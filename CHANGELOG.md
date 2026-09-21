@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint56: divisorial families and shorter approximation proof
+
+Added the audited finite-divisor parameter-family proposition and the local multiplier-ideal jump calculation. The positive residual hypothesis is imposed at the limit; no general envelope-system recovery is claimed. Completed the second focused reading of Chapters1–5, removed an unnecessary second parameter from the mass-extrema and mass-invariance proofs using the strict approximation already proved, and shortened the closing research discussion in Chapter27. Eight book files change. The687-page build and33 affected/adjacent pages were checked.
+
 ## 22 September2026 — Checkpoint55: geometry and appendix review
 
 Completed the second focused reading of Chapters29–32 and the appendix, including every nested input. Clarified the comparison of closed currents through potentials, removed repeated proof introductions, made exponential normalization explicit in the selection question, corrected equation references, and made exponential constants roman. Eight book files change; existing mathematical hypotheses and source labels are preserved. The687-page build and33 affected/adjacent pages were checked. No new theorem or independent verifier run is claimed.
