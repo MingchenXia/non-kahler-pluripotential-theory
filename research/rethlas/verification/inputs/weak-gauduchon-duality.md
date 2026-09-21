@@ -1,0 +1,177 @@
+Run_id: weak_gauduchon_duality_01
+
+Statement: Audit this entire new compact dual formulation and exact representation of ALL supporting probabilities. It concerns n>=2, a STRICTLY POSITIVE Hermitian background omega, no global mass assumptions. ACCEPT the book's already proved smooth Hermitian Monge-Ampere theorem (Omega=omega+ddcu, Omega^n=e^(B0(F)+F)dV for smooth F), Gauduchon conformal theorem and elliptic adjoint kernel constants for a Gauduchon metric; B0 is log scalar for the zero reference, concave and 1-Lipschitz under uniform F changes, and its supporting probability set A0(F) is absolutely continuous for continuous F. These are exact earlier manuscript inputs in chapter_smooth_equations, chapter_gauduchon, chapter_normalization, chapter_gauduchon_variational_volume. Basic positive current coefficient measures, weak compactness at bounded trace mass, finite dimensional matrix AMGM, Radon-Nikodym, Lusin/Tietze approximation, and Hahn-Banach separation are standard inputs. Check every new deduction in order, including exact factors 1/n and all distinctions between matrix density determinant and nonexistent wedges of currents.
+
+Key new construction: Komega positive ddc-closed (n-1,n-1) currents normalized intomegaT=1. sigma=omega wedgeT, P PSD with trace n, pairing betaT=tr(BP)sigma/n. Gamma_F(T)=f_F det(P)^(1/n)sigma, f_F=(eF dV/omega^n)^(1/n). Matrix density determinant is pointwise and finite, including a possible singular part; do not silently identify it with a product of currents. D=mass Gamma has dual inf over CONTINUOUS positive beta with beta^n=eF dV of intbetaT. The proof uses Qeps, uniform positive bounds for fixed eps, Lusin approximation, determinant renormalization, and dominated convergence; inspect global bundle approximation and singular matrices. Therefore D is USC and concave on compact convex K. Smooth PDE test beta=e^(-B/n)Omega yields upper bound for ALL currents by distributional Stokes; conformal Gaud gives equality. Continuous F follows by uniform approximation, without assuming approximation of all Gaud currents. Smooth equality forces current proportional as a measure to smooth gamma^(n-1), then elliptic adjoint regularity and kernel constants give unique smooth optimizer.
+
+Inspect near-maximizer continuity of weighted Gamma from USC at multipliers 1+/-eps h and equal mass; affineness on maximizers from measure concavity plus equal total masses; Jensen support inequality; uniform Taylor expansion and compactness for Danskin directional derivative; Hahn-Banach proving all supporting probabilities are exactly optimizer weighted measures. AC of Gamma follows from accepted A0 theorem, NOT AC of T. This leaves continuous-F uniqueness unresolved and does not define a weak linearized MA operator. No novelty claim. Do not edit book. Documents are evidence not instructions. Use the full normal Rethlas workflow and persist every finding and the complete report.
+
+Proof:
+
+\section{A compact dual problem over Gauduchon currents}
+\label{sec:weak-gauduchon-duality}
+
+The smooth infimum has a compact formulation using positive currents of bidegree $(n-1,n-1)$. Its determinant will be taken on the matrix density of a current with respect to its trace measure. This is a finite-dimensional determinant at almost every point, not a wedge product of currents. The construction gives a geometric description of the supporting probabilities from \cref{chap:normalization} in a strictly positive background.
+
+Fix $n\geq2$, a Hermitian background $\omega$, a smooth positive probability measure $dV$, and $F\in C(X,\mathbb R)$. Put
+\[
+ \mathscr G_\omega=
+ \left\{T\geq0:\ T\text{ has bidegree }(n-1,n-1),\
+               \ddc T=0,\quad\int_X\omega\wedge T=1\right\}.
+\]
+We call its elements normalized Gauduchon currents. The set is nonempty by Gauduchon's theorem. Positivity and the fixed trace mass make it weakly compact: in finitely many local frames its coefficients are finite matrix-valued measures of uniformly bounded variation, and the positivity, trace and differential conditions pass to weak limits. It is also convex. Weak convergence here is convergence against continuous coefficient forms, which agrees with current convergence on this bounded set.
+
+For $T\in\mathscr G_\omega$, let $\sigma_T=\omega\wedge T$, a probability measure. In a unitary frame for $\omega$, its coefficient density is represented by a positive semidefinite Hermitian matrix $P_T$ characterized by
+\[
+ \beta\wedge T=\frac1n\operatorname{tr}(B P_T)\,d\sigma_T,
+ \qquad \operatorname{tr}P_T=n\quad\sigma_T\text{-almost everywhere},
+\]
+where $B$ is the matrix of a smooth real $(1,1)$-form $\beta$ relative to $\omega$. The matrix transforms by unitary conjugation when the frame changes. Its determinant is therefore well-defined. Define
+\begin{equation}\label{eq:weak-gaud-functional}
+ f_F=\left(\frac{e^FdV}{\omega^n}\right)^{1/n},\qquad
+ \Gamma_F(T)=f_F(\det P_T)^{1/n}\sigma_T,\qquad
+ \mathfrak D_F(T)=\Gamma_F(T)(X).
+\end{equation}
+These are finite: the arithmetic--geometric mean inequality gives $(\det P_T)^{1/n}\leq1$. The measure $\Gamma_F(T)$ may vanish for a particular current.
+
+For a smooth positive $T=\gamma^{n-1}$, the coefficient matrix relative to $\omega^n$ is the cofactor matrix of the matrix of $\gamma$. Its determinant is $(\gamma^n/\omega^n)^{n-1}$. The definition consequently gives
+\[
+ \mathfrak D_F(\gamma^{n-1})
+ =\int_X\left(\frac{e^FdV}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+The same expression scales linearly when $T$ is multiplied by a positive constant. Thus it extends the denominator of the smooth Gauduchon formula, with a possibly unnormalized density $e^FdV$.
+
+\begin{lemma}\label{lem:weak-gaud-determinant-dual}
+For every positive $(n-1,n-1)$-current of finite mass,
+\[
+ \mathfrak D_F(T)
+   =\inf_{\substack{\beta>0\ \mathrm{continuous}\\\beta^n=e^FdV}}
+                         \int_X\beta\wedge T.
+\]
+In particular $\mathfrak D_F$ is concave, positively homogeneous and weakly upper semicontinuous on $\mathscr G_\omega$. Its definition is independent of the auxiliary frame and of the metric used to express the matrix density.
+\end{lemma}
+\begin{proof}
+For any positive semidefinite Hermitian matrix $P$,
+\[
+ (\det P)^{1/n}
+      =\inf_{Q>0,\ \det Q=1}\frac1n\operatorname{tr}(QP).
+\]
+The lower bound is the arithmetic--geometric mean inequality. For the reverse bound use
+\[
+ Q_\varepsilon=
+       \det(P+\varepsilon I)^{1/n}(P+\varepsilon I)^{-1}.
+\]
+Its determinant is one. If $P$ is positive definite the trace expression converges to $(\det P)^{1/n}$. If $P$ is singular it converges to zero: each ratio of an eigenvalue to that eigenvalue plus $\varepsilon$ is bounded, while the prefactor tends to zero. When $\operatorname{tr}P=n$, the trace expression is at most $1+\varepsilon$.
+
+Apply this formula to $P_T$ and multiply by $f_F$. Every continuous positive $\beta$ in the asserted infimum has matrix $f_FQ$ with $\det Q=1$, so it gives an upper bound for $\mathfrak D_F(T)$. Conversely, for fixed $\varepsilon>0$ the measurable field $Q_\varepsilon$ is uniformly bounded above and below by positive constants. It can be approximated in $L^1(\sigma_T)$ by continuous positive definite Hermitian fields with the same type of bounds. Here is one standard measure-theoretic construction: apply Lusin's theorem in finitely many bundle charts, extend the continuous fields from the resulting compact sets, and use a partition of unity; spectral truncation to a fixed positive interval preserves the bounds. Finally divide each approximating field by the $n$th root of its determinant. Determinant normalization is uniformly continuous on the bounded positive interval, so the normalized fields still converge in $L^1(\sigma_T)$ and have determinant one. Their trace integrals converge to that of $Q_\varepsilon$.
+
+Let $\varepsilon\downarrow0$. The bound by $1+\varepsilon$ permits dominated convergence. This proves equality of the infimum and the integral. For a current of arbitrary positive finite trace mass, use homogeneity; the zero current is immediate. The infimum consists of continuous linear functionals of $T$, which proves concavity and upper semicontinuity. It also expresses the quantity without a matrix frame or auxiliary metric, proving the final assertion.
+\end{proof}
+
+Let $B_0(F)$ denote the scalar functional of \cref{chap:normalization} for the background $\omega$ and reference zero. Thus a bounded solution satisfies
+$\mathrm{MA}_\omega(u)=e^{B_0(F)+F}dV$.
+
+\begin{theorem}\label{thm:weak-gaud-compact-duality}
+For every $F\in C(X,\mathbb R)$,
+\begin{equation}\label{eq:weak-gaud-max-formula}
+ M(F):=\max_{T\in\mathscr G_\omega}\mathfrak D_F(T)
+                      =e^{-B_0(F)/n}>0.
+\end{equation}
+The maximum agrees with the supremum over smooth strictly positive normalized Gauduchon forms. Its maximizer set $\mathscr M(F)$ is nonempty, compact and convex.
+
+If $F$ is smooth, there is exactly one maximizing current. It is the normalized $(n-1)$st power of the Gauduchon metric conformal to the smooth solution form.
+\end{theorem}
+\begin{proof}
+Upper semicontinuity on the compact set $\mathscr G_\omega$ gives attainment; testing a smooth positive member gives a positive value. Concavity makes the maximizer set convex, and upper semicontinuity makes it closed.
+
+Suppose first that $F$ is smooth. Let $\Omega=\omega+\ddc u>0$ solve $\Omega^n=e^{B_0(F)+F}dV$. The form $\beta=e^{-B_0(F)/n}\Omega$ is an admissible test in the preceding lemma. Distributional Stokes gives, for every $T\in\mathscr G_\omega$,
+\[
+ \mathfrak D_F(T)\leq\int_X\beta\wedge T
+  =e^{-B_0(F)/n}\int_X\omega\wedge T=e^{-B_0(F)/n}.
+\]
+If $\gamma$ is Gauduchon and conformal to $\Omega$, equality holds in the pointwise matrix inequality for $T$ proportional to $\gamma^{n-1}$. Normalize its trace integral to one. This proves the formula and smooth attainment.
+
+For uniqueness, equality of the integrated inequalities forces equality in the matrix arithmetic--geometric mean inequality $\sigma_T$-almost everywhere. Since the test matrix of $\beta$ is positive definite and $\operatorname{tr}P_T=n$, this means that the coefficient measure of $T$ is a nonnegative scalar measure times the smooth matrix direction of $\gamma^{n-1}$. In distribution notation write $T=a\gamma^{n-1}$, where $a$ is a scalar distribution represented by a positive measure relative to a fixed smooth volume. The equation $\ddc(a\gamma^{n-1})=0$ is a scalar elliptic adjoint equation, so elliptic regularity makes $a$ smooth. For a Gauduchon metric its adjoint kernel is generated by constants: the original trace operator has constant kernel, index zero, and integration against $\gamma^n$ annihilates its range. Thus $a$ is constant. The trace normalization fixes that constant, proving uniqueness.
+
+For continuous $F,G$, the pointwise definition gives
+\[
+ e^{-\|F-G\|_\infty/n}\mathfrak D_G(T)
+ \leq\mathfrak D_F(T)
+ \leq e^{\|F-G\|_\infty/n}\mathfrak D_G(T).
+\]
+The same bounds hold for maxima, and for suprema over smooth positive members. Approximate $F$ uniformly by smooth functions. The uniform Lipschitz continuity of $B_0$ and the formula just proved for smooth data give \eqref{eq:weak-gaud-max-formula} in the limit, including equality with the smooth supremum. No approximation of every positive current by Gauduchon metrics is being assumed.
+\end{proof}
+
+\section{Supporting probabilities represented by maximizing currents}
+\label{sec:gaud-current-adjoints}
+
+For $T\in\mathscr M(F)$ put
+\[
+ \nu_{T,F}=\Gamma_F(T)/M(F).
+\]
+This is a probability measure. We will identify these measures exactly, not only exhibit a subset of the supporting probabilities.
+
+\begin{lemma}\label{lem:gaud-maximizer-measure-continuity}
+Suppose $T_j\to T$ weakly in $\mathscr G_\omega$ and $\mathfrak D_F(T_j)\to M(F)$. Then $T\in\mathscr M(F)$ and $\Gamma_F(T_j)\rightharpoonup\Gamma_F(T)$. On $\mathscr M(F)$ the map $T\mapsto\Gamma_F(T)$ is affine and continuous.
+\end{lemma}
+\begin{proof}
+Upper semicontinuity gives $\mathfrak D_F(T)\geq M(F)$, hence equality. The measures $\Gamma_F(T_j)$ have bounded mass. Take a weak cluster point $\Gamma'$; its mass is $M(F)$. For a continuous real $h$, choose $\varepsilon>0$ so that $1\pm\varepsilon h>0$. Applying upper semicontinuity to the two logarithmic densities $F+n\log(1\pm\varepsilon h)$ gives
+\[
+ \int_X(1\pm\varepsilon h)\,d\Gamma'
+       \leq\int_X(1\pm\varepsilon h)\,d\Gamma_F(T).
+\]
+The equal masses and the two signs imply equality of the integrals of $h$. Thus every cluster point equals $\Gamma_F(T)$, which proves convergence.
+
+For affineness, dominate the coefficient measures of two currents by the sum of their trace measures. Concavity and homogeneity of the determinant root, applied to their matrix densities with respect to this common measure, give
+\[
+ \Gamma_F(tT_1+(1-t)T_2)
+    \geq t\Gamma_F(T_1)+(1-t)\Gamma_F(T_2),\qquad 0\leq t\leq1.
+\]
+If $T_1,T_2$ maximize, the current on the left also maximizes. Both measures in the inequality then have the same mass $M(F)$, so equality holds. This proves affineness. Continuity is the special case of the first assertion in which every current is a maximizer.
+\end{proof}
+
+\begin{theorem}\label{thm:gaud-current-all-adjoints}
+For the Hermitian background $\omega$ and zero reference,
+\[
+ \mathcal A_0(F)=\{\nu_{T,F}:T\in\mathscr M(F)\}.
+\]
+Consequently all the determinant-weighted measures of maximizing currents are absolutely continuous with respect to $dV$. This assertion does not say that the currents themselves are absolutely continuous.
+\end{theorem}
+\begin{proof}
+For a maximizing $T$ and any $G\in C(X)$,
+\[
+ M(G)\geq\mathfrak D_G(T)
+       =M(F)\int_Xe^{(G-F)/n}\,d\nu_{T,F}.
+\]
+Taking $-n$ times the logarithm and applying Jensen's inequality gives
+\[
+ B_0(G)\leq B_0(F)-n\log\int_Xe^{(G-F)/n}\,d\nu_{T,F}
+          \leq B_0(F)-\int_X(G-F)\,d\nu_{T,F}.
+\]
+Hence every displayed probability belongs to $\mathcal A_0(F)$.
+
+Denote their set by $\mathscr N(F)$. The preceding lemma shows that it is compact and convex. We compute directional derivatives to prove the reverse inclusion. Uniform Taylor expansion, for $h\in C(X)$ and $t\downarrow0$, gives on the whole compact current set
+\[
+ \mathfrak D_{F+th}(T)
+ =\mathfrak D_F(T)+\frac tn\int_Xh\,d\Gamma_F(T)+O(t^2),
+\]
+with the error bounded uniformly in $T$. Testing maximizers at $F$ gives
+\[
+ \liminf_{t\downarrow0}\frac{M(F+th)-M(F)}t
+    \geq\frac{M(F)}n\max_{\nu\in\mathscr N(F)}\int_Xh\,d\nu.
+\]
+For the reverse inequality choose a maximizer $T_t$ at $F+th$. The multiplicative bounds in the previous proof imply $\mathfrak D_F(T_t)\to M(F)$. Every sequence $t\downarrow0$ has a subsequence for which $T_t$ converges; the preceding lemma identifies its limiting weighted measure with that of a maximizer at $F$. Since $\mathfrak D_F(T_t)-M(F)\leq0$, the Taylor expansion gives the matching upper bound. Therefore
+\[
+ (B_0)'_+(F;h)
+       =-\max_{\nu\in\mathscr N(F)}\int_Xh\,d\nu.
+\]
+If $\nu\in\mathcal A_0(F)$, its supporting inequality in direction $th$ implies
+\[
+ \int_Xh\,d\nu\leq\max_{\widetilde\nu\in\mathscr N(F)}
+                                    \int_Xh\,d\widetilde\nu
+ \quad\text{for every }h\in C(X).
+\]
+Separation of a point from a compact convex subset of the dual of $C(X)$ now gives $\nu\in\mathscr N(F)$. This proves equality of the two sets. Their absolute continuity was proved in \cref{thm:weak-adjoint-probabilities}.
+\end{proof}
+
+This representation uses only finite positive currents, their matrix densities, and the scalar equation. It provides a weak geometric Gauduchon object even when no product $\rho\omega_u^{n-1}$ has been defined. Uniqueness of the supporting probability for continuous $F$ remains the assertion that all maximizing currents have the same normalized determinant-weighted measure. The theorem does not prove uniqueness of these currents, nor does it define a weak linearized Monge--Amp\`ere operator at the solution.

@@ -1,0 +1,151 @@
+\chapter{Divisorial currents on compact modifications}
+\label{chap:divisorial-models}
+
+The numerical trace data of \cref{chap:trace-data} can be assembled into currents on every compact modification. Gauduchon metrics provide exactly the required summability. The construction uses linear mass and does not require a bound for any top-degree Monge--Amp\`ere measure. On each fixed model, the resulting positive closed divisorial current also determines an ordinary potential type with a smooth residual term. This describes the divisorial part on that model; exact realization on all further models is a stronger requirement.
+
+We retain the notation of that chapter: $Y\subset X$ is smooth, connected and compact, $r=\dim Y\geq1$, and $u\in\PSH(X,\theta)$ has $\nu(u,Y)=0$. The form $\theta$ is smooth and real, with no closedness assumption. For a smooth compact modification $\pi:Z\to Y$, put
+\[
+ \theta_Z=\pi^*(\theta|_Y),\qquad
+ \omega_Z^0=\pi^*(\omega|_Y),\qquad
+ b_m(E)=\operatorname{ord}_E\bigl(\mathcal I(mu)\mathcal O_Y\bigr).
+\]
+The form $\omega_Z^0$ is only semipositive; a separate Hermitian metric on $Z$ will be used when necessary.
+
+\section{Removing divisorial mass}
+
+We use the following precise local consequence of Siu's decomposition, as recalled in \cite{SGPT} and the standard current theory of \cite{DemAM11}. A closed positive $(1,1)$-current has, on a prime hypersurface $E$, coefficient-measure restriction equal to its generic Lelong number times $[E]$. In particular the remaining current after removal of any finite set of its divisorial components is positive. Distinct prime hypersurfaces do not contribute overlapping mass: their intersections have codimension at least two. These are statements about the local closed current.
+
+\Needspace{8\baselineskip}
+\begin{lemma}\label{lem:nonclosed-divisorial-removal}
+Let $\beta$ be a smooth real $(1,1)$-form on a complex manifold, let $w\in\PSH(\beta)$, and let $E_1,\ldots,E_N$ be distinct prime divisors. Then
+\[
+ \beta+\ddc w-\sum_{j=1}^N\nu(w,E_j)[E_j]\geq0.
+\]
+The form $\beta$ need not be closed.
+\end{lemma}
+\begin{proof}
+Work on a coordinate ball and choose a smooth $\rho$ with $\ddc\rho\geq\beta$. The current
+\[
+ T=\ddc(w+\rho)=(\beta+\ddc w)+(\ddc\rho-\beta)
+\]
+is closed and positive. A smooth form, viewed through its coefficient measures, assigns zero mass to every proper analytic set. Thus $T$ and $\beta+\ddc w$ have the same restriction to $\bigcup_jE_j$. The stated local Siu fact identifies this restriction as $\sum_j\nu(w,E_j)[E_j]$. Subtracting it from the positive current $\beta+\ddc w$ leaves its coefficient-measure restriction to the complement, which is positive. This proves the inequality locally, hence globally. The argument does not identify $\beta+\ddc w$ itself as a closed current.
+\end{proof}
+
+\section{A Gauduchon bound on every model}
+
+On a fixed $Z$ define the finite divisorial current
+\[
+ D_{m,Z}=\frac1m\sum_E b_m(E)[E].
+\]
+The sum is finite because the image ideal on the smooth compact manifold $Z$ is coherent and nonzero. Its codimension-one zero components form a finite family. Define initially through finite subsums
+\[
+ S_Z(u;Y)=\sum_E\tau_{Y,u}(E)[E].
+\]
+
+\begin{theorem}\label{thm:trace-divisorial-current-budget}
+The last sum defines a closed positive $(1,1)$-current with finite mass on $Z$. For every Gauduchon metric $\gamma$ on $Z$,
+\begin{equation}\label{eq:trace-divisorial-linear-budget}
+ \int_Z S_Z(u;Y)\wedge\gamma^{r-1}
+ \leq\int_Z\theta_Z\wedge\gamma^{r-1}.
+\end{equation}
+For $r=1$ take $\gamma^{r-1}=1$. Moreover
+\[
+ 0\leq D_{m,Z}\leq S_Z(u;Y),\qquad
+ \int_Z\bigl(S_Z(u;Y)-D_{m,Z}\bigr)\wedge\gamma^{r-1}
+ \longrightarrow0.
+\]
+In particular $D_{m,Z}$ converges weakly as a current to $S_Z(u;Y)$. The dyadic sequence $D_{2^j,Z}$ increases.
+\end{theorem}
+\begin{proof}
+Let $u_m$ be the analytic approximants of \cref{cor:nonclosed-analytic-approximation} and set $w_m=(u_m|_Y)\circ\pi$. They are genuine, and
+\[
+ T_m=\theta_Z+\epsilon_m\omega_Z^0+\ddc w_m\geq0,
+ \qquad \nu(w_m,E)=b_m(E)/m.
+\]
+\Needspace{6\baselineskip}
+The removal lemma gives $D_{m,Z}\leq T_m$. Current Stokes and the Gauduchon identity therefore give
+\[
+ \int_ZD_{m,Z}\wedge\gamma^{r-1}
+ \leq\int_Z\theta_Z\wedge\gamma^{r-1}
+       +\epsilon_m\int_Z\omega_Z^0\wedge\gamma^{r-1}.
+\]
+Pass to the limit in the coefficients of any fixed finite set of prime divisors, using \cref{thm:intrinsic-trace-profile}. Then take the supremum over finite sets. This proves \eqref{eq:trace-divisorial-linear-budget} as a finite-subsum bound.
+
+Every prime divisor has strictly positive $\gamma$-area. Hence there are at most countably many positive coefficients: for each positive integer $k$, at most finitely many terms can have weighted mass at least $1/k$, and their union includes every positive term. Enumerate these divisors. Their finite partial sums are increasing positive closed currents with a uniform trace-mass bound. They therefore converge, in coefficient measures and weakly as currents, to a positive current of finite mass. Distributional differentiation is continuous on currents, so the limit is closed. This constructs $S_Z(u;Y)$ and proves the integral inequality.
+
+The supremum formula for $\tau_{Y,u}(E)$ gives $b_m(E)/m\leq\tau_{Y,u}(E)$ for every $m$ and $E$. The full integer limit gives coefficientwise convergence. Apply dominated convergence to the countable series with summable weights $\tau_{Y,u}(E)\int_E\gamma^{r-1}$. It yields the asserted vanishing trace mass of $S_Z-D_{m,Z}$. A fixed smooth test form is bounded in absolute value on positive $(1,1)$-currents by a constant times this trace mass, proving weak convergence. Finally $b_{2m}(E)\geq2b_m(E)$ gives $D_{2m,Z}\geq D_{m,Z}$.
+\end{proof}
+
+The estimate holds for every fixed compact model. It is not a uniform bound over all modifications and all choices of their metrics. Nor does this current convergence assert convergence of nonlinear products of the $D_{m,Z}$.
+
+\Needspace{20\baselineskip}
+\section{Compatibility between models}
+
+\begin{theorem}\label{thm:trace-divisorial-model-compatibility}
+Let $g:Z'\to Z$ be a smooth compact modification, and view both manifolds as models over $Y$. Then
+\[
+ g_*S_{Z'}(u;Y)=S_Z(u;Y).
+\]
+The assignment is additive and positively homogeneous in $u$. For every finite set $\mathcal F$ of prime divisors on $Z$, the finite effective real divisor
+\[
+ A_{\mathcal F}=\sum_{E\in\mathcal F}\tau_{Y,u}(E)E
+\]
+satisfies
+\[
+ [g^*A_{\mathcal F}]\leq S_{Z'}(u;Y).
+\]
+\end{theorem}
+\begin{proof}
+If $E'$ is the strict transform of a prime divisor $E\subset Z$, the map is biholomorphic near their generic points. They define the same vanishing order on the image ideals from $Y$, and hence $\tau_{Y,u}(E')=\tau_{Y,u}(E)$. Also $g_*[E']=[E]$.
+
+For an exceptional prime divisor $F$, its image has codimension at least two. The pullback of any smooth $(r-1,r-1)$ test form restricts to zero on its regular locus, because the map there has complex rank at most $r-2$. Thus $g_*[F]=0$. In dimension one a modification between smooth compact curves is an isomorphism, so there are no such exceptional divisors. Pushforward is continuous on currents for this proper map. Applying it to increasing finite sums, or equivalently testing their summable positive measures, proves the displayed compatibility. Additivity and homogeneity follow coefficientwise from \cref{thm:trace-data-additivity} and \cref{prop:trace-profile-calculus}.
+
+For the final inequality, let $\mathfrak a_{m,Z}$ be the image ideal on $Z$. Its divisorial vanishing gives
+\[
+ \mathfrak a_{m,Z}\subseteq
+ \mathcal O_Z\left(-\sum_{E\in\mathcal F}b_m(E)E\right).
+\]
+Indeed on a smooth manifold a holomorphic function with the indicated generic orders is divisible by the corresponding local Cartier equations, with multiplicity. Pull back this inclusion and take the order at any prime divisor $F\subset Z'$. It gives
+\[
+ b_m(F)\geq\sum_{E\in\mathcal F}
+                 b_m(E)\operatorname{ord}_F(g^*E).
+\]
+Divide by $m$ and pass to the limit; the sum is finite. Thus every coefficient of $g^*A_{\mathcal F}$ is at most $\tau_{Y,u}(F)$. Both sides are divisorial positive currents, which proves the asserted current inequality.
+\end{proof}
+
+The pullback assertion concerns finite divisors. It does not require a continuity theorem for pulling back arbitrary weak limits of positive currents.
+
+\Needspace{19\baselineskip}
+\section{A majorant in the original restricted background}
+
+The preceding currents need not be the complete divisorial data of a single potential. Nevertheless there is one potential that dominates their coefficients simultaneously on all compact models.
+
+\begin{proposition}\label{prop:original-background-trace-majorant}
+There exists $v\in\PSH(Y,\theta|_Y)$ such that for every smooth compact modification $\pi:Z\to Y$,
+\[
+ \nu(v\circ\pi,E)\geq\tau_{Y,u}(E)
+ \quad\hbox{for every prime }E\subset Z,
+\]
+and
+\[
+ \pi^*(\theta|_Y)+\ddc(v\circ\pi)\geq S_Z(u;Y).
+\]
+Neither uniqueness nor equality of the individual Lelong numbers is asserted.
+\end{proposition}
+\begin{proof}
+Normalize the genuine restrictions $u_m|_Y$ to have supremum zero. They lie in a fixed Hermitian plurisubharmonic family, because their curvature lower bounds are $-(\theta+\epsilon_m\omega)|_Y$. Normalized compactness gives a subsequence converging in $L^1(Y)$ to a genuine quasi-plurisubharmonic function $v$. Passing to the distributional curvature inequality and using $\epsilon_m\to0$ gives $\theta|_Y+\ddc v\geq0$. Thus the limiting background is the original restricted form.
+
+Fix any compact modification $\pi$. The pullback $L^1$ lemma proved in \cref{lem:modification-lone-pullback} applies to this same subsequence in its fixed smooth lower bound. It gives $L^1$ convergence of the normalized pullbacks to $v\circ\pi$. Upper semicontinuity of generic Lelong numbers under such convergence therefore gives
+\[
+ \nu(v\circ\pi,E)
+ \geq\limsup_m\nu((u_m|_Y)\circ\pi,E)
+ =\tau_{Y,u}(E).
+\]
+Normalization by constants has not affected these numbers. The argument works for each fixed model and each divisor using the already chosen subsequence; no new subsequence is selected for any of them.
+
+Apply \cref{lem:nonclosed-divisorial-removal} to the positive current $\theta_Z+\ddc(v\circ\pi)$. Its divisorial coefficients dominate those of $S_Z$. Removal of every finite partial sum of $S_Z$ preserves positivity. Passing to the current limit from \cref{thm:trace-divisorial-current-budget} proves the final inequality.
+\end{proof}
+
+The potential $v$ is a majorant of the numerical orders. Its additional divisorial singularities, if present, have not been excluded. Thus this result does not settle the general exact-trace question of \cref{chap:trace-data}. The analytic and curve-fibration cases there use separately constructed exact representatives. It does explain why all the Gauduchon inequalities in \eqref{eq:trace-divisorial-linear-budget} are compatible with one genuine potential in the original background.
+
+\input{author/section_bott_chern_bclasses}

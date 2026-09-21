@@ -1,0 +1,72 @@
+\section{Moving measures and relative compactness}
+
+A common lower envelope in $\mathcal E_\varphi$ need not have finite mass. The preceding domination lemma nevertheless suffices for the capacity argument. Finiteness of the limiting measure will follow afterwards from control of its tails.
+
+\begin{proposition}\label{prop:relative-common-envelope-criterion}
+Suppose $u_j\in\mathcal E_\varphi$ and, for a fixed $h\in\mathcal E_\varphi$ and constant $C$,
+\[
+ h\leq u_j\leq\varphi+C,\qquad
+ u_j\longrightarrow u\in\PSH(X,\theta)\quad\hbox{in }L^1(X).
+\]
+If
+\[
+ I_j:=\int_X|e^{u_j}-e^u|\,\mu_{u_j}\longrightarrow0,
+\]
+then $u\in\mathcal E_\varphi$ and $u_j\to u$ in capacity. No upper mass bound is part of this criterion.
+\end{proposition}
+\begin{proof}
+The bounds pass to $u$ almost everywhere along an extraction and then to canonical representatives. Upward stability gives $u\in\mathcal E_\varphi$. Translate the entire family and its bounds by a common constant to make all potentials nonpositive.
+
+It suffices to obtain capacity convergence along a further extraction of every subsequence. Extract so that $I_j\leq2^{-j}$ and $u_j\to u$ almost everywhere for smooth volume. Form
+\[
+ p_{j,N}=P_\theta(u_j,\ldots,u_N),\qquad
+ p_j=P_\theta\left(\inf_{\ell\geq j}u_\ell\right).
+\]
+Every envelope lies above $h$ and below $\varphi+C$, so is genuine and belongs to $\mathcal E_\varphi$. For the finite envelope, partition its contact set by the first index $\ell$ with $p_{j,N}=u_\ell$. Ordered contact on each part gives
+\[
+ \int_X|e^{p_{j,N}}-e^u|\,\mu_{p_{j,N}}
+ \leq\sum_{\ell=j}^N I_\ell\leq2^{1-j}.
+\]
+Only positive integrals are used here, even if a rooftop has infinite mass.
+
+As $N\to\infty$, $p_{j,N}\downarrow p_j$. As $j\to\infty$, the $p_j$ increase to a genuine canonical limit $p$. Both convergences hold in capacity by monotone truncation with the fixed lower bound $h$. Also $h\leq p\leq u\leq\varphi+C$; the upper inequality follows first from almost-everywhere convergence of the extracted $u_j$. Thus $p\in\mathcal E_\varphi$.
+
+Apply \cref{lem:weighted-extended-lsc} first as $N\to\infty$ and then as $j\to\infty$, with the bounded quasi-continuous weights displayed above. The weights converge in capacity because the exponential is Lipschitz on a common upper half-line. We obtain
+\[
+ \int_X|e^p-e^u|\,\mu_p=0,
+ \qquad \mu_p(\{p<u\})=0.
+\]
+The second equality follows off the poles, which the extended measures ignore. The relative zero-domination lemma gives $p=u$, without a finiteness hypothesis on $\mu_p$.
+
+Finally $U_j=(\sup_{\ell\geq j}u_\ell)^*$ decreases to $u$ by Hartogs' lemma and the almost-everywhere extraction. Monotone capacity convergence applies to $p_j\uparrow u$ and $U_j\downarrow u$. The inequalities $p_j\leq u_j\leq U_j$ prove capacity convergence on this extraction, and hence on the original sequence.
+\end{proof}
+
+\begin{theorem}\label{thm:relative-moving-measure-continuity}
+Under the geometric and common-envelope hypotheses of \cref{prop:relative-common-envelope-criterion}, suppose
+\[
+ \mu_{u_j}\leq A\omega_{\psi_j}^n+\nu,
+\]
+where $A\geq0$ is fixed, $\nu$ is a fixed finite non-pluripolar measure, and $\psi_j\in\PSH(X,\omega)$ are uniformly bounded and converge in capacity to a bounded $\psi$. Then $u\in\mathcal E_\varphi$, $u_j\to u$ in capacity, $\mu_u$ is finite, and
+\[
+ \mu_{u_j}\rightharpoonup\mu_u.
+\]
+\end{theorem}
+\begin{proof}
+Translate so that $u_j,u\leq0$. The functions $e^{u_j},e^u$ are uniformly bounded quasi-plurisubharmonic functions with a common lower curvature bound. They converge in smooth-volume $L^1$, since the exponential is Lipschitz on $(-\infty,0]$. The moving bounded integration lemma and the fixed non-pluripolar integration lemma give
+\[
+ \int_X|e^{u_j}-e^u|\,\omega_{\psi_j}^n\longrightarrow0,
+ \qquad
+ \int_X|e^{u_j}-e^u|\,\mathrm{d}\nu\longrightarrow0.
+\]
+Therefore $I_j\to0$, and the preceding proposition proves capacity convergence and class membership.
+
+The bounded reference measures have uniformly bounded mass and satisfy a common capacity estimate by \cref{lem:bounded-mixed-capacity}. For a constant $B$ independent of $j,T$,
+\[
+ \mu_{u_j}(\{u_j<-T\})
+ \leq B\operatorname{Cap}_\omega(\{h<-T\})
+       +\nu(\{h<-T\})\longrightarrow0
+\]
+uniformly in $j$. The first term tends to zero because $h$ is a genuine quasi-plurisubharmonic function, and the second because $\nu$ is finite and ignores its pole set. The total masses are uniformly bounded by the assumed domination. The undamped tail theorem, in its general-background form, now gives finiteness of $\mu_u$ and the asserted weak convergence.
+\end{proof}
+
+In particular, the common envelope supplied by \cref{prop:exponential-common-rooftop} is sufficient whenever its bounded reference potentials converge in capacity. The proof never estimates the mass of a finite rooftop by a bound independent of the number of obstacles. The relative zero-domination lemma replaces that unnecessary intermediate estimate.

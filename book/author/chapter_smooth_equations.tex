@@ -1,0 +1,401 @@
+\chapter{Smooth Monge--Amp\`ere equations}
+\label{chap:smooth-equations}
+
+The non-closedness of the background changes the normalization of a Monge--Amp\`ere equation, but does not prevent smooth solvability. We prove the potential and second-derivative estimates, complete the continuity argument using standard elliptic regularity, and compute the variation of the normalization constant using the Gauduchon adjoint measure.
+
+Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$. We study
+\begin{equation}\label{eq:smooth-ma}
+ \omega_u^n=e^{F+b}\mathrm{d}V,\qquad \omega_u>0,
+\end{equation}
+where $F\in C^\infty(X,\R)$ is prescribed and both $u$ and the real number $b$ are unknown. Adding a constant to $u$ does not change the equation.
+
+For $n=1$, the adjoint measure used below means $\mu_u=\omega_u/\int_X\omega_u$; the compatibility and Fredholm arguments of \cref{prop:adjoint-gauduchon} then follow directly from Stokes' theorem.
+
+\section{Existence and the unknown constant}
+
+\begin{theorem}[Tosatti--Weinkove]\label{thm:tw-smooth}
+For every smooth real $F$, \eqref{eq:smooth-ma} has a unique pair $(u,b)$ with $\sup_Xu=0$. The potential $u$ is smooth.
+\end{theorem}
+
+For $n\geq2$ this is \cite[Corollary 1]{TW10}. The proof below supplies the $C^0$ and second-derivative estimates and the continuity argument. Their equation uses $\mathrm i\partial\bar\partial\varphi$. With our convention, set $u=2\pi\varphi$. A general $\mathrm{d}V$ is absorbed by replacing their prescribed function by $F+\log(\mathrm{d}V/\omega^n)$.
+
+In dimension one, integration determines
+$e^b=\int_X\omega/\int_Xe^F \mathrm{d}V$, and the remaining equation for $u$ is the usual Poisson equation. Thus the statement holds in that dimension as well.
+
+No bounded mass property is assumed in \cref{thm:tw-smooth}. In particular, existence of a solution for each fixed smooth density does not give a uniform mass bound as the density varies.
+
+\begin{proposition}\label{prop:b-extrema}
+Every solution of \eqref{eq:smooth-ma} satisfies
+\[
+ \inf_X\!\left(\log\frac{\omega^n}{\mathrm{d}V}-F\right)
+ \leq b\leq
+ \sup_X\!\left(\log\frac{\omega^n}{\mathrm{d}V}-F\right).
+\]
+\end{proposition}
+\begin{proof}
+At a maximum point $x_+$ of $u$, the Hermitian form $\ddc u$ is nonpositive. Hence $\omega_u^n(x_+)\leq\omega^n(x_+)$, and
+$b\leq\log(\omega^n/\mathrm{d}V)(x_+)-F(x_+)$.
+At a minimum point the reverse argument gives the lower bound.
+\end{proof}
+
+When $\mathrm{d}\omega=0$, integration gives the familiar explicit formula
+\begin{equation}\label{eq:closed-b}
+ b=\log\frac{\int_X\omega^n}{\int_Xe^F \mathrm{d}V}.
+\end{equation}
+The same formula is valid under any hypothesis that ensures invariance of the total mass on smooth potentials. In general, integrating the equation gives only
+\[
+ e^b=\frac{\Mass_\omega(u)}{\int_Xe^F \mathrm{d}V},
+\]
+whose numerator depends on the unknown potential. Replacing that numerator by $\int_X\omega^n$ would discard the mass defect from \cref{chap:mass}.
+
+\section{The uniform potential estimate}
+
+The essential global estimate only needs an upper bound for the density. We follow the weighted integration method of Cherrier and Tosatti--Weinkove \cite{Cherrier87,TW10}. A finite recurrence will absorb the torsion terms. The normalized compactness theorem then finishes the argument after Sobolev iteration.
+
+\begin{lemma}\label{lem:pointwise-torsion-estimate}
+There is a constant $C$ depending on $\omega$ such that, for every positive $(1,1)$-form $\eta$, every smooth real $f$, every $\delta>0$, and $0\leq k\leq n-2$,
+\[
+ \begin{split}
+ |\dc f\wedge \mathrm{d}\omega\wedge\eta^k\wedge\omega^{n-k-2}|
+ \leq{}&\frac C\delta\,\mathrm{d}f\wedge\dc f\wedge\eta^k\wedge\omega^{n-k-1}\\
+ &+C\delta\,\eta^k\wedge\omega^{n-k}.
+ \end{split}
+\]
+The absolute value means that of the coefficient relative to the positive volume form $\omega^n$.
+\end{lemma}
+\begin{proof}
+At the point in question choose an $\omega$-unitary frame in which $\eta$ is diagonal, with positive eigenvalues $\lambda_1,\ldots,\lambda_n$. Expand $\eta^k$ as a sum over $k$-element subsets $I$, with coefficient a positive dimensional multiple of $\lambda_I=\prod_{i\in I}\lambda_i$. A surviving coefficient from $\dc f\wedge \mathrm{d}\omega$ has the form of a bounded coefficient of $\mathrm{d}\omega$ times one first derivative $f_a$, where $a\notin I$. Young's inequality bounds its absolute value by
+\[
+ C\lambda_I|f_a|\leq (C/\delta)\lambda_I|f_a|^2
+                              +C\delta\lambda_I.
+\]
+The sum of the first terms is bounded by a fixed multiple of the first positive form in the assertion: its diagonal expansion contains precisely the terms $\lambda_I|f_a|^2$ with $a\notin I$. The second positive form contains all the $\lambda_I$. Finitely many indices and the uniform bound for $\mathrm{d}\omega$ give a uniform $C$. The normalization of $\dc$ changes only this constant.
+\end{proof}
+
+\begin{lemma}\label{lem:cherrier-gradient}
+Suppose $u$ is smooth, $\eta=\omega+\ddc u>0$, and
+$\eta^n\leq\Lambda\omega^n$ for a fixed $\Lambda>0$. There are constants $p_0\geq1$ and $C$ depending only on $\omega$ and $\Lambda$ such that
+\[
+ \int_X\mathrm{d}(e^{-pu/2})\wedge\dc(e^{-pu/2})\wedge\omega^{n-1}
+ \leq Cp\int_Xe^{-pu}\omega^n\quad(p\geq p_0).
+\]
+\end{lemma}
+\begin{proof}
+For a fixed $p\geq1$, abbreviate
+\[
+ M_k=\int_Xe^{-pu}\eta^k\wedge\omega^{n-k},\qquad
+ J_k=\int_Xe^{-pu}\mathrm{d}u\wedge\dc u\wedge\eta^k\wedge\omega^{n-k-1},
+ \quad J=\sum_{k=0}^{n-1}J_k.
+\]
+All these numbers are nonnegative. Let
+$T=\sum_{k=0}^{n-1}\eta^k\wedge\omega^{n-k-1}$. Since $\mathrm{d}\eta=\mathrm{d}\omega$, differentiation gives
+\[
+ \mathrm{d}T=n\sum_{k=0}^{n-2}\eta^k\wedge\omega^{n-k-2}\wedge \mathrm{d}\omega.
+\]
+The sum is empty when $n=1$. Stokes' theorem gives the exact identity
+\[
+ \begin{split}
+ \int_Xe^{-pu}(\eta^n-\omega^n)
+ &=\int_Xe^{-pu}\ddc u\wedge T\\
+ &=pJ+\int_Xe^{-pu}\dc u\wedge \mathrm{d}T.
+ \end{split}
+\]
+The density assumption bounds the left side above by $(\Lambda+1)M_0$. Apply \cref{lem:pointwise-torsion-estimate} to the last integral, and choose $\delta=K/p$ for a sufficiently large fixed $K$. The contribution proportional to $J/\delta$ is then at most $pJ/2$. After absorption we obtain
+\begin{equation}\label{eq:weighted-first-bound}
+ pJ\leq CM_0+\frac Cp\sum_{k=0}^{n-2}M_k.
+\end{equation}
+This estimate alone is not enough, because the mixed weighted masses on the right have not been bounded.
+
+For $1\leq k\leq n-2$, a second integration by parts gives
+\begin{equation}\label{eq:weighted-recurrence}
+ M_k-M_{k-1}=pJ_{k-1}+R_k,
+ \qquad
+ R_k=\int_Xe^{-pu}\dc u\wedge
+                \mathrm{d}(\eta^{k-1}\wedge\omega^{n-k}).
+\end{equation}
+The derivative in $R_k$ has two terms, with coefficients $k-1$ and $n-k$. Apply the pointwise estimate with $\delta=1/p$ to each of them. Omitting nonexistent negative indices yields
+\[
+ |R_k|\leq Cp(J_{k-2}+J_{k-1})
+                   +\frac Cp(M_{k-2}+M_{k-1}),
+ \qquad M_{-1}=J_{-1}=0.
+\]
+Consequently, for $p\geq1$,
+\[
+ M_k\leq C(M_{k-1}+M_{k-2}+pJ).
+\]
+Induction over the finitely many values of $k$ proves
+\[
+ \sum_{k=0}^{n-2}M_k\leq C(M_0+pJ).
+\]
+For $n=2$ this is immediate, and for $n=1$ the sum is empty. Inserting this bound in \eqref{eq:weighted-first-bound} gives
+$pJ\leq CM_0+C'J$. Taking $p\geq2C'$ absorbs the last term and proves $pJ\leq CM_0$.
+
+Finally,
+\[
+ \int_X\mathrm{d}(e^{-pu/2})\wedge\dc(e^{-pu/2})\wedge\omega^{n-1}
+ =\frac{p^2}{4}J_0\leq\frac{p^2}{4}J\leq CpM_0.
+\]
+Every integration is between smooth forms, and the only derivatives of the background were estimated explicitly.
+\end{proof}
+
+\begin{theorem}\label{thm:smooth-czero}
+For each $\Lambda>0$ there is $C_\Lambda$ such that every smooth $u$ with
+\[
+ \omega+\ddc u>0,\qquad \sup_Xu=0,\qquad
+ (\omega+\ddc u)^n\leq\Lambda\omega^n
+\]
+satisfies $\|u\|_\infty\leq C_\Lambda$.
+\end{theorem}
+\begin{proof}
+Let $\mathrm{d}\mu=\omega^n/\int_X\omega^n$. The usual Sobolev inequality for the fixed Riemannian metric of $\omega$ gives, for some $\beta>1$,
+\[
+ \left(\int_X |w|^{2\beta}\,\mathrm{d}\mu\right)^{1/\beta}
+ \leq C\left(\int_X\mathrm{d}w\wedge\dc w\wedge\omega^{n-1}
+                         +\int_X|w|^2\,\mathrm{d}\mu\right).
+\]
+We may take $\beta=n/(n-1)$ if $n\geq2$, and for example $\beta=2$ if $n=1$. Apply this to $w=e^{-pu/2}$ and use \cref{lem:cherrier-gradient}. With $Z=e^{-u}$ we get
+\[
+ \|Z\|_{L^{p\beta}(\mu)}\leq(Cp)^{1/p}\|Z\|_{L^p(\mu)}
+ \quad(p\geq p_0).
+\]
+Iterate at $p=p_0\beta^j$. The product of the constants is finite because
+$\sum_j(1+\log(p_0\beta^j))/(p_0\beta^j)<\infty$. Hence, for a uniform $C_1\geq1$ and $m=\inf_Xu$,
+\begin{equation}\label{eq:near-minimum-integral}
+ e^{-p_0m}\leq C_1\int_Xe^{-p_0u}\,\mathrm{d}\mu.
+\end{equation}
+This still involves the unknown potential on the right. Divide by $e^{-p_0m}$ and set $A=p_0^{-1}\log(2C_1)$. The integrand $e^{-p_0(u-m)}$ is at most one everywhere and at most $(2C_1)^{-1}$ outside $S=\{u\leq m+A\}$. Therefore \eqref{eq:near-minimum-integral} implies
+\[
+ \mu(S)\geq\frac1{2C_1}=:\delta>0.
+\]
+By \cref{thm:normalized-compactness}, $\int_X(-u)\,\mathrm{d}\mu\leq C_0$. On $S$ we have $-u\geq-m-A$, so
+\[
+ C_0\geq\int_X(-u)\,\mathrm{d}\mu\geq\delta(-m-A)
+\]
+when $-m\geq A$; otherwise the desired bound is immediate. Thus $-m\leq A+C_0/\delta$, proving the theorem.
+\end{proof}
+
+Neither the gradient estimate nor its consequence uses a uniform upper bound for the masses of all potentials. The density bound applies to the particular solutions being studied. This is why the estimate remains compatible with \cref{thm:hopf-unbounded}.
+
+\section{Uniqueness by ellipticity}
+
+The smooth uniqueness argument does not use the uncorrected global comparison principle.
+
+\begin{proposition}\label{prop:smooth-uniqueness}
+Suppose $(u,b)$ and $(v,c)$ are smooth solutions of \eqref{eq:smooth-ma} with the same $F$ and $\mathrm{d}V$. Then $b=c$ and $u-v$ is constant.
+\end{proposition}
+\begin{proof}
+At a maximum of $u-v$, one has $\omega_u\leq\omega_v$, so $e^b\leq e^c$. At a minimum one obtains $e^b\geq e^c$. Therefore $b=c$.
+
+Put $h=u-v$ and $\eta_t=\omega_v+t\ddc h$ for $0\leq t\leq1$. This is a family of strictly positive forms. Subtracting the logarithms of the two equations and integrating the derivative along the segment gives
+\[
+ 0=\int_0^1 n\,\frac{\ddc h\wedge\eta_t^{n-1}}{\eta_t^n}\,\mathrm{d}t.
+\]
+The right side is a linear elliptic operator applied to $h$. Its coefficients are smooth and uniformly positive on the compact manifold, and it has no zeroth-order term. The strong maximum principle implies that $h$ is constant.
+\end{proof}
+
+\Needspace{8\baselineskip}
+\begin{proposition}\label{prop:exp-smooth-unique}
+Let $\lambda>0$ and $f$ be smooth and strictly positive. There is at most one smooth strictly positive potential solving
+\[
+ \omega_u^n=e^{\lambda u}f\,\mathrm{d}V.
+\]
+\end{proposition}
+\begin{proof}
+If $u,v$ solve the equation, evaluate it at a maximum of $u-v$. The matrix inequality $\omega_u\leq\omega_v$ gives $e^{\lambda(u-v)}\leq1$ there, so $u\leq v$ everywhere. Interchanging them proves equality.
+\end{proof}
+
+Existence will follow from \cref{thm:smooth-proper-existence}. This pointwise uniqueness argument does not apply directly to an arbitrary unbounded weak solution.
+
+\section{Smooth dependence}
+
+The normalization $\sup_Xu=0$ is convenient for compactness, but need not vary differentiably with the data. For differentiating solutions, fix instead the linear normalization
+\[
+ \int_Xu\,\mathrm{d}V=0.
+\]
+Changing between these normalizations only adds a constant to $u$ and leaves $b$ unchanged.
+
+\begin{proposition}\label{prop:smooth-dependence}
+With this linear normalization, the solution $(u,b)$ of \eqref{eq:smooth-ma} depends smoothly on $F$ in H\"older spaces, and hence along every smooth finite-dimensional family of smooth data.
+\end{proposition}
+\begin{proof}
+Consider the map
+\[
+ (u,b,F)\longmapsto
+ \log\frac{(\omega+\ddc u)^n}{\mathrm{d}V}-F-b
+\]
+on the open set of strictly positive potentials in $C^{k+2,\alpha}$, restricted to $\int_Xu\,\mathrm{d}V=0$. Its derivative in $(u,b)$ is
+\[
+ (v,a)\longmapsto L_uv-a.
+\]
+Given $h\in C^{k,\alpha}$, integrating $L_uv-a=h$ against $\mu_u$ forces
+$a=-\int_Xh\,\mathrm{d}\mu_u$. For this value, the equation for $v$ satisfies the compatibility condition of \cref{prop:adjoint-gauduchon}, and has a unique solution with zero $\mathrm{d}V$-mean. Elliptic estimates make this inverse bounded. The Banach-space implicit function theorem now gives local smooth dependence. Uniqueness identifies these local solution maps, and elliptic regularity allows arbitrary $k$ for smooth data.
+\end{proof}
+
+\input{author/section_smooth_estimates}
+
+\section{Completing the continuity argument}
+
+\begin{proof}[of \cref{thm:tw-smooth}]
+The dimension-one argument was given at the start of the chapter. In higher dimension put
+$G=F+\log(\mathrm{d}V/\omega^n)$ and consider
+\[
+ (\omega+\ddc u_t)^n=e^{tG+b_t}\omega^n,
+ \qquad\sup_Xu_t=0,\qquad0\leq t\leq1.
+\]
+At $t=0$, take $u_0=0$ and $b_0=0$. The local implicit-function argument in \cref{prop:smooth-dependence}, with the additive constant temporarily fixed by a linear mean, shows that the set of solvable parameters is open.
+
+At every solvable parameter, \cref{prop:b-extrema} gives
+\[
+ -\sup_X(tG)\leq b_t\leq-\inf_X(tG),
+ \qquad e^{tG+b_t}\leq e^{\operatorname{osc}_XG}.
+\]
+The constants $b_t$ are uniformly bounded, and \cref{thm:smooth-czero} bounds $u_t$ in $C^0$. Apply \cref{thm:classical-higher-estimate}. Along any sequence of solvable parameters converging in $[0,1]$, a subsequence of $(u_t,b_t)$ therefore converges smoothly to a solution; uniform equivalence of the metrics preserves strict positivity. The supremum normalization also passes to the limit. Thus the solvable set is closed. Connectedness of $[0,1]$ gives a solution at $t=1$, and \cref{prop:smooth-uniqueness} gives uniqueness.
+\end{proof}
+
+\section{The smooth exponential equation}
+
+\begin{theorem}\label{thm:smooth-proper-existence}
+For every $\lambda>0$ and every smooth real $F$, there is a unique smooth $u$ with $\omega_u>0$ such that
+\[
+ \omega_u^n=e^{\lambda u+F}\omega^n.
+\]
+There is no free additive constant, and
+\[
+ -\lambda^{-1}\sup_XF\leq u\leq-\lambda^{-1}\inf_XF.
+\]
+\end{theorem}
+\begin{proof}
+At a minimum of $u$, the equation gives $\lambda u+F\geq0$; at a maximum it gives $\lambda u+F\leq0$. These inequalities prove the stated bounds.
+
+Consider the equations
+\[
+ \omega_{u_t}^n=e^{\lambda u_t+tF}\omega^n,\qquad0\leq t\leq1.
+\]
+At $t=0$, $u_0=0$ is a solution. The linearization in $u$ is $L_u-\lambda$. Its kernel is zero by the maximum principle. Its Fredholm index is zero: deform its positive principal coefficients to those of a fixed Laplacian while keeping the negative zeroth-order term. The latter operator is invertible, and elliptic Fredholm index is constant under this deformation. Thus $L_u-\lambda$ is an isomorphism between the usual H\"older spaces, with bounded inverse by Schauder theory. The implicit function theorem proves openness.
+
+The extrema bounds give $\|u_t\|_\infty\leq\lambda^{-1}\|F\|_\infty$. The semilinear consequence of \cref{thm:hermitian-second-estimate} gives uniform ellipticity and all higher bounds. A subsequence along any converging sequence of solvable parameters therefore converges smoothly to a strictly positive solution at the limit. This proves closedness, and hence existence at $t=1$. Uniqueness is \cref{prop:exp-smooth-unique}.
+\end{proof}
+
+\begin{proposition}\label{prop:smooth-proper-comparison}
+Let $\lambda>0$, let $F$ be smooth, and let $v,w$ be smooth strictly $\omega$-plurisubharmonic functions. If
+\[
+ \omega_v^n\geq e^{\lambda v+F}\omega^n,
+ \qquad \omega_w^n\leq e^{\lambda w+F}\omega^n,
+\]
+then $v\leq w$.
+\end{proposition}
+\begin{proof}
+If $v-w$ had a positive maximum at $x$, then $\omega_v(x)\leq\omega_w(x)$. Taking determinants and applying the two assumptions would give
+$e^{\lambda v(x)+F(x)}\leq e^{\lambda w(x)+F(x)}$, contradicting $v(x)>w(x)$.
+\end{proof}
+
+For a fixed smooth obstacle $f$, the choice $\lambda=\beta$ and $F=-\beta f$ gives
+\[
+ \omega_{u_\beta}^n=e^{\beta(u_\beta-f)}\omega^n.
+\]
+These equations penalize values above the obstacle. In \cref{prop:smooth-obstacle-support} we use them to construct its envelope and prove contact support. The necessary convergence will use only bounded regularization and the comparison just proved.
+
+\section{The Gauduchon derivative of the constant}
+
+Let $F_t$ be a smooth family and write $(u_t,b_t)$ for its solutions. A dot denotes differentiation in $t$. At each $t$, use the probability measure $\mu_{u_t}$ associated to $\eta_t=\omega_{u_t}$ in \cref{chap:gauduchon}.
+
+\begin{theorem}\label{thm:b-derivatives}
+The normalization constant satisfies
+\begin{align}
+ \dot b_t&=-\int_X\dot F_t\,\mathrm{d}\mu_{u_t},\label{eq:b-first}\\
+ \ddot b_t&=-\int_X\ddot F_t\,\mathrm{d}\mu_{u_t}
+ -\int_X\operatorname{tr}(A_t^2)\,\mathrm{d}\mu_{u_t},\label{eq:b-second}
+\end{align}
+where $A_t=\eta_t^{-1}\ddc\dot u_t$ is the Hermitian endomorphism determined by the indicated forms. In particular, along an affine family $F_t=F_0+tG$, the function $b_t$ is concave. Its second derivative vanishes at a parameter value if and only if $G$ is constant on $X$.
+\end{theorem}
+\begin{proof}
+Differentiating the logarithm of \eqref{eq:smooth-ma} gives
+\[
+ L_{u_t}\dot u_t=\dot F_t+\dot b_t.
+\]
+Integration against $\mu_{u_t}$ proves \eqref{eq:b-first}.
+
+For positive matrices $H_t$, direct differentiation of the inverse gives
+\[
+ \frac{\mathrm{d}^2}{\mathrm{d}t^2}\log\det H_t
+ =\operatorname{tr}(H_t^{-1}\ddot H_t)
+  -\operatorname{tr}\bigl((H_t^{-1}\dot H_t)^2\bigr).
+\]
+Apply this pointwise to $\eta_t$. The second derivative of the equation is
+\[
+ L_{u_t}\ddot u_t-\operatorname{tr}(A_t^2)
+ =\ddot F_t+\ddot b_t.
+\]
+At this fixed parameter, integrate against $\mu_{u_t}$ once more. This proves \eqref{eq:b-second}; there is no need to differentiate the measure.
+
+The eigenvalues of the Hermitian endomorphism $A_t$ are real, so $\operatorname{tr}(A_t^2)\geq0$. For affine $F_t$ the second derivative is therefore nonpositive. If it vanishes, strict positivity of the smooth density of $\mu_{u_t}$ implies $A_t=0$ everywhere. Thus $\ddc\dot u_t=0$; the maximum principle gives that $\dot u_t$ is constant. The first differentiated equation then gives $G=-\dot b_t$, a constant. Conversely, if $G$ is constant, the solution metric is independent of $t$ and $b_t=b_0-tG$.
+\end{proof}
+
+This is one precise sense in which Gauduchon metrics replace a lost integration identity: the response of the equation to its density is measured by the adjoint probability $\mu_u$. Related concavity arguments for elliptic normalization constants use exactly this Gauduchon construction in \cite[Theorem 2.13]{Collins21}. No novelty is claimed for the method or the calculation.
+
+\Needspace{6\baselineskip}
+\begin{corollary}\label{cor:b-lipschitz}
+For two smooth functions $F,G$, the normalization constants satisfy
+\[
+ -\sup_X(G-F)\leq b(G)-b(F)\leq-\inf_X(G-F).
+\]
+In particular, $|b(G)-b(F)|\leq\|G-F\|_\infty$. If $G-F$ is nonconstant, both displayed inequalities are strict.
+\end{corollary}
+\begin{proof}
+Apply \eqref{eq:b-first} along $F_t=F+t(G-F)$ and integrate over $0\leq t\leq1$. Each $\mu_{u_t}$ is a probability measure with strictly positive smooth density. The integral of a nonconstant continuous function against it lies strictly between that function's minimum and maximum.
+\end{proof}
+
+Thus $b$ is a decreasing, concave, Lipschitz functional of the logarithmic density, with the translation rule $b(F+a)=b(F)-a$. It extends uniquely as a Lipschitz functional from smooth to continuous $F$ by uniform approximation. This last statement concerns the scalar functional only; existence or regularity of limiting potentials requires further estimates.
+
+\section{Prescribing a Gauduchon volume form}
+
+There is also a Monge--Amp\`ere type equation whose unknown is the $(n-1)$st power of a metric. It respects the Gauduchon condition and its Aeppli class.
+
+\Needspace{22\baselineskip}
+\begin{theorem}[Sz\'ekelyhidi--Tosatti--Weinkove]
+\label{thm:stw-volume}
+Assume $n\geq2$. Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)$ with $u$ smooth and $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
+\[
+ \Gamma_u=\gamma_0^{n-1}+\ddc u\wedge\gamma^{n-2}
+ +\operatorname{Re}\left(
+     \frac{\mathrm i}{2\pi}\partial u\wedge\bar\partial(\gamma^{n-2})
+   \right)
+\]
+has a positive root $\eta_u^{n-1}=\Gamma_u$ satisfying
+\[
+ \eta_u^n=e^{F+b}\gamma^n.
+\]
+\end{theorem}
+
+This is \cite[Theorem 1.4]{STW17}, with $u$ equal to $2\pi$ times the reference potential. We give its proof below. The potential bound comes first, followed by the adjoint calculation, the torsion identities and the second-order estimate. A Euclidean Liouville theorem then gives the gradient bound by rescaling. Standard elliptic regularity completes the continuity argument.
+
+To see the preserved geometry, set
+$\xi_u=\mathrm i\,\bar\partial u\wedge\gamma^{n-2}/(4\pi)$.
+The Leibniz rule gives
+$\Gamma_u-\gamma_0^{n-1}=\partial\xi_u+\bar\partial\overline{\xi_u}$.
+If $\gamma_0$ is Gauduchon, so is $\eta_u$, and their $(n-1)$st powers have the same Aeppli class: the difference has the displayed exact form. Uniqueness here concerns the stated scalar ansatz; it does not assert uniqueness among all Gauduchon metrics in that Aeppli class.
+
+\input{author/section_stw_czero}
+
+\input{author/section_gauduchon_volume_adjoint}
+
+\input{author/section_stw_structure}
+
+\input{author/section_stw_second_order}
+
+\input{author/section_stw_liouville}
+
+\input{author/section_stw_gradient}
+
+\input{author/section_stw_continuity}
+
+\section{What must change for weak solutions}
+
+The smooth theorem is the first part of the equation theory. The remaining parts require additional definitions and estimates:
+\begin{enumerate}
+\item For densities in $L^p$, $p>1$, one must define the bounded Monge--Amp\`ere measure and obtain uniform potential estimates.
+\item For a prescribed singularity type, the background may be merely big and the solution unbounded. The equation must then use a non-pluripolar product.
+\item For general non-pluripolar right-hand sides, a suitable relative full-mass class must be specified. In a non-closed background its definition cannot rely on invariance of the raw mass within a singularity type.
+\end{enumerate}
+
+The results of \cite{ALS26,XL26} address these questions under different hypotheses, specified in the chapters below. Smooth solvability supplies neither bounded mass nor positive lower volume. For $\theta_u^n=c\mu$, uniqueness of $c$ and uniqueness of $u$ modulo constants are distinct assertions. A weak theorem concerning only the scalar must not be read as the full uniqueness statement of \cref{prop:smooth-uniqueness}.

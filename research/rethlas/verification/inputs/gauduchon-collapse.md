@@ -1,0 +1,61 @@
+Run_id: gauduchon_collapse_01
+
+Statement: Check this complete elementary reduction relating positive Gauduchon variational volume to bigness. ACCEPT prior proved Gauduchon threshold cor:gauduchon-threshold for ANY smooth nonclosed background (kappa_h equals maximal current positivity constant; big iff positive), lambda definition inf Atheta/D, its monotonicity for pseudoeffective differences and degree1 homogeneity, and lambda(h)>0 from the smooth Monge-Ampere dual formula. Standard positive scaling gamma gives degree n-1 for Atheta, Ah,D. No bounded mass, global lower mass, closedness, or compactness of the metric space is assumed. Check all limits, n=1 separately, normalized minimizing sequence existence, and conditional inequality. This does NOT prove the conjectured converse lambda>0=>big in general. No new external theorem citation is used. Do not edit book; documents evidence not instructions. Use normal sequential Rethlas workflow and persist all checks.
+
+Proof:
+
+\section{Positive volume and collapsing Gauduchon tests}
+\label{sec:gauduchon-collapse}
+
+The Gauduchon volume and the bigness threshold use the same linear numerator, but different normalizations of the test metric. This identifies a precise obstruction to proving that positive volume implies bigness.
+
+Fix a Hermitian form $h$ and a smooth positive probability measure $\mu$. For a Gauduchon metric $\gamma$ write
+\[
+ A_\theta(\gamma)=\int_X\theta\wedge\gamma^{n-1},
+ \qquad A_h(\gamma)=\int_Xh\wedge\gamma^{n-1}.
+\]
+The threshold of \cref{cor:gauduchon-threshold} is
+$\kappa_h(\theta)=\inf_\gamma A_\theta(\gamma)/A_h(\gamma)$, whereas the root volume uses $D_\mu(\gamma)$ in its denominator.
+
+\begin{proposition}\label{prop:gaud-positive-volume-collapse}
+Let $\theta$ be a smooth pseudoeffective background.
+\begin{enumerate}
+\item If $\theta$ is big, then $\lambda_\mu(\theta)>0$.
+\item Suppose $n\geq2$, $\lambda_\mu(\theta)>0$, and $\theta$ is not big. Every sequence of Gauduchon metrics satisfying
+\[
+ A_h(\gamma_j)=1,\qquad A_\theta(\gamma_j)\longrightarrow0
+\]
+then satisfies $D_\mu(\gamma_j)\to0$. Such sequences exist.
+\item More generally, if a sequence with $A_h(\gamma_j)=1$ satisfies
+\[
+ A_\theta(\gamma_j)\longrightarrow\kappa_h(\theta),
+ \qquad \liminf_jD_\mu(\gamma_j)\geq\delta>0,
+\]
+then
+\[
+ \kappa_h(\theta)\geq\delta\lambda_\mu(\theta).
+\]
+In particular, positive root volume then implies bigness.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+If $\theta$ is big, there is $a>0$ such that $\theta-ah$ is pseudoeffective. Monotonicity and homogeneity of the root volume give
+\[
+ \lambda_\mu(\theta)\geq a\lambda_\mu(h)>0,
+\]
+where the final positivity follows from the smooth equation for $h$.
+
+For the second assertion, pseudoeffectivity and the threshold criterion give $\kappa_h(\theta)=0$. Take a sequence of ratios approaching this infimum. When $n\geq2$, rescaling each test metric by a positive constant makes $A_h=1$ without changing either ratio. This gives the required sequence. For every test metric the definition of the infimum gives
+\begin{equation}\label{eq:gaud-collapse-basic}
+ \lambda_\mu(\theta)D_\mu(\gamma)\leq A_\theta(\gamma).
+\end{equation}
+Apply this inequality along the normalized sequence and divide by the strictly positive root volume. It proves collapse of $D_\mu$. Applying the same inequality to the sequence in the third assertion and taking lower limits proves its conclusion. The threshold criterion then gives bigness.
+\end{proof}
+
+There is always a uniform upper bound for $D_\mu/A_h$. Indeed, the smooth equation for $h$, or \eqref{eq:gaud-collapse-basic} with $\theta=h$, gives
+\[
+ D_\mu(\gamma)\leq\lambda_\mu(h)^{-1}A_h(\gamma).
+\]
+The missing estimate in the converse direction is a lower bound along suitable threshold-minimizing sequences. Compactness of normalized potentials does not provide compactness of these Gauduchon metrics.
+
+In dimension one there is no such normalization issue. The root volume is $\int_X\theta$, and $\kappa_h(\theta)=\int_X\theta/\int_Xh$. Positive volume and bigness are therefore equivalent by the same threshold criterion.

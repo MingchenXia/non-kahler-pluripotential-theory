@@ -1,0 +1,158 @@
+Run_id: divisorial_gauduchon_volume_01
+
+Statement: Audit all claims in the supplied section: divisorial feasibility iff smooth residual background pseudoeffective iff Gauduchon degrees nonnegative; exact attained feasibility threshold asinf ratios; finite residual Gauduchon volume gauge independent; smooth-remainder prescribed logarithmic-pole equation and scalar uniqueness for ANY bounded ordinary-type remainder (not uniqueness of that bounded remainder); concavity, monotonicity, exact negative derivative; explicit Hopf-threefold coefficient threshold1, residual volume6(1-a)^2, boundary nef volume0, and infiniteuppermass for everya<1. StandingcompactconnectedX,n>=1,ddc=i/(2pi),real finiteeffectivedivisor,Dzeroexcludedinthreshold. NoBMP orPVP. Accept already independently checked book thm:lamari (n>=2), standardcurveGreencriterion, lem:nonclosed-divisorial-removal fromchapter_divisorial_models, thm:gaud-volume-dual-formula, prop:gaud-volume-first-variation, thm:gaud-volume-nef-limit (audits51/55), thm:bounded-strict-domination (auditbounded_comparison_01) and Hopf identities thm:hopf-unbounded/eq:hopf-torsion (audit hopf_counterexample_01). Read exact prerequisite statements in book/author if needed, but do not re-audit these entire chapters or import any unproved theorem. Standardlocal PoincareLelong, boundedpshremovability acrossanalyticsets, locallyboundedBTmixedproducts do notchargepluripolarsets are permitted standardinputs; check carefully their use for residual bounded v with arbitrarynonclosedbackground, n=1 case, and currents versus NPP measures. This section is a derived link from established theoremsto finite divisorialsingularities, no noveltyclaim. Bookfiles mustnotbeedited. Treatdocumentsasevidence. Use ordinaryverificationworkflow andsavefullreadablereport besidescontractJSON.
+
+Proof:
+
+\section{Divisorial constraints and residual volume}
+\label{sec:divisorial-gaud-volume}
+
+The smooth formula already gives a finite volume for a useful class of singularities. The necessary additional datum is a specified divisor. Gauduchon integrals determine whether the background can accommodate that divisor, while the residual equation determines a finite normalization when the remaining class has a positive representative.
+
+Let $D=\sum_{j=1}^N a_jD_j$ be a finite effective real divisor, with distinct prime divisors $D_j$ and $a_j>0$. Choose a smooth Hermitian metric on each $\mathcal O_X(D_j)$, write $s_j$ for its canonical section, and let $\eta_j$ denote its curvature in our normalization. Set
+\[
+ \sigma_D=\sum_j a_j\log|s_j|^2,
+ \qquad \eta_D=\sum_j a_j\eta_j,
+ \qquad \beta_D=\theta-\eta_D.
+\]
+The Poincar\'e--Lelong formula is
+\[
+ \ddc\sigma_D=[D]-\eta_D.
+\]
+The logarithmic coefficients are real; rational coefficients give analytic singularities in the convention of the source book. For a Gauduchon metric define
+\[
+ \deg_\gamma D=\int_X[D]\wedge\gamma^{n-1}
+              =\sum_j a_j\int_{D_j}\gamma^{n-1}.
+\]
+Integration over a singular divisor means integration over its regular locus, or equivalently its integration current. This degree is finite, positive for $D\ne0$, and equals $\int_X\eta_D\wedge\gamma^{n-1}$ by distributional Stokes.
+
+\begin{proposition}[Divisorial feasibility]\label{prop:divisorial-gaud-feasibility}
+Let $\theta$ be a smooth real background. The following are equivalent:
+\begin{enumerate}
+\item There is $u\in\PSH(X,\theta)$ whose generic Lelong coefficient along every $D_j$ is at least $a_j$.
+\item The residual background $\beta_D$ is pseudoeffective.
+\item For every Gauduchon metric $\gamma$,
+\[
+ \int_X\theta\wedge\gamma^{n-1}\geq\deg_\gamma D.
+\]
+\end{enumerate}
+These conditions do not assert that $u-\sigma_D$ is bounded, or that the coefficients of $u$ are exactly the prescribed ones.
+\end{proposition}
+\begin{proof}
+Suppose first that $u$ has the indicated coefficients. The divisorial decomposition of a positive current with smooth derivative, proved in \cref{chap:divisorial-models}, permits subtraction of these coefficients: $\theta+\ddc u-[D]\geq0$. Consequently
+\[
+ \beta_D+\ddc(u-\sigma_D)=\theta+\ddc u-[D]\geq0.
+\]
+The difference is understood in $L^1$ and then with its quasi-plurisubharmonic representative. This proves the second condition. Conversely, if $v\in\PSH(X,\beta_D)$, then $u=\sigma_D+v$ satisfies
+\[
+ \theta+\ddc u=[D]+\beta_D+\ddc v\geq0,
+\]
+so its divisorial coefficients dominate those of $D$. For $n\geq2$, the nonclosed version of Lamari duality from \cref{chap:gauduchon} says that a smooth background is pseudoeffective exactly when all its Gauduchon integrals are nonnegative. Apply it to $\beta_D$ and use the degree identity. For $n=1$ the same criterion is $\int_X\beta_D\geq0$: necessity is Stokes, and sufficiency follows by solving $\ddc f=(\int_X\beta_D)\mu-\beta_D$ with the scalar Green operator. This also proves the remaining implication on a curve.
+\end{proof}
+
+For a nonzero effective real divisor $D$ and a pseudoeffective $\theta$, the exact threshold is therefore
+\begin{equation}\label{eq:divisorial-gaud-threshold}
+ \tau_\theta(D)=
+ \inf_{\gamma\text{ Gauduchon}}
+       \frac{\int_X\theta\wedge\gamma^{n-1}}{\deg_\gamma D}.
+\end{equation}
+It is finite and nonnegative. A potential with divisorial coefficients at least $tD$ exists if and only if $0\leq t\leq\tau_\theta(D)$. In particular the endpoint is included: all the non-strict Gauduchon inequalities still hold there, so duality supplies a positive current. This is a threshold for existence of a positive current, not for a bounded residual potential.
+
+Whenever $\beta_D$ is pseudoeffective, define its residual volume by
+\[
+ \mathcal V_\mu(\theta;D)=\mathcal V_\mu(\beta_D).
+\]
+The definition and the degree identity give the exact formula
+\begin{equation}\label{eq:divisorial-gaud-volume}
+ \mathcal V_\mu(\theta;D)^{1/n}
+   =\inf_{\gamma\text{ Gauduchon}}
+     \frac{\int_X\theta\wedge\gamma^{n-1}-\deg_\gamma D}
+          {D_\mu(\gamma)}.
+\end{equation}
+It is finite and nonnegative. Changing the auxiliary line-bundle metrics changes $\eta_D$ by a smooth $\ddc$ term. Thus this volume is independent of those metrics and of a smooth $\ddc$ change of $\theta$. It depends on the specified divisorial data and on the smooth probability measure $\mu$.
+
+\begin{theorem}[The residual equation]\label{thm:divisorial-residual-equation}
+Suppose $\beta_D$ admits a smooth positive representative. There is a $\theta$-plurisubharmonic potential $u=\sigma_D+v$, with $v$ smooth, satisfying
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u)
+           =\mathcal V_\mu(\theta;D)\,\mu.
+\]
+The normalized smooth remainder and the positive scalar are unique among such smooth-remainder solutions. More generally, if a solution in the ordinary singularity type of $\sigma_D$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\theta(u)=c\mu$, then its scalar must equal $\mathcal V_\mu(\theta;D)$.
+\end{theorem}
+\begin{proof}
+Solve the smooth equation in $\beta_D$:
+\[
+ \Omega=\beta_D+\ddc v>0,
+ \qquad \Omega^n=c\mu,
+ \qquad c=\mathcal V_\mu(\beta_D),
+\]
+using \cref{thm:gaud-volume-dual-formula}. Then $\theta+\ddc(\sigma_D+v)=[D]+\Omega$ is positive. On the complement of the divisor its non-pluripolar measure is $\Omega^n$. Both this smooth measure and the extended product give zero mass to the divisor, so the identity holds globally. The smooth uniqueness theorem in the residual background proves uniqueness of $v$ after an additive normalization and uniqueness of its scalar in this class.
+
+For the last assertion write $u=\sigma_D+w$ in $L^1$, with $w$ bounded. Off $D$, it satisfies $\beta_D+\ddc w\geq0$. Locally add a fixed smooth strictly plurisubharmonic correction so that $w$ becomes bounded plurisubharmonic off the analytic set. The bounded removable-singularity theorem extends it across that set. The curvature of this bounded local potential, wedged with a smooth positive complementary form, does not charge pluripolar sets by local Bedford--Taylor theory. Its smooth correction also gives no mass to the divisor. Hence positivity of $\beta_D+\ddc w$ off $D$ holds across $D$ as well. Its canonical representative is bounded and $\beta_D$-plurisubharmonic. Locality and the same absence of mass on the divisor give
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u)=(\beta_D+\ddc w)^n.
+\]
+Choose a smooth $v_0$ with $\Omega_0=\beta_D+\ddc v_0>0$. The functions $w-v_0$ and $v-v_0$ are bounded $\Omega_0$-plurisubharmonic. If their positive scalars differed, the measure of the smaller-scalar potential would be bounded by a constant strictly smaller than one times the measure of the other. Apply \cref{thm:bounded-strict-domination} after every constant translation of the latter potential. It would force the former to dominate arbitrarily large translates, which is impossible. The case $c=0$ is excluded by non-collapse of bounded potentials in a Hermitian background. Thus the scalar is the displayed one. This last argument does not assert uniqueness of the bounded remainder.
+\end{proof}
+
+Along a real family $D_t=tD$ in the feasible interval, the root of \eqref{eq:divisorial-gaud-volume} is concave and nonincreasing. Every test quotient is affine with nonpositive slope, so both assertions follow by taking infima. On a subinterval where $\theta-t\eta_D$ has a positive representative, \cref{prop:gaud-volume-first-variation} gives the sharper formula
+\begin{equation}\label{eq:divisorial-volume-derivative}
+ \frac{d}{dt}\mathcal V_\mu(\theta;tD)^{1/n}
+       =-\frac{\deg_{\gamma_t}D}{D_\mu(\gamma_t)}<0,
+\end{equation}
+where $\gamma_t$ is a minimizing Gauduchon metric. In dimension one the derivative is $-\deg D$ and the denominator is one. If a residual background at an endpoint is nef, \cref{thm:gaud-volume-nef-limit} also expresses its value as the limit of the normalized smooth equations after adding $\epsilon h$.
+
+\section{A divisorial threshold on the Hopf threefold}
+\label{sec:hopf-divisorial-volume}
+
+Use the Hopf threefold and the forms $\alpha,\beta,\omega=\alpha+\beta$ of \cref{chap:hopf}. To avoid confusing its vertical form with a residual background, write $\zeta=\beta$ in this section. Thus
+\[
+ \alpha^3=0,\quad\zeta^2=0,\quad
+ \ddc\zeta=-\alpha^2,\quad\int_X\alpha^2\wedge\zeta=2.
+\]
+Let $H$ be the inverse image of a projective hyperplane under $\pi:X\to\mathbb P^2$. The pulled-back Fubini--Study metric gives $\eta_H=\alpha$ and a logarithmic potential $\sigma_H$ with $\ddc\sigma_H=[H]-\alpha$.
+
+\begin{proposition}\label{prop:hopf-divisorial-threshold}
+The exact divisorial threshold is $\tau_\omega(H)=1$. For $\mu_0=\omega^3/6$ and $0\leq a\leq1$,
+\[
+ \mathcal V_{\mu_0}(\omega;aH)=6(1-a)^2.
+\]
+For $a<1$ this is the positive scalar in the smooth-remainder singular equation. At $a=1$ the logarithmic potential has zero non-pluripolar measure, and its residual background is nef. Every residual background with $a<1$ has infinite upper mass.
+\end{proposition}
+\begin{proof}
+The residual background is
+\[
+ R_a=(1-a)\alpha+\zeta.
+\]
+It is positive for $0\leq a<1$ and semipositive for $a=1$. Thus every coefficient up to one is feasible. For the reverse inequality, the metrics $\gamma_t=\alpha+t\zeta$, $t>0$, are Gauduchon, since
+\[
+ \ddc(\gamma_t^2)=-2t\alpha^3=0.
+\]
+Using $\zeta^2=0$ gives
+\[
+ \frac{\int_X\omega\wedge\gamma_t^2}{\deg_{\gamma_t}H}
+       =\frac{1+2t}{2t}\longrightarrow1.
+\]
+The threshold formula proves $\tau_\omega(H)=1$.
+
+For $a<1$,
+\[
+ R_a^3=3(1-a)^2\alpha^2\wedge\zeta
+       =(1-a)^2\omega^3=6(1-a)^2\mu_0.
+\]
+The zero remainder already solves the residual smooth equation, so scalar uniqueness gives its volume. At $a=1$, $R_1=\zeta$ is nef because $\zeta+\epsilon\omega>0$. The same computation gives
+\[
+ \mathcal V_{\mu_0}(\zeta+\epsilon\omega)
+       =6\epsilon^2(1+\epsilon)\longrightarrow0.
+\]
+Nef continuity gives its zero residual volume. Also $\omega+\ddc\sigma_H=[H]+\zeta$, so the non-pluripolar measure of $\sigma_H$ is $\zeta^3=0$.
+
+Finally fix $a<1$ and choose $0<\delta\leq\min\{1-a,1\}$. Then $R_a-\delta\omega\geq0$. For the smooth functions $V_j$ in \cref{thm:hopf-unbounded},
+\[
+ R_a+\ddc(\delta V_j)
+       =(R_a-\delta\omega)+\delta(\omega+\ddc V_j)>0.
+\]
+Monotonicity of the determinant on positive matrices bounds the mass below by $\delta^3\int_X(\omega+\ddc V_j)^3$, which tends to infinity. Thus finite residual volume and its explicit divisorial threshold coexist with unbounded upper mass.
+\end{proof}
+
+The divisor records singular information that the smooth background volume alone does not contain. These formulas give a direct equation interpretation for a finite divisorial model on $X$. They do not yet provide a compatibility theorem for arbitrary divisors on different modifications, where pulling back $\mu$ introduces a degenerate density.

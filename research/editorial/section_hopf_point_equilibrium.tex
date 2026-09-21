@@ -1,0 +1,140 @@
+\section{A point pole on the Hopf manifold}
+\label{sec:hopf-point-equilibrium}
+
+The one-point case on the Hopf manifold admits an explicit calculation of both the kernel measure and its Fubini--Study potential. It supplies a lower asymptotic for a selecting weight which does not descend. The limit also shows exactly which singularity information the section spaces have lost.
+
+Use $X_n\to\mathbb P^q$, $q=n-1\geq1$, with $L=L_1$, the Fubini--Study metric and probability volume $\nu_X=\omega^n/(2n)$ from the preceding sections. Let $p\in X_n$ lie over $b=[1:0:\cdots:0]$. Suppose $\varphi$ has a single logarithmic pole of rational coefficient $0<a<1$ at $p$ and is locally bounded elsewhere, as in \eqref{eq:isolated-selecting-poles}. The continuous weight is zero. Set
+\[
+ t([Z_0:\cdots:Z_q])=
+       \frac{|Z_1|^2+\cdots+|Z_q|^2}{|Z_0|^2+\cdots+|Z_q|^2},
+ \qquad r_m=\max\{\lfloor ma\rfloor-q,0\},
+ \qquad D_m=\binom{m+q}{q}.
+\]
+Thus $t=0$ exactly at $b$. Define the function $e_a$ on $[0,1]$ by
+\begin{equation}\label{eq:point-equilibrium-function}
+ e_a(t)=
+ \begin{cases}
+ a\log(t/a)+(1-a)\log((1-t)/(1-a)),&0<t<a,\\
+ 0,&a\leq t\leq1,\\
+ -\infty,&t=0,
+ \end{cases}
+\end{equation}
+and put $E_a=e_a\circ t$ on $\mathbb P^q$.
+
+\begin{proposition}\label{prop:hopf-point-binomial-kernel}
+The selected kernel and dimension are
+\[
+ B_{X_n,m}=D_m\left(
+          \sum_{j=r_m}^{m}\binom mj t^j(1-t)^{m-j}\right)\circ\pi,
+ \qquad
+ N_m=D_m-\binom{r_m+q-1}{q}.
+\]
+The last binomial coefficient is zero when $r_m=0$. In particular all these spaces are nonempty, and
+\[
+ \lim_{m\to\infty}\frac{q!N_m}{m^q}=1-a^q>0.
+\]
+\end{proposition}
+\begin{proof}
+By \cref{prop:isolated-pole-section-descent}, the space on the base consists of homogeneous polynomials of degree $m$ vanishing to order at least $r_m$ at $b$. In the affine chart $Z_0=1$, this selects exactly the monomials $Z^\ell$ with $\ell_1+\cdots+\ell_q\geq r_m$.
+
+Coordinate circle invariance makes distinct monomials orthogonal. Their squared norms for $\sigma^q$ are
+\[
+ \int_{\mathbb P^q}\frac{|Z^\ell|^2}{|Z|^{2m}}\,\sigma^q
+       =\frac{q!\,\ell_0!\cdots\ell_q!}{(m+q)!},
+ \qquad |\ell|=m.
+\]
+For completeness, integrate $|z^\ell|^2e^{-|z|^2}$ over $\mathbb C^{q+1}$ in two ways. Product integration gives $\pi^{q+1}\prod_i\ell_i!$; radial integration separates a sphere average and the factor $(m+q)!$. Dividing by the same computation for $\ell=0$ gives the displayed normalized sphere average. Its projective pushforward is $\sigma^q$, since both are the invariant probability under the unitary group. This proves the norm formula.
+
+The reciprocal squared norm is $D_m m!/(\ell_0!\cdots\ell_q!)$. Sum first over the monomials with $\ell_1+\cdots+\ell_q=j$. The multinomial formula gives
+\[
+ D_m\binom mj t^j(1-t)^{m-j}.
+\]
+The norms and kernels lift exactly to $X_n$, proving the first formula. There are $\binom{j+q-1}{q-1}$ monomials of affine degree $j$. Summing the excluded degrees $0\leq j<r_m$ gives $\binom{r_m+q-1}{q}$. Since $r_m/m\to a$ and $0\leq r_m\leq m$, this proves the dimension formula, nonemptiness and the limit.
+\end{proof}
+
+\begin{theorem}\label{thm:hopf-point-potential-limit}
+Let $U_m=m^{-1}\log B_{X_n,m}$ be the global partial Fubini--Study potential for the zero continuous weight. Then
+\[
+ U_m\longrightarrow E_a\circ\pi
+\]
+in $L^1(X_n)$, pointwise with extended values, and locally uniformly off the fiber $\pi^{-1}(b)$. The normalized measures converge in total variation:
+\[
+ \frac{q!}{m^q}B_{X_n,m}\,\nu_X
+       \longrightarrow
+       \mathbf1_{\{t\circ\pi>a\}}\nu_X.
+\]
+\end{theorem}
+\begin{proof}
+Write the sum in the proposition as $P_m(t)$. For fixed $0<t<1$, it is the probability that a binomial random variable of parameters $(m,t)$ is at least $r_m$. Its variance is $mt(1-t)$. Chebyshev's inequality and $r_m/m\to a$ imply
+\[
+ P_m(t)\longrightarrow
+ \begin{cases}0,&t<a,\\1,&t>a.\end{cases}
+\]
+The pushforward of $\sigma^q$ by $t$ is $q t^{q-1}\,\mathrm{d}t$. One can see this directly in the affine chart: the Fubini--Study radial density is
+$2q r^{2q-1}(1+r^2)^{-q-1}\,\mathrm{d}r$, and $t=r^2/(1+r^2)$. In particular the level $t=a$ has measure zero. Now $0\leq P_m\leq1$ and $q!D_m/m^q\to1$. Dominated convergence gives convergence of the densities in $L^1(\sigma^q)$, hence also in $L^1(\nu_X)$ after lifting. This is exactly the asserted total-variation convergence. Its limiting mass is $\int_a^1 qt^{q-1}\,\mathrm{d}t=1-a^q$.
+
+To compute the potential, put
+\[
+ H(s)=-s\log s-(1-s)\log(1-s),\qquad 0\leq s\leq1,
+\]
+with $0\log0=0$. The elementary binomial bounds are
+\[
+ \frac{e^{mH(j/m)}}{m+1}\leq\binom mj
+                   \leq e^{mH(j/m)}\quad(0\leq j\leq m).
+\]
+Indeed the $j$th probability for parameters $(m,j/m)$ is at most one and at least $1/(m+1)$. For the latter assertion, the ratio of neighboring probabilities shows that the $j$th term is a largest term; the $m+1$ terms sum to one. The endpoint cases have probability one.
+
+The logarithm of a sum of at most $m+1$ nonnegative terms differs from the largest logarithm by at most $\log(m+1)$. It follows that $m^{-1}\log P_m(t)$ differs by at most $\log(m+1)/m$ from
+\[
+ \max_{r_m\leq j\leq m}
+ \left\{H(j/m)+(j/m)\log t+(1-j/m)\log(1-t)\right\}.
+\]
+On compact subintervals of $(0,1)$, uniform continuity and $r_m/m\to a$ make these maxima converge uniformly to the maximum over $a\leq s\leq1$. Differentiation in $s$ shows that the maximum is zero when $t\geq a$ and equals the first expression in \eqref{eq:point-equilibrium-function} when $t<a$. Thus the limit is $e_a(t)$, including at $t=a$.
+
+There is also uniform convergence near $t=1$. Choose $c$ with $a<c<1$. The same variance estimate gives $P_m(t)\geq1-C/m$ uniformly for $c\leq t\leq1$ and large $m$; hence $m^{-1}\log P_m\to0$ uniformly there. Together with the preceding compact-interval argument and $m^{-1}\log D_m\to0$, this proves local uniform convergence off $t=0$. At $t=0$, eventually $r_m>0$, so $P_m(0)=0$ and the extended pointwise limit is $-\infty$.
+
+Finally $U_m\in\PSH(X_n,\alpha)$ by its holomorphic sum-of-squares expression, and
+\[
+ \sup_{X_n}U_m=\frac{\log D_m}{m},
+\]
+because $P_m\leq1$ and $P_m(1)=1$. \Cref{thm:normalized-compactness} for potentials with a fixed smooth curvature lower bound supplies $L^1$ cluster limits and excludes collapse. Each cluster limit agrees almost everywhere with $E_a\circ\pi$, by the local uniform convergence off the analytic fiber. Every subsequence has the same cluster limit, proving convergence of the whole sequence in $L^1$. This uses compactness of quasi-plurisubharmonic functions, not a nonlinear mass bound.
+\end{proof}
+
+The formula for $E_a$ has an intrinsic envelope interpretation. Set $\psi_a=a\log t$ on $\mathbb P^q$. This is $\sigma$-plurisubharmonic for $0<a<1$: away from $b$, its curvature is the convex combination of $\sigma$ and the semipositive form induced by the projection $[Z_0:Z']\mapsto[Z']$. For $q=1$, the second form is zero. The local logarithmic expression gives the positive extension at $b$.
+
+\begin{proposition}\label{prop:hopf-point-envelope}
+The function $E_a$ belongs to $\PSH(\mathbb P^q,\sigma)$ and
+\[
+ E_a=E_{\sigma,\mathbb P^q}[\psi_a]_{\mathcal I}(0),
+ \qquad
+ \mathrm{MA}_\sigma(E_a)=\mathbf1_{\{t>a\}}\sigma^q.
+\]
+Moreover, $E_a\circ\pi$ is the largest $u\in\PSH(X_n,\alpha)$ satisfying $u\leq0$ and $u\preceq_{\mathcal I}\varphi$. Thus
+\[
+ \mathbf1_{\{t\circ\pi>a\}}\nu_X
+       =\frac1{2n}\mathrm{MA}^{\mathrm{ext}}_\omega(E_a\circ\pi).
+\]
+\end{proposition}
+\begin{proof}
+In the chart $Z_0=1$, write $z=Z'/Z_0$ and $R^2=a/(1-a)$. For $|z|<R$, the local potential of $\sigma+\ddc E_a$ is
+\[
+ \log(1+|z|^2)+E_a
+       =a\log|z|^2-a\log a-(1-a)\log(1-a).
+\]
+Its complex Hessian is positive and has rank $q-1$ away from zero. For $|z|>R$, the form is $\sigma$. The two expressions for $E_a$ have equal values and equal first derivatives at $|z|=R$. They therefore glue as a $C^{1,1}$ function near the interface, with no hypersurface term in its distributional Hessian. Near $b$ it has the logarithmic pole of coefficient $a$. This proves global $\sigma$-plurisubharmonicity and $E_a\simeq\psi_a$.
+
+To verify the envelope bound, let $w\in\PSH(\mathbb P^q,\sigma)$ satisfy $w\leq0$ and $w\preceq_{\mathcal I}\psi_a$. By \cref{lem:analytic-ideal-dominance}, $w\leq\psi_a+C$. Fix a complex line through zero in the affine chart. If the restriction of $w+\log(1+|z|^2)$ is identically $-\infty$, there is nothing to prove on that line. Otherwise it is subharmonic. On its punctured disk of radius $R$, subtract $a\log|z|^2$. The result is subharmonic and bounded above near zero by the ordinary singularity inequality, so it extends subharmonically across zero. On the boundary its value is at most $\log(1+R^2)-a\log R^2$. The maximum principle gives exactly $w\leq E_a$ in the disk. Every point with $|z|<R$ lies on such a line; outside this ball $w\leq0=E_a$. Since $E_a$ itself is an admissible competitor, it is the stated envelope. Continuous zero obstacles make the quasi-everywhere and everywhere inequalities equivalent, as proved earlier.
+
+On the complement of $b$, the local potentials are $C^{1,1}$. Their Bedford--Taylor top products are the almost-everywhere determinants of their complex Hessians: local convolution gives uniformly bounded Hessians converging almost everywhere, and dominated convergence identifies the determinant limit with the locally uniform Bedford--Taylor limit. The rank computation makes this determinant zero for $t<a$ and equal to $\sigma^q$ for $t>a$. The interface has smooth volume zero, and a $C^{1,1}$ local potential adds no measure there. The non-pluripolar measure gives $b$ zero mass. This proves the measure formula.
+
+For the assertion on $X_n$, every $\alpha$-plurisubharmonic function is $u=w\circ\pi$ by \cref{prop:psh-descent-submersion}. Since $\varphi$ has analytic singularities, $u\preceq_{\mathcal I}\varphi$ implies $u\preceq\varphi$ by \cref{lem:analytic-ideal-dominance}. In product coordinates $(z,\tau)$ at $p$, restrict this inequality to $\tau=0$. It yields $w(z)\leq a\log|z|^2+C$, and hence $w\preceq\psi_a$ globally. Conversely, $w\preceq\psi_a$ gives
+\[
+ w(z)\leq a\log|z|^2+C
+             \leq a\log(|z|^2+|\tau|^2)+C
+\]
+near $p$. Away from $p$, local boundedness of $\varphi$ and compactness make the upper inequality global. Thus $w\circ\pi\preceq\varphi$, which implies the ideal order. Applying analytic ideal domination on the base as well shows that the two ideal-constrained competitor families are exactly those already considered. Their largest members therefore agree under pullback. Finally \cref{thm:hopf-descended-hermitian-ma} and the base measure formula give the last identity.
+\end{proof}
+
+For sufficiently small rational $a$, the cutoff construction in the preceding section makes $\varphi\in\PSH(X_n,\omega)$ with its only pole at $p$. The theorem consequently applies on the Hopf threefold where BMP fails, and gives a nonzero limit with the intrinsic normalization $2/m^2$. The limiting potential has a pole on the whole elliptic fiber over $b$. At other points of that fiber the input $\varphi$ is locally bounded, whereas the limiting potential has a nontrivial multiplier ideal at sufficiently large weight. Thus even this positive-growth limit does not recover the multiplier-ideal type of an arbitrary Hermitian-positive selecting weight.
+
+The measure limit is also different from the raw Hermitian Monge--Amp\`ere measure of $\varphi$. Choose its cutoff support in a small neighborhood of $p$. There is a nonempty open set outside that support with $t\circ\pi<a$: take a neighborhood of another point of the same elliptic fiber. On this open set $\varphi=0$, so locality gives $\mathrm{MA}^{\mathrm{ext}}_\omega(\varphi)=\omega^n$, while the limiting kernel measure is zero. The equality above concerns the projected equilibrium potential $E_a\circ\pi$, whose construction and singularity type have been identified, not the original selecting weight.

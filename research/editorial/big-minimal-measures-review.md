@@ -1,0 +1,40 @@
+# General measures in the minimal envelope class
+
+## Scope
+
+The two staged sources reconstruct the minimal-reference general non-pluripolar measure equations for any smooth big real theta. They assume BMP and positive lower minimal relative volume ell. The background need not be semipositive or closed. Volume addition and monotonicity explicitly prove that metric BMP+PVP imply the hypotheses. The full arbitrary-model theorem in Chapter13 continues to retain BOTH metric volume properties. No global hypothesis is removed from that imported theorem.
+
+Positive-exponent solutions are unique in E_V. At zero exponent the positive scalar is unique; the normalized potential need not be unique. General data produce a solution in the minimal ENVELOPE class, not necessarily in the ordinary bounded-difference type of V. The previous ordinary-type Lp theorem supplies the smooth approximants and still needs neither BMP nor PVP.
+
+## Proof details
+
+The concave obstacle need not be theta-psh. Its inverse is convex with derivative between zero and one. Applying it to the envelope and V gives a theta-psh function below u, with equality on contact. The two positive-current coefficients sum to one. Bounded local convolution, a smooth lower-curvature error, and capacity control of the derivative weights justify the weighted product inequality. The analytic pole complement is contained in the finite locus of V; no reverse inclusion is asserted.
+
+The higher-moment estimate isolates the exact condition A_theta(nu)<infinity for a probability measure. It does not assume this for every NPP measure. With N=2n+1, the choice of square-root energy yields a moment exponent r=1+1/(4N)>1. Domination upgrades MA-essential depth to a bound seen by nu. The normalization uses sup p=sup(p-V); it applies A_theta to p-sup p, never to the difference p-V. The layer-cake factor r is retained. Uniform integrability follows by adding the fixed L1(nu) function -V to the uniformly Lr relative depths; V itself is not claimed to be in Lr.
+
+Smoothing uses compactly supported chart measures eta_a nu and one decreasing sequence of radial radii. The exact dual identity puts eta_a outside the convolution of the test function. The local submean inequality proves A_theta(nu_j)<=A_theta(nu)+C directly. No unproved assertion that the smoothed measures remain in a special compact convex measure class is needed.
+
+Uniform first moments place L1 limits in E_V. Higher moments give fixed-measure L1 convergence after bounded truncation in a larger Hermitian background. Upper tail envelopes and radial submean then give the MOVING-measure self-error. This yields capacity convergence. The original measures converge weakly only after the separate raw-tail estimate C/T. The moving exponential right side is tested against positive smooth functions, whose product with e^(lambda u) is bounded quasi-psh. Weak convergence of nu_j alone is not substituted for that argument.
+
+General NPP data are written f MA_omega(psi), with psi bounded and omega Hermitian, by the existing carrier decomposition. The local weighted CLN estimate proves finite A_theta for each bounded density truncation. Uniformity in the truncation index is unnecessary: a fixed finite NPP dominator supplies the final compactness step. This bypasses the later lower-inequality lemma in Li's source and its delicate density extraction; it does not assume L1 continuity of MA.
+
+## Audit and integration
+
+The normal Rethlas audits are `big_minimal_moments_01` and `big_minimal_measures_01`. The second has the exact higher-moment proposition as a conditional premise, independently checked by the first. Both audits passed. Their full final reports, 11+14 sequential checks and 2+3 reference checks have been read. Both runners exited0. Each failed-checks channel contains only a no-findings record with empty error/gap lists. The downstream conditional dependency is discharged by the independently passed moment audit. There are111 completed reports:105 correct and6 historical adverse, all historical findings resolved. The staged sources are unchanged. The mathematical sources are promoted from the reviewed private preview; removing four pagination guards from the measure source recovers its submitted text exactly, and the moment source is byte-identical. The Chapter13 and Chapter32 prose identifies the narrower remaining proof boundary. One older Gauduchon source receives a pagination guard only. The six-file source map records their exact hashes. Layout and package checks are recorded below after the final build.
+
+## Next construction: arbitrary model references
+
+The remaining known-result proof is Li Proposition6.1 and Theorems6.1--6.2, retaining the stated model and volume assumptions. The main book's no-BMP program, I-goodness, traces, geometric bigness and birational recovery remain separate tasks.
+
+1. For u,v of ordinary minimal type, truncate only the exponential weights, not the background potentials. The solved potentials have a common ordinary-type lower barrier (u+v)/2-C and a decreasing upper bound. This supplies a fixed dominator C(MAu+MAv), so the already proved continuity theorem should identify the limiting equation without importing Li Lemma5.2.
+2. For u,v of one arbitrary ordinary model type, first use max(u,V-j) and max(v,V-j). The finite-index solutions have ordinary minimal type, whereas their tail roofs and limit have the target model type. A common lower competitor must be supplied explicitly; the same-class roof theorem cannot simply be invoked across those reference types. The source controls a damped self-error. A direct proof can use contact, weighted lower semicontinuity, and then zero domination for the limiting target-class roof.
+3. Identify the equation on a cutoff of a genuine common lower envelope h. On {h>-T}, the reference truncations equal u and v for j>T after normalization. The cutoff product must be expanded in a larger Hermitian background before multiplication, as elsewhere in the book. Localized weighted data are finite there. The source calls a squeezed convergence monotone; replace this by the actual bounded/fixed-measure or capacity convergence argument.
+4. For u in E_phi and v of ordinary phi type, then for both in E_phi with MAv dominated by a bounded Hermitian carrier, the source uses stretched envelopes and relative first moments. Work through these remaining stages explicitly, with one fixed reference and all finite prefixes. Retain equality sets in max-contact mass estimates and optimize over upper ordinary-type volume when needed.
+5. Only after weighted-measure addition is constructed should the arbitrary-model supersolution and general-measure existence theorem be declared internally proved. Minimal-reference existence alone does not discharge it. The imported theorem also asserts an ordinary-type Lp refinement for the arbitrary model, whose estimate must be reconstructed.
+
+
+## Final source and layout checks
+
+The book is564 pages, still32 chapters and an appendix. All13 initial-preview pages,11 grouping pages,20 interface/research/bibliography pages,3 pages affected by condensation of the research paragraph, and12 pages affected by the final Gauduchon proposition grouping were rendered and viewed. The final production PDF has identical page text to the reviewed private preview. There are no errors, undefined references or overfull boxes. One existing underfull bibliography line was visually reviewed.
+
+The moment source is byte-identical to the submission. Removing four pagination guards recovers the exact submitted measure source. Removing the one new guard in section_gauduchon_collapse.tex recovers its prior mathematical text. Allsix current integration-map hashes were verified. All29 original SGPT sources, checkpoint20 and the17-page standalone note are unchanged. The immutable release record is `research/audits/build-snapshot-21.json`. Independent source-package validation is recorded separately in `research/audits/source-package-portability-21.json`.

@@ -1,0 +1,261 @@
+Run_id: envelope_testcurves_connected_01
+
+Statement: Audit the complete chapter below: pure envelopeLegendreduality on connected compact complex X anysmoothrealtheta, genuinephi=Ptheta[phi]. TestcurveGamma concavedecreasing,Gamma_tau=P[Gamma_tau],uscsupGamma=phi,finitecutoffc,noMAmasshypothesis. Raydefinedbyproductsubgeodesic/Perronsegments, L1initialphi,P[u_t]=phi,sup u_t=ct. ClaimbijectionrawLegen/inverse andexactuscsup equalityallpoints, plusfullycomputedP1example. NoEenvidentification, noautomaticaffinesupforarbitraryrays,noDarvasmetricorweakHCMAclaims. Everyproof/canonicalpointwiseandboundaryargumenttargeted.
+
+Accepted local/previous inputs: canonical qpsh normalizedL1compactness, maximum/upperenvelope/localgluing, orderandordinarytypeinvarianceofPtheta. Kiselmanfornonclosedbackground andPerronconstructionsarebeing independentlyauditedhermitian_perron_rays_01; readreportifcomplete, acceptconditionallyifpending,checkscopesratherthanreprovewholechapter. SourceSGPTlocalclassicalKiselmanandconvexLegendreduality accepted standard/sourcebookinputs. Originaluserownedtex at/Users/mingchen/Downloads/Singularities in global pluripotential theory_Final/author/chapter_testcurve.tex andchapter_rays.tex. The sourceglobalmass-dependentgeometrymustNOTbeimported. Bookread-only. DefinitionPtheta[u]=uscsup{h theta-psh,h<=0,h preceq u}; preceqmeansMOREsingular <=u+C. GenuinePfixed =>sup0 bynormalizingcompetitor. NoidempotenceofgeneralP orclosureofmodelnetsassumed:phi explicitlyfixed. NewrayclassseparatefromEenvalreadyinbook.
+
+Specialfocus: normalizeddecreasingGamma_atcutoff/u_t-ct no collapseviaL1compactness; closedconcavefibersleftcontinuitycanonicalrepresentatives; rawF vsuscV Fubini+verticalconvexity+Kiselmandual+pointwisereconstructionatallpoles; gproperrealdualityusingt>0 andtau<c; forwardP[u]=phi byorderbothways; endpointL1; localPerronreplacementdualbound(b-a)(c-tau)andfixedpointforcesunchanged; reverseP[g]=g usingq_C=P(g+C,0)<=phi andaffinecompetitorq_C-Ct/M,infM then s0. ExplicitP1model: rotationalenvelopecurrent,radialconvexq,asymptoticsforcessecants>=lambda, tangentiallinebarrier, thenLegendremaxatlambda=e^t r²/(1+e^t r²). Bookddc=i/(2pi)partialbarpartial,FS integral1. Gamma_cneednotbeassertedfixed; curveconditiononlytau<c. Allquestions/limitationspartofscope. Useusualworkflow/report.
+
+Clarification and repair scope: The historical envelope_testcurves_01 report returned wrong only because the standalone extract omitted connectedness; it explicitly found no other issue under connectedness. The book already has the standing assumption in /Users/mingchen/Non-Kahler/book/author/conventions.tex: "Unless otherwise stated, X is a connected compact complex manifold of complex dimension n>=1, without boundary." The chapter now repeats connectedness explicitly. Check the corrected full statement, the decreasing-normalization compactness step and the scope of every input. Do not erase or overwrite the earlier report. You may use its completed small-step checks after confirming this sole issue is resolved. Current hermitian_perron_rays_01 report is correct. The figure only illustrates the already checked exact P1 formulas; it makes no additional mathematical assertion. Book read-only.
+
+Proof:
+
+\chapter{Test curves and Legendre duality}
+\label{chap:hermitian-testcurves}
+
+The envelope part of the Ross--Witt Nystr\"om correspondence is driven by a minimum principle and one-variable convex duality. We develop that part with its hypotheses expressed directly in terms of envelopes. This avoids defining a relative class through a mass identity that may fail in a Hermitian background.
+
+Let $\theta$ be a smooth real background on the connected compact complex manifold $X$. Fix a genuine envelope fixed point
+\[
+ \varphi=P_\theta[\varphi].
+\]
+In particular $\varphi\leq0$ and $\sup_X\varphi=0$. No positivity or finiteness of its Monge--Amp\`ere mass is assumed in this chapter. The minimum principle and Perron constructions are those of \cref{chap:hermitian-rays}; the real convex duality used below is the elementary Legendre duality recalled in the convex appendix of \cite{SGPT}.
+
+\section{The two classes of curves}
+
+\begin{definition}\label{def:hermitian-envelope-testcurve}
+An \emph{envelope test curve} with initial potential $\varphi$ consists of a real number $c$ and potentials $\Gamma_\tau\in\PSH(X,\theta)$ for $\tau<c$ such that
+\begin{enumerate}
+\item $\tau\mapsto\Gamma_\tau$ is pointwise concave and decreasing;
+\item $P_\theta[\Gamma_\tau]=\Gamma_\tau$ for every $\tau<c$;
+\item $(\sup_{\tau<c}\Gamma_\tau)^*=\varphi$.
+\end{enumerate}
+Its cutoff is $c$. We extend it by
+\[
+ \Gamma_c=\lim_{\tau\uparrow c}\Gamma_\tau,
+ \qquad \Gamma_\tau\equiv-\infty\quad(\tau>c).
+\]
+\end{definition}
+
+The limit defining $\Gamma_c$ is genuine. Indeed each finite member has supremum zero, so normalized $L^1$ compactness excludes collapse of this decreasing family. The limit is a canonical $\theta$-plurisubharmonic function. In particular, its pole set has zero smooth volume.
+
+\begin{definition}\label{def:hermitian-envelope-ray}
+An \emph{envelope ray} with initial potential $\varphi$ and slope $c$ is a subgeodesic $u_t$, $t>0$, such that
+\begin{enumerate}
+\item $u_t\to\varphi$ in $L^1(X)$ as $t\downarrow0$, and every finite restriction, with $u_0=\varphi$, is a Perron segment;
+\item $P_\theta[u_t]=\varphi$ for every $t>0$;
+\item $\sup_Xu_t=ct$ for every $t>0$.
+\end{enumerate}
+\end{definition}
+
+The last two conditions are part of this definition. We do not assume that arbitrary Perron rays automatically satisfy them. The condition involving $P_\theta$ is also kept distinct from membership in the convex-combination class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ of \cref{def:relative-envelope-class}. Their identification would require a further theorem in the regime under consideration.
+
+\section{The pointwise transforms}
+
+For an envelope test curve define
+\begin{equation}\label{eq:hermitian-legendre-forward}
+ U_t(x)=\sup_{\tau<c}\bigl(\Gamma_\tau(x)+t\tau\bigr),
+ \qquad t>0.
+\end{equation}
+For a subgeodesic on the positive half-line, its inverse transform is
+\begin{equation}\label{eq:hermitian-legendre-backward}
+ \widehat u_\tau(x)=\inf_{t>0}\bigl(u_t(x)-t\tau\bigr).
+\end{equation}
+We shall prove that the supremum in \eqref{eq:hermitian-legendre-forward} is already upper semicontinuous. In particular, it will not be necessary to change its values on a pluripolar set.
+
+We record the real-variable facts involved. A proper, upper semicontinuous, decreasing concave function $g:\R\to[-\infty,0]$, identically $-\infty$ for $\tau>c$, has the dual formulas
+\[
+ f(t)=\sup_{\tau\in\R}(g(\tau)+t\tau),\qquad
+ g(\tau)=\inf_{t>0}(f(t)-t\tau)
+\]
+provided $g$ is finite somewhere and finite arbitrarily far to the left. The latter property follows from decreasingness. Here $f$ is finite and convex for $t>0$, with $f(t)\leq ct$. These are the usual Legendre formulas for $-g$. Negative $t$ give infinite supremum; the value at $t=0$ is the limit from $t>0$, so retaining only positive $t$ does not change the infimum. The case $g\equiv-\infty$ is interpreted separately and gives $f\equiv-\infty$.
+
+Conversely, a finite convex function $f$ on $(0,\infty)$ with $f(t)\leq ct$ is recovered from $\inf_{s>0}(f(s)-s\tau)$ using only $\tau<c$. To see why the strict inequality causes no loss, use a supporting slope of $f$ at $t$. Such a slope is at most $c$. If it is strictly smaller, its supporting line gives the equality. If it equals $c$, convexity and the upper bound imply that $f(s)-cs$ is constant for $s\geq t$ and no smaller for $s<t$. The transforms at $\tau\uparrow c$ then recover that same line: their intercepts lie between $f(t)-ct$ and $f(t)-t\tau$. These observations also prove the assertion without an appeal to duality at a domain boundary.
+
+\begin{lemma}\label{lem:testcurve-closed-fibers}
+At every $x$, the extended function $\tau\mapsto\Gamma_\tau(x)$ is upper semicontinuous and concave on $\R$, or is identically $-\infty$. Its forward transform satisfies
+\[
+ \Gamma_\tau(x)=\inf_{t>0}(U_t(x)-t\tau).
+\]
+\end{lemma}
+\begin{proof}
+First fix $\tau<c$ and let $\tau_j\uparrow\tau$. The decreasing limit of $\Gamma_{\tau_j}$ is a genuine potential, since it dominates $\Gamma_\tau$. Choose $r$ with $\tau<r<c$. Outside the pole set of $\Gamma_r$, the concave function is finite on a neighborhood of $\tau$, so its ordinary continuity identifies the decreasing limit with $\Gamma_\tau$. Equality almost everywhere identifies the two canonical potentials everywhere. Thus the curve is left-continuous at every finite parameter. Its value at $c$ was defined by that same left limit. Decreasingness now gives upper semicontinuity, including at points where the value is $-\infty$. Concavity is preserved by this extension at $c$ and by assigning $-\infty$ to its right. The stated inverse formula is the preceding real duality, applied at $x$; it also holds in the identically $-\infty$ case.
+\end{proof}
+
+\begin{theorem}[No regularization in the forward transform]
+\label{thm:hermitian-legendre-usc}
+The function $U_t$ in \eqref{eq:hermitian-legendre-forward} is genuine and $\theta$-plurisubharmonic for each $t>0$, and its complexification is a product potential. The displayed pointwise supremum agrees everywhere with its upper semicontinuous regularization on the product.
+\end{theorem}
+\begin{proof}
+Every term in the supremum is a product potential. The bound $\Gamma_\tau\leq0$ gives $U_t\leq ct$, while any fixed $\tau<c$ supplies a genuine lower potential $\Gamma_\tau+t\tau$. Let $V$ be the upper semicontinuous regularization on $X\times\{\Real z>0\}$. It is a genuine product potential, invariant in the imaginary direction, and $V_t\leq ct$.
+
+The envelope theorem says $U=V$ almost everywhere on the product. Measurability of the raw supremum can also be seen by taking rational $\tau<c$; left-continuity of the curve gives the same supremum. Fubini's theorem, followed by continuity of finite convex functions in $t$, shows that outside one set $Z\subset X$ of zero smooth volume,
+\[
+ U_t(x)=V_t(x)\quad\text{for every }t>0.
+\]
+Enlarge $Z$ to contain the pole set of $\Gamma_c$, so both vertical functions are finite outside it.
+
+For each $\tau<c$, Kiselman's principle in \cref{prop:hermitian-kiselman} gives
+\[
+ \chi_\tau=\inf_{t>0}(V_t-t\tau)
+ \in\PSH(X,\theta)\cup\{-\infty\}.
+\]
+Off $Z$ it equals $\Gamma_\tau$ by \cref{lem:testcurve-closed-fibers}. Therefore it is genuine, and equality of canonical potentials gives $\chi_\tau=\Gamma_\tau$ on all of $X$. At each $x$, recover the finite convex function $V_t(x)\leq ct$ from these inverse transforms using the real-variable observation above. If that vertical function is identically $-\infty$, all its transforms are $-\infty$ and the conclusion is the same. We obtain
+\[
+ V_t(x)=\sup_{\tau<c}(\chi_\tau(x)+t\tau)=U_t(x).
+\]
+This proves the assertion everywhere, including on the exceptional set originally discarded in the Fubini argument.
+\end{proof}
+
+\section{From a test curve to a ray}
+
+\begin{theorem}\label{thm:testcurve-to-envelope-ray}
+The forward transform of an envelope test curve is an envelope ray with the same initial potential and cutoff slope. Moreover $U_t-ct$ decreases as $t$ increases.
+\end{theorem}
+\begin{proof}
+Product positivity has just been proved. The inequalities
+\[
+ \Gamma_\tau+t\tau\leq U_t\leq\varphi+ct
+\]
+give $\sup_XU_t\geq t\tau$ for each $\tau<c$ and $\sup_XU_t\leq ct$. Letting $\tau\uparrow c$ proves equality. The formula
+\[
+ U_t-ct=\sup_{\tau<c}\bigl(\Gamma_\tau-t(c-\tau)\bigr)
+\]
+proves decreasingness.
+
+The order property of the singularity envelope gives
+\[
+ \Gamma_\tau=P_\theta[\Gamma_\tau]\leq P_\theta[U_t]
+ \leq P_\theta[\varphi]=\varphi.
+\]
+Taking the regularized supremum in $\tau$ proves $P_\theta[U_t]=\varphi$.
+
+The supremum bounds give $L^1$ compactness as $t\downarrow0$. Any cluster point $v$ satisfies $v\leq\varphi$ by the upper bound and $v\geq\Gamma_\tau$ for every fixed $\tau<c$ by the lower bound. Canonical representatives and the regularized supremum yield $v=\varphi$. Thus $U_t\to\varphi$ in $L^1$.
+
+It remains to prove Perron maximality. Fix $0\leq a<b$ and replace $U_t$ on $(a,b)$ by the Perron segment between $U_a,U_b$. It exists and attains its endpoints, since the restricted original path is a competitor. By the gluing argument in \cref{prop:hermitian-perron}, the resulting path $v_t$ is a subgeodesic, equals $U_t$ outside $(a,b)$, and dominates it inside. Convexity on the replaced interval gives $v_t\leq ct$ everywhere.
+
+Fix $\tau<c$ and write
+$\chi_\tau=\inf_{t>0}(v_t-t\tau)$. This is a genuine $\theta$-plurisubharmonic potential because it dominates $\Gamma_\tau$. We have
+\begin{equation}\label{eq:finite-replacement-dual-bound}
+ \Gamma_\tau\leq\chi_\tau
+ \leq\Gamma_\tau+(b-a)(c-\tau).
+\end{equation}
+Indeed for $s\in[a,b]$, the decreasingness of $U_t-ct$ gives
+\[
+ \chi_\tau\leq U_b-b\tau
+ \leq U_s-s\tau+(b-s)(c-\tau).
+\]
+For $s$ outside the interval, use $v_s=U_s$ to obtain the same bound with $(b-a)(c-\tau)$. Taking the infimum over $s>0$ and using the inverse formula proves \eqref{eq:finite-replacement-dual-bound}.
+
+Since $v_t\leq ct$, taking $t\downarrow0$ in the bound
+$\chi_\tau\leq v_t-t\tau$ gives $\chi_\tau\leq0$. The bounds in \eqref{eq:finite-replacement-dual-bound} show $\chi_\tau\simeq\Gamma_\tau$. Hence it is a competitor for $P_\theta[\Gamma_\tau]=\Gamma_\tau$. Thus $\chi_\tau=\Gamma_\tau$ for every $\tau<c$. Recovering $v_t$ by the real duality proves $v_t=U_t$. This is maximality on every finite interval, including intervals starting at zero.
+\end{proof}
+
+\section{From a ray to a test curve}
+
+\begin{theorem}\label{thm:envelope-ray-to-testcurve}
+If $u_t$ is an envelope ray of slope $c$, its inverse transform is an envelope test curve with cutoff $c$ and initial potential $\varphi$. The forward and inverse transforms are mutually inverse bijections between the two classes in \cref{def:hermitian-envelope-testcurve,def:hermitian-envelope-ray}.
+\end{theorem}
+\begin{proof}
+A finite convex function bounded above on $(0,\infty)$ is decreasing. Apply this to $u_t(x)-ct\leq0$ at points with genuine vertical restrictions. The same monotonicity holds everywhere, also on identically $-\infty$ fibers. The family is normalized by $\sup_X(u_t-ct)=0$, so its decreasing limit as $t\to\infty$ is genuine by normalized $L^1$ compactness. Consequently
+\[
+ \widehat u_c=\inf_{t>0}(u_t-ct)\in\PSH(X,\theta).
+\]
+For $\tau<c$, the inverse transform is at least $\widehat u_c$ and at most $u_1-\tau$. The minimum principle therefore makes it a genuine potential. Also
+\[
+ \widehat u_\tau\leq\inf_{t>0}t(c-\tau)=0
+ \quad(\tau\leq c),
+\]
+while the same upper bound with $t\to\infty$ shows $\widehat u_\tau\equiv-\infty$ for $\tau>c$. Concavity and decreasingness in $\tau$ follow by taking an infimum of affine functions with slopes $-t$.
+
+Write $g=\widehat u_\tau$ for a fixed $\tau<c$. We prove $P_\theta[g]=g$. For every $M>0$, the inequality $g\leq u_M-M\tau$ implies
+\[
+ P_\theta[g]\leq P_\theta[u_M]=\varphi.
+\]
+For $C>0$ put $q_C=P_\theta(g+C,0)$. It is genuine since $g\leq0$ is a competitor, and
+\[
+ g\leq q_C\leq P_\theta[g]\leq\varphi,
+ \qquad q_C-C\leq g\leq u_M-M\tau.
+\]
+The affine path $q_C-Ct/M$ on $[0,M]$ is consequently admissible for $\varphi,u_M-M\tau$. Adding an affine function of time gives a bijection of Perron competitor families, so $u_t-t\tau$ is the Perron segment for these endpoints. For $0<s\leq1$ we obtain
+\[
+ q_C-Cs\leq u_{sM}-sM\tau.
+\]
+Take the infimum in $M>0$ to get $q_C-Cs\leq g$, and then let $s\downarrow0$. Thus $q_C=g$ for every $C>0$. Taking its increasing envelope limit proves $P_\theta[g]=g$.
+
+Let $\psi=(\sup_{\tau<c}\widehat u_\tau)^*$. We have already shown $\widehat u_\tau\leq\varphi$, so $\psi\leq\varphi$. For almost every $x$, the convex function $t\mapsto u_t(x)$ has limit $\varphi(x)$ at zero. Indeed that limit exists by convexity and the linear upper bound, and an almost-everywhere convergent sequence from the $L^1$ endpoint condition identifies it. Elementary one-variable duality gives
+\[
+ \sup_{\tau<c}\inf_{t>0}(u_t(x)-t\tau)=\varphi(x).
+\]
+One can also see this by letting $\tau\to-\infty$: on a sufficiently short initial interval $u_t(x)$ is within any prescribed error of $\varphi(x)$, while a supporting affine lower bound for $u_t(x)$ makes the penalized values outside that interval arbitrarily large. Hence $\psi=\varphi$ by canonical representatives.
+
+Finally, as $\tau\uparrow c$ the transforms decrease to $\widehat u_c$, because the two infima in $t$ and $\tau<c$ commute. Thus the endpoint convention agrees with \cref{def:hermitian-envelope-testcurve}. The real duality for convex functions bounded above by $ct$ recovers $u_t$ from its inverse transforms. Conversely, \cref{lem:testcurve-closed-fibers} recovers a test curve from its forward transform. This proves the bijection.
+\end{proof}
+
+The proofs follow the envelope and Legendre arguments in \cite[chapter on test curves, Ross--Witt Nystr\"om correspondence]{SGPT}, with the assumptions stated in terms of the exact operators used here. They do not use mass preservation, an energy functional, or a distance on singularities. No assertion of novelty is intended. In particular the correspondence by itself does not define a Hermitian Darvas metric or identify a mass slope with a metric length.
+
+\section{A computed example on the projective line}
+
+A closed example makes the transform and its pole convention explicit. On $\mathbb P^1$ take
+\[
+ \theta=\ddc\log(1+|z|^2),\qquad
+ g(z)=\log\frac{|z|^2}{1+|z|^2}.
+\]
+The form is understood in the usual two affine charts; $\int_{\mathbb P^1}\theta=1$ in our normalization. The potential $g$ has a logarithmic pole at zero and extends smoothly across infinity, with value zero there.
+
+Put $H(\lambda)=-\lambda\log\lambda-(1-\lambda)\log(1-\lambda)$, with $H(0)=H(1)=0$. For $0<\lambda<1$, define
+\begin{equation}\label{eq:pone-explicit-model}
+ \Gamma_\lambda(z)=
+ \begin{cases}
+ \lambda\log|z|^2-\log(1+|z|^2)+H(\lambda),
+       & |z|^2\leq\lambda/(1-\lambda),\\
+ 0,    & |z|^2\geq\lambda/(1-\lambda).
+ \end{cases}
+\end{equation}
+Set $\Gamma_\lambda=0$ for $\lambda\leq0$, $\Gamma_1=g$, and $\Gamma_\lambda=-\infty$ for $\lambda>1$.
+
+\begin{proposition}\label{prop:pone-explicit-testcurve}
+This is an envelope test curve with initial potential zero and cutoff one. Its forward transform is
+\begin{equation}\label{eq:pone-explicit-ray}
+ U_t(z)=\log\frac{1+e^t|z|^2}{1+|z|^2},\qquad t>0.
+\end{equation}
+At $z=0$ its value is zero, and at infinity its value is $t$.
+\end{proposition}
+\begin{proof}
+For $s=\log|z|^2$ let $q_\lambda(s)=\Gamma_\lambda(z)+\log(1+e^s)$. In the first region of \eqref{eq:pone-explicit-model} it is the affine function $\lambda s+H(\lambda)$, tangent to $\log(1+e^s)$ at $s_\lambda=\log(\lambda/(1-\lambda))$. In the second region it is $\log(1+e^s)$. Its derivative is continuous and nondecreasing at the joining point, so $q_\lambda$ is convex. The local radial subharmonicity criterion shows that $\Gamma_\lambda$ is $\theta$-plurisubharmonic, including the logarithmic pole at zero. It is zero near infinity and has ordinary type $\lambda g$.
+
+We show that it equals $P_\theta[\lambda g]$. For any competitor $v\leq0$ with $v\preceq\lambda g$, take the regularized supremum of its rotations. This remains a competitor, is radial, and dominates $v$. The bound $v\leq\lambda g+C$ is uniform under rotations, so the singularity condition is preserved by regularization. Write the resulting radial potential as $q(s)-\log(1+e^s)$. Then $q$ is convex,
+\[
+ q(s)\leq\log(1+e^s),\qquad q(s)\leq\lambda s+C
+ \quad(s\to-\infty).
+\]
+The last inequality forces every secant slope of $q$ to be at least $\lambda$. Otherwise convexity would bound all slopes further to the left by a number smaller than $\lambda$, contradicting the displayed upper bound as $s\to-\infty$. For $s\leq s_\lambda$ it follows that
+\[
+ q(s)\leq q(s_\lambda)-\lambda(s_\lambda-s)
+ \leq\lambda s+H(\lambda).
+\]
+For $s\geq s_\lambda$ the obstacle itself gives the required bound. Therefore $v\leq\Gamma_\lambda$. Since $\Gamma_\lambda$ is itself a competitor, it equals $P_\theta[\lambda g]$. Ordinary-type invariance now gives $P_\theta[\Gamma_\lambda]=\Gamma_\lambda$. Zero is also an envelope fixed point.
+
+For a fixed $0<|z|<\infty$, put $p=|z|^2/(1+|z|^2)$. The function $\lambda\mapsto\Gamma_\lambda(z)$ is zero for $\lambda\leq p$. For $\lambda\geq p$ its derivative is
+\[
+ \log|z|^2+\log\frac{1-\lambda}{\lambda}.
+\]
+This starts at zero and decreases, proving concavity and decreasingness. At zero the curve is zero for $\lambda\leq0$ and $-\infty$ thereafter; at infinity it is zero for $\lambda\leq1$. These also satisfy the asserted conditions. Its limit towards $-\infty$ is zero, and its limit at one is $g$, proving that it is a test curve.
+
+For finite nonzero $z$ and $t>0$, the maximum in the transform occurs in the second parameter region at
+\[
+ \lambda=\frac{e^t|z|^2}{1+e^t|z|^2}.
+\]
+Substitution, or the identity
+$\sup_{0\leq\lambda\leq1}(\lambda a+H(\lambda))=\log(1+e^a)$,
+gives \eqref{eq:pone-explicit-ray}. At zero only parameters $\lambda\leq0$ have finite values, giving zero; at infinity the supremum of $t\lambda$ for $\lambda<1$ is $t$. Thus the same formula extends smoothly in both charts.
+\end{proof}
+
+Each finite slice of this ray is bounded and has envelope zero, while the inverse transforms have logarithmic singularities. The pointwise value at the initial endpoint can differ from a regularized supremum in a general test curve; this example shows why the formulas must specify their parameter domains and pole values. The mass and metric interpretations available in this closed example require their own hypotheses in the Hermitian theory.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.94\textwidth}{!}{\input{images/legendre-example}}
+\caption{The explicit test curve and its ray, at points with $\log|z|^2=-2$ (solid), $0$ (dashed), and $2$ (dotted). The parameter functions on the left are concave; their transforms on the right are convex.}
+\label{fig:explicit-legendre-pone}
+\end{figure}

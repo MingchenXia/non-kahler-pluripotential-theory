@@ -1,0 +1,67 @@
+\section{An \texorpdfstring{$L^1$}{L1} distance on ideal types and its completion}
+\label{sec:ideal-lone-completion}
+
+The ideal envelope gives a canonical representative of each multiplier-ideal class in a fixed background. It therefore supplies a simple metric. Its completion, however, need not consist of ideal envelopes. We prove this explicitly on a curve. The example separates a topology available from compactness alone from the singularity geometry sought in the source characterization.
+
+Fix a smooth positive probability volume form $\mathrm{d}V$ and a smooth real background $\theta$ with $\PSH(X,\theta)\ne\varnothing$. Let
+\[
+ \mathfrak S_{\mathcal I}(X,\theta)
+       =\PSH(X,\theta)/{\sim_{\mathcal I}},\qquad
+ \mathfrak M_{\mathcal I}(X,\theta)
+       =\{q\in\PSH(X,\theta):Q_\theta[q]=q\}.
+\]
+By \cref{thm:hermitian-i-projection}, the assignment $[u]\mapsto Q_\theta[u]$ is a bijection from the first set to the second. Every member of the second set has supremum zero.
+
+\begin{proposition}\label{prop:ideal-lone-metric}
+The formula
+\[
+ d_{\mathcal I,\theta,\mathrm{d}V}([u],[v])
+      =\int_X|Q_\theta[u]-Q_\theta[v]|\,\mathrm{d}V
+\]
+defines a finite metric on $\mathfrak S_{\mathcal I}(X,\theta)$. This metric space is totally bounded. Its metric completion is canonically the $L^1$ closure of $\mathfrak M_{\mathcal I}(X,\theta)$ inside the compact space $\mathcal K_\theta$ of \cref{thm:normalized-compactness}. Changing $\mathrm{d}V$ to another smooth positive probability volume gives a bi-Lipschitz equivalent metric.
+\end{proposition}
+\begin{proof}
+The envelopes are integrable and depend only on the ideal classes. Symmetry and the triangle inequality are those of the $L^1$ norm. If the distance is zero, the two quasi-plurisubharmonic canonical representatives agree everywhere, since they agree almost everywhere. Projection then shows that the ideal classes agree. The converse is immediate.
+
+The normalized compactness theorem places $\mathfrak M_{\mathcal I}$ inside compact $\mathcal K_\theta$. Every subset of a compact metric space is totally bounded, and its completion is its closure in that space. This proves the asserted completion without any closedness claim for $\mathfrak M_{\mathcal I}$ itself. Finally the ratio of two smooth positive volume forms on compact $X$ is bounded above and below by positive constants. Multiplying the integral by these bounds proves the last assertion.
+\end{proof}
+
+For a Hermitian background, \cref{cor:fixed-hermitian-analytic-density} will prove that analytic classes are dense in this metric. The curve example below describes the still larger metric completion. The background is fixed in this construction. The proposition does not assert invariance of this topology under a smooth change of background, or identify it with the $d_S$ topology. More decisively, its completion may add many different functions with the same multiplier ideals.
+
+\Needspace{12\baselineskip}
+\begin{theorem}\label{thm:curve-ideal-lone-completion}
+Let $Y$ be a compact connected Riemann surface and $\theta$ a smooth positive form of total mass one. Then the normalized ideal envelopes with finitely many logarithmic poles and zero non-pluripolar mass are dense in $\mathcal K_\theta$ for $L^1$. The logarithmic coefficients can be chosen rational, so these approximants have analytic singularities in the convention of \cite{SGPT}. Consequently the completion in \cref{prop:ideal-lone-metric} is all of $\mathcal K_\theta$. The metric on ideal classes is not complete.
+\end{theorem}
+\begin{proof}
+We first consider a finitely supported probability measure
+\[
+ \nu=\sum_{j=1}^N a_j\delta_{p_j},\qquad a_j>0,\quad\sum_j a_j=1.
+\]
+The elementary Green-kernel construction on the curve, stated in \cref{thm:curve-trace-realization}, gives a potential $q_\nu$ with
+\[
+ \theta+\ddc q_\nu=\nu,\qquad\sup_Yq_\nu=0.
+\]
+For completeness, choose a kernel with $\ddc_xG(x,p)=\delta_p-\theta$. The sum $\sum_j a_jG(x,p_j)$ has this curvature, and subtracting its finite supremum gives $q_\nu$. Near $p_j$ it is $a_j\log|z-p_j|^2$ plus a smooth function; it is smooth away from the finite support. All of its curvature lies on its pole set, so its non-pluripolar measure is zero.
+
+We claim $Q_\theta[q_\nu]=q_\nu$. If $w\sim_{\mathcal I}q_\nu$, the local ideal criterion gives $\nu(w,p_j)=a_j$. On a curve, this Lelong number is exactly the atomic mass of the positive measure $\theta+\ddc w$. That measure has total mass one by distributional Stokes, so its prescribed atoms already exhaust the mass. It follows that $\theta+\ddc w=\nu$. Thus $\ddc(w-q_\nu)=0$. The difference is a distributional harmonic function, hence smooth and constant on the compact connected curve. Among these translates the greatest one below zero is $q_\nu$. This proves the claim. It also shows that every such $q_\nu$ is an ordinary model potential by \cref{prop:p-below-i}.
+
+Now take any $u\in\mathcal K_\theta$. Its curvature $\nu=\theta+\ddc u$ is a positive probability measure. Choose finitely supported probability measures $\nu_j$ converging weakly to $\nu$. One elementary construction partitions a compact metric space into finitely many Borel sets of diameter tending to zero, places their masses at chosen points, and omits the sets of mass zero. Uniform continuity of each continuous test function proves weak convergence.
+
+We may make these weights rational. For a partition with weights $a_1,\ldots,a_N$, choose a large integer $M$, replace $a_i$ by $b_i=\lfloor Ma_i\rfloor/M$ for $i<N$, and put $b_N=1-\sum_{i<N}b_i$. Discard zero weights. The total absolute change is at most $2(N-1)/M$, which can be made to tend to zero along the partitions. This preserves weak convergence. Writing $b_i=m_i/M$ gives the analytic type
+\[
+ \left(\frac1M,\mathcal O_Y\left(-\sum_i m_i p_i\right)\right)
+\]
+with smooth local remainders. Arbitrary real weights were sufficient for the preceding construction; rational weights prove the additional assertion about analytic singularities.
+
+Let $q_j=q_{\nu_j}$. By normalized compactness, every subsequence has an $L^1$-convergent further subsequence with limit $q\in\mathcal K_\theta$. Passing to distributions in the curvature identity gives
+\[
+ \theta+\ddc q=\nu=\theta+\ddc u.
+\]
+The difference is constant by the same harmonic argument. Since both suprema are zero, it is zero. Every cluster limit is therefore $u$, so the full sequence converges to $u$ in $L^1$. This proves the density assertion and identifies the completion.
+
+To see incompleteness concretely, choose a nonconstant smooth real function $f$. For sufficiently small $\varepsilon>0$, $\theta+\varepsilon\ddc f>0$. Put $u=\varepsilon f-\sup_Y(\varepsilon f)$. It is smooth, normalized and nonconstant. Its multiplier ideals are all trivial, so $Q_\theta[u]=0$, because zero is an admissible competitor. In particular $u\notin\mathfrak M_{\mathcal I}(Y,\theta)$. The preceding approximants $q_j$ are ideal envelopes, and their classes are Cauchy for $d_{\mathcal I,\theta,\mathrm{d}V}$ because $q_j\to u$ in $L^1$. If they converged in that metric to an ideal class, its envelope would agree almost everywhere, and hence everywhere, with $u$. This contradicts $Q_\theta[u]\ne u$.
+\end{proof}
+
+In the last example, every approximating non-pluripolar measure is zero, while the smooth limit has the positive measure $\theta+\ddc u$. There is no failure of weak convergence for the positive currents: their atomic measures converge precisely to that smooth measure. The discontinuity occurs when the pole sets are removed. The sequence lies at zero non-pluripolar mass, so it does not contradict the positive-mass hypotheses in the source book's characterization theorems.
+
+This example also proves that $Q_\theta$ is not continuous for $L^1$ on the normalized potentials: $Q_\theta[q_j]=q_j\to u$, but $Q_\theta[u]=0$. Compactifying the ideal classes by this elementary metric adds all normalized potentials on the curve. Those new points cannot be identified merely by their multiplier ideals, since many distinct smooth potentials have the same trivial ideals. A Hermitian singularity theory must specify whether it seeks such a compactification, a topology restricted by positive mass, or a different completion retaining additional data.

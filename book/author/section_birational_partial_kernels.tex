@@ -1,0 +1,194 @@
+\section{Partial kernels under a modification}
+\label{sec:birational-partial-kernels}
+
+A modification preserves holomorphic sections, but it changes the integrability condition defining a multiplier ideal. The correction is the relative canonical bundle. With its natural metric, the same correction gives an exact identity for partial kernel measures. This permits the K\"ahler convergence theorem to be transferred to a manifold admitting a K\"ahler modification. We prove the transfer, retaining that geometric hypothesis throughout the asymptotic conclusion.
+
+Let $\pi:Y\to X$ be a modification of connected compact complex manifolds of dimension $n$. There is an analytic subset $S\subset X$ of codimension at least two such that $\pi$ is an isomorphism over $X\setminus S$. Set $D=\pi^{-1}(S)$ and
+\[
+ R_\pi=K_Y\otimes\pi^*K_X^{-1}.
+\]
+The determinant of the differential is a canonical holomorphic section $J_\pi$ of $R_\pi$. In local coordinates its coefficient is the complex Jacobian determinant. Its zeros are contained in $D$. These standard facts about modifications of smooth manifolds include the case $n=1$, when the modification is an isomorphism.
+
+\begin{lemma}\label{lem:adjoint-ideal-transform}
+Let $a$ be quasi-plurisubharmonic on $X$. Under the natural identification away from $S$,
+\[
+ \pi_*\bigl(R_\pi\otimes\mathcal I(a\circ\pi)\bigr)
+       =\mathcal I(a).
+\]
+More precisely, for any holomorphic line bundle $M$ on $X$, the map
+\[
+ s\longmapsto J_\pi\,\pi^*s
+\]
+identifies
+\[
+ H^0\bigl(X,M\otimes\mathcal I(a)\bigr)
+ \simeq H^0\bigl(Y,\pi^*M\otimes R_\pi
+                         \otimes\mathcal I(a\circ\pi)\bigr).
+\]
+\end{lemma}
+\begin{proof}
+The assertion is local on $X$. In coordinates and local frames the proposed map sends a holomorphic coefficient $f$ to $(f\circ\pi)\operatorname{Jac}\pi$. Change of variables gives the local integrability equivalence between
+\[
+ |f|^2e^{-a}
+ \quad\hbox{and}\quad
+ |f\circ\pi|^2|\operatorname{Jac}\pi|^2e^{-a\circ\pi}.
+\]
+For the implication from integrability upstairs to integrability near a downstairs point, take a relatively compact smaller neighborhood. Its inverse image has compact closure by properness, so finitely many integrability charts suffice. Smooth positive coordinate densities are comparable on these smaller charts. Analytic exceptional sets have smooth volume zero and do not change the integrals.
+
+It remains to justify that every section upstairs has the required form. Divide it by $J_\pi$ off $D$ and use the inverse of $\pi$ there. This gives a holomorphic section of $M$ off $S$. Hartogs extension across the codimension-at-least-two analytic set $S$ supplies a holomorphic section $s$ on $X$. Its image $J_\pi\pi^*s$ agrees with the given section off $D$, hence everywhere by the identity theorem. The integrability equivalence then places $s$ in the required multiplier ideal. The same argument on each open set proves the sheaf identity and the global identification.
+\end{proof}
+
+In particular, the formula does not identify $\pi^*\mathcal I(a)$ with $\mathcal I(a\circ\pi)$. The Jacobian is part of the holomorphic coefficient upstairs, rather than a factor that may be deleted from the integrability test.
+
+We also need invariance of the ideal \emph{order}, which asks for all positive weights. We give the local argument to avoid assuming that a modification of a small open subset of $Y$ extends over $X$.
+
+\begin{lemma}\label{lem:birational-ideal-order}
+For quasi-plurisubharmonic $a,b$ on $X$,
+\[
+ a\preceq_{\mathcal I}b
+ \quad\Longleftrightarrow\quad
+ a\circ\pi\preceq_{\mathcal I}b\circ\pi.
+\]
+\end{lemma}
+\begin{proof}
+The reverse implication follows at every positive weight from the sheaf identity in \cref{lem:adjoint-ideal-transform}: tensor the upstairs ideal inclusion with $R_\pi$ and apply the left-exact direct image functor.
+
+For the forward implication, fix a coordinate neighborhood $W\subset Y$, a smooth local modification $\sigma:Z\to W$, and a prime divisor $E$ on $Z$. Shrinking $W$ as necessary near the center under consideration, its image is contained in a coordinate neighborhood $U\subset X$. Put $F=\pi\circ\sigma$ and
+\[
+ A_F(E)=1+\operatorname{ord}_E\operatorname{Jac}F.
+\]
+The map $F$ is holomorphic and is one-to-one and biholomorphic off a proper analytic set. It need not be a proper modification of $U$.
+
+The proof of \cref{lem:bergman-divisorial-error} applies to this map on relatively compact coordinate patches and gives
+\[
+ \max\left\{\nu_E(a\circ F)-\frac{A_F(E)}m,0\right\}
+ \leq \frac1m\operatorname{ord}_E\bigl(\mathcal I(ma)\mathcal O_Z\bigr)
+ \leq\nu_E(a\circ F).
+\]
+Here $\nu_E$ denotes the generic number along $E$. For clarity, the upper inequality pulls back the local Bergman lower bound on $U$. For the lower one, a germ $f\in\mathcal I(ma)$ pulls back to an integrable coefficient $(f\circ F)\operatorname{Jac}F$: on a relatively compact upstairs patch the change-of-variables integral is bounded by the integral over its downstairs image. Generic divisorial removal and the one-variable integral give
+\[
+ \operatorname{ord}_E(f\circ F)+A_F(E)>m\nu_E(a\circ F).
+\]
+Only local injectivity off the exceptional set and the compact patch are needed for this estimate, not properness of $F$ over $U$. The same estimates hold for $b$.
+
+The hypothesis implies $\mathcal I(ma)\subseteq\mathcal I(mb)$ for every $m>0$. Orders of the pulled-back ideals therefore satisfy the reverse inequality. Letting $m\to\infty$ in the two estimates proves
+\[
+ \nu_E(a\circ F)\geq\nu_E(b\circ F).
+\]
+This holds for every local divisor over $Y$. Blowing up a point on any local modification recovers its pointwise Lelong number; in dimension one the point already is a divisor. The exact local criterion in \cref{thm:local-i-inputs} now proves the upstairs ideal order. No extension of $\sigma$ outside its local domain was used.
+\end{proof}
+
+\begin{proposition}\label{prop:birational-partial-envelopes}
+Let $\theta$ be a smooth closed real $(1,1)$-form on $X$ and let $\varphi\in\PSH(X,\theta)$. Pullback is a bijection
+\[
+ \PSH(X,\theta)\longrightarrow\PSH(Y,\pi^*\theta).
+\]
+For $v\in C(X)$, put $E_X(v)=E_{\theta,X}[\varphi]_{\mathcal I}(v)$. Then
+\[
+ E_{\pi^*\theta,Y}[\varphi\circ\pi]_{\mathcal I}(v\circ\pi)
+       =E_X(v)\circ\pi.
+\]
+For any $u\in\PSH(X,\theta)$ the non-pluripolar measures also satisfy
+\[
+ \pi_*\mathrm{MA}_{\pi^*\theta}(u\circ\pi)
+       =\mathrm{MA}_\theta(u),
+\]
+initially as extended positive measures if finiteness has not yet been established.
+\end{proposition}
+\begin{proof}
+Pullback is well defined using the local plurisubharmonic potentials of the closed form $\theta$. It is injective because $\pi$ is surjective. To prove surjectivity, let $b\in\PSH(Y,\pi^*\theta)$ and first define $u$ off $S$ by the inverse map. On a coordinate neighborhood choose a smooth potential $\rho$ for $\theta$. Properness and local upper boundedness of $b+\rho\circ\pi$ give a local upper bound for $u+\rho$ near $S$. The removable-singularity theorem for plurisubharmonic functions therefore extends $u+\rho$ across $S$. These local extensions glue canonically and give $u\in\PSH(X,\theta)$. The plurisubharmonic functions $b+\rho\circ\pi$ and $(u+\rho)\circ\pi$ agree off $D$, hence almost everywhere and as canonical representatives everywhere. Thus $b=u\circ\pi$.
+
+For a continuous obstacle on the whole manifold, its quasi-everywhere inequality for a quasi-plurisubharmonic function is equivalent to its everywhere inequality. Indeed it holds almost everywhere, and local averages recover the canonical function while the obstacle is continuous. Surjectivity of $\pi$ and \cref{lem:birational-ideal-order} now identify the two competitor families. Each partial envelope is the largest member of its family by \cref{thm:hermitian-partial-i-envelope}. This proves the envelope identity without interchanging pullback and an unverified regularized supremum.
+
+Finally, the measures agree under the biholomorphism away from $D$ and $S$ by locality of the non-pluripolar construction. They give these analytic sets zero mass. Testing nonnegative Borel functions, or increasing compact subsets of the complements, proves the pushforward identity, including the possibility of infinite total mass.
+\end{proof}
+
+Choose smooth positive probability volumes $\nu_X,\nu_Y$. They determine a smooth metric $h_R$ on $R_\pi$ such that
+\begin{equation}\label{eq:jacobian-volume-metric}
+ |J_\pi|_{h_R}^2\,\nu_Y=\pi^*\nu_X.
+\end{equation}
+For example, write the coordinate volume densities as $f_X,f_Y$. The local frame of $R_\pi$ given by the quotient of coordinate canonical frames has squared norm $(f_X\circ\pi)/f_Y$. This is smooth and strictly positive even where $J_\pi$ vanishes, and the coordinate transformation laws make it a metric. Equation~\eqref{eq:jacobian-volume-metric} concerns smooth top forms; it does not define the pullback of an arbitrary measure.
+
+\begin{proposition}\label{prop:birational-partial-kernel-measures}
+Let $L,h,\varphi,v$ be as in the selected-space construction, with $v\in C(X)$ and $\varphi\in\QPSH(X)$. Use $\nu_X$ downstairs. Upstairs use $\pi^*L$, the fixed auxiliary bundle $(R_\pi,h_R)$, the singular weight $\varphi\circ\pi$, the continuous weight $v\circ\pi$, and $\nu_Y$. Then the identification
+\[
+ H^0(X,L^m\otimes\mathcal I(m\varphi))
+ \simeq H^0(Y,\pi^*L^m\otimes R_\pi
+                         \otimes\mathcal I(m\varphi\circ\pi))
+\]
+is an isometry for the continuous weighted norms. Their kernels and measures obey
+\[
+ B_{Y,m}=|J_\pi|_{h_R}^2(B_{X,m}\circ\pi),
+ \qquad \pi_*\beta_{Y,m}^{(r)}=\beta_{X,m}^{(r)}
+\]
+for the same normalization integer $r$. The formulas include empty section spaces.
+\end{proposition}
+\begin{proof}
+The section identification is \cref{lem:adjoint-ideal-transform} with $M=L^m$ and $a=m\varphi$. By \eqref{eq:jacobian-volume-metric} and change of variables,
+\[
+ \int_Y|J_\pi\pi^*s|_{\pi^*h^m\otimes h_R}^2e^{-mv\circ\pi}\,\mathrm{d}\nu_Y
+ =\int_X|s|_{h^m}^2e^{-mv}\,\mathrm{d}\nu_X.
+\]
+The singular weight has already selected the section space; it does not enter this norm. Apply the isometry to an orthonormal basis and sum its squared evaluations to obtain the kernel formula, including at zeros of $J_\pi$. Multiplying by $r!/m^r$ and testing a continuous function pulled back from $X$ proves the measure formula.
+\end{proof}
+
+\Needspace{25\baselineskip}
+\subsection{Convergence with a K\"ahler modification}
+
+\begin{theorem}\label{thm:fujiki-partial-kernel-limit}
+Suppose $X$ admits a modification from a compact K\"ahler manifold. Let $L$ have smooth metric $h$ and curvature $\theta=c_1(L,h)$, and let $\varphi\in\PSH(X,\theta)$ satisfy
+\[
+ \mathrm{MA}_\theta(\varphi)(X)>0.
+\]
+For every $v\in C(X)$ and smooth positive probability volume $\nu_X$, the partial kernel measures on the whole manifold satisfy
+\[
+ \frac{n!}{m^n}B_{m,v,\varphi,\nu_X}\,\nu_X
+       \rightharpoonup\mathrm{MA}_\theta(E_X(v)).
+\]
+The measure on the right is finite and nonzero. Its total mass equals
+\[
+ M=\lim_{m\to\infty}\frac{n!}{m^n}
+                    h^0(X,L^m\otimes\mathcal I(m\varphi)),
+\]
+which is independent of $v$ and $\nu_X$. The limit measure is independent of the chosen K\"ahler modification.
+\end{theorem}
+\begin{proof}
+Choose a K\"ahler modification $\pi:Y\to X$ and a smooth positive probability volume $\nu_Y$. The pulled-back potential belongs to $\PSH(Y,\pi^*\theta)$, and its non-pluripolar mass is the given positive mass by \cref{prop:birational-partial-envelopes}. In particular that mass is finite, by the closed K\"ahler theory.
+
+Apply \cite[Theorem~14.3.1]{SGPT} on $Y$, with line bundle $\pi^*L$, auxiliary twisting line bundle $R_\pi$, continuous obstacle $v\circ\pi$, and smooth probability $\nu_Y$. Its Bernstein--Markov hypothesis follows from the proof of \cref{prop:hermitian-full-bm}; a fixed smooth auxiliary bundle only changes the local constants. The ideal convention and continuous weighted norm agree exactly with those in the preceding proposition. The source theorem gives
+\[
+ \beta_{Y,m}^{(n)}\rightharpoonup
+ \mathrm{MA}_{\pi^*\theta}
+ \bigl(E_{\pi^*\theta,Y}[\varphi\circ\pi]_{\mathcal I}(v\circ\pi)\bigr).
+\]
+This is the asymptotic input from the original book. Its equilibrium measure has finite positive mass under the stated positive-mass hypothesis.
+
+Push forward the convergence, testing continuous functions on $X$. The kernel identity, envelope identity and non-pluripolar pushforward identity give the displayed downstairs limit. Testing the constant function one proves the dimension formula. The dimensions do not involve $v$ or either volume. Finally the limiting expression is defined entirely on $X$, proving independence of the modification.
+\end{proof}
+
+The hypothesis is membership in Fujiki's class $\mathcal C$, expressed by a K\"ahler modification. By \cref{lem:kahler-modification-bounded-mass}, it implies BMP. Thus this theorem does not remove BMP from an arbitrary-background equation theorem. It extends the closed line-bundle equilibrium statement to this geometric setting; the Jacobian identities before it require no K\"ahler modification or mass bound.
+
+The positive dimension limit also forces $X$ to be Moishezon, by \cref{cor:non-moishezon-section-vanishing}. On a manifold failing BMP, ambient normalization by $m^n$ always gives zero kernel measures. The quotient normalization studied below can still give a nonzero limit.
+
+\Needspace{15\baselineskip}
+\begin{corollary}\label{cor:fujiki-partial-determinant}
+Under the theorem's hypotheses, the determinant functionals with $r=n$ converge pointwise on $C(X)$ to
+\[
+ \mathcal F(v)=\int_0^1\!\left(\int_X
+       v\,\mathrm{d}\mathrm{MA}_\theta(E_X(tv))\right)\mathrm{d}t.
+\]
+This functional is concave, $\mathcal F(0)=0$, and
+\[
+ \mathcal F(v+c)=\mathcal F(v)+Mc,\qquad
+ |\mathcal F(v)-\mathcal F(w)|\leq M\|v-w\|_\infty.
+\]
+\end{corollary}
+\begin{proof}
+Integrate the finite-dimensional first-variation identity in \cref{prop:partial-kernel-variation} along $tv$. For each fixed $t$ the integrand converges by the theorem. Its absolute value is bounded by
+\[
+ \|v\|_\infty\frac{n!N_m}{m^n},
+\]
+and this sequence of constants is bounded because it converges to $M$. Dominated convergence on $[0,1]$ gives the formula. The limiting integrand is measurable as the pointwise limit of continuous finite-dimensional derivatives. Concavity, the translation identity and the Lipschitz bound pass from the finite-dimensional functionals to their pointwise limit.
+\end{proof}
+
+The limit is a functional for the closed-curvature partial equilibrium operator. It is not a primitive for the raw nonclosed Hermitian Monge--Amp\`ere operator. Nor does convergence of the kernel measures alone prove the lower bound for the partial Fubini--Study potentials in \cref{thm:partial-fubini-study-upper}. Generation of those potentials and lower-dimensional kernel limits outside this geometric regime remain distinct questions.

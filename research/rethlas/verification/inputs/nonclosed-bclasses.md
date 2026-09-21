@@ -1,0 +1,153 @@
+Run_id: nonclosed_bclasses_01
+
+Statement: Verify the entire submitted chapter on non-closed background classes. Use the ordinary bounded verification workflow and read manuscript and sources without modifying them. Accepted prerequisites: chapter_divisorial_models.tex passed divisorial_models_01 (read report): summable closed positive trace divisorial currents S_Z, Gauduchon budgets, strong trace-mass approximation D_m,Z to S_Z, push compatibility, and one original-background majorant on all models. CONDITIONALLY accept section_bott_chern_bclasses.tex conclusions while bott_chern_bclasses_01 is finishing: its elementary smooth/current HBC(1,1) isomorphism, self-trace equality for closed positive currents, and unit-ideal Demailly regularization smoothness argument. Check whether this latter report has passed and record status. No circular dependence on this submitted chapter. All new extensions must be checked: arbitrary smooth real nonclosed theta; affine quotient of pi*theta plus CLOSED currents by ddc distributions; smooth reps and derivative fiber; push under modifications ONLY because derivative is pulled from fixed base, arbitrary quasi-closed push not asserted; smooth-class pull and push-pull identity; positivity, gauge and I-equivalence; extension of self-tau=Siu to all qpsh via local correction/Jacobian inequality; analytic singularities defined with rational coefficient and bounded remainder in chapter18; bounded potential regularization arbitrary smooth lower bound yields smooth almost-positive reps in FIXED affine class (no closedness used); analytic => affine nef Cartier. Approximation uses theta_m=theta+2epsilon_m omega, thus backgrounds and their derivatives VARY. Modelwise concrete current representatives C_m=pi*theta+2epsilon_m*pi*omega-D_m converge weakly, derivatives smoothly. No claim about unrestricted BC weak quotient topology, no closed-only nef approximation, no nonlinear volume continuity. Counterexample U from already audited infinite-mass witness all positive-weight I=O gives self divisors zero on ALL models and same affine nef Cartier bclass as0 but infinite raw mass. Standard inputs accepted: local BT/current facts, log resolution as SGPT, Demailly analytic regularization stated in manuscript with arbitrary continuous lower bound, finite Gauduchon linear trace bounds. Primary BGL25 publisher Def1.1/Lem1.4 provides terminology for broader all-smooth-forms/ddc space; our fixed-fiber construction proved directly, not general quasi-closed push. Read research/sources/BGL25-published.txt lines250-375 and DemAM11 Th14.12 construction/obs14.14 if needed. All work without BMP/PVP. No novelty claim. Check all dimension/normalization/type conditions and every new proof.
+
+Proof:
+
+\chapter{Classes with a non-closed background}
+\label{chap:nonclosed-bclasses}
+
+Ordinary Bott--Chern cohomology records closed forms. A larger space records all smooth $(1,1)$-forms modulo $\ddc$ of smooth functions, as in \cite[Section 1]{BGL25}. In this chapter we work in the part of that space whose exterior derivative comes from one specified base background. This restriction permits pushforward between models and retains the torsion of the Hermitian operator.
+
+The constructions below are definitions and direct consequences of the divisorial estimates already proved. No identification with a nonlinear volume is implicit in the use of the word class.
+
+\section{An affine space on each model}
+
+Fix a connected compact complex manifold $Y$ of dimension $n\geq1$ and a smooth real $(1,1)$-form $\theta$ on it. For a smooth compact modification $\pi:Z\to Y$, let
+\[
+ \mathscr A_Z(\theta)=
+ \frac{\{\pi^*\theta+C:C\text{ is a closed real }(1,1)\text{-current on }Z\}}
+      {\ddc\mathcal D'(Z,\mathbb R)}.
+\]
+The quotient is affine: two displayed currents are equivalent if their difference is $\ddc$ of a real distribution. By \cref{lem:bc-one-one-current-description}, every class has a smooth representative and
+\[
+ \mathscr A_Z(\theta)=\{\pi^*\theta\}+H^{1,1}_{\mathrm{BC}}(Z,\mathbb R).
+\]
+Its smooth representatives $\eta$ are exactly forms in this affine quotient with $d\eta=\pi^*d\theta$. Thus it is the fiber, over $\pi^*d\theta$, of the derivative map on the larger $dd^c$-class space. We distinguish $\mathscr A_Z(\theta)$ from ordinary Bott--Chern cohomology when $d\theta\neq0$.
+
+\begin{proposition}\label{prop:fixed-background-class-maps}
+If $g:Z'\to Z$ is a compact modification over $Y$, pushforward and pullback induce maps
+\[
+ g_*:\mathscr A_{Z'}(\theta)\to\mathscr A_Z(\theta),
+ \qquad g^*:\mathscr A_Z(\theta)\to\mathscr A_{Z'}(\theta),
+ \qquad g_*g^*=\mathrm{id}.
+\]
+Pushforward preserves classes with positive current representatives.
+\end{proposition}
+\begin{proof}
+Write $\pi'=\pi\circ g$. For a representative $\pi'^*\theta+C'$, degree-one change of variables gives
+\[
+ g_*(\pi'^*\theta+C')=\pi^*\theta+g_*C'.
+\]
+The second term is closed. Changing the representative by $\ddc U$ changes its pushforward by $\ddc(g_*U)$, so the map is well-defined. Positivity follows from positivity of proper pushforward.
+
+For pullback choose a smooth representative $\eta=\pi^*\theta+\beta$, where $\beta$ is smooth and closed. Its pullback has the required form on $Z'$. If two such representatives are equivalent, their difference is a smooth form $\ddc U$; the injectivity part of \cref{lem:bc-one-one-current-description} makes $U$ smooth. Their pullbacks consequently differ by $\ddc(U\circ g)$, proving independence. Finally $g_*g^*\eta=\eta$ for smooth representatives proves the identity on classes.
+\end{proof}
+
+This argument uses the prescribed derivative: $d(g_*\eta')=\pi^*d\theta$ is smooth. A pushforward of an arbitrary current with smooth exterior derivative need not retain a smooth derivative. We have not asserted a pushforward map on the unrestricted larger $dd^c$-class space.
+
+A compatible family with entries in $\mathscr A_Z(\theta)$ will be called a \emph{b-divisor class over the background $\theta$}. Compatibility always means the displayed pushforward compatibility. A family is pseudoeffective if every entry has a positive representative. A Cartier realization on $Z$ means that every entry on a model dominating $Z$ is the pullback of one class in $\mathscr A_Z(\theta)$.
+
+An affine class is called nef if it admits smooth representatives $\eta_\epsilon\geq-\epsilon\gamma$ for every $\epsilon>0$, where $\gamma$ is a Hermitian metric on that model. Metric comparison makes the definition independent of $\gamma$. A Cartier realization is nef when its realizing affine class is nef.
+
+\section{The class associated with trace data}
+
+\begin{theorem}\label{thm:nonclosed-trace-bclass}
+Suppose $Y\subset X$ and $u\in\PSH(X,\Theta)$ satisfy the standing trace hypotheses, and set $\theta=\Theta|_Y$. Then
+\[
+ \mathbb B_Z(u;Y,\theta)
+ =\{\pi^*\theta-S_Z(u;Y)\}\in\mathscr A_Z(\theta)
+\]
+is a pseudoeffective b-divisor class over $\theta$. It is unchanged by ambient multiplier-ideal equivalence and by a smooth $\ddc$ change of the restricted background, after identifying the resulting affine spaces.
+\end{theorem}
+\begin{proof}
+The currents $S_Z$ are closed, so the displayed classes belong to the indicated affine spaces. Their compatibility follows from \cref{thm:trace-divisorial-model-compatibility} and \cref{prop:fixed-background-class-maps}. The original-background majorant supplies one $v\in\PSH(Y,\theta)$ with
+\[
+ \pi^*\theta+\ddc(v\circ\pi)-S_Z(u;Y)\geq0
+\]
+on every model, proving pseudoeffectivity. The currents $S_Z$ depend only on the ambient multiplier ideals. A change $\theta\mapsto\theta+\ddc f$ adds $\ddc(f\circ\pi)$ to every representative, which is zero in the quotient. This proves both invariances.
+\end{proof}
+
+If the restricted background is closed, this construction is exactly \cref{prop:trace-bott-chern-bclass}. For a non-closed background it instead retains the prescribed derivative on every model.
+
+For a potential $u\in\PSH(Y,\theta)$ on the base itself, write
+\[
+ N_Z(u)=\sum_E\nu(u\circ\pi,E)[E],
+ \qquad \mathbb D_\theta(u)_Z=\{\pi^*\theta-N_Z(u)\}.
+\]
+The self-trace identity remains valid here. Indeed the proof of \cref{lem:self-trace-is-siu} uses only a local psh correction, the Bergman lower bound and the Jacobian integrability inequality. These apply to any quasi-plurisubharmonic $u$ and give
+\[
+ \nu(u\circ\pi,E)-A_E/m
+ \leq m^{-1}\operatorname{ord}_E\mathcal I(mu)
+ \leq\nu(u\circ\pi,E).
+\]
+Thus $N_Z(u)=S_Z(u;Y)$, including when $\theta$ is not closed. The preceding theorem makes $\mathbb D_\theta(u)$ a pseudoeffective family. Its positive representative can also be taken directly as $\pi^*\theta+\ddc(u\circ\pi)-N_Z(u)$ by the divisorial removal lemma.
+
+\section{Analytic singularities and nef realization}
+
+\begin{proposition}\label{prop:nonclosed-analytic-nef-cartier}
+If $u\in\PSH(Y,\theta)$ has analytic singularities, then $\mathbb D_\theta(u)$ has a nef Cartier realization on a smooth compact modification. No closedness of $\theta$ is needed.
+\end{proposition}
+\begin{proof}
+Resolve the analytic singularity ideal. On one model $\pi:Z\to Y$ we have
+\[
+ \pi^*\theta+\ddc(u\circ\pi)=[D]+R,
+ \qquad R=\beta+\ddc v\geq0,
+\]
+where $D$ is a finite effective rational divisor, $\beta$ is smooth, $v$ is globally bounded after choosing divisor metrics, and $d\beta=\pi^*d\theta$. Positivity follows from divisorial removal. The form $\beta$ need not be closed.
+
+Repeat the unit-ideal regularization argument of \cref{lem:bounded-closed-potential-nef}. Its curvature estimate allows the arbitrary smooth lower bound $-\beta$, and therefore gives smooth $v_j$ with $\beta+\ddc v_j\geq-\epsilon_j\gamma$, $\epsilon_j\to0$. Each form has derivative $\pi^*d\theta$ and represents the same affine class. This proves nefness in the stated affine sense; closedness played no role in this estimate.
+
+On every further modification, the pullback of the bounded residual potential remains bounded and has zero Lelong numbers. The divisorial part is precisely the pullback of $D$. Thus the residual affine class on that model is the pullback of the class of $R$, proving the Cartier realization.
+\end{proof}
+
+\section{Approximation while the derivative varies}
+
+The last proposition also yields a useful approximation for arbitrary singularities. The backgrounds in this statement vary by a smooth error tending to zero. We record that variation as part of the conclusion.
+
+\begin{theorem}\label{thm:varying-background-nef-approximation}
+Let $u\in\PSH(Y,\theta)$ and fix a Hermitian form $\omega$ on $Y$. There are $\epsilon_m\downarrow0$ and analytic potentials $u_m$ such that
+\[
+ \theta_m=\theta+2\epsilon_m\omega,
+ \qquad \theta_m+\ddc u_m\geq\epsilon_m\omega.
+\]
+For each $m$, the family $\mathbb D_{\theta_m}(u_m)$ has a nef Cartier realization. On every fixed compact model $\pi:Z\to Y$, its class has the current representative
+\[
+ C_{m,Z}=\pi^*\theta+2\epsilon_m\pi^*\omega-D_{m,Z},
+ \qquad D_{m,Z}=\frac1m\sum_E\operatorname{ord}_E\mathcal I(mu)[E].
+\]
+These representatives satisfy
+\[
+ C_{m,Z}\longrightarrow\pi^*\theta-N_Z(u)
+ \quad\hbox{weakly as currents},
+\]
+and their exterior derivatives converge smoothly to $\pi^*d\theta$.
+\end{theorem}
+\begin{proof}
+Take $u_m$ and $\epsilon_m$ from \cref{cor:nonclosed-analytic-approximation}. Adding $2\epsilon_m\omega$ changes the lower bound $-\epsilon_m\omega$ into $\epsilon_m\omega$, proving the first assertion. Each $u_m$ has analytic type $(1/m,\mathcal I(mu))$, so \cref{prop:nonclosed-analytic-nef-cartier} applies to its positive current in background $\theta_m$.
+
+On a fixed model the generic divisorial Lelong numbers of $u_m\circ\pi$ are exactly $m^{-1}\operatorname{ord}_E\mathcal I(mu)$. Dropping the $\ddc$ of that potential from the regular-current representative leaves precisely $C_{m,Z}$ in its affine class. The self-trace identity and \cref{thm:trace-divisorial-current-budget} give $D_{m,Z}\to N_Z(u)$ in trace mass, hence weakly as currents. The smooth error $2\epsilon_m\pi^*\omega$ tends to zero in every derivative, proving current convergence. Since each $D_{m,Z}$ is closed,
+\[
+ dC_{m,Z}=\pi^*d\theta+2\epsilon_m\pi^*d\omega,
+\]
+which proves the stated smooth convergence.
+\end{proof}
+
+This is a concrete convergence of representatives, with a specified derivative error. It does not invoke continuity of the larger $dd^c$-class quotient under arbitrary weak convergence. It also does not assert approximation within the single affine space $\mathscr A_Z(\theta)$: the approximating spaces have backgrounds $\theta_m$. When $\theta$ is closed and $\omega$ is not, these are non-closed approximating classes. Consequently the theorem does not supply a net of closed nef Cartier classes of the kind used in the K\"ahler b-divisor theorem.
+
+\section{A b-divisor class does not determine raw Hermitian mass}
+
+\begin{proposition}\label{prop:affine-bclass-infinite-mass}
+If $v_+(\omega)=+\infty$, there is $U\in\PSH(Y,\omega)$ such that
+\[
+ \mathbb D_\omega(U)=\mathbb D_\omega(0),\qquad
+ \int_Y\mathrm{MA}^{\mathrm{ext}}_\omega(U)=+\infty,
+ \qquad \int_Y\omega^n<+\infty.
+\]
+The common family has the nef Cartier realization $(Y,\{\omega\})$.
+\end{proposition}
+\begin{proof}
+Take $U$ from \cref{thm:infinite-mass-witness}. Every positive-weight multiplier ideal is the unit ideal. Hence every divisorial order in $D_{m,Z}$ is zero on every model. The self-trace identity gives $N_Z(U)=0$, which is also the divisorial part of the constant potential. Both families are therefore the pullback classes of $\omega$. The form $\omega$ is smooth and positive, so its affine class is nef and realizes the family on the base. The infinite extended mass is part of the construction of $U$, whereas the smooth measure $\omega^n$ has finite mass by compactness.
+\end{proof}
+
+Thus even the background-dependent family of affine classes can forget an infinite raw mass. It records a coherent divisorial invariant and admits the approximation above, but a volume theory would require an additional definition and a separate comparison theorem. Approximation with exactly fixed derivative, intersection products, and relations with the finite damped measures remain directions for further work.

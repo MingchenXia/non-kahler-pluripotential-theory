@@ -1,0 +1,144 @@
+\section{The modified comparison principle}
+
+The ordinary comparison principle would force invariance of mass. Its useful Hermitian replacement compares the measures on a thin sublevel set after reserving a small amount of strict positivity. We give the finite induction of Guedj--Lu \cite[Theorem 1.5]{GL22}, with enlarged dimensional constants. The original principle is due to Ko\l odziej--Nguyen \cite[Theorem 0.2]{KN15}.
+
+Choose $B_0\geq1$ such that
+\[
+ -B_0\omega^2\leq\ddc\omega\leq B_0\omega^2,
+ \qquad
+ -B_0\omega^3\leq \mathrm{d}\omega\wedge\dc\omega\leq B_0\omega^3.
+\]
+Only inequalities after wedging with positive complementary forms are needed. Such a constant exists because $\omega$ is Hermitian and $X$ is compact. Terms whose degree exceeds the dimension are omitted.
+
+\begin{theorem}\label{thm:modified-comparison}
+Let $u,v\in\PSH(X,\omega)\cap L^\infty(X)$ and $0<\varepsilon<1$. Put
+\[
+ m_\varepsilon=\inf_X\bigl(u-(1-\varepsilon)v\bigr),\qquad
+ U_{\varepsilon,s}=\{u<(1-\varepsilon)v+m_\varepsilon+s\}.
+\]
+If $0<s<\varepsilon^3/(32B_0n^2)$, then, with
+$a=B_0n^2s\varepsilon^{-3}$,
+\begin{equation}\label{eq:modified-comparison}
+ (1-4a)^n\int_{U_{\varepsilon,s}}\omega_{(1-\varepsilon)v}^{\,n}
+ \leq\int_{U_{\varepsilon,s}}\omega_u^n.
+\end{equation}
+In particular, the reverse factor $(1-4a)^{-n}$ tends to one as $s\downarrow0$ for fixed $\varepsilon$.
+\end{theorem}
+\begin{proof}
+Write $v_\varepsilon=(1-\varepsilon)v$, $U=U_{\varepsilon,s}$ and
+\[
+ \phi=\max(u,v_\varepsilon+m_\varepsilon+s),\qquad
+ T_k=\omega_u^k\wedge\omega_\phi^{n-k},\qquad I_k=\int_U T_k.
+\]
+Set $I_{-1}=I_{-2}=0$. Then $0\leq\phi-u\leq s$, this difference vanishes outside $U$, and on $U$ locality gives
+$\omega_\phi=\omega_{v_\varepsilon}\geq\varepsilon\omega$ in all bounded products.
+
+We will use the mixed version of the ordered-contact argument in \cref{prop:ordered-contact-general}. If $u\leq\phi$ and $W$ is a fixed positive mixed product of bounded potentials, then
+\[
+ \mathbf1_{\{u=\phi\}}\omega_u\wedge W
+ \leq\mathbf1_{\{u=\phi\}}\omega_\phi\wedge W.
+\]
+For completeness, apply locality to $\max(u,\phi-\delta)$ on $\{u>\phi-\delta\}$, which contains the contact set. These maxima converge uniformly to $\phi$ as $\delta\downarrow0$. Continuity of the mixed bounded products and the weak-limit inequality on compact subsets of the contact set prove the assertion, followed by inner regularity. This is the same proof with the remaining factors held fixed.
+
+Apply it with $W=\omega_u^k\wedge\omega_\phi^{n-k-1}$. On $X\setminus U$ the difference $T_k-T_{k+1}$ is nonnegative. Consequently
+\begin{equation}\label{eq:comparison-stokes}
+ I_k-I_{k+1}
+ \leq\int_X\ddc(\phi-u)\wedge W
+ =\int_X(\phi-u)\ddc W.
+\end{equation}
+This Stokes identity is valid for the bounded potentials in use. To check it, approximate $u$ and $\phi$ by bounded smooth decreasing $\omega$-plurisubharmonic functions using \cref{thm:bounded-exact-regularization}. For smooth functions it is ordinary integration by parts. The derivative $\ddc W$ expands as below in bounded Hessian products and smooth forms; bounded Bedford--Taylor convergence, also against bounded quasi-continuous coefficients converging in capacity, passes each term to the limit.
+
+Set $p=n-k-1$. Since $\mathrm{d}\omega_u=\mathrm{d}\omega_\phi=\mathrm{d}\omega$, expansion gives
+\[
+ \begin{split}
+ \ddc W={}&k\ddc\omega\wedge\omega_u^{k-1}\wedge\omega_\phi^p
+       +p\ddc\omega\wedge\omega_u^k\wedge\omega_\phi^{p-1}\\
+ &+k(k-1)\mathrm{d}\omega\wedge\dc\omega\wedge\omega_u^{k-2}\wedge\omega_\phi^p\\
+ &+2kp\,\mathrm{d}\omega\wedge\dc\omega\wedge\omega_u^{k-1}\wedge\omega_\phi^{p-1}\\
+ &+p(p-1)\mathrm{d}\omega\wedge\dc\omega\wedge\omega_u^k\wedge\omega_\phi^{p-2}.
+ \end{split}
+\]
+Factors with a zero coefficient and a negative power are absent. On $U$ we can replace each $\omega^j$ in an upper bound by $\varepsilon^{-j}\omega_\phi^j$. Using $\phi-u\leq s$ and $\varepsilon^{-2}\leq\varepsilon^{-3}$ in \eqref{eq:comparison-stokes}, we obtain
+\[
+ I_k-I_{k+1}\leq B_0s\varepsilon^{-3}
+ \bigl(k(k-1)I_{k-2}+k(1+2p)I_{k-1}+p^2I_k\bigr).
+\]
+Each coefficient is at most $n^2$. Hence
+\begin{equation}\label{eq:comparison-recurrence}
+ I_k-I_{k+1}\leq a(I_{k-2}+I_{k-1}+I_k).
+\end{equation}
+Put $q=1-4a>7/8$. Inductively suppose $qI_j\leq I_{j+1}$ for $j<k$. Then
+$I_{k-1}\leq q^{-1}I_k$ and $I_{k-2}\leq q^{-2}I_k$ whenever the indices exist. Since
+\[
+ 1+q^{-1}+q^{-2}\leq1+8/7+64/49<4,
+\]
+\eqref{eq:comparison-recurrence} gives $qI_k\leq I_{k+1}$. The case $k=0$ follows from the same formula with the two absent terms set to zero. Induction proves $q^n I_0\leq I_n$. On $U$, $T_0=\omega_{v_\varepsilon}^n$, while $T_n=\omega_u^n$, giving the theorem. In dimension one all torsion terms vanish and the same argument applies.
+\end{proof}
+
+The positivity reserve $\omega_{(1-\varepsilon)v}\geq\varepsilon\omega$ prices the torsion terms. The factor $s$ comes from the height of $\phi-u$. Keeping $s$ fixed while sending $\varepsilon$ to zero would violate the required relation between these two parameters.
+
+\begin{lemma}\label{lem:strict-set-positive-volume}
+If $a,b$ are quasi-plurisubharmonic functions and $\{a<b\}$ is nonempty at a point where both are finite, then this set has positive smooth volume.
+\end{lemma}
+\begin{proof}
+Choose a point $x$ with $a(x)<b(x)$ and a number $c$ between them. Upper semicontinuity gives $a<c$ on a neighborhood $V$ of $x$. If $\{b>c\}\cap V$ had zero volume, then $b\leq c$ almost everywhere on $V$. The canonical quasi-plurisubharmonic representative, or the submean inequality after a smooth local correction, would imply $b(x)\leq c$, a contradiction. Thus $\{a<b\}$ has positive volume.
+\end{proof}
+
+\begin{theorem}\label{thm:bounded-strict-domination}
+Let $u,v\in\PSH(X,\omega)\cap L^\infty(X)$, and let $0\leq c<1$. If
+\[
+ \mathbf1_{\{u<v\}}\omega_u^n
+ \leq c\,\mathbf1_{\{u<v\}}\omega_v^n,
+\]
+then $u\geq v$. In particular, $\omega_u^n(\{u<v\})=0$ implies $u\geq v$.
+\end{theorem}
+\begin{proof}
+Suppose $m=\inf_X(u-v)<0$. Choose $\varepsilon>0$ so small that
+\[
+ (1-\varepsilon)^n>c,
+ \qquad 2\varepsilon\|v\|_\infty<-m/4,
+\]
+omitting the second restriction if $v=0$. Since
+$|m_\varepsilon-m|\leq\varepsilon\|v\|_\infty$, for all sufficiently small $s>0$ the set $U=U_{\varepsilon,s}$ is contained in $\{u<v\}$: there
+\[
+ u-v<m_\varepsilon+s-\varepsilon v
+       \leq m+2\varepsilon\|v\|_\infty+s<0.
+\]
+The set $U$ is nonempty by the definition of the infimum and has positive volume by \cref{lem:strict-set-positive-volume}.
+
+Make $s$ smaller so that \cref{thm:modified-comparison} applies and
+$(1-4B_0n^2s\varepsilon^{-3})^n(1-\varepsilon)^n>c$. Write the first factor as $q^n$. Positivity of every mixed term gives
+\[
+ \omega_{(1-\varepsilon)v}^n
+ \geq(1-\varepsilon)^n\omega_v^n+\varepsilon^n\omega^n.
+\]
+Comparison and the assumption would therefore imply
+\[
+ q^n(1-\varepsilon)^n\int_U\omega_v^n
+       +q^n\varepsilon^n\int_U\omega^n
+ \leq\int_U\omega_u^n\leq c\int_U\omega_v^n.
+\]
+All integrals are finite. The chosen strict inequality and the positive volume of $U$ make this impossible.
+\end{proof}
+
+\begin{corollary}\label{cor:bounded-mass-positive}
+Every bounded $\omega$-plurisubharmonic function has strictly positive Monge--Amp\`ere mass.
+\end{corollary}
+\begin{proof}
+If $\omega_u^n=0$, bounded domination with the constant potential $v=\sup_Xu+1$ would give $u\geq v$, a contradiction.
+\end{proof}
+
+This positivity is asserted separately for each bounded potential. It does not provide a uniform positive infimum over all such potentials.
+
+\Needspace{8\baselineskip}
+\begin{corollary}\label{cor:bounded-exponential-comparison}
+If $u,v\in\PSH(X,\omega)\cap L^\infty(X)$ and $\lambda>0$, then
+\[
+ e^{-\lambda v}\omega_v^n\geq e^{-\lambda u}\omega_u^n
+ \quad\Longrightarrow\quad v\leq u.
+\]
+\end{corollary}
+\begin{proof}
+For every $t>0$, on $\{u<v-t\}$ the assumption gives
+$\omega_u^n\leq e^{-\lambda t}\omega_v^n$. Apply \cref{thm:bounded-strict-domination} to $u,v-t$, and then let $t\downarrow0$.
+\end{proof}

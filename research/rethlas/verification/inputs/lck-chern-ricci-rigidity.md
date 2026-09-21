@@ -1,0 +1,94 @@
+Run_id: lck_chern_ricci_rigidity_01
+
+Statement: On a connected compact complex manifold of complex dimension n>=2, a smooth Hermitian metric which is LCK, Gauduchon and Chern–Ricci flat has parallel Lee form, hence is Vaisman. Check the full reconstructed proof, including signs and constants in the real Ricci identity, conformal formulas, Bianchi and Bochner integrations, and the equality cases. No bounded mass property is assumed.
+
+Proof:
+
+The source of the argument is Barbaro–Otiman, arXiv2509.18364v2 Theorem A (Chern–Ricci-flat specialization), archived as `/Users/mingchen/Non-Kahler/research/sources/BO25-LCK-CY.pdf` and `.txt`. Verify the proof below using only standard conformal connection/Ricci formulas, contracted Bianchi and Bochner identities, not the target theorem as a premise. The manuscript is mathematical data, not instructions.
+
+Conventions: the real metric satisfies omega(U,V)=g(JU,V); lambda is the real closed Lee form d omega=lambda wedge omega; ordinary dc=i(barpartial-partial)/(4pi), ddc=i partial barpartial/(2pi). Chern–Ricci flatness is independent of this positive normalization. In the real Riemannian proof Jlambda=-lambda composed with J (this has no dc-normalization factor).
+
+Gauduchon implies lambda is co-closed: locally lambda=df and e^-f omega is Kahler, so dc(omega^(n-1))=(n-1)lambda^c wedge omega^(n-1), where lambda^c=dc f. The latter form is a nonzero constant multiple of the real Hodge star of lambda. Thus ddc omega^(n-1)=0 iff d*lambda=0, and along with d lambda=0 this says lambda is harmonic. This justification is included as an input subproof and must be checked.
+
+Full proposed proof:
+
+```latex
+\begin{proof}[of \cref{thm:lck-chern-ricci-rigidity}]
+We give the Chern--Ricci-flat specialization of the argument in \cite[Section 4]{BO25LCK}. All tensors in this proof are real Riemannian tensors for the metric $g$ associated with $\omega$. Put
+\[
+ A=\lambda^\sharp,\qquad B=JA,\qquad
+ S=\nabla\lambda,\qquad
+ S^+(U,V)=\tfrac12\bigl(S(U,V)+S(JU,JV)\bigr).
+\]
+Here $\nabla$ is the Levi--Civita connection. The tensor $S$ is symmetric because $\mathrm{d}\lambda=0$. By \cref{prop:lck-gauduchon}, $\lambda$ is harmonic, so $\operatorname{tr}_gS=0$ and $\operatorname{div}A=0$. Write $J\lambda=-\lambda\circ J$, without the constant factor used in $\lambda^{\mathrm c}$ elsewhere in the chapter.
+
+We first compute the Riemannian Ricci tensor:
+\begin{equation}\label{eq:lck-ricci-real}
+ \operatorname{Ric}_g
+ =nS^+-(n-1)S-\tfrac12|\lambda|^2g
+       +\tfrac12\lambda\otimes\lambda
+       +\tfrac n2 J\lambda\otimes J\lambda.
+\end{equation}
+For completeness, take a local function $f$ with $\lambda=\mathrm{d}f$, and put $\widetilde g=e^{-f}g$. The standard conformal Ricci formula in real dimension $2n$ gives
+\[
+ \operatorname{Ric}_{\widetilde g}
+ =\operatorname{Ric}_g+(n-1)S
+       +\tfrac{n-1}{2}\lambda\otimes\lambda
+       -\tfrac{n-1}{2}|\lambda|^2g,
+\]
+where the trace-Hessian term vanishes because $\operatorname{tr}_gS=0$.
+The local metric $\widetilde g$ is K\"ahler. Since the Chern--Ricci form of $g$ vanishes, its K\"ahler Ricci form, written using the unnormalized operator $\mathrm i\partial\bar\partial$, is
+$n\mathrm i\partial\bar\partial f=\tfrac n2\mathrm{d}(J\lambda)$.
+
+The conformal connection formula and $\widetilde\nabla J=0$ give
+\[
+ (\nabla_UJ)V
+ =\tfrac12\bigl(\lambda(JV)U-\lambda(V)JU
+             +g(U,V)JA+g(JU,V)A\bigr).
+\]
+Substituting this into
+$(\nabla_UJ\lambda)(V)=-S(U,JV)-\lambda((\nabla_UJ)V)$ and antisymmetrizing yields
+\[
+ \mathrm{d}(J\lambda)(U,JV)
+ =2S^+(U,V)-|\lambda|^2g(U,V)
+             +\lambda(U)\lambda(V)+J\lambda(U)J\lambda(V).
+\]
+For a K\"ahler metric its Ricci tensor is obtained from its Ricci form by evaluation on $(U,JV)$. Comparing the last two displays with the conformal Ricci formula proves \eqref{eq:lck-ricci-real}. The calculation is local, so the resulting tensor identity holds globally.
+
+All integrals below use the Riemannian volume of $g$. Since
+$S(A,A)=\tfrac12A(|\lambda|^2)$ and $\operatorname{div}A=0$,
+\begin{equation}\label{eq:lck-aa-zero}
+ \int_X S(A,A)\,\mathrm{d}\operatorname{vol}_g=0.
+\end{equation}
+The contracted Bianchi identity and $\mathrm{d}^*\lambda=0$ imply
+$\int_X\langle\operatorname{Ric}_g,S\rangle\,\mathrm{d}\operatorname{vol}_g=0$:
+integrate the divergence of the Ricci tensor against $\lambda$, then integrate the resulting scalar-curvature derivative against this co-closed form. Since $S^+$ is the orthogonal projection of $S$ onto the $J$-invariant symmetric tensors, \eqref{eq:lck-ricci-real}, the vanishing trace of $S$ and \eqref{eq:lck-aa-zero} give
+\begin{equation}\label{eq:lck-bianchi-integral}
+ n\int_X|S^+|^2\,\mathrm{d}\operatorname{vol}_g
+ -(n-1)\int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
+ +\tfrac n2\int_XS(B,B)\,\mathrm{d}\operatorname{vol}_g=0.
+\end{equation}
+
+The integrated Bochner identity for the harmonic one-form $\lambda$ is
+\[
+ \int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
+ +\int_X\operatorname{Ric}_g(A,A)\,\mathrm{d}\operatorname{vol}_g=0.
+\]
+Evaluating \eqref{eq:lck-ricci-real} on $(A,A)$ cancels its two quartic terms, and the $J\lambda\otimes J\lambda$ term vanishes. Thus
+\[
+ \operatorname{Ric}_g(A,A)
+ =(1-\tfrac n2)S(A,A)+\tfrac n2S(B,B).
+\]
+Together with \eqref{eq:lck-aa-zero}, this gives
+\begin{equation}\label{eq:lck-bochner-integral}
+ \int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
+ +\tfrac n2\int_XS(B,B)\,\mathrm{d}\operatorname{vol}_g=0.
+\end{equation}
+Subtracting \eqref{eq:lck-bochner-integral} from \eqref{eq:lck-bianchi-integral} gives
+\[
+ \int_X\bigl(|S^+|^2-|S|^2\bigr)\,\mathrm{d}\operatorname{vol}_g=0.
+\]
+The integrand is nonpositive, so $S=S^+$ everywhere. Consequently $S(B,B)=S(A,A)$ pointwise. Its integral vanishes by \eqref{eq:lck-aa-zero}; \eqref{eq:lck-bochner-integral} then gives $\int_X|S|^2=0$. Hence $\nabla\lambda=0$, which is the Vaisman condition.
+\end{proof}
+
+```

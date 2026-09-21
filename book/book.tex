@@ -1,0 +1,91 @@
+\input{preamble}
+\usepackage{booktabs}
+\usepackage{needspace}
+\usepackage{etoolbox}
+% Keep the template's hierarchy while avoiding an isolated final contents entry.
+\makeatletter
+\patchcmd{\l@chapter}{1.0em}{0.8em}{}{}
+\newif\ifhermitiantocpart
+\apptocmd{\l@part}{\global\hermitiantocparttrue}{}{}
+\patchcmd{\l@chapter}{\addpenalty{-\@highpenalty}}%
+  {\ifhermitiantocpart\penalty10000\global\hermitiantocpartfalse
+   \else\addpenalty{-\@highpenalty}\fi}{}{}
+\patchcmd{\l@part}{1em}{0.75em}{}{}
+\patchcmd{\l@part}{1em}{0.75em}{}{}
+\makeatother
+% Leave room for two-digit section numbers in the original table-of-contents style.
+\tocsecnum=30pt
+\tocsubsecnum=38pt
+\tocsectotal=\tocchpnum
+\advance\tocsectotal by\tocsecnum
+\tocsubsectotal=\tocsectotal
+\advance\tocsubsectotal by\tocsubsecnum
+\newcommand{\HH}{\mathcal H}
+\newcommand{\dc}{\mathrm d^{\mathrm c}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Mass}{\mathrm M}
+\newcommand{\Vsm}{\overline{\mathrm v}_{\mathrm{sm}}}
+\hypersetup{pdftitle={Singularities in Hermitian pluripotential theory},pdfauthor={Research manuscript prepared for Mingchen Xia},pdfsubject={AI-assisted working research draft}}
+\begin{document}
+\author{Research manuscript\\prepared for Mingchen Xia}
+\title{Singularities in Hermitian pluripotential theory}
+\subtitle{Foundations, obstructions, and a research program}
+\date{Working draft, September 16, 2026}
+\pagenumbering{Alph}
+\maketitle
+\frontmatter
+\include{author/preface}
+\tableofcontents
+\include{author/conventions}
+\mainmatter
+\part{The Hermitian foundations}
+\include{author/chapter_framework}
+\include{author/chapter_mass}
+\include{author/chapter_energy}
+\include{author/chapter_gauduchon}
+\include{author/chapter_compactness}
+\include{author/chapter_products}
+\include{author/chapter_damped_measures}
+\include{author/chapter_hopf}
+\part{Monge--Amp\`ere equations}
+\include{author/chapter_smooth_equations}
+\include{author/chapter_weak_equations}
+\include{author/chapter_degenerate_uniqueness}
+\part{Relative singularities and equations}
+\include{author/chapter_envelopes}
+\include{author/chapter_prescribed_equations}
+\include{author/chapter_relative_finite_measures}
+\include{author/chapter_normalization}
+\include{author/chapter_igood}
+\part{Interpolation and test curves}
+\include{author/chapter_rays}
+\include{author/chapter_testcurves}
+\part{Analytic approximation and restriction}
+\include{author/chapter_analytic_approximation}
+\include{author/chapter_trace_data}
+\part{Holomorphic sections and convex bodies}
+\include{author/chapter_sections}
+\include{author/chapter_flag_bodies}
+\include{author/chapter_hopf_reduction}
+\part{Divisorial classes on modifications}
+\include{author/chapter_divisorial_models}
+\include{author/chapter_nonclosed_bclasses}
+\part{Envelope systems and non-Archimedean questions}
+\include{author/chapter_envelope_systems}
+\part{Gauduchon duality and finite volumes}
+\include{author/chapter_gauduchon_variational_volume}
+\part{Partial kernels and equilibrium}
+\include{author/chapter_partial_bergman}
+\part{Closed classes and locally conformally K\"ahler geometry}
+\include{author/chapter_bott_chern_loci}
+\include{author/chapter_transcendental_nakamaye}
+\include{author/chapter_lck}
+\part{Problems and conjectures}
+\include{author/chapter_research_program}
+\appendix
+\include{author/appendix_hermitian_spaces}
+\backmatter
+\bibliographystyle{sgptalpha}
+\bibliography{references}
+\end{document}

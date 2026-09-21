@@ -1,0 +1,143 @@
+\chapter{Background forms and local singularities}
+\label{chap:framework}
+
+Several constructions in pluripotential theory depend only on the complex structure. Others require a positive background form, and integration by parts often requires closedness. We begin by separating these hypotheses.
+
+We begin with definitions and a few elementary facts. These facts explain why the local singularity theory survives, and why the curvature of a line bundle cannot represent an arbitrary Hermitian background.
+
+\section{Two ways to leave the K\"ahler setting}
+
+\begin{definition}\label{def:theta-psh}
+A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic} if
+\[
+ \theta+\ddc u\geq0
+\]
+as a current. We denote the set of these functions by $\PSH(X,\theta)$.
+\end{definition}
+
+If $\theta=\omega$ is Hermitian, the set is nonempty because it contains every constant. For a general smooth real form $\theta$, nonemptiness is an assumption, not a consequence of the definition.
+
+\begin{proposition}\label{prop:local-correction}
+Let $u\in\PSH(X,\theta)$. On each relatively compact coordinate ball, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
+Conversely, if $u$ is quasi-plurisubharmonic on the compact manifold $X$, then there is a constant $C>0$ such that $u\in\PSH(X,C\omega)$.
+\end{proposition}
+\begin{proof}
+On a coordinate ball with compact closure in a larger chart, smoothness of $\theta$ gives
+\[
+ \theta\leq A\ddc|z|^2
+\]
+for a sufficiently large $A$. Consequently,
+\[
+ \ddc(u+A|z|^2)\geq A\ddc|z|^2-\theta\geq0.
+\]
+The function $u+A|z|^2$ is quasi-plurisubharmonic with its canonical representative; positivity of its complex Hessian therefore gives plurisubharmonicity.
+
+For the converse, choose finitely many relatively compact charts covering $X$ on which $u=p_j+f_j$, with $p_j$ plurisubharmonic and $f_j$ smooth. On the closure of each smaller chart, the smooth form $\ddc f_j$ is bounded below by $-C_j\omega$. Thus $\ddc u\geq-C_j\omega$ there. Taking the maximum of finitely many $C_j$ proves the global inequality.
+\end{proof}
+
+The correction permits the use of local plurisubharmonic theory. The smooth remainder $\theta-A\ddc|z|^2$ must still be retained when forming products or integrating by parts.
+
+\begin{proposition}\label{prop:no-local-potential}
+If $\theta=\ddc\rho$ on an open set for a smooth function $\rho$, then $\mathrm{d}\theta=0$ on that set. In particular, at a point where $\mathrm{d}\theta\neq0$, no neighborhood admits such a representation.
+\end{proposition}
+\begin{proof}
+The identity follows from $\mathrm{d}\ddc=0$.
+\end{proof}
+
+For a closed real $(1,1)$-form, smooth local $\ddc$-potentials do exist on sufficiently small coordinate balls by the local $\partial\bar\partial$-lemma. This local fact does not require the compact manifold to admit a K\"ahler metric. Thus a closed background on a non-K\"ahler manifold and a non-closed background are already different at the local level.
+
+\section{Changes of background}
+
+\begin{proposition}\label{prop:gauge}
+Let $f$ be smooth and real, and set $\theta'=\theta+\ddc f$. Then
+\[
+ \PSH(X,\theta)\longrightarrow\PSH(X,\theta'),
+ \qquad u\longmapsto u-f
+\]
+is a bijection. It preserves the positive current and the ordinary singularity type. Moreover, $\mathrm{d}\theta'=\mathrm{d}\theta$.
+\end{proposition}
+\begin{proof}
+For every $u$ in the source,
+\[
+ \theta'+\ddc(u-f)=\theta+\ddc u.
+\]
+The inverse is $v\mapsto v+f$. Since $X$ is compact, $f$ is bounded, so subtracting $f$ preserves singularity type. The last assertion follows from $\mathrm{d}\ddc f=0$.
+\end{proof}
+
+The quotient of smooth real $(1,1)$-forms by smooth $\ddc$-terms can therefore be useful even for non-closed forms. It must be distinguished from the usual Bott--Chern cohomology group, whose representatives are closed. The terminology in the literature is not uniform: some authors use an enlarged Bott--Chern space for the former quotient. We shall always specify whether its representatives are required to be closed.
+
+\begin{proposition}\label{prop:convexity}
+If $u\in\PSH(X,\theta)$ and $v\in\PSH(X,\eta)$, then, for $a,b\geq0$ with $a+b>0$,
+\[
+ au+bv\in\PSH(X,a\theta+b\eta).
+\]
+In particular, $\PSH(X,\theta)$ is convex. If $\eta\geq\theta$, then $\PSH(X,\theta)\subseteq\PSH(X,\eta)$.
+\end{proposition}
+\begin{proof}
+Sums with nonnegative coefficients preserve quasi-plurisubharmonicity, with zero-coefficient terms omitted. The curvature identity is
+\[
+ a\theta+b\eta+\ddc(au+bv)
+ =a(\theta+\ddc u)+b(\eta+\ddc v)\geq0.
+\]
+For the inclusion, add the positive smooth form $\eta-\theta$ to $\theta+\ddc u$.
+\end{proof}
+
+An arbitrary pair of quasi-plurisubharmonic functions belongs to $\PSH(X,C\omega)$ for large $C$. This does not supply a common \emph{closed} positive background. On a manifold without a K\"ahler metric, replacing $C\omega$ by a large K\"ahler form is not an available step.
+
+\section{Singularity type and multiplier ideals}
+
+\begin{definition}\label{def:singularity-order}
+For quasi-plurisubharmonic functions $u,v$, write $u\preceq v$ if $u\leq v+C$ for some $C\in\R$. Write $u\sim v$ if $u\preceq v$ and $v\preceq u$.
+\end{definition}
+
+\begin{proposition}\label{prop:singularity-elementary}
+The relation $\preceq$ is a preorder, and $\sim$ is an equivalence relation. Adding a bounded smooth function preserves the equivalence class. In particular, all smooth functions on $X$ have the same singularity type.
+\end{proposition}
+\begin{proof}
+Reflexivity follows with $C=0$. If $u\leq v+C$ and $v\leq w+D$, then $u\leq w+C+D$, proving transitivity. The usual equivalence relation associated to a preorder gives $\sim$. If $|f|\leq A$, then $u-A\leq u+f\leq u+A$. Finally, every smooth function on compact $X$ is bounded.
+\end{proof}
+
+\begin{definition}\label{def:multiplier-ideal}
+The multiplier ideal $\mathcal I(u)$ is the sheaf whose local sections are holomorphic functions $g$ for which $|g|^2e^{-u}$ is locally integrable against a smooth positive volume form.
+\end{definition}
+
+Changing the volume form does not change local integrability: on relatively compact coordinate neighborhoods, the ratio of two smooth positive volume forms is bounded above and below by positive constants. This definition thus requires no chosen Hermitian metric.
+
+\begin{proposition}\label{prop:ideal-order}
+If $u\preceq v$, then $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$. If $u\sim v$, then these ideals agree for every $k>0$.
+\end{proposition}
+\begin{proof}
+An inequality $u\leq v+C$ implies $e^{-kv}\leq e^{kC}e^{-ku}$. Multiplying by $|g|^2$ shows that local integrability for $ku$ implies local integrability for $kv$. Apply the same argument in both directions when $u\sim v$.
+\end{proof}
+
+\begin{example}\label{ex:ideal-disc}
+Let $\lambda\geq0$ and $u(z)=\lambda\log|z|^2$. Then
+\[
+ \mathcal I(u)_0=(z^{\lfloor\lambda\rfloor}).
+\]
+Indeed, if a nonzero holomorphic germ has order $m$, its squared modulus is comparable to $|z|^{2m}$ near the origin. Its weighted integral is finite precisely when
+\[
+ \int_0^\epsilon r^{2m-2\lambda+1}\,\mathrm{d}r<\infty,
+ \qquad\text{equivalently}\qquad m>\lambda-1.
+\]
+The smallest nonnegative integer satisfying this strict inequality is $\lfloor\lambda\rfloor$. At an integer value of $\lambda$, the excluded borderline exponent is $-1$, so the strictness of the integrability condition matters.
+\end{example}
+
+One can now define the $\mathcal I$-preorder by requiring inclusion of $\mathcal I(ku)$ in $\mathcal I(kv)$ for every positive integer $k$, as in \cite{SGPT}. Its definition is meaningful on any complex manifold. Establishing its relation to an envelope or to a global mass is a separate problem.
+
+\section{Closed curvature and algebraic interpretations}
+
+\begin{proposition}\label{prop:chern-closed}
+The curvature current of a singular Hermitian metric with locally integrable weights on a holomorphic line bundle is closed. In particular, a non-closed form $\omega$ cannot itself be the curvature of such a metric, nor can $\omega+\ddc u$ be closed at a point where $\mathrm{d}\omega\neq0$.
+\end{proposition}
+\begin{proof}
+Choose a local holomorphic frame $e$ and write its squared norm as $|e|_h^2=e^{-\varphi}$. The curvature current is locally $\ddc\varphi$. If $e'=ge$ is another frame, with $g$ holomorphic and nowhere zero, the new weight is $\varphi-\log|g|^2$. Since $\log|g|^2$ is pluriharmonic, these local currents glue. Each is closed because $\mathrm{d}\ddc=0$. The final assertion follows from
+\[
+ \mathrm{d}(\omega+\ddc u)=\mathrm{d}\omega
+\]
+in the sense of currents.
+\end{proof}
+
+A Hermitian metric on a line bundle thus gives a closed curvature current. When we later study sections with multiplier-ideal conditions, this closed current must be specified in addition to any auxiliary Hermitian form on $X$.
+
+An algebraic interpretation must specify a line bundle or closed class and justify the relation of its invariants to the chosen analytic background.

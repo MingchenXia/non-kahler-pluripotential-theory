@@ -1,0 +1,254 @@
+Run_id: intrinsic_trace_data_01
+
+Statement: Audit the complete new trace chapter below including ALL limits, infinite series, ordinary-type assertions and the complete curve equation theorem. X connected compact complex, Y connected compact smooth submanifold, u genuine qpsh with generic nu(u,Y)=0; no BMP/PVP. Intrinsic data from image ideals I(tu)O_Y on prime divisors of smooth compact modifications. Claims finite Fekete limit, I-invariance/calculus, comparison to naive restriction and analytic equality; on curves finite atomic measure D, canonical ordinary type from Green potential, total-variation and dyadic monotone approximations; prescribed atomic-type Lp equation iff M>D(Y), exact scalar and uniqueness up to constants, zero-mass endpoint. Higher-dimensional potential realization and equality/addition remain explicit questions, not claims. No identification with full SGPT P-trace.
+
+Accepted inputs: local multiplier-ideal subadditivity/restriction, Skoda integrability, log resolution/change-of-variables criterion for analytic ideals, local point Bergman lower estimate and ideal type, standard scalar Green kernel/Poisson/elliptic W2p on compact Riemann surface, bounded BT does not charge polar sets, dimension-one Lelong equals Laplacian atom, canonical qpsh reps. Exact global Demailly approximants with analytic type(1/m,I(mu)) and curvature theta+ddc u_m>=-epsilon_m omega, and restricted divisorial boundedness via Gauduchon, are stated/proved in chapter_analytic_approximation.tex, under analytic_approximation_01. Read its report if complete; otherwise accept CONDITIONALLY while checking uses. SourceDemailly-analytic-methods.pdf/.txt has exactJuly2011 statements14.2/14.12/15.1/15.2, userSGPTsource also available. Book conventions ddc=i/(2pi), exp(-u), nu coefficientlog|z|². Preceq means MORE singular. The ideal onY is the image, not a tensor product retaining torsion. No claim all local modifications globalize. Be especially critical of finiteness, curve Green-current reconstruction, equality of ordinary types, absence of diffuse polar residual mass for a bounded-type competitor, and scalar uniqueness. Book read-only. Use usual workflow/output.
+
+Proof:
+
+\chapter{Restriction and intrinsic trace data}
+\label{chap:trace-data}
+
+The trace in \cite{SGPT} is constructed by restricting quasi-equisingular approximants and taking a limit in the topology of singularities. On a general Hermitian manifold, the existence and independence of such a limit require further work. There is, however, intrinsic data that can be defined before choosing a topology: the asymptotic vanishing orders of the restricted multiplier ideals. We construct this data, prove its finiteness using the preceding Gauduchon estimate, and realize it by a canonical ordinary singularity type when the submanifold is a curve.
+
+Let $Y\subset X$ be a connected compact complex submanifold of positive dimension, and let $u\in\QPSH(X)$ satisfy $\nu(u,Y)=0$. Choose any smooth real $\theta$ with $u\in\PSH(X,\theta)$ when a curvature bound is needed. The trace data itself will not depend on this choice.
+
+\section{Restricted ideals}
+
+For $t>0$ put
+\[
+ \mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y.
+\]
+This is the image ideal in $\mathcal O_Y$, not the tensor product with any possible torsion retained. It is coherent and nonzero. Indeed, choose $y\in Y$ with $\nu(u,y)<1/t$; Skoda integrability gives $\mathcal I(tu)_y=\mathcal O_{X,y}$.
+
+We use two standard local multiplier-ideal facts, recalled in \cite{SGPT} and \cite[Section 15]{DemAM11}:
+\begin{equation}\label{eq:trace-local-ideal-inputs}
+ \mathcal I(v|_Y)\subseteq\mathcal I(v)\mathcal O_Y,
+ \qquad
+ \mathcal I(v+w)\subseteq\mathcal I(v)\mathcal I(w).
+\end{equation}
+The first follows from local Ohsawa--Takegoshi extension. For the second, weighted holomorphic functions on a product form the Hilbert tensor product of the two weighted spaces; its generators give the product multiplier ideal. Restriction to the diagonal then gives the inclusion. These are local results for psh functions. Smooth corrections extend them to quasi-plurisubharmonic functions with the weight convention of this book. No compact K\"ahler hypothesis is involved.
+
+A \emph{divisor over $Y$} in this chapter means a prime divisor $E$ on a connected smooth compact modification $\pi:Z\to Y$. For a nonzero coherent ideal $\mathfrak a$ on $Y$, let $\operatorname{ord}_E(\mathfrak a)$ be the generic vanishing order of its image on $Z$. It is a finite nonnegative integer. We consider these divisors on compact modifications; no extension of every local modification to a compact one is being assumed.
+
+\begin{theorem}\label{thm:intrinsic-trace-profile}
+For every divisor $E$ over $Y$, the limit
+\begin{equation}\label{eq:trace-profile}
+ \tau_{Y,u}(E)
+ :=\lim_{t\to\infty}\frac{\operatorname{ord}_E\mathfrak a_t(u;Y)}{t}
+ =\sup_{t>0}\frac{\operatorname{ord}_E\mathfrak a_t(u;Y)}{t}
+\end{equation}
+exists and is finite. It also equals the limit along positive integers. The numbers depend only on the multiplier-ideal equivalence class of $u$ on $X$.
+\end{theorem}
+\begin{proof}
+Write $b(t)=\operatorname{ord}_E\mathfrak a_t(u;Y)$. The second inclusion in \eqref{eq:trace-local-ideal-inputs}, followed by restriction, gives
+\[
+ \mathfrak a_{s+t}\subseteq\mathfrak a_s\mathfrak a_t,
+ \qquad b(s+t)\geq b(s)+b(t).
+\]
+Moreover $b(t)\geq0$. For fixed $s>0$ and $t=ks+r$, $0\leq r<s$, repeated superadditivity gives $b(t)\geq k b(s)$; for $r=0$ the same conclusion follows without a remainder. Hence
+\[
+ \liminf_{t\to\infty}\frac{b(t)}t\geq\frac{b(s)}s.
+\]
+Taking the supremum over $s$ proves existence and the supremum formula, initially allowing $+\infty$. The same argument with $t$ restricted to integers proves that their limit is the same.
+
+For integer $m$ sufficiently large, \cref{cor:nonclosed-analytic-approximation} and analytic restriction give
+\[
+ \frac{b(m)}m
+ =\nu\bigl((u_m|_Y)\circ\pi,E\bigr).
+\]
+These numbers are uniformly bounded by \cref{cor:restricted-analytic-divisorial-bound}. The integer limit, and therefore the full supremum, is finite. Finally all the image ideals in the definition are unchanged when $u$ is replaced by a multiplier-ideal equivalent potential. This proves the last assertion without selecting any approximating sequence.
+\end{proof}
+
+We call $\tau_{Y,u}$ the \emph{divisorial trace data}. The definition is an assignment of numbers. It does not, by itself, supply a quasi-plurisubharmonic function on $Y$ having exactly those numbers on every modification.
+
+\begin{proposition}\label{prop:trace-profile-calculus}
+For potentials with zero generic Lelong number along $Y$, the following assertions hold:
+\begin{enumerate}
+\item If $u\preceq_{\mathcal I}v$, then $\tau_{Y,u}(E)\geq\tau_{Y,v}(E)$ for every $E$.
+\item For every $a>0$, $\tau_{Y,au}=a\tau_{Y,u}$.
+\item $\tau_{Y,u+v}\geq\tau_{Y,u}+\tau_{Y,v}$ and
+$\tau_{Y,\max(u,v)}\leq\min\{\tau_{Y,u},\tau_{Y,v}\}$, pointwise on divisors.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The ideal inclusion defining $\preceq_{\mathcal I}$ reverses vanishing orders after restriction, proving (1). Substituting $at$ for $t$ in the full real-parameter limit proves (2). Subadditivity of multiplier ideals gives the first inequality in (3) after taking orders and limits. For the second, both $\mathcal I(tu)$ and $\mathcal I(tv)$ are contained in $\mathcal I(t\max(u,v))$. Thus the latter contains their sum, whose order is the minimum of their orders. Restrict and pass to the limit. Generic Lelong numbers of sums add, so all sums in this statement still have zero generic Lelong number along $Y$.
+\end{proof}
+
+Only the displayed inequalities for sums and maxima have been proved here. Upgrading them to equalities is a separate comparison problem; no equality is implicit in the terminology.
+
+\section{Comparison with ordinary restriction}
+
+\begin{proposition}\label{prop:trace-naive-comparison}
+If $v=u|_Y$ is genuine, then
+\[
+ \tau_{Y,u}(E)\leq\nu(v\circ\pi,E)
+\]
+for every divisor $E$ over $Y$. If $u$ has analytic singularities, equality holds.
+\end{proposition}
+\begin{proof}
+The restriction theorem gives
+$\mathcal I(tv)\subseteq\mathfrak a_t(u;Y)$. The local Bergman lower estimate implies
+\[
+ \operatorname{ord}_E\mathcal I(tv)\leq t\nu(v\circ\pi,E).
+\]
+Indeed, the logarithm of generators of $\mathcal I(tv)$, divided by $t$, is locally at least $v$ up to a bounded term, by \cref{prop:bergman-local-estimates}; pulling back and taking a generic Lelong number gives the inequality. Thus the same upper bound holds for the order of $\mathfrak a_t$, and the limit proves the first assertion.
+
+Suppose now that $u$ has analytic type $(c,\mathfrak b)$. We recall explicitly the elementary asymptotic ideal estimate that supplies the reverse bound. Locally, for a fixed $C>0$ and every sufficiently large $t$,
+\begin{equation}\label{eq:analytic-ideal-bounds-trace}
+ \mathfrak b^{\lceil tc\rceil}\subseteq\mathcal I(tu),
+ \qquad
+ f\in\mathcal I(tu)\ \Longrightarrow\
+ \log|f|^2\leq(t-C)u+O(1).
+\end{equation}
+The first inclusion follows directly from integrability: a product of $\lceil tc\rceil$ generators vanishes enough to make its squared norm times $e^{-tu}$ locally bounded. For the second, take a log resolution of $\mathfrak b$, as in the standard resolution theorem recalled in \cite{SGPT}. Write the pulled-back singular part as
+$\sum_i a_i\log|s_i|^2$, with $a_i>0$, and let $A_i$ be one plus the order of the relative Jacobian along the corresponding divisor. Local integrability of $f$ gives
+\[
+ \operatorname{ord}_{E_i}(f)+A_i>t a_i.
+\]
+Choose $C\geq\max_i A_i/a_i$. It follows that the divisor of the pulled-back $f$ dominates $(t-C)\sum_i a_iE_i$. Dividing by the corresponding monomials on the resolution shows that the quotient is locally bounded. This gives the second inequality upstairs and then downstairs. Constants in $O(1)$ may depend on $t$ and $f$; the constant $C$ is fixed. A finite resolution cover suffices near the locus under consideration.
+
+Restrict \eqref{eq:analytic-ideal-bounds-trace} to $Y$ and take the order along $E$. Analytic restriction gives
+$\nu(v\circ\pi,E)=c\operatorname{ord}_E(\mathfrak b\mathcal O_Y)$. Consequently
+\[
+ (t-C)\nu(v\circ\pi,E)
+ \leq\operatorname{ord}_E\mathfrak a_t(u;Y)
+ \leq\lceil tc\rceil\operatorname{ord}_E(\mathfrak b\mathcal O_Y).
+\]
+After division by $t$, both outer expressions tend to the same number. This proves equality. The argument is local in the center of the valuation, so local presentations of an analytic singularity suffice.
+\end{proof}
+
+The inequality can be strict. On a small bidisc write
+\[
+ u(z,w)=\max\{-\log(-\log|z|^2),\ \log|w|^2\},
+ \qquad Y=\{z=0\}.
+\]
+The bidisc is chosen with $|z|<e^{-1}$, and the first function is extended by $-\infty$ at $z=0$. It is psh: the function $s\mapsto-\log(-s)$ is increasing and convex for $s<0$. The maximum is psh as well. For every $t>0$,
+\[
+ e^{-tu}\leq(-\log|z|^2)^t,
+\]
+which is locally integrable. Thus all ambient multiplier ideals are trivial and all the trace data is zero. But $u|_Y=\log|w|^2$ has Lelong number one at the origin. This is the local obstruction in \cite[chapter on the trace operator]{SGPT}, expressed directly in the image ideals.
+
+\section{Realization on a compact curve}
+
+Assume now that $Y$ is a compact connected Riemann surface. Its prime divisors are points. Set
+\[
+ D_u=\sum_{p\in Y}\tau_{Y,u}(p)\,\delta_p.
+\]
+We first prove that this is a finite measure; the displayed sum is initially understood through its finite subsums.
+
+\begin{theorem}\label{thm:curve-trace-realization}
+Let $u\in\PSH(X,\theta)$ with $\nu(u,Y)=0$, and put $M=\int_Y\theta|_Y$. Then
+\begin{equation}\label{eq:curve-trace-budget}
+ 0\leq D_u(Y)\leq M.
+\end{equation}
+The finite atomic measure $D_u$ defines a canonical ordinary quasi-plurisubharmonic singularity type on $Y$. For every smooth positive form $\eta$ on $Y$ with $\int_Y\eta=1$, that type has a representative $v\in\PSH(Y,\theta|_Y)$ with
+\begin{equation}\label{eq:curve-trace-current}
+ \theta|_Y+\ddc v=D_u+(M-D_u(Y))\eta.
+\end{equation}
+Its extended Monge--Amp\`ere measure is $(M-D_u(Y))\eta$. The ordinary type is independent of $\eta$, of the chosen smooth background admitting the construction, and of the ambient representative within its multiplier-ideal class.
+\end{theorem}
+\begin{proof}
+For integer $m$ let
+\[
+ D_m=\frac1m\sum_{p\in Y}
+       \operatorname{ord}_p\mathfrak a_m(u;Y)\,\delta_p.
+\]
+A nonzero coherent ideal on a compact smooth curve has finitely many zeros, so this is a finite sum. It is the atomic part of the positive current
+$(\theta+\epsilon_m\omega)|_Y+\ddc(u_m|_Y)$.
+Stokes on the curve gives
+\[
+ D_m(Y)\leq M+\epsilon_m\int_Y\omega|_Y.
+\]
+For any finite subset of $Y$, pass to the limit in the sum of its coefficients using \cref{thm:intrinsic-trace-profile}. Then take the supremum over finite subsets. This gives \eqref{eq:curve-trace-budget}. In particular the positive coefficients have at most countable support, and they define the claimed finite measure. Write $d=D_u(Y)$.
+
+For completeness, choose a Green kernel for $\ddc$ on the curve, normalized so that
+\[
+ \ddc_xG(x,p)=\delta_p-\eta,\qquad G(x,p)\leq0.
+\]
+The scalar Green-function construction is a standard fact of elliptic theory on a compact Riemann surface: its singularity is $\log|z(x)-z(p)|^2$, it is bounded above uniformly, and $\sup_p\int_Y|G(x,p)|\eta(x)<\infty$. Subtracting one uniform constant gives the indicated sign. Fubini therefore shows that
+\[
+ w(x)=\int_YG(x,p)\,dD_u(p)
+\]
+is an $L^1$ function, with its canonical quasi-plurisubharmonic representative satisfying
+$\ddc w=D_u-d\eta$. It has Lelong number $\tau_{Y,u}(p)$ at every point $p$.
+
+Since $M\eta-\theta|_Y$ is smooth and has integral zero, the scalar Poisson equation gives a smooth $s$ with $\ddc s=M\eta-\theta|_Y$. Then $v=w+s$ satisfies \eqref{eq:curve-trace-current}. Positivity follows from $M\geq d$. At every atom of $D_u$, the positive Lelong number forces $v=-\infty$. The remaining pole set has zero smooth volume. Removing the pole set from the current consequently leaves exactly $(M-d)\eta$, proving the assertion about the extended measure.
+
+If another smooth volume form or another admissible smooth background is used, the difference of the two constructed representatives has smooth $\ddc$: their atomic parts are the same, and all other terms in their equations are smooth. Elliptic regularity makes their difference smooth, hence bounded. This proves independence of these choices at the level of ordinary type. Independence of the ambient multiplier-ideal representative follows from equality of the numbers defining $D_u$.
+\end{proof}
+
+We denote this ordinary type by $\operatorname{Tr}^{\mathrm{at}}_Y(u)$, the \emph{atomic trace on a curve}. This notation distinguishes its construction from the general $P$-equivalence-valued trace of the source book. All potentials on a curve having these Lelong numbers have the same multiplier ideals, but they need not have the same ordinary type. The construction selects the type with a smooth residual curvature measure.
+
+\begin{proposition}\label{prop:curve-trace-approximation}
+The measures $D_m$ above satisfy $D_m\leq D_u$ and converge to $D_u$ in total variation. Along dyadic indices they increase. With a fixed nonpositive Green kernel, the corresponding potentials $w_{2^j}=\int_YG(\cdot,p)\,dD_{2^j}(p)$ decrease to $w$ and converge in $L^1(Y)$. Each $w_m$ has the ordinary singularity type of $u_m|_Y$.
+
+If the ordinary restriction $u|_Y$ is genuine, it is more singular than the atomic trace:
+\[
+ u|_Y\preceq \operatorname{Tr}^{\mathrm{at}}_Y(u).
+\]
+For analytic $u$, ordinary equivalence holds.
+\end{proposition}
+\begin{proof}
+The supremum formula \eqref{eq:trace-profile} gives $D_m\leq D_u$ coefficient by coefficient. Since $D_u$ is a finite atomic measure, dominated convergence of its coefficients proves $D_m(Y)\to D_u(Y)$ and hence total-variation convergence. Superadditivity at $m+m$ gives $D_{2m}\geq D_m$. The sign of $G$ then makes $w_{2^j}$ decrease. Monotone convergence for $-G$ identifies its pointwise limit with $w$, including possible poles. The uniform $L^1$ bound for the kernel also gives
+\[
+ \|w_m-w\|_{L^1(\eta)}
+ \leq C\|D_m-D_u\|_{\mathrm{TV}}\longrightarrow0.
+\]
+Each $D_m$ is finitely supported. Locally both $w_m$ and $u_m|_Y$ are its logarithmic singular part plus a bounded remainder. Thus their ordinary types agree.
+
+Suppose $a=u|_Y$ is genuine and write $\mu=\theta|_Y+\ddc a\geq0$. By \cref{prop:trace-naive-comparison}, the atomic part of $\mu$ dominates $D_u$. Therefore
+\[
+ \ddc(a-w)=\mu-D_u-\theta|_Y+d\eta
+]
+is bounded below by a smooth form. The $L^1$ difference has a quasi-plurisubharmonic representative, which is bounded above on compact $Y$. Equality of canonical representatives upgrades the resulting almost-everywhere inequality to $a\leq w+C$ everywhere. If $u$ is analytic, \cref{prop:trace-naive-comparison} identifies its finitely many restricted logarithmic coefficients with those of $D_u$. Its bounded local remainders then give ordinary equivalence.
+\end{proof}
+
+\section{The equation in the atomic trace type}
+
+The curve construction also gives a complete elementary equation theorem in this type.
+
+\begin{theorem}\label{thm:curve-atomic-lp-equation}
+Retain the notation $M=\int_Y\theta|_Y$ and $d=D_u(Y)$. Let $dV$ be a smooth positive volume form on $Y$, and let $0\leq f\in L^p(dV)$, $p>1$, with $\int_Yf\,dV>0$.
+There is a solution in the atomic trace type to
+\[
+ \mathrm{MA}^{\mathrm{ext}}_{\theta|_Y}(v)=c f\,dV,
+ \qquad c>0,
+\]
+if and only if $M>d$. In that case
+\[
+ c=\frac{M-d}{\int_Yf\,dV},
+\]
+and $v$ is unique up to an additive constant. If $M=d$, there is instead a unique such ordinary-type solution up to constants with extended measure zero.
+\end{theorem}
+\begin{proof}
+Assume $M>d$ and use the Green potential $w$ above. Choose the displayed $c$ and solve
+\[
+ \ddc s=d\eta+c f\,dV-\theta|_Y.
+\]
+The right side has integral zero. Standard scalar elliptic theory gives $s\in W^{2,p}(Y)$, unique up to constants. In real dimension two the Sobolev embedding for $p>1$ makes $s$ continuous and bounded. The potential $v=w+s$ has the atomic trace type and satisfies
+\[
+ \theta|_Y+\ddc v=D_u+c f\,dV\geq0.
+\]
+Its extended measure is $c f\,dV$, since this density does not charge the pole set while the atoms do. For $M=d$ the identical construction with $c=0$ has a smooth right side and produces the asserted zero-measure solution.
+
+To prove necessity and uniqueness, let $a$ be any $\theta|_Y$-plurisubharmonic potential in the ordinary type of $w$, and put $\mu=\theta|_Y+\ddc a$. Its Lelong numbers, and hence its atoms, are exactly those of $D_u$. Thus $\mu-D_u$ is a positive measure and
+\[
+ \ddc(a-w)=\mu-D_u-\theta|_Y+d\eta
+\]
+has a smooth lower bound. The difference has a bounded quasi-plurisubharmonic representative, because the ordinary types agree. The curvature measure of a bounded quasi-plurisubharmonic function on a curve does not charge polar sets, by the local bounded Bedford--Taylor property. After addition of smooth forms the same assertion applies to $\mu-D_u$. Consequently
+\[
+ \mathrm{MA}^{\mathrm{ext}}_{\theta|_Y}(a)=\mu-D_u,
+ \qquad
+ \int_Y\mathrm{MA}^{\mathrm{ext}}_{\theta|_Y}(a)=M-d.
+\]
+Integrating any proposed equation forces the displayed value of $c$, so a positive $c$ requires $M>d$. If two potentials solve with the same density and scalar, their full currents both equal $D_u+c f\,dV$. Their difference has zero $\ddc$ and is therefore constant on the compact connected curve. The argument also proves uniqueness in the zero-measure case.
+\end{proof}
+
+\section{What remains in higher dimension}
+
+The divisorial trace data in \cref{thm:intrinsic-trace-profile} is available in every dimension, without a bounded mass hypothesis. The curve argument uses two special facts: divisors are points, and positivity can be reconstructed from a scalar measure of fixed total mass. Neither argument supplies a higher-dimensional realization.
+
+A first research question is whether, after enlarging the smooth background on $Y$, there is a quasi-plurisubharmonic potential whose divisorial Lelong numbers equal $\tau_{Y,u}$ on every compact modification. A second is whether a distinguished envelope of such representatives is independent of the approximation and has the desired continuity and addition properties. These are precise tasks for a Hermitian trace theory; no claim of their novelty or of a known obstruction is made here.
+
+Even after a realization is found, identification with the source book's trace requires a comparison of topologies and of the $P$-equivalence relations. The finite divisorial bounds proved above do not establish that comparison. They do provide intrinsic data, an ordinary-type realization on curves, and an exact equation theorem there, all before imposing any ambient bounded mass condition.

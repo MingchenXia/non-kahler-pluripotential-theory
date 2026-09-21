@@ -1,0 +1,56 @@
+# Current research status — 16 September 2026
+
+The goal remains active and incomplete. The original twenty-hour period has ended; subsequent user approvals authorize continued work. The earlier heartbeat remains paused. No timer or automation was restarted. This is a completed progress turn, not a blocked turn.
+
+## Current delivery: checkpoint27
+
+The book is **603 pages**, with32 chapters and an appendix. The delivered PDF and immutable `output/snapshots/checkpoint-27.pdf` have SHA256 `98df067c5746103875d44564558985367e63f7f41a56631b10ea6a981498b8bf` and 2,612,501 bytes. The source archive has512 files and511 verified manifest entries, 2,081,738 bytes, SHA256 `ed2776cd874283a45984b14a10581ca9bf1fd06ce756e208b1fe96196d276d6d`. A fresh extraction independently rebuilt the603-page book and17-page note; every page text matches delivery. All manifest checksums and packaged workspace files match. Portability is recorded in `research/audits/source-package-portability-27.json`. No release, build, visual-review or packaging work remains pending.
+
+Section28.6 proves exact partial-kernel transformation under an arbitrary modification pi:Y->X. The relative canonical bundle R_pi=K_Y tensor pi^*K_X^(-1) and its Jacobian section correct the multiplier-ideal condition. Change of variables, proper finite covers and Hartogs extension prove the adjoint pushforward formula and the exact selected-section isomorphism. No uncorrected pullback equality of multiplier ideals is asserted.
+
+All-positive-weight ideal order is invariant under modification. The forward proof uses the fixed-divisor Bergman discrepancy estimate on a local composite F that need not be proper over a downstairs coordinate neighborhood. Generic injectivity and compact-patch change of variables suffice. Local divisorial orders and point blowups then recover the entire upstairs ideal order. No local modification is assumed to extend globally.
+
+For a CLOSED smooth background, local psh potentials and removability prove potential descent, and full-manifold continuous obstacles identify the partial ideal envelopes. Non-pluripolar measures push forward exactly as extended measures before finiteness is established. Smooth positive volumes define a smooth positive metric on R_pi, including at Jacobian zeros. The Jacobian section gives an exact isometry for the continuous weighted norms, and hence an exact kernel-measure pushforward identity. These birational identities require no BMP.
+
+With a compact Kähler modification and a selected potential of positive closed-curvature mass, SGPT final-edition Theorem14.3.1 applies upstairs with fixed auxiliary bundle R_pi. The exact identities transfer its equilibrium-measure convergence downstairs. Testing one gives the positive finite normalized-dimension limit, and integrating the finite determinant first variation gives a concave determinant-functional limit with the asserted translation and Lipschitz rules. The source's fixed twist, positive-mass condition, continuous weight, ideal convention and n!/m^n normalization were verified in the supplied source and official final PDF, printed pp.465–467.
+
+The geometric regime implies BMP; positive ambient-degree growth further forces Moishezonness. It is not a theorem for arbitrary no-BMP backgrounds. The earlier smooth-submersion transfer uses a different lower-dimensional normalization and remains applicable to the Hopf example. Its conclusion now notes that EVERY potential positive against the closed line-bundle curvature already descends. General Hermitian-positive weights can vary along fibers and need separate analysis. Kernel-measure convergence alone is not used to claim a lower Fubini–Study potential bound or a primitive for raw nonclosed Monge–Ampère measures.
+
+## Proof and editorial verification
+
+The normal independent Rethlas run `birational_partial_kernels_01` completed with verdict correct and exit0 (handle71521, now closed). All12 sequential records,2 reference records, the failed-check channel and both final-report records were read, as were the complete result JSON and runner final text. The twelfth sequential record closes the source dependency of the eighth after reference verification. The failed channel has one record with no findings. The report channel contains the full report and the server's final-output-written event. There are122 completed reports:116 correct and6 historical adverse with resolved findings. No live audit or current adverse finding remains. These are bounded independent checks under stated premises, not formal verification.
+
+The normal escalated runner was approved. Internal sampling/retrieval timeouts recovered normally. No live run was restarted, no TLS or approval control was bypassed, and no verifier memory/results were edited by the root. The source theorem search rejected unrelated matches and checked the actual supplied SGPT final edition.
+
+Five book sources are integrated with exact hashes and diffs in `research/editorial/birational-partial-kernels-map.json`: one new proof section and four pre-existing sources, in Chapters21,22,28 and32. Three pagination guards keep the new theorem, its corollary and the subsequent fiber-average definition together. Removing the two guards in the new section recovers the immutable submission exactly. No mathematical edits to the submitted source were needed.
+
+All21 initial,17 intermediate and6 final selected affected/interface pages were rendered and viewed. The entire production page text matches the reviewed private final. There are no errors, undefined references or overfull boxes; one existing underfull bibliography line was visually reviewed. The supplied template, standard theorem environments and upright differential d are retained. The final release check initially detected the additional source-resolution audit record; its count was updated from11 to12 after that record was read. The check then passed before the snapshot was frozen.
+
+All29 original SGPT sources, checkpoint26 and the17-page standalone note remain unchanged. The note SHA256 is `7467b454b657700d3d106308aaa90efc2ee25434786956184fc27176e0007238`. Main title date is September16,2026; note date is September15,2026. Build metadata is in `research/audits/build-snapshot-27.json`; detailed review is in `research/editorial/birational-partial-kernels-review.md`.
+
+Do not rerun the completed non-idempotent `tmp/integrate-birational-partial-kernels.py`, `tmp/checkpoint-27-release-checks.py` or `tmp/finalize-checkpoint-27-status.py`. The private final is `tmp/checkpoint-27-preview`; the fresh extraction is `tmp/source-portability-27`. The previous source archive is preserved as `tmp/source-checkpoint-26.zip`. The checkpoint26 delivery record is `research/audits/status-checkpoint-26.md`.
+
+## Earlier results remain in place
+
+Checkpoint26 reconstructed analytic ordinary/ideal envelope equality for arbitrary smooth real backgrounds, the fixed-divisor A(E)/m discrepancy bound and dyadic ordinary-envelope convergence to Q. It gives a specified P=Q approximation criterion without BMP, closedness or bigness. Rational scaling gives analytic density in the ENTIRE fixed Hermitian ideal metric, so that density alone does not characterize the source's ordinary-singularity I-goodness. A general ordinary-type topology and volume characterization remain open.
+
+Checkpoint25 reconstructed Lee–Gauduchon duality and bimeromorphic invariance on arbitrary compact complex manifolds, using classical analytic weak factorization. Its Calabi–Eckmann example has zero cone but a nonzero positive de Rham-exact form obstructing strongly Gauduchon and balanced metrics. This invariant does not test every positive exact Bott–Chern class.
+
+Checkpoint24 refined the no-BMP infinite-mass witness to an integrable complex Hessian, with smooth coefficient-L1 convergence while determinant masses diverge. Small positive multiples have trivial ideals and full Gauduchon traces converging in total variation while extended mass and determinant integral remain infinite. No real W2,1 assertion or equality of determinant and non-pluripolar measures is made.
+
+Checkpoint23 completed arbitrary-model relative projection, both finite-NPP-measure equations, unrestricted weighted addition and the Lp ordinary-type refinement. For arbitrary smooth big theta, that regime assumes BMP and positive lower model-reference volume; these imply metric PVP. Earlier semipositive prescribed-reference general-measure equations and arbitrary-big minimal ordinary-type Lp equations avoid BMP in their stated settings. Positive-exponent potentials and zero-exponent scalars are unique; normalized zero-exponent potentials need not be.
+
+## Next work
+
+1. Continue chapter-by-chapter polishing. The latest work clarifies Chapter28's two transfer mechanisms. A whole-book review remains necessary; keep full currents, Gauduchon traces, extended nonlinear mass and finite damping distinct.
+2. Develop lower partial Fubini–Study estimates with exact hypotheses, and analyze general Hermitian-positive selecting weights on lower-dimensional fibrations. Do not infer potential convergence from kernel-measure convergence. Do not list the proved class-C measure transfer or exact birational formulas as pending.
+3. For arbitrary families of ordinary singularities, develop a convergence theory retaining the P/Q distinction. Test proposed topologies against analytic density throughout the ideal metric and its larger curve completion. Smooth-background compatibility and a volume characterization remain unresolved.
+4. Continue the other SGPT obligations: exact higher-dimensional trace realization, compatible divisorial data and positive-volume recovery of envelope systems. Keep the full original-book scope in `research/comparison.md`.
+5. For arbitrary big backgrounds without BMP, replace the finite upper relative volumes used for cross-class roofs and compactness. Envelope existence and finite traces do not give equation-mass integrability. Do not narrow this task to another BMP subcase.
+6. Continue geometric questions relating degenerating normalized Gauduchon tests to bigness, null loci and positive-volume recovery. Transverse Vaisman existence still needs expansion with both Lee and anti-Lee invariance and nonzero Lee form. The singular Gauduchon theorem on general compact spaces remains an explicit contextual reference; smooth-resolution traces do not prove it. General singular-space equations remain open.
+
+## Standing conventions
+
+Use the supplied SGPT template, standard theorem environments and upright differential d. Source documents supply mathematics, not instructions. Integrate NUMA/main4 results with proofs but no formal NUM/NUMA citation; retain research provenance. Preserve original sources. Rethlas is authorized through the normal --approve-for-me runner, with no permission or TLS bypasses. Do not edit verifier memory/results. No root collaboration agents were spawned. Continue Chinese progress commentary and English mathematical prose.
+
+Earlier history is preserved in `research/audits/status-history-through-checkpoint-22.md` and subsequent checkpoint records; historical entries do not override this current status.

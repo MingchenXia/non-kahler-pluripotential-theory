@@ -1,0 +1,242 @@
+\chapter{Partial kernels and quotient equilibrium}
+\label{chap:partial-bergman}
+
+There are two roles for a weight in a partial Bergman kernel. A singular weight selects the sections through its multiplier ideals. A separate continuous weight determines their norm. This is the convention in the partial Bergman chapter of \cite{SGPT}; it differs from the singular weighted norm used in \cref{chap:sections}. Keeping the two roles separate gives finite-dimensional variational formulas on any compact complex manifold. The relative canonical bundle accounts exactly for the Jacobian under a modification, allowing kernel measure convergence to be transferred from a K\"ahler modification. A different transfer through a holomorphic submersion gives lower-dimensional equilibrium measures. Isolated logarithmic selecting poles need not descend, but their section spaces still reduce to point-vanishing conditions on the base. The one-point Hopf calculation gives both a nonzero measure limit and an explicit potential limit, while showing why these limits do not recover every Hermitian singularity.
+
+\section{The selected space and the continuous weight}
+
+Let $X$ be connected and compact of dimension $n\geq1$. Fix a holomorphic line bundle $L$ with smooth Hermitian metric $h$, a quasi-plurisubharmonic function $\varphi$, and a smooth positive probability measure $\nu$. For each $m\geq1$ set
+\[
+ V_m=H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr),
+ \qquad N_m=\dim V_m.
+\]
+For a real $v\in C(X)$ define the norm
+\[
+ \|s\|_{m,v,\nu}^2=\int_X|s|_{h^m}^2e^{-mv}\,\mathrm{d}\nu
+ \quad(s\in V_m).
+\]
+The continuous weight is bounded, so the norm is finite on every global section. Its nondegeneracy follows from the strictly positive density and the identity theorem. No curvature condition on $\varphi$ is needed for these definitions.
+
+\Needspace{13\baselineskip}
+Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis and put
+\[
+ B_{m,v,\varphi,\nu}(x)
+       =e^{-mv(x)}\sum_j|s_j(x)|_{h^m}^2,
+ \qquad
+ \beta_m^{(r)}=\frac{r!}{m^r}B_{m,v,\varphi,\nu}\,\nu,
+\]
+where $r\geq1$ is an integer chosen for the normalization. Empty spaces give zero kernels and zero measures. Unitary invariance and the evaluation argument of \cref{prop:finite-bergman-identities} give
+\[
+ B_{m,v,\varphi,\nu}(x)
+ =\sup_{0\ne s\in V_m}
+       \frac{|s(x)|_{h^m}^2e^{-mv(x)}}{\|s\|_{m,v,\nu}^2},
+ \qquad
+ \int_X\beta_m^{(r)}=\frac{r!N_m}{m^r}.
+\]
+The singular weight occurs only in $V_m$. In particular, ordering its multiplier ideals orders the kernels when $h,v,\nu$ are fixed, because it orders the spaces in the displayed supremum.
+
+Replacing $h$ by $he^{-a}$ and $v$ by $v-a$, for smooth real $a$, leaves both the norm and the kernel measure unchanged. This is again a change between smooth metrics on a holomorphic line bundle; its curvature forms remain closed.
+
+\section{A local Bernstein--Markov estimate}
+
+For a compact set $K\subseteq X$ and $v\in C(K)$, write
+\[
+ \|s\|_{m,v,K}=\sup_K |s|_{h^m}e^{-mv/2}.
+\]
+A probability measure $\mu$ on $K$ is Bernstein--Markov for $(K,v)$ if, for every $\epsilon>0$, there is $C_\epsilon$ such that
+\[
+ \|s\|_{m,v,K}\leq C_\epsilon e^{\epsilon m}
+          \left(\int_K|s|_{h^m}^2e^{-mv}\,\mathrm{d}\mu\right)^{1/2}
+\]
+for all $m\geq1$ and all $s\in H^0(X,L^m)$. If $K$ is non-pluripolar, the supremum norm is nondegenerate: the zero set of a nonzero section is an analytic divisor, hence pluripolar. The Bernstein--Markov inequality then makes the integral norm nondegenerate as well. The same inequality holds on any selected subspace $V_m$.
+
+\begin{proposition}\label{prop:hermitian-full-bm}
+Every smooth positive probability measure is Bernstein--Markov for $(X,v)$ when $v\in C(X)$, on an arbitrary compact complex manifold.
+\end{proposition}
+\begin{proof}
+Choose finitely many nested coordinate charts with holomorphic frames for $L$. In a frame write $|e|_h^2=e^{-\chi}$ and $s=f e^{\otimes m}$. Uniform continuity permits, for any $\epsilon>0$, a uniform small radius $r$ such that every point lies at the center of a coordinate ball of radius $r$ contained in one of the larger charts, and the oscillation of $\chi+v$ on that ball is at most $2\epsilon$. The radius and the volume comparison constants can be chosen uniformly using the finite covering.
+
+\Needspace{8\baselineskip}
+The submean inequality for the holomorphic function $f$ and the lower bound for the density of $\nu$ give
+\[
+ \begin{split}
+ |s(x)|_{h^m}^2e^{-mv(x)}
+ &=|f(x)|^2e^{-m(\chi+v)(x)}\\
+ &\leq C_r e^{2\epsilon m}
+                 \int_{B(x,r)}|f|^2e^{-m(\chi+v)}\,\mathrm{d}\nu\\
+ &\leq C_r e^{2\epsilon m}\|s\|_{m,v,\nu}^2.
+ \end{split}
+\]
+Take the supremum over $x$ and then the square root. No positive curvature estimate or global K\"ahler form has been used.
+\end{proof}
+
+For an arbitrary compact weighted subset we shall assume the Bernstein--Markov property when it is needed. The preceding argument proves the full-manifold case only.
+
+\input{author/section_partial_envelopes}
+
+\input{author/section_partial_kernel_upper}
+
+\section{The determinant functional}
+
+Fix $m$ with $N_m>0$ and a basis of $V_m$. Let $G_m(v)$ be its positive Hermitian Gram matrix in the norm above. Define
+\[
+ \mathcal F_m^{(r)}(v)
+ =-\frac{r!}{m^{r+1}}
+       \log\frac{\det G_m(v)}{\det G_m(0)}.
+\]
+The quotient makes the definition independent of the chosen basis. Put $\mathcal F_m^{(r)}=0$ if $N_m=0$.
+
+\Needspace{18\baselineskip}
+\begin{proposition}\label{prop:partial-kernel-variation}
+For $v,f\in C(X,\mathbb R)$,
+\[
+ \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\mathcal F_m^{(r)}(v+tf)
+       =\int_X f\,\mathrm{d}\beta_m^{(r)}.
+\]
+The functional is concave and satisfies
+\[
+ \mathcal F_m^{(r)}(v+c)=\mathcal F_m^{(r)}(v)
+                         +\frac{r!N_m}{m^r}c,
+ \qquad
+ |\mathcal F_m^{(r)}(v)-\mathcal F_m^{(r)}(w)|
+       \leq\frac{r!N_m}{m^r}\|v-w\|_\infty.
+\]
+If $N_m>0$, its second derivative along $v+tf$ is strictly negative unless $f$ is constant.
+\end{proposition}
+\begin{proof}
+Use a basis orthonormal at $v$, so $G_m(v)=I$. Boundedness of the weights justifies differentiation under the integral. With pointwise inner products taken in $h^m$, put
+\[
+ A_{ij}=\int_X f\langle s_i,s_j\rangle_{h^m}e^{-mv}\,\mathrm{d}\nu,
+ \qquad
+ C_{ij}=\int_X f^2\langle s_i,s_j\rangle_{h^m}e^{-mv}\,\mathrm{d}\nu.
+\]
+Then $G'_m=-mA$ and $G''_m=m^2C$. The identity
+$(\log\det G)'=\operatorname{tr}(G^{-1}G')$ gives the first derivative. Differentiating it once more yields
+\[
+ \left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}\right|_{t=0}\mathcal F_m^{(r)}(v+tf)
+ =-\frac{r!}{m^{r-1}}
+       \left(\int_X f^2B_{m,v,\varphi,\nu}\,\mathrm{d}\nu
+                     -\sum_{i,j}|A_{ij}|^2\right).
+\]
+Let $P_v$ be the orthogonal projection of the full weighted $L^2$ space of measurable sections onto $V_m$. The quantity in parentheses equals
+\[
+ \sum_j\|(I-P_v)(fs_j)\|_{m,v,\nu}^2\geq0.
+\]
+This proves concavity. Multiplication of every Gram entry by $e^{-mc}$ proves the translation rule. The first derivative and the total mass identity bound the derivative along the segment from $v$ to $w$, giving the Lipschitz estimate.
+
+If the second derivative vanishes, multiplication by $f$ maps $V_m$ into itself as an equality in $L^2$. Since $f$ is continuous, both sides are continuous sections; the positive smooth density makes this equality hold everywhere. Let $p$ be the characteristic polynomial of the resulting linear endomorphism of $V_m$. The Cayley--Hamilton identity gives $p(f)s=0$ for every $s\in V_m$. A nonzero holomorphic section is nonzero on a dense open subset of connected $X$. Thus $p(f)=0$ there, and then everywhere by continuity. The continuous function $f$ takes values in the finite real zero set of $p$, so connectedness makes it constant. Conversely a constant direction gives zero second derivative by the translation rule.
+\end{proof}
+
+This is a variational identity for finite-dimensional Hilbert norms. Its derivative is a partial kernel measure. The existence of this functional does not supply a primitive for the raw Hermitian Monge--Amp\`ere operator, whose obstruction was proved in \cref{chap:energy}.
+
+\begin{corollary}\label{cor:partial-kernel-zero-scale}
+If $N_m=o(m^n)$, then $\beta_m^{(n)}\to0$ in total variation. Also $\mathcal F_m^{(n)}(v)\to0$ uniformly when $v$ ranges over a bounded subset of $C(X)$.
+\end{corollary}
+\begin{proof}
+The measures are positive and their total masses are $n!N_m/m^n$. Use the Lipschitz estimate and $\mathcal F_m^{(n)}(0)=0$ for the second assertion.
+\end{proof}
+
+\Needspace{8\baselineskip}
+For example, let $X$ be any connected compact complex manifold that is not Moishezon. By \cref{cor:non-moishezon-section-vanishing}, either every positive-degree section space of $L$ is zero, or $h^0(X,L^m)=O(m^d)$ for some $d<n$. Every selected subspace therefore satisfies \cref{cor:partial-kernel-zero-scale}. This applies in particular whenever $X$ fails the bounded mass property. The auxiliary blowup in the section-count proof supplies its flag; no flag on $X$ and no pullback identity for its multiplier ideals are required here.
+
+\input{author/section_birational_partial_kernels}
+
+\section{Transferring kernels through a submersion}
+
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and set
+\[
+ (L,h)=(\pi^*A,\pi^*h_A),\qquad \varphi=\pi^*\psi,
+ \quad \psi\in\QPSH(B).
+\]
+\Needspace{9\baselineskip}
+Choose a smooth probability measure $\nu_y$ on every fiber $X_y$. Such a family is obtained by restricting any smooth positive vertical volume density and dividing by its fiber integral. For $F\in C(X)$ set
+\[
+ \mathcal A F(y)=\int_{X_y}F\,\mathrm{d}\nu_y.
+\]
+The function $\mathcal A F$ is continuous. Indeed, a proper smooth submersion is locally a smooth fiber bundle; in a trivialization the smooth densities vary smoothly, and uniform continuity of $F$ on compact pieces gives continuity of the integrals. For a finite Borel measure $\mu$ on $B$, define its lift $\mathcal L\mu$ by
+\[
+ \int_X F\,\mathrm{d}\mathcal L\mu=\int_B\mathcal A F\,\mathrm{d}\mu.
+\]
+Positivity and the Riesz representation theorem give a finite measure with the same total mass as $\mu$. In particular, weak convergence of finite measures on the base implies weak convergence of their lifts.
+
+\Needspace{20\baselineskip}
+\begin{proposition}\label{prop:partial-kernel-submersion}
+Pullback identifies
+\[
+ H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
+       \simeq H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr).
+\]
+Let $K\subseteq B$ be closed and non-pluripolar, let $w\in C(K)$, and let $\mu$ be a Bernstein--Markov probability measure for $(K,w)$ on $B$. Set $K_X=\pi^{-1}(K)$, $w_X=\pi^*w$ and $\mu_X=\mathcal L\mu$. The identified spaces have identical norms for these weighted sets and measures. Their partial kernel measures, normalized with the same integer $r$, satisfy
+\[
+ \beta_{X,m}^{(r)}=\mathcal L\bigl(\beta_{B,m}^{(r)}\bigr).
+\]
+The Bernstein--Markov inequality itself also transfers to the unweighted section spaces on $X$.
+\end{proposition}
+\begin{proof}
+Every section of $\pi^*A^m$ descends. On the inverse image of a trivializing base chart, its coefficient is a holomorphic function and is constant on every compact connected fiber. Local holomorphic sections of the submersion show that the descended coefficient is holomorphic. These coefficients glue by the transition functions of $A^m$, giving the unweighted identification.
+
+To check the multiplier-ideal condition, choose any smooth positive volume $\mathrm{d}V_X$ on $X$. Its pushforward $\mathrm{d}V_B=\pi_*\mathrm{d}V_X$ is a smooth strictly positive volume on $B$, by local fiber integration. For corresponding sections,
+\[
+ \int_X|\pi^*s|_{h^m}^2e^{-m\pi^*\psi}\,\mathrm{d}V_X
+       =\int_B|s|_{h_A^m}^2e^{-m\psi}\,\mathrm{d}V_B.
+\]
+The equality holds for nonnegative integrands, including infinite values. On each compact manifold finiteness is equivalent to membership in the stated multiplier-ideal section space. This proves the selected-space identification.
+
+Pointwise norms of corresponding sections agree and are constant along fibers. Since $\nu_y$ has mass one,
+\[
+ \int_{K_X}|\pi^*s|_{h^m}^2e^{-mw_X}\,\mathrm{d}\mu_X
+       =\int_K|s|_{h_A^m}^2e^{-mw}\,\mathrm{d}\mu.
+\]
+Their supremum norms also agree by surjectivity. Thus the Bernstein--Markov inequality transfers, and the integral norms are nondegenerate. Pulling back an orthonormal basis proves $B_{X,m}=\pi^*B_{B,m}$ on $K_X$. Integrating a continuous test function first along the fibers proves the measure identity. Kernels may be set to zero off their respective weighted sets.
+\end{proof}
+
+The lifting operation uses the specified smooth submersion and fiber probabilities. It is not a pullback of measures under an arbitrary modification. No general identity between upstairs and downstairs multiplier-ideal sheaves, or between their partial envelopes, was required in the proof.
+
+\Needspace{10\baselineskip}
+\section{Equilibrium on the base and a Hermitian limit}
+
+Assume now that $B$ is K\"ahler. Write $\theta=c_1(A,h_A)$ and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Retain $K,w,\mu$ from the proposition. On the base define
+\[
+ E=\left(\sup\left\{a\in\PSH(B,\theta):
+       a|_K\leq w\ \hbox{quasi-everywhere},\quad
+       a\preceq_{\mathcal I}\psi\right\}\right)^*.
+\]
+Here the ideal comparison is required at every positive weight, as elsewhere. This is the partial $\mathcal I$-envelope of the source book.
+
+\begin{theorem}\label{thm:partial-kernel-quotient-limit}
+Under these hypotheses,
+\[
+ \frac{q!}{m^q}B_{X,m}\,\mu_X
+       \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E)\bigr).
+\]
+If $n>q$, the measures with normalization $n!/m^n$ tend to zero in total variation.
+\end{theorem}
+\begin{proof}
+Apply \cite[Theorem~14.3.1]{SGPT} on the compact K\"ahler base, with its auxiliary twisting line bundle trivial. Its hypotheses are precisely the positive-mass potential $\psi$, the closed non-pluripolar set $K$, the continuous weight $w$, and the Bernstein--Markov probability $\mu$. It gives
+\[
+ \frac{q!}{m^q}B_{B,m}\,\mu
+          \rightharpoonup\mathrm{MA}_\theta(E).
+\]
+This is the only asymptotic theorem imported here. The proposition and continuity of the lifting operation give the asserted upstairs limit. In particular the $q$-normalized total masses are bounded. Multiplying them by $(n!/q!)m^{q-n}$ proves the last statement when $n>q$.
+\end{proof}
+
+\Needspace{30\baselineskip}
+\section{The Hopf equilibrium measure}
+
+On the Hopf manifold $X_n$, take $B=\mathbb P^{n-1}$, $A=\mathcal O(1)$, and $\theta=\sigma$ as in \cref{chap:hopf-reduction}. Let the probability on each elliptic fiber be $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
+\[
+ \mathcal L\tau=\tfrac12\pi^*\tau\wedge\zeta
+\]
+in the precise fiber-integration notation of that chapter. Since $E\in\PSH(B,\sigma)$, \cref{thm:hopf-descended-hermitian-ma} identifies the limit as
+\begin{equation}\label{eq:hopf-partial-equilibrium}
+ \frac{(n-1)!}{m^{n-1}}B_{X_n,m}\,\mu_X
+       \rightharpoonup
+       \frac{1}{2n}\mathrm{MA}^{\mathrm{ext}}_\omega(\pi^*E).
+\end{equation}
+This is a nonzero finite Hermitian Monge--Amp\`ere measure: the base partial envelope has positive mass under the source theorem's hypotheses. For $n=3$, the ambient Hopf manifold is the same one on which the bounded mass property fails. The theorem uses only the potentials that descend to its projective base.
+
+The exponent in \eqref{eq:hopf-partial-equilibrium} is $n-1$; normalization by $m^n$ gives zero. The closed curvature $\alpha=\pi^*\sigma$ of $L$ has zero top Monge--Amp\`ere measure on these potentials. Adding the vertical form $\zeta$ produces the nonzero Hermitian limit; the factor $1/(2n)$ records the fiber probability and the binomial coefficient. By \cref{thm:hopf-weighted-section-descent}, every potential positive against the closed line-bundle curvature $k\alpha$ already descends. Potentials positive only against the Hermitian form $\omega$ can vary along the fibers. The following sections treat their selected spaces when the singularities are isolated logarithmic poles. General selecting weights and comparison of the determinant functional with the Gauduchon variational volume remain questions.
+
+\input{author/section_fiber_point_kernels}
+
+\input{author/section_hopf_point_equilibrium}

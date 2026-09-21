@@ -1,0 +1,204 @@
+Run_id: big_lp_equations_01
+
+Statement: Independently audit the new full reconstruction of bounded subsolutions and bounded exponential/normalized Monge-Ampere existence on ANY smooth semipositive big theta, without BMP/PVP. Bigness means a genuine qpsh rho with theta+ddc rho>=a omega, not necessarily analytic singularities. p>1,f>=0 nonzero Lp. Exponential lambda>0 unique bounded solution; normalized equation unique positive scalar and existence of normalized bounded potential (potential uniqueness not claimed). Uniform bounds for constructed solutions given upper Lp norm and positive lower integral f^(1/n). Check every proof step, directions of comparison, uniformity, varying backgrounds, upper/lower envelope limit, weighted contact bound, n=1, and convex transform without analytic rho. Accepted inputs, all separately reconstructed: bounded local BT products/chain rule, positivity, ordered contact for ANY smooth background, bounded monotone continuity and capacity continuity; quasi-continuity/canonical representatives; normalized L1 compactness and uniform small exponential integrability; semipositive envelope/contact support for genuine potentials; bounded non-collapsing for big theta and bounded strict/exponential domination (singular_domination_01 independently auditing these); Hermitian continuous Lp normalized and exponential existence with estimates from weak_lp_existence_01 (completed correct), including its explicit Gauduchon-root normalization bounds, lower density Lp bound and C0 estimate; no global mass bound. Main target source file author/section_big_lp_equations.tex. Hermitian details available at /Users/mingchen/Non-Kahler/book/author/section_weak_estimates.tex and chapter_weak_equations.tex. Inspiration GL23-equations.txt (arxiv2107.01938v1 Lem3.3/Thm3.4); that source defines big using analytic rho, whereas our construction uses only genuine rho and bounded truncation chain rule. Source's chi=-1/t is positive on negative t despite claimed [-1,0]; manuscript subtracts1. Don't import GL theorem as proof. Keep audit read only except usual records/reports; do not edit book. All original Rethlas files unchanged.
+
+Proof:
+
+\section{Bounded subsolutions in a big background}
+
+We next prove the bounded existence results needed for singular barriers. Throughout the next three sections, $\theta\geq0$ is smooth and big, $\omega$ is a fixed Hermitian metric, and $dV$ is smooth and positive. Fix a genuine potential $\rho$ and a number $0<a\leq1$ such that
+\[
+ \theta+\ddc\rho\geq a\omega,\qquad \rho\leq-1.
+\]
+No regularity of the singularities of $\rho$ is assumed. We reconstruct the big-background argument of \cite[Lemma 3.3 and Theorem 3.4]{GL23E}, using the Hermitian equations already proved.
+
+\begin{lemma}[A uniform bounded subsolution]\label{lem:big-lp-subsolution}
+Fix $p>1$ and $L>0$. There is $b>0$ such that, for every $f\geq0$ with $\|f\|_{L^p(dV)}\leq L$, one can find $s\in\PSH(X,\theta)$ satisfying
+\[
+ -1\leq s\leq0,\qquad \mathrm{MA}_\theta(s)\geq b f\,dV.
+\]
+The constant depends on the fixed geometry, $\rho,a,p,L$.
+\end{lemma}
+\begin{proof}
+Choose $1<q<p$. Since a fixed quasi-plurisubharmonic function belongs to every finite $L^r$ space, H\"older's inequality gives a uniform $L^q$ bound for
+\[
+ g=(-\rho)^{2n}f.
+\]
+By \cref{thm:kn-continuous} there are $c>0$ and a continuous $\omega$-plurisubharmonic $v$, normalized by $\sup_Xv=-1$, such that
+\[
+ \omega_v^n=c(1+g)\,dV.
+\]
+The construction of that theorem gives a uniform upper bound for $c$: in its Gauduchon trace estimate the root integral of $1+g$ is bounded below by the root integral of $1$. The lower-density estimate gives
+$c\|1+g\|_q\geq c_q>0$. Thus $c$ is also bounded below, and the potential estimate gives $-C\leq v\leq-1$ with a uniform $C$.
+
+Put $h=\rho+av\leq-1$. Then $\theta_h\geq a\omega_v$. On $(-\infty,-1]$ define
+\[
+ \chi(t)=-t^{-1}-1,\qquad
+ \chi'(t)=t^{-2}\in(0,1],\qquad \chi''(t)=-2t^{-3}>0.
+\]
+Set $s=\chi(h)$, with value $-1$ at poles of $h$. To justify both positivity and the product calculation, first use $h_k=\max(h,-k)$, $k\geq1$. The bounded chain rule and $\theta\geq0$ give
+\[
+ \theta+\ddc\chi(h_k)
+ =(1-\chi'(h_k))\theta+\chi'(h_k)\theta_{h_k}
+       +\chi''(h_k)\,dh_k\wedge d^ch_k\geq0.
+\]
+These bounded potentials decrease to $s$, so $s\in\PSH(X,\theta)$ and $-1\leq s\leq0$. On $\{h>-k\}$, locality and positivity give
+\[
+ \mathrm{MA}_\theta(s)
+ \geq a^n|h|^{-2n}\omega_v^n
+ \geq a^nc|h|^{-2n}(-\rho)^{2n}f\,dV.
+\]
+Exhaust the finite locus of $h$. Its complement is pluripolar and has zero $dV$ measure. Since
+$|h|\leq(-\rho)+aC\leq(1+aC)(-\rho)$, the assertion follows with any common lower bound for $a^nc(1+aC)^{-2n}$.
+\end{proof}
+
+The lemma gives a subsolution for each prescribed density in an $L^p$ bounded family. It is not a lower bound for the masses of all bounded $\theta$-plurisubharmonic functions.
+
+\section{The degenerate exponential equation}
+
+\begin{theorem}\label{thm:big-bounded-exponential}
+Let $0\leq f\in L^p(dV)$, $p>1$, be nonzero, and let $\lambda>0$. There is a unique bounded $v\in\PSH(X,\theta)$ such that
+\[
+ \mathrm{MA}_\theta(v)=e^{\lambda v}f\,dV.
+\]
+For fixed $\lambda$, these solutions are uniformly bounded when $\|f\|_p$ is bounded above and $\int_X f^{1/n}\,dV$ is bounded away from zero.
+\end{theorem}
+\begin{proof}
+For $0<\varepsilon\leq1$, set $\theta_\varepsilon=\theta+\varepsilon\omega$. The Hermitian existence theorem gives a continuous solution $v_\varepsilon$ with
+\[
+ \mathrm{MA}_{\theta_\varepsilon}(v_\varepsilon)
+       =e^{\lambda v_\varepsilon}f\,dV.
+\]
+Take $s,b$ from \cref{lem:big-lp-subsolution}, and put
+$w=s+\lambda^{-1}\log b$. Positivity of bounded products gives
+\[
+ \mathrm{MA}_{\theta_\varepsilon}(w)
+ \geq\mathrm{MA}_\theta(s)\geq bf\,dV
+ \geq e^{\lambda w}f\,dV.
+\]
+Bounded exponential comparison yields $w\leq v_\varepsilon$.
+If $0<\varepsilon'<\varepsilon$, then $v_{\varepsilon'}$ is also $\theta_\varepsilon$-plurisubharmonic and
+\[
+ \mathrm{MA}_{\theta_\varepsilon}(v_{\varepsilon'})
+ \geq e^{\lambda v_{\varepsilon'}}f\,dV.
+\]
+The same comparison gives $v_{\varepsilon'}\leq v_\varepsilon$. Hence $v_\varepsilon$ decreases to a bounded $\theta$-plurisubharmonic $v$, between $w$ and $v_1$.
+
+To pass to the equation, use the fixed Hermitian background $\Omega=\theta+\omega$. Expand
+\[
+ (\theta_\varepsilon+\ddc v_\varepsilon)^n
+ =\sum_{k=0}^n\binom nk
+       (\Omega+\ddc v_\varepsilon)^k
+       \wedge\bigl(-(1-\varepsilon)\omega\bigr)^{n-k}.
+\]
+Bounded monotone continuity applies to every term, and the smooth coefficients converge. Dominated convergence applies to the right-hand sides. This proves the equation. Uniqueness follows from semipositive bounded domination and \cref{prop:big-noncollapsing}, by the exponential comparison argument.
+
+For the uniform assertion the lower barrier $w$ is uniform by the subsolution lemma. The upper barrier $v_1$ is an equation in the fixed Hermitian background $\Omega$. The proof of \cref{lem:exponential-gauduchon-mean} bounds its supremum using only an upper density norm and a positive lower root integral. Indeed those two bounds control, respectively, the H\"older term and the denominator in \eqref{eq:gauduchon-exponential-mean}; smooth approximation retains these bounds. Thus $v_1$, and hence $v$, has a uniform upper bound.
+\end{proof}
+
+The limiting potential is bounded. The preceding monotone argument does not prove continuity when $\theta$ degenerates.
+
+\section{The degenerate normalized equation}
+
+The normalized equation needs a second compactness argument. Its approximants need not be monotone. Upper envelopes and lower rooftop envelopes will identify the limit without an unproved continuity assertion for the Monge--Amp\`ere operator along $L^1$ convergence.
+
+\begin{theorem}\label{thm:big-bounded-normalized}
+For every nonzero $0\leq f\in L^p(dV)$, $p>1$, there are a bounded $\varphi\in\PSH(X,\theta)$ and a uniquely determined $c>0$ such that
+\[
+ \mathrm{MA}_\theta(\varphi)=cf\,dV,\qquad \sup_X\varphi=0.
+\]
+The construction gives uniform bounds for $\|\varphi\|_\infty,c,c^{-1}$ when $\|f\|_p$ is bounded above and $\int_Xf^{1/n}\,dV$ is bounded away from zero. Uniqueness of the normalized potential is not asserted here.
+\end{theorem}
+\begin{proof}
+Put $\omega_j=\theta+2^{-j}\omega$. Choose continuous normalized solutions
+\[
+ \mathrm{MA}_{\omega_j}(\varphi_j)=c_jf\,dV,
+ \qquad \sup_X\varphi_j=0.
+\]
+First we bound $c_j$. The smooth approximation proof of \cref{thm:kn-continuous} and the Gauduchon trace give a common upper bound: the numerator $\int_X\omega_j\wedge\gamma^{n-1}$ is bounded above by $\int_X(\theta+\omega)\wedge\gamma^{n-1}$, and the root integral of $f$ is positive and fixed. This uses the smooth approximating equations before passage to their continuous limits.
+
+For a lower bound take $s,b$ from \cref{lem:big-lp-subsolution}. If $c_j<b$, then
+\[
+ \mathrm{MA}_{\omega_j}(\varphi_j)
+ \leq(c_j/b)\mathrm{MA}_{\omega_j}(s+A)
+\]
+for every constant $A$. Strict domination would give $\varphi_j\geq s+A$ for every $A$, a contradiction. Thus $c_j\geq b$. In fact the constants decrease with $j$: if $k>j$, positivity gives
+$\mathrm{MA}_{\omega_j}(\varphi_k)\geq c_kf\,dV$, and the same contradiction excludes $c_j<c_k$. Hence $c_j\downarrow c>0$.
+
+We next bound the potentials uniformly. All $\varphi_j$ are normalized $\Omega$-plurisubharmonic for $\Omega=\theta+\omega$. Choose $\gamma>0$ small and $1<q<p$ such that
+\[
+ g_j=e^{-\gamma\varphi_j}f
+\]
+is bounded in $L^q$, using uniform exponential integrability and H\"older's inequality. Since $\varphi_j\leq0$, we have $g_j\geq f$. The preceding exponential theorem therefore gives uniformly bounded $w_j\in\PSH(X,\theta)$ with
+\[
+ \mathrm{MA}_\theta(w_j)=e^{\gamma w_j}g_j\,dV.
+\]
+Choose $C_0\geq\max\{1,\sup_jc_j\}$ and set $z_j=w_j-\gamma^{-1}\log C_0$. Then
+\[
+ \mathrm{MA}_{\omega_j}(z_j)
+ \geq e^{\gamma z_j}c_jg_j\,dV,
+ \qquad
+ \mathrm{MA}_{\omega_j}(\varphi_j)
+       =e^{\gamma\varphi_j}c_jg_j\,dV.
+\]
+Exponential comparison gives $z_j\leq\varphi_j\leq0$. This is the desired common bounded range.
+
+Extract a subsequence converging in $L^1$ and almost everywhere to the canonical $\theta$-plurisubharmonic representative $\varphi$. We keep the indices $j$; the positive coefficients in $\omega_j$ still decrease to zero. Define
+\[
+ \Phi_j^+=\left(\sup_{\ell\geq j}\varphi_\ell\right)^*,
+ \qquad h_j=\inf_{\ell\geq j}\varphi_\ell,
+ \qquad p_j=P_\theta(h_j),
+ \qquad c_j^- =\inf_{\ell\geq j}c_\ell,\quad
+ c_j^+ =\sup_{\ell\geq j}c_\ell.
+\]
+All potentials here have a common bounded range. The upper envelopes are $\omega_j$-plurisubharmonic and decrease to $\varphi$; the usual upper-envelope representative agrees almost everywhere with the $L^1$ limit. This follows also from the local Hartogs lemma applied to the bounded tails.
+
+For clarity, the lower measure bound for these upper envelopes follows directly from ordered contact. If $a,b$ are bounded potentials in a common background $\eta$, then $a,b\leq\max(a,b)$ gives
+\[
+ \mathrm{MA}_\eta(\max(a,b))
+ \geq\mathbf1_{\{a\geq b\}}\mathrm{MA}_\eta(a)
+       +\mathbf1_{\{a<b\}}\mathrm{MA}_\eta(b).
+\]
+Apply this to finite maxima of the $\varphi_\ell$ in background $\omega_j$, where
+$\mathrm{MA}_{\omega_j}(\varphi_\ell)\geq c_\ell f\,dV$ for $\ell\geq j$. Bounded increasing continuity, followed by the decreasing limit in $j$ and the smooth background expansion, gives
+\begin{equation}\label{eq:big-normalized-upper-tail}
+ \mathrm{MA}_{\omega_j}(\Phi_j^+)\geq c_j^-f\,dV,
+ \qquad \mathrm{MA}_\theta(\varphi)\geq cf\,dV.
+\end{equation}
+
+We obtain the reverse inequality by lower envelopes, retaining a useful exponential weight. For $N\geq j$ put
+\[
+ p_{j,N}=P_\theta\left(\min_{j\leq\ell\leq N}\varphi_\ell\right).
+\]
+The obstacle is continuous and bounded, so the measure of $p_{j,N}$ is carried by its contact set. Partition that set into disjoint Borel pieces by choosing the first index $\ell$ at which $p_{j,N}=\varphi_\ell$. On this piece, ordered contact in background $\omega_\ell$ and positivity give
+\[
+ \mathrm{MA}_\theta(p_{j,N})
+ \leq\mathrm{MA}_{\omega_\ell}(p_{j,N})
+ \leq c_\ell f\,dV.
+\]
+There $p_{j,N}=\varphi_\ell\geq h_j$. Summing the restrictions therefore yields the global inequality
+\[
+ \mathrm{MA}_\theta(p_{j,N})
+ \leq e^{p_{j,N}-h_j}c_j^+f\,dV.
+\]
+As $N\to\infty$, the envelopes decrease to $p_j$: the limit lies below each tail obstacle quasi-everywhere, hence is a competitor for $P_\theta(h_j)$, and the reverse inequality is immediate. Bounded monotone continuity and dominated convergence give
+\[
+ \mathrm{MA}_\theta(p_j)\leq e^{p_j-h_j}c_j^+f\,dV.
+\]
+The functions $p_j$ increase. Let $\varphi'=(\lim_jp_j)^*$; since $h_j\to\varphi$ almost everywhere, we have $\varphi'\leq\varphi$ by canonical representatives. Passing to the increasing limit gives
+\[
+ \mathrm{MA}_\theta(\varphi')
+ \leq e^{\varphi'-\varphi}cf\,dV
+ \leq e^{\varphi'-\varphi}\mathrm{MA}_\theta(\varphi).
+\]
+Bounded exponential comparison forces $\varphi'\geq\varphi$. Thus they coincide, and this last inequality, together with \eqref{eq:big-normalized-upper-tail}, proves the equation. Subtracting $\sup_X\varphi$ gives the required normalization if needed.
+
+All bounds used above depend only on the two stated density bounds and the fixed data; this proves the uniform assertion for the constructed solution. Finally, two different positive constants for the same $f$ would contradict strict domination after arbitrary translation of one bounded solution, exactly as in the lower-bound argument. This proves uniqueness of $c$.
+\end{proof}
+
+The same two exponential barriers as in \cref{prop:vanishing-exponent} now give
+\[
+ \|\lambda v_\lambda-\log c\|_\infty
+ \leq\lambda\operatorname{osc}_X\varphi
+\]
+for these bounded degenerate solutions. Thus the normalizing constant is intrinsic: it is independent of the auxiliary Hermitian metric used in the approximation. No bounded mass hypothesis entered either existence proof.

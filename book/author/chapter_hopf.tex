@@ -1,0 +1,499 @@
+\chapter{Unbounded mass on a Gauduchon threefold}
+\label{chap:hopf}
+
+The preceding estimates apply without an upper bound for the masses of all bounded potentials. We now explain why that generality is necessary. The example of Xia--Zhang \cite{XZ26} takes place on a Hopf threefold and uses a Gauduchon background. Its mass formula turns a vertical Dirichlet energy into total Monge--Amp\`ere mass. Heat regularization on the elliptic fibers produces large energy, while a carefully chosen variation of the regularization scale preserves positivity in the transverse directions.
+
+We give the construction and its estimates. Throughout this chapter, $\ddc=\mathrm i\partial\bar\partial/(2\pi)$, as elsewhere in the book. Relative to \cite{XZ26}, whose operator is $\mathrm i\partial\bar\partial$, we divide all background forms by $2\pi$ and keep the potentials unchanged. This choice preserves the scalar positivity inequalities and changes the coefficient in the mass identity.
+
+\begin{theorem}[Xia--Zhang]\label{thm:hopf-unbounded}
+The compact threefold
+\[
+ X=(\C^3\setminus\{0\})/\langle z\mapsto e^{-1}z\rangle
+\]
+admits a Gauduchon form $\omega$ and smooth real functions $V_j$ such that
+\[
+ \omega+\ddc V_j>0,\qquad
+ \int_X(\omega+\ddc V_j)^3\longrightarrow+\infty.
+\]
+In particular, $X$ does not have the bounded mass property.
+\end{theorem}
+
+\section{The geometry and the mass identity}
+
+On $\C^3\setminus\{0\}$ put
+\[
+ s=\log|z|^2,\qquad
+ \alpha=\ddc s,\qquad
+ \beta=\mathrm{d}s\wedge\dc s
+       =\frac{\mathrm i}{2\pi}\partial s\wedge\bar\partial s,
+ \qquad \omega=\alpha+\beta.
+\]
+The contraction changes $s$ by the constant $-2$, so these forms descend to $X$. A closed annulus between two successive radii is a compact fundamental region; this also proves compactness of the quotient. Projectivization gives a holomorphic map
+\[
+ \pi:X\longrightarrow\mathbb P^2,
+ \qquad \alpha=\pi^*\omega_{\FS},\qquad
+ \int_{\mathbb P^2}\omega_{\FS}^2=1.
+\]
+Here $\omega_{\FS}=\ddc\log(1+|\xi|^2)$ in an affine chart. The form $\alpha$ has rank two and is positive transverse to the fibers. The rank-one form $\beta$ is positive along the vertical line. Their kernels have zero intersection, and therefore $\omega>0$.
+
+The identities needed below are
+\begin{equation}\label{eq:hopf-torsion}
+ \alpha^3=0,\quad \beta^2=0,\quad \mathrm{d}\alpha=0,
+ \quad \ddc\beta=-\alpha^2,
+ \quad \ddc(\omega^2)=0.
+\end{equation}
+The first three follow from the definitions and the dimension of the base. For the fourth, differentiate $\beta=\mathrm i\partial s\wedge\bar\partial s/(2\pi)$; the result is $(\partial\bar\partial s)^2/(4\pi^2)=-\alpha^2$. Finally,
+$\omega^2=\alpha^2+2\alpha\wedge\beta$, so its $\ddc$ is $-2\alpha^3=0$. Thus $\omega$ is Gauduchon, although $\ddc\omega=-\alpha^2\ne0$.
+
+On the chart $U_0=\{z_0\ne0\}\simeq\C^2$ write
+\[
+ \xi_j=z_j/z_0\quad(j=1,2),\qquad w=\log z_0.
+\]
+The logarithm and the contraction change $w$ by elements of
+$\Lambda=\mathbb Z+2\pi\mathrm i\mathbb Z$. Hence
+\[
+ \pi^{-1}(U_0)\simeq U_0\times E,\qquad
+ E=\C/\Lambda,\qquad
+ \mathrm{d}A_E=\frac{\mathrm i}{4\pi}\mathrm{d}w\wedge \mathrm{d}\bar w,
+ \quad\int_E\mathrm{d}A_E=1.
+\]
+On another base chart the fiber coordinate changes by a holomorphic function of the base. Consequently, the vertical derivative $\partial_w$ and the fiber integral below are globally defined.
+
+\begin{proposition}\label{prop:hopf-mass}
+For every $V\in C^\infty(X,\R)$,
+\begin{equation}\label{eq:hopf-mass}
+ \int_X(\omega+\ddc V)^3
+ =6+6\int_{\mathbb P^2}
+       \left(\int_{\pi^{-1}(y)}|V_w|^2\,\mathrm{d}A_E\right)
+       \omega_{\FS}^2(y).
+\end{equation}
+This is an identity of integrals; positivity is not required.
+\end{proposition}
+\begin{proof}
+Since $\beta$ restricts to $2\mathrm{d}A_E$ on each fiber,
+\[
+ \int_X\omega^3=3\int_X\alpha^2\wedge\beta=6.
+\]
+The pure Hessian term integrates to zero, and the linear term vanishes by $\ddc\omega^2=0$. Twice integrating by parts in the remaining term gives
+\[
+ \begin{split}
+ \int_X(\omega+\ddc V)^3-\int_X\omega^3
+ &=3\int_X V\ddc\omega\wedge\ddc V\\
+ &=-3\int_X V\alpha^2\wedge\ddc V
+ =3\int_X\mathrm{d}V\wedge\dc V\wedge\alpha^2.
+ \end{split}
+\]
+Wedging with $\alpha^2$ removes every horizontal component of $\mathrm{d}V\wedge\dc V$. Its vertical component is
+$\mathrm i|V_w|^2\mathrm{d}w\wedge \mathrm{d}\bar w/(2\pi)=2|V_w|^2\mathrm{d}A_E$. Fiber integration proves the formula.
+\end{proof}
+
+\section{A scalar test for positivity}
+
+For $\xi\ne0$ introduce
+\[
+ x=\log|\xi|^2,\qquad
+ \mu=\frac{e^x}{1+e^x},\qquad \mu_x=\mu(1-\mu).
+\]
+We use functions $V=V(x,w)$ that are independent of $x$ near the negative end and constant in both variables near the positive end. The first condition gives smooth extension across $\xi=0$. The second gives extension over the complement of the affine chart, by using the same constant there. For each individual $V$, its nonconstant base region is compact; no common compact region for the sequence is needed.
+
+\begin{lemma}\label{lem:hopf-positivity}
+For such a function, at $\xi\ne0$ the inequality $\omega+\ddc V>0$ is equivalent to
+\begin{equation}\label{eq:hopf-positivity}
+ 1+V_{w\bar w}>0,\qquad \mu+V_x>0,\qquad
+ Q[V]:=V_{xx}+\mu-
+       \frac{|\mu+V_{x\bar w}|^2}{1+V_{w\bar w}}>0.
+\end{equation}
+At $\xi=0$, it is enough and necessary that $1+V_{w\bar w}>0$.
+\end{lemma}
+\begin{proof}
+In these coordinates,
+\[
+ s=w+\bar w+\log(1+e^x),\qquad
+ \partial s=\mathrm{d}w+\mu\partial x,
+\]
+and
+\[
+ 2\pi\alpha
+ =\mathrm i\mu\partial\bar\partial x
+  +\mathrm i\mu(1-\mu)\partial x\wedge\bar\partial x.
+\]
+Choose horizontal vectors of unit length for $2\pi\alpha$, one orthogonal to the radial direction and the other
+\[
+ e_r=\frac{\xi_1\partial_{\xi_1}+\xi_2\partial_{\xi_2}}
+                {\sqrt{\mu(1-\mu)}}.
+\]
+Adjoin the vertical vector $\partial_w$. In this frame the matrix of $2\pi(\omega+\ddc V)$ is
+\[
+ \begin{pmatrix}
+ (\mu+V_x)/\mu&0&0\\
+ 0&(\mu+V_{xx})/[\mu(1-\mu)]&
+       (\mu+V_{x\bar w})/\sqrt{\mu(1-\mu)}\\
+ 0&(\mu+V_{wx})/\sqrt{\mu(1-\mu)}&1+V_{w\bar w}
+ \end{pmatrix}.
+\]
+The Schur complement of the last diagonal entry gives exactly \eqref{eq:hopf-positivity}. At $\xi=0$, the derivatives of $V$ in the base vanish and $\partial s=\mathrm{d}w$, which gives the last assertion.
+\end{proof}
+
+The difficulty is the mixed derivative $V_{x\bar w}$. Keeping a highly concentrated fiber potential unchanged and then cutting it off rapidly would make its square too large. We shall first spread the concentration by the heat equation. The cutoff will occur only when all fiber derivatives are exponentially small.
+
+\section{Heat potentials on the elliptic curve}
+
+For $t>0$ define
+\begin{equation}\label{eq:hopf-heat}
+ k_t(w)=\frac2t\sum_{\lambda\in\Lambda}
+                 \exp\left(-\frac{|w-\lambda|^2}{t}\right).
+\end{equation}
+This is a smooth positive periodic function of integral one. Indeed, unfolding the integral reduces it to the Gaussian integral on $\C$, since $\mathrm{d}A_E=\mathrm{d}a\,\mathrm{d}b/(2\pi)$ for $w=a+\mathrm ib$.
+For $(p,q)\in\mathbb Z^2$ set
+\[
+ \nu_{p,q}=p+\frac{\mathrm iq}{2\pi},\qquad
+ \chi_{p,q}(w)=e^{2\pi\mathrm ip\operatorname{Re}w+
+                         \mathrm iq\operatorname{Im}w}.
+\]
+These characters form an orthonormal basis. Computing the Fourier coefficients by the same unfolding gives
+\begin{equation}\label{eq:hopf-heat-fourier}
+ k_t=\sum_{p,q}e^{-\pi^2|\nu_{p,q}|^2t}\chi_{p,q},
+ \qquad \partial_tk_t=\partial_w\partial_{\bar w}k_t.
+\end{equation}
+All differentiated series converge locally uniformly for $t>0$.
+
+\begin{lemma}\label{lem:hopf-fiber-potential}
+Let $0<\eta<1/10$ and define
+\[
+ F_\eta(t,w)=-\eta\int_t^\infty(k_r(w)-1)\,\mathrm{d}r.
+\]
+Then $F_\eta$ is smooth and real, and
+\begin{align}
+ (F_\eta)_t=(F_\eta)_{w\bar w}
+   &=\eta(k_t-1),\label{eq:hopf-F-heat}\\
+ (\log k_t)_{w\bar w}&\geq-1/t,\label{eq:hopf-log-hessian}\\
+ \int_E|(F_\eta)_w(t,w)|^2\mathrm{d}A_E
+   &=2\eta^2\log(1/t)+O(\eta^2)\quad(0<t\leq1).
+   \label{eq:hopf-energy}
+\end{align}
+The last error is uniform in $t$ and $\eta$. For fixed nonnegative integers $a,m$ there is also a uniform estimate
+\begin{equation}\label{eq:hopf-large-time}
+ \|\partial_t^aF_\eta(t,\cdot)\|_{C^m(E)}
+ \leq C_{a,m}\eta e^{-t/4}\quad(t\geq1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Integrating the nonconstant Fourier modes gives
+\[
+ F_\eta(t,w)=-\frac{\eta}{\pi^2}
+ \sum_{(p,q)\ne(0,0)}
+ \frac{e^{-\pi^2|\nu_{p,q}|^2t}}{|\nu_{p,q}|^2}\chi_{p,q}(w).
+\]
+This proves smoothness, reality and \eqref{eq:hopf-F-heat}. The least nonzero value of $\pi^2|\nu_{p,q}|^2$ is $1/4$. After any fixed number of differentiations, the additional coefficients have polynomial growth in $|\nu_{p,q}|$. Factoring out $e^{-t/4}$ for $t\geq1$ leaves a convergent Gaussian series, proving \eqref{eq:hopf-large-time}.
+
+To prove \eqref{eq:hopf-log-hessian}, fix a lift of $w$ and give $\Lambda$ the probability weights
+\[
+ P_\lambda=
+ \frac{e^{-|w-\lambda|^2/t}}
+      {\sum_{\lambda'}e^{-|w-\lambda'|^2/t}}.
+\]
+Logarithmic differentiation of the Gaussian sum yields
+\[
+ t\partial_{\bar w}\log k_t=-\sum_\lambda(w-\lambda)P_\lambda,
+\]
+and one more derivative gives
+\[
+ (\log k_t)_{w\bar w}
+ =-\frac1t+\frac1{t^2}
+ \left(\sum_\lambda|w-\lambda|^2P_\lambda
+       -\left|\sum_\lambda(w-\lambda)P_\lambda\right|^2\right).
+\]
+The expression in parentheses is a variance and is nonnegative.
+
+Finally, Parseval's identity gives, with $\mathcal E_\eta(t)$ denoting the energy in \eqref{eq:hopf-energy},
+\[
+ \mathcal E_\eta(t)=\frac{\eta^2}{\pi^2}
+   \sum_{(p,q)\ne(0,0)}
+   \frac{e^{-2\pi^2|\nu_{p,q}|^2t}}{|\nu_{p,q}|^2},
+ \qquad
+ \mathcal E_\eta'(t)=-2\eta^2(k_{2t}(0)-1).
+\]
+The Gaussian formula at the origin implies
+\[
+ k_{2t}(0)=\frac1t+
+    O\left(t^{-1}e^{-1/(4t)}\right)\quad(0<t\leq1).
+\]
+For this bound, isolate the zero lattice vector and use
+$e^{-|\lambda|^2/(2t)}\leq e^{-1/(4t)}e^{-|\lambda|^2/4}$ for $\lambda\ne0$. The error is integrable at zero, and $\mathcal E_\eta(1)=O(\eta^2)$. Integrating the derivative between $t$ and $1$ proves \eqref{eq:hopf-energy}.
+\end{proof}
+
+\section{An estimate for the mixed derivative}
+
+We need a relation between the heat kernel and its logarithmic gradient. It will allow a positive square in the Schur complement to absorb most of a negative term.
+
+\begin{lemma}\label{lem:hopf-gradient}
+For a constant $C_0\geq1$ depending only on $E$,
+\begin{equation}\label{eq:hopf-gradient}
+ tk_t(w)\leq C_0\exp\left(
+   -\frac{|t\partial_{\bar w}\log k_t(w)|^2}{C_0t}\right)
+ \quad(0<t\leq1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose a nearest lattice point $\lambda_0$, and put
+$d=|w-\lambda_0|$ and $s_\lambda=|w-\lambda|^2-d^2\geq0$.
+The distance $d$ is bounded by the diameter of a fundamental rectangle. The triangle inequality shows that $s_\lambda\geq|\lambda-\lambda_0|^2/4-C$; outside a fixed finite set it is at least $|\lambda-\lambda_0|^2/8$. Consequently,
+\[
+ \sum_\lambda (1+|w-\lambda|)e^{-s_\lambda/t}\leq C,
+ \qquad tk_t(w)\leq Ce^{-d^2/t}.
+\]
+The probability formula in the previous proof gives, with
+$G=|t\partial_{\bar w}\log k_t|$,
+\[
+ G\leq d+\sum_{\lambda\ne\lambda_0}|w-\lambda|e^{-s_\lambda/t}.
+\]
+If $d\geq1/4$, this is at most $Cd$. If $d<1/4$, the nonzero lattice distances are at least one and
+\[
+ s_\lambda\geq|\lambda-\lambda_0|
+                    (|\lambda-\lambda_0|-2d)
+              \geq\tfrac12|\lambda-\lambda_0|^2.
+\]
+Summing the resulting Gaussian bound gives
+$G\leq C(d+e^{-c/t})$ in all cases. When $G>2Ce^{-c/t}$, we have $d\geq G/(2C)$ and can use $tk_t\leq Ce^{-d^2/t}$. In the remaining case $G^2/t$ is bounded, and the same conclusion follows from $tk_t\leq C$, after increasing $C_0$.
+\end{proof}
+
+\begin{lemma}\label{lem:hopf-square}
+Fix $0<\kappa<1/(200C_0)$. Suppose $0<\eta<1/10$, $0<t\leq1$ and $1/2\leq\mu\leq1$. Set
+\[
+ \sigma^2=\frac{2\kappa}{\eta}\log\frac1{\eta t},\qquad
+ h=\eta k_t,\qquad
+ \zeta=\frac{\sigma}{\mu}\,t\partial_{\bar w}\log k_t.
+\]
+There is a constant $C$, independent of these parameters, such that
+\begin{equation}\label{eq:hopf-square}
+ \kappa tk_t-
+ \frac{\mu^2(1-\eta)h}{1-\eta+h}
+       \left|\zeta-\frac1{1-\eta}\right|^2
+ \leq C\kappa\exp\left(-\frac1{C\sigma^2t}\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+If $\sigma^2t\geq1/100$, use $tk_t\leq C_0$ and enlarge $C$.
+Assume $\sigma^2t<1/100$. If
+$|\zeta-(1-\eta)^{-1}|\geq1/4$, the subtracted expression is at least $h/[100(1+h)]$. Since $\log(1/(\eta t))>2$, the definition of $\sigma$ gives
+\[
+ \kappa t(1+h)\leq\frac{\eta}{400}+C_0\kappa\eta
+ <\frac{\eta}{100}.
+\]
+Multiplication by $k_t/(1+h)$ shows that the left side of \eqref{eq:hopf-square} is nonpositive.
+
+Otherwise $|\zeta|\geq3/4$, so
+\[
+ |t\partial_{\bar w}\log k_t|=\frac{\mu|\zeta|}{\sigma}
+ \geq\frac3{8\sigma}.
+\]
+Apply \cref{lem:hopf-gradient} and discard the nonnegative square. This gives \eqref{eq:hopf-square} in the last case as well.
+\end{proof}
+
+\section{Varying the heat scale}
+
+We now choose a function that is highly concentrated over a fixed base ball and becomes almost constant before it is cut off. Fix the small constant $\kappa$ from \cref{lem:hopf-square}. All estimates below are for $\eta\downarrow0$, with $\kappa$ fixed. Write
+\[
+ L=\log(1/\eta),\quad
+ \varepsilon=\eta^{1/\eta^2},\quad
+ q_0=\sqrt{\log\frac1{\eta\varepsilon}},\quad
+ a=\sqrt{\frac\kappa{2\eta}}.
+\]
+Choose a smooth nondecreasing $\chi:\R\to[0,1]$, equal to zero on $(-\infty,0]$ and one on $[1,+\infty)$, with $\int_0^1\chi=1/2$. Define
+\begin{equation}\label{eq:hopf-scale}
+ q(x)=q_0-\int_0^{ax}\chi(s)\,\mathrm{d}s,
+ \qquad t(x)=\eta^{-1}e^{-q(x)^2}.
+\end{equation}
+Thus $t=\varepsilon$ on $x\leq0$, and $q=q_0+1/2-ax$ on $x\geq a^{-1}$. Put
+\[
+ b=\frac{q_0-1/2}{a},\qquad
+ x_* =\frac{q_0+1/2}{a}.
+\]
+For small $\eta$, we have $0<a^{-1}<b<x_*$, with
+\begin{equation}\label{eq:hopf-scale-size}
+ q(b)=1,\quad q(x_*)=0,\quad
+ b,x_*=O\bigl(\sqrt{L/\eta}\bigr),\quad \eta b=o(1).
+\end{equation}
+Choose another smooth cutoff $\vartheta$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
+\[
+ W(x,w)=\vartheta(q(x))F_\eta(t(x),w).
+\]
+This is $F_\eta(\varepsilon,w)$ on $x\leq0$ and zero on $x\geq x_*$. Moreover,
+\begin{equation}\label{eq:hopf-vertical-positive}
+ 1+W_{w\bar w}=1+\vartheta(q)\eta(k_t-1)>1-\eta.
+\end{equation}
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:hopf-small-defect}
+For the functions just constructed, let
+\[
+ d_\eta(x)=\max_{w\in E}\max\{-Q[W](x,w),0\}.
+\]
+Then $d_\eta$ is continuous, supported in $[0,b]$, and
+\begin{equation}\label{eq:hopf-small-defect}
+ \int_\R d_\eta(x)\,\mathrm{d}x=o(1),\qquad
+ \sup_{\R\times E}\max\{-W_x,0\}=o(1).
+\end{equation}
+On $[-2,-1]\times E$, one also has $Q[W]\geq2/27$ for small $\eta$.
+\end{lemma}
+\begin{proof}
+We first work on $[0,b]$, where $\vartheta(q)=1$. Set
+\[
+ h=\eta k_t,\qquad \sigma=(\log t)_x,\qquad
+ \zeta=\frac{\sigma t}{\mu}\partial_{\bar w}\log k_t.
+\]
+The heat equation gives $F_t=h-\eta$, and the chain rule gives
+\[
+ W_x=\sigma tF_t,\quad
+ W_{xx}=(\sigma_x+\sigma^2)tF_t+\sigma^2t^2F_{tt},
+ \quad W_{x\bar w}=\sigma tF_{t\bar w}.
+\]
+Substitute these in $Q[W]$, use
+$h_t=h((\log k_t)_{w\bar w}+|\partial_{\bar w}\log k_t|^2)$,
+and complete the square. The exact result is
+\begin{equation}\label{eq:hopf-Q-identity}
+ \begin{split}
+ Q[W]={}&\sigma^2t\{h[1+t(\log k_t)_{w\bar w}]-\eta\}
+       +\sigma_xtF_t+\mu(1-\mu)-\frac{\mu^2\eta}{1-\eta}\\
+ &+\frac{\mu^2(1-\eta)h}{1-\eta+h}
+       \left|\zeta-\frac1{1-\eta}\right|^2.
+ \end{split}
+\end{equation}
+In particular, the part $\sigma^2th[1+t(\log k_t)_{w\bar w}]$ is nonnegative.
+
+On $[0,a^{-1}]$ we have
+\[
+ \sigma=2aq\chi(ax),\qquad
+ \sigma_x=-\frac\kappa\eta\chi(ax)^2
+               +\frac\kappa\eta q\chi'(ax).
+\]
+Here $q_0-1/2\leq q\leq q_0$ and
+$t\leq\varepsilon e^{q_0}$. The latter tends to zero faster than any power of $\eta$. In particular,
+\[
+ \kappa q\chi'(ax)t\leq\eta,\qquad \sigma^2t\leq\eta^2.
+\]
+Where $\chi>0$, apply \cref{lem:hopf-square} with $\kappa\chi^2$ in place of $\kappa$. It absorbs the negative term $-\kappa\chi^2tk_t$ coming from $\sigma_xtF_t$. The remaining part involving $\chi'$ is at least $-\eta$, because $F_t\geq-\eta$. The other negative terms in \eqref{eq:hopf-Q-identity} are $O(\eta)$; the exponential error is also $O(\eta)$ since $\sigma^2t\leq\eta^2$. Thus $d_\eta\leq C\eta$ on this interval. If $\chi=0$, smooth nonnegativity implies $\chi'=0$, and directly
+\[
+ Q[W]=\mu-\frac{\mu^2}{1-\eta+h}>0,
+\]
+since $\mu\leq\mu(a^{-1})<1-\eta$ for small $\eta$.
+
+On $[a^{-1},b]$ the formulas simplify to
+\begin{equation}\label{eq:hopf-time-change}
+ \sigma=2aq,\qquad \sigma_x=-\kappa/\eta,\qquad
+ \mathrm{d}x=-\frac{\mathrm{d}q}{a}=\sqrt{\frac\eta{2\kappa}}\frac{\mathrm{d}t}{tq}.
+\end{equation}
+For $t\leq1$, use \cref{lem:hopf-square} in \eqref{eq:hopf-Q-identity} to obtain
+\begin{equation}\label{eq:hopf-defect-small-time}
+ d_\eta(x)\leq2\eta+2\kappa q^2t
+          +C\kappa\exp\left(-\frac\eta{C\kappa q^2t}\right).
+\end{equation}
+Indeed, $-\eta\sigma^2t=-2\kappa q^2t$ and
+$\sigma_xtF_t=-\kappa tk_t+\kappa t$; these are exactly the two terms for which the scale was chosen. When $t\geq1$, use the exponential derivative estimates \eqref{eq:hopf-large-time} directly in the definition of $Q$. The denominator stays above $1-\eta$, and the chain rule gives
+\begin{equation}\label{eq:hopf-defect-large-time}
+ d_\eta(x)\leq C\kappa q^2t^2e^{-t/4}.
+\end{equation}
+For completeness, the perturbing derivatives are bounded by constants times
+$\eta e^{-t/4}$, $\eta\sigma t e^{-t/4}$ and
+$\eta[(|\sigma_x|+\sigma^2)t+\sigma^2t^2]e^{-t/4}$. Since $q,t\geq1$ here, each is bounded by a constant times the right side of \eqref{eq:hopf-defect-large-time}. Subtraction of the two quotients in $Q[W]-Q[0]$ then gives the stated bound.
+
+We integrate these estimates explicitly. The constant $2\eta$ and the initial interval contribute $O(\eta b)=o(1)$. In the small-time region $q\geq\sqrt L$ and $t=\eta^{-1}e^{-q^2}$. Therefore
+\[
+ \int 2\kappa q^2t\,\mathrm{d}x
+ \leq\frac{2\kappa}{a\eta}
+       \int_{\sqrt L}^{\infty}q^2e^{-q^2}\,\mathrm{d}q
+ \leq C\sqrt{\eta L}=o(1).
+\]
+For the exponential term the integral is at most
+\[
+ \frac{C\kappa}{a}
+ \int_{\sqrt L}^{q_0}
+ \exp\left(-\frac{\eta^2e^{q^2}}{C\kappa q^2}\right)\,\mathrm{d}q.
+\]
+The interval $[\sqrt L,2\sqrt L]$ has length $O(\sqrt L)$. For $q\geq2\sqrt L$ and sufficiently small $\eta$,
+$\eta^2e^{q^2}/q^2\geq e^{q^2/4}$. The integral over this remaining interval is bounded by a fixed integrable function on $[1,+\infty)$. Its prefactor is $O(\sqrt\eta)$, so the full expression is $o(1)$. In the large-time region, \eqref{eq:hopf-time-change} gives
+\[
+ \int d_\eta(x)\,\mathrm{d}x
+ \leq C\sqrt\eta\int_1^{1/(e\eta)}qt e^{-t/4}\,\mathrm{d}t
+ \leq C\sqrt{\eta L}\int_1^\infty t e^{-t/4}\,\mathrm{d}t=o(1).
+\]
+This proves the integral assertion on $[0,b]$.
+
+The negative slope has a uniform small bound as well. For $t\leq1$, $F_t\geq-\eta$ and $0\leq\sigma\leq2aq$, so
+\[
+ \max\{-W_x,0\}\leq\sqrt{2\kappa\eta}\,
+        t\sqrt{\log\frac1{\eta t}}\leq C\sqrt{\eta L}.
+\]
+The last inequality follows because $t\sqrt{L+\log(1/t)}$ is increasing on $(0,1]$ when $L>1$. For $t\geq1$ and $q\geq1$, use
+$|W_x|\leq C\sqrt\eta\,qt e^{-t/4}$ and $q\leq\sqrt L$.
+
+It remains to check the ends, including the cutoff region. If $b\leq x\leq x_*$, then $0\leq q\leq1$ and
+$1/(e\eta)\leq t\leq1/\eta$. The derivatives of the cutoffs and scale have at most polynomial growth in $\eta^{-1}$. Thus \eqref{eq:hopf-large-time} implies
+\[
+ \sup_w\bigl(|W_x|+|Q[W]-Q[0]|\bigr)
+ \leq Ce^{-1/(5e\eta)}.
+\]
+But $Q[0]=\mu(1-\mu)\geq e^{-x_*}/4$ on this interval, and \eqref{eq:hopf-scale-size} shows that the error is $o(e^{-x_*})$. Hence $Q[W]>0$ there. For $x\geq x_*$, $W=0$ and positivity is immediate. For $x\leq0$, $W_x=0$ and
+\[
+ Q[W]\geq\mu\left(1-\frac\mu{1-\eta}\right)>0,
+\]
+since $\mu\leq1/2$. On $[-2,-1]$, use $1/9\leq\mu\leq3/10$ and $1-\eta\geq9/10$ to obtain the lower bound $2/27$. Finally $Q[W]$ is continuous with positive denominator; its negative part has a continuous maximum over compact $E$. This proves the support, continuity and all remaining assertions.
+\end{proof}
+
+\section{Repairing the remaining defect}
+
+The integral estimate is the relevant quantity: a small total negative defect can be corrected by a function of the base variable alone. Such a correction leaves the vertical energy unchanged.
+
+\begin{proof}[of \cref{thm:hopf-unbounded}]
+Choose a smooth function $r_\eta\geq0$ supported in $(-1/2,b+1/2)$ with
+\[
+ r_\eta>d_\eta\ \hbox{on }[0,b],\qquad
+ m_\eta:=\int_\R r_\eta\,\mathrm{d}x\leq\int_\R d_\eta\,\mathrm{d}x+\eta=o(1).
+\]
+Such a majorant exists by uniform approximation of the compactly supported continuous function $d_\eta$, followed by adding a positive bump on $[0,b]$; for each fixed $\eta$ the approximation error can be chosen as small as the displayed integral requires. Fix a smooth $\psi\geq0$ supported in $(-2,-1)$ with integral one and set
+\[
+ g_\eta(x)=\int_{-\infty}^x(x-s)
+                   (r_\eta(s)-m_\eta\psi(s))\,\mathrm{d}s,
+ \qquad V_\eta=W+g_\eta.
+\]
+The negative part of $g_\eta''$ is placed to the left of the positive part, and their integrals agree. Consequently,
+\[
+ -m_\eta\leq g_\eta'\leq0,
+ \qquad g_\eta'=0\ \hbox{for }x\leq-2
+                 \ \hbox{and for }x\geq b+1/2.
+\]
+Thus $g_\eta$ is zero at the negative end and constant at the positive end. The function $V_\eta$ has the endpoint properties required for smooth extension to $X$.
+
+Since $g_\eta$ is independent of $w$, the Schur complement changes by exactly its second derivative:
+\[
+ Q[V_\eta]=Q[W]+r_\eta-m_\eta\psi.
+\]
+This is positive on $[0,b]$ by the strict majorant property. On $(-2,-1)$ it is at least $2/27-m_\eta\|\psi\|_\infty>0$. Elsewhere $Q[W]>0$, $\psi=0$ and $r_\eta\geq0$.
+The vertical coefficient remains above $1-\eta$ by \eqref{eq:hopf-vertical-positive}. For the remaining coefficient, if $x\leq-2$ both $W_x$ and $g_\eta'$ vanish; if $-2\leq x\leq0$, then $W_x=0$ and $\mu\geq\mu(-2)>0$; and if $x\geq0$, then $\mu\geq1/2$ and $W_x\geq-o(1)$. In all cases $\mu+(V_\eta)_x>0$ for sufficiently small $\eta$. The positivity lemma therefore gives $\omega+\ddc V_\eta>0$ on $X$.
+
+On the fixed ball $B=\{|\xi|^2<e^{-3}\}\Subset U_0$, one has
+$V_\eta=F_\eta(\varepsilon,w)$, including at $\xi=0$. Thus
+\[
+ \int_{\pi^{-1}(y)}|(V_\eta)_w|^2\mathrm{d}A_E
+ =2\eta^2\log(1/\varepsilon)+O(\eta^2)
+ =2\log(1/\eta)+O(\eta^2)\longrightarrow+\infty
+\]
+uniformly for $y\in B$. Since $\int_B\omega_{\FS}^2>0$, the mass identity \eqref{eq:hopf-mass} proves the theorem along any sequence $\eta\downarrow0$.
+\end{proof}
+
+\section{Consequences for a general theory}
+
+This example separates three assertions. The Gauduchon condition gives a conserved linear trace. It also removes the linear term from the mass polynomial. It does not control the remaining quadratic contribution, which in this example is a nonnegative vertical energy that can grow without bound.
+
+\begin{corollary}\label{cor:hopf-lower-mass}
+For the displayed Hopf metric, every bounded $\omega$-plurisubharmonic function has Monge--Amp\`ere mass at least $6$. In particular,
+\[
+ v_-(\omega)=6,\qquad v_+(\omega)=+\infty.
+\]
+Here $v_-(\omega)$ is the infimum of the masses over all bounded $\omega$-plurisubharmonic functions.
+\end{corollary}
+\begin{proof}
+For smooth strictly positive potentials the lower bound is immediate from \cref{prop:hopf-mass}. Approximate a bounded $\omega$-plurisubharmonic function by \cref{thm:bounded-exact-regularization}. Bounded Bedford--Taylor continuity gives convergence of the total masses and hence the lower bound. The constant potential attains $6$, while \cref{thm:hopf-unbounded} gives the infinite supremum.
+\end{proof}
+
+Thus a positive lower mass need not imply finite upper mass, even for a Gauduchon metric. On this threefold, \cref{chap:damped-measures} gives finite exponentially damped measures and finite polynomially damped measures of order $q>1$. Optimal damping and solvability of particular undamped equations remain separate questions.

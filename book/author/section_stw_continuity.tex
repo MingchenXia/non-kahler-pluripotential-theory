@@ -1,0 +1,71 @@
+\section{Closing the Gauduchon continuity argument}
+\label{sec:stw-continuity}
+
+We explain the remaining regularity and solvability steps using standard local elliptic theory. The relevant concavity acts on a linear transform of the complex Hessian, so its real uniformly elliptic formulation needs to retain that transform.
+
+\begin{lemma}\label{lem:stw-higher-regularity}
+For the fixed forms in \cref{thm:stw-volume}, the preceding potential, gradient and second-order estimates give uniform $C^k$ bounds for smooth normalized solutions whenever the smooth prescribed functions $F$ range over a set bounded in every $C^k$ norm.
+\end{lemma}
+\begin{proof}
+Work first with $v=u/(2\pi)$. The second-order theorem and the rescaling proposition give uniform bounds for $v$, its gradient and its complex Hessian. The constants $b$ are bounded by the potential estimate. Hence the positive matrix
+\[
+ Q=Q_0+P_\gamma(\mathrm i\partial\bar\partial v)+Z(\partial v)
+\]
+has uniformly bounded eigenvalues above. Its determinant is uniformly bounded below by the equation. Every eigenvalue is therefore bounded below by a positive constant as well. Choose fixed $0<a<b_0$ such that $aI\leq Q\leq b_0I$ in unitary frames for every solution.
+
+The fixed scalar operator $\Delta_\gamma v=\operatorname{tr}_\gamma(\mathrm i\partial\bar\partial v)$ is uniformly elliptic and has bounded right-hand side. Its standard interior $W^{2,p}$ estimates, applied on a finite cover, bound $v$ in $W^{2,p}$ for every finite $p$. Choosing $p>2n$ gives a uniform $C^{1,\alpha}$ bound for some $\alpha>0$. Thus the matrix $R(x)=Q_0(x)+Z_x(\partial v(x))$ is uniformly $C^\alpha$.
+
+On a coordinate ball, let $\mathcal H_x(A)$ denote the Hermitian matrix of $\mathrm i\partial\bar\partial v$ in a fixed smooth unitary frame when $A=D^2_{\mathbb R}v$. It is a real linear map in $A$, smooth in $x$. If a real symmetric matrix $N$ is nonnegative, then $\mathcal H_x(N)\geq0$, and its trace is comparable to $\operatorname{tr}_{\mathbb R}N$ with uniform positive constants on the ball. This follows either by evaluating on a vector and its complex rotation, or by the coordinate formula for $v_{i\bar j}$.
+
+Freeze the already obtained function $\partial v(x)$ in $R(x)$ and define on all real symmetric $A$
+\[
+ \widetilde\Phi(A,x)=
+  \inf_{aI\leq B\leq b_0I}
+    \left\{\log\det B+
+       \operatorname{tr}\left[B^{-1}
+          \bigl(R(x)+P_n(\mathcal H_x(A))-B\bigr)\right]\right\}.
+\]
+The infimum is over a fixed compact set of positive Hermitian matrices. This function is concave in $A$. If $R(x)+P_n(\mathcal H_x(A))$ lies in that set, it agrees with its logarithmic determinant: each expression is a supporting affine function of the concave logarithmic determinant, and the tangent at that very matrix attains equality.
+
+For $N\geq0$, each affine function increases by
+\[
+ \operatorname{tr}\bigl(B^{-1}P_n(\mathcal H_x(N))\bigr).
+\]
+Since $P_n$ preserves positivity and trace, this lies between fixed positive multiples of $\operatorname{tr}_{\mathbb R}N$, uniformly in $B,x$. Taking infima preserves both inequalities. Thus $\widetilde\Phi$ is uniformly elliptic on all real symmetric matrices. Smoothness of $\mathcal H_x$ and the uniform $C^\alpha$ bound for $R$ also give
+\[
+ |\widetilde\Phi(A,x)-\widetilde\Phi(A,y)|
+          \leq C|x-y|^\alpha(1+\|A\|).
+\]
+These are the hypotheses of the standard local concave, uniformly elliptic Evans--Krylov estimate with H\"older coefficients; one precise formulation is \cite[Definition~3.2 and Theorem~3.4]{TWWY15}. The value $\widetilde\Phi(0,x)$ is uniformly bounded by the compact tangent set and the bound for $R$. The given smooth function solves
+\[
+ \widetilde\Phi(D^2_{\mathbb R}v,x)=(n-1)(F+b)
+\]
+on the ball. That estimate, on smaller balls of a finite cover, yields a uniform $C^{2,\beta}$ bound for some $\beta>0$.
+
+Differentiating the original smooth matrix equation gives linear uniformly elliptic equations for first derivatives of $v$. Their coefficients, including the first-order coefficients from $Z$, are now H\"older continuous. Local Schauder estimates give $C^{3,\beta}$ bounds, and differentiation and induction give every higher bound. The normalizations and the finite coordinate cover make the bounds global. The only regularity inputs here are the standard scalar $W^{2,p}$, concave Evans--Krylov and Schauder estimates.
+\end{proof}
+
+\begin{proof}[of \cref{thm:stw-volume} from the preceding estimates]
+Let
+\[
+ F_0=\log\frac{\gamma_0^n}{\gamma^n},\qquad
+ F_t=(1-t)F_0+tF,\quad0\leq t\leq1.
+\]
+At $t=0$, $u=0,b=0$ solves the equation. For the continuity argument normalize by $\int_Xu\,\gamma^n=0$; adding a constant has no effect on the equation, and at the end we impose $\sup u=0$ instead.
+
+We verify openness including its scalar obstruction. At a solution, the derivative in $u$ of $\log\det Q_u$ is a real scalar uniformly elliptic operator $L$ with a first-order term and no zeroth-order term. Its principal positivity follows from the matrix calculation in the lemma, or directly from the positive trace pairing with $P_n$. The maximum principle on connected $X$ gives $\ker L=\mathbb R$. The standard adjoint construction used in \cref{sec:gauduchon-volume-adjoint} supplies a positive smooth probability measure $\mu$ with $L^*\mu=0$. Fredholm theory gives the range condition
+\[
+ Lw=f\quad\Longleftrightarrow\quad\int_X f\,\mathrm{d}\mu=0.
+\]
+The index is zero: the principal elliptic coefficients can be joined through positive coefficients to a fixed scalar Laplacian, whose index is zero, while the lower-order terms can be continuously removed. Its cokernel is therefore one-dimensional. For the logarithmic determinant equation the full derivative in $(u,b)$ is
+\[
+ (w,c)\longmapsto Lw-(n-1)c.
+\]
+Given any H\"older function $f$, take $c=-(n-1)^{-1}\int_Xf\,\mathrm{d}\mu$ and solve $Lw=f+(n-1)c$ with zero $\gamma^n$ mean. This gives a bounded inverse on the corresponding H\"older spaces. Positivity of $\Gamma_u$ is an open condition, so the implicit function theorem proves openness of the solution parameters.
+
+For closedness, the prescribed path has uniform bounds in every smooth norm. The potential estimate bounds $u$ after supremum normalization and bounds $b$. The second-order theorem and the rescaling argument give the gradient and complex Hessian bounds, and the preceding lemma gives every higher bound. Subtracting the mean preserves all derivative bounds and changes the uniformly bounded potentials by uniformly bounded constants. A convergent subsequence of mean-zero solutions therefore gives a smooth solution at a limiting parameter. The determinant lower bound and matrix upper bound preserve strict positivity in the limit. Thus the nonempty open and closed set of parameters is all of $[0,1]$.
+
+Finally consider two solutions $(u,b)$ and $(v,c)$ for the same $F$. At a maximum of $u-v$ their gradients agree and their complex Hessians are ordered. The first-order terms are equal there, and $P_n$ preserves the Hessian ordering. Consequently $Q_u\leq Q_v$, so $b\leq c$ by the equation. At a minimum the reverse inequality gives $b\geq c$. Hence $b=c$. Along the segment between $u$ and $v$, the matrices $Q$ remain positive because the ansatz is affine. Integrating the linearized logarithmic determinant along that segment produces a scalar uniformly elliptic operator with drift and no zeroth-order term annihilating $u-v$. The maximum principle makes $u-v$ constant. Supremum normalization makes the constant zero.
+\end{proof}
+
+When $\gamma_0$ is Gauduchon, the elementary Aeppli identity preceding the estimates shows that the resulting metric is Gauduchon and its $(n-1)$st power is in the specified Aeppli class. The theorem remains about the scalar ansatz: it does not give uniqueness among all metrics in that class.

@@ -1,0 +1,45 @@
+Run_id: curve_trace_metric_01
+
+Statement: Audit the short curve-metric supplement below, especially exact factor1/2 and the comparison with SGPT's trace and I-goodness. Arbitrary Hermitian ambient X, compact smooth curveY, genericnu(u,Y)=0. Divisorialtrace atomicD, finiteD_m fromI(mu)O_Y, Greenpotentialsw,w_m. NoambientBMP orKahler except the last identification explicitly assumesXKahler. Metric is only the standard SGPT Kähler metric onY (everyHermitiancurveKahler).
+
+Accepted prerequisites CONDITIONALLY until reports finish: analytic_approximation_01 andintrinsic_trace_data_01; read reports if complete, checkuses ratherthanreprove all. In particular D_m<=D, mass andTVconvergence, w<=w_m, fullcurrentsD+(A-d)eta etc, ordinaryequivw_m~u_mY, uniformcurvatureforrestrictedapprox. Exact SGPTorderedformula is in userlocal/Users/mingchen/Downloads/Singularities in global pluripotential theory_Final/author/chapter_comp.tex, lemma lma:varphileqpsi_metric lines764ff:1/(n+1)sumdifferencesofmixedmasses. SGPTpositive-massI-good characterization analyticdSclosure in chapter_Igood.tex accepted as sourcebookinput; checkscope. SGPTquasiequiDemaillytype(2^-j,I(2^ju)) in chapter_pshfunctions.tex thm:qequi, trace definition in chapter_trace.tex def:traceop; use only in statedambientKahlercase. Bookread-only; no novelty claim. Usualworkflow/report.
+
+Proof:
+
+\section{Comparison with the source metric on the curve}
+
+Every smooth positive form on a compact Riemann surface is K\"ahler. We may therefore use the source book's metric on singularities on $Y$, while the ambient manifold $X$ remains arbitrary Hermitian. This gives a quantitative comparison for the trace just constructed.
+
+\begin{proposition}\label{prop:curve-trace-source-distance}
+Choose a smooth positive form $\eta$ of integral one on $Y$ and choose $A>D_u(Y)$ sufficiently large that every restricted approximant $u_m|_Y$ is $A\eta$-plurisubharmonic. Use a fixed nonpositive Green kernel to define $w,w_m$ as above. In the source book's normalization of $d_{S,A\eta}$,
+\begin{equation}\label{eq:curve-trace-source-distance}
+ d_{S,A\eta}(w,u_m|_Y)
+ =d_{S,A\eta}(w,w_m)
+ =\frac12\bigl(D_u(Y)-D_m(Y)\bigr)
+ \longrightarrow0.
+\end{equation}
+In particular the atomic trace has $\mathcal I$-good singularities in the source sense on the curve. If the ambient manifold is K\"ahler, it represents the $P$-equivalence class of the source book's trace.
+\end{proposition}
+\begin{proof}
+The restricted curvature bounds of \cref{cor:nonclosed-analytic-approximation} are dominated by a single $A\eta$, after increasing $A$. Since $D_m\leq D_u$ and $G\leq0$, we have $w\leq w_m$. Also
+\[
+ A\eta+\ddc w=D_u+(A-D_u(Y))\eta,
+ \qquad
+ A\eta+\ddc w_m=D_m+(A-D_m(Y))\eta.
+\]
+Their extended masses are $A-D_u(Y)$ and $A-D_m(Y)$, both positive. We now invoke only the following explicit closed-background identity from \cite[chapter on comparison of singularities, ordered-distance formula]{SGPT}: for $a\preceq_P b$ in a fixed closed background $\Theta$ on a compact K\"ahler manifold of dimension $n$,
+\[
+ d_{S,\Theta}(a,b)
+ =\frac1{n+1}\sum_{j=0}^n
+ \left(\int\Theta_b^j\wedge\Theta_{V_\Theta}^{n-j}
+       -\int\Theta_a^j\wedge\Theta_{V_\Theta}^{n-j}\right),
+\]
+where the products are non-pluripolar. In dimension one the $j=0$ terms cancel. Substitution of the two masses proves the second equality in \eqref{eq:curve-trace-source-distance}. Ordinary equivalence of $u_m|_Y$ and $w_m$ gives distance zero between them in the source theory, proving the first equality. Total-variation convergence of $D_m$ proves the limit.
+
+Each $w_m$ has finitely many logarithmic poles with rational coefficients, hence analytic singularities. The positive-mass characterization recalled in \cref{chap:hermitian-igood}, now applied on the K\"ahler curve $Y$, shows that their $d_S$ limit $w$ is $\mathcal I$-good.
+
+Finally suppose $X$ is K\"ahler. The source book supplies a quasi-equisingular approximation with analytic type
+$(2^{-j},\mathcal I(2^ju))$. Its restriction to $Y$ has the ordinary type of $w_{2^j}$. The same distance calculation therefore proves that these restrictions converge to $w$ in the source metric. This is precisely its definition of a trace representative. Uniqueness of that trace modulo $P$-equivalence gives the final assertion.
+\end{proof}
+
+The metric used here lives on the curve. The proof does not construct a metric on singularities for an arbitrary higher-dimensional Hermitian background. It identifies exactly the part of the source trace theory that the atomic construction already recovers.

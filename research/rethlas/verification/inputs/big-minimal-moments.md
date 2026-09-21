@@ -1,0 +1,154 @@
+Run_id: big_minimal_moments_01
+
+Statement: Verify all statements and proofs in the staged TeX below: a concave-obstacle envelope inequality and a higher-moment bound for ordinary minimal-type potentials in an arbitrary smooth big real background. BMP and positive lower MINIMAL relative volume ell are explicit. The test measure is a non-pluripolar PROBABILITY measure with finite A_theta(nu), the supremum of its integrals against ALL normalized theta-psh potentials. No bounded carrier is assumed in this proposition and no assertion that arbitrary NPP measures have finite A is made. Check the inverse convex chain proof, precise nonclosed background, normalization, layer-cake factors, essential-depth argument and all uniform constants.
+
+Legitimate exact internal premises, independently reconstructed and previously audited:
+1. section_big_relative_foundations.tex: under BMP and model reference V with ell>0, every member of E_V has MA mass in [ell,M], and strict/zero domination: if u in E_V, v preceq V and 1_{u<v} MAu <= c 1_{u<v} MAv, c<1, then u>=v. Ordinary-type potentials u~V belong to E_V. V is model, normalized sup V=0; normalized theta-psh functions are <=V by its definition.
+2. section_big_general_contact.tex: a genuine envelope of a finite-a.e. quasi-continuous obstacle in ANY smooth big theta has extended MA supported on contact. No semipositivity, closedness, BMP or PVP is needed for this contact theorem. Genuine envelopes can ignore pluripolar modifications of the obstacle. chapter_products.tex gives nonclosed locally bounded positive products, locality, ordered contact and locally bounded monotone continuity. Extended measures ignore pluripolar sets. Uniformly bounded local mixed measures are controlled by capacity.
+3. A strict theta-psh analytic pole barrier rho exists and may be normalized rho<=V; on its analytic-complement Omega, V and all ordinary-type potentials are locally bounded. A quasi-psh function with a fixed smooth lower curvature bound and a local upper bound extends across an analytic subset retaining that bound. No local potential for nonclosed theta may be used.
+4. Local convolution of quasi-psh functions after a fixed smooth strictly psh correction, bounded convex chain calculus, Bedford--Taylor product continuity and canonical representatives are standard tools, but check the proposed weighted-product derivation and all lower curvature errors explicitly.
+
+XL26 Proposition5.1 and Lemma5.1 (https://arxiv.org/abs/2601.13446v1; full archived text /Users/mingchen/Non-Kahler/research/sources/P26.txt lines1295--1465) are attribution, not imported proofs of the submitted claims. Main manuscript /Users/mingchen/Non-Kahler/book/author. Follow normal sequential verification workflow, do not edit submitted TeX or manuscript, persist findings and final JSON, and stop after output.
+
+Proof:
+
+\section{Higher moments in the minimal singularity type}
+\label{sec:big-minimal-moments}
+
+We continue in the bounded mass regime of \cref{sec:big-relative-foundations}, now with reference $V=V_\theta$. Thus $\theta$ is any smooth big real $(1,1)$-form and
+\[
+ \ell=\underline{\operatorname{vol}}_\theta(V)>0,
+ \qquad M=\overline{\operatorname{vol}}_\theta(V)<\infty.
+\]
+Write $\mathcal E_V$ for its relative full mass class and $\mu_u=\mathrm{MA}_\theta(u)$. The preceding first-moment criterion puts limits in this class. To integrate those limits against a fixed singular measure, we need a stronger estimate. We reconstruct the argument of \cite[Proposition 5.1]{XL26}, recording exactly the integrability assumption on that measure.
+
+For a non-pluripolar probability measure $\nu$, put
+\[
+ A_\theta(\nu)=\sup\left\{\int_X(-w)\,\mathrm{d}\nu:
+             w\in\PSH(X,\theta),\ \sup_Xw=0\right\}.
+\]
+We will use measures for which this number is finite. No such assertion is made for an arbitrary non-pluripolar measure.
+
+\begin{lemma}\label{lem:big-concave-envelope}
+Suppose $u\simeq V$, $u\leq V$, and $\chi:\mathbb R_{\leq0}\to\mathbb R_{\leq0}$ is increasing and concave, with $\chi(0)=0$ and $\chi'\geq1$. Assume $\chi$ is $C^{1,1}$ on compact intervals. Set
+\[
+ b=V+\chi(u-V),\qquad p=P_\theta(b).
+\]
+The obstacle is defined off the pole set of $V$; its value on that set may be taken to be $-\infty$. Then $p\simeq V$ and
+\[
+ \mu_p\leq\mathbf1_{\{p=b\}}\chi'(u-V)^n\mu_u.
+\]
+All measures and contact sets in this formula may be restricted to the complement of any fixed analytic pole barrier for $\theta$.
+\end{lemma}
+\begin{proof}
+The difference $u-V$ is bounded, so $V-C\leq b\leq u\leq V$ for some $C$. Hence $p\simeq V$. The obstacle is quasi-continuous: away from sets of arbitrarily small capacity, $u$ and $V$ are finite and continuous, and their difference has a fixed bounded range. The general contact theorem \cref{thm:big-general-envelope-contact} therefore applies.
+
+Choose a strict analytic pole barrier $\rho\leq V$ and put $\Omega=X\setminus\{\rho=-\infty\}$. On this open set $u,V,p$ are locally bounded. Let $\tau=\chi^{-1}$; then $\tau$ is convex and $0<\tau'\leq1$. The function
+\[
+ w=V+\tau(p-V)
+\]
+is $\theta$-plurisubharmonic on $\Omega$. Indeed, the bounded convex chain rule gives
+\[
+ \theta_w\geq\tau'(p-V)\theta_p+
+                     (1-\tau'(p-V))\theta_V\geq0.
+\]
+The coefficients sum to one, so this calculation does not require $\theta\geq0$. Since $w$ is bounded above and $w\geq V-C'$, it extends canonically across the analytic complement as a $\theta$-plurisubharmonic function. The smooth lower curvature bound is preserved by local removability.
+
+For clarity, the chain calculation also gives the bounded-product inequality
+\[
+ \mathrm{MA}_\theta(w)\geq\tau'(p-V)^n\mu_p
+ \quad\hbox{on }\Omega.
+\]
+It can be justified on each inner coordinate ball by adding one smooth strictly plurisubharmonic correction to both $p$ and $V$ and convolving. The resulting smooth functions decrease to them and have lower curvature bound $-\theta-\epsilon\beta$, with $\epsilon\downarrow0$ and a fixed positive coordinate form $\beta$. Smooth convex approximations of $\tau$ have derivative in $[0,1]$. Their chain formula and positivity give the inequality in the enlarged background. Bounded monotone product continuity, convergence in capacity of the continuous derivative factors, and then $\epsilon\downarrow0$ give the displayed inequality. This also proves the assertion for $C^{1,1}$ weights. Local bounded mixed measures are uniformly controlled by capacity during this passage.
+
+The inequality $p\leq b$ implies $w\leq u$, with equality on $D=\{p=b\}$. Ordered contact gives
+\[
+ \mathbf1_D\tau'(p-V)^n\mu_p
+ \leq\mathbf1_D\mathrm{MA}_\theta(w)
+ \leq\mathbf1_D\mu_u.
+\]
+On $D$ the derivative is $1/\chi'(u-V)$. Contact support for $p$ proves the claim on $\Omega$. Its analytic complement is ignored by all the non-pluripolar measures involved.
+\end{proof}
+
+\begin{proposition}\label{prop:big-minimal-higher-moment}
+Set $N=2n+1$ and $r=1+(4N)^{-1}$. There is a constant $C$, depending only on $n,\ell,M$, such that, for every non-pluripolar probability measure $\nu$ with $A=A_\theta(\nu)<\infty$ and every $u\simeq V$ with $\sup_Xu=0$,
+\[
+ \int_X(V-u)^r\,\mathrm{d}\nu
+ \leq C(1+A)(1+B)^{1+1/N},
+ \qquad B=\int_X(V-u)\,\mu_u.
+\]
+In particular a uniform bound for the relative first moments on the right gives uniform integrability of these normalized potentials with respect to $\nu$.
+\end{proposition}
+\begin{proof}
+Normalization gives $u\leq V$. Put $x=V-u\geq0$ and
+\[
+ T=\sup\{t\geq0:\mu_u(\{x>t\})>0\},
+\]
+with $T=0$ if this set is empty. Since $u\simeq V$, $T$ is finite. Zero domination, applied to $V-t$ for $t>T$, shows that $u\geq V-T$. Thus $x\leq T$ off the pole set. If $T\leq2$ the claim is immediate. We may suppose $T>2$; in particular $B>0$.
+
+For $0<s<T-2$, define
+\[
+ g_s(t)=
+ \begin{cases}
+  \bigl((1+t)^{3/2}\mu_u(\{x>t\})\bigr)^{-1},&0\leq t\leq T-s,\\
+  (1+t)^{-3/2},&t>T-s,
+ \end{cases}
+ \quad F_s(t)=1+\int_0^t g_s(a)\,\mathrm{d}a,
+\]
+and set
+\[
+ W_s(t)=\int_0^t F_s(a)^{1/N}\,\mathrm{d}a,
+ \qquad\chi_s(-t)=-W_s(t).
+\]
+The tail in the first denominator has a positive lower bound on $[0,T-s]$. Hence $F_s$ is locally Lipschitz, and $\chi_s$ has precisely the regularity and concavity required in the lemma.
+
+Tonelli's theorem gives
+\begin{equation}\label{eq:big-weight-derivative-moment}
+ \int_X F_s(x)\,\mu_u
+ =\mu_u(X)+\int_0^Tg_s(t)\mu_u(\{x>t\})\,\mathrm{d}t
+ \leq3\max(1,M).
+\end{equation}
+Here $\int_0^\infty(1+t)^{-3/2}\,\mathrm{d}t=2$; on the second interval the tail is at most $M$.
+Chebyshev's inequality gives $\mu_u(\{x>t\})\leq B/t$. It follows, by integration first for $F_s$ and then for $W_s$, that
+\begin{equation}\label{eq:big-weight-growth}
+ W_s(t)\geq c(1+B)^{-1/N}t^{\beta},
+ \qquad1\leq t\leq T-s,
+ \qquad\beta=1+\frac1{2N}.
+\end{equation}
+Indeed $g_s(t)\geq cB^{-1}t^{-1/2}$ for $t\geq1$ in this interval, so $F_s(t)\geq c(1+B)^{-1}t^{1/2}$. For $t\geq2$ integrate this estimate on $[t/2,t]$; for $1\leq t\leq2$ use $W_s(t)\geq t$.
+
+Let $p_s=P_\theta(V-W_s(x))$. The preceding lemma and $W_s(t)\leq tF_s(t)^{1/N}$ imply, by Cauchy--Schwarz and $N=2n+1$,
+\[
+ \begin{split}
+ \int_X(V-p_s)^{1/2}\,\mu_{p_s}
+ &\leq\int_X x^{1/2}F_s(x)^{(n+1/2)/N}\,\mu_u\\
+ &\leq B^{1/2}\left(\int_XF_s(x)\,\mu_u\right)^{1/2}
+ \leq C B^{1/2}.
+ \end{split}
+\]
+Write $a_s=\sup_Xp_s\leq0$. For any $q\simeq V$, the definition of $V$ gives $q-\sup_Xq\leq V$, whereas $V\leq0$ gives $q-V\geq q$. Consequently
+\[
+ \sup_X(q-V)=\sup_Xq.
+\]
+In particular $V-p_s\geq-a_s$. Since $\mu_{p_s}(X)\geq\ell$, the last energy estimate yields $-a_s\leq CB$. This normalization concerns the $\theta$-plurisubharmonic function $p_s$, not the difference $p_s-V$.
+
+The definition of $A$ now gives
+\[
+ \int_XW_s(x)\,\mathrm{d}\nu
+ \leq\int_X(V-p_s)\,\mathrm{d}\nu
+ \leq A-a_s\leq A+CB.
+\]
+Combining this with \eqref{eq:big-weight-growth}, and then taking $s\downarrow0$ for each fixed $1\leq t<T$, proves
+\[
+ \nu(\{x>t\})\leq C(1+B)^{1/N}(A+B)t^{-\beta}.
+\]
+There is no tail for $t\geq T$. The layer-cake formula therefore gives
+\[
+ \int_Xx^r\,\mathrm{d}\nu
+ =r\int_0^\infty t^{r-1}\nu(\{x>t\})\,\mathrm{d}t
+ \leq1+C(1+B)^{1/N}(A+B),
+\]
+because $1<r<\beta$. This implies the stated bound.
+
+Finally $-u=-V+(V-u)$, where $-V\in L^1(\nu)$ because $A<\infty$. The fixed summand is integrable and the other summands have a uniform $L^r(\nu)$ bound. This proves uniform integrability, without claiming an $L^r$ bound for $V$ itself.
+\end{proof}

@@ -1,0 +1,196 @@
+\chapter{Flags, convex bodies and algebraic directions}
+\label{chap:flag-bodies}
+
+Flag valuations and graded section spaces can be studied on a compact complex manifold without a K\"ahler metric. We begin with a complete compact flag. Gauduchon degrees then provide the linear bounds needed to place all section valuations in a compact convex body. Later we supply such a flag on an auxiliary point blowup, preserving the original section spaces. The resulting growth statements therefore apply to every compact complex manifold.
+
+There is also a restriction on what a full-dimensional body can describe. It produces algebraically independent meromorphic functions, and hence a projective modification by the classical Moishezon theorem. We shall prove that such a modification implies bounded mass. Thus lower-dimensional bodies are unavoidable on the manifolds where the unrestricted Hermitian theory is most different from its K\"ahler counterpart.
+
+\section{A complete compact flag}
+
+Let $X$ be connected and compact of dimension $n\geq1$, and fix
+\[
+ X=Y_0\supset Y_1\supset\cdots\supset Y_n=\{p\},
+\]
+where every $Y_i$ is smooth, connected and compact, and is a prime divisor in $Y_{i-1}$. Let $L$ be a holomorphic line bundle. For a nonzero section $s\in H^0(X,L^m)$, define $\nu_1(s)$ to be its vanishing order along $Y_1$. Divide by the corresponding power of the canonical section of $\mathcal O_X(Y_1)$ and restrict to $Y_1$. The result is a nonzero section of $L^m(-\nu_1Y_1)|_{Y_1}$. Repeat the procedure down the flag. The resulting vector
+\[
+ \nu(s)=(\nu_1(s),\ldots,\nu_n(s))\in\mathbb N^n
+\]
+is its flag valuation.
+
+\Needspace{9\baselineskip}
+Near $p$, choose coordinates adapted to the flag and a nonvanishing frame of $L$. This construction is the lexicographically first exponent of the Taylor expansion of the local coefficient of $s$. In particular, for nonzero sections of the indicated degrees,
+\[
+ \nu(st)=\nu(s)+\nu(t),
+ \qquad \nu(s+t)\geq\min\{\nu(s),\nu(t)\}
+\]
+when $s,t$ have the same degree and $s+t\neq0$. If their valuations are different, equality holds in the second formula. The inequality uses lexicographic order.
+
+\begin{lemma}\label{lem:flag-one-dimensional-leaves}
+For every finite-dimensional vector subspace $V\subset H^0(X,L^m)$,
+\[
+ \#\{\nu(s):0\neq s\in V\}=\dim V.
+\]
+\end{lemma}
+\begin{proof}
+Sections with distinct valuations are linearly independent: in a nontrivial finite linear combination, the least valuation occurs in exactly one summand and cannot cancel. Thus there are at most $\dim V$ values.
+
+For the reverse bound, proceed by induction on $\dim V$. The nonempty set of values has a least element in the lexicographic order on $\mathbb N^n$. The coefficient of that monomial is a nonzero linear functional on $V$. Its kernel has codimension one, and every nonzero member of the kernel has strictly larger valuation. By induction the kernel contributes $\dim V-1$ distinct values, in addition to the least one. The zero-dimensional case is immediate.
+\end{proof}
+
+\section{Gauduchon bounds for the valuation}
+
+\begin{theorem}\label{thm:gauduchon-linear-flag-bound}
+There are constants $C_1,\ldots,C_n\geq0$, depending only on $L$ and the chosen flag, such that
+\[
+ 0\leq\nu_i(s)\leq C_i m
+ \quad(1\leq i\leq n)
+\]
+for every $m\geq1$ and every nonzero $s\in H^0(X,L^m)$.
+\end{theorem}
+\begin{proof}
+For each $i$, equip $Y_{i-1}$ with a Gauduchon metric $\gamma_i$; when it is a curve, any Hermitian metric will do. Put $d_i=n-i+1$ and
+\[
+ a_i=\int_{Y_i}\gamma_i^{d_i-1}>0,
+ \qquad A_i=\deg_{\gamma_i}(L|_{Y_{i-1}}).
+\]
+For $i=n$ the integral defining $a_i$ is the integral of $1$ over the point $p$, so $a_n=1$. For $j<i$, also put
+\[
+ B_{ij}=\deg_{\gamma_i}
+ \left(\mathcal O_{Y_{j-1}}(Y_j)|_{Y_{i-1}}\right).
+\]
+All these are fixed real numbers.
+
+\Needspace{8\baselineskip}
+At stage $i$ of the valuation algorithm, the residual section belongs to the line bundle
+\[
+ M_{i-1}=L^m|_{Y_{i-1}}\otimes
+     \bigotimes_{j<i}\mathcal O_{Y_{j-1}}(-\nu_j(s)Y_j)|_{Y_{i-1}}.
+\]
+\Needspace{6\baselineskip}
+Its zero divisor contains $\nu_i(s)Y_i$. Poincar\'e--Lelong, tested against $\gamma_i^{d_i-1}$, therefore gives
+\begin{equation}\label{eq:flag-degree-recursion}
+ a_i\nu_i(s)\leq mA_i-\sum_{j<i}B_{ij}\nu_j(s).
+\end{equation}
+For $i=1$ this bounds $\nu_1(s)$ by $m|A_1|/a_1$. If the bounds are known for the preceding indices, the right side is at most
+\[
+ m\left(|A_i|+\sum_{j<i}|B_{ij}|C_j\right).
+\]
+Divide by $a_i$ to choose $C_i$ and complete the induction. Negative degrees cause no difficulty: the existence of the residual section already ensures the nonnegativity needed in \eqref{eq:flag-degree-recursion}.
+\end{proof}
+
+Only linear degrees appear in this proof. The forms $\gamma_i$ need not be closed, and the theorem makes no assertion about their top-degree Monge--Amp\`ere masses.
+
+\section{The body of a graded section algebra}
+
+Let $W_\bullet=\bigoplus_{m\geq0}W_m$ be a graded subalgebra of the section ring of $L$, with $W_0=\mathbb C$. One example is the bounded weighted section algebra $\mathcal W_\bullet(u)$ of \cref{chap:sections}. The multiplier-ideal spaces $\mathcal H_m(u)$ by themselves are not assumed to form such an algebra.
+
+Set
+\[
+ S=\{(0,0)\}\cup
+       \{(\nu(s),m):m\geq1,\ 0\neq s\in W_m\}.
+\]
+It is an additive semigroup. Indeed the product of two nonzero sections is nonzero on the connected manifold, and valuations add. By \cref{thm:gauduchon-linear-flag-bound}, $S$ lies in the closed cone
+\[
+ \{(x,t):t\geq0,\ 0\leq x_i\leq C_i t\}.
+\]
+The only point of this cone at height zero is the origin. Define
+\[
+ \Delta(W_\bullet)=
+ \overline{\operatorname{conv}}
+ \{m^{-1}\nu(s):m\geq1,\ 0\neq s\in W_m\}.
+\]
+This is a compact convex subset of $\mathbb R^n$ when the set is nonempty. If every positive-degree piece is zero, set $\Delta(W_\bullet)=\varnothing$. Equivalently it is the height-one slice of the closed cone generated by $S$.
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:flag-body-upper-count}
+For every such algebra,
+\[
+ \limsup_{m\to\infty}m^{-n}\dim W_m
+ \leq\operatorname{vol}_{\mathbb R^n}\Delta(W_\bullet).
+\]
+In particular a body with empty interior gives $\dim W_m=o(m^n)$.
+\end{proposition}
+\begin{proof}
+Let $S_m=\{\nu(s):0\neq s\in W_m\}$. Its cardinality is $\dim W_m$ by \cref{lem:flag-one-dimensional-leaves}, and $m^{-1}S_m\subseteq\Delta(W_\bullet)$. Attach the half-open cube $m^{-1}(a+[0,1)^n)$ to each $a\in S_m$. The cubes are disjoint, their total volume is $m^{-n}\dim W_m$, and their union is contained in
+\[
+ \Delta(W_\bullet)+[0,m^{-1}]^n.
+\]
+These compact neighborhoods decrease to $\Delta(W_\bullet)$, so their volumes converge to its volume. This proves the inequality. A compact convex set has positive $n$-dimensional volume exactly when it has nonempty interior, proving the last statement. The empty-body case is immediate.
+\end{proof}
+
+For completeness, the exact count is available under the following arithmetic condition. We use here the standard semigroup theorem proved in the appendix \emph{Almost semigroups} of \cite{SGPT}: if an additive subsemigroup of $\mathbb Z^{n+1}$ is contained in a closed cone whose height-one slice is compact and whose height-zero slice is the origin, and if the subgroup it generates is $\mathbb Z^{n+1}$, then its degree-$m$ cardinalities divided by $m^n$ converge to the Euclidean volume of that slice of its own closed cone. This is a combinatorial input from the previous book.
+
+\begin{corollary}\label{cor:flag-body-primitive-count}
+If the subgroup generated by $S$ is all of $\mathbb Z^{n+1}$, then
+\[
+ \lim_{m\to\infty}m^{-n}\dim W_m
+ =\operatorname{vol}_{\mathbb R^n}\Delta(W_\bullet).
+\]
+\end{corollary}
+\begin{proof}
+The cone bound and its height-zero condition were proved above, and the subgroup hypothesis is precisely the one in the stated semigroup theorem. Apply it and use \cref{lem:flag-one-dimensional-leaves}.
+\end{proof}
+
+The subgroup condition records both lattice index and degree periodicity. No version of this last formula with those factors omitted is asserted for an arbitrary graded algebra. The upper bound, including its zero-volume consequence, needs no such condition.
+
+\section{Full dimension forces algebraic functions}
+
+\begin{proposition}\label{prop:full-flag-body-meromorphic}
+If $\Delta(W_\bullet)$ has nonempty interior in $\mathbb R^n$, then $X$ has $n$ algebraically independent meromorphic functions.
+\end{proposition}
+\begin{proof}
+The normalized valuation vectors of actual sections affinely span $\mathbb R^n$; otherwise their closed convex hull would lie in a proper affine subspace. Choose sections $s_0,\ldots,s_n$ of positive degrees $m_0,\ldots,m_n$ with affinely independent normalized vectors. Let $M$ be a common multiple of the degrees and put $t_i=s_i^{M/m_i}\in W_M$. The quotients
+\[
+ f_i=t_i/t_0\quad(1\leq i\leq n)
+\]
+are global meromorphic functions. The valuation extends to such quotients by subtraction, and
+\[
+ \nu(f_i)=M\left(\frac{\nu(s_i)}{m_i}
+                       -\frac{\nu(s_0)}{m_0}\right).
+\]
+These $n$ vectors are linearly independent. Distinct monomials in the $f_i$ consequently have distinct valuation vectors. In any nonzero polynomial expression in the $f_i$, the term of least lexicographic valuation cannot cancel. Thus no nonzero polynomial vanishes on $(f_1,\ldots,f_n)$, proving algebraic independence.
+\end{proof}
+
+We retain the following classical geometric theorem as a standard input: a compact irreducible complex space of dimension $n$ with $n$ algebraically independent meromorphic functions admits a modification from a smooth projective manifold. This is the projective-modification form of Moishezon's theorem; the precise statement is recorded in \cite[Introduction, p.~1332]{Moi67}. Its resolution argument is outside our analytic development.
+
+\begin{lemma}\label{lem:kahler-modification-bounded-mass}
+If a compact complex manifold $X$ admits a modification $\pi:Z\to X$ from a compact K\"ahler manifold, then $X$ has the bounded mass property.
+\end{lemma}
+\begin{proof}
+Fix a Hermitian form $\omega$ on $X$ and a K\"ahler form $\kappa$ on $Z$. Choose $C>0$ with $\pi^*\omega\leq C\kappa$. For any bounded $u\in\PSH(X,\omega)$, its pullback is bounded and satisfies
+\[
+ 0\leq\pi^*\omega+\ddc(u\circ\pi)
+ \leq C\kappa+\ddc(u\circ\pi).
+\]
+The two bounded positive products give
+\[
+ \begin{split}
+ \int_X(\omega+\ddc u)^n
+ &=\int_Z(\pi^*\omega+\ddc(u\circ\pi))^n\\
+ &\leq\int_Z(C\kappa+\ddc(u\circ\pi))^n
+ =C^n\int_Z\kappa^n.
+ \end{split}
+\]
+The first equality follows on the biholomorphic locus by the local Bedford--Taylor change of variables; both measures assign zero mass to the excluded analytic sets, so it holds globally. The inequality is positivity of mixed products. The last equality is bounded Bedford--Taylor Stokes in the closed K\"ahler background, or the usual bounded mass identity recalled in \cite{SGPT}. The right side is independent of $u$, proving bounded mass. This is also the upper-volume pullback argument of \cite[Lemma 3.6]{GL22}.
+\end{proof}
+
+\begin{theorem}\label{thm:bmp-failure-flag-degeneracy}
+If $X$ fails the bounded mass property, then for every complete smooth compact flag, every holomorphic line bundle $L$ and every graded section subalgebra $W_\bullet$ as above,
+\[
+ \operatorname{vol}_{\mathbb R^n}\Delta(W_\bullet)=0,
+ \qquad \dim W_m=o(m^n).
+\]
+\end{theorem}
+\begin{proof}
+A body of nonempty interior would give $n$ algebraically independent meromorphic functions by \cref{prop:full-flag-body-meromorphic}. The stated Moishezon theorem would give a smooth projective, hence K\"ahler, modification of $X$. This contradicts \cref{lem:kahler-modification-bounded-mass}. The body therefore has empty interior, and \cref{prop:flag-body-upper-count} gives both conclusions.
+\end{proof}
+
+This theorem identifies a limitation of a full-dimensional algebraic volume in the general Hermitian theory. It does not prevent nontrivial section spaces or useful lower-dimensional convex bodies. The intrinsic trace data and Gauduchon degree tests remain available even when this top-dimensional section growth vanishes.
+
+\input{author/section_intrinsic_flag_count}
+
+\input{author/section_blowup_flags}
+
+\input{author/section_hopf_flag_body}
+
+For section rings via algebraic reduction, see \cite{Wu24}. Our construction uses a specified complete compact flag, available on the auxiliary modification just described. No assertion about centers of arbitrary meromorphic-field valuations is used.

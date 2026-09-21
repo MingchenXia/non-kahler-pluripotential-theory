@@ -1,0 +1,227 @@
+\chapter{Torsion and the variation of mass}
+\label{chap:mass}
+
+The total Monge--Amp\`ere mass is constant on smooth K\"ahler potentials. For a general Hermitian form it is a polynomial in the potential whose nonconstant coefficients are controlled by derivatives of the background. We shall derive this polynomial and use it to exhibit the failure of several direct generalizations.
+
+Everything in this chapter concerns smooth forms and smooth functions. This restriction makes the identities independent of any choice of a Monge--Amp\`ere operator on unbounded functions.
+
+\section{Integration by parts with a non-closed form}
+
+\begin{lemma}\label{lem:ibp}
+For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
+\[
+ \int_X\ddc f\wedge T=\int_X f\ddc T.
+\]
+\end{lemma}
+\begin{proof}
+Stokes' theorem applied first to $\mathrm{d}(\dc f\wedge T)$ gives
+\[
+ \int_X\ddc f\wedge T=\int_X\dc f\wedge \mathrm{d}T.
+\]
+The operator $\dc$ also has zero integral on forms of total degree $2n-1$: on the possible bidegrees this follows from Stokes' theorem for $\partial$ and $\bar\partial$. Applying this to $\dc(f\,\mathrm{d}T)$ and using $\dc \mathrm{d}=-\mathrm{d}\dc$ yields
+\[
+ 0=\int_X\dc f\wedge \mathrm{d}T-\int_X f\ddc T.
+\]
+Combining the two identities proves the claim.
+\end{proof}
+
+\begin{lemma}\label{lem:power-torsion}
+For a smooth real $(1,1)$-form $\omega$ and an integer $q\geq1$,
+\[
+ \ddc(\omega^q)
+ =q\,\omega^{q-1}\wedge\ddc\omega
+ +q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega,
+\]
+where the second term is omitted when $q=1$.
+\end{lemma}
+\begin{proof}
+Since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
+\[
+ \mathrm{d}\dc(\omega^q)
+ =q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega
+ +q\,\omega^{q-1}\wedge \mathrm{d}\dc\omega.
+\]
+\end{proof}
+
+The term involving $\mathrm{d}\omega\wedge\dc\omega$ is one reason that the condition $\ddc\omega=0$ must not be confused with closedness. In higher dimension it need not imply $\ddc(\omega^q)=0$.
+
+\section{The mass polynomial}
+
+Set
+\[
+ \HH_\omega=\{u\in C^\infty(X,\R):\omega+\ddc u>0\},
+ \qquad \Mass_\omega(u)=\int_X(\omega+\ddc u)^n.
+\]
+The set $\HH_\omega$ is convex, contains all constants, and is open in the $C^2$ topology.
+
+\begin{theorem}\label{thm:mass-expansion}
+For every smooth real function $u$,
+\begin{equation}\label{eq:mass-expansion}
+ \Mass_\omega(u)=\int_X\omega^n+
+ \sum_{k=1}^{n-1}\binom nk
+ \int_X u(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}).
+\end{equation}
+The equality is an identity of integrals and does not require $u\in\HH_\omega$.
+\end{theorem}
+\begin{proof}
+Expand $(\omega+\ddc u)^n$ by the binomial theorem. The term with $k=n$ integrates to zero, since
+\[
+ (\ddc u)^n=\mathrm{d}\bigl(\dc u\wedge(\ddc u)^{n-1}\bigr).
+\]
+For $1\leq k\leq n-1$, apply \cref{lem:ibp} with
+$T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Both $\mathrm{d}$ and $\dc$ annihilate $\ddc u$, so
+\[
+ \ddc T=(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}).
+\]
+This gives each of the terms in \eqref{eq:mass-expansion}.
+\end{proof}
+
+\begin{corollary}\label{cor:constant-mass-sufficient}
+If $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$, then
+\[
+ \Mass_\omega(u)=\int_X\omega^n
+\]
+for every smooth $u$. In particular, this holds when $\mathrm{d}\omega=0$.
+\end{corollary}
+\begin{proof}
+Every term in the sum in \eqref{eq:mass-expansion} vanishes. A closed real $(1,1)$-form is annihilated by both $\partial$ and $\bar\partial$, hence so are its powers.
+\end{proof}
+
+\begin{proposition}\label{prop:mass-variation}
+For smooth $u,v$,
+\begin{equation}\label{eq:mass-first-variation}
+ \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\Mass_\omega(u+tv)
+ =n\int_X v\ddc(\omega_u^{n-1}).
+\end{equation}
+If $\Mass_\omega$ is constant on $\HH_\omega$, then $\ddc(\omega_u^{n-1})=0$ for every $u\in\HH_\omega$.
+\end{proposition}
+\begin{proof}
+Differentiating the finite polynomial gives
+\[
+ n\int_X\ddc v\wedge\omega_u^{n-1}.
+\]
+Apply \cref{lem:ibp}. For the second assertion, every smooth direction $v$ gives a line segment in $\HH_\omega$ for sufficiently small $|t|$, so the right side vanishes for all test functions $v$. The smooth top-degree form $\ddc(\omega_u^{n-1})$ must therefore vanish.
+\end{proof}
+
+\begin{corollary}\label{cor:surface-mass}
+If $n=2$, then
+\[
+ \Mass_\omega(u)=\int_X\omega^2+2\int_Xu\ddc\omega.
+\]
+Consequently, $\Mass_\omega$ is constant on $\HH_\omega$ if and only if $\ddc\omega=0$.
+\end{corollary}
+\begin{proof}
+The formula is \eqref{eq:mass-expansion} for $n=2$. It proves one implication directly; the other follows from \cref{prop:mass-variation} at $u=0$.
+\end{proof}
+
+A Hermitian form with $\ddc(\omega^{n-1})=0$ is called a Gauduchon form. Thus on a surface the Gauduchon condition is exactly the condition for smooth mass invariance. In dimension three, the expansion is
+\[
+ \Mass_\omega(u)=\int_X\omega^3
+ +3\int_Xu\ddc(\omega^2)
+ +3\int_Xu\ddc u\wedge\ddc\omega.
+\]
+The Gauduchon condition removes the middle term, but does not by itself remove the last one. The full characterization of mass invariance is given in \cref{thm:mass-invariance-characterization}.
+
+\section{An explicit varying-mass example}
+
+\begin{example}\label{ex:torus-mass}
+Let
+\[
+ X=\bigl(\C/(\mathbb Z+\mathrm i\mathbb Z)\bigr)^2,
+ \qquad z_j=x_j+\mathrm i y_j,
+ \qquad \beta_j=\frac{\mathrm i}{2\pi}\,\mathrm{d}z_j\wedge \mathrm{d}\bar z_j.
+\]
+The forms $\beta_j$ descend to $X$. Define
+\[
+ b(x_1)=2+\cos(2\pi x_1),\qquad
+ \omega=\beta_1+b(x_1)\beta_2,\qquad
+ u_t=t\cos(2\pi x_1).
+\]
+Since $1\leq b\leq3$, the form $\omega$ is Hermitian. It is not closed: $\mathrm{d}\omega=\mathrm{d}b\wedge\beta_2$ is not identically zero.
+
+For a function $f$ of $x_1$ alone, $\ddc f=(f''/4)\beta_1$. Hence
+\[
+ \omega_{u_t}
+ =\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)\beta_1+b\beta_2>0
+ \quad\text{if}\quad |t|<\pi^{-2}.
+\]
+Writing $B=\int_X\beta_1\wedge\beta_2>0$, direct expansion and integration give
+\begin{equation}\label{eq:torus-mass}
+ \Mass_\omega(u_t)=(4-\pi^2t)B.
+\end{equation}
+Indeed, the average of $\cos(2\pi x_1)$ is zero and that of its square is $1/2$, while
+\[
+ \omega_{u_t}^2
+ =2\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)
+       \bigl(2+\cos(2\pi x_1)\bigr)\beta_1\wedge\beta_2.
+\]
+Thus even smooth potentials in the same singularity class have different masses.
+\end{example}
+
+The complex torus admits K\"ahler metrics, but the chosen equation form is nonclosed. Mass variation already occurs in this setting. The Hopf example in \cref{chap:hopf} will exhibit the further failure of an upper mass bound on a non-K\"ahler manifold.
+
+\begin{corollary}\label{cor:mass-not-singularity-invariant}
+For general Hermitian backgrounds, the rule
+\[
+ [u]\longmapsto\int_X\omega_u^n
+\]
+does not define a function of the ordinary singularity type, even if restricted to smooth strictly $\omega$-plurisubharmonic potentials. Nor is this mass determined by the multiplier ideals of the potential.
+\end{corollary}
+\begin{proof}
+All the potentials $u_t$ in \cref{ex:torus-mass} are smooth on compact $X$, so they have the same singularity type. Their multiplier ideals are the structure sheaf for every positive multiple of the weight. Their masses differ by \eqref{eq:torus-mass}.
+\end{proof}
+
+To obtain invariants of singularity types, we will therefore take upper and lower masses over all representatives of a type, or use envelopes and finite linear traces. The mass of an individual representative remains a separate quantity.
+
+\section{What the global comparison principle would imply}
+
+\begin{proposition}\label{prop:comparison-forces-mass}
+Suppose that a Hermitian form $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
+\begin{equation}\label{eq:naive-comparison}
+ \int_{\{u<v\}}\omega_v^n
+ \leq\int_{\{u<v\}}\omega_u^n.
+\end{equation}
+Then $\Mass_\omega$ is constant on $\HH_\omega$.
+\end{proposition}
+\begin{proof}
+Fix $u,v\in\HH_\omega$. By compactness choose a constant $C$ such that $u<v+C$ everywhere. Since $\omega_{v+C}=\omega_v$, applying \eqref{eq:naive-comparison} to $u$ and $v+C$ gives $\Mass_\omega(v)\leq\Mass_\omega(u)$. Exchange $u$ and $v$ and repeat the argument to obtain the opposite inequality.
+\end{proof}
+
+\begin{corollary}\label{cor:comparison-fails}
+The inequality \eqref{eq:naive-comparison} is false for general compact Hermitian backgrounds.
+\end{corollary}
+\begin{proof}
+Use \cref{ex:torus-mass}. For $-\pi^{-2}<t<0$, set $u=0$ and $v=u_t+C$ with $C>|t|$. Then $\{u<v\}=X$, but
+\[
+ \int_X\omega_v^2=(4-\pi^2t)B>4B=\int_X\omega_u^2.
+\]
+\end{proof}
+
+The modified comparison theorem in \cref{thm:modified-comparison} accounts for the derivatives of the background. Under the Guan--Li condition, the ordinary comparison principle is recovered.
+
+\section{Invariance and boundedness are different questions}
+
+For the next elementary observation, define the upper smooth mass
+\[
+ \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty].
+\]
+This definition asks for an upper bound over an entire class of potentials. It is stronger than finiteness of each individual smooth mass, and weaker than mass invariance.
+
+\begin{proposition}\label{prop:smooth-bmp-metric}
+If $\omega$ and $\eta$ are Hermitian forms with $\omega\leq C\eta$, then
+\[
+ \Vsm(\omega)\leq C^n\Vsm(\eta).
+\]
+In particular, finiteness of $\Vsm$ is independent of the Hermitian form.
+\end{proposition}
+\begin{proof}
+For $u\in\HH_\omega$, the form $C\eta+\ddc u$ is positive and dominates $\omega+\ddc u$. The top exterior power is monotone on positive Hermitian forms; this follows, for example, by diagonalizing one of the forms and comparing eigenvalues of their difference. Therefore
+\[
+ \int_X(\omega+\ddc u)^n
+ \leq C^n\int_X\bigl(\eta+\ddc(u/C)\bigr)^n
+ \leq C^n\Vsm(\eta).
+\]
+Take the supremum over $u$. Any two Hermitian forms on compact $X$ are comparable in both directions, proving the last assertion.
+\end{proof}
+
+Variation of mass in \cref{ex:torus-mass} does not imply unboundedness. The latter occurs on a Hopf threefold; we prove Xia--Zhang's counterexample \cite{XZ26} in \cref{chap:hopf}.

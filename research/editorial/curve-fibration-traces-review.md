@@ -1,0 +1,43 @@
+# Curve-fibration traces and divisorial ordinary types
+
+Checkpoint29 develops the trace construction in Chapters20 and24 and synchronizes its uses in Chapters16 and32. It imposes no bounded mass hypothesis. The integration map records three immutable submissions, six edited chapter/section interfaces, and exact reversible layout changes.
+
+## Mathematical scope
+
+The divisorial-domination lemma starts with an actual positive finite-mass current S=sum c_j[D_j] and a potential satisfying ddc v=S-beta with beta smooth. Countably many components are allowed. Its conclusion is the equivalence of a preceq v, all-weight ideal domination, and the inequalities nu(a,D_j)>=c_j. Local smooth correction permits the use of Siu's coefficient restriction on a closed positive current. Removing its divisorial coefficient mass from the original nonclosed positive current still preserves positivity. Passing to the increasing finite sums gives a smooth lower bound for ddc(a-v). The L1 difference therefore has a globally bounded-above qpsh representative. Canonical averages upgrade almost-everywhere domination to everywhere. No global nonclosed Siu decomposition is invoked.
+
+The holomorphic submersion identity for multiplier ideals is proved in both directions. One uses Fubini for finite ideal generators. In the reverse direction, each fiber Taylor coefficient is weighted-integrable by its coefficient estimate; the analytic local quotient R/J and Krull intersection put the whole germ in the extended ideal. Ideals are taken at every positive real weight, not only at integers.
+
+Let p:X->M be a smooth connected-fiber holomorphic submersion of compact connected complex manifolds, C a smooth connected compact curve in M, and Y=p^{-1}(C). For an ambient U with zero generic Lelong number along C, its curve trace measure D is finite and atomic. A Green potential w with ddc w=D-delta eta pulls back through the smooth submersion q:Y->C to v. This distributional pullback is defined by fiber integration; it is not an arbitrary pullback of an atomic measure. Each fiber is a prime divisor and the pulled-back divisorial series has finite mass.
+
+On every smooth compact modification pi:Z->Y, a horizontal prime divisor has trace order zero. A vertical prime over b has trace order ord_E(t_b o q o pi) tau_C,U(b). Restricted image ideals give this formula directly. The same formula for the Lelong number of v o pi follows from a local coordinate with t_b o q o pi=z_1^k and the one-variable circular-mean definition. Horizontal generic zero follows from a point where w is finite; there is no claim of one common generic point avoiding every pole or ideal zero at all weights.
+
+The fiber constraints characterize ordinary domination by the new lemma. Thus the trace and ordinary-envelope families agree. The ideal envelope Q is defined using ideal equivalence, not inclusion. Replacing any ordinary competitor a by max(a,v-sup v) supplies an equivalent competitor dominating a. Conversely ideal equivalence gives ideal domination, so the suprema match. Preservation of all ideals and the divisorial lemma then prove T=P=Q ordinarily equivalent to v. A half-background representative supplies positive finite mass and the already proved prescribed-type equations. The type is independent of Green choices and sufficiently large background and respects sums and positive scalars in this fibration setting.
+
+On C x Z, the extended product measure is (k+1) times the tensor product of the factor measures. The bounded identity is justified through separate psh corrections, local decreasing smoothing and the finite smooth-background expansion. Uniform local variation permits tensor convergence even when intermediate expansions have signed terms. For general potentials the increasing plurifine rectangles identify the compatible bounded restrictions; sigma-finiteness and vanishing on pole sets allow passage to the whole product, even with infinite total mass.
+
+For the curve trace potential and A>delta, the canonical product measure is the smooth positive measure (k+1)(A-delta) eta tensor omega_Z^k. The separated Lp equation combines the exact curve scalar (A-delta)/integral f eta with the continuous Hermitian equation on Z. Its scalar is (k+1)c_C c_Z. Nonseparated equations are asserted only in the sufficiently large trace background required by the preceding theorem. No uniqueness of a normalized zero-exponent potential is asserted.
+
+If Z fails BMP, the integrable infinite-mass witness H supplies a second representative v+H o r of infinite mass. Fubini and all-weight exponential integrability of H preserve every multiplier ideal, including the nontrivial curve ideal. The local ideal criterion gives all divisorial Lelong data. Smooth mass witnesses pulled back from Z prove that C x Z itself fails BMP. The Hopf threefold gives a concrete factor. The ambient construction realizes the exact curve-fibration trace data, not every arbitrary abstract profile.
+
+The independent fixed-model corollary uses the smooth Bott–Chern representative of a positive closed current. Two associated qpsh potentials differ smoothly by elliptic regularity. For a divisorial current the domination lemma gives P=Q ordinarily equivalent to this canonical representative. The existing Gauduchon estimate applies on each fixed model separately. This does not recover additional trace data on further modifications or give a uniform mass bound over all models. Other potentials with the same ideals need not have the canonical ordinary type.
+
+## Independent proof review
+
+The normal approved Rethlas runs `curve_fibration_traces_01` and `divisorial_trace_types_01` both ended with verdict `correct`, no critical errors or gaps, and runner exit0. Their process handles15605 and69730 were polled to completion and closed. No live audit was restarted; root never edited verifier memory or results.
+
+The first run has17 statement records and10 canonical-reference records. The second has7 statement records containing25 ordered deductions and6 reference records, including the independently located standard Siu restriction in Demailly's book and one expressly contextual citation. Each run has one empty-finding failed-check record and two report records: the complete report and the output-written event. All records, full result JSON and runner final text were read. In the first run, record5 was persisted after6–10 following a recovered append error; the record explicitly identifies the earlier mathematical reading order. This transport issue produced no missing mathematical check.
+
+The first audit checks the two full sections from their immutable files. The second independently checks the divisorial-domination lemma and the fixed-model corollary; it does not assume the first verdict and does not use the contextual curve-fibration theorem as a premise. Canonical inputs are treated with their actual hypotheses. These bounded independent audits are neither formal verification nor certification of novelty.
+
+## Editing and production checks
+
+Four occurrences of the scalar curve mass d times eta are corrected to italic d with a thin multiplication space. Actual differential operators remain upright. New mathematical statements use only the template's standard environments, with no optional invented names.
+
+The three submissions are mathematically unchanged at integration. Reversing the recorded pagination commands and one equivalent PSH-membership phrasing recovers the immutable originals byte for byte. The chapter interfaces explain the established special cases and preserve the general open problems.
+
+Initial review covered41 selected pages; the first layout pass covered32. The second pass covered19 pages, and all7 changed pages after the final Chapter24 adjustment were rendered and viewed. The final preview has621 pages, with no errors, undefined references or overfull boxes. One existing underfull bibliography line was visually reviewed. The final build and portable source rebuild are also checked there. The original SGPT sources, template, title dates, previous checkpoint and standalone note are preserved.
+
+## Remaining questions
+
+Exact realization for arbitrary higher-dimensional profiles is still open in this treatment. A fixed-model divisorial type does not determine all higher-codimensional singularities. General background compatibility, a topology on ordinary singularity types and a volume characterization require further arguments. The finite/infinite pair with the same exact trace and ideals is a necessary test of any proposed mass characterization. The general no-BMP equation and non-Kähler geometry program remain in scope.

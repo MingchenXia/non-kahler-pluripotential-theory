@@ -1,0 +1,409 @@
+{
+  "run_id": "stw_second_order_reconstruction_01",
+  "conditional_dependency": "stw_matrix_structure_01",
+  "statement_check_count": 13,
+  "deduction_step_count": 69,
+  "critical_errors": [],
+  "gaps": [],
+  "source_sha256": {
+    "/Users/mingchen/Non-Kahler/research/sources/STW17.pdf": "a019e3b93184e517942ba3248bae6e90ce2bf05cdb39e9120d3d65ce1ca6f12e",
+    "/Users/mingchen/Non-Kahler/research/sources/STW17.txt": "b477e80e580919838a27794cb36f8b9041488a80dc1810cb84952ee2a4f496bf"
+  },
+  "full_report_sha256": "c453982d088a2efbe7719f2955cdb8912899799ff14d60983bd7e2cda3016981",
+  "channels": {
+    "statement_checks": [
+      {
+        "timestamp_utc": "2026-09-14T22:55:23.563865+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Conditional precursor and theorem hypotheses",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "The six-term torsion, missing-gradient, covariant-derivative, weights/coercivity and concavity assertions of section_stw_structure.tex are accepted as conditional inputs from run stw_matrix_structure_01; they are not independently certified here.",
+            "Q0 is uniformly positive because gamma0 and gamma are fixed positive Hermitian forms on compact X. Set tau=min eigenvalue_gamma Q0>0, D=exp(sup h). These satisfy the conditional coercivity hypotheses.",
+            "Only the mixed complex Hessian is the target. No positive definiteness of g, Gauduchon condition, prior Hessian estimate, or full STW estimate is assumed."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:26.274415+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Theorem proof: normalization, test function, spectral bounds",
+          "status": "checked",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "Subtracting sup v preserves the equation and bounds the new oscillation M by twice the original C0 bound. K>=1 and |partial v|^2<=K-1.",
+            "phi'=1/(4K-2s), phi''=2/(4K-2s)^2, giving the displayed bounds on [0,K]. psi'=-D1 D2 exp(-D2t)<0 and psi''=D1 D2^2 exp(-D2t)>0.",
+            "P preserves trace, so tr g=tr Q>0 and lambda1>0. H is continuous and attains a maximum on compact X, despite possible eigenvalue multiplicity.",
+            "Ordering and tr g>0 imply lambda_i>=lambda_n>-(n-1)lambda1 and lambda_i<=lambda1. Since W is linear in the gradient with fixed bounded coefficients, |chi+W|<=C sqrt(K). Thus |v_i bar j|<=C lambda if lambda>=K. This never bounds pure v_ij.",
+            "Bounds at the maximum transfer by the bounded oscillations of phi and psi; assuming lambda/K above a fixed threshold is a valid dichotomy."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:29.690192+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Differentiating the largest eigenvalue: Chern-parallel perturbation",
+          "status": "checked",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "A smooth unitary frame with zero Chern connection at a chosen point exists by a unitary gauge with prescribed first jet; its second jets can be bounded by the fixed background. It can be aligned with the full eigenbasis at that point.",
+            "Take B=epsilon0 times the orthogonal projection onto the complement of the first frame vector. B is self-adjoint and nonnegative nearby, has nabla B=0 at the point and bounded second derivatives. g-B has top eigenvalue lambda and all others lambda_p-epsilon0 there. The top is simple and remains simple on some neighborhood; no simplicity of the lower eigenvalues is needed.",
+            "Rayleigh monotonicity gives tilde lambda<=lambda1(g) nearby and equality at the maximum, so tilde H is a valid smooth lower support attaining a local maximum.",
+            "The simple eigenvalue formula yields a_k=nabla_k g_1bar1 and the two displayed squared covariant derivatives divided by lambda-lambda_p+epsilon0, plus the bounded B second derivative. In a unitary parallel gauge any derivative-of-connection commutator with the diagonal endomorphism has zero 11 component; no uncontrolled O(lambda) is hidden in the stated O(1) at this stage.",
+            "Each gap is positive and <=n lambda+epsilon0<=2n lambda after taking fixed epsilon0 small and lambda>=K>=1. Conversion of first covariant derivatives costs O(lambda); second conversion is -2 Re sum_p conjugate(Gamma^p_k1) g_1barp,k+O(lambda). Diagonal p=1 costs C|g_1bar1,k|. The p>1 terms are absorbed using Young.",
+            "A coefficient 1/(2n lambda) may be reduced first to 1/(4n lambda) on converting squares, then to 1/(8n lambda) on absorbing the linear terms. Remaining costs are C lambda. Thus eq:stw-eigenvalue-basic holds."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:32.542570+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Maximum first derivative and preliminary second derivative",
+          "status": "checked",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "At the local maximum, 0=a_k/lambda+phi' V_k+psi' v_k for every k. Differentiating gamma^{p bar q} v_p v_barq gives the stated bound |V_k|<=C sqrt(K) sum_p(|v_pk|+|v_p bark|)+CK.",
+            "The exact positive Hessian contribution to (|partial v|^2)_k bark at the unitary point is sum_p(|v_pk|^2+|v_p bark|^2). The third derivatives are sum_p(v_p v_barp k bark+v_barp v_pk bark), with partial derivatives commuting.",
+            "Metric first-derivative terms are bounded by C sqrt(K) times the same linear Hessians, and metric second-derivative terms by CK. After multiplying by phi'<=1/(2K), Young with total budget 1/(20K) leaves 1/(4K)-1/(20K)=1/(5K) and a background constant. This establishes eq:stw-maximum-second-preliminary without bounding pure Hessians."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:45.916759+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Third derivatives: first differentiated equation and frozen-weight contraction",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "Metric compatibility and the spectral differential give sum_k f_k nabla_p g_kbark=h_p. Since P(W)=Z and P is parallel, contracting D Phi with either nabla_p W or nabla_bar1 nabla_1 W gives sum_i t_i times the corresponding Z diagonal derivative. No derivative of the weights is taken in these algebraic identities.",
+            "For i>1, t_i<=(n-1)f1<= (n-1)f_k for every k. For i=1, the conditional diagonal exclusion means that every gradient index q in Z_1bar1 satisfies q>1, and t1<=F<=n(n-1) f_q.",
+            "For each differentiation index p, the dangerous pure term is t1 |v_qp| with q>1. Partial symmetry v_qp=v_pq moves it to column q of S. The mixed term t1 |v_pbarq| already has column q (or is conjugated to it). The same conversion for covariant derivatives costs only C sqrt(K) F.",
+            "The connection correction in sum_k f_k nabla_p g_kbark is diagonal because g is diagonal: it is a bounded multiple of sum_k f_k |lambda_k|. The identity lambda_k=v_kbark+chi_kbark+W_kbark bounds this by S+C sqrt(K) F, without using the unweighted C lambda bound.",
+            "Derivatives of fixed coefficients and chi cost C sqrt(K) F, and bounded h_p costs the same by the conditional positive lower bound for F. The conjugate equation holds because f_k are real. Thus eq:stw-weighted-third-bound holds for every p."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:50.440432+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Third derivatives: twice differentiated equation and coordinate cancellation",
+          "status": "checked",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "Commutativity of partial derivatives gives g_1bar1,kbark=g_kbark,1bar1+W_1bar1,kbark-W_kbark,1bar1+O(1), where the O(1) is the fixed chi difference.",
+            "Differentiating Phi(g)=h twice covariantly gives sum_k f_k nabla_bar1 nabla_1 g_kbark=h_1bar1+Ccal. Metric compatibility identifies nabla_bar1 g with (nabla_1 g)^*, and h_1bar1 is a mixed scalar derivative.",
+            "With the convention nabla_1 g_kbark=g_kbark,1-sum_q Gamma^q_1k g_qbark, expansion yields g_kbark,1bar1-sum_q Gamma^q_1k g_qbark,bar1-sum_q conjugate(Gamma^q_1k) g_kbarq,1+O(lambda). Hermitian symmetry combines the two linear terms as -2 Re sum_q conjugate(Gamma^q_1k) g_kbarq,1. The bar over Gamma is necessary and is correctly present in the supplied proof.",
+            "For each k,q, commute scalar Hessian partials to get g_kbarq,1=g_1barq,k+W_kbarq,1-W_1barq,k+O(1). q>1 derivatives g_1barq,k are absorbed by the eigenvalue squares with the same weight f_k; q=1 leaves C sum_k f_k |g_1bar1,k|.",
+            "W_1barq,k has pure terms v_pk with derivative column k, mixed terms bounded by C lambda, and coefficient terms O(sqrt(K)). Therefore its weighted cost is C sum_k,p f_k |v_pk|+C lambda F. It is not necessary to bound v_pk by lambda.",
+            "Applying the same exact Chern-to-partial conversion to W gives 2 Re sum_q conjugate(Gamma^q_1k) W_kbarq,1=W_kbark,1bar1-nabla_bar1 nabla_1 W_kbark+O(sqrt(K)). This cancels the full partial W_kbark,1bar1 term, before any dangerous pure Hessian is estimated.",
+            "h_1bar1 and O(sqrt(K)) terms are bounded by C lambda F using lambda>=K>=1 and F's positive lower bound. The resulting eq:stw-eigenvalue-torsion-remainder is valid; the literal 'sum_kf_k' missing a TeX backslash is a cosmetic typo with unambiguous mathematical meaning."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:53.624017+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Third derivatives: both torsion remainders and the E/(6K) budget",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "For the negative torsion contraction, the conditional exclusions put every third derivative in the t1 contribution in v_q1bar1 or its conjugate with q>1. Since partials commute, v_q1bar1=v_1bar1,q=g_1bar1,q-chi_1bar1,q-W_1bar1,q.",
+            "For q>1, t1<=C f_q. Hence the resulting first derivatives of g have exactly the weight f_q, and the pure terms in W_1bar1,q are v_pq with the same column weight. Other third derivatives carry t_i<=Cf1 and can be assigned to any derivative column q because f1<=f_q.",
+            "The differentiated coefficient terms in the t1 component contain only pure v_q1 and their conjugates with q>1. Symmetry moves these to column q; the possible pure v_11 in i>1 components has weight Cf1. Explicit gradient covariant formulas are nabla_bar1 nabla_1 v_q=v_q1bar1-Gamma^r_1q v_rbar1-(partial_bar1 Gamma^r_1q)v_r and nabla_bar1 nabla_1 v_barq=v_1barqbar1-conjugate(Gamma^r_1q)v_1barr, with sums over r. Their extra Hessians are mixed and bounded by C lambda. This verifies the connection-derivative remainder estimate under the stipulated coefficient identities.",
+            "Consequently the negative torsion contraction is bounded by C(sum_k f_k |g_1bar1,k|+sum_k,p f_k |v_pk|+lambda F). No unweighted pure v_11 occurs.",
+            "For W_1bar1=sum_p(c^p v_p+conjugate(c^p) v_barp), differentiating twice produces the weighted third derivatives from eq:stw-weighted-third-bound. First coefficient derivatives multiply v_pk or v_p bark, and second coefficient derivatives multiply gradients. Thus the positive torsion term has the stated bound after bounding only mixed Hessians by C lambda.",
+            "In the gradient third-derivative term, commute v_barp k bark to v_kbark barp and v_pk bark to v_kbark p. Multiplication by phi'|partial v|<=C/sqrt(K) leaves C S/sqrt(K)+C F. The eigenvalue torsion remainder, after division by lambda, leaves C sum_k,p f_k |v_pk|/lambda+C F and the displayed g derivative error.",
+            "Weighted Cauchy-Schwarz gives S^2<=2n F E. Since lambda>=K>=1, every linear Hessian error is bounded by C S/sqrt(K), and Young can allocate total E/(30K) with C F cost. The difference 1/5-1/30=1/6 verifies the positive coefficient in eq:stw-key-maximum-inequality. All constants up to this inequality are independent of K,D1,D2."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:17.674380+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Case 1: splitting weights and using logdet concavity",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "Take lambda_n>=-delta lambda and 0<delta<1/2. For I={k:f_k>f1/delta}, 1 is excluded. If k is outside I, f_k<=f1/delta, so sum_{k notin I} f_k |v_k|^2<=f1 K/delta without an extra n factor.",
+            "Using |a+b|^2<=2|a|^2+2|b|^2 and phi''=2(phi')^2 proves both negative-square estimates, including coefficients 2 for the complement and 4 delta for the I gradient term.",
+            "Because psi is a fixed smooth positive exponential on the bounded interval, one can later choose delta so 4 delta (psi')^2<=psi''/2 everywhere. The remaining psi'' contribution is at least one half globally.",
+            "For k in I, f_k>f1 implies lambda_k<lambda, so the concavity denominator is nonzero. Also lambda-lambda_k<=(1+delta)lambda and f_k-f1>(1-delta)f_k. Thus the conditional concavity square gives the coefficient (1-delta)/(1+delta)>=1-2delta.",
+            "The combined negative and positive squares have the form (1-2delta) sum_{k in I} f_k (|nabla_1 g_kbar1|^2-|a_k|^2)/lambda^2. Applying the comparison lemma below loses at most its full stated budget because 0<1-2delta<1. The unused phi'' terms are nonnegative."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:24.876178+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Case 1: quantitative derivative-cancellation lemma",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "For k>1, commuting partial Hessian derivatives yields e_k=nabla_1 g_kbar1-a_k=W_kbar1,1-W_1bar1,k+O(lambda). Here a_k differs from g_1bar1,k by a bounded connection coefficient times lambda.",
+            "W_kbar1,1 has no pure v_11: off-diagonal W=-(n-1)Z at the unitary point and the stipulated Z_kbar1 coefficient of v_1 vanishes. Differentiating the metric factor in (tr Z)gamma contributes only O(sqrt(K)). The coefficient derivative multiplying v_1 is also a gradient cost. Every remaining pure v_p1 has p>1. W_1bar1,k has pure v_pk with k>1, so symmetry places these in U=sum_{p>1,q}|v_pq|. Mixed Hessians alone are bounded by C lambda.",
+            "The valid one-sided identity |a+e|^2-|a|^2=2 Re(a conjugate(e))+|e|^2>=-2|a||e| avoids an unnecessary negative |e|^2 loss.",
+            "For k>1, |a_k|/lambda<=C((U+H_k)/sqrt(K)+1)+|psi'||v_k|, H_k=sum_p|v_p bark|. Multiplying by |e_k|/lambda<=C(1+U/lambda), using H_k<=C lambda and lambda>=K, yields exactly the six displayed types of error.",
+            "With N=n(n-1), U^2<=N sum_{p>1,q}|v_pq|^2. Since F<=n(n-1)f_p for p>1 and v_pq=v_qp, F U^2<=n^2(n-1)^2 sum_{p>1,q} f_p |v_qp|^2<=n^2(n-1)^2 E. The exceptional pure v_11 is absent from U.",
+            "The weighted H_k/sqrt(K) and U/sqrt(K) terms are each bounded by an arbitrarily small fixed fraction of E/K+C F. The term C F U^2/(lambda sqrt(K)) is <=C E/(lambda sqrt(K)); relative to E/K its coefficient is C sqrt(K)/lambda<=C/(lambda/K).",
+            "Use |v_k|<=epsilon+|v_k|^2/(4 epsilon) for the fifth term. For the last, |v_k|U<=|v_k|^2+U^2 gives C|psi'| E/lambda plus C|psi'| sum_k f_k |v_k|^2 because lambda>=1. Its relative E/K cost is C sup|psi'|/(lambda/K).",
+            "Allocate, for example, 1/48 of E/K to each of the two linear Hessian terms and the two quadratic U terms. Total cost is E/(12K). Large lambda/K thresholds depend on fixed background and sup|psi'| only; constants multiplying epsilon|psi'|F do not depend on epsilon or psi. This proves eq:stw-derivative-cancellation."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:29.382701+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Case 1: derivative error, torsion contraction, numerical closure",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "The remaining derivative error satisfies |g_1bar1,k|/lambda<=|a_k|/lambda+C<=C sum_p(|v_pk|+|v_p bark|)/sqrt(K)+C+|psi'||v_k|. Young with total E/(60K) and the scalar epsilon inequality gives precisely its displayed bound.",
+            "In sum_i t_i Z_i bari, i=1 has only gradient indices p>1, so t1|v_p|<=C f_p|v_p|. For i>1, t_i<=C f1<=C f_p for every p. Thus |sum_k f_k W_kbark|<=C sum_p f_p|v_p|, with the claimed epsilon and quadratic-gradient bound.",
+            "Since psi'<0, psi' sum_k f_k v_kbark=|psi'| sum_k f_k(chi_kbark-lambda_k)+|psi'| sum_k f_k W_kbark. The torsion term is therefore bounded below by minus its absolute-value estimate, as used.",
+            "The residual E coefficient is at least 1/6-1/12-1/60=1/15. It may be decreased to 1/20. Since v_1bar1=lambda-(chi+W)_1bar1 and |chi+W|^2<=CK, |v_1bar1|^2>=lambda^2/2-CK. Hence E/(20K)>=f1 lambda^2/(40K)-C f1, and the final error is absorbed in C F.",
+            "All epsilon-linear F errors combine into epsilon C0 |psi'|F with C0 independent of epsilon,D1,D2,K. All quadratic-gradient errors combine into C_epsilon |psi'| sum_k f_k |v_k|^2. Thus eq:stw-first-case-closure is valid with the displayed numerical coefficients."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:32.851325+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Case 1: independent choices of epsilon,D2,D1,delta and ratio bound",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "The conditional coercivity lemma applies with tau>0 and D=exp(sup h). For lambda beyond its fixed threshold, sum_k f_k(chi_kbark-lambda_k)>=tau F/2.",
+            "First choose epsilon so epsilon C0<tau/4. Then choose D2>2 C_epsilon, since psi''/|psi'|=D2. Next choose D1 so D1 D2 tau/4>C0; min_{[-M,0]}|psi'|=D1D2.",
+            "Finally choose 0<delta<min(1/2,exp(-D2 M)/(8D1)). This ensures 4 delta(psi')^2<=psi''/2 throughout the interval. The choices depend only on background data and the C0 bound, never on K.",
+            "Every later large lambda/K assumption, including the U-square absorptions, can now be enforced using a fixed threshold. There is no circular dependence of D1,D2 on K or delta.",
+            "After the positive gradient and F terms are dropped, the closure inequality forces lambda^2/(40K)<=2 delta^{-1}(psi')^2 K. Thus lambda^2<=80 delta^{-1} sup|psi'|^2 K^2, with coefficient 80 correct."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:01:18.930922+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Case 2: smallest eigenvalue below -delta lambda",
+          "status": "checked",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "Keeping the already fixed constants, |v_n barn|^2>=lambda_n^2/2-CK>=delta^2 lambda^2/2-CK. Thus E/(6K)>=f_n delta^2 lambda^2/(12K)-C f_n>=delta^2 lambda^2 F/(12nK)-C F by f_n>=F/n and f_n<=F. The coefficient 1/(12n) is valid.",
+            "The concavity and psi'' terms are nonnegative and may be discarded. Since psi is fixed, |psi' sum_k f_k v_kbark|<=C lambda F uses only the mixed Hessian bound. The C in this paragraph may depend on the now fixed psi and delta, hence on fixed data only.",
+            "Using g_1bar1,k=a_k+O(lambda), the linear g-derivative error is <=(1/2) sum_k f_k |a_k|^2/lambda^2+C F. Combining it with the original negative square gives the coefficient -3/2, as displayed.",
+            "The scalar inequality (3/2)|A+B|^2<=2|A|^2+6|B|^2 is exact Young with parameter 1/3; its difference is (1/2)|A-3B|^2>=0. Put A=phi' V_k, B=psi' v_k. Then 2(phi')^2=phi'', and 6 sup|psi'|^2 sum_k f_k|v_k|^2<=CK F.",
+            "After cancellation, 0>=delta^2 lambda^2 F/(12nK)-C lambda F-CK F. Since lambda>=K and lambda F>0, division gives lambda/K<=C. No remaining pure Hessian term requires an a priori bound."
+          ]
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:01:22.526612+00:00",
+        "channel": "statement_checks",
+        "record": {
+          "location": "Global propagation and final hypothesis audit",
+          "status": "checked_conditionally",
+          "critical_errors": [],
+          "gaps": [],
+          "steps": [
+            "The two eigenvalue cases exhaust all possibilities. All discarded low lambda/K cases have a fixed ratio bound. Hence lambda1 at the maximum is <=C K.",
+            "For any x and maximum point x0, log(lambda1(x)/lambda1(x0))<=phi(s(x0))-phi(s(x))+psi(v(x0))-psi(v(x))<=one-half log 2+D1(exp(D2 M)-1). This gives a uniform global bound lambda1(x)<=C K.",
+            "At every point tr g>0 and ordering give |lambda_i(g)|<=(n-1)lambda1. Therefore |g|_gamma<=C K, and |i partial barpartial v|_gamma<=|g|+|chi+W|<=C K+C sqrt(K)<=C' K.",
+            "Compactness is used for the maximum and uniform coefficient bounds. The C0 bound fixes the psi interval. C2 h bounds differentiated equations and sup h supplies the determinant bound in coercivity. Positivity Q defines the admissible cone and elliptic weights. Positivity and smoothness of the backgrounds supply tau and all coefficient bounds.",
+            "No Gauduchon or closedness identity, integral argument, or prior second-order estimate occurs. The conclusion is correct conditional on the precise precursor identities stipulated by the user; this is not an independent verdict on stw_matrix_structure_01."
+          ]
+        }
+      }
+    ],
+    "reference_checks": [
+      {
+        "timestamp_utc": "2026-09-14T23:06:24.946938+00:00",
+        "channel": "reference_checks",
+        "record": {
+          "location": "Core proof opening citation: STW17 Section 3; comparison of structural assumptions and displayed formulas",
+          "referenced_statement": "Székelyhidi–Tosatti–Weinkove, Gauduchon metrics with prescribed volume form, Section 3: the special gradient structure for Q=P(g) gives sup |i partial barpartial v| <= C(1+sup |partial v|^2); covariant-to-partial conversion and the W cancellation use conjugate(Gamma^q_1k), with the mixed Hessian bounded and pure Hessians kept in weighted squares.",
+          "status": "matched_and_checked_without_importing_estimate",
+          "arxiv_match_found": false,
+          "arxiv_search": {
+            "tool": "search_arxiv_theorems",
+            "full_statement_query": true,
+            "returned_ids": [
+              "1909.00808 / Lemma 3.7",
+              "2112.00488 / Proposition 2.2",
+              "1907.05992 / Proposition 2.3",
+              "1505.02124 / Lemma 2.1",
+              "1911.03593 / Lemma 3.5"
+            ],
+            "comparison": "None of the five returned statements is the cited result or an applicable substitute."
+          },
+          "web_match_found": true,
+          "web_search": {
+            "same_statement_query": true,
+            "primary_source": "https://arxiv.org/abs/1503.04491",
+            "pdf": "https://arxiv.org/pdf/1503.04491",
+            "version": "1503.04491v2, 8 December 2017; Acta Math. 219 (2017), 181–211"
+          },
+          "local_sources": {
+            "pdf": "/Users/mingchen/Non-Kahler/research/sources/STW17.pdf",
+            "text": "/Users/mingchen/Non-Kahler/research/sources/STW17.txt",
+            "visually_inspected_pages": [
+              7,
+              15,
+              16,
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "context_expansion": [
+            "STW Sections 2–3 work on a compact Hermitian manifold. The Gauduchon assumption in the later existence theorem is not an assumption used in this local second-order calculation.",
+            "STW g=chi+u_i barj+W is not assumed positive. Its P_alpha(g) is the positive matrix in the logdet specialization; the supplied gamma,v,Q correspond to alpha,u,g-tilde. The supplied Q0 is STW P_alpha(chi).",
+            "STW (2.4)–(2.6) use Z=P_alpha(W) and W=(tr_alpha Z)alpha-(n-1)Z, with independent fixed coefficients linear in the real gradient. The page-7 assumptions and derivative consequences exclude the exceptional pure Hessian and third derivative. The supplied precursor is accepted conditionally as providing precisely those needed exclusions.",
+            "STW Theorem 2.2 uses a general C-subsolution. The reconstruction does not invoke it or its prior estimates: the stipulated elementary positive-background coercivity replaces Proposition 2.3 for this logdet problem."
+          ],
+          "formula_comparisons": [
+            "Visual PDF p.15, (3.17): the coefficient of g_kbarq,1 is conjugate(Gamma^q_1k), not Gamma^q_1k. PDF p.16, (3.20), uses the same conjugated coefficient in the W cancellation. Both match the supplied proof and the independently expanded Chern connection formula. The local TXT extraction drops these overlines and cannot adjudicate them.",
+            "Visual PDF p.16, immediately before (3.24): the bound is sup_i,j |u_i barj|<=C lambda1. It does not bound the pure u_ij. The supplied proof preserves this distinction.",
+            "The source uses a diagonal coordinate perturbation with distinct lower shifts. The supplied proof instead makes B self-adjoint in a unitary Chern-parallel frame and requires only a simple top eigenvalue. The independent simple-eigenvalue calculation validates this modification; no source perturbation argument is used as a black box.",
+            "STW (3.22)–(3.28) match the two torsion remainders, the frozen W-to-Z contraction and the positive E/(6K) step. The reconstruction checks these using explicit p,k weight routing.",
+            "The reconstruction replaces the weaker expansion in STW (3.37) by |a+e|^2-|a|^2>=-2|a||e|. This is a valid strengthening and leaves no compulsory negative |e|^2 error.",
+            "Visual PDF p.22 (3.47) bounds a mixed-Hessian linear term by mixed-Hessian squares; (3.48)–(3.49) control U with pure squares. The reconstruction independently allocates a total E/(12K) and retains E/(60K) for the later derivative error.",
+            "Visual PDF p.23 (3.53)–(3.55) exhibits E/(20K) and f1 lambda1^2/(40K), with the final lower bound using |u_1bar1|^2, not |u_11|^2. The reconstruction's 1/15 residual can indeed be decreased to 1/20.",
+            "The reconstruction's Case 2 uses the weaker but valid coefficient delta^2/(12n) instead of the source's delta^2/(10n). Its -3/2 square and subsequent cancellation agree with the direct scalar calculation and the structure of STW (3.56).",
+            "No C0, gradient, full second-order, Liouville, Evans–Krylov, or existence result from STW is imported into the proof under audit."
+          ],
+          "critical_errors": [],
+          "gaps": []
+        }
+      }
+    ],
+    "failed_checks": [
+      {
+        "timestamp_utc": "2026-09-14T23:06:28.718962+00:00",
+        "channel": "failed_checks",
+        "record": {
+          "status": "none",
+          "critical_errors": [],
+          "gaps": [],
+          "scope": "Full supplied core proof; precursor identities are conditional dependencies. The missing TeX backslash in 'sum_kf_k' is cosmetic and does not change the mathematical assertion."
+        }
+      }
+    ],
+    "events": [
+      {
+        "timestamp_utc": "2026-09-14T22:54:24.413046+00:00",
+        "channel": "events",
+        "record": {
+          "event": "scope_initialized",
+          "assumptions": [
+            "compact complex manifold without boundary, n>=2",
+            "fixed smooth positive Hermitian gamma and gamma0",
+            "smooth real v, Q>0, bounded C0 v and C2 h"
+          ],
+          "conditional_dependency": "stw_matrix_structure_01: six-term torsion identity, missing-gradient and covariant derivative identities, spectral weights, coercivity and logdet concavity are assumed only conditionally",
+          "constraints": "No prior second-order estimate; no book edits; supplied proof read in textual order.",
+          "retry": "Retry after first append permission-review timeout; the timeout was not a substantive denial."
+        }
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:23.563955+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:26.274508+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:29.690259+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:55:32.542746+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:45.917069+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:50.440612+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T22:56:53.624110+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:17.674683+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:24.876261+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:29.382859+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:00:32.851429+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:01:18.931184+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:01:22.526679+00:00",
+        "event_type": "memory_append",
+        "channel": "statement_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:06:24.947378+00:00",
+        "event_type": "memory_append",
+        "channel": "reference_checks"
+      },
+      {
+        "timestamp_utc": "2026-09-14T23:06:28.719115+00:00",
+        "event_type": "memory_append",
+        "channel": "failed_checks"
+      }
+    ]
+  }
+}

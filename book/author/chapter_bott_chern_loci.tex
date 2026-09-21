@@ -1,0 +1,209 @@
+\chapter{Bott--Chern classes and singular loci}
+\label{chap:bott-chern-loci}
+
+The distinction between a closed class and a nonclosed background becomes particularly important for singular loci. Boucksom's definitions of the non-nef and non-K\"ahler loci already apply to ordinary Bott--Chern classes on compact complex manifolds. An auxiliary Hermitian metric measures lower bounds for closed currents; it need not itself represent a cohomology class. We begin with these definitions and then explain why a numerical restricted-volume construction needs additional care.
+
+\section{Closed classes with Hermitian lower bounds}
+
+Let $X$ be a connected compact complex manifold and let $\omega$ be a Hermitian metric. The ordinary real Bott--Chern group is
+\[
+ H^{1,1}_{\mathrm{BC}}(X,\R)
+ =\frac{\{\theta\in C^\infty(X,\Lambda^{1,1}_{\R}):
+                                      \mathrm{d}\theta=0\}}
+        {\ddc C^\infty(X,\R)}.
+\]
+Fix a class $\alpha$ and a smooth closed representative $\theta$. Representatives that are currents have the form $T=\theta+\ddc u$; an almost positive such current has a quasi-plurisubharmonic potential $u$.
+
+\begin{definition}
+The class $\alpha$ is \emph{pseudoeffective} if it contains a positive current. It is \emph{nef} if, for every $\varepsilon>0$, there is a smooth real $u_\varepsilon$ with
+\[
+ \theta+\ddc u_\varepsilon\geq-\varepsilon\omega.
+\]
+It is \emph{big} if it contains a closed current $T\geq\delta\omega$ for some $\delta>0$. Such a current is called a \emph{K\"ahler current}.
+\end{definition}
+
+These conditions are independent of the representative and the auxiliary metric. Changing the representative adds a smooth $\ddc$-term to the potential, and any two Hermitian metrics on a compact manifold bound each other by constant multiples. A positive Hermitian form that is not closed is not, by itself, a representative of an ordinary Bott--Chern class. Likewise, bigness of an arbitrary smooth background in \cref{chap:framework} does not imply bigness of a closed class.
+
+For a pseudoeffective $\alpha$, write
+\[
+ \alpha[-\varepsilon\omega]
+ =\{T\in\alpha:T\geq-\varepsilon\omega\}.
+\]
+Every current in this set is closed. This notation, used by Boucksom \cite[Section 2.1.2]{BouThesis02}, avoids the expression $\alpha+\varepsilon\{\omega\}$, which is unavailable when $\omega$ is not closed.
+
+\begin{proposition}\label{prop:bc-gauduchon-compactness}
+For each fixed $\varepsilon>0$, the currents in $\alpha[-\varepsilon\omega]$ have uniformly bounded distributional mass. The bound is a linear trace bound and requires no bounded mass property.
+\end{proposition}
+\begin{proof}
+Choose a Gauduchon metric $\gamma$. For $T=\theta+\ddc u$ in this family, the current $T+\varepsilon\omega$ is positive and
+\[
+ \int_X(T+\varepsilon\omega)\wedge\gamma^{n-1}
+ =\int_X(\theta+\varepsilon\omega)\wedge\gamma^{n-1}.
+\]
+The right side is fixed. Comparison of smooth Hermitian metrics converts this trace into a bound for all coefficients of the positive current $T+\varepsilon\omega$. Subtracting the fixed smooth form gives the asserted bound for $T$. In dimension one the same argument uses Stokes directly.
+\end{proof}
+
+This is also why a nef class is pseudoeffective: take smooth representatives with errors tending to zero and a weakly convergent subsequence. Closedness and the Bott--Chern class persist in the limit. Equivalently, normalized potentials have an $L^1$-convergent subsequence by the compactness of quasi-plurisubharmonic functions. The limit current is positive.
+
+\section{Minimal multiplicities and the non-nef locus}
+
+For $\varepsilon>0$ put
+\[
+ V_\varepsilon
+ =\left(\sup\{u\in\PSH(X,\theta+\varepsilon\omega):u\leq0\}\right)^*,
+ \qquad T_{\min,\varepsilon}=\theta+\ddc V_\varepsilon.
+\]
+The envelope exists because $\alpha$ is pseudoeffective. It is a potential with minimal singularities among the currents in $\alpha[-\varepsilon\omega]$: for any potential $u$ in that family,
+$u-\sup_Xu\leq V_\varepsilon$. Notice that the positive current used to construct the envelope is $T_{\min,\varepsilon}+\varepsilon\omega$, whereas $T_{\min,\varepsilon}$ is the closed current representing $\alpha$.
+
+\Needspace{10\baselineskip}
+\begin{definition}\label{def:bc-minimal-multiplicity}
+The \emph{minimal multiplicity} of $\alpha$ at $x$ is
+\[
+ \nu(\alpha,x)=\sup_{\varepsilon>0}\nu(T_{\min,\varepsilon},x).
+\]
+The \emph{non-nef locus} is
+\[
+ E_{\mathrm{nn}}(\alpha)=\{x\in X:\nu(\alpha,x)>0\}.
+\]
+\end{definition}
+
+Lelong numbers of these almost positive closed currents are well defined; adding a smooth form does not change them. If $\varepsilon$ decreases, the admissible family shrinks, so its minimal multiplicities increase. Thus the supremum is the limit as $\varepsilon\downarrow0$. Comparison of two auxiliary metrics proves independence of $\omega$. Changing the representative changes minimal potentials only by a smooth function and bounded normalization errors, so it does not affect these numbers either. These are precisely the definitions of \cite[Definition 2.1.5]{BouThesis02}.
+
+We use two standard forms of Demailly regularization, with the precise lower bounds of \cite[Theorem 2.1]{Bou04Zariski}. If $T\geq\gamma$ is closed and almost positive, smooth representatives $\theta_j\in\{T\}$ satisfy $\theta_j\geq\gamma-C\lambda_j\omega$, where the continuous functions $\lambda_j$ decrease pointwise to $\nu(T,\cdot)$. When all Lelong numbers vanish, Dini's theorem makes this loss uniformly small. Analytic regularization gives currents $T_j\in\{T\}$ with $T_j\geq\gamma-\varepsilon_j\omega$, $\varepsilon_j\downarrow0$, and $\nu(T_j,x)\leq\nu(T,x)$. Thus it preserves strict positivity after a small loss and introduces no positive Lelong number at a point where the original number is zero. These are also the regularization principles recalled in \cite[Theorems 1.2.9--1.2.10]{BouThesis02} and in \cite{SGPT}.
+
+\begin{proposition}\label{prop:bc-non-nef}
+For a pseudoeffective class $\alpha$, the set $E_{\mathrm{nn}}(\alpha)$ is a countable union of analytic subsets. Moreover,
+\[
+ \alpha\text{ is nef}\quad\Longleftrightarrow\quad
+ E_{\mathrm{nn}}(\alpha)=\varnothing.
+\]
+\end{proposition}
+\begin{proof}
+By Siu's analyticity theorem and monotonicity of the minimal multiplicities,
+\[
+ E_{\mathrm{nn}}(\alpha)
+ =\bigcup_{k,\ell\geq1}
+       \{x:\nu(T_{\min,1/\ell},x)\geq1/k\}.
+\]
+If $\alpha$ is nef, a smooth representative is available in every $\alpha[-\varepsilon\omega]$. A minimal potential is bounded below by its smooth potential up to a constant, so all its Lelong numbers vanish. Conversely, if the non-nef locus is empty, all $T_{\min,\varepsilon}$ have zero Lelong numbers. Apply the regularization consequence just stated to obtain a smooth representative bounded below by $-2\varepsilon\omega$. Letting $\varepsilon$ vary proves nefness.
+\end{proof}
+
+The parameter $\varepsilon$ is essential. Even for a nef class, a positive current with minimal singularities in $\alpha$ itself may have nonzero Lelong numbers; the nef ruled-surface example in \cite[Section 1.2.3]{BouThesis02} illustrates this. Definition \ref{def:bc-minimal-multiplicity} does not replace the almost positive approximating families by the single family of positive currents.
+
+\Needspace{13\baselineskip}
+\section{The non-K\"ahler locus}
+
+For an almost positive closed current write $E_+(T)=\{x:\nu(T,x)>0\}$.
+
+\begin{definition}
+If $\alpha$ is big, its \emph{non-K\"ahler locus} is
+\[
+ E_{\mathrm{nK}}(\alpha)=\bigcap_{T}E_+(T),
+\]
+where $T$ ranges over K\"ahler currents in $\alpha$. For a pseudoeffective class that is not big, we use the convention $E_{\mathrm{nK}}(\alpha)=X$.
+\end{definition}
+
+The definition for big classes is \cite[Definition 2.1.19]{BouThesis02}. The following elementary part of Boucksom's theorem explains its geometry.
+
+\begin{theorem}\label{thm:bc-non-kahler-locus}
+Let $\alpha$ be big. There is a K\"ahler current with analytic singularities, smooth off its polar set, whose positive Lelong set is exactly $E_{\mathrm{nK}}(\alpha)$. In particular this locus is a proper analytic subset, and
+\[
+ E_{\mathrm{nn}}(\alpha)\subset E_{\mathrm{nK}}(\alpha),
+ \qquad
+ E_{\mathrm{nK}}(\alpha)=\varnothing
+ \quad\Longleftrightarrow\quad\alpha\text{ is K\"ahler}.
+\]
+\end{theorem}
+\begin{proof}
+Analytic regularization reduces the defining intersection to K\"ahler currents with analytic singularities and smooth remainder away from their poles. Indeed, regularization of any strict current remains strict after a sufficiently small loss, and its positive Lelong set is contained in that of the original current.
+
+Given two strict currents with potentials $u_1,u_2$, their maximum is a potential for a current dominating $\delta\omega$ for a common $\delta>0$. Its Lelong numbers are the minima of the two Lelong numbers. Regularizing this current gives a strict current with analytic singularities whose positive Lelong set is contained in the intersection of the previous two sets.
+
+The descending chain condition for analytic subsets of a compact complex manifold now gives a smallest finite intersection of the analytic sets under consideration. This intersection equals the full intersection. The maximum-and-regularization construction realizes a subset of that finite intersection as the polar set of a single strict analytic current. Since the full intersection is contained in the polar set of every such current, equality follows. This is the argument of \cite[Theorem 2.1.20]{BouThesis02}.
+
+For any positive current $T\in\alpha$ and any $\varepsilon>0$, minimality gives $\nu(T_{\min,\varepsilon},x)\leq\nu(T,x)$. Take the supremum in $\varepsilon$, then the intersection over strict $T$, to obtain the inclusion of loci. If the non-K\"ahler locus is empty, the realizing analytic current has no poles and is a smooth K\"ahler representative. The reverse implication follows by using a smooth K\"ahler form in the defining intersection.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{proposition}\label{prop:bc-no-isolated-locus}
+The non-K\"ahler locus of a big class has no isolated points.
+\end{proposition}
+\begin{proof}
+Let $\theta+\ddc\Phi\geq\delta\omega$ be a current as in \cref{thm:bc-non-kahler-locus}. Suppose $x$ is an isolated point of its polar set. Choose a coordinate ball centered at $x$ with no other pole. For sufficiently large $A$, the local function
+$q(z)=A|z|^2-C$ satisfies $\theta+\ddc q\geq\delta'\omega$ on a smaller ball, for some $\delta'>0$.
+
+Choose $C$ so that $q<\Phi$ on a closed annular collar of the boundary. This is possible because $\Phi$ is smooth on that collar. Since $\Phi\to-\infty$ at $x$, the maximum $\max(\Phi,q)$ agrees with $q$ near $x$ and with $\Phi$ on the collar. It therefore glues to $\Phi$ outside the ball and gives a global K\"ahler current smooth near $x$. Its Lelong number at $x$ is zero, contradicting the definition of $E_{\mathrm{nK}}(\alpha)$.
+\end{proof}
+
+Closed bigness has a strong global consequence: the existence of a K\"ahler current is equivalent to membership in Fujiki's class $\mathcal C$, by the standard modification criterion recalled in \cite[Theorem 1.2.11]{BouThesis02}. Thus a compact complex manifold outside $\mathcal C$ has no big ordinary Bott--Chern class. The strictly positive nonclosed backgrounds of this book still exist on every compact complex manifold.
+
+\section{Null loci and numerical restricted volumes}
+
+For the moment assume that $X$ is K\"ahler and let $\omega$ be a K\"ahler form. If $\alpha$ is nef, its classical null locus is
+\[
+ \operatorname{Null}(\alpha)
+ =\bigcup_{\substack{V\subset X\ \mathrm{irreducible},\ \dim V>0\\
+                       \int_V\alpha^{\dim V}=0}}V.
+\]
+The intersection number may be computed on a resolution of $V$ by pulling back a smooth closed representative. It is independent of that representative, by Stokes' theorem. For a nef and big class, the equality
+\[
+ E_{\mathrm{nK}}(\alpha)=\operatorname{Null}(\alpha)
+\]
+is the transcendental Nakamaye theorem of Collins--Tosatti \cite{CT15Loci}. Their theorem also applies on compact manifolds in class $\mathcal C$.
+
+For a general pseudoeffective class on a compact K\"ahler manifold, the appropriate replacement is the numerical restricted volume of Collins--Tosatti \cite[Section 2]{CT22Restricted}. For an irreducible $k$-dimensional $V$, $k>0$, it is zero when $V\subset E_{\mathrm{nn}}(\alpha)$; otherwise it is
+\begin{equation}\label{eq:bc-numerical-restricted-volume}
+ \langle\alpha^k\rangle_{X\mid V}
+ =\lim_{\varepsilon\downarrow0}\ \sup_T
+ \int_{V_{\mathrm{reg}}}
+      \bigl((T+\varepsilon\omega)|_{V_{\mathrm{reg}}}\bigr)_{\mathrm{ac}}^k.
+\end{equation}
+Here $T\in\alpha$ is closed, $T\geq-\varepsilon\omega$, its polar set does not contain $V$, and its potentials have analytic singularities with a \emph{smooth} remainder. This last condition makes the displayed measure the extension by zero of a smooth measure away from an analytic subset. It must not be replaced without explanation by the weaker condition of a bounded remainder.
+
+The numerical null locus is the union of the positive-dimensional irreducible subvarieties on which \eqref{eq:bc-numerical-restricted-volume} vanishes. The trace theory of \cite[Chapter 8]{SGPT} relates these restricted volumes to masses on $V$, which explains why singularity types and restriction of multiplier ideals are relevant to identifying this locus. Such a trace need not equal an ordinary pointwise restriction of a singular potential; see \cref{chap:trace-data}. In \cref{nk:thm:main}, we prove equality of the numerical null locus and the non-K\"ahler locus for every pseudoeffective class on a compact K\"ahler manifold, by adapting the supplied proof of \cite{VXNull}. The proof uses the trace and multiplier-ideal theory of \cite{SGPT}.
+
+\section{Failure of a direct Hermitian volume formula}
+
+The closedness of the perturbation in \eqref{eq:bc-numerical-restricted-volume} is not merely a matter of notation. Even the ambient case $V=X$ behaves incorrectly if one replaces its K\"ahler form by an arbitrary Hermitian metric.
+
+\begin{proposition}\label{prop:bc-zero-class-infinite-error-volume}
+Suppose a compact complex $n$-fold has a Hermitian metric $\omega$ and smooth real functions $v_j$ such that
+\[
+ \omega+\ddc v_j>0,
+ \qquad \int_X(\omega+\ddc v_j)^n\longrightarrow+\infty.
+\]
+For every $\varepsilon>0$,
+\begin{equation}\label{eq:bc-zero-class-infinite-error-volume}
+ \sup_{\substack{T\in\{0\}\ \mathrm{smooth,\ closed}\\
+                          T\geq-\varepsilon\omega}}
+       \int_X(T+\varepsilon\omega)^n=+\infty.
+\end{equation}
+This occurs for the Gauduchon metric on the Hopf threefold of \cref{chap:hopf}.
+\end{proposition}
+\begin{proof}
+Fix $\varepsilon>0$ and take $T_j=\varepsilon\ddc v_j$. Each $T_j$ is smooth, closed and represents the zero Bott--Chern class. Moreover,
+\[
+ T_j+\varepsilon\omega
+ =\varepsilon(\omega+\ddc v_j)>0,
+\]
+and its top mass is
+$\varepsilon^n\int_X(\omega+\ddc v_j)^n\to+\infty$.
+The Hopf specialization follows from \cref{thm:hopf-unbounded}.
+\end{proof}
+
+All currents in this proof have empty polar set, so imposing analytic singularities with smooth remainder does not eliminate the example. The supremum is already infinite for each fixed error size; letting $\varepsilon$ tend to zero afterwards does not repair it. In contrast, if $\omega$ is K\"ahler and $T=\ddc v$ is smooth, Stokes gives
+\[
+ \int_X(T+\varepsilon\omega)^n
+ =\varepsilon^n\int_X\omega^n\longrightarrow0.
+\]
+\Needspace{7\baselineskip}
+The zero Bott--Chern class is nef, has empty non-nef locus, and contains only the zero positive current: a positive representative would be $\ddc u\geq0$, so $u$ would be a global plurisubharmonic function on a compact manifold and hence constant. Thus \eqref{eq:bc-zero-class-infinite-error-volume} measures the nonlinear mass of the Hermitian error family, not positivity of the closed class.
+
+This example singles out a necessary requirement for any proposed numerical restricted-volume theory without bounded mass: it must avoid taking this unrestricted supremum over Hermitian-error representatives. Choosing Gauduchon metrics alone does not solve the problem. Possible approaches must instead control the approximating family, use genuinely closed positive currents where these are available, or introduce a different invariant with an explicit comparison theorem.
+
+\section{Relation with the non-Hermitian locus}
+
+For a nonclosed big background, the analogue relevant to the equations in this book is its non-Hermitian locus. Dang's qualitative null locus uses failure of bigness after restriction to subvarieties; it is not defined by the unbounded supremum in \eqref{eq:bc-zero-class-infinite-error-volume}. The exact singularity condition and the theorem identifying these loci for nef and big backgrounds are recalled in \cref{sec:non-kahler-geometric-problems}.
+
+These constructions address different data. The non-nef locus tests small negative errors for closed currents. The non-K\"ahler locus tests strict closed positivity. The non-Hermitian locus tests strict positivity with a prescribed exterior derivative. Numerical null loci require an appropriate restricted invariant in addition to these qualitative definitions. Keeping these distinctions is necessary before relating a singularity theory to geometric bigness or to degeneration of a Monge--Amp\`ere equation.

@@ -1,0 +1,98 @@
+\section{Current tests for smooth positivity}
+\label{sec:smooth-cone-current-duality}
+
+The current space used above also tests whether a background has a smooth positive representative. This is a different use of separation from the smooth Gauduchon tests for pseudoeffectivity in \cref{thm:lamari}. We give the argument because it connects the pluripotential constructions to geometric boundaries of the Hermitian cone.
+
+Fix a Hermitian metric $h$ and use the compact set
+\[
+ \mathscr G_h=\{T\geq0:\ T\text{ has bidegree }(n-1,n-1),
+               \ \ddc T=0,\ \int_Xh\wedge T=1\}.
+\]
+For any smooth real $(1,1)$-form $\theta$, define
+\[
+ m_h(\theta)=\min_{T\in\mathscr G_h}\int_X\theta\wedge T.
+\]
+The minimum exists by weak compactness, and it is finite since $-Ch\leq\theta\leq Ch$ for some $C$.
+
+\begin{theorem}\label{thm:smooth-cone-current-duality}
+The background $\theta$ has a smooth positive representative if and only if $m_h(\theta)>0$. Moreover $\theta$ is nef if and only if $m_h(\theta)\geq0$, and
+\[
+ m_h(\theta)=\sup\{a\in\mathbb R:\ \exists u\in C^\infty(X,\mathbb R),
+                                  \ \theta+\ddc u>ah\}.
+\]
+\end{theorem}
+\begin{proof}
+If $\theta+\ddc u\geq ah$ for $a>0$, then distributional integration by parts gives $\int_X\theta\wedge T\geq a$ for every normalized test current. This proves one implication.
+
+For the converse, work in the real Fr\'echet space of smooth $(1,1)$-forms. Let $\mathcal P$ be its open convex cone of strictly positive forms, and let $L=\ddc C^\infty(X,\mathbb R)$. If the affine space $\theta+L$ is disjoint from $\mathcal P$, the Hahn--Banach separation theorem for an open convex set and a disjoint affine space gives a nonzero continuous real linear functional $T$ with
+\[
+ T(\theta+\ell)\leq T(\eta)\qquad(\ell\in L,\ \eta\in\mathcal P).
+\]
+Varying $\ell$ by arbitrary real multiples shows $T(L)=0$. Scaling any $\eta\in\mathcal P$ to zero shows $T(\theta)\leq0$, while scaling it to infinity shows $T(\eta)\geq0$. Thus $T$ is a positive current: every smooth semipositive test form is a limit of strictly positive forms. Positivity also makes it a current of order zero. The equality $T(L)=0$ is precisely $\ddc T=0$. Since $T\ne0$ and $h>0$, its trace $T(h)$ is positive. Normalizing produces an element of $\mathscr G_h$ with nonpositive pairing against $\theta$. This contradicts $m_h(\theta)>0$ and proves the converse. No closed-range assertion for $L$ is needed.
+
+The identity $m_h(\theta-ah)=m_h(\theta)-a$ and the equivalence just proved show that the set inside the supremum is exactly $(-\infty,m_h(\theta))$. Finally, nefness means that $\theta+\varepsilon h$ has a smooth positive representative for every $\varepsilon>0$. This is equivalent to $m_h(\theta)+\varepsilon>0$ for all such $\varepsilon$, or $m_h(\theta)\geq0$.
+\end{proof}
+
+The smooth test forms in the Lamari criterion and the possibly singular currents here should be distinguished. Smooth Gauduchon tests detect the existence of a positive current in a background. Testing against all positive $\ddc$-closed currents detects its nef and smooth positive regimes.
+
+\begin{proposition}\label{prop:nef-annihilator-determinant}
+Let $\theta$ be nef, let $\mu$ be a smooth positive probability measure, and suppose $\lambda_\mu(\theta)>0$. If $T\in\mathscr G_h$ satisfies $\int_X\theta\wedge T=0$, then its determinant-weighted measure vanishes.
+\end{proposition}
+\begin{proof}
+Write $\sigma=h\wedge T$ and let $P$ be its matrix density, normalized by $\operatorname{tr}P=n$ as above. Set
+\[
+ \mathcal D_\mu(T)=
+ \int_X\left(\frac{\mu}{h^n}\right)^{1/n}
+                  \det(P)^{1/n}\,\mathrm{d}\sigma.
+\]
+First suppose a background $\eta$ has a smooth positive representative. The smooth Monge--Amp\`ere equation and the exact formula for $\lambda_\mu$ give a smooth positive form $\Omega=\eta+\ddc u$ with $\Omega^n=\lambda_\mu(\eta)^n\mu$. Pointwise matrix arithmetic--geometric mean, integrated against the coefficient measure of $T$, yields
+\[
+ \int_X\eta\wedge T=\int_X\Omega\wedge T
+              \geq\lambda_\mu(\eta)\mathcal D_\mu(T).
+\]
+Apply this to $\eta=\theta+\varepsilon h$. The left side tends to zero by the hypothesis on $T$, and nef continuity of $\lambda_\mu$ gives a positive limit on the right unless $\mathcal D_\mu(T)=0$. Hence that integral is zero. Its integrand is nonnegative, with a strictly positive smooth factor, so $\det P=0$ $\sigma$-almost everywhere. This says exactly that the determinant-weighted measure vanishes.
+\end{proof}
+
+A nef boundary with positive variational volume therefore has annihilating currents whose coefficient matrices are rank deficient almost everywhere. Their trace measures need not be supported on analytic subsets merely because these determinants vanish.
+
+\Needspace{10\baselineskip}
+\subsection{A Chern--Ricci flow application}
+
+For this paragraph use the conventional Chern--Ricci form
+\[
+ \operatorname{Ric}(\omega)=-i\partial\bar\partial\log\omega^n
+                          =-2\pi\ddc\log\omega^n,
+\]
+interpreted in local coordinates; coordinate changes do not affect the form. This fixes the time normalization of the flow $\partial_t\omega=-\operatorname{Ric}(\omega)$. Put $\chi=\operatorname{Ric}(\omega_0)$ and $\theta_t=\omega_0-t\chi$.
+
+The maximal-time theorem of Tosatti--Weinkove \cite[Theorem 1.2 in the arXiv version]{TW15} states that the smooth flow starting from a Hermitian metric $\omega_0$ exists on $[0,\tau)$, where
+\[
+ \tau=\sup\{t\geq0:\ \theta_t\text{ has a smooth positive representative}\}.
+\]
+We use this standard parabolic theorem as an external input. Its smooth potentials are multiplied by $2\pi$ when expressed with our $\ddc$; the time variable is unchanged because the Ricci form above is theirs.
+
+\begin{corollary}\label{cor:chern-ricci-current-lifetime}
+Let
+\[
+ b=\max_{T\in\mathscr G_{\omega_0}}\int_X\chi\wedge T.
+\]
+Then the maximal smooth existence time is
+\[
+ \tau=\begin{cases}1/b,&b>0,\\+\infty,&b\leq0.\end{cases}
+\]
+If $\tau<\infty$, the limiting background $\theta_\tau$ is nef and there is a normalized current $T_*$ with $\int_X\theta_\tau\wedge T_*=0$. If also $\lambda_\mu(\theta_\tau)>0$, every such annihilating current has zero determinant-weighted measure.
+\end{corollary}
+\begin{proof}
+For $t\geq0$, normalization of the tests gives the exact identity
+\[
+ m_{\omega_0}(\theta_t)=1-tb.
+\]
+The smooth-positivity theorem and the quoted existence-time theorem prove the formula for $\tau$. When $b>0$, the maximum defining $b$ is attained by weak compactness. Its maximizer $T_*$ annihilates $\theta_\tau$. The same identity gives $m_{\omega_0}(\theta_\tau)=0$, hence nefness. The last assertion is \cref{prop:nef-annihilator-determinant}.
+\end{proof}
+
+Along the flow, $\omega(t)=\theta_t+\ddc\varphi_t$ with a smooth potential. For every fixed $T\in\mathscr G_{\omega_0}$ one consequently has
+\[
+ \int_X\omega(t)\wedge T
+       =1-t\int_X\chi\wedge T.
+\]
+These finite traces describe a boundary obstruction without any total Monge--Amp\`ere mass bound. They do not locate the singularities of the flow or prove smooth convergence away from an analytic set. Those geometric questions require local estimates in addition to the scalar pairings.

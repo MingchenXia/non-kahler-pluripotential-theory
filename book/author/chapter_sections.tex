@@ -1,0 +1,196 @@
+\chapter{Holomorphic sections and Hermitian mass}
+\label{chap:sections}
+
+Weighted holomorphic sections make sense on every compact complex manifold. Their curvature is closed, however, even when the manifold carries a non-closed Hermitian metric. This chapter separates the elementary section theory from the additional asymptotic assertions in the source book. Gauduchon metrics give a useful bridge: their linear degrees constrain sections without assigning an algebraic meaning to a non-closed top-degree mass.
+
+Throughout $X$ is connected, compact and of positive dimension $n$. Let $L$ be a holomorphic line bundle with smooth Hermitian metric $h$, let $\mathrm{d}V$ be a smooth positive volume form, and let $u\in\QPSH(X)$. In a holomorphic frame $e$, write $|e|_h^2=e^{-\chi}$. Its curvature form is
+\[
+ \beta=\ddc\chi.
+\]
+It is smooth, real and closed. The elementary constructions below do not require $u\in\PSH(X,\beta)$; whenever that additional positivity is needed, it will be stated.
+
+\section{Weighted section spaces}
+
+For every positive integer $m$, set
+\[
+ \mathcal H_m(u)=H^0(X,L^m\otimes\mathcal I(mu)),\qquad
+ \|s\|_{m,u}^2=\int_X|s|_{h^m}^2e^{-mu}\,\mathrm{d}V.
+\]
+The integral is taken off the pole set of $u$, a set of smooth volume zero. Membership in $\mathcal H_m(u)$ is equivalent to finiteness of this norm: the definition of the multiplier ideal gives local integrability, and compactness gives a finite covering. The converse follows by restriction to coordinate balls. Thus $\mathcal H_m(u)$ is a finite-dimensional Hilbert space, as a subspace of $H^0(X,L^m)$. Write $N_m=\dim\mathcal H_m(u)$.
+
+If $u\preceq_{\mathcal I}v$, the inclusion of multiplier ideals gives
+$\mathcal H_m(u)\subseteq\mathcal H_m(v)$ for every $m$. Ordinary equivalence of weights gives the same section spaces, although their Hilbert norms can differ. None of these assertions refers to a background Hermitian form on $X$.
+
+\begin{proposition}\label{prop:section-norm-comparison}
+Suppose $|u-v|\leq D$ off the poles and $\mathrm{d}V'=e^F \mathrm{d}V$ with $|F|\leq E$. The section spaces for $(u,\mathrm{d}V)$ and $(v,\mathrm{d}V')$ coincide, and
+\[
+ e^{-mD-E}\|s\|_{m,u}^2
+ \leq\|s\|_{m,v,\mathrm{d}V'}^2
+ \leq e^{mD+E}\|s\|_{m,u}^2.
+\]
+\end{proposition}
+\begin{proof}
+The ratio of the two integrands is $e^{-m(v-u)+F}$, which lies between the displayed constants. Integrability in either norm is therefore equivalent to integrability in the other. Integrating proves both estimates.
+\end{proof}
+
+\section{The kernel and its curvature}
+
+Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ and define
+\[
+ K_{m,u}(x)=\sum_{j=1}^{N_m}|s_j(x)|_{h^m}^2,
+ \qquad B_{m,u}(x)=K_{m,u}(x)e^{-mu(x)}
+\]
+outside the pole set. Set $B_{m,u}=0$ on that set. When $N_m=0$, both kernels are zero. Unitary invariance makes the definition independent of the orthonormal basis.
+
+\begin{proposition}\label{prop:finite-bergman-identities}
+If $N_m>0$, then
+\[
+ K_{m,u}(x)=\sup_{0\neq s\in\mathcal H_m(u)}
+                   \frac{|s(x)|_{h^m}^2}{\|s\|_{m,u}^2},
+ \qquad \int_X B_{m,u}\,\mathrm{d}V=N_m.
+\]
+The potential $\Phi_m=m^{-1}\log K_{m,u}$ is genuine, has analytic singularities, and satisfies
+\[
+ \beta+\ddc\Phi_m\geq0.
+\]
+This positive current is closed. If $N_m=0$, $\Phi_m\equiv-\infty$ and is not a genuine potential.
+\end{proposition}
+\begin{proof}
+Write a section in the orthonormal basis. The Cauchy--Schwarz inequality bounds its evaluation by the sum of squared basis evaluations, with equality for a coefficient vector proportional to their complex conjugates after trivializing the one-dimensional fiber. At a common zero both sides vanish. This proves the extremal formula. Integrating the defining finite sum for $B_{m,u}$ sums the squared norms of the basis vectors and gives $N_m$.
+
+Locally $s_j=f_j e^{\otimes m}$, so
+\[
+ \Phi_m=\frac1m\log\sum_j|f_j|^2-\chi,
+ \qquad
+ \beta+\ddc\Phi_m=\frac1m\ddc\log\sum_j|f_j|^2\geq0.
+\]
+A nonzero section prevents the sum from vanishing identically. The local expression therefore defines a genuine potential of analytic singularity type. It also proves closedness directly.
+\end{proof}
+
+By the extremal formula, \cref{prop:section-norm-comparison} implies
+\[
+ |\Phi_m(u,\mathrm{d}V)-\Phi_m(v,\mathrm{d}V')|\leq D+E/m
+\]
+off the common base locus, and hence as an inequality of ordinary types everywhere. In particular the smooth volume form affects these potentials by $O(m^{-1})$ when the weight is fixed.
+
+There is also an exact change of frame-free data. If the squared metric is changed to $h'=h e^{-a}$ and the weight to $u'=u-a$, their product $h'^m e^{-mu'}$ is unchanged. Hence the Hilbert norm and the density $B_{m,u}\,\mathrm{d}V$ are unchanged, while
+\[
+ \beta'=\beta+\ddc a,\qquad \Phi'_m=\Phi_m-a.
+\]
+The current $\beta+\ddc\Phi_m$ is consequently unchanged. This is the line-bundle counterpart of the background covariance in \cref{chap:framework}; both backgrounds in this construction are closed.
+
+\section{Gauduchon degree and vanishing}
+
+Let $\gamma$ be a Gauduchon metric. Define the degree
+\[
+ \deg_\gamma L=\int_X\beta\wedge\gamma^{n-1}.
+\]
+Changing $h$ changes $\beta$ by $\ddc a$. Its integral against $\gamma^{n-1}$ vanishes by Stokes, so the degree is independent of the smooth metric on $L$.
+
+\begin{theorem}\label{thm:gauduchon-section-obstruction}
+If $\deg_\gamma L<0$, then $H^0(X,L^m)=0$ for every $m\geq1$. If $\deg_\gamma L=0$ and $H^0(X,L^m)\neq0$, then $L^m$ is holomorphically trivial and $h^0(X,L^m)=1$. These conclusions apply in particular to its weighted subspaces $\mathcal H_m(u)$.
+\end{theorem}
+\begin{proof}
+Let $s$ be a nonzero section of $L^m$ with zero divisor $D$. The Poincar\'e--Lelong formula in our normalization is
+\[
+ \ddc\log|s|_{h^m}^2=[D]-m\beta.
+\]
+The logarithm is locally integrable. Testing against $\gamma^{n-1}$ gives
+\[
+ m\deg_\gamma L=\int_D\gamma^{n-1}\geq0.
+\]
+Every nonempty effective divisor has strictly positive integral because $\gamma$ is positive on its regular locus. Negative degree is therefore impossible. At degree zero the divisor is empty, so $s$ is nowhere zero and trivializes $L^m$. All holomorphic functions on the connected compact manifold are constant, giving dimension one.
+\end{proof}
+
+More generally, if $T=\beta+\ddc u\geq0$ is a closed positive current, Gauduchon integration gives
+\[
+ \deg_\gamma L=\int_X T\wedge\gamma^{n-1}\geq0.
+\]
+If the degree is zero, positivity and the strict positivity of $\gamma$ imply $T=0$. This is a linear obstruction valid without bounded mass. It says nothing by itself about the top-degree mass of a different, non-closed background.
+
+\input{author/section_trace_section_obstruction}
+
+\section{Which spaces form a graded algebra?}
+
+The multiplier-ideal section spaces need not be closed under multiplication. This issue is present already in the K\"ahler setting and is one reason that the almost-semigroup theory in \cite{SGPT} is needed.
+
+\begin{example}\label{ex:multiplier-sections-not-graded}
+On $\mathbb P^1$ let $L=\mathcal O(1)$ with Fubini--Study curvature $\beta$, and let
+\[
+ u(z)=\frac35\log\frac{|z|^2}{1+|z|^2}.
+\]
+Then $\beta+\ddc u=\frac25\beta+\frac35\delta_0\geq0$,
+$\mathcal I(u)=\mathcal O$ and $\mathcal I(2u)=\mathcal O(-[0])$. A section of $L$ nonzero at $0$ belongs to $\mathcal H_1(u)$, but its square does not belong to $\mathcal H_2(u)$.
+\end{example}
+\begin{proof}
+The weight has only one singularity, $\frac35\log|z|^2+O(1)$ at zero. The one-variable integrability calculation gives the two stated ideals. The curvature follows from Poincar\'e--Lelong and the Fubini--Study potential. The section assertion is precisely the failure to vanish at zero.
+\end{proof}
+
+The boundedness condition gives a graded alternative. Define $\mathcal W_0=\mathbb C$ and, for $m\geq1$,
+\[
+ \mathcal W_m(u)=\{s\in H^0(X,L^m):
+             |s|_{h^m}^2e^{-mu}\text{ is bounded off }\{u=-\infty\}\}.
+\]
+These finite-dimensional vector spaces are unchanged when the smooth metric is changed, since the ratio of two smooth metrics is bounded above and below on $X$. They lie in $\mathcal H_m(u)$, because $X$ has finite smooth volume. The identity
+\[
+ |st|_{h^{m+k}}^2e^{-(m+k)u}
+ =\bigl(|s|_{h^m}^2e^{-mu}\bigr)
+  \bigl(|t|_{h^k}^2e^{-ku}\bigr)
+\]
+proves $\mathcal W_m(u)\mathcal W_k(u)\subseteq\mathcal W_{m+k}(u)$. Closure under addition follows from $|s+t|^2\leq2|s|^2+2|t|^2$. Thus $\bigoplus_m\mathcal W_m(u)$ is a graded subalgebra of the section ring. This elementary construction makes no coherence assertion about a sheaf of bounded weighted germs.
+
+\section{A complete count on a curve}
+
+A curve provides a transparent comparison of integrability, boundedness and mass. Let $X$ now be a compact connected Riemann surface, and suppose $\beta+\ddc u\geq0$. Assume $u$ is bounded away from finitely many points $p_1,\ldots,p_r$, with
+\[
+ u=c_i\log|z_i|^2+O(1)\quad\hbox{at }p_i,
+ \qquad c_i>0.
+\]
+Set $\ell=\deg L=\int_X\beta$ and $d=\sum_i c_i$.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:curve-weighted-section-growth}
+In this situation $0\leq d\leq\ell$, and
+\[
+ \begin{split}
+ \mathcal H_m(u)&=H^0\left(X,L^m\Bigl(-\sum_i\lfloor mc_i\rfloor p_i\Bigr)\right),\\
+ \mathcal W_m(u)&=H^0\left(X,L^m\Bigl(-\sum_i\lceil mc_i\rceil p_i\Bigr)\right).
+ \end{split}
+\]
+Moreover,
+\[
+ \lim_{m\to\infty}\frac{\dim\mathcal H_m(u)}m
+ =\lim_{m\to\infty}\frac{\dim\mathcal W_m(u)}m
+ =\ell-d
+ =\int_X\mathrm{MA}^{\mathrm{ext}}_\beta(u).
+\]
+\end{theorem}
+\begin{proof}
+A germ vanishing to order $k$ has weighted squared norm comparable to $|z_i|^{2(k-mc_i)}$. Local integrability means $k-mc_i>-1$, or $k\geq\lfloor mc_i\rfloor$; boundedness means $k\geq mc_i$, or $k\geq\lceil mc_i\rceil$. Compactness gives the displayed global identifications.
+
+The positive curvature measure has atom $c_i$ at $p_i$ and total mass $\ell$. Subtracting these atoms leaves a positive measure, proving $d\leq\ell$. The remainder does not charge polar sets: after subtracting the logarithmic singularity, the local potential has a bounded quasi-plurisubharmonic representative. Its curvature has the bounded Bedford--Taylor property. Thus this remaining measure is exactly the extended measure, of mass $\ell-d$.
+
+If $\ell>d$, the degrees of both line bundles in the display equal $m(\ell-d)+O(1)$ and tend to infinity. The standard Riemann--Roch theorem and Serre duality on a curve give $h^0=\deg+1-g$ once the degree exceeds $2g-2$. Dividing by $m$ proves both limits. If $\ell=d$, both degrees remain bounded. A line bundle of negative degree has no nonzero section, and one of nonnegative degree $k$ has at most $k+1$ sections: impose vanishing at $k+1$ distinct points and use the negative-degree case for the kernel. Hence both dimensions are uniformly bounded, and both limits are zero. These arguments include $r=0$.
+\end{proof}
+
+Riemann--Roch and Serre duality are the only global algebraic inputs in this count. No asymptotic Bergman theorem is needed. Since every real $(1,1)$-form on a curve is closed, the equality is a closed-curvature comparison result and does not predict the mass of an arbitrary higher-dimensional Hermitian operator.
+
+\input{author/section_hopf_sections}
+
+\section{Why section counts do not recover arbitrary Hermitian mass}
+
+\begin{proposition}\label{prop:sections-infinite-mass-obstruction}
+Suppose $v_+(\omega)=+\infty$ for a Hermitian metric on $X$. There is a potential $U\in\PSH(X,\omega)$ such that, with $L=\mathcal O_X$ and its constant metric,
+\[
+ \dim\mathcal H_m(U)=1\quad\hbox{for every }m\geq1,
+ \qquad \int_X\mathrm{MA}^{\mathrm{ext}}_\omega(U)=+\infty.
+\]
+The currents produced by its global Bergman potentials are identically zero.
+\end{proposition}
+\begin{proof}
+Take $U$ from \cref{thm:infinite-mass-witness}, which has $\mathcal I(tU)=\mathcal O_X$ at every positive weight and infinite extended mass. Global holomorphic functions on $X$ are constant, so every weighted section space is one-dimensional. The constant section is integrable by the ideal condition and compactness. Its normalized basis consists of a nonzero constant; therefore each $\Phi_m$ is constant. Since the trivial metric has curvature zero, its Bergman current is zero.
+\end{proof}
+
+In particular $m^{-n}\dim\mathcal H_m(U)\to0$ while the Hermitian mass is infinite. This does not contradict the source book's section-volume formulas: their positivity is expressed in the curvature of the chosen line bundle, which here is zero. The example shows exactly why replacing that closed curvature by $\omega$ in the conclusion is invalid.
+
+These constructions retain a holomorphic line bundle for the section spaces and a Hermitian background for the nonlinear operator. \Cref{chap:flag-bodies} derives intrinsic convex bodies and growth rates. \Cref{chap:partial-bergman} proves birational kernel transfer, equilibrium limits from a K\"ahler modification, and lower-dimensional fibration limits. Its isolated-point Hopf model has positive growth but loses a pole's position within its fiber. Each comparison states how the closed curvature and the Hermitian background are related.

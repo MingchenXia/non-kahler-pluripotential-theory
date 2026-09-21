@@ -1,0 +1,60 @@
+\section{The Hopf flag and its lower-dimensional body}
+
+Return to $X_n$ and $L_k$ from \cref{prop:hopf-bergman-exact}, with $n\geq2$ and $k\geq0$ an integer. There is a complete compact flag
+\[
+ Y_i=\{z_1=\cdots=z_i=0\}/\langle e^{-1}\rangle
+ \quad(1\leq i\leq n-1),\qquad Y_n=\{p\}\subset Y_{n-1}.
+\]
+Here $Y_{n-1}=\C^*/\langle e^{-1}\rangle$ is an elliptic curve, and $p$ is any of its points. Every inclusion has the smoothness and divisor properties required above. Take the complete section algebra $W_m=H^0(X_n,L_k^m)$, which is also $\mathcal W_m(0)$.
+
+\Needspace{17\baselineskip}
+\begin{proposition}\label{prop:hopf-flag-simplex}
+For this flag,
+\[
+ \{\nu(s):0\neq s\in W_m\}
+ =\{(a_1,\ldots,a_{n-1},0):a_i\in\mathbb N,
+                                  \ \textstyle\sum_i a_i\leq km\}.
+\]
+Consequently
+\[
+ \Delta(W_\bullet)=
+ \{(x_1,\ldots,x_{n-1},0):x_i\geq0,
+                                  \ \textstyle\sum_i x_i\leq k\}.
+\]
+Its $n$-dimensional volume is zero. When $k>0$, its volume in the coordinate hyperplane $x_n=0$, with the Euclidean measure for which the coordinate lattice has covolume one, is
+\[
+ \frac{k^{n-1}}{(n-1)!}
+ =\lim_{m\to\infty}\frac{\dim W_m}{m^{n-1}}.
+\]
+For $k=0$ the body is a point and $\dim W_m=1$.
+\end{proposition}
+\begin{proof}
+The sections are precisely homogeneous polynomials of degree $km$. Successively taking the least power of $z_1$, dividing and restricting, and then doing the same with $z_2,\ldots,z_{n-1}$, leaves a nonzero multiple of
+$z_n^{km-a_1-\cdots-a_{n-1}}$. It is nowhere zero on $Y_{n-1}$. Hence the last valuation coordinate, the vanishing order at $p$, is zero. The preceding coordinates are nonnegative and their sum is at most $km$.
+
+Conversely every such tuple is realized by the monomial
+\[
+ z_1^{a_1}\cdots z_{n-1}^{a_{n-1}}
+ z_n^{km-a_1-\cdots-a_{n-1}}.
+\]
+This proves the equality of valuation sets. Their normalized vectors lie in the displayed simplex. Its vertices $0,ke_1,\ldots,ke_{n-1}$ already occur in degree one, so their closed convex hull is the whole simplex. Its intrinsic volume is the elementary simplex volume. Finally the exact binomial count of \cref{prop:hopf-bergman-exact} has leading coefficient $k^{n-1}/(n-1)!$, giving the limit. The constant-polynomial case gives the statements for $k=0$.
+\end{proof}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.05,>=Latex]
+ \fill[blue!9] (0,0)--(3,0)--(0,3)--cycle;
+ \draw[thick,blue!60!black] (0,0)--(3,0)--(0,3)--cycle;
+ \draw[->] (-.25,0)--(3.65,0) node[right] {$x_1$};
+ \draw[->] (0,-.25)--(0,3.55) node[above] {$x_2$};
+ \node[below left] at (0,0) {$0$};
+ \node[below] at (3,0) {$k$};
+ \node[left] at (0,3) {$k$};
+ \node[align=center] at (1,1) {$\operatorname{vol}_2=k^2/2$};
+ \node[anchor=west,align=left] at (3.5,2.5) {plane $x_3=0$\\$\operatorname{vol}_3=0$};
+\end{tikzpicture}
+\caption{For the Hopf threefold and $k>0$, the body is a triangle in a coordinate plane. Its area counts quadratic section growth; its ambient volume vanishes.}
+\label{fig:hopf-flag-triangle}
+\end{figure}
+
+The last coordinate vanishes because the residual section has no zeros on the elliptic fiber. On the Hopf threefold, the triangle area, the Gauduchon degree $4k$, and the infinite upper Hermitian mass are three different invariants.

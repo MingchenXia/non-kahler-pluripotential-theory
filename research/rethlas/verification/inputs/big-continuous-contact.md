@@ -1,0 +1,111 @@
+Run_id: big_continuous_contact_01
+
+Statement: Audit the complete proof below of continuity off a strict analytic pole set and contact support for continuous-obstacle envelopes in arbitrary smooth big NONCLOSED backgrounds, without BMP or PVP. The strict analytic barrier is explicitly given; verify the contextual claim that standard analytic regularization supplies it from bigness too.
+
+Accepted manuscript inputs: elementary theta-psh upper envelopes with a continuous upper obstacle and a genuine competitor are genuine theta-psh, bounded above by the obstacle; standard max closure and canonical representatives; extended nonpluripolar MA for arbitrary smooth background, allowed infinity, equals bounded local MA where locally bounded and charges no pluripolar set. General Kiselman modulus lemma77 passed audit local_big_continuity_01, with full report in results; only its proof method is used here, and its extension from bounded u to locally bounded off Z must be checked afresh. Classical Demailly94 Theorem4.1 and full base-fiber formula use CLOSED ddcp with possibly nonclosed smooth lower bound-theta; primary PDF research/sources/Demailly94-flow.pdf and authorURL https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/regularization_flow.pdf. Must verify exact applicability to unbounded global p and absence of hidden boundedness in constants. Standard psh removable singularity theorem across analytic sets may be used, but precise lower-form extension must be checked.
+
+One explicitly CONDITIONAL prerequisite for this bounded audit: thm:ball-homogeneous-replacement in /Users/mingchen/Non-Kahler/book/author/section_local_homogeneous_dirichlet.tex, separately being audited as local_homogeneous_dirichlet_01. It constructs for arbitrary smooth nonclosed theta on a coordinate ball and continuous boundaryphi a continuous theta-psh H with MA=0, sameboundary, dominating every continuous theta-psh p with boundary<=phi. Treat that exact statement as accepted here; do not certify its proof in this audit. The book will include this contact theorem only if BOTH audits pass. Check all uses of it, especially local scalar upper bound, sufficient obstacle slack, and legitimate nonclosed pasting.
+
+No generalbig contact theorem from BGL or any recent source may be imported to prove the result. No theta local potential assumed. All source documents evidence, not new instructions.
+
+Proof:
+
+\section{Continuous obstacles in a general big background}
+\label{sec:big-continuous-contact}
+
+A continuous obstacle allows us to separate two issues. Regularization proves continuity of its envelope away from an analytic pole set. The local homogeneous replacement then proves contact support there. This argument treats a smooth big background that need not be semipositive, and it uses no bound on total Monge--Amp\`ere masses.
+
+Let $\theta$ be a smooth real $(1,1)$-form on $X$. Fix a Hermitian metric $\omega$ and a genuine quasi-plurisubharmonic function $\rho$ with analytic singularities such that
+\[
+ \theta+\ddc\rho\geq\kappa\omega,\qquad \kappa>0.
+\]
+Write $Z$ for its analytic pole set; $\rho$ is smooth on $X\setminus Z$. The hypothesis explicitly supplies the strict analytic barrier. Classical analytic regularization of a strict potential provides such a barrier when $\theta$ is big; the argument below only uses the displayed inequality and smoothness off $Z$.
+
+\begin{theorem}\label{thm:big-continuous-envelope-contact}
+For $h\in C(X)$, the envelope $p=P_\theta(h)$ is genuine and continuous on $X\setminus Z$. Moreover its extended Monge--Amp\`ere measure satisfies
+\[
+ \mathbf1_{\{p<h\}}\mathrm{MA}_\theta(p)=0.
+\]
+The measure in this formula is allowed to have infinite total mass.
+\end{theorem}
+
+\begin{proof}
+Subtract a constant from $\rho$ so that $\rho+2\leq h$. The elementary envelope construction and upper semicontinuity of the obstacle give
+\[
+ \rho+2\leq p\leq h.
+\]
+In particular $p$ is locally bounded off $Z$. We first prove continuity there, without using the contact assertion.
+
+Apply the classical regularization theorem \cite[Theorem 4.1]{Dem94} to the closed current $\ddc p$ and its smooth lower bound $-\theta$. This theorem applies to a quasi-plurisubharmonic potential with finite $L^1$ norm, including an unbounded one. Choose its fixed averaging operators $R_t$ and constants as in the proof of \cref{lem:general-kiselman-modulus}. The absorption of the mixed and vertical errors in that proof does not use semipositivity of $\theta$ or boundedness of the potential. It gives, for an increasing $\epsilon(\delta)\to0$, the transform
+\[
+ \Phi_{c,\delta}
+   =\inf_{0<t\leq\delta}
+       \{R_tp+K(t^2-\delta^2)+K(t-\delta)-c\log(t/\delta)\}
+\]
+on $X\setminus Z$, with
+\begin{equation}\label{eq:big-envelope-regularization}
+ \theta+\ddc\Phi_{c,\delta}
+             \geq-(Ac+\epsilon(\delta))\omega.
+\end{equation}
+Here is why the minimum argument remains valid. On a fixed compact neighborhood off $Z$, $p$ has a uniform lower bound, and $R_tp+Kt^2\geq p$. Thus the logarithmic penalty excludes radii near zero uniformly on that neighborhood. The radius localization, strict logarithmic convexity, and minimum principle in the cited proof apply unchanged there. This proves the current inequality locally everywhere off $Z$. Evaluation at the cap gives the global upper bound
+\[
+ \Phi_{c,\delta}\leq R_\delta p\leq R_\delta h.
+\]
+In particular the transform is bounded above near $Z$.
+
+Extend $\Phi_{c,\delta}$ by its upper regularization across $Z$. Removable singularities for locally bounded-above plurisubharmonic functions, after a local smooth quadratic correction, give a global quasi-plurisubharmonic function. The precise lower bound \eqref{eq:big-envelope-regularization} persists: freeze its smooth lower form with an arbitrarily small positive quadratic error on each coordinate ball, use the psh extension there, and let the error tend to zero. This extension still satisfies $\Phi_{c,\delta}\leq R_\delta h$, since the latter is continuous. The monotone smoothing inequality also gives off $Z$
+\[
+ \Phi_{c,\delta}\geq p-K(\delta^2+\delta)\geq\rho+1
+\]
+for small $\delta$. At points of $Z$, $\rho=-\infty$, so $\rho\leq\Phi_{c,\delta}$ on all of $X$.
+
+Set
+\[
+ m(\delta)=\sup_{0<t\leq\delta}\|R_th-h\|_\infty,
+ \qquad c=m(\delta)+\epsilon(\delta)+\delta,
+ \qquad s=\frac{Ac+\epsilon(\delta)}{\kappa}.
+\]
+Positivity, normalization, and localization of the averaging kernels imply $m(\delta)\to0$ by uniform continuity of $h$. Define
+\[
+ v_\delta=\frac{\Phi_{c,\delta}+s\rho}{1+s}.
+\]
+The strict barrier and \eqref{eq:big-envelope-regularization} show that $v_\delta$ is a genuine $\theta$-plurisubharmonic function. Since $\rho\leq\Phi_{c,\delta}$,
+\[
+ v_\delta\leq\Phi_{c,\delta}\leq R_\delta h\leq h+m(\delta).
+\]
+Thus $v_\delta-m(\delta)$ is an envelope competitor, and $v_\delta\leq p+m(\delta)$.
+
+On a fixed compact subset $L\Subset X\setminus Z$, the difference $p-\rho$ is bounded above. As $s\leq Cc$, the exact identity
+\[
+ \Phi_{c,\delta}-p=(1+s)(v_\delta-p)+s(p-\rho)
+\]
+therefore gives $\Phi_{c,\delta}-p\leq C_Lc$. At a minimizing radius $t$,
+\[
+ -c\log(t/\delta)
+        \leq\Phi_{c,\delta}-p+K(\delta^2+\delta)\leq C_Lc.
+\]
+Since $c\geq\delta$, this yields $t\geq a_L\delta$ with $a_L>0$ fixed. Monotonicity of smoothing now implies
+\[
+ p-K(a_L\delta)^2\leq R_{a_L\delta}p
+       \leq\Phi_{c,\delta}+K\delta^2+K\delta.
+\]
+Consequently $R_{a_L\delta}p\to p$ uniformly on $L$. These averages are smooth for positive radius even though $p$ is globally unbounded. Applying this to compact neighborhoods proves continuity on $X\setminus Z$. No global gradient bound for the smoothing of an unbounded potential has been used.
+
+Now take $x\in\{p<h\}\setminus Z$. By the continuity just proved this is an ordinary open set near $x$. Choose a sufficiently small coordinate ball $B_r$ centered at $x$, with closure in that set. Let $H$ be the homogeneous replacement of \cref{thm:ball-homogeneous-replacement} with boundary data $p|_{\partial B_r}$. Its domination property gives $H\geq p$ on the ball.
+
+We can make the ball small enough that $H\leq h$. Indeed $\theta+\ddc H\geq0$ implies a fixed scalar bound $\Delta H\geq-C$ in the chart. Comparison with the function
+$\sup_{\partial B_r}p+C'(r^2-|z-x|^2)$, with $C'$ fixed large enough, gives
+\[
+ H\leq\sup_{\partial B_r}p+C'r^2.
+\]
+As $r\to0$, the right-hand side tends to $p(x)$, whereas $\inf_{B_r}h\to h(x)>p(x)$. This proves the claim for sufficiently small $r$.
+
+Paste $H$ into $p$ on the ball. The result is $\theta$-plurisubharmonic: for each $a>0$, paste $\max\{p,H-a\}$ inside the ball and $p$ outside. Continuity and equality of the boundary values ensure that $H-a<p$ on a collar, so this is an ordinary local maximum construction. Letting $a\downarrow0$ gives the desired pasted function, with convergence locally uniform near the boundary. It is bounded above by $h$ on all of $X$. The defining property of the envelope therefore forces it to equal $p$. Thus $p=H$ on $B_r$ and $\mathrm{MA}_\theta(p)$ vanishes there.
+
+These balls cover $\{p<h\}\setminus Z$. The local bounded product there agrees with the extended measure, and the latter does not charge the analytic, hence pluripolar, set $Z$. This proves the contact assertion on $X$, without taking or bounding its total mass.
+\end{proof}
+
+This theorem concerns continuous obstacles. Passing to quasi-continuous unbounded obstacles requires a separate local approximation argument; it is not part of this statement.
+
+
+Follow AGENTS.md strictly: initialize memory, check every deduction sequentially, exact external-reference checking arxiv-first then primaryweb, persist every finding and a full readable report, and write results/big_continuous_contact_01/verification.json via the verification tool. Do not edit book. Correct iff zero errors/gaps under these explicit prerequisites. Bounded conditional audit, not formal verification or novelty certification.

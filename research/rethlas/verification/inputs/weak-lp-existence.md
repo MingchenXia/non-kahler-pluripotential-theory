@@ -1,0 +1,278 @@
+Run_id: weak_lp_existence_01
+
+Statement: Independently check the full attached reconstruction of continuous Hermitian Monge-Ampere existence for nonnegative nonzero Lp densities p>1, including normalized equation with unknown scalar and proper exponential equation. No BMP or PVP is assumed. Convention ddc=i/(2pi) partial bar-partial. Accepted inputs: standard LOCAL weighted Chern-Levine-Nirenberg and local volume-relative-capacity estimates as explicitly stated at the start; bounded local BT calculus with positivity, locality and bounded uniform/capacity continuity; normalized L1 compactness and uniform small exponential integrability proved earlier; smooth normalized and smooth proper existence proved and audited separately; Gauduchon conformal theorem and conserved trace; modified comparison with exact constants and bounded strict/exponential domination as audited in bounded_comparison_01. Check all deductions from these inputs, their hypotheses, parameter dependencies and dimension1. Do NOT import global Hermitian capacity estimates, Lp a priori bounds, weak compactness/existence, or bounded/positive-volume properties. Particularly inspect the local-to-global capacity test gluing, weighted capacity-tail proof, shifted infima/inclusions, backwards dyadic iteration (without decreasing capacity continuity), density Lp norm lower bound (not total mass lower bound), uniform convergence from L1, both bounds on c_j, Jensen/Gauduchon control of sup exponential solutions, and both passage-to-limit proofs. Attribution KN15 Section5 and Nguyen16 Proposition2.5 is for comparison only: this manuscript uses a simpler power-two capacity iteration and a direct lower-density bound, so check the actual argument. Relevant primary full texts are research/sources/KN15.txt, Nguyen16.txt, Dinew16.txt; source SGPT includes standard local references, GZ17 is a standard monograph. Scope is only the supplied reconstruction and two theorem targets, not later zero-exponent consequences.
+
+Target1: For smooth strictly positive Hermitian omega on connected compact X, smooth positive dV, nonnegative f in Lp, p>1, integral f>0, there exist continuous omega-psh u with sup u=0 and c>0 such that omega_u^n=c f dV. Target2: for every lambda>0 there is a unique continuous solution omega_u^n=exp(lambda u) f dV (proof also asserts uniqueness among bounded solutions).
+
+Proof:
+
+\section{Local capacity estimates}
+
+We now reconstruct the existence arguments. The local inputs are classical Bedford--Taylor estimates; the passage to a Hermitian background is given explicitly. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ and $\operatorname{Vol}(E)=\int_EdV$.
+
+We use two standard local estimates on concentric coordinate balls $B'\Subset B$:
+\begin{enumerate}
+\item If $w\leq0$ is plurisubharmonic on $B$ and $v$ is bounded and plurisubharmonic, then
+\[
+ \int_{B'}|w|(\ddc v)^n
+ \leq C\|w\|_{L^1(B)}\|v\|_{L^\infty(B)}^n.
+\]
+An additive constant can first be chosen in $v$. This is the weighted Chern--Levine--Nirenberg inequality.
+\item For every Borel set $E\subset B'$, the relative Bedford--Taylor capacity satisfies
+\[
+ \operatorname{Vol}(E)\leq C\exp\bigl(-a\operatorname{cap}(E,B)^{-1/n}\bigr),
+\]
+with value zero when the capacity is zero. This is the classical local volume--capacity estimate.
+\end{enumerate}
+These are statements of local pluripotential theory, as developed in \cite[Chapters 3 and 4]{GZ17}; the bounded product and capacity conventions also agree, up to harmless fixed constants, with \cite[Chapter 2]{SGPT}. We will not import a global Hermitian capacity estimate. The deductions below recover the estimates used in \cite[Section 5]{KN15} and \cite[Section 6]{Dinew16}.
+
+\begin{lemma}\label{lem:global-capacity-estimates}
+There are constants $a,C>0$ such that
+\begin{equation}\label{eq:global-volume-capacity}
+ \operatorname{Vol}(E)\leq C\exp\bigl(-a\operatorname{Cap}(E)^{-1/n}\bigr)
+\end{equation}
+for every Borel $E\subset X$. Also, for $u\in\PSH(X,\omega)$ with $\sup_Xu=0$ and $t>1$,
+\begin{equation}\label{eq:global-capacity-tail}
+ \operatorname{Cap}(\{u<-t\})\leq C/t.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Take a finite cover by smaller coordinate balls $B'_j\Subset B_j$. A local capacity test $0\leq v\leq1$ on $B_j$ can be made into a global test as follows. Choose a smooth function $\chi_j$ equal to zero near $\overline{B'_j}$, equal to $-2$ near $\partial B_j$, and with $-2\leq\chi_j\leq0$. Choose $\delta>0$ small enough that
+\[
+ \omega+\delta\ddc\chi_j\geq0,\qquad 3\delta/2\leq1.
+\]
+The function
+\[
+ V=\max\{\delta(v+\chi_j),-\delta/2\}+\delta/2
+ \quad\hbox{on }B_j,
+ \qquad V=0\quad\hbox{outside }B_j
+\]
+is globally $\omega$-plurisubharmonic and lies between zero and one. Near the boundary the constant branch is selected. On $B'_j$ we have $\omega_V\geq\delta\ddc v$. Positivity of bounded products therefore gives
+\[
+ \operatorname{cap}(E\cap B'_j,B_j)
+ \leq\delta^{-n}\operatorname{Cap}(E).
+\]
+The local volume estimate, followed by summation over the finite cover, proves \eqref{eq:global-volume-capacity}.
+
+For the second estimate, choose on each $B_j$ a smooth negative quadratic function $r_j$ with $\ddc r_j\geq\omega$. For every global test $0\leq v\leq1$, the functions $u+r_j\leq0$ and $v+r_j$ are plurisubharmonic. Thus
+\[
+ \begin{split}
+ \int_{\{u<-t\}}\omega_v^n
+ &\leq t^{-1}\int_X(-u)\omega_v^n\\
+ &\leq t^{-1}\sum_j\int_{B'_j}(-u-r_j)
+                    \bigl(\ddc(v+r_j)\bigr)^n\\
+ &\leq \frac Ct\left(1+\int_X|u|\,dV\right).
+ \end{split}
+\]
+Here the second inequality uses $\omega_v\leq\ddc(v+r_j)$, and the third is the local weighted estimate; the local test functions have a common bounded range. The normalized $L^1$ bound in \cref{thm:normalized-compactness} finishes the proof after taking the supremum over $v$.
+\end{proof}
+
+\begin{corollary}\label{cor:lp-capacity-square}
+Fix $p>1$. There is $C_p$ such that every nonnegative $F\in L^p(X,dV)$ satisfies
+\[
+ \int_E F\,dV\leq C_p\|F\|_p\operatorname{Cap}(E)^2
+\]
+for every Borel set $E$.
+\end{corollary}
+\begin{proof}
+H\"older's inequality and \eqref{eq:global-volume-capacity} bound the integral by
+$C\|F\|_p\exp(-a\operatorname{Cap}(E)^{-1/n}/p')$, where $p'=p/(p-1)$. The quotient of this exponential by $x^2$ is bounded on $0<x\leq\operatorname{Cap}(X)<\infty$. Capacity-zero sets have zero smooth volume.
+\end{proof}
+
+The exponent two is only a convenient choice. The same proof gives any fixed positive power of capacity. No uniform bound over all bounded potentials appears here: only tests in the fixed interval $[0,1]$ define the capacity.
+
+\section{Sublevels and the uniform potential bound}
+
+\begin{lemma}\label{lem:thin-sublevel-capacity}
+Let $u,v\in\PSH(X,\omega)\cap L^\infty(X)$, with $-H\leq v\leq0$ and $H\geq1$. Fix $0<\varepsilon<1$, and put
+\[
+ m=\inf_X(u-(1-\varepsilon)v),\qquad
+ U_s=\{u<(1-\varepsilon)v+m+s\}.
+\]
+There are $\delta_\varepsilon>0$ and $C_H>0$, depending only on the indicated parameters and the background, such that
+\begin{equation}\label{eq:thin-capacity}
+ t^n\operatorname{Cap}(U_s)\leq C_H\int_{U_{s+t}}\omega_u^n
+ \qquad(0<s,t,\ s+t<\delta_\varepsilon).
+\end{equation}
+Every $U_s$, $s>0$, has positive capacity.
+\end{lemma}
+\begin{proof}
+Use the constant $B_0$ from \cref{thm:modified-comparison} and set
+\[
+ \delta_\varepsilon=\min\{1-\varepsilon,\varepsilon^3/(128B_0n^2)\}.
+\]
+For a capacity test $0\leq\rho\leq1$, put
+\[
+ \tau=\frac{t}{2(1-\varepsilon)(H+1)},\quad
+ w=(1-\tau)v+\tau\rho,\quad
+ m'=\inf_X(u-(1-\varepsilon)w).
+\]
+Then $0<\tau<1$ and
+$0\leq(1-\varepsilon)(w-v)\leq t/2$, so $m-t/2\leq m'\leq m$. Consequently
+\[
+ U_s\subset V:=\{u<(1-\varepsilon)w+m'+s+t/2\}
+ \subset U_{s+t}.
+\]
+Apply modified comparison to $u,w$ at height $s+t/2$. Its inverse factor is at most $(8/7)^n$. Moreover,
+\[
+ \omega_{(1-\varepsilon)w}
+ \geq(1-\varepsilon)\tau\omega_\rho
+ =\frac{t}{2(H+1)}\omega_\rho.
+\]
+Integration over $U_s\subset V$ and comparison over $V$ give \eqref{eq:thin-capacity}, with $C_H=[2(H+1)]^n(8/7)^n$, after taking the supremum over $\rho$. Each $U_s$ is nonempty by the definition of the infimum. \Cref{lem:strict-set-positive-volume} gives positive smooth volume, hence positive capacity by the constant test.
+\end{proof}
+
+\begin{lemma}[A backwards iteration]\label{lem:backwards-capacity}
+In the preceding setting, suppose
+\[
+ \int_E\omega_u^n\leq A\operatorname{Cap}(E)^2\qquad(E\subset X\ \hbox{Borel}),
+ \qquad A>0.
+\]
+For every $0<D<\delta_\varepsilon$,
+\begin{equation}\label{eq:sublevel-capacity-lower}
+ \operatorname{Cap}(U_D)\geq\frac{D^n}{4^nC_HA}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $a(s)=\operatorname{Cap}(U_s)^{1/n}>0$ and $K=(C_HA)^{1/n}$. The preceding lemma gives
+\[
+ t\,a(s)\leq K a(s+t)^2\qquad(s+t<\delta_\varepsilon).
+\]
+Suppose $4Ka(D)<D$. Starting with $s_0=D$, define
+\[
+ t_j=2Ka(s_j),\qquad s_{j+1}=s_j-t_j.
+\]
+As long as $s_{j+1}>0$, the displayed inequality yields
+$a(s_{j+1})\leq a(s_j)/2$. Inductively,
+\[
+ \sum_{j\geq0}t_j\leq4Ka(D)<D,
+\]
+so all these choices are allowed and $s_j\downarrow s_\infty>0$. Monotonicity gives
+$0<a(s_\infty)\leq a(s_j)\leq2^{-j}a(D)$, a contradiction. Therefore $D\leq4Ka(D)$, which is \eqref{eq:sublevel-capacity-lower}. No continuity of capacity at decreasing sets is required.
+\end{proof}
+
+\begin{theorem}[The $L^p$ potential estimate]\label{thm:lp-potential-estimate}
+Fix $p>1$. There are constants $C_p,c_p>0$ such that, whenever
+$u\in\PSH(X,\omega)\cap L^\infty(X)$, $\sup_Xu=0$, and
+\[
+ \omega_u^n=F\,dV,\qquad F\in L^p(X,dV),\quad F\geq0,
+\]
+we have
+\begin{equation}\label{eq:lp-potential-bound}
+ \|u\|_\infty\leq C_p(1+\|F\|_p),
+ \qquad \|F\|_p\geq c_p.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The zero density is excluded by \cref{cor:bounded-mass-positive}. Apply \cref{cor:lp-capacity-square,lem:backwards-capacity} with $v=0$, $H=1$, $\varepsilon=1/2$, and $A=C_p\|F\|_p>0$. Fix $D=\delta_{1/2}/2$. If $M=-\inf_Xu$, the resulting inequality is
+\[
+ \operatorname{Cap}(\{u<-M+D\})\geq c/\|F\|_p.
+\]
+If $M>D+1$, \eqref{eq:global-capacity-tail} bounds this capacity by $C/(M-D)$, giving the first assertion; the remaining case is immediate. Bounding the same capacity by $\operatorname{Cap}(X)$ gives the second assertion.
+\end{proof}
+
+The bound is deliberately coarse; it suffices for compactness. The positive lower bound concerns the $L^p$ norm of a density of a bounded solution. It does not assert a positive infimum of the total Monge--Amp\`ere masses of all bounded potentials.
+
+\section{From $L^1$ convergence to uniform convergence}
+
+\begin{theorem}\label{thm:lp-uniform-compactness}
+Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
+\[
+ \omega_{u_j}^n=F_j\,dV,\qquad F_j\geq0,\qquad \sup_j\|F_j\|_p<\infty
+\]
+for some $p>1$. If $(u_j)$ is Cauchy in $L^1(X,dV)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega$-plurisubharmonic function.
+\end{theorem}
+\begin{proof}
+By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. Suppose uniform Cauchy convergence fails. After exchanging indices when necessary, there are a number $a>0$ and arbitrarily large $j,k$ with
+\[
+ S:=\inf_X(u_k-u_j)\leq-a.
+\]
+Choose $0<\varepsilon<1$ such that $\varepsilon H<a/4$, and choose a fixed $D>0$ with $2D<\delta_\varepsilon$ and $2D<a/4$. Apply the preceding sublevel lemmas with $u=u_k$, $v=u_j$. Since $v\leq0$,
+$m=\inf(u-(1-\varepsilon)v)\leq S$. Thus
+\[
+ U_{2D}\subset\{u-v<S+2D+\varepsilon H\}
+ \subset\{|u-v|>a/2\}.
+\]
+The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a common $A$ supplied by \cref{cor:lp-capacity-square}, gives $\operatorname{Cap}(U_D)\geq c>0$. On the other hand, \eqref{eq:thin-capacity}, H\"older and Chebyshev give
+\[
+ \begin{split}
+ D^n\operatorname{Cap}(U_D)
+ &\leq C_H\int_{U_{2D}}F_k\,dV\\
+ &\leq C_H\|F_k\|_p
+       \left(\frac{2\|u_k-u_j\|_1}{a}\right)^{1/p'}
+ \longrightarrow0.
+ \end{split}
+\]
+This contradiction proves uniform Cauchy convergence. Normalized $L^1$ compactness supplies an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
+\end{proof}
+
+This proves the compactness statement of \cite[Corollary 5.10]{KN15}. The density bound is essential to the argument: normalized $L^1$ compactness alone would not give uniform convergence.
+
+\section{Existence for an $L^p$ density}
+
+\begin{proof}[Proof of \cref{thm:kn-continuous}]
+Choose smooth strictly positive $f_j\to f$ in $L^p(X,dV)$. Smooth existence gives
+\[
+ \omega_{u_j}^n=c_jf_j\,dV,\qquad \sup_Xu_j=0,\qquad c_j>0.
+\]
+We first control the constants. For $n\geq2$, fix a Gauduchon metric $\gamma$. By \cref{prop:gauduchon-amgm},
+\[
+ c_j^{1/n}A_j\leq\int_X\omega\wedge\gamma^{n-1},
+ \qquad A_j=\int_X(f_jdV/\gamma^n)^{1/n}\gamma^n.
+\]
+Since $|x^{1/n}-y^{1/n}|\leq|x-y|^{1/n}$ for $x,y\geq0$, H\"older's inequality gives $A_j\to A>0$. Thus $c_j$ is bounded above. In dimension one the same estimate is Stokes' identity and $A_j=\int_Xf_j\,dV$.
+
+The lower-density estimate in \cref{thm:lp-potential-estimate} gives
+$c_j\|f_j\|_p\geq c_p$, so the constants are bounded away from zero. The densities $c_jf_j$ are now uniformly bounded in $L^p$, and the same theorem gives a common bound for $u_j$. Pass to a subsequence with $c_j\to c>0$ and $u_j$ Cauchy in $L^1$. By \cref{thm:lp-uniform-compactness}, $u_j\to u$ uniformly, with $u$ continuous and $\sup_Xu=0$.
+
+Bounded Bedford--Taylor continuity gives $\omega_{u_j}^n\rightharpoonup\omega_u^n$, while $c_jf_j\to cf$ in $L^p$. Hence $\omega_u^n=cf\,dV$. This proves existence on every compact Hermitian manifold, without bounded mass or a positive lower-volume assumption.
+\end{proof}
+
+\section{The exponential equation and the Gauduchon mean}
+
+The exponential equation also needs control of the additive constants. The following use of the Gauduchon trace provides the upper bound, even when the densities tend to zero at some points.
+
+\begin{lemma}\label{lem:exponential-gauduchon-mean}
+Fix $\lambda>0$ and $p>1$. Suppose smooth $u_j$ with $\omega_{u_j}>0$ solve
+\[
+ \omega_{u_j}^n=e^{\lambda u_j}f_j\,dV,
+\]
+where smooth strictly positive $f_j$ converge in $L^p$ to a nonnegative nonzero $f$. Then $M_j=\sup_Xu_j$ is bounded above and below, uniformly in $j$.
+\end{lemma}
+\begin{proof}
+Absorb the smooth ratio $dV/\omega^n$ into $f_j$, so that $dV=\omega^n$ in the calculation. Choose $\rho>0$ smooth with $\ddc(\rho\omega^{n-1})=0$, using \cref{thm:gauduchon}; for $n=1$, take $\rho=1$. Put
+\[
+ \alpha=\int_X\rho\omega^n,\quad
+ A_j=\int_X f_j^{1/n}\rho\omega^n,\quad
+ \psi_j=u_j-M_j\leq0.
+\]
+As in the preceding proof, $A_j\to A>0$. Arithmetic--geometric mean and the conserved trace imply
+\[
+ \alpha=\int_X\omega_{u_j}\wedge\rho\omega^{n-1}
+ \geq e^{\lambda M_j/n}\int_X e^{\lambda\psi_j/n}f_j^{1/n}\rho\omega^n.
+\]
+Apply Jensen's inequality to the probability measure
+$A_j^{-1}f_j^{1/n}\rho\omega^n$. Taking logarithms yields
+\begin{equation}\label{eq:gauduchon-exponential-mean}
+ \lambda M_j\leq n\log(\alpha/A_j)
+ +\frac{\lambda}{A_j}\int_X(-\psi_j)f_j^{1/n}\rho\omega^n.
+\end{equation}
+The normalized potentials $\psi_j$ have uniform $L^q$ bounds for every finite $q$, by \cref{lem:uniform-exponential}. With $q=np/(np-1)$, H\"older gives a uniform bound for the last integral, since
+$\|f_j^{1/n}\|_{np}=\|f_j\|_p^{1/n}$. This proves the upper bound for $M_j$.
+
+Finally, the density $F_j=e^{\lambda u_j}f_j$ satisfies
+$\|F_j\|_p\leq e^{\lambda M_j}\|f_j\|_p$. Applying the lower-density bound of \cref{thm:lp-potential-estimate} to $\psi_j$ gives
+\[
+ c_p\leq e^{\lambda M_j}\|f_j\|_p,
+\]
+which bounds $M_j$ below. This uses a density estimate, not a positive lower bound on arbitrary Monge--Amp\`ere masses.
+\end{proof}
+
+The weighted mean in \eqref{eq:gauduchon-exponential-mean} is Nguyen's mechanism \cite[Proposition 2.5]{Nguyen16}. Here the lower bound is obtained directly from the sublevel estimate, so no continuous existence theorem is needed as an intermediate input.
+
+\begin{proof}[Proof of \cref{thm:nguyen-exp}]
+Choose $f_j$ as above. The smooth proper equation, \cref{thm:smooth-proper-existence}, gives smooth $u_j$ satisfying the required equations. The preceding lemma bounds $M_j$ and consequently bounds $F_j=e^{\lambda u_j}f_j$ in $L^p$. The normalized potentials $\psi_j=u_j-M_j$ are uniformly bounded by \cref{thm:lp-potential-estimate}. Pass to a subsequence with $M_j\to M$ and $\psi_j$ Cauchy in $L^1$. \Cref{thm:lp-uniform-compactness} gives uniform convergence $u_j\to u\in\PSH(X,\omega)\cap C(X)$.
+
+Uniform convergence and $f_j\to f$ in $L^p$ give
+$e^{\lambda u_j}f_j\to e^{\lambda u}f$ in $L^p$. Bounded-product continuity therefore gives $\omega_u^n=e^{\lambda u}f\,dV$. Bounded exponential comparison, \cref{cor:bounded-exponential-comparison}, gives uniqueness, in fact among all bounded solutions. All limiting Monge--Amp\`ere measures in this proof are controlled by the equations themselves.
+\end{proof}

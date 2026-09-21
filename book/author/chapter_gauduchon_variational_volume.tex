@@ -1,0 +1,260 @@
+\chapter{A Gauduchon variational volume}
+\label{chap:gauduchon-variational-volume}
+
+Raw Hermitian mass changes under a smooth change of potential. The normalization of a Monge--Amp\`ere equation behaves differently: it depends on the background modulo $\ddc$ of a smooth function. Fixing a smooth probability measure therefore gives a finite volume quantity on the cone of backgrounds admitting positive representatives. We express its $n$th root as an infimum of linear Gauduchon integrals and extend that formula to pseudoeffective backgrounds.
+
+The choice of probability measure will remain part of the definition. In general it cannot be removed. The concavity method belongs to the general construction of \cite[Theorem 2.13]{Collins21}; our purpose here is to give the precise Gauduchon formula, its elementary extension, and the limits of its interpretation. No bounded mass property is used.
+
+\section{The definition and its elementary properties}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth strictly positive top-degree form $\mu$ with $\int_X\mu=1$. For a Gauduchon metric $\gamma$, put
+\[
+ D_\mu(\gamma)=\int_X
+           \left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+This number is positive. It scales by $r^{n-1}$ when $\gamma$ is multiplied by a positive constant $r$.
+
+We call a smooth real background $\theta$ pseudoeffective if $\PSH(X,\theta)\neq\varnothing$. This definition also permits non-closed $\theta$. We identify smooth backgrounds whose difference is $\ddc f$ for a smooth real function $f$; this is the larger space of smooth $\ddc $-classes considered earlier, rather than the closed subspace of ordinary Bott--Chern cohomology.
+
+\Needspace{12\baselineskip}
+\begin{definition}\label{def:gaud-variational-volume}
+For a pseudoeffective background $\theta$, define
+\[
+ \lambda_\mu(\theta)=
+ \inf_{\gamma\text{ Gauduchon}}
+ \frac{\displaystyle\int_X\theta\wedge\gamma^{n-1}}
+      {D_\mu(\gamma)},
+ \qquad
+ \mathcal V_\mu(\theta)=\lambda_\mu(\theta)^n.
+\]
+In dimension one every Hermitian metric is permitted in the infimum; its quotient is simply $\int_X\theta$.
+\end{definition}
+
+\begin{proposition}\label{prop:gaud-volume-elementary}
+The number $\lambda_\mu(\theta)$ is finite and nonnegative. It is unchanged by a smooth $\ddc$ change of $\theta$, positively homogeneous of degree one, and concave on the pseudoeffective cone. If $\beta-\theta$ is pseudoeffective, then
+\[
+ \lambda_\mu(\beta)\geq\lambda_\mu(\theta).
+\]
+The function is upper semicontinuous under smooth convergence within that cone.
+\end{proposition}
+\begin{proof}
+Choose $u\in\PSH(X,\theta)$. Distributional Stokes and the Gauduchon condition give
+\[
+ \int_X\theta\wedge\gamma^{n-1}
+ =\int_X(\theta+\ddc u)\wedge\gamma^{n-1}\geq0.
+\]
+Thus every quotient is nonnegative. Testing one fixed Gauduchon metric gives a finite upper bound. The same identity proves gauge invariance and monotonicity for a pseudoeffective difference.
+
+Each quotient is a linear function of the background. The infimum of these linear functions is concave and positively homogeneous. Each individual quotient is continuous in the smooth topology. Given a smoothly converging sequence, bound the infimum by any one quotient, take the upper limit, and finally take the infimum over the test metric. This proves upper semicontinuity.
+\end{proof}
+
+These properties concern $\lambda_\mu$, the root of the volume. Concavity of its $n$th power is not asserted.
+
+\section{The exact formula in the positive cone}
+
+Let $\mathscr P$ consist of backgrounds $\theta$ admitting a smooth real $u$ with $\theta+\ddc u>0$. For $\theta\in\mathscr P$, the smooth equation theorem gives a unique positive form
+\[
+ \Omega_\theta=\theta+\ddc u_\theta,
+ \qquad \Omega_\theta^n=c_\theta(\mu)\mu,
+ \qquad c_\theta(\mu)>0.
+\]
+The potential is unique after any fixed additive normalization. To apply \cref{thm:tw-smooth}, first choose a Hermitian representative of the background and express $\mu$ as a smooth positive density relative to its volume form.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:gaud-volume-dual-formula}
+For every $\theta\in\mathscr P$,
+\[
+ \lambda_\mu(\theta)=c_\theta(\mu)^{1/n},
+ \qquad \mathcal V_\mu(\theta)=c_\theta(\mu).
+\]
+The infimum in \cref{def:gaud-variational-volume} is attained. When $n\geq2$, its minimizing Gauduchon metrics are precisely the constant multiples of the Gauduchon metric conformal to $\Omega_\theta$.
+\end{theorem}
+\begin{proof}
+For any Hermitian metric $\gamma$, the arithmetic--geometric mean inequality for the eigenvalues of $\Omega_\theta$ relative to $\gamma$ gives the pointwise inequality
+\[
+ \Omega_\theta\wedge\gamma^{n-1}
+ \geq\left(\frac{\Omega_\theta^n}{\gamma^n}\right)^{1/n}\gamma^n
+ =c_\theta(\mu)^{1/n}
+       \left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+If $\gamma$ is Gauduchon, integration replaces $\Omega_\theta$ in the numerator by $\theta$. Every test quotient is therefore at least $c_\theta(\mu)^{1/n}$.
+
+For $n\geq2$, take the Gauduchon representative $\gamma=e^g\Omega_\theta$ given by \cref{thm:gauduchon}. The eigenvalues are equal at every point, so equality holds pointwise and then in the quotient. This proves the formula and attainment. Conversely, if a metric attains the infimum, the nonnegative smooth difference in the displayed inequality has zero integral. It vanishes everywhere, and equality in the arithmetic--geometric mean inequality makes $\gamma$ conformal to $\Omega_\theta$. Uniqueness of the Gauduchon metric in a conformal class, up to constant scale, proves the last assertion.
+
+For $n=1$, integrate the equation and use $\int_X\ddc u_\theta=0$. It gives $c_\theta(\mu)=\int_X\theta$, equal to every quotient in the definition.
+\end{proof}
+
+\begin{corollary}\label{cor:gaud-volume-big-positive}
+If $\theta$ is big, in the sense that
+$\theta+\ddc\rho\geq\delta h$ for some $\delta>0$ and some Hermitian metric $h$, then $\lambda_\mu(\theta)>0$.
+\end{corollary}
+\begin{proof}
+The background $\theta-\delta h$ is pseudoeffective. Monotonicity, homogeneity and the theorem give
+$\lambda_\mu(\theta)\geq\delta\lambda_\mu(h)>0$.
+\end{proof}
+
+This implication does not require a smooth positive representative of $\theta$. Its converse will not be assumed.
+
+\section{Concavity, equality and variation}
+
+\begin{theorem}\label{thm:gaud-volume-concavity-equality}
+Let $\theta_0,\theta_1\in\mathscr P$ and $0<s<1$. Then
+\[
+ \lambda_\mu((1-s)\theta_0+s\theta_1)
+ \geq(1-s)\lambda_\mu(\theta_0)+s\lambda_\mu(\theta_1).
+\]
+Equality holds if and only if, for some $r>0$ and some smooth real $f$,
+\[
+ \theta_1=r\theta_0+\ddc f.
+\]
+\end{theorem}
+\begin{proof}
+Concavity was proved in \cref{prop:gaud-volume-elementary}. Suppose first that $n\geq2$ and equality holds. Take a minimizing Gauduchon metric for the middle background. Its quotient is the indicated convex combination of its two endpoint quotients. Each endpoint quotient is at least the corresponding infimum. Equality therefore forces this same metric to minimize both endpoint quotients.
+
+By \cref{thm:gaud-volume-dual-formula}, both solution forms $\Omega_0$ and $\Omega_1$ are conformal to this metric. Their volume forms are $c_0\mu$ and $c_1\mu$, so their pointwise proportionality factor is the constant $r=(c_1/c_0)^{1/n}$. Hence $\Omega_1=r\Omega_0$, which gives the stated smooth $\ddc$ relation. Conversely that relation, gauge invariance and homogeneity prove equality.
+
+When $n=1$, the function is $\int_X\theta$. Take $r=\int_X\theta_1/\int_X\theta_0$. The difference $\theta_1-r\theta_0$ has integral zero, so the Green operator on the compact curve writes it as $\ddc f$ with $f$ smooth. Thus the same equivalence holds.
+\end{proof}
+
+\begin{proposition}\label{prop:gaud-volume-first-variation}
+The function $\lambda_\mu$ is smooth along smooth finite-dimensional families in $\mathscr P$. For a smooth real $(1,1)$-form $\chi$ and $n\geq2$, its derivative at $\theta$ is
+\[
+ (\mathrm{d}\lambda_\mu)_\theta(\chi)
+ =\frac{\displaystyle\int_X\chi\wedge\gamma_\theta^{n-1}}
+        {D_\mu(\gamma_\theta)},
+\]
+where $\gamma_\theta$ is any minimizing Gauduchon metric. In dimension one the derivative is $\int_X\chi$.
+\end{proposition}
+\begin{proof}
+Use a fixed mean normalization for the solution potential. The linearization of the logarithmic equation, including its scalar, is
+\[
+ (v,a)\longmapsto\operatorname{tr}_{\Omega_\theta}(\ddc v)-a.
+\]
+The maximum principle, the Gauduchon adjoint probability and the Fredholm alternative give a bounded inverse on mean-zero H\"older spaces, exactly as in the smooth continuity proof. The implicit function theorem therefore gives smooth dependence of the normalized solution and its scalar when the background varies in a finite-dimensional smooth family.
+
+Write $\lambda=\lambda_\mu(\theta)$, $\Omega=\Omega_\theta$, and $\gamma_\theta=e^g\Omega$. Differentiating $\Omega_t^n=\lambda_t^n\mu$ at $t=0$ gives
+\[
+ (\chi+\ddc\dot u)\wedge\Omega^{n-1}
+                   =\lambda^{n-1}\dot\lambda\,\mu.
+\]
+Multiply by $e^{(n-1)g}$ and integrate. The term with $\ddc\dot u$ vanishes by the Gauduchon condition. Moreover
+\[
+ D_\mu(\gamma_\theta)
+       =\lambda^{n-1}\int_X e^{(n-1)g}\mu.
+\]
+Substitution proves the derivative formula. The dimension-one formula follows directly from the definition.
+\end{proof}
+
+Thus a minimizing Gauduchon metric is also the linear functional that differentiates the root volume. This identifies the two uses of Gauduchon metrics in the infimum and in the linearized equation.
+
+\input{author/section_gauduchon_volume_hessian}
+
+\input{author/section_gauduchon_metric_geometry}
+
+\input{author/section_weak_gauduchon_duality}
+
+\input{author/section_gauduchon_determinant_integrability}
+
+\section{Nef limits and a boundary without a minimizer}
+
+Call a smooth background nef if, for one Hermitian $h$ and every $\epsilon>0$, $\theta+\epsilon h$ belongs to $\mathscr P$. Metric comparison makes this condition independent of $h$. Such a background is pseudoeffective: normalize its almost-positive smooth potentials, use the compactness theorem in a fixed lower-curvature class, and pass their distributional positivity to an $L^1$ limit.
+
+\begin{theorem}\label{thm:gaud-volume-nef-limit}
+For every nef background $\theta$ and every Hermitian form $h$,
+\[
+ \lambda_\mu(\theta)
+     =\lim_{\epsilon\downarrow0}\lambda_\mu(\theta+\epsilon h),
+ \qquad
+ \mathcal V_\mu(\theta)
+     =\lim_{\epsilon\downarrow0}c_{\theta+\epsilon h}(\mu).
+\]
+These limits are decreasing and independent of $h$.
+\end{theorem}
+\begin{proof}
+The quantities decrease by monotonicity. The infima over $\epsilon>0$ and over Gauduchon metrics commute. For a fixed metric the quotient is linear in $\epsilon$, so
+\[
+ \begin{split}
+ \inf_{\epsilon>0}\lambda_\mu(\theta+\epsilon h)
+ &=\inf_\gamma\inf_{\epsilon>0}
+   \frac{\int_X\theta\wedge\gamma^{n-1}
+                +\epsilon\int_Xh\wedge\gamma^{n-1}}
+        {D_\mu(\gamma)}\\
+ &=\lambda_\mu(\theta).
+ \end{split}
+\]
+The coefficient of $\epsilon$ is positive, so the inner infimum is its limit at zero. Apply the exact formula on $\mathscr P$ and raise to the $n$th power. The resulting expression is the original definition at $\theta$, proving independence of $h$.
+\end{proof}
+
+If $X$ is K\"ahler and $\theta$ is closed and nef, choose $h$ K\"ahler. Closed Stokes in every perturbed equation gives
+\[
+ c_{\theta+\epsilon h}(\mu)=\int_X(\theta+\epsilon h)^n.
+\]
+It follows that $\mathcal V_\mu(\theta)=\int_X\theta^n$ in this regime. No such polynomial identity is used for non-closed backgrounds.
+
+\begin{proposition}\label{prop:zero-gaud-volume-attainment}
+Suppose $\theta$ is pseudoeffective and $\lambda_\mu(\theta)=0$. The infimum is attained if and only if $\theta=\ddc f$ for a smooth real function $f$.
+\end{proposition}
+\begin{proof}
+If the infimum is attained by $\gamma$, take a positive representative $T=\theta+\ddc u$. Its integral against the strictly positive form $\gamma^{n-1}$ is zero. Positivity forces $T=0$, so $\ddc u=-\theta$ is smooth. Taking the trace with one fixed Hermitian metric gives an elliptic equation with smooth right side; elliptic regularity makes $u$ smooth. Thus $\theta$ is smoothly $\ddc$-exact. Conversely a smoothly exact background pairs to zero with every Gauduchon metric, so all metrics attain the infimum.
+\end{proof}
+
+The nef divisor class in the ruled-surface example has zero square and a nonzero positive representative $[D]$. Its root volume is zero, but no smooth Gauduchon metric minimizes the defining quotient. A minimizing sequence must therefore degenerate in a manner that prevents a smooth positive limiting metric. This assertion concerns the infimum; it is not a compactness theorem for such sequences.
+
+\section{Dependence on the probability measure}
+
+\begin{proposition}\label{prop:gaud-volume-density-comparison}
+For smooth positive probability measures $\mu,\nu$, choose constants $m,M>0$ such that $m\mu\leq\nu\leq M\mu$. Then for every pseudoeffective $\theta$,
+\[
+ M^{-1/n}\lambda_\mu(\theta)
+ \leq\lambda_\nu(\theta)
+ \leq m^{-1/n}\lambda_\mu(\theta).
+\]
+In particular the zero set and the positivity set are independent of the chosen smooth probability measure.
+\end{proposition}
+\begin{proof}
+The density inequalities give
+$m^{1/n}D_\mu(\gamma)\leq D_\nu(\gamma)
+ \leq M^{1/n}D_\mu(\gamma)$.
+The numerators are nonnegative. Divide and take infima.
+\end{proof}
+
+The values themselves need not be independent of the measure. There is an exact criterion on the positive cone.
+
+\begin{proposition}\label{prop:gaud-volume-density-independence}
+Fix a Hermitian representative $\omega$. The value $\mathcal V_\mu(\omega)$ is the same for all smooth positive probability measures $\mu$ if and only if
+\[
+ \int_X(\omega+\ddc v)^n
+\]
+is independent of the smooth potential $v$ with $\omega+\ddc v>0$.
+\end{proposition}
+\begin{proof}
+For such a potential, put
+\[
+ M_v=\int_X(\omega+\ddc v)^n,
+ \qquad \mu_v=\frac{(\omega+\ddc v)^n}{M_v}.
+\]
+It is a smooth positive probability measure, and $v$ already solves its normalized equation with scalar $M_v$. Scalar uniqueness and \cref{thm:gaud-volume-dual-formula} give
+$\mathcal V_{\mu_v}(\omega)=M_v$.
+Thus measure independence implies mass invariance. Conversely, if all these masses equal one constant, every smooth normalized equation has that constant as its scalar after integration. The volume is then independent of its smooth probability measure.
+\end{proof}
+
+The non-closed torus example of \cref{ex:torus-mass} therefore produces different values for different smooth probability measures. On a Gauduchon surface, smooth mass is conserved, so the value equals $\int_X\omega^2$ for every such measure. On the Hopf threefold of \cref{chap:hopf}, the value is finite and positive for each fixed $\mu$, even though $v_+(\omega)=+\infty$.
+
+\input{author/section_gauduchon_volume_extrema}
+
+\input{author/section_mass_geometry}
+
+\input{author/section_nef_degenerations}
+
+\input{author/section_smooth_cone_duality}
+
+\input{author/section_divisorial_gauduchon_volume}
+
+\Needspace{24\baselineskip}
+\section{Questions beyond the smooth formula}
+
+The formula gives a finite quantity on every pseudoeffective smooth $\ddc $-class, is invariant under changing its smooth representative, and recovers a solved Monge--Amp\`ere normalization on the positive cone. Its root is concave, its nef extension is canonical once $\mu$ is fixed, and its vanishing does not depend on that choice. These are consequences of the proved formula.
+
+Several further identifications remain questions. Does positivity characterize bigness, at least for nef backgrounds on an arbitrary compact complex manifold? The preceding section identifies the extrema over smooth densities on the positive cone. What further comparison is valid for volumes attached to singular classes? What modification law is valid when the pullback of a smooth positive probability measure vanishes on the exceptional divisor? The present proof uses strict positivity of the density for its smooth equation and its minimizing metric. It does not establish a birational transformation law for degenerate pulled-back densities, nor an intersection volume for an arbitrary b-divisor family.
+
+For a finite divisor on $X$, the residual construction and its exact feasibility threshold are now available. Extending them to compatible residual classes on all modifications, or identifying them with normalizations in general prescribed envelope classes, still requires further theorems. The explicit failure of envelope-system recovery shows why taking a perturbation limit and then discarding its extra divisorial singularities cannot be assumed to preserve such a theory.

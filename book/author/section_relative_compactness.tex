@@ -1,0 +1,210 @@
+\section{Compactness with a common lower barrier}
+
+An existence proof usually produces convergence in $L^1$ before it produces convergence in capacity. We now bridge these topologies when all potentials stay within a fixed bounded distance of one reference. The proof keeps the local bounded estimates separate from the singular domination argument. Neither bounded mass nor a uniform positive lower mass is assumed.
+
+We first specify one further standard local input. Cegrell's fixed-measure convergence lemma says that a uniformly bounded sequence of plurisubharmonic functions converging in $L^1_{\mathrm{loc}}$ converges in $L^1(\nu)$ on compact subsets for each finite non-pluripolar measure $\nu$ there. The usual formulation allowing extraction gives the same conclusion: apply it to every subsequence, extract almost-everywhere convergence for smooth volume, and use the subsequence criterion for convergence. This is the classical fixed-measure argument used in \cite[Section 11.1.2]{GZ17}; see also the explicit extraction in \cite[Lemma 2.1 and Corollary 2.2]{KN22}. We retain this local lemma as a standard input. The Hermitian arguments below are proved here.
+
+\Needspace{15\baselineskip}
+\begin{lemma}\label{lem:fixed-npp-integrals}
+Let $\nu$ be a finite non-pluripolar measure on $X$. If uniformly bounded quasi-plurisubharmonic functions $a_j,a$ have a common smooth lower curvature bound and $a_j\to a$ in $L^1(X)$, then
+\[
+ \int_X|a_j-a|\,\mathrm{d}\nu\longrightarrow0.
+\]
+If instead $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in $L^1(X)$, then, for every $b>0$,
+\[
+ \int_X|e^{bu_j}-e^{bu}|\,\mathrm{d}\nu\longrightarrow0.
+\]
+\end{lemma}
+\begin{proof}
+For the first statement add a fixed smooth strictly plurisubharmonic correction on each of finitely many coordinate balls. The resulting functions are uniformly bounded and plurisubharmonic. Apply the local input on smaller compact balls covering $X$ and sum the integrals; the corrections cancel in the difference.
+
+For the second statement choose $A\omega\geq\theta$. If $u_j\leq C$, the convex chain rule gives
+$\ddc e^{bu_j}\geq-bAe^{bC}\omega$, also for unbounded $u_j$ by bounded truncation. Thus $e^{bu_j}$ are uniformly bounded quasi-plurisubharmonic functions in one lower curvature class. Their $L^1(\mathrm{d}V)$ convergence follows from the Lipschitz bound $be^{bC}$ for the exponential on $(-\infty,C]$. Apply the first statement. We assign the value zero to the exponential at a pole.
+\end{proof}
+
+\begin{lemma}\label{lem:bounded-mixed-capacity}
+Fix a Hermitian metric $\omega$ and $A<+\infty$. All positive mixed measures
+\[
+ \omega_{v_1}\wedge\cdots\wedge\omega_{v_k}\wedge\omega^{n-k},
+ \qquad \|v_i\|_\infty\leq A,
+ \quad v_i\in\PSH(X,\omega),
+\]
+are bounded above on Borel sets by $C_A\operatorname{Cap}_\omega$. In particular their total masses are bounded. Their integrals against uniformly bounded functions tending to zero in capacity tend uniformly to zero.
+\end{lemma}
+\begin{proof}
+Translate the $v_i$ so that $0\leq v_i\leq2A$, and put
+$q=(v_1+\cdots+v_k)/B$, where $B\geq\max\{2k,2kA,1\}$.
+Then $0\leq q\leq1$ and
+\[
+ \omega_q=B^{-1}\sum_{i=1}^k\omega_{v_i}+(1-k/B)\omega.
+\]
+All coefficients are positive. Expanding $\omega_q^n$ bounds the indicated mixed product by a constant multiple of $\omega_q^n$. The definition of capacity proves the claim. The case $k=0$ follows by testing with zero. For a bounded function $z$, split its integral into $\{|z|>t\}$ and its complement; first use capacity convergence for fixed $t>0$, and then let $t\downarrow0$.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:moving-bounded-integrals}
+Let $a_j,a,w_j,w\in\PSH(X,\omega)$ be uniformly bounded. If $a_j\to a$ in $L^1(X)$ and $w_j\to w$ in capacity, then, for $0\leq k\leq n$,
+\[
+ \int_X|a_j-a|\,\omega_{w_j}^{k}\wedge\omega^{n-k}
+ \longrightarrow0.
+\]
+The same conclusion holds when the $a_j$ have any fixed smooth lower curvature bound.
+\end{lemma}
+\begin{proof}
+We give the torsion calculation behind \cite[Lemma 2.3]{KN22}. By the subsequence criterion, we may first extract $a_j\to a$ almost everywhere for smooth volume. The upper tail envelopes
+$A_j=(\sup_{\ell\geq j}a_\ell)^*$ decrease to $a$: the local Hartogs lemma gives the upper inequality for the limit, and almost-everywhere convergence gives the reverse one. Bounded monotone capacity convergence therefore implies
+\[
+ \alpha_j:=\max(a_j,a)\longrightarrow a\quad\text{in capacity}.
+\]
+The part $\alpha_j-a$ of $|a_j-a|=(\alpha_j-a)+(\alpha_j-a_j)$ tends to zero against the moving products by \cref{lem:bounded-mixed-capacity}.
+
+Put $h_j=\alpha_j-a_j\geq0$. We compare its integrals for two indices $j,\ell$. The case $k=0$ is the assumed $L^1$ convergence. For $k\geq1$, put $z=w_j-w_\ell$ and
+\[
+ T=\sum_{s=0}^{k-1}\omega_{w_j}^{s}\wedge
+       \omega_{w_\ell}^{k-1-s}\wedge\omega^{n-k}.
+\]
+The sum includes $s=0$. Factorization and compact Stokes give
+\begin{align*}
+ &\int_Xh_j\bigl(\omega_{w_j}^{k}-\omega_{w_\ell}^{k}\bigr)
+                      \wedge\omega^{n-k}\\
+ &\hspace{20mm}=\int_Xh_j\ddc z\wedge T
+ =\int_Xz\,\ddc(h_jT).
+\end{align*}
+Here the full product rule is
+\begin{equation}\label{eq:moving-measure-torsion}
+ \ddc(h_jT)=\ddc h_j\wedge T+\mathrm{d}h_j\wedge\dc T
+             -\dc h_j\wedge \mathrm{d}T+h_j\ddc T.
+\end{equation}
+The last term is retained. It need not vanish on a Hermitian manifold.
+
+We estimate the four terms. Since $\ddc h_j=\omega_{\alpha_j}-\omega_{a_j}$, the absolute contribution of the first is at most
+\[
+ \int_X|z|(\omega_{\alpha_j}+\omega_{a_j})\wedge T.
+\]
+It tends to zero uniformly as $j,\ell\to\infty$ by \cref{lem:bounded-mixed-capacity}, since $w_j-w_\ell\to0$ in capacity. Differentiating each factor shows
+$\mathrm{d}T=\mathrm{d}\omega\wedge R$ and $\dc T=\dc\omega\wedge R$, where $R$ is a positive sum of mixed products of degree $(n-2,n-2)$. Moreover $\ddc T$ is a sum of terms containing $\ddc\omega$ and mixed products of degree $n-2$, or $\mathrm{d}\omega\wedge\dc\omega$ and mixed products of degree $n-3$. Terms with negative degree are absent. These smooth torsion factors are bounded in absolute value by fixed multiples of $\omega^2$ and $\omega^3$. As $h_j$ is uniformly bounded, the contribution of $h_j\ddc T$ also tends uniformly to zero by the same capacity estimate.
+
+For the two gradient terms, the pointwise Cauchy--Schwarz inequality for a positive mixed product gives, for example,
+\[
+ \left|\int_Xz\,\mathrm{d}h_j\wedge\dc\omega\wedge R\right|^2
+ \leq C\left(\int_X|z|\,\mathrm{d}h_j\wedge\dc h_j\wedge\omega\wedge R\right)
+          \left(\int_X|z|\,\omega^2\wedge R\right).
+\]
+The second factor tends uniformly to zero. The first is uniformly bounded. For completeness, if $p$ is any of the uniformly bounded potentials and $S$ any positive mixed product of degree $n-1$ occurring here, then
+\[
+ \int_X\mathrm{d}p\wedge\dc p\wedge S
+ =\frac12\int_Xp^2\ddc S-\int_Xp\,\ddc p\wedge S.
+\]
+Expand $\ddc S$ with all its torsion terms as above, and write $\ddc p=\omega_p-\omega$. Boundedness of $p$ and \cref{lem:bounded-mixed-capacity} bound both integrals uniformly. Finally,
+$\mathrm{d}h_j\wedge\dc h_j\leq2\mathrm{d}\alpha_j\wedge\dc\alpha_j+2\mathrm{d}a_j\wedge\dc a_j$
+as positive quadratic forms. This proves the asserted bound. The other gradient term has the same estimate. In dimension one $T=1$ and all torsion terms in \eqref{eq:moving-measure-torsion} vanish.
+
+These bounded integration-by-parts and energy identities may first be written for smooth decreasing regularizations in the exact Hermitian background. The local Bedford--Taylor chain rule, its gradient products and quasi-continuity give the displayed identities for bounded potentials. Equivalently they follow from the bounded current calculus of \cref{chap:products}. Only the common bound on the potentials enters the estimates.
+
+We have shown that the difference of the two $h_j$ integrals tends uniformly to zero when $j,\ell$ are large. For a fixed sufficiently large $\ell$, \cref{lem:fixed-npp-integrals} gives
+\[
+ \int_Xh_j\,\omega_{w_\ell}^{k}\wedge\omega^{n-k}\longrightarrow0.
+\]
+Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
+\end{proof}
+
+\begin{lemma}\label{lem:weighted-extended-lsc}
+Let $\theta\geq0$, and suppose $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in capacity. If $b_j,b$ are nonnegative uniformly bounded quasi-continuous functions and $b_j\to b$ in capacity, then
+\[
+ \int_X b\,\mathrm{MA}^{\mathrm{ext}}_\theta(u)
+ \leq\liminf_j\int_X b_j\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j).
+\]
+Both sides are allowed to be infinite.
+\end{lemma}
+\begin{proof}
+Translate the potentials to be nonpositive. Choose continuous nondecreasing cutoffs $g_T$ on $[-\infty,0]$ which vanish on $[-\infty,-2T]$, equal one on $[-T,0]$, and increase to one at every finite point as $T\to\infty$. For fixed $T$, bounded capacity continuity and \cref{lem:bounded-mixed-capacity} give
+\[
+ \begin{split}
+ \int_Xb_jg_T(u_j)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
+ &=\int_Xb_jg_T(\max(u_j,-2T))\,
+                   \mathrm{MA}_\theta(\max(u_j,-2T))\\
+ &\longrightarrow\int_Xbg_T(u)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u).
+ \end{split}
+\]
+For the capacity bound one can enlarge the background to a fixed Hermitian metric. The bounded measures then have uniformly controlled capacity, so quasi-continuous weights may be used in the usual bounded continuity theorem. The first equality is locality; its weight is zero on the truncation level. The left side is at most the integral in the assertion. Let $T\to\infty$ and use monotone convergence, since extended measures ignore pole sets.
+\end{proof}
+
+The monotone capacity passages used below also require no mass estimate. For a decreasing sequence we require a genuine limit, which is then a common lower bound. A prescribed genuine lower barrier ensures that the decreasing limit is genuine. For an increasing sequence of genuine potentials, the first term is a common lower bound; a common upper bound gives a genuine canonical limit. In either case truncate at $-T$, use bounded monotone capacity convergence, and then let $T\to\infty$. The capacity of the deep sublevels of the fixed genuine lower bound tends to zero. Increasing limits are taken with their canonical upper semicontinuous representative.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:common-barrier-criterion}
+Let $\theta\geq0$ be big. Suppose $\varphi\in\PSH(X,\theta)$ admits a genuine $P_{\delta\theta}(\varphi)$ for some $0<\delta<1$. Let $u_j\in\PSH(X,\theta)$ satisfy, for a fixed $C$,
+\[
+ \varphi-C\leq u_j\leq\varphi+C,\qquad u_j\longrightarrow u\text{ in }L^1(X).
+\]
+If
+\begin{equation}\label{eq:common-barrier-self-error}
+ I_j:=\int_X|e^{u_j}-e^u|\,
+               \mathrm{MA}^{\mathrm{ext}}_\theta(u_j)\longrightarrow0,
+\end{equation}
+then $u_j\to u$ in capacity. No bound on the total Monge--Amp\`ere masses is part of this criterion.
+\end{theorem}
+\begin{proof}
+The canonical limit lies between $\varphi-C$ and $\varphi+C$. It suffices to prove capacity convergence after further extraction from an arbitrary subsequence. Choose an extraction with $I_j\leq2^{-j}$ and almost-everywhere convergence for smooth volume. For $N\geq j$ define
+\[
+ p_{j,N}=P_\theta(u_j,\ldots,u_N),\qquad
+ p_j=P_\theta\left(\inf_{\ell\geq j}u_\ell\right).
+\]
+All these envelopes lie between $\varphi-C$ and $\varphi+C$. The contact theorem and ordered contact give a finite-rooftop inequality: partition the contact set according to the first index $\ell$ for which $p_{j,N}=u_\ell$. On that piece the measure of $p_{j,N}$ is bounded by that of $u_\ell$, and $e^{p_{j,N}}=e^{u_\ell}$. Therefore
+\[
+ \int_X|e^{p_{j,N}}-e^u|\,
+            \mathrm{MA}^{\mathrm{ext}}_\theta(p_{j,N})
+ \leq\sum_{\ell=j}^N I_\ell\leq2^{1-j}.
+\]
+This uses only positive measures, including when their total masses are infinite.
+
+As $N\to\infty$, $p_{j,N}\downarrow p_j$; the limit is the envelope of the infimum because every competitor is below every finite rooftop. The sequence $p_j$ increases to a genuine canonical limit $p$. Both passages hold in capacity by the preceding monotone observation. Apply \cref{lem:weighted-extended-lsc} to the bounded nonnegative weights $|e^{p_{j,N}}-e^u|$, first in $N$ and then in $j$. We obtain
+\[
+ \int_X|e^p-e^u|\,\mathrm{MA}^{\mathrm{ext}}_\theta(p)=0.
+\]
+The inequalities $p_j\leq u_\ell$ for all $\ell\geq j$ imply $p\leq u$, first almost everywhere and then for canonical representatives. Also $p\simeq u\simeq\varphi$. Off their poles, $e^p<e^u$ exactly on $\{p<u\}$, so
+$\mathrm{MA}^{\mathrm{ext}}_\theta(p)(\{p<u\})=0$.
+The competitor $P_{\delta\theta}(\varphi)-C$ makes $P_{\delta\theta}(p)$ genuine. Apply \cref{thm:singular-strict-domination} with coefficient zero to obtain $p\geq u$, and hence $p=u$.
+
+Finally $U_j=(\sup_{\ell\geq j}u_\ell)^*$ decreases to $u$ by Hartogs' lemma and the almost-everywhere extraction. The inequalities
+$p_j\leq u_j\leq U_j$, together with the monotone capacity convergence of both outer sequences, prove the claim.
+\end{proof}
+
+\begin{proposition}\label{prop:lower-barrier-criterion}
+In \cref{thm:common-barrier-criterion}, one may replace the two bounds on $u_j$ by
+\[
+ \varphi-C\leq u_j\leq C
+\]
+provided the $L^1$ limit satisfies $u\preceq\varphi$. In particular the approximants may be bounded while $\varphi$ is unbounded.
+\end{proposition}
+\begin{proof}
+The $L^1$ limit satisfies $u\geq\varphi-C$, so the additional hypothesis implies $u\simeq\varphi$. Repeat the finite rooftop construction in the theorem. Every $p_{j,N}$ remains genuine and lies between $\varphi-C$ and $C$, which is enough for contact support and for the bounded exponential weights. The resulting inequality is still
+\[
+ \int_X|e^{p_{j,N}}-e^u|\,
+             \mathrm{MA}^{\mathrm{ext}}_\theta(p_{j,N})\leq2^{1-j}.
+\]
+The limits $p_j$ exist by the common lower bound, and $p_j\leq u$ follows from $p_j\leq u_\ell$ for every $\ell\geq j$ and almost-everywhere convergence. Thus
+$\varphi-C\leq p_j\leq u$, and all $p_j$ and their increasing limit $p$ have the same ordinary type as $\varphi$. Monotone capacity convergence and weighted lower semicontinuity give
+$\mathrm{MA}^{\mathrm{ext}}_\theta(p)(\{p<u\})=0$. Singular domination applies to $(p,u)$ exactly as before, so $p=u$. The upper tail envelopes decrease to $u$, and the same sandwich gives capacity convergence. No singularity-type assertion was needed for the finite rooftops or for the individual approximants.
+\end{proof}
+
+\begin{corollary}\label{cor:common-barrier-continuity}
+Under the geometric and common-barrier hypotheses of \cref{thm:common-barrier-criterion}, suppose either
+\begin{enumerate}
+\item $\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)\leq\nu$ for a fixed finite non-pluripolar measure $\nu$; or
+\item $\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)\leq A\omega_{w_j}^n$, where $A$ is fixed and $w_j\in\PSH(X,\omega)$ are uniformly bounded and converge in capacity to a bounded $w$.
+\end{enumerate}
+Then $u_j\to u$ in capacity, all the measures have finite mass, and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
+ \rightharpoonup\mathrm{MA}^{\mathrm{ext}}_\theta(u).
+\]
+\end{corollary}
+\begin{proof}
+In the first case \cref{lem:fixed-npp-integrals} applied to exponentials proves \eqref{eq:common-barrier-self-error}. In the second case use \cref{lem:moving-bounded-integrals}, since the exponentials are bounded and have a common lower curvature bound. The criterion gives capacity convergence in both cases.
+
+The masses are uniformly bounded by the corresponding dominating measures. For the deep tails use $u_j\geq\varphi-C$. In the first case their masses are at most $\nu(\{\varphi<C-T\})$, which tends to zero because $\nu$ ignores the pole set of $\varphi$. In the second case \cref{lem:bounded-mixed-capacity} bounds them by
+$C'\operatorname{Cap}_\omega(\{\varphi<C-T\})$, which also tends to zero. Apply the raw-tail continuity theorem \cref{thm:undamped-tail-continuity} in its general-background form. It gives finiteness and weak convergence for the limiting measure as well.
+\end{proof}
+
+This reconstructs the common ordinary type case of \cite[Theorem 4.1]{ALS26}. Its reference need not be an envelope fixed point; the smaller-background condition is enough. A model reference becomes useful when an a priori estimate supplies the two uniform barriers. If such a lower barrier is unavailable, constructing one in a relative envelope class is an additional problem, treated separately in the general-measure theorem below.

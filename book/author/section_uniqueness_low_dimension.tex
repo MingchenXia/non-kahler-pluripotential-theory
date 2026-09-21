@@ -1,0 +1,160 @@
+\section{Integrated rigidity in dimensions two and three}
+\label{uni-sec:lowdim}
+
+The linearized equation is not the only way to use equality of
+determinants.  In low dimension a quadratic difference has a definite sign,
+and its integral is fixed by exactness or by a sign on the torsion.
+
+\begin{theorem}\label{uni-thm:sobolev}
+Let \(n\in\{2,3\}\) and let \(u,v\in W^{2,n}(X)\).  Assume
+\(A,B\geq0\) almost everywhere and
+\[
+  A^n=B^n=f\,\mathrm{d}V,\qquad f>0\quad\hbox{almost everywhere}.
+\]
+For \(n=2\) impose no differential condition on \(\omega\).  For
+\(n=3\), assume
+\begin{equation}
+  \ddc\omega\wedge\mathrm{i}\eta\wedge\bar\eta\leq0
+  \label{uni-eq:threefold-sign}
+\end{equation}
+for every \((1,0)\)-covector \(\eta\).  Then
+\(\ddc(u-v)=0\) distributionally and \(u-v\) is almost everywhere constant.
+For upper semicontinuous \(\omega\)-plurisubharmonic representatives the
+equality holds pointwise.
+\end{theorem}
+
+\begin{proof}
+Put
+\[
+ \begin{gathered}
+ w=u-v,\qquad s=(u+v)/2,\qquad D=\ddc w=A-B,\\
+ C=(A+B)/2=\omega+\ddc s.
+ \end{gathered}
+\]
+The coefficients of \(C,D\) lie in \(L^n\); their top products are
+integrable by H\"older's inequality.  At almost every point the common
+determinant is positive, so \(A,B\) are positive definite.  Diagonalize
+them simultaneously by congruence, writing
+\(A=\sum e_j\), \(B=\sum\lambda_j e_j\), where
+\(e_j=\mathrm{i}\theta_j\wedge\bar\theta_j\), \(\lambda_j>0\), and
+\(\prod\lambda_j=1\).
+
+In dimension two,
+\begin{equation}\label{uni-eq:surface-sign}
+ D^2=A^2+B^2-2A\wedge B
+    =2(2-\lambda_1-\lambda_2)e_1\wedge e_2\leq0,
+\end{equation}
+with equality precisely when \(A=B\).  In dimension three,
+\begin{equation}\label{uni-eq:threefold-algebra}
+ 2C\wedge D^2=A^3+B^3-A^2\wedge B-A\wedge B^2\leq0.
+\end{equation}
+Indeed, with \(E=e_1\wedge e_2\wedge e_3\), the four terms on the right
+are
+\[
+ 6E,\qquad 6E,\qquad 2\Bigl(\sum_j\lambda_j\Bigr)E,
+ \qquad 2\Bigl(\sum_{i<j}\lambda_i\lambda_j\Bigr)E.
+\]
+Each sum is at least three, and equality again forces all
+\(\lambda_j=1\).
+
+Choose smooth real \(w_k\to w\) in \(W^{2,n}\) and set
+\(D_k=\ddc w_k\).  Such approximations follow by a partition of unity,
+local extension of compactly supported pieces, and convolution.  They
+are not required to preserve semipositivity.  For \(n=2\), Stokes gives
+\(\int_XD_k^2=0\), since
+\(D_k^2=\mathrm{d}(\dc w_k\wedge D_k)\).  Moreover
+\[
+ \|D_k^2-D^2\|_{L^1}
+ \leq C\|D_k-D\|_{L^2}(\|D_k\|_{L^2}+\|D\|_{L^2})\longrightarrow0.
+\]
+Thus \(\int_XD^2=0\), and the nonpositive integrand in
+\eqref{uni-eq:surface-sign} vanishes almost everywhere.  Its strict equality
+case gives \(D=0\) almost everywhere.
+
+For \(n=3\), also choose smooth \(s_k\to s\) in \(W^{2,3}\), and put
+\(C_k=\omega+\ddc s_k\).  The needed identity is
+\begin{equation}\label{uni-eq:torsion-integral}
+ \int_X C_k\wedge D_k^2
+ =\int_X\omega\wedge D_k^2
+ =-\int_X\mathrm{d}w_k\wedge \dc w_k\wedge\ddc\omega.
+\end{equation}
+Here the first equality follows because
+\(\ddc s_k\wedge D_k^2=\mathrm{d}(\dc s_k\wedge D_k^2)\).
+To check the sign in the second equality, put
+\(J_k=\mathrm{d}w_k\wedge \dc w_k\).  Using
+\(\dc \mathrm{d}=-\ddc \) and \((\dc )^2=0\),
+\[
+ \dc J_k=-D_k\wedge \dc w_k,\qquad \ddc J_k=-D_k^2.
+\]
+Stokes, first for \(\mathrm{d}(\omega\wedge \dc J_k)\) and then for
+\(\dc (\mathrm{d}\omega\wedge J_k)\), gives
+\begin{align*}
+ \int_X\omega\wedge\ddc J_k&=-\int_X\mathrm{d}\omega\wedge \dc J_k,\\
+ 0&=-\int_X\ddc\omega\wedge J_k-\int_X\mathrm{d}\omega\wedge \dc J_k.
+\end{align*}
+Combining them yields \eqref{uni-eq:torsion-integral}.  Thus no unrecorded
+first-order torsion term is discarded.
+
+Strong \(L^3\) convergence implies convergence of all three-factor
+products in \(L^1\).  For example,
+\[
+ \|(C_k-C)\wedge D_k^2\|_1
+ \leq C\|C_k-C\|_3\|D_k\|_3^2\longrightarrow0,
+\]
+and
+\[
+ \|C\wedge(D_k^2-D^2)\|_1
+ \leq C\|C\|_3\|D_k-D\|_3(\|D_k\|_3+\|D\|_3)\longrightarrow0.
+\]
+Also \(\mathrm{d}w_k\wedge \dc w_k\to \mathrm{d}w\wedge \dc w\) in \(L^{3/2}\), so the
+right side of \eqref{uni-eq:torsion-integral} converges.  Consequently
+\begin{equation}\label{uni-eq:torsion-limit}
+ \int_XC\wedge D^2=-\int_X\mathrm{d}w\wedge \dc w\wedge\ddc\omega\geq0.
+\end{equation}
+The last sign uses
+\(\mathrm{d}w\wedge \dc w=(\mathrm{i}/(2\pi))\partial w\wedge\bar\partial w\)
+and \eqref{uni-eq:threefold-sign}.  The left integrand is nonpositive by
+\eqref{uni-eq:threefold-algebra}, so it vanishes almost everywhere.  The
+positive-density equality case gives \(D=0\) almost everywhere.
+
+In both dimensions \(\ddc w=0\) as a distribution.  Taking the complex
+trace in a chart gives the distributional Euclidean equation
+\(\Delta w=0\).  To recall why a smooth representative exists, convolve
+locally with smooth radial kernels.  The convolutions are harmonic on
+smaller balls and converge to \(w\) in \(L^1\).  Their mean-value property
+against a fixed smaller radial kernel passes to the limit, identifying
+\(w\) almost everywhere with a smooth harmonic convolution there.  These
+representatives agree on overlaps and give a global smooth harmonic
+representative.  Its attained maximum on compact connected \(X\) and the
+local mean-value property make it constant.
+
+If the original potentials are upper semicontinuous
+\(\omega\)-plurisubharmonic representatives, each equals the limit of its
+local ball averages: this follows from the submean inequality and upper
+semicontinuity after adding a smooth local function.  The almost
+everywhere constant-difference equality therefore holds pointwise.  Equal
+mean normalizations give equality almost everywhere in the Sobolev class;
+equal supremum normalizations give equality for the plurisubharmonic
+representatives.
+\end{proof}
+
+\begin{corollary}\label{uni-cor:dense-lowdim}
+For \(C^2\) potentials in dimensions two and three, the corresponding
+conclusion remains valid if the common continuous density is positive
+merely on a dense set.  In dimension three retain
+\eqref{uni-eq:threefold-sign}; in particular \(\ddc\omega=0\) is sufficient.
+\end{corollary}
+
+\begin{proof}
+At a point where the common top power vanishes, the algebraic expressions
+are still nonpositive: in dimension two \(D^2=-2A\wedge B\), and in
+dimension three
+\(2C\wedge D^2=-A^2\wedge B-A\wedge B^2\).
+The same integral identities force these continuous expressions to vanish
+everywhere.  Their strict equality cases give \(D=0\) on \(\{f>0\}\).
+Density and continuity then give \(D=0\) globally.  No equality-case
+assertion at a degenerate point is needed.
+\end{proof}
+
+
+The Hopf threefold of \cref{chap:hopf} illustrates the distinction between this uniqueness argument and a mass bound. Its metric satisfies $\ddc\omega=-\alpha^2$ with $\alpha\geq0$, so it meets the sign condition in \eqref{uni-eq:threefold-sign}. The Sobolev uniqueness theorem therefore applies on this example, even though its upper Monge--Amp\`ere volume is infinite.

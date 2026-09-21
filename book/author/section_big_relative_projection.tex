@@ -1,0 +1,159 @@
+\section{Relative projection and supersolutions}
+\label{sec:big-relative-projection}
+
+We keep the hypotheses of \cref{sec:big-relative-foundations}: $\theta$ is a smooth big real form, $X$ has bounded mass, and $\varphi=P_\theta[\varphi]$ has positive lower relative volume. The construction of a supersolution requires a rooftop between $\varphi$ and a member of the minimal class $\mathcal E_{V_\theta}$. These two potentials need not belong to the same relative class. We first prove that this rooftop exists and belongs to $\mathcal E_\varphi$.
+
+\begin{lemma}\label{lem:positive-volume-stretch}
+Let $u,r\in\PSH(X,\theta)$, with $u\leq r$, and assume
+$\underline{\operatorname{vol}}_\theta(u)>0$. There is $b_0>1$ such that $Q_b(u,r)$ is genuine for $1\leq b\leq b_0$. Moreover,
+\[
+ \lim_{b\downarrow1}\overline{\operatorname{vol}}_\theta(Q_b(u,r))
+ =\overline{\operatorname{vol}}_\theta(u).
+\]
+Neither $u$ nor $r$ is required to be a model potential.
+\end{lemma}
+\begin{proof}
+This is the convex-envelope argument of \cite[Proposition 3.1]{XL26}, with its mixed-mass estimate made explicit. Translate so that $u\leq r\leq0$. Suppose, to the contrary, that $Q_b(u,r)$ is not genuine for any $b>1$. Fix $1<b\leq2$, and set
+\[
+ u_j=\max(u,r-j),\qquad v_j=u+(b-1)u_j,
+ \qquad q_j=P_\theta(v_j-(b-1)r).
+\]
+Differences at common poles are interpreted through the corresponding convex inequality. Off the poles the obstacle lies between $u-(b-1)j$ and $u$. Hence $q_j$ is genuine and $q_j\simeq u$. As $j$ increases it decreases. A genuine limit would be a competitor for $Q_b(u,r)$, so $\sup_Xq_j\to-\infty$.
+
+Let $C_j=\{q_j+(b-1)r=v_j\}$. The contact theorem puts $\mu_{q_j}$ on $C_j$. The positive current with potential $q_j+(b-1)r$ in background $b\theta$ contains the current with potential $q_j$ in background $\theta$. Ordered contact in background $b\theta$ therefore gives
+\[
+ \mu_{q_j}\leq\mathbf1_{C_j}(\theta_u+(b-1)\theta_{u_j})^n.
+\]
+On $C_j$ we have $q_j=u+(b-1)u_j-(b-1)r\geq bu$. For any $k>0$ and then all sufficiently large $j$, $q_j\leq-bk$ everywhere, and consequently
+\begin{equation}\label{eq:positive-volume-stretch-tail}
+ \underline{\operatorname{vol}}_\theta(u)
+ \leq\mu_{q_j}(X)
+ \leq\int_{\{u\leq-k\}}(\theta_u+(b-1)\theta_{u_j})^n.
+\end{equation}
+
+Choose a Hermitian metric $\Omega\geq\theta$ and put $K=v_+(\Omega)<\infty$. For any $s,t\in\PSH(X,\theta)$, positivity of the non-pluripolar mixed products and \cref{prop:bmp-finite} imply
+\[
+ \begin{split}
+ \binom nq\int_X\theta_s^{n-q}\wedge\theta_t^q
+ &\leq\binom nq\int_X\Omega_s^{n-q}\wedge\Omega_t^q\\
+ &\leq2^n\int_X\mathrm{MA}_\Omega((s+t)/2)
+ \leq2^nK\qquad(0\leq q\leq n).
+ \end{split}
+\]
+Here the estimate for the possibly unbounded average follows by constant truncation in the positive background $\Omega$. All products in the display are positive. Expanding the last integrand in \eqref{eq:positive-volume-stretch-tail}, and using $(b-1)^q\leq b-1$ for $q\geq1$, gives
+\[
+ \underline{\operatorname{vol}}_\theta(u)
+ \leq\mu_u(\{u\leq-k\})+n2^nK(b-1).
+\]
+The measure $\mu_u$ is finite and ignores its pole set. Let $k\to\infty$, and then $b\downarrow1$. This contradicts the positive lower volume.
+
+Choose $b_0>1$ for which $h_0=Q_{b_0}(u,r)$ is genuine. For $1<b\leq b_0$ put $t=(b-1)/(b_0-1)$. The defining inequalities show that
+\[
+ (1-t)u+th_0\leq Q_b(u,r)\leq u.
+\]
+Thus all these envelopes exist. For $b<b_0$, addition, homogeneity and volume monotonicity give
+\[
+ (1-t)^n\overline{\operatorname{vol}}_\theta(u)
+ \leq\overline{\operatorname{vol}}_\theta(Q_b(u,r))
+ \leq\overline{\operatorname{vol}}_\theta(u).
+\]
+Letting $b\downarrow1$ proves the limit. Undoing the common translation changes neither ordinary-type volume nor genuineness.
+\end{proof}
+
+\begin{corollary}\label{cor:positive-volume-strict-barrier}
+If $u\in\PSH(X,\theta)$ has positive lower relative volume, then there are $w\in\PSH(X,\theta)$ and $\varepsilon>0$ with
+\[
+ w\leq u,\qquad \theta+\ddc w\geq\varepsilon\omega,
+\]
+where $\omega$ is a fixed Hermitian metric. The background $\theta$ is still assumed big.
+\end{corollary}
+\begin{proof}
+Translate $u$ so that $u\leq V_\theta$. Choose a strict potential $\rho\leq V_\theta$ with $\theta+\ddc\rho\geq\delta\omega$, using bigness. For a genuine $h=Q_b(u,V_\theta)$ with $b>1$, put
+\[
+ w=b^{-1}h+(1-b^{-1})\rho.
+\]
+Its defining convex inequality gives $w\leq u$, and its current is at least $(1-b^{-1})\delta\omega$. Restore the translation of $u$ by the same translation of $w$.
+\end{proof}
+
+\begin{proposition}\label{prop:big-cross-class-roof}
+For every $z\in\mathcal E_{V_\theta}$, the rooftop $P_\theta(\varphi,z)$ is genuine and belongs to $\mathcal E_\varphi$.
+\end{proposition}
+\begin{proof}
+Write $V=V_\theta$. First suppose $z\leq V$; also $\varphi\leq V\leq0$. For $b>1$ sufficiently close to one, the preceding lemma gives a genuine
+\[
+ h_b=Q_b(\varphi,V)\leq\varphi.
+\]
+Set $a=1-b^{-1}$. The same-class stretching lemma, now applied in $\mathcal E_V$, gives $z_{1/a}=Q_{1/a}(z,V)\in\mathcal E_V$. The potential
+\[
+ k_a=a z_{1/a}+(1-a)h_b
+\]
+is below both $\varphi$ and $z$. Indeed $z_{1/a}\leq V$ and $(1-a)h_b+aV\leq\varphi$ prove the first bound; $h_b\leq V$ and $a z_{1/a}+(1-a)V\leq z$ prove the second. Thus $p=P_\theta(\varphi,z)$ is genuine. Addition and monotonicity give
+\[
+ (1-a)^n\overline{\operatorname{vol}}_\theta(h_b)
+ \leq\overline{\operatorname{vol}}_\theta(k_a)
+ \leq\overline{\operatorname{vol}}_\theta(p)
+ \leq\overline{\operatorname{vol}}_\theta(\varphi).
+\]
+As $b\downarrow1$, $a\downarrow0$, and the first term tends to the last by the lemma. The upper volumes are therefore equal. Since $p\leq\varphi$, \cref{thm:relative-equivalence} gives $p\in\mathcal E_\varphi$.
+
+For general $z$, the envelope identity gives $z-\sup_Xz\leq V$. Set $S=\max(\sup_Xz,0)$. The preceding case gives $P_\theta(\varphi,z-S)\in\mathcal E_\varphi$, and
+\[
+ P_\theta(\varphi,z-S)\leq P_\theta(\varphi,z)\leq\varphi.
+\]
+Upward stability finishes the proof. In particular, no same-class rooftop assertion has been applied directly to $\varphi$ and $z$.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:big-relative-projection}
+Let $z\in\mathcal E_{V_\theta}$ and define
+\[
+ Q=P_\theta[\varphi](z)
+   =\left(\lim_{C\to\infty}P_\theta(\varphi+C,z)\right)^*.
+\]
+Then $Q\in\mathcal E_\varphi$, $Q\leq z$, and
+\[
+ \mu_Q\leq\mathbf1_{\{Q=z\}}\mu_z.
+\]
+\end{proposition}
+\begin{proof}
+Put $p_C=P_\theta(\varphi+C,z)$ for $C\geq0$. The preceding proposition gives $p_0\in\mathcal E_\varphi$. Since $p_0\leq p_C\preceq\varphi$, upward stability gives $p_C\in\mathcal E_\varphi$. Its envelope identity, together with $p_C\leq z$, yields the uniform bound
+\[
+ p_C\leq\varphi+\sup_Xp_C\leq\varphi+\sup_Xz.
+\]
+The increasing canonical limit is consequently genuine, belongs to $\mathcal E_\varphi$ and is at most $z$. The common lower bound $p_0$ gives convergence in capacity.
+
+Partition the contact set by assigning ties to the obstacle $z$. The contact inequalities then give
+\begin{equation}\label{eq:big-projection-contact-tail}
+ \mu_{p_C}
+ \leq\mathbf1_{\{p_C=\varphi+C<z\}}\mu_\varphi
+       +\mathbf1_{\{p_C=z\}}\mu_z.
+\end{equation}
+The first term has total mass at most
+\[
+ \varepsilon_C:=\mu_\varphi(\{\varphi\leq\sup_Xz-C\})
+ \longrightarrow0.
+\]
+For every nonnegative continuous test function, weighted lower semicontinuity applied to \eqref{eq:big-projection-contact-tail} therefore gives $\mu_Q\leq\mu_z$.
+
+For $\delta>0$, let $\chi=\min(1,(z-Q)_+/\delta)$, defined arbitrarily on the polar indeterminacy set. This is a bounded nonnegative quasi-continuous function. On $\{p_C=z\}$ it vanishes, since $p_C\leq Q\leq z$. Thus
+\[
+ \int_X\chi\,\mu_{p_C}\leq\varepsilon_C.
+\]
+Another application of weighted lower semicontinuity gives $\int_X\chi\,\mu_Q=0$. The weight is positive on $\{Q<z\}$ outside the poles, which $\mu_Q$ ignores. Hence $\mu_Q$ is supported on $\{Q=z\}$, proving the asserted restriction of $\mu_z$. This is the relative-projection contact argument of \cite[Proposition 3.3]{XL26}; its prerequisite rooftop has been constructed above.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{corollary}\label{cor:big-relative-supersolution}
+For every nonzero finite non-pluripolar measure $\nu$, there is $Q\in\mathcal E_\varphi$ such that
+\[
+ 0\ne e^{-Q}\mu_Q\leq\nu.
+\]
+In particular this weighted measure is finite.
+\end{corollary}
+\begin{proof}
+Monotonicity gives $\underline{\operatorname{vol}}_\theta(V_\theta)\geq\ell>0$. The minimal-reference theorem supplies $z\in\mathcal E_{V_\theta}$ with $\mu_z=e^z\nu$. Apply the proposition to obtain $Q\in\mathcal E_\varphi$. On its contact set $Q=z$, so
+\[
+ \mu_Q\leq\mathbf1_{\{Q=z\}}e^z\nu\leq e^Q\nu.
+\]
+The weights are finite off the pole sets and are assigned zero measure there. Thus $e^{-Q}\mu_Q\leq\nu$. It is nonzero because $\mu_Q(X)\geq\ell>0$.
+\end{proof}

@@ -1,0 +1,186 @@
+\section{Minimal singularities in an arbitrary big background}
+\label{sec:big-minimal-existence}
+
+We retain the assumptions and the strict potential of \cref{sec:big-minimal-comparison}. The reference is now
+\[
+ V_\theta=\left(\sup\{w\in\PSH(X,\theta):w\leq0\}\right)^*.
+\]
+In particular $\rho\leq V_\theta\leq0$ and $\sup_XV_\theta=0$. We will solve the equations in the ordinary singularity type of $V_\theta$, with no bounded mass or uniform positive lower volume assumption. The resolution step uses the following precise version of classical regularization.
+
+\begin{theorem}[Demailly regularization]\label{thm:resolvable-regularization-input}
+Let $\alpha$ be any smooth real $(1,1)$-form and let $u\in\PSH(X,\alpha)$. There are $\delta_j\downarrow0$ and $\widetilde u_j\in\PSH(X,\alpha+\delta_j\omega)$ decreasing to $u$ such that each $\widetilde u_j$ is smooth off an analytic pole set and, after a finite sequence of blowups with smooth centers, has local expressions
+\[
+ \pi_j^*\widetilde u_j=\sum_\ell a_\ell\log|s_\ell|+b,
+ \qquad a_\ell>0,\quad b\in C^\infty.
+\]
+The divisors may be taken to have simple normal crossings. The coefficients include the fixed normalization of $\ddc$.
+\end{theorem}
+
+This is the standard input \cite[Theorem 3.2]{DP04}, applied to the closed current $\ddc u$ with smooth lower bound $-\alpha$. Its lower bound is not required to be closed, and its ambient manifold is only Hermitian. Item (iv) supplies the smooth remainder after resolution; ordinary analytic type with merely a bounded remainder would not suffice here. This version need not be the particular multiplier-ideal sequence in \cref{thm:demailly-hermitian-input}. We do not assert that the additional conclusions of these two regularization statements hold for the same sequence. Applying this theorem to any strictly $\theta$-plurisubharmonic potential with a sufficiently small curvature error also justifies the choice of $\rho$ above.
+
+\begin{lemma}\label{lem:big-resolved-equation}
+Let $\psi\in\PSH(X,\theta)$ satisfy $\theta_\psi\geq a\omega$ for some $a>0$ and have the resolved smooth-remainder form in the preceding theorem. For every nonzero $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, and $\lambda>0$, there exists $u\in\PSH(X,\theta)$ with $u\simeq\psi$ such that
+\[
+ \mu_u=e^{\lambda u}f\,\mathrm{d}V.
+\]
+\end{lemma}
+\begin{proof}
+Resolve $\psi$ by $\pi:Y\to X$. The pulled-back current has the form
+\[
+ \pi^*\theta+\ddc\pi^*\psi=\beta+[D],
+\]
+where $D$ is effective and $\beta$ is smooth. Off $D$ one has $\beta\geq a\pi^*\omega$, so this inequality holds everywhere by smoothness. Thus $\beta$ is semipositive.
+
+We check its bigness. For a blowup with smooth center and exceptional divisor $E$, choose a metric on $\mathcal O(-E)$ with curvature positive in the directions tangent to the projective fibers. The pullback of a Hermitian metric is positive in the complementary directions along $E$. Consequently its sum with a sufficiently small positive multiple of this curvature is a Hermitian metric: first check positivity along $E$, then in a neighborhood, and finally on the compact complement, where the pullback is already positive. Iterating over the blowups gives an effective real exceptional divisor $F$, with logarithmic potential $\zeta$, and a smooth Hermitian form $\kappa$ such that
+\[
+ \pi^*\omega+\ddc\zeta=\kappa+[F].
+\]
+For the iteration, pull back the previous smooth positive form, apply the one-blowup construction, and add the pulled-back previous divisor to the new positive multiple of $E$. Hence
+$\beta+a\ddc\zeta\geq a\kappa$, proving bigness of $\beta$. This argument concerns Hermitian metrics and never requires a closed positive form on $Y$.
+
+Fix a smooth positive volume form $\mathrm{d}V_Y$, and write $\pi^*\mathrm{d}V=J\,\mathrm{d}V_Y$. The function $J$ is smooth, nonnegative and bounded, and is positive off the exceptional locus. Define
+\[
+ H=e^{\lambda\pi^*\psi}(f\circ\pi)J.
+\]
+It is nonzero and belongs to $L^p(\mathrm{d}V_Y)$. Indeed $\psi$ is bounded above, and change of variables gives
+\[
+ \int_Y|(f\circ\pi)J|^p\,\mathrm{d}V_Y
+ \leq\|J\|_\infty^{p-1}\int_X|f|^p\,\mathrm{d}V.
+\]
+Values on the analytic exceptional sets do not affect these integrals. The semipositive big-background theorem \cref{thm:big-bounded-exponential} produces a bounded $s\in\PSH(Y,\beta)$ with
+\[
+ \mathrm{MA}_\beta(s)=e^{\lambda s}H\,\mathrm{d}V_Y.
+\]
+The function $\pi^*\psi+s$ is $\pi^*\theta$-plurisubharmonic, because its current is $\beta_s+[D]\geq0$. By \cref{thm:hermitian-space-descent} it descends to $u\in\PSH(X,\theta)$. Boundedness of $s$ gives $u\simeq\psi$. Off the exceptional and polar sets, change of variables proves the required equation. Both its extended left-hand side and its smooth-volume right-hand side ignore those analytic sets. The equation therefore holds on all of $X$.
+\end{proof}
+
+\begin{theorem}\label{thm:big-minimal-exponential}
+Let $\theta$ be any smooth big real $(1,1)$-form and let $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, be nonzero. For every $\lambda>0$ there is a unique $u\in\PSH(X,\theta)$ such that
+\[
+ u\simeq V_\theta,\qquad
+ \mathrm{MA}_\theta(u)=e^{\lambda u}f\,\mathrm{d}V.
+\]
+No bounded mass or uniform positive lower volume hypothesis is needed.
+\end{theorem}
+\begin{proof}
+Apply \cref{thm:resolvable-regularization-input} to $V_\theta$. After taking a subsequence, write $\delta_j=2^{-j}$ and choose $\widetilde\psi_j\downarrow V_\theta$ with
+$\theta_{\widetilde\psi_j}\geq-\delta_j\omega$. Set
+\[
+ a_j=(1-\delta_j)\sup_X\widetilde\psi_j\geq0,
+ \qquad
+ \psi_j=(1-\delta_j)\widetilde\psi_j+\delta_j\rho-a_j.
+\]
+Normalized compactness, or monotonicity and Hartogs' lemma, gives $a_j\to0$. Resolving the singularities of $\widetilde\psi_j$ and $\rho$ together shows that $\psi_j$ has a smooth remainder after resolution. Moreover,
+\begin{equation}\label{eq:big-minimal-approximation}
+ \theta_{\psi_j}\geq\delta_j^2\omega,
+ \qquad
+ (1-\delta_j)V_\theta+\delta_j\rho-a_j
+ \leq\psi_j\leq V_\theta.
+\end{equation}
+The upper inequality follows because $\psi_j$ is $\theta$-plurisubharmonic and at most zero. The explicit subtraction of $a_j$ keeps the normalization separate from the fixed pole barrier.
+
+By the resolved equation lemma there are $u_j\simeq\psi_j$ satisfying
+\[
+ \mu_{u_j}=e^{\lambda u_j}f\,\mathrm{d}V.
+\]
+Each $u_j$ is bounded below by $\rho$ up to a constant depending on $j$. The Gauduchon trace proposition gives a uniform upper bound for $\sup_Xu_j$.
+
+There is also a uniform lower estimate. Translate the fixed $\rho$ down by $1+\sup_j a_j$ when applying \cref{lem:big-reference-subsolution}, and take its reference to be $\psi_j-1$. The lemma gives $\psi_j-1\leq v_j\leq\psi_j\leq0$ and $\mu_{v_j}\geq mf\,\mathrm{d}V$, with $m>0$ independent of $j$. Put $w_j=v_j+\lambda^{-1}\log m$. Then
+\[
+ \mu_{w_j}\geq e^{\lambda w_j}f\,\mathrm{d}V,
+ \qquad u_j\simeq w_j\simeq\psi_j.
+\]
+The exponential order in \cref{cor:big-barrier-orders} gives $u_j\geq w_j$. Thus for a uniform $C$,
+\begin{equation}\label{eq:big-minimal-solution-bounds}
+ \psi_j-C\leq u_j\leq V_\theta+C.
+\end{equation}
+After extraction, $u_j$ converges in $L^1$ and almost everywhere to a genuine $u$. The preceding bounds give $V_\theta-C\leq u\leq V_\theta+C$.
+
+We verify its equation using envelopes. Put $A_j=\sup_{k\geq j}a_k$ and, for $N\geq j$, define
+\[
+ p_{j,N}=P_\theta(u_j,\ldots,u_N),\qquad
+ t_{j,N}=\max_{j\leq k\leq N}u_k.
+\]
+Both functions lie above the genuine competitor
+\[
+ b_j=(1-\delta_j)V_\theta+\delta_j\rho-C-A_j.
+\]
+In particular every envelope is genuine. All these functions are uniformly locally bounded on $\Omega$, also as $j$ varies. Contact support from \cref{thm:big-general-envelope-contact} and a disjoint partition by the first contact index give
+\[
+ \mu_{p_{j,N}}\leq e^{\lambda p_{j,N}}f\,\mathrm{d}V.
+\]
+There is no factor $N$ here: on each piece the envelope equals one $u_k$, and ordered contact bounds its measure by that single measure. Locality and ordered contact for a finite maximum similarly give
+\[
+ \mu_{t_{j,N}}\geq e^{\lambda t_{j,N}}f\,\mathrm{d}V.
+\]
+Let $N\to\infty$, setting $p_j=\lim_Np_{j,N}$ and $t_j=(\lim_Nt_{j,N})^*$. Local bounded monotone continuity passes both inequalities to these limits. Next $p_j$ increases to a regularized limit $p$, while $t_j$ decreases to $u$ by Hartogs' lemma. The bound by $b_j$ gives $p\simeq V_\theta$, and $p\leq u$. A second use of local bounded monotone continuity gives
+\[
+ \mu_p\leq e^{\lambda p}f\,\mathrm{d}V,
+ \qquad \mu_u\geq e^{\lambda u}f\,\mathrm{d}V.
+\]
+These inequalities hold on $\Omega$ and extend across $Z$ because all measures involved ignore it. Thus
+$\mu_p\leq e^{\lambda(p-u)}\mu_u$. The exponential order gives $p\geq u$, so $p=u$ and the equation follows. Applying that order in both directions also proves uniqueness. Every passage of the Monge--Amp\`ere operator above was along a locally bounded monotone sequence on $\Omega$.
+\end{proof}
+
+\begin{theorem}\label{thm:big-minimal-normalized}
+Under the assumptions of \cref{thm:big-minimal-exponential}, there are $v\in\PSH(X,\theta)$ and a uniquely determined $c>0$ such that
+\[
+ \sup_Xv=0,
+ \qquad V_\theta-C\leq v\leq V_\theta,
+ \qquad \mathrm{MA}_\theta(v)=cf\,\mathrm{d}V.
+\]
+Uniqueness of the normalized potential is not asserted.
+\end{theorem}
+\begin{proof}
+Solve the positive-exponent equations with $\lambda=1/j$, and write
+\[
+ v_j=u_j-\sup_Xu_j,\qquad
+ c_j=e^{\sup_Xu_j/j},\qquad
+ \mu_{v_j}=c_j e^{v_j/j}f\,\mathrm{d}V.
+\]
+Then $v_j\simeq V_\theta$ and $v_j\leq V_\theta\leq0$. The Gauduchon trace gives $c_j\leq C_0$ uniformly.
+
+Choose $\varepsilon>0$ small and $1<q<p$ such that $e^{-\varepsilon v_j}f$ is bounded in $L^q$. This follows from H\"older's inequality and uniform Skoda integrability of normalized potentials in a fixed enlarged Hermitian background. The subsolution lemma, with reference $V_\theta-1$ and the fixed barrier $\rho-1$, produces
+\[
+ V_\theta-1\leq\eta_j\leq V_\theta,
+ \qquad
+ \mu_{\eta_j}\geq m e^{-\varepsilon v_j}f\,\mathrm{d}V
+                 \geq mf\,\mathrm{d}V
+\]
+for a uniform $m>0$. Since $\mu_{v_j}\leq c_jf\,\mathrm{d}V$, scalar order gives $c_j\geq m$.
+
+Take $D=\varepsilon^{-1}\max\{0,\log(C_0/m)\}$ and put $w_j=\eta_j-D$. We have
+\[
+ e^{\varepsilon(w_j-v_j)}\mu_{v_j}
+ =c_j e^{v_j/j+\varepsilon\eta_j-\varepsilon D-\varepsilon v_j}
+           f\,\mathrm{d}V
+ \leq m e^{-\varepsilon v_j}f\,\mathrm{d}V
+ \leq\mu_{w_j}.
+\]
+Exponential order therefore gives $v_j\geq w_j$. In particular
+\begin{equation}\label{eq:big-normalized-uniform-type}
+ V_\theta-1-D\leq v_j\leq V_\theta,
+ \qquad m\leq c_j\leq C_0.
+\end{equation}
+Extract a subsequence with $v_j\to v$ in $L^1$ and almost everywhere and $c_j\to c\in[m,C_0]$. The limit is normalized, genuine and of minimal ordinary type. After relabeling, denote the retained exponents by $\lambda_j\downarrow0$; thus $\mu_{v_j}=c_je^{\lambda_jv_j}f\,\mathrm{d}V$.
+
+One more comparison is needed to identify the measure. Define finite lower envelopes $p_{j,N}=P_\theta(v_j,\ldots,v_N)$ and finite maxima $t_{j,N}=\max_{j\leq k\leq N}v_k$. They all lie between $V_\theta-1-D$ and $V_\theta$. On $\Omega$ put
+\[
+ h_k=c_k e^{(\lambda_k-\varepsilon)v_k},\qquad
+ H_j=\sup_{k\geq j}h_k,\qquad L_j=\inf_{k\geq j}h_k.
+\]
+These functions are bounded on each relatively compact subset of $\Omega$, uniformly in $j$. Almost everywhere they converge, as $j\to\infty$, to $c e^{-\varepsilon v}$. Contact partition and the maximum principle give
+\[
+ \mu_{p_{j,N}}\leq e^{\varepsilon p_{j,N}}H_jf\,\mathrm{d}V,
+ \qquad
+ \mu_{t_{j,N}}\geq e^{\varepsilon t_{j,N}}L_jf\,\mathrm{d}V.
+\]
+First let $N\to\infty$, obtaining $p_j$ and $t_j$, and then let $j\to\infty$. The lower envelopes increase to $p\simeq V_\theta$ with $p\leq v$, while the upper envelopes decrease to $v$. Local bounded monotone continuity applies to the left sides, and dominated convergence on relatively compact subsets of $\Omega$ applies to the densities. We obtain
+\[
+ \mu_p\leq c e^{\varepsilon(p-v)}f\,\mathrm{d}V,
+ \qquad \mu_v\geq cf\,\mathrm{d}V.
+\]
+Extend across $Z$ and apply exponential order to get $p\geq v$. Hence $p=v$ and $\mu_v=cf\,\mathrm{d}V$. The artificial fixed exponent $\varepsilon$ in this last argument is what allows domination to identify the two envelope limits; the unweighted inequalities alone would not do so. Scalar uniqueness is \cref{cor:big-barrier-orders}.
+\end{proof}
+
+These two theorems reconstruct \cite[Theorems 4.6--4.7]{BGL25} in the book's conventions. The solutions have finite non-pluripolar measure because their equations have integrable right-hand sides. This is a conclusion for these solutions, not a bound on the masses of all potentials in their ordinary singularity type. In particular it does not establish the bounded mass property. The counterexamples in \cref{thm:degenerate-hermitian-nonuniqueness} explain why uniqueness of the scalar in the second theorem must be distinguished from uniqueness of its potential.

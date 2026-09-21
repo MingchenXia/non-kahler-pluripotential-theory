@@ -1,0 +1,61 @@
+Run_id: trace_section_obstruction_01
+
+Statement: Audit new Gauduchon obstruction for nonzero restriction of infinitelymany multiplierideal section spaces. For eachfinitecompactdivisorcollection on a smoothcompactmodification ofY, nonzero V_m at arbitrarilylarge m forces deg_gamma(pi*L_Y)>=sumtau_i vol_gamma(E_i), forallGaudmetrics. Then closedrealclasspi*c1L-sumtau_i c1OE_i pseudoeffective viaprovedLamari r>=2, explicitPoisson r1. Strictfiniteinequalityviolation implieseventual V_m0. Conversefailsirrationalunitaryflatbundleonellipticcurvewithu0,Y=X. Checkallidealimagerestrictionanddivisororderclaims, subsequence limit direction, correctc1normalization, positivityandGaudtests, endpointdim1, counterexample. NoBMP and nohigherdimexacttracerealization used.
+
+Accepted prerequisites: intrinsic_trace_data_01 finiteprofilefullintegerlimit b_i(m)/m->tau; elementaryPoincareLelong ddclog|s|²=[D]-m beta andGaudcurrentStokes; gauduchon_duality_01 for thm:lamari inbookchapter_gauduchon.tex (ONLYn>=2, handledr1separatelyhere); standardscalarPoisson andholomorphicmaxmodulus; weightedsectionspaces H_m=H0(Lm I(mu)). The referenced degreeobstruction innewchapter_sections.tex is elementaryPL, butitsproof mayberead; donotwaitforitsindependentaudit. Fulltargetbelow. Bookreadonly. Usualboundedverificationworkflow.
+
+Proof:
+
+\section{Trace data constrains restricted sections}
+
+The intrinsic trace data of \cref{chap:trace-data} has a direct interpretation in terms of necessary conditions for sections to restrict nontrivially. Gauduchon degrees express these conditions on every smooth compact modification of the submanifold.
+
+Let $Y\subset X$ be smooth, compact and connected, of positive dimension $r$, with $\nu(u,Y)=0$. Write
+\[
+ \mathfrak a_m=\mathcal I(mu)\mathcal O_Y,
+ \qquad
+ V_m=\operatorname{im}\bigl(\mathcal H_m(u)\longrightarrow H^0(Y,L^m|_Y)\bigr).
+\]
+Every section in $V_m$ belongs to $H^0(Y,L^m|_Y\otimes\mathfrak a_m)$. This is an inclusion; extension of all sections of the latter space is not assumed.
+
+\begin{theorem}\label{thm:gauduchon-trace-section-obstruction}
+Suppose $V_m\neq0$ for arbitrarily large integers $m$. Let $\pi:Z\to Y$ be any smooth compact modification, let $E_1,\ldots,E_q$ be distinct prime divisors on $Z$, and let $\gamma$ be a Gauduchon metric on $Z$. Then
+\[
+ \deg_\gamma(\pi^*(L|_Y))
+ \geq\sum_{i=1}^q\tau_{Y,u}(E_i)\int_{E_i}\gamma^{r-1}.
+\]
+Moreover the real closed $(1,1)$ class
+\[
+ c_1(\pi^*(L|_Y))-
+       \sum_{i=1}^q\tau_{Y,u}(E_i)c_1(\mathcal O_Z(E_i))
+\]
+is pseudoeffective: it admits a closed positive current.
+\end{theorem}
+\begin{proof}
+Choose a nonzero $s_m\in V_m$ for each integer in an unbounded sequence of such degrees. Its pullback is a nonzero holomorphic section of $\pi^*(L^m|_Y)$. Since its local coefficient belongs to the image ideal $\mathfrak a_m$, its zero divisor satisfies
+\[
+ \operatorname{div}(\pi^*s_m)
+ \geq\sum_{i=1}^q b_i(m)E_i,
+ \qquad b_i(m)=\operatorname{ord}_{E_i}\mathfrak a_m.
+\]
+Poincar\'e--Lelong and the Gauduchon identity, exactly as in \cref{thm:gauduchon-section-obstruction}, give
+\[
+ m\deg_\gamma(\pi^*(L|_Y))
+ \geq\sum_{i=1}^q b_i(m)\int_{E_i}\gamma^{r-1}.
+\]
+Divide by $m$ and use the full integer limit in \cref{thm:intrinsic-trace-profile}. The same limit holds on the selected unbounded sequence, proving the inequality.
+
+Choose smooth metrics on the divisor line bundles and let $\beta_i$ denote their curvatures. The smooth closed form
+\[
+ \Theta=\pi^*(\beta|_Y)-\sum_{i=1}^q\tau_{Y,u}(E_i)\beta_i
+\]
+represents the displayed class. Poincar\'e--Lelong shows
+$\int_Z\beta_i\wedge\gamma^{r-1}=\int_{E_i}\gamma^{r-1}$.
+Thus $\int_Z\Theta\wedge\gamma^{r-1}\geq0$ for every Gauduchon metric on $Z$. For $r\geq2$, the generalized Lamari criterion of \cref{thm:lamari} supplies a genuine $w$ with $\Theta+\ddc w\geq0$. For $r=1$, choose a smooth probability form $\eta$ and solve the scalar Poisson equation $\ddc w=(\int_Z\Theta)\eta-\Theta$; the integral is nonnegative by the same inequality, so the resulting representative is positive. Since $\Theta$ is closed, this is a closed positive current, proving pseudoeffectivity. This application uses the criterion only for a closed representative; it requires no upper Monge--Amp\`ere mass bound.
+\end{proof}
+
+Equivalently, a strict violation of one of these finite Gauduchon inequalities forces $V_m=0$ for all sufficiently large $m$. Indeed the finite sum $\sum_i b_i(m)m^{-1}\int_{E_i}\gamma^{r-1}$ then exceeds the degree for every large $m$, contradicting the inequality satisfied by a nonzero restricted section. This gives an effective obstruction in terms of any chosen finite collection of trace numbers, without constructing a trace potential of exactly those numbers.
+
+The necessary condition has no general converse. On the elliptic curve $E=\C/(\mathbb Z+\mathrm i\mathbb Z)$, choose an irrational real number $a$ and the flat line bundle with multipliers $e^{2\pi\mathrm i a}$ and $1$ on the two generators. Its constant metric has curvature zero. Take $u=0$ and $Y=X=E$, so every trace number is zero and the displayed pseudoeffectivity condition holds. Nevertheless every positive tensor power has no nonzero holomorphic section. To see this, a hypothetical section of a power has a zero divisor of degree zero and hence is nowhere zero. Its logarithmic norm is harmonic on $E$, and is constant. The lifted holomorphic function therefore has constant modulus and is constant on $\C$. The nontrivial multiplier $e^{2\pi\mathrm i ma}$ forces that constant to be zero, a contradiction.
+
+Additional positivity is therefore needed for a section-existence theorem. The Gauduchon tests above are useful necessary conditions, but neither pseudoeffectivity nor the numerical trace data alone creates a supply of global sections.

@@ -1,0 +1,79 @@
+\Needspace{21\baselineskip}
+\section{Recovering the upper and lower masses}
+\label{sec:gaud-volume-extrema}
+
+Fix a Hermitian representative $\omega$, and let $\mathscr M$ be the set of smooth strictly positive probability measures on $X$. The values obtained by varying $\mu$ have a precise relation to the usual mass bounds.
+
+\begin{theorem}\label{thm:gaud-volume-mass-extrema}
+One has
+\[
+ \inf_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_-(\omega),
+ \qquad
+ \sup_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_+(\omega).
+\]
+The supremum is allowed to be infinite. Moreover
+\begin{equation}\label{eq:gaud-lower-mass-formula}
+ v_-(\omega)^{1/n}
+ =\inf_{\gamma\text{ Gauduchon}}
+ \frac{\displaystyle\int_X\omega\wedge\gamma^{n-1}}
+      {\displaystyle\left(\int_X\gamma^n\right)^{(n-1)/n}}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The smooth normalized equation realizes every value $\mathcal V_\mu(\omega)$ as the mass of a smooth strictly positive potential. Conversely every such potential $v$ realizes its mass by the probability measure $\mu_v$ in the proof of \cref{prop:gaud-volume-density-independence}. Thus the two ranges, as subsets of $(0,+\infty)$, are equal.
+
+We justify replacing bounded potentials by smooth strictly positive ones in the extrema defining $v_\pm$. If $u\in\PSH(X,\omega)\cap L^\infty$, \cref{thm:bounded-exact-regularization} gives smooth $\omega$-plurisubharmonic $u_j$ decreasing to $u$. Their bounded Monge--Amp\`ere measures converge by monotone continuity, including their total masses on compact $X$. For fixed $j$, the potentials $(1-\delta)u_j$, $0<\delta<1$, are strictly positive in background $\omega$, and their masses tend to that of $u_j$ as $\delta\downarrow0$, by the smooth polynomial expansion. Every bounded mass is therefore a limit of strictly positive smooth masses. The reverse inclusion is immediate. This proves the first two identities, without a uniform bound on those masses.
+
+For the last formula, take the $n$th root and commute the infima over $\mu$ and $\gamma$ in the dual formula. At fixed $\gamma$, H\"older's inequality and $\int_X\mu=1$ give
+\[
+ D_\mu(\gamma)
+ \leq\left(\int_X\gamma^n\right)^{(n-1)/n}.
+\]
+Equality holds for the smooth probability measure
+$\mu=\gamma^n/\int_X\gamma^n$. The numerator is positive and does not depend on $\mu$, so this maximization of the denominator computes the infimum of the quotient. Substitution gives \eqref{eq:gaud-lower-mass-formula}. For $n=1$ both denominators are one, and the same argument applies.
+\end{proof}
+
+Thus $v_-(\omega)>0$ is equivalent to a positive lower bound for
+$\int_X\omega\wedge\gamma^{n-1}$ among Gauduchon metrics of volume one. The theorem gives this equivalence, not a proof that the lower bound always holds. Likewise every fixed smooth density gives a finite normalization, while their supremum can be infinite.
+
+\Needspace{25\baselineskip}
+\begin{proposition}\label{prop:lower-mass-smooth-attainment}
+For a Hermitian $\omega$, the infimum in \eqref{eq:gaud-lower-mass-formula} is attained if and only if the infimum of smooth strictly positive Monge--Amp\`ere masses is attained. Every such minimizing potential has a Gauduchon metric $\omega+\ddc v$.
+\end{proposition}
+\begin{proof}
+Suppose a test metric $\gamma$ attains the first infimum, and put $m=v_-(\omega)^{1/n}$. Its numerator is strictly positive, so $m>0$. For $\mu_\gamma=\gamma^n/\int_X\gamma^n$, the same test metric gives
+$\lambda_{\mu_\gamma}(\omega)\leq m$.
+The mass-extrema theorem gives the opposite inequality. Hence the smooth equation for $\mu_\gamma$ has mass $m^n=v_-(\omega)$, giving a minimizing smooth potential. For $n\geq2$, equality in the dual formula makes its solution conformal to $\gamma$. The fixed proportional volume forms make the conformal factor constant, so the solution metric is Gauduchon.
+
+Conversely, at a smooth strictly positive mass minimizer $v$, both signs of every smooth variation are admissible for sufficiently small parameters. The first variation of the raw mass therefore gives
+\[
+ \int_X f\,\ddc\bigl((\omega+\ddc v)^{n-1}\bigr)=0
+ \quad\hbox{for every smooth real }f.
+\]
+Thus $\Omega=\omega+\ddc v$ is Gauduchon. Using $\gamma=\Omega$ in the quotient and Gauduchon Stokes gives
+\[
+ \frac{\int_X\omega\wedge\Omega^{n-1}}
+      {(\int_X\Omega^n)^{(n-1)/n}}
+             =(\int_X\Omega^n)^{1/n}=v_-(\omega)^{1/n},
+\]
+so the test infimum is attained. In dimension one all metrics are Gauduchon, and all masses equal $\int_X\omega$.
+\end{proof}
+
+The density infimum also has a definition beyond the positive cone. For a pseudoeffective smooth background, put
+\[
+ \lambda_*(\theta)=
+ \inf_{\gamma\text{ Gauduchon}}
+ \frac{\int_X\theta\wedge\gamma^{n-1}}
+      {(\int_X\gamma^n)^{(n-1)/n}}.
+\]
+The same H\"older argument proves
+\[
+ \lambda_*(\theta)=\inf_{\mu\in\mathscr M}\lambda_\mu(\theta).
+\]
+It is finite, nonnegative, concave, homogeneous, and invariant under smooth $\ddc$ changes. If $\theta$ is nef, commuting the infima over the test metric and $\epsilon>0$ also gives
+\[
+ \lambda_*(\theta)
+ =\lim_{\epsilon\downarrow0}\lambda_*(\theta+\epsilon h)
+ =\lim_{\epsilon\downarrow0}v_-(\omega_\epsilon)^{1/n},
+\]
+where $\omega_\epsilon$ is any smooth Hermitian representative of $\theta+\epsilon h$. Gauge invariance makes the last expression independent of that representative. This extends the lower-mass formula to the nef boundary. It does not identify the resulting value with every lower-volume definition for an arbitrary singular class.

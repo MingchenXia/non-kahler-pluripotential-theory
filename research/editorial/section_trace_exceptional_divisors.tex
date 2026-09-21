@@ -1,0 +1,119 @@
+\section{Exceptional divisors between trace models}
+\label{sec:trace-exceptional-divisors}
+
+We return to the intrinsic trace data of $u$ along $Y$. Write $S_Z=S_Z(u;Y)$ on a smooth compact model $Z\to Y$. The finite-divisor inequality in \cref{thm:trace-divisorial-model-compatibility} now extends to the whole countable current. The difference is supported on finitely many exceptional divisors of the specified modification.
+
+\begin{theorem}\label{thm:trace-exceptional-difference}
+For a smooth compact modification $g:Z'\to Z$, there is a unique finite effective real divisor $E_g$ supported on its exceptional locus such that
+\begin{equation}\label{eq:trace-exceptional-difference}
+ S_{Z'}=g^*S_Z+[E_g].
+\end{equation}
+For $h:Z''\to Z'$, the divisors satisfy
+\begin{equation}\label{eq:trace-exceptional-cocycle}
+ E_{g\circ h}=E_h+h^*E_g.
+\end{equation}
+Their coefficients are additive and positively homogeneous in the ambient trace potential $u$.
+
+The analytic-ideal approximants on the two models give finite effective exceptional divisors
+\[
+ [E_{m,g}]=D_{m,Z'}-g^*D_{m,Z}.
+\]
+For any Gauduchon metric $\gamma'$ on $Z'$, the measures
+\[
+ [E_{m,g}]\wedge(\gamma')^{r-1}
+     \longrightarrow [E_g]\wedge(\gamma')^{r-1},\qquad r=\dim Y,
+\]
+converge in total variation.
+\end{theorem}
+\begin{proof}
+Enumerate the positive divisorial components of $S_Z$. Every finite partial sum has pullback at most $S_{Z'}$ by \cref{thm:trace-divisorial-model-compatibility}. \Cref{cor:countable-divisorial-pullback} identifies the increasing limit of those pullbacks with $g^*S_Z$. Thus $S_{Z'}-g^*S_Z$ is a positive closed divisorial current. The two currents have equal coefficients along every strict transform of a divisor on $Z$, because these orders describe the same valuation. Every other prime divisor of $Z'$ is exceptional for $g$. The exceptional analytic set has only finitely many irreducible components on compact $Z'$. Its divisorial components therefore support a finite effective real divisor $E_g$. Coefficients of integration currents identify it uniquely.
+
+Pullback of positive closed $(1,1)$-currents is functorial, by composition of local psh potentials. Using \eqref{eq:trace-exceptional-difference} for $h$ and $g$ gives
+\[
+ S_{Z''}=h^*S_{Z'}+[E_h]
+        =(g\circ h)^*S_Z+[h^*E_g]+[E_h].
+\]
+Uniqueness gives \eqref{eq:trace-exceptional-cocycle}. Additivity and positive homogeneity follow from the same properties of every trace coefficient and linearity of pullback.
+
+For a fixed $m$, the image ideal on $Z$ has a finite divisorial part. Its local generators are divisible by the corresponding Cartier equations. Extension to $Z'$ therefore gives
+\[
+ b_m(F)\geq\sum_{D\subset Z}
+                    b_m(D)\operatorname{ord}_F(g^*D)
+\]
+for every prime divisor $F$ on $Z'$. The sum is finite. After division by $m$, this proves positivity of $D_{m,Z'}-g^*D_{m,Z}$. Its coefficients on strict transforms are zero, so it is the integration current of an effective exceptional real divisor $E_{m,g}$.
+
+Choose also a Gauduchon metric $\gamma$ on $Z$. By \cref{thm:trace-divisorial-current-budget}, the currents $S_Z-D_{m,Z}$ and $S_{Z'}-D_{m,Z'}$ are positive and their trace masses tend to zero. Subtraction of the two identities for the exceptional currents gives
+\[
+ [E_{m,g}]-[E_g]
+   =-(S_{Z'}-D_{m,Z'})+g^*(S_Z-D_{m,Z}).
+\]
+Both terms on the right, before the minus sign, are positive. The total variation of the signed trace measure is consequently at most
+\[
+ \int_{Z'}(S_{Z'}-D_{m,Z'})\wedge(\gamma')^{r-1}
+ +C_g\int_Z(S_Z-D_{m,Z})\wedge\gamma^{r-1},
+\]
+by \eqref{eq:modification-linear-mass-bound}. It tends to zero. This proves the claimed convergence, without assuming monotonicity of the exceptional divisors as $m$ varies.
+\end{proof}
+
+The coefficient of $E_g$ at an exceptional prime $F$ is explicitly
+\begin{equation}\label{eq:trace-exceptional-coefficient}
+ \tau_{Y,u}(F)
+  -\sum_{D\subset Z}\tau_{Y,u}(D)\operatorname{ord}_F(g^*D).
+\end{equation}
+The sum is countable and convergent. Indeed it is the coefficient of $g^*S_Z$ in the positive divisorial series of \cref{cor:countable-divisorial-pullback}; it is bounded above by $\tau_{Y,u}(F)$. This is a genuine whole-current formula, not a formal pullback of an unspecified infinite divisor.
+
+\begin{corollary}\label{cor:trace-model-ordinary-comparison}
+Let $v_Z$ and $v_{Z'}$ be the canonical ordinary-type representatives of $S_Z$ and $S_{Z'}$ from \cref{cor:divisorial-current-ordinary-type}. If $\rho_{E_g}$ is a global logarithmic potential of the finite real divisor $E_g$, then
+\[
+ v_{Z'}-(v_Z\circ g)-\rho_{E_g}
+\]
+is represented by a smooth function. In particular
+\[
+ v_{Z'}\preceq v_Z\circ g,
+\]
+and the two ordinary types are equal if and only if $E_g=0$.
+\end{corollary}
+\begin{proof}
+Choose smooth Hermitian metrics on the line bundles of the prime components of $E_g$. The weighted sum of the logarithms of the squared canonical-section norms gives $\rho_{E_g}$ with
+\[
+ \ddc\rho_{E_g}=[E_g]-\alpha_{E_g},
+\]
+where $\alpha_{E_g}$ is smooth and closed. It is quasi-plurisubharmonic and bounded above on compact $Z'$. Writing $\ddc v_Z=S_Z-B_Z$ and $\ddc v_{Z'}=S_{Z'}-B_{Z'}$, the theorem gives
+\[
+ \ddc\bigl(v_{Z'}-v_Z\circ g-\rho_{E_g}\bigr)
+       =g^*B_Z+\alpha_{E_g}-B_{Z'},
+\]
+which is smooth. The Hermitian-trace elliptic argument makes the $L^1$ difference smooth. Equality with the canonical qpsh representatives then holds everywhere. The bounded-above logarithmic potential gives the ordinary domination.
+
+If $E_g=0$, the smooth difference gives ordinary equivalence. Conversely ordinary equivalence would give equal generic Lelong numbers on every prime divisor of $Z'$. The smooth residual terms show that their difference on a prime component of $E_g$ is precisely its positive coefficient, a contradiction. Hence ordinary equivalence forces $E_g=0$.
+\end{proof}
+
+When the original $\theta$ is closed, the residual Bott--Chern classes of \cref{prop:trace-bott-chern-bclass} satisfy the more precise relation
+\[
+ \mathbb A_{Z'}(u;Y,\theta)
+       =g^*\mathbb A_Z(u;Y,\theta)-\{[E_g]\}_{\mathrm{BC}}.
+\]
+This follows by subtracting \eqref{eq:trace-exceptional-difference} from the pulled-back smooth background. Both residual classes are pseudoeffective, as already proved. The displayed formula describes their difference; it does not identify a nonlinear intersection product or volume.
+
+\begin{example}\label{ex:exceptional-trace-with-exact-potential}
+On $Y=\mathbb P^2$ put
+\[
+ u=a\log\frac{|Z_1|^2+|Z_2|^2}
+                   {|Z_0|^2+|Z_1|^2+|Z_2|^2},\qquad a>0.
+\]
+Take the ambient manifold to be $Y$ itself. If $\sigma$ is the Fubini--Study form in our $\ddc$ normalization, then $u\in\PSH(Y,a\sigma)$. It has analytic singularities only at $p=[1:0:0]$, and has zero generic Lelong number on $Y$. Its trace is exactly the ordinary singularity data of $u$, by \cref{prop:trace-naive-comparison}. There are no divisorial poles on $Y$, so $S_Y=0$ and its canonical ordinary type is smooth. If $\pi:\widetilde Y\to Y$ is the blowup at $p$ with exceptional curve $F$, then
+\[
+ S_{\widetilde Y}=a[F],\qquad E_\pi=aF.
+\]
+Indeed on either standard blowup chart the numerator has one exceptional factor of squared modulus and a smooth positive remaining factor. The pole order is $a$ along $F$ and zero along every other prime divisor. Thus a nonzero exceptional difference does not obstruct the existence of an exact trace potential. It obstructs identifying that potential with the canonical type of the divisorial part on the original model.
+
+The same distinction occurs on a manifold failing BMP. Take a compact Hermitian factor $(W,\omega_W)$ failing BMP, such as the Hopf threefold in \cref{thm:hopf-unbounded}, and pull this potential back to $Y\times W$. Its pole set is $\{p\}\times W$, of codimension two, and the modification $\widetilde Y\times W\to Y\times W$ has exceptional coefficient $a$ along $F\times W$. Analytic restriction again gives an exact trace. For a product Hermitian form $\Omega=\operatorname{pr}_Y^*\sigma+\operatorname{pr}_W^*\omega_W$, smooth mass witnesses $H_j$ on $W$ have pullback masses
+\[
+ \binom{k+2}{2}\left(\int_Y\sigma^2\right)
+          \left(\int_W(\omega_W+\ddc H_j)^k\right)\longrightarrow+\infty,
+ \qquad k=\dim W,
+\]
+by the smooth binomial expansion and the dimensions of the two factors. Hence the product also fails BMP. The potential is admitted by a sufficiently large Hermitian background; the BMP assertion does not impose an unproved positivity condition for a prescribed small background.
+\end{example}
+
+The exceptional divisors provide compatible information between every pair of models, and the analytic-ideal approximants recover them in linear mass. A general exact trace potential would still have to realize all higher-codimensional information simultaneously. The example shows why vanishing of every $E_g$ is not a necessary condition for that problem. It is precisely the condition for the canonical divisorial ordinary types themselves to pull back without an additional logarithmic term.

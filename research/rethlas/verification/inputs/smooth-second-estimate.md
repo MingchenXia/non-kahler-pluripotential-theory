@@ -1,0 +1,191 @@
+Run_id: smooth_second_estimate_01
+
+Statement: Independently audit every step of the supplied Hermitian trace inequality, completed-square calculation, maximum-principle second-derivative estimate, higher-regularity consequence and extension to G=a u+F for bounded nonnegative a. Fix compact connected X and a smooth Hermitian background. No closedness, BMP or PVP. Our coordinate convention is omega=i/(2pi) g, so h=g+u_ijbar and Delta_g u=tr_g h-n. Accepted standard inputs are elementary Chern connection definitions and curvature commutation, maximum principle, fixed linear elliptic W2p/Sobolev estimates, and the standard local (real or complex) Evans-Krylov and Schauder theorems. Do NOT import the Cherrier/Tosatti-Weinkove trace or second-derivative estimate: reconstruct and verify the actual supplied tensor identity, including all signs, contractions, positive norms and the precise remainder E. The explicit E uses the curvature commutator C acting on h; check it by the two torsion switches. In particular, the entire K square and its residual torsion trace must be checked independently. Verify the maximum argument in both cases, constant dependencies, determinant lower bound and final semilinear bootstrapping. Source for attribution and comparison only: /Users/mingchen/Non-Kahler/research/sources/TW15.pdf and TW15.txt (arXiv1201.0312, Sections3 and9). Its normalization uses omega=i g; ours absorbs2pi into g. No C0 existence proof or proper-equation existence is included in this bounded task. Return gaps if the regularity reduction uses an input stronger than the accepted standard theorems.
+
+Proof:
+
+\section{Second derivatives and ellipticity}
+
+We now supply the estimate that turns a bound for the potential into uniform ellipticity. The torsion calculation goes back to Cherrier. We use its completed-square form and the maximum argument of Tosatti--Weinkove \cite[Sections 3 and 9]{TW15}.
+
+For this calculation write
+\[
+ \omega=\frac{\mathrm i}{2\pi}g_{i\bar j}\,dz^i\wedge d\bar z^j,
+ \qquad \omega_u=\frac{\mathrm i}{2\pi}h_{i\bar j}\,dz^i\wedge d\bar z^j,
+ \qquad h_{i\bar j}=g_{i\bar j}+u_{i\bar j}.
+\]
+Thus $\Delta_gv=g^{i\bar j}v_{i\bar j}$ and $\Delta_hv=h^{i\bar j}v_{i\bar j}$ are exactly the trace operators for our $\ddc$ convention. In particular, $\Delta_hu=n-\operatorname{tr}_hg$. Repeated indices are summed. Let $\nabla$ be the Chern connection of the fixed metric $g$, with
+\[
+ \Gamma_{ik}^p=g^{p\bar q}\partial_i g_{k\bar q},\qquad
+ T_{ik}^p=\Gamma_{ik}^p-\Gamma_{ki}^p,\qquad
+ \tau_k=\sum_iT_{ik}^i.
+\]
+All bounds for this connection and its curvature depend only on $g$.
+
+\begin{lemma}[The trace inequality]\label{lem:hermitian-trace-inequality}
+Suppose $h=g+(u_{i\bar j})>0$, and put
+\[
+ S=\operatorname{tr}_gh,\qquad B=\operatorname{tr}_hg,
+ \qquad G=\log\frac{\det h}{\det g}.
+\]
+There is $C_g$ such that, at every point where $S\geq1$,
+\begin{equation}\label{eq:hermitian-trace-inequality}
+ \Delta_h\log S\geq
+ \frac2{S^2}\operatorname{Re}\bigl(h^{k\bar q}\tau_k S_{\bar q}\bigr)
+ +\frac{\Delta_gG}{S}-C_gB.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The identity $d\omega_u=d\omega$ is equivalent to
+\begin{equation}\label{eq:trace-torsion-switch}
+ \nabla_i h_{k\bar j}-\nabla_k h_{i\bar j}
+ =T_{ik}^p(g_{p\bar j}-h_{p\bar j}),
+\end{equation}
+and its complex conjugate. This also follows directly by cancelling the third derivatives of $u$.
+
+For tensors with two holomorphic and one antiholomorphic lower indices, use the positive norm
+\[
+ \|A\|^2=g^{i\bar\ell}h^{k\bar q}h^{p\bar j}
+ A_{ik\bar j}\overline{A_{\ell q\bar p}}.
+\]
+Set $A_{ik\bar j}=\nabla_i h_{k\bar j}$ and
+$D_{ik\bar j}=T_{ik}^p h_{p\bar j}$. We first claim
+\begin{equation}\label{eq:trace-before-square}
+ \Delta_hS=\|A+D\|^2+\Delta_gG+E,
+ \qquad |E|\leq C_g(1+S)B.
+\end{equation}
+Here is the calculation and the bound for its remainder. Start with
+$\Delta_hS=h^{i\bar j}g^{k\bar\ell}\nabla_i\nabla_{\bar j}h_{k\bar\ell}$.
+Switch $\bar j,\bar\ell$ by the conjugate of \eqref{eq:trace-torsion-switch}, commute $\nabla_i,\nabla_{\bar\ell}$, and then switch $i,k$ by \eqref{eq:trace-torsion-switch}. The terms with a derivative of $h$ are
+\[
+ h^{i\bar j}g^{k\bar\ell}\nabla_{\bar\ell}\nabla_kh_{i\bar j}
+ -2\operatorname{Re}\bigl(h^{i\bar j}g^{k\bar\ell}
+             T_{ik}^p\nabla_{\bar\ell}h_{p\bar j}\bigr).
+\]
+In making the first switch there is also a term
+$-h^{i\bar j}g^{k\bar\ell}\overline{T_{j\ell}^q}\nabla_i h_{k\bar q}$.
+Using \eqref{eq:trace-torsion-switch} on it is what gives one of the two conjugate derivative terms just displayed, together with
+\[
+ h^{i\bar j}g^{k\bar\ell}T_{ik}^p\overline{T_{j\ell}^q}
+                   (h_{p\bar q}-g_{p\bar q}).
+\]
+The part containing $h$ is $\|D\|^2$. Differentiating the logarithmic determinant gives
+\[
+ \Delta_gG=h^{i\bar j}g^{k\bar\ell}
+                \nabla_{\bar\ell}\nabla_kh_{i\bar j}-\|A\|^2.
+\]
+The two derivative terms left over are $2\operatorname{Re}\langle A,D\rangle$, using the antisymmetry of $T$. These identities give \eqref{eq:trace-before-square}.
+
+More explicitly, let
+\[
+ \mathcal C_{i\bar\ell k\bar j}
+  =(\nabla_i\nabla_{\bar\ell}-\nabla_{\bar\ell}\nabla_i)h_{k\bar j}.
+\]
+The remainder is the contraction by $h^{i\bar j}g^{k\bar\ell}$ of
+\[
+ \begin{split}
+ &(\nabla_i\overline{T_{j\ell}^q})(g_{k\bar q}-h_{k\bar q})
+ +(\nabla_{\bar\ell}T_{ik}^p)(g_{p\bar j}-h_{p\bar j})\\
+ &\hspace{15mm}+\mathcal C_{i\bar\ell k\bar j}
+              -T_{ik}^p\overline{T_{j\ell}^q}g_{p\bar q}.
+ \end{split}
+\]
+The commutator $\mathcal C$ is curvature acting linearly on $h$; this follows by inserting $\nabla=\partial+\Gamma$ and cancelling the derivatives of $h$. In a $g$-unitary frame diagonalizing $h$, every coefficient inside this remainder is bounded by $C_g(1+S)$. The contraction is consequently bounded by $C_g(1+S)\sum_i h^{i\bar i}$, as asserted. No derivative of $h$ remains in $E$.
+
+It remains to control the gradient introduced by the logarithm. Define
+\[
+ H_{ik\bar j}=h_{i\bar j}\frac{S_k}{S},\qquad
+ K=\|A+D-H\|^2\geq0.
+\]
+By \eqref{eq:trace-torsion-switch},
+\[
+ g^{i\bar\ell}(A+D)_{ik\bar\ell}=S_k+\tau_k.
+\]
+Also $\|H\|^2=|\partial S|_h^2/S$. Expanding the square therefore gives
+\[
+ K=\|A+D\|^2-\frac{|\partial S|_h^2}{S}
+       -\frac2S\operatorname{Re}(h^{k\bar q}\tau_kS_{\bar q}).
+\]
+Combine this with \eqref{eq:trace-before-square} to obtain the exact identity
+\[
+ \Delta_h\log S=\frac KS+
+ \frac2{S^2}\operatorname{Re}(h^{k\bar q}\tau_kS_{\bar q})
+ +\frac{\Delta_gG}{S}+\frac ES.
+\]
+Since $S\geq1$, the remainder is at least $-2C_gB$. Enlarging the constant proves the lemma.
+\end{proof}
+
+\begin{theorem}[The second-derivative bound]\label{thm:hermitian-second-estimate}
+Fix $D,K>0$. Suppose $u$ is smooth, $\omega_u>0$, and
+\[
+ \operatorname{osc}_Xu\leq D,\qquad
+ \omega_u^n=e^G\omega^n,\qquad
+ |G|\leq K,\qquad \Delta_gG\geq-K.
+\]
+There is a constant $C=C(\omega,D,K)$ such that
+\[
+ C^{-1}\omega\leq\omega_u\leq C\omega.
+\]
+\end{theorem}
+\begin{proof}
+Write $s=u-\inf_Xu+1$, so $1\leq s\leq D+1$, and maximize
+\[
+ Q=\log S-Au+s^{-1}
+\]
+on $X$, with $A\geq1$ to be fixed. At a maximum point $x$, if $S(x)<1$ the upper bound for $S$ everywhere already follows from the oscillation bound and the definition of $Q$. We may therefore assume $S(x)\geq1$ and use \cref{lem:hermitian-trace-inequality}.
+
+The positive eigenvalues of $h$ relative to $g$ give $SB\geq n^2$. Hence $\Delta_gG/S\geq-KB/n^2$. Moreover, $\partial Q=0$ gives
+\[
+ \frac{S_k}{S}=(A+s^{-2})u_k.
+\]
+Because $|\tau|_h^2\leq C_gB$, the absolute value of the torsion term is bounded by
+\begin{equation}\label{eq:trace-torsion-absorption}
+ \begin{split}
+ \left|\frac2{S^2}\operatorname{Re}(h^{k\bar q}\tau_kS_{\bar q})\right|
+ &\leq\frac{C_g(A+1)}S\sqrt B\,|\partial u|_h\\
+ &\leq\frac{|\partial u|_h^2}{s^3}
+          +\frac{C_g(A+1)^2s^3}{S^2}B.
+ \end{split}
+\end{equation}
+If $S(x)^2\leq(A+1)^2(D+1)^3$, then $S(x)$ is bounded once $A$ is fixed, and again so is $S$ everywhere. In the remaining case the last coefficient of $B$ is at most $C_g$.
+
+On the other hand, direct differentiation gives
+\[
+ \Delta_hQ=\Delta_h\log S+(A+s^{-2})(B-n)
+                         +2s^{-3}|\partial u|_h^2.
+\]
+The trace inequality and \eqref{eq:trace-torsion-absorption} imply at $x$
+\[
+ 0\geq\Delta_hQ\geq(A-C_g-K/n^2)B-n(A+1),
+\]
+after a fixed enlargement of $C_g$. Choose $A>C_g+K/n^2+1$. It follows that $B(x)$ is bounded. If $\lambda_i$ are the eigenvalues, then for $n\geq2$
+\[
+ S=\sum_i\lambda_i
+ =e^G\sum_i\prod_{j\ne i}\lambda_j^{-1}
+ \leq n e^K B^{n-1}.
+\]
+For $n=1$, $S=e^G$ directly. Thus $S(x)$ is bounded in all cases. For every $y\in X$, the maximum property gives
+\[
+ \log S(y)\leq\log S(x)+A(u(y)-u(x))+s(x)^{-1}-s(y)^{-1}
+             \leq\log S(x)+AD+1.
+\]
+This proves $S\leq C$ on $X$. The determinant lower bound then gives
+$\lambda_i\geq e^{-K}C^{-(n-1)}$, proving uniform equivalence.
+\end{proof}
+
+\begin{corollary}[Higher regularity]\label{thm:classical-higher-estimate}
+Fix $\omega$. For smooth solutions of
+\[
+ (\omega+\ddc u)^n=e^G\omega^n,\qquad\omega+\ddc u>0,
+\]
+a uniform $C^0$ bound for $u$ and uniform bounds for $G$ in every $C^k$ norm imply uniform bounds for $u$ in every $C^k$ norm.
+\end{corollary}
+\begin{proof}
+\Cref{thm:hermitian-second-estimate} gives uniform ellipticity and a bound for $\Delta_gu=S-n$. The standard linear elliptic $W^{2,p}$ estimate for this fixed operator first bounds $u$ in $C^{1,\alpha}$ for any $\alpha<1$. The local complex Evans--Krylov estimate for the concave logarithmic determinant then gives a uniform $C^{2,\alpha}$ bound. One can use its real uniformly elliptic formulation: project real symmetric Hessians to their complex Hermitian part and extend the logarithmic determinant concavely from the compact set of positive matrices supplied by the preceding theorem. The extension is uniformly elliptic on real symmetric matrices because that projection preserves positivity and its trace. The usual Evans--Krylov theorem applies to this extension. Finally, differentiation of the equation gives linear uniformly elliptic equations with H\"older coefficients; Schauder estimates and induction give all higher bounds. Only these standard local elliptic regularity theorems are used here.
+\end{proof}
+
+The same conclusion holds for equations $\omega_u^n=e^{a u+F}\omega^n$ with $a$ in a fixed bounded interval of nonnegative numbers, $u$ uniformly bounded, and $F$ uniformly bounded in every $C^k$. Indeed,
+\[
+ \Delta_g(a u+F)=a(S-n)+\Delta_gF\geq-an+\Delta_gF,
+\]
+so the second-derivative estimate applies without a prior bound for derivatives of $u$. The fixed-operator estimate first gives $C^{1,\alpha}$, after which the same local regularity and bootstrapping apply.

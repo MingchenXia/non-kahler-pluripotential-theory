@@ -1,0 +1,104 @@
+\chapter{Continuous solutions and normalization}
+\label{chap:weak-equations}
+
+The bounded product from \cref{chap:products} makes it possible to formulate equations with nonsmooth densities on an arbitrary compact Hermitian manifold. We prove continuous existence from smooth solvability, local capacity estimates and modified comparison. The only imported analytic estimates in this chapter are classical local Bedford--Taylor estimates. We also distinguish uniqueness of a scaling constant from uniqueness of a potential.
+
+Fix a Hermitian form $\omega$, a smooth positive volume form $\mathrm{d}V$, and a nonnegative density $f\in L^p(X,\mathrm{d}V)$ with $p>1$ and $\int_Xf\,\mathrm{d}V>0$. Multiplying by the smooth positive ratio $\mathrm{d}V/\omega^n$ converts this setting into the one used in the references.
+
+\section{The two basic existence theorems}
+
+\begin{theorem}[Ko{\l}odziej--Nguyen]\label{thm:kn-continuous}
+There are $c>0$ and $u\in\PSH(X,\omega)\cap C(X)$ such that
+\[
+ (\omega+\ddc u)^n=c f\,\mathrm{d}V.
+\]
+One may normalize $\sup_Xu=0$.
+\end{theorem}
+
+This is \cite[Theorem 0.1]{KN15}. It requires neither the bounded mass property nor a positive lower-volume hypothesis. Uniqueness of the normalized potential fails in this generality, even for a smooth density and a background with bounded mass; see \cref{thm:degenerate-hermitian-nonuniqueness}.
+
+\begin{theorem}[Nguyen]\label{thm:nguyen-exp}
+For every $\lambda>0$, there is a unique continuous $\omega$-plurisubharmonic function $u_\lambda$ satisfying
+\begin{equation}\label{eq:weak-exp}
+ (\omega+\ddc u_\lambda)^n=e^{\lambda u_\lambda}f\,\mathrm{d}V.
+\end{equation}
+\end{theorem}
+
+This is \cite[Theorem 0.1]{Nguyen16}. In both references $\ddc=\mathrm i\partial\bar\partial/\pi$, twice our operator. Replacing a reference potential $\varphi$ by $u=2\varphi$ gives the stated current. For \eqref{eq:weak-exp}, use the reference parameter $2\lambda$ as well. Thus the change of normalization also affects the exponential parameter.
+
+The assumption $\lambda>0$ removes the additive freedom: shifting $u_\lambda$ changes the right side. These theorems concern strictly positive smooth backgrounds and continuous potentials. They should not be applied to a merely big background or an arbitrary singular potential without a further theorem.
+
+\input{author/section_modified_comparison}
+
+\input{author/section_weak_estimates}
+
+\section{Order for the exponential equation}
+
+\begin{lemma}\label{lem:exp-order}
+Let $a,b\in\PSH(X,\omega)\cap L^\infty(X)$ solve
+\[
+ \omega_a^n=e^{\lambda a}f_a\,\mathrm{d}V,\qquad
+ \omega_b^n=e^{\lambda b}f_b\,\mathrm{d}V,
+\]
+where $\lambda>0$ and $f_a,f_b$ are nonnegative nonzero $L^p$ densities, $p>1$. If $f_a\leq f_b$ almost everywhere, then $b\leq a$ on $X$.
+\end{lemma}
+
+\begin{proof}
+The equations and $f_a\leq f_b$ give
+$e^{-\lambda b}\omega_b^n\geq e^{-\lambda a}\omega_a^n$.
+Apply \cref{cor:bounded-exponential-comparison} with $u=a$ and $v=b$.
+\end{proof}
+
+This recovers \cite[Lemma 2.3]{Nguyen16}. The proof only requires bounded potentials and the stated measure inequality; it does not require a positive lower bound for either density.
+
+The order reverses because increasing the density can be offset by decreasing the potential in the exponential factor.
+
+\section{Recovering the scaling constant}
+
+The exponential equation determines the constant in \cref{thm:kn-continuous} through a small-parameter limit. The following argument also gives a uniform error estimate.
+
+\begin{proposition}\label{prop:vanishing-exponent}
+Suppose $u\in\PSH(X,\omega)\cap C(X)$ and $c>0$ satisfy $\omega_u^n=cf\,\mathrm{d}V$. Set $m=\inf_Xu$ and $M=\sup_Xu$. Then the solution of \eqref{eq:weak-exp} obeys
+\begin{equation}\label{eq:exp-barriers}
+ u+\frac{\log c}{\lambda}-M
+ \leq u_\lambda\leq
+ u+\frac{\log c}{\lambda}-m.
+\end{equation}
+In particular,
+\[
+ \|\lambda u_\lambda-\log c\|_\infty
+ \leq\lambda(M-m),
+ \qquad
+ e^{\lambda u_\lambda}\longrightarrow c
+ \quad\hbox{uniformly on }X.
+\]
+The scaling constant $c$ is unique.
+\end{proposition}
+\begin{proof}
+Let $a=u+\lambda^{-1}\log c-M$. It has the same Monge--Amp\`ere measure as $u$, and
+\[
+ \omega_a^n=e^{\lambda a}f_a\,\mathrm{d}V,\qquad
+ f_a=e^{-\lambda(u-M)}f\geq f.
+\]
+The density $f_a$ is nonzero and in $L^p$ because $u$ is bounded. Apply \cref{lem:exp-order} to $a$ and $u_\lambda$ to obtain $a\leq u_\lambda$.
+
+Similarly, $b=u+\lambda^{-1}\log c-m$ solves the exponential equation with density
+$f_b=e^{-\lambda(u-m)}f\leq f$. The order lemma gives $u_\lambda\leq b$. This proves \eqref{eq:exp-barriers}. Multiplying by $\lambda$ and using $m\leq u\leq M$ proves the norm bound and the uniform limit.
+
+If another pair $(v,c')$ solves the equation with the same $f$, the same unique functions $u_\lambda$ satisfy
+$\lambda u_\lambda\to\log c'$ as well. Hence $c'=c$.
+\end{proof}
+
+The limiting characterization is due to Nguyen \cite[Corollary 0.2]{Nguyen16}. The displayed proof isolates its comparison mechanism. It proves uniqueness of the constant without comparing two candidate potentials for the equation with $\lambda=0$. The next chapter gives explicit examples and develops criteria for potential uniqueness. For classical potentials, uniqueness of the scalar also has a direct extremum proof:
+
+\input{author/section_classical_scalar_uniqueness}
+
+\Needspace{17\baselineskip}
+\section{Limits of this chapter}
+
+We have proved the two continuous existence theorems, their capacity and compactness estimates, bounded domination, and the normalization consequences. The local weighted Chern--Levine--Nirenberg and volume--capacity estimates were explicitly retained as standard inputs. The proof controls the densities of the approximating equations and never requires bounded mass on $X$.
+
+The scalar limit above does not prove that the normalized potentials
+$u_\lambda-\sup_Xu_\lambda$ have a unique limit for every density under consideration. \Cref{prop:symmetric-equation-clusters} proves their uniform precompactness and preservation of data symmetries after the regularity theorem is established. Agreement of all cluster limits remains a further question.
+
+Equations with prescribed singularities require a different layer of the theory: relative envelopes, upper and lower singularity volumes, and a specified full-mass class. The following chapters state and compare these definitions and record the corresponding results of \cite{ALS26,XL26}.

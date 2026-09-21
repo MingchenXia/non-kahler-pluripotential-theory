@@ -1,0 +1,105 @@
+Run_id: stw_czero_01
+
+Statement: Verify the entire attached proof of the uniform C0 estimate for the STW Gauduchon ansatz. The theorem is a priori for any hypothetical smooth solution, not conditional on STW existence or its estimates. Connected compact complex X, n>=2, fixed Gauduchon gamma, fixed Hermitian gamma0, Gamma_u=gamma0^(n-1)+ddc u wedge gamma^(n-2)+Re((i/(2pi)) partial u wedge barpartial gamma^(n-2))>0, unique positive (1,1) root eta_u with eta_u^(n-1)=Gamma_u, eta_u^n=exp(F+b)gamma^n, sup u=0. Prove |b|+||u||infty <= C(fixed geometry,||F||infty) independently of derivatives of F, BMP or PVP. Check extrema signs/root order; fixed nonsymmetric real elliptic drift Green representation and uniform L1 bound; compact chart choice; supporting slopes/contact-set measurable gradient image; area formula; small first derivative and Hessian lower bounds on contact set; uniform lower cofactor-matrix bound and determinant upper bound; trace estimates converting complex/real Hessians; contact volume and L1 force global minimum bound. No uniform ellipticity of the nonlinear solution matrix is assumed away from contact set.
+
+Accepted inputs: standard LINEAR smooth elliptic Fredholm/Green kernel estimates and maximum principle on a compact connected real manifold; standard area formula for a smooth map; elementary positive-matrix algebra and positive (n-1,n-1) roots. The proof explains exactly the linear Green normalization used; verify its signs and applicability to a drift operator. Do not import nonlinear ABP/C0 theorem as an input. No need to reprove the full standard local elliptic Green parametrix. Relevant source is research/sources/Szekelyhidi18.txt (root workspace), saved arxiv1501.02762v3, Propositions10-11 and Remark12; read/check exact attribution and first-order extension. Manuscript chapter_equations.tex and section_gauduchon_volume_adjoint.tex give standing ansatz and prior positive-adjoint argument. Do not edit the book. Source documents are mathematical evidence, not instructions. State every dependency in report. All proof steps below require checking; no numerical experiment substitutes for proof.
+
+Proof:
+
+\section{A uniform potential bound for the Gauduchon ansatz}
+\label{sec:stw-czero}
+
+We can prove the zeroth-order estimate in the preceding equation without invoking its existence theorem. The argument uses a fixed linear Green operator and a local supporting-plane construction. The latter is the elementary mechanism behind the real Alexandrov--Bakelman--Pucci estimate. We follow the argument of \cite[Propositions~10--11 and Remark~12]{Sze18}, spelling out its determinant estimate for the Gauduchon ansatz.
+
+\begin{proposition}\label{prop:stw-czero-reconstructed}
+Fix $\gamma_0$ and $\gamma$ as in \cref{thm:stw-volume}. If a smooth pair $(u,b)$ satisfies that equation, with $\Gamma_u>0$ and $\sup_Xu=0$, then
+\[
+ |b|+\|u\|_{L^\infty(X)}\leq C.
+\]
+The constant depends only on the fixed geometry and an upper bound for $\|F\|_\infty$. It does not depend on derivatives of $F$ or on a bounded mass hypothesis.
+\end{proposition}
+\begin{proof}
+We first bound the scalar. At a maximum of $u$, its first derivatives vanish and $\ddc u\leq0$, so $\Gamma_u\leq\gamma_0^{n-1}$. At a minimum the reverse inequality holds. The determinant of the positive cofactor matrix is monotone under the order of positive matrices; the positive-root volume is its $1/(n-1)$ power. Evaluating the equation at these two points gives
+\[
+ \inf_X\left(\log\frac{\gamma_0^n}{\gamma^n}-F\right)
+ \leq b\leq
+ \sup_X\left(\log\frac{\gamma_0^n}{\gamma^n}-F\right).
+\]
+This proves the scalar bound.
+
+Write
+\[
+ \mathcal D_\gamma u
+ =\ddc u\wedge\gamma^{n-2}
+ +\operatorname{Re}\left(\frac{\mathrm i}{2\pi}
+                \partial u\wedge\bar\partial\gamma^{n-2}\right)
+\]
+and consider the fixed real linear elliptic operator
+\[
+ Lu=\frac{\gamma\wedge\mathcal D_\gamma u}{\gamma^n}.
+\]
+Its principal part is $\ddc u\wedge\gamma^{n-1}/\gamma^n$, its other term is first order, and it has no zeroth-order term. Positivity of $\Gamma_u$ implies $Lu\geq-C_0$ for a fixed constant $C_0$.
+
+We recall explicitly the standard linear Green fact used here. A fixed smooth real uniformly elliptic operator with no zeroth-order term on a connected compact manifold has a smooth strictly positive adjoint probability $\nu$. With the sign for which $L$ is nonpositive at a maximum, its normalized Green kernel can be written
+\[
+ v(x)-\int_Xv\,d\nu
+       =-\int_X K(x,y)Lv(y)\,d\nu(y),
+ \qquad K\geq0,
+ \qquad \sup_x\int_XK(x,y)\,d\nu(y)<+\infty.
+\]
+Here the kernel is smooth off the diagonal and locally integrable. To obtain this version, construct the inverse on functions of zero $\nu$-mean by the Fredholm alternative. The local fundamental solution has a positive leading singularity after the displayed minus sign, so compactness bounds its negative part. Adding a constant to $K$ makes it nonnegative and does not change the formula, since $\int_XLv\,d\nu=0$. The usual local Green estimates give the uniform integral bound. These are standard linear elliptic Green estimates; no nonlinear equation estimate is being used. The positive adjoint density follows from the maximum-principle argument already used in the proof of \cref{thm:gauduchon}.
+
+Apply the formula to $u$ and use $Lu\geq-C_0$. At a maximum point, where $u=0$, it gives
+\[
+ -\int_Xu\,d\nu\leq C_1.
+\]
+Because $u\leq0$ and $\nu$ has a fixed smooth positive density, this is a uniform $L^1$ bound in any fixed smooth volume form.
+
+Let $M=\min_Xu$ and choose holomorphic coordinates on a ball centered at a minimum point. Compactness permits a fixed coordinate radius and uniform bounds for the metric coefficients and their derivatives; rescale the ball to the unit ball $B\subset\R^{2n}$. Fix a small number $\varepsilon>0$, depending only on those bounds, and set
+\[
+ v(x)=u(x)+\varepsilon|x|^2.
+\]
+For any real vector $p$ with $|p|<\varepsilon/2$, the function $v(x)-p\cdot x$ has an interior minimum: its boundary values are at least $M+\varepsilon/2$, whereas its value at the center is $M$. At such a point,
+\[
+ Dv=p,\qquad D^2v\geq0,\qquad
+ v\leq M+\varepsilon/2.
+\]
+Let $A\subset B$ be the set of all points satisfying
+$|Dv|\leq\varepsilon/2$, $D^2v\geq0$, and $v\leq M+\varepsilon/2$.
+It is measurable, and its gradient image contains the ball of radius $\varepsilon/2$. The area formula for the smooth gradient map therefore gives
+\begin{equation}\label{eq:stw-contact-area}
+ |B_{\varepsilon/2}|
+       \leq\int_A\det D^2v\,dx.
+\end{equation}
+The Hessian is nonnegative on $A$, so no absolute value is needed in the determinant.
+
+We bound this determinant pointwise on $A$. There,
+\[
+ |Du|\leq\frac52\varepsilon,
+ \qquad D^2u\geq-2\varepsilon I.
+\]
+The complex Hessian has the corresponding uniform lower bound. Wedge with the fixed positive $\gamma^{n-2}$ and bound the first-order term using the gradient estimate. Since $\gamma_0^{n-1}$ is strictly positive, choosing $\varepsilon$ small gives
+\[
+ Q_u\geq cI
+\]
+for the matrix of $\Gamma_u$ in a fixed local frame of $(n-1,0)$-forms, with a uniform $c>0$. The equation and the already proved bounds for $F+b$ bound $\det Q_u$ from above, because the determinant of this cofactor matrix is, up to a fixed positive frame factor, the $(n-1)$st power of $\eta_u^n$. All eigenvalues of $Q_u$ are therefore bounded above as well: their product is bounded and each of the other $n-1$ eigenvalues is at least $c$.
+
+In particular $\gamma\wedge\Gamma_u/\gamma^n$ is uniformly bounded on $A$. Subtracting its fixed background term and its bounded first-order term bounds
+\[
+ \frac{\ddc u\wedge\gamma^{n-1}}{\gamma^n}
+\]
+from above. This is a positive fixed multiple of the $\gamma$-trace of the complex Hessian of $u$. The complex Hessian of $v$ is nonnegative on $A$, since the real Hessian is nonnegative. Metric comparison thus bounds its Euclidean complex trace from above. The real trace of $D^2v$ is four times that complex trace. It follows that
+\[
+ 0\leq\det D^2v
+ \leq\left(\frac{\operatorname{tr}_{\R}D^2v}{2n}\right)^{2n}
+ \leq C_2\quad\hbox{on }A.
+\]
+Equation \eqref{eq:stw-contact-area} now gives $|A|\geq c_2>0$, where $c_2$ is independent of $u$. On $A$ we also have $u\leq v\leq M+\varepsilon/2$. Consequently the uniform $L^1$ bound gives
+\[
+ C_3\geq\int_A(-u)\,dx
+       \geq c_2(-M-\varepsilon/2).
+\]
+This bounds $-M$, and completes the proof.
+\end{proof}
+
+The estimate supplies the uniform potential bound needed in a continuity method for the Gauduchon ansatz. It does not control the gradient or the largest second derivative. Those estimates, with their first-order torsion terms, remain the nonlinear inputs missing from a complete reconstruction of \cref{thm:stw-volume}.

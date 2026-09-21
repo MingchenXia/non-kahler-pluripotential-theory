@@ -1,0 +1,183 @@
+Run_id: bott_chern_bclasses_01
+
+Statement: Verify full new BCbdivisor-class supplement. Mainchapter_divisorial_models.tex independently auditingdivisorial_models_01; accept its conclusions CONDITIONALLY for boundedcheck: τcurrentsS_Z finiteclosedpositive, finiteGaudbudgets,strongdivpartapprox,pushcompat,andoneoriginalθ|YPSHmajorant withallprofileinequalities. Allothernewproofs mustbechecked here. Acceptedstandardinputs: LOCALddcPoincarelemma forrealclosed11currents, localpshpotentialsforpositiveclosedcurrents, localSiu divisor restriction/removal, scalar ellipticregularity, localSkoda/multiplieridealdefinition exp(-mu), Lelongpointwiseandgenericfacts, globalDemaillyanalyticregularization asprecisebookThm18andDemAM11Thm14.12 construction, logresolutionstandardSGPT. BC smooth/current description isPROVED HERE withlocalpotentials andpartition; no ddbar lemma onnonKahler assumed. Kählerddbarlemma onlyforcomparisonwithsource. CheckeverynewstepincludingGaudfunctional/oppositepseudo cone/HopfdeRham0BCnonzero, traceBCclasses onlyTHETACLOSED, closedpositiveTselftrace equalityviaJacobianA(E) floorbound, properpushpullcurrent,additivity,Siu regularclasses, analyticTCartierrealization/nefbecauseboundedv, smoothness ofDemaillyunitidealapproximants (ordinary boundedanalyticTYPE alone insufficient). RootreadexactDemAM11textlines8360-8430gluelog(sum cutoff²exp(2m Bergman+smooth)),Thm14.12 p142-143, observation14.14 smoothafterresolution; unitideals noresolutionnecessary. Sources research/sources/Demailly-analytic-methods.pdf/txt. Factoroursi/(2pi), sourcei/pi potentialhalf, alreadyauditednormalization; no topMAclaim. SourceSGPT author/chapter_bdiv.tex usesCOHOMOLOGYCLASSES notfiniteformaldivisors, KählerH11 agreesBC onlyunderddbar. No general nefnet/volume theoremasserted; finalquestionsareunknownhere. n>=1 generally, Hopfn>=2. Readbookreadonly. No noveltyclaim. Usualboundedverificationworkflow.
+
+Proof:
+
+\section{Bott--Chern classes and closed currents}
+
+The b-divisors in \cite[chapter on b-divisors]{SGPT} are cohomology classes on all modifications. We preserve that distinction: they are not required to be finite formal sums of prime divisors. On a compact non-K\"ahler manifold the appropriate degree-one cohomology is Bott--Chern cohomology.
+
+For a complex manifold $Z$, define
+\[
+ H^{1,1}_{\mathrm{BC}}(Z,\mathbb R)
+ =\frac{\{\beta\in C^\infty(Z,\Lambda^{1,1}_{\mathbb R}):d\beta=0\}}
+        {\{\ddc f:f\in C^\infty(Z,\mathbb R)\}}.
+\]
+We first justify the current description that will be used below.
+
+\begin{lemma}\label{lem:bc-one-one-current-description}
+Replacing smooth forms and smooth functions in this quotient by currents and distributions gives the same space. In particular every closed positive $(1,1)$-current can be written
+\[
+ T=\beta+\ddc w
+\]
+with $\beta$ smooth and closed and $w$ a global quasi-plurisubharmonic function.
+\end{lemma}
+\begin{proof}
+Use the local $\ddc$-Poincar\'e lemma for real closed $(1,1)$-currents on coordinate balls, a standard local current fact recalled in \cite{SGPT}. Write $T=\ddc v_i$ on such a cover. The local potentials can be taken real, and can be taken plurisubharmonic when $T$ is positive. On overlaps $\ddc(v_i-v_j)=0$. Taking the Euclidean trace gives a harmonic distribution, so elliptic regularity makes $v_i-v_j$ smooth.
+
+Choose a smooth locally finite partition of unity $\chi_i$ subordinate to the cover and put $w=\sum_i\chi_i v_i$, extending each supported term as a distribution. On the $j$th ball,
+\[
+ w-v_j=\sum_i\chi_i(v_i-v_j)
+\]
+is smooth. Therefore $\beta=T-\ddc w=-\ddc(w-v_j)$ is smooth locally and hence globally. It is real and closed. If $T$ is positive, the same identity shows that $w$ is locally psh plus smooth, and thus has a global canonical quasi-plurisubharmonic representative. This proves surjectivity of the smooth-to-current map on the quotient.
+
+For injectivity, if a smooth form $\beta$ equals $\ddc w$ for a real distribution $w$, taking a smooth Hermitian trace gives an elliptic scalar equation with smooth right side. Interior elliptic regularity makes $w$ smooth. Thus the relation already holds in the smooth quotient.
+\end{proof}
+
+The class of a closed current $T$ is written $\{T\}_{\mathrm{BC}}$. It is called pseudoeffective when it has a positive closed representative. Pullback of classes uses smooth representatives. Pushforward under a proper modification uses currents; it is well-defined because pushforward commutes with $\ddc$. The lemma identifies its result with a smooth Bott--Chern class. For a modification $g$, we have $g_*g^*\beta=\beta$ as currents for every smooth form $\beta$ of the indicated degree, by degree-one change of variables.
+
+A Gauduchon metric $\gamma$ defines a linear functional on this cohomology:
+\[
+ \ell_\gamma(\{T\}_{\mathrm{BC}})=\int_ZT\wedge\gamma^{\dim Z-1}.
+\]
+Current Stokes makes it independent of the representative. For a positive representative it is nonnegative, and equality forces that representative to vanish, by positivity and the strict positivity of the metric. In particular the pseudoeffective cone contains no nonzero line: if $T_1,T_2\geq0$ represent opposite classes, their sum has zero Gauduchon pairing, hence $T_1=T_2=0$.
+
+On the Hopf manifold, $\alpha=\ddc\log|z|^2$ is exact as a de Rham form. Indeed $\dc\log|z|^2$ descends to the quotient because the logarithm changes by a constant under the contraction. Nevertheless
+\[
+ \ell_\omega(\{\alpha\}_{\mathrm{BC}})
+ =\int_{X_n}\alpha\wedge\omega^{n-1}=2(n-1)>0.
+\]
+Thus its Bott--Chern class is nonzero. Gauduchon integration detects closed-curvature information that the de Rham class loses in this example.
+
+\begin{definition}
+A \emph{Bott--Chern b-divisor class} over $Y$ is a family
+\[
+ \mathbb A=(\mathbb A_Z)_{\pi:Z\to Y},\qquad
+ \mathbb A_Z\in H^{1,1}_{\mathrm{BC}}(Z,\mathbb R),
+\]
+over smooth compact modifications, compatible with pushforward. It is pseudoeffective if every $\mathbb A_Z$ is pseudoeffective. It is \emph{Cartier} if there are one model $Z$ and one class $a_Z$ such that its class on every model $Z'$ dominating $Z$ is the pullback of $a_Z$.
+\end{definition}
+
+When the models are K\"ahler, the standard $\partial\bar\partial$ lemma identifies this cohomology with the real $(1,1)$-cohomology used in \cite{SGPT}. The definition then agrees with the source definition. No such identification is imposed on a general compact Hermitian manifold.
+
+\begin{proposition}\label{prop:trace-bott-chern-bclass}
+If the original ambient background $\theta$ is closed, the classes
+\[
+ \mathbb A_Z(u;Y,\theta)
+ =\{\pi^*(\theta|_Y)-S_Z(u;Y)\}_{\mathrm{BC}}
+\]
+form a pseudoeffective Bott--Chern b-divisor class. They depend only on the ambient multiplier-ideal class of $u$ and the Bott--Chern class of $\theta|_Y$.
+\end{proposition}
+\begin{proof}
+By \cref{prop:original-background-trace-majorant}, there is one $v$ on $Y$ such that
+\[
+ R_Z=\pi^*(\theta|_Y)+\ddc(v\circ\pi)-S_Z(u;Y)\geq0
+\]
+on every model. Since $\theta$ and $S_Z$ are closed, $R_Z$ is closed. Its class is exactly the displayed one, proving pseudoeffectivity. Compatibility follows from \cref{thm:trace-divisorial-model-compatibility} and $g_*g^*(\theta_Z)=\theta_Z$. The trace data is unchanged by ambient multiplier-ideal equivalence, and replacing $\theta|_Y$ by a smooth $\ddc$ perturbation changes no class. These facts prove independence.
+\end{proof}
+
+If $\theta$ is not closed, the same expression $R_Z$ is still a positive current, but
+\[
+ dR_Z=\pi^*(d\theta|_Y).
+\]
+It therefore need not define a Bott--Chern class. This is a differential obstruction, independent of its finite linear mass or its divisorial summability.
+
+\section{The b-divisor class of a closed positive current}
+
+For the next construction let $T$ be a closed positive $(1,1)$-current on any connected compact complex manifold $Y$. Write $T=\beta+\ddc w$ as in \cref{lem:bc-one-one-current-description}. On a compact modification $\pi:Z\to Y$, its pullback is defined by the local psh potentials, and is genuine and positive because $\pi$ is bimeromorphic. Let
+\[
+ N_Z(T)=\sum_E\nu(w\circ\pi,E)[E],\qquad
+ \operatorname{Reg}_Z(T)=\pi^*T-N_Z(T).
+\]
+Siu's decomposition makes the second current positive and closed. We spell out its relation with the numerical construction.
+
+\begin{lemma}\label{lem:self-trace-is-siu}
+For $Y$ regarded as a submanifold of itself and every divisor $E$ on a smooth compact modification,
+\[
+ \tau_{Y,w}(E)=\nu(w\circ\pi,E).
+\]
+Thus $N_Z(T)=S_Z(w;Y)$.
+\end{lemma}
+\begin{proof}
+A genuine quasi-plurisubharmonic function has Lelong number zero at almost every point, so the self-trace satisfies its required generic hypothesis. Put $\nu_E=\nu(w\circ\pi,E)$ and let $A_E$ be one plus the generic vanishing order of the Jacobian determinant of $\pi$ along $E$.
+
+The local Bergman lower estimate, followed by pullback, gives
+\[
+ \frac1m\operatorname{ord}_E\mathcal I(mw)\leq\nu_E.
+\]
+For the reverse bound, let $f$ be a local member of $\mathcal I(mw)$ near the center of $E$. At a generic point of $E$, local Siu decomposition and a smooth correction give
+\[
+ w\circ\pi\leq\nu_E\log|z_1|^2+C,
+ \qquad E=\{z_1=0\}.
+\]
+Choose the point away from the other zero components of $f\circ\pi$ and the Jacobian. If $a=\operatorname{ord}_E(f\circ\pi)$, change of variables for the locally integrable function $|f|^2e^{-mw}$ shows that
+\[
+ |f\circ\pi|^2e^{-m(w\circ\pi)}|\operatorname{Jac}\pi|^2
+\]
+is locally integrable. It is bounded below by a positive constant times
+$|z_1|^{2(a+A_E-1-m\nu_E)}$ on a smaller product neighborhood. Integration in $z_1$ is finite only if $a+A_E>m\nu_E$. Apply this necessary inequality to finite local generators of the multiplier ideal. It gives
+\[
+ \nu_E-A_E/m
+ \leq\frac1m\operatorname{ord}_E\mathcal I(mw)
+ \leq\nu_E.
+\]
+Let $m\to\infty$ and use the integer limit defining $\tau$. This proves the equality, including $\nu_E=0$.
+\end{proof}
+
+\begin{theorem}\label{thm:closed-current-bclass}
+The family
+\[
+ \mathbb D(T)_Z=\{\operatorname{Reg}_Z(T)\}_{\mathrm{BC}}
+\]
+is a pseudoeffective Bott--Chern b-divisor class. For closed positive currents $T_1,T_2$ and $a\geq0$,
+\[
+ \mathbb D(T_1+T_2)=\mathbb D(T_1)+\mathbb D(T_2),
+ \qquad \mathbb D(aT_1)=a\mathbb D(T_1).
+\]
+On a K\"ahler manifold, with K\"ahler models, it agrees with the b-divisor class of the same current in \cite{SGPT}.
+\end{theorem}
+\begin{proof}
+The preceding lemma identifies $N_Z(T)$ with the already constructed compatible divisorial currents. For $g:Z'\to Z$, we have $g_*N_{Z'}(T)=N_Z(T)$ and $g_*g^*(\pi^*T)=\pi^*T$. For the latter identity, write the current as a smooth form plus $\ddc$ of a potential; degree-one change of variables applies both to the smooth form and to the locally integrable pulled-back potential, and pushforward commutes with $\ddc$. Therefore
+\[
+ g_*\operatorname{Reg}_{Z'}(T)=\operatorname{Reg}_Z(T).
+\]
+Taking classes proves compatibility, and positivity proves pseudoeffectivity. Generic Lelong numbers add under addition of positive currents and scale by nonnegative constants. Hence their divisorial parts, and then their regular parts, have the same properties. This proves the two identities. In the K\"ahler case both the regular-current construction and the identified cohomology classes are exactly those in the source definition.
+\end{proof}
+
+\section{Analytic singularities give a nef Cartier class}
+
+A class $a\in H^{1,1}_{\mathrm{BC}}(Z,\mathbb R)$ is \emph{nef} if, for one Hermitian metric $\gamma$, it has a smooth representative $\beta_\epsilon\geq-\epsilon\gamma$ for every $\epsilon>0$. Comparison of two fixed Hermitian metrics shows that this definition is independent of the metric. A Cartier b-divisor class is called nef here if it has a realization by a nef class.
+
+\begin{lemma}\label{lem:bounded-closed-potential-nef}
+If $R=\beta+\ddc v\geq0$ is closed, $\beta$ is smooth, and $v$ is bounded, then $\{R\}_{\mathrm{BC}}$ is nef.
+\end{lemma}
+\begin{proof}
+Apply the classical analytic regularization construction of \cref{thm:demailly-hermitian-input} to $v$, with lower bound $-\beta$. Its multiplier ideals are all the unit ideal. In this case the construction produces smooth functions $v_m$ with
+\[
+ \beta+\ddc v_m\geq-\epsilon_m\gamma,
+ \qquad \epsilon_m\to0.
+\]
+We identify the extra smoothness explicitly: the local Bergman sums have no common zeros and are smooth and positive; the glued potential is the logarithm of a finite sum of these smooth positive sums with smooth cutoff factors. At every point at least one cutoff is positive. The logarithm is therefore smooth. This is the construction preceding \cite[Theorem 14.12]{DemAM11}; the smooth remainder after resolution is also recorded there in (14.14). Smoothness here follows from the construction with unit ideals, not merely from having bounded analytic type. The displayed smooth forms represent the same closed class and satisfy its defining nef estimates.
+\end{proof}
+
+\begin{theorem}\label{thm:analytic-current-nef-cartier}
+If the closed positive current $T$ has analytic singularities, then $\mathbb D(T)$ is Cartier and has a nef realization on a smooth compact modification.
+\end{theorem}
+\begin{proof}
+Resolve the analytic singularity ideal, using the standard log-resolution theorem recalled in \cite{SGPT}. On one smooth compact model $\pi:Z\to Y$,
+\[
+ \pi^*T=[D]+R,
+\]
+where $D$ is a finite effective rational divisor and $R$ is positive, closed, and has locally bounded potentials. To obtain a global bounded potential, choose smooth metrics on the divisor bundles. Subtract the corresponding logarithmic squared norms from $w\circ\pi$. The remainder $v$ is globally bounded, and
+\[
+ R=\beta_Z+\ddc v
+\]
+for a smooth closed $\beta_Z$. The lemma makes its class nef.
+
+On every further compact modification $g:Z'\to Z$, the current $g^*R$ still has bounded local potentials and consequently zero Lelong numbers. The entire divisorial part of $g^*\pi^*T$ is therefore $[g^*D]$, and its regular part is $g^*R$. It follows that $\mathbb D(T)_{Z'}=g^*\{R\}_{\mathrm{BC}}$. Thus the pair $(Z,\{R\}_{\mathrm{BC}})$ is the required nef Cartier realization.
+\end{proof}
+
+This proves the analytic-singularity step of the b-divisor construction without a K\"ahler hypothesis. For a general current, analytic regularization gives closed approximants bounded below by $-\epsilon_m\gamma$. On a non-K\"ahler manifold the form $\gamma$ is not a closed class that can be added to make each approximant positive. The K\"ahler perturbation used in the source proof of nefness is therefore unavailable in this form.
+
+The following questions remain separate: whether the b-divisor class of every closed positive current is a limit of nef Cartier classes in an appropriate modelwise topology; what volume should be assigned to such a family; and under which hypotheses it agrees with a nonlinear mass. None follows from pushforward compatibility or from the finite Gauduchon bounds proved here.

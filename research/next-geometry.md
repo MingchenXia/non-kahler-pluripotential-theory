@@ -1,0 +1,29 @@
+# Next geometric chapter: flags, convex bodies and bounded mass
+
+19:15 UTC 14September2026. Plan, NOT YET a book theorem. Do not lose full SGPT geometry scope.
+
+## Current separately drafted geometry
+
+chapter_sections.tex (audit weighted_sections_01 exec52929) elementary weightedHilbert/Bergman andGauddegree, Isectionnotgraded, boundedWgraded, curveRR, UinfinitytrivialL. section_hopf_sections.tex (hopf_sections_01 exec59838) explicitHopf Lk, Nm binomial(km+n-1,n-1), K/BconstantN forprobvolume, Gauddeg2k(n-1), closedtopmass0/omega^n2n. section_trace_section_obstruction.tex (trace_section_obstruction_01 exec12875) Gaudtrace restrictions necessarydegreeconditions andpseudoeff residualclass, ellipticirrationalflatcounterexample. All3 NOTINCLUDEDuntilfullreportsread. Intended inserts insectionschapter afterGauddegree fortraceobstruction andaftercurve forHopf, thenlastinfinite-massobstruction. Add aschapter20 innewPart Holomorphicsectionsandconvexbodies aftertrace.
+
+## Proposed flag valuation construction
+
+Assume GIVEN a complete smooth connected compact flag X=Y0>Y1>...>Yn={p}, eachYi smoothprime divisor onY(i-1). Do NOT claim existence of suchflags on everycompactcomplexmanifold. For nonzerosection Lm define nu_i bydividecanonicalYi^nu_i thenrestrictiteratively. Standardlocaladaptedcoordinatesatp give lexleadingTaylor valuation, productadditivity, sum>=min, one-dimensionalleaves. Prove #nu(V\0)=dimV foranyfinite-dimensionalsectionspace byGaussianelimination (distinctvaluesindependent, oneleadingcoefficientlinearfunctionalatminimalvalue andinductdim).
+
+Gauduchon LINEAR bounds forALL H0(Lm), noKahler/BMP: atstagei onY(i-1) dimensiond=n-i+1 chooseGaudgamma_i (curve anymetric). M_(i-1)=Lm restricted timesproduct ofO_{Y(j-1)}(-nu_j Yj)|Y(i-1),j<i. Itsnonzeroresidualsectiondivisorcontainsnu_i Yi. DegreePL implies
+ a_i nu_i <= m A_i - sum_{j<i} B_ij nu_j,
+ a_i=intYi gamma_i^(d-1)>0, A_i=deg_gamma_i Lrestricted, B_ij=fixeddegreesofrestrictedO(Yj). Thus nu_i<=C_i m inductively usingabsolutevalues coefficients. Alllinearvalboxesfitpointedcone0<=x_i<=C_i t.
+
+For genuinelygradedW_m (e.gboundedweightedsections), S={(nu(s),m)} plus0 issemigroup. DefineDelta=closedconvhull{nu(s)/m}, compactor empty. For everym S_m/m subsetDelta, latticecubes give limsup dimW_m/m^n <=vol_n Delta (andifDeltalowerdim thenlimit0). Proofuniongridcubes count/m^n insideDelta+[-1/m,1/m]^n, volumecontinuity compactconvex. ImportexactstandardsemigrouptheoremfromSGPT appendixAlmostsemigroups if subgroupS=Z^(n+1): then lim dimW_m/m^n=volDelta, source theoremfull-lattice semigroup (chapter_okounkov.tex thm:HausOkoun andappendixthm:KK12growth). Stateexactextraassumption, don'tignorelatticeindex/periodotherwise.
+
+IfDelta hasnonemptyinterior, choose n+1 affinelyindependent normalizedvaluationpointsofactualsections (denseconvhullgeneratorsaffinespan). Raiseallto commondegreeM andtakemeromorphicratiosf_i againstbase s0. nu(f_i)=M(normalizednu_i-normalizednu0) linearlyindependent. Any polynomial in f_i hasmonomialswithdistinctvaluations, so uniquelexleasttermcannotcancel. Thus n algebraically independentmeromorphicfunctions. This argument elementary anddoesn'tneedprimitivegroupsaturation.
+
+Standardgeometricinput: Moishezon theorem, compactirreduciblenfoldwithnalgindepmeromorphicfunctions admits modificationbySMOOTHPROJECTIVEmanifold. Primary original Moi67 paper found/readweb intropp1331-1332, exactstatementpage1332. TitleResolutiontheoremsforcompactcomplexspaceswithasufficientlylargefieldofmeromorphicfunctions, MathUSSR-Izv1(6)(1967),1331-1356,DOI10.1070/IM1967v001n06ABEH000624. URL https://www.mathnet.ru/php/getFT.phtml?jrnid=im&option_lang=eng&paperid=2594&what=fullteng . webPDFread (26pages), localdownloadexec17359mayfailedtimeout, inspectbeforeduplicate. No localmanifest/bib yet. Exacttheoremcanbe cited standardexternalinput withoutrebuilding26pageresolutionproof. OriginalauthorprimaryMathnetmetadata https://www.mathnet.ru/eng/im2594 . DemaillyanalmethbookSec14 alsostatesMoishezon equivalencebutoriginalprimarybetter.
+
+Kahler MODIFICATION impliesBMP, provehere: pi:Z->X properbimeromorphic smoothcompactKahlerκ; chooseCκ>=pi*omega. boundedomegaPSHu pullsbackbounded; localBTnaturalityoffexceptional andnoanalyticmass giveintXMAomega u=intZ(pi*omega+ddc upi)^n <=intZ(Cκ+ddc upi)^n=C^n intκ^n byclosedStokes. This is GL22Lemma3.6 firstbullet specialized, readlocaltextlines923ff. Thuspositivefull-dimensionalDelta⇒nalgindep⇒standardMoi67projectivemodification⇒BMP. CONTRAPOSITIVE: onBMPFAIL manifold, allsuchgradedflagbodieshavelowerdimension anddimW_m=o(m^n). This doesnotassumeBMPinmainframework; identifieswhyfull-dimensionalalgebraicdictionarycannotcapturethegeneralHermitianregime. Needindependentauditallnewclaims.
+
+## Explicit Hopf flagbody, proposed
+
+Xn andLkabove, u0=>Wm=H0allsections. FlagYi={z0=...=z(i-1)=0}/q fori1..n-1 (lastisellipticfiberE), thenY_npointp onE. Valuationofhomogeneouspolydegreekm has(n-1)nonnegativeexponentsa_i withsum<=km, andlastcoordinate0becausefinalresidualmonomialzlast^(km-sum) isnowherezeroonC*/q. Converselyeverytupleoccursviaamononomial. Delta={(x1..x(n-1),0):xi>=0,sumxi<=k}. Itsn-volume0; intrinsic(n-1)-volume k^(n-1)/(n-1)! matchesexactNmleadingcoefficient. k0point. Forn3displaytriangleinplanez=0, usefulTikzmathfigure, noimagegenneeded. Showsalgebraic directions/transversefiber distinction onthe SAMEBMPfailHopfthreefold.
+
+Potential toriccomparison later: Hopfopenorbitallcoordsnonzero is(C*)^(n-1) x ellipticE, notalgebraictorus(C*)^n. Compact(S1)^n invariantfunctions onlogcover areperiodicunderdiagonalshift. ClosedLkweightsF=k logsumexp(x)+u satisfyF(x+c1)=F(x)+kc; ifbetaPSH convexF,Hessianhasdiagonalnull,gradientin hyperplane sum p_i=k,topclosedMA0. Nonclosedomega hasno localddcpotentialandcannotbesubstitutedintothisconvexpotentialdictionary. Notyetproof/book.

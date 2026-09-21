@@ -1,0 +1,144 @@
+Run_id: gauduchon_volume_hessian_01
+
+Statement: Audit all supplied secondvariation, classrecovery, and explicit example proofs. Fixed smoothpositive probabilitymu, compactconnectedX,n>=1, arbitrarysmoothpositive dd^c-backgroundclassconeP, noBMP. ACCEPT alreadyproved/audited internal Gaud volume dual formula51 (lambda=c^(1/n), unique minimizing Gaudray conformal solutionΩ), smooth dependence and firstvariation, ordinarysmoothHermitianMAexistence/uniqueupconst, positiveGaudadjoint probabilitywithmeantrace0; standardpositive(n-1,n-1)rootn>=2 andGreenoncurve. Use exact statements frombook/author/chapter_gauduchon_variational_volume.tex andchapter_gauduchon.tex. Check Hessiancalculation along AFFINE theta+tchi: Aχ=Ω^-1(χ+ddc udot),trA=nλdot/λ,secondlogeq trace ddcu''−trA²=n(logλ)'', integratefixedbaseadjoint =>−D²logλ=∫trA²/n. Rootλ''/λ=−∫||A−rI||²/n, zeroiffχ=rtheta+ddcf, logHesszeroiffddcf. Polarization givesbilinearpositivequadraticform onquotienttangentddcclasses, gaugeinvariant, smoothRiemannian onfinite-affine slices; NOfullinfinitedimpathdistance/completenessclaim. Forn>=2 derivativeXi=γ^(n−1)/Dmuγ determinesGaudray; positiveroothatγhasD=1;recoverΩ=λ(mu/hatγ^n)^(1/n)hatγ. Value+derivativeidentifiesclass, derivativealone identifiespositiveray; λ=1classesbijectionGaudrays inverseΩγ fromdensity. n1separateGreenstatement. P1xP1formsalpha,beta integral1,theta=aα+bβ =>Vmu=2ab ALLsmoothprobmu, distinctclasses e^tα+e^-tβ haveidenticalvolumeprofile, periods distinguish; inducedfinite2D Hessmetric=.5[(da/a)^2+(db/b)^2], Eucl logcoordscomplete, unittspeedhyperbola. Check eachstatementandnormalization. No noveltyclaim. Do noteditbook. Standardreferences and internalcompletedproofs are allowed only as stated. Save detailedreadablefullreport andstrictcontractJSON withusualworkflow.
+
+Proof:
+
+\section{Second variation on background classes}
+\label{sec:gaud-volume-hessian}
+
+The first variation identifies a Gauduchon metric as a supporting linear functional. The second variation gives more information: the only directions invisible to the logarithmic volume are smooth $\ddc$ changes of background. This provides a positive quadratic form on background classes, with no bounded mass hypothesis.
+
+Fix the smooth positive probability measure $\mu$. At $\theta\in\mathscr P$, write
+\[
+ \Omega=\theta+\ddc u,\qquad
+ \Omega^n=\lambda^n\mu,\qquad
+ \lambda=\lambda_\mu(\theta).
+\]
+For $n\geq2$ choose a Gauduchon metric $\gamma=e^g\Omega$ and its adjoint probability
+\[
+ d\nu_\Omega=
+   \frac{e^{(n-1)g}\Omega^n}{\int_X e^{(n-1)g}\Omega^n}.
+\]
+It satisfies $\int_X\operatorname{tr}_\Omega(\ddc f)\,d\nu_\Omega=0$ for every smooth $f$. In dimension one take $\nu_\Omega=\Omega/\int_X\Omega=\mu$; the same identity follows from Stokes.
+
+Let $\theta_t=\theta+t\chi$, where $\chi$ is smooth and real. For sufficiently small $t$, the background stays in $\mathscr P$. Choose the solution potentials with one fixed mean normalization, and define the Hermitian endomorphism
+\[
+ A_\chi=\Omega^{-1}(\chi+\ddc\dot u).
+\]
+Here $\Omega^{-1}$ means raising an index with the positive metric $\Omega$; traces of its powers are independent of coordinates. All derivatives in what follows are at $t=0$.
+
+\begin{proposition}\label{prop:gaud-volume-hessian}
+Along this affine variation,
+\begin{align}
+ \frac{\ddot\lambda}{\lambda}
+   &=-\frac1n\int_X
+      \left\|A_\chi-\frac{\dot\lambda}{\lambda}I\right\|_\Omega^2
+                                      \,d\nu_\Omega,\label{eq:gaud-root-hessian}\\
+ -\frac{d^2}{dt^2}\log\lambda_\mu(\theta_t)
+   &=\frac1n\int_X\operatorname{tr}(A_\chi^2)\,d\nu_\Omega.
+                                      \label{eq:gaud-log-hessian}
+\end{align}
+The first expression vanishes exactly when
+$\chi=r\theta+\ddc f$ for a real constant $r$ and a smooth real $f$.
+The second vanishes exactly when $\chi=\ddc f$ for a smooth real $f$.
+\end{proposition}
+\begin{proof}
+Smooth dependence was proved in \cref{prop:gaud-volume-first-variation}. Differentiate the logarithmic equation. Since $\mu$ is fixed,
+\[
+ \operatorname{tr}A_\chi=n\frac{\dot\lambda}{\lambda}.
+\]
+In particular this trace is constant on $X$. Differentiate once more along the affine background path:
+\[
+ \operatorname{tr}_\Omega(\ddc\ddot u)
+       -\operatorname{tr}(A_\chi^2)
+   =n\left(\frac{\ddot\lambda}{\lambda}
+                  -\frac{\dot\lambda^2}{\lambda^2}\right).
+\]
+Integration against the fixed probability $\nu_\Omega$ at $t=0$ removes the first term. This proves \eqref{eq:gaud-log-hessian}. No derivative of the adjoint measure is taken in this calculation.
+
+Put $r=\dot\lambda/\lambda$. Since $A_\chi$ is Hermitian and $\operatorname{tr}A_\chi=nr$,
+\[
+ \|A_\chi-rI\|_\Omega^2
+      =\operatorname{tr}(A_\chi^2)-nr^2.
+\]
+Substitution gives \eqref{eq:gaud-root-hessian}. The adjoint measure has a strictly positive smooth density. Thus equality in that formula is equivalent to $A_\chi=rI$ everywhere, or
+\[
+ \chi+\ddc\dot u=r(\theta+\ddc u).
+\]
+This is the stated relation with $f=ru-\dot u$. Conversely, if $\chi=r\theta+\ddc f$, then $\theta_t$ is smoothly $\ddc$-equivalent to $(1+rt)\theta$ for small $t$. Homogeneity makes $\lambda_\mu(\theta_t)=(1+rt)\lambda$, so its second derivative is zero.
+
+The integrand in \eqref{eq:gaud-log-hessian} is the squared norm of a Hermitian endomorphism. Its integral vanishes exactly when $A_\chi=0$, which gives $\chi=-\ddc\dot u$. Conversely a smooth $\ddc$ change leaves $\lambda$ constant. This proves both equality statements.
+\end{proof}
+
+The linearized solution and scalar depend linearly on $\chi$. Polarization therefore gives a bilinear form
+\begin{equation}\label{eq:gaud-background-quadratic-form}
+ \mathfrak g_\theta(\chi_1,\chi_2)
+    =-D^2\log\lambda_\mu|_\theta(\chi_1,\chi_2)
+    =\frac1n\int_X\operatorname{tr}(A_{\chi_1}A_{\chi_2})\,d\nu_\Omega.
+\end{equation}
+It descends to smooth real $(1,1)$-forms modulo $\ddc C^\infty(X,\mathbb R)$ and is positive definite there. A change of representative of $\theta$ leaves its solution form $\Omega$ unchanged; a change of representative of a direction is absorbed by the derivative of the solution potential. Thus the form is intrinsic on these background classes. On every finite-dimensional affine family whose directions are linearly independent modulo smooth $\ddc$ terms, it is a smooth Riemannian metric.
+
+These variations change the background class. Directions obtained by varying a potential inside one fixed class are exactly the directions killed by \eqref{eq:gaud-background-quadratic-form}. Thus this construction concerns a different space from the potential-space geometry in \cref{chap:energy}. No claim about completeness or nondegeneracy of a path distance on the full infinite-dimensional quotient is needed here.
+
+\section{Recovering a positive class from its Gauduchon derivative}
+\label{sec:gaud-volume-gradient-recovery}
+
+For $n\geq2$ define the smooth positive $(n-1,n-1)$-form
+\[
+ \Xi_\theta=\frac{\gamma_\theta^{n-1}}{D_\mu(\gamma_\theta)},
+\]
+where $\gamma_\theta$ is any minimizing Gauduchon metric. The quotient is independent of its constant scale, is $\ddc$-closed, and represents the derivative:
+\[
+ (d\lambda_\mu)_\theta(\chi)=\int_X\chi\wedge\Xi_\theta.
+\]
+
+\begin{proposition}\label{prop:gaud-derivative-recovery}
+For $n\geq2$, the pair consisting of $\lambda_\mu(\theta)$ and its derivative on all smooth real $(1,1)$-forms determines the smooth $\ddc$-class of $\theta\in\mathscr P$. The derivative alone determines the class up to multiplication by a positive constant. More precisely, if $\widehat\gamma$ is the positive root of $\Xi_\theta$, then
+\[
+ D_\mu(\widehat\gamma)=1,
+ \qquad
+ \Omega_\theta=
+   \lambda_\mu(\theta)
+       \left(\frac{\mu}{\widehat\gamma^n}\right)^{1/n}
+       \widehat\gamma.
+\]
+The classes in $\mathscr P$ normalized by $\lambda_\mu=1$ are in bijection with the rays of Gauduchon metrics.
+\end{proposition}
+\begin{proof}
+Pairing against every smooth $(1,1)$-form determines the smooth form $\Xi_\theta$. Its positive root exists and is unique by the pointwise linear algebra used in the Gauduchon chapter. If $D=D_\mu(\gamma_\theta)$, that root is $\widehat\gamma=D^{-1/(n-1)}\gamma_\theta$. The homogeneity of $D_\mu$ gives $D_\mu(\widehat\gamma)=1$.
+
+The solution form $\Omega_\theta$ is conformal to its minimizing metric. Its volume is $\lambda_\mu(\theta)^n\mu$. These two requirements determine the conformal factor pointwise and give the displayed formula. Thus the value and derivative recover $\Omega_\theta$, a representative of the desired class. Without the value, the same formula recovers its positive ray. Conversely positive scaling of the class scales $\Omega_\theta$ and leaves its minimizing Gauduchon ray, and hence $\Xi_\theta$, unchanged.
+
+For surjectivity of the last assertion, take any Gauduchon metric $\gamma$ and set
+\[
+ \Omega_\gamma=\left(\frac\mu{\gamma^n}\right)^{1/n}\gamma.
+\]
+This is unchanged by constant rescaling of $\gamma$, is Hermitian, and satisfies $\Omega_\gamma^n=\mu$. Its zero potential solves the smooth normalized equation, so its class has $\lambda_\mu=1$. Equality in the pointwise arithmetic--geometric mean inequality shows that $\gamma$ is its minimizing Gauduchon metric. Injectivity follows from the recovery formula: two normalized classes with the same Gauduchon ray have the same solution form. This proves the bijection.
+\end{proof}
+
+In dimension one, the smooth $\ddc$-class is already determined by its integral, by the scalar Green operator. The derivative is the fixed functional $\chi\mapsto\int_X\chi$, and the value determines the class. There is no need for the positive-root construction in that dimension.
+
+\section{Equal volume profiles need not mean equal classes}
+\label{sec:gaud-volume-profile-example}
+
+The derivative in the preceding proposition is essential. Even knowing the volume for every smooth positive probability measure need not identify a background class.
+
+On $X=\mathbb P^1\times\mathbb P^1$, let $\alpha,\beta$ be the pulled-back Fubini--Study forms of integral one on their respective factors. They satisfy
+\[
+ \alpha^2=\beta^2=0,\qquad\int_X\alpha\wedge\beta=1.
+\]
+For $a,b>0$ the form $\theta_{a,b}=a\alpha+b\beta$ is K\"ahler. Closed Stokes in the smooth equation gives, for every smooth positive probability measure $\mu$,
+\[
+ \mathcal V_\mu(\theta_{a,b})=2ab,
+ \qquad \lambda_\mu(\theta_{a,b})=\sqrt{2ab}.
+\]
+Consequently all $\theta_{e^t,e^{-t}}$ have exactly the same volume profile $\mu\mapsto2$. Their smooth $\ddc$-classes are distinct: integration over $\mathbb P^1\times\{p\}$ gives $e^t$, which is invariant under addition of $\ddc f$.
+
+By direct differentiation, the restriction of \eqref{eq:gaud-background-quadratic-form} to this two-dimensional cone is
+\[
+ \mathfrak g=\frac12\left(\frac{da^2}{a^2}+\frac{db^2}{b^2}\right).
+\]
+The coordinates $(\log a/\sqrt2,\log b/\sqrt2)$ identify this metric with the Euclidean metric on $\mathbb R^2$, so the induced metric on this family is complete. The curve $a=e^t,b=e^{-t}$ has unit speed. This is a calculation within the indicated finite-dimensional family; it makes no assertion about lengths obtained by allowing arbitrary background directions outside that family.
+
+The value of a volume is a numerical invariant. The Gauduchon derivative carries the additional information that recovers a positive class, and its second variation measures changes of that class. Extending these statements to nef boundary points or to singular residual classes requires control of the minimizing Gauduchon metrics as they degenerate.
