@@ -104,6 +104,8 @@ for name in (
     "research/editorial/individual-stability-map.json",
     "research/editorial/root-tail-map.json",
     "research/editorial/tail-divisor-map.json",
+    "research/editorial/positive-lower-threshold-map.json",
+    "research/editorial/positive-lower-threshold-review.md",
     "research/editorial/tail-divisor-review.md",
     "research/editorial/section_root_tail_continuity.tex",
     "research/editorial/section_threshold_divisorial_constraints.tex",
@@ -257,6 +259,8 @@ Checkpoint40 extends the exact Gauduchon formula to integrable densities, shorte
 Checkpoint41 identifies the bounded-root closure by uniform tails and proves integrable-current attainment, supporting-probability formulas and trace saturation at the subsolution threshold. Smooth dual attainment gives rigidity of threshold subsolutions. Both bounded audits passed; the preceding trace audit's stale dependency-status finding is preserved and resolved by run02. The compiled book has665 pages. Scalar-rate and divisorial working notes are explicitly unaudited and not book content. No exact rough equation or singular-current wedge is inferred.
 
 Checkpoint42 adds the continuity characterization of root tails, divisorial coefficient loss and geometric restrictions on threshold subsolutions. The weak closure of smooth tests is distinguished from all normalized Gauduchon currents. Two bounded audits passed after the explicit nonzero-density restatement. The compiled book has669 pages. Separate research-only drafts about positive-lower-mass threshold identification and nef divisors are not part of this manuscript checkpoint.
+
+Checkpoint43 integrates the passed positive-lower-mass threshold identification and subsequential capacity convergence, and the zero-volume constraint on nef divisors at the threshold. The compiled book has671 pages. These are short deductions from existing chapter results. The exact equation with vanishing lower mass, whole-family convergence and divisor realization remain separate questions; no BMP is imposed.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

@@ -1,5 +1,7 @@
 # Nef divisors and maximizing Gauduchon currents
 
+**Update, 22 September2026:** the two proposed deductions passed positive_lower_mass_threshold_01 and are integrated in checkpoint43. The earlier note is preserved as research history; exact scope and output checks are in positive-lower-threshold-review.md.
+
 22 September2026. Unaudited continuation after the pending semipositive-divisor supplement. This is not production book content and is not covered by either current audit.
 
 There is a short additional consequence worth checking against the existing nef-annihilator theorem. Suppose f>=0 is nonzero in L1, p=f^(1/n) lies in D_omega^0, and a threshold subsolution satisfies omega+dd^c u >= [E]. The separately audited divisorial proposition supplies a maximizing current T with integral beta_E wedge T=0.

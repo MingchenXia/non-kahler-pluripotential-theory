@@ -1,5 +1,7 @@
 # Identifying the individual threshold under positive lower mass
 
+**Update, 22 September2026:** the two proposed deductions passed positive_lower_mass_threshold_01 and are integrated in checkpoint43. The earlier note is preserved as research history; exact scope and output checks are in positive-lower-threshold-review.md.
+
 22 September2026. Unaudited follow-up draft, not included in checkpoint42. The precise proposed text is `research/editorial/section_positive_lower_mass_threshold.tex`, staged for bounded audit `positive_lower_mass_threshold_01`.
 
 Rereading Chapter14 reveals a short route to the exact coefficient in the PVP regime. Its finite-measure scalar comparison permits the SECOND potential to be any genuine PSH function, not necessarily in the envelope class. If an envelope-class solution has MA(w)=c f dV and any genuine subsolution has MA(s)>=a f dV, comparison gives c/a>=1. Thus c is exactly the maximal global subsolution coefficient b_h(f). The existing general-measure theorem supplies w under v_-(h)>0. No repeated exponential-limit proof is needed for this scalar identification.

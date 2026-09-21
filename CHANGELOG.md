@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint43: exact threshold under positive lower mass
+
+Connected the Chapter14 finite-measure comparison with the global subsolution threshold: every nonzero nonnegative L1 density has an envelope-class exact solution at b_h(f) under positive lower mass, without BMP. Reused upward stability and dominated continuity to identify capacity limits of normalized greatest exponential solutions along every L1-convergent subsequence. Clarified that the general unresolved regime has vanishing lower mass. Added a five-line proof forcing zero variational volume for nef divisors present at the threshold. The bounded audit passed; all seven statement and three reference records were read. The671-page book matches the inspected preview; thirteen affected/adjacent pages, references, transitions and statement pagination were checked. No errors, undefined references or overfull boxes. Original sources, the standalone note and checkpoint42 are preserved. No uniqueness of normalized zero-exponent potentials or full divisor realization theorem is asserted.
+
 ## 22 September2026 — Chapter14 threshold synthesis passed, integration pending
 
 The bounded audit positive_lower_mass_threshold_01 passed with normal exit0 and no errors/gaps. All seven statement and three reference records were read. The short internal deductions identify the exact maximal coefficient and subsequential capacity convergence under positive lower mass, and force zero variational volume for a nef divisor at the threshold. The production book is still checkpoint42; the two audited supplements are research-only until preview and integration checks finish. No zero-exponent potential uniqueness or vanishing-lower-mass existence theorem is asserted.
