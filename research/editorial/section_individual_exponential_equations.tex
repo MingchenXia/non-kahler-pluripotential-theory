@@ -1,0 +1,79 @@
+\section{Exponential equations for an individual density}
+\label{sec:individual-exponential-equations}
+
+A positive subsolution threshold supplies a fixed lower bound for the bounded approximations to an exponential equation. Their monotonicity then gives the capacity convergence needed in \cref{thm:exponential-closedness}. We continue with a Hermitian background $h$ and a nonzero nonnegative density $f\in L^1(\mathrm{d}V)$.
+
+\begin{theorem}\label{thm:individual-exponential-subsolution}
+Fix $\lambda>0$. Suppose there is $s\in\PSH(X,h)$ such that
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V.
+\]
+Then the equation
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u_\lambda)
+       =\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V
+\]
+has a greatest solution. More precisely, $u_\lambda$ is the greatest genuine $h$-plurisubharmonic subsolution of this equation, and its Monge--Amp\`ere measure is finite. It is the decreasing limit of the continuous solutions for $f_k=\min(f,k)$.
+\end{theorem}
+\begin{proof}
+Let $u_k$ solve the continuous exponential equation for $f_k$, using \cref{thm:nguyen-exp}. The order lemma \cref{lem:exp-order} gives $u_{k+1}\leq u_k$.
+
+Every genuine subsolution $v$ for $f$ lies below each $u_k$. Indeed, for $t>0$, on $\{u_k<v-t\}$ we have
+\[
+ \mathrm{MA}_h(u_k)=\mathrm{e}^{\lambda u_k}f_k\,\mathrm{d}V
+ \leq\mathrm{e}^{-\lambda t}\mathrm{e}^{\lambda v}f\,\mathrm{d}V
+ \leq\mathrm{e}^{-\lambda t}\mathrm{MA}^{\mathrm{ext}}_h(v-t).
+\]
+The first potential $u_k$ is bounded, so $P_{h/2}(u_k)$ is genuine and $v-t\preceq u_k$. Strict domination, \cref{thm:singular-strict-domination}, gives $u_k\geq v-t$. Let $t\downarrow0$.
+
+In particular, $s\leq u_k\leq u_1$. Thus the decreasing limit $u_\lambda$ is genuine. Decreasing convergence is convergence in capacity, by the quasi-continuity and Dini argument used in \cref{thm:individual-density-subsolution}. Choose a common constant $A\geq\sup_Xu_1$. Apply \cref{thm:exponential-closedness} to $u_k-A$, with densities $\mathrm{e}^{\lambda A}f_k\to\mathrm{e}^{\lambda A}f$ in $L^1$. It proves the equation and finiteness of its left side. Finally every subsolution $v$ lies below all $u_k$, hence below $u_\lambda$, which is itself a subsolution.
+\end{proof}
+
+The extremal property makes this solution canonical. It does not exclude smaller solutions with other singularities. For $f\in L^p$, $p>1$, it agrees with the continuous solution: that solution gives a bounded lower barrier, and bounded exponential comparison gives uniqueness between the resulting bounded solutions.
+
+\begin{corollary}\label{cor:individual-positive-threshold-exponential}
+If $b=b_h(f)>0$, the preceding greatest solution exists for every $\lambda>0$. If $v\in\PSH(X,h)$ has $\sup_Xv=0$ and
+$\mathrm{MA}^{\mathrm{ext}}_h(v)\geq bf\,\mathrm{d}V$, then
+\[
+ u_\lambda\geq v+\lambda^{-1}\log b.
+\]
+Writing
+\[
+ M_\lambda=\sup_Xu_\lambda,\qquad
+ v_\lambda=u_\lambda-M_\lambda,\qquad
+ c_\lambda=\mathrm{e}^{\lambda M_\lambda},
+\]
+we have
+\[
+ c_\lambda\longrightarrow b_h(f),\qquad
+ \mathrm{e}^{\lambda u_\lambda}f\longrightarrow b_h(f)f
+           \quad\text{in }L^1(\mathrm{d}V)
+ \quad(\lambda\downarrow0).
+\]
+\end{corollary}
+\begin{proof}
+The attained-threshold theorem supplies $v$. Since $v\leq0$, the function $s=v+\lambda^{-1}\log b$ satisfies
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(s)\geq bf\,\mathrm{d}V
+       \geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V.
+\]
+The theorem gives $u_\lambda\geq s$, hence $c_\lambda\geq b$.
+
+Set $g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$. The normalized-exponential lemma \cref{lem:normalized-exponential-npp}, applied to the fixed finite measure $f\,\mathrm{d}V$, gives $g_\lambda\to f$ in $L^1$. Each $g_\lambda$ is nonzero, since a genuine quasi-plurisubharmonic function is finite almost everywhere. The equation for $u_\lambda$ implies
+\[
+ c_\lambda\leq b_h(g_\lambda)
+\]
+by the maximal subsolution characterization. Upper semicontinuity therefore gives
+\[
+ b\leq\liminf_{\lambda\downarrow0}c_\lambda
+ \leq\limsup_{\lambda\downarrow0}c_\lambda
+ \leq b_h(f)=b.
+\]
+This proves the scalar limit. Since $g_\lambda\to f$ in $L^1$, it also proves $c_\lambda g_\lambda\to bf$ in $L^1$.
+\end{proof}
+
+The right-hand-side measures therefore converge in total variation. The argument does not establish capacity convergence of the normalized potentials $v_\lambda$, so it does not yet solve the exact equation at $b_h(f)$. The lower bound becomes
+\[
+ v_\lambda\geq v-\lambda^{-1}\log(c_\lambda/b_h(f)),
+\]
+and convergence of $c_\lambda$ alone does not bound this error. Whether an exponential subsolution exists when $b_h(f)=0$ is a separate question; the theorem applies whenever such a subsolution can be constructed.

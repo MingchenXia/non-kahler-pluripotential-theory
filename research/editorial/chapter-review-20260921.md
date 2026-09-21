@@ -49,3 +49,5 @@ The external contextual Yi Li citation was rechecked at https://arxiv.org/html/1
 Next: continue research and focused checks at the interfaces between chapters. The first systematic root pass now covers every chapter, every nested proof input and the appendix. Keep individual-measure solvability, ordinary-type topology, higher-dimensional traces and lower partial-kernel asymptotics active. A clean build or bounded audit does not certify the whole book.
 
 Checkpoint39 supplements this completed pass with Section13.23 and its Section32.2 interface. The individual-density result received a separate bounded audit, full root reread and visual check; see `individual-density-review.md`. The new content does not change the recorded scope of the earlier chapter reviews.
+
+Checkpoint40 adds the integrable-density Gauduchon formula, shorter threshold-topology proofs and greatest exponential equations. Chapters13,27 and32 and their examples were checked at their interfaces; two bounded audits passed. See `individual-stability-review.md` and the reversible integration map. This supplements, and does not replace, the completed whole-manuscript root pass.

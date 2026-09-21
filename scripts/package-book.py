@@ -101,6 +101,13 @@ for name in (
     "research/editorial/chapters-27-29-map.json",
     "research/editorial/chapters-30-appendix-map.json",
     "research/editorial/individual-density-map.json",
+    "research/editorial/individual-stability-map.json",
+    "research/editorial/individual-stability-review.md",
+    "research/editorial/section_individual_density_stability.tex",
+    "research/editorial/section_individual_density_stability_v2.tex",
+    "research/editorial/section_individual_exponential_equations.tex",
+    "research/editorial/section_integrable_gauduchon_tests.tex",
+    "research/editorial/individual-density-next-questions.md",
     "research/editorial/individual-density-review.md",
     "research/editorial/section_individual_density_subsolutions.tex",
     "research/editorial/individual-measure-tests.md",
@@ -227,6 +234,8 @@ Checkpoint37 completes the root reread of Chapters 27–29 and all twenty inputs
 Checkpoint38 completes the first systematic root reread of all 32 chapters, every nested proof input and the appendix. Four edits supply a residual-nefness proof and reuse established divisorial, cone and local ideal arguments. All exact hypotheses remain explicit. The review and reversible map record the scope; this is not whole-book certification. Research and further focused checks remain active.
 
 Checkpoint39 adds the attained individual-L1 subsolution threshold and a counterexample to sufficiency of smooth comparison tests in Section13.23. The bounded audit passed; exact threshold equations and their singularity class remain an explicit problem in Section32.2. The follow-up topology note is unaudited and not included in the book. The compiled manuscript has653 pages.
+
+Checkpoint40 extends the exact Gauduchon formula to integrable densities, shortens the threshold topology proofs, separates the roles of upper/lower mass in the root space, and constructs greatest exponential solutions from subsolutions. Both bounded audits passed; exact zero-exponent equations and normalized-potential capacity convergence remain open. The compiled book has661 pages. The further root-space tail note is unaudited and not part of the book.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

@@ -1,5 +1,7 @@
 # Continuation after the individual-density threshold
 
+**Update, 22 September 2026:** checkpoint40 proves the proposed upper semicontinuity, relaxation and root-density properties, together with an exact Gauduchon formula and greatest exponential equations from a subsolution. Both bounded audits passed. The earlier deductions below are preserved as research history; further unaudited questions are in `individual-density-next-questions.md`.
+
 22 September 2026. Working deductions conditional on acceptance of `individual_density_subsolutions_01`. Not integrated and not independently audited. No novelty claim.
 
 ## Upper semicontinuity of the threshold

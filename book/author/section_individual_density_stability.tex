@@ -1,0 +1,115 @@
+\section{Stability of the subsolution threshold}
+\label{sec:individual-density-stability}
+
+Fix the Hermitian form $h$ and smooth positive probability volume $\mathrm{d}V$ as in \cref{sec:individual-density-subsolutions}. The threshold $b_h$ is upper semicontinuous for $L^1$ convergence. This gives a one-sided stability statement even when positive lower mass fails. Applied to the $n$th root of a density, it also defines a norm on the data admitting a positive scaled subsolution.
+
+\begin{theorem}\label{thm:individual-threshold-semicontinuity}
+Suppose $f_j,f$ are nonzero nonnegative $L^1$ densities and $f_j\to f$ in $L^1(\mathrm{d}V)$. Then
+\[
+ \limsup_{j\to\infty}b_h(f_j)\leq b_h(f).
+\]
+Moreover,
+\begin{equation}\label{eq:individual-threshold-relaxation}
+ b_h(f)=\lim_{\delta\downarrow0}\sup\{c_h(q):q\in L^\infty,\ q\geq0,\ q\not\equiv0,
+                                      \ \|q-f\|_1<\delta\}.
+\end{equation}
+The suprema are finite for sufficiently small $\delta$.
+\end{theorem}
+\begin{proof}
+Write $A_\gamma(f)=\int_X(f\,\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. For each fixed $\gamma$, H\"older's inequality and
+$|s^{1/n}-t^{1/n}|\leq|s-t|^{1/n}$ show that $A_\gamma$ is continuous in $L^1$. It is positive at every nonzero nonnegative density. By \cref{thm:integrable-gauduchon-formula}, $b_h^{1/n}$ is the infimum of the continuous positive quotients $\int_Xh\wedge\gamma^{n-1}/A_\gamma(f)$. It is therefore upper semicontinuous. Testing one fixed $\gamma$ also bounds it above on an $L^1$ neighborhood of $f$.
+
+For bounded $q$, $b_h(q)=c_h(q)$. The first assertion therefore bounds the upper limit of $c_h(q_j)$ along every bounded-density approximation $q_j\to f$. Conversely the canonical truncations of $f$ attain $b_h(f)$ in the limit. Local boundedness and these two observations prove \eqref{eq:individual-threshold-relaxation}.
+\end{proof}
+
+Consequently $b_h$ is continuous at each density where it vanishes. If $v_-(h)=0$, it is discontinuous at every density where it is positive: normalize the density, use the obstructing mixtures of \cref{cor:lower-mass-lone-instability}, and restore its integral. Thus the zero set is exactly the continuity set in that case. This statement concerns the scalar functional; it supplies neither capacity convergence of the original equation potentials nor equality of their limiting measures.
+
+\subsection{Finite sums of densities}
+
+Order and homogeneity give $b_h(f)\geq b_h(g)$ when $0\leq f\leq g$ and both are nonzero, and $b_h(tf)=t^{-1}b_h(f)$ for $t>0$. The root functional $\rho_h$ from \cref{sec:integrable-gauduchon-tests} expresses finite addition.
+
+\begin{proposition}\label{prop:individual-root-triangle}
+The functional $\rho_h$ is homogeneous, satisfies
+$\rho_h(p)\leq\rho_h(q)$ whenever $|p|\leq|q|$, and obeys
+\[
+ \rho_h(p+q)\leq\rho_h(p)+\rho_h(q).
+\]
+In particular, if $b_h(f),b_h(g)>0$, then
+\[
+ b_h(f+g)\geq
+       \bigl(b_h(f)^{-1/n}+b_h(g)^{-1/n}\bigr)^{-n}>0.
+\]
+\end{proposition}
+\begin{proof}
+The representation \eqref{eq:integrable-gauduchon-root} is a supremum of positive linear tests applied to $|p|$. It gives homogeneity, order, and the triangle inequality by $|p+q|\leq|p|+|q|$. Finally
+$(f+g)^{1/n}\leq f^{1/n}+g^{1/n}$ gives the displayed density inequality.
+\end{proof}
+
+\begin{proposition}\label{prop:individual-density-banach}
+The real vector space
+\[
+ \mathcal D_h=\{p\in L^n(\mathrm{d}V):\rho_h(p)<+\infty\}
+\]
+is complete for the norm $\|p\|_{\mathcal D_h}=\|p\|_{L^n}+\rho_h(p)$. It is an order ideal in $L^n$: if $q\in\mathcal D_h$ and $|p|\leq|q|$, then $p\in\mathcal D_h$. It contains $L^\infty$ and is therefore dense in $L^n$ for the $L^n$ norm.
+
+Moreover, $\mathcal D_h=L^n$ if and only if $v_-(h)>0$. In that case its norm is equivalent to the $L^n$ norm. If $h$ is K\"ahler, then
+\[
+ \rho_h(p)=\left(\int_Xh^n\right)^{-1/n}\|p\|_{L^n}.
+\]
+\end{proposition}
+\begin{proof}
+The preceding proposition proves that $\mathcal D_h$ is a vector space and that the displayed expression is a norm. It also proves the order-ideal assertion. Bounded functions belong to $\mathcal D_h$ by continuous equation existence.
+
+If $p_j\to p$ in $L^n$, then $|p_j|^n\to|p|^n$ in $L^1$. Upper semicontinuity of $b_h$ gives
+\[
+ \rho_h(p)\leq\liminf_j\rho_h(p_j).
+\]
+This includes $b_h(|p|^n)=0$, when the right side must be infinite; for $p=0$ the inequality follows from nonnegativity. Now let $(p_j)$ be Cauchy in $\mathcal D_h$. It converges in $L^n$ to some $p$. Lower semicontinuity, applied first to $p_j$ and then to $p_j-p_k$ as $k\to\infty$, gives $p\in\mathcal D_h$ and
+\[
+ \rho_h(p_j-p)\leq\liminf_{k\to\infty}\rho_h(p_j-p_k)\longrightarrow0.
+\]
+Together with $L^n$ convergence, this proves completeness.
+
+If $v_-(h)>0$, \cref{prop:individual-normalizer-lp} gives
+$\rho_h(p)\leq v_-(h)^{-1/n}\|p\|_{L^n}$, proving equality of the spaces and equivalence of the norms. If $v_-(h)=0$, take the obstructing density $f$ from \cref{thm:lower-mass-obstructing-measure}. Its root $f^{1/n}$ belongs to $L^n$ but not to $\mathcal D_h$. The K\"ahler formula follows from the same normalization proposition.
+\end{proof}
+
+Thus, when lower mass vanishes, the roots of densities admitting positive scaled subsolutions form a proper dense subspace of $L^n$, complete for the stronger displayed norm. Finite addition preserves admissibility. An infinite sum need not: the positive smooth summands in \cref{thm:lower-mass-obstructing-measure} already give an $L^1$ counterexample. Density of bounded functions in the $\mathcal D_h$ norm has not been asserted. The metric comparisons in \cref{prop:individual-threshold-backgrounds} show that this space is independent of $h$ and that its norms for different Hermitian metrics are equivalent.
+
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:individual-root-completeness}
+The norm $\rho_h$ alone is complete on $\mathcal D_h$ if and only if $v_+(h)<+\infty$. When upper mass is finite,
+\[
+ \|p\|_{L^n}\leq v_+(h)^{1/n}\rho_h(p),
+\]
+so $\rho_h$ and $\|\cdot\|_{\mathcal D_h}$ are equivalent norms.
+\end{proposition}
+\begin{proof}
+If $v_+(h)<+\infty$, every continuous solution for a bounded density $q$ satisfies
+$c_h(q)\int_Xq\,\mathrm{d}V\leq v_+(h)$. Apply this to the truncations of $|p|^n$ and let the truncation level increase. It gives the displayed bound. Completeness follows from \cref{prop:individual-density-banach}.
+
+Suppose instead that $v_+(h)=+\infty$. By \cref{thm:gaud-volume-mass-extrema}, the constants of smooth positive probability densities are unbounded above. For each $j$, choose such a density $f_j$ with
+\[
+ c_h(f_j)\geq(j2^j)^n,
+ \qquad p_j=jf_j^{1/n}.
+\]
+Then $\|p_j\|_{L^n}=j$ and $\rho_h(p_j)\leq2^{-j}$. The positive partial sums $P_N=\sum_{j\leq N}p_j$ are Cauchy for $\rho_h$.
+
+A fixed Gauduchon test has a smooth strictly positive coefficient, so \eqref{eq:integrable-gauduchon-root} gives $\rho_h(p)\geq c\|p\|_{L^1}$ with a constant $c>0$. Thus $\sum_jp_j$ converges in $L^1$ to a nonnegative function $P$. Were $P_N$ to converge for $\rho_h$ to an element of $\mathcal D_h$, that element would equal $P$ almost everywhere. But $P\geq p_j$ for all $j$, so $\|P\|_{L^n}\geq j$ for all $j$. This contradicts membership in $L^n$. Therefore $\rho_h$ is not complete.
+\end{proof}
+
+The two mass properties have separate roles: positive lower mass makes every $L^n$ root admissible, whereas finite upper mass makes the root norm control the $L^n$ norm. The norm $\|\cdot\|_{\mathcal D_h}$ is complete without either assumption.
+
+
+The geometric examples realize all four possibilities. The non-K\"ahler entries below follow from \cref{cor:hopf-lower-mass,prop:lower-mass-balanced-metric,cor:both-mass-properties-fail}.
+\begin{center}
+\begin{tabular}{@{}l@{\qquad}l@{\qquad}l@{}}
+Manifold & Domain $\mathcal D_h$ & Is $\rho_h$ complete?\\
+\hline
+K\"ahler manifold & $L^n$ & Yes\\
+Hopf threefold & $L^n$ & No\\
+Balanced elliptic quotient & $\mathcal D_h\subsetneq L^n$ & Yes\\
+Product example & $\mathcal D_h\subsetneq L^n$ & No
+\end{tabular}
+\end{center}
