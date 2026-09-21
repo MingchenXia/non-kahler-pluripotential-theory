@@ -276,10 +276,14 @@ Suppose $\varphi$ is unbounded below and $u_\lambda\simeq\varphi$ for every $\la
 Bounded equivalence preserves unboundedness below. Every nonempty strict sublevel set of the upper semicontinuous function $u_\lambda$ is open and has positive smooth volume. Thus $u_\lambda$ is essentially unbounded below, as is $\lambda u_\lambda$. The stated conclusions follow.
 \end{proof}
 
-Normalization separates the diverging additive constants from the singular potentials. There is a simple quantitative observation for $L^p$ data.
+Normalization separates the diverging additive constants from the singular potentials. The normalized exponentials converge against every fixed finite non-pluripolar measure. For $L^p$ data the estimate is quantitative.
 
-\begin{lemma}\label{lem:normalized-exponential-lp}
-Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, let $\lambda_j\downarrow0$, and let $f\in L^p(\mathrm{d}V)$ for some $p>1$. Then
+\begin{lemma}\label{lem:normalized-exponential-lp}\label{lem:normalized-exponential-npp}
+Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, and let $\lambda_j>0$ decrease to zero. For every finite non-pluripolar measure $\mu$,
+\[
+ \int_X\left|e^{\lambda_jv_j}-1\right|\,\mathrm{d}\mu\longrightarrow0.
+\]
+If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then more precisely
 \[
  \int_X\left|e^{\lambda_jv_j}-1\right|\,|f|\,\mathrm{d}V
  \leq C_p\lambda_j\|f\|_{L^p(\mathrm{d}V)}.
@@ -287,11 +291,18 @@ Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, let $\lambda_j\downarrow0$, an
 The constant depends on the fixed background, $p$ and $\mathrm{d}V$.
 \end{lemma}
 \begin{proof}
-Choose $C>0$ with $\theta\leq C\omega$. Scaling \cref{lem:uniform-exponential} gives a uniform exponential moment for the nonnegative functions $-v_j$, and hence a uniform $L^q$ bound for every finite $q$. For $q=p/(p-1)$, use
+Put $a_j=e^{\lambda_jv_j}$, with value zero at the poles. After discarding finitely many indices, $0<\lambda_j\leq1$. Choose a Hermitian form $\Omega\geq\theta$. The bounded convex chain rule in background $\Omega$, applied first to $\max(v_j,-T)$ and then letting $T\to\infty$, gives
 \[
- 0\leq1-e^{\lambda_jv_j}\leq\lambda_j|v_j|
+ 0\leq a_j\leq1,\qquad
+ \ddc a_j\geq-\lambda_j a_j\Omega\geq-\Omega.
 \]
-and H\"older's inequality.
+The normalized $L^1$ estimate and
+\[
+ 0\leq1-a_j\leq\lambda_j|v_j|
+\]
+give $a_j\to1$ in smooth-volume $L^1$. Thus \cref{lem:fixed-npp-integrals} gives convergence in $L^1(\mu)$.
+
+For the quantitative assertion, scaling \cref{lem:uniform-exponential} gives a uniform $L^q$ bound for $-v_j$, where $q=p/(p-1)$. Apply H\"older's inequality to the same pointwise bound. This estimate holds for every $j$.
 \end{proof}
 
 Consequently, if $u_j$ solve $\mathrm{MA}_\theta(u_j)=e^{\lambda_ju_j}f\,\mathrm{d}V$, put

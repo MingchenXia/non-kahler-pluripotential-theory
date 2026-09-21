@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint35: relative measures and normalization review
+
+Completed Chapters14–15 and all20 proof inputs. Consolidated three normalized-exponential arguments, with constant truncations in a larger Hermitian background; shortened repeated stretching and compactness proofs after checking their ingredients; corrected the normalization chapter's existence reference and reused weak-adjoint stability. Twelve source files include five pagination-only repairs. The649-page PDF matches the preview on every page;37 initial and27 final selected pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. The note, all29 original sources and checkpoint34 are preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book correctness claim; the systematic pass continues with Chapter16.
+
 ## 21 September 2026 — Checkpoint34: prescribed equations review
 
 Completed the full Chapter13 statement-to-proof pass and all18 inputs. Simplified the symmetry compactness proof, scalar tail notation and a repeated envelope estimate. Clarified cutoff positivity and the regularization error subsequence; aligned lower-volume and ordinary-type invariance language with the extended definitions. Seven source files, including the Chapter10 cross-reference, were integrated. The651-page PDF matches the preview on every page, and all12 changed pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. The standalone note, all29 original sources and checkpoint33 were preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book correctness claim; Chapter14 and later work remain incomplete.

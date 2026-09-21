@@ -17,20 +17,13 @@ These bounds concern the singularity class. Metric positive lower volume follows
 If $u,w\in\mathcal E_\varphi$ and $u\leq w$, then $Q_b(u,w)$ is genuine and belongs to $\mathcal E_\varphi$ for every $b\geq1$.
 \end{lemma}
 \begin{proof}
-First translate so that $u,w\leq\varphi$. Put $u_t=Q_t(u,\varphi)$, which is genuine by the definition of the class. If $t>bs$, with $s\geq1$, the defining convex inequality gives
-\[
- \frac bt u_t+\left(1-\frac bt\right)\varphi\leq Q_b(u,\varphi),
-\]
-because the left side is a competitor. Consequently
+The proof of \cref{lem:relative-stretch-closure} applies here: it uses only convex combinations in the same background and upward stability of the envelope class. Explicitly, translate $u,w$ below $\varphi$ and put $u_t=Q_t(u,\varphi)$. For $s\geq1$ and $t>bs$, its convex competitor gives
 \[
  \frac{bs}{t}u_t+\left(1-\frac{bs}{t}\right)\varphi
  \leq sQ_b(u,\varphi)-(s-1)\varphi.
 \]
-This supplies every convex competitor required for $Q_b(u,\varphi)\in\mathcal E_\varphi$. Also
-\[
- Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi.
-\]
-Upward stability proves the assertion. The displayed differences are interpreted through convex inequalities, as before. Only convex combinations in the same background have been used; no scaling towards a constant is involved.
+Thus $Q_b(u,\varphi)\in\mathcal E_\varphi$. The bounds
+$Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi$ and upward stability prove the claim. As before, differences are interpreted through convex inequalities off poles. No scaling towards a constant is used.
 \end{proof}
 
 \begin{proposition}\label{prop:big-relative-finite-rooftops}
@@ -142,52 +135,39 @@ For the original sequence,
 \]
 \end{theorem}
 \begin{proof}
-The envelope identity $P_\theta[u_j]=\varphi$ and Hartogs' lemma give $u_j\leq\varphi+C$ uniformly. After a common translation, suppose $u_j\leq\varphi\leq0$, hence $u\leq\varphi$. The fixed non-pluripolar integration lemma applies to the bounded quasi-plurisubharmonic functions $e^{u_j},e^u$, after enlarging a Hermitian background. Extract once so that $u_j\to u$ almost everywhere for smooth volume and
+We apply the arguments of \cref{lem:dominated-relative-rooftop-extraction,thm:relative-fixed-measure-continuity}, checking their ingredients in the present background. The envelope identity and Hartogs' lemma give $u_j\leq\varphi+C$. Finite rooftops and stretching preserve $\mathcal E_\varphi$ by \cref{prop:big-relative-finite-rooftops,lem:big-relative-stretch}; their masses are at least $\ell$. These replace the corresponding semipositive-background facts.
+
+After a common translation, assume $u_j,u\leq\varphi\leq0$. Using \cref{lem:fixed-npp-integrals}, extract once so that smooth-volume almost-everywhere convergence holds and
 \[
  I_j:=\int_X|e^{u_j}-e^u|\,\mu_{u_j}\leq2^{-j}.
 \]
-Put $p_{j,N}=P_\theta(u_j,\ldots,u_N)$. The finite-rooftop proposition puts these potentials in $\mathcal E_\varphi$. Partition the contact set by the first index realizing the minimum. The pieces are disjoint, so ordered contact gives
+For $p_{j,N}=P_\theta(u_j,\ldots,u_N)$, disjoint first-contact pieces give
 \begin{equation}\label{eq:big-finite-roof-domination}
  \mu_{p_{j,N}}\leq\nu,\qquad
  \int_X|e^{p_{j,N}}-e^u|\,\mu_{p_{j,N}}\leq2^{1-j}.
 \end{equation}
-There is no factor equal to the number of obstacles in the first bound.
+In the extraction lemma's proof, replace $\kappa$ by $\ell$. For each fixed $B\geq1$, the stretched roofs $r_{j,N}=Q_B(p_{j,N},\varphi)$ satisfy
+\[
+ \ell\leq\mu_{r_{j,N}}(X),\qquad
+ \mu_{r_{j,N}}\leq B^n\nu.
+\]
+Its exponential test therefore bounds $\sup_Xr_{j,N}$ below, independently of $N$, once $j$ is sufficiently large. The same prefix-and-tail construction with $B=2b$ uses only convex combinations and genuine finite rooftops. It supplies every defining $b$-competitor for
+\[
+ h=P_\theta(\inf_j u_j)\in\mathcal E_\varphi.
+\]
+Since $h\leq u\leq\varphi$, upward stability gives $u\in\mathcal E_\varphi$. No semipositivity has entered this extraction argument.
 
-Fix $B\geq1$ and put $r_{j,N}=Q_B(p_{j,N},\varphi)$. Stretching preserves the class, and contact support gives
-\[
- \mu_{r_{j,N}}\leq B^n\nu,\qquad
- \mu_{r_{j,N}}(X)\geq\ell.
-\]
-On its contact set one has
-$p_{j,N}=B^{-1}r_{j,N}+(1-B^{-1})\varphi\leq B^{-1}r_{j,N}$.
-It follows that
-\[
- \int_Xe^u\,\mu_{r_{j,N}}
- \leq B^n2^{1-j}+B^n\nu(X)e^{\sup_Xr_{j,N}/B}.
-\]
-Choose $K>0$ with $B^n\nu(\{u\leq-K\})<\ell/2$. The same integral is at least $e^{-K}\ell/2$. For $j$ sufficiently large the preceding inequality therefore bounds $\sup_Xr_{j,N}$ from below independently of $N$. Since $r_{j,N}$ decreases in $N$ and is at most $\varphi$, it has a genuine limit $R\leq\varphi$, satisfying
-\[
- B^{-1}R+(1-B^{-1})\varphi\leq u_k\qquad(k\geq j).
-\]
-
-For any $b\geq1$ use this construction with $B=2b$. Set
-$S=Q_{2b}(P_\theta(u_1,\ldots,u_{j-1}),\varphi)$ if $j>1$, and $S=\varphi$ otherwise. This is genuine and $S\leq\varphi$. Then $H=(R+S)/2$ satisfies
-\[
- b^{-1}H+(1-b^{-1})\varphi\leq u_k\qquad(k\geq1).
-\]
-For a tail index use the inequality for $R$ and $S\leq\varphi$; for an earlier index use the inequality for $S$ and $R\leq\varphi$. The case $b=1$ proves that $h=P_\theta(\inf_k u_k)$ is genuine. Every $b$ supplies its defining convex competitor. Thus $h\in\mathcal E_\varphi$. The inequalities $h\leq u\leq\varphi$ also give $u\in\mathcal E_\varphi$ by upward stability.
-
-Set $p_j=P_\theta(\inf_{k\geq j}u_k)$ and $p=(\lim_jp_j)^*$. The limits $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ have the fixed lower bound $h$, so hold in capacity. Every potential belongs to $\mathcal E_\varphi$, and $p\leq u$. Applying \cref{lem:big-weighted-lsc} to \eqref{eq:big-finite-roof-domination}, first in $N$ and then in $j$, gives
+For continuity, put $p_j=P_\theta(\inf_{k\geq j}u_k)$ and $p=(\lim_jp_j)^*$. Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ have the genuine lower bound $h$, so converge in capacity. All the limits lie in $\mathcal E_\varphi$ and $p\leq u$. The general-background weighted lower-semicontinuity lemma, applied twice to \eqref{eq:big-finite-roof-domination}, gives
 \[
  \int_X|e^p-e^u|\,\mu_p=0.
 \]
-The measures ignore poles, so $\mu_p(\{p<u\})=0$. The general big-background domination theorem with coefficient zero yields $p=u$. The upper tail envelopes $(\sup_{k\geq j}u_k)^*$ decrease to $u$ by Hartogs' lemma and the almost-everywhere extraction. Squeezing $u_j$ between these and $p_j$ proves capacity convergence along the extracted sequence.
+Now use \cref{thm:big-relative-domination} with coefficient zero to get $p=u$. The upper tail envelopes decrease to $u$ by Hartogs' lemma. Squeezing between them and $p_j$ proves capacity convergence.
 
-Finally
+Finally, the fixed finite dominator gives
 \[
  \mu_{u_j}(\{u_j\leq-T\})\leq\nu(\{h\leq-T\})\longrightarrow0
 \]
-uniformly in $j$. The general-background undamped tail theorem proves weak convergence to $\mu_u$, and weak limits preserve domination by $\nu$. Starting with an arbitrary original subsequence gives a further subsequence with these same conclusions. Hence capacity and weak convergence hold for the original sequence.
+uniformly in $j$. The general-background undamped tail theorem proves weak convergence to $\mu_u\leq\nu$. Starting with an arbitrary subsequence gives a further subsequence with both convergences and the same limit. Hence the conclusions hold for the original sequence.
 \end{proof}
 
 The upper volume bound enters the construction of finite rooftops. Their stretched versions then have the positive lower mass $\ell$, which prevents collapse. The fixed measure controls the tails only after a common lower envelope has been constructed. These are different uses of the hypotheses. This proves the fixed-measure continuity statement of \cite[Theorem 4.2]{XL26}; the corresponding construction of general-measure solutions is given in \cref{sec:big-model-general-measures}.

@@ -96,6 +96,8 @@ for name in (
     "research/editorial/section_vanishing_lower_mass_v2.tex",
     "research/editorial/section_lower_mass_solvability.tex",
     "research/editorial/section_lower_mass_metric_geometry.tex",
+    "research/editorial/chapters-14-15-review.md",
+    "research/editorial/chapters-14-15-map.json",
     "research/editorial/chapter-13-review.md",
     "research/editorial/chapter-13-map.json",
     "research/editorial/chapters-10-12-review.md",
@@ -202,6 +204,8 @@ Checkpoint32 integrates the Chapters6–9 systematic correctness and exposition 
 Checkpoint33 integrates the complete Chapters10–12 root review. Repeated comparison/energy proofs are shortened, the nonuniqueness examples retain their technical estimates, and two elementary envelope statements lose unused bigness assumptions. Extended volume definitions are separated from the hypotheses for finiteness and comparison. Two notation corrections also appear in the standalone note. The chapter ledger records completed Chapters1–12 and the partial Chapter13 pass.
 
 Checkpoint34 integrates the full Chapter13 review: earlier compactness replaces repeated regularity-based compactness, scalar tails and envelope bounds are streamlined, and cutoff/regularization language is precise. Extended volume invariance is distinguished from conditional comparison. The ledger records completed Chapters1–13 and the partial Chapter14 pass; this remains a working manuscript.
+
+Checkpoint35 integrates the complete Chapters14–15 review. Repeated normalized-exponential limits share one proved lemma, big-background compactness states the exact prerequisites for proof reuse, and adjoint stability uses its earlier proposition. No existence/uniqueness assumptions are changed. Chapters1–15 have received this systematic root pass; later chapters and research remain incomplete.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
