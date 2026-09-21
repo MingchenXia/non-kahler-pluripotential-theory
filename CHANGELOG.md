@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint32: Chapters6–9 proof simplification
+
+Integrated five reviewed sources after the full root pass. Ordered contact now uses decreasing continuity directly. Uniform tail control implies the removed total-mass hypothesis. Smooth-equation proofs reuse established Fredholm/local-inverse arguments, with the local/global dependency explicit. The necessary Hopf and nonlinear estimates are retained. The651-page production PDF matches every page of the final visually inspected preview; no errors, undefined references or overfull boxes. Source hashes, reversible edits, original references and preserved checkpoint31 outputs were checked. Packaging and private synchronization are recorded separately. The systematic pass continues from Chapter10; no new independent audit is claimed.
+
 ## 21 September 2026 — Chapters6–9 review, pending integration
 
 Completed the next root statement-to-proof pass, including every smooth-equation proof input. Drafted a decreasing maximum for the ordered-contact argument, removed a redundant total-mass assumption from tail continuity, shortened repeated adjoint/Fredholm and local-inverse arguments, and clarified positive-form terminology. Retained the detailed Hopf and STW estimates after checking their roles and existing reports. Five source edits remain in the private preview with exact patches and review scope; checkpoint31 is still delivered. Its private remote head was verified at ea3e35d5cfd889007f63162f6fcd1d70c4f5685b.

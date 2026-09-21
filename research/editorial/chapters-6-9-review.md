@@ -1,6 +1,6 @@
 # Chapters6–9: proof and exposition review
 
-This is the next systematic root pass, following the user's instruction to improve every existing part. All statements and proofs in Chapters6,7,8 and9 have been read, including the integrable-Hessian supplement and all eight inputs in the smooth-equations chapter. The changes are in a private preview; checkpoint31 remains the delivered version until compilation, final visual review and integration finish. No new Rethlas run was needed for the elementary dependency simplifications below. Existing audit reports remain unchanged, and their actual conditional scopes are retained.
+This is the next systematic root pass, following the user's instruction to improve every existing part. All statements and proofs in Chapters6,7,8 and9 have been read, including the integrable-Hessian supplement and all eight inputs in the smooth-equations chapter. The changes are integrated in checkpoint32. The651-page production PDF matches the final visually inspected preview on every page; five source hashes and reversible edits were checked. No new Rethlas run was needed for the elementary dependency simplifications below. Existing audit reports remain unchanged, and their actual conditional scopes are retained.
 
 ## Chapter6
 
@@ -26,6 +26,6 @@ The nine prior final reports for smooth C0/second derivatives, STW C0/adjoint/ma
 
 Three local edits are proposed. Replace ambiguous 'strictly positive potential' by 'solution with omega_u>0'. Reuse the proved Gauduchon Fredholm/positive-adjoint argument instead of repeating it. In the STW openness step reuse the local mean-zero inverse in the smooth-dependence lemma, explicitly at a single positive potential; global existence and the uniqueness used to join global solution maps are not prerequisites for this local inverse. Using the root-volume equation keeps the derivative L_u w-c with its already established normalization. The detailed nonlinear derivative estimates remain intact.
 
-## Pending work
+## Integration and continuation
 
-Finish the combined preview inspection, promote these five source files with a reversible map, rebuild and package them, and save the result to the private repository. Then continue the whole-manuscript pass from Chapter10. The remaining research directions and all later chapters remain incomplete.
+The combined preview and final pagination adjustment were rendered and viewed, including the section headings, complete theorem/proof and adjacent pages. The five revised sources were promoted with a reversible map and rebuilt. No errors, undefined references or overfull boxes remain; the existing underfull bibliography line is unchanged. Checkpoint31 and its source archive were preserved. Build-snapshot-32.json records the exact PDF metadata; fresh-source portability and private synchronization are separate final checks. Continue from Chapter10. The remaining research directions and later chapters remain incomplete.

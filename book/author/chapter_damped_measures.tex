@@ -219,9 +219,7 @@ and Tonelli's theorem, valid also for the extended measure $\mu_u$, give the tot
  &\leq C\frac{q}{q-r_n}(1+T)^{r_n-q}.
  \end{split}
 \]
-The possible mass on $\{s=0\}$ is bounded by \cref{lem:sublevel-mass-growth}, so the total bound follows also from this tail estimate.
-
-For the capacity estimate write $\delta=\operatorname{Cap}_\omega(E)$. If $\delta=0$, apply \cref{prop:damped-capacity} on each finite sublevel of $s$ and exhaust the complement of the pole set. Thus $\sigma_{q,u}(E)=0$. If $0<\delta\leq1$, choose $T=\delta^{-1/(q+n-r_n)}\geq1$. On $\{s\leq T\}$, take $p=(1+T)^{-1}$ and use \cref{prop:damped-capacity} to obtain
+For the capacity estimate write $\delta=\operatorname{Cap}_\omega(E)$. If $\delta=0$, the set $E$ is pluripolar, so $\sigma_{q,u}(E)=0$. If $0<\delta\leq1$, choose $T=\delta^{-1/(q+n-r_n)}\geq1$. On $\{s\leq T\}$, take $p=(1+T)^{-1}$ and use \cref{prop:damped-capacity} to obtain
 \[
  \sigma_{q,u}(E\cap\{s\leq T\})
  \leq\mu_u(E\cap\{s\leq T\})
@@ -232,9 +230,9 @@ The remaining part is bounded by the preceding tail estimate. Since $T^n\delta=T
 
 For $n\geq2$, the capacity exponent is $1-n/(q+2)$, and the sufficient damping condition is $q>n-2$. Without the Gauduchon improvement, the initial local estimate would give only $q>n$ and capacity exponent $1-n/q$. Thus the conserved linear mass has a concrete effect on the treatment of arbitrarily singular potentials. Further improvements under special torsion conditions remain possible.
 
+\Needspace{14\baselineskip}
 \section{Continuity of the damped operators}
 
-\Needspace{10\baselineskip}
 \begin{theorem}\label{thm:damped-continuity}
 Let $u_j,u\in\PSH(X,\omega)$ be nonpositive, and suppose $u_j\to u$ in capacity. Then, for every $p>0$ and every $q>r_n$,
 \[
@@ -280,24 +278,25 @@ When finite undamped measures are needed, the extra hypothesis can be placed on 
 \begin{theorem}\label{thm:undamped-tail-continuity}
 Let $u_j,u\in\PSH(X,\omega)$ be nonpositive and suppose $u_j\to u$ in capacity. Assume
 \[
- \sup_j\mu_{u_j}(X)<+\infty,\qquad
  \lim_{T\to\infty}\sup_j\mu_{u_j}(\{u_j<-T\})=0.
 \]
 Then $\mu_u$ is finite and $\mu_{u_j}\rightharpoonup\mu_u$. No bounded mass property of $X$ is assumed.
 \end{theorem}
 \begin{proof}
+Choose $T_0$ so that every tail beyond $T_0$ has mass at most one. By \cref{lem:sublevel-mass-growth}, $\mu_{u_j}(X)\leq C(1+T_0)^{r_n}+1$. Thus the tail condition already gives a uniform bound for the total masses.
+
 Choose a continuous nonincreasing function $\eta:[0,+\infty)\to[0,1]$, equal to one on $[0,1]$ and zero on $[2,+\infty)$. Put $\eta_T(s)=\eta(s/T)$. The fixed-truncation argument in \cref{thm:damped-continuity}, now with coefficient $\eta_T(-u_j)$, gives
 \[
  \eta_T(-u_j)\mu_{u_j}\rightharpoonup\eta_T(-u)\mu_u
  \quad\text{for every fixed }T>0.
 \]
-The integrals on the left are bounded by the assumed uniform total mass. Since $\eta_T(-u)$ increases to one off the pole set as $T\to\infty$, monotone convergence proves $\mu_u(X)<+\infty$.
+The integrals on the left are bounded by this uniform total mass. Since $\eta_T(-u)$ increases to one off the pole set as $T\to\infty$, monotone convergence proves $\mu_u(X)<+\infty$.
 
 For a continuous test function $f$, the error made by inserting $\eta_T(-u_j)$ is at most
 $\|f\|_\infty\mu_{u_j}(\{u_j<-T\})$, uniformly small for large $T$. For the limit potential the corresponding error tends to zero because $\mu_u$ is finite and its pole set has zero mass. Pass first $j\to\infty$ with $T$ fixed, and then $T\to\infty$.
 \end{proof}
 
-One can express these sequence assumptions by a single integrability condition. Let $\chi:[0,+\infty)\to[1,+\infty)$ be continuous, increasing and unbounded. For a nonpositive potential define
+The tail condition has an equivalent formulation using an increasing weight. Let $\chi:[0,+\infty)\to[1,+\infty)$ be continuous, increasing and unbounded. For a nonpositive potential define
 \[
  J_{\chi,\omega}(u)=\int_X\chi(-u)\,\mathrm{d}\mu_u,
 \]
@@ -320,7 +319,7 @@ $\chi(-u_j)\eta_T(-u_j)$. Its integral converges at each fixed $T$ and is at mos
 \end{proof}
 
 \begin{proposition}\label{prop:tail-integrability-equivalence}
-For a family of nonpositive potentials, the two uniform conditions in \cref{thm:undamped-tail-continuity} are equivalent to a uniform bound on $J_{\chi,\omega}$ for some continuous increasing unbounded $\chi\geq1$.
+For a family of nonpositive potentials, the uniform tail condition in \cref{thm:undamped-tail-continuity} is equivalent to a uniform bound on $J_{\chi,\omega}$ for some continuous increasing unbounded $\chi\geq1$.
 \end{proposition}
 \begin{proof}
 One implication was proved in the preceding corollary. For the other choose numbers $T_k\to+\infty$, with $T_{k+1}>T_k+1$, such that the mass of $\{-u_j>T_k\}$ is at most $2^{-k}$ for every member of the family. Let $r_k$ be a continuous nondecreasing function, zero on $[0,T_k]$ and one on $[T_k+1,+\infty)$. Define
@@ -371,6 +370,7 @@ On their supports, $u_j=-j$. Consequently, for $j>T$,
 Nevertheless, $u_j\to u$ in capacity. Indeed, outside any neighborhood of the origin the functions eventually agree, and neighborhoods of this capacity-zero point can be chosen with arbitrarily small capacity. Thus bounded mass and capacity convergence do not prevent the undamped measures from acquiring mass on a pole of the limit. The damped limit agrees with the extended measure, as predicted by \cref{thm:damped-continuity}.
 \end{example}
 
+\Needspace{39\baselineskip}
 \section{Extension to general backgrounds}
 
 \begin{theorem}\label{thm:general-background-damping}
@@ -396,5 +396,5 @@ All the mass, tail and capacity bounds follow from the already proved estimates 
 The first inequality follows by inclusion of the test potentials and positivity of the added background. For the second, if $0\leq v\leq1$ is $\Omega$-plurisubharmonic, then $v/C_0$ is an admissible $\omega$-test potential and
 $(\Omega+\ddc v)^n=C_0^n(\omega+\ddc(v/C_0))^n$.
 
-For continuity, the same fixed-truncation identity as in \cref{thm:damped-continuity} applies. The truncated potentials are bounded and $\Omega$-plurisubharmonic. Their products with background $\theta$ may be signed before multiplication by the cutoff, but their local expansions in bounded plurisubharmonic Hessians and fixed smooth forms are continuous under capacity convergence. The coefficient vanishes on the truncation level, so the identity with the restricted positive measure is exact. Uniform tails, already obtained by domination, then remove the cutoff. The proof of the undamped criterion uses only this fixed-truncation continuity and its stated mass and tail assumptions. Its integrability corollaries are purely measure-theoretic and therefore transfer as well.
+For continuity, use the fixed-truncation identity in \cref{thm:damped-continuity}. Its truncations are bounded and $\Omega$-plurisubharmonic. Their signed $\theta$-products are continuous under capacity convergence by the local expansion in \cref{prop:bounded-products}, also with the bounded quasi-continuous coefficients used above. The cutoff vanishes at the truncation level, giving exactly the restricted positive measure. The uniform tails supplied by domination remove the cutoff. Domination also supplies the sublevel estimate, so the preceding proofs of the undamped tail and integrability criteria apply verbatim.
 \end{proof}

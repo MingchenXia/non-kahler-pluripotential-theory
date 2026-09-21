@@ -96,6 +96,8 @@ for name in (
     "research/editorial/section_vanishing_lower_mass_v2.tex",
     "research/editorial/section_lower_mass_solvability.tex",
     "research/editorial/section_lower_mass_metric_geometry.tex",
+    "research/editorial/chapters-6-9-review.md",
+    "research/editorial/chapters-6-9-map.json",
     "research/editorial/elliptic-foundations-review.md",
     "research/editorial/elliptic-foundations-map.json",
     "research/editorial/chapter-review-20260921.md",
@@ -190,6 +192,8 @@ existence remains an explicit external input.
 Checkpoint30 adds continuous Bott–Chern representatives and exceptional trace divisors in Sections24.8–24.9, an affine residual-class identity in Section25.2, and the compact cone base in Proposition29.1.2. Section27.15 reconstructs the elliptic threefold with zero lower mass but a balanced metric of finite upper mass. Section13.22 proves the equivalence between positive lower mass and universal normalized non-pluripolar solvability, without BMP; it constructs obstructing positive L1 densities when lower mass vanishes. Fixed-density volumes, arbitrary individual measures and unbounded exponential equations remain distinct. All five bounded audits passed, and the exact integration map records editorial changes.
 
 Checkpoint31 adds the elliptic closed-current cone and potential/section descent, the exact boundary-volume orders, and the smooth limits of minimizing Gauduchon forms with possibly unbounded metric roots in Section29.7. All three bounded audits passed. Chapters1–5 have received a systematic correctness and exposition pass, with exact scope and pending chapters in the chapter-review ledger. The integration map and build snapshot record checked sources and visual review.
+
+Checkpoint32 integrates the Chapters6–9 systematic correctness and exposition pass: decreasing contact approximation, a streamlined tail criterion, and reuse of the established elliptic local inverse. The technical Hopf and smooth-equation estimates are retained. The chapter ledger records completed Chapters1–9 and remaining work; this root review is not an independent mathematical certification.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
