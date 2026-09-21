@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint38: complete the first whole-manuscript pass
+
+Read Chapters 30–32, every nested proof input and the appendix, completing the first systematic root reread of the book. Four source edits supply the residual-nefness proof, use the direct divisorial approximation estimate, reuse pointedness for Lee–Gauduchon lineality, and consolidate the appendix's local ideal-equivalence proof with Chapter28. The noncompact local scope was already proved in the appendix. All Kähler, properness, density and same-metric assumptions remain explicit. The 649-page PDF matches the inspected preview on every page; twelve changed and five adjacent pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. Original sources, the note and checkpoint37 outputs are preserved. Fresh reconstruction and private synchronization are recorded separately. No new independent audit; the research and further focused checking remain active.
+
 ## 22 September 2026 — Checkpoint37: Gauduchon volume, kernels and closed loci
 
 Completed the systematic root reread of Chapters 27–29 and all twenty proof inputs. Three source edits reuse the established divisorial removal, ideal-envelope order and submersion descent arguments. All concentration, degeneracy, Jacobian, jet-threshold and ideal-recovery restrictions remain explicit; no theorem hypothesis or conclusion changes. The 649-page production PDF matches the preview on every page. All nine changed pages, three adjacent pages and a contents page were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. All 29 originals, the note and checkpoint36 outputs are preserved. Fresh reconstruction and private synchronization are recorded separately. No new independent audit; Chapters 30–32, the appendix and research remain incomplete.

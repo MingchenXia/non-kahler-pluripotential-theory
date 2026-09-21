@@ -99,6 +99,9 @@ for name in (
     "research/editorial/chapters-16-26-review.md",
     "research/editorial/chapters-16-26-map.json",
     "research/editorial/chapters-27-29-map.json",
+    "research/editorial/chapters-30-appendix-map.json",
+    "research/editorial/chapters-30-appendix-review.md",
+    "research/audits/build-snapshot-38.json",
     "research/editorial/chapters-27-29-review.md",
     "research/audits/build-snapshot-37.json",
     "research/editorial/chapters-14-15-review.md",
@@ -215,6 +218,8 @@ Checkpoint35 integrates the complete Chapters14–15 review. Repeated normalized
 Checkpoint36 records the full root reread of Chapters16–26 and all their inputs. Repeated divisorial estimates for restriction, addition and self-trace share earlier proved results, and the trace comparison lemma comes before its applications. The ledger now covers Chapters1–26; the remaining chapters, appendix and research are incomplete.
 
 Checkpoint37 completes the root reread of Chapters 27–29 and all twenty inputs. Three proof simplifications reuse established divisorial, envelope and descent results without changing theorem scope. The ledger now covers Chapters 1–29; Chapters 30–32, the appendix and research remain incomplete.
+
+Checkpoint38 completes the first systematic root reread of all 32 chapters, every nested proof input and the appendix. Four edits supply a residual-nefness proof and reuse established divisorial, cone and local ideal arguments. All exact hypotheses remain explicit. The review and reversible map record the scope; this is not whole-book certification. Research and further focused checks remain active.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
