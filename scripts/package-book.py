@@ -114,6 +114,9 @@ for name in (
     "research/editorial/smooth-dual-regularity-review.md",
     "research/editorial/section_smooth_dual_regularity_v2.tex",
     "research/editorial/section_smooth_dual_sharpness.tex",
+    "research/editorial/section_semipositive_capacity_limit.tex",
+    "research/editorial/capacity-and-trace-map.json",
+    "research/editorial/capacity-and-trace-review.md",
     "research/editorial/section_semipositive_trace_rate.tex",
     "research/editorial/current-rate-and-approximation-map.json",
     "research/editorial/current-rate-and-approximation-review.md",
@@ -306,6 +309,8 @@ Checkpoint49 strengthens and shortens Section27.11.4: maxima and Gauduchon Stoke
 Checkpoint50 adds two audited consequences under smooth semipositive dual attainment: whole-family normalized exponential L1 convergence with a common lower barrier and a quantitative scalar bound, and independence of positive pole-divisor classes. The683-page build has synchronized Chapter13/32 interfaces. No capacity or global regularity conclusion across the degeneracy set is claimed.
 
 Checkpoint51 adds audited quantitative convergence for full Gauduchon traces and local coefficient currents, and polishes Chapters18/19 with a shorter local Bergman L1 proof and explicit pole/restriction examples. The685-page build retains the general capacity and global regularity questions.
+
+Checkpoint52 adds an audited conditional capacity corollary with an explicit smaller-background envelope hypothesis. Chapters20–22 and every nested input were reread; the685-page build clarifies the nonzero section-space case and trace notation while preserving the general open questions.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

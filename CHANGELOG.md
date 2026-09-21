@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint52: conditional capacity and trace/section review
+
+Integrated the audited capacity corollary under its explicit smaller-background envelope hypothesis. Reread Chapters20–22 and all ten nested inputs; clarified the nonzero section-space condition for comparing Bergman potentials, separated the fibration map from the envelope symbol, checked Cao’s published theorem locator and corrected roman constants. Thirteen book files change. The685-page build and46 affected/adjacent pages were checked. The general capacity and higher-dimensional trace questions remain open.
+
+## 22 September2026 — Conditional capacity limit under review
+
+Submitted a short corollary using the existing lower-barrier criterion under the explicit smaller-background envelope condition. It is outside checkpoint51 until checked. The second focused reading of the entire trace chapter and its five inputs is complete; notation and exposition edits are being prepared.
+
 ## 22 September2026 — Checkpoint51: quantitative currents and simpler approximation proofs
 
 Added an audited O(lambda) Gauduchon-trace estimate and local O(sqrt(lambda)) coefficient-current estimate under smooth semipositive dual attainment. Reread Chapters18/19, replaced a local Bergman compactness argument by dominated convergence, clarified the pole value in the explicit test curve and added a zero-Lelong restriction example. Four book files change. The685-page build and31 affected/adjacent pages were checked. The new current estimates imply no potential or MA rate and no capacity conclusion across the degeneracy set.
