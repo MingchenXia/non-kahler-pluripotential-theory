@@ -16,7 +16,7 @@ distinguish proved results, external inputs, conditional results and open proble
 
 ## Current manuscript and proof boundary
 
-- **Checked release: checkpoint30.** 639 pages, 32 chapters and an appendix. The integrated manuscript and inspected PDF include continuous Bott–Chern representatives, exceptional trace divisors, the compact pseudoeffective cone base, the vanishing-lower-mass threefold, its balanced geometry, and the universal-measure solvability criterion. Five bounded audits passed; their dependencies are discharged. A fresh source extraction reconstructed both outputs with identical page text.
+- **Checked manuscript: checkpoint31.** 649 pages,32 chapters and an appendix. Three bounded audits support the elliptic closed-current, boundary-volume and Gauduchon-limit additions. Chapters1–5 have completed the first systematic root reread and their edits are integrated. The combined PDF is compiled and visually checked; fresh source reconstruction is recorded separately. The full book review and research remain incomplete.
 - Upper bounded mass and positive lower mass are independent. A balanced metric with finite upper mass can have zero lower mass. General measure existence therefore cannot omit all lower-mass or right-hand-side restrictions.
 - Positive lower mass characterizes solvability for every finite non-pluripolar measure in a Hermitian background, without BMP. Individual L1 data and unbounded exponential equations require separate analysis. Fixed-density volume must remain distinct from its density infimum.
 - Linear current continuity and exceptional-divisor formulas do not imply nonlinear volume continuity or full higher-dimensional trace realization.
@@ -24,8 +24,8 @@ distinguish proved results, external inputs, conditional results and open proble
 ## Immediate work
 
 1. Keep the checked source package and private GitHub history synchronized after significant updates.
-2. Continue chapter polishing, preserving all singularity, I-goodness, trace and Bergman topics.
-3. A complete draft now treats closed-current descent and Bott–Chern cones on the elliptic lower-mass example, with potential/envelope and selected-section descent. A companion computes the exact boundary volume and its orders. Both bounded audits and the combined private preview must pass before integration.
+2. Carry out the systematic whole-manuscript correctness, readability and proof-simplification pass in `research/editorial/chapter-review-20260921.md`. Chapters1–5 have had a full root reread and integration checks; continue from Chapter6. Preserve all singularity, I-goodness, trace and Bergman topics.
+3. Section29.7 now treats elliptic current, potential/envelope and selected-section descent, the exact boundary volume and its orders, and minimizing Gauduchon forms with unbounded metric roots. All three bounded audits passed. Use these explicit examples to test further geometric statements; no full Bott–Chern-group computation or general boundary-rank theorem is claimed.
 4. A research-only note tests individual L1 densities against smooth normalizers. It gives a necessary obstruction and a bounded Kähler example showing that the test need not recover the equation scalar; no sufficiency is asserted.
 5. Seek geometric sufficient conditions for positive lower mass and criteria for individual measures when it vanishes. The full Gauduchon determinant endpoint fails on the example; fixed-density maximizers remain a separate family.
 

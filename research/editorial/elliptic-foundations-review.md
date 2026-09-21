@@ -1,0 +1,9 @@
+# Checkpoint31 integration review
+
+The three canonical proof sources are retained unchanged in research/editorial/. The reversible map records every source-to-book edit, and all14 changed book files with before/after hashes. The first two proofs receive only notation, explicit cross-references, paragraph transitions and pagination changes; the Gauduchon-limit source is integrated verbatim. All three bounded audits passed, with their existing mathematical premises discharged by reviewed earlier chapters. No novelty claim or formal certification is made.
+
+The root pass through Chapters1–5 checked every statement and proof. Its ledger records the elementary algebra, local compactness/gluing and elliptic/Hahn–Banach dependencies. The all-positive-real ideal-weight convention is aligned with Chapter16; no unproved integer-to-real equivalence is used. Total Gauduchon trace is distinguished from its measure. Existing symmetry and Fredholm arguments are reused to shorten proofs. The Yi Li contextual reference was checked against Equation(1.18) and Theorem1.2 of https://arxiv.org/html/1004.0553v1; no theorem in these chapters depends on that contextual citation.
+
+The final preview has649 pages. The new sections and affected chapter output were rendered and viewed, including all subsequent pagination changes. Production has identical text on every page. No build errors, undefined references or overfull boxes remain; the previously inspected underfull bibliography line is unchanged. See build-snapshot-31.json for exact hashes, page sets and audit counts. The source portability result is a separate post-packaging record.
+
+All29 original SGPT files match their manifest. Checkpoint30 and its source archive are preserved. The standalone note is unchanged. The research-only individual-density test is excluded from the checked manuscript. Systematic review beyond Chapter5 remains pending.

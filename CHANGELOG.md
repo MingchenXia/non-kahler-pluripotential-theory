@@ -1,5 +1,15 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint31: elliptic geometry and foundational revision
+
+Integrated the elliptic closed-current descent, nef/pseudoeffective cone, potential/envelope and section descent, exact boundary-volume formula, and normalized Gauduchon-limit calculation. All three bounded audits passed and their full records were read. The metric roots can be unbounded even when their squares converge smoothly; the book separates this from the lower-mass concentration example.
+
+Completed the first systematic root reread of Chapters1–5. Aligned real ideal weights, clarified trace measures versus total trace, simplified repeated symmetry and Fredholm arguments, supplied two explicit compactness steps, and refined pagination. The649-page production PDF matches the inspected preview on every page; no errors, undefined references or overfull boxes. Preserved the prior release, source archive and original references. Source portability and private synchronization are recorded separately. The whole-manuscript review continues from Chapter6.
+
+## 21 September 2026 — Systematic review and elliptic proof checks
+
+The two elliptic descent/boundary-volume audits completed correctly; full records and final reports were read, with no failed checks and normal exits. Prepared a further Gauduchon-limit supplement for separate bounded review. Began the user-requested whole-manuscript pass and read Chapters1–5, recording exact scope, necessary proof steps and pending chapter coverage. Private-preview corrections align real multiplier-ideal weights, separate trace measures from their conserved totals, remove duplicate exposition and reuse already proved symmetry and Fredholm arguments. Compilation, final visual review and integration of these edits remain pending; checkpoint30 stays the checked release.
+
 ## 21 September 2026 — Elliptic closed-current draft
 
 Prepared a proposed self-contained section deriving current descent, the nef/pseudoeffective cone and a Bott–Chern/de Rham distinction on the elliptic example. It also develops potential/envelope and selected-section/kernel descent, retaining quadratic algebraic growth and zero cubic Monge–Ampère measure. Submitted for a separate bounded Rethlas audit. A companion draft computes the fixed-density boundary volume and orders1,2,3. Both interrupted audits were resumed in their existing sessions after process inspection; the proofs remain pending. The combined647-page private preview compiles, and13 selected pages have been rendered and viewed. Its reversible draft edits are recorded. Also preserved an unreviewed research note giving necessary smooth comparison tests for individual densities and a counterexample to scalar sharpness. Checkpoint30 remains the checked release and is remotely backed up at1f28e502dc5d42068b1a72a4fb4c7c012cc73ff5.
