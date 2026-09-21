@@ -3,10 +3,15 @@
 
 There are two ways to prescribe singularities in a Monge--Amp\`ere equation. One can require the solution to differ from a reference potential by a bounded function. Alternatively, one can require it to belong to a relative full mass class; the solution may then be strictly more singular than the reference. The distinction is already present in the closed theory. In the Hermitian theory it interacts with the choice of upper and lower volume, and with the positivity assumptions needed for domination.
 
-This chapter proves $L^p$ equations with bounded potentials or prescribed ordinary singularities in semipositive big backgrounds. For arbitrary smooth big backgrounds, both minimal ordinary-type equations follow from strict barriers, resolution and the Gauduchon trace, without either metric volume property. Chapter~\ref{chap:relative-finite-measures} proves general-measure equations in two regimes: the semipositive case under the smaller-background model condition and positive lower volume, without bounded mass; and arbitrary big backgrounds under bounded mass and positive lower volume of the model reference. In the latter regime it also proves unrestricted weighted addition and the ordinary-type $L^p$ refinement. Throughout, uniqueness of the normalization constant is distinguished from uniqueness of the potential.
+We first solve $L^p$ equations in semipositive big backgrounds and develop the comparison and compactness arguments used later. These also describe what the positive-exponent approximation selects in the nonuniqueness example. For arbitrary smooth big backgrounds, \cref{sec:big-minimal-comparison,sec:big-minimal-existence} use a strict singular barrier, resolution and the Gauduchon trace to solve both equations in the minimal ordinary singularity type, without either metric volume property. The next step prescribes a general ordinary type in a semipositive background.
+
+For general non-pluripolar measures, existence depends on the background and the reference class. We state the two regimes here and prove them in \cref{chap:relative-finite-measures}: semipositive big backgrounds with a smaller-background model reference and positive lower mass, without bounded mass; and arbitrary big backgrounds with bounded mass and positive lower volume of the model reference. In a Hermitian background, \cref{sec:lower-mass-solvability} explains why a lower-mass hypothesis is necessary for solvability for every measure.
+
+For an individual $L^1$ density, \cref{sec:individual-density-subsolutions,sec:integrable-gauduchon-tests,sec:individual-density-stability} replace this uniform hypothesis by an exact subsolution threshold and its Gauduchon formula. The final sections construct the greatest exponential solution at a positive threshold and separate convergence of the scalar, the right-hand-side measure and the normalized potential. Throughout, uniqueness of the scalar is distinguished from uniqueness of the potential.
 
 \input{author/section_singular_domination}
 
+\Needspace{12\baselineskip}
 \input{author/section_big_lp_equations}
 
 \input{author/section_bounded_stability}
@@ -15,6 +20,7 @@ This chapter proves $L^p$ equations with bounded potentials or prescribed ordina
 
 \input{author/section_symmetric_equation_selection}
 
+\Needspace{12\baselineskip}
 \input{author/section_numa_canonical_limit}
 
 \input{author/section_numa_positive_exponent_regularities}
@@ -230,7 +236,7 @@ The two general-measure theorems have different hypotheses. The semipositive the
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:relative-domination}
-Let $0\leq a<1$. If
+Let $\theta$ be a smooth real $(1,1)$-form, let $u,v\in\PSH(X,\theta)$, and let $0\leq a<1$. If
 \[
  \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(u)
  \leq a\,\mathbf1_{\{u<v\}}\mathrm{MA}_\theta(v),
@@ -246,7 +252,7 @@ then $u\geq v$ in each of the following regimes:
 The first assertion was proved in \cref{thm:singular-strict-domination}. The second is proved without a finite-mass assumption in \cref{thm:relative-extended-domination}, starting from the finite-measure argument of \cite[Theorem 3.14]{ALS26}. The third is proved in \cref{thm:big-relative-domination}, reconstructing \cite[Proposition 3.2]{XL26} without a separate global positive-volume assumption. In the first case, a potential equivalent to an ALS model meets the smaller-background condition by a constant translation of a competitor for that model.
 
 \begin{proposition}\label{prop:relative-uniqueness}
-In any of the classes in the preceding existence theorems, two solutions of the same exponential equation with $\lambda>0$ coincide. If $u$ and $v$ solve
+Fix a nonzero finite positive non-pluripolar measure $\mu$. Consider either a fixed ordinary singularity type admitting a smaller-background envelope in a semipositive big background, or one of the relative classes in parts (2) and (3) of \cref{thm:relative-domination}. In each such class, two solutions of $\mathrm{MA}_\theta(w)=\mathrm{e}^{\lambda w}\mu$ with $\lambda>0$ coincide. If $u$ and $v$ solve
 \[
  \mathrm{MA}_\theta(u)=c_u\mu,\qquad
  \mathrm{MA}_\theta(v)=c_v\mu,
@@ -271,7 +277,10 @@ For the second assertion, suppose $c_u<c_v$. For every real $A$, the global ineq
 implies $u\geq v+A$ by strict domination. Choose a point where both potentials are finite and let $A\to+\infty$, a contradiction. Hence $c_u\geq c_v$; exchanging the two proves equality. There is no factor strictly below one when $c_u=c_v$, so this argument does not prove equality of the potentials for the constant-density equation.
 \end{proof}
 
+The corresponding uniqueness statements in the minimal ordinary type of an arbitrary smooth big background follow from \cref{cor:big-barrier-orders}. That argument uses a strict singular barrier; it does not require semipositivity or bounded mass.
+
 \section{The zero-exponent limit and its topology}
+\label{sec:zero-exponent-topology}
 
 The uniform limit $\lambda u_\lambda\to\log c$ proved for continuous bounded potentials in \cref{chap:weak-equations} cannot be transferred unchanged to an unbounded prescribed singularity type.
 
@@ -282,7 +291,12 @@ Suppose $\varphi$ is unbounded below and $u_\lambda\simeq\varphi$ for every $\la
 Bounded equivalence preserves unboundedness below. Every nonempty strict sublevel set of the upper semicontinuous function $u_\lambda$ is open and has positive smooth volume. Thus $u_\lambda$ is essentially unbounded below, as is $\lambda u_\lambda$. The stated conclusions follow.
 \end{proof}
 
-Normalization separates the diverging additive constants from the singular potentials. The normalized exponentials converge against every fixed finite non-pluripolar measure. For $L^p$ data the estimate is quantitative.
+For solutions of $\mathrm{MA}_\theta(u_\lambda)=\mathrm{e}^{\lambda u_\lambda}\mu$, write
+\[
+ v_\lambda=u_\lambda-\sup_Xu_\lambda,\qquad
+ c_\lambda=\mathrm{e}^{\lambda\sup_Xu_\lambda}.
+\]
+There are three separate limit questions: whether $c_\lambda$ has a finite limit, whether the measures $c_\lambda\mathrm{e}^{\lambda v_\lambda}\mu$ converge, and whether a limit of $v_\lambda$ solves the resulting equation. The next lemma passes from the first question to the second for every fixed finite non-pluripolar measure. The third requires a continuity theorem for the Monge--Amp\`ere operator. For $L^p$ densities, the measure estimate is quantitative.
 
 \begin{lemma}\label{lem:normalized-exponential-lp}\label{lem:normalized-exponential-npp}
 Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, and let $\lambda_j>0$ decrease to zero. For every finite non-pluripolar measure $\mu$,
@@ -332,6 +346,7 @@ $\mathrm{MA}_\theta(u_j)\rightharpoonup\mathrm{MA}_\theta(u)$.
 This is the fixed-measure case of \cite[Lemma 4.2 and Theorem 4.1, condition (2)]{ALS26}. A complete reconstruction is given in \cref{thm:relative-fixed-measure-continuity}. Its proof first constructs a common rooftop envelope after extraction, establishes finite mass of the limiting lower roofs, and then applies domination. Mere $L^1$ convergence, even for uniformly bounded potentials, is insufficient for the Monge--Amp\`ere passage to the limit. The common dominating measure and the positive lower mass assumption are the substantive hypotheses here.
 
 \section[Exponential approximation without bounded mass]{Closing an exponential approximation without bounded mass}
+\label{sec:exponential-closedness}
 
 The estimates in \cref{chap:damped-measures} give a passage to the limit that requires neither bounded mass nor a positive lower volume. Its hypothesis is convergence in capacity. Establishing that convergence in an existence argument remains a separate task.
 
@@ -398,8 +413,8 @@ This argument also pinpoints the difficulty as $\lambda_j\downarrow0$: the tail 
 
 \section{Consequences for the singularity program}
 
-The results above solve several Hermitian prescribed-singularity problems already. A research program extending \cite{SGPT} should therefore focus on the remaining identifications and structures, rather than present these existence theorems as conjectures.
+Ordinary singularity volumes are defined by optimizing mass within a bounded-equivalence class. They are therefore invariants of that class and may be infinite; their finiteness and comparison properties retain the hypotheses of \cref{chap:envelopes}. Multiplier-ideal equivalence is coarser. The $\mathcal I$-goodness problem asks which envelope and volume identities survive under this coarser relation.
 
-The extended upper and lower volumes in \cref{chap:envelopes} are invariants of ordinary singularity type by definition; their values may be infinite. Their finiteness and comparison theorems retain the hypotheses stated there. The relative envelope condition and finite damped measures are available without bounded mass. Finiteness and continuity of the undamped measure require their own estimates, which can be imposed on the sequence used in a proof. Multiplier-ideal equivalence is coarser than bounded equivalence and is not built into these definitions. The next comparison with $\mathcal I$-goodness must determine which volume and envelope identities survive that coarser relation.
+The equation proofs separate three ingredients: relative envelopes, finite damped measures and continuity of the undamped operator. The first two are available without bounded mass. The third requires estimates for the actual approximating sequence, as in \cref{thm:exponential-closedness}.
 
-Gauduchon metrics have already supplied an invariant linear trace and the adjoint measure controlling the smooth normalization constant. In \cref{chap:normalization}, the dependence of the scalar on the logarithmic density yields supporting probability measures for prescribed-type equations. Identifying these probabilities with a linearized adjoint at a singular solution requires additional regularity; their existence does not assume such an identification.
+Gauduchon metrics give an invariant linear trace and the adjoint measure controlling the smooth scalar. In \cref{chap:normalization}, logarithmic variation of the density gives supporting probabilities for prescribed-type equations. Their construction does not identify them with a linearized adjoint at a singular solution; that identification requires additional regularity.

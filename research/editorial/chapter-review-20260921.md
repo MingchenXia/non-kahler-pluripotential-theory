@@ -63,3 +63,5 @@ Checkpoint44 checks the quantitative exponential-damping proposition and the Cha
 Checkpoint45 checks the Chapter27 trace/duality interfaces and Chapter32 proof boundary. The regularity proof separates coefficient matrices from nonlinear products, uses a short first-order bootstrap and merges the old rigidity corollary without losing its label. The bounded audit passed. See smooth-dual-regularity-review.md.
 
 Checkpoint46 checks the smooth-dual sharpness and exponential-selection consequences and updates the Chapter32 uniqueness interface and reading guide. The closedness and dimension assumptions are tested by explicit examples. The preface, conventions and Chapter1 were reread without further mathematical edits. See smooth-dual-sharpness-review.md.
+
+Checkpoint47 revisits Chapter13 exposition, direct scalar comparison, the exact uniqueness regimes and the three zero-exponent limit questions. It removes a repeated compactness argument and tightens the chapter opening and ending. See equation-exposition-review.md for exact scope; no new independent verifier run was used.

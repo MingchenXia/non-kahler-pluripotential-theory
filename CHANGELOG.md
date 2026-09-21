@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint47: equation proofs and reading order
+
+Simplified the Lp threshold proof by direct strict domination, made the uniqueness classes explicit, and distinguished scalar, right-hand-side and potential limits throughout the Chapter13 route. Revised its opening and ending and checked the exact earlier dependencies. Four source files change, one only for pagination. The679-page build and40 rendered affected pages were checked; this is a focused root review, with no new theorem or independent verifier run.
+
 ## 22 September2026 — Checkpoint46: sharpness and uniform selection
 
 Proved whole-family uniform convergence under smooth dual attainment by reusing the earlier Lp compactness result. Characterized smooth dual attainment for a closed Hermitian background, and constructed a nonclosed Hermitian background with smooth maximizing test and density vanishing on an open set on every compact complex manifold of dimension at least two. The dimension-one comparison explains the regularity theorem's restriction. The bounded audit passed. Updated the Chapter32 uniqueness discussion and reading guide, preserving their general open problems. The 679-page output matches the inspected preview; eleven pages were rendered and read, and compilation has no errors, undefined references or overfull boxes. Original references, checkpoint45 and the standalone note are preserved.
