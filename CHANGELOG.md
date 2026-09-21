@@ -3,6 +3,17 @@
 Git history begins on 21 September 2026. Earlier checkpoints are documented below
 and in the retained audit records; they are not fabricated as earlier Git commits.
 
+## 2026-09-21 — Cover correction
+
+- Remove “Research manuscript / prepared for Mingchen Xia” from the book cover
+  and matching PDF author metadata, as requested. Apply the same change to the
+  pending checkpoint30 source.
+- Rebuild the delivered book and pending preview; inspect both covers. The book
+  remains 621 pages, and every page after the cover has identical extracted text
+  to checkpoint29. Preserve the original checkpoint29 snapshot and source archive.
+- Regenerate the portable source archive, including the blueprint, changelog and
+  cover revision record. No mathematical statement or proof is changed.
+
 ## 2026-09-21 — Private source repository and synchronization
 
 - Preserve the released checkpoint29 source, research plans, literature ledger,

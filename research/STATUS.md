@@ -12,7 +12,7 @@ Root found a rational-coefficient convention issue in the second submission's ex
 
 The private preview is `tmp/checkpoint-30-preview` (627 pages); four proof sources and seven existing chapter interfaces are prepared. The second build succeeded without errors, undefined references or overfull boxes. Visual inspection, final proof review, integration and release remain pending. Production remains checkpoint29. No original source or verifier memory/result was edited. No root collaboration agents were spawned.
 
-The user supplied `https://mingchenxia.github.io/Papers/volinf0_vibe.pdf` on 21 September. The web reader could not open it; a normal approved network download succeeded and is saved in `tmp/volinf0_vibe.pdf`, with extracted text in `tmp/volinf0_vibe.txt`. Reading and incorporation are the current priority, especially lower-volume claims, equation hypotheses and open problems. The interruption and current recovery were explained to the user.
+The user supplied `https://mingchenxia.github.io/Papers/volinf0_vibe.pdf` on 21 September. The web reader could not open it; a normal approved network download succeeded and is saved in `tmp/volinf0_vibe.pdf`, with extracted text in `tmp/volinf0_vibe.txt`. A first full reading of the eight-page paper is complete; detailed proof review and incorporation remain the current priority, especially lower-volume claims, equation hypotheses and open problems. The interruption and current recovery were explained to the user.
 
 ## GitHub source history and synchronization
 
@@ -33,7 +33,9 @@ is active, and the older research heartbeat remains paused. An initial HTTP 400
 was resolved by repository-local transport settings and a normal retry.
 See `research/audits/github-source-setup.json` for the setup checks.
 
-## Current delivery: checkpoint29
+## Current delivery: checkpoint29 with cover correction
+
+On 21 September the user requested removal of “Research manuscript / prepared for Mingchen Xia” from the book cover. The delivered PDF now has SHA256 `7d3be7d0090e8e6c43e7a4842c9c478e7174536a719b6e182bc41d3a8494a705` and 2,701,739 bytes. Its 621 pages differ from the original checkpoint29 only on the cover; extracted text of pages2–621 is identical. The PDF author metadata was cleared as well. Both production and pending-preview covers were rebuilt, rendered and inspected. The current source archive has 540 files and 539 manifest entries, 2,226,786 bytes, SHA256 `75899483fe20c3e47e0db89af6a82f874a145bd5ee4dc8cc1b05ee1aa43ac59f`. The original checkpoint29 source archive was preserved at `tmp/source-checkpoint-29.zip`, and its frozen PDF remains unchanged. See `research/audits/cover-revision-2026-09-21.json`. The following checkpoint29 hashes describe the original mathematical release, before this cover-only correction.
 
 The book is **621 pages**, with 32 chapters and an appendix. The delivered PDF and immutable `output/snapshots/checkpoint-29.pdf` have SHA256 `4cc1da99a74911ff518603378a21283d7652dd3e3139e43e6a181f916b420c86` and 2,701,474 bytes. The source archive has 537 files and 536 verified manifest entries, 2,221,724 bytes, SHA256 `562be480a717c48606c002db660e3259d105c49b74c09bc96e8fb4b29691665d`. A fresh extraction independently rebuilt the 621-page book and 17-page note; every page text matches delivery. All manifest checksums and packaged workspace files match. Portability is recorded in `research/audits/source-package-portability-29.json`. No release, build, visual-review or packaging work remains pending.
 

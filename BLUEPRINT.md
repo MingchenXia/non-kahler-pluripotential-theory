@@ -20,6 +20,9 @@ distinguish proved results, external inputs, conditional results and open proble
   appendix. Its source is in `book/`. Compilation and independent reconstruction
   are recorded in `research/audits/build-snapshot-29.json` and
   `research/audits/source-package-portability-29.json`.
+  The 21 September cover correction removes the two-line preparer credit; all
+  body pages are unchanged. Its checks are in
+  `research/audits/cover-revision-2026-09-21.json`.
 - **Pending checkpoint30:** four proof drafts under `research/editorial/` develop
   continuous Gauduchon-normalized Bott–Chern representatives, pullback of countable
   divisorial currents, exceptional divisors between trace models, affine class
