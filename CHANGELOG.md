@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Elliptic closed-current draft
+
+Prepared a proposed self-contained section deriving current descent, the nef/pseudoeffective cone and a Bott–Chern/de Rham distinction on the elliptic example. It also develops potential/envelope and selected-section/kernel descent, retaining quadratic algebraic growth and zero cubic Monge–Ampère measure. Submitted for a separate bounded Rethlas audit. A companion draft computes the fixed-density boundary volume and orders1,2,3. Both interrupted audits were resumed in their existing sessions after process inspection; the proofs remain pending. The combined647-page private preview compiles, and13 selected pages have been rendered and viewed. Its reversible draft edits are recorded. Also preserved an unreviewed research note giving necessary smooth comparison tests for individual densities and a counterexample to scalar sharpness. Checkpoint30 remains the checked release and is remotely backed up at1f28e502dc5d42068b1a72a4fb4c7c012cc73ff5.
+
 ## 21 September 2026 — Checkpoint30 integration
 
 Integrated seven reviewed proof sources: continuous Bott–Chern representatives and fixed-modification current pullback; effective exceptional trace divisors and affine class differences; compact pseudoeffective cone base; the supplied vanishing-lower-mass example; its balanced metric and finite upper mass; and the equivalence between positive lower mass and universal normalized measure solvability. Updated the geometric questions and equation hypotheses, condensed the preface, retained the empty cover credit, and corrected the Siu theorem locator from the original scan.

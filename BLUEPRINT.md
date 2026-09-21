@@ -25,8 +25,9 @@ distinguish proved results, external inputs, conditional results and open proble
 
 1. Keep the checked source package and private GitHub history synchronized after significant updates.
 2. Continue chapter polishing, preserving all singularity, I-goodness, trace and Bergman topics.
-3. Investigate closed-current descent and Bott–Chern cones on the elliptic lower-mass example; keep proposed deductions outside the checked book until their proofs are reviewed.
-4. Seek geometric sufficient conditions for positive lower mass and criteria for individual measures when it vanishes. The full Gauduchon determinant endpoint fails on the example; fixed-density maximizers remain a separate family.
+3. A complete draft now treats closed-current descent and Bott–Chern cones on the elliptic lower-mass example, with potential/envelope and selected-section descent. A companion computes the exact boundary volume and its orders. Both bounded audits and the combined private preview must pass before integration.
+4. A research-only note tests individual L1 densities against smooth normalizers. It gives a necessary obstruction and a bounded Kähler example showing that the test need not recover the equation scalar; no sufficiency is asserted.
+5. Seek geometric sufficient conditions for positive lower mass and criteria for individual measures when it vanishes. The full Gauduchon determinant endpoint fails on the example; fixed-density maximizers remain a separate family.
 
 ## Longer research directions
 
