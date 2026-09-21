@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint55: geometry and appendix review
+
+Completed the second focused reading of Chapters29–32 and the appendix, including every nested input. Clarified the comparison of closed currents through potentials, removed repeated proof introductions, made exponential normalization explicit in the selection question, corrected equation references, and made exponential constants roman. Eight book files change; existing mathematical hypotheses and source labels are preserved. The687-page build and33 affected/adjacent pages were checked. No new theorem or independent verifier run is claimed.
+
 ## 22 September2026 — Checkpoint54: residual rigidity and Gauduchon/Bergman review
 
 Integrated the audited strengthening of the finite-divisor equation: under smooth positive residual and density hypotheses, threshold subsolutions have the unique smooth remainder without assuming it bounded. Ordinary-type solutions also have the same scalar. Completed the second focused reading of Chapters27–28 and all nested inputs, preserved the distinctions between lower/upper mass and selected/norm weights, and polished notation and display placement. Fourteen book files change. The687-page build and35 affected/adjacent pages were checked; degenerate residual backgrounds and pullback densities remain open here.

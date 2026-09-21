@@ -124,6 +124,8 @@ for name in (
     "research/editorial/section_divisorial_residual_rigidity.tex",
     "research/editorial/divisorial-rigidity-map.json",
     "research/editorial/divisorial-rigidity-review.md",
+    "research/editorial/geometry-review-map.json",
+    "research/editorial/geometry-review-review.md",
     "research/editorial/section_semipositive_trace_rate.tex",
     "research/editorial/current-rate-and-approximation-map.json",
     "research/editorial/current-rate-and-approximation-review.md",
