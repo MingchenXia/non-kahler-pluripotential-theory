@@ -114,6 +114,9 @@ for name in (
     "research/editorial/smooth-dual-regularity-review.md",
     "research/editorial/section_smooth_dual_regularity_v2.tex",
     "research/editorial/section_smooth_dual_sharpness.tex",
+    "research/editorial/section_semipositive_dual_attainment.tex",
+    "research/editorial/semipositive-dual-attainment-map.json",
+    "research/editorial/semipositive-dual-attainment-review.md",
     "research/editorial/equation-exposition-map.json",
     "research/editorial/equation-exposition-review.md",
     "research/editorial/smooth-dual-sharpness-map.json",
@@ -283,6 +286,8 @@ Checkpoint45 proves smooth exact threshold equations under smooth strictly posit
 Checkpoint46 adds the checked uniform exponential-limit consequence, closed-background characterization and nonclosed zero-density construction under smooth dual attainment. The book has679 pages. General singular-current regularity, vanishing-lower-mass individual equations and degenerate-density selection remain open outside the stated regimes.
 
 Checkpoint47 revises Chapter13 proof economy and the distinction between scalar, measure and potential limits. It has679 pages and a focused root review, with no new independent theorem audit. The earlier proof boundaries remain.
+
+Checkpoint48 extends exact threshold equations to an assumed smooth semipositive Gauduchon maximizer positive outside a proper analytic set. Differences are divisorial, with a Bott--Chern relation and uniqueness within multiplier-ideal classes. Its bounded audit passed. The681-page build preserves the general singular-current and divisor-realization questions.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

@@ -65,3 +65,5 @@ Checkpoint45 checks the Chapter27 trace/duality interfaces and Chapter32 proof b
 Checkpoint46 checks the smooth-dual sharpness and exponential-selection consequences and updates the Chapter32 uniqueness interface and reading guide. The closedness and dimension assumptions are tested by explicit examples. The preface, conventions and Chapter1 were reread without further mathematical edits. See smooth-dual-sharpness-review.md.
 
 Checkpoint47 revisits Chapter13 exposition, direct scalar comparison, the exact uniqueness regimes and the three zero-exponent limit questions. It removes a repeated compactness argument and tightens the chapter opening and ending. See equation-exposition-review.md for exact scope; no new independent verifier run was used.
+
+Checkpoint48 integrates the smooth semipositive dual extension, with multiplier-ideal and research-program interfaces. Chapter16 main source and Chapter17 were reread; the latter required no mathematical change. See semipositive-dual-attainment-review.md for the exact support-theorem and audit scope.

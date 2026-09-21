@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint48: semipositive dual forms and singularity classes
+
+A smooth semipositive maximizing form positive outside a proper analytic set now gives a global exact threshold equation and local smoothness. Differences are divisorial with a Bott--Chern relation, giving uniqueness within each multiplier-ideal class and under independence of the divisor classes. The normal bounded audit passed and every record was read. Four book files change; Chapter16 gauge hypotheses and Chapter32 boundaries are clearer. The681-page production build and50 rendered pages were checked. General singular-current attainment and divisor realization remain separate.
+
+## 22 September2026 — Semipositive dual attainment draft
+
+Submitted a separate extension of smooth dual attainment to an analytic degeneracy set, including exact equations and divisorial differences with uniqueness in a multiplier-ideal class. It is unreviewed and outside checkpoint47 until the bounded audit and output checks pass.
+
 ## 22 September2026 — Checkpoint47: equation proofs and reading order
 
 Simplified the Lp threshold proof by direct strict domination, made the uniqueness classes explicit, and distinguished scalar, right-hand-side and potential limits throughout the Chapter13 route. Revised its opening and ending and checked the exact earlier dependencies. Four source files change, one only for pagination. The679-page build and40 rendered affected pages were checked; this is a focused root review, with no new theorem or independent verifier run.
