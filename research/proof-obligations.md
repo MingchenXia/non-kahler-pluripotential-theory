@@ -93,3 +93,10 @@ Connectedness of the positive-density region is now a proved sufficient conditio
 ## 21 September 2026 — Pending lower-mass integration
 
 Complete the independent lower-mass, universal-solvability and balanced-metric audits; read every finding. Preserve the exact distinction between arbitrary and maximizing Gauduchon tests, fixed smooth density and density infimum, normalized and exponential equations, and bounded mass and positive lower mass. Replace the obsolete universal endpoint question only when integrating the reviewed counterexample. The scalar normalization obstruction applies to all genuine potentials through strict domination, without any finite-mass restriction; check that orientation and each smaller-background premise.
+
+
+## 21 September 2026: checkpoint30 integration completed
+
+The five bounded audits for continuous closed-current pullback, exceptional trace divisors, vanishing lower mass, universal-measure solvability and the balanced quotient geometry have passed. All conditional premises among them are discharged. The seven proof sources are now in the639-page production manuscript. See `editorial/current-theory-lower-mass-review.md` and `audits/build-snapshot-30.json` for exact scope and checks. The Siu locator is corrected from the published scan independently of the audit. Historical pending entries above retain their dated meaning.
+
+The unrestricted positive-lower-mass question has a negative answer from the supplied reconstructed threefold. BMP and positive lower mass are independent, and balanced plus BMP is insufficient for the latter. Universal normalized finite non-pluripolar solvability is equivalent to positive lower mass in a Hermitian background. General individual-measure criteria at zero lower mass, unbounded exponential solvability, nonlinear volume compatibility across models, and arbitrary exact trace realization remain outside these results.

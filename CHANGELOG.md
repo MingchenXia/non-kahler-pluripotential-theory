@@ -1,5 +1,11 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint30 integration
+
+Integrated seven reviewed proof sources: continuous Bott–Chern representatives and fixed-modification current pullback; effective exceptional trace divisors and affine class differences; compact pseudoeffective cone base; the supplied vanishing-lower-mass example; its balanced metric and finite upper mass; and the equivalence between positive lower mass and universal normalized measure solvability. Updated the geometric questions and equation hypotheses, condensed the preface, retained the empty cover credit, and corrected the Siu theorem locator from the original scan.
+
+Five independent audits passed and their conditional premises are discharged. All22 book-file hashes, reversible proof edits, original references and preserved outputs were checked. The639-page production PDF matches every page of the reviewed preview;68 initial,73 revised and3 final pages were visually inspected. No build errors, undefined references or overfull boxes. A fresh source extraction rebuilt both outputs with identical page text. Final package metadata and private synchronization are recorded separately.
+
 Git history begins on 21 September 2026. Earlier checkpoints are documented below
 and in the retained audit records; they are not fabricated as earlier Git commits.
 

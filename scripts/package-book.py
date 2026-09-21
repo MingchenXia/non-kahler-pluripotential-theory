@@ -83,6 +83,19 @@ for name in (
     "research/editorial/section_hopf_point_equilibrium.tex",
     "research/editorial/build-hopf-point-plot.py",
     "research/editorial/hopf-point-plot-checks.json",
+    "research/editorial/current-theory-lower-mass-review.md",
+    "research/editorial/current-theory-lower-mass-map.json",
+    "research/editorial/trace-exceptional-author-correction.md",
+    "research/editorial/lower-mass-author-correction.md",
+    "research/editorial/section_continuous_bc_representatives.tex",
+    "research/editorial/section_trace_exceptional_divisors.tex",
+    "research/editorial/section_trace_exceptional_divisors_v2.tex",
+    "research/editorial/section_affine_trace_difference.tex",
+    "research/editorial/section_bott_chern_cone_compactness.tex",
+    "research/editorial/section_vanishing_lower_mass.tex",
+    "research/editorial/section_vanishing_lower_mass_v2.tex",
+    "research/editorial/section_lower_mass_solvability.tex",
+    "research/editorial/section_lower_mass_metric_geometry.tex",
     "research/editorial/curve-fibration-traces-review.md",
     "research/editorial/curve-fibration-traces-map.json",
     "research/editorial/section_curve_fibration_traces.tex",
@@ -167,6 +180,8 @@ full kernel. The explicitly constructed Calabi–Eckmann example has zero cone b
 no strongly Gauduchon or balanced metric, exhibiting the limitation of this
 invariant. These results require no BMP or LCK assumption. Transverse Vaisman
 existence remains an explicit external input.
+
+Checkpoint30 adds continuous Bott–Chern representatives and exceptional trace divisors in Sections24.8–24.9, an affine residual-class identity in Section25.2, and the compact cone base in Proposition29.1.2. Section27.15 reconstructs the elliptic threefold with zero lower mass but a balanced metric of finite upper mass. Section13.22 proves the equivalence between positive lower mass and universal normalized non-pluripolar solvability, without BMP; it constructs obstructing positive L1 densities when lower mass vanishes. Fixed-density volumes, arbitrary individual measures and unbounded exponential equations remain distinct. All five bounded audits passed, and the exact integration map records editorial changes.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

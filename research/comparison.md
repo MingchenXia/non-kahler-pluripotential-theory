@@ -39,3 +39,10 @@ Chapters 29–31 add ordinary closed Bott–Chern loci, the full supplied Nakama
 ## 21 September 2026 — Lower-mass extension under review
 
 The current private preview adds the geometric failure of positive lower mass and a proposed exact characterization by solvability for every finite non-pluripolar measure. The example metric has a proposed balanced/finite-upper-mass calculation, so this direction must retain both mass properties separately. This expands the equation and non-Kähler geometry comparison without removing singularity types, I-goodness, trace compatibility or Bergman asymptotics from the original scope. These are pending drafts, not changes to the last checked release.
+
+
+## 21 September 2026: checkpoint30 integration completed
+
+The five bounded audits for continuous closed-current pullback, exceptional trace divisors, vanishing lower mass, universal-measure solvability and the balanced quotient geometry have passed. All conditional premises among them are discharged. The seven proof sources are now in the639-page production manuscript. See `editorial/current-theory-lower-mass-review.md` and `audits/build-snapshot-30.json` for exact scope and checks. The Siu locator is corrected from the published scan independently of the audit. Historical pending entries above retain their dated meaning.
+
+The unrestricted positive-lower-mass question has a negative answer from the supplied reconstructed threefold. BMP and positive lower mass are independent, and balanced plus BMP is insufficient for the latter. Universal normalized finite non-pluripolar solvability is equivalent to positive lower mass in a Hermitian background. General individual-measure criteria at zero lower mass, unbounded exponential solvability, nonlinear volume compatibility across models, and arbitrary exact trace realization remain outside these results.

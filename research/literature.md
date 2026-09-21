@@ -257,3 +257,10 @@ Rethlas runs `curve_fibration_traces_01` and `divisorial_trace_types_01` both co
 ## 21 September 2026 — Lower mass and the Siu locator
 
 The supplied eight-page LowerMass26 manuscript has been read in full and reconstructed with ddc=i/(2pi), instead of its i/pi convention. Its existence theorem and the new dimension/product consequences remain under independent review. Root checked the original Siu author-hosted published scan at printed pp.53–54: the analytic-level-set assertion is the Main Theorem, not Theorem I. The correction is preserved separately. Draft consequences for universal-measure solvability and for balanced geometry use existing book inputs and have separate audits; no novelty claim is made.
+
+
+## 21 September 2026: checkpoint30 integration completed
+
+The five bounded audits for continuous closed-current pullback, exceptional trace divisors, vanishing lower mass, universal-measure solvability and the balanced quotient geometry have passed. All conditional premises among them are discharged. The seven proof sources are now in the639-page production manuscript. See `editorial/current-theory-lower-mass-review.md` and `audits/build-snapshot-30.json` for exact scope and checks. The Siu locator is corrected from the published scan independently of the audit. Historical pending entries above retain their dated meaning.
+
+The unrestricted positive-lower-mass question has a negative answer from the supplied reconstructed threefold. BMP and positive lower mass are independent, and balanced plus BMP is insufficient for the latter. Universal normalized finite non-pluripolar solvability is equivalent to positive lower mass in a Hermitian background. General individual-measure criteria at zero lower mass, unbounded exponential solvability, nonlinear volume compatibility across models, and arbitrary exact trace realization remain outside these results.

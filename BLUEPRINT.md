@@ -16,39 +16,17 @@ distinguish proved results, external inputs, conditional results and open proble
 
 ## Current manuscript and proof boundary
 
-- **Checked release: checkpoint29.** The 621-page book has 32 chapters and an
-  appendix. Its source is in `book/`. Compilation and independent reconstruction
-  are recorded in `research/audits/build-snapshot-29.json` and
-  `research/audits/source-package-portability-29.json`.
-  The 21 September cover correction removes the two-line preparer credit; all
-  body pages are unchanged. Its checks are in
-  `research/audits/cover-revision-2026-09-21.json`.
-- **Pending checkpoint30:** continuous Bott–Chern representatives and corrected
-  exceptional-divisor/affine-class/compact-cone drafts have passed their bounded
-  independent audits. Their exact hypotheses and the rational analytic coefficient
-  correction are preserved. They await integration and final output inspection.
-- **New lower-mass material:** the supplied counterexample has a complete
-  reconstruction under independent review. Two additional drafts develop the
-  equivalence between positive lower mass and universal non-pluripolar solvability,
-  and the quotient metric's balanced property, finite upper mass and geometric
-  obstructions. The latter deductions have their own bounded reviews. None has
-  replaced the checked release. Correct the original Siu locator to Main Theorem,
-  p.53, using the verified published scan; preserve the original submission.
+- **Checked release: checkpoint30.** 639 pages, 32 chapters and an appendix. The integrated manuscript and inspected PDF include continuous Bott–Chern representatives, exceptional trace divisors, the compact pseudoeffective cone base, the vanishing-lower-mass threefold, its balanced geometry, and the universal-measure solvability criterion. Five bounded audits passed; their dependencies are discharged. A fresh source extraction reconstructed both outputs with identical page text.
+- Upper bounded mass and positive lower mass are independent. A balanced metric with finite upper mass can have zero lower mass. General measure existence therefore cannot omit all lower-mass or right-hand-side restrictions.
+- Positive lower mass characterizes solvability for every finite non-pluripolar measure in a Hermitian background, without BMP. Individual L1 data and unbounded exponential equations require separate analysis. Fixed-density volume must remain distinct from its density infimum.
+- Linear current continuity and exceptional-divisor formulas do not imply nonlinear volume continuity or full higher-dimensional trace realization.
 
 ## Immediate work
 
-1. Complete and read the three lower-mass audits. Verify the measure-diagonal
-   argument for arbitrary singular candidates, every normalization in the geometric
-   example, and the balanced/upper-mass calculation. Keep conditional dependencies
-   explicit until each premise is reviewed.
-2. Replace the obsolete universal positive-lower-volume question by questions
-   about sufficient geometry, admissible individual measures, and unbounded
-   exponential equations. Keep fixed-density volume separate from its density
-   infimum. The preliminary preview already contains the corresponding interfaces.
-3. Inspect the combined preview, integrate reviewed statements, compile and
-   reconstruct the source archive before declaring checkpoint30 checked.
-4. Continue the chapter-by-chapter proof and exposition pass with the entire SGPT
-   singularity, I-goodness, trace and Bergman scope retained.
+1. Keep the checked source package and private GitHub history synchronized after significant updates.
+2. Continue chapter polishing, preserving all singularity, I-goodness, trace and Bergman topics.
+3. Investigate closed-current descent and Bott–Chern cones on the elliptic lower-mass example; keep proposed deductions outside the checked book until their proofs are reviewed.
+4. Seek geometric sufficient conditions for positive lower mass and criteria for individual measures when it vanishes. The full Gauduchon determinant endpoint fails on the example; fixed-density maximizers remain a separate family.
 
 ## Longer research directions
 

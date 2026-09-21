@@ -10,6 +10,14 @@ The book distinguishes a closed background on a compact complex manifold from a 
 
 **For the SGPT singularity program:** read Chapters 12 and 16–28, then Chapters 29–32 for closed singular loci, the Nakamaye proof, LCK geometry and remaining questions. Ordinary type, envelope equivalence and multiplier-ideal equivalence are kept distinct. Curve traces, explicit fibrations and finite divisorial systems provide test cases; their identities are not asserted in every dimension or background.
 
+## Lower mass, equations and the elliptic example
+
+Read Section13.22 for the exact equivalence between positive lower mass and normalized solvability for every finite non-pluripolar measure. The diagonal-density proof allows arbitrary singular candidates and infinite mass. Its counterexample density has a positive lower bound but belongs to no Lp,p>1; obstructing densities are L1 dense. Smooth and Lp existence, and unbounded exponential solvability, are separate issues.
+
+Section27.15 reconstructs the elliptic threefold with zero lower mass for every Hermitian metric. Its explicit balanced metric has finite upper mass24pi and a vertical Dirichlet formula. The smooth positive ddc-exact(2,2)-form excludes pluriclosed metrics and closed Kähler currents. Compare with the Hopf example to see the independence of the two mass properties. Section32.5 replaces the former universal-positivity problem by sufficient-geometry and fixed-density questions.
+
+For linear geometry, read Sections24.8–24.9, Corollary25.2.1 and Proposition29.1.2. Continuous Gauduchon-normalized representatives control pullback on a fixed modification. Finite exceptional divisors describe the exact change of canonical divisorial ordinary types, including a cocycle and total-variation approximation. The compact cone base is linear; none of these statements asserts nonlinear mass continuity.
+
 ## Analytic approximation and I-goodness
 
 Read Section16.5 for the elementary ideal metric and its curve completion, then Section16.6 for what dyadic approximation preserves. Local analytic domination and the discrepancy estimate give monotone ordinary-envelope convergence to Q without BMP or bigness. The equality P=Q is equivalent to convergence of these envelopes to P. Rational scaling in a Hermitian background gives analytic density in the entire ideal metric, so that density alone is not the source characterization. Chapter19 states the exact global regularization input; Section16.7 and Section32.9 distinguish this proved criterion from a convergence theory for arbitrary ordinary types.

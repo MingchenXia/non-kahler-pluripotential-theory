@@ -1,0 +1,81 @@
+\section{Lower mass and solvability for all measures}
+\label{sec:lower-mass-solvability}
+
+For a Hermitian background, positive lower mass has an exact interpretation in terms of equations. The distinction between a fixed smooth density and all non-pluripolar measures is essential. We first record a consequence of strict domination that applies even to potentials of infinite extended mass.
+
+\begin{lemma}\label{lem:smooth-normalizer-subsolution-bound}
+Let $h$ be a Hermitian form and let $\nu$ be a smooth strictly positive probability measure. Write
+\[
+ (h+\ddc v)^n=c_h(\nu)\nu,\qquad h+\ddc v>0,
+\]
+for its smooth normalized equation. If $u\in\PSH(X,h)$ and $a>0$ satisfy
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\nu,
+\]
+then $a\leq c_h(\nu)$.
+\end{lemma}
+\begin{proof}
+Suppose $a>c_h(\nu)$, and set $r=c_h(\nu)/a<1$. For every real $A$, the smooth potential $v+A$ admits a genuine envelope in background $h/2$: a sufficiently small constant lies below it. Also $u\preceq v+A$, since $u$ is bounded above and $v+A$ is bounded below on compact $X$. The measure inequality gives
+\[
+ \mathrm{MA}_h(v+A)=c_h(\nu)\nu
+       \leq r\,\mathrm{MA}^{\mathrm{ext}}_h(u).
+\]
+Apply \cref{thm:singular-strict-domination}, with first potential $v+A$ and second potential $u$. It yields $v+A\geq u$ for every $A$. Letting $A\to-\infty$ at a point where $u$ is finite is a contradiction. No total mass of $u$ was used.
+\end{proof}
+
+\begin{theorem}\label{thm:lower-mass-obstructing-measure}
+Suppose $v_-(h)=0$ for a Hermitian form $h$. Fix a smooth positive probability measure $\mathrm{d}V$. There is a probability measure $\mu=f\,\mathrm{d}V$ with $f\in L^1(\mathrm{d}V)$ and $f\geq m>0$ almost everywhere such that no $u\in\PSH(X,h)$ and $a>0$ satisfy
+\begin{equation}\label{eq:lower-mass-impossible-subsolution}
+ \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\mu.
+\end{equation}
+In particular, the equation $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$ has no solution for any $c>0$, even without a prescribed singularity type or a finite-mass requirement on the candidate potential.
+\end{theorem}
+\begin{proof}
+By \cref{thm:gaud-volume-mass-extrema}, there are smooth strictly positive probability measures $\nu_j=f_j\,\mathrm{d}V$ such that
+\[
+ c_h(\nu_j)\leq 2^{-2j}\qquad(j\geq1).
+\]
+Set
+\[
+ \mu=\sum_{j=1}^{\infty}2^{-j}\nu_j,
+ \qquad f=\sum_{j=1}^{\infty}2^{-j}f_j.
+\]
+Monotone convergence gives $\int_Xf\,\mathrm{d}V=1$, so $f\in L^1$. Also $f\geq\tfrac12\min_X f_1=:m>0$ almost everywhere. Absolute continuity with respect to smooth volume makes $\mu$ non-pluripolar.
+
+If \eqref{eq:lower-mass-impossible-subsolution} held, then for every $j$
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a2^{-j}\nu_j.
+\]
+The preceding lemma would imply $a2^{-j}\leq c_h(\nu_j)\leq2^{-2j}$. Thus $a\leq2^{-j}$ for all $j$, contradicting $a>0$.
+\end{proof}
+
+\begin{corollary}\label{cor:positive-lower-mass-solvability}
+For a Hermitian form $h$, the following conditions are equivalent:
+\begin{enumerate}
+\item $v_-(h)>0$.
+\item Every nonzero finite positive non-pluripolar measure $\mu$ admits $c>0$ and $u\in\mathcal E_{\mathrm{env}}(X,h,0)$ such that
+$\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$.
+\item For every probability density $f\in L^1(\mathrm{d}V)$ bounded below by a positive constant, there are $u\in\PSH(X,h)$ and $a>0$ such that
+$\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$.
+\end{enumerate}
+Here $\mathrm{d}V$ is any fixed smooth positive probability measure. No upper mass bound is assumed.
+\end{corollary}
+\begin{proof}
+For the reference zero, $P_h[0]=0$ and $P_{\varepsilon h}(0)=0$ for every $0<\varepsilon<1$. The form $h$ is semipositive and big. Thus (1) implies (2) by \cref{thm:als-general-measure}. Condition (2) implies (3), since an absolutely continuous measure is non-pluripolar. The preceding theorem proves the contrapositive of (3) implies (1).
+\end{proof}
+
+\begin{corollary}\label{cor:lower-mass-lone-instability}
+Assume $v_-(h)=0$, and let $\mu=f\,\mathrm{d}V$ be the measure constructed above. Then $f\notin L^p(\mathrm{d}V)$ for every $p>1$. Moreover, for every nonnegative probability density $g\in L^1(\mathrm{d}V)$ and every $0<t<1$, the probability density
+\[
+ g_t=(1-t)g+tf
+\]
+admits no positive scaled subsolution as in \eqref{eq:lower-mass-impossible-subsolution}. Nevertheless $\|g_t-g\|_{L^1}\leq2t$. In particular, densities with this obstruction are dense among probability densities in $L^1$.
+\end{corollary}
+\begin{proof}
+If $f\in L^p$ for some $p>1$, \cref{thm:kn-continuous} would give a continuous solution of $\mathrm{MA}_h(u)=cf\,\mathrm{d}V$ with $c>0$, contradicting the theorem. Since $g_t\,\mathrm{d}V\geq t\mu$, a positive scaled subsolution for $g_t\,\mathrm{d}V$ would give one for $\mu$. Finally
+$\|g_t-g\|_1=t\|f-g\|_1\leq2t$.
+\end{proof}
+
+Smooth strictly positive probability densities are also dense in $L^1$ and always admit a smooth normalized solution. Thus ordinary $L^1$ approximation alone cannot preserve solvability when the lower mass vanishes. The obstruction concerns the concentration of the density; it occurs even when that density is bounded below by a positive constant. It is realized on the compact threefold of \cref{thm:vanishing-lower-mass}.
+
+This argument does not exclude unbounded solutions of the exponential equation. If $\mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}\mu$ with $\lambda>0$, the factor $\mathrm{e}^{\lambda u}$ need not have a positive lower bound. It does exclude bounded solutions for the measure above. Determining whether the exponential equation can absorb this concentration, and characterizing individual measures that admit a normalized solution when $v_-(h)=0$, are distinct questions.
