@@ -1,5 +1,7 @@
 # Further questions after the Gauduchon threshold formula
 
+**Update, 22 September 2026:** checkpoint41 establishes the bounded-root closure/tail criterion and the compact current description on that closure. Both bounded audits passed. The earlier note is preserved as research history; exact-equation and quantitative-rate questions remain open. Further unaudited deductions are in `threshold-rate-working-note.md` and `threshold-divisorial-tests.md`.
+
 22 September 2026. Working note, not in the book; none of the proposed further implications below has been independently audited. The two checkpoint40 submissions have their own exact scopes. Preserve this separation.
 
 ## The order-continuous part of the root space

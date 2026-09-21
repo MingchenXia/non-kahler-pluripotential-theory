@@ -102,6 +102,13 @@ for name in (
     "research/editorial/chapters-30-appendix-map.json",
     "research/editorial/individual-density-map.json",
     "research/editorial/individual-stability-map.json",
+    "research/editorial/root-tail-map.json",
+    "research/editorial/root-tail-review.md",
+    "research/editorial/section_root_uniform_tails.tex",
+    "research/editorial/section_integrable_gauduchon_currents.tex",
+    "research/editorial/section_threshold_trace_saturation.tex",
+    "research/editorial/threshold-rate-working-note.md",
+    "research/editorial/threshold-divisorial-tests.md",
     "research/editorial/individual-stability-review.md",
     "research/editorial/section_individual_density_stability.tex",
     "research/editorial/section_individual_density_stability_v2.tex",
@@ -236,6 +243,8 @@ Checkpoint38 completes the first systematic root reread of all 32 chapters, ever
 Checkpoint39 adds the attained individual-L1 subsolution threshold and a counterexample to sufficiency of smooth comparison tests in Section13.23. The bounded audit passed; exact threshold equations and their singularity class remain an explicit problem in Section32.2. The follow-up topology note is unaudited and not included in the book. The compiled manuscript has653 pages.
 
 Checkpoint40 extends the exact Gauduchon formula to integrable densities, shortens the threshold topology proofs, separates the roles of upper/lower mass in the root space, and constructs greatest exponential solutions from subsolutions. Both bounded audits passed; exact zero-exponent equations and normalized-potential capacity convergence remain open. The compiled book has661 pages. The further root-space tail note is unaudited and not part of the book.
+
+Checkpoint41 identifies the bounded-root closure by uniform tails and proves integrable-current attainment, supporting-probability formulas and trace saturation at the subsolution threshold. Smooth dual attainment gives rigidity of threshold subsolutions. Both bounded audits passed; the preceding trace audit's stale dependency-status finding is preserved and resolved by run02. The compiled book has665 pages. Scalar-rate and divisorial working notes are explicitly unaudited and not book content. No exact rough equation or singular-current wedge is inferred.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

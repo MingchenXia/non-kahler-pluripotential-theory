@@ -1,0 +1,39 @@
+# Root-tail approximation, Gauduchon currents and threshold traces
+
+Integration review for checkpoint41. Both bounded reviews and the final production build and page inspection have passed. This review records a bounded mathematical scope, not whole-book certification.
+
+## Mathematical content and proof economy
+
+The addition to Section13.25 identifies the closure of bounded functions in the complete norm ||p||_Ln+rho_h(p). The signed truncation argument proves equivalence with uniform Gauduchon tails and dominated convergence in measure. Its short proof uses only the existing subcritical root estimate, order and the triangle inequality. Smooth approximation is in L^{2n}, then in the stronger root-space norm; no density statement for all of D_h is inserted. Positive lower mass recovers all of Ln. The full closure remains a separate geometric question when lower mass vanishes.
+
+The new Section27.11 extends the compact Gauduchon-current supremum to every nonnegative Ln weight, including infinity. Bounded measurable weights are reached by uniform L^q determinant estimates and L^{2n} approximation. General weights are reached by two commuting suprema. Attainment is claimed only on D_h^0, where uniform root tails give uniform convergence of the current functionals. This avoids smoothing singular Gauduchon currents or exchanging a maximum with an uncontrolled limit.
+
+The same section adapts the existing near-maximizer and supporting-probability proofs to a fixed admissible integrable density. The weights p exp(F/n)(1±epsilon H) stay in D_h^0. Two signs and equality of total masses identify the weighted-measure limit. Matrix determinant concavity can be multiplied by the unbounded root only after the determinant measures have been proved absolutely continuous; the resulting masses are finite. Taylor remainders are uniform because those masses are uniformly bounded. The proof specifies that the intermediate difference quotients concern M_f, before taking the negative logarithm. Separation then identifies every supporting probability. The density f=1 recovers the earlier zero-reference setting; no ordinary singularity class is transported to general f.
+
+The trace lemma treats genuine, potentially infinite-mass potentials with one local bounded argument. Freeze the two smooth backgrounds separately; use the local mixed inequality for bounded closed Hessians after quadratic corrections; pass first through the smooth error parameter and then through truncations. The second passage needs only convergence of linear currents. The full trace retains pole-set mass, while the lower density ignores a smooth-volume-null pole set. No undamped Monge–Ampère continuity is used.
+
+At the threshold, the difference between this trace and the Gauduchon determinant-weighted density is a positive finite measure. Its exact mass is 1-b^(1/n)D_p(T), independent of the chosen threshold subsolution. Along smooth maximizing tests, this is its total-variation norm and tends to zero. The D_h^0 condition is used only to identify the determinant-weighted limit when the currents converge. We do not define a wedge with the singular limit current.
+
+A smooth strictly positive maximizing current gives a short rigidity proof: the positive error measure vanishes, so subtracting two trace equalities yields one homogeneous scalar elliptic equation. Elliptic regularity and the maximum principle make the potentials differ by a constant. Smooth strictly positive densities supply such a maximizing current through the classical smooth equation. No smooth attainment for rough densities is inferred.
+
+## Source and dependency checks
+
+The root reread both new root/current supplements and the trace supplement, including zero weights, infinity conventions, n>=2 for the current construction, signed truncations, metric comparison and all limiting orders. The interfaces with Chapters4,13,15,27 and32 were reread. In particular, Chapter15 continues to concern prescribed ordinary types under its own hypotheses; its new paragraph only points to a different threshold functional. The exact individual L1 equation is still open in Chapter32. The first systematic root pass through all32 chapters and the appendix remains recorded separately.
+
+Dinew's local input was rechecked against the author's arXiv:0705.0974v1, Theorem1.2, PDF page2. It assumes bounded local plurisubharmonic functions and nonnegative integrable Lebesgue densities. The published metadata, Math. Z.262 (2009),1–15, DOI10.1007/s00209-008-0356-z, was rechecked at the publisher; the publisher provides subscription-only full text. The existing bibliography already states that theorem locators refer to v1, and is preserved. The citation is not an invocation of a global Hermitian mixed theorem.
+
+The audit root_tails_current_attainment_01 returned correct, with no errors or gaps and normal exit0. All seven statement records, six reference records, synthesis/final records and the empty failed-check file were read. Its exact source files are preserved.
+
+The first trace run threshold_trace_saturation_01 returned wrong solely because an early read of STATUS still described the already-completed root-tail audit as pending. It checked the trace lemma, total-variation identity and rigidity as correct and the final convergence deduction as correct conditional on that dependency. The dependency report already existed before that run; the first audit's records and submitted proof were preserved. Its five statement records, one reference record, gap and final records were read. Run02 receives the exact completed dependency report with SHA256488d1ce7c37d28a181a8cd4f6f86ad3215a9a87ad5e1c6e166d74df478b79461. The proof payload is byte-for-byte identical. Final run02 disposition is recorded below only after completion.
+
+## Editorial choices and separate research
+
+The integration keeps the supplied book template, standard result environments and upright differential d. Exponential constants in the new current section are roman. A parenthesis clarifies evaluation of the trace measure on X. The trace statement says that the limit is independent of u for a fixed current limit T, without asserting dependence on distinct T's. Complete new statements and their introductory definitions are kept together by existing Needspace conventions. Source-to-production edits are reversible and do not alter the audited mathematical scope.
+
+The quantitative scalar-rate and necessary tail-characterization deductions are in threshold-rate-working-note.md. They have not passed a bounded audit and are not book content. They explain precisely why a tail modulus tending to zero is not automatically a linear rate in the exponent, and why singular-current products or singular supporting probabilities cannot be inferred from loss of uniform integrability.
+
+## Final checks
+
+Run02 exited0 and returned correct, with no errors or gaps. All five statement records, one reference record and two synthesis/final records were read; failed_checks is empty. It confirms the exact root-tail dependency and all mathematical steps. There are139 reports:132 correct and seven preserved historical adverse reports with resolved findings. Neither these bounded reviews nor the earlier whole-book pass is whole-book certification.
+
+The production PDF has665 pages and every raw page text equals the inspected final preview. Seventeen affected or adjacent pages were rendered and read, with a further pass after statement pagination and roman-constant corrections. No errors, undefined references or overfull boxes; the existing underfull bibliography paragraph remains. The eight-file reversible map preserves each exact audited source. The standalone note, checkpoint40 and all29 original sources are unchanged. Fresh archive reconstruction and private backup are recorded separately. The divisorial-test working note is also unaudited and excluded from the book.

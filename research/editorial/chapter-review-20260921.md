@@ -51,3 +51,5 @@ Next: continue research and focused checks at the interfaces between chapters. T
 Checkpoint39 supplements this completed pass with Section13.23 and its Section32.2 interface. The individual-density result received a separate bounded audit, full root reread and visual check; see `individual-density-review.md`. The new content does not change the recorded scope of the earlier chapter reviews.
 
 Checkpoint40 adds the integrable-density Gauduchon formula, shorter threshold-topology proofs and greatest exponential equations. Chapters13,27 and32 and their examples were checked at their interfaces; two bounded audits passed. See `individual-stability-review.md` and the reversible integration map. This supplements, and does not replace, the completed whole-manuscript root pass.
+
+Checkpoint41 checks the bounded-root closure, integrable Gauduchon-current attainment and full-current threshold traces, including the interfaces with Chapters4,13,15,27 and32. Two bounded audits passed; one intervening stale-dependency report is preserved and resolved. See `root-tail-review.md` and its reversible map. This adds to the full root reread and does not certify the entire book.
