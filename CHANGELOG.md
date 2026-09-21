@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint37: Gauduchon volume, kernels and closed loci
+
+Completed the systematic root reread of Chapters 27–29 and all twenty proof inputs. Three source edits reuse the established divisorial removal, ideal-envelope order and submersion descent arguments. All concentration, degeneracy, Jacobian, jet-threshold and ideal-recovery restrictions remain explicit; no theorem hypothesis or conclusion changes. The 649-page production PDF matches the preview on every page. All nine changed pages, three adjacent pages and a contents page were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. All 29 originals, the note and checkpoint36 outputs are preserved. Fresh reconstruction and private synchronization are recorded separately. No new independent audit; Chapters 30–32, the appendix and research remain incomplete.
+
 ## 21 September 2026 — Checkpoint36: singularities, traces and modelwise geometry
 
 Completed the systematic root reread of Chapters16–26 and all associated inputs. Six source changes consolidate the local divisorial estimates for analytic restriction, additivity and self-trace; the shared comparison lemma precedes both applications. Exact fibration envelopes reuse the proved order inequality, and endpoint derivative wording is clearer. No analytic, geometric or PDE hypothesis changes. The649-page PDF matches the preview;20 initial and seven additional final pages were viewed. No errors, undefined references or overfull boxes; one existing underfull bibliography line remains. All29 originals, the note and checkpoint35 are preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book certification; Chapters27–32 and the appendix remain in this pass.

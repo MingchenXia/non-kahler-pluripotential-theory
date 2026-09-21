@@ -98,6 +98,9 @@ for name in (
     "research/editorial/section_lower_mass_metric_geometry.tex",
     "research/editorial/chapters-16-26-review.md",
     "research/editorial/chapters-16-26-map.json",
+    "research/editorial/chapters-27-29-map.json",
+    "research/editorial/chapters-27-29-review.md",
+    "research/audits/build-snapshot-37.json",
     "research/editorial/chapters-14-15-review.md",
     "research/editorial/chapters-14-15-map.json",
     "research/editorial/chapter-13-review.md",
@@ -210,6 +213,8 @@ Checkpoint34 integrates the full Chapter13 review: earlier compactness replaces 
 Checkpoint35 integrates the complete Chapters14–15 review. Repeated normalized-exponential limits share one proved lemma, big-background compactness states the exact prerequisites for proof reuse, and adjoint stability uses its earlier proposition. No existence/uniqueness assumptions are changed. Chapters1–15 have received this systematic root pass; later chapters and research remain incomplete.
 
 Checkpoint36 records the full root reread of Chapters16–26 and all their inputs. Repeated divisorial estimates for restriction, addition and self-trace share earlier proved results, and the trace comparison lemma comes before its applications. The ledger now covers Chapters1–26; the remaining chapters, appendix and research are incomplete.
+
+Checkpoint37 completes the root reread of Chapters 27–29 and all twenty inputs. Three proof simplifications reuse established divisorial, envelope and descent results without changing theorem scope. The ledger now covers Chapters 1–29; Chapters 30–32, the appendix and research remain incomplete.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
