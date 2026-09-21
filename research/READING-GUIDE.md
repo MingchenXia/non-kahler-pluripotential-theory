@@ -30,8 +30,9 @@ The root space has two distinct norm components, Ln and rho_h. Positive lower ma
 | Positive lower mass | An exact threshold equation in the minimal envelope class for every such L1 density. Section14.8.1 gives capacity convergence along each normalized L1-convergent subsequence. |
 | Uniform root tails, in dimension at least two | Attainment in the compact Gauduchon current problem. Section13.29.1 gives scalar and total-variation errors for exponential damping, without a general capacity conclusion. |
 | A smooth strictly positive current maximizer, in dimension at least two | Every genuine threshold subsolution is smooth and exact, with uniqueness modulo constants. The whole normalized positive-exponent family converges uniformly. |
+| A smooth semipositive maximizer positive off a proper analytic set, in dimension at least two | The exact threshold solution is unique modulo constants and smooth off that set. The whole normalized exponential family converges in L1 with a fixed lower barrier and b<=c_lambda<=b exp(C lambda). |
 
-The last row uses the trace equality and a local first-order regularity argument, not a mass bound. In a Kähler background, smooth strict positivity of the density is equivalent to this smooth dual attainment. A nonclosed background can behave differently: Example27.11.1 constructs, on every compact complex manifold of dimension at least two, a Hermitian background and a density vanishing on an open set with a smooth strictly positive maximizing test. Read this with the Chapter11 nonuniqueness examples; the zero set alone does not decide uniqueness.
+The smooth-attainment rows use the trace equality and a local first-order regularity argument, not a mass bound. In a Kähler background, smooth strict positivity of the density is equivalent to smooth strictly positive dual attainment. A nonclosed background can behave differently: Example27.11.1 constructs, on every compact complex manifold of dimension at least two, a Hermitian background and a density vanishing on an open set with a smooth strictly positive maximizing test. Read this with the Chapter11 nonuniqueness examples; the zero set alone does not decide uniqueness.
 
 ## Analytic approximation and I-goodness
 
@@ -81,7 +82,7 @@ Chapter 11 collects positive uniqueness results and counterexamples. Read their 
 | C2 potentials, C1,1 density | A square-root sublevel criterion; inverse square-root integrability is sufficient. |
 | Guan–Li equation background | Bounded uniqueness for nonzero nonnegative Lp density, p > 1. |
 | Genuine threshold subsolutions, dimension at least two | A smooth strictly positive Gauduchon current maximizer forces smoothness and uniqueness modulo constants; see Section27.11.3. |
-| Genuine threshold subsolutions, dimension at least two, smooth semipositive maximizer positive off a proper analytic set | Section27.11.4 gives the exact equation, smoothness off that set and uniqueness modulo constants for all threshold subsolutions. The proof uses maxima, the current support theorem and Gauduchon Stokes. |
+| Genuine threshold subsolutions, dimension at least two, smooth semipositive maximizer positive off a proper analytic set | Section27.11.4 gives the exact equation, smoothness off that set and uniqueness modulo constants for all threshold subsolutions. The proof uses maxima, the current support theorem and Gauduchon Stokes. Sections27.11.5–27.11.6 give the normalized exponential L1 limit and independence of positive pole-divisor classes. |
 
 Smooth densities with infinite-order or exactly quadratic zeros on two real hypersurfaces admit uncountably many normalized smooth solutions. A further construction prescribes a real analytic density with two distinct smooth solutions in every dimension at least three. It proves sharpness of the inverse-power threshold; its positive-density region has three components.
 

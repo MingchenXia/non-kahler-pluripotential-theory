@@ -69,3 +69,5 @@ Checkpoint47 revisits Chapter13 exposition, direct scalar comparison, the exact 
 Checkpoint48 integrates the smooth semipositive dual extension, with multiplier-ideal and research-program interfaces. Chapter16 main source and Chapter17 were reread; the latter required no mathematical change. See semipositive-dual-attainment-review.md for the exact support-theorem and audit scope.
 
 Checkpoint49 shortens and strengthens the newly added Section27.11.4. The exact unbounded ordered-contact input was reread. The maximum and Gauduchon-Stokes proof removes the ideal-class and class-independence conditions; the resulting Chapter16/32 interfaces were simplified. See semipositive-dual-uniqueness-review.md.
+
+Checkpoint50 checks the exponential/divisor consequences of the semipositive dual theorem and their Chapter13/32 interfaces. The accepted divisorial-removal, linear Bott--Chern, normalized-compactness, uniform-moment and all-Hermitian trace inputs were reread. See semipositive-dual-consequences-review.md.

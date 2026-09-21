@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint50: exponential limits and positive pole divisors
+
+Under smooth semipositive dual attainment, proved whole-family normalized exponential L1 convergence, a fixed lower barrier and an O(lambda) scalar error. Proved linear independence of the positive pole-divisor Bott–Chern classes. Updated Chapter13/32 interfaces and the reading guide. Both frozen proofs passed a bounded audit; every report record was read. The683-page build and23 affected/adjacent pages were checked. Capacity convergence across the analytic degeneracy set remains unproved here.
+
+## 22 September2026 — Semipositive dual consequences under review
+
+Frozen two short follow-up proofs: independence of the positive pole-divisor classes, and normalized exponential L1 convergence with a quantitative scalar bound. Submitted them to a bounded audit. They remain outside the checked checkpoint49 manuscript; no capacity or uniform convergence across the degeneracy set is claimed.
+
 ## 22 September2026 — Checkpoint49: stronger uniqueness with a shorter proof
 
 Replaced the separate ideal-class and divisor-independence conditions by type-free uniqueness under the same smooth semipositive dual hypothesis. The proof takes a maximum, applies the support theorem and uses a positive Gauduchon pairing to kill nonpositive divisorial coefficients. Removed the now unnecessary Chapter16 bridge and updated Chapter32 and the reading guide. The separate audit passed; every record was read. The681-page production build and21 rendered pages were checked. The exploratory polytope draft is retained outside the book as superseded research history.
