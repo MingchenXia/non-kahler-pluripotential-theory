@@ -1,0 +1,75 @@
+Run_id: exponential_tail_modulus_01
+
+Statement: Check the following quantitative root-tail estimate for exponential damping, its consequences for the greatest-solution scalar and total-variation limits, and the separate linear bound for an L^r density root with r>n. No BMP or positive lower mass is imposed. The tail-infimum modulus itself is NOT claimed linear under L^r: the proof supplies a potentially sharper replacement. No capacity convergence, exact equation when lower mass vanishes, or potential uniqueness is inferred.
+
+All dependencies are existing internal results in /Users/mingchen/Non-Kahler/book/author. section_individual_density_stability.tex defines D_h with norm ||.||_Ln+rho_h and proves solidity/triangle/completeness; section_root_uniform_tails.tex gives the D_h^0 tail criterion and eq:root-subcritical-bound for every finite exponent r>n. chapter_compactness.tex lem:uniform-exponential gives all finite moments uniformly for normalized h-psh potentials (locate its exact context if nested). section_individual_exponential_equations.tex cor:individual-positive-threshold-exponential defines u_lambda, v_lambda, c_lambda and proves b<=c_lambda<=b_h(exp(lambda v_lambda)f). The exact integrable Gauduchon formula identifies b_h(p^n)=rho_h(p)^(-n). The checked production book is checkpoint43,671 pages. The new proposal is research-only and not in that book. Its proof is an internal synthesis; no novelty claim is made. Preserve all earlier sources, reports and verifier memory; this is a new bounded audit.
+
+Check the quantifiers in the uniform estimate, all products' membership in D_h, the dependence of constants, the positivity of the root denominator, both signs of the total-variation decomposition and the Holder exponents. In particular retain the Ln summand of the norm: rho_h alone need not control Ln outside bounded upper mass. For the final paragraph compare section_relative_compactness.tex thm:common-barrier-criterion / prop:lower-barrier-criterion with the positive-lower-mass hypothesis of section_dominated_relative_compactness.tex. These assumptions must not be discarded.
+
+Proof:
+
+\subsection{An error bound for the scalar limit}
+
+The bounded-root approximation gives a quantitative form of the preceding scalar limit. The estimate is uniform over normalized potentials, although the modulus depends on the density root. Keep $h$ Hermitian and $\mathrm{d}V$ a smooth probability volume.
+
+\begin{proposition}\label{prop:exponential-root-tail-modulus}
+Let $0\leq p\in\mathcal D_h^0$ be nonzero, put $f=p^n$, $R=\rho_h(p)$ and $b=R^{-n}$. There is a constant $C_h$ such that the function
+\[
+ \eta_p(\lambda)=\inf_{K>0}
+ \left(\|p\mathbf1_{\{p>K\}}\|_{\mathcal D_h}+C_hK\lambda\right)
+\]
+tends to zero as $\lambda\downarrow0$ and satisfies
+\begin{equation}\label{eq:uniform-root-damping}
+ \big\|p(1-\mathrm{e}^{\lambda v/n})\big\|_{\mathcal D_h}
+ \leq\eta_p(\lambda)
+ \qquad\bigl(v\in\PSH(X,h),\ \sup_Xv=0\bigr).
+\end{equation}
+For the greatest exponential solution and the normalizations of \cref{cor:individual-positive-threshold-exponential}, if $\eta_p(\lambda)<R$, then
+\[
+ b\leq c_\lambda\leq\bigl(R-\eta_p(\lambda)\bigr)^{-n}
+\]
+and
+\begin{align*}
+ \big\|\mathrm{MA}^{\mathrm{ext}}_h(v_\lambda)
+              -bf\,\mathrm{d}V\big\|_{\mathrm{TV}}
+ &\leq(c_\lambda-b)\|p\|_{L^n}^{n}
+       +nb\|p\|_{L^n}^{n-1}\eta_p(\lambda).
+\end{align*}
+If $p\in L^r$ for some finite $r>n$, the same bounds hold with $\eta_p(\lambda)$ replaced by $C_{h,r}\|p\|_{L^r}\lambda$. In particular the scalar and total-variation errors are $O(\lambda)$ for each such fixed density.
+\end{proposition}
+\begin{proof}
+By \cref{lem:uniform-exponential}, normalized $h$-plurisubharmonic functions have uniformly bounded norms in every finite $L^s$. Equation~\eqref{eq:root-subcritical-bound}, with $s=2n$, therefore gives a uniform bound for $\|v\|_{\mathcal D_h}$. On $\{p\leq K\}$ use
+\[
+ 0\leq p(1-\mathrm{e}^{\lambda v/n})
+     \leq K\lambda(-v)/n;
+\]
+on its complement use the upper bound $p$. Solidity and the triangle inequality give \eqref{eq:uniform-root-damping} for a fixed constant $C_h$, after taking the infimum over $K$. The root-tail criterion and the $L^n$ tail estimate make the first term tend to zero as $K\to\infty$. Choose $K$ first and then let $\lambda\downarrow0$ to obtain $\eta_p(\lambda)\to0$.
+
+Set $q_\lambda=p\mathrm{e}^{\lambda v_\lambda/n}$, so that $q_\lambda^n=g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$. The triangle inequality gives
+\[
+ R-\eta_p(\lambda)\leq\rho_h(q_\lambda)\leq R.
+\]
+The previously proved inequalities $b\leq c_\lambda\leq b_h(g_\lambda)=\rho_h(q_\lambda)^{-n}$ give the scalar bound. Since $0\leq q_\lambda\leq p$, the elementary factorization of $p^n-q_\lambda^n$ and H\"older's inequality imply
+\[
+ \|f-g_\lambda\|_{L^1}
+ \leq n\|p\|_{L^n}^{n-1}\|p-q_\lambda\|_{L^n}
+ \leq n\|p\|_{L^n}^{n-1}\eta_p(\lambda).
+\]
+The identity $c_\lambda g_\lambda-bf=(c_\lambda-b)g_\lambda-b(f-g_\lambda)$, together with $\|g_\lambda\|_{L^1}\leq\|f\|_{L^1}$, proves the total-variation bound.
+
+Finally suppose $p\in L^r$ with $n<r<+\infty$, and choose $n<s<r$. By the same subcritical estimate and H\"older,
+\[
+ \|p(-v)\|_{\mathcal D_h}
+ \leq C_s\|p(-v)\|_{L^s}
+ \leq C_s\|p\|_{L^r}\|v\|_{L^{rs/(r-s)}}
+ \leq C_{h,r}\|p\|_{L^r}.
+\]
+Thus the bound $1-\mathrm{e}^{\lambda v/n}\leq\lambda(-v)/n$ gives the asserted linear replacement in \eqref{eq:uniform-root-damping}. Repeat the two estimates with this replacement. For small $\lambda$, the function $t\mapsto(R-t)^{-n}$ has bounded derivative on $0\leq t\leq R/2$, proving the stated error orders.
+\end{proof}
+
+The general modulus tends to zero but has not been shown to be $O(\lambda)$. In particular,
+\[
+ 0\leq\lambda^{-1}\log(c_\lambda/b)
+ \leq-\frac n\lambda\log\bigl(1-\eta_p(\lambda)/R\bigr)
+\]
+does not provide a uniform bound from root tails alone. Even when a uniform lower barrier is obtained, a capacity argument must check the singularity-type or lower-mass hypotheses of its continuity theorem. The proposition estimates scalars and measures; it does not supply exact threshold existence when lower mass vanishes.

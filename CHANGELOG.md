@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint44: a quantitative scalar limit
+
+Added the uniform full-root-norm damping estimate and its scalar and total-variation error bounds. A separate Holder argument supplies linear errors for finite Lr roots with r>n. No BMP, positive lower mass or new capacity conclusion is used. The bounded audit passed; all five statement and three reference records were read. The673-page book matches the inspected preview, with ten rendered pages and no errors, undefined references or overfull boxes. Original sources, checkpoint43 and the standalone note are preserved. A separate smooth-dual regularity proposal is saved explicitly as unreviewed research.
+
+## 22 September2026 — Quantitative scalar limit under review
+
+Submitted the research-only exponential-tail-modulus supplement for bounded review. It keeps the Ln summand of the root norm to control total-variation error even when upper mass is infinite, and separates the tail modulus from the sharper linear Lr estimate. It does not infer capacity convergence or an exact equation with zero lower mass. The checked production book remains checkpoint43.
+
 ## 22 September2026 — Checkpoint43: exact threshold under positive lower mass
 
 Connected the Chapter14 finite-measure comparison with the global subsolution threshold: every nonzero nonnegative L1 density has an envelope-class exact solution at b_h(f) under positive lower mass, without BMP. Reused upward stability and dominated continuity to identify capacity limits of normalized greatest exponential solutions along every L1-convergent subsequence. Clarified that the general unresolved regime has vanishing lower mass. Added a five-line proof forcing zero variational volume for nef divisors present at the threshold. The bounded audit passed; all seven statement and three reference records were read. The671-page book matches the inspected preview; thirteen affected/adjacent pages, references, transitions and statement pagination were checked. No errors, undefined references or overfull boxes. Original sources, the standalone note and checkpoint42 are preserved. No uniqueness of normalized zero-exponent potentials or full divisor realization theorem is asserted.

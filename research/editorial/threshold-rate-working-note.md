@@ -1,5 +1,7 @@
 # Quantitative questions after the root-tail construction
 
+**Update, checkpoint44:** the scalar-rate argument is now written and passed exponential_tail_modulus_01. Section13.29.1 uses the full D_h norm to include total-variation error and gives the higher-Lr linear bound separately. The earlier note remains research history; smooth-dual regularity is a new unreviewed follow-up.
+
 **Update, 22 September2026:** The continuity characterization is now proved and audited in checkpoint42, Section27.11.1. The quantitative scalar-rate proposal below remains unaudited.
 
 22 September 2026. Research-only deductions, not submitted to either bounded audit for the root-tail/current-attainment or trace-saturation supplements. Do not present these as checked book results.
