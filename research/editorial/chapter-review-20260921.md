@@ -67,3 +67,5 @@ Checkpoint46 checks the smooth-dual sharpness and exponential-selection conseque
 Checkpoint47 revisits Chapter13 exposition, direct scalar comparison, the exact uniqueness regimes and the three zero-exponent limit questions. It removes a repeated compactness argument and tightens the chapter opening and ending. See equation-exposition-review.md for exact scope; no new independent verifier run was used.
 
 Checkpoint48 integrates the smooth semipositive dual extension, with multiplier-ideal and research-program interfaces. Chapter16 main source and Chapter17 were reread; the latter required no mathematical change. See semipositive-dual-attainment-review.md for the exact support-theorem and audit scope.
+
+Checkpoint49 shortens and strengthens the newly added Section27.11.4. The exact unbounded ordered-contact input was reread. The maximum and Gauduchon-Stokes proof removes the ideal-class and class-independence conditions; the resulting Chapter16/32 interfaces were simplified. See semipositive-dual-uniqueness-review.md.

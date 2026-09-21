@@ -1,0 +1,9 @@
+# Maximum argument after semipositive dual attainment
+
+Checkpoint48 proved exactness and divisorial differences, with sufficient hypotheses for uniqueness. The follow-up v2 source proposes uniqueness without prescribing the singularity type. It applies ordered contact to w=max(u,v), uses the already established common current off the analytic set, and applies the support theorem to ddc(w-u) and ddc(w-v). The divisorial coefficients are nonpositive because w dominates each input. A strictly positive Gauduchon pairing of this exact current is zero, so all coefficients vanish. This removes the separate multiplier-ideal and divisor-class independence assumptions and shortens the proof. It is submitted separately and is not part of the checked checkpoint48 release.
+
+An exploratory polytope parameterization was written before noticing this maximum argument. It is preserved as threshold-solution-polytope-draft.tex, unaudited and not integrated. If the maximum argument passes, that parameter set can only be a singleton in this regime; a nontrivial family would contradict closure of threshold subsolutions under maxima. The earlier general singular-current/divisor-realization questions remain open. No rationality or novelty claim is made.
+
+The exact extended ordered-contact proposition was reread, including finite-level passage for arbitrary smooth backgrounds. Its hypotheses allow the unbounded threshold potentials. The support-current coefficients use only ordinary Lelong monotonicity, not the valuative multiplier-ideal characterization. Both q=u and q=v are needed to conclude equality up to constants. No nonlinear limit, mass property, global regularity across the analytic set, or exponential convergence is used.
+
+Update: the separate audit passed and the stronger v2 is integrated in checkpoint49. Its exact review is in semipositive-dual-uniqueness-review.md. The earlier draft status above records the pre-audit state.

@@ -81,7 +81,7 @@ Chapter 11 collects positive uniqueness results and counterexamples. Read their 
 | C2 potentials, C1,1 density | A square-root sublevel criterion; inverse square-root integrability is sufficient. |
 | Guan–Li equation background | Bounded uniqueness for nonzero nonnegative Lp density, p > 1. |
 | Genuine threshold subsolutions, dimension at least two | A smooth strictly positive Gauduchon current maximizer forces smoothness and uniqueness modulo constants; see Section27.11.3. |
-| Genuine threshold subsolutions, dimension at least two, smooth semipositive maximizer positive off a proper analytic set | Section27.11.4 gives the exact equation, smoothness off that set, and a divisorial Bott--Chern formula for differences. Uniqueness holds within an ideal class, or for independent divisor classes, in particular in codimension at least two. |
+| Genuine threshold subsolutions, dimension at least two, smooth semipositive maximizer positive off a proper analytic set | Section27.11.4 gives the exact equation, smoothness off that set and uniqueness modulo constants for all threshold subsolutions. The proof uses maxima, the current support theorem and Gauduchon Stokes. |
 
 Smooth densities with infinite-order or exactly quadratic zeros on two real hypersurfaces admit uncountably many normalized smooth solutions. A further construction prescribes a real analytic density with two distinct smooth solutions in every dimension at least three. It proves sharpness of the inverse-power threshold; its positive-density region has three components.
 

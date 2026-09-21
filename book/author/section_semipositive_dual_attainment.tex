@@ -1,6 +1,6 @@
 \subsection{A smooth maximizing form with an analytic degeneracy set}
 
-Strict positivity of a smooth maximizing form can be weakened if its degeneracy is confined to a proper analytic subset. The proof is local away from that subset. The possible ambiguity of the potential is then divisorial.
+Strict positivity of a smooth maximizing form can be weakened if its degeneracy is confined to a proper analytic subset. The proof is local away from that subset. A maximum argument and a Gauduchon integral then give uniqueness without prescribing a singularity type.
 
 \begin{theorem}\label{thm:semipositive-dual-exact-equation}
 Let $\omega$ be Hermitian on a connected compact complex manifold of dimension $n\geq2$, let $0\leq f\in L^1(\mathrm{d}V)$ be nonzero, and assume $b=b_\omega(f)>0$. Suppose $D_{f^{1/n}}$ has a smooth semipositive maximizer $T\in\mathscr G_\omega$ which is strictly positive on $X\setminus Z$, where $Z$ is a proper analytic subset. Then every threshold subsolution is smooth on $X\setminus Z$ and satisfies
@@ -9,13 +9,7 @@ Let $\omega$ be Hermitian on a connected compact complex manifold of dimension $
 \]
 on $X$. Such a solution exists and has finite mass. The function $f^{1/n}$ has a smooth nonnegative representative on $X\setminus Z$.
 
-If $u,v$ are threshold subsolutions and $Z_1,\ldots,Z_m$ are the prime divisorial components of $Z$, there are real numbers $c_j$ such that
-\begin{equation}\label{eq:semipositive-dual-divisorial-difference}
- \ddc(u-v)=\sum_{j=1}^m c_j[Z_j],\qquad
- \sum_{j=1}^m c_j\{Z_j\}=0
-       \quad\text{in }H^{1,1}_{\mathrm{BC}}(X,\mathbb R).
-\end{equation}
-Consequently threshold solutions are unique modulo constants within each multiplier-ideal equivalence class, hence within each ordinary singularity type. They are unique modulo constants without a prescribed type if the classes $\{Z_j\}$ are linearly independent. In particular this holds when $Z$ has codimension at least two.
+All threshold subsolutions differ by constants.
 \end{theorem}
 \begin{proof}
 Put $p=f^{1/n}$ and $A=\omega+\ddc u$, where $u$ is any threshold subsolution. Existence of at least one such $u$ is \cref{thm:individual-density-subsolution}. Fix a smooth strictly positive $T_0\in\mathscr G_\omega$ and set $T_\varepsilon=(T+\varepsilon T_0)/(1+\varepsilon)$. Each $T_\varepsilon$ belongs to $\mathscr G_\omega$ and has a smooth Hermitian root, so \cref{prop:threshold-trace-saturation} gives
@@ -35,18 +29,28 @@ On $U=X\setminus Z$ write $T=\gamma^{n-1}$, where $\gamma$ is smooth and strictl
 
 The local regularity lemma \cref{lem:smooth-conformal-current} makes $u,a$ smooth on $U$. Taking the smooth top power proves the equation there, and $f^{1/n}=b^{-1/n}a(\gamma^n/\mathrm{d}V)^{1/n}$ is smooth and nonnegative there. Both $\mathrm{MA}^{\mathrm{ext}}_\omega(u)$ and $f\,\mathrm{d}V$ vanish on the pluripolar set $Z$. Hence the equality holds on $X$, and its total mass is $b\int_Xf\,\mathrm{d}V<+\infty$.
 
-For two threshold subsolutions the formula $\omega+\ddc u=a\gamma$ has the same right side on $U$. Thus $S=\ddc(u-v)$ is a real closed current supported on $Z$. It has order zero, being the difference of the positive currents $\omega+\ddc u$ and $\omega+\ddc v$. The classical support theorem gives $S=\sum_jc_j[Z_j]$; components of higher codimension carry no such current. This is \cite[Chapter III, Corollaries 2.11 and 2.14]{DemCADG}. To check the class relation with smooth representatives, write $[Z_j]=\beta_j+\ddc\ell_j$, using a smooth Hermitian metric on the divisor line bundle. Then
+It remains to prove uniqueness. Let $v$ be another threshold subsolution and put $w=\max(u,v)$. By \cref{prop:ordered-contact-general},
 \[
- \sum_jc_j\beta_j
-   =\ddc\bigl(u-v-\sum_jc_j\ell_j\bigr).
+ \mathrm{MA}^{\mathrm{ext}}_\omega(w)\geq
+ \mathbf1_{\{u\geq v\}}\mathrm{MA}^{\mathrm{ext}}_\omega(u)
+ +\mathbf1_{\{u<v\}}\mathrm{MA}^{\mathrm{ext}}_\omega(v)
+ \geq bf\,\mathrm{d}V.
 \]
-The left side is smooth. Taking its local trace and applying elliptic regularity makes the global $L^1$ potential on the right smooth. Hence the displayed form is $\ddc$-exact in smooth Bott--Chern cohomology, proving \eqref{eq:semipositive-dual-divisorial-difference}.
+The common pole set has zero mass for all the measures involved. Thus $w$ is also a threshold subsolution, and the preceding argument gives the same smooth current $a\gamma$ for $u,v,w$ on $U$.
 
-Near a regular point of $Z_j$ lying on no other component, choose a local defining function $z_1$. In our normalization $\ddc\log|z_1|^2=[Z_j]$, so
+For $q=u$ or $q=v$, the current $S=\ddc(w-q)$ is real, closed, of order zero and supported on $Z$. The classical support theorem, \cite[Chapter III, Corollaries 2.11 and 2.14]{DemCADG}, gives
+\begin{equation}\label{eq:semipositive-dual-divisorial-difference}
+ S=\sum_{j=1}^m c_j[Z_j],\qquad
+ c_j=\nu(w,Z_j)-\nu(q,Z_j)\leq0,
+\end{equation}
+where $Z_j$ are the prime divisorial components of $Z$. Indeed, near a generic smooth point of $Z_j$, the difference $w-q-c_j\log|z_1|^2$ is pluriharmonic, since $\ddc\log|z_1|^2=[Z_j]$ in our normalization. This identifies the coefficient; its sign follows from $w\geq q$. Higher-codimension components carry no closed order-zero $(1,1)$-current.
+
+Choose any smooth strictly positive Gauduchon metric $\eta$. Distributional Stokes gives
 \[
- \ddc\bigl(u-v-c_j\log|z_1|^2\bigr)=0.
+ 0=\int_X\ddc(w-q)\wedge\eta^{n-1}
+   =\sum_jc_j\int_{Z_j}\eta^{n-1}.
 \]
-The expression in parentheses is a smooth pluriharmonic function by distributional elliptic regularity. Taking generic Lelong numbers therefore gives $c_j=\nu_{Z_j}(u)-\nu_{Z_j}(v)$. If $u\sim_{\mathcal I}v$, these numbers agree by \cref{thm:local-i-inputs}, so all coefficients vanish. Ordinary equivalence implies multiplier-ideal equivalence. Alternatively, independence of the divisor classes forces them all to vanish directly from \eqref{eq:semipositive-dual-divisorial-difference}. In either case $\ddc(u-v)=0$ globally, and a real pluriharmonic distribution on connected compact $X$ is constant. When $Z$ has codimension at least two, the sum is empty.
+Each divisor integral is positive and each $c_j$ is nonpositive, so every coefficient vanishes. Therefore $w-q$ is a global pluriharmonic distribution and is constant on connected compact $X$. Applying this to both $q=u$ and $q=v$ shows that $u-v$ is constant.
 \end{proof}
 
-The theorem assumes a smooth form. It neither defines a wedge product with an arbitrary singular maximizing current nor proves that such a current has an analytic degeneracy set. The divisor relation is necessary for two threshold solutions to differ; it does not assert that every relation is realized. No bounded mass, positive lower mass, root-tail condition, or convergence of an exponential approximation is used.
+The theorem assumes a smooth form. It neither defines a wedge product with an arbitrary singular maximizing current nor proves that such a current has an analytic degeneracy set. No bounded mass, positive lower mass, root-tail condition, or convergence of an exponential approximation is used.

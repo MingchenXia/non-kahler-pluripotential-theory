@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint49: stronger uniqueness with a shorter proof
+
+Replaced the separate ideal-class and divisor-independence conditions by type-free uniqueness under the same smooth semipositive dual hypothesis. The proof takes a maximum, applies the support theorem and uses a positive Gauduchon pairing to kill nonpositive divisorial coefficients. Removed the now unnecessary Chapter16 bridge and updated Chapter32 and the reading guide. The separate audit passed; every record was read. The681-page production build and21 rendered pages were checked. The exploratory polytope draft is retained outside the book as superseded research history.
+
+## 22 September2026 — Maximum argument for semipositive dual uniqueness
+
+Submitted a stronger, shorter v2 proof: maxima preserve the threshold inequality, and a positive Gauduchon pairing kills the nonpositive divisorial difference. It is pending independent audit and outside checkpoint48. Preserved the exploratory, unintegrated polytope draft and documented why it becomes unnecessary if the maximum argument passes.
+
 ## 22 September2026 — Checkpoint48: semipositive dual forms and singularity classes
 
 A smooth semipositive maximizing form positive outside a proper analytic set now gives a global exact threshold equation and local smoothness. Differences are divisorial with a Bott--Chern relation, giving uniqueness within each multiplier-ideal class and under independence of the divisor classes. The normal bounded audit passed and every record was read. Four book files change; Chapter16 gauge hypotheses and Chapter32 boundaries are clearer. The681-page production build and50 rendered pages were checked. General singular-current attainment and divisor realization remain separate.
