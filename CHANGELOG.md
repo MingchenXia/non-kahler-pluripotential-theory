@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Chapters6–9 review, pending integration
+
+Completed the next root statement-to-proof pass, including every smooth-equation proof input. Drafted a decreasing maximum for the ordered-contact argument, removed a redundant total-mass assumption from tail continuity, shortened repeated adjoint/Fredholm and local-inverse arguments, and clarified positive-form terminology. Retained the detailed Hopf and STW estimates after checking their roles and existing reports. Five source edits remain in the private preview with exact patches and review scope; checkpoint31 is still delivered. Its private remote head was verified at ea3e35d5cfd889007f63162f6fcd1d70c4f5685b.
+
 ## 21 September 2026 — Checkpoint31: elliptic geometry and foundational revision
 
 Integrated the elliptic closed-current descent, nef/pseudoeffective cone, potential/envelope and section descent, exact boundary-volume formula, and normalized Gauduchon-limit calculation. All three bounded audits passed and their full records were read. The metric roots can be unbounded even when their squares converge smoothly; the book separates this from the lower-mass concentration example.

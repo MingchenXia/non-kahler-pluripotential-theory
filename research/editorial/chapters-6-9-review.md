@@ -1,0 +1,31 @@
+# Chapters6–9: proof and exposition review
+
+This is the next systematic root pass, following the user's instruction to improve every existing part. All statements and proofs in Chapters6,7,8 and9 have been read, including the integrable-Hessian supplement and all eight inputs in the smooth-equations chapter. The changes are in a private preview; checkpoint31 remains the delivered version until compilation, final visual review and integration finish. No new Rethlas run was needed for the elementary dependency simplifications below. Existing audit reports remain unchanged, and their actual conditional scopes are retained.
+
+## Chapter6
+
+Checked correction independence, smooth differences of decompositions, positivity by frozen backgrounds, compatibility of truncations, increasing sigma-finite measures, local total-variation limits after restriction, metric independence of BMP and bounded approximation. Checked the convex-series witness, qualitative-to-uniform exponential-integrability argument, Jensen tail estimate, coefficient-L1 current convergence, determinant domination and divergence of the full mass sequence.
+
+The ordered-contact proof previously invoked uniform convergence of max(a,b-delta), although only decreasing continuity had been explicitly stated nearby. Uniform continuity is a valid standard bounded-product input, but it is unnecessary here. Replace that auxiliary potential by max(a+delta,b). It decreases to b and agrees with a+delta on the plurifine open neighborhood {a+delta>b} of the equality set. Locality, constant invariance and the compact-set inequality for weak limits give the same proof directly from the already stated decreasing theorem. This is a dependency simplification, not a claim that the former theorem was false. The arbitrary-background positivity and restricted total-variation argument are unchanged.
+
+## Chapter7
+
+Checked cutoff-recursion degrees, the uniform degree-one trace bound, global exact-wedge cancellation, the exponent max(n-2,0), convex-transform positivity, finite exponential damping, the polynomial Tonelli estimate and capacity exponent, weighted bounded-product continuity, and the curve pole example. General-background domination and signed truncation formulas retain their positivity only after restriction.
+
+The uniform total-mass hypothesis in the undamped continuity theorem is redundant. Uniformly vanishing deep tails provide T0 with every tail mass at most1, and the already proved shallow bound gives total mass at most C(1+T0)^r+1. The theorem therefore states the tail hypothesis alone and proves the total bound first. The equivalent increasing-weight criterion and general-background explanation are synchronized. This introduces no new geometric assumption. The capacity-zero case now uses the already stated equivalence with pluripolarity, and a repeated explanation of the total polynomial bound is removed; Tonelli's integral still includes any mass at level0.
+
+## Chapter8
+
+Checked the normalization ddc=i partial barpartial/(2pi), fiber area and mass6, Schur complement, heat Fourier eigenvalues and spectral gap1/4, variance Hessian bound, Parseval energy, nearest-lattice gradient estimate and square absorption constants. Checked the q/t change of variables, initial/small-time/large-time estimates, integrability of the defect, cutoff positivity, strict smooth majorant, scalar repair and its slope bound, fixed-base-ball energy divergence, and bounded lower-mass corollary. The previous hopf_counterexample_01 report was read. No change is needed in the technical estimates; their roles are explicit and shortening them would conceal essential positivity control.
+
+## Chapter9
+
+Read the main chapter and section_smooth_estimates, section_stw_czero, section_gauduchon_volume_adjoint, section_stw_structure, section_stw_second_order, section_stw_liouville, section_stw_gradient and section_stw_continuity. Checked the extrema/scalar signs, weighted torsion recurrence and absorption, Sobolev/near-minimum step, ordinary Chern trace square and its remainder, maximum test, fixed-operator-to-Evans–Krylov reduction, normalization derivatives and equality case. For the Gauduchon ansatz, checked cofactor/root-volume factors, the Aeppli identity, Green/contact argument, adjoint integration signs, missing-gradient indices, weight/coercivity identities, two eigenvalue cases and numerical absorption allocation, Liouville case quantifiers and weighted annulus step, rescaled-frame errors, and the final continuity dependency order.
+
+The nine prior final reports for smooth C0/second derivatives, STW C0/adjoint/matrix structure/second order/Liouville/gradient/continuity were read. Their earlier conditional inputs are now supplied by the preceding reconstructed sections. This is not a new independent certification of those long calculations. Standard linear elliptic and local pluripotential inputs remain the stated classical dependencies.
+
+Three local edits are proposed. Replace ambiguous 'strictly positive potential' by 'solution with omega_u>0'. Reuse the proved Gauduchon Fredholm/positive-adjoint argument instead of repeating it. In the STW openness step reuse the local mean-zero inverse in the smooth-dependence lemma, explicitly at a single positive potential; global existence and the uniqueness used to join global solution maps are not prerequisites for this local inverse. Using the root-volume equation keeps the derivative L_u w-c with its already established normalization. The detailed nonlinear derivative estimates remain intact.
+
+## Pending work
+
+Finish the combined preview inspection, promote these five source files with a reversible map, rebuild and package them, and save the result to the private repository. Then continue the whole-manuscript pass from Chapter10. The remaining research directions and all later chapters remain incomplete.

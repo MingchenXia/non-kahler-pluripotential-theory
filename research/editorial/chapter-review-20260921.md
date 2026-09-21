@@ -9,10 +9,10 @@ Started21 September2026 following the user's explicit request to optimize every 
 | 3 | `author/chapter_energy.tex` (`chap:energy`) | Read formal-adjoint symmetry, local jet realization, polarization and radial defect; retain necessary linear algebra, reuse the symmetry lemma in the telescoping proof; verify YiLi10 Equation(1.18)/Theorem1.2 as contextual input. |
 | 4 | `author/chapter_gauduchon.tex` (`chap:gauduchon`) | Read the entire chapter and prior gauduchon_duality_01 result; retain Hahn–Banach/right-inverse proof, shorten repeated adjoint Fredholm argument by citing the proved conformal theorem. |
 | 5 | `author/chapter_compactness.tex` and `section_gauduchon_trace_topology.tex` (`chap:compactness`) | Read every statement and proof, including local logarithmic-radius/Poisson estimates, coordinate overlap, branch removal, decreasing diagonal and exact rescaling; preserve necessary steps. Make eventual negativity and the mean-normalized uniform upper bound explicit. |
-| 6 | `author/chapter_products.tex` (`chap:products`) | Pending full reread. |
-| 7 | `author/chapter_damped_measures.tex` (`chap:damped-measures`) | Pending full reread. |
-| 8 | `author/chapter_hopf.tex` (`chap:hopf`) | Pending full reread. |
-| 9 | `author/chapter_smooth_equations.tex` (`chap:smooth-equations`) | Pending full reread. |
+| 6 | `author/chapter_products.tex` (`chap:products`) | Read every proof, including the integrable-current supplement. Simplify ordered contact using a decreasing maximum; preview integration pending. |
+| 7 | `author/chapter_damped_measures.tex` (`chap:damped-measures`) | Read every proof and all endpoint cases. Remove a redundant total-mass hypothesis via the existing shallow bound; simplify repeated measure arguments; preview integration pending. |
+| 8 | `author/chapter_hopf.tex` (`chap:hopf`) | Read every proof, normalization and parameter estimate; prior Hopf report read. Retain the necessary heat/Schur-complement/defect-repair details; no source change. |
+| 9 | `author/chapter_smooth_equations.tex` (`chap:smooth-equations`) | Read the main chapter and all eight proof inputs. Check scalar and torsion calculations, normalization factors, both maximum cases, Liouville/rescaling and regularity dependencies. Shorten repeated Fredholm/local-inverse arguments; preview integration pending. |
 | 10 | `author/chapter_weak_equations.tex` (`chap:weak-equations`) | Pending full reread. |
 | 11 | `author/chapter_degenerate_uniqueness.tex` (`chap:degenerate-uniqueness`) | Pending full reread. |
 | 12 | `author/chapter_envelopes.tex` (`chap:envelopes`) | Pending full reread. |
@@ -46,4 +46,4 @@ The original Chapter1 paragraph used positive integer weights although Chapter16
 
 The external contextual Yi Li citation was rechecked at https://arxiv.org/html/1004.0553v1, Equation(1.18) and Theorem1.2 (n>=3). It is a modified path functional, not a primitive of the raw one-form. The primary abstract and author institutional listing distinguish the general-manifold preprint from the published surface paper; the general-dimensional reference is retained. No theorem in Chapters1–4 relies on that paper. The TW10 and BGL25 local locators retain their recorded primary-source verification in `research/literature.md`; the new pass does not reconstruct all classical elliptic theory.
 
-Next: Chapter6. The first five chapters passed final integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.
+Next: final integration of Chapters6–9 revisions, then Chapter10. The first five chapters passed final integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.
