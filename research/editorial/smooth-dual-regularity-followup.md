@@ -1,5 +1,7 @@
 # Smooth positive dual attainment and exact regularity
 
+**Checkpoint45 update:** the v2 regularity lemma and corollary passed smooth_dual_regularity_01 and are integrated with the former rigidity label retained. The original proposal below is preserved as history. The closed-background observation is now developed, with a nonclosed zero-density example and the dimension-one comparison, in section_smooth_dual_sharpness.tex; that separate draft is unreviewed and outside the book.
+
 22 September2026. Unaudited proposed follow-up, not production book content. The exact draft is section_smooth_dual_regularity.tex, saved in research/editorial and awaiting its own bounded audit.
 
 The fixed smooth positive maximizing Gauduchon current gives an exact trace equality for every threshold subsolution, without root tails. Positivity makes the full current's coefficients absolutely continuous. The already-proved trace inequality for every smooth Hermitian test, reduced to a countable dense family in local charts, forces the a.e. determinant to be at least the target density. The fixed trace and arithmetic--geometric mean force equality and hence a conformal current A=a gamma. This avoids assuming any identification of the a.e. determinant with the non-pluripolar product at Sobolev regularity.

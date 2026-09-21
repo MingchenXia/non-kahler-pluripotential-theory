@@ -110,6 +110,10 @@ for name in (
     "research/editorial/section_exponential_tail_modulus.tex",
     "research/editorial/section_smooth_dual_regularity.tex",
     "research/editorial/smooth-dual-regularity-followup.md",
+    "research/editorial/smooth-dual-regularity-map.json",
+    "research/editorial/smooth-dual-regularity-review.md",
+    "research/editorial/section_smooth_dual_regularity_v2.tex",
+    "research/editorial/section_smooth_dual_sharpness.tex",
     "research/editorial/positive-lower-threshold-review.md",
     "research/editorial/tail-divisor-review.md",
     "research/editorial/section_root_tail_continuity.tex",
@@ -268,6 +272,8 @@ Checkpoint42 adds the continuity characterization of root tails, divisorial coef
 Checkpoint43 integrates the passed positive-lower-mass threshold identification and subsequential capacity convergence, and the zero-volume constraint on nef divisors at the threshold. The compiled book has671 pages. These are short deductions from existing chapter results. The exact equation with vanishing lower mass, whole-family convergence and divisor realization remain separate questions; no BMP is imposed.
 
 Checkpoint44 adds a checked quantitative exponential-damping modulus and scalar/total-variation error bounds. The compiled book has673 pages. A separate smooth-dual regularity draft is explicitly unreviewed and is not book content. No general zero-lower-mass exact equation or capacity conclusion is inferred from the error modulus.
+
+Checkpoint45 proves smooth exact threshold equations under smooth strictly positive dual attainment in dimension at least two, without mass properties or root tails. The compiled book has675 pages. A separate closed-background and nonclosed zero-density sharpness draft is explicitly unreviewed and is not book content.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

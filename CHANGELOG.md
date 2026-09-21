@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint45: regularity from a smooth maximizing current
+
+Strengthened the fixed smooth dual-attainment corollary to a smooth exact equation and a smooth nonnegative density root in dimension n>=2. A short first-order bootstrap avoids an unproved Sobolev product identification. The prior rigidity label remains available, and the Chapter32 boundary is synchronized. The bounded audit passed; eight statement and six reference records were read. The675-page book matches the inspected preview, with nine rendered pages and no errors, undefined references or overfull boxes. Original sources, checkpoint44 and the standalone note are preserved. The closed-background and zero-density sharpness follow-up is explicitly unreviewed.
+
+## 22 September2026 — Smooth dual regularity under review
+
+Submitted the local conformal-current lemma and proposed smooth-dual exact-equation consequence to Rethlas. The dimension n>=2 and smooth strictly positive maximizer are explicit. The proof separates a measurable matrix determinant from the nonlinear product until regularity is proved. The production book remains checkpoint44; no regularity conclusion from singular maximizing currents is claimed.
+
 ## 22 September2026 — Checkpoint44: a quantitative scalar limit
 
 Added the uniform full-root-norm damping estimate and its scalar and total-variation error bounds. A separate Holder argument supplies linear errors for finite Lr roots with r>n. No BMP, positive lower mass or new capacity conclusion is used. The bounded audit passed; all five statement and three reference records were read. The673-page book matches the inspected preview, with ten rendered pages and no errors, undefined references or overfull boxes. Original sources, checkpoint43 and the standalone note are preserved. A separate smooth-dual regularity proposal is saved explicitly as unreviewed research.
