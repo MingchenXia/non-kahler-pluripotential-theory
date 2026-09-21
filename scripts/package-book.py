@@ -96,6 +96,8 @@ for name in (
     "research/editorial/section_vanishing_lower_mass_v2.tex",
     "research/editorial/section_lower_mass_solvability.tex",
     "research/editorial/section_lower_mass_metric_geometry.tex",
+    "research/editorial/chapters-16-26-review.md",
+    "research/editorial/chapters-16-26-map.json",
     "research/editorial/chapters-14-15-review.md",
     "research/editorial/chapters-14-15-map.json",
     "research/editorial/chapter-13-review.md",
@@ -206,6 +208,8 @@ Checkpoint33 integrates the complete Chapters10–12 root review. Repeated compa
 Checkpoint34 integrates the full Chapter13 review: earlier compactness replaces repeated regularity-based compactness, scalar tails and envelope bounds are streamlined, and cutoff/regularization language is precise. Extended volume invariance is distinguished from conditional comparison. The ledger records completed Chapters1–13 and the partial Chapter14 pass; this remains a working manuscript.
 
 Checkpoint35 integrates the complete Chapters14–15 review. Repeated normalized-exponential limits share one proved lemma, big-background compactness states the exact prerequisites for proof reuse, and adjoint stability uses its earlier proposition. No existence/uniqueness assumptions are changed. Chapters1–15 have received this systematic root pass; later chapters and research remain incomplete.
+
+Checkpoint36 records the full root reread of Chapters16–26 and all their inputs. Repeated divisorial estimates for restriction, addition and self-trace share earlier proved results, and the trace comparison lemma comes before its applications. The ledger now covers Chapters1–26; the remaining chapters, appendix and research are incomplete.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

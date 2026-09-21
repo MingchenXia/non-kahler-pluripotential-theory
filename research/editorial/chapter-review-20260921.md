@@ -1,6 +1,6 @@
 # Whole-manuscript correctness and exposition pass
 
-Started21 September2026 following the user's explicit request to optimize every already written part. The table records this new systematic pass, not the older targeted proof audits. “Read” means a full statement-to-proof root pass of the named chapter; it is not a mathematical guarantee or an independent audit. Chapters1–5 revisions are integrated in checkpoint31, and Chapters6–9 revisions in checkpoint32, and Chapters10–12 revisions in checkpoint33, after compilation and visual checks. Chapter13 revisions are integrated in checkpoint34. Chapters14–15 revisions are integrated in checkpoint35. The rest of this systematic pass remains incomplete.
+Started21 September2026 following the user's explicit request to optimize every already written part. The table records this new systematic pass, not the older targeted proof audits. “Read” means a full statement-to-proof root pass of the named chapter; it is not a mathematical guarantee or an independent audit. Chapters1–5 revisions are integrated in checkpoint31, and Chapters6–9 revisions in checkpoint32, and Chapters10–12 revisions in checkpoint33, after compilation and visual checks. Chapter13 revisions are integrated in checkpoint34. Chapters14–15 revisions are integrated in checkpoint35. Chapters16–26 have completed the root pass recorded in checkpoint36. The rest of this systematic pass remains incomplete.
 
 | Chapter | Scope in this pass | Status |
 |---|---|---|
@@ -19,17 +19,17 @@ Started21 September2026 following the user's explicit request to optimize every 
 | 13 | `author/chapter_prescribed_equations.tex` (`chap:prescribed-equations`) | Read the main chapter and all18 proof inputs. Checked singular barriers, local contact, capacity limits, all existence regimes and lower-mass obstruction. Reuse earlier compactness and upper bounds; simplify scalar tails; clarify cutoff and regularization language; align extended-volume scope. Integrated in checkpoint34. |
 | 14 | `author/chapter_relative_finite_measures.tex` (`chap:relative-finite-measures`) | Read the main chapter and all18 inputs. Checked domination, extraction, carriers, moments, smoothing, weighted limits/addition, projection and both equations. Consolidate repeated normalized-exponential limits; reuse compactness only after checking every replacement prerequisite. Integrated in checkpoint35. |
 | 15 | `author/chapter_normalization.tex` (`chap:normalization`) | Read the main chapter and both inputs. Checked scalar concavity, supporting measures, duality/entropy, uniform absolute continuity and the generic differentiability argument. Correct the existence cross-reference and reuse weak-adjoint stability. Integrated in checkpoint35. |
-| 16 | `author/chapter_igood.tex` (`chap:hermitian-igood`) | Pending full reread. |
-| 17 | `author/chapter_rays.tex` (`chap:hermitian-rays`) | Pending full reread. |
-| 18 | `author/chapter_testcurves.tex` (`chap:hermitian-testcurves`) | Pending full reread. |
-| 19 | `author/chapter_analytic_approximation.tex` (`chap:analytic-approximation`) | Pending full reread. |
-| 20 | `author/chapter_trace_data.tex` (`chap:trace-data`) | Pending full reread. |
-| 21 | `author/chapter_sections.tex` (`chap:sections`) | Pending full reread. |
-| 22 | `author/chapter_flag_bodies.tex` (`chap:flag-bodies`) | Pending full reread. |
-| 23 | `author/chapter_hopf_reduction.tex` (`chap:hopf-reduction`) | Pending full reread. |
-| 24 | `author/chapter_divisorial_models.tex` (`chap:divisorial-models`) | Pending full reread. |
-| 25 | `author/chapter_nonclosed_bclasses.tex` (`chap:nonclosed-bclasses`) | Pending full reread. |
-| 26 | `author/chapter_envelope_systems.tex` (`chap:hermitian-envelope-systems`) | Pending full reread. |
+| 16 | `author/chapter_igood.tex` (`chap:hermitian-igood`) | Read every proof and both inputs: ideal projection/calculus, volume boundaries, curve completion, dyadic envelopes and rational fixed-background density. No change needed. |
+| 17 | `author/chapter_rays.tex` (`chap:hermitian-rays`) | Read every proof: Kiselman, endpoints, Perron gluing, smooth product equation and raw-action torsion. Clarify the two one-sided endpoint derivatives in checkpoint36. |
+| 18 | `author/chapter_testcurves.tex` (`chap:hermitian-testcurves`) | Read every proof: cutoff noncollapse, pointwise duality at poles, both correspondence directions and the P1 example. Preserve exact defining conditions; no change needed. |
+| 19 | `author/chapter_analytic_approximation.tex` (`chap:analytic-approximation`) | Read every proof and precise regularization input: analytic restriction, Bergman constants, curvature errors and Gauduchon divisorial bounds. No change needed. |
+| 20 | `author/chapter_trace_data.tex` (`chap:trace-data`) | Read main chapter and all five inputs: intrinsic data, curve equations/distance, additivity, envelopes, exact fibrations and product measures. Consolidate the local comparison and simplify envelope equality in checkpoint36. |
+| 21 | `author/chapter_sections.tex` (`chap:sections`) | Read main chapter and both inputs: norms/kernels, Gauduchon vanishing and trace obstruction, graded distinction, curve count and exact Hopf kernels. No change needed. |
+| 22 | `author/chapter_flag_bodies.tex` (`chap:flag-bodies`) | Read main chapter and all three inputs: flag recursion, lattice/period count, section field, auxiliary blowup and Hopf simplex. No change needed. |
+| 23 | `author/chapter_hopf_reduction.tex` (`chap:hopf-reduction`) | Read every proof: submersion descent, weighted isometry, exact operator/scalar and toric gradient. Checked repaired existence/uniqueness sources; no change needed. |
+| 24 | `author/chapter_divisorial_models.tex` (`chap:divisorial-models`) | Read main chapter and all four nested inputs: countable currents, model compatibility, Bott–Chern representatives, nef Cartier classes, pullback continuity and exceptional differences. Reuse the discrepancy estimate for self-trace in checkpoint36. |
+| 25 | `author/chapter_nonclosed_bclasses.tex` (`chap:nonclosed-bclasses`) | Read main chapter and affine exceptional-difference input: prescribed derivative, nef realization, varying-background approximation and infinite-mass obstruction. Cite consolidated self-trace in checkpoint36. |
+| 26 | `author/chapter_envelope_systems.tex` (`chap:hermitian-envelope-systems`) | Read main chapter and boundary example: transition maps, retraction/adjunction, realization, gauge and zero-residual-volume nonrecovery. No change needed. |
 | 27 | `author/chapter_gauduchon_variational_volume.tex` (`chap:gauduchon-variational-volume`) | Pending full reread. |
 | 28 | `author/chapter_partial_bergman.tex` (`chap:partial-bergman`) | Pending full reread. |
 | 29 | `author/chapter_bott_chern_loci.tex` (`chap:bott-chern-loci`) | Targeted elliptic additions and adjacent loci interfaces; three independent audits passed, including the Gauduchon limits. Full reread of the remaining chapter pending. |
@@ -46,4 +46,4 @@ The original Chapter1 paragraph used positive integer weights although Chapter16
 
 The external contextual Yi Li citation was rechecked at https://arxiv.org/html/1004.0553v1, Equation(1.18) and Theorem1.2 (n>=3). It is a modified path functional, not a primitive of the raw one-form. The primary abstract and author institutional listing distinguish the general-manifold preprint from the published surface paper; the general-dimensional reference is retained. No theorem in Chapters1–4 relies on that paper. The TW10 and BGL25 local locators retain their recorded primary-source verification in `research/literature.md`; the new pass does not reconstruct all classical elliptic theory.
 
-Next: continue Chapter16. The first fifteen chapters have completed this root pass; their revisions passed integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.
+Next: continue Chapter27. The first twenty-six chapters have completed this root pass; their revisions passed integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.

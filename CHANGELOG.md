@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint36: singularities, traces and modelwise geometry
+
+Completed the systematic root reread of Chapters16–26 and all associated inputs. Six source changes consolidate the local divisorial estimates for analytic restriction, additivity and self-trace; the shared comparison lemma precedes both applications. Exact fibration envelopes reuse the proved order inequality, and endpoint derivative wording is clearer. No analytic, geometric or PDE hypothesis changes. The649-page PDF matches the preview;20 initial and seven additional final pages were viewed. No errors, undefined references or overfull boxes; one existing underfull bibliography line remains. All29 originals, the note and checkpoint35 are preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book certification; Chapters27–32 and the appendix remain in this pass.
+
 ## 21 September 2026 — Checkpoint35: relative measures and normalization review
 
 Completed Chapters14–15 and all20 proof inputs. Consolidated three normalized-exponential arguments, with constant truncations in a larger Hermitian background; shortened repeated stretching and compactness proofs after checking their ingredients; corrected the normalization chapter's existence reference and reused weak-adjoint stability. Twelve source files include five pagination-only repairs. The649-page PDF matches the preview on every page;37 initial and27 final selected pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. The note, all29 original sources and checkpoint34 are preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book correctness claim; the systematic pass continues with Chapter16.

@@ -72,6 +72,34 @@ The sum inequality will be strengthened to equality in \cref{thm:trace-data-addi
 
 \section{Comparison with ordinary restriction}
 
+The following local comparison will prove both equality for analytic restrictions and additivity of the trace data. It reuses the divisorial error estimate from \cref{chap:hermitian-igood}.
+
+\begin{lemma}\label{lem:analytic-minorant-product-ideals}
+Let $u,v$ be quasi-plurisubharmonic on a compact complex manifold, and let $s$ have analytic singularities. If $u+v\leq s+O(1)$, then for analytic potentials $U_m,V_m$ of types $(1/m,\mathcal I(mu))$, $(1/m,\mathcal I(mv))$, there are numbers $\delta_m\downarrow0$ such that
+\[
+ U_m+V_m\leq(1-\delta_m)s+O(1)
+ \quad\hbox{for all sufficiently large integers }m.
+\]
+The bounded error may depend on $m$.
+\end{lemma}
+\begin{proof}
+Resolve the ideal of $s$ and write its singular part locally as
+$\sum_i c_i\log|z_i|^2$, with $c_i>0$. Set
+$A_i=1+\operatorname{ord}_{E_i}(\operatorname{Jac}\pi)$.
+The hypothesis and \cref{lem:bergman-divisorial-error} give
+\[
+ \nu(U_m\circ\pi,E_i)+\nu(V_m\circ\pi,E_i)
+ \geq\nu(u\circ\pi,E_i)+\nu(v\circ\pi,E_i)-\frac{2A_i}{m}
+ \geq c_i-\frac{2A_i}{m}.
+\]
+Choose a positive integer $C\geq\max_i2A_i/c_i$ and put $\delta_m=C/m<1$ for large $m$. After a smooth local correction, divisorial removal from the positive Hessian of $(U_m+V_m)\circ\pi$ shows that
+\[
+ (U_m+V_m)\circ\pi-(1-\delta_m)\sum_i c_i\log|z_i|^2
+\]
+has a quasi-plurisubharmonic representative. It is locally bounded above. A finite resolution cover and proper descent therefore give
+$U_m+V_m\leq(1-\delta_m)s+O(1)$, just as in \cref{lem:analytic-ideal-dominance}. The bounded constant may depend on $m$. If the divisor is empty, $s$ is bounded and upper bounds for $U_m,V_m$ prove the assertion directly.
+\end{proof}
+
 \begin{proposition}\label{prop:trace-naive-comparison}
 If $v=u|_Y$ is genuine, then
 \[
@@ -87,28 +115,16 @@ $\mathcal I(tv)\subseteq\mathfrak a_t(u;Y)$. The local Bergman lower estimate im
 \]
 Indeed, the logarithm of generators of $\mathcal I(tv)$, divided by $t$, is locally at least $v$ up to a bounded term, by \cref{prop:bergman-local-estimates}; pulling back and taking a generic Lelong number gives the inequality. Thus the same upper bound holds for the order of $\mathfrak a_t$, and the limit proves the first assertion.
 
-Suppose now that $u$ has analytic type $(c,\mathfrak b)$. We recall explicitly the elementary asymptotic ideal estimate that supplies the reverse bound. Locally, for a fixed $C>0$ and every sufficiently large $t$,
-\begin{equation}\label{eq:analytic-ideal-bounds-trace}
- \mathfrak b^{\lceil tc\rceil}\subseteq\mathcal I(tu),
- \qquad
- f\in\mathcal I(tu)\ \Longrightarrow\
- \log|f|^2\leq(t-C)u+O(1).
-\end{equation}
-The first inclusion follows directly from integrability: a product of $\lceil tc\rceil$ generators vanishes enough to make its squared norm times $e^{-tu}$ locally bounded. For the second, take a log resolution of $\mathfrak b$, as in the standard resolution theorem recalled in \cite{SGPT}. Write the pulled-back singular part as
-$\sum_i a_i\log|s_i|^2$, with $a_i>0$, and let $A_i$ be one plus the order of the relative Jacobian along the corresponding divisor. Local integrability of $f$ gives
+If $u$ has analytic singularities, apply \cref{lem:analytic-minorant-product-ideals} with $v=0$ and $s=u$, taking $V_m=0$ and $U_m=u_m$. It gives
 \[
- \operatorname{ord}_{E_i}(f)+A_i>t a_i.
+ u_m\leq(1-\delta_m)u+O(1),\qquad\delta_m\downarrow0.
 \]
-Choose $C\geq\max_i A_i/a_i$. It follows that the divisor of the pulled-back $f$ dominates $(t-C)\sum_i a_iE_i$. Dividing by the corresponding monomials on the resolution shows that the quotient is locally bounded. This gives the second inequality upstairs and then downstairs. Constants in $O(1)$ may depend on $t$ and $f$; the constant $C$ is fixed. A finite resolution cover suffices near the locus under consideration.
-
-Restrict \eqref{eq:analytic-ideal-bounds-trace} to $Y$ and take the order along $E$. Analytic restriction gives
-$\nu(v\circ\pi,E)=c\operatorname{ord}_E(\mathfrak b\mathcal O_Y)$. Consequently
+Restrict to $Y$, pull back by $\pi$, and take the generic Lelong number along $E$. Since $u_m$ has type $(1/m,\mathcal I(mu))$,
 \[
- (t-C)\nu(v\circ\pi,E)
- \leq\operatorname{ord}_E\mathfrak a_t(u;Y)
- \leq\lceil tc\rceil\operatorname{ord}_E(\mathfrak b\mathcal O_Y).
+ \frac1m\operatorname{ord}_E\mathfrak a_m(u;Y)
+ \geq(1-\delta_m)\nu((u|_Y)\circ\pi,E).
 \]
-After division by $t$, both outer expressions tend to the same number. This proves equality. The argument is local in the center of the valuation, so local presentations of an analytic singularity suffice.
+Let $m\to\infty$. This proves the reverse inequality and hence equality. All restrictions are genuine because $\nu(u,Y)=0$.
 \end{proof}
 
 The inequality can be strict. On a small bidisc write
@@ -193,7 +209,7 @@ Each $D_m$ is finitely supported. Locally both $w_m$ and $u_m|_Y$ are its logari
 
 Suppose $a=u|_Y$ is genuine and write $\mu=\theta|_Y+\ddc a\geq0$. By \cref{prop:trace-naive-comparison}, the atomic part of $\mu$ dominates $D_u$. Therefore
 \[
- \ddc(a-w)=\mu-D_u-\theta|_Y+d\,\eta.
+ \ddc(a-w)=\mu-D_u-\theta|_Y+d\,\eta
 \]
 is bounded below by a smooth form. The $L^1$ difference has a quasi-plurisubharmonic representative, which is bounded above on compact $Y$. Equality of canonical representatives upgrades the resulting almost-everywhere inequality to $a\leq w+C$ everywhere. If $u$ is analytic, \cref{prop:trace-naive-comparison} identifies its finitely many restricted logarithmic coefficients with those of $D_u$. Its bounded local remainders then give ordinary equivalence.
 \end{proof}
