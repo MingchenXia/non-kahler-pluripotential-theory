@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint51: quantitative currents and simpler approximation proofs
+
+Added an audited O(lambda) Gauduchon-trace estimate and local O(sqrt(lambda)) coefficient-current estimate under smooth semipositive dual attainment. Reread Chapters18/19, replaced a local Bergman compactness argument by dominated convergence, clarified the pole value in the explicit test curve and added a zero-Lelong restriction example. Four book files change. The685-page build and31 affected/adjacent pages were checked. The new current estimates imply no potential or MA rate and no capacity conclusion across the degeneracy set.
+
+## 22 September2026 — Quantitative current convergence under review
+
+Frozen a short trace-error and matrix argument for global linear trace convergence and local square-root coefficient convergence of the exponential currents under smooth semipositive dual attainment. Submitted a separate bounded audit; it remains outside checkpoint50. Existing Chapter18/19 editorial drafts are also being prepared for the next checked update.
+
 ## 22 September2026 — Checkpoint50: exponential limits and positive pole divisors
 
 Under smooth semipositive dual attainment, proved whole-family normalized exponential L1 convergence, a fixed lower barrier and an O(lambda) scalar error. Proved linear independence of the positive pole-divisor Bott–Chern classes. Updated Chapter13/32 interfaces and the reading guide. Both frozen proofs passed a bounded audit; every report record was read. The683-page build and23 affected/adjacent pages were checked. Capacity convergence across the analytic degeneracy set remains unproved here.

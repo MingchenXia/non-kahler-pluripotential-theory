@@ -114,6 +114,9 @@ for name in (
     "research/editorial/smooth-dual-regularity-review.md",
     "research/editorial/section_smooth_dual_regularity_v2.tex",
     "research/editorial/section_smooth_dual_sharpness.tex",
+    "research/editorial/section_semipositive_trace_rate.tex",
+    "research/editorial/current-rate-and-approximation-map.json",
+    "research/editorial/current-rate-and-approximation-review.md",
     "research/editorial/section_semipositive_divisors.tex",
     "research/editorial/section_semipositive_exponential_limit.tex",
     "research/editorial/semipositive-dual-consequences-map.json",
@@ -301,6 +304,8 @@ Checkpoint48 extends exact threshold equations to an assumed smooth semipositive
 Checkpoint49 strengthens and shortens Section27.11.4: maxima and Gauduchon Stokes prove uniqueness of all threshold subsolutions under the same smooth semipositive dual hypothesis. No ideal class or divisor-class independence is prescribed. The separate bounded audit passed; the681-page source was checked. The exploratory polytope draft remains unaudited research history outside the book.
 
 Checkpoint50 adds two audited consequences under smooth semipositive dual attainment: whole-family normalized exponential L1 convergence with a common lower barrier and a quantitative scalar bound, and independence of positive pole-divisor classes. The683-page build has synchronized Chapter13/32 interfaces. No capacity or global regularity conclusion across the degeneracy set is claimed.
+
+Checkpoint51 adds audited quantitative convergence for full Gauduchon traces and local coefficient currents, and polishes Chapters18/19 with a shorter local Bergman L1 proof and explicit pole/restriction examples. The685-page build retains the general capacity and global regularity questions.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
