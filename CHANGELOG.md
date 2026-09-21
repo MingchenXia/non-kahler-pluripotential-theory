@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint34: prescribed equations review
+
+Completed the full Chapter13 statement-to-proof pass and all18 inputs. Simplified the symmetry compactness proof, scalar tail notation and a repeated envelope estimate. Clarified cutoff positivity and the regularization error subsequence; aligned lower-volume and ordinary-type invariance language with the extended definitions. Seven source files, including the Chapter10 cross-reference, were integrated. The651-page PDF matches the preview on every page, and all12 changed pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. The standalone note, all29 original sources and checkpoint33 were preserved. Fresh reconstruction and private backup are recorded separately. No new independent audit or whole-book correctness claim; Chapter14 and later work remain incomplete.
+
 ## 21 September 2026 — Checkpoint33: Chapters10–12 correctness and proof economy
 
 Completed the full root pass through Chapters10–12 and all inputs. Reused the decreasing contact proof, bounded domination and weighted-cofactor theorem; defined the scalar proposition notation, clarified the later local mixed-density input, and corrected two shared-source notation issues. Removed unused bigness assumptions from the semipositive fixed-point mass bound and the nonempty relative-envelope construction. Extended volume definitions now visibly allow infinity while comparison hypotheses remain explicit. All nonuniqueness endpoint/positivity details are retained. Nine source files, the651-page book and17-page note were checked against their visually reviewed preview; no errors, undefined references or overfull boxes. Original files, checkpoint32 and its source/note were preserved. Fresh reconstruction and private synchronization are separate final records. Chapter13 is partly read; the full task remains incomplete.

@@ -1,0 +1,31 @@
+# Chapter13: prescribed equations and proof dependencies
+
+The complete main chapter and all18 proof inputs received a statement-to-proof root reread. Seven revised book sources, including one backward cross-reference in Chapter10, are integrated in checkpoint34. This is a root mathematical and editorial pass, not an independent certification. The133 bounded reports are unchanged.
+
+## Estimates and semipositive equations
+
+Checked the relative uniform estimate's exponential tilt, the smaller-background competitor and its convex translation rule; the supersolution envelope and every finite-measure cancellation. Checked singular domination with a common genuine barrier and no subtraction of infinite measures. For bounded Lp equations, checked the reciprocal subsolution, Gauduchon root-integral normalization, monotone background approximation, tilted lower bounds, disjoint contact partitions and the fixed positive exponent identifying the two limits. The scalar sequence was already proved decreasing; its redundant upper/lower tail symbols are removed. The proof still distinguishes uniqueness of the scalar from uniqueness of the potential.
+
+Checked stability's small, large and zero density-error cases and the allowable exponent. Checked regularization's averaging error, gradient bound, Kiselman-radius lower bound and the stated nonoptimal Holder exponent. Symmetry compactness now uses the earlier L1-to-uniform compactness theorem directly, after noting that positive-exponent solutions are continuous. The separate third solution still obtains Holder regularity from the regularity theorem. This shortens the dependency chain without changing any conclusion; Chapter10's cross-reference agrees.
+
+The radial selection and positive-exponent regularity arguments were read in full: weak radial flux, absence of jump atoms, one-sided zero-band constraints, smooth inversion where the angular determinant is positive, exterior endpoint normalization and the local C1,1/non-C2 conclusion. No additional global smoothness or general unique-selection assertion is made. The local-big continuity argument retains the curvature modulus, mixed-term absorption, radius localization and strict-barrier correction.
+
+## Contacts, compactness and general singular data
+
+Checked the homogeneous local Dirichlet construction, comparison barriers and maximality proof; the continuous obstacle argument, exceptional-set repair, lower-semicontinuous approximation and signed fixed-level product bounds. The general-contact proof reuses Chapter12's finite-sublevel estimate, keeping both the genuine lower competitor and uniform upper bound explicit. The signed capacity calculation and final countable exhaustion remain intact; no total mass bound is inferred.
+
+Checked the fixed non-pluripolar integration input and its exponential consequence; bounded mixed-capacity control, all torsion terms in moving integration, weighted lower semicontinuity, the finite-rooftop summable-error argument and its lower-barrier variant. Every monotone limit used there has a genuine lower bound or a genuine stipulated limit. Common-barrier raw continuity still obtains tail control from the actual dominating measures.
+
+Checked the bounded subsolution theorem's two approximation stages, the smooth-density-only mixed inequality, fixed-reference trace, positivity of the limiting root integral, and total-variation identification. Checked weighted addition's polynomial mass estimate and localization; the phrase about the cutoff's support is replaced by its positive-value locus, which is the exact set required for locality. Checked arbitrary-big comparison, reciprocal subsolutions, Gauduchon trace, resolution and descending equations. The regularization sentence now explicitly selects curvature errors at most2^-j; it does not pretend an arbitrary error subsequence equals that sequence.
+
+Both arbitrary-big minimal-type constructions retain their locally bounded monotone limits off the analytic poles. The artificial positive exponent in the normalized construction remains, since it identifies the lower and upper limits. Both prescribed-type maximizing-measure constructions retain the common ordinary-type bound, weighted weak convergence, positive residual and addition contradiction. The lower-mass obstruction retains its smooth-normalizer inequality even for infinite-mass candidates, and the distinction between bounded and unbounded exponential solutions.
+
+The lower volume at reference zero equals the infimum over bounded potentials by definition, without BMP. The closing discussion now distinguishes ordinary-type invariance of extended volume definitions from the hypotheses for finiteness and comparison. These are definition-level scope clarifications, not new no-BMP volume-comparison theorems.
+
+## Audit evidence and output checks
+
+Read the existing final reports for Holder regularization, local-big continuity, radial selection and positive-exponent regularity, bounded subsolutions, general-big contacts, arbitrary-big comparison/existence, common-barrier repair, weighted addition, prescribed Lp existence and lower-mass solvability. Read the DP04/BGL25 external-reference record for the exact regularization and minimal-type inputs. The resolved dependency reports retain their precise accepted premises; the lower-mass geometric prerequisite has its separate passed report. No verifier sources, memory or results were edited or rerun. This pass does not claim to have reread every raw verifier log.
+
+The651-page production PDF matches the reviewed preview on every page. All12 changed pages were rendered and viewed. No errors, undefined references or overfull boxes remain; the existing underfull bibliography line remains. The17-page standalone note is unchanged. All29 original reference-file hashes and the preserved checkpoint33 outputs were checked. The reversible integration map, build snapshot and fresh-source portability record identify the precise artifacts. Private synchronization follows reconstruction.
+
+Chapter14 has begun: the main chapter, extended domination, dominated compactness, exponential common envelopes and moving-measure continuity have been read. Its remaining inputs and the rest of the systematic pass are pending.

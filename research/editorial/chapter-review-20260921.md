@@ -1,6 +1,6 @@
 # Whole-manuscript correctness and exposition pass
 
-Started21 September2026 following the user's explicit request to optimize every already written part. The table records this new systematic pass, not the older targeted proof audits. “Read” means a full statement-to-proof root pass of the named chapter; it is not a mathematical guarantee or an independent audit. Chapters1–5 revisions are integrated in checkpoint31, and Chapters6–9 revisions in checkpoint32, and Chapters10–12 revisions in checkpoint33, after compilation and visual checks. The rest of this systematic pass remains incomplete.
+Started21 September2026 following the user's explicit request to optimize every already written part. The table records this new systematic pass, not the older targeted proof audits. “Read” means a full statement-to-proof root pass of the named chapter; it is not a mathematical guarantee or an independent audit. Chapters1–5 revisions are integrated in checkpoint31, and Chapters6–9 revisions in checkpoint32, and Chapters10–12 revisions in checkpoint33, after compilation and visual checks. Chapter13 revisions are integrated in checkpoint34. The rest of this systematic pass remains incomplete.
 
 | Chapter | Scope in this pass | Status |
 |---|---|---|
@@ -16,8 +16,8 @@ Started21 September2026 following the user's explicit request to optimize every 
 | 10 | `author/chapter_weak_equations.tex` (`chap:weak-equations`) | Read the main chapter and all three inputs. Checked comparison, capacity, continuous existence and normalization. Reuse decreasing contact; define A,B in the scalar proposition. Integrated in checkpoint33. |
 | 11 | `author/chapter_degenerate_uniqueness.tex` (`chap:degenerate-uniqueness`) | Read the main chapter and all eleven inputs. Checked low-regularity/cofactor/topological uniqueness and every nonuniqueness construction. Reuse proved domination and weighted energy, clarify the later mixed lemma, correct notation and pagination. Integrated in checkpoint33. |
 | 12 | `author/chapter_envelopes.tex` (`chap:envelopes`) | Read every proof and bounded-contact input. Checked truncations, envelopes, volume comparisons, relative equivalence and infinite-mass witness. Remove two unused bigness assumptions; retain comparison scope; reuse the finite-sublevel argument. Integrated in checkpoint33. |
-| 13 | `author/chapter_prescribed_equations.tex` (`chap:prescribed-equations`) | Main chapter, singular domination, semipositive big Lp equations and bounded stability read. Remaining proof inputs pending; no completed chapter pass yet. |
-| 14 | `author/chapter_relative_finite_measures.tex` (`chap:relative-finite-measures`) | Pending full reread. |
+| 13 | `author/chapter_prescribed_equations.tex` (`chap:prescribed-equations`) | Read the main chapter and all18 proof inputs. Checked singular barriers, local contact, capacity limits, all existence regimes and lower-mass obstruction. Reuse earlier compactness and upper bounds; simplify scalar tails; clarify cutoff and regularization language; align extended-volume scope. Integrated in checkpoint34. |
+| 14 | `author/chapter_relative_finite_measures.tex` (`chap:relative-finite-measures`) | Main chapter, extended domination, dominated compactness, exponential common envelopes and moving-measure continuity read. Remaining14 proof inputs pending; chapter pass incomplete. |
 | 15 | `author/chapter_normalization.tex` (`chap:normalization`) | Pending full reread. |
 | 16 | `author/chapter_igood.tex` (`chap:hermitian-igood`) | Pending full reread. |
 | 17 | `author/chapter_rays.tex` (`chap:hermitian-rays`) | Pending full reread. |
@@ -46,4 +46,4 @@ The original Chapter1 paragraph used positive integer weights although Chapter16
 
 The external contextual Yi Li citation was rechecked at https://arxiv.org/html/1004.0553v1, Equation(1.18) and Theorem1.2 (n>=3). It is a modified path functional, not a primitive of the raw one-form. The primary abstract and author institutional listing distinguish the general-manifold preprint from the published surface paper; the general-dimensional reference is retained. No theorem in Chapters1–4 relies on that paper. The TW10 and BGL25 local locators retain their recorded primary-source verification in `research/literature.md`; the new pass does not reconstruct all classical elliptic theory.
 
-Next: continue Chapter13. The first twelve chapters have completed this root pass; their revisions passed integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.
+Next: continue Chapter14. The first thirteen chapters have completed this root pass; their revisions passed integration and visual review. Continue through every chapter and appendix; a targeted audit or clean compile does not discharge the whole-manuscript obligation.

@@ -96,6 +96,8 @@ for name in (
     "research/editorial/section_vanishing_lower_mass_v2.tex",
     "research/editorial/section_lower_mass_solvability.tex",
     "research/editorial/section_lower_mass_metric_geometry.tex",
+    "research/editorial/chapter-13-review.md",
+    "research/editorial/chapter-13-map.json",
     "research/editorial/chapters-10-12-review.md",
     "research/editorial/chapters-10-12-map.json",
     "research/editorial/chapters-6-9-review.md",
@@ -198,6 +200,8 @@ Checkpoint31 adds the elliptic closed-current cone and potential/section descent
 Checkpoint32 integrates the Chapters6–9 systematic correctness and exposition pass: decreasing contact approximation, a streamlined tail criterion, and reuse of the established elliptic local inverse. The technical Hopf and smooth-equation estimates are retained. The chapter ledger records completed Chapters1–9 and remaining work; this root review is not an independent mathematical certification.
 
 Checkpoint33 integrates the complete Chapters10–12 root review. Repeated comparison/energy proofs are shortened, the nonuniqueness examples retain their technical estimates, and two elementary envelope statements lose unused bigness assumptions. Extended volume definitions are separated from the hypotheses for finiteness and comparison. Two notation corrections also appear in the standalone note. The chapter ledger records completed Chapters1–12 and the partial Chapter13 pass.
+
+Checkpoint34 integrates the full Chapter13 review: earlier compactness replaces repeated regularity-based compactness, scalar tails and envelope bounds are streamlined, and cutoff/regularization language is precise. Extended volume invariance is distinguished from conditional comparison. The ledger records completed Chapters1–13 and the partial Chapter14 pass; this remains a working manuscript.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
