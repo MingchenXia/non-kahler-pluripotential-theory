@@ -1,5 +1,9 @@
 # Modification history
 
+## 21 September 2026 — Checkpoint33: Chapters10–12 correctness and proof economy
+
+Completed the full root pass through Chapters10–12 and all inputs. Reused the decreasing contact proof, bounded domination and weighted-cofactor theorem; defined the scalar proposition notation, clarified the later local mixed-density input, and corrected two shared-source notation issues. Removed unused bigness assumptions from the semipositive fixed-point mass bound and the nonempty relative-envelope construction. Extended volume definitions now visibly allow infinity while comparison hypotheses remain explicit. All nonuniqueness endpoint/positivity details are retained. Nine source files, the651-page book and17-page note were checked against their visually reviewed preview; no errors, undefined references or overfull boxes. Original files, checkpoint32 and its source/note were preserved. Fresh reconstruction and private synchronization are separate final records. Chapter13 is partly read; the full task remains incomplete.
+
 ## 21 September 2026 — Checkpoint32: Chapters6–9 proof simplification
 
 Integrated five reviewed sources after the full root pass. Ordered contact now uses decreasing continuity directly. Uniform tail control implies the removed total-mass hypothesis. Smooth-equation proofs reuse established Fredholm/local-inverse arguments, with the local/global dependency explicit. The necessary Hopf and nonlinear estimates are retained. The651-page production PDF matches every page of the final visually inspected preview; no errors, undefined references or overfull boxes. Source hashes, reversible edits, original references and preserved checkpoint31 outputs were checked. Packaging and private synchronization are recorded separately. The systematic pass continues from Chapter10; no new independent audit is claimed.
