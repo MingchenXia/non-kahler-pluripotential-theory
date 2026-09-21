@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint54: residual rigidity and Gauduchon/Bergman review
+
+Integrated the audited strengthening of the finite-divisor equation: under smooth positive residual and density hypotheses, threshold subsolutions have the unique smooth remainder without assuming it bounded. Ordinary-type solutions also have the same scalar. Completed the second focused reading of Chapters27–28 and all nested inputs, preserved the distinctions between lower/upper mass and selected/norm weights, and polished notation and display placement. Fourteen book files change. The687-page build and35 affected/adjacent pages were checked; degenerate residual backgrounds and pullback densities remain open here.
+
+## 22 September2026 — Divisorial residual rigidity under review
+
+The second focused reading of Chapter27 and all nested inputs is complete. A candidate strengthening of the finite-divisor residual equation now uses the earlier smooth dual rigidity to remove the bounded-remainder assumption for threshold subsolutions and to prove smoothness and uniqueness of ordinary-type solutions. Its separate proof is frozen and submitted; checkpoint53 remains the checked manuscript.
+
 ## 22 September2026 — Checkpoint53: uniform limits, a projective example and shorter descent proof
 
 Integrated the audited Lp uniform-limit corollary and explicit semipositive projective maximizer, distinguishing smooth solution potentials from density-root regularity. Completed the second focused reading of Chapters23–26 and all nested inputs. Chapter23 now uses the internal bounded uniqueness theorem on its closed base, shortening the reduced-equation proof. Six book files change. The687-page build and31 affected/adjacent pages were checked; general L1 regularity and automatic smaller-background envelopes remain open.
