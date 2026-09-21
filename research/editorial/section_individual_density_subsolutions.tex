@@ -1,0 +1,170 @@
+\section{Subsolutions for an individual density}
+\label{sec:individual-density-subsolutions}
+
+Positive lower mass controls every non-pluripolar right-hand side at once. For a fixed density, one can instead test the normalization constants of its bounded truncations. The resulting limit determines exactly whether a positive multiple of that density is dominated by an extended Monge--Amp\`ere measure. This is a statement about subsolutions; it does not assert existence of an equation at the limiting constant.
+
+Fix a Hermitian form $h$ and a smooth positive probability volume $\mathrm{d}V$ on the connected compact manifold $X$. For a nonzero nonnegative bounded density $q$, let $c_h(q)>0$ be the unique constant for which
+\[
+ \mathrm{MA}_h(v)=c_h(q)q\,\mathrm{d}V,
+ \qquad v\in\PSH(X,h)\cap C(X).
+\]
+Existence and uniqueness of the constant follow from \cref{thm:kn-continuous,prop:vanishing-exponent}. The density $q$ is not required to have integral one or to be bounded away from zero.
+
+\begin{lemma}\label{lem:bounded-normalizer-subsolution}
+If $u\in\PSH(X,h)$ and $a>0$ satisfy
+$\mathrm{MA}^{\mathrm{ext}}_h(u)\geq aq\,\mathrm{d}V$, then $a\leq c_h(q)$. Consequently,
+\[
+ q\leq r\quad\Longrightarrow\quad c_h(q)\geq c_h(r),
+ \qquad c_h(tq)=t^{-1}c_h(q)\quad(t>0)
+\]
+for nonzero nonnegative bounded densities $q,r$.
+\end{lemma}
+\begin{proof}
+The proof of \cref{lem:smooth-normalizer-subsolution-bound} uses only boundedness of the comparison potential. Indeed, if $a>c_h(q)$, every translate $v+A$ has a genuine envelope in background $h/2$, and $u\preceq v+A$. The inequality
+\[
+ \mathrm{MA}_h(v+A)\leq\frac{c_h(q)}a
+                  \mathrm{MA}^{\mathrm{ext}}_h(u)
+\]
+and \cref{thm:singular-strict-domination} give $v+A\geq u$ for every real $A$, a contradiction at a point where $u$ is finite. This argument permits zeros of $q$ and infinite mass of $u$.
+
+If $q\leq r$, a continuous solution for $r$ is a subsolution for $c_h(r)q\,\mathrm{d}V$, so the first assertion gives the order inequality. The scaling identity follows from uniqueness of the constant.
+\end{proof}
+
+Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral, and put
+\begin{equation}\label{eq:individual-truncated-normalizer}
+ f_k=\min(f,k),\qquad
+ b_h(f)=\lim_{k\to\infty}c_h(f_k).
+\end{equation}
+The limit exists in $[0,+\infty)$ because the constants decrease and $c_h(f_1)$ is finite. The order lemma also gives
+\begin{equation}\label{eq:individual-bounded-tests}
+ b_h(f)=\inf\{c_h(q):0\leq q\leq f,\ q\in L^\infty,
+                                      \ \textstyle\int_Xq\,\mathrm{d}V>0\}.
+\end{equation}
+In fact every such $q$ is bounded above by $f_k$ for sufficiently large $k$, and the $f_k$ themselves are admissible tests.
+
+\begin{theorem}\label{thm:individual-density-subsolution}
+For every such $f$,
+\[
+ b_h(f)=\max\{a\geq0:\text{there exists }u\in\PSH(X,h)
+       \text{ with }\mathrm{MA}^{\mathrm{ext}}_h(u)
+                         \geq af\,\mathrm{d}V\}.
+\]
+In particular, a positive scaled subsolution exists if and only if $b_h(f)>0$. No bounded mass property or positive lower-mass hypothesis is assumed.
+\end{theorem}
+\begin{proof}
+If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then it dominates $af_k\,\mathrm{d}V$. The preceding lemma gives $a\leq c_h(f_k)$ for every $k$, hence $a\leq b_h(f)$. If $b_h(f)=0$, the zero potential realizes the coefficient zero.
+
+Suppose $b=b_h(f)>0$. Choose continuous normalized solutions
+\[
+ \mathrm{MA}_h(u_k)=c_h(f_k)f_k\,\mathrm{d}V,
+ \qquad \sup_Xu_k=0.
+\]
+After extraction, $u_{k_j}\to u$ in $L^1$ and almost everywhere, where $u$ is a genuine normalized $h$-plurisubharmonic function. Define
+\[
+ w_j=\left(\sup_{\ell\geq j}u_{k_\ell}\right)^*.
+\]
+Each $w_j$ is bounded, since $u_{k_j}\leq w_j\leq0$. The local Hartogs lemma and almost-everywhere convergence give $w_j\searrow u$.
+
+For a finite maximum of the functions $u_{k_\ell}$ with $\ell\geq j$, ordered contact gives a Monge--Amp\`ere measure at least $bf_{k_j}\,\mathrm{d}V$: every constituent measure has this lower bound. More explicitly,
+\[
+ \mathrm{MA}_h(\max(s,t))\geq
+ \mathbf1_{\{s\geq t\}}\mathrm{MA}_h(s)
+ +\mathbf1_{\{s<t\}}\mathrm{MA}_h(t)
+\]
+for bounded $s,t$. Bounded increasing Bedford--Taylor continuity, applied to these finite maxima for fixed $j$, therefore gives
+\[
+ \mathrm{MA}_h(w_j)\geq bf_{k_j}\,\mathrm{d}V.
+\]
+The bound on the potentials at this step may depend on $j$.
+
+The decreasing sequence $w_j$ converges to $u$ in capacity. For completeness, remove an open set of arbitrarily small capacity on whose complement $u$ and all $w_j$ are finite and continuous, using quasi-continuity and countable subadditivity. On the remaining compact set Dini's theorem gives uniform convergence. Apply the damped continuity theorem \cref{thm:damped-continuity} with weight $e^{w_j}$. It gives
+\[
+ e^{w_j}\mathrm{MA}_h(w_j)
+       \rightharpoonup e^u\mathrm{MA}^{\mathrm{ext}}_h(u).
+\]
+Also $e^{w_j}f_{k_j}\to e^uf$ in $L^1(\mathrm{d}V)$ by dominated convergence, since $0\leq e^{w_j}f_{k_j}\leq f$. Hence
+\[
+ e^u\mathrm{MA}^{\mathrm{ext}}_h(u)\geq be^uf\,\mathrm{d}V.
+\]
+On each set $\{u>-N\}$ one may divide by $e^u$. Exhaust these sets; their complement is pluripolar and has zero smooth volume. This proves $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq bf\,\mathrm{d}V$ and attains the maximum.
+\end{proof}
+
+The proof constructs an upper envelope of a subsequence. It does not claim that the original normalized solutions converge in capacity, that their limit has finite mass, or that the limiting inequality is an equality. These are additional requirements in the individual equation problem. The definition is unchanged if truncation is replaced by any increasing sequence of nonzero bounded densities tending to $f$: necessity bounds its limiting constants below by $b_h(f)$, and the same upper-envelope construction bounds them above by $b_h(f)$.
+
+\begin{proposition}\label{prop:individual-normalizer-lp}
+If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)$ equals the normalization constant of the continuous equation for $f$. In general,
+\[
+ b_h(f)\geq\frac{v_-(h)}{\int_Xf\,\mathrm{d}V}.
+\]
+If $h$ is K\"ahler, then $b_h(f)=\int_Xh^n/\int_Xf\,\mathrm{d}V$ for every nonzero nonnegative $L^1$ density.
+\end{proposition}
+\begin{proof}
+For $f\in L^p$, its continuous solution is a subsolution for every $f_k$, so its positive scalar $c$ satisfies $c\leq b_h(f)$. The equations for $u_k$ have uniformly bounded $L^p$ densities, since $c_h(f_k)\leq c_h(f_1)$ and $f_k\leq f$. By \cref{thm:lp-uniform-compactness}, a subsequence converges uniformly. Passing to the equation gives scalar $b_h(f)$ and right side $f$; uniqueness of the scalar gives $b_h(f)=c$.
+
+Each bounded solution has total mass at least $v_-(h)$, so $c_h(f_k)\int_Xf_k\,\mathrm{d}V\geq v_-(h)$. Take the limit. In the K\"ahler case, bounded Stokes instead gives the exact identity $c_h(f_k)\int_Xf_k\,\mathrm{d}V=\int_Xh^n$, which proves the last assertion.
+\end{proof}
+
+\subsection{Why smooth tests alone are insufficient}
+
+For a probability density $f\geq m>0$, consider the weaker quantity
+\[
+ C_h^{\mathrm{sm}}(f)=\inf_g c_h(g)\|g/f\|_{L^\infty},
+\]
+where $g$ ranges over smooth strictly positive probability densities. The subsolution bound gives $b_h(f)\leq C_h^{\mathrm{sm}}(f)$. Equality holds for smooth $f$, but even positivity of the smooth-test quantity does not imply a scaled subsolution when $v_-(h)=0$.
+
+\begin{theorem}\label{thm:smooth-tests-insufficient}
+If $v_-(h)=0$, there is a probability density $f\in L^1(\mathrm{d}V)$ bounded below by a positive constant such that
+\[
+ b_h(f)=0<C_h^{\mathrm{sm}}(f).
+\]
+Thus no positive multiple of $f\,\mathrm{d}V$ is dominated by an extended Monge--Amp\`ere measure, although every smooth comparison test gives a common positive bound.
+\end{theorem}
+\begin{proof}
+We first note that bounded normalizers are continuous under $L^p$ convergence to a nonzero bounded density, for any fixed $p>1$. Indeed the Gauduchon trace inequality bounds the constants above, and the lower $L^p$ density estimate bounds them away from zero. The normalized continuous solutions then have uniformly bounded $L^p$ right-hand sides. Uniform compactness and uniqueness of the scalar identify every subsequential limit. This is exactly the compactness argument in the proof of \cref{thm:kn-continuous}.
+
+Let $(U_i)_{i\geq1}$ be a countable basis of nonempty open subsets of $X$. We construct numbers $\alpha_j>0$, bounded densities $q_j\not\equiv0$, and closed nowhere dense sets $K_j$ such that
+\[
+ \int_Xq_j\,\mathrm{d}V\leq1,\qquad
+ \operatorname{supp}q_j\subset K_j,\qquad
+ c_h(q_j)\leq\alpha_j2^{-j}.
+\]
+Start with $\alpha_1=1/4$. Once $\alpha_j$ is chosen, the identity between lower mass and the infimum of smooth normalization constants gives a smooth strictly positive probability density $g_j$ with $c_h(g_j)<\alpha_j2^{-j}$. Choose a closed nowhere dense $K_j$ so that $q_j=g_j\mathbf1_{K_j}$ is sufficiently close to $g_j$ in $L^2$ for the displayed scalar bound to hold. Such sets exist: remove an open dense set of arbitrarily small measure from $X$; boundedness of the fixed $g_j$ makes the $L^2$ error arbitrarily small. Choose it small enough also that $q_j$ is nonzero.
+
+After choosing $K_1,\ldots,K_N$, put
+\[
+ m_N=\min_{1\leq i\leq N}
+    \mathrm{d}V\left(U_i\setminus\bigcup_{j=1}^NK_j\right)>0.
+\]
+Each set inside the minimum is nonempty and open. Choose
+\[
+ 0<\alpha_{N+1}\leq
+       \min\{\alpha_N/2,\ 2^{-N-2}m_N\},
+\]
+and continue. In particular,
+\[
+ \sum_{j>N}\alpha_j\leq2\alpha_{N+1}
+             \leq2^{-N-1}m_N.
+\]
+The function $Q=\sum_j\alpha_jq_j$ is nonnegative and integrable. Its essential infimum on every nonempty open set is zero. To see this on $U_i$, take $N\geq i$ and remove the first $N$ sets $K_j$. On the remaining set the first $N$ summands vanish. Markov's inequality bounds the measure where the tail exceeds $2^{-N}$ by
+\[
+ 2^N\sum_{j>N}\alpha_j\int_Xq_j\,\mathrm{d}V
+       \leq m_N/2.
+\]
+The remaining set originally has measure at least $m_N$. A positive-measure subset therefore satisfies $Q\leq2^{-N}$. Let $N\to\infty$ and use the basis property.
+
+Set $M=\int_X(1+Q)\,\mathrm{d}V$ and $f=(1+Q)/M$. If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then the bounded comparison lemma gives
+\[
+ \frac{a\alpha_j}{M}\leq c_h(q_j)\leq\alpha_j2^{-j}
+ \quad\text{for every }j.
+\]
+This is impossible. Hence $b_h(f)=0$.
+
+Finally let $g$ be any smooth strictly positive probability density and put $R=\|g/f\|_\infty$. The inequality $g\leq R(1+Q)/M$ almost everywhere forces $g\leq R/M$ everywhere. Otherwise continuity would give a nonempty open set on which $g>R(1+\varepsilon)/M$ for some $\varepsilon>0$, contradicting the essential infimum property of $Q$ on that set. Order and homogeneity of the scalar now give
+\[
+ R c_h(g)\geq M c_h(1).
+\]
+The constant test $g=1$ attains this value, since $\operatorname*{ess\,inf}_XQ=0$. Thus
+$C_h^{\mathrm{sm}}(f)=M c_h(1)>0$, as required.
+\end{proof}
+
+The distinction is caused by the order restriction on a smooth test: it cannot use a measurable increase of a density whose essential lower value is unchanged in every open set. Bounded measurable tests retain this information. The theorem concerns subsolution existence for individual $L^1$ densities. A characterization of exact normalized equations at $b_h(f)$, including their natural singularity class and finite-mass compactness, remains a separate problem.

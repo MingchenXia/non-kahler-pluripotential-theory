@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint39: individual-density subsolutions
+
+Integrated Section13.23: bounded density truncations determine the attained maximal scaled-subsolution coefficient for every nonzero nonnegative L1 density, without BMP or positive lower mass. A nowhere-dense-support construction disproves sufficiency of positive smooth-test bounds when lower mass is zero. The Lp and Kähler constants are identified, while exact equation existence at the threshold and its singularity class remain explicit problems in Section32.2. The bounded Rethlas audit passed; all 16 statement and six reference records were read, with no errors or gaps and runner exit0. The 653-page PDF matches the inspected preview. New pages and affected transitions were viewed; no errors, undefined references or overfull boxes. Checkpoint38, the standalone note, originals and audit submissions are preserved. Further topology deductions remain in a separate unaudited note. Fresh reconstruction and private synchronization are recorded separately.
+
+## 22 September 2026 — Pending individual-density subsolution draft
+
+Wrote a research-only supplement giving a proposed attained threshold from bounded density truncations and an adaptive nowhere-dense-support construction showing the limitation of smooth tests. Submitted the full proof for bounded audit `individual_density_subsolutions_01`. It is not integrated in checkpoint38, and no correctness or novelty claim is made before review. The checked book and archive remain unchanged.
+
 ## 22 September 2026 — Checkpoint38: complete the first whole-manuscript pass
 
 Read Chapters 30–32, every nested proof input and the appendix, completing the first systematic root reread of the book. Four source edits supply the residual-nefness proof, use the direct divisorial approximation estimate, reuse pointedness for Lee–Gauduchon lineality, and consolidate the appendix's local ideal-equivalence proof with Chapter28. The noncompact local scope was already proved in the appendix. All Kähler, properness, density and same-metric assumptions remain explicit. The 649-page PDF matches the inspected preview on every page; twelve changed and five adjacent pages were viewed. No errors, undefined references or overfull boxes; the existing underfull bibliography line remains. Original sources, the note and checkpoint37 outputs are preserved. Fresh reconstruction and private synchronization are recorded separately. No new independent audit; the research and further focused checking remain active.

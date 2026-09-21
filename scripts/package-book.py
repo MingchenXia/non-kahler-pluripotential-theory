@@ -100,6 +100,11 @@ for name in (
     "research/editorial/chapters-16-26-map.json",
     "research/editorial/chapters-27-29-map.json",
     "research/editorial/chapters-30-appendix-map.json",
+    "research/editorial/individual-density-map.json",
+    "research/editorial/individual-density-review.md",
+    "research/editorial/section_individual_density_subsolutions.tex",
+    "research/editorial/individual-measure-tests.md",
+    "research/editorial/individual-density-followup.md",
     "research/editorial/chapters-30-appendix-review.md",
     "research/audits/build-snapshot-38.json",
     "research/editorial/chapters-27-29-review.md",
@@ -220,6 +225,8 @@ Checkpoint36 records the full root reread of Chapters16–26 and all their input
 Checkpoint37 completes the root reread of Chapters 27–29 and all twenty inputs. Three proof simplifications reuse established divisorial, envelope and descent results without changing theorem scope. The ledger now covers Chapters 1–29; Chapters 30–32, the appendix and research remain incomplete.
 
 Checkpoint38 completes the first systematic root reread of all 32 chapters, every nested proof input and the appendix. Four edits supply a residual-nefness proof and reuse established divisorial, cone and local ideal arguments. All exact hypotheses remain explicit. The review and reversible map record the scope; this is not whole-book certification. Research and further focused checks remain active.
+
+Checkpoint39 adds the attained individual-L1 subsolution threshold and a counterexample to sufficiency of smooth comparison tests in Section13.23. The bounded audit passed; exact threshold equations and their singularity class remain an explicit problem in Section32.2. The follow-up topology note is unaudited and not included in the book. The compiled manuscript has653 pages.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

@@ -1,5 +1,7 @@
 # Smooth comparison tests for an individual right-hand side
 
+**Update, 22 September 2026:** the positivity question for smooth tests below has a negative answer in the supplement integrated as Section13.23 of checkpoint39. Its bounded audit `individual_density_subsolutions_01` passed. Bounded truncation constants instead give an exact attained threshold for scaled subsolutions. The original note is retained below as research history; its first remaining question is no longer open. Exact threshold equations and geometric interpretations remain separate.
+
 21 September 2026. Research note, not integrated into the book and not independently audited. The short deductions below use checkpoint30 Lemma13.22.1. The possible converse is a question, not a theorem or a claim of novelty.
 
 Fix a Hermitian form h and a smooth positive probability volume dV. For a smooth strictly positive probability density g, write c_h(g) for the scalar of the normalized smooth equation MA_h(v)=c_h(g)g dV. For a measurable probability density f with f>=m>0 almost everywhere, define
