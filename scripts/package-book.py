@@ -114,6 +114,9 @@ for name in (
     "research/editorial/smooth-dual-regularity-review.md",
     "research/editorial/section_smooth_dual_regularity_v2.tex",
     "research/editorial/section_smooth_dual_sharpness.tex",
+    "research/editorial/smooth-dual-sharpness-map.json",
+    "research/editorial/smooth-dual-sharpness-review.md",
+    "research/editorial/section_smooth_dual_sharpness_v2.tex",
     "research/editorial/positive-lower-threshold-review.md",
     "research/editorial/tail-divisor-review.md",
     "research/editorial/section_root_tail_continuity.tex",
@@ -274,6 +277,8 @@ Checkpoint43 integrates the passed positive-lower-mass threshold identification 
 Checkpoint44 adds a checked quantitative exponential-damping modulus and scalar/total-variation error bounds. The compiled book has673 pages. A separate smooth-dual regularity draft is explicitly unreviewed and is not book content. No general zero-lower-mass exact equation or capacity conclusion is inferred from the error modulus.
 
 Checkpoint45 proves smooth exact threshold equations under smooth strictly positive dual attainment in dimension at least two, without mass properties or root tails. The compiled book has675 pages. A separate closed-background and nonclosed zero-density sharpness draft is explicitly unreviewed and is not book content.
+
+Checkpoint46 adds the checked uniform exponential-limit consequence, closed-background characterization and nonclosed zero-density construction under smooth dual attainment. The book has679 pages. General singular-current regularity, vanishing-lower-mass individual equations and degenerate-density selection remain open outside the stated regimes.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

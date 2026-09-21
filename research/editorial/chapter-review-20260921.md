@@ -61,3 +61,5 @@ Checkpoint43 rereads the Chapter14 finite-measure comparison, dominated compactn
 Checkpoint44 checks the quantitative exponential-damping proposition and the Chapter6 uniform-moment, Chapter13 root-norm and Chapter32 interfaces. Its bounded audit passed. The full norm is retained to avoid a hidden upper-mass assumption; the preceding error discussion is consolidated. See exponential-tail-modulus-review.md.
 
 Checkpoint45 checks the Chapter27 trace/duality interfaces and Chapter32 proof boundary. The regularity proof separates coefficient matrices from nonlinear products, uses a short first-order bootstrap and merges the old rigidity corollary without losing its label. The bounded audit passed. See smooth-dual-regularity-review.md.
+
+Checkpoint46 checks the smooth-dual sharpness and exponential-selection consequences and updates the Chapter32 uniqueness interface and reading guide. The closedness and dimension assumptions are tested by explicit examples. The preface, conventions and Chapter1 were reread without further mathematical edits. See smooth-dual-sharpness-review.md.

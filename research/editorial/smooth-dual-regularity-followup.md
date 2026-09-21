@@ -1,5 +1,7 @@
 # Smooth positive dual attainment and exact regularity
 
+**Checkpoint46 update:** the closed-background characterization, the nonclosed example, the dimension-one comparison and the uniform exponential-limit consequence passed smooth_dual_sharpness_01 and are integrated. Both earlier proposal versions remain preserved.
+
 **Checkpoint45 update:** the v2 regularity lemma and corollary passed smooth_dual_regularity_01 and are integrated with the former rigidity label retained. The original proposal below is preserved as history. The closed-background observation is now developed, with a nonclosed zero-density example and the dimension-one comparison, in section_smooth_dual_sharpness.tex; that separate draft is unreviewed and outside the book.
 
 22 September2026. Unaudited proposed follow-up, not production book content. The exact draft is section_smooth_dual_regularity.tex, saved in research/editorial and awaiting its own bounded audit.

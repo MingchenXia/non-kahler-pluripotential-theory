@@ -14,9 +14,24 @@ The book distinguishes a closed background on a compact complex manifold from a 
 
 Read Section13.22 for the exact equivalence between positive lower mass and normalized solvability for every finite non-pluripolar measure. The diagonal-density proof allows arbitrary singular candidates and infinite mass. Its counterexample density has a positive lower bound but belongs to no Lp,p>1; obstructing densities are L1 dense. Smooth and Lp existence, and unbounded exponential solvability, are separate issues.
 
-Section27.15 reconstructs the elliptic threefold with zero lower mass for every Hermitian metric. Its explicit balanced metric has finite upper mass24pi and a vertical Dirichlet formula. The smooth positive ddc-exact(2,2)-form excludes pluriclosed metrics and closed Kähler currents. Compare with the Hopf example to see the independence of the two mass properties. Section32.5 replaces the former universal-positivity problem by sufficient-geometry and fixed-density questions.
+Section27.16 reconstructs the elliptic threefold with zero lower mass for every Hermitian metric. Its explicit balanced metric has finite upper mass24pi and a vertical Dirichlet formula. The smooth positive ddc-exact(2,2)-form excludes pluriclosed metrics and closed Kähler currents. Compare with the Hopf example to see the independence of the two mass properties. Section32.5 replaces the former universal-positivity problem by sufficient-geometry and fixed-density questions.
 
 For linear geometry, read Sections24.8–24.9, Corollary25.2.1 and Proposition29.1.2. Continuous Gauduchon-normalized representatives control pullback on a fixed modification. Finite exceptional divisors describe the exact change of canonical divisorial ordinary types, including a cocycle and total-variation approximation. The compact cone base is linear; none of these statements asserts nonlinear mass continuity.
+
+## Individual densities: thresholds, equations and limits
+
+Sections13.23–13.25 start with a nonzero nonnegative L1 density f. Its threshold b_h(f) is the largest scaled density dominated by an extended Monge–Ampère measure, and that subsolution threshold is attained. The Gauduchon formula computes it exactly. Positivity of the threshold alone does not yet give a general exact equation when lower mass vanishes.
+
+The root space has two distinct norm components, Ln and rho_h. Positive lower mass makes every Ln root admissible. Finite upper mass makes rho_h control the Ln norm. The closure of bounded roots is characterized by uniform Gauduchon tails. Section27.11 uses those tails for compact current attainment and supporting probabilities; a compact current maximizer need not be smooth.
+
+| Additional hypothesis | Proved conclusion |
+|---|---|
+| f belongs to Lp, p>1 | A continuous exact equation with scalar b_h(f); normalized positive-exponent solutions are uniformly precompact. Uniqueness of their limits needs a further argument. |
+| Positive lower mass | An exact threshold equation in the minimal envelope class for every such L1 density. Section14.8.1 gives capacity convergence along each normalized L1-convergent subsequence. |
+| Uniform root tails, in dimension at least two | Attainment in the compact Gauduchon current problem. Section13.29.1 gives scalar and total-variation errors for exponential damping, without a general capacity conclusion. |
+| A smooth strictly positive current maximizer, in dimension at least two | Every genuine threshold subsolution is smooth and exact, with uniqueness modulo constants. The whole normalized positive-exponent family converges uniformly. |
+
+The last row uses the trace equality and a local first-order regularity argument, not a mass bound. In a Kähler background, smooth strict positivity of the density is equivalent to this smooth dual attainment. A nonclosed background can behave differently: Example27.11.1 constructs, on every compact complex manifold of dimension at least two, a Hermitian background and a density vanishing on an open set with a smooth strictly positive maximizing test. Read this with the Chapter11 nonuniqueness examples; the zero set alone does not decide uniqueness.
 
 ## Analytic approximation and I-goodness
 
@@ -65,6 +80,7 @@ Chapter 11 collects positive uniqueness results and counterexamples. Read their 
 | W2,n potentials, n = 2 or 3 | Integrated rigidity for density positive almost everywhere; an additional torsion sign is required in dimension three. |
 | C2 potentials, C1,1 density | A square-root sublevel criterion; inverse square-root integrability is sufficient. |
 | Guan–Li equation background | Bounded uniqueness for nonzero nonnegative Lp density, p > 1. |
+| Genuine threshold subsolutions, dimension at least two | A smooth strictly positive Gauduchon current maximizer forces smoothness and uniqueness modulo constants; see Section27.11.3. |
 
 Smooth densities with infinite-order or exactly quadratic zeros on two real hypersurfaces admit uncountably many normalized smooth solutions. A further construction prescribes a real analytic density with two distinct smooth solutions in every dimension at least three. It proves sharpness of the inverse-power threshold; its positive-density region has three components.
 
@@ -87,4 +103,4 @@ For the **original symmetric density**, Chapter 13 proves that the whole normali
 
 Chapter 32 relates analytic questions to bigness, the Fujiki class, null loci, Chern–Ricci flow, balanced and pluriclosed metrics, and Morse inequalities. The open uniqueness question now concerns extension of the connected-positive-region criterion to bounded potentials. General selection is also unresolved.
 
-`proof-obligations.md` gives the proof boundary; `comparison.md` maps the original book's subjects; `literature.md` records primary versions and assumptions. This revision reviews chapter openings and endings and polishes selected arguments. A full line-by-line editorial pass of every chapter remains in progress.
+`proof-obligations.md` gives the proof boundary; `comparison.md` maps the original book's subjects; `literature.md` records primary versions and assumptions. The first systematic root reread covers all32 chapters, their nested inputs and the appendix. Subsequent additions have focused reviews, whose exact scope is recorded in research/editorial/chapter-review-20260921.md and the individual review files. This is not a claim of whole-book certification; correctness and exposition work continue.

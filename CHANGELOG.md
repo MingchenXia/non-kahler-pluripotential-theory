@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint46: sharpness and uniform selection
+
+Proved whole-family uniform convergence under smooth dual attainment by reusing the earlier Lp compactness result. Characterized smooth dual attainment for a closed Hermitian background, and constructed a nonclosed Hermitian background with smooth maximizing test and density vanishing on an open set on every compact complex manifold of dimension at least two. The dimension-one comparison explains the regularity theorem's restriction. The bounded audit passed. Updated the Chapter32 uniqueness discussion and reading guide, preserving their general open problems. The 679-page output matches the inspected preview; eleven pages were rendered and read, and compilation has no errors, undefined references or overfull boxes. Original references, checkpoint45 and the standalone note are preserved.
+
+## 22 September2026 — Sharpness of the smooth dual hypothesis under review
+
+Submitted the closed-background characterization, the nonclosed zero-density construction and the curve comparison and the uniform-convergence consequence to Rethlas. These remain outside the checked checkpoint45 book until their own proof review and output inspection pass.
+
 ## 22 September2026 — Checkpoint45: regularity from a smooth maximizing current
 
 Strengthened the fixed smooth dual-attainment corollary to a smooth exact equation and a smooth nonnegative density root in dimension n>=2. A short first-order bootstrap avoids an unproved Sobolev product identification. The prior rigidity label remains available, and the Chapter32 boundary is synchronized. The bounded audit passed; eight statement and six reference records were read. The675-page book matches the inspected preview, with nine rendered pages and no errors, undefined references or overfull boxes. Original sources, checkpoint44 and the standalone note are preserved. The closed-background and zero-density sharpness follow-up is explicitly unreviewed.
