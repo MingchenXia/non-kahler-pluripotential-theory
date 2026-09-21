@@ -22,6 +22,11 @@ and in the retained audit records; they are not fabricated as earlier Git commit
   supplied template and immutable audit records is preserved. Remote privacy and
   head identity are checked when synchronization runs.
 
+The initial 647-file import was pushed and verified against GitHub `main`;
+repository visibility is private. The hourly synchronization heartbeat is active.
+The earlier paused research heartbeat remains paused. Setup verification is
+recorded in `research/audits/github-source-setup.json`.
+
 ## Checkpoint29 — Last checked manuscript release
 
 - Exact curve-fibration traces on all compact models, fixed-model divisorial

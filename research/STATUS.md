@@ -26,6 +26,13 @@ research heartbeat or initiate new mathematical work. Generated outputs, tempora
 files, downloaded full texts and raw verifier runtime state remain local. A draft
 commit does not change the mathematical review or release status.
 
+The initial source import `5acec87d0bbc86470cfb7d9a407c19ec9cb5ac22` was
+pushed and matched the remote `main` head; GitHub reports visibility `PRIVATE`.
+All 647 tracked files matched their source bytes. The synchronization heartbeat
+is active, and the older research heartbeat remains paused. An initial HTTP 400
+was resolved by repository-local transport settings and a normal retry.
+See `research/audits/github-source-setup.json` for the setup checks.
+
 ## Current delivery: checkpoint29
 
 The book is **621 pages**, with 32 chapters and an appendix. The delivered PDF and immutable `output/snapshots/checkpoint-29.pdf` have SHA256 `4cc1da99a74911ff518603378a21283d7652dd3e3139e43e6a181f916b420c86` and 2,701,474 bytes. The source archive has 537 files and 536 verified manifest entries, 2,221,724 bytes, SHA256 `562be480a717c48606c002db660e3259d105c49b74c09bc96e8fb4b29691665d`. A fresh extraction independently rebuilt the 621-page book and 17-page note; every page text matches delivery. All manifest checksums and packaged workspace files match. Portability is recorded in `research/audits/source-package-portability-29.json`. No release, build, visual-review or packaging work remains pending.
