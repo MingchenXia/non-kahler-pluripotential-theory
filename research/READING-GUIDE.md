@@ -32,6 +32,8 @@ The root space has two distinct norm components, Ln and rho_h. Positive lower ma
 | A smooth strictly positive current maximizer, in dimension at least two | Every genuine threshold subsolution is smooth and exact, with uniqueness modulo constants. The whole normalized positive-exponent family converges uniformly. |
 | A smooth semipositive maximizer positive off a proper analytic set, in dimension at least two | The exact threshold solution is unique modulo constants and smooth off that set. The whole normalized exponential family converges in L1 with a fixed lower barrier and b<=c_lambda<=b exp(C lambda). |
 
+Corollary27.11.5 gives whole-family uniform exponential convergence for Lp data, p>1, under the semipositive dual hypothesis. Example27.11.2 computes an attained semipositive dual on projective space: the solution is smooth but its density root is not differentiable along the coordinate hyperplanes.
+
 Corollary27.11.4 gives whole-family capacity convergence under the further condition that the threshold solution admits a genuine smaller-background envelope. This holds for a bounded threshold solution; it is not known to follow automatically from smooth semipositive dual attainment.
 
 Section27.11.6 further gives O(lambda) total-variation convergence of the full Gauduchon trace and local O(sqrt(lambda)) coefficient convergence of the full currents off the degeneracy set. These are linear-current estimates, not rates for the potentials or their Monge–Ampère measures.

@@ -1,5 +1,13 @@
 # Modification history
 
+## 22 September2026 — Checkpoint53: uniform limits, a projective example and shorter descent proof
+
+Integrated the audited Lp uniform-limit corollary and explicit semipositive projective maximizer, distinguishing smooth solution potentials from density-root regularity. Completed the second focused reading of Chapters23–26 and all nested inputs. Chapter23 now uses the internal bounded uniqueness theorem on its closed base, shortening the reduced-equation proof. Six book files change. The687-page build and31 affected/adjacent pages were checked; general L1 regularity and automatic smaller-background envelopes remain open.
+
+## 22 September2026 — Semipositive projective example under review
+
+Frozen and submitted an explicit coordinate-square example and the formal Lp uniform-limit corollary. The example tests the exact dual normalization and the loss of density-root regularity on an analytic degeneracy set. Neither is integrated into checkpoint52 yet. The second focused reading now also covers Chapters23–26 and all their nested inputs; their existing mathematical conclusions are retained.
+
 ## 22 September2026 — Checkpoint52: conditional capacity and trace/section review
 
 Integrated the audited capacity corollary under its explicit smaller-background envelope hypothesis. Reread Chapters20–22 and all ten nested inputs; clarified the nonzero section-space condition for comparing Bergman potentials, separated the fibration map from the envelope symbol, checked Cao’s published theorem locator and corrected roman constants. Thirteen book files change. The685-page build and46 affected/adjacent pages were checked. The general capacity and higher-dimensional trace questions remain open.
