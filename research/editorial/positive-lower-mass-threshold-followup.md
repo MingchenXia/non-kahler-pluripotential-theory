@@ -1,0 +1,11 @@
+# Identifying the individual threshold under positive lower mass
+
+22 September2026. Unaudited follow-up draft, not included in checkpoint42. The precise proposed text is `research/editorial/section_positive_lower_mass_threshold.tex`, staged for bounded audit `positive_lower_mass_threshold_01`.
+
+Rereading Chapter14 reveals a short route to the exact coefficient in the PVP regime. Its finite-measure scalar comparison permits the SECOND potential to be any genuine PSH function, not necessarily in the envelope class. If an envelope-class solution has MA(w)=c f dV and any genuine subsolution has MA(s)>=a f dV, comparison gives c/a>=1. Thus c is exactly the maximal global subsolution coefficient b_h(f). The existing general-measure theorem supplies w under v_-(h)>0. No repeated exponential-limit proof is needed for this scalar identification.
+
+The greatest exponential solution from Chapter13 lies above the Chapter14 envelope-class exponential solution. Upward stability therefore puts it in the envelope class. Its normalized measures have the already-proved total-variation limit b_h(f)f dV and a common finite dominator. The earlier fixed-measure continuity theorem then upgrades every L1-convergent subsequence to capacity convergence and identifies its limit as an envelope-class exact solution. Do not claim uniqueness of zero-exponent potentials or convergence of the whole normalized family.
+
+The positive-lower-mass hypothesis is explicit in the standing assumptions before thm:relative-finite-domination. Do not discard it in the scalar comparison. Also E_env is defined by genuine stretched envelopes: the converse from merely P_h[u]=0 is not assumed outside BMP. Use the proved upward-stability proposition directly.
+
+After review, this should tighten the proof boundary in Chapters13,14 and32: the general positive-threshold question is outstanding when lower mass vanishes; PVP already supplies exact existence and subsequential capacity compactness. The results of checkpoint42 remain valid, but their general unresolved-equation language needs this more specific known regime. In particular the Hopf all-L1 case has exact existence at b_h(f), independently of the semipositive-divisor exclusion. No novelty is claimed; this is a synthesis and normalization identification from established chapter results.

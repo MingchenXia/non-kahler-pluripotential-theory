@@ -103,6 +103,16 @@ for name in (
     "research/editorial/individual-density-map.json",
     "research/editorial/individual-stability-map.json",
     "research/editorial/root-tail-map.json",
+    "research/editorial/tail-divisor-map.json",
+    "research/editorial/tail-divisor-review.md",
+    "research/editorial/section_root_tail_continuity.tex",
+    "research/editorial/section_threshold_divisorial_constraints.tex",
+    "research/editorial/section_threshold_divisorial_geometry.tex",
+    "research/editorial/section_threshold_divisorial_geometry_v2.tex",
+    "research/editorial/section_positive_lower_mass_threshold.tex",
+    "research/editorial/section_nef_divisor_threshold.tex",
+    "research/editorial/positive-lower-mass-threshold-followup.md",
+    "research/editorial/nef-divisor-followup.md",
     "research/editorial/root-tail-review.md",
     "research/editorial/section_root_uniform_tails.tex",
     "research/editorial/section_integrable_gauduchon_currents.tex",
@@ -245,6 +255,8 @@ Checkpoint39 adds the attained individual-L1 subsolution threshold and a counter
 Checkpoint40 extends the exact Gauduchon formula to integrable densities, shortens the threshold topology proofs, separates the roles of upper/lower mass in the root space, and constructs greatest exponential solutions from subsolutions. Both bounded audits passed; exact zero-exponent equations and normalized-potential capacity convergence remain open. The compiled book has661 pages. The further root-space tail note is unaudited and not part of the book.
 
 Checkpoint41 identifies the bounded-root closure by uniform tails and proves integrable-current attainment, supporting-probability formulas and trace saturation at the subsolution threshold. Smooth dual attainment gives rigidity of threshold subsolutions. Both bounded audits passed; the preceding trace audit's stale dependency-status finding is preserved and resolved by run02. The compiled book has665 pages. Scalar-rate and divisorial working notes are explicitly unaudited and not book content. No exact rough equation or singular-current wedge is inferred.
+
+Checkpoint42 adds the continuity characterization of root tails, divisorial coefficient loss and geometric restrictions on threshold subsolutions. The weak closure of smooth tests is distinguished from all normalized Gauduchon currents. Two bounded audits passed after the explicit nonzero-density restatement. The compiled book has669 pages. Separate research-only drafts about positive-lower-mass threshold identification and nef divisors are not part of this manuscript checkpoint.
 
 Primary-source versions and checksums are in research/literature.md and
 research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded

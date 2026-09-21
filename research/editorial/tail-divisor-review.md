@@ -1,0 +1,25 @@
+# Tail continuity and divisorial constraints
+
+Checkpoint42 integrates three bounded supplements. This review is not whole-book certification. The prior systematic pass through all32 chapters and the appendix is recorded in chapter-review-20260921.md.
+
+## Proofs and hypotheses
+
+Section27.11.1 characterizes the closure of bounded density roots by continuity under every uniformly bounded logarithmic perturbation tending to zero in measure. The proof uses the earlier uniform-tail estimate and an explicit smooth cutoff construction when it fails. The quantifier allows any fixed uniform bound: it does not claim failure for every prescribed small bound. Multiplicative order intervals are distinguished from unrestricted L1 perturbations. Uniform integrability here concerns all normalized current tests, not just maximizing currents.
+
+Section29.1.1 bounds a subsolution coefficient by b(1-kappa)^n when its full positive current contains an effective real divisor. Its proof only wedges that full current with smooth Gauduchon forms. The trace lower bound and the divisor measure occupy disjoint measure classes, so their masses can be bounded together. At the threshold every smooth maximizing sequence has divisor pairing tending to zero. Under root tails its cluster currents maximize the determinant functional. The exposed face is asserted only in the weak closure of smooth positive tests. The exceptional curve on a blown-up projective plane shows why that closure cannot be replaced by all positive ddc-closed currents: pairing with its smooth Chern representative has negative value on the exceptional current and positive value on every smooth test.
+
+A semipositive representative gives a short matrix proof of divisor exclusion when the density gives no mass to its zero locus. Zero trace against a nonzero positive semidefinite matrix forces the other matrix to be singular. Absolute continuity of the determinant measure then contradicts its positive maximizing value. The nonzero, nonnegative L1 density is explicit in the corollary. On the Hopf example the representative has rank two everywhere, and positive lower mass supplies root tails for every L1 density. Positive coefficients along that divisor remain possible at smaller equation constants, as the earlier residual formulas show. No arbitrary singular-current wedge, exact rough equation, full divisor classification, or nef-volume characterization of bigness is inferred.
+
+The residual-volume section distinguishes fixing a divisor from allowing all genuine potentials in the global threshold. The geometry chapter distinguishes smooth Gauduchon tests for pseudoeffectivity from all current tests for nefness. These clarifications use existing proofs rather than adding parallel arguments.
+
+## Bounded audit
+
+root_tail_divisorial_constraints_01 exited0 and returned correct: all eight statement, eight reference and two synthesis/final records were read, with no errors or gaps. threshold_divisorial_geometry_01 accepted the proof conditional on nonzero density but requested this standing hypothesis explicitly in the corollary. Its five statement/seven reference records, gap and report are preserved. The immutable v2 source adds that assumption without changing any proof. threshold_divisorial_geometry_02 exited0 and returned correct: all five statement, seven reference and two synthesis/final records were read; failed_checks is empty. There are142 checkpoint reports,134 correct and eight historical adverse reports with resolved findings. New follow-up audit positive_lower_mass_threshold_01 is separate and not included in these counts.
+
+## Editorial and output checks
+
+Eight production files changed. The reversible map reconstructs every previous file and all three exact audited sources. Standard environments, the original template and upright differential d are preserved. Complete statements and introductory formulas were checked after pagination adjustments. Seventeen affected or adjacent pages, including contents and Chapters27/29/32 interfaces, were rendered and read. Pages535,536,573 were rerendered after the final changes. The669-page production text matches the final preview on every page. No errors, undefined references or overfull boxes; the existing underfull bibliography paragraph remains. All29 original sources, checkpoint41 PDF/archive and the standalone note are unchanged. Fresh source reconstruction and private synchronization are recorded separately.
+
+## Continuing review
+
+The scalar-rate note remains unaudited apart from its tail-continuity portion now proved here. A new Chapter14 reread suggests a shorter proof of exact threshold existence and subsequential capacity convergence under positive lower mass, and the existing nef-annihilator proposition suggests a zero-volume constraint for nef divisors at the threshold. These two research supplements are separately submitted and are not checkpoint42 book content. The general zero-lower-mass equation and divisor-realization problems remain separate.

@@ -1,5 +1,9 @@
 # Divisorial constraints on threshold Gauduchon tests
 
+**Update, 22 September2026:** Checkpoint42 proves the divisorial coefficient bound, the face statement restricted to the weak closure of smooth tests, and the semipositive-divisor exclusion. The earlier note is preserved as research history; no full divisor realization theorem is asserted.
+
+**Review update:** the trace-saturation dependency is now proved in checkpoint41. The proposed face must be restricted to the weak closure of smooth normalized Gauduchon forms: nonnegativity on every singular Gauduchon current is not established. A new bounded audit checks this precise version and a quantitative coefficient loss using the already-defined kappa. No result below was included in checkpoint41.
+
 22 September2026. Unaudited research note; not book content. This uses the proposed trace-saturation proposition and standard divisor-current calculus. It is not covered by either root-tail or trace audit.
 
 Let h be Hermitian, f>=0 nonzero in L1, b_h(f)>0, and u a threshold subsolution. Suppose the positive current h+dd^c u dominates a[D] for some effective divisor D and a>0. Let beta_D be a smooth Chern representative of {D}, so [D]=beta_D+dd^c ell_D with ell_D locally integrable. Let T_j be smooth strictly positive, dd^c-closed (n-1,n-1)-forms with integral h wedge T_j=1, maximizing the density-root test.

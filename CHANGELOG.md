@@ -1,5 +1,17 @@
 # Modification history
 
+## 22 September2026 — Chapter14 threshold synthesis passed, integration pending
+
+The bounded audit positive_lower_mass_threshold_01 passed with normal exit0 and no errors/gaps. All seven statement and three reference records were read. The short internal deductions identify the exact maximal coefficient and subsequential capacity convergence under positive lower mass, and force zero variational volume for a nef divisor at the threshold. The production book is still checkpoint42; the two audited supplements are research-only until preview and integration checks finish. No zero-exponent potential uniqueness or vanishing-lower-mass existence theorem is asserted.
+
+## 22 September2026 — Checkpoint42: tail continuity and divisorial geometry
+
+Characterized the bounded-root closure by continuity under uniformly bounded logarithmic perturbations. Proved the loss in the global Monge–Ampère coefficient forced by a divisorial component, and the zero pairing of its class with smooth maximizing-test clusters. An exceptional-curve example distinguishes the closure of smooth Gauduchon tests from the full current space. A matrix proof excludes semipositive divisors under the stated density condition, including the Hopf hyperplane for every nonzero nonnegative L1 density. Both bounded reviews passed; the first geometry report's request to restate nonzero density is preserved and resolved. All13 statement and15 reference records of the passing runs were read. The669-page book matches the inspected preview; seventeen pages and the relevant chapter interfaces were checked, with no errors, undefined references or overfull boxes. Chapter14 exact-threshold normalization and a further nef-divisor consequence remain separate research under review.
+
+## 22 September 2026 — Pending tail-continuity and divisorial review
+
+Prepared two research-only supplements: an exact continuity/UI characterization of the bounded-root closure, and a quantitative loss in the Monge–Ampère coefficient forced by a divisorial component. At the maximal coefficient, smooth maximizing-test clusters annihilate its Bott–Chern class. The proposed face is restricted to the weak closure of smooth tests; no general pairing positivity for singular currents is assumed. A bounded audit is pending; the production book remains checkpoint41.
+
 ## 22 September 2026 — Checkpoint41: bounded roots, maximizing currents and threshold traces
 
 Identified the bounded-root closure by uniform Gauduchon tails, extended the compact current supremum to all integrable density roots, and proved attainment and supporting-probability formulas under the tail hypothesis. A local bounded mixed inequality and linear current convergence give the full-current trace estimate for genuine unbounded potentials. An exact error-mass identity gives total-variation trace saturation, and smooth dual attainment gives rigidity up to constants. The two bounded audits passed; the first trace audit's stale dependency-status finding is preserved and resolved by a recheck of the identical proof. All12 statement and seven reference records in the passed runs were read. The665-page book matches the inspected preview, with no errors, undefined references or overfull boxes. Seventeen affected/adjacent pages and interfaces with Chapters4,13,15,27 and32 were checked. Exact rough equations and singular-current products remain outside the claim. Checkpoint40 and original sources are preserved; quantitative-rate/divisorial ideas remain separate unaudited research notes.

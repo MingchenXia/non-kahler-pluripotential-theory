@@ -1,5 +1,7 @@
 # Quantitative questions after the root-tail construction
 
+**Update, 22 September2026:** The continuity characterization is now proved and audited in checkpoint42, Section27.11.1. The quantitative scalar-rate proposal below remains unaudited.
+
 22 September 2026. Research-only deductions, not submitted to either bounded audit for the root-tail/current-attainment or trace-saturation supplements. Do not present these as checked book results.
 
 Let p=f^(1/n) belong to D_h^0, be nonnegative and nonzero; write R=rho_h(p)=b_h(f)^(-1/n). Let u_lambda be the greatest positive-exponent solution from checkpoint40, v_lambda=u_lambda-sup u_lambda<=0, and c_lambda=exp(lambda sup u_lambda). The existing theorem gives b<=c_lambda<=b_h(exp(lambda v_lambda)f).
