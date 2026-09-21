@@ -3,6 +3,24 @@
 Git history begins on 21 September 2026. Earlier checkpoints are documented below
 and in the retained audit records; they are not fabricated as earlier Git commits.
 
+## 2026-09-21 — Linear-current audits and lower-mass research drafts
+
+- Complete and read the independent audits of continuous Bott–Chern current
+  representatives and the corrected exceptional-divisor, affine-class and cone
+  arguments. Both pass; their integration is still pending.
+- Reconstruct the supplied lower-mass counterexample with the book's normalization.
+  Draft a universal-solvability criterion, an L1 obstruction measure, and the
+  example's balanced metric, finite upper mass and exact-form obstructions.
+  These three new mathematical pieces have separate audits in progress.
+- Verify Siu's analyticity theorem in the author's scan of the published p.53;
+  correct its locator to Main Theorem in a separate version, preserving the
+  submitted source. No mathematical conclusion changes in this correction.
+- Prepare a combined private preview and revise affected equation, Gauduchon and
+  research interfaces, including the obsolete universal endpoint problem.
+  Compilation succeeds; final visual review, proof review and release remain
+  pending. The delivered book is unchanged.
+- This is a research snapshot, not a checked manuscript release or novelty claim.
+
 ## 2026-09-21 — Cover correction
 
 - Remove “Research manuscript / prepared for Mingchen Xia” from the book cover

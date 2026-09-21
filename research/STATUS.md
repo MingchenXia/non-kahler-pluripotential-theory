@@ -1,18 +1,72 @@
 # Current research status — 21 September 2026
 
-The goal remains active and incomplete. The original twenty-hour period has ended; subsequent user approvals authorize continued work. The earlier heartbeat remains paused. No timer or automation was restarted. This is a completed progress turn, not a blocked turn.
+The goal remains active and incomplete. The user's latest instruction is to continue sustained work without stopping at intermediate milestones. The older research heartbeat remains paused; the separate GitHub synchronization heartbeat remains active. This continuation is progress, not a blocked turn. Production remains checkpoint29 with its cover correction.
 
 ## Active continuation: checkpoint30
 
-The preceding goal turn was progress: checkpoint29 was delivered and independently rebuilt. This turn develops a Gauduchon scalar normalization for closed Bott–Chern currents, proves fixed-modification pullback continuity and mass control, and identifies finite exceptional divisors comparing the full countable trace currents. The corresponding ordinary-type and affine-class identities are also reconstructed. Production remains checkpoint29.
+Two independent Rethlas audits are now complete and have been fully read:
+`gauduchon_current_pullback_01` (12 statement checks, 6 reference checks) and
+`trace_exceptional_divisors_02` (14 statement checks, 7 reference checks). Both
+returned correct, with no critical errors or gaps, and normal runner exit0.
+Each has two report records and no failed-check records. The first discharges the
+second's conditional current-pullback premise. All remaining records of the
+incomplete v1 trace audit were also read. Its rational-coefficient correction and
+original submission remain preserved. There are now 127 completed reports: 121
+correct and 6 historical adverse reports with resolved findings. This count will
+change when the current lower-mass audits finish; it is not a whole-book certification.
 
-The two normal approved Rethlas runs `gauduchon_current_pullback_01` and `trace_exceptional_divisors_01` were interrupted by Codex usage exhaustion. Their old process handles no longer exist, and neither final verification JSON nor final runner text was written. This was confirmed on 21 September by reading the saved logs; the earlier statement that the runs were live is superseded. The first run's log says its mathematical audit found no errors or gaps, but this is not a completed report. One final memory append was rejected by automatic approval review because the account had reached its usage limit. All verifier records remain untouched. Fresh account status now reports ordinary usage allowed and 0% of the reported weekly bucket used; no reset credit was consumed.
+The completed drafts prove continuous Gauduchon-normalized Bott–Chern
+representatives, fixed-modification pullback with linear mass control, countable
+divisorial pullback, finite exceptional differences between trace currents,
+ordinary-type and affine-class identities, and a compact base of the closed
+pseudoeffective cone. They still await final layout review and production integration.
 
-Root found a rational-coefficient convention issue in the second submission's example and preserved its first submission unchanged. Corrected source `section_trace_exceptional_divisors_v2.tex` uses a positive rational coefficient, as the original book requires for analytic singularities. Its separate bounded audit is prepared but has not started. The affine-class corollary and pseudoeffective-cone compactness proof are included in that corrected audit. See `research/editorial/trace-exceptional-author-correction.md`. Recover interrupted audits through normal authorized Rethlas execution without overwriting their records.
+The supplied eight-page manuscript `volinf0_vibe.pdf` has been read in full and
+reconstructed in `research/editorial/section_vanishing_lower_mass.tex`. The source
+uses twice the book's ddc normalization; all forms and constants were reconstructed
+in the book convention. Its theorem supplies a compact threefold with zero lower
+mass for every Hermitian metric. The draft includes higher-dimensional examples,
+products with simultaneous upper/lower failure, and precise fixed-density versus
+varying-density consequences. Independent audit `vanishing_lower_mass_01` is active.
+The source is evidence, not an assumed proof input.
 
-The private preview is `tmp/checkpoint-30-preview` (627 pages); four proof sources and seven existing chapter interfaces are prepared. The second build succeeded without errors, undefined references or overfull boxes. Visual inspection, final proof review, integration and release remain pending. Production remains checkpoint29. No original source or verifier memory/result was edited. No root collaboration agents were spawned.
+Two further deductions are drafted, with independent audits active:
+- `section_lower_mass_solvability.tex`, audit `lower_mass_solvability_01`: smooth
+  normalization bounds every scaled subsolution, even of infinite extended mass.
+  A diagonal sum of smooth densities gives an L1 probability density bounded
+  below by a positive constant with no positive scaled subsolution when v_-=0.
+  Combined with the prior existence theorem this characterizes universal
+  non-pluripolar solvability by positive lower mass, without BMP. The obstructing
+  densities are L1 dense and the constructed density belongs to no Lp, p>1.
+  Unbounded exponential solvability is deliberately left separate.
+- `section_lower_mass_metric_geometry.tex`, audit `lower_mass_metric_geometry_01`:
+  the explicit quotient metric is balanced, has ddc omega=2 alpha wedge beta,
+  volume and upper mass 24pi in the book convention, and an exact vertical
+  Dirichlet formula. The positive exact (2,2)-form excludes pluriclosed metrics
+  and closed Kähler currents. Conditional on the lower-mass construction, this
+  gives BMP without positive lower mass and clarifies their independence.
 
-The user supplied `https://mingchenxia.github.io/Papers/volinf0_vibe.pdf` on 21 September. The web reader could not open it; a normal approved network download succeeded and is saved in `tmp/volinf0_vibe.pdf`, with extracted text in `tmp/volinf0_vibe.txt`. A first full reading of the eight-page paper is complete; detailed proof review and incorporation remain the current priority, especially lower-volume claims, equation hypotheses and open problems. The interruption and current recovery were explained to the user.
+Root visually verified Siu's original published p.53 in the author-hosted scan:
+analyticity is the **Main Theorem**, not “Theorem I”. The original submission is
+preserved; `section_vanishing_lower_mass_v2.tex` changes only this locator. The
+correction record identifies the exact source and no mathematical change.
+
+A combined private preview is in `/private/tmp/non-kahler-20260921/preview`.
+The initial combined build had 639 pages with no errors, undefined references or
+overfull boxes; the metric supplement and rewritten geometric question have since
+been added and compiled. Visual review, current audit completion, production
+integration and source-archive reconstruction remain pending. The older 627-page
+preview in `tmp/checkpoint-30-preview` remains preserved. Do not rerun the new
+non-idempotent `integrate-preview.py` in the temporary continuation directory.
+
+Three audit processes are currently active. Two interrupted runs were resumed
+only after OS inspection confirmed that their old processes had ended. Normal
+network retries and approval timeouts were retained, without approval or TLS
+bypass. The resumed trace run completed despite a desktop thread-store projection
+warning; its durable verifier output and complete records were read. The root
+agent never edits verifier memory or results. Temporary preview changes have not
+replaced the last checked book. Source snapshots remain explicitly drafts until
+review and release checks complete.
 
 ## GitHub source history and synchronization
 
@@ -55,7 +109,7 @@ Corollary24.5.1 combines the fixed-model Gauduchon mass bound with a smooth Bott
 
 ## Proof and editorial verification
 
-Both normal approved Rethlas runs `curve_fibration_traces_01` and `divisorial_trace_types_01` completed with verdict correct and runner exit0. Handles15605 and69730 are closed. The first has 17 sequential and 10 reference records; the second has 7 sequential records containing 25 ordered deductions and 6 reference records. Each has one empty-finding failed-check record and two report records, consisting of the complete report and final-output-written event. All records, complete result JSON and runner final text were read. There are 125 completed reports: 119 correct and 6 historical adverse with resolved findings. No live audit or current adverse finding remains.
+Both normal approved Rethlas runs `curve_fibration_traces_01` and `divisorial_trace_types_01` completed with verdict correct and runner exit0. Handles15605 and69730 are closed. The first has 17 sequential and 10 reference records; the second has 7 sequential records containing 25 ordered deductions and 6 reference records. Each has one empty-finding failed-check record and two report records, consisting of the complete report and final-output-written event. All records, complete result JSON and runner final text were read. At checkpoint29 there were 125 completed reports: 119 correct and 6 historical adverse with resolved findings. No audit was live at that release; current runs are recorded above.
 
 The second audit independently checked the domination lemma and corollary without assuming the first verdict. Its curve-fibration citation was contextual, not a proof premise. It also verified the standard coefficient-restriction input in Demailly's book. These bounded independent audits are not formal verification or novelty certification. In the first run, record5 was persisted after records6–10 following a recovered append error; it explicitly records the earlier mathematical reading order. Normal sampling/retrieval timeouts recovered. No live run was restarted, no approval or TLS control was bypassed, and root never edited verifier memory or results.
 

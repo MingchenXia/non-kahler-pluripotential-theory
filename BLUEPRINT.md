@@ -23,31 +23,32 @@ distinguish proved results, external inputs, conditional results and open proble
   The 21 September cover correction removes the two-line preparer credit; all
   body pages are unchanged. Its checks are in
   `research/audits/cover-revision-2026-09-21.json`.
-- **Pending checkpoint30:** four proof drafts under `research/editorial/` develop
-  continuous Gauduchon-normalized Bott–Chern representatives, pullback of countable
-  divisorial currents, exceptional divisors between trace models, affine class
-  identities and compact bases of the pseudoeffective cone. These drafts have not
-  replaced the released chapters. The two initial Rethlas runs were interrupted
-  by usage exhaustion; neither has a final report. Use the corrected
-  `section_trace_exceptional_divisors_v2.tex` for further review, preserving v1.
-- **New supplied paper:**
-  <https://mingchenxia.github.io/Papers/volinf0_vibe.pdf> claims a compact complex
-  threefold with zero lower Hermitian Monge–Ampère mass. It has been downloaded,
-  but its full proof has not yet been checked or integrated. Do not describe that
-  claim as a verified theorem of this book before completing the review.
+- **Pending checkpoint30:** continuous Bott–Chern representatives and corrected
+  exceptional-divisor/affine-class/compact-cone drafts have passed their bounded
+  independent audits. Their exact hypotheses and the rational analytic coefficient
+  correction are preserved. They await integration and final output inspection.
+- **New lower-mass material:** the supplied counterexample has a complete
+  reconstruction under independent review. Two additional drafts develop the
+  equivalence between positive lower mass and universal non-pluripolar solvability,
+  and the quotient metric's balanced property, finite upper mass and geometric
+  obstructions. The latter deductions have their own bounded reviews. None has
+  replaced the checked release. Correct the original Siu locator to Main Theorem,
+  p.53, using the verified published scan; preserve the original submission.
 
 ## Immediate work
 
-1. Read and audit the new lower-mass counterexample. Track its normalization,
-   Gauduchon cone separation, concentration argument and Hermitian Calabi–Yau step.
-   Revisit every claim or open problem about universal positive lower mass, and
-   retain the precise positivity assumptions needed by equation results.
-2. Complete the interrupted checkpoint30 audits through normal authorized Rethlas
-   execution. Preserve the audit history and rational-coefficient correction.
-   Review the four proof drafts and all affected chapter interfaces.
-3. Integrate only appropriately reviewed claims, compile, inspect affected pages,
-   and produce a new checked release with reproducible source and audit records.
-4. Continue a chapter-by-chapter exposition and proof pass across the entire book.
+1. Complete and read the three lower-mass audits. Verify the measure-diagonal
+   argument for arbitrary singular candidates, every normalization in the geometric
+   example, and the balanced/upper-mass calculation. Keep conditional dependencies
+   explicit until each premise is reviewed.
+2. Replace the obsolete universal positive-lower-volume question by questions
+   about sufficient geometry, admissible individual measures, and unbounded
+   exponential equations. Keep fixed-density volume separate from its density
+   infimum. The preliminary preview already contains the corresponding interfaces.
+3. Inspect the combined preview, integrate reviewed statements, compile and
+   reconstruct the source archive before declaring checkpoint30 checked.
+4. Continue the chapter-by-chapter proof and exposition pass with the entire SGPT
+   singularity, I-goodness, trace and Bergman scope retained.
 
 ## Longer research directions
 
