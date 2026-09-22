@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint76: a shorter nef-difference estimate
+
+The Chapter30 bigness proof now uses Cauchy--Schwarz to give Popovici's known coefficient k, replacing the weaker 4k level-set estimate. Its theorem, attribution and the domination constant choice are synchronized. The other 14 formal statements in the edited files are unchanged. The bounded Rethlas run nef_schwarz_01 returned correct. The 701-page manuscript and all 12 selected pages passed the stated output checks; source reconstruction is recorded separately. Closedness remains essential for the fixed top and mixed integrals. No unrestricted Hermitian bigness criterion or novelty is claimed.
+
 ## 22 September 2026 — Checkpoint75: selected Gauduchon tests in geometry
 
 The divisorial threshold proposition and its two geometric corollaries now require uniform integrability only along one smooth maximizing sequence when a maximizing annihilator is needed. The prior root-tail case remains sufficient. Both geometric proofs are preserved; the Hopf illustration names the semipositive corollary explicitly after its move; the two corollaries precede that common illustration. The research-program paragraph specifies the global-threshold hypothesis. The bounded Rethlas run selected_divisor_01 returned correct. The 701-page manuscript and all 20 selected pages passed the stated output checks; source reconstruction is recorded separately. No BMP, current regularity or exact equation follows from the new hypothesis alone.

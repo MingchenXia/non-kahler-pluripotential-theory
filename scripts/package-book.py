@@ -168,6 +168,8 @@ for name in (
     "research/editorial/nef-proof-review.md",
     "research/editorial/selected-divisor-map.json",
     "research/editorial/selected-divisor-review.md",
+    "research/editorial/nef-schwarz-map.json",
+    "research/editorial/nef-schwarz-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
