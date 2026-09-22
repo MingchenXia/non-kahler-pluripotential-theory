@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Prescribed-reference entropy audit
+
+Run `prescribed_dual_entropy_01` returned `correct` with no critical errors or gaps, relative to its explicitly accepted internal inputs. The audit checked the reusable lower Lq density-norm lemma, both strict-domination directions, finite-level positivity in nonclosed backgrounds, constants uniform for common theta and epsilon, every infinite-entropy case, and the absence of BMP/PVP. It also checked the noncircular scalar lower bound in the earlier normalized-equation proof and varying-reference compactness through a single Hermitian dual sublevel. The submitted input, two editorial proof files and final report are preserved. Manuscript integration, compilation and visual inspection remain pending; checkpoint67 remains the checked release. No novelty or singular-reference entropy-difference extremum is claimed.
+
 ## 22 September 2026 — Checkpoint67: exact mass bounds from entropy differences
 
 Proved that the infimum and supremum of H_0 minus relative entropy are log v_- and log v_+, even when restricted to smooth strictly positive probabilities. The proof uses Gibbs probabilities and smooth Gauduchon adjoints for the two opposite endpoints, with the earlier bounded regularization theorem. It includes zero lower mass and infinite upper mass without a standing mass hypothesis. Verified both invariances and the equivalence between constancy of the difference and mass invariance; connected this with the existing curvature characterization. Rethlas returned correct without gaps. The 695-page book compiles cleanly apart from the inherited bibliography underfull paragraph; 13 selected pages were inspected. The next singular-reference entropy estimate is a separate draft.
