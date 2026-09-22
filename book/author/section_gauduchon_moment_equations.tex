@@ -1,0 +1,70 @@
+\subsection{A moment condition on maximizing tests}
+
+Smoothness of a maximizing current is one way to obtain an exact threshold equation. Another sufficient condition uses moments of a smooth maximizing sequence and a smaller-background envelope. It makes no regularity assumption on a limiting current.
+
+\begin{theorem}\label{thm:gauduchon-moment-threshold}
+Let $n\geq2$, $0\leq f\in L^1(\mathrm{d}V)$ be nonzero, and $b=b_\omega(f)>0$. Put $p=f^{1/n}$ and $R=\rho_\omega(p)=b^{-1/n}$. Suppose there are smooth strictly positive $T_j\in\mathscr G_\omega$ such that
+\[
+ d_j=D_p(T_j)\longrightarrow R,\qquad
+ \mathrm{d}\nu_j=d_j^{-1}p k_{T_j}\,\mathrm{d}V,
+\]
+and a constant $C$ satisfying
+\begin{equation}\label{eq:maximizing-gauduchon-moments}
+ \int_X(-v)\,\mathrm{d}\nu_j\leq C
+ \quad\text{for all }j\text{ and all }v\in\PSH(X,\omega)
+                  \text{ with }\sup_Xv=0.
+\end{equation}
+For the greatest exponential solutions and their normalizations, one then has
+\[
+ b\leq c_\lambda\leq b\mathrm{e}^{C\lambda},\qquad
+ \Phi_f-C\leq v_\lambda\leq0.
+\]
+Suppose in addition that $P_{\delta\omega}(\Phi_f)$ is genuine for some $0<\delta<1$. Whenever $\lambda_k\downarrow0$ and $v_{\lambda_k}\to v$ in $L^1(X)$, the convergence holds in capacity and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\omega(v)=bf\,\mathrm{d}V,
+ \qquad \Phi_f-C\leq v\leq\Phi_f.
+\]
+In particular an exact threshold solution exists. No bounded-mass or positive lower-mass hypothesis is imposed.
+\end{theorem}
+\begin{proof}
+The trace inequality \cref{lem:unbounded-gauduchon-trace-density} and Stokes give, for each $j$ and $\lambda>0$,
+\[
+ 1\geq c_\lambda^{1/n}d_j
+              \int_X\mathrm{e}^{\lambda v_\lambda/n}\,\mathrm{d}\nu_j
+   \geq c_\lambda^{1/n}d_j\mathrm{e}^{-C\lambda/n}.
+\]
+\Needspace{9\baselineskip}
+The second inequality is Jensen's inequality and \eqref{eq:maximizing-gauduchon-moments}. Let $j\to\infty$. Since $R=b^{-1/n}$, this proves the upper scalar bound. The lower scalar bound and comparison with every normalized threshold subsolution were proved in \cref{cor:individual-positive-threshold-exponential}. Apply that comparison to $\Phi_f$ to obtain
+\[
+ v_\lambda\geq\Phi_f-\lambda^{-1}\log(c_\lambda/b)
+                \geq\Phi_f-C.
+\]
+
+Now let $v_{\lambda_k}\to v$ in $L^1$. By \cref{prop:greatest-normalized-threshold}, its limit lies in $\mathcal S_f$ and hence below $\Phi_f$. The lower bound passes to the limit, so $v\simeq\Phi_f$. For all sufficiently large $k$,
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\omega(v_{\lambda_k})
+   =c_{\lambda_k}\mathrm{e}^{\lambda_k v_{\lambda_k}}f\,\mathrm{d}V
+   \leq b\mathrm{e}^{C}f\,\mathrm{d}V.
+\]
+The functions $|\mathrm{e}^{v_{\lambda_k}}-\mathrm{e}^v|$ are uniformly bounded and tend to zero in smooth-volume measure. Their integrals against the fixed $L^1$ density $f$ therefore tend to zero. This gives the self-measure error required by \cref{prop:lower-barrier-criterion}, with reference $\Phi_f$. The additional limit-type condition has just been checked, and the smaller-background condition is an assumption. That proposition gives capacity convergence.
+
+Damped continuity now identifies the equation without a mass-conservation argument. Write $g_k=c_{\lambda_k}\mathrm{e}^{\lambda_k v_{\lambda_k}}f$. We know $g_k\to bf$ in $L^1$ and $0\leq g_k\leq b\mathrm{e}^Cf$ for large $k$. Hence
+\[
+ \mathrm{e}^{v_{\lambda_k}}\mathrm{MA}^{\mathrm{ext}}_\omega(v_{\lambda_k})
+   =\mathrm{e}^{v_{\lambda_k}}g_k\,\mathrm{d}V
+   \longrightarrow\mathrm{e}^v bf\,\mathrm{d}V
+\]
+in total variation, while damped continuity gives the weak limit
+$\mathrm{e}^v\mathrm{MA}^{\mathrm{ext}}_\omega(v)$. Divide off the pole set to obtain the equation and its finite mass. Finally normalized compactness supplies an $L^1$ cluster limit along any sequence $\lambda_k\downarrow0$, proving existence.
+\end{proof}
+
+The moment condition is automatic if the densities of $\nu_j$ are uniformly bounded in $L^q(\mathrm{d}V)$ for some $q>1$, by H\"older and the uniform finite moments of normalized quasi-plurisubharmonic functions. More generally, a uniform entropy bound suffices. Write $a_j=\mathrm{d}\nu_j/\mathrm{d}V$ and suppose $\int_Xa_j\log a_j\,\mathrm{d}V\leq H$. Choose $\alpha>0$ and $A$ from \cref{lem:uniform-exponential}, so that $\int_X\mathrm{e}^{-\alpha v}\,\mathrm{d}V\leq A$ for every normalized $v$. The elementary entropy inequality, first for $v_T=\max(v,-T)$, gives
+\[
+ \alpha\int_X(-v_T)a_j\,\mathrm{d}V
+ \leq \int_Xa_j\log a_j\,\mathrm{d}V
+             +\log\int_X\mathrm{e}^{-\alpha v_T}\,\mathrm{d}V
+ \leq H+\log A.
+\]
+For completeness, apply $t\log t-t+1\geq0$ to $t=a_j/q$, integrate against the probability density $q=\mathrm{e}^{-\alpha v_T}/\int_X\mathrm{e}^{-\alpha v_T}\,\mathrm{d}V$, and rearrange. Monotone convergence as $T\to\infty$ proves \eqref{eq:maximizing-gauduchon-moments} with $C=(H+\log A)/\alpha$.
+
+The envelope condition is automatic if $\Phi_f$ is bounded. Both conditions are additional hypotheses. Root tails alone have not been shown to imply them. The theorem proves subsequential capacity convergence and existence; it does not identify all normalized solutions, assert whole-family convergence, or assert that $\Phi_f$ itself solves the exact equation.

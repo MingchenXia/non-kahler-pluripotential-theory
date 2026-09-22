@@ -1,0 +1,51 @@
+\subsection{The greatest normalized threshold subsolution}
+
+A lower bound for a Monge--Amp\`ere density survives $L^1$ convergence of potentials. This uses upper envelopes and damped continuity, rather than continuity of the original Monge--Amp\`ere measures.
+
+\begin{lemma}\label{lem:density-subsolution-lone-closure}
+Let $s_j,s\in\PSH(X,h)$ have a common upper bound and satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(s_j)\geq g_j\,\mathrm{d}V.
+\]
+Then $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq g\,\mathrm{d}V$.
+\end{lemma}
+\begin{proof}
+Translate the potentials to be nonpositive and extract a subsequence for which both convergences hold almost everywhere. Set
+\[
+ a_j=\inf_{\ell\geq j}g_\ell,\qquad
+ w_j=\left(\sup_{\ell\geq j}s_\ell\right)^*.
+\]
+Then $0\leq a_j\uparrow g$ almost everywhere and $w_j\downarrow s$. For fixed $j$, the finite maxima $\max_{j\leq\ell\leq N}s_\ell$ have measures at least $a_j\,\mathrm{d}V$ by ordered contact. They increase to $w_j$ after regularization, with the genuine lower bound $s_j$ and upper bound zero. The convergence holds in capacity: truncate at a fixed negative level, use bounded monotone capacity convergence, and then let the level tend to infinity using the genuine lower bound. Damped continuity therefore gives
+\[
+ \mathrm{e}^{w_j}\mathrm{MA}^{\mathrm{ext}}_h(w_j)
+       \geq \mathrm{e}^{w_j}a_j\,\mathrm{d}V.
+\]
+Indeed the right sides for the finite maxima converge by dominated convergence, since $a_j\leq g$ almost everywhere. Divide by the positive weight off the pole set to obtain $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.
+
+Now $w_j\downarrow s$ is again convergence in capacity with a genuine lower bound. Apply damped continuity once more. Since $0\leq\mathrm{e}^{w_j}a_j\leq g$, dominated convergence gives
+\[
+ \mathrm{e}^s\mathrm{MA}^{\mathrm{ext}}_h(s)
+       \geq\mathrm{e}^s g\,\mathrm{d}V.
+\]
+Divide on $\{s>-N\}$ and let $N\to\infty$. Both sides of the desired inequality give zero mass to the pole set. Restore the common translation.
+\end{proof}
+
+\begin{proposition}\label{prop:greatest-normalized-threshold}
+For $b=b_h(f)>0$, the family
+\[
+ \mathcal S_f=\{s\in\PSH(X,h):\sup_Xs=0,\
+             \mathrm{MA}^{\mathrm{ext}}_h(s)\geq bf\,\mathrm{d}V\}
+\]
+is nonempty and compact in $L^1(X)$. It has a greatest member
+\[
+ \Phi_f=\left(\sup_{s\in\mathcal S_f}s\right)^*.
+\]
+Every normalized $L^1$ cluster limit of the greatest exponential solutions from \cref{cor:individual-positive-threshold-exponential} belongs to $\mathcal S_f$ and hence lies below $\Phi_f$.
+\end{proposition}
+\begin{proof}
+Nonemptiness is \cref{thm:individual-density-subsolution}. Normalized compactness and the preceding lemma show that $\mathcal S_f$ is compact. Ordered contact makes it stable under finite maxima. Choose a countable Choquet family for its supremum and take successive finite maxima, including one fixed member of $\mathcal S_f$. This increasing sequence has a genuine lower bound and upper bound zero. Its canonical limit is $\Phi_f$ and its convergence holds in $L^1$. The lemma gives the required measure inequality. Its supremum is zero because it lies between a normalized member and zero. Thus $\Phi_f\in\mathcal S_f$ and it dominates every member.
+
+For an exponential cluster limit, the densities of the measures converge in $L^1$ to $bf$ by \cref{cor:individual-positive-threshold-exponential}. Apply the lemma to these densities and the normalized potentials.
+\end{proof}
+
+This proposition asserts a greatest normalized subsolution, not equality of its measure with $bf\,\mathrm{d}V$. In particular it does not assert that $\Phi_f$ has finite mass.

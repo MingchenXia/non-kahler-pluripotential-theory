@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint64: threshold equations from Gauduchon moments
+
+Proved L1 closure for subsolutions with convergent density lower bounds, and reused it to shorten threshold attainment. Constructed the greatest normalized threshold subsolution. A new conditional theorem obtains an exact individual threshold equation from uniform moments along a smooth maximizing Gauduchon sequence and a genuine smaller-background envelope, without either mass property. Its independent Rethlas check returned correct with no gaps; the later elementary entropy specialization was checked directly. The691-page manuscript was compiled,22 selected pages inspected, and all previous labels and the checkpoint63 outputs preserved. The unrestricted positive-threshold problem remains open.
+
 ## 22 September 2026 — Checkpoint63: Gauduchon volume and partial kernels
 
 Completed the second focused reading of Chapters27–28 and all31 nested inputs, finishing the recorded second pass over the book and appendix. Simplified pointwise Lelong loss by blowing up the point and applying the existing divisorial Bergman estimate; the original constant, assumptions and conclusions are unchanged. Corrected one equation reference. Independently checked all2,107 Hopf figure coordinates and the three density normalizations. The687-page build has no errors or overfull boxes;38 affected or comparison pages were inspected. The style audit over all33 files has zero errors and six inherited warnings. The review records the precise boundaries of dual regularity, mass noncollapse and partial-kernel recovery.

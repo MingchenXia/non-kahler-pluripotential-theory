@@ -42,6 +42,36 @@ The limit exists in $[0,+\infty)$ because the constants decrease and $c_h(f_1)$ 
 \end{equation}
 In fact every such $q$ is bounded above by $f_k$ for sufficiently large $k$, and the $f_k$ themselves are admissible tests.
 
+A lower bound for a Monge--Amp\`ere density survives $L^1$ convergence of potentials. This uses upper envelopes and damped continuity, rather than continuity of the original Monge--Amp\`ere measures.
+
+\begin{lemma}\label{lem:density-subsolution-lone-closure}
+Let $s_j,s\in\PSH(X,h)$ have a common upper bound and satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(s_j)\geq g_j\,\mathrm{d}V.
+\]
+Then $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq g\,\mathrm{d}V$.
+\end{lemma}
+\begin{proof}
+Translate the potentials to be nonpositive and extract a subsequence for which both convergences hold almost everywhere. Set
+\[
+ a_j=\inf_{\ell\geq j}g_\ell,\qquad
+ w_j=\left(\sup_{\ell\geq j}s_\ell\right)^*.
+\]
+Then $0\leq a_j\uparrow g$ almost everywhere and $w_j\downarrow s$. For fixed $j$, the finite maxima $\max_{j\leq\ell\leq N}s_\ell$ have measures at least $a_j\,\mathrm{d}V$ by ordered contact. They increase to $w_j$ after regularization, with the genuine lower bound $s_j$ and upper bound zero. The convergence holds in capacity: truncate at a fixed negative level, use bounded monotone capacity convergence, and then let the level tend to infinity using the genuine lower bound. Damped continuity therefore gives
+\[
+ \mathrm{e}^{w_j}\mathrm{MA}^{\mathrm{ext}}_h(w_j)
+       \geq \mathrm{e}^{w_j}a_j\,\mathrm{d}V.
+\]
+Indeed the right sides for the finite maxima converge by dominated convergence, since $a_j\leq g$ almost everywhere. Divide by the positive weight off the pole set to obtain $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.
+
+Now $w_j\downarrow s$ is again convergence in capacity with a genuine lower bound. Apply damped continuity once more. Since $0\leq\mathrm{e}^{w_j}a_j\leq g$, dominated convergence gives
+\[
+ \mathrm{e}^s\mathrm{MA}^{\mathrm{ext}}_h(s)
+       \geq\mathrm{e}^s g\,\mathrm{d}V.
+\]
+Divide on $\{s>-N\}$ and let $N\to\infty$. Both sides of the desired inequality give zero mass to the pole set. Restore the common translation.
+\end{proof}
+
 \begin{theorem}\label{thm:individual-density-subsolution}
 For every such $f$,
 \[
@@ -54,42 +84,18 @@ In particular, a positive scaled subsolution exists if and only if $b_h(f)>0$. N
 \begin{proof}
 If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then it dominates $af_k\,\mathrm{d}V$. The preceding lemma gives $a\leq c_h(f_k)$ for every $k$, hence $a\leq b_h(f)$. If $b_h(f)=0$, the zero potential realizes the coefficient zero.
 
+\Needspace{7\baselineskip}
 Suppose $b=b_h(f)>0$. Choose continuous normalized solutions
 \[
  \mathrm{MA}_h(u_k)=c_h(f_k)f_k\,\mathrm{d}V,
  \qquad \sup_Xu_k=0.
 \]
-After extraction, $u_{k_j}\to u$ in $L^1$ and almost everywhere, where $u$ is a genuine normalized $h$-plurisubharmonic function. Define
-\[
- w_j=\left(\sup_{\ell\geq j}u_{k_\ell}\right)^*.
-\]
-Each $w_j$ is bounded, since $u_{k_j}\leq w_j\leq0$. The local Hartogs lemma and almost-everywhere convergence give $w_j\searrow u$.
-
-For a finite maximum of the functions $u_{k_\ell}$ with $\ell\geq j$, ordered contact gives a Monge--Amp\`ere measure at least $bf_{k_j}\,\mathrm{d}V$: every constituent measure has this lower bound. More explicitly,
-\[
- \mathrm{MA}_h(\max(s,t))\geq
- \mathbf1_{\{s\geq t\}}\mathrm{MA}_h(s)
- +\mathbf1_{\{s<t\}}\mathrm{MA}_h(t)
-\]
-for bounded $s,t$. Bounded increasing Bedford--Taylor continuity, applied to these finite maxima for fixed $j$, therefore gives
-\[
- \mathrm{MA}_h(w_j)\geq bf_{k_j}\,\mathrm{d}V.
-\]
-The bound on the potentials at this step may depend on $j$.
-
-The decreasing sequence $w_j$ converges to $u$ in capacity. For completeness, remove an open set of arbitrarily small capacity on whose complement $u$ and all $w_j$ are finite and continuous, using quasi-continuity and countable subadditivity. On the remaining compact set Dini's theorem gives uniform convergence. Apply the damped continuity theorem \cref{thm:damped-continuity} with weight $\mathrm{e}^{w_j}$. It gives
-\[
- \mathrm{e}^{w_j}\mathrm{MA}_h(w_j)
-       \rightharpoonup \mathrm{e}^u\mathrm{MA}^{\mathrm{ext}}_h(u).
-\]
-Also $\mathrm{e}^{w_j}f_{k_j}\to \mathrm{e}^uf$ in $L^1(\mathrm{d}V)$ by dominated convergence, since $0\leq \mathrm{e}^{w_j}f_{k_j}\leq f$. Hence
-\[
- \mathrm{e}^u\mathrm{MA}^{\mathrm{ext}}_h(u)\geq b\mathrm{e}^uf\,\mathrm{d}V.
-\]
-On each set $\{u>-N\}$ one may divide by $\mathrm{e}^u$. Exhaust these sets; their complement is pluripolar and has zero smooth volume. This proves $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq bf\,\mathrm{d}V$ and attains the maximum.
+After extraction, $u_{k_j}\to u$ in $L^1$, where $u$ is a genuine normalized $h$-plurisubharmonic function. The densities $c_h(f_{k_j})f_{k_j}$ converge to $bf$ in $L^1$: they are dominated by $c_h(f_1)f$ and converge pointwise almost everywhere. \Cref{lem:density-subsolution-lone-closure} gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq bf\,\mathrm{d}V$, attaining the maximum.
 \end{proof}
 
-The proof constructs an upper envelope of a subsequence. It does not claim that the original normalized solutions converge in capacity, that their limit has finite mass, or that the limiting inequality is an equality. These are additional requirements in the individual equation problem. The definition is unchanged if truncation is replaced by any increasing sequence of nonzero bounded densities tending to $f$: necessity bounds its limiting constants below by $b_h(f)$, and the same upper-envelope construction bounds them above by $b_h(f)$.
+The argument preserves a density lower bound. It does not claim that the original normalized solutions converge in capacity, that their limit has finite mass, or that the limiting inequality is an equality. These are additional requirements in the individual equation problem. The definition is unchanged if truncation is replaced by any increasing sequence of nonzero bounded densities tending to $f$: necessity bounds its limiting constants below by $b_h(f)$, and the same upper-envelope construction bounds them above by $b_h(f)$.
+
+\input{author/section_threshold_subsolution_envelope}
 
 \begin{proposition}\label{prop:individual-normalizer-lp}
 If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)$ equals the normalization constant of the continuous equation for $f$. In general,
