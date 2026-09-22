@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint69: comparison of prescribed references
+
+Proved ordinary-type monotonicity of B and H and a quantitative comparison with zero reference, uniform over every continuous logarithmic density. Used a single dual sublevel to identify supporting-probability limits as the smaller-background parameter tends to zero, with weak L1 convergence and a whole-sequence conclusion under uniqueness. Added an analytic-envelope family connecting this statement to the smooth Gauduchon adjoint. Reused strict domination and the existing dual compactness theorem. Split the remaining-questions paragraph and shortened repetitive prose in the example. Rethlas returned correct without gaps. The 697-page output passed compilation and 14-page visual review; source reconstruction is recorded separately. The hypotheses on the model and smaller background remain.
+
 ## 22 September 2026 — Checkpoint68: density norms and entropy with prescribed singularities
 
 Integrated the verified relative lower Lq density estimate and extended the entropy bounds to all model references satisfying the existing semipositive big and smaller-background hypotheses. Constants are uniform for common theta and epsilon, giving entropy control and uniform integrability for varying-reference supporting probabilities. Reused the density lemma to obtain a positive scalar limit directly in the normalized prescribed equation. Preserved all existing formal statements. Rethlas returned correct without gaps; the separate audit commit remains in history. The 697-page book compiles without errors or overfull boxes; 17 selected pages were inspected, including the clarified solution notation and comparison-barrier paragraph. Singular-reference entropy-difference extrema and arbitrary-reference limit identification remain open.
