@@ -91,3 +91,5 @@ Checkpoint58 completes the second focused reading of Chapters9–12, including a
 Checkpoint59 completes the second focused reading of Chapter13 and its24 nested inputs. The normalized exponential convergence proof now uses capacity directly. See prescribed-review.md for checks and the exact ongoing Chapter14–15 reading scope.
 
 Checkpoint60 completes the second focused reading of Chapters14–15 and all21 nested inputs. Fixed-measure continuity reuses the general common-envelope criterion. See relative-review.md for dependency and hypothesis checks. Chapters16–18 and their inputs have also been read; their next edits and visual checks remain separate.
+
+Checkpoint61 completes the second focused review of Chapters16–19 and all three inputs. The analytic-density proof now reuses envelope homogeneity. See singularity-review.md. Chapters20–23 and all ten inputs have also been read; their proposed simplification and output checks are next.

@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint61: analytic envelopes and Perron theory
+
+Completed the second focused reading of Chapters16–19, two proof inputs and the Legendre figure. Fixed-background analytic envelope convergence now follows directly from homogeneity and the preceding theorem, avoiding repeated divisorial estimates and normalization. Unified constants and repaired short statement/computation breaks. The687-page book and21 selected affected/adjacent pages were checked; all six plot coordinate sets match the formulas within rounding. The changed-file audit has zero errors and four unchanged warnings. No theorem hypotheses or proof boundaries change.
+
 ## 22 September2026 — Checkpoint60: relative continuity and normalization
 
 Completed the second focused reading of Chapters14–15 and all21 nested inputs. Moved the unchanged common-envelope capacity criterion earlier and reused it in fixed-measure continuity, removing duplicate roof and semicontinuity arguments. Checked the dependency order and retained each volume hypothesis. Unified exponential typography and seven named references. The687-page book compiles cleanly apart from inherited underfull text; all49 affected/adjacent pages were inspected. The edited-file style audit has zero errors and three warnings, down from ten. No new theorem or verifier run is claimed.
