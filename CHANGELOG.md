@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint80: de Rham control of current masses
+
+Added an elementary corollary of the checked strongly Gauduchon criterion: a de Rham norm controls every closed positive current's linear mass exactly in the strongly Gauduchon case. Compact sets of classes give weakly compact current families, and the image pseudoeffective cone is closed and has no nonzero line. All original chapter text and three formal statements remain unchanged. Rethlas strong_current_compactness_01 returned correct with no gaps, including degenerate cohomology groups and empty families. The 701-page output and all five selected pages passed the stated checks; fresh source reconstruction is recorded separately. A separate primitive elliptic-bundle calculation is preserved as an unintegrated draft with pending proof and literature checks. Checkpoint79 was remotely verified at 9c5b5a4.
+
 ## 22 September 2026 — Checkpoint79: the strongly Gauduchon criterion
 
 Added the complete converse to the positive-exact-current obstruction, with Popovici attribution and an exact source-version locator. The supplied private reference was consulted first; the complete primary proof was independently checked and reconstructed. Rethlas strong_gauduchon_criterion_01 returned correct, including type, positivity, exactness, the d^c primitive and the Bott--Chern reformulation. The definition and example statements are unchanged. The final paragraph uses the earlier balanced lower-mass example to explain why the criterion requires neither full cohomological injectivity nor positive lower mass; it received a separate primary-agent check. The 701-page manuscript and all eight selected pages passed the stated output checks. Fresh source reconstruction is recorded separately. The blueprint now points to the preserved detailed history instead of repeating its full recent sequence. Checkpoint78 was remotely verified at 040b5fb.
