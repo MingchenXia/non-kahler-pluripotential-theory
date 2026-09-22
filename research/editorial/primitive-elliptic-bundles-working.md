@@ -1,6 +1,6 @@
 # Primitive line bundles and lower Monge--Ampère mass
 
-Working direction, 22 September 2026. This is an unintegrated primary-agent calculation and a proposed next test family. It has not received a bounded verifier run or a complete literature audit. No novelty or globally open status is claimed. It uses no additional result of Popovici.
+Historical working direction, 22 September 2026. The stages below retain their original tentative wording. **Checkpoint82 supersedes their pending status for the metric construction, canonical bundle, separated and radial mass bounds, and precise K3 example:** these now have the correct bounded report `primitive_elliptic_bundle_01` and are written in Section32.5.3. See `primitive-elliptic-review.md` for the primary-source checks and exact proof boundary. The unrestricted lower mass and the current-descent suggestion below remain unresolved here and are not manuscript premises. No novelty or globally open status is claimed. No additional result of Popovici is used.
 
 ## Geometric setup
 

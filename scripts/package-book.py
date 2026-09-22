@@ -182,6 +182,8 @@ for name in (
     "research/editorial/elliptic-radial-map.json",
     "research/editorial/elliptic-radial-review.md",
     "research/editorial/primitive-elliptic-bundles-working.md",
+    "research/editorial/primitive-elliptic-map.json",
+    "research/editorial/primitive-elliptic-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
