@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint84: total variation and curve singularity topology
+
+Section20.5.1 classifies positive-mass curve ideal envelopes by their atomic data and proves two-sided comparison with the original source metric. The fixed positive lower-mass locus is complete, has dense analytic envelopes and is not totally bounded. The proof uses finite support first, then an explicit tail estimate. Original SGPT formulas and proofs were read directly; the full focused report curve_atomic_source_topology_01 passed. Section32.9 records the scope for the general topology problem. Twenty-seven rendered pages cover the changed content, and final reflowed pages were reread. The book has707 pages; all old source text and labels, original references and the companion note are preserved. Source reconstruction is recorded separately. Checkpoint83 was remotely verified at80e09c56. No Popovici result or private-reference content is used.
+
 ## 22 September 2026 — Checkpoint83: positive mass does not repair the ideal metric
 
 Section16.5 constructs analytic ideal envelopes on a compact curve with one fixed rational mass tau in (0,1), converging to zero in the elementary ideal-envelope metric while their measures converge to tau theta. The limit potential has mass one. The source ordered-distance formula gives the exact positive gap (1-tau)/2; this substitution was checked directly against the original SGPT source. The full Rethlas report positive_mass_ideal_metric_01 passed the construction and measure limit under the stated earlier inputs. Section32.9 records the implication for the topology problem. All prior source text and labels are preserved. Fifteen rendered pages cover all 12 changed raw page texts, and the book remains 705 pages. Source reconstruction and original-reference checks are recorded separately. Checkpoint82 was remotely verified at 2c372de6. No result of Popovici or private-reference content is used.

@@ -16,7 +16,7 @@ distinguish proved results, external inputs, conditional results and open proble
 
 ## Current manuscript and proof boundary
 
-- **Checked manuscript: checkpoint83.** 705 pages, 32 chapters and an appendix. The systematic rereads and their limits are recorded in `research/editorial/chapter-review-20260921.md`; they are bounded reviews, not whole-book certification. The latest Chapter16 example shows that the elementary ideal-envelope metric does not control mass even along analytic model potentials of one fixed positive mass. The original source distance retains the exact positive gap. Chapter32 now contains the checked primitive elliptic-bundle construction and K3 test, with the unrestricted lower mass left as a question. All 170 preserved verifier reports retain their individual scopes. Compilation, affected-page visual checks and source reconstruction are recorded for each release. `CHANGELOG.md`, the editorial reviews and Git history retain the earlier results and proof boundaries. The research remains incomplete.
+- **Checked manuscript: checkpoint84.** 707 pages, 32 chapters and an appendix. The systematic rereads and their limits are recorded in `research/editorial/chapter-review-20260921.md`; they are bounded reviews, not whole-book certification. Section20.5.1 identifies the source topology on positive-mass curve ideal envelopes with total variation of their atomic data. A fixed positive lower mass bound gives completeness and analytic density, while the space is not totally bounded. This distinguishes it from the elementary ideal metric and its Chapter16 mass discontinuity. The primitive elliptic-bundle construction and K3 test remain in Chapter32, with unrestricted lower mass unresolved. All 171 preserved verifier reports retain their individual scopes. Compilation, affected-page visual checks and source reconstruction are recorded per release. The research remains incomplete.
 - Upper bounded mass and positive lower mass are independent. A balanced metric with finite upper mass can have zero lower mass. General measure existence therefore cannot omit all lower-mass or right-hand-side restrictions.
 - Positive lower mass characterizes solvability for every finite non-pluripolar measure in a Hermitian background, without BMP. Individual L1 subsolutions now have an exact Gauduchon criterion. Under positive lower mass the equation scalar is exactly the global subsolution threshold, and normalized greatest exponential solutions converge in capacity along every L1-convergent subsequence. Without a lower-mass hypothesis, uniform first moments along one maximizing Gauduchon sequence and a genuine smaller-background envelope of the greatest normalized threshold subsolution now suffice for an exact equation. The unrestricted positive-threshold problem and zero-threshold exponential existence remain open. Fixed-density volume must remain distinct from its density infimum.
 - Linear current continuity and exceptional-divisor formulas do not imply nonlinear volume continuity or full higher-dimensional trace realization.
@@ -50,7 +50,10 @@ distinguish proved results, external inputs, conditional results and open proble
   interpretation and explicit separation between ordinary and ideal envelopes.
   The curve example in Section16.5 shows that a uniform positive lower bound
   on individual masses alone does not repair continuity for the elementary
-  ideal-envelope metric.
+  ideal-envelope metric. On a curve, Section20.5.1 identifies the source
+  topology on positive-mass ideal envelopes with total variation of the atomic
+  data; the fixed lower-mass locus is complete and has analytic density. This
+  does not construct a general Hermitian singularity metric.
 - Extend arbitrary-big model-reference equations beyond bounded mass. Linear
   Gauduchon trace control alone does not give nonlinear mass integrability.
 - Study lower partial Bergman asymptotics, positive-volume recovery and the loss

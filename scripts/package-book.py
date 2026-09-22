@@ -186,6 +186,8 @@ for name in (
     "research/editorial/primitive-elliptic-review.md",
     "research/editorial/positive-ideal-map.json",
     "research/editorial/positive-ideal-review.md",
+    "research/editorial/curve-atomic-map.json",
+    "research/editorial/curve-atomic-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
