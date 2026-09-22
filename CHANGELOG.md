@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint74: direct bounded-potential nefness proofs
+
+The closed and nonclosed residual nefness arguments now invoke the earlier bounded almost-regularization proposition directly. Closed representatives stay in the same Bott--Chern class; nonclosed representatives retain their exact exterior derivative. This removes the longer unit-ideal analytic regularization argument and its dependent repetition. All eleven formal result statements and all labels in the edited files are unchanged. Chapters24–26 and their nested inputs, the Chapter5 dependency and the Chapter30 residual-nef interface received a focused primary-agent reread; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes, and all 15 selected pages were read. Source reconstruction is recorded separately.
+
 ## 22 September 2026 — Checkpoint73: simpler partial-kernel proofs
 
 Wrote the kernel extremal formula over the unit ball so that it includes the zero space literally. Replaced the determinant strict-concavity equality argument by a holomorphic section quotient and the identity theorem. The explicit Hopf potential now converges in L1 directly from an integrable logarithmic bound, without a compactness extraction. All eight formal statements and all labels in the edited files are preserved. Chapters21,22,28 and all their inputs received a focused primary-agent reread; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes, and all 13 selected pages were read. Source reconstruction is recorded separately.

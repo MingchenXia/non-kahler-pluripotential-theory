@@ -164,6 +164,8 @@ for name in (
     "research/editorial/trace-proof-economy-review.md",
     "research/editorial/kernel-proof-map.json",
     "research/editorial/kernel-proof-review.md",
+    "research/editorial/nef-proof-map.json",
+    "research/editorial/nef-proof-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
