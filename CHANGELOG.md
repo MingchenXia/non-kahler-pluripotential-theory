@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint66: Hermitian dual entropy and clearer research questions
+
+Compared the Hermitian zero-reference convex dual with ordinary entropy from both sides, using a fixed Gauduchon test and the lower Lq density estimate. Their finite domains and uniformly bounded families coincide without either mass property. Rethlas returned correct with no gaps, including infinite values and dimension one. Reorganized the general-measure research discussion, preserving all39 previous result references and all10 complete formal problem/conjecture blocks in the edited source. The693-page manuscript compiles with no errors or overfull boxes;15 selected pages were inspected. Singular-reference entropy bounds and entropy-difference extrema remain further work.
+
 ## 22 September 2026 — Checkpoint65: selected Gauduchon limits
 
 Proved that uniform integrability along one maximizing sequence gives a maximizing current and convergence of its determinant-weighted measures, without the global bounded-root-closure assumption. Verified the entropy sufficient condition and passage of first moments to the limiting probability. Reused the criterion to shorten the existing supporting-probability proof. Rethlas returned correct with no gaps for the new argument and entropy calculations. The693-page manuscript compiles cleanly apart from the inherited bibliography underfull warning;16 selected pages were inspected. Current regularity, smaller-background noncollapse and unrestricted threshold equations remain open.

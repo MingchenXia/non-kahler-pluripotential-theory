@@ -101,3 +101,5 @@ Checkpoint63 completes the second focused review of Chapters27–28 and all31 ne
 Checkpoint64 follows up Chapters13,27 and32 with the density-closure lemma, greatest normalized threshold subsolution and conditional moment theorem. See moment-equations-review.md and its reversible map. This is a targeted follow-up to the completed second pass, not another full-book reread.
 
 Checkpoint65 follows up Chapters27 and32 with selected-sequence dual attainment, entropy consequences and a shorter supporting-probability proof. See selected-current-review.md and its reversible map for the exact dependency reread. The new criterion does not supply current regularity or smaller-background noncollapse.
+
+Checkpoint66 follows up Chapter15 and both original nested inputs, the Hermitian entropy comparison, and the Chapter27/32 interfaces. The general-measure program is shorter and retains all prior result references and all complete formal questions. See dual-entropy-review.md and its reversible map.
