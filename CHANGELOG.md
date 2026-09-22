@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint75: selected Gauduchon tests in geometry
+
+The divisorial threshold proposition and its two geometric corollaries now require uniform integrability only along one smooth maximizing sequence when a maximizing annihilator is needed. The prior root-tail case remains sufficient. Both geometric proofs are preserved; the Hopf illustration names the semipositive corollary explicitly after its move; the two corollaries precede that common illustration. The research-program paragraph specifies the global-threshold hypothesis. The bounded Rethlas run selected_divisor_01 returned correct. The 701-page manuscript and all 20 selected pages passed the stated output checks; source reconstruction is recorded separately. No BMP, current regularity or exact equation follows from the new hypothesis alone.
+
 ## 22 September 2026 — Checkpoint74: direct bounded-potential nefness proofs
 
 The closed and nonclosed residual nefness arguments now invoke the earlier bounded almost-regularization proposition directly. Closed representatives stay in the same Bott--Chern class; nonclosed representatives retain their exact exterior derivative. This removes the longer unit-ideal analytic regularization argument and its dependent repetition. All eleven formal result statements and all labels in the edited files are unchanged. Chapters24–26 and their nested inputs, the Chapter5 dependency and the Chapter30 residual-nef interface received a focused primary-agent reread; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes, and all 15 selected pages were read. Source reconstruction is recorded separately.
