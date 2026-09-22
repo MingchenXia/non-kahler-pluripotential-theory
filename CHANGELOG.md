@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint78: direct Lee--Gauduchon invariance
+
+Replaced the blowup and weak-factorization route by degree-one invariance for every smooth modification and a common graph resolution. The cone-invariance theorem and six mathematical statements remain unchanged; the cohomology lemma now covers arbitrary modifications. Nonempty openness supplies the span assertion directly. Rethlas lee_modification_01 returned correct under the stated classical inputs. The missing definition label is fixed, and all eleven selected pages passed visual review. The book has 700 pages after the unused weak-factorization citation drops from the rendered bibliography. Fresh source reconstruction is recorded separately. The user's new Popovici rule is preserved in PLAN.md; the primary-source proof audit is recorded separately, without integrating the supplied private reference. GitHub synchronization recovered: checkpoints76 and77 were remotely verified at d55c429.
+
 ## 22 September 2026 — Checkpoint77: standard ideal-envelope notation
 
 At the user's request, the book now writes P_theta[u]_{I}, with calligraphic I, for multiplier-ideal envelopes. All 136 operator occurrences in thirteen source files and five prose references are addressed; nested projections and the resolution qualifier are checked explicitly. The mathematics of all 71 formal results/definitions and their proofs is unchanged, and every label is preserved. The 701-page manuscript and all 35 selected pages passed the stated output checks; the house audit retains zero errors and seventeen inherited warnings. No new verifier run was used for this notation-only revision. Fresh source reconstruction is recorded separately.

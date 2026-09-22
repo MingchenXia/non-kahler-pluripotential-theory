@@ -37,7 +37,7 @@ If $j_X([\lambda])=0$, write $\dc\lambda=\ddc f$ for a smooth real function $f$.
 By \cref{prop:psef-cone-compact-base}, the pseudoeffective Bott--Chern cone contains no nonzero line. Thus $j_X(\xi)$ and $-j_X(\xi)$ are both pseudoeffective exactly when $j_X(\xi)=0$. This is the asserted identity $\mathcal C_X\cap(-\mathcal C_X)=K_X$.
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{def:lee-gauduchon-cone}
 The \emph{Lee--Gauduchon cone} is
 \[
  \operatorname{LG}(X)
@@ -67,11 +67,12 @@ Let $\mathcal Z_X^+$ denote the strictly positive forms in $\mathcal Z_X$. Every
 \[
  \operatorname{LG}(X)=q_X(\mathcal Z_X^+).
 \]
-Gauduchon's theorem makes $\mathcal Z_X^+$ nonempty. It is convex and stable under positive scaling. Fix $\Gamma_0\in\mathcal Z_X^+$. For every $\Gamma\in\mathcal Z_X$, compactness implies $\Gamma+t\Gamma_0>0$ for large $t$. Thus $\mathcal Z_X^+$ spans $\mathcal Z_X$, proving the span assertion.
+Gauduchon's theorem makes $\mathcal Z_X^+$ nonempty. It is convex and stable under positive scaling.
 
-To see openness directly, choose forms $\Gamma_1,\ldots,\Gamma_r\in\mathcal Z_X$ whose images form a basis of $W_X$. If $\Gamma\in\mathcal Z_X^+$, then $\Gamma+\sum_i t_i\Gamma_i$ remains strictly positive for all sufficiently small real $t_i$. Its image describes a neighborhood of $q_X(\Gamma)$ in $W_X$. This also covers $W_X=\{0\}$, with the empty basis.
+To see openness directly, choose forms $\Gamma_1,\ldots,\Gamma_r\in\mathcal Z_X$ whose images form a basis of $W_X$. If $\Gamma\in\mathcal Z_X^+$, then $\Gamma+\sum_i t_i\Gamma_i$ remains strictly positive for all sufficiently small real $t_i$. Its image describes a neighborhood of $q_X(\Gamma)$ in $W_X$. This also covers $W_X=\{0\}$, with the empty basis. Since a nonempty open subset spans its ambient vector space, the span assertion follows.
 \end{proof}
 
+\Needspace{12\baselineskip}
 \begin{theorem}\label{thm:lee-gauduchon-duality}
 The cone $\mathcal C_X$ is closed, and
 \[
@@ -133,10 +134,10 @@ Here $\pi_*v$ initially denotes a scalar distribution. The identity $\pi_*\pi^*\
 Finally, if $\pi^*\theta=\ddc f$ for a smooth real $f$, pushforward gives $\theta=\ddc(\pi_*f)$. Taking a smooth elliptic trace shows that the scalar distribution $\pi_*f$ is smooth. Hence $\{\theta\}=0$, proving injectivity.
 \end{proof}
 
-We recall the degree-one topological fact needed for a blowup, including its short proof.
+The degree-one cohomology can be compared directly under a modification.
 
 \begin{lemma}\label{lem:lee-gauduchon-blowup-cohomology}
-If $\pi:Y\to X$ is the blowup of a smooth center, then
+If $\pi:Y\to X$ is a modification between connected compact complex manifolds, then
 \[
  \pi^*:H^1_{\mathrm{dR}}(X,\R)\longrightarrow
                     H^1_{\mathrm{dR}}(Y,\R)
@@ -145,12 +146,23 @@ is an isomorphism. Its Poincar\'e dual is the isomorphism
 $\pi_*:H^{2n-1}_{\mathrm{dR}}(Y,\R)\to H^{2n-1}_{\mathrm{dR}}(X,\R)$.
 \end{lemma}
 \begin{proof}
-A blowup along a divisor is an isomorphism. Otherwise let $Z$ be the center, of complex codimension $r\geq2$, and $E$ the exceptional divisor. Identify
-$U=X\setminus Z=Y\setminus E$. By the Thom isomorphism and the long exact sequence of the pair,
-\[
- H^k(X,U;\R)=H^{k-2r}(Z;\R)=0\quad(k=1,2).
-\]
-Hence restriction $H^1(X,\R)\to H^1(U,\R)$ is an isomorphism. On $Y$, the same argument gives $H^1(Y,U;\R)=H^{-1}(E;\R)=0$, so restriction $H^1(Y,\R)\to H^1(U,\R)$ is injective. It is also surjective: every class on $U$ extends to $X$, and its pullback extends it to $Y$. Commutativity of restrictions proves the first assertion. For a disconnected center the argument applies to each disjoint component. Poincar\'e duality and the projection formula give the second assertion.
+For a proper analytic subset $A$ of a connected complex manifold $M$, restriction
+$H^1(M,\R)\to H^1(M\setminus A,\R)$ is injective, and is an isomorphism
+if $A$ has complex codimension at least two. Indeed, choose a Whitney
+stratification of $A$. General position moves every one-cycle off its
+strata, which have real codimension at least two. If those codimensions
+are at least four, it also moves every bounding two-chain off the strata,
+relative to its boundary. Thus the map on first homology is surjective
+in the first case and bijective in the second. Dualizing over $\R$ gives
+the asserted restriction statements.
+
+Since $X$ is smooth, there is an analytic subset $A\subset X$ of complex
+codimension at least two such that $\pi$ is an isomorphism over
+$U=X\setminus A$. Restriction from $X$ to $U$ is therefore an isomorphism,
+whereas restriction from $Y$ to $\pi^{-1}U$ is injective. Every class on
+$\pi^{-1}U\simeq U$ extends to $X$ and hence pulls back to a class on $Y$.
+The commutative restriction diagram proves that $\pi^*$ is an isomorphism.
+Poincar\'e duality and the projection formula give the assertion for $\pi_*$.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -158,7 +170,7 @@ Hence restriction $H^1(X,\R)\to H^1(U,\R)$ is an isomorphism. On $Y$, the same a
 Let $X$ and $Y$ be bimeromorphic connected compact complex manifolds. Under the natural identification of $H^1_{\mathrm{dR}}$ and its Poincar\'e-dual identification of $H^{2n-1}_{\mathrm{dR}}$, their spaces $K_X,W_X$ and cones $\mathcal C_X,\operatorname{LG}(X)$ agree.
 \end{theorem}
 \begin{proof}
-First suppose $\pi:Y\to X$ is a blowup with smooth center. Holomorphic pullback commutes with $\dc$, so
+First let $\pi:Y\to X$ be a modification. Holomorphic pullback commutes with $\dc$, so
 \[
  j_Y(\pi^*\xi)=\pi^*j_X(\xi).
 \]
@@ -167,7 +179,14 @@ By \cref{lem:lee-gauduchon-modification}, membership in $\mathcal C_X$ is equiva
  \pi_*\operatorname{LG}(Y)=\operatorname{LG}(X).
 \]
 
-For a general bimeromorphic map, use the standard analytic weak factorization theorem: it factors into blowups and blowdowns along smooth centers between compact complex manifolds \cite[Theorem 0.3.1, analytic case]{AKMW02}. Apply the preceding argument at every step. These degree-one identifications are the natural ones and do not depend on the chosen factorization. Indeed, they agree on a common open set where the bimeromorphic map is an isomorphism, and restriction to such a set is injective in degree one: one-dimensional cycles can be moved off the strata of its analytic complement, each of real codimension at least two. The dual identifications are consequently canonical as well.
+For a bimeromorphic map between $X$ and $Y$, resolve its graph to obtain
+modifications $p:Z\to X$ and $q:Z\to Y$ from one smooth compact manifold.
+The preceding argument applies to both maps and identifies the cones and
+kernels via $(q^*)^{-1}p^*$ and its Poincar\'e dual. These identifications
+are independent of the resolution: they agree on a common open set where
+the original map is an isomorphism, and the injectivity of degree-one
+restriction proved above determines each class uniquely. The dual
+identifications are consequently canonical as well.
 \end{proof}
 
 \subsection{Geometric consequences and the mass obstruction}
