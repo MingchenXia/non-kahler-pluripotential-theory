@@ -122,7 +122,18 @@ For the stability assertion, begin with the stated $F_j,\nu_j$ rather than with 
 
 The dual set therefore extends the smooth Gauduchon adjoint to bounded logarithmic densities, with a precise form of stability. Its possible failure to be a singleton remains a separate question.
 
-\section{Entropy in the closed case}
+\section{Entropy and the closed case}
+
+We first recall a measure-theoretic identity used in both the closed and nonclosed settings.
+
+For a probability measure $\nu=h\,\mathrm{d}V$, define
+\[
+ \operatorname{Ent}_{\mathrm{d}V}(\nu)=\int_Xh\log h\,\mathrm{d}V,
+ \qquad 0\log0=0,
+\]
+and set its entropy to $+\infty$ if it is not absolutely continuous. This entropy may be negative when $\mathrm{d}V(X)\ne1$, but its negative part is finite since $h\log h\geq-\mathrm{e}^{-1}$.
+
+\input{author/section_entropy_variational}
 
 If $\theta$ is K\"ahler, the ordinary type $\varphi$ has a fixed non-pluripolar mass $m_\varphi>0$ under the standing hypotheses, by the closed-background theory of \cite{SGPT}. Integrating the equation gives
 \begin{equation}\label{eq:normalization-closed-formula}
@@ -133,13 +144,6 @@ If $\theta$ is K\"ahler, the ordinary type $\varphi$ has a fixed non-pluripolar 
 \end{equation}
 The second identity follows by differentiating in bounded directions and testing the supporting inequality with both signs of the parameter.
 
-For a probability measure $\nu=h\,\mathrm{d}V$, define
-\[
- \operatorname{Ent}_{\mathrm{d}V}(\nu)=\int_Xh\log h\,\mathrm{d}V,
- \qquad 0\log0=0,
-\]
-and set its entropy to $+\infty$ if it is not absolutely continuous. This entropy may be negative when $\mathrm{d}V(X)\ne1$, but its negative part is finite since $h\log h\geq-\mathrm{e}^{-1}$.
-
 \begin{proposition}\label{prop:normalization-dual-entropy}
 In the closed case,
 \[
@@ -148,26 +152,7 @@ In the closed case,
 Thus the minimum formula becomes the usual entropy variational formula for the logarithmic integral in \eqref{eq:normalization-closed-formula}.
 \end{proposition}
 \begin{proof}
-If $\nu$ is singular with respect to $\mathrm{d}V$ in the sense that it is not absolutely continuous, \cref{thm:normalization-dual-compactness} gives $H_\varphi(\nu)=+\infty$. Suppose $\mathrm{d}\nu=h\,\mathrm{d}V$. For finite entropy, Jensen's inequality for the concave logarithm, with probability measure $\nu$, gives for bounded $F$
-\[
- \int_X F\,\mathrm{d}\nu-\int_Xh\log h\,\mathrm{d}V
- =\int_{\{h>0\}}\log\frac{\mathrm{e}^F}{h}\,\mathrm{d}\nu
- \leq\log\int_{\{h>0\}}\mathrm{e}^F\,\mathrm{d}V
- \leq\log\int_X\mathrm{e}^F\,\mathrm{d}V.
-\]
-An approximation proves the same inequality if a logarithm is initially unbounded. If entropy is infinite, the resulting upper bound for $H_\varphi$ is automatic. Taking the supremum yields
-$H_\varphi(\nu)\leq\log m_\varphi+\operatorname{Ent}_{\mathrm{d}V}(\nu)$.
-
-For the reverse inequality, put
-\[
- F_k=\log\bigl(\max\{k^{-1},\min\{h,k\}\}\bigr),\qquad k\geq1.
-\]
-Then $\int_X\mathrm{e}^{F_k}\,\mathrm{d}V\to\int_Xh\,\mathrm{d}V=1$ by truncation in $L^1$. Also
-$\int_XF_k\,\mathrm{d}\nu\to\int_Xh\log h\,\mathrm{d}V$, with the value $+\infty$ allowed: the positive part increases to the positive part of $h\log h$, and the negative part converges by domination by its integrable negative part. For each fixed $k$, approximate $F_k$ by continuous functions with the same bounds in $L^1(\mathrm{d}V+\nu)$. Their exponential integrals and their $\nu$-integrals converge to those of $F_k$. Therefore the continuous supremum defining $H_\varphi$ is at least
-\[
- \log m_\varphi-\log\int_X\mathrm{e}^{F_k}\,\mathrm{d}V+\int_XF_k\,\mathrm{d}\nu.
-\]
-Letting $k\to\infty$ proves the reverse inequality, including infinite entropy.
+Substitute \eqref{eq:normalization-closed-formula} into the defining supremum and apply \cref{lem:entropy-variational}.
 \end{proof}
 
 The reference volume is part of this dual functional. If it is replaced by $\mathrm{d}V'=\mathrm{e}^a \mathrm{d}V$ for a continuous real $a$, then

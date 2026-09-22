@@ -1,0 +1,28 @@
+\begin{lemma}\label{lem:entropy-variational}
+For every Borel probability measure $\nu$,
+\[
+ \operatorname{Ent}_{\mathrm{d}V}(\nu)
+ =\sup_{F\in C(X)}\left(\int_XF\,\mathrm{d}\nu
+                     -\log\int_X\mathrm{e}^F\,\mathrm{d}V\right).
+\]
+The identity includes infinite values and requires no geometric hypothesis on the background.
+\end{lemma}
+\begin{proof}
+If $\nu$ is not absolutely continuous, choose a compact set $K$ with $\mathrm{d}V(K)=0$ and $\nu(K)>0$. For $t>0$, regularity and a continuous cutoff give $0\leq\chi_t\leq1$, equal to one on $K$, with support of volume at most $\mathrm{e}^{-2t}$. With $F=t\chi_t$, the expression in the supremum is at least
+\[
+ t\nu(K)-\log\bigl(\mathrm{d}V(X)+\mathrm{e}^{-t}\bigr),
+\]
+which tends to infinity.
+
+Suppose $\nu=h\,\mathrm{d}V$. When its entropy is finite, Jensen's inequality for the logarithm gives
+\[
+ \int_XF\,\mathrm{d}\nu-\operatorname{Ent}_{\mathrm{d}V}(\nu)
+ \leq\log\int_{\{h>0\}}\mathrm{e}^F\,\mathrm{d}V
+ \leq\log\int_X\mathrm{e}^F\,\mathrm{d}V.
+\]
+For infinite entropy the resulting upper bound is automatic. For the opposite inequality set
+\[
+ F_k=\log\bigl(\max\{k^{-1},\min\{h,k\}\}\bigr),\qquad k\geq1.
+\]
+Then $\int_X\mathrm{e}^{F_k}\,\mathrm{d}V\to1$, and $\int_XF_k\,\mathrm{d}\nu\to\operatorname{Ent}_{\mathrm{d}V}(\nu)$, with infinity allowed. The positive parts converge increasingly, and the negative parts are dominated by the integrable negative part of $h\log h$. For each fixed $k$, approximate $F_k$ in $L^1(\mathrm{d}V+\nu)$ by continuous functions with the same bounds. Their two integrals converge to those of $F_k$, including the exponential integral. The continuous supremum is therefore at least its value at $F_k$. Let $k\to\infty$.
+\end{proof}

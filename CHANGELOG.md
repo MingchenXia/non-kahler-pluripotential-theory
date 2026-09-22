@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint70: entropy proof reuse and functional stability
+
+Extracted a self-contained entropy variational lemma and used it directly in the closed, Hermitian and prescribed-reference proofs. Proved a finite scalar pseudometric, its dual formula on the finite-entropy domain, volume independence and adjoint stability for bounded measurable logarithmic densities under uniform scalar-functional convergence. Reused this to shorten the zero-reference corollary. Added projective examples showing sharpness and failure to distinguish different ordinary or ideal types. Corrected the previous analytic scaling example to use rational t, matching the source convention; the previous bounded verifier report had not audited this convention and is preserved. Rethlas normalization_distance_01 checked the repair and new deductions without critical errors or gaps. All 22 prior formal statements remain. The 701-page output passed compilation and 22-page visual review; clean source reconstruction is recorded separately.
+
 ## 22 September 2026 — Checkpoint69: comparison of prescribed references
 
 Proved ordinary-type monotonicity of B and H and a quantitative comparison with zero reference, uniform over every continuous logarithmic density. Used a single dual sublevel to identify supporting-probability limits as the smaller-background parameter tends to zero, with weak L1 convergence and a whole-sequence conclusion under uniqueness. Added an analytic-envelope family connecting this statement to the smooth Gauduchon adjoint. Reused strict domination and the existing dual compactness theorem. Split the remaining-questions paragraph and shortened repetitive prose in the example. Rethlas returned correct without gaps. The 697-page output passed compilation and 14-page visual review; source reconstruction is recorded separately. The hypotheses on the model and smaller background remain.

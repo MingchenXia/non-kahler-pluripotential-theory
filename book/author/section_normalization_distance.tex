@@ -1,0 +1,49 @@
+\subsection{Uniform comparison of the scalar functionals}
+
+The comparison has a functional formulation that also applies away from reference zero. Fix $\theta$ as above and, for two references satisfying \eqref{eq:normalization-reference}, put
+\begin{equation}\label{eq:normalization-distance}
+ \Delta(\varphi,\psi)
+   =\sup_{G\in C(X)}|B_\varphi(G)-B_\psi(G)|.
+\end{equation}
+The comparison with $B_0$ makes this number finite for every such pair. It is a pseudometric: symmetry, vanishing on the diagonal and the triangle inequality follow from the uniform norm. Distinct singularity types can have distance zero, as \cref{ex:normalization-distance-projective} shows.
+
+\begin{proposition}\label{prop:normalization-distance-dual}
+For admitted model references,
+\[
+ \Delta(\varphi,\psi)
+ =\sup_{\operatorname{Ent}_{\mathrm{d}V}(\nu)<\infty}
+                       |H_\varphi(\nu)-H_\psi(\nu)|,
+\]
+where the supremum is over probability measures. The same value is obtained in \eqref{eq:normalization-distance} using all bounded measurable $G$. It is independent of the smooth positive reference volume.
+\end{proposition}
+\begin{proof}
+By \cref{cor:prescribed-dual-entropy}, finite entropy is the common finite domain of the two duals; rescaling the reference volume to have mass one does not change finiteness. A uniform bound for $|B_\varphi-B_\psi|$ passes to their defining suprema, so the displayed supremum is at most $\Delta(\varphi,\psi)$. Conversely, denote that supremum by $D$. If $\nu\in\mathcal A_\psi(G)$, it has finite entropy and the dual minimum formula gives
+\[
+ B_\varphi(G)
+ \leq H_\varphi(\nu)-\int_XG\,\mathrm{d}\nu
+ \leq B_\psi(G)+D.
+\]
+Interchanging the references proves the opposite inequality. Thus $\Delta\leq D$.
+
+For bounded measurable $G$, take continuous approximations with the same uniform bound converging in $L^1(\mathrm{d}V)$. The continuity theorem \cref{thm:normalization-bounded-lone}, applied separately to the two fixed references, extends the scalar bound to $G$. Finally a volume change $\mathrm{d}V'=\mathrm{e}^a\mathrm{d}V$ replaces each $B(G)$ by $B(G+a)$. Translation by $a\in C(X)$ is a bijection of the test space, so the supremum is unchanged.
+\end{proof}
+
+\begin{proposition}\label{prop:normalization-distance-stability}
+Suppose $\Delta(\varphi_j,\varphi)\to0$. Let $G_j,G$ be uniformly bounded measurable functions with $G_j\to G$ in $L^1(\mathrm{d}V)$, and choose $\nu_j\in\mathcal A_{\varphi_j}(G_j)$. Their densities are uniformly integrable. Every weak cluster point belongs to $\mathcal A_\varphi(G)$, and convergence of a subsequence also holds weakly in $L^1$. If $\mathcal A_\varphi(G)$ is a singleton, the full sequence converges to it in these two senses.
+\end{proposition}
+\begin{proof}
+Write $\delta_j=\Delta(\varphi_j,\varphi)$. The scalar and dual bounds, together with the supporting identity, give
+\[
+ 0\leq H_\varphi(\nu_j)-\int_XG_j\,\mathrm{d}\nu_j-B_\varphi(G_j)
+       \leq2\delta_j.
+\]
+If $\|G_j\|_\infty\leq M$, then $H_\varphi(\nu_j)\leq B_\varphi(0)+2M+2\delta_j$. Thus all measures lie in one finite dual sublevel. By \cref{thm:normalization-dual-compactness}, their densities are uniformly integrable, and a weakly convergent subsequence also converges weakly in $L^1$.
+
+Let its limit be $\nu$. Uniform integrability, the common bound and convergence in measure give $\int_X|G_j-G|\,\mathrm{d}\nu_j\to0$. Weak $L^1$ convergence applies to the bounded function $G$, and \cref{thm:normalization-bounded-lone} gives $B_\varphi(G_j)\to B_\varphi(G)$. Lower semicontinuity in the displayed inequality yields
+\[
+ H_\varphi(\nu)-\int_XG\,\mathrm{d}\nu-B_\varphi(G)\leq0.
+\]
+The measurable dual minimum formula gives the reverse inequality and identifies equality with $\nu\in\mathcal A_\varphi(G)$. Compactness proves whole-sequence convergence when this set is a singleton.
+\end{proof}
+
+This criterion concerns the scalar functionals and their supporting probabilities. It does not assert convergence of the solution potentials. To use it for a family of singularities, one still needs a way to prove $\Delta\to0$ from information about those singularities. The preceding smaller-background comparison gives one such condition.

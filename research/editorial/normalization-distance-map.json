@@ -1,0 +1,216 @@
+{
+  "date_utc": "2026-09-22T05:18:07.112808+00:00",
+  "baseline_commit": "efb87324eb0bb6e434acca68505a5ae13281e11a",
+  "scope": "A standalone entropy variational lemma, finite scalar pseudometric and dual formula, measurable-data adjoint stability, projective sharpness and nonseparation examples, and repair of the analytic rational-scaling convention.",
+  "preview_directory": "/private/tmp/non-kahler-20260922/normalization-distance-preview",
+  "all_existing_labels_preserved": true,
+  "reversible_edits_checked": true,
+  "complete_prior_formal_blocks_preserved": 22,
+  "editorial_after_submission": "Existing statements are preserved; the old analytic family explicitly uses rational t. The entropy lemma replaces extraction from the closed-case proof, and general stability shortens the zero-reference proof. Remove a redundant sentence from the new entropy statement, update its comparison introduction to the actual order, and keep the projective mass formula with its explanatory sentence. No mathematical assertion is strengthened.",
+  "book_files": [
+    {
+      "path": "book/author/section_entropy_variational.tex",
+      "added": true,
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "ecd08f9e7049b6c27a6ba7e694a852b1599eaea50b9197d6c521ec51d9a148f2",
+      "edits": [
+        {
+          "old_start": 0,
+          "old_end": 0,
+          "new_start": 0,
+          "new_end": 27,
+          "old": "",
+          "new": "\\begin{lemma}\\label{lem:entropy-variational}\nFor every Borel probability measure $\\nu$,\n\\[\n \\operatorname{Ent}_{\\mathrm{d}V}(\\nu)\n =\\sup_{F\\in C(X)}\\left(\\int_XF\\,\\mathrm{d}\\nu\n                     -\\log\\int_X\\mathrm{e}^F\\,\\mathrm{d}V\\right).\n\\]\n\\end{lemma}\n\\begin{proof}\nIf $\\nu$ is not absolutely continuous, choose a compact set $K$ with $\\mathrm{d}V(K)=0$ and $\\nu(K)>0$. For $t>0$, regularity and a continuous cutoff give $0\\leq\\chi_t\\leq1$, equal to one on $K$, with support of volume at most $\\mathrm{e}^{-2t}$. With $F=t\\chi_t$, the expression in the supremum is at least\n\\[\n t\\nu(K)-\\log\\bigl(\\mathrm{d}V(X)+\\mathrm{e}^{-t}\\bigr),\n\\]\nwhich tends to infinity.\n\nSuppose $\\nu=h\\,\\mathrm{d}V$. When its entropy is finite, Jensen's inequality for the logarithm gives\n\\[\n \\int_XF\\,\\mathrm{d}\\nu-\\operatorname{Ent}_{\\mathrm{d}V}(\\nu)\n \\leq\\log\\int_{\\{h>0\\}}\\mathrm{e}^F\\,\\mathrm{d}V\n \\leq\\log\\int_X\\mathrm{e}^F\\,\\mathrm{d}V.\n\\]\nFor infinite entropy the resulting upper bound is automatic. For the opposite inequality set\n\\[\n F_k=\\log\\bigl(\\max\\{k^{-1},\\min\\{h,k\\}\\}\\bigr),\\qquad k\\geq1.\n\\]\nThen $\\int_X\\mathrm{e}^{F_k}\\,\\mathrm{d}V\\to1$, and $\\int_XF_k\\,\\mathrm{d}\\nu\\to\\operatorname{Ent}_{\\mathrm{d}V}(\\nu)$, with infinity allowed. The positive parts converge increasingly, and the negative parts are dominated by the integrable negative part of $h\\log h$. For each fixed $k$, approximate $F_k$ in $L^1(\\mathrm{d}V+\\nu)$ by continuous functions with the same bounds. Their two integrals converge to those of $F_k$, including the exponential integral. The continuous supremum is therefore at least its value at $F_k$. Let $k\\to\\infty$.\n\\end{proof}\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_normalization_distance.tex",
+      "added": true,
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "016c50f18c364f8212d70a305eeeb5e34131f3f495de9311a77acf4e822292a5",
+      "edits": [
+        {
+          "old_start": 0,
+          "old_end": 0,
+          "new_start": 0,
+          "new_end": 49,
+          "old": "",
+          "new": "\\subsection{Uniform comparison of the scalar functionals}\n\nThe comparison has a functional formulation that also applies away from reference zero. Fix $\\theta$ as above and, for two references satisfying \\eqref{eq:normalization-reference}, put\n\\begin{equation}\\label{eq:normalization-distance}\n \\Delta(\\varphi,\\psi)\n   =\\sup_{G\\in C(X)}|B_\\varphi(G)-B_\\psi(G)|.\n\\end{equation}\nThe comparison with $B_0$ makes this number finite for every such pair. It is a pseudometric: symmetry, vanishing on the diagonal and the triangle inequality follow from the uniform norm. Distinct singularity types can have distance zero, as \\cref{ex:normalization-distance-projective} shows.\n\n\\begin{proposition}\\label{prop:normalization-distance-dual}\nFor admitted model references,\n\\[\n \\Delta(\\varphi,\\psi)\n =\\sup_{\\operatorname{Ent}_{\\mathrm{d}V}(\\nu)<\\infty}\n                       |H_\\varphi(\\nu)-H_\\psi(\\nu)|,\n\\]\nwhere the supremum is over probability measures. The same value is obtained in \\eqref{eq:normalization-distance} using all bounded measurable $G$. It is independent of the smooth positive reference volume.\n\\end{proposition}\n\\begin{proof}\nBy \\cref{cor:prescribed-dual-entropy}, finite entropy is the common finite domain of the two duals; rescaling the reference volume to have mass one does not change finiteness. A uniform bound for $|B_\\varphi-B_\\psi|$ passes to their defining suprema, so the displayed supremum is at most $\\Delta(\\varphi,\\psi)$. Conversely, denote that supremum by $D$. If $\\nu\\in\\mathcal A_\\psi(G)$, it has finite entropy and the dual minimum formula gives\n\\[\n B_\\varphi(G)\n \\leq H_\\varphi(\\nu)-\\int_XG\\,\\mathrm{d}\\nu\n \\leq B_\\psi(G)+D.\n\\]\nInterchanging the references proves the opposite inequality. Thus $\\Delta\\leq D$.\n\nFor bounded measurable $G$, take continuous approximations with the same uniform bound converging in $L^1(\\mathrm{d}V)$. The continuity theorem \\cref{thm:normalization-bounded-lone}, applied separately to the two fixed references, extends the scalar bound to $G$. Finally a volume change $\\mathrm{d}V'=\\mathrm{e}^a\\mathrm{d}V$ replaces each $B(G)$ by $B(G+a)$. Translation by $a\\in C(X)$ is a bijection of the test space, so the supremum is unchanged.\n\\end{proof}\n\n\\begin{proposition}\\label{prop:normalization-distance-stability}\nSuppose $\\Delta(\\varphi_j,\\varphi)\\to0$. Let $G_j,G$ be uniformly bounded measurable functions with $G_j\\to G$ in $L^1(\\mathrm{d}V)$, and choose $\\nu_j\\in\\mathcal A_{\\varphi_j}(G_j)$. Their densities are uniformly integrable. Every weak cluster point belongs to $\\mathcal A_\\varphi(G)$, and convergence of a subsequence also holds weakly in $L^1$. If $\\mathcal A_\\varphi(G)$ is a singleton, the full sequence converges to it in these two senses.\n\\end{proposition}\n\\begin{proof}\nWrite $\\delta_j=\\Delta(\\varphi_j,\\varphi)$. The scalar and dual bounds, together with the supporting identity, give\n\\[\n 0\\leq H_\\varphi(\\nu_j)-\\int_XG_j\\,\\mathrm{d}\\nu_j-B_\\varphi(G_j)\n       \\leq2\\delta_j.\n\\]\nIf $\\|G_j\\|_\\infty\\leq M$, then $H_\\varphi(\\nu_j)\\leq B_\\varphi(0)+2M+2\\delta_j$. Thus all measures lie in one finite dual sublevel. By \\cref{thm:normalization-dual-compactness}, their densities are uniformly integrable, and a weakly convergent subsequence also converges weakly in $L^1$.\n\nLet its limit be $\\nu$. Uniform integrability, the common bound and convergence in measure give $\\int_X|G_j-G|\\,\\mathrm{d}\\nu_j\\to0$. Weak $L^1$ convergence applies to the bounded function $G$, and \\cref{thm:normalization-bounded-lone} gives $B_\\varphi(G_j)\\to B_\\varphi(G)$. Lower semicontinuity in the displayed inequality yields\n\\[\n H_\\varphi(\\nu)-\\int_XG\\,\\mathrm{d}\\nu-B_\\varphi(G)\\leq0.\n\\]\nThe measurable dual minimum formula gives the reverse inequality and identifies equality with $\\nu\\in\\mathcal A_\\varphi(G)$. Compactness proves whole-sequence convergence when this set is a singleton.\n\\end{proof}\n\nThis criterion concerns the scalar functionals and their supporting probabilities. It does not assert convergence of the solution potentials. To use it for a family of singularities, one still needs a way to prove $\\Delta\\to0$ from information about those singularities. The preceding smaller-background comparison gives one such condition.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_normalization_projective_examples.tex",
+      "added": true,
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e37733b8711dcec87e67abcc1585f20a0787ac9bf6875f4da4eb2aa4a19f1d1c",
+      "edits": [
+        {
+          "old_start": 0,
+          "old_end": 0,
+          "new_start": 0,
+          "new_end": 27,
+          "old": "",
+          "new": "\\begin{example}\\label{ex:normalization-distance-projective}\nThe pseudometric retains only the mass in a closed K\\\"ahler background. Indeed \\eqref{eq:normalization-closed-formula} gives\n\\[\n \\Delta(\\varphi,\\psi)=|\\log m_\\varphi-\\log m_\\psi|.\n\\]\nFor an explicit calculation, let $\\theta$ be the Fubini--Study form on $\\mathbb P^n$, normalized by $\\int_X\\theta^n=1$, and let $D$ be a hyperplane. A defining section with its Fubini--Study metric gives $a_D=\\log|s_D|^2\\leq0$ after rescaling, with\n\\[\n \\ddc a_D=[D]-\\theta,\\qquad\n \\theta+\\ddc(ta_D)=(1-t)\\theta+t[D].\n\\]\nTake a rational $0<t<1$ and put $\\varphi_{t,D}=P_\\theta[ta_D]$. As in \\cref{ex:analytic-reference-normalization}, this is an admitted model reference of ordinary type $ta_D$. Off $D$ its original representative has Monge--Amp\\`ere measure $(1-t)^n\\theta^n$, and its non-pluripolar measure puts no mass on $D$.\n\n\\Needspace{5\\baselineskip}\nInvariance of mass under bounded changes in the closed background gives\n\\[\n m_{\\varphi_{t,D}}=(1-t)^n,\\qquad\n B_{\\varphi_{t,D}}(G)-B_0(G)=n\\log(1-t).\n\\]\nThus the constant in \\cref{prop:reference-normalization-comparison} is sharp.\n\nOn $\\mathbb P^1$, choose two distinct points $p,q$ for $D$. The corresponding references have distance zero, although one is unbounded at $p$ and bounded at $q$, while the other has the reverse behavior. They are not ordinarily equivalent. For every positive integer $m$,\n\\[\n \\mathcal I(m\\varphi_{t,p})=\\mathcal O(-\\lfloor mt\\rfloor p),\\qquad\n \\mathcal I(m\\varphi_{t,q})=\\mathcal O(-\\lfloor mt\\rfloor q).\n\\]\nThe one-variable integrability criterion proves these identities. For $mt\\geq1$ the ideals differ. Thus $\\Delta$ does not separate ideal types either, and cannot replace the singularity topology sought in this chapter.\n\\end{example}\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_normalization_dual.tex",
+      "added": false,
+      "before_sha256": "bb54c4baccf50ffc35e8109c56f845bb344dfde29ecb42164e002c850e7c67e9",
+      "after_sha256": "4a25532bd6f18663453700e409484ee2da1414fb99cec59a7c9a3fec272f3c2b",
+      "edits": [
+        {
+          "old_start": 124,
+          "old_end": 125,
+          "new_start": 124,
+          "new_end": 136,
+          "old": "\\section{Entropy in the closed case}\n",
+          "new": "\\section{Entropy and the closed case}\n\nWe first recall a measure-theoretic identity used in both the closed and nonclosed settings.\n\nFor a probability measure $\\nu=h\\,\\mathrm{d}V$, define\n\\[\n \\operatorname{Ent}_{\\mathrm{d}V}(\\nu)=\\int_Xh\\log h\\,\\mathrm{d}V,\n \\qquad 0\\log0=0,\n\\]\nand set its entropy to $+\\infty$ if it is not absolutely continuous. This entropy may be negative when $\\mathrm{d}V(X)\\ne1$, but its negative part is finite since $h\\log h\\geq-\\mathrm{e}^{-1}$.\n\n\\input{author/section_entropy_variational}\n"
+        },
+        {
+          "old_start": 135,
+          "old_end": 142,
+          "new_start": 146,
+          "new_end": 146,
+          "old": "For a probability measure $\\nu=h\\,\\mathrm{d}V$, define\n\\[\n \\operatorname{Ent}_{\\mathrm{d}V}(\\nu)=\\int_Xh\\log h\\,\\mathrm{d}V,\n \\qquad 0\\log0=0,\n\\]\nand set its entropy to $+\\infty$ if it is not absolutely continuous. This entropy may be negative when $\\mathrm{d}V(X)\\ne1$, but its negative part is finite since $h\\log h\\geq-\\mathrm{e}^{-1}$.\n\n",
+          "new": ""
+        },
+        {
+          "old_start": 150,
+          "old_end": 170,
+          "new_start": 154,
+          "new_end": 155,
+          "old": "If $\\nu$ is singular with respect to $\\mathrm{d}V$ in the sense that it is not absolutely continuous, \\cref{thm:normalization-dual-compactness} gives $H_\\varphi(\\nu)=+\\infty$. Suppose $\\mathrm{d}\\nu=h\\,\\mathrm{d}V$. For finite entropy, Jensen's inequality for the concave logarithm, with probability measure $\\nu$, gives for bounded $F$\n\\[\n \\int_X F\\,\\mathrm{d}\\nu-\\int_Xh\\log h\\,\\mathrm{d}V\n =\\int_{\\{h>0\\}}\\log\\frac{\\mathrm{e}^F}{h}\\,\\mathrm{d}\\nu\n \\leq\\log\\int_{\\{h>0\\}}\\mathrm{e}^F\\,\\mathrm{d}V\n \\leq\\log\\int_X\\mathrm{e}^F\\,\\mathrm{d}V.\n\\]\nAn approximation proves the same inequality if a logarithm is initially unbounded. If entropy is infinite, the resulting upper bound for $H_\\varphi$ is automatic. Taking the supremum yields\n$H_\\varphi(\\nu)\\leq\\log m_\\varphi+\\operatorname{Ent}_{\\mathrm{d}V}(\\nu)$.\n\nFor the reverse inequality, put\n\\[\n F_k=\\log\\bigl(\\max\\{k^{-1},\\min\\{h,k\\}\\}\\bigr),\\qquad k\\geq1.\n\\]\nThen $\\int_X\\mathrm{e}^{F_k}\\,\\mathrm{d}V\\to\\int_Xh\\,\\mathrm{d}V=1$ by truncation in $L^1$. Also\n$\\int_XF_k\\,\\mathrm{d}\\nu\\to\\int_Xh\\log h\\,\\mathrm{d}V$, with the value $+\\infty$ allowed: the positive part increases to the positive part of $h\\log h$, and the negative part converges by domination by its integrable negative part. For each fixed $k$, approximate $F_k$ by continuous functions with the same bounds in $L^1(\\mathrm{d}V+\\nu)$. Their exponential integrals and their $\\nu$-integrals converge to those of $F_k$. Therefore the continuous supremum defining $H_\\varphi$ is at least\n\\[\n \\log m_\\varphi-\\log\\int_X\\mathrm{e}^{F_k}\\,\\mathrm{d}V+\\int_XF_k\\,\\mathrm{d}\\nu.\n\\]\nLetting $k\\to\\infty$ proves the reverse inequality, including infinite entropy.\n",
+          "new": "Substitute \\eqref{eq:normalization-closed-formula} into the defining supremum and apply \\cref{lem:entropy-variational}.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_hermitian_dual_entropy.tex",
+      "added": false,
+      "before_sha256": "23a52e2a18b9aa44118c900623b7b1ec218294ed4f58113c13611d8596751f2f",
+      "after_sha256": "f58a3bf200232107f7474f19cef6de6f97069f9fa8939fc693f56a763e025872",
+      "edits": [
+        {
+          "old_start": 34,
+          "old_end": 44,
+          "new_start": 34,
+          "new_end": 35,
+          "old": "For an absolutely continuous probability $\\nu$, the variational calculation in the proof of \\cref{prop:normalization-dual-entropy} gives\n\\[\n \\sup_{F\\in C(X)}\\left(\\int_XF\\,\\mathrm{d}\\nu\n                 -\\log\\int_X\\mathrm{e}^F\\,\\mathrm{d}V\\right)\n       =\\operatorname{Ent}_{\\mathrm{d}V}(\\nu),\n\\]\nincluding infinite entropy. This measure-theoretic identity requires no closedness. Taking suprema in the two bounds for $B_0$, with $F=qG$ and $F=G/n$, proves the claim with $a_q=\\log c_q$ and $A=-n\\log m$.\n\n\\Needspace{4\\baselineskip}\nFor every other probability, both $H_0$ and entropy are infinite by \\cref{thm:normalization-dual-compactness}. Fix $q=2$ for the assertions about finite domains and uniformly bounded families.\n",
+          "new": "Take the defining suprema in the two scalar bounds and apply \\cref{lem:entropy-variational}, with $F=qG$ and $F=G/n$, respectively. This proves both inequalities for every probability measure, including infinite values, with $a_q=\\log c_q$ and $A=-n\\log m$. Fix $q=2$ for the finite-domain and bounded-family assertions.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_prescribed_dual_entropy.tex",
+      "added": false,
+      "before_sha256": "619dd1180a57981024952b5556d830bb9c84eafa2bc54c69adc1d252008c03e1",
+      "after_sha256": "1e86346dd1d27adc3fce235a33b7b1a08647830a9306529b8e161abe0a206838",
+      "edits": [
+        {
+          "old_start": 28,
+          "old_end": 29,
+          "new_start": 28,
+          "new_end": 29,
+          "old": "For an absolutely continuous probability, take the defining supremum in the lower scalar estimate and use the entropy variational formula with $F=qG$. This proves the lower bound with $a_q=\\log b_q$, including infinite entropy. Every non-absolutely-continuous probability has both values infinite by \\cref{thm:normalization-dual-compactness}. The finite-domain and bounded-family assertions follow by taking $q=2$. The lower-density lemma is uniform in the reference for fixed $\\varepsilon$, and the upper bound uses only $\\Omega$. This proves the final assertion.\n",
+          "new": "Taking the defining supremum in the lower scalar estimate and applying \\cref{lem:entropy-variational} with $F=qG$ gives the lower bound for every probability, including infinite values, with $a_q=\\log b_q$. The finite-domain and bounded-family assertions follow by taking $q=2$. The lower-density lemma is uniform in the reference for fixed $\\varepsilon$, and the upper bound uses only $\\Omega$. This proves the final assertion.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_reference_comparison.tex",
+      "added": false,
+      "before_sha256": "9d87ce8a1baefeed18f71bfc9e7c9aa19afcc37d046b9e68bc9929d144d6d884",
+      "after_sha256": "1f7fc841aaeb338e741e441b9648cc6c3d80b0628746265e04c3ea196c5f928c",
+      "edits": [
+        {
+          "old_start": 35,
+          "old_end": 35,
+          "new_start": 35,
+          "new_end": 37,
+          "old": "",
+          "new": "\\input{author/section_normalization_distance}\n\n"
+        },
+        {
+          "old_start": 39,
+          "old_end": 49,
+          "new_start": 41,
+          "new_end": 42,
+          "old": "Put $\\delta_j=-n\\log(1-\\varepsilon_j)\\to0$. The proposition gives $|B_{\\varphi_j}-B_0|\\leq\\delta_j$ on all of $C(X)$. Its dual inequality and the supporting identity give\n\\[\n 0\\leq H_0(\\nu_j)-\\int_XG_j\\,\\mathrm{d}\\nu_j-B_0(G_j)\n       \\leq\\delta_j.\n\\]\nChoose $M$ with $\\|G_j\\|_\\infty\\leq M$. This implies $H_0(\\nu_j)\\leq B_0(0)+2M+\\delta_j$, so all $\\nu_j$ lie in one compact dual sublevel. If a subsequence converges weakly to $\\nu$, lower semicontinuity, uniform convergence of $G_j$ and continuity of $B_0$ give\n\\[\n H_0(\\nu)-\\int_XG\\,\\mathrm{d}\\nu-B_0(G)\\leq0.\n\\]\nThe dual minimum formula gives the opposite inequality and identifies equality with $\\nu\\in\\mathcal A_0(G)$. The common-sublevel theorem \\cref{thm:normalization-dual-compactness} also gives uniform integrability and weak $L^1$ convergence. Compactness and uniqueness of the limiting supporting probability give the last assertion.\n",
+          "new": "Put $\\delta_j=-n\\log(1-\\varepsilon_j)\\to0$. The comparison proposition gives $\\Delta(\\varphi_j,0)\\leq\\delta_j$, hence uniform convergence of $B_{\\varphi_j}$ to $B_0$ on all of $C(X)$. Apply \\cref{prop:normalization-distance-stability} with limiting reference zero for the assertions about supporting probabilities.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_analytic_envelope_limits.tex",
+      "added": false,
+      "before_sha256": "5394829ae9da4e2c8ecac7a9a9540a19703a5d186cd09c53237cf485cb70158c",
+      "after_sha256": "23d20e16dc1f60c9553c3096d7524788c75d5893c0dbc8678de8d4c54973c554",
+      "edits": [
+        {
+          "old_start": 44,
+          "old_end": 45,
+          "new_start": 44,
+          "new_end": 45,
+          "old": " \\varphi_t=P_\\theta[ta],\\qquad 0<t<1.\n",
+          "new": " \\varphi_t=P_\\theta[ta],\\qquad t\\in\\mathbb Q\\cap(0,1).\n"
+        },
+        {
+          "old_start": 54,
+          "old_end": 54,
+          "new_start": 54,
+          "new_end": 56,
+          "old": "",
+          "new": "\n\\input{author/section_normalization_projective_examples}\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/chapter_normalization.tex",
+      "added": false,
+      "before_sha256": "4edb0003d0bab6f735354821ee7e6b40cafdcb2d8b125967fc62303c290a5751",
+      "after_sha256": "0d48e8c83465c9a531f81bf73940578fc548ab6e2ea38b15714e3f46339312fc",
+      "edits": [
+        {
+          "old_start": 243,
+          "old_end": 244,
+          "new_start": 243,
+          "new_end": 244,
+          "old": "A third question is how the sets $\\mathcal A_\\varphi(F)$ vary when the prescribed singularity type changes. By \\cref{cor:prescribed-dual-entropy}, bounded logarithmic densities and a common smaller-background parameter give uniform entropy and compactness even for varying model references. When the smaller-background parameters tend to zero, \\cref{cor:small-reference-adjoint-limits} identifies every limit with a zero-reference supporting probability. A stability criterion for general changes of the model reference is still needed.\n",
+          "new": "A third question is how the sets $\\mathcal A_\\varphi(F)$ vary when the prescribed singularity type changes. By \\cref{cor:prescribed-dual-entropy}, bounded logarithmic densities and a common smaller-background parameter give uniform entropy and compactness even for varying model references. When the smaller-background parameters tend to zero, \\cref{cor:small-reference-adjoint-limits} identifies every limit with a zero-reference supporting probability. \\Cref{prop:normalization-distance-stability} gives stability under uniform convergence of the scalar functionals, even for bounded measurable logarithmic densities. Relating this condition directly to the ordinary singularities or their multiplier ideals remains a separate question.\n"
+        }
+      ]
+    }
+  ],
+  "visual_pages": {
+    "book": {
+      "review": [
+        9,
+        10,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384
+      ]
+    }
+  }
+}
