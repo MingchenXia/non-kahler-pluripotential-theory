@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint71: real parameters and analytic-type terminology
+
+Rephrased the consequence of the real-parameter divisorial lemma using an explicit local logarithmic presentation and stated its generic Lelong number directly in the proof. Clarified when that presentation has a rational coefficient and made the same distinction in the local Bergman discussion. The real-parameter inequalities, integer global regularization and rational Hermitian approximants are unchanged. This bounded terminology edit received a primary-agent definition/proof reread, with no new Rethlas run. Eleven other complete formal statements and all labels are preserved. The 701-page book compiles without errors or overfull boxes; 13 selected pages were read, and only four physical pages have changed text. Source reconstruction is recorded separately.
+
 ## 22 September 2026 — Checkpoint70: entropy proof reuse and functional stability
 
 Extracted a self-contained entropy variational lemma and used it directly in the closed, Hermitian and prescribed-reference proofs. Proved a finite scalar pseudometric, its dual formula on the finite-entropy domain, volume independence and adjoint stability for bounded measurable logarithmic densities under uniform scalar-functional convergence. Reused this to shorten the zero-reference corollary. Added projective examples showing sharpness and failure to distinguish different ordinary or ideal types. Corrected the previous analytic scaling example to use rational t, matching the source convention; the previous bounded verifier report had not audited this convention and is preserved. Rethlas normalization_distance_01 checked the repair and new deductions without critical errors or gaps. All 22 prior formal statements remain. The 701-page output passed compilation and 22-page visual review; clean source reconstruction is recorded separately.
