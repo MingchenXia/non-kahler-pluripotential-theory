@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint67: exact mass bounds from entropy differences
+
+Proved that the infimum and supremum of H_0 minus relative entropy are log v_- and log v_+, even when restricted to smooth strictly positive probabilities. The proof uses Gibbs probabilities and smooth Gauduchon adjoints for the two opposite endpoints, with the earlier bounded regularization theorem. It includes zero lower mass and infinite upper mass without a standing mass hypothesis. Verified both invariances and the equivalence between constancy of the difference and mass invariance; connected this with the existing curvature characterization. Rethlas returned correct without gaps. The 695-page book compiles cleanly apart from the inherited bibliography underfull paragraph; 13 selected pages were inspected. The next singular-reference entropy estimate is a separate draft.
+
 ## 22 September 2026 — Checkpoint66: Hermitian dual entropy and clearer research questions
 
 Compared the Hermitian zero-reference convex dual with ordinary entropy from both sides, using a fixed Gauduchon test and the lower Lq density estimate. Their finite domains and uniformly bounded families coincide without either mass property. Rethlas returned correct with no gaps, including infinite values and dimension one. Reorganized the general-measure research discussion, preserving all39 previous result references and all10 complete formal problem/conjecture blocks in the edited source. The693-page manuscript compiles with no errors or overfull boxes;15 selected pages were inspected. Singular-reference entropy bounds and entropy-difference extrema remain further work.

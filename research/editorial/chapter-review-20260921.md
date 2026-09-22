@@ -103,3 +103,5 @@ Checkpoint64 follows up Chapters13,27 and32 with the density-closure lemma, grea
 Checkpoint65 follows up Chapters27 and32 with selected-sequence dual attainment, entropy consequences and a shorter supporting-probability proof. See selected-current-review.md and its reversible map for the exact dependency reread. The new criterion does not supply current regularity or smaller-background noncollapse.
 
 Checkpoint66 follows up Chapter15 and both original nested inputs, the Hermitian entropy comparison, and the Chapter27/32 interfaces. The general-measure program is shorter and retains all prior result references and all complete formal questions. See dual-entropy-review.md and its reversible map.
+
+Checkpoint67 rereads the Chapter15 normalization and dual arguments, the Chapter2 mass polynomial and the Chapter27 smooth/bounded extrema and curvature interface. It adds an economical two-family proof of the exact entropy-difference extrema and preserves the existing formal statements. See entropy-mass-review.md and its reversible map.
