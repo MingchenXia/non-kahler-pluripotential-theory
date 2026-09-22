@@ -27,12 +27,12 @@ The only resolution input is the standard principalization of an analytic ideal.
 \begin{proposition}\label{prop:analytic-envelope-type}
 Let $\theta$ be any smooth real background, and let $a\in\PSH(X,\theta)$ have analytic singularities. Then
 \[
- a\simeq P_\theta[a]=Q_\theta[a].
+ a\simeq P_\theta[a]=P_\theta[a]_{\mathcal I}.
 \]
 In particular the common envelope has analytic singularities with the same coefficient and ideal as $a$, up to a bounded remainder.
 \end{proposition}
 \begin{proof}
-Put $q=Q_\theta[a]$. Projection gives $q\sim_{\mathcal I}a$, so the lemma gives $q\preceq a$. Since $q\leq0$, it is a competitor for $P_\theta[a]$. Combine this with \cref{prop:p-below-i} to obtain
+Put $q=P_\theta[a]_{\mathcal I}$. Projection gives $q\sim_{\mathcal I}a$, so the lemma gives $q\preceq a$. Since $q\leq0$, it is a competitor for $P_\theta[a]$. Combine this with \cref{prop:p-below-i} to obtain
 \[
  a-\sup_Xa\leq P_\theta[a]\leq q\leq P_\theta[a].
 \]
@@ -108,18 +108,18 @@ For every $u\in\PSH(X,\theta)$ and every choice in \eqref{eq:dyadic-analytic-bac
 \]
 Then $q_j$ has analytic singularities, and
 \[
- q_j=Q_{\theta+\epsilon_jh}[a_j]
-       \searrow Q_\theta[u]
+ q_j=P_{\theta+\epsilon_jh}[a_j]_{\mathcal I}
+       \searrow P_\theta[u]_{\mathcal I}
 \]
 pointwise and in $L^1$. The limit is independent of the regularizing representatives, the admissible error sequence and the metric $h$.
 \end{theorem}
 \begin{proof}
-By \cref{prop:analytic-envelope-type}, $q_j=Q_{\theta+\epsilon_jh}[a_j]\simeq a_j$. Since the backgrounds decrease and $a_{j+1}\preceq a_j$, the function $q_{j+1}$ is a competitor for $P_{\theta+\epsilon_jh}[a_j]$. Hence $q_{j+1}\leq q_j$.
+By \cref{prop:analytic-envelope-type}, $q_j=P_{\theta+\epsilon_jh}[a_j]_{\mathcal I}\simeq a_j$. Since the backgrounds decrease and $a_{j+1}\preceq a_j$, the function $q_{j+1}$ is a competitor for $P_{\theta+\epsilon_jh}[a_j]$. Hence $q_{j+1}\leq q_j$.
 
-Put $p=Q_\theta[u]$. The inequality $a_j\geq u$ implies $u\preceq_{\mathcal I}a_j$. Regard $p$ in the larger background and use ideal projection and order preservation there. This gives
+Put $p=P_\theta[u]_{\mathcal I}$. The inequality $a_j\geq u$ implies $u\preceq_{\mathcal I}a_j$. Regard $p$ in the larger background and use ideal projection and order preservation there. This gives
 \[
  u-\sup_Xu\leq p\leq
- Q_{\theta+\epsilon_jh}[p]\leq q_j\leq0.
+ P_{\theta+\epsilon_jh}[p]_{\mathcal I}\leq q_j\leq0.
 \]
 Thus the decreasing limit $q$ is genuine, has supremum zero and belongs to $\PSH(X,\theta)$: the current inequalities pass to the limit, and a nested intersection of the compact maximum sets preserves the supremum. The displayed lower bound also proves $L^1$ convergence by dominated convergence.
 
@@ -131,21 +131,21 @@ Fix a local divisor $E$. The inequalities $u-\sup_Xu\leq q\leq q_j$ imply
 \]
 By \cref{lem:bergman-divisorial-error}, the last term tends to $\nu_E(u)$. Therefore $q$ and $u$ have the same Lelong number on every local divisor over $X$. This gives the pointwise data on every local modification as well: blow up the point and use that its Lelong number is the generic number on the exceptional divisor; on a curve the point already is a divisor. The local ideal criterion \cref{thm:local-i-inputs} now gives $q\sim_{\mathcal I}u$.
 
-Since $q\leq0$ is $\theta$-plurisubharmonic, it is a competitor for $p=Q_\theta[u]$. The earlier inequality $p\leq q$ proves equality. This identifies the limit solely from $\theta$ and the ideal class of $u$, proving every asserted independence.
+Since $q\leq0$ is $\theta$-plurisubharmonic, it is a competitor for $p=P_\theta[u]_{\mathcal I}$. The earlier inequality $p\leq q$ proves equality. This identifies the limit solely from $\theta$ and the ideal class of $u$, proving every asserted independence.
 \end{proof}
 
 \Needspace{17\baselineskip}
 \begin{corollary}\label{cor:dyadic-goodness-criterion}
 For the sequence above, the following are equivalent:
 \[
- P_\theta[u]=Q_\theta[u],\qquad
+ P_\theta[u]=P_\theta[u]_{\mathcal I},\qquad
  q_j\longrightarrow P_\theta[u]\text{ in }L^1,
  \qquad q_j\searrow P_\theta[u]\text{ pointwise}.
 \]
 They hold for one admissible choice of approximation if and only if they hold for every such choice. For any smooth positive probability volume $\mathrm{d}V$,
 \[
  \lim_j\int_X(q_j-P_\theta[u])\,\mathrm{d}V
-   =\int_X(Q_\theta[u]-P_\theta[u])\,\mathrm{d}V\geq0,
+   =\int_X(P_\theta[u]_{\mathcal I}-P_\theta[u])\,\mathrm{d}V\geq0,
 \]
 and equality to zero is another equivalent condition.
 \end{corollary}
@@ -163,9 +163,9 @@ When the background is itself Hermitian, scaling absorbs the curvature error. Ra
 \begin{corollary}\label{cor:fixed-hermitian-analytic-density}
 Let $\omega$ be Hermitian and let $u\in\PSH(X,\omega)$. There are analytic $b_j\in\PSH(X,\omega)$ with $b_j\to u$ in $L^1$, with decreasing ordinary singularity types, such that
 \[
- P_\omega[b_j]=Q_\omega[b_j]\searrow Q_\omega[u].
+ P_\omega[b_j]=P_\omega[b_j]_{\mathcal I}\searrow P_\omega[u]_{\mathcal I}.
 \]
-Consequently analytic singularity classes are dense in the entire ideal-type metric space of \cref{prop:ideal-lone-metric}, without BMP. The equality $P_\omega[u]=Q_\omega[u]$ is equivalent to convergence of these ordinary envelopes to $P_\omega[u]$ in $L^1$.
+Consequently analytic singularity classes are dense in the entire ideal-type metric space of \cref{prop:ideal-lone-metric}, without BMP. The equality $P_\omega[u]=P_\omega[u]_{\mathcal I}$ is equivalent to convergence of these ordinary envelopes to $P_\omega[u]$ in $L^1$.
 \end{corollary}
 \begin{proof}
 Use $h=\omega$ in \eqref{eq:dyadic-analytic-backgrounds}. Enlarge the error bounds to positive rational numbers $\epsilon_j\downarrow0$, and set
@@ -179,17 +179,17 @@ Then $c_j\uparrow1$ is rational and
 \]
 The analytic coefficient is $c_j/m_j$. Also $b_j\to u$ in $L^1$, since $a_j\to u$ there and the sequence has bounded $L^1$ norm. Because $a_{j+1}\preceq a_j$, $c_{j+1}\geq c_j$, and each $a_j$ is bounded above, one has $b_{j+1}\preceq b_j$.
 
-Put $q_j=P_{(1+\epsilon_j)\omega}[a_j]=Q_{(1+\epsilon_j)\omega}[a_j]$. The preceding theorem gives $q_j\searrow Q_\omega[u]$ pointwise and in $L^1$. Since $b_j$ is analytic, \cref{prop:analytic-envelope-type} and the homogeneity in \cref{prop:i-envelope-operations} give
+Put $q_j=P_{(1+\epsilon_j)\omega}[a_j]=P_{(1+\epsilon_j)\omega}[a_j]_{\mathcal I}$. The preceding theorem gives $q_j\searrow P_\omega[u]_{\mathcal I}$ pointwise and in $L^1$. Since $b_j$ is analytic, \cref{prop:analytic-envelope-type} and the homogeneity in \cref{prop:i-envelope-operations} give
 \[
- r_j:=P_\omega[b_j]=Q_\omega[b_j]=c_jq_j.
+ r_j:=P_\omega[b_j]=P_\omega[b_j]_{\mathcal I}=c_jq_j.
 \]
-Here $q_j\leq0$ decreases and $c_j\uparrow1$, so $r_j$ also decreases, with pointwise limit $Q_\omega[u]$. Moreover
+Here $q_j\leq0$ decreases and $c_j\uparrow1$, so $r_j$ also decreases, with pointwise limit $P_\omega[u]_{\mathcal I}$. Moreover
 \[
- Q_\omega[u]\leq q_j\leq r_j\leq0.
+ P_\omega[u]_{\mathcal I}\leq q_j\leq r_j\leq0.
 \]
 The genuine lower bound proves $L^1$ convergence by dominated convergence.
 
-The metric distance from $[b_j]$ to $[u]$ is exactly the $L^1$ distance from $r_j$ to $Q_\omega[u]$, so it tends to zero. The last assertion follows from the identified limit.
+The metric distance from $[b_j]$ to $[u]$ is exactly the $L^1$ distance from $r_j$ to $P_\omega[u]_{\mathcal I}$, so it tends to zero. The last assertion follows from the identified limit.
 \end{proof}
 
-In particular, density of analytic classes for the elementary ideal metric imposes no restriction at all on the ideal class. That metric alone cannot reproduce the $d_S$-closure characterization of ordinary singularities. The new criterion instead compares ordinary envelopes, retaining the possible difference between $P_\theta[u]$ and $Q_\theta[u]$. Its invariance under a change of the auxiliary regularization is proved above; a background-independent singularity topology and a compatible volume characterization remain separate questions.
+In particular, density of analytic classes for the elementary ideal metric imposes no restriction at all on the ideal class. That metric alone cannot reproduce the $d_S$-closure characterization of ordinary singularities. The new criterion instead compares ordinary envelopes, retaining the possible difference between $P_\theta[u]$ and $P_\theta[u]_{\mathcal I}$. Its invariance under a change of the auxiliary regularization is proved above; a background-independent singularity topology and a compatible volume characterization remain separate questions.

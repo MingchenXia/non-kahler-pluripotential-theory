@@ -30,8 +30,8 @@ using the weight $\mathrm{e}^{-\lambda u}$ fixed in \cref{chap:framework}.
 \begin{definition}\label{def:hermitian-i-envelope}
 For $u\in\PSH(X,\theta)$ define
 \[
- Q_\theta[u]:=P_\theta[u]_{\mathcal I}
- =\left(\sup\{v\in\PSH(X,\theta):v\leq0,
+ P_\theta[u]_{\mathcal I}
+ :=\left(\sup\{v\in\PSH(X,\theta):v\leq0,
                    \ v\sim_{\mathcal I}u\}\right)^*.
 \]
 \end{definition}
@@ -80,16 +80,16 @@ The corresponding expressions for $v,v'$ are equal by the first local input. App
 \begin{theorem}\label{thm:hermitian-i-projection}
 For every smooth real background $\theta$ and $u\in\PSH(X,\theta)$,
 \[
- Q_\theta[u]\sim_{\mathcal I}u,\qquad
- Q_\theta[Q_\theta[u]]=Q_\theta[u].
+ P_\theta[u]_{\mathcal I}\sim_{\mathcal I}u,\qquad
+ P_\theta[P_\theta[u]_{\mathcal I}]_{\mathcal I}=P_\theta[u]_{\mathcal I}.
 \]
 The regularization in \cref{def:hermitian-i-envelope} does not change the pointwise supremum. Moreover,
 \[
- \sup_X Q_\theta[u]=0.
+ \sup_X P_\theta[u]_{\mathcal I}=0.
 \]
 \end{theorem}
 \begin{proof}
-Write $q=Q_\theta[u]$. By Choquet's lemma choose a sequence from the defining family whose regularized supremum is $q$. Replace it by successive finite maxima. By \cref{lem:hermitian-i-calculus}, the resulting sequence $v_j$ remains in the family, is increasing, and converges to $q$ almost everywhere.
+Write $q=P_\theta[u]_{\mathcal I}$. By Choquet's lemma choose a sequence from the defining family whose regularized supremum is $q$. Replace it by successive finite maxima. By \cref{lem:hermitian-i-calculus}, the resulting sequence $v_j$ remains in the family, is increasing, and converges to $q$ almost everywhere.
 
 Fix $x\in X$ and $\lambda>0$. On a coordinate ball about $x$, choose one smooth function $r$ such that every $v_j+r$ and $q+r$ is plurisubharmonic. This is possible because they all have the same smooth curvature lower bound $-\theta$. The second local input gives
 \[
@@ -99,13 +99,13 @@ Fix $x\in X$ and $\lambda>0$. On a coordinate ball about $x$, choose one smooth 
 \]
 for large $j$; smooth additions give the second equality. Hence $q\sim_{\mathcal I}u$.
 
-Since $q\leq0$, it now belongs to its own defining family. The pointwise supremum is at least $q$ and at most its regularization $q$, proving the assertion about regularization. The defining families for $Q_\theta[q]$ and $Q_\theta[u]$ coincide, which proves idempotence. Finally, if $\sup_Xq<0$, the function $q-\sup_Xq$ would be a larger competitor, a contradiction.
+Since $q\leq0$, it now belongs to its own defining family. The pointwise supremum is at least $q$ and at most its regularization $q$, proving the assertion about regularization. The defining families for $P_\theta[q]_{\mathcal I}$ and $P_\theta[u]_{\mathcal I}$ coincide, which proves idempotence. Finally, if $\sup_Xq<0$, the function $q-\sup_Xq$ would be a larger competitor, a contradiction.
 \end{proof}
 
 \begin{proposition}\label{prop:p-below-i}
 For every $u\in\PSH(X,\theta)$,
 \[
- u-\sup_Xu\leq P_\theta[u]\leq Q_\theta[u]\leq V_\theta.
+ u-\sup_Xu\leq P_\theta[u]\leq P_\theta[u]_{\mathcal I}\leq V_\theta.
 \]
 \end{proposition}
 \begin{proof}
@@ -113,15 +113,15 @@ Only the middle inequality needs explanation. Let $h\leq0$ be $\theta$-plurisubh
 \[
  h'=\max(h,u-\sup_Xu).
 \]
-It is a normalized competitor below zero, dominates $h$, and differs from $u$ by a bounded amount. Hence $h'\sim_{\mathcal I}u$, so $h\leq Q_\theta[u]$. Take the regularized supremum over $h$. The last inequality holds because every competitor for $Q_\theta[u]$ is a competitor for $V_\theta$.
+It is a normalized competitor below zero, dominates $h$, and differs from $u$ by a bounded amount. Hence $h'\sim_{\mathcal I}u$, so $h\leq P_\theta[u]_{\mathcal I}$. Take the regularized supremum over $h$. The last inequality holds because every competitor for $P_\theta[u]_{\mathcal I}$ is a competitor for $V_\theta$.
 \end{proof}
 
 \begin{corollary}\label{cor:ordinary-preserves-i}
 For $u\in\PSH(X,\theta)$,
 \[
  P_\theta[u]\sim_{\mathcal I}u,\qquad
- Q_\theta[P_\theta[u]]=Q_\theta[u],\qquad
- P_\theta[Q_\theta[u]]=Q_\theta[u].
+ P_\theta[P_\theta[u]]_{\mathcal I}=P_\theta[u]_{\mathcal I},\qquad
+ P_\theta[P_\theta[u]_{\mathcal I}]=P_\theta[u]_{\mathcal I}.
 \]
 \end{corollary}
 \begin{proof}
@@ -129,17 +129,17 @@ The inequalities of \cref{prop:p-below-i} and monotonicity of local integrabilit
 \[
  \mathcal I(\lambda u)
  \subseteq\mathcal I(\lambda P_\theta[u])
- \subseteq\mathcal I(\lambda Q_\theta[u])
+ \subseteq\mathcal I(\lambda P_\theta[u]_{\mathcal I})
  =\mathcal I(\lambda u).
 \]
-This proves the first assertion, and equality of the defining families proves the second. For $q=Q_\theta[u]$, the inequalities $q\leq P_\theta[q]\leq Q_\theta[q]=q$ prove the last assertion; the first inequality uses $q\leq0$.
+This proves the first assertion, and equality of the defining families proves the second. For $q=P_\theta[u]_{\mathcal I}$, the inequalities $q\leq P_\theta[q]\leq P_\theta[q]_{\mathcal I}=q$ prove the last assertion; the first inequality uses $q\leq0$.
 \end{proof}
 
 \begin{corollary}\label{cor:i-envelope-finite}
-If $\theta$ is semipositive and big, then $Q_\theta[u]$ has finite extended Monge--Amp\`ere mass for every $u\in\PSH(X,\theta)$, without bounded mass on $X$.
+If $\theta$ is semipositive and big, then $P_\theta[u]_{\mathcal I}$ has finite extended Monge--Amp\`ere mass for every $u\in\PSH(X,\theta)$, without bounded mass on $X$.
 \end{corollary}
 \begin{proof}
-The last identity in \cref{cor:ordinary-preserves-i} makes $Q_\theta[u]$ an ordinary envelope fixed point. Apply the fixed-point mass estimate in \cref{prop:fixed-point-finite}.
+The last identity in \cref{cor:ordinary-preserves-i} makes $P_\theta[u]_{\mathcal I}$ an ordinary envelope fixed point. Apply the fixed-point mass estimate in \cref{prop:fixed-point-finite}.
 \end{proof}
 
 The finiteness statement concerns the envelope. It does not imply finiteness for every function with the same multiplier ideals, as \cref{prop:goodness-infinite-mass} below demonstrates.
@@ -148,31 +148,31 @@ The finiteness statement concerns the envelope. It does not imply finiteness for
 Write $u\preceq_{\mathcal I}v$ if $\mathcal I(\lambda u)\subseteq\mathcal I(\lambda v)$ for every $\lambda>0$. Then
 \[
  u\preceq_{\mathcal I}v\quad\Longrightarrow\quad
- Q_\theta[u]\leq Q_\theta[v].
+ P_\theta[u]_{\mathcal I}\leq P_\theta[v]_{\mathcal I}.
 \]
-For $a>0$ one has $Q_{a\theta}[a u]=aQ_\theta[u]$. For potentials $u_i\in\PSH(X,\theta_i)$,
+For $a>0$ one has $P_{a\theta}[a u]_{\mathcal I}=aP_\theta[u]_{\mathcal I}$. For potentials $u_i\in\PSH(X,\theta_i)$,
 \[
- Q_{\theta_1}[u_1]+Q_{\theta_2}[u_2]
- \leq Q_{\theta_1+\theta_2}[u_1+u_2].
+ P_{\theta_1}[u_1]_{\mathcal I}+P_{\theta_2}[u_2]_{\mathcal I}
+ \leq P_{\theta_1+\theta_2}[u_1+u_2]_{\mathcal I}.
 \]
 \end{proposition}
 \begin{proof}
-If $h$ is a competitor for $Q_\theta[u]$, the reverse Lelong inequalities in \cref{thm:local-i-inputs} show that $\max(h,v-\sup_Xv)$ is multiplier-ideal equivalent to $v$. It is below zero and dominates $h$. Taking the supremum proves order preservation. Scaling gives a bijection of the two defining families. For addition, the sum of the two envelopes is below zero, is $(\theta_1+\theta_2)$-plurisubharmonic, and is multiplier-ideal equivalent to $u_1+u_2$ by projection and \cref{lem:hermitian-i-calculus}. It is therefore an admissible competitor on the right.
+If $h$ is a competitor for $P_\theta[u]_{\mathcal I}$, the reverse Lelong inequalities in \cref{thm:local-i-inputs} show that $\max(h,v-\sup_Xv)$ is multiplier-ideal equivalent to $v$. It is below zero and dominates $h$. Taking the supremum proves order preservation. Scaling gives a bijection of the two defining families. For addition, the sum of the two envelopes is below zero, is $(\theta_1+\theta_2)$-plurisubharmonic, and is multiplier-ideal equivalent to $u_1+u_2$ by projection and \cref{lem:hermitian-i-calculus}. It is therefore an admissible competitor on the right.
 \end{proof}
 
 \Needspace{9\baselineskip}
 \begin{proposition}\label{prop:i-envelope-gauge}
 Let $\theta$ be a smooth real background, $u\in\PSH(X,\theta)$, and $f\in C^\infty(X,\mathbb R)$. Set $\theta'=\theta+\ddc f$, $u'=u-f$, $m=\min_Xf$ and $M=\max_Xf$. Then
 \[
- Q_\theta[u]+m
- \leq Q_{\theta'}[u']+f
- \leq Q_\theta[u]+M.
+ P_\theta[u]_{\mathcal I}+m
+ \leq P_{\theta'}[u']_{\mathcal I}+f
+ \leq P_\theta[u]_{\mathcal I}+M.
 \]
-The identical inequalities hold with $P$ in place of $Q$.
+The identical inequalities hold for ordinary envelopes.
 \end{proposition}
 \begin{proof}
-If $v$ is a competitor for $Q_\theta[u]$, then $v-f+m$ is $\theta'$-plurisubharmonic, below zero, and multiplier-ideal equivalent to $u'$. Therefore
-$v\leq Q_{\theta'}[u']+f-m$.
+If $v$ is a competitor for $P_\theta[u]_{\mathcal I}$, then $v-f+m$ is $\theta'$-plurisubharmonic, below zero, and multiplier-ideal equivalent to $u'$. Therefore
+$v\leq P_{\theta'}[u']_{\mathcal I}+f-m$.
 Taking the envelope gives the first inequality. Conversely, a competitor $v'$ in the new background gives $v'+f-M$ in the old one, which proves the second inequality. For $P$, use the ordinary singularity order instead of multiplier-ideal equivalence in the same calculation.
 \end{proof}
 
@@ -182,7 +182,7 @@ Thus changing the smooth representative gives envelopes whose associated current
 
 One might try to copy the source definition by putting
 \[
- W_\theta(u)=\int_X\mathrm{MA}_\theta(Q_\theta[u]),
+ W_\theta(u)=\int_X\mathrm{MA}_\theta(P_\theta[u]_{\mathcal I}),
 \]
 whenever the integral is defined. In a non-closed background this quantity need not depend only on the current $\theta+\ddc u$.
 
@@ -194,7 +194,7 @@ Use the Hermitian form $\omega$ and smooth function $g=u_t$ from \cref{ex:torus-
 \[
  \omega+\ddc0=\omega'+\ddc(-g).
 \]
-For a smooth potential in a Hermitian background, the multiplier ideals at all weights are trivial and zero is an admissible competitor for its $Q$-envelope. That envelope is therefore zero. Consequently
+For a smooth potential in a Hermitian background, the multiplier ideals at all weights are trivial and zero is an admissible competitor for its multiplier-ideal envelope. That envelope is therefore zero. Consequently
 \[
  W_\omega(0)=\int_X\omega^2,\qquad
  W_{\omega'}(-g)=\int_X(\omega+\ddc g)^2.
@@ -207,9 +207,9 @@ This obstruction persists on a complex manifold that is itself K\"ahler, and inv
 There is a natural pair of replacements under bounded mass. For big $\theta$, define
 \[
  \mathcal V^-_{\mathcal I,\theta}(u)
-   =\underline{\operatorname{vol}}_\theta(Q_\theta[u]),\qquad
+   =\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}),\qquad
  \mathcal V^+_{\mathcal I,\theta}(u)
-   =\overline{\operatorname{vol}}_\theta(Q_\theta[u]).
+   =\overline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}).
 \]
 They are finite and depend only on the multiplier-ideal class of $u$ in the fixed background. By \cref{prop:i-envelope-gauge} and gauge invariance of singularity volumes, they also depend only on the associated $\ddc$-class and the multiplier-ideal data, rather than on its smooth decomposition. Moreover, \cref{prop:p-below-i,thm:volume-monotonicity} give
 \[
@@ -224,26 +224,26 @@ These inequalities justify considering the two nonnegative gaps. They do not ass
 
 For the moment call
 \begin{equation}\label{eq:background-goodness}
- P_\theta[u]=Q_\theta[u]
+ P_\theta[u]=P_\theta[u]_{\mathcal I}
 \end{equation}
 \emph{envelope goodness in the fixed background}. This is a working definition. We have not proved independence under addition of an arbitrary positive background, nor equivalence with a closure of analytic singularities. Those are part of what makes the source notion more than a formal equality.
 
 \begin{proposition}\label{prop:goodness-infinite-mass}
 If a Hermitian metric $\omega$ fails bounded mass, there exists $U\in\PSH(X,\omega)$ such that
 \[
- P_\omega[U]=Q_\omega[U]=0,
+ P_\omega[U]=P_\omega[U]_{\mathcal I}=0,
  \qquad U\in\mathcal E_{\mathrm{env}}(X,\omega,0),
  \qquad \mathrm{MA}^{\mathrm{ext}}_\omega(U)(X)=+\infty.
 \]
 \end{proposition}
 \begin{proof}
-Take $U$ from \cref{prop:infinite-envelope-class}. Its ordinary envelope is zero and its multiplier ideals are trivial at every weight. Zero is consequently a competitor for $Q_\omega[U]$, and all such competitors are below zero. Thus $Q_\omega[U]=0$. The other properties have already been proved.
+Take $U$ from \cref{prop:infinite-envelope-class}. Its ordinary envelope is zero and its multiplier ideals are trivial at every weight. Zero is consequently a competitor for $P_\omega[U]_{\mathcal I}$, and all such competitors are below zero. Thus $P_\omega[U]_{\mathcal I}=0$. The other properties have already been proved.
 \end{proof}
 
 For this potential, the raw envelope mass $W_\omega(U)=\int_X\omega^n$ is finite, while the mass of $U$ is infinite. Therefore the envelope equality in \eqref{eq:background-goodness} cannot imply the source raw mass-volume identity on the whole Hermitian potential space. The example supplies a concrete reason to impose a finite-mass regime or to replace the invariant before formulating an equivalence theorem.
 
 \Needspace{8\baselineskip}
-Positive divisorial currents supply another explicit regime for envelope equality. \Cref{cor:divisorial-current-ordinary-type} constructs a canonical ordinary type from a finite-mass divisorial current and a smooth residual form, and proves $P_\Omega[v]=Q_\Omega[v]\simeq v$ in every Hermitian background admitting that representative. The current may have infinitely many components. Exact curve-fibration trace types are examples; \cref{prop:exact-trace-infinite-representatives} still gives representatives of the same ideal class with different finiteness of Monge--Amp\`ere mass.
+Positive divisorial currents supply another explicit regime for envelope equality. \Cref{cor:divisorial-current-ordinary-type} constructs a canonical ordinary type from a finite-mass divisorial current and a smooth residual form, and proves $P_\Omega[v]=P_\Omega[v]_{\mathcal I}\simeq v$ in every Hermitian background admitting that representative. The current may have infinitely many components. Exact curve-fibration trace types are examples; \cref{prop:exact-trace-infinite-representatives} still gives representatives of the same ideal class with different finiteness of Monge--Amp\`ere mass.
 
 \input{author/section_ideal_lone_completion}
 
@@ -256,14 +256,14 @@ The following formal implication isolates part of the desired theory.
 
 \Needspace{14\baselineskip}
 \begin{proposition}\label{prop:conditional-i-characterization}
-Assume bounded mass and a big background $\theta$. Let $u\in\PSH(X,\theta)$, and put $q=Q_\theta[u]$. Suppose
+Assume bounded mass and a big background $\theta$. Let $u\in\PSH(X,\theta)$, and put $q=P_\theta[u]_{\mathcal I}$. Suppose
 \[
  \underline{\operatorname{vol}}_\theta(q)>0,
  \qquad u\in\mathcal E_{\mathrm{env}}(X,\theta,P_\theta[u]).
 \]
 Then the following are equivalent:
 \[
- P_\theta[u]=Q_\theta[u],\qquad
+ P_\theta[u]=P_\theta[u]_{\mathcal I},\qquad
  \overline{\operatorname{vol}}_\theta(u)
       =\mathcal V^+_{\mathcal I,\theta}(u).
 \]
@@ -289,7 +289,7 @@ This is a research question for the present manuscript, not a claim that every p
 
 \Needspace{10\baselineskip}
 \begin{problem}\label{qu:i-good-no-bmp}
-Construct a topology on ordinary singularity types in arbitrary Hermitian backgrounds for which the closure of analytic singularities is exactly the set satisfying $P_\omega[u]=Q_\omega[u]$. It should recover the dyadic-envelope criterion of \cref{cor:dyadic-goodness-criterion,cor:fixed-hermitian-analytic-density}, remain meaningful for infinite extended mass, and specify how convergence behaves under smooth changes of representative and background.
+Construct a topology on ordinary singularity types in arbitrary Hermitian backgrounds for which the closure of analytic singularities is exactly the set satisfying $P_\omega[u]=P_\omega[u]_{\mathcal I}$. It should recover the dyadic-envelope criterion of \cref{cor:dyadic-goodness-criterion,cor:fixed-hermitian-analytic-density}, remain meaningful for infinite extended mass, and specify how convergence behaves under smooth changes of representative and background.
 \end{problem}
 
 The dyadic criterion identifies the limit of a specific ideal-controlled approximation; it does not yet define convergence for arbitrary families of ordinary singularity types. By \cref{cor:fixed-hermitian-analytic-density}, the elementary ideal metric makes analytic classes dense everywhere. The finite damped measures of \cref{chap:damped-measures} provide additional analytic data, but do not by themselves characterize multiplier ideals. Their capacity-continuity theorem also shows a limitation: on a normalized family, convergence in capacity already implies convergence of these damped measures. Merely appending damped weak convergence to capacity convergence adds no condition that could distinguish multiplier-ideal approximation. A convergence theory for arbitrary families must retain additional information about singularities, for example controlled ideal inclusions at each fixed weight. Constructing that theory remains open.

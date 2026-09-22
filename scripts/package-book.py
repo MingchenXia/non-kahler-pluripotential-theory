@@ -170,6 +170,8 @@ for name in (
     "research/editorial/selected-divisor-review.md",
     "research/editorial/nef-schwarz-map.json",
     "research/editorial/nef-schwarz-review.md",
+    "research/editorial/ideal-notation-map.json",
+    "research/editorial/ideal-notation-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
@@ -312,7 +314,7 @@ extended mass. The pointwise determinant is compared with, not identified with,
 the non-pluripolar measure. Chapters4–7 explain how finite damping supplies
 nonlinear information beyond finite traces, without BMP.
 
-Section16.6 proves that ordinary envelopes of dyadic analytic regularizations decrease to the ideal envelope, without BMP, closedness or bigness. This gives a specific approximation criterion for P=Q. In a Hermitian background, rational scaling keeps the approximation in the same background and proves analytic density in the entire elementary ideal-type metric space. A topology on arbitrary ordinary singularity types and a general volume characterization remain open.
+Section16.6 proves that ordinary envelopes of dyadic analytic regularizations decrease to the ideal envelope, without BMP, closedness or bigness. This gives a specific approximation criterion for equality of ordinary and multiplier-ideal envelopes. In a Hermitian background, rational scaling keeps the approximation in the same background and proves analytic density in the entire elementary ideal-type metric space. A topology on arbitrary ordinary singularity types and a general volume characterization remain open.
 
 Section28.6 proves exact multiplier-ideal and partial-kernel transformation formulas under a modification, including the relative canonical bundle and its Jacobian metric. Closed-background ideal envelopes and non-pluripolar measures also descend. With a Kähler modification and positive closed-curvature mass, the original SGPT equilibrium theorem gives kernel-measure and determinant-functional limits. This geometric hypothesis implies BMP; the general birational identities require no mass bound. The lower-dimensional Hopf limit and general lower Fubini–Study questions remain distinct.
 
