@@ -132,6 +132,8 @@ for name in (
     "research/editorial/section_general_damping_weights.tex",
     "research/editorial/general-damping-map.json",
     "research/editorial/general-damping-review.md",
+    "research/editorial/equations-review-map.json",
+    "research/editorial/equations-review.md",
     "research/editorial/section_semipositive_trace_rate.tex",
     "research/editorial/current-rate-and-approximation-map.json",
     "research/editorial/current-rate-and-approximation-review.md",

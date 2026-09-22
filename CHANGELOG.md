@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint58: equation proofs and Chapters9–12 review
+
+Completed the second focused reading of Chapters9–12 and their23 nested inputs. Reused the local inverse in Gauduchon continuity and weighted comparison in the small-exponent barriers, preserving all hypotheses and conclusions. Polished the closing discussion and notation; removed the remaining prepared-for credit from the companion note. The687-page book and17-page note compile without new layout or reference failures. All41 affected/adjacent book pages and7 note pages were inspected. The house audit has no new diagnostics; inherited label/template conventions remain recorded.
+
 ## 22 September2026 — Checkpoint57: general damping and foundational proof economy
 
 Added the audited general decreasing-weight criterion and its critical logarithmic example, without bounded mass. Completed the second focused reading of Chapters6–8, shortened the sublevel and capacity estimates, clarified the tail-integrability argument and connected the Hopf example to the established equation theorem. Four book files change. The687-page build and42 affected/adjacent pages were checked. Chapters9–10 were also reread, with their edits reserved for the next checkpoint.
