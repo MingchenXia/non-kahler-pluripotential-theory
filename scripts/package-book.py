@@ -175,6 +175,8 @@ for name in (
     "research/editorial/lee-modification-map.json",
     "research/editorial/lee-modification-review.md",
     "research/editorial/popovici-use-review.md",
+    "research/editorial/strong-gauduchon-map.json",
+    "research/editorial/strong-gauduchon-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",
