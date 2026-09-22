@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint73: simpler partial-kernel proofs
+
+Wrote the kernel extremal formula over the unit ball so that it includes the zero space literally. Replaced the determinant strict-concavity equality argument by a holomorphic section quotient and the identity theorem. The explicit Hopf potential now converges in L1 directly from an integrable logarithmic bound, without a compactness extraction. All eight formal statements and all labels in the edited files are preserved. Chapters21,22,28 and all their inputs received a focused primary-agent reread; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes, and all 13 selected pages were read. Source reconstruction is recorded separately.
+
 ## 22 September 2026 — Checkpoint72: shared divisorial comparison in the trace chapter
 
 Moved the existing divisorial-potential comparison, with its entire proof and qualification unchanged, before the curve construction. The curve restriction and curve-envelope comparisons now reuse it directly. The curve equation retains its distinct argument excluding extra polar mass. All fourteen formal statements and all labels across the four files are preserved. The focused primary-agent reread covers Chapter20 and its five nested inputs; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes; all 22 selected pages were read. Source reconstruction is recorded separately.
