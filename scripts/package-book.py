@@ -136,6 +136,8 @@ for name in (
     "research/editorial/equations-review.md",
     "research/editorial/prescribed-review-map.json",
     "research/editorial/prescribed-review.md",
+    "research/editorial/relative-review-map.json",
+    "research/editorial/relative-review.md",
     "research/editorial/section_semipositive_trace_rate.tex",
     "research/editorial/current-rate-and-approximation-map.json",
     "research/editorial/current-rate-and-approximation-review.md",

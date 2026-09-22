@@ -89,3 +89,5 @@ Checkpoint57 completes the second focused reading of Chapters6–8 and the integ
 Checkpoint58 completes the second focused reading of Chapters9–12, including all23 nested inputs. It removes the repeated local inverse from the Gauduchon continuity proof and auxiliary densities from the small-exponent barriers, while retaining the essential degenerate estimates and examples. See equations-review.md. Chapter13 has begun: its main file, singular-domination and big-Lp inputs are read; the remaining inputs are pending.
 
 Checkpoint59 completes the second focused reading of Chapter13 and its24 nested inputs. The normalized exponential convergence proof now uses capacity directly. See prescribed-review.md for checks and the exact ongoing Chapter14–15 reading scope.
+
+Checkpoint60 completes the second focused reading of Chapters14–15 and all21 nested inputs. Fixed-measure continuity reuses the general common-envelope criterion. See relative-review.md for dependency and hypothesis checks. Chapters16–18 and their inputs have also been read; their next edits and visual checks remain separate.

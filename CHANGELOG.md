@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint60: relative continuity and normalization
+
+Completed the second focused reading of Chapters14–15 and all21 nested inputs. Moved the unchanged common-envelope capacity criterion earlier and reused it in fixed-measure continuity, removing duplicate roof and semicontinuity arguments. Checked the dependency order and retained each volume hypothesis. Unified exponential typography and seven named references. The687-page book compiles cleanly apart from inherited underfull text; all49 affected/adjacent pages were inspected. The edited-file style audit has zero errors and three warnings, down from ten. No new theorem or verifier run is claimed.
+
 ## 22 September2026 — Checkpoint59: prescribed equations and a direct capacity proof
 
 Completed the second focused reading of Chapter13 and all24 nested inputs. Normalized exponential convergence now follows directly from sublevel capacity and absolute continuity of a fixed finite non-pluripolar measure; the quantitative Lp bound and all hypotheses remain unchanged. Unified exponential typography and repaired split statements. The687-page book compiles without new reference or layout failures; all52 affected/adjacent pages, including downstream references, were inspected. The edited-file style audit has zero errors and three unchanged warnings. No new theorem or verifier run is claimed.

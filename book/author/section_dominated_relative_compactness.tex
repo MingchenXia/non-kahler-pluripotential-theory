@@ -12,7 +12,7 @@ In particular $u\in\mathcal E_\varphi$.
 \begin{proof}
 The envelope identity \cref{prop:relative-envelope-equality} gives $P_\theta[u_j]=\varphi$. Since $u_j-\sup_Xu_j\leq P_\theta[u_j]$, Hartogs' lemma supplies a constant $C$ with $u_j\leq\varphi+C$ for all $j$. A common translation reduces to $u_j\leq\varphi\leq0$, and then $u\leq\varphi$. By \cref{lem:fixed-npp-integrals},
 \[
- I_j=\int_X|e^{u_j}-e^u|\,\mathrm{d}\mu_{u_j}\longrightarrow0.
+ I_j=\int_X|\mathrm{e}^{u_j}-\mathrm{e}^u|\,\mathrm{d}\mu_{u_j}\longrightarrow0.
 \]
 Extract so that $I_j\leq2^{-j}$ and $u_j\to u$ almost everywhere for smooth volume. This extraction is made once.
 
@@ -21,7 +21,7 @@ For $N\geq j$ put $p_{j,N}=P_\theta(u_j,\ldots,u_N)$. These are in $\mathcal E_\
 \begin{equation}\label{eq:finite-rooftop-common-domination}
  \mu_{p_{j,N}}\leq\nu,
  \qquad
- \int_X|e^{p_{j,N}}-e^u|\,\mathrm{d}\mu_{p_{j,N}}
+ \int_X|\mathrm{e}^{p_{j,N}}-\mathrm{e}^u|\,\mathrm{d}\mu_{p_{j,N}}
  \leq\sum_{\ell=j}^N I_\ell\leq2^{1-j}.
 \end{equation}
 The first bound has no factor $N$: each disjoint piece is bounded by the restriction of the same measure $\nu$ to that piece.
@@ -32,17 +32,17 @@ Fix a real number $B\geq1$ and set $r_{j,N}=Q_B(p_{j,N},\varphi)$. It belongs to
  \leq B^n\nu,
 \]
 where $D_{j,N}=\{B^{-1}r_{j,N}+(1-B^{-1})\varphi=p_{j,N}\}$. On this set, since $\varphi\leq0$,
-$e^{p_{j,N}}\leq e^{r_{j,N}/B}$. Consequently
+$\mathrm{e}^{p_{j,N}}\leq \mathrm{e}^{r_{j,N}/B}$. Consequently
 \begin{equation}\label{eq:relative-rooftop-noncollapse-test}
- \int_Xe^u\,\mathrm{d}\mu_{r_{j,N}}
+ \int_X\mathrm{e}^u\,\mathrm{d}\mu_{r_{j,N}}
  \leq B^n2^{1-j}
       +B^n\nu(X)\exp\!\left(\frac{\sup_X r_{j,N}}B\right).
 \end{equation}
 On the other hand choose $K>0$ with $B^n\nu(\{u\leq-K\})<\kappa/2$. This is possible since $u$ is genuine and $\nu$ does not charge its pole set. The preceding measure domination and lower mass bound imply
 \[
- \int_Xe^u\,\mathrm{d}\mu_{r_{j,N}}\geq e^{-K}\kappa/2.
+ \int_X\mathrm{e}^u\,\mathrm{d}\mu_{r_{j,N}}\geq \mathrm{e}^{-K}\kappa/2.
 \]
-Choose $j$ so large that $B^n2^{1-j}<e^{-K}\kappa/4$. Formula \eqref{eq:relative-rooftop-noncollapse-test} then bounds $\sup_Xr_{j,N}$ from below independently of $N$. The sequence decreases in $N$ and has the common upper bound $\varphi$. Its limit $R$ is therefore genuine. It satisfies, for every $\ell\geq j$,
+Choose $j$ so large that $B^n2^{1-j}<\mathrm{e}^{-K}\kappa/4$. Formula \eqref{eq:relative-rooftop-noncollapse-test} then bounds $\sup_Xr_{j,N}$ from below independently of $N$. The sequence decreases in $N$ and has the common upper bound $\varphi$. Its limit $R$ is therefore genuine. It satisfies, for every $\ell\geq j$,
 \begin{equation}\label{eq:relative-tail-stretched-competitor}
  B^{-1}R+(1-B^{-1})\varphi\leq u_\ell,
  \qquad R\leq\varphi.
@@ -61,6 +61,48 @@ Finally $h\leq u_j$ for all $j$, hence $h\leq u\leq\varphi$ by the almost-everyw
 
 The prefix and tail step matters: extracting a subsequence of finite rooftops does not allow one to rename the number of their obstacles. The proof above fixes a summable error sequence first, proves a lower bound uniform in the finite endpoint $N$, and then restores every term of that extracted sequence. It makes no assertion about the rooftop of the entire original sequence before extraction.
 
+Once a common lower envelope is available, a single integral criterion gives convergence in capacity. Its proof uses zero domination and allows infinite masses.
+
+\Needspace{17\baselineskip}
+\begin{proposition}\label{prop:relative-common-envelope-criterion}
+Suppose $u_j\in\mathcal E_\varphi$ and, for a fixed $h\in\mathcal E_\varphi$ and constant $C$,
+\[
+ h\leq u_j\leq\varphi+C,\qquad
+ u_j\longrightarrow u\in\PSH(X,\theta)\quad\hbox{in }L^1(X).
+\]
+If
+\[
+ I_j:=\int_X|\mathrm{e}^{u_j}-\mathrm{e}^u|\,\mu_{u_j}\longrightarrow0,
+\]
+then $u\in\mathcal E_\varphi$ and $u_j\to u$ in capacity. No upper mass bound is part of this criterion.
+\end{proposition}
+\begin{proof}
+The bounds pass to $u$ almost everywhere along an extraction and then to canonical representatives. Upward stability gives $u\in\mathcal E_\varphi$. Translate the entire family and its bounds by a common constant to make all potentials nonpositive.
+
+It suffices to obtain capacity convergence along a further extraction of every subsequence. Extract so that $I_j\leq2^{-j}$ and $u_j\to u$ almost everywhere for smooth volume. Form
+\[
+ p_{j,N}=P_\theta(u_j,\ldots,u_N),\qquad
+ p_j=P_\theta\left(\inf_{\ell\geq j}u_\ell\right).
+\]
+Every envelope lies above $h$ and below $\varphi+C$, so is genuine and belongs to $\mathcal E_\varphi$. For the finite envelope, partition its contact set by the first index $\ell$ with $p_{j,N}=u_\ell$. Ordered contact on each part gives
+\[
+ \int_X|\mathrm{e}^{p_{j,N}}-\mathrm{e}^u|\,\mu_{p_{j,N}}
+ \leq\sum_{\ell=j}^N I_\ell\leq2^{1-j}.
+\]
+Only positive integrals are used here, even if a rooftop has infinite mass.
+
+As $N\to\infty$, $p_{j,N}\downarrow p_j$. As $j\to\infty$, the $p_j$ increase to a genuine canonical limit $p$. Both convergences hold in capacity by monotone truncation with the fixed lower bound $h$. Also $h\leq p\leq u\leq\varphi+C$; the upper inequality follows first from almost-everywhere convergence of the extracted $u_j$. Thus $p\in\mathcal E_\varphi$.
+
+Apply \cref{lem:weighted-extended-lsc} first as $N\to\infty$ and then as $j\to\infty$, with the bounded quasi-continuous weights displayed above. The weights converge in capacity because the exponential is Lipschitz on a common upper half-line. We obtain
+\[
+ \int_X|\mathrm{e}^p-\mathrm{e}^u|\,\mu_p=0,
+ \qquad \mu_p(\{p<u\})=0.
+\]
+The second equality follows off the poles, which the extended measures ignore. The relative zero-domination lemma gives $p=u$, without a finiteness hypothesis on $\mu_p$.
+
+Finally $U_j=(\sup_{\ell\geq j}u_\ell)^*$ decreases to $u$ by Hartogs' lemma and the almost-everywhere extraction. Monotone capacity convergence applies to $p_j\uparrow u$ and $U_j\downarrow u$. The inequalities $p_j\leq u_j\leq U_j$ prove capacity convergence on this extraction, and hence on the original sequence.
+\end{proof}
+
 \section{Dominated continuity}
 
 \begin{theorem}\label{thm:relative-fixed-measure-continuity}
@@ -72,29 +114,21 @@ Under \eqref{eq:relative-positive-lower-volume}, suppose $u_j\in\mathcal E_\varp
 \]
 \end{theorem}
 \begin{proof}
-Start with any subsequence. Apply \cref{lem:dominated-relative-rooftop-extraction} to obtain a further subsequence with $I_j\leq2^{-j}$, almost-everywhere convergence, and a common lower envelope $h\in\mathcal E_\varphi$. Normalize all potentials below zero as in that proof. Keep the notation $p_{j,N}$, and set
+Start with any subsequence. By \cref{lem:dominated-relative-rooftop-extraction}, a further subsequence has a common lower envelope $h\in\mathcal E_\varphi$, and $u\in\mathcal E_\varphi$. The envelope identity and Hartogs' lemma give a common upper bound $u_j\leq\varphi+C$.
+
+After a common translation, assume $u_j,u\leq0$. The fixed non-pluripolar integration lemma gives
 \[
- p_j=P_\theta\left(\inf_{\ell\geq j}u_\ell\right),
- \qquad p=(\lim_jp_j)^*.
+ \int_X|\mathrm{e}^{u_j}-\mathrm{e}^u|\,\mathrm{d}\mu_{u_j}
+ \leq\int_X|\mathrm{e}^{u_j}-\mathrm{e}^u|\,\mathrm{d}\nu
+ \longrightarrow0.
 \]
-The limits $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ have the genuine lower bound $h$, and all potentials are at most $\varphi$. They converge in capacity by the monotone observation preceding \cref{thm:common-barrier-criterion}. Upward stability gives $p_j,p\in\mathcal E_\varphi$.
-
-Apply weighted lower semicontinuity to \eqref{eq:finite-rooftop-common-domination}, first in $N$ and then in $j$. Nonnegative continuous test functions give $\mu_{p_j},\mu_p\leq\nu$, so these measures are finite. The bounded quasi-continuous exponential weights give
-\[
- \int_X|e^p-e^u|\,\mathrm{d}\mu_p=0.
-\]
-The construction and almost-everywhere convergence give $p\leq u$. Thus $\mu_p$ vanishes on $\{p<u\}$. Since $p\in\mathcal E_\varphi$ has finite measure and $u\preceq\varphi$, \cref{thm:relative-finite-domination} with coefficient zero yields $p\geq u$. Hence $p=u$.
-
-The upper tail envelopes $U_j=(\sup_{\ell\geq j}u_\ell)^*$ decrease to $u$, by Hartogs' lemma and the almost-everywhere extraction. Their genuine lower bound is $h$. The inequalities $p_j\leq u_j\leq U_j$ and monotone capacity convergence prove capacity convergence of the extracted sequence.
-
-\Needspace{8\baselineskip}
-For its raw measures use the same fixed lower bound:
+Thus \cref{prop:relative-common-envelope-criterion} proves capacity convergence along this extraction. For the raw measures, the common lower bound gives
 \[
  \mu_{u_j}(\{u_j\leq-T\})
  \leq\nu(\{h\leq-T\})\longrightarrow0
  \quad\hbox{uniformly in }j.
 \]
-The raw-tail theorem \cref{thm:undamped-tail-continuity} now yields weak convergence to $\mu_u$. Weak limits preserve domination by the fixed finite $\nu$. Every original subsequence has a further subsequence with these conclusions and the same limit $u$. This proves both convergences for the original sequence. Class membership was already supplied by the extraction lemma.
+The limit on the right uses finiteness of $\nu$ and its vanishing on the pole set of the genuine $h$. The raw-tail theorem \cref{thm:undamped-tail-continuity} now gives weak convergence to $\mu_u$. Weak limits preserve domination by the fixed finite $\nu$. Every original subsequence has a further subsequence with these conclusions and the same limit $u$, so both convergences hold for the original sequence.
 \end{proof}
 
 This reconstructs the fixed-dominating-measure case of \cite[Lemma 4.2 and Theorem 4.1]{ALS26}, in an extraction form sufficient for convergence. The argument uses $v_-(\theta)>0$ only to prevent the stretched comparison envelopes from collapsing. It never uses $v_+(\theta)<+\infty$.
