@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint 62: traces, sections and modelwise classes
+
+Completed the second focused reading of Chapters 20–26 and all sixteen inputs. The ordinary-restriction comparison now uses the existing divisorial Bergman estimate directly. Added one missing definition label and improved two formula/page transitions. All statements and hypotheses remain unchanged. Checked the 687-page build and 48 selected pages, including the Hopf flag figure and the ruled-surface nonrecovery example. The style audit over all 23 read files now has zero errors and eight inherited warnings. The review records the distinction between linear modelwise compatibility, exact ordinary-type realization and nonlinear mass.
+
 ## 22 September2026 — Checkpoint61: analytic envelopes and Perron theory
 
 Completed the second focused reading of Chapters16–19, two proof inputs and the Legendre figure. Fixed-background analytic envelope convergence now follows directly from homogeneity and the preceding theorem, avoiding repeated divisorial estimates and normalization. Unified constants and repaired short statement/computation breaks. The687-page book and21 selected affected/adjacent pages were checked; all six plot coordinate sets match the formulas within rounding. The changed-file audit has zero errors and four unchanged warnings. No theorem hypotheses or proof boundaries change.

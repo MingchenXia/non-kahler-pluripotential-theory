@@ -93,3 +93,5 @@ Checkpoint59 completes the second focused reading of Chapter13 and its24 nested 
 Checkpoint60 completes the second focused reading of Chapters14–15 and all21 nested inputs. Fixed-measure continuity reuses the general common-envelope criterion. See relative-review.md for dependency and hypothesis checks. Chapters16–18 and their inputs have also been read; their next edits and visual checks remain separate.
 
 Checkpoint61 completes the second focused review of Chapters16–19 and all three inputs. The analytic-density proof now reuses envelope homogeneity. See singularity-review.md. Chapters20–23 and all ten inputs have also been read; their proposed simplification and output checks are next.
+
+Checkpoint 62 completes the second focused review of Chapters 20–26 and all sixteen inputs. The restriction comparison reuses the divisorial Bergman estimate; see trace-sections-review.md and its reversible map. Continue with Chapters 27–28 and their nested inputs.
