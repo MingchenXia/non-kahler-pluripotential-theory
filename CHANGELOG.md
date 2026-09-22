@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint68: density norms and entropy with prescribed singularities
+
+Integrated the verified relative lower Lq density estimate and extended the entropy bounds to all model references satisfying the existing semipositive big and smaller-background hypotheses. Constants are uniform for common theta and epsilon, giving entropy control and uniform integrability for varying-reference supporting probabilities. Reused the density lemma to obtain a positive scalar limit directly in the normalized prescribed equation. Preserved all existing formal statements. Rethlas returned correct without gaps; the separate audit commit remains in history. The 697-page book compiles without errors or overfull boxes; 17 selected pages were inspected, including the clarified solution notation and comparison-barrier paragraph. Singular-reference entropy-difference extrema and arbitrary-reference limit identification remain open.
+
 ## 22 September 2026 — Prescribed-reference entropy audit
 
 Run `prescribed_dual_entropy_01` returned `correct` with no critical errors or gaps, relative to its explicitly accepted internal inputs. The audit checked the reusable lower Lq density-norm lemma, both strict-domination directions, finite-level positivity in nonclosed backgrounds, constants uniform for common theta and epsilon, every infinite-entropy case, and the absence of BMP/PVP. It also checked the noncircular scalar lower bound in the earlier normalized-equation proof and varying-reference compactness through a single Hermitian dual sublevel. The submitted input, two editorial proof files and final report are preserved. Manuscript integration, compilation and visual inspection remain pending; checkpoint67 remains the checked release. No novelty or singular-reference entropy-difference extremum is claimed.
