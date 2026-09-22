@@ -160,6 +160,8 @@ for name in (
     "research/editorial/normalization-distance-review.md",
     "research/editorial/analytic-parameter-map.json",
     "research/editorial/analytic-parameter-review.md",
+    "research/editorial/trace-proof-economy-map.json",
+    "research/editorial/trace-proof-economy-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
     "research/editorial/section_normalization_distance.tex",

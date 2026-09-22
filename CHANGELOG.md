@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint72: shared divisorial comparison in the trace chapter
+
+Moved the existing divisorial-potential comparison, with its entire proof and qualification unchanged, before the curve construction. The curve restriction and curve-envelope comparisons now reuse it directly. The curve equation retains its distinct argument excluding extra polar mass. All fourteen formal statements and all labels across the four files are preserved. The focused primary-agent reread covers Chapter20 and its five nested inputs; no new Rethlas run is claimed. The 701-page book compiles without errors or overfull boxes; all 22 selected pages were read. Source reconstruction is recorded separately.
+
 ## 22 September 2026 — Checkpoint71: real parameters and analytic-type terminology
 
 Rephrased the consequence of the real-parameter divisorial lemma using an explicit local logarithmic presentation and stated its generic Lelong number directly in the proof. Clarified when that presentation has a rational coefficient and made the same distinction in the local Bergman discussion. The real-parameter inequalities, integer global regularization and rational Hermitian approximants are unchanged. This bounded terminology edit received a primary-agent definition/proof reread, with no new Rethlas run. Eleven other complete formal statements and all labels are preserved. The 701-page book compiles without errors or overfull boxes; 13 selected pages were read, and only four physical pages have changed text. Source reconstruction is recorded separately.

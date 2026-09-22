@@ -1,0 +1,115 @@
+{
+  "date_utc": "2026-09-22T05:52:09.689702+00:00",
+  "baseline_commit": "d060cc92acdcfc200b1b05bdbc7efdaf850be189",
+  "scope": "Move the existing divisorial-potential comparison before its curve applications and reuse it to shorten two repeated trace arguments; preserve all trace/equation hypotheses and formal statements.",
+  "preview_directory": "/private/tmp/non-kahler-20260922/trace-proof-economy-preview",
+  "all_existing_labels_preserved": true,
+  "reversible_edits_checked": true,
+  "complete_prior_formal_blocks_preserved": 14,
+  "preservation_scope": "Across the four files together: one whole lemma, proof and qualification are moved unchanged to a shared input.",
+  "moved_block_sha256": "f1bcfd56a53dfd4e8d3e1db2d7624422e0a764c17daac9f3794b30057b75275f",
+  "moved_block": "\\begin{lemma}\\label{lem:divisorial-potential-domination}\nLet $Y$ be a connected compact complex manifold and let $v\\in\\QPSH(Y)$ satisfy\n\\[\n \\ddc v=S-\\beta,\\qquad\n S=\\sum_j c_j[D_j],\\quad c_j>0,\n\\]\nwhere the $D_j$ are distinct prime divisors, the sum is a positive current of finite mass, and $\\beta$ is a smooth real $(1,1)$-form. For $a\\in\\QPSH(Y)$, the following conditions are equivalent:\n\\[\n a\\preceq v,\\qquad a\\preceq_{\\mathcal I}v,\\qquad\n \\nu(a,D_j)\\geq c_j\\quad\\hbox{for every }j.\n\\]\n\\end{lemma}\n\\begin{proof}\nThe coefficient-measure restriction of $S$ to $D_j$ is $c_j[D_j]$. Distinct divisors have intersections of codimension at least two, which carry no mass of either divisor current. Countable summation preserves this assertion. Smooth forms give every divisor zero coefficient mass. Local Siu decomposition after a smooth correction therefore gives $\\nu(v,D_j)=c_j$.\n\nOrdinary domination implies ideal domination by integrability, and ideal domination implies the asserted divisorial Lelong inequalities by the local ideal criterion used in \\cref{thm:hermitian-i-projection}. It remains to prove that these inequalities imply ordinary domination.\n\nChoose a Hermitian form $\\Lambda$ with $a\\in\\PSH(Y,\\Lambda)$. The divisorial inequalities allow removal of each finite partial sum of $S$ from $\\Lambda+\\ddc a$ while retaining positivity. To see this locally, add a smooth correction to $a$ to obtain a psh function. Siu decomposition identifies the coefficient mass of its closed positive curvature current on each divisor. The smooth correction has no such mass, so removal of those same coefficients from the original positive current is still positive. Passing to the increasing finite sums gives\n\\[\n \\Lambda+\\ddc a-S\\geq0.\n\\]\nConsequently $\\ddc(a-v)\\geq\\beta-\\Lambda$. The $L^1$ difference has a quasi-plurisubharmonic representative and is bounded above on compact $Y$. This yields $a\\leq v+C$ almost everywhere. Canonical local averages of quasi-plurisubharmonic functions give the same inequality everywhere. This proves ordinary domination.\n\\end{proof}\n\nHere a finite-mass divisorial current may have infinitely many components. The lemma imposes a smooth residual term in the equation for $v$; it is not an assertion about every potential with the same divisorial Lelong numbers.\n",
+  "book_files": [
+    {
+      "path": "book/author/chapter_trace_data.tex",
+      "added": false,
+      "before_sha256": "ee01cd9a79b3307cb8ed421a5e6e032ea38c0d8c2f34015a8fc945f8e8dccc1d",
+      "after_sha256": "0527b7b85e9bd6aeea018552788018d80df823b2a16f67481232ad1e2360e5ae",
+      "edits": [
+        {
+          "old_start": 141,
+          "old_end": 141,
+          "new_start": 141,
+          "new_end": 143,
+          "old": "",
+          "new": "\\input{author/section_divisorial_potential_domination}\n\n"
+        },
+        {
+          "old_start": 211,
+          "old_end": 216,
+          "new_start": 213,
+          "new_end": 214,
+          "old": "Suppose $a=u|_Y$ is genuine and write $\\mu=\\theta|_Y+\\ddc a\\geq0$. By \\cref{prop:trace-naive-comparison}, the atomic part of $\\mu$ dominates $D_u$. Therefore\n\\[\n \\ddc(a-w)=\\mu-D_u-\\theta|_Y+d\\,\\eta\n\\]\nis bounded below by a smooth form. The $L^1$ difference has a quasi-plurisubharmonic representative, which is bounded above on compact $Y$. Equality of canonical representatives upgrades the resulting almost-everywhere inequality to $a\\leq w+C$ everywhere. If $u$ is analytic, \\cref{prop:trace-naive-comparison} identifies its finitely many restricted logarithmic coefficients with those of $D_u$. Its bounded local remainders then give ordinary equivalence.\n",
+          "new": "If $a=u|_Y$ is genuine, \\cref{prop:trace-naive-comparison} gives $\\nu(a,p)\\geq\\tau_{Y,u}(p)$ at every point. Since $\\ddc w=D_u-D_u(Y)\\eta$, \\cref{lem:divisorial-potential-domination} implies $a\\preceq w$. If $u$ is analytic, \\cref{prop:trace-naive-comparison} identifies its finitely many restricted logarithmic coefficients with those of $D_u$. Its bounded local remainders then give ordinary equivalence.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_trace_envelope.tex",
+      "added": false,
+      "before_sha256": "e5d299313516d56c3a943d6a5b551f9cb34d85df46156d7167224d892371c2d3",
+      "after_sha256": "ac7ce16975c002cee73afed05a93bab5add7f7ccff083c09cfbc3258f5509e86",
+      "edits": [
+        {
+          "old_start": 84,
+          "old_end": 89,
+          "new_start": 84,
+          "new_end": 85,
+          "old": "On a curve this model construction can be compared more precisely with the atomic trace. Take $\\Omega=A\\eta$ as in \\cref{prop:curve-trace-source-distance}, and let $w$ be its Green representative. Every competitor $a$ in \\eqref{eq:trace-profile-envelope} has a curvature measure with atoms at least $D_u$. Hence\n\\[\n \\ddc(a-w)=(A\\eta+\\ddc a)-D_u-(A-D_u(Y))\\eta\n\\]\nhas a smooth lower bound. The difference is a genuine quasi-plurisubharmonic function and is bounded above on the compact curve, so $a\\preceq w$. Conversely $a\\preceq w$ implies all the required Lelong inequalities. Thus the defining competitor family is exactly the ordinary singularity-envelope family, and\n",
+          "new": "On a curve this model construction can be compared more precisely with the atomic trace. Take $\\Omega=A\\eta$ as in \\cref{prop:curve-trace-source-distance}, and let $w$ be its Green representative. By \\cref{lem:divisorial-potential-domination}, the defining pointwise trace inequalities for $a\\in\\PSH(Y,A\\eta)$ are equivalent to $a\\preceq w$. Thus the defining competitor family is exactly the ordinary singularity-envelope family, and\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_curve_fibration_traces.tex",
+      "added": false,
+      "before_sha256": "f9e715b7900e33ef6762c468fc2aa4d383b27bcddf9097c10cf5ca1b52a92ec4",
+      "after_sha256": "77503a421e12d22d50d9d31b2c6537776e86f078f033e5b50ff1378f4285cd4b",
+      "edits": [
+        {
+          "old_start": 7,
+          "old_end": 34,
+          "new_start": 7,
+          "new_end": 8,
+          "old": "\\begin{lemma}\\label{lem:divisorial-potential-domination}\nLet $Y$ be a connected compact complex manifold and let $v\\in\\QPSH(Y)$ satisfy\n\\[\n \\ddc v=S-\\beta,\\qquad\n S=\\sum_j c_j[D_j],\\quad c_j>0,\n\\]\nwhere the $D_j$ are distinct prime divisors, the sum is a positive current of finite mass, and $\\beta$ is a smooth real $(1,1)$-form. For $a\\in\\QPSH(Y)$, the following conditions are equivalent:\n\\[\n a\\preceq v,\\qquad a\\preceq_{\\mathcal I}v,\\qquad\n \\nu(a,D_j)\\geq c_j\\quad\\hbox{for every }j.\n\\]\n\\end{lemma}\n\\begin{proof}\nThe coefficient-measure restriction of $S$ to $D_j$ is $c_j[D_j]$. Distinct divisors have intersections of codimension at least two, which carry no mass of either divisor current. Countable summation preserves this assertion. Smooth forms give every divisor zero coefficient mass. Local Siu decomposition after a smooth correction therefore gives $\\nu(v,D_j)=c_j$.\n\nOrdinary domination implies ideal domination by integrability, and ideal domination implies the asserted divisorial Lelong inequalities by the local ideal criterion used in \\cref{thm:hermitian-i-projection}. It remains to prove that these inequalities imply ordinary domination.\n\nChoose a Hermitian form $\\Lambda$ with $a\\in\\PSH(Y,\\Lambda)$. The divisorial inequalities allow removal of each finite partial sum of $S$ from $\\Lambda+\\ddc a$ while retaining positivity. To see this locally, add a smooth correction to $a$ to obtain a psh function. Siu decomposition identifies the coefficient mass of its closed positive curvature current on each divisor. The smooth correction has no such mass, so removal of those same coefficients from the original positive current is still positive. Passing to the increasing finite sums gives\n\\[\n \\Lambda+\\ddc a-S\\geq0.\n\\]\nConsequently $\\ddc(a-v)\\geq\\beta-\\Lambda$. The $L^1$ difference has a quasi-plurisubharmonic representative and is bounded above on compact $Y$. This yields $a\\leq v+C$ almost everywhere. Canonical local averages of quasi-plurisubharmonic functions give the same inequality everywhere. This proves ordinary domination.\n\\end{proof}\n\nHere a finite-mass divisorial current may have infinitely many components. The lemma imposes a smooth residual term in the equation for $v$; it is not an assertion about every potential with the same divisorial Lelong numbers.\n\nWe also record the local ideal identity needed for the ambient pullback. In the proof, extension of an ideal means the ideal generated by its pullbacks.\n",
+          "new": "We first record the local ideal identity needed for the ambient pullback. In the proof, extension of an ideal means the ideal generated by its pullbacks.\n"
+        }
+      ]
+    },
+    {
+      "path": "book/author/section_divisorial_potential_domination.tex",
+      "added": true,
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "5850fe9bd5ce3b874dcd5fcb2dfd8b7835c1aa39a582af0991880fd02260a658",
+      "edits": [
+        {
+          "old_start": 0,
+          "old_end": 0,
+          "new_start": 0,
+          "new_end": 28,
+          "old": "",
+          "new": "\\Needspace{12\\baselineskip}\nThe following comparison will be used for the curve trace and its pullbacks. It permits countably many divisorial components.\n\n\\begin{lemma}\\label{lem:divisorial-potential-domination}\nLet $Y$ be a connected compact complex manifold and let $v\\in\\QPSH(Y)$ satisfy\n\\[\n \\ddc v=S-\\beta,\\qquad\n S=\\sum_j c_j[D_j],\\quad c_j>0,\n\\]\nwhere the $D_j$ are distinct prime divisors, the sum is a positive current of finite mass, and $\\beta$ is a smooth real $(1,1)$-form. For $a\\in\\QPSH(Y)$, the following conditions are equivalent:\n\\[\n a\\preceq v,\\qquad a\\preceq_{\\mathcal I}v,\\qquad\n \\nu(a,D_j)\\geq c_j\\quad\\hbox{for every }j.\n\\]\n\\end{lemma}\n\\begin{proof}\nThe coefficient-measure restriction of $S$ to $D_j$ is $c_j[D_j]$. Distinct divisors have intersections of codimension at least two, which carry no mass of either divisor current. Countable summation preserves this assertion. Smooth forms give every divisor zero coefficient mass. Local Siu decomposition after a smooth correction therefore gives $\\nu(v,D_j)=c_j$.\n\nOrdinary domination implies ideal domination by integrability, and ideal domination implies the asserted divisorial Lelong inequalities by the local ideal criterion used in \\cref{thm:hermitian-i-projection}. It remains to prove that these inequalities imply ordinary domination.\n\nChoose a Hermitian form $\\Lambda$ with $a\\in\\PSH(Y,\\Lambda)$. The divisorial inequalities allow removal of each finite partial sum of $S$ from $\\Lambda+\\ddc a$ while retaining positivity. To see this locally, add a smooth correction to $a$ to obtain a psh function. Siu decomposition identifies the coefficient mass of its closed positive curvature current on each divisor. The smooth correction has no such mass, so removal of those same coefficients from the original positive current is still positive. Passing to the increasing finite sums gives\n\\[\n \\Lambda+\\ddc a-S\\geq0.\n\\]\nConsequently $\\ddc(a-v)\\geq\\beta-\\Lambda$. The $L^1$ difference has a quasi-plurisubharmonic representative and is bounded above on compact $Y$. This yields $a\\leq v+C$ almost everywhere. Canonical local averages of quasi-plurisubharmonic functions give the same inequality everywhere. This proves ordinary domination.\n\\end{proof}\n\nHere a finite-mass divisorial current may have infinitely many components. The lemma imposes a smooth residual term in the equation for $v$; it is not an assertion about every potential with the same divisorial Lelong numbers.\n"
+        }
+      ]
+    }
+  ],
+  "typography": "Keep the introductory paragraph and the moved lemma statement together; its complete original mathematical block remains unchanged. Remove the extra blank line at the new input end; the unchanged mathematical block excludes its following separator.",
+  "visual_pages": {
+    "book": {
+      "review": [
+        10,
+        11,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        469,
+        612
+      ]
+    }
+  }
+}
