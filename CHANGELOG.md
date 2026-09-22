@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint63: Gauduchon volume and partial kernels
+
+Completed the second focused reading of Chapters27–28 and all31 nested inputs, finishing the recorded second pass over the book and appendix. Simplified pointwise Lelong loss by blowing up the point and applying the existing divisorial Bergman estimate; the original constant, assumptions and conclusions are unchanged. Corrected one equation reference. Independently checked all2,107 Hopf figure coordinates and the three density normalizations. The687-page build has no errors or overfull boxes;38 affected or comparison pages were inspected. The style audit over all33 files has zero errors and six inherited warnings. The review records the precise boundaries of dual regularity, mass noncollapse and partial-kernel recovery.
+
 ## 22 September 2026 — Checkpoint 62: traces, sections and modelwise classes
 
 Completed the second focused reading of Chapters 20–26 and all sixteen inputs. The ordinary-restriction comparison now uses the existing divisorial Bergman estimate directly. Added one missing definition label and improved two formula/page transitions. All statements and hypotheses remain unchanged. Checked the 687-page build and 48 selected pages, including the Hopf flag figure and the ruled-surface nonrecovery example. The style audit over all 23 read files now has zero errors and eight inherited warnings. The review records the distinction between linear modelwise compatibility, exact ordinary-type realization and nonlinear mass.

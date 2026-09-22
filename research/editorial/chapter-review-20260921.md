@@ -95,3 +95,5 @@ Checkpoint60 completes the second focused reading of Chapters14–15 and all21 n
 Checkpoint61 completes the second focused review of Chapters16–19 and all three inputs. The analytic-density proof now reuses envelope homogeneity. See singularity-review.md. Chapters20–23 and all ten inputs have also been read; their proposed simplification and output checks are next.
 
 Checkpoint 62 completes the second focused review of Chapters 20–26 and all sixteen inputs. The restriction comparison reuses the divisorial Bergman estimate; see trace-sections-review.md and its reversible map. Continue with Chapters 27–28 and their nested inputs.
+
+Checkpoint63 completes the second focused review of Chapters27–28 and all31 nested inputs, including the kernel figure. See volume-kernel-review.md and its reversible map. Chapters1–32 and the appendix now all have recorded second-pass reviews; this is not whole-book certification. Continue with individual-measure equations and geometric noncollapse.
