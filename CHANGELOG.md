@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September2026 — Checkpoint59: prescribed equations and a direct capacity proof
+
+Completed the second focused reading of Chapter13 and all24 nested inputs. Normalized exponential convergence now follows directly from sublevel capacity and absolute continuity of a fixed finite non-pluripolar measure; the quantitative Lp bound and all hypotheses remain unchanged. Unified exponential typography and repaired split statements. The687-page book compiles without new reference or layout failures; all52 affected/adjacent pages, including downstream references, were inspected. The edited-file style audit has zero errors and three unchanged warnings. No new theorem or verifier run is claimed.
+
 ## 22 September2026 — Checkpoint58: equation proofs and Chapters9–12 review
 
 Completed the second focused reading of Chapters9–12 and their23 nested inputs. Reused the local inverse in Gauduchon continuity and weighted comparison in the small-exponent barriers, preserving all hypotheses and conclusions. Polished the closing discussion and notation; removed the remaining prepared-for credit from the companion note. The687-page book and17-page note compile without new layout or reference failures. All41 affected/adjacent book pages and7 note pages were inspected. The house audit has no new diagnostics; inherited label/template conventions remain recorded.
