@@ -179,6 +179,8 @@ for name in (
     "research/editorial/strong-gauduchon-review.md",
     "research/editorial/strong-compactness-map.json",
     "research/editorial/strong-compactness-review.md",
+    "research/editorial/elliptic-radial-map.json",
+    "research/editorial/elliptic-radial-review.md",
     "research/editorial/primitive-elliptic-bundles-working.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",

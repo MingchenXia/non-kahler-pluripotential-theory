@@ -79,3 +79,40 @@ The strongly Gauduchon current-mass estimate gives linear compactness on this ba
 The primary author-hosted published version of Angella--Guedj--Lu, [Plurisigned Hermitian metrics](https://www.math.univ-toulouse.fr/~guedj/fichierspdf/TAMS22.pdf), was consulted. Theorem2.2 gives upper mass bounds from dd^c omega>=0 in dimension three. Section4.2 records balanced pluripositive invariant metrics on the Iwasawa manifold. These statements do not settle the proposed lower-mass question. The 2023 paper's universal mass questions predate the counterexamples already reconstructed in this book.
 
 The next literature check should identify the precise relation of this line-bundle quotient with existing balanced elliptic-bundle constructions. Do not identify every principal elliptic bundle, every Fu--Yau construction, or every nilmanifold with this one-curvature model. The proof, normalizations and scope of the proposed family need a focused check before manuscript integration.
+
+## Follow-up: a restriction on separated potentials
+
+The specific P^1 x P^1 calculation has now been independently checked in the correct report elliptic_radial_mass_01. It is written in Chapter27: the infimum over smooth strictly admissible u=f(t)+pi^*v is 8, not zero. This includes an arbitrary smooth base term v. The full proof and its precise scope are recorded in elliptic-radial-review.md. The remaining formulas in this working note are still pending a separate bounded check.
+
+Here is a proposed general extension. Put T=2 log q, A=integral_B eta^2 and kappa=(-integral_B c^2)/A>0. For a separated potential u=f(t)+pi^*v and p=f', positivity forces the closed base form eta+p c+dd^c v to be Kähler for each value of p. Its square has integral A(1-kappa p^2), since c is primitive and smooth exact terms disappear by Stokes. Consequently |p|<M:=kappa^(-1/2). Vertical positivity gives p'>-1 and periodicity gives integral_0^T p=0. The mass identity would give
+
+\[
+ \int_X(\omega+dd^c u)^3
+ =3TA\left(1-\frac{\kappa}{T}\int_0^T p^2\right).
+\]
+
+The same endpoint argument, with r=max p-min p, gives r<T and r<2M and
+
+\[
+ \frac1T\int_0^T p^2\leq\frac{r^2}{4}-\frac{r^3}{6T}
+ < F(M,T),\qquad
+ F(M,T)=
+ \begin{cases}
+  T^2/12,&T\leq2M,\\
+  M^2-4M^3/(3T),&T\geq2M.
+ \end{cases}
+\]
+
+For nonzero p the function of r increases up to r=T; the zero function is immediate. This proposes the strictly positive lower bound 3TA(1-kappa F(M,T)) for all separated potentials. Its sharpness on a general base is not asserted: the cohomological amplitude condition need not suffice for positivity with one fixed v. For the existing example A=2, kappa=1 and T=4*pi, the bound is 8 and the checked proposition supplies sharpness.
+
+For purely radial potentials v=0, a different bound controls the exact permitted amplitude. Write c^2=-lambda(b)^2 eta^2 and let M_0=1/max_B|lambda|. The adapted coframe gives strict positivity exactly when |p|<M_0 and p'>-1. The sharp one-dimensional supremum should be F(M_0,T). For T>=2M_0 use equal plateaus at +M_0 and -M_0 with a slope-minus-one descent of length 2M_0; for T<=2M_0 use the mean-zero sawtooth from T/2 to -T/2. At the join retain the positive jump. Periodic convolution and multiplication by 1-epsilon give strict smooth admissibility in both cases, including equality T=2M_0. This would give the exact radial mass infimum 3TA(1-kappa F(M_0,T)), but that general statement is not yet verifier-checked.
+
+## Follow-up: known torus-bundle geometry and a further test
+
+Goldstein--Prokushkin's primary [arXiv:hep-th/0212307v2](https://arxiv.org/pdf/hep-th/0212307v2), dated 7 June 2004, was consulted at Theorem1 and its construction in Section2, and the fundamental-form calculation (17)--(18) in Section4. It constructs principal torus bundles from two integral curvature forms and identifies the balanced condition over a Calabi--Yau surface by primitivity of their (1,1) parts. It also constructs a nowhere-zero holomorphic top form from one on the base. These provide geometric context, not a lower-mass conclusion or a claim of a new bundle construction.
+
+In the present one-line-bundle model, the global (1,0)-form theta=partial t equals a/2+2*pi*i*b. Its two real connection forms have curvatures zero and 2*pi*c. For q=e^(2*pi) their fiber periods agree with the standard torus in that source; other q give a rectangular fiber modulus. This is the relevant specialization of the construction, with the vertical metric normalization kept explicit. It does not identify arbitrary two-curvature torus bundles with line-bundle quotients.
+
+There is also a direct canonical-bundle calculation to check: if sigma is a local holomorphic two-form on the base and w a local line-bundle coordinate, then pi^*sigma wedge dw/w is unchanged under a change of line-bundle trivialization. The extra horizontal one-form wedges to zero by the base dimension. Thus K_X is isomorphic to pi^*K_B. In particular, a K3 base gives a non-Kähler threefold with trivial canonical bundle when c is nonzero. This ties the lower-mass question to familiar balanced non-Kähler Calabi--Yau geometry, without asserting a solution of the Hull--Strominger system.
+
+A possible sharper test is a K3 surface with a negative nonzero Picard class and no compact curves. Existence of the precise base and the choice of primitive class need a standard K3 reference check before use. Conditional on such a base, every compact curve in X must be vertical, since its proper image in B is a point or a curve. The rational-curve averaging used by the known lower-mass example therefore cannot be reused to supply horizontal directions. Whether lower mass nevertheless vanishes in this setting is unresolved in this project; no claim that it is globally open is made.

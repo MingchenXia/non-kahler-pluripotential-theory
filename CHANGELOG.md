@@ -1,5 +1,9 @@
 # Modification history
 
+## 22 September 2026 — Checkpoint81: a sharp limitation of radial potentials
+
+Chapter27 now proves that potentials f(t)+pi^*v on the lower-mass elliptic example have mass strictly greater than 8, with infimum 8 approached by smooth periodic approximations. The arbitrary smooth base term cannot change the necessary amplitude bound, and the unrestricted lower mass remains zero. Rethlas elliptic_radial_mass_01 returned correct without gaps. The proof was shortened and all 18 selected pages read; the book remains 701 pages. Both original propositions and all earlier source text are preserved. Production equality, source reconstruction and original-source checks are recorded separately. The general primitive-bundle note remains unintegrated; its new draft calculation, primary torus-bundle comparison and conditional K3 direction have their pending status stated explicitly. Checkpoint80 was remotely verified at b5f7c9e.
+
 ## 22 September 2026 — Checkpoint80: de Rham control of current masses
 
 Added an elementary corollary of the checked strongly Gauduchon criterion: a de Rham norm controls every closed positive current's linear mass exactly in the strongly Gauduchon case. Compact sets of classes give weakly compact current families, and the image pseudoeffective cone is closed and has no nonzero line. All original chapter text and three formal statements remain unchanged. Rethlas strong_current_compactness_01 returned correct with no gaps, including degenerate cohomology groups and empty families. The 701-page output and all five selected pages passed the stated checks; fresh source reconstruction is recorded separately. A separate primitive elliptic-bundle calculation is preserved as an unintegrated draft with pending proof and literature checks. Checkpoint79 was remotely verified at 9c5b5a4.

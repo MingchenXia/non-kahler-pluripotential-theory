@@ -1,0 +1,15 @@
+# Radial potentials on the lower-mass elliptic example
+
+Checkpoint81 inserts one proposition in the existing metric-geometry subsection of Chapter27. All previous source text, both existing propositions and their labels are preserved. No result of Popovici is used, and no novelty is claimed.
+
+For the book's normalization, the infimum of the smooth strictly positive masses over u=f(t)+pi^*v, with f of period 4*pi and v any smooth real base function, is exactly 8. Every individual mass is strictly greater than 8. The unrestricted lower mass remains zero. Thus adding an independent base potential to a radial function still cannot produce the known collapse.
+
+The proof first restricts positivity to the vertical line and the horizontal complex plane ker partial t. Every base point sees every value of t modulo its period. Integrating the resulting positive base form over the two rulings forces |f'|<1, even though v is arbitrary. Positivity on the vertical line gives f''>-1. The existing smooth mass identity and the explicit fiber integral give 6(4*pi-integral (f')^2).
+
+The variance estimate uses only the endpoints of an interval from a maximum to a subsequent minimum. Multiplication of -p'<=1 by the nonnegative quadratic (A-p)(p+B) and integration gives AB L-integral p^2 >= (A+B)^3/6; no monotonicity of p is assumed. The strict amplitude bound then gives integral p^2<L-4/3. Sharpness follows from a periodic profile with two equal constant intervals, one descent of slope -1, and a positive jump at the period join. Nonnegative periodic convolution preserves its distributional derivative bound and its zero mean. Scaling by 1-epsilon makes both positivity inequalities strict. The mean-zero primitive is periodic, and L2 convergence gives the limiting mass.
+
+The complete actual report elliptic_radial_mass_01 was read: correct under the explicitly stated geometric facts and preceding smooth mass identity, with no critical errors or gaps. The runner exited zero. The final exposition removes a repeated mean-zero display and puts the elementary fiber-integration formula inline; all mathematical assertions and arguments of the frozen input remain. This keeps the key interval inequality with its explanation. The baseline and final affected-source audits have zero errors and zero warnings.
+
+All 18 selected pages were rendered and read in the final preview, including all 16 changed aligned raw pages. The changes after the inserted proposition are page flow, equation numbering and the existing cross-reference in Chapter29. The checked production, original-source preservation, archive and source reconstruction have separate machine-readable records. This is a bounded review, not certification of the whole book.
+
+The supplied LowerMass26 source was revisited for its quotient and normalization. Its differential convention is twice the book's; the calculation above uses the book's integral-one Fubini--Study forms, fiber integral 4*pi and total metric volume 24*pi throughout. The general primitive-bundle working note remains outside the manuscript and is not covered by this verifier report.
