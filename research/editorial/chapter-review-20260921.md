@@ -99,3 +99,5 @@ Checkpoint 62 completes the second focused review of Chapters 20–26 and all si
 Checkpoint63 completes the second focused review of Chapters27–28 and all31 nested inputs, including the kernel figure. See volume-kernel-review.md and its reversible map. Chapters1–32 and the appendix now all have recorded second-pass reviews; this is not whole-book certification. Continue with individual-measure equations and geometric noncollapse.
 
 Checkpoint64 follows up Chapters13,27 and32 with the density-closure lemma, greatest normalized threshold subsolution and conditional moment theorem. See moment-equations-review.md and its reversible map. This is a targeted follow-up to the completed second pass, not another full-book reread.
+
+Checkpoint65 follows up Chapters27 and32 with selected-sequence dual attainment, entropy consequences and a shorter supporting-probability proof. See selected-current-review.md and its reversible map for the exact dependency reread. The new criterion does not supply current regularity or smaller-background noncollapse.
