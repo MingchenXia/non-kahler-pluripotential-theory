@@ -1,5 +1,11 @@
 # Modification history
 
+## 23 September 2026 — Checkpoint89: interior regularity with an explicit Holder premise
+
+Integrate the supplied nonclosed regularity argument as Section 13.20, with a complete proof for locally Holder minimal-singularity solutions and a separate global Lp corollary. The original source lacked the global integrability needed to invoke Dang's Holder theorem. Rethlas `nonclosed_interior_regularity_01` returns wrong for that statement and accepts the entire remaining argument under explicit local Holder continuity; this distinction is preserved. The corollary keeps Dang26 as an additional input, not a reconstructed proof. Add the classical Caffarelli89 citation, expand the ABP passage and local curvature/cutoff estimates, and update Chapter 33 and the research boundary. Neither mass property nor closedness is imposed. Preserve the original source and all previous verifier records. Preserve a separate nef incomplete-metric calculation as an explicitly unverified, unintegrated draft.
+
+Primary proof review, second exposition pass and house audit passed. The 704-page production compiles without errors, unresolved references or overfull boxes; one inherited bibliography underfull paragraph remains. All 37 selected pages were rendered and read, and production images and all page texts match the reviewed preview. Final build and clean source reconstruction are recorded separately in build-snapshot-89.json and source-package-portability-89.json; the latter must pass before declaring the release procedure complete. No whole-book certification is claimed.
+
 ## 23 September 2026 — Checkpoint88: incomplete divisorial metric
 
 Integrate the user-supplied counterexample as Section 28.8, with a full proof of the big-class equation, minimality, finite energy, uniqueness, ample locus and incompleteness. Adapt the dd^c normalization and record the non-nefness computation. Chapter 33 distinguishes this negative answer from the remaining nef and flow-compatible questions. Add the checked DNGL26 contextual reference; retain the standard BEGZ inputs explicitly. Original source and historical records are preserved.

@@ -4,6 +4,10 @@
 
 Current ledger, 16 September 2026. The earlier chronological record is retained in `audits/proof-obligations-history-through-2026-09-15-0450.md`. The main theory does not assume the bounded mass property. A successful bounded audit is evidence for its specified argument and inputs; it is not formal certification or a novelty review.
 
+## Interior smoothness update (checkpoint89)
+
+Section 13.20 reconstructs the supplied nonclosed regularity proof under explicit local Holder continuity of a minimal-singularity solution. The source statement did not justify that premise: Dang26 needs global Lp, p>1. The normal report `nonclosed_interior_regularity_01` is adverse for the broad statement and accepts the complete remaining argument after that repair. The global Lp corollary therefore retains Dang's theorem as an additional input whose full proof is not reconstructed here. No BMP/PVP, closedness or nefness is used. The ABP/concave-elliptic bootstrap, two Chern curvature swaps, polynomial Calabi calculation, rescaling and convolution buffer are explicit. It remains to establish the Holder premise from only local smooth positive density, or to develop regularity for more general types and across the barrier's pole set. No conclusion for these regimes is claimed.
+
 ## Standard reference boundary
 
 The book retains local Bedford–Taylor theory, local capacity and weighted Chern–Levine–Nirenberg estimates, local Skoda integrability, strong openness, valuative multiplier-ideal facts, classical Demailly regularization, basic current theory, and the indicated SGPT results. Standard functional analysis and elliptic/parabolic theory are stated where used. Nonclosed extensions of local formulas are justified rather than subsumed under a standard closed theorem.

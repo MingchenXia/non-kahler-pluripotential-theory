@@ -24,6 +24,8 @@ Chapter 13 also proves weighted lower semicontinuity for extended measures in an
 
 Chapter 13 reconstructs minimal ordinary-type Lp equations in arbitrary smooth big backgrounds, without either mass property. The proof uses a strict singular barrier, resolution and the Gauduchon trace. Prescribing a more general ordinary type in a semipositive big background requires the stated smaller-background condition.
 
+Section 13.20 then proves interior smoothness for locally Holder minimal-singularity solutions, with smooth positive density on the regular locus of a strict singular barrier. The global Lp corollary invokes Dang26 explicitly for Holder continuity; the local derivative argument is proved in full. Neither uniform mass property is needed. Mere smoothness of the density on that open locus does not supply the omitted global Lp premise.
+
 The two measure-representation sections in Chapter 13 require no mass property. One represents every finite non-pluripolar measure as an integrable density relative to a bounded potential’s measure. The other retains a prescribed ordinary type and allows the reference measure to have infinite mass. The density is not asserted bounded. Neither representation by itself solves the equation.
 
 For a Hermitian background, Chapter 13 also characterizes positive lower mass by universal normalized solvability and constructs obstructing positive L1 densities when it vanishes. This characterization belongs to the general theory because it describes both possibilities. For one density, the attained subsolution threshold and its exact Gauduchon formula replace a uniform assumption. A positive threshold alone is not yet known here to give an exact zero-exponent equation in general.

@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint89
+
+The book has **704 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-89.pdf` has SHA256 `3129e87155064e59fea7e218aa84b51b231118a0a23933af7cf5ec3ef191defd` and 3011303 bytes. Every production page text matches the reviewed preview. All 37 selected page images, covering the complete added section, transitions, chapter introduction, contents, research discussion and bibliography, were rendered and read; production images are pixel-identical. Compilation has no errors, unresolved references, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-89.json`.
+
+Section 13.20 integrates the supplied nonclosed regularity proof after correcting its premise. Theorem 13.20.1 proves interior smoothness for locally Holder minimal-singularity solutions where a chosen strict analytic-singularity barrier is smooth and the density is smooth positive. Corollary 13.20.1 supplies the global Lp case using the explicitly identified Dang26 Holder input, whose proof is not reconstructed here. Neither mass property, closedness, semipositivity nor nefness is assumed. Chapter 33 retains the precise unresolved regimes.
+
+The normal Rethlas report `nonclosed_interior_regularity_01` is **wrong for the original statement**, which lacked the global integrability needed to invoke Dang. Its requested continuation accepts the complete remaining proof with explicit local Holder continuity and finds no further gaps. This adverse report is not relabelled. There are 174 reports:165 correct and nine adverse (eight historical, plus this original-statement defect handled by narrowing the integrated theorem). The full primary review and proof expansions are recorded in `research/editorial/nonclosed-interior-regularity-review.md`.
+
+All 173 earlier reports, 29 original SGPT files, both supplied original TeX files, checkpoint88 and its archive, the unchanged 17-page companion note and the three hidden Nakamaye sources are preserved. A separate nef incomplete-metric calculation remains an explicitly unverified, unintegrated research draft. No whole-book certification or novelty claim is made.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-89.json`; that record must exist and pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint88
 
 The book has **688 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-88.pdf` has SHA256 `d18d5a996584516ec0bc858dfac6587ae9f1fe8efd8bbf64642e4ed022f5add2` and 2935143 bytes. Every production page text matches the reviewed preview. All 35 selected production page images are pixel-identical to the rendered and read preview, covering the full new section, its transitions, changed contents, research discussion and bibliography. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-88.json`.
