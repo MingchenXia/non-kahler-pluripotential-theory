@@ -194,6 +194,8 @@ for name in (
     "research/editorial/general-envelope-review.md",
     "research/editorial/weighted-continuity-map.json",
     "research/editorial/weighted-continuity-review.md",
+    "research/editorial/incomplete-metric-map.json",
+    "research/editorial/incomplete-metric-review.md",
     "research/editorial/curve-atomic-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",

@@ -1,5 +1,11 @@
 # Modification history
 
+## 23 September 2026 — Checkpoint88: incomplete divisorial metric
+
+Integrate the user-supplied counterexample as Section 28.8, with a full proof of the big-class equation, minimality, finite energy, uniqueness, ample locus and incompleteness. Adapt the dd^c normalization and record the non-nefness computation. Chapter 33 distinguishes this negative answer from the remaining nef and flow-compatible questions. Add the checked DNGL26 contextual reference; retain the standard BEGZ inputs explicitly. Original source and historical records are preserved.
+
+Primary proof review, second prose pass, house audit and 688-page compilation passed. The normal Rethlas run incomplete_divisorial_metric_01 returned correct under its explicit standard inputs. All 35 selected pages were rendered and read; production images and all page texts match the preview. Clean source reconstruction is recorded separately in source-package-portability-88.json. No whole-book mathematical certification is claimed.
+
 ## 23 September 2026 — Checkpoint87: weighted measure continuity
 
 Consolidate the already proved arbitrary-background weighted lower-semicontinuity lemma in Chapter 13 and replace the Chapter 32 duplicate by a citation, preserving both stable labels. Clarify signed-product total-variation control, moving quasi-continuous weights and genuine monotone limits. The lemma permits infinite mass; all later equation hypotheses and 13 other formal statements in the edited inputs are unchanged. The 684-page second-pass preview compiles with no errors, unresolved references or overfull boxes and one inherited bibliography underfull paragraph. All 66 selected pages were rerendered: 51 changed images were read and 15 matched the first reviewed images pixel for pixel. Every production page text matches the final preview; clean source reconstruction is recorded separately in source-package-portability-87.json. No new verifier run, external input, equation-existence claim or Popovici result is involved. All 172 saved verifier reports, 29 original reference files, checkpoint86, its source archive and the companion note are preserved.

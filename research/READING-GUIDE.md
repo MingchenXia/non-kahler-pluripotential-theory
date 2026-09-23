@@ -1,4 +1,4 @@
-# Reading guide — checkpoint87
+# Reading guide — checkpoint88
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -63,3 +63,5 @@ Chapter 29 treats LCK metrics, Lee and anti-Lee forms, Gauduchon identities, rig
 Chapter 33 connects the analytic theory with bigness, nefness, the Fujiki class, balanced and pluriclosed metrics, null loci and geometric flows. The primitive elliptic-bundle calculation and K3 test are explicit cases; unrestricted lower mass in that K3 example remains unresolved. Other open directions include individual-measure exact equations when lower mass vanishes, ordinary-type topology, higher-dimensional trace realization and lower partial Bergman asymptotics.
 
 The appendix states the extension to unibranch compact complex spaces and its limitations. The companion nonuniqueness note remains unchanged. A completed bounded audit or a successful build is not whole-book mathematical certification.
+
+Section 28.8 integrates the supplied incomplete divisorial metric: a unique minimal-singularity finite-energy solution in a big non-nef class can be incomplete on every open subset of its ample locus. Chapter 33 records the limitation for geometric applications. Its bounded proof review and release records are linked in STATUS.md.

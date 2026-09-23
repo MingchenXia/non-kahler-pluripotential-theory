@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint88
+
+The book has **688 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-88.pdf` has SHA256 `d18d5a996584516ec0bc858dfac6587ae9f1fe8efd8bbf64642e4ed022f5add2` and 2935143 bytes. Every production page text matches the reviewed preview. All 35 selected production page images are pixel-identical to the rendered and read preview, covering the full new section, its transitions, changed contents, research discussion and bibliography. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-88.json`.
+
+Section 28.8 (Theorem 28.8.1) integrates the supplied `incomplete_metric.tex`: a big non-nef class on the blow-up of the projective plane has a unique finite-energy solution of a divisorial exponential equation with minimal singularities, whose metric is incomplete on every nonempty connected open subset of its ample locus. The full proof is retained and adapted to the book's dd^c normalization. Chapter 33 distinguishes this negative answer from the remaining nef and flow-compatible questions. Fourteen existing result/problem environments in the edited inputs are unchanged.
+
+The normal Rethlas run `incomplete_divisorial_metric_01` returned correct with no critical errors or gaps under its explicitly listed standard closed-Kähler inputs. There are 173 saved reports:165 correct and eight historical adverse reports resolved later. The original supplied file, 29 SGPT source files, all 172 earlier reports, checkpoint87 and its archive, the 17-page companion note and the three hidden Nakamaye files are preserved. See `research/editorial/incomplete-metric-review.md` for exact scope. No whole-book certification is claimed.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-88.json`; that record must exist and pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint87
 
 The book remains **684 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-87.pdf` has SHA256 `73185b9a7522fcf6ac3cb367dad9e46409435e74ac3781717f02ec2e1459e1eb` and 2915779 bytes. Every production page text matches the final reviewed preview. All 66 selected pages were rerendered after the second pass: 51 changed images were read, and 15 were pixel-identical to the already read first preview. The selection covers all 21 changed page texts relative to checkpoint86. There are no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-87.json`.
