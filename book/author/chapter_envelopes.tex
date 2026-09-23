@@ -291,6 +291,8 @@ The two volumes are invariant under bounded changes of $u$ by definition. They a
 \]
 \section{Relative envelope classes}
 
+In this section $\theta$ is an arbitrary smooth real $(1,1)$-form and $\varphi\in\PSH(X,\theta)$. No semipositivity, bigness or mass hypothesis is imposed.
+
 For $u,\varphi\in\PSH(X,\theta)$ and $b\geq1$, define the competitor family
 \[
  \mathcal A_b(u,\varphi)=
@@ -313,7 +315,7 @@ Define
 \]
 \end{definition}
 
-This is the definition used in \cite[Definition 3.2]{ALS26} for semipositive big $\theta$. It is meaningful without a mass bound. Its comparison with the volume-defined class is developed in \cref{chap:mass-bound-volumes}.
+This is the definition used in \cite[Definition 3.2]{ALS26} for semipositive big $\theta$. It is meaningful without a mass bound. Its comparison with the volume-defined class is developed in \cref{chap:mass-bound-volumes}. For the fixed reference, write $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$.
 
 \begin{proposition}\label{prop:relative-elementary}
 The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all potentials equivalent to $\varphi$, and is stable under bounded changes of its members. If $u$ belongs to it, $u\leq v$ and $v\preceq\varphi$, then $v$ belongs to it. In particular, it is stable under taking maxima of two members.
@@ -321,48 +323,6 @@ The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all 
 \begin{proof}
 If $u\geq\varphi-C$, use $h=\varphi-bC$ for each $b$. More generally, if $u'\geq u-C$ and $h\in\mathcal A_b(u,\varphi)$, then $h-bC\in\mathcal A_b(u',\varphi)$. The singularity-order condition persists under bounded changes. Convex combinations of two competitors give competitors for the same convex combination of their target functions. Finally a competitor for $u$ is a competitor for any larger $v$; the assumed relation $v\preceq\varphi$ supplies the other defining condition.
 \end{proof}
-
-\section{Model references}
-
-\begin{proposition}\label{prop:relative-envelope-equality}
-For a big background, if $u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, then
-\[
- P_\theta[u]=P_\theta[\varphi].
-\]
-This implication does not require bounded mass.
-\end{proposition}
-\begin{proof}
-The relation $u\preceq\varphi$ gives one inequality. For $a\in(0,1)$ choose $h_a$ with $a\varphi+(1-a)h_a\leq u$. Combining normalized competitors for $P_\theta[\varphi]$ and $P_\theta[h_a]$ gives
-\[
- aP_\theta[\varphi]+(1-a)P_\theta[h_a]\leq P_\theta[u].
-\]
-Indeed, their convex combination is below zero and is more singular than $u$; taking the two upper envelopes preserves the inequality by local regularization. For every potential $h$, $P_\theta[h]$ has supremum zero, because it lies above $h-\sup_Xh$ and below zero. The normalized $L^1$ bound therefore applies uniformly to $P_\theta[h_a]$. Along $a\to1$ the left-hand side tends to $P_\theta[\varphi]$ in $L^1$. The inequality passes to the limit almost everywhere and then everywhere for the canonical representatives. This proves the other inequality.
-\end{proof}
-
-We use an envelope condition to leave room below the reference singularity without imposing a uniform mass bound.
-
-For semipositive big $\theta$, the condition used by Alehyane--Lu--Salouf is
-\begin{equation}\label{eq:als-model-condition}
- P_\theta[\varphi]=\varphi,\qquad
- P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
- \quad\text{for some }0<\varepsilon<1.
-\end{equation}
-The second requirement leaves room to realize the singularity below a smaller background. Under bounded mass, a different model condition uses positive lower volume; see \eqref{eq:li-model-condition}. We keep these conditions distinct.
-
-In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity of the mass of every potential equivalent to $\varphi$, by \cite[Proposition 2.10 and the discussion after Definition 2.13]{ALS26}. This is individual positivity; a positive infimum over all such potentials is a stronger assertion. That paper does not assume bounded mass for its same-singularity-type equations with $L^p$ data.
-
-The model conditions also clarify a limitation of raw mass. On a manifold without bounded mass, \cref{thm:infinite-mass-witness} gives potentials with infinite mass and trivial multiplier ideals at every weight. Meanwhile every envelope fixed point for a semipositive big background has finite mass. Thus multiplier ideals alone do not control the unnormalized mass of a representative. Any extension of the source book's $\mathcal I$-goodness equivalences must account for the envelope and the chosen volume invariant.
-
-\section{Room below the reference potential}
-\label{sec:relative-envelope-room}
-
-Throughout this section, $X$ is connected and compact, $\theta\geq0$ is smooth and big, and $\varphi$ satisfies \eqref{eq:als-model-condition}. Fix $0<\varepsilon<1$ with $P_{\varepsilon\theta}(\varphi)$ genuine. Write
-\[
- \mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi),
- \qquad \mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0),
- \qquad \mu_u=\mathrm{MA}^{\mathrm{ext}}_\theta(u).
-\]
-The notation $Q_b$ refers to the convex competitor definition in \cref{def:relative-envelope-class}; differences at common poles are never assigned artificial values. No positive lower-volume hypothesis is imposed in this section.
 
 \begin{lemma}\label{lem:relative-stretch-closure}
 If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then $Q_b(u,\varphi)\in\mathcal E_\varphi$ for every $b\geq1$. More generally, if $u,w\in\mathcal E_\varphi$ and $u\leq w$, then $Q_b(u,w)\in\mathcal E_\varphi$.
@@ -384,8 +344,66 @@ For the second assertion choose a constant $C$ such that $u-C\leq\varphi$ and $w
 \[
  Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi.
 \]
-Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership.
+Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership. The convex-combination argument is that of \cite[Proposition 3.5]{ALS26}.
 \end{proof}
+
+\begin{proposition}\label{prop:relative-finite-rooftops}
+The rooftop of any nonempty finite collection of members of $\mathcal E_\varphi$ is genuine and belongs to $\mathcal E_\varphi$.
+\end{proposition}
+\begin{proof}
+Let $u_1,\ldots,u_N\in\mathcal E_\varphi$. The case $N=1$ follows from the definition. A common constant translation reduces the remaining cases to $u_i\leq\varphi$, since rooftops commute with such translations and class membership is unchanged. For $b\geq1$, put
+\[
+ h_b=\frac1N\sum_{i=1}^N Q_{Nb}(u_i,\varphi).
+\]
+Every summand is genuine and at most $u_i\leq\varphi$. For each $i$, the defining inequality for its summand and the bounds on the others give
+\[
+ b^{-1}h_b+(1-b^{-1})\varphi
+ \leq (Nb)^{-1}Q_{Nb}(u_i,\varphi)
+              +(1-(Nb)^{-1})\varphi
+ \leq u_i.
+\]
+These are inequalities between convex combinations of canonical potentials, so they remain meaningful at common poles. For $b=1$, $h_1$ is a competitor for $p=P_\theta(u_1,\ldots,u_N)$; hence $p$ is genuine. For every $b\geq1$, the left side is a $\theta$-plurisubharmonic competitor below each $u_i$, so it is at most $p$. Thus $h_b\in\mathcal A_b(p,\varphi)$. Together with $p\leq u_1\preceq\varphi$, this proves $p\in\mathcal E_\varphi$.
+\end{proof}
+
+The finiteness of the family is essential: every $\varphi-j$ belongs to $\mathcal E_\varphi$, whereas $P_\theta(\inf_{j\geq1}(\varphi-j))\equiv-\infty$. The common-envelope constructions for sequences in \cref{chap:relative-finite-measures} require additional estimates.
+
+\begin{proposition}\label{prop:relative-envelope-equality}
+If $u\in\mathcal E_\varphi$, then
+\[
+ P_\theta[u]=P_\theta[\varphi].
+\]
+\end{proposition}
+\begin{proof}
+The relation $u\preceq\varphi$ gives one inequality. For $a\in(0,1)$ choose $h_a$ with $a\varphi+(1-a)h_a\leq u$. Combining normalized competitors for $P_\theta[\varphi]$ and $P_\theta[h_a]$ gives
+\[
+ aP_\theta[\varphi]+(1-a)P_\theta[h_a]\leq P_\theta[u].
+\]
+Indeed, their convex combination is below zero and is more singular than $u$; taking the two upper envelopes preserves the inequality by local regularization. For every potential $h$, $P_\theta[h]$ has supremum zero, because it lies above $h-\sup_Xh$ and below zero. The normalized $L^1$ bound therefore applies uniformly to $P_\theta[h_a]$. Along $a\to1$ the left-hand side tends to $P_\theta[\varphi]$ in $L^1$. The inequality passes to the limit almost everywhere and then everywhere for the canonical representatives. This proves the other inequality.
+\end{proof}
+
+\section{Model references}
+
+The preceding envelope identities use only convex combinations, the local envelope theorem and normalized $L^1$ compactness. To obtain mass positivity for semipositive big $\theta$, we use the reference condition of Alehyane--Lu--Salouf
+\begin{equation}\label{eq:als-model-condition}
+ P_\theta[\varphi]=\varphi,\qquad
+ P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
+ \quad\text{for some }0<\varepsilon<1.
+\end{equation}
+The second requirement leaves room to realize the singularity below a smaller background. Under bounded mass, a different model condition uses positive lower volume; see \eqref{eq:li-model-condition}. We keep these conditions distinct.
+
+In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity of the mass of every potential equivalent to $\varphi$, by \cite[Proposition 2.10 and the discussion after Definition 2.13]{ALS26}. This is individual positivity; a positive infimum over all such potentials is a stronger assertion. That paper does not assume bounded mass for its same-singularity-type equations with $L^p$ data.
+
+The model conditions also clarify a limitation of raw mass. On a manifold without bounded mass, \cref{thm:infinite-mass-witness} gives potentials with infinite mass and trivial multiplier ideals at every weight. Meanwhile every envelope fixed point for a semipositive big background has finite mass. Thus multiplier ideals alone do not control the unnormalized mass of a representative. Any extension of the source book's $\mathcal I$-goodness equivalences must account for the envelope and the chosen volume invariant.
+
+\section{Room below the reference potential}
+\label{sec:relative-envelope-room}
+
+Throughout this section, $X$ is connected and compact, $\theta\geq0$ is smooth and big, and $\varphi$ satisfies \eqref{eq:als-model-condition}. Fix $0<\varepsilon<1$ with $P_{\varepsilon\theta}(\varphi)$ genuine. Write
+\[
+ \mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0),
+ \qquad \mu_u=\mathrm{MA}^{\mathrm{ext}}_\theta(u).
+\]
+The notation $Q_b$ refers to the convex competitor definition in \cref{def:relative-envelope-class}; differences at common poles are never assigned artificial values. No positive lower-volume hypothesis is imposed in this section.
 
 \begin{lemma}\label{lem:relative-difference-envelope}
 If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then
@@ -401,31 +419,6 @@ Since $\varphi\leq0$, the potential $u$ is a competitor for the obstacle $u-\var
  h_b\leq bu-(b-1)\varphi\leq b(u-\varphi).
 \]
 Semipositivity makes $b^{-1}h_b$ a $\theta$-plurisubharmonic competitor for $w$. Hence $h_b\leq bw$, supplying a competitor for $P_\theta(bw)$ for every $b$. This is exactly $w\in\mathcal E_0$.
-\end{proof}
-
-\begin{proposition}\label{prop:relative-finite-rooftops}
-The rooftop of any finite collection of members of $\mathcal E_\varphi$ is genuine and belongs to $\mathcal E_\varphi$.
-\end{proposition}
-\begin{proof}
-It suffices first to produce a genuine rooftop for two members $u,v$. Translate them so that $u,v\leq\varphi$, and let $w_u,w_v\in\mathcal E_0$ be the preceding difference envelopes. Their rooftop $z=P_\theta(w_u,w_v)$ is genuine: the potential
-\[
- \tfrac12P_\theta(2w_u)+\tfrac12P_\theta(2w_v)
- \leq w_u+w_v\leq\min(w_u,w_v)
-\]
-is a competitor. For each $b\geq1$, the same argument with $2b$ in place of $2$ gives a $\theta$-plurisubharmonic $h_b\leq b\min(w_u,w_v)$. Therefore $b^{-1}h_b\leq z$ and $P_\theta(bz)$ is genuine. Thus $z\in\mathcal E_0$.
-
-Set $\delta=1-\varepsilon$ and $q=P_{\varepsilon\theta}(\varphi)$. Since $P_\theta(z/\delta)$ is genuine, the potential
-\[
- \delta P_\theta(z/\delta)+q
- \leq z+\varphi\leq\min(u,v)
-\]
-is a genuine $\theta$-plurisubharmonic competitor. This proves nonemptiness of the rooftop for any pair in the class.
-
-To prove class membership, put $u_b=Q_b(u,\varphi)$ and $v_b=Q_b(v,\varphi)$. They belong to $\mathcal E_\varphi$ by \cref{lem:relative-stretch-closure}, so the just-proved nonemptiness gives $r_b=P_\theta(u_b,v_b)$. If $p=P_\theta(u,v)$, then
-\[
- b^{-1}r_b+(1-b^{-1})\varphi\leq p.
-\]
-Indeed, the left side is a $\theta$-plurisubharmonic competitor below both $u$ and $v$. This is a competitor for the defining $b$-condition of $p$. Since $p\leq u\preceq\varphi$, it proves $p\in\mathcal E_\varphi$. Iterate to handle a finite collection. These arguments reconstruct \cite[Propositions 3.5--3.7]{ALS26} in the precise forms needed here.
 \end{proof}
 
 \begin{lemma}\label{lem:smaller-background-mass-lower}
@@ -465,7 +458,7 @@ has background $(\varepsilon+\delta)\theta$. It supplies the asserted competitor
 
 \section{Infinite mass inside the envelope class}
 
-The same series construction gives a stronger obstruction. It concerns the relative class itself, with the smooth reference potential zero.
+The series construction of \cref{thm:infinite-mass-witness} also gives an infinite-mass member of the relative envelope class with reference zero.
 
 \begin{proposition}\label{prop:infinite-envelope-class}
 If $v_+(\omega)=+\infty$, the potential $U$ in \cref{thm:infinite-mass-witness} can be chosen so that, in addition,

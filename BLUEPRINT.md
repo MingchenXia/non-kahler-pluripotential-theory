@@ -8,7 +8,7 @@ Develop a self-contained compact Hermitian counterpart of Mingchen Xia's *Singul
 
 Use standard theorem environments, upright differential d and the standard multiplier-ideal envelope notation. Distinguish proved statements, precise external inputs, conditional results and open problems. Before using any result of Popovici, consult the supplied private working reference and independently check the entire proof and dependencies. That private reference is not book content or package material.
 
-## Structure after checkpoint85
+## Structure
 
 The book has 33 active chapters and an appendix. Chapters 1–29 form the main sequence. Part XII separates the substantial mass-dependent theory into three chapters:
 
@@ -22,7 +22,7 @@ The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily exclu
 
 ## Current proof boundary
 
-The reorganization changes exposition and location, not the hypotheses or conclusions of the retained results. It is not a new mathematical verification of the whole manuscript. The earlier systematic pass and its limits are in `research/editorial/chapter-review-20260921.md`; 171 bounded verifier reports retain their individual accepted inputs and scopes. Release-specific build and source-reconstruction checks are recorded separately.
+Checkpoint85 reorganized the exposition without changing the retained results. Checkpoint86 broadens the elementary relative-envelope theory: stretching, nonempty finite rooftops and equality of ordinary singularity envelopes hold for any smooth background and genuine reference. Their proofs use convex combinations, the upper-envelope theorem and normalized L1 compactness. Model-reference positivity and the infinite-rooftop and equation arguments retain their stated additional assumptions. Chapter 32 reuses the general convex proofs without weakening its mass hypotheses. The earlier systematic pass and its limits are in `research/editorial/chapter-review-20260921.md`; 172 bounded verifier reports retain their individual accepted inputs and scopes. Release checks are recorded separately and are not whole-book mathematical certification.
 
 Upper bounded mass and positive lower mass are independent. The elliptic example has a balanced metric with finite upper mass and zero lower mass. Extended non-pluripolar measures, finite damping and envelopes therefore provide the general framework. A finite linear Gauduchon trace cannot be substituted for nonlinear mass integrability. Nor does representing a measure as an integrable density against a Monge–Ampère measure solve an equation for that measure.
 

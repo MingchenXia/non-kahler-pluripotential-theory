@@ -1,4 +1,4 @@
-# Reading guide — checkpoint85 structure
+# Reading guide — checkpoint86
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -8,7 +8,7 @@ Chapters 1–8 develop the nonclosed background, torsion, Gauduchon traces, comp
 
 Read the trace estimates together with the infinite-mass witness. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
 
-Chapter 12 constructs envelopes, defines extended upper and lower singularity volumes, and develops the relative envelope class. Its stretching, difference-envelope and finite-rooftop arguments use the stated model condition but no positive lower mass. The individual positivity conclusion remains valid when the uniform lower bound vanishes. The chapter ends with infinite mass inside the relative envelope class. Finite-volume comparisons are in Chapter 30.
+Chapter 12 constructs envelopes, defines extended upper and lower singularity volumes, and develops the relative envelope class. Stretching, nonempty finite rooftops and equality of ordinary singularity envelopes work for any smooth background and genuine reference. The difference-envelope and mass-positivity arguments retain the stated semipositive model setting, without a uniform positive lower mass. The individual positivity conclusion remains valid when the uniform lower bound vanishes. The chapter ends with infinite mass inside the relative envelope class. Finite-volume comparisons are in Chapter 30.
 
 Chapter 15 develops multiplier-ideal envelopes and the relation between ordinary and ideal envelopes. Dyadic analytic regularizations give a specific monotone convergence criterion without BMP or bigness. Rational scaling gives analytic density in the elementary ideal metric on a fixed Hermitian background. It does not give the desired topology on arbitrary ordinary types. On a curve, even fixed positive masses fail to restore mass continuity for that elementary metric.
 

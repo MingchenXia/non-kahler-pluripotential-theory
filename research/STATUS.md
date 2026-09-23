@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint86
+
+The book remains **684 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-86.pdf` has SHA256 `c60484232b4802349b0814bd3eec323f5292f8eeeb9f0f224bdd15d5577c60fb` and 2917264 bytes. Every production page text matches the final reviewed preview. The final visual review covers 54 selected physical pages: the last two wording changes were rendered and read, and 52 other selected pages were rerendered and found pixel-identical to previously read images. No errors, unresolved references, duplicate labels or overfull boxes occur; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-86.json`.
+
+Chapter 12 now proves stretching closure, closure under nonempty finite rooftops and equality of ordinary singularity envelopes for an arbitrary smooth background and any genuine reference. The finite-rooftop proof uses one convex average. Chapter 32 replaces two proofs by citations to these general results, retaining all its hypotheses and formal statements. The countable-family warning distinguishes this closure from sequence compactness. The model-reference positivity, measure convergence and equation results retain their additional assumptions.
+
+The normal Rethlas run `general_relative_envelopes_01` terminated successfully and returned correct with no critical errors or gaps, under its three explicitly accepted elementary analytic inputs. There are 172 saved reports:164 correct and eight historical adverse reports resolved later. The previous 171 reports and 29 original SGPT files are unchanged. Checkpoint85 and its source archive, the 17-page companion note, and the three hidden Nakamaye files are preserved. The exact scope is in `research/editorial/general-envelope-review.md`; no whole-book certification or new equation-existence theorem is claimed.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-86.json`; that record must exist and pass before declaring the release procedure complete. The full book goal and the continuing-work list below remain active.
+
 ## Checkpoint85
 
 The reorganized book has **684 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-85.pdf` has SHA256 `31c1369eadcd2d885001c24e1ee58d3011314b37fe53cc2b450b8da22cb89bdb` and 2920891 bytes. Every production page text matches the reviewed final preview. All82 first-final selected pages and27 supplement pages were rendered and read; the supplement covers all14 subsequently changed page texts, and71 unchanged selected pages were rerendered and found pixel-identical. These are focused structural/layout checks, not whole-book mathematical certification. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-85.json`.
@@ -24,4 +34,4 @@ Chapter19's curve source metric compares with total variation of atomic data und
 
 ## Preservation and publication
 
-Checkpoint84 was remotely verified at `19dbac55fb8da863643f84c49fea79eacecd8193`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.
+Checkpoint85 was remotely verified at `6874dd9a2111b1faad2c488b99f1bb50e3ebf6a6`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.

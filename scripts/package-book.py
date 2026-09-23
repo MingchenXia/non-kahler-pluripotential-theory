@@ -190,6 +190,8 @@ for name in (
     "research/editorial/curve-atomic-map.json",
     "research/editorial/mass-structure-map.json",
     "research/editorial/mass-structure-review.md",
+    "research/editorial/general-envelope-map.json",
+    "research/editorial/general-envelope-review.md",
     "research/editorial/curve-atomic-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
