@@ -2,9 +2,15 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
-## Current revision under review
+## Checkpoint94
 
-A whole-book notation-scope review is in progress at the user's request. Every active section and subsection must declare or precisely recall its objects and hypotheses before using them, including proof-local notation. The first reported instance is Definition 1.1.1. The mingchen-writing skill has been updated with the rule and the manual coverage audit. The first complete-text notation pass covers all 33 active chapters, their nested inputs, the appendix and front matter (188 files). The full draft compiles to 762 pages; its house-audit diagnostics exactly match the same baseline93 scope. The second pass, final visual inspection and source reconstruction remain pending. Progress is recorded in `editorial/notation-before-use-review.md` and its file map. Checkpoint93 remains the latest checked release until these checks finish.
+The book has **760 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-94.pdf` has SHA256 `a27a7cb5c0fe5ac5f09a6f6ea475591501353080dbd9a75d349a12e3351cc1f0` and 3406300 bytes. The user's whole-book notation request has received two passes across all 188 active author files: a complete-text first pass and a second check of local declarations, inherited hypotheses and proof-local scope. Definition 1.1.1 now explicitly introduces X, theta and the auxiliary metric before use. The mingchen-writing skill and its audit guidance have been updated and validated; the exact patch is preserved in the repository.
+
+This is an exposition revision. All existing labels and formal-environment counts are preserved, and mass hypotheses remain specific to their stated regimes. No new theorem or independent whole-book mathematical certification is claimed. The full coverage and limitations are in `editorial/notation-before-use-review.md` and its file map.
+
+Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 96 selected final pages were inspected, with coverage of every active chapter and the appendix. The 188-input house audit has 54 inherited label/style errors and 168 warnings, exactly matching the same checkpoint93 inputs after path/line normalization. All 180 verifier reports, original sources, style assets, bibliography, hidden Nakamaye files and the unverified inactive nef draft remain unchanged. Checkpoint93 and its archive are preserved. The 17-page companion was rebuilt from the revised shared sections and its introductory/final-question declarations were corrected; all 17 pages were inspected. Its earlier PDF remains separately preserved, and its root house-audit findings are unchanged. See `research/audits/build-snapshot-94.json`.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-94.json`; it must pass before declaring the release procedure complete. The full book goal remains active and incomplete.
 
 ## Checkpoint93
 
