@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint87
+
+The book remains **684 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-87.pdf` has SHA256 `73185b9a7522fcf6ac3cb367dad9e46409435e74ac3781717f02ec2e1459e1eb` and 2915779 bytes. Every production page text matches the final reviewed preview. All 66 selected pages were rerendered after the second pass: 51 changed images were read, and 15 were pixel-identical to the already read first preview. The selection covers all 21 changed page texts relative to checkpoint86. There are no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-87.json`.
+
+The existing arbitrary-background weighted lower-semicontinuity lemma is now in Chapter 13, replacing its earlier semipositive-only version. Chapter 32 cites it instead of repeating its proof. The argument allows infinite total mass and makes explicit the signed-product total-variation bound and the moving quasi-continuous weight passage. The genuine monotone-limit prerequisites are preserved. All 13 other formal statements in the three edited inputs are unchanged; the bounded-subsolution input has only a spacing control.
+
+No new Rethlas run was started. The focused primary review reread the three relevant historical reports, including the adverse common-barrier report and its subsequent successful repair. All 172 saved reports, 29 original SGPT files, checkpoint86 and its source archive, the 17-page companion note and the three inactive Nakamaye sources are preserved. See `research/editorial/weighted-continuity-review.md` for the bounded scope; no new equation-existence theorem or whole-book certification is claimed.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-87.json`; that record must exist and pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint86
 
 The book remains **684 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-86.pdf` has SHA256 `c60484232b4802349b0814bd3eec323f5292f8eeeb9f0f224bdd15d5577c60fb` and 2917264 bytes. Every production page text matches the final reviewed preview. The final visual review covers 54 selected physical pages: the last two wording changes were rendered and read, and 52 other selected pages were rerendered and found pixel-identical to previously read images. No errors, unresolved references, duplicate labels or overfull boxes occur; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-86.json`.
@@ -34,4 +44,4 @@ Chapter19's curve source metric compares with total variation of atomic data und
 
 ## Preservation and publication
 
-Checkpoint85 was remotely verified at `6874dd9a2111b1faad2c488b99f1bb50e3ebf6a6`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.
+Checkpoint86 was remotely verified at `9a50334b1e982ef853107aff2b8b63bcd4780053`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.

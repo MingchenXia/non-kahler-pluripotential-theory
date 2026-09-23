@@ -1,4 +1,4 @@
-# Reading guide — checkpoint86
+# Reading guide — checkpoint87
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -19,6 +19,8 @@ The curve-fibration construction realizes exact compact-model divisor orders. Pr
 ## Equations and Gauduchon duality without a uniform mass hypothesis
 
 Chapters 9–11 treat smooth and continuous equations, normalization, uniqueness criteria and explicit failures of potential uniqueness. Keep the distinctions between a unique scalar, a unique potential and a selected approximation limit. The zero set of the density alone does not decide uniqueness.
+
+Chapter 13 also proves weighted lower semicontinuity for extended measures in any smooth background, with capacity-convergent potentials and bounded nonnegative quasi-continuous weights. This result allows infinite mass. Turning L1 convergence into capacity convergence or obtaining weak convergence of the unweighted measures still requires the stated barrier, domination or tail estimates.
 
 Chapter 13 reconstructs minimal ordinary-type Lp equations in arbitrary smooth big backgrounds, without either mass property. The proof uses a strict singular barrier, resolution and the Gauduchon trace. Prescribing a more general ordinary type in a semipositive big background requires the stated smaller-background condition.
 

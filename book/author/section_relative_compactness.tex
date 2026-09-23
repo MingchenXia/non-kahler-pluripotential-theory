@@ -108,28 +108,28 @@ We have shown that the difference of the two $h_j$ integrals tends uniformly to 
 Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
 \end{proof}
 
-\begin{lemma}\label{lem:weighted-extended-lsc}
-Let $\theta\geq0$, and suppose $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in capacity. If $b_j,b$ are nonnegative uniformly bounded quasi-continuous functions and $b_j\to b$ in capacity, then
+\begin{lemma}\label{lem:weighted-extended-lsc}\label{lem:big-weighted-lsc}
+Let $\theta$ be any smooth real $(1,1)$-form. Suppose $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in capacity. If $b_j,b$ are nonnegative uniformly bounded quasi-continuous functions and $b_j\to b$ in capacity, then
 \[
- \int_X b\,\mathrm{MA}^{\mathrm{ext}}_\theta(u)
- \leq\liminf_j\int_X b_j\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j).
+ \int_Xb\,\mathrm{MA}^{\mathrm{ext}}_\theta(u)
+ \leq\liminf_j\int_Xb_j\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j).
 \]
-Both sides are allowed to be infinite.
+Both sides may be infinite. No mass or bigness assumption is needed.
 \end{lemma}
 \begin{proof}
-Translate the potentials to be nonpositive. Choose continuous nondecreasing cutoffs $g_T$ on $[-\infty,0]$ which vanish on $[-\infty,-2T]$, equal one on $[-T,0]$, and increase to one at every finite point as $T\to\infty$. For fixed $T$, bounded capacity continuity and \cref{lem:bounded-mixed-capacity} give
+Translate the potentials below zero and choose a Hermitian metric $\Omega\geq\theta$. Let $g_T$ be a continuous nondecreasing cutoff, zero on $[-\infty,-2T]$, one on $[-T,0]$, increasing to one at finite points. Put $v_j=\max(u_j,-2T)$ and $v=\max(u,-2T)$. These are uniformly bounded $\Omega$-plurisubharmonic functions and converge in capacity. Expand $(\theta+\ddc v_j)^n$ using $\theta+\ddc v_j=(\Omega+\ddc v_j)+(\theta-\Omega)$. Each smooth factor is bounded by a fixed power of $\Omega$ up to a constant. Thus the signed terms have total variations controlled by positive bounded mixed measures, and \cref{lem:bounded-mixed-capacity} gives a common capacity bound for fixed $T$. Bounded Bedford--Taylor continuity gives weak convergence term by term. It also permits the weights $b_jg_T(v_j)$: their differences from the limiting weight tend to zero in capacity, and the common capacity bound makes their integrals tend to zero. For the fixed limiting weight, remove a set of arbitrarily small capacity, extend continuously from its complement, and control the discarded part by the same bound. Locality and the vanishing cutoff on the truncation level give
 \[
  \begin{split}
  \int_Xb_jg_T(u_j)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
- &=\int_Xb_jg_T(\max(u_j,-2T))\,
-                   \mathrm{MA}_\theta(\max(u_j,-2T))\\
- &\longrightarrow\int_Xbg_T(u)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u).
+ &=\int_Xb_jg_T(v_j)(\theta+\ddc v_j)^n\\
+ &\longrightarrow
+ \int_Xbg_T(u)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u).
  \end{split}
 \]
-For the capacity bound one can enlarge the background to a fixed Hermitian metric. The bounded measures then have uniformly controlled capacity, so quasi-continuous weights may be used in the usual bounded continuity theorem. The first equality is locality; its weight is zero on the truncation level. The left side is at most the integral in the assertion. Let $T\to\infty$ and use monotone convergence, since extended measures ignore pole sets.
+The first integral is nonnegative and bounded above by the corresponding uncut integral, although the bounded product before multiplication may be signed. Let $T\to\infty$ and use monotone convergence.
 \end{proof}
 
-The monotone capacity passages used below also require no mass estimate. For a decreasing sequence we require a genuine limit, which is then a common lower bound. A prescribed genuine lower barrier ensures that the decreasing limit is genuine. For an increasing sequence of genuine potentials, the first term is a common lower bound; a common upper bound gives a genuine canonical limit. In either case truncate at $-T$, use bounded monotone capacity convergence, and then let $T\to\infty$. The capacity of the deep sublevels of the fixed genuine lower bound tends to zero. Increasing limits are taken with their canonical upper semicontinuous representative.
+Monotone capacity convergence also needs no mass estimate. A decreasing sequence with a genuine limit has that limit as a common lower bound. An increasing sequence of genuine potentials with a common upper bound has its first term as a lower bound and a genuine upper-regularized limit. Choose a Hermitian $\Omega\geq\theta$ and truncate at $-T$. Bounded monotone capacity convergence applies to the truncations. The deep sublevels of the fixed lower bound have capacity tending to zero, so letting $T\to\infty$ proves convergence for the original sequence.
 
 \Needspace{16\baselineskip}
 \begin{theorem}\label{thm:common-barrier-criterion}
@@ -170,6 +170,7 @@ Finally $U_j=(\sup_{\ell\geq j}u_\ell)^*$ decreases to $u$ by Hartogs' lemma and
 $p_j\leq u_j\leq U_j$, together with the monotone capacity convergence of both outer sequences, prove the claim.
 \end{proof}
 
+\Needspace{10\baselineskip}
 \begin{proposition}\label{prop:lower-barrier-criterion}
 In \cref{thm:common-barrier-criterion}, one may replace the two bounds on $u_j$ by
 \[
