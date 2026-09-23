@@ -3,9 +3,11 @@
 
 In the closed theory, three constructions meet: positivity on a product, a Perron envelope joining two potentials, and geodesics for the Mabuchi metric. The first two can be studied on a compact Hermitian manifold using local pluripotential theory. The third changes because integration by parts acquires torsion terms. We shall prove the envelope statements before comparing the two smooth equations.
 
-Here $\theta$ is any smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. In particular, neither semipositivity nor bigness is needed for the elementary product arguments. The local inputs are the psh maximum and envelope theorems and Kiselman's minimum principle, in the forms recalled in \cite[chapters on plurisubharmonic functions and geodesic rays]{SGPT}. We explain the passage to a nonclosed background.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. In particular, neither semipositivity nor bigness is needed for the elementary product arguments. The local inputs are the psh maximum and envelope theorems and Kiselman's minimum principle, in the forms recalled in \cite[chapters on plurisubharmonic functions and geodesic rays]{SGPT}. We explain the passage to a nonclosed background.
 
-\section{Positivity on a strip}
+\section{Positivity on a strip}\label{sec:strip-positivity}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence.
 
 For an open interval $I\subset\R$, write
 \[
@@ -16,11 +18,11 @@ A family $u_t\in\PSH(X,\theta)$, $t\in I$, is a \emph{subgeodesic} if its comple
 \[
  U(x,z)=u_{\Real z}(x)
 \]
-is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on the product. The word specifies this positivity condition; it does not yet identify a metric geodesic. A subgeodesic from $u_a$ to $u_b$ on a finite interval additionally converges to those endpoints in $L^1(X)$.
+is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on the product. The word specifies this positivity condition; it does not yet identify a metric geodesic. For real $a<b$ and $u_a,u_b\in\PSH(X,\theta)$, a subgeodesic on $(a,b)$ from $u_a$ to $u_b$ additionally converges to those endpoints in $L^1(X)$.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:hermitian-subgeodesic-calculus}
-Subgeodesics are preserved by adding an affine function of $t$, by a positive affine reparametrization of time, by finite maxima, and by convex combinations. Replacing $\theta$ by $\theta+\ddc h$ and $u_t$ by $u_t-h$ also preserves them. For every $x$, the function $t\mapsto u_t(x)$ is either finite and convex on $I$ or identically $-\infty$ there.
+Subgeodesics are preserved by adding an affine function of $t$, by a positive affine reparametrization of time, by finite maxima, and by convex combinations. For $h\in C^\infty(X,\mathbb R)$, replacing $\theta$ by $\theta+\ddc h$ and $u_t$ by $u_t-h$ also preserves them. For every $x$, the function $t\mapsto u_t(x)$ is either finite and convex on $I$ or identically $-\infty$ there.
 \end{proposition}
 \begin{proof}
 The first assertions follow from the product current inequality: affine functions of $\Real z$ have zero complex Hessian, convex combinations preserve positivity, and smooth gauge changes preserve the current. The maximum assertion is the local maximum theorem for functions with a common smooth lower curvature bound.
@@ -32,6 +34,8 @@ The supremum operation requires upper semicontinuous regularization on the produ
 
 \section{The minimum principle with a nonclosed background}
 
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. For a nonempty open interval $I\subset\mathbb R$, set $S_I=\{z\in\mathbb C:\Real z\in I\}$ and let $\pi:X\times S_I\to X$ be the projection. A subgeodesic and its complexification $U(x,z)=u_{\Real z}(x)$ are understood as in \cref{sec:strip-positivity}.
+
 \begin{proposition}\label{prop:hermitian-kiselman}
 For a subgeodesic $u_t$ on any interval $I$, the function
 \[
@@ -42,7 +46,7 @@ is either a genuine $\theta$-plurisubharmonic function or identically $-\infty$.
 \begin{proof}
 The classical local Kiselman principle says that the infimum in the real variable of a plurisubharmonic function on a product with a strip, invariant in its imaginary variable, is plurisubharmonic or identically $-\infty$. Its parameter interval may be unbounded. We use this local result from \cite{SGPT}.
 
-Fix $x_0$, a coordinate Euclidean form $\kappa$, and $\eta>0$. On a sufficiently small coordinate ball the constant form $\beta=\theta(x_0)$ satisfies
+Fix $x_0\in X$, choose local holomorphic coordinates centered at $x_0$, and let $\kappa$ be their Euclidean form. Fix $\eta>0$. On a sufficiently small coordinate ball the constant form $\beta=\theta(x_0)$ satisfies
 \[
  \beta-\eta\kappa\leq\theta\leq\beta+\eta\kappa.
 \]
@@ -59,7 +63,7 @@ For example, the proposition applies to $u_t-t\tau$ for a fixed real $\tau$. On 
 
 \begin{proposition}
 \label{prop:subgeodesic-endpoint-control}
-A subgeodesic is continuous in $L^1(X)$ on the interior of its parameter interval. If its $L^1$ endpoints on $[a,b]$ are $u_a,u_b$, then
+A subgeodesic is continuous in $L^1(X)$ on the interior of its parameter interval. If $a<b$ are finite endpoints and its $L^1$ endpoint limits are $u_a,u_b\in\PSH(X,\theta)$, then
 \begin{equation}\label{eq:hermitian-chord-bound}
  u_t\leq\frac{b-t}{b-a}u_a+\frac{t-a}{b-a}u_b,
  \qquad a<t<b.
@@ -77,7 +81,9 @@ On a compact interior interval, choose two surrounding times. Convexity bounds t
 For the endpoint inequality, choose sequences approaching $a,b$ along which the stipulated $L^1$ convergence holds almost everywhere. Apply convexity between these times and pass to the limit. This proves \eqref{eq:hermitian-chord-bound} almost everywhere in $x$. Both sides are canonical quasi-plurisubharmonic functions, so the inequality holds everywhere. The joint upper limits follow from this bound and upper semicontinuity of the endpoints; the other endpoint's contribution is bounded above by a constant times its vanishing coefficient. The same reasoning works at a pole of $u_a$ or $u_b$.
 \end{proof}
 
-\section{Perron segments}
+\section{Perron segments}\label{sec:perron-segments}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. Use the subgeodesics and product projection of \cref{sec:strip-positivity}. Fix endpoint potentials $u_0,u_1\in\PSH(X,\theta)$. Write $u\simeq v$ for equality of ordinary singularity types, meaning $u\leq v+C$ and $v\leq u+C$ for some constant $C$.
 
 We first work on $[0,1]$. Call a subgeodesic $v_t$ \emph{admissible for $u_0,u_1$} if its joint boundary upper limits are at most $u_0,u_1$, respectively. Endpoint equality is not required of a competitor. Define the Perron envelope on the product by
 \[
@@ -133,9 +139,11 @@ The construction uses neither the finiteness of the endpoint masses nor a unifor
 
 \section{The smooth product equation}
 
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. For a nonempty open interval $I\subset\mathbb R$, set $S_I=\{z\in\mathbb C:\Real z\in I\}$ and let $\pi:X\times S_I\to X$ be the projection. A subgeodesic and its complexification $U(x,z)=u_{\Real z}(x)$ are understood as in \cref{sec:strip-positivity}. For a smooth path, dots denote derivatives in the real parameter $t\in I$. In local coordinates $x_1,\ldots,x_n$ on $X$, write $\partial_i=\partial/\partial x_i$, $\partial_{\bar j}=\partial/\partial\bar x_j$ and $u_{i\bar j}=\partial_i\partial_{\bar j}u$. Repeated indices are summed from $1$ to $n$.
+
 Let $u_t$ be smooth with $\eta_t=\theta+\ddc u_t>0$. Use the book's convention
 $\theta=\frac{\mathrm{i}}{2\pi}g_{i\bar j}\,\mathrm{d}x_i\wedge \mathrm{d}\bar x_j$ and write
-$h_{i\bar j}=g_{i\bar j}+u_{i\bar j}$. The product form is represented by the block matrix
+$h_{i\bar j}=g_{i\bar j}+u_{i\bar j}$. Let $(h^{i\bar j})$ denote the inverse coefficient matrix. The product form $\pi^*\theta+\ddc U$ is represented by the block matrix
 \[
  \begin{pmatrix}
  h_{i\bar j}&\tfrac12\partial_i\dot u\\
@@ -159,7 +167,7 @@ Its $(n+1)$st power vanishes exactly when equality holds. Equivalently, the homo
 The Schur complement of $h$ is one quarter of the difference in the displayed inequality. A block matrix with positive definite first block is semipositive exactly when its Schur complement is nonnegative, and its determinant vanishes exactly when that complement vanishes.
 
 \Needspace{8\baselineskip}
-Finally,
+For any smooth real function $f$ on the coordinate chart,
 \[
  \mathrm{d} f\wedge\dc f=\frac{\mathrm{i}}{2\pi}\partial f\wedge\bar\partial f,
  \qquad
@@ -173,11 +181,11 @@ This is a pointwise matrix calculation and is unchanged by torsion. It does not 
 
 \section{The torsion in the raw \texorpdfstring{$L^2$}{L2} action}
 
-Fix a Hermitian background $\omega$ and the open space $\HH_\omega$ of smooth strictly $\omega$-plurisubharmonic potentials. The positive bilinear form
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$ and fix a Hermitian form $\omega$. Put $\omega_u=\omega+\ddc u$ and $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$. For real smooth tangent directions $v,w$, the positive bilinear form
 \[
  G_u(v,w)=\int_Xvw\,\omega_u^n
 \]
-is well defined. For a smooth path in this space, consider its action
+is well defined. For a smooth path $t\mapsto u_t\in\HH_\omega$, $0\leq t\leq1$, let $\dot u_t$ and $\ddot u_t$ denote its time derivatives and consider its action
 \[
  \mathscr S(u)=\frac12\int_0^1\int_X\dot u_t^{\,2}\,\omega_{u_t}^n\,\mathrm{d}t.
 \]

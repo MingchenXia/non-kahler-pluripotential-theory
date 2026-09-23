@@ -1,6 +1,8 @@
 \section{Local H\"older continuity in a big background}
 \label{sec:big-minimal-holder}
 
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$. Choose $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, with $\rho\leq0$ and $\theta+\ddc\rho\geq\omega$. Set $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mu_u=\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, the extended measure of \cref{chap:products}. On coordinate balls the same notation denotes the local bounded product when $u$ is bounded. The order $u\preceq v$ means $u\leq v+C$ for some constant $C$, and $u\simeq v$ means both inequalities. Let $P_\theta$ be the obstacle envelope of \cref{sec:obstacle-envelopes} and set $V_\theta=P_\theta(0)$. All unqualified function norms use $\mathrm{d}V$. The operators $R_t$ are the Chern-connection averages of \cref{lem:chern-kiselman-input}; gradients and distances use a fixed smooth metric, and $s_+=\max(s,0)$.
+
 We now reconstruct the local H\"older conclusion of
 \cite[Theorem~A and Theorem~3.1]{Dang26}. Two points require attention when passing from
 \cref{sec:holder-from-stability}: the solution can be unbounded on $X$,
@@ -36,15 +38,15 @@ $\|\nabla R_ta\|_{K_1}\leq C_{K_1}/t$.
 \begin{proof}
 Apply \cite[Theorem~4.1]{Dem94} to the closed current $\ddc a$ and the
 smooth lower bound $-\theta$. It gives monotonicity and logarithmic
-convexity, with
-$\lambda(x,t)=t\partial_t(R_ta+K_0t^2)\geq0$ increasing in $t$.
+convexity: for a constant $K_0>0$, set
+$\lambda(x,t)=t\partial_t(R_ta(x)+K_0t^2)$. This function is nonnegative and increasing in $t$.
 We first justify a linear error for this smooth lower bound, rather than
 infer a rate from the unspecified modulus in that theorem.
 
 Choose the auxiliary curvature form to be $A\omega$, with $A$ large
 enough that the Chern curvature plus $A\omega\otimes\operatorname{Id}$
 is nonnegative on every decomposable tensor. Equivalently, after
-absorbing the normalization constants, its coefficients satisfy
+absorbing the normalization constants, writing $R_{j\bar k\ell\bar m}$ for the Chern curvature coefficients and $\xi,\zeta$ for tangent vectors in a unitary frame, the coefficients satisfy
 \[
  \sum R_{j\bar k\ell\bar m}\xi_j\bar\xi_k\zeta_\ell\bar\zeta_m
  \geq-A|\xi|^2|\zeta|^2.
@@ -55,7 +57,7 @@ curvature contraction by $-A$ times its trace. Hence the algebraic inequality us
 \cite[Lemma~4.4]{Dem94} holds with no small $\epsilon$ term and no
 $M_\epsilon$ correction.
 
-Fix $x$ and $t=|w|$. In a uniformly sized coordinate chart about $x$,
+Fix $x\in X$ and a complex radius variable $w\ne0$, and put $t=|w|$. Write $\xi\in T_x^{1,0}X$ and $\tau\in\mathbb C$ for a base--radius tangent vector. In a uniformly sized coordinate chart about $x$,
 write $\beta=\ddc|z|^2$ and
 choose a quadratic $q_{x,t}$ with
 \[
@@ -77,7 +79,7 @@ $\nu=\ddc(a+Q)\wedge\beta^{n-1}$, the local Lelong mass inequality and
 a fixed larger-ball mass bound give
 $\nu(B_t(x))\leq Ct^{2n-2}$. The coefficients of
 $\partial\bar\partial(a+q_{x,t})$ are controlled in total variation
-by those of $\ddc(a+Q)$ plus a uniformly bounded smooth form. Scaling
+by those of $\ddc(a+Q)$ plus a uniformly bounded smooth form. Let $\operatorname{exph}_x$ denote the fiber averaging map used to define $R_t$ at $x$, and let $\zeta\in\mathbb C^n$ be the integration variable in a tangent frame. Scaling
 therefore gives, uniformly in $x$ and $t$,
 
 \[
@@ -96,11 +98,11 @@ Subtracting the regularization of $q_{x,t}$ restores $-\theta(x)$;
 its base Hessian differs from $\ddc q_{x,t}$ by $O(t)$, its mixed and
 vertical Hessians are bounded, and its radial logarithmic derivative
 is $O(t^2)$. The extra $Bt\beta$ also costs only $O(t)$.
-Consequently the full base--fiber Hessian satisfies
+Consequently, for a fixed constant $C_1>0$, the full base--fiber Hessian satisfies
 \[
  \ddc_{x,w}R_{|w|}a[\xi,\tau]^2
  \geq-\theta_x[\xi]^2-(A\lambda(x,t)+Ct)|\xi|^2
-       -K_1(|\xi||\tau|+|\tau|^2).
+       -C_1(|\xi||\tau|+|\tau|^2).
 \]
 All constants are independent of $x,t,c,\delta$ and uniform in the
 normalized family. In particular, setting $\xi=0$ in the same local
@@ -111,7 +113,7 @@ logarithmic convexity and monotonicity above with a uniform $K_0$.
 Increase $K\geq K_0$ and add $K(t^2+t)$ to the regularization. The
 positive vertical Hessian of $K|w|$ absorbs the mixed term by
 \[
- K_1|\xi||\tau|\leq C't|\xi|^2+\frac{K}{8t}|\tau|^2,
+ C_1|\xi||\tau|\leq C't|\xi|^2+\frac{K}{8t}|\tau|^2,
 \]
 and absorbs the remaining bounded vertical error for small $t$.
 The logarithmic derivative of the corrected function is at least
@@ -149,7 +151,7 @@ The preceding regularization lemma and
 H\"older conclusion with an explicit, nonoptimal exponent.
 
 \begin{theorem}\label{thm:big-minimal-holder}
-Let $u\in\PSH(X,\theta)$ satisfy
+Fix $C_0>0$. Let $u\in\PSH(X,\theta)$ satisfy
 \[
  \sup_Xu=0,\qquad V_\theta-C_0\leq u\leq V_\theta,
  \qquad\mu_u=f\,\mathrm{d}V,
@@ -168,7 +170,7 @@ Subtract a constant from the strict barrier so that $\rho\leq u-1$.
 It still satisfies $\theta+\ddc\rho\geq\kappa\omega$ for a fixed
 $\kappa>0$. Choose
 $0<\gamma<(p-1)/(np+p-1)$ and write $\alpha=2\gamma<1$.
-For small $\delta$ set
+Apply \cref{lem:smooth-background-regularization-rate} with $a=u$ and use its constants $A,K,C$ and transform $\Phi_{c,\delta}$. For small $\delta>0$ set
 \[
  c=\delta^\alpha,\qquad e=Ac+C\delta,\qquad s=e/\kappa,
  \qquad v_\delta=\frac{\Phi_{c,\delta}+s\rho}{1+s}.
@@ -205,7 +207,7 @@ Hence $t\geq a_M\delta$ for a fixed $a_M>0$. As in the proof of
 \]
 The constants are uniform on the chosen compact subset. Apply this to a
 slightly larger compact neighborhood, where also
-$\|\nabla R_tu\|\leq C_M/t$. For nearby points at distance $d$, smooth
+$\|\nabla R_tu\|\leq C_M/t$. For nearby points $x,y$ at distance $d>0$, smooth
 approximation and a short path in that neighborhood give
 \[
  |u(x)-u(y)|\leq C_M(t^\alpha+d/t).
@@ -238,6 +240,8 @@ singularity type or replace global $L^p$ integrability by local
 smoothness of the density.
 
 \subsection{Limits of normalized exponential solutions}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$. Choose $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, with $\rho\leq0$ and $\theta+\ddc\rho\geq\omega$. Set $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mu_u=\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, the extended measure of \cref{chap:products}. On coordinate balls the same notation denotes the local bounded product when $u$ is bounded. The order $u\preceq v$ means $u\leq v+C$ for some constant $C$, and $u\simeq v$ means both inequalities. Let $P_\theta$ be the obstacle envelope of \cref{sec:obstacle-envelopes} and set $V_\theta=P_\theta(0)$. All unqualified function norms use $\mathrm{d}V$. Fix $p>1$ and a nonzero nonnegative $f\in L^p(X,\mathrm{d}V)$. For $0<\lambda\leq1$, let $u_\lambda$ be the minimal-singularity solution of $\mu_{u_\lambda}=\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V$, and put $v_\lambda=u_\lambda-\sup_Xu_\lambda$, $c_\lambda=\mathrm{e}^{\lambda\sup_Xu_\lambda}$. Use constants $B,C,m>0$ from \cref{lem:big-exponential-uniform-type}, so $V_\theta-B\leq v_\lambda\leq V_\theta$ and $m\leq c_\lambda\leq C$. For $0<\alpha<1$, $[\,\cdot\,]_{C^\alpha}$ denotes the H\"older seminorm on the indicated compact coordinate neighborhood.
 
 The fixed-reference compactness theorem also describes the approximation
 used to construct the zero-exponent equation. It controls differences of
