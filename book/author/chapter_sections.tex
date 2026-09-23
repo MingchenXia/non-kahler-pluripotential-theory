@@ -3,13 +3,15 @@
 
 Weighted holomorphic sections make sense on every compact complex manifold. Their curvature is closed, however, even when the manifold carries a non-closed Hermitian metric. This chapter separates the elementary section theory from the additional asymptotic assertions in the source book. Gauduchon metrics give a useful bridge: their linear degrees constrain sections without assigning an algebraic meaning to a non-closed top-degree mass.
 
-Throughout $X$ is connected, compact and of positive dimension $n$. Let $L$ be a holomorphic line bundle with smooth Hermitian metric $h$, let $\mathrm{d}V$ be a smooth positive volume form, and let $u\in\QPSH(X)$. In a holomorphic frame $e$, write $|e|_h^2=\mathrm{e}^{-\chi}$. Its curvature form is
+Throughout $X$ is a connected compact complex manifold of dimension $n\geq1$. Let $L$ be a holomorphic line bundle with smooth Hermitian metric $h$, let $\mathrm{d}V$ be a smooth positive volume form, and let $u\in\QPSH(X)$. In a holomorphic frame $e$, write $|e|_h^2=\mathrm{e}^{-\chi}$. Its curvature form is
 \[
  \beta=\ddc\chi.
 \]
 It is smooth, real and closed. The elementary constructions below do not require $u\in\PSH(X,\beta)$; whenever that additional positivity is needed, it will be stated.
 
-\section{Weighted section spaces}
+\section{Weighted section spaces}\label{sec:weighted-section-spaces}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a holomorphic line bundle $L\to X$, a smooth Hermitian metric $h$ on $L$, a smooth positive volume form $\mathrm{d}V$ on $X$, and a quasi-plurisubharmonic function $u$ on $X$. Let $\beta$ be the curvature of $h$: in a local holomorphic frame $e$ with $|e|_h^2=\mathrm{e}^{-\chi}$, it is $\beta=\ddc\chi$. Multiplier ideals $\mathcal I(mu)$ use the weight $\mathrm{e}^{-mu}$.
 
 For every positive integer $m$, set
 \[
@@ -18,11 +20,11 @@ For every positive integer $m$, set
 \]
 The integral is taken off the pole set of $u$, a set of smooth volume zero. Membership in $\mathcal H_m(u)$ is equivalent to finiteness of this norm: the definition of the multiplier ideal gives local integrability, and compactness gives a finite covering. The converse follows by restriction to coordinate balls. Thus $\mathcal H_m(u)$ is a finite-dimensional Hilbert space, as a subspace of $H^0(X,L^m)$. Write $N_m=\dim\mathcal H_m(u)$.
 
-If $u\preceq_{\mathcal I}v$, the inclusion of multiplier ideals gives
+For $v\in\QPSH(X)$, write $u\preceq_{\mathcal I}v$ if $\mathcal I(tu)\subseteq\mathcal I(tv)$ for every $t>0$. If $u\preceq_{\mathcal I}v$, the inclusion of multiplier ideals gives
 $\mathcal H_m(u)\subseteq\mathcal H_m(v)$ for every $m$. Ordinary equivalence of weights gives the same section spaces, although their Hilbert norms can differ. None of these assertions refers to a background Hermitian form on $X$.
 
 \begin{proposition}\label{prop:section-norm-comparison}
-Suppose $|u-v|\leq D$ off the poles and $\mathrm{d}V'=\mathrm{e}^F \mathrm{d}V$ with $|F|\leq E$. The section spaces for $(u,\mathrm{d}V)$ and $(v,\mathrm{d}V')$ coincide, and
+Let $v\in\QPSH(X)$, let $D,E\geq0$, and let $F\in C^\infty(X,\mathbb R)$. Suppose $|u-v|\leq D$ off the poles and $\mathrm{d}V'=\mathrm{e}^F \mathrm{d}V$ with $|F|\leq E$. The section spaces for $(u,\mathrm{d}V)$ and $(v,\mathrm{d}V')$ coincide. For every $s$ in this common space and every positive integer $m$,
 \[
  \mathrm{e}^{-mD-E}\|s\|_{m,u}^2
  \leq\|s\|_{m,v,\mathrm{d}V'}^2
@@ -33,9 +35,11 @@ Suppose $|u-v|\leq D$ off the poles and $\mathrm{d}V'=\mathrm{e}^F \mathrm{d}V$ 
 The ratio of the two integrands is $\mathrm{e}^{-m(v-u)+F}$, which lies between the displayed constants. Integrability in either norm is therefore equivalent to integrability in the other. Integrating proves both estimates.
 \end{proof}
 
-\section{The kernel and its curvature}
+\section{The kernel and its curvature}\label{sec:weighted-bergman-kernel}
 
-Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ and define
+Retain $X,n,L,h,\beta,u,\mathrm{d}V$ from \cref{sec:weighted-section-spaces}: $X$ is compact complex, $h$ is a smooth metric on $L$, $\beta$ is its closed curvature, and $u$ is quasi-plurisubharmonic. Use the weighted section space $\mathcal H_m(u)$ and norm $\|\cdot\|_{m,u}$ defined there, with $N_m=\dim\mathcal H_m(u)$. Fix a positive integer $m$.
+
+Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ of $\mathcal H_m(u)$ and define
 \[
  K_{m,u}(x)=\sum_{j=1}^{N_m}|s_j(x)|_{h^m}^2,
  \qquad B_{m,u}(x)=K_{m,u}(x)\mathrm{e}^{-mu(x)}
@@ -67,25 +71,27 @@ Locally $s_j=f_j e^{\otimes m}$, so
 A nonzero section prevents the sum from vanishing identically. The local expression therefore defines a genuine potential of analytic singularity type. It also proves closedness directly.
 \end{proof}
 
-When the common section space is nonzero, the extremal formula and \cref{prop:section-norm-comparison} give
+Let $v\in\QPSH(X)$ and let $\mathrm{d}V'=\mathrm{e}^F\mathrm{d}V$ with smooth real $F$. Suppose $|u-v|\leq D$ off the poles and $|F|\leq E$, for constants $D,E\geq0$, as in \cref{prop:section-norm-comparison}. When the common section space is nonzero, the extremal formula and \cref{prop:section-norm-comparison} give
 \[
  |\Phi_m(u,\mathrm{d}V)-\Phi_m(v,\mathrm{d}V')|\leq D+E/m
 \]
 off the common base locus, and hence as an inequality of ordinary types everywhere. In particular the smooth volume form affects these potentials by $O(m^{-1})$ when the weight is fixed.
 
-There is also an exact change of frame-free data. If the squared metric is changed to $h'=h \mathrm{e}^{-a}$ and the weight to $u'=u-a$, their product $h'^m \mathrm{e}^{-mu'}$ is unchanged. Hence the Hilbert norm and the density $B_{m,u}\,\mathrm{d}V$ are unchanged, while
+There is also an exact change of frame-free data. Let $a\in C^\infty(X,\mathbb R)$. If the squared metric is changed to $h'=h \mathrm{e}^{-a}$ and the weight to $u'=u-a$, their product $h'^m \mathrm{e}^{-mu'}$ is unchanged. Hence the Hilbert norm and the density $B_{m,u}\,\mathrm{d}V$ are unchanged, while
 \[
  \beta'=\beta+\ddc a,\qquad \Phi'_m=\Phi_m-a.
 \]
 The current $\beta+\ddc\Phi_m$ is consequently unchanged. This is the line-bundle counterpart of the background covariance in \cref{chap:framework}; both backgrounds in this construction are closed.
 
-\section{Gauduchon degree and vanishing}
+\section{Gauduchon degree and vanishing}\label{sec:gauduchon-section-degree}
 
-Let $\gamma$ be a Gauduchon metric. Define the degree
+Retain $X,n,L,h,\beta,u,\mathrm{d}V$ from \cref{sec:weighted-section-spaces}: $X$ is compact complex, $h$ is a smooth metric on $L$, $\beta$ is its closed curvature, and $u$ is quasi-plurisubharmonic. Use the weighted section space $\mathcal H_m(u)$ and norm $\|\cdot\|_{m,u}$ defined there, with $N_m=\dim\mathcal H_m(u)$. Write $h^0(X,L^m)=\dim H^0(X,L^m)$.
+
+Let $\gamma$ be a Gauduchon metric on $X$, so $\ddc\gamma^{n-1}=0$. Define the degree
 \[
  \deg_\gamma L=\int_X\beta\wedge\gamma^{n-1}.
 \]
-Changing $h$ changes $\beta$ by $\ddc a$. Its integral against $\gamma^{n-1}$ vanishes by Stokes, so the degree is independent of the smooth metric on $L$.
+Changing $h$ changes $\beta$ by $\ddc a$ for a smooth real function $a$. Its integral against $\gamma^{n-1}$ vanishes by Stokes, so the degree is independent of the smooth metric on $L$.
 
 \begin{theorem}\label{thm:gauduchon-section-obstruction}
 If $\deg_\gamma L<0$, then $H^0(X,L^m)=0$ for every $m\geq1$. If $\deg_\gamma L=0$ and $H^0(X,L^m)\neq0$, then $L^m$ is holomorphically trivial and $h^0(X,L^m)=1$. These conclusions apply in particular to its weighted subspaces $\mathcal H_m(u)$.
@@ -110,12 +116,14 @@ If the degree is zero, positivity and the strict positivity of $\gamma$ imply $T
 
 \input{author/section_trace_section_obstruction}
 
-\section{Which spaces form a graded algebra?}
+\section{Which spaces form a graded algebra?}\label{sec:bounded-section-algebra}
+
+Retain $X,n,L,h,\beta,u,\mathrm{d}V$ from \cref{sec:weighted-section-spaces}: $X$ is compact complex, $h$ is a smooth metric on $L$, $\beta$ is its closed curvature, and $u$ is quasi-plurisubharmonic. Use the weighted section space $\mathcal H_m(u)$ and norm $\|\cdot\|_{m,u}$ defined there, with $N_m=\dim\mathcal H_m(u)$.
 
 The multiplier-ideal section spaces need not be closed under multiplication. This issue is present already in the K\"ahler setting and is one reason that the almost-semigroup theory in \cite{SGPT} is needed.
 
 \begin{example}\label{ex:multiplier-sections-not-graded}
-On $\mathbb P^1$ let $L=\mathcal O(1)$ with Fubini--Study curvature $\beta$, and let
+Put $X=\mathbb P^1$, let $z$ be its affine coordinate, and let $\delta_0$ be the Dirac mass at the origin. Take $L=\mathcal O(1)$ with Fubini--Study curvature $\beta$, and let
 \[
  u(z)=\frac35\log\frac{|z|^2}{1+|z|^2}.
 \]
@@ -131,7 +139,7 @@ The boundedness condition gives a graded alternative. Define $\mathcal W_0=\math
  \mathcal W_m(u)=\{s\in H^0(X,L^m):
              |s|_{h^m}^2\mathrm{e}^{-mu}\text{ is bounded off }\{u=-\infty\}\}.
 \]
-These finite-dimensional vector spaces are unchanged when the smooth metric is changed, since the ratio of two smooth metrics is bounded above and below on $X$. They lie in $\mathcal H_m(u)$, because $X$ has finite smooth volume. The identity
+These finite-dimensional vector spaces are unchanged when the smooth metric is changed, since the ratio of two smooth metrics is bounded above and below on $X$. They lie in $\mathcal H_m(u)$, because $X$ has finite smooth volume. For positive integers $m,k$, $s\in\mathcal W_m(u)$ and $t\in\mathcal W_k(u)$, the identity
 \[
  |st|_{h^{m+k}}^2\mathrm{e}^{-(m+k)u}
  =\bigl(|s|_{h^m}^2\mathrm{e}^{-mu}\bigr)
@@ -141,7 +149,9 @@ proves $\mathcal W_m(u)\mathcal W_k(u)\subseteq\mathcal W_{m+k}(u)$. Closure und
 
 \section{A complete count on a curve}
 
-A curve provides a transparent comparison of integrability, boundedness and mass. Let $X$ now be a compact connected Riemann surface, and suppose $\beta+\ddc u\geq0$. Assume $u$ is bounded away from finitely many points $p_1,\ldots,p_r$, with
+Retain $X,n,L,h,\beta,u,\mathrm{d}V$ from \cref{sec:weighted-section-spaces}: $X$ is compact complex, $h$ is a smooth metric on $L$, $\beta$ is its closed curvature, and $u$ is quasi-plurisubharmonic. Use the weighted section space $\mathcal H_m(u)$ and norm $\|\cdot\|_{m,u}$ defined there, with $N_m=\dim\mathcal H_m(u)$. Use the bounded weighted section spaces $\mathcal W_m(u)$ from \cref{sec:bounded-section-algebra}, and let $\mathrm{MA}^{\mathrm{ext}}$ denote the extended non-pluripolar measure.
+
+A curve provides a transparent comparison of integrability, boundedness and mass. Let $X$ now be a compact connected Riemann surface, and suppose $\beta+\ddc u\geq0$. Assume $u$ is bounded away from finitely many points $p_1,\ldots,p_r$, with coefficients $c_i>0$ and local coordinates $z_i$ centered at $p_i$, such that
 \[
  u=c_i\log|z_i|^2+O(1)\quad\hbox{at }p_i,
  \qquad c_i>0.
@@ -170,7 +180,7 @@ A germ vanishing to order $k$ has weighted squared norm comparable to $|z_i|^{2(
 
 The positive curvature measure has atom $c_i$ at $p_i$ and total mass $\ell$. Subtracting these atoms leaves a positive measure, proving $d\leq\ell$. The remainder does not charge polar sets: after subtracting the logarithmic singularity, the local potential has a bounded quasi-plurisubharmonic representative. Its curvature has the bounded Bedford--Taylor property. Thus this remaining measure is exactly the extended measure, of mass $\ell-d$.
 
-If $\ell>d$, the degrees of both line bundles in the display equal $m(\ell-d)+O(1)$ and tend to infinity. The standard Riemann--Roch theorem and Serre duality on a curve give $h^0=\deg+1-g$ once the degree exceeds $2g-2$. Dividing by $m$ proves both limits. If $\ell=d$, both degrees remain bounded. A line bundle of negative degree has no nonzero section, and one of nonnegative degree $k$ has at most $k+1$ sections: impose vanishing at $k+1$ distinct points and use the negative-degree case for the kernel. Hence both dimensions are uniformly bounded, and both limits are zero. These arguments include $r=0$.
+If $\ell>d$, the degrees of both line bundles in the display equal $m(\ell-d)+O(1)$ and tend to infinity. Let $g$ be the genus of $X$. The standard Riemann--Roch theorem and Serre duality on a curve give $h^0=\deg+1-g$ once the degree exceeds $2g-2$. Dividing by $m$ proves both limits. If $\ell=d$, both degrees remain bounded. A line bundle of negative degree has no nonzero section, and one of nonnegative degree $k$ has at most $k+1$ sections: impose vanishing at $k+1$ distinct points and use the negative-degree case for the kernel. Hence both dimensions are uniformly bounded, and both limits are zero. These arguments include $r=0$.
 \end{proof}
 
 Riemann--Roch and Serre duality are the only global algebraic inputs in this count. No asymptotic Bergman theorem is needed. Since every real $(1,1)$-form on a curve is closed, the equality is a closed-curvature comparison result and does not predict the mass of an arbitrary higher-dimensional Hermitian operator.
@@ -178,6 +188,8 @@ Riemann--Roch and Serre duality are the only global algebraic inputs in this cou
 \input{author/section_hopf_sections}
 
 \section{Why section counts do not recover arbitrary Hermitian mass}
+
+Retain $X,n,L,h,\beta,u,\mathrm{d}V$ from \cref{sec:weighted-section-spaces}: $X$ is compact complex, $h$ is a smooth metric on $L$, $\beta$ is its closed curvature, and $u$ is quasi-plurisubharmonic. Use the weighted section space $\mathcal H_m(u)$ and norm $\|\cdot\|_{m,u}$ defined there, with $N_m=\dim\mathcal H_m(u)$. Let $\omega$ be a Hermitian form on $X$, let $v_+(\omega)$ be the supremum of masses of bounded $\omega$-plurisubharmonic potentials, and use the extended measure $\mathrm{MA}^{\mathrm{ext}}_\omega$ of \cref{chap:products}. The Bergman potentials $\Phi_m$ are those of \cref{sec:weighted-bergman-kernel}.
 
 \begin{proposition}\label{prop:sections-infinite-mass-obstruction}
 Suppose $v_+(\omega)=+\infty$ for a Hermitian metric on $X$. There is a potential $U\in\PSH(X,\omega)$ such that, with $L=\mathcal O_X$ and its constant metric,

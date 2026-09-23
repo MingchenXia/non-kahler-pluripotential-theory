@@ -5,9 +5,12 @@ The non-Archimedean chapter of \cite{SGPT} starts with analytic test curves on c
 
 We develop a restricted part of this construction with arbitrary Hermitian perturbations. The curves will be constant sufficiently far to the left. This condition avoids assuming continuity of $\mathcal I$-modelization along an unrestricted increasing family. We obtain compatible systems, a canonical limit in the original background, and an exact criterion for recovering a system from that limit. No Monge--Amp\`ere mass enters these constructions. Their volume theory remains separate. The exceptional-divisor identities in \cref{thm:trace-exceptional-difference,cor:affine-trace-exceptional-difference} describe linear changes between models, but do not imply that a limit over shrinking backgrounds preserves its multiplier ideals.
 
-Throughout, $X$ is connected and compact, $\theta$ is smooth and real, and $\PSH(X,\theta)\neq\varnothing$. Fix real numbers $a<c$.
+Throughout this chapter, $X$ is a connected compact complex manifold of dimension $n$, and $\theta$ is a smooth real $(1,1)$-form on $X$ with $\PSH(X,\theta)\neq\varnothing$. Fix real numbers $a<c$.
 
 \section{Curves constant on a left half-line}
+\label{sec:left-constant-curves}
+
+Use the manifold $X$, background $\theta$ and real parameters $a<c$ fixed above. The operator $P_\theta[\cdot]_{\mathcal I}$ is the normalized multiplier-ideal envelope of \cref{def:hermitian-i-envelope}.
 
 \begin{definition}\label{def:bounded-left-i-curve}
 Let $\mathscr T_{a,c}(\theta)$ be the set of families $\Gamma=(\Gamma_\tau)_{\tau<c}$ satisfying:
@@ -27,7 +30,7 @@ Every slice has supremum zero. The decreasing endpoint limit is genuine by norma
 so taking the infimum proves equality. The first inequality uses the normalized potential itself as a competitor.
 
 \begin{proposition}\label{prop:bounded-left-i-ray}
-A curve in $\mathscr T_{a,c}(\theta)$ is an envelope test curve with initial potential $\varphi=\Gamma_a$. Its Legendre transform is a Perron envelope ray and satisfies
+A curve in $\mathscr T_{a,c}(\theta)$ is an envelope test curve with initial potential $\varphi=\Gamma_a$. Denote its Legendre transform by $U_t=(\sup_{\tau<c}(\Gamma_\tau+t\tau))^*$ for real $t>0$. It is a Perron envelope ray and satisfies
 \[
  \varphi+at\leq U_t\leq\varphi+ct\qquad(t>0).
 \]
@@ -38,6 +41,9 @@ A $P_\theta[\cdot]_{\mathcal I}$-fixed potential is $P_\theta$-fixed by \cref{co
 \end{proof}
 
 \section{Transition maps}
+\label{sec:envelope-system-transitions}
+
+Retain $X$, $\theta$, $a<c$ and the curve spaces $\mathscr T_{a,c}(\theta)$ from \cref{sec:left-constant-curves}. A background in this section is a smooth real $(1,1)$-form on $X$; inequalities between backgrounds mean positivity of their difference.
 
 \begin{proposition}\label{prop:hermitian-i-curve-transition}
 If $\beta\geq\theta$ are smooth real backgrounds, slicewise projection defines an injective map
@@ -52,7 +58,7 @@ For $\beta\geq\beta'\geq\theta$, these maps satisfy
 They preserve order.
 \end{proposition}
 \begin{proof}
-The input slices are $\beta$-plurisubharmonic, so their projections are genuine and $P_\beta[\cdot]_{\mathcal I}$-fixed. Decreasingness, constancy for $\tau\leq a$, and order preservation follow from \cref{prop:i-envelope-operations}. To check concavity, put $\tau=(1-s)r+s t$ with $0<s<1$. That same proposition and the concavity of the original curve give
+The input slices are $\beta$-plurisubharmonic, so their projections are genuine and $P_\beta[\cdot]_{\mathcal I}$-fixed. Decreasingness, constancy for $\tau\leq a$, and order preservation follow from \cref{prop:i-envelope-operations}. To check concavity, choose real $r,t<c$ and $0<s<1$, and put $\tau=(1-s)r+s t$. That same proposition and the concavity of the original curve give
 \[
  \begin{split}
  (1-s)P_\beta[\Gamma_r]_{\mathcal I}+sP_\beta[\Gamma_t]_{\mathcal I}
@@ -92,8 +98,10 @@ The set is nonempty. If $u\in\PSH(X,\theta)$, the constant family $\Gamma_\tau=P
 
 \section{A canonical limit in the original background}
 
+Keep the data and maps of \cref{sec:envelope-system-transitions}: $\mathscr S_{a,c}(\theta)$ is the space of compatible systems indexed by Hermitian forms $\eta$ on $X$, and $\mathsf E$ sends a curve in $\mathscr T_{a,c}(\theta)$ to its projections. Slice parameters $\tau$ are real and satisfy $\tau<c$.
+
 \begin{theorem}\label{thm:hermitian-system-retraction}
-Fix any Hermitian form $h$. For every $\boldsymbol\Gamma\in\mathscr S_{a,c}(\theta)$ the limits
+Fix any Hermitian form $h$ on $X$. The index $j$ below ranges over the positive integers. For every $\boldsymbol\Gamma\in\mathscr S_{a,c}(\theta)$ the limits
 \[
  (\mathsf R\boldsymbol\Gamma)_\tau
  =\lim_{j\to\infty}\Gamma^{h/j}_\tau\qquad(\tau<c)
@@ -150,7 +158,7 @@ Order preservation of $\mathsf E$ follows from the transition proposition. Apply
 \end{proof}
 
 \begin{proposition}\label{prop:hermitian-system-realization-criterion}
-A system is realized in $\theta$ if and only if, for every $\tau<c$, its limiting slice $(\mathsf R\boldsymbol\Gamma)_\tau$ is multiplier-ideal equivalent to one, and hence every, slice $\Gamma^\eta_\tau$.
+A system $\boldsymbol\Gamma\in\mathscr S_{a,c}(\theta)$ is realized in $\theta$ if and only if, for every $\tau<c$, its limiting slice $(\mathsf R\boldsymbol\Gamma)_\tau$ is multiplier-ideal equivalent to one, and hence every, slice $\Gamma^\eta_\tau$.
 \end{proposition}
 \begin{proof}
 For a realized system this follows from $\mathsf R\mathsf E=\mathrm{id}$ and ideal preservation by each projection. Conversely the assumed equivalence and fixedness in the larger background give
@@ -165,8 +173,10 @@ The criterion can be expressed entirely locally. By \cref{thm:local-i-inputs}, i
 
 \section{Smooth changes of representative}
 
+Retain the fixed manifold $X$, background $\theta$ and parameters $a<c$ of \cref{sec:left-constant-curves}, and the curve and system spaces of \cref{sec:envelope-system-transitions}. We compare them with the corresponding spaces for a smoothly equivalent background. The maps $\mathsf E$ and $\mathsf R$ are those of \cref{thm:hermitian-system-retraction}.
+
 \begin{proposition}\label{prop:hermitian-system-gauge}
-If $\theta'=\theta+\ddc f$ with $f$ smooth and real, the formulas
+If $\theta'=\theta+\ddc f$ with $f\in C^\infty(X,\mathbb R)$, take $\Gamma\in\mathscr T_{a,c}(\theta)$ and $\boldsymbol\Gamma\in\mathscr S_{a,c}(\theta)$. The formulas
 \[
  (\mathsf G_f\Gamma)_\tau=P_{\theta'}[\Gamma_\tau-f]_{\mathcal I},
  \qquad
@@ -194,6 +204,8 @@ This identifies the change of indexing collection. To compare with the actual sp
 \Needspace{17\baselineskip}
 \section{Why a volume does not follow from the system}
 
+Let $X$ be a connected compact complex manifold of dimension $n$, let $\omega,h$ be Hermitian forms on $X$, and let $\boldsymbol\Gamma\in\mathscr S_{a,c}(\omega)$. The extended non-pluripolar measure $\mathrm{MA}^{\mathrm{ext}}_\beta(v)$ is the measure defined in \cref{chap:products} for a background $\beta$ and a genuine $\beta$-plurisubharmonic potential $v$.
+
 \begin{proposition}\label{prop:envelope-system-raw-volume-failure}
 The expression suggested by the source volume formula,
 \[
@@ -201,7 +213,7 @@ The expression suggested by the source volume formula,
    \int_X\mathrm{MA}^{\mathrm{ext}}_{\omega+\epsilon h}
                  (\Gamma^{\epsilon h}_a),
 \]
-when this limit exists, need not be invariant under the smooth-gauge bijection of envelope systems. Here $\omega,h$ are Hermitian forms.
+when this limit exists, need not be invariant under the smooth-gauge bijection of envelope systems. The parameter $\epsilon$ is real and positive.
 \end{proposition}
 \begin{proof}
 Take the homogeneous curve with every finite slice equal to zero and cutoff $c=0$, choosing $a<0$. Every component is still zero because $\omega+\eta$ is positive and zero is its multiplier-ideal envelope for the unit-ideal class. The displayed limit is therefore
