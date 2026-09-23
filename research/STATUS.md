@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint90
+
+The book has **710 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-90.pdf` has SHA256 `b5613523672dfddefa9f6281c52179aa41c07fd9cfcccc2d8fa47ff82a2cb34c` and 3038625 bytes. Every production page text matches the reviewed final preview. All 33 selected pages were rendered and read; after the last wording polish, the two changed pages were read again and the other 31 images were pixel-identical. Every selected production image matches that final preview. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-90.json`.
+
+Sections 13.20–13.21 prove one-sided stability above a strict barrier, compactness for a fixed reference interval under uniform Lp density bounds, and local Holder continuity for minimal-singularity solutions in an arbitrary smooth big background. The linear curvature error for the smooth nonclosed lower form is reconstructed from Demailly’s classical expansion. Section 13.22 now proves its global Lp interior-smoothness corollary using this internal theorem, while retaining the broader local theorem’s explicit Holder premise. Neither metric mass property is imposed. Local-density-only, nonminimal and pole-set regularity remain outside the asserted result.
+
+Both normal Rethlas runs, `big_reference_stability_holder_01` and `big_reference_compactness_01`, returned correct with no critical errors or gaps under their stated accepted inputs. The core report verifies the stability theorem assumed by the separate compactness audit. There are 176 reports: 167 correct and nine adverse. The original interior-regularity adverse report remains unchanged; the global Lp reconstruction does not validate the broader source statement. The exact two-audit and second-pass scopes are in `research/editorial/big-reference-stability-holder-review.md`.
+
+All 174 earlier reports, 29 original SGPT files, both supplied original TeX files, checkpoint89 and its archive, the 17-page companion and the three inactive Nakamaye sources are preserved. The separate nef incomplete-metric draft remains unverified and inactive. The house audit of the five affected inputs reports 0 errors and 15 inherited warnings. No whole-book certification or novelty claim is made.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-90.json`; that record must exist and pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint89
 
 The book has **704 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-89.pdf` has SHA256 `3129e87155064e59fea7e218aa84b51b231118a0a23933af7cf5ec3ef191defd` and 3011303 bytes. Every production page text matches the reviewed preview. All 37 selected page images, covering the complete added section, transitions, chapter introduction, contents, research discussion and bibliography, were rendered and read; production images are pixel-identical. Compilation has no errors, unresolved references, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-89.json`.
