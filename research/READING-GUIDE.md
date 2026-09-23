@@ -1,4 +1,4 @@
-# Reading guide — checkpoint91
+# Reading guide — checkpoint92
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -7,6 +7,8 @@ The book separates the general Hermitian theory from the substantial development
 Chapters 1–8 develop the nonclosed background, torsion, Gauduchon traces, compactness, extended non-pluripolar products, finite damped measures and the Hopf example. Upper bounded mass and positive lower mass are independent properties. The general framework allows infinite total Monge–Ampère mass and vanishing lower mass.
 
 Read the trace estimates together with the infinite-mass witness. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
+
+Section 4.4 distinguishes the compact weak closure of smooth Gauduchon tests from all normalized positive dd^c-closed currents. The first gives the pseudoeffective/big threshold and its stability; the second tests smooth positivity and nefness in Chapter 26. The exceptional curve in Chapter 28 shows why the two current families cannot be identified. Smooth attainment of the linear threshold is equivalent to smooth dd^c-exactness at the threshold.
 
 Chapter 12 constructs envelopes, defines extended upper and lower singularity volumes, and develops the relative envelope class. Stretching, nonempty finite rooftops and equality of ordinary singularity envelopes work for any smooth background and genuine reference. The difference-envelope and mass-positivity arguments retain the stated semipositive model setting, without a uniform positive lower mass. The individual positivity conclusion remains valid when the uniform lower bound vanishes. The chapter ends with infinite mass inside the relative envelope class. Finite-volume comparisons are in Chapter 30.
 

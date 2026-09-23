@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint92
+
+The book has **714 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-92.pdf` has SHA256 `b430f35e621e9b8e88bec603d8245aa31f881cdb3a191deed6e2980b7f401f46` and 3057650 bytes. All 71 selected pages were rendered and read; the final page-break polish changes only pages 530–531, which were reread, and the other 69 images are pixel-identical to the reviewed preview. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-92.json`.
+
+Section 4.4 proves compact linear duality, a polar characterization and uniform stability for the Gauduchon positivity threshold. A zero-degree lemma gives the precise smooth-attainment condition and shortens a later proof. Chapters 26 and 28 distinguish smooth-test closure from the entire current family, with the exceptional-curve strict comparison. Neither mass property is imposed; nonlinear determinant duality retains its own domain and proof. Dimension-one reuse is explicit.
+
+The normal Rethlas run `gauduchon_linear_test_closure_01` is correct under its accepted inputs; the full report and primary second-pass scope are recorded in `editorial/gauduchon-linear-duality-review.md`. There are 179 reports: 170 correct and nine adverse. All 27 earlier formal blocks in the edited inputs are unchanged; three are added. GL22 and Collins21 now cite verified journal editions with unchanged theorem locators.
+
+All 178 earlier reports, 29 SGPT originals, four supplied original files, checkpoint91 and its archive, the 17-page companion and the three inactive Nakamaye files are preserved. The nef incomplete-metric draft remains unverified and inactive. The six-input house audit has 0 errors and 4 inherited warnings. No whole-book certification or novelty claim is made.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-92.json`; it must pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint91
 
 The book has **712 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-91.pdf` has SHA256 `8fc7c65be0ddd2fef0cf405e942c98f5a75c2e69ee84ef17cb55c935739a4228` and 3048360 bytes. All 46 selected pages were rendered and read. The final affine-operator definition changes physical pages 268–269, which were reread; the other 44 selected images are pixel-identical to the reviewed preceding production. The build has no errors, unresolved references, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. See `research/audits/build-snapshot-91.json`.
