@@ -2,7 +2,7 @@
 
 ## 23 September 2026 — Local notation declarations under review
 
-Begin the requested whole-book review of notation before first use in every active section and subsection, starting with Definition 1.1.1. Update the mingchen-writing skill and its proof/LaTeX audit guidance. The first complete-text pass covers Chapters 1–9, with local settings and proof-local declarations repaired. Later chapters and the full second pass/build remain pending. Mathematical scope is to remain unchanged. This revision is not yet a checked release. The Chapters 1–8 intermediate build is clean apart from the inherited bibliography underfull paragraph; Chapter 9 awaits compilation. The first-nine-chapter house audit has one inherited label-prefix error and 22 inherited warnings, identical to baseline93.
+Begin the requested whole-book review of notation before first use in every active section and subsection, starting with Definition 1.1.1. Update the mingchen-writing skill and its proof/LaTeX audit guidance. The first complete-text pass covers Chapters 1–12, with local settings and proof-local declarations repaired. Later chapters and the full second pass/build remain pending. Mathematical scope is to remain unchanged. This revision is not yet a checked release. The intermediate build after Chapters 1–12 has 726 pages with no errors, unresolved references, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. For these exact inputs, the house audit has 54 label/style errors and 105 warnings, all identical to baseline93; no new diagnostic was introduced. Full visual review and the remaining chapters are pending.
 
 ## 23 September 2026 — Checkpoint93: ample-locus smoothness and Dang's theorem
 
