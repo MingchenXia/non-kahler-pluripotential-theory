@@ -1,6 +1,14 @@
-# Current research status — 23 September 2026
+# Current research status — 24 September 2026
 
-The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
+The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
+
+## Checkpoint95
+
+The book remains **760 pages**, with 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-95.pdf` has SHA256 `2d53fb1894b168b88e33c5908807e4f1130d436c866bcfb394053a4fafeb06b6` and 3407816 bytes. Chapter 1 received a complete source first/second pass and a final layout check. Its existing definition/proposition statements and proofs are preserved; the logarithmic example's zero coefficient is explicit and the local-correction, order and all-weight explanations are clearer. All other active author inputs are unchanged.
+
+The daily continuation program records four research directions, a 33-chapter revision queue and eight arXiv candidates. Primary new/cross listings cover 17–23 September; replacement coverage is only 23 September, with the earlier gap retained. No new preprint result is a book premise. An exact degenerate weighted-kernel model and conditional fixed-jet projection argument are saved as a working note, directly reread but independently unaudited and outside the book. The general mass-independent proof boundary is unchanged.
+
+The final compilation has no errors, undefined references, duplicate labels or overfull boxes and one inherited bibliography underfull paragraph. All eight selected final pages were inspected; they cover every changed page text and the entire revised chapter. The changed-input house audit has zero errors and one inherited warning. All 180 verifier reports, original sources, style/bibliography assets, hidden sources, prior snapshot/archive and unchanged companion are preserved. See `editorial/chapter-one-review-95.md` and `audits/build-snapshot-95.json`. Clean source reconstruction is recorded separately in `audits/source-package-portability-95.json` and must pass before the release procedure is complete. Next full-chapter revision target: Chapter 2. The broad book goal remains active and incomplete.
 
 ## Checkpoint94
 

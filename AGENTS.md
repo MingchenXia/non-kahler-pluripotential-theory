@@ -38,7 +38,9 @@ when connectivity/authentication recovers. Record or report a persistent failure
 do not state that work was backed up remotely until the remote head is verified.
 
 The hourly GitHub synchronization heartbeat is a fallback for missed updates and
-failed pushes. It does not restart the older paused research heartbeat, initiate
-mathematical work, or commit files while another process is actively writing them.
+failed pushes. It does not initiate mathematical work or commit files while
+another process is actively writing them. The separate research heartbeat was
+explicitly reactivated for daily arXiv reading, research and chapter revision by
+the user on 23 September 2026; follow `research/daily-program.md` for that work.
 Keep `.gitignore` exclusions: build products, downloaded full texts, temporary
 previews, credentials, raw verifier logs and verifier runtime state stay local.

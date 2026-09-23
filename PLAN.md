@@ -2,7 +2,7 @@
 
 Authorized start: 2026-09-14 10:19:41 UTC / 18:19:41 Asia/Shanghai.
 Original research period ended: 2026-09-15 06:19:41 UTC / 14:19:41 Asia/Shanghai.
-The user subsequently approved continuation. The goal remains active; the old deadline and phases below document the initial plan. The earlier heartbeat is paused.
+The user subsequently approved continuation. The goal remains active; the old deadline and phases below document the initial plan. On 23 September 2026 the user authorized continuing research, daily arXiv checks and ongoing chapter revision. The existing research heartbeat is now active daily at 09:00 Asia/Shanghai; see `research/daily-program.md`.
 
 The general prescribed-reference measure equations are reconstructed in two regimes: semipositive big backgrounds under the smaller-background model condition and positive lower volume, without BMP; and arbitrary smooth big backgrounds under BMP and positive lower model-reference volume. The latter construction now includes relative projection, both equations, unrestricted weighted addition and the ordinary-type Lp refinement. Metric PVP follows from the model-volume hypothesis under BMP; this is an equivalent formulation of the cited regime, not a further generalization. Minimal ordinary-type Lp existence for any smooth big background is reconstructed without either metric volume property.
 

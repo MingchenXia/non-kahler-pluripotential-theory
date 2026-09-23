@@ -1,7 +1,7 @@
 \chapter{Background forms and local singularities}
 \label{chap:framework}
 
-Local singularity theory depends on the complex structure, while global positivity requires a background form and integration by parts may require closedness. The definitions and elementary facts below distinguish these hypotheses. In particular, the closed curvature of a line bundle cannot represent an arbitrary Hermitian background.
+Local singularities can be studied after adding a smooth correction to a potential. Global positivity also depends on the background form, and integration by parts depends on its differential. We first separate these roles. This distinction will remain necessary when line bundles enter the theory: their curvature is closed even when the auxiliary Hermitian form is not.
 
 \section{Two ways to leave the K\"ahler setting}
 
@@ -21,6 +21,7 @@ If $\theta=\omega$ is Hermitian, the set is nonempty because it contains every c
 Let $u\in\PSH(X,\theta)$. On each relatively compact coordinate ball with coordinates $z=(z_1,\ldots,z_n)$, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
 Conversely, if $u$ is quasi-plurisubharmonic on the compact manifold $X$, then there is a constant $C>0$ such that $u\in\PSH(X,C\omega)$.
 \end{proposition}
+\Needspace{7\baselineskip}
 \begin{proof}
 On a coordinate ball with compact closure in a larger chart, smoothness of $\theta$ gives
 \[
@@ -35,7 +36,11 @@ The function $u+A|z|^2$ is quasi-plurisubharmonic with its canonical representat
 For the converse, choose finitely many relatively compact charts covering $X$ on which $u=p_j+f_j$, with $p_j$ plurisubharmonic and $f_j$ smooth. On the closure of each smaller chart, the smooth form $\ddc f_j$ is bounded below by $-C_j\omega$. Thus $\ddc u\geq-C_j\omega$ there. Taking the maximum of finitely many $C_j$ proves the global inequality.
 \end{proof}
 
-The correction permits the use of local plurisubharmonic theory. The smooth remainder $\theta-A\ddc|z|^2$ must still be retained when forming products or integrating by parts.
+For $u\in\PSH(X,\theta)$, choose coordinates $z$ and a constant $A>0$ as in \cref{prop:local-correction}, and put $p=u+A|z|^2$. Then
+\[
+ \theta+\ddc u=\ddc p+(\theta-A\ddc|z|^2).
+\]
+Thus local plurisubharmonic theory applies to $p$, while the smooth remainder records the original background. It must be retained when forming products or integrating by parts.
 
 \begin{proposition}\label{prop:no-local-potential}
 If $\theta=\ddc\rho$ on an open set for a smooth function $\rho$, then $\mathrm{d}\theta=0$ on that set. In particular, at a point where $\mathrm{d}\theta\neq0$, no neighborhood admits such a representation.
@@ -50,6 +55,7 @@ For a closed real $(1,1)$-form, smooth local $\ddc$-potentials do exist on suffi
 
 Let $X$ be a connected compact complex manifold, let $\theta$ and $\eta$ be smooth real $(1,1)$-forms on $X$, and fix a Hermitian form $\omega$. The notation $\PSH(X,\theta)$ is as in \cref{def:theta-psh}. Two quasi-plurisubharmonic functions have the same ordinary singularity type if each is bounded above by the other plus a constant.
 
+\Needspace{12\baselineskip}
 \begin{proposition}\label{prop:gauge}
 Let $f$ be smooth and real, and set $\theta'=\theta+\ddc f$. Then
 \[
@@ -85,7 +91,7 @@ Sums with nonnegative coefficients preserve quasi-plurisubharmonicity, with zero
 For the inclusion, add the positive smooth form $\eta-\theta$ to $\theta+\ddc u$.
 \end{proof}
 
-An arbitrary pair of quasi-plurisubharmonic functions belongs to $\PSH(X,C\omega)$ for large $C$. This does not supply a common \emph{closed} positive background. On a manifold without a K\"ahler metric, replacing $C\omega$ by a large K\"ahler form is not an available step.
+By \cref{prop:local-correction}, any two quasi-plurisubharmonic functions belong to $\PSH(X,C\omega)$ for a common sufficiently large $C$. This lets us compare their singularities within one positive background. Its differential is still $C\,\mathrm{d}\omega$, so enlarging $C$ does not remove any failure of closedness.
 
 \section{Singularity type and multiplier ideals}
 
@@ -94,6 +100,8 @@ Let $X$ be a connected compact complex manifold. All quasi-plurisubharmonic func
 \begin{definition}\label{def:singularity-order}
 For quasi-plurisubharmonic functions $u,v$, write $u\preceq v$ if $u\leq v+C$ for some $C\in\R$. Write $u\sim v$ if $u\preceq v$ and $v\preceq u$.
 \end{definition}
+
+The convention $u\preceq v$ means that $u$ is at least as singular as $v$. In particular, a logarithmic pole lies below a bounded potential in this order.
 
 \begin{proposition}\label{prop:singularity-elementary}
 The relation $\preceq$ is a preorder, and $\sim$ is an equivalence relation. Adding a bounded smooth function preserves the equivalence class. In particular, all smooth functions on $X$ have the same singularity type.
@@ -116,7 +124,7 @@ Let $g$ be a local holomorphic function on $X$. An inequality $u\leq v+C$ implie
 \end{proof}
 
 \begin{example}\label{ex:ideal-disc}
-On a disc in $\mathbb C$ centered at the origin, with coordinate $z$, let $\lambda\geq0$ and $u(z)=\lambda\log|z|^2$. Then
+On a disc in $\mathbb C$ centered at the origin, with coordinate $z$, let $\lambda\geq0$ and put $u(z)=\lambda\log|z|^2$ for $\lambda>0$, while $u=0$ for $\lambda=0$. Then
 \[
  \mathcal I(u)_0=(z^{\lfloor\lambda\rfloor}).
 \]
@@ -127,6 +135,8 @@ Indeed, if a nonzero holomorphic germ has order $m$, its squared modulus is comp
 \]
 The smallest nonnegative integer satisfying this strict inequality is $\lfloor\lambda\rfloor$. At an integer value of $\lambda$, the excluded borderline exponent is $-1$, so the strictness of the integrability condition matters.
 \end{example}
+
+The example also explains why one multiplier ideal is insufficient to compare singularities: different coefficients $\lambda$ can have the same integer part. For a real weight $k>0$, applying the calculation to $ku$ gives $\mathcal I(ku)_0=(z^{\lfloor k\lambda\rfloor})$. The ideals at all $k>0$ recover $\lambda$, since for real coefficients $0\leq\lambda<\mu$ the two integer parts differ as soon as $k(\mu-\lambda)>1$.
 
 We use the $\mathcal I$-preorder defined by inclusion of $\mathcal I(ku)$ in $\mathcal I(kv)$ for every real weight $k>0$. Requiring equality at all these weights gives the ideal equivalence relation used in \cref{chap:hermitian-igood}. Both definitions make sense on any complex manifold; their relation to envelopes and global masses requires further arguments.
 
@@ -145,6 +155,4 @@ Let $h$ be the singular Hermitian metric on the holomorphic line bundle $L\to X$
 in the sense of currents.
 \end{proof}
 
-A Hermitian metric on a line bundle thus gives a closed curvature current. When we later study sections with multiplier-ideal conditions, this closed current must be specified in addition to any auxiliary Hermitian form on $X$.
-
-An algebraic interpretation must specify a line bundle or closed class and justify the relation of its invariants to the chosen analytic background.
+When studying sections with multiplier-ideal conditions, we shall therefore specify both the line bundle with its closed curvature and any auxiliary Hermitian form on $X$. An algebraic interpretation then requires an argument relating the line bundle's invariants to that analytic background.

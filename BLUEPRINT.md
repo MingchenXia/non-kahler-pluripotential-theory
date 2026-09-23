@@ -50,6 +50,12 @@ Checkpoint93 integrates the supplied arbitrary-big-class ample-locus smoothness 
 
 Checkpoint94 completes the requested local-notation revision across every active chapter, nested proof input, appendix and front matter. Each section declares or precisely recalls its objects and hypotheses before use, and proofs introduce their own temporary symbols. Two manual passes cover all 188 active author files. The same rule and coverage audit are incorporated into mingchen-writing. The companion note is synchronized with its shared book sections and its own local declarations. This changes exposition rather than the proof boundary: general and mass-dependent regimes retain their assumptions. The exact review, inherited house-audit findings and limits of the layout check are in `research/editorial/notation-before-use-review.md`.
 
+## Daily continuation, 24 September 2026
+
+The existing research heartbeat now runs daily at 09:00 Asia/Shanghai, under the user's renewed instruction. `research/daily-program.md` defines the bounded daily work; `research/arxiv-watch.json` records exact announcement/version coverage and verification status. The new `research/editorial/chapter-revision-queue.md` preserves the whole-book revision obligation.
+
+`research/research-directions-20260924.md` develops four concrete directions from the existing proof boundary: individual-density barriers and Gauduchon degeneration; finite-type curvature with degree-dependent ideal selection; equation-dependent singular loci; and trace compatibility on resolutions. The first working calculation gives an exact degenerate weighted entire-function kernel and a fixed-jet projection argument conditional on full-kernel convergence. It remains a research note, independently unaudited and outside the book. New arXiv candidates have not been adopted as theorem inputs. Neither mass regime nor the hidden-chapter boundary changes.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
@@ -66,4 +72,4 @@ Checkpoint94 completes the requested local-notation revision across every active
 
 The source repository is private: <https://github.com/MingchenXia/non-kahler-pluripotential-theory>. Significant coherent updates receive a descriptive commit and a changelog entry stating what was checked. Draft preservation is not mathematical certification. Compile and inspect changed output before describing a new checked release, then verify source reconstruction under the existing release procedure.
 
-Follow `AGENTS.md` and `scripts/sync-github.py`. The hourly synchronization heartbeat is a fallback for missed commits and failed pushes; it does not resume the older paused research heartbeat. Generated outputs, downloaded full texts, credentials and raw verifier runtime files stay local. Never modify verifier records, force-push, rewrite history or publish the repository.
+Follow `AGENTS.md` and `scripts/sync-github.py`. The hourly synchronization heartbeat is a fallback for missed commits and failed pushes and remains synchronization-only. The user separately reactivated daily research, arXiv reading and chapter revision on 23 September 2026; follow `research/daily-program.md`. Generated outputs, downloaded full texts, credentials and raw verifier runtime files stay local. Never modify verifier records, force-push, rewrite history or publish the repository.
