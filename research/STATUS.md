@@ -2,6 +2,10 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Current revision under review
+
+A whole-book notation-scope review is in progress at the user's request. Every active section and subsection must declare or precisely recall its objects and hypotheses before using them, including proof-local notation. The first reported instance is Definition 1.1.1. The mingchen-writing skill has been updated with the rule and the manual coverage audit. The first complete-text notation pass covers Chapters 1–9; later chapters, the appendix and front matter remain pending. Progress is recorded in `editorial/notation-before-use-review.md` and its file map. Checkpoint93 remains the latest checked release until the full revision, build and reconstruction checks finish.
+
 ## Checkpoint93
 
 The book has **716 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-93.pdf` has SHA256 `7c56f0b9a0a9ee549307f0b5edbc8ee9a1b38f31e2c6aa27f6edf3c5516d95f7` and 3066250 bytes. All 42 selected final pages were rendered and inspected: 27 match previously read images pixel for pixel, and the other 15 were reread. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-93.json`.

@@ -22,6 +22,8 @@ Current priorities are to polish the exposition chapter by chapter and develop t
 
 The user requires the standard notation $P_\theta[u]_{\mathcal I}$ for the multiplier-ideal envelope throughout the book; do not reintroduce the shorthand $Q_\theta[u]$.
 
+On 23 September the user requires every section and subsection to declare its objects and notation before use, including all definitions, statements and proofs. A declaration in the front-matter conventions alone is insufficient. Apply this throughout the active book, preserve mathematical hypotheses, and incorporate the same rule in the mingchen-writing skill.
+
 Before using any result of Popovici, first consult the relevant entries in the user-supplied `/Users/mingchen/Downloads/main 15.pdf`, then independently check the complete proof and its dependencies. The supplied document is a private working reference, not material to integrate into the book. Its assessments are evidence to examine, not automatic mathematical premises. Record the scope of the completed proof check before relying on the result.
 
 The user additionally requires a systematic pass through every already written part: verify correctness and readability, and simplify proofs without weakening their hypotheses or concealing dependencies. New results must not displace this whole-manuscript obligation. Record the actual chapter-level scope of each pass.

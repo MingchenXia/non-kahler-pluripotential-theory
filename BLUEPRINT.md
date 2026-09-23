@@ -50,7 +50,7 @@ Checkpoint93 integrates the supplied arbitrary-big-class ample-locus smoothness 
 
 ## Continuing work
 
-1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
+1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. The current requested notation pass must declare or precisely recall the local setting in every active section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
 2. Seek criteria for exact individual-measure equations when lower mass vanishes. Distinguish positive subsolution threshold, exact equality, admissible singularity type and the topology of approximation. General positive-threshold exactness and zero-threshold exponential existence remain open here.
 3. Seek geometric sufficient conditions for positive lower mass. Test them against the balanced elliptic example and primitive bundles, including the K3 case. Do not infer determinant noncollapse from linear current estimates or smooth limits of Gauduchon forms.
 4. Develop a topology on ordinary singularity types compatible with envelopes and an appropriate volume invariant. Keep the elementary ideal metric's fixed-positive-mass discontinuity separate from the curve source-metric comparison. Direct geometric criteria for convergence of normalization functionals and solution potentials remain missing.

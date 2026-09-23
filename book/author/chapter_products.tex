@@ -5,6 +5,8 @@ A non-closed form has no local potential, but a bounded potential still has a we
 
 \section{Local products}
 
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $1\leq k\leq n$ be an integer. Local coordinate domains are identified with domains in $\mathbb C^n$, with coordinates $z=(z_1,\ldots,z_n)$.
+
 We recall the following input from local pluripotential theory, developed in the source book \cite{SGPT}.
 
 \begin{theorem}[Bedford--Taylor]
@@ -15,7 +17,7 @@ $\ddc p_1\wedge\cdots\wedge\ddc p_k$ is a positive closed current of order zero.
 
 Here locality means equality of the restricted currents on a plurifine open Borel set where the potentials agree. The plurifine topology is the topology generated locally by plurisubharmonic functions. It is finer than the ordinary topology and, for example, makes the strict superlevel sets of a quasi-plurisubharmonic function open.
 
-Let $u$ be locally bounded and $\theta$-plurisubharmonic. On a relatively compact coordinate ball choose $q=A|z|^2$ so that $p=u+q$ is plurisubharmonic. Set $\beta=\theta-\ddc q$ and define
+Let $u$ be locally bounded and $\theta$-plurisubharmonic. On a relatively compact coordinate ball choose a constant $A>0$ and put $q=A|z|^2$ so that $p=u+q$ is plurisubharmonic. Set $\beta=\theta-\ddc q$ and define
 \begin{equation}\label{eq:bounded-expansion}
  (\theta+\ddc u)^k
  :=\sum_{j=0}^k\binom{k}{j}(\ddc p)^j\wedge\beta^{k-j}.
@@ -47,11 +49,13 @@ The local expansion also gives continuity along uniformly locally bounded decrea
 
 \section{Maxima and truncations}
 
+Let $X$ be a connected compact complex manifold, and let $\theta$ be a smooth real $(1,1)$-form on $X$. We use $\PSH(X,\theta)$ in the sense of \cref{def:theta-psh}.
+
 \begin{lemma}\label{lem:max-psh}
 If $u,v\in\PSH(X,\theta)$, then $\max(u,v)\in\PSH(X,\theta)$. Consequently, if $\theta\geq0$ and $u\in\PSH(X,\theta)$, then $\max(u,-t)$ is $\theta$-plurisubharmonic for every real $t$.
 \end{lemma}
 \begin{proof}
-The maximum is quasi-plurisubharmonic by a common local smooth correction. To verify its precise lower Hessian bound, use the constant form $\theta'$ from the preceding proof. Write $\theta'+\varepsilon\kappa=\ddc r$ locally. Then $u+r$ and $v+r$ are plurisubharmonic, hence so is their maximum. It follows that
+The maximum is quasi-plurisubharmonic by a common local smooth correction. To verify its precise lower Hessian bound, fix a positive constant $(1,1)$-form $\kappa$ in a coordinate ball. For each $\varepsilon>0$, freeze $\theta$ on smaller neighborhoods to a constant form $\theta'$ with $-\varepsilon\kappa\leq\theta-\theta'\leq\varepsilon\kappa$, as in \cref{prop:bounded-products}. Write $\theta'+\varepsilon\kappa=\ddc r$ locally. Then $u+r$ and $v+r$ are plurisubharmonic, hence so is their maximum. It follows that
 \[
  \theta+2\varepsilon\kappa+\ddc\max(u,v)\geq0
 \]
@@ -62,7 +66,7 @@ For a general smooth $\theta$, the final hypothesis cannot be dropped: a constan
 
 \section{An extended measure without a mass bound}
 
-For the moment let $\theta\geq0$. Subtract a constant so that $u\leq0$, and put
+Let $X$ be a connected compact complex manifold of dimension $n$, let $\theta$ be a smooth semipositive real $(1,1)$-form on $X$, and let $u\in\PSH(X,\theta)$. Subtract a constant so that $u\leq0$. For $t>0$ put
 \[
  u_t=\max(u,-t),\qquad D_t=\{u>-t\},\qquad
  \nu_t=\mathbf1_{D_t}(\theta+\ddc u_t)^n.
@@ -90,6 +94,8 @@ For finite mass, the construction is precisely the extension of the bounded loca
 The word \emph{extended} keeps a mathematical distinction visible. A positive Borel measure of infinite total mass on a compact space is not a Radon measure in the sense of a locally finite measure. We cannot treat it as a current of order zero on all of $X$.
 
 \section{Arbitrary smooth backgrounds}
+
+Let $X$ be a connected compact complex manifold of dimension $n$, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $u\in\PSH(X,\theta)$. For $t>0$ write $u_t=\max(u,-t)$ and $D_t=\{u>-t\}$.
 
 The construction can be made without semipositivity of $\theta$. The point is to prove positivity only after restricting to the sets where truncation leaves the potential unchanged.
 
@@ -188,6 +194,8 @@ $(\theta+\ddc v_t+2\epsilon\kappa)^n$. These are polynomials in $\epsilon$ whose
 
 \section{The bounded mass hypothesis}
 
+Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ and $\eta$ denote Hermitian forms on $X$. Backgrounds $\theta$ below are smooth real $(1,1)$-forms. The extended measure $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ is the positive restricted-truncation measure of \cref{thm:arbitrary-extended-ma}.
+
 \begin{definition}\label{def:bmp}
 For a Hermitian form $\omega$, set
 \[
@@ -202,7 +210,7 @@ The manifold has the \emph{bounded mass property} if $v_+(\omega)<+\infty$.
 The bounded mass property is independent of the Hermitian metric. Moreover, the supremum in \cref{def:bmp} is unchanged if only smooth potentials are used.
 \end{proposition}
 \begin{proof}
-Suppose $\eta\leq C\omega$. If $v$ is a bounded $\eta$-plurisubharmonic function, then $v/C$ is $\omega$-plurisubharmonic and
+Choose $C>0$ such that $\eta\leq C\omega$. If $v$ is a bounded $\eta$-plurisubharmonic function, then $v/C$ is $\omega$-plurisubharmonic and
 \[
  0\leq\eta+\ddc v
  \leq C\bigl(\omega+\ddc(v/C)\bigr).
@@ -221,7 +229,7 @@ Assume $v_+(\omega)<+\infty$. If $0\leq\theta\leq C\omega$ and $u\in\PSH(X,\thet
 \]
 \end{proposition}
 \begin{proof}
-Every constant truncation $u_t$ is bounded and $\theta$-plurisubharmonic. Apply the comparison of positive forms from \cref{prop:bmp-metric} to $u_t$, and then restrict to $D_t$. The bound is independent of $t$, so it passes to the increasing limit.
+For $t>0$, set $u_t=\max(u,-t)$ and $D_t=\{u>-t\}$. Every such truncation is bounded and $\theta$-plurisubharmonic. Apply the comparison of positive forms from \cref{prop:bmp-metric} to $u_t$, and then restrict to $D_t$. The bound is independent of $t$, so it passes to the increasing limit.
 \end{proof}
 
 For arbitrary smooth backgrounds, including non-semipositive ones, the comparison in \cref{thm:arbitrary-extended-ma} gives the same finite-mass conclusion under bounded mass, after enlarging the Hermitian metric. The finite mixed-current construction of \cite[Theorem 2.2]{BGL25} also uses a uniform variation bound before removing the restrictions. Such a bound is unnecessary for an extended positive measure, but is essential for viewing the result as a global current.
@@ -229,6 +237,8 @@ For arbitrary smooth backgrounds, including non-semipositive ones, the compariso
 The counterexample of Xia--Zhang \cite{XZ26} shows that \cref{def:bmp} is a genuine restriction in dimension three. Smooth solvability of an equation with a fixed density, established in the next part, therefore coexists with failure of a uniform mass bound over all potentials.
 
 \section{Small exponential weights}
+
+Let $X$ be a connected compact complex manifold, let $\omega$ be a Hermitian form, and fix a smooth positive volume form $\mathrm{d}V$ on $X$. All $L^1$ norms and integrals in this section use this volume form.
 
 First, \cref{thm:normalized-compactness} gives, for normalized potentials $v\in\PSH(X,\omega)$ with $\sup_Xv=0$,
 \begin{equation}\label{eq:normalized-lone}
@@ -265,6 +275,8 @@ Thus $\mathrm{e}^{-pV}$ is nonintegrable for every $p>0$, contradicting the qual
 \end{proof}
 
 \section{Infinite mass with trivial multiplier ideals}
+
+Let $X$ be a connected compact complex manifold of dimension $n$, let $\omega$ be a Hermitian form, and fix a smooth positive volume form $\mathrm{d}V$ on $X$. Write $\omega_u=\omega+\ddc u$ and let $v_+(\omega)$ be the upper bounded-potential mass of \cref{def:bmp}. We use the extended measure of \cref{thm:arbitrary-extended-ma} and the multiplier ideal $\mathcal I(u)$ of \cref{def:multiplier-ideal}; $\mathcal O_X$ denotes the sheaf of holomorphic functions on $X$.
 
 The failure of bounded mass has a consequence for individual singularities, rather than only for sequences of smooth potentials.
 

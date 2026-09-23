@@ -5,7 +5,7 @@ Two global facts enter repeatedly in the arguments that follow: normalized poten
 
 \section{Normalized compactness}
 
-Fix a smooth positive volume form $\mathrm{d}V$. We use the standard local compactness theorem from \cite{SGPT}: a sequence of plurisubharmonic functions locally bounded above has a subsequence which either converges in $L^1_{\loc}$ to a plurisubharmonic function or tends locally uniformly to $-\infty$. We also use the local submean inequality and the canonical representative of an $L^1$ plurisubharmonic limit.
+Let $X$ be a connected compact complex manifold, and fix a smooth positive volume form $\mathrm{d}V$ on $X$. All backgrounds $\theta$ in this section are smooth real $(1,1)$-forms on $X$. We use the standard local compactness theorem from \cite{SGPT}: a sequence of plurisubharmonic functions locally bounded above has a subsequence which either converges in $L^1_{\loc}$ to a plurisubharmonic function or tends locally uniformly to $-\infty$. We also use the local submean inequality and the canonical representative of an $L^1$ plurisubharmonic limit.
 
 \begin{theorem}\label{thm:normalized-compactness}
 For any smooth real $(1,1)$-form $\theta$, the family
@@ -50,13 +50,13 @@ Local decreasing-limit theory gives a quasi-plurisubharmonic limit or the functi
 The elementary bounded case of the regularization argument in \cite{BK07} rests on a useful fact: local convolutions made in different holomorphic coordinates become uniformly close, even when the original bounded potential is not continuous. We include the estimates because ordinary uniform approximation of the potential itself is unavailable.
 
 \Needspace{9\baselineskip}
-Let $u$ be a bounded plurisubharmonic function on a Euclidean domain. On a fixed relatively compact subset, for small $\delta>0$ put
+Let $n\geq1$, let $U\subset\mathbb C^n$ be a domain, and let $u$ be a bounded plurisubharmonic function on $U$. Write $z=(z_1,\ldots,z_n)$ for the Euclidean coordinates and $\mathrm{d}\sigma$ for Euclidean surface measure on a sphere. On a fixed relatively compact subset, for small $\delta>0$ put
 \[
  S_\delta u(z)=\sup_{|\zeta-z|\leq\delta}u(\zeta),\qquad
  A_\delta u(z)=\fint_{|\zeta-z|=\delta}u(\zeta)\,\mathrm{d}\sigma(\zeta),
  \qquad u_\delta=u*\rho_\delta,
 \]
-where $\rho$ is a smooth nonnegative radial mollifier of integral one, supported in the unit ball. A fixed larger neighborhood contains all balls below, and $B$ denotes a bound for the oscillation of $u$ there.
+where $\rho$ is a smooth nonnegative radial mollifier of integral one, supported in the unit ball, with $\rho_\delta(\zeta)=\delta^{-2n}\rho(\zeta/\delta)$. A fixed larger neighborhood contains all balls below, and $B$ denotes a bound for the oscillation of $u$ there.
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:bounded-local-regularization}
@@ -101,7 +101,7 @@ Combining the two comparisons proves the second assertion.
 
 \Needspace{9\baselineskip}
 \begin{corollary}\label{cor:coordinate-convolution}
-Let $F:U\to V$ be biholomorphic and $u$ bounded and plurisubharmonic on $U$. The difference
+Let $U,V\subset\mathbb C^n$ be domains and let $F:U\to V$ be biholomorphic and $u$ bounded and plurisubharmonic on $U$. The difference
 \[
  u_\delta-\bigl((u\circ F^{-1})*\rho_\delta\bigr)\circ F
 \]
@@ -113,7 +113,9 @@ On a compact subset, $F$ and its inverse have uniformly bounded first derivative
 
 \section{Gluing with a small curvature error}
 
-We use a smooth maximum in finitely many real variables. Choose a smooth even probability density supported in $[-1,1]$, let $Z_1,\ldots,Z_N$ have its product distribution, and define
+Let $X$ be a connected compact complex manifold, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $\omega$ be a Hermitian form. All functions and differential forms used in the gluing argument are defined on $X$ or on the stated coordinate neighborhoods.
+
+Fix an integer $N\geq1$ and write $t=(t_1,\ldots,t_N)\in\mathbb R^N$ and $\mathbf1=(1,\ldots,1)\in\mathbb R^N$. The translation parameter $c$ below is any real number. We use a smooth maximum in these variables. Choose a smooth even probability density supported in $[-1,1]$, let the real random variables $Z_1,\ldots,Z_N$ have its product distribution, and define
 \[
  M_\tau(t_1,\ldots,t_N)
      =\mathbb E\max_i(t_i+\tau Z_i)\quad(\tau>0).
@@ -125,7 +127,7 @@ Convolution makes $M_\tau$ smooth. It is convex, increasing in every argument, a
 \]
 If $t_i<\max_{j\ne i}t_j-2\tau$, the $i$th argument can be removed without changing the value. Also $M_\tau(t)$ is nondecreasing in $\tau$: it is a convex even function of $\tau$ because the distribution of $Z$ is symmetric.
 
-If smooth functions $f_i$ satisfy $\ddc f_i\geq-\gamma$ for a common smooth form $\gamma$, then
+The second identity expresses translation invariance. If smooth real functions $f_i$, $1\leq i\leq N$, satisfy $\ddc f_i\geq-\gamma$ for a common smooth real $(1,1)$-form $\gamma$, then
 \begin{equation}\label{eq:smooth-max-curvature}
  \ddc M_\tau(f_1,\ldots,f_N)\geq-\gamma.
 \end{equation}
@@ -187,6 +189,8 @@ $\psi_{\epsilon_j,\delta}+2^{-j}-v_{j-1}$ decrease pointwise to a function bound
 \Needspace{16\baselineskip}
 \section{Preserving a Hermitian background}
 
+Let $X$ be a connected compact complex manifold, and fix a Hermitian form $\omega$ on $X$. The space $\PSH(X,\omega)$ consists of the quasi-plurisubharmonic functions $u$ with $\omega+\ddc u\geq0$.
+
 \begin{theorem}\label{thm:bounded-exact-regularization}
 For $u\in\PSH(X,\omega)\cap L^\infty(X)$ there are smooth functions $u_j\downarrow u$ such that
 \[
@@ -195,7 +199,7 @@ For $u\in\PSH(X,\omega)\cap L^\infty(X)$ there are smooth functions $u_j\downarr
 The functions $u_j$ are uniformly bounded.
 \end{theorem}
 \begin{proof}
-Subtract a constant so that $u\leq-2$. Apply \cref{prop:bounded-almost-regularization} with $\theta=\omega$. The compact sets $\{v_j\geq-1\}$ decrease to the empty set, since $u\leq-2$. Discarding finitely many terms therefore gives $v_j<0$ everywhere. Write
+Subtract a constant so that $u\leq-2$. Apply \cref{prop:bounded-almost-regularization} with $\theta=\omega$, obtaining smooth $v_j\downarrow u$ and positive $\varepsilon_j\downarrow0$ with $(1+\varepsilon_j)\omega+\ddc v_j\geq0$. The compact sets $\{v_j\geq-1\}$ decrease to the empty set, since $u\leq-2$. Discarding finitely many terms therefore gives $v_j<0$ everywhere. Write
 \[
  u_j=\frac{v_j}{1+2\varepsilon_j}.
 \]

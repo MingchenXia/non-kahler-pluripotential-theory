@@ -5,6 +5,8 @@ Local singularity theory depends on the complex structure, while global positivi
 
 \section{Two ways to leave the K\"ahler setting}
 
+Let $X$ be a connected compact complex manifold of complex dimension $n\geq1$. Fix a smooth real $(1,1)$-form $\theta$ on $X$ and a Hermitian form $\omega$ on $X$. We use $\ddc=\mathrm{i}\partial\bar\partial/(2\pi)$. A quasi-plurisubharmonic function is locally the sum of a plurisubharmonic function and a smooth real function, with its upper semicontinuous representative, and is not identically $-\infty$.
+
 \begin{definition}\label{def:theta-psh}
 A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic} if
 \[
@@ -16,7 +18,7 @@ as a current. We denote the set of these functions by $\PSH(X,\theta)$.
 If $\theta=\omega$ is Hermitian, the set is nonempty because it contains every constant. For a general smooth real form $\theta$, nonemptiness is an assumption, not a consequence of the definition.
 
 \begin{proposition}\label{prop:local-correction}
-Let $u\in\PSH(X,\theta)$. On each relatively compact coordinate ball, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
+Let $u\in\PSH(X,\theta)$. On each relatively compact coordinate ball with coordinates $z=(z_1,\ldots,z_n)$, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
 Conversely, if $u$ is quasi-plurisubharmonic on the compact manifold $X$, then there is a constant $C>0$ such that $u\in\PSH(X,C\omega)$.
 \end{proposition}
 \begin{proof}
@@ -45,6 +47,8 @@ The identity follows from $\mathrm{d}\ddc=0$.
 For a closed real $(1,1)$-form, smooth local $\ddc$-potentials do exist on sufficiently small coordinate balls by the local $\partial\bar\partial$-lemma. This local fact does not require the compact manifold to admit a K\"ahler metric. Thus a closed background on a non-K\"ahler manifold and a non-closed background are already different at the local level.
 
 \section{Changes of background}
+
+Let $X$ be a connected compact complex manifold, let $\theta$ and $\eta$ be smooth real $(1,1)$-forms on $X$, and fix a Hermitian form $\omega$. The notation $\PSH(X,\theta)$ is as in \cref{def:theta-psh}. Two quasi-plurisubharmonic functions have the same ordinary singularity type if each is bounded above by the other plus a constant.
 
 \begin{proposition}\label{prop:gauge}
 Let $f$ be smooth and real, and set $\theta'=\theta+\ddc f$. Then
@@ -85,6 +89,8 @@ An arbitrary pair of quasi-plurisubharmonic functions belongs to $\PSH(X,C\omega
 
 \section{Singularity type and multiplier ideals}
 
+Let $X$ be a connected compact complex manifold. All quasi-plurisubharmonic functions in this section are defined on $X$, except in the explicitly local example.
+
 \begin{definition}\label{def:singularity-order}
 For quasi-plurisubharmonic functions $u,v$, write $u\preceq v$ if $u\leq v+C$ for some $C\in\R$. Write $u\sim v$ if $u\preceq v$ and $v\preceq u$.
 \end{definition}
@@ -97,7 +103,7 @@ Reflexivity follows with $C=0$. If $u\leq v+C$ and $v\leq w+D$, then $u\leq w+C+
 \end{proof}
 
 \begin{definition}\label{def:multiplier-ideal}
-The multiplier ideal $\mathcal I(u)$ is the sheaf whose local sections are holomorphic functions $g$ for which $|g|^2\mathrm{e}^{-u}$ is locally integrable against a smooth positive volume form.
+For a quasi-plurisubharmonic function $u$ on $X$, the multiplier ideal $\mathcal I(u)$ is the sheaf whose local sections are holomorphic functions $g$ for which $|g|^2\mathrm{e}^{-u}$ is locally integrable against a smooth positive volume form.
 \end{definition}
 
 Changing the volume form does not change local integrability: on relatively compact coordinate neighborhoods, the ratio of two smooth positive volume forms is bounded above and below by positive constants. This definition thus requires no chosen Hermitian metric.
@@ -106,11 +112,11 @@ Changing the volume form does not change local integrability: on relatively comp
 If $u\preceq v$, then $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$. If $u\sim v$, then these ideals agree for every $k>0$.
 \end{proposition}
 \begin{proof}
-An inequality $u\leq v+C$ implies $\mathrm{e}^{-kv}\leq \mathrm{e}^{kC}\mathrm{e}^{-ku}$. Multiplying by $|g|^2$ shows that local integrability for $ku$ implies local integrability for $kv$. Apply the same argument in both directions when $u\sim v$.
+Let $g$ be a local holomorphic function on $X$. An inequality $u\leq v+C$ implies $\mathrm{e}^{-kv}\leq \mathrm{e}^{kC}\mathrm{e}^{-ku}$. Multiplying by $|g|^2$ shows that local integrability for $ku$ implies local integrability for $kv$. Apply the same argument in both directions when $u\sim v$.
 \end{proof}
 
 \begin{example}\label{ex:ideal-disc}
-Let $\lambda\geq0$ and $u(z)=\lambda\log|z|^2$. Then
+On a disc in $\mathbb C$ centered at the origin, with coordinate $z$, let $\lambda\geq0$ and $u(z)=\lambda\log|z|^2$. Then
 \[
  \mathcal I(u)_0=(z^{\lfloor\lambda\rfloor}).
 \]
@@ -126,11 +132,13 @@ We use the $\mathcal I$-preorder defined by inclusion of $\mathcal I(ku)$ in $\m
 
 \section{Closed curvature and algebraic interpretations}
 
+Let $X$ be a complex manifold and let $\omega$ be a smooth real $(1,1)$-form on $X$. The functions $u$ below are locally integrable on $X$, so $\ddc u$ is defined as a current.
+
 \begin{proposition}\label{prop:chern-closed}
 The curvature current of a singular Hermitian metric with locally integrable weights on a holomorphic line bundle is closed. In particular, a non-closed form $\omega$ cannot itself be the curvature of such a metric, nor can $\omega+\ddc u$ be closed at a point where $\mathrm{d}\omega\neq0$.
 \end{proposition}
 \begin{proof}
-Choose a local holomorphic frame $e$ and write its squared norm as $|e|_h^2=\mathrm{e}^{-\varphi}$. The curvature current is locally $\ddc\varphi$. If $e'=ge$ is another frame, with $g$ holomorphic and nowhere zero, the new weight is $\varphi-\log|g|^2$. Since $\log|g|^2$ is pluriharmonic, these local currents glue. Each is closed because $\mathrm{d}\ddc=0$. The final assertion follows from
+Let $h$ be the singular Hermitian metric on the holomorphic line bundle $L\to X$ in the statement. Choose a local holomorphic frame $e$ of $L$ and write its squared norm as $|e|_h^2=\mathrm{e}^{-\varphi}$. The curvature current is locally $\ddc\varphi$. If $e'=ge$ is another frame, with $g$ holomorphic and nowhere zero, the new weight is $\varphi-\log|g|^2$. Since $\log|g|^2$ is pluriharmonic, these local currents glue. Each is closed because $\mathrm{d}\ddc=0$. The final assertion follows from
 \[
  \mathrm{d}(\omega+\ddc u)=\mathrm{d}\omega
 \]

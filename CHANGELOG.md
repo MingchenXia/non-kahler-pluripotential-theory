@@ -1,5 +1,9 @@
 # Modification history
 
+## 23 September 2026 — Local notation declarations under review
+
+Begin the requested whole-book review of notation before first use in every active section and subsection, starting with Definition 1.1.1. Update the mingchen-writing skill and its proof/LaTeX audit guidance. The first complete-text pass covers Chapters 1–9, with local settings and proof-local declarations repaired. Later chapters and the full second pass/build remain pending. Mathematical scope is to remain unchanged. This revision is not yet a checked release. The Chapters 1–8 intermediate build is clean apart from the inherited bibliography underfull paragraph; Chapter 9 awaits compilation. The first-nine-chapter house audit has one inherited label-prefix error and 22 inherited warnings, identical to baseline93.
+
 ## 23 September 2026 — Checkpoint93: ample-locus smoothness and Dang's theorem
 
 Integrate the supplied main theorem as Theorem 28.3.2 for every big closed class on a compact Kähler manifold, without nefness. Give the full route from the standard BEGZ existence and minimal-singularity estimates through the book's locus, Holder and derivative results. Explicitly reconstruct Dang26 Theorem 3.1 and justify the scalar/local-equation formulation using the analytic complement's zero mass. Retain global Lp in the Holder theorem and local Holder continuity in the interior theorem; do not import the broader local-density-only source formulation. Update Chapter 33 and the reading guide. Reuse the existing bibliography after comparison with the supplied file.
