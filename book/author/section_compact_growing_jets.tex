@@ -1,0 +1,221 @@
+\section{Localization on curves}
+\label{sec:compact-growing-jets}
+
+Let $C$ be a connected compact Riemann surface, let $x\in C$, and let $(L,h)$ be a smooth Hermitian holomorphic line bundle. Fix an integer $r\geq1$. Suppose that in a holomorphic coordinate $z$ centered at $x$ and a holomorphic frame $e$,
+\[
+ |e|_h^2=\mathrm{e}^{-\phi},\qquad
+ \phi(z)=|z|^{2r}+O(|z|^{2r+1}).
+\]
+Let $\nu$ be a smooth positive volume form, locally $a(z)\,\mathrm{d}A$, where $a(0)=1$ and $\mathrm{d}A$ is Euclidean area. For positive integers $m$, choose nonnegative integers $q_m$ such that
+\[
+ q_m\longrightarrow\infty,\qquad q_m=o(m^{1/(2r+1)}).
+\]
+Write $\mathfrak m_x$ for the ideal sheaf of $x$ and give
+\[
+ V_m=H^0(C,L^m\otimes\mathfrak m_x^{q_m})
+ \quad\hbox{the norm}\quad
+ \|s\|_m^2=\int_C|s|_{h^m}^2\,\mathrm{d}\nu.
+\]
+Its density is $B_m=\sum_j|s_{m,j}|_{h^m}^2$ for any orthonormal basis $(s_{m,j})$, with value zero if $V_m=0$. Let
+$\Phi(\tau)=(2\pi)^{-1/2}\int_{-\infty}^{\tau}\mathrm{e}^{-s^2/2}\,\mathrm{d}s$ for real $\tau$.
+
+The local upper bound uses only these data. To produce enough global sections for a matching lower bound, we impose positivity away from $x$.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:compact-growing-jets}
+For a fixed real $\tau$, let $x_m$ lie in the coordinate neighborhood and satisfy
+\[
+ T_m:=m|z(x_m)|^{2r}=q_m/r+\tau\sqrt{q_m/r}.
+\]
+Then
+\begin{equation}\label{eq:compact-growing-jets-upper}
+ \limsup_{m\to\infty}
+ \frac{\pi B_m(x_m)}{mr^2|z(x_m)|^{2r-2}}\leq\Phi(\tau).
+\end{equation}
+If the curvature of $(L,h)$ is semipositive on $C$ and strictly positive on $C\setminus\{x\}$, this ratio converges to $\Phi(\tau)$.
+\end{theorem}
+\begin{proof}
+Put $z_m=z(x_m)$, $\rho_m=|z_m|$, $R_m=(q_m/(rm))^{1/(2r)}$ and
+\[
+ S_m=\frac{mr^2\rho_m^{2r-2}}\pi.
+\]
+For all sufficiently large $m$, $T_m>0$, $R_m\to0$, and $\rho_m/R_m\to1$. Positive constants denoted by $M$, with subscripts when needed, may change between estimates. They are independent of $m$ and of the argument of $z_m$; they may depend on the fixed geometric data, $r$, $\tau$, and fixed auxiliary cutoffs or radii. We write $q=q_m$ when no confusion is possible. The model densities $B_{m,r}^{(q)}$ are those of \cref{sec:degenerate-selected-kernels}.
+
+\emph{The kernel on a shrinking disc.}
+Fix a real $A>1$ and set $D_m=\{|z|<A R_m\}$. On $D_m$,
+\[
+ m|\phi(z)-|z|^{2r}|\leq M_A mR_m^{2r+1}
+ =M_A\frac{q_mR_m}{r}=o(1),\qquad
+ \sup_{D_m}|a-1|=o(1).
+\]
+The first limit follows from $q_mR_m=r^{-1/(2r)}(q_m^{2r+1}/m)^{1/(2r)}\to0$. Hence the actual local norm and the radial norm with weight $\mathrm{e}^{-m|z|^{2r}}\,\mathrm{d}A$ differ by a factor $1+o(1)$, uniformly over all holomorphic functions on $D_m$. The same comparison holds for their pointwise weights at $z_m$.
+
+For integers $k\geq0$, let $I_{m,k}$ and $J_{m,k}$ be the squared norms of $z^k$ on $D_m$ and on the whole plane, respectively, with this radial weight. Polar integration gives
+\[
+ \begin{aligned}
+ I_{m,k}&=\frac\pi r m^{-(k+1)/r}\gamma((k+1)/r,U_m),
+ &U_m&=m(A R_m)^{2r},\\
+ J_{m,k}&=\frac\pi r m^{-(k+1)/r}\Gamma((k+1)/r),
+ &\gamma(b,U)&=\int_0^U t^{b-1}\mathrm{e}^{-t}\,\mathrm{d}t.
+ \end{aligned}
+\]
+Here $b,U>0$. Angular Parseval and Tonelli show that the normalized monomials form a complete orthonormal system in the weighted holomorphic disc space: the squared norm of a Taylor series is the sum of the squared monomial norms, so its partial sums converge in that norm. The density of the subspace vanishing to order at least $q$ is therefore
+\[
+ B_m^{D}(z_m)=\mathrm{e}^{-T_m}\sum_{k\geq q}\frac{\rho_m^{2k}}{I_{m,k}}.
+\]
+Point evaluation is continuous by the local submean inequality; thus this sum also gives its extremal norm.
+
+\Needspace{8\baselineskip}
+Choose fixed real numbers $1<c<d<A^{2r}$ and put $k_m=\lfloor rcT_m\rfloor$. For large $m$, $k_m\geq q$ and $U_m\geq dT_m$. Uniformly for $0\leq k\leq k_m+1$,
+\begin{equation}\label{eq:truncated-gamma-comparison}
+ \frac{I_{m,k}}{J_{m,k}}=1+O(\mathrm{e}^{-\eta T_m})
+\end{equation}
+for some fixed $\eta>0$. Indeed, let $G_b$ have Gamma density $t^{b-1}\mathrm{e}^{-t}/\Gamma(b)$ on $(0,\infty)$. A change of variable gives $\mathbb E\mathrm{e}^{sG_b}=(1-s)^{-b}$ for $0<s<1$. With $b=(k+1)/r\leq cT_m+O_r(1)$, Markov's inequality yields
+\[
+ 1-\frac{\gamma(b,U_m)}{\Gamma(b)}
+ \leq\mathrm{e}^{-sU_m}(1-s)^{-b}.
+\]
+Since $d>c$, choose $s>0$ small enough that $sd+c\log(1-s)>0$. The right side is at most $M\mathrm{e}^{-\eta T_m}$, as required.
+
+Cauchy--Schwarz for the positive radial measure gives
+$I_{m,k+1}^2\leq I_{m,k}I_{m,k+2}$. Hence $I_{m,k+1}/I_{m,k}$ increases with $k$. By \eqref{eq:truncated-gamma-comparison} and the Gamma-ratio asymptotic,
+\[
+ \rho_m^2\frac{I_{m,k_m}}{I_{m,k_m+1}}
+ =(1+o(1))T_m^{1/r}
+   \frac{\Gamma((k_m+1)/r)}{\Gamma((k_m+2)/r)}
+ \longrightarrow c^{-1/r}<1.
+\]
+Choose $\kappa\in(c^{-1/r},1)$. For all large $m$, the ratio of consecutive terms $\rho_m^{2k}/I_{m,k}$ is at most $\kappa$ for every $k\geq k_m$. Consequently,
+\[
+ \mathrm{e}^{-T_m}\sum_{k>k_m}\frac{\rho_m^{2k}}{I_{m,k}}
+ \leq\frac{\kappa}{1-\kappa}
+          \mathrm{e}^{-T_m}\frac{\rho_m^{2k_m}}{I_{m,k_m}}
+ =o(S_m).
+\]
+For the last equality, replace $I_{m,k_m}$ by $J_{m,k_m}$ using \eqref{eq:truncated-gamma-comparison}. The resulting monomial is bounded by $B_{m,r}^{(k_m)}(z_m)$. In \eqref{eq:degenerate-poisson-comparison}, each residue threshold divided by $T_m$ tends to $c>1$, so Chebyshev's inequality makes all those Poisson tails tend to zero. The comparison error is $O(T_m^{-1/2})$.
+
+For $q\leq k\leq k_m$, use \eqref{eq:truncated-gamma-comparison}. Since $I_{m,k}\leq J_{m,k}$ for every $k$, we obtain
+\[
+ B_{m,r}^{(q)}(z_m)\leq B_m^{D}(z_m)
+ \leq(1+o(1))B_{m,r}^{(q)}(z_m)+o(S_m).
+\]
+By \cref{prop:degenerate-kernel-transition},
+\begin{equation}\label{eq:shrinking-disc-transition}
+ B_m^{D}(z_m)/S_m\longrightarrow\Phi(\tau).
+\end{equation}
+The global norm of a selected section dominates its actual norm on $D_m$. Restriction and the preceding norm comparisons therefore give
+$B_m(x_m)\leq(1+o(1))B_m^D(z_m)$, including when $V_m=0$. This proves \eqref{eq:compact-growing-jets-upper}.
+
+\Needspace{13\baselineskip}
+\emph{Polynomials with almost all their norm near the point.}
+Assume from now on the curvature hypotheses in the last assertion. Fix a real $c>1$ and put $K_m=\lfloor cq_m\rfloor$. Define
+\[
+ C_m=\sum_{k=q_m}^{K_m}\frac{\rho_m^{2k}}{J_{m,k}},\qquad
+ p_m(z)=C_m^{-1/2}\sum_{k=q_m}^{K_m}
+                   \frac{\bar z_m^{\,k}z^k}{J_{m,k}}.
+\]
+\Needspace{6\baselineskip}
+For large $m$ these are well defined, $\|p_m\|_{m,r}=1$, and
+\begin{equation}\label{eq:model-polynomial-value}
+ \mathrm{e}^{-T_m}|p_m(z_m)|^2
+ =B_{m,r}^{(q_m)}(z_m)-B_{m,r}^{(K_m+1)}(z_m)
+ =(\Phi(\tau)+o(1))S_m.
+\end{equation}
+The omitted tail is $o(S_m)$ by \eqref{eq:degenerate-poisson-comparison}, since its Poisson thresholds divided by $T_m$ tend to $c>1$.
+
+Choose $\delta\in(0,1/2)$ so that the coordinate disc $|z|<\delta$ satisfies
+$\phi(z)\geq\beta|z|^{2r}$ for a fixed $\beta\in(1/2,1)$, and $a$ is bounded above there. For a sufficiently large fixed $A>1$,
+\begin{equation}\label{eq:model-polynomial-localization}
+ \int_{A R_m<|z|<\delta}|p_m|^2\mathrm{e}^{-m\phi}a\,\mathrm{d}A=o(1).
+\end{equation}
+To see this, write $p_m(z)=\sum_{k=q_m}^{K_m}b_{m,k}z^k$, so that
+$\sum_k|b_{m,k}|^2J_{m,k}=1$. Radial domination, angular orthogonality and polar integration bound the left side by a fixed constant times
+\[
+ \sum_{k=q_m}^{K_m}|b_{m,k}|^2J_{m,k}\,
+ \beta^{-(k+1)/r}
+ \mathbb P\{G_{(k+1)/r}\geq\beta A^{2r}q_m/r\}.
+\]
+The Gamma moment at $s=1/2$ gives, for $b,U>0$,
+\[
+ \beta^{-b}\mathbb P\{G_b\geq U\}
+ \leq\exp\bigl(-U/2+b\log(2/\beta)\bigr).
+\]
+Choose $A$ so large that $\beta A^{2r}/2>c\log(2/\beta)+1$. Since $(k+1)/r\leq(cq_m+1)/r$, the last factor in the sum is $O(\mathrm{e}^{-q_m/r})$, uniformly in $k$. This proves \eqref{eq:model-polynomial-localization}. On $|z|<A R_m$ the actual and radial model norms differ by a factor $1+o(1)$, as proved above. The model norm on this disc is at most $1$.
+
+Fix a smooth cutoff $\chi$, with $0\leq\chi\leq1$, compactly supported in $|z|<\delta$ and equal to one near zero. Extend $\chi p_m e^{\otimes m}$ by zero to $C$. The preceding estimates give
+\begin{equation}\label{eq:cutoff-polynomial-norm}
+ \|\chi p_m e^{\otimes m}\|_m^2\leq1+o(1).
+\end{equation}
+All these choices precede the limit in $m$.
+
+\emph{A global correction with the same vanishing condition.}
+Let $f_m=\bar\partial(\chi p_m e^{\otimes m})$. Its support is contained in a fixed annulus where $\phi$ has a positive lower bound. Cauchy--Schwarz and the normalized coefficient identity give, for $|z|<\delta<1$,
+\[
+ |p_m(z)|^2\leq\sum_{k=q_m}^{K_m}\frac{|z|^{2k}}{J_{m,k}}
+ \leq M(K_m+1)m^{(K_m+1)/r}.
+\]
+Here $\Gamma(b)$ has a positive lower bound for $b\geq1/r$. Since $q_m\log m=o(m)$, the factor $\mathrm{e}^{-m\phi}$ on the annulus dominates this coefficient growth.
+
+\Needspace{12\baselineskip}
+Use the K\"ahler form $\nu$ on the curve to define form norms and the induced metric $h_{K_C^{-1}}$ on the inverse canonical line bundle $K_C^{-1}$. Choose a smooth cutoff $\eta$ supported in the coordinate chart, equal to one near $x$, and satisfying $0\leq\eta\leq1$. Shrink its support if necessary. For a sufficiently small fixed $t_0>0$, the global smooth functions
+\[
+ \ell_t=\eta\log(|z|^2+t^2),\qquad 0<t\leq t_0,
+\]
+extended by zero outside the chart, are nonpositive. Their complex Hessians are nonnegative where $\eta=1$. On the fixed transition annulus they are uniformly bounded below, independently of $t$.
+
+Choose a fixed smooth real function $\psi$, equal to a sufficiently large positive multiple of $|z|^2$ near $x$ and cut off in the chart, such that
+\[
+ \mathrm{i}\Theta(K_C^{-1})+\mathrm{i}\partial\bar\partial\psi\geq2\nu
+\]
+on a neighborhood of $x$ where $\eta=1$. Here $\mathrm{i}\Theta$ denotes the Chern curvature, so the weight $\mathrm{e}^{-\psi}$ contributes $\mathrm{i}\partial\bar\partial\psi$. For all large $m$ and all $0<t\leq t_0$, equip
+$E_m=L^m\otimes K_C^{-1}$ with the smooth metric
+\[
+ H_{m,t}=(h^m\otimes h_{K_C^{-1}})\,
+                     \mathrm{e}^{-\psi-q_m\ell_t}.
+\]
+It satisfies
+\begin{equation}\label{eq:jet-correction-curvature}
+ \mathrm{i}\Theta(E_m,H_{m,t})\geq\nu.
+\end{equation}
+Near $x$, the two terms involving $h$ and $\ell_t$ are nonnegative and the other two dominate $2\nu$. On the complement of a fixed such neighborhood, compactness and strict positivity give a lower bound $c_0m\nu$ for $m\mathrm{i}\Theta(L,h)$, with $c_0>0$. It absorbs all remaining negative terms, bounded by $M(q_m+1)\nu$, because $q_m=o(m)$.
+
+On the support of $f_m$, the functions $\ell_t$ are bounded below uniformly in $t$. The polynomial estimate, the bounded derivatives of $\chi$, and $q_m\log m=o(m)$ therefore give a constant $a_0>0$ such that, for all large $m$,
+\[
+ \int_C|f_m|_{h^m,\nu}^2
+        \mathrm{e}^{-\psi-q_m\ell_t}\,\mathrm{d}\nu
+ \leq\mathrm{e}^{-a_0m}\qquad(0<t\leq t_0).
+\]
+Identify an $L^m$-valued $(0,1)$-form with an $E_m$-valued $(1,1)$-form using the canonical tensor identity; the induced metrics preserve its norm. In bidegree $(1,1)$ on a curve, \eqref{eq:jet-correction-curvature} makes the curvature commutator at least the identity. The smooth complete-K\"ahler $L^2$ theorem \cite[Theorem~5.1]{DemAM11} applies: the curve is compact and the data are automatically $\bar\partial$-closed. It gives an $L^m$-valued weak solution $u_{m,t}$ with
+\[
+ \bar\partial u_{m,t}=f_m,\qquad
+ \int_C|u_{m,t}|_{h^m}^2
+       \mathrm{e}^{-\psi-q_m\ell_t}\,\mathrm{d}\nu
+ \leq\mathrm{e}^{-a_0m}.
+\]
+The canonical-bundle term in \eqref{eq:jet-correction-curvature} accounts for this change of bidegree.
+
+For each fixed $m$, let $t\downarrow0$. Since $\ell_t\leq0$ and $\psi$ is bounded, extract a weakly convergent subsequence in the original $L^2$ norm, with limit $u_m$. Distributional continuity gives $\bar\partial u_m=f_m$. For fixed $t'>0$ and $t<t'$, one has $\ell_t\leq\ell_{t'}$, so the same bound holds in the fixed smooth weighted space with weight $\mathrm{e}^{-\psi-q_m\ell_{t'}}$. Its norm is equivalent to the original norm for this fixed $m,t'$. Weak lower semicontinuity followed by monotone convergence as $t'\downarrow0$ gives
+\[
+ \int_C|u_m|_{h^m}^2\mathrm{e}^{-\psi-q_m\ell}\,\mathrm{d}\nu
+ \leq\mathrm{e}^{-a_0m},\qquad
+ \ell=\eta\log|z|^2.
+\]
+In particular, $\|u_m\|_m^2\leq M\mathrm{e}^{-a_0m}$. Near $x$ the right side $f_m$ vanishes, so the distributional Cauchy--Riemann equation makes $u_m$ holomorphic in the frame $e^{\otimes m}$. Integrability against $|z|^{-2q_m}$ forces its vanishing order to be at least $q_m$: for a nonzero germ of order $j$, the radial integral is finite exactly when $j-q_m>-1$. The smooth factors are bounded above and below near $x$ for each fixed $m$.
+
+It follows that $s_m=\chi p_m e^{\otimes m}-u_m$ is a global holomorphic section in $V_m$. By \eqref{eq:cutoff-polynomial-norm}, $\|s_m\|_m\leq1+o(1)$.
+
+\emph{Evaluation at the moving point.}
+For large $m$, the disc $D_m$ lies where $\chi=1$ and $f_m=0$. Apply the local norm comparison and the disc extremal estimate to the holomorphic representative of $u_m$, which vanishes to order at least $q_m$. By \eqref{eq:shrinking-disc-transition},
+\[
+ |u_m(x_m)|_{h^m}^2
+ \leq(1+o(1))B_m^D(z_m)\|u_m\|_m^2
+ \leq M S_m\mathrm{e}^{-a_0m}.
+\]
+The actual pointwise metric factor differs from $\mathrm{e}^{-T_m}$ by $1+o(1)$. Since $\Phi(\tau)>0$, \eqref{eq:model-polynomial-value} and the triangle inequality give
+\[
+ |s_m(x_m)|_{h^m}^2\geq(\Phi(\tau)+o(1))S_m.
+\]
+These sections are nonzero for large $m$. The extremal characterization of $B_m$ and $\|s_m\|_m\leq1+o(1)$ yield the matching lower bound. This proves the limit.
+\end{proof}
+
+The growth range makes the local metric remainder negligible throughout the disc carrying the polynomial norm. The theorem keeps $\tau$ fixed. Larger growing orders, transitions incorporating further terms of the local weight, and higher-dimensional analogues require additional estimates. A compact curve provides a base model for the fibration identities earlier in the chapter; transferring such a local transition to a non-K\"ahler total space also requires the appropriate description of its selected section spaces.

@@ -1,6 +1,6 @@
 # A possible local upper bound for growing jet constraints
 
-Status: research draft, 24 September 2026. Directly derived and reread, but not independently audited and not integrated into the book. No novelty claim. The full compact-curve localization problem remains open in the manuscript. This note uses the exact model statements in Section 27.12; the two associated Rethlas reports concern that model and its endpoint correction, not the new argument below.
+Status: Historical upper-bound derivation, now superseded by checkpoint97. The complete upper/lower proof passed the bounded Rethlas audit `compact_growing_jets_01` and is Theorem 27.13.1. The text below preserves its draft wording; use the book for the final formulation. The frozen audit input is unchanged. See `compact-growing-jets-energy-review-97.md` for exact scope and classical inputs. No novelty claim.
 
 ## Setting and proposed conclusion
 

@@ -64,6 +64,12 @@ Problem 33.12.3 specifies the first compact-curve localization question and the 
 
 A further working proof in `research/editorial/growing-jet-local-upper-draft.md` proposes the one-sided compact-curve transition bound in the initial growth range. It restricts global sections to a shrinking disc, compares incomplete Gamma moments uniformly below a cutoff, and uses log-convex radial moments for the remaining tail. The argument was directly derived and reread but has not received an independent audit and is not integrated into the book. Neither kernel audit covers it. The global lower bound remains unresolved; the full localization problem is unchanged.
 
+## Compact localization and radial energy, checkpoint97
+
+Section 27.13 proves compact-curve Gaussian localization for q_m=o(m^(1/(2r+1))). The local limsup needs only the local metric expansion; global semipositivity and strict positivity away from the distinguished point give the liminf by a weighted L2 correction retaining the vanishing order. The full proof passed `compact_growing_jets_01` under the exact-model and classical smooth complete-Kähler inputs. This supersedes the draft/open status recorded at checkpoint96. Larger orders, higher weight terms, higher dimension and non-Kähler fibration transfers remain separate questions in Problem 33.12.3. No new arXiv premise or novelty claim is made.
+
+Chapter 3 completed the current correctness/writing pass. A general radial torsion-defect formula shortens the surface proof; the closed-energy identity is explicitly proved for every smooth closed real background. The Gauduchon surface example separates smooth mass invariance from the primitive obstruction. No metric mass property is imposed on the general theory. See `research/editorial/compact-growing-jets-energy-review-97.md` for the direct and independent review scopes. Continue with Chapter 4; daily literature work and the broad book goal remain active.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

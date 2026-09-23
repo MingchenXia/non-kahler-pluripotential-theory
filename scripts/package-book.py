@@ -35,6 +35,8 @@ for name in (
     "research/editorial/chapter-revision-queue.md",
     "research/editorial/chapter-one-review-95.md",
     "research/editorial/degenerate-growing-kernels-review-96.md",
+    "research/editorial/compact-growing-jets-energy-review-97.md",
+    "research/editorial/compact-growing-jet-localization-draft.md",
     "research/editorial/growing-jet-local-upper-draft.md",
     "research/editorial/degenerate-selected-kernels.md",
     "research/editorial/notation-before-use-map.json",

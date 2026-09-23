@@ -1,10 +1,12 @@
-# Reading guide — checkpoint93
+# Reading guide — checkpoint97
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
 ## General foundations and singularities
 
 Chapters 1–8 develop the nonclosed background, torsion, Gauduchon traces, compactness, extended non-pluripolar products, finite damped measures and the Hopf example. Upper bounded mass and positive lower mass are independent properties. The general framework allows infinite total Monge–Ampère mass and vanishing lower mass.
+
+Chapter 3 derives the primitive obstruction and the general radial torsion-defect formula. A Gauduchon surface has invariant smooth mass, but this alone does not give a primitive of the raw one-form. The closed-energy identity uses only closedness of the smooth real background.
 
 Read the trace estimates together with the infinite-mass witness. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
 
@@ -59,6 +61,8 @@ Part XII contains three separate chapters. The upper and lower assumptions are n
 ## Geometry and the remaining questions
 
 Chapter 27 treats partial kernels. Birational transformation identities do not require a mass bound. A Kähler modification and positive closed-curvature mass permit the source equilibrium theorem to be applied; that geometric setting implies BMP. Submersion and Hopf examples instead retain their base and intrinsic-growth hypotheses. Kernel-measure convergence alone does not prove a lower potential bound or recover the original ideal type.
+
+Sections 27.12–27.13 treat growing vanishing orders. The exact degenerate entire-function model precedes compact-curve localization for q_m=o(m^(1/(2r+1))), with global semipositivity and positivity away from the chosen point for the lower bound. Problem 33.12.3 asks about larger ranges and higher weight terms. Transfer to non-Kähler total spaces and higher dimension remains separate.
 
 Chapter 28 develops ordinary Bott–Chern loci and elliptic-bundle examples. It keeps the classical and numerical restricted-volume definitions in their stated regimes. A direct Hermitian-error supremum is infinite even in the zero class on the Hopf example. The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded, with its sources and history preserved; its proof is not an active book dependency.
 

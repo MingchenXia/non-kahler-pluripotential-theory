@@ -1,5 +1,13 @@
 # Modification history
 
+## 24 September 2026 — Checkpoint97: compact growing jets and radial energy
+
+Complete Chapter 3's correctness/writing pass. Add the general radial torsion-defect formula, shorten the surface proof, state its actual Euler equation and explain the Gauduchon surface distinction between mass invariance and the primitive obstruction. Broaden the closed-energy calculation to every smooth closed real background. These elementary changes received two direct proof passes.
+
+Add Theorem 27.13.1 with complete compact-curve Gaussian localization proof for q_m=o(m^(1/(2r+1))). The normal Rethlas audit passes under the accepted exact-model and classical smooth L2 inputs; all 182 earlier reports are unchanged. Retain the upper/lower drafts as derivation history. Update Problem 33.12.3 to ask about larger orders and corrections from higher local weight terms. No general non-Kähler localization theorem or novelty claim is asserted. Update the blueprint, status, research directions, reading guide, chapter queue and curated source package.
+
+The book has 772 pages. The final build has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 31 selected final pages were inspected: eleven match already read preview images and twenty were read after final compilation. The four-input house audit has zero errors and seventeen inherited warnings, matching baseline findings. The other 186 earlier active author inputs, original sources, hidden materials, historical verifier records, checkpoint96 PDF/archive and 17-page companion remain unchanged. Exact checks are in `research/editorial/compact-growing-jets-energy-review-97.md` and `research/audits/build-snapshot-97.json`. Fresh reconstruction must separately pass in `research/audits/source-package-portability-97.json` before release checks are complete. The daily 09:00 Asia/Shanghai arXiv task is unchanged; no additional announcement scan is claimed. Next full-chapter target: Chapter 4. The broad goal remains active and incomplete.
+
 ## 24 September 2026 — Checkpoint96: growing selected kernels and Chapter 2
 
 Complete the Chapter 2 correctness/readability pass: handle q=1 before the torsion-power proof, explain the dimension-one empty sum, declare example and comparison notation, clarify Gauduchon first variation and distinguish individual smooth finiteness, a uniform bound and equal masses. Preserve all mathematical claims and metric-mass scope.
