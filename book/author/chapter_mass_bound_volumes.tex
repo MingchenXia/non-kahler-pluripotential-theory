@@ -1,0 +1,208 @@
+\chapter{Volumes under bounded mass}
+\label{chap:mass-bound-volumes}
+
+The upper and lower volumes in \cref{def:singularity-volumes} are defined as extended quantities in every smooth background. In this chapter $X$ has bounded mass and the backgrounds are big. These assumptions give finite invariants and comparison under changes of singularities. Positive lower volume will be imposed separately where it is used. The envelope constructions of \cref{chap:envelopes} remain available without these mass assumptions.
+
+\section{Comparison of singularity volumes}
+
+In a big background under bounded mass, these are \cite[Definition 3.1]{BGL25}, expressed in potentials, and
+\[
+ 0\leq\underline{\operatorname{vol}}_\theta(u)
+ \leq\int_X\mathrm{MA}_\theta(u)
+ \leq\overline{\operatorname{vol}}_\theta(u)<+\infty.
+\]
+The uniform finiteness at the right is the content of the bounded mass estimates, not merely the finiteness of each individual integral.
+
+Under bounded mass and bigness, if $\theta$ is also closed, both volumes equal $\int_X\mathrm{MA}_\theta(u)$; this uses invariance of the non-pluripolar mass under equivalent singularities, recalled in \cite[Example 3.2]{BGL25}. For a non-closed background this equality can fail even at $u=0$, as \cref{ex:torus-mass} shows.
+
+\Needspace{12\baselineskip}
+\begin{theorem}\label{thm:volume-monotonicity}
+Suppose $\theta_1$ is big, $\theta_1\leq\theta_2$, and $u_i\in\PSH(X,\theta_i)$ satisfy $u_1\preceq u_2$. On a manifold with bounded mass,
+\[
+ \underline{\operatorname{vol}}_{\theta_1}(u_1)
+ \leq\underline{\operatorname{vol}}_{\theta_2}(u_2),\qquad
+ \overline{\operatorname{vol}}_{\theta_1}(u_1)
+ \leq\overline{\operatorname{vol}}_{\theta_2}(u_2).
+\]
+\end{theorem}
+\begin{proof}
+We reconstruct \cite[Proposition 3.7]{BGL25} in the big regime. Shift $u_1$ so that $u_1\leq u_2$. Choose $v_2\simeq u_2$ in $\PSH(X,\theta_2)$ and set
+\[
+ p_t=P_{\theta_1}(u_1+t,v_2).
+\]
+For $t>0$, a sufficiently low constant translate of $u_1$ is a competitor; also $p_t\leq u_1+t$. Thus $p_t\simeq u_1$. The contact theorem, applied in each background on the corresponding contact part, and positivity of the mixed products give
+\[
+ \mathrm{MA}_{\theta_1}(p_t)
+ \leq\mathbf1_{\{u_1\leq v_2-t\}}\mathrm{MA}_{\theta_1}(u_1)
+      +\mathrm{MA}_{\theta_2}(v_2).
+\]
+Indeed $p_t$ is also $\theta_2$-plurisubharmonic and is below $v_2$, so the contact inequality in that background applies. The first measure on the right has mass tending to zero: its indicators tend to zero off the pole sets, and the measure is finite and non-pluripolar. Integrate, let $t\to+\infty$, and then take the infimum over $v_2$.
+
+For the upper volume, choose any $v_1\simeq u_1$ in $\PSH(X,\theta_1)$ and put $w_t=\max(v_1,u_2-t)$. It is $\theta_2$-plurisubharmonic and $w_t\simeq u_2$. On $D_t=\{v_1>u_2-t\}$, locality and mixed-product positivity imply
+\[
+ \mathbf1_{D_t}\mathrm{MA}_{\theta_1}(v_1)
+ \leq\mathbf1_{D_t}\mathrm{MA}_{\theta_2}(w_t).
+\]
+The sets $D_t$ exhaust the complement of a pluripolar set. Hence integration and passage to the limit give
+$\int_X\mathrm{MA}_{\theta_1}(v_1)\leq
+\overline{\operatorname{vol}}_{\theta_2}(u_2)$.
+Take the supremum over $v_1$. This proof does not require $v_1$ to be bounded.
+\end{proof}
+
+The theorem orders the backgrounds and the potentials separately. These hypotheses should not be confused with ordering the two currents $\theta_i+\ddc u_i$.
+
+\begin{proposition}\label{prop:volume-addition}
+Assume bounded mass. Let $\theta$ be big, $u\in\PSH(X,\theta)$, and $v\in\PSH(X,\eta)$ for a smooth real form $\eta$. Then, for either the lower or the upper volume,
+\[
+ \operatorname{vol}_\theta(u)
+ \leq\operatorname{vol}_{\theta+\eta}(u+v).
+\]
+\end{proposition}
+\begin{proof}
+The form $\theta+\eta$ is big, by adding the positive current $\eta+\ddc v$ to a strictly positive current in the class of $\theta$. For the upper volume, add $v$ to each competitor for $u$. Positivity of mixed products shows that the resulting mass is at least the original mass.
+
+For the lower volume, choose $w\simeq u+v$ in $\PSH(X,\theta+\eta)$, and let $p=P_\theta(w-v)$. Since $w-v=u+O(1)$ outside the pole sets, the envelope is genuine and $p\simeq u$. The contact theorem says that its measure is carried by $D=\{p+v=w\}$. Furthermore $p+v\leq w$ everywhere, since this inequality holds off a pluripolar set between canonical quasi-plurisubharmonic functions. Thus
+\[
+ \mathrm{MA}_\theta(p)
+ \leq\mathbf1_D\mathrm{MA}_{\theta+\eta}(p+v)
+ \leq\mathbf1_D\mathrm{MA}_{\theta+\eta}(w).
+\]
+Integrating and taking the infimum over $w$ proves the assertion. This is the envelope proof of \cite[Proposition 2.5]{XL26}.
+\end{proof}
+
+\section{Relative full mass}
+
+\begin{definition}\label{def:relative-volume-class}
+Define
+\[
+ \mathcal E_{\mathrm{vol}}(X,\theta,\varphi)
+ =\{u\in\PSH(X,\theta):u\preceq\varphi,
+ \ \overline{\operatorname{vol}}_\theta(u)
+   =\overline{\operatorname{vol}}_\theta(\varphi)\}.
+\]
+\end{definition}
+
+This is \cite[Definition 3.2]{XL26}. The next theorem compares it with the envelope class of \cref{def:relative-envelope-class}.
+
+\begin{theorem}\label{thm:relative-equivalence}
+Suppose $X$ has bounded mass, $\theta$ is big, and
+$\underline{\operatorname{vol}}_\theta(\varphi)>0$. Then
+\[
+ \mathcal E_{\mathrm{env}}(X,\theta,\varphi)
+ =\mathcal E_{\mathrm{vol}}(X,\theta,\varphi).
+\]
+Every member also satisfies
+$\underline{\operatorname{vol}}_\theta(u)
+=\underline{\operatorname{vol}}_\theta(\varphi)$.
+\end{theorem}
+\begin{proof}
+First assume the envelope condition. For each $a\in(0,1)$ there is $h\in\PSH(X,\theta)$ such that $a\varphi+(1-a)h\leq u$. By \cref{thm:volume-monotonicity,prop:volume-addition} and homogeneity, for either volume,
+\[
+ a^n\operatorname{vol}_\theta(\varphi)
+ \leq\operatorname{vol}_\theta(a\varphi+(1-a)h)
+ \leq\operatorname{vol}_\theta(u)
+ \leq\operatorname{vol}_\theta(\varphi).
+\]
+Let $a\to1$. This proves equality of both volumes in this direction, even without positive lower volume.
+
+Conversely, suppose equality of the upper volumes, and fix $b>1$. Shift the potentials so that $u\leq\varphi\leq0$, and put
+\[
+ u_j=\max(u,\varphi-j),\qquad q_j=Q_b(u_j,\varphi).
+\]
+Each $q_j$ is genuine and equivalent to $\varphi$: the lower competitor $\varphi-bj$ and the defining inequality give
+$\varphi-bj\leq q_j\leq\varphi$.
+The sequence decreases. If its limit were $-\infty$, the compactness and Hartogs lemma for normalized quasi-plurisubharmonic functions would give $\sup_Xq_j\to-\infty$.
+
+Set $C_j=\{b^{-1}q_j+(1-b^{-1})\varphi=u_j\}$. The contact theorem and positivity of mixed products give
+\[
+ \mathrm{MA}_\theta(q_j)
+ \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(u_j).
+\]
+On $C_j\cap\{q_j\leq-bk\}$, the inequality $\varphi\leq0$ implies $u_j\leq-k$, hence $u\leq-k$. For $j>k$, locality on $\{u>-k\}\subset\{u>\varphi-j\}$ therefore yields
+\[
+ \begin{split}
+ \int_{\{q_j\leq-bk\}}\mathrm{MA}_\theta(q_j)
+ &\leq b^n\int_{\{u\leq-k\}}\mathrm{MA}_\theta(u_j)\\
+ &\leq b^n\left(
+ \overline{\operatorname{vol}}_\theta(\varphi)
+ -\int_{\{u>-k\}}\mathrm{MA}_\theta(u)\right).
+ \end{split}
+\]
+If $\sup_Xq_j\to-\infty$, the domain on the left is all of $X$ for large $j$. It follows, on letting $k\to+\infty$, that
+\[
+ \underline{\operatorname{vol}}_\theta(\varphi)
+ \leq b^n\left(
+ \overline{\operatorname{vol}}_\theta(\varphi)
+ -\int_X\mathrm{MA}_\theta(u)\right).
+\]
+The same collapse would hold with any $u'\simeq u$ in place of $u$: a competitor for either target gives one for the other by a constant translation. Repeating the argument and taking the supremum of $\int_X\mathrm{MA}_\theta(u')$ gives
+\[
+ \underline{\operatorname{vol}}_\theta(\varphi)
+ \leq b^n\left(
+ \overline{\operatorname{vol}}_\theta(\varphi)
+ -\overline{\operatorname{vol}}_\theta(u)\right)=0,
+\]
+a contradiction. Thus $Q_b(u,\varphi)$ is genuine for every $b$. The argument is the full-volume case of \cite[Lemma 3.1]{XL26}; the proof uses bounded mass and the displayed positive lower volume, without a separate global positive volume hypothesis.
+\end{proof}
+
+\section{Model references with positive lower volume}
+
+For a big, possibly non-semipositive form under bounded mass, Li uses
+\begin{equation}\label{eq:li-model-condition}
+ P_\theta[\varphi]=\varphi,\qquad
+ \underline{\operatorname{vol}}_\theta(\varphi)>0.
+\end{equation}
+Under bounded mass, positive lower volume implies the smaller-background condition by \cite[Proposition 2.11]{ALS26}. In the latter assertion $\theta$ is semipositive and big, and the reference is an ordinary envelope fixed point. The smaller-background condition \eqref{eq:als-model-condition} does not itself assert a uniform positive lower mass. Its no-mass-bound consequences were proved in \cref{sec:relative-envelope-room}.
+
+\section{Volumes of multiplier-ideal envelopes}
+
+There is a natural pair of replacements under bounded mass. For big $\theta$, define
+\[
+ \mathcal V^-_{\mathcal I,\theta}(u)
+   =\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}),\qquad
+ \mathcal V^+_{\mathcal I,\theta}(u)
+   =\overline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}).
+\]
+They are finite and depend only on the multiplier-ideal class of $u$ in the fixed background. By \cref{prop:i-envelope-gauge} and gauge invariance of singularity volumes, they also depend only on the associated $\ddc$-class and the multiplier-ideal data, rather than on its smooth decomposition. Moreover, \cref{prop:p-below-i,thm:volume-monotonicity} give
+\[
+ \underline{\operatorname{vol}}_\theta(u)
+ \leq\mathcal V^-_{\mathcal I,\theta}(u),\qquad
+ \overline{\operatorname{vol}}_\theta(u)
+ \leq\mathcal V^+_{\mathcal I,\theta}(u).
+\]
+These inequalities justify considering the two nonnegative gaps. They do not assert that either gap detects equality of envelopes without further hypotheses.
+
+The following proposition gives a conditional volume characterization of equality of the ordinary and multiplier-ideal envelopes.
+
+\Needspace{14\baselineskip}
+\begin{proposition}\label{prop:conditional-i-characterization}
+Assume bounded mass and a big background $\theta$. Let $u\in\PSH(X,\theta)$, and put $q=P_\theta[u]_{\mathcal I}$. Suppose
+\[
+ \underline{\operatorname{vol}}_\theta(q)>0,
+ \qquad u\in\mathcal E_{\mathrm{env}}(X,\theta,P_\theta[u]).
+\]
+Then the following are equivalent:
+\[
+ P_\theta[u]=P_\theta[u]_{\mathcal I},\qquad
+ \overline{\operatorname{vol}}_\theta(u)
+      =\mathcal V^+_{\mathcal I,\theta}(u).
+\]
+If they hold, the corresponding equality for the lower volume also holds.
+\end{proposition}
+\begin{proof}
+If the envelopes agree, the relative-class hypothesis puts $u$ in $\mathcal E_{\mathrm{env}}(X,\theta,q)$. The proof of \cref{thm:relative-equivalence} gives equality of both volumes with those of $q$.
+
+Conversely, equality of the upper volumes, together with $u\preceq q$ from \cref{prop:p-below-i}, puts $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. Positive lower volume and \cref{thm:relative-equivalence} imply membership in $\mathcal E_{\mathrm{env}}(X,\theta,q)$. By \cref{prop:relative-envelope-equality},
+\[
+ P_\theta[u]=P_\theta[q]=q,
+\]
+as required.
+\end{proof}
+
+The ordinary model identity $P_\theta[q]=q$ used in this proof is automatic by \cref{cor:ordinary-preserves-i}. The remaining displayed hypotheses are substantive. Under these hypotheses, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$. The remaining issue is to find intrinsic hypotheses ensuring the required positive lower volume and relative-class membership.
+
+\begin{problem}\label{qu:hermitian-i-characterization}
+For big non-closed backgrounds on manifolds with bounded mass, what is the weakest positive-volume assumption under which the hypotheses of \cref{prop:conditional-i-characterization} are automatic? Can that assumption be checked using only the ideal or divisorial data in the fixed background?
+\end{problem}
+
+This is a research question for the present manuscript, not a claim that every part is absent from the literature. In particular, the relative-envelope results in \cite{ALS26,XL26} already address parts of the modelization problem. The remaining comparison must preserve their precise hypotheses. A convergence defined through upper volumes should not be called a pseudometric until a triangle inequality has actually been proved.

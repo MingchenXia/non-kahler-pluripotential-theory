@@ -1,5 +1,7 @@
 # Proof boundary and remaining obligations
 
+**Current structure (checkpoint85).** The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded from the book. Its source and historical reviews are preserved. The substantial mass-dependent theory is now in Part XII, Chapters 30–32; general envelope lemmas and measure representations are in Chapters 12–13. The detailed entries below retain their historical chapter numbers; use `READING-GUIDE.md` for the current route.
+
 Current ledger, 16 September 2026. The earlier chronological record is retained in `audits/proof-obligations-history-through-2026-09-15-0450.md`. The main theory does not assume the bounded mass property. A successful bounded audit is evidence for its specified argument and inputs; it is not formal certification or a novelty review.
 
 ## Standard reference boundary

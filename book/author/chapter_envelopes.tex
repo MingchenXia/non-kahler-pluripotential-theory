@@ -1,7 +1,7 @@
 \chapter{Envelopes and volumes of singularities}
 \label{chap:envelopes}
 
-The mass of a particular potential and the volume of its singularity type are different objects, even for smooth Hermitian potentials. We first construct the envelope operators, then introduce upper and lower volumes by varying the bounded part of a potential. The relative envelope class is defined without a mass bound. Its comparison with a class defined by equality of volumes will require the stated volume hypotheses.
+The mass of a particular potential and the volume of its singularity type are different objects, even for smooth Hermitian potentials. We first construct the envelope operators, then introduce upper and lower volumes by varying the bounded part of a potential. The relative envelope class is defined without a mass bound. We prove its envelope and positivity properties before exhibiting a member of infinite mass. Its comparison with a volume-defined class is deferred to \cref{chap:mass-bound-volumes}.
 
 \section{Obstacle envelopes}
 
@@ -258,7 +258,7 @@ The same argument as in \cref{cor:bounded-exponential-comparison} now gives expo
 
 \section{Upper and lower volumes}
 
-The following definitions use the extended Monge--Amp\`ere measure and make sense for any smooth real background $\theta$, with values in $[0,+\infty]$. Finiteness and the comparison theorems below are stated under bounded mass and bigness. These hypotheses are local to those statements.
+The following definitions use the extended Monge--Amp\`ere measure and make sense for any smooth real background $\theta$, with values in $[0,+\infty]$. Their finite-volume comparison theory under bounded mass is developed separately in \cref{chap:mass-bound-volumes}.
 
 \begin{definition}\label{def:singularity-volumes}
 For $u\in\PSH(X,\theta)$, define
@@ -275,13 +275,12 @@ For $u\in\PSH(X,\theta)$, define
 These are the lower and upper volumes of the singularity type of $u$ in the fixed background. We write $\underline{\operatorname{vol}}(\theta)$ and $\overline{\operatorname{vol}}(\theta)$ for their values at $V_\theta$.
 \end{definition}
 
-In a big background under bounded mass, these are \cite[Definition 3.1]{BGL25}, expressed in potentials, and
+For a semipositive form define
 \[
- 0\leq\underline{\operatorname{vol}}_\theta(u)
- \leq\int_X\mathrm{MA}_\theta(u)
- \leq\overline{\operatorname{vol}}_\theta(u)<+\infty.
+ v_-(\theta)=\inf_{v\in\PSH(X,\theta)\cap L^\infty(X)}
+                      \int_X\mathrm{MA}_\theta(v).
 \]
-The uniform finiteness at the right is the content of the bounded mass estimates, not merely the finiteness of each individual integral.
+This is $\underline{\operatorname{vol}}_\theta(0)$, since the potentials of ordinary type zero are exactly the bounded potentials. The inequality $v_-(\theta)>0$ is uniform positivity over all bounded potentials, which is stronger than positivity of the mass for each individual bounded potential.
 
 The two volumes are invariant under bounded changes of $u$ by definition. They are also invariant under the smooth gauge change $(\theta,u)\mapsto(\theta+\ddc f,u-f)$: the map $v\mapsto v-f$ identifies the competitor currents and their measures. Scaling gives
 \[
@@ -290,64 +289,7 @@ The two volumes are invariant under bounded changes of $u$ by definition. They a
  \overline{\operatorname{vol}}_{t\theta}(tu)
   =t^n\overline{\operatorname{vol}}_\theta(u)\quad(t>0).
 \]
-Under bounded mass and bigness, if $\theta$ is also closed, both volumes equal $\int_X\mathrm{MA}_\theta(u)$; this uses invariance of the non-pluripolar mass under equivalent singularities, recalled in \cite[Example 3.2]{BGL25}. For a non-closed background this equality can fail even at $u=0$, as \cref{ex:torus-mass} shows.
-
-\Needspace{12\baselineskip}
-\begin{theorem}\label{thm:volume-monotonicity}
-Suppose $\theta_1$ is big, $\theta_1\leq\theta_2$, and $u_i\in\PSH(X,\theta_i)$ satisfy $u_1\preceq u_2$. On a manifold with bounded mass,
-\[
- \underline{\operatorname{vol}}_{\theta_1}(u_1)
- \leq\underline{\operatorname{vol}}_{\theta_2}(u_2),\qquad
- \overline{\operatorname{vol}}_{\theta_1}(u_1)
- \leq\overline{\operatorname{vol}}_{\theta_2}(u_2).
-\]
-\end{theorem}
-\begin{proof}
-We reconstruct \cite[Proposition 3.7]{BGL25} in the big regime. Shift $u_1$ so that $u_1\leq u_2$. Choose $v_2\simeq u_2$ in $\PSH(X,\theta_2)$ and set
-\[
- p_t=P_{\theta_1}(u_1+t,v_2).
-\]
-For $t>0$, a sufficiently low constant translate of $u_1$ is a competitor; also $p_t\leq u_1+t$. Thus $p_t\simeq u_1$. The contact theorem, applied in each background on the corresponding contact part, and positivity of the mixed products give
-\[
- \mathrm{MA}_{\theta_1}(p_t)
- \leq\mathbf1_{\{u_1\leq v_2-t\}}\mathrm{MA}_{\theta_1}(u_1)
-      +\mathrm{MA}_{\theta_2}(v_2).
-\]
-Indeed $p_t$ is also $\theta_2$-plurisubharmonic and is below $v_2$, so the contact inequality in that background applies. The first measure on the right has mass tending to zero: its indicators tend to zero off the pole sets, and the measure is finite and non-pluripolar. Integrate, let $t\to+\infty$, and then take the infimum over $v_2$.
-
-For the upper volume, choose any $v_1\simeq u_1$ in $\PSH(X,\theta_1)$ and put $w_t=\max(v_1,u_2-t)$. It is $\theta_2$-plurisubharmonic and $w_t\simeq u_2$. On $D_t=\{v_1>u_2-t\}$, locality and mixed-product positivity imply
-\[
- \mathbf1_{D_t}\mathrm{MA}_{\theta_1}(v_1)
- \leq\mathbf1_{D_t}\mathrm{MA}_{\theta_2}(w_t).
-\]
-The sets $D_t$ exhaust the complement of a pluripolar set. Hence integration and passage to the limit give
-$\int_X\mathrm{MA}_{\theta_1}(v_1)\leq
-\overline{\operatorname{vol}}_{\theta_2}(u_2)$.
-Take the supremum over $v_1$. This proof does not require $v_1$ to be bounded.
-\end{proof}
-
-The theorem orders the backgrounds and the potentials separately. These hypotheses should not be confused with ordering the two currents $\theta_i+\ddc u_i$.
-
-\begin{proposition}\label{prop:volume-addition}
-Assume bounded mass. Let $\theta$ be big, $u\in\PSH(X,\theta)$, and $v\in\PSH(X,\eta)$ for a smooth real form $\eta$. Then, for either the lower or the upper volume,
-\[
- \operatorname{vol}_\theta(u)
- \leq\operatorname{vol}_{\theta+\eta}(u+v).
-\]
-\end{proposition}
-\begin{proof}
-The form $\theta+\eta$ is big, by adding the positive current $\eta+\ddc v$ to a strictly positive current in the class of $\theta$. For the upper volume, add $v$ to each competitor for $u$. Positivity of mixed products shows that the resulting mass is at least the original mass.
-
-For the lower volume, choose $w\simeq u+v$ in $\PSH(X,\theta+\eta)$, and let $p=P_\theta(w-v)$. Since $w-v=u+O(1)$ outside the pole sets, the envelope is genuine and $p\simeq u$. The contact theorem says that its measure is carried by $D=\{p+v=w\}$. Furthermore $p+v\leq w$ everywhere, since this inequality holds off a pluripolar set between canonical quasi-plurisubharmonic functions. Thus
-\[
- \mathrm{MA}_\theta(p)
- \leq\mathbf1_D\mathrm{MA}_{\theta+\eta}(p+v)
- \leq\mathbf1_D\mathrm{MA}_{\theta+\eta}(w).
-\]
-Integrating and taking the infimum over $w$ proves the assertion. This is the envelope proof of \cite[Proposition 2.5]{XL26}.
-\end{proof}
-
-\section{Relative full mass through convex combinations}
+\section{Relative envelope classes}
 
 For $u,\varphi\in\PSH(X,\theta)$ and $b\geq1$, define the competitor family
 \[
@@ -369,16 +311,9 @@ Define
        \ \mathcal A_b(u,\varphi)\ne\varnothing
        \text{ for every }b\geq1\}.
 \]
-Under bounded mass we also define
-\[
- \mathcal E_{\mathrm{vol}}(X,\theta,\varphi)
- =\{u\in\PSH(X,\theta):u\preceq\varphi,
- \ \overline{\operatorname{vol}}_\theta(u)
-   =\overline{\operatorname{vol}}_\theta(\varphi)\}.
-\]
 \end{definition}
 
-The first is the definition used in \cite[Definition 3.2]{ALS26} for semipositive big $\theta$; the second is \cite[Definition 3.2]{XL26}. Our temporary subscripts keep their definitions visible before proving their equivalence in a common regime.
+This is the definition used in \cite[Definition 3.2]{ALS26} for semipositive big $\theta$. It is meaningful without a mass bound. Its comparison with the volume-defined class is developed in \cref{chap:mass-bound-volumes}.
 
 \begin{proposition}\label{prop:relative-elementary}
 The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all potentials equivalent to $\varphi$, and is stable under bounded changes of its members. If $u$ belongs to it, $u\leq v$ and $v\preceq\varphi$, then $v$ belongs to it. In particular, it is stable under taking maxima of two members.
@@ -387,68 +322,7 @@ The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all 
 If $u\geq\varphi-C$, use $h=\varphi-bC$ for each $b$. More generally, if $u'\geq u-C$ and $h\in\mathcal A_b(u,\varphi)$, then $h-bC\in\mathcal A_b(u',\varphi)$. The singularity-order condition persists under bounded changes. Convex combinations of two competitors give competitors for the same convex combination of their target functions. Finally a competitor for $u$ is a competitor for any larger $v$; the assumed relation $v\preceq\varphi$ supplies the other defining condition.
 \end{proof}
 
-\begin{theorem}\label{thm:relative-equivalence}
-Suppose $X$ has bounded mass, $\theta$ is big, and
-$\underline{\operatorname{vol}}_\theta(\varphi)>0$. Then
-\[
- \mathcal E_{\mathrm{env}}(X,\theta,\varphi)
- =\mathcal E_{\mathrm{vol}}(X,\theta,\varphi).
-\]
-Every member also satisfies
-$\underline{\operatorname{vol}}_\theta(u)
-=\underline{\operatorname{vol}}_\theta(\varphi)$.
-\end{theorem}
-\begin{proof}
-First assume the envelope condition. For each $a\in(0,1)$ there is $h\in\PSH(X,\theta)$ such that $a\varphi+(1-a)h\leq u$. By \cref{thm:volume-monotonicity,prop:volume-addition} and homogeneity, for either volume,
-\[
- a^n\operatorname{vol}_\theta(\varphi)
- \leq\operatorname{vol}_\theta(a\varphi+(1-a)h)
- \leq\operatorname{vol}_\theta(u)
- \leq\operatorname{vol}_\theta(\varphi).
-\]
-Let $a\to1$. This proves equality of both volumes in this direction, even without positive lower volume.
-
-Conversely, suppose equality of the upper volumes, and fix $b>1$. Shift the potentials so that $u\leq\varphi\leq0$, and put
-\[
- u_j=\max(u,\varphi-j),\qquad q_j=Q_b(u_j,\varphi).
-\]
-Each $q_j$ is genuine and equivalent to $\varphi$: the lower competitor $\varphi-bj$ and the defining inequality give
-$\varphi-bj\leq q_j\leq\varphi$.
-The sequence decreases. If its limit were $-\infty$, the compactness and Hartogs lemma for normalized quasi-plurisubharmonic functions would give $\sup_Xq_j\to-\infty$.
-
-Set $C_j=\{b^{-1}q_j+(1-b^{-1})\varphi=u_j\}$. The contact theorem and positivity of mixed products give
-\[
- \mathrm{MA}_\theta(q_j)
- \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(u_j).
-\]
-On $C_j\cap\{q_j\leq-bk\}$, the inequality $\varphi\leq0$ implies $u_j\leq-k$, hence $u\leq-k$. For $j>k$, locality on $\{u>-k\}\subset\{u>\varphi-j\}$ therefore yields
-\[
- \begin{split}
- \int_{\{q_j\leq-bk\}}\mathrm{MA}_\theta(q_j)
- &\leq b^n\int_{\{u\leq-k\}}\mathrm{MA}_\theta(u_j)\\
- &\leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\int_{\{u>-k\}}\mathrm{MA}_\theta(u)\right).
- \end{split}
-\]
-If $\sup_Xq_j\to-\infty$, the domain on the left is all of $X$ for large $j$. It follows, on letting $k\to+\infty$, that
-\[
- \underline{\operatorname{vol}}_\theta(\varphi)
- \leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\int_X\mathrm{MA}_\theta(u)\right).
-\]
-The same collapse would hold with any $u'\simeq u$ in place of $u$: a competitor for either target gives one for the other by a constant translation. Repeating the argument and taking the supremum of $\int_X\mathrm{MA}_\theta(u')$ gives
-\[
- \underline{\operatorname{vol}}_\theta(\varphi)
- \leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\overline{\operatorname{vol}}_\theta(u)\right)=0,
-\]
-a contradiction. Thus $Q_b(u,\varphi)$ is genuine for every $b$. The argument is the full-volume case of \cite[Lemma 3.1]{XL26}; the proof uses bounded mass and the displayed positive lower volume, without a separate global positive volume hypothesis.
-\end{proof}
-
-\section{Which model condition?}
+\section{Model references}
 
 \begin{proposition}\label{prop:relative-envelope-equality}
 For a big background, if $u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, then
@@ -465,7 +339,7 @@ The relation $u\preceq\varphi$ gives one inequality. For $a\in(0,1)$ choose $h_a
 Indeed, their convex combination is below zero and is more singular than $u$; taking the two upper envelopes preserves the inequality by local regularization. For every potential $h$, $P_\theta[h]$ has supremum zero, because it lies above $h-\sup_Xh$ and below zero. The normalized $L^1$ bound therefore applies uniformly to $P_\theta[h_a]$. Along $a\to1$ the left-hand side tends to $P_\theta[\varphi]$ in $L^1$. The inequality passes to the limit almost everywhere and then everywhere for the canonical representatives. This proves the other inequality.
 \end{proof}
 
-Two additional positivity conditions accompany envelope fixed points in the literature. We state them separately.
+We use an envelope condition to leave room below the reference singularity without imposing a uniform mass bound.
 
 For semipositive big $\theta$, the condition used by Alehyane--Lu--Salouf is
 \begin{equation}\label{eq:als-model-condition}
@@ -473,16 +347,121 @@ For semipositive big $\theta$, the condition used by Alehyane--Lu--Salouf is
  P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
  \quad\text{for some }0<\varepsilon<1.
 \end{equation}
-The second requirement leaves room to realize the singularity below a smaller background. For a big, possibly non-semipositive form under bounded mass, Li uses
-\begin{equation}\label{eq:li-model-condition}
- P_\theta[\varphi]=\varphi,\qquad
- \underline{\operatorname{vol}}_\theta(\varphi)>0.
-\end{equation}
-We refer to the formulas when invoking their theorems, rather than silently treating the two meanings of ``model'' as interchangeable.
+The second requirement leaves room to realize the singularity below a smaller background. Under bounded mass, a different model condition uses positive lower volume; see \eqref{eq:li-model-condition}. We keep these conditions distinct.
 
-In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity of the mass of every potential equivalent to $\varphi$, by \cite[Proposition 2.10 and the discussion after Definition 2.13]{ALS26}. This is individual positivity; a positive infimum over all such potentials is a stronger assertion. Under bounded mass, positive lower volume implies the smaller-background condition by \cite[Proposition 2.11]{ALS26}. That paper does not assume bounded mass for its same-singularity-type equations with $L^p$ data.
+In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity of the mass of every potential equivalent to $\varphi$, by \cite[Proposition 2.10 and the discussion after Definition 2.13]{ALS26}. This is individual positivity; a positive infimum over all such potentials is a stronger assertion. That paper does not assume bounded mass for its same-singularity-type equations with $L^p$ data.
 
 The model conditions also clarify a limitation of raw mass. On a manifold without bounded mass, \cref{thm:infinite-mass-witness} gives potentials with infinite mass and trivial multiplier ideals at every weight. Meanwhile every envelope fixed point for a semipositive big background has finite mass. Thus multiplier ideals alone do not control the unnormalized mass of a representative. Any extension of the source book's $\mathcal I$-goodness equivalences must account for the envelope and the chosen volume invariant.
+
+\section{Room below the reference potential}
+\label{sec:relative-envelope-room}
+
+Throughout this section, $X$ is connected and compact, $\theta\geq0$ is smooth and big, and $\varphi$ satisfies \eqref{eq:als-model-condition}. Fix $0<\varepsilon<1$ with $P_{\varepsilon\theta}(\varphi)$ genuine. Write
+\[
+ \mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi),
+ \qquad \mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0),
+ \qquad \mu_u=\mathrm{MA}^{\mathrm{ext}}_\theta(u).
+\]
+The notation $Q_b$ refers to the convex competitor definition in \cref{def:relative-envelope-class}; differences at common poles are never assigned artificial values. No positive lower-volume hypothesis is imposed in this section.
+
+\begin{lemma}\label{lem:relative-stretch-closure}
+If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then $Q_b(u,\varphi)\in\mathcal E_\varphi$ for every $b\geq1$. More generally, if $u,w\in\mathcal E_\varphi$ and $u\leq w$, then $Q_b(u,w)\in\mathcal E_\varphi$.
+\end{lemma}
+\begin{proof}
+Put $u_t=Q_t(u,\varphi)$. Fix $s\geq1$ and choose $t>bs$. The defining inequality for $u_t$ shows that
+\[
+ \frac bt u_t+\left(1-\frac bt\right)\varphi
+ \leq bu-(b-1)\varphi.
+\]
+The left side is $\theta$-plurisubharmonic, so it is at most $u_b$. Consequently
+\[
+ \frac{bs}{t}u_t+\left(1-\frac{bs}{t}\right)\varphi
+ \leq s u_b-(s-1)\varphi.
+\]
+This supplies a competitor for every $s$. Also $u_b\leq u\leq\varphi$, which supplies the singularity-order condition. All inequalities are interpreted off the pole sets and then as inequalities between the corresponding convex combinations of canonical potentials.
+
+For the second assertion choose a constant $C$ such that $u-C\leq\varphi$ and $w-C\leq\varphi$. Translation reduces to $u,w\leq\varphi$. The obstacle for $Q_b(u,w)$ lies above that for $Q_b(u,\varphi)$ and below $u$, because $u\leq w\leq\varphi$. Thus
+\[
+ Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi.
+\]
+Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership.
+\end{proof}
+
+\begin{lemma}\label{lem:relative-difference-envelope}
+If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then
+\[
+ w=P_\theta(u-\varphi)\in\mathcal E_0,
+ \qquad w\leq0,
+ \qquad w+\varphi\leq u.
+\]
+\end{lemma}
+\begin{proof}
+Since $\varphi\leq0$, the potential $u$ is a competitor for the obstacle $u-\varphi$ away from its pole set. The envelope is genuine, bounded above by zero, and satisfies the asserted sum inequality by canonical representatives. For $b\geq1$, let $h_b=Q_b(u,\varphi)$. Then
+\[
+ h_b\leq bu-(b-1)\varphi\leq b(u-\varphi).
+\]
+Semipositivity makes $b^{-1}h_b$ a $\theta$-plurisubharmonic competitor for $w$. Hence $h_b\leq bw$, supplying a competitor for $P_\theta(bw)$ for every $b$. This is exactly $w\in\mathcal E_0$.
+\end{proof}
+
+\begin{proposition}\label{prop:relative-finite-rooftops}
+The rooftop of any finite collection of members of $\mathcal E_\varphi$ is genuine and belongs to $\mathcal E_\varphi$.
+\end{proposition}
+\begin{proof}
+It suffices first to produce a genuine rooftop for two members $u,v$. Translate them so that $u,v\leq\varphi$, and let $w_u,w_v\in\mathcal E_0$ be the preceding difference envelopes. Their rooftop $z=P_\theta(w_u,w_v)$ is genuine: the potential
+\[
+ \tfrac12P_\theta(2w_u)+\tfrac12P_\theta(2w_v)
+ \leq w_u+w_v\leq\min(w_u,w_v)
+\]
+is a competitor. For each $b\geq1$, the same argument with $2b$ in place of $2$ gives a $\theta$-plurisubharmonic $h_b\leq b\min(w_u,w_v)$. Therefore $b^{-1}h_b\leq z$ and $P_\theta(bz)$ is genuine. Thus $z\in\mathcal E_0$.
+
+Set $\delta=1-\varepsilon$ and $q=P_{\varepsilon\theta}(\varphi)$. Since $P_\theta(z/\delta)$ is genuine, the potential
+\[
+ \delta P_\theta(z/\delta)+q
+ \leq z+\varphi\leq\min(u,v)
+\]
+is a genuine $\theta$-plurisubharmonic competitor. This proves nonemptiness of the rooftop for any pair in the class.
+
+To prove class membership, put $u_b=Q_b(u,\varphi)$ and $v_b=Q_b(v,\varphi)$. They belong to $\mathcal E_\varphi$ by \cref{lem:relative-stretch-closure}, so the just-proved nonemptiness gives $r_b=P_\theta(u_b,v_b)$. If $p=P_\theta(u,v)$, then
+\[
+ b^{-1}r_b+(1-b^{-1})\varphi\leq p.
+\]
+Indeed, the left side is a $\theta$-plurisubharmonic competitor below both $u$ and $v$. This is a competitor for the defining $b$-condition of $p$. Since $p\leq u\preceq\varphi$, it proves $p\in\mathcal E_\varphi$. Iterate to handle a finite collection. These arguments reconstruct \cite[Propositions 3.5--3.7]{ALS26} in the precise forms needed here.
+\end{proof}
+
+\begin{lemma}\label{lem:smaller-background-mass-lower}
+If $0<a<1$ and $q=P_{a\theta}(u)$ is genuine for $u\in\PSH(X,\theta)$, then
+\[
+ \int_X\mu_u\geq(1-a)^n v_-(\theta).
+\]
+The mass on the left is also strictly positive individually, even if $v_-(\theta)=0$.
+\end{lemma}
+\begin{proof}
+The obstacle $u-q$ is nonnegative away from the poles. The bounded-below envelope lemma makes
+$p=P_{(1-a)\theta}(u-q)$ bounded. Its measure is carried by $D=\{p+q=u\}$, and $p+q\leq u$ everywhere. Positivity of mixed products and ordered contact imply
+\[
+ \mathrm{MA}_{(1-a)\theta}(p)
+ \leq\mathbf1_D\mathrm{MA}^{\mathrm{ext}}_\theta(p+q)
+ \leq\mathbf1_D\mu_u.
+\]
+All assertions are first restricted away from the poles. Integrating and writing $p=(1-a)\widetilde p$ proves the lower bound from the definition of $v_-(\theta)$. The bounded potential $p$ has strictly positive mass by \cref{prop:big-noncollapsing}, since $(1-a)\theta$ is big. This proves the individual assertion as well.
+\end{proof}
+
+\begin{theorem}\label{thm:relative-uniform-mass-lower}
+Every $u\in\mathcal E_\varphi$ admits a genuine $P_{(\varepsilon+\delta)\theta}(u)$ whenever $0<\delta<1-\varepsilon$. Consequently
+\[
+ \int_X\mu_u\geq(1-\varepsilon)^n v_-(\theta),
+ \qquad \int_X\mu_u>0.
+\]
+The first bound is uniform over the class; the second is an individual assertion. Neither asserts finiteness.
+\end{theorem}
+\begin{proof}
+Translate $u$ below $\varphi$ and use $w\in\mathcal E_0$ from \cref{lem:relative-difference-envelope}. The potential
+\[
+ P_{\varepsilon\theta}(\varphi)+\delta P_\theta(w/\delta)
+ \leq\varphi+w\leq u
+\]
+has background $(\varepsilon+\delta)\theta$. It supplies the asserted competitor. Apply \cref{lem:smaller-background-mass-lower} and let $\delta\downarrow0$ for the uniform estimate. The individual conclusion follows by taking any one such $\delta$. This is the lower-volume mechanism of \cite[Proposition 3.8]{ALS26}.
+\end{proof}
 
 \section{Infinite mass inside the envelope class}
 

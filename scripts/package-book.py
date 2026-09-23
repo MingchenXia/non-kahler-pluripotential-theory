@@ -25,6 +25,7 @@ selected.update(p for p in (book / "style").iterdir() if p.is_file())
 for name in (
     "book/references.bib", "book/latexmkrc", "scripts/build-book.sh",
     "scripts/build-numa-note.sh", "PLAN.md", "BLUEPRINT.md", "CHANGELOG.md", "research/comparison.md",
+    "AGENTS.md", "research/STATUS.md",
     "research/audits/cover-revision-2026-09-21.json",
     "research/proof-obligations.md", "research/literature.md", "research/READING-GUIDE.md",
     "research/source-outline.md", "research/source-manifest.json",
@@ -187,6 +188,8 @@ for name in (
     "research/editorial/positive-ideal-map.json",
     "research/editorial/positive-ideal-review.md",
     "research/editorial/curve-atomic-map.json",
+    "research/editorial/mass-structure-map.json",
+    "research/editorial/mass-structure-review.md",
     "research/editorial/curve-atomic-review.md",
     "research/editorial/analytic-parameter-edits.json",
     "research/editorial/section_entropy_variational.tex",
@@ -286,133 +289,17 @@ for submission in (root / "research/rethlas/verification/inputs").glob("*.md"):
     if match and match.group(1) in completed_runs:
         selected.add(submission)
 
-readme = """# Singularities in Hermitian pluripotential theory
+readme = (root / "README.md").read_text() + """
 
-Editable source of an AI-assisted mathematical working draft prepared for Mingchen Xia.
-The manuscript retains the supplied SGPT template and notation. It develops the main
-Hermitian framework without a bounded mass assumption, with explicit hypotheses for
-special regimes. This is not an author-approved revision or a novelty certification.
+## Source archive
 
-Build with a TeX distribution providing latexmk, pdfLaTeX, BibTeX, the newtx fonts,
-and the packages used in book/preamble.tex:
-
-    bash scripts/build-book.sh
-    bash scripts/build-numa-note.sh
-
-Outputs appear in output/pdf/. The second file is a standalone proof of the
-hypersurface nonuniqueness constructions, including a density
-with exactly quadratic zeros. It shares the same
-proof source as the book.
-
-Read research/READING-GUIDE.md for three routes through the manuscript,
-research/comparison.md for the disposition of every original-book subject and
-research/proof-obligations.md for the exact proof boundary. The semipositive prescribed-reference general-measure
-equations are reconstructed under positive lower volume, with no bounded mass
-hypothesis. Minimal ordinary-type Lp equations for ANY smooth big background are
-now reconstructed without BMP or PVP, using strict pole-barrier comparison,
-resolution and a singular Gauduchon trace estimate. Minimal-reference GENERAL
-non-pluripolar measure existence for any smooth big background is also reconstructed
-under BMP and positive lower minimal volume, through higher moments, local smoothing
-and fixed-dominator limits. Both metric volume properties imply those hypotheses.
-Weighted addition in an arbitrary prescribed class is also reconstructed, with a
-common relative lower bound permitting different approximating singularity types
-and an infinite undamped weighted reference measure. The arbitrary-model supersolution construction, both general-measure equations,
-unrestricted addition and the Lp ordinary-type refinement are now reconstructed.
-BMP and positive lower model volume imply metric PVP, so the hypothesis formulation
-does not enlarge the cited regime. The main extension beyond BMP and the distinct
-geometry/singularity research questions remain open in the manuscript.
-
-Section6.8 refines the infinite-mass witness to a full current with integrable
-complex Hessian coefficients. Smooth current approximants converge in coefficient
-L1 while their top-degree masses diverge. Small multiples have full Gauduchon traces
-converging in total variation and still have infinite determinant integral and
-extended mass. The pointwise determinant is compared with, not identified with,
-the non-pluripolar measure. Chapters4–7 explain how finite damping supplies
-nonlinear information beyond finite traces, without BMP.
-
-Section16.6 proves that ordinary envelopes of dyadic analytic regularizations decrease to the ideal envelope, without BMP, closedness or bigness. This gives a specific approximation criterion for equality of ordinary and multiplier-ideal envelopes. In a Hermitian background, rational scaling keeps the approximation in the same background and proves analytic density in the entire elementary ideal-type metric space. A topology on arbitrary ordinary singularity types and a general volume characterization remain open.
-
-Section28.6 proves exact multiplier-ideal and partial-kernel transformation formulas under a modification, including the relative canonical bundle and its Jacobian metric. Closed-background ideal envelopes and non-pluripolar measures also descend. With a Kähler modification and positive closed-curvature mass, the original SGPT equilibrium theorem gives kernel-measure and determinant-functional limits. This geometric hypothesis implies BMP; the general birational identities require no mass bound. The lower-dimensional Hopf limit and general lower Fubini–Study questions remain distinct.
-
-Sections28.10–28.11 treat non-descended isolated logarithmic selecting weights on fibrations. Exact base point-vanishing spaces differ from base multiplier-ideal spaces by O(m^(q-1)) dimensions, giving kernel and determinant limits under a positive-mass base hypothesis. The one-point Hopf model has explicit binomial kernels, an L1 and local-uniform potential limit, and total-variation measure convergence. Moving the pole along its fiber preserves every selected space, even with positive intrinsic growth; the limit can lose the original ideal type. These arguments require no BMP on the total space.
-
-Sections20.8–20.9 give exact higher-dimensional traces over an ambient curve problem under a smooth connected-fiber holomorphic submersion. A Green pullback realizes every compact-model divisor order and its ordinary type is independent of a sufficiently large background. A product formula for extended Monge–Ampère measures includes infinite total mass and gives separated Lp equations. Products with a factor failing BMP have finite- and infinite-mass representatives with all the same multiplier ideals and exact trace numbers. Corollary24.5.1 combines the Gauduchon mass bound with a smooth residual current to determine a canonical ordinary type on each fixed model; this alone does not recover the trace data on further modifications.
-
-Chapters 29–31 develop ordinary Bott–Chern loci, the full supplied transcendental
-Nakamaye proof, and locally conformally Kähler geometry. The weak nef-difference
-criterion is proved through Monge–Ampère equations and Gauduchon duality. Two local
-auxiliary lemmas allow Hermitian reference metrics, retaining the required closed
-background; the main numerical theorem remains Kähler. A complete reconstructed
-Chern–Ricci-flat Gauduchon rigidity proof is also included.
-Lee–Gauduchon strict duality and bimeromorphic invariance are reconstructed in
-Section31.8, using classical analytic weak factorization. Strict tests exclude the
-full kernel. The explicitly constructed Calabi–Eckmann example has zero cone but
-no strongly Gauduchon or balanced metric, exhibiting the limitation of this
-invariant. These results require no BMP or LCK assumption. Transverse Vaisman
-existence remains an explicit external input.
-
-Checkpoint30 adds continuous Bott–Chern representatives and exceptional trace divisors in Sections24.8–24.9, an affine residual-class identity in Section25.2, and the compact cone base in Proposition29.1.2. Section27.15 reconstructs the elliptic threefold with zero lower mass but a balanced metric of finite upper mass. Section13.22 proves the equivalence between positive lower mass and universal normalized non-pluripolar solvability, without BMP; it constructs obstructing positive L1 densities when lower mass vanishes. Fixed-density volumes, arbitrary individual measures and unbounded exponential equations remain distinct. All five bounded audits passed, and the exact integration map records editorial changes.
-
-Checkpoint31 adds the elliptic closed-current cone and potential/section descent, the exact boundary-volume orders, and the smooth limits of minimizing Gauduchon forms with possibly unbounded metric roots in Section29.7. All three bounded audits passed. Chapters1–5 have received a systematic correctness and exposition pass, with exact scope and pending chapters in the chapter-review ledger. The integration map and build snapshot record checked sources and visual review.
-
-Checkpoint32 integrates the Chapters6–9 systematic correctness and exposition pass: decreasing contact approximation, a streamlined tail criterion, and reuse of the established elliptic local inverse. The technical Hopf and smooth-equation estimates are retained. The chapter ledger records completed Chapters1–9 and remaining work; this root review is not an independent mathematical certification.
-
-Checkpoint33 integrates the complete Chapters10–12 root review. Repeated comparison/energy proofs are shortened, the nonuniqueness examples retain their technical estimates, and two elementary envelope statements lose unused bigness assumptions. Extended volume definitions are separated from the hypotheses for finiteness and comparison. Two notation corrections also appear in the standalone note. The chapter ledger records completed Chapters1–12 and the partial Chapter13 pass.
-
-Checkpoint34 integrates the full Chapter13 review: earlier compactness replaces repeated regularity-based compactness, scalar tails and envelope bounds are streamlined, and cutoff/regularization language is precise. Extended volume invariance is distinguished from conditional comparison. The ledger records completed Chapters1–13 and the partial Chapter14 pass; this remains a working manuscript.
-
-Checkpoint35 integrates the complete Chapters14–15 review. Repeated normalized-exponential limits share one proved lemma, big-background compactness states the exact prerequisites for proof reuse, and adjoint stability uses its earlier proposition. No existence/uniqueness assumptions are changed. Chapters1–15 have received this systematic root pass; later chapters and research remain incomplete.
-
-Checkpoint36 records the full root reread of Chapters16–26 and all their inputs. Repeated divisorial estimates for restriction, addition and self-trace share earlier proved results, and the trace comparison lemma comes before its applications. The ledger now covers Chapters1–26; the remaining chapters, appendix and research are incomplete.
-
-Checkpoint37 completes the root reread of Chapters 27–29 and all twenty inputs. Three proof simplifications reuse established divisorial, envelope and descent results without changing theorem scope. The ledger now covers Chapters 1–29; Chapters 30–32, the appendix and research remain incomplete.
-
-Checkpoint38 completes the first systematic root reread of all 32 chapters, every nested proof input and the appendix. Four edits supply a residual-nefness proof and reuse established divisorial, cone and local ideal arguments. All exact hypotheses remain explicit. The review and reversible map record the scope; this is not whole-book certification. Research and further focused checks remain active.
-
-Checkpoint39 adds the attained individual-L1 subsolution threshold and a counterexample to sufficiency of smooth comparison tests in Section13.23. The bounded audit passed; exact threshold equations and their singularity class remain an explicit problem in Section32.2. The follow-up topology note is unaudited and not included in the book. The compiled manuscript has653 pages.
-
-Checkpoint40 extends the exact Gauduchon formula to integrable densities, shortens the threshold topology proofs, separates the roles of upper/lower mass in the root space, and constructs greatest exponential solutions from subsolutions. Both bounded audits passed; exact zero-exponent equations and normalized-potential capacity convergence remain open. The compiled book has661 pages. The further root-space tail note is unaudited and not part of the book.
-
-Checkpoint41 identifies the bounded-root closure by uniform tails and proves integrable-current attainment, supporting-probability formulas and trace saturation at the subsolution threshold. Smooth dual attainment gives rigidity of threshold subsolutions. Both bounded audits passed; the preceding trace audit's stale dependency-status finding is preserved and resolved by run02. The compiled book has665 pages. Scalar-rate and divisorial working notes are explicitly unaudited and not book content. No exact rough equation or singular-current wedge is inferred.
-
-Checkpoint42 adds the continuity characterization of root tails, divisorial coefficient loss and geometric restrictions on threshold subsolutions. The weak closure of smooth tests is distinguished from all normalized Gauduchon currents. Two bounded audits passed after the explicit nonzero-density restatement. The compiled book has669 pages. Separate research-only drafts about positive-lower-mass threshold identification and nef divisors are not part of this manuscript checkpoint.
-
-Checkpoint43 integrates the passed positive-lower-mass threshold identification and subsequential capacity convergence, and the zero-volume constraint on nef divisors at the threshold. The compiled book has671 pages. These are short deductions from existing chapter results. The exact equation with vanishing lower mass, whole-family convergence and divisor realization remain separate questions; no BMP is imposed.
-
-Checkpoint44 adds a checked quantitative exponential-damping modulus and scalar/total-variation error bounds. The compiled book has673 pages. A separate smooth-dual regularity draft is explicitly unreviewed and is not book content. No general zero-lower-mass exact equation or capacity conclusion is inferred from the error modulus.
-
-Checkpoint45 proves smooth exact threshold equations under smooth strictly positive dual attainment in dimension at least two, without mass properties or root tails. The compiled book has675 pages. A separate closed-background and nonclosed zero-density sharpness draft is explicitly unreviewed and is not book content.
-
-Checkpoint46 adds the checked uniform exponential-limit consequence, closed-background characterization and nonclosed zero-density construction under smooth dual attainment. The book has679 pages. General singular-current regularity, vanishing-lower-mass individual equations and degenerate-density selection remain open outside the stated regimes.
-
-Checkpoint47 revises Chapter13 proof economy and the distinction between scalar, measure and potential limits. It has679 pages and a focused root review, with no new independent theorem audit. The earlier proof boundaries remain.
-
-Checkpoint48 extends exact threshold equations to an assumed smooth semipositive Gauduchon maximizer positive outside a proper analytic set. Differences are divisorial, with a Bott--Chern relation and uniqueness within multiplier-ideal classes. Its bounded audit passed. The681-page build preserves the general singular-current and divisor-realization questions.
-
-Checkpoint49 strengthens and shortens Section27.11.4: maxima and Gauduchon Stokes prove uniqueness of all threshold subsolutions under the same smooth semipositive dual hypothesis. No ideal class or divisor-class independence is prescribed. The separate bounded audit passed; the681-page source was checked. The exploratory polytope draft remains unaudited research history outside the book.
-
-Checkpoint50 adds two audited consequences under smooth semipositive dual attainment: whole-family normalized exponential L1 convergence with a common lower barrier and a quantitative scalar bound, and independence of positive pole-divisor classes. The683-page build has synchronized Chapter13/32 interfaces. No capacity or global regularity conclusion across the degeneracy set is claimed.
-
-Checkpoint51 adds audited quantitative convergence for full Gauduchon traces and local coefficient currents, and polishes Chapters18/19 with a shorter local Bergman L1 proof and explicit pole/restriction examples. The685-page build retains the general capacity and global regularity questions.
-
-Checkpoint52 adds an audited conditional capacity corollary with an explicit smaller-background envelope hypothesis. Chapters20–22 and every nested input were reread; the685-page build clarifies the nonzero section-space case and trace notation while preserving the general open questions.
-
-Primary-source versions and checksums are in research/literature.md and
-research/sources/manifest.json. Copyrighted reference PDFs are not bundled. Bounded
-Rethlas audit submissions and reports are retained under research/rethlas/verification/.
-Historical adverse reports are preserved: common_barrier_compactness_01 is resolved
-by common_barrier_repair_01; envelope_testcurves_01 by envelope_testcurves_connected_01;
-hopf_reduction_01 by hopf_reduction_reference_repair_01; geometry_problem_connections_01
-by geometry_problem_connections_repair_01; closed_loci_lck_connections_01 by
-closed_loci_lck_connections_repair_01. Audit premises and scope remain part of each
-report. The Nakamaye integration audit accepted all mathematics but recorded a stale
-map checksum; that metadata-only finding was repaired and deterministically checked
-in research/editorial/nakamaye-integration-review.md. Its adverse report is preserved.
-A passed report is not formal verification.
-
-This archive includes sources actually read by the two completed builds. Unincluded
-working drafts, generated TeX files, downloaded reference PDFs and verifier internals
-are excluded. MANIFEST.json records every packaged file's checksum.
+This archive contains the manuscript sources read by the two completed builds,
+selected research and historical review records, and a checksum manifest.
+The temporarily excluded Nakamaye chapter is preserved in the private Git
+repository and earlier archives; its three inactive book files are omitted here.
+Historical review records keep their checkpoint-specific chapter numbers.
+Downloaded full texts, the private Popovici working reference and verifier
+runtime state are excluded. MANIFEST.json records packaged checksums.
 """
 payloads = {str(p.relative_to(root)): p.read_bytes() for p in sorted(selected)}
 payloads["README.md"] = readme.encode()

@@ -18,13 +18,19 @@ Checkpoint28 develops non-descended isolated logarithmic selecting weights. Exac
 
 Checkpoint29 polishes Chapters16,20,24 and32. It constructs exact curve-fibration traces and product measures without BMP, proves all-weight ideal pullback by submersions, and identifies the ordinary type of a fixed finite-mass divisorial current. The curve-fibration type has addition and positive homogeneity. Product examples preserve the exact trace and all multiplier ideals while changing finite mass to infinite mass. General trace realization, compatibility and ordinary-type topology remain open.
 
-Current priorities are to polish the exposition chapter by chapter and develop the connections with non-Kähler geometry. The supplied uniqueness manuscript is integrated with proofs; differential d is upright and environment headings use standard names. At the user's request, results from the supplied NUMA article are incorporated directly without formal citation; provenance is retained in the research records. The Boucksom and Ornea–Verbitsky material now forms two additional chapters. The supplied general null-locus proof is now fully adapted as Chapter 30, with a reconstructed nef-difference proof and separately checked Hermitian auxiliary lemmas. Remaining recent external inputs and full chapter-by-chapter polishing are still writing obligations. No additional approval is required for these authorized revisions.
+Current priorities are to polish the exposition chapter by chapter and develop the connections with non-Kähler geometry. The supplied uniqueness manuscript is integrated with proofs; differential d is upright and environment headings use standard names. At the user's request, results from the supplied NUMA article are incorporated directly without formal citation; provenance is retained in the research records. The Boucksom and Ornea–Verbitsky material now forms two additional chapters. The supplied general null-locus proof was adapted as Chapter 30. On 22 September the user asked to hide that chapter temporarily; its sources and prior reviews are preserved, but it is excluded from the active book. Remaining recent external inputs and full chapter-by-chapter polishing are still writing obligations. No additional approval is required for these authorized revisions.
 
 The user requires the standard notation $P_\theta[u]_{\mathcal I}$ for the multiplier-ideal envelope throughout the book; do not reintroduce the shorthand $Q_\theta[u]$.
 
 Before using any result of Popovici, first consult the relevant entries in the user-supplied `/Users/mingchen/Downloads/main 15.pdf`, then independently check the complete proof and its dependencies. The supplied document is a private working reference, not material to integrate into the book. Its assessments are evidence to examine, not automatic mathematical premises. Record the scope of the completed proof check before relying on the result.
 
 The user additionally requires a systematic pass through every already written part: verify correctness and readability, and simplify proofs without weakening their hypotheses or concealing dependencies. New results must not displace this whole-manuscript obligation. Record the actual chapter-level scope of each pass.
+
+## User steering, 22 September 2026: general theory and separate mass hypotheses
+
+Temporarily exclude the former Chapter 30, “A transcendental Nakamaye theorem”, from the compiled book and contents. Preserve its source and history; remove active references promising its proof.
+
+Develop the main narrative as generally as possible. Collect the substantial theory requiring bounded mass, positive lower mass or related uniform mass conditions in a separate part. Keep general extended-volume definitions, envelope constructions, individual-density criteria, characterizations of mass properties and counterexamples in the main narrative. Distinguish assumptions on one datum or reference from a mass property imposed uniformly on all potentials. Reorganization must preserve hypotheses and proof dependencies; it does not strengthen the moved results.
 
 ## Objective
 

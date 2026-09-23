@@ -1,0 +1,62 @@
+\section{Representing non-pluripolar measures}
+\label{sec:bounded-measure-carrier}
+
+A finite non-pluripolar measure can be written as an integrable density with respect to the Monge--Amp\`ere measure of a bounded potential. The construction below uses semipositivity and bigness, with no uniform upper or lower mass bound. We then retain a prescribed ordinary type in \cref{sec:relative-measure-carrier}, allowing the resulting reference measure to have infinite mass.
+
+\begin{lemma}\label{lem:bounded-measure-carrier}
+Let $\theta\geq0$ be smooth and big, and let $\mu$ be a finite non-pluripolar measure on $X$. There are a bounded $\psi\in\PSH(X,\theta)$ and a nonnegative
+$f\in L^1(\mathrm{MA}_\theta(\psi))$ such that
+\[
+ \mu=f\,\mathrm{MA}_\theta(\psi).
+\]
+No upper or lower volume property is assumed.
+\end{lemma}
+\begin{proof}
+We first specify the local input. Cegrell's decomposition theorem \cite[Theorem 6.3]{Ceg98} says that a positive compactly supported measure $\tau$ on a bounded hyperconvex domain in $\mathbb C^n$, $n\geq2$, is
+\[
+ \tau=g(\ddc v)^n+\tau_s,
+ \qquad v\in\mathcal E_0,\qquad
+ 0\leq g\in L^1((\ddc v)^n),
+\]
+where $\tau_s$ is carried by a pluripolar set. Here the local class $\mathcal E_0$ consists of bounded negative plurisubharmonic functions with zero boundary values and finite total Monge--Amp\`ere mass. This local notation is different from the global envelope class $\mathcal E_{\mathrm{env}}(X,\theta,0)$. If $\tau$ is non-pluripolar, $\tau_s=0$, so $\tau\ll(\ddc v)^n$. A change in the normalization of $\ddc$ only changes $g$ by a positive constant.
+
+For completeness the required local assertion on a disk also follows from the Green potential. Let $a\leq0$ be the Green potential of a finite compactly supported non-polar measure $\tau$, normalized by $\ddc a=\tau$. Then $v=\mathrm{e}^a$ is bounded and subharmonic, and
+\[
+ \ddc v\geq \mathrm{e}^a\tau.
+\]
+To justify the inequality, set $a_M=\max(a,-M)$. The bounded subharmonic chain rule gives
+$\ddc \mathrm{e}^{a_M}\geq \mathrm{e}^{a_M}\ddc a_M$, which on $\{a>-M\}$ is at least $\mathrm{e}^a\tau$. Let $M\to\infty$, using decreasing convergence of the bounded subharmonic functions $\mathrm{e}^{a_M}$ and monotone convergence on the right. Since $\{a=-\infty\}$ is polar, $\mathrm{e}^a>0$ almost everywhere for $\tau$. Thus $\tau\ll\ddc v$. The bounded chain inequality itself follows by local convolution and passage to the distributional limit. We use only this absolute continuity assertion in every dimension.
+
+Choose a strict potential $\rho$ with analytic singularities, smooth off its analytic pole set $Z$, and
+\[
+ \theta+\ddc\rho\geq\kappa\omega,\qquad\kappa>0.
+\]
+Such a potential is available by strict regularization. Cover $X\setminus Z$ by countably many compact inner coordinate balls $K_i$, with larger coordinate balls $B_i\Subset X\setminus Z$. Apply the local assertion to $\mu_i=\mathbf1_{K_i}\mu$ on $B_i$. After a positive affine change of its bounded local potential, we obtain $v_i\in\PSH(B_i)$ with
+\[
+ 1\leq v_i\leq2,\qquad
+ \mu_i\ll(\ddc v_i)^n.
+\]
+Zero pieces may be omitted. Pick a smooth $\chi_i$ on $B_i$ which is zero near $K_i$ and $-3$ near $\partial B_i$. For a sufficiently small $\epsilon_i>0$,
+\[
+ \theta+\ddc\bigl(\rho+\epsilon_i(v_i+\chi_i)\bigr)
+ \geq\tfrac\kappa2\omega+\epsilon_i\ddc v_i.
+\]
+Inside $B_i$ take the maximum of this potential with $\rho$, and extend it by $\rho$ outside $B_i$. The two pieces glue because $v_i+\chi_i\leq-1$ on a boundary collar. Finally take the maximum with $-C_i$, where $C_i$ is large enough that this last maximum does not change the function near $K_i$. Constants are $\theta$-plurisubharmonic since $\theta\geq0$. We have obtained a global bounded $q_i\in\PSH(X,\theta)$ which agrees with $\rho+\epsilon_i v_i$ near $K_i$. Positivity of bounded mixed products therefore gives
+\[
+ \mathrm{MA}_\theta(q_i)\geq\epsilon_i^n(\ddc v_i)^n
+ \quad\hbox{near }K_i,
+ \qquad \mu_i\ll\mathrm{MA}_\theta(q_i).
+\]
+
+Translate each $q_i$ so that $q_i\leq0$, and choose positive numbers $t_i$ with
+\[
+ \sum_i t_i<1,\qquad
+ \sum_i t_i\|q_i\|_\infty<\infty.
+\]
+The uniformly convergent sum $\psi=\sum_i t_iq_i$ is bounded and $\theta$-plurisubharmonic. For a fixed index $i$ it is a convex combination
+$\psi=t_iq_i+(1-t_i)w_i$ with a bounded $w_i\in\PSH(X,\theta)$: use the remaining terms and the unused weight on the constant zero potential. Hence
+\[
+ \mathrm{MA}_\theta(\psi)\geq t_i^n\mathrm{MA}_\theta(q_i).
+\]
+Every $\mu_i$ is absolutely continuous with respect to this single finite measure. The sets $K_i$ cover $X\setminus Z$, and $\mu(Z)=0$. Thus $\mu\ll\mathrm{MA}_\theta(\psi)$. The Radon--Nikodym theorem supplies the asserted integrable density. If $\mu=0$, simply take $\psi=0$ and $f=0$.
+\end{proof}
