@@ -1,0 +1,251 @@
+Run_id: degenerate_selected_kernel_01
+
+Statement: Independently verify all statements and proofs in the following complete LaTeX section, in reading order. This is an exact one-variable weighted entire-function kernel model with weight |z|^{2r}, integer r>=1, and selecting ideal (z^q). It is not a compact-manifold localization theorem and makes no novelty claim. Check exact normalization, uniformity in q in the Poisson comparison, floor/ceiling effects, the potential limit on the critical circle, local L1 and total variation convergence, the obstacle characterization and its pole atom, and the transition for arbitrary growing orders.
+
+Accepted classical inputs: Stirling's logarithmic Gamma expansion and Gamma-ratio expansion with O(1/x) remainder on the positive real axis (DLMF 5.11.1, 5.11.13 and 5.11.15); elementary weighted Bergman Hilbert-space theory, submean and Cauchy inequalities, Parseval, Tonelli, dominated convergence, Cauchy--Schwarz, Chebyshev, the subharmonic maximum principle and removable isolated singularities, and Poincare--Lelong with dd^c log|z|^2=delta_0. The elementary Poisson Gaussian limit is proved below, not taken as an additional black box. Check all transitions using these inputs, including gamma-ratio uniformity over k>=q and the distinction between the full envelope current and its non-pluripolar measure. No recent paper, Popovici theorem or mass property is an accepted input.
+
+Follow the local verification AGENTS.md and its required skills. Use the normal verification tools and persist the strict report under this fresh run_id. Do not edit the submitted input, the book, any prior run, or the Rethlas installation. Book macros: \ddc=i partial barpartial/(2pi); \cref refers to the semantic labels defined in this section.
+
+Proof:
+
+\section{Degenerate curvature and growing vanishing orders}
+\label{sec:degenerate-selected-kernels}
+
+The preceding compact examples reduce the selected spaces to vanishing conditions on a base. A local model separates the order of vanishing from the degeneracy of the smooth metric. It also distinguishes the scale of the full kernel from the scale on which a growing ideal changes the selected kernel.
+
+Fix an integer $r\geq1$. On $\mathbb C$, with coordinate $z=x+\mathrm{i}y$ and area measure $\mathrm{d}A=\mathrm{d}x\,\mathrm{d}y$, put $\phi(z)=|z|^{2r}$. For a real $m>0$, let $H_{m,r}$ be the Hilbert space of entire functions with norm
+\[
+ \|f\|_{m,r}^2=\int_{\mathbb C}|f|^2\mathrm{e}^{-m\phi}\,\mathrm{d}A.
+\]
+For an integer $q\geq0$, let $H_{m,r}^{(q)}$ consist of the functions vanishing to order at least $q$ at zero. Point and jet evaluations are bounded by the local submean and Cauchy inequalities, since the weight is bounded below on each fixed disc. Thus this subspace is closed. Write $K_{m,r}^{(q)}(z,w)$ for its reproducing kernel, holomorphic in $z$ and antiholomorphic in $w$, and put
+\[
+ B_{m,r}^{(q)}(z)=\mathrm{e}^{-m\phi(z)}K_{m,r}^{(q)}(z,z).
+\]
+Here the selecting condition is the ideal $(z^q)$, while the smooth weight determines the norm. We use $\Gamma(a)=\int_0^\infty t^{a-1}\mathrm{e}^{-t}\,\mathrm{d}t$ for $a>0$.
+
+\begin{proposition}\label{prop:degenerate-fock-kernel}
+For every $m>0$ and integer $q\geq0$,
+\begin{equation}\label{eq:degenerate-fock-series}
+ K_{m,r}^{(q)}(z,w)=\frac r\pi\sum_{k=q}^\infty
+ \frac{m^{(k+1)/r}(z\bar w)^k}{\Gamma((k+1)/r)}.
+\end{equation}
+The series and all its derivatives converge uniformly on compact sets. For $\zeta\in\mathbb C$,
+\begin{equation}\label{eq:degenerate-fock-scaling}
+ m^{-1/r}B_{m,r}^{(q)}(m^{-1/(2r)}\zeta)
+ =\frac r\pi\mathrm{e}^{-|\zeta|^{2r}}
+       \sum_{k=q}^\infty\frac{|\zeta|^{2k}}{\Gamma((k+1)/r)}.
+\end{equation}
+Consequently, if $m$ tends to infinity through positive integers and $q=q_m\to\infty$, the left side tends to zero uniformly on compact $\zeta$-sets.
+\end{proposition}
+\begin{proof}
+Rotational invariance makes the monomials orthogonal. For every integer $k\geq0$, polar integration with radial variable $\rho$ and the substitution $t=m\rho^{2r}$ give
+\[
+ \|z^k\|_{m,r}^2=2\pi\int_0^\infty\rho^{2k+1}\mathrm{e}^{-m\rho^{2r}}\,\mathrm{d}\rho
+ =\frac\pi r m^{-(k+1)/r}\Gamma((k+1)/r).
+\]
+For an entire function $f(z)=\sum_{k\geq0}a_kz^k$, angular Parseval on circles and Tonelli's theorem yield
+$\|f\|_{m,r}^2=\sum_{k\geq0}|a_k|^2\|z^k\|_{m,r}^2$.
+Thus the normalized monomials form an orthonormal basis, and the selected subspace has the basis with $k\geq q$. This proves \eqref{eq:degenerate-fock-series}. Stirling's formula shows that the reciprocal Gamma coefficients decay faster than every fixed geometric progression, even after multiplication by any fixed power of $k$. This proves compact convergence with all derivatives. Substitution gives \eqref{eq:degenerate-fock-scaling}. On $|\zeta|\leq R$ for a fixed real $R>0$, its tail is bounded by the tail of the convergent series with $|\zeta|$ replaced by $R$, proving the last assertion.
+\end{proof}
+
+For $r=1$ and $q=0$, the density is $m/\pi$. For general $r$ the value at zero is $rm^{1/r}/(\pi\Gamma(1/r))$ when $q=0$, and zero when $q>0$. The scale $m^{-1/(2r)}$ therefore describes fixed vanishing orders, but a growing order requires a further rescaling.
+
+\subsection{A uniform tail estimate}
+\label{sec:degenerate-kernel-tail}
+
+Retain the integer $r\geq1$, the weight $\phi(z)=|z|^{2r}$ and the densities $B_{m,r}^{(q)}$ of \cref{sec:degenerate-selected-kernels}. For $T>0$, let $N_T$ be a Poisson random variable, defined by
+$\mathbb P(N_T=\ell)=\mathrm{e}^{-T}T^\ell/\ell!$ for integers $\ell\geq0$; $\mathbb P$ and $\mathbb E$ denote probability and expectation. For a real $0<\alpha\leq1$, define
+\[
+ w_{\alpha,T}(\ell)=T^{\alpha-1}\frac{\Gamma(\ell+1)}{\Gamma(\ell+\alpha)}.
+\]
+All constants in the next lemma may depend on $\alpha$, but not on $T$.
+
+\begin{lemma}\label{lem:poisson-gamma-weight}
+There is a constant $C_\alpha>0$ such that, for $T\geq1$,
+\[
+ \mathbb E\bigl|w_{\alpha,T}(N_T)-1\bigr|\leq C_\alpha T^{-1/2}.
+\]
+\end{lemma}
+\begin{proof}
+The Poisson series gives $\mathbb E N_T=T$ and $\operatorname{Var}(N_T)=T$. Stirling's formula, applied to the ratio of Gamma functions, gives
+\[
+ \frac{\Gamma(\ell+1)}{\Gamma(\ell+\alpha)}
+ =\ell^{1-\alpha}(1+O_\alpha(\ell^{-1}))\quad(\ell\to\infty),
+ \qquad
+ \frac{\Gamma(\ell+1)}{\Gamma(\ell+\alpha)}
+ \leq C_\alpha(\ell+1)^{1-\alpha}\quad(\ell\geq0).
+\]
+The second bound follows from the first by increasing the constant for finitely many small integers. Since $0\leq1-\alpha<1$, it implies
+\[
+ w_{\alpha,T}(\ell)\leq C_\alpha\left(1+\frac{\ell+1}{T}\right),
+ \qquad
+ \mathbb E(w_{\alpha,T}(N_T)+1)^2\leq C_\alpha
+ \quad(T\geq1).
+\]
+For $T\geq2$, put $E_T=\{|N_T-T|\leq T/2\}$. On this event the ratio expansion and the bounded derivative of $s^{1-\alpha}$ on $[1/2,3/2]$ give
+\[
+ |w_{\alpha,T}(N_T)-1|
+ \leq C_\alpha\left(\frac{|N_T-T|}{T}+\frac1T\right).
+\]
+Its expectation is at most $C_\alpha T^{-1/2}$ by Cauchy--Schwarz. On the complement, Chebyshev's inequality gives $\mathbb P(E_T^c)\leq4/T$. The preceding second-moment bound and Cauchy--Schwarz give the same estimate there. Enlarging the constant handles $1\leq T\leq2$.
+\end{proof}
+
+For integers $q\geq0$ and $0\leq s<r$, put
+\[
+ L_s(q)=\left\lceil\frac{q-s}{r}\right\rceil\geq0.
+\]
+These are the thresholds obtained by writing a monomial degree as $k=r\ell+s$.
+
+\begin{proposition}\label{prop:degenerate-kernel-poisson}
+There is a constant $C_r>0$, depending only on $r$, such that for $m>0$, $z\ne0$ and $T=m|z|^{2r}\geq1$,
+\begin{equation}\label{eq:degenerate-poisson-comparison}
+ \left|\frac{\pi B_{m,r}^{(q)}(z)}{mr^2|z|^{2r-2}}
+ -\frac1r\sum_{s=0}^{r-1}\mathbb P\{N_T\geq L_s(q)\}\right|
+ \leq C_r T^{-1/2}
+ \quad(q\geq0).
+\end{equation}
+In particular, the error is uniform in the vanishing order $q$.
+\end{proposition}
+\begin{proof}
+Let $\rho=|z|>0$ and put $\alpha_s=(s+1)/r$ for integers $0\leq s<r$. Group the positive series \eqref{eq:degenerate-fock-series} by these residues. Since $T=m\rho^{2r}$, it gives the exact identity
+\[
+ \begin{split}
+ B_{m,r}^{(q)}(z)
+ &=\frac r{\pi\rho^2}\sum_{s=0}^{r-1}
+     \mathrm{e}^{-T}\sum_{\ell\geq L_s(q)}
+           \frac{T^{\ell+\alpha_s}}{\Gamma(\ell+\alpha_s)}\\
+ &=\frac{rT}{\pi\rho^2}\sum_{s=0}^{r-1}
+     \mathbb E\bigl[w_{\alpha_s,T}(N_T)
+                         \mathbf1_{\{N_T\geq L_s(q)\}}\bigr].
+ \end{split}
+\]
+Divide by $mr^2\rho^{2r-2}/\pi=r^2T/(\pi\rho^2)$ and apply \cref{lem:poisson-gamma-weight} to each of the finitely many residues. The indicator is bounded by one, independently of its threshold.
+\end{proof}
+
+\subsection{The limiting envelope and the transition scale}
+\label{sec:degenerate-kernel-limit}
+
+Fix the integer $r\geq1$ and the weight $\phi(z)=|z|^{2r}$ on $\mathbb C$, and use the kernels and densities of \cref{sec:degenerate-selected-kernels}. Degrees $m$ below are positive integers. For a real $\lambda>0$, set $q_m=\lfloor m\lambda\rfloor$ and $R_\lambda=(\lambda/r)^{1/(2r)}$. Define
+\[
+ V_\lambda(z)=
+ \begin{cases}
+ |z|^{2r},&|z|\geq R_\lambda,\\
+ \lambda\log(|z|^2/R_\lambda^2)+\lambda/r,&0<|z|<R_\lambda,\\
+ -\infty,&z=0.
+ \end{cases}
+\]
+Here $\ddc=\mathrm{i}\partial\bar\partial/(2\pi)$, and $\delta_0$ denotes the unit point mass at zero. In dimension one, the non-pluripolar measure discards the mass carried by the pole set.
+
+\begin{theorem}\label{thm:degenerate-growing-kernel-limit}
+One has
+\[
+ \frac1m\log K_{m,r}^{(q_m)}(z,z)\longrightarrow V_\lambda(z)
+\]
+pointwise with extended values and in $L^1_{\mathrm{loc}}(\mathbb C)$. The kernel measures converge locally in total variation:
+\begin{equation}\label{eq:degenerate-kernel-measure-limit}
+ \frac1m B_{m,r}^{(q_m)}\,\mathrm{d}A
+ \longrightarrow\mathbf1_{\{|z|>R_\lambda\}}\ddc\phi.
+\end{equation}
+The function $V_\lambda$ is the largest subharmonic function $v$ on $\mathbb C$ such that $v\leq\phi$ and $v(z)\leq\lambda\log|z|^2+C$ near zero for some constant $C$. Its distributional Laplacian is
+\begin{equation}\label{eq:degenerate-envelope-current}
+ \ddc V_\lambda=\lambda\delta_0+
+                  \mathbf1_{\{|z|>R_\lambda\}}\ddc\phi.
+\end{equation}
+Thus the limit in \eqref{eq:degenerate-kernel-measure-limit} is the non-pluripolar measure of this envelope, rather than its full distributional Laplacian.
+\end{theorem}
+\begin{proof}
+For fixed $z\ne0$, put $\rho=|z|$ and $T=m\rho^{2r}$. If $\rho\ne R_\lambda$, then $L_s(q_m)/T\to\lambda/(r\rho^{2r})$. Chebyshev's inequality and \eqref{eq:degenerate-poisson-comparison} give
+\begin{equation}\label{eq:degenerate-density-pointwise}
+ \frac1m B_{m,r}^{(q_m)}(z)\longrightarrow
+ \begin{cases}
+ 0,&0<\rho<R_\lambda,\\
+ r^2\rho^{2r-2}/\pi,&\rho>R_\lambda.
+ \end{cases}
+\end{equation}
+The same comparison with $q=0$ bounds the selected density by $C_r m\rho^{2r-2}$ when $T\geq1$. When $T\leq1$, \eqref{eq:degenerate-fock-scaling} with $q=0$ bounds it by $C_r m^{1/r}\leq C_r m$. Thus $m^{-1}B_{m,r}^{(q_m)}$ is uniformly bounded on each compact set. The circle $\rho=R_\lambda$ and the origin have zero area. Dominated convergence and
+$\ddc\phi=(r^2/\pi)|z|^{2r-2}\mathrm{d}A$
+prove \eqref{eq:degenerate-kernel-measure-limit}.
+
+For the potential limit inside the circle, fix $0<\rho<R_\lambda$ and write
+\[
+ d_{m,k}=\frac{m^{(k+1)/r}\rho^{2k}}{\Gamma((k+1)/r)}
+ \quad(k\geq q_m).
+\]
+The Gamma ratio estimate from Stirling's formula gives
+\[
+ \frac{d_{m,k+1}}{d_{m,k}}
+ \leq\left(\frac{rm\rho^{2r}}{q_m+1}\right)^{1/r}
+           \left(1+\frac{C_r}{q_m+1}\right)
+ \quad(k\geq q_m)
+\]
+for all sufficiently large $m$. Its right side tends to a number less than one. Hence the sum of these terms lies between $d_{m,q_m}$ and a fixed multiple of that term. Stirling's formula then yields
+\[
+ \frac1m\log K_{m,r}^{(q_m)}(z,z)
+ \longrightarrow\lambda\log\rho^2+
+                 \frac\lambda r\bigl(1-\log(\lambda/r)\bigr)
+ =V_\lambda(z).
+\]
+For $\rho>R_\lambda$, the positive density limit in \eqref{eq:degenerate-density-pointwise} instead gives $m^{-1}\log B_{m,r}^{(q_m)}(z)\to0$, so the unweighted kernel potential tends to $\phi(z)$.
+
+At $\rho=R_\lambda$, put $k_m=\max\{q_m,\lfloor rm\rho^{2r}\rfloor\}$. Then $k_m/m\to r\rho^{2r}=\lambda$. The single monomial with this degree and Stirling's formula give
+$\liminf m^{-1}\log K_{m,r}^{(q_m)}(z,z)\geq\phi(z)$.
+The full-kernel bound already proved gives the reverse upper limit. At zero the selected kernel vanishes for all sufficiently large $m$. This proves pointwise convergence everywhere.
+
+For local $L^1$ convergence, the full-kernel bounds give a uniform upper bound for $m^{-1}\log K_{m,r}^{(q_m)}(z,z)$ on each compact set. The single selected monomial of degree $q_m$ gives the lower bound
+\[
+ \frac1m\log K_{m,r}^{(q_m)}(z,z)
+ \geq c_m+\frac{q_m}{m}\log|z|^2,
+\]
+where $c_m$ is bounded as $m\to\infty$, again by Stirling's formula. Since $0\leq q_m/m\leq\lambda$, the negative part on a fixed compact set is bounded by a constant plus $2\lambda|\log|z||$ near zero. This is locally area-integrable. Dominated convergence proves the $L^1_{\mathrm{loc}}$ assertion.
+
+The two radial expressions for $V_\lambda$ and their first radial derivatives agree at $R_\lambda$, because $rR_\lambda^{2r}=\lambda$. Away from zero and that circle, direct differentiation proves \eqref{eq:degenerate-envelope-current}. Matching first derivatives gives no circle measure, and $\ddc\log|z|^2=\delta_0$ supplies the atom at zero. The right side is positive, so $V_\lambda$ is subharmonic. For $t=|z|^{2r}/(\lambda/r)<1$, the inequality $\log t+1\leq t$ proves $V_\lambda\leq\phi$ inside the circle; outside it there is equality.
+
+Finally let $v$ satisfy the stated subharmonic and pole conditions. On the punctured disc $|z|<R_\lambda$, the function $v-\lambda\log|z|^2$ is subharmonic and bounded above near zero. Its subharmonic extension across zero is at most $\lambda/r-\lambda\log R_\lambda^2$ on the boundary. The maximum principle gives $v\leq V_\lambda$ inside the disc. Outside, this follows from $v\leq\phi$. Since $V_\lambda$ itself satisfies the conditions, it is the largest admissible function. Removing its pole atom gives the last assertion.
+\end{proof}
+
+The measures in this theorem have infinite total mass on $\mathbb C$; their convergence is asserted on compact sets. The weighted potentials $m^{-1}\log B_{m,r}^{(q_m)}$ converge to $V_\lambda-\phi$. In particular, the radius $R_\lambda$ is created by the selecting ideal even when $r=1$, while $r>1$ also records a curvature zero at the origin.
+
+For the transition statement, retain $r$, $\phi$ and $B_{m,r}^{(q)}$ from this subsection, but now allow any integer sequence $q_m\to\infty$. Define the Gaussian distribution function
+\[
+ \Phi(\tau)=\frac1{\sqrt{2\pi}}\int_{-\infty}^{\tau}
+                        \mathrm{e}^{-s^2/2}\,\mathrm{d}s
+ \quad(\tau\in\mathbb R).
+\]
+
+\begin{proposition}\label{prop:degenerate-kernel-transition}
+Fix a real $\tau$. Choose $z_m\ne0$ with
+\[
+ m|z_m|^{2r}=\frac{q_m}{r}+\tau\sqrt{\frac{q_m}{r}},
+\]
+which is positive for all sufficiently large $m$. Then
+\[
+ \frac{\pi B_{m,r}^{(q_m)}(z_m)}{mr^2|z_m|^{2r-2}}
+ \longrightarrow\Phi(\tau).
+\]
+In particular, this applies both when $q_m/m\to\lambda>0$ and when $q_m/m\to0$.
+\end{proposition}
+\begin{proof}
+We first record the Poisson limit used here. For a fixed real $M>0$, Stirling's formula for $\ell!$ gives, uniformly over integers $\ell$ with $|\ell-T|\leq M\sqrt T$,
+\[
+ \mathbb P(N_T=\ell)=\frac1{\sqrt{2\pi T}}
+   \exp\left(-\frac{(\ell-T)^2}{2T}\right)
+           (1+O_M(T^{-1/2}))\quad(T\to\infty).
+\]
+Indeed insert the factorial expansion in $\mathrm{e}^{-T}T^\ell/\ell!$ and expand the logarithm in $(\ell-T)/T$; the cubic remainder is $O_M(T^{-1/2})$. Riemann sums on bounded intervals therefore converge to Gaussian integrals. Chebyshev's bound
+$\mathbb P(|N_T-T|>M\sqrt T)\leq M^{-2}$
+then permits $M\to\infty$. Thus if real thresholds $a_T$ satisfy $(a_T-T)/\sqrt T\to a\in\mathbb R$, one has
+$\mathbb P(N_T\geq a_T)\to1-\Phi(a)$;
+rounding changes the normalized threshold by at most $T^{-1/2}$, and the Gaussian distribution is continuous.
+
+Set $T_m=m|z_m|^{2r}$. Then $T_m\to\infty$ and, for every integer $0\leq s<r$,
+\[
+ \frac{L_s(q_m)-T_m}{\sqrt{T_m}}\longrightarrow-\tau.
+\]
+Apply the preceding Poisson limit in \eqref{eq:degenerate-poisson-comparison}. Its uniform error tends to zero, and each of the finitely many probabilities tends to $1-\Phi(-\tau)=\Phi(\tau)$.
+\end{proof}
+
+For a sequence $q_m\to\infty$, put $R_m=(q_m/(rm))^{1/(2r)}$. At fixed $\tau$, the radii in \cref{prop:degenerate-kernel-transition} satisfy
+\[
+ |z_m|=R_m\left(1+\frac{\tau}{2\sqrt{rq_m}}+O_{r,\tau}(q_m^{-1})\right).
+\]
+If $q_m=o(m)$, these radii tend to the curvature zero, while their ratio to the full-kernel scale $m^{-1/(2r)}$ tends to infinity. This exact model does not give a localization theorem for a compact Hermitian manifold. Such a theorem must estimate the selected kernel uniformly as the vanishing order grows. An asymptotic for any one fixed order is insufficient.

@@ -1,7 +1,7 @@
 \chapter{Torsion and the variation of mass}
 \label{chap:mass}
 
-The total Monge--Amp\`ere mass is constant on smooth K\"ahler potentials. For a general Hermitian form it is a polynomial in the potential whose nonconstant coefficients are controlled by derivatives of the background. We shall derive this polynomial and use it to exhibit the failure of several direct generalizations.
+The total Monge--Amp\`ere mass is constant on smooth K\"ahler potentials. For a general Hermitian form, derivatives of the background produce additional terms. We shall compute them, exhibit smooth potentials of different total masses, and explain why the ordinary global comparison principle would force mass invariance.
 
 Everything in this chapter concerns smooth forms and smooth functions. This restriction makes the identities independent of any choice of a Monge--Amp\`ere operator on unbounded functions.
 
@@ -38,7 +38,7 @@ For a smooth real $(1,1)$-form $\omega$ and an integer $q\geq1$,
 where the second term is omitted when $q=1$.
 \end{lemma}
 \begin{proof}
-Since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
+For $q=1$, the asserted formula is the identity $\ddc\omega=\ddc\omega$. Suppose $q\geq2$. Since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
 \[
  \mathrm{d}\dc(\omega^q)
  =q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega
@@ -76,9 +76,10 @@ $T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Both $\mathrm{d}$ and $\dc$ annihilate $\d
 \[
  \ddc T=(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}).
 \]
-This gives each of the terms in \eqref{eq:mass-expansion}.
+This gives each of the terms in \eqref{eq:mass-expansion}. When $n=1$, the sum is empty and the mass is constant.
 \end{proof}
 
+\Needspace{9\baselineskip}
 \begin{corollary}\label{cor:constant-mass-sufficient}
 If $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$, then
 \[
@@ -124,7 +125,7 @@ A Hermitian form with $\ddc(\omega^{n-1})=0$ is called a Gauduchon form. Thus on
  +3\int_Xu\ddc(\omega^2)
  +3\int_Xu\ddc u\wedge\ddc\omega.
 \]
-The Gauduchon condition removes the middle term, but does not by itself remove the last one. The full characterization of mass invariance is given in \cref{thm:mass-invariance-characterization}.
+The Gauduchon condition removes the middle term, but does not by itself remove the last one. Equivalently, \eqref{eq:mass-first-variation} vanishes at $u=0$, while mass invariance requires it to vanish at every admissible $u$. The full characterization of mass invariance is given in \cref{thm:mass-invariance-characterization}.
 
 \Needspace{23\baselineskip}
 \section{An explicit varying-mass example}
@@ -143,7 +144,7 @@ The forms $\beta_j$ descend to $X$. For a real parameter $t$, define
 \]
 Since $1\leq b\leq3$, the form $\omega$ is Hermitian. It is not closed: $\mathrm{d}\omega=\mathrm{d}b\wedge\beta_2$ is not identically zero.
 
-For a function $f$ of $x_1$ alone, $\ddc f=(f''/4)\beta_1$. Hence
+For a smooth real function $v$ on $X$, write $\omega_v=\omega+\ddc v$ and $\Mass_\omega(v)=\int_X\omega_v^2$. For a function $f$ of $x_1$ alone, with derivatives taken in $x_1$, one has $\ddc f=(f''/4)\beta_1$. Hence
 \[
  \omega_{u_t}
  =\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)\beta_1+b\beta_2>0
@@ -180,7 +181,7 @@ Upper and lower masses taken over all representatives of an ordinary type are in
 \Needspace{15\baselineskip}
 \section{What the global comparison principle would imply}
 
-Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ be a Hermitian form on $X$. Write $\omega_u=\omega+\ddc u$, $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$ and $\Mass_\omega(u)=\int_X\omega_u^n$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ be a Hermitian form on $X$. Write $\omega_u=\omega+\ddc u$, $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$ and $\Mass_\omega(u)=\int_X\omega_u^n$.
 
 \begin{proposition}\label{prop:comparison-forces-mass}
 Suppose that a Hermitian form $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
@@ -209,23 +210,23 @@ The modified comparison theorem in \cref{thm:modified-comparison} accounts for t
 \Needspace{30\baselineskip}
 \section{Invariance and boundedness are different questions}
 
-Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ and $\eta$ be Hermitian forms on $X$. For either form $\gamma$, set $\HH_\gamma=\{u\in C^\infty(X,\mathbb R):\gamma+\ddc u>0\}$ and $\Mass_\gamma(u)=\int_X(\gamma+\ddc u)^n$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ and $\eta$ be Hermitian forms on $X$. For either form $\gamma$, set $\HH_\gamma=\{u\in C^\infty(X,\mathbb R):\gamma+\ddc u>0\}$ and $\Mass_\gamma(u)=\int_X(\gamma+\ddc u)^n$.
 
-For the next elementary observation, define the upper smooth mass
+Define the upper smooth mass
 \[
  \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty].
 \]
-This definition asks for an upper bound over an entire class of potentials. It is stronger than finiteness of each individual smooth mass, and weaker than mass invariance.
+Finiteness of $\Vsm(\omega)$ asks for one bound over all smooth strictly $\omega$-plurisubharmonic potentials. Each individual smooth mass is already finite by compactness. Mass invariance supplies such a uniform bound; boundedness alone does not assert that the masses are equal. The comparison below concerns this smooth class.
 
 \begin{proposition}\label{prop:smooth-bmp-metric}
-If $\omega$ and $\eta$ are Hermitian forms with $\omega\leq C\eta$, then
+If $C>0$ is a real constant and $\omega\leq C\eta$, then
 \[
  \Vsm(\omega)\leq C^n\Vsm(\eta).
 \]
 In particular, finiteness of $\Vsm$ is independent of the Hermitian form.
 \end{proposition}
 \begin{proof}
-For $u\in\HH_\omega$, the form $C\eta+\ddc u$ is positive and dominates $\omega+\ddc u$. For positive Hermitian matrices $A\leq B$, all eigenvalues of $A^{-1/2}BA^{-1/2}$ are at least one, so $\det A\leq\det B$. Applying this pointwise gives monotonicity of the top exterior power. Therefore
+For $u\in\HH_\omega$, the function $u/C$ belongs to $\HH_\eta$, because $C\eta+\ddc u$ is positive and dominates $\omega+\ddc u$. For positive Hermitian matrices $A\leq B$, all eigenvalues of $A^{-1/2}BA^{-1/2}$ are at least one, so $\det A\leq\det B$. Applying this pointwise gives monotonicity of the top exterior power. Therefore
 \[
  \int_X(\omega+\ddc u)^n
  \leq C^n\int_X\bigl(\eta+\ddc(u/C)\bigr)^n

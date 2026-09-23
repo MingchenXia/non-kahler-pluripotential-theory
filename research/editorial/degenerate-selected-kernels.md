@@ -1,6 +1,6 @@
 # Degenerate selected kernels: a model and a conditional transfer
 
-Status: working research note, 24 September 2026. The elementary arguments below have received a direct second pass. They have not received an independent Rethlas audit and are not integrated into the book. No novelty claim is made. The global hypotheses proposed at the end remain open here. No new arXiv theorem is an input to either proof.
+Status: working research note, 24 September 2026, continued at checkpoint96. The elementary one-variable model below is now contained in the more complete book Section 27.12, whose growing-order extension has a full audit and a separately checked endpoint repair; see `degenerate-growing-kernels-review-96.md`. The conditional fixed-jet transfer argument in this note is still independently unaudited and outside the book. Its proposed global hypotheses remain open here. No novelty claim is made and no new arXiv theorem is a proof input.
 
 ## A one-variable model
 
@@ -52,6 +52,6 @@ This is a conditional transfer lemma. It assumes convergence of the full off-dia
 
 In the compact setting, let $(L,h)$ be a holomorphic line bundle with smooth semipositive curvature and let $x$ be a point where that curvature has finite-order degeneracy. Can a verified full-kernel local theorem give the hypothesis of the transfer lemma for the spaces of sections vanishing to a fixed order at $x$? The local jet condition is precise; any further global ideal conditions would define a different space and require additional analysis.
 
-For the actual partial kernels in Chapter 27, the selecting ideals depend on the degree. Determine useful growth regimes for their jet orders, and control the smallest eigenvalue of the corresponding growing jet Gram matrix or find a method avoiding that inversion. The first model shows why a fixed-order asymptotic cannot settle this question. A successful local theorem would then have to be reconciled with the chapter's intrinsic section-growth normalization and fibration identities.
+For the actual partial kernels in Chapter 27, the selecting ideals depend on the degree. The exact model now has a q-uniform Poisson comparison and Gaussian transition at radius (q_m/(rm))^(1/(2r)). Determine which growth regimes permit a compact localization theorem, and control the smallest eigenvalue of the corresponding growing jet Gram matrix or find a method avoiding that inversion. The first model shows why a fixed-order asymptotic cannot settle this question. A successful local theorem would then have to be reconciled with the chapter's intrinsic section-growth normalization and fibration identities.
 
 Chiang's arXiv:2609.24869v1 is a reading candidate for the full-kernel hypothesis. Its complete Kähler adjoint theorem and its general spectral-gap theorem have different premises. No theorem from it has been invoked above; the complete proof, convention conversion and actual geometric applicability remain to be checked.

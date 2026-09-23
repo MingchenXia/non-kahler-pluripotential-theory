@@ -34,6 +34,8 @@ for name in (
     "research/research-directions-20260924.md",
     "research/editorial/chapter-revision-queue.md",
     "research/editorial/chapter-one-review-95.md",
+    "research/editorial/degenerate-growing-kernels-review-96.md",
+    "research/editorial/growing-jet-local-upper-draft.md",
     "research/editorial/degenerate-selected-kernels.md",
     "research/editorial/notation-before-use-map.json",
     "research/editorial/notation-before-use-review.md",

@@ -1,5 +1,15 @@
 # Modification history
 
+## 24 September 2026 — Checkpoint96: growing selected kernels and Chapter 2
+
+Complete the Chapter 2 correctness/readability pass: handle q=1 before the torsion-power proof, explain the dimension-one empty sum, declare example and comparison notation, clarify Gauduchon first variation and distinguish individual smooth finiteness, a uniform bound and equal masses. Preserve all mathematical claims and metric-mass scope.
+
+Add Section 27.12 with complete proofs of the exact weighted entire-function kernel, a uniform-in-vanishing-order Poisson comparison, the growing-order envelope and local total-variation measure limits, and Gaussian transition. Distinguish the envelope pole atom from the non-pluripolar kernel-measure limit. Preserve the complete audit's adverse r=1 scope finding and its original submission; the separately recorded correction audit passes. There are 182 reports:172 correct and ten adverse. No old verifier record is edited. The compact-curve localization question in Chapter 33 remains explicitly open, and the earlier conditional fixed-jet transfer note is still independently unaudited. No general compact Hermitian theorem, new arXiv premise or novelty claim is asserted.
+
+Preserve a further, explicitly unaudited local upper-bound draft using truncated radial kernels and log-convex moments. It is outside the book and outside the two kernel audit scopes; the matching global lower bound remains open.
+
+The second-pass 768-page build has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 30 selected final pages were inspected. The four-input house audit has zero errors and sixteen inherited warnings, matching the baseline. Preserve 185 unchanged earlier author inputs, all original references, hidden materials, prior snapshot/archive and the 17-page companion. Record the exact review and build in `degenerate-growing-kernels-review-96.md` and `build-snapshot-96.json`; `source-package-portability-96.json` must separately pass the clean reconstruction before release checks are complete. Update the blueprint and chapter queue, with Chapter 3 next. The daily arXiv automation is unchanged and no additional announcement scan is claimed.
+
 ## 24 September 2026 — Checkpoint95: daily research program and Chapter 1 revision
 
 Reactivate the existing research heartbeat for daily 09:00 Asia/Shanghai arXiv reading, bounded research attempts and chapter revision. Add a coverage/version ledger with eight candidate papers and an explicit gap for older replacement announcements. Record four directions growing from the book's proof boundary. Save a directly derived degenerate weighted-kernel model and a conditional fixed-jet projection proof as an independently unaudited research note outside the book. No new arXiv theorem is adopted or novelty claimed. Establish a new 33-chapter revision queue; do not count research-linked spot checks as complete chapter reviews.
