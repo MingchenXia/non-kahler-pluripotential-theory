@@ -1,4 +1,4 @@
-# Reading guide — checkpoint92
+# Reading guide — checkpoint93
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -61,6 +61,8 @@ Part XII contains three separate chapters. The upper and lower assumptions are n
 Chapter 27 treats partial kernels. Birational transformation identities do not require a mass bound. A Kähler modification and positive closed-curvature mass permit the source equilibrium theorem to be applied; that geometric setting implies BMP. Submersion and Hopf examples instead retain their base and intrinsic-growth hypotheses. Kernel-measure convergence alone does not prove a lower potential bound or recover the original ideal type.
 
 Chapter 28 develops ordinary Bott–Chern loci and elliptic-bundle examples. It keeps the classical and numerical restricted-volume definitions in their stated regimes. A direct Hermitian-error supremum is infinite even in the zero class on the Hopf example. The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded, with its sources and history preserved; its proof is not an active book dependency.
+
+Subsection 28.3.1 applies the complete regularity chain to every big closed class on a compact Kähler manifold. Theorem 28.3.2 proves that the full-mass solution for a smooth strictly positive global volume form is smooth on the ample locus, with no nefness assumption. Read it after the non-Kähler-locus theorem and Sections 13.19, 13.21 and 13.22. Dang26 Theorem 3.1 is reconstructed internally, including its scalar/local-equation version; classical BEGZ existence and minimality remain standard inputs. The incomplete-metric example in Section 28.8 shows why local smoothness is distinct from completeness.
 
 Chapter 29 treats LCK metrics, Lee and anti-Lee forms, Gauduchon identities, rigidity and the Lee–Gauduchon cone. The cone can vanish even when a positive de Rham-exact current obstructs a strongly Gauduchon metric. The checked strongly Gauduchon criterion remains active; its complete-proof review is recorded separately. No content from the supplied private Popovici working reference is integrated.
 

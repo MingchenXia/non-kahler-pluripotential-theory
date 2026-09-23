@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint93
+
+The book has **716 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-93.pdf` has SHA256 `7c56f0b9a0a9ee549307f0b5edbc8ee9a1b38f31e2c6aa27f6edf3c5516d95f7` and 3066250 bytes. All 42 selected final pages were rendered and inspected: 27 match previously read images pixel for pixel, and the other 15 were reread. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-93.json`.
+
+Theorem 28.3.2 integrates the supplied smoothness result for every big closed class on a compact Kähler manifold and a smooth strictly positive global volume form. No nefness is imposed. Section 13.21 explicitly reconstructs Dang26 Theorem 3.1, including its scalar/local-equation formulation, through the internal stability and regularization proofs. Section 13.22 supplies the complete local derivative argument. Classical BEGZ existence and minimal-singularity results remain explicit standard inputs. Local smoothness of the density alone is not substituted for global Lp or the interior theorem's Holder premise.
+
+The normal Rethlas run `ample_locus_dang_integration_01` reviewed the full assembled chain and returned correct under its listed classical/internal inputs, with no critical errors or gaps. The complete report and primary second-pass scope are recorded in `editorial/ample-locus-integration-review.md`. There are 180 reports: 171 correct and nine adverse. All 38 previous formal blocks in the edited inputs are unchanged; one theorem is added. All needed bibliography entries already existed; the bibliography is unchanged.
+
+All 179 historical reports, 29 SGPT originals, six supplied original files, checkpoint92 and its archive, the 17-page companion and the three inactive Nakamaye files are preserved. The nef incomplete-metric draft remains unverified and inactive. The five-input house audit has 0 errors and 15 inherited warnings. No whole-book certification or novelty claim is made.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-93.json`; it must pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint92
 
 The book has **714 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-92.pdf` has SHA256 `b430f35e621e9b8e88bec603d8245aa31f881cdb3a191deed6e2980b7f401f46` and 3057650 bytes. All 71 selected pages were rendered and read; the final page-break polish changes only pages 530–531, which were reread, and the other 69 images are pixel-identical to the reviewed preview. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-92.json`.
