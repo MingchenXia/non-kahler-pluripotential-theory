@@ -3,9 +3,9 @@
 
 There are two roles for a weight in a partial Bergman kernel. A singular weight selects the sections through its multiplier ideals. A separate continuous weight determines their norm. This is the convention in the partial Bergman chapter of \cite{SGPT}; it differs from the singular weighted norm used in \cref{chap:sections}. Keeping the two roles separate gives finite-dimensional variational formulas on any compact complex manifold. The relative canonical bundle accounts exactly for the Jacobian under a modification, allowing kernel measure convergence to be transferred from a K\"ahler modification. A different transfer through a holomorphic submersion gives lower-dimensional equilibrium measures. Isolated logarithmic selecting poles need not descend, but their section spaces still reduce to point-vanishing conditions on the base. The one-point Hopf calculation gives both a nonzero measure limit and an explicit potential limit, while showing why these limits do not recover every Hermitian singularity.
 
-\section{The selected space and the continuous weight}
+\section{The selected space and the continuous weight}\label{sec:partial-selected-space}
 
-Let $X$ be connected and compact of dimension $n\geq1$. Fix a holomorphic line bundle $L$ with smooth Hermitian metric $h$, a quasi-plurisubharmonic function $\varphi$, and a smooth positive probability measure $\nu$. For each $m\geq1$ set
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a holomorphic line bundle $L$ with smooth Hermitian metric $h$, a quasi-plurisubharmonic function $\varphi$, and a smooth positive probability measure $\nu$. For each integer $m\geq1$ set
 \[
  V_m=H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr),
  \qquad N_m=\dim V_m.
@@ -18,14 +18,14 @@ For a real $v\in C(X)$ define the norm
 The continuous weight is bounded, so the norm is finite on every global section. Its nondegeneracy follows from the strictly positive density and the identity theorem. No curvature condition on $\varphi$ is needed for these definitions.
 
 \Needspace{13\baselineskip}
-Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis and put
+Fix an integer $r\geq1$ for the normalization. Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis of $V_m$ for this norm, and for $x\in X$ put
 \[
  B_{m,v,\varphi,\nu}(x)
        =\mathrm{e}^{-mv(x)}\sum_j|s_j(x)|_{h^m}^2,
  \qquad
  \beta_m^{(r)}=\frac{r!}{m^r}B_{m,v,\varphi,\nu}\,\nu,
 \]
-where $r\geq1$ is an integer chosen for the normalization. Empty spaces give zero kernels and zero measures. Unitary invariance and the evaluation argument of \cref{prop:finite-bergman-identities} give
+Empty spaces give zero kernels and zero measures. Unitary invariance and the evaluation argument of \cref{prop:finite-bergman-identities} give
 \[
  B_{m,v,\varphi,\nu}(x)
  =\sup_{\substack{s\in V_m\\\|s\|_{m,v,\nu}\leq1}}
@@ -38,6 +38,9 @@ The singular weight occurs only in $V_m$. In particular, ordering its multiplier
 Replacing $h$ by $h\mathrm{e}^{-a}$ and $v$ by $v-a$, for smooth real $a$, leaves both the norm and the kernel measure unchanged. This is again a change between smooth metrics on a holomorphic line bundle; its curvature forms remain closed.
 
 \section{A local Bernstein--Markov estimate}
+\label{sec:partial-bernstein-markov}
+
+Retain the connected compact complex manifold $X$ and smooth Hermitian holomorphic line bundle $(L,h)$ of \cref{sec:partial-selected-space}. Degrees $m$ are positive integers. Continuous weights in this section are real-valued.
 
 For a compact set $K\subseteq X$ and $v\in C(K)$, write
 \[
@@ -54,7 +57,7 @@ for all $m\geq1$ and all $s\in H^0(X,L^m)$. If $K$ is non-pluripolar, the suprem
 Every smooth positive probability measure is Bernstein--Markov for $(X,v)$ when $v\in C(X)$, on an arbitrary compact complex manifold.
 \end{proposition}
 \begin{proof}
-Choose finitely many nested coordinate charts with holomorphic frames for $L$. In a frame write $|e|_h^2=\mathrm{e}^{-\chi}$ and $s=f e^{\otimes m}$. Uniform continuity permits, for any $\epsilon>0$, a uniform small radius $r$ such that every point lies at the center of a coordinate ball of radius $r$ contained in one of the larger charts, and the oscillation of $\chi+v$ on that ball is at most $2\epsilon$. The radius and the volume comparison constants can be chosen uniformly using the finite covering.
+Let $\nu$ be the smooth strictly positive probability measure under consideration. Choose finitely many nested coordinate charts with holomorphic frames for $L$. In a holomorphic frame $e$, write $|e|_h^2=\mathrm{e}^{-\chi}$ and $s=f e^{\otimes m}$. Uniform continuity permits, for any $\epsilon>0$, a uniform small radius $r$ such that every point lies at the center of a coordinate ball of radius $r$ contained in one of the larger charts, and the oscillation of $\chi+v$ on that ball is at most $2\epsilon$. The radius and the volume comparison constants can be chosen uniformly using the finite covering.
 
 \Needspace{8\baselineskip}
 The submean inequality for the holomorphic function $f$ and the lower bound for the density of $\nu$ give
@@ -77,6 +80,9 @@ For an arbitrary compact weighted subset we shall assume the Bernstein--Markov p
 \input{author/section_partial_kernel_upper}
 
 \section{The determinant functional}
+\label{sec:partial-determinant}
+
+Use $X$, $(L,h)$, the selecting weight $\varphi$, probability volume $\nu$, spaces $V_m$ and dimensions $N_m$ from \cref{sec:partial-selected-space}. Fix an integer $r\geq1$. For a continuous real weight $v$ on $X$, the kernel and normalized measure are $B_{m,v,\varphi,\nu}$ and $\beta_m^{(r)}$ there, with norm $\|\cdot\|_{m,v,\nu}$.
 
 Fix $m$ with $N_m>0$ and a basis of $V_m$. Let $G_m(v)$ be its positive Hermitian Gram matrix in the norm above. Define
 \[
@@ -93,7 +99,7 @@ For $v,f\in C(X,\mathbb R)$,
  \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\mathcal F_m^{(r)}(v+tf)
        =\int_X f\,\mathrm{d}\beta_m^{(r)}.
 \]
-The functional is concave and satisfies
+For constants $c\in\mathbb R$ and weights $w\in C(X,\mathbb R)$, the functional is concave and satisfies
 \[
  \mathcal F_m^{(r)}(v+c)=\mathcal F_m^{(r)}(v)
                          +\frac{r!N_m}{m^r}c,
@@ -104,7 +110,7 @@ The functional is concave and satisfies
 If $N_m>0$, its second derivative along $v+tf$ is strictly negative unless $f$ is constant.
 \end{proposition}
 \begin{proof}
-Use a basis orthonormal at $v$, so $G_m(v)=I$. Boundedness of the weights justifies differentiation under the integral. With pointwise inner products taken in $h^m$, put
+Use a basis $s_1,\ldots,s_{N_m}$ orthonormal at $v$, so $G_m(v)=I$, the identity matrix of size $N_m$. Matrix indices $i,j$ below range from $1$ to $N_m$. Boundedness of the weights justifies differentiation under the integral. With pointwise inner products taken in $h^m$, put
 \[
  A_{ij}=\int_X f\langle s_i,s_j\rangle_{h^m}\mathrm{e}^{-mv}\,\mathrm{d}\nu,
  \qquad
@@ -142,15 +148,14 @@ For example, let $X$ be any connected compact complex manifold that is not Moish
 
 \input{author/section_birational_partial_kernels}
 
-\section{Transferring kernels through a submersion}
+\section{Transferring kernels through a submersion}\label{sec:partial-submersion}
 
-Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and set
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Section degrees $m$ and normalization exponents $r$ are positive integers, as in \cref{sec:partial-selected-space}. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and choose a genuine quasi-plurisubharmonic function $\psi$ on $B$. Set
 \[
- (L,h)=(\pi^*A,\pi^*h_A),\qquad \varphi=\pi^*\psi,
- \quad \psi\in\QPSH(B).
+ (L,h)=(\pi^*A,\pi^*h_A),\qquad \varphi=\pi^*\psi.
 \]
 \Needspace{9\baselineskip}
-Choose a smooth probability measure $\nu_y$ on every fiber $X_y$. Such a family is obtained by restricting any smooth positive vertical volume density and dividing by its fiber integral. For $F\in C(X)$ set
+For $y\in B$, write $X_y=\pi^{-1}(y)$. Choose a smoothly varying family of smooth strictly positive probability measures $\nu_y$ on these fibers. Such a family is obtained by restricting any smooth positive vertical volume density and dividing by its fiber integral. For $F\in C(X)$ set
 \[
  \mathcal A F(y)=\int_{X_y}F\,\mathrm{d}\nu_y.
 \]
@@ -195,8 +200,11 @@ The lifting operation uses the specified smooth submersion and fiber probabiliti
 
 \Needspace{10\baselineskip}
 \section{Equilibrium on the base and a Hermitian limit}
+\label{sec:partial-base-equilibrium}
 
-Assume now that $B$ is K\"ahler. Write $\theta=c_1(A,h_A)$ and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Retain $K,w,\mu$ from the proposition. On the base define
+Keep the submersion $\pi:X\to B$, dimensions $n,q$, line bundle $(A,h_A)$, fiber probabilities and lifting map $\mathcal L$ from \cref{sec:partial-submersion}. Let $K\subseteq B$ be closed and non-pluripolar, let $w\in C(K,\mathbb R)$, and let $\mu$ be a Bernstein--Markov probability for $(K,w)$. Write $\mu_X=\mathcal L\mu$ and use the pulled-back continuous weight on $\pi^{-1}(K)$.
+
+Assume now that $B$ is K\"ahler. Write $\theta=c_1(A,h_A)$ and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Write $B_{B,m}$ and $B_{X,m}$ for the selected kernels of \cref{prop:partial-kernel-submersion}. On the base define
 \[
  E=\left(\sup\left\{a\in\PSH(B,\theta):
        a|_K\leq w\ \hbox{quasi-everywhere},\quad
@@ -224,7 +232,7 @@ This is the only asymptotic theorem imported here. The proposition and continuit
 \Needspace{30\baselineskip}
 \section{The Hopf equilibrium measure}
 
-On the Hopf manifold $X_n$, take $B=\mathbb P^{n-1}$, $A=\mathcal O(1)$, and $\theta=\sigma$ as in \cref{chap:hopf-reduction}. Let the probability on each elliptic fiber be $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
+Let $n\geq2$, and use the Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n-1}$, forms $\sigma$, $\alpha=\pi^*\sigma$, $\zeta$ and $\omega=\alpha+\zeta$ from \cref{chap:hopf-reduction}. In the setting of \cref{sec:partial-base-equilibrium}, take $B=\mathbb P^{n-1}$, $A=\mathcal O(1)$, and $\theta=\sigma$ as in \cref{chap:hopf-reduction}. Retain a positive-mass selecting potential $\psi$, the base data $K,w,\mu$ and their partial envelope $E$ from that section. Let the probability on each elliptic fiber $X_y=\pi^{-1}(y)$ be $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
 \[
  \mathcal L\tau=\tfrac12\pi^*\tau\wedge\zeta
 \]
@@ -236,7 +244,7 @@ in the precise fiber-integration notation of that chapter. Since $E\in\PSH(B,\si
 \end{equation}
 This is a nonzero finite Hermitian Monge--Amp\`ere measure: the base partial envelope has positive mass under the source theorem's hypotheses. For $n=3$, the ambient Hopf manifold is the same one on which the bounded mass property fails. The theorem uses only the potentials that descend to its projective base.
 
-The exponent in \eqref{eq:hopf-partial-equilibrium} is $n-1$; normalization by $m^n$ gives zero. The closed curvature $\alpha=\pi^*\sigma$ of $L$ has zero top Monge--Amp\`ere measure on these potentials. Adding the vertical form $\zeta$ produces the nonzero Hermitian limit; the factor $1/(2n)$ records the fiber probability and the binomial coefficient. By \cref{thm:hopf-weighted-section-descent}, every potential positive against the closed line-bundle curvature $k\alpha$ already descends. Potentials positive only against the Hermitian form $\omega$ can vary along the fibers. The following sections treat their selected spaces when the singularities are isolated logarithmic poles. General selecting weights and comparison of the determinant functional with the Gauduchon variational volume remain questions.
+The exponent in \eqref{eq:hopf-partial-equilibrium} is $n-1$; normalization by $m^n$ gives zero. The closed curvature $\alpha=\pi^*\sigma$ of $L$ has zero top Monge--Amp\`ere measure on these potentials. Adding the vertical form $\zeta$ produces the nonzero Hermitian limit; the factor $1/(2n)$ records the fiber probability and the binomial coefficient. By \cref{thm:hopf-weighted-section-descent}, every potential positive against the closed line-bundle curvature $k\alpha$ for a positive integer $k$ already descends. Potentials positive only against the Hermitian form $\omega$ can vary along the fibers. The following sections treat their selected spaces when the singularities are isolated logarithmic poles. General selecting weights and comparison of the determinant functional with the Gauduchon variational volume remain questions.
 
 \input{author/section_fiber_point_kernels}
 

@@ -3,17 +3,17 @@
 
 Locally conformally K\"ahler geometry gives a useful testing ground for the theory developed here. Its local K\"ahler metrics make some geometric constructions available, while its global Lee form records an obstruction to patching those metrics without changing scale. The Hopf example of \cref{chap:hopf} belongs to this class. We explain both its additional structure and the distinction between ordinary and twisted potentials. The final section reconstructs a bimeromorphic invariant from Gauduchon tests and gives an explicit example showing the limits of that invariant. We follow the conventions of this book; the operator $\dc$ in \cite{OV24LCK} differs by a constant factor.
 
-\section{The Lee form and the K\"ahler covering}
+\section{The Lee form and the K\"ahler covering}\label{sec:lck-lee-cover}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$, with complex structure $J$.
 
 \begin{definition}\label{def:lck}
-A Hermitian form $\omega$ is \emph{locally conformally K\"ahler}, or LCK, if
+A Hermitian form $\omega$ on $X$ is \emph{locally conformally K\"ahler}, or LCK, if there is a smooth real one-form $\lambda$ on $X$ such that
 \[
  \mathrm{d}\omega=\lambda\wedge\omega,
  \qquad \mathrm{d}\lambda=0
 \]
-for a real one-form $\lambda$, called its \emph{Lee form}. It is \emph{strictly LCK} if $\lambda$ is not exact. A strictly LCK metric is \emph{Vaisman} if its Lee form is parallel for its Levi--Civita connection.
+The form $\lambda$ is called its \emph{Lee form}. It is \emph{strictly LCK} if $\lambda$ is not exact. A strictly LCK metric is \emph{Vaisman} if its Lee form is parallel for its Levi--Civita connection.
 \end{definition}
 
 The strictness convention excludes the K\"ahler case from the word Vaisman. On a compact connected manifold a nonzero parallel one-form cannot be exact: the differential of a global potential vanishes at a maximum, and a parallel form has constant length. Thus a nonzero parallel Lee form is automatically nowhere zero and nonexact.
@@ -39,6 +39,9 @@ This positive character describes the change of scale. Forms transforming by $\c
 The conformal change $\omega'=\mathrm{e}^a\omega$ changes the Lee form to $\lambda+\mathrm{d}a$. In particular, the de Rham class $[\lambda]$ depends only on the conformal class. If $\lambda$ is exact, the construction above gives a K\"ahler form on $X$ itself.
 
 \section{Gauduchon representatives and the Lee class}
+\label{sec:lck-lee-class}
+
+Let $(X,J)$ be a connected compact complex manifold of dimension $n\geq2$, and let $\omega$ be an LCK metric with Lee form $\lambda$ as in \cref{def:lck}. Write $\lambda^{1,0}$ and $\lambda^{0,1}$ for its type components. Smooth conformal factors $a$ and local primitives $f$ below are real-valued.
 
 Set
 \[
@@ -65,7 +68,7 @@ On a local conformal K\"ahler chart,
  \dc(\omega^{n-1})
  =(n-1)\lambda^{\mathrm c}\wedge\omega^{n-1}.
 \]
-The pointwise Hermitian Hodge-star identity identifies
+Let $*$ be the real Hodge star of the Riemannian metric associated with $\omega$, and let $\mathrm d^*$ be the adjoint of the exterior derivative. The pointwise Hermitian Hodge-star identity identifies
 $\lambda^{\mathrm c}\wedge\omega^{n-1}$ with a fixed nonzero constant times $*\lambda$. Consequently $\ddc(\omega^{n-1})=0$ is equivalent to $\mathrm{d}*\lambda=0$, or $\mathrm{d}^*\lambda=0$. Since $\mathrm{d}\lambda=0$, co-closedness is equivalent to harmonicity. Existence of the conformal representative follows from \cref{thm:gauduchon}; conformal changes preserve the LCK condition.
 
 Stokes' theorem and $\mathrm{d}(\omega^{n-1})=(n-1)\lambda\wedge\omega^{n-1}$ give
@@ -101,7 +104,7 @@ For the Hopf example below, $\kappa_\lambda=\alpha$ is smooth semipositive and t
 If $X$ has a strictly LCK structure and $\{\kappa_\lambda\}$ is pseudoeffective, then $X$ admits no balanced metric.
 \end{proposition}
 \begin{proof}
-Let $T=\kappa_\lambda+\ddc u\geq0$ represent the class. It is a nonzero closed current, since the class is nonzero. It is also de Rham exact. If $b$ were balanced, then $\mathrm{d}(b^{n-1})=0$, so distributional Stokes would give
+Let $T=\kappa_\lambda+\ddc u\geq0$ represent the class. It is a nonzero closed current, since the class is nonzero. It is also de Rham exact. If a Hermitian metric $b$ were balanced, then $\mathrm{d}(b^{n-1})=0$, so distributional Stokes would give
 \[
  \int_XT\wedge b^{n-1}=0.
 \]
@@ -117,6 +120,8 @@ For every compact strictly LCK manifold, the ordinary Bott--Chern class $\{\kapp
 The positivity in \eqref{eq:lck-lee-degree} tests the class against the LCK metric in its Gauduchon gauge. Pseudoeffectivity requires nonnegative pairing with \emph{every} Gauduchon metric, by \cref{thm:lamari}. This is the precise additional statement needed for this approach. It is independent of any upper bound for nonlinear Monge--Amp\`ere masses.
 
 \section{Ordinary and twisted potentials}
+
+Retain the connected compact complex manifold $X$, LCK metric $\omega$, closed Lee form $\lambda$, form $\lambda^{\mathrm c}$ and curvature $\kappa_\lambda$ of \cref{sec:lck-lee-class}. On a cover $\pi:\widetilde X\to X$ with $\pi^*\lambda=\mathrm dF$, use $\widetilde\omega=\mathrm e^{-F}\pi^*\omega$ and the deck character $\chi$ from \cref{sec:lck-lee-cover}. The operators below act on smooth differential forms; their Hessian composition is applied to smooth real functions $u$.
 
 For the fixed closed one-form $\lambda$, define
 \[
@@ -178,6 +183,8 @@ This is cohomology with values in the weight line bundle \cite[Section 18.5]{OV2
 
 \section{The Vaisman Hopf example}
 
+In this section $X=(\mathbb C^3\setminus\{0\})/\langle z\mapsto\mathrm e^{-1}z\rangle$ is the Hopf threefold of \cref{chap:hopf}. On its cover set $s=\log|z|^2$, $\alpha=\ddc s$, $\beta=\mathrm ds\wedge\dc s$, and $\omega=\alpha+\beta$. These forms descend to $X$. Use $\kappa_\lambda$ and $D_\lambda$ as in \cref{sec:lck-lee-class} and \eqref{eq:lck-gauge-operators}.
+
 \begin{proposition}\label{prop:lck-hopf-vaisman}
 The Gauduchon form $\omega=\alpha+\beta$ in \cref{chap:hopf} is Vaisman, with Lee form $\lambda=-\mathrm{d}s$. It satisfies
 \[
@@ -193,7 +200,7 @@ On the covering $s=\log|z|^2$, $\alpha=\ddc s$ and $\beta=\mathrm{d}s\wedge\dc s
                    =-\mathrm{d}s\wedge\omega,
  \qquad \mathrm{e}^s\omega=\ddc(\mathrm{e}^s)=\ddc|z|^2.
 \]
-Although $s$ is not a function on the quotient, $\mathrm{d}s$ descends. Its integral around the loop induced by $z\mapsto \mathrm{e}^{-1}z$ is $-2$, so the Lee form is not exact. Up to a constant factor, the associated Riemannian metric on the cover is
+Although $s$ is not a function on the quotient, $\mathrm{d}s$ descends. Its integral around the loop induced by $z\mapsto \mathrm{e}^{-1}z$ is $-2$, so the Lee form is not exact. Let $g_{S^5}$ be the round metric on the unit sphere. Up to a constant factor, the associated Riemannian metric on the cover is
 \[
  \frac{|\mathrm{d}z|^2}{|z|^2}
  =\mathrm{d}t^2+g_{S^5},\qquad t=\log|z|.
@@ -207,6 +214,8 @@ The unbounded masses follow from \cref{thm:hopf-unbounded}.
 The last statement concerns the full family $\omega+\ddc u$. It makes no assertion that the particular metrics producing unbounded mass remain Vaisman or have the same Lee form. This distinction is essential when comparing it with volume theorems formulated within the Vaisman class.
 
 \section{Prescribed volume and the Gauduchon condition}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$. Fix a smooth closed real one-form $\lambda$ on $X$, and use the twisted operators and cohomology defined in \eqref{eq:lck-gauge-operators} and the discussion following it. The functions $a,u$ below are smooth and real; $\eta$ is a smooth differential form on $X$.
 
 The natural geometric uniqueness question fixes a Lee class and a twisted Bott--Chern class. If the Lee forms themselves differ, one must first specify the identification of the twisted groups. Multiplication by $\mathrm{e}^{-a}$ intertwines the complexes for $\lambda+\mathrm{d}a$ and $\lambda$:
 \[

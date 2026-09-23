@@ -3,16 +3,16 @@
 
 The distinction between a closed class and a nonclosed background becomes particularly important for singular loci. Boucksom's definitions of the non-nef and non-K\"ahler loci already apply to ordinary Bott--Chern classes on compact complex manifolds. An auxiliary Hermitian metric measures lower bounds for closed currents; it need not itself represent a cohomology class. We begin with these definitions and then explain why a numerical restricted-volume construction needs additional care.
 
-\section{Closed classes with Hermitian lower bounds}
+\section{Closed classes with Hermitian lower bounds}\label{sec:bc-hermitian-bounds}
 
-Let $X$ be a connected compact complex manifold and let $\omega$ be a Hermitian metric. The ordinary real Bott--Chern group is
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ be a Hermitian metric on $X$. The ordinary real Bott--Chern group is
 \[
  H^{1,1}_{\mathrm{BC}}(X,\R)
  =\frac{\{\theta\in C^\infty(X,\Lambda^{1,1}_{\R}):
                                       \mathrm{d}\theta=0\}}
         {\ddc C^\infty(X,\R)}.
 \]
-Fix a class $\alpha$ and a smooth closed representative $\theta$. Representatives that are currents have the form $T=\theta+\ddc u$; an almost positive such current has a quasi-plurisubharmonic potential $u$.
+Fix a class $\alpha\in H^{1,1}_{\mathrm{BC}}(X,\R)$ and a smooth closed real $(1,1)$-representative $\theta$. Representatives that are currents have the form $T=\theta+\ddc u$; an almost positive such current has a quasi-plurisubharmonic potential $u$.
 
 \begin{definition}\label{def:bc-class-positivity}
 The class $\alpha$ is \emph{pseudoeffective} if it contains a positive current. It is \emph{nef} if, for every $\varepsilon>0$, there is a smooth real $u_\varepsilon$ with
@@ -50,6 +50,9 @@ This is also why a nef class is pseudoeffective: take smooth representatives wit
 \input{author/section_threshold_divisorial_constraints}
 
 \section{Minimal multiplicities and the non-nef locus}
+\label{sec:bc-minimal-multiplicities}
+
+Retain $X$, $n$ and the Hermitian metric $\omega$ from \cref{sec:bc-hermitian-bounds}. Fix a pseudoeffective class $\alpha\in H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$ with smooth closed representative $\theta$. For an almost positive closed $(1,1)$-current $T$ and a point $x\in X$, write $\nu(T,x)$ for its Lelong number. The set $\alpha[-\varepsilon\omega]$ consists of its representatives bounded below by $-\varepsilon\omega$.
 
 For $\varepsilon>0$ put
 \[
@@ -62,7 +65,7 @@ $u-\sup_Xu\leq V_\varepsilon$. Notice that the positive current used to construc
 
 \Needspace{10\baselineskip}
 \begin{definition}\label{def:bc-minimal-multiplicity}
-The \emph{minimal multiplicity} of $\alpha$ at $x$ is
+For $x\in X$, the \emph{minimal multiplicity} of $\alpha$ at $x$ is
 \[
  \nu(\alpha,x)=\sup_{\varepsilon>0}\nu(T_{\min,\varepsilon},x).
 \]
@@ -74,7 +77,7 @@ The \emph{non-nef locus} is
 
 Lelong numbers of these almost positive closed currents are well defined; adding a smooth form does not change them. If $\varepsilon$ decreases, the admissible family shrinks, so its minimal multiplicities increase. Thus the supremum is the limit as $\varepsilon\downarrow0$. Comparison of two auxiliary metrics proves independence of $\omega$. Changing the representative changes minimal potentials only by a smooth function and bounded normalization errors, so it does not affect these numbers either. These are precisely the definitions of \cite[Definition 2.1.5]{BouThesis02}.
 
-We use two standard forms of Demailly regularization, with the precise lower bounds of \cite[Theorem 2.1]{Bou04Zariski}. If $T\geq\gamma$ is closed and almost positive, smooth representatives $\theta_j\in\{T\}$ satisfy $\theta_j\geq\gamma-C\lambda_j\omega$, where the continuous functions $\lambda_j$ decrease pointwise to $\nu(T,\cdot)$. When all Lelong numbers vanish, Dini's theorem makes this loss uniformly small. Analytic regularization gives currents $T_j\in\{T\}$ with $T_j\geq\gamma-\varepsilon_j\omega$, $\varepsilon_j\downarrow0$, and $\nu(T_j,x)\leq\nu(T,x)$. Thus it preserves strict positivity after a small loss and introduces no positive Lelong number at a point where the original number is zero. These are also the regularization principles recalled in \cite[Theorems 1.2.9--1.2.10]{BouThesis02} and in \cite{SGPT}.
+We use two standard forms of Demailly regularization, with the precise lower bounds of \cite[Theorem 2.1]{Bou04Zariski}. Let $\gamma$ be a smooth real $(1,1)$-form on $X$. If $T\geq\gamma$ is a closed almost positive $(1,1)$-current, smooth representatives $\theta_j\in\{T\}$ satisfy $\theta_j\geq\gamma-C\lambda_j\omega$, where $C>0$ is fixed and the continuous functions $\lambda_j$ decrease pointwise to $\nu(T,\cdot)$. When all Lelong numbers vanish, Dini's theorem makes this loss uniformly small. Analytic regularization gives currents $T_j\in\{T\}$ with $T_j\geq\gamma-\varepsilon_j\omega$, $\varepsilon_j\downarrow0$, and $\nu(T_j,x)\leq\nu(T,x)$. Thus it preserves strict positivity after a small loss and introduces no positive Lelong number at a point where the original number is zero. These are also the regularization principles recalled in \cite[Theorems 1.2.9--1.2.10]{BouThesis02} and in \cite{SGPT}.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:bc-non-nef}
@@ -98,15 +101,18 @@ The parameter $\varepsilon$ is essential. Even for a nef class, a positive curre
 
 \Needspace{13\baselineskip}
 \section{The non-K\"ahler locus}
+\label{sec:bc-non-kahler-locus}
 
-For an almost positive closed current write $E_+(T)=\{x:\nu(T,x)>0\}$.
+Retain the compact complex manifold $X$, Hermitian metric $\omega$, real Bott--Chern class $\alpha$ and smooth closed representative $\theta$ of \cref{sec:bc-hermitian-bounds}. For pseudoeffective $\alpha$, use $T_{\min,\varepsilon}$ and $E_{\mathrm{nn}}(\alpha)$ from \cref{sec:bc-minimal-multiplicities}.
+
+For an almost positive closed $(1,1)$-current $T$ on $X$, write $E_+(T)=\{x:\nu(T,x)>0\}$.
 
 \begin{definition}\label{def:bc-non-kahler-locus}
-If $\alpha$ is big, its \emph{non-K\"ahler locus} is
+If $\alpha$ is big, let $T$ range over its K\"ahler-current representatives. Its \emph{non-K\"ahler locus} is
 \[
  E_{\mathrm{nK}}(\alpha)=\bigcap_{T}E_+(T),
 \]
-where $T$ ranges over K\"ahler currents in $\alpha$. For a pseudoeffective class that is not big, we use the convention $E_{\mathrm{nK}}(\alpha)=X$.
+For a pseudoeffective class that is not big, we use the convention $E_{\mathrm{nK}}(\alpha)=X$.
 \end{definition}
 
 The definition for big classes is \cite[Definition 2.1.19]{BouThesis02}. The following elementary part of Boucksom's theorem explains its geometry.
@@ -136,7 +142,7 @@ For any positive current $T\in\alpha$ and any $\varepsilon>0$, minimality gives 
 The non-K\"ahler locus of a big class has no isolated points.
 \end{proposition}
 \begin{proof}
-Let $\theta+\ddc\Phi\geq\delta\omega$ be a current as in \cref{thm:bc-non-kahler-locus}. Suppose $x$ is an isolated point of its polar set. Choose a coordinate ball centered at $x$ with no other pole. For sufficiently large $A$, the local function
+Let $\theta+\ddc\Phi\geq\delta\omega$ be a current as in \cref{thm:bc-non-kahler-locus}. Suppose $x$ is an isolated point of its polar set. Choose holomorphic coordinates $z=(z_1,\ldots,z_n)$ on a ball centered at $x$, with no other pole. For a sufficiently large positive constant $A$ and a real constant $C$ to be chosen, the local function
 $q(z)=A|z|^2-C$ satisfies $\theta+\ddc q\geq\delta'\omega$ on a smaller ball, for some $\delta'>0$.
 
 Choose $C$ so that $q<\Phi$ on a closed annular collar of the boundary. This is possible because $\Phi$ is smooth on that collar. Since $\Phi\to-\infty$ at $x$, the maximum $\max(\Phi,q)$ agrees with $q$ near $x$ and with $\Phi$ on the collar. It therefore glues to $\Phi$ outside the ball and gives a global K\"ahler current smooth near $x$. Its Lelong number at $x$ is zero, contradicting the definition of $E_{\mathrm{nK}}(\alpha)$.
@@ -148,7 +154,7 @@ Closed bigness has a strong global consequence: the existence of a K\"ahler curr
 
 \section{Null loci and numerical restricted volumes}
 
-For the moment assume that $X$ is K\"ahler and let $\omega$ be a K\"ahler form. If $\alpha$ is nef, its classical null locus is
+Let $X$ be a connected compact K\"ahler manifold of dimension $n$, let $\omega$ be a K\"ahler form, and fix a class $\alpha\in H^{1,1}_{\mathrm{BC}}(X,\mathbb R)$. If $\alpha$ is nef, its classical null locus is
 \[
  \operatorname{Null}(\alpha)
  =\bigcup_{\substack{V\subset X\ \mathrm{irreducible},\ \dim V>0\\
@@ -160,24 +166,26 @@ The intersection number may be computed on a resolution of $V$ by pulling back a
 \]
 is the transcendental Nakamaye theorem of Collins--Tosatti \cite{CT15Loci}. Their theorem also applies on compact manifolds in class $\mathcal C$.
 
-For a general pseudoeffective class on a compact K\"ahler manifold, the appropriate replacement is the numerical restricted volume of Collins--Tosatti \cite[Section 2]{CT22Restricted}. For an irreducible $k$-dimensional $V$, $k>0$, it is zero when $V\subset E_{\mathrm{nn}}(\alpha)$; otherwise it is
+For a general pseudoeffective class on a compact K\"ahler manifold, the appropriate replacement is the numerical restricted volume of Collins--Tosatti \cite[Section 2]{CT22Restricted}. For an irreducible compact analytic subvariety $V\subset X$ of dimension $k>0$, let $V_{\mathrm{reg}}$ be its regular locus. The numerical restricted volume is zero when $V\subset E_{\mathrm{nn}}(\alpha)$. Otherwise, for real $\varepsilon>0$, let $T$ range over closed representatives of $\alpha$ with $T\geq-\varepsilon\omega$, analytic singularities with smooth remainder, and polar set not containing $V$. The subscript $\mathrm{ac}$ denotes the absolutely continuous part on $V_{\mathrm{reg}}$. The volume is
 \begin{equation}\label{eq:bc-numerical-restricted-volume}
  \langle\alpha^k\rangle_{X\mid V}
  =\lim_{\varepsilon\downarrow0}\ \sup_T
  \int_{V_{\mathrm{reg}}}
       \bigl((T+\varepsilon\omega)|_{V_{\mathrm{reg}}}\bigr)_{\mathrm{ac}}^k.
 \end{equation}
-Here $T\in\alpha$ is closed, $T\geq-\varepsilon\omega$, its polar set does not contain $V$, and its potentials have analytic singularities with a \emph{smooth} remainder. This last condition makes the displayed measure the extension by zero of a smooth measure away from an analytic subset. It must not be replaced without explanation by the weaker condition of a bounded remainder.
+The condition that the analytic singularities have a \emph{smooth} remainder makes the displayed measure the extension by zero of a smooth measure away from an analytic subset. It must not be replaced without explanation by the weaker condition of a bounded remainder.
 
 The numerical null locus is the union of the positive-dimensional irreducible subvarieties on which \eqref{eq:bc-numerical-restricted-volume} vanishes. The trace theory of \cite[Chapter 8]{SGPT} relates these restricted volumes to masses on $V$, which explains why singularity types and restriction of multiplier ideals are relevant to identifying this locus. Such a trace need not equal an ordinary pointwise restriction of a singular potential; see \cref{chap:trace-data}.
 
 \section{Failure of a direct Hermitian volume formula}
 
+Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ be a Hermitian metric on $X$. The symbol $\{0\}$ below means the zero real Bott--Chern class. We compare the restricted-volume expression \eqref{eq:bc-numerical-restricted-volume} with the same expression using this possibly nonclosed perturbation.
+
 The closedness of the perturbation in \eqref{eq:bc-numerical-restricted-volume} is not merely a matter of notation. Even the ambient case $V=X$ behaves incorrectly if one replaces its K\"ahler form by an arbitrary Hermitian metric.
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:bc-zero-class-infinite-error-volume}
-Suppose a compact complex $n$-fold has a Hermitian metric $\omega$ and smooth real functions $v_j$ such that
+Suppose there are smooth real functions $v_j$ on $X$, for positive integers $j$, such that
 \[
  \omega+\ddc v_j>0,
  \qquad \int_X(\omega+\ddc v_j)^n\longrightarrow+\infty.

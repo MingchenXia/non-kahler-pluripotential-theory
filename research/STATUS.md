@@ -4,7 +4,7 @@ The goal remains active and incomplete. Continue improving the manuscript after 
 
 ## Current revision under review
 
-A whole-book notation-scope review is in progress at the user's request. Every active section and subsection must declare or precisely recall its objects and hypotheses before using them, including proof-local notation. The first reported instance is Definition 1.1.1. The mingchen-writing skill has been updated with the rule and the manual coverage audit. The first complete-text notation pass covers Chapters 1–26; later chapters, the appendix and front matter remain pending. Progress is recorded in `editorial/notation-before-use-review.md` and its file map. Checkpoint93 remains the latest checked release until the full revision, build and reconstruction checks finish.
+A whole-book notation-scope review is in progress at the user's request. Every active section and subsection must declare or precisely recall its objects and hypotheses before using them, including proof-local notation. The first reported instance is Definition 1.1.1. The mingchen-writing skill has been updated with the rule and the manual coverage audit. The first complete-text notation pass covers all 33 active chapters, their nested inputs, the appendix and front matter (188 files). The full draft compiles to 762 pages; its house-audit diagnostics exactly match the same baseline93 scope. The second pass, final visual inspection and source reconstruction remain pending. Progress is recorded in `editorial/notation-before-use-review.md` and its file map. Checkpoint93 remains the latest checked release until these checks finish.
 
 ## Checkpoint93
 
