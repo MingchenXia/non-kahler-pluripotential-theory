@@ -1,0 +1,163 @@
+% Historical submitted candidate; superseded by the factored checkpoint91 text.
+% See big-exponential-compactness-review.md for the completed review and exact scope.
+% DRAFT: independent review pending; not an active book input.
+\subsection{Limits of normalized exponential solutions}
+
+The fixed-reference compactness theorem also describes the approximation
+used to construct the zero-exponent equation. It controls differences of
+potentials uniformly on $\Omega$, even when the potentials themselves
+are unbounded near its complement.
+
+\begin{proposition}\label{prop:big-exponential-clusters}
+Let $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, be nonzero, and let
+$u_\lambda\simeq V_\theta$ be the unique solution of
+\[
+ \mu_{u_\lambda}=\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V,
+ \qquad \lambda>0.
+\]
+Put
+\[
+ v_\lambda=u_\lambda-\sup_Xu_\lambda,
+ \qquad c_\lambda=\mathrm{e}^{\lambda\sup_Xu_\lambda}.
+\]
+For $0<\lambda\leq1$ there are constants $B,C,m>0$, independent of
+$\lambda$, such that
+\[
+ V_\theta-B\leq v_\lambda\leq V_\theta,
+ \qquad m\leq c_\lambda\leq C.
+\]
+The normalized family is relatively compact for uniform convergence of
+differences on $\Omega$. As $\lambda\downarrow0$, every cluster limit
+$v$ is normalized, has minimal singularities, and satisfies
+\[
+ \mu_v=cf\,\mathrm{d}V,
+\]
+where $c>0$ is the unique scalar in
+\cref{thm:big-minimal-normalized}. Moreover,
+\[
+ c_\lambda\longrightarrow c,
+ \qquad c_\lambda\mathrm{e}^{\lambda v_\lambda}f
+          \longrightarrow cf\quad\text{in }L^p(\mathrm{d}V).
+\]
+Every sequence of parameters in $(0,1]$ has a subsequence for which the
+potentials converge in $C^\beta$ on each compact subset of $\Omega$, for
+all
+\[
+ 0<\beta<\frac{2(p-1)}{np+3(p-1)}.
+\]
+No metric mass property is assumed.
+\end{proposition}
+
+\begin{proof}
+The equation for $v_\lambda$ is
+\[
+ \mu_{v_\lambda}=c_\lambda\mathrm{e}^{\lambda v_\lambda}
+                         f\,\mathrm{d}V.
+\]
+Fix a Gauduchon metric $\gamma$ and write
+$\gamma^n=G\,\mathrm{d}V$. Since $v_\lambda\leq0$ and
+$0<\lambda\leq1$, \eqref{eq:big-singular-gauduchon-trace} gives
+\[
+ c_\lambda^{1/n}
+ \int_X\mathrm{e}^{v_\lambda/n}f^{1/n}G^{1-1/n}\,\mathrm{d}V
+ \leq\int_X\theta\wedge\gamma^{n-1}.
+\]
+The integrals on the left have a positive uniform lower bound.
+Otherwise quasi-plurisubharmonic compactness would give an almost
+everywhere convergent subsequence of the normalized $v_\lambda$ with a
+genuine limit, and dominated convergence would give a positive limit
+integral, since $f$ is nonzero. Thus $c_\lambda\leq C$.
+
+The lower-type estimate in the proof of
+\eqref{eq:big-normalized-uniform-type} now applies for every
+$0<\lambda\leq1$. More explicitly, uniform Skoda integrability gives
+fixed $\varepsilon>0$ and $1<q<p$ with
+$\|\mathrm{e}^{-\varepsilon v_\lambda}f\|_q$ uniformly bounded.
+The reference-preserving subsolution lemma supplies
+\[
+ V_\theta-1\leq\eta_\lambda\leq V_\theta,
+ \qquad \mu_{\eta_\lambda}\geq
+ m\mathrm{e}^{-\varepsilon v_\lambda}f\,\mathrm{d}V
+ \geq mf\,\mathrm{d}V
+\]
+for a fixed $m>0$. Scalar order, together with
+$\mu_{v_\lambda}\leq c_\lambda f\,\mathrm{d}V$, gives
+$c_\lambda\geq m$. Set
+$D=\varepsilon^{-1}\max\{0,\log(C/m)\}$ and
+$w_\lambda=\eta_\lambda-D$. Then
+\[
+ \mathrm{e}^{\varepsilon(w_\lambda-v_\lambda)}\mu_{v_\lambda}
+ \leq m\mathrm{e}^{-\varepsilon v_\lambda}f\,\mathrm{d}V
+ \leq\mu_{w_\lambda},
+\]
+since $\lambda v_\lambda\leq0$ and $\eta_\lambda\leq0$.
+Exponential order gives $v_\lambda\geq w_\lambda$, proving the uniform
+bounds with $B=1+D$.
+
+The densities are bounded in $L^p$ by $C\|f\|_p$. Apply
+\cref{cor:big-reference-uniform-convergence} with $\eta=V_\theta$.
+Given any sequence $\lambda_j\downarrow0$, pass to a subsequence with
+$v_{\lambda_j}\to v$ uniformly in differences on $\Omega$ and in
+$L^1(X)$, and with $c_{\lambda_j}\to c_*\in[m,C]$.
+The limit has the same reference bounds and is normalized. On the
+complement of the pole set,
+\[
+ 0\leq1-\mathrm{e}^{\lambda v_\lambda}
+ \leq1-\mathrm{e}^{\lambda(V_\theta-B)}\longrightarrow0.
+\]
+Dominated convergence after multiplication by $f$ therefore gives
+$\mathrm{e}^{\lambda v_\lambda}f\to f$ in $L^p$ for the whole family.
+The compactness corollary identifies the limit equation as
+$\mu_v=c_*f\,\mathrm{d}V$. Scalar uniqueness gives $c_*=c$.
+Every subsequential scalar limit as $\lambda\downarrow0$ is therefore $c$, so
+$c_\lambda\to c$. The stated density convergence follows.
+
+Finally \cref{thm:big-minimal-holder} gives uniform local $C^\alpha$
+bounds for every $\alpha$ below its endpoint. For
+$0<\beta<\alpha$, uniform convergence and the elementary interpolation
+inequality on smaller coordinate balls give
+\[
+ [v_{\lambda_j}-v]_{C^\beta}
+ \leq C\|v_{\lambda_j}-v\|_\infty^{1-\beta/\alpha}
+          [v_{\lambda_j}-v]_{C^\alpha}^{\beta/\alpha}
+ \longrightarrow0.
+\]
+Use slightly larger compact neighborhoods for these estimates. The
+uniformly convergent subsequence already supplied by compactness works
+on every compact subset and for each sub-endpoint exponent; no further
+choice depending on that exponent is needed.
+\end{proof}
+
+\begin{corollary}\label{cor:big-exponential-symmetries}
+Suppose a group $G$ of biholomorphisms preserves $\theta$ and the measure
+$f\,\mathrm{d}V$. Every $v_\lambda$ and every cluster limit as
+$\lambda\downarrow0$ is $G$-invariant. If the normalized zero-exponent
+equation has only one $G$-invariant solution of minimal singularities,
+then the whole family $v_\lambda$ converges to it, uniformly in
+differences on $\Omega$ and in each local $C^\beta$ topology from the
+proposition.
+\end{corollary}
+\begin{proof}
+For $g\in G$, pullback preserves $\theta$-plurisubharmonicity and
+$V_\theta\circ g=V_\theta$, by the envelope definition. It also
+preserves the positive-exponent equation. Its uniqueness gives
+$u_\lambda\circ g=u_\lambda$, and normalization preserves this equality.
+Pullback by a fixed smooth biholomorphism is continuous on $L^1(X)$,
+since its Jacobian relative to the fixed smooth volume is bounded.
+Every cluster limit is therefore invariant almost everywhere, hence in
+canonical representatives. This argument does not require $g$ to
+preserve the chosen barrier or $\Omega$.
+
+Under the stated uniqueness within the invariant class, every cluster
+limit is the same potential. Relative compactness then implies
+convergence of the whole family in the uniform-difference metric:
+a sequence staying a fixed positive distance from that potential would
+have a convergent subsequence, a contradiction. The interpolation
+argument above upgrades it to the asserted local $C^\beta$ convergence.
+\end{proof}
+
+The proposition gives compactness and identifies every cluster equation.
+It does not by itself select a unique cluster potential. The additional
+hypothesis in the corollary concerns only the invariant class; uniqueness
+of all normalized solutions can fail, as in
+\cref{thm:degenerate-hermitian-nonuniqueness}.

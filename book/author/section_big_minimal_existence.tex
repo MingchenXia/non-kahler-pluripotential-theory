@@ -5,8 +5,9 @@ We retain the assumptions and the strict potential of \cref{sec:big-minimal-comp
 \[
  V_\theta=\left(\sup\{w\in\PSH(X,\theta):w\leq0\}\right)^*.
 \]
-In particular $\rho\leq V_\theta\leq0$ and $\sup_XV_\theta=0$. We will solve the equations in the ordinary singularity type of $V_\theta$, with no bounded mass or uniform positive lower volume assumption. The resolution step uses the following precise version of classical regularization.
+In particular $\rho\leq V_\theta\leq0$ and $\sup_XV_\theta=0$. We will solve the equations in the ordinary singularity type of $V_\theta$, with no bounded mass or uniform positive lower volume assumption. The exponential construction varies analytic singularities, so its limit will be justified by envelopes. The normalized equation instead has a common reference interval and uses the compactness theorem just proved. The resolution step begins with the following precise version of classical regularization.
 
+\Needspace{13\baselineskip}
 \begin{theorem}[Demailly regularization]\label{thm:resolvable-regularization-input}
 Let $\alpha$ be any smooth real $(1,1)$-form and let $u\in\PSH(X,\alpha)$. There are $\delta_j\downarrow0$ and $\widetilde u_j\in\PSH(X,\alpha+\delta_j\omega)$ decreasing to $u$ such that each $\widetilde u_j$ is smooth off an analytic pole set and, after a finite sequence of blowups with smooth centers, has local expressions
 \[
@@ -123,6 +124,65 @@ These inequalities hold on $\Omega$ and extend across $Z$ because all measures i
 $\mu_p\leq \mathrm{e}^{\lambda(p-u)}\mu_u$. The exponential order gives $p\geq u$, so $p=u$ and the equation follows. Applying that order in both directions also proves uniqueness. Every passage of the Monge--Amp\`ere operator above was along a locally bounded monotone sequence on $\Omega$.
 \end{proof}
 
+\begin{lemma}\label{lem:big-exponential-uniform-type}
+Under the hypotheses of \cref{thm:big-minimal-exponential}, let
+$u_\lambda$ be its solution and put
+\[
+ v_\lambda=u_\lambda-\sup_Xu_\lambda,
+ \qquad c_\lambda=\mathrm{e}^{\lambda\sup_Xu_\lambda}.
+\]
+There are constants $B,C,m>0$, independent of $0<\lambda\leq1$, such that
+\begin{equation}\label{eq:big-normalized-uniform-type}
+ V_\theta-B\leq v_\lambda\leq V_\theta,
+ \qquad m\leq c_\lambda\leq C.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The equation for $v_\lambda$ is
+\[
+ \mu_{v_\lambda}=c_\lambda\mathrm{e}^{\lambda v_\lambda}
+                         f\,\mathrm{d}V.
+\]
+Fix a Gauduchon metric $\gamma$ and write
+$\gamma^n=G\,\mathrm{d}V$. Since $v_\lambda\leq0$ and
+$0<\lambda\leq1$, \eqref{eq:big-singular-gauduchon-trace} gives
+\[
+ c_\lambda^{1/n}
+ \int_X\mathrm{e}^{v_\lambda/n}f^{1/n}G^{1-1/n}\,\mathrm{d}V
+ \leq\int_X\theta\wedge\gamma^{n-1}.
+\]
+The integrals on the left have a positive uniform lower bound.
+Otherwise quasi-plurisubharmonic compactness would give an almost
+everywhere convergent subsequence of the normalized $v_\lambda$ with a
+genuine limit, and dominated convergence would give a positive limit
+integral, since $f$ is nonzero. Thus $c_\lambda\leq C$.
+
+To control the singularity type, uniform Skoda integrability gives
+fixed $\varepsilon>0$ and $1<q<p$ with
+$\|\mathrm{e}^{-\varepsilon v_\lambda}f\|_q$ uniformly bounded.
+Apply \cref{lem:big-reference-subsolution} with reference
+$V_\theta-1$ and barrier $\rho-1$. It supplies
+\[
+ V_\theta-1\leq\eta_\lambda\leq V_\theta,
+ \qquad \mu_{\eta_\lambda}\geq
+ m\mathrm{e}^{-\varepsilon v_\lambda}f\,\mathrm{d}V
+ \geq mf\,\mathrm{d}V
+\]
+for a fixed $m>0$. Scalar order, together with
+$\mu_{v_\lambda}\leq c_\lambda f\,\mathrm{d}V$, gives
+$c_\lambda\geq m$. Set
+$D=\varepsilon^{-1}\max\{0,\log(C/m)\}$ and
+$w_\lambda=\eta_\lambda-D$. Then
+\[
+ \mathrm{e}^{\varepsilon(w_\lambda-v_\lambda)}\mu_{v_\lambda}
+ \leq m\mathrm{e}^{-\varepsilon v_\lambda}f\,\mathrm{d}V
+ \leq\mu_{w_\lambda},
+\]
+since $\lambda v_\lambda\leq0$ and $\eta_\lambda\leq0$.
+Exponential order gives $v_\lambda\geq w_\lambda$, proving the uniform
+bounds with $B=1+D$.
+\end{proof}
+
 \begin{theorem}\label{thm:big-minimal-normalized}
 Under the assumptions of \cref{thm:big-minimal-exponential}, there are $v\in\PSH(X,\theta)$ and a uniquely determined $c>0$ such that
 \[
@@ -133,57 +193,21 @@ Under the assumptions of \cref{thm:big-minimal-exponential}, there are $v\in\PSH
 Uniqueness of the normalized potential is not asserted.
 \end{theorem}
 \begin{proof}
-Solve the positive-exponent equations with $\lambda=1/j$, and write
-\[
- v_j=u_j-\sup_Xu_j,\qquad
- c_j=\mathrm{e}^{\sup_Xu_j/j},\qquad
- \mu_{v_j}=c_j \mathrm{e}^{v_j/j}f\,\mathrm{d}V.
-\]
-Then $v_j\simeq V_\theta$ and $v_j\leq V_\theta\leq0$. The Gauduchon trace gives $c_j\leq C_0$ uniformly.
+Apply \cref{lem:big-exponential-uniform-type} with $\lambda=1/j$ and
+write $v_j=v_{1/j}$, $c_j=c_{1/j}$. Extract a subsequence with
+$v_j\to v$ in $L^1$ and almost everywhere, and $c_j\to c\in[m,C]$.
+The limit is normalized, genuine and of minimal ordinary type.
+The densities $c_j\mathrm{e}^{v_j/j}f$ have a common $L^p$ bound.
+Hence \cref{cor:big-reference-uniform-convergence}, with reference
+$V_\theta$, upgrades the convergence to uniform convergence of
+differences on $\Omega$ and identifies the weak $L^p$ limit of these
+densities with the density of $\mu_v$.
 
-\Needspace{12\baselineskip}
-Choose $\varepsilon>0$ small and $1<q<p$ such that $\mathrm{e}^{-\varepsilon v_j}f$ is bounded in $L^q$. This follows from H\"older's inequality and uniform Skoda integrability of normalized potentials in a fixed enlarged Hermitian background. The subsolution lemma, with reference $V_\theta-1$ and the fixed barrier $\rho-1$, produces
-\[
- V_\theta-1\leq\eta_j\leq V_\theta,
- \qquad
- \mu_{\eta_j}\geq m \mathrm{e}^{-\varepsilon v_j}f\,\mathrm{d}V
-                 \geq mf\,\mathrm{d}V
-\]
-for a uniform $m>0$. Since $\mu_{v_j}\leq c_jf\,\mathrm{d}V$, scalar order gives $c_j\geq m$.
-
-\Needspace{8\baselineskip}
-Take $D=\varepsilon^{-1}\max\{0,\log(C_0/m)\}$ and put $w_j=\eta_j-D$. We have
-\[
- \mathrm{e}^{\varepsilon(w_j-v_j)}\mu_{v_j}
- =c_j \mathrm{e}^{v_j/j+\varepsilon\eta_j-\varepsilon D-\varepsilon v_j}
-           f\,\mathrm{d}V
- \leq m \mathrm{e}^{-\varepsilon v_j}f\,\mathrm{d}V
- \leq\mu_{w_j}.
-\]
-Exponential order therefore gives $v_j\geq w_j$. In particular
-\begin{equation}\label{eq:big-normalized-uniform-type}
- V_\theta-1-D\leq v_j\leq V_\theta,
- \qquad m\leq c_j\leq C_0.
-\end{equation}
-Extract a subsequence with $v_j\to v$ in $L^1$ and almost everywhere and $c_j\to c\in[m,C_0]$. The limit is normalized, genuine and of minimal ordinary type. After relabeling, denote the retained exponents by $\lambda_j\downarrow0$; thus $\mu_{v_j}=c_j\mathrm{e}^{\lambda_jv_j}f\,\mathrm{d}V$.
-
-One more comparison is needed to identify the measure. Define finite lower envelopes $p_{j,N}=P_\theta(v_j,\ldots,v_N)$ and finite maxima $t_{j,N}=\max_{j\leq k\leq N}v_k$. They all lie between $V_\theta-1-D$ and $V_\theta$. On $\Omega$ put
-\[
- h_k=c_k \mathrm{e}^{(\lambda_k-\varepsilon)v_k},\qquad
- H_j=\sup_{k\geq j}h_k,\qquad L_j=\inf_{k\geq j}h_k.
-\]
-These functions are bounded on each relatively compact subset of $\Omega$, uniformly in $j$. Almost everywhere they converge, as $j\to\infty$, to $c \mathrm{e}^{-\varepsilon v}$. Contact partition and the maximum principle give
-\[
- \mu_{p_{j,N}}\leq \mathrm{e}^{\varepsilon p_{j,N}}H_jf\,\mathrm{d}V,
- \qquad
- \mu_{t_{j,N}}\geq \mathrm{e}^{\varepsilon t_{j,N}}L_jf\,\mathrm{d}V.
-\]
-First let $N\to\infty$, obtaining $p_j$ and $t_j$, and then let $j\to\infty$. The lower envelopes increase to $p\simeq V_\theta$ with $p\leq v$, while the upper envelopes decrease to $v$. Local bounded monotone continuity applies to the left sides, and dominated convergence on relatively compact subsets of $\Omega$ applies to the densities. We obtain
-\[
- \mu_p\leq c \mathrm{e}^{\varepsilon(p-v)}f\,\mathrm{d}V,
- \qquad \mu_v\geq cf\,\mathrm{d}V.
-\]
-Extend across $Z$ and apply exponential order to get $p\geq v$. Hence $p=v$ and $\mu_v=cf\,\mathrm{d}V$. The artificial fixed exponent $\varepsilon$ in this last argument is what allows domination to identify the two envelope limits; the unweighted inequalities alone would not do so. Scalar uniqueness is \cref{cor:big-barrier-orders}.
+At almost every point $v_j$ converges to a finite value, so $v_j/j\to0$.
+Since $v_j\leq0$ and $c_j\leq C$, dominated convergence gives
+$c_j\mathrm{e}^{v_j/j}f\to cf$ in $L^p$. Therefore
+$\mu_v=cf\,\mathrm{d}V$. Scalar uniqueness is
+\cref{cor:big-barrier-orders}.
 \end{proof}
 
 These theorems reconstruct \cite[Theorems 4.6--4.7]{BGL25}. Their equations prove finite mass for the solutions, not a mass bound for their whole ordinary singularity type. At exponent zero only the scalar is unique; \cref{thm:degenerate-hermitian-nonuniqueness} gives counterexamples to uniqueness of the potential.

@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. Continue improving the manuscript after milestones. The old research heartbeat remains paused; hourly GitHub synchronization is a fallback only.
 
+## Checkpoint91
+
+The book has **712 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-91.pdf` has SHA256 `8fc7c65be0ddd2fef0cf405e942c98f5a75c2e69ee84ef17cb55c935739a4228` and 3048360 bytes. All 46 selected pages were rendered and read. The final affine-operator definition changes physical pages 268–269, which were reread; the other 44 selected images are pixel-identical to the reviewed preceding production. The build has no errors, unresolved references, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. See `research/audits/build-snapshot-91.json`.
+
+Sections 13.19–13.21 now place fixed-reference compactness before existence, shorten the zero-exponent existence proof, and give normalized exponential compactness with whole-family scalar and strong Lp density convergence. Potential convergence remains subsequential unless the stated invariant-class uniqueness holds. Section 13.22 incorporates the updated Archive proof details while retaining the explicit local Holder premise and the internally proved global Lp corollary. Local-density-only, nonminimal and pole-set regularity remain outside the asserted conclusions. Neither metric mass property is imposed.
+
+Both new focused Rethlas reports are correct under their accepted inputs. There are 178 reports:169 correct and nine adverse. The original adverse interior-regularity report is unchanged. The exact scopes and primary second-pass checks are in `editorial/big-exponential-compactness-review.md` and `editorial/nonclosed-archive-integration-review.md`. All 47 earlier formal blocks in the affected inputs are preserved, including the interior section's fifteen result statements and one remark; three blocks are added. No whole-book certification or novelty claim is made.
+
+All 176 earlier reports, 29 original SGPT files, four supplied original source/bibliography files, checkpoint90 and its archive, the 17-page companion, and the three inactive Nakamaye files are preserved. The separate nef incomplete-metric draft remains unverified and inactive. The seven-input house audit reports 0 errors and 16 inherited warnings.
+
+Clean source reconstruction is recorded separately in `research/audits/source-package-portability-91.json`; that record must exist and pass before declaring the release procedure complete. The full book goal remains active and incomplete.
+
 ## Checkpoint90
 
 The book has **710 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-90.pdf` has SHA256 `b5613523672dfddefa9f6281c52179aa41c07fd9cfcccc2d8fa47ff82a2cb34c` and 3038625 bytes. Every production page text matches the reviewed final preview. All 33 selected pages were rendered and read; after the last wording polish, the two changed pages were read again and the other 31 images were pixel-identical. Every selected production image matches that final preview. Compilation has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. See `research/audits/build-snapshot-90.json`.
@@ -78,4 +90,4 @@ Chapter19's curve source metric compares with total variation of atomic data und
 
 ## Preservation and publication
 
-Checkpoint86 was remotely verified at `9a50334b1e982ef853107aff2b8b63bcd4780053`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.
+Checkpoint90 was remotely verified at `0f3dfa696032aa543352acb019836de7547e4da5`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.

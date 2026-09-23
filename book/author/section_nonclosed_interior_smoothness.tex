@@ -255,7 +255,7 @@ Apply this to the regularizations and pass to currents. Equation \eqref{eq:inter
 \]
 which is (3).
 
-Conversely assume (3), say $\operatorname{tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q>n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det_\beta T=F$ almost everywhere. On a smaller ball with $F\geq m>0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so
+Conversely assume (3), say $\operatorname{tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q>2n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det_\beta T=F$ almost everywhere. On a smaller ball with $F\geq m>0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so
 \[
   \frac{m}{L^{n-1}}I\leq T\leq LI
 \]
@@ -266,22 +266,21 @@ It remains to regularize a strong solution. Let $P(M)$ be the complex Hessian as
   G(x,M)=\inf_{\delta I\leq A\leq LI}
   \left\{\log\det A+\operatorname{tr}\!\left[A^{-1}\bigl(\Theta(x)+P(M)-A\bigr)\right]\right\}-\log F(x).
 \]
-The tangent-plane formula for $\log\det$ gives $G(x,D^2u)=0$ almost everywhere. This is a uniformly elliptic concave Bellman equation with smooth lower-order coefficients and constant principal matrices. The almost-everywhere solution is also a viscosity solution. Indeed,
-if a smooth upper test $a$ had $G(x,D^2a)<0$ at the contact point,
-strictify it by a small positive quadratic and shrink the ball so that
-this inequality has a fixed negative margin. Uniform ellipticity then
-gives
+For fixed $A$, write $\mathcal E_A(x,M)$ for the expression in braces
+minus $\log F(x)$. The tangent-plane formula for $\log\det$ gives
 \[
- \mathcal P^+(D^2(u-a))\geq\epsilon>0
+  G(x,D^2u)=0\quad\text{almost everywhere}.
 \]
-almost everywhere, where $\mathcal P^+$ is the maximal Pucci operator
-for these fixed ellipticity constants. The difference is negative on
-the boundary and zero at the contact point. The classical ABP maximum
-principle for $W^{2,q}$ functions, $q>2n$, is a contradiction. A lower
-test is treated by applying the same argument to its difference with
-$u$. Thus both viscosity inequalities hold. The variable-coefficient
-Evans--Krylov theorem for uniformly elliptic concave equations
-\cite{Caffarelli89} gives $u\in C^{2,\alpha}_{\mathrm{loc}}$. Schauder estimates applied to successive derivatives of \eqref{eq:interior-local-ma} give $u\in C^\infty$. This proves (3)$\Rightarrow$(1). Finally, (1) and $F>0$ imply that the smooth semipositive matrix $T$ is positive definite, giving (2) and (3).
+The operator $G$ is concave and uniformly elliptic on real symmetric matrices. The affine operators $\mathcal E_A$ have constant principal matrices with eigenvalues bounded above and below in terms of $\delta$ and $L$. Their $x$-dependence is smooth uniformly in $A$, so $G$ has a uniform local Lipschitz modulus in $x$.
+
+We verify that the strong solution is a viscosity solution. Suppose that a smooth function $p$ touches $u$ from above at $x_0$ and that $G(x_0,D^2p)<0$. Some fixed matrix $A$ then satisfies $\mathcal E_A(x,D^2p)<-\eta$ on a small ball. Since $G(x,D^2u)=0$ almost everywhere, $\mathcal E_A(x,D^2u)\geq0$ there. Thus $u-p$ has an interior maximum and satisfies
+\[
+  \operatorname{tr}\!\left(A^{-1}P(D^2(u-p))\right)\geq\eta
+  \quad\text{almost everywhere}.
+\]
+After a small quadratic perturbation makes the contact strict, this contradicts the Aleksandrov maximum principle \cite[Chapter~9, Theorem~9.1]{GT01}. If instead $p$ touches $u$ from below and $G(x_0,D^2p)>0$, then $\mathcal E_A(x,D^2p)>\eta$ for every admissible $A$ on a small ball. At almost every point choose an admissible $A(x)$ with $\mathcal E_{A(x)}(x,D^2u)<\eta/2$. A measurable choice is obtained by taking the first qualifying element of a countable dense family. The function $p-u$ then violates the same maximum principle for the measurable uniformly elliptic coefficients $A(x)^{-1}$. Hence $u$ is a viscosity solution of $G(x,D^2u)=0$.
+
+The variable-coefficient Evans--Krylov theorem \cite[Definition~3.2, Theorem~3.4, and the paragraph following it]{TWWY15} gives $u\in C^{2,\alpha}_{\mathrm{loc}}$. The original equation is now uniformly elliptic with smooth data. Difference quotients satisfy linear equations whose principal coefficients are averages of inverse matrices along positive definite segments. Interior Schauder estimates first give $u\in C^{3,\alpha}_{\mathrm{loc}}$ and then, by iteration, $u\in C^\infty$. This proves (3)$\Rightarrow$(1). Finally, (1) and $F>0$ imply that the smooth semipositive matrix $T$ is positive definite, giving (2) and (3).
 \end{proof}
 
 \subsection{Smooth exact approximants}\label{sec:interior-approximants}
@@ -295,8 +294,6 @@ values plus a sufficiently large multiple of $|z|^2-R^2$ is a strict
 subsolution. We use precisely the same classical input
 \cite[Theorem~1.1]{GL10}; for $n=1$ this is the Poisson Dirichlet problem.
 The following estimates keep track of the boundary-data dependence.
-
-\paragraph{A trace estimate at a maximum}
 
 \Needspace{20\baselineskip}
 \begin{lemma}\label{lem:interior-trace-peak}
@@ -494,7 +491,7 @@ has boundary value $g_j-q$ and satisfies
   \qquad
   (\eta+\ddc\underline w_j)^n\geq F\beta^n.
 \]
-The smooth Dirichlet theorem just recalled supplies a solution $w_j$ for the Hermitian background $\eta$; put $u_j=w_j+q$. Comparing $u_j$ with $\varphi\pm\lVert g_j-\varphi\rVert_\infty$ by \cref{prop:interior-comparison} proves the first bound in \eqref{eq:interior-tame-rates}. The functions $u_j$ are therefore uniformly bounded. \Cref{prop:interior-global-trace} and the polynomial $C^4$ boundary norm give the second bound.
+Apply the smooth Dirichlet theorem just recalled with density $H=F\beta^n/\eta^n$ to obtain a solution $w_j$ for the Hermitian background $\eta$; put $u_j=w_j+q$. Comparing $u_j$ with $\varphi\pm\lVert g_j-\varphi\rVert_\infty$ by \cref{prop:interior-comparison} proves the first bound in \eqref{eq:interior-tame-rates}. The functions $u_j$ are therefore uniformly bounded. \Cref{prop:interior-global-trace} and the polynomial $C^4$ boundary norm give the second bound.
 \end{proof}
 
 \subsection{Localization near the nonregular set}\label{sec:interior-localization}
@@ -648,10 +645,12 @@ Use the flat connection of $\beta$ and the Chern connection $\nabla$ of $g$. The
   \Psi^k_{ij}=g^{k\bar\ell}\partial_i g_{j\bar\ell},
   \qquad \mathcal R=|\Psi|_g^2.
 \]
-The Chern torsion is determined by the fixed background:
+The lowered torsion tensor is determined by the fixed background. Put
 \begin{equation}\label{eq:interior-torsion-background}
-  \mathcal T^k_{ij}
-  =g^{k\bar\ell}(\partial_i\vartheta_{j\bar\ell}-\partial_j\vartheta_{i\bar\ell}).
+  C_{ij\bar\ell}
+  =\partial_i\vartheta_{j\bar\ell}-\partial_j\vartheta_{i\bar\ell},
+  \qquad
+  \mathcal T^k_{ij}=g^{k\bar\ell}C_{ij\bar\ell}.
 \end{equation}
 Consequently, for a fixed integer $N$,
 \begin{align}
@@ -663,43 +662,71 @@ Consequently, for a fixed integer $N$,
 \end{align}
 Every factor here is either a fixed derivative of $\vartheta$, a connection factor $\Psi$, or a factor of $g^{\pm1}$; this explains the polynomial dependence.
 
-We use the convention
-$R_{i\bar j k}{}^\ell=-\partial_{\bar j}\Psi^\ell_{ik}$ and lower the last
-index with $g$. The two index-interchange identities are
+For tensor fields, use $\Delta_g=g^{p\bar q}\nabla_p\nabla_{\bar q}$.
+We record the curvature identities used in the estimate. With
 \[
- \begin{split}
- R_{i\bar j k\bar\ell}-R_{k\bar j i\bar\ell}
- &=-g_{p\bar\ell}\nabla_{\bar j}\mathcal T^p_{ik},\\
- R_{i\bar j k\bar\ell}-R_{i\bar\ell k\bar j}
- &=-g_{k\bar p}\nabla_i\overline{\mathcal T^p_{j\ell}}.
- \end{split}
+  \operatorname{Rm}^k{}_{i\bar j l}=-\partial_{\bar j}\Psi^k_{il},
+  \qquad
+  \operatorname{Rm}_{i\bar j l\bar k}=g_{m\bar k}\operatorname{Rm}^m{}_{i\bar j l},
 \]
-The first follows by differentiating the antisymmetric part of the
-connection; the second is its complex conjugate, using the Hermitian
-symmetry of the curvature. Thus both swaps, followed by contraction,
-compare the second Chern--Ricci tensor
-$R^{(2)}_{k\bar\ell}=g^{i\bar j}R_{i\bar j k\bar\ell}$ with the first,
-$R^{(1)}_{k\bar\ell}=-\partial_k\partial_{\bar\ell}\log F$.
-The bounds for the torsion and its derivatives give
+set
+\[
+  \operatorname{Ric}^{(2)}_{l\bar k}=g^{i\bar j}\operatorname{Rm}_{i\bar j l\bar k},
+  \qquad
+  \operatorname{Ric}^{(1)}_{l\bar k}=g^{i\bar j}\operatorname{Rm}_{l\bar k i\bar j}
+  =-\partial_l\partial_{\bar k}\log F.
+\]
+The two curvature interchanges are
+\begin{align*}
+  \operatorname{Rm}_{i\bar j l\bar k}-\operatorname{Rm}_{l\bar j i\bar k}
+  &=-\nabla_{\bar j}C_{il\bar k},\\
+  \operatorname{Rm}_{i\bar j l\bar k}-\operatorname{Rm}_{i\bar k l\bar j}
+  &=-\nabla_i\overline{C}_{\bar j\bar k l}.
+\end{align*}
+They follow by differentiating the torsion identity and its conjugate. Successive interchange and contraction give
+\begin{equation}\label{eq:interior-ricci-contraction}
+  \operatorname{Ric}^{(2)}_{l\bar k}
+  =\operatorname{Ric}^{(1)}_{l\bar k}
+  -g^{i\bar j}\bigl(
+    \nabla_l\overline C_{\bar j\bar k i}
+    +\nabla_{\bar j}C_{il\bar k}
+  \bigr).
+\end{equation}
+Metric compatibility, \eqref{eq:interior-torsion-derivatives}, and the fixed smooth formula for $\operatorname{Ric}^{(1)}$ imply
 \begin{equation}\label{eq:interior-ricci2}
-  |\operatorname{Ric}^{(2)}|\leq CM^N(1+\sqrt{\mathcal R}),\qquad
+  |\operatorname{Ric}^{(2)}|\leq CM^N(1+\sqrt{\mathcal R}),
+  \qquad
   |\nabla\operatorname{Ric}^{(2)}|
   \leq CM^N(1+\mathcal R+|\nabla\Psi|+|\bar\nabla\Psi|).
 \end{equation}
-Here $\operatorname{Ric}^{(2)}$ is the corresponding endomorphism. Raising indices
-introduces only further fixed powers of $M$.
-Since the background connection is flat, $\bar\nabla\Psi=-\operatorname{Rm}(g)$. The contracted holomorphic Chern--Bianchi identity and differentiation of $|\Psi|_g^2$ give schematically
+Moreover,
 \[
-  \Delta_g\Psi=-\nabla\operatorname{Ric}^{(2)}+\mathcal T*\operatorname{Rm}(g),
+  \nabla_{\bar q}\Psi^k_{ij}=-\operatorname{Rm}^k{}_{i\bar q j},
 \]
-and
+and the Chern--Bianchi identity, including its torsion term, is
 \[
+  \nabla_p\operatorname{Rm}^k{}_{i\bar q j}-\nabla_i\operatorname{Rm}^k{}_{p\bar q j}
+  =-\mathcal T^r_{pi}\operatorname{Rm}^k{}_{r\bar q j}.
+\]
+Consequently,
+\begin{equation}\label{eq:interior-laplacian-connection-difference}
+  \Delta_g\Psi^k_{ij}
+  =-\nabla_i(\operatorname{Ric}^{(2)})^k{}_j
+  +g^{p\bar q}\mathcal T^r_{pi}\operatorname{Rm}^k{}_{r\bar q j}.
+\end{equation}
+If $A^k{}_l=(\operatorname{Ric}^{(2)})^k{}_l$, define its action on a tensor of type $(1,2)$ by
+\[
+  (A\mathbin{\cdot}\Psi)^k_{ij}
+  =A^k{}_l\Psi^l_{ij}-A^l{}_i\Psi^k_{lj}-A^l{}_j\Psi^k_{il}.
+\]
+Differentiating the squared norm and using metric compatibility gives
+\begin{equation}\label{eq:interior-laplacian-calabi-norm}
   \Delta_g\mathcal R
   =|\nabla\Psi|^2+|\bar\nabla\Psi|^2
    +2\operatorname{Re}\langle\Delta_g\Psi,\Psi\rangle
-   +\operatorname{Ric}^{(2)}*\Psi*\bar\Psi.
-\]
-Using \eqref{eq:interior-torsion-derivatives}--\eqref{eq:interior-ricci2} and Young's inequality to absorb derivative products yields
+   -\operatorname{Re}\langle A\mathbin{\cdot}\Psi,\Psi\rangle.
+\end{equation}
+There is no mixed torsion term because the Chern torsion has type $(2,0)$. Using \eqref{eq:interior-torsion-derivatives}, \eqref{eq:interior-ricci2}, and \eqref{eq:interior-laplacian-connection-difference} in \eqref{eq:interior-laplacian-calabi-norm}, Young's inequality absorbs the products of $\sqrt{\mathcal R}$ with $|\nabla\Psi|+|\bar\nabla\Psi|$. We obtain
 \begin{equation}\label{eq:interior-calabi-differential}
   \Delta_g\mathcal R\geq-CM^N(\mathcal R^{3/2}+1).
 \end{equation}
@@ -806,6 +833,14 @@ The infinite product converges because $\sum q^k(1+k)<\infty$. For each fixed $j
 \subsection{Proof of the main theorem}\label{sec:interior-main-proof}
 
 \begin{proof}[of \cref{thm:nonclosed-interior-smoothness}]
+If $n=1$, the equation is the linear identity
+\[
+  \ddc\varphi=cf\,\omega_X-\theta
+  \quad\text{on }\Omega.
+\]
+Its right-hand side is smooth, so interior elliptic regularity gives $\varphi\in C^\infty(\Omega)$, and the original equation gives $\theta+\ddc\varphi=cf\,\omega_X>0$. We henceforth assume $n\geq2$.
+
+
 Let
 \[
   \mathcal S=\{p\in\Omega:\varphi\text{ is not smooth on any neighborhood of }p\}.

@@ -4,6 +4,14 @@
 
 Current ledger, 16 September 2026. The earlier chronological record is retained in `audits/proof-obligations-history-through-2026-09-15-0450.md`. The main theory does not assume the bounded mass property. A successful bounded audit is evidence for its specified argument and inputs; it is not formal certification or a novelty review.
 
+## Updated interior-regularity proof (checkpoint91)
+
+The Archive source supplies explicit Bellman/ABP, curvature and dimension-one details for Section 13.22. The focused report `nonclosed_archive_refinement_01` accepts these under the existing local Holder and minimal-singularity hypotheses. The original adverse source-statement report is preserved. The global Lp sufficient condition is internal; local smoothness of the density alone remains insufficient for the stated proof. See `editorial/nonclosed-archive-integration-review.md`.
+
+## Normalized exponential limits (checkpoint91)
+
+The fixed-reference compactness result now precedes minimal-equation existence. Uniform Gauduchon and Skoda/subsolution bounds put all normalized positive-exponent solutions in one reference interval. This shortens the zero-exponent existence proof and identifies every cluster equation, with whole-family scalar and strong Lp density convergence. Local Holder bounds give subsequence convergence in every strict sub-endpoint local Holder topology. Whole-family potential convergence still requires the stated uniqueness inside the invariant class; the general selection problem remains open here. See `editorial/big-exponential-compactness-review.md` for the submitted proof, final factoring and noncircular dependencies. Current sections are stability13.19, existence13.20, Holder and exponential limits13.21, interior smoothness13.22.
+
 ## Stability and local Holder reconstruction (checkpoint90)
 
 The additional Dang26 Holder input retained at checkpoint89 is reconstructed in Sections 13.20–13.21. The proof uses the established reference-preserving subsolution and strict-barrier domination, then derives a linear regularization error from Demailly’s exact local expansion. The strengthened compactness corollary first proves uniform Cauchy convergence pairwise, then identifies the limit equation by local Bedford–Taylor continuity and weak Lp compactness. It assumes a fixed reference interval and a uniform density bound; it does not assume the limit equation or uniqueness of the potential. Neither metric mass property is used. The nonclosed interior smoothness theorem keeps its explicit local Holder premise, with the global Lp corollary now proved internally. Local-density-only regularity, nonminimal regularity and regularity across poles remain outside this result. Full audit scopes and the second-pass expansions are recorded separately; this is not whole-book certification.

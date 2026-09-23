@@ -1,4 +1,4 @@
-# Reading guide — checkpoint90
+# Reading guide — checkpoint91
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -24,7 +24,7 @@ Chapter 13 also proves weighted lower semicontinuity for extended measures in an
 
 Chapter 13 reconstructs minimal ordinary-type Lp equations in arbitrary smooth big backgrounds, without either mass property. The proof uses a strict singular barrier, resolution and the Gauduchon trace. Prescribing a more general ordinary type in a semipositive big background requires the stated smaller-background condition.
 
-Sections 13.20–13.21 prove stability and fixed-reference compactness above a strict barrier, then reconstruct local Holder continuity for minimal-singularity solutions with global Lp density, p>1. The smooth nonclosed regularization error is derived from Demailly’s classical expansion. Section 13.22 proves interior smoothness where the barrier is smooth and the density is smooth positive. Dang26 is credited for the Holder theorem, whose proof is now supplied in the book. Neither metric mass property is used. Local smoothness of the density alone does not supply global Lp integrability; nonminimal regularity and behavior across poles remain separate.
+Section 13.19 proves stability and fixed-reference compactness above a strict barrier; Section 13.20 uses compactness to shorten the normalized existence proof. Section 13.21 reconstructs local Holder continuity for minimal-singularity solutions with global Lp density, p>1. The smooth nonclosed regularization error is derived from Demailly’s classical expansion. Section 13.22 proves interior smoothness where the barrier is smooth and the density is smooth positive. Dang26 is credited for the Holder theorem, whose proof is now supplied in the book. Subsection 13.21.1 proves normalized exponential compactness, scalar and density convergence, with whole-family potential convergence conditional on invariant-class uniqueness. Neither metric mass property is used. Local smoothness of the density alone does not supply global Lp integrability; nonminimal regularity and behavior across poles remain separate.
 
 The two measure-representation sections in Chapter 13 require no mass property. One represents every finite non-pluripolar measure as an integrable density relative to a bounded potential’s measure. The other retains a prescribed ordinary type and allows the reference measure to have infinite mass. The density is not asserted bounded. Neither representation by itself solves the equation.
 
