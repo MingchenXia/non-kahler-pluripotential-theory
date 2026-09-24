@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint104
+
+The book has **782 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-104.pdf` has SHA256 `e5d926c7018130edd1c2ff3d43c2c09dad43e0061eec6af1b0dea7951f6cb32c` and 3524569 bytes. Chapter 9's complete first/second correctness-and-writing pass is now finished across checkpoints103–104: this increment fully rereads the six remaining inputs, clarifies local notation and the noncircular implicit-function argument, and checks the second-order, Liouville and continuity proofs. All 31 earlier formal statements preserve their hypotheses/conclusions; two only make declarations explicit. No new formal result or Rethlas run is added. There remain189 reports:179 correct and ten historical adverse.
+
+The 782-page build has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 31 selected final pages were inspected. The six-input house audit has zero errors and zero warnings. The other 185 active inputs, originals, bibliography/styles, hidden sources, all 189 historical reports, checkpoint103 PDF/archive and the 17-page companion are preserved. See `research/editorial/gauduchon-equations-second-pass-104.md` and `research/audits/build-snapshot-104.json`. Fresh reconstruction is checked separately in `research/audits/source-package-portability-104.json`; that record must pass before release checks are complete.
+
+Published TWWY15 locators and the existing exact Sze18 preprint locators were checked. The bibliography is unchanged; no fresh whole-paper audit or new arXiv coverage is claimed. Recorded coverage gaps remain. The checkpoint103 smooth Hopf theorem is unchanged; continuous-density equality and global convexity remain open here. Continue with Chapter 10 and inspect the actual convergence of smooth approximations before using nonlinear continuity. The general theory and broad book goal remain active and incomplete.
+
 ## Checkpoint103
 
 The book has **782 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-103.pdf` has SHA256 `6d4487272bcf12289304952886ac2e5af3a4d45e860ab9cb6b123a7569035556` and 3523475 bytes. Section 9.9 proves the Hopf normalization identity, the exact smooth base-pullback equality case, and the background Hessian formula with the same kernel. Its bounded Rethlas check passes under three explicit internal inputs. There are 189 reports:179 correct and ten historical adverse. No general mass condition, nonsmooth extension or novelty claim is made.

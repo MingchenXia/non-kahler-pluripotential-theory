@@ -108,6 +108,12 @@ Section 9.9 derives the normalization defect D(F)=b(F)+log integral exp(F)dnu on
 
 All nine Chapter 9 inputs received a first pass; the three edited inputs received the second pass. Finish the remaining six-input second pass before advancing to Chapter 10. Published STW locators are checked; this is not a fresh whole-paper audit. The limited same-day arXiv probe does not close CV or historical replacement gaps. The SGPT scope, separated mass regimes and excluded Nakamaye chapter are unchanged.
 
+## Chapter 9 review completed, checkpoint104
+
+The six remaining Gauduchon-equation inputs have completed their full second pass. Together with checkpoint103, this finishes the current nine-input Chapter 9 correctness/writing cycle. The contact-set, adjoint, matrix-weight, second-order, Liouville and continuity arguments retain their hypotheses and conclusions; local declarations and the noncircular inverse-function step are clearer. The complete saved second-order and continuity reports were reread. No new theorem or verifier run is added.
+
+Continue with Chapter 10, including the exact convergence of smooth approximations needed to test the continuous-density Hopf equality question. The smooth normalization theorem, its model-specific scope and the other open questions are unchanged. No additional arXiv scan or adoption is claimed; existing coverage gaps remain. The general and special mass regimes and excluded Nakamaye material are unchanged.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

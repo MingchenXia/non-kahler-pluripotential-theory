@@ -14,7 +14,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 6 | `chapter_products.tex` | Complete first/second pass including integrable-current input and final layout; see smooth-masses-products-review-100.md |
 | 7 | `chapter_damped_measures.tex` | Complete first/second pass including general-weight input and final layout; see capacity-defects-damping-review-101.md |
 | 8 | `chapter_hopf.tex` | Complete full first/second proof-and-writing pass and final layout; see hopf-fiber-average-review-102.md |
-| 9 | `chapter_smooth_equations.tex` | In progress: all nine inputs read once; second pass complete for root, smooth estimates and gradient input; six other inputs pending. See hopf-normalization-smooth-equations-review-103.md |
+| 9 | `chapter_smooth_equations.tex` | Complete nine-input first/second pass across checkpoints103–104, including final selected-page review; see gauduchon-equations-second-pass-104.md |
 | 10 | `chapter_weak_equations.tex` | Pending |
 | 11 | `chapter_degenerate_uniqueness.tex` | Pending |
 | 12 | `chapter_envelopes.tex` | Pending |
@@ -40,4 +40,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 32 | `chapter_bounded_mass_equations.tex` | Pending |
 | 33 | `chapter_research_program.tex` | Pending |
 
-The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: finish Chapter 9 second pass through section_stw_czero, section_gauduchon_volume_adjoint, section_stw_structure, section_stw_second_order, section_stw_liouville and section_stw_continuity. Then proceed to Chapter 10. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
+The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 10 and its inputs. Inspect the exact solution-convergence statements before attempting continuous-density Hopf equality. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
