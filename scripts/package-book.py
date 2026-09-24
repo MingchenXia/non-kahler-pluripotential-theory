@@ -41,6 +41,8 @@ for name in (
     "research/editorial/smooth-masses-products-review-100.md",
     "research/editorial/capacity-defects-damping-review-101.md",
     "research/editorial/hopf-fiber-average-review-102.md",
+    "research/editorial/hopf-normalization-smooth-equations-review-103.md",
+    "research/rethlas/verification/inputs/hopf-normalization-defect.md",
     "research/editorial/compact-growing-jet-localization-draft.md",
     "research/editorial/growing-jet-local-upper-draft.md",
     "research/editorial/degenerate-selected-kernels.md",

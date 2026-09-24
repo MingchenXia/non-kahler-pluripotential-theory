@@ -56,3 +56,9 @@ Newly detected v1 candidates: Liu 2609.28411, Qing–Sun–Zhou 2609.27556, Chen
 The CV `new?show=2000&skip=0` page still bears September 23. A different primary URL, [CV new with show=100](https://arxiv.org/list/math.CV/new?show=100), returns a page explicitly dated **Monday 21 September**, with all 14 entries (4 new, 3 cross, 7 replacements). Every numbered title was read. This backfills the September 21 CV replacement-title list only; it is not September 24 coverage. The other historical replacement gaps remain. Same-day DG/AG/AP coverage from checkpoint101 is retained without a repeated scan.
 
 The newly detected relevant update is [Zhuo Liu, arXiv:2506.22834v2](https://arxiv.org/abs/2506.22834). Its primary history gives first submission 28 June 2025 10:31:44 UTC and v2 on 18 September 2026 04:18:52 UTC; it appears in the returned September 21 replacement list. The abstract concerns convolution regularization, L2 estimates in specified form bidegrees and singular Hermitian metrics. Only the abstract and history are checked; full statements and proofs remain pending, and no result is adopted. The other six replacement titles do not receive a blanket claim of primary-version verification.
+
+### Chapter 9 continuation, 24 September
+
+This is a same-day bounded continuation of the recorded daily scan. The [CV endpoint](https://arxiv.org/list/math.CV/new?show=2000&skip=0) still returns the September 23 heading and 21 entries. This availability probe adds no September 24 coverage and does not establish a negative scan. The previous seven-day new/cross coverage, DG/AG/AP September 24 coverage, candidate histories and historical replacement gaps are retained. No candidate is newly adopted.
+
+The source check for this increment concerns the already used STW theorem, whose published version is now used in the bibliography. Exact scope and retrieval failures are in `literature.md`.

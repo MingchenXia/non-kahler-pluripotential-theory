@@ -1,4 +1,4 @@
-# Reading guide — checkpoint102
+# Reading guide — checkpoint103
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -53,6 +53,8 @@ Chapter 26 studies the Gauduchon variational volume and attainment. Distinguish 
 | Uniform first moments along one maximizing sequence, plus a genuine smaller-background envelope for the greatest threshold subsolution | Exact equations and capacity convergence along normalized L1-convergent exponential subsequences. |
 
 Uniform integrability alone gives an integrable maximizing current and supporting probabilities; it does not give the smoothness or envelope assumption in the last two rows. These are conditions on the selected data and tests, not global bounded-mass hypotheses.
+
+Section 9.9 specializes the smooth equation to the fixed Hopf metric. It identifies the normalization defect with vertical energy, characterizes its zero set by base pullbacks, and computes its background Hessian using the Gauduchon adjoint. The smooth result does not assert a nonsmooth equality case or global convexity.
 
 ## Theory under uniform mass assumptions
 

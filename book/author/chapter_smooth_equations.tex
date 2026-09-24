@@ -5,9 +5,9 @@ The non-closedness of the background changes the normalization of a Monge--Amp\`
 
 Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$ on $X$. For $u\in C^\infty(X,\mathbb R)$, write $\omega_u=\omega+\ddc u$. Let $F\in C^\infty(X,\mathbb R)$ be prescribed and let $b\in\mathbb R$ be an unknown scalar. We study
 \begin{equation}\label{eq:smooth-ma}
- \omega_u^n=\mathrm{e}^{F+b}\mathrm{d}V,\qquad \omega_u>0,
+ \omega_u^n=\mathrm{e}^{F+b}\mathrm{d}V,\qquad \omega_u>0.
 \end{equation}
-Both $u$ and $b$ are unknown. Adding a constant to $u$ does not change the equation.
+Adding a constant to $u$ does not change the equation.
 
 For $n=1$, the adjoint measure used below means $\mu_u=\omega_u/\int_X\omega_u$; the compatibility and Fredholm arguments of \cref{prop:adjoint-gauduchon} then follow directly from Stokes' theorem.
 
@@ -56,6 +56,7 @@ Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a
 
 The essential global estimate only needs an upper bound for the density. We follow the weighted integration method of Cherrier and Tosatti--Weinkove \cite{Cherrier87,TW10}. A finite recurrence will absorb the torsion terms. The normalized compactness theorem then finishes the argument after Sobolev iteration.
 
+\Needspace{10\baselineskip}
 \begin{lemma}\label{lem:pointwise-torsion-estimate}
 There is a constant $C$ depending on $\omega$ such that, for every positive $(1,1)$-form $\eta$, every smooth real $f$, every $\delta>0$, and $0\leq k\leq n-2$,
 \[
@@ -85,7 +86,7 @@ $\eta^n\leq\Lambda\omega^n$ for a fixed $\Lambda>0$. There are constants $p_0\ge
 \]
 \end{lemma}
 \begin{proof}
-For a fixed $p\geq1$, abbreviate
+For a fixed real $p\geq1$, define $M_k$ for $0\leq k\leq n$ and $J_k$ for $0\leq k\leq n-1$ by
 \[
  M_k=\int_X\mathrm{e}^{-pu}\eta^k\wedge\omega^{n-k},\qquad
  J_k=\int_X\mathrm{e}^{-pu}\mathrm{d}u\wedge\dc u\wedge\eta^k\wedge\omega^{n-k-1},
@@ -236,7 +237,7 @@ on the open set of strictly positive potentials in $C^{k+2,\alpha}$, restricted 
  (v,a)\longmapsto L_uv-a.
 \]
 Given $h\in C^{k,\alpha}$, integrating $L_uv-a=h$ against $\mu_u$ forces
-$a=-\int_Xh\,\mathrm{d}\mu_u$. For this value, the equation for $v$ satisfies the compatibility condition of \cref{prop:adjoint-gauduchon}, and has a unique solution with zero $\mathrm{d}V$-mean. Elliptic estimates make this inverse bounded. The Banach-space implicit function theorem now gives local smooth dependence. Uniqueness identifies these local solution maps, and elliptic regularity allows arbitrary $k$ for smooth data.
+$a=-\int_Xh\,\mathrm{d}\mu_u$. For this value, the equation for $v$ satisfies the compatibility condition of \cref{prop:adjoint-gauduchon}, and has a unique solution with zero $\mathrm{d}V$-mean. Elliptic estimates make this inverse bounded. The Banach-space implicit function theorem gives a local solution map around the given positive solution; this step does not require the global existence theorem. Uniqueness identifies the local maps wherever they overlap, and elliptic regularity allows arbitrary $k$ for smooth data.
 \end{proof}
 
 \input{author/section_smooth_estimates}
@@ -259,7 +260,7 @@ At every solvable parameter, \cref{prop:b-extrema} gives
  -\sup_X(tG)\leq b_t\leq-\inf_X(tG),
  \qquad \mathrm{e}^{tG+b_t}\leq \mathrm{e}^{\operatorname{osc}_XG}.
 \]
-The constants $b_t$ are uniformly bounded, and \cref{thm:smooth-czero} bounds $u_t$ in $C^0$. Apply \cref{thm:classical-higher-estimate}. Along any sequence of solvable parameters converging in $[0,1]$, a subsequence of $(u_t,b_t)$ therefore converges smoothly to a solution; uniform equivalence of the metrics preserves strict positivity. The supremum normalization also passes to the limit. Thus the solvable set is closed. Connectedness of $[0,1]$ gives a solution at $t=1$, and \cref{prop:smooth-uniqueness} gives uniqueness.
+The constants $b_t$ are uniformly bounded, and \cref{thm:smooth-czero} bounds $u_t$ in $C^0$. Apply \cref{cor:classical-higher-estimate}. Along any sequence of solvable parameters converging in $[0,1]$, a subsequence of $(u_t,b_t)$ therefore converges smoothly to a solution; uniform equivalence of the metrics preserves strict positivity. The supremum normalization also passes to the limit. Thus the solvable set is closed. Connectedness of $[0,1]$ gives a solution at $t=1$, and \cref{prop:smooth-uniqueness} gives uniqueness.
 \end{proof}
 
 \section{The smooth exponential equation}
@@ -361,6 +362,94 @@ Apply \eqref{eq:b-first} along $F_t=F+t(G-F)$ and integrate over $0\leq t\leq1$.
 
 Thus $b$ is a decreasing, concave, Lipschitz functional of the logarithmic density, with the translation rule $b(F+a)=b(F)-a$ for every real constant $a$. It extends uniquely as a Lipschitz functional from smooth to continuous $F$ by uniform approximation. This last statement concerns the scalar functional only; existence or regularity of limiting potentials requires further estimates.
 
+\section{Normalization on the Hopf threefold}
+\label{sec:hopf-normalization}
+
+Let $X=(\mathbb C^3\setminus\{0\})/\langle z\mapsto\mathrm{e}^{-1}z\rangle$, with projection $\pi:X\to\mathbb P^2$ and the Gauduchon form $\omega=\alpha+\beta$ of \cref{chap:hopf}, where $\alpha=\pi^*\omega_{\FS}$ and $\int_{\mathbb P^2}\omega_{\FS}^2=1$. Write $\nu=\omega^3/6$ for its probability volume measure. The fibers are $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ with normalized Haar area $\mathrm{d}A_E$. Use $A$ for the fiber average of \cref{prop:hopf-fiber-average}. For a smooth real function $u$ on $X$ and a local fiber coordinate $w$, the derivative $u_w$ is independent of the choice of base trivialization, and $\nu$ disintegrates as $\mathrm{d}A_E\,\omega_{\FS}^2$.
+
+For $F\in C^\infty(X,\mathbb R)$, let $(u_F,b(F))$ be the solution of
+\[
+ (\omega+\ddc u_F)^3=\mathrm{e}^{F+b(F)}\omega^3,
+ \qquad \omega+\ddc u_F>0,\qquad \int_Xu_F\,\mathrm{d}\nu=0.
+\]
+Define
+\[
+ D(F)=b(F)+\log\int_X\mathrm{e}^F\,\mathrm{d}\nu.
+\]
+In a closed background, the corresponding expression vanishes by \eqref{eq:closed-b}. Here the explicit mass formula expresses it in terms of the energy along the elliptic fibers.
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:hopf-normalization-defect}
+For every smooth real $F$ on this threefold,
+\begin{align}
+ \mathrm{e}^{D(F)}&=1+\int_X|(u_F)_w|^2\,\mathrm{d}\nu,
+ \label{eq:hopf-normalization-energy}\\
+ \|u_F-Au_F\|_{L^2(X,\nu)}^2
+ &\leq4\bigl(\mathrm{e}^{D(F)}-1\bigr).
+ \label{eq:hopf-normalization-average}
+\end{align}
+Thus $D(F)\geq0$, with equality if and only if $F=\pi^*H$ for some $H\in C^\infty(\mathbb P^2,\mathbb R)$.
+\end{proposition}
+\begin{proof}
+Integration of the equation and \eqref{eq:hopf-mass} give
+\[
+ \mathrm{e}^{D(F)}=\frac16\int_X(\omega+\ddc u_F)^3
+                  =1+\int_X|(u_F)_w|^2\,\mathrm{d}\nu.
+\]
+Substituting the first equality into \eqref{eq:hopf-average-mass} proves \eqref{eq:hopf-normalization-average}.
+
+If $D(F)=0$, smoothness gives $(u_F)_w=0$ everywhere. Since $u_F$ is real, it is constant on each connected fiber. It descends to a smooth real function $q$ on $\mathbb P^2$, with $\omega_{\FS}+\ddc q>0$. The identities $\beta^2=0$ and $\alpha=\pi^*\omega_{\FS}$ give
+\[
+ (\omega+\ddc\pi^*q)^3
+       =3\pi^*(\omega_{\FS}+\ddc q)^2\wedge\beta.
+\]
+Dividing by $\omega^3=3\pi^*\omega_{\FS}^2\wedge\beta$ and taking logarithms proves that $F$ is a smooth base pullback.
+
+Conversely, suppose $F=\pi^*H$. Apply \cref{thm:tw-smooth} on $(\mathbb P^2,\omega_{\FS})$ to obtain a smooth real $q$ and a scalar $c$ with
+\[
+ \omega_{\FS}+\ddc q>0,\qquad
+ (\omega_{\FS}+\ddc q)^2=\mathrm{e}^{H+c}\omega_{\FS}^2.
+\]
+Closedness of the base form and Stokes' theorem give $\mathrm{e}^c\int_{\mathbb P^2}\mathrm{e}^H\omega_{\FS}^2=1$. The preceding cube identity shows that $\pi^*q$, after subtraction of its $\nu$-mean, solves the equation on $X$ with scalar $c$. Uniqueness gives $b(F)=c$. Disintegration of $\nu$ now yields $D(F)=0$.
+\end{proof}
+
+In particular, if a smooth positive density $f$ satisfies $\int_Xf\,\mathrm{d}\nu=1$, the equation $(\omega+\ddc u)^3=\mathrm{e}^b f\omega^3$ has $b\geq0$, with equality precisely when $f$ comes from the base. Fixing the total integral of the density therefore does not determine the scalar on this non-closed background.
+
+\begin{corollary}\label{cor:hopf-normalization-hessian}
+Let $G\in C^\infty(X,\mathbb R)$. Write $L_0v=3\ddc v\wedge\omega^2/\omega^3$, and let $v$ be the unique smooth real function satisfying
+\[
+ L_0v=G-\int_XG\,\mathrm{d}\nu,
+ \qquad \int_Xv\,\mathrm{d}\nu=0.
+\]
+Then
+\[
+ \left.\frac{\mathrm{d}}{\mathrm{d}t}D(tG)\right|_{t=0}=0,
+ \qquad
+ \left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}D(tG)\right|_{t=0}
+       =2\int_X|v_w|^2\,\mathrm{d}\nu.
+\]
+The second derivative vanishes if and only if $G$ is a smooth base pullback.
+\end{corollary}
+\begin{proof}
+For real $t$ near zero put $u_t=u_{tG}$ and $b_t=b(tG)$. By \cref{prop:smooth-dependence}, this is a smooth family, with $u_0=b_0=0$. A dot denotes its derivative in $t$. Differentiating the logarithmic equation at zero gives $L_0\dot u_0=G+\dot b_0$. Since $\omega$ is Gauduchon, $\nu$ is the adjoint probability of $L_0$. Integration gives $\dot b_0=-\int_XG\,\mathrm{d}\nu$, so $\dot u_0=v$. This also proves existence and uniqueness of the displayed mean-zero solution.
+
+Smooth dependence gives $(u_t)_w=t v_w+O(t^2)$ uniformly on $X$. Equation \eqref{eq:hopf-normalization-energy} therefore gives
+\[
+ \mathrm{e}^{D(tG)}=1+t^2\int_X|v_w|^2\,\mathrm{d}\nu+O(t^3).
+\]
+Taking logarithms proves the derivative formulas.
+
+\Needspace{8\baselineskip}
+If the second derivative vanishes, then $v=\pi^*q$ for a smooth real $q$ on the base. Direct wedge expansion gives
+\[
+ L_0(\pi^*q)=\pi^*\!\left(
+       \frac{2\ddc q\wedge\omega_{\FS}}{\omega_{\FS}^2}\right).
+\]
+Hence $G=L_0v+\int_XG\,\mathrm{d}\nu$ is a base pullback. Conversely, when $G$ is a base pullback, the proposition gives $D(tG)=0$ for every real $t$, proving the converse.
+\end{proof}
+
+The corollary describes the second variation at the background density. Global convexity of $D$ would require a separate argument: the concavity of $b$ and the convexity of the logarithmic integral have opposite signs. The mass identity and the fiber estimate used here concern this fixed Hopf metric.
+
 \section{Prescribing a Gauduchon volume form}
 
 Let $X$ be a connected compact complex manifold of dimension $n\geq2$. All forms and functions in the following equation are defined on $X$. A Gauduchon form $\gamma$ satisfies $\ddc(\gamma^{n-1})=0$.
@@ -370,7 +459,7 @@ There is also a Monge--Amp\`ere type equation whose unknown is the $(n-1)$st pow
 \Needspace{22\baselineskip}
 \begin{theorem}[Sz\'ekelyhidi--Tosatti--Weinkove]
 \label{thm:stw-volume}
-Assume $n\geq2$. Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)$ with $u$ smooth and $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
+Assume $n\geq2$. Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)\in C^\infty(X,\mathbb R)\times\mathbb R$ with $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
 \[
  \Gamma_u=\gamma_0^{n-1}+\ddc u\wedge\gamma^{n-2}
  +\operatorname{Re}\left(
@@ -407,6 +496,8 @@ If $\gamma_0$ is Gauduchon, so is $\eta_u$, and their $(n-1)$st powers have the 
 
 \section{What must change for weak solutions}
 
+Let $X$ be a connected compact complex manifold with a fixed smooth positive volume form $\mathrm{d}V$. The $L^p$ spaces in this section use that volume form.
+
 The smooth theorem is the first part of the equation theory. The remaining parts require additional definitions and estimates:
 \begin{enumerate}
 \item For densities in $L^p$, $p>1$, one must define the bounded Monge--Amp\`ere measure and obtain uniform potential estimates.
@@ -414,4 +505,4 @@ The smooth theorem is the first part of the equation theory. The remaining parts
 \item For general non-pluripolar right-hand sides, a suitable relative full-mass class must be specified. In a non-closed background its definition cannot rely on invariance of the raw mass within a singularity type.
 \end{enumerate}
 
-The results of \cite{ALS26,XL26} address these questions under different hypotheses, specified in the chapters below. Smooth solvability supplies neither bounded mass nor positive lower volume. For a smooth real $(1,1)$-background $\theta$ on a compact complex manifold $X$, a potential $u\in\PSH(X,\theta)$, and a prescribed positive measure $\mu$, consider an equation $\mathrm{MA}^{\mathrm{ext}}_\theta(u)=c\mu$ with an unknown nonnegative scalar $c$. Uniqueness of $c$ and uniqueness of $u$ modulo constants are distinct assertions. A weak theorem concerning only the scalar must not be read as the full uniqueness statement of \cref{prop:smooth-uniqueness}.
+The results of \cite{ALS26,XL26} address these questions under different hypotheses, specified in the chapters below. Smooth solvability supplies neither bounded mass nor positive lower volume. For a smooth real $(1,1)$-background $\theta$ on $X$, a potential $u\in\PSH(X,\theta)$, and a prescribed positive measure $\mu$, consider an equation $\mathrm{MA}^{\mathrm{ext}}_\theta(u)=c\mu$ with an unknown nonnegative scalar $c$. Uniqueness of $c$ and uniqueness of $u$ modulo constants are distinct assertions. A weak theorem concerning only the scalar must not be read as the full uniqueness statement of \cref{prop:smooth-uniqueness}.

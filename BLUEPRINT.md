@@ -102,6 +102,12 @@ Proposition 8.7.1 proves that bounded minimizers of Monge–Ampère mass for the
 
 The complete Chapter 8 proof-and-writing pass preserves its eight earlier statements and makes the large-time and integrated defect estimates more explicit. The cutoff region in the heat construction grows as eta decreases, so the construction does not establish arbitrary fixed-region mass-defect localization. Support and pluripolar charging remain questions. Continue with Chapter 9 and its inputs. The general theory, separated special mass regimes, hidden-chapter boundary and daily literature program remain unchanged.
 
+## Hopf equation normalization, checkpoint103
+
+Section 9.9 derives the normalization defect D(F)=b(F)+log integral exp(F)dnu on the fixed Hopf metric directly from vertical energy. It proves D>=0 with equality exactly for smooth base-pullback densities, the solution's L2 fiber-average estimate, and the background Hessian formula with the same kernel. The full bounded audit passes under the explicit internal smooth-equation and Hopf inputs. This settles the checkpoint102 smooth-density test; global convexity, density-norm coercivity and continuous-density equality remain open here. No general metric mass property is imposed.
+
+All nine Chapter 9 inputs received a first pass; the three edited inputs received the second pass. Finish the remaining six-input second pass before advancing to Chapter 10. Published STW locators are checked; this is not a fresh whole-paper audit. The limited same-day arXiv probe does not close CV or historical replacement gaps. The SGPT scope, separated mass regimes and excluded Nakamaye chapter are unchanged.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
