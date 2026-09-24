@@ -1,4 +1,4 @@
-# Reading guide — checkpoint100
+# Reading guide — checkpoint101
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -12,7 +12,7 @@ Chapter 4 now distinguishes Gauduchon surfaces from higher dimensions under pote
 
 Chapter 5 gives finite Gauduchon trace coordinates on the full normalized potential space. Proposition 5.2.2 supplies a linear inverse L1 estimate and square-root forward trace estimate; Example 5.2.1 proves optimality of both exponents. These estimates also apply to unbounded potentials.
 
-Read the trace estimates together with the infinite-mass witness. Corollary 6.8.2 also gives smooth strictly positive currents converging in coefficient L1 to the background, with all fixed exponential weights converging, and freely prescribed larger masses when BMP fails. Even a fixed finite target mass need not converge to the background volume. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
+Read the trace estimates together with the infinite-mass witness. Corollary 6.8.2 also gives smooth strictly positive currents converging in coefficient L1 to the background, with all fixed exponential weights converging, and freely prescribed larger masses when BMP fails. Even a fixed finite target mass need not converge to the background volume. Corollary 7.6.2 shows that the same sequence converges in capacity to zero. Its shallow restrictions converge in whole total variation, while all fixed deep levels retain the same positive weak defect along one subsequence. This shows why the sequence-level tail condition in Chapter 7 cannot simply be dropped. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
 
 Section 4.4 distinguishes the compact weak closure of smooth Gauduchon tests from all normalized positive dd^c-closed currents. The first gives the pseudoeffective/big threshold and its stability; the second tests smooth positivity and nefness in Chapter 26. The exceptional curve in Chapter 28 shows why the two current families cannot be identified. Smooth attainment of the linear threshold is equivalent to smooth dd^c-exactness at the threshold.
 

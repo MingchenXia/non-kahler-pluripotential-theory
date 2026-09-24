@@ -39,6 +39,7 @@ for name in (
     "research/editorial/gauduchon-persistence-review-98.md",
     "research/editorial/quantitative-trace-compactness-review-99.md",
     "research/editorial/smooth-masses-products-review-100.md",
+    "research/editorial/capacity-defects-damping-review-101.md",
     "research/editorial/compact-growing-jet-localization-draft.md",
     "research/editorial/growing-jet-local-upper-draft.md",
     "research/editorial/degenerate-selected-kernels.md",

@@ -44,3 +44,9 @@ All eight tracked primary abstract pages were rechecked: each still shows only i
 ### Chapter 6 continuation, 24 September
 
 A limited primary availability probe still received the September 23 math.CV/new heading (21 entries). The retrieved math.DG page was not fully rescreened. This adds no complete announcement coverage; September 24 and the historical replacement gap remain open. Existing sources XZ26 and KN15 still show v1 and v2 on their primary abstract pages. KN15 publication metadata is confirmed, with the existing author-version locators retained pending a readable publisher copy. No new theorem is adopted. See `literature.md` and the compact follow-up record in `arxiv-watch.json`.
+
+### Chapter 7 continuation, 24 September
+
+Refreshed primary new listings show September 24 in math.DG (30 new, 8 cross, 14 replacements), math.AG (21, 18, 12) and math.AP (47, 11, 25). Every numbered entry and title was read. Math.CV still returns September 23 (5, 7, 9), including a fresh skip=0 request. All eight direct new/recent requests failed with SSL unexpected EOF; browser retrieval supplied the listings above. Retain successful September 17–23 new/cross overlap. September 24 CV and September 17–22 replacement history remain incomplete; no complete negative scan is claimed.
+
+Newly detected v1 candidates: Liu 2609.28411, Qing–Sun–Zhou 2609.27556, Chen–Zheng 2609.27809. Primary histories for the first two give September 23. Chen–Zheng’s abstract and v1 HTML give August 18 despite the September ID and September 24 listing: preserve the discrepancy without guessing its cause. Gu 2609.27341 concerns real Aleksandrov solutions. Exact metadata, deduplicated IDs, locators and review limits are in `arxiv-watch.json` and `literature.md`. No new book premise or bibliography entry.

@@ -22,7 +22,7 @@ There is $C_\omega<+\infty$ such that every $v\in\PSH(X,\omega)$ with $0\leq v\l
 \begin{proof}
 Choose finitely many coordinate balls with smaller relatively compact balls covering $X$. On each larger ball choose a fixed quadratic function $q$ with $\ddc q\geq\omega$. Then $p=v+q$ is plurisubharmonic, and, after a constant shift of $q$, satisfies $0\leq p\leq A+C$ there. Let $\kappa$ be the Euclidean K\"ahler form.
 
-We recall the cutoff proof of the local estimate. For an integer $1\leq j\leq n$ and a cutoff $\chi$ equal to one on a smaller ball, compactly supported in a larger one, and with $|\ddc\chi|\leq C\kappa$, integration by parts gives
+We recall the cutoff proof of the local estimate. For an integer $1\leq j\leq n$, choose a smooth cutoff $\chi$ with $0\leq\chi\leq1$, equal to one on a smaller ball, compactly supported in a larger one, and with $|\ddc\chi|\leq C\kappa$. Then integration by parts gives
 \[
  \begin{split}
  \int\chi(\ddc p)^j\wedge\kappa^{n-j}
@@ -61,7 +61,7 @@ and the integral of the first positive term against $\kappa^{n-1}$ on any one co
 \]
 This is uniformly bounded by \cref{cor:trace-bounds}; the smooth second term has fixed mass. For $n=1$ the same assertion follows directly from Stokes' theorem.
 
-Consequently the cutoff recursion can stop at degree one, rather than degree zero. For $j\geq1$ it gives, on a fixed smaller ball,
+Consequently the cutoff recursion can stop at degree one, rather than degree zero. For $1\leq j\leq n$ it gives, on a fixed smaller ball,
 \[
  \int(\ddc p)^j\wedge\kappa^{n-j}\leq C_j(1+A)^{j-1}.
 \]
@@ -75,7 +75,7 @@ we obtain
  0\leq M_j(v)\leq C_j(1+A)^{\max(j-1,0)}.
 \]
 
-There is one more global cancellation. For a bounded quasi-plurisubharmonic function, the signed products $(\ddc v)^j$ are globally defined by the same local Bedford--Taylor expansion. They are closed and satisfy
+There is one more global cancellation. For the bounded quasi-plurisubharmonic function $v$ and $1\leq j\leq n$, the signed products $(\ddc v)^j$ are globally defined by the same local Bedford--Taylor expansion. They are closed and satisfy
 \[
  (\ddc v)^j=\ddc\bigl(v(\ddc v)^{j-1}\bigr).
 \]
@@ -92,7 +92,7 @@ Since all $M_j(v)$ are nonnegative,
 This proves the proposition, including dimension one.
 \end{proof}
 
-The two ingredients are the Gauduchon bound for one positive factor and the cancellation of the globally exact top wedge. Both also appear in the mixed-volume analysis of \cite[Proposition 3.3]{GL22}. The proposition records their quantitative consequence for a bounded range. We do not claim that the exponent $r_n$ is optimal for every metric. In dimensions one and two it is zero, recovering bounded mass in those dimensions.
+The two ingredients are the Gauduchon bound for one positive factor and the cancellation of the globally exact top wedge. Both also appear in the mixed-volume analysis of \cite[Proposition 3.3(i), (vi)]{GL22}. The proposition records their quantitative consequence for a bounded range. We do not claim that the exponent $r_n$ is optimal for every metric. In dimensions one and two it is zero, recovering bounded mass in those dimensions.
 
 \section{A bounded convex transform}
 
@@ -134,6 +134,7 @@ For arbitrary $u$, use $u_t=\max(u,-t)$. The bounded potentials $F_a(u_t)$ decre
 Let $t\to+\infty$. The pole set is discarded by $\mu_u$ and has zero mass for the bounded product on the right.
 \end{proof}
 
+\Needspace{12\baselineskip}
 \begin{theorem}\label{thm:exponential-damping}
 For every $p>0$, the measure
 \[
@@ -209,11 +210,10 @@ have uniformly bounded mass for $u\in\PSH(X,\omega)$, $u\leq0$. More precisely,
  \sigma_{q,u}(\{u<-T\})
  \leq C\frac{q}{q-r_n}(1+T)^{r_n-q}\quad(T\geq0).
 \]
-There is also $C_q$ such that
+There is also $C_q$ such that, for every Borel set $E\subset X$,
 \[
- \sigma_{q,u}(E)\leq C_q\operatorname{Cap}_\omega(E)^{(q-r_n)/(q+n-r_n)}
+ \sigma_{q,u}(E)\leq C_q\operatorname{Cap}_\omega(E)^{(q-r_n)/(q+n-r_n)}.
 \]
-for every Borel set $E$.
 \end{theorem}
 \begin{proof}
 Write $s=-u\geq0$. The identity
@@ -261,7 +261,7 @@ We give the truncation argument explicitly. For $T>1$, choose a continuous funct
        \mathrm{MA}_\omega(\max(u_j,-2T)),
 \]
 where $g_T(t)=\chi_T(t)w(t)$ on $[-2T,0]$ and $g_T(-2T)=0$.
-The truncated potentials are uniformly bounded and converge in capacity to the corresponding truncation of $u$, since truncation is Lipschitz. Their coefficients $g_T$ also converge in capacity and are uniformly bounded. Standard bounded Bedford--Taylor continuity therefore gives weak convergence of these truncated weighted measures for each fixed $T$.
+The truncated potentials are uniformly bounded and converge in capacity to the corresponding truncation of $u$, since truncation is Lipschitz. Since $g_T$ is uniformly continuous on $[-2T,0]$, the coefficients $g_T(\max(u_j,-2T))$ also converge in capacity and are uniformly bounded. The bounded product measures are uniformly dominated by a fixed multiple of capacity, using the capacity test obtained by shifting and scaling the truncations. The integral of the difference of the coefficients therefore tends to zero: outside a set of capacity tending to zero the difference is uniformly small. For the limiting quasi-continuous coefficient, remove a set of arbitrarily small capacity and extend its continuous restriction from the compact complement. Bounded Bedford--Taylor continuity applies to this continuous test function, and capacity domination bounds the removed part. This proves weak convergence of the truncated weighted measures for each fixed $T$.
 
 It remains to remove the cutoff uniformly in $j$. For exponential damping,
 \[
@@ -307,10 +307,11 @@ Choose a continuous nonincreasing function $\eta:[0,+\infty)\to[0,1]$, equal to 
 \]
 The integrals on the left are bounded by this uniform total mass. Since $\eta_T(-u)$ increases to one off the pole set as $T\to\infty$, monotone convergence proves $\mu_u(X)<+\infty$.
 
-For a continuous test function $f$, the error made by inserting $\eta_T(-u_j)$ is at most
+For a continuous test function $f:X\to\R$, the error made by inserting $\eta_T(-u_j)$ is at most
 $\|f\|_\infty\mu_{u_j}(\{u_j<-T\})$, uniformly small for large $T$. For the limit potential the corresponding error tends to zero because $\mu_u$ is finite and its pole set has zero mass. Pass first $j\to\infty$ with $T$ fixed, and then $T\to\infty$.
 \end{proof}
 
+\Needspace{8\baselineskip}
 The tail condition has an equivalent formulation using an increasing weight. Let $\chi:[0,+\infty)\to[1,+\infty)$ be continuous, increasing and unbounded. For a nonpositive potential define
 \[
  J_{\chi,\omega}(u)=\int_X\chi(-u)\,\mathrm{d}\mu_u,
@@ -351,7 +352,7 @@ The sum is locally finite, so $\chi$ is continuous, increasing and unbounded. To
 
 These results identify the estimate needed in a general existence proof: obtain compactness of the potentials in capacity and prevent undamped mass from accumulating at their increasingly deep sublevels. A geometric bounded mass property is one possible source of some estimates, but it is not part of the statements or proofs above.
 
-\Needspace{9\baselineskip}
+\Needspace{14\baselineskip}
 \begin{example}\label{ex:p1-raw-tail}
 The tail condition cannot be omitted, even on a compact K\"ahler curve. On $X=\mathbb P^1$, let $z$ be the standard affine coordinate and let $\delta_0$ denote the unit Dirac measure at its origin. Take the Fubini--Study form
 \[
@@ -386,6 +387,61 @@ On their supports, $u_j=-j$. Consequently, for $j>T$,
 Nevertheless, $u_j\to u$ in capacity. Indeed, outside any neighborhood of the origin the functions eventually agree, and neighborhoods of this capacity-zero point can be chosen with arbitrarily small capacity. Thus bounded mass and capacity convergence do not prevent the undamped measures from acquiring mass on a pole of the limit. The damped limit agrees with the extended measure, as predicted by \cref{thm:damped-continuity}.
 \end{example}
 
+The preceding example has a singular limit. When bounded mass fails, the smooth sequence of \cref{cor:smooth-prescribed-masses} has a smooth limit and still loses continuity of its total mass. The loss occurs entirely at deep sublevels. Recall that $v_+(\omega)$ is the supremum of $\int_X(\omega+\ddc v)^n$ over bounded $v\in\PSH(X,\omega)$. For a finite signed measure $\tau$, write $\|\tau\|_{\mathrm{TV}}$ for its whole total variation norm.
+
+\Needspace{16\baselineskip}
+\begin{corollary}\label{cor:smooth-capacity-mass-defect}
+Assume $v_+(\omega)=+\infty$ and put $V_\omega=\int_X\omega^n$. Fix a real number $b>V_\omega$ and a sequence $0<\varepsilon_j<1$ tending to zero. The smooth potentials $w_j$ in \cref{cor:smooth-prescribed-masses}, chosen with mass $b$, converge to zero in capacity. For every $T>0$,
+\[
+ \left\|\mathbf1_{\{w_j\geq-T\}}(\omega+\ddc w_j)^n-\omega^n
+ \right\|_{\mathrm{TV}}\longrightarrow0,
+ \qquad
+ \int_{\{w_j<-T\}}(\omega+\ddc w_j)^n\longrightarrow b-V_\omega.
+\]
+After passage to a subsequence, there is a positive measure $\sigma$ of mass $b-V_\omega$ such that
+\[
+ (\omega+\ddc w_j)^n\rightharpoonup\omega^n+\sigma,
+ \qquad
+ \mathbf1_{\{w_j<-T\}}(\omega+\ddc w_j)^n\rightharpoonup\sigma
+ \quad\text{for every }T>0.
+\]
+\end{corollary}
+\begin{proof}
+The construction in \cref{cor:smooth-prescribed-masses} gives $w_j=s_j u_j$, where $u_j$ is smooth and $\omega$-plurisubharmonic, $\sup_Xu_j=0$ and $0<s_j<\varepsilon_j$. The normalized sublevel estimate \eqref{eq:global-capacity-tail}, whose proof uses only the local weighted Chern--Levine--Nirenberg inequality and normalized $L^1$ compactness, gives, for every fixed $\delta>0$ and all sufficiently large $j$,
+\[
+ \operatorname{Cap}_\omega(\{|w_j|>\delta\})
+ =\operatorname{Cap}_\omega(\{u_j<-\delta/s_j\})
+ \leq Cs_j/\delta\longrightarrow0.
+\]
+This use of the later estimate does not depend on any equation-existence theorem.
+
+Put $\mu_j=(\omega+\ddc w_j)^n$. Fix $T>0$ and write $E_{j,T}=\{w_j\geq-T\}$. The lower bound in \cref{cor:smooth-prescribed-masses} gives
+\[
+ \mathbf1_{E_{j,T}}\mu_j\geq
+ \lambda_{j,T}:=(1-\varepsilon_j)^n\mathbf1_{E_{j,T}}\omega^n.
+\]
+Since $w_j\to0$ in $L^1$, the smooth volume of $X\setminus E_{j,T}$ tends to zero. Hence $\lambda_{j,T}\to\omega^n$ in total variation. For every $p>0$, \cref{thm:damped-continuity} gives $\int_X\mathrm{e}^{pw_j}\,\mathrm{d}\mu_j\to V_\omega$, and therefore
+\[
+ \limsup_j\mu_j(E_{j,T})
+ \leq\mathrm{e}^{pT}\lim_j\int_X\mathrm{e}^{pw_j}\,\mathrm{d}\mu_j
+ =\mathrm{e}^{pT}V_\omega.
+\]
+Let $p\downarrow0$. Together with the lower bound this proves $\mu_j(E_{j,T})\to V_\omega$. Positivity now yields
+\[
+ \begin{split}
+ \|\mathbf1_{E_{j,T}}\mu_j-\omega^n\|_{\mathrm{TV}}
+ &\leq\mu_j(E_{j,T})-\lambda_{j,T}(X)
+       +\|\lambda_{j,T}-\omega^n\|_{\mathrm{TV}}\\
+ &\longrightarrow0.
+ \end{split}
+\]
+Subtracting this shallow mass from $\mu_j(X)=b$ proves the tail identity.
+
+The positive measures $\mu_j$ have fixed mass on compact $X$, so a subsequence converges weakly to a measure $\nu$ of mass $b$. The inequality $\mu_j\geq(1-\varepsilon_j)^n\omega^n$ gives $\nu\geq\omega^n$. Set $\sigma=\nu-\omega^n$. For each $T>0$, subtract the already established total-variation limit of the shallow restrictions from $\mu_j\rightharpoonup\nu$. This gives the last assertion along the same subsequence for every $T$.
+\end{proof}
+
+Thus capacity convergence and a uniform bound on the masses do not replace the tail hypothesis, even for smooth approximants converging to a smooth potential. The currents in this example also converge in coefficient $L^1$, and their Gauduchon traces converge in total variation. The argument does not determine where $\sigma$ is supported or whether it charges pluripolar sets.
+
 \Needspace{39\baselineskip}
 \section{Extension to general backgrounds}
 
@@ -405,7 +461,7 @@ Choose $C_0\geq1$ such that $\theta\leq\Omega:=C_0\omega$. Then $u\in\PSH(X,\Ome
 \[
  0\leq\mu_{\theta,u}\leq\mathrm{MA}^{\mathrm{ext}}_\Omega(u).
 \]
-All the mass, tail and capacity bounds follow from the already proved estimates for $\Omega$. To express them in the original capacity, note that
+All the mass, tail and capacity bounds follow from the already proved estimates for $\Omega$. To express them in the original capacity, note that for every Borel set $E\subset X$,
 \[
  \operatorname{Cap}_\omega(E)
  \leq\operatorname{Cap}_\Omega(E)
@@ -414,5 +470,5 @@ All the mass, tail and capacity bounds follow from the already proved estimates 
 The first inequality follows by inclusion of the test potentials and positivity of the added background. For the second, if $0\leq v\leq1$ is $\Omega$-plurisubharmonic, then $v/C_0$ is an admissible $\omega$-test potential and
 $(\Omega+\ddc v)^n=C_0^n(\omega+\ddc(v/C_0))^n$.
 
-For continuity, use the fixed-truncation identity in \cref{thm:damped-continuity}. Its truncations are bounded and $\Omega$-plurisubharmonic. Their signed $\theta$-products are continuous under capacity convergence by the local expansion in \cref{prop:bounded-products}, also with the bounded quasi-continuous coefficients used above. The cutoff vanishes at the truncation level, giving exactly the restricted positive measure. The uniform tails supplied by domination remove the cutoff. Domination also supplies the sublevel estimate, so the preceding proofs of the undamped tail and integrability criteria apply verbatim.
+For continuity, let nonpositive $u_j,u\in\PSH(X,\theta)$ converge in capacity. Use the fixed-truncation identity in \cref{thm:damped-continuity}. Its truncations are bounded and $\Omega$-plurisubharmonic. Their signed $\theta$-products are continuous under capacity convergence by the local expansion in \cref{prop:bounded-products}, also with the bounded quasi-continuous coefficients used above. The cutoff vanishes at the truncation level, giving exactly the restricted positive measure. The uniform tails supplied by domination remove the cutoff. Domination also supplies the sublevel estimate, so the preceding proofs of the undamped tail and integrability criteria apply verbatim.
 \end{proof}

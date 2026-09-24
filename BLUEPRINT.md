@@ -90,6 +90,12 @@ Chapter 6 completed the full first/second pass including its integrable-current 
 
 The general extended-measure theory retains arbitrary smooth backgrounds and possible infinite mass. The fixed-level restriction identity and local notation are explicit. Weak limits for a fixed prescribed larger mass give positive defect measures, but which such measures can be realized remains unresolved here. The varying-adjoint and auxiliary-trace-metric questions remain open. Continue the chapter queue with Chapter 7. No new external premise or complete September 24 announcement scan is claimed.
 
+## Capacity defects and damping, checkpoint101
+
+Chapter 7 completed both proof-and-writing passes including the general-weight input. Corollary 7.6.2 strengthens the smooth fixed-mass example: the potentials converge in capacity to zero; at every fixed depth the shallow measures converge to the background in whole total variation, and one subsequence of every deep restriction converges to the same positive excess measure. The proof passes its bounded audit under the three explicit earlier inputs. The later normalized capacity estimate is used without any equation-existence dependence. Uniform mass and capacity convergence alone therefore do not replace the sequence-level tail criterion, even with a smooth limit and strong linear convergence.
+
+The support and pluripolar charging of possible defects remain open questions here. General arbitrary-background damping retains its hypotheses; no blanket mass property is added. Local declarations, weighted continuity and the logarithmic-tail proof are clarified. Continue with Chapter 8. New September 24 literature candidates remain unadopted, with category-specific coverage and date uncertainty in the watch ledger.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
