@@ -70,6 +70,14 @@ Section 27.13 proves compact-curve Gaussian localization for q_m=o(m^(1/(2r+1)))
 
 Chapter 3 completed the current correctness/writing pass. A general radial torsion-defect formula shortens the surface proof; the closed-energy identity is explicitly proved for every smooth closed real background. The Gauduchon surface example separates smooth mass invariance from the primitive obstruction. No metric mass property is imposed on the general theory. See `research/editorial/compact-growing-jets-energy-review-97.md` for the direct and independent review scopes. Continue with Chapter 4; daily literature work and the broad book goal remain active.
 
+## Gauduchon persistence and bounded adjoints, checkpoint98
+
+Chapter 4 completed the full correctness/writing pass, including its nested linear-duality input. The surface exception is corrected: Gauduchon forms on surfaces remain Gauduchon under positive potential perturbations. In every dimension, persistence for all smooth positive perturbations is equivalent to invariant smooth Monge–Ampère mass. The explicit three-torus example shows why a single Gauduchon identity is insufficient in higher dimension. The normalized multiplier is constant exactly for a Gauduchon solution metric.
+
+In this explicit geometric regime, normalized Monge–Ampère measures extend the adjoint probabilities to bounded potentials, with weak continuity for uniformly bounded sequences converging in capacity. The complete new argument passed `gauduchon_persistence_adjoint_01` under six stated internal/classical inputs. The non-Kahler surface primitive obstruction remains. General weak-adjoint uniqueness, unbounded approximation and a weak linearized operator are not settled. Chiose's characterization is now cited in its checked published 2024 version. No blanket mass property or new Popovici premise is imposed. See `research/editorial/gauduchon-persistence-review-98.md`; continue with Chapter 5.
+
+The daily September 24 arXiv scan could not obtain September 24 announcements; returned primary listings still show September 23, and some direct requests failed. All eight tracked primary abstract histories still show v1. Existing successful coverage and the earlier replacement gap are preserved explicitly; no complete negative scan or new arXiv theorem adoption is claimed.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

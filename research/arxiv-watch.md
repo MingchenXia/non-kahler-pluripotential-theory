@@ -34,3 +34,9 @@ Entries overlap between categories and lists. `arxiv-watch.json` preserves the U
 Read the complete proof chain for Chiang's precise localization theorem, comparing its kernel and weight conventions with the book. Inspect Fang–Ma's actual geometric hypotheses before using its locus as more than a question. The Liu–Rao item requires a full proof/dependency audit before it affects any mathematical assertion. No Popovici result is newly relied on.
 
 Dang26 and Pan25 are already recorded and were deduplicated. The old v2 of Hai–Phu–Tung is a version-check item, not a new September result. In later scans, distinguish newly posted versions from first submissions and record inaccessible or incomplete replacement coverage instead of reporting a negative search.
+
+## 24 September, daily 09:00 follow-up
+
+Attempted a rolling 18–24 September scan. The eight primary URLs still return September 23 headings and the previous totals. Four directly retrieved DG/AP lists match the previous complete entry texts exactly. The two CV lists and AG new list returned HTTP 406, and AG recent timed out during TLS negotiation; browser fallback likewise serves the old dated listings. Thus this run does **not** extend the successful announcement coverage to September 24. The September 17–22 replacement gap also remains.
+
+All eight tracked primary abstract pages were rechecked: each still shows only its recorded v1 and original submission time. There is no newly detected version among those eight candidates; this is not a complete negative scan. No arXiv theorem is adopted. The Gauduchon chapter instead prompted a primary check of Chiose's published 2024 paper, recorded in `literature.md`.

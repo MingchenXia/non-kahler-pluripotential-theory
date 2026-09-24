@@ -1,4 +1,4 @@
-# Reading guide — checkpoint97
+# Reading guide — checkpoint98
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -7,6 +7,8 @@ The book separates the general Hermitian theory from the substantial development
 Chapters 1–8 develop the nonclosed background, torsion, Gauduchon traces, compactness, extended non-pluripolar products, finite damped measures and the Hopf example. Upper bounded mass and positive lower mass are independent properties. The general framework allows infinite total Monge–Ampère mass and vanishing lower mass.
 
 Chapter 3 derives the primitive obstruction and the general radial torsion-defect formula. A Gauduchon surface has invariant smooth mass, but this alone does not give a primitive of the raw one-form. The closed-energy identity uses only closedness of the smooth real background.
+
+Chapter 4 now distinguishes Gauduchon surfaces from higher dimensions under potential perturbations. Propositions 4.5.2 and 4.6.1 give the exact persistence/mass criterion and its bounded adjoint extension; Example 4.5.1 supplies a three-torus obstruction. General weak adjoints remain a separate question.
 
 Read the trace estimates together with the infinite-mass witness. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
 

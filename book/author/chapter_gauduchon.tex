@@ -1,7 +1,7 @@
 \chapter{Gauduchon metrics and linear mass}
 \label{chap:gauduchon}
 
-A Gauduchon metric supplies a positive test form against which the mass of a positive $(1,1)$-current is unchanged by adding $\ddc u$. This finite linear mass remains available when the top-degree Monge--Amp\`ere mass varies or is infinite. Applied to a solution metric, the Gauduchon construction also identifies the compatibility condition for the linearized equation. The family of all Gauduchon metrics carries different information: its degree-to-volume ratios recover the lower Monge--Amp\`ere mass, and degeneration of these ratios produces the example in \cref{sec:vanishing-lower-mass}. Later, \cref{lem:constant-trace-bc-representative} uses the same scalar operator to choose continuous smooth representatives of closed Bott--Chern classes and to prove linear mass control under a fixed modification.
+A Gauduchon metric supplies a positive test form against which the mass of a positive $(1,1)$-current is unchanged by adding $\ddc u$ for a quasi-plurisubharmonic potential $u$. This finite linear mass remains available when the top-degree Monge--Amp\`ere mass varies or is infinite. Applied to a solution metric, the Gauduchon construction also identifies the compatibility condition for the linearized equation. The family of all Gauduchon metrics carries different information: its degree-to-volume ratios recover the lower Monge--Amp\`ere mass, and degeneration of these ratios produces the example in \cref{sec:vanishing-lower-mass}. Later, \cref{lem:constant-trace-bc-representative} uses the same scalar operator to choose continuous smooth representatives of closed Bott--Chern classes and to prove linear mass control under a fixed modification.
 
 Throughout this chapter, $X$ is a connected compact complex manifold of dimension $n\geq2$. In dimension one every Hermitian form is closed, and the corresponding integration identities follow directly from Stokes' theorem.
 
@@ -146,7 +146,7 @@ We prove the converse by the Hahn--Banach theorem and a scalar elliptic equation
 \[
  \lambda_i=\frac{(\prod_jg_j)^{1/(n-1)}}{g_i}.
 \]
-The formula is invariant under a change of frame and yields a smooth root. Thus $\ddc\Gamma=0$ says exactly that this root is Gauduchon.
+The spectral formula uses only a positive determinant and a matrix inverse, so the root depends smoothly on the coefficients, including at repeated eigenvalues. Pointwise uniqueness makes the local roots agree on overlaps. Thus $\ddc\Gamma=0$ says exactly that this root is Gauduchon.
 
 \begin{proof}[of \cref{thm:lamari}]
 Necessity is \cref{prop:gauduchon-trace}. For sufficiency, let $F$ be the real vector space of smooth real $(n-1,n-1)$-forms and let
@@ -240,13 +240,83 @@ This proves the necessary compatibility condition.
 Apply the Fredholm argument from \cref{thm:gauduchon} to $\eta$. For $k\geq0$ and $0<\alpha<1$, on $C^{k+2,\alpha}(X)\to C^{k,\alpha}(X)$, the operator $L_u$ has index zero and kernel $\R$, so its range has codimension one. The nonzero functional $h\mapsto\int_Xh\,\mathrm{d}\mu_u$ annihilates that range; hence its kernel is precisely the range. This proves sufficiency. Elliptic regularity gives a smooth solution, unique modulo constants.
 \end{proof}
 
-The measure $\mu_u$ is the adjoint measure of $L_u$, and it depends on the solution metric. If $\eta$ itself is Gauduchon, its multiplier is constant and $\mu_u=\eta^n/\int_X\eta^n$. For a general solution metric the multiplier is nonconstant.
+\Needspace{10\baselineskip}
+The measure $\mu_u$ depends on the solution metric $\eta$. Its multiplier is constant precisely when $\eta$ is Gauduchon: a constant multiplier satisfies the defining equation exactly in that case, and uniqueness then applies. Thus
+\[
+ \mu_u=\frac{\eta^n}{\int_X\eta^n}
+ \quad\text{if }\ddc(\eta^{n-1})=0.
+\]
+On a surface, $\ddc\omega_u=\ddc\omega$, so every positive potential perturbation of a Gauduchon form is still Gauduchon. In higher dimension this persistence requires more than the Gauduchon condition at $u=0$.
 
-There is no reason for $\omega_u$ to be Gauduchon merely because $\omega$ is Gauduchon. Nor does \eqref{eq:adjoint-identity} assert that the one-form
-$v\mapsto\int_Xv\,\mathrm{d}\mu_u$ is closed as $u$ varies. Its derivative also contains the derivative of $\rho_u$. The adjoint identity is a solvability statement for a linear equation; exactness of a one-form on the space of potentials is a further question.
+\begin{proposition}\label{prop:gauduchon-potential-persistence}
+Every form $\omega_u$, for $u\in\HH_\omega$, is Gauduchon if and only if
+\[
+ \int_X\omega_u^n=\int_X\omega^n
+ \quad\text{for every }u\in\HH_\omega.
+\]
+In that case, with $M=\int_X\omega^n$, the normalized multiplier is $\rho_u=M^{-1}$ and $\mu_u=M^{-1}\omega_u^n$ for every $u\in\HH_\omega$.
+\end{proposition}
+\begin{proof}
+The first variation in \cref{prop:mass-variation} is
+\[
+ \left.\frac{\mathrm d}{\mathrm dt}\right|_{t=0}
+       \int_X\omega_{u+tv}^n
+ =n\int_Xv\ddc(\omega_u^{n-1}).
+\]
+If all $\omega_u$ are Gauduchon, this derivative vanishes in every direction; integrating along the segment from $0$ to $u$ gives the asserted mass identity. Conversely, the identity makes the displayed integral zero for every smooth real test function $v$, so $\ddc(\omega_u^{n-1})=0$. The normalized multiplier is then the constant $M^{-1}$ by \cref{thm:gauduchon}.
+\end{proof}
 
-\section{A question for singular potentials}
+The differential characterization is given by \cref{thm:mass-invariance-characterization}: persistence is equivalent to $\ddc(\omega^j)=0$ for all integers $1\leq j\leq n-1$. The following example distinguishes it from the single Gauduchon identity in dimension three.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$, and let $\omega$ be a Hermitian form on $X$. For a smooth real potential $v$ with $\omega_v=\omega+\ddc v>0$, let $\mu_v=\rho_v\omega_v^n$ be the probability measure defined by the normalized Gauduchon multiplier in \cref{prop:adjoint-gauduchon}.
+\begin{example}\label{ex:gauduchon-persistence-torus}
+Let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ and $X=E^3$. Write $z_j=x_j+\mathrm i y_j$ for the coordinates on the covering space, for $1\leq j\leq3$, and let $\eta_j=(\mathrm i/2)\mathrm dz_j\wedge\mathrm d\bar z_j$ be the descended forms. The periodic functions
+\[
+ b=\exp(\cos(2\pi x_1)),\qquad c=b^{-1}
+\]
+define a Hermitian form
+\[
+ \omega=\eta_1+b\eta_2+c\eta_3.
+\]
+Since $bc=1$,
+\[
+ \omega^2=2b\eta_1\wedge\eta_2
+          +2c\eta_1\wedge\eta_3+2\eta_2\wedge\eta_3.
+\]
+The derivatives of $b,c$ involve only $x_1$, so $\ddc(\omega^2)=0$.
 
-The conformal theorem does not define $\mu_u$ when $\omega+\ddc u$ is only a current. Suppose smooth strictly $\omega$-plurisubharmonic potentials $u_j$ converge to $u$ in capacity. Which energy or nondegeneracy hypotheses ensure that $\mu_{u_j}$ has a unique weak limit, independent of the approximation? Does this limit satisfy an adjoint identity for a weak linearization? In \cref{chap:normalization}, supporting probabilities for the normalization functional recover $\mu_u$ in the smooth case and yield a conditional approximation theorem. General uniqueness and a distributional adjoint identity remain open here.
+Put $v=\cos(2\pi x_2)$ and $h=-\pi\cos(2\pi x_2)$. With the book's normalization, $\ddc v=h\eta_2$. For a real $s$ with $0<|s|<1/(\pi\mathrm e)$, the form
+\[
+ \omega_{sv}=\eta_1+(b+sh)\eta_2+c\eta_3
+\]
+is positive, since $b\geq\mathrm e^{-1}$ and $|h|\leq\pi$. However,
+\[
+ \ddc(\omega_{sv}^2)
+ =2s\ddc\omega\wedge\ddc v
+ =2sh\ddc c\wedge\eta_2\wedge\eta_3\ne0.
+\]
+Indeed, $\ddc c=(c''/(4\pi))\eta_1$, where the prime differentiates in $x_1$, and $c''(0)=4\pi^2\mathrm e^{-1}$ while $h=-\pi$ at $x_2=0$. Thus a Gauduchon form can have arbitrarily small positive potential perturbations which are not Gauduchon.
+\end{example}
+
+Even when persistence holds, the one-form $v\mapsto\int_Xv\,\mathrm d\mu_u$ need not have a primitive on $\HH_\omega$. On a compact non-K\"ahler surface equipped with a Gauduchon form, the proposition identifies it with the raw Monge--Amp\`ere one-form divided by the constant $M$. By \cref{thm:raw-primitive}, it has no primitive. The adjoint measure provides the compatibility condition for a linear equation; this is distinct from a variational primitive.
+
+\section{Limits of adjoint measures}
+\label{sec:adjoint-measure-limits}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$, and let $\omega$ be a Hermitian form on $X$. Put $\HH_\omega=\{v\in C^\infty(X,\mathbb R):\omega_v:=\omega+\ddc v>0\}$. For $v\in\HH_\omega$, let $\mu_v=\rho_v\omega_v^n$ be the probability measure defined by the normalized Gauduchon multiplier in \cref{prop:adjoint-gauduchon}. For bounded potentials, use the products of \cref{prop:bounded-products} and convergence in the capacity defined in \cref{sec:hermitian-capacity}. Weak convergence of measures means convergence against continuous functions on $X$.
+
+\begin{proposition}\label{prop:bounded-adjoint-persistence}
+Assume that $\omega_v$ is Gauduchon for every $v\in\HH_\omega$, and set $M=\int_X\omega^n$. For every $u\in\PSH(X,\omega)\cap L^\infty(X)$, the measure
+\[
+ \mu_u:=M^{-1}(\omega+\ddc u)^n
+\]
+is a probability measure and agrees with the preceding definition when $u\in\HH_\omega$. If $u_j,u\in\PSH(X,\omega)\cap L^\infty(X)$, for integers $j\geq1$, are uniformly bounded and $u_j\to u$ in capacity, then $\mu_{u_j}\rightharpoonup\mu_u$.
+\end{proposition}
+\begin{proof}
+For smooth strictly positive potentials, both assertions about the definition follow from \cref{prop:gauduchon-potential-persistence}. For bounded $u$, choose uniformly bounded smooth strictly positive approximants decreasing to $u$ by \cref{thm:bounded-exact-regularization}. Continuity of bounded products passes their common mass $M$ to the limit. Positivity is \cref{prop:bounded-products}.
+
+To prove convergence, work on an inner coordinate ball and add one fixed smooth quadratic $q$ so that all $u_j+q$ and $u+q$ are plurisubharmonic. They are uniformly bounded and converge in local Bedford--Taylor capacity, by the capacity comparison recalled in \cref{sec:hermitian-capacity}. The classical bounded capacity-continuity theorem therefore gives convergence of their mixed products. Multiply by the fixed smooth coefficients in \eqref{eq:bounded-expansion}, then use a finite cover and a partition of unity. This gives $(\omega+\ddc u_j)^n\rightharpoonup(\omega+\ddc u)^n$ on $X$, and division by $M$ proves the assertion.
+\end{proof}
+
+The proposition applies to every Gauduchon surface. It gives an approximation-independent extension in the bounded range under its explicit geometric hypothesis. It does not construct a weak linearized operator.
+
+For a general Hermitian form, the conformal theorem does not define $\rho_u$ when $\omega+\ddc u$ is only a current. Suppose smooth potentials $u_j\in\HH_\omega$ converge to a genuine $u\in\PSH(X,\omega)$ in capacity. Which energy or nondegeneracy hypotheses ensure that $\mu_{u_j}$ has a unique weak limit, independent of the approximation? Does this limit satisfy an adjoint identity for a weak linearization? In \cref{chap:normalization}, supporting probabilities for the normalization functional recover $\mu_u$ in the smooth case and yield a conditional approximation theorem. Outside the preceding bounded regime and those stated hypotheses, uniqueness and a distributional adjoint identity remain open here.

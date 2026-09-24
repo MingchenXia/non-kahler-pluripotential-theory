@@ -1,5 +1,13 @@
 # Modification history
 
+## 24 September 2026 — Checkpoint98: Gauduchon persistence and bounded adjoints
+
+Complete the full Chapter 4 source pass, including its linear-duality input. Correct the omitted Gauduchon surface exception and the constant-multiplier wording. Add the exact equivalence with smooth mass invariance, an explicit three-torus counterexample and a bounded adjoint extension continuous for uniformly bounded capacity convergence. Preserve the primitive obstruction and general weak-adjoint questions. The bounded Rethlas run passes under its six accepted inputs; its complete report was read and all prior records are unchanged.
+
+Use Chiose's checked published 2024 edition and exact theorem locators. Record the daily arXiv attempt's actual incomplete coverage and eight unchanged candidate versions. Update the chapter queue, research directions, blueprint, status, reading guide and source package. No new arXiv theorem, blanket mass hypothesis, Popovici premise or novelty claim is introduced.
+
+The book has 774 pages. The final compilation has no errors, unresolved references/citations, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. All 25 selected final pages were rendered and read. The changed-input house audit has zero errors and 18 inherited warnings, improving by the resolved Chiose publication warning. The 187 other active author inputs, all historical verifier reports, original sources, hidden materials, checkpoint97 PDF/archive and 17-page companion are preserved. See `research/editorial/gauduchon-persistence-review-98.md` and `research/audits/build-snapshot-98.json`. Fresh reconstruction must separately pass in `research/audits/source-package-portability-98.json` before release checks are complete. Next full-chapter target: Chapter 5. The broad project remains incomplete.
+
 ## 24 September 2026 — Checkpoint97: compact growing jets and radial energy
 
 Complete Chapter 3's correctness/writing pass. Add the general radial torsion-defect formula, shorten the surface proof, state its actual Euler equation and explain the Gauduchon surface distinction between mass invariance and the primitive obstruction. Broaden the closed-energy calculation to every smooth closed real background. These elementary changes received two direct proof passes.

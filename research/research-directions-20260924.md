@@ -35,3 +35,9 @@ A further bounded problem is to compare finite Gauduchon traces of a single pote
 ## Order of work
 
 Proceed first with the growing-jet model and the individual-density barrier question, while rotating the chapter revision queue. Full audits of the new Bergman and J-equation papers are reading tasks, not substitutes for checking the book's existing proofs. Preserve failed estimates with explicit hypotheses so that daily continuation can build on them.
+
+## Gauduchon persistence: bounded result and next test
+
+Checkpoint98 proves that persistence of the Gauduchon condition along all smooth positive potential perturbations is exactly smooth mass invariance. The explicit three-torus example separates persistence from the Gauduchon condition at a single metric. In the persistence regime, Proposition 4.6.1 gives a canonical bounded adjoint probability and weak continuity for uniformly bounded capacity-convergent sequences. The full new argument passed the bounded audit `gauduchon_persistence_adjoint_01`; its six accepted inputs are explicit.
+
+A next bounded question is to compute or bound the varying normalized Gauduchon multiplier on the non-persistent torus example as the positive metric approaches degeneracy. No such estimate is proved here. Any extension to unbounded potentials must control those weights in addition to Monge–Ampère products; linear trace compactness alone does not provide this. General weak-adjoint uniqueness and a singular weak linearization remain open.

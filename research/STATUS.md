@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint98
+
+The book has **774 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-98.pdf` has SHA256 `81508b7aebde85512cf1adc52cfded33e82390fd08e35432d859608c1a6429e9` and 3480632 bytes. Chapter 4 and its only nested input completed a first/second proof-and-writing pass. The corrected surface case, smooth persistence/mass equivalence, three-torus obstruction and bounded adjoint extension are detailed in the review. Their normal Rethlas run passed under six stated internal/classical inputs. There are 184 reports:174 correct and ten historical adverse reports; the previous 183 reports are unchanged. All 26 prior formal blocks in the affected inputs retain their statements. General weak-adjoint uniqueness and a weak linearized operator remain open here.
+
+Chiose's source now uses the published 2024 article and Theorems 1–2. The daily rolling arXiv attempt still received September 23 announcements, with recorded CV/AG failures; all eight candidate primary histories still show v1. September 24 coverage and the earlier replacement gap remain incomplete. No negative scan, new arXiv premise, novelty claim or new Popovici dependency is asserted.
+
+The final compilation has no errors, unresolved references/citations, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. All 25 selected final pages were rendered and read. The changed-input house audit has zero errors and 18 inherited warnings, improving by the resolved Chiose publication warning. The 187 other active author inputs, all historical verifier reports, original sources, hidden materials, checkpoint97 PDF/archive and 17-page companion are preserved. See `research/editorial/gauduchon-persistence-review-98.md` and `research/audits/build-snapshot-98.json`. Fresh reconstruction must separately pass in `research/audits/source-package-portability-98.json` before release checks are complete. Next full-chapter target: Chapter 5. The broad project remains incomplete.
+
 ## Checkpoint97
 
 The book has **772 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-97.pdf` has SHA256 `2fa2af4a87f48ff1373e221680dc9ba29c2fdd2cee0aaae871214ab48ecb4290` and 3472100 bytes. Chapter 3 received a full first/second correctness and writing pass. The general radial torsion formula shortens the surface proof; the closed-energy identity covers every smooth closed real background. A Gauduchon surface separates smooth mass invariance from the primitive obstruction.

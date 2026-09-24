@@ -36,6 +36,7 @@ for name in (
     "research/editorial/chapter-one-review-95.md",
     "research/editorial/degenerate-growing-kernels-review-96.md",
     "research/editorial/compact-growing-jets-energy-review-97.md",
+    "research/editorial/gauduchon-persistence-review-98.md",
     "research/editorial/compact-growing-jet-localization-draft.md",
     "research/editorial/growing-jet-local-upper-draft.md",
     "research/editorial/degenerate-selected-kernels.md",
@@ -322,7 +323,7 @@ for directory in (root / "research/rethlas/verification/results").iterdir():
     selected.update(directory.glob("*.md"))
     completed_runs.add(directory.name)
 for submission in (root / "research/rethlas/verification/inputs").glob("*.md"):
-    match = re.search(r"Run_id:\s*`?([a-zA-Z0-9_]+)", submission.read_text())
+    match = re.search(r"Run_id:\s*`?([a-zA-Z0-9_]+)", submission.read_text(), re.IGNORECASE)
     if match and match.group(1) in completed_runs:
         selected.add(submission)
 
