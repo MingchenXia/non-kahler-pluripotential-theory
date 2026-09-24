@@ -16,7 +16,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 8 | `chapter_hopf.tex` | Complete full first/second proof-and-writing pass and final layout; see hopf-fiber-average-review-102.md |
 | 9 | `chapter_smooth_equations.tex` | Complete nine-input first/second pass across checkpoints103–104, including final selected-page review; see gauduchon-equations-second-pass-104.md |
 | 10 | `chapter_weak_equations.tex` | Complete four-input first/second pass and final selected-page review; see hopf-lp-continuous-equations-review-105.md |
-| 11 | `chapter_degenerate_uniqueness.tex` | Pending |
+| 11 | `chapter_degenerate_uniqueness.tex` | Complete twelve-input first/second direct proof-and-writing pass; see hopf-near-equality-uniqueness-review-106.md |
 | 12 | `chapter_envelopes.tex` | Pending |
 | 13 | `chapter_prescribed_equations.tex` | Pending |
 | 14 | `chapter_normalization.tex` | Pending |
@@ -40,4 +40,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 32 | `chapter_bounded_mass_equations.tex` | Pending |
 | 33 | `chapter_research_program.tex` | Pending |
 
-The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 11 and all its inputs. The Hopf equality case is now proved for Lp densities and continuous solutions; keep the remaining qualitative near-equality question separate. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
+The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 12 and its inputs. Checkpoint106 resolves qualitative Hopf near equality under fixed Lp bounds and gives a strong L1 density counterexample. The four newly supplied papers also require complete proof review and integration under their exact hypotheses. Research-linked spot checks of other chapters do not count as their full revision.

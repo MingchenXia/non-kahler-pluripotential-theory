@@ -1,6 +1,14 @@
-# Current research status — 24 September 2026
+# Current research status — 25 September 2026
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
+
+## Checkpoint106
+
+The book has **786 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-106.pdf` has SHA256 `50979ac121d8cea089658a48cb853f923f1dc20a3e3a4a0dfe28eb7f0f4d13c2` and 3541618 bytes. The new Proposition 10.10.2 proves qualitative Hopf near-equality compactness under a fixed finite Lp density bound and unit integral. Example 10.10.1 gives uniformly positive bounded smooth densities whose scalar defect tends to zero but whose L1 distance from base pullbacks stays positive. The proofs received direct first and second checks; no independent Rethlas run or novelty verdict is claimed. All 190 historical reports are unchanged.
+
+Chapter 11 completes the current twelve-input first/second proof-and-writing pass. All 24 prior formal statement blocks are byte-identical to checkpoint105. The hypersurface component proof is clarified, duplicate declarations removed, and BG/LPT source records refined with exact version distinctions. Both builds have no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited book bibliography underfull paragraph remains. The shared quadratic section also updates the 17-page companion. The house audit retains 52 inherited label/remark errors and reduces warnings from 81 to 79; these are style findings, not build failures. See `research/editorial/hopf-near-equality-uniqueness-review-106.md` and `research/audits/build-snapshot-106.json`. Both outputs rebuilt from a fresh empty extraction, and every reconstructed page text matches the reviewed production output; exact checks are recorded in `research/audits/source-package-portability-106.json`.
+
+The next full chapter is 12. The user explicitly established a persistent writing goal and supplied four papers for integration on 25 September. Their hashes and pending proof-review state are in `research/supplied-papers-20260925.json`. Their complete arguments have not yet been accepted or integrated at this checkpoint. Daily announcement probes returned older headings; no new complete date coverage or replacement-gap closure is claimed. The broad goal remains active and incomplete.
 
 ## Checkpoint105
 

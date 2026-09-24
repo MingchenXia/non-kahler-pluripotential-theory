@@ -66,3 +66,7 @@ The source check for this increment concerns the already used STW theorem, whose
 ### Chapter 10 continuation,24 September
 
 The [CV new endpoint](https://arxiv.org/list/math.CV/new?show=2000) again returned the Wednesday23 September heading and 21 entries. This is a limited availability probe, not additional complete coverage or a negative scan. The recent list was not fully rescreened. Earlier successful September 24 DG/AG/AP coverage and the historical replacement gaps remain. No new candidate or version is adopted. The source work instead checks the existing KN15/Nguyen16 statements and publication metadata, with exact preprint locators retained; see `literature.md`.
+
+### Chapter 11 continuation, 25 September
+
+The four primary new-list endpoints were probed. CV returned September 23; DG, AG and AP returned September 24. This adds no complete September 25 or rolling-seven-day coverage and does not close historical replacement gaps. No negative scan or adoption is claimed. The bounded source work instead checks the existing BG/LPT citations; the four user-supplied PDFs enter a separate proof-review queue.

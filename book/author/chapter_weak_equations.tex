@@ -150,6 +150,70 @@ Uniqueness of the scalar implies $c_f=I_f^{-1}$. Every continuous solution then 
 The argument allows densities that vanish and uses the bounded mass-minimizer theorem directly. It makes no assertion about a vertical-energy identity for nonsmooth potentials or about unbounded solutions.
 
 
+The equality case also determines the limits of nearly minimizing data when their integrability is uniform. The conclusion for densities uses the weak topology of $L^p$; the example below shows why a norm conclusion would be false.
+
+\begin{proposition}\label{prop:hopf-near-equality-compactness}
+Keep the Hopf data $X,\omega,\nu,\pi,A$ above. Fix $1<p<\infty$ and $M\geq1$. Suppose $f_j\geq0$ satisfy
+\[
+ \int_X f_j\,\mathrm{d}\nu=1,\qquad
+ \|f_j\|_{L^p(X,\nu)}\leq M,\qquad c_{f_j}\longrightarrow1.
+\]
+For each $j$, choose any continuous solution $u_j$ of $\omega_{u_j}^3=c_{f_j}f_j\omega^3$, normalized by $\sup_Xu_j=0$. Then
+\[
+ \|u_j-Au_j\|_{C^0(X)}\longrightarrow0,\qquad
+ f_j-Af_j\rightharpoonup0\quad\hbox{in }L^p(X,\nu).
+\]
+Every subsequence has a further subsequence with $u_j\to\pi^*q$ uniformly and $f_j\rightharpoonup\pi^*g$ weakly in $L^p$, where $q$ is continuous and $\omega_{\FS}$-plurisubharmonic, $g\geq0$, $\int_{\mathbb P^2}g\omega_{\FS}^2=1$, and
+\[
+ (\omega_{\FS}+\ddc q)^2=g\omega_{\FS}^2.
+\]
+\end{proposition}
+\begin{proof}
+The equation densities $c_{f_j}f_j$ have a common $L^p$ bound because the scalars converge. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence on which $u_j\to u$ uniformly. Reflexivity of $L^p$ permits a further extraction with $f_j\rightharpoonup f$ weakly in $L^p$. Positivity, unit integral and the bound $\|f\|_p\leq M$ pass to the limit. Bounded-product continuity under uniform convergence identifies
+\[
+ (\omega+\ddc u)^3=f\omega^3.
+\]
+Thus $c_f=1$, and \cref{prop:hopf-lp-normalization} gives $u=\pi^*q$ and $f=\pi^*g$. The bounded cube identity proved there identifies the displayed base equation by testing against pullbacks of continuous base functions. In particular, both limits are fixed by $A$.
+
+Haar averaging is a contraction on $C^0(X)$ and on $L^p(X,\nu)$. It is also self-adjoint for integration against $\nu$: Fubini and invariance under the fiber translations give $\int\chi Af\,\mathrm{d}\nu=\int A\chi f\,\mathrm{d}\nu$ for $\chi\in L^{p'}$, where $p'=p/(p-1)$. Along the extracted subsequence, therefore, $u_j-Au_j\to0$ uniformly and $f_j-Af_j\rightharpoonup0$ in $L^p$. If either asserted convergence failed for the original sequence, a subsequence witnessing that failure, with one fixed $L^{p'}$ test in the weak case, would have a further subsequence of this kind. This contradiction proves both whole-sequence conclusions.
+\end{proof}
+
+\begin{example}\label{ex:hopf-oscillating-near-minimizers}
+Retain the same Hopf data and choose $0<a<1/2$. On the covering space put $s=\log|z|^2$. Although $s$ changes by $-2$ under the defining contraction, every $2$-periodic function of $s$ descends to $X$. For an integer $m\geq1$, define the smooth normalized potential
+\[
+ u_m=\frac{a}{\pi^2m^2}\bigl(\cos(\pi m s)-1\bigr).
+\]
+Primes below denote derivatives with respect to $s$. Since $\ddc s=\alpha$ and $\mathrm{d}s\wedge\dc s=\beta$, the chain rule gives
+\[
+ \omega+\ddc u_m=(1+u_m')\alpha+(1+u_m'')\beta,
+ \qquad u_m'=-\frac{a}{\pi m}\sin(\pi m s),\quad
+ u_m''=-a\cos(\pi m s).
+\]
+Both coefficients are bounded below by positive constants independent of $m$. The rank identities $\alpha^3=\beta^2=0$ imply
+\[
+ (\omega+\ddc u_m)^3=H_m\omega^3,\qquad
+ H_m=\left(1-\frac{a}{\pi m}\sin(\pi m s)\right)^2
+          \bigl(1-a\cos(\pi m s)\bigr).
+\]
+On each fiber $s$ is twice the real Haar coordinate plus a base-dependent constant. Its distribution modulo $2$ is uniform. Averaging the periodic expression, the terms containing $u_m''$, $u_m'u_m''$ and $(u_m')^2u_m''$ integrate to zero, as derivatives of periodic functions. Hence
+\[
+ I_m:=\int_XH_m\,\mathrm{d}\nu=AH_m
+      =1+\frac{a^2}{2\pi^2m^2}.
+\]
+Set $f_m=H_m/I_m$. These smooth densities have unit integral and common strictly positive lower and finite upper bounds. Scalar uniqueness gives $c_{f_m}=I_m\to1$, and $Af_m=1$. Nevertheless,
+\[
+ \|f_m-1+a\cos(\pi m s)\|_{C^0(X)}=O(m^{-1}),
+ \qquad
+ \lim_{m\to\infty}\|f_m-Af_m\|_{L^1(X,\nu)}=\frac{2a}{\pi}>0.
+\]
+Here the constant in $O(m^{-1})$ depends only on $a$, and the last identity uses the period average of $|\cos|$, which is $2/\pi$. Thus near equality does not imply strong $L^1$ convergence to the fiber average, even for uniformly positive bounded smooth densities. It does not imply approach to any other base pullback in $L^1$ either: if $Ag=g$, the contraction property gives
+\[
+ \|f_m-Af_m\|_1\leq2\|f_m-g\|_1.
+\]
+For comparison, $\|u_m-Au_m\|_{C^0}=a/(\pi^2m^2)\to0$, as the proposition requires.
+\end{example}
+
+
 \Needspace{17\baselineskip}
 \section{Limits of this chapter}
 

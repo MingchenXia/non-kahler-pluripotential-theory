@@ -120,6 +120,12 @@ Chapter 10 completes both passes through all four inputs. The capacity iteration
 
 This supersedes the continuous-density equality question in checkpoints103–104. Global convexity away from the background, density-distance coercivity, L1 endpoints, unbounded solutions and localized mass defects remain open here. Next, read Chapter 11 in full and test qualitative near-equality compactness for Lp-bounded normalized densities, distinguishing any compactness conclusion from a uniform modulus. The limited CV probe adds no full announcement coverage; published KN15/Nguyen16 metadata is updated with exact preprint locators retained. Hidden material and the general/special regime boundary are unchanged.
 
+## Near equality and the Chapter 11 pass, checkpoint106
+
+Section 10.10 proves qualitative near-equality compactness under fixed Lp density bounds and unit integral: potentials approach their fiber averages uniformly, and density differences approach zero weakly in Lp. An explicit smooth radial family disproves a strong L1 density-distance modulus even under common positive lower and upper density bounds. These are direct deductions with a second proof pass, without a new independent verifier report. All earlier equality statements retain their scope.
+
+Chapter 11 has completed both full twelve-input proof-and-writing passes. The hypersurface component argument is expanded, repeated declarations are removed and two citations now distinguish published metadata from version-specific proof locators. All 24 prior formal statement blocks are unchanged. Chapter 12 is next. The four user-supplied PDFs recorded in research/supplied-papers-20260925.json are queued for complete proof/dependency review and integration; opening statements alone are not accepted inputs. The persistent writing goal was explicitly established on 25 September. No mass-regime or hidden-chapter boundary changes.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
