@@ -84,6 +84,12 @@ Chapter 5 completed the full correctness/writing pass including its trace input.
 
 The trace retains the whole potential. Unchanged capacity and infinite-mass examples prevent it from controlling nonlinear limits or directly defining a singularity-class metric. Varying Gauduchon multipliers remain a separate open question. Changing the trace's auxiliary metric gives a further quantitative question in the research directions. Continue with Chapter 6. No additional announcement scan or new external premise is claimed; recorded coverage gaps persist.
 
+## Smooth mass discontinuity, checkpoint100
+
+Chapter 6 completed the full first/second pass including its integrable-current section. Corollary 6.8.2 strengthens the separation between linear traces and nonlinear mass: on a manifold where BMP fails, smooth strictly positive currents can converge to the background in coefficient L1, with all fixed exponential weights converging to 1, while the total masses follow any prescribed sequence above the background volume. In particular, a uniform finite bound along one sequence does not restore mass continuity. The new proof passes its bounded audit under the earlier smooth-approximation, normalized-compactness and uniform-exponential inputs.
+
+The general extended-measure theory retains arbitrary smooth backgrounds and possible infinite mass. The fixed-level restriction identity and local notation are explicit. Weak limits for a fixed prescribed larger mass give positive defect measures, but which such measures can be realized remains unresolved here. The varying-adjoint and auxiliary-trace-metric questions remain open. Continue the chapter queue with Chapter 7. No new external premise or complete September 24 announcement scan is claimed.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

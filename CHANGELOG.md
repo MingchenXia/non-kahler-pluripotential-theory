@@ -1,5 +1,11 @@
 # Modification history
 
+## 24 September 2026 — Checkpoint100: smooth prescribed masses and Chapter 6
+
+Complete the full first/second pass through bounded products and the nested integrable-current construction. Keep all fifteen existing statements. Add Corollary 6.8.2: under failure of BMP, smooth strictly positive currents approach the background in coefficient L1 and every fixed exponential weight approaches 1, while their masses equal any prescribed sequence above the background volume. The bounded Rethlas check passes under stated internal inputs. Make fixed-level finiteness, decomposition changes, proof-local factors and the smooth probability volume explicit; improve formula pagination. Record the open defect-measure realization question. No new external premise, Popovici use or novelty claim. Limited same-day arXiv checks do not close the recorded announcement gaps.
+
+The final 778-page build has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 24 selected final pages were inspected. The two-input house audit has zero errors and four unchanged warnings. The other 188 active author inputs, original and hidden files, bibliography/styles, 185 historical reports, checkpoint99 PDF/archive and 17-page companion are preserved. See `research/editorial/smooth-masses-products-review-100.md` and `research/audits/build-snapshot-100.json`; fresh reconstruction must separately pass in `research/audits/source-package-portability-100.json` before release checks are complete. Next full-chapter target: Chapter 7.
+
 ## 24 September 2026 — Checkpoint99: quantitative traces and Chapter 5
 
 Complete Chapter 5's first/second correctness and writing pass, including its trace section. Prove a linear inverse L1 estimate and square-root forward estimate for the bounded-Lipschitz trace metric, with sharp examples on the flat curve. The bounded Rethlas check passes under stated classical/internal inputs. Preserve all nine prior formal statements and 184 earlier reports. Clarify coordinate convolution, gluing parameters and the local L1 volume; use exact published BK07 locators. No new arXiv premise, mass hypothesis, Popovici use or novelty claim. Update blueprint/status, queue, reading guide, research directions and package. The book has 776 pages.

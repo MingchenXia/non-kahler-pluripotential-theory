@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint100
+
+The book has **778 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-100.pdf` has SHA256 `6f641b056ace9321fb7a88d5dc7fa7fc29eeaff19e8ff8e1ee742b7c40f119c9` and 3496481 bytes. Chapter 6 and its nested integrable-current input completed the full first/second proof-and-writing pass. All fifteen earlier formal statements are preserved. New Corollary 6.8.2 constructs smooth strictly positive currents converging in coefficient L1 to the background, with every fixed exponential weight converging to 1, while prescribing any sequence of masses above the background volume. The example assumes failure of BMP; that is not a hypothesis of the general measure construction. The bounded Rethlas check passes under three explicit internal inputs. There are 186 reports:176 correct and ten historical adverse.
+
+The final 778-page build has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 24 selected final pages were inspected. The two-input house audit has zero errors and four unchanged warnings. The other 188 active author inputs, original and hidden files, bibliography/styles, 185 historical reports, checkpoint99 PDF/archive and 17-page companion are preserved. See `research/editorial/smooth-masses-products-review-100.md` and `research/audits/build-snapshot-100.json`; fresh reconstruction must separately pass in `research/audits/source-package-portability-100.json` before release checks are complete.
+
+The fixed-mass special case separates even uniformly finite mass from nonlinear continuity. Possible weak defect measures remain a research question. The limited same-day primary recheck does not complete September 24 or historical replacement coverage; no new arXiv premise is used. Continue with Chapter 7. The broad book goal remains active and incomplete.
+
 ## Checkpoint99
 
 The book has **776 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-99.pdf` has SHA256 `7150b1d4db6fd46297759bdd2e4a48a5e42020874931dc76263a4fccdbaf7432` and 3489807 bytes. Chapter 5 and its nested trace input completed the full first/second proof-and-writing pass. Proposition 5.2.2 gives quantitative L1/finite-trace estimates for all normalized theta-psh potentials, with both exponents sharp by Example 5.2.1. No bounded-potential or Monge–Ampère mass hypothesis is imposed. The bounded Rethlas audit passes under explicit classical/internal inputs. All 184 earlier reports and nine prior formal statements are preserved. There are 185 reports:175 correct and ten historical adverse reports.
