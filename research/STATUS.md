@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint102
+
+The book has **780 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-102.pdf` has SHA256 `db1b6287de00e2119af1d05a9069da9f2510f534a1bda0d208a4bd17a6313afc` and 3512825 bytes. Chapter 8 completed both full proof-and-writing passes. All eight prior formal blocks are unchanged. Proposition 8.7.1 gives a sharp fiber-average inequality with constant 2/3 and characterizes bounded mass minimizers as base pullbacks for the displayed Hopf metric. The bounded Rethlas report passes under three internal inputs; there are 188 reports:178 correct and ten historical adverse.
+
+The 780-page build has no errors, unresolved references/citations, duplicate labels or overfull boxes, and one inherited bibliography underfull paragraph. All 24 selected final pages were inspected. The one-input house audit has zero errors and three unchanged warnings. The other 189 active author inputs, original sources, bibliography/styles, inactive files, 187 historical reports, checkpoint101 PDF/archive and 17-page companion are preserved. See `research/editorial/hopf-fiber-average-review-102.md` and `research/audits/build-snapshot-102.json`. Fresh source reconstruction passed for both outputs, with every page text matching the reviewed output; exact archive checks are recorded in `research/audits/source-package-portability-102.json`.
+
+The fixed-region localization and defect-support/pluripolar questions remain open. No general Hermitian lower-mass or coercivity assumption is introduced. One historical CV replacement list is backfilled and Liu 2506.22834v2 is recorded as an unadopted abstract-only candidate. September 24 CV and other historical replacement gaps remain. Continue with Chapter 9 and its inputs. The broad book goal remains active and incomplete.
+
 ## Checkpoint101
 
 The book has **778 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-101.pdf` has SHA256 `bc5ad98455c59090a5e5bc581b9c5c1c96103bc7c8fc8ed2909c53e188d960a1` and 3503175 bytes. Chapter 7 and its nested general-weight input completed the full first/second proof-and-writing pass. Twelve prior formal blocks are unchanged; two only move notation declarations before use. Corollary 7.6.2 gives smooth capacity convergence to zero with fixed finite mass and a positive deep-level defect when BMP fails. Every fixed shallow restriction converges in whole total variation to the background; one subsequence works for every fixed deep level. Its bounded Rethlas audit passes under three internal inputs. There are 187 reports:177 correct and ten historical adverse.

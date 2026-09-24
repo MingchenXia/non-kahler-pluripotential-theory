@@ -33,9 +33,11 @@ def synchronize(message):
     if run("git", "remote", "get-url", "origin").strip() != REMOTE:
         raise RuntimeError("Unexpected origin; no changes were staged.")
     # Check before committing or sending any repository content.
-    info = json.loads(run("gh", "repo", "view", REPO,
-                          "--json", "nameWithOwner,visibility"))
-    if info["nameWithOwner"] != REPO or info["visibility"] != "PRIVATE":
+    info = json.loads(run("gh", "api", f"repos/{REPO}", "--jq",
+                          "{nameWithOwner: .full_name, visibility: .visibility, private: .private}"))
+    if (info.get("nameWithOwner") != REPO
+            or info.get("visibility") != "private"
+            or info.get("private") is not True):
         raise RuntimeError("The expected repository must be private.")
     git_dir = Path(run("git", "rev-parse", "--absolute-git-dir").strip())
     if any((git_dir / p).exists() for p in

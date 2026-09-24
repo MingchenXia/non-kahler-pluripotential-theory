@@ -13,7 +13,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 5 | `chapter_compactness.tex` | Complete first/second pass including trace input and final layout; see quantitative-trace-compactness-review-99.md |
 | 6 | `chapter_products.tex` | Complete first/second pass including integrable-current input and final layout; see smooth-masses-products-review-100.md |
 | 7 | `chapter_damped_measures.tex` | Complete first/second pass including general-weight input and final layout; see capacity-defects-damping-review-101.md |
-| 8 | `chapter_hopf.tex` | Pending |
+| 8 | `chapter_hopf.tex` | Complete full first/second proof-and-writing pass and final layout; see hopf-fiber-average-review-102.md |
 | 9 | `chapter_smooth_equations.tex` | Pending |
 | 10 | `chapter_weak_equations.tex` | Pending |
 | 11 | `chapter_degenerate_uniqueness.tex` | Pending |
@@ -40,4 +40,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 32 | `chapter_bounded_mass_equations.tex` | Pending |
 | 33 | `chapter_research_program.tex` | Pending |
 
-The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 8, including its inputs. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
+The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 9, including its inputs. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.

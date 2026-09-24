@@ -96,6 +96,12 @@ Chapter 7 completed both proof-and-writing passes including the general-weight i
 
 The support and pluripolar charging of possible defects remain open questions here. General arbitrary-background damping retains its hypotheses; no blanket mass property is added. Local declarations, weighted continuity and the logarithmic-tail proof are clarified. Continue with Chapter 8. New September 24 literature candidates remain unadopted, with category-specific coverage and date uncertainty in the watch ledger.
 
+## Hopf mass minimizers, checkpoint102
+
+Proposition 8.7.1 proves that bounded minimizers of Monge–Ampère mass for the displayed Hopf metric are exactly bounded omega_FS-psh base pullbacks. The squared L2 distance from a potential to its Haar fiber average is at most two thirds of its excess mass, with sharp constant. The proof combines the explicit mass identity and the torus spectral gap, then passes through bounded decreasing regularization. Its bounded audit passes under those internal prerequisites. No nonsmooth energy identity or general Hermitian coercivity is assumed.
+
+The complete Chapter 8 proof-and-writing pass preserves its eight earlier statements and makes the large-time and integrated defect estimates more explicit. The cutoff region in the heat construction grows as eta decreases, so the construction does not establish arbitrary fixed-region mass-defect localization. Support and pluripolar charging remain questions. Continue with Chapter 9 and its inputs. The general theory, separated special mass regimes, hidden-chapter boundary and daily literature program remain unchanged.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
