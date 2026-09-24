@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint107
+
+The book has **790 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-107.pdf` has SHA256 `a4684cde7ed5707a8bf716714e0cb1e9d02d07c2d8d854b11deb6c2115c215f5` and 3562676 bytes. Section 27.14 reconstructs the supplied Q5.2 theorem: exact descended multiplier-ideal orders for a section over a smooth base divisor, a positive-mass base weight under theta-c Theta_Z>0, a sharp O(m^(q-1)) section-space error, and the resulting kernel/determinant limits. The complete supplied proof and new deduction received direct first/second checks. No independent verifier or novelty verdict is claimed; all 190 historical reports remain unchanged.
+
+The sixteen earlier formal statement blocks in the two edited chapter roots are unchanged. The general selected-space approximation problem is retained and Chapter 12 remains next in the full review cycle. The new section's house audit has zero errors and warnings; the two chapter roots retain zero errors and fifteen inherited warnings. Compilation has no unresolved references, duplicate labels or overfull boxes and one inherited bibliography underfull paragraph. The 17-page companion is byte-identical to checkpoint106. See `research/editorial/horizontal-center-integration-review-107.md` and `research/audits/build-snapshot-107.json`; all 22 selected final pages were inspected, and both outputs rebuilt from a fresh empty extraction with every page text matching production. Exact package checks are in `research/audits/source-package-portability-107.json`.
+
+The other three supplied papers have initial full-text readings, but dedicated dependency/second passes and integrations remain pending. The local-density paper requires careful comparison of an arbitrary smooth-density open set with the book's full strict-barrier locus; these are different hypotheses. The broad writing goal remains active and incomplete.
+
 ## Checkpoint106
 
 The book has **786 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-106.pdf` has SHA256 `50979ac121d8cea089658a48cb853f923f1dc20a3e3a4a0dfe28eb7f0f4d13c2` and 3541618 bytes. The new Proposition 10.10.2 proves qualitative Hopf near-equality compactness under a fixed finite Lp density bound and unit integral. Example 10.10.1 gives uniformly positive bounded smooth densities whose scalar defect tends to zero but whose L1 distance from base pullbacks stays positive. The proofs received direct first and second checks; no independent Rethlas run or novelty verdict is claimed. All 190 historical reports are unchanged.

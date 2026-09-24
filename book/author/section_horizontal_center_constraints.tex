@@ -1,0 +1,125 @@
+\section{Singularities along a section over a divisor}
+\label{sec:horizontal-center-constraints}
+
+The isolated-pole calculation in \cref{sec:fiber-point-kernels} has a counterpart for a positive-dimensional singular set. A section over a divisor on the base supplies a single divisorial vanishing condition after descent. The fiber normal variables shift its order by a bounded amount. We reconstruct the supplied manuscript's calculation and sharp example \cite[Theorem~1.1, Lemma~2.2 and Proposition~4.1]{SuppliedHorizontal26}, then apply the kernel comparison already proved above.
+
+We first give the section estimate needed on the divisor. For a compact complex manifold $M$ and a holomorphic line bundle $G$, write $h^0(M,G)=\dim H^0(M,G)$.
+
+\begin{lemma}\label{lem:linear-range-section-bound}
+Let $M$ be a compact complex manifold of dimension $d\geq0$, and let $E,F$ be holomorphic line bundles on $M$. For each fixed $C_0>0$ there is $C_1$ such that
+\[
+ h^0(M,E^m\otimes F^j)\leq C_1m^d
+ \qquad(m\geq1,\ j\in\mathbb Z,\ |j|\leq C_0m).
+\]
+\end{lemma}
+\begin{proof}
+For $d=0$, the manifold is a finite set and the dimension equals its number of points. Suppose $d\geq1$. Fix smooth Hermitian metrics on $E,F$, a smooth positive volume $\mathrm{d}V$, and finitely many coordinate charts with frames and smaller subcharts covering $M$. The local metric weight of $E^m\otimes F^j$ has second derivatives bounded by $Cm$, uniformly for $|j|\leq C_0m$. At a point $p$ in a smaller subchart, multiply the frame by the exponential of a holomorphic affine function to remove the constant and real-linear terms of this weight. The new weight is zero at $p$ and has absolute value at most $Cm|z-p|^2$ on a fixed neighborhood. A ball of radius $\varepsilon m^{-1/2}$ lies in the chart, with $\varepsilon>0$ independent of $p,m,j$. The submean inequality for a section's holomorphic coefficient gives
+\[
+ |s(p)|^2\leq Cm^d\int_M|s|^2\,\mathrm{d}V.
+\]
+All constants depend only on the fixed charts, metrics, volume and $C_0$. Evaluation at $p$ has one-dimensional target, so for an $L^2$-orthonormal basis $s_1,\ldots,s_N$ its squared operator norm is $\sum_{\ell=1}^N|s_\ell(p)|^2$. The displayed bound and integration give $N\leq C\operatorname{Vol}(M)m^d$.
+\end{proof}
+
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers of dimension $r\geq1$. Suppose $B$ is K\"ahler of dimension $q\geq1$. Fix a holomorphic line bundle $A$ on $B$ with a smooth Hermitian metric $h_A$ and positive curvature $\theta=c_1(A,h_A)$. Let $Z\subset B$ be a nonempty smooth divisor, and suppose there is a holomorphic section $\sigma:Z\to X$ of $\pi$ over $Z$. Put $Y=\sigma(Z)$. Fix $c>0$ and a smooth metric $h_Z$ on $\mathcal O_B(Z)$, with curvature $\Theta_Z$, such that $\alpha:=\theta-c\Theta_Z>0$. Let $s_Z$ be the canonical section of $\mathcal O_B(Z)$, and set $\psi=c\log|s_Z|_{h_Z}^2$.
+
+Fix a Hermitian form $\omega$ on $X$ independently of $h_A$. Suppose $\varphi\in\PSH(X,\omega)$ is locally bounded on $X\setminus Y$ and, in submersion coordinates $(x,z',w_1,\ldots,w_r)$ near each point of $Y$, satisfies
+\begin{equation}\label{eq:horizontal-center-singularity}
+ \begin{gathered}
+ \varphi=c\log\left(|x|^2+\sum_{j=1}^r|w_j|^2\right)+O(1),\\
+ Z=\{x=0\},\qquad Y=\{x=w_1=\cdots=w_r=0\}.
+ \end{gathered}
+\end{equation}
+The remainder is locally bounded. The vector $z'$ consists of the $q-1$ tangential base coordinates; it is absent when $q=1$. Multiplier ideals use the weight $\mathrm{e}^{-mv}$, as in \cref{sec:weighted-section-spaces}.
+
+\begin{theorem}\label{thm:horizontal-center-descent}
+The weight $\psi$ is $\theta$-plurisubharmonic and has positive non-pluripolar mass
+\[
+ \int_B\mathrm{MA}_\theta(\psi)=\int_B\alpha^q>0.
+\]
+For every integer $m\geq1$, put $\ell_m=\lfloor mc\rfloor$ and $k_m=\max\{\ell_m-r,0\}$. Under holomorphic descent, the selected spaces are
+\[
+ \begin{split}
+ V_m&:=H^0\bigl(X,\pi^*A^m\otimes\mathcal I(m\varphi)\bigr)
+       =H^0\bigl(B,A^m(-k_m Z)\bigr),\\
+ W_m&:=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
+       =H^0\bigl(B,A^m(-\ell_m Z)\bigr)\subseteq V_m.
+ \end{split}
+\]
+There is a constant $C$, depending on the fixed data and independent of $m$, such that
+\[
+ 0\leq\dim V_m-\dim W_m\leq Cm^{q-1}.
+\]
+For $q=1$ the difference is at most $r\,\#Z$ for every $m$.
+\end{theorem}
+\begin{proof}
+Poincar\'e--Lelong gives $\theta+\ddc\psi=\alpha+c[Z]\geq0$. After subtracting a constant, suppose $\psi\leq0$. On $\{\psi>-t\}$ the bounded truncation $\max\{\psi,-t\}$ has Monge--Amp\`ere measure $\alpha^q$ by locality. The restricted measures defining the non-pluripolar product therefore increase to the zero extension of $\alpha^q$ from $B\setminus Z$. The divisor has zero smooth volume, which proves the mass formula.
+
+Every section of $\pi^*A^m$ descends by \cref{prop:partial-kernel-submersion}. Consider a nonzero local base coefficient $g(x,z')$ and let $a\geq0$ be its order of divisibility by $x$ as a germ. Its pullback is independent of the fiber coordinates $w$. At nearby tangential points where the leading coefficient in $x$ is nonzero, its squared absolute value is comparable to $|x|^{2a}$ on a smaller neighborhood. The bounded remainder in \eqref{eq:horizontal-center-singularity} changes integrability only by fixed positive factors. In the $r+1$ normal variables $(x,w)$, polar integration has a positive finite angular factor and radial integral
+\[
+ \int_0^\varepsilon \rho^{2a-2mc+2(r+1)-1}\,\mathrm{d}\rho.
+\]
+It converges precisely when $a+r+1>mc$, equivalently $a\geq k_m$. At equality in the strict inequality the integral diverges logarithmically. If the leading coefficient vanishes at the tangential point under consideration but $a<k_m$, every neighborhood contains an open tangential set where that coefficient is nonzero; Fubini gives divergence on that set. If $a\geq k_m$, the bound $|g|\leq C|x|^a$ proves integrability throughout a smaller neighborhood. Thus the criterion holds at every stalk, including special tangential points. Outside $Y$ there is no constraint. In one base normal variable the same argument gives $\mathcal I(m\psi)=\mathcal O_B(-\ell_m Z)$. These facts prove the two space identities and their inclusion.
+
+For $k_m\leq j<\ell_m$, the divisor restriction sequence gives
+\[
+ \begin{split}
+ 0&\longrightarrow A^m(-(j+1)Z)\longrightarrow A^m(-jZ)\\
+  &\longrightarrow \bigl(A^m(-jZ)\bigr)|_Z\longrightarrow0.
+ \end{split}
+\]
+Consequently the loss in section dimension at this step is at most $h^0(Z,(A^m(-jZ))|_Z)$. Apply \cref{lem:linear-range-section-bound} on $Z$ with $E=A|_Z$ and $F=\mathcal O_B(-Z)|_Z$: the integers satisfy $0\leq j\leq cm$, so the bound is $Cm^{q-1}$ uniformly. There are at most $r$ steps. Summing proves the estimate. When $q=1$, each restriction space has dimension $\#Z$, giving the last assertion without an asymptotic argument.
+\end{proof}
+
+\begin{example}\label{ex:horizontal-center-sharp-error}
+For every $q,r\geq1$, integer $k\geq1$, and real $0<c<k$, the hypotheses above occur on $X=\mathbb P^q\times\mathbb P^r$ with $B=\mathbb P^q$ and $A=\mathcal O_{\mathbb P^q}(k)$. They give, for $q\geq2$,
+\[
+ \dim V_m-\dim W_m
+   =\frac{r(k-c)^{q-1}}{(q-1)!}m^{q-1}+O(m^{q-2}).
+\]
+For $q=1$ the difference is $\min\{r,\lfloor mc\rfloor\}$ for every $m$.
+\end{example}
+\begin{proof}
+Use homogeneous coordinates $[Z_0:\cdots:Z_q]$ on the base and $[W_0:\cdots:W_r]$ on the fiber. Set $Z=\{Z_0=0\}$ and $Y=Z\times\{[1:0:\cdots:0]\}$. Write $\omega_B,\omega_F$ for the Fubini--Study forms, normalized to have top integrals one. Define
+\[
+ R_B=\frac{|Z_0|^2}{\sum_{i=0}^q|Z_i|^2},\qquad
+ R_F=\frac{\sum_{j=1}^r|W_j|^2}{\sum_{j=0}^r|W_j|^2},\qquad
+ \varphi=c\log(R_B+R_F),\quad\psi=c\log R_B.
+\]
+The function $\varphi$ is smooth off $Y$ and satisfies \eqref{eq:horizontal-center-singularity}. After taking a common denominator, the numerator of $R_B+R_F$ is
+\[
+ \sum_{j=0}^r|Z_0W_j|^2+\sum_{i=0}^q\sum_{j=1}^r|Z_iW_j|^2.
+\]
+Its logarithm in each affine frame is plurisubharmonic. Hence $\ddc\varphi\geq-c(\omega_B+\omega_F)$. Choose an integer $b\geq c$ and set $\omega=k\omega_B+b\omega_F$. This is a Hermitian form, and $\omega+\ddc\varphi\geq(k-c)\omega_B+(b-c)\omega_F\geq0$. On the base, $\theta=k\omega_B$, $\Theta_Z=\omega_B$ and $\alpha=(k-c)\omega_B>0$.
+
+Put $\ell_m=\lfloor mc\rfloor$. Divisibility of homogeneous polynomials by powers of $Z_0$ gives the exact counts
+\[
+ \dim W_m=\binom{km-\ell_m+q}{q},\qquad
+ \dim V_m=\binom{km-\max\{\ell_m-r,0\}+q}{q}.
+\]
+For large $m$, the two residual degrees differ by $r$ and equal $(k-c)m+O(1)$. Subtracting the degree-$q$ binomial polynomials gives the asserted leading coefficient and remainder. For $q=1$, subtraction gives $\ell_m-\max\{\ell_m-r,0\}=\min\{r,\ell_m\}$ for every $m$.
+\end{proof}
+
+Retain all the hypotheses and spaces of \cref{thm:horizontal-center-descent}. Fix a smooth positive probability volume $\nu_B$, smooth fiber probabilities, and the lifting map $\mathcal L$ of \cref{sec:partial-submersion}; put $\nu_X=\mathcal L\nu_B$. Use the pullback metric on $\pi^*A$ and, for a real $v\in C(B)$, its pullback $v\circ\pi$ as continuous norm weight. Let
+\[
+ E(v)=E_{\theta,B}[\psi]_{\mathcal I}(v)
+\]
+be the base ideal envelope of \cref{sec:partial-base-equilibrium}. The next consequence concerns these continuous norms; the singular weight $\varphi$ selects the space only.
+
+\begin{corollary}\label{cor:horizontal-center-kernel-limit}
+The $q$-normalized kernel measure selected by $\varphi$ on $X$ has total-variation distance $O(m^{-1})$ from the lift of the base kernel measure selected by $\psi$. In particular,
+\[
+ \beta_{X,m,v\circ\pi,\varphi}^{(q)}
+    \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E(v))\bigr).
+\]
+The determinant functionals, normalized to vanish at zero weight, satisfy
+\[
+ \mathcal F_{X,m}^{(q)}(v\circ\pi)\longrightarrow
+ \int_0^1\left(\int_Bv\,\mathrm{d}\mathrm{MA}_\theta(E(tv))\right)\mathrm{d}t.
+\]
+Normalization by $m^{q+r}$ instead gives zero kernel measures in total variation.
+\end{corollary}
+\begin{proof}
+Fiber integration identifies the upstairs continuous norm with the base norm on $V_m$, just as in \cref{prop:partial-kernel-submersion}. The kernel measure upstairs is therefore the lift of the kernel measure for $V_m$. By \cref{lem:kernel-codimension-comparison,thm:horizontal-center-descent}, its difference from the lifted $W_m$ measure is positive and has total mass $q!(\dim V_m-\dim W_m)/m^q=O(m^{-1})$. The base is K\"ahler and $\psi$ has positive non-pluripolar mass, so the equilibrium theorem used in \cref{thm:partial-kernel-quotient-limit} applies to $W_m$. It gives the weak limit. The determinant comparison in \cref{lem:kernel-codimension-comparison} is $O(m^{-1})\|v\|_\infty$; applying \cref{cor:fujiki-partial-determinant} to the identity modification of $B$ gives the displayed limit. Its dominated-convergence bound is the uniformly bounded $q$-normalized section dimension times $\|v\|_\infty$. Finally the $q$-normalized masses are bounded, so multiplication by $m^{-r}$, with the fixed factorial adjustment, proves the last assertion.
+\end{proof}
+
+This proves the approximation in \cref{qu:fiber-selected-approximation} for the specified singular center and curvature margin $\theta-c\Theta_Z>0$. The fixed shift of the vanishing order does not identify the multiplier-ideal sheaves on $X$ and $B$. More general centers and selecting weights remain outside this calculation.

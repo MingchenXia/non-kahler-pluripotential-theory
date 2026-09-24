@@ -126,6 +126,12 @@ Section 10.10 proves qualitative near-equality compactness under fixed Lp densit
 
 Chapter 11 has completed both full twelve-input proof-and-writing passes. The hypersurface component argument is expanded, repeated declarations are removed and two citations now distinguish published metadata from version-specific proof locators. All 24 prior formal statement blocks are unchanged. Chapter 12 is next. The four user-supplied PDFs recorded in research/supplied-papers-20260925.json are queued for complete proof/dependency review and integration; opening statements alone are not accepted inputs. The persistent writing goal was explicitly established on 25 September. No mass-regime or hidden-chapter boundary changes.
 
+## Divisorial section constraints, checkpoint107
+
+The supplied Q5.2 manuscript is reconstructed in Section 27.14. A logarithmic singularity along a section over a smooth base divisor imposes the exact descended order max(floor(mc)-r,0). The base weight c log|s_Z|^2 imposes floor(mc), has positive mass under theta-c Theta_Z>0, and loses only O(m^(q-1)) sections. An explicit projective product proves sharpness. Existing kernel comparison gives O(1/m) total-variation error, equilibrium and determinant limits for continuous descended norms. The general selected-space approximation problem remains open beyond these hypotheses. All earlier formal statements retain their scope.
+
+This is a direct two-pass proof integration, without a new independent verifier report. The three other supplied papers remain in the proof-review queue after initial full-text readings. Chapter 12 remains the next full chapter. See research/editorial/horizontal-center-integration-review-107.md.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

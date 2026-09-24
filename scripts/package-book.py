@@ -45,6 +45,8 @@ for name in (
     "research/editorial/gauduchon-equations-second-pass-104.md",
     "research/editorial/hopf-lp-continuous-equations-review-105.md",
     "research/editorial/hopf-near-equality-uniqueness-review-106.md",
+    "research/editorial/horizontal-center-integration-review-107.md",
+    "research/editorial/supplied-papers-integration-queue.md",
     "research/supplied-papers-20260925.json",
     "research/rethlas/verification/inputs/hopf-lp-normalization.md",
     "research/rethlas/verification/inputs/hopf-normalization-defect.md",

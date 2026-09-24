@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint107: descended constraints along a divisor
+
+Integrate the supplied Q5.2 manuscript with complete proofs in Section 27.14. Derive the exact fiber-dimension shift in the multiplier-ideal order, positive base mass under the stated curvature margin, a sharp section-count error and kernel/determinant consequences. Retain the general problem and all sixteen earlier formal statement blocks in the edited chapter roots. Complete direct second proof and style passes; no new independent verifier report is asserted.
+
+The book is 790 pages. The new section has a clean house audit; the two chapter roots retain fifteen inherited warnings and no errors. The final build has no unresolved references or overfull boxes and one inherited bibliography underfull paragraph. The 17-page companion is unchanged. Final page and fresh-source checks are recorded in the checkpoint107 audit files. All original/hidden sources, styles and historical reports are preserved. Three supplied integrations and the full Chapter 12 review remain pending.
+
 ## 25 September 2026 — Checkpoint106: Hopf near equality and Chapter 11
 
 Prove qualitative near-equality compactness for continuous Hopf solutions under fixed Lp density bounds. Construct smooth uniformly positive bounded radial densities disproving strong L1 density coercivity from the scalar defect. Complete both direct proof-and-writing passes through all twelve Chapter 11 inputs, retaining all 24 formal statement blocks; clarify the hypersurface topology, remove duplicate declarations and add precise published/preprint citation locators. No independent verifier run is added and all historical reports are preserved. The new persistent writing goal includes full proof review and integration of the user's four supplied PDFs, now inventoried with hashes but not yet adopted.
