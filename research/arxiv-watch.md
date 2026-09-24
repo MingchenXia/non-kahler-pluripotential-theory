@@ -62,3 +62,7 @@ The newly detected relevant update is [Zhuo Liu, arXiv:2506.22834v2](https://arx
 This is a same-day bounded continuation of the recorded daily scan. The [CV endpoint](https://arxiv.org/list/math.CV/new?show=2000&skip=0) still returns the September 23 heading and 21 entries. This availability probe adds no September 24 coverage and does not establish a negative scan. The previous seven-day new/cross coverage, DG/AG/AP September 24 coverage, candidate histories and historical replacement gaps are retained. No candidate is newly adopted.
 
 The source check for this increment concerns the already used STW theorem, whose published version is now used in the bibliography. Exact scope and retrieval failures are in `literature.md`.
+
+### Chapter 10 continuation,24 September
+
+The [CV new endpoint](https://arxiv.org/list/math.CV/new?show=2000) again returned the Wednesday23 September heading and 21 entries. This is a limited availability probe, not additional complete coverage or a negative scan. The recent list was not fully rescreened. Earlier successful September 24 DG/AG/AP coverage and the historical replacement gaps remain. No new candidate or version is adopted. The source work instead checks the existing KN15/Nguyen16 statements and publication metadata, with exact preprint locators retained; see `literature.md`.

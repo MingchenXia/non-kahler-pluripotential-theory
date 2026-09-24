@@ -43,6 +43,8 @@ for name in (
     "research/editorial/hopf-fiber-average-review-102.md",
     "research/editorial/hopf-normalization-smooth-equations-review-103.md",
     "research/editorial/gauduchon-equations-second-pass-104.md",
+    "research/editorial/hopf-lp-continuous-equations-review-105.md",
+    "research/rethlas/verification/inputs/hopf-lp-normalization.md",
     "research/rethlas/verification/inputs/hopf-normalization-defect.md",
     "research/editorial/compact-growing-jet-localization-draft.md",
     "research/editorial/growing-jet-local-upper-draft.md",

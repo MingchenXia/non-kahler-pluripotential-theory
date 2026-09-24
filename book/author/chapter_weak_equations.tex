@@ -95,6 +95,61 @@ The limiting characterization is due to Nguyen \cite[Corollary 0.2]{Nguyen16}. T
 
 \input{author/section_classical_scalar_uniqueness}
 
+\section{Normalization on the Hopf threefold}
+\label{sec:hopf-lp-normalization}
+
+Let $X=(\mathbb C^3\setminus\{0\})/\langle z\mapsto\mathrm{e}^{-1}z\rangle$, with projection $\pi:X\to\mathbb P^2$ and the Hermitian form $\omega=\alpha+\beta$ of \cref{prop:hopf-mass}. Here $\alpha=\pi^*\omega_{\FS}$, $\int_{\mathbb P^2}\omega_{\FS}^2=1$, and $\nu=\omega^3/6$ is a probability measure. Let $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ act by $\tau_a[z]=[\mathrm{e}^a z]$, and let $A$ denote averaging with respect to its probability Haar measure $\mathrm{d}A_E$, as in \cref{prop:hopf-fiber-average}. The measure $\nu$ disintegrates as $\mathrm{d}A_E\,\omega_{\FS}^2$. For $u\in\PSH(X,\omega)$, write $\omega_u=\omega+\ddc u$.
+
+Fix $p>1$ and a nonnegative nonzero $f\in L^p(X,\nu)$. By \cref{thm:kn-continuous,prop:vanishing-exponent}, there is a unique positive scalar $c_f$ for which
+\[
+ (\omega+\ddc u)^3=c_f f\,\omega^3
+\]
+has a continuous $\omega$-plurisubharmonic solution. Put $I_f=\int_Xf\,\mathrm{d}\nu$. The bounded mass characterization in \cref{prop:hopf-fiber-average} extends the smooth equality case of \cref{prop:hopf-normalization-defect} to these densities.
+
+\begin{proposition}\label{prop:hopf-lp-normalization}
+One has $c_f I_f\geq1$, and every continuous solution $u$ satisfies
+\begin{equation}\label{eq:hopf-lp-average}
+ \|u-Au\|_{L^2(X,\nu)}^2\leq4(c_f I_f-1).
+\end{equation}
+Moreover, $c_f I_f=1$ if and only if $f=\pi^*g$ almost everywhere with respect to $\nu$, for some nonnegative $g\in L^p(\mathbb P^2,\omega_{\FS}^2)$. In this case every continuous solution is the pullback of a continuous $\omega_{\FS}$-plurisubharmonic function.
+\end{proposition}
+\begin{proof}
+Integrating the equation gives $\int_X\omega_u^3=6c_f I_f$. The lower mass bound and \eqref{eq:hopf-average-mass} give the first two assertions.
+
+Suppose $c_f I_f=1$. By \cref{prop:hopf-fiber-average}, $u=\pi^*q$ for a bounded $\omega_{\FS}$-plurisubharmonic function $q$. Local holomorphic sections of $\pi$ show that $q$ is continuous. Thus $u\circ\tau_a=u$ for every $a\in E$. Naturality of bounded products and invariance of $\omega$ give
+\[
+ \tau_a^*(f\nu)=f\nu\qquad(a\in E).
+\]
+This is a measure identity; no common pointwise representative of $f$ for all $a$ is needed.
+
+Fubini's theorem defines the fiber average $Af$ almost everywhere. It equals $\pi^*g$ for a measurable function $g$ on the base: local trivializations differ by translations of the Haar variable. Jensen's inequality gives
+\[
+ \int_{\mathbb P^2}|g|^p\omega_{\FS}^2
+ \leq\int_X|f|^p\,\mathrm{d}\nu.
+\]
+For every continuous real test function $\chi$ on $X$, measure invariance gives $\int_X\chi f\,\mathrm{d}\nu=\int_X(\chi\circ\tau_a)f\,\mathrm{d}\nu$. Integrate in $a$ and use Fubini and invariance of Haar measure under $a\mapsto-a$. The result is $\int_X\chi f\,\mathrm{d}\nu=\int_X\chi Af\,\mathrm{d}\nu$. Hence $f=Af=\pi^*g$ almost everywhere, with $g\geq0$.
+
+Conversely, suppose $f=\pi^*g$ almost everywhere. Disintegration gives $I_f=\int_{\mathbb P^2}g\omega_{\FS}^2$. Apply \cref{thm:kn-continuous} on the base. There are a continuous $\omega_{\FS}$-plurisubharmonic function $q$ and a scalar $k>0$ with
+\[
+ (\omega_{\FS}+\ddc q)^2=kg\,\omega_{\FS}^2.
+\]
+Bounded decreasing regularization and Stokes give $\int_{\mathbb P^2}(\omega_{\FS}+\ddc q)^2=1$, so $k=I_f^{-1}$.
+
+Put $u=\pi^*q$. To compute its bounded product, take smooth strictly $\omega_{\FS}$-plurisubharmonic $q_j\downarrow q$ by \cref{thm:bounded-exact-regularization}. Their pullbacks decrease to $u$ and are strictly $\omega$-plurisubharmonic. For each $j$, the smooth cube identity gives
+\[
+ (\omega+\ddc\pi^*q_j)^3
+ =3\pi^*(\omega_{\FS}+\ddc q_j)^2\wedge\beta.
+\]
+On a local trivialization, the right side is $6\mathrm{d}A_E$ times the base measure $(\omega_{\FS}+\ddc q_j)^2$: horizontal components of $\beta$ vanish against the base top-degree form, and its vertical restriction is $2\mathrm{d}A_E$. Bounded-product continuity on the base and on $X$, tested in these trivializations and patched by a partition of unity, therefore gives
+\[
+ (\omega+\ddc u)^3=\frac{f}{I_f}\,\omega^3.
+\]
+Uniqueness of the scalar implies $c_f=I_f^{-1}$. Every continuous solution then has mass $6$, so the same mass characterization makes it a base pullback. Its descended potential is continuous by local sections, as above.
+\end{proof}
+
+The argument allows densities that vanish and uses the bounded mass-minimizer theorem directly. It makes no assertion about a vertical-energy identity for nonsmooth potentials or about unbounded solutions.
+
+
 \Needspace{17\baselineskip}
 \section{Limits of this chapter}
 

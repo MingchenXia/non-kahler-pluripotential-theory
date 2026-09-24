@@ -114,6 +114,12 @@ The six remaining Gauduchon-equation inputs have completed their full second pas
 
 Continue with Chapter 10, including the exact convergence of smooth approximations needed to test the continuous-density Hopf equality question. The smooth normalization theorem, its model-specific scope and the other open questions are unchanged. No additional arXiv scan or adoption is claimed; existing coverage gaps remain. The general and special mass regimes and excluded Nakamaye material are unchanged.
 
+## Continuous equations and Hopf normalization, checkpoint105
+
+Chapter 10 completes both passes through all four inputs. The capacity iteration, uniform solution compactness, Gauduchon mean and scalar-uniqueness proofs retain their hypotheses. Proposition 10.10.1 proves c_f I_f>=1 and ||u-Au||_L2(nu)^2<=4(c_f I_f-1) for every continuous solution with nonnegative nonzero Lp density,p>1, on the fixed Hopf threefold. Equality holds exactly for almost-everywhere base-pullback densities, and every continuous solution then descends. The direct proof and bounded audit use four explicit internal results; they impose no new general mass property.
+
+This supersedes the continuous-density equality question in checkpoints103–104. Global convexity away from the background, density-distance coercivity, L1 endpoints, unbounded solutions and localized mass defects remain open here. Next, read Chapter 11 in full and test qualitative near-equality compactness for Lp-bounded normalized densities, distinguishing any compactness conclusion from a uniform modulus. The limited CV probe adds no full announcement coverage; published KN15/Nguyen16 metadata is updated with exact preprint locators retained. Hidden material and the general/special regime boundary are unchanged.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.
