@@ -78,6 +78,12 @@ In this explicit geometric regime, normalized Monge–Ampère measures extend th
 
 The daily September 24 arXiv scan could not obtain September 24 announcements; returned primary listings still show September 23, and some direct requests failed. All eight tracked primary abstract histories still show v1. Existing successful coverage and the earlier replacement gap are preserved explicitly; no complete negative scan or new arXiv theorem adoption is claimed.
 
+## Quantitative finite traces, checkpoint99
+
+Chapter 5 completed the full correctness/writing pass including its trace input. Proposition 5.2.2 bounds the bounded-Lipschitz trace distance below by the L1 distance of normalized potentials and above by its square root. Example 5.2.1 proves optimality of both exponents on a flat curve. The result applies to every potential in the mean-normalized space, without a nonlinear mass hypothesis. Its proof uses the normalized adjoint scalar equation and smoothing of Lipschitz tests. The bounded audit `gauduchon_trace_quantitative_01` passes under explicit classical/internal inputs.
+
+The trace retains the whole potential. Unchanged capacity and infinite-mass examples prevent it from controlling nonlinear limits or directly defining a singularity-class metric. Varying Gauduchon multipliers remain a separate open question. Changing the trace's auxiliary metric gives a further quantitative question in the research directions. Continue with Chapter 6. No additional announcement scan or new external premise is claimed; recorded coverage gaps persist.
+
 ## Continuing work
 
 1. Continue the chapter-by-chapter correctness and exposition pass, using the new structure. Maintain the completed notation pass: declare or precisely recall the local setting in every new or revised section/subsection and introduce proof-local symbols before use. Check assumptions at every reused proof and simplify repeated arguments without weakening them. Preserve the full singularity, I-goodness, trace and Bergman scope of the source book.

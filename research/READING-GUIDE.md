@@ -1,4 +1,4 @@
-# Reading guide — checkpoint98
+# Reading guide — checkpoint99
 
 The book separates the general Hermitian theory from the substantial developments requiring uniform mass properties. Chapter numbers here refer to the reorganized manuscript. Earlier audit records retain the numbering of their own checkpoints.
 
@@ -9,6 +9,8 @@ Chapters 1–8 develop the nonclosed background, torsion, Gauduchon traces, comp
 Chapter 3 derives the primitive obstruction and the general radial torsion-defect formula. A Gauduchon surface has invariant smooth mass, but this alone does not give a primitive of the raw one-form. The closed-energy identity uses only closedness of the smooth real background.
 
 Chapter 4 now distinguishes Gauduchon surfaces from higher dimensions under potential perturbations. Propositions 4.5.2 and 4.6.1 give the exact persistence/mass criterion and its bounded adjoint extension; Example 4.5.1 supplies a three-torus obstruction. General weak adjoints remain a separate question.
+
+Chapter 5 gives finite Gauduchon trace coordinates on the full normalized potential space. Proposition 5.2.2 supplies a linear inverse L1 estimate and square-root forward trace estimate; Example 5.2.1 proves optimality of both exponents. These estimates also apply to unbounded potentials.
 
 Read the trace estimates together with the infinite-mass witness. Even coefficient-L1 convergence of full currents and total-variation convergence of their Gauduchon traces can coexist with infinite determinant integrals. Linear control does not supply nonlinear integrability. Finite damping supplies a different, explicitly controlled family of measures without BMP.
 

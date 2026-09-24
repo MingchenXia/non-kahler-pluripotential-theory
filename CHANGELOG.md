@@ -1,5 +1,11 @@
 # Modification history
 
+## 24 September 2026 — Checkpoint99: quantitative traces and Chapter 5
+
+Complete Chapter 5's first/second correctness and writing pass, including its trace section. Prove a linear inverse L1 estimate and square-root forward estimate for the bounded-Lipschitz trace metric, with sharp examples on the flat curve. The bounded Rethlas check passes under stated classical/internal inputs. Preserve all nine prior formal statements and 184 earlier reports. Clarify coordinate convolution, gluing parameters and the local L1 volume; use exact published BK07 locators. No new arXiv premise, mass hypothesis, Popovici use or novelty claim. Update blueprint/status, queue, reading guide, research directions and package. The book has 776 pages.
+
+The final build has no errors, unresolved references/citations, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. All 21 selected final pages were inspected. The two-input house audit has zero errors and two unchanged warnings. Preserve the other 188 active author inputs, original/hidden sources, bibliography/styles, checkpoint98 PDF/archive and companion. Exact checks are in `research/editorial/quantitative-trace-compactness-review-99.md` and `research/audits/build-snapshot-99.json`; fresh reconstruction must separately pass in `research/audits/source-package-portability-99.json` before release checks are complete. Next full-chapter target: Chapter 6. The broad book goal remains incomplete. No additional announcement scan is claimed; existing coverage gaps remain.
+
 ## 24 September 2026 — Checkpoint98: Gauduchon persistence and bounded adjoints
 
 Complete the full Chapter 4 source pass, including its linear-duality input. Correct the omitted Gauduchon surface exception and the constant-multiplier wording. Add the exact equivalence with smooth mass invariance, an explicit three-torus counterexample and a bounded adjoint extension continuous for uniformly bounded capacity convergence. Preserve the primitive obstruction and general weak-adjoint questions. The bounded Rethlas run passes under its six accepted inputs; its complete report was read and all prior records are unchanged.

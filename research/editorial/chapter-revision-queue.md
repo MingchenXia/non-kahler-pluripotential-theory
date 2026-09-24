@@ -10,7 +10,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 2 | `chapter_mass.tex` | Complete first/second source pass and final layout check; see degenerate-growing-kernels-review-96.md |
 | 3 | `chapter_energy.tex` | Complete first/second source pass and final layout check; see compact-growing-jets-energy-review-97.md |
 | 4 | `chapter_gauduchon.tex` | Complete first/second pass including nested linear-duality input and final layout; see gauduchon-persistence-review-98.md |
-| 5 | `chapter_compactness.tex` | Pending |
+| 5 | `chapter_compactness.tex` | Complete first/second pass including trace input and final layout; see quantitative-trace-compactness-review-99.md |
 | 6 | `chapter_products.tex` | Pending |
 | 7 | `chapter_damped_measures.tex` | Pending |
 | 8 | `chapter_hopf.tex` | Pending |
@@ -40,4 +40,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 32 | `chapter_bounded_mass_equations.tex` | Pending |
 | 33 | `chapter_research_program.tex` | Pending |
 
-The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 5, including its inputs. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
+The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 6, including its inputs. Research-linked spot checks of Chapter 27 do not count as a complete revision of that chapter.
