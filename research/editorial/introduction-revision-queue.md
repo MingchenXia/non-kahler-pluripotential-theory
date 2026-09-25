@@ -8,9 +8,9 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 |---|---|---:|---|
 | 1 | `chapter_framework.tex` | 4 | Complete direct first/second editorial reads and all changed-page inspection; release checks recorded in checkpoint110. |
 | 2 | `chapter_mass.tex` | 5 | Complete direct first/second editorial reads and all changed-page inspection; release checks recorded in checkpoint110. |
-| 3 | `chapter_energy.tex` | 4 | Pending complete introduction/notation pass. |
-| 4 | `chapter_gauduchon.tex` | 6 | Pending complete introduction/notation pass. |
-| 5 | `chapter_compactness.tex` | 5 | Pending complete introduction/notation pass. |
+| 3 | `chapter_energy.tex` | 3 | Complete direct first/second editorial reads and all affected-page inspection; release checks recorded in checkpoint111. |
+| 4 | `chapter_gauduchon.tex` | 6 | Complete direct first/second editorial reads and all affected-page inspection; release checks recorded in checkpoint111. |
+| 5 | `chapter_compactness.tex` | 5 | Complete direct first/second editorial reads and all affected-page inspection; release checks recorded in checkpoint111. |
 | 6 | `chapter_products.tex` | 8 | Pending complete introduction/notation pass. |
 | 7 | `chapter_damped_measures.tex` | 7 | Pending complete introduction/notation pass. |
 | 8 | `chapter_hopf.tex` | 7 | Pending complete introduction/notation pass. |
@@ -41,4 +41,6 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 33 | `chapter_research_program.tex` | 22 | Pending complete introduction/notation pass. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Repeated operator convention removed; full introduction/notation pass pending. |
 
-Front conventions have been shortened. Targeted removal of repeated operator conventions in Chapters 8, 13, 16, 27, 28 and the appendix does not count as a complete introduction pass for those chapters. Continue with Chapter 3 and all of its sections. Q2.8 remains the next supplied manuscript, after the immediate editorial priority.
+Front conventions have been shortened. Targeted removal of repeated operator conventions in Chapters 8, 13, 16, 27, 28 and the appendix does not count as a complete introduction pass for those chapters. Checkpoint111 covers Chapters 3–5, including both nested inputs. Former Section 3.4 was a repeated roadmap; its useful cross-chapter connection is incorporated in Section 3.3, leaving three mathematical sections. Continue with Chapter 6 and all of its sections. Q2.8 remains the next supplied manuscript, after the immediate editorial priority.
+
+The later structural instruction now takes priority: centralize general psh tools in Chapter 1 and move paper citations to a final historical chapter. The remaining introduction pass resumes after those moves; its next original chapter is 6.

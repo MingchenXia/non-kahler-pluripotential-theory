@@ -96,3 +96,10 @@ The user requires a new systematic rewrite of every chapter and section introduc
 This editorial pass is the immediate priority and runs across the whole active book, including nested sections and the appendix. Track it separately in research/editorial/introduction-revision-queue.md; previously completed proof passes do not count as completed introduction rewrites. Continue the remaining supplied-paper review and research program without displacing this request.
 
 The user's further correction explicitly supersedes the earlier requirement to restate every setting and notation in each section. Define notation once at its natural first use and carry it through the chapter. Do not repeat definitions at section boundaries, as formerly done in Section 2.4. Introduce only genuinely new objects or changed assumptions; use a brief cross-reference across distant chapters when needed. Apply this throughout the active book.
+
+
+## User steering, 25 September 2026: foundations and historical notes
+
+General results about plurisubharmonic functions belong together in the first chapter, rather than being scattered through the book. Reorganize the elementary calculus, normalized compactness, regularization, exponential integrability and general envelope tools accordingly, and audit the rest of the book for further general psh material. Preserve the actual hypotheses and proofs, replacing later copies by internal references. Specialized Monge–Ampère, singularity, geometric and equation arguments keep their natural chapters.
+
+Move citations of papers, including their exact checked locators and provenance, to a final chapter of historical notes. Book citations may remain in the mathematical body. Classify sources by their actual nature, not merely their BibTeX entry type: SGPT and Demailly's two book manuscripts are books. Preserve attribution and dependency information in the historical chapter, linked to the relevant mathematical results; do not merely erase citation commands or leave broken sentences. The single bibliography remains. This structural work now precedes the remaining introduction-only pass.

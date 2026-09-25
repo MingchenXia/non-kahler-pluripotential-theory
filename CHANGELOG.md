@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint111: energy, Gauduchon tests and regularization
+
+Rewrite all chapter/section openings of Chapters 3–5 and their two nested inputs. Remove repeated setting and notation declarations, replace generic headings, and absorb the roadmap-only former Section 3.4 into the end of the radial-energy section. Preserve the general closed background in Section 3.2, local nonemptiness for trace coordinates, compact-duality domain, bounded-adjoint persistence hypothesis and regularization estimates. Fix the probability volume once for Chapter 5. Continue the whole-book editorial queue at Chapter 6; Q2.8 and the other research/writing obligations remain active.
+
+Both complete direct reads pass; thirty formal blocks and all thirty proof environments are unchanged. Three formal blocks have wording-only deletions. The 800-page build has no errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The five-file house audit retains zero errors/seven inherited warnings. The companion and all 190 historical reports are unchanged. All 34 affected pages passed visual inspection. Both outputs rebuilt from a fresh empty extraction and every page text matches production. The later user instruction to centralize general psh results in Chapter 1 and collect paper citations in a final historical chapter is recorded in PLAN.md as the immediate structural priority.
+
 ## 25 September 2026 — Checkpoint110: introductions, notation and headings
 
 Apply the user's corrections to Chapters 1–2 and the front conventions. Remove redundant quasi-psh qualifications, the misleading global nonemptiness sentence, repeated section setup and definitions, and repeated d-c/ddc conventions. Retain actual source-normalization conversions. Rewrite the first two chapters' introductions around their mathematical arguments and replace conversational headings, including Section 2.5 with “Uniform mass bounds”. Remove default “without boundary” qualifications in active sources. The new whole-book editorial queue starts next at Chapter 3 and explicitly supersedes the old repeated-local-setting rule.

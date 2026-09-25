@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint111 — Chapters 3–5 editorial pass
+
+The immediate editorial priority has advanced through Chapters 3–5, including both nested inputs. All introductions have been rewritten around the actual argument, repeated settings and definitions removed, and headings made mathematical. Former Section 3.4 contained only a repeated roadmap; its useful links are retained in Section 3.3. The first five chapters now complete this bounded editorial scope. The user subsequently required general psh results to be centralized in Chapter 1 and paper citations moved to a final historical chapter. This structural work is now the immediate priority; the Chapter 6 introduction draft is prepared locally but not yet applied. The separate mathematical proof cycle remains at Section 12.3, and Q2.8 integration remains pending.
+
+The book remains **800 pages**, with 33 active chapters, an appendix and 193 active author inputs. Snapshot `output/snapshots/checkpoint-111.pdf` has SHA256 `14e22728fd44e1a128ae0d689ca85839ce0c107dcc7ec619ab67a1e9ee9eef37` and 3606852 bytes. Thirty of 33 formal blocks are unchanged, and three receive wording-only deletions. All 30 proof environments are byte-identical. Both full direct mathematical/editorial reads are complete. The house audit retains zero errors/seven inherited warnings; compilation has no errors, unresolved references/citations, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. The 17-page companion is unchanged. All 34 affected pages passed visual inspection. Both outputs rebuilt from a fresh empty extraction and every page text matches production; see source-package-portability-111.json.
+
+Checkpoint110 was privately synchronized successfully at 4089fcac3ae79cfaeef5dce84db82a5e4ee9aaa6, backing up both checkpoints109 and110. All 190 historical verifier reports are preserved; no new verifier, source theorem or announcement coverage is claimed. The full book goal remains active and incomplete.
+
 ## Checkpoint110 — editorial priority
 
 The user's latest corrections make the whole-book introduction, repeated-definition and heading pass the immediate priority. The earlier rule to restate each section's setting is superseded: carry established notation through a chapter and introduce only new objects or changed assumptions. The dedicated queue is `research/editorial/introduction-revision-queue.md`; previous proof reviews do not count as completed introduction rewrites.

@@ -2,7 +2,7 @@
 
 Checkpoint94's complete local-notation pass remains the baseline. This queue records a new correctness/readability pass, not a claim that the other chapters are unreviewed historically. An entry is complete only for its stated scope; include nested author inputs when claiming a whole chapter.
 
-For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 3; this proof-review queue remains at Section 12.3.
+For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 6 after the checkpoint111 editorial pass; this proof-review queue remains at Section 12.3.
 
 | Chapter | Source | This cycle |
 |---|---|---|

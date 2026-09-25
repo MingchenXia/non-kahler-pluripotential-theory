@@ -1,17 +1,15 @@
 \chapter{Monge--Amp\`ere energy and torsion}
 \label{chap:energy}
 
-In the K\"ahler setting, the Monge--Amp\`ere operator is the differential of a scalar energy. This relation is essential in variational arguments and in the geometry of the space of potentials. The symmetry of the linearization tests whether the same differential can have a primitive for a Hermitian background. We shall establish the obstruction and then compute the torsion terms in the functional obtained by integrating along radial paths.
+The variation of Monge--Amp\`ere mass in the preceding chapter raises a related question: when is the Monge--Amp\`ere operator itself the differential of an energy? For a Hermitian background, such an energy exists precisely when the background is closed. Symmetry of second derivatives detects the obstruction. Integration along radial paths still defines a functional in the nonclosed case, but its derivative contains explicit torsion terms. Computing these terms identifies the equation that this functional can represent variationally.
 
-\section{The symmetry test}
+\section{Primitives of the Monge--Amp\`ere one-form}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. For a smooth real function $u$ on $X$, set $\omega_u=\omega+\ddc u$ and $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$.
-
-We work on the open convex set $\HH_\omega$ of smooth strictly positive potentials. A tangent direction is a smooth real function. Define the one-form
+Fix a Hermitian form $\omega$. On $\HH_\omega$ consider the one-form
 \[
  \alpha_u(v)=\int_Xv\,\omega_u^n.
 \]
-A primitive of $\alpha$ means a functional $E$ whose derivative in every smooth direction is $DE_u(v)=\alpha_u(v)$. In discussing second derivatives it suffices to require that the restriction of $E$ to every finite-dimensional affine plane be twice continuously differentiable.
+Here $v$ is a smooth real tangent direction. A primitive of $\alpha$ is a functional $E$ with $DE_u(v)=\alpha_u(v)$. Its second derivatives must be symmetric, which imposes a condition on the form $\omega_u^{n-1}$. It suffices to require that the restriction of $E$ to every finite-dimensional affine plane be twice continuously differentiable.
 
 \begin{proposition}\label{prop:energy-symmetry}
 If $\alpha$ has a primitive near $u\in\HH_\omega$, then for every smooth $v,w$,
@@ -89,12 +87,11 @@ In dimension one every real $(1,1)$-form is closed, so the primitive exists by \
 There are constructions of torsion-corrected energy functionals in the Hermitian literature, including work of Yi Li \cite[Equation~(1.18) and Theorem~1.2]{YiLi10}. Such constructions do not contradict this obstruction: a correction changes the one-form being integrated. To use a corrected energy in a variational problem, one must compute its derivative and verify that its critical-point equation is the desired equation.
 
 \Needspace{17\baselineskip}
-\section{The closed-background calculation}
+\section{Energy for a closed background}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ be a smooth closed real $(1,1)$-form on $X$. For smooth real functions $u,v$ on $X$, write $\omega_u=\omega+\ddc u$ and $DE_{\omega,u}(v)=\left.\frac{\mathrm d}{\mathrm dt}\right|_{t=0}E_\omega(u+tv)$ for the directional derivative of the functional defined below.
+Assume in this section that $\omega$ is a smooth closed real $(1,1)$-form; positivity is unnecessary for the calculation. Closedness allows integration by parts in each mixed term of the energy and makes their derivatives telescope. For smooth real $u$, define
 
 \Needspace{7\baselineskip}
-The calculation applies to every smooth real $u$, whether or not $\omega_u$ is positive. Define
 \begin{equation}\label{eq:closed-energy}
  E_\omega(u)=\frac1{n+1}\sum_{j=0}^n
  \int_Xu\,\omega_u^j\wedge\omega^{n-j}.
@@ -117,18 +114,16 @@ with the second summand absent for $j=0$. For $j\geq1$, the form $\omega_u^{j-1}
 Together with the $j=0$ term $\int_Xv\omega^n$, these terms telescope to $(n+1)\int_Xv\omega_u^n$. Division by $n+1$ completes the proof.
 \end{proof}
 
-Closedness is the hypothesis used in the integration by parts. If $\omega$ is also Hermitian, restricting $E_\omega$ to $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$ gives the primitive used in \cref{thm:raw-primitive}.
+If $\omega$ is also Hermitian, the restriction of $E_\omega$ to $\HH_\omega$ is the primitive required in \cref{thm:raw-primitive}.
 
-\section{Integrating along radial paths}
+\section{Radial energy and torsion}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$. Put $\omega_u=\omega+\ddc u$ and $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$. The one-form considered here is $\alpha_u(v)=\int_Xv\,\omega_u^n$ for smooth real tangent directions $v$.
-
-Even when a one-form has no primitive, it can be integrated along a chosen family of paths. Since $\HH_\omega$ is convex and contains $0$, define
+Return to an arbitrary Hermitian form $\omega$. For $u\in\HH_\omega$, integrating $\alpha$ along the segment from $0$ to $u$ defines a functional
 \[
  F_\omega(u)=\int_0^1\alpha_{tu}(u)\,\mathrm{d}t
  =\int_0^1\int_Xu(\omega+t\ddc u)^n\,\mathrm{d}t.
 \]
-This is a well-defined polynomial functional of a smooth potential. Its existence does not imply $DF_\omega=\alpha$.
+The difference between its derivative and $\alpha$ is an integration-by-parts defect. The following formula expresses it through derivatives of the mixed powers of $\omega$.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:radial-torsion-defect}
@@ -189,13 +184,4 @@ The formula for $F_\omega$ follows by expanding the square and integrating $1,t,
 Here $\Omega_t=\omega+t\ddc u$. Since both $\mathrm{d}$ and $\dc$ annihilate $\ddc u$, the derivatives of $\Omega_t$ in \eqref{eq:radial-torsion-defect} are those of $\omega$, independent of $t$. The factor $2\int_0^1t\,\mathrm{d}t=1$ gives \eqref{eq:radial-defect}.
 \end{proof}
 
-\Needspace{6\baselineskip}
-For a fixed smooth real $(2,2)$-form $\mu$ on a surface, a critical point of $F_\omega(u)-\int_Xu\,\mu$ therefore satisfies $\omega_u^2+u\ddc\omega+\mathrm{d}u\wedge\dc\omega-\dc u\wedge\mathrm{d}\omega=\mu$. The extra terms are part of its Euler equation. Any proposed alternative energy must likewise be checked through its actual first variation.
-
-\section{Consequences for a theory of singularities}
-
-The source book defines a distance on singularity types using the geometry of geodesic rays. A Hermitian construction must distinguish several tasks: defining a suitable class of subgeodesics, constructing envelopes, establishing an energy with a specified derivative, and proving metric identities. A formal positivity condition on a product does not accomplish all four tasks.
-
-The calculations above give two tests for any proposed extension. First, restricting to smooth potentials must reproduce the torsion terms. Second, a claimed primitive of the raw operator must satisfy \eqref{eq:energy-symmetry}. These tests are useful before passing to unbounded potentials, where approximation can hide the same obstruction.
-
-The chapters on interpolation and test curves develop the order and envelope constructions. The energy and metric identities require further arguments; their precise status is recorded there.
+For a fixed smooth real $(2,2)$-form $\mu$ on a surface, a critical point of $F_\omega(u)-\int_Xu\,\mu$ therefore satisfies $\omega_u^2+u\ddc\omega+\mathrm{d}u\wedge\dc\omega-\dc u\wedge\mathrm{d}\omega=\mu$. The torsion terms change its Euler equation. Their role in comparing Perron interpolation with metric geodesics is taken up in \cref{chap:hermitian-rays}; the envelope correspondence for test curves follows in \cref{chap:hermitian-testcurves}.

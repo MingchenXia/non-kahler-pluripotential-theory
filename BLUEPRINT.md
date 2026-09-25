@@ -167,3 +167,15 @@ Section 12.2 and its bounded-contact input complete the current direct first/sec
 ## Introduction rewrite requested on 25 September 2026
 
 The user rejects repeated default conventions and introductions that inventory content without explaining its mathematical purpose. A dedicated whole-book pass now takes priority: chapter openings should identify the problem and the mechanism, and section openings should make the next argument necessary. Notation is introduced once at its first use and carried through a chapter; only new objects and changed assumptions require a new declaration. Global operator conventions are stated once in the front matter. The first bounded revision covers the conventions and all chapter/section openings of Chapters 1–2; the remaining chapters and nested sections are tracked separately in research/editorial/introduction-revision-queue.md. The continuing mathematical program and Q2.8 integration remain active.
+
+
+## Introduction and notation revision, checkpoint111
+
+The new editorial pass now covers Chapters 3–5 and their two nested inputs. Chapter 3 presents the closedness obstruction through symmetry and radial variation; its former Section 3.4 contained only repeated cautions and a roadmap, so its useful references are incorporated into Section 3.3. No mathematical result or proof is removed. Chapter 4 introduces each Gauduchon construction through its use in linear mass, positivity or the adjoint equation. Chapter 5 follows normalized compactness, trace topology, coordinate comparison, gluing and exact Hermitian rescaling. Established settings and definitions are carried forward, and the probability volume is fixed once for Chapter 5. The general closed background in Section 3.2 and the local nonemptiness assumption for the trace homeomorphism remain explicit.
+
+Continue this priority with Chapter 6. The independent proof-review queue remains at Section 12.3, and the Q2.8 supplied manuscript still requires its dedicated dependency and second proof pass. This is an editorial continuation, not a new mathematical theorem or independent verification. Checkpoint110 synchronization succeeded and privately backed up both checkpoints109 and110. The full book goal remains active.
+
+
+## Foundation and citation reorganization — latest instruction
+
+General psh results are to be collected in the first chapter. Start by moving the general compactness/regularization tools from Chapter 5 and maximum/exponential tools from Chapter 6, then audit envelope and other general psh inputs. Paper citations will move to a final historical chapter, with original locators and attribution retained and linked to the body. Book citations remain allowed in the body. The initial active-source inventory finds 264 keyed citations across 108 inputs, to 69 distinct works; source-type classification must distinguish actual book manuscripts from research papers. The main proof/writing goal and Q2.8 remain incomplete.
