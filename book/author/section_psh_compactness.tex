@@ -1,0 +1,36 @@
+\section{Normalized compactness}
+
+Fix a smooth positive probability volume $\mathrm{d}V$ for $L^1$ norms. The local compactness theorem for plurisubharmonic functions, recalled in \cite{SGPT}, gives an $L^1_{\loc}$-convergent subsequence or local uniform convergence to $-\infty$ for a locally uniformly upper-bounded sequence on a connected domain. A point at which the global maximum is attained excludes the second alternative, and connectedness propagates the first across $X$.
+
+\begin{theorem}\label{thm:normalized-compactness}
+For any smooth real $(1,1)$-form $\theta$, the family
+\[
+ \mathcal K_\theta=\{u\in\PSH(X,\theta):\sup_Xu=0\}
+\]
+is compact in $L^1(X,\mathrm{d}V)$. In particular, there is a constant $C_\theta$ such that
+\[
+ \int_X|u|\,\mathrm{d}V\leq C_\theta\quad(u\in\mathcal K_\theta).
+\]
+\end{theorem}
+\begin{proof}
+Let $(u_j)$ be a sequence in this family and choose $x_j$ with $u_j(x_j)=0$. Passing to a subsequence, suppose $x_j\to x$. Cover $X$ by finitely many connected coordinate balls, and on a slightly larger ball choose a fixed smooth correction $r_i$ for which $u_j+r_i$ is plurisubharmonic. Such corrections exist because $\theta$ is smooth. These local functions are uniformly bounded above, since $u_j\leq0$.
+
+On a ball containing $x$ in its interior, the alternative of locally uniform convergence to $-\infty$ is impossible: the values at $x_j$ stay bounded below. Local compactness therefore gives an $L^1$-convergent subsequence on this ball. If a second ball overlaps it, local compactness on the second ball cannot yield convergence to $-\infty$ on compact subsets of the overlap, since the first limit is finite almost everywhere there. Thus a further subsequence converges in $L^1$ on the second ball. The intersection graph of a finite connected open cover of connected $X$ is connected. Repeating along that graph and taking finitely many subsequences gives local $L^1$ convergence everywhere. A partition of unity then gives convergence in $L^1(X)$ to a function $u$.
+
+The inequalities $\ddc u_j\geq-\theta$ pass to distributions. The local canonical representatives of $u+r_i$ are plurisubharmonic and agree on overlaps after subtracting their corrections. They define a global $\theta$-plurisubharmonic representative, still denoted by $u$. Since $u_j\leq0$, it satisfies $u\leq0$.
+
+We check that the supremum has not decreased. For a fixed small radius around $x_j$ inside the first coordinate ball, apply the submean inequality to $u_j+r_i$. Local $L^1$ convergence allows passage to the limit in the ball averages, also as their centers approach $x$: the averages of the differences tend to zero by $L^1$ convergence, and translating the indicator of a fixed ball is continuous for the integral of a fixed $L^1$ function. Letting the radius tend to zero gives
+\[
+ 0+r_i(x)=\lim_j(u_j+r_i)(x_j)\leq(u+r_i)(x).
+\]
+Thus $u(x)=0$, and the limit belongs to $\mathcal K_\theta$. This proves sequential compactness, which is compactness in the metric space $L^1(X)$.
+
+If the displayed norm bound failed, choose a sequence whose $L^1$ norms tend to infinity. Its convergent subsequence would have bounded norms, a contradiction.
+\end{proof}
+
+\begin{corollary}\label{cor:decreasing-limit}
+A decreasing sequence in $\PSH(X,\theta)$ with uniformly bounded $L^1$ norms has a genuine $\theta$-plurisubharmonic limit and converges to it in $L^1$.
+\end{corollary}
+\begin{proof}
+Local decreasing-limit theory gives a quasi-plurisubharmonic limit or the function $-\infty$ on each connected coordinate neighborhood. The $L^1$ bound excludes the latter alternative, by Fatou's lemma applied to the negative parts. The local representatives glue. Finally, the sequence is bounded above by its first member; subtracting the sequence from that member and applying monotone convergence proves $L^1$ convergence.
+\end{proof}

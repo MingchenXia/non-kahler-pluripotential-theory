@@ -10,15 +10,15 @@ Use standard theorem environments, upright differential d and the standard multi
 
 ## Structure
 
-The book has 33 active chapters and an appendix. Chapters 1–29 form the main sequence. Part XII separates the substantial mass-dependent theory into three chapters:
+The book has 33 active chapters and an appendix. Chapter 1 collects general psh foundations: compactness, regularization, integrability, local capacity tools, multiplier ideals, divisorial estimates, general envelopes and descent. Later chapters use internal references to these results. Chapters 1–28 form the main mathematical sequence. Part XII separates the substantial mass-dependent theory:
 
-- Chapter 30, *Volumes under bounded mass*: finite singularity volumes, comparison, relative full mass and the conditional ideal-envelope volume characterization. Positive lower reference volume is imposed at the particular reverse implications that need it.
-- Chapter 31, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references. Positive lower mass is a standing assumption; bounded mass is not.
-- Chapter 32, *Big backgrounds under bounded mass*: arbitrary smooth big backgrounds, bounded mass and a model reference of positive lower volume. The last section compares the equation regimes, each under its own explicit assumptions.
+- Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, relative full mass and the conditional ideal-envelope volume characterization.
+- Chapter 30, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references, without a blanket bounded mass assumption.
+- Chapter 31, *Big backgrounds under bounded mass*: arbitrary smooth big backgrounds, bounded mass and a model reference of positive lower volume.
 
-General extended-volume definitions, relative-envelope lemmas and measure representations remain in Chapters 12–13. Individual-density equations and mass-property characterizations remain in the main sequence, together with failure examples. A condition on a single density or model reference must not be confused with a uniform metric mass property. Geometric hypotheses that imply a mass property are stated where used.
+Chapter 32 collects research questions; Chapter 33 records history and paper sources. Citations of books may remain in the mathematical body, while all non-book citations and exact locators belong to the final historical chapter. This is an attribution policy, not permission to remove proof dependencies or weaken hypotheses. The build checks citation placement. The relocation and second-pass scope are recorded in `research/editorial/psh-foundations-history-review-112.md` and the two accompanying maps.
 
-The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded at the user's request. Its three source files and review history are preserved. Active references promising its proof have been removed. The ordinary Bott–Chern loci and LCK chapters remain, now Chapters 28–29. Chapter 33 collects research questions. Historical audits retain their original numbering; `research/READING-GUIDE.md` gives the current route, and `research/editorial/mass-structure-map.json` records the relocation.
+The former standalone analytic-approximation chapter is absorbed into Chapter 1, with its specialized restriction corollary in Chapter 18. The temporarily excluded *A transcendental Nakamaye theorem* remains hidden, with its three files and prior history preserved. Bott–Chern loci and LCK geometry are Chapters 27–28. Earlier checkpoint narratives below retain their original numbering; `research/READING-GUIDE.md` gives the current route.
 
 ## Current proof boundary
 
@@ -179,3 +179,7 @@ Continue this priority with Chapter 6. The independent proof-review queue remain
 ## Foundation and citation reorganization — latest instruction
 
 General psh results are to be collected in the first chapter. Start by moving the general compactness/regularization tools from Chapter 5 and maximum/exponential tools from Chapter 6, then audit envelope and other general psh inputs. Paper citations will move to a final historical chapter, with original locators and attribution retained and linked to the body. Book citations remain allowed in the body. The initial active-source inventory finds 264 keyed citations across 108 inputs, to 69 distinct works; source-type classification must distinguish actual book manuscripts from research papers. The main proof/writing goal and Q2.8 remain incomplete.
+
+## Foundations and historical notes, checkpoint112
+
+Centralize the general psh results in the first chapter and move all paper citations to the final historical chapter, preserving exact locators and their mathematical links. The lower-curvature and regularization hypotheses are unchanged. Rewrite the uniform Lelong estimate using local cutoff mass bounds so the first chapter does not depend on later Gauduchon theory. Complete the Chapter 6 editorial pass; continue with Chapter 7. The bounded-domination section (now 12.2), Q2.8 review and the research program remain pending. This structural release does not constitute whole-book proof certification.

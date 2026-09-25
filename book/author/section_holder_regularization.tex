@@ -3,78 +3,7 @@
 
 We give a regularity consequence with an explicit, nonoptimal exponent. The proof uses the bounded stability theorem and classical Chern-connection regularization. It does not assume a positive lower bound for the density or the bounded mass property. The loss in the exponent comes from an elementary smoothing estimate at the end; sharper exponents require a stronger regularization-to-modulus argument.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive probability measure. Fix $C_0>0$ and $u\in\PSH(X,\omega)$ with $-C_0\leq u\leq0$. Distances, gradients and tensor norms use a fixed smooth Riemannian metric.
-
-\subsection{The classical regularization input}
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive probability measure. Fix $C_0>0$ and $u\in\PSH(X,\omega)$ with $-C_0\leq u\leq0$. Distances, gradients and tensor norms use a fixed smooth Riemannian metric.
-
-Let $R_tu$ be Demailly's Chern-connection regularization. It averages $u$ over the tangent fiber with a fixed smooth nonnegative radial kernel of integral one. The averaging map is a smooth realization of the holomorphic part of the formal fiberwise expansion of the exponential map; it need not be genuinely holomorphic in the fiber. We use the following classical estimate from \cite[Theorem 4.1 and Remark 4.7]{Dem94}; the precise truncated transform in this form is recorded in \cite[Lemma 4.1]{KN19}. Constants absorb the fixed normalization of $\ddc$.
-
-\Needspace{23\baselineskip}
-\begin{lemma}\label{lem:chern-kiselman-input}
-There are constants $A,K>0$ and $t_*>0$, depending only on the fixed geometry and bound for $u$, such that $R_tu$ is smooth for $0<t<t_*$,
-\[
- -C_0\leq R_tu\leq0,\qquad
- R_tu+Kt^2\downarrow u\quad\text{as }t\downarrow0.
-\]
-For $0<\delta<t_*$ and $c>0$, the bounded function
-\[
- \Phi_{c,\delta}
-   =\inf_{0<t\leq\delta}
-       \left\{R_tu+K(t^2-\delta^2)+K(t-\delta)
-                         -c\log(t/\delta)\right\}
-\]
-is quasi-plurisubharmonic and satisfies
-\[
- \omega+\ddc\Phi_{c,\delta}\geq-(Ac+2K\delta)\omega.
-\]
-The infimum is attained at some $t>0$ at every point.
-\end{lemma}
-
-Only this classical curvature estimate is retained as an input. Its linear term $K(t-\delta)$ matters in the Hermitian case: it absorbs the mixed base--fiber terms in the complex Hessian of the regularization. The function $-c\log(t/\delta)$ tends to $+\infty$ as $t\downarrow0$, while $u$ is bounded, which explains attainment away from zero. We require neither smoothness of the minimizing radius nor smoothness of the transform across the region where that radius equals $\delta$.
-
-We record two elementary estimates for the averaging operators so that their use does not require a K\"ahler volume identity.
-
-\begin{lemma}\label{lem:chern-smoothing-integral}
-For all sufficiently small $t>0$,
-\[
- \|R_tu-u\|_{L^1(\mathrm{d}V)}\leq Ct^2,
- \qquad \|\nabla R_tu\|_\infty\leq C/t.
-\]
-The constants are uniform for $-C_0\leq u\leq0$.
-\end{lemma}
-\begin{proof}
-Let $z$ be local base coordinates and $\xi\in\mathbb C^n$ the fiber variable in a smooth orthonormal tangent frame. Write $\rho(|\xi|^2)$ for the fixed radial averaging kernel, normalized against Lebesgue measure $\mathrm{d}\xi$. In these coordinates the averaging map $F$ gives
-\[
- R_tu(z)=\int u(F(z,t\xi))\rho(|\xi|^2)\,\mathrm{d}\xi,
- \qquad F(z,0)=z,
-\]
-where the kernel is supported in $|\xi|\leq1$. The map $F$ is smooth in these variables and its fiber differential at zero is an isomorphism. We first claim that the adjoint with respect to $\mathrm{d}V$ satisfies
-\[
- R_t^*1=1+O(t^2)
-\]
-uniformly. To see this, insert a smooth partition of unity in the $z$ variable with each term compactly supported in a frame chart. For fixed $\xi$, change variables $x=F(z,t\xi)$ on a neighborhood of that support. The inverse map and its Jacobian have uniform Taylor expansions in $t$. The term of order zero in the transformed density is the chosen partition function at $x$. Its term of order one is linear in $\xi$. Integrating that term against the even radial kernel gives zero. The remaining density is bounded by $Ct^2\mathrm{d}V(x)$, since the second derivatives of all maps, partition functions and volume coefficients are bounded on these finitely many compact charts. Summing the partition functions proves the claim.
-
-Consequently
-\[
- \left|\int_X(R_tu-u)\,\mathrm{d}V\right|
-  =\left|\int_Xu(R_t^*1-1)\,\mathrm{d}V\right|\leq Ct^2.
-\]
-The preceding lemma gives $R_tu-u\geq-Kt^2$. For a real function $a\geq-Kt^2$ one has $|a|\leq a+2Kt^2$. Apply this inequality and integrate to obtain the first estimate.
-
-For the derivative bound, change variables in the fiber to express $R_tu(z)=\int_Xu(x)k_t(z,x)\,\mathrm{d}V(x)$. In local coordinates the smooth kernel is supported where $|x-z|\leq Ct$ and satisfies
-\[
- |\nabla_z k_t(z,x)|\leq Ct^{-2n-1}.
-\]
-Indeed, the inverse fiber map and its Jacobian have uniformly bounded derivatives; differentiating the scaled radial argument introduces at most one factor $t^{-1}$ in addition to $t^{-2n}$. Smooth compact support of the kernel causes no boundary term. Integration over a ball of volume at most $Ct^{2n}$ gives $\int|\nabla_zk_t|\,\mathrm{d}V\leq C/t$. Multiplication by the uniform bound for $u$ proves the assertion.
-\end{proof}
-
-The first estimate uses cancellation of the odd first-order term of an averaging kernel. It does not use conservation of Hermitian Monge--Amp\`ere mass.
-
-\subsection{The modulus of continuity}
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive probability measure. Write $\mathrm{MA}_\omega(u)=(\omega+\ddc u)^n$ for bounded $\omega$-plurisubharmonic $u$, and $s_+=\max(s,0)$ for a real number $s$. For a potential normalized by $-C_0\leq u\leq0$, use the averaging operators $R_t$, transforms $\Phi_{c,\delta}$ and constants $A,K,t_*$ of \cref{lem:chern-kiselman-input}; their estimates are uniform for a fixed $C_0$. Distances and gradients refer to the fixed smooth metric used in that construction.
+For the bounded potential $u$ below, use the operators $R_t$, transforms $\Phi_{c,\delta}$ and constants of \cref{lem:chern-kiselman-input,lem:chern-smoothing-integral}. Norms use the fixed smooth probability volume $\mathrm{d}V$; put $s_+=\max(s,0)$ for a real number $s$.
 
 \begin{theorem}\label{thm:hermitian-holder-elementary}
 Let $p>1$ and let $u\in\PSH(X,\omega)\cap L^\infty(X)$ solve

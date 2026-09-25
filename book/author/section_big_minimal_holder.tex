@@ -3,152 +3,16 @@
 
 Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$. Choose $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, with $\rho\leq0$ and $\theta+\ddc\rho\geq\omega$. Set $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mu_u=\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, the extended measure of \cref{chap:products}. On coordinate balls the same notation denotes the local bounded product when $u$ is bounded. The order $u\preceq v$ means $u\leq v+C$ for some constant $C$, and $u\simeq v$ means both inequalities. Let $P_\theta$ be the obstacle envelope of \cref{sec:obstacle-envelopes} and set $V_\theta=P_\theta(0)$. All unqualified function norms use $\mathrm{d}V$. The operators $R_t$ are the Chern-connection averages of \cref{lem:chern-kiselman-input}; gradients and distances use a fixed smooth metric, and $s_+=\max(s,0)$.
 
-We now reconstruct the local H\"older conclusion of
-\cite[Theorem~A and Theorem~3.1]{Dang26}. Two points require attention when passing from
+We now prove local H\"older continuity above a strict singular barrier. Two points require attention when passing from
 \cref{sec:holder-from-stability}: the solution can be unbounded on $X$,
 and the smooth lower bound for its Hessian need not be closed. We retain
 Demailly's classical local regularization expansion and explain the
 quantitative estimate used here.
 
-\begin{lemma}\label{lem:smooth-background-regularization-rate}
-Let $a$ be quasi-plurisubharmonic on $X$, with $\sup_Xa=0$ and
-$\theta+\ddc a\geq0$, and suppose that $a$ is locally bounded on $\Omega$.
-There are constants $A,K,C>0$ such that the averaging operators $R_t$
-from \cref{lem:chern-kiselman-input} satisfy
-\[
- R_ta+Kt^2\downarrow a,\qquad
- \|R_ta-a\|_{L^1(\mathrm{d}V)}\leq Ct^2.
-\]
-For small $\delta>0$ and $c>0$, the transform on $\Omega$
-\[
- \Phi_{c,\delta}
- =\inf_{0<t\leq\delta}
- \{R_ta+K(t^2-\delta^2)+K(t-\delta)-c\log(t/\delta)\}
-\]
-extends canonically to $X$ and satisfies
-\begin{equation}\label{eq:smooth-background-transform-rate}
- a-K(\delta^2+\delta)\leq\Phi_{c,\delta}\leq R_\delta a\leq0,
- \qquad \theta+\ddc\Phi_{c,\delta}\geq-(Ac+C\delta)\omega.
-\end{equation}
-At each point of $\Omega$ the infimum is attained at a positive radius.
-On every compact $K_1\Subset\Omega$, for sufficiently small $t$,
-$\|\nabla R_ta\|_{K_1}\leq C_{K_1}/t$.
-\end{lemma}
-
-\begin{proof}
-Apply \cite[Theorem~4.1]{Dem94} to the closed current $\ddc a$ and the
-smooth lower bound $-\theta$. It gives monotonicity and logarithmic
-convexity: for a constant $K_0>0$, set
-$\lambda(x,t)=t\partial_t(R_ta(x)+K_0t^2)$. This function is nonnegative and increasing in $t$.
-We first justify a linear error for this smooth lower bound, rather than
-infer a rate from the unspecified modulus in that theorem.
-
-Choose the auxiliary curvature form to be $A\omega$, with $A$ large
-enough that the Chern curvature plus $A\omega\otimes\operatorname{Id}$
-is nonnegative on every decomposable tensor. Equivalently, after
-absorbing the normalization constants, writing $R_{j\bar k\ell\bar m}$ for the Chern curvature coefficients and $\xi,\zeta$ for tangent vectors in a unitary frame, the coefficients satisfy
-\[
- \sum R_{j\bar k\ell\bar m}\xi_j\bar\xi_k\zeta_\ell\bar\zeta_m
- \geq-A|\xi|^2|\zeta|^2.
-\]
-This choice is available by compactness. Pairing this inequality with
-the nonnegative eigenvalues of a positive complex Hessian bounds its
-curvature contraction by $-A$ times its trace. Hence the algebraic inequality used in
-\cite[Lemma~4.4]{Dem94} holds with no small $\epsilon$ term and no
-$M_\epsilon$ correction.
-
-Fix $x\in X$ and a complex radius variable $w\ne0$, and put $t=|w|$. Write $\xi\in T_x^{1,0}X$ and $\tau\in\mathbb C$ for a base--radius tangent vector. In a uniformly sized coordinate chart about $x$,
-write $\beta=\ddc|z|^2$ and
-choose a quadratic $q_{x,t}$ with
-\[
- \ddc q_{x,t}=\theta(x)+Bt\beta,
-\]
-where $B$ is fixed and large enough that $a+q_{x,t}$ is plurisubharmonic
-on a ball containing the averaging support and its nearby base points.
-This follows from the smooth variation bound
-$\|\theta(y)-\theta(x)\|\leq C|y-x|$ on that ball of radius $O(t)$.
-For the Hessian calculation at $(x,w)$ the quadratic is held fixed.
-Its coefficients and all needed derivatives are uniformly bounded.
-
-Here are the error estimates in the classical expansion
-\cite[Proposition~3.8, equations (3.11), (4.3), and (4.5)]{Dem94}.
-Normalized quasi-plurisubharmonic compactness bounds $\|a\|_1$.
-On each fixed larger chart, add one fixed strictly plurisubharmonic
-quadratic $Q$ to $a$. If
-$\nu=\ddc(a+Q)\wedge\beta^{n-1}$, the local Lelong mass inequality and
-a fixed larger-ball mass bound give
-$\nu(B_t(x))\leq Ct^{2n-2}$. The coefficients of
-$\partial\bar\partial(a+q_{x,t})$ are controlled in total variation
-by those of $\ddc(a+Q)$ plus a uniformly bounded smooth form. Let $\operatorname{exph}_x$ denote the fiber averaging map used to define $R_t$ at $x$, and let $\zeta\in\mathbb C^n$ be the integration variable in a tangent frame. Scaling
-therefore gives, uniformly in $x$ and $t$,
-
-\[
- \int_{|\zeta|<1}|\partial\bar\partial(a+q_{x,t})|
-       (\operatorname{exph}_x(t\zeta))\,\mathrm{d}\zeta
- \leq Ct^{-2}.
-\]
-The integral is understood as the pullback of coefficient measures for
-nonsmooth $a$. Thus the terms with a coefficient $O(t^3)$ contribute
-$O(t)$; the order-two expansion has an $O(t)$ remainder as well.
-The mixed and vertical contributions have bounds
-$C(|\xi||\tau|+|\tau|^2)$. The curvature term is bounded below by
-$-A\lambda(x,t)|\xi|^2$, using the preceding curvature choice.
-Equation (4.5) identifies its radial mass with $\lambda$ up to $O(t^2)$.
-Subtracting the regularization of $q_{x,t}$ restores $-\theta(x)$;
-its base Hessian differs from $\ddc q_{x,t}$ by $O(t)$, its mixed and
-vertical Hessians are bounded, and its radial logarithmic derivative
-is $O(t^2)$. The extra $Bt\beta$ also costs only $O(t)$.
-Consequently, for a fixed constant $C_1>0$, the full base--fiber Hessian satisfies
-\[
- \ddc_{x,w}R_{|w|}a[\xi,\tau]^2
- \geq-\theta_x[\xi]^2-(A\lambda(x,t)+Ct)|\xi|^2
-       -C_1(|\xi||\tau|+|\tau|^2).
-\]
-All constants are independent of $x,t,c,\delta$ and uniform in the
-normalized family. In particular, setting $\xi=0$ in the same local
-expansion gives a uniform lower bound for the fiber Hessian. Adding a
-fixed multiple of $|w|^2$ gives its subharmonicity, hence the
-logarithmic convexity and monotonicity above with a uniform $K_0$.
-
-Increase $K\geq K_0$ and add $K(t^2+t)$ to the regularization. The
-positive vertical Hessian of $K|w|$ absorbs the mixed term by
-\[
- C_1|\xi||\tau|\leq C't|\xi|^2+\frac{K}{8t}|\tau|^2,
-\]
-and absorbs the remaining bounded vertical error for small $t$.
-The logarithmic derivative of the corrected function is at least
-$\lambda$. The capped Kiselman minimum argument in
-\cref{lem:general-kiselman-modulus} therefore gives the last inequality
-in \eqref{eq:smooth-background-transform-rate}, now with error $C\delta$.
-On compact subsets of $\Omega$, local boundedness of $a$ makes the
-logarithmic penalty diverge uniformly at zero, so that the minimum
-occurs away from zero. The same argument handles minimizers at the
-upper cap without differentiating their radius.
-
-The other bounds in \eqref{eq:smooth-background-transform-rate} follow
-from monotonicity and evaluation at $t=\delta$. In particular the
-transform is bounded above near the analytic complement. The removable
-singularity theorem extends it, preserving the exact smooth lower
-Hessian bound by local freezing and passage to the limit. Its lower
-bound by $a-K(\delta^2+\delta)$ also extends by canonical representatives.
-
-The adjoint computation in \cref{lem:chern-smoothing-integral} gives
-$R_t^*1=1+O(t^2)$. It needs only $a\in L^1$, since
-\[
- \left|\int_X(R_ta-a)\,\mathrm{d}V\right|
- \leq Ct^2\|a\|_1.
-\]
-Together with $R_ta-a\geq-Kt^2$, this proves the stated $L^1$ estimate.
-Finally the smoothing kernel near $K_1$ samples a fixed larger compact
-subset of $\Omega$, where $a$ is bounded. The same kernel derivative
-estimate as in \cref{lem:chern-smoothing-integral} gives $C_{K_1}/t$.
-\end{proof}
-
 The strict potential $\rho$ and the open set $\Omega$ are fixed as in
 \cref{sec:big-minimal-comparison}; the background $\theta$ may be nonclosed.
-The preceding regularization lemma and
-\cref{thm:big-reference-one-sided-stability} prove Dang's local
-H\"older conclusion with an explicit, nonoptimal exponent.
+The regularization estimate in \cref{lem:smooth-background-regularization-rate} and
+\cref{thm:big-reference-one-sided-stability} prove local H\"older continuity with an explicit, nonoptimal exponent.
 
 \begin{theorem}\label{thm:big-minimal-holder}
 Fix $C_0>0$. Let $u\in\PSH(X,\theta)$ satisfy
@@ -218,8 +82,7 @@ the asserted range. Boundedness on the compact neighborhood handles
 pairs farther apart.
 \end{proof}
 
-The formulation with a scalar and an equation only on $\Omega$, used in
-\cite[Theorem~3.1]{Dang26}, follows as well. Suppose
+The formulation with a scalar and an equation only on $\Omega$ follows as well. Suppose
 $\mu_u=cf\,\mathrm{d}V$ on $\Omega$, where $c>0$ and
 $0\leq f\in L^p(X,\mathrm{d}V)$, and retain the same minimal bounds.
 The lower bound $u\geq V_\theta-C_0\geq\rho-C_0$ makes $u$ locally

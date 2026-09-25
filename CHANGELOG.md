@@ -1,5 +1,12 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint112: psh foundations and historical sources
+
+Collect general psh results and complete proofs in Chapter 1, including local capacity inputs, analytic and Chern regularization, multiplier ideals, divisorial estimates, envelopes, the minimum principle, descent and fixed-measure convergence. Remove their later copies and the former analytic-approximation chapter; retain the restricted-approximation corollary with trace data. Rewrite the uniform Lelong bound by local cutoff and normalized compactness to avoid a forward Gauduchon dependency. Keep distinct regularization sequences and all regime-specific hypotheses. Complete the Chapter 6 introduction/notation pass and repair relocation seams throughout the body.
+
+Create final Chapter 33, *Historical notes*. All 191 original non-book citation occurrences retain exact locator matches there; repeated citations are merged into 187 commands. Preserve original paragraphs and provenance in the relocation ledger. Book citations remain in the body. Add a build guard and include it in the portable source archive. The final 810-page book compiles without errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The house audit retains 19 inherited errors/98 warnings with no added findings. All 342 selected book pages and all 17 companion pages passed visual inspection. Both outputs rebuilt from a fresh empty extraction with every page text matching production; exact scope and hashes are recorded in the checkpoint audits. No new independent verifier report, source validation or novelty judgment is claimed. Continue at Chapter 7 in the introduction queue and Section 12.2 in the proof queue; Q2.8 remains pending.
+
+
 ## 25 September 2026 — Checkpoint111: energy, Gauduchon tests and regularization
 
 Rewrite all chapter/section openings of Chapters 3–5 and their two nested inputs. Remove repeated setting and notation declarations, replace generic headings, and absorb the roadmap-only former Section 3.4 into the end of the radial-energy section. Preserve the general closed background in Section 3.2, local nonemptiness for trace coordinates, compact-duality domain, bounded-adjoint persistence hypothesis and regularization estimates. Fix the probability volume once for Chapter 5. Continue the whole-book editorial queue at Chapter 6; Q2.8 and the other research/writing obligations remain active.

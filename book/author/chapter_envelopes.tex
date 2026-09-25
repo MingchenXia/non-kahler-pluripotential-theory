@@ -1,89 +1,7 @@
 \chapter{Envelopes and volumes of singularities}
 \label{chap:envelopes}
 
-The mass of a particular potential and the volume of its singularity type are different objects, even for smooth Hermitian potentials. We first construct the envelope operators, then introduce upper and lower volumes by varying the bounded part of a potential. The relative envelope class is defined without a mass bound. We prove its envelope and positivity properties before exhibiting a member of infinite mass. Its comparison with a volume-defined class is deferred to \cref{chap:mass-bound-volumes}.
-
-\section{Obstacle envelopes}
-\label{sec:obstacle-envelopes}
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$ on $X$.
-
-A smooth real $(1,1)$-form $\theta$ is called \emph{big} if there are $\rho\in\PSH(X,\theta)$ and $\delta>0$ such that
-\[
- \theta+\ddc\rho\geq\delta\omega.
-\]
-Here $\omega$ is any Hermitian metric. Changing that metric changes $\delta$, not the condition. Neither this definition nor the existence of $\theta$-plurisubharmonic functions requires $\theta$ to be closed.
-
-For any smooth real $(1,1)$-form $\theta$ and an extended-real obstacle $f$ on $X$, defined at least outside a pluripolar set, write
-\[
- P_\theta(f)=\left(\sup\{v\in\PSH(X,\theta):v\leq f
-                      \ \hbox{q.e.}\}\right)^*.
-\]
-For $u,v\in\PSH(X,\theta)$, set $P_\theta(u,v)=P_\theta(\min(u,v))$. The star denotes upper semicontinuous regularization, and the empty supremum is $-\infty$. Quasi-everywhere means outside a pluripolar set. This convention also gives meaning to differences of quasi-plurisubharmonic functions at common poles. For an upper semicontinuous obstacle, the pointwise definition gives the same competitors: a quasi-plurisubharmonic function lying below it almost everywhere lies below it everywhere, by the local submean inequality and upper semicontinuity of the obstacle.
-
-We use the standard local envelope theorem as an external input: an upper envelope of plurisubharmonic functions, locally bounded above, has a plurisubharmonic upper semicontinuous regularization and differs from its unregularized supremum only on a pluripolar set. Applying local smooth corrections and the freezing argument of \cref{prop:bounded-products} gives the corresponding statement with the exact lower bound $\ddc v\geq-\theta$.
-
-Here is a useful way to check the upper bound for an unbounded obstacle. If $f\leq A$ for a real constant $A$ on a Borel set $E$ of positive $\mathrm{d}V$-measure and $h\leq f$ is a competitor, normalize $\widetilde h=h-\sup_Xh$. By \cref{thm:normalized-compactness},
-\[
- (\sup_Xh-A)\operatorname{vol}_{\mathrm{d}V}(E)
- \leq\int_E|\widetilde h|\,\mathrm{d}V\leq C_\theta
- \quad\hbox{whenever }\sup_Xh>A.
-\]
-Thus the competitors have a common upper bound. In particular this applies to any measurable obstacle finite almost everywhere, by taking one of its finite sublevel sets of positive volume. This argument controls the supremum of the competitors; nonemptiness remains a separate requirement.
-
-If $\PSH(X,\theta)$ is nonempty, its normalized envelope
-\[
- V_\theta=P_\theta(0)
-\]
-is $\theta$-plurisubharmonic. Indeed, a normalized $\theta$-plurisubharmonic function is a competitor, and the family is bounded above by zero. Moreover,
-\[
- u-\sup_Xu\leq V_\theta\qquad(u\in\PSH(X,\theta)).
-\]
-Thus $V_\theta$ has minimal singularities. If $\theta\geq0$, then $V_\theta=0$.
-
-\begin{lemma}\label{lem:bounded-below-envelope}
-Let $\eta$ be a smooth semipositive real $(1,1)$-form on $X$. If an obstacle $f$ is finite almost everywhere and bounded below quasi-everywhere by a constant, then $P_\eta(f)$ is a bounded $\eta$-plurisubharmonic function.
-\end{lemma}
-\begin{proof}
-The lower constant is a competitor. The preceding finite-sublevel argument gives a common upper bound for all competitors. The local envelope theorem therefore gives a bounded envelope.
-\end{proof}
-
-\begin{proposition}
-\label{prop:continuous-obstacle-envelope}
-If $f$ is continuous and $\omega$ is Hermitian, then $P_\omega(f)$ is continuous. Moreover,
-\[
- \|P_\omega(f)-P_\omega(g)\|_\infty\leq\|f-g\|_\infty
- \quad(f,g\in C^0(X)).
-\]
-\end{proposition}
-\begin{proof}
-The constant $\min_Xf$ is a competitor, so $p=P_\omega(f)$ is bounded. The local envelope theorem gives $p\leq f$ quasi-everywhere, and continuity of $f$ makes this inequality pointwise. Choose smooth $v_j\downarrow p$ by \cref{thm:bounded-exact-regularization}. For every $\epsilon>0$, the continuous functions $v_j-f$ decrease to a function at most zero. Compactness shows that $v_j\leq f+\epsilon$ everywhere for all large $j$: otherwise their decreasing compact $\epsilon$-superlevel sets would have nonempty intersection. Hence $v_j-\epsilon$ is a competitor and
-\[
- p\leq v_j\leq p+\epsilon.
-\]
-Thus $v_j\to p$ uniformly, proving continuity. The last inequality follows directly from the competitors and
-$P_\omega(g+c)=P_\omega(g)+c$ for constants $c$.
-\end{proof}
-
-For $u,v\in\PSH(X,\theta)$ write $u\preceq v$ when $u\leq v+C$ for some real constant $C$.
-
-\begin{definition}\label{def:singularity-envelope}
-For $u\in\PSH(X,\theta)$, set
-\[
- P_\theta[u]
- =\left(\lim_{C\to+\infty}P_\theta(u+C,0)\right)^*
- =\left(\sup\{h\in\PSH(X,\theta):h\preceq u,\ h\leq0\}\right)^*.
-\]
-We call $u$ an \emph{envelope fixed point} if $P_\theta[u]=u$.
-\end{definition}
-
-The two formulas agree by taking the union of the competitor families. They also agree with the definition using $V_\theta$ in place of zero: every $\theta$-plurisubharmonic competitor below zero is below $V_\theta$. The envelope is a genuine potential, since the competitors contain $u-\sup_Xu$ and are bounded above by zero. In particular, $u\preceq P_\theta[u]$. The last relation is not an assertion that the two functions differ by a bounded amount.
-
-Directly from the competitors, $P_\theta[u]$ is unchanged when $u$ is replaced by a potential of the same ordinary singularity type, and
-\[
- u\preceq v\quad\Longrightarrow\quad P_\theta[u]\leq P_\theta[v].
-\]
-These statements concern ordinary singularities. Replacing $\preceq$ by the multiplier-ideal order would define a different operator, which will require a separate comparison.
+The mass of a particular potential and the volume of its singularity type are different objects, even for smooth Hermitian potentials. The envelopes constructed in \cref{sec:obstacle-envelopes} localize their Monge--Amp\`ere measures on contact sets. Upper and lower volumes then arise by varying the bounded part of a potential. The relative envelope class is defined without a mass bound. We prove its envelope and positivity properties before exhibiting a member of infinite mass. Its comparison with a volume-defined class is deferred to \cref{chap:mass-bound-volumes}.
 
 \section{Contact sets}
 
@@ -139,7 +57,7 @@ The total extended mass is allowed to be infinite.
 The quasi-everywhere inequality follows from the local envelope theorem and Choquet extraction. The measure assertion is \cref{prop:unbounded-contact-reduction}.
 \end{proof}
 
-This proves the semipositive statement without a bigness or mass assumption. The corresponding conclusion in a semipositive big background is also \cite[Theorem 2.2]{ALS26}. Its proof uses precisely the bounded-to-unbounded passage handled above.
+This proves the semipositive statement without a bigness or mass assumption.
 
 \begin{theorem}
 \label{thm:envelope-contact-big}
@@ -150,7 +68,7 @@ Let $\theta$ be smooth and big. If $f$ is quasi-continuous, finite almost everyw
 The extended measure may have infinite total mass. No bounded mass or positive lower-volume hypothesis is required.
 \end{theorem}
 
-The proof is given in \cref{thm:big-general-envelope-contact}, after establishing the local homogeneous replacement and continuous-obstacle case. A strict singular barrier repairs quasi-everywhere competitors, and signed bounded products control the final truncation argument. Under bounded mass, the contact conclusion is also \cite[Theorem 2.9 and Proposition 2.11]{BGL25}; that global mass hypothesis is not used in our proof. The ordered-contact inequality of \cref{prop:ordered-contact-general} applies to arbitrary smooth backgrounds without bigness or bounded mass.
+The proof is given in \cref{thm:big-general-envelope-contact}, after establishing the local homogeneous replacement and continuous-obstacle case. A strict singular barrier repairs quasi-everywhere competitors, and signed bounded products control the final truncation argument. The ordered-contact inequality of \cref{prop:ordered-contact-general} applies to arbitrary smooth backgrounds without bigness or bounded mass.
 
 \begin{proposition}\label{prop:rooftop-measure}
 Let $\theta$ be a smooth real $(1,1)$-form that is semipositive or big, and let $u,v\in\PSH(X,\theta)$. Suppose $p=P_\theta(u,v)\in\PSH(X,\theta)$. The corresponding contact theorem, \cref{thm:envelope-contact,thm:envelope-contact-big}, gives
@@ -180,7 +98,7 @@ We have $\varphi\leq0$. For every $j\geq0$, the envelope $P_\theta(\varphi+j,0)$
           \mathrm{MA}^{\mathrm{ext}}_\theta(\varphi)
       +\mathbf1_{\{\varphi=0\}}\theta^n.
 \]
-One must not subtract potentially infinite measures here. Instead, restrict to $\{\varphi>-t\}$ and choose $j>t$. The first term vanishes. Letting $t\to+\infty$ proves the claim by the definition of the extended measure. This is the fixed-point argument in \cite[Proposition 2.12]{ALS26}.
+One must not subtract potentially infinite measures here. Instead, restrict to $\{\varphi>-t\}$ and choose $j>t$. The first term vanishes. Letting $t\to+\infty$ proves the claim by the definition of the extended measure.
 \end{proof}
 
 \section{Bounded domination in a semipositive background}
@@ -232,7 +150,7 @@ Let $\theta\geq0$ be non-collapsing on bounded potentials. Suppose $u,v\in\PSH(X
 then $u\geq v$.
 \end{theorem}
 \begin{proof}
-We give the envelope argument of \cite[Proposition 2.8]{GL22}. If the conclusion failed, choose $a>0$ such that $E=\{u<v-a\}$ is nonempty. This set has positive volume by \cref{lem:strict-set-positive-volume}. Fix $C$ with $|u|,|v|\leq C$.
+If the conclusion failed, choose $a>0$ such that $E=\{u<v-a\}$ is nonempty. This set has positive volume by \cref{lem:strict-set-positive-volume}. Fix $C$ with $|u|,|v|\leq C$.
 
 For $b>1$ define the bounded envelope
 \[
@@ -312,7 +230,7 @@ For $b=1$ the inequality means $h\leq u$. For $b>1$ the displayed sum of quasi-p
 \[
  Q_b(u,\varphi)=P_\theta(bu-(b-1)\varphi).
 \]
-When the family is nonempty, its envelope is a genuine potential. Indeed, the obstacle $bu-(b-1)\varphi$ is finite almost everywhere, so the finite-sublevel argument at the start of the chapter gives a common upper bound for the competitors. The local envelope theorem applies, and the defining convex inequality holds everywhere by the canonical quasi-plurisubharmonic representatives. This argument needs no bigness or mass hypothesis. The construction in a semipositive big background is also recorded in \cite[Propositions 2.4 and Lemma 2.5]{ALS26}, and in an arbitrary big background in \cite[Section 2.1]{XL26}.
+When the family is nonempty, its envelope is a genuine potential. Indeed, the obstacle $bu-(b-1)\varphi$ is finite almost everywhere, so the finite-sublevel argument in \cref{sec:obstacle-envelopes} gives a common upper bound for the competitors. The local envelope theorem applies, and the defining convex inequality holds everywhere by the canonical quasi-plurisubharmonic representatives. This argument needs no bigness or mass hypothesis.
 
 \begin{definition}\label{def:relative-envelope-class}
 Define
@@ -324,7 +242,7 @@ Define
 \]
 \end{definition}
 
-This is the definition used in \cite[Definition 3.2]{ALS26} for semipositive big $\theta$. It is meaningful without a mass bound. Its comparison with the volume-defined class is developed in \cref{chap:mass-bound-volumes}. For the fixed reference, write $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$.
+This definition is meaningful without a mass bound. Its comparison with the volume-defined class is developed in \cref{chap:mass-bound-volumes}. For the fixed reference, write $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$.
 
 \begin{proposition}\label{prop:relative-elementary}
 The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all potentials equivalent to $\varphi$, and is stable under bounded changes of its members. If $u$ belongs to it, $v\in\PSH(X,\theta)$, $u\leq v$ and $v\preceq\varphi$, then $v$ belongs to it. In particular, it is stable under taking maxima of two members.
@@ -353,7 +271,7 @@ For the second assertion choose a constant $C$ such that $u-C\leq\varphi$ and $w
 \[
  Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi.
 \]
-Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership. The convex-combination argument is that of \cite[Proposition 3.5]{ALS26}.
+Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership.
 \end{proof}
 
 \begin{proposition}\label{prop:relative-finite-rooftops}
@@ -402,7 +320,7 @@ The preceding envelope identities use only convex combinations, the local envelo
 \end{equation}
 The second requirement leaves room to realize the singularity below a smaller background. Under bounded mass, a different model condition uses positive lower volume; see \eqref{eq:li-model-condition}. We keep these conditions distinct.
 
-In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity of the mass of every potential equivalent to $\varphi$, by \cite[Proposition 2.10 and the discussion after Definition 2.13]{ALS26}. This is individual positivity; a positive infimum over all such potentials is a stronger assertion. That paper does not assume bounded mass for its same-singularity-type equations with $L^p$ data.
+In the semipositive regime, \cref{prop:fixed-point-finite} supplies finiteness of the mass in \eqref{eq:als-model-condition}. The smaller-background condition further implies positivity for every potential equivalent to $\varphi$, by \cref{thm:relative-uniform-mass-lower}. A positive infimum over all such potentials is a stronger assertion.
 
 The model conditions also clarify a limitation of raw mass. On a manifold without bounded mass, \cref{thm:infinite-mass-witness} gives potentials with infinite mass and trivial multiplier ideals at every weight. Meanwhile every envelope fixed point for a semipositive big background has finite mass. Thus multiplier ideals alone do not control the unnormalized mass of a representative. Any extension of the source book's $\mathcal I$-goodness equivalences must account for the envelope and the chosen volume invariant.
 
@@ -464,7 +382,7 @@ Translate $u$ below $\varphi$ and use $w\in\mathcal E_0$ from \cref{lem:relative
  P_{\varepsilon\theta}(\varphi)+\delta P_\theta(w/\delta)
  \leq\varphi+w\leq u
 \]
-has background $(\varepsilon+\delta)\theta$. It supplies the asserted competitor. Apply \cref{lem:smaller-background-mass-lower} and let $\delta\downarrow0$ for the uniform estimate. The individual conclusion follows by taking any one such $\delta$. This is the lower-volume mechanism of \cite[Proposition 3.8]{ALS26}.
+has background $(\varepsilon+\delta)\theta$. It supplies the asserted competitor. Apply \cref{lem:smaller-background-mass-lower} and let $\delta\downarrow0$ for the uniform estimate. The individual conclusion follows by taking any one such $\delta$.
 \end{proof}
 
 \section{Infinite mass inside the envelope class}

@@ -1,18 +1,11 @@
-\chapter{Analytic approximation and divisorial bounds}
-\label{chap:analytic-approximation}
-
-Analytic approximation is a classical local and global construction on compact complex manifolds. Its availability should be separated from the convergence of Monge--Amp\`ere masses or of a metric on singularities. We recall the standard regularization theorem in the precise form needed for a nonclosed background, explain its normalization, and derive a uniform divisorial bound from Gauduchon metrics. The next chapter will apply this bound to restrictions of multiplier ideals.
-
-Throughout, $X$ is a connected compact complex manifold of dimension $n\geq1$. We use the local Ohsawa--Takegoshi theorem, coherence of multiplier ideals, and Demailly's classical global regularization theorem as standard reference inputs. They are stated below in the forms used. The global regularization input is \cite[Theorem 14.12 and its construction]{DemAM11}; the numbered locations refer to the author's July 2011 text. It permits an arbitrary continuous lower bound, without requiring that bound to be closed.
-
 \section{Analytic types and restriction}\label{sec:analytic-types}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. For a quasi-plurisubharmonic function $u$ on $X$ and a positive integer $m$, let $\mathcal I(mu)$ be its multiplier ideal for the weight $\mathrm{e}^{-mu}$, and write $\nu(u,x)$ for its Lelong number at a point $x\in X$, normalized by $\log|z|^2$ in local coordinates.
+Write $\nu(u,x)$ for the Lelong number of a quasi-plurisubharmonic function $u$, normalized by $\log|z|^2$ in local coordinates.
 
 We follow the convention of \cite{SGPT}: a quasi-plurisubharmonic function $u$ has analytic singularities if locally there are holomorphic functions $f_1,\ldots,f_N$, not all identically zero, and a rational $c>0$ such that
 \[
  u=c\log\bigl(|f_1|^2+\cdots+|f_N|^2\bigr)+O(1),
- \qquad c\in\mathbb Q_{>0},
+ \qquad c\in\mathbb Q_{>0}.
 \]
 The remainder is bounded; smoothness of this remainder is an additional property. A coherent ideal $\mathfrak a$ and a common coefficient $c$ specify the \emph{analytic type} $(c,\mathfrak a)$. Changing local generators changes the logarithm by a bounded amount on smaller relatively compact open sets.
 
@@ -39,9 +32,14 @@ Zero generic Lelong number does not make the restriction of an arbitrary quasi-p
 \]
 is plurisubharmonic: the function $t\mapsto-\sqrt{-t}$ is increasing and convex for $t<0$. Along $\{z_1=0\}$, its Lelong number is zero but its restriction is identically $-\infty$. The analytic hypothesis in \cref{prop:analytic-type-calculus} will exclude this behavior for the approximants below.
 
+\subsection{Lelong level sets}
+\label{subsec:psh-lelong-levels}
+
+Siu's analyticity theorem says that, for every $c>0$, the set $\{x:\nu(u,x)\geq c\}$ is analytic. A smooth local correction reduces the quasi-plurisubharmonic statement to the theorem for closed positive currents. We use this classical input in the form recalled in \cite{SGPT}; its original source is recorded in \cref{sec:history-psh}.
+
 \section{The local Bergman estimates}
 
-Fix an integer $n\geq1$, a bounded pseudoconvex domain $\Omega\subset\mathbb C^n$, and a plurisubharmonic function $\psi$ on $\Omega$. Write $\mathrm{d}\lambda$ for Euclidean volume, $B(x,r)$ for the Euclidean ball of radius $r>0$ about $x$, and $\nu(v,x)$ for the Lelong number normalized by $\log|z|^2$. Use $\mathcal I(m\psi)$ for the multiplier ideal of $\mathrm{e}^{-m\psi}$. For a positive integer $m$, define the weighted holomorphic Hilbert space
+Fix an integer $n\geq1$, a bounded pseudoconvex domain $\Omega\subset\mathbb C^n$, and a plurisubharmonic function $\psi$ on $\Omega$. Write $\mathrm{d}\lambda$ for Euclidean volume and $B(x,r)$ for the Euclidean ball of radius $r>0$ about $x$. For a positive integer $m$, define the weighted holomorphic Hilbert space
 \[
  \mathcal H_m=\left\{f\in\mathcal O(\Omega):
           \|f\|_m^2:=\int_\Omega|f|^2\mathrm{e}^{-m\psi}\,\mathrm{d}\lambda<\infty\right\}.
@@ -95,9 +93,7 @@ The same local construction and estimates hold for every real parameter $m>0$. I
 \Needspace{23\baselineskip}
 \section{The global curvature bound}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. For a quasi-plurisubharmonic function $u$ on $X$ and a positive integer $m$, let $\mathcal I(mu)$ be its multiplier ideal for the weight $\mathrm{e}^{-mu}$, and write $\nu(u,x)$ for its Lelong number at a point $x\in X$, normalized by $\log|z|^2$ in local coordinates. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$ on $X$; use the latter for $L^1$ convergence. Analytic type is understood as in \cref{sec:analytic-types}.
-
-We record precisely the classical global input, including the ideal type supplied by its construction.
+Return to the compact manifold $X$ and its fixed Hermitian form $\omega$. The global regularization theorem glues the local Bergman constructions while controlling the curvature error. We retain it as a classical input in the following precise form.
 
 \begin{theorem}[Demailly regularization]\label{thm:demailly-hermitian-input}
 Let $u$ be quasi-plurisubharmonic on a connected compact complex manifold and let $\gamma$ be a continuous real $(1,1)$-form with $\ddc u\geq\gamma$. Fix a Hermitian form $\omega$. There are quasi-plurisubharmonic $u_m$, for sufficiently large positive integers $m$, and numbers $\epsilon_m\downarrow0$ such that
@@ -123,58 +119,36 @@ Their analytic type is $(1/m,\mathcal I(mu))$.
 Apply the theorem to the closed, almost positive current $\ddc u$ with lower bound $\gamma=-\theta$. The theorem requires no closedness of $\gamma$. Adding $\theta$ gives the asserted inequality. In the convention of \cite{DemAM11}, this application is to the potential $u/2$, since $\frac{\mathrm{i}}{\pi}\partial\bar\partial(u/2)=\ddc u$.
 \end{proof}
 
-Thus the nonclosed background does not prevent analytic regularization with a vanishing curvature error. The issue in an $\mathcal I$-goodness theorem is what further topology or mass identity that approximation satisfies. Taking ordinary envelopes along dyadic indices does give a canonical limit: \cref{thm:dyadic-analytic-envelope-limit} identifies it with $P_\theta[u]_{\mathcal I}$. In a Hermitian background, rational scaling absorbs the curvature errors and gives analytic approximants in the original background, by \cref{cor:fixed-hermitian-analytic-density}. These conclusions concern singularities and envelopes; they do not prove convergence of the unrestricted Monge--Amp\`ere masses.
+These approximants retain the curvature lower bound up to a vanishing error. Their multiplier ideals will later identify the limit of their ordinary envelopes in \cref{thm:dyadic-analytic-envelope-limit}.
 
-\Needspace{16\baselineskip}
-\section{Gauduchon metrics bound divisorial orders}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. For a quasi-plurisubharmonic function $u$ on $X$ and a positive integer $m$, let $\mathcal I(mu)$ be its multiplier ideal for the weight $\mathrm{e}^{-mu}$, and write $\nu(u,x)$ for its Lelong number at a point $x\in X$, normalized by $\log|z|^2$ in local coordinates. For a prime divisor $E$, the notation $\nu(v,E)$ means the generic Lelong number along $E$. A Gauduchon metric on a complex manifold of dimension $d$ is a Hermitian form $\eta$ with $\ddc\eta^{d-1}=0$.
+\subsection{Regularization of closed currents}
+\label{subsec:psh-closed-regularization}
 
-A linear mass estimate suffices for a basic uniform bound on singularities. It is available on every compact Hermitian manifold.
-
-\begin{lemma}\label{lem:gauduchon-uniform-lelong}
-Let $Z$ be connected compact complex and let $\beta$ be a smooth real $(1,1)$-form with $\PSH(Z,\beta)\ne\varnothing$. There is a finite constant $C_\beta$ such that
+We also use the closed-current form of regularization recalled in \cite{SGPT}. Let $T=\eta+\ddc v$ be an almost positive closed $(1,1)$-current, where $\eta$ is smooth and closed and $v$ is quasi-plurisubharmonic. If $T\geq\gamma$ for a smooth real $(1,1)$-form $\gamma$, there are smooth representatives $T_j=\eta+\ddc v_j$ with
 \[
- \nu(v,z)\leq C_\beta\qquad
- \text{for every }v\in\PSH(Z,\beta)\text{ and every }z\in Z.
+ T_j\geq\gamma-C\lambda_j\omega,
 \]
-In particular all generic divisorial Lelong numbers in this fixed background are uniformly bounded. Additive normalization of the potentials is unnecessary.
-\end{lemma}
-\begin{proof}
-Write $d=\dim Z$. For $d\geq2$, choose a Gauduchon metric $\eta$. For $d=1$, use $\eta^{d-1}=1$. The conserved linear trace in \cref{prop:gauduchon-trace} gives
+where $C>0$ is fixed and the continuous functions $\lambda_j$ decrease pointwise to $\nu(T,\cdot)$. When all Lelong numbers vanish, Dini's theorem makes this loss uniformly small. Analytic regularization gives representatives $S_j$ with
 \[
- \int_Z(\beta+\ddc v)\wedge\eta^{d-1}
- =\int_Z\beta\wedge\eta^{d-1}.
+ S_j\geq\gamma-\varepsilon_j\omega,\qquad
+ \varepsilon_j\downarrow0,\qquad
+ \nu(S_j,x)\leq\nu(T,x).
 \]
-The current on the left is positive, so this fixed nonnegative number bounds its mass on every coordinate ball.
+Thus it preserves strict positivity after a small loss and introduces no positive Lelong number at a point where the original number is zero.
 
-On a slightly larger ball choose a smooth quadratic $r$ with $\ddc r\geq\beta$. Then
-\[
- T=\ddc(v+r)=(\beta+\ddc v)+(\ddc r-\beta)
-\]
-is closed and positive. Equivalence of fixed smooth metrics bounds its local trace mass by a constant times the preceding global trace plus a fixed smooth contribution. The local Lelong monotonicity formula bounds the Lelong number at the center by the trace mass on a fixed surrounding ball, with a constant depending only on that ball. Use finitely many nested coordinate balls to obtain the same bound for every center in the smaller balls. Smooth corrections do not change Lelong numbers. This proves the assertion.
-\end{proof}
+\subsection{Smooth remainders after resolution}
 
-\begin{corollary}\label{cor:restricted-analytic-divisorial-bound}
-Fix a smooth real $(1,1)$-form $\theta$, a Hermitian form $\omega$, and $u\in\PSH(X,\theta)$. Let $u_m$ with curvature errors $\epsilon_m$ be the approximants of \cref{cor:nonclosed-analytic-approximation}. Let $Y\subset X$ be a connected compact complex submanifold and suppose
-\[
- \nu(u,Y):=\inf_{y\in Y}\nu(u,y)=0.
-\]
-For the approximants of \cref{cor:nonclosed-analytic-approximation}, each $u_m|_Y$ is genuine. If $\pi:Z\to Y$ is a smooth compact modification and $E\subset Z$ is a prime divisor, then
-\[
- \sup_m\nu\bigl((u_m|_Y)\circ\pi,E\bigr)<\infty.
-\]
-\end{corollary}
-\begin{proof}
-For each $m$, choose $y\in Y$ with $\nu(u,y)<1/m$. The local Skoda integrability criterion gives $\mathcal I(mu)_y=\mathcal O_{X,y}$. Thus the image ideal $\mathcal I(mu)\mathcal O_Y$ is not identically zero. Analytic restriction in \cref{prop:analytic-type-calculus} makes $u_m|_Y$ genuine. Its pullback to $Z$ is also genuine.
+For arguments on a modification, the bounded remainder in an analytic presentation is sometimes insufficient. The following version of regularization supplies a smooth remainder after resolution.
 
-\Needspace{6\baselineskip}
-The restricted and pulled-back positivity inequality gives
+\Needspace{13\baselineskip}
+\begin{theorem}[Demailly regularization]\label{thm:resolvable-regularization-input}
+Let $\alpha$ be any smooth real $(1,1)$-form and let $u\in\PSH(X,\alpha)$. There are $\delta_j\downarrow0$ and $\widetilde u_j\in\PSH(X,\alpha+\delta_j\omega)$ decreasing to $u$ such that each $\widetilde u_j$ is smooth off an analytic pole set and, after a modification $\pi_j:Y_j\to X$ given by a finite sequence of blowups with smooth centers, has local expressions as follows. Let $s_\ell$ be local holomorphic defining functions of divisors, let $a_\ell>0$ be real numbers, and let $b$ be a smooth real function. Then
 \[
- \pi^*(\theta|_Y)+\ddc\bigl((u_m|_Y)\circ\pi\bigr)
- \geq-\epsilon_m\pi^*(\omega|_Y).
+ \pi_j^*\widetilde u_j=\sum_\ell a_\ell\log|s_\ell|+b,
+ \qquad a_\ell>0,\quad b\in C^\infty.
 \]
-A single smooth Hermitian form on $Z$, multiplied by a large enough constant, dominates these lower bounds for all indices. The preceding lemma therefore applies on $Z$ and bounds the generic Lelong number along $E$.
-\end{proof}
+The divisors may be taken to have simple normal crossings. The coefficients include the fixed normalization of $\ddc$.
+\end{theorem}
 
-This use of Gauduchon metrics controls a degree-one current after restriction and modification. It makes no claim about the top-degree masses of the restricted approximants. In particular it remains available when the ambient bounded mass property fails.
+This classical input applies to the closed current $\ddc u$ with smooth lower bound $-\alpha$; its source is recorded in \cref{sec:history-psh}. Its lower bound is not required to be closed, and its ambient manifold is only Hermitian. The resolved expression supplies the smooth remainder after resolution; ordinary analytic type with merely a bounded remainder would not suffice here. This version need not be the particular multiplier-ideal sequence in \cref{thm:demailly-hermitian-input}. We do not assert that the additional conclusions of these two regularization statements hold for the same sequence. Applying this theorem with a sufficiently small curvature error preserves strict positivity.

@@ -3,7 +3,7 @@
 
 In the closed theory, three constructions meet: positivity on a product, a Perron envelope joining two potentials, and geodesics for the Mabuchi metric. The first two can be studied on a compact Hermitian manifold using local pluripotential theory. The third changes because integration by parts acquires torsion terms. We shall prove the envelope statements before comparing the two smooth equations.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. In particular, neither semipositivity nor bigness is needed for the elementary product arguments. The local inputs are the psh maximum and envelope theorems and Kiselman's minimum principle, in the forms recalled in \cite[chapters on plurisubharmonic functions and geodesic rays]{SGPT}. We explain the passage to a nonclosed background.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. In particular, neither semipositivity nor bigness is needed for the elementary product arguments. The maximum, envelope and minimum principles are established in \cref{chap:framework}.
 
 \section{Positivity on a strip}\label{sec:strip-positivity}
 
@@ -32,34 +32,9 @@ Fix $x$. Restriction to the vertical complex line gives a subharmonic function o
 
 The supremum operation requires upper semicontinuous regularization on the product. A locally uniformly bounded above family of product potentials has a product potential as its regularized supremum whenever the supremum is genuine. Translation invariance in $\Im z$ is preserved. These are local envelope facts and do not use Monge--Amp\`ere mass.
 
-\section{The minimum principle with a nonclosed background}
+\section{Interior continuity and endpoint control}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form with $\PSH(X,\theta)\ne\varnothing$. Fix a smooth positive volume form on $X$ for $L^1$ convergence. For a nonempty open interval $I\subset\mathbb R$, set $S_I=\{z\in\mathbb C:\Real z\in I\}$ and let $\pi:X\times S_I\to X$ be the projection. A subgeodesic and its complexification $U(x,z)=u_{\Real z}(x)$ are understood as in \cref{sec:strip-positivity}.
-
-\begin{proposition}\label{prop:hermitian-kiselman}
-For a subgeodesic $u_t$ on any interval $I$, the function
-\[
- q(x)=\inf_{t\in I}u_t(x)
-\]
-is either a genuine $\theta$-plurisubharmonic function or identically $-\infty$. No regularization of the infimum is necessary. If $I$ is bounded, the infimum is genuine.
-\end{proposition}
-\begin{proof}
-The classical local Kiselman principle says that the infimum in the real variable of a plurisubharmonic function on a product with a strip, invariant in its imaginary variable, is plurisubharmonic or identically $-\infty$. Its parameter interval may be unbounded. We use this local result from \cite{SGPT}.
-
-Fix $x_0\in X$, choose local holomorphic coordinates centered at $x_0$, and let $\kappa$ be their Euclidean form. Fix $\eta>0$. On a sufficiently small coordinate ball the constant form $\beta=\theta(x_0)$ satisfies
-\[
- \beta-\eta\kappa\leq\theta\leq\beta+\eta\kappa.
-\]
-Choose a quadratic function $r$ with $\ddc r=\beta+\eta\kappa$. Then $U+r\circ\pi$ is psh on the ball times $S_I$. Its infimum is $q+r$, so the local principle gives
-\[
- \ddc q\geq-\beta-\eta\kappa\geq-\theta-2\eta\kappa
-\]
-where the infimum is genuine. In a fixed atlas the Euclidean forms are bounded by a fixed Hermitian metric. Letting $\eta\downarrow0$ proves the exact lower bound $\ddc q\geq-\theta$. The local alternative propagates across overlapping balls on connected $X$: a genuine psh function cannot equal $-\infty$ on an open set. Thus either $q$ is genuine everywhere as a quasi-plurisubharmonic function or $q\equiv-\infty$. The infimum is upper semicontinuous, as an infimum of upper semicontinuous functions.
-
-If $I$ is bounded, Fubini's theorem applied to $U$ shows that for almost every $x$ its vertical restriction is genuine. A finite convex function on a bounded open interval has a finite lower bound: any supporting affine function at an interior point bounds it from below on that interval. Hence $q(x)>-\infty$ almost everywhere. This excludes the identically $-\infty$ alternative.
-\end{proof}
-
-For example, the proposition applies to $u_t-t\tau$ for a fixed real $\tau$. On an unbounded interval the infimum may be $-\infty$; this alternative will encode the cutoff of a test curve.
+The minimum principle in \cref{prop:hermitian-kiselman} gives an integrable lower bound on every bounded time interval. Together with pointwise convexity, it turns convergence of the endpoints in $L^1$ into control of the entire segment.
 
 \begin{proposition}
 \label{prop:subgeodesic-endpoint-control}
@@ -76,7 +51,7 @@ Moreover the boundary upper limits hold jointly in space and time:
 \]
 \end{proposition}
 \begin{proof}
-On a compact interior interval, choose two surrounding times. Convexity bounds the potentials above by the chord of the two corresponding potentials, hence by a constant. The preceding proposition supplies one genuine integrable lower bound. For almost every $x$, pointwise continuity follows from finite convexity. Dominated convergence now proves interior $L^1$ continuity.
+On a compact interior interval, choose two surrounding times. Convexity bounds the potentials above by the chord of the two corresponding potentials, hence by a constant. \Cref{prop:hermitian-kiselman} supplies one genuine integrable lower bound. For almost every $x$, pointwise continuity follows from finite convexity. Dominated convergence now proves interior $L^1$ continuity.
 
 For the endpoint inequality, choose sequences approaching $a,b$ along which the stipulated $L^1$ convergence holds almost everywhere. Apply convexity between these times and pass to the limit. This proves \eqref{eq:hermitian-chord-bound} almost everywhere in $x$. Both sides are canonical quasi-plurisubharmonic functions, so the inequality holds everywhere. The joint upper limits follow from this bound and upper semicontinuity of the endpoints; the other endpoint's contribution is bounded above by a constant times its vanishing coefficient. The same reasoning works at a pole of $u_a$ or $u_b$.
 \end{proof}

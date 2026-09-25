@@ -7,24 +7,6 @@ The elementary topology of ideal envelopes can be compared directly with analyti
 
 The closed-background analogue of the first assertion appears in \cite[Proposition~3.2.10]{SGPT}. The limiting argument is also the ideal-theoretic part of the proof of its $\mathcal I$-goodness characterization, \cite[Theorem~7.1.1, proof of $(3)\Rightarrow(1)$, Step~1]{SGPT}. We give the details for a nonclosed background; no mass or $d_S$ conclusion is imported.
 
-\begin{lemma}\label{lem:analytic-ideal-dominance}
-Let $v$ be quasi-plurisubharmonic on a compact complex manifold, and let $a$ have analytic singularities. If $v\preceq_{\mathcal I}a$, then $v\preceq a$.
-\end{lemma}
-\begin{proof}
-Resolve the coherent ideal of an analytic presentation of $a$ by a smooth modification $\pi:Y\to X$. In local coordinates $z_1,\ldots,z_n$ on $Y$, its expression has coefficients $b_i\geq0$, $1\leq i\leq r\leq n$, and a locally bounded remainder $B$:
-\[
- a\circ\pi=\sum_{i=1}^r b_i\log|z_i|^2+B,
- \qquad b_i\geq0,\qquad B\in L^\infty_{\mathrm{loc}}.
-\]
-By \cref{thm:local-i-inputs}, the generic Lelong number of $v\circ\pi$ along $\{z_i=0\}$ is at least $b_i$. Add a smooth local function to $v\circ\pi$ to make it plurisubharmonic. Divisorial removal for this closed positive complex Hessian shows that
-\[
- v\circ\pi-\sum_i b_i\log|z_i|^2
-\]
-has a quasi-plurisubharmonic representative. Here the difference is first interpreted off the divisor, or as an integrable distribution. Such a representative is locally bounded above. Since $B$ is locally bounded, $v\circ\pi\leq a\circ\pi+C$ on each relatively compact resolution chart away from the divisor. A finite cover above a smaller coordinate neighborhood makes $C$ uniform there. Push the inequality down off the analytic exceptional set; the canonical quasi-plurisubharmonic representatives extend it everywhere. Finitely many neighborhoods on the compact manifold give $v\leq a+C$ globally.
-
-The only resolution input is the standard principalization of an analytic ideal. Divisorial removal is applied to a locally closed positive Hessian after smooth correction, not to a purported closed background on the original manifold.
-\end{proof}
-
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:analytic-envelope-type}
 Let $\theta$ be any smooth real background, and let $a\in\PSH(X,\theta)$ have analytic singularities. Then
@@ -34,7 +16,7 @@ Let $\theta$ be any smooth real background, and let $a\in\PSH(X,\theta)$ have an
 In particular the common envelope has analytic singularities with the same coefficient and ideal as $a$, up to a bounded remainder.
 \end{proposition}
 \begin{proof}
-Put $q=P_\theta[a]_{\mathcal I}$. Projection gives $q\sim_{\mathcal I}a$, so the lemma gives $q\preceq a$. Since $q\leq0$, it is a competitor for $P_\theta[a]$. Combine this with \cref{prop:p-below-i} to obtain
+Put $q=P_\theta[a]_{\mathcal I}$. Projection gives $q\sim_{\mathcal I}a$, so \cref{lem:analytic-ideal-dominance} gives $q\preceq a$. Since $q\leq0$, it is a competitor for $P_\theta[a]$. Combine this with \cref{prop:p-below-i} to obtain
 \[
  a-\sup_Xa\leq P_\theta[a]\leq q\leq P_\theta[a].
 \]
@@ -56,39 +38,6 @@ When $\theta$ is Hermitian and $G$ is fixed and smooth, every choice in $\mathca
 \end{example}
 
 \input{author/section_normalization_projective_examples}
-
-We need the approximation estimate on every fixed local modification, not merely the Lelong estimate at points of $X$. A \emph{local divisor over $X$} means a prime divisor $E$ on a smooth modification $\pi:Z\to U$ of a coordinate neighborhood. For a quasi-plurisubharmonic function $u$ on $X$, let $\nu(u\circ\pi,E)$ be its generic Lelong number along $E$, let $\operatorname{ord}_E$ denote divisorial vanishing order, and let $\operatorname{Jac}\pi$ be the local holomorphic Jacobian determinant. Write
-\[
- \nu_E(u)=\nu(u\circ\pi,E),\qquad
- A_U(E)=1+\operatorname{ord}_E(\operatorname{Jac}\pi).
-\]
-The second number is the log discrepancy. These local modifications are not required to extend over the compact manifold.
-
-\begin{lemma}\label{lem:bergman-divisorial-error}
-For a quasi-plurisubharmonic function $u$, every fixed local divisor $E$, and every real $m>0$, one has
-\[
- \max\!\left\{\nu_E(u)-\frac{A_U(E)}m,0\right\}
- \leq \frac1m\operatorname{ord}_E\mathcal I(mu)
- \leq \nu_E(u).
-\]
-Consequently, a local logarithmic presentation $a_m=m^{-1}\log\sum_k|f_{m,k}|^2+O(1)$, where the $f_{m,k}$ generate $\mathcal I(mu)$, satisfies $\nu_E(a_m)\to\nu_E(u)$ as $m\to\infty$.
-\end{lemma}
-\begin{proof}
-The upper estimate follows from the local Bergman lower bound in \cref{prop:bergman-local-estimates}. The logarithm of local generators of $\mathcal I(mu)$, divided by $m$, is at least $u$ up to a locally bounded term. Pulling back and taking a generic Lelong number reverses this inequality.
-
-For the lower estimate, take a local generator $f$ of the ideal and set $k=\operatorname{ord}_E(f)$. At a generic smooth point of $E$, choose a coordinate $z_1$ defining it. Divisorial removal, after a smooth correction, gives
-\[
- u\circ\pi\leq\nu_E(u)\log|z_1|^2+C.
-\]
-\Needspace{9\baselineskip}
-Shrink around a point where the residual factors of $f\circ\pi$ and of the Jacobian are nonvanishing. The change-of-variables formula and local integrability of $|f|^2\mathrm{e}^{-mu}$ then require integrability in $z_1$ of
-\[
- |z_1|^{2(k+A_U(E)-1-m\nu_E(u))}.
-\]
-This implies $k+A_U(E)>m\nu_E(u)$. In particular the weaker non-strict lower bound in the statement holds. Take the minimum over a finite set of local generators and use nonnegativity of the order. Since $\nu_E(a_m)=m^{-1}\operatorname{ord}_E\mathcal I(mu)$, the last assertion follows by letting $m\to\infty$.
-\end{proof}
-
-For rational $m>0$, the presentation $a_m$ has analytic singularities in the convention of the source book. The real-parameter estimate does not require this restriction.
 
 Fix $u\in\PSH(X,\theta)$ and a Hermitian form $h$ on $X$. Choose the regularization from \cref{thm:demailly-hermitian-input} along $m_j=2^j$, starting at a sufficiently large index. Denote it by $a_j$ and choose numbers $\epsilon_j>0$ decreasing to zero such that
 \begin{equation}\label{eq:dyadic-analytic-backgrounds}

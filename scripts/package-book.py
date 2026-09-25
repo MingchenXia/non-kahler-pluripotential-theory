@@ -23,7 +23,7 @@ for stem in ("book", "numa-thin-zero-set-note"):
             selected.add(item)
 selected.update(p for p in (book / "style").iterdir() if p.is_file())
 for name in (
-    "book/references.bib", "book/latexmkrc", "scripts/build-book.sh",
+    "book/references.bib", "book/latexmkrc", "scripts/build-book.sh", "scripts/check-citation-placement.py",
     "scripts/build-numa-note.sh", "PLAN.md", "BLUEPRINT.md", "CHANGELOG.md", "research/comparison.md",
     "AGENTS.md", "research/STATUS.md",
     "research/audits/cover-revision-2026-09-21.json",
@@ -51,6 +51,9 @@ for name in (
     "research/editorial/introduction-revision-review-110.md",
     "research/editorial/introduction-revision-review-111.md",
     "research/editorial/introduction-revision-queue.md",
+    "research/editorial/paper-citation-relocation.json",
+    "research/editorial/psh-foundations-map-112.json",
+    "research/editorial/psh-foundations-history-review-112.md",
     "research/editorial/supplied-papers-integration-queue.md",
     "research/supplied-papers-20260925.json",
     "research/rethlas/verification/inputs/hopf-lp-normalization.md",

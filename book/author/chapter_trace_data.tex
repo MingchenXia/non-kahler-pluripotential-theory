@@ -1,7 +1,9 @@
 \chapter{Restriction and intrinsic trace data}
 \label{chap:trace-data}
 
-The trace in \cite{SGPT} is constructed by restricting quasi-equisingular approximants and taking a limit in the topology of singularities. On a general Hermitian manifold, the existence and independence of such a limit require further work. There is, however, intrinsic data that can be defined before choosing a topology: the asymptotic vanishing orders of the restricted multiplier ideals. We construct this data and prove its finiteness using the preceding Gauduchon estimate. A Green potential realizes it on a curve. Pullback then gives exact higher-dimensional traces for smooth fibrations over an ambient curve problem, with an ordinary type independent of a sufficiently large background. Product examples distinguish this canonical representative from other representatives of the same multiplier-ideal class, whose nonlinear mass can be infinite.
+The trace in \cite{SGPT} is constructed by restricting quasi-equisingular approximants and taking a limit in the topology of singularities. On a general Hermitian manifold, the existence and independence of such a limit require further work. There is, however, intrinsic data that can be defined before choosing a topology: the asymptotic vanishing orders of the restricted multiplier ideals. We construct this data and prove its finiteness using the uniform Lelong estimate of \cref{lem:gauduchon-uniform-lelong}. A Green potential realizes it on a curve. Pullback then gives exact higher-dimensional traces for smooth fibrations over an ambient curve problem, with an ordinary type independent of a sufficiently large background. Product examples distinguish this canonical representative from other representatives of the same multiplier-ideal class, whose nonlinear mass can be infinite.
+
+\input{author/section_restricted_analytic_approximants}
 
 \section{Restricted ideals}\label{sec:restricted-ideals}
 
@@ -12,14 +14,6 @@ For $t>0$ put
  \mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y.
 \]
 This is the image ideal in $\mathcal O_Y$, not the tensor product with any possible torsion retained. It is coherent and nonzero. Indeed, choose $y\in Y$ with $\nu(u,y)<1/t$; Skoda integrability gives $\mathcal I(tu)_y=\mathcal O_{X,y}$.
-
-For local quasi-plurisubharmonic functions $v,w$, with $v|_Y$ genuine when restriction is used, we use two standard multiplier-ideal facts, recalled in \cite{SGPT} and \cite[Section 15]{DemAM11}:
-\begin{equation}\label{eq:trace-local-ideal-inputs}
- \mathcal I(v|_Y)\subseteq\mathcal I(v)\mathcal O_Y,
- \qquad
- \mathcal I(v+w)\subseteq\mathcal I(v)\mathcal I(w).
-\end{equation}
-The first follows from local Ohsawa--Takegoshi extension. For the second, weighted holomorphic functions on a product form the Hilbert tensor product of the two weighted spaces; its generators give the product multiplier ideal. Restriction to the diagonal then gives the inclusion. These are local results for psh functions. Smooth corrections extend them to quasi-plurisubharmonic functions with the weight convention of this book. No compact K\"ahler hypothesis is involved.
 
 A \emph{divisor over $Y$} in this chapter means a prime divisor $E$ on a connected smooth compact modification $\pi:Z\to Y$. For a nonzero coherent ideal $\mathfrak a$ on $Y$, let $\operatorname{ord}_E(\mathfrak a)$ be the generic vanishing order of its image on $Z$. It is a finite nonnegative integer. We consider these divisors on compact modifications; no extension of every local modification to a compact one is being assumed.
 
@@ -74,32 +68,7 @@ The sum inequality will be strengthened to equality in \cref{thm:trace-data-addi
 
 Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. For real $t>0$, use $\mathcal I(tu)$ for the multiplier ideal of $\mathrm{e}^{-tu}$ and $\mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y$ for its image ideal on $Y$. A divisor $E$ over $Y$ lies on a smooth compact modification $\pi:Z\to Y$, and $\operatorname{ord}_E$ denotes its generic vanishing order. The trace number $\tau_{Y,u}(E)$ is the limit in \eqref{eq:trace-profile}. Write $a\preceq b$ if $a\leq b+C$ for some constant $C$, $a\simeq b$ if both inequalities hold, and $a\preceq_{\mathcal I}b$ if $\mathcal I(ta)\subseteq\mathcal I(tb)$ for all $t>0$.
 
-The following local comparison will prove both equality for analytic restrictions and additivity of the trace data. It reuses the divisorial error estimate from \cref{chap:hermitian-igood}.
-
-\begin{lemma}\label{lem:analytic-minorant-product-ideals}
-Let $u,v$ be quasi-plurisubharmonic on a compact complex manifold, and let $s$ have analytic singularities. If $u+v\leq s+O(1)$, then for analytic potentials $U_m,V_m$ of types $(1/m,\mathcal I(mu))$, $(1/m,\mathcal I(mv))$, there are numbers $\delta_m\downarrow0$ such that
-\[
- U_m+V_m\leq(1-\delta_m)s+O(1)
- \quad\hbox{for all sufficiently large integers }m.
-\]
-The bounded error may depend on $m$.
-\end{lemma}
-\begin{proof}
-Resolve the ideal of $s$ by a smooth modification $\pi:\widetilde X\to X$. Let $E_i$ be the components of its resolved divisor with positive coefficients $c_i$. In resolution coordinates $z_i$ defining these components, its singular part is $\sum_i c_i\log|z_i|^2$. Set
-$A_i=1+\operatorname{ord}_{E_i}(\operatorname{Jac}\pi)$.
-The hypothesis and \cref{lem:bergman-divisorial-error} give
-\[
- \nu(U_m\circ\pi,E_i)+\nu(V_m\circ\pi,E_i)
- \geq\nu(u\circ\pi,E_i)+\nu(v\circ\pi,E_i)-\frac{2A_i}{m}
- \geq c_i-\frac{2A_i}{m}.
-\]
-Choose a positive integer $C\geq\max_i2A_i/c_i$ and put $\delta_m=C/m<1$ for large $m$. After a smooth local correction, divisorial removal from the positive Hessian of $(U_m+V_m)\circ\pi$ shows that
-\[
- (U_m+V_m)\circ\pi-(1-\delta_m)\sum_i c_i\log|z_i|^2
-\]
-has a quasi-plurisubharmonic representative. It is locally bounded above. A finite resolution cover and proper descent therefore give
-$U_m+V_m\leq(1-\delta_m)s+O(1)$, just as in \cref{lem:analytic-ideal-dominance}. The bounded constant may depend on $m$. If the divisor is empty, $s$ is bounded and upper bounds for $U_m,V_m$ prove the assertion directly.
-\end{proof}
+The local comparison in \cref{lem:analytic-minorant-product-ideals} identifies the trace of an analytic restriction and will also prove additivity of the trace data.
 
 \begin{proposition}\label{prop:trace-naive-comparison}
 If $v=u|_Y$ is genuine, then

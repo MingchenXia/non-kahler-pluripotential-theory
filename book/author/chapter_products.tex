@@ -1,24 +1,14 @@
 \chapter{Bounded products and non-pluripolar measures}
 \label{chap:products}
 
-A non-closed form has no local potential, but a bounded potential still has a well-defined Monge--Amp\`ere measure. The construction expands the non-closed smooth part separately from the local plurisubharmonic part. Passing to unbounded functions requires a further step: the resulting measure need not have finite mass. At the end of the chapter, we show that this failure can occur even when the full current has integrable coefficients and is approximated by smooth currents in the coefficient $L^1$ norm.
+The local Bedford--Taylor product extends to a smooth background by separating a plurisubharmonic potential from a smooth remainder. For unbounded potentials, locality makes the bounded truncation measures compatible on increasing superlevel sets. Their limit is a positive non-pluripolar measure, possibly of infinite mass. This construction separates existence of the measure from bounds on its total mass: when uniform bounded-potential mass fails, a single potential can have infinite mass while all its multiplier ideals are trivial. The same example shows why convergence of the full currents in the coefficient $L^1$ norm does not control their determinants.
 
 \section{Local products}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $1\leq k\leq n$ be an integer. Local coordinate domains are identified with domains in $\mathbb C^n$, with coordinates $z=(z_1,\ldots,z_n)$.
-
-We recall the following input from local pluripotential theory, developed in the source book \cite{SGPT}.
-
-\begin{theorem}[Bedford--Taylor]
-\label{thm:bt-input}
-If $p_1,\ldots,p_k$ are locally bounded plurisubharmonic functions on a domain in $\C^n$, their mixed product
-$\ddc p_1\wedge\cdots\wedge\ddc p_k$ is a positive closed current of order zero. It is symmetric, multilinear in its current factors, and continuous under simultaneous locally bounded decreasing approximation. It does not charge pluripolar sets and is local in the plurifine topology.
-\end{theorem}
-
-Here locality means equality of the restricted currents on a plurifine open Borel set where the potentials agree. The plurifine topology is the topology generated locally by plurisubharmonic functions. It is finer than the ordinary topology and, for example, makes the strict superlevel sets of a quasi-plurisubharmonic function open.
+A local smooth correction makes a bounded quasi-plurisubharmonic function plurisubharmonic. Expanding the current around this corrected potential will define its products. We use \cref{thm:bt-input} and fix an integer $1\leq k\leq n$.
 
 \Needspace{8\baselineskip}
-Let $u$ be locally bounded and $\theta$-plurisubharmonic. On a relatively compact coordinate ball choose a constant $A>0$ and put $q=A|z|^2$ so that $p=u+q$ is plurisubharmonic. Set $\beta=\theta-\ddc q$ and define
+Let $u$ be locally bounded and $\theta$-plurisubharmonic. On a relatively compact coordinate ball with coordinates $z$, choose $A>0$ and put $q=A|z|^2$ so that $p=u+q$ is plurisubharmonic. Set $\beta=\theta-\ddc q$ and define
 \begin{equation}\label{eq:bounded-expansion}
  (\theta+\ddc u)^k
  :=\sum_{j=0}^k\binom{k}{j}(\ddc p)^j\wedge\beta^{k-j}.
@@ -46,28 +36,11 @@ $S_i=\theta_i'+\varepsilon\kappa+\ddc u_i$ is positive and closed there, with a 
 All terms on the right are positive, and the second term is smooth. Expanding the mixed product therefore gives a sum of positive currents. Although the neighborhoods depend on $\varepsilon$, they cover the original coordinate ball. The product of the $T_i+2\varepsilon\kappa$ is thus positive throughout that ball. By multilinearity it converges weakly to the product of the $T_i$ as $\varepsilon\to0$, proving positivity.
 \end{proof}
 
-The local expansion also gives continuity along uniformly locally bounded decreasing sequences, by applying \cref{thm:bt-input} to the corrected potentials and then summing the finitely many terms. These constructions are discussed in \cite[Section 1]{KN15} and \cite[Section 2.1]{BGL25}. No bounded mass property is needed here. The mass of each fixed bounded product is finite on compact $X$.
+The local expansion also gives continuity along uniformly locally bounded decreasing sequences, by applying \cref{thm:bt-input} to the corrected potentials and then summing the finitely many terms. Each bounded top-degree product has finite mass on compact $X$.
 
-\section{Maxima and truncations}
+\section{Truncation and non-pluripolar measures}
 
-Let $X$ be a connected compact complex manifold, and let $\theta$ be a smooth real $(1,1)$-form on $X$. We use $\PSH(X,\theta)$ in the sense of \cref{def:theta-psh}.
-
-\begin{lemma}\label{lem:max-psh}
-If $u,v\in\PSH(X,\theta)$, then $\max(u,v)\in\PSH(X,\theta)$. Consequently, if $\theta\geq0$ and $u\in\PSH(X,\theta)$, then $\max(u,-t)$ is $\theta$-plurisubharmonic for every real $t$.
-\end{lemma}
-\begin{proof}
-The maximum is quasi-plurisubharmonic by a common local smooth correction. To verify its precise lower Hessian bound, fix a positive constant $(1,1)$-form $\kappa$ in a coordinate ball. For each $\varepsilon>0$, freeze $\theta$ on smaller neighborhoods to a constant form $\theta'$ with $-\varepsilon\kappa\leq\theta-\theta'\leq\varepsilon\kappa$, as in \cref{prop:bounded-products}. Write $\theta'+\varepsilon\kappa=\ddc r$ locally. Then $u+r$ and $v+r$ are plurisubharmonic, hence so is their maximum. It follows that
-\[
- \theta+2\varepsilon\kappa+\ddc\max(u,v)\geq0
-\]
-on each such neighborhood. Let $\varepsilon\to0$. For the last assertion, constants belong to $\PSH(X,\theta)$ when $\theta\geq0$.
-\end{proof}
-
-For a general smooth $\theta$, the final hypothesis cannot be dropped: a constant is $\theta$-plurisubharmonic precisely when $\theta\geq0$. Thus constant truncations of $\theta$-plurisubharmonic functions are not an automatic device in a merely big, non-semipositive background.
-
-\section{An extended measure without a mass bound}
-
-Let $X$ be a connected compact complex manifold of dimension $n$, let $\theta$ be a smooth semipositive real $(1,1)$-form on $X$, and let $u\in\PSH(X,\theta)$. Subtract a constant so that $u\leq0$. For $t>0$ put
+Assume first that $\theta\geq0$. Constant truncation preserves positivity, and plurifine locality identifies the resulting measures wherever the truncation leaves the potential unchanged. For $u\in\PSH(X,\theta)$, normalized by $u\leq0$, and $t>0$, put
 \[
  u_t=\max(u,-t),\qquad D_t=\{u>-t\},\qquad
  \nu_t=\mathbf1_{D_t}(\theta+\ddc u_t)^n.
@@ -95,16 +68,14 @@ For finite mass, the construction is precisely the extension of the bounded loca
 
 The word \emph{extended} keeps a mathematical distinction visible. A positive Borel measure of infinite total mass on a compact space is not a Radon measure in the sense of a locally finite measure. We cannot treat it as a current of order zero on all of $X$.
 
-\section{Arbitrary smooth backgrounds}
+\section{Restricted products and contact inequalities}
 
-Let $X$ be a connected compact complex manifold of dimension $n$, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $u\in\PSH(X,\theta)$. For $t>0$ write $u_t=\max(u,-t)$ and $D_t=\{u>-t\}$.
+Now let $\theta$ be an arbitrary smooth real $(1,1)$-form and $u\in\PSH(X,\theta)$. The bounded truncations $u_t$ can lose positivity relative to $\theta$. Their products are nevertheless positive after restriction to $D_t$, where $u_t=u$. Local positive corrections prove this restricted positivity and also give a comparison on the contact set of two ordered potentials.
 
-The construction can be made without semipositivity of $\theta$. The point is to prove positivity only after restricting to the sets where truncation leaves the potential unchanged.
-
-Choose a Hermitian form $\Omega$ with $\theta\leq\Omega$. Every $u\in\PSH(X,\theta)$ belongs to $\PSH(X,\Omega)$. Thus $u_t=\max(u,-t)$ is a bounded quasi-plurisubharmonic function, and the signed product $(\theta+\ddc u_t)^n$ is defined by \cref{prop:bounded-products}. It need not be positive on all of $X$.
+Choose a Hermitian form $\Omega$ with $\theta\leq\Omega$. Every $u\in\PSH(X,\theta)$ belongs to $\PSH(X,\Omega)$. Thus $u_t$ is a bounded quasi-plurisubharmonic function, and the signed product $(\theta+\ddc u_t)^n$ is defined by \cref{prop:bounded-products}.
 
 \begin{lemma}\label{lem:restricted-positive-product}
-With $D_t=\{u>-t\}$, one has
+The restricted product satisfies
 \[
  0\leq\mathbf1_{D_t}(\theta+\ddc u_t)^n
  \leq\mathbf1_{D_t}(\Omega+\ddc u_t)^n.
@@ -153,7 +124,7 @@ The right-hand side has finite mass because it is dominated by a bounded $\Omega
 For intrinsicness, let $f$ be a smooth real function on $X$ and consider the decomposition $\theta'=\theta+\ddc f$, $u'=u-f$. On each set where both potentials are bounded below, sufficiently deep truncations agree with their untruncated potentials. The two bounded-potential currents then agree on that set, and plurifine locality gives equality of the restricted products. Such sets exhaust the complement of the common pole set, since $f$ is smooth and bounded. This proves the assertion; changes of additive normalization are a special case. Any two smooth decompositions of the same current differ in this way by the elliptic-regularity argument in \cref{prop:bounded-products}.
 \end{proof}
 
-For finite mass, this is the usual non-pluripolar product. The restricted construction is the mechanism in \cite[Proposition 2.1]{BGL25}. Allowing an extended measure removes the need for a global variation bound at this stage. It does not remove the need for such a bound when a global current is required.
+For finite mass, this is the usual non-pluripolar product. Allowing an extended measure removes the need for a global variation bound at this stage. It does not remove the need for such a bound when a global current is required.
 
 \begin{proposition}\label{prop:ordered-contact-general}
 Let $\theta$ be any smooth real $(1,1)$-form and let $u,v\in\PSH(X,\theta)$ satisfy $u\leq v$. Then
@@ -199,9 +170,9 @@ $(\theta+\ddc u_t+2\epsilon\kappa)^n$ and
 $(\theta+\ddc v_t+2\epsilon\kappa)^n$. These are polynomials in $\epsilon$ whose coefficients have locally finite variation. They converge in local total variation as $\epsilon\downarrow0$, including after restriction to $\{u=v\}\cap D_t$. This proves the inequality for background $\theta$ on each finite level. Finally let $t\to+\infty$. The common pole set has zero extended mass, and the levels exhaust its complement in the equality set.
 \end{proof}
 
-\section{The bounded mass hypothesis}
+\section{The bounded mass property}
 
-Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ and $\eta$ denote Hermitian forms on $X$. Backgrounds $\theta$ below are smooth real $(1,1)$-forms, and $C>0$ denotes a comparison constant. The extended measure $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ is the positive restricted-truncation measure of \cref{thm:arbitrary-extended-ma}.
+A uniform bound for the masses of bounded potentials passes to every restricted truncation limit. We now identify this property and prove that it is independent of the Hermitian form used to define it. Smooth decreasing regularization reduces its verification to smooth potentials.
 
 \begin{definition}\label{def:bmp}
 For a Hermitian form $\omega$, set
@@ -226,7 +197,7 @@ By positivity of mixed bounded products,
 $\int_X(\eta+\ddc v)^n\leq C^n v_+(\omega)$.
 Comparison in the other direction proves metric independence.
 
-For the last assertion apply \cref{thm:bounded-exact-regularization}. The smooth approximants decrease and remain uniformly bounded, so continuity of bounded products gives convergence of their total masses. The reverse inequality between the two suprema is immediate. This also recovers the comparison recorded after \cite[Definition 1.16]{BGL25}.
+For the last assertion apply \cref{thm:bounded-exact-regularization}. The smooth approximants decrease and remain uniformly bounded, so continuity of bounded products gives convergence of their total masses. The reverse inequality between the two suprema is immediate.
 \end{proof}
 
 \begin{proposition}\label{prop:bmp-finite}
@@ -239,54 +210,13 @@ Assume $v_+(\omega)<+\infty$. If $0\leq\theta\leq C\omega$ and $u\in\PSH(X,\thet
 For $t>0$, set $u_t=\max(u,-t)$ and $D_t=\{u>-t\}$. Every such truncation is bounded and $\theta$-plurisubharmonic. Apply the comparison of positive forms from \cref{prop:bmp-metric} to $u_t$, and then restrict to $D_t$. The bound is independent of $t$, so it passes to the increasing limit.
 \end{proof}
 
-For arbitrary smooth backgrounds, including non-semipositive ones, the comparison in \cref{thm:arbitrary-extended-ma} gives the same finite-mass conclusion under bounded mass, after enlarging the Hermitian metric. The finite mixed-current construction of \cite[Theorem 2.2]{BGL25} also uses a uniform variation bound before removing the restrictions. Such a bound is unnecessary for an extended positive measure, but is essential for viewing the result as a global current.
+For arbitrary smooth backgrounds, including non-semipositive ones, the comparison in \cref{thm:arbitrary-extended-ma} gives the same finite-mass conclusion under bounded mass, after enlarging the Hermitian metric. A positive measure on compact $X$ defines a current of order zero precisely when it has finite mass.
 
-The counterexample of Xia--Zhang \cite{XZ26} shows that \cref{def:bmp} is a genuine restriction in dimension three. Smooth solvability of an equation with a fixed density, established in the next part, therefore coexists with failure of a uniform mass bound over all potentials.
-
-\section{Small exponential weights}
-
-Let $X$ be a connected compact complex manifold, let $\omega$ be a Hermitian form, and fix a smooth positive volume form $\mathrm{d}V$ on $X$. All $L^1$ norms and integrals in this section use this volume form.
-
-First, \cref{thm:normalized-compactness} gives, for normalized potentials $v\in\PSH(X,\omega)$ with $\sup_Xv=0$,
-\begin{equation}\label{eq:normalized-lone}
- \int_X|v|\,\mathrm{d}V\leq K_\omega.
-\end{equation}
-Changing the smooth volume form only changes the constant. The genuine decreasing-limit consequence is \cref{cor:decreasing-limit}. The normalized estimate is also recorded in \cite[Proposition 6.2]{Dinew16}.
-
-Second, local Skoda integrability implies that every quasi-plurisubharmonic function $v$ on compact $X$ admits some exponent $a(v)>0$ for which $\mathrm{e}^{-a(v)v}$ is integrable. Indeed, apply the local theorem to a plurisubharmonic correction near each point, and then take the minimum exponent over a finite cover. The local theorem is recalled in \cite[Section 1]{Zeriahi01}. This assertion is qualitative: the exponent may initially depend on $v$.
-
-The compactness estimate and this standard local input imply the uniform version needed here.
-
-\begin{lemma}\label{lem:uniform-exponential}
-There are constants $\alpha>0$ and $C<+\infty$, depending on $(X,\omega,\mathrm{d}V)$, such that
-\[
- \int_X\mathrm{e}^{-\alpha v}\,\mathrm{d}V\leq C
- \quad\hbox{for all }v\in\PSH(X,\omega),\quad \sup_Xv=0.
-\]
-\end{lemma}
-\begin{proof}
-Suppose no such pair exists. Set $a_j=2^{-j}$ and choose normalized potentials $v_j\leq0$ with
-\[
- \int_X\exp\!\left(-\frac{a_j}{j}v_j\right)\mathrm{d}V\geq2^j.
-\]
-The partial sums $V_N=\sum_{j\leq N}a_jv_j$ decrease, are $\omega$-plurisubharmonic, and have uniformly bounded $L^1$ norms by \eqref{eq:normalized-lone}. Their limit $V$ is therefore $\omega$-plurisubharmonic. Since all summands are nonpositive, $V\leq a_jv_j$ for every $j$.
-
-\Needspace{6\baselineskip}
-Fix $p>0$. For every $j\geq1/p$,
-\[
- \int_X\mathrm{e}^{-pV}\,\mathrm{d}V
- \geq\int_X\mathrm{e}^{-pa_jv_j}\,\mathrm{d}V
- \geq\int_X\mathrm{e}^{-(a_j/j)v_j}\,\mathrm{d}V
- \geq2^j.
-\]
-Thus $\mathrm{e}^{-pV}$ is nonintegrable for every $p>0$, contradicting the qualitative Skoda input applied to $V$.
-\end{proof}
+The threefold constructed in \cref{chap:hopf} fails the bounded mass property. Smooth solvability of an equation with a fixed density, established in the next part, therefore coexists with failure of a uniform mass bound over all potentials.
 
 \section{Infinite mass with trivial multiplier ideals}
 
-Let $X$ be a connected compact complex manifold of dimension $n$, let $\omega$ be a Hermitian form, and fix a smooth positive volume form $\mathrm{d}V$ on $X$. Write $\omega_u=\omega+\ddc u$ and let $v_+(\omega)$ be the upper bounded-potential mass of \cref{def:bmp}. We use the extended measure of \cref{thm:arbitrary-extended-ma} and the multiplier ideal $\mathcal I(u)$ of \cref{def:multiplier-ideal}; $\mathcal O_X$ denotes the sheaf of holomorphic functions on $X$.
-
-The failure of bounded mass has a consequence for individual singularities, rather than only for sequences of smooth potentials.
+When $v_+(\omega)=+\infty$, a weighted sum of smooth potentials with rapidly growing masses produces one potential of infinite mass. The weights can be chosen so that every exponential remains integrable. Thus the failure occurs within the multiplier-ideal class of a smooth potential.
 
 \begin{theorem}\label{thm:infinite-mass-witness}
 If $v_+(\omega)=+\infty$, there is $U\in\PSH(X,\omega)$, $U\leq0$, such that
@@ -363,6 +293,6 @@ The first assertion follows from \cref{prop:bmp-finite,thm:infinite-mass-witness
 Positivity of mixed products gives a lower bound of $\varepsilon^n$ times the truncation measure for $U$. Its limiting mass is therefore infinite. Finally, $\|\varepsilon U\|_{L^1}\to0$.
 \end{proof}
 
-In particular, the manifold in \cite{XZ26} has a potential that is $\mathcal I$-equivalent to a smooth function while its extended mass is infinite. Thus the multiplier ideals alone cannot control the mass of a representative. A Hermitian characterization of $\mathcal I$-goodness must specify a finite-mass domain or a different global invariant; \cref{chap:hermitian-igood} returns to this problem.
+In particular, the manifold in \cref{chap:hopf} has a potential that is $\mathcal I$-equivalent to a smooth function while its extended mass is infinite. Thus the multiplier ideals alone cannot control the mass of a representative. A Hermitian characterization of $\mathcal I$-goodness must specify a finite-mass domain or a different global invariant; \cref{chap:hermitian-igood} returns to this problem.
 
 \input{author/section_integrable_infinite_mass}
