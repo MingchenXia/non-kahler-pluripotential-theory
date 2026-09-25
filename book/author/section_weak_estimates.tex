@@ -1,71 +1,6 @@
-\section{Local capacity estimates}
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{chap:products}. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity in \cref{sec:hermitian-capacity}, and $\operatorname{Vol}(E)=\int_E\mathrm{d}V$ for Borel $E\subset X$. All function norms use $\mathrm{d}V$. We now reconstruct the existence arguments from classical local Bedford--Taylor estimates.
-
-The local capacity and weighted integral estimates are recalled in \cref{sec:psh-local-capacity}. A finite coordinate cover transfers them to the fixed Hermitian background.
-
-\begin{lemma}\label{lem:global-capacity-estimates}
-There are constants $a,C>0$ such that
-\begin{equation}\label{eq:global-volume-capacity}
- \operatorname{Vol}(E)\leq C\exp\bigl(-a\operatorname{Cap}(E)^{-1/n}\bigr)
-\end{equation}
-for every Borel $E\subset X$. Also, for $u\in\PSH(X,\omega)$ with $\sup_Xu=0$ and $t>1$,
-\begin{equation}\label{eq:global-capacity-tail}
- \operatorname{Cap}(\{u<-t\})\leq C/t.
-\end{equation}
-\end{lemma}
-\begin{proof}
-Take a finite cover by smaller coordinate balls $B'_j\Subset B_j$. A local capacity test $0\leq v\leq1$ on $B_j$ can be made into a global test as follows. Choose a smooth function $\chi_j$ equal to zero near $\overline{B'_j}$, equal to $-2$ near $\partial B_j$, and with $-2\leq\chi_j\leq0$. Choose $\delta>0$ small enough that
-\[
- \omega+\delta\ddc\chi_j\geq0,\qquad 3\delta/2\leq1.
-\]
-The function
-\[
- V=\max\{\delta(v+\chi_j),-\delta/2\}+\delta/2
- \quad\hbox{on }B_j,
- \qquad V=0\quad\hbox{outside }B_j
-\]
-is globally $\omega$-plurisubharmonic and lies between zero and one. Near the boundary the constant branch is selected. On $B'_j$ we have $\omega_V\geq\delta\ddc v$. Positivity of bounded products therefore gives
-\[
- \operatorname{cap}(E\cap B'_j,B_j)
- \leq\delta^{-n}\operatorname{Cap}(E).
-\]
-The local volume estimate, followed by summation over the finite cover, proves \eqref{eq:global-volume-capacity}.
-
-For the second estimate, choose on each $B_j$ a smooth negative quadratic function $r_j$ with $\ddc r_j\geq\omega$. For every global test $0\leq v\leq1$, the functions $u+r_j\leq0$ and $v+r_j$ are plurisubharmonic. Thus
-\[
- \begin{split}
- \int_{\{u<-t\}}\omega_v^n
- &\leq t^{-1}\int_X(-u)\omega_v^n\\
- &\leq t^{-1}\sum_j\int_{B'_j}(-u-r_j)
-                    \bigl(\ddc(v+r_j)\bigr)^n\\
- &\leq \frac Ct\left(1+\int_X|u|\,\mathrm{d}V\right).
- \end{split}
-\]
-Here the second inequality uses $\omega_v\leq\ddc(v+r_j)$, and the third is the local weighted estimate; the local test functions have a common bounded range. The normalized $L^1$ bound in \cref{thm:normalized-compactness} finishes the proof after taking the supremum over $v$.
-\end{proof}
-
-\begin{corollary}\label{cor:lp-capacity-square}
-Fix $p>1$. There is $C_p$ such that every nonnegative $F\in L^p(X,\mathrm{d}V)$ satisfies
-\[
- \int_E F\,\mathrm{d}V\leq C_p\|F\|_p\operatorname{Cap}(E)^2
-\]
-for every Borel set $E$.
-\end{corollary}
-\begin{proof}
-H\"older's inequality and \eqref{eq:global-volume-capacity} bound the integral by
-\[
- C\|F\|_p\exp(-a\operatorname{Cap}(E)^{-1/n}/p'),
- \qquad p'=p/(p-1).
-\]
-The quotient of this exponential by $x^2$ is bounded on $0<x\leq\operatorname{Cap}(X)<\infty$. Capacity-zero sets have zero smooth volume.
-\end{proof}
-
-The exponent two is only a convenient choice. The same proof gives any fixed positive power of capacity. No uniform bound over all bounded potentials appears here: only tests in the fixed interval $[0,1]$ define the capacity.
-
 \section{Sublevels and the uniform potential bound}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{chap:products}. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity in \cref{sec:hermitian-capacity}, and $\operatorname{Vol}(E)=\int_E\mathrm{d}V$ for Borel $E\subset X$. All function norms use $\mathrm{d}V$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{prop:bounded-products}. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity in \cref{sec:hermitian-capacity}, and $\operatorname{Vol}(E)=\int_E\mathrm{d}V$ for Borel $E\subset X$. All function norms use $\mathrm{d}V$.
 
 \begin{lemma}\label{lem:thin-sublevel-capacity}
 Let $u,v\in\PSH(X,\omega)\cap L^\infty(X)$, with $-H\leq v\leq0$ and $H\geq1$. Fix $0<\varepsilon<1$, and put
@@ -158,7 +93,7 @@ The bound is deliberately coarse; it suffices for compactness. The positive lowe
 
 \section{From \texorpdfstring{$L^1$}{L1} convergence to uniform convergence}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{chap:products}. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity in \cref{sec:hermitian-capacity}, and $\operatorname{Vol}(E)=\int_E\mathrm{d}V$ for Borel $E\subset X$. All function norms use $\mathrm{d}V$. For $p>1$, set $p'=p/(p-1)$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{prop:bounded-products}. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity in \cref{sec:hermitian-capacity}, and $\operatorname{Vol}(E)=\int_E\mathrm{d}V$ for Borel $E\subset X$. All function norms use $\mathrm{d}V$. For $p>1$, set $p'=p/(p-1)$.
 
 \begin{theorem}\label{thm:lp-uniform-compactness}
 Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
@@ -195,7 +130,7 @@ The density bound is essential to the argument: normalized $L^1$ compactness alo
 
 \section{Existence for an \texorpdfstring{$L^p$}{Lp} density}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{chap:products}. Fix $p>1$ and a nonnegative $f\in L^p(X,\mathrm{d}V)$ with $\int_Xf\,\mathrm{d}V>0$. We prove the continuous existence assertion of \cref{thm:kn-continuous} for these data. All norms below use $\mathrm{d}V$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{prop:bounded-products}. Fix $p>1$ and a nonnegative $f\in L^p(X,\mathrm{d}V)$ with $\int_Xf\,\mathrm{d}V>0$. We prove the continuous existence assertion of \cref{thm:kn-continuous} for these data. All norms below use $\mathrm{d}V$.
 
 \begin{proof}[of \cref{thm:kn-continuous}]
 Choose smooth strictly positive $f_j\to f$ in $L^p(X,\mathrm{d}V)$. Smooth existence gives
@@ -217,7 +152,7 @@ Bounded Bedford--Taylor continuity gives $\omega_{u_j}^n\rightharpoonup\omega_u^
 
 \section{The exponential equation and the Gauduchon mean}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{chap:products}. Fix $\lambda>0$. All $L^p$ norms below are taken with respect to $\mathrm{d}V$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\mathrm{d}V$ be a smooth positive volume form on $X$. For $u\in\PSH(X,\omega)$ write $\omega_u=\omega+\ddc u$; products of bounded potentials have the meaning of \cref{prop:bounded-products}. Fix $\lambda>0$. All $L^p$ norms below are taken with respect to $\mathrm{d}V$.
 
 The exponential equation also needs control of the additive constants. The following use of the Gauduchon trace provides the upper bound, even when the densities tend to zero at some points.
 

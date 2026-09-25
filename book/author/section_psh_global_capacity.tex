@@ -1,0 +1,78 @@
+\section{Hermitian capacity}
+\label{sec:hermitian-capacity}
+
+Local capacity tests can be glued to the constant function on a compact manifold after a fixed rescaling. This compares local Bedford--Taylor capacity with a capacity defined by global potentials and transfers both volume estimates and normalized sublevel estimates to $X$.
+
+For a Borel set $E\subset X$, put
+\[
+ \operatorname{Cap}_\omega(E)
+ =\sup_{v\in\PSH(X,\omega),\ 0\leq v\leq1}
+             \int_E(\omega+\ddc v)^n.
+\]
+The products are those of \cref{prop:bounded-products}. Their local expansion and \eqref{eq:local-cln-range} show that $\operatorname{Cap}_\omega(X)<+\infty$. On relatively compact coordinate balls, a fixed smooth correction bounds the measures of global tests by a constant times the corresponding local capacity. Conversely, the gluing construction below bounds local capacity by global capacity. Thus the quasi-continuity and capacity-zero characterizations in \cref{sec:psh-local-capacity} hold for $\operatorname{Cap}_\omega$. Convergence in this capacity means
+\[
+ \operatorname{Cap}_\omega(\{|u_j-u|>\delta\})\longrightarrow0
+ \quad\text{for every }\delta>0,
+\]
+where pole sets may be omitted. The bounded-product continuity statements of \cref{sec:psh-local-capacity} pass to the Hermitian products by their local expansion and a finite cover.
+
+For the following estimates, abbreviate $\operatorname{Cap}=\operatorname{Cap}_\omega$ and $\omega_v=\omega+\ddc v$, and let $\operatorname{Vol}$ denote the volume for the fixed smooth measure $\mathrm{d}V$.
+
+\begin{lemma}\label{lem:global-capacity-estimates}
+There are constants $a,C>0$ such that
+\begin{equation}\label{eq:global-volume-capacity}
+ \operatorname{Vol}(E)\leq C\exp\bigl(-a\operatorname{Cap}(E)^{-1/n}\bigr)
+\end{equation}
+for every Borel $E\subset X$. Also, for $u\in\PSH(X,\omega)$ with $\sup_Xu=0$ and $t>1$,
+\begin{equation}\label{eq:global-capacity-tail}
+ \operatorname{Cap}(\{u<-t\})\leq C/t.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Take a finite cover by smaller coordinate balls $B'_j\Subset B_j$. A local capacity test $0\leq v\leq1$ on $B_j$ can be made into a global test as follows. Choose a smooth function $\chi_j$ equal to zero near $\overline{B'_j}$, equal to $-2$ near $\partial B_j$, and with $-2\leq\chi_j\leq0$. Choose $\delta>0$ small enough that
+\[
+ \omega+\delta\ddc\chi_j\geq0,\qquad 3\delta/2\leq1.
+\]
+The function
+\[
+ V=\max\{\delta(v+\chi_j),-\delta/2\}+\delta/2
+ \quad\hbox{on }B_j,
+ \qquad V=0\quad\hbox{outside }B_j
+\]
+is globally $\omega$-plurisubharmonic and lies between zero and one. Near the boundary the constant branch is selected. On $B'_j$ we have $\omega_V\geq\delta\ddc v$. Positivity of bounded products therefore gives
+\[
+ \operatorname{cap}(E\cap B'_j,B_j)
+ \leq\delta^{-n}\operatorname{Cap}(E).
+\]
+The local volume estimate, followed by summation over the finite cover, proves \eqref{eq:global-volume-capacity}.
+
+For the second estimate, choose on each $B_j$ a smooth negative quadratic function $r_j$ with $\ddc r_j\geq\omega$. For every global test $0\leq v\leq1$, the functions $u+r_j\leq0$ and $v+r_j$ are plurisubharmonic. Thus
+\[
+ \begin{split}
+ \int_{\{u<-t\}}\omega_v^n
+ &\leq t^{-1}\int_X(-u)\omega_v^n\\
+ &\leq t^{-1}\sum_j\int_{B'_j}(-u-r_j)
+                    \bigl(\ddc(v+r_j)\bigr)^n\\
+ &\leq \frac Ct\left(1+\int_X|u|\,\mathrm{d}V\right).
+ \end{split}
+\]
+Here the second inequality uses $\omega_v\leq\ddc(v+r_j)$, and the third is the local weighted estimate; the local test functions have a common bounded range. The normalized $L^1$ bound in \cref{thm:normalized-compactness} finishes the proof after taking the supremum over $v$.
+\end{proof}
+
+\begin{corollary}\label{cor:lp-capacity-square}
+Fix $p>1$. There is $C_p$ such that every nonnegative $F\in L^p(X,\mathrm{d}V)$ satisfies
+\[
+ \int_E F\,\mathrm{d}V\leq C_p\|F\|_p\operatorname{Cap}(E)^2
+\]
+for every Borel set $E$.
+\end{corollary}
+\begin{proof}
+H\"older's inequality and \eqref{eq:global-volume-capacity} bound the integral by
+\[
+ C\|F\|_p\exp(-a\operatorname{Cap}(E)^{-1/n}/p'),
+ \qquad p'=p/(p-1).
+\]
+The quotient of this exponential by $x^2$ is bounded on $0<x\leq\operatorname{Cap}(X)<\infty$. Capacity-zero sets have zero smooth volume.
+\end{proof}
+
+The same proof bounds an $L^p$ density by any fixed positive power of capacity. The choice of the exponent two will be convenient for the sublevel iteration in \cref{lem:backwards-capacity}.

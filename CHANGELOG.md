@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint113: Chapter 7 rewrite
+
+Rewrite Chapter 7 and its nested input as a complete unit: mathematical section openings, titles and transitions replace repeated setup, definitions and recaps. Collect bounded smooth-background products, the convex chain rule and general Hermitian capacity estimates in Chapter 1. Keep the range-growth and damping arguments with Chapter 7, using internal references to their general inputs. Correct the scaling example to choose the stronger coefficient-integrable witness and use its stated range 0<epsilon<1. Repair moved-result references without counting later chapters as rewritten.
+
+Both direct reads are complete. The 66 formal blocks are preserved, with five quantifier/notation/wording edits; 51 of 57 proof environments are unchanged and six have calculation-relocation or dependency/prose edits. The thirteen-input house audit retains eight inherited errors/eighteen warnings, with no new findings. The final book has 810 pages. Compilation has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 106 selected book pages passed visual inspection. The 17-page companion is byte-identical to checkpoint112. Both outputs rebuilt in a fresh empty extraction, with every reconstructed page text matching production. Exact checks are recorded in the checkpoint audits. Continue the chapter rewrite at Chapter 8; the independent proof queue remains at Section 12.2 and Q2.8 remains pending.
+
 ## 25 September 2026 — Checkpoint112: psh foundations and historical sources
 
 Collect general psh results and complete proofs in Chapter 1, including local capacity inputs, analytic and Chern regularization, multiplier ideals, divisorial estimates, envelopes, the minimum principle, descent and fixed-measure convergence. Remove their later copies and the former analytic-approximation chapter; retain the restricted-approximation corollary with trace data. Rewrite the uniform Lelong bound by local cutoff and normalized compactness to avoid a forward Gauduchon dependency. Keep distinct regularization sequences and all regime-specific hypotheses. Complete the Chapter 6 introduction/notation pass and repair relocation seams throughout the body.

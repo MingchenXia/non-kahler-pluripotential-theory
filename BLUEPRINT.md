@@ -183,3 +183,7 @@ General psh results are to be collected in the first chapter. Start by moving th
 ## Foundations and historical notes, checkpoint112
 
 Centralize the general psh results in the first chapter and move all paper citations to the final historical chapter, preserving exact locators and their mathematical links. The lower-curvature and regularization hypotheses are unchanged. Rewrite the uniform Lelong estimate using local cutoff mass bounds so the first chapter does not depend on later Gauduchon theory. Complete the Chapter 6 editorial pass; continue with Chapter 7. The bounded-domination section (now 12.2), Q2.8 review and the research program remain pending. This structural release does not constitute whole-book proof certification.
+
+## Chapter-by-chapter rewrite, checkpoint113
+
+The user's latest direction requires each chapter and its nested sections to be rewritten as a complete unit against all earlier standards. Chapter 7, *Weighted Monge–Ampère measures*, completes that pass. Its bounded-range estimate, damping constructions, capacity continuity and undamped tail criterion now form one argument without repeated setup or definitions. The general bounded-product calculus, convex chain rule and Hermitian capacity estimates are collected in Chapter 1; later citations point to those results. The scaling example explicitly uses the stronger coefficient-integrable witness and its range 0<epsilon<1. Continue at Chapter 8. The separate proof queue remains at Section 12.2, and Q2.8 and the research program remain pending.

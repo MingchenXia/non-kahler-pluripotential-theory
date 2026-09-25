@@ -4,13 +4,13 @@ The chapter numbers below refer to the current book. Earlier review records keep
 
 ## Foundations
 
-Chapter 1 develops the elementary calculus, normalized compactness, exponential integrability, local products and capacity, regularization, multiplier ideals, divisorial estimates, obstacle envelopes, the minimum principle, pullback and descent, and convergence against a fixed non-pluripolar measure. The analytic regularization with a prescribed multiplier-ideal type is kept separate from the decreasing sequence with smooth resolved remainders. The Chern regularization estimates retain their different boundedness and background hypotheses.
+Chapter 1 develops the elementary calculus, normalized compactness, exponential integrability, local products, bounded smooth-background products, Hermitian capacity and its volume/sublevel estimates, regularization, multiplier ideals, divisorial estimates, obstacle envelopes, the minimum principle, pullback and descent, and convergence against a fixed non-pluripolar measure. The analytic regularization with a prescribed multiplier-ideal type is kept separate from the decreasing sequence with smooth resolved remainders. The Chern regularization estimates retain their different boundedness and background hypotheses.
 
 Chapters 2–4 explain torsion, mass variation, the obstruction to a primitive of the raw Monge–Ampère one-form, and Gauduchon traces and positivity. A Gauduchon surface has invariant smooth mass, but this alone does not give the raw energy primitive. Persistence under potential perturbation in higher dimensions requires the precise mass-invariance identities.
 
 Chapter 5 identifies normalized potentials with their finite Gauduchon traces. Its linear inverse L1 estimate and square-root forward estimate also apply to unbounded potentials. These linear estimates do not control nonlinear Monge–Ampère mass.
 
-Chapters 6–8 construct extended non-pluripolar products, finite damped measures and the Hopf counterexample. Infinite determinant integrals can coexist with coefficient-L1 convergence of currents and total-variation convergence of their traces. The explicit Hopf geometry also has a sharp fiber-average coercivity estimate; it is not a general mass hypothesis.
+Chapter 6 extends the first-chapter bounded products to non-pluripolar measures. Chapter 7 develops finite weighted measures, their capacity continuity and the uniform-tail criterion for undamped convergence. Chapter 8 gives the Hopf counterexample. Infinite determinant integrals can coexist with coefficient-L1 convergence of currents and total-variation convergence of their traces. The explicit Hopf geometry also has a sharp fiber-average coercivity estimate; it is not a general mass hypothesis.
 
 ## Equations and singularity types
 
