@@ -1,6 +1,6 @@
 \section{Maxima and the maximum principle}
 
-Truncating a potential requires stability under maxima. For a smooth background, this follows from the local psh maximum theorem by freezing the coefficients and then letting the curvature error tend to zero. The submean inequality also determines pointwise order from almost-everywhere order and forces upper-bounded plurisubharmonic functions on Euclidean space to be constant.
+Maxima allow us to truncate potentials and to replace them on an open set while preserving a lower curvature bound. For a smooth background, the local psh maximum and gluing principles retain that bound by freezing the coefficients and then letting the curvature error tend to zero. The submean inequality also determines pointwise order from almost-everywhere order and forces upper-bounded plurisubharmonic functions on Euclidean space to be constant.
 
 \begin{lemma}\label{lem:max-psh}
 If $u,v\in\PSH(X,\theta)$, then $\max(u,v)\in\PSH(X,\theta)$. Consequently, if $\theta\geq0$ and $u\in\PSH(X,\theta)$, then $\max(u,-t)$ is $\theta$-plurisubharmonic for every real $t$.
@@ -13,6 +13,17 @@ The maximum is quasi-plurisubharmonic by a common local smooth correction. To ve
 on each such neighborhood. Let $\varepsilon\to0$. For the last assertion, constants belong to $\PSH(X,\theta)$ when $\theta\geq0$.
 \end{proof}
 
+\begin{lemma}\label{lem:qpsh-gluing}
+Let $Y$ be a complex manifold, let $\beta$ be a smooth real $(1,1)$-form on $Y$, and let $D\subset Y$ be open. Suppose $u$ is $\beta$-plurisubharmonic on $Y$, $v$ is $\beta$-plurisubharmonic on $D$, and
+\[
+ \limsup_{D\ni y\to x}v(y)\leq u(x)\qquad(x\in\partial D).
+\]
+Then the function equal to $\max(u,v)$ on $D$ and to $u$ on $Y\setminus D$ is $\beta$-plurisubharmonic.
+\end{lemma}
+\begin{proof}
+Call the pasted function $w$. It is upper semicontinuous by the boundary inequality. Freeze $\beta$ on a small coordinate ball as in \cref{lem:max-psh}, and choose a quadratic correction $r$ so that $u+r$ and $v+r$ are plurisubharmonic on their respective domains. Away from $\partial D$, the function $w+r$ is plurisubharmonic by the maximum theorem. At a point of $\partial D$ it equals $u+r$ and dominates $u+r$ on the ball, so it satisfies the submean inequality on every complex line through that point. Thus $w+r$ is plurisubharmonic on the whole ball. Letting the coefficient-freezing error tend to zero gives $\beta+\ddc w\geq0$.
+\end{proof}
+
 Almost-everywhere order also determines pointwise order. This permits comparisons proved in a Sobolev class to be applied to the quasi-plurisubharmonic potentials themselves.
 
 \begin{lemma}\label{lem:qpsh-almost-everywhere-order}
@@ -22,6 +33,7 @@ Let $a,b$ be quasi-plurisubharmonic functions. If $a\leq b$ almost everywhere, t
 On a coordinate ball add the same smooth function $q$ so that $a+q$ and $b+q$ are plurisubharmonic. At each point a plurisubharmonic function equals the limit of its ball averages as the radius tends to zero, by the submean inequality and upper semicontinuity. The almost-everywhere inequality orders these averages, so passage to the limit gives $a+q\leq b+q$. Subtract $q$.
 \end{proof}
 
+\Needspace{8\baselineskip}
 \begin{lemma}\label{lem:strict-set-positive-volume}
 If $a,b$ are quasi-plurisubharmonic functions and $\{a<b\}$ is nonempty at a point where both are finite, then this set has positive smooth volume.
 \end{lemma}

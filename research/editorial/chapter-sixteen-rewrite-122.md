@@ -1,0 +1,36 @@
+# Chapter 16 — complete rewrite and proof review, checkpoint122
+
+Date: 25 September 2026. Baseline: c3682a62374a6c34df74060f52042453c6d87ab1 (checkpoint121). The continuing whole-book goal remains active and incomplete.
+
+## Scope and reading record
+
+The whole of `book/author/chapter_rays.tex` was read directly before editing and reread directly after editing. It has five sections and no nested inputs. Both complete reads also cover the changed Chapter 1 inputs `section_psh_maxima.tex` and `section_psh_minimum.tex`. Their addition is a bounded foundation update, not a new whole-Chapter 1 review.
+
+Targeted dependencies were checked in Chapter 1's obstacle-envelope construction, almost-everywhere order and ordinary singularity notation; the front-matter conventions; Chapter 2's integration-by-parts lemma and smooth-potential space; and Chapter 4's Gauduchon persistence proposition and explicit three-torus counterexample. These targeted reads do not certify the rest of those chapters anew. No research paper is cited in the changed chapter. The existing book references in Chapter 1 remain there; no new publication-status or external-source audit is claimed.
+
+## Editorial changes and dependencies
+
+The chapter opening now explains why product positivity gives an interpolation and why its smooth equation differs from stationarity of the L2 action. The section openings explain chord control, boundary barriers, the Schur complement and volume variation. Repeated manifold/background/volume setups, the ordinary-type definition, the smooth-potential-space definition and repeated time-derivative notation are removed. No blanket nonemptiness of PSH is assumed. The established symbol `\sim` replaces the isolated `\simeq` notation.
+
+The general invariant-strip convexity argument is now a Chapter 1 lemma, used both by the minimum principle and by the subgeodesic chapter. A Chapter 1 gluing lemma supplies the precise joint boundary hypothesis needed for replacing a Perron path on a smaller strip. Its proof uses the submean inequality at boundary points and coefficient freezing to preserve the exact smooth lower curvature bound. The local envelope theorem and almost-everywhere order are invoked internally rather than reproved.
+
+The Perron segment terminology is introduced with the envelope construction, with prescribed endpoint attainment made explicit. The formal L2 action retains its mathematical definition but loses the unnecessary repeated qualification in the section heading. The concluding comparison uses the existing three-torus example, giving an actual smooth Perron segment that fails stationarity even though the chosen background is Gauduchon.
+
+## Mathematical checks
+
+- Invariant-strip convexity: the local correction depends only on the base. Vertical restrictions are subharmonic or identically minus infinity, and invariance converts the Laplacian into a nonnegative second real derivative. Fubini supplies the finite alternative almost everywhere. A supporting affine function on a bounded interval makes the minimum genuine.
+- Interior L1 continuity: surrounding-time chords give a common upper bound and the minimum principle gives one integrable lower bound. Pointwise finite convexity and dominated convergence apply on each compact interior interval.
+- Endpoint control: almost-everywhere limits along endpoint sequences imply the chord bound, and Chapter 1 upgrades the inequality to pointwise order. The proof now explicitly handles poles when taking the joint upper limit.
+- Perron construction: the joint upper-semicontinuous chord bounds the regularized product supremum; a competitor makes every slice genuine. The explicit inequality `|uP_t-u0| <= |w_t-u0| + t|u1-u0|` proves endpoint attainment. On an interior substrip the new envelope dominates the old one, and its joint boundary limits permit gluing. Original endpoint cases use the same boundary bounds.
+- Same ordinary type: the maximum of the two affine barriers attains both endpoints and satisfies the displayed bounded-difference estimates. Convex endpoint slopes bound all secant slopes, giving the claimed uniform time-Lipschitz constant away from the common pole set. The constant is explicitly nonnegative.
+- Smooth matrix formula: the former phrase defining `(h^{i bar j})` as the inverse coefficient matrix was incompatible with the following index contraction for general complex off-diagonal coefficients. The rewritten formula uses the column `xi=(partial_i dot u)` and the unambiguous scalar `xi* H^{-1} xi`. For example, with `H=[[2,i],[-i,2]]` and `xi=(1,i)`, this scalar is 2, while contracting the literal inverse entries in the former order gives 2/3. The block determinant and the rank-one trace identity now use the same ordering. The invariant wedge-form equation is unchanged.
+- L2 variation: time integration differentiates both velocity and volume. Spatial integration by parts is applied to the entire form `f^2 T`; the product rule has cross term `2 f (df wedge dcT - dcf wedge dT)`. Its Hessian term cancels the volume derivative. Strict positivity on the compact time interval permits all sufficiently small fixed-endpoint variations. Necessity and sufficiency both follow.
+- Constant translations: zero acceleration and zero spatial velocity derivative give the product equation; action stationarity leaves exactly `(n/2) a^2 ddc(omega_u^{n-1})`. The Chapter 4 example supplies failure of this condition through a positive perturbation of a Gauduchon metric. In dimension one the condition is automatic. No nonsmooth homogeneous-equation theorem or complete metric interpretation is asserted.
+
+## Release validation
+
+All 7 Chapter 16 formal statements retain their labels; 3 are byte-identical to the baseline. All 7 proofs remain, of which 1 is byte-identical. Across the three reviewed inputs there are 16 formal blocks and 16 proofs, including the two new foundation lemmas. The matrix-order correction is recorded above; the invariant equation and variational formula retain their mathematical content.
+
+The house audit retains zero errors and one inherited chapter-label warning. Non-book citation placement passes. The final book has 794 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 42 selected final pages passed visual inspection: front matter and contents, conventions, the changed Chapter 1 sections with transitions, complete Chapter 16 with transitions, and the complete bibliography. Section openings and statement/proof page breaks were adjusted and reinspected. The seventeen-page companion is byte-identical to checkpoint121. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs. Exact hashes and checks are in build-snapshot-122.json and source-package-portability-122.json. All 190 historical verifier reports and three hidden sources remain unchanged.
+
+Both chapter queues continue with the complete Chapter 17, including every nested input. Historical verifier reports and hidden Nakamaye files are outside this edit; no new independent verifier run is claimed.

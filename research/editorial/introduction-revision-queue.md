@@ -21,7 +21,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 13 | `chapter_prescribed_equations.tex` | 50 | Complete chapter and all 32 nested-input rewrite, first/second direct reads and release checks in checkpoint119. |
 | 14 | `chapter_normalization.tex` | 20 | Complete chapter and all nine final nested-input rewrite, first/second direct reads and release checks in checkpoint120; includes Q2.8 selection. |
 | 15 | `chapter_igood.tex` | 9 | Complete chapter and all three nested-input rewrite, first/second direct reads and release checks in checkpoint121. |
-| 16 | `chapter_rays.tex` | 5 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
+| 16 | `chapter_rays.tex` | 5 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint122; general strip convexity and gluing belong to Chapter 1. |
 | 17 | `chapter_testcurves.tex` | 5 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 18 | `chapter_trace_data.tex` | 12 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 19 | `chapter_sections.tex` | 8 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
@@ -41,7 +41,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 33 | `chapter_history.tex` | 18 | New historical chapter: exact locator audit and second editorial read in checkpoint112. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 
-Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–121 complete the full rewrites of Chapters 7–15, including all their nested inputs. Continue chapter by chapter at Chapter 16, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes Chapter 15 in checkpoint121 and proceeds to Chapter 16.
+Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–122 complete the full rewrites of Chapters 7–16, including all their nested inputs. Continue chapter by chapter at Chapter 17, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes Chapter 16 in checkpoint122 and proceeds to Chapter 17.
 
 Checkpoint113 also moves bounded smooth-background products, the chain rule and general Hermitian capacity estimates into Chapter 1. The changed references in later chapters are dependency repairs, not completed chapter rewrites. Chapter 6 has five sections; Chapter 10 has nine after checkpoint116. The first chapter has 23 sections and seven subsections.
 
@@ -50,3 +50,5 @@ Checkpoint117 consolidates almost-everywhere quasi-psh order and C1,1 bounded-pr
 Checkpoint118 moves the general quasi-continuous approximation lemma into Chapter 1 and replaces repeated weighted-limit arguments by internal references. Chapter 12 has six sections after combining the model-reference condition and its positivity argument.
 
 Checkpoint119 consolidates general capacity, bounded-product and quasi-psh inputs in six Chapter 1 sections. Chapter 13 has fifty sections and subsections after moving its proper-gap argument and removing the final recap. Its two full reads include all recursively nested inputs.
+
+Checkpoint122 adds the general invariant-strip convexity and gluing lemmas to Chapter 1, with complete first/second reads of the two affected foundation inputs. Chapter 16 has five sections and no nested inputs.
