@@ -11,6 +11,13 @@ Let $I\subset\mathbb R$ be a nonempty open interval, set $S_I=\{z\in\mathbb C:\R
 A local smooth correction making $U$ plurisubharmonic can be chosen to depend only on $x$. Restriction to a vertical complex line is therefore subharmonic or identically $-\infty$. In the former case its distributional Laplacian is the second real derivative of $t\mapsto u_t(x)$, which is nonnegative. The resulting convex representative is finite on $I$ and agrees everywhere with the subharmonic function by the submean inequality. Finally, $U$ is locally integrable on the product. Fubini's theorem, applied in coordinate balls times a fixed rectangle in $S_I$, excludes the identically $-\infty$ alternative for almost every $x$.
 \end{proof}
 
+\begin{corollary}\label{cor:radial-subharmonic-convexity}
+Let $I\subset\mathbb R$ be a nonempty open interval. A radial function $z\mapsto q(\log|z|^2)$ is subharmonic on the annulus $\{z:\log|z|^2\in I\}$ if and only if $q$ is finite and convex on $I$. Allowing the identically $-\infty$ function on the annulus adds the corresponding alternative for $q$.
+\end{corollary}
+\begin{proof}
+The holomorphic covering $z=\mathrm{e}^{w/2}$ pulls the function back to $q(\Real w)$. The strip argument in \cref{lem:invariant-strip-convexity} proves necessity. Conversely, a finite convex $q$ has nonnegative distributional second derivative. Thus $q(\Real w)$ is subharmonic, and this descends through the local biholomorphisms of the covering.
+\end{proof}
+
 \begin{proposition}\label{prop:hermitian-kiselman}
 Under the hypotheses of \cref{lem:invariant-strip-convexity}, the function
 \[
@@ -35,3 +42,75 @@ Suppose $I$ is bounded. By \cref{lem:invariant-strip-convexity}, the function $t
 \end{proof}
 
 For example, the proposition applies to $u_t-t\tau$ for a fixed real $\tau$. On an unbounded interval the infimum may be $-\infty$; this alternative will encode the cutoff of a test curve.
+
+\subsection{Pointwise Legendre transforms}\label{sec:psh-legendre}
+
+The minimum principle can also show that a supremum is already upper semicontinuous. Regularizing the Legendre transform of a concave family gives a potential on the product. The minimum principle identifies its inverse transforms with the original family everywhere; applying real duality once more identifies the regularization with the pointwise supremum. We first specify the one-variable duality, including its endpoints; the general Legendre--Fenchel theorem is recalled in \cite[appendix on convex analysis]{SGPT}.
+
+\begin{lemma}\label{lem:halfline-legendre-duality}
+Let $c\in\mathbb R$. Suppose $g:\mathbb R\to[-\infty,0]$ is upper semicontinuous, concave and decreasing, finite somewhere, and equal to $-\infty$ on $(c,\infty)$. Then
+\[
+ f(t)=\sup_{\tau<c}\bigl(g(\tau)+t\tau\bigr),\qquad t>0,
+\]
+is finite and convex, satisfies $f(t)\leq ct$, and obeys
+\[
+ g(\tau)=\inf_{t>0}\bigl(f(t)-t\tau\bigr),\qquad
+ \lim_{t\downarrow0}f(t)=\sup_{\tau<c}g(\tau).
+\]
+Conversely, every finite convex $f$ on $(0,\infty)$ with $f(t)\leq ct$ is recovered by the first formula from $g(\tau)=\inf_{t>0}(f(t)-t\tau)$, and satisfies the same endpoint identity. The formulas also hold for $g\equiv-\infty$, with $f\equiv-\infty$.
+\end{lemma}
+\begin{proof}
+Decreasingness makes $g$ finite arbitrarily far to the left. Hence the defining supremum is finite for $t>0$, bounded above by $ct$ and below by any one finite affine term. Concavity and upper semicontinuity give $g(c)=\lim_{\tau\uparrow c}g(\tau)$, so including $c$ does not change the supremum. The Legendre transform of $-g$ is infinite for $t<0$. At $t=0$ it equals $m=\sup_{\tau<c}g(\tau)$; the bounds
+\[
+ g(\tau)+t\tau\leq f(t)\leq m+ct
+\]
+show that $f(t)\to m$ as $t\downarrow0$. The biconjugacy theorem for the closed convex function $-g$ therefore gives the inverse formula, with $t=0$ omitted without changing the infimum.
+
+Now start with $f$. At each $t>0$, choose a supporting slope $p$. The upper bound $f(s)\leq cs$ as $s\to\infty$ forces $p\leq c$. If $p<c$, the supporting line gives $g(p)=f(t)-tp$ and recovers $f(t)$. If $p=c$, then $f(s)-cs$ is constant for $s\geq t$: this function is convex, bounded above, hence decreasing, while its supporting line at $t$ is constant. For every $\tau<c$ we consequently have
+\[
+ f(t)-ct\leq g(\tau)\leq f(t)-t\tau.
+\]
+Letting $\tau\uparrow c$ again recovers $f(t)$. In particular $g$ is finite somewhere. As an infimum of affine functions with slopes $-s<0$, it is upper semicontinuous, concave and decreasing. Taking $s\downarrow0$ in the bound $f(s)-s\tau\leq s(c-\tau)$ gives $g\leq0$, and taking $s\to\infty$ gives $g=-\infty$ for $\tau>c$. The endpoint identity now follows from the first part. The identically $-\infty$ case follows directly from the formulas.
+\end{proof}
+
+Let $\Gamma_\tau\in\PSH(X,\theta)$ for $\tau<c$, with $\Gamma_\tau\leq0$, and suppose $\tau\mapsto\Gamma_\tau$ is pointwise concave and decreasing. Extend the family by its decreasing limit at $c$ and by $-\infty$ for $\tau>c$. Define its forward transform by
+\begin{equation}\label{eq:hermitian-legendre-forward}
+ U_t(x)=\sup_{\tau<c}\bigl(\Gamma_\tau(x)+t\tau\bigr),
+ \qquad t>0.
+\end{equation}
+\Needspace{5\baselineskip}
+For a family $(u_t)_{t>0}$, the inverse transform is
+\begin{equation}\label{eq:hermitian-legendre-backward}
+ \widehat u_\tau(x)=\inf_{t>0}\bigl(u_t(x)-t\tau\bigr).
+\end{equation}
+
+\begin{lemma}\label{lem:testcurve-closed-fibers}
+At each $x$, the extended function $\tau\mapsto\Gamma_\tau(x)$ is upper semicontinuous and concave, or identically $-\infty$. Its forward transform satisfies
+\[
+ \Gamma_\tau(x)=\inf_{t>0}\bigl(U_t(x)-t\tau\bigr)
+ \qquad(\tau\in\mathbb R).
+\]
+\end{lemma}
+\begin{proof}
+Fix $\tau<c$ and let $\tau_j\uparrow\tau$. The decreasing limit of $\Gamma_{\tau_j}$ is a genuine potential because it dominates $\Gamma_\tau$. Choose $r\in(\tau,c)$. Outside the pole set of $\Gamma_r$, the concave parameter function is finite near $\tau$ and hence continuous there. Thus the decreasing limit equals $\Gamma_\tau$ almost everywhere, and everywhere by \cref{lem:qpsh-almost-everywhere-order}. This proves left continuity at every $\tau<c$. The value at $c$ is its left limit by definition. Decreasingness gives upper semicontinuity, also where the value is $-\infty$, and concavity survives the extension. The inverse formula is \cref{lem:halfline-legendre-duality} at each $x$.
+\end{proof}
+
+\begin{theorem}\label{thm:hermitian-legendre-usc}
+For the preceding family $(\Gamma_\tau)_{\tau<c}$, the pointwise supremum in \eqref{eq:hermitian-legendre-forward} is already upper semicontinuous on $X\times(0,\infty)$. Its complexification $U(x,z)=U_{\Real z}(x)$ is quasi-plurisubharmonic on $X\times\{\Real z>0\}$ and satisfies $\pi^*\theta+\ddc U\geq0$. Each slice belongs to $\PSH(X,\theta)$.
+\end{theorem}
+\begin{proof}
+Every term in the supremum satisfies the product current inequality. The bound $\Gamma_\tau\leq0$ gives $U_t\leq ct$, while any fixed $\tau_0<c$ supplies the lower potential $\Gamma_{\tau_0}+t\tau_0$. By the local envelope theorem in \cref{sec:obstacle-envelopes}, the upper semicontinuous regularization $V$ on the product is quasi-plurisubharmonic, satisfies $\pi^*\theta+\ddc V\geq0$, and agrees with $U$ almost everywhere. It is invariant in the imaginary direction and satisfies $V_t\leq ct$. The raw supremum is measurable: left continuity from \cref{lem:testcurve-closed-fibers} allows the parameters to be restricted to rational numbers.
+
+Outside a set $Z\subset X$ of zero smooth volume containing the pole set of $\Gamma_{\tau_0}$, Fubini's theorem gives $U_t(x)=V_t(x)$ for almost every $t>0$. Both sides are finite convex functions of $t$, by \cref{lem:halfline-legendre-duality,lem:invariant-strip-convexity}. Their continuity makes this equality valid for every $t>0$ and every $x\notin Z$.
+
+For each $\tau<c$, \cref{prop:hermitian-kiselman} gives
+\[
+ \chi_\tau=\inf_{t>0}(V_t-t\tau)
+ \in\PSH(X,\theta)\cup\{-\infty\}.
+\]
+Off $Z$ it equals $\Gamma_\tau$ by \cref{lem:testcurve-closed-fibers}. It is therefore genuine, and \cref{lem:qpsh-almost-everywhere-order} gives $\chi_\tau=\Gamma_\tau$ everywhere. At each $x$, recover the convex vertical function of $V$ from these inverse transforms using \cref{lem:halfline-legendre-duality}, also in the identically $-\infty$ case. We obtain
+\[
+ V_t(x)=\sup_{\tau<c}\bigl(\chi_\tau(x)+t\tau\bigr)=U_t(x).
+\]
+Finally, the lower bound by $\Gamma_{\tau_0}+t\tau_0$ ensures that every slice is genuine.
+\end{proof}

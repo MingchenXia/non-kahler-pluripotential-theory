@@ -1,6 +1,12 @@
-# Current research status — 25 September 2026
+# Current research status — 26 September 2026
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
+
+## Checkpoint123 — complete Chapter 17 rewrite
+
+Chapter 17 completes the whole-chapter rewrite and two direct mathematical/editorial reads. Its four sections now develop envelope test curves and rays, the two directions of the correspondence, and the explicit logarithmic-pole example. The general pointwise Legendre results move to Chapter 1, together with an explicit half-line duality lemma and the radial subharmonicity criterion. The generalized upper-semicontinuity proof uses a fixed interior potential, allowing the cutoff member to collapse outside the envelope setting. Repeated settings, definitions and defensive recap passages are removed. The Perron-replacement and rooftop arguments retain their precise endpoint conditions. The nested figure is checked against all 906 coordinate values and visually inspected.
+
+The house audit has zero errors and two inherited label warnings, down from three warnings before the rewrite. Non-book citation placement passes. The final book has 792 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 38 selected final pages passed visual inspection: front matter and contents, conventions, the changed Chapter 1 section with transitions, complete Chapter 17 and its figure with transitions, and the complete bibliography. Formula and section page breaks were adjusted and reinspected. The seventeen-page companion is byte-identical to checkpoint122. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs. Exact hashes and checks are in build-snapshot-123.json and source-package-portability-123.json. All 190 historical verifier reports and three hidden sources remain unchanged. See chapter-seventeen-rewrite-123.md for exact read and dependency scopes. The cited book arguments were checked in the supplied local sources; no new independent verifier run or external publication-status audit is claimed. Both queues proceed to the whole of Chapter 18. The broader writing/research goal remains active and incomplete.
 
 ## Checkpoint122 — complete Chapter 16 rewrite
 
