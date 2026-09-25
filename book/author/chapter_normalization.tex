@@ -1,21 +1,15 @@
 \chapter{Normalization and weak adjoint measures}
 \label{chap:normalization}
 
-A Gauduchon metric enters the smooth Monge--Amp\`ere equation through the derivative of its normalizing constant. We now recover part of this construction from the weak equation itself. The variable will be the logarithm of the prescribed density. Concavity gives supporting probability measures, even when the solution is singular and its linearized operator has not been defined.
+The scalar multiplying a prescribed Monge--Amp\`ere density is unique even when the potential is not. Varying the logarithmic density therefore gives a well-defined functional. Mixed products and domination make it concave; its supporting functionals determine probability measures. Continuity of the scalar then controls their concentration and produces a dual variational problem. In the minimal singularity type, these probabilities also identify the potential selected by a vanishing exponential parameter.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Throughout this chapter, $\theta$ is a smooth semipositive big real $(1,1)$-form on $X$, $\mathrm{d}V$ is a smooth positive volume form on $X$, and $\varphi\in\PSH(X,\theta)$ is a model potential satisfying
-\begin{equation}\label{eq:normalization-reference}
- P_\theta[\varphi]=\varphi,\qquad
- P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
- \quad\text{for some }0<\varepsilon<1.
-\end{equation}
-No bounded mass or uniform positive lower mass hypothesis is imposed. The prescribed ordinary-type existence theorem \cref{thm:als-prescribed-lp} supplies the only global equation input. The arguments below are consequences of that theorem, singular domination and the local mixed inequality. We make no novelty claim for these deductions.
+Fix a connected compact complex manifold $X$ of dimension $n$ and a smooth positive volume form $\mathrm{d}V$. We first take $\theta$ smooth, semipositive and big, and a model reference $\varphi$ satisfying \eqref{eq:als-model-condition}. The equation is supplied by \cref{thm:als-prescribed-lp}. Function spaces are real, and their norms use $\mathrm{d}V$. The final selection argument will allow an arbitrary smooth big background.
 
 \section{The scalar functional}\label{sec:normalization-scalar}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth semipositive big real $(1,1)$-form $\theta$ and a smooth positive volume form $\mathrm{d}V$ on $X$. Let $\varphi\in\PSH(X,\theta)$ be a model reference satisfying \eqref{eq:normalization-reference}. We use the extended measure $\mathrm{MA}^{\mathrm{ext}}_\theta$ of \cref{chap:products}; $u\preceq v$ means $u\leq v+C$ for a constant $C$, and $u\simeq v$ means both inequalities. All function spaces and norms are real and use $\mathrm{d}V$ unless specified otherwise.
+Changing the density changes the scalar in the equation. Comparison determines the direction of this change, and multiplication of the density by a constant gives an exact translation rule.
 
-For a bounded real measurable function $F$, \cref{thm:als-prescribed-lp} gives $u\simeq\varphi$ and a unique $c_\varphi(F)>0$ such that
+For a bounded real measurable function $F$, \cref{thm:als-prescribed-lp} gives $u\sim\varphi$ and a unique $c_\varphi(F)>0$ such that
 \begin{equation}\label{eq:relative-normalization}
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)
        =c_\varphi(F)\mathrm{e}^F\,\mathrm{d}V.
@@ -24,7 +18,7 @@ Define
 \[
  B_\varphi(F)=\log c_\varphi(F).
 \]
-Functions equal $\mathrm{d}V$-almost everywhere are identified. This definition uses uniqueness of the scalar, not uniqueness of the normalized potential. The condition $u\simeq\varphi$ shows that the scalar is attached to the ordinary singularity type being prescribed.
+Functions equal $\mathrm{d}V$-almost everywhere are identified. Scalar uniqueness makes $B_\varphi$ well defined and attaches it to the prescribed ordinary type, even when the normalized potential is not unique.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:relative-normalization-order}
@@ -41,7 +35,7 @@ Consequently
 and $|B_\varphi(G)-B_\varphi(F)|\leq\|G-F\|_\infty$.
 \end{proposition}
 \begin{proof}
-Suppose $F\leq G$ almost everywhere and, to obtain a contradiction, $c_\varphi(F)<c_\varphi(G)$. Let $u,v\simeq\varphi$ solve the two equations. Then, for every constant $a$,
+Suppose $F\leq G$ almost everywhere and, to obtain a contradiction, $c_\varphi(F)<c_\varphi(G)$. Let $u,v\sim\varphi$ solve the two equations. Then, for every constant $a$,
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)
  \leq\frac{c_\varphi(F)}{c_\varphi(G)}
@@ -52,37 +46,11 @@ The ratio is strictly less than one. Bounded equivalence transfers the genuine s
 Replacing $F$ by $F+a$ and the constant by $\mathrm{e}^{-a}c_\varphi(F)$ leaves the right side of \eqref{eq:relative-normalization} unchanged. Scalar uniqueness proves the translation rule. Apply monotonicity to the two constant translates of $F$ bounding $G$ to obtain \eqref{eq:relative-normalization-lipschitz}.
 \end{proof}
 
-The functional is also unchanged by a smooth change of representative when the solution problem is transported with it: for a smooth real function $h$ on $X$, replacing $\theta$ by $\theta+\ddc h$ and every potential by $u-h$ preserves the current and the prescribed ordinary type. This observation describes transport of a solvable problem. It does not assert a new existence theorem for an arbitrary nonsemipositive background.
+For a smooth real $h$, replacing $\theta$ by $\theta+\ddc h$ and each potential by $u-h$ preserves the current and the prescribed ordinary type. Transporting the solution problem in this way leaves its scalar unchanged.
 
 \section{Concavity from mixed products}
 
-Retain the data $X,n,\theta,\mathrm{d}V,\varphi$ of \cref{sec:normalization-scalar}, with the model and smaller-background conditions \eqref{eq:normalization-reference}. Use $c_\varphi(F)$ for the scalar in \eqref{eq:relative-normalization} and $B_\varphi(F)=\log c_\varphi(F)$, for real $F\in L^\infty(\mathrm{d}V)$. For a potential $u$, write $\theta_u=\theta+\ddc u$.
-
-We need a consequence of the bounded mixed inequality for unbounded potentials. It is useful to prove it directly on finite levels, without presuming that their total masses are finite.
-
-\begin{lemma}\label{lem:singular-convex-density}
-Let $f,g$ be nonnegative measurable functions on $X$. Suppose $u,v\in\PSH(X,\theta)$ and
-\[
- \mathrm{MA}^{\mathrm{ext}}_\theta(u)\geq f\,\mathrm{d}V,
- \qquad \mathrm{MA}^{\mathrm{ext}}_\theta(v)\geq g\,\mathrm{d}V,
- \qquad f,g\geq0.
-\]
-For $0\leq t\leq1$ we have
-\begin{equation}\label{eq:singular-convex-density}
- \mathrm{MA}^{\mathrm{ext}}_\theta(tu+(1-t)v)
- \geq\bigl(tf^{1/n}+(1-t)g^{1/n}\bigr)^n\,\mathrm{d}V.
-\end{equation}
-\end{lemma}
-\begin{proof}
-The endpoints are immediate. For $0<t<1$, translate $u,v$ to be nonpositive and put $u_k=\max(u,-k)$ and $v_k=\max(v,-k)$. Semipositivity of $\theta$ makes these bounded $\theta$-plurisubharmonic functions. By locality,
-\[
- \mathrm{MA}_\theta(u_k)\geq\mathbf1_{\{u>-k\}}f\,\mathrm{d}V,
- \qquad
- \mathrm{MA}_\theta(v_k)\geq\mathbf1_{\{v>-k\}}g\,\mathrm{d}V.
-\]
-Apply \cref{lem:nonclosed-mixed-density} to each mixed term in the positive expansion of $\theta_{tu_k+(1-t)v_k}^{n}$. On
-$E_k=\{u>-k\}\cap\{v>-k\}$ this gives exactly the density on the right of \eqref{eq:singular-convex-density}. On the same set, plurifine locality identifies the left side with the extended measure of $tu+(1-t)v$. Let $k\to\infty$. The sets $E_k$ exhaust the complement of the two pole sets, which have zero smooth volume. The asserted measure inequality follows by monotone convergence on Borel sets. No weak convergence of the unrestricted truncation measures was used.
-\end{proof}
+A convex combination of two solutions stays in the prescribed ordinary type. The mixed density inequality of \cref{lem:singular-convex-density} bounds its measure from below; strict domination then compares that bound with the scalar for the interpolated density.
 
 \begin{theorem}\label{thm:relative-normalization-concavity}
 The functional $B_\varphi$ is concave on the real space $L^\infty(\mathrm{d}V)$: for $F,G$ in that space,
@@ -92,8 +60,8 @@ The functional $B_\varphi$ is concave on the real space $L^\infty(\mathrm{d}V)$:
 \]
 \end{theorem}
 \begin{proof}
-Let $u,v\simeq\varphi$ solve the equations for $F,G$. Put
-$H=tF+(1-t)G$ and $D=c_\varphi(F)^t c_\varphi(G)^{1-t}$. The preceding lemma and the arithmetic--geometric mean inequality give
+Let $u,v\sim\varphi$ solve the equations for $F,G$. Put
+$H=tF+(1-t)G$ and $D=c_\varphi(F)^t c_\varphi(G)^{1-t}$. \Cref{lem:singular-convex-density} and the arithmetic--geometric mean inequality give
 \[
  \begin{split}
  \mathrm{MA}^{\mathrm{ext}}_\theta(tu+(1-t)v)
@@ -105,13 +73,11 @@ $H=tF+(1-t)G$ and $D=c_\varphi(F)^t c_\varphi(G)^{1-t}$. The preceding lemma and
 The averaged potential has ordinary type $\varphi$. If $c_\varphi(H)<D$, its measure dominates that of a solution for $H$ by a factor strictly greater than one. Apply singular strict domination to that solution and every constant translate of the averaged potential, as in the proof of \cref{prop:relative-normalization-order}. The same contradiction gives $c_\varphi(H)\geq D$. Taking logarithms proves concavity.
 \end{proof}
 
-This proof does not differentiate a weak solution. In the smooth Hermitian case it agrees with the differential calculation of \cref{thm:b-derivatives}. The singular argument uses existence and domination to establish the same concavity.
+For smooth Hermitian data, this concavity agrees with the differential calculation of \cref{thm:b-derivatives}.
 
 \section{Continuity for bounded densities}
 
-Retain the data $X,n,\theta,\mathrm{d}V,\varphi$ of \cref{sec:normalization-scalar}, with the model and smaller-background conditions \eqref{eq:normalization-reference}. Use $c_\varphi(F)$ for the scalar in \eqref{eq:relative-normalization} and $B_\varphi(F)=\log c_\varphi(F)$, for real $F\in L^\infty(\mathrm{d}V)$.
-
-Uniform continuity alone would produce supporting measures on continuous functions, but would not exclude concentration on a set of zero volume. A stronger continuity statement excludes that concentration.
+To rule out concentration of a supporting measure on a set of zero volume, we need continuity under bounded changes of density that tend to zero in $L^1$. The relative estimate gives common barriers for the solutions, and their common measure bound identifies every limiting scalar.
 
 \begin{theorem}\label{thm:normalization-bounded-lone}
 If $F_j,F$ are uniformly bounded and $F_j\to F$ in $L^1(\mathrm{d}V)$, then
@@ -120,39 +86,35 @@ If $F_j,F$ are uniformly bounded and $F_j\to F$ in $L^1(\mathrm{d}V)$, then
 \]
 \end{theorem}
 \begin{proof}
-Choose solutions $u_j\simeq\varphi$ normalized by $\sup_Xu_j=0$, and write $c_j=c_\varphi(F_j)$. If $|F_j|\leq M$, order and translation give
+Choose solutions $u_j\sim\varphi$ normalized by $\sup_Xu_j=0$, and write $c_j=c_\varphi(F_j)$. If $|F_j|\leq M$, order and translation give
 \[
  \mathrm{e}^{-M}c_\varphi(0)\leq c_j\leq \mathrm{e}^M c_\varphi(0).
 \]
-In particular their Monge--Amp\`ere measures are dominated by a fixed multiple of $\mathrm{d}V$. The relative uniform estimate gives a constant $C$ such that
+In particular their Monge--Amp\`ere measures are dominated by a fixed multiple of $\mathrm{d}V$. \Cref{thm:relative-linfty} gives a constant $C$ such that
 \[
  \varphi-C\leq u_j\leq\varphi.
 \]
-From any subsequence extract $c_j\to c>0$ and $u_j\to u$ in $L^1(X)$. The common-barrier continuity theorem gives convergence in capacity, $u\simeq\varphi$, and raw weak convergence of their measures. On the other hand, boundedness makes the exponential Lipschitz on the common range, so $c_j\mathrm{e}^{F_j}\to c\mathrm{e}^F$ in $L^1(\mathrm{d}V)$. Therefore
+From any subsequence extract $c_j\to c>0$ and $u_j\to u$ in $L^1(X)$. \Cref{cor:common-barrier-continuity} gives convergence in capacity, $u\sim\varphi$, and raw weak convergence of their measures. On the other hand, boundedness makes the exponential Lipschitz on the common range, so $c_j\mathrm{e}^{F_j}\to c\mathrm{e}^F$ in $L^1(\mathrm{d}V)$. Therefore
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)=c\mathrm{e}^F\,\mathrm{d}V.
 \]
 Scalar uniqueness gives $c=c_\varphi(F)$. Every subsequence has a further subsequence with this scalar limit, proving convergence of the full sequence and then of its logarithms.
 \end{proof}
 
-Only the measures of this particular family of solutions were bounded. Their domination and common barriers came from the equation and the relative estimate. There was no bound on masses of all bounded $\theta$-plurisubharmonic functions.
-
 \section{Supporting probability measures}\label{sec:normalization-supports}
 
-Retain the data $X,n,\theta,\mathrm{d}V,\varphi$ of \cref{sec:normalization-scalar}, with the model and smaller-background conditions \eqref{eq:normalization-reference}. Use $c_\varphi(F)$ for the scalar in \eqref{eq:relative-normalization} and $B_\varphi(F)=\log c_\varphi(F)$, for real $F\in L^\infty(\mathrm{d}V)$.
-
-Restrict $B_\varphi$ to the real Banach space $C(X)$, equipped with the uniform norm. For $F\in C(X)$, let $\mathcal A_\varphi(F)$ be the set of Borel probability measures $\nu$ satisfying
+A supporting functional records the first-order response of the scalar to a change of logarithmic density. Monotonicity and the translation rule force its negative to be integration against a probability. Work first on $C(X)$ with the uniform norm. For $F\in C(X)$, let $\mathcal A_\varphi(F)$ be the set of Borel probability measures $\nu$ satisfying
 \begin{equation}\label{eq:adjoint-probability-set}
  B_\varphi(G)\leq B_\varphi(F)-\int_X(G-F)\,\mathrm{d}\nu
  \qquad\text{for every }G\in C(X).
 \end{equation}
-These are the negatives of the supergradients of the concave functional. The notation denotes a set of measures; uniqueness is not part of the definition.
+Thus $-\nu$ is a supergradient of $B_\varphi$ at $F$.
 
 \begin{theorem}\label{thm:weak-adjoint-probabilities}
 For every $F\in C(X)$, the set $\mathcal A_\varphi(F)$ is nonempty, convex and weakly compact. Every one of its measures is absolutely continuous with respect to $\mathrm{d}V$.
 \end{theorem}
 \begin{proof}
-We include the functional analysis. Write $C_\varphi=-B_\varphi$, a convex Lipschitz function. For fixed $F\in C(X,\mathbb R)$ and a direction $h\in C(X,\mathbb R)$, the limit
+Write $C_\varphi=-B_\varphi$, a convex Lipschitz function. For fixed $F\in C(X,\mathbb R)$ and a direction $h\in C(X,\mathbb R)$, the limit
 \[
  p(h)=\lim_{t\downarrow0}
         \frac{C_\varphi(F+th)-C_\varphi(F)}{t}
@@ -174,8 +136,6 @@ It remains to prove absolute continuity. Let $K$ be compact with $\mathrm{d}V(K)
 The right side tends to zero by \cref{thm:normalization-bounded-lone}. Thus $\nu(K)=0$. Inner regularity of a finite Borel measure on the compact manifold proves the same for every Borel set of zero volume. The Radon--Nikodym theorem now gives $\mathrm{d}\nu=h_\nu \mathrm{d}V$ with $h_\nu\geq0$ and $\int_Xh_\nu \mathrm{d}V=1$.
 \end{proof}
 
-No bound for the densities $h_\nu$ in $L^p$, $p>1$, has been proved here. Even absolute continuity uses the bounded-$L^1$ continuity of the normalization functional; it would not follow just from its uniform Lipschitz bound.
-
 \begin{proposition}
 \label{prop:weak-adjoint-stability}
 If $F_j\to F$ uniformly and $\nu_j\in\mathcal A_\varphi(F_j)$, every weak cluster point of $\nu_j$ belongs to $\mathcal A_\varphi(F)$. In particular, if the latter set consists of a single measure, $\nu_j$ converges to it.
@@ -190,9 +150,7 @@ uniform continuity of $B_\varphi$, uniform convergence of $F_j$ and weak converg
 
 \section{Directional derivatives and the smooth identification}
 
-Retain the data $X,n,\theta,\mathrm{d}V,\varphi$ of \cref{sec:normalization-scalar}, with the model and smaller-background conditions \eqref{eq:normalization-reference}. Use $c_\varphi(F)$ for the scalar in \eqref{eq:relative-normalization} and $B_\varphi(F)=\log c_\varphi(F)$, for real $F\in L^\infty(\mathrm{d}V)$. Write $\mathcal A_\varphi(F)$ for the supporting probabilities defined by \eqref{eq:adjoint-probability-set}.
-
-The possible lack of uniqueness has an exact scalar meaning. For $F,G\in C(X)$, write $D^+B_\varphi(F)[G]$ and $D^-B_\varphi(F)[G]$ for the limits of the difference quotient as $t\downarrow0$ and $t\uparrow0$, respectively.
+The range of integrals against the supporting probabilities is exactly the gap between the two directional derivatives. A singleton therefore identifies a derivative, and the smooth equation identifies that measure with the Gauduchon adjoint. For $F,G\in C(X)$, write $D^+B_\varphi(F)[G]$ and $D^-B_\varphi(F)[G]$ for the limits of the difference quotient as $t\downarrow0$ and $t\uparrow0$, respectively.
 
 \begin{proposition}\label{prop:normalization-directional}
 The one-sided derivatives exist, and
@@ -217,9 +175,7 @@ If the set is a singleton, the two derivatives coincide for every $G$ and equal 
 \label{thm:normalization-gauduchon-recovery}
 Let $\theta=\omega$ be Hermitian, let $\varphi=0$, and let $F$ be smooth. If $u$ is the smooth normalized solution of \eqref{eq:relative-normalization}, put $\omega_u=\omega+\ddc u$. Let $\rho_u$ be the positive smooth Gauduchon factor with $\ddc(\rho_u\omega_u^{n-1})=0$ and $\int_X\rho_u\omega_u^n=1$, and put $\mathrm{d}\mu_u=\rho_u\omega_u^n$. Then
 \[
- \mathcal A_0(F)=\{\mu_u\},\qquad
- \mathrm{d}\mu_u=\rho_u\omega_u^n,\quad
- \ddc(\rho_u\omega_u^{n-1})=0,\quad\mu_u(X)=1.
+ \mathcal A_0(F)=\{\mu_u\}.
 \]
 For $n=1$ the same assertion uses $\mu_u=\omega_u/\int_X\omega_u$.
 \end{theorem}
@@ -245,13 +201,13 @@ Let $\mathcal D_\omega^0$ be the closure of bounded density roots in the norm of
 
 \input{author/section_generic_adjoints}
 
-\section{Remaining questions}
+\input{author/section_vanishing_parameter_selection}
 
-Retain the data $X,n,\theta,\mathrm{d}V,\varphi$ of \cref{sec:normalization-scalar}, with the model and smaller-background conditions \eqref{eq:normalization-reference}. Use $c_\varphi(F)$ for the scalar in \eqref{eq:relative-normalization} and $B_\varphi(F)=\log c_\varphi(F)$, for real $F\in L^\infty(\mathrm{d}V)$. Write $\mathcal A_\varphi(F)$ for the supporting probabilities defined by \eqref{eq:adjoint-probability-set}. Let $F\in C(X,\mathbb R)$. For a potential $u$, set $\theta_u=\theta+\ddc u$.
+\section{Differentiability and dependence on the singularity type}
 
-The first remaining question is whether $\mathcal A_\varphi(F)$ is a singleton for every continuous $F$ under \eqref{eq:normalization-reference}. Equivalently, is $B_\varphi$ G\^ateaux differentiable everywhere on $C(X)$? We have proved this for smooth data in a Hermitian background, for continuous data in the closed K\"ahler case, and on a dense $G_\delta$ in every fixed regime of this chapter. These assertions do not settle uniqueness at every continuous density in a general Hermitian background or for a singular reference.
+Return to the semipositive big background and model reference of \cref{sec:normalization-scalar}. The first question is whether $\mathcal A_\varphi(F)$ is a singleton for every continuous $F$ under \eqref{eq:als-model-condition}. Equivalently, is $B_\varphi$ G\^ateaux differentiable everywhere on $C(X)$? We have proved this for smooth data in a Hermitian background, for continuous data in the closed K\"ahler case, and on a dense $G_\delta$ for every fixed reference above. These assertions do not settle uniqueness at every continuous density in a general Hermitian background or for a singular reference.
 
-A second question concerns a weak linearized operator whose adjoint annihilates the supporting probability. In a Hermitian background and with zero reference, \cref{thm:gaud-current-all-adjoints} will represent every supporting probability by a determinant-weighted positive $\ddc$-closed current. Identifying such a current with a scalar multiple of the weak power $\theta_u^{n-1}$ is a further issue: the product and its compatibility with approximation must first be justified.
+A second question concerns a weak linearized operator at a solution $u$ whose adjoint annihilates the supporting probability. In a Hermitian background and with zero reference, \cref{thm:gaud-current-all-adjoints} will represent every supporting probability by a determinant-weighted positive $\ddc$-closed current. Identifying such a current with a scalar multiple of the weak power $\theta_u^{n-1}$ is a further issue: the product and its compatibility with approximation must first be justified.
 
 A third question is how the sets $\mathcal A_\varphi(F)$ vary when the prescribed singularity type changes. By \cref{cor:prescribed-dual-entropy}, bounded logarithmic densities and a common smaller-background parameter give uniform entropy and compactness even for varying model references. When the smaller-background parameters tend to zero, \cref{cor:small-reference-adjoint-limits} identifies every limit with a zero-reference supporting probability. \Cref{prop:normalization-distance-stability} gives stability under uniform convergence of the scalar functionals, even for bounded measurable logarithmic densities. Relating this condition directly to the ordinary singularities or their multiplier ideals remains a separate question.
 

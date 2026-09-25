@@ -1,4 +1,4 @@
-# Reading guide — checkpoint112
+# Reading guide — checkpoint120
 
 The chapter numbers below refer to the current book. Earlier review records keep the numbering of their own checkpoints. General psh tools are collected in Chapter 1. Paper sources and exact locators are collected in final Chapter 33; book citations may remain beside the mathematics.
 
@@ -20,7 +20,7 @@ Chapter 12 applies the first-chapter envelope tools to contact sets, domination,
 
 Chapter 13 develops prescribed-singularity equations without a blanket metric mass hypothesis. It includes weighted lower semicontinuity for extended measures, measure representations, equations in a fixed ordinary type, and minimal-type Lp equations for arbitrary smooth big backgrounds. Global Lp data, p>1, supply the local Holder input for interior smoothness on the strict-barrier locus. Smooth density on an arbitrary open set alone does not supply that integrability. The local boundary examples explain this distinction. The chapter also treats individual-density thresholds and exponential approximations.
 
-Chapter 14 studies normalization functionals and weak supporting probabilities. These functionals need not separate singularity types in a closed background. Chapter 15 distinguishes ordinary and multiplier-ideal envelopes, proving the specified analytic approximation and ideal-metric conclusions without claiming the general Hermitian singularity topology.
+Chapter 14 studies normalization functionals, weak supporting probabilities and entropy duality. Its selection theorem identifies the whole vanishing-exponent limit for fixed nonzero Lp data, p > 1, in ordinary minimal type on a smooth big background. These functionals need not separate singularity types in a closed background. Chapter 15 distinguishes ordinary and multiplier-ideal envelopes, proving the specified analytic approximation and ideal-metric conclusions without claiming the general Hermitian singularity topology.
 
 Chapters 16–18 cover Perron interpolation, test curves and intrinsic trace data. The minimum principle and analytic regularization are used from Chapter 1. Restriction of analytic approximants opens Chapter 18. Positive-mass curve ideal envelopes have a trace description by atomic measures; the higher-dimensional realization problem remains separate.
 
@@ -40,4 +40,4 @@ Chapters 29–31 form the separate part under mass assumptions. Chapter 29 devel
 
 Chapter 32 records the remaining research problems and their exact boundaries. Chapter 33 gives the historical sources, checked locators and comparisons of hypotheses for the mathematical body. The appendix treats compact complex spaces; smooth-space psh tools are referenced from Chapter 1 rather than defined again.
 
-The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. The next introduction unit is Chapter 7; the proof cycle resumes at bounded domination in Chapter 12. Three supplied papers are integrated, while Q2.8 still requires its dedicated proof/dependency and second pass.
+The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 15, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.

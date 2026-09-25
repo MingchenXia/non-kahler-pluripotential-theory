@@ -121,3 +121,28 @@ The function $G(x,y)=x+\chi(y-x)$, for $y\leq x$, is convex and nondecreasing in
 \]
 For smooth potentials the chain rule gives the identity. For bounded potentials, add a common quadratic correction and convolve. Convolution preserves the order, and $G(x+r,y+r)=r+G(x,y)$ retains the common correction. The bounded chain rule \eqref{eq:bounded-convex-chain-rule} and its gradient products give the identity in the limit. Freezing the smooth background as in \cref{prop:bounded-products} preserves its exact lower bound. Every term on the right is positive; positivity of the bounded mixed products gives the last assertion.
 \end{proof}
+
+The mixed density inequality also applies to unbounded potentials after restricting to common finite levels.
+
+\begin{lemma}\label{lem:singular-convex-density}
+Let $X$ be compact, let $\theta$ be smooth, semipositive and big, and let $\mathrm{d}V$ be a smooth positive volume form. Write $\mathrm{MA}^{\mathrm{ext}}_\theta$ for the extended measure of \cref{chap:products}. Let $f,g\geq0$ be measurable. Suppose $u,v\in\PSH(X,\theta)$ and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u)\geq f\,\mathrm{d}V,
+ \qquad \mathrm{MA}^{\mathrm{ext}}_\theta(v)\geq g\,\mathrm{d}V.
+\]
+For $0\leq t\leq1$ we have
+\begin{equation}\label{eq:singular-convex-density}
+ \mathrm{MA}^{\mathrm{ext}}_\theta(tu+(1-t)v)
+ \geq\bigl(tf^{1/n}+(1-t)g^{1/n}\bigr)^n\,\mathrm{d}V.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The endpoints are immediate. For $0<t<1$, translate $u,v$ to be nonpositive and put $u_k=\max(u,-k)$ and $v_k=\max(v,-k)$. Semipositivity of $\theta$ makes these bounded $\theta$-plurisubharmonic functions. By locality,
+\[
+ \mathrm{MA}_\theta(u_k)\geq\mathbf1_{\{u>-k\}}f\,\mathrm{d}V,
+ \qquad
+ \mathrm{MA}_\theta(v_k)\geq\mathbf1_{\{v>-k\}}g\,\mathrm{d}V.
+\]
+Apply \cref{lem:nonclosed-mixed-density} to each mixed term in the positive expansion of $\theta_{tu_k+(1-t)v_k}^{n}$. On
+$E_k=\{u>-k\}\cap\{v>-k\}$ this gives exactly the density on the right of \eqref{eq:singular-convex-density}. On the same set, plurifine locality identifies the left side with the extended measure of $tu+(1-t)v$. Let $k\to\infty$. The sets $E_k$ exhaust the complement of the two pole sets, which have zero smooth volume. The asserted measure inequality follows by monotone convergence on Borel sets. No weak convergence of the unrestricted truncation measures was used.
+\end{proof}

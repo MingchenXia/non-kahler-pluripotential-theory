@@ -19,7 +19,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 11 | `chapter_degenerate_uniqueness.tex` | 21 | Complete chapter and all eleven nested-input reads, whole-chapter rewrite and release checks in checkpoint117. |
 | 12 | `chapter_envelopes.tex` | 6 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint118. |
 | 13 | `chapter_prescribed_equations.tex` | 50 | Complete chapter and all 32 nested-input rewrite, first/second direct reads and release checks in checkpoint119. |
-| 14 | `chapter_normalization.tex` | 15 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
+| 14 | `chapter_normalization.tex` | 20 | Complete chapter and all nine final nested-input rewrite, first/second direct reads and release checks in checkpoint120; includes Q2.8 selection. |
 | 15 | `chapter_igood.tex` | 8 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 16 | `chapter_rays.tex` | 5 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 17 | `chapter_testcurves.tex` | 5 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
@@ -41,7 +41,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 33 | `chapter_history.tex` | 18 | New historical chapter: exact locator audit and second editorial read in checkpoint112. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 
-Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–119 complete the full rewrites of Chapters 7–13, including all their nested inputs. Continue chapter by chapter at Chapter 14, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. Q2.8 remains the next supplied manuscript. The separate proof queue also completes Chapter 13 in checkpoint119 and proceeds to Chapter 14.
+Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–120 complete the full rewrites of Chapters 7–14, including all their nested inputs. Continue chapter by chapter at Chapter 15, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes Chapter 14 in checkpoint120 and proceeds to Chapter 15.
 
 Checkpoint113 also moves bounded smooth-background products, the chain rule and general Hermitian capacity estimates into Chapter 1. The changed references in later chapters are dependency repairs, not completed chapter rewrites. Chapter 6 has five sections; Chapter 10 has nine after checkpoint116. The first chapter has 23 sections and seven subsections.
 
