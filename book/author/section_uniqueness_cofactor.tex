@@ -1,9 +1,9 @@
 \section{Polarized cofactors and propagation}
 \label{uni-sec:cofactor}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and fix a smooth positive volume form $\mathrm{d}V$. For real potentials $u,v$ of the regularity specified below, put $A=\omega+\ddc u$, $B=\omega+\ddc v$, $w=u-v$ and $T=\sum_{j=0}^{n-1}A^j\wedge B^{n-1-j}$. Products of measurable coefficients are interpreted almost everywhere. Here the potentials are $C^2$. Let $Q$ be the continuous real quadratic form on $T^*X$ defined by \eqref{uni-eq:Q}. Its polarization defines $Q^\sharp:T^*X\to TX$ by $\eta(Q^\sharp\xi)=Q(\xi,\eta)$. A reachable set from a point consists of endpoints of absolutely continuous curves starting there with velocity in $\operatorname{im}Q^\sharp$ almost everywhere; a control orbit uses finite concatenations of flows of locally Lipschitz vector fields with values in that range.  The next theorem uses two kinds of information: a weighted
-identity controls the gradient at every point, whereas a degenerate
-maximum principle controls only the extremal sets.
+Uniform ellipticity is sufficient for propagation of an extremum, but it is not necessary. The range of the cofactor may already connect enough points to force constancy. For $C^2$ potentials, the quadratic form $Q$ in \eqref{uni-eq:Q} is continuous. Its polarization defines $Q^\sharp:T^*X\to TX$ by $\eta(Q^\sharp\xi)=Q(\xi,\eta)$. A reachable set from a point consists of endpoints of absolutely continuous curves starting there with velocity in $\operatorname{im}Q^\sharp$ almost everywhere. A control orbit consists of endpoints of finite concatenations of flows of locally Lipschitz vector fields taking values in that range.
+
+A positive weight satisfying $\ddc(hT)=0$ gives an energy identity controlling $\mathrm{d}w$ everywhere. Without such a weight, a degenerate maximum principle gives propagation only from the extremal sets. This distinction accounts for the different density assumptions on reachable sets and orbits in the theorem.
 
 \begin{theorem}\label{uni-thm:cofactor-intro}
 Let $u,v\in C^2(X)$, $A,B\geq0$, and $A^n=B^n$.
@@ -27,16 +27,13 @@ span $TX$ at every point.
 
 \subsection{Weighted energy}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and fix a smooth positive volume form $\mathrm{d}V$. For real potentials $u,v$ of the regularity specified below, put $A=\omega+\ddc u$, $B=\omega+\ddc v$, $w=u-v$ and $T=\sum_{j=0}^{n-1}A^j\wedge B^{n-1-j}$. Products of measurable coefficients are interpreted almost everywhere. Assume $u,v\in C^2(X,\mathbb R)$, $A,B\geq0$ and $A^n=B^n$. Let $h:X\to(0,\infty)$ be continuous. We use the cofactor quadratic form $Q$ of \eqref{uni-eq:Q} and its polarized map $Q^\sharp:T^*X\to TX$ as defined above.
-
-The distributional condition $\ddc(hT)=0$ means
+Testing the weighted cofactor against $w^2$ produces a nonnegative gradient integral. Only distributional $\ddc$-closedness is needed: for a continuous $h>0$, the condition is
 \begin{equation}\label{uni-eq:weightedclosed}
  \int_X\ddc\varphi\wedge hT=0\qquad(\varphi\in C^\infty(X,\mathbb R)).
 \end{equation}
-It does not assert $\mathrm{d}(hT)=0$.
 
 \begin{proof}[of Theorem~\ref{uni-thm:cofactor-intro}(1)]
-The product rule in our convention is
+The product rule gives
 \begin{equation}\label{uni-eq:w2}
  \ddc(w^2)=2w\ddc w+2\mathrm{d}w\wedge \dc w
           =2w\ddc w+\frac{\mathrm{i}}{\pi}\partial w\wedge\bar\partial w.
@@ -54,11 +51,7 @@ $Q(\mathrm{d}w)=0$ implies $Q(\mathrm{d}w,\eta)=0$ for every $\eta$.  Therefore
 \begin{equation}\label{uni-eq:annihilate}
  \mathrm{d}w_x\bigl(Q_x^\sharp\eta\bigr)=0\qquad(x\in X,\ \eta\in T_x^*X).
 \end{equation}
-Define a reachable set from $p$ using all absolutely continuous curves
-$\gamma$ starting at $p$ whose velocities lie in
-$\operatorname{im}Q^\sharp$ almost everywhere.  The chain rule for the
-$C^1$ function $w$ and \eqref{uni-eq:annihilate} make $w$ constant along
-each such curve.  One dense reachable set suffices by continuity.  If
+The chain rule and \eqref{uni-eq:annihilate} make $w$ constant along every absolutely continuous curve whose velocity lies in $\operatorname{im}Q^\sharp$ almost everywhere.  One dense reachable set suffices by continuity.  If
 instead $Q$ is positive definite on a dense set, \eqref{uni-eq:energy}
 gives $\mathrm{d}w=0$ there and hence everywhere.
 \end{proof}
@@ -73,7 +66,7 @@ weight with $\ddc(hT)=0$; that is a hypothesis on the particular pair.
 
 \subsection{The real symbol and exterior-ball propagation}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and fix a smooth positive volume form $\mathrm{d}V$. For real potentials $u,v$ of the regularity specified below, put $A=\omega+\ddc u$, $B=\omega+\ddc v$, $w=u-v$ and $T=\sum_{j=0}^{n-1}A^j\wedge B^{n-1-j}$. Products of measurable coefficients are interpreted almost everywhere. Assume $u,v\in C^2(X,\mathbb R)$ and $A,B\geq0$. Write $Q$ for the quadratic form in \eqref{uni-eq:Q}, and let $Q^\sharp:T^*X\to TX$ be the map associated to its polarization. The operator below acts on real $C^2$ functions $\varphi$.
+To propagate an extremum without the weight, we write the linearized operator in real coordinates. Its symbol is continuous and semipositive. An exterior tangent ball to the maximum set can have its normal only in the kernel of that symbol; this forces the maximum set to be invariant under the range fields.
 
 In a holomorphic chart $z_j=x_j+\mathrm{i} y_j$, let $C_{\rm cf}$ be the
 Hermitian matrix characterized by
@@ -190,8 +183,7 @@ symbol $a$ may be used as the original range fields.
 The unweighted statement needs dense orbits from every point, so that it
 applies to a point where an extremum is attained.  The weighted statement
 needs only one dense reachable set because its energy identity controls
-$\mathrm{d}w$ everywhere.  These hypotheses should not be interchanged.
-For $C^{2,1}$ potentials and a locally Lipschitz background, the cofactor
+$\mathrm{d}w$ everywhere.  For $C^{2,1}$ potentials and a locally Lipschitz background, the cofactor
 columns are locally Lipschitz and the orbit criterion still applies; the
 classical bracket criterion above is stated only for smooth fields.
 \end{remark}
