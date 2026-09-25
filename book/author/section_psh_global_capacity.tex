@@ -91,3 +91,102 @@ Choose open sets $O_j$ with capacity at most $2^{-j}$ such that $f$ is continuou
 \]
 At a boundary point of $G_j$, limits from the closed complement give $f$, while values from inside are at least that value. Thus $f_j$ is lower semicontinuous. The functions decrease to $f$ outside $\bigcap_jG_j$, a capacity-zero set. Their difference from $f$ is supported in $G_j$, which also proves convergence in capacity.
 \end{proof}
+
+Uniform bounds on potentials give a common capacity bound for their mixed measures.
+
+\begin{lemma}\label{lem:bounded-mixed-capacity}
+Fix a Hermitian metric $\omega$, a finite $A\geq0$ and an integer $0\leq k\leq n$. All positive mixed measures
+\[
+ \omega_{v_1}\wedge\cdots\wedge\omega_{v_k}\wedge\omega^{n-k},
+ \qquad \|v_i\|_\infty\leq A,
+ \quad v_i\in\PSH(X,\omega),
+\]
+are bounded above on Borel sets by $C_A\operatorname{Cap}_\omega$. In particular their total masses are bounded. Their integrals against uniformly bounded functions tending to zero in capacity tend uniformly to zero.
+\end{lemma}
+\begin{proof}
+Translate the $v_i$ so that $0\leq v_i\leq2A$, and put
+$q=(v_1+\cdots+v_k)/B$, where $B\geq\max\{2k,2kA,1\}$.
+Then $0\leq q\leq1$ and
+\[
+ \omega_q=B^{-1}\sum_{i=1}^k\omega_{v_i}+(1-k/B)\omega.
+\]
+All coefficients are positive. Expanding $\omega_q^n$ bounds the indicated mixed product by a constant multiple of $\omega_q^n$. The definition of capacity proves the claim. The case $k=0$ follows by testing with zero. For a bounded function $z$, split its integral into $\{|z|>t\}$ and its complement; first use capacity convergence for fixed $t>0$, and then let $t\downarrow0$.
+\end{proof}
+
+The same control applies to the total variation of a product formed with a different smooth background.
+
+\begin{lemma}\label{lem:signed-truncation-quasicont}
+Let $\Omega$ be Hermitian and $\theta$ any smooth real $(1,1)$-form. Suppose $v_j$ are $\Omega$-plurisubharmonic, have common finite upper and lower bounds, and decrease to $v$. Then the signed measures
+\[
+ \nu_j=(\theta+\ddc v_j)^n
+\]
+converge to $(\theta+\ddc v)^n$ against every fixed bounded quasi-continuous function. Their total variations are uniformly controlled by local capacity on a fixed finite cover.
+\end{lemma}
+\begin{proof}
+On a relatively compact coordinate ball, choose a fixed quadratic $q$ such that $v_j+q$ are plurisubharmonic. Their common bounds remain uniform. Expand
+\[
+ (\theta+\ddc v_j)^n
+ =\sum_{\ell=0}^n\binom n\ell
+   \bigl(\ddc(v_j+q)\bigr)^\ell
+       \wedge(\theta-\ddc q)^{n-\ell}.
+\]
+The absolute value of the $\ell$th summand is bounded by a fixed constant times
+\[
+ \bigl(\ddc(v_j+q)\bigr)^\ell\wedge\kappa_0^{n-\ell},
+\]
+where $\kappa_0$ is a fixed positive Euclidean form. This mixed positive measure is uniformly bounded by a constant times local capacity: add a fixed strictly plurisubharmonic quadratic to $v_j+q$, expand its top power, and rescale its uniformly bounded range into $[0,1]$ for the capacity definition. This also handles $\ell=0$. Summing on a finite cover gives the asserted variation control. Ordinary decreasing Bedford--Taylor continuity gives weak convergence term by term. For a bounded quasi-continuous coefficient, remove an open set of small capacity and extend the coefficient continuously from its compact complement. The variation bound controls the error uniformly for the sequence and its limit. Letting that capacity tend to zero proves the assertion.
+\end{proof}
+
+A finite non-pluripolar measure is uniformly absolutely continuous with respect to capacity, although it need not satisfy a power bound.
+
+\begin{lemma}\label{lem:npp-uniform-capacity}
+Let $\mu$ be a finite non-pluripolar Borel measure on $X$. Then
+\[
+ \lim_{\delta\downarrow0}\sup\{\mu(E):E\text{ Borel},\
+                      \operatorname{Cap}_\omega(E)\leq\delta\}=0.
+\]
+Consequently, capacity convergence implies convergence in $\mu$-measure.
+\end{lemma}
+\begin{proof}
+If the first assertion failed, there would be $\epsilon>0$ and Borel sets $E_j$ with capacity at most $2^{-j}$ and $\mu(E_j)\geq\epsilon$. Countable subadditivity of capacity gives
+\[
+ \operatorname{Cap}_\omega\left(\limsup_j E_j\right)=0.
+\]
+The limsup is therefore pluripolar and has zero $\mu$-measure. On the other hand, finiteness of $\mu$ and continuity from above applied to $\bigcup_{j\geq k}E_j$ show that the limsup has measure at least $\epsilon$, a contradiction. Apply the first assertion to the sets on which the difference of two converging potentials exceeds a fixed positive number to get the consequence.
+\end{proof}
+
+\begin{lemma}\label{lem:monotone-psh-capacity}
+Let $u_j\in\PSH(X,\theta)$. If $u_j$ decreases to a genuine potential $u$, or increases with a common upper bound and $u=(\lim_j u_j)^*$, then $u_j\to u$ in capacity.
+\end{lemma}
+\begin{proof}
+In the decreasing case $u$ is a common lower bound; in the increasing case $u_1$ is one. Choose a Hermitian $\Omega\geq\theta$ and truncate at $-T$. Bounded monotone capacity convergence applies to the truncations. Quasi-continuity of the common lower bound permits removal of an open set of arbitrarily small capacity containing its pole set and all its discontinuities. On the compact complement that lower bound is finite and continuous, hence bounded below. Its deep sublevels therefore have capacity tending to zero. Let $T\to\infty$.
+\end{proof}
+
+A fixed bounded reference also controls a mixed trace with one normalized, varying potential.
+
+\begin{lemma}\label{lem:bounded-reference-trace}
+Let $\theta\geq0$ and fix a bounded $\psi\in\PSH(X,\theta)$. There is a constant $C_\psi$ such that
+\[
+ \int_X\theta_v\wedge\theta_\psi^{n-1}\leq C_\psi
+\]
+for every bounded $v\in\PSH(X,\theta)$ with $\sup_Xv=0$.
+\end{lemma}
+\begin{proof}
+Choose a fixed Hermitian metric $\Omega\geq\theta$. All currents in the left side are positive, and $\Omega_\psi\geq\theta_\psi$. Bounded Stokes gives
+\[
+ \int_X\theta_v\wedge\theta_\psi^{n-1}
+ \leq\int_X\theta\wedge\Omega_\psi^{n-1}
+       +\int_Xv\,\ddc(\Omega_\psi^{n-1}).
+\]
+The first term has a fixed bound. For $n\geq2$, the exact differentiation formula is
+\[
+ \ddc(\Omega_\psi^{n-1})
+ =(n-1)\ddc\Omega\wedge\Omega_\psi^{n-2}
+ +(n-1)(n-2)\mathrm{d}\Omega\wedge\dc\Omega\wedge\Omega_\psi^{n-3},
+\]
+where the second term is absent for $n=2$. Its absolute value is bounded by fixed multiples of the corresponding positive mixed measures with $\Omega^2$ and $\Omega^3$ in place of the smooth torsion factors. The weighted local Chern--Levine--Nirenberg inequality from \cref{sec:psh-local-capacity} bounds the integrals of $|v|$ against these measures. Indeed, on each larger coordinate ball add fixed smooth corrections to $v$ and $\psi$, shift the first to be negative, expand in the corrected positive Hessian of $\psi$, and apply that inequality on a smaller ball. The bound is
+\[
+ C(1+\|\psi\|_\infty)^n(1+\|v\|_{L^1(X)}).
+\]
+Normalized $\theta$-plurisubharmonic functions have uniformly bounded $L^1$ norms. Summing the local bounds proves the assertion. For $n=1$, the second integral is zero by Stokes, and the result is immediate.
+\end{proof}

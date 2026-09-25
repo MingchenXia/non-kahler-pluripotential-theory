@@ -1,7 +1,7 @@
 \section{Products with smooth backgrounds}
 \label{sec:psh-bounded-products}
 
-The Bedford--Taylor construction also defines products after adding smooth forms to complex Hessians. Independence of the smooth correction makes these products global; positivity requires retaining the original lower curvature bound. Fix $1\leq k\leq n$.
+The Bedford--Taylor construction also defines products after adding smooth forms to complex Hessians. Independence of the smooth correction makes these products global; positivity requires retaining the original lower curvature bound. Write $\theta_v=\theta+\ddc v$ and fix $1\leq k\leq n$.
 
 \Needspace{8\baselineskip}
 Let $u$ be locally bounded and $\theta$-plurisubharmonic. On a relatively compact coordinate ball with coordinates $z$, choose $A>0$ and put $q=A|z|^2$ so that $p=u+q$ is plurisubharmonic. Set $\beta=\theta-\ddc q$ and define
@@ -52,3 +52,72 @@ For a locally bounded quasi-plurisubharmonic function $v$ and a smooth convex in
  \ddc F(v)=F'(v)\ddc v+F''(v)\,\mathrm{d}v\wedge\dc v.
 \end{equation}
 The gradient term and its products with positive bounded Bedford--Taylor factors are nonnegative. These local identities follow by decreasing regularization; bounded potentials have the local Sobolev regularity needed for the gradient expression. They are part of the bounded local calculus recalled in \cite{SGPT,GZ17}. In particular, inequalities obtained from this formula pass through local smoothing with a lower-curvature error tending to zero.
+
+The mixed density inequality survives a smooth change of background. Work on an open set $U\subset\mathbb C^n$ and put $\beta=\ddc|z|^2$.
+
+\begin{lemma}\label{lem:interior-mixed-background}\label{lem:nonclosed-mixed-density}
+Let $T_i=\vartheta_i+\ddc u_i\geq0$, $i=1,2$, where $\vartheta_i$ are smooth real $(1,1)$-forms and $u_i$ are locally bounded. If
+\[
+  T_i^n\geq F_i\beta^n,
+  \qquad F_i\geq0\text{ measurable},
+\]
+then, for every integer $0\leq k\leq n$,
+\begin{equation}\label{eq:interior-mixed-background}
+  T_1^k\wedge T_2^{n-k}
+  \geq F_1^{k/n}F_2^{(n-k)/n}\beta^n.
+\end{equation}
+Consequently, for $a,b\geq0$,
+\begin{equation}\label{eq:interior-minkowski-background}
+  (aT_1+bT_2)^n
+  \geq\bigl(aF_1^{1/n}+bF_2^{1/n}\bigr)^n\beta^n.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix $W\Subset U$. On a ball $B_r(x)$ choose a constant form
+\[
+  A_i=\vartheta_i(x)+Cr\beta
+\]
+so that $S_i=A_i-\vartheta_i$ satisfies $0\leq S_i\leq2Cr\beta$. If $q_i$ is a quadratic potential for $A_i$, then $u_i+q_i$ is plurisubharmonic and
+\[
+  \bigl(\ddc(u_i+q_i)\bigr)^n=(T_i+S_i)^n\geq F_i\beta^n.
+\]
+Apply \cref{thm:local-mixed-input} to the two closed Hessians. After expansion, every term not equal to $T_1^k\wedge T_2^{n-k}$ contains some $S_i$ and is bounded by $C'r\mu$, where
+\[
+  \mu=\sum_{a+b\leq n-1}T_1^a\wedge T_2^b\wedge\beta^{n-a-b}
+\]
+is locally finite. A finite cover and a partition of unity give on $W$
+\[
+  T_1^k\wedge T_2^{n-k}
+  \geq F_1^{k/n}F_2^{(n-k)/n}\beta^n-C'r\mu.
+\]
+Letting $r\downarrow0$ proves \eqref{eq:interior-mixed-background}; the binomial expansion gives \eqref{eq:interior-minkowski-background}.
+\end{proof}
+
+\begin{lemma}\label{lem:interior-convolution}
+Suppose $u$ is continuous, $T=\vartheta+\ddc u\geq0$, and $T^n\geq g^n\beta^n$ with $g\geq0$ continuous. For a nonnegative convolution kernel $\chi_\delta$ of mass one,
+\begin{equation}\label{eq:interior-convolution}
+  (T*\chi_\delta)^n\geq(g*\chi_\delta)^n\beta^n
+\end{equation}
+on every smaller domain on which the convolution is defined.
+\end{lemma}
+
+\begin{proof}
+Approximate the convolution by finite convex combinations of translates and apply \eqref{eq:interior-minkowski-background}. The background forms converge smoothly and the potentials converge uniformly on compact sets. To pass to the limit, add a common quadratic and telescope the difference of two powers. After pairing with a test form, integration by parts bounds each term by the uniform difference of the potentials times a mixed-current mass. Successive integration against nested cutoffs gives a uniform bound for those masses. Thus the bounded-potential products converge and \eqref{eq:interior-convolution} follows.
+\end{proof}
+
+\begin{lemma}\label{lem:bounded-convex-pair}
+Let $h\leq a$ be locally bounded $\theta$-plurisubharmonic functions, and let $\chi$ be smooth on a neighborhood of $(-\infty,0]$ with $0\leq\chi'\leq1$ and $\chi''\geq0$. Then $w=a+\chi(h-a)$ is $\theta$-plurisubharmonic and
+\[
+ \theta_w=(1-\chi'(h-a))\theta_a+\chi'(h-a)\theta_h
+       +\chi''(h-a)\,\mathrm{d}(h-a)\wedge\dc(h-a).
+\]
+In particular, $\theta_w^n\geq\chi'(h-a)^n\theta_h^n$.
+\end{lemma}
+\begin{proof}
+The function $G(x,y)=x+\chi(y-x)$, for $y\leq x$, is convex and nondecreasing in each variable: its first derivatives are $1-\chi'$ and $\chi'$, and its Hessian is
+\[
+ \chi''\begin{pmatrix}1&-1\\-1&1\end{pmatrix}\geq0.
+\]
+For smooth potentials the chain rule gives the identity. For bounded potentials, add a common quadratic correction and convolve. Convolution preserves the order, and $G(x+r,y+r)=r+G(x,y)$ retains the common correction. The bounded chain rule \eqref{eq:bounded-convex-chain-rule} and its gradient products give the identity in the limit. Freezing the smooth background as in \cref{prop:bounded-products} preserves its exact lower bound. Every term on the right is positive; positivity of the bounded mixed products gives the last assertion.
+\end{proof}

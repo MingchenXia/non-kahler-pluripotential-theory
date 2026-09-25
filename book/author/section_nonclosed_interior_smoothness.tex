@@ -3,141 +3,28 @@
 \section{Interior smoothness on the regular locus}
 \label{sec:nonclosed-interior-smoothness}
 
-The existence theorem above concerns the minimal ordinary singularity
-type of an arbitrary smooth big background. We now study local
-smoothness where the density is smooth and positive. The argument below
-assumes local H\"older continuity of the solution. It uses a strict
-singular barrier to select a point of the nonregular set and then derives
-local derivative estimates for the original background. Neither bounded
-mass nor positive lower mass is imposed.
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and let $\omega_X$ be a Hermitian form on $X$.
-
-Choose $\varepsilon>0$ and $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth
-remainder such that
-\begin{equation}\label{eq:interior-strict-reference}
- \theta+\ddc\rho\geq\varepsilon\omega_X,
- \qquad \rho\leq0.
-\end{equation}
-Write $\Omega=\{\rho>-\infty\}$ and retain the minimal envelope $V_\theta$
-from \cref{sec:big-minimal-existence}.
+Smoothness of the density gives interior smoothness of a minimal-type solution once local H\"older continuity is known on the regular locus $\Omega$ of the fixed strict barrier. The proper gap from \cref{lem:interior-proper-gap} locates a point of any nonregular set. Near that point, smooth Dirichlet approximants have polynomial trace growth; localization improves this growth until a uniform trace bound yields elliptic regularity.
 
 \begin{theorem}\label{thm:nonclosed-interior-smoothness}
 Suppose $\varphi\in\PSH(X,\theta)$ has minimal singularities and is locally
 H\"older continuous on $\Omega$. Let $c>0$ and let $f$ be smooth and strictly positive on $\Omega$. Assume
 \[
- (\theta+\ddc\varphi)^n=cf\,\omega_X^n\quad\text{on }\Omega.
+ (\theta+\ddc\varphi)^n=cf\,\omega^n\quad\text{on }\Omega.
 \]
 Then
 $\varphi\in C^\infty(\Omega)$ and $\theta+\ddc\varphi>0$ there.
 \end{theorem}
 
 Subtracting a constant, we may assume $\sup_X\varphi=0$ and choose $C>0$ such that $V_\theta-C\leq\varphi\leq V_\theta$.
-A sufficient condition for the H\"older premise is $0\leq f\in L^p(X,\omega_X^n)$ for some $p>1$, by \cref{thm:big-minimal-holder}. Smoothness of $f$ only on $\Omega$ does not imply its global $L^p$ integrability. The argument below retains local H\"older continuity as an explicit premise, so it also applies when that continuity is known by another argument.
+A sufficient condition for the H\"older premise is $0\leq f\in L^p(X,\omega^n)$ for some $p>1$, by \cref{thm:big-minimal-holder}. The theorem also applies when local H\"older continuity is obtained by another argument.
 
-All coordinate balls have compact closure in a larger chart, with holomorphic coordinates $z=(z_1,\ldots,z_n)$. Put $\beta=\ddc|z|^2$ and take matrix coefficients relative to $\beta$.
+All coordinate balls have compact closure in a larger chart.
 
-\Needspace{15\baselineskip}
-\subsection{The proper barrier}\label{sec:interior-proper}
+\subsection{Local comparison}\label{sec:interior-calculus}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and let $\omega_X$ be a Hermitian form on $X$. Fix $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, satisfying $\theta+\ddc\rho\geq\varepsilon\omega_X$ for a constant $\varepsilon>0$. Set $\Omega=\{\rho>-\infty\}$ and $V_\theta=P_\theta(0)$, the minimal envelope of \cref{sec:big-minimal-existence}. Let $\varphi\in\PSH(X,\theta)$ have minimal singularities and be locally H\"older continuous on $\Omega$. Normalize $\sup_X\varphi=0$ and choose $C>0$ with $V_\theta-C\leq\varphi\leq V_\theta$.
+Local comparison identifies the given continuous potential with limits of smooth Dirichlet solutions. Its proof uses the mixed inequalities of \cref{lem:interior-mixed-background,lem:interior-convolution} and the closed-current comparison formula \eqref{eq:interior-power-comparison}.
 
-The singularity type supplies the global compactness needed for the final localization.
-
-\begin{lemma}\label{lem:interior-proper-gap}
-After adding a constant to $\rho$, one may assume $\rho\leq0$. Then $\varphi-\rho$ is continuous, bounded below, and proper on $\Omega$, in the sense that all its sublevel sets are compact in $\Omega$.
-\end{lemma}
-
-\begin{proof}
-Choose $M\geq0$ with $\theta\geq-M\omega_X$. If $a\in(0,1)$ is sufficiently close to one, then
-\[
-  \theta+\ddc(a\rho)
-  =a(\theta+\ddc\rho)+(1-a)\theta
-  \geq\bigl(a\varepsilon-(1-a)M\bigr)\omega_X>0.
-\]
-Thus $a\rho$ is an admissible competitor for $V_\theta$. Minimal singularities and the normalization give
-\[
-  0\geq\varphi\geq V_\theta-C\geq a\rho-C,
-\]
-and hence
-\begin{equation}\label{eq:interior-gap-proper}
-  \varphi-\rho\geq(1-a)(-\rho)-C.
-\end{equation}
-The assumed local H\"older continuity makes $\varphi$ continuous on $\Omega$; $\rho$ is smooth there because it has analytic singularities. Hence $\varphi-\rho$ is continuous. Since $\rho\to-\infty$ when approaching $X\setminus\Omega$, \eqref{eq:interior-gap-proper} places every sublevel set in a compact superlevel set of $\rho$. The sublevel set is closed in $\Omega$, so it is compact there.
-\end{proof}
-
-\subsection{Local bounded-potential calculus}\label{sec:interior-calculus}
-
-Work in Euclidean coordinates $z=(z_1,\ldots,z_n)$ on $\mathbb C^n$, with $n\geq1$, and put $\beta=\ddc|z|^2$. Background forms denoted by $\vartheta$ are smooth real $(1,1)$-forms; their matrices, traces and determinants are taken relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated coordinate indices range from $1$ to $n$, and $I$ denotes the identity matrix of the indicated size. Let $U\subset\mathbb C^n$ be open. For a locally bounded quasi-plurisubharmonic function $u$ on $U$ with $T=\vartheta+\ddc u\geq0$, its powers are defined by choosing a quadratic $q$ such that $u+q$ is plurisubharmonic and expanding $T=\ddc(u+q)+(\vartheta-\ddc q)$. Independence of $q$ follows from the Bedford--Taylor calculus. Decreasing regularizations may be chosen using nonnegative radial mollifiers after the quadratic correction. Bedford--Taylor monotone continuity then gives convergence of every term in the expansion; see \cref{thm:bt-input}.
-
-\paragraph{Mixed inequalities}
-
-We use the local mixed inequality of \cref{thm:local-mixed-input}.
-
-
-\begin{lemma}\label{lem:interior-mixed-background}
-Let $T_i=\vartheta_i+\ddc u_i\geq0$, $i=1,2$, where $\vartheta_i$ are smooth real $(1,1)$-forms and $u_i$ are locally bounded. If
-\[
-  T_i^n\geq F_i\beta^n,
-  \qquad F_i\geq0\text{ continuous},
-\]
-then, for every integer $0\leq k\leq n$,
-\begin{equation}\label{eq:interior-mixed-background}
-  T_1^k\wedge T_2^{n-k}
-  \geq F_1^{k/n}F_2^{(n-k)/n}\beta^n.
-\end{equation}
-Consequently, for $a,b\geq0$,
-\begin{equation}\label{eq:interior-minkowski-background}
-  (aT_1+bT_2)^n
-  \geq\bigl(aF_1^{1/n}+bF_2^{1/n}\bigr)^n\beta^n.
-\end{equation}
-\end{lemma}
-
-\begin{proof}
-Fix $W\Subset U$. On a ball $B_r(x)$ choose a constant form
-\[
-  A_i=\vartheta_i(x)+Cr\beta
-\]
-so that $S_i=A_i-\vartheta_i$ satisfies $0\leq S_i\leq2Cr\beta$. If $q_i$ is a quadratic potential for $A_i$, then $u_i+q_i$ is plurisubharmonic and
-\[
-  \bigl(\ddc(u_i+q_i)\bigr)^n=(T_i+S_i)^n\geq F_i\beta^n.
-\]
-Apply Dinew's inequality to the two closed Hessians. After expansion, every term not equal to $T_1^k\wedge T_2^{n-k}$ contains some $S_i$ and is bounded by $C'r\mu$, where
-\[
-  \mu=\sum_{a+b\leq n-1}T_1^a\wedge T_2^b\wedge\beta^{n-a-b}
-\]
-is locally finite. A finite cover and a partition of unity give on $W$
-\[
-  T_1^k\wedge T_2^{n-k}
-  \geq F_1^{k/n}F_2^{(n-k)/n}\beta^n-C'r\mu.
-\]
-Letting $r\downarrow0$ proves \eqref{eq:interior-mixed-background}; the binomial expansion gives \eqref{eq:interior-minkowski-background}.
-\end{proof}
-
-\begin{lemma}\label{lem:interior-convolution}
-Suppose $u$ is continuous, $T=\vartheta+\ddc u\geq0$, and $T^n\geq g^n\beta^n$ with $g\geq0$ continuous. For a nonnegative convolution kernel $\chi_\delta$ of mass one,
-\begin{equation}\label{eq:interior-convolution}
-  (T*\chi_\delta)^n\geq(g*\chi_\delta)^n\beta^n
-\end{equation}
-on every smaller domain on which the convolution is defined.
-\end{lemma}
-
-\begin{proof}
-Approximate the convolution by finite convex combinations of translates and apply \eqref{eq:interior-minkowski-background}. The background forms converge smoothly and the potentials converge uniformly on compact sets. To pass to the limit, add a common quadratic and telescope the difference of two powers. After pairing with a test form, integration by parts bounds each term by the uniform difference of the potentials times a mixed-current mass. Successive integration against nested cutoffs gives a uniform bound for those masses. Thus the bounded-potential products converge and \eqref{eq:interior-convolution} follows.
-\end{proof}
-
-\paragraph{Comparison without a closed background}
-
-We first record the one closed-current comparison fact that enters the proof. If $a,b$ are locally bounded plurisubharmonic functions, $E=\{a<b\}\Subset U$, and $S$ is a positive closed $(n-1,n-1)$-current obtained as a product of bounded plurisubharmonic Hessians and smooth closed positive forms, then
-\begin{equation}\label{eq:interior-mixed-BT-comparison}
-  \int_E\ddc b\wedge S\leq\int_E\ddc a\wedge S.
-\end{equation}
-Indeed, apply the Bedford--Taylor integration-by-parts formula to $b_\epsilon=\max\{a,b-\epsilon\}$ and let $\epsilon\downarrow0$; monotone continuity gives the limit. Replacing one factor at a time yields, for $P=\ddc a$ and $Q=\ddc b$,
-\begin{equation}\label{eq:interior-power-comparison}
-  \int_E P^{n-j}\wedge Q^j\leq\int_E P^n,
-  \qquad 0\leq j\leq n.
-\end{equation}
-This is the mixed form of the local Bedford--Taylor comparison principle, as developed in \cite{SGPT}. Notice that only closed Hessians occur in \eqref{eq:interior-mixed-BT-comparison}.
+In the local arguments, put $\beta=\ddc|z|^2$ in Euclidean coordinates and take coefficient matrices relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$ and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated indices run from $1$ to $n$; $I$ denotes the identity matrix. The smooth real background is denoted by $\vartheta$.
 
 \begin{proposition}\label{prop:interior-comparison}
 Let $D\Subset\mathbb C^n$ be a bounded domain and let $\vartheta$ be a smooth real $(1,1)$-form near $\overline D$. Suppose $u,v\in C(\overline D)$ are $\vartheta$-plurisubharmonic,
@@ -210,9 +97,7 @@ determinant strictly larger than $F$ for small $\delta$. Uniform convergence pre
 
 \subsection{Bounded traces and smoothness}\label{sec:interior-criterion}
 
-Work in Euclidean coordinates $z=(z_1,\ldots,z_n)$ on $\mathbb C^n$, with $n\geq1$, and put $\beta=\ddc|z|^2$. Background forms denoted by $\vartheta$ are smooth real $(1,1)$-forms; their matrices, traces and determinants are taken relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated coordinate indices range from $1$ to $n$, and $I$ denotes the identity matrix of the indicated size.
-
-The final local bootstrap can be isolated from the approximation argument.
+A bounded trace of a positive current bounds all its coefficient measures. The equation then gives a lower eigenvalue bound, so it becomes uniformly elliptic. We record this criterion before constructing approximants whose traces can be controlled.
 
 \begin{proposition}\label{prop:interior-criterion}
 Let $B\subset\mathbb C^n$ be a coordinate ball, let $\vartheta$ be a smooth real $(1,1)$-form there and let $F\in C^\infty(B)$ be strictly positive. Suppose $u$ is continuous, $T=\vartheta+\ddc u\geq0$, and
@@ -275,16 +160,9 @@ The classical variable-coefficient Evans--Krylov theorem gives $u\in C^{2,\alpha
 
 \subsection{Smooth exact approximants}\label{sec:interior-approximants}
 
-Work in Euclidean coordinates $z=(z_1,\ldots,z_n)$ on $\mathbb C^n$, with $n\geq1$, and put $\beta=\ddc|z|^2$. Background forms denoted by $\vartheta$ are smooth real $(1,1)$-forms; their matrices, traces and determinants are taken relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated coordinate indices range from $1$ to $n$, and $I$ denotes the identity matrix of the indicated size. The balls below are centered at the origin after translation. A ball of radius $r_0$ is denoted by $B_{r_0}$. On its boundary, $\nu$ is the outward Euclidean unit normal and $\nabla_{\tan}$ denotes tangential differentiation. For a positive form $T$, the inner product $\langle\,\cdot,\cdot\rangle_T$ on covectors is the one induced by its inverse matrix.
+The smooth Dirichlet theorem in \cref{lem:ball-smooth-dirichlet} also applies to a smooth positive density $F$: a smooth extension of the boundary value plus a large quadratic function is a strict subsolution. We need its dependence on the boundary data explicitly. The next estimates make that dependence polynomial, so H\"older approximation of the boundary values gives a polynomial rate in both the uniform error and the trace.
 
-We construct local smooth solutions for the original background.
-
-For smooth positive $F$ and smooth boundary data, the proof of
-\cref{lem:ball-smooth-dirichlet} applies without change to
-$(\vartheta+\ddc u)^n=F\beta^n$. Indeed, a smooth extension of the boundary
-values plus a sufficiently large multiple of $|z|^2-r_0^2$ is a strict
-subsolution. We use the same classical smooth Dirichlet theorem; for $n=1$ this is the Poisson Dirichlet problem.
-The following estimates keep track of the boundary-data dependence.
+The balls are centered at the origin. On their boundaries, $\nu$ is the outward Euclidean unit normal and $\nabla_{\tan}$ denotes tangential differentiation. For a positive form $T$, covector inner products with subscript $T$ use its inverse matrix.
 
 \Needspace{20\baselineskip}
 \begin{lemma}\label{lem:interior-trace-peak}
@@ -348,6 +226,7 @@ For $S$ larger than a fixed constant the bracket is at least $A\varepsilon/2$; t
 
 The next estimate records quantitative dependence on the boundary data.
 
+\Needspace{17\baselineskip}
 \begin{proposition}\label{prop:interior-global-trace}
 Let $B$ be the unit ball. Fix smooth $\vartheta$, smooth $F>0$ near $\overline B$, and $M<\infty$. There are $C,N<\infty$, depending only on these fixed data, such that every smooth solution $u$ with boundary value $g\in C^\infty(\partial B)$ of
 \[
@@ -445,12 +324,13 @@ Finally, choose a fixed quadratic $q$ with $\vartheta+\ddc q\geq\varepsilon\beta
 
 \paragraph{Exact approximation}
 
-Return to the global data of \cref{thm:nonclosed-interior-smoothness}: $\theta$ is the smooth big background on the compact manifold $X$, $\varphi$ is the minimal-singularity locally H\"older solution on $\Omega=\{\rho>-\infty\}$, and its equation is $(\theta+\ddc\varphi)^n=cf\,\omega_X^n$ there, with $c>0$ and $f$ smooth and positive.
+Apply these estimates to the boundary values of $\varphi$ on a ball in $\Omega$.
 
+\Needspace{18\baselineskip}
 \begin{proposition}\label{prop:interior-tame-approximants}
 Let $B\Subset\Omega$ be a coordinate ball, identified with $\{|z|<r_0\}$, with closure in a larger coordinate chart, and put
 \[
-  F=\frac{cf\,\omega_X^n}{\beta^n}.
+  F=\frac{cf\,\omega^n}{\beta^n}.
 \]
 There are $a>0$, $b,C<\infty$, and $u_j\in C^\infty(\overline B)$ such that
 \begin{equation}\label{eq:interior-exact-approximants}
@@ -489,8 +369,11 @@ Apply the smooth Dirichlet theorem just recalled with density $H=F\beta^n/\eta^n
 
 \subsection{Localization near the nonregular set}\label{sec:interior-localization}
 
-Work in Euclidean coordinates $z=(z_1,\ldots,z_n)$ on $\mathbb C^n$, with $n\geq1$, and put $\beta=\ddc|z|^2$. Background forms denoted by $\vartheta$ are smooth real $(1,1)$-forms; their matrices, traces and determinants are taken relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated coordinate indices range from $1$ to $n$, and $I$ denotes the identity matrix of the indicated size. Norms and distances below are Euclidean. A smooth exact solution for data $(\vartheta,F)$ means a smooth real $u_j$ with $\vartheta+\ddc u_j>0$ and $(\vartheta+\ddc u_j)^n=F\beta^n$.
+A quadratic gap along the nonregular set suppresses the boundary contribution to a maximum-principle estimate. Choosing the coefficient of that gap proportional to $\log j$ improves polynomial trace growth to growth smaller than every positive power. Combining this improvement with the approximation rate gives uniform $C^{1,\alpha}$ bounds.
 
+Distances and norms below are Euclidean. A smooth exact solution for $(\vartheta,F)$ satisfies $\vartheta+\ddc u_j>0$ and $(\vartheta+\ddc u_j)^n=F\beta^n$.
+
+\Needspace{28\baselineskip}
 \begin{proposition}\label{prop:interior-subpower}
 For $R>0$, let $B=B_R(0)$, let $\vartheta$ and $F>0$ be smooth near $\overline B$, and let $u\in C(\overline B)$. Suppose $q$ is smooth and $\vartheta+\ddc q\geq\varepsilon\beta$ for some $\varepsilon>0$. Put $v=u-q$ and $m=v(0)$, and fix $\kappa>0$. Let $\mathcal S\subset\overline B$ be closed, contain $0$, and satisfy
 \begin{equation}\label{eq:interior-quadratic-separation}
@@ -613,9 +496,9 @@ where $\gamma>0$ can be chosen arbitrarily small by shrinking the ball. With $t=
 \Needspace{24\baselineskip}
 \subsection{Derivative estimates and bounded traces}\label{sec:interior-calabi}
 
-Work in Euclidean coordinates $z=(z_1,\ldots,z_n)$ on $\mathbb C^n$, with $n\geq1$, and put $\beta=\ddc|z|^2$. Background forms denoted by $\vartheta$ are smooth real $(1,1)$-forms; their matrices, traces and determinants are taken relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated coordinate indices range from $1$ to $n$, and $I$ denotes the identity matrix of the indicated size. Here $B$ is the unit ball, and $B_r(p)$ denotes a Euclidean ball of radius $r$ centered at $p$. The notation $\partial g$ refers to ordinary coordinate derivatives of the coefficients of a form $g$. Gradients in the stated scalar estimates are Euclidean. In the proof, tensor covariant derivatives will instead use the explicitly specified Chern connection.
+To turn the $C^{1,\alpha}$ bounds into bounded traces, we need a derivative estimate whose dependence on ellipticity is polynomial. The Chern-connection calculation below retains the torsion of the background. An averaging estimate for the trace then closes a nonlinear iteration when $\alpha$ is sufficiently close to one.
 
-The next estimate needs no K\"ahler identity. Its purpose is quantitative: all dependence on the ellipticity ratio is polynomial.
+Here $B$ is the unit ball, $B_r(p)$ is a Euclidean ball, and $\partial g$ denotes ordinary coordinate derivatives of its coefficient matrix. Tensor derivatives in the proof use the specified Chern connection.
 
 \begin{proposition}\label{prop:interior-calabi}
 Fix smooth $\vartheta$ and smooth $F>0$ near the closed unit ball. There are $C,N<\infty$, depending only on finitely many derivatives of the fixed data, such that any smooth solution
@@ -829,16 +712,15 @@ The infinite product converges because $\sum q^k(1+k)<\infty$. For each fixed $j
 \Needspace{8\baselineskip}
 \subsection{Proof of the main theorem}\label{sec:interior-main-proof}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and let $\omega_X$ be a Hermitian form on $X$. Fix $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, satisfying $\theta+\ddc\rho\geq\varepsilon\omega_X$ for a constant $\varepsilon>0$. Set $\Omega=\{\rho>-\infty\}$ and $V_\theta=P_\theta(0)$, the minimal envelope of \cref{sec:big-minimal-existence}. Let $\varphi\in\PSH(X,\theta)$ have minimal singularities and be locally H\"older continuous on $\Omega$. Normalize $\sup_X\varphi=0$ and choose $C>0$ with $V_\theta-C\leq\varphi\leq V_\theta$. Fix $c>0$ and $f\in C^\infty(\Omega)$ with $f>0$, and assume $(\theta+\ddc\varphi)^n=cf\,\omega_X^n$ on $\Omega$. On each coordinate ball with coordinates $z$, write $\beta=\ddc|z|^2$. These are the data of \cref{thm:nonclosed-interior-smoothness}.
+If a nonregular point exists, minimize $\varphi-\rho$ over the nonregular set. The strict barrier gives quadratic separation at that point. The preceding estimates then supply a bounded trace in a neighborhood, contradicting its choice.
 
 \begin{proof}[of \cref{thm:nonclosed-interior-smoothness}]
 If $n=1$, the equation is the linear identity
 \[
-  \ddc\varphi=cf\,\omega_X-\theta
+  \ddc\varphi=cf\,\omega-\theta
   \quad\text{on }\Omega.
 \]
-Its right-hand side is smooth, so interior elliptic regularity gives $\varphi\in C^\infty(\Omega)$, and the original equation gives $\theta+\ddc\varphi=cf\,\omega_X>0$. We henceforth assume $n\geq2$.
-
+Its right-hand side is smooth, so interior elliptic regularity gives $\varphi\in C^\infty(\Omega)$, and the original equation gives $\theta+\ddc\varphi=cf\,\omega>0$. We henceforth assume $n\geq2$.
 
 Let
 \[
@@ -858,7 +740,7 @@ In coordinates centered at $p$, take $\kappa>0$ small and set
 \[
   q(z)=\rho(z)-\kappa|z|^2.
 \]
-After shrinking $B$, \eqref{eq:interior-strict-reference} gives $\theta+\ddc q>0$. If $v=\varphi-q$, then the minimizing property of $p$ gives
+After shrinking $B$, the strict lower bound for $\theta_\rho$ gives $\theta+\ddc q>0$. If $v=\varphi-q$, then the minimizing property of $p$ gives
 \[
   v(p)=m,
   \qquad
@@ -876,7 +758,7 @@ on a still smaller neighborhood of $p$. Since $u_j\to\varphi$ uniformly, $\ddc u
 
 Hence $\mathcal S=\varnothing$ and $\varphi\in C^\infty(\Omega)$. The form $\theta+\ddc\varphi$ is smooth and semipositive there, while
 \[
-  (\theta+\ddc\varphi)^n=cf\,\omega_X^n>0.
+  (\theta+\ddc\varphi)^n=cf\,\omega^n>0.
 \]
 Its nonnegative eigenvalues have positive product, so every eigenvalue is positive. Therefore $\theta+\ddc\varphi>0$ on $\Omega$.
 \end{proof}
@@ -885,11 +767,10 @@ Its nonnegative eigenvalues have positive product, so every eigenvalue is positi
 Two inputs enter the localization: local H\"older continuity supplies polynomial boundary approximation, and the proper gap $\varphi-\rho$ selects a point of the nonregular locus with quadratic separation. Every derivative estimate is local and is performed for the original non-closed form $\theta$.
 \end{remark}
 
-
 \begin{corollary}\label{cor:big-lp-interior-smoothness}
-Let $0\leq f\in L^p(X,\omega_X^n)$, $p>1$, be smooth and strictly positive
+Let $0\leq f\in L^p(X,\omega^n)$, $p>1$, be smooth and strictly positive
 on $\Omega$. Every minimal-singularity solution of
-$(\theta+\ddc\varphi)^n=cf\,\omega_X^n$, $c>0$, is smooth and strictly
+$(\theta+\ddc\varphi)^n=cf\,\omega^n$, $c>0$, is smooth and strictly
 $\theta$-plurisubharmonic on $\Omega$.
 \end{corollary}
 \begin{proof}
@@ -901,11 +782,6 @@ local H\"older continuity. All hypotheses of
 The existence of a normalized minimal-singularity solution is already
 proved in \cref{thm:big-minimal-normalized}.
 \end{proof}
-
-This assertion concerns interior regularity. It gives no regularity
-across the pole set of the chosen strict barrier, and it does not address
-zeros of the density. In particular the degeneracy examples earlier in
-this chapter retain their stated scope.
 
 For a smooth closed big representative on a compact K\"ahler manifold,
 \cref{thm:big-class-ample-smoothness} applies this conclusion to the

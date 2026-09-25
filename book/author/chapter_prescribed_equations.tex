@@ -1,13 +1,13 @@
 \chapter{Equations with prescribed singularities}
 \label{chap:prescribed-equations}
 
-There are two ways to prescribe singularities in a Monge--Amp\`ere equation. One can require the solution to differ from a reference potential by a bounded function. Alternatively, one can require it to belong to a relative full mass class; the solution may then be strictly more singular than the reference. The distinction is already present in the closed theory. In the Hermitian theory it interacts with the choice of upper and lower volume, and with the positivity assumptions needed for domination.
+Prescribing a singularity type asks for a solution whose difference from a given potential is bounded. An existence proof must therefore control this difference as well as the Monge--Amp\`ere measure. A strict lower barrier makes comparison possible; relative estimates keep the approximants in the required type; envelope compactness then identifies their limiting equation.
 
-We first solve $L^p$ equations in semipositive big backgrounds and develop the comparison and compactness arguments used later. These also describe what the positive-exponent approximation selects in the nonuniqueness example. For arbitrary smooth big backgrounds, \cref{sec:big-minimal-comparison,sec:big-minimal-existence} use a strict singular barrier, resolution and the Gauduchon trace to solve both equations in the minimal ordinary singularity type, without either metric volume property. \Cref{sec:big-reference-stability} gives stability and compactness near a fixed reference above that barrier. For minimal-singularity solutions, \cref{sec:big-minimal-holder} proves local H\"older continuity under a global $L^p$ density bound and describes the normalized exponential limits. \Cref{sec:nonclosed-interior-smoothness} then proves smoothness where the barrier is smooth and the density is smooth and positive. The boundary criterion and counterexamples in \cref{sec:local-density-boundary} distinguish this regularity theorem from assertions on arbitrary smooth-density open sets. We then prescribe a general ordinary type in a semipositive background.
+We study both the exponential equation and its zero-exponent limit. A positive exponent fixes the additive constant and gives uniqueness in the prescribed type. At exponent zero, comparison still determines the scalar multiplying the density, while the potential can fail to be unique. The projective example shows how symmetry can nevertheless select the limit of the exponential solutions. For a general big background, a strict analytic barrier also identifies the open set on which stability leads to local regularity.
 
-In a Hermitian background, \cref{sec:lower-mass-solvability} explains why positive lower mass is necessary for solvability for every finite non-pluripolar measure. The general-measure existence theorems under uniform mass hypotheses are collected in \cref{chap:relative-finite-measures,chap:bounded-mass-equations}. The present chapter treats the admissibility and approximation of individual right-hand sides without imposing either metric mass property.
+For integrable densities, the final part of the chapter replaces an $L^p$ estimate by a subsolution threshold. Bounded truncations and Gauduchon tests determine this threshold and construct a greatest exponential solution when it is positive. The argument distinguishes convergence of the scalar and its measures from convergence of the normalized potentials. The existence theory for all finite non-pluripolar measures under mass hypotheses is developed in \cref{chap:relative-finite-measures,chap:bounded-mass-equations}.
 
-For an individual $L^1$ density, \cref{sec:individual-density-subsolutions,sec:integrable-gauduchon-tests,sec:individual-density-stability} replace this uniform hypothesis by an exact subsolution threshold and its Gauduchon formula. The final sections construct the greatest exponential solution at a positive threshold and separate convergence of the scalar, the right-hand-side measure and the normalized potential. Throughout, uniqueness of the scalar is distinguished from uniqueness of the potential.
+Throughout, $X$ is a connected compact complex manifold of dimension $n\geq1$, $\omega$ is a Hermitian metric, and $\mathrm{d}V$ is a smooth positive probability volume form. Unqualified function norms use this volume. We use the singularity order, envelopes and capacity of \cref{chap:framework}. We abbreviate $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ to $\mathrm{MA}_\theta(u)$. The background hypotheses are specified in each argument, and the extended measures may have infinite mass. Write $s_+=\max(s,0)$ for a real $s$.
 
 \input{author/section_singular_domination}
 
@@ -53,34 +53,26 @@ For an individual $L^1$ density, \cref{sec:individual-density-subsolutions,sec:i
 \input{author/section_local_density_boundary}
 
 \Needspace{12\baselineskip}
-\section{The same ordinary singularity type}\label{sec:ordinary-type-equations}
+\section{Equations in a prescribed ordinary type}\label{sec:ordinary-type-equations}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive volume form. Let $\theta$ be a smooth semipositive big real $(1,1)$-form on $X$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, using the extended product of \cref{chap:products}. We use the obstacle envelopes $P_\theta(f)$ from \cref{sec:obstacle-envelopes} and the singularity envelopes $P_\theta[u]$ from \cref{def:singularity-envelope}. The relation $u\preceq v$ means $u\leq v+C$ for some real constant $C$; $u\simeq v$ means that both inequalities hold. Fix a reference $\varphi\in\PSH(X,\theta)$ satisfying
-\[
- P_\theta[\varphi]=\varphi,\qquad
- P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
- \quad\text{for some }0<\varepsilon<1.
-\]
-Fix one such $\varepsilon\in(0,1)$. Thus the model condition is exactly \eqref{eq:als-model-condition}.
+Return to a semipositive big $\theta$. We now require the solution to have the ordinary type of an envelope fixed point $\varphi$ satisfying \eqref{eq:als-model-condition}. Fix $\varepsilon\in(0,1)$ for which $P_{\varepsilon\theta}(\varphi)$ is genuine. The smaller-background envelope yields a uniform bound for the difference from $\varphi$. A supersolution and the addition theorem then prove existence in this type.
 
 \Needspace{20\baselineskip}
 \begin{theorem}
 \label{thm:als-prescribed-lp}
-Let $\mathrm{d}V$ be a smooth positive volume form and let $\mu=f\,\mathrm{d}V$, where $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, and $\mu(X)>0$. Then:
+Let $\mu=f\,\mathrm{d}V$, where $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, and $\mu(X)>0$. Then:
 \begin{enumerate}
-\item For every $\lambda>0$ there is a unique $u\in\PSH(X,\theta)$ with $u\simeq\varphi$ such that
+\item For every $\lambda>0$ there is a unique $u\in\PSH(X,\theta)$ with $u\sim\varphi$ such that
 \[
  \mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu.
 \]
-\item There are $u\in\PSH(X,\theta)$ with $u\simeq\varphi$ and a uniquely determined constant $c>0$ such that
+\item There are $u\in\PSH(X,\theta)$ with $u\sim\varphi$ and a uniquely determined constant $c>0$ such that
 \[
  \mathrm{MA}_\theta(u)=c\mu.
 \]
 \end{enumerate}
-The assertions hold without bounded mass or a positive uniform lower mass hypothesis on $X$.
-\end{theorem}
 
-The proofs follow after the uniform estimate and supersolution construction.
+\end{theorem}
 
 Only $c$ is asserted to be unique in the second part. Uniqueness of the potential up to a constant is false under these hypotheses: \cref{thm:degenerate-hermitian-nonuniqueness} already gives a counterexample in the minimal singularity type of a Hermitian background. Positive-exponent uniqueness does not imply zero-exponent uniqueness.
 
@@ -92,7 +84,7 @@ The next estimate explains how the same singularity type is retained in the limi
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:relative-linfty}
-Under the hypotheses on $(X,\theta,\varphi)$ above, suppose $u\in\PSH(X,\theta)$, $u\simeq\varphi$, $\sup_Xu=0$, and
+Under the hypotheses on $(X,\theta,\varphi)$ above, suppose $u\in\PSH(X,\theta)$, $u\sim\varphi$, $\sup_Xu=0$, and
 \[
  \mathrm{MA}_\theta(u)\leq f\,\mathrm{d}V,
  \qquad0\leq f\in L^p(\mathrm{d}V),\quad p>1.
@@ -106,7 +98,7 @@ There is a constant $C$, depending on the fixed geometry, $\varphi$, $p$, and an
 \begin{proof}
 The upper bound follows directly from the fixed-point property: $u\leq0$ and $u\preceq\varphi$, so $u$ is a competitor for $P_\theta[\varphi]$.
 
-Fix $0<\varepsilon<1$ for which $\varphi_\varepsilon=P_{\varepsilon\theta}(\varphi)$ is genuine. Since $\varphi_\varepsilon\leq\varphi\leq0$, uniform exponential integrability for normalized $u$ and exponential integrability for this fixed $\varphi_\varepsilon$ allow a choice of $\gamma>0$ and $1<q<p$ such that
+Put $\varphi_\varepsilon=P_{\varepsilon\theta}(\varphi)$. Since $\varphi_\varepsilon\leq\varphi\leq0$, uniform exponential integrability for normalized $u$ and exponential integrability for this fixed $\varphi_\varepsilon$ allow a choice of $\gamma>0$ and $1<q<p$ such that
 \[
  g=\mathrm{e}^{-\gamma(\varphi_\varepsilon+u)}f
 \]
@@ -123,18 +115,13 @@ Put $h=\varphi_\varepsilon+v\leq\varphi$ and define
  \chi(t)=\frac1{1-t}\quad(t\leq0),\qquad
  \psi=\varphi+\chi(h-\varphi).
 \]
-Then $0\leq\chi\leq1$, $0<\chi'\leq1$, and $\chi''>0$. The formula is interpreted off the pole sets and then by the canonical representative. We justify it as follows. The function
-$G(x,y)=x+\chi(y-x)$ on $y\leq x$ is convex and nondecreasing in each variable: its first derivatives are $1-\chi'$ and $\chi'$, and its Hessian is
-\[
- \chi''\begin{pmatrix}1&-1\\-1&1\end{pmatrix}\geq0.
-\]
-For bounded ordered potentials the local chain rule therefore gives
+Then $0\leq\chi\leq1$, $0<\chi'\leq1$, and $\chi''>0$. Interpret the formula off the pole sets. For bounded ordered potentials, \cref{lem:bounded-convex-pair}, with $G(x,y)=x+\chi(y-x)$, gives
 \[
  \theta+\ddc G(\varphi,h)
  \geq(1-\chi'(h-\varphi))\theta_\varphi
        +\chi'(h-\varphi)\theta_h\geq0.
 \]
-This bounded chain rule follows by local convolution after a common smooth correction; $G(x+r,y+r)=r+G(x,y)$ preserves that correction, and positivity follows by the same constant-form freezing used for bounded products. For unbounded potentials apply the bounded assertion to
+For unbounded potentials apply the bounded assertion to
 $\varphi_k=\max(\varphi,-k)$ and $h_k=\max(h,-k)\leq\varphi_k$. Monotonicity of $G$ makes $G(\varphi_k,h_k)$ decrease. Its limit is $\theta$-plurisubharmonic and lies between $\varphi$ and $\varphi+1$, so it is genuine and equals $\psi$ as defined above. Locality on common finite levels and bounded product positivity give
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(\psi)
@@ -167,14 +154,14 @@ The two potentials have the same ordinary singularity type. Moreover $P_{\vareps
 The estimate controls $u-\varphi$, rather than $u$ itself. The smaller-background condition supplies $\varphi_\varepsilon$ and enables the final domination argument; the bounded auxiliary equation is now supplied by the preceding sections.
 
 \begin{lemma}\label{lem:relative-lp-supersolution}
-For nonzero $0\leq f\in L^p(\mathrm{d}V)$ and $\lambda>0$, there exists $w\in\PSH(X,\theta)$ with $w\simeq\varphi$ such that
+For nonzero $0\leq f\in L^p(\mathrm{d}V)$ and $\lambda>0$, there exists $w\in\PSH(X,\theta)$ with $w\sim\varphi$ such that
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(w)\leq \mathrm{e}^{\lambda w}f\,\mathrm{d}V.
 \]
 \end{lemma}
 \begin{proof}
 Let $v$ be the bounded solution of $\mathrm{MA}_\theta(v)=\mathrm{e}^{\lambda v}f\,\mathrm{d}V$ supplied by \cref{thm:big-bounded-exponential}, and write $M=\sup_Xv$, $a=v-M\leq0$. The rooftop $p=P_\theta(a,\varphi)$ satisfies
-$\varphi-\|a\|_\infty\leq p\leq\varphi$, so $p\simeq\varphi$. By the rooftop inequality,
+$\varphi-\|a\|_\infty\leq p\leq\varphi$, so $p\sim\varphi$. By the rooftop inequality,
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(p)
  \leq\mathbf1_{\{p=a\leq\varphi\}}\mathrm{MA}_\theta(a)
@@ -202,85 +189,21 @@ $\mathrm{MA}^{\mathrm{ext}}_\theta(p)\leq \mathrm{e}^{\lambda(p+M)}f\,\mathrm{d}
 \section{The zero-exponent limit and its topology}
 \label{sec:zero-exponent-topology}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive volume form. Let $\theta$ be a smooth real $(1,1)$-form and $\varphi\in\PSH(X,\theta)$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, using the extended product of \cref{chap:products}. We use the obstacle envelopes $P_\theta(f)$ from \cref{sec:obstacle-envelopes} and the singularity envelopes $P_\theta[u]$ from \cref{def:singularity-envelope}. The relation $u\preceq v$ means $u\leq v+C$ for some real constant $C$; $u\simeq v$ means that both inequalities hold. Capacity means $\operatorname{Cap}_\omega$ from \cref{sec:hermitian-capacity}. We consider families $u_\lambda\in\PSH(X,\theta)$ indexed by $\lambda>0$; equation and singularity assumptions on them are stated in each result.
+For an unbounded prescribed type, the zero-exponent limit must be formulated through normalized potentials and their measures. Even multiplying an individual unbounded potential by a positive exponent leaves its uniform distance from every finite constant infinite. The useful convergence comes instead from integration against the fixed right-hand-side measure.
 
-The uniform limit $\lambda u_\lambda\to\log c$ proved for continuous bounded potentials in \cref{chap:weak-equations} cannot be transferred unchanged to an unbounded prescribed singularity type.
+\Cref{prop:singular-no-uniform-limit} makes this obstruction precise for every unbounded ordinary type.
 
-\begin{proposition}\label{prop:singular-no-uniform-limit}
-Suppose $\varphi$ is unbounded below and $u_\lambda\simeq\varphi$ for every $\lambda>0$. Then $\lambda u_\lambda$ cannot converge uniformly on $X$ to a finite constant as $\lambda\downarrow0$. Its distance to any finite constant is also infinite in $L^\infty(\mathrm{d}V)$ for each fixed $\lambda>0$.
-\end{proposition}
-\begin{proof}
-Bounded equivalence preserves unboundedness below. Every nonempty strict sublevel set of the upper semicontinuous function $u_\lambda$ is open and has positive smooth volume. Thus $u_\lambda$ is essentially unbounded below, as is $\lambda u_\lambda$. The stated conclusions follow.
-\end{proof}
-
-A fixed finite non-pluripolar measure is uniformly controlled by capacity.
-
-\begin{lemma}\label{lem:npp-uniform-capacity}
-Let $\mu$ be a finite non-pluripolar Borel measure on $X$. Then
-\[
- \lim_{\delta\downarrow0}\sup\{\mu(E):E\text{ Borel},\
-                      \operatorname{Cap}_\omega(E)\leq\delta\}=0.
-\]
-Consequently, capacity convergence implies convergence in $\mu$-measure.
-\end{lemma}
-\begin{proof}
-If the first assertion failed, there would be $\epsilon>0$ and Borel sets $E_j$ with capacity at most $2^{-j}$ and $\mu(E_j)\geq\epsilon$. Countable subadditivity of capacity gives
-\[
- \operatorname{Cap}_\omega\left(\limsup_j E_j\right)=0.
-\]
-The limsup is therefore pluripolar and has zero $\mu$-measure. On the other hand, finiteness of $\mu$ and continuity from above applied to $\bigcup_{j\geq k}E_j$ show that the limsup has measure at least $\epsilon$, a contradiction. Apply the first assertion to the sets on which the difference of two converging potentials exceeds a fixed positive number to get the consequence.
-\end{proof}
-
-For solutions of $\mathrm{MA}_\theta(u_\lambda)=\mathrm{e}^{\lambda u_\lambda}\mu$, write
+For a fixed finite non-pluripolar measure $\mu$ and solutions of $\mathrm{MA}_\theta(u_\lambda)=\mathrm{e}^{\lambda u_\lambda}\mu$, write
 \[
  v_\lambda=u_\lambda-\sup_Xu_\lambda,\qquad
  c_\lambda=\mathrm{e}^{\lambda\sup_Xu_\lambda}.
 \]
-There are three separate limit questions: whether $c_\lambda$ has a finite limit, whether the measures $c_\lambda\mathrm{e}^{\lambda v_\lambda}\mu$ converge, and whether a limit of $v_\lambda$ solves the resulting equation. The next lemma passes from the first question to the second for every fixed finite non-pluripolar measure. The third requires a continuity theorem for the Monge--Amp\`ere operator. For $L^p$ densities, the measure estimate is quantitative.
-
-\Needspace{12\baselineskip}
-\begin{lemma}\label{lem:normalized-exponential-lp}\label{lem:normalized-exponential-npp}
-Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, and let $\lambda_j>0$ decrease to zero. For every finite non-pluripolar measure $\mu$,
-\[
- \int_X\left|\mathrm{e}^{\lambda_jv_j}-1\right|\,\mathrm{d}\mu\longrightarrow0.
-\]
-If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then more precisely
-\[
- \int_X\left|\mathrm{e}^{\lambda_jv_j}-1\right|\,|f|\,\mathrm{d}V
- \leq C_p\lambda_j\|f\|_{L^p(\mathrm{d}V)}.
-\]
-The constant depends on the fixed background, $p$ and $\mathrm{d}V$.
-\end{lemma}
-\begin{proof}
-Choose a Hermitian form $\Omega\geq\theta$. By \cref{lem:global-capacity-estimates}, for every $T>1$,
-\[
- \operatorname{Cap}_\Omega(\{v_j<-T\})\leq C/T
-\]
-uniformly in $j$. Since $v_j\leq0$, splitting at this sublevel gives
-\[
- \int_X(1-\mathrm{e}^{\lambda_jv_j})\,\mathrm{d}\mu
- \leq\lambda_jT\mu(X)+\mu(\{v_j<-T\}).
-\]
-The preceding lemma makes the second term uniformly small when $T$ is large. For this fixed $T$, the first term tends to zero as $j\to\infty$. This proves the general assertion. The value of the exponential is zero at a pole; pole sets have zero $\mu$-measure.
-
-For the quantitative assertion, \cref{lem:uniform-exponential}, applied in background $\Omega$, gives a uniform $L^q$ bound for $-v_j$, where $q=p/(p-1)$. H\"older's inequality and
-\[
- 0\leq1-\mathrm{e}^{\lambda_jv_j}\leq\lambda_j|v_j|
-\]
-give the claimed estimate for every $j$.
-\end{proof}
-
-Consequently, for a fixed nonnegative $f\in L^p(\mathrm{d}V)$, $p>1$, and parameters $\lambda_j\downarrow0$, if $u_j\in\PSH(X,\theta)$ solve $\mathrm{MA}_\theta(u_j)=\mathrm{e}^{\lambda_ju_j}f\,\mathrm{d}V$, put
-\[
- v_j=u_j-\sup_Xu_j,\qquad c_j=\mathrm{e}^{\lambda_j\sup_Xu_j}.
-\]
-If $c_j\to c<+\infty$, then the right-hand sides
-$c_j\mathrm{e}^{\lambda_jv_j}f\,\mathrm{d}V$ converge in total variation to $cf\,\mathrm{d}V$. This conclusion follows from the lemma alone. To conclude that an $L^1$ limit of $v_j$ solves the limiting equation still requires continuity of the Monge--Amp\`ere operator and preservation of the relative class.
+By \cref{lem:normalized-exponential-npp}, if $c_\lambda\to c<+\infty$, then the right-hand sides converge in total variation to $c\mu$. For an $L^p$ density, \cref{lem:normalized-exponential-lp} gives a linear error in the exponential factor. Identifying the measure of a limit of $v_\lambda$ additionally requires a continuity theorem for the Monge--Amp\`ere operator.
 
 Here is one precise continuity input that supplies this step in a common regime.
 
 \begin{theorem}\label{thm:relative-dominated-continuity}
-Assume now that $\theta$ is semipositive and big, that the reference $\varphi$ satisfies \eqref{eq:als-model-condition}, and that $v_-(\theta)>0$, where $v_-(\theta)$ is the infimum of the masses of bounded $\theta$-plurisubharmonic potentials. These are the background hypotheses of \cref{thm:als-general-measure}. Use the relative class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ defined in \cref{def:relative-envelope-class}. Suppose $u_j\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, $u_j\to u\in\PSH(X,\theta)$ in $L^1(X)$, and
+Assume now that $\theta$ is semipositive and big, that the reference $\varphi$ satisfies \eqref{eq:als-model-condition}, and that $v_-(\theta)>0$. These are the background hypotheses of \cref{thm:als-general-measure}. Use the relative class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ defined in \cref{def:relative-envelope-class}. Suppose $u_j\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, $u_j\to u\in\PSH(X,\theta)$ in $L^1(X)$, and
 \[
  \mathrm{MA}_\theta(u_j)\leq\nu
 \]
@@ -290,12 +213,10 @@ $\mathrm{MA}_\theta(u_j)\rightharpoonup\mathrm{MA}_\theta(u)$.
 
 A complete reconstruction is given in \cref{thm:relative-fixed-measure-continuity}. Its proof first constructs a common rooftop envelope after extraction, establishes finite mass of the limiting lower roofs, and then applies domination. Mere $L^1$ convergence, even for uniformly bounded potentials, is insufficient for the Monge--Amp\`ere passage to the limit. The common dominating measure and the positive lower mass assumption are the substantive hypotheses here.
 
-\section[Exponential approximation without bounded mass]{Closing an exponential approximation without bounded mass}
+\section{Limits of positive-exponent equations}
 \label{sec:exponential-closedness}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form on $X$, and let $\mathrm{d}V$ be a smooth positive volume form. Let $\theta$ be any smooth real $(1,1)$-form. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, using the extended product of \cref{chap:products}. Capacity convergence is measured by $\operatorname{Cap}_\omega$ from \cref{sec:hermitian-capacity}.
-
-The estimates in \cref{chap:damped-measures} give a passage to the limit that requires neither bounded mass nor a positive lower volume. Its hypothesis is convergence in capacity. Establishing that convergence in an existence argument remains a separate task.
+At a strictly positive limiting exponent, exponential decay controls the mass on deep sublevels uniformly. Once the potentials converge in capacity, the tail criterion identifies their limiting Monge--Amp\`ere measure. Convergence of the right-hand-side densities then identifies the equation.
 
 \Needspace{15\baselineskip}
 \begin{theorem}\label{thm:exponential-closedness}
@@ -342,11 +263,4 @@ This argument also pinpoints the difficulty as $\lambda_j\downarrow0$: the tail 
 
 \input{author/section_individual_exponential_equations}
 
-\Needspace{19\baselineskip}
-\section{Consequences for the singularity program}
-
-Ordinary singularity volumes are defined by optimizing mass within a bounded-equivalence class. They are therefore invariants of that class and may be infinite; their finiteness and comparison properties retain the hypotheses of \cref{chap:envelopes}. Multiplier-ideal equivalence is coarser. Here $\mathcal I$ denotes multiplier ideals as defined in \cref{chap:framework}. The $\mathcal I$-goodness problem asks which envelope and volume identities survive under this coarser relation.
-
-The equation proofs separate three ingredients: relative envelopes, finite damped measures and continuity of the undamped operator. The first two are available without bounded mass. The third requires estimates for the actual approximating sequence, as in \cref{thm:exponential-closedness}.
-
-Gauduchon metrics give an invariant linear trace and the adjoint measure controlling the smooth scalar. In \cref{chap:normalization}, logarithmic variation of the density gives supporting probabilities for prescribed-type equations. Their construction does not identify them with a linearized adjoint at a singular solution; that identification requires additional regularity.
+The scalar estimates lead to the variational description in \cref{chap:normalization}. There, logarithmic variation of the density gives supporting probabilities for the normalization functional. Identifying these probabilities with adjoint measures at a singular solution requires the regularity established in the relevant equation regime.

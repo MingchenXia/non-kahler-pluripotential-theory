@@ -1,64 +1,6 @@
 \section{A bounded subsolution theorem}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$ on $X$. For a smooth real $(1,1)$-form $\eta$ and $u\in\PSH(X,\eta)$, put $\eta_u=\eta+\ddc u$ and $\mathrm{MA}_\eta(u)=\mathrm{MA}^{\mathrm{ext}}_\eta(u)$, the extended product of \cref{chap:products}. For bounded potentials this is the bounded product. For a smooth real $(1,1)$-form $\theta$, use the obstacle envelope $P_\theta$ of \cref{sec:obstacle-envelopes}; a star denotes upper semicontinuous regularization. Write $u\preceq v$ if $u\leq v+C$ for some real $C$, and $u\simeq v$ if both inequalities hold.
-
-We next allow a density with respect to the Monge--Amp\`ere measure of a bounded potential. Such a measure may be singular with respect to smooth volume. Two preparatory facts explain how its density controls the normalization of a solution.
-
-\Needspace{14\baselineskip}
-\begin{lemma}\label{lem:nonclosed-mixed-density}
-Let $\theta$ be any smooth real background, and let $u,v$ be bounded $\theta$-plurisubharmonic functions. For nonnegative measurable functions $f,g$ on $X$, suppose
-\[
- \theta_u^n\geq f\,\mathrm{d}V,\qquad\theta_v^n\geq g\,\mathrm{d}V,
- \qquad f,g\geq0,
-\]
-then
-\[
- \theta_u^k\wedge\theta_v^{n-k}
- \geq f^{k/n}g^{(n-k)/n}\,\mathrm{d}V,\qquad0\leq k\leq n.
-\]
-\end{lemma}
-\begin{proof}
-The local input is \cref{thm:local-mixed-input}. We explain why no closedness of $\theta$ is required in its present use.
-
-Fix a coordinate chart with Euclidean form $\kappa$ and $\eta>0$. On a sufficiently small ball centered at $x$, the constant coefficient form $\beta=\theta(x)$ satisfies
-\[
- \beta-\eta\kappa\leq\theta\leq\beta+\eta\kappa.
-\]
-Choose a quadratic $q$ with $\ddc q=\beta+\eta\kappa$. The functions $u+q,v+q$ are bounded and plurisubharmonic on the ball, and their Hessians dominate $\theta_u,\theta_v$. Their top powers therefore dominate $f\,\mathrm{d}V,g\,\mathrm{d}V$. The local mixed inequality applies. Since
-\[
- \theta+2\eta\kappa\geq\beta+\eta\kappa,
-\]
-positivity transfers the resulting mixed lower bound to the background $\theta+2\eta\kappa$. In a fixed finite atlas $\kappa\leq C\omega$. The small balls cover $X$, so the bound holds globally with background $\theta+2C\eta\omega$. Let $\eta\downarrow0$ in the bounded polynomial expansion of the products. This proves the assertion.
-\end{proof}
-
-\begin{lemma}\label{lem:bounded-reference-trace}
-Let $\theta\geq0$ and fix a bounded $\psi\in\PSH(X,\theta)$. There is a constant $C_\psi$ such that
-\[
- \int_X\theta_v\wedge\theta_\psi^{n-1}\leq C_\psi
-\]
-for every bounded $v\in\PSH(X,\theta)$ with $\sup_Xv=0$.
-\end{lemma}
-\begin{proof}
-Choose a fixed Hermitian metric $\Omega\geq\theta$. All currents in the left side are positive, and $\Omega_\psi\geq\theta_\psi$. Bounded Stokes gives
-\[
- \int_X\theta_v\wedge\theta_\psi^{n-1}
- \leq\int_X\theta\wedge\Omega_\psi^{n-1}
-       +\int_Xv\,\ddc(\Omega_\psi^{n-1}).
-\]
-The first term has a fixed bound. For $n\geq2$, the exact differentiation formula is
-\[
- \ddc(\Omega_\psi^{n-1})
- =(n-1)\ddc\Omega\wedge\Omega_\psi^{n-2}
- +(n-1)(n-2)\mathrm{d}\Omega\wedge\dc\Omega\wedge\Omega_\psi^{n-3},
-\]
-where the second term is absent for $n=2$. Its absolute value is bounded by fixed multiples of the corresponding positive mixed measures with $\Omega^2$ and $\Omega^3$ in place of the smooth torsion factors. The weighted local Chern--Levine--Nirenberg inequality from \cref{chap:weak-equations} bounds the integrals of $|v|$ against these measures. Indeed, on each larger coordinate ball add fixed smooth corrections to $v$ and $\psi$, shift the first to be negative, expand in the corrected positive Hessian of $\psi$, and apply that inequality on a smaller ball. The bound is
-\[
- C(1+\|\psi\|_\infty)^n(1+\|v\|_{L^1(X)}).
-\]
-Normalized $\theta$-plurisubharmonic functions have uniformly bounded $L^1$ norms. Summing the local bounds proves the assertion. For $n=1$, the second integral is zero by Stokes, and the result is immediate.
-\end{proof}
-
-The trace here is tested against a fixed bounded reference. It is different from an upper bound for $\int_X\theta_v^n$ when all factors vary. Its proof uses weighted local estimates for the torsion terms, while the smooth-volume normalizations earlier used a Gauduchon metric.
+We next solve the exponential equation for a bounded density relative to the Monge--Amp\`ere measure of one bounded potential. This permits right-hand sides singular with respect to smooth volume. Regularizing the reference gives a moving dominating measure; the mixed density inequality and fixed-reference trace estimate of \cref{lem:nonclosed-mixed-density,lem:bounded-reference-trace} bound the normalizations when the density is allowed to vanish.
 
 \Needspace{15\baselineskip}
 \begin{theorem}\label{thm:bounded-subsolution}
@@ -72,7 +14,7 @@ and $\mu(X)>0$. For every $\lambda>0$ there is a unique bounded $u\in\PSH(X,\the
 \[
  \mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu.
 \]
-No bounded mass hypothesis on $X$ is required.
+
 \end{theorem}
 \begin{proof}
 Write $\nu=\mathrm{MA}_\theta(\psi)$, a finite non-pluripolar measure.
@@ -150,4 +92,4 @@ Extract an $L^1$ limit. Now $\mathrm{MA}_\theta(u_j)\leq C''\nu$, so \cref{cor:c
 Consequently $\mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu$. Uniqueness is bounded exponential order. Positivity of $\mu(X)$ was used in the normalization argument and cannot be omitted.
 \end{proof}
 
-This theorem permits a singular measure dominated by the Monge--Amp\`ere measure of one bounded potential. An arbitrary finite non-pluripolar measure is not assumed to have such a bounded density representation. The common reference in the theorem is the subsolution data needed for this step of the existence theory.
+The next step uses this theorem for weighted sums of bounded truncation measures.

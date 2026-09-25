@@ -77,3 +77,47 @@ Directly from the competitors, $P_\theta[u]$ is unchanged when $u$ is replaced b
  u\preceq v\quad\Longrightarrow\quad P_\theta[u]\leq P_\theta[v].
 \]
 These statements concern ordinary singularities. Replacing $\preceq$ by the multiplier-ideal order would define a different operator, which will require a separate comparison.
+
+For a bounded obstacle in a big background, exceptional sets in the competitor inequality can be removed by a small singular perturbation.
+
+\begin{lemma}
+\label{lem:big-pointwise-competitor}
+Let $\theta$ be big, let $f$ be bounded, and let $u\in\PSH(X,\theta)$ satisfy $u\leq f$ quasi-everywhere. There are genuine $u_t\in\PSH(X,\theta)$, $t>0$, such that $u_t\leq f$ everywhere and $u_t\to u$ almost everywhere as $t\downarrow0$.
+\end{lemma}
+\begin{proof}
+Choose $\rho\in\PSH(X,\theta)$ with $\theta+\ddc\rho\geq\kappa\omega$ for some $\kappa>0$. The exceptional set $E=\{u>f\}$ is pluripolar. The global form of Josefson's theorem on compact complex manifolds supplies a genuine quasi-plurisubharmonic $\chi$ with $\chi=-\infty$ on $E$; see \cite[Theorem 1.1.5]{SGPT}. Rescale and normalize it so that $\chi\leq0$ and $\ddc\chi\geq-\omega$. Shift $\rho$ so that $\rho\leq\inf_X f$. With $s=t/\kappa$, put
+\[
+ u_t=\frac{u+t\chi+s\rho}{1+s}.
+\]
+All three potentials are finite almost everywhere, so this is genuine. Moreover
+\[
+ \theta+\ddc u_t
+ =\frac{\theta+\ddc u+t\ddc\chi+s(\theta+\ddc\rho)}{1+s}
+ \geq0.
+\]
+Outside $E$, each of $u$ and $\rho$ is at most $f$, while $\chi\leq0$, so $u_t\leq f$. On $E$ the numerator is $-\infty$. Finally $u_t\to u$ wherever all three potentials are finite, which is a set of full measure.
+\end{proof}
+
+Minimal singularities separate a potential from the poles of a strict analytic barrier. This gives a proper function on its regular locus.
+
+\begin{lemma}\label{lem:interior-proper-gap}
+Let $\rho\in\PSH(X,\theta)$ have analytic singularities with smooth remainder and satisfy $\theta+\ddc\rho\geq\varepsilon\omega$ for some $\varepsilon>0$. Set $\Omega=\{\rho>-\infty\}$. If $\varphi$ has minimal singularities and is continuous on $\Omega$, then $\varphi-\rho$ is continuous, bounded below, and proper on $\Omega$: all its sublevel sets are compact in $\Omega$.
+\end{lemma}
+
+\begin{proof}
+Translate $\rho$ and $\varphi$ so that $\rho\leq0$ and $\sup_X\varphi=0$, and choose $C$ with $\varphi\geq V_\theta-C$. These translations do not affect properness. Choose $M\geq0$ with $\theta\geq-M\omega$. If $a\in(0,1)$ is sufficiently close to one, then
+\[
+  \theta+\ddc(a\rho)
+  =a(\theta+\ddc\rho)+(1-a)\theta
+  \geq\bigl(a\varepsilon-(1-a)M\bigr)\omega>0.
+\]
+Thus $a\rho$ is an admissible competitor for $V_\theta$. Minimal singularities and the normalization give
+\[
+  0\geq\varphi\geq V_\theta-C\geq a\rho-C,
+\]
+and hence
+\begin{equation}\label{eq:interior-gap-proper}
+  \varphi-\rho\geq(1-a)(-\rho)-C.
+\end{equation}
+By hypothesis $\varphi$ is continuous on $\Omega$; $\rho$ is smooth there because it has analytic singularities. Hence $\varphi-\rho$ is continuous. Since $\rho\to-\infty$ when approaching $X\setminus\Omega$, \eqref{eq:interior-gap-proper} places every sublevel set in a compact superlevel set of $\rho$. The sublevel set is closed in $\Omega$, so it is compact there.
+\end{proof}

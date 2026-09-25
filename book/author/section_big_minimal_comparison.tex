@@ -1,37 +1,35 @@
 \section{Comparison above a strict singular barrier}
 \label{sec:big-minimal-comparison}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$. Neither semipositivity nor closedness is assumed. There is no bounded mass or uniform positive lower volume hypothesis. Fix a strict potential $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder. Set $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$, and assume
-\[
- \rho\leq0,\qquad \theta+\ddc\rho\geq\omega,
-\]
-Such a potential is supplied by the classical regularization theorem, after decreasing $\omega$.  For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mu_u=\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, the extended measure of \cref{chap:products}. On coordinate balls the same notation denotes the local bounded product when $u$ is bounded. The order $u\preceq v$ means $u\leq v+C$ for some constant $C$, and $u\simeq v$ means both inequalities. Let $P_\theta$ be the obstacle envelope of \cref{sec:obstacle-envelopes} and set $V_\theta=P_\theta(0)$. All unqualified function norms use $\mathrm{d}V$. On $\Omega$, every potential bounded below by $\rho-C$ is locally bounded. Its local bounded product agrees with $\mu_u$ there, and the extended measure gives zero mass to $Z$.
+For an arbitrary big background, a strict analytic barrier replaces the smaller-background construction used above. It confines a prospective negative minimum away from its pole set; a local comparison then rules out that minimum.
+
+Fix $\rho\leq0$ with analytic singularities and smooth remainder, and decrease the Hermitian metric if necessary so that $\theta_\rho\geq\omega$. Put $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$. These data remain fixed through \cref{sec:nonclosed-interior-smoothness}. A potential bounded below by $\rho-C$ is locally bounded on $\Omega$, where its extended measure agrees with its bounded product.
 
 \begin{lemma}\label{lem:big-local-comparison}
 Let $B\Subset\Omega$ be a coordinate ball, and let $u,v$ be bounded $\theta$-plurisubharmonic functions on $B$. Assume
 \[
  \liminf_{x\to\partial B}(u-v)(x)\geq0,
- \qquad \mathbf1_{\{u<v\}}\mu_u\leq
-             \mathbf1_{\{u<v\}}\mu_v.
+ \qquad \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(u)\leq
+             \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(v).
 \]
 Then $u\geq v$ on $B$.
 \end{lemma}
 \begin{proof}
 Fix $\varepsilon>0$ and set $v_\varepsilon=\max(u,v-\varepsilon)$. It equals $u$ near the boundary. Locality on $\{u>v-\varepsilon\}$ and ordered contact on $\{u\leq v-\varepsilon\}$ show that
 \[
- \mu_u\leq\mu_{v_\varepsilon}
+ \mathrm{MA}_\theta(u)\leq\mathrm{MA}_\theta(v_\varepsilon)
 \]
 throughout $B$: the latter set is contained in $\{u<v\}$, where the assumed inequality applies.
 
-Let $q$ be the ordinary plurisubharmonic envelope on $B$ of the bounded quasi-continuous obstacle $u-v_\varepsilon$, with the obstacle inequality understood quasi-everywhere. If $h<0$ is a smooth strictly plurisubharmonic defining function for the ball, then $Ah\leq u-v_\varepsilon\leq0$ for sufficiently large $A$. Hence $Ah\leq q\leq0$ and $q$ tends to zero at the boundary. We use here the classical local bounded-envelope contact theorem: $(\ddc q)^n$ is carried by $D=\{q=u-v_\varepsilon\}$. This is the ordinary Bedford--Taylor obstacle result, in the local theory of \cite{GZ17} and the preceding SGPT book; no nonclosed background enters that input.
+Let $q$ be the ordinary plurisubharmonic envelope on $B$ of $u-v_\varepsilon$. This bounded quasi-continuous obstacle is zero near the boundary and lies between $Ah$ and zero for a sufficiently large $A$, where $h<0$ is a smooth strictly plurisubharmonic defining function for the ball. Thus $q$ tends to zero at the boundary, and \eqref{eq:local-envelope-contact} shows that $(\ddc q)^n$ is carried by $D=\{q=u-v_\varepsilon\}$.
 
 Canonical representatives give $q+v_\varepsilon\leq u$. Ordered contact, followed by the preceding measure inequality, yields
 \[
  \mathbf1_D\mathrm{MA}_\theta(q+v_\varepsilon)
- \leq\mathbf1_D\mu_u
- \leq\mathbf1_D\mu_{v_\varepsilon}.
+ \leq\mathbf1_D\mathrm{MA}_\theta(u)
+ \leq\mathbf1_D\mathrm{MA}_\theta(v_\varepsilon).
 \]
-The positive expansion of $(\theta_{v_\varepsilon}+\ddc q)^n$ contains both $\mu_{v_\varepsilon}$ and $(\ddc q)^n$. Thus $\mathbf1_D(\ddc q)^n=0$, and contact support gives $(\ddc q)^n=0$. The classical bounded Bedford--Taylor comparison principle with zero boundary values implies $q=0$. Consequently $u\geq v_\varepsilon$, first quasi-everywhere and then everywhere. Let $\varepsilon\downarrow0$.
+The positive expansion of $(\theta_{v_\varepsilon}+\ddc q)^n$ contains both $\mathrm{MA}_\theta(v_\varepsilon)$ and $(\ddc q)^n$. Thus $\mathbf1_D(\ddc q)^n=0$, and contact support gives $(\ddc q)^n=0$. The classical bounded Bedford--Taylor comparison principle with zero boundary values implies $q=0$. Consequently $u\geq v_\varepsilon$, first quasi-everywhere and then everywhere. Let $\varepsilon\downarrow0$.
 \end{proof}
 
 \begin{theorem}\label{thm:big-barrier-domination}
@@ -41,8 +39,8 @@ Suppose $u,v\in\PSH(X,\theta)$ satisfy, for constants $C_0,C_1\geq0$,
 \]
 If, for some $0\leq c<1$,
 \[
- \mathbf1_{\{u<v\}}\mu_u\leq
- c\,\mathbf1_{\{u<v\}}\mu_v,
+ \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(u)\leq
+ c\,\mathbf1_{\{u<v\}}\mathrm{MA}_\theta(v),
 \]
 then $u\geq v$. The measures need not have finite total mass.
 \end{theorem}
@@ -69,17 +67,17 @@ The function $w=v_\delta+\delta\eta+m$ is $\theta$-plurisubharmonic on $B$, and 
 \]
 Thus $\{u<w\}\subset\{u<v\}$, and positivity gives on this set
 \[
- \mu_u\leq c\mu_v\leq(1-\delta)^n\mu_v\leq\mu_w.
+ \mathrm{MA}_\theta(u)\leq c\mathrm{MA}_\theta(v)\leq(1-\delta)^n\mathrm{MA}_\theta(v)\leq\mathrm{MA}_\theta(w).
 \]
 The local comparison lemma implies $u\geq w$ on $B$. Evaluating at $x_j$ gives $u(x_j)-v_\delta(x_j)\geq m+\delta\eta(x_j)$, contrary to $\eta(x_0)>0$. We have proved $u\geq v_\delta$. Let $\delta\downarrow0$ along values with $(1-\delta)^n>c$, and extend the resulting inequality from $\Omega$ by canonical representatives.
 \end{proof}
 
 \Needspace{20\baselineskip}
 \begin{corollary}\label{cor:big-barrier-orders}
-Let $u,v\in\PSH(X,\theta)$ satisfy $u,v\geq\rho-C$ for some $C\geq0$ and $u\simeq v$.
+Let $u,v\in\PSH(X,\theta)$ satisfy $u,v\geq\rho-C$ for some $C\geq0$ and $u\sim v$.
 \begin{enumerate}
-\item If $\mu_u\leq c\mu_v$ for $c\geq0$, then $c\geq1$.
-\item If $\mu_u\leq \mathrm{e}^{\lambda(u-v)}\mu_v$ for $\lambda>0$, then $u\geq v$.
+\item If $\mathrm{MA}_\theta(u)\leq c\mathrm{MA}_\theta(v)$ for $c\geq0$, then $c\geq1$.
+\item If $\mathrm{MA}_\theta(u)\leq \mathrm{e}^{\lambda(u-v)}\mathrm{MA}_\theta(v)$ for $\lambda>0$, then $u\geq v$.
 \end{enumerate}
 In particular the positive-exponent equation has at most one solution in each such ordinary singularity type, and the normalized equation has at most one positive scalar in that type.
 \end{corollary}
@@ -90,9 +88,7 @@ If $c<1$, apply the theorem to $u,v+A$ for every constant $A>0$. Its lower-barri
 \section{Subsolutions and the Gauduchon trace}
 \label{sec:big-minimal-estimates}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth big real $(1,1)$-form, and fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$. Choose $\rho\in\PSH(X,\theta)$ with analytic singularities and smooth remainder, with $\rho\leq0$ and $\theta+\ddc\rho\geq\omega$. Set $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$. For $u\in\PSH(X,\theta)$ put $\theta_u=\theta+\ddc u$ and $\mu_u=\mathrm{MA}_\theta(u)=\mathrm{MA}^{\mathrm{ext}}_\theta(u)$, the extended measure of \cref{chap:products}. On coordinate balls the same notation denotes the local bounded product when $u$ is bounded. All function norms below use $\mathrm{d}V$.
-
-The next construction preserves a reference potential up to a bounded term. Its positive-current formula explains why the reference form itself need not be semipositive.
+The strict barrier also lets us construct a subsolution within a bounded distance of any reference between $\rho$ and zero. A convex combination of positive currents gives the curvature estimate. Pairing the equation with a Gauduchon metric then bounds its normalization through a linear trace.
 
 \begin{lemma}\label{lem:big-reference-subsolution}
 Fix $p>1$ and $L>0$. There is $m>0$ such that, whenever
@@ -103,7 +99,7 @@ Fix $p>1$ and $L>0$. There is $m>0$ such that, whenever
 there exists $v\in\PSH(X,\theta)$ with
 \[
  \eta\leq v\leq\eta+1,\qquad
- \mu_v\geq m g\,\mathrm{d}V.
+ \mathrm{MA}_\theta(v)\geq m g\,\mathrm{d}V.
 \]
 The constant depends only on the fixed geometry, $\rho,p,L$.
 \end{lemma}
@@ -116,17 +112,15 @@ for a fixed $m>0$. Put $u_1=\rho+s$. Then $\theta_{u_1}\geq\omega_s$. On $\Omega
 \[
  t=1+\eta-u_1,\qquad v=\eta+t^{-1}.
 \]
-Here $1\leq t\leq2-\rho$. The bounded local chain rule gives
+Here $1\leq t\leq2-\rho$. Apply \cref{lem:bounded-convex-pair} on relatively compact subsets of $\Omega$, with $a=\eta$, $h=u_1$ and $\chi(s)=(1-s)^{-1}$. It gives
 \[
  \theta_v=(1-t^{-2})\theta_\eta+t^{-2}\theta_{u_1}
        +2t^{-3}\,\mathrm{d}(\eta-u_1)\wedge\dc(\eta-u_1)
  \geq t^{-2}\theta_{u_1}.
 \]
-All coefficients in the first two terms are nonnegative and sum to one. This proves local positivity without a sign assumption on $\theta$. The calculation for locally bounded quasi-plurisubharmonic functions follows by local regularization and the bounded chain rule, or equivalently its usual energy-current formulation.
-
-Since $\eta\leq v\leq\eta+1$, the function $v$ is locally bounded above near $Z$. The removable-singularity theorem for quasi-plurisubharmonic functions extends it canonically to $X$, retaining $\theta_v\geq0$. To check the exact smooth lower bound, first enlarge it by an arbitrary positive constant-coefficient error on a small ball, extend the resulting plurisubharmonic function across $Z$, and let that error tend to zero. The two bounds by $\eta$ and $\eta+1$ extend as well. On $\Omega$, positivity of the local products gives
+Since $\eta\leq v\leq\eta+1$, \cref{lem:qpsh-removable-analytic} extends $v$ across $Z$, and the bounds extend by \cref{lem:qpsh-almost-everywhere-order}. On $\Omega$, positivity of the local products gives
 \[
- \mu_v\geq t^{-2n}\theta_{u_1}^n
+ \mathrm{MA}_\theta(v)\geq t^{-2n}\theta_{u_1}^n
        \geq(2-\rho)^{-2n}\omega_s^n
        \geq m g\,\mathrm{d}V.
 \]
@@ -138,15 +132,15 @@ Let $\gamma$ be Gauduchon, write $\gamma^n=G\,\mathrm{d}V$, and put
 \[
  T_\gamma=\int_X\theta\wedge\gamma^{n-1}>0.
 \]
-If $u\geq\rho-C$ is $\theta$-plurisubharmonic and $\mu_u\geq F\,\mathrm{d}V$, $F\geq0$, then
+If $u\geq\rho-C$ is $\theta$-plurisubharmonic and $\mathrm{MA}_\theta(u)\geq F\,\mathrm{d}V$, $F\geq0$, then
 \begin{equation}\label{eq:big-singular-gauduchon-trace}
  \int_X F^{1/n}G^{1-1/n}\,\mathrm{d}V\leq T_\gamma.
 \end{equation}
 Consequently, for a fixed nonzero $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, solutions above this barrier of
-$\mu_u=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$ have uniformly bounded suprema when $\lambda>0$ is fixed. If instead $v_j\in\PSH(X,\theta)$, $j\geq1$, and constants $C_j\geq0$ satisfy
+$\mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$ have uniformly bounded suprema when $\lambda>0$ is fixed. If instead $v_j\in\PSH(X,\theta)$, $j\geq1$, and constants $C_j\geq0$ satisfy
 \[
  \sup_Xv_j=0,\qquad
- \mu_{v_j}=c_j \mathrm{e}^{v_j/j}f\,\mathrm{d}V,
+ \mathrm{MA}_\theta(v_j)=c_j \mathrm{e}^{v_j/j}f\,\mathrm{d}V,
  \qquad v_j\geq\rho-C_j,
 \]
 with $c_j>0$, then the constants $c_j$ are uniformly bounded above.
@@ -159,12 +153,12 @@ The linear current $\theta_u\wedge\gamma^{n-1}$ is positive and globally defined
 \]
 since $\ddc\gamma^{n-1}=0$. Applying the identity to $\rho$ proves $T_\gamma>0$.
 
-On $\Omega$ the local mixed inequality gives
+On $\Omega$, apply \cref{lem:interior-mixed-background} to $\theta_u$ and $\gamma$ to obtain
 \[
  \theta_u\wedge\gamma^{n-1}\geq
  F^{1/n}G^{1-1/n}\,\mathrm{d}V.
 \]
-Here is the justification for the two possibly nonclosed backgrounds. Freeze each smooth form at the center of a small coordinate ball, and add a constant-coefficient error $\varepsilon\ddc|z|^2$ that dominates its variation. Add the corresponding quadratic potentials to $u$ and to $0$, respectively. Their ordinary positive Hessians dominate $\theta_u$ and $\gamma$, so their top powers dominate $F\,\mathrm{d}V$ and $G\,\mathrm{d}V$. The classical local mixed inequality for bounded psh functions applies. Its mixed product is bounded above by the product formed from $\theta_u+2\varepsilon\ddc|z|^2$ and $\gamma+2\varepsilon\ddc|z|^2$. Covering a compact subset of $\Omega$ and then letting $\varepsilon\downarrow0$ proves the displayed inequality there. Exhaust $\Omega$ and use positivity of the global trace measure. The complement has zero smooth volume, giving \eqref{eq:big-singular-gauduchon-trace}.
+Exhaust $\Omega$ and use positivity of the global trace measure. The complement has zero smooth volume, giving \eqref{eq:big-singular-gauduchon-trace}.
 
 For the exponential assertion write $a=\sup_Xu$ and $w=u-a$. The estimate becomes
 \[

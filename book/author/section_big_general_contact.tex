@@ -1,31 +1,7 @@
 \section{Quasi-continuous obstacles in a big background}
 \label{sec:big-general-contact}
 
-We now remove continuity and boundedness of the obstacle in \cref{thm:big-continuous-envelope-contact}. Two points require care. An envelope competitor lies below its obstacle only quasi-everywhere, so an increasing approximation of the obstacle needs a correction at the exceptional set. Also, truncation by a constant need not preserve positivity in the original background. We use signed bounded products before restricting to a truncation set.
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$ on $X$. For a smooth real $(1,1)$-form $\eta$ and $u\in\PSH(X,\eta)$, put $\eta_u=\eta+\ddc u$ and $\mathrm{MA}_\eta(u)=\mathrm{MA}^{\mathrm{ext}}_\eta(u)$, the extended product of \cref{chap:products}. For bounded potentials this is the bounded product. For a smooth real $(1,1)$-form $\theta$, use the obstacle envelope $P_\theta$ of \cref{sec:obstacle-envelopes}; a star denotes upper semicontinuous regularization. Write $u\preceq v$ if $u\leq v+C$ for some real $C$, and $u\simeq v$ if both inequalities hold. Fix a smooth big real $(1,1)$-form $\theta$ and a strict potential $\rho\in\PSH(X,\theta)$ with analytic singularities. For some constant $\kappa>0$, assume
-\[
- \theta+\ddc\rho\geq\kappa\omega,\qquad \kappa>0.
-\]
-Its pole set is denoted by $Z$. For a real number $a$, write $a_+=\max(a,0)$. In particular $\rho$ is smooth on $X\setminus Z$. Capacity below may be computed using a fixed finite cover by coordinate balls. Its null sets are precisely the pluripolar sets, and its quasi-continuity notion agrees with the one already used for envelopes.
-
-\begin{lemma}
-\label{lem:big-pointwise-competitor}
-Let $f$ be bounded, and let $u\in\PSH(X,\theta)$ satisfy $u\leq f$ quasi-everywhere. There are genuine $u_t\in\PSH(X,\theta)$, $t>0$, such that $u_t\leq f$ everywhere and $u_t\to u$ almost everywhere as $t\downarrow0$.
-\end{lemma}
-\begin{proof}
-The exceptional set $E=\{u>f\}$ is pluripolar. The global form of Josefson's theorem on compact complex manifolds supplies a genuine quasi-plurisubharmonic $\chi$ with $\chi=-\infty$ on $E$; see \cite[Theorem 1.1.5]{SGPT}. Rescale and normalize it so that $\chi\leq0$ and $\ddc\chi\geq-\omega$. Shift $\rho$ so that $\rho\leq\inf_X f$. With $s=t/\kappa$, put
-\[
- u_t=\frac{u+t\chi+s\rho}{1+s}.
-\]
-All three potentials are finite almost everywhere, so this is genuine. Moreover
-\[
- \theta+\ddc u_t
- =\frac{\theta+\ddc u+t\ddc\chi+s(\theta+\ddc\rho)}{1+s}
- \geq0.
-\]
-Outside $E$, each of $u$ and $\rho$ is at most $f$, while $\chi\leq0$, so $u_t\leq f$. On $E$ the numerator is $-\infty$. Finally $u_t\to u$ wherever all three potentials are finite, which is a set of full measure.
-\end{proof}
+Keep the big background and analytic barrier of \cref{sec:big-continuous-contact}. We extend contact support first to bounded lower semicontinuous obstacles, then to quasi-continuous obstacles, and finally to unbounded ones. The pointwise competitor approximation of \cref{lem:big-pointwise-competitor} handles exceptional sets. For the final truncation, \cref{lem:signed-truncation-quasicont} controls signed products until they are restricted to the region where positivity holds.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:big-bounded-lsc-contact}
@@ -50,8 +26,6 @@ are open, increase with $j$, and cover $X$. Compactness gives an index after whi
 For fixed $k$, the set $U_k=\{p<f_k\}$ is open. If $j\geq k$, then $p_j\leq p<f_k\leq f_j$ on $U_k$. The preceding continuous-obstacle theorem gives $\mathrm{MA}_\theta(p_j)=0$ there. On every relatively compact open subset of $X\setminus Z$, the functions $p_j$ have common bounds. Increasing local Bedford--Taylor continuity, applied after a common smooth correction and finite expansion, gives convergence of their measures to $\mathrm{MA}_\theta(p)$. The weak-limit inequality for open sets therefore gives zero measure on $U_k\setminus Z$. The union of these sets is $\{p<f\}\setminus Z$. The extended measure charges no pluripolar set, so it also charges no part of $Z$.
 \end{proof}
 
-Here and below the bounded local increasing continuity is the usual counterpart of decreasing Bedford--Taylor continuity from the source book. Upper regularization of an increasing limit changes it only on a pluripolar set. No assertion about the total mass of an unbounded increasing limit is being used.
-
 \begin{proposition}\label{prop:big-bounded-quasicont-contact}
 The conclusion of \cref{prop:big-bounded-lsc-contact} holds for every bounded quasi-continuous obstacle $f$.
 \end{proposition}
@@ -60,32 +34,10 @@ By \cref{lem:quasicont-lsc-approximation}, there are bounded lower semicontinuou
 
 For fixed $k$, put $H_k=\min\{1,(f-p_k)_+\}$ on $X\setminus Z$. This is a bounded quasi-continuous function there. If $j\geq k$, then on $\{H_k>0\}$ we have $p_j\leq p_k<f\leq f_j$, outside a pluripolar set. The preceding proposition gives $H_k\mathrm{MA}_\theta(p_j)=0$ off $Z$.
 
-Let $g$ be continuous with compact support in $X\setminus Z$. Bounded local product convergence holds against the fixed quasi-continuous coefficient $gH_k$. To verify this, remove an open set of small capacity where the coefficient may be discontinuous, extend it continuously from the compact complement, and use weak convergence there. Local uniform bounds for the potentials give uniform capacity control for the products, so the error on the removed set tends to zero. Consequently $H_k\mathrm{MA}_\theta(p)=0$ off $Z$. Letting $k\to\infty$ exhausts $\{p<f\}\setminus Z$. Non-pluripolarity removes $Z$.
+Let $g$ be continuous with compact support in $X\setminus Z$. Weighted bounded-product continuity from \cref{sec:psh-local-capacity} applies to the fixed quasi-continuous coefficient $gH_k$. Consequently $H_k\mathrm{MA}_\theta(p)=0$ off $Z$. Letting $k\to\infty$ exhausts $\{p<f\}\setminus Z$. Non-pluripolarity removes $Z$.
 \end{proof}
 
-The remaining approximation needs this capacity argument for signed measures. We record the precise bounded fact to avoid imposing positivity where it is unavailable.
-
-\begin{lemma}\label{lem:signed-truncation-quasicont}
-Let $\Omega$ be Hermitian and $\theta$ any smooth real $(1,1)$-form. Suppose $v_j$ are $\Omega$-plurisubharmonic, have common finite upper and lower bounds, and decrease to $v$. Then the signed measures
-\[
- \nu_j=(\theta+\ddc v_j)^n
-\]
-converge to $(\theta+\ddc v)^n$ against every fixed bounded quasi-continuous function. Their total variations are uniformly controlled by local capacity on a fixed finite cover.
-\end{lemma}
-\begin{proof}
-On a relatively compact coordinate ball, choose a fixed quadratic $q$ such that $v_j+q$ are plurisubharmonic. Their common bounds remain uniform. Expand
-\[
- (\theta+\ddc v_j)^n
- =\sum_{\ell=0}^n\binom n\ell
-   \bigl(\ddc(v_j+q)\bigr)^\ell
-       \wedge(\theta-\ddc q)^{n-\ell}.
-\]
-The absolute value of the $\ell$th summand is bounded by a fixed constant times
-\[
- \bigl(\ddc(v_j+q)\bigr)^\ell\wedge\kappa_0^{n-\ell},
-\]
-where $\kappa_0$ is a fixed positive Euclidean form. This mixed positive measure is uniformly bounded by a constant times local capacity: add a fixed strictly plurisubharmonic quadratic to $v_j+q$, expand its top power, and rescale its uniformly bounded range into $[0,1]$ for the capacity definition. This also handles $\ell=0$. Summing on a finite cover gives the asserted variation control. Ordinary decreasing Bedford--Taylor continuity gives weak convergence term by term. For a bounded quasi-continuous coefficient, remove an open set of small capacity and extend the coefficient continuously from its compact complement. The variation bound controls the error uniformly for the sequence and its limit. Letting that capacity tend to zero proves the assertion.
-\end{proof}
+For an unbounded obstacle, we use the signed-product continuity of \cref{lem:signed-truncation-quasicont} after truncation.
 
 \Needspace{12\baselineskip}
 \begin{theorem}
@@ -97,7 +49,7 @@ Let $\theta$ be smooth and big. Let $f$ be a quasi-continuous obstacle, finite a
 The background need not be semipositive. No bounded mass or positive lower-volume property is assumed, and the measure may have infinite total mass.
 \end{theorem}
 \begin{proof}
-Set $f_j=\max(f,-j)$ and $p_j=P_\theta(f_j)$. The genuine potential $p$ is a competitor for every obstacle. Since $f_j\leq f_1$ and $f_1$ is finite almost everywhere, the finite-sublevel argument at the start of \cref{chap:envelopes} gives a common upper bound for all competitors. Thus the envelopes $p_j$ are genuine and uniformly bounded above. Choose $M$ strictly larger than this bound.
+Set $f_j=\max(f,-j)$ and $p_j=P_\theta(f_j)$. The genuine potential $p$ is a competitor for every obstacle. Since $f_j\leq f_1$ and $f_1$ is finite almost everywhere, the finite-sublevel argument in \cref{sec:obstacle-envelopes} gives a common upper bound for all competitors. Thus the envelopes $p_j$ are genuine and uniformly bounded above. Choose $M$ strictly larger than this bound.
 
 The obstacle $g_j=\min(f_j,M)$ is bounded and quasi-continuous. Since $p_j<M$ and $p_j\leq f_j$ quasi-everywhere, $p_j$ is a competitor for $P_\theta(g_j)$; the reverse inequality follows from $g_j\leq f_j$. Thus $p_j=P_\theta(g_j)$. The preceding bounded result gives contact support for $p_j$ at $g_j$. The strict inequality $p_j<M$ excludes contact at the artificial upper cutoff, so
 \begin{equation}\label{eq:big-truncated-obstacle-contact}

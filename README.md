@@ -6,11 +6,11 @@ The current structure has 33 chapters and an appendix. The main sequence develop
 
 **Part XII, “Theory under mass bounds”, collects the substantial additional theory:**
 
-- Chapter 30, *Volumes under bounded mass*: finite singularity volumes, comparison, the relation between envelope and volume full mass classes, and the conditional volume characterization of ideal-envelope equality.
-- Chapter 31, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references, assuming positive lower mass and allowing infinite upper mass.
-- Chapter 32, *Big backgrounds under bounded mass*: arbitrary smooth big backgrounds, bounded mass and positive lower volume of the model reference.
+- Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, the relation between envelope and volume full mass classes, and the conditional volume characterization of ideal-envelope equality.
+- Chapter 30, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references, assuming positive lower mass and allowing infinite upper mass.
+- Chapter 31, *Big backgrounds under bounded mass*: arbitrary smooth big backgrounds, bounded mass and positive lower volume of the model reference.
 
-The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded at the user’s request. Its three source files and revision history are preserved. The current Chapter 30 is the new volume chapter. The chapters on ordinary Bott–Chern loci and LCK geometry remain active.
+The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded at the user’s request. Its three source files and revision history are preserved. The current volume chapter is Chapter 29. The chapters on ordinary Bott–Chern loci and LCK geometry remain active.
 
 The general relative-envelope lemmas and both measure-representation constructions remain in the main theory. A measure representation with an integrable density does not imply an exact equation. Characterizations of mass properties, their failure examples, and geometric cases where those properties follow from other hypotheses also remain in the main sequence.
 

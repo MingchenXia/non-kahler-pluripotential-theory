@@ -22,3 +22,114 @@ For the first statement add a fixed smooth strictly plurisubharmonic correction 
 For the second statement choose $A\omega\geq\theta$. If $u_j\leq C$, the convex chain rule gives
 $\ddc \mathrm{e}^{bu_j}\geq-bA\mathrm{e}^{bC}\omega$, also for unbounded $u_j$ by bounded truncation. Thus $\mathrm{e}^{bu_j}$ are uniformly bounded quasi-plurisubharmonic functions in one lower curvature class. Their $L^1(\mathrm{d}V)$ convergence follows from the Lipschitz bound $b\mathrm{e}^{bC}$ for the exponential on $(-\infty,C]$. Apply the first statement. We assign the value zero to the exponential at a pole.
 \end{proof}
+
+\begin{proposition}\label{prop:singular-no-uniform-limit}
+Let $\theta$ be smooth and let $\varphi\in\PSH(X,\theta)$. Suppose $\varphi$ is unbounded below and $u_\lambda\sim\varphi$ for every $\lambda>0$. Then $\lambda u_\lambda$ cannot converge uniformly on $X$ to a finite constant as $\lambda\downarrow0$. Its distance to any finite constant is also infinite in $L^\infty(\mathrm{d}V)$ for each fixed $\lambda>0$.
+\end{proposition}
+\begin{proof}
+Bounded equivalence preserves unboundedness below. Every nonempty strict sublevel set of the upper semicontinuous function $u_\lambda$ is open and has positive smooth volume. Thus $u_\lambda$ is essentially unbounded below, as is $\lambda u_\lambda$. The stated conclusions follow.
+\end{proof}
+
+A vanishing exponent gives convergence to one even when the normalized potentials vary.
+
+\Needspace{17\baselineskip}
+\begin{lemma}\label{lem:normalized-exponential-lp}\label{lem:normalized-exponential-npp}
+Let $v_j\in\PSH(X,\theta)$ satisfy $\sup_Xv_j=0$, and let $\lambda_j>0$ decrease to zero. For every finite non-pluripolar measure $\mu$,
+\[
+ \int_X\left|\mathrm{e}^{\lambda_jv_j}-1\right|\,\mathrm{d}\mu\longrightarrow0.
+\]
+If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then more precisely
+\[
+ \int_X\left|\mathrm{e}^{\lambda_jv_j}-1\right|\,|f|\,\mathrm{d}V
+ \leq C_p\lambda_j\|f\|_{L^p(\mathrm{d}V)}.
+\]
+The constant depends on the fixed background, $p$ and $\mathrm{d}V$.
+\end{lemma}
+\begin{proof}
+Choose a Hermitian form $\Omega\geq\theta$. By \cref{lem:global-capacity-estimates}, for every $T>1$,
+\[
+ \operatorname{Cap}_\Omega(\{v_j<-T\})\leq C/T
+\]
+uniformly in $j$. Since $v_j\leq0$, splitting at this sublevel gives
+\[
+ \int_X(1-\mathrm{e}^{\lambda_jv_j})\,\mathrm{d}\mu
+ \leq\lambda_jT\mu(X)+\mu(\{v_j<-T\}).
+\]
+\Cref{lem:npp-uniform-capacity} makes the second term uniformly small when $T$ is large. For this fixed $T$, the first term tends to zero as $j\to\infty$. This proves the general assertion. The value of the exponential is zero at a pole; pole sets have zero $\mu$-measure.
+
+For the quantitative assertion, \cref{lem:uniform-exponential}, applied in background $\Omega$, gives a uniform $L^q$ bound for $-v_j$, where $q=p/(p-1)$. H\"older's inequality and
+\[
+ 0\leq1-\mathrm{e}^{\lambda_jv_j}\leq\lambda_j|v_j|
+\]
+give the claimed estimate for every $j$.
+\end{proof}
+
+A moving bounded-product measure can also be used if its potentials converge in capacity. The proof estimates the torsion terms in integration by parts.
+
+\begin{lemma}\label{lem:moving-bounded-integrals}
+Let $a_j,a,w_j,w\in\PSH(X,\omega)$ be uniformly bounded. If $a_j\to a$ in $L^1(X)$ and $w_j\to w$ in capacity, then, for $0\leq k\leq n$,
+\[
+ \int_X|a_j-a|\,\omega_{w_j}^{k}\wedge\omega^{n-k}
+ \longrightarrow0.
+\]
+The same conclusion holds when the $a_j$ have any fixed smooth lower curvature bound.
+\end{lemma}
+\begin{proof}
+By the subsequence criterion, we may first extract $a_j\to a$ almost everywhere for smooth volume. The upper tail envelopes
+$A_j=(\sup_{\ell\geq j}a_\ell)^*$ decrease to $a$: the local Hartogs lemma gives the upper inequality for the limit, and almost-everywhere convergence gives the reverse one. Bounded monotone capacity convergence therefore implies
+\[
+ \alpha_j:=\max(a_j,a)\longrightarrow a\quad\text{in capacity}.
+\]
+The part $\alpha_j-a$ of $|a_j-a|=(\alpha_j-a)+(\alpha_j-a_j)$ tends to zero against the moving products by \cref{lem:bounded-mixed-capacity}.
+
+Put $h_j=\alpha_j-a_j\geq0$. We compare its integrals for two indices $j,\ell$. The case $k=0$ is the assumed $L^1$ convergence. For $k\geq1$, put $z=w_j-w_\ell$ and
+\[
+ T=\sum_{s=0}^{k-1}\omega_{w_j}^{s}\wedge
+       \omega_{w_\ell}^{k-1-s}\wedge\omega^{n-k}.
+\]
+The sum includes $s=0$. Factorization and compact Stokes give
+\begin{align*}
+ &\int_Xh_j\bigl(\omega_{w_j}^{k}-\omega_{w_\ell}^{k}\bigr)
+                      \wedge\omega^{n-k}\\
+ &\hspace{20mm}=\int_Xh_j\ddc z\wedge T
+ =\int_Xz\,\ddc(h_jT).
+\end{align*}
+Here the full product rule is
+\begin{equation}\label{eq:moving-measure-torsion}
+ \ddc(h_jT)=\ddc h_j\wedge T+\mathrm{d}h_j\wedge\dc T
+             -\dc h_j\wedge \mathrm{d}T+h_j\ddc T.
+\end{equation}
+The last term is retained. It need not vanish on a Hermitian manifold.
+
+We estimate the four terms. Since $\ddc h_j=\omega_{\alpha_j}-\omega_{a_j}$, the absolute contribution of the first is at most
+\[
+ \int_X|z|(\omega_{\alpha_j}+\omega_{a_j})\wedge T.
+\]
+It tends to zero uniformly as $j,\ell\to\infty$ by \cref{lem:bounded-mixed-capacity}, since $w_j-w_\ell\to0$ in capacity. Differentiating each factor shows
+$\mathrm{d}T=\mathrm{d}\omega\wedge R$ and $\dc T=\dc\omega\wedge R$, where $R$ is a positive sum of mixed products of degree $(n-2,n-2)$. Moreover $\ddc T$ is a sum of terms containing $\ddc\omega$ and mixed products of degree $n-2$, or $\mathrm{d}\omega\wedge\dc\omega$ and mixed products of degree $n-3$. Terms with negative degree are absent. These smooth torsion factors are bounded in absolute value by fixed multiples of $\omega^2$ and $\omega^3$. As $h_j$ is uniformly bounded, the contribution of $h_j\ddc T$ also tends uniformly to zero by the same capacity estimate.
+
+For the two gradient terms, the pointwise Cauchy--Schwarz inequality for a positive mixed product gives, for example,
+\[
+ \left|\int_Xz\,\mathrm{d}h_j\wedge\dc\omega\wedge R\right|^2
+ \leq C\left(\int_X|z|\,\mathrm{d}h_j\wedge\dc h_j\wedge\omega\wedge R\right)
+          \left(\int_X|z|\,\omega^2\wedge R\right).
+\]
+The second factor tends uniformly to zero. The first is uniformly bounded. For completeness, if $p$ is any of the uniformly bounded potentials and $S$ any positive mixed product of degree $n-1$ occurring here, then
+\[
+ \int_X\mathrm{d}p\wedge\dc p\wedge S
+ =\frac12\int_Xp^2\ddc S-\int_Xp\,\ddc p\wedge S.
+\]
+Expand $\ddc S$ with all its torsion terms as above, and write $\ddc p=\omega_p-\omega$. Boundedness of $p$ and \cref{lem:bounded-mixed-capacity} bound both integrals uniformly. Finally,
+$\mathrm{d}h_j\wedge\dc h_j\leq2\mathrm{d}\alpha_j\wedge\dc\alpha_j+2\mathrm{d}a_j\wedge\dc a_j$
+as positive quadratic forms. This proves the asserted bound. The other gradient term has the same estimate. In dimension one $T=1$ and all torsion terms in \eqref{eq:moving-measure-torsion} vanish.
+
+These bounded integration-by-parts and energy identities may first be written for smooth decreasing regularizations in the exact Hermitian background. The local Bedford--Taylor chain rule, its gradient products and quasi-continuity give the displayed identities for bounded potentials. Equivalently they follow from the bounded current calculus of \cref{sec:psh-bounded-products}. Only the common bound on the potentials enters the estimates.
+
+We have shown that the difference of the two $h_j$ integrals tends uniformly to zero when $j,\ell$ are large. For a fixed sufficiently large $\ell$, \cref{lem:fixed-npp-integrals} gives
+\[
+ \int_Xh_j\,\omega_{w_\ell}^{k}\wedge\omega^{n-k}\longrightarrow0.
+\]
+Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
+\end{proof}
+
+\Needspace{25\baselineskip}

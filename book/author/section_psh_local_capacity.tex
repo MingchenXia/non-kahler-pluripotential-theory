@@ -11,7 +11,11 @@ $\ddc p_1\wedge\cdots\wedge\ddc p_k$ is a positive closed current of order zero.
 
 Here locality means equality of the restricted currents on a plurifine open Borel set where the potentials agree. The plurifine topology is the topology generated locally by plurisubharmonic functions. It is finer than the ordinary topology and, for example, makes the strict superlevel sets of a quasi-plurisubharmonic function open.
 
-For concentric coordinate balls $B'\Subset B$ and a Borel set $E\subset B'$, let $\operatorname{cap}(E,B)=\sup\{\int_E(\ddc v)^n:v\in\PSH(B),\ 0\leq v\leq1\}$ be the relative Bedford--Taylor capacity. We use two standard local estimates on these balls, with constants $C,a>0$ depending only on the nested balls and the fixed volume form:
+For concentric coordinate balls $B'\Subset B$ and a Borel set $E\subset B'$, let $\operatorname{cap}(E,B)=\sup\{\int_E(\ddc v)^n:v\in\PSH(B),\ 0\leq v\leq1\}$ be the relative Bedford--Taylor capacity. If $v$ is bounded and plurisubharmonic on $B$, normalize its range to $[0,1]$ to obtain
+\[
+ (\ddc v)^n(E)\leq(\sup_Bv-\inf_Bv)^n\operatorname{cap}(E,B).
+\]
+The constant case has zero measure. We use two standard local estimates on these balls, with constants $C,a>0$ depending only on the nested balls and the fixed volume form:
 \begin{enumerate}
 \item If $w\leq0$ is plurisubharmonic on $B$ and $v$ is bounded and plurisubharmonic, then
 \[
@@ -26,7 +30,6 @@ An additive constant can first be chosen in $v$. This is the weighted Chern--Lev
 with value zero when the capacity is zero. This is the classical local volume--capacity estimate.
 \end{enumerate}
 These are statements of local pluripotential theory, as developed in \cite[Chapters 3 and 4]{GZ17}; the bounded product and capacity conventions also agree, up to harmless fixed constants, with \cite[Chapter 2]{SGPT}.
-
 
 The dependence on the range can be read directly from the cutoff argument. If $M>0$ and $p$ is plurisubharmonic on $B$ with $0\leq p\leq M$, choose a cutoff $0\leq\chi\leq1$ supported in $B$, equal to one on a smaller ball, with $|\ddc\chi|\leq C\kappa$, where $\kappa$ is the Euclidean form. For $1\leq j\leq n$,
 \[
@@ -62,3 +65,40 @@ then, for $0\leq k\leq n$,
   \geq A^{k/n}B^{(n-k)/n}\beta^n.
 \]
 \end{theorem}
+
+If $a,b$ are locally bounded plurisubharmonic functions, $E=\{a<b\}\Subset U$, and $S$ is a positive closed $(n-1,n-1)$-current obtained as a product of bounded plurisubharmonic Hessians and smooth closed positive forms, then
+\begin{equation}\label{eq:interior-mixed-BT-comparison}
+  \int_E\ddc b\wedge S\leq\int_E\ddc a\wedge S.
+\end{equation}
+Indeed, apply the Bedford--Taylor integration-by-parts formula to $b_\epsilon=\max\{a,b-\epsilon\}$ and let $\epsilon\downarrow0$; monotone continuity gives the limit. Replacing one factor at a time yields, for $P=\ddc a$ and $Q=\ddc b$,
+\begin{equation}\label{eq:interior-power-comparison}
+  \int_E P^{n-j}\wedge Q^j\leq\int_E P^n,
+  \qquad 0\leq j\leq n.
+\end{equation}
+These are the mixed forms of the local Bedford--Taylor comparison principle from \cite{SGPT}.
+
+The local obstacle theorem gives a corresponding contact statement. Let $B$ be a ball, $h<0$ a smooth strictly plurisubharmonic defining function, and $f$ a bounded quasi-continuous obstacle with $Ah\leq f\leq0$ for some $A>0$. Its ordinary plurisubharmonic envelope $q$, defined using the inequality $q\leq f$ quasi-everywhere, satisfies $Ah\leq q\leq0$, tends to zero at the boundary, and obeys
+\begin{equation}\label{eq:local-envelope-contact}
+ \mathbf1_{\{q<f\}}(\ddc q)^n=0.
+\end{equation}
+This is the bounded local envelope theorem from \cite{SGPT,GZ17}.
+
+\begin{lemma}\label{lem:local-bounded-measure-carrier}
+Let $B$ be a coordinate ball and let $\tau$ be a finite non-pluripolar measure with compact support in $B$. There is a bounded plurisubharmonic function $v$ on $B$ such that $\tau\ll(\ddc v)^n$.
+\end{lemma}
+\begin{proof}
+Cegrell's decomposition theorem says the following. On a bounded hyperconvex domain in $\mathbb C^n$, $n\geq2$, let $\mathcal E_0$ consist of bounded negative plurisubharmonic functions with zero boundary values and finite total Monge--Amp\`ere mass. Every positive compactly supported measure $\tau$ has a decomposition
+\[
+ \tau=g(\ddc v)^n+\tau_s,
+ \qquad v\in\mathcal E_0,\qquad
+ 0\leq g\in L^1((\ddc v)^n),
+\]
+where $\tau_s$ is a positive measure carried by a pluripolar set. This local notation is different from the global envelope class $\mathcal E_{\mathrm{env}}(X,\theta,0)$. If $\tau$ is non-pluripolar, $\tau_s=0$, so $\tau\ll(\ddc v)^n$.
+
+For completeness the required local assertion on a disk also follows from the Green potential. Let $a\leq0$ be the Green potential of a finite compactly supported non-polar measure $\tau$, normalized by $\ddc a=\tau$. Then $v=\mathrm{e}^a$ is bounded and subharmonic, and
+\[
+ \ddc v\geq \mathrm{e}^a\tau.
+\]
+To justify the inequality, set $a_M=\max(a,-M)$. The bounded subharmonic chain rule gives
+$\ddc \mathrm{e}^{a_M}\geq \mathrm{e}^{a_M}\ddc a_M$, which on $\{a>-M\}$ is at least $\mathrm{e}^a\tau$. Let $M\to\infty$, using decreasing convergence of the bounded subharmonic functions $\mathrm{e}^{a_M}$ and monotone convergence on the right. Since $\{a=-\infty\}$ is polar, $\mathrm{e}^a>0$ almost everywhere for $\tau$. Thus $\tau\ll\ddc v$. The chain inequality is \eqref{eq:bounded-convex-chain-rule} in dimension one.
+\end{proof}
