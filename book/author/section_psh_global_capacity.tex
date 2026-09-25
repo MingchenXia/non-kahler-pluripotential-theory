@@ -1,3 +1,4 @@
+\Needspace{8\baselineskip}
 \section{Hermitian capacity}
 \label{sec:hermitian-capacity}
 
@@ -76,3 +77,17 @@ The quotient of this exponential by $x^2$ is bounded on $0<x\leq\operatorname{Ca
 \end{proof}
 
 The same proof bounds an $L^p$ density by any fixed positive power of capacity. The choice of the exponent two will be convenient for the sublevel iteration in \cref{lem:backwards-capacity}.
+
+For quasi-continuous obstacles, a decreasing lower semicontinuous approximation preserves the original bounds and confines the error to sets of vanishing capacity.
+
+\begin{lemma}
+\label{lem:quasicont-lsc-approximation}
+Every bounded quasi-continuous function $f$ admits bounded lower semicontinuous functions $f_j$ with common bounds such that $f_j\downarrow f$ quasi-everywhere and $f_j\to f$ in capacity.
+\end{lemma}
+\begin{proof}
+Choose open sets $O_j$ with capacity at most $2^{-j}$ such that $f$ is continuous on $X\setminus O_j$, and set $G_j=\bigcup_{k\geq j}O_k$. Then $G_j$ decreases, its capacity tends to zero, and $f$ is continuous on its closed complement. Choose $M\geq\sup_Xf$ and define
+\[
+ f_j=f\ \hbox{on }X\setminus G_j,\qquad f_j=M\ \hbox{on }G_j.
+\]
+At a boundary point of $G_j$, limits from the closed complement give $f$, while values from inside are at least that value. Thus $f_j$ is lower semicontinuous. The functions decrease to $f$ outside $\bigcap_jG_j$, a capacity-zero set. Their difference from $f$ is supported in $G_j$, which also proves convergence in capacity.
+\end{proof}
