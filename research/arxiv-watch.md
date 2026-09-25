@@ -70,3 +70,5 @@ The [CV new endpoint](https://arxiv.org/list/math.CV/new?show=2000) again return
 ### Chapter 11 continuation, 25 September
 
 The four primary new-list endpoints were probed. CV returned September 23; DG, AG and AP returned September 24. This adds no complete September 25 or rolling-seven-day coverage and does not close historical replacement gaps. No negative scan or adoption is claimed. The bounded source work instead checks the existing BG/LPT citations; the four user-supplied PDFs enter a separate proof-review queue.
+
+Checkpoint109: the CV availability probe still displays 24 September and 22 entries, already screened at checkpoint108. No additional complete coverage is claimed. The DNGL26 primary abstract/version record was rechecked solely for the existing citation; no theorem is adopted. The source/dependency work in this continuation is the supplied Q6.3 reconstruction and the published BT82 increasing-product locator. September 25 announcements and historical replacement gaps remain pending.
