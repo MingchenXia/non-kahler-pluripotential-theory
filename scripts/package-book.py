@@ -48,6 +48,8 @@ for name in (
     "research/editorial/horizontal-center-integration-review-107.md",
     "research/editorial/local-density-boundary-review-108.md",
     "research/editorial/divisorial-normal-length-review-109.md",
+    "research/editorial/introduction-revision-review-110.md",
+    "research/editorial/introduction-revision-queue.md",
     "research/editorial/supplied-papers-integration-queue.md",
     "research/supplied-papers-20260925.json",
     "research/rethlas/verification/inputs/hopf-lp-normalization.md",

@@ -1,13 +1,11 @@
 \chapter{Torsion and the variation of mass}
 \label{chap:mass}
 
-The total Monge--Amp\`ere mass is constant on smooth K\"ahler potentials. For a general Hermitian form, derivatives of the background produce additional terms. We shall compute them, exhibit smooth potentials of different total masses, and explain why the ordinary global comparison principle would force mass invariance.
-
-Everything in this chapter concerns smooth forms and smooth functions. This restriction makes the identities independent of any choice of a Monge--Amp\`ere operator on unbounded functions.
+For smooth K\"ahler potentials, Stokes' theorem makes the total Monge--Amp\`ere mass independent of the potential. With a nonclosed background, the same calculation leaves derivatives of powers of that form. The resulting mass polynomial identifies when invariance holds and gives explicit examples where it fails. This failure also explains why the global comparison principle must change in the Hermitian setting.
 
 \section{Integration by parts with a non-closed form}
 
-Let $X$ be a connected compact complex manifold of complex dimension $n\geq1$, without boundary. All functions and differential forms in this section are smooth and are defined on $X$. We use $\dc=\mathrm{i}(\bar\partial-\partial)/(4\pi)$ and $\ddc=\mathrm{d}\dc$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. We first compute the terms that remain when integration by parts differentiates a power of the background form.
 
 \begin{lemma}\label{lem:ibp}
 For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
@@ -50,7 +48,7 @@ The term involving $\mathrm{d}\omega\wedge\dc\omega$ is one reason that the cond
 
 \section{The mass polynomial}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ be a Hermitian form on $X$. For $u\in C^\infty(X,\mathbb R)$ write $\omega_u=\omega+\ddc u$. Set
+Fix a Hermitian form $\omega$ on $X$. For $u\in C^\infty(X,\mathbb R)$ write $\omega_u=\omega+\ddc u$. Expanding its top power and integrating by parts will express the mass variation in terms of derivatives of powers of $\omega$. Set
 \[
  \HH_\omega=\{u\in C^\infty(X,\R):\omega+\ddc u>0\},
  \qquad \Mass_\omega(u)=\int_X(\omega+\ddc u)^n.
@@ -128,7 +126,9 @@ A Hermitian form with $\ddc(\omega^{n-1})=0$ is called a Gauduchon form. Thus on
 The Gauduchon condition removes the middle term, but does not by itself remove the last one. Equivalently, \eqref{eq:mass-first-variation} vanishes at $u=0$, while mass invariance requires it to vanish at every admissible $u$. The full characterization of mass invariance is given in \cref{thm:mass-invariance-characterization}.
 
 \Needspace{23\baselineskip}
-\section{An explicit varying-mass example}
+\section{Mass variation on a complex torus}
+
+The surface formula suggests choosing a background whose complex Hessian is nonzero and a potential that pairs nontrivially with it. A product of elliptic curves gives an explicit example in which the mass varies along a family of smooth potentials.
 
 \begin{example}\label{ex:torus-mass}
 Let $X=(\C/(\mathbb Z+\mathrm i\mathbb Z))^2$. For $j=1,2$, let $x_j,y_j$ be the real coordinates on its universal cover and put
@@ -144,7 +144,7 @@ The forms $\beta_j$ descend to $X$. For a real parameter $t$, define
 \]
 Since $1\leq b\leq3$, the form $\omega$ is Hermitian. It is not closed: $\mathrm{d}\omega=\mathrm{d}b\wedge\beta_2$ is not identically zero.
 
-For a smooth real function $v$ on $X$, write $\omega_v=\omega+\ddc v$ and $\Mass_\omega(v)=\int_X\omega_v^2$. For a function $f$ of $x_1$ alone, with derivatives taken in $x_1$, one has $\ddc f=(f''/4)\beta_1$. Hence
+For a function $f$ of $x_1$ alone, with derivatives taken in $x_1$, one has $\ddc f=(f''/4)\beta_1$. Hence
 \[
  \omega_{u_t}
  =\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)\beta_1+b\beta_2>0
@@ -166,7 +166,7 @@ Thus even smooth potentials in the same singularity class have different masses.
 The complex torus admits K\"ahler metrics, but the chosen equation form is nonclosed. Mass variation already occurs in this setting. The Hopf example in \cref{chap:hopf} will exhibit the further failure of an upper mass bound on a non-K\"ahler manifold.
 
 \begin{corollary}\label{cor:mass-not-singularity-invariant}
-For a Hermitian form $\omega$ on a compact complex manifold $X$ of dimension $n$, write $\omega_u=\omega+\ddc u$ and let $[u]$ denote the ordinary singularity type of $u$. In general, the rule
+Let $[u]$ denote the ordinary singularity type of $u$. In general, the rule
 \[
  [u]\longmapsto\int_X\omega_u^n
 \]
@@ -179,9 +179,9 @@ All the potentials $u_t$ in \cref{ex:torus-mass} are smooth on compact $X$, so t
 Upper and lower masses taken over all representatives of an ordinary type are invariants of that type. Envelope constructions provide another way to choose a representative. The Gauduchon trace measures of \cref{thm:gaud-trace-homeomorphism} retain information about individual potentials. Their total mass, in contrast, depends only on the fixed background, by \cref{prop:gauduchon-trace}.
 
 \Needspace{15\baselineskip}
-\section{What the global comparison principle would imply}
+\section{Comparison and mass invariance}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ be a Hermitian form on $X$. Write $\omega_u=\omega+\ddc u$, $\HH_\omega=\{u\in C^\infty(X,\mathbb R):\omega_u>0\}$ and $\Mass_\omega(u)=\int_X\omega_u^n$.
+Adding a constant to a potential leaves its measure unchanged. Consequently, a comparison inequality on strict sublevel sets would compare total masses after a suitable constant shift. The varying-mass example therefore obstructs the usual global inequality.
 
 \begin{proposition}\label{prop:comparison-forces-mass}
 Suppose that a Hermitian form $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
@@ -208,16 +208,14 @@ Use the torus $X$, form $\omega$, potentials $u_t$ and constant $B=\int_X\beta_1
 The modified comparison theorem in \cref{thm:modified-comparison} accounts for the derivatives of the background. Under the Guan--Li condition, the ordinary comparison principle is recovered.
 
 \Needspace{30\baselineskip}
-\section{Invariance and boundedness are different questions}
+\section{Uniform mass bounds}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\omega$ and $\eta$ be Hermitian forms on $X$. For either form $\gamma$, set $\HH_\gamma=\{u\in C^\infty(X,\mathbb R):\gamma+\ddc u>0\}$ and $\Mass_\gamma(u)=\int_X(\gamma+\ddc u)^n$.
+Once mass invariance fails, one can still ask for a uniform upper bound. Unlike invariance, finiteness of this bound is independent of the choice of Hermitian form. Let $\eta$ be a second Hermitian form on $X$.
 
 Define the upper smooth mass
 \[
  \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty].
 \]
-Finiteness of $\Vsm(\omega)$ asks for one bound over all smooth strictly $\omega$-plurisubharmonic potentials. Each individual smooth mass is already finite by compactness. Mass invariance supplies such a uniform bound; boundedness alone does not assert that the masses are equal. The comparison below concerns this smooth class.
-
 \begin{proposition}\label{prop:smooth-bmp-metric}
 If $C>0$ is a real constant and $\omega\leq C\eta$, then
 \[

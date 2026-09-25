@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint110 — editorial priority
+
+The user's latest corrections make the whole-book introduction, repeated-definition and heading pass the immediate priority. The earlier rule to restate each section's setting is superseded: carry established notation through a chapter and introduce only new objects or changed assumptions. The dedicated queue is `research/editorial/introduction-revision-queue.md`; previous proof reviews do not count as completed introduction rewrites.
+
+The book remains **800 pages**, with 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-110.pdf` has SHA256 `229fbdc1e598dbd564b6cd536d8529b35145452151ef5f7a5c041b4648e8476d` and 3614339 bytes. Chapters 1–2 now have rewritten chapter/section introductions, repeated setup and definitions removed, and mathematical headings, including Section 2.5 “Uniform mass bounds”. The front conventions are shortened; the operator normalization is declared there once. Repeated declarations in other active chapters and the default boundary qualification are removed. Source-specific normalization conversions remain. All ten edited inputs retain the same house-audit findings as their baselines; 67 formal blocks are unchanged and four receive only the documented wording/notation edits.
+
+Both direct editorial passes and inspection of all twenty changed pages are complete. The build has no errors, unresolved references/citations, duplicate labels or overfull boxes, and one inherited bibliography underfull paragraph. The 17-page companion is unchanged. Both outputs rebuilt successfully in a fresh empty extraction, with every page text matching production; see source-package-portability-110.json. Checkpoint109 was committed locally as e68592e after its full checks; two private synchronization attempts failed at the transport layer before pushing. Retry routine synchronization after this revision and verify the remote head before claiming backup. All 190 historical reports are unchanged.
+
+Continue the new editorial pass with Chapter 3 and its sections; Chapters 3–33 and the appendix remain pending as whole units. The prior mathematical chapter cycle remains at Section 12.3. Three supplied papers are integrated, with Q2.8 pending. The persistent goal is active and incomplete.
+
 ## Checkpoint109
 
 The book has **800 pages**, 33 active chapters and an appendix. Snapshot `output/snapshots/checkpoint-109.pdf` has SHA256 `f60e2daf49f26f6fcd31ef1d5399e9fe9fb1665572eaff8ebaf8aa1c1aeb91bf` and 3618623 bytes. Section 28.9 reconstructs the supplied divisorial completeness criterion and sharp compact torus models. The abstract normal-length proposition is proved for arbitrary Hermitian metrics, and the exponential corollary keeps all three pointwise bounds. The pole coefficients in the examples need not extend smoothly and positively across the divisor; the separate prescribed-pole and flow questions remain open.

@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint110: introductions, notation and headings
+
+Apply the user's corrections to Chapters 1–2 and the front conventions. Remove redundant quasi-psh qualifications, the misleading global nonemptiness sentence, repeated section setup and definitions, and repeated d-c/ddc conventions. Retain actual source-normalization conversions. Rewrite the first two chapters' introductions around their mathematical arguments and replace conversational headings, including Section 2.5 with “Uniform mass bounds”. Remove default “without boundary” qualifications in active sources. The new whole-book editorial queue starts next at Chapter 3 and explicitly supersedes the old repeated-local-setting rule.
+
+The 800-page book passes compilation and inspection of all twenty changed pages. Two direct editorial passes are complete. Sixty-seven formal blocks are unchanged; four have only the documented wording/notation edits. The ten edited inputs retain eleven inherited house-audit errors/twenty-four warnings, with no new findings. There are no build errors, unresolved references, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The companion is unchanged. Both outputs rebuilt successfully in a fresh empty extraction, with every page text matching production; see source-package-portability-110.json. No new verifier report or literature theorem is added. The full editorial and mathematical program remains open.
+
 ## 25 September 2026 — Checkpoint109: divisorial normal length and critical compact models
 
 Reconstruct Q6.3 in Section 28.9 and prove the abstract metric criterion for arbitrary Hermitian backgrounds. Include the exponential corollary and full-mass compact torus models at and above the critical exponent two. Preserve the distinction between logarithmically weakened integrable poles and a prescribed pole with a smooth positive coefficient across the divisor. Update the corresponding Chapter 33 discussion. Complete the direct first/second review of Section 12.2 and its bounded-contact input, clarifying increasing bounded-product convergence and removing duplicated notation. All 39 earlier formal blocks in the four edited sources are unchanged. Q2.8 and the remainder of the chapter cycle stay pending.

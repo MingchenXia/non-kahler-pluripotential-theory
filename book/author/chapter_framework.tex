@@ -1,11 +1,11 @@
 \chapter{Background forms and local singularities}
 \label{chap:framework}
 
-Local singularities can be studied after adding a smooth correction to a potential. Global positivity also depends on the background form, and integration by parts depends on its differential. We first separate these roles. This distinction will remain necessary when line bundles enter the theory: their curvature is closed even when the auxiliary Hermitian form is not.
+The singular part of a potential is a local object, whereas positivity of the current it defines is a global condition. A smooth background form connects these two descriptions. A smooth change of potential can be absorbed into the background, leaving the current and its singularity type unchanged. Allowing the background to be nonclosed changes its relation to local potentials and line-bundle curvature. To compare singularities, we use domination up to a constant and inclusion of multiplier ideals.
 
-\section{Two ways to leave the K\"ahler setting}
+\section{Plurisubharmonic potentials}
 
-Let $X$ be a connected compact complex manifold of complex dimension $n\geq1$. Fix a smooth real $(1,1)$-form $\theta$ on $X$ and a Hermitian form $\omega$ on $X$. We use $\ddc=\mathrm{i}\partial\bar\partial/(2\pi)$. A quasi-plurisubharmonic function is locally the sum of a plurisubharmonic function and a smooth real function, with its upper semicontinuous representative, and is not identically $-\infty$.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth real $(1,1)$-form, and let $\omega$ be a Hermitian form on $X$. There are two distinct extensions of the K\"ahler setting: one can study a closed background on a non-K\"ahler manifold, or allow the background itself to be nonclosed. In both cases positivity is expressed through quasi-plurisubharmonic functions, which are locally sums of plurisubharmonic functions and smooth real functions.
 
 \begin{definition}\label{def:theta-psh}
 A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic} if
@@ -15,7 +15,7 @@ A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic}
 as a current. We denote the set of these functions by $\PSH(X,\theta)$.
 \end{definition}
 
-If $\theta=\omega$ is Hermitian, the set is nonempty because it contains every constant. For a general smooth real form $\theta$, nonemptiness is an assumption, not a consequence of the definition.
+If $\theta=\omega$, every constant belongs to $\PSH(X,\omega)$.
 
 \begin{proposition}\label{prop:local-correction}
 Let $u\in\PSH(X,\theta)$. On each relatively compact coordinate ball with coordinates $z=(z_1,\ldots,z_n)$, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
@@ -31,7 +31,7 @@ for a sufficiently large $A$. Consequently,
 \[
  \ddc(u+A|z|^2)\geq A\ddc|z|^2-\theta\geq0.
 \]
-The function $u+A|z|^2$ is quasi-plurisubharmonic with its canonical representative; positivity of its complex Hessian therefore gives plurisubharmonicity.
+Thus $u+A|z|^2$ is plurisubharmonic.
 
 For the converse, choose finitely many relatively compact charts covering $X$ on which $u=p_j+f_j$, with $p_j$ plurisubharmonic and $f_j$ smooth. On the closure of each smaller chart, the smooth form $\ddc f_j$ is bounded below by $-C_j\omega$. Thus $\ddc u\geq-C_j\omega$ there. Taking the maximum of finitely many $C_j$ proves the global inequality.
 \end{proof}
@@ -53,7 +53,7 @@ For a closed real $(1,1)$-form, smooth local $\ddc$-potentials do exist on suffi
 
 \section{Changes of background}
 
-Let $X$ be a connected compact complex manifold, let $\theta$ and $\eta$ be smooth real $(1,1)$-forms on $X$, and fix a Hermitian form $\omega$. The notation $\PSH(X,\theta)$ is as in \cref{def:theta-psh}. Two quasi-plurisubharmonic functions have the same ordinary singularity type if each is bounded above by the other plus a constant.
+Let $\eta$ be another smooth real $(1,1)$-form on $X$. A positive current can be written as a smooth background plus a complex Hessian in more than one way. A smooth change of decomposition changes the potential by a bounded function; positive linear combinations also allow us to compare potentials belonging to different backgrounds.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:gauge}
@@ -62,14 +62,14 @@ Let $f$ be smooth and real, and set $\theta'=\theta+\ddc f$. Then
  \PSH(X,\theta)\longrightarrow\PSH(X,\theta'),
  \qquad u\longmapsto u-f
 \]
-is a bijection. It preserves the positive current and the ordinary singularity type. Moreover, $\mathrm{d}\theta'=\mathrm{d}\theta$.
+is a bijection. It preserves the positive current and changes the potential by a bounded function. Moreover, $\mathrm{d}\theta'=\mathrm{d}\theta$.
 \end{proposition}
 \begin{proof}
 For every $u$ in the source,
 \[
  \theta'+\ddc(u-f)=\theta+\ddc u.
 \]
-The inverse is $v\mapsto v+f$. Since $X$ is compact, $f$ is bounded, so subtracting $f$ preserves singularity type. The last assertion follows from $\mathrm{d}\ddc f=0$.
+The inverse is $v\mapsto v+f$, and $f$ is bounded by compactness. The last assertion follows from $\mathrm{d}\ddc f=0$.
 \end{proof}
 
 The quotient of smooth real $(1,1)$-forms by smooth $\ddc$-terms can therefore be useful even for non-closed forms. It must be distinguished from the usual Bott--Chern cohomology group, whose representatives are closed. The terminology in the literature is not uniform: some authors use an enlarged Bott--Chern space for the former quotient. We shall always specify whether its representatives are required to be closed.
@@ -95,7 +95,7 @@ By \cref{prop:local-correction}, any two quasi-plurisubharmonic functions belong
 
 \section{Singularity type and multiplier ideals}
 
-Let $X$ be a connected compact complex manifold. All quasi-plurisubharmonic functions in this section are defined on $X$, except in the explicitly local example.
+We compare quasi-plurisubharmonic functions on $X$ first by domination up to a constant, then through weighted local integrability of holomorphic functions. The first comparison gives ordinary singularity types; the second gives multiplier ideals. A logarithmic pole on a disc will show why the ideals at all positive weights enter the comparison.
 
 \begin{definition}\label{def:singularity-order}
 For quasi-plurisubharmonic functions $u,v$, write $u\preceq v$ if $u\leq v+C$ for some $C\in\R$. Write $u\sim v$ if $u\preceq v$ and $v\preceq u$.
@@ -140,9 +140,9 @@ The example also explains why one multiplier ideal is insufficient to compare si
 
 We use the $\mathcal I$-preorder defined by inclusion of $\mathcal I(ku)$ in $\mathcal I(kv)$ for every real weight $k>0$. Requiring equality at all these weights gives the ideal equivalence relation used in \cref{chap:hermitian-igood}. Both definitions make sense on any complex manifold; their relation to envelopes and global masses requires further arguments.
 
-\section{Closed curvature and algebraic interpretations}
+\section{Curvature of line bundles}
 
-Let $X$ be a complex manifold and let $\omega$ be a smooth real $(1,1)$-form on $X$. The functions $u$ below are locally integrable on $X$, so $\ddc u$ is defined as a current.
+Let $X$ be a complex manifold and let $\omega$ be a smooth real $(1,1)$-form on $X$. To connect potentials with holomorphic sections, we ask when a current $\omega+\ddc u$, with $u$ locally integrable, can be the curvature of a line-bundle metric. The transition law for its local weights forces a closedness condition on the background.
 
 \begin{proposition}\label{prop:chern-closed}
 The curvature current of a singular Hermitian metric with locally integrable weights on a holomorphic line bundle is closed. In particular, a non-closed form $\omega$ cannot itself be the curvature of such a metric, nor can $\omega+\ddc u$ be closed at a point where $\mathrm{d}\omega\neq0$.
