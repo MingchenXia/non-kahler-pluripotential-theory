@@ -187,3 +187,7 @@ Centralize the general psh results in the first chapter and move all paper citat
 ## Chapter-by-chapter rewrite, checkpoint113
 
 The user's latest direction requires each chapter and its nested sections to be rewritten as a complete unit against all earlier standards. Chapter 7, *Weighted Monge–Ampère measures*, completes that pass. Its bounded-range estimate, damping constructions, capacity continuity and undamped tail criterion now form one argument without repeated setup or definitions. The general bounded-product calculus, convex chain rule and Hermitian capacity estimates are collected in Chapter 1; later citations point to those results. The scaling example explicitly uses the stronger coefficient-integrable witness and its range 0<epsilon<1. Continue at Chapter 8. The separate proof queue remains at Section 12.2, and Q2.8 and the research program remain pending.
+
+## Chapter-by-chapter rewrite, checkpoint114
+
+Chapter 8, *Unbounded mass on a Gauduchon threefold*, completes the same whole-chapter pass. Its seven section openings and headings follow the vertical-energy identity, heat potential, square estimate, varying heat scale, base correction and fiber-average characterization. Repeated setup is removed, actual extension and positivity hypotheses are retained, and the equality argument uses the first-chapter quasi-psh lemma. The nine formal statements remain unchanged. Continue at Chapter 9, including every nested input. The separate proof queue stays at Section 12.2; Q2.8 and the broader program remain pending.

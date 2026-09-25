@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint114: Chapter 8 rewrite
+
+Rewrite the complete Hopf chapter and its seven sections around the mass formula, heat concentration, mixed-derivative control, base correction and minimum-mass characterization. Remove repeated definitions and settings, replace generic headings, specify the cutoff range and use the first-chapter quasi-psh equality lemma. Preserve the extension conditions and the potential-dependent support region. All nine formal statements are unchanged; eight of nine proof environments are unchanged, with notation and dependency edits in the last.
+
+Both full direct reads and inspection of all 33 selected pages are complete. The house audit retains zero errors/two inherited warnings. The final book has 810 pages and no compilation errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The 17-page companion is unchanged. Both outputs rebuilt in a fresh empty extraction, with every reconstructed page text matching production. All 190 historical verifier reports and the hidden sources are preserved. Continue with the whole of Chapter 9; Section 12.2 in the separate proof queue and Q2.8 remain pending.
+
 ## 25 September 2026 — Checkpoint113: Chapter 7 rewrite
 
 Rewrite Chapter 7 and its nested input as a complete unit: mathematical section openings, titles and transitions replace repeated setup, definitions and recaps. Collect bounded smooth-background products, the convex chain rule and general Hermitian capacity estimates in Chapter 1. Keep the range-growth and damping arguments with Chapter 7, using internal references to their general inputs. Correct the scaling example to choose the stronger coefficient-integrable witness and use its stated range 0<epsilon<1. Repair moved-result references without counting later chapters as rewritten.

@@ -1,9 +1,7 @@
 \chapter{Unbounded mass on a Gauduchon threefold}
 \label{chap:hopf}
 
-The preceding estimates apply without an upper bound for the masses of all bounded potentials. We now explain why that generality is necessary. The example takes place on a Hopf threefold and uses a Gauduchon background. Its mass formula turns a vertical Dirichlet energy into total Monge--Amp\`ere mass. Heat regularization on the elliptic fibers produces large energy, while a carefully chosen variation of the regularization scale preserves positivity in the transverse directions.
-
-
+On the Hopf threefold below, a Gauduchon metric has a mass formula whose quadratic term is a positive multiple of the Dirichlet energy along the elliptic fibers. To make the mass unbounded, we construct smooth potentials with arbitrarily large vertical energy while keeping the perturbed form positive. The heat kernel supplies the concentration; varying its time parameter across the base controls the mixed derivatives, and a function of the base alone restores positivity while preserving the vertical energy. The same mass formula identifies the potentials of minimum mass through their fiber averages.
 
 \begin{theorem}[Xia--Zhang]\label{thm:hopf-unbounded}
 The compact threefold
@@ -18,12 +16,12 @@ admits a Gauduchon form $\omega$ and smooth real functions $V_j$ such that
 In particular, $X$ does not have the bounded mass property.
 \end{theorem}
 
-\section{The geometry and the mass identity}
+\section{Vertical energy and total mass}
 
-Let $X$ be the Hopf threefold $(\mathbb C^3\setminus\{0\})/\langle z\mapsto\mathrm{e}^{-1}z\rangle$, with covering coordinates $z=(z_0,z_1,z_2)$.
+The projective fibration separates the horizontal and vertical parts of the metric. The Gauduchon identity removes the linear term in the mass polynomial, while the torsion formula turns the quadratic term into a positive vertical energy.
 
 \Needspace{6\baselineskip}
-On $\C^3\setminus\{0\}$ put
+On the covering space $\C^3\setminus\{0\}$, with coordinates $z=(z_0,z_1,z_2)$, put
 \[
  s=\log|z|^2,\qquad
  \alpha=\ddc s,\qquad
@@ -90,16 +88,16 @@ Wedging with $\alpha^2$ removes every horizontal component of $\mathrm{d}V\wedge
 $\mathrm i|V_w|^2\mathrm{d}w\wedge \mathrm{d}\bar w/(2\pi)=2|V_w|^2\mathrm{d}A_E$. Fiber integration proves the formula.
 \end{proof}
 
-\section{A scalar test for positivity}
+\section{The positivity criterion}
 
-Work on the Hopf threefold $X$ of \cref{thm:hopf-unbounded} with the form $\omega=\alpha+\beta$ constructed in \cref{prop:hopf-mass}. On its affine trivialization over $U_0\simeq\mathbb C^2$, write $\xi=(\xi_1,\xi_2)$ for the base coordinates and $w$ for the fiber coordinate modulo $\Lambda=\mathbb Z+2\pi\mathrm{i}\mathbb Z$, and put $E=\mathbb C/\Lambda$. Subscripts denote partial derivatives in the displayed variables.
+A potential depending on the base only through its radius has one tangential horizontal coefficient and a two-by-two radial--vertical block. The Schur complement of that block isolates the mixed derivative that must be controlled. Subscripts denote partial derivatives in the displayed variables.
 
 For $\xi\ne0$ introduce
 \[
  x=\log|\xi|^2,\qquad
  \mu=\frac{\mathrm{e}^x}{1+\mathrm{e}^x},\qquad \mu_x=\mu(1-\mu).
 \]
-We use smooth real functions $V:\mathbb R\times E\to\mathbb R$, written $V=V(x,w)$, that are independent of $x$ near the negative end and constant in both variables near the positive end. The first condition gives smooth extension across $\xi=0$. The second gives extension over the complement of the affine chart, by using the same constant there. For each individual $V$, its nonconstant base region is compact; no common compact region for the sequence is needed.
+We use smooth real functions $V:\mathbb R\times E\to\mathbb R$, written $V=V(x,w)$, that are independent of $x$ near the negative end and constant in both variables near the positive end. These conditions give smooth extension across $\xi=0$ and over the complement of the affine chart, using the same constant at the positive end. The nonconstant base region may depend on $V$.
 
 \begin{lemma}\label{lem:hopf-positivity}
 For such a function, at $\xi\ne0$ the inequality $\omega+\ddc V>0$ is equivalent to
@@ -139,11 +137,11 @@ Adjoin the vertical vector $\partial_w$. In this frame the matrix of $2\pi(\omeg
 The Schur complement of the last diagonal entry gives exactly \eqref{eq:hopf-positivity}. At $\xi=0$, the derivatives of $V$ in the base vanish and $\partial s=\mathrm{d}w$, which gives the last assertion.
 \end{proof}
 
-The difficulty is the mixed derivative $V_{x\bar w}$. Keeping a highly concentrated fiber potential unchanged and then cutting it off rapidly would make its square too large. We shall first spread the concentration by the heat equation. The cutoff will occur only when all fiber derivatives are exponentially small.
+A rapid cutoff of a concentrated fiber potential can make the mixed derivative $V_{x\bar w}$ too large for this criterion. We therefore spread the concentration by the heat equation before cutting off, so that the fiber derivatives are already exponentially small in the cutoff region.
 
-\section{Heat potentials on the elliptic curve}
+\section{Heat potentials on the elliptic fiber}
 
-Let $\Lambda=\mathbb Z+2\pi\mathrm{i}\mathbb Z$ and $E=\mathbb C/\Lambda$. Write $w$ for the coordinate on the covering plane and $\mathrm{d}A_E=\mathrm{i}\mathrm{d}w\wedge\mathrm{d}\bar w/(4\pi)$ for the probability area form on $E$. Subscripts on a function of $(t,w)$ denote partial derivatives.
+The potential of the heat kernel minus its mean has a fixed lower Hessian bound and logarithmically divergent energy as the time tends to zero. At large times, all its derivatives decay exponentially. These two regimes provide the concentrated potential and its eventual cutoff.
 
 For $t>0$ define
 \begin{equation}\label{eq:hopf-heat}
@@ -229,11 +227,9 @@ For this bound, isolate the zero lattice vector and use
 $\mathrm{e}^{-|\lambda|^2/(2t)}\leq \mathrm{e}^{-1/(4t)}\mathrm{e}^{-|\lambda|^2/4}$ for $\lambda\ne0$. The error is integrable at zero, and $\mathcal E_\eta(1)=O(\eta^2)$. Integrating the derivative between $t$ and $1$ proves \eqref{eq:hopf-energy}.
 \end{proof}
 
-\section{An estimate for the mixed derivative}
+\section{A heat-kernel square estimate}
 
-Let $E=\mathbb C/\Lambda$, where $\Lambda=\mathbb Z+2\pi\mathrm{i}\mathbb Z$, and let $w$ denote a covering coordinate. For $t>0$, let $k_t:E\to(0,+\infty)$ be the probability heat kernel defined by \eqref{eq:hopf-heat}. Derivatives in $w$ are taken on the covering plane.
-
-We need a relation between the heat kernel and its logarithmic gradient. It will allow a positive square in the Schur complement to absorb most of a negative term.
+The Schur complement subtracts a square involving the mixed derivative. The heat equation produces a compensating positive square after the time parameter is allowed to vary. A bound relating the heat kernel to its logarithmic gradient controls the region where that positive square is small.
 
 \begin{lemma}\label{lem:hopf-gradient}
 For a constant $C_0\geq1$ depending only on $E$,
@@ -299,11 +295,11 @@ Otherwise $|\zeta|\geq3/4$, so
 Apply \cref{lem:hopf-gradient} and discard the nonnegative square. This gives \eqref{eq:hopf-square} in the last case as well.
 \end{proof}
 
-\section{Varying the heat scale}
+\section{The transverse heat scale}
 
-Let $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$. For $t>0$ and $0<\eta<1/10$, let $k_t$ and $F_\eta(t,w)$ be the heat kernel and heat potential of \eqref{eq:hopf-heat} and \cref{lem:hopf-fiber-potential}. On the Hopf trivialization over $U_0\simeq\mathbb C^2$ from \cref{prop:hopf-mass}, let $\xi$ denote the affine base coordinates and $w\in E$ the fiber coordinate. For $\xi\ne0$ put $x=\log|\xi|^2$ and $\mu(x)=\mathrm{e}^x/(1+\mathrm{e}^x)$. We use the scalar expression $Q[V]$ defined in \eqref{eq:hopf-positivity}.
+The heat time will remain small on a fixed base ball and increase until the fiber potential can be cut off. We choose its rate so that the negative part of the Schur complement has small integral in the radial variable. Fix $\kappa$ as in \cref{lem:hopf-square}.
 
-We now choose a function that is highly concentrated over a fixed base ball and becomes almost constant before it is cut off. Fix the small constant $\kappa$ from \cref{lem:hopf-square}. All estimates below are for $\eta\downarrow0$, with $\kappa$ fixed. Write
+All estimates below are for $\eta\downarrow0$, with $\kappa$ fixed. Write
 \[
  L=\log(1/\eta),\quad
  \varepsilon=\eta^{1/\eta^2},\quad
@@ -325,7 +321,7 @@ For small $\eta$, we have $0<a^{-1}<b<x_*$, with
  q(b)=1,\quad q(x_*)=0,\quad
  b,x_*=O\bigl(\sqrt{L/\eta}\bigr),\quad \eta b=o(1).
 \end{equation}
-Choose another smooth cutoff $\vartheta$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
+Choose another smooth cutoff $\vartheta:\R\to[0,1]$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
 \[
  W(x,w)=\vartheta(q(x))F_\eta(t(x),w).
 \]
@@ -457,11 +453,9 @@ since $\mu\leq1/2$. On $[-2,-1]$, use $1/9\leq\mu\leq3/10$ and $1-\eta\geq9/10$ 
 \end{proof}
 
 \Needspace{17\baselineskip}
-\section{Repairing the remaining defect}
+\section{A base correction and unbounded mass}
 
-Keep the Hopf threefold $X$, its Hermitian form $\omega$, the projection $\pi:X\to\mathbb P^2$, the affine base coordinates $\xi\in U_0\simeq\mathbb C^2$, and the fiber coordinate $w\in E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ from \cref{prop:hopf-mass}. The base variable is $x=\log|\xi|^2$, and $\mu(x)=\mathrm{e}^x/(1+\mathrm{e}^x)$. For $0<\eta<1/10$ and fixed $\kappa$ as in \cref{lem:hopf-square}, use the functions $q(x)$ and $t(x)$ of \eqref{eq:hopf-scale}, its initial value $\varepsilon=\eta^{1/\eta^2}$, and the cutoff heat potential $W(x,w)$ constructed there from $F_\eta$ of \cref{lem:hopf-fiber-potential}. Let $b>0$ be the endpoint with $q(b)=1$, and let $d_\eta(x)=\max_{w\in E}\max\{-Q[W](x,w),0\}$ be the continuous defect of \cref{lem:hopf-small-defect}; $Q$ is the expression in \eqref{eq:hopf-positivity}. The fiber area form $\mathrm{d}A_E$ and base form $\omega_{\FS}$ are normalized as in \cref{prop:hopf-mass}.
-
-The integral estimate is the relevant quantity: a small total negative defect can be corrected by a function of the base variable alone. Such a correction leaves the vertical energy unchanged.
+Adding a function of $x$ changes $Q[W]$ by its second derivative and leaves the vertical energy unchanged. The integral bound for $d_\eta$ lets us choose this derivative above the defect, then balance its integral in an interval where $Q[W]$ is uniformly positive. The correction has small first derivative, so the remaining horizontal coefficient stays positive as well.
 
 \begin{proof}[of \cref{thm:hopf-unbounded}]
 Choose a smooth function $r_\eta\geq0$ supported in $(-1/2,b+1/2)$ with
@@ -500,11 +494,9 @@ $V_\eta=F_\eta(\varepsilon,w)$, including at $\xi=0$. Thus
 uniformly for $y\in B$. Since $\int_B\omega_{\FS}^2>0$, the mass identity \eqref{eq:hopf-mass} proves the theorem along any sequence $\eta\downarrow0$.
 \end{proof}
 
-\section{Consequences for a general theory}
+\section{Minimum mass and fiber averaging}
 
-Let $X$ be the Hopf threefold of \cref{thm:hopf-unbounded}, equipped with the Gauduchon form $\omega=\alpha+\beta$ of \cref{prop:hopf-mass}. Let $\pi:X\to\mathbb P^2$ be the projectivization map, so $\alpha=\pi^*\omega_{\FS}$, where $\omega_{\FS}$ is the Fubini--Study form normalized by $\int_{\mathbb P^2}\omega_{\FS}^2=1$. The form $\beta$ has rank one and is positive on the vertical line. Write $v_+(\omega)$ and $v_-(\omega)$ for the supremum and infimum, respectively, of $\int_X(\omega+\ddc v)^3$ over bounded $v\in\PSH(X,\omega)$.
-
-Here the Gauduchon condition conserves the linear trace and removes the linear term from the mass polynomial. The quadratic term remains a nonnegative vertical energy with no uniform bound.
+The vertical energy in \eqref{eq:hopf-mass} is nonnegative, and its vanishing forces a smooth potential to be constant on each fiber. Bounded regularization passes the mass bound to bounded potentials. The fiber Poincar\'e inequality then quantifies the difference from a base pullback and identifies all minimizers.
 
 \begin{corollary}\label{cor:hopf-lower-mass}
 For the displayed Hopf metric, every bounded $\omega$-plurisubharmonic function has Monge--Amp\`ere mass at least $6$. In particular,
@@ -517,12 +509,12 @@ Here $v_-(\omega)$ is the infimum of the masses over all bounded $\omega$-pluris
 For smooth strictly positive potentials the lower bound is immediate from \cref{prop:hopf-mass}. Approximate a bounded $\omega$-plurisubharmonic function by \cref{thm:bounded-exact-regularization}. Bounded Bedford--Taylor continuity gives convergence of the total masses and hence the lower bound. The constant potential attains $6$, while \cref{thm:hopf-unbounded} gives the infinite supremum.
 \end{proof}
 
-The mass identity also measures the distance from a potential to its fiber average. Let $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ act on $X$ by scalar multiplication: for $a\in E$, the map $\tau_a:X\to X$ sends $[z]$ to $[\mathrm{e}^a z]$. This is well defined and preserves $\alpha$, $\beta$ and $\omega$. Write $w$ for the coordinate on the covering plane of $E$, and let $\mathrm{d}A_E=\mathrm{i}\,\mathrm{d}w\wedge\mathrm{d}\bar w/(4\pi)$ be its probability Haar measure. For a bounded Borel function $u:X\to\mathbb R$, set
+To average along the fibers, let $E$ act on $X$ by scalar multiplication: $\tau_a[z]=[\mathrm{e}^a z]$ for $a\in E$. The action preserves $\alpha$, $\beta$ and $\omega$, and $\mathrm{d}A_E$ is its probability Haar measure. For a bounded Borel function $u:X\to\mathbb R$, set
 \[
  \mathrm{d}\nu=\frac{\omega^3}{6}=\frac12\alpha^2\wedge\beta,
  \qquad
  Au(p)=\int_Eu(\tau_a(p))\,\mathrm{d}A_E(a)
- \quad(p\in X)
+ \quad(p\in X).
 \]
 Thus $Au$ is constant on each fiber, and $\nu$ is a probability measure whose fiber measures are $\mathrm{d}A_E$ and whose base measure is $\omega_{\FS}^2$.
 
@@ -541,7 +533,7 @@ The coefficient $2/3$ is optimal, even among smooth strictly positive potentials
 \]
 \end{proposition}
 \begin{proof}
-First suppose that $u$ is smooth and $\omega+\ddc u>0$. Averaging the positive forms $\tau_a^*(\omega+\ddc u)$ gives $\omega+\ddc Au>0$. Write $Au=\pi^*v$. At each point, the kernel of $\partial s$, where $s=\log|z|^2$ on the cover, maps isomorphically to the tangent space of the base. Restricting $\pi^*(\omega_{\FS}+\ddc v)+\beta$ to this kernel shows that $\omega_{\FS}+\ddc v>0$.
+First suppose that $u$ is smooth and $\omega+\ddc u>0$. Averaging the positive forms $\tau_a^*(\omega+\ddc u)$ gives $\omega+\ddc Au>0$. Write $Au=\pi^*v$. At each point, the kernel of $\partial s$ maps isomorphically to the tangent space of the base. Restricting $\pi^*(\omega_{\FS}+\ddc v)+\beta$ to this kernel shows that $\omega_{\FS}+\ddc v>0$.
 
 For a smooth function $f:E\to\mathbb R$, the nonconstant Fourier characters in \eqref{eq:hopf-heat-fourier}, indexed by $(p,q)\in\mathbb Z^2\setminus\{(0,0)\}$, have eigenvalues
 $\pi^2p^2+q^2/4\geq1/4$ for $-\partial_w\partial_{\bar w}$. Parseval's identity therefore gives
@@ -553,9 +545,9 @@ Apply this inequality on every fiber and integrate against $\omega_{\FS}^2$. The
 
 For bounded $u$, choose smooth $u_j\downarrow u$ with $\omega+\ddc u_j>0$ by \cref{thm:bounded-exact-regularization}. The sequence is uniformly bounded. Its averages decrease pointwise to $Au$ by dominated convergence. The corresponding smooth base potentials $v_j$ decrease to a bounded $\omega_{\FS}$-plurisubharmonic function $v$, so $Au=\pi^*v$. Dominated convergence gives $u_j\to u$ and $Au_j\to Au$ in $L^2(X,\nu)$, while bounded Bedford--Taylor continuity gives convergence of the total masses. Thus \eqref{eq:hopf-average-mass} passes to $u$.
 
-If the mass is $6$, the inequality gives $u=Au$ almost everywhere. Both functions are quasi-plurisubharmonic, so uniqueness of their canonical representatives gives equality everywhere. Conversely, if $u=\pi^*v$ with bounded $v\in\PSH(\mathbb P^2,\omega_{\FS})$, choose smooth strictly positive $v_j\downarrow v$ on the base using \cref{thm:bounded-exact-regularization}. The pullbacks decrease to $u$ and are uniformly bounded. They are strictly $\omega$-plurisubharmonic because the base forms are positive and $\beta$ is positive on the vertical line. Their vertical derivatives vanish, so \eqref{eq:hopf-mass} gives mass $6$ for each of them. Bounded Bedford--Taylor continuity gives the same mass for $u$.
+If the mass is $6$, the inequality gives $u=Au$ almost everywhere. Since both functions are bounded and quasi-plurisubharmonic, \cref{lem:strict-set-positive-volume} gives equality everywhere. Conversely, if $u=\pi^*v$ with bounded $v\in\PSH(\mathbb P^2,\omega_{\FS})$, choose smooth strictly positive $v_j\downarrow v$ on the base using \cref{thm:bounded-exact-regularization}. The pullbacks decrease to $u$ and are uniformly bounded. They are strictly $\omega$-plurisubharmonic because the base forms are positive and $\beta$ is positive on the vertical line. Their vertical derivatives vanish, so \eqref{eq:hopf-mass} gives mass $6$ for each of them. Bounded Bedford--Taylor continuity gives the same mass for $u$.
 
-To check the constant, use the affine chart $U_0=\{z_0\ne0\}\subset\mathbb P^2$, with base coordinates $\xi=(z_1/z_0,z_2/z_0)$ and fiber coordinate $w=\log z_0$ modulo the lattice of $E$. Choose a nonzero real $\rho\in C_c^\infty(U_0)$. For $\delta\in\mathbb R$, the function
+To check the constant, choose a nonzero real $\rho\in C_c^\infty(U_0)$. For $\delta\in\mathbb R$, the function
 \[
  u(\xi,w)=\delta\rho(\xi)\cos(\operatorname{Im}w)
 \]

@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint114 — complete Chapter 8 rewrite
+
+Chapter 8 and all seven sections complete the current first/second direct rewrite and review. The chapter now follows the vertical-energy mass identity, heat concentration, transverse heat scale, base correction and fiber-average characterization of minimum mass. Repeated settings and definitions are removed. The cutoff range is explicit, the moving support region is retained, and the equality argument refers to the general first-chapter result. All nine formal statements and eight of nine proof environments are unchanged; the remaining proof has notation and dependency edits. Continue at Chapter 9 as a complete unit, including its nested inputs.
+
+The book retains 33 active chapters, 209 active author inputs and 23 first-chapter sections. The chapter's house audit has zero errors and two inherited warnings. The final book has 810 pages and no build errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. All 33 selected book pages passed visual inspection. The 17-page companion is byte-identical to checkpoint113. Both outputs rebuilt in a fresh empty extraction, with every reconstructed page text matching production. See chapter-eight-rewrite-114.md, build-snapshot-114.json and source-package-portability-114.json for the exact scope and checks.
+
+The separate proof queue remains at Section 12.2. Q2.8, subsequent chapter rewrites and the broader goal remain unfinished. No new independent verifier run, source validation, announcement coverage or novelty judgment is claimed. Historical reports and hidden sources are preserved.
+
 ## Checkpoint113 — complete Chapter 7 rewrite
 
 The user's chapter-by-chapter instruction now governs the rewrite queue. Chapter 7 and its nested general-weight discussion have complete first/second direct reads and rewritten introductions, titles and transitions. Repeated settings, capacity definitions, measure notation and qualifications are removed. General bounded products, the convex chain rule and the Hermitian capacity estimates are in Chapter 1. The scaling example now explicitly selects the stronger coefficient-integrable witness and keeps its range 0<epsilon<1. Continue at Chapter 8; later reference repairs do not count as whole-chapter rewrites.

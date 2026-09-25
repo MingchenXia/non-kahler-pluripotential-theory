@@ -2,7 +2,7 @@
 
 Checkpoint94's complete local-notation pass remains the baseline. This queue records a new correctness/readability pass, not a claim that the other chapters are unreviewed historically. An entry is complete only for its stated scope; include nested author inputs when claiming a whole chapter.
 
-For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 8 after the Chapter 7 rewrite in checkpoint113; this proof-review queue resumes at the bounded-domination section, now Section 12.2.
+For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 9 after the Chapter 8 rewrite in checkpoint114; this proof-review queue resumes at the bounded-domination section, now Section 12.2.
 
 | Chapter | Source | This cycle |
 |---|---|---|
