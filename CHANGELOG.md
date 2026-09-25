@@ -1,5 +1,12 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint108: local boundary regularity and discontinuous compact solutions
+
+Reconstruct all Q2.9 results in Section 13.23: the full smooth-trace criterion, continuous logarithmic L1 example, discontinuous constant-measure bidisc solution, compact torus gluing with direct failure of every Lp,p>1, capacity limitation and Lipschitz nonsmooth example. Preserve the exact domain and Holder hypotheses of the existing global regularity theorem, and update the corresponding Chapter 33 boundary. Check the published GL10 Dirichlet locator and BT82 bounded uniqueness; add the supplied-paper provenance without invented authorship. Complete two direct reads of Section 12.1 without changing it, leaving the rest of Chapter 12 pending. Close the September 24 CV announcement-screening gap, retaining earlier replacement gaps and unadopted candidates.
+
+The book is 796 pages; the companion remains byte-identical at 17 pages. First/second direct proof and style passes are complete. The new section has zero house-audit errors/warnings, the two roots retain zero errors/fifteen inherited warnings, and every earlier formal statement block is unchanged. The build has no errors, unresolved references, duplicate labels or overfull boxes, with one inherited bibliography underfull paragraph. All 29 selected final pages were inspected, and both outputs rebuilt in a fresh empty extraction with every page text matching production. Exact checks are in build-snapshot-108.json and source-package-portability-108.json. All 190 historical verifier reports remain unchanged; no new independent verifier run or novelty verdict is claimed.
+
+
 ## 25 September 2026 — Checkpoint107: descended constraints along a divisor
 
 Integrate the supplied Q5.2 manuscript with complete proofs in Section 27.14. Derive the exact fiber-dimension shift in the multiplier-ideal order, positive base mass under the stated curvature margin, a sharp section-count error and kernel/determinant consequences. Retain the general problem and all sixteen earlier formal statement blocks in the edited chapter roots. Complete direct second proof and style passes; no new independent verifier report is asserted.

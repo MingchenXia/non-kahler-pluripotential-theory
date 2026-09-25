@@ -16,11 +16,9 @@ Likely connections: Chapter 13's symmetric/vanishing-parameter discussion, Chapt
 
 ## Q2.9: local density versus boundary data
 
-The complete five-page text has an initial mathematical reading. It contains: a smooth Dirichlet trace criterion under local closedness; a continuous non-Holder-at-the-divisor example with global density in L1 but no Lp; a bounded discontinuous local psh potential with constant positive Monge–Ampere measure; a regularized-maximum gluing on a compact torus; a direct proof that the global glued density fails every Lp, p>1; and a local Lipschitz but nonsmooth Pogorelov-type example.
+The complete five-page manuscript is reconstructed in Section 13.23 at checkpoint108. The boundary criterion, continuous logarithmic model, discontinuous local constant-measure example, compact gluing, direct global Lp failure, capacity observation and Lipschitz example have dedicated first/second proof checks. See local-density-boundary-review-108.md and its release records. This bounded integration does not complete the full Chapter 13 review.
 
-The local construction uses h=sum alpha_k log|z-a_k|^2, b=exp(h), a_zbarz=b^(-1), and P(z,w)=a(z)+b(z)|w|^2. Check the countable arithmetic–geometric estimate for b^(-1) in L2, continuity of the logarithmic convolution, the pluripolar exceptional set, and the determinant cancellation. For gluing, preserve the collar inequalities and verify the transition-region Hessian lower bound that proves failure of every Lp; do not replace it with a regularity theorem used contrapositively. Verify the classical smooth ball Dirichlet locator in GL10 and the bounded uniqueness interface.
-
-The scope comparison matters. An arbitrary open ball with smooth density is different from Omega={rho>-infinity}, the entire regular locus of a global analytic strict barrier in Theorem thm:nonclosed-interior-smoothness. That theorem also assumes local Holder continuity and uses the proper global gap on the nonregular set. The supplied discontinuous example lacks that Holder premise. Its separate local Lipschitz example, by itself, does not realize the full global strict-barrier hypotheses. Record the local counterexamples and boundary criterion without silently treating them as either a contradiction to, or an independent proof of, the book's stronger global theorem. Audit any shared local estimate on its own stated assumptions.
+The distinction between an arbitrary smooth-density open subset and the entire regular locus of a global strict analytic-singularity barrier is explicit in Chapters 13 and 33. Existing global regularity hypotheses are preserved. The continuous logarithmic profile can be reused when integrating Q6.3.
 
 ## Q6.3: divisorial completeness
 

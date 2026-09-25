@@ -17,7 +17,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 9 | `chapter_smooth_equations.tex` | Complete nine-input first/second pass across checkpoints103–104, including final selected-page review; see gauduchon-equations-second-pass-104.md |
 | 10 | `chapter_weak_equations.tex` | Complete four-input first/second pass and final selected-page review; see hopf-lp-continuous-equations-review-105.md |
 | 11 | `chapter_degenerate_uniqueness.tex` | Complete twelve-input first/second direct proof-and-writing pass; see hopf-near-equality-uniqueness-review-106.md |
-| 12 | `chapter_envelopes.tex` | Pending |
+| 12 | `chapter_envelopes.tex` | Section 12.1 complete first/second direct read, unchanged; remaining sections and bounded-contact input pending. See local-density-boundary-review-108.md |
 | 13 | `chapter_prescribed_equations.tex` | Pending |
 | 14 | `chapter_normalization.tex` | Pending |
 | 15 | `chapter_igood.tex` | Pending |
@@ -40,4 +40,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 32 | `chapter_bounded_mass_equations.tex` | Pending |
 | 33 | `chapter_research_program.tex` | Pending |
 
-The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: Chapter 12 and its inputs. Checkpoint106 resolves qualitative Hopf near equality under fixed Lp bounds and gives a strong L1 density counterexample. The four newly supplied papers also require complete proof review and integration under their exact hypotheses. Research-linked spot checks of other chapters do not count as their full revision.
+The appendix and front matter remain in the cycle after Chapter 33. Next full-chapter target: resume Chapter 12 at Section 12.2 and its bounded-contact input. Checkpoint106 resolves qualitative Hopf near equality under fixed Lp bounds and gives a strong L1 density counterexample. The four newly supplied papers also require complete proof review and integration under their exact hypotheses. Research-linked spot checks of other chapters do not count as their full revision.

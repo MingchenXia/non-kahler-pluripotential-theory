@@ -1,0 +1,230 @@
+\section{Local density and boundary control}
+\label{sec:local-density-boundary}
+
+Let $X$ be a compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and let $\theta$ be a smooth real $(1,1)$-form. Write $\mathrm{MA}_\theta(u)$ for the extended product of \cref{chap:products}. A function $u\in\PSH(X,\theta)$ has minimal ordinary singularities if every $v\in\PSH(X,\theta)$ satisfies $v\leq u+C_v$ for some constant $C_v$. We examine an arbitrary open set $\Omega\subset X$ on which the equation density is smooth and positive. The boundary criterion and examples below reconstruct \cite[Theorems~1.1--1.2 and Sections~3--5]{SuppliedLocalDensity26}.
+
+The distinction from \cref{thm:nonclosed-interior-smoothness} is the domain: there the density is smooth on the entire regular locus of a fixed global strict barrier with analytic singularities, and the solution is locally H\"older on that locus. Local information on an arbitrary open subset does not supply these hypotheses.
+
+\subsection{Smooth boundary traces}
+
+Retain $X$, $\omega$ and $\theta$, and let $\mathrm{d}V$ be a smooth positive volume form. Fix $\rho\in\PSH(X,\theta)$ with $\theta+\ddc\rho\geq\varepsilon\omega$ for some $\varepsilon>0$. Let $\Omega$ be an open set where $\rho$ is smooth and $\mathrm{d}\theta=0$. For a coordinate ball $B\Subset\Omega$, a boundary trace $g$ means the full interior limit
+\[
+ \lim_{B\ni z\to\xi}u(z)=g(\xi)
+ \qquad(\xi\in\partial B),
+\]
+not merely a radial or almost-everywhere limit.
+
+\begin{theorem}\label{thm:smooth-boundary-trace-regularity}
+Suppose that $u\in\PSH(X,\theta)$ has minimal ordinary singularities and
+\[
+ \mathrm{MA}_\theta(u)=f\,\mathrm{d}V\quad\text{on }\Omega,
+ \qquad f\in C^\infty(\Omega),\quad f>0.
+\]
+Assume that $\Omega$ is covered by coordinate Euclidean balls $B_j\Subset\Omega$ such that $\theta$ has a smooth local potential near $\overline{B_j}$ and $u$ has a smooth boundary trace on $\partial B_j$. Then $u\in C^\infty(\Omega)$ and $\theta+\ddc u>0$ there.
+\end{theorem}
+
+\begin{proof}
+Minimality gives $u\geq\rho-C$ for a constant $C$. Thus $u$ is locally bounded on $\Omega$. Fix one of the balls, write it as $B_R(z_0)$, and choose a smooth function $h$ near its closure with $\ddc h=\theta$. The bounded plurisubharmonic function $v=u+h$ has, by \cref{prop:bounded-products}, Bedford--Taylor measure $f\,\mathrm{d}V$ and smooth boundary trace $\varphi=g+h|_{\partial B}$.
+
+Write $\mathrm{d}V=J\,\mathrm{d}\Lambda$ in these coordinates, where $\mathrm{d}\Lambda$ is Euclidean volume, and set $G=\pi^n fJ/n!$. Our normalization gives
+\begin{equation}\label{eq:local-density-determinant}
+ (\ddc V)^n=\frac{n!}{\pi^n}\det(V_{j\bar k})\,\mathrm{d}\Lambda
+\end{equation}
+for smooth $V$. There is a smooth strictly plurisubharmonic $V$ on $\overline B$ with determinant $G$ and boundary value $\varphi$. For $n\geq2$, this is the classical Dirichlet input \cite[Theorem~1.1, p.~1186]{GL10}, applied with zero background and flat Hermitian metric. Indeed, if $\Phi$ smoothly extends $\varphi$, then $\Phi+A(|z-z_0|^2-R^2)$ is a strict subsolution when $A$ is sufficiently large. Here the cited equation has background zero, metric $(\mathrm{i}/2)\partial\bar\partial|z|^2$, and right-hand side $G$. For $n=1$, extend $G$ smoothly with compact support and convolve with $\pi^{-1}\log|z|^2$; adding the harmonic extension of the remaining smooth boundary values gives $V$.
+
+The difference $v-V$ tends to zero at every boundary point. Compactness of $\partial B$ makes this convergence uniform near the boundary: otherwise a sequence approaching the boundary with difference bounded away from zero would have a subsequence approaching one fixed boundary point. Bounded Dirichlet uniqueness \cite[Corollary~4.4, p.~17]{BT82} gives $v=V$. Therefore $u=V-h$ is smooth and its background form is positive on $B$. The balls cover $\Omega$.
+\end{proof}
+
+The proof uses minimality only to obtain the local lower bound from $\rho$. Consequently the same conclusion holds for any solution already known to be locally bounded on $\Omega$ and satisfying the same trace condition. Local closedness supplies the potentials after the coordinate balls are made small enough; the background may be nonclosed elsewhere.
+
+\begin{example}\label{ex:logarithmic-continuous-density}
+For every $n\geq1$, the trace criterion admits a bounded continuous solution whose global density belongs to $L^1$ and to no $L^p$ with $p>1$. The solution need not be H\"older at the complement of $\Omega$.
+
+Let $E=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, $X=E^n$, and
+\[
+ \omega_j=\frac{\mathrm{i}}{2\pi}\,\mathrm{d}z_j\wedge\mathrm{d}\bar z_j,
+ \qquad \theta=\sum_{j=1}^n\omega_j,
+ \qquad D=\{0\}\times E^{n-1}.
+\]
+Take $\mathrm{d}V=\theta^n$ and $\rho=0$. Choose a nonnegative smooth cutoff $\chi$ supported in a coordinate disc $|z|<r_0<1$ of $E$ and equal to one near zero. For $\beta>0$, define
+\[
+ \psi(z)=\chi(z)(-\log|z|^2)^{-\beta}\quad(z\ne0),
+ \qquad \psi(0)=0,
+\]
+and extend by zero. On the smaller punctured disc put $t=|z|^2$ and $L=-\log t$. Differentiation gives
+\begin{equation}\label{eq:continuous-logarithmic-profile}
+ \psi_{z\bar z}=\frac{\beta(\beta+1)}{tL^{\beta+2}},
+ \qquad t\frac{\mathrm{d}}{\mathrm{d}t}L^{-\beta}
+       =\beta L^{-\beta-1}\longrightarrow0.
+\end{equation}
+The first expression is integrable and the second is the radial flux. Integration by parts on punctured discs, using also $\psi\to0$, shows that the distributional Hessian has no atom at zero. On the cutoff annulus its negative part is bounded. Hence, for a sufficiently small fixed $\eta>0$, $u=\eta\psi(z_1)$ satisfies $\theta+\ddc u\geq\theta/2$.
+
+Only one coordinate contributes to $\ddc u$. Locally approximate the bounded subharmonic potential in that coordinate from above and use \cref{thm:bt-input}; the smooth diagonal determinant identity passes to the limit and yields
+\[
+ \mathrm{MA}_\theta(u)=f\theta^n,
+ \qquad f=1+\eta\psi_{z\bar z}(z_1).
+\]
+Give $f$ any positive value on the null set $D$. It is smooth and positive on $\Omega=X\setminus D$, where $u$ is smooth and has smooth traces on all relatively compact coordinate balls. Near $D$ its singular term is comparable to $|z_1|^{-2}(-\log|z_1|^2)^{-\beta-2}$. Its radial $L^1$ integral converges, whereas
+\[
+ \int_0^{r_0}s^{1-2p}(-\log s^2)^{-p(\beta+2)}\,\mathrm{d}s=+\infty
+ \qquad(p>1).
+\]
+Also $(-\log|z|^2)^{-\beta}/|z|^\alpha\to+\infty$ for every $\alpha>0$, so $u$ is not H\"older at $D$. Finally, boundedness gives minimal ordinary singularities, since every global $\theta$-plurisubharmonic competitor is bounded above.
+\end{example}
+
+\subsection{A bounded discontinuous potential}
+
+Let $U=W=\{|z|<1/4\}\subset\mathbb C$, with coordinates $z$ and $w$ on the two factors. Write $\mathrm{d}A$ for planar Lebesgue measure and set
+\[
+ a_k=\alpha_k=2^{-k-4},\qquad
+ A=\sum_{k\geq1}\alpha_k=\frac1{16},\qquad
+ S=\{0\}\cup\{a_k:k\geq1\}.
+\]
+Define on $U$
+\begin{equation}\label{eq:accumulating-polar-weight}
+ h(z)=\sum_{k\geq1}\alpha_k\log|z-a_k|^2,
+ \qquad b(z)=\mathrm{e}^{h(z)},
+\end{equation}
+with $b=0$ where $h=-\infty$.
+
+\begin{lemma}\label{lem:discontinuous-constant-measure}
+The function
+\[
+ a(z)=\frac1\pi\int_U\log|z-\zeta|^2\,b(\zeta)^{-1}\,\mathrm{d}A(\zeta)
+\]
+is bounded and continuous on $U$. The bounded function
+\[
+ P(z,w)=a(z)+b(z)|w|^2
+\]
+is plurisubharmonic on $U\times W$, is smooth off $S\times W$, and satisfies
+\begin{equation}\label{eq:discontinuous-constant-measure}
+ (\ddc P)^2=\frac2{\pi^2}\,\mathrm{d}A(z)\,\mathrm{d}A(w).
+\end{equation}
+It is discontinuous at every $(0,w_0)$ with $w_0\ne0$.
+\end{lemma}
+
+\begin{proof}
+The summands defining $h$ are negative on $U$, so their partial sums decrease. Since $h(0)=2\sum_k\alpha_k\log a_k> -\infty$, the limit is subharmonic. On compact subsets of $U\setminus S$, the series and its derivatives converge uniformly, making $h$ harmonic there. Moreover $0\leq b\leq1$, $b(a_k)=0$, and $b(0)>0$.
+
+Weighted arithmetic--geometric mean gives, almost everywhere,
+\begin{equation}\label{eq:polar-reciprocal-integrability}
+ b(z)^{-2}\leq\sum_{k\geq1}\frac{\alpha_k}{A}|z-a_k|^{-4A}.
+\end{equation}
+For the countable inequality, first use the first $N$ weights and assign the remaining weight to the factor $1$; then let $N$ increase. Since $4A=1/4<2$, the integrals of the terms $|z-a_k|^{-4A}$ on $U$ are bounded uniformly in $k$. Thus $b^{-1}\in L^2(U)$.
+
+The logarithmic kernel has uniformly bounded $L^2$ norm on the translates of $U$ that occur in the definition of $a$. Cauchy--Schwarz bounds $a$ uniformly. Choose a compactly supported $L^2(\mathbb C)$ kernel agreeing with $\log|z|^2$ on $U-U$. Translation continuity in $L^2$, paired with $b^{-1}\mathbf1_U\in L^2$, proves continuity of $a$. The distribution identity $\partial_z\partial_{\bar z}\log|z|^2=\pi\delta_0$ gives $a_{z\bar z}=b^{-1}$. In particular $a$ is subharmonic and, by local elliptic regularity, smooth off $S$.
+
+The second summand of $P$ is $\exp(h(z)+\log|w|^2)$, a convex increasing composition of a plurisubharmonic function, extended by zero at its poles. Thus $P$ is bounded and plurisubharmonic. At smooth points the harmonicity of $h=\log b$ gives $bb_{z\bar z}=|b_z|^2$, and hence
+\[
+ \det(P_{j\bar k})
+ =ba_{z\bar z}+|w|^2\bigl(bb_{z\bar z}-|b_z|^2\bigr)=1.
+\]
+The set $S\times W$ is contained in the pole set of $h(z)+\log|z|$, a plurisubharmonic function not identically $-\infty$. It is also Lebesgue-null. Pluripolar nullity in \cref{thm:bt-input} and \eqref{eq:local-density-determinant} prove \eqref{eq:discontinuous-constant-measure} throughout the bidisc. Finally,
+\[
+ P(a_k,w_0)=a(a_k)\longrightarrow a(0)
+ <a(0)+b(0)|w_0|^2=P(0,w_0)
+\]
+when $w_0\ne0$.
+\end{proof}
+
+\subsection{Compact gluing}
+
+Let $P$, $a$, $b$, $S$, $U$ and $W$ be as in \cref{lem:discontinuous-constant-measure}. We work on the flat complex torus $X=(\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z))^2$, identifying a small coordinate ball with a ball in $U\times W$. For a smooth function $v$ on the ball write $H_v=(v_{j\bar k})$ for its complex Hessian and $I$ for the two-dimensional identity matrix.
+
+\begin{theorem}\label{thm:compact-local-density-discontinuity}
+There are a positive flat K\"ahler form $\theta$ on $X$, a bounded $u\in\PSH(X,\theta)$ with minimal ordinary singularities, and a density $F>0$ almost everywhere such that
+\[
+ \mathrm{MA}_\theta(u)=F\theta^2,\qquad
+ F\in L^1(X,\theta^2),\qquad
+ F\notin L^p(X,\theta^2)\quad(p>1).
+\]
+On an open coordinate ball $\Omega$, $F$ is a positive constant and $u$ is discontinuous. The constant function $\rho=0$ is a smooth strict barrier on $X$.
+\end{theorem}
+
+\begin{proof}
+Set $R=1/8$ and choose $M$ so that $P_0=P+M$ satisfies $0\leq P_0\leq L$ on $B_R\Subset U\times W$ for some finite $L$. Choose $C>0$ with
+\begin{equation}\label{eq:compact-gluing-collar}
+ \frac{3CR^2}{16}\geq2,\qquad
+ \frac{5CR^2}{16}>L+2,
+\end{equation}
+and put $Q(Z)=C(|Z|^2-R^2/4)$ for $Z=(z,w)$. Let $\chi$ be the convolution of $|t|$ with an even nonnegative smooth probability kernel supported in $(-1,1)$. Then $\chi$ is smooth and convex, $|\chi'|\leq1$, $\chi'(0)=0$, and $\chi(t)=|t|$ for $|t|\geq1$. The function
+\[
+ m(s,t)=\frac{s+t+\chi(s-t)}2,\qquad v=m(P_0,Q)
+\]
+is bounded and plurisubharmonic, because $m$ is convex and nondecreasing in each variable. The collar inequalities imply
+\[
+ v=P_0\quad\text{on }B_{R/4},\qquad
+ v=Q\quad\text{when }3R/4\leq|Z|<R.
+\]
+Indeed, $Q\leq-2\leq P_0-2$ on the first ball and $Q>L+2\geq P_0+2$ on the collar. Define
+\[
+ \theta=\frac{\mathrm{i}C}{2\pi}
+  (\mathrm{d}z\wedge\mathrm{d}\bar z+\mathrm{d}w\wedge\mathrm{d}\bar w),
+ \qquad
+ u=\begin{cases}v-Q&\text{on }B_R,\\0&\text{outside }B_R.\end{cases}
+\]
+The collar identity makes $u$ identically zero near $\partial B_R$ and gives a global bounded potential with $\theta+\ddc u=\ddc v$ on the ball and $\theta+\ddc u=\theta$ outside. Thus $u$ is admissible and has minimal ordinary singularities.
+
+Outside the pluripolar set $(S\times W)\cap B_R$, set $\lambda=(1+\chi'(P_0-Q))/2$. Differentiating the regularized maximum gives
+\begin{equation}\label{eq:regularized-max-hessian-density}
+ H_v=\lambda H_P+(1-\lambda)CI
+   +\frac{\chi''(P_0-Q)}2
+        \partial(P_0-Q)\otimes\overline{\partial(P_0-Q)}.
+\end{equation}
+Both $H_P$ and $CI$ are positive definite there; the final term is positive semidefinite. Hence the classical density is positive. Bounded products charge no pluripolar sets, so there is no further measure on the exceptional set. Their mass on compact $X$ is finite by \cref{prop:bounded-products}. This proves $\mathrm{MA}_\theta(u)=F\theta^2$ for an almost-everywhere positive $F\in L^1$. On $\Omega=B_{R/4}$, \eqref{eq:discontinuous-constant-measure} gives the representative $F=C^{-2}$. There $u=P+M-Q$ is discontinuous at $(0,w_0)$ for $0<|w_0|<R/4$.
+
+We prove failure of every global $L^p$ directly in the transition region. For large $k$, set
+\[
+ m_k=a(a_k)+M\in[0,L],\qquad
+ w_k=\bigl(R^2/4+m_k/C-|a_k|^2\bigr)^{1/2},
+ \qquad Z_k=(a_k,w_k).
+\]
+Then $w_k>0$, $P_0(Z_k)=Q(Z_k)=m_k$, and \eqref{eq:compact-gluing-collar} gives $|Z_k|^2<9R^2/16$. Near the isolated pole $a_k$,
+\[
+ h(z)=\alpha_k\log|z-a_k|^2+H_k(z),
+\]
+where $H_k$ is smooth and harmonic. Consequently $b$ and $P_0$ are continuous near $Z_k$. There is a product neighborhood $V_k\Subset B_R$ of $Z_k$, with $|w|$ bounded below by a positive number, on which $1/4\leq\lambda\leq3/4$.
+
+At smooth points of $V_k$, positivity and the two-dimensional determinant expansion give
+\[
+ \begin{split}
+ \det H_v&\geq\det\bigl(\lambda H_P+(1-\lambda)CI\bigr)\\
+ &\geq\lambda(1-\lambda)C\operatorname{tr}H_P
+ \geq c_k b_{z\bar z},
+ \end{split}
+\]
+where $c_k>0$ may depend on $k$ and $C$. Here $P_{z\bar z}=b^{-1}+|w|^2b_{z\bar z}$. With $\zeta=z-a_k$, shrink the first factor of $V_k$ so that
+\[
+ b_{z\bar z}=|\zeta|^{2\alpha_k}\mathrm{e}^{H_k}
+       \left|\frac{\alpha_k}{\zeta}+\partial_zH_k\right|^2
+       \geq c'_k|\zeta|^{2\alpha_k-2}
+\]
+for some $c'_k>0$. Since $F=C^{-2}\det H_v$, this lower bound implies $F\notin L^p$ whenever $p(1-\alpha_k)\geq1$: the $w$-disc has positive area and the radial integral in $z$ contains
+\[
+ \int_0^{\delta_k}r^{1-2p(1-\alpha_k)}\,\mathrm{d}r=+\infty.
+\]
+For each $p>1$ such a $k$ exists because $\alpha_k\downarrow0$.
+\end{proof}
+
+Capacity domination of first order cannot replace the trace hypothesis. Indeed, for a bounded plurisubharmonic function $v$ on a bounded domain $D\subset\mathbb C^n$, choose $M\geq\sup_Dv-\inf_Dv>0$. The function $q=(v-\inf_Dv)/M$ is an admissible test for the relative capacity
+\[
+ \operatorname{Cap}_D(E)
+ =\sup_{q\in\PSH(D),\,0\leq q\leq1}\int_E(\ddc q)^n.
+\]
+Thus $(\ddc v)^n(E)\leq M^n\operatorname{Cap}_D(E)$ for every Borel $E\subset D$. Constant functions have zero measure. The discontinuous $P$ satisfies this bound and even has constant positive volume measure.
+
+\begin{example}\label{ex:local-lipschitz-constant-measure}
+On the bidisc in $\mathbb C^2$ with coordinates $(z,w)$, the function
+\[
+ H(z,w)=2|z|(1+|w|^2)
+\]
+is locally Lipschitz, plurisubharmonic and not $C^1$ along $\{z=0\}$. Plurisubharmonicity follows by writing its two summands as convex exponential compositions of $\log|z|$ and $\log|z|+\log|w|^2$. At $z\ne0$,
+\[
+ H_{z\bar z}=\frac{1+|w|^2}{2|z|},\qquad
+ H_{w\bar w}=2|z|,\qquad
+ |H_{z\bar w}|^2=|w|^2.
+\]
+Hence $\det(H_{j\bar k})=1$, and pluripolar nullity gives $(\ddc H)^2=2\pi^{-2}\,\mathrm{d}\Lambda$ on the entire bidisc.
+\end{example}
+
+This last example rules out a purely local implication from H\"older continuity and a smooth positive density to smoothness. It does not supply the global hypotheses on the regular locus in \cref{thm:nonclosed-interior-smoothness}. In \cref{thm:compact-local-density-discontinuity}, the solution lacks local H\"older continuity on the indicated ball and the density is rough elsewhere on $X$, which is the regular locus of the chosen barrier $\rho=0$. The trace criterion instead identifies the given bounded solution with a smooth Dirichlet solution on each ball.
