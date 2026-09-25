@@ -1,16 +1,7 @@
 \section{The adjoint equation for Gauduchon volume}
 \label{sec:gauduchon-volume-adjoint}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$. Fix a Hermitian form $\gamma_0$ and a Gauduchon form $\gamma$ on $X$. All potentials and test functions in this section are smooth real functions on $X$, and $u$ denotes a potential for the scalar ansatz of \cref{thm:stw-volume}. The linearization can be studied at any potential for which the ansatz is positive; this requires no existence theorem. It supplies the adjoint measure used in the continuity argument. The variation formulas for solutions follow once that argument is complete. They describe a second role for Gauduchon metrics, different from testing the ordinary Hermitian Monge--Amp\`ere equation.
-
-Put $K=\gamma^{n-2}$ and define the real linear operator with values in $(n-1,n-1)$-forms by
-\[
- \mathcal D_\gamma v
- =\ddc v\wedge K+
-   \operatorname{Re}\left(\frac{\mathrm i}{2\pi}
-              \partial v\wedge\bar\partial K\right).
-\]
-Thus $\Gamma_u=\gamma_0^{n-1}+\mathcal D_\gamma u$ and $\eta_u^{n-1}=\Gamma_u$. Fix a smooth positive volume form $\mathrm{d}V_0$. When differentiating solutions we use $\int_Xu\,\mathrm{d}V_0=0$ in place of the supremum normalization; this changes neither $\Gamma_u$ nor the scalar $b$.
+The positive-root operation changes the trace linearization by a factor $n/(n-1)$, while the first-order term of the ansatz introduces drift. Its adjoint probability gives the compatibility condition for varying both the potential and the scalar. We compute this operator at any potential with $\Gamma_u>0$ and then express its adjoint as an equation for a positive $(1,1)$-form. Put $K=\gamma^{n-2}$.
 
 \begin{proposition}\label{prop:gaud-volume-linearization}
 On the open set $\Gamma_u>0$, the derivative of
@@ -108,83 +99,3 @@ The unique normalized multiplier is consequently the constant $(\int_X\gamma^n)^
 \end{proof}
 
 For $n>2$ the equation for $\rho_u\eta_u$ contains the first derivatives of $\gamma^{n-2}$. The Gauduchon condition on $\eta_u$ alone is not the displayed adjoint equation. The fixed auxiliary metric $\gamma$ remains part of it.
-
-\section{Normalization for the Gauduchon equation}
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$, with fixed Hermitian form $\gamma_0$ and Gauduchon form $\gamma$. Use the real linear form-valued operator $\mathcal D_\gamma$ of \cref{sec:gauduchon-volume-adjoint}, and put $\Gamma_u=\gamma_0^{n-1}+\mathcal D_\gamma u=\eta_u^{n-1}>0$ for smooth real potentials $u$. Thus $\eta_u$ is the positive root of the ansatz. Write $\mathcal G(u)=\log(\eta_u^n/\gamma^n)$, let $\mathcal L_u$ be its derivative from \cref{prop:gaud-volume-linearization}, and let $\mathrm{d}\mu_u^\gamma=\rho_u\eta_u^n$ be the corresponding normalized adjoint probability measure. Fix a smooth positive volume form $\mathrm{d}V_0$ and normalize potentials by $\int_Xu\,\mathrm{d}V_0=0$.
-
-Let $b_\gamma(F)$ denote the scalar in \cref{thm:stw-volume}, with $\gamma_0$ and $\gamma$ fixed. It is defined for every smooth real $F$ by that existence theorem. We first justify differentiating it.
-
-\begin{lemma}\label{lem:gaud-volume-smooth-dependence}
-The mean-normalized pair $(u,b_\gamma(F))$ depends smoothly on smooth finite-dimensional families of $F$.
-\end{lemma}
-\begin{proof}
-Fix an integer $k\geq0$ and $0<\alpha<1$. The positive-root map $\Gamma\mapsto\eta$ is smooth on positive $(n-1,n-1)$-forms: in a frame it is the inverse of the positive cofactor-matrix map. Thus $\mathcal G(u)-F-b$ is a smooth map into $C^{k,\alpha}(X,\mathbb R)$ on the open set of mean-zero $u\in C^{k+2,\alpha}(X,\mathbb R)$ with $\Gamma_u>0$, together with $b\in\mathbb R$ and $F\in C^{k,\alpha}(X,\mathbb R)$. Its derivative in $(u,b)$ is
-\[
- (v,a)\longmapsto\mathcal L_uv-a,
- \qquad \int_Xv\,\mathrm{d}V_0=0.
-\]
-Given $h\in C^{k,\alpha}(X,\mathbb R)$, integrating against $\mu_u^\gamma$ forces $a=-\int_Xh\,\mathrm{d}\mu_u^\gamma$. The Fredholm alternative then solves for $v$, uniquely after the mean normalization. Schauder estimates give a bounded inverse. The implicit function theorem gives a local solution map around any given positive solution. This step uses only the adjoint construction. Once global existence and uniqueness in \cref{thm:stw-volume} are established, uniqueness joins these local maps. Arbitrarily high H\"older orders give the assertion for smooth data.
-\end{proof}
-
-\Needspace{7\baselineskip}
-For a smooth family of prescribed functions $F_t\in C^\infty(X,\mathbb R)$, with $t$ in a real open interval, let $u_t$ be the mean-normalized solutions and let a dot denote differentiation in $t$. Choose any local frame for $(n-1,0)$-forms and let $Q_t$ be the positive Hermitian matrix of $\Gamma_{u_t}$ in the corresponding convention for positive $(n-1,n-1)$-forms. The expression
-\[
- \operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
-\]
-is independent of the chosen frame and is nonnegative: the endomorphism is similar to the Hermitian matrix $Q_t^{-1/2}\dot Q_t Q_t^{-1/2}$.
-
-\Needspace{18\baselineskip}
-\begin{theorem}\label{thm:gaud-volume-normalization-derivatives}
-For a smooth family $F_t$ and its solutions,
-\begin{align*}
- \dot b_\gamma(F_t)&=-\int_X\dot F_t\,\mathrm{d}\mu_{u_t}^\gamma,\\
- \ddot b_\gamma(F_t)&=-\int_X\ddot F_t\,\mathrm{d}\mu_{u_t}^\gamma
- -\frac1{n-1}\int_X
-        \operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
-                          \,\mathrm{d}\mu_{u_t}^\gamma.
-\end{align*}
-In particular $b_\gamma$ is concave, and along $F_t=F_0+tG$ its second derivative is strictly negative unless $G$ is constant. For smooth real functions $F,G$ on $X$ and a real constant $a$, moreover,
-\[
- b_\gamma(F+a)=b_\gamma(F)-a,
- \qquad |b_\gamma(G)-b_\gamma(F)|\leq\|G-F\|_\infty.
-\]
-\end{theorem}
-\begin{proof}
-The determinant of the cofactor matrix of a positive $n\times n$ matrix $H$ is $(\det H)^{n-1}$. Consequently, up to a term independent of $u$ coming from the fixed frame,
-\[
- \mathcal G(u)=\frac1{n-1}\log\det Q.
-\]
-Differentiate $\mathcal G(u_t)=F_t+b_\gamma(F_t)$ once. Integration against the adjoint probability gives the first formula.
-
-Because $\Gamma_u$ is affine in $u$, its second derivative along the family is $\mathcal D_\gamma\ddot u_t$. The matrix derivative identity for $\log\det$ therefore gives
-\[
- \mathcal L_{u_t}\ddot u_t
- -\frac1{n-1}\operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
- =\ddot F_t+\ddot b_\gamma(F_t).
-\]
-Integrate at this fixed parameter against $\mu_{u_t}^\gamma$ to obtain the second formula. No derivative of the measure is needed.
-
-For affine $F_t$, positivity of the density of $\mu_{u_t}^\gamma$ proves concavity. Equality in the second derivative forces $\dot\Gamma_{u_t}=0$, hence $\mathcal L_{u_t}\dot u_t=0$. The kernel statement makes $\dot u_t$ constant, so the first differentiated equation forces $G$ to be constant. Conversely a constant change of $F$ changes only $b$ by the opposite constant. Finally integrate the first derivative along the line from $F$ to $G$; it lies between $-\sup_X(G-F)$ and $-\inf_X(G-F)$, proving the stated Lipschitz bound.
-\end{proof}
-
-This calculation is the normalization-concavity method already used for the ordinary Hermitian equation, with the determinant exponent $1/(n-1)$ and the adjoint operator appropriate to the Gauduchon ansatz. It is a consequence of the smooth equation, not an independent proof of its existence.
-
-\Needspace{9\baselineskip}
-\begin{example}\label{ex:gaud-volume-surface}
-If $n=2$ and $\gamma_0$ is Gauduchon, then $\eta_u=\gamma_0+\ddc u$ is also Gauduchon. Stokes gives
-\[
- \int_X\eta_u^2=\int_X\gamma_0^2,
-\]
-since the linear term pairs $u$ with $\ddc\gamma_0=0$ and the quadratic term integrates to zero. Therefore
-\[
- b_\gamma(F)=\log\int_X\gamma_0^2-
-                   \log\int_X\mathrm{e}^F\gamma^2,
- \qquad
- \mathrm{d}\mu_u^\gamma=\frac{\mathrm{e}^F\gamma^2}{\int_X\mathrm{e}^F\gamma^2}.
-\]
-The adjoint equation gives the same measure because $\rho_u$ is constant. Along $F+tG$, the second derivative is minus the variance of $G$ under this probability. This verifies the normalization formula directly in a case with conserved mass.
-\end{example}
-
-\Needspace{7\baselineskip}
-The Lipschitz bound extends the scalar $b_\gamma$ uniquely to continuous $F$. It does not construct a weak positive $(n-1,n-1)$-form solving the equation. Such a theory would need a definition of the nonlinear root-volume measure for singular forms in the Aeppli ansatz, compactness of the corresponding potentials, and a stability theorem for the adjoint equation. These are separate questions; ordinary weak solutions for a smooth real $(1,1)$-background $\theta$ from the preceding sections do not supply them.

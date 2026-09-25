@@ -1,14 +1,9 @@
 \section{The gradient bound by rescaling}
 \label{sec:stw-gradient-reduction}
 
-We now explain precisely how the second-order estimate gives the gradient bound for the Gauduchon equation. We state the implication separately, so that the role of its hypothesis remains explicit. For a family with bounded $C^2$ data, \cref{thm:stw-second-order-reconstructed} supplies that hypothesis.
+The Hessian estimate makes a sequence rescaled by its maximum gradient compact in $C^1$ on every fixed Euclidean ball. A hypothetical gradient blowup would therefore give a bounded Lipschitz function with a nonzero derivative at the origin. The rescaled determinant tends to zero, so the limit is maximal for the cone of \cref{sec:stw-liouville}, contradicting its Liouville theorem.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$. Fix a Hermitian form $\gamma_0$ and a Gauduchon form $\gamma$ on $X$. Use the real linear form-valued operator $\mathcal D_\gamma$ defined in \cref{sec:gauduchon-volume-adjoint}. For a Hermitian matrix $A$, put $P_n(A)=((\operatorname{tr}A)I-A)/(n-1)$, where $I$ is the identity matrix. In Euclidean coordinates let $H(v)=(\partial_i\partial_{\bar j}v)$ denote the complex Hessian. For a smooth potential $u$, let $\Gamma_u$ denote the form in the ansatz below and let $\eta_u$ be its positive $(n-1)$st root when $\Gamma_u>0$. For a prescribed smooth real function $F$ on $X$ and a real scalar $b$, the equation is
-\[
- \Gamma_u=\gamma_0^{n-1}+\mathcal D_\gamma u=\eta_u^{n-1}>0,
- \qquad \eta_u^n=\mathrm{e}^{F+b}\gamma^n,\qquad \sup_Xu=0.
-\]
-Consider a family with $\|F\|_{C^0}\leq M$ for a fixed $M>0$. The preceding $C^0$ estimate bounds $\|u\|_{C^0}$ and $|b|$ uniformly.
+Consider a family of normalized solutions of \cref{thm:stw-volume} with $\|F\|_{C^0}\leq M$ for a fixed $M>0$. The potential estimate bounds $\|u\|_{C^0}$ and $|b|$ uniformly. We isolate the consequence of a Hessian estimate for this family.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:stw-gradient-from-second-order}
@@ -17,10 +12,10 @@ Suppose there is a constant $K$ such that every solution in this family satisfie
  \sup_X|\ddc u|_\gamma
        \leq K\bigl(1+\sup_X|\partial u|_\gamma^2\bigr).
 \end{equation}
-Then $\sup_X|\partial u|_\gamma$ and $\sup_X|\ddc u|_\gamma$ are uniformly bounded in the family. No existence theorem is assumed for this assertion about solutions that are already given.
+Then $\sup_X|\partial u|_\gamma$ and $\sup_X|\ddc u|_\gamma$ are uniformly bounded in the family.
 \end{proposition}
 \begin{proof}
-We first give the matrix form needed under rescaling. Use the Hodge star of $\gamma$ to identify real $(n-1,n-1)$-forms with Hermitian matrices, normalized so that $\gamma^{n-1}$ corresponds to $I$. In a $\gamma$-unitary frame let $Q_u$ be the matrix corresponding to $\Gamma_u$. Let $Q_0$ be the corresponding matrix of $\gamma_0^{n-1}$, let $(\ddc u)_\gamma$ be the matrix of $\ddc u$, and let $Z_\gamma(\partial u)$ be the matrix of the first-order term in $\mathcal D_\gamma u$. The wedge identity gives
+We first give the matrix form needed under rescaling. Use the Hodge star of $\gamma$ to identify real $(n-1,n-1)$-forms with Hermitian matrices, normalized so that $\gamma^{n-1}$ corresponds to $I$. In a $\gamma$-unitary frame let $Q_u$ be the matrix corresponding to $\Gamma_u$. Write $(\ddc u)_\gamma$ for the matrix of $\ddc u$, and $Z_\gamma(\partial u)$ for the first-order matrix, so it equals $Z(\partial v)$ when $v=u/(2\pi)$. The wedge identity gives
 \begin{equation}\label{eq:stw-cofactor-matrix-scaling}
  Q_u=Q_0+P_n\bigl((\ddc u)_\gamma\bigr)+Z_\gamma(\partial u),
  \qquad \det Q_u=\mathrm{e}^{(n-1)(F+b)}.
@@ -55,7 +50,7 @@ Divide \eqref{eq:stw-cofactor-matrix-scaling} by $A_j^2$ and evaluate at the sca
  \det(A_j^{-2}Q_{u_j})
        =A_j^{-2n}\mathrm{e}^{(n-1)(F_j+b_j)}\longrightarrow0.
 \end{equation}
-For precision, take the compatible unitary frames obtained from the positive square roots $S_j=g_j^{-1/2}$. The principal matrix in these frames is $P_n(S_jH(v_j)S_j/(2\pi))$, which differs from $P_n(H(v_j)/(2\pi))$ by a uniformly vanishing error. No derivatives of these frames are taken, and the determinant identity is exact in the unitary frames. The factor $1/(2\pi)$ records the convention for $\ddc$; it does not change the cone. The positive matrices on the left imply, by passage to distributions, $P_n(H(v))\geq0$.
+For precision, take the compatible unitary frames obtained from the positive square roots $S_j=g_j^{-1/2}$. The principal matrix in these frames is $P_n(S_jH(v_j)S_j/(2\pi))$, which differs from $P_n(H(v_j)/(2\pi))$ by a uniformly vanishing error. No derivatives of these frames are taken, and the determinant identity is exact in the unitary frames. The positive factor $1/(2\pi)$ does not change the cone. The positive matrices on the left imply, by passage to distributions, $P_n(H(v))\geq0$.
 
 We check maximality. Suppose a smooth $h$ touches $v$ from below at $z_0$ and $P_n(H(h)(z_0))>0$. Subtract $\delta|z-z_0|^2$ with $\delta>0$ small. On a small ball this makes the contact strict and preserves strict positivity of the matrix. Local uniform convergence supplies interior lower contact points $z_j\to z_0$ for $v_j$ and this perturbed test function, after adding constants to the latter. The complex Hessian inequality at a minimum gives
 \[

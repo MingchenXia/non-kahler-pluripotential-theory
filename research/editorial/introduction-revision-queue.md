@@ -6,7 +6,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
-| 1 | `chapter_framework.tex` | 30 | Complete first/second reads in checkpoint112, with dependency relocation and seam review in checkpoint113. |
+| 1 | `chapter_framework.tex` | 30 | Complete first/second reads in checkpoint112, dependency relocation and seam review in checkpoint113, and the psh Liouville addition and seam review in checkpoint115. |
 | 2 | `chapter_mass.tex` | 5 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 3 | `chapter_energy.tex` | 3 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 4 | `chapter_gauduchon.tex` | 6 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
@@ -14,7 +14,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 6 | `chapter_products.tex` | 5 | Complete first/second reads in checkpoint112, with dependency relocation and seam review in checkpoint113. |
 | 7 | `chapter_damped_measures.tex` | 7 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint113. |
 | 8 | `chapter_hopf.tex` | 7 | Complete whole-chapter rewrite and first/second direct reads in checkpoint114; release checks recorded in its audit files. |
-| 9 | `chapter_smooth_equations.tex` | 19 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
+| 9 | `chapter_smooth_equations.tex` | 18 | Complete chapter and every nested-input rewrite, first/second direct reads and release checks in checkpoint115. |
 | 10 | `chapter_weak_equations.tex` | 10 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 11 | `chapter_degenerate_uniqueness.tex` | 22 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 12 | `chapter_envelopes.tex` | 7 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
@@ -41,6 +41,6 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 33 | `chapter_history.tex` | 18 | New historical chapter: exact locator audit and second editorial read in checkpoint112. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 
-Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–114 complete the full rewrites of Chapters 7–8, including Chapter 7's nested input. Continue chapter by chapter at Chapter 9, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. Q2.8 remains the next supplied manuscript. The separate proof queue resumes at bounded domination, now Section 12.2.
+Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–115 complete the full rewrites of Chapters 7–9, including all their nested inputs. Continue chapter by chapter at Chapter 10, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. Q2.8 remains the next supplied manuscript. The separate proof queue resumes at bounded domination, now Section 12.2.
 
 Checkpoint113 also moves bounded smooth-background products, the chain rule and general Hermitian capacity estimates into Chapter 1. The changed references in later chapters are dependency repairs, not completed chapter rewrites. Chapter 6 now has five sections and Chapter 10 has ten; the first chapter has 23 sections and seven subsections.

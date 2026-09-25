@@ -1,7 +1,7 @@
 \chapter{Smooth Monge--Amp\`ere equations}
 \label{chap:smooth-equations}
 
-The non-closedness of the background changes the normalization of a Monge--Amp\`ere equation, but does not prevent smooth solvability. We prove the potential and second-derivative estimates, complete the continuity argument using standard elliptic regularity, and compute the variation of the normalization constant using the Gauduchon adjoint measure.
+A Hermitian Monge--Amp\`ere equation determines both a potential and a scalar multiplying the prescribed density. The scalar compensates for the variation of total mass. Weighted integration bounds the potential, a trace estimate gives uniform ellipticity, and the adjoint measure removes the one-dimensional obstruction in the continuity method. Differentiating the equation against that measure then describes the scalar as a concave functional of the logarithmic density. We also solve the volume equation for the $(n-1)$st power of a metric, where an exact Aeppli variation introduces first-order torsion terms. Its derivative estimates depend on their specific matrix structure and on a Euclidean rescaling argument.
 
 Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$ on $X$. For $u\in C^\infty(X,\mathbb R)$, write $\omega_u=\omega+\ddc u$. Let $F\in C^\infty(X,\mathbb R)$ be prescribed and let $b\in\mathbb R$ be an unknown scalar. We study
 \begin{equation}\label{eq:smooth-ma}
@@ -9,22 +9,16 @@ Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smo
 \end{equation}
 Adding a constant to $u$ does not change the equation.
 
-For $n=1$, the adjoint measure used below means $\mu_u=\omega_u/\int_X\omega_u$; the compatibility and Fredholm arguments of \cref{prop:adjoint-gauduchon} then follow directly from Stokes' theorem.
-
 \section{Existence and the unknown constant}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. Fix a smooth positive volume form $\mathrm{d}V$ and a smooth real function $F$ on $X$. For a smooth real potential $u$, write $\omega_u=\omega+\ddc u$; the unknowns in \eqref{eq:smooth-ma} are $u$ with $\omega_u>0$ and a scalar $b\in\mathbb R$. Write $\Mass_\omega(u)=\int_X\omega_u^n$ for the total mass.
+The potential is determined up to an additive constant, while the density requires a multiplicative normalization. At extrema of the potential, the equation bounds this scalar directly in terms of the prescribed data. These bounds will make the continuity path uniform.
 
 \begin{theorem}[Tosatti--Weinkove]\label{thm:tw-smooth}
 For every smooth real $F$, \eqref{eq:smooth-ma} has a unique pair $(u,b)$ with $\sup_Xu=0$. The potential $u$ is smooth.
 \end{theorem}
 
-The proof below supplies the potential and second-derivative estimates, then completes the continuity argument.
-
 In dimension one, integration determines
 $\mathrm{e}^b=\int_X\omega/\int_X\mathrm{e}^F \mathrm{d}V$, and the remaining equation for $u$ is the usual Poisson equation. Thus the statement holds in that dimension as well.
-
-No bounded mass property is assumed in \cref{thm:tw-smooth}. In particular, existence of a solution for each fixed smooth density does not give a uniform mass bound as the density varies.
 
 \begin{proposition}\label{prop:b-extrema}
 Every solution of \eqref{eq:smooth-ma} satisfies
@@ -50,11 +44,9 @@ The same formula is valid under any hypothesis that ensures invariance of the to
 \]
 whose numerator depends on the unknown potential. Replacing that numerator by $\int_X\omega^n$ would discard the mass defect from \cref{chap:mass}.
 
-\section{The uniform potential estimate}
+\section{The potential bound from weighted integration}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. All functions and forms below are on $X$, unless a coordinate domain is specified. Norms and constants use the fixed metric $\omega$. The notation $\mathrm{d}\mu$ introduced in the proof below denotes a probability volume measure.
-
-The essential global estimate only needs an upper bound for the density. Weighted integration controls the potential through its density. A finite recurrence will absorb the torsion terms. The normalized compactness theorem then finishes the argument after Sobolev iteration.
+An upper bound for the density controls the normalized potential. Integrating against $\mathrm{e}^{-pu}$ produces a gradient term and mixed weighted masses; a finite recurrence absorbs the latter together with the torsion error. Sobolev iteration then gives a set of uniformly positive volume near the minimum, and normalized $L^1$ compactness bounds that minimum. Norms below use the fixed metric $\omega$.
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:pointwise-torsion-estimate}
@@ -74,7 +66,7 @@ At the point in question choose an $\omega$-unitary frame in which $\eta$ is dia
  C\lambda_I|f_a|\leq (C/\delta)\lambda_I|f_a|^2
                               +C\delta\lambda_I.
 \]
-The sum of the first terms is bounded by a fixed multiple of the first positive form in the assertion: its diagonal expansion contains precisely the terms $\lambda_I|f_a|^2$ with $a\notin I$. The second positive form contains all the $\lambda_I$. Finitely many indices and the uniform bound for $\mathrm{d}\omega$ give a uniform $C$. The normalization of $\dc$ changes only this constant.
+The sum of the first terms is bounded by a fixed multiple of the first positive form in the assertion: its diagonal expansion contains precisely the terms $\lambda_I|f_a|^2$ with $a\notin I$. The second positive form contains all the $\lambda_I$. Finitely many indices and the uniform bound for $\mathrm{d}\omega$ give a uniform $C$.
 \end{proof}
 
 \begin{lemma}\label{lem:cherrier-gradient}
@@ -140,7 +132,6 @@ Finally,
  \int_X\mathrm{d}(\mathrm{e}^{-pu/2})\wedge\dc(\mathrm{e}^{-pu/2})\wedge\omega^{n-1}
  =\frac{p^2}{4}J_0\leq\frac{p^2}{4}J\leq CpM_0.
 \]
-Every integration is between smooth forms, and the only derivatives of the background were estimated explicitly.
 \end{proof}
 
 \begin{theorem}\label{thm:smooth-czero}
@@ -179,13 +170,9 @@ By \cref{thm:normalized-compactness}, $\int_X(-u)\,\mathrm{d}\mu\leq C_0$. On $S
 when $-m\geq A$; otherwise the desired bound is immediate. Thus $-m\leq A+C_0/\delta$, proving the theorem.
 \end{proof}
 
-Neither the gradient estimate nor its consequence uses a uniform upper bound for the masses of all potentials. The density bound applies to the particular solutions being studied. This is why the estimate remains compatible with \cref{thm:hopf-unbounded}.
-
 \section{Uniqueness by ellipticity}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. Fix a smooth positive volume form $\mathrm{d}V$ and a smooth real function $F$ on $X$. For a smooth real potential $u$, write $\omega_u=\omega+\ddc u$; the unknowns in \eqref{eq:smooth-ma} are $u$ with $\omega_u>0$ and a scalar $b\in\mathbb R$. All other potentials and density functions in this section are smooth real functions on $X$.
-
-The smooth uniqueness argument does not use the uncorrected global comparison principle.
+For two solutions with the same density, extrema of their difference first identify the scalar. Linearizing along the segment between their positive forms then reduces uniqueness of the potential to the strong maximum principle. An exponential dependence on the potential gives the stronger pointwise comparison proved below.
 
 \begin{proposition}\label{prop:smooth-uniqueness}
 Suppose $(u,b)$ and $(v,c)$ are smooth solutions of \eqref{eq:smooth-ma} with the same $F$ and $\mathrm{d}V$. Then $b=c$ and $u-v$ is constant.
@@ -211,11 +198,15 @@ Let $\lambda>0$ and $f$ be smooth and strictly positive. There is at most one sm
 If $u,v$ solve the equation, evaluate it at a maximum of $u-v$. The matrix inequality $\omega_u\leq\omega_v$ gives $\mathrm{e}^{\lambda(u-v)}\leq1$ there, so $u\leq v$ everywhere. Interchanging them proves equality.
 \end{proof}
 
-Existence will follow from \cref{thm:smooth-proper-existence}. This pointwise uniqueness argument does not apply directly to an arbitrary unbounded weak solution.
+The exponential equation will be solved in \cref{thm:smooth-proper-existence}.
 
-\section{Smooth dependence}
+\section{The linearized equation and smooth dependence}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. Fix a smooth positive volume form $\mathrm{d}V$ on $X$. For each prescribed $F\in C^\infty(X,\mathbb R)$, let $(u,b)$ be its solution of \eqref{eq:smooth-ma}, where $\omega_u=\omega+\ddc u$. For smooth $v$, write $L_uv=n\ddc v\wedge\omega_u^{n-1}/\omega_u^n$, and let $\mu_u$ be its adjoint probability measure from \cref{prop:adjoint-gauduchon}; when $n=1$, use $\mu_u=\omega_u/\int_X\omega_u$.
+The linearized operator annihilates constants, and its range is the space of functions with zero adjoint mean. Including the scalar as an unknown removes this obstruction. For $\omega_u>0$, define
+\[
+ L_uv=n\frac{\ddc v\wedge\omega_u^{n-1}}{\omega_u^n},
+\]
+and let $\mu_u$ be its adjoint probability from \cref{prop:adjoint-gauduchon}. In dimension one, $\mu_u=\omega_u/\int_X\omega_u$; the compatibility condition follows from Stokes' theorem.
 
 The normalization $\sup_Xu=0$ is convenient for compactness, but need not vary differentiably with the data. For differentiating solutions, fix instead the linear normalization
 \[
@@ -242,9 +233,9 @@ $a=-\int_Xh\,\mathrm{d}\mu_u$. For this value, the equation for $v$ satisfies th
 
 \input{author/section_smooth_estimates}
 
-\section{Completing the continuity argument}
+\section{The continuity method}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. Fix a smooth positive volume form $\mathrm{d}V$ and a smooth real function $F$ on $X$. For a smooth real potential $u$, write $\omega_u=\omega+\ddc u$; the unknowns in \eqref{eq:smooth-ma} are $u$ with $\omega_u>0$ and a scalar $b\in\mathbb R$. For a real function $H$ on $X$, set $\operatorname{osc}_XH=\sup_XH-\inf_XH$.
+The local inverse gives openness of the solvable set. The extrema bound for the scalar, the potential estimate and the derivative estimates give compactness along a path from the background density to the prescribed one. Uniform ellipticity preserves positivity at a limiting parameter.
 
 \begin{proof}[of \cref{thm:tw-smooth}]
 The dimension-one argument was given at the start of the chapter. In higher dimension put
@@ -265,7 +256,7 @@ The constants $b_t$ are uniformly bounded, and \cref{thm:smooth-czero} bounds $u
 
 \section{The smooth exponential equation}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. For a smooth real function $u$ on $X$, set $\omega_u=\omega+\ddc u$. When $\omega_u>0$, its logarithmic trace linearization is $L_uv=n\ddc v\wedge\omega_u^{n-1}/\omega_u^n$ for smooth real $v$. All density functions below are defined on $X$.
+When the logarithmic density contains a positive multiple of the potential, extrema bound the potential itself and the linearization acquires a negative zeroth-order term. The continuity method therefore has neither an additive normalization nor an extra scalar unknown.
 
 \begin{theorem}\label{thm:smooth-proper-existence}
 For every $\lambda>0$ and every smooth real $F$, there is a unique smooth $u$ with $\omega_u>0$ such that
@@ -310,9 +301,9 @@ These equations penalize values above the obstacle. In \cref{prop:smooth-obstacl
 
 \section{The Gauduchon derivative of the constant}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. Fix a smooth positive volume form $\mathrm{d}V$ on $X$. For each $F\in C^\infty(X,\mathbb R)$, denote by $b(F)$ the scalar in \eqref{eq:smooth-ma} and fix the corresponding potential by $\int_Xu\,\mathrm{d}V=0$. Put $\omega_u=\omega+\ddc u$ and $L_uv=n\ddc v\wedge\omega_u^{n-1}/\omega_u^n$. The measure $\mu_u$ is the adjoint probability of this operator, as in \cref{prop:adjoint-gauduchon}, with $\mu_u=\omega_u/\int_X\omega_u$ in dimension one.
+Integration against the adjoint probability eliminates the derivatives of the potential from the first variation. In the second variation, the matrix logarithm leaves a nonnegative square with a minus sign. This gives concavity and identifies its equality case.
 
-Let $I\subset\mathbb R$ be an open interval and let $(F_t)_{t\in I}$ be a smooth family of smooth real functions on $X$. Write $(u_t,b_t)$ for its solutions. A dot denotes differentiation in $t$. At each $t$, use the probability measure $\mu_{u_t}$ associated to $\eta_t=\omega_{u_t}$ in \cref{chap:gauduchon}.
+Write $b(F)$ for the scalar in \eqref{eq:smooth-ma}, and use the linear normalization $\int_Xu\,\mathrm{d}V=0$. For a smooth family $F_t$, with $t$ in an open interval $I\subset\mathbb R$, write $(u_t,b_t)$ for its solutions and put $\eta_t=\omega_{u_t}$. A dot denotes differentiation in $t$.
 
 \begin{theorem}\label{thm:b-derivatives}
 Put $A_t=\eta_t^{-1}\ddc\dot u_t$, the Hermitian endomorphism determined by the indicated forms. The normalization constant satisfies
@@ -346,8 +337,6 @@ At this fixed parameter, integrate against $\mu_{u_t}$ once more. This proves \e
 The eigenvalues of the Hermitian endomorphism $A_t$ are real, so $\operatorname{tr}(A_t^2)\geq0$. For affine $F_t$ the second derivative is therefore nonpositive. If it vanishes, strict positivity of the smooth density of $\mu_{u_t}$ implies $A_t=0$ everywhere. Thus $\ddc\dot u_t=0$; the maximum principle gives that $\dot u_t$ is constant. The first differentiated equation then gives $G=-\dot b_t$, a constant. Conversely, if $G$ is constant, the solution metric is independent of $t$ and $b_t=b_0-tG$.
 \end{proof}
 
-The adjoint probability $\mu_u$ measures the response of the equation to its density. The Gauduchon identity supplies the integration rule needed for the variation.
-
 \Needspace{6\baselineskip}
 \begin{corollary}\label{cor:b-lipschitz}
 For two smooth functions $F,G$, the normalization constants satisfy
@@ -365,7 +354,7 @@ Thus $b$ is a decreasing, concave, Lipschitz functional of the logarithmic densi
 \section{Normalization on the Hopf threefold}
 \label{sec:hopf-normalization}
 
-Let $X=(\mathbb C^3\setminus\{0\})/\langle z\mapsto\mathrm{e}^{-1}z\rangle$, with projection $\pi:X\to\mathbb P^2$ and the Gauduchon form $\omega=\alpha+\beta$ of \cref{chap:hopf}, where $\alpha=\pi^*\omega_{\FS}$ and $\int_{\mathbb P^2}\omega_{\FS}^2=1$. Write $\nu=\omega^3/6$ for its probability volume measure. The fibers are $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ with normalized Haar area $\mathrm{d}A_E$. Use $A$ for the fiber average of \cref{prop:hopf-fiber-average}. For a smooth real function $u$ on $X$ and a local fiber coordinate $w$, the derivative $u_w$ is independent of the choice of base trivialization, and $\nu$ disintegrates as $\mathrm{d}A_E\,\omega_{\FS}^2$.
+The Hopf metric of \cref{chap:hopf} makes the discrepancy from the closed-background normalization explicit: it is the energy of the solution along the elliptic fibers. In this section use that threefold, its projection $\pi:X\to\mathbb P^2$, the probability measure $\nu=\omega^3/6$ and the averaging operator $A$ of \cref{prop:hopf-fiber-average}. The fiber derivative $u_w$ is independent of the base trivialization.
 
 For $F\in C^\infty(X,\mathbb R)$, let $(u_F,b(F))$ be the solution of
 \[
@@ -376,7 +365,7 @@ Define
 \[
  D(F)=b(F)+\log\int_X\mathrm{e}^F\,\mathrm{d}\nu.
 \]
-In a closed background, the corresponding expression vanishes by \eqref{eq:closed-b}. Here the explicit mass formula expresses it in terms of the energy along the elliptic fibers.
+The corresponding expression vanishes for a closed background by \eqref{eq:closed-b}.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:hopf-normalization-defect}
@@ -448,13 +437,11 @@ If the second derivative vanishes, then $v=\pi^*q$ for a smooth real $q$ on the 
 Hence $G=L_0v+\int_XG\,\mathrm{d}\nu$ is a base pullback. Conversely, when $G$ is a base pullback, the proposition gives $D(tG)=0$ for every real $t$, proving the converse.
 \end{proof}
 
-The corollary describes the second variation at the background density. Global convexity of $D$ would require a separate argument: the concavity of $b$ and the convexity of the logarithmic integral have opposite signs. The mass identity and the fiber estimate used here concern this fixed Hopf metric.
+This is a second-variation formula at the background density. It does not determine global convexity of $D$: the second derivatives of $b$ and of the logarithmic integral have opposite signs.
 
 \section{Prescribing a Gauduchon volume form}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq2$. All forms and functions in the following equation are defined on $X$. A Gauduchon form $\gamma$ satisfies $\ddc(\gamma^{n-1})=0$.
-
-There is also a Monge--Amp\`ere type equation whose unknown is the $(n-1)$st power of a metric. It respects the Gauduchon condition and its Aeppli class.
+We now return to a general connected compact complex manifold $X$ of dimension $n\geq2$. To preserve a Gauduchon Aeppli class, we vary the $(n-1)$st power of the metric by a $\partial$- and $\bar\partial$-exact term. The resulting scalar ansatz contains first derivatives of the potential as well as its complex Hessian.
 
 \Needspace{22\baselineskip}
 \begin{theorem}[Sz\'ekelyhidi--Tosatti--Weinkove]
@@ -472,7 +459,7 @@ has a positive root $\eta_u^{n-1}=\Gamma_u$ satisfying
 \]
 \end{theorem}
 
-The proof is developed in the following sections. The potential bound comes first, followed by the adjoint calculation, the torsion identities and the second-order estimate. A Euclidean Liouville theorem then gives the gradient bound by rescaling. Standard elliptic regularity completes the continuity argument.
+Keep $\gamma_0$ and $\gamma$ fixed for the remainder of the chapter, and write $\mathcal D_\gamma u=\Gamma_u-\gamma_0^{n-1}$ for the linear part of the ansatz. A Green estimate and a local contact argument bound the potential. The derivative estimate retains the torsion term and bounds the complex Hessian by the square of the gradient; rescaling then reduces a hypothetical gradient blowup to a Liouville theorem. These bounds close the continuity method.
 
 To see the preserved geometry, set
 $\xi_u=\mathrm i\,\bar\partial u\wedge\gamma^{n-2}/(4\pi)$.
@@ -494,15 +481,6 @@ If $\gamma_0$ is Gauduchon, so is $\eta_u$, and their $(n-1)$st powers have the 
 
 \input{author/section_stw_continuity}
 
-\section{What must change for weak solutions}
+\input{author/section_gauduchon_volume_variation}
 
-Let $X$ be a connected compact complex manifold with a fixed smooth positive volume form $\mathrm{d}V$. The $L^p$ spaces in this section use that volume form.
-
-The smooth theorem is the first part of the equation theory. The remaining parts require additional definitions and estimates:
-\begin{enumerate}
-\item For densities in $L^p$, $p>1$, one must define the bounded Monge--Amp\`ere measure and obtain uniform potential estimates.
-\item For a prescribed singularity type, the background may be merely big and the solution unbounded. The equation must then use a non-pluripolar product.
-\item For general non-pluripolar right-hand sides, a suitable relative full-mass class must be specified. In a non-closed background its definition cannot rely on invariance of the raw mass within a singularity type.
-\end{enumerate}
-
-The prescribed-singularity chapters address these questions under their stated hypotheses. Smooth solvability supplies neither bounded mass nor positive lower volume. For a smooth real $(1,1)$-background $\theta$ on $X$, a potential $u\in\PSH(X,\theta)$, and a prescribed positive measure $\mu$, consider an equation $\mathrm{MA}^{\mathrm{ext}}_\theta(u)=c\mu$ with an unknown nonnegative scalar $c$. Uniqueness of $c$ and uniqueness of $u$ modulo constants are distinct assertions. A weak theorem concerning only the scalar must not be read as the full uniqueness statement of \cref{prop:smooth-uniqueness}.
+The next chapter treats nonsmooth densities for the ordinary Hermitian equation. There the limiting Monge--Amp\`ere measure and the uniqueness of the normalization scalar require separate arguments; the smooth maximum principle alone does not pass to weak potentials.

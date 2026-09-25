@@ -1,0 +1,72 @@
+\section{Normalization for the Gauduchon equation}
+
+The existence theorem now defines a scalar $b_\gamma(F)$ for every smooth real $F$. Its variation is governed by the adjoint probability $\mu_u^\gamma$ and the concavity of the logarithmic determinant of $\Gamma_u$. To differentiate solutions, fix a smooth positive volume form $\mathrm{d}V_0$ and use $\int_Xu\,\mathrm{d}V_0=0$ in place of the supremum normalization.
+
+\begin{lemma}\label{lem:gaud-volume-smooth-dependence}
+The mean-normalized pair $(u,b_\gamma(F))$ depends smoothly on smooth finite-dimensional families of $F$.
+\end{lemma}
+\begin{proof}
+Fix an integer $k\geq0$ and $0<\alpha<1$. The positive-root map $\Gamma\mapsto\eta$ is smooth on positive $(n-1,n-1)$-forms: in a frame it is the inverse of the positive cofactor-matrix map. Thus $\mathcal G(u)-F-b$ is smooth from mean-zero potentials in $C^{k+2,\alpha}$ with $\Gamma_u>0$, scalars $b$ and data $F\in C^{k,\alpha}$ to $C^{k,\alpha}$. The openness argument in the proof of \cref{thm:stw-volume} shows that its derivative in $(u,b)$ is an isomorphism; the same argument works with the chosen $\mathrm{d}V_0$-mean. The implicit function theorem gives local smooth solution maps, and uniqueness joins them. Taking arbitrary $k$ proves the assertion for smooth data.
+\end{proof}
+
+\Needspace{7\baselineskip}
+For a smooth family of prescribed functions $F_t\in C^\infty(X,\mathbb R)$, with $t$ in a real open interval, let $u_t$ be the mean-normalized solutions and let a dot denote differentiation in $t$. Choose any local frame for $(n-1,0)$-forms and let $Q_t$ be the positive Hermitian matrix of $\Gamma_{u_t}$ in the corresponding convention for positive $(n-1,n-1)$-forms. The expression
+\[
+ \operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
+\]
+is independent of the chosen frame and is nonnegative: the endomorphism is similar to the Hermitian matrix $Q_t^{-1/2}\dot Q_t Q_t^{-1/2}$.
+
+\Needspace{18\baselineskip}
+\begin{theorem}\label{thm:gaud-volume-normalization-derivatives}
+For a smooth family $F_t$ and its solutions,
+\begin{align*}
+ \dot b_\gamma(F_t)&=-\int_X\dot F_t\,\mathrm{d}\mu_{u_t}^\gamma,\\
+ \ddot b_\gamma(F_t)&=-\int_X\ddot F_t\,\mathrm{d}\mu_{u_t}^\gamma
+ -\frac1{n-1}\int_X
+        \operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
+                          \,\mathrm{d}\mu_{u_t}^\gamma.
+\end{align*}
+In particular $b_\gamma$ is concave, and along $F_t=F_0+tG$ its second derivative is strictly negative unless $G$ is constant. For smooth real functions $F,G$ on $X$ and a real constant $a$, moreover,
+\[
+ b_\gamma(F+a)=b_\gamma(F)-a,
+ \qquad |b_\gamma(G)-b_\gamma(F)|\leq\|G-F\|_\infty.
+\]
+\end{theorem}
+\begin{proof}
+The determinant of the cofactor matrix of a positive $n\times n$ matrix $H$ is $(\det H)^{n-1}$. Consequently, up to a term independent of $u$ coming from the fixed frame,
+\[
+ \mathcal G(u)=\frac1{n-1}\log\det Q.
+\]
+Differentiate $\mathcal G(u_t)=F_t+b_\gamma(F_t)$ once. Integration against the adjoint probability gives the first formula.
+
+Because $\Gamma_u$ is affine in $u$, its second derivative along the family is $\mathcal D_\gamma\ddot u_t$. The matrix derivative identity for $\log\det$ therefore gives
+\[
+ \mathcal L_{u_t}\ddot u_t
+ -\frac1{n-1}\operatorname{tr}\bigl((Q_t^{-1}\dot Q_t)^2\bigr)
+ =\ddot F_t+\ddot b_\gamma(F_t).
+\]
+Integrate at this fixed parameter against $\mu_{u_t}^\gamma$ to obtain the second formula. No derivative of the measure is needed.
+
+For affine $F_t$, positivity of the density of $\mu_{u_t}^\gamma$ proves concavity. Equality in the second derivative forces $\dot\Gamma_{u_t}=0$, hence $\mathcal L_{u_t}\dot u_t=0$. The kernel statement makes $\dot u_t$ constant, so the first differentiated equation forces $G$ to be constant. Conversely a constant change of $F$ changes only $b$ by the opposite constant. Finally integrate the first derivative along the line from $F$ to $G$; it lies between $-\sup_X(G-F)$ and $-\inf_X(G-F)$, proving the stated Lipschitz bound.
+\end{proof}
+
+On a surface with Gauduchon background, conservation of total mass makes the scalar and its adjoint probability explicit.
+
+\Needspace{9\baselineskip}
+\begin{example}\label{ex:gaud-volume-surface}
+If $n=2$ and $\gamma_0$ is Gauduchon, then $\eta_u=\gamma_0+\ddc u$ is also Gauduchon. Stokes gives
+\[
+ \int_X\eta_u^2=\int_X\gamma_0^2,
+\]
+since the linear term pairs $u$ with $\ddc\gamma_0=0$ and the quadratic term integrates to zero. Therefore
+\[
+ b_\gamma(F)=\log\int_X\gamma_0^2-
+                   \log\int_X\mathrm{e}^F\gamma^2,
+ \qquad
+ \mathrm{d}\mu_u^\gamma=\frac{\mathrm{e}^F\gamma^2}{\int_X\mathrm{e}^F\gamma^2}.
+\]
+The adjoint equation gives the same measure because $\rho_u$ is constant. Along $F+tG$, the second derivative is minus the variance of $G$ under this probability. This verifies the normalization formula directly in a case with conserved mass.
+\end{example}
+
+\Needspace{7\baselineskip}
+The Lipschitz bound extends $b_\gamma$ uniquely to continuous $F$. Constructing corresponding weak solutions would additionally require a root-volume measure for singular forms in the Aeppli ansatz, compactness of their potentials and stability of the adjoint equation.

@@ -1,5 +1,11 @@
 # Modification history
 
+## 25 September 2026 — Checkpoint115: Chapter 9 rewrite
+
+Rewrite the complete smooth-equations chapter and its nested inputs around the two existence arguments. Move Gauduchon normalization variation after existence, use the local inverse already proved for openness, and remove repeated settings, operator definitions and the roadmap-only final section. Rewrite the eighteen section openings and improve their headings and transitions. Prove the general bounded-above psh Liouville lemma in Chapter 1 and use it in the specialized limiting-cone argument. All previous mathematical hypotheses and conclusions are preserved; two formal blocks lose redundant qualifications. Across the eleven edited inputs, 31 existing formal blocks and 25 existing proof environments are byte-identical.
+
+Both complete direct reads and all 101 selected-page inspections are finished. The house audit retains zero errors/three inherited warnings. The final book has 806 pages, with no compilation errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The 17-page companion is unchanged. Both outputs rebuilt in a fresh empty extraction, with every reconstructed page text matching production. All 190 historical verifier reports and the hidden sources are preserved. Continue with the whole of Chapter 10; the separate Section 12.2 proof queue and Q2.8 remain pending. No new independent verification or external source validation is claimed.
+
 ## 25 September 2026 — Checkpoint114: Chapter 8 rewrite
 
 Rewrite the complete Hopf chapter and its seven sections around the mass formula, heat concentration, mixed-derivative control, base correction and minimum-mass characterization. Remove repeated definitions and settings, replace generic headings, specify the cutoff range and use the first-chapter quasi-psh equality lemma. Preserve the extension conditions and the potential-dependent support region. All nine formal statements are unchanged; eight of nine proof environments are unchanged, with notation and dependency edits in the last.

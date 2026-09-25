@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint115 — complete Chapter 9 rewrite
+
+Chapter 9 and all its nested inputs complete the current first/second direct rewrite and review. Its eighteen sections now follow two existence proofs: the ordinary smooth Monge–Ampère equation and the Gauduchon volume equation. The latter's normalization variation follows the existence proof, and its local inverse refers to the earlier openness argument. Introductions, headings and transitions explain the arguments; repeated settings, definitions and the roadmap-only final section are removed. The general bounded-above psh Liouville lemma is proved in Chapter 1 and invoked internally by the limiting-cone argument.
+
+The book has 33 active chapters, 210 active author inputs, 23 first-chapter sections and 806 pages. Across the eleven edited inputs, 31 of 33 existing formal blocks are unchanged; two lose redundant qualifications, and the first-chapter lemma is added. Twenty-five of 32 existing proof environments are unchanged; seven have exposition, notation, dependency or relocation edits. Both full direct reads and all 101 selected-page inspections are complete. The house audit retains zero errors/three inherited warnings. Compilation has no errors, unresolved references/citations, duplicate labels or overfull boxes; one inherited bibliography underfull paragraph remains. The 17-page companion is unchanged. Both outputs rebuilt in a fresh empty extraction, with every reconstructed page text matching production. See chapter-nine-rewrite-115.md, build-snapshot-115.json and source-package-portability-115.json for the precise review scope.
+
+Continue with the whole of Chapter 10. The separate proof queue remains at Section 12.2; Q2.8 and the broader goal remain unfinished. No new independent verifier run, external source validation, announcement coverage or novelty judgment is claimed. Historical reports and hidden sources are preserved.
+
 ## Checkpoint114 — complete Chapter 8 rewrite
 
 Chapter 8 and all seven sections complete the current first/second direct rewrite and review. The chapter now follows the vertical-energy mass identity, heat concentration, transverse heat scale, base correction and fiber-average characterization of minimum mass. Repeated settings and definitions are removed. The cutoff range is explicit, the moving support region is retained, and the equality argument refers to the general first-chapter result. All nine formal statements and eight of nine proof environments are unchanged; the remaining proof has notation and dependency edits. Continue at Chapter 9 as a complete unit, including its nested inputs.

@@ -1,6 +1,6 @@
-\section{Maxima and truncations}
+\section{Maxima and the maximum principle}
 
-Truncating a potential requires stability under maxima. For a smooth background, this follows from the local psh maximum theorem by freezing the coefficients and then letting the curvature error tend to zero.
+Truncating a potential requires stability under maxima. For a smooth background, this follows from the local psh maximum theorem by freezing the coefficients and then letting the curvature error tend to zero. The submean inequality also determines pointwise order from almost-everywhere order and forces upper-bounded plurisubharmonic functions on Euclidean space to be constant.
 
 \begin{lemma}\label{lem:max-psh}
 If $u,v\in\PSH(X,\theta)$, then $\max(u,v)\in\PSH(X,\theta)$. Consequently, if $\theta\geq0$ and $u\in\PSH(X,\theta)$, then $\max(u,-t)$ is $\theta$-plurisubharmonic for every real $t$.
@@ -19,4 +19,18 @@ If $a,b$ are quasi-plurisubharmonic functions and $\{a<b\}$ is nonempty at a poi
 \end{lemma}
 \begin{proof}
 Choose a point $x$ with $a(x)<b(x)$ and a number $c$ between them. Upper semicontinuity gives $a<c$ on a neighborhood $V$ of $x$. If $\{b>c\}\cap V$ had zero volume, then $b\leq c$ almost everywhere on $V$. The canonical quasi-plurisubharmonic representative, or the submean inequality after a smooth local correction, would imply $b(x)\leq c$, a contradiction. Thus $\{a<b\}$ has positive volume.
+\end{proof}
+
+\begin{lemma}\label{lem:psh-liouville}
+A plurisubharmonic function on $\mathbb C^m$, $m\geq1$, that is bounded above is constant.
+\end{lemma}
+\begin{proof}
+First let $f$ be smooth and subharmonic on $\mathbb C$, with $f\leq M$. Write $\sigma=(\Delta f)\,\mathrm{d}A$ for its nonnegative Laplacian measure, where $\Delta$ and $\mathrm{d}A$ are Euclidean. Green's formula for circular means gives, for $R>0$,
+\[
+ \frac1{2\pi}\int_0^{2\pi}f(R\mathrm{e}^{\mathrm{i}t})\,\mathrm{d}t-f(0)
+ =\frac1{2\pi}\int_0^R\frac{\sigma(B(0,r))}{r}\,\mathrm{d}r.
+\]
+For fixed $r_0>0$ and $R>r_0$, the right side is at least $\sigma(B(0,r_0))\log(R/r_0)/(2\pi)$, while the left side is at most $M-f(0)$. Letting $R\to\infty$ gives $\sigma(B(0,r_0))=0$. Thus $f$ is harmonic, and the harmonic Liouville theorem applied to the positive harmonic function $M+1-f$ makes $f$ constant.
+
+For the given plurisubharmonic function, convolution with a smooth nonnegative radial probability kernel gives smooth plurisubharmonic functions with the same upper bound. Their restrictions to every affine complex line are constant by the planar argument, so each convolution is constant on $\mathbb C^m$. Local $L^1$ convergence of the convolutions and the submean representative give the assertion.
 \end{proof}
