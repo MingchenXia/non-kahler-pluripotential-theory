@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint154: read and rewrite the complete present Chapter 11 and all its nested inputs, then Chapter 12. Chapter 10 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint155: read and rewrite the complete present Chapter 12 and all its nested inputs, then Chapter 13. Chapter 11 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -18,7 +18,7 @@ Current next unit after checkpoint154: read and rewrite the complete present Cha
 | 8 | `chapter_hopf.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint152. The heat and square estimates share one argument with uniform constants; fiber averaging supplies the minimum-mass conclusion. See chapter-eight-rewrite-152.md. |
 | 9 | `chapter_smooth_equations.tex` | 17 | Complete integrated seventeen-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint153. Scalar bounds and uniqueness share one argument; the Gauduchon cofactor identity is used throughout the derivative, rescaling and variation proofs. See chapter-nine-rewrite-153.md. |
 | 10 | `chapter_weak_equations.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint154. Capacity estimates give uniform compactness; both existence constructions use the Gauduchon trace. Scalar uniqueness remains distinct from a selected potential limit. See chapter-ten-rewrite-154.md. |
-| 11 | `chapter_degenerate_uniqueness.tex` | 24 | Complete chapter and all eleven nested-input reads, whole-chapter rewrite and release checks in checkpoint117. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
+| 11 | `chapter_degenerate_uniqueness.tex` | 24 | Complete integrated nine-section rewrite and two direct revised mathematical/editorial reads of all thirteen inputs in checkpoint155. Extremum propagation, cofactor energy and bounded comparison lead to the projective nonuniqueness constructions. Shared companion inputs and its corrected standalone root are checked. See chapter-eleven-rewrite-155.md. |
 | 12 | `chapter_envelopes.tex` | 6 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint118. |
 | 13 | `chapter_prescribed_equations.tex` | 50 | Complete chapter and all 32 nested-input rewrite, first/second direct reads and release checks in checkpoint119. |
 | 14 | `chapter_normalization.tex` | 20 | Complete chapter and all nine final nested-input rewrite, first/second direct reads and release checks in checkpoint120; includes Q2.8 selection. |
@@ -113,3 +113,5 @@ Checkpoint152 completes the whole Chapter 8 rewrite. The next complete chapter i
 Checkpoint153 completes the whole Chapter 9 rewrite, including all nine nested inputs. The next complete chapter is Chapter 10.
 
 Checkpoint154 completes the whole Chapter 10 rewrite, including all three nested inputs. The next complete chapter is Chapter 11.
+
+Checkpoint155 completes the whole Chapter 11 rewrite, including all twelve nested inputs. The next complete chapter is Chapter 12.

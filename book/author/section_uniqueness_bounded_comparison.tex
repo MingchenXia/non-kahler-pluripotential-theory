@@ -1,16 +1,15 @@
-\section{Bounded comparison on the equation background}
+\section{Comparison and invariant mass}
 \label{uni-sec:bounded}
 
 A condition on the background gives bounded uniqueness even when the positive-density region is disconnected. Ordinary comparison and an auxiliary solution whose density is enlarged on a strict sublevel set supply this criterion. The Guan--Li condition supplies ordinary comparison by making the total Monge--Amp\`ere mass independent of the potential.
 
-Set $V=\int_X\omega^n$. We use the bounded products of \cref{prop:bounded-products} and the notation $\mathrm{MA}_\omega$.
-
-The Guan--Li condition
+\Needspace{10\baselineskip}
+Set $V=\int_X\omega^n$. The Guan--Li condition
 \begin{equation}
    \ddc\omega=0,\qquad \ddc(\omega^2)=0
    \label{uni-eq:GL}
 \end{equation}
-will be imposed on the equation background $\omega$.
+is equivalent to mass invariance by \cref{lem:power-torsion,thm:mass-invariance-characterization}. In dimension one it is automatic.
 
 \Needspace{17\baselineskip}
 \begin{theorem}\label{uni-thm:GL-intro}
@@ -33,47 +32,25 @@ required.
 We first establish the comparison principle through its equivalence with mass invariance.
 
 \begin{theorem}\label{uni-thm:GL-equivalence}
-The following conditions on the same equation form $\omega$ are
-equivalent:
-\begin{enumerate}
-\item $\ddc\omega=0$ and $\ddc(\omega^2)=0$;
-\item $\ddc\omega=0$ and $\mathrm{d}\omega\wedge \dc \omega=0$;
-\item $\ddc(\omega^k)=0$ for $1\leq k\leq n-1$;
-\item $\int_X\mathrm{MA}_\omega(a)=\int_X\omega^n$ for every bounded
-      $\omega$-plurisubharmonic $a$;
-\item for every bounded $\omega$-plurisubharmonic pair $a,b$,
+Condition \eqref{uni-eq:GL} holds if and only if every pair of bounded $\omega$-plurisubharmonic functions $a,b$ satisfies
 \begin{equation}\label{uni-eq:ordinaryCP}
  \int_{\{a<b\}}\mathrm{MA}_\omega(b)
  \leq\int_{\{a<b\}}\mathrm{MA}_\omega(a).
 \end{equation}
-\end{enumerate}
-The same equivalence holds when the tests in the last two conditions are
-restricted to smooth potentials.  For $n=1$ all conditions are automatic;
-for $n=2$ they reduce to $\ddc\omega=0$.
+It suffices to require this inequality for smooth potentials.
 \end{theorem}
 
 \begin{proof}
-The differentiation formula
-\begin{equation}\label{uni-eq:power-torsion}
- \ddc(\omega^k)=k\omega^{k-1}\wedge\ddc\omega
- +k(k-1)\omega^{k-2}\wedge \mathrm{d}\omega\wedge \dc \omega
-\end{equation}
-proves the equivalence of the first three conditions.  In dimensions one
-and two the omitted equations vanish by degree, giving the stated
-caveats.  The characterization of smooth mass invariance is the polarization argument of \cref{thm:mass-invariance-characterization}. Exact-background smooth decreasing regularization and bounded product continuity extend the identity to every bounded potential.
+Under \eqref{uni-eq:GL}, \cref{thm:mass-invariance-characterization} gives $\int_X\mathrm{MA}_\omega(a)=V$ for every bounded potential $a$; for $n=1$ this is Stokes' theorem.
 
-Here is a direct proof of bounded comparison from that identity. Set $q=\max(a,b)$. On $\{a<b\}$, locality gives $\mathrm{MA}_\omega(q)=\mathrm{MA}_\omega(b)$. On $\{a\geq b\}$, one has $a=q$ and $a\leq q$, so ordered contact (\cref{prop:ordered-contact-general}) gives
+Set $q=\max(a,b)$. On $\{a<b\}$, locality gives $\mathrm{MA}_\omega(q)=\mathrm{MA}_\omega(b)$. On $\{a\geq b\}$, one has $a=q$ and $a\leq q$, so ordered contact (\cref{prop:ordered-contact-general}) gives
 \[
  \mathbf1_{\{a\geq b\}}\mathrm{MA}_\omega(a)
  \leq \mathbf1_{\{a\geq b\}}\mathrm{MA}_\omega(q).
 \]
-All three total masses equal $V=\int_X\omega^n$. Subtracting the last inequality from this finite common mass proves \eqref{uni-eq:ordinaryCP}.
+All three total masses equal $V$. Subtracting the last inequality from this finite common mass proves \eqref{uni-eq:ordinaryCP}.
 
-Conversely, bounded comparison implies bounded mass invariance: shift one of a bounded pair by a sufficiently large constant so
-that its strict sublevel set is all of $X$, apply
-\eqref{uni-eq:ordinaryCP}, and reverse the pair.  Comparing with the zero
-potential yields the mass identity.  The bounded mass identity restricted
-to smooth potentials implies the differential conditions by \cref{thm:mass-invariance-characterization}, closing all implications.
+Conversely, comparison for smooth potentials implies smooth mass invariance: shift one member of a smooth pair by a sufficiently large constant to make its strict sublevel set all of $X$, apply \eqref{uni-eq:ordinaryCP}, and reverse the pair. Comparison with the zero potential gives the common mass $V$. By \cref{thm:mass-invariance-characterization,lem:power-torsion}, this implies \eqref{uni-eq:GL} when $n\geq2$; for $n=1$ that condition holds by degree.
 \end{proof}
 
 For the uniqueness argument we need an auxiliary solution and the mixed inequality. Continuous existence supplies the first. If $G\geq0$ lies in $L^p(X,\omega^n)$ and $\int_XG\omega^n=V$, \cref{thm:kn-continuous} gives a continuous bounded solution with a positive normalizing constant. The mass identity makes that constant equal to one. Thus
@@ -81,13 +58,6 @@ For the uniqueness argument we need an auxiliary solution and the mixed inequali
  \mathrm{MA}_\omega(\rho)=G\omega^n
 \end{equation}
 is solvable, including for the indicator-truncated density below.
-
-The bounded mixed inequality, proved from local Bedford--Taylor theory in \cref{lem:nonclosed-mixed-density}, applies to bounded $\omega$-plurisubharmonic functions $a,b$, nonnegative integrable densities $F,G$ and $0<t<1$. If $\mathrm{MA}_\omega(a)\geq F\omega^n$ and $\mathrm{MA}_\omega(b)\geq G\omega^n$, it gives
-\begin{equation}\label{uni-eq:mixed-bounded}
- \mathrm{MA}_\omega((1-t)a+tb)
- \geq\bigl((1-t)F^{1/n}+tG^{1/n}\bigr)^n\omega^n,
- \qquad 0<t<1.
-\end{equation}
 
 \begin{proof}[of Theorem~\ref{uni-thm:GL-intro}]
 The domination statement needed here is the case $c=0$ of \cref{thm:bounded-strict-domination}: if $\mathrm{MA}_\omega(a)(\{a<b\})=0$ for bounded $\omega$-plurisubharmonic functions $a,b$, then $a\geq b$.
@@ -110,12 +80,12 @@ Take $C_0$ with $\rho-C_0\leq u$, and set
  E_\delta=\{v<q_\delta\}\subset S,
  \qquad 0<\delta<1.
 \]
-On $S$, the mixed inequality gives
-\[
+On $S$, the mixed inequality \eqref{eq:interior-minkowski-background} gives
+\begin{equation}\label{uni-eq:mixed-bounded}
  \mathrm{MA}_\omega(q_\delta)\geq
  \bigl((1-\delta)+\delta2^{1/n}\bigr)^n\mu=:A_\delta\mu,
  \qquad A_\delta>1.
-\]
+\end{equation}
 Ordinary comparison on $E_\delta$ yields
 \[
  A_\delta\mu(E_\delta)

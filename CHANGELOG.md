@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint155 — 26 September 2026
+
+Chapter 11 completes its whole nine-section rewrite, including all twelve nested inputs, and two complete direct revised mathematical/editorial reads. The density threshold follows the extremum theorem, the unweighted identity belongs to the cofactor argument, and the radial continuum belongs to the first example. Earlier foundation and mass results replace duplicate proofs. The contact, propagation, Sobolev, bounded-energy and scalar-ODE arguments retain their full hypotheses and proofs. The companion note supplies its own projective mass bound and replaces its obsolete bounded-uniqueness question by the established conclusion.
+
+The thirteen chapter inputs have 48 inherited house-audit errors and 67 warnings, compared with 52 and 68 before revision; no new diagnostic is introduced. The companion root retains its two legacy alphabet-macro diagnostics and two bibliography warnings. Non-book citations remain in Chapter 33 of the monograph. The 806-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 81 selected book pages and all seventeen companion pages pass visual review. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-eleven-rewrite-155.md, build-snapshot-155.json and source-package-portability-155.json.
+
+Continue with the complete present Chapter 12 and all its nested inputs, then Chapter 13. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint154 — 26 September 2026
 
 Chapter 10 completes its whole six-section rewrite, including all three nested inputs, and two complete direct revised mathematical/editorial reads. Capacity estimates and uniform compactness share one argument; normalized and exponential existence, density order and bounded-solution continuity share another. The vanishing-exponent cluster equation follows its scalar limit directly. Repeated definitions and settings are removed, constant dependencies are explicit, and the Hopf weak-density limit retains its oscillating counterexample.
