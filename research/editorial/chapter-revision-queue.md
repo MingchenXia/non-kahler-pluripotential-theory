@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint165: read and rewrite the complete present Chapter 21 and all its nested inputs, then Chapter 22. Chapter 20 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint166: read and rewrite the complete present Chapter 22 and all its nested inputs, then Chapter 23. Chapter 21 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -28,7 +28,7 @@ Current next unit after checkpoint165: read and rewrite the complete present Cha
 | 18 | `chapter_trace_data.tex` | Complete integrated seven-input rewrite and two direct revised mathematical/editorial reads in checkpoint163. Trace calculus and additivity are merged before curve realization; established domination and BMP estimates simplify proofs. All 34 labels remain. See chapter-eighteen-rewrite-163.md. |
 | 19 | `chapter_sections.tex` | Complete integrated three-input rewrite and two direct revised mathematical/editorial reads in checkpoint164. Weighted sections and kernels are merged; residual effective divisors and normalized compactness give the trace obstruction in every dimension. All thirteen labels and eight formal statements remain. See chapter-nineteen-rewrite-164.md. |
 | 20 | `chapter_flag_bodies.tex` | Complete integrated four-input rewrite and two direct revised mathematical/editorial reads in checkpoint165, including the inline Hopf figure. The general ratio-field formula absorbs the full-dimensional case; intrinsic counts precede their Moishezon consequence. All nineteen labels remain. See chapter-twenty-rewrite-165.md. |
-| 21 | `chapter_hopf_reduction.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint127; the affected Chapter 1 product input receives both reads; see chapter-twenty-one-rewrite-127.md. Checkpoint164 repairs only the duplicated merged-section reference in the first section opening. |
+| 21 | `chapter_hopf_reduction.tex` | Complete integrated rewrite and two direct revised mathematical/editorial reads in checkpoint166. All seven labels and three formal statements remain; three sections replace four. See chapter-twenty-one-rewrite-166.md. |
 | 22 | `chapter_divisorial_models.tex` | Complete whole-chapter and all nested-input first/second direct proof-and-writing reads, with output checks in checkpoint128; both affected Chapter 1 inputs receive the same reads; see chapter-twenty-two-rewrite-128.md. Checkpoint163 repairs only the merged-calculus reference in the compatibility proof. |
 | 23 | `chapter_nonclosed_bclasses.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint129; see chapter-twenty-three-rewrite-129.md. |
 | 24 | `chapter_envelope_systems.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint130; the affected Chapter 1 input receives both reads; see chapter-twenty-four-rewrite-130.md. |
@@ -91,3 +91,5 @@ Checkpoint163 completes the integrated Chapter 18 rewrite. The next complete cha
 Checkpoint164 completes the integrated Chapter 19 rewrite. The next complete chapter is Chapter 20.
 
 Checkpoint165 completes the integrated Chapter 20 rewrite. The next complete chapter is Chapter 21.
+
+Checkpoint166 completes the integrated Chapter 21 rewrite. The next complete chapter is Chapter 22.

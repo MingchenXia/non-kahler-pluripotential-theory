@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint165: read and rewrite the complete present Chapter 21 and all its nested inputs, then Chapter 22. Chapter 20 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint166: read and rewrite the complete present Chapter 22 and all its nested inputs, then Chapter 23. Chapter 21 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -28,7 +28,7 @@ Current next unit after checkpoint165: read and rewrite the complete present Cha
 | 18 | `chapter_trace_data.tex` | 10 | Complete integrated seven-input rewrite and two direct revised mathematical/editorial reads in checkpoint163. Trace calculus and additivity are merged before curve realization; established domination and BMP estimates simplify proofs. All 34 labels remain. See chapter-eighteen-rewrite-163.md. |
 | 19 | `chapter_sections.tex` | 7 | Complete integrated three-input rewrite and two direct revised mathematical/editorial reads in checkpoint164. Weighted sections and kernels are merged; residual effective divisors and normalized compactness give the trace obstruction in every dimension. All thirteen labels and eight formal statements remain. See chapter-nineteen-rewrite-164.md. |
 | 20 | `chapter_flag_bodies.tex` | 6 | Complete integrated four-input rewrite and two direct revised mathematical/editorial reads in checkpoint165, including the inline Hopf figure. The general ratio-field formula absorbs the full-dimensional case; intrinsic counts precede their Moishezon consequence. All nineteen labels remain. See chapter-twenty-rewrite-165.md. |
-| 21 | `chapter_hopf_reduction.tex` | 4 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint127; general bounded-product pullback is in Chapter 1; the converse Hopf positivity implication is proved. Checkpoint164 repairs only the duplicated merged-section reference in the first section opening. |
+| 21 | `chapter_hopf_reduction.tex` | 3 | Complete integrated rewrite and two direct revised mathematical/editorial reads in checkpoint166. All seven labels and three formal statements remain; three sections replace four. See chapter-twenty-one-rewrite-166.md. |
 | 22 | `chapter_divisorial_models.tex` | 8 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint128; general global potentials and canonical divisorial ordinary types belong to Chapter 1. Checkpoint163 repairs only the merged-calculus reference in the compatibility proof. |
 | 23 | `chapter_nonclosed_bclasses.tex` | 5 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint129; one affine setup and precise internal foundation references replace repeated definitions. |
 | 24 | `chapter_envelope_systems.tex` | 6 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint130; the general periodic subharmonic lemma moves to Chapter 1 and repeated setups are removed. |
@@ -135,3 +135,5 @@ Checkpoint163 completes the integrated Chapter 18 rewrite. The next complete cha
 Checkpoint164 completes the integrated Chapter 19 rewrite. The next complete chapter is Chapter 20.
 
 Checkpoint165 completes the integrated Chapter 20 rewrite. The next complete chapter is Chapter 21.
+
+Checkpoint166 completes the integrated Chapter 21 rewrite. The next complete chapter is Chapter 22.

@@ -1,7 +1,7 @@
-\chapter{Fibrations and toric models}
+\chapter{Hopf fibrations and toric potentials}
 \label{chap:hopf-reduction}
 
-The elliptic fibers of a scalar Hopf manifold force potentials in a pulled-back closed class to descend to projective space. Fiber integration then identifies their weighted section norms and expresses the Hermitian Monge--Amp\`ere measure of a descended potential through its measure on the base. The resulting mass bound and reduced equation describe a class of potentials inside a manifold whose unrestricted masses can be infinite. For potentials invariant under the coordinate circle action, logarithmic coordinates turn curvature positivity into convexity, with gradients taking values in a simplex.
+The projective fibration of a scalar Hopf manifold connects its section algebra with a Monge--Amp\`ere equation on the base. Compactness of the elliptic fibers forces potentials in a pulled-back closed class to descend. Fiber integration then preserves their weighted section norms and computes the Hermitian measure of a descended potential. Closedness on the base fixes the normalization and gives uniqueness for the reduced equation. For circle-invariant base potentials, logarithmic coordinates express positivity as convexity, with the gradient parametrizing the relative interior of a simplex when the curvature is strictly positive.
 
 Fix $n\geq2$ and use the Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n-1}$ and forms $\alpha,\zeta,\omega$ of \cref{prop:hopf-bergman-exact}. Write $\sigma$ for the Fubini--Study form normalized by $\int_{\mathbb P^{n-1}}\sigma^{n-1}=1$. The identities needed below are
 \[
@@ -13,7 +13,7 @@ Fix $n\geq2$ and use the Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n
 
 \section{Weighted sections on the projective base}\label{sec:hopf-projective-sections}
 
-The line bundles $L_k$ from \cref{prop:hopf-bergman-exact}, for integers $k\geq0$, are the pullbacks of $\mathcal O(k)$ with its Fubini--Study metric. Their homogeneous sections have squared norm $|f(z)|^2|z|^{-2k}$, invariant under every nonzero complex scalar. Once the weight descends, integrating along the fibers therefore preserves the weighted norms and kernels of \cref{sec:weighted-section-spaces}.
+The line bundles $L_k$ from \cref{prop:hopf-bergman-exact}, for integers $k\geq0$, are the pullbacks of $\mathcal O(k)$ with its Fubini--Study metric. Their homogeneous sections have squared norm $|f(z)|^2|z|^{-2k}$, invariant under every nonzero complex scalar. Descent of the weight therefore makes the weighted integrand a function on the base, and the fiber integral identifies the norms and kernels of \cref{sec:weighted-section-spaces}.
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:hopf-weighted-section-descent}
@@ -38,9 +38,9 @@ Descent of the potential follows from \cref{prop:psh-descent-submersion}. The un
 Apply this formula to $F=|s|^2\mathrm{e}^{-mv}$, with the value on the pole set immaterial. It proves equality of the possibly infinite integrals. Finiteness characterizes the multiplier-ideal section spaces, giving the asserted isometry. An orthonormal basis therefore pulls back to an orthonormal basis, which proves the kernel identities. Finally, a nonnegative function on the base is bounded if and only if its pullback is bounded, proving the statement about bounded weighted sections and their multiplication.
 \end{proof}
 
-\section{The Hermitian operator on descended potentials}
+\section{Descended measures and equations}
 
-The pulled-back curvature has zero top power because the base has dimension $n-1$. Adding $\zeta$ supplies the fiber direction. Since $\zeta^2=0$, the top power then consists of a single mixed term, whose fiber integral determines the mass.
+The form $\zeta$ supplies the fiber direction missing from the pulled-back curvature. Its square vanishes, so the Hermitian top power has a single mixed term. Integrating this term determines the mass and reduces an equation with descended density to the base.
 
 If $\nu$ is a positive Borel measure on $\mathbb P^{n-1}$, for nonnegative Borel test functions $F$ on $X_n$ we write $\pi^*\nu\wedge\zeta$ for the measure defined by
 \[
@@ -97,19 +97,15 @@ For the final assertion, take bounded truncations of $v\in\PSH(\mathbb P^{n-1},k
 
 If an $\omega$-plurisubharmonic potential is constant on the fibers, the local-section argument in \cref{prop:psh-descent-submersion} gives a quasi-plurisubharmonic base potential. The theorem therefore bounds its Hermitian mass by $2n$. On the Hopf threefold this bound is six, so the unbounded masses in \cref{chap:hopf} require potentials that vary along the fibers.
 
-\section{A reduced Monge--Amp\`ere equation}
-
-The measure formula reduces an equation with descended density and potential to the projective base. Closedness fixes the scalar there, and bounded comparison gives uniqueness within this class of potentials.
-
-Let $f\geq0$ be in $L^p(\mathbb P^{n-1},\sigma^{n-1})$, $p>1$, with $\int f\sigma^{n-1}>0$. Among potentials $u=\pi^*v$ with bounded $v\in\PSH(\mathbb P^{n-1},\sigma)$, the equation
+For the equation, let $f\geq0$ be in $L^p(\mathbb P^{n-1},\sigma^{n-1})$, $p>1$, with $\int f\sigma^{n-1}>0$. Among potentials $u=\pi^*v$ with bounded $v\in\PSH(\mathbb P^{n-1},\sigma)$,
 \begin{equation}\label{eq:hopf-reduced-equation}
  (\omega+\ddc u)^n=c(f\circ\pi)\,\mathrm{d}V,\qquad c>0,
 \end{equation}
-is equivalent to
+is equivalent to the base equation
 \[
  (\sigma+\ddc v)^{n-1}=\frac{c}{2n}f\sigma^{n-1}.
 \]
-Indeed \cref{thm:hopf-descended-hermitian-ma} and $\mathrm{d}V=\frac12\pi^*(\sigma^{n-1})\wedge\zeta$ give one implication. For the other, push the measures forward by $\pi$; the common fiber integral is two, so their equality is also necessary.
+The base equation implies \eqref{eq:hopf-reduced-equation} by \cref{thm:hopf-descended-hermitian-ma} and the formula for $\mathrm{d}V$. Conversely, pushing \eqref{eq:hopf-reduced-equation} forward gives $2n(\sigma+\ddc v)^{n-1}=cf\sigma^{n-1}$.
 
 \Needspace{5\baselineskip}
 Integrating the base equation fixes
@@ -122,13 +118,13 @@ For a real parameter $\lambda$, the same calculation identifies an equation with
 
 \section{Logarithmic coordinates and the gradient simplex}
 
-For a circle-invariant potential, logarithmic coordinates turn curvature positivity into convexity. Projective scaling fixes the sum of the gradient coordinates; boundedness on projective space makes each coordinate nonnegative. Strict positivity then fills the interior of the resulting simplex.
+Projective scaling leaves one null direction in the logarithmic Hessian. On its quotient, positivity becomes convexity, and boundedness of the potential forces the gradient into a simplex. The logarithmic growth gives every interior gradient value; strict positivity gives uniqueness on the quotient.
 
 Here allow $k>0$ to be real. Let $v$ be a smooth function on $\mathbb P^{n-1}$ invariant under the coordinate circle action, and put $u=\pi^*v$. In the covering coordinates $z_1,\ldots,z_n$, on the locus where all coordinates are nonzero, set $x_i=\log|z_i|^2$ and
 \[
  F(x)=k\log\left(\sum_{i=1}^n \mathrm{e}^{x_i}\right)+u(x).
 \]
-Write $\nabla F$ and $D^2F$ for its Euclidean gradient and Hessian, and $F_i,F_{ij}$ for their entries. Let $e_i$ be the coordinate vectors and $\mathbf1=(1,\ldots,1)$. Circle invariance makes $u$ a function of $x$, while projective scaling makes it unchanged under simultaneous translation of the $x_i$. Thus, for every $t\in\mathbb R$,
+Write $\nabla F=(F_i)$ and $D^2F=(F_{ij})$ for its Euclidean gradient and Hessian, and let $\mathbf1=(1,\ldots,1)$. Circle invariance makes $u$ a function of $x$, while projective scaling gives, for every $t\in\mathbb R$,
 \begin{equation}\label{eq:hopf-convex-translation}
  F(x+t\mathbf1)=F(x)+kt.
 \end{equation}
@@ -148,20 +144,18 @@ On the covering space, $k\alpha+\ddc u=\ddc F$. In the coordinates $z_i$, its He
 \]
 Congruence by the invertible diagonal matrix with entries $1/z_i$ proves the equivalence with the nonnegative real Hessian of $F$. Differentiating \eqref{eq:hopf-convex-translation} gives $\sum_i F_i=k$ and $D^2F\,\mathbf1=0$.
 
-Fix $x^0\in\mathbb R^n$ and let $p=\nabla F(x^0)$. Convexity gives $F(x)\geq F(x^0)+p\cdot(x-x^0)$ for all $x$. Smoothness of $v$ on the compact base gives a constant $C$ such that
+Boundedness of $v$ on the compact base gives a constant $C$ such that
 \[
  \left|F(x)-k\log\sum_i \mathrm{e}^{x_i}\right|\leq C.
 \]
-Send only $x_i$ to $-\infty$. The upper bound for $F$ remains finite because $n\geq2$. If $p_i<0$, its supporting affine function would tend to $+\infty$, a contradiction. Thus $p_i\geq0$, proving $p\in\Sigma_k$.
+Fix $x$ and a coordinate vector $e_i$. The convex function $t\mapsto F(x+te_i)$ is bounded above as $t\to-\infty$, since $n\geq2$. Its derivative cannot be negative: the supporting line at such a point would tend to $+\infty$ as $t\to-\infty$. Thus $F_i\geq0$, proving $\nabla F\in\Sigma_k$.
 
-Assume the base form is positive definite. On the hyperplane $H=\{x:\sum_i x_i=0\}$, the Hessian is then positive definite: the differential of projectivization has kernel exactly the complex scalar direction, and $H$ removes its real logarithmic part. Therefore $F|_H$ is strictly convex. Its gradient cannot have $p_i=0$. Indeed along $x^0+te_i$ the second derivative is strictly positive, since $e_i$ is not the scalar direction. The first derivative is strictly increasing in $t$ and nonnegative everywhere; it must consequently be positive at every finite $t$.
+Assume the base form is positive definite. The Hessian is positive definite transverse to $\mathbf1$, because the differential of projectivization has kernel exactly the complex scalar direction. In particular $F$ is strictly convex on $H=\{x:\sum_i x_i=0\}$. Along each line $x+te_i$, its derivative is strictly increasing and nonnegative everywhere, hence positive. Thus every gradient lies in the relative interior of $\Sigma_k$.
 
 Conversely take $p_i>0$ with $\sum_i p_i=k$. The function $F(x)-p\cdot x$ is translation invariant along $\mathbf1$. On $H$ it tends to $+\infty$ as $|x|\to\infty$. To see this, note that
 \[
  k\max_i x_i-p\cdot x
  =\sum_i p_i(\max_j x_j-x_i)
 \]
-is strictly positive on every nonzero vector of $H$, and has a positive minimum on its unit sphere. The bounded difference between $F$ and $k\log\sum \mathrm{e}^{x_i}$, together with $\log\sum \mathrm{e}^{x_i}\geq\max_i x_i$, gives the claimed coercivity. There is thus a unique minimizer on $H$. Its critical-point equation says that $\nabla F-p$ is a multiple of $\mathbf1$; both gradients have sum $k$, so this multiple is zero. This proves surjectivity. Strict convexity on $H$ proves injectivity.
+is strictly positive on every nonzero vector of $H$, and has a positive minimum on its unit sphere. The bounded difference between $F$ and $k\log\sum \mathrm{e}^{x_i}$, together with $\log\sum \mathrm{e}^{x_i}\geq\max_i x_i$, gives the claimed coercivity. There is thus a unique minimizer on $H$. Its critical-point equation says that $\nabla F-p$ is a multiple of $\mathbf1$; both vectors have coordinate sum $k$, so this multiple is zero. This proves surjectivity. Strict convexity on $H$ proves injectivity.
 \end{proof}
-
-The null scalar direction gives zero $n$th power for the closed curvature. The fiber term $\zeta$ supplies that direction in the Hermitian measure formula of \cref{thm:hopf-descended-hermitian-ma}.

@@ -108,6 +108,7 @@ for name in (
     "research/editorial/chapter-eighteen-rewrite-163.md",
     "research/editorial/chapter-nineteen-rewrite-164.md",
     "research/editorial/chapter-twenty-rewrite-165.md",
+    "research/editorial/chapter-twenty-one-rewrite-166.md",
     "research/supplied-restricted-invariants-20260926.json",
     "research/source-disposition-145.json",
     "research/audits/source-ledger-145.json",
