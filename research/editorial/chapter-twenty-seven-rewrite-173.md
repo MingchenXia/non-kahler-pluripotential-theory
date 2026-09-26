@@ -1,0 +1,43 @@
+# Chapter 27 rewrite — checkpoint173
+
+Baseline: `21de2d293f8bfe853f993ce825367bff013fff50`. The current chapter contains thirteen recursive author inputs and no figures. The original complete chapter was directly read before revision. The release requires two complete revised mathematical/editorial reads, compilation, affected-page inspection and a fresh source-package reconstruction. Those checks are recorded below at their actual scope.
+
+## Architecture and removed repetition
+
+The chapter now develops closed classes, their singular loci and restricted masses before turning to divisorial components of threshold subsolutions. The latter has its own section and explicitly returns from the class-C setting to an arbitrary compact Hermitian manifold. The ample-locus equation follows the elliptic model and precedes the completeness examples. Its new transition distinguishes the smooth global density of the regularity theorem from the exponential equation with a divisorial pole.
+
+The Bott–Chern quotient, pseudoeffectivity, nefness and bigness are used from their earlier definitions. The repeated definition environment is removed; its label remains an alias for the section containing the corresponding references. The trace functional and its strict positivity are used from Chapter 22. The elliptic current-descent subsection is merged with its parent section and its label is retained there. The current chapter has twelve sections and five subsections, instead of ten and eight. All 76 old labels remain; the threshold section adds one label.
+
+The ample-locus proof uses the already proved global-Lp interior-smoothness corollary after checking the classical minimal bounds and choosing the strict barrier. It no longer repeats the Holder and smoothness chain. The elliptic ideal-order argument uses submersion pullback and local holomorphic sections. The remaining bounded-product, distributional descent and metric arguments retain their proofs.
+
+## Residual nefness
+
+The actual-trace setup previously assumed separately that the residual class was nef. This follows from the other hypotheses. Off the finite divisor, subtraction leaves a positive current with bounded potential. Removability gives its positive extension across the divisor. Its background is smooth and closed, so `lem:bounded-closed-potential-nef` in Chapter 22 applies and proves nefness.
+
+The residual-mass lemma now states this conclusion, and the subsequent invariance theorem does not impose it again. The bounded-remainder, finite-divisor, actual-restriction and Kähler-model conditions remain. The three examples still distinguish class mass from trace mass, one-sided singularity comparison from preservation of ordinary type, and positivity on a subvariety from avoidance of the ambient null locus. The source's explicit nef premise is recorded accurately in the historical paragraph; this is an internal simplification, not a new claim about the source or a generalization to arbitrary intrinsic traces.
+
+The changed bounded interfaces are the final paragraph of Chapter 18, the closed-class paragraph of Chapter 32, and the supplied-restricted-invariant paragraph of Chapter 33, with their neighboring context. These chapters do not receive a fresh whole-chapter review. The next Chapter 28 opening and the previous Chapter 26 ending are checked as adjacent seams.
+
+## Mathematical and dependency scope
+
+The complete reads cover linear Gauduchon compactness, minimal multiplicities with a vanishing negative error, the finite-intersection construction of the non-Kähler locus and the local replacement excluding isolated points. The zero-class Hermitian-error supremum remains infinite at each fixed error size. Closed comparison on Kähler resolutions gives finite restricted mass, modification invariance and rank-drop vanishing. The normalized diagonal coefficient, nef intersection and smooth-target strict-current descent retain their precise geometric hypotheses.
+
+The trace computation retains total divisors on common refinements and polynomial comparison of bounded closed masses. The threshold argument retains restriction of the residual trace measure to the divisor, the smooth-test closure, and sequence-level uniform integrability for attainment. The semipositive and nef-volume criteria remain distinct. The elliptic example retains current descent, exact cones, zero ambient non-pluripolar mass, quadratic section growth, cubic boundary volume and the four limits of normalized Gauduchon powers.
+
+The ample-locus theorem retains classical closed-big existence and minimal-singularity inputs. The blowup example retains the finite-energy comparison argument despite the infinite unweighted pole measure, and the first-exit proof of incompleteness. The normal-length estimate uses the intrinsic hyperplane determinant and a proper Lipschitz exhaustion. The torus profiles retain full mass, the absence of a divisor atom and the sharp exponent two. These examples do not settle completeness for a prescribed nonintegrable pole with a smooth positive coefficient across the divisor or for flow-compatible data.
+
+Previously recorded classical source checks in `chapter-twenty-seven-rewrite-133.md` and `restricted-invariants-integration-160.md` are reused at their bounded scopes. No new source version, paper integration, Popovici input, independent agent or verifier is claimed. Targeted internal reads cover the Chapter 22 cohomology/trace discussion, continuous representatives and bounded-potential nef lemma; Chapter 1 envelope and descent statements and proofs used here; the Chapter 13 interior theorem and global-Lp corollary at their stated scopes; and the Chapter 25 nef-annihilator proposition. These are not fresh full reviews of the dependency chapters.
+
+## Review and release checks
+
+The first revised direct read covers all thirteen inputs in the expanded chapter, lines 1–1276, in four consecutive ranges. It checks all statements, proofs and transitions. Its wording findings distinguish positive representatives from arbitrary smooth representatives, state the Kähler regime in the opening, introduce the ample-locus setting before its symbols, and separate smooth-density regularity from the next divisorial equation. A further local clarification says that the residual current has bounded potentials, not bounded coefficients.
+
+The thirteen chapter inputs and three bounded interface files have a house audit with zero errors and thirteen inherited warnings, identical in count and kind to the baseline. The chapter has 35 formal blocks and 28 proofs after the duplicate definition is removed. Thirty-two retained formal statements are byte-identical; the three changed ones remove a repeated functional formula, assert the derived residual nefness, or remove that redundant premise. These comparisons supplement the direct reads.
+
+The second complete direct revised read covers all thirteen inputs, expanded lines 1–1241, in four consecutive ranges after the first output inspection and the local wording correction. It also rereads the bounded interfaces specified above. No further manuscript correction was needed. These are direct mathematical/editorial reads, not independent verification.
+
+The thirteen chapter inputs and three bounded interface files have a house audit with zero errors and thirteen inherited warnings. The 809-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 73 selected final pages pass visual review: 1 changed image was directly inspected and 72 match the preceding inspected render byte for byte. The first render included direct inspection of 55 changed pages. Both outputs rebuild from a fresh empty source-package extraction with identical page text. The companion is byte-identical to checkpoint172. There are 33 active chapters and 221 author inputs; the 190 historical verifier reports and three hidden sources remain unchanged. Earlier classical source checks are reused at their recorded scopes; no new independent verification is claimed.
+
+Continue with the complete present Chapter 28 and all its nested inputs, then Chapter 29. The broader writing and research goal remains active and incomplete.
+
+The complete Chapter 27 output and adjacent transitions, front matter and contents, and every other changed body page were included in the final selection. Source-package checks compare all manuscript and build-script payloads with the clean reconstruction, while subsequent research documentation is current. See build-snapshot-173.json and source-package-portability-173.json.
