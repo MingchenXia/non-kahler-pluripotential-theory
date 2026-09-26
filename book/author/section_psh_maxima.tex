@@ -1,6 +1,6 @@
 \section{Maxima and the maximum principle}
 
-Maxima allow us to truncate potentials and to replace them on an open set while preserving a lower curvature bound. For a smooth background, the local psh maximum and gluing principles retain that bound by freezing the coefficients and then letting the curvature error tend to zero. The submean inequality also determines pointwise order from almost-everywhere order and forces upper-bounded plurisubharmonic functions on Euclidean space to be constant.
+Maxima allow us to truncate potentials and to replace them on an open set while preserving a lower curvature bound. For a smooth background, the local psh maximum and gluing principles retain that bound by freezing the coefficients and then letting the curvature error tend to zero. The submean inequality determines pointwise order from almost-everywhere order and forces upper-bounded plurisubharmonic functions on Euclidean space to be constant. Successive disc comparisons also give the local upper bound needed to extend across an isolated puncture in dimension at least two.
 
 \begin{lemma}\label{lem:max-psh}
 If $u,v\in\PSH(X,\theta)$, then $\max(u,v)\in\PSH(X,\theta)$. Consequently, if $\theta\geq0$ and $u\in\PSH(X,\theta)$, then $\max(u,-t)$ is $\theta$-plurisubharmonic for every real $t$.
@@ -78,6 +78,21 @@ Let $Z$ be a proper analytic subset of an open set $U$, and let $u$ be $\theta$-
 \end{lemma}
 \begin{proof}
 Fix a constant positive form $\kappa$ in a coordinate chart. On a sufficiently small ball, freeze $\theta$ to a constant form $\theta'$ with $|\theta-\theta'|\leq\epsilon\kappa$, and choose a quadratic potential $q$ for $\theta'+\epsilon\kappa$. The plurisubharmonic function $u+q$ extends across $Z$ by the classical removable-singularity theorem from \cite{SGPT}. Its extension gives $\theta+\ddc u\geq-2\epsilon\kappa$. Let $\epsilon\downarrow0$. The extensions agree on overlaps by their upper-limit definition.
+\end{proof}
+
+In complex dimension at least two, an isolated puncture automatically satisfies the upper-bound hypothesis.
+
+\begin{lemma}\label{lem:projective-puncture-upper-bound}\label{lem:isolated-puncture-extension}
+Let $X$ be a complex manifold of dimension $n\geq2$, let $\theta$ be a smooth real $(1,1)$-form on $X$, and let $p\in X$. Every $\theta$-plurisubharmonic function on $X\setminus\{p\}$ is locally bounded above near $p$ and extends uniquely to a member of $\PSH(X,\theta)$. If $X$ is compact, it is bounded above on $X\setminus\{p\}$.
+\end{lemma}
+\begin{proof}
+In a coordinate polydisc about $p$, add a smooth quadratic function to obtain a plurisubharmonic function $h$ on $\Delta_R^n\setminus\{0\}$. Write the coordinates as $(z_1,z_2,z')$, with $z'$ absent when $n=2$, and choose $0<r<R$. The compact set
+\[
+ K=\{|z_1|\leq r,\ |z_2|=r,\ |z'_j|\leq r\}
+\]
+avoids the puncture, so $h\leq M$ on $K$ for some finite $M$. For $z_1\ne0$, the maximum principle in the $z_2$-disc gives the same bound throughout the smaller polydisc. If $z_1=0$ and $(z_2,z')\ne0$, the $z_1$-disc avoids the puncture, and its boundary is already covered by this bound. Applying the maximum principle once more gives $h\leq M$ there too. Subtracting the smooth correction proves the local upper bound.
+
+\Cref{lem:qpsh-removable-analytic} supplies the extension with its original lower curvature bound. Uniqueness follows from \cref{lem:qpsh-almost-everywhere-order}. On a compact $X$, upper semicontinuity then gives a global upper bound.
 \end{proof}
 
 \begin{lemma}\label{lem:qpsh-upper-test}
