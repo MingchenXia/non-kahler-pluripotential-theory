@@ -1,14 +1,15 @@
-\section{Sublevels and the uniform potential bound}
+\section{Capacity estimates and uniform compactness}
 
-Insert a capacity test into the comparison potential. Modified comparison then bounds the capacity of one sublevel by the Monge--Amp\`ere mass of a slightly larger one. For an $L^p$ density, the capacity estimate of \cref{cor:lp-capacity-square} reverses this relation: a nonempty sublevel of fixed height has a definite capacity. The tail bound \eqref{eq:global-capacity-tail} consequently bounds the depth of a normalized potential. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity of \cref{sec:hermitian-capacity}.
+Insert a capacity test into the comparison potential. Modified comparison then bounds the capacity of one sublevel by the Monge--Amp\`ere mass of a slightly larger one. For an $L^p$ density, the capacity estimate of \cref{cor:lp-capacity-square} reverses this relation: a nonempty sublevel of fixed height has a definite capacity. The tail bound \eqref{eq:global-capacity-tail} bounds the depth of a normalized potential. Applied to differences of solutions, the same estimate upgrades $L^1$ compactness to uniform compactness. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity of \cref{sec:hermitian-capacity}.
 
+\Needspace{15\baselineskip}
 \begin{lemma}\label{lem:thin-sublevel-capacity}
 Let $u,v\in\PSH(X,\omega)\cap L^\infty(X)$, with $-H\leq v\leq0$ and $H\geq1$. Fix $0<\varepsilon<1$, and put
 \[
  m=\inf_X(u-(1-\varepsilon)v),\qquad
  U_s=\{u<(1-\varepsilon)v+m+s\}.
 \]
-There are $\delta_\varepsilon>0$ and $C_H>0$, depending only on the indicated parameters and the background, such that
+There are $\delta_\varepsilon>0$, depending only on $(X,\omega,\varepsilon)$, and $C_H>0$, depending only on $(n,H)$, such that
 \begin{equation}\label{eq:thin-capacity}
  t^n\operatorname{Cap}(U_s)\leq C_H\int_{U_{s+t}}\omega_u^n
  \qquad(0<s,t,\ s+t<\delta_\varepsilon).
@@ -67,11 +68,11 @@ We check positivity before using the sublevel inequality. If $a(s_i)\leq2^{-i}a(
  \sum_{i=0}^j t_i\leq2Ka(D)\sum_{i=0}^j2^{-i}<4Ka(D)<D.
 \]
 Hence $s_{j+1}>0$, and the displayed sublevel inequality gives $a(s_{j+1})\leq a(s_j)/2$. Induction justifies every step, and $s_j\downarrow s_\infty\geq D-4Ka(D)>0$. Monotonicity gives
-$0<a(s_\infty)\leq a(s_j)\leq2^{-j}a(D)$, a contradiction. Therefore $D\leq4Ka(D)$, which is \eqref{eq:sublevel-capacity-lower}. No continuity of capacity at decreasing sets is required.
+$0<a(s_\infty)\leq a(s_j)\leq2^{-j}a(D)$, a contradiction. Therefore $D\leq4Ka(D)$, which is \eqref{eq:sublevel-capacity-lower}.
 \end{proof}
 
 \begin{theorem}\label{thm:lp-potential-estimate}
-Fix $p>1$. There are constants $C_p,c_p>0$ such that, whenever
+There are constants $C_p,c_p>0$, depending only on $(X,\omega,\mathrm{d}V,p)$, such that, whenever
 $u\in\PSH(X,\omega)\cap L^\infty(X)$, $\sup_Xu=0$, and
 \[
  \omega_u^n=F\,\mathrm{d}V,\qquad F\in L^p(X,\mathrm{d}V),\quad F\geq0,
@@ -90,8 +91,6 @@ The zero density is excluded by \cref{cor:bounded-mass-positive}. Apply \cref{co
 If $M>D+1$, \eqref{eq:global-capacity-tail} bounds this capacity by $C/(M-D)$, giving the first assertion; the remaining case is immediate. Bounding the same capacity by $\operatorname{Cap}(X)$ gives the second assertion.
 \end{proof}
 
-\section{Uniform compactness for \texorpdfstring{$L^p$}{Lp} densities}
-
 If two uniformly bounded solutions remain separated at some point, the preceding estimate gives a fixed positive capacity to a sublevel of their difference. Small $L^1$ distance makes its volume small, while the uniform $L^p$ density bound makes its Monge--Amp\`ere mass small. This contradicts the sublevel estimate and upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$.
 
 \begin{theorem}\label{thm:lp-uniform-compactness}
@@ -99,13 +98,14 @@ Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
 \[
  \omega_{u_j}^n=F_j\,\mathrm{d}V,\qquad F_j\geq0,\qquad \sup_j\|F_j\|_p<\infty
 \]
-for some $p>1$. If $(u_j)$ is Cauchy in $L^1(X,\mathrm{d}V)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega$-plurisubharmonic function.
+for the fixed $p>1$. If $(u_j)$ is Cauchy in $L^1(X,\mathrm{d}V)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega$-plurisubharmonic function.
 \end{theorem}
 \begin{proof}
 By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. Suppose uniform Cauchy convergence fails. After exchanging indices when necessary, there are a number $a>0$ and arbitrarily large $j,k$ with
 \[
  S:=\inf_X(u_k-u_j)\leq-a.
 \]
+\Needspace{10\baselineskip}
 Choose $0<\varepsilon<1$ such that $\varepsilon H<a/4$, and choose a fixed $D>0$ with $2D<\delta_\varepsilon$ and $2D<a/4$. Apply the preceding sublevel lemmas with $u=u_k$, $v=u_j$. Since $v\leq0$,
 $m=\inf(u-(1-\varepsilon)v)\leq S$. Thus
 \[
@@ -122,15 +122,15 @@ The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a common $A$ s
  \longrightarrow0.
  \end{split}
 \]
-This contradiction proves uniform Cauchy convergence. Normalized $L^1$ compactness supplies an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
+This contradiction proves uniform Cauchy convergence. The normalized compactness theorem, \cref{thm:normalized-compactness}, supplies an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
 \end{proof}
 
-\section{Existence for an \texorpdfstring{$L^p$}{Lp} density}
+\section{Construction of continuous solutions}
 
 Smooth approximation gives solutions with unknown normalization scalars. A Gauduchon trace bounds those scalars above, and the lower bound for the density norm bounds them away from zero. The resulting uniform $L^p$ bound puts the potentials in the compact family just constructed, so their limit solves the prescribed equation.
 
 \begin{proof}[of \cref{thm:kn-continuous}]
-Choose smooth strictly positive $f_j\to f$ in $L^p(X,\mathrm{d}V)$. Smooth existence gives
+Choose smooth strictly positive $f_j\to f$ in $L^p(X,\mathrm{d}V)$. By \cref{thm:tw-smooth}, smooth existence gives
 \[
  \omega_{u_j}^n=c_jf_j\,\mathrm{d}V,\qquad \sup_Xu_j=0,\qquad c_j>0.
 \]
@@ -147,12 +147,10 @@ $c_j\|f_j\|_p\geq c_p$, so the constants are bounded away from zero. The densiti
 Bounded Bedford--Taylor continuity gives $\omega_{u_j}^n\rightharpoonup\omega_u^n$, while $c_jf_j\to cf$ in $L^p$. Hence $\omega_u^n=cf\,\mathrm{d}V$, as required.
 \end{proof}
 
-\section{The exponential equation and the Gauduchon mean}
-
-For a fixed $\lambda>0$, normalizing a smooth solution changes the density by the factor $\mathrm{e}^{\lambda\sup_Xu}$. We must bound this factor before applying uniform compactness. Jensen's inequality for a probability weighted by the root of the density turns the conserved Gauduchon trace into an upper bound for $\sup_Xu$; the lower bound for the density norm gives the reverse bound.
+For the exponential equation, the corresponding scalar is $\mathrm{e}^{\lambda\sup_Xu}$. Its upper bound comes from Jensen's inequality: weighting a Gauduchon probability by the root of the density relates the conserved trace to $\sup_Xu$. The lower-density estimate again gives the reverse bound.
 
 \begin{lemma}\label{lem:exponential-gauduchon-mean}
-Fix $\lambda>0$ and $p>1$. Suppose smooth $u_j$ with $\omega_{u_j}>0$ solve
+Fix $\lambda>0$. Suppose smooth $u_j$ with $\omega_{u_j}>0$ solve
 \[
  \omega_{u_j}^n=\mathrm{e}^{\lambda u_j}f_j\,\mathrm{d}V,
 \]
@@ -165,7 +163,7 @@ Absorb the fixed smooth positive ratio $\mathrm{d}V/\omega^n$ into both $f_j$ an
  A_j=\int_X f_j^{1/n}\rho\omega^n,\quad
  \psi_j=u_j-M_j\leq0.
 \]
-Set $A=\int_X f^{1/n}\rho\omega^n$. The root inequality $|x^{1/n}-y^{1/n}|\leq|x-y|^{1/n}$ and H\"older give $A_j\to A>0$. Arithmetic--geometric mean and the conserved trace imply
+Set $A=\int_X f^{1/n}\rho\omega^n$. The root inequality used in the preceding existence proof gives $A_j\to A>0$. Arithmetic--geometric mean and the conserved trace imply
 \[
  \alpha=\int_X\omega_{u_j}\wedge\rho\omega^{n-1}
  \geq \mathrm{e}^{\lambda M_j/n}\int_X \mathrm{e}^{\lambda\psi_j/n}f_j^{1/n}\rho\omega^n.
@@ -180,13 +178,10 @@ The normalized potentials $\psi_j$ have uniform $L^q$ bounds for every finite $q
 $\|f_j^{1/n}\|_{np}=\|f_j\|_p^{1/n}$. This proves the upper bound for $M_j$.
 
 Finally, the density $F_j=\mathrm{e}^{\lambda u_j}f_j$ satisfies
-$\|F_j\|_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p$. Applying the lower-density bound of \cref{thm:lp-potential-estimate} to $\psi_j$ gives
-\[
- c_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p,
-\]
-which bounds $M_j$ below.
+$\|F_j\|_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p$. The lower-density bound of \cref{thm:lp-potential-estimate}, applied to $\psi_j$, gives $c_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p$, which bounds $M_j$ below.
 \end{proof}
 
+\Needspace{9\baselineskip}
 \begin{proof}[of \cref{thm:nguyen-exp}]
 Choose smooth strictly positive $f_j\to f$ in $L^p$. The smooth proper equation, \cref{thm:smooth-proper-existence}, gives smooth $u_j$ satisfying the required equations. The preceding lemma bounds $M_j$ and consequently bounds $F_j=\mathrm{e}^{\lambda u_j}f_j$ in $L^p$. The normalized potentials $\psi_j=u_j-M_j$ are uniformly bounded by \cref{thm:lp-potential-estimate}. Pass to a subsequence with $M_j\to M$ and $\psi_j$ Cauchy in $L^1$. \Cref{thm:lp-uniform-compactness} gives uniform convergence $u_j\to u\in\PSH(X,\omega)\cap C(X)$.
 

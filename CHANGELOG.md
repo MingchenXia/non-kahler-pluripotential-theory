@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint154 — 26 September 2026
+
+Chapter 10 completes its whole six-section rewrite, including all three nested inputs, and two complete direct revised mathematical/editorial reads. Capacity estimates and uniform compactness share one argument; normalized and exponential existence, density order and bounded-solution continuity share another. The vanishing-exponent cluster equation follows its scalar limit directly. Repeated definitions and settings are removed, constant dependencies are explicit, and the Hopf weak-density limit retains its oscillating counterexample.
+
+All four author inputs have zero house-audit errors and the same three inherited warnings. Non-book citations remain in Chapter 33. The 806-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 48 selected final pages pass visual review, with 20 changed images directly inspected and 28 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-ten-rewrite-154.md, build-snapshot-154.json and source-package-portability-154.json.
+
+Continue with the complete present Chapter 11 and all its nested inputs, then Chapter 12. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint153 — 26 September 2026
 
 Chapter 9 completes its whole seventeen-section rewrite, including all nine nested inputs, and two direct revised mathematical/editorial reads. Scalar bounds and uniqueness share one section; exponential comparison supplies the former separate uniqueness proposition. The linearized operator and adjoint compatibility are used from Chapter 4. The Gauduchon cofactor matrix and determinant identity are defined once and used in rescaling, higher regularity and variation. The full torsion, eigenvalue, Liouville and continuity proofs remain. Auxiliary-constant dependencies are explicit, and repeated definitions, derivative notation, roadmaps and recaps are removed.
