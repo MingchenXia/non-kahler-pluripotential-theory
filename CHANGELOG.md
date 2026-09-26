@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint159 — 26 September 2026
+
+Chapter 15 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all four inputs. The ordinary/ideal envelope sandwich and preservation of multiplier ideals form one proposition, with both labels retained. Analytic and divisorial envelope equality are grouped together; smooth changes of background and their mass obstruction share one section. Divisorial equality and the infinite-mass example use their existing internal lemmas. Curve incompleteness follows from the proved completion and its nonconstant smooth points. The dyadic analytic approximation leads to the ordinary-type topology problem; introductions explain these mathematical transitions and repeated settings and recaps are removed.
+
+The four-input house audit has zero errors and two inherited label-prefix warnings. All twenty-five original labels remain and resolve; non-book citations remain in Chapter 33. The 800-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 52 selected book pages pass visual review across three renders. The companion is byte-identical to checkpoint158. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-fifteen-rewrite-159.md, build-snapshot-159.json and source-package-portability-159.json.
+
+Continue with the complete present Chapter 16 and all its nested inputs, then Chapter 17. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint158 — 26 September 2026
 
 Chapter 14 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all ten inputs. Scalar order, concavity and bounded L1 continuity form one section; directional derivatives, generic uniqueness and Gauduchon identification are grouped together. The short generic approximation corollary is merged into the uniqueness theorem with its label retained. The critical scalar norm uses the existing strict-barrier subsolution estimate, and centered compactness uses the preceding normalized exponential theorem with an explicit dominated-convergence step. Repeated definitions, settings and recaps are removed; unresolved adjoint and singularity-comparison questions accompany the relevant results.
