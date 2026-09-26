@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint149 — Chapter 5 and trace topology
+
+Chapter 5 completes its whole rewrite and two direct revised mathematical/editorial reads. Two sections distinguish the trace map and admissible data from the complete metric and sharp quantitative estimates. One scalar elliptic operator and its volume adjoint now serve the Green inverse and both estimates. Distributional positivity uses Chapter 1, and zero trace mass uses Chapter 4. The capacity counterexample moves beside its curve construction in Chapter 15, after damped continuity is available; the entire changed root input receives both reads, without a new recursive Chapter 15 review. The infinite-mass construction remains in Chapter 6. Repeated openings, scalar setups and recaps are removed without weakening the conclusions.
+
+The three changed author inputs have zero house-audit errors and one inherited label warning. Non-book citations remain in Chapter 33. The 810-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 48 selected final pages pass visual review, with 36 changed images directly inspected and 12 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-five-rewrite-149.md, build-snapshot-149.json and source-package-portability-149.json.
+
+Continue with the complete present Chapter 6, including its relocated density and trace inequalities, then Chapter 7. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint148 — Chapter 4 and its foundation dependencies
 
 Chapter 4 completes its whole six-section rewrite, including the linear-duality input, and two direct revised mathematical/editorial reads. The openings connect conserved traces, positive-current existence, attained lower curvature bounds and adjoint compatibility. The distributional local-correction assertion moves into Chapter 1; that entire root input receives both reads at its actual file scope. The persistence and bounded-adjoint proofs reuse the Chapter 2 mass results and Chapter 1 capacity continuity. Repeated settings, notation, calculations and the surface primitive example are removed. The full separation, scalar right-inverse and current-closure proofs remain, with the one-dimensional zero-degree case and uniform boundedness of capacity limits explicit.

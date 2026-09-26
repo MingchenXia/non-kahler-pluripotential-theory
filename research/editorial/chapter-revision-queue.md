@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint148: read and rewrite the complete present Chapter 5, then Chapter 6. Chapter 4, including its nested linear-duality input, has two complete revised mathematical/editorial reads and release checks in chapter-four-rewrite-148.md. The changed Chapter 1 root input has both reads; its nested sections are not claimed as a new full-chapter review. Earlier rows retain their historical scopes.
+Current next unit after checkpoint149: read and rewrite the complete present Chapter 6, including its relocated density and trace inequalities, then Chapter 7. Chapter 5 and its nested trace-topology input have two complete revised mathematical/editorial reads and release checks. The changed Chapter 15 completion root input has both reads; its nested projective examples are not claimed as a new recursive chapter review. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -12,7 +12,7 @@ Current next unit after checkpoint148: read and rewrite the complete present Cha
 | 2 | `chapter_mass.tex` | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads in checkpoint146; includes the complete mass-invariance proof moved from Chapter 25. See chapter-two-rewrite-146.md. |
 | 3 | `chapter_energy.tex` | Complete integrated three-section rewrite and two direct revised mathematical/editorial reads in checkpoint147; a single radial energy, complete primitive criterion and explicit surface Euler equation. See chapter-three-rewrite-147.md. |
 | 4 | `chapter_gauduchon.tex` | Complete integrated six-section rewrite, including the linear-duality input, and two direct revised mathematical/editorial reads in checkpoint148. General distributional correction belongs to Chapter 1; bounded adjoints use the existing mass and capacity results. See chapter-four-rewrite-148.md. |
-| 5 | `chapter_compactness.tex` | Complete first/second pass including trace input and final layout; see quantitative-trace-compactness-review-99.md |
+| 5 | `chapter_compactness.tex` | Complete integrated two-section rewrite and two direct revised mathematical/editorial reads in checkpoint149. One scalar operator serves trace recovery and estimates; the nonlinear capacity counterexample is placed after its curve construction in Chapter 15. See chapter-five-rewrite-149.md. |
 | 6 | `chapter_products.tex` | Complete first/second pass including integrable-current input and final layout; see smooth-masses-products-review-100.md |
 | 7 | `chapter_damped_measures.tex` | Complete first/second pass including general-weight input and final layout; see capacity-defects-damping-review-101.md |
 | 8 | `chapter_hopf.tex` | Complete full first/second proof-and-writing pass and final layout; see hopf-fiber-average-review-102.md |
@@ -22,7 +22,7 @@ Current next unit after checkpoint148: read and rewrite the complete present Cha
 | 12 | `chapter_envelopes.tex` | Complete chapter and bounded-contact input first/second direct proof-and-writing reads, with final output checks in checkpoint118; see chapter-twelve-rewrite-118.md. Earlier bounded reviews retain their recorded scopes. |
 | 13 | `chapter_prescribed_equations.tex` | Complete chapter and all 32 nested-input first/second direct proof-and-writing reads, with final output checks in checkpoint119; see chapter-thirteen-rewrite-119.md. |
 | 14 | `chapter_normalization.tex` | Complete chapter and all nine final nested-input first/second direct proof-and-writing reads, with output checks in checkpoint120; see chapter-fourteen-rewrite-120.md and vanishing-selection-review-120.md. |
-| 15 | `chapter_igood.tex` | Complete chapter and all three nested-input first/second direct proof-and-writing reads, with output checks in checkpoint121; see chapter-fifteen-rewrite-121.md. |
+| 15 | `chapter_igood.tex` | Complete chapter and all three nested-input first/second direct proof-and-writing reads, with output checks in checkpoint121; see chapter-fifteen-rewrite-121.md. Checkpoint149 relocates the capacity counterexample here and reads the entire changed completion root input twice; the nested projective examples are unchanged. |
 | 16 | `chapter_rays.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint122; no nested inputs; see chapter-sixteen-rewrite-122.md. |
 | 17 | `chapter_testcurves.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint123; includes the nested figure; see chapter-seventeen-rewrite-123.md. |
 | 18 | `chapter_trace_data.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint124; relocated general lemmas receive both reads in Chapter 1; see chapter-eighteen-rewrite-124.md. |
@@ -57,3 +57,5 @@ Checkpoint146 completes the integrated Chapter 2 review and moves the mass-invar
 Checkpoint147 completes the integrated Chapter 3 rewrite and release checks. The next complete chapter is Chapter 4, including its nested linear-duality input.
 
 Checkpoint148 completes the integrated Chapter 4 rewrite and release checks, including its nested linear-duality section and the changed Chapter 1 root input. The next complete chapter is Chapter 5.
+
+Checkpoint149 completes the whole Chapter 5 rewrite and the bounded Chapter 15 relocation. The next complete chapter is Chapter 6.

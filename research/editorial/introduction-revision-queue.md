@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint148: read and rewrite the complete present Chapter 5, then Chapter 6. Chapter 4, including its nested linear-duality input, has two complete revised mathematical/editorial reads and release checks in chapter-four-rewrite-148.md. The changed Chapter 1 root input has both reads; its nested sections are not claimed as a new full-chapter review. Earlier rows retain their historical scopes.
+Current next unit after checkpoint149: read and rewrite the complete present Chapter 6, including its relocated density and trace inequalities, then Chapter 7. Chapter 5 and its nested trace-topology input have two complete revised mathematical/editorial reads and release checks. The changed Chapter 15 completion root input has both reads; its nested projective examples are not claimed as a new recursive chapter review. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -12,7 +12,7 @@ Current next unit after checkpoint148: read and rewrite the complete present Cha
 | 2 | `chapter_mass.tex` | 5 | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads in checkpoint146; includes the complete mass-invariance proof moved from Chapter 25. See chapter-two-rewrite-146.md. |
 | 3 | `chapter_energy.tex` | 3 | Complete integrated three-section rewrite and two direct revised mathematical/editorial reads in checkpoint147; a single radial energy, complete primitive criterion and explicit surface Euler equation. See chapter-three-rewrite-147.md. |
 | 4 | `chapter_gauduchon.tex` | 6 | Complete integrated six-section rewrite, including the linear-duality input, and two direct revised mathematical/editorial reads in checkpoint148. General distributional correction belongs to Chapter 1; bounded adjoints use the existing mass and capacity results. See chapter-four-rewrite-148.md. |
-| 5 | `chapter_compactness.tex` | 1 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
+| 5 | `chapter_compactness.tex` | 2 | Complete integrated two-section rewrite and two direct revised mathematical/editorial reads in checkpoint149. One scalar operator serves trace recovery and estimates; the nonlinear capacity counterexample is placed after its curve construction in Chapter 15. See chapter-five-rewrite-149.md. |
 | 6 | `chapter_products.tex` | 6 | Complete first/second reads in checkpoint112, with dependency relocation and seam review in checkpoint113. Checkpoint142 adds the density/trace section with two direct proof reads and checks its adjoining transitions. |
 | 7 | `chapter_damped_measures.tex` | 7 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint113. |
 | 8 | `chapter_hopf.tex` | 7 | Complete whole-chapter rewrite and first/second direct reads in checkpoint114; release checks recorded in its audit files. |
@@ -22,7 +22,7 @@ Current next unit after checkpoint148: read and rewrite the complete present Cha
 | 12 | `chapter_envelopes.tex` | 6 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint118. |
 | 13 | `chapter_prescribed_equations.tex` | 50 | Complete chapter and all 32 nested-input rewrite, first/second direct reads and release checks in checkpoint119. |
 | 14 | `chapter_normalization.tex` | 20 | Complete chapter and all nine final nested-input rewrite, first/second direct reads and release checks in checkpoint120; includes Q2.8 selection. |
-| 15 | `chapter_igood.tex` | 9 | Complete chapter and all three nested-input rewrite, first/second direct reads and release checks in checkpoint121. |
+| 15 | `chapter_igood.tex` | 9 | Complete chapter and all three nested-input rewrite, first/second direct reads and release checks in checkpoint121. Checkpoint149 relocates the capacity counterexample here and reads the entire changed completion root input twice; the nested projective examples are unchanged. |
 | 16 | `chapter_rays.tex` | 5 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint122; general strip convexity and gluing belong to Chapter 1. |
 | 17 | `chapter_testcurves.tex` | 4 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint123; includes the nested figure; general Legendre and radial psh results belong to Chapter 1. |
 | 18 | `chapter_trace_data.tex` | 11 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint124; general restriction, modification continuity and divisorial domination belong to Chapter 1. |
@@ -101,3 +101,5 @@ Checkpoint146 completes the integrated Chapter 2 review and moves the mass-invar
 Checkpoint147 completes the integrated Chapter 3 rewrite and release checks. The next complete chapter is Chapter 4, including its nested linear-duality input.
 
 Checkpoint148 completes the integrated Chapter 4 rewrite and release checks, including its nested linear-duality section and the changed Chapter 1 root input. The next complete chapter is Chapter 5.
+
+Checkpoint149 completes the whole Chapter 5 rewrite and the bounded Chapter 15 relocation. The next complete chapter is Chapter 6.
