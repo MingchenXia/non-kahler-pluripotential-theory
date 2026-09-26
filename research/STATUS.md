@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint142 — integrated foundations and dependency order
+
+The complete integrated Chapter 1 and all eighteen nested author inputs receive an original read and two complete revised mathematical/editorial reads. Its opening now explains local smooth correction, global normalization and the two comparisons of singularities. The bounded convex chain rule precedes its first use. The unbounded density and trace inequalities move with their proofs to Chapter 6, after extended measures and locality have been constructed. The divisorial envelope identity moves with its proof to Chapter 15; Chapter 1 retains the canonical ordinary type of the divisorial current. Repeated explanations and a vacuous nonemptiness condition are removed without enlarging the nonvacuous theorem scopes.
+
+The 22 reviewed author inputs have zero house-audit errors and the same eight inherited warnings as their pre-edit baseline. Non-book citation placement passes. The 786-page book and seventeen-page companion build without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 161 selected final pages pass visual review. The companion PDF is byte-identical to checkpoint141. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. See research/editorial/foundations-integration-review-142.md for exact read and source scopes.
+
+The next unit reconciles the source-disposition and proof-obligation ledgers with the current manuscript. Their historical detailed entries are not a fresh source audit or proof-completion claim. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint141 — front matter and reading route
 
 The complete front matter is rewritten around singularity comparison, variable mass, damping and Gauduchon traces. The equation overview specifies nonzero nonnegative Lp data and separates solvability from prescribed-type conditions, scalar uniqueness, potential uniqueness and approximation selection. The reading route now identifies the mass-bound part, final historical chapter and singular-space appendix. Repeated definitions and a repeated mass-assumption disclaimer are removed; the operator, multiplier-ideal and mass normalizations are preserved. The subtitle names envelopes, equations and complex geometry, and the draft date is updated.

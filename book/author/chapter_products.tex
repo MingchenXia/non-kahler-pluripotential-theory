@@ -91,6 +91,7 @@ For intrinsicness, let $f$ be a smooth real function on $X$ and consider the dec
 
 For finite mass, this is the usual non-pluripolar product. Allowing an extended measure removes the need for a global variation bound at this stage. It does not remove the need for such a bound when a global current is required.
 
+\Needspace{12\baselineskip}
 \begin{proposition}\label{prop:ordered-contact-general}
 Let $\theta$ be any smooth real $(1,1)$-form and let $u,v\in\PSH(X,\theta)$ satisfy $u\leq v$. Then
 \[
@@ -133,6 +134,53 @@ On $D_t=\{u>-t\}$, both $u$ and $v$ are above $-t$. Taking $k>t+\sup|r|$ makes $
 Choose a Hermitian form $\Omega\geq\theta$. The fixed truncations $u_t=\max(u,-t)$ and $v_t=\max(v,-t)$ are bounded and $\Omega$-plurisubharmonic, so their signed products with background $\theta$ are defined. On $D_t$, the products just used equal the restrictions of
 $(\theta+\ddc u_t+2\epsilon\kappa)^n$ and
 $(\theta+\ddc v_t+2\epsilon\kappa)^n$. These are polynomials in $\epsilon$ whose coefficients have locally finite variation. They converge in local total variation as $\epsilon\downarrow0$, including after restriction to $\{u=v\}\cap D_t$. This proves the inequality for background $\theta$ on each finite level. Finally let $t\to+\infty$. The common pole set has zero extended mass, and the levels exhaust its complement in the equality set.
+\end{proof}
+
+\section{Density and trace inequalities}
+\label{sec:extended-density-inequalities}
+
+The mixed density inequality of \cref{lem:nonclosed-mixed-density} passes to unbounded potentials on common finite levels. Convex combinations then give a lower bound for their extended Monge--Amp\`ere measures; comparison with a smooth metric gives a lower bound for the full linear trace.
+
+\begin{lemma}\label{lem:singular-convex-density}
+Let $X$ be compact, let $\theta$ be smooth, semipositive and big, and let $\mathrm{d}V$ be a smooth positive volume form. Let $f,g\geq0$ be measurable. Suppose $u,v\in\PSH(X,\theta)$ and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u)\geq f\,\mathrm{d}V,
+ \qquad \mathrm{MA}^{\mathrm{ext}}_\theta(v)\geq g\,\mathrm{d}V.
+\]
+For $0\leq t\leq1$ we have
+\begin{equation}\label{eq:singular-convex-density}
+ \mathrm{MA}^{\mathrm{ext}}_\theta(tu+(1-t)v)
+ \geq\bigl(tf^{1/n}+(1-t)g^{1/n}\bigr)^n\,\mathrm{d}V.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The endpoints are immediate. For $0<t<1$, translate $u,v$ to be nonpositive and put $u_k=\max(u,-k)$ and $v_k=\max(v,-k)$. Semipositivity of $\theta$ makes these bounded $\theta$-plurisubharmonic functions. By locality,
+\[
+ \mathrm{MA}_\theta(u_k)\geq\mathbf1_{\{u>-k\}}f\,\mathrm{d}V,
+ \qquad
+ \mathrm{MA}_\theta(v_k)\geq\mathbf1_{\{v>-k\}}g\,\mathrm{d}V.
+\]
+Apply \cref{lem:nonclosed-mixed-density} to each mixed term in the positive expansion of $\theta_{tu_k+(1-t)v_k}^{n}$. On
+$E_k=\{u>-k\}\cap\{v>-k\}$ this gives exactly the density on the right of \eqref{eq:singular-convex-density}. On the same set, plurifine locality identifies the left side with the extended measure of $tu+(1-t)v$. Let $k\to\infty$. The sets $E_k$ exhaust the complement of the two pole sets, which have zero smooth volume. The asserted measure inequality follows by monotone convergence on Borel sets. No weak convergence of the unrestricted truncation measures was used.
+\end{proof}
+
+The same mixed inequality gives a linear trace bound for unbounded potentials. The linear current retains its mass on the pole set, whereas the extended measure discards that set.
+
+\begin{lemma}\label{lem:unbounded-gauduchon-trace-density}
+Let $X$ be compact of dimension $n\geq1$, let $\omega,\gamma$ be Hermitian forms, and let $\mathrm{d}V$ be a smooth positive volume form. If $u\in\PSH(X,\omega)$ and $0\leq g\in L^1(\mathrm{d}V)$ satisfy $\mathrm{MA}^{\mathrm{ext}}_\omega(u)\geq g\,\mathrm{d}V$, then
+\[
+ (\omega+\ddc u)\wedge\gamma^{n-1}
+ \geq(g\,\mathrm{d}V/\gamma^n)^{1/n}\gamma^n.
+\]
+\end{lemma}
+\begin{proof}
+For bounded $u$, apply \cref{lem:nonclosed-mixed-density} locally to $T_1=\omega+\ddc u$ and $T_2=\gamma$, with $k=1$. The smooth volume factors in that lemma combine to give exactly the displayed right-hand side.
+
+In general, subtract a constant so that $u\leq0$ and put $u_k=\max(u,-k)$. Positivity and locality give
+\[
+ \mathrm{MA}_\omega(u_k)\geq\mathbf1_{\{u>-k\}}g\,\mathrm{d}V.
+\]
+Apply the bounded inequality to $u_k$. Since $u_k\to u$ in $L^1$, the currents $\omega+\ddc u_k$ and their wedges with the fixed smooth form $\gamma^{n-1}$ converge weakly. The right-hand sides converge in $L^1$ to the asserted density: the pole set has zero smooth volume and $g^{1/n}$ is integrable. Passing to the limit proves the inequality, including any additional trace mass of $u$ on its pole set.
 \end{proof}
 
 \section{The bounded mass property}
