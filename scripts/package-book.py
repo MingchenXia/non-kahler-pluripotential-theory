@@ -83,6 +83,7 @@ for name in (
     "research/editorial/chapter-thirty-two-rewrite-138.md",
     "research/editorial/chapter-thirty-three-rewrite-139.md",
     "research/editorial/appendix-rewrite-140.md",
+    "research/editorial/frontmatter-rewrite-141.md",
     "research/editorial/book-writing-skill-review-20260926.md",
     "research/editorial/skills/mingchen-book-writing/SKILL.md",
     "research/editorial/skills/mingchen-book-writing/agents/openai.yaml",

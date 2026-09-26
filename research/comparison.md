@@ -1,8 +1,8 @@
 # Source-to-Hermitian comparison
 
-**Current structure (checkpoint85).** The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded from the book. Its source and historical reviews are preserved. The substantial mass-dependent theory is now in Part XII, Chapters 30–32; general envelope lemmas and measure representations are in Chapters 12–13. The detailed entries below retain their historical chapter numbers; use `READING-GUIDE.md` for the current route.
+**Current structure (checkpoint141).** The active book has 33 chapters and an appendix. General psh tools are in Chapter 1, the mass-bound theory is in Part XII (Chapters 29–31), problems are in Chapter 32 and historical sources are in Chapter 33. The former Nakamaye chapter remains excluded, with its sources preserved. The detailed entries below retain their dated scopes and historical chapter numbers; they require reconciliation with the current manuscript and do not establish whole-project completion. Use `READING-GUIDE.md` and the live chapter queues for the current route.
 
-Current disposition, 16 September 2026. Chapter numbers refer to the Hermitian manuscript. This is a coverage map, not a claim that every theorem of SGPT has been generalized. The source outline is preserved in `source-outline.md`; the earlier chronological ledger is archived in `audits/comparison-history-through-2026-09-15-0450.md`.
+Disposition begun on 16 September 2026, with dated updates below. Chapter numbers refer to the manuscript at those checkpoints. This is a coverage map, not a claim that every theorem of SGPT has been generalized. The source outline is preserved in `source-outline.md`; the earlier chronological ledger is archived in `audits/comparison-history-through-2026-09-15-0450.md`.
 
 | Original subject | Developed counterpart | Precise boundary |
 |---|---|---|

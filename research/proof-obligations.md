@@ -1,8 +1,8 @@
 # Proof boundary and remaining obligations
 
-**Current structure (checkpoint85).** The former Chapter 30, *A transcendental Nakamaye theorem*, is temporarily excluded from the book. Its source and historical reviews are preserved. The substantial mass-dependent theory is now in Part XII, Chapters 30–32; general envelope lemmas and measure representations are in Chapters 12–13. The detailed entries below retain their historical chapter numbers; use `READING-GUIDE.md` for the current route.
+**Current structure (checkpoint141).** The active book has 33 chapters and an appendix. General psh tools are in Chapter 1, the mass-bound theory is in Part XII (Chapters 29–31), problems are in Chapter 32 and historical sources are in Chapter 33. The former Nakamaye chapter remains excluded, with its sources preserved. The detailed entries below retain their dated scopes and historical chapter numbers; they require reconciliation with the current manuscript and do not establish whole-project completion. Use `READING-GUIDE.md` and the live chapter queues for the current route.
 
-Current ledger, 16 September 2026. The earlier chronological record is retained in `audits/proof-obligations-history-through-2026-09-15-0450.md`. The main theory does not assume the bounded mass property. A successful bounded audit is evidence for its specified argument and inputs; it is not formal certification or a novelty review.
+Ledger begun on 16 September 2026, with dated updates below. The earlier chronological record is retained in `audits/proof-obligations-history-through-2026-09-15-0450.md`. The main theory does not assume the bounded mass property. A successful bounded audit is evidence for its specified argument and inputs; it is not formal certification or a novelty review.
 
 ## Updated interior-regularity proof (checkpoint91)
 

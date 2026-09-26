@@ -6,7 +6,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
-| 1 | `chapter_framework.tex` | 34 | Complete first/second reads in checkpoint112, dependency relocation and seam review in checkpoint113, and the psh Liouville addition and seam review in checkpoint115. |
+| 1 | `chapter_framework.tex` | 35 | Complete first/second reads in checkpoint112, dependency relocation and seam review in checkpoint113, and the psh Liouville addition and seam review in checkpoint115. |
 | 2 | `chapter_mass.tex` | 5 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 3 | `chapter_energy.tex` | 3 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 4 | `chapter_gauduchon.tex` | 6 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
@@ -40,9 +40,9 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 32 | `chapter_research_program.tex` | 24 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint138; the settled selection question and repeated definitions are removed. |
 | 33 | `chapter_history.tex` | 21 | Complete whole-chapter historical synthesis, first/second direct reads and release checks in checkpoint139; all source keys and original internal references retained. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Complete whole-chapter rewrite, two direct revised reads and release checks in checkpoint140; smooth disk and capacity tools relocated to Chapter 1. |
-| Front matter | `preface.tex`, `conventions.tex`, title/source interfaces | — | Pending complete revision under current standards. |
+| Front matter | `preface.tex`, `conventions.tex`, title/source interfaces | — | Complete rewrite, two direct revised reads and release checks in checkpoint141; the reading route matches the active structure. |
 
-Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–139 complete the full rewrites of Chapters 7–33, including all their nested inputs. The appendix completes this pass in checkpoint140. Continue with front matter, covering mathematical orientation, conventions and source/title interfaces together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue completes the appendix in checkpoint140 and also proceeds to front matter.
+Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–139 complete the full rewrites of Chapters 7–33, including all their nested inputs. The appendix completes this pass in checkpoint140. Front matter completes the pass in checkpoint141. The next integrated review starts with the complete current Chapter 1 and its later relocated material, followed by source-disposition and proof-obligation reconciliation. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes front matter in checkpoint141 and retains each earlier review’s actual scope.
 
 Checkpoint113 also moves bounded smooth-background products, the chain rule and general Hermitian capacity estimates into Chapter 1. The changed references in later chapters are dependency repairs, not completed chapter rewrites. Chapter 6 has five sections; Chapter 10 has nine after checkpoint116. The first chapter has 23 sections and ten subsections after checkpoint124.
 
@@ -83,3 +83,5 @@ Checkpoint138 reviews the complete Chapter 32 and all three nested inputs before
 Checkpoint139 reads the complete historical chapter before editing and twice after revision. Repeated attribution paragraphs are consolidated into a connected account; exact theorem scope and source versions remain distinct. No formal proof or figure occurs in this chapter.
 
 Checkpoint140 reads the complete six-section appendix before editing and twice after revision, together with the complete affected Chapter 1 descent input and its nested restriction input. Chapter 1 now has 23 sections and twelve subsections.
+
+Checkpoint141 reads the complete preface, conventions and root document before editing and twice after revision. Both queues next review the integrated current Chapter 1; later additions were read at their individual checkpoints, which does not retroactively extend the earlier whole-chapter read.
