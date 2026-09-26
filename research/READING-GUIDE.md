@@ -1,4 +1,4 @@
-# Reading guide — checkpoint124
+# Reading guide — checkpoint125
 
 The chapter numbers below refer to the current book. Earlier review records keep the numbering of their own checkpoints. General psh tools are collected in Chapter 1. Paper sources and exact locators are collected in final Chapter 33; book citations may remain beside the mathematics.
 
@@ -26,7 +26,7 @@ Chapter 16 constructs Perron segments with explicit endpoint barriers and compar
 
 ## Geometry and section spaces
 
-Chapters 19–24 develop holomorphic sections, flags, quotient models, divisorial currents, nonclosed background classes and envelope systems. Linear compatibility on modifications does not imply continuity of nonlinear mass or realization of every proposed trace system.
+Chapter 19 develops weighted section spaces and kernels, Gauduchon and restricted-trace obstructions, a bounded section algebra and the exact curve growth formula. Its Hopf and infinite-mass examples separate section growth from Hermitian mass. Chapters 20–24 develop flags, quotient models, divisorial currents, nonclosed background classes and envelope systems. Linear compatibility on modifications does not imply continuity of nonlinear mass or realization of every proposed trace system.
 
 Chapter 25 develops Gauduchon variational volume and its dual formulations. Smooth positive attainment, semipositive attainment away from an analytic set and integrable-current attainment have different regularity consequences. Upper bounded mass and positive lower mass are independent; the elliptic example has finite upper mass and zero lower mass.
 
@@ -40,4 +40,4 @@ Chapters 29–31 form the separate part under mass assumptions. Chapter 29 devel
 
 Chapter 32 records the remaining research problems and their exact boundaries. Chapter 33 gives the historical sources, checked locators and comparisons of hypotheses for the mathematical body. The appendix treats compact complex spaces; smooth-space psh tools are referenced from Chapter 1 rather than defined again.
 
-The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 19, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.
+The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 20, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.
