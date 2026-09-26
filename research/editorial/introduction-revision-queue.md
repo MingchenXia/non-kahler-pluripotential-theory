@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint157: read and rewrite the complete present Chapter 14 and all its nested inputs, then Chapter 15. Chapter 13 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint158: read and rewrite the complete present Chapter 15 and all its nested inputs, then Chapter 16. Chapter 14 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -21,7 +21,7 @@ Current next unit after checkpoint157: read and rewrite the complete present Cha
 | 11 | `chapter_degenerate_uniqueness.tex` | 24 | Complete integrated nine-section rewrite and two direct revised mathematical/editorial reads of all thirteen inputs in checkpoint155. Extremum propagation, cofactor energy and bounded comparison lead to the projective nonuniqueness constructions. Shared companion inputs and its corrected standalone root are checked. See chapter-eleven-rewrite-155.md. |
 | 12 | `chapter_envelopes.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads of both inputs in checkpoint156. Contact support gives the shorter fixed-point proof; convexity and upward stability give finite rooftops; the duplicate big-contact theorem is replaced by its Chapter 13 reference. The bounded history interface is checked. See chapter-twelve-rewrite-156.md. |
 | 13 | `chapter_prescribed_equations.tex` | 49 | Complete integrated rewrite and two direct revised mathematical/editorial reads of all 33 inputs in checkpoint157. Weighted lower semicontinuity moves to Chapter 6; duplicate continuity, carrier and normalizer arguments are consolidated; interior interpolation retains full-sequence convergence. See chapter-thirteen-rewrite-157.md. |
-| 14 | `chapter_normalization.tex` | 20 | Complete chapter and all nine final nested-input rewrite, first/second direct reads and release checks in checkpoint120; includes Q2.8 selection. |
+| 14 | `chapter_normalization.tex` | 18 | Complete integrated eight-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint158. Scalar properties and adjoint constructions are grouped; duplicate definitions and arguments are replaced by their existing internal results. All 56 labels remain. See chapter-fourteen-rewrite-158.md. |
 | 15 | `chapter_igood.tex` | 9 | Complete chapter and all three nested-input rewrite, first/second direct reads and release checks in checkpoint121. Checkpoint149 relocates the capacity counterexample here and reads the entire changed completion root input twice; the nested projective examples are unchanged. |
 | 16 | `chapter_rays.tex` | 5 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint122; general strip convexity and gluing belong to Chapter 1. |
 | 17 | `chapter_testcurves.tex` | 4 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint123; includes the nested figure; general Legendre and radial psh results belong to Chapter 1. |
@@ -119,3 +119,5 @@ Checkpoint155 completes the whole Chapter 11 rewrite, including all twelve neste
 Checkpoint156 completes the whole Chapter 12 rewrite, including its bounded-contact input. The next complete chapter is Chapter 13.
 
 Checkpoint157 completes the integrated Chapter 13 rewrite, including all 32 nested inputs. The next complete chapter is Chapter 14.
+
+Checkpoint158 completes the integrated Chapter 14 rewrite, including all nine nested inputs. The next complete chapter is Chapter 15.

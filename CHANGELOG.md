@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint158 — 26 September 2026
+
+Chapter 14 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all ten inputs. Scalar order, concavity and bounded L1 continuity form one section; directional derivatives, generic uniqueness and Gauduchon identification are grouped together. The short generic approximation corollary is merged into the uniqueness theorem with its label retained. The critical scalar norm uses the existing strict-barrier subsolution estimate, and centered compactness uses the preceding normalized exponential theorem with an explicit dominated-convergence step. Repeated definitions, settings and recaps are removed; unresolved adjoint and singularity-comparison questions accompany the relevant results.
+
+The ten-input house audit has zero errors and one inherited chapter-label-prefix warning. All fifty-six original labels remain and resolve; non-book citations remain in Chapter 33. The 802-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 62 selected book pages pass visual review across three renders. The companion is byte-identical to checkpoint157. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-fourteen-rewrite-158.md, build-snapshot-158.json and source-package-portability-158.json.
+
+Continue with the complete present Chapter 15 and all its nested inputs, then Chapter 16. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint157 — 26 September 2026
 
 Chapter 13 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all 33 inputs. Bounded equations, symmetric selection and big-background contact results are grouped together; ordinary-type existence precedes arbitrary-big minimal-type existence. Weighted lower semicontinuity and its full proof move to Chapter 6. The duplicate relative-continuity statement is replaced by the theorem at its Chapter 30 proof. A single relative measure representation yields the bounded case, one comparison proves the normalizer bounds, and an extracted Lp scalar-continuity lemma serves both approximation arguments. The interior interpolation propositions are merged with full-sequence convergence retained and the parameter order made explicit. Repeated definitions, settings and recaps are removed.

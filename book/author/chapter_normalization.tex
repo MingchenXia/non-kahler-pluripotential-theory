@@ -1,13 +1,13 @@
 \chapter{Normalization and weak adjoint measures}
 \label{chap:normalization}
 
-The scalar multiplying a prescribed Monge--Amp\`ere density is unique even when the potential is not. Varying the logarithmic density therefore gives a well-defined functional. Mixed products and domination make it concave; its supporting functionals determine probability measures. Continuity of the scalar then controls their concentration and produces a dual variational problem. In the minimal singularity type, these probabilities also identify the potential selected by a vanishing exponential parameter.
+The prescribed equation determines a unique scalar even when it has several normalized potentials. As the logarithmic density varies, this scalar defines a concave functional whose supporting probabilities extend the smooth Gauduchon adjoint. Its convex dual controls concentration through entropy. For a fixed $L^p$ density, $p>1$, in minimal type, the supporting probabilities also normalize a greatest critical subsolution, which is the limit selected by the exponential equations.
 
-Fix a connected compact complex manifold $X$ of dimension $n$ and a smooth positive volume form $\mathrm{d}V$. We first take $\theta$ smooth, semipositive and big, and a model reference $\varphi$ satisfying \eqref{eq:als-model-condition}. The equation is supplied by \cref{thm:als-prescribed-lp}. Function spaces are real, and their norms use $\mathrm{d}V$. The final selection argument will allow an arbitrary smooth big background.
+Fix a smooth positive volume form $\mathrm{d}V$. Until \cref{sec:vanishing-parameter-selection}, take $\theta$ smooth, semipositive and big, and a model reference $\varphi$ satisfying \eqref{eq:als-model-condition}. Function spaces are real, and their norms use $\mathrm{d}V$.
 
 \section{The scalar functional}\label{sec:normalization-scalar}
 
-Changing the density changes the scalar in the equation. Comparison determines the direction of this change, and multiplication of the density by a constant gives an exact translation rule.
+Comparison makes the scalar decrease as the density increases. Mixed products strengthen this order to concavity in the logarithmic density; compactness of solutions then gives continuity under uniformly bounded $L^1$ perturbations.
 
 For a bounded real measurable function $F$, \cref{thm:als-prescribed-lp} gives $u\sim\varphi$ and a unique $c_\varphi(F)>0$ such that
 \begin{equation}\label{eq:relative-normalization}
@@ -18,7 +18,7 @@ Define
 \[
  B_\varphi(F)=\log c_\varphi(F).
 \]
-Functions equal $\mathrm{d}V$-almost everywhere are identified. Scalar uniqueness makes $B_\varphi$ well defined and attaches it to the prescribed ordinary type, even when the normalized potential is not unique.
+Scalar uniqueness attaches $B_\varphi$ to the ordinary type of $\varphi$.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:relative-normalization-order}
@@ -48,9 +48,7 @@ Replacing $F$ by $F+a$ and the constant by $\mathrm{e}^{-a}c_\varphi(F)$ leaves 
 
 For a smooth real $h$, replacing $\theta$ by $\theta+\ddc h$ and each potential by $u-h$ preserves the current and the prescribed ordinary type. Transporting the solution problem in this way leaves its scalar unchanged.
 
-\section{Concavity from mixed products}
-
-A convex combination of two solutions stays in the prescribed ordinary type. The mixed density inequality of \cref{lem:singular-convex-density} bounds its measure from below; strict domination then compares that bound with the scalar for the interpolated density.
+A convex combination of two solutions stays in the prescribed ordinary type. Its mixed density lower bound gives concavity.
 
 \begin{theorem}\label{thm:relative-normalization-concavity}
 The functional $B_\varphi$ is concave on the real space $L^\infty(\mathrm{d}V)$: for $F,G$ in that space,
@@ -75,9 +73,7 @@ The averaged potential has ordinary type $\varphi$. If $c_\varphi(H)<D$, its mea
 
 For smooth Hermitian data, this concavity agrees with the differential calculation of \cref{thm:b-derivatives}.
 
-\section{Continuity for bounded densities}
-
-To rule out concentration of a supporting measure on a set of zero volume, we need continuity under bounded changes of density that tend to zero in $L^1$. The relative estimate gives common barriers for the solutions, and their common measure bound identifies every limiting scalar.
+Uniformly bounded logarithmic densities give common barriers for the solutions. Their compactness identifies the limiting scalar even when the logarithmic densities converge only in $L^1$.
 
 \begin{theorem}\label{thm:normalization-bounded-lone}
 If $F_j,F$ are uniformly bounded and $F_j\to F$ in $L^1(\mathrm{d}V)$, then
@@ -148,9 +144,9 @@ Take a weakly convergent subsequence and fix $G\in C(X)$. In
 uniform continuity of $B_\varphi$, uniform convergence of $F_j$ and weak convergence of the probabilities allow passage to the limit. The resulting inequality holds for every $G$, so the limiting measure is in $\mathcal A_\varphi(F)$. If that set is a singleton, every convergent subsequence has the same limit; compactness proves the final assertion.
 \end{proof}
 
-\section{Directional derivatives and the smooth identification}
+\subsection{Directional derivatives}
 
-The range of integrals against the supporting probabilities is exactly the gap between the two directional derivatives. A singleton therefore identifies a derivative, and the smooth equation identifies that measure with the Gauduchon adjoint. For $F,G\in C(X)$, write $D^+B_\varphi(F)[G]$ and $D^-B_\varphi(F)[G]$ for the limits of the difference quotient as $t\downarrow0$ and $t\uparrow0$, respectively.
+The range of integrals against the supporting probabilities is exactly the gap between the two directional derivatives. Thus differentiability is equivalent to uniqueness of the supporting probability. For $F,G\in C(X)$, write $D^+B_\varphi(F)[G]$ and $D^-B_\varphi(F)[G]$ for the limits of the difference quotient as $t\downarrow0$ and $t\uparrow0$, respectively.
 
 \begin{proposition}\label{prop:normalization-directional}
 The one-sided derivatives exist, and
@@ -171,13 +167,20 @@ Conversely choose $\nu_t\in\mathcal A_\varphi(F+tG)$ and apply its supporting in
 If the set is a singleton, the two derivatives coincide for every $G$ and equal the displayed continuous linear functional. Conversely, equality of the two one-sided derivatives for every $G$ forces all supporting probabilities to have identical integrals against every continuous function. The Riesz theorem makes them identical.
 \end{proof}
 
+\input{author/section_generic_adjoints}
+
+\Needspace{16\baselineskip}
+\subsection{Gauduchon adjoints}
+
+For a smooth Hermitian equation, differentiating the scalar identifies the supporting probability with the adjoint measure of the linearized operator.
+
 \begin{theorem}
 \label{thm:normalization-gauduchon-recovery}
-Let $\theta=\omega$ be Hermitian, let $\varphi=0$, and let $F$ be smooth. If $u$ is the smooth normalized solution of \eqref{eq:relative-normalization}, put $\omega_u=\omega+\ddc u$. Let $\rho_u$ be the positive smooth Gauduchon factor with $\ddc(\rho_u\omega_u^{n-1})=0$ and $\int_X\rho_u\omega_u^n=1$, and put $\mathrm{d}\mu_u=\rho_u\omega_u^n$. Then
+Let $\theta=\omega$ be Hermitian, let $\varphi=0$, and let $F$ be smooth. Let $u$ be the smooth normalized solution of \eqref{eq:relative-normalization}, and let $\mu_u$ be its Gauduchon adjoint probability from \cref{prop:adjoint-gauduchon}. Then
 \[
  \mathcal A_0(F)=\{\mu_u\}.
 \]
-For $n=1$ the same assertion uses $\mu_u=\omega_u/\int_X\omega_u$.
+For $n=1$, put $\mu_u=(\omega+\ddc u)/\int_X\omega$.
 \end{theorem}
 \begin{proof}
 In dimensions at least two, \cref{thm:b-derivatives} shows that for every smooth real $G$,
@@ -189,26 +192,16 @@ Scalar uniqueness identifies its normalizing constant with the present $B_0$. Fo
 $c_0(F)=\int_X\omega/\int_X\mathrm{e}^F \mathrm{d}V$, whose logarithmic derivative gives the stated measure directly.
 \end{proof}
 
-Thus for a continuous $F$ in the Hermitian case, smooth approximations $F_j\to F$ uniformly produce Gauduchon adjoint probabilities whose weak cluster points all belong to $\mathcal A_0(F)$ and are absolutely continuous. If $\mathcal A_0(F)$ is a singleton, the weak limit is independent of this approximation. This is a conditional answer to the question in \cref{chap:gauduchon}, for approximations controlled through the logarithmic density.
+Thus for a continuous $F$ in the Hermitian case, smooth approximations $F_j\to F$ uniformly produce Gauduchon adjoint probabilities whose weak cluster points all belong to $\mathcal A_0(F)$ and are absolutely continuous. If $\mathcal A_0(F)$ is a singleton, the weak limit is independent of this approximation. In particular this holds at every $F\in\mathscr U_0$. Uniqueness at every continuous density remains unresolved in this Hermitian setting, and likewise for the general singular references considered above.
 
 In dimension $n\geq2$, the Hermitian zero-reference case has a quantitative strengthening: \cref{cor:gaud-adjoint-lq} gives uniform $L^q$ bounds for all these densities when $\|F\|_\infty$ is bounded and $1<q<n/(n-1)$. It includes $q=n/(n-1)$ under the positive lower-volume hypothesis. Its proof uses the finite Gauduchon-current formulation of \cref{chap:gauduchon-variational-volume}; no such bound for an arbitrary singular reference is inferred here.
 
-Let $\mathcal D_\omega^0$ be the closure of bounded density roots in the norm of \cref{subsec:bounded-root-approximation}. For an integrable nonnegative density $f$ whose root belongs to $\mathcal D_\omega^0$, \cref{prop:integrable-threshold-adjoints} will give a similar representation for $F\mapsto\log b_\omega(\mathrm{e}^Ff)$. That functional is defined by a subsolution threshold; its construction does not require an exact equation for $f$ or prescribe a singularity type.
+A weak linearized operator requires more than a supporting probability. In this Hermitian zero-reference setting, \cref{thm:gaud-current-all-adjoints} represents each supporting probability by a determinant-weighted positive $\ddc$-closed current. Identifying that current with a scalar multiple of the weak power $\omega_u^{n-1}$ requires a justified product and compatibility with approximation.
+
+For nonzero $0\leq f\in L^1(\mathrm{d}V)$ with $f^{1/n}\in\mathcal D_\omega^0$ as in \cref{subsec:bounded-root-approximation}, \cref{prop:integrable-threshold-adjoints} gives a similar representation for $F\mapsto\log b_\omega(\mathrm{e}^Ff)$. This functional comes from the subsolution threshold rather than an equation in a prescribed singularity type.
 
 \input{author/section_normalization_dual}
 
 \input{author/section_reference_comparison}
 
-\input{author/section_generic_adjoints}
-
 \input{author/section_vanishing_parameter_selection}
-
-\section{Differentiability and dependence on the singularity type}
-
-Return to the semipositive big background and model reference of \cref{sec:normalization-scalar}. The first question is whether $\mathcal A_\varphi(F)$ is a singleton for every continuous $F$ under \eqref{eq:als-model-condition}. Equivalently, is $B_\varphi$ G\^ateaux differentiable everywhere on $C(X)$? We have proved this for smooth data in a Hermitian background, for continuous data in the closed K\"ahler case, and on a dense $G_\delta$ for every fixed reference above. These assertions do not settle uniqueness at every continuous density in a general Hermitian background or for a singular reference.
-
-A second question concerns a weak linearized operator at a solution $u$ whose adjoint annihilates the supporting probability. In a Hermitian background and with zero reference, \cref{thm:gaud-current-all-adjoints} will represent every supporting probability by a determinant-weighted positive $\ddc$-closed current. Identifying such a current with a scalar multiple of the weak power $\theta_u^{n-1}$ is a further issue: the product and its compatibility with approximation must first be justified.
-
-A third question is how the sets $\mathcal A_\varphi(F)$ vary when the prescribed singularity type changes. By \cref{cor:prescribed-dual-entropy}, bounded logarithmic densities and a common smaller-background parameter give uniform entropy and compactness even for varying model references. When the smaller-background parameters tend to zero, \cref{cor:small-reference-adjoint-limits} identifies every limit with a zero-reference supporting probability. \Cref{prop:normalization-distance-stability} gives stability under uniform convergence of the scalar functionals, even for bounded measurable logarithmic densities. Relating this condition directly to the ordinary singularities or their multiplier ideals remains a separate question.
-
-These questions concern the supporting probabilities obtained from the scalar equation. Their role differs from that of an energy on the space of potentials: the obstruction in \cref{chap:energy} still applies to a primitive of the Monge--Amp\`ere one-form.
