@@ -80,6 +80,7 @@ for name in (
     "research/editorial/chapter-twenty-nine-rewrite-135.md",
     "research/editorial/chapter-thirty-rewrite-136.md",
     "research/editorial/chapter-thirty-one-rewrite-137.md",
+    "research/editorial/chapter-thirty-two-rewrite-138.md",
     "research/editorial/supplied-papers-integration-queue.md",
     "research/supplied-papers-20260925.json",
     "research/rethlas/verification/inputs/hopf-lp-normalization.md",
