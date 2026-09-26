@@ -1,6 +1,14 @@
-# Current research status — 26 September 2026
+# Current research status — 27 September 2026
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
+
+## Checkpoint177 — Chapter 31, projection and weighted addition
+
+Chapter 31 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all eleven author inputs. Relative projection follows minimal-class existence, supplying the initial supersolution before weighted addition fills its deficit. Domination and fixed-measure convergence, the moment estimates, and the limiting/addition arguments are grouped by their proof roles. The first-moment proof chooses one representative with mass close to its upper volume and uses it in both contradiction arguments. The higher-moment normalization follows directly from the envelope bound. All twenty-six formal statements are byte-identical, all twenty-five proofs and fifty-eight labels remain, and twenty proof blocks are byte-identical. Eight sections and five subsections replace thirteen sections. Ten chapter inputs are edited; the final relative-Lp input is unchanged but fully reread. No other author input is edited.
+
+The house audit has zero errors and one inherited chapter-label warning. The 809-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 62 selected final pages pass visual review: 8 changed images were directly inspected and 54 match the preceding inspected render byte for byte. The first render included direct inspection of 40 changed pages. Both outputs rebuild from a fresh empty source-package extraction with identical page text; the companion is byte-identical to checkpoint176. There are 33 active chapters and 221 author inputs. The 190 historical verifier reports and three hidden sources remain unchanged. Existing source checks are reused at their recorded scopes; no new independent verification is claimed.
+
+Continue with the complete present Chapter 32 and all its nested inputs, then Chapter 33. The broader writing and research goal remains active and incomplete.
 
 ## Checkpoint176 — Chapter 30 and relative measure equations
 

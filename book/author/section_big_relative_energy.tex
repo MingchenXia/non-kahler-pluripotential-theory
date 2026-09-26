@@ -1,8 +1,8 @@
 \Needspace{20\baselineskip}
-\section{A relative first-moment estimate}
+\section{Relative moments}
 \label{sec:big-relative-first-moment}
 
-A relative first moment prevents a sequence from collapsing and keeps its limits in $\mathcal E_\varphi$. The proof compares rooftop masses with the upper volume of one ordinary type, then optimizes over equivalent reference potentials. For a real number $t$, write $t_+=\max(t,0)$.
+A relative first moment prevents a sequence from collapsing and keeps its limits in $\mathcal E_\varphi$. Choose a representative whose mass is close to the upper volume of its ordinary type. Comparing rooftop masses with this fixed measure then contradicts collapse. For a real number $t$, write $t_+=\max(t,0)$.
 
 \begin{proposition}\label{prop:big-relative-first-moment}
 Fix $w\in\mathcal E_\varphi$. Suppose $u_j\in\mathcal E_\varphi$, $u_j\leq w$, and
@@ -14,7 +14,7 @@ Then $\sup_Xu_j$ is bounded below. If $u_j\to u\in\PSH(X,\theta)$ in $L^1(X)$, t
 The same conclusions hold if $u_j\leq w$ is replaced by a common upper bound $u_j\leq\varphi+C$ and the integral is replaced by $\int_X(w-u_j)_+\,\mu_{u_j}$.
 \end{proposition}
 \begin{proof}
-We first treat $u_j\leq w$. Choose any $w'\simeq w$ with $w'\leq w$, and let $p_j=P_\theta(u_j,w')$. These envelopes belong to $\mathcal E_\varphi$. Contact support and ordered contact imply
+We first treat $u_j\leq w$. Since $\overline{\operatorname{vol}}_\theta(w)=M$, choose $w'\simeq w$ with $\mu_{w'}(X)>M-\ell/2$. Translate $w'$ so that $w'\leq w$, and put $p_j=P_\theta(u_j,w')$. These envelopes belong to $\mathcal E_\varphi$. Contact support and ordered contact imply
 \begin{equation}\label{eq:big-energy-roof-bound}
  \int_X(w'-p_j)\,\mu_{p_j}
  \leq\int_X(w-u_j)\,\mu_{u_j}\leq K.
@@ -34,10 +34,10 @@ If a subsequence had $\sup_Xu_j\to-\infty$, then also $\sup_Xp_j\to-\infty$. Spl
  \ell\leq\mu_{p_j}(X)
  \leq\frac Ks+\mu_{w'}(\{p_j>w'-s\})+M-\mu_{w'}(X).
 \]
-For fixed $s$, the middle term tends to zero, since $w'$ is finite off a pluripolar set and $\mu_{w'}$ is finite and non-pluripolar. Let $j\to\infty$ and then $s\to\infty$. This gives $\ell\leq M-\mu_{w'}(X)$ for every $w'\simeq w$ lying below $w$. Constant translations do not change mass, so the supremum of these masses is $\overline{\operatorname{vol}}_\theta(w)=M$. This contradicts $\ell>0$ and proves the first assertion.
+For fixed $s$, the middle term tends to zero, since $w'$ is finite off a pluripolar set and $\mu_{w'}$ is finite and non-pluripolar. Let $j\to\infty$ and then $s\to\infty$. This gives $\ell\leq M-\mu_{w'}(X)<\ell/2$, a contradiction, and proves the first assertion.
 
 \Needspace{8\baselineskip}
-Now suppose $u_j\to u$ in $L^1$. Then $u\leq w\preceq\varphi$. Fix $b>1$ and suppose that $Q_b(u,w)$ is not genuine. Replacing $w$ by any boundedly equivalent $w'$ cannot change nonemptiness of its convex competitor family: a constant translation of a competitor compensates for the bounded change. Keep $p_j=P_\theta(u_j,w')$ and set
+Now suppose $u_j\to u$ in $L^1$. Then $u\leq w\preceq\varphi$. Fix $b>1$ and suppose that $Q_b(u,w)$ is not genuine. Since $w-w'$ is bounded, a constant translation of a competitor shows that $Q_b(u,w')$ is not genuine either. Keep the same $p_j$ and set
 \[
  h_j=Q_b(p_j,w')\in\mathcal E_\varphi.
 \]
@@ -58,12 +58,13 @@ Apply \eqref{eq:big-energy-max-bound} with $a=h_j$ and $t=bs$ to the complementa
      \mu_{w'}(\{h_j>w'-bs\})+M-\mu_{w'}(X).
 \]
 \Needspace{7\baselineskip}
-The same successive limits and optimization over $w'\simeq w$ give a contradiction. Therefore $Q_b(u,w)$ is genuine for every $b>1$. The resulting convex inequalities and \cref{thm:volume-monotonicity,prop:volume-addition} give
+First let $j\to\infty$ and then $s\to\infty$. The chosen mass of $w'$ again gives $\ell<\ell/2$, a contradiction. Therefore $Q_b(u,w)$ is genuine for every $b>1$. The resulting convex inequalities and \cref{thm:volume-monotonicity,prop:volume-addition} give
 \[
  (1-b^{-1})^n M\leq\overline{\operatorname{vol}}_\theta(u)\leq M.
 \]
 Let $b\to\infty$. The upper volumes are equal, hence $u\in\mathcal E_\varphi$.
 
+\Needspace{6\baselineskip}
 For the last assertion put $q_j=P_\theta(u_j,w)$. Contact gives
 \[
  \int_X(w-q_j)\,\mu_{q_j}
@@ -93,7 +94,7 @@ Apply the first-moment proposition with reference $u$ and its one-sided version.
 \]
 and the same proposition puts $p_j$ in $\mathcal E_\varphi$. Its increasing canonical limit $p$ belongs to that class by upward stability, since $p_1\leq p\leq u\preceq\varphi$. The inequality $p\leq u$ follows from the almost-everywhere convergence of the extracted sequence.
 
-Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ converge in capacity by \cref{lem:monotone-psh-capacity}, with the genuine lower bound $p_1$. Apply \cref{lem:big-weighted-lsc} to \eqref{eq:big-self-measure-roofs}, using the bounded weights $\min(1,|p_{j,N}-u|)$ and then $\min(1,|p_j-u|)$. Their capacity convergence follows by first discarding deep sublevels of $p_1$ and $u$ and then using the Lipschitz function $\min(1,|x-y|)$ on finite values. The result is
+Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ converge in capacity by \cref{lem:monotone-psh-capacity}, with the genuine lower bound $p_1$. Apply \cref{lem:weighted-extended-lsc} to \eqref{eq:big-self-measure-roofs}, using the bounded weights $\min(1,|p_{j,N}-u|)$ and then $\min(1,|p_j-u|)$. Their capacity convergence follows by first discarding deep sublevels of $p_1$ and $u$ and then using the Lipschitz function $\min(1,|x-y|)$ on finite values. The result is
 \[
  \int_X\min(1,|p-u|)\,\mu_p=0.
 \]
