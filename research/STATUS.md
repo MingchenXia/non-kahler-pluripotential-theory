@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint182 — Source disposition and proof boundaries
+
+The source-disposition and proof-obligation ledgers now describe checked checkpoint181: nineteen source inputs in eighteen subjects, 33 active chapters, 221 author inputs, all 23 formal questions and all ten supplied papers. Both revised ledgers received two complete direct reads. Their predecessors are archived verbatim. Current labels and compiled locations replace obsolete references; earlier source-proof reviews retain their exact scopes.
+
+The original four-paper archive has expanded to ten PDFs. Every member matches a previously inventoried and integrated source; the three later ZIP archives and standalone cone PDF also match their recorded checksums. No new source version needs integration. Historical inventories remain unchanged.
+
+The ledgers distinguish internal arguments, classical inputs, specialized imported proofs and research questions. The next writing unit is the Vaisman prescribed-volume theorem, Theorem 28.4.1, followed by the parabolic maximal-time input to Corollary 25.17.1. The singularity/I-goodness and trace program remains active. No manuscript, bibliography or PDF changes here, and no fresh whole-book or independent proof audit is claimed.
+
+Current labels, source coverage, question statements, local links and archival copies are checked. Both PDFs and all manuscript/build payloads remain identical to checked checkpoint181; the refreshed source archive is compared with its fresh reconstruction. The 190 historical verifier reports, three hidden sources and historical source inventories are unchanged. This is a research-record update, not a new manuscript build. See research/editorial/source-ledger-review-182.md and research/audits/source-ledger-182.json. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint181 — Front matter and singularity recovery
 
 The front matter completes two full revised direct reads. The preface connects singularity comparison with analytic-envelope approximation, damping, equation normalization and geometric realization. It distinguishes density in the ideal-envelope metric from goodness, and identical scalar functionals from recovery of divisorial types. Gauduchon identification of scalar variation is confined to the smooth positive regime. The reading route includes the projective-cone appendix. Conventions, source attribution, title and subtitle remain; only the draft date changes in the root document. No mathematical body input, bibliography, active inclusion or label number changes.

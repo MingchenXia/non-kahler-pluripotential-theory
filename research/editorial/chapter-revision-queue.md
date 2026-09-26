@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint181: reconcile the integrated source-disposition and proof-obligation records with the present manuscript. The complete front matter has two revised direct reads and release checks. Earlier chapter and source reviews retain their historical scopes.
+Current next unit after checkpoint182: reconstruct the imported Vaisman prescribed-volume theorem (Theorem 28.4.1), then the parabolic maximal-time input to Corollary 25.17.1. The source and proof ledgers now match checked checkpoint181; their two direct reads and source-identity checks do not enlarge earlier proof-review scopes. The singularity/I-goodness and trace research program remains active.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -123,3 +123,5 @@ Checkpoint179 completes the integrated Chapter 33 rewrite. The next complete uni
 Checkpoint180 completes the integrated appendix rewrite, including its projective-cone input. The next unit is complete front matter, followed by source-disposition and proof-obligation reconciliation.
 
 Checkpoint181 completes the integrated front matter. The next unit reconciles source dispositions and proof obligations; this editorial cycle does not by itself establish whole-book completion.
+
+Checkpoint182 reconciles all source subjects, ten supplied results and 23 formal questions with current labels and proof boundaries. The next unit is the complete Vaisman prescribed-volume argument; see source-ledger-review-182.md. No manuscript changes or new full-book proof audit occur in this record update.
