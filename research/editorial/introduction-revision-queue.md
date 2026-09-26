@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint162: read and rewrite the complete present Chapter 18 and all its nested inputs, then Chapter 19. Chapter 17 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint163: read and rewrite the complete present Chapter 19 and all its nested inputs, then Chapter 20. Chapter 18 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -25,11 +25,11 @@ Current next unit after checkpoint162: read and rewrite the complete present Cha
 | 15 | `chapter_igood.tex` | 10 | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint159. Envelope comparisons are consolidated; background mass, curve completion and analytic approximation form the subsequent arguments. All 25 labels remain. See chapter-fifteen-rewrite-159.md. |
 | 16 | `chapter_rays.tex` | 4 | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint161; no nested inputs. Endpoint control is grouped with subgeodesic calculus; explicit secant inequalities give the same-type time estimate. All 13 labels and 7 statement/proof pairs remain. See chapter-sixteen-rewrite-161.md. |
 | 17 | `chapter_testcurves.tex` | 4 | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint162, with full nested-figure review. Dominated convergence simplifies initial attainment; the punctured-disc maximum principle gives the projective envelope. All 10 labels, 5 statements and 3 proofs remain. See chapter-seventeen-rewrite-162.md. |
-| 18 | `chapter_trace_data.tex` | 11 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint124; general restriction, modification continuity and divisorial domination belong to Chapter 1. |
+| 18 | `chapter_trace_data.tex` | 10 | Complete integrated seven-input rewrite and two direct revised mathematical/editorial reads in checkpoint163. Trace calculus and additivity are merged before curve realization; established domination and BMP estimates simplify proofs. All 34 labels remain. See chapter-eighteen-rewrite-163.md. |
 | 19 | `chapter_sections.tex` | 8 | Complete whole-chapter and both nested-input rewrite, first/second direct reads and release checks in checkpoint125; general psh and Gauduchon inputs are internal references. |
 | 20 | `chapter_flag_bodies.tex` | 7 | Complete whole-chapter and all three nested-input rewrite, first/second direct reads and release checks in checkpoint126; includes the inline Hopf diagram and corrected semigroup source attribution. |
 | 21 | `chapter_hopf_reduction.tex` | 4 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint127; general bounded-product pullback is in Chapter 1; the converse Hopf positivity implication is proved. |
-| 22 | `chapter_divisorial_models.tex` | 8 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint128; general global potentials and canonical divisorial ordinary types belong to Chapter 1. |
+| 22 | `chapter_divisorial_models.tex` | 8 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint128; general global potentials and canonical divisorial ordinary types belong to Chapter 1. Checkpoint163 repairs only the merged-calculus reference in the compatibility proof. |
 | 23 | `chapter_nonclosed_bclasses.tex` | 5 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint129; one affine setup and precise internal foundation references replace repeated definitions. |
 | 24 | `chapter_envelope_systems.tex` | 6 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint130; the general periodic subharmonic lemma moves to Chapter 1 and repeated setups are removed. |
 | 25 | `chapter_gauduchon_variational_volume.tex` | 39 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint131; three general results centralized in Chapter 1 and repeated definitions removed. Checkpoint143 adds two reads of the new sections or changed interfaces, at the bounded scope in supplied-three-papers-review-143.md.  Checkpoint146 relocates the mass-invariance proof and rereads the complete affected mass-extremum input twice; four further inputs receive pagination-only checks. |
@@ -129,3 +129,5 @@ Checkpoint160 integrates the finite restricted-invariant paper at bounded scope 
 Checkpoint161 completes the integrated Chapter 16 rewrite. The next complete chapter is Chapter 17.
 
 Checkpoint162 completes the integrated Chapter 17 rewrite. The next complete chapter is Chapter 18.
+
+Checkpoint163 completes the integrated Chapter 18 rewrite. The next complete chapter is Chapter 19.
