@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint156 — Chapter 12, contact sets and relative envelope classes
+
+Chapter 12 completes its whole six-section rewrite, including the bounded-contact input, and two complete direct revised mathematical/editorial reads. The fixed-point measure estimate follows directly from contact with zero; stretch closure uses the bs competitor; finite rooftop stability follows from convexity and upward stability; and the infinite-mass example uses the existing common-envelope theorem. The duplicate big-background contact statement is replaced by a reference to Chapter 13. Repeated definitions and roadmap prose are removed, and the bounded history interface describes the revised proof.
+
+The three changed author inputs have zero house-audit errors and sixteen inherited warnings, with no new diagnostics. Non-book citations remain in Chapter 33. The 804-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 38 selected book pages pass visual review. The companion is byte-identical to checkpoint155. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-twelve-rewrite-156.md, build-snapshot-156.json and source-package-portability-156.json.
+
+Continue with the complete present Chapter 13 and all its nested inputs, then Chapter 14. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint155 — Chapter 11, degenerate uniqueness and separating zero sets
 
 Chapter 11 completes its whole nine-section rewrite, including all twelve nested inputs, and two complete direct revised mathematical/editorial reads. The density threshold follows the extremum theorem, the unweighted identity belongs to the cofactor argument, and the radial continuum belongs to the first example. Earlier foundation and mass results replace duplicate proofs. The contact, propagation, Sobolev, bounded-energy and scalar-ODE arguments retain their full hypotheses and proofs. The companion note supplies its own projective mass bound and replaces its obsolete bounded-uniqueness question by the established conclusion.

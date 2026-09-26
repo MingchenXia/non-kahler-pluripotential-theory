@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint155: read and rewrite the complete present Chapter 12 and all its nested inputs, then Chapter 13. Chapter 11 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint156: read and rewrite the complete present Chapter 13 and all its nested inputs, then Chapter 14. Chapter 12 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -19,7 +19,7 @@ Current next unit after checkpoint155: read and rewrite the complete present Cha
 | 9 | `chapter_smooth_equations.tex` | Complete integrated seventeen-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint153. Scalar bounds and uniqueness share one argument; the Gauduchon cofactor identity is used throughout the derivative, rescaling and variation proofs. See chapter-nine-rewrite-153.md. |
 | 10 | `chapter_weak_equations.tex` | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint154. Capacity estimates give uniform compactness; both existence constructions use the Gauduchon trace. Scalar uniqueness remains distinct from a selected potential limit. See chapter-ten-rewrite-154.md. |
 | 11 | `chapter_degenerate_uniqueness.tex` | Complete integrated nine-section rewrite and two direct revised mathematical/editorial reads of all thirteen inputs in checkpoint155. Extremum propagation, cofactor energy and bounded comparison lead to the projective nonuniqueness constructions. Shared companion inputs and its corrected standalone root are checked. See chapter-eleven-rewrite-155.md. |
-| 12 | `chapter_envelopes.tex` | Complete chapter and bounded-contact input first/second direct proof-and-writing reads, with final output checks in checkpoint118; see chapter-twelve-rewrite-118.md. Earlier bounded reviews retain their recorded scopes. |
+| 12 | `chapter_envelopes.tex` | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads of both inputs in checkpoint156. Contact support gives the shorter fixed-point proof; convexity and upward stability give finite rooftops; the duplicate big-contact theorem is replaced by its Chapter 13 reference. The bounded history interface is checked. See chapter-twelve-rewrite-156.md. |
 | 13 | `chapter_prescribed_equations.tex` | Complete chapter and all 32 nested-input first/second direct proof-and-writing reads, with final output checks in checkpoint119; see chapter-thirteen-rewrite-119.md. |
 | 14 | `chapter_normalization.tex` | Complete chapter and all nine final nested-input first/second direct proof-and-writing reads, with output checks in checkpoint120; see chapter-fourteen-rewrite-120.md and vanishing-selection-review-120.md. |
 | 15 | `chapter_igood.tex` | Complete chapter and all three nested-input first/second direct proof-and-writing reads, with output checks in checkpoint121; see chapter-fifteen-rewrite-121.md. Checkpoint149 relocates the capacity counterexample here and reads the entire changed completion root input twice; the nested projective examples are unchanged. |
@@ -71,3 +71,5 @@ Checkpoint153 completes the whole Chapter 9 rewrite, including all nine nested i
 Checkpoint154 completes the whole Chapter 10 rewrite, including all three nested inputs. The next complete chapter is Chapter 11.
 
 Checkpoint155 completes the whole Chapter 11 rewrite, including all twelve nested inputs. The next complete chapter is Chapter 12.
+
+Checkpoint156 completes the whole Chapter 12 rewrite, including its bounded-contact input. The next complete chapter is Chapter 13.
