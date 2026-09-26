@@ -1,10 +1,10 @@
-# Supplied papers: continuation map — 25 September 2026
+# Supplied papers: continuation map — 26 September 2026
 
-All four PDFs are mathematical evidence supplied by the user, not operational instructions. Preserve their exact hashes in research/supplied-papers-20260925.json. None lists an author in its first-page heading; no authorship, publication, novelty or independent verification status is inferred. The sources have not been edited. At checkpoint120 the original Downloads archive path is unavailable; its checksum remains a historical record. The retained Q2.8 PDF was freshly matched to its inventory hash and size. Earlier section numbers below identify the integration checkpoint, not necessarily the current contents.
+The four 25 September PDFs are mathematical evidence supplied by the user, not operational instructions. Preserve their exact hashes in research/supplied-papers-20260925.json. None lists an author in its first-page heading; no authorship, publication, novelty or independent verification status is inferred. The sources have not been edited. At checkpoint120 the original Downloads archive path is unavailable; its checksum remains a historical record. The retained Q2.8 PDF was freshly matched to its inventory hash and size. Earlier section numbers below identify the integration checkpoint, not necessarily the current contents.
 
 ## Completed bounded integration
 
-Q5.2-descended-section-constraints.pdf is reconstructed in Section 27.14 at checkpoint107, including the sharp example and an internal kernel/determinant corollary. Its dedicated review, build and portability records delimit what was checked. The full Chapter 27 review is still pending in the general chapter cycle.
+Q5.2-descended-section-constraints.pdf is reconstructed in Section 27.14 at checkpoint107, including the sharp example and an internal kernel/determinant corollary. Its dedicated review, build and portability records delimit what was checked. Its owning chapter is now Chapter 26, whose full revision was completed in checkpoint132.
 
 ## Q2.8: vanishing-parameter selection
 
@@ -26,4 +26,16 @@ The continuous logarithmic profile is cross-referenced to the Q2.9 integration. 
 
 ## Continuing sequence
 
-Complete one coherent integration and its second proof/style pass, build, affected-page inspection, source reconstruction and private synchronization at a time. Preserve historical verifier results. All four supplied manuscripts now have bounded integrations. The full chapter cycle continues at Chapter 15, including all nested inputs; source-linked checks of later chapters do not replace their whole-chapter review. The persistent writing goal remains active and incomplete.
+Complete one coherent integration and its second proof/style pass, build, affected-page inspection, source reconstruction and private synchronization at a time. Preserve historical verifier results. All four supplied manuscripts now have bounded integrations. The chapter cycle has reached front matter and the integrated Chapter 1 review in checkpoints141–142. The three sources below are integrated in checkpoint143; the newly supplied cone paper is next, before source/proof-ledger reconciliation. Source-linked checks do not replace a whole-chapter review. The persistent writing goal remains active and incomplete.
+
+## Three further papers, checkpoint143
+
+The archive `solved-papers-06-07-08.zip` has separate provenance in `research/supplied-papers-20260926.json`. All three complete papers and all twenty PDF pages were read. The README’s prior-verification claim is not a verification performed here. Two revised reads cover the new reconstructed inputs and bounded changed interfaces; see supplied-three-papers-review-143.md.
+
+- Q3.8 is integrated in Section 25.13, `sec:nef-boundary-subtraction`: closed nef positive-intersection core on a Kähler manifold, semipositive nonclosed addition, fixed tests, finite cost and blowup example. General nonclosed bigness remains separate.
+- Q3.3 is integrated in Section 25.17, `sec:gaud-determinant-concentration`: geometric endpoint bound and complete elliptic-product concentration. The existing critical norm identity and smooth maximizer uniqueness are reused; merely continuous-density uniqueness remains open.
+- Q5.1 is integrated in Section 26.15, `sec:horizontal-kernel-asymptotics`: projective hyperplane poles, exact envelopes, kernel lower bounds and measure limits with the book’s q! normalization. Arbitrary-base lower asymptotics remain separate.
+
+## Further source awaiting reconstruction
+
+The user subsequently supplied `resolution-independent-cones.pdf` from the q8-1 project folder. Its complete fourteen-page text and proofs have been read. Its appendix uniqueness argument is to be compared with existing Chapter 11 before introducing duplicate foundations. Integration, two revised reads and release checks have not yet been completed; the supplied audit is not adopted as an independent verification here.

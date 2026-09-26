@@ -1,5 +1,11 @@
 # Source-to-Hermitian comparison
 
+## Bounded update, checkpoint143
+
+Three supplied manuscripts are integrated with complete reconstructed proofs: closed-core subtraction at a nef boundary and determinant concentration in Chapter 25, and horizontal projective partial-kernel asymptotics in Chapter 26. Existing endpoint and smooth-maximizer theorems are reused. The kernel measure retains the book’s factorial normalization and its conditional fiber probabilities. Chapter 32 removes the settled fixed-smooth-density question and narrows the remaining Morse and kernel questions to their unresolved regimes. Exact paper attribution is confined to Chapter 33.
+
+The closed-core result does not settle arbitrary nonclosed nef bigness. The determinant construction distinguishes the exact maximizer from maximizing sequences and the full critical-norm cone. The horizontal kernel theorem is projective and retains its pole model and all normalizations. The detailed historical ledger below still awaits full reconciliation; this supplement does not mark that task complete. The new cone manuscript is the next source unit.
+
 **Current structure (checkpoint141).** The active book has 33 chapters and an appendix. General psh tools are in Chapter 1, the mass-bound theory is in Part XII (Chapters 29–31), problems are in Chapter 32 and historical sources are in Chapter 33. The former Nakamaye chapter remains excluded, with its sources preserved. The detailed entries below retain their dated scopes and historical chapter numbers; they require reconciliation with the current manuscript and do not establish whole-project completion. Use `READING-GUIDE.md` and the live chapter queues for the current route.
 
 Disposition begun on 16 September 2026, with dated updates below. Chapter numbers refer to the manuscript at those checkpoints. This is a coverage map, not a claim that every theorem of SGPT has been generalized. The source outline is preserved in `source-outline.md`; the earlier chronological ledger is archived in `audits/comparison-history-through-2026-09-15-0450.md`.

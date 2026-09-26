@@ -1,0 +1,156 @@
+\section{Subtraction with a closed nef core}
+\label{sec:nef-boundary-subtraction}
+
+A closed nef class of positive top intersection can keep the root volume positive when a path reaches the boundary of the positive cone. Adding a semipositive form preserves this lower bound, even when the added form is nonclosed. Two tests chosen at the initial point then bound the total subtraction cost. The dependence on the density and on the derivatives of the added form remains explicit.
+
+Assume in this section that $X$ is K\"ahler of dimension $n\geq2$, and fix a K\"ahler form $\Omega$. Let $\alpha$ be smooth, closed and nef, let $B\geq0$ be a smooth real $(1,1)$-form, and let $t>0$. Put
+\[
+ a_s=\alpha+(t-s)\Omega,\qquad
+ \theta_s=a_s+B,\qquad V_s=\int_Xa_s^n.
+\]
+Choose a K\"ahler representative $\kappa_0$ of $[a_0]$ and solve
+$\gamma_0=\kappa_0+\ddc u_0>0$, $\gamma_0^n=V_0\mu$.
+Define the fixed quantities
+\begin{equation}\label{eq:closed-core-fixed-tests}
+ \begin{gathered}
+ I_B=\int_XB\wedge\kappa_0^{n-1},\qquad
+ U_\mu=\frac{V_0+I_B}{D_\mu(\kappa_0)},\\
+ \Delta_\mu(B)=V_0^{-(n-1)/n}\int_XB\wedge\gamma_0^{n-1}.
+ \end{gathered}
+\end{equation}
+
+\begin{theorem}\label{thm:closed-core-subtraction}
+Suppose $V:=V_t>0$ and there is a smooth compact complex curve $C\subset X$ with $\int_C\alpha=\int_CB=0$. Then $\theta_s$ has a smooth positive representative for $s<t$, $\theta_t$ is nef but has no smooth positive representative, and $\theta_s$ is not nef for $s>t$. Moreover,
+\[
+ \lambda_\mu(a_s)=V_s^{1/n}\quad(0\leq s\leq t),
+ \qquad \lambda_\mu(\theta_t)\geq V^{1/n}>0.
+\]
+For every choice of minimizing Gauduchon metrics $g_s$ for $\theta_s$, $0\leq s<t$, their subtraction ratios are Lebesgue measurable and
+\begin{equation}\label{eq:closed-core-cost}
+ \begin{split}
+ 0\leq\mathcal C
+ &:=\int_0^t\frac{\int_X\Omega\wedge g_s^{n-1}}{D_\mu(g_s)}\,\mathrm{d}s
+   =\lambda_\mu(\theta_0)-\lambda_\mu(\theta_t)\\
+ &\leq\min\{U_\mu,V_0^{1/n}+\Delta_\mu(B)\}-V^{1/n}<\infty.
+ \end{split}
+\end{equation}
+The integral is improper at $t$. If $B\leq M\kappa_0$, then
+\[
+ \Delta_\mu(B)\leq MV_0^{1/n},\qquad
+ \mathcal C\leq(1+M)V_0^{1/n}-V^{1/n}.
+\]
+There are a quasi-plurisubharmonic $\rho$ and $\varepsilon>0$ with
+$\alpha+\ddc\rho\geq\varepsilon\Omega$ and
+$\theta_t+\ddc\rho\geq\varepsilon\Omega$.
+\end{theorem}
+\begin{proof}
+For $s<t$, take a nef approximation
+$\alpha+\ddc v_\delta\geq-\delta\Omega$ with $\delta<t-s$.
+It gives a K\"ahler representative of $a_s$, and adding $B$ gives a positive representative of $\theta_s$. The same approximations show nefness at $t$. On the curve, smooth Stokes gives
+\[
+ \int_C(\theta_s+\ddc v)=(t-s)\int_C\Omega
+\]
+for every smooth $v$. This excludes strict positivity at $t$. For $s>t$, nef approximation with $\delta<s-t$ would contradict this identity.
+
+The closed nef formula following \cref{thm:gaud-volume-nef-limit} gives
+$\lambda_\mu(a_s)=V_s^{1/n}$, including at $t$. Monotonicity gives the lower bound for $\theta_t$; a fixed Gauduchon test bounds its value above. The same nef-limit theorem identifies this value with the limit as $s\uparrow t$.
+
+Write $f(s)=\lambda_\mu(\theta_s)$ for $s<t$. It is finite and concave on $(-\infty,t)$, being the infimum of affine test quotients, and it is nonincreasing. For a minimizing test at $s$, put
+$H(s)=\int_X\Omega\wedge g_s^{n-1}/D_\mu(g_s)$. Its affine quotient gives
+$f(s+h)\leq f(s)-hH(s)$ for both signs of sufficiently small $h$.
+Thus $H(s)=-f'(s)$ at every differentiability point. A finite concave function is locally Lipschitz, so it is absolutely continuous on $[0,r]$ for $r<t$. Every choice of $H$ is Lebesgue measurable: it agrees almost everywhere with $-f'$, and its finite values on the exceptional null set do not change measurability for the completed Lebesgue measure. Hence
+\[
+ \int_0^rH(s)\,\mathrm{d}s=f(0)-f(r).
+\]
+Use $H\geq0$ and the endpoint limit to obtain the identity in \eqref{eq:closed-core-cost}.
+
+The K\"ahler test $\kappa_0$ gives $\lambda_\mu(\theta_0)\leq U_\mu$. Since $\gamma_0^n=V_0\mu$ and $\gamma_0$ is cohomologous to $a_0$,
+\[
+ D_\mu(\gamma_0)=V_0^{(n-1)/n},\qquad
+ \int_Xa_0\wedge\gamma_0^{n-1}=V_0.
+\]
+This test gives the second initial upper bound. If $B\leq M\kappa_0$, closed Stokes yields
+$\int_XB\wedge\gamma_0^{n-1}\leq M\int_X\kappa_0\wedge\gamma_0^{n-1}=MV_0$.
+These inequalities prove the cost bounds.
+
+Finally, the closed nef-and-big criterion on a compact K\"ahler manifold, recalled in \cite{SGPT}, gives a K\"ahler current $\alpha+\ddc\rho\geq\varepsilon\Omega$ because $V>0$. Adding $B$ proves the last assertion. The exterior derivative of this second current is $\mathrm{d}B$.
+\end{proof}
+
+A birational holomorphic contraction $p:X\to Y$ between compact K\"ahler manifolds supplies such data when it contracts a smooth curve $C$. Take $\alpha=p^*\omega_Y$, with $\omega_Y$ K\"ahler, and $B\geq0$ vanishing on $TC$. The degree-one map gives $\int_X\alpha^n=\int_Y\omega_Y^n>0$, while both curve integrals vanish.
+
+The second fixed test separates the closed intersection term from the differential correction of $B$.
+
+\begin{proposition}\label{prop:closed-core-differential-cost}
+Set $S=\sum_{j=0}^{n-2}\gamma_0^j\wedge\kappa_0^{n-2-j}$. Then
+\begin{equation}\label{eq:closed-core-differential-cost}
+ \Delta_\mu(B)=V_0^{-(n-1)/n}
+       \left(I_B+\int_Xu_0\,\ddc B\wedge S\right).
+\end{equation}
+If $-C_B\kappa_0^2\leq\ddc B\leq C_B\kappa_0^2$ in the weak-positivity order, then
+\[
+ \Delta_\mu(B)\leq V_0^{-(n-1)/n}I_B
+       +(n-1)C_B\operatorname{osc}_X(u_0)V_0^{1/n}.
+\]
+Such a finite $C_B$ exists for every fixed smooth $B$.
+\end{proposition}
+\begin{proof}
+The factors of $S$ are closed and
+$\gamma_0^{n-1}-\kappa_0^{n-1}=\ddc u_0\wedge S$.
+Integration by parts gives the identity. Also $\int_X\ddc B\wedge S=0$, so normalize $\sup_Xu_0=0$. The assumed inequalities and positivity of the summands of $S$ bound the correction above by
+\[
+ C_B\operatorname{osc}_X(u_0)\int_X\kappa_0^2\wedge S
+       =(n-1)C_B\operatorname{osc}_X(u_0)V_0.
+\]
+The equality uses the mixed intersections of the cohomologous K\"ahler forms. Finally, evaluate $\ddc B$ on $\kappa_0$-unit decomposable complex two-vectors. Compactness bounds these evaluations, giving $C_B$.
+\end{proof}
+
+The potential $u_0$ solves one fixed equation with density $V_0\mu/\kappa_0^n$. Thus its oscillation retains the dependence on $\mu$; the tensors $\mathrm{d}\theta_s=\mathrm{d}B$ and $\ddc\theta_s=\ddc B$ are fixed along the path.
+For the closed core, put $P_s=\int_X\Omega\wedge a_s^{n-1}$. Then
+\[
+ -\frac{\mathrm{d}}{\mathrm{d}s}\lambda_\mu(a_s)
+       =\frac{P_s}{V_s^{(n-1)/n}},\qquad
+ \int_0^t\frac{P_s}{V_s^{(n-1)/n}}\,\mathrm{d}s=V_0^{1/n}-V^{1/n}.
+\]
+Moreover $P_s'=-(n-1)\int_X\Omega^2\wedge a_s^{n-2}\leq0$, since all classes on the segment are nef. Integrating $V_s'=-nP_s$ gives
+\begin{equation}\label{eq:closed-core-nef-morse}
+ V\geq V_0-nt\int_X\Omega\wedge a_0^{n-1}.
+\end{equation}
+This calculation remains valid when $V=0$, so a positive right side supplies the positive-intersection hypothesis. It is a numerical inequality on a segment with nef endpoint.
+
+\begin{example}\label{ex:nonclosed-nef-subtraction}
+There is a genuinely nonclosed path as above on the blowup of $\mathbb P^2$ at a point, with
+\[
+ \lambda_\mu(\theta_1)\geq\frac32,\qquad
+ 0\leq\mathcal C\leq\frac{11}{\sqrt8}-\frac32,
+\]
+and an explicit strictly positive current at the nef endpoint.
+\end{example}
+\begin{proof}
+Realize the blowup as
+$X=\{(x,[u:v])\in\mathbb P^2\times\mathbb P^1:x_1v=x_2u\}$,
+with projections $p,q$ and exceptional curve $E=p^{-1}([1:0:0])$.
+Let $L=p^*\omega_{\mathrm{FS},\mathbb P^2}$, $M=q^*\omega_{\mathrm{FS},\mathbb P^1}$ and $\Omega=L+M$, with the Fubini--Study forms normalized on projective lines. The incidence embedding makes $\Omega$ K\"ahler. The degree-one blowdown, a fiber of $q$, and $q|_E:E\to\mathbb P^1$ give
+\[
+ \int_XL^2=\int_XL\wedge M=1,\quad M^2=0,\quad L|_{TE}=0,\quad\int_EM=1.
+\]
+Take $t=1$, $\alpha=L$, $\kappa_0=2L+M$ and $\mu=\kappa_0^2/8$. With $r=1-s$, the core volumes are $V_s=1+4r+3r^2$.
+Choose a nonconstant smooth bump $0\leq\chi\leq1$ supported away from $E$, and put
+\[
+ b=\frac13\int_X\chi L\wedge\kappa_0,\qquad
+ f=\chi-b,\qquad B=(1+f/2)L.
+\]
+Since $\int_XL\wedge\kappa_0=3$, we have $|f|\leq1$ and
+$\int_XfL\wedge\kappa_0=0$. Thus $B\geq L/2$ and $B|_{TE}=0$.
+Where $\mathrm{d}\chi\ne0$, $L$ is symplectic, and wedging with $L$ is injective on real one-forms in dimension four. Hence $\mathrm{d}B=\tfrac12\mathrm{d}f\wedge L\ne0$.
+
+At the endpoint $\theta_1=(2+f/2)L\geq3L/2$, giving the stated lower bound. The initial solution has $\gamma_0=\kappa_0$ and $u_0=0$, so
+$D_\mu(\kappa_0)=\sqrt8$, $I_B=3$, $\Delta_\mu(B)=3/\sqrt8$ and $U_\mu=11/\sqrt8$. The cost identity gives the claimed estimate.
+
+The pullback of $\{x_1=0\}$ is $E$ plus a fiber of $q$, so
+$\mathcal O(E)=p^*\mathcal O_{\mathbb P^2}(1)\otimes q^*\mathcal O_{\mathbb P^1}(-1)$.
+Give this bundle its product metric $h_E$, of curvature $L-M$, and let $s_E$ be the canonical section. Poincar\'e--Lelong gives, for $\rho=\tfrac12\log|s_E|_{h_E}^2$,
+\[
+ \theta_1+\ddc\rho=B+\tfrac12\Omega+\tfrac12[E]\geq\tfrac12\Omega.
+\]
+Finally, $\int_X\Omega\wedge a_0=5$, so the right side of \eqref{eq:closed-core-nef-morse} is $8-10=-2$, although $V_1=1$. That sufficient numerical condition is therefore not necessary.
+\end{proof}

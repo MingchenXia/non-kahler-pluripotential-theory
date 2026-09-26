@@ -85,6 +85,8 @@ for name in (
     "research/editorial/appendix-rewrite-140.md",
     "research/editorial/frontmatter-rewrite-141.md",
     "research/editorial/foundations-integration-review-142.md",
+    "research/editorial/supplied-three-papers-review-143.md",
+    "research/supplied-papers-20260926.json",
     "research/editorial/book-writing-skill-review-20260926.md",
     "research/editorial/skills/mingchen-book-writing/SKILL.md",
     "research/editorial/skills/mingchen-book-writing/agents/openai.yaml",

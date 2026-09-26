@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint143 — 26 September 2026
+
+Three supplied manuscripts are integrated with complete reconstructed proofs: closed-core subtraction at a nef boundary and determinant concentration in Chapter 25, and horizontal projective partial-kernel asymptotics in Chapter 26. Existing endpoint and smooth-maximizer theorems are reused. The kernel measure retains the book’s factorial normalization and its conditional fiber probabilities. Chapter 32 removes the settled fixed-smooth-density question and narrows the remaining Morse and kernel questions to their unresolved regimes. Exact paper attribution is confined to Chapter 33.
+
+The three source papers and all twenty source pages were read and inspected. The three new sections and bounded changed interfaces received two direct revised mathematical/editorial reads. The nine changed author inputs have zero house-audit errors and the same 32 inherited warnings. Citation placement passes. The 798-page book and seventeen-page companion build without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 217 selected final pages pass visual review. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 214 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. See research/editorial/supplied-three-papers-review-143.md for exact scopes.
+
+The newly supplied resolution-independent-cones.pdf is the next bounded source integration; its opening and complete proof have been read, but its reconstruction and release checks remain pending. Source-disposition and proof-obligation reconciliation follows the requested integrations. The broader writing goal remains active and incomplete.
+
 ## Checkpoint142 — 26 September 2026
 
 The complete integrated Chapter 1 and all eighteen nested author inputs receive an original read and two complete revised mathematical/editorial reads. Its opening now explains local smooth correction, global normalization and the two comparisons of singularities. The bounded convex chain rule precedes its first use. The unbounded density and trace inequalities move with their proofs to Chapter 6, after extended measures and locality have been constructed. The divisorial envelope identity moves with its proof to Chapter 15; Chapter 1 retains the canonical ordinary type of the divisorial current. Repeated explanations and a vacuous nonemptiness condition are removed without enlarging the nonvacuous theorem scopes.
