@@ -1,0 +1,189 @@
+\section{Bounded uniqueness and connectedness}
+\label{sec:bounded-connected-uniqueness}
+
+Connectedness of the positive-density region also gives uniqueness for bounded potentials. The missing differentiability is replaced by an energy measure of the difference. Its pushforward to the real line has a Lipschitz density vanishing at the extreme levels. This forces the extreme sets to have zero equation mass; smooth test potentials concentrated near such a set then contradict modified comparison.
+
+\begin{theorem}\label{thm:connected-positive-uniqueness}
+Let $F\in C^\infty(X)$ satisfy $F\geq0$, $F\not\equiv0$, with $U=\{F>0\}$ connected and dense. If bounded $\omega$-plurisubharmonic functions $u,v$ satisfy
+\[
+\omega_u^n=\omega_v^n=F\omega^n,
+\]
+then $u-v$ is constant. In particular, $\sup_Xu=\sup_Xv$ implies $u=v$.
+\end{theorem}
+
+Bounded solutions are continuous by \cref{cor:bounded-lp-continuity}. We may therefore use pointwise extrema throughout the proof. If $b$ is continuous and $\omega_b\geq\varepsilon\omega$, with $0<\varepsilon<1$, apply \cref{thm:modified-comparison} to $b/(1-\varepsilon)$. Thus its thin-sublevel estimate applies directly to any such strictly positive comparison potential. The correction factor tends to one with the sublevel height, while $\varepsilon$ stays fixed.
+
+\begin{proposition}\label{prop:weak-extremum-localization}
+Let continuous $\omega$-plurisubharmonic $u,v$ satisfy $\omega_u^n=\omega_v^n=F\omega^n$, where $F\geq0$ is continuous. Let $q$ be smooth and strictly $\omega$-plurisubharmonic, and write $\omega_q^n=G\omega^n$. For every $0<\kappa<1$ and $\eta>0$,
+\begin{equation}\label{eq:weak-localization-min}
+F\omega^n\bigl(\{u-v<\min_X(u-v)+\eta\}\cap\{F>\kappa G\}\bigr)>0.
+\end{equation}
+The analogous assertion holds for the near-maximum set.
+\end{proposition}
+
+\begin{proof}
+Choose $\delta\in(0,1]$ with $\omega_q\geq\delta \omega$. For $0<t<1$, put $b_t=(1-t)v+tq$, $m_t=\min_X(u-b_t)$, and $E_s=\{u<b_t+m_t+s\}$. Then $\omega_{b_t}\geq t\delta \omega$. Write $\mu=F\omega^n$, $d=\kappa^{-1/n}-1$, and $\gamma=nd$. By \eqref{eq:interior-minkowski-background},
+\[
+\omega_{b_t}^n\geq\bigl((1-t)F^{1/n}+tG^{1/n}\bigr)^n \omega^n.
+\]
+On $L=\{F\leq\kappa G\}$ this is at least $(1+\gamma t)\mu$, and on $R=\{F>\kappa G\}$ it is at least $(1-nt)\mu$. Choose $s>0$ so small that the reverse comparison factor in \eqref{eq:modified-comparison}, with $\varepsilon=t\delta$, is at most $1+\gamma t/2$. Setting $A=\mu(E_s\cap L)$ and $B=\mu(E_s\cap R)$ gives
+\[
+(1+\gamma t)A+(1-nt)B\leq(1+\gamma t/2)(A+B),
+\qquad B\geq\frac{1-\kappa^{1/n}}2\,\mu(E_s).
+\]
+The open set $E_s$ is nonempty by the definition of $m_t$. As $\omega_{b_t}^n\geq(t\delta)^n\omega^n$, \eqref{eq:modified-comparison} forces $\mu(E_s)>0$, hence $B>0$.
+
+Let $a=\min_X(u-v)$ and $\Lambda=\|v-q\|_\infty$. The perturbation satisfies $|m_t-a|\leq t\Lambda$, and $E_s\subset\{u-v<a+2t\Lambda+s\}$. Given $\eta$, choose $t$ and then $s$ with $2t\Lambda+s<\eta$. This proves \eqref{eq:weak-localization-min}. Interchanging $u$ and $v$ gives the near-maximum assertion.
+\end{proof}
+
+\subsection{The energy of the difference}
+
+For continuous solutions with $A^n=B^n=F\omega^n$ and continuous $F\geq0$, keep $A,B,w,T$ from \eqref{uni-eq:linearization}. Thus $\ddc w\wedge T=0$.
+
+\begin{proposition}\label{prop:weak-level-energy}
+There is a finite positive measure $E=\mathrm{d} w\wedge\dc w\wedge T$ with the following properties.
+
+For every smooth real function $\chi$ on $\mathbb R$,
+\begin{equation}\label{eq:weak-energy-chain}
+\int_X\chi''(w)\,\mathrm{d} E=\int_X\chi(w)\,\ddc T.
+\end{equation}
+The signed current $\ddc T$ is a finite measure. If $a=\min_Xw$, $b=\max_Xw$, and
+\[
+k(t)=\int_X(w-t)_+\,\ddc T,
+\]
+then $k$ is nonnegative, globally Lipschitz, supported on $[a,b]$, and
+\begin{equation}\label{eq:weak-energy-pushforward}
+w_*E=k(t)\,\mathrm{d} t.
+\end{equation}
+In particular, $E$ charges no level set of $w$.
+
+On every relatively compact coordinate domain $V\Subset\{F>0\}$ there is $C_V<\infty$ such that every piecewise $C^1$ Lipschitz function $p$ on $[a,b]$ satisfies
+\begin{equation}\label{eq:weak-local-coercivity}
+\int_V|\mathrm{d}(p(w))|\,\mathrm{d}\lambda\leq C_V\left(\int_V|p'(w)|^2\,\mathrm{d} E\right)^{1/2},
+\end{equation}
+where $\mathrm{d}\lambda$ is Euclidean coordinate volume.
+\end{proposition}
+
+\begin{proof}
+Expand $T$ locally into smooth powers of $\omega$ multiplied by closed Bedford--Taylor products of $\ddc u$ and $\ddc v$. Differentiating twice acts only on those smooth powers. The local mass bounds in \cref{sec:psh-local-capacity} show that $\ddc T$ is a finite signed measure.
+
+We first construct $E$ and justify \eqref{eq:weak-energy-chain}. On a coordinate ball, convolve $u,v,\omega$ with a common nonnegative radial mollifier. Write the resulting smooth positive forms as $A_\rho=\omega_\rho+\ddc u_\rho$ and $B_\rho=\omega_\rho+\ddc v_\rho$, and let $T_\rho$ be their mixed sum. On a slightly larger ball, add the same fixed multiple of $|z|^2$ to each potential to obtain plurisubharmonic functions. Their radial regularizations decrease to the originals, so Bedford--Taylor continuity applies to all closed Hessian products. Since $u,v$ are continuous, $u_\rho,v_\rho,w_\rho$ converge uniformly on compact subsets.
+
+For a closed smooth product $S_\rho$ appearing in $T_\rho$, the identity
+\begin{equation}\label{eq:weak-energy-regularization}
+\mathrm{d} w_\rho\wedge\dc w_\rho\wedge S_\rho
+=\tfrac12\ddc(w_\rho^2S_\rho)-w_\rho\ddc w_\rho\wedge S_\rho
+\end{equation}
+has a distributional limit. Both Hessian products on its right converge weakly with uniformly bounded local variation, and their weights converge uniformly. The same holds after multiplying by the convergent smooth factors from $\omega_\rho$. Thus the positive measures $E_\rho=\mathrm{d} w_\rho\wedge\dc w_\rho\wedge T_\rho$ converge to a positive finite measure $E$. Formula \eqref{eq:weak-energy-regularization} makes this limit intrinsic on overlapping charts.
+
+For smooth regularizations, the chain rule gives
+\[
+\ddc\chi(w_\rho)\wedge T_\rho
+=\chi''(w_\rho)E_\rho+\chi'(w_\rho)\ddc w_\rho\wedge T_\rho.
+\]
+The last current tends to zero, because $\ddc w_\rho\wedge T_\rho=A_\rho^n-B_\rho^n$ tends weakly to $A^n-B^n=0$ and has uniformly bounded variation. Uniform convergence of $\chi'(w_\rho)$ permits the weight. Passing to the limit and integrating by parts on compact $X$ gives \eqref{eq:weak-energy-chain}. A partition of unity justifies this passage without a global regularization; the derivative terms cancel after summation.
+
+Let $\sigma=w_*(\ddc T)$ and $\nu=w_*E$. Equation \eqref{eq:weak-energy-chain} says $\nu''=\sigma$ as distributions on $\mathbb R$. Stokes and $\ddc w\wedge T=0$ give
+\[
+\sigma(\mathbb R)=\int_X\ddc T=0,\qquad
+\int_{\mathbb R}s\,\mathrm{d}\sigma(s)=\int_Xw\,\ddc T=\int_X\ddc w\wedge T=0.
+\]
+Consequently $k(t)=\int(s-t)_+\,\mathrm{d}\sigma(s)$ is globally Lipschitz and vanishes outside $[a,b]$. It has $k''=\sigma$; hence the compactly supported distribution $\nu-k(t)\,\mathrm{d} t$ has second derivative zero and must vanish. Positivity of $\nu$ and continuity of $k$ imply $k\geq0$. This proves \eqref{eq:weak-energy-pushforward} and the assertion about level sets.
+
+We establish \eqref{eq:weak-local-coercivity}. On a coordinate neighborhood of $V$, set $\beta=\ddc|z|^2$ and write $F\omega^n=F_0\beta^n$. The coefficient density matrix $A_{\mathrm{ac}}$ satisfies $\det_\beta A_{\mathrm{ac}}=F_0$ almost everywhere, by \cref{lem:continuous-density-coefficients}. The local Sobolev regularity in \cref{sec:psh-local-capacity} gives $w_\rho\to w$ strongly in local $W^{1,2}$; a subsequence of gradients converges almost everywhere.
+
+Since $T_\rho$ contains $A_\rho^{n-1}$ and all its terms are positive, Fatou's lemma applied to $E_\rho$ yields the measure inequality
+\begin{equation}\label{eq:weak-energy-ac-lower}
+E\geq\mathrm{d} w\wedge\dc w\wedge A_{\mathrm{ac}}^{n-1}.
+\end{equation}
+On $V$, $F_0$ has a positive lower bound. The cofactor matrix of $A_{\mathrm{ac}}$ has smallest eigenvalue at least $\det A_{\mathrm{ac}}/\operatorname{tr}A_{\mathrm{ac}}=F_0/\operatorname{tr}A_{\mathrm{ac}}$. The trace is locally integrable because $A$ has finite mass. The Sobolev chain rule, \eqref{eq:weak-energy-ac-lower}, and Cauchy--Schwarz give
+\[
+\int_V|\mathrm{d}(p(w))|\,\mathrm{d}\lambda
+\leq C\left(\int_V|p'(w)|^2\,\mathrm{d} E\right)^{1/2}
+\left(\int_V\frac{\operatorname{tr}A_{\mathrm{ac}}}{F_0}\,\mathrm{d}\lambda\right)^{1/2}.
+\]
+The last factor is finite and is absorbed into $C_V$. Values assigned to $p'$ at its finitely many corners are immaterial because $E$ charges no level of $w$.
+\end{proof}
+
+\begin{lemma}\label{lem:weak-null-extremum-levels}
+Assume in addition that $U=\{F>0\}$ is connected and dense. If $w=u-v$ is nonconstant, then
+\[
+F\omega^n(\{w=\min_Xw\})=F\omega^n(\{w=\max_Xw\})=0.
+\]
+\end{lemma}
+
+\begin{proof}
+Put $a=\min_Xw<b=\max_Xw$ and let $k$ be given by \cref{prop:weak-level-energy}. It is Lipschitz, nonnegative, and $k(a)=0$. Choose $\epsilon_j\downarrow0$ with $a+\epsilon_j<b$. For $\delta>0$, set
+\[
+J_j(\delta)=\int_a^{a+\epsilon_j}\frac{\mathrm{d} t}{k(t)+\delta}.
+\]
+If $L$ is a Lipschitz constant for $k$, then $k(t)\leq L(t-a)$ on this interval, so $J_j(\delta)\to\infty$ as $\delta\downarrow0$. Choose $\delta_j>0$ with $J_j=J_j(\delta_j)\geq j$. Let $p_j=0$ on $(-\infty,a]$, $p_j=1$ on $[a+\epsilon_j,\infty)$, and
+\[
+p_j'(t)=\frac{1}{J_j(k(t)+\delta_j)}\quad(a<t<a+\epsilon_j).
+\]
+The pushforward identity \eqref{eq:weak-energy-pushforward} gives
+\[
+\int_X|p_j'(w)|^2\,\mathrm{d} E
+=\frac{1}{J_j^2}\int_a^{a+\epsilon_j}\frac{k(t)}{(k(t)+\delta_j)^2}\,\mathrm{d} t
+\leq\frac1{J_j}\longrightarrow0.
+\]
+By \eqref{eq:weak-local-coercivity}, $\mathrm{d}(p_j(w))\to0$ in local $L^1$ on $U$. The bounded functions $p_j(w)$ converge pointwise and in local $L^1$ to $\mathbf1_{\{w>a\}}$, whose distributional gradient therefore vanishes on $U$. Connectedness makes this indicator constant almost everywhere on $U$. Since $w$ is nonconstant, $\{w>a\}$ is a nonempty open set; density of $U$ makes its intersection with $U$ nonempty and open. The constant is one. Thus $\{w=a\}\cap U$ has zero ordinary volume, and $F=0$ off $U$ gives the first assertion. Apply the argument to $-w$ for the maximum set.
+\end{proof}
+
+\subsection{Concentrating smooth test potentials}
+
+The following construction has a constant independent of the height and derivatives of the test density. This uniformity permits concentration near a null set.
+
+\begin{proposition}\label{prop:weak-uniform-test-potentials}
+For every $B_0>\|1\|_{L^2(\omega^n)}$ there is $\varepsilon=\varepsilon(X,\omega,B_0)>0$ such that every smooth function $g\geq1$ with $\|g\|_{L^2(\omega^n)}\leq B_0$ admits a smooth strictly $\omega$-plurisubharmonic function $q$ satisfying
+\begin{equation}\label{eq:weak-uniform-test-determinant}
+\omega_q^n\geq\varepsilon g \omega^n.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Choose finitely many coordinate balls $B_j=\{|z_j|<R_j\}$, with closures in their charts, whose concentric smaller balls $\{|z_j|<r_j\}$ cover $X$. On $B_j$, let $\psi_j$ solve
+\begin{equation}\label{eq:weak-local-dirichlet}
+(\ddc\psi_j)^n=g\omega^n,\qquad \psi_j|_{\partial B_j}=0.
+\end{equation}
+The coordinate density is smooth and strictly positive. The classical smooth Dirichlet theorem applies: $C_j(|z_j|^2-R_j^2)$ is a smooth strict subsolution with zero boundary values if $C_j^n$ is larger than the coordinate density. Thus $\psi_j$ is smooth and strictly plurisubharmonic on $\overline B_j$. The maximum principle gives $\psi_j\leq0$.
+
+We need a bound independent of $\sup g$. Write the coordinate equation as $\det(\partial_j\bar\partial_k\psi_j)=D_j$, and put $M_j=-\min_{B_j}\psi_j$. At a minimum point $x_j$, each real slope $p$ with $|p|<M_j/(2R_j)$ has an interior contact point for $\psi_j-p\cdot(x-x_j)$: its value at $x_j$ is $-M_j$, while its boundary values are larger than $-M_j$. At these contact points the real Hessian $S$ is nonnegative, and the gradient map covers the slope ball. The real area formula and the matrix inequality
+\[
+\det_{\mathbb R}S\leq4^n\bigl(\det_{\mathbb C}(\partial_j\bar\partial_k\psi_j)\bigr)^2=4^nD_j^2
+\]
+therefore give $M_j\leq C(n,R_j)\|D_j\|_{L^2(B_j)}^{1/n}$. For the matrix inequality, average $S$ with $J^\mathsf TSJ$; concavity of $\log\det$ and the paired eigenvalues of the $J$-invariant average give the displayed factor, with singular matrices handled by approximation. The ratio of $\omega^n$ to coordinate volume is fixed and bounded, so $\|D_j\|_2$ is controlled by $B_0$. Consequently
+\begin{equation}\label{eq:weak-local-uniform-sup}
+-M_0\leq\psi_j\leq0\quad\text{on every }B_j,
+\end{equation}
+where $M_0$ depends only on $X,\omega,B_0$ and the chosen finite cover.
+
+Put $\beta_j=\ddc|z_j|^2$. Choose $a_j>0$ such that $a_j\beta_j\leq \omega/2$ on $B_j$, and let $t_j=(R_j^2+r_j^2)/2$. Fix $\tau>0$ so small that $\tau M_0<a_j(R_j^2-r_j^2)/4$ for every $j$. The smooth function
+\[
+s_j=\tau\psi_j+a_j(t_j-|z_j|^2)
+\]
+is positive by a fixed margin on the smaller ball, negative on a collar of $\partial B_j$, and satisfies $\omega_{s_j}\geq \omega/2+\tau\ddc\psi_j$. Choose a smooth convex regularization $M_j^{\mathrm{sm}}$ of $s\mapsto\max(s,0)$ that is zero below a small negative threshold and equal to $s$ above the corresponding positive threshold, with $0\leq(M_j^{\mathrm{sm}})'\leq1$ and $(M_j^{\mathrm{sm}})''\geq0$. The thresholds can be chosen below both margins. Set $Q_j=M_j^{\mathrm{sm}}(s_j)$ on $B_j$ and extend it by zero. This extension is smooth, and
+\[
+\omega_{Q_j}=(M_j^{\mathrm{sm}})'(s_j)\omega_{s_j}+\bigl(1-(M_j^{\mathrm{sm}})'(s_j)\bigr)\omega
++(M_j^{\mathrm{sm}})''(s_j)\,\mathrm{d} s_j\wedge\dc s_j\geq \omega/2.
+\]
+On the smaller ball, $Q_j=s_j$ and $\omega_{Q_j}\geq\tau\ddc\psi_j$. If $N$ is the number of balls, take $q=N^{-1}\sum_jQ_j$. Then $\omega_q\geq \omega/2$ everywhere. Each point belongs to at least one smaller ball, so positivity of the other summands and \eqref{eq:weak-local-dirichlet} give
+\[
+\omega_q^n\geq(\tau/N)^n(\ddc\psi_j)^n=(\tau/N)^n g \omega^n.
+\]
+Thus \eqref{eq:weak-uniform-test-determinant} holds with $\varepsilon=(\tau/N)^n$, independent of $\sup g$ and of all derivatives of $g$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:connected-positive-uniqueness}]
+In complex dimension one, $\omega_u=\omega_v$ gives $\ddc(u-v)=0$ as distributions. The bounded difference is then harmonic and hence constant on compact connected $X$. Assume $n\geq2$. By \cref{cor:bounded-lp-continuity}, both $u$ and $v$ are continuous. Thus $w=u-v$ is continuous.
+
+Suppose $w$ is nonconstant. Let $a=\min_Xw$, $K=\{w=a\}$, and $\mu=F\omega^n$. By \cref{lem:weak-null-extremum-levels}, $\mu(K)=0$. Choose $B_0>\|1\|_{L^2(\omega^n)}$ and let $\varepsilon>0$ be the constant from \cref{prop:weak-uniform-test-potentials}. The compact set $K_0=K\cap\{F\geq\varepsilon/2\}$ has zero $\omega^n$-volume. Fix $A>1$ with $\varepsilon A>\max_XF$. By regularity of the smooth volume measure, choose an open neighborhood $O$ of $K_0$ so small that
+\[
+\int_X\omega^n+(A^2-1)\int_O\omega^n<B_0^2.
+\]
+Take a smooth $0\leq\chi\leq1$ equal to one near $K_0$ and supported in $O$, and set $g=1+(A-1)\chi$. If $K_0=\varnothing$, take $\chi=0$. Then $g\geq1$, $g=A$ on $K_0$, and $\|g\|_{L^2(\omega^n)}<B_0$.
+
+By \cref{prop:weak-uniform-test-potentials}, there is a smooth strictly $\omega$-plurisubharmonic $q$ with $\omega_q^n=G\omega^n\geq\varepsilon g\omega^n$. On $K_0$ we have $G\geq\varepsilon A>F$; on $K\setminus K_0$ we have $F<\varepsilon/2<\varepsilon\leq G$. Thus $G>F$ throughout the compact set $K$. Choose $0<\kappa<1$ such that $F<\kappa G$ on $K$, and put $W=\{F<\kappa G\}$. The complement of this open neighborhood of $K$ is compact, and $w-a$ has a strictly positive minimum there if it is nonempty. Hence some $\eta>0$ satisfies $\{w<a+\eta\}\subset W$.
+
+\Cref{prop:weak-extremum-localization} asserts that $\mu(\{w<a+\eta\}\cap\{F>\kappa G\})>0$. The set inside this measure is empty by the preceding inclusion. This contradiction makes $w$ constant. Equality of the suprema makes the constant zero.
+\end{proof}

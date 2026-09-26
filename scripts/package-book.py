@@ -86,6 +86,8 @@ for name in (
     "research/editorial/frontmatter-rewrite-141.md",
     "research/editorial/foundations-integration-review-142.md",
     "research/editorial/supplied-three-papers-review-143.md",
+    "research/editorial/projective-cones-review-144.md",
+    "research/supplied-cones-20260926.json",
     "research/supplied-papers-20260926.json",
     "research/editorial/book-writing-skill-review-20260926.md",
     "research/editorial/skills/mingchen-book-writing/SKILL.md",

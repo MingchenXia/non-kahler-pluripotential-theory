@@ -1,5 +1,11 @@
 # Proof boundary and remaining obligations
 
+## Bounded update, checkpoint144
+
+The supplied projective-cone manuscript is reconstructed in Appendix A.6, including its logarithmic ordinary-class equation, determinant-preserving nonclosed deformations, closed bounded endpoint, all-resolution pushforward identity and explicit quadric examples. Chapter 11.6 proves bounded uniqueness for smooth nonnegative density with connected dense positive set. Its coefficient-density lemma belongs to Chapter 1; Chapter 10 derives bounded Lp continuity from the proper equation. Chapter 32 replaces the settled bounded-uniqueness problem by the theorem and narrows the singular-space problem to the remaining regimes. Paper attribution stays in Chapter 33.
+
+The logarithmic class keeps 0 < a < 1, projectively normal smooth base, prescribed angular/radial data and the two positivity inequalities for deformation. Mass invariance for every competitor is asserted only for the closed background; nonclosed classes have finite competitor mass and the explicitly computed solution mass. The residual need not descend. The bounded endpoint uses its closed energy argument. The imported smooth Dirichlet theorem has a bounded primary statement/locator check, not a new full external proof audit. Historical detailed entries below still await reconciliation; no new independent verifier run or Popovici input is claimed.
+
 ## Bounded update, checkpoint143
 
 Three supplied manuscripts are integrated with complete reconstructed proofs: closed-core subtraction at a nef boundary and determinant concentration in Chapter 25, and horizontal projective partial-kernel asymptotics in Chapter 26. Existing endpoint and smooth-maximizer theorems are reused. The kernel measure retains the book’s factorial normalization and its conditional fiber probabilities. Chapter 32 removes the settled fixed-smooth-density question and narrows the remaining Morse and kernel questions to their unresolved regimes. Exact paper attribution is confined to Chapter 33.

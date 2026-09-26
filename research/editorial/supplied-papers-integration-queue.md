@@ -26,7 +26,7 @@ The continuous logarithmic profile is cross-referenced to the Q2.9 integration. 
 
 ## Continuing sequence
 
-Complete one coherent integration and its second proof/style pass, build, affected-page inspection, source reconstruction and private synchronization at a time. Preserve historical verifier results. All four supplied manuscripts now have bounded integrations. The chapter cycle has reached front matter and the integrated Chapter 1 review in checkpoints141–142. The three sources below are integrated in checkpoint143; the newly supplied cone paper is next, before source/proof-ledger reconciliation. Source-linked checks do not replace a whole-chapter review. The persistent writing goal remains active and incomplete.
+Complete one coherent integration and its second proof/style pass, build, affected-page inspection, source reconstruction and private synchronization at a time. Preserve historical verifier results. All four supplied manuscripts now have bounded integrations. The chapter cycle has reached front matter and the integrated Chapter 1 review in checkpoints141–142. The three sources below are integrated in checkpoint143; the cone paper is integrated in checkpoint144, before source/proof-ledger reconciliation. Source-linked checks do not replace a whole-chapter review. The persistent writing goal remains active and incomplete.
 
 ## Three further papers, checkpoint143
 
@@ -36,6 +36,6 @@ The archive `solved-papers-06-07-08.zip` has separate provenance in `research/su
 - Q3.3 is integrated in Section 25.17, `sec:gaud-determinant-concentration`: geometric endpoint bound and complete elliptic-product concentration. The existing critical norm identity and smooth maximizer uniqueness are reused; merely continuous-density uniqueness remains open.
 - Q5.1 is integrated in Section 26.15, `sec:horizontal-kernel-asymptotics`: projective hyperplane poles, exact envelopes, kernel lower bounds and measure limits with the book’s q! normalization. Arbitrary-base lower asymptotics remain separate.
 
-## Further source awaiting reconstruction
+## Projective cones, checkpoint144
 
-The user subsequently supplied `resolution-independent-cones.pdf` from the q8-1 project folder. Its complete fourteen-page text and proofs have been read. Its appendix uniqueness argument is to be compared with existing Chapter 11 before introducing duplicate foundations. Integration, two revised reads and release checks have not yet been completed; the supplied audit is not adopted as an independent verification here.
+The user supplied `resolution-independent-cones.pdf` from the q8-1 project folder. All fourteen source pages and complete proofs were read and inspected. Section A.6 reconstructs Theorems A–B and Sections 3–7; Section 11.6 reconstructs Appendix A bounded uniqueness. General coefficient-density calculus belongs to Chapter 1 and the proper-equation continuity implication to Chapter 10. The new inputs and bounded changed interfaces receive two revised reads, with release checks recorded separately. The old connected-positivity question is replaced by the proved theorem. General singular-space equations and intrinsic singular traces remain open. Exact provenance is in research/supplied-cones-20260926.json; the supplied audit is not adopted as independent verification performed here.
