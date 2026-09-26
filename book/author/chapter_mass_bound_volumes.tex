@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-Bounded mass makes the upper and lower singularity volumes finite. Rooftops and maxima then compare these volumes as the background or the singularities vary. The main application is a characterization of relative full mass: equality of upper volumes is equivalent to the existence of every stretching envelope when the reference has positive lower volume. The lower bound prevents the approximating envelopes from collapsing to $-\infty$.
+A bound on Monge--Amp\`ere mass turns the extended singularity volumes into finite invariants. Their comparison rests on contact sets: rooftops transfer lower-volume competitors, while maxima transfer upper-volume competitors. Positive lower volume then prevents stretching envelopes from collapsing, so equality of upper volumes becomes an envelope condition. This connects relative full mass to the comparison between ordinary and multiplier-ideal envelopes.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -16,7 +16,7 @@ Choose a Hermitian form $\Omega\geq\theta$. The estimates in \cref{prop:bmp-fini
 \]
 If $\theta$ is closed, both volumes equal $\int_X\mathrm{MA}_\theta(u)$, by invariance of non-pluripolar mass under equivalent singularities in the closed theory \cite{SGPT}. For a non-closed background this equality can fail even at $u=0$, as \cref{ex:torus-mass} shows.
 
-To compare lower volumes, a rooftop transfers a competitor from the less singular type to the more singular one. For upper volumes, a maximum transfers competitors in the other direction. In both arguments, locality isolates an error supported on deeper sublevel sets.
+Volume increases when the background increases or the singularities decrease. The rooftop and maximum constructions preserve the required ordinary types; locality confines their errors to sets with vanishing mass.
 
 \Needspace{12\baselineskip}
 \begin{theorem}\label{thm:volume-monotonicity}
@@ -78,7 +78,7 @@ Integrating and taking the infimum over $w$ proves the assertion.
 
 \section{Relative full mass}
 
-Fix a reference $\varphi\in\PSH(X,\theta)$. Relative full mass asks whether a potential below the singularity type of $\varphi$ retains its upper volume. The stretching envelopes $Q_b(u,\varphi)$ from \cref{def:relative-envelope-class} will connect this numerical condition to the relative envelope class.
+Fix a reference $\varphi\in\PSH(X,\theta)$. A potential more singular than $\varphi$ has at most its upper volume. Relative full mass requires equality; positive lower volume of $\varphi$ will turn this numerical condition into the existence of every stretching envelope $Q_b(u,\varphi)$ from \cref{def:relative-envelope-class}.
 
 \begin{definition}\label{def:relative-volume-class}
 Define
@@ -90,7 +90,7 @@ Define
 \]
 \end{definition}
 
-The envelope condition gives equality of both volumes by convex comparison. In the reverse direction, positive lower volume supplies a lower bound for the masses of the approximating stretching envelopes. Collapse would move all of that mass into sublevel sets whose remaining mass tends to zero.
+Convex comparison proves one implication. For the converse, choose a representative whose mass is close to the common upper volume. If its stretching envelopes collapsed, contact support would bound their masses by the small remaining deficit, contradicting the positive lower volume of the reference.
 
 \begin{theorem}\label{thm:relative-equivalence}
 Suppose $\underline{\operatorname{vol}}_\theta(\varphi)>0$. Then
@@ -112,56 +112,51 @@ First assume the envelope condition. For each $a\in(0,1)$ there is $h\in\PSH(X,\
 \]
 Let $a\to1$. This proves equality of both volumes in this direction, even without positive lower volume.
 
-Conversely, suppose equality of the upper volumes, and fix $b>1$. Shift the potentials so that $u\leq\varphi\leq0$. For positive integers $j$, put
+Conversely, suppose equality of the upper volumes. Fix $b>1$ and put
 \[
- u_j=\max(u,\varphi-j),\qquad q_j=Q_b(u_j,\varphi).
+ \delta=\underline{\operatorname{vol}}_\theta(\varphi)>0,
+ \qquad V=\overline{\operatorname{vol}}_\theta(\varphi)
+         =\overline{\operatorname{vol}}_\theta(u).
+\]
+Choose $v\simeq u$ in $\PSH(X,\theta)$ such that
+\begin{equation}\label{eq:relative-volume-deficit}
+ V-\int_X\mathrm{MA}_\theta(v)<b^{-n}\delta.
+\end{equation}
+\Needspace{7\baselineskip}
+Translating the potentials gives $v\leq\varphi\leq0$ without changing their masses. For positive integers $j$, put
+\[
+ v_j=\max(v,\varphi-j),\qquad q_j=Q_b(v_j,\varphi).
 \]
 Each $q_j$ is genuine and equivalent to $\varphi$: the lower competitor $\varphi-bj$ and the defining inequality give
 $\varphi-bj\leq q_j\leq\varphi$.
 The sequence decreases. If its limit were $-\infty$, \cref{thm:normalized-compactness} would give $\sup_Xq_j\to-\infty$.
 
 \Needspace{7\baselineskip}
-Set $C_j=\{b^{-1}q_j+(1-b^{-1})\varphi=u_j\}$. The contact theorem and positivity of mixed products give
+Set $C_j=\{b^{-1}q_j+(1-b^{-1})\varphi=v_j\}$. The contact theorem and positivity of mixed products give
 \[
  \mathrm{MA}_\theta(q_j)
- \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(u_j).
+ \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(v_j).
 \]
 \Needspace{11\baselineskip}
-For a positive integer $k$, on $C_j\cap\{q_j\leq-bk\}$, the inequality $\varphi\leq0$ implies $u_j\leq-k$, hence $u\leq-k$. For $j>k$, locality on $\{u>-k\}\subset\{u>\varphi-j\}$ therefore yields
+For a positive integer $k$, on $C_j\cap\{q_j\leq-bk\}$, the inequality $\varphi\leq0$ implies $v_j\leq-k$, hence $v\leq-k$. For $j>k$, locality on $\{v>-k\}\subset\{v>\varphi-j\}$ therefore yields
 \[
  \begin{split}
  \int_{\{q_j\leq-bk\}}\mathrm{MA}_\theta(q_j)
- &\leq b^n\int_{\{u\leq-k\}}\mathrm{MA}_\theta(u_j)\\
- &\leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\int_{\{u>-k\}}\mathrm{MA}_\theta(u)\right).
+ &\leq b^n\int_{\{v\leq-k\}}\mathrm{MA}_\theta(v_j)\\
+ &\leq b^n\left(V
+ -\int_{\{v>-k\}}\mathrm{MA}_\theta(v)\right).
  \end{split}
 \]
-If $\sup_Xq_j\to-\infty$, the domain on the left is all of $X$ for large $j$. It follows, on letting $k\to+\infty$, that
+If $\sup_Xq_j\to-\infty$, the domain on the left is all of $X$ for large $j$. Since $q_j\simeq\varphi$, its mass is at least $\delta$. Letting $k\to+\infty$ gives
 \[
- \underline{\operatorname{vol}}_\theta(\varphi)
- \leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\int_X\mathrm{MA}_\theta(u)\right).
+ \delta\leq b^n\left(V-\int_X\mathrm{MA}_\theta(v)\right)<\delta,
 \]
-The same collapse would hold with any $u'\simeq u$ in place of $u$: a competitor for either target gives one for the other by a constant translation. Repeating the argument and taking the supremum of $\int_X\mathrm{MA}_\theta(u')$ gives
-\[
- \underline{\operatorname{vol}}_\theta(\varphi)
- \leq b^n\left(
- \overline{\operatorname{vol}}_\theta(\varphi)
- -\overline{\operatorname{vol}}_\theta(u)\right)=0,
-\]
-a contradiction. Thus $Q_b(u,\varphi)$ is genuine for every $b$, proving the envelope condition.
+by \eqref{eq:relative-volume-deficit}. Thus the decreasing limit is genuine and belongs to $\mathcal A_b(v,\varphi)$. If $v\leq u+C$, subtracting $bC$ gives a member of $\mathcal A_b(u,\varphi)$. Since $b>1$ was arbitrary, this proves the envelope condition.
 \end{proof}
 
-\section{Model references with positive lower volume}
+\section{Positive volume and smaller backgrounds}
 
-A model reference combines the ordinary envelope identity with the lower volume bound needed in \cref{thm:relative-equivalence}. In the present regime the condition is
-\begin{equation}\label{eq:li-model-condition}
- P_\theta[\varphi]=\varphi,\qquad
- \underline{\operatorname{vol}}_\theta(\varphi)>0.
-\end{equation}
-For a semipositive background, positive lower volume gives a competitor in a strictly smaller background. The proof controls the mixed terms created by a small stretching of the potential.
+In a semipositive background, stretching $u$ by a factor $b>1$ and then dividing a competitor by $b$ produces a potential below $u$ in background $b^{-1}\theta$. Positive lower volume allows a small stretch: bounded mass controls its mixed-product error, while contact support excludes collapse of the approximating envelopes.
 
 \Needspace{8\baselineskip}
 \begin{proposition}\label{prop:positive-volume-smaller-background}
@@ -215,16 +210,22 @@ $bu\leq f_j=p_j\leq-C$, so $u\leq-C/b$. Integrating yields
 The first term tends to zero as $C\to+\infty$, because the measure is finite and non-pluripolar. This contradicts the choice of $b$. Thus $P_\theta(bu)$ is genuine, and $b^{-1}P_\theta(bu)$ supplies a competitor for $P_{b^{-1}\theta}(u)$.
 \end{proof}
 
-Applied to a fixed point $\varphi$, the proposition gives the smaller-background condition \eqref{eq:als-model-condition}. If $v_-(\theta)>0$, the converse follows from \cref{lem:smaller-background-mass-lower}: every potential equivalent to $\varphi$ admits a smaller-background competitor with the same $\varepsilon$, and hence
+For model references, the positive-volume condition is
+\begin{equation}\label{eq:li-model-condition}
+ P_\theta[\varphi]=\varphi,\qquad
+ \underline{\operatorname{vol}}_\theta(\varphi)>0.
+\end{equation}
+When $\theta\geq0$, the proposition turns this into the smaller-background condition \eqref{eq:als-model-condition}. If also $v_-(\theta)>0$, the converse follows from \cref{lem:smaller-background-mass-lower}: every potential equivalent to $\varphi$ admits a smaller-background competitor with the same $\varepsilon$, and hence
 \[
  \underline{\operatorname{vol}}_\theta(\varphi)
  \geq(1-\varepsilon)^n v_-(\theta)>0.
 \]
 Without this additional lower bound, the smaller-background argument still gives individual positivity, as proved in \cref{sec:relative-envelope-room}.
 
+\Needspace{11\baselineskip}
 \section{Volumes of multiplier-ideal envelopes}
 
-The multiplier-ideal envelope replaces an ordinary singularity type by the largest normalized potential with the same ideal data. Its upper and lower volumes therefore give finite invariants of that data. For $u\in\PSH(X,\theta)$, set
+Ideal data determine the upper and lower volumes of their associated envelope. For $u\in\PSH(X,\theta)$, set
 \[
  \mathcal V^-_{\mathcal I,\theta}(u)
    =\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}),\qquad
@@ -238,7 +239,7 @@ They depend only on the multiplier-ideal class of $u$ in the fixed background. B
  \overline{\operatorname{vol}}_\theta(u)
  \leq\mathcal V^+_{\mathcal I,\theta}(u).
 \]
-The upper-volume gap detects equality of the two envelopes once relative full mass applies to the ideal envelope and $u$ already lies in the relative class of its ordinary envelope.
+The ideal envelope is an ordinary fixed point by \cref{cor:ordinary-preserves-i}. Thus relative full mass can detect equality with the ordinary envelope, provided its positive-volume hypothesis holds and $u$ belongs to the relative class of its ordinary envelope.
 
 \Needspace{14\baselineskip}
 \begin{proposition}\label{prop:conditional-i-characterization}
@@ -265,7 +266,7 @@ Conversely, equality of the upper volumes, together with $u\preceq q$ from \cref
 as required.
 \end{proof}
 
-The ordinary model identity $P_\theta[q]=q$ used in this proof is automatic by \cref{cor:ordinary-preserves-i}. Under the hypotheses of the proposition, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$.
+Under the hypotheses of the proposition, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$.
 
 \begin{problem}\label{qu:hermitian-i-characterization}
 For big non-closed backgrounds on manifolds with bounded mass, what is the weakest positive-volume assumption under which the hypotheses of \cref{prop:conditional-i-characterization} are automatic? Can that assumption be checked using only the ideal or divisorial data in the fixed background?
