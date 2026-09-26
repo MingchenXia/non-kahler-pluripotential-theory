@@ -3,18 +3,18 @@
 
 A Hermitian Monge--Amp\`ere equation determines both a potential and a scalar multiplying the prescribed density. The scalar compensates for the variation of total mass. Weighted integration bounds the potential, a trace estimate gives uniform ellipticity, and the adjoint measure removes the one-dimensional obstruction in the continuity method. Differentiating the equation against that measure then describes the scalar as a concave functional of the logarithmic density. We also solve the volume equation for the $(n-1)$st power of a metric, where an exact Aeppli variation introduces first-order torsion terms. Its derivative estimates depend on their specific matrix structure and on a Euclidean rescaling argument.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$ on $X$. For $u\in C^\infty(X,\mathbb R)$, write $\omega_u=\omega+\ddc u$. Let $F\in C^\infty(X,\mathbb R)$ be prescribed and let $b\in\mathbb R$ be an unknown scalar. We study
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$ on $X$. Let $F\in C^\infty(X,\mathbb R)$ be prescribed and let $b\in\mathbb R$ be an unknown scalar. We study
 \begin{equation}\label{eq:smooth-ma}
  \omega_u^n=\mathrm{e}^{F+b}\mathrm{d}V,\qquad \omega_u>0.
 \end{equation}
 Adding a constant to $u$ does not change the equation.
 
-\section{Existence and the unknown constant}
+\section{Scalar bounds and uniqueness}
 
-The potential is determined up to an additive constant, while the density requires a multiplicative normalization. At extrema of the potential, the equation bounds this scalar directly in terms of the prescribed data. These bounds will make the continuity path uniform.
+Extrema of the potential bound the normalization scalar in terms of the prescribed data. Applied to the difference of two solutions, the same argument identifies their scalars; ellipticity then determines the potential up to a constant. The scalar bounds also make the continuity path uniform.
 
 \begin{theorem}[Tosatti--Weinkove]\label{thm:tw-smooth}
-For every smooth real $F$, \eqref{eq:smooth-ma} has a unique pair $(u,b)$ with $\sup_Xu=0$. The potential $u$ is smooth.
+For every smooth real $F$, \eqref{eq:smooth-ma} has a unique pair $(u,b)\in C^\infty(X,\mathbb R)\times\mathbb R$ with $\sup_Xu=0$.
 \end{theorem}
 
 In dimension one, integration determines
@@ -38,11 +38,24 @@ When $\mathrm{d}\omega=0$, integration gives the familiar explicit formula
 \begin{equation}\label{eq:closed-b}
  b=\log\frac{\int_X\omega^n}{\int_X\mathrm{e}^F \mathrm{d}V}.
 \end{equation}
-The same formula is valid under any hypothesis that ensures invariance of the total mass on smooth potentials. In general, integrating the equation gives only
+The same formula holds whenever the mass-invariance criterion of \cref{thm:mass-invariance-characterization} is satisfied. In general, integrating the equation gives only
 \[
  \mathrm{e}^b=\frac{\Mass_\omega(u)}{\int_X\mathrm{e}^F \mathrm{d}V},
 \]
-whose numerator depends on the unknown potential. Replacing that numerator by $\int_X\omega^n$ would discard the mass defect from \cref{chap:mass}.
+whose numerator depends on the unknown potential.
+
+\begin{proposition}\label{prop:smooth-uniqueness}
+Suppose $(u,b)$ and $(v,c)$ are smooth solutions of \eqref{eq:smooth-ma} with the same $F$ and $\mathrm{d}V$. Then $b=c$ and $u-v$ is constant.
+\end{proposition}
+\begin{proof}
+At a maximum of $u-v$, one has $\omega_u\leq\omega_v$, so $\mathrm{e}^b\leq \mathrm{e}^c$. At a minimum one obtains $\mathrm{e}^b\geq \mathrm{e}^c$. Therefore $b=c$.
+
+Put $h=u-v$ and $\eta_t=\omega_v+t\ddc h$ for $0\leq t\leq1$. This is a family of strictly positive forms. Subtracting the logarithms of the two equations and integrating the derivative along the segment gives
+\[
+ 0=\int_0^1 n\,\frac{\ddc h\wedge\eta_t^{n-1}}{\eta_t^n}\,\mathrm{d}t.
+\]
+The right side is a linear elliptic operator applied to $h$. Its coefficients are smooth and uniformly positive on the compact manifold, and it has no zeroth-order term. The strong maximum principle implies that $h$ is constant.
+\end{proof}
 
 \section{The potential bound from weighted integration}
 
@@ -142,6 +155,7 @@ For each $\Lambda>0$ there is $C_\Lambda$ such that every smooth $u$ with
 \]
 satisfies $\|u\|_\infty\leq C_\Lambda$.
 \end{theorem}
+\Needspace{8\baselineskip}
 \begin{proof}
 Let $\mathrm{d}\mu=\omega^n/\int_X\omega^n$. The usual Sobolev inequality for the fixed Riemannian metric of $\omega$ gives, for some $\beta>1$ and every smooth real test function $w$,
 \[
@@ -170,43 +184,9 @@ By \cref{thm:normalized-compactness}, $\int_X(-u)\,\mathrm{d}\mu\leq C_0$. On $S
 when $-m\geq A$; otherwise the desired bound is immediate. Thus $-m\leq A+C_0/\delta$, proving the theorem.
 \end{proof}
 
-\section{Uniqueness by ellipticity}
-
-For two solutions with the same density, extrema of their difference first identify the scalar. Linearizing along the segment between their positive forms then reduces uniqueness of the potential to the strong maximum principle. An exponential dependence on the potential gives the stronger pointwise comparison proved below.
-
-\begin{proposition}\label{prop:smooth-uniqueness}
-Suppose $(u,b)$ and $(v,c)$ are smooth solutions of \eqref{eq:smooth-ma} with the same $F$ and $\mathrm{d}V$. Then $b=c$ and $u-v$ is constant.
-\end{proposition}
-\begin{proof}
-At a maximum of $u-v$, one has $\omega_u\leq\omega_v$, so $\mathrm{e}^b\leq \mathrm{e}^c$. At a minimum one obtains $\mathrm{e}^b\geq \mathrm{e}^c$. Therefore $b=c$.
-
-Put $h=u-v$ and $\eta_t=\omega_v+t\ddc h$ for $0\leq t\leq1$. This is a family of strictly positive forms. Subtracting the logarithms of the two equations and integrating the derivative along the segment gives
-\[
- 0=\int_0^1 n\,\frac{\ddc h\wedge\eta_t^{n-1}}{\eta_t^n}\,\mathrm{d}t.
-\]
-The right side is a linear elliptic operator applied to $h$. Its coefficients are smooth and uniformly positive on the compact manifold, and it has no zeroth-order term. The strong maximum principle implies that $h$ is constant.
-\end{proof}
-
-\Needspace{8\baselineskip}
-\begin{proposition}\label{prop:exp-smooth-unique}
-Let $\lambda>0$ and $f$ be smooth and strictly positive. There is at most one smooth solution with $\omega_u>0$ of
-\[
- \omega_u^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V.
-\]
-\end{proposition}
-\begin{proof}
-If $u,v$ solve the equation, evaluate it at a maximum of $u-v$. The matrix inequality $\omega_u\leq\omega_v$ gives $\mathrm{e}^{\lambda(u-v)}\leq1$ there, so $u\leq v$ everywhere. Interchanging them proves equality.
-\end{proof}
-
-The exponential equation will be solved in \cref{thm:smooth-proper-existence}.
-
 \section{The linearized equation and smooth dependence}
 
-The linearized operator annihilates constants, and its range is the space of functions with zero adjoint mean. Including the scalar as an unknown removes this obstruction. For $\omega_u>0$, define
-\[
- L_uv=n\frac{\ddc v\wedge\omega_u^{n-1}}{\omega_u^n},
-\]
-and let $\mu_u$ be its adjoint probability from \cref{prop:adjoint-gauduchon}. In dimension one, $\mu_u=\omega_u/\int_X\omega_u$; the compatibility condition follows from Stokes' theorem.
+The linearized operator $L_u$ of \eqref{eq:linearized-ma} annihilates constants, and its range is the space of functions with zero mean under the adjoint probability $\mu_u$ of \cref{prop:adjoint-gauduchon}. Including the scalar as an unknown removes this obstruction. In dimension one, $\mu_u=\omega_u/\int_X\omega_u$; the compatibility condition follows from Stokes' theorem.
 
 The normalization $\sup_Xu=0$ is convenient for compactness, but need not vary differentiably with the data. For differentiating solutions, fix instead the linear normalization
 \[
@@ -223,7 +203,7 @@ Fix an integer $k\geq0$ and a real exponent $0<\alpha<1$. Consider the map
  (u,b,F)\longmapsto
  \log\frac{(\omega+\ddc u)^n}{\mathrm{d}V}-F-b
 \]
-on the open set of strictly positive potentials in $C^{k+2,\alpha}$, restricted to $\int_Xu\,\mathrm{d}V=0$. Its derivative in $(u,b)$ is
+on the open set of potentials in $C^{k+2,\alpha}$ with $\omega_u>0$, restricted to $\int_Xu\,\mathrm{d}V=0$. Its derivative in $(u,b)$ is
 \[
  (v,a)\longmapsto L_uv-a.
 \]
@@ -258,12 +238,25 @@ The constants $b_t$ are uniformly bounded, and \cref{thm:smooth-czero} bounds $u
 
 When the logarithmic density contains a positive multiple of the potential, extrema bound the potential itself and the linearization acquires a negative zeroth-order term. The continuity method therefore has neither an additive normalization nor an extra scalar unknown.
 
+\begin{proposition}\label{prop:smooth-proper-comparison}\label{prop:exp-smooth-unique}
+Let $\lambda>0$, let $F$ be smooth, and let $v,w$ be smooth strictly $\omega$-plurisubharmonic functions. If
+\[
+ \omega_v^n\geq \mathrm{e}^{\lambda v+F}\omega^n,
+ \qquad \omega_w^n\leq \mathrm{e}^{\lambda w+F}\omega^n,
+\]
+then $v\leq w$. In particular, two smooth solutions coincide.
+\end{proposition}
+\begin{proof}
+If $v-w$ had a positive maximum at $x$, then $\omega_v(x)\leq\omega_w(x)$. Taking determinants and applying the two assumptions would give
+$\mathrm{e}^{\lambda v(x)+F(x)}\leq \mathrm{e}^{\lambda w(x)+F(x)}$, contradicting $v(x)>w(x)$. For two solutions, apply the comparison in both orders.
+\end{proof}
+
 \begin{theorem}\label{thm:smooth-proper-existence}
 For every $\lambda>0$ and every smooth real $F$, there is a unique smooth $u$ with $\omega_u>0$ such that
 \[
  \omega_u^n=\mathrm{e}^{\lambda u+F}\omega^n.
 \]
-There is no free additive constant, and
+The solution satisfies
 \[
  -\lambda^{-1}\sup_XF\leq u\leq-\lambda^{-1}\inf_XF.
 \]
@@ -278,19 +271,6 @@ Consider the equations
 At $t=0$, $u_0=0$ is a solution. The linearization in $u$ is $L_u-\lambda$. Its kernel is zero by the maximum principle. Its Fredholm index is zero: deform its positive principal coefficients to those of a fixed Laplacian while keeping the negative zeroth-order term. The latter operator is invertible, and elliptic Fredholm index is constant under this deformation. Thus $L_u-\lambda$ is an isomorphism between the usual H\"older spaces, with bounded inverse by Schauder theory. The implicit function theorem proves openness.
 
 The extrema bounds give $\|u_t\|_\infty\leq\lambda^{-1}\|F\|_\infty$. The semilinear consequence of \cref{thm:hermitian-second-estimate} gives uniform ellipticity and all higher bounds. A subsequence along any converging sequence of solvable parameters therefore converges smoothly to a strictly positive solution at the limit. This proves closedness, and hence existence at $t=1$. Uniqueness is \cref{prop:exp-smooth-unique}.
-\end{proof}
-
-\begin{proposition}\label{prop:smooth-proper-comparison}
-Let $\lambda>0$, let $F$ be smooth, and let $v,w$ be smooth strictly $\omega$-plurisubharmonic functions. If
-\[
- \omega_v^n\geq \mathrm{e}^{\lambda v+F}\omega^n,
- \qquad \omega_w^n\leq \mathrm{e}^{\lambda w+F}\omega^n,
-\]
-then $v\leq w$.
-\end{proposition}
-\begin{proof}
-If $v-w$ had a positive maximum at $x$, then $\omega_v(x)\leq\omega_w(x)$. Taking determinants and applying the two assumptions would give
-$\mathrm{e}^{\lambda v(x)+F(x)}\leq \mathrm{e}^{\lambda w(x)+F(x)}$, contradicting $v(x)>w(x)$.
 \end{proof}
 
 For a fixed smooth real obstacle $f$ on $X$ and a parameter $\beta>0$, the choice $\lambda=\beta$ and $F=-\beta f$ gives
@@ -405,7 +385,7 @@ Closedness of the base form and Stokes' theorem give $\mathrm{e}^c\int_{\mathbb 
 In particular, if a smooth positive density $f$ satisfies $\int_Xf\,\mathrm{d}\nu=1$, the equation $(\omega+\ddc u)^3=\mathrm{e}^b f\omega^3$ has $b\geq0$, with equality precisely when $f$ comes from the base. Fixing the total integral of the density therefore does not determine the scalar on this non-closed background.
 
 \begin{corollary}\label{cor:hopf-normalization-hessian}
-Let $G\in C^\infty(X,\mathbb R)$. Write $L_0v=3\ddc v\wedge\omega^2/\omega^3$, and let $v$ be the unique smooth real function satisfying
+Let $G\in C^\infty(X,\mathbb R)$, and let $v$ be the unique smooth real function satisfying
 \[
  L_0v=G-\int_XG\,\mathrm{d}\nu,
  \qquad \int_Xv\,\mathrm{d}\nu=0.
@@ -420,7 +400,7 @@ Then
 The second derivative vanishes if and only if $G$ is a smooth base pullback.
 \end{corollary}
 \begin{proof}
-For real $t$ near zero put $u_t=u_{tG}$ and $b_t=b(tG)$. By \cref{prop:smooth-dependence}, this is a smooth family, with $u_0=b_0=0$. A dot denotes its derivative in $t$. Differentiating the logarithmic equation at zero gives $L_0\dot u_0=G+\dot b_0$. Since $\omega$ is Gauduchon, $\nu$ is the adjoint probability of $L_0$. Integration gives $\dot b_0=-\int_XG\,\mathrm{d}\nu$, so $\dot u_0=v$. This also proves existence and uniqueness of the displayed mean-zero solution.
+For real $t$ near zero put $u_t=u_{tG}$ and $b_t=b(tG)$. By \cref{prop:smooth-dependence}, this is a smooth family, with $u_0=b_0=0$. Differentiating the logarithmic equation at zero gives $L_0\dot u_0=G+\dot b_0$. Since $\omega$ is Gauduchon, $\nu$ is the adjoint probability of $L_0$. Integration gives $\dot b_0=-\int_XG\,\mathrm{d}\nu$, so $\dot u_0=v$. This also proves existence and uniqueness of the displayed mean-zero solution.
 
 Smooth dependence gives $(u_t)_w=t v_w+O(t^2)$ uniformly on $X$. Equation \eqref{eq:hopf-normalization-energy} therefore gives
 \[
@@ -446,7 +426,7 @@ We now return to a general connected compact complex manifold $X$ of dimension $
 \Needspace{22\baselineskip}
 \begin{theorem}[Sz\'ekelyhidi--Tosatti--Weinkove]
 \label{thm:stw-volume}
-Assume $n\geq2$. Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)\in C^\infty(X,\mathbb R)\times\mathbb R$ with $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
+Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)\in C^\infty(X,\mathbb R)\times\mathbb R$ with $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
 \[
  \Gamma_u=\gamma_0^{n-1}+\ddc u\wedge\gamma^{n-2}
  +\operatorname{Re}\left(
@@ -459,7 +439,7 @@ has a positive root $\eta_u^{n-1}=\Gamma_u$ satisfying
 \]
 \end{theorem}
 
-Keep $\gamma_0$ and $\gamma$ fixed for the remainder of the chapter, and write $\mathcal D_\gamma u=\Gamma_u-\gamma_0^{n-1}$ for the linear part of the ansatz. A Green estimate and a local contact argument bound the potential. The derivative estimate retains the torsion term and bounds the complex Hessian by the square of the gradient; rescaling then reduces a hypothetical gradient blowup to a Liouville theorem. These bounds close the continuity method.
+Keep $\gamma_0$ and $\gamma$ fixed for the remainder of the chapter, and write $\mathcal D_\gamma u=\Gamma_u-\gamma_0^{n-1}$ for the linear part of the ansatz.
 
 To see the preserved geometry, set
 $\xi_u=\mathrm i\,\bar\partial u\wedge\gamma^{n-2}/(4\pi)$.
@@ -482,5 +462,3 @@ If $\gamma_0$ is Gauduchon, so is $\eta_u$, and their $(n-1)$st powers have the 
 \input{author/section_stw_continuity}
 
 \input{author/section_gauduchon_volume_variation}
-
-The next chapter treats nonsmooth densities for the ordinary Hermitian equation. There the limiting Monge--Amp\`ere measure and the uniqueness of the normalization scalar require separate arguments; the smooth maximum principle alone does not pass to weak potentials.

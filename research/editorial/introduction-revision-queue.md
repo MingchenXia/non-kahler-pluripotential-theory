@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint152: read and rewrite the complete present Chapter 9 and all its nested inputs, then Chapter 10. Chapter 8 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint153: read and rewrite the complete present Chapter 10 and all its nested inputs, then Chapter 11. Chapter 9 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -16,7 +16,7 @@ Current next unit after checkpoint152: read and rewrite the complete present Cha
 | 6 | `chapter_products.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint150. A single arbitrary-background construction uses the Chapter 1 bounded-contact foundation; all infinite-mass and prescribed-mass proofs remain. See chapter-six-rewrite-150.md. |
 | 7 | `chapter_damped_measures.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint151. One general weight criterion includes capacity continuity; the explicit exponential bound, all tail and integrability criteria, and both mass-defect examples remain. See chapter-seven-rewrite-151.md. |
 | 8 | `chapter_hopf.tex` | 6 | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint152. The heat and square estimates share one argument with uniform constants; fiber averaging supplies the minimum-mass conclusion. See chapter-eight-rewrite-152.md. |
-| 9 | `chapter_smooth_equations.tex` | 18 | Complete chapter and every nested-input rewrite, first/second direct reads and release checks in checkpoint115. |
+| 9 | `chapter_smooth_equations.tex` | 17 | Complete integrated seventeen-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint153. Scalar bounds and uniqueness share one argument; the Gauduchon cofactor identity is used throughout the derivative, rescaling and variation proofs. See chapter-nine-rewrite-153.md. |
 | 10 | `chapter_weak_equations.tex` | 9 | Complete chapter and all three nested-input reads, whole-chapter rewrite and release checks in checkpoint116. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. Checkpoint150 replaces the repeated bounded-contact proof by the Chapter 1 lemma and reads the complete modified-comparison input twice. |
 | 11 | `chapter_degenerate_uniqueness.tex` | 24 | Complete chapter and all eleven nested-input reads, whole-chapter rewrite and release checks in checkpoint117. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
 | 12 | `chapter_envelopes.tex` | 6 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint118. |
@@ -109,3 +109,5 @@ Checkpoint150 completes the whole Chapter 6 rewrite and the bounded Chapter 1 an
 Checkpoint151 completes the whole Chapter 7 rewrite. The next complete chapter is Chapter 8.
 
 Checkpoint152 completes the whole Chapter 8 rewrite. The next complete chapter is Chapter 9, including all its nested inputs.
+
+Checkpoint153 completes the whole Chapter 9 rewrite, including all nine nested inputs. The next complete chapter is Chapter 10.

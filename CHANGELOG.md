@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint153 — 26 September 2026
+
+Chapter 9 completes its whole seventeen-section rewrite, including all nine nested inputs, and two direct revised mathematical/editorial reads. Scalar bounds and uniqueness share one section; exponential comparison supplies the former separate uniqueness proposition. The linearized operator and adjoint compatibility are used from Chapter 4. The Gauduchon cofactor matrix and determinant identity are defined once and used in rescaling, higher regularity and variation. The full torsion, eigenvalue, Liouville and continuity proofs remain. Auxiliary-constant dependencies are explicit, and repeated definitions, derivative notation, roadmaps and recaps are removed.
+
+All ten author inputs have zero house-audit errors and the same three inherited warnings. Non-book citations remain in Chapter 33. The 806-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 74 selected final pages pass visual review, with 54 changed images directly inspected and 20 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-nine-rewrite-153.md, build-snapshot-153.json and source-package-portability-153.json.
+
+Continue with the complete present Chapter 10 and all its nested inputs, then Chapter 11. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint152 — 26 September 2026
 
 Chapter 8 completes its whole six-section rewrite and two direct revised mathematical/editorial reads. The heat-potential and mixed-derivative estimates form one argument. The square estimate explicitly has a constant uniform in its varying parameters, including the cutoff factor in its pointwise application. The mass formula uses the Chapter 2 mass polynomial. The sharp fiber-average inequality now supplies the minimum-mass corollary, removing a duplicate regularization proof and the repeated lower-mass definition. The complete heat-scale and base-correction construction remains, while the distant equation-solvability recap is removed.

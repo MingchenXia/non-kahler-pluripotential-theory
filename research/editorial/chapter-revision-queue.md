@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint152: read and rewrite the complete present Chapter 9 and all its nested inputs, then Chapter 10. Chapter 8 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint153: read and rewrite the complete present Chapter 10 and all its nested inputs, then Chapter 11. Chapter 9 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -16,7 +16,7 @@ Current next unit after checkpoint152: read and rewrite the complete present Cha
 | 6 | `chapter_products.tex` | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint150. A single arbitrary-background construction uses the Chapter 1 bounded-contact foundation; all infinite-mass and prescribed-mass proofs remain. See chapter-six-rewrite-150.md. |
 | 7 | `chapter_damped_measures.tex` | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint151. One general weight criterion includes capacity continuity; the explicit exponential bound, all tail and integrability criteria, and both mass-defect examples remain. See chapter-seven-rewrite-151.md. |
 | 8 | `chapter_hopf.tex` | Complete integrated six-section rewrite and two direct revised mathematical/editorial reads in checkpoint152. The heat and square estimates share one argument with uniform constants; fiber averaging supplies the minimum-mass conclusion. See chapter-eight-rewrite-152.md. |
-| 9 | `chapter_smooth_equations.tex` | Complete nine-input first/second pass across checkpoints103–104, including final selected-page review; see gauduchon-equations-second-pass-104.md |
+| 9 | `chapter_smooth_equations.tex` | Complete integrated seventeen-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint153. Scalar bounds and uniqueness share one argument; the Gauduchon cofactor identity is used throughout the derivative, rescaling and variation proofs. See chapter-nine-rewrite-153.md. |
 | 10 | `chapter_weak_equations.tex` | Complete four-input first/second pass and final selected-page review; see hopf-lp-continuous-equations-review-105.md. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. Checkpoint150 replaces the repeated bounded-contact proof by the Chapter 1 lemma and reads the complete modified-comparison input twice. |
 | 11 | `chapter_degenerate_uniqueness.tex` | Complete twelve-input first/second direct proof-and-writing pass; see hopf-near-equality-uniqueness-review-106.md. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
 | 12 | `chapter_envelopes.tex` | Complete chapter and bounded-contact input first/second direct proof-and-writing reads, with final output checks in checkpoint118; see chapter-twelve-rewrite-118.md. Earlier bounded reviews retain their recorded scopes. |
@@ -65,3 +65,5 @@ Checkpoint150 completes the whole Chapter 6 rewrite and the bounded Chapter 1 an
 Checkpoint151 completes the whole Chapter 7 rewrite. The next complete chapter is Chapter 8.
 
 Checkpoint152 completes the whole Chapter 8 rewrite. The next complete chapter is Chapter 9, including all its nested inputs.
+
+Checkpoint153 completes the whole Chapter 9 rewrite, including all nine nested inputs. The next complete chapter is Chapter 10.
