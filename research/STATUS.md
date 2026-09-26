@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint157 — Chapter 13, prescribed singularities and individual densities
+
+Chapter 13 completes its integrated rewrite and two complete direct revised mathematical/editorial reads of all 33 inputs. Bounded equations, symmetric selection and big-background contact results are grouped together; ordinary-type existence precedes arbitrary-big minimal-type existence. Weighted lower semicontinuity and its full proof move to Chapter 6. The duplicate relative-continuity statement is replaced by the theorem at its Chapter 30 proof. A single relative measure representation yields the bounded case, one comparison proves the normalizer bounds, and an extracted Lp scalar-continuity lemma serves both approximation arguments. The interior interpolation propositions are merged with full-sequence convergence retained and the parameter order made explicit. Repeated definitions, settings and recaps are removed.
+
+The 36-input house-audit scope has zero errors and sixteen inherited warnings, reduced from eighteen baseline warnings. Non-book citations remain in Chapter 33. The 802-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 202 selected book pages pass visual review across four renders. The companion is byte-identical to checkpoint156. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-thirteen-rewrite-157.md, build-snapshot-157.json and source-package-portability-157.json.
+
+Continue with the complete present Chapter 14 and all its nested inputs, then Chapter 15. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint156 — Chapter 12, contact sets and relative envelope classes
 
 Chapter 12 completes its whole six-section rewrite, including the bounded-contact input, and two complete direct revised mathematical/editorial reads. The fixed-point measure estimate follows directly from contact with zero; stretch closure uses the bs competitor; finite rooftop stability follows from convexity and upward stability; and the infinite-mass example uses the existing common-envelope theorem. The duplicate big-background contact statement is replaced by a reference to Chapter 13. Repeated definitions and roadmap prose are removed, and the bounded history interface describes the revised proof.

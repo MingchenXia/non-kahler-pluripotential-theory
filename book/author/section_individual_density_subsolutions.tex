@@ -3,32 +3,6 @@
 
 For one fixed density, the normalizers of its bounded truncations give an exact test for the existence of a positive scaled subsolution. A cluster limit attains the threshold because density lower bounds survive $L^1$ convergence of potentials through upper envelopes.
 
-For a nonzero nonnegative bounded density $q$, denote by $c_h(q)>0$ the scalar in its continuous equation
-\[
- \mathrm{MA}_h(v)=c_h(q)q\,\mathrm{d}V.
-\]
-Existence and scalar uniqueness are given by \cref{thm:kn-continuous,prop:vanishing-exponent}.
-
-\begin{lemma}\label{lem:bounded-normalizer-subsolution}
-If $u\in\PSH(X,h)$ and $a>0$ satisfy
-$\mathrm{MA}^{\mathrm{ext}}_h(u)\geq aq\,\mathrm{d}V$, then $a\leq c_h(q)$. Consequently,
-\[
- q\leq r\quad\Longrightarrow\quad c_h(q)\geq c_h(r),
- \qquad c_h(tq)=t^{-1}c_h(q)\quad(t>0)
-\]
-for nonzero nonnegative bounded densities $q,r$.
-\end{lemma}
-\begin{proof}
-The proof of \cref{lem:smooth-normalizer-subsolution-bound} uses only boundedness of the comparison potential. Indeed, if $a>c_h(q)$, every translate $v+A$ has a genuine envelope in background $h/2$, and $u\preceq v+A$. The inequality
-\[
- \mathrm{MA}_h(v+A)\leq\frac{c_h(q)}a
-                  \mathrm{MA}^{\mathrm{ext}}_h(u)
-\]
-and \cref{thm:singular-strict-domination} give $v+A\geq u$ for every real $A$, a contradiction at a point where $u$ is finite. This argument permits zeros of $q$ and infinite mass of $u$.
-
-If $q\leq r$, a continuous solution for $r$ is a subsolution for $c_h(r)q\,\mathrm{d}V$, so the first assertion gives the order inequality. The scaling identity follows from uniqueness of the constant.
-\end{proof}
-
 Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral, and put
 \begin{equation}\label{eq:individual-truncated-normalizer}
  f_k=\min(f,k),\qquad
@@ -97,6 +71,7 @@ The argument preserves a density lower bound. It does not claim that the origina
 
 \input{author/section_threshold_subsolution_envelope}
 
+\Needspace{12\baselineskip}
 \begin{proposition}\label{prop:individual-normalizer-lp}
 If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)$ equals the normalization constant of the continuous equation for $f$. In general,
 \[
@@ -105,7 +80,7 @@ If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)$ equals the normalizatio
 If $h$ is K\"ahler, then $b_h(f)=\int_Xh^n/\int_Xf\,\mathrm{d}V$ for every nonzero nonnegative $L^1$ density.
 \end{proposition}
 \begin{proof}
-Let $v$ be a continuous solution for $f\in L^p$, with scalar $c>0$. It is a subsolution for $cf\,\mathrm{d}V$, so the maximal-subsolution characterization gives $c\leq b_h(f)$. Conversely, the comparison argument of \cref{lem:bounded-normalizer-subsolution} uses only boundedness of $v$, not of the density: if $u$ were a subsolution for $af\,\mathrm{d}V$ with $a>c$, strict domination would give $v+A\geq u$ for every real $A$, a contradiction. Apply this to the attained threshold subsolution to obtain $b_h(f)\leq c$.
+Let $v$ be a continuous solution for $f\in L^p$, with scalar $c>0$. It is a subsolution for $cf\,\mathrm{d}V$, so the maximal-subsolution characterization gives $c\leq b_h(f)$. Conversely, the bounded-solution comparison in \cref{lem:bounded-normalizer-subsolution}, applied to the attained threshold subsolution and $v$, gives $b_h(f)\leq c$.
 
 Each bounded solution has total mass at least $v_-(h)$, so $c_h(f_k)\int_Xf_k\,\mathrm{d}V\geq v_-(h)$. Take the limit. In the K\"ahler case, bounded Stokes instead gives the exact identity $c_h(f_k)\int_Xf_k\,\mathrm{d}V=\int_Xh^n$, which proves the last assertion.
 \end{proof}
@@ -127,15 +102,13 @@ If $v_-(h)=0$, there is a probability density $f\in L^1(\mathrm{d}V)$ bounded be
 Thus no positive multiple of $f\,\mathrm{d}V$ is dominated by an extended Monge--Amp\`ere measure, although every smooth comparison test gives a common positive bound.
 \end{theorem}
 \begin{proof}
-We first note that the normalization constants for bounded densities are continuous under $L^p$ convergence to a nonzero bounded density, for any fixed $p>1$. Indeed the Gauduchon trace inequality bounds the constants above, and the lower $L^p$ density estimate bounds them away from zero. The normalized continuous solutions then have uniformly bounded $L^p$ right-hand sides. Uniform compactness and uniqueness of the scalar identify every subsequential limit. This is exactly the compactness argument in the proof of \cref{thm:kn-continuous}.
-
 Let $(U_i)_{i\geq1}$ be a countable basis of nonempty open subsets of $X$. We construct numbers $\alpha_j>0$, bounded densities $q_j\not\equiv0$, and closed nowhere dense sets $K_j$ such that
 \[
  \int_Xq_j\,\mathrm{d}V\leq1,\qquad
  \operatorname{supp}q_j\subset K_j,\qquad
  c_h(q_j)\leq\alpha_j2^{-j}.
 \]
-Start with $\alpha_1=1/4$. Once $\alpha_j$ is chosen, the identity between lower mass and the infimum of smooth normalization constants gives a smooth strictly positive probability density $g_j$ with $c_h(g_j)<\alpha_j2^{-j}$. Choose a closed nowhere dense $K_j$ so that $q_j=g_j\mathbf1_{K_j}$ is sufficiently close to $g_j$ in $L^2$ for the displayed scalar bound to hold. Such sets exist: remove an open dense set of arbitrarily small measure from $X$; boundedness of the fixed $g_j$ makes the $L^2$ error arbitrarily small. Choose it small enough also that $q_j$ is nonzero.
+Start with $\alpha_1=1/4$. Once $\alpha_j$ is chosen, the identity between lower mass and the infimum of smooth normalization constants gives a smooth strictly positive probability density $g_j$ with $c_h(g_j)<\alpha_j2^{-j}$. Choose a closed nowhere dense $K_j$ so that $q_j=g_j\mathbf1_{K_j}$ is sufficiently close to $g_j$ in $L^2$ for the displayed scalar bound to hold, using \cref{lem:lp-normalizer-continuity}. Such sets exist: remove an open dense set of arbitrarily small measure from $X$; boundedness of the fixed $g_j$ makes the $L^2$ error arbitrarily small. Choose it small enough also that $q_j$ is nonzero.
 
 After choosing $K_1,\ldots,K_N$, put
 \[

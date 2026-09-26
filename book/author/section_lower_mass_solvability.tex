@@ -3,28 +3,39 @@
 
 For a Hermitian background $h$, solvability for every finite non-pluripolar measure is equivalent to positive lower mass. When $v_-(h)=0$, smooth densities with rapidly decreasing normalizers can be summed to produce a density admitting no positive scaled subsolution. Strict domination supplies the bound that makes this construction work. In the remaining sections, $h$ denotes a Hermitian form on $X$.
 
-\begin{lemma}\label{lem:smooth-normalizer-subsolution-bound}
-Let $h$ be a Hermitian form and let $\nu$ be a smooth strictly positive probability measure. Let $v\in C^\infty(X,\mathbb R)$ and $c_h(\nu)>0$ solve
+For nonzero $0\leq q\in L^p(\mathrm{d}V)$ with $p>1$, let $c_h(q)>0$ be the scalar in its continuous equation, supplied by \cref{thm:kn-continuous,prop:vanishing-exponent}. For the measure $\nu=q\,\mathrm{d}V$ we also write $c_h(\nu)=c_h(q)$.
+
+\begin{lemma}\label{lem:bounded-normalizer-subsolution}\label{lem:smooth-normalizer-subsolution-bound}
+If $u\in\PSH(X,h)$ and $a>0$ satisfy
 \[
- (h+\ddc v)^n=c_h(\nu)\nu,\qquad h+\ddc v>0,
+ \mathrm{MA}^{\mathrm{ext}}_h(u)\geq aq\,\mathrm{d}V,
 \]
-for its smooth normalized equation. If $u\in\PSH(X,h)$ and $a>0$ satisfy
+then $a\leq c_h(q)$. Consequently, for nonzero nonnegative bounded densities $q,r$,
 \[
- \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\nu,
+ q\leq r\ \Longrightarrow\ c_h(q)\geq c_h(r),
+ \qquad c_h(tq)=t^{-1}c_h(q)\quad(t>0).
 \]
-then $a\leq c_h(\nu)$.
 \end{lemma}
 \begin{proof}
-Suppose $a>c_h(\nu)$, and set $r=c_h(\nu)/a<1$. For every real $A$, the smooth potential $v+A$ admits a genuine envelope in background $h/2$: a sufficiently small constant lies below it. Also $u\preceq v+A$, since $u$ is bounded above and $v+A$ is bounded below on compact $X$. The measure inequality gives
+Let $v$ be a continuous solution for $q$. If $a>c_h(q)$, put $\tau=c_h(q)/a<1$. Every translate $v+A$ admits a genuine envelope in background $h/2$, and $u\preceq v+A$. The inequality
 \[
- \mathrm{MA}_h(v+A)=c_h(\nu)\nu
-       \leq r\,\mathrm{MA}^{\mathrm{ext}}_h(u).
+ \mathrm{MA}_h(v+A)=c_h(q)q\,\mathrm{d}V
+       \leq\tau\,\mathrm{MA}^{\mathrm{ext}}_h(u)
 \]
-Apply \cref{thm:singular-strict-domination}, with first potential $v+A$ and second potential $u$. It yields $v+A\geq u$ for every $A$. Letting $A\to-\infty$ at a point where $u$ is finite is a contradiction. No total mass of $u$ was used.
+and \cref{thm:singular-strict-domination} give $v+A\geq u$ for every real $A$. Letting $A\to-\infty$ at a point where $u$ is finite is a contradiction.
+
+If $q\leq r$, a continuous solution for $r$ is a subsolution for $c_h(r)q\,\mathrm{d}V$, giving the order inequality. Scalar uniqueness gives the homogeneity. The comparison used only boundedness of $v$, so its first conclusion also holds for any nonnegative density that has a bounded solution with scalar $c_h(q)$.
+\end{proof}
+
+\begin{lemma}\label{lem:lp-normalizer-continuity}
+Fix $p>1$. If nonzero nonnegative densities $q_j,q\in L^p(\mathrm{d}V)$ satisfy $q_j\to q$ in $L^p$, then $c_h(q_j)\to c_h(q)$.
+\end{lemma}
+\begin{proof}
+The Gauduchon trace inequality bounds $c_h(q_j)$ above, since $q_j^{1/n}\to q^{1/n}$ in $L^n$ and every fixed positive trace test has a positive integral at $q$. The lower-density estimate of \cref{thm:lp-potential-estimate} bounds the scalars away from zero. Normalized continuous solutions consequently have uniformly bounded $L^p$ densities. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence on which the potentials converge uniformly and the scalars converge to some $c>0$. Bounded product continuity identifies the limit equation as $\mathrm{MA}_h(u)=cq\,\mathrm{d}V$. Scalar uniqueness gives $c=c_h(q)$, proving convergence of the original sequence.
 \end{proof}
 
 \begin{theorem}\label{thm:lower-mass-obstructing-measure}
-Suppose $v_-(h)=0$ for a Hermitian form $h$. Fix a smooth positive probability measure $\mathrm{d}V$. There is a probability measure $\mu=f\,\mathrm{d}V$ with $f\in L^1(\mathrm{d}V)$ and $f\geq m>0$ almost everywhere such that no $u\in\PSH(X,h)$ and $a>0$ satisfy
+Suppose $v_-(h)=0$. There is a probability measure $\mu=f\,\mathrm{d}V$ with $f\in L^1(\mathrm{d}V)$ and $f\geq m>0$ almost everywhere such that no $u\in\PSH(X,h)$ and $a>0$ satisfy
 \begin{equation}\label{eq:lower-mass-impossible-subsolution}
  \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\mu.
 \end{equation}
@@ -46,11 +57,11 @@ If \eqref{eq:lower-mass-impossible-subsolution} held, then for every $j$
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a2^{-j}\nu_j.
 \]
-The preceding lemma would imply $a2^{-j}\leq c_h(\nu_j)\leq2^{-2j}$. Thus $a\leq2^{-j}$ for all $j$, contradicting $a>0$.
+\Cref{lem:bounded-normalizer-subsolution} would imply $a2^{-j}\leq c_h(\nu_j)\leq2^{-2j}$. Thus $a\leq2^{-j}$ for all $j$, contradicting $a>0$.
 \end{proof}
 
 \begin{corollary}\label{cor:positive-lower-mass-solvability}
-For a Hermitian form $h$, the following conditions are equivalent:
+The following conditions are equivalent:
 \begin{enumerate}
 \item $v_-(h)>0$.
 \item Every nonzero finite positive non-pluripolar measure $\mu$ admits $c>0$ and $u\in\mathcal E_{\mathrm{env}}(X,h,0)$ such that
@@ -58,7 +69,6 @@ $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$.
 \item For every probability density $f\in L^1(\mathrm{d}V)$ bounded below by a positive constant, there are $u\in\PSH(X,h)$ and $a>0$ such that
 $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$.
 \end{enumerate}
-Here $\mathrm{d}V$ is any fixed smooth positive probability measure.
 \end{corollary}
 \begin{proof}
 For the reference zero, $P_h[0]=0$ and $P_{\varepsilon h}(0)=0$ for every $0<\varepsilon<1$. The form $h$ is semipositive and big. Thus (1) implies (2) by \cref{thm:als-general-measure}. Condition (2) implies (3), since an absolutely continuous measure is non-pluripolar. The preceding theorem proves the contrapositive of (3) implies (1).

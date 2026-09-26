@@ -1,0 +1,31 @@
+# Chapter 13 rewrite — checkpoint157
+
+Baseline: `a93bbb30b32282e5e80041bc99c4bb13b3ab89a1`, checked checkpoint156. The complete original chapter and all 32 nested inputs were read directly. The revised 33 inputs received two complete direct mathematical/editorial reads, including the three contiguous parts of the long interior-regularity input. Chapter 6 root was read completely before and after relocation; its unchanged nested infinite-mass input is outside the fresh review scope. Bounded Chapter 30 theorem/proof and Chapter 33 attribution interfaces were checked. This is not a whole-Chapter 30 or 33 review.
+
+## Architecture and proof changes
+
+The chapter proceeds from bounded equations and regularity through contact sets, relative compactness and ordinary-type existence to arbitrary-big minimal-type solutions. Measure representation precedes lower-mass obstruction, individual-density thresholds, Gauduchon tests, root spaces and exponential limits. Neighboring bounded-equation, symmetric-example and big-contact sections are merged; the regularity regimes are placed together. Introductions state the mathematical mechanism. Repeated settings, definitions, proofs and roadmap paragraphs are removed.
+
+The full weighted lower-semicontinuity proof moves to Chapter 6, retaining both labels and its arbitrary smooth background, varying bounded quasi-continuous weights, capacity topology and possible infinite masses. Dominated relative continuity is stated once in Chapter 30, where its proof already lives; the old label is retained there as an alias. Chapter 13 states the exact alternatives before referring to the theorem. The historical attribution is correspondingly singular.
+
+The continuous-obstacle proof now uses the Chapter 1 smooth-background regularization-rate theorem. That complete unchanged foundational input was read to verify its scope for globally unbounded potentials locally bounded off analytic poles. The contact replacement argument and arbitrary-big descent remain. Closed-background modification descent cannot replace the separate arbitrary-background descent theorem.
+
+One relative measure representation proves the bounded case by setting the reference to zero. One normalizer/subsolution comparison carries the smooth alias, and a separate scalar Lp-continuity lemma serves both the obstruction construction and measurable Gauduchon approximation. The two interior interpolation statements become one proposition with both labels: the dyadic series and intermediate-index estimate prove full-sequence C1-alpha convergence. The boundary gap is fixed before choosing its logarithmic coefficient and error parameter. Local smooth Dirichlet regularity refers to the already introduced input.
+
+## Mathematical checks
+
+Bounded stability retains the assumption that the limiting potential already solves its equation. Existence still identifies the limiting measure independently. Semipositive bounded theory, arbitrary big backgrounds, smaller-background references, positive lower mass and bounded upper mass retain their separate scopes. Scalar uniqueness is not replaced by potential uniqueness. Infinite extended measures are never subtracted.
+
+Gauduchon approximation uses a uniform L2n bound before exchanging approximation and supremum. Root norms distinguish positive lower mass from bounded upper mass. Exponential limits identify the scalar and right-hand-side measure without asserting capacity convergence from root tails alone. The general tail modulus need not be linear; linear error estimates retain the stronger Lr root hypothesis.
+
+## Release checks
+
+The 36-input house-audit scope has zero errors and sixteen inherited warnings, reduced from eighteen baseline warnings. Non-book citations remain in Chapter 33. The 802-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited book bibliography underfull paragraph remains. All 202 selected book pages pass visual review across four renders. The companion is byte-identical to checkpoint156. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-thirteen-rewrite-157.md, build-snapshot-157.json and source-package-portability-157.json.
+
+The first selection had 202 pages: 192 changed/new images were directly inspected and 10 were byte-identical to inspected checkpoint156 images. The second render had 47 changed/new images, all directly inspected; 155 images were byte-identical to that first pass. The third render had 55 changed/new images, all directly inspected; 147 were byte-identical to the second pass. After the final two local layout adjustments, 11 changed/new images were directly reinspected and 191 were byte-identical to the reviewed third pass. The selection covers the complete Chapter 13 and adjoining pages, front matter and contents, and every other changed body page compared within its chapter while ignoring shifted running page numbers. Local space reservations keep short introductions, selected theorem statements and proof leads with their following displays. The chapter now has 26 sections, 49 sections/subsections and 83 formal blocks. Of 188 original labels, 187 remain and resolve, including three relocated aliases; only the unreferenced redundant interior-locality remark label is removed. The new scalar-continuity lemma has its own label. Final package manuscript and build payloads match the fresh reconstruction; later changes affect only research documentation. Private synchronization follows these checks.
+
+No new external result, literature locator check, Popovici reliance, novelty search or independent verifier run is claimed. The historical bibliography prompts retain their previous scopes.
+
+## Continuation
+
+After release checks, continue with the complete present Chapter 14 and all its nested inputs, then Chapter 15. The broader goal remains active. Existing writing-skill rules cover this revision; no new author correction requires a skill-only change.
