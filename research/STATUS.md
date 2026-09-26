@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint168 — Chapter 22 and divisorial compatibility
+
+Chapter 22 completes its integrated eight-section rewrite, including all three nested inputs, and two complete direct revised mathematical/editorial reads. Divisorial summability leads to compatibility, common majorants, residual classes and the exceptional-divisor formula. One ideal-order inequality now supplies both finite pullback and exceptional approximants. The Bott–Chern quotient and smooth ordinary-type difference use the Chapter 1 potential lemma. A zero-mean identity makes the L1 compactness step explicit. All 27 existing labels, sixteen formal blocks and fourteen proofs remain; one equation label is added. Fifteen formal blocks are unchanged and the self-trace lemma has only a wording edit.
+
+The four-input house audit has zero errors and one inherited chapter-label warning. The 813-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 41 selected final pages pass visual review: 11 changed images were directly inspected and 30 match the first inspected render byte for byte. Both outputs rebuild from a fresh empty source-package extraction with identical page text. The companion is byte-identical to checkpoint167. There are 33 active chapters and 221 author inputs; the 190 historical verifier reports and three hidden sources remain unchanged. No new independent verification is claimed.
+
+Continue with the complete present Chapter 23 and its nested input, then Chapter 24. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint167 — Geometric stability of normalization
 
 The supplied q8-2 manuscript is integrated in Sections 14.8–14.10. Relative positive-form bounds compare the entire normalization functional uniformly over all bounded tests. The resulting dual bounds give uniformly integrable supporting densities and weak L1 stability. Ordinary divisorial removal identifies the whole prescribed type with bounded potentials in its positive residual background. Moving sections and weights give L1 convergence of full supremum-normalized solutions in the two stated regimes. Smooth adjoints and the value at zero reconstruct the functional.

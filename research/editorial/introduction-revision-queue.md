@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint167: read and rewrite the complete present Chapter 22 and all its nested inputs, then Chapter 23. Checkpoint167 is a bounded supplied-result integration and does not advance the complete-chapter queue.
+Current next unit after checkpoint168: read and rewrite the complete present Chapter 23 and its nested input, then Chapter 24. Chapter 22 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -29,7 +29,7 @@ Current next unit after checkpoint167: read and rewrite the complete present Cha
 | 19 | `chapter_sections.tex` | 7 | Complete integrated three-input rewrite and two direct revised mathematical/editorial reads in checkpoint164. Weighted sections and kernels are merged; residual effective divisors and normalized compactness give the trace obstruction in every dimension. All thirteen labels and eight formal statements remain. See chapter-nineteen-rewrite-164.md. |
 | 20 | `chapter_flag_bodies.tex` | 6 | Complete integrated four-input rewrite and two direct revised mathematical/editorial reads in checkpoint165, including the inline Hopf figure. The general ratio-field formula absorbs the full-dimensional case; intrinsic counts precede their Moishezon consequence. All nineteen labels remain. See chapter-twenty-rewrite-165.md. |
 | 21 | `chapter_hopf_reduction.tex` | 3 | Complete integrated rewrite and two direct revised mathematical/editorial reads in checkpoint166. All seven labels and three formal statements remain; three sections replace four. See chapter-twenty-one-rewrite-166.md. |
-| 22 | `chapter_divisorial_models.tex` | 8 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint128; general global potentials and canonical divisorial ordinary types belong to Chapter 1. Checkpoint163 repairs only the merged-calculus reference in the compatibility proof. |
+| 22 | `chapter_divisorial_models.tex` | 8 | Complete integrated eight-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint168. One ideal-order inequality serves the exceptional approximants; Chapter 1 supplies the smooth-potential arguments, and zero-mean normalization gives L1 compactness. All 27 existing labels remain. See chapter-twenty-two-rewrite-168.md. |
 | 23 | `chapter_nonclosed_bclasses.tex` | 5 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint129; one affine setup and precise internal foundation references replace repeated definitions. |
 | 24 | `chapter_envelope_systems.tex` | 6 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint130; the general periodic subharmonic lemma moves to Chapter 1 and repeated setups are removed. |
 | 25 | `chapter_gauduchon_variational_volume.tex` | 39 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint131; three general results centralized in Chapter 1 and repeated definitions removed. Checkpoint143 adds two reads of the new sections or changed interfaces, at the bounded scope in supplied-three-papers-review-143.md.  Checkpoint146 relocates the mass-invariance proof and rereads the complete affected mass-extremum input twice; four further inputs receive pagination-only checks. |
@@ -139,3 +139,5 @@ Checkpoint165 completes the integrated Chapter 20 rewrite. The next complete cha
 Checkpoint166 completes the integrated Chapter 21 rewrite. The next complete chapter is Chapter 22.
 
 Checkpoint167 integrates geometric normalization stability; the next complete chapter remains Chapter 22.
+
+Checkpoint168 completes the integrated Chapter 22 rewrite. The next complete chapter is Chapter 23.
