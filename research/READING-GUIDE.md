@@ -1,4 +1,4 @@
-# Reading guide — checkpoint123
+# Reading guide — checkpoint124
 
 The chapter numbers below refer to the current book. Earlier review records keep the numbering of their own checkpoints. General psh tools are collected in Chapter 1. Paper sources and exact locators are collected in final Chapter 33; book citations may remain beside the mathematics.
 
@@ -22,7 +22,7 @@ Chapter 13 develops prescribed-singularity equations without a blanket metric ma
 
 Chapter 14 studies normalization functionals, weak supporting probabilities and entropy duality. Its selection theorem identifies the whole vanishing-exponent limit for fixed nonzero Lp data, p > 1, in ordinary minimal type on a smooth big background. These functionals need not separate singularity types in a closed background. Chapter 15 develops ideal projection, analytic-envelope equality, mass dependence and the ideal L1 metric before its dyadic approximation criterion. The curve counterexamples show that this metric does not control non-pluripolar mass. The scalar-distance comparison is made in a Kähler background. The general Hermitian topology on ordinary singularity types remains open.
 
-Chapter 16 constructs Perron segments with explicit endpoint barriers and compares the smooth product equation with the torsion terms in the L2 action. The general strip convexity, minimum and gluing principles are used from Chapter 1. Chapter 17 proves the envelope correspondence between test curves and Perron rays, using the general pointwise Legendre results from Chapter 1, and computes a logarithmic-pole example. Restriction of analytic approximants opens Chapter 18. Positive-mass curve ideal envelopes have a trace description by atomic measures; the higher-dimensional realization problem remains separate.
+Chapter 16 constructs Perron segments with explicit endpoint barriers and compares the smooth product equation with the torsion terms in the L2 action. The general strip convexity, minimum and gluing principles are used from Chapter 1. Chapter 17 proves the envelope correspondence between test curves and Perron rays, using the general pointwise Legendre results from Chapter 1, and computes a logarithmic-pole example. Chapter 18 constructs intrinsic trace data from restricted multiplier ideals, using the general analytic-restriction and modification lemmas in Chapter 1. On a curve, Green potentials realize these data and the source singularity topology is equivalent to total variation of the atomic measures. Trace envelopes give positive finite-mass models in a sufficiently large background; curve fibrations give exact realizations. The arbitrary higher-dimensional exact-realization and background-comparison problems remain open.
 
 ## Geometry and section spaces
 
@@ -40,4 +40,4 @@ Chapters 29–31 form the separate part under mass assumptions. Chapter 29 devel
 
 Chapter 32 records the remaining research problems and their exact boundaries. Chapter 33 gives the historical sources, checked locators and comparisons of hypotheses for the mathematical body. The appendix treats compact complex spaces; smooth-space psh tools are referenced from Chapter 1 rather than defined again.
 
-The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 18, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.
+The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 19, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.

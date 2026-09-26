@@ -3,6 +3,13 @@
 
 
 
+
+## Checkpoint124 — 26 September 2026
+
+Chapter 18 completes the whole-chapter rewrite and two direct mathematical/editorial reads, including every nested input. Its ten sections and one subsection develop restricted ideals, finite asymptotic trace orders, curve realizations and equations, the curve singularity metric, additivity, trace envelopes, curve fibrations and extended product measures. One standing setup replaces repeated definitions and assumptions. General restriction of analytic approximants, L1 convergence under modifications and countable-divisor domination move to Chapter 1, where a trace-measure proof of Lelong semicontinuity is also added. Book citations for the curve distance and trace comparison now have checked pinpoint locators. Exact realization and ordinary background independence for arbitrary higher-dimensional trace data remain open.
+
+The house audit retains zero errors and one inherited chapter-label warning. Non-book citation placement passes. The final book has 790 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 75 selected final pages passed visual inspection: front matter and contents, conventions, Chapter 1 from the divisorial estimates through its end and the Chapter 2 transition, complete Chapter 18 with transitions, and the complete bibliography. Formula and statement page breaks were adjusted and reinspected. The seventeen-page companion is byte-identical to checkpoint123. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs. Exact hashes and checks are in build-snapshot-124.json and source-package-portability-124.json. All 190 historical verifier reports and three hidden sources remain unchanged.
+
 ## Checkpoint123 — 26 September 2026
 
 Chapter 17 completes the whole-chapter rewrite and two direct mathematical/editorial reads. Its four sections now develop envelope test curves and rays, the two directions of the correspondence, and the explicit logarithmic-pole example. The general pointwise Legendre results move to Chapter 1, together with an explicit half-line duality lemma and the radial subharmonicity criterion. The generalized upper-semicontinuity proof uses a fixed interior potential, allowing the cutoff member to collapse outside the envelope setting. Repeated settings, definitions and defensive recap passages are removed. The Perron-replacement and rooftop arguments retain their precise endpoint conditions. The nested figure is checked against all 906 coordinate values and visually inspected.

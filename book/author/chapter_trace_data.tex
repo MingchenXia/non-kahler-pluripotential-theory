@@ -1,22 +1,23 @@
 \chapter{Restriction and intrinsic trace data}
 \label{chap:trace-data}
 
-The trace in \cite{SGPT} is constructed by restricting quasi-equisingular approximants and taking a limit in the topology of singularities. On a general Hermitian manifold, the existence and independence of such a limit require further work. There is, however, intrinsic data that can be defined before choosing a topology: the asymptotic vanishing orders of the restricted multiplier ideals. We construct this data and prove its finiteness using the uniform Lelong estimate of \cref{lem:gauduchon-uniform-lelong}. A Green potential realizes it on a curve. Pullback then gives exact higher-dimensional traces for smooth fibrations over an ambient curve problem, with an ordinary type independent of a sufficiently large background. Product examples distinguish this canonical representative from other representatives of the same multiplier-ideal class, whose nonlinear mass can be infinite.
+Restriction can create logarithmic poles that none of the ambient multiplier ideals detect. A trace should instead retain the singularities seen by analytic approximation. We encode them by the asymptotic orders of the multiplier ideals restricted to the submanifold. Subadditivity gives their limits, and the uniform Lelong bound of \cref{lem:gauduchon-uniform-lelong} makes those limits finite. On a curve, the resulting atomic measure has a Green potential whose ordinary type is canonical. In higher dimension, an envelope realizes the associated inequalities; exact realization follows when the data comes from a smooth fibration over a curve.
 
-\input{author/section_restricted_analytic_approximants}
+Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected compact complex submanifold of positive dimension, and fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. Choose a smooth real $(1,1)$-form $\theta$ with $u\in\PSH(X,\theta)$ and a Hermitian form $\omega$. We use the analytic approximants $u_m$ and errors $\epsilon_m$ of \cref{cor:nonclosed-analytic-approximation}. Their restrictions are genuine by \cref{cor:restricted-analytic-divisorial-bound}.
 
 \section{Restricted ideals}\label{sec:restricted-ideals}
 
-Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. Write $a\preceq b$ if $a\leq b+C$ for some constant $C$, $a\simeq b$ if both inequalities hold, and $a\preceq_{\mathcal I}b$ if $\mathcal I(ta)\subseteq\mathcal I(tb)$ for all $t>0$. Multiplier ideals use the weight $\mathrm{e}^{-tu}$. Fix a Hermitian form on $X$ for the analytic approximations of \cref{cor:nonclosed-analytic-approximation}.
+The image of a multiplier ideal on $Y$ records the vanishing of its local generators along $Y$. Its order on a modification can grow with the weight, even when the ideal is generically trivial on $Y$.
 
 For $t>0$ put
 \[
  \mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y.
 \]
-This is the image ideal in $\mathcal O_Y$, not the tensor product with any possible torsion retained. It is coherent and nonzero. Indeed, choose $y\in Y$ with $\nu(u,y)<1/t$; Skoda integrability gives $\mathcal I(tu)_y=\mathcal O_{X,y}$.
+Here we take the image of the restriction map in $\mathcal O_Y$. It is coherent and nonzero. Indeed, choose $y\in Y$ with $\nu(u,y)<1/t$; Skoda integrability gives $\mathcal I(tu)_y=\mathcal O_{X,y}$.
 
-A \emph{divisor over $Y$} in this chapter means a prime divisor $E$ on a connected smooth compact modification $\pi:Z\to Y$. For a nonzero coherent ideal $\mathfrak a$ on $Y$, let $\operatorname{ord}_E(\mathfrak a)$ be the generic vanishing order of its image on $Z$. It is a finite nonnegative integer. We consider these divisors on compact modifications; no extension of every local modification to a compact one is being assumed.
+A \emph{divisor over $Y$} in this chapter means a prime divisor $E$ on a connected smooth compact modification $\pi:Z\to Y$. For a nonzero coherent ideal $\mathfrak a$ on $Y$, let $\operatorname{ord}_E(\mathfrak a)$ be the generic vanishing order of its image on $Z$. It is a finite nonnegative integer.
 
+\Needspace{9\baselineskip}
 \begin{theorem}\label{thm:intrinsic-trace-profile}
 For every divisor $E$ over $Y$, the limit
 \begin{equation}\label{eq:trace-profile}
@@ -43,10 +44,10 @@ For integer $m$ sufficiently large, \cref{cor:nonclosed-analytic-approximation} 
  \frac{b(m)}m
  =\nu\bigl((u_m|_Y)\circ\pi,E\bigr).
 \]
-These numbers are uniformly bounded by \cref{cor:restricted-analytic-divisorial-bound}. The integer limit, and therefore the full supremum, is finite. Finally all the image ideals in the definition are unchanged when $u$ is replaced by a multiplier-ideal equivalent potential. This proves the last assertion without selecting any approximating sequence.
+These numbers are uniformly bounded by \cref{cor:restricted-analytic-divisorial-bound}. The integer limit, and therefore the full supremum, is finite. Finally all the image ideals in the definition are unchanged when $u$ is replaced by a multiplier-ideal equivalent potential. This proves the last assertion.
 \end{proof}
 
-We call $\tau_{Y,u}$ the \emph{divisorial trace data}. The definition is an assignment of numbers. It does not, by itself, supply a quasi-plurisubharmonic function on $Y$ having exactly those numbers on every modification.
+We call $\tau_{Y,u}$ the \emph{divisorial trace data}. Its realization by a potential on $Y$ will be the main question of this chapter.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:trace-profile-calculus}
@@ -66,9 +67,7 @@ The sum inequality will be strengthened to equality in \cref{thm:trace-data-addi
 
 \section{Comparison with ordinary restriction}
 
-Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. For real $t>0$, use $\mathcal I(tu)$ for the multiplier ideal of $\mathrm{e}^{-tu}$ and $\mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y$ for its image ideal on $Y$. A divisor $E$ over $Y$ lies on a smooth compact modification $\pi:Z\to Y$, and $\operatorname{ord}_E$ denotes its generic vanishing order. The trace number $\tau_{Y,u}(E)$ is the limit in \eqref{eq:trace-profile}. Write $a\preceq b$ if $a\leq b+C$ for some constant $C$, $a\simeq b$ if both inequalities hold, and $a\preceq_{\mathcal I}b$ if $\mathcal I(ta)\subseteq\mathcal I(tb)$ for all $t>0$.
-
-The local comparison in \cref{lem:analytic-minorant-product-ideals} identifies the trace of an analytic restriction and will also prove additivity of the trace data.
+The restriction theorem for multiplier ideals bounds the trace data by the Lelong numbers of a genuine restriction. Analytic singularities give equality, because their approximants also admit an ordinary upper bound with asymptotically the same logarithmic coefficients.
 
 \begin{proposition}\label{prop:trace-naive-comparison}
 If $v=u|_Y$ is genuine, then
@@ -107,14 +106,12 @@ The bidisc is chosen with $|z|<\mathrm{e}^{-1}$, and the first function is exten
 \[
  \mathrm{e}^{-tu}\leq(-\log|z|^2)^t,
 \]
-which is locally integrable. Thus all ambient multiplier ideals are trivial and all the trace data is zero. But $u|_Y=\log|w|^2$ has Lelong number one at the origin. This is the local obstruction in \cite[chapter on the trace operator]{SGPT}, expressed directly in the image ideals.
-
-\input{author/section_divisorial_potential_domination}
+which is locally integrable. Thus all ambient multiplier ideals are trivial and all the trace data is zero. But $u|_Y=\log|w|^2$ has Lelong number one at the origin. This example is from \cite[Example~8.1.2]{SGPT}.
 
 \Needspace{12\baselineskip}
 \section{Realization on a compact curve}\label{sec:curve-trace-realization}
 
-Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. For real $t>0$, use $\mathcal I(tu)$ for the multiplier ideal of $\mathrm{e}^{-tu}$ and $\mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y$ for its image ideal on $Y$. A divisor $E$ over $Y$ lies on a smooth compact modification $\pi:Z\to Y$, and $\operatorname{ord}_E$ denotes its generic vanishing order. The trace number $\tau_{Y,u}(E)$ is the limit in \eqref{eq:trace-profile}. Write $a\preceq b$ if $a\leq b+C$ for some constant $C$, $a\simeq b$ if both inequalities hold, and $a\preceq_{\mathcal I}b$ if $\mathcal I(ta)\subseteq\mathcal I(tb)$ for all $t>0$. In this section $Y$ is a Riemann surface. Its divisors are points; $\delta_p$ denotes the Dirac mass at $p$. Fix a Hermitian form $\omega$ on $X$ and the analytic approximants $u_m$ with curvature errors $\epsilon_m$ from \cref{cor:nonclosed-analytic-approximation}.
+Assume until \cref{sec:trace-additivity} that $Y$ is a curve. Its divisors are points, and the trace numbers become atomic masses. Stokes bounds their sum; the Green operator then turns this measure into a potential with a smooth residual curvature measure.
 
 Set
 \[
@@ -148,11 +145,11 @@ Stokes on the curve gives
 \]
 For any finite subset of $Y$, pass to the limit in the sum of its coefficients using \cref{thm:intrinsic-trace-profile}. Then take the supremum over finite subsets. This gives \eqref{eq:curve-trace-budget}. In particular the positive coefficients have at most countable support, and they define the claimed finite measure. Write $d=D_u(Y)$.
 
-For completeness, choose a Green kernel for $\ddc$ on the curve, normalized so that
+Choose a Green kernel for $\ddc$ on the curve, normalized so that
 \[
  \ddc_xG(x,p)=\delta_p-\eta,\qquad G(x,p)\leq0.
 \]
-The scalar Green-function construction is a standard fact of elliptic theory on a compact Riemann surface: its singularity is $\log|z(x)-z(p)|^2$, it is bounded above uniformly, and $\sup_p\int_Y|G(x,p)|\eta(x)<\infty$. Subtracting one uniform constant gives the indicated sign. Fubini therefore shows that
+The Green kernel of the scalar Laplacian on the compact Riemann surface has the following properties: its singularity is $\log|z(x)-z(p)|^2$, it is bounded above uniformly, and $\sup_p\int_Y|G(x,p)|\eta(x)<\infty$. Subtracting one uniform constant gives the indicated sign. Fubini therefore shows that
 \[
  w(x)=\int_YG(x,p)\,\mathrm{d}D_u(p)
 \]
@@ -164,9 +161,9 @@ Since $M\eta-\theta|_Y$ is smooth and has integral zero, the scalar Poisson equa
 If another smooth volume form or another admissible smooth background is used, the difference of the two constructed representatives has smooth $\ddc$: their atomic parts are the same, and all other terms in their equations are smooth. Elliptic regularity makes their difference smooth, hence bounded. This proves independence of these choices at the level of ordinary type. Independence of the ambient multiplier-ideal representative follows from equality of the numbers defining $D_u$.
 \end{proof}
 
-We denote this ordinary type by $\operatorname{Tr}^{\mathrm{at}}_Y(u)$, the \emph{atomic trace on a curve}. This notation distinguishes its construction from the general $P$-equivalence-valued trace of the source book. All potentials on a curve having these Lelong numbers have the same multiplier ideals, but they need not have the same ordinary type. The construction selects the type with a smooth residual curvature measure.
+We denote this ordinary type by $\operatorname{Tr}^{\mathrm{at}}_Y(u)$, the \emph{atomic trace on a curve}. All potentials on a curve having these Lelong numbers have the same multiplier ideals, but they need not have the same ordinary type. The construction selects the type with a smooth residual curvature measure.
 
-For each sufficiently large positive integer $m$, retain the measure $D_m=m^{-1}\sum_{p\in Y}\operatorname{ord}_p\mathfrak a_m(u;Y)\,\delta_p$ from the proof above. Fix the smooth probability form $\eta$ and nonpositive Green kernel $G$ used there, and put $w=\int_YG(\cdot,p)\,\mathrm{d}D_u(p)$ and $w_m=\int_YG(\cdot,p)\,\mathrm{d}D_m(p)$. For a finite signed measure $\sigma$, write $\|\sigma\|_{\mathrm{TV}}=|\sigma|(Y)$.
+Keep $D_m,G,w$ from the proof and put $w_m=\int_YG(\cdot,p)\,\mathrm{d}D_m(p)$. For a finite signed measure $\sigma$, write $\|\sigma\|_{\mathrm{TV}}=|\sigma|(Y)$.
 
 \begin{proposition}\label{prop:curve-trace-approximation}
 The measures $D_m$ above satisfy $D_m\leq D_u$ and converge to $D_u$ in total variation. Along dyadic indices they increase. With a fixed nonpositive Green kernel, the corresponding potentials $w_{2^j}=\int_YG(\cdot,p)\,\mathrm{d}D_{2^j}(p)$ decrease to $w$ and converge in $L^1(Y)$. Each $w_m$ has the ordinary singularity type of $u_m|_Y$.
@@ -190,9 +187,7 @@ If $a=u|_Y$ is genuine, \cref{prop:trace-naive-comparison} gives $\nu(a,p)\geq\t
 
 \section{The equation in the atomic trace type}
 
-Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. For real $t>0$, use $\mathcal I(tu)$ for the multiplier ideal of $\mathrm{e}^{-tu}$ and $\mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y$ for its image ideal on $Y$. A divisor $E$ over $Y$ lies on a smooth compact modification $\pi:Z\to Y$, and $\operatorname{ord}_E$ denotes its generic vanishing order. The trace number $\tau_{Y,u}(E)$ is the limit in \eqref{eq:trace-profile}. Write $a\preceq b$ if $a\leq b+C$ for some constant $C$, $a\simeq b$ if both inequalities hold, and $a\preceq_{\mathcal I}b$ if $\mathcal I(ta)\subseteq\mathcal I(tb)$ for all $t>0$. In this section $Y$ is a Riemann surface. Its divisors are points; $\delta_p$ denotes the Dirac mass at $p$. Fix a Hermitian form $\omega$ on $X$ and the analytic approximants $u_m$ with curvature errors $\epsilon_m$ from \cref{cor:nonclosed-analytic-approximation}. Let $D_u=\sum_{y\in Y}\tau_{Y,u}(y)\delta_y$, $M=\int_Y\theta|_Y$, and $d=D_u(Y)$, as in \cref{sec:curve-trace-realization}. Choose a smooth probability form $\eta$ and its Green representative $w$ with $\ddc w=D_u-d\eta$. The atomic trace type is the ordinary singularity type of $w$. Use $\mathrm{MA}^{\mathrm{ext}}$ for the extended non-pluripolar measure of \cref{chap:products}.
-
-The curve construction also gives a complete elementary equation theorem in this type.
+Write $d=D_u(Y)$ and let $w$ be the Green representative above. In its ordinary type, the atoms of the full curvature measure are fixed. Prescribing the extended measure therefore reduces to a Poisson equation for the bounded remainder, with total mass $M-d$.
 
 \begin{theorem}\label{thm:curve-atomic-lp-equation}
 Retain the notation $M=\int_Y\theta|_Y$ and $d=D_u(Y)$. Let $\mathrm{d}V$ be a smooth positive volume form on $Y$, and let $0\leq f\in L^p(\mathrm{d}V)$, $p>1$, with $\int_Yf\,\mathrm{d}V>0$.
@@ -222,7 +217,7 @@ To prove necessity and uniqueness, let $a$ be any $\theta|_Y$-plurisubharmonic p
 \[
  \ddc(a-w)=\mu-D_u-\theta|_Y+d\,\eta
 \]
-has a smooth lower bound. The difference has a bounded quasi-plurisubharmonic representative, because the ordinary types agree. The curvature measure of a bounded quasi-plurisubharmonic function on a curve does not charge polar sets, by the local bounded Bedford--Taylor property. After addition of smooth forms the same assertion applies to $\mu-D_u$. Consequently
+has a smooth lower bound. The difference has a bounded quasi-plurisubharmonic representative, because the ordinary types agree. The curvature measure of a bounded quasi-plurisubharmonic function on a curve does not charge polar sets, by \cref{prop:bounded-products}. After addition of smooth forms the same assertion applies to $\mu-D_u$. Consequently
 \[
  \mathrm{MA}^{\mathrm{ext}}_{\theta|_Y}(a)=\mu-D_u,
  \qquad
@@ -241,14 +236,14 @@ Integrating any proposed equation forces the displayed value of $c$, so a positi
 
 \input{author/section_trace_product_measures}
 
-\section{What remains in higher dimension}
+\section{Exact realization in higher dimension}
 
-Let $X$ be a connected compact complex manifold and let $Y\subset X$ be a connected compact complex submanifold of positive dimension. Write $\QPSH$ for quasi-plurisubharmonic functions and $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)$, with $\nu(u,y)$ the Lelong number. Fix $u\in\QPSH(X)$ with $\nu(u,Y)=0$. When needed choose a smooth real $(1,1)$-form $\theta$ on $X$ with $u\in\PSH(X,\theta)$. For real $t>0$, use $\mathcal I(tu)$ for the multiplier ideal of $\mathrm{e}^{-tu}$ and $\mathfrak a_t(u;Y)=\mathcal I(tu)\mathcal O_Y$ for its image ideal on $Y$. A divisor $E$ over $Y$ lies on a smooth compact modification $\pi:Z\to Y$, and $\operatorname{ord}_E$ denotes its generic vanishing order. The trace number $\tau_{Y,u}(E)$ is the limit in \eqref{eq:trace-profile}. Write $\mathcal T_\Omega(u;Y)$ for the trace envelope of \eqref{eq:trace-profile-envelope}, with the sufficiently large Hermitian background $\Omega$ chosen in \cref{thm:trace-profile-model-envelope}.
+For a general submanifold $Y$, the remaining realization problem is to find $v\in\QPSH(Y)$ such that
+\[
+ \nu(v\circ\pi,E)=\tau_{Y,u}(E)
+\]
+for every divisor on every smooth compact modification. The envelope of \cref{thm:trace-profile-model-envelope} has Lelong numbers at least this large. An exact representative would force equality for that envelope in every sufficiently large background. Analytic ambient singularities and the curve fibrations of \cref{thm:curve-fibration-exact-trace} supply such representatives; for arbitrary data, the limit of restricted approximants may acquire additional singularities.
 
-The divisorial trace data is finite, intrinsic and additive in every dimension. The envelope $\mathcal T_\Omega(u;Y)$ is a distinguished model potential in its chosen Hermitian background, has positive finite extended mass, and admits the prescribed-type equations of \cref{cor:trace-envelope-prescribed-equation}. These conclusions require no bounded mass hypothesis on the ambient manifold or on $Y$.
+A second problem is to compare the envelopes as the background changes. For curve fibrations they all represent one ordinary type, compatible with addition and positive homogeneity. For general data, inclusion of competitor families orders the envelopes but does not identify their ordinary types. The numerical additivity theorem alone does not settle this question.
 
-For analytic ambient potentials, ordinary restriction realizes the profile. For the curve-fibration data of \cref{thm:curve-fibration-exact-trace}, the Green pullback realizes every compact-model order and identifies the ordinary envelope type. The unresolved question is exact realization for arbitrary trace data. The general construction proves only the inequality $\geq$; an extracted limit may acquire additional singularities. The exact representatives in the two stated cases exclude this increase, but their construction is not available for arbitrary profiles.
-
-A second question concerns compatibility among backgrounds for general data. The curve-fibration theorem gives an ordinary type with addition and positive homogeneity, independent of a sufficiently large background. In the general case, each fixed-background envelope is independent of the extracted majorant, but a comparable background-independent type and its continuity remain to be established. Additivity of the numerical data alone does not give addition of these general envelopes.
-
-Identification with the source book's higher-dimensional trace also requires a comparison of topologies and of the $P$-equivalence relations. \Cref{prop:curve-trace-source-distance} establishes this comparison on a curve. A corresponding higher-dimensional singularity metric and a trace construction for arbitrary data remain open in this treatment. \Cref{thm:trace-exceptional-difference} will identify the effective exceptional divisors comparing adjacent trace models and their total-variation approximation. Such linear compatibility does not by itself construct an exact potential for arbitrary profiles. The product example in \cref{prop:exact-trace-infinite-representatives} shows why exact divisorial data, even together with equality of every multiplier ideal, does not by itself control the mass of every representative.
+The K\"ahler trace of \cite[Section~8.1]{SGPT} is defined through a singularity topology and takes values in $P$-equivalence classes. The curve identification in \cref{prop:curve-trace-source-distance} uses that topology on $Y$. Extending this comparison to higher-dimensional Hermitian manifolds requires a corresponding topology and control of the restricted approximations in it. The exceptional-divisor compatibility proved in \cref{thm:trace-exceptional-difference} concerns the numerical data. The product example in \cref{prop:exact-trace-infinite-representatives} shows that even exact realization and equality of all multiplier ideals leave the extended mass of a representative undetermined.

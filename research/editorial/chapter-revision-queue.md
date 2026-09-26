@@ -2,7 +2,7 @@
 
 Checkpoint94's complete local-notation pass remains the baseline. This queue records a new correctness/readability pass, not a claim that the other chapters are unreviewed historically. An entry is complete only for its stated scope; include nested author inputs when claiming a whole chapter.
 
-For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 18 after the complete Chapter 17 rewrite and proof review in checkpoint123; this proof-review queue also proceeds to Chapter 18.
+For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, beginning next with Chapter 19 after the complete Chapter 18 rewrite and proof review in checkpoint124; this proof-review queue also proceeds to Chapter 19.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -23,7 +23,7 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 15 | `chapter_igood.tex` | Complete chapter and all three nested-input first/second direct proof-and-writing reads, with output checks in checkpoint121; see chapter-fifteen-rewrite-121.md. |
 | 16 | `chapter_rays.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint122; no nested inputs; see chapter-sixteen-rewrite-122.md. |
 | 17 | `chapter_testcurves.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint123; includes the nested figure; see chapter-seventeen-rewrite-123.md. |
-| 18 | `chapter_trace_data.tex` | Pending |
+| 18 | `chapter_trace_data.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint124; relocated general lemmas receive both reads in Chapter 1; see chapter-eighteen-rewrite-124.md. |
 | 19 | `chapter_sections.tex` | Pending |
 | 20 | `chapter_flag_bodies.tex` | Pending |
 | 21 | `chapter_hopf_reduction.tex` | Pending |
@@ -39,4 +39,4 @@ For each unit: read the complete argument, list its hypotheses and dependencies,
 | 31 | `chapter_bounded_mass_equations.tex` | Pending |
 | 32 | `chapter_research_program.tex` | Pending |
 
-Chapter 33 is the new historical chapter, with its locator/editorial review recorded in checkpoint112. The appendix and front matter remain in the proof cycle. Next full-chapter target: Chapter 18, including every nested input. First-chapter additions received a relocation/dependency pass in checkpoint112; that does not retroactively extend the checkpoint95 audit. Checkpoint106 resolves qualitative Hopf near equality under fixed Lp bounds and gives a strong L1 density counterexample. All four supplied manuscripts have bounded integrations; Q2.8 completes its proof/dependency and output checks in checkpoint120. Research-linked spot checks of other chapters do not count as their full revision.
+Chapter 33 is the new historical chapter, with its locator/editorial review recorded in checkpoint112. The appendix and front matter remain in the proof cycle. Next full-chapter target: Chapter 19, including every nested input. First-chapter additions received a relocation/dependency pass in checkpoint112; that does not retroactively extend the checkpoint95 audit. Checkpoint106 resolves qualitative Hopf near equality under fixed Lp bounds and gives a strong L1 density counterexample. All four supplied manuscripts have bounded integrations; Q2.8 completes its proof/dependency and output checks in checkpoint120. Research-linked spot checks of other chapters do not count as their full revision.
