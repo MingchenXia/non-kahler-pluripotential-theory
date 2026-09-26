@@ -5,6 +5,13 @@
 
 
 
+
+## Checkpoint126 — 26 September 2026
+
+Chapter 20 completes the whole-chapter rewrite and two direct mathematical/editorial reads, including all three nested inputs and the inline Hopf diagram. Its seven sections connect flag valuations, Gauduchon bounds, convex-body counts, Moishezon geometry, intrinsic lattice growth, point blowups and the Hopf simplex. The introductions explain these mechanisms; repeated definitions and settings are removed. The bounded-mass argument uses the existing reduction to smooth potentials. The intrinsic count retains the degree period, horizontal lattice and zero-dimensional case. The point-blowup introduction distinguishes dimensions one and at least two. The supplied book recalls the semigroup growth theorem rather than proving it; the attribution is corrected and the appendix and named-theorem locator checked. General psh inputs remain in Chapter 1, and paper citations remain in Chapter 33.
+
+The house audit retains zero errors and two inherited label warnings. Non-book citation placement passes. The final book has 790 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 35 selected final pages passed visual inspection: front matter, contents and conventions, complete Chapter 20 and its Hopf diagram, the preceding and following transitions, and the complete bibliography. A split degree-definition paragraph was adjusted and reinspected. The seventeen-page companion is byte-identical to checkpoint125. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs. Exact hashes and checks are in build-snapshot-126.json and source-package-portability-126.json. All 190 historical verifier reports and three hidden sources remain unchanged.
+
 ## Checkpoint125 — 26 September 2026
 
 Chapter 19 completes the whole-chapter rewrite and two direct mathematical/editorial reads, including both nested inputs. Its eight sections develop weighted section spaces, evaluation kernels, Gauduchon degree, restricted trace orders, the bounded section algebra, curve growth, homogeneous Hopf sections and the infinite-mass example. The introductions explain these mechanisms; repeated definitions and settings are removed. The zero-degree statement now expressly conditions the dimension of a weighted subspace on its nonvanishing. The curve setting uses local boundedness away from its specified logarithmic poles. General psh inputs remain in Chapter 1; the Gauduchon and trace arguments use internal references. The only book citation has a checked descriptive chapter locator.
