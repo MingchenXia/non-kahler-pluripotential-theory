@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint180: read and rewrite the complete front matter, including preface, conventions and title/source interfaces. Then reconcile the integrated source-disposition and proof-obligation records. The appendix has two complete revised mathematical/editorial reads of both inputs and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint181: reconcile the integrated source-disposition and proof-obligation records with the present manuscript. The complete front matter has two revised direct reads and release checks. Earlier chapter and source reviews retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -42,7 +42,7 @@ Current next unit after checkpoint180: read and rewrite the complete front matte
 | 32 | `chapter_research_program.tex` | 23 | Complete integrated rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint178. Uniqueness joins selection; collapse follows bigness; compatible recovery follows trace realization. All twenty-two formal blocks, five proofs and thirty-one labels are byte-identical. See chapter-thirty-two-rewrite-178.md. |
 | 33 | `chapter_history.tex` | 21 | Complete integrated historical rewrite and two direct revised mathematical/editorial reads of its single author input in checkpoint179. Uniqueness and selection share one section; mass-bounded volumes precede prescribed-singularity equations. All 75 source keys and numbered locators remain; prior source reviews retain their recorded scopes. See chapter-thirty-three-rewrite-179.md. |
 | Appendix | `appendix_hermitian_spaces.tex` | 9 | Complete integrated rewrite and two direct revised mathematical/editorial reads of both author inputs in checkpoint180. Cone potentials use general descent; resolution-independent measures include further modifications over regular points. Nine formal blocks and seven proofs remain, with distinct logarithmic and bounded uniqueness arguments. See appendix-rewrite-180.md. |
-| Front matter | `preface.tex`, `conventions.tex`, title/source interfaces | — | Complete rewrite, two direct revised reads and release checks in checkpoint141; the reading route matches the active structure. |
+| Front matter | `preface.tex`, `conventions.tex`, title/source interfaces | — | Complete integrated rewrite and two full revised direct reads of preface, conventions and root document in checkpoint181. Singularity comparison, analytic density, normalization invariants and geometric realization have distinct scopes. Conventions and mathematical body unchanged. See frontmatter-rewrite-181.md. |
 
 Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–139 complete the full rewrites of Chapters 7–33, including all their nested inputs. The appendix completes this pass in checkpoint140. Front matter completes the pass in checkpoint141. The integrated current Chapter 1 completes its review in checkpoint142, including later relocated material. Source-disposition and proof-obligation reconciliation follows. A citation relocation does not count as a complete rewrite of its former chapter. The four 25 September supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes front matter in checkpoint141 and retains each earlier review’s actual scope.
 
@@ -165,3 +165,5 @@ Checkpoint178 completes the integrated Chapter 32 rewrite. The next complete cha
 Checkpoint179 completes the integrated Chapter 33 rewrite. The next complete unit is the appendix with both author inputs, followed by the front matter.
 
 Checkpoint180 completes the integrated appendix rewrite, including its projective-cone input. The next unit is complete front matter, followed by source-disposition and proof-obligation reconciliation.
+
+Checkpoint181 completes the integrated front matter. The next unit reconciles source dispositions and proof obligations; this editorial cycle does not by itself establish whole-book completion.
