@@ -1,33 +1,49 @@
 \chapter{Big backgrounds under bounded mass}
 \label{chap:bounded-mass-equations}
 
-Throughout this chapter $X$ is a connected compact complex manifold of dimension $n$ with bounded mass, $\theta$ is a smooth big real $(1,1)$-form on $X$, and the model reference $\varphi\in\PSH(X,\theta)$ satisfies \eqref{eq:li-model-condition}. Semipositivity of $\theta$ is not assumed. Bounded mass and positive lower reference volume give a finite positive interval for masses in the relative class. The convergence and equation arguments below use these mass controls.
+Bounded mass and positive lower reference volume place the Monge--Amp\`ere masses in a finite positive interval. This interval allows first-moment estimates to control singular limits in a smooth big background. The general-measure equation is first solved in the minimal class, then transferred to a prescribed model by relative projection and addition of weighted measures. A final moment estimate recovers the ordinary reference type for $L^p$ data.
+
+Assume that $X$ has bounded mass, fix a smooth big real $(1,1)$-form $\theta$, and let $\varphi$ satisfy \eqref{eq:li-model-condition}. Fix a Hermitian form $\omega$ for capacity and a smooth positive volume form $\mathrm{d}V$. Write
+\[
+ \mathcal E_\varphi=\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)
+                  =\mathcal E_{\mathrm{env}}(X,\theta,\varphi),
+ \qquad \theta_a=\theta+\ddc a,\qquad \mu_a=\mathrm{MA}_\theta(a),
+\]
+where the equality of classes is \cref{thm:relative-equivalence}, and put
+\[
+ \ell=\underline{\operatorname{vol}}_\theta(\varphi)>0,
+ \qquad M=\overline{\operatorname{vol}}_\theta(\varphi)<\infty.
+\]
+Every $u\in\mathcal E_\varphi$ satisfies
+\begin{equation}\label{eq:big-relative-mass-interval}
+ \ell\leq\mu_u(X)\leq M.
+\end{equation}
+We use the stretching envelopes $Q_b$ of \cref{def:relative-envelope-class}.
 
 \clearpage
 \section{The general-measure equations}
 \label{sec:big-general-equation-setting}
 
-Retain the manifold $X$, dimension $n$, background $\theta$ and reference $\varphi$ just specified. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm dV$ on $X$. Bounded mass means $v_+(\omega)<\infty$, where $v_+(\omega)$ and $v_-(\omega)$ are the supremum and infimum of the Monge--Amp\`ere masses of bounded $\omega$-plurisubharmonic potentials. The lower and upper relative volumes and the class $\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)$ are those of \cref{chap:mass-bound-volumes}. We write $u\simeq\varphi$ when their difference is bounded off their common poles.
+A positive exponent determines a unique solution in the relative class. At exponent zero, the equation determines its positive scalar; normalized potentials may still differ, as in \cref{cor:analytic-nonuniqueness-envelope-class}.
 
 \Needspace{22\baselineskip}
 \begin{theorem}
 \label{thm:li-general-measure}
-Assume that $X$ has bounded mass. Let $\theta$ be big and let $\varphi$ satisfy \eqref{eq:li-model-condition}; in particular,
-$\underline{\operatorname{vol}}_\theta(\varphi)>0$. For every nonzero positive non-pluripolar Radon measure $\mu$:
+For every nonzero finite non-pluripolar measure $\mu$:
 \begin{enumerate}
-\item There are $u\in\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)$ and a unique $c>0$ such that $\mathrm{MA}_\theta(u)=c\mu$.
-\item For each $\lambda>0$ there is a unique $u\in\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)$ such that $\mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu$.
+\item There are $u\in\mathcal E_\varphi$ and a unique $c>0$ such that $\mathrm{MA}_\theta(u)=c\mu$.
+\item For each $\lambda>0$ there is a unique $u\in\mathcal E_\varphi$ such that $\mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu$.
 \end{enumerate}
 If $\mu=f\,\mathrm{d}V$ with $0\leq f\in L^p(\mathrm{d}V)$ for some $p>1$, the solutions in both parts may be taken with $u\simeq\varphi$.
 \end{theorem}
 
-Once the positive-volume model reference is fixed, the metric positivity is automatic under bounded mass. Indeed, choose $C>0$ with $\theta\leq C\omega$. Since $\varphi\preceq0$, \cref{thm:volume-monotonicity} gives
+These assumptions also give $v_-(\omega)>0$. Indeed, choose $C>0$ with $\theta\leq C\omega$. Since $\varphi\preceq0$, \cref{thm:volume-monotonicity} gives
 \[
  0<\underline{\operatorname{vol}}_\theta(\varphi)
  \leq\underline{\operatorname{vol}}_{C\omega}(0)
  =C^n v_-(\omega).
 \]
-The proofs in \cref{sec:big-relative-projection,sec:big-model-general-measures,sec:big-model-lp} reconstruct all the assertions. They construct the rooftop between different reference classes before projecting a minimal-reference solution, maximize the weighted measure of supersolutions, and obtain the $L^p$ ordinary type by a relative moment estimate. The class $\mathcal E_{\mathrm{vol}}$ agrees with $\mathcal E_{\mathrm{env}}$ by \cref{thm:relative-equivalence}.
+The construction proceeds through \cref{thm:big-minimal-general-measures,prop:big-relative-projection,thm:big-model-exponential,thm:big-model-normalized}. A rooftop between the prescribed model and a minimal-class solution supplies the initial supersolution. Maximizing its weighted measure gives the equation, and \cref{cor:big-model-lp-type} gives the ordinary-type conclusion.
 
 \input{author/section_big_relative_foundations}
 
@@ -48,55 +64,3 @@ The proofs in \cref{sec:big-relative-projection,sec:big-model-general-measures,s
 \input{author/section_big_unrestricted_addition}
 
 \input{author/section_big_model_lp}
-
-\Needspace{24\baselineskip}
-\section{Comparison of the equation regimes}
-
-Let $X$ be a connected compact complex manifold and let $\theta$ be a smooth real $(1,1)$-form on $X$. Write $\mathrm{MA}_\theta(a)$ for its extended non-pluripolar measure when $a\in\PSH(X,\theta)$, and $a\preceq b$ when $a\leq b+C$ for some real constant $C$. The operators $P_\theta$, $P_\theta[\,\cdot\,]$ and the two relative classes are defined in \cref{chap:envelopes,chap:mass-bound-volumes}. A model reference $\varphi\in\PSH(X,\theta)$ is specified only in the regimes that use it.
-
-For comparison, the following statements use the hypotheses listed in each regime. The first regime does not require either uniform mass property; the second requires positive lower mass; the third also requires bounded mass.
-
-\Needspace{18\baselineskip}
-\begin{theorem}\label{thm:relative-domination}
-Let $\theta$ be a smooth real $(1,1)$-form, let $u,v\in\PSH(X,\theta)$, and let $0\leq a<1$. If
-\[
- \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(u)
- \leq a\,\mathbf1_{\{u<v\}}\mathrm{MA}_\theta(v),
-\]
-then $u\geq v$ in each of the following regimes:
-\begin{enumerate}
-\item $\theta$ is semipositive and big, $P_{\delta\theta}(u)\not\equiv-\infty$ for some $\delta\in(0,1)$, and $v\preceq u$;
-\item $\theta,\varphi$ satisfy the assumptions of \cref{thm:als-general-measure}, $u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, $v\preceq\varphi$;
-\item $X$ has bounded mass, $\theta$ is big, $\varphi=P_\theta[\varphi]$ has positive lower volume, $u\in\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)$, and $v\preceq\varphi$.
-\end{enumerate}
-\end{theorem}
-
-The first assertion was proved in \cref{thm:singular-strict-domination}. The second is proved without a finite-mass assumption in \cref{thm:relative-extended-domination}. The third is proved in \cref{thm:big-relative-domination}. In the first case, a potential equivalent to an ALS model meets the smaller-background condition by a constant translation of a competitor for that model.
-
-\begin{proposition}\label{prop:relative-uniqueness}
-Fix a nonzero finite positive non-pluripolar measure $\mu$. Consider either a fixed ordinary singularity type admitting a smaller-background envelope in a semipositive big background, or one of the relative classes in parts (2) and (3) of \cref{thm:relative-domination}. In each such class, two solutions of $\mathrm{MA}_\theta(w)=\mathrm{e}^{\lambda w}\mu$ with $\lambda>0$ coincide. If $u$ and $v$ solve
-\[
- \mathrm{MA}_\theta(u)=c_u\mu,\qquad
- \mathrm{MA}_\theta(v)=c_v\mu,
- \qquad c_u,c_v>0,
-\]
-in the same specified class, then $c_u=c_v$.
-\end{proposition}
-\begin{proof}
-For the exponential equation fix $s>0$. On $\{u<v-s\}$,
-\[
- \mathrm{MA}_\theta(u)
- =\mathrm{e}^{\lambda(u-v)}\mathrm{MA}_\theta(v)
- \leq \mathrm{e}^{-\lambda s}\mathrm{MA}_\theta(v-s).
-\]
-Strict domination gives $u\geq v-s$. Let $s\downarrow0$ and exchange $u,v$.
-
-For the second assertion, suppose $c_u<c_v$. For every real $A$, the global inequality
-\[
- \mathrm{MA}_\theta(u)
- =\frac{c_u}{c_v}\mathrm{MA}_\theta(v+A)
-\]
-implies $u\geq v+A$ by strict domination. Choose a point where both potentials are finite and let $A\to+\infty$, a contradiction. Hence $c_u\geq c_v$; exchanging the two proves equality. There is no factor strictly below one when $c_u=c_v$, so this argument does not prove equality of the potentials for the constant-density equation.
-\end{proof}
-
-The corresponding uniqueness statements in the minimal ordinary type of an arbitrary smooth big background follow from \cref{cor:big-barrier-orders}. That argument uses a strict singular barrier; it does not require semipositivity or bounded mass.

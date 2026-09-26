@@ -1,17 +1,18 @@
 \section{Weighted limits with a common relative lower bound}
 \label{sec:big-weighted-limits}
 
-We return to a model reference $\varphi=P_\theta[\varphi]$ for an arbitrary smooth big real background $\theta$. Throughout this section $X$ has bounded mass and $\underline{\operatorname{vol}}_\theta(\varphi)>0$. Here $X$ is the connected compact complex $n$-fold of \cref{sec:big-relative-foundations}; use its measure notation $\mu_a=\mathrm{MA}_\theta(a)$, class $\mathcal E_\varphi$, constants $\ell,M$ and smooth-volume and capacity conventions. In particular every member of $\mathcal E_\varphi$ has mass in a fixed interval $[\ell,M]$. The next criterion allows the approximating potentials to have different singularity types. Their common lower bound, rather than membership of every approximant in $\mathcal E_\varphi$, supplies the required envelopes.
+We return to the reference $\varphi$ and the constants $\ell,M$. A common lower bound in $\mathcal E_\varphi$ controls weighted limits even when the approximants have different singularity types. This allows minimal-type truncations to converge to a solution in the prescribed class.
 
+\Needspace{13\baselineskip}
 \begin{lemma}\label{lem:big-weighted-common-bound}
 Let $a_j\in\PSH(X,\theta)$ have a common upper bound and converge in $L^1(X)$ to a genuine $a\preceq\varphi$. Suppose there is $h\in\mathcal E_\varphi$ such that $h\leq a_j$ for every $j$. If, for some $\lambda>0$,
 \[
  \int_X|a_j-a|\mathrm{e}^{\lambda a}\,\mu_{a_j}\longrightarrow0,
 \]
-then $a\in\mathcal E_\varphi$ and $a_j\to a$ in capacity. The approximants need not lie in $\mathcal E_\varphi$.
+then $a\in\mathcal E_\varphi$ and $a_j\to a$ in capacity.
 \end{lemma}
 \begin{proof}
-The order passes to the canonical limit, so $h\leq a\preceq\varphi$. Upward stability gives $a\in\mathcal E_\varphi$.
+By \cref{lem:qpsh-almost-everywhere-order}, the bounds pass to the limit, so $h\leq a\preceq\varphi$. Upward stability gives $a\in\mathcal E_\varphi$.
 Start with any subsequence and extract again so that the displayed integrals are at most $2^{-j}$ and smooth-volume almost-everywhere convergence holds. The finite roofs
 \[
  p_{j,N}=P_\theta(a_j,\ldots,a_N)
@@ -24,7 +25,7 @@ are genuine because $h$ is a competitor. Disjoint first-contact pieces give
 \]
 No relative-class assertion about these finite roofs is needed. Their decreasing limits $p_j=P_\theta(\inf_{k\geq j}a_k)$ are genuine and at least $h$. Almost-everywhere convergence gives $p_j\leq a$. Hence $p_j$ and their increasing canonical limit $p$ lie in $\mathcal E_\varphi$.
 
-The limits in $N$ and then in $j$ converge in capacity, using the genuine lower bound $h$. Apply weighted lower semicontinuity \cref{lem:big-weighted-lsc} twice to the bounded weights
+The limits in $N$ and then in $j$ converge in capacity by \cref{lem:monotone-psh-capacity}, using the genuine lower bound $h$. Apply weighted lower semicontinuity \cref{lem:big-weighted-lsc} twice to the bounded weights
 $\min(1,|p_{j,N}-a|)\mathrm{e}^{\lambda a}$ and their limits. They converge in capacity: discard deep sublevels of $h$ and $a$, then use continuity on the remaining finite ranges. We obtain
 \[
  \int_X\min(1,|p-a|)\mathrm{e}^{\lambda a}\,\mu_p=0.
@@ -34,6 +35,7 @@ The exponential is positive off a pluripolar set, which $\mu_p$ ignores. Zero do
 
 We next identify a limit equation whose undamped reference measure can have infinite mass. We state the argument for exponent one; rescaling the background and potentials gives the general exponent, as explained in the next section.
 
+\Needspace{20\baselineskip}
 \begin{lemma}\label{lem:big-truncated-addition-limit}
 Let $u,v,\sigma\in\PSH(X,\theta)$ be nonpositive, with $u,v\preceq\varphi$, and let $t_j\uparrow\infty$. Each of $u_j,v_j$ is either the fixed corresponding potential or its truncation
 \[
@@ -64,13 +66,14 @@ If $x\notin E_j$, one truncated input and its limit are at most $-t_j$, so both 
  \leq\int_X|a_j-a|\mathrm{e}^{(a+a_j)/2}(\mu_u+\mu_v)
        +C \mathrm{e}^{-t_j/2}.
 \end{equation}
-Here the assumed uniform mass bound is used only in the last term. The fixed measure $\mu_u+\mu_v$ is finite by bounded mass. The fixed non-pluripolar integration lemma applied to $\mathrm{e}^{a_j},\mathrm{e}^a$ gives convergence in measure of $a_j$ to $a$ for that measure, since $a$ is finite almost everywhere. The first integrand in \eqref{eq:big-addition-weighted-error} is uniformly bounded and tends to zero in measure. Its integral tends to zero. The preceding lemma now proves capacity convergence. Truncation levels $t_j$ are retained when a subsequence is taken.
+Here the assumed uniform mass bound is used only in the last term. The fixed measure $\mu_u+\mu_v$ is finite by bounded mass. \Cref{lem:fixed-npp-integrals}, applied to $\mathrm{e}^{a_j},\mathrm{e}^a$, gives convergence in measure of $a_j$ to $a$ for that measure, since $a$ is finite almost everywhere. The integrand in the first term of \eqref{eq:big-addition-weighted-error} is uniformly bounded and tends to zero in measure. Its integral tends to zero. The preceding lemma now proves capacity convergence. Truncation levels $t_j$ are retained when a subsequence is taken.
 
 To identify the equation, for $T>0$ choose a continuous nondecreasing function $g_T:[-\infty,0]\to[0,1]$, zero on $[-\infty,-2T]$ and one on $[-T,0]$, with $g_T\uparrow1$ at finite points. Put $\chi_T=g_T(h)$. We have $h\leq u,v$ by passing to the limit in the upper bounds. On $\{\chi_T>0\}$, both $u$ and $v$ exceed $-2T$. Therefore, once $t_j>2T$, every truncated input agrees there with its limit, and
 \[
  \chi_T\mu_{a_j}
  =\chi_T\mathrm{e}^{a_j}(\mathrm{e}^{-u}\mu_u+\mathrm{e}^{-v}\mu_v).
 \]
+\Needspace{7\baselineskip}
 Choose a Hermitian form $\Omega\geq\theta$. On the left replace $a_j$ by $\max(a_j,-2T)$ and expand the bounded product as
 \[
  (\theta+\ddc\max(a_j,-2T))^n
@@ -80,5 +83,5 @@ Choose a Hermitian form $\Omega\geq\theta$. On the left replace $a_j$ by $\max(a
 The cutoff vanishes at the truncation level. Bounded capacity continuity with the fixed quasi-continuous weight $\chi_T$ therefore gives convergence to $\chi_T\mu_a$, after testing against a continuous function. The uncut product may be signed; its terms have uniformly capacity-controlled total variations.
 
 On the right, $\chi_T \mathrm{e}^{-u}$ and $\chi_T \mathrm{e}^{-v}$ are bounded by $\mathrm{e}^{2T}$. Fixed-measure exponential convergence gives convergence in total variation to
-$\chi_T\mathrm{e}^a(\mathrm{e}^{-u}\mu_u+\mathrm{e}^{-v}\mu_v)$. Let $T\to\infty$. The limiting right side is at most $\mu_u+\mu_v$, because $a\leq u,v$. Both sides ignore the polar set of $h$, so the cutoff identities prove the global equation and its finiteness. No raw weak convergence of the uncut approximating measures was asserted in this argument.
+$\chi_T\mathrm{e}^a(\mathrm{e}^{-u}\mu_u+\mathrm{e}^{-v}\mu_v)$. Let $T\to\infty$. The limiting right side is at most $\mu_u+\mu_v$, because $a\leq u,v$. Both sides ignore the polar set of $h$, so the cutoff identities prove the global equation and its finiteness.
 \end{proof}

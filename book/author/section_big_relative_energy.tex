@@ -2,7 +2,7 @@
 \section{A relative first-moment estimate}
 \label{sec:big-relative-first-moment}
 
-Retain the connected compact complex $n$-fold $X$, big smooth real $(1,1)$-form $\theta$, model reference $\varphi$, bounded mass hypothesis and positive lower relative volume of \cref{sec:big-relative-foundations}. Use its notation $\mathcal E_\varphi$, $\mu_a$, $\ell$, $M$, $Q_b$ and $\theta_a$, and its fixed smooth-volume and capacity conventions. Write $t_+=\max(t,0)$ for the positive part of a real number $t$. The following estimate explains why control of energy relative to a fixed full-mass potential prevents loss of singularity type. The proof must use the upper volume of an ordinary singularity type, rather than replace all masses by one cohomological number.
+A relative first moment prevents a sequence from collapsing and keeps its limits in $\mathcal E_\varphi$. The proof compares rooftop masses with the upper volume of one ordinary type, then optimizes over equivalent reference potentials. For a real number $t$, write $t_+=\max(t,0)$.
 
 \begin{proposition}\label{prop:big-relative-first-moment}
 Fix $w\in\mathcal E_\varphi$. Suppose $u_j\in\mathcal E_\varphi$, $u_j\leq w$, and
@@ -41,11 +41,11 @@ Now suppose $u_j\to u$ in $L^1$. Then $u\leq w\preceq\varphi$. Fix $b>1$ and sup
 \[
  h_j=Q_b(p_j,w')\in\mathcal E_\varphi.
 \]
-We claim that $\sup_Xh_j\to-\infty$. Otherwise, since $h_j\leq p_j\leq w'$, quasi-plurisubharmonic compactness would give a subsequence with a genuine $L^1$ limit $h$. Passing to the limit in
+We claim that $\sup_Xh_j\to-\infty$. Otherwise, since $h_j\leq p_j\leq w'$, \cref{thm:normalized-compactness} would give a subsequence with a genuine $L^1$ limit $h$. Passing to the limit in
 \[
  b^{-1}h_j+(1-b^{-1})w'\leq p_j\leq u_j
 \]
-first almost everywhere and then by canonical representatives gives a competitor for $Q_b(u,w')$, a contradiction.
+first almost everywhere and then by \cref{lem:qpsh-almost-everywhere-order} gives a competitor for $Q_b(u,w')$, a contradiction.
 
 On the contact set of $h_j$ one has
 $p_j=b^{-1}h_j+(1-b^{-1})w'$. Thus $h_j\leq w'-bs$ implies $p_j\leq w'-s$ there. Contact and \eqref{eq:big-energy-roof-bound} imply
@@ -57,6 +57,7 @@ Apply \eqref{eq:big-energy-max-bound} with $a=h_j$ and $t=bs$ to the complementa
  \ell\leq b^nK/s+
      \mu_{w'}(\{h_j>w'-bs\})+M-\mu_{w'}(X).
 \]
+\Needspace{7\baselineskip}
 The same successive limits and optimization over $w'\simeq w$ give a contradiction. Therefore $Q_b(u,w)$ is genuine for every $b>1$. The resulting convex inequalities and \cref{thm:volume-monotonicity,prop:volume-addition} give
 \[
  (1-b^{-1})^n M\leq\overline{\operatorname{vol}}_\theta(u)\leq M.
@@ -71,7 +72,7 @@ For the last assertion put $q_j=P_\theta(u_j,w)$. Contact gives
 The ordered case bounds $\sup_Xq_j$ from below and therefore also $\sup_Xu_j$. If $u_j\to u$ in $L^1$, extract a genuine $L^1$ limit $q$ of the $q_j$, using $q_j\leq w$. The ordered case gives $q\in\mathcal E_\varphi$. Since $q\leq u\leq\varphi+C$, upward stability gives $u\in\mathcal E_\varphi$ as well.
 \end{proof}
 
-In particular the estimate need not make $u_j-w$ bounded. It controls the negative part only through its integral against the moving measure $\mu_{u_j}$. The proof optimizes over potentials equivalent to the reference.
+When the first moment of the difference tends to zero, tail rooftops identify the limit in capacity.
 
 \Needspace{20\baselineskip}
 \begin{theorem}\label{thm:big-relative-self-measure-convergence}
@@ -92,11 +93,9 @@ Apply the first-moment proposition with reference $u$ and its one-sided version.
 \]
 and the same proposition puts $p_j$ in $\mathcal E_\varphi$. Its increasing canonical limit $p$ belongs to that class by upward stability, since $p_1\leq p\leq u\preceq\varphi$. The inequality $p\leq u$ follows from the almost-everywhere convergence of the extracted sequence.
 
-Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ converge in capacity with the genuine lower bound $p_1$. Apply \cref{lem:big-weighted-lsc} to \eqref{eq:big-self-measure-roofs}, using the bounded weights $\min(1,|p_{j,N}-u|)$ and then $\min(1,|p_j-u|)$. Their capacity convergence follows by first discarding deep sublevels of $p_1$ and $u$ and then using the Lipschitz function $\min(1,|x-y|)$ on finite values. The result is
+Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ converge in capacity by \cref{lem:monotone-psh-capacity}, with the genuine lower bound $p_1$. Apply \cref{lem:big-weighted-lsc} to \eqref{eq:big-self-measure-roofs}, using the bounded weights $\min(1,|p_{j,N}-u|)$ and then $\min(1,|p_j-u|)$. Their capacity convergence follows by first discarding deep sublevels of $p_1$ and $u$ and then using the Lipschitz function $\min(1,|x-y|)$ on finite values. The result is
 \[
  \int_X\min(1,|p-u|)\,\mu_p=0.
 \]
 Zero domination gives $p=u$. The upper tail envelopes $(\sup_{k\geq j}u_k)^*$ decrease to $u$. Squeezing the extracted $u_j$ between these envelopes and $p_j$ proves capacity convergence. Applying this to every initial subsequence proves the conclusion for the original sequence.
 \end{proof}
-
-The conclusion stated here is convergence in capacity. To apply the undamped continuity theorem, one must also verify its tail condition; the example in \cref{ex:p1-raw-tail} shows why capacity convergence alone does not suffice. In the fixed-dominator situation that verification used the common lower envelope and the finite dominating measure.

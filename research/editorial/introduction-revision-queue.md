@@ -6,7 +6,7 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
-| 1 | `chapter_framework.tex` | 33 | Complete first/second reads in checkpoint112, dependency relocation and seam review in checkpoint113, and the psh Liouville addition and seam review in checkpoint115. |
+| 1 | `chapter_framework.tex` | 34 | Complete first/second reads in checkpoint112, dependency relocation and seam review in checkpoint113, and the psh Liouville addition and seam review in checkpoint115. |
 | 2 | `chapter_mass.tex` | 5 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 3 | `chapter_energy.tex` | 3 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 4 | `chapter_gauduchon.tex` | 6 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
@@ -36,12 +36,12 @@ The d-c/ddc convention is kept once in the front matter. Source-specific convers
 | 28 | `chapter_lck.tex` | 11 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint134; repeated definitions and local psh pullback arguments replaced by internal references. |
 | 29 | `chapter_mass_bound_volumes.tex` | 4 | Complete whole-chapter rewrite, two direct revised reads and release checks in checkpoint135; repeated definitions removed and the smaller-background implication proved in full. |
 | 30 | `chapter_relative_finite_measures.tex` | 11 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint136; repeated definitions removed and duplicate exponential corollaries merged. |
-| 31 | `chapter_bounded_mass_equations.tex` | 14 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
+| 31 | `chapter_bounded_mass_equations.tex` | 13 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint137; general measure smoothing centralized in Chapter 1 and duplicate statements removed. |
 | 32 | `chapter_research_program.tex` | 22 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 | 33 | `chapter_history.tex` | 18 | New historical chapter: exact locator audit and second editorial read in checkpoint112. |
 | Appendix | `appendix_hermitian_spaces.tex` | 6 | Pending complete chapter rewrite under the current standards; earlier structural/citation edits only. |
 
-Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–136 complete the full rewrites of Chapters 7–30, including all their nested inputs. Continue chapter by chapter at Chapter 31, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes Chapter 30 in checkpoint136 and proceeds to Chapter 31.
+Checkpoint112 centralizes general psh results in Chapter 1 and all non-book citations in final Chapter 33. The former analytic-approximation chapter is removed; subsequent chapters are renumbered. Checkpoints113–137 complete the full rewrites of Chapters 7–31, including all their nested inputs. Continue chapter by chapter at Chapter 32, covering introductions, definitions, titles, transitions and proof dependencies together. A citation relocation does not count as a complete rewrite of its former chapter. All four supplied manuscripts have bounded integrations, completed by Q2.8 in checkpoint120. The separate proof queue also completes Chapter 31 in checkpoint137 and proceeds to Chapter 32.
 
 Checkpoint113 also moves bounded smooth-background products, the chain rule and general Hermitian capacity estimates into Chapter 1. The changed references in later chapters are dependency repairs, not completed chapter rewrites. Chapter 6 has five sections; Chapter 10 has nine after checkpoint116. The first chapter has 23 sections and ten subsections after checkpoint124.
 
@@ -74,3 +74,5 @@ Checkpoint134 reviews all five recursive Chapter 28 inputs before editing and tw
 Checkpoint135 reviews the whole Chapter 29 input before editing and twice after revision. Its four sections have no nested inputs or figures. The complete changed historical volume section receives two revised reads; this is a bounded locator update, not a whole-history-chapter revision.
 
 Checkpoint136 reviews the whole Chapter 30 and its eight nested inputs before editing and twice after revision. Its ten sections and one subsection have no figures. Historical provenance is checked at bounded relevant paragraphs; the history chapter is unchanged.
+
+Checkpoint137 reviews the whole Chapter 31 and its ten nested inputs before editing and twice after revision. Its thirteen sections have no figures. The complete affected Chapter 1 fixed-measure and bounded-product inputs receive both revised reads; Chapter 1 now has 23 sections and eleven subsections. The modified historical prescribed-equations section receives two bounded reads.

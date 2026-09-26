@@ -1,31 +1,7 @@
 \section{Relative envelopes in a general big background}
 \label{sec:big-relative-foundations}
 
-Let $X$ be a connected compact complex manifold of dimension $n$ and let $\theta$ be any smooth big real $(1,1)$-form on $X$. Fix a smooth positive volume form for $L^1(X)$ and a Hermitian form for capacity. The standing assumptions of this chapter replace the semipositivity and smaller-background hypotheses in \cref{chap:relative-finite-measures}. We assume bounded mass and fix a model reference $\varphi=P_\theta[\varphi]$ with
-\[
- \ell:=\underline{\operatorname{vol}}_\theta(\varphi)>0,
- \qquad M:=\overline{\operatorname{vol}}_\theta(\varphi)<+\infty.
-\]
-Write $\mathcal E_\varphi=\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, using \cref{thm:relative-equivalence}. For $a\in\PSH(X,\theta)$ put $\theta_a=\theta+\ddc a$ and $\mu_a=\mathrm{MA}_\theta(a)$. For $b\geq1$ and potentials $a,w$, put $Q_b(a,w)=P_\theta(ba-(b-1)w)$ whenever genuine; differences are interpreted off poles. The relations $a\preceq w$ and $a\simeq w$ compare ordinary singularity types. Every member satisfies
-\begin{equation}\label{eq:big-relative-mass-interval}
- \ell\leq\mu_u(X)\leq M.
-\end{equation}
-These bounds concern the singularity class. Metric positive lower volume follows from these hypotheses, as explained after \cref{thm:li-general-measure}. The relative envelope and domination arguments below use precisely this regime. The general-measure construction in \cref{sec:big-model-general-measures} will use these same hypotheses.
-
-\Needspace{10\baselineskip}
-\begin{lemma}\label{lem:big-relative-stretch}
-If $u,w\in\mathcal E_\varphi$ and $u\leq w$, then $Q_b(u,w)$ is genuine and belongs to $\mathcal E_\varphi$ for every $b\geq1$.
-\end{lemma}
-\begin{proof}
-This is \cref{lem:relative-stretch-closure}, applied to the envelope-defined class. The identification with the volume-defined class is \cref{thm:relative-equivalence}.
-\end{proof}
-
-\begin{proposition}\label{prop:big-relative-finite-rooftops}
-For $u_1,\ldots,u_p\in\mathcal E_\varphi$, the envelope $P_\theta(u_1,\ldots,u_p)$ is genuine and belongs to $\mathcal E_\varphi$.
-\end{proposition}
-\begin{proof}
-Apply \cref{prop:relative-finite-rooftops} to the envelope-defined class. Its convex-combination proof works for any smooth background and does not use either mass bound.
-\end{proof}
+Stretching and finite rooftops preserve $\mathcal E_\varphi$ by \cref{lem:relative-stretch-closure,prop:relative-finite-rooftops}. Contact support turns these envelopes into comparison functions. Their positive lower mass excludes collapse, while the finite measure of one potential controls the contact tails.
 
 \begin{theorem}\label{thm:big-relative-domination}
 Let $u\in\mathcal E_\varphi$, $v\in\PSH(X,\theta)$ with $v\preceq\varphi$, and $0\leq c<1$. If
@@ -40,7 +16,7 @@ Replace $v$ by $\max(u,v)$. Locality preserves the hypothesis and upward stabili
  q_b=Q_b(u,v),\qquad
  D_b=\{b^{-1}q_b+(1-b^{-1})v=u\}.
 \]
-The preceding stretching lemma gives $q_b\in\mathcal E_\varphi$ and $q_b\leq u$. Contact support and positivity of the mixed products give
+\Cref{lem:relative-stretch-closure} gives $q_b\in\mathcal E_\varphi$ and $q_b\leq u$. Contact support and positivity of the mixed products give
 \[
  b^{-n}\mu_{q_b}+(1-b^{-1})^n\mathbf1_{D_b}\mu_v
  \leq\mathbf1_{D_b}\mu_u.
@@ -50,17 +26,27 @@ Here $\mu_{q_b}$ is supported on $D_b$. Choose $b$ so large that $(1-b^{-1})^n>c
  \ell\leq\mu_{q_b}(X)\leq\mu_u(\{q_b=u\}).
 \end{equation}
 
-If $u<v$ anywhere, there is $\delta>0$ such that $\{u<v-\delta\}$ has positive smooth volume. Indeed, the contrary would give $u\geq v$ almost everywhere and then everywhere for canonical quasi-plurisubharmonic representatives. On this set
-$q_b\leq u-(b-1)\delta$. The family $q_b$ decreases in $b$ and is bounded above by $u$. A genuine limit could not be $-\infty$ on a set of positive smooth volume. Hence its limit is identically $-\infty$, and Hartogs' lemma gives $\sup_Xq_b\to-\infty$. The sets $\{q_b=u\}$ then have $\mu_u$-mass tending to zero by dominated convergence off the pole set of $u$. This contradicts \eqref{eq:big-domination-fixed-tail}.
+If $u<v$ anywhere, there is $\delta>0$ such that $\{u<v-\delta\}$ has positive smooth volume. Indeed, the contrary would give $u\geq v$ almost everywhere and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. On this set
+$q_b\leq u-(b-1)\delta$. The family $q_b$ decreases in $b$ and is bounded above by $u$. A genuine limit could not be $-\infty$ on a set of positive smooth volume. Hence its limit is identically $-\infty$, and \cref{thm:normalized-compactness} gives $\sup_Xq_b\to-\infty$. The sets $\{q_b=u\}$ then have $\mu_u$-mass tending to zero by dominated convergence off the pole set of $u$. This contradicts \eqref{eq:big-domination-fixed-tail}.
 \end{proof}
 
-The exponential order and uniqueness of the positive scalar follow exactly by applying this theorem to $v-\delta$ and then letting $\delta\downarrow0$, or by applying it to all constant translates of $v$, respectively. Thus the third regime in \cref{thm:relative-domination} now has an internal proof. Potential uniqueness for the equation without an exponential does not follow.
+\begin{corollary}\label{cor:big-relative-orders}
+For $u,v$ as in \cref{thm:big-relative-domination} and $\lambda>0$,
+\[
+ \mathrm{e}^{-\lambda u}\mu_u\leq\mathrm{e}^{-\lambda v}\mu_v
+ \quad\Longrightarrow\quad u\geq v.
+\]
+If $\mu_u\leq c\mu_v$ on $X$ for a finite $c\geq0$, then $c\geq1$.
+\end{corollary}
+\begin{proof}
+On $\{u<v-\delta\}$ the weighted inequality gives $\mu_u\leq\mathrm{e}^{-\lambda\delta}\mu_v$. Apply strict domination to $v-\delta$ and let $\delta\downarrow0$. If the second assertion failed, strict domination against every translate $v+A$ would contradict finiteness of $u,v$ at a common point.
+\end{proof}
 
 \Needspace{24\baselineskip}
 \section{Capacity and measures in a general big background}
 \label{sec:big-relative-continuity}
 
-Retain the connected compact complex $n$-fold $X$, big smooth real $(1,1)$-form $\theta$, model reference $\varphi$, bounded mass hypothesis and positive lower relative volume of \cref{sec:big-relative-foundations}. Use its notation $\mathcal E_\varphi$, $\mu_a$, $\ell$, $M$, $Q_b$ and $\theta_a$, and its fixed smooth-volume and capacity conventions. The weighted lower-semicontinuity and monotone capacity arguments proved in \cref{lem:weighted-extended-lsc} apply to this background. They use bounded products after enlarging the background to a Hermitian metric, so no positivity of the uncut constant-truncation product is required.
+A fixed dominating measure gives a common lower envelope after extraction and then convergence in capacity. The proof follows the semipositive-background construction of \cref{thm:relative-fixed-measure-continuity}, with the interval \eqref{eq:big-relative-mass-interval} supplying the mass bounds. Weighted lower semicontinuity is available in the present background by \cref{lem:weighted-extended-lsc}.
 
 \Needspace{20\baselineskip}
 \begin{theorem}\label{thm:big-relative-fixed-continuity}
@@ -76,7 +62,7 @@ For the original sequence,
 \]
 \end{theorem}
 \begin{proof}
-We apply the arguments of \cref{lem:dominated-relative-rooftop-extraction,thm:relative-fixed-measure-continuity}, checking their ingredients in the present background. The envelope identity and Hartogs' lemma give $u_j\leq\varphi+C$. Finite rooftops and stretching preserve $\mathcal E_\varphi$ by \cref{prop:big-relative-finite-rooftops,lem:big-relative-stretch}; their masses are at least $\ell$. These replace the corresponding semipositive-background facts.
+We apply the arguments of \cref{lem:dominated-relative-rooftop-extraction,thm:relative-fixed-measure-continuity}, checking their ingredients in the present background. The envelope identity and Hartogs' lemma give $u_j\leq\varphi+C$. Finite rooftops and stretching preserve $\mathcal E_\varphi$ by \cref{prop:relative-finite-rooftops,lem:relative-stretch-closure}; their masses are at least $\ell$. These replace the corresponding semipositive-background facts.
 
 After a common translation, assume $u_j,u\leq\varphi\leq0$. Using \cref{lem:fixed-npp-integrals}, extract once so that smooth-volume almost-everywhere convergence holds and
 \[
@@ -96,9 +82,9 @@ Its exponential test therefore bounds $\sup_Xr_{j,N}$ below, independently of $N
 \[
  h=P_\theta(\inf_j u_j)\in\mathcal E_\varphi.
 \]
-Since $h\leq u\leq\varphi$, upward stability gives $u\in\mathcal E_\varphi$. No semipositivity has entered this extraction argument.
+Since $h\leq u\leq\varphi$, upward stability gives $u\in\mathcal E_\varphi$.
 
-For continuity, put $p_j=P_\theta(\inf_{k\geq j}u_k)$ and $p=(\lim_jp_j)^*$. Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ have the genuine lower bound $h$, so converge in capacity. All the limits lie in $\mathcal E_\varphi$ and $p\leq u$. The general-background weighted lower-semicontinuity lemma, applied twice to \eqref{eq:big-finite-roof-domination}, gives
+For continuity, put $p_j=P_\theta(\inf_{k\geq j}u_k)$ and $p=(\lim_jp_j)^*$. Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ have the genuine lower bound $h$, so converge in capacity by \cref{lem:monotone-psh-capacity}. All the limits lie in $\mathcal E_\varphi$ and $p\leq u$. The general-background weighted lower-semicontinuity lemma, applied twice to \eqref{eq:big-finite-roof-domination}, gives
 \[
  \int_X|\mathrm{e}^p-\mathrm{e}^u|\,\mu_p=0.
 \]
@@ -108,7 +94,5 @@ Finally, the fixed finite dominator gives
 \[
  \mu_{u_j}(\{u_j\leq-T\})\leq\nu(\{h\leq-T\})\longrightarrow0
 \]
-uniformly in $j$. The general-background undamped tail theorem proves weak convergence to $\mu_u\leq\nu$. Starting with an arbitrary subsequence gives a further subsequence with both convergences and the same limit. Hence the conclusions hold for the original sequence.
+uniformly in $j$. \Cref{thm:general-background-damping} proves weak convergence to $\mu_u\leq\nu$. Starting with an arbitrary subsequence gives a further subsequence with both convergences and the same limit. Hence the conclusions hold for the original sequence.
 \end{proof}
-
-Finite rooftops and stretching are properties of the envelope-defined class in an arbitrary smooth background. Here the mass hypotheses identify that class with the volume-defined class and give the interval \eqref{eq:big-relative-mass-interval}. The positive lower bound prevents collapse of the stretched rooftops; the fixed measure controls their masses and, after construction of a common lower envelope, the tails. The finite-rooftop construction itself uses neither bound. The corresponding construction of general-measure solutions is given in \cref{sec:big-model-general-measures}.

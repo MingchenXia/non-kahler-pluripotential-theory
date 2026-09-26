@@ -1,19 +1,12 @@
 \section{Higher moments in the minimal singularity type}
 \label{sec:big-minimal-moments}
 
-Let $X$ be the connected compact complex $n$-fold of \cref{sec:big-relative-foundations}, with its fixed smooth-volume and capacity conventions. Retain bounded mass and a smooth big real $(1,1)$-form $\theta$, now with the minimal reference $V=V_\theta=P_\theta(0)$ and its positive lower relative volume. Thus $\theta$ is any smooth big real $(1,1)$-form and
+Set $V=V_\theta$ and $\mathcal E_V=\mathcal E_{\mathrm{env}}(X,\theta,V)$, and write
 \[
- \ell=\underline{\operatorname{vol}}_\theta(V)>0,
- \qquad M=\overline{\operatorname{vol}}_\theta(V)<\infty.
+ \ell_V=\underline{\operatorname{vol}}_\theta(V)\geq\ell>0,
+ \qquad M_V=\overline{\operatorname{vol}}_\theta(V)<\infty.
 \]
-Write $\mathcal E_V=\mathcal E_{\mathrm{vol}}(X,\theta,V)=\mathcal E_{\mathrm{env}}(X,\theta,V)$ and, for $a\in\PSH(X,\theta)$, set $\theta_a=\theta+\ddc a$ and $\mu_a=\mathrm{MA}_\theta(a)$. The relation $a\simeq V$ means bounded difference off the common poles. The preceding first-moment criterion puts limits in this class. To integrate those limits against a fixed singular measure, we need a stronger estimate. The next argument records the integrability assumption on that measure.
-
-For a non-pluripolar probability measure $\nu$, put
-\[
- A_\theta(\nu)=\sup\left\{\int_X(-w)\,\mathrm{d}\nu:
-             w\in\PSH(X,\theta),\ \sup_Xw=0\right\}.
-\]
-We will use measures for which this number is finite. No such assertion is made for an arbitrary non-pluripolar measure.
+The inequalities follow from volume monotonicity and bounded mass. A first moment against the moving Monge--Amp\`ere measure controls a higher moment against each fixed probability $\nu$ with $A_\theta(\nu)<\infty$, as defined in \cref{subsec:psh-measure-smoothing}. A concave obstacle converts the distribution of $V-u$ into this stronger integrability estimate.
 
 \begin{lemma}\label{lem:big-concave-envelope}
 Suppose $u\simeq V$, $u\leq V$, and $\chi:\mathbb R_{\leq0}\to\mathbb R_{\leq0}$ is increasing and concave, with $\chi(0)=0$ and $\chi'\geq1$. Assume $\chi$ is $C^{1,1}$ on compact intervals. Set
@@ -29,24 +22,17 @@ All measures and contact sets in this formula may be restricted to the complemen
 \begin{proof}
 The difference $u-V$ is bounded, so $V-C\leq b\leq u\leq V$ for some $C$. Hence $p\simeq V$. The obstacle is quasi-continuous: away from sets of arbitrarily small capacity, $u$ and $V$ are finite and continuous, and their difference has a fixed bounded range. The general contact theorem \cref{thm:big-general-envelope-contact} therefore applies.
 
-Choose a strict analytic pole barrier $\rho\leq V$ and put $\Omega=X\setminus\{\rho=-\infty\}$. On this open set $u,V,p$ are locally bounded. Let $\tau=\chi^{-1}$; then $\tau$ is convex and $0<\tau'\leq1$. The function
+Choose a strict analytic pole barrier $\rho\leq V$ and put $\Omega=X\setminus\{\rho=-\infty\}$. On this open set $u,V,p$ are locally bounded. Let $\tau=\chi^{-1}$; then $\tau$ is convex and $0<\tau'\leq1$. By \cref{lem:bounded-convex-pair}, the function
 \[
  w=V+\tau(p-V)
 \]
-is $\theta$-plurisubharmonic on $\Omega$. Indeed, the bounded convex chain rule gives
+is $\theta$-plurisubharmonic on $\Omega$ and satisfies
 \[
- \theta_w\geq\tau'(p-V)\theta_p+
-                     (1-\tau'(p-V))\theta_V\geq0.
+ \mathrm{MA}_\theta(w)\geq\tau'(p-V)^n\mu_p.
 \]
-The coefficients sum to one, so this calculation does not require $\theta\geq0$. Since $w$ is bounded above and $w\geq V-C'$, it extends canonically across the analytic complement as a $\theta$-plurisubharmonic function. The smooth lower curvature bound is preserved by local removability.
+Since $p\leq w\leq V$ on $\Omega$, local removability in \cref{lem:qpsh-removable-analytic} extends $w$ across the analytic complement, preserving its smooth lower curvature bound.
 
-For clarity, the chain calculation also gives the bounded-product inequality
-\[
- \mathrm{MA}_\theta(w)\geq\tau'(p-V)^n\mu_p
- \quad\hbox{on }\Omega.
-\]
-It can be justified on each inner coordinate ball by adding one smooth strictly plurisubharmonic correction to both $p$ and $V$ and convolving. The resulting smooth functions decrease to them and have lower curvature bound $-\theta-\epsilon\beta$, with $\epsilon\downarrow0$ and a fixed positive coordinate form $\beta$. Smooth convex approximations of $\tau$ have derivative in $[0,1]$. Their chain formula and positivity give the inequality in the enlarged background. Bounded monotone product continuity, convergence in capacity of the continuous derivative factors, and then $\epsilon\downarrow0$ give the displayed inequality. This also proves the assertion for $C^{1,1}$ weights. Local bounded mixed measures are uniformly controlled by capacity during this passage.
-
+\Needspace{6\baselineskip}
 The inequality $p\leq b$ implies $w\leq u$, with equality on $D=\{p=b\}$. Ordered contact gives
 \[
  \mathbf1_D\tau'(p-V)^n\mu_p
@@ -57,7 +43,7 @@ On $D$ the derivative is $1/\chi'(u-V)$. Contact support for $p$ proves the clai
 \end{proof}
 
 \begin{proposition}\label{prop:big-minimal-higher-moment}
-Set $N=2n+1$ and $r=1+(4N)^{-1}$. For $u\simeq V$ with $\sup_Xu=0$, put $B=\int_X(V-u)\,\mu_u$. There is a constant $C$, depending only on $n,\ell,M$, such that, for every non-pluripolar probability measure $\nu$ with $A=A_\theta(\nu)<\infty$ and every $u\simeq V$ with $\sup_Xu=0$,
+Set $N=2n+1$ and $r=1+(4N)^{-1}$. For $u\simeq V$ with $\sup_Xu=0$, put $B=\int_X(V-u)\,\mu_u$. There is a constant $C$, depending only on $n,\ell_V,M_V$, such that, for every non-pluripolar probability measure $\nu$ with $A=A_\theta(\nu)<\infty$,
 \[
  \int_X(V-u)^r\,\mathrm{d}\nu
  \leq C(1+A)(1+B)^{1+1/N}
@@ -92,9 +78,9 @@ Tonelli's theorem gives
 \begin{equation}\label{eq:big-weight-derivative-moment}
  \int_X F_s(x)\,\mu_u
  =\mu_u(X)+\int_0^Tg_s(t)\mu_u(\{x>t\})\,\mathrm{d}t
- \leq3\max(1,M).
+ \leq3\max(1,M_V).
 \end{equation}
-Here $\int_0^\infty(1+t)^{-3/2}\,\mathrm{d}t=2$; on the second interval the tail is at most $M$.
+Here $\int_0^\infty(1+t)^{-3/2}\,\mathrm{d}t=2$; on the second interval the tail is at most $M_V$.
 Chebyshev's inequality gives $\mu_u(\{x>t\})\leq B/t$. It follows, by integration first for $F_s$ and then for $W_s$, that
 \begin{equation}\label{eq:big-weight-growth}
  W_s(t)\geq c(1+B)^{-1/N}t^{\beta},
@@ -116,7 +102,7 @@ Write $a_s=\sup_Xp_s\leq0$. For any $q\simeq V$, the definition of $V$ gives $q-
 \[
  \sup_X(q-V)=\sup_Xq.
 \]
-In particular $V-p_s\geq-a_s$. Since $\mu_{p_s}(X)\geq\ell$, the last energy estimate yields $-a_s\leq CB$. This normalization concerns the $\theta$-plurisubharmonic function $p_s$, not the difference $p_s-V$.
+In particular $V-p_s\geq-a_s$. Since $\mu_{p_s}(X)\geq\ell_V$, the last energy estimate yields $-a_s\leq CB$. This normalization concerns the $\theta$-plurisubharmonic function $p_s$, not the difference $p_s-V$.
 
 The definition of $A$ now gives
 \[

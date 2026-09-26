@@ -132,4 +132,88 @@ We have shown that the difference of the two $h_j$ integrals tends uniformly to 
 Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
 \end{proof}
 
+\subsection{Smoothing the measure}
+\label{subsec:psh-measure-smoothing}
+
+Coordinate convolution gives smooth approximations of a finite measure. For a varying quasi-plurisubharmonic integrand, the submean inequality transfers the error to the original measure. This is the additional control needed beyond weak convergence of the measures themselves.
+
+For a smooth background $\theta$ with $\PSH(X,\theta)\ne\varnothing$ and a non-pluripolar probability measure $\nu$, put
+\[
+ A_\theta(\nu)=\sup\left\{\int_X(-w)\,\mathrm{d}\nu:
+ w\in\PSH(X,\theta),\ \sup_Xw=0\right\}.
+\]
+This number may be infinite. Bounded Bedford--Taylor measures satisfy the following estimate.
+
+\begin{lemma}\label{lem:bounded-carrier-integrability}
+Let $\omega$ be Hermitian, let $\psi\in\PSH(X,\omega)$ be bounded, and put $\nu=(\omega+\ddc\psi)^n$. There is a finite constant $C$, depending on the fixed backgrounds and $\|\psi\|_\infty$, such that
+\[
+ \int_X(-w)\,\mathrm{d}\nu\leq C
+ \qquad(w\in\PSH(X,\theta),\ \sup_Xw=0).
+\]
+\end{lemma}
+\begin{proof}
+On finitely many nested coordinate balls $B'_a\Subset B_a$ covering $X$, choose fixed smooth corrections $q_a,r_a$ with $\ddc q_a\geq\omega$ and $\ddc r_a\geq\theta$, and shift $r_a$ to be nonpositive. Then $\psi+q_a$ is bounded plurisubharmonic, $w+r_a$ is negative plurisubharmonic, and positivity of bounded products gives
+\[
+ \int_{B'_a}(-w)\,\mathrm{d}\nu
+ \leq\int_{B'_a}(-w-r_a)\bigl(\ddc(\psi+q_a)\bigr)^n
+ \leq C_a\bigl(1+\|w\|_{L^1(B_a)}\bigr).
+\]
+The last step is the weighted Chern--Levine--Nirenberg estimate in \cref{sec:psh-local-capacity}. Sum over the cover and use the normalized $L^1$ bound of \cref{thm:normalized-compactness}.
+\end{proof}
+
+Choose finitely many coordinate balls $B_a$, smooth functions $\eta_a\geq0$ with compact support in these balls and $\sum_a\eta_a=1$, and inner neighborhoods of their supports whose closures lie in $B_a$. Let $\chi\geq0$ be a smooth radial convolution kernel on the unit ball of $\mathbb C^n$, of integral one. Fix $\epsilon_j\downarrow0$ small enough for every convolution below to stay in the corresponding coordinate ball. Denote convolution of a function in that chart by $S_{a,j}$. For a Borel test function $F$ and a probability measure $\nu$, define a smooth probability measure $\nu_j$ by convolving each coordinate measure $\eta_a\nu$ and adding its extensions by zero. Its defining dual identity is
+\begin{equation}\label{eq:measure-smoothing-duality}
+ \int_X F\,\mathrm{d}\nu_j
+ =\sum_a\int_X\eta_a S_{a,j}F\,\mathrm{d}\nu.
+\end{equation}
+The kernel is even, so the same convolution occurs on the right. This identity first holds for nonnegative Borel functions, and then for integrable signed functions. In particular $\nu_j\rightharpoonup\nu$.
+
+\Needspace{20\baselineskip}
+\begin{lemma}\label{lem:measure-smoothing-integrals}
+If $\nu$ is non-pluripolar and $A_\theta(\nu)<\infty$, then
+\[
+ \sup_j A_\theta(\nu_j)<\infty.
+\]
+More generally, let $z_j,z$ be quasi-plurisubharmonic functions with a common upper bound and a common smooth lower curvature bound. Suppose they converge both in $L^1(X)$ and in $L^1(\nu)$. Then
+\begin{equation}\label{eq:convolution-moving-integrals}
+ \int_X|z_j-z|\,\mathrm{d}\nu_j\longrightarrow0.
+\end{equation}
+Consequently, for every $\lambda>0$,
+\[
+ \mathrm{e}^{\lambda z_j}\nu_j\rightharpoonup \mathrm{e}^{\lambda z}\nu.
+\]
+\end{lemma}
+\Needspace{9\baselineskip}
+\begin{proof}
+On each coordinate ball choose a fixed smooth function $q_a$ whose Levi form dominates $\theta$. If $w\in\PSH(X,\theta)$ and $\sup_Xw=0$, then $w+q_a$ is plurisubharmonic. The submean inequality gives
+\[
+ -S_{a,j}w\leq-w+S_{a,j}q_a-q_a\leq-w+C.
+\]
+The constant is independent of $w$ and $j$. Integrating \eqref{eq:measure-smoothing-duality} proves $A_\theta(\nu_j)\leq A_\theta(\nu)+C$.
+
+For the second assertion start with any subsequence, and extract so that $z_j\to z$ almost everywhere for smooth volume. The upper envelopes
+\[
+ H_j=\left(\sup_{k\geq j}z_k\right)^*
+\]
+decrease to $z$ by \cref{thm:normalized-compactness} and this almost-everywhere convergence. Enlarge the fixed corrections $q_a$ so that $H_j+q_a,z_j+q_a,z+q_a$ are all plurisubharmonic. Since $H_j\geq z_j,z$, the dual identity and the submean inequality imply
+\[
+ \begin{split}
+ \int_X|z_j-z|\,\mathrm{d}\nu_j
+ &\leq\sum_a\int_X\eta_a S_{a,j}(2H_j-z_j-z)\,\mathrm{d}\nu\\
+ &\leq2\sum_a\int_X\eta_a
+       \bigl(S_{a,j}(H_j+q_a)-(z+q_a)\bigr)\,\mathrm{d}\nu
+       +\int_X(z-z_j)\,\mathrm{d}\nu.
+ \end{split}
+\]
+All integrals are well defined: each function on the left of a submean inequality is bounded above, and its negative part is controlled by that of its integrable unsmoothed counterpart plus a constant.
+
+Radial averages of a plurisubharmonic function decrease when the radius decreases. Therefore $S_{a,j}(H_j+q_a)$ decreases to $z+q_a$ on the support of $\eta_a$. To identify the limit, fix an index $k$, bound $H_j\leq H_k$ for $j\geq k$, let $j\to\infty$ in the radius, and then let $k\to\infty$. The reverse inequality is the submean inequality. The nonnegative difference in the last display is dominated by an integrable constant minus $z$ on this compact support. Thus its integral tends to zero. The final integral tends to zero by $L^1(\nu)$ convergence. The subsequence criterion proves \eqref{eq:convolution-moving-integrals} for the original sequence.
+
+The exponential is Lipschitz on the common upper range, so its moving $L^1$ error also tends to zero. If $\zeta>0$ is smooth, then $\zeta \mathrm{e}^{\lambda z}=\mathrm{e}^{\lambda z+\log\zeta}$ is bounded and quasi-plurisubharmonic. For any fixed bounded quasi-plurisubharmonic function $F$, the same local submean argument and dominated convergence in \eqref{eq:measure-smoothing-duality} give
+\[
+ \int_XF\,\mathrm{d}\nu_j\longrightarrow\int_XF\,\mathrm{d}\nu.
+\]
+Apply this to $F=\zeta \mathrm{e}^{\lambda z}$. Subtracting two positive smooth tests proves the required convergence for every smooth test function. Uniformly bounded masses and uniform approximation of continuous functions by smooth ones prove weak convergence.
+\end{proof}
+
 \Needspace{25\baselineskip}
