@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint146 — Chapter 2 and the mass-invariance criterion
+
+Chapter 2 completes its whole five-section rewrite and two direct mathematical/editorial reads. The full smooth and bounded mass-invariance characterization moves from Chapter 25 to the mass polynomial, using only Chapter 1 foundations and preceding Chapter 2 identities. Its stable label and later callers are preserved; the redundant sufficient-condition corollary and duplicate Gauduchon definition are removed. Chapter 25 retains the volume, entropy and mass-extremum applications. Repeated settings and tangential recaps are removed, and four downstream page-break adjustments preserve the mathematical text.
+
+The seven changed author inputs have zero house-audit errors and the same four inherited warnings. Paper citations remain in Chapter 33. The 814-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 65 selected final pages pass visual review: seventeen changed images were directly reinspected after the second read and 48 are byte-identical to the inspected first output. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 216 author inputs. All 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes and checks are recorded in chapter-two-rewrite-146.md, build-snapshot-146.json and source-package-portability-146.json.
+
+Continue with the complete present Chapter 3, then Chapters 4–6, after the foundation relocations. The broader book goal remains active and incomplete.
+
 ## Checkpoint145 — current source and proof boundaries
 
 The source comparison and proof-obligation ledgers now describe the current manuscript, with old chronological versions preserved verbatim. Nineteen source chapter/appendix inputs are mapped exactly once to eighteen subjects, with stable labels and compiled locations in the active 33-chapter, 216-input book. The ledgers distinguish internal proofs, classical imports and unestablished extensions, and remove stale claims about the hidden Nakamaye chapter, bounded uniqueness, selection and the Hölder dependency. This is a subject-level disposition and record reconciliation, not a new audit of every source theorem.

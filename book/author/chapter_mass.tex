@@ -1,11 +1,11 @@
 \chapter{Torsion and the variation of mass}
 \label{chap:mass}
 
-For smooth K\"ahler potentials, Stokes' theorem makes the total Monge--Amp\`ere mass independent of the potential. With a nonclosed background, the same calculation leaves derivatives of powers of that form. The resulting mass polynomial identifies when invariance holds and gives explicit examples where it fails. This failure also explains why the global comparison principle must change in the Hermitian setting.
+The total Monge--Amp\`ere mass need not be preserved by adding a complex Hessian to a Hermitian form. Integration by parts expresses its variation through derivatives of the background powers; polarization shows that the vanishing of these derivatives is also necessary for invariance. When they do not vanish, even smooth potentials of the same singularity type can have different masses, and the ordinary global comparison principle fails. Uniform upper bounds then provide a weaker property that depends only on the manifold.
 
 \section{Integration by parts with a non-closed form}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. We first compute the terms that remain when integration by parts differentiates a power of the background form.
+Integration by parts transfers the complex Hessian of a function to the form against which it is integrated. For powers of a nonclosed background, the resulting derivative contains both its complex Hessian and a quadratic torsion term.
 
 \begin{lemma}\label{lem:ibp}
 For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
@@ -36,7 +36,7 @@ For a smooth real $(1,1)$-form $\omega$ and an integer $q\geq1$,
 where the second term is omitted when $q=1$.
 \end{lemma}
 \begin{proof}
-For $q=1$, the asserted formula is the identity $\ddc\omega=\ddc\omega$. Suppose $q\geq2$. Since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
+For $q\geq2$, since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
 \[
  \mathrm{d}\dc(\omega^q)
  =q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega
@@ -48,12 +48,12 @@ The term involving $\mathrm{d}\omega\wedge\dc\omega$ is one reason that the cond
 
 \section{The mass polynomial}
 
-Fix a Hermitian form $\omega$ on $X$. For $u\in C^\infty(X,\mathbb R)$ write $\omega_u=\omega+\ddc u$. Expanding its top power and integrating by parts will express the mass variation in terms of derivatives of powers of $\omega$. Set
+Fix a Hermitian form $\omega$. Write $\omega_u=\omega+\ddc u$ and set
 \[
  \HH_\omega=\{u\in C^\infty(X,\R):\omega+\ddc u>0\},
  \qquad \Mass_\omega(u)=\int_X(\omega+\ddc u)^n.
 \]
-The set $\HH_\omega$ is convex, contains all constants, and is open in the $C^2$ topology.
+Here $\Mass_\omega$ is defined for every smooth real $u$. The set $\HH_\omega$ is convex and open in the $C^2$ topology. Expanding the mass along a smooth direction gives a polynomial whose nonconstant coefficients detect the derivatives of the background.
 
 \begin{theorem}\label{thm:mass-expansion}
 For every smooth real function $u$,
@@ -62,7 +62,6 @@ For every smooth real function $u$,
  \sum_{k=1}^{n-1}\binom nk
  \int_X u(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}).
 \end{equation}
-The equality is an identity of integrals and does not require $u\in\HH_\omega$.
 \end{theorem}
 \begin{proof}
 Expand $(\omega+\ddc u)^n$ by the binomial theorem. The term with $k=n$ integrates to zero, since
@@ -77,17 +76,47 @@ $T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Both $\mathrm{d}$ and $\dc$ annihilate $\d
 This gives each of the terms in \eqref{eq:mass-expansion}. When $n=1$, the sum is empty and the mass is constant.
 \end{proof}
 
-\Needspace{9\baselineskip}
-\begin{corollary}\label{cor:constant-mass-sufficient}
-If $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$, then
-\[
- \Mass_\omega(u)=\int_X\omega^n
-\]
-for every smooth $u$. In particular, this holds when $\mathrm{d}\omega=0$.
-\end{corollary}
+The vanishing of all derivatives in \eqref{eq:mass-expansion} is sufficient for mass invariance. To prove necessity, vary the potential in several directions and recover each derivative by polarization.
+
+\Needspace{18\baselineskip}
+\begin{theorem}[Chiose]\label{thm:mass-invariance-characterization}
+Assume $n\geq2$. The following conditions are equivalent:
+\begin{enumerate}
+\item $\int_X(\omega+\ddc u)^n$ is independent of $u\in\HH_\omega$;
+\item $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$;
+\item $\ddc\omega=0$ and $\mathrm{d}\omega\wedge\dc\omega=0$.
+\end{enumerate}
+They are also equivalent to constancy of the mass over all bounded $\omega$-plurisubharmonic functions. Under these conditions the common mass is $\int_X\omega^n$.
+\end{theorem}
 \begin{proof}
-Every term in the sum in \eqref{eq:mass-expansion} vanishes. A closed real $(1,1)$-form is annihilated by both $\partial$ and $\bar\partial$, hence so are its powers.
+Assume the first condition. For every smooth real $u$, both signs of $tu$ are admissible when $|t|$ is small. The polynomial
+$\int_X(\omega+t\ddc u)^n$ is therefore constant on an interval. Its nonconstant coefficients vanish. For $1\leq j\leq n-1$ this gives
+\[
+ \int_X\omega^j\wedge(\ddc u)^{n-j}=0.
+\]
+Replace $u$ by a linear combination of $n-j$ smooth real functions and compare the coefficient containing every parameter once. We obtain
+\[
+ \int_X\omega^j\wedge\ddc u_1\wedge\cdots\wedge\ddc u_{n-j}=0.
+\]
+Integration by parts in the first factor, followed by testing arbitrary $u_1$, yields the pointwise identity
+\[
+ \ddc(\omega^j)\wedge\ddc u_2\wedge\cdots\wedge\ddc u_{n-j}=0
+\]
+for every choice of the remaining functions. At a given point their complex Hessians can be prescribed arbitrarily: multiply a quadratic polynomial in a coordinate chart by a cutoff equal to one near that point. Complexifying the multilinear identity permits the quadratic monomials $z_a\bar z_b$. Products of their Hessians give all coordinate forms of complementary bidegree. Pairing with those forms shows that every coefficient of $\ddc(\omega^j)$ vanishes. When $j=n-1$, there are no remaining factors, and the same conclusion follows directly from testing $u_1$. This proves the second condition.
+
+The second condition implies the first by \cref{thm:mass-expansion}. For $n\geq3$, the identities for $j=1,2$ give
+\[
+ 0=\ddc(\omega^2)=2\omega\wedge\ddc\omega
+                         +2\mathrm{d}\omega\wedge\dc\omega,
+\]
+so the second condition implies the third. For $n=2$, the last torsion form vanishes for degree reasons, and the implication is immediate. Conversely \cref{lem:power-torsion} proves all the power identities from the third condition.
+
+For a bounded potential, \cref{thm:bounded-exact-regularization} gives uniformly bounded smooth strictly positive approximants decreasing to it. The bounded-product continuity of \cref{sec:psh-bounded-products} passes their common mass to the limit. Conversely, constancy for bounded potentials implies constancy on $\HH_\omega$. The zero potential gives the value of the common mass.
 \end{proof}
+
+In particular, a closed background has invariant mass. More generally, under the equivalent conditions above, \eqref{eq:mass-expansion} gives the same identity for every smooth real $u$. In dimension one the mass is always $\int_X\omega$.
+
+The first derivative of the mass singles out the highest power of the perturbed background.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:mass-variation}
@@ -117,13 +146,13 @@ Consequently, $\Mass_\omega$ is constant on $\HH_\omega$ if and only if $\ddc\om
 The formula is \eqref{eq:mass-expansion} for $n=2$. It proves one implication directly; the other follows from \cref{prop:mass-variation} at $u=0$.
 \end{proof}
 
-A Hermitian form with $\ddc(\omega^{n-1})=0$ is called a Gauduchon form. Thus on a surface the Gauduchon condition is exactly the condition for smooth mass invariance. In dimension three, the expansion is
+The identity $\ddc(\omega^{n-1})=0$ makes the first variation vanish at $u=0$; it will be studied in \cref{chap:gauduchon}. On a surface this already gives mass invariance. In dimension three, however,
 \[
  \Mass_\omega(u)=\int_X\omega^3
  +3\int_Xu\ddc(\omega^2)
  +3\int_Xu\ddc u\wedge\ddc\omega.
 \]
-The Gauduchon condition removes the middle term, but does not by itself remove the last one. Equivalently, \eqref{eq:mass-first-variation} vanishes at $u=0$, while mass invariance requires it to vanish at every admissible $u$. The full characterization of mass invariance is given in \cref{thm:mass-invariance-characterization}.
+Vanishing of $\ddc(\omega^2)$ removes the linear term, while $\ddc\omega$ still governs the quadratic term. Thus stationarity at one potential must be distinguished from invariance on $\HH_\omega$.
 
 \Needspace{23\baselineskip}
 \section{Mass variation on a complex torus}
@@ -160,23 +189,16 @@ Indeed, the average of $\cos(2\pi x_1)$ is zero and that of its square is $1/2$,
  =2\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)
        \bigl(2+\cos(2\pi x_1)\bigr)\beta_1\wedge\beta_2.
 \]
-Thus even smooth potentials in the same singularity class have different masses.
 \end{example}
 
 The complex torus admits K\"ahler metrics, but the chosen equation form is nonclosed. Mass variation already occurs in this setting. The Hopf example in \cref{chap:hopf} will exhibit the further failure of an upper mass bound on a non-K\"ahler manifold.
 
 \begin{corollary}\label{cor:mass-not-singularity-invariant}
-Let $[u]$ denote the ordinary singularity type of $u$. In general, the rule
-\[
- [u]\longmapsto\int_X\omega_u^n
-\]
-does not define a function of the ordinary singularity type, even if restricted to smooth strictly $\omega$-plurisubharmonic potentials. Nor is this mass determined by the multiplier ideals of the potential.
+In general, the total Monge--Amp\`ere mass is not determined by the ordinary singularity type or by the multiplier ideals, even among smooth strictly $\omega$-plurisubharmonic potentials.
 \end{corollary}
 \begin{proof}
 All the potentials $u_t$ in \cref{ex:torus-mass} are smooth on compact $X$, so they have the same singularity type. Their multiplier ideals are the structure sheaf for every positive multiple of the weight. Their masses differ by \eqref{eq:torus-mass}.
 \end{proof}
-
-Upper and lower masses taken over all representatives of an ordinary type are invariants of that type. Envelope constructions provide another way to choose a representative. The Gauduchon trace measures of \cref{thm:gaud-trace-homeomorphism} retain information about individual potentials. Their total mass, in contrast, depends only on the fixed background, by \cref{prop:gauduchon-trace}.
 
 \Needspace{15\baselineskip}
 \section{Comparison and mass invariance}
@@ -205,19 +227,17 @@ Use the torus $X$, form $\omega$, potentials $u_t$ and constant $B=\int_X\beta_1
 \]
 \end{proof}
 
-The modified comparison theorem in \cref{thm:modified-comparison} accounts for the derivatives of the background. Under the Guan--Li condition, the ordinary comparison principle is recovered.
+The modified comparison theorem in \cref{thm:modified-comparison} accounts for the derivatives of the background. Conversely, the mass identity in \cref{thm:mass-invariance-characterization} yields ordinary comparison for bounded potentials, as proved in \cref{uni-thm:GL-equivalence}.
 
-\Needspace{30\baselineskip}
+\Needspace{20\baselineskip}
 \section{Uniform mass bounds}
 
-Once mass invariance fails, one can still ask for a uniform upper bound. Unlike invariance, finiteness of this bound is independent of the choice of Hermitian form. Let $\eta$ be a second Hermitian form on $X$.
-
-Define the upper smooth mass
+Masses can vary while remaining uniformly bounded. Comparing two Hermitian forms and rescaling their potentials shows that finiteness of the upper bound depends only on $X$. Define
 \[
  \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty].
 \]
 \begin{proposition}\label{prop:smooth-bmp-metric}
-If $C>0$ is a real constant and $\omega\leq C\eta$, then
+If $\eta$ is another Hermitian form and $\omega\leq C\eta$ for a constant $C>0$, then
 \[
  \Vsm(\omega)\leq C^n\Vsm(\eta).
 \]
