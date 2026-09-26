@@ -1,3 +1,4 @@
+\Needspace{12\baselineskip}
 \section{Lelong numbers and divisorial estimates}
 \label{sec:psh-divisorial-estimates}
 
@@ -70,7 +71,6 @@ Write $d=\dim Z$ and let $\kappa$ be the Euclidean form in the chart. Choose a n
 Every point of the smaller ball admits a surrounding Euclidean ball of a fixed radius inside the intermediate ball. The local Lelong monotonicity formula, recalled in \cite{SGPT}, bounds the Lelong number at its center by a fixed multiple of this trace mass. The finite cover gives one bound on $Z$. Smooth additions and additive normalization do not change Lelong numbers, proving the assertion for the original potentials.
 \end{proof}
 
-
 The Bergman estimates also control Lelong numbers on a fixed local modification. A \emph{local divisor over $X$} means a prime divisor $E$ on a smooth modification $\pi:Z\to U$ of a coordinate neighborhood. For a quasi-plurisubharmonic function $u$ on $X$, let $\nu(u\circ\pi,E)$ be its generic Lelong number along $E$, let $\operatorname{ord}_E$ denote divisorial vanishing order, and let $\operatorname{Jac}\pi$ be the local holomorphic Jacobian determinant. Write
 \[
  \nu_E(u)=\nu(u\circ\pi,E),\qquad
@@ -104,6 +104,28 @@ This implies $k+A_U(E)>m\nu_E(u)$. In particular the weaker non-strict lower bou
 
 For rational $m>0$, the presentation $a_m$ has analytic singularities in the convention of the source book. The real-parameter estimate does not require this restriction.
 
+Blowing up a point converts the divisorial estimate into a pointwise order bound on any local modification.
+
+\begin{lemma}\label{lem:ideal-modification-lelong-loss}
+Let $U$ be a complex manifold of dimension $n$, let $u$ be quasi-plurisubharmonic on $U$, and let $\pi:Y\to U$ be a modification with smooth source. Fix $y\in Y$ and an integer $m\geq1$. Write $J_\pi$ for the holomorphic Jacobian in local coordinates near $y$. If a nonzero holomorphic germ $g$ at $\pi(y)$ belongs to $\mathcal I(mu)$, then
+\[
+ \operatorname{ord}_y(g\circ\pi)
+       \geq m\nu(u\circ\pi,y)-n-\operatorname{ord}_yJ_\pi.
+\]
+\end{lemma}
+\begin{proof}
+If $n\geq2$, let $\rho:\widetilde Y\to Y$ be the blowup of $y$ and let $E$ be its exceptional divisor. For $n=1$, take $\rho$ to be the identity and $E=\{y\}$. Set $F=\pi\circ\rho$ and write $J_F$ for its local holomorphic Jacobian determinant. Generic orders along $E$ give
+\[
+ \nu(u\circ F,E)=\nu(u\circ\pi,y),\qquad
+ \operatorname{ord}_E(g\circ F)=\operatorname{ord}_y(g\circ\pi).
+\]
+On a standard blowup chart the Jacobian of $\rho$ has order $n-1$ along $E$. The chain rule therefore gives the log discrepancy over $U$ as
+\[
+ A_U(E)=1+\operatorname{ord}_E J_F
+       =n+\operatorname{ord}_yJ_\pi.
+\]
+Since $g\in\mathcal I(mu)$, its order along $E$ is at least the order of this ideal. The lower estimate in \cref{lem:bergman-divisorial-error}, applied to $F$, proves the inequality.
+\end{proof}
 
 \begin{lemma}\label{lem:analytic-ideal-dominance}
 Let $v$ be quasi-plurisubharmonic on a compact complex manifold, and let $a$ have analytic singularities. If $v\preceq_{\mathcal I}a$, then $v\preceq a$.
@@ -122,7 +144,6 @@ has a quasi-plurisubharmonic representative. Here the difference is first interp
 
 The only resolution input is the standard principalization of an analytic ideal. Divisorial removal is applied to a locally closed positive Hessian after smooth correction, not to a purported closed background on the original manifold.
 \end{proof}
-
 
 \Needspace{12\baselineskip}
 \begin{lemma}\label{lem:analytic-minorant-product-ideals}

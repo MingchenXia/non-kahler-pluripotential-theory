@@ -1,7 +1,7 @@
 \section{Obstacle envelopes}
 \label{sec:obstacle-envelopes}
 
-An obstacle selects the largest potential lying below it. The local upper-envelope theorem gives the construction once the competitors have a common upper bound; normalized compactness supplies that bound for obstacles finite almost everywhere.
+An obstacle selects the largest potential lying below it. The local upper-envelope theorem gives the construction once the competitors have a common upper bound; normalized compactness supplies that bound for an obstacle finite almost everywhere or prescribed on a non-pluripolar compact set.
 
 A smooth real $(1,1)$-form $\theta$ is called \emph{big} if there are $\rho\in\PSH(X,\theta)$ and $\delta>0$ such that
 \[
@@ -26,6 +26,25 @@ Here is a useful way to check the upper bound for an unbounded obstacle. If $f\l
 \]
 Thus the competitors have a common upper bound. In particular this applies to any measurable obstacle finite almost everywhere, by taking one of its finite sublevel sets of positive volume.
 
+An obstacle bound on a non-pluripolar compact set also bounds every competitor globally, even when that set has zero smooth volume.
+
+\begin{lemma}\label{lem:compact-obstacle-upper-bound}
+Let $\theta$ be a smooth real $(1,1)$-form on the connected compact manifold $X$, let $K\subseteq X$ be compact and non-pluripolar, and let $w\in C(K,\mathbb R)$. There is a constant $C=C(\theta,K,w)$ such that every $a\in\PSH(X,\theta)$ satisfying $a\leq w$ quasi-everywhere on $K$ has $\sup_X a\leq C$.
+\end{lemma}
+\begin{proof}
+Otherwise choose such functions $a_j$ with
+\[
+ M_j:=\sup_Xa_j\geq 2^j+\max_Kw.
+\]
+The normalized functions $v_j=a_j-M_j\leq0$ have uniformly bounded $L^1$ norms by \cref{thm:normalized-compactness}. Choose a Hermitian form $\omega$ and $A>0$ with $\theta\leq A\omega$. The partial sums
+\[
+ s_N=\sum_{j=1}^N2^{-j}v_j
+\]
+decrease, have uniformly bounded $L^1$ norms, and satisfy $\ddc s_N\geq-A\omega$. Thus their limit is a genuine quasi-plurisubharmonic function $s$; the $L^1$ bound excludes the identically $-\infty$ alternative in the local decreasing-limit theorem.
+
+Let $N_j\subseteq K$ be a pluripolar exceptional set for the $j$-th obstacle inequality. On $K\setminus\bigcup_jN_j$ one has $v_j\leq-2^j$ for every $j$, hence $s=-\infty$. The set where a genuine quasi-plurisubharmonic function is $-\infty$ is pluripolar. Together with the countable union of the $N_j$, it would contain all of $K$, contradicting the hypothesis on $K$.
+\end{proof}
+
 If $\PSH(X,\theta)$ is nonempty, its normalized envelope
 \[
  V_\theta=P_\theta(0)
@@ -43,6 +62,7 @@ Let $\eta$ be a smooth semipositive real $(1,1)$-form on $X$. If an obstacle $f$
 The lower constant is a competitor. The preceding finite-sublevel argument gives a common upper bound for all competitors. The local envelope theorem therefore gives a bounded envelope.
 \end{proof}
 
+\Needspace{12\baselineskip}
 \begin{proposition}
 \label{prop:continuous-obstacle-envelope}
 If $f$ is continuous and $\omega$ is Hermitian, then $P_\omega(f)$ is continuous. Moreover,
@@ -84,6 +104,7 @@ For a bounded obstacle in a big background, exceptional sets in the competitor i
 \label{lem:big-pointwise-competitor}
 Let $\theta$ be big, let $f$ be bounded, and let $u\in\PSH(X,\theta)$ satisfy $u\leq f$ quasi-everywhere. There are genuine $u_t\in\PSH(X,\theta)$, $t>0$, such that $u_t\leq f$ everywhere and $u_t\to u$ almost everywhere as $t\downarrow0$.
 \end{lemma}
+\Needspace{12\baselineskip}
 \begin{proof}
 Choose $\rho\in\PSH(X,\theta)$ with $\theta+\ddc\rho\geq\kappa\omega$ for some $\kappa>0$. The exceptional set $E=\{u>f\}$ is pluripolar. The global form of Josefson's theorem on compact complex manifolds supplies a genuine quasi-plurisubharmonic $\chi$ with $\chi=-\infty$ on $E$; see \cite[Theorem 1.1.5]{SGPT}. Rescale and normalize it so that $\chi\leq0$ and $\ddc\chi\geq-\omega$. Shift $\rho$ so that $\rho\leq\inf_X f$. With $s=t/\kappa$, put
 \[

@@ -15,7 +15,7 @@ Every member on the right is constant on each fiber, with the value $-\infty$ al
 \begin{proof}
 In a coordinate ball $V\subset B$, choose a smooth function $\rho$ with $\ddc\rho\geq\theta$. If $u\in\PSH(X,\pi^*\theta)$, then $u+\rho\circ\pi$ is plurisubharmonic on $\pi^{-1}(V)$. Its restriction to a fiber is plurisubharmonic or identically $-\infty$. Since a fiber is compact and connected, the maximum principle makes it constant in either case. Thus $u=v\circ\pi$ for a uniquely defined function $v$ on $B$.
 
-A holomorphic submersion admits local holomorphic sections. Composing $u+\rho\circ\pi$ with such a section shows that $v+\rho$ is plurisubharmonic or identically $-\infty$ on a smaller ball. The latter alternative on a nonempty open ball would make $u=-\infty$ on its open inverse image, contradicting genuineness. Hence $v$ is quasi-plurisubharmonic and has its canonical upper semicontinuous representative. Distributional differentiation in local product coordinates gives
+A holomorphic submersion admits local holomorphic sections. Composing $u+\rho\circ\pi$ with such a section shows that $v+\rho$ is plurisubharmonic or identically $-\infty$ on a smaller ball. The latter alternative on a nonempty open ball would make $u=-\infty$ on its open inverse image, contradicting genuineness. Hence $v$ is quasi-plurisubharmonic. Distributional differentiation in local product coordinates gives
 \[
  \pi^*(\theta+\ddc v)=\pi^*\theta+\ddc u\geq0.
 \]
@@ -24,27 +24,37 @@ Positivity of a current of this pulled-back form implies positivity on the base:
 Conversely, the local plurisubharmonic characterization shows that pullback of a $\theta$-plurisubharmonic function by a submersion is $\pi^*\theta$-plurisubharmonic. It is genuine by surjectivity and local product coordinates. Uniqueness follows from surjectivity.
 \end{proof}
 
-No closedness of $\theta$ is needed in this descent argument. The absence of a positive vertical term in $\pi^*\theta$ is what makes the fiberwise maximum principle applicable.
-
-
 \input{author/section_restricted_analytic_approximants}
 
-\subsection{Convergence under modifications}
+\subsection{Modifications}
+
+\begin{proposition}\label{prop:psh-descent-modification}
+Let $\pi:Y\to X$ be a modification of connected compact complex manifolds, and let $\theta$ be a smooth closed real $(1,1)$-form on $X$. Pullback gives a bijection
+\[
+ \PSH(X,\theta)\longrightarrow\PSH(Y,\pi^*\theta).
+\]
+\end{proposition}
+\begin{proof}
+Let $S\subset X$ be a proper analytic set over whose complement $\pi$ is an isomorphism, and put $D=\pi^{-1}(S)$. Pullback is well defined using the local plurisubharmonic potentials of the closed form $\theta$. It is injective because $\pi$ is surjective. To prove surjectivity, let $b\in\PSH(Y,\pi^*\theta)$ and first define $u$ off $S$ by the inverse map. On a coordinate neighborhood choose a smooth potential $\rho$ for $\theta$. Properness and local upper boundedness of $b+\rho\circ\pi$ give a local upper bound for $u+\rho$ near $S$. The removable-singularity theorem for plurisubharmonic functions therefore extends $u+\rho$ across $S$. These local extensions glue canonically and give $u\in\PSH(X,\theta)$. The plurisubharmonic functions $b+\rho\circ\pi$ and $(u+\rho)\circ\pi$ agree off $D$, hence almost everywhere and as canonical representatives everywhere. Thus $b=u\circ\pi$.
+\end{proof}
 
 A modification preserves $L^1$ convergence within a family with one lower curvature bound. Compactness controls the pullbacks near the exceptional locus, where a direct change-of-variables estimate would involve a vanishing Jacobian.
 
 \begin{lemma}\label{lem:modification-lone-pullback}
-Let $\pi:Z\to Y$ be a modification between connected smooth compact complex manifolds, and let $\Omega_0$ be a smooth real $(1,1)$-form on $Y$. If $v_j\to v$ in $L^1(Y)$ and all $v_j,v$ belong to $\PSH(Y,\Omega_0)$, then
+Let $\pi:Z\to Y$ be a modification between connected complex manifolds, and let $\Omega_0$ be a smooth real $(1,1)$-form on $Y$. If $v_j\to v$ in $L^1_{\mathrm{loc}}(Y)$ and all $v_j,v$ belong to $\PSH(Y,\Omega_0)$, then
 \[
- v_j\circ\pi\longrightarrow v\circ\pi\quad\hbox{in }L^1(Z).
+ v_j\circ\pi\longrightarrow v\circ\pi
+       \quad\hbox{in }L^1_{\mathrm{loc}}(Z).
 \]
+In particular, on compact manifolds this is convergence in $L^1$.
 \end{lemma}
 \begin{proof}
-\Cref{thm:normalized-compactness} and Hartogs' lemma bound the suprema of $v_j$ from above, and $L^1$ convergence to a genuine potential bounds them from below. Pullback preserves the supremum because $\pi$ is surjective. Choose a Hermitian form $\gamma$ on $Z$ with $\pi^*\Omega_0\leq C\gamma$. The pullbacks are genuine quasi-plurisubharmonic functions with this fixed lower curvature bound. Normalized compactness therefore makes them relatively compact in $L^1(Z)$.
+Hartogs' lemma bounds $v_j$ uniformly above on relatively compact subsets of $Y$. The pullbacks are therefore locally uniformly bounded above and have the common smooth lower curvature bound $-\pi^*\Omega_0$. After a smooth local correction, plurisubharmonic compactness gives a convergent subsequence on each connected coordinate region in $Z$, or convergence to $-\infty$ locally uniformly.
 
-Off the exceptional locus, $\pi$ is a biholomorphism onto its image. On relatively compact subsets there, change of variables gives $L^1$ convergence to $v\circ\pi$. Every global cluster limit consequently equals $v\circ\pi$ outside the exceptional locus, hence almost everywhere, since that analytic locus has smooth volume zero. The cluster limit is unique, proving convergence of the whole sequence.
+Every such region meets the complement of the exceptional locus. There $\pi$ is a biholomorphism, and change of variables gives $L^1_{\mathrm{loc}}$ convergence to $v\circ\pi$. Thus collapse is excluded. Each subsequential limit agrees with $v\circ\pi$ off the exceptional locus, hence almost everywhere, since that analytic locus has smooth volume zero. The limit is unique. Applying this argument to every subsequence and a countable coordinate cover proves convergence of the whole sequence in $L^1_{\mathrm{loc}}(Z)$.
 \end{proof}
 
+\Needspace{13\baselineskip}
 \subsection{Multiplier ideals under modifications}
 \label{sec:psh-birational-ideals}
 
@@ -87,6 +97,7 @@ In particular, the formula does not identify $\pi^*\mathcal I(a)$ with $\mathcal
 
 We also need invariance of the ideal \emph{order}, which asks for all positive weights. We give the local argument to avoid assuming that a modification of a small open subset of $Y$ extends over $X$.
 
+\Needspace{10\baselineskip}
 \begin{lemma}\label{lem:birational-ideal-order}
 For quasi-plurisubharmonic $a,b$ on $X$,
 \[
@@ -98,7 +109,6 @@ The assertion is local on $X$ and also holds for a proper bimeromorphic map betw
 \end{lemma}
 \begin{proof}
 The reverse implication follows at every positive weight from the sheaf identity in \cref{lem:adjoint-ideal-transform}: tensor the upstairs ideal inclusion with $R_\pi$ and apply the left-exact direct image functor. The proof of that sheaf identity is local on the target; properness makes each fiber compact and supplies the required finite integrability cover. Compactness of the entire manifolds is unnecessary.
-
 
 For the forward implication, fix a coordinate neighborhood $W\subset Y$, a smooth local modification $\sigma:Z\to W$, and a prime divisor $E$ on $Z$. Shrinking $W$ as necessary near the center under consideration, its image is contained in a coordinate neighborhood $U\subset X$. Put $F=\pi\circ\sigma$ and
 \[
@@ -125,6 +135,7 @@ The hypothesis implies $\mathcal I(ma)\subseteq\mathcal I(mb)$ for every $m>0$. 
 This holds for every local divisor over $Y$. Blowing up a point on any local modification recovers its pointwise Lelong number; in dimension one the point already is a divisor. The exact local criterion in \cref{thm:local-i-inputs} now proves the upstairs ideal order. No extension of $\sigma$ outside its local domain was used.
 \end{proof}
 
+\Needspace{13\baselineskip}
 \begin{lemma}\label{lem:ideal-equivalence-modification}
 For a proper bimeromorphic map $\rho:Z\to Y$ between smooth complex manifolds and genuine quasi-plurisubharmonic functions $a,b$ on $Y$,
 \[
@@ -135,5 +146,5 @@ For a proper bimeromorphic map $\rho:Z\to Y$ between smooth complex manifolds an
 The statement is local on $Y$ and requires no closed global background.
 \end{lemma}
 \begin{proof}
-Apply the local order equivalence of \cref{lem:birational-ideal-order} to both $(a,b)$ and $(b,a)$. Its proof uses local Bergman estimates for the forward implication and proper change of variables for the reverse implication. It therefore applies in the present smooth setting without a compactness or closed-background assumption. The two order inequalities are exactly equality of the multiplier ideals at every positive weight.
+Apply the local order equivalence of \cref{lem:birational-ideal-order} to both $(a,b)$ and $(b,a)$. The two order inequalities are exactly equality of the multiplier ideals at every positive weight.
 \end{proof}

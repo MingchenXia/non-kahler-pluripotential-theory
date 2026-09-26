@@ -3,7 +3,7 @@
 
 A selecting weight need not descend even when every holomorphic section does. For finitely many isolated logarithmic poles, the resulting section spaces can still be determined exactly. The ambient dimension enters the integrability threshold, while the dimension of the base governs section growth. Their difference produces finitely many extra jet orders, whose contribution to a normalized kernel measure tends to zero.
 
-We first record the finite-dimensional comparison used below. It applies to arbitrary selected subspaces, whether or not they are defined by a multiplier ideal.
+For nested section spaces, the normalized codimension is exactly the total variation of their kernel-measure difference.
 
 \Needspace{19\baselineskip}
 \begin{lemma}\label{lem:kernel-codimension-comparison}
@@ -23,14 +23,14 @@ Their determinant functionals, each normalized to vanish at the zero weight, sat
 These statements include zero-dimensional spaces.
 \end{lemma}
 \begin{proof}
-Extend an orthonormal basis of $W_m$ to one of $V_m$ for the norm at $v$. The kernel difference is the sum of the squared weighted evaluations of the added basis vectors. It is nonnegative, and its integral is their number $d_m$. This gives the total-variation formula. Apply the first-variation proof of \cref{prop:partial-kernel-variation} to each of the two fixed subspaces and integrate their difference along $tv$, $0\leq t\leq1$. At each $t$, the just-proved positive kernel difference has total mass $q!d_m/m^q$. Its integral against $v$ is therefore bounded in absolute value by that mass times $\|v\|_\infty$. The normalization at zero proves the last assertion. The argument uses no generation or asymptotic statement.
+Extend an orthonormal basis of $W_m$ to one of $V_m$ for the norm at $v$. The kernel difference is the sum of the squared weighted evaluations of the added basis vectors. It is nonnegative, and its integral is their number $d_m$. This gives the total-variation formula. Apply the first-variation proof of \cref{prop:partial-kernel-variation} to each of the two fixed subspaces and integrate their difference along $tv$, $0\leq t\leq1$. At each $t$, the just-proved positive kernel difference has total mass $q!d_m/m^q$. Its integral against $v$ is therefore bounded in absolute value by that mass times $\|v\|_\infty$. The normalization at zero proves the last assertion.
 \end{proof}
 
-Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds with connected fibers. Put $n=\dim X$, $q=\dim B\geq1$, and $f=n-q$. Let $A$ be a holomorphic line bundle on $B$ and $L=\pi^*A$. Fix distinct points $p_1,\ldots,p_N$ on $X$ and positive rational numbers $a_1,\ldots,a_N$. Suppose $\varphi\in\QPSH(X)$ is locally bounded away from these points and, in local coordinates $x$ centered at $p_j$, has the form
+Return to a submersion $\pi:X\to B$ and a pullback line bundle $L=\pi^*A$ as in \cref{sec:partial-submersion}, and put $f=n-q$. Fix distinct points $p_1,\ldots,p_N$ on $X$ and positive rational numbers $a_1,\ldots,a_N$. Suppose $\varphi\in\QPSH(X)$ is locally bounded away from these points and, in local coordinates $x$ centered at $p_j$, has the form
 \begin{equation}\label{eq:isolated-selecting-poles}
  \varphi(x)=a_j\log|x|^2+O(1).
 \end{equation}
-No positivity against the closed curvature of $L$ is assumed. Write
+Write
 \[
  Z=\{\pi(p_1),\ldots,\pi(p_N)\},\qquad
  a_b=\max_{\pi(p_j)=b}a_j\quad(b\in Z).
@@ -64,16 +64,7 @@ then $W_m\subseteq V_m$ and
 An empty inner sum is zero. The constants depend on the fixed point data, not on $m$.
 \end{proposition}
 \begin{proof}
-For a radial logarithmic pole $a\log|x|^2+O(1)$, with real $a>0$, in a coordinate ball in $\C^n$, let $\mathfrak m_0$ be the maximal ideal at the origin. Then the multiplier ideal at weight $m$ is
-\[
- \mathfrak m_0^{\max\{\lfloor ma\rfloor-n+1,0\}}.
-\]
-Indeed, a nonzero holomorphic germ of order $k$ has spherical squared integral comparable to $r^{2k}$ for small $r$. Its first nonzero homogeneous Taylor term gives the positive leading coefficient. The bounded remainder in the weight changes the integral by bounded positive factors. Radial integrability is therefore equivalent to
-\[
- \int_0^\epsilon r^{2k-2ma+2n-1}\,\mathrm{d}r<+\infty,
- \quad\hbox{or equivalently }k+n>ma.
-\]
-The smallest nonnegative integer $k$ satisfying this strict inequality is the displayed exponent. Away from the specified points the multiplier ideal is the full structure sheaf.
+\Cref{lem:smooth-center-multiplier-ideal}, with a point as center, gives $\mathcal I(m\varphi)_{p_j}=\mathfrak m_{p_j}^{\max\{\lfloor ma_j\rfloor-n+1,0\}}$. Away from the specified points the ideal is the full structure sheaf.
 
 Every section of $L^m$ descends to $B$, by the compact-fiber argument in \cref{prop:partial-kernel-submersion}. Near $p_j$, choose submersion coordinates $(z,\tau)$ with $\pi(z,\tau)=z$. A pulled-back section has a local coefficient $g(z)$ independent of $\tau$. Its order at $(0,0)$ equals its order at $z=0$. The conditions from points in the same fiber are thus the same kind of point-vanishing condition, and their maximum is $r_{m,b}$. This proves the exact space identification.
 
@@ -108,15 +99,13 @@ More precisely, its total-variation distance from the lift of the base partial k
 The normalized dimensions converge to the finite positive equilibrium mass. If $n>q$, normalization by $n!/m^n$ gives zero kernel measures in total variation.
 \end{theorem}
 \begin{proof}
-The radial integrability calculation in dimension $q$ identifies the base multiplier-ideal-selected space with $W_m$ in the proposition. Corresponding sections in $V_m$ and on $X$ have equal continuous norms, since the pointwise norm and continuous weight descend and every fiber probability has mass one. The same orthonormal-basis argument as in \cref{prop:partial-kernel-submersion} gives the exact lift of the kernel associated with $V_m$ on $B$.
+\Cref{lem:smooth-center-multiplier-ideal} in dimension $q$ identifies the base multiplier-ideal-selected space with $W_m$ in the proposition. Corresponding sections in $V_m$ and on $X$ have equal continuous norms, since the pointwise norm and continuous weight descend and every fiber probability has mass one. The same orthonormal-basis argument as in \cref{prop:partial-kernel-submersion} gives the exact lift of the kernel associated with $V_m$ on $B$.
 
 By \cref{lem:kernel-codimension-comparison,prop:isolated-pole-section-descent}, the normalized kernel difference between $V_m$ and $W_m$ is positive with total mass $O(m^{-1})$. Its lift remains positive with the same mass. Apply \cref{thm:fujiki-partial-kernel-limit} to $B$, using the identity modification: all its closed K\"ahler and positive-mass hypotheses are among the assumptions here. It gives the base $W_m$ convergence, and the vanishing kernel difference proves the asserted limit on $X$.
 
 The determinant comparison bounds the difference of the two functionals by $O(m^{-1})\|v\|_\infty$. The exact norm identification and \cref{cor:fujiki-partial-determinant} on $B$ give the displayed limit. Testing one proves the dimension assertion. The $q$-normalized masses are bounded, so multiplication by $(n!/q!)m^{q-n}$ proves the last assertion.
 \end{proof}
 
-The hypothesis on $\psi$ is a geometric constraint on the projected point data. It is not automatic for arbitrarily large coefficients. For an ample bundle with a positive smooth curvature form $\theta$, it holds when the finitely many coefficients are sufficiently small. Here is a direct construction. On disjoint coordinate balls choose smooth cutoffs equal to one near their centers. Each cutoff times $\log|z-b|^2$, extended by zero, has complex Hessian bounded below by $-C_b\theta$: near the center it is plurisubharmonic, and on the intervening annulus it is smooth. If $\sum_b a_bC_b<1$, their weighted sum is $\theta$-plurisubharmonic and has precisely the prescribed poles. Off the poles its curvature dominates $\epsilon\theta$ for some $\epsilon>0$, so its non-pluripolar mass is positive. It is finite by the closed K\"ahler theory.
-
-The identical cutoff construction on $X$, with any fixed Hermitian metric $\omega$, produces $\varphi\in\PSH(X,\omega)$ for sufficiently small coefficients. It uses only a smooth curvature lower bound, not BMP. If $f>0$ and the pole set is nonempty and finite, this $\varphi$ cannot descend: it is finite at other points of a fiber containing a pole.
+For a positive curvature form $\theta$, \cref{lem:small-isolated-log-poles} constructs the required $\psi$ when the coefficients are sufficiently small. Its curvature dominates a positive multiple of $\theta$ off the poles, so its non-pluripolar mass is positive; closed K\"ahler theory makes it finite. Applying the same lemma on $X$ with a Hermitian metric constructs $\varphi$. If the fibers have positive dimension and the pole set is nonempty and finite, $\varphi$ cannot descend, since it is finite at other points of a fiber containing a pole.
 
 The exact section formula also explains a failure of singularity recovery. Moving an isolated pole within its fiber does not change any selected section space. Adding finitely many poles in that same fiber does not change the spaces when the maximal coefficient there is unchanged. For the fixed pullback metric $h=\pi^*h_A$, continuous weight $v$ and lifted measure $\nu_X$, all kernels and determinant functionals are then exactly the same in every degree. The multiplier-ideal types on $X$ are nevertheless different: at sufficiently large weight one ideal is proper at a point where the other is the full local ring. Under the theorem's hypotheses this loss of information coexists with a positive $q$-dimensional growth limit. Closed-curvature positivity of the selecting potential, present in the source theory, cannot be replaced merely by positivity against a Hermitian background.

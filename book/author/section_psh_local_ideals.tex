@@ -1,7 +1,38 @@
-\section{Local properties of multiplier ideals}
+\section{Multiplier ideals and logarithmic poles}
 \label{sec:psh-local-ideals}
 
-Multiplier ideals compare singularities through integrability. Their local valuative characterization and strong openness, recalled in \cite{SGPT}, make this comparison compatible with maxima, addition and increasing limits.
+For a logarithmic pole along a smooth center, weighted integrability is determined by the normal vanishing order of a holomorphic germ. For general singularities, the local valuative characterization and strong openness recalled in \cite{SGPT} make the ideal comparison compatible with maxima, addition and increasing limits.
+
+In local coordinates $(z,w)\in\mathbb C^d\times\mathbb C^k$, with $d\geq0$ and $k\geq1$, let $Y=\{w=0\}$ and denote its ideal by $\mathcal I_Y$.
+
+\begin{lemma}\label{lem:smooth-center-multiplier-ideal}
+If a quasi-plurisubharmonic function has the form $u=c\log|w|^2+O(1)$ with $c>0$ and locally bounded remainder, then for every $t>0$,
+\[
+ \mathcal I(tu)=\mathcal I_Y^{\max\{\lfloor tc\rfloor-k+1,0\}}.
+\]
+The zeroth power is the full structure sheaf.
+\end{lemma}
+\begin{proof}
+The bounded remainder changes integrability by bounded positive factors. Expand a nonzero holomorphic germ $g(z,w)$ in homogeneous terms in $w$, and let $a$ be the smallest degree whose coefficient is not identically zero as a germ in $z$. On smaller product neighborhoods, $|g(z,w)|\leq C|w|^a$. Hence $a+k>tc$ suffices for weighted integrability, since its radial bound is
+\[
+ \int_0^\varepsilon \rho^{2a-2tc+2k-1}\,\mathrm{d}\rho<+\infty.
+\]
+Conversely, at every nearby tangential point where the degree-$a$ term is nonzero, angular integration of $|g|^2$ has a positive leading term of degree $2a$. The radial integral diverges when $a+k\leq tc$, including logarithmic divergence at equality. Such tangential points form a nonempty open set in every sufficiently small neighborhood. Fubini then excludes local weighted integrability of $g$. For $d=0$ the same argument is the radial calculation at a point. Thus $g$ is integrable exactly when its order in the normal ideal is at least the integer in the statement.
+\end{proof}
+
+Small isolated logarithmic poles can be inserted into any Hermitian background by cutoffs.
+
+\begin{lemma}\label{lem:small-isolated-log-poles}
+Let $\omega$ be Hermitian on a compact complex manifold $X$, and fix distinct points $p_1,\ldots,p_N$. There are constants $C_j>0$ such that, whenever $a_j>0$ and $\sum_jC_ja_j<1$, there is $u\in\PSH(X,\omega)$, smooth off these points, with
+\[
+ u=a_j\log|z|^2+O(1)\quad\hbox{near }p_j,\qquad
+ \omega+\ddc u\geq\left(1-\sum_jC_ja_j\right)\omega.
+\]
+Here $z$ denotes local coordinates centered at $p_j$. The function can be chosen to vanish outside arbitrarily small disjoint coordinate neighborhoods, with the constants depending on those neighborhoods.
+\end{lemma}
+\begin{proof}
+Choose disjoint coordinate balls and smooth cutoffs $\chi_j$ supported there and equal to one near their centers. The function $\chi_j\log|z|^2$, extended by zero, is plurisubharmonic near its pole and smooth elsewhere, so its complex Hessian is bounded below by $-C_j\omega$. Set $u=\sum_ja_j\chi_j\log|z|^2$. The lower bounds give the asserted current inequality, and its remaining properties follow from the disjoint supports.
+\end{proof}
 
 \begin{theorem}\label{thm:local-i-inputs}
 For germs of plurisubharmonic functions, the following facts hold.
@@ -40,7 +71,6 @@ Fix a coordinate neighborhood $U\subset X$ and a smooth local modification $\pi:
 The corresponding expressions for $v,v'$ are equal by the first local input. Apply the converse direction of that input on each neighborhood. The Lelong identities are the usual local maximum, addition and scaling identities, unchanged by smooth corrections.
 \end{proof}
 
-
 Let $v,w$ be local quasi-plurisubharmonic functions and let $Y$ be a complex submanifold on which $v|_Y$ is genuine. Restriction and subadditivity give the two inclusions recalled in \cite{SGPT} and \cite[Section 15]{DemAM11}:
 \begin{equation}\label{eq:trace-local-ideal-inputs}
  \mathcal I(v|_Y)\subseteq\mathcal I(v)\mathcal O_Y,
@@ -48,7 +78,6 @@ Let $v,w$ be local quasi-plurisubharmonic functions and let $Y$ be a complex sub
  \mathcal I(v+w)\subseteq\mathcal I(v)\mathcal I(w).
 \end{equation}
 The first follows from local Ohsawa--Takegoshi extension. For the second, weighted holomorphic functions on a product form the Hilbert tensor product of the two weighted spaces; its generators give the product multiplier ideal. Restriction to the diagonal then gives the inclusion. These are local results for psh functions. Smooth corrections extend them to quasi-plurisubharmonic functions with the weight convention of this book. No compact K\"ahler hypothesis is involved.
-
 
 For a holomorphic submersion, multiplier ideals commute with pullback. Extension of an ideal means the ideal generated by its pullbacks.
 

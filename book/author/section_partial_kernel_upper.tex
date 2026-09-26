@@ -1,45 +1,23 @@
 \section{An upper bound for partial Fubini--Study limits}
 \label{sec:partial-kernel-upper}
 
-There is also an asymptotic statement that does not require a K\"ahler manifold or positive Monge--Amp\`ere mass. It gives the upper bound for the potentials associated with partial kernels. Obtaining the reverse inequality is a separate generation problem.
+The Bernstein--Markov estimate bounds the partial Fubini--Study potentials from above. Their ideal constraints survive in the limit because the loss in each Lelong-number estimate is of order $m^{-1}$ on a fixed modification. The compact-set envelope retains the obstacle even when the set has zero smooth volume.
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $L\to X$ be a holomorphic line bundle with smooth Hermitian metric $h$ and curvature $\theta=c_1(L,h)$. Assume $\varphi\in\PSH(X,\theta)$. Fix a closed non-pluripolar set $K$, a continuous real weight $w$ on $K$, and a Bernstein--Markov probability measure $\mu$ for $(K,w)$. For each positive integer $m$, set $V_m=H^0(X,L^m\otimes\mathcal I(m\varphi))$ and $N_m=\dim V_m$. Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ for the continuous weighted norm of \cref{sec:partial-bernstein-markov}, and define the global partial Fubini--Study potential
+\Needspace{13\baselineskip}
+Now take $\theta=c_1(L,h)$, assume $\varphi\in\PSH(X,\theta)$, and choose a Bernstein--Markov probability $\mu$ for $(K,w)$. Use the selected spaces $V_m$ and dimensions $N_m$ from \cref{sec:partial-selected-space}. Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ for the continuous weighted norm of \cref{sec:partial-bernstein-markov}, and define the global partial Fubini--Study potential
 \[
  U_m=\frac1m\log\sum_{j=1}^{N_m}|s_j|_{h^m}^2
  \quad(N_m>0).
 \]
 Set $U_m=-\infty$ if $N_m=0$. For a nonempty space the local expression in a frame shows that $U_m\in\PSH(X,\theta)$ and has analytic singularity type. On $K$, it satisfies $\mathrm{e}^{m(U_m-w)}=B_{m,w,\varphi,\mu}$.
 
-\begin{lemma}\label{lem:ideal-modification-lelong-loss}
-Let $U\subseteq X$ be open, and let $\pi:Y\to U$ be a local modification with smooth source, let $y\in Y$, and let $J_\pi$ be its holomorphic Jacobian in coordinates near $y$. If a nonzero holomorphic germ $g$ belongs to $\mathcal I(m\varphi)$ on $U$, then
-\[
- \operatorname{ord}_y(g\circ\pi)
-       \geq m\nu(\varphi\circ\pi,y)-n-\operatorname{ord}_yJ_\pi.
-\]
-Consequently, for every nonempty $V_m$,
+For a local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ and $y\in Y$, write $J_\pi$ for its local holomorphic Jacobian determinant and apply \cref{lem:ideal-modification-lelong-loss} to every basis coefficient. The Lelong number of the logarithm of a sum of squared holomorphic functions is the minimum of their orders. The smooth metric contributes zero, so
 \[
  \nu(U_m\circ\pi,y)
        \geq\nu(\varphi\circ\pi,y)
-                   -\frac{n+\operatorname{ord}_yJ_\pi}{m}.
+                   -\frac{n+\operatorname{ord}_yJ_\pi}{m}
+ \qquad(N_m>0).
 \]
-\end{lemma}
-\begin{proof}
-If $n\geq2$, let $\rho:\widetilde Y\to Y$ be the blowup of $y$ and let $E$ be its exceptional divisor. For $n=1$, take $\rho$ to be the identity and $E=\{y\}$. Set $F=\pi\circ\rho$ and write $J_F$ for its local holomorphic Jacobian determinant. Generic orders along $E$ give
-\[
- \nu(\varphi\circ F,E)=\nu(\varphi\circ\pi,y),\qquad
- \operatorname{ord}_E(g\circ F)=\operatorname{ord}_y(g\circ\pi).
-\]
-On a standard blowup chart the Jacobian of $\rho$ has order $n-1$ along $E$. The chain rule therefore gives the log discrepancy over $U$ as
-\[
- A_U(E)=1+\operatorname{ord}_E J_F
-       =n+\operatorname{ord}_yJ_\pi.
-\]
-Since $g\in\mathcal I(m\varphi)$, its order along $E$ is at least the order of this ideal. The lower estimate in \cref{lem:bergman-divisorial-error}, applied to $F$, now proves the first assertion.
-
-For the second, write each basis section in a local frame. The Lelong number of the logarithm of a sum of squared holomorphic functions is the minimum of their orders in the convention of this book. The pulled-back smooth metric has zero Lelong number, so dividing by $m$ gives the result.
-\end{proof}
-
-We shall use the local version of \cref{lem:modification-lone-pullback}. Namely, $L^1_{\loc}$ convergence of potentials with a common smooth curvature lower bound is preserved under a fixed smooth local modification. Here is the same proof in its local form. On relatively compact subsets the pullbacks are locally bounded above and have a common smooth lower curvature bound. After smooth correction, local plurisubharmonic compactness supplies subsequential limits or collapse to $-\infty$ on a connected coordinate region. Every such region meets the complement of the exceptional locus. There the modification is a biholomorphism, and change of variables gives $L^1_{\loc}$ convergence to the expected pullback. Collapse is therefore excluded. Every subsequential limit equals that pullback off the exceptional locus, hence almost everywhere and then as its canonical representative. Uniqueness of cluster limits gives convergence along the whole sequence.
 
 \begin{theorem}\label{thm:partial-fubini-study-upper}
 Along the indices for which $N_m>0$, the potentials $U_m$ form a relatively compact family in $L^1(X)$. Every cluster limit $U$ along indices tending to infinity is genuine, has multiplier-ideal order
@@ -66,7 +44,7 @@ The extremal formula takes the supremum over a single unit section, so no dimens
 \]
 Since $\mu$ is a probability measure, this implies $\sup_XU_m\geq\min_Kw$. The normalized compactness theorem now gives relative $L^1$ compactness with genuine limits.
 
-Let $U_{m_j}\to U$ in $L^1(X)$, with $m_j\to\infty$. Fix any local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ over an open subset $U_{\mathrm{loc}}\subseteq X$, and any point $y\in Y$. The local pullback argument just given supplies $L^1_{\loc}$ convergence upstairs. Upper semicontinuity of Lelong numbers and \cref{lem:ideal-modification-lelong-loss} yield
+Let $U_{m_j}\to U$ in $L^1(X)$, with $m_j\to\infty$. Fix any local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ over an open subset $U_{\mathrm{loc}}\subseteq X$, and any point $y\in Y$. \Cref{lem:modification-lone-pullback} supplies $L^1_{\loc}$ convergence upstairs. Upper semicontinuity of Lelong numbers in \cref{lem:lelong-lone-semicontinuity} and the preceding order bound yield
 \[
  \nu(U\circ\pi,y)
        \geq\limsup_j\nu(U_{m_j}\circ\pi,y)
@@ -82,7 +60,7 @@ Every $a\in\PSH(X,\theta)$ satisfies $a\leq V_\theta+\sup_Xa$, and hence $a\prec
 \[
  U_m\leq G+\delta_{m,\epsilon}.
 \]
-Passing to the $L^1$ limit gives $U\leq G+2\epsilon$ almost everywhere, and then everywhere by canonical representatives. Let $\epsilon\downarrow0$. Since $G\leq w$ quasi-everywhere on $K$ by \cref{thm:hermitian-partial-i-envelope}, the same holds for $U$. Both defining conditions for the partial envelope have now been checked, so $U\leq E_{\theta,K}[\varphi]_{\mathcal I}(w)$.
+Passing to the $L^1$ limit gives $U\leq G+2\epsilon$ almost everywhere, and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. Let $\epsilon\downarrow0$. Since $G\leq w$ quasi-everywhere on $K$ by \cref{thm:hermitian-partial-i-envelope}, the same holds for $U$. Both defining conditions for the partial envelope have now been checked, so $U\leq E_{\theta,K}[\varphi]_{\mathcal I}(w)$.
 
 Finally, the local Hartogs lemma says that if $U_{m_j}\to U$ in $L^1$, then for any $x_j\to x$ one has $\limsup_jU_{m_j}(x_j)\leq U(x)$. Apply this after extracting an $L^1$ convergent subsequence from any sequence of nonempty indices and points approaching $x$. Every resulting limit is at most the partial envelope. This proves the regularized upper-limit inequality, including at its poles. Empty indices contribute only $-\infty$.
 \end{proof}

@@ -1,4 +1,4 @@
-# Reading guide — checkpoint131
+# Reading guide — checkpoint132
 
 The chapter numbers below refer to the current book. Earlier review records keep the numbering of their own checkpoints. General psh tools are collected in Chapter 1. Paper sources and exact locators are collected in final Chapter 33; book citations may remain beside the mathematics.
 
@@ -30,7 +30,7 @@ Chapter 19 develops weighted section spaces and kernels, Gauduchon and restricte
 
 Chapter 25 develops Gauduchon variational volume through the normalized smooth equation, its Hessian and derivative, and a compact dual problem over currents. Uniform determinant tails control integrable-density attainment; the general trace-density inequality is used from Chapter 1. Smooth positive attainment, semipositive attainment away from an analytic set and integrable-current attainment have different regularity consequences. Upper bounded mass and positive lower mass are independent; the elliptic example has finite upper mass and zero lower mass.
 
-Chapter 26 studies partial kernels and quotient equilibrium. Birational transfer uses the canonical Jacobian correction; the relevant general ideal identities are in Chapter 1. The chapter includes exact one-dimensional growing-order models, compact-curve localization in the stated growth range, and the supplied horizontal-center estimates. Arbitrary selected-space approximation remains open.
+Chapter 26 studies partial kernels and quotient equilibrium. General compact-obstacle bounds, smooth-center ideals, logarithmic-pole constructions and modification calculus are used from Chapter 1. Birational transfer uses the canonical Jacobian correction and retains a Kähler modification for convergence; submersion transfer uses fiber probabilities and the base-dimensional normalization. The Hopf example gives a nonzero limit that loses the original singularity type. The chapter includes exact one-dimensional growing-order models, compact-curve localization in the stated growth range, and the supplied horizontal-center estimates. Arbitrary selected-space approximation and the general Fubini–Study lower bound remain open.
 
 Chapters 27–28 connect the theory with closed Bott–Chern classes and locally conformally Kahler geometry. The first includes minimal multiplicities, ample-locus regularity, incomplete big-class metrics and the supplied divisorial normal-length criterion. Its pole and flow hypotheses remain distinct. The LCK chapter treats ordinary/twisted positivity, rigidity and the Lee–Gauduchon cone. The temporarily hidden Nakamaye chapter remains excluded.
 
@@ -40,4 +40,4 @@ Chapters 29–31 form the separate part under mass assumptions. Chapter 29 devel
 
 Chapter 32 records the remaining research problems and their exact boundaries. Chapter 33 gives the historical sources, checked locators and comparisons of hypotheses for the mathematical body. The appendix treats compact complex spaces; smooth-space psh tools are referenced from Chapter 1 rather than defined again.
 
-The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 26, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.
+The whole-book proof and introduction passes remain in progress. Their separate queues are `editorial/chapter-revision-queue.md` and `editorial/introduction-revision-queue.md`. Both queues proceed to the complete Chapter 27, including every nested input. All four supplied papers have bounded integrations; Q2.8 completes its dedicated proof/dependency and second pass in checkpoint120.

@@ -1,7 +1,9 @@
 \chapter{Partial kernels and quotient equilibrium}
 \label{chap:partial-bergman}
 
-There are two roles for a weight in a partial Bergman kernel. A singular weight selects the sections through its multiplier ideals. A separate continuous weight determines their norm. This is the convention in the partial Bergman chapter of \cite{SGPT}; it differs from the singular weighted norm used in \cref{chap:sections}. Keeping the two roles separate gives finite-dimensional variational formulas on any compact complex manifold. The relative canonical bundle accounts exactly for the Jacobian under a modification, allowing kernel measure convergence to be transferred from a K\"ahler modification. A different transfer through a holomorphic submersion gives lower-dimensional equilibrium measures. Isolated logarithmic selecting poles need not descend, but their section spaces still reduce to point-vanishing conditions on the base. The one-point Hopf calculation gives both a nonzero measure limit and an explicit potential limit, while showing why these limits do not recover every Hermitian singularity. An exact weighted entire-function model separates finite-order curvature degeneracy from growing vanishing conditions and computes their transition scale. A local norm comparison and a global $L^2$ correction transfer this transition to compact curves in a specified range of growing orders.
+A partial Bergman kernel uses a singular weight to select holomorphic sections and a continuous weight to measure their size. Its integral counts the selected sections. The growth of that dimension determines the normalization needed for a nonzero limit; on a fibration, the relevant dimension can be that of the base rather than the total space.
+
+Two geometric comparisons identify such limits. Under a modification, the relative canonical bundle corrects both ideal integrability and the Hilbert norm, so the equilibrium theorem transfers from a K\"ahler source by an exact measure identity. Under a submersion with compact connected fibers, sections descend, and logarithmic selecting poles become vanishing conditions on the base. The Hopf example computes the resulting measure and potential while exhibiting the loss of the original singularity type. Finally, an entire-function model gives the transition caused by a growing vanishing order; local norm estimates and a global $L^2$ correction transfer it to compact curves.
 
 \section{The selected space and the continuous weight}\label{sec:partial-selected-space}
 
@@ -15,7 +17,7 @@ For a real $v\in C(X)$ define the norm
  \|s\|_{m,v,\nu}^2=\int_X|s|_{h^m}^2\mathrm{e}^{-mv}\,\mathrm{d}\nu
  \quad(s\in V_m).
 \]
-The continuous weight is bounded, so the norm is finite on every global section. Its nondegeneracy follows from the strictly positive density and the identity theorem. No curvature condition on $\varphi$ is needed for these definitions.
+The continuous weight is bounded, so the norm is finite on every global section. Its nondegeneracy follows from the strictly positive density and the identity theorem. This separation of the selecting weight from the norm follows \cite[Section 14.3]{SGPT}.
 
 \Needspace{13\baselineskip}
 Fix an integer $r\geq1$ for the normalization. Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis of $V_m$ for this norm, and for $x\in X$ put
@@ -23,7 +25,7 @@ Fix an integer $r\geq1$ for the normalization. Let $s_1,\ldots,s_{N_m}$ be an or
  B_{m,v,\varphi,\nu}(x)
        =\mathrm{e}^{-mv(x)}\sum_j|s_j(x)|_{h^m}^2,
  \qquad
- \beta_m^{(r)}=\frac{r!}{m^r}B_{m,v,\varphi,\nu}\,\nu,
+ \beta_m^{(r)}=\frac{r!}{m^r}B_{m,v,\varphi,\nu}\,\nu.
 \]
 Empty spaces give zero kernels and zero measures. Unitary invariance and the evaluation argument of \cref{prop:finite-bergman-identities} give
 \[
@@ -35,12 +37,12 @@ Empty spaces give zero kernels and zero measures. Unitary invariance and the eva
 \]
 The singular weight occurs only in $V_m$. In particular, ordering its multiplier ideals orders the kernels when $h,v,\nu$ are fixed, because it orders the spaces in the displayed supremum.
 
-Replacing $h$ by $h\mathrm{e}^{-a}$ and $v$ by $v-a$, for smooth real $a$, leaves both the norm and the kernel measure unchanged. This is again a change between smooth metrics on a holomorphic line bundle; its curvature forms remain closed.
+Replacing $h$ by $h\mathrm{e}^{-a}$ and $v$ by $v-a$, for smooth real $a$, leaves both the norm and the kernel measure unchanged.
 
 \section{A local Bernstein--Markov estimate}
 \label{sec:partial-bernstein-markov}
 
-Retain the connected compact complex manifold $X$ and smooth Hermitian holomorphic line bundle $(L,h)$ of \cref{sec:partial-selected-space}. Degrees $m$ are positive integers. Continuous weights in this section are real-valued.
+A Bernstein--Markov estimate compares the supremum norm with the integral norm up to an arbitrarily small exponential loss in the degree. The local submean inequality supplies it for a smooth positive volume and a continuous weight on the whole manifold.
 
 For a compact set $K\subseteq X$ and $v\in C(K)$, write
 \[
@@ -70,10 +72,10 @@ The submean inequality for the holomorphic function $f$ and the lower bound for 
  &\leq C_r \mathrm{e}^{2\epsilon m}\|s\|_{m,v,\nu}^2.
  \end{split}
 \]
-Take the supremum over $x$ and then the square root. No positive curvature estimate or global K\"ahler form has been used.
+Take the supremum over $x$ and then the square root.
 \end{proof}
 
-For an arbitrary compact weighted subset we shall assume the Bernstein--Markov property when it is needed. The preceding argument proves the full-manifold case only.
+For a general weighted compact subset, the Bernstein--Markov property will be an explicit hypothesis.
 
 \input{author/section_partial_envelopes}
 
@@ -82,9 +84,9 @@ For an arbitrary compact weighted subset we shall assume the Bernstein--Markov p
 \section{The determinant functional}
 \label{sec:partial-determinant}
 
-Use $X$, $(L,h)$, the selecting weight $\varphi$, probability volume $\nu$, spaces $V_m$ and dimensions $N_m$ from \cref{sec:partial-selected-space}. Fix an integer $r\geq1$. For a continuous real weight $v$ on $X$, the kernel and normalized measure are $B_{m,v,\varphi,\nu}$ and $\beta_m^{(r)}$ there, with norm $\|\cdot\|_{m,v,\nu}$.
+The logarithm of the Gram determinant integrates the partial kernel measure as the continuous weight varies. Orthogonal projection expresses its second derivative as a negative squared norm, giving concavity and a uniform bound in terms of the section dimension.
 
-Fix $m$ with $N_m>0$ and a basis of $V_m$. Let $G_m(v)$ be its positive Hermitian Gram matrix in the norm above. Define
+Return to the full-manifold norm $\|\cdot\|_{m,v,\nu}$ of \cref{sec:partial-selected-space}, with a quasi-plurisubharmonic selecting weight $\varphi$. Fix $m$ with $N_m>0$ and a basis of $V_m$. Let $G_m(v)$ be its positive Hermitian Gram matrix in this norm. Define
 \[
  \mathcal F_m^{(r)}(v)
  =-\frac{r!}{m^{r+1}}
@@ -144,13 +146,15 @@ The measures are positive and their total masses are $n!N_m/m^n$. Use the Lipsch
 \end{proof}
 
 \Needspace{8\baselineskip}
-For example, let $X$ be any connected compact complex manifold that is not Moishezon. By \cref{cor:non-moishezon-section-vanishing}, either every positive-degree section space of $L$ is zero, or $h^0(X,L^m)=O(m^d)$ for some $d<n$. Every selected subspace therefore satisfies \cref{cor:partial-kernel-zero-scale}. This applies in particular whenever $X$ fails the bounded mass property. The auxiliary blowup in the section-count proof supplies its flag; no flag on $X$ and no pullback identity for its multiplier ideals are required here.
+For example, let $X$ be any connected compact complex manifold that is not Moishezon. By \cref{cor:non-moishezon-section-vanishing}, either every positive-degree section space of $L$ is zero, or $h^0(X,L^m)=O(m^d)$ for some $d<n$. Every selected subspace therefore satisfies \cref{cor:partial-kernel-zero-scale}. This applies in particular whenever $X$ fails the bounded mass property.
 
 \input{author/section_birational_partial_kernels}
 
 \section{Transferring kernels through a submersion}\label{sec:partial-submersion}
 
-Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Section degrees $m$ and normalization exponents $r$ are positive integers, as in \cref{sec:partial-selected-space}. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and choose a genuine quasi-plurisubharmonic function $\psi$ on $B$. Set
+Compact connected fibers make every section of a pulled-back line bundle descend. Choosing probability measures on the fibers makes this descent an isometry; the kernel measures then lift by fiber integration.
+
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and choose a quasi-plurisubharmonic function $\psi$ on $B$. Set
 \[
  (L,h)=(\pi^*A,\pi^*h_A),\qquad \varphi=\pi^*\psi.
 \]
@@ -196,21 +200,16 @@ Pointwise norms of corresponding sections agree and are constant along fibers. S
 Their supremum norms also agree by surjectivity. Thus the Bernstein--Markov inequality transfers, and the integral norms are nondegenerate. Pulling back an orthonormal basis proves $B_{X,m}=\pi^*B_{B,m}$ on $K_X$. Integrating a continuous test function first along the fibers proves the measure identity. Kernels may be set to zero off their respective weighted sets.
 \end{proof}
 
-The lifting operation uses the specified smooth submersion and fiber probabilities. It is not a pullback of measures under an arbitrary modification. No general identity between upstairs and downstairs multiplier-ideal sheaves, or between their partial envelopes, was required in the proof.
-
 \Needspace{10\baselineskip}
 \section{Equilibrium on the base and a Hermitian limit}
 \label{sec:partial-base-equilibrium}
 
-Keep the submersion $\pi:X\to B$, dimensions $n,q$, line bundle $(A,h_A)$, fiber probabilities and lifting map $\mathcal L$ from \cref{sec:partial-submersion}. Let $K\subseteq B$ be closed and non-pluripolar, let $w\in C(K,\mathbb R)$, and let $\mu$ be a Bernstein--Markov probability for $(K,w)$. Write $\mu_X=\mathcal L\mu$ and use the pulled-back continuous weight on $\pi^{-1}(K)$.
+On a K\"ahler base, the partial kernel measures converge to the Monge--Amp\`ere measure of the partial envelope. Continuity of fiber integration then gives a limit upstairs with the base-dimensional normalization.
 
-Assume now that $B$ is K\"ahler. Write $\theta=c_1(A,h_A)$ and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Write $B_{B,m}$ and $B_{X,m}$ for the selected kernels of \cref{prop:partial-kernel-submersion}. On the base define
+Keep the submersion and weighted compact set $(K,w,\mu)$ above. Assume that $B$ is K\"ahler, put $\theta=c_1(A,h_A)$, and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Write $B_{B,m},B_{X,m}$ for the corresponding kernels, $\mu_X=\mathcal L\mu$, and
 \[
- E=\left(\sup\left\{a\in\PSH(B,\theta):
-       a|_K\leq w\ \hbox{quasi-everywhere},\quad
-       a\preceq_{\mathcal I}\psi\right\}\right)^*.
+ E=E_{\theta,K}[\psi]_{\mathcal I}(w).
 \]
-Here the ideal comparison is required at every positive weight, as elsewhere. This is the partial $\mathcal I$-envelope of the source book.
 
 \begin{theorem}\label{thm:partial-kernel-quotient-limit}
 Under these hypotheses,
@@ -226,13 +225,15 @@ Apply \cite[Theorem~14.3.1]{SGPT} on the compact K\"ahler base, with its auxilia
  \frac{q!}{m^q}B_{B,m}\,\mu
           \rightharpoonup\mathrm{MA}_\theta(E).
 \]
-This is the only asymptotic theorem imported here. The proposition and continuity of the lifting operation give the asserted upstairs limit. In particular the $q$-normalized total masses are bounded. Multiplying them by $(n!/q!)m^{q-n}$ proves the last statement when $n>q$.
+\Cref{prop:partial-kernel-submersion} and continuity of the lifting operation give the asserted upstairs limit. In particular the $q$-normalized total masses are bounded. Multiplying them by $(n!/q!)m^{q-n}$ proves the last statement when $n>q$.
 \end{proof}
 
 \Needspace{30\baselineskip}
 \section{The Hopf equilibrium measure}
 
-Let $n\geq2$, and use the Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n-1}$, forms $\sigma$, $\alpha=\pi^*\sigma$, $\zeta$ and $\omega=\alpha+\zeta$ from \cref{chap:hopf-reduction}. In the setting of \cref{sec:partial-base-equilibrium}, take $B=\mathbb P^{n-1}$, $A=\mathcal O(1)$, and $\theta=\sigma$ as in \cref{chap:hopf-reduction}. Retain a positive-mass selecting potential $\psi$, the base data $K,w,\mu$ and their partial envelope $E$ from that section. Let the probability on each elliptic fiber $X_y=\pi^{-1}(y)$ be $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
+The vertical part of the Hopf metric converts the lifted base equilibrium measure into a Hermitian Monge--Amp\`ere measure. Its coefficient records both the fiber probability and the top-product expansion.
+
+Use $X_n$, $n\geq2$, its projection $\pi:X_n\to\mathbb P^{n-1}$ and the forms $\sigma,\alpha,\zeta,\omega$ of \cref{chap:hopf-reduction}. Take $A=\mathcal O(1)$ with curvature $\theta=\sigma$ and retain the selecting potential $\psi$ and weighted data $(K,w,\mu)$ above. On each elliptic fiber set $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
 \[
  \mathcal L\tau=\tfrac12\pi^*\tau\wedge\zeta
 \]

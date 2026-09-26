@@ -44,7 +44,9 @@ For $r=1$ and $q=0$, the density is $m/\pi$. For general $r$ the value at zero i
 \subsection{A uniform tail estimate}
 \label{sec:degenerate-kernel-tail}
 
-Retain the integer $r\geq1$, the weight $\phi(z)=|z|^{2r}$ and the densities $B_{m,r}^{(q)}$ of \cref{sec:degenerate-selected-kernels}. For $T>0$, let $N_T$ be a Poisson random variable, defined by
+Grouping monomial degrees by their residue modulo $r$ expresses the kernel through weighted Poisson tails. The Gamma-ratio estimate below removes those weights with an error independent of the vanishing threshold.
+
+For $T>0$, let $N_T$ be a Poisson random variable, defined by
 $\mathbb P(N_T=\ell)=\mathrm{e}^{-T}T^\ell/\ell!$ for integers $\ell\geq0$; $\mathbb P$ and $\mathbb E$ denote probability and expectation. For a real $0<\alpha\leq1$, define
 \[
  w_{\alpha,T}(\ell)=T^{\alpha-1}\frac{\Gamma(\ell+1)}{\Gamma(\ell+\alpha)}.
@@ -119,7 +121,7 @@ Divide by $mr^2\rho^{2r-2}/\pi=r^2T/(\pi\rho^2)$ and apply \cref{lem:poisson-gam
 \subsection{The limiting envelope and the transition scale}
 \label{sec:degenerate-kernel-limit}
 
-Fix the integer $r\geq1$ and the weight $\phi(z)=|z|^{2r}$ on $\mathbb C$, and use the kernels and densities of \cref{sec:degenerate-selected-kernels}. Degrees $m$ below are positive integers. For a real $\lambda>0$, set $q_m=\lfloor m\lambda\rfloor$ and $R_\lambda=(\lambda/r)^{1/(2r)}$. Define
+A vanishing order proportional to $m$ removes the kernel density inside a fixed circle. Inside that circle the potential limit is logarithmic; outside it agrees with the smooth weight. Let $m$ tend to infinity through positive integers. For $\lambda>0$, set $q_m=\lfloor m\lambda\rfloor$ and $R_\lambda=(\lambda/r)^{1/(2r)}$. Define
 \[
  V_\lambda(z)=
  \begin{cases}
@@ -201,13 +203,14 @@ Finally let $v$ satisfy the stated subharmonic and pole conditions. On the punct
 
 The measures in this theorem have infinite total mass on $\mathbb C$; their convergence is asserted on compact sets. The weighted potentials $m^{-1}\log B_{m,r}^{(q_m)}$ converge to $V_\lambda-\phi$. In particular, the radius $R_\lambda$ is created by the selecting ideal even when $r=1$, while $r>1$ also records a curvature zero at the origin.
 
-For the transition statement, retain $r$, $\phi$ and $B_{m,r}^{(q)}$ from this subsection, but now allow any integer sequence $q_m\to\infty$. Define the Gaussian distribution function
+For any integer sequence $q_m\to\infty$, the boundary transition is governed by the central limit of the same Poisson tails. Define the Gaussian distribution function
 \[
  \Phi(\tau)=\frac1{\sqrt{2\pi}}\int_{-\infty}^{\tau}
                         \mathrm{e}^{-s^2/2}\,\mathrm{d}s
  \quad(\tau\in\mathbb R).
 \]
 
+\Needspace{13\baselineskip}
 \begin{proposition}\label{prop:degenerate-kernel-transition}
 Fix a real $\tau$. Choose $z_m\ne0$ with
 \[
@@ -244,4 +247,4 @@ For a sequence $q_m\to\infty$, put $R_m=(q_m/(rm))^{1/(2r)}$. At fixed $\tau$, t
 \[
  |z_m|=R_m\left(1+\frac{\tau}{2\sqrt{rq_m}}+O_{r,\tau}(q_m^{-1})\right).
 \]
-If $q_m=o(m)$, these radii tend to zero, while their ratio to the full-kernel scale $m^{-1/(2r)}$ tends to infinity. The limiting point is a curvature zero when $r>1$. This exact model does not give a localization theorem for a compact Hermitian manifold. Such a theorem must estimate the selected kernel uniformly as the vanishing order grows. An asymptotic for any one fixed order is insufficient.
+If $q_m=o(m)$, these radii tend to zero, while their ratio to the full-kernel scale $m^{-1/(2r)}$ tends to infinity. The limiting point is a curvature zero when $r>1$. To transfer this transition to a compact manifold, the local norm comparison and the global extension error must be uniform in the growing vanishing order. The next section establishes both estimates on a curve.
