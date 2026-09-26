@@ -88,11 +88,7 @@ The choices $j=0,r$ give $W_m,V_m$. Under the reference norm for $\nu_0=\omega_B
  A_d=\binom{d+q}{q},\qquad
  Q_{m,j}(R)=\mathbb P\{\operatorname{Bin}(d,R)\geq t_{m,j}\}.
 \end{equation}
-Indeed, the squared coordinate proportions $p_i=|Z_i|^2/\sum|Z_j|^2$ have density $q!$ on the simplex. This follows by projectivizing independent standard complex Gaussian variables: their squared moduli have density $\exp(-\sum u_i)$, and $u_i=Sp_i$ has Jacobian $S^q$. Hence for $|\beta|=d$,
-\[
- \int_Bp^\beta\,\nu_0=\frac{q!\prod_{i=0}^q\beta_i!}{(d+q)!}.
-\]
-Phase invariance makes the monomials orthogonal. Summing their normalized squared norms for $\beta_0\geq t_{m,j}$ gives \eqref{eq:horizontal-binomial-kernel} by the multinomial identity. Counting these monomials gives
+Apply the monomial norm formula \eqref{eq:projective-monomial-norm} in degree $d$. Coordinate circle invariance makes the monomials orthogonal, and selection retains those with exponent of $Z_0$ at least $t_{m,j}$. The multinomial identity, summed over the other exponents, gives \eqref{eq:horizontal-binomial-kernel}. Counting these monomials gives
 $\dim\mathcal H_m^{(j)}=\binom{d-t_{m,j}+q}{q}=C_cm^q+O(m^{q-1})$.
 
 Write
@@ -116,11 +112,12 @@ The event that the first $t_{m,j}$ trials succeed gives
  c\log R\leq\frac{t_{m,j}}m\log R
        \leq\frac1m\log Q_{m,j}(R)\leq0.
 \]
-Since $\log R$ is integrable against every smooth volume, dominated convergence proves global $L^1$ convergence of the relative weights. The added term $m^{-1}\log A_d$ tends to zero. For the measures, the variance estimate gives $Q_{m,j}\to\mathbf1_{D_c}$ away from $R=a$. The simplex density gives the marginal $q(1-R)^{q-1}\,\mathrm{d}R$, so that boundary has zero volume. Since $q!A_d/m^q\to k^q$ and these constants are bounded, dominated convergence proves total-variation convergence to $\mu_c$ and
+Since $\log R$ is integrable against every smooth volume, dominated convergence proves global $L^1$ convergence of the relative weights. The added term $m^{-1}\log A_d$ tends to zero. For the measures, the variance estimate gives $Q_{m,j}\to\mathbf1_{D_c}$ away from $R=a$. The marginal of $R$ is $q(1-R)^{q-1}\,\mathrm{d}R$: apply the radial computation in the proof of \cref{thm:hopf-point-potential-limit} to $1-R$. Thus the boundary has zero volume. Since $q!A_d/m^q\to k^q$ and these constants are bounded, dominated convergence proves total-variation convergence to $\mu_c$ and
 \[
  \mu_c(B)=k^q\int_a^1q(1-R)^{q-1}\,\mathrm{d}R=(k-c)^q.
 \]
 
+\Needspace{13\baselineskip}
 \subsection{Changing the integration volume}
 
 Fix a positive continuous $w$ on $B$, and put $\delta=\min_Bw>0$ and $M=\max_Bw$. Comparing norms gives
@@ -170,12 +167,7 @@ For $f_c=k^q\mathbf1_{D_c}/w$, fiber integration gives
 \]
 This proves the upstairs total-variation limit and its pushforward. The same integration transfers $L^1$ convergence; any other smooth positive volume on compact $X$ is comparable to $\nu_X$. Local uniform convergence pulls back off $\pi^{-1}(Z)$. The dimension asymptotic gives the probability limits, and $N_m/m^{q+r}=O(m^{-r})$ proves the zero limit in ambient degree.
 
-For $W_m\subseteq U_m\subseteq V_m$, extend orthonormal bases in the common norm. Then $B_{W,m}\leq B_{U,m}\leq B_{V,m}$ and
-\[
- \int_B(B_{U,m}-B_{W,m})\nu_B
-       =\dim U_m-\dim W_m\leq\dim V_m-\dim W_m=O(m^{q-1}).
-\]
-The positive measure difference is therefore $O(m^{-1})$ after $q$-normalization. The two endpoint weights give the lower bound and local uniform convergence by sandwiching. Their $L^1$ errors bound the intermediate error, proving global convergence as well.
+For $W_m\subseteq U_m\subseteq V_m$, monotonicity gives $B_{W,m}\leq B_{U,m}\leq B_{V,m}$. By \cref{lem:kernel-codimension-comparison}, the positive difference of the $q$-normalized $U_m$ and $W_m$ measures has total mass at most $q!(\dim V_m-\dim W_m)/m^q=O(m^{-1})$. The two endpoint weights give the lower bound and local uniform convergence by sandwiching. Their $L^1$ errors bound the intermediate error, proving global convergence as well.
 \end{proof}
 
 \enlargethispage{2\baselineskip}
