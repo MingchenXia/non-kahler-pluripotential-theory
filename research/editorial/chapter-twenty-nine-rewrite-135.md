@@ -1,0 +1,44 @@
+# Chapter 29 rewrite — checkpoint135
+
+Baseline: `9a813bcf2e2609662810f5789fbd9e4d51c91dc8`. Chapter 29 has one author input, four sections and no nested inputs or figures. The complete original and revised chapter were read directly; the revised chapter received two full mathematical/editorial reads. The second followed the first build and inspection of all 34 selected pages. The complete historical section “Volumes under mass bounds” was read before editing and twice after its one-paragraph update. This is not a full revision of Chapter 33. No independent agent or verifier was run. Final output inspection and fresh source reconstruction are complete.
+
+## Exposition and scope
+
+The chapter now begins with the role of bounded mass in volume comparison and the lower-volume obstruction to collapse of stretching envelopes. Bounded mass and the smooth big background are declared once. Repeated definitions of singularity order, the two volumes and stretching envelopes are removed; later sections carry the setting forward. The comparison section explains why lower volumes use rooftops and upper volumes use maxima. Relative full mass is introduced through its numerical question and the contact argument that answers it. The last section explains why ideal envelopes give volume invariants and when the upper-volume gap detects equality of envelopes.
+
+The almost-everywhere order argument and normalized compactness are used by references to Chapter 1. No new general psh statement is introduced or left in Chapter 29. The added proof concerns uniform Monge–Ampère mass and therefore belongs in this chapter. All non-book citations remain in final Chapter 33. Only its volume-source paragraph changes; bibliography entries are unchanged.
+
+## Mathematical review
+
+For a Hermitian form dominating the smooth background, the already proved mass bound is uniform over all potentials. This gives finite upper volume, including in a non-semipositive big background. The closed-background equality of the two volumes retains its standard book input; it is not asserted for nonclosed forms.
+
+The monotonicity proof checks both the background order and the ordinary singularity order. Its lower-volume rooftop is equivalent to the first potential and has a contact error whose finite non-pluripolar mass tends to zero. Its upper-volume maximum is equivalent to the second potential, and locality on the increasing strict-comparison sets works for every competitor, without a boundedness assumption. The addition proof checks bigness of the sum background, genuineness and ordinary type of the difference envelope, and ordered contact after adding the second current. Non-pluripolar products ignore the discarded pole sets.
+
+The relative full-mass proof retains the positive lower volume of the reference only where it prevents collapse. The forward convex-comparison argument gives equality of both volumes without this positivity. In the reverse direction, the truncated targets and stretching envelopes have the reference type. On the contact set, a low envelope value forces a low value of the target. Locality bounds this mass by the upper reference volume minus an exhausted part of the target mass. Applying the same argument to every ordinarily equivalent target and taking the supremum of its mass gives the contradiction. No separate global positive lower mass property is introduced.
+
+The former citation-only smaller-background assertion now has a complete proof, Proposition `prop:positive-volume-smaller-background`. For a semipositive big background, write delta for the positive lower volume of u and M for a uniform bound on all masses. Choose 1<b<=2 with 2^n(b-1)M<delta, set s=b-1, and use r_j=max(u,-j/s), f_j=u+s r_j=max(bu,u-j), and p_j=P_theta(f_j). The inequalities u-j<=p_j<=u preserve the ordinary type. If the stretched envelope collapsed, contact support and ordered contact would put its mass into {u<=-C/b}. Positivity and multilinearity give the explicit measure bound
+
+    MA_(b theta)(f_j) - MA_theta(u)
+        <= 2^n s MA_theta((u+r_j)/2).
+
+Indeed the mixed coefficients s^k are at most s for k>=1; the full sum of the two positive currents has top power 2^n times the measure of their average potential. The error is at most 2^n sM after integration. The remaining finite non-pluripolar tail tends to zero as C tends to infinity, contradicting the choice of b. Scaling P_theta(bu) supplies the smaller-background competitor. The proof requires neither a model identity nor positive v_-(theta). For the converse, the existing smaller-background mass estimate applies uniformly to bounded translates within the ordinary type; positive v_-(theta) supplies positive lower volume. Without that bound it still gives individual positivity.
+
+The ideal-envelope characterization keeps both displayed hypotheses: positive lower volume of the ideal envelope and membership in the relative class of the ordinary envelope. The ordinary fixed-point identity of the ideal envelope and the dyadic criterion are used from their earlier proofs. The question of intrinsic hypotheses making those assumptions automatic remains open; this checkpoint does not claim a complete Hermitian I-goodness characterization or an upper-volume pseudometric.
+
+## Sources and dependencies
+
+Three exact primary PDFs were downloaded again. Their SHA-256 hashes match the archived manifest: ALS26 arXiv:2511.02339v1, Li arXiv:2601.13446v1, and the 43-page published BGL25 article. Exact URLs, hashes and scopes are recorded in build-snapshot-135.json.
+
+ALS26 Proposition 2.11 was read with its complete proof; Proposition 2.10 and its proof were also checked visually on page 9. Pages 9–10 were inspected to distinguish the forward implication from the converse. The book replaces the forward proof's O(b-1) term by the explicit uniform estimate above. The source states v_-(theta)>0 for its equivalence, but the forward proof does not use it; the chapter and historical note now make this distinction explicit.
+
+Li's Propositions 2.4–2.5, Lemma 3.1 and Proposition 3.1 were read with their proofs, together with Definition 3.2 and Corollary 3.1 and its proof. Page 9 was inspected for the upper/lower-volume bars. Its final “taking the infimum” is interpreted as minimizing the upper-volume deficit, which requires taking the supremum of the competitor masses; the book already writes that operation explicitly. BGL25 Proposition 3.7 and its complete proof were read, with page 27 inspected. The source's bounded-competitor wording in the upper-volume proof is not imported: the book uses locality for arbitrary ordinarily equivalent competitors.
+
+The current arXiv records for the two preprints were checked and still list their v1 records. This is a bounded source/version check, not a new search for solutions of the chapter's open question. Internal checks cover the full normalized-compactness input, the arbitrary-background extended product and ordered-contact proofs, bounded-mass finiteness, the semipositive contact proof, big-contact statement and rooftop-support proof, relative-envelope definitions and equality, the smaller-background lower estimate and relative uniform lower bound, and the ordinary/ideal envelope comparison and fixed-point arguments. These are targeted dependencies, not full new reviews of their chapters. No new Popovici result or supplied-ZIP integration is involved. The 190 historical reports remain untouched.
+
+## Release checks
+
+Final output inspection is complete. The comparison records seven formal blocks and five proofs, including the newly proved smaller-background proposition; two old blocks and one old proof are byte-identical. Four statement edits remove repetitions of the chapter's standing assumptions. No existing labels are removed.
+
+The house audit has zero errors and two inherited label warnings, with no new findings. Non-book citation placement passes. The final book has 788 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 34 selected final pages passed visual inspection: front matter, contents and conventions, complete Chapter 29 with the Part XII opening and neighboring transitions, the changed history section, and the complete bibliography. The seventeen-page companion is byte-identical to checkpoint134. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact hashes and checks are in build-snapshot-135.json; the portability audit is source-package-portability-135.json.
+
+Both queues continue at Chapter 30. The whole-book goal remains active and incomplete.
