@@ -1,0 +1,41 @@
+# Finite restricted invariants and actual traces — checkpoint160
+
+Baseline: `3ab48560a15cea78ac55e53b287cb51a8c6c7736`, checked checkpoint159. This is a bounded supplied-paper integration, not the next whole-chapter rewrite. Chapter 16 remains next, followed by Chapter 17. The unlimited book-writing goal remains active and incomplete.
+
+## Source and review scope
+
+The supplied `q6-1-paper-and-latex.zip` contains the eleven-page *Finite restricted invariants for closed classes and resolved traces*, dated 26 September 2026, a complete 474-line TeX source, its bibliography/style and a README. All source TeX, including every proof and the bibliography, was directly read. PDF text was consulted to check numbering; a complete visual inspection of the source PDF is not claimed. Exact source files are retained unmodified locally, with their hashes and archive provenance in `research/supplied-restricted-invariants-20260926.json`. The source has an empty author field. No authorship, publication or novelty claim is inferred. The README's claimed Xean verification is source metadata, not an independent verification performed in this task. No new independent verifier run or Popovici premise is used.
+
+The new mathematical unit consists of the complete `section_finite_restricted_invariants.tex` and `section_resolved_trace_masses.tex`. Changed interfaces are the Chapter 27 opening and the insertion/elliptic transition, the closed-class research paragraph and its neighbors in Chapter 32, the closed-loci historical section in Chapter 33, and three bibliography entries. The original Chapter 27 root was read completely; its unchanged nested inputs were not freshly audited. Neither Chapter 32 nor Chapter 33 has a new complete mathematical review here.
+
+## Mathematical integration
+
+The class invariant is a supremum of non-pluripolar top masses on a compact Kähler resolution of each irreducible reduced positive-dimensional subvariety of a smooth class-C manifold. Its proof includes a finite closed comparison bound, all-current modification invariance, proper-transform compatibility, the arbitrary-class rank-drop statement, positivity versus bigness on the model and on smooth targets, the nef intersection formula, and the full zero-invariant union. Subvarieties wholly inside an exceptional image are covered by the Kähler model theorem, not by an undefined strict transform. Equality with Collins–Tosatti numerical restricted volume is asserted only for nef ambient classes. The final null-locus equality uses the already active external classical theorem and does not reactivate the hidden Nakamaye chapter.
+
+For an actual ordinary trace (or a potential given directly on a smooth target), a finite effective real divisorial decomposition with bounded remainder and nef residual class gives the individual mass as the residual top intersection. The reconstruction simplifies the source proof: add a large closed Kähler form, use Chapter 2 bounded mass invariance, and compare polynomial coefficients. Polarization supplies mixed masses. Chapter 1 supplies potential descent, removability and the disk criterion. Total pullback divisors retain all exceptional coefficients; generic logarithmic coefficients identify residual classes on a common refinement. Smooth gauges and divisor metrics cancel in the residual current. Positive residual mass produces a strict current with a one-sided singularity comparison; the same ordinary type is obtained under the stated smooth-positive residual hypothesis on one model. The blowup-of-a-point example prevents upgrading positive mass alone to that conclusion. The divisorial zero-mass and positive-section-inside-a-null-divisor examples distinguish the remaining notions.
+
+## Classical dependency checks
+
+The following bounded checks identify the actual inputs. They are not complete fresh reconstructions of the cited papers.
+
+| Source | Checked scope and use |
+|---|---|
+| Fujiki, PRIMS 14 (1978), 1–52 | Publisher metadata and original PDF; Lemma 4.6 and its proof, p. 35, read in text and rendered page. Closed subspaces of class C and its holomorphic-image characterization. |
+| Barlet, MSRI Publications 37 (2000), 25–42 | Cambridge publication metadata; original archived chapter Theorem 10 and complete proof sketch, pp. 31–32. Varouchas's Kähler modification theorem. Archived title page says 1999; the bibliography uses the published 2000 date. |
+| Bierstone–Milman, Invent. Math. 128 (1997), 207–302 | Published original paper on an academic mirror; Theorem 1.6 and Remark 1.7(2), pp. 215–216. Statement-level embedded resolution input, not a reread of its algorithm. |
+| Demailly–Păun, Ann. of Math. 159 (2004), 1247–1274 | Publisher metadata and published PDF; Proposition 2.6 and Theorem 2.12 with their proofs, pp. 1257–1260. The concentration argument's earlier Lemma 2.1 and Yau input retain their classical status; they were not newly reconstructed. The diagonal normalization coefficient was calculated directly, including dimension one. |
+| BEGZ, Acta Math. 205 (2010), 199–262 | Published retained PDF, Definition 1.17 and following nef cup-product discussion, Proposition 1.20 with proof and the minimal-current equality after it, and Proposition 1.22. The latter invokes the classical Boucksom positive-mass criterion; this turn does not claim to have reconstructed that dependency's complete proof. |
+| Collins–Tosatti, Ann. Fac. Sci. Toulouse 31 (2022), 907–947 | Published retained PDF, Lemma 2.6 and its complete proof, pp. 917–918. Nef numerical restricted volume equals intersection, including singular subvarieties. |
+| Collins–Tosatti, Invent. Math. 202 (2015), 1167–1198 | Existing published citation and previously retained external theorem. Theorem 1.1 was additionally checked in the author/arXiv version, pp. 1–2; this is not a fresh published-full-proof audit. |
+
+MathSciNet searching supplied no accessible record for the newly added historical entries; primary publisher metadata was used. Non-book citations and all exact locators are in Chapter 33. No source style or bibliography was copied wholesale.
+
+## Release checks
+
+Two complete direct mathematical/editorial reads cover both new inputs and bounded changed interfaces, not whole Chapters 27, 32 or 33. The five-file house audit has zero errors and the same 25 baseline warnings. The 811-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the one inherited bibliography underfull paragraph remains. All 78 selected final book pages pass visual review, including the full Chapter 27 output and all other changed body pages. The companion is byte-identical to checkpoint159. Both outputs rebuild in a fresh empty source extraction with identical page text. There are 33 active chapters and 218 author inputs. All 190 historical verifier reports and three hidden Nakamaye files remain unchanged. No new independent verifier run or Popovici premise is claimed. Exact review scope is in restricted-invariants-integration-160.md and the checkpoint160 build and portability audits.
+
+The first render selected 78 pages: 60 changed/new images were read directly in 15 sheets; 18 matched inspected checkpoint159 images byte for byte. The final render selected 78 pages: 6 changed images were read in 2 sheets, and 72 matched the inspected first render. The second read made the diagonal and Kähler refinement explicit, specified addition of backgrounds and the mixed-background scope, and clarified the residual nef premise in the opening. A local space reservation keeps the mixed-mass hypothesis with its display. Subsequent final package documentation updates do not alter the reconstructed manuscript/build payloads.
+
+## Continuation
+
+Continue the integrated chapter revision with Chapter 16, then Chapter 17. This supplied result settles the stated closed-class and bounded-residual regimes; general nonclosed restricted invariants and intrinsic multiplier-ideal traces outside this regime remain research questions. Existing book-writing skill rules cover the integration; the user supplied new mathematical evidence rather than a new editorial correction, so no skill-only change is made.

@@ -1,0 +1,109 @@
+\section{Divisorial traces with bounded remainder}
+\label{sec:resolved-trace-masses}
+
+The class invariant is a supremum over currents. The mass of an actual trace also records its divisorial singularities: the non-pluripolar product discards the divisor and retains the residual class. A bounded remainder makes this residual mass cohomological.
+
+Let $Y\subset X$ be irreducible and reduced, with $k=\dim Y>0$, let $\alpha_0$ be smooth and closed on $X$, and let $u\in\PSH(X,\alpha_0)$ have a genuine ordinary restriction $v=u|_Y$. On a K\"ahler resolution $f=j\circ\pi:Z\to X$, put $\alpha_Z=f^*\alpha_0$ and $v_\pi=u\circ f$. For a smooth $Y$, one can instead start directly with $v\in\PSH(Y,\alpha_Y)$ for a smooth closed form $\alpha_Y$ and put $\alpha_Z=\pi^*\alpha_Y$, $v_\pi=v\circ\pi$. These are actual potentials; the intrinsic multiplier-ideal trace of \cref{chap:trace-data} is a different construction.
+
+Suppose on one such resolution that
+\begin{equation}\label{eq:resolved-trace-decomposition}
+ v_\pi=\ell+w,
+ \qquad \ell=\sum_{j=1}^N c_j\log|s_j|_{h_j}^2,
+ \qquad w\text{ bounded},
+\end{equation}
+where $c_j>0$, the $D_j$ are prime divisors, $s_j$ is the canonical section of $\mathcal O(D_j)$, and $h_j$ is a smooth Hermitian metric. The empty sum is allowed. Write $\Gamma=\sum_jc_jD_j$ and $\gamma_j=c_1(\mathcal O(D_j),h_j)$, and set
+\begin{equation}\label{eq:resolved-trace-residual-class}
+ \eta_v=\alpha_Z-\sum_jc_j\gamma_j,
+ \qquad b_v=\{\eta_v\}=\{\alpha_Z\}-\{[\Gamma]\}.
+\end{equation}
+Assume $b_v$ is nef. All assertions below about a singular $Y$ are made on its resolutions.
+
+\begin{lemma}\label{lem:bounded-residual-mass-polynomial}
+The current $R_v=\eta_v+\ddc w$ is positive and has bounded local potentials. Moreover,
+\begin{equation}\label{eq:resolved-trace-mass}
+ \int_Z\langle(\alpha_Z+\ddc v_\pi)^k\rangle
+       =\int_ZR_v^k
+       =\int_Zb_v^k
+       =\mathcal R_Z(b_v).
+\end{equation}
+\Needspace{7\baselineskip}
+If $v_1,\ldots,v_k$ satisfy the same conditions on $Z$, for possibly different closed backgrounds, then
+\begin{equation}\label{eq:resolved-trace-mixed-mass}
+ \int_ZR_{v_1}\wedge\cdots\wedge R_{v_k}
+       =\int_Zb_{v_1}\wedge\cdots\wedge b_{v_k}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Off $|\Gamma|$, the current $\alpha_Z+\ddc v_\pi$ equals $\eta_v+\ddc w$ and is positive. After adding a smooth local potential for $\eta_v$, the bounded function $w$ is plurisubharmonic there. By \cref{lem:qpsh-removable-analytic}, it extends across the divisor as a bounded plurisubharmonic function, agreeing almost everywhere with the original one. We use this extension to represent $w$ canonically. Thus $R_v\geq0$ globally and
+\[
+ \alpha_Z+\ddc v_\pi=[\Gamma]+R_v.
+\]
+The non-pluripolar measure on the left of \eqref{eq:resolved-trace-mass} agrees with $R_v^k$ off the divisor, and neither charges the divisor. This gives the first equality.
+
+Fix a K\"ahler form $\kappa$ on $Z$. For all sufficiently large real $t$, the smooth closed form $\eta_v+t\kappa$ is K\"ahler. Its bounded potential $w$ therefore satisfies
+\[
+ \int_Z(R_v+t\kappa)^k=\int_Z(\eta_v+t\kappa)^k
+\]
+by \cref{thm:mass-invariance-characterization}, with the one-dimensional case given by Stokes. Both sides are polynomials in $t$. Their constant coefficients agree, giving $\int_ZR_v^k=\int_Zb_v^k$. The last equality in \eqref{eq:resolved-trace-mass} is \eqref{eq:nef-restricted-mass}. Apply the same polynomial argument to positive linear combinations of the $R_{v_i}$ and compare coefficients to obtain \eqref{eq:resolved-trace-mixed-mass}.
+\end{proof}
+
+Denote the common value in \eqref{eq:resolved-trace-mass} by $\mathfrak r(v;Y)$.
+
+\begin{theorem}\label{thm:resolved-trace-invariance}
+The number $\mathfrak r(v;Y)$ is independent of the chosen divisor metrics and of the K\"ahler resolution carrying \eqref{eq:resolved-trace-decomposition}. Two potentials of the same ordinary singularity type, in the same closed background, have the same number whenever each has a decomposition of the form \eqref{eq:resolved-trace-decomposition} with nef residual class. Their residual classes agree on a common refinement. Residual classes add when the traces and their backgrounds are added, and their mixed masses are given by \eqref{eq:resolved-trace-mixed-mass}.
+\end{theorem}
+\begin{proof}
+Changing a divisor metric changes $\ell$ by a smooth function, changes $w$ by its negative, and changes $\eta_v$ by the corresponding $\ddc$-term. Thus $R_v$ is unchanged. The same cancellation holds when a smooth change of background is accompanied by the opposite change of potential.
+
+For a modification $\rho:W\to Z$ with $W$ K\"ahler, pull back the total divisor $\Gamma$, including all exceptional coefficients. The pulled-back decomposition has bounded remainder $w\circ\rho$, residual current $\rho^*R_v$ and nef residual class $\rho^*b_v$. Its mass is
+\[
+ \int_W(\rho^*b_v)^k=\int_Zb_v^k.
+\]
+For two decompositions on different resolutions, pass to a common K\"ahler refinement. At a generic smooth point of a prime component of the union of their divisors, the difference of the logarithmic terms is $(a_1-a_2)\log|t|^2+O(1)$ in a local defining coordinate $t$. The two bounded-difference inequalities force $a_1=a_2$. Hence the total divisors, and therefore the residual classes in the common background, coincide. Finally, adding the decompositions adds both the divisors and the bounded remainders. The residual class is the sum of the nef residual classes, and \eqref{eq:resolved-trace-mixed-mass} computes its mixed terms.
+\end{proof}
+
+\begin{proposition}\label{prop:resolved-trace-strict-current}
+If $\mathfrak r(v;Y)>0$, there is a strict positive current in $\{\alpha_Z\}$ with a potential $p$ satisfying $p\leq v_\pi+A$ for some constant $A$. If $b_v$ has a smooth positive representative on one resolution carrying \eqref{eq:resolved-trace-decomposition}, that resolution admits such a strict current with $p\sim v_\pi$. When $Y$ is smooth, the strict current and the respective potential inequalities descend to $Y$.
+\end{proposition}
+\begin{proof}
+Positive residual mass gives $\int_Zb_v^k>0$. Apply \eqref{eq:normalized-diagonal-current} to obtain $K=\eta_v+\ddc a\geq\delta\kappa$. The current
+\[
+ [\Gamma]+K=\alpha_Z+\ddc(\ell+a)
+\]
+is strict. Since $a$ is bounded above on $Z$ and $w$ is bounded below, its potential $p=\ell+a$ satisfies $p\leq\ell+w+A=v_\pi+A$. If $b_v$ has a smooth positive representative, choose $a$ smooth, giving the bounded difference in both directions.
+
+For smooth $Y$, take $\alpha_Y=\alpha_0|_Y$ in the restriction setting. Then \cref{prop:psh-descent-modification} gives $p=q\circ\pi$ for $q\in\PSH(Y,\alpha_Y)$. Strict positivity follows from \eqref{eq:strict-current-pushforward}; surjectivity of $\pi$ descends each potential inequality. The smooth-positive hypothesis concerns the specified model: pulling a K\"ahler class through a further blowup need not give a K\"ahler class.
+\end{proof}
+
+\begin{example}\label{ex:divisorial-trace-zero-mass}
+Let $Y=\mathbb P^k$ be a hyperplane in $X=\mathbb P^{k+1}$, and let another hyperplane $H_X$ cut out $H\subset Y$. Normalize the Fubini--Study form by $\int_Y\omega^k=1$. For $c>0$ and $d\geq0$, take $\alpha_0=(c+d)\omega$ on $X$ and $u=c\log|s_{H_X}|^2$ with the Fubini--Study metric. Its genuine restriction satisfies
+\[
+ \alpha_0|_Y+\ddc v=c[H]+d\omega|_Y,
+ \qquad \mathfrak r(v;Y)=d^k,
+ \qquad \mathcal R(\{\alpha_0\};Y)=(c+d)^k.
+\]
+Thus $d=0$ gives zero trace mass in a class with positive restricted invariant. The divisor remains a nonzero part of the current even though the non-pluripolar top product discards it.
+\end{example}
+
+\begin{example}\label{ex:positive-trace-bounded-type-obstruction}
+Let $\mu:Y\to\mathbb P^2$ be the blowup of a point, with exceptional curve $E$, and put $\alpha_Y=\mu^*\omega_{\mathrm{FS}}$, $v=0$. The residual class is nef and big, and
+\[
+ \mathfrak r(0;Y)=\mathcal R(\{\alpha_Y\};Y)=1.
+\]
+There is nevertheless no bounded $q\in\PSH(Y,\alpha_Y)$ for which $\alpha_Y+\ddc q\geq\delta\kappa$ with $\delta>0$ and $\kappa$ K\"ahler. Indeed, boundedness permits restriction to $E$, and the disk criterion in \cref{lem:smooth-disk-criterion} gives
+\[
+ \ddc(q|_E)\geq\delta\kappa|_E,
+\]
+because $\alpha_Y|_E=0$. Integration over the compact curve contradicts Stokes' theorem. Positive mass therefore supplies the one-sided comparison in \cref{prop:resolved-trace-strict-current}, but may require additional singularities.
+\end{example}
+
+\begin{example}\label{ex:positive-restriction-inside-null-locus}
+Let $\mu:X\to\mathbb P^3$ be the blowup of a line $L$, and set $a=\mu^*\{\omega_{\mathrm{FS}}\}$. Its exceptional divisor is
+$E=\mathbb P(N_{L/\mathbb P^3})\simeq\mathbb P^1\times\mathbb P^1$, since $N_{L/\mathbb P^3}\simeq\mathcal O(1)\oplus\mathcal O(1)$. On $E$, the map $\mu$ is the projection to $L$. Hence $\int_Ea^2=0$, whereas a section $Y$ of $E\to L$ satisfies $\int_Ya=1$. Every irreducible subvariety not contained in $E$ has positive intersection, because $\mu^*\omega_{\mathrm{FS}}$ is positive on its nonempty open part outside $E$. By \cref{cor:finite-restricted-null-union},
+\[
+ E_{\mathrm{nK}}(a)=E,
+ \qquad \mathcal R(a;E)=0,
+ \qquad \mathcal R(a;Y)=1.
+\]
+The zero-invariant union detects the whole null locus. Positivity on one subvariety does not assert that it lies outside that locus.
+\end{example}

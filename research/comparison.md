@@ -40,3 +40,7 @@ The supplied-paper queue and provenance records identify the integrated manuscri
 ## Remaining work
 
 [The proof-boundary ledger](proof-obligations.md) separates imported inputs, established regimes and unestablished extensions. The original singularity/I-goodness and trace program remains part of the objective alongside equations and geometry. A source disposition, a completed editorial pass or a successful build does not close the research questions in Chapter 32 or establish whole-book completion.
+
+## Scoped addition after the base reconciliation — checkpoint160
+
+Sections 27.6–27.7 add finite restricted closed-class masses on class-C manifolds and cohomological masses for actual divisorial traces with bounded remainder and nef residual class. This is a specified extension of the trace/geometry route, not a general construction of the intrinsic trace operator in arbitrary nonclosed backgrounds. Its primary-source and two-pass review scope is in research/editorial/restricted-invariants-integration-160.md. The current active graph has 218 author inputs; the base reconciliation and its historical machine-readable map retain their checkpoint144 scope.
