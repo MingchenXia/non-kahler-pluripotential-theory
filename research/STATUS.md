@@ -2,6 +2,14 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint151 — Chapter 7 and a single weight criterion
+
+Chapter 7 completes its whole six-section rewrite, including the general-weight input, and two direct revised mathematical/editorial reads. One range estimate and one restricted-mass lemma supply the weight bounds. The general decreasing-weight theorem now includes capacity continuity and precedes its polynomial and logarithmic applications. The exponential transform retains its stronger explicit capacity estimate. A single cutoff identity uses the Chapter 1 weighted bounded-product calculus and serves the undamped tail and integrability criteria. The mass-concentration examples and arbitrary smooth-background extension keep their complete proofs. Repeated local setups, continuity proofs, notation and tiny sections are removed.
+
+The two changed author inputs have zero house-audit errors and one inherited label warning. Non-book citations remain in Chapter 33. The 804-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 45 selected final pages pass visual review, with 8 changed images directly inspected and 37 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-seven-rewrite-151.md, build-snapshot-151.json and source-package-portability-151.json.
+
+Continue with the complete present Chapter 8, then Chapter 9 and its nested inputs. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint150 — Chapter 6 and restricted products
 
 Chapter 6 completes its whole six-section rewrite and two direct revised mathematical/editorial reads. Restricted positivity now leads to one non-pluripolar measure construction for arbitrary smooth backgrounds. The bounded ordered-contact argument, including fixed positive complementary factors, belongs to Chapter 1 and is cited directly in Chapters 6 and 10. The convex-density lemma drops its unused bigness hypothesis, and the bounded-mass estimate states the general smooth-background conclusion directly. The infinite-mass construction, integrable coefficient refinement and prescribed smooth masses retain their full proofs and quantitative estimates. Repeated constructions, notation and distant recaps are removed.
