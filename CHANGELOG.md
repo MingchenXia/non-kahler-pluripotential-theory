@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint170 — 26 September 2026
+
+Chapter 24 completes its integrated rewrite, including the nested ruled-surface construction, and two complete direct revised mathematical/editorial reads. The limiting curve and recovery criterion precede the combined treatment of smooth background changes and limiting mass. Envelope-family inclusion shortens the fixed-point proof; the Chapter 15 analytic-envelope theorem supplies the bounded residual potential in the mass calculation. The closed-positive cofinality argument is placed beside recovery, and the introductions distinguish the extra divisorial pole from nonclosed mass variation. All seventeen labels, eleven formal blocks and nine proofs remain; the mathematical statements are unchanged. Five sections replace six.
+
+The two-input house audit has zero errors and one inherited chapter-label warning. The 811-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 39 selected final pages pass visual review: 4 changed images were directly inspected and 35 match the first inspected render byte for byte. Both outputs rebuild from a fresh empty source-package extraction with identical page text. The companion is byte-identical to checkpoint169. There are 33 active chapters and 221 author inputs; the 190 historical verifier reports and three hidden sources remain unchanged. No new independent verification is claimed.
+
+Continue with the complete present Chapter 25 and all its nested inputs, then Chapter 26. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint169 — 26 September 2026
 
 Chapter 23 completes its integrated rewrite, including the nested exceptional-difference input, and two complete direct revised mathematical/editorial reads. The affine maps follow by translation from the Chapter 22 Bott–Chern maps, whose positivity and Cartier terminology is reused. Analytic realization and varying-background approximation now form one section. The text distinguishes current convergence from nef approximation with fixed exterior derivative: translating the approximating affine classes back need not preserve nefness. All nine labels, six formal statements and six proofs remain; the formal statements are unchanged. Four sections replace five.

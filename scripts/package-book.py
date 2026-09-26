@@ -112,6 +112,7 @@ for name in (
     "research/editorial/geometric-normalization-integration-167.md",
     "research/editorial/chapter-twenty-two-rewrite-168.md",
     "research/editorial/chapter-twenty-three-rewrite-169.md",
+    "research/editorial/chapter-twenty-four-rewrite-170.md",
     "research/supplied-geometric-normalization-20260926.json",
     "research/supplied-restricted-invariants-20260926.json",
     "research/source-disposition-145.json",

@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint169: read and rewrite the complete present Chapter 24 and its nested input, then Chapter 25. Chapter 23 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint170: read and rewrite the complete present Chapter 25 and all its nested inputs, then Chapter 26. Chapter 24 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -31,7 +31,7 @@ Current next unit after checkpoint169: read and rewrite the complete present Cha
 | 21 | `chapter_hopf_reduction.tex` | 3 | Complete integrated rewrite and two direct revised mathematical/editorial reads in checkpoint166. All seven labels and three formal statements remain; three sections replace four. See chapter-twenty-one-rewrite-166.md. |
 | 22 | `chapter_divisorial_models.tex` | 8 | Complete integrated eight-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint168. One ideal-order inequality serves the exceptional approximants; Chapter 1 supplies the smooth-potential arguments, and zero-mean normalization gives L1 compactness. All 27 existing labels remain. See chapter-twenty-two-rewrite-168.md. |
 | 23 | `chapter_nonclosed_bclasses.tex` | 4 | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads of both inputs in checkpoint169. Translated Bott–Chern maps replace the repeated affine-map proof; analytic realization and varying-derivative approximation form one argument. All nine labels and six formal statements remain. See chapter-twenty-three-rewrite-169.md. |
-| 24 | `chapter_envelope_systems.tex` | 6 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint130; the general periodic subharmonic lemma moves to Chapter 1 and repeated setups are removed. |
+| 24 | `chapter_envelope_systems.tex` | 5 | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads of both inputs in checkpoint170. Recovery precedes the combined gauge and mass discussion; envelope-family inclusion and the analytic-envelope theorem replace repeated arguments. All seventeen labels and eleven mathematical statements remain. See chapter-twenty-four-rewrite-170.md. |
 | 25 | `chapter_gauduchon_variational_volume.tex` | 39 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint131; three general results centralized in Chapter 1 and repeated definitions removed. Checkpoint143 adds two reads of the new sections or changed interfaces, at the bounded scope in supplied-three-papers-review-143.md.  Checkpoint146 relocates the mass-invariance proof and rereads the complete affected mass-extremum input twice; four further inputs receive pagination-only checks. |
 | 26 | `chapter_partial_bergman.tex` | 21 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint132; general psh facts centralized in Chapter 1 and all 2107 plotted coordinate pairs checked. Checkpoint143 adds two reads of the new sections or changed interfaces, at the bounded scope in supplied-three-papers-review-143.md. |
 | 27 | `chapter_bott_chern_loci.tex` | 18 | Complete whole-chapter and all nested-input rewrite, two direct revised reads and release checks in checkpoint133; isolated-puncture extension centralized in Chapter 1 and repeated definitions removed.  Checkpoint160 adds two direct revised reads of the new restricted-mass/trace inputs or the bounded changed interface; see restricted-invariants-integration-160.md. |
@@ -143,3 +143,5 @@ Checkpoint167 integrates geometric normalization stability; the next complete ch
 Checkpoint168 completes the integrated Chapter 22 rewrite. The next complete chapter is Chapter 23.
 
 Checkpoint169 completes the integrated Chapter 23 rewrite. The next complete chapter is Chapter 24.
+
+Checkpoint170 completes the integrated Chapter 24 rewrite. The next complete chapter is Chapter 25, whose current active graph contains 29 author inputs including its root.
