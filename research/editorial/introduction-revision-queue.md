@@ -4,6 +4,8 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
+Current next unit after checkpoint145: read and rewrite the complete present Chapter 2, then Chapters 3–6, with the foundations now centralized in Chapter 1. Checkpoint145 completes source/proof-ledger reconciliation at its documented subject and statement scope. Earlier rows retain their historical review scopes.
+
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
 | 1 | `chapter_framework.tex` | 35 | Complete integrated chapter and all eighteen nested-input original and two revised reads in checkpoint142, including the later additions; earlier checkpoints retain their original scopes. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
@@ -91,3 +93,5 @@ Checkpoint142 reads all nineteen current Chapter 1 inputs before editing and twi
 Checkpoint143 adds the three complete supplied-paper reconstructions, with two direct revised reads and bounded Chapter 25/26/32/33 interface checks. The source proofs and all twenty source pages were read. Checkpoint144 completes the subsequent cone integration; source-disposition and proof-obligation reconciliation follows it. Earlier whole-chapter scopes remain unchanged.
 
 Checkpoint144 reconstructs the cone equations and bounded connected-positivity uniqueness with two direct revised reads. The general coefficient-density lemma is placed in Chapter 1, the continuity implication in Chapter 10, and the specialized uniqueness proof in Chapter 11. Chapter 32 replaces the solved bounded-uniqueness question and retains the general singular-space problem. The complete source proof and all fourteen source pages were read. Final release checks are in build-snapshot-144.json. The next unit is source/proof-ledger reconciliation; earlier whole-chapter scopes remain unchanged.
+
+Checkpoint145 replaces the chronological source/proof ledgers by current statements and locations, preserves the original records and checks all nineteen source-outline units. This research-only reconciliation changes no manuscript or prior audit scope. The integrated chapter sequence resumes at Chapter 2.

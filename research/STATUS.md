@@ -2,6 +2,12 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint145 — current source and proof boundaries
+
+The source comparison and proof-obligation ledgers now describe the current manuscript, with old chronological versions preserved verbatim. Nineteen source chapter/appendix inputs are mapped exactly once to eighteen subjects, with stable labels and compiled locations in the active 33-chapter, 216-input book. The ledgers distinguish internal proofs, classical imports and unestablished extensions, and remove stale claims about the hidden Nakamaye chapter, bounded uniqueness, selection and the Hölder dependency. This is a subject-level disposition and record reconciliation, not a new audit of every source theorem.
+
+Both revised ledgers receive two direct reads. Structural, locator, link and preservation checks are recorded in research/editorial/source-ledger-review-145.md and research/audits/source-ledger-145.json. The manuscript, bibliography, build scripts and both PDFs are unchanged from checked checkpoint144; the source package is refreshed only for research records. The next unit is the complete current Chapter 2, followed by Chapters 3–6 after the foundation relocations. The broader goal remains active and incomplete.
+
 ## Checkpoint144 — cone equations and bounded uniqueness
 
 The supplied projective-cone manuscript is reconstructed in Appendix A.6, including its logarithmic ordinary-class equation, determinant-preserving nonclosed deformations, closed bounded endpoint, all-resolution pushforward identity and explicit quadric examples. Chapter 11.6 proves bounded uniqueness for smooth nonnegative density with connected dense positive set. Its coefficient-density lemma belongs to Chapter 1; Chapter 10 derives bounded Lp continuity from the proper equation. Chapter 32 replaces the settled bounded-uniqueness problem by the theorem and narrows the singular-space problem to the remaining regimes. Paper attribution stays in Chapter 33.
