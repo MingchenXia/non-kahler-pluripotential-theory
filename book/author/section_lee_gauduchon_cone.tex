@@ -1,19 +1,14 @@
 \section{The Lee--Gauduchon cone}
 \label{sec:lee-gauduchon-cone}
 
-The Lee--Gauduchon cone records all Gauduchon tests in a finite-dimensional cohomology space. We give the arguments, keeping track of the kernel on which every test vanishes. Throughout this section $X$ is a connected compact complex manifold of dimension $n\geq2$; an LCK structure is not required.
+For the rest of the chapter, let $X$ be an arbitrary compact complex manifold of dimension $n\geq2$. For a Gauduchon metric $\gamma$, the closed form $\dc(\gamma^{n-1})$ pairs with degree-one classes through the map $j_X$ of \eqref{eq:lck-lee-bc-map}. These classes of degree $2n-1$ form an open convex cone in the annihilator of $\ker j_X$. Its dual detects pseudoeffectivity in the image of $j_X$.
 
-For a smooth closed real one-form $\lambda$ on $X$, put $\kappa_\lambda=\dc\lambda$. Set $V_X=H^1_{\mathrm{dR}}(X,\R)$, and recall the linear map
-\[
- j_X:V_X\longrightarrow H^{1,1}_{\mathrm{BC}}(X,\R),
- \qquad j_X([\lambda])=\{\kappa_\lambda\},
- \qquad \kappa_\lambda=\dc\lambda.
-\]
-Let
+Set $V_X=H^1_{\mathrm{dR}}(X,\R)$ and
 \[
  K_X=\ker j_X,\qquad
  W_X=K_X^\perp\subset H^{2n-1}_{\mathrm{dR}}(X,\R),
 \]
+\Needspace{6\baselineskip}
 where the annihilator uses the Poincar\'e pairing with a class $a\in H^{2n-1}_{\mathrm{dR}}(X,\R)$
 \[
  \langle[\lambda],a\rangle=\int_X\lambda\wedge a.
@@ -23,7 +18,7 @@ Finally, let
  \mathcal C_X
  =\{[\lambda]\in V_X:j_X([\lambda])\text{ is pseudoeffective}\}.
 \]
-This cone concerns the image of $j_X$. We do not identify that image with the entire kernel of the map from Bott--Chern to de Rham cohomology.
+The image of $j_X$ can be strictly smaller than the kernel of the Bott--Chern-to-de-Rham map, as \cref{ex:lee-calabi-eckmann} will show.
 
 \begin{lemma}\label{lem:lee-gauduchon-kernel}
 The space $K_X$ consists of the de Rham classes of real parts of closed holomorphic one-forms. Moreover,
@@ -86,7 +81,6 @@ Conversely,
  =\{a\in W_X:\langle\xi,a\rangle>0
                          \text{ for every }\xi\in\mathcal C_X\setminus K_X\}.
 \]
-Thus strict positivity is tested only outside the kernel. In particular, it is never required against the zero class.
 \end{theorem}
 \begin{proof}
 The first equality is exactly \cref{thm:lamari} applied to the smooth closed background $\kappa_\lambda$, using \eqref{eq:lck-lee-gauduchon-pairing}. It expresses $\mathcal C_X$ as an intersection of closed half-spaces, so this cone is closed.
@@ -105,12 +99,11 @@ For the converse, suppose $a\in W_X\setminus\operatorname{LG}(X)$. Finite-dimens
 Indeed, in the usual separating inequalities the constant can be taken to be zero by scaling elements of the cone. By Poincar\'e duality, $\ell$ is represented by a class $\xi\in V_X$, modulo $K_X$. Its nonzero restriction means $\xi\notin K_X$. The first equality in the theorem implies $\xi\in\mathcal C_X$, contradicting the required strict inequalities for $a$. This proves the second equality. If $\operatorname{LG}(X)=W_X$, there is no point to separate and the same conclusion holds.
 \end{proof}
 
-\subsection{Modification of the positive classes}
+\subsection{Bimeromorphic invariance}
 
-For each connected compact complex manifold $X$ of dimension $n\geq2$, use the map $j_X$, spaces $V_X,K_X,W_X$ and cones $\mathcal C_X,\operatorname{LG}(X)$ from \cref{sec:lee-gauduchon-cone}. For another manifold $Y$ of the same dimension, use the corresponding subscript $Y$. Braces denote real Bott--Chern classes.
+A modification preserves degree-one cohomology and detects pseudoeffectivity of classes pulled back from the base. These two facts identify the cones $\mathcal C_X$; duality then identifies the Lee--Gauduchon cones.
 
-The proof of invariance uses closed positive $(1,1)$-currents. Their pullback is defined through local plurisubharmonic potentials. There is no corresponding pullback operation for arbitrary currents.
-
+\Needspace{18\baselineskip}
 \begin{lemma}\label{lem:lee-gauduchon-modification}
 Let $\pi:Y\to X$ be a modification between connected compact complex manifolds, and let $\theta$ be a smooth closed real $(1,1)$-form on $X$. Then
 \[
@@ -121,19 +114,11 @@ Let $\pi:Y\to X$ be a modification between connected compact complex manifolds, 
 The pullback on real Bott--Chern cohomology in bidegree $(1,1)$ is injective.
 \end{lemma}
 \begin{proof}
-Suppose $T=\theta+\ddc u\geq0$. On a coordinate ball write $\theta=\ddc h$ with $h$ smooth. The function $h+u$ is plurisubharmonic, so $(h+u)\circ\pi$ is plurisubharmonic on the inverse image. It is not identically $-\infty$ on any open subset: every open subset of $Y$ meets the locus where $\pi$ is an isomorphism, and $h+u$ has no open pole set. The local pullbacks therefore define a positive current
+By \cref{prop:psef-cone-compact-base}, both pullback and pushforward preserve pseudoeffectivity. The underlying potential pullback is the one used in \cref{lem:modification-lone-pullback}. Since $\pi$ has degree one,
 \[
- \pi^*T=\pi^*\theta+\ddc(u\circ\pi).
+ \pi_*\pi^*\{\theta\}=\{\theta\}.
 \]
-This also proves local integrability of the composed potential. The constructions agree on overlaps, where the local potentials differ by a smooth pluriharmonic function.
-
-Conversely, let $S=\pi^*\theta+\ddc v\geq0$. Pushforward preserves positivity and commutes with differentiation, giving
-\[
- \pi_*S=\theta+\ddc(\pi_*v)\geq0.
-\]
-Here $\pi_*v$ initially denotes a scalar distribution. The identity $\pi_*\pi^*\theta=\theta$ follows by integration on the isomorphism locus: the exceptional sets have smooth volume zero, and $\pi$ has degree one. Locally, the distribution $\pi_*v+h$ has positive complex Hessian and hence a plurisubharmonic representative. Thus $\pi_*v$ is represented by a genuine quasi-plurisubharmonic function, proving pseudoeffectivity downstairs.
-
-Finally, if $\pi^*\theta=\ddc f$ for a smooth real $f$, pushforward gives $\theta=\ddc(\pi_*f)$. Taking a smooth elliptic trace shows that the scalar distribution $\pi_*f$ is smooth. Hence $\{\theta\}=0$, proving injectivity.
+Indeed, the current identity $\pi_*\pi^*\theta=\theta$ follows by integration on the isomorphism locus, whose complement has smooth volume zero. This left inverse proves injectivity and the reverse implication for pseudoeffectivity.
 \end{proof}
 
 The degree-one cohomology can be compared directly under a modification.
@@ -191,9 +176,9 @@ restriction proved above determines each class uniquely. The dual
 identifications are consequently canonical as well.
 \end{proof}
 
-\subsection{Geometric consequences and the mass obstruction}
+\subsection{Balanced metrics and the Hopf cone}
 
-Retain a connected compact complex manifold $X$ of dimension $n\geq2$, with $V_X=H^1_{\mathrm{dR}}(X,\mathbb R)$, $K_X=\ker j_X$, its Poincar\'e annihilator $W_X$, and the cones $\mathcal C_X,\operatorname{LG}(X)$ of \cref{sec:lee-gauduchon-cone}. In the Hopf example below, $\lambda$ and $\alpha$ are the Lee form and semipositive curvature from \cref{prop:lck-hopf-vaisman}.
+The presence of zero in the Lee--Gauduchon cone rules out nonzero pseudoeffective classes in the image of $j_X$. Balanced metrics satisfy this condition. On the Hopf threefold, by contrast, the Lee curvature gives a positive ray and the dual cone is an open half-line.
 
 \begin{corollary}\label{cor:lee-gauduchon-zero}
 The following conditions are equivalent:
@@ -210,7 +195,7 @@ An open cone in a finite-dimensional vector space that contains zero is the enti
 On a compact K\"ahler manifold the $\partial\bar\partial$-lemma gives $j_X=0$: every $\kappa_\lambda$ is closed and de Rham exact. Thus $K_X=V_X$ and $W_X=0$. Nonemptiness gives $\operatorname{LG}(X)=\{0\}$. Bimeromorphic invariance extends this conclusion to Fujiki's class $\mathcal C$.
 \end{proof}
 
-Consequently, a nonzero pseudoeffective class in the image of $j_X$ obstructs balanced metrics throughout the bimeromorphic class. For an LCK Lee class, this recovers the mechanism of \cref{prop:lck-balanced-obstruction}. Its known positive pairing against its own Gauduchon metric does not establish pseudoeffectivity: the latter still requires all Gauduchon tests, as stated in \cref{conj:lck-lee-psef}.
+Consequently, a nonzero pseudoeffective class in the image of $j_X$ obstructs balanced metrics throughout the bimeromorphic class. For LCK manifolds, \cref{conj:lck-lee-psef} would provide such a class.
 
 For the Hopf threefold of \cref{chap:hopf}, the covering description identifies the underlying manifold with $S^1\times S^5$, so $V_X=\R[\lambda]$. The class $j_X([\lambda])=\{\alpha\}$ is nonzero by \eqref{eq:lck-lee-degree}, and is pseudoeffective because $\alpha\geq0$. Negative multiples are not pseudoeffective, since their pairing against the fixed Gauduchon metric is negative. Thus
 \[
@@ -218,4 +203,4 @@ For the Hopf threefold of \cref{chap:hopf}, the covering description identifies 
  \operatorname{LG}(X)=\{a\in H^5_{\mathrm{dR}}(X,\R):
                                   \langle[\lambda],a\rangle>0\}.
 \]
-This explicit invariant is compatible with the failure of bounded Monge--Amp\`ere mass on the same manifold. The cone records linear cohomological tests. It supplies neither an upper mass bound nor the nonlinear tail estimates needed for equation limits.
+The same manifold has unbounded Monge--Amp\`ere mass by \cref{thm:hopf-unbounded}. The positive ray detected here controls linear cohomological pairings, which do not bound those nonlinear masses.
