@@ -3,6 +3,32 @@
 
 Pullback preserves the local positivity of a potential. Compact fibers force descent when the background has no vertical component; under a modification, a Jacobian factor accounts for the change in multiplier-ideal integrability.
 
+\subsection{Holomorphic disks}
+
+A smooth background need not have local potentials, but its pullback to a disk does. Testing there retains the exact lower curvature bound under a holomorphic map.
+
+\begin{lemma}\label{lem:smooth-disk-criterion}
+Let $\theta$ be a smooth real $(1,1)$-form on a complex manifold $M$, and let $u$ be quasi-plurisubharmonic on $M$. Then $\theta+\ddc u\geq0$ if and only if the following condition holds. For every holomorphic map $f:\Delta\to M$ from the unit disk whose pullback $u\circ f$ is not identically $-\infty$, the function $u\circ f+a$ is subharmonic wherever $a$ is a smooth local potential for $f^*\theta$.
+\end{lemma}
+\begin{proof}
+Suppose first that $\theta+\ddc u\geq0$. On a coordinate ball convolve with a smooth nonnegative radial kernel. The smooth functions $u_\epsilon$ satisfy
+\[
+ \ddc u_\epsilon\geq-\theta_\epsilon,
+ \qquad\theta_\epsilon\longrightarrow\theta\quad\text{smoothly}.
+\]
+Write $u=p-r$, with $p$ plurisubharmonic and $r$ smooth. The convolutions $p_\epsilon$ decrease to $p$. On a smaller disk where $u\circ f$ is genuine, $p_\epsilon\circ f$ therefore converges in $L^1_{\mathrm{loc}}$ to $p\circ f$, while $r_\epsilon\circ f$ converges smoothly. Pull back the smooth inequality and pass to distributions. This gives $\ddc(u\circ f)+f^*\theta\geq0$. Since $u\circ f=p\circ f-r\circ f$ is quasi-subharmonic, the distributional inequality makes $u\circ f+a$ subharmonic.
+
+Conversely, test on affine complex lines in a coordinate ball. For any fixed nonzero constant direction $\xi$, local integrability of $u$ implies that almost every parallel line has a genuine restriction. Fubini's theorem applied to nonnegative smooth test functions gives positivity of the scalar distribution $(\theta+\ddc u)(\xi,\bar\xi)$. Positivity for a countable dense set of constant directions proves positivity of the Hermitian matrix of coefficient measures, hence the current inequality.
+\end{proof}
+
+Consequently, holomorphic pullback preserves the background inequality wherever the pulled-back potential is genuine: apply the disk criterion to compositions of maps. We also use descent of subharmonicity under a finite disk map $\rho(t)=t^k$, $k\geq1$. If $h\circ\rho$ is subharmonic, local inverse branches make $h$ subharmonic off zero. It is bounded above near zero and has the canonical extension value there, since
+\[
+ h(0)=(h\circ\rho)(0)
+      =\limsup_{t\to0,\ t\ne0}h(t^k)
+      =\limsup_{z\to0,\ z\ne0}h(z).
+\]
+The removable-singularity theorem makes $h$ subharmonic at zero as well.
+
 \subsection{Compact fibers}
 
 \begin{proposition}\label{prop:psh-descent-submersion}
@@ -21,7 +47,7 @@ A holomorphic submersion admits local holomorphic sections. Composing $u+\rho\ci
 \]
 Positivity of a current of this pulled-back form implies positivity on the base: test in product coordinates and integrate a nonnegative compactly supported volume form of integral one in the fiber variables. It follows that $v\in\PSH(B,\theta)$.
 
-Conversely, the local plurisubharmonic characterization shows that pullback of a $\theta$-plurisubharmonic function by a submersion is $\pi^*\theta$-plurisubharmonic. It is genuine by surjectivity and local product coordinates. Uniqueness follows from surjectivity.
+Conversely, \cref{lem:smooth-disk-criterion} shows that pullback of a $\theta$-plurisubharmonic function by a submersion is $\pi^*\theta$-plurisubharmonic. It is genuine by surjectivity and local product coordinates. Uniqueness follows from surjectivity.
 \end{proof}
 
 \input{author/section_restricted_analytic_approximants}
@@ -52,6 +78,27 @@ In particular, on compact manifolds this is convergence in $L^1$.
 Hartogs' lemma bounds $v_j$ uniformly above on relatively compact subsets of $Y$. The pullbacks are therefore locally uniformly bounded above and have the common smooth lower curvature bound $-\pi^*\Omega_0$. After a smooth local correction, plurisubharmonic compactness gives a convergent subsequence on each connected coordinate region in $Z$, or convergence to $-\infty$ locally uniformly.
 
 Every such region meets the complement of the exceptional locus. There $\pi$ is a biholomorphism, and change of variables gives $L^1_{\mathrm{loc}}$ convergence to $v\circ\pi$. Thus collapse is excluded. Each subsequential limit agrees with $v\circ\pi$ off the exceptional locus, hence almost everywhere, since that analytic locus has smooth volume zero. The limit is unique. Applying this argument to every subsequence and a countable coordinate cover proves convergence of the whole sequence in $L^1_{\mathrm{loc}}(Z)$.
+\end{proof}
+
+Capacity convergence is also preserved by a modification. The comparison takes place away from small neighborhoods of the exceptional sets; a uniform comparison of capacities on the whole manifolds is unnecessary.
+
+\begin{lemma}\label{lem:modification-capacity-pullback}
+Let $\pi:Z\to Y$ be a modification between connected compact complex manifolds, each equipped with a smooth Hermitian capacity. For quasi-plurisubharmonic functions $v_j,v$ on $Y$,
+\[
+ v_j\longrightarrow v\text{ in capacity on }Y
+ \quad\Longleftrightarrow\quad
+ v_j\circ\pi\longrightarrow v\circ\pi\text{ in capacity on }Z.
+\]
+\end{lemma}
+\begin{proof}
+Choose a proper analytic set $S\subset Y$ such that $\pi$ is an isomorphism outside $D=\pi^{-1}(S)$. Both sets have capacity zero. For $\epsilon>0$, choose an open neighborhood $V$ of $D$ of capacity less than $\epsilon$. Properness gives a neighborhood $U_0$ of $S$ with $\pi^{-1}(U_0)\subset V$. Shrink it to an open $U$ with $\operatorname{Cap}_Y(U)<\epsilon$. The inverse map is biholomorphic near the compact set $Y\setminus U$. A finite cover by nested coordinate charts and the local-global capacity comparison of \cref{sec:hermitian-capacity} give a constant $C_\epsilon$ such that, for every Borel set $E\subset Y$,
+\[
+ \begin{split}
+ \operatorname{Cap}_Z(\pi^{-1}E)&\leq\epsilon+C_\epsilon\operatorname{Cap}_Y(E),\\
+ \operatorname{Cap}_Y(E)&\leq\epsilon+C_\epsilon\operatorname{Cap}_Z(\pi^{-1}E).
+ \end{split}
+\]
+Apply these inequalities to $E=\{|v_j-v|>\delta\}$ for each fixed $\delta>0$, omitting the pluripolar pole sets. First let $j\to\infty$, then $\epsilon\downarrow0$.
 \end{proof}
 
 \Needspace{13\baselineskip}

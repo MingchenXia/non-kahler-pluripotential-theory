@@ -1,51 +1,36 @@
 \chapter{Foundations on unibranch compact complex spaces}
 \label{app:hermitian-spaces}
 
-The smooth theory has a useful extension to singular spaces that does not require a K\"ahler resolution. The background pulls back to a smooth form on any resolution, although it may become degenerate there. We first justify descent of potentials for a nonclosed background. Envelopes and extended measures can then be transported through the resolution.
+A potential descends from a resolution when it is constant on each fiber. For a pulled-back background, local smooth correction and the maximum principle give this constancy on connected fibers. Descent then transports envelopes and compactness to the singular space, while vanishing on exceptional sets makes non-pluripolar measures independent of the resolution.
 
-Throughout this appendix $X$ is a reduced irreducible compact unibranch complex space of pure dimension $n\geq1$. Smooth functions and forms on $X$ are understood through compatible local embeddings in complex Euclidean spaces. A Hermitian form is locally the restriction of a smooth positive ambient form. The smooth real $(1,1)$-form $\theta$ below need not be positive or closed.
+Throughout this appendix $X$ is a reduced irreducible compact unibranch complex space of pure dimension $n\geq1$. Smooth functions and forms on $X$ are understood through compatible local embeddings in complex Euclidean spaces. A Hermitian form is locally the restriction of a smooth positive ambient form. Fix a smooth real $(1,1)$-form $\theta$ on $X$.
 
-We use three standard complex-space facts in the forms recalled and proved in the unibranch appendix of \cite{SGPT}. Resolutions exist and any two admit a common smooth resolution. A proper bimeromorphic map to a unibranch space has connected fibers. Finally, the Fornaess--Narasimhan criterion characterizes plurisubharmonic functions by upper semicontinuity and subharmonicity on holomorphic disks. We also use the disk-lifting argument given there: locally a holomorphic disk lifts through a proper surjective modification after a finite ramified cover of the disk. These facts concern complex spaces and do not require a K\"ahler metric.
+Resolutions and common smooth refinements exist, and a proper bimeromorphic map to a unibranch space has connected fibers; see \cite[Theorems B.1.1--B.1.3]{SGPT}. The Fornaess--Narasimhan criterion identifies plurisubharmonic functions by upper semicontinuity and subharmonicity on holomorphic disks \cite[Theorem B.2.1]{SGPT}. The ramified disk lift used below is the argument in \cite[proof of Theorem B.2.2]{SGPT}.
 
-\Needspace{21\baselineskip}
-\section{A definition retaining the nonclosed background}
+\section{Potentials and disk tests}
 
 \label{sec:space-background-setting}
-Let $X$ be a reduced irreducible compact unibranch complex space of pure dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form on $X$, interpreted through local embeddings. Neither positivity nor closedness of $\theta$ is assumed. Write $\Delta=\{z\in\mathbb C:|z|<1\}$ for the unit disc.
+The pullback of $\theta$ to the unit disk $\Delta$ has a smooth local potential. Disk tests therefore express the background inequality even when $\theta$ has no local potential on $X$.
 
 \begin{definition}\label{def:space-theta-psh}
-An upper semicontinuous function $u:X\to[-\infty,+\infty)$, not identically $-\infty$ on any nonempty open subset, belongs to $\PSH(X,\theta)$ if for every holomorphic disk $f:\Delta\to X$, either $u\circ f\equiv-\infty$, or $u\circ f$ is locally quasi-subharmonic in its canonical representative and
-\[
- \ddc(u\circ f)+f^*\theta\geq0
-\]
-on the disk. The inequality is interpreted in distributions. The requirement of the canonical representative excludes changing the value upwards at an isolated point.
+An upper semicontinuous function $u:X\to[-\infty,+\infty)$, not identically $-\infty$ on any nonempty open subset, is \emph{$\theta$-plurisubharmonic} if the following disk condition holds. For every holomorphic $f:\Delta\to X$, the function $u\circ f+a$ is subharmonic or identically $-\infty$ wherever $a$ is a smooth local potential for $f^*\theta$. The set of these functions is denoted by $\PSH(X,\theta)$.
 \end{definition}
 
-On a disk a smooth real $(1,1)$-form has a smooth local potential, even though $\theta$ need not have local potentials on $X$. Thus the displayed condition says that $u\circ f$ becomes subharmonic after addition of a local potential for $f^*\theta$.
+Two choices of $a$ differ by a harmonic function, so the condition is independent of that choice. On every disk where the pullback is genuine, it gives $\ddc(u\circ f)+f^*\theta\geq0$ in distributions.
 
 \begin{lemma}\label{lem:space-local-correction}
-Every function in \cref{def:space-theta-psh} is locally the sum of a plurisubharmonic function on the complex space and a smooth function. On a manifold, the definition agrees with $\theta+\ddc u\geq0$ for the canonical quasi-plurisubharmonic representative.
+Every member of $\PSH(X,\theta)$ is locally the sum of a plurisubharmonic function on $X$ and a smooth function. If $X$ is smooth, this definition agrees with \cref{def:theta-psh}.
 \end{lemma}
 \begin{proof}
-In a local embedding choose an ambient smooth strictly plurisubharmonic function $r$ with $\ddc r\geq\theta$ on a smaller neighborhood. Then $(u+r)\circ f$ is subharmonic or identically $-\infty$ on every disk. Upper semicontinuity and the Fornaess--Narasimhan criterion make $u+r$ plurisubharmonic there. The local genuineness required in the definition excludes the identically $-\infty$ alternative. This proves the local assertion.
-
-On a manifold, suppose first that $\theta+\ddc u\geq0$. On a coordinate ball regularize $u$ by convolution. The smooth functions $u_\epsilon$ satisfy
-\[
- \ddc u_\epsilon\geq-\theta_\epsilon,
- \qquad\theta_\epsilon\longrightarrow\theta\quad\text{smoothly}.
-\]
-One may write this regularization as convolution of a plurisubharmonic local correction, minus its smooth correction. Along a fixed holomorphic disk whose pullback is genuine, the plurisubharmonic convolutions decrease to that pullback; hence they converge locally in $L^1$ on the disk. Pulling back the smooth inequality and taking distributions proves the disk inequality for $u$.
-
-Conversely the first part gives a local quasi-plurisubharmonic representative. Test the disk inequality on affine complex lines in a coordinate ball. Fubini's theorem, applied to nonnegative smooth test functions, gives nonnegativity of the distribution $(\theta+\ddc u)(\xi,\bar\xi)$ for each constant complex direction $\xi$. Lines on which the pullback is identically $-\infty$ form a set of transverse Lebesgue measure zero by local integrability. Positivity for a countable dense set of constant directions proves positivity of the Hermitian matrix of coefficient measures. This is the current inequality.
+In a local embedding choose an ambient smooth strictly plurisubharmonic function $r$ with $\ddc r\geq\theta$ on a smaller neighborhood. For a disk $f$ and a local potential $a$ of $f^*\theta$, the function $r\circ f-a$ is subharmonic. Hence $(u+r)\circ f$ is subharmonic or identically $-\infty$. The Fornaess--Narasimhan criterion and the local nondegeneracy of $u$ make $u+r$ plurisubharmonic. The smooth case now follows from \cref{lem:smooth-disk-criterion}.
 \end{proof}
 
-\Needspace{15\baselineskip}
 \section{Descent through a resolution}
 
-Retain the space $X$, dimension $n$ and smooth real $(1,1)$-background $\theta$ of \cref{sec:space-background-setting}. Let $\pi:Y\to X$ be a smooth compact resolution. Use $\PSH(X,\theta)$ as defined in \cref{def:space-theta-psh}.
+The pullback of the background has no vertical component. A local correction therefore makes a potential plurisubharmonic near a fiber, and connectedness identifies the constants on its irreducible components.
 
 \begin{theorem}\label{thm:hermitian-space-descent}
-Let $\pi:Y\to X$ be a resolution, with $Y$ smooth and compact. Pullback is an order-preserving bijection
+Let $\pi:Y\to X$ be a resolution. Pullback is an order-preserving bijection
 \[
  \pi^*:\PSH(X,\theta)\longrightarrow\PSH(Y,\pi^*\theta).
 \]
@@ -60,32 +45,28 @@ For the converse take $v\in\PSH(Y,\pi^*\theta)$. Near a fiber choose the local c
 \]
 Its restriction to each compact irreducible component of the fiber is constant, possibly identically $-\infty$, by the maximum principle on a resolution of that component. Connectedness of the fiber makes the constants equal: intersecting components have the same value, and the finite component intersection graph is connected. Since $r\circ\pi$ is constant on the fiber, so is $v$.
 
-Thus $v=u\circ\pi$ for a unique function $u$ on $X$. It is upper semicontinuous: for each real $c$, the closed set $\{v\geq c\}$ has closed image under the proper map, and that image is $\{u\geq c\}$. The function is locally genuine because $v$ is genuine and $\pi$ is an isomorphism on a dense open subset.
+Thus $v=u\circ\pi$ for a unique function $u$ on $X$. It is upper semicontinuous: for each real $c$, the closed set $\{v\geq c\}$ has closed image under the proper map, and that image is $\{u\geq c\}$. If $u$ were identically $-\infty$ on a nonempty open set, the same would hold for $v$ on its open inverse image. Thus $u$ is locally genuine.
 
-It remains to retain the exact background in the disk test. Let $f:\Delta\to X$ have a genuine pullback $u\circ f$. Near a chosen point, after a finite cover $\rho(t)=t^k$ of discs, with local coordinate $t$ and positive integer $k$, there is a lift $f':\Delta\to Y$ with $\pi\circ f'=f\circ\rho$. Choose a smooth local function $a$ on the original disk with $\ddc a=f^*\theta$. The function
+It remains to retain the exact background in the disk test. Let $f:\Delta\to X$ have a genuine pullback $u\circ f$. Near a chosen point, take a curve in $\Delta\times_XY$ dominating the disk. Its normalization gives, after shrinking, a finite cover $\rho(t)=t^k$ and a holomorphic lift $f':\Delta\to Y$ with $\pi\circ f'=f\circ\rho$. Choose a smooth local function $a$ on the original disk with $\ddc a=f^*\theta$. The function
 \[
  (u\circ f+a)\circ\rho=v\circ f'+a\circ\rho
 \]
-is subharmonic by the smooth-manifold disk criterion, because its curvature is $\ddc(v\circ f')+f'^*\pi^*\theta\geq0$. Subharmonicity descends through $t\mapsto t^k$: away from the branch point use local inverse branches, and at the branch point use the locally bounded upper extension and its canonical limsup value. The equality of that value follows from surjectivity of the finite map. Hence $u\circ f+a$ is subharmonic. This proves the required disk inequality at every point and thus the bijection.
+is subharmonic by \cref{lem:smooth-disk-criterion}. Subharmonicity descends through $\rho$ by the finite-disk argument following that lemma. Thus $u\circ f+a$ is subharmonic at every point, proving the bijection.
 
-All remaining assertions follow from pointwise equality $v=u\circ\pi$ and surjectivity: inequalities with constants, suprema, and uniform bounds are the same upstairs and downstairs.
+Surjectivity preserves suprema, uniform bounds and inequalities with constants, proving the remaining assertions.
 \end{proof}
-
-The proof used a dominating smooth local correction, rather than a local potential for $\theta$. This is the step that allows the background to remain nonclosed.
 
 \section{Envelopes and normalized compactness}
 
-Retain the space $X$, dimension $n$ and smooth real $(1,1)$-background $\theta$ of \cref{sec:space-background-setting}. Let $\pi:Y\to X$ be a smooth compact resolution. Use $\PSH(X,\theta)$ as defined in \cref{def:space-theta-psh}. For $u\in\PSH(X,\theta)$, the ordinary envelope $P_\theta[u]$ is defined by the normalized competitors $a\preceq u$, where $a\preceq u$ means $a\leq u+C$ for a real constant $C$.
-
-For an extended-real function $f:X\to[-\infty,+\infty]$ with a nonempty family of $\theta$-plurisubharmonic minorants, locally uniformly bounded above, define $P_\theta(f)$ by the regularized supremum of that family, just as on a manifold.
+Fix a resolution $\pi:Y\to X$. The envelope constructions of \cref{sec:obstacle-envelopes,def:singularity-envelope} now apply on $X$. In the following obstacle statement the inequality against $f$ is pointwise, and its family of minorants is assumed nonempty and locally uniformly bounded above. The descent bijection identifies the competitors; the remaining issue is whether upper semicontinuous regularization commutes with pullback.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:space-envelope-pullback}
-Under these hypotheses the envelope is genuine and
+For such an extended-real obstacle $f:X\to[-\infty,+\infty]$, the envelope is genuine and
 \[
  P_{\pi^*\theta}(f\circ\pi)=P_\theta(f)\circ\pi.
 \]
-The same compatibility holds for the ordinary model envelope $P_\theta[u]$.
+It also holds for the ordinary model envelope $P_\theta[u]$, for every $u\in\PSH(X,\theta)$.
 \end{proposition}
 \begin{proof}
 The preceding bijection identifies the competitor families. Let $s$ be their pointwise supremum on $X$; its pullback is the pointwise supremum upstairs. Its regularization on $Y$ is a genuine $\pi^*\theta$-plurisubharmonic function, since there is a genuine lower competitor. It descends to a $\theta$-plurisubharmonic function $q$ by the theorem. Since $q\geq s$ and $q$ is upper semicontinuous, $q\geq s^*$.
@@ -93,18 +74,15 @@ The preceding bijection identifies the competitor families. Let $s$ be their poi
 For the reverse inequality fix $x\in X$ and $y\in\pi^{-1}(x)$. For each neighborhood $U$ of $x$, the unregularized supremum upstairs is bounded by $\sup_U s$ on the open neighborhood $\pi^{-1}(U)$ of $y$. Therefore $q(x)\leq\sup_U s$. Taking the infimum over $U$ gives $q(x)\leq s^*(x)$. This proves both the identity and genuineness downstairs. The proof for $P_\theta[u]$ is identical, because ordinary singularity order and its constants are preserved by pullback.
 \end{proof}
 
-The normalized space $\{u\in\PSH(X,\theta):\sup_Xu=0\}$ is compact when endowed with the $L^1$ topology of its pullbacks to a fixed resolution with a fixed smooth positive volume form. This topology is independent of those choices. Indeed, smooth positive volume forms on one compact resolution have equivalent norms. For a further smooth modification $\rho:Z\to Y$, a normalized sequence and its pullbacks are compact in their respective $L^1$ spaces by \cref{thm:normalized-compactness}. Off the exceptional analytic sets, $\rho$ is a biholomorphism, so every cluster limit upstairs is the pullback of the corresponding limit downstairs. Equality on this dense open set determines the canonical quasi-plurisubharmonic functions everywhere. The subsequence criterion proves convergence in either space exactly when it holds in the other. Apply this twice on a common resolution to compare any two choices. This argument asserts equivalence of the topologies, not a uniform comparison of their $L^1$ norms.
+The normalized space $\{u\in\PSH(X,\theta):\sup_Xu=0\}$ is compact in the $L^1$ topology of its pullbacks to $Y$, by \cref{thm:normalized-compactness} and descent. Smooth positive volume forms give equivalent norms on a fixed compact resolution. Under a further modification, pullback is continuous by \cref{lem:modification-lone-pullback} and bijective by descent. It is therefore a homeomorphism between the normalized compact spaces. A common resolution compares any two choices. This proves independence of the topology without asserting a comparison of the norms on different models.
 
-\Needspace{18\baselineskip}
 \section{Ideal envelopes defined on resolutions}
 
-Retain the space $X$, dimension $n$ and smooth real $(1,1)$-background $\theta$ of \cref{sec:space-background-setting}. Let $\pi:Y\to X$ be a smooth compact resolution. Use $\PSH(X,\theta)$ as defined in \cref{def:space-theta-psh}. Fix $u\in\PSH(X,\theta)$. On any smooth manifold, $\mathcal I(ta)$ denotes the multiplier ideal of a quasi-plurisubharmonic weight $ta$, for $t>0$; $a\sim_{\mathcal I}b$ means equality of these ideals at every such weight. The smooth ideal-envelope operator is $P_{\pi^*\theta}[\,\cdot\,]_{\mathcal I}$ of \cref{def:hermitian-i-envelope}.
-
-Define two potentials on $X$ to be \emph{resolution-ideal equivalent} when their pullbacks have equal multiplier ideals at all positive weights on one smooth resolution. \Cref{lem:ideal-equivalence-modification} and a common refinement show independence of that resolution. This is a definition through smooth models; it makes no identification with a multiplier-ideal sheaf defined directly on a singular local ring.
+Multiplier ideals can be compared on smooth models even when no intrinsic ideal sheaf on a singular local ring has been specified. Call two potentials on $X$ \emph{resolution-ideal equivalent} if their pullbacks are $\mathcal I$-equivalent on one smooth resolution. The all-weight equivalence of \cref{lem:ideal-equivalence-modification}, applied on a common refinement, makes this independent of the resolution. The smooth projection of \cref{thm:hermitian-i-projection} then defines an envelope in this class.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:space-resolution-i-envelope}
-There is a unique potential $P_\theta[u]_{\mathcal I}^{\mathrm{res}}$ on $X$ satisfying
+For $u\in\PSH(X,\theta)$, there is a unique potential $P_\theta[u]_{\mathcal I}^{\mathrm{res}}$ on $X$ satisfying
 \[
  P_\theta[u]_{\mathcal I}^{\mathrm{res}}\circ\pi
        =P_{\pi^*\theta}[u\circ\pi]_{\mathcal I}
@@ -117,15 +95,16 @@ For a fixed resolution the right side exists by \cref{thm:hermitian-i-projection
 
 \section{Extended measures and finite damping}
 
-Retain the space $X$, dimension $n$ and smooth real $(1,1)$-background $\theta$ of \cref{sec:space-background-setting}. Let $\pi:Y\to X$ be a smooth compact resolution. Use $\PSH(X,\theta)$ as defined in \cref{def:space-theta-psh}. Choose $\pi$ to be an isomorphism over the regular locus $X_{\mathrm{reg}}$, and put $X_{\mathrm{sing}}=X\setminus X_{\mathrm{reg}}$. The symbol $\pi_*$ denotes pushforward of measures. Write $\mathrm{MA}^{\mathrm{ext}}_{Y,\pi^*\theta}$ for the extended non-pluripolar measure on the smooth resolution.
+Write $X_{\mathrm{reg}}$ and $X_{\mathrm{sing}}$ for the regular and singular loci. Choose the resolution to be an isomorphism over $X_{\mathrm{reg}}$. The extended measure is determined on this isomorphism locus because it vanishes on the exceptional set. Its pushforward can thus be compared across resolutions even when its total mass is infinite.
 
 For $u\in\PSH(X,\theta)$ define
 \begin{equation}\label{eq:space-extended-ma}
  \mathrm{MA}^{\mathrm{ext}}_{X,\theta}(u)
    =\pi_*\mathrm{MA}^{\mathrm{ext}}_{Y,\pi^*\theta}(u\circ\pi),
 \end{equation}
-using a resolution that is an isomorphism over $X_{\mathrm{reg}}$.
+where $\mathrm{MA}^{\mathrm{ext}}_{Y,\pi^*\theta}$ is the extended measure of \cref{thm:arbitrary-extended-ma} on $Y$.
 
+\enlargethispage{2\baselineskip}
 \begin{theorem}\label{thm:space-extended-measures}
 The right side is independent of the resolution. It is a positive sigma-finite Borel measure, gives zero mass to $X_{\mathrm{sing}}$ and to locally pluripolar sets, and may have infinite total mass. For bounded $u$ it is finite. Put $r_n=\max(n-2,0)$. There are finite constants $C$ and, for each $q>r_n$, $C_q$, depending only on the fixed background data and on $q$ in the second case, such that for every nonpositive $u\in\PSH(X,\theta)$ and $p>0$,
 \[
@@ -141,15 +120,15 @@ On a resolution the preimage of $X_{\mathrm{sing}}$ is a proper analytic set. Th
 
 Positivity follows upstairs. Sigma-finiteness also follows from the smooth construction: on the regular locus the resolution is a Borel isomorphism, so the finite-measure sets there push forward to a countable finite-measure exhaustion; the remaining analytic set has measure zero. Locally pluripolar sets pull back to pluripolar sets off the exceptional locus, and the exceptional locus itself has zero mass. Thus the stated vanishing holds.
 
-If $u$ is bounded, its pullback is bounded on the compact smooth resolution. Local bounded-product estimates give finite total mass. For general nonpositive $u$, apply \cref{thm:general-background-damping} on $Y$ to the arbitrary smooth background $\pi^*\theta$. Pushforward and $u\circ\pi$ identify the weighted integrals exactly. No uniform bound for the undamped masses is used.
+If $u$ is bounded, its pullback is bounded on the compact smooth resolution. Local bounded-product estimates give finite total mass. For general nonpositive $u$, apply \cref{thm:general-background-damping} on $Y$ to the arbitrary smooth background $\pi^*\theta$. Pushforward and $u\circ\pi$ identify the weighted integrals exactly. The constants come from the fixed smooth background and Hermitian metric on $Y$.
 \end{proof}
 
-Convergence in capacity can likewise be tested on a resolution and is independent of that choice. Here one uses any smooth Hermitian capacity on the resolution. For a further smooth modification, remove neighborhoods of the exceptional analytic sets having arbitrarily small capacity on each manifold. On compact subsets of the remaining isomorphism locus, a finite cover by biholomorphic charts compares the local capacities in both directions. Thus capacity convergence downstairs is equivalent to capacity convergence of the pullbacks. A common resolution proves the assertion for any two resolutions of $X$.
+Define capacity convergence on $X$ by capacity convergence of pullbacks to a resolution, using a smooth Hermitian metric there. The local capacity comparison of \cref{sec:hermitian-capacity} makes the metric immaterial, and \cref{lem:modification-capacity-pullback} applied on a common resolution makes the choice of model immaterial.
 
-It follows from \cref{thm:general-background-damping} and proper pushforward that both damped measures in the theorem are weakly continuous under this capacity convergence, for nonpositive potentials. For a sequence of nonpositive potentials $u_j\in\PSH(X,\theta)$ converging in capacity, the undamped measure is weakly continuous if, in addition, its total masses are uniformly bounded and its masses on $\{u_j<-T\}$ tend uniformly to zero as the real number $T$ tends to infinity. These are exactly the smooth tail hypotheses; the identities of measures and of sublevel sets under pullback preserve them.
+It follows from \cref{thm:general-background-damping} and proper pushforward that both damped measures in the theorem are weakly continuous under this capacity convergence, for nonpositive potentials. For a sequence of nonpositive potentials $u_j\in\PSH(X,\theta)$ converging in capacity, the undamped measure is weakly continuous if, in addition, its total masses are uniformly bounded and its masses on $\{u_j<-T\}$ tend uniformly to zero as the real number $T$ tends to infinity. Pullback preserves these mass and sublevel conditions.
 
-\section{The limits of this extension}
+\section{Degenerate equations and singular traces}
 
-The appendix establishes potentials, ordinary envelopes, resolution-ideal envelopes, normalized compactness and extended measures on unibranch compact spaces. The pullback of a Hermitian background is generally degenerate, so the smooth strictly positive equation theorem cannot simply be applied on the resolution. A pulled-back smooth volume also vanishes along the exceptional locus. Existence, regularity and normalization for such equations require the corresponding degenerate estimates.
+Descent of potentials does not supply an equation estimate on the resolution. A pulled-back Hermitian form is generally degenerate there, and a pulled-back smooth volume can vanish along the exceptional locus. Existence, regularity and normalization therefore require estimates adapted to those degeneracies, as discussed in \cref{qu:singular-space-equations-program}.
 
-The intrinsic restricted-ideal trace of the smooth theory also needs a separate construction when the subspace is contained in the singular locus. The resolution-ideal envelope alone supplies neither that trace nor a regularization theorem on the singular local ring. These are specific remaining directions. The extension proved here uses local complex-space theory and the arbitrary-background results on smooth resolutions, without requiring a K\"ahler resolution or bounded mass.
+An intrinsic restricted-ideal trace on a subspace contained in the singular locus requires regularization compatible with restriction there. The resolution-ideal envelope alone supplies neither this regularization nor the trace.
