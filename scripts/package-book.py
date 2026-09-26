@@ -118,6 +118,7 @@ for name in (
     "research/editorial/chapter-twenty-seven-rewrite-173.md",
     "research/editorial/chapter-twenty-eight-rewrite-174.md",
     "research/editorial/chapter-twenty-nine-rewrite-175.md",
+    "research/editorial/chapter-thirty-rewrite-176.md",
     "research/supplied-geometric-normalization-20260926.json",
     "research/supplied-restricted-invariants-20260926.json",
     "research/source-disposition-145.json",

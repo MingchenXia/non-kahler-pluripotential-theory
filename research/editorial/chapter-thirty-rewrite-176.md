@@ -1,0 +1,29 @@
+# Chapter 30 integrated rewrite — checkpoint176
+
+Baseline: checkpoint175, `f36e2ec333fb66f2598211a9d98916f39e0243fe`. The complete original chapter and all nine recursive author inputs were read before revision. This is a whole-chapter pass in the ongoing queue, after the supplied geometric-normalization paper was integrated at checkpoint167.
+
+## Mathematical and editorial changes
+
+Seven sections and four subsections replace ten sections and one subsection. Finite and extended domination form one section. Common-envelope extraction and fixed-measure continuity form another; moving bounded carriers and their continuity theorem form a third. The minimal and prescribed-reference existence proofs precede the final section on the zero-exponent normalization, which now includes the nonuniqueness example. All fourteen formal statements are byte-identical, all fourteen proofs remain, and all thirty-one labels are preserved. Nine proof blocks are byte-identical when compared within their original files; the five changed proofs simplify their use of earlier results without changing the hypotheses or conclusions. No other author input is edited.
+
+The normalized model bound is proved once in the chapter setup and used in the compactness and existence arguments. In the positive continuous-density stage, the already constructed common lower envelope and common upper bound give a genuine L1 cluster directly, removing a separate lower estimate for the suprema. The minimal-class argument cites earlier bounded-potential membership instead of proving it again. Its zero-exponent barrier uses only the upper bound H=max(0,sup h). The projective nonuniqueness example uses the earlier Kähler-modification upper-mass theorem, retaining the lower-volume comparison explicitly.
+
+Finite-mass domination is still proved first and applied to the finite-mass auxiliary difference envelope before the extended domination theorem. Finite-level restrictions justify subtraction in extended-measure comparisons. The extraction fixes one summable-error subsequence and then constructs envelopes for every stretching factor; it does not discard a different prefix for each factor. The exponential barrier retains its positive-lower-mass and ordinary-type alternatives. Fixed-measure and moving-carrier convergence retain their distinct integral and tail controls. At exponent zero the scalar is unique, while the conclusion for potentials is a subsequential limit equation. None of these distinctions is replaced by a global bounded-mass assumption.
+
+## Dependencies and review scope
+
+Direct dependency reads include the earlier ordinary-type common-barrier criterion and its two consequences, singular domination with a smaller background, the bounded subsolution theorem, the raw-tail continuity proof, the fixed non-pluripolar integral and normalized-exponential lemmas, the moving bounded-measure integral lemma, the bounded-carrier representation, and the Kähler-modification bounded-mass lemma. The preceding Chapter 29 ending and following Chapter 31 opening were read as transitions. The prescribed ordinary-type Lp theorem was consulted at statement/context scope; its complete earlier review retains its scope. The Chapter 33 general-measure source paragraph was also consulted without modification.
+
+The complete original and revised proof reads recorded at checkpoint136, including the identified ALS26 v1 source proofs, remain scoped source evidence. This pass reuses those source checks; it does not claim a fresh version search or a complete new external-paper audit. No new Popovici result or independent verifier run is used. The 190 historical verifier records and three hidden Nakamaye inputs are to remain unchanged. The existing writing-skill rules already cover these changes; no new author correction requires a skill update.
+
+## Release checks
+
+The first complete revised direct read corrects an overly unconditional description of the auxiliary difference envelope: its vanishing property is constructed in the zero-domination argument. It also makes bounded-potential envelope-class membership explicit by an earlier reference.
+
+All thirty changed pages in the first output were inspected directly. A local guard keeps the lower scalar-bound setup with its display. The second complete revised direct read covers all nine inputs after this adjustment, including every proof and both transitions. These are direct mathematical/editorial reads, not independent verification.
+
+The house audit has zero errors and one inherited chapter-label warning. The 809-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 52 selected final pages pass visual review: 2 changed images were directly inspected and 50 match the preceding inspected render byte for byte. The first render included direct inspection of 30 changed pages. Both outputs rebuild from a fresh empty source-package extraction with identical page text; the companion is byte-identical to checkpoint175. There are 33 active chapters and 221 author inputs. The 190 historical verifier reports and three hidden sources remain unchanged. Existing source checks are reused at their recorded scopes; no new independent verification is claimed.
+
+The output selection covers the complete Chapter 30 and adjacent chapter transitions, front matter and contents, and all other changed body pages, including renumbered references in Chapters 13, 25, 31, 32 and 33. Final package manuscript and build-script payloads are compared with those of the fresh reconstruction after research documentation is finalized. See build-snapshot-176.json and source-package-portability-176.json.
+
+Continue with the complete present Chapter 31 and all its nested inputs, then Chapter 32. The broader writing and research goal remains active and incomplete.
