@@ -1,18 +1,21 @@
 \chapter{Fibrations and toric models}
 \label{chap:hopf-reduction}
 
-A non-K\"ahler manifold may contain a substantial K\"ahler theory in its quotient geometry. The Hopf manifold gives an explicit example. Its closed line-bundle potentials descend to projective space. Its Hermitian Monge--Amp\`ere operator, when restricted to potentials that descend, is also determined by an operator on that base. We prove these statements before describing their convex interpretation.
+The elliptic fibers of a scalar Hopf manifold force potentials in a pulled-back closed class to descend to projective space. Fiber integration then identifies their weighted section norms and expresses the Hermitian Monge--Amp\`ere measure of a descended potential through its measure on the base. The resulting mass bound and reduced equation describe a class of potentials inside a manifold whose unrestricted masses can be infinite. For potentials invariant under the coordinate circle action, logarithmic coordinates turn curvature positivity into convexity, with gradients taking values in a simplex.
 
-\section{Weighted sections on the projective base}\label{sec:hopf-projective-sections}
-
-Fix integers $n\geq2$ and $k\geq0$. Use the compact Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n-1}$, forms $\alpha,\zeta,\omega$ and probability volume $\mathrm{d}V$ of \cref{prop:hopf-bergman-exact}. Write $\sigma$ for the Fubini--Study form on the base, normalized by $\int_{\mathbb P^{n-1}}\sigma^{n-1}=1$. Thus
+Fix $n\geq2$ and use the Hopf manifold $X_n$, projection $\pi:X_n\to\mathbb P^{n-1}$ and forms $\alpha,\zeta,\omega$ of \cref{prop:hopf-bergman-exact}. Write $\sigma$ for the Fubini--Study form normalized by $\int_{\mathbb P^{n-1}}\sigma^{n-1}=1$. The identities needed below are
 \[
- \alpha=\pi^*\sigma,\qquad
+ \alpha=\pi^*\sigma,\qquad \omega=\alpha+\zeta,\qquad
+ \zeta^2=0,\qquad
  \mathrm{d}V=\tfrac12\alpha^{n-1}\wedge\zeta,\qquad
  \int_{\pi^{-1}(y)}\zeta=2.
 \]
-Let $L_k$ with its metric be the line bundle of \cref{prop:hopf-bergman-exact}. Use the weighted norms and kernels $K,B$ of \cref{sec:weighted-section-spaces,sec:weighted-bergman-kernel}, and the bounded weighted algebra of \cref{sec:bounded-section-algebra}. The bundle is naturally the pullback of $\mathcal O(k)$ with its Fubini--Study metric. For example, the homogeneous-polynomial description gives both transition functions and the pointwise squared norm $|f(z)|^2|z|^{-2k}$, which is unchanged by every nonzero complex scalar.
 
+\section{Weighted sections on the projective base}\label{sec:hopf-projective-sections}
+
+The line bundles $L_k$ from \cref{prop:hopf-bergman-exact}, for integers $k\geq0$, are the pullbacks of $\mathcal O(k)$ with its Fubini--Study metric. Their homogeneous sections have squared norm $|f(z)|^2|z|^{-2k}$, invariant under every nonzero complex scalar. Once the weight descends, integrating along the fibers therefore preserves the weighted norms and kernels of \cref{sec:weighted-section-spaces,sec:weighted-bergman-kernel}.
+
+\Needspace{18\baselineskip}
 \begin{theorem}\label{thm:hopf-weighted-section-descent}
 Let $k\geq0$ be an integer and $u\in\PSH(X_n,k\alpha)$. Then $u=\pi^*v$ for a unique $v\in\PSH(\mathbb P^{n-1},k\sigma)$. For every positive integer $m$, pullback identifies the weighted section spaces isometrically; for a section $s$ in the displayed space on the base,
 \[
@@ -32,26 +35,24 @@ Descent of the potential follows from \cref{prop:psh-descent-submersion}. The un
                          \int_{\pi^{-1}(y)}\zeta
  =\int_{\mathbb P^{n-1}}F\sigma^{n-1}.
 \]
-Apply this formula to $F=|s|^2\mathrm{e}^{-mv}$, with the value on the pole set immaterial. It proves equality of the possibly infinite integrals. Finiteness characterizes the multiplier-ideal section spaces, so it proves the asserted isometry without needing an extension theorem for sections. An orthonormal basis therefore pulls back to an orthonormal basis, which proves the kernel identities. Finally, a nonnegative function on the base is bounded if and only if its pullback is bounded, proving the statement about bounded weighted sections and their multiplication.
+Apply this formula to $F=|s|^2\mathrm{e}^{-mv}$, with the value on the pole set immaterial. It proves equality of the possibly infinite integrals. Finiteness characterizes the multiplier-ideal section spaces, giving the asserted isometry. An orthonormal basis therefore pulls back to an orthonormal basis, which proves the kernel identities. Finally, a nonnegative function on the base is bounded if and only if its pullback is bounded, proving the statement about bounded weighted sections and their multiplication.
 \end{proof}
-
-In particular, section asymptotics in this closed class are those of a projective manifold of dimension $n-1$. Any theorem from \cite{SGPT} applied to them must use that dimension and the base curvature $k\sigma$. The theorem does not identify such an asymptotic with an $n$-dimensional Hermitian mass.
 
 \section{The Hermitian operator on descended potentials}
 
-Use the compact Hopf manifold $X_n$ of dimension $n\geq2$ and its holomorphic projection $\pi:X_n\to\mathbb P^{n-1}$ from \cref{prop:hopf-bergman-exact}. Let $\sigma$ be the normalized Fubini--Study form on the base. Retain the forms $\alpha=\pi^*\sigma$, $\zeta$, $\omega=\alpha+\zeta$ and the probability volume $\mathrm{d}V=\tfrac12\alpha^{n-1}\wedge\zeta$ from \cref{sec:hopf-projective-sections}; every fiber has $\zeta$-mass two. Write $\mathrm{MA}^{\mathrm{ext}}$ for the extended non-pluripolar measure, and let $k\geq0$ be an integer.
+The pulled-back curvature has zero top power because the base has dimension $n-1$. Adding $\zeta$ supplies the fiber direction. Since $\zeta^2=0$, the top power then consists of a single mixed term, whose fiber integral determines the mass.
 
 If $\nu$ is a positive Borel measure on $\mathbb P^{n-1}$, for nonnegative Borel test functions $F$ on $X_n$ we write $\pi^*\nu\wedge\zeta$ for the measure defined by
 \[
  \int_{X_n}F\,\pi^*\nu\wedge\zeta
  =\int_{\mathbb P^{n-1}}
-        \left(\int_{\pi^{-1}(y)}F\zeta\right)\mathrm{d}\nu(y)
- \quad(F\geq0).
+        \left(\int_{\pi^{-1}(y)}F\zeta\right)\mathrm{d}\nu(y).
 \]
-This agrees with the usual product when $\nu$ is a smooth top-degree form. The notation here uses the smooth submersion and its fiber measure; it asserts no pullback operation for arbitrary singular maps.
+For a smooth top-degree form $\nu$, this agrees with its pullback wedged with $\zeta$.
 
+\Needspace{18\baselineskip}
 \begin{theorem}\label{thm:hopf-descended-hermitian-ma}
-For $v\in\PSH(\mathbb P^{n-1},\sigma)$ and $u=\pi^*v$, we have $u\in\PSH(X_n,\omega)$ and
+For a quasi-plurisubharmonic function $v$ on $\mathbb P^{n-1}$, the pullback $u=\pi^*v$ belongs to $\PSH(X_n,\omega)$ if and only if $v\in\PSH(\mathbb P^{n-1},\sigma)$. In this case
 \[
  \mathrm{MA}^{\mathrm{ext}}_\omega(u)
  =n\,\pi^*\mathrm{MA}^{\mathrm{ext}}_\sigma(v)\wedge\zeta.
@@ -62,18 +63,25 @@ Consequently
  =2n\int_{\mathbb P^{n-1}}\mathrm{MA}^{\mathrm{ext}}_\sigma(v)
  \leq2n.
 \]
-Equality holds for bounded $v$. In contrast, for $v\in\PSH(\mathbb P^{n-1},k\sigma)$,
+Equality holds for bounded $v$. For an integer $k\geq0$ and $v\in\PSH(\mathbb P^{n-1},k\sigma)$,
 \[
  \mathrm{MA}^{\mathrm{ext}}_{k\alpha}(\pi^*v)=0
 \]
 as an $n$-dimensional measure on $X_n$.
 \end{theorem}
 \begin{proof}
-The form-current decomposition is
+If $v$ is $\sigma$-plurisubharmonic, then
 \[
  \omega+\ddc u=\pi^*(\sigma+\ddc v)+\zeta\geq0.
 \]
-First assume $v$ bounded. Local Bedford--Taylor products commute with this smooth projection: in product coordinates the local bounded potential is independent of the fiber variable, and local decreasing smooth plurisubharmonic approximations give this assertion directly. Since $\zeta^2=0$ and the base has dimension $n-1$, expansion gives
+Conversely, if the left side is positive, wedge it with the smooth semipositive form $\zeta$ and push forward. Since $\zeta^2=0$ and its fiber integral is two,
+\[
+ \pi_*\bigl((\omega+\ddc u)\wedge\zeta\bigr)
+ =2(\sigma+\ddc v)\geq0.
+\]
+This identity of currents follows by testing against a smooth form on the base and integrating in the fiber variables. It proves the converse.
+
+For the measure formula, first take bounded $v\in\PSH(\mathbb P^{n-1},\sigma)$. By \cref{lem:bounded-products-submersion}, its bounded products commute with $\pi^*$. Since $\zeta^2=0$ and the base has dimension $n-1$, expansion gives
 \[
  (\omega+\ddc u)^n
  =n\,\pi^*(\sigma+\ddc v)^{n-1}\wedge\zeta.
@@ -84,42 +92,45 @@ For general $v$, normalize $v\leq0$ and use $v_j=\max(v,-j)$. Because $\sigma$ i
 
 The mass formula follows because each fiber has $\zeta$-mass two. The base extended mass is at most one: its truncation measure restricted to $\{v>-j\}$ is bounded above in total mass by the full bounded product, whose mass is $\int\sigma^{n-1}=1$ by closed Stokes. For bounded $v$ no part is removed and equality holds.
 
-For the final assertion, the bounded products of $k\alpha+\ddc\pi^*v_j$ are pulled back from a base of dimension $n-1$, so their $n$th powers vanish. The same truncation argument gives zero extended measure. If $k=0$, the only genuine base potentials are constants and the assertion is immediate.
+For the final assertion, take bounded truncations of $v\in\PSH(\mathbb P^{n-1},k\sigma)$. Their pulled-back currents have zero $n$th power by \cref{lem:bounded-products-submersion}. Restricting to the truncation levels and taking the increasing limit gives zero extended measure, also when $k=0$.
 \end{proof}
 
-Thus the potentials that descend to the base have uniformly bounded Hermitian mass, even on the Hopf threefold where unrestricted upper mass is infinite. In particular, the unbounded-mass phenomenon proved in \cref{chap:hopf} requires potentials with nonconstant behavior along the elliptic fibers.
+If an $\omega$-plurisubharmonic potential is constant on the fibers, the local-section argument in \cref{prop:psh-descent-submersion} gives a quasi-plurisubharmonic base potential. The theorem therefore bounds its Hermitian mass by $2n$. On the Hopf threefold this bound is six, so the unbounded masses in \cref{chap:hopf} require potentials that vary along the fibers.
 
 \section{A reduced Monge--Amp\`ere equation}
 
-Use the compact Hopf manifold $X_n$ of dimension $n\geq2$ and its holomorphic projection $\pi:X_n\to\mathbb P^{n-1}$ from \cref{prop:hopf-bergman-exact}. Let $\sigma$ be the normalized Fubini--Study form on the base. Retain the forms $\alpha=\pi^*\sigma$, $\zeta$, $\omega=\alpha+\zeta$ and the probability volume $\mathrm{d}V=\tfrac12\alpha^{n-1}\wedge\zeta$ from \cref{sec:hopf-projective-sections}; every fiber has $\zeta$-mass two. The scalar $c$ in the equations below is positive.
+The measure formula reduces an equation with descended density and potential to the projective base. Closedness fixes the scalar there, and bounded comparison gives uniqueness within this class of potentials.
 
 Let $f\geq0$ be in $L^p(\mathbb P^{n-1},\sigma^{n-1})$, $p>1$, with $\int f\sigma^{n-1}>0$. Among potentials $u=\pi^*v$ with bounded $v\in\PSH(\mathbb P^{n-1},\sigma)$, the equation
 \begin{equation}\label{eq:hopf-reduced-equation}
- (\omega+\ddc u)^n=c(f\circ\pi)\,\mathrm{d}V
+ (\omega+\ddc u)^n=c(f\circ\pi)\,\mathrm{d}V,\qquad c>0,
 \end{equation}
 is equivalent to
 \[
  (\sigma+\ddc v)^{n-1}=\frac{c}{2n}f\sigma^{n-1}.
 \]
-Indeed \cref{thm:hopf-descended-hermitian-ma} and $\mathrm{d}V=\frac12\pi^*(\sigma^{n-1})\wedge\zeta$ give one implication. For the other, push the measures forward by $\pi$; the common fiber integral is two, so their equality is also necessary. Integrating the base equation fixes
+Indeed \cref{thm:hopf-descended-hermitian-ma} and $\mathrm{d}V=\frac12\pi^*(\sigma^{n-1})\wedge\zeta$ give one implication. For the other, push the measures forward by $\pi$; the common fiber integral is two, so their equality is also necessary.
+
+\Needspace{5\baselineskip}
+Integrating the base equation fixes
 \[
  c=\frac{2n}{\int_{\mathbb P^{n-1}}f\sigma^{n-1}}.
 \]
-Since $\sigma$ is closed, it satisfies the Guan--Li condition. Apply \cref{uni-thm:GL-intro} to $(\mathbb P^{n-1},\sigma)$. It gives a continuous base solution with the scalar just computed, unique up to constants among bounded $\sigma$-plurisubharmonic functions. Consequently \eqref{eq:hopf-reduced-equation} has a continuous solution unique up to constants within the descended class. For smooth positive $f$, \cref{thm:tw-smooth} on the same base gives smooth $v$, with the same scalar fixed by Stokes. Both existence and uniqueness therefore follow from results proved earlier in this book.
+Since $\sigma$ is closed, it satisfies the Guan--Li condition. Apply \cref{uni-thm:GL-intro} to $(\mathbb P^{n-1},\sigma)$. It gives a continuous base solution with the scalar just computed, unique up to constants among bounded $\sigma$-plurisubharmonic functions. Consequently \eqref{eq:hopf-reduced-equation} has a continuous solution unique up to constants within the descended class. For smooth positive $f$, \cref{thm:tw-smooth} on the same base gives smooth $v$, with the same scalar fixed by Stokes.
 
-The same measure calculation, without an existence assertion, transforms, for a real parameter $\lambda$, a right side $c \mathrm{e}^{\lambda u}(f\circ\pi)\mathrm{d}V$ into $(c/(2n))\mathrm{e}^{\lambda v}f\sigma^{n-1}$. If $f$ depends on the fiber variable, this reduction no longer applies.
+For a real parameter $\lambda$, the same calculation identifies an equation with right side $c\mathrm{e}^{\lambda u}(f\circ\pi)\mathrm{d}V$ with the base equation having right side $(c/(2n))\mathrm{e}^{\lambda v}f\sigma^{n-1}$.
 
-\section{Convex potentials and the missing direction}
+\section{Logarithmic coordinates and the gradient simplex}
 
-Use the compact Hopf manifold $X_n$ of dimension $n\geq2$ and its holomorphic projection $\pi:X_n\to\mathbb P^{n-1}$ from \cref{prop:hopf-bergman-exact}. Let $\sigma$ be the normalized Fubini--Study form on the base. Retain the forms $\alpha=\pi^*\sigma$, $\zeta$, $\omega=\alpha+\zeta$ and the probability volume $\mathrm{d}V=\tfrac12\alpha^{n-1}\wedge\zeta$ from \cref{sec:hopf-projective-sections}; every fiber has $\zeta$-mass two. On the covering space $\mathbb C^n\setminus\{0\}$ use coordinates $z_1,\ldots,z_n$. For real functions of $x=(x_1,\ldots,x_n)\in\mathbb R^n$, let $\nabla$ and $D^2$ denote the Euclidean gradient and Hessian, and write $F_i=\partial F/\partial x_i$, $F_{ij}=\partial^2F/\partial x_i\partial x_j$. Let $e_i$ be the coordinate vectors and $\mathbf1=(1,\ldots,1)$.
+For a circle-invariant potential, logarithmic coordinates turn curvature positivity into convexity. Projective scaling fixes the sum of the gradient coordinates; boundedness on projective space makes each coordinate nonnegative. Strict positivity then fills the interior of the resulting simplex.
 
-Fix a real number $k>0$ and let $v$ be a smooth function on $\mathbb P^{n-1}$ invariant under the coordinate circle action. Put $u=\pi^*v$. On the locus where all coordinates are nonzero, set $x_i=\log|z_i|^2$ and
+Here allow $k>0$ to be real. Let $v$ be a smooth function on $\mathbb P^{n-1}$ invariant under the coordinate circle action, and put $u=\pi^*v$. In the covering coordinates $z_1,\ldots,z_n$, on the locus where all coordinates are nonzero, set $x_i=\log|z_i|^2$ and
 \[
  F(x)=k\log\left(\sum_{i=1}^n \mathrm{e}^{x_i}\right)+u(x).
 \]
-Circle invariance makes this a function of $x$. Since $u$ is pulled back from projective space, it is unchanged under every simultaneous real translation of the $x_i$. Hence for every $t\in\mathbb R$,
+Write $\nabla F$ and $D^2F$ for its Euclidean gradient and Hessian, and $F_i,F_{ij}$ for their entries. Let $e_i$ be the coordinate vectors and $\mathbf1=(1,\ldots,1)$. Circle invariance makes $u$ a function of $x$, while projective scaling makes it unchanged under simultaneous translation of the $x_i$. Thus, for every $t\in\mathbb R$,
 \begin{equation}\label{eq:hopf-convex-translation}
- F(x+t\mathbf1)=F(x)+kt,\qquad \mathbf1=(1,\ldots,1).
+ F(x+t\mathbf1)=F(x)+kt.
 \end{equation}
 
 \begin{proposition}\label{prop:hopf-convex-hyperplane}
@@ -129,8 +140,9 @@ On this locus, positivity of $k\alpha+\ddc u$ is equivalent to convexity of $F$.
 \]
 and $D^2F\,\mathbf1=0$. If $k\sigma+\ddc v$ is positive definite on the base, the gradient induces a bijection from $\mathbb R^n/\mathbb R\mathbf1$ onto the relative interior of $\Sigma_k$.
 \end{proposition}
+\Needspace{8\baselineskip}
 \begin{proof}
-The current-form $k\alpha+\ddc u$ is $\ddc F$ on the logarithmic cover. In the coordinates $z_i$, its Hermitian coefficient matrix is a positive constant times
+On the covering space, $k\alpha+\ddc u=\ddc F$. In the coordinates $z_i$, its Hermitian coefficient matrix is a positive constant times
 \[
  \left(\frac{F_{ij}}{z_i\overline z_j}\right)_{i,j}.
 \]
@@ -152,4 +164,4 @@ Conversely take $p_i>0$ with $\sum_i p_i=k$. The function $F(x)-p\cdot x$ is tra
 is strictly positive on every nonzero vector of $H$, and has a positive minimum on its unit sphere. The bounded difference between $F$ and $k\log\sum \mathrm{e}^{x_i}$, together with $\log\sum \mathrm{e}^{x_i}\geq\max_i x_i$, gives the claimed coercivity. There is thus a unique minimizer on $H$. Its critical-point equation says that $\nabla F-p$ is a multiple of $\mathbf1$; both gradients have sum $k$, so this multiple is zero. This proves surjectivity. Strict convexity on $H$ proves injectivity.
 \end{proof}
 
-The convex gradient occupies an $(n-1)$-dimensional simplex. The null scalar direction explains the vanishing $n$th power of the closed curvature. The additional term $\zeta$ in the Hermitian form restores a positive direction in the measure formula of \cref{thm:hopf-descended-hermitian-ma}. Since $\omega$ is not closed, it has no local scalar $\ddc$-potential; substituting it into the convex-potential correspondence would discard precisely this distinction.
+The null scalar direction gives zero $n$th power for the closed curvature. The fiber term $\zeta$ supplies that direction in the Hermitian measure formula of \cref{thm:hopf-descended-hermitian-ma}.
