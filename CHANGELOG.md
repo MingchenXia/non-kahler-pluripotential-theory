@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint161 — 26 September 2026
+
+Chapter 16 completes its integrated four-section rewrite and two complete direct revised mathematical/editorial reads. Subgeodesic calculus, interior L1 continuity and joint endpoint bounds form one section. Perron existence is separated from endpoint attainment, and replacement on a subinterval is justified at both interior and original endpoints. The same-type time estimate uses explicit convex secant inequalities. The Schur computation uses the existing velocity column directly, while the L2 variation and constant-translation example retain the precise torsion obstruction. Introductions connect the barriers, finite-interval maximality and variational equation; repeated settings and transitions are removed.
+
+All thirteen original labels and seven statement/proof pairs remain. The house audit has zero errors and one inherited chapter-label warning; non-book citations remain in Chapter 33. The 809-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 31 selected final book pages pass visual review. The companion is byte-identical to checkpoint160. Both outputs rebuild from a fresh empty source-package extraction with identical page text. There are 33 active chapters and 218 author inputs. All 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-sixteen-rewrite-161.md, build-snapshot-161.json and source-package-portability-161.json.
+
+Continue with the complete present Chapter 17 and all its nested inputs, then Chapter 18. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint160 — 26 September 2026
 
 The supplied finite-restricted-invariants manuscript is integrated in Sections 27.6–27.7. For closed classes on smooth class-C manifolds, Kähler models give finite resolution-independent restricted masses, arbitrary-class rank-drop vanishing, positivity versus bigness, the nef intersection formula and the zero-invariant union. Actual divisorial traces with bounded remainder and nef residual class have the residual top-intersection mass, with total-divisor pullback, mixed masses and a strict-current construction. Three examples distinguish this trace mass from the class supremum, obstruct preservation of ordinary type under positive mass alone, and exhibit a positive restriction inside an ambient null divisor. Chapter 32 now retains the genuinely broader nonclosed and intrinsic-trace questions; exact paper attribution is in Chapter 33.

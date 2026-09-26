@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint160: read and rewrite the complete present Chapter 16 and all its nested inputs, then Chapter 17. Checkpoint160 is a bounded supplied-paper integration and does not advance the chapter queue. Earlier rows retain their historical scopes.
+Current next unit after checkpoint161: read and rewrite the complete present Chapter 17 and all its nested inputs, then Chapter 18. Chapter 16 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
@@ -23,7 +23,7 @@ Current next unit after checkpoint160: read and rewrite the complete present Cha
 | 13 | `chapter_prescribed_equations.tex` | 49 | Complete integrated rewrite and two direct revised mathematical/editorial reads of all 33 inputs in checkpoint157. Weighted lower semicontinuity moves to Chapter 6; duplicate continuity, carrier and normalizer arguments are consolidated; interior interpolation retains full-sequence convergence. See chapter-thirteen-rewrite-157.md. |
 | 14 | `chapter_normalization.tex` | 18 | Complete integrated eight-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint158. Scalar properties and adjoint constructions are grouped; duplicate definitions and arguments are replaced by their existing internal results. All 56 labels remain. See chapter-fourteen-rewrite-158.md. |
 | 15 | `chapter_igood.tex` | 10 | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint159. Envelope comparisons are consolidated; background mass, curve completion and analytic approximation form the subsequent arguments. All 25 labels remain. See chapter-fifteen-rewrite-159.md. |
-| 16 | `chapter_rays.tex` | 5 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint122; general strip convexity and gluing belong to Chapter 1. |
+| 16 | `chapter_rays.tex` | 4 | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint161; no nested inputs. Endpoint control is grouped with subgeodesic calculus; explicit secant inequalities give the same-type time estimate. All 13 labels and 7 statement/proof pairs remain. See chapter-sixteen-rewrite-161.md. |
 | 17 | `chapter_testcurves.tex` | 4 | Complete whole-chapter rewrite, first/second direct reads and release checks in checkpoint123; includes the nested figure; general Legendre and radial psh results belong to Chapter 1. |
 | 18 | `chapter_trace_data.tex` | 11 | Complete whole-chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint124; general restriction, modification continuity and divisorial domination belong to Chapter 1. |
 | 19 | `chapter_sections.tex` | 8 | Complete whole-chapter and both nested-input rewrite, first/second direct reads and release checks in checkpoint125; general psh and Gauduchon inputs are internal references. |
@@ -125,3 +125,5 @@ Checkpoint158 completes the integrated Chapter 14 rewrite, including all nine ne
 Checkpoint159 completes the integrated Chapter 15 rewrite, including all three nested inputs. The next complete chapter is Chapter 16.
 
 Checkpoint160 integrates the finite restricted-invariant paper at bounded scope in Chapters 27, 32 and 33. The next complete chapter remains Chapter 16.
+
+Checkpoint161 completes the integrated Chapter 16 rewrite. The next complete chapter is Chapter 17.

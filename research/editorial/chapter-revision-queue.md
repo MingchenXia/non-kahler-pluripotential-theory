@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint160: read and rewrite the complete present Chapter 16 and all its nested inputs, then Chapter 17. Checkpoint160 is a bounded supplied-paper integration and does not advance the chapter queue. Earlier rows retain their historical scopes.
+Current next unit after checkpoint161: read and rewrite the complete present Chapter 17 and all its nested inputs, then Chapter 18. Chapter 16 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -23,7 +23,7 @@ Current next unit after checkpoint160: read and rewrite the complete present Cha
 | 13 | `chapter_prescribed_equations.tex` | Complete integrated rewrite and two direct revised mathematical/editorial reads of all 33 inputs in checkpoint157. Weighted lower semicontinuity moves to Chapter 6; duplicate continuity, carrier and normalizer arguments are consolidated; interior interpolation retains full-sequence convergence. See chapter-thirteen-rewrite-157.md. |
 | 14 | `chapter_normalization.tex` | Complete integrated eight-section rewrite and two direct revised mathematical/editorial reads of all ten inputs in checkpoint158. Scalar properties and adjoint constructions are grouped; duplicate definitions and arguments are replaced by their existing internal results. All 56 labels remain. See chapter-fourteen-rewrite-158.md. |
 | 15 | `chapter_igood.tex` | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads of all four inputs in checkpoint159. Envelope comparisons are consolidated; background mass, curve completion and analytic approximation form the subsequent arguments. All 25 labels remain. See chapter-fifteen-rewrite-159.md. |
-| 16 | `chapter_rays.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint122; no nested inputs; see chapter-sixteen-rewrite-122.md. |
+| 16 | `chapter_rays.tex` | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint161; no nested inputs. Endpoint control is grouped with subgeodesic calculus; explicit secant inequalities give the same-type time estimate. All 13 labels and 7 statement/proof pairs remain. See chapter-sixteen-rewrite-161.md. |
 | 17 | `chapter_testcurves.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint123; includes the nested figure; see chapter-seventeen-rewrite-123.md. |
 | 18 | `chapter_trace_data.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint124; relocated general lemmas receive both reads in Chapter 1; see chapter-eighteen-rewrite-124.md. |
 | 19 | `chapter_sections.tex` | Complete whole-chapter and both nested-input first/second direct proof-and-writing reads, with output checks in checkpoint125; see chapter-nineteen-rewrite-125.md. |
@@ -81,3 +81,5 @@ Checkpoint158 completes the integrated Chapter 14 rewrite, including all nine ne
 Checkpoint159 completes the integrated Chapter 15 rewrite, including all three nested inputs. The next complete chapter is Chapter 16.
 
 Checkpoint160 integrates the finite restricted-invariant paper at bounded scope in Chapters 27, 32 and 33. The next complete chapter remains Chapter 16.
+
+Checkpoint161 completes the integrated Chapter 16 rewrite. The next complete chapter is Chapter 17.
