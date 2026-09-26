@@ -1,11 +1,10 @@
 # Modification history
 
+## Checkpoint128 — 26 September 2026
 
+Chapter 22 completes its eight-section rewrite and two direct mathematical/editorial reads, including every nested input. One trace setup replaces repeated declarations; the introductions explain Gauduchon summability, compatibility across modifications, Bott–Chern classes, analytic nef realization, continuous representatives and exceptional differences. The general global smooth-residual potential decomposition and canonical ordinary type of a finite-mass divisorial current are collected in Chapter 1; both affected foundation inputs receive the same two reads. The chapter uses these internally and retains its geometric current arguments. Countable tails, pullback continuity, the elliptic normalization and exceptional ordinary-type comparison are checked. The final product example now gives an explicit admissible background constant. Local SGPT and Demailly book passages supply checked locators. General nef approximation and higher-dimensional exact trace realization retain their stated open boundaries. Paper citations remain in Chapter 33.
 
-
-
-
-
+The house audit retains zero errors and one inherited chapter-label warning. Non-book citation placement passes. The final book has 790 pages, with no build errors, unresolved references/citations, duplicate labels or overfull boxes. One inherited bibliography underfull paragraph remains. All 47 selected final pages passed visual inspection: front matter, contents and conventions, the complete Chapter 1 divisorial-estimate section with its transitions, complete Chapter 22 with its neighboring transitions, and the complete bibliography. Formula introductions and proof openings were adjusted and reinspected. The seventeen-page companion is byte-identical to checkpoint127. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 211 author inputs. Exact hashes and checks are in build-snapshot-128.json and source-package-portability-128.json. All 190 historical verifier reports and three hidden sources remain unchanged.
 
 ## Checkpoint127 — 26 September 2026
 

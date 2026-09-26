@@ -1,19 +1,20 @@
 \chapter{Divisorial currents on compact modifications}
 \label{chap:divisorial-models}
 
-The numerical trace data of \cref{chap:trace-data} can be assembled into currents on every compact modification. Gauduchon metrics provide exactly the required summability. The construction uses linear mass and does not require a bound for any top-degree Monge--Amp\`ere measure. On each fixed model, the resulting positive closed divisorial current also determines an ordinary potential type with a smooth residual term. This describes the divisorial part on that model; exact realization on all further models is a stronger requirement. A scalar Gauduchon equation gives continuous smooth representatives and proves continuity of closed-current pullback. The difference between the trace currents on two models is then an effective exceptional divisor, whose logarithmic potential describes the change of these ordinary types.
+The trace numbers of \cref{chap:trace-data} prescribe divisorial coefficients on every modification. A Gauduchon pairing bounds their sum on each model, so they define positive closed currents. These currents are compatible with pushforward, while pullback introduces an effective exceptional divisor. To pass from finite divisors to the full currents, we construct smooth Bott--Chern representatives by a scalar Gauduchon equation and prove continuity of pullback. The exceptional divisor then measures the change in the ordinary types determined by the divisorial currents.
 
-Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected smooth compact complex submanifold of dimension $r\geq1$, and fix a smooth real $(1,1)$-form $\theta$ and a Hermitian form $\omega$ on $X$. Let $u\in\PSH(X,\theta)$ satisfy $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)=0$. For positive integers $m$, use the multiplier ideal $\mathcal I(mu)$ for the weight $\mathrm{e}^{-mu}$ and the trace numbers $\tau_{Y,u}(E)$ of \eqref{eq:trace-profile}. For a smooth compact modification $\pi:Z\to Y$, put
+Retain the trace setting of \cref{chap:trace-data}: $X$ is a connected compact complex manifold, $Y\subset X$ is a connected compact complex submanifold of dimension $r\geq1$, $\theta$ is a smooth real $(1,1)$-form, $\omega$ is Hermitian, and $u\in\PSH(X,\theta)$ satisfies $\nu(u,Y)=0$. For a smooth compact modification $\pi:Z\to Y$, put
 \[
  \theta_Z=\pi^*(\theta|_Y),\qquad
  \omega_Z^0=\pi^*(\omega|_Y),\qquad
- b_m(E)=\operatorname{ord}_E\bigl(\mathcal I(mu)\mathcal O_Y\bigr).
+ b_m(E)=\operatorname{ord}_E\bigl(\mathcal I(mu)\mathcal O_Y\bigr)
+ \quad(m\in\mathbb Z_{\geq1}).
 \]
-The form $\omega_Z^0$ is only semipositive; a separate Hermitian metric on $Z$ will be used when necessary.
+Here $E$ is a prime divisor on $Z$, and the order is that of the image ideal pulled back to $Z$. Write $[E]$ for its integration current. The coefficients $b_m(E)/m$ converge to $\tau_{Y,u}(E)$ by \cref{thm:intrinsic-trace-profile}. The semipositive form $\omega_Z^0$ records the curvature errors $\epsilon_m$ of the analytic approximants $u_m$ from \cref{cor:nonclosed-analytic-approximation}; Gauduchon metrics on $Z$ will measure current mass.
 
 \section{A Gauduchon bound on every model}\label{sec:divisorial-model-bound}
 
-Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected smooth compact complex submanifold of dimension $r\geq1$, and fix a smooth real $(1,1)$-form $\theta$ and a Hermitian form $\omega$ on $X$. Let $u\in\PSH(X,\theta)$ satisfy $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)=0$. For positive integers $m$, use the multiplier ideal $\mathcal I(mu)$ for the weight $\mathrm{e}^{-mu}$ and the trace numbers $\tau_{Y,u}(E)$ of \eqref{eq:trace-profile}. Fix a smooth compact modification $\pi:Z\to Y$, and put $\theta_Z=\pi^*(\theta|_Y)$ and $\omega_Z^0=\pi^*(\omega|_Y)$. For a prime divisor $E$ on any such model, let $b_m(E)=\operatorname{ord}_E(\mathcal I(mu)\mathcal O_Y)$ be the generic order of the pulled-back image ideal. Write $[E]$ for its integration current. Gauduchon metrics $\gamma$ on $Z$ satisfy $\ddc\gamma^{r-1}=0$.
+Divisorial removal bounds the finite sums of ideal orders by the curvature of the restricted analytic approximants. Pairing with a Gauduchon metric removes their Hessians and leaves an estimate depending only on the smooth background.
 
 For a positive integer $m$, with $E$ ranging over prime divisors on $Z$, define the finite divisorial current
 \[
@@ -39,13 +40,13 @@ For $r=1$ take $\gamma^{r-1}=1$. Moreover
 In particular $D_{m,Z}$ converges weakly as a current to $S_Z(u;Y)$. The dyadic sequence $D_{2^j,Z}$ increases.
 \end{theorem}
 \begin{proof}
-Let $u_m$ with curvature errors $\epsilon_m$ be the analytic approximants of \cref{cor:nonclosed-analytic-approximation} and set $w_m=(u_m|_Y)\circ\pi$. They are genuine, and
+Set $w_m=(u_m|_Y)\circ\pi$. By \cref{cor:restricted-analytic-divisorial-bound}, these pullbacks are genuine, and
 \[
  T_m=\theta_Z+\epsilon_m\omega_Z^0+\ddc w_m\geq0,
  \qquad \nu(w_m,E)=b_m(E)/m.
 \]
 \Needspace{6\baselineskip}
-The removal lemma gives $D_{m,Z}\leq T_m$. Current Stokes and the Gauduchon identity therefore give
+\Cref{lem:nonclosed-divisorial-removal} gives $D_{m,Z}\leq T_m$. Current Stokes and the Gauduchon identity therefore give
 \[
  \int_ZD_{m,Z}\wedge\gamma^{r-1}
  \leq\int_Z\theta_Z\wedge\gamma^{r-1}
@@ -58,12 +59,12 @@ Every prime divisor has strictly positive $\gamma$-area. Hence there are at most
 The supremum formula for $\tau_{Y,u}(E)$ gives $b_m(E)/m\leq\tau_{Y,u}(E)$ for every $m$ and $E$. The full integer limit gives coefficientwise convergence. Apply dominated convergence to the countable series with summable weights $\tau_{Y,u}(E)\int_E\gamma^{r-1}$. It yields the asserted vanishing trace mass of $S_Z-D_{m,Z}$. A fixed smooth test form is bounded in absolute value on positive $(1,1)$-currents by a constant times this trace mass, proving weak convergence. Finally $b_{2m}(E)\geq2b_m(E)$ gives $D_{2m,Z}\geq D_{m,Z}$.
 \end{proof}
 
-The estimate holds for every fixed compact model. It is not a uniform bound over all modifications and all choices of their metrics. Nor does this current convergence assert convergence of nonlinear products of the $D_{m,Z}$.
+The bound depends on the model and its Gauduchon metric. It controls the linear trace mass of the divisorial currents.
 
 \Needspace{20\baselineskip}
 \section{Compatibility between models}
 
-Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected smooth compact complex submanifold of dimension $r\geq1$, and fix a smooth real $(1,1)$-form $\theta$ and a Hermitian form $\omega$ on $X$. Let $u\in\PSH(X,\theta)$ satisfy $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)=0$. For positive integers $m$, use the multiplier ideal $\mathcal I(mu)$ for the weight $\mathrm{e}^{-mu}$ and the trace numbers $\tau_{Y,u}(E)$ of \eqref{eq:trace-profile}. Fix a smooth compact modification $\pi:Z\to Y$, and put $\theta_Z=\pi^*(\theta|_Y)$ and $\omega_Z^0=\pi^*(\omega|_Y)$. For a prime divisor $E$ on any such model, let $b_m(E)=\operatorname{ord}_E(\mathcal I(mu)\mathcal O_Y)$ be the generic order of the pulled-back image ideal. Write $[E]$ for its integration current. Use the finite divisorial approximants $D_{m,Z}$ and closed positive trace current $S_Z(u;Y)$ defined in \cref{sec:divisorial-model-bound}.
+Strict transforms preserve ideal orders, whereas exceptional divisors disappear under pushforward. Divisibility of the image ideals gives the complementary inequality under pullback, first for finite divisors.
 
 \begin{theorem}\label{thm:trace-divisorial-model-compatibility}
 Let $g:Z'\to Z$ be a smooth compact modification, and view both manifolds as models over $Y$. Then
@@ -89,6 +90,7 @@ For the final inequality, let $\mathfrak a_{m,Z}=\mathcal I(mu)\mathcal O_Z$ be 
  \mathfrak a_{m,Z}\subseteq
  \mathcal O_Z\left(-\sum_{E\in\mathcal F}b_m(E)E\right).
 \]
+\Needspace{10\baselineskip}
 Indeed on a smooth manifold a holomorphic function with the indicated generic orders is divisible by the corresponding local Cartier equations, with multiplicity. Pull back this inclusion and take the order at any prime divisor $F\subset Z'$. It gives
 \[
  b_m(F)\geq\sum_{E\in\mathcal F}
@@ -97,14 +99,12 @@ Indeed on a smooth manifold a holomorphic function with the indicated generic or
 Divide by $m$ and pass to the limit; the sum is finite. Thus every coefficient of $g^*A_{\mathcal F}$ is at most $\tau_{Y,u}(F)$. Both sides are divisorial positive currents, which proves the asserted current inequality.
 \end{proof}
 
-The argument so far concerns finite divisors. \Cref{sec:continuous-bc-representatives} will prove the required continuity for positive closed $(1,1)$-currents, and \cref{thm:trace-exceptional-difference} will extend the inequality to the whole countable trace current. No such assertion about general currents or nonlinear products is used here.
+To pass from $[g^*A_{\mathcal F}]$ to the pullback of the whole trace current, we need continuity of closed-current pullback. This is proved in \cref{sec:continuous-bc-representatives} and applied in \cref{thm:trace-exceptional-difference}.
 
 \Needspace{19\baselineskip}
 \section{A majorant in the original restricted background}
 
-Let $X$ be a connected compact complex manifold, let $Y\subset X$ be a connected smooth compact complex submanifold of dimension $r\geq1$, and fix a smooth real $(1,1)$-form $\theta$ and a Hermitian form $\omega$ on $X$. Let $u\in\PSH(X,\theta)$ satisfy $\nu(u,Y)=\inf_{y\in Y}\nu(u,y)=0$. For positive integers $m$, use the multiplier ideal $\mathcal I(mu)$ for the weight $\mathrm{e}^{-mu}$ and the trace numbers $\tau_{Y,u}(E)$ of \eqref{eq:trace-profile}. Fix a smooth compact modification $\pi:Z\to Y$, and put $\theta_Z=\pi^*(\theta|_Y)$ and $\omega_Z^0=\pi^*(\omega|_Y)$. For a prime divisor $E$ on any such model, let $b_m(E)=\operatorname{ord}_E(\mathcal I(mu)\mathcal O_Y)$ be the generic order of the pulled-back image ideal. Write $[E]$ for its integration current. Use the finite divisorial approximants $D_{m,Z}$ and closed positive trace current $S_Z(u;Y)$ defined in \cref{sec:divisorial-model-bound}. Retain the analytic approximants $u_m$ and errors $\epsilon_m$ of \cref{cor:nonclosed-analytic-approximation}, using $\omega$ for their curvature error.
-
-The preceding currents need not be the complete divisorial data of a single potential. Nevertheless there is one potential that dominates their coefficients simultaneously on all compact models.
+Normalize the restricted analytic approximants and take an $L^1$ limit on $Y$. Their curvature errors vanish, so the limit belongs to the original restricted background. Convergence under each modification then bounds all trace coefficients by the Lelong numbers of this one potential.
 
 \begin{proposition}\label{prop:original-background-trace-majorant}
 There exists $v\in\PSH(Y,\theta|_Y)$ such that for every smooth compact modification $\pi:Z\to Y$,
@@ -116,12 +116,11 @@ and
 \[
  \pi^*(\theta|_Y)+\ddc(v\circ\pi)\geq S_Z(u;Y).
 \]
-Neither uniqueness nor equality of the individual Lelong numbers is asserted.
 \end{proposition}
 \begin{proof}
-Normalize the genuine restrictions $u_m|_Y$ to have supremum zero. They lie in a fixed Hermitian plurisubharmonic family, because their curvature lower bounds are $-(\theta+\epsilon_m\omega)|_Y$. Normalized compactness gives a subsequence converging in $L^1(Y)$ to a genuine quasi-plurisubharmonic function $v$. Passing to the distributional curvature inequality and using $\epsilon_m\to0$ gives $\theta|_Y+\ddc v\geq0$. Thus the limiting background is the original restricted form.
+Normalize the genuine restrictions $u_m|_Y$ to have supremum zero. They lie in a fixed Hermitian plurisubharmonic family, because their curvature lower bounds are $-(\theta+\epsilon_m\omega)|_Y$. \Cref{thm:normalized-compactness} gives a subsequence converging in $L^1(Y)$ to a genuine quasi-plurisubharmonic function $v$. Passing to the distributional curvature inequality and using $\epsilon_m\to0$ gives $\theta|_Y+\ddc v\geq0$. Thus the limiting background is the original restricted form.
 
-Fix any compact modification $\pi$. The pullback $L^1$ lemma proved in \cref{lem:modification-lone-pullback} applies to this same subsequence in its fixed smooth lower bound. It gives $L^1$ convergence of the normalized pullbacks to $v\circ\pi$. Upper semicontinuity of generic Lelong numbers under such convergence therefore gives
+Fix any compact modification $\pi$. The pullback $L^1$ lemma proved in \cref{lem:modification-lone-pullback} applies to this same subsequence in its fixed smooth lower bound. It gives $L^1$ convergence of the normalized pullbacks to $v\circ\pi$. The Lelong semicontinuity of \cref{lem:lelong-lone-semicontinuity} therefore gives
 \[
  \nu(v\circ\pi,E)
  \geq\limsup_m\nu((u_m|_Y)\circ\pi,E)
@@ -132,7 +131,7 @@ Normalization by constants has not affected these numbers. The argument works fo
 Apply \cref{lem:nonclosed-divisorial-removal} to the positive current $\theta_Z+\ddc(v\circ\pi)$. Its divisorial coefficients dominate those of $S_Z$. Removal of every finite partial sum of $S_Z$ preserves positivity. Passing to the current limit from \cref{thm:trace-divisorial-current-budget} proves the final inequality.
 \end{proof}
 
-The potential $v$ is a majorant of the numerical orders. Its additional divisorial singularities, if present, have not been excluded. Thus this result does not settle the general exact-trace question of \cref{chap:trace-data}. The analytic and curve-fibration cases there use separately constructed exact representatives. It does explain why all the Gauduchon inequalities in \eqref{eq:trace-divisorial-linear-budget} are compatible with one genuine potential in the original background.
+The inequalities may be strict, so the limit need not be an exact trace representative. The analytic and curve-fibration constructions of \cref{chap:trace-data} establish equality by additional arguments.
 
 \input{author/section_bott_chern_bclasses}
 
