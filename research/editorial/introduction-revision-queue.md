@@ -4,14 +4,14 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint147: read and rewrite the complete present Chapter 4, then Chapters 5–6. Chapter 3 has two complete revised mathematical/editorial reads and release checks in chapter-three-rewrite-147.md. Earlier rows retain their historical review scopes.
+Current next unit after checkpoint148: read and rewrite the complete present Chapter 5, then Chapter 6. Chapter 4, including its nested linear-duality input, has two complete revised mathematical/editorial reads and release checks in chapter-four-rewrite-148.md. The changed Chapter 1 root input has both reads; its nested sections are not claimed as a new full-chapter review. Earlier rows retain their historical scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
-| 1 | `chapter_framework.tex` | 35 | Complete integrated chapter and all eighteen nested-input original and two revised reads in checkpoint142, including the later additions; earlier checkpoints retain their original scopes. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
+| 1 | `chapter_framework.tex` | 35 | Complete integrated chapter and all eighteen nested-input original and two revised reads in checkpoint142, including the later additions; earlier checkpoints retain their original scopes. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. Checkpoint148 adds the distributional local-correction assertion and two complete reads of the root input, without re-auditing its nested sections. |
 | 2 | `chapter_mass.tex` | 5 | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads in checkpoint146; includes the complete mass-invariance proof moved from Chapter 25. See chapter-two-rewrite-146.md. |
 | 3 | `chapter_energy.tex` | 3 | Complete integrated three-section rewrite and two direct revised mathematical/editorial reads in checkpoint147; a single radial energy, complete primitive criterion and explicit surface Euler equation. See chapter-three-rewrite-147.md. |
-| 4 | `chapter_gauduchon.tex` | 6 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
+| 4 | `chapter_gauduchon.tex` | 6 | Complete integrated six-section rewrite, including the linear-duality input, and two direct revised mathematical/editorial reads in checkpoint148. General distributional correction belongs to Chapter 1; bounded adjoints use the existing mass and capacity results. See chapter-four-rewrite-148.md. |
 | 5 | `chapter_compactness.tex` | 1 | Original editorial pass complete in checkpoints110–111; checkpoint112 relocation seams checked. |
 | 6 | `chapter_products.tex` | 6 | Complete first/second reads in checkpoint112, with dependency relocation and seam review in checkpoint113. Checkpoint142 adds the density/trace section with two direct proof reads and checks its adjoining transitions. |
 | 7 | `chapter_damped_measures.tex` | 7 | Complete chapter and nested-input rewrite, first/second direct reads and release checks in checkpoint113. |
@@ -99,3 +99,5 @@ Checkpoint145 replaces the chronological source/proof ledgers by current stateme
 Checkpoint146 completes the integrated Chapter 2 review and moves the mass-invariance characterization to its natural position after the mass polynomial. Both revised mathematical inputs receive two complete reads; the Chapter 3 surface example has only a reference repair. The next complete chapter is Chapter 3.
 
 Checkpoint147 completes the integrated Chapter 3 rewrite and release checks. The next complete chapter is Chapter 4, including its nested linear-duality input.
+
+Checkpoint148 completes the integrated Chapter 4 rewrite and release checks, including its nested linear-duality section and the changed Chapter 1 root input. The next complete chapter is Chapter 5.

@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint148 — 26 September 2026
+
+Chapter 4 completes its whole six-section rewrite, including the linear-duality input, and two direct revised mathematical/editorial reads. The openings connect conserved traces, positive-current existence, attained lower curvature bounds and adjoint compatibility. The distributional local-correction assertion moves into Chapter 1; that entire root input receives both reads at its actual file scope. The persistence and bounded-adjoint proofs reuse the Chapter 2 mass results and Chapter 1 capacity continuity. Repeated settings, notation, calculations and the surface primitive example are removed. The full separation, scalar right-inverse and current-closure proofs remain, with the one-dimensional zero-degree case and uniform boundedness of capacity limits explicit.
+
+The three changed author inputs have zero house-audit errors and the same four inherited warnings. Paper citations remain in Chapter 33; the classical distributional input has an exact book locator in Chapter 1. The 812-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 40 selected final pages pass visual review: 4 changed images were directly inspected after the second read and 36 are byte-identical to inspected first-output images. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 216 author inputs. All 190 historical verifier reports and three hidden sources remain unchanged. See chapter-four-rewrite-148.md, build-snapshot-148.json and source-package-portability-148.json for exact scopes.
+
+Continue with the complete present Chapter 5, then Chapter 6, after the foundation relocations. The broader writing goal remains active and incomplete.
+
 ## Checkpoint147 — 26 September 2026
 
 Chapter 3 completes its whole three-section rewrite and two direct revised mathematical/editorial reads. The radial integral and mixed-power sum define one energy for every smooth real background; closedness appears exactly where its derivative is identified with the Monge–Ampère one-form. The preliminary symmetry proposition and weaker obstruction corollary are absorbed into the complete primitive criterion. The first-jet, polarization and small-Hessian arguments remain complete. The first variation reuses the existing integration-by-parts and product identities, and the chapter ends with the surface Euler equation.
