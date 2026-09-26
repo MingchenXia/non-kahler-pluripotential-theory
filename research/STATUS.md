@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint167 — Geometric stability of normalization
+
+The supplied q8-2 manuscript is integrated in Sections 14.8–14.10. Relative positive-form bounds compare the entire normalization functional uniformly over all bounded tests. The resulting dual bounds give uniformly integrable supporting densities and weak L1 stability. Ordinary divisorial removal identifies the whole prescribed type with bounded potentials in its positive residual background. Moving sections and weights give L1 convergence of full supremum-normalized solutions in the two stated regimes. Smooth adjoints and the value at zero reconstruct the functional.
+
+For closed big model references with small unbounded locus and positive mass, the functional factors exactly through mass. The relocated projective example and a new nonclosed example have identical functionals and supports but different poles, multiplier ideals and full-potential limits. The needed bounded positive measurable-density uniqueness is proved internally in Section 11.4. Chapters 15, 25 and 32 now refer to the settled regimes while retaining degenerate residuals, arbitrary singularity topology, infinite model systems and nonsmooth adjoint uniqueness as separate questions. Non-book sources and precise locators remain in Chapter 33.
+
+The five new or expanded inputs have two complete direct revised mathematical/editorial reads; changed interfaces have bounded direct reads. The house audit has zero errors and 25 inherited review prompts. The 813-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. All 112 selected final pages pass visual review: 96 changed images were directly inspected and 16 match the first inspected render byte for byte. Both outputs rebuild from a fresh empty source-package extraction with identical page text. The companion is byte-identical to checkpoint166. There are 33 chapters and 221 active author inputs. The 190 historical verifier reports and three hidden sources remain unchanged; no new independent verification is claimed.
+
+This is a supplied-result integration, not a new complete rewrite of the affected chapters. The next complete chapter remains Chapter 22, then Chapter 23. The broader writing goal remains active and incomplete.
+
 ## Checkpoint166 — Chapter 21 and the smooth-target trace identity
 
 Chapter 21 completes its integrated rewrite and two complete direct revised mathematical/editorial reads. The Hopf fibration organizes weighted sections, descended measures and equations, and toric potentials. The fiber integral and reduced equation now share a section; the convex proof separates growth-based surjectivity from strict-convexity uniqueness. All seven labels and three formal statement/proof pairs remain, with the statements unchanged. Three sections replace four.

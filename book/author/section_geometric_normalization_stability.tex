@@ -1,0 +1,60 @@
+\section{Varying positive backgrounds}\label{sec:geometric-normalization-stability}
+
+A relative inequality between two Hermitian forms compares their scalars independently of the size of the logarithmic density. This converts geometric convergence of backgrounds into the uniform functional comparison used above.
+
+Here $X$ is connected and $\beta$ is a smooth positive real $(1,1)$-form. Write $B_\beta$, $H_\beta$ and $\mathcal A_\beta$ for the preceding functionals and supporting sets with background $\beta$ and reference zero. For two such backgrounds set
+\[
+ d(B_\beta,B_{\beta'})=\sup_{F\in L^\infty(\mathrm{d}V)}|B_\beta(F)-B_{\beta'}(F)|.
+\]
+The supremum ranges over all bounded tests, with no common bound on their norms.
+
+\begin{theorem}\label{thm:geometric-normalization-comparison}
+Suppose $0<\varepsilon<1$ and $(1-\varepsilon)\beta\leq\beta'\leq(1+\varepsilon)\beta$. For every bounded measurable $F$,
+\begin{equation}\label{eq:geometric-normalization-comparison}
+ n\log(1-\varepsilon)\leq B_{\beta'}(F)-B_\beta(F)\leq n\log(1+\varepsilon).
+\end{equation}
+In particular $d(B_\beta,B_{\beta'})\leq-n\log(1-\varepsilon)$. The same conclusion holds if the form comparison is satisfied by positive smooth representatives $\beta+\ddc h$ and $\beta'+\ddc h'$.
+\end{theorem}
+\begin{proof}
+First let $F$ be smooth, with smooth solutions $v,v'$ in the two backgrounds. At a maximum of $v'-(1+\varepsilon)v$,
+\[
+ 0<\beta'+\ddc v'\leq(1+\varepsilon)(\beta+\ddc v).
+\]
+Taking determinants and canceling $\mathrm{e}^F\mathrm{d}V$ gives the upper bound. At a minimum of $v'-(1-\varepsilon)v$, the reverse form inequality gives the lower bound. For bounded measurable $F$, choose smooth uniformly bounded approximations converging in $L^1$. Apply \cref{thm:normalization-bounded-lone} separately in the two fixed backgrounds. Finally the correspondence $v\mapsto v-h$ preserves both boundedness and the current, so $B_{\beta+\ddc h}=B_\beta$ whenever both backgrounds are positive. This proves the representative assertion.
+\end{proof}
+
+\begin{corollary}\label{cor:geometric-adjoint-stability}
+Let $\beta_j$ satisfy the form comparison with $\beta$ and $\varepsilon_j\to0$. Suppose $F_j\to F$ in $L^1(\mathrm{d}V)$ with a common $L^\infty$ bound. Then $B_{\beta_j}(F_j)\to B_\beta(F)$. For any $\nu_j\in\mathcal A_{\beta_j}(F_j)$, their densities are uniformly integrable and every subsequence has a further subsequence converging weakly in $L^1$ to an element of $\mathcal A_\beta(F)$. If this set is a singleton, the full sequence converges to it weakly in $L^1$ and as probability measures. This holds in particular when $F$ is smooth.
+\end{corollary}
+\begin{proof}
+Put $\delta_j=-n\log(1-\varepsilon_j)$. The scalar assertion follows from \eqref{eq:geometric-normalization-comparison} and \cref{thm:normalization-bounded-lone} in the fixed background $\beta$. Taking suprema over tests gives the extended-valued inequalities
+\[
+ H_{\beta_j}\leq H_\beta+\delta_j,\qquad H_\beta\leq H_{\beta_j}+\delta_j.
+\]
+Their finite domains coincide. The support identity therefore gives
+\[
+ 0\leq H_\beta(\nu_j)-B_\beta(F_j)-\int_XF_j\,\mathrm{d}\nu_j\leq2\delta_j.
+\]
+If $\|F_j\|_\infty\leq M$, this puts the measures in a fixed sublevel $H_\beta\leq B_\beta(0)+2M+2\sup_j\delta_j$. Apply \cref{thm:normalization-dual-compactness}. For a weak $L^1$ cluster limit, uniform integrability gives $\int|F_j-F|\,\mathrm{d}\nu_j\to0$. Lower semicontinuity in the last display and the measurable dual minimum formula identify the limit as a support at $F$. Compactness gives full convergence when that support is unique; \cref{thm:normalization-gauduchon-recovery} supplies uniqueness at smooth $F$.
+\end{proof}
+
+Smooth changes of the background also control the potentials. The inverse of the linearized equation used in \cref{prop:smooth-dependence} remains available when the form itself is included among the parameters.
+
+\begin{proposition}\label{prop:smooth-background-potential-stability}
+If positive $\beta_j\to\beta$ and $F_j\to F$ in $C^\infty$, the solutions normalized by $\int_Xv_j\,\mathrm{d}V=0$ converge in $C^\infty$ to the similarly normalized solution for $(\beta,F)$. Their scalars converge as well.
+\end{proposition}
+\begin{proof}
+Fix $k\geq0$ and $0<\alpha<1$. On the open positivity set, consider the smooth map
+\[
+ (\eta,G,w,a)\longmapsto\log\frac{(\eta+\ddc w)^n}{\mathrm{d}V}-a-G
+\]
+from $C^{k,\alpha}$ forms and functions, mean-zero $C^{k+2,\alpha}$ potentials, and $\mathbb R$, into $C^{k,\alpha}$. At the limiting solution its derivative in $(w,a)$ is $(h,q)\mapsto\Delta_\Omega h-q$, where $\Omega=\beta+\ddc v$ and $\Delta_\Omega h=n\ddc h\wedge\Omega^{n-1}/\Omega^n$. For a target $g$, choose $q=-\int g\,\mathrm{d}\mu_v$, with the adjoint probability of \cref{prop:adjoint-gauduchon}. The Fredholm alternative then gives the unique mean-zero $h$ solving $\Delta_\Omega h=g+q$, with a bounded inverse as in \cref{prop:smooth-dependence}. In dimension one this is the Poisson alternative.
+
+The implicit function theorem gives a local branch continuous in these spaces. For smooth parameters, bounded uniqueness from \cref{cor:bounded-positive-density-uniqueness} identifies this branch with the global smooth solution. Thus $v_j\to v$ in $C^{k+2,\alpha}$ for every $k$, proving the assertion.
+\end{proof}
+
+The smooth adjoint probabilities determine the functional once its additive constant is fixed. If $\nu_{\beta,F}$ denotes the unique support at a smooth test, integration of the derivative in \cref{thm:normalization-gauduchon-recovery} along $sF$ gives
+\begin{equation}\label{eq:adjoint-functional-reconstruction}
+ B_\beta(F)=B_\beta(0)-\int_0^1\!\int_XF\,\mathrm{d}\nu_{\beta,sF}\,\mathrm{d}s.
+\end{equation}
+The implicit function theorem makes this derivative continuous along the path. Consequently two positive backgrounds on the same $X,\mathrm{d}V$ have identical bounded-test functionals if and only if their values at zero and all their smooth-test adjoint probabilities agree. One direction follows by differentiation; the other follows from \eqref{eq:adjoint-functional-reconstruction} for smooth tests and bounded $L^1$ approximation for all remaining tests.

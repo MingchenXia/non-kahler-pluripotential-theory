@@ -14,7 +14,7 @@ then $u-v$ is constant. In particular, $\sup_Xu=\sup_Xv$ implies $u=v$.
 Bounded solutions are continuous by \cref{cor:bounded-lp-continuity}. We may therefore use pointwise extrema throughout the proof. If $b$ is continuous and $\omega_b\geq\varepsilon\omega$, with $0<\varepsilon<1$, apply \cref{thm:modified-comparison} to $b/(1-\varepsilon)$. Thus its thin-sublevel estimate applies directly to any such strictly positive comparison potential. The correction factor tends to one with the sublevel height, while $\varepsilon$ stays fixed.
 
 \begin{proposition}\label{prop:weak-extremum-localization}
-Let continuous $\omega$-plurisubharmonic $u,v$ satisfy $\omega_u^n=\omega_v^n=F\omega^n$, where $F\geq0$ is continuous. Let $q$ be smooth and strictly $\omega$-plurisubharmonic, and write $\omega_q^n=G\omega^n$. For every $0<\kappa<1$ and $\eta>0$,
+Let continuous $\omega$-plurisubharmonic $u,v$ satisfy $\omega_u^n=\omega_v^n=F\omega^n$, where $F\geq0$ is bounded measurable. Let $q$ be smooth and strictly $\omega$-plurisubharmonic, and write $\omega_q^n=G\omega^n$. For every $0<\kappa<1$ and $\eta>0$,
 \begin{equation}\label{eq:weak-localization-min}
 F\omega^n\bigl(\{u-v<\min_X(u-v)+\eta\}\cap\{F>\kappa G\}\bigr)>0.
 \end{equation}
@@ -39,7 +39,7 @@ Let $a=\min_X(u-v)$ and $\Lambda=\|v-q\|_\infty$. The perturbation satisfies $|m
 
 \subsection{The energy of the difference}
 
-Assume $u,v$ are continuous and $A^n=B^n=F\omega^n$ for continuous $F\geq0$. Although the cofactor is now a current, its pairing with the gradient square still defines a positive measure. The identity $\ddc w\wedge T=0$ determines the distribution of this energy over the levels of $w$.
+Assume $u,v$ are continuous and $A^n=B^n=F\omega^n$ for bounded measurable $F\geq0$. Although the cofactor is now a current, its pairing with the gradient square still defines a positive measure. The identity $\ddc w\wedge T=0$ determines the distribution of this energy over the levels of $w$.
 
 \begin{proposition}\label{prop:weak-level-energy}
 There is a finite positive measure $E=\mathrm{d} w\wedge\dc w\wedge T$ with the following properties.
@@ -58,7 +58,7 @@ w_*E=k(t)\,\mathrm{d} t.
 \end{equation}
 In particular, $E$ charges no level set of $w$.
 
-On every relatively compact coordinate domain $V\Subset\{F>0\}$ there is $C_V<\infty$ such that every piecewise $C^1$ Lipschitz function $p$ on $[a,b]$ satisfies
+On every relatively compact coordinate domain $V$ on whose neighborhood $F$ has a positive essential lower bound, there is $C_V<\infty$ such that every piecewise $C^1$ Lipschitz function $p$ on $[a,b]$ satisfies
 \begin{equation}\label{eq:weak-local-coercivity}
 \int_V|\mathrm{d}(p(w))|\,\mathrm{d}\lambda\leq C_V\left(\int_V|p'(w)|^2\,\mathrm{d} E\right)^{1/2},
 \end{equation}
@@ -91,7 +91,7 @@ Let $\sigma=w_*(\ddc T)$ and $\nu=w_*E$. Equation \eqref{eq:weak-energy-chain} s
 \]
 Consequently $k(t)=\int(s-t)_+\,\mathrm{d}\sigma(s)$ is globally Lipschitz and vanishes outside $[a,b]$. It has $k''=\sigma$; hence the compactly supported distribution $\nu-k(t)\,\mathrm{d} t$ has second derivative zero and must vanish. Positivity of $\nu$ and continuity of $k$ imply $k\geq0$. This proves \eqref{eq:weak-energy-pushforward} and the assertion about level sets.
 
-We establish \eqref{eq:weak-local-coercivity}. On a coordinate neighborhood of $V$, set $\beta=\ddc|z|^2$ and write $F\omega^n=F_0\beta^n$. The coefficient density matrix $A_{\mathrm{ac}}$ satisfies $\det_\beta A_{\mathrm{ac}}=F_0$ almost everywhere, by \cref{lem:continuous-density-coefficients}. The local Sobolev regularity in \cref{sec:psh-local-capacity} gives $w_\rho\to w$ strongly in local $W^{1,2}$; a subsequence of gradients converges almost everywhere. Along the same subsequence $A_\rho\to A_{\mathrm{ac}}$ almost everywhere by differentiation of its coefficient measures.
+We establish \eqref{eq:weak-local-coercivity}. On a coordinate neighborhood of $V$, set $\beta=\ddc|z|^2$ and choose $c_V>0$ with $F\omega^n\geq c_V\beta^n$. Apply \cref{lem:interior-convolution} with the constant function $g=c_V^{1/n}$. Differentiation of coefficient measures then gives $\det_\beta A_{\mathrm{ac}}\geq c_V$ almost everywhere. The local Sobolev regularity in \cref{sec:psh-local-capacity} gives $w_\rho\to w$ strongly in local $W^{1,2}$; a subsequence of gradients converges almost everywhere. Along the same subsequence $A_\rho\to A_{\mathrm{ac}}$ almost everywhere by differentiation of its coefficient measures.
 
 \Needspace{6\baselineskip}
 Since $T_\rho$ contains $A_\rho^{n-1}$ and all its terms are positive, Fatou's lemma applied to $E_\rho$ yields the measure inequality
@@ -99,17 +99,17 @@ Since $T_\rho$ contains $A_\rho^{n-1}$ and all its terms are positive, Fatou's l
 E\geq\mathrm{d} w\wedge\dc w\wedge A_{\mathrm{ac}}^{n-1}.
 \end{equation}
 \Needspace{10\baselineskip}
-On $V$, $F_0$ has a positive lower bound. The cofactor matrix of $A_{\mathrm{ac}}$ has smallest eigenvalue at least $\det A_{\mathrm{ac}}/\operatorname{tr}A_{\mathrm{ac}}=F_0/\operatorname{tr}A_{\mathrm{ac}}$. The trace is locally integrable because $A$ has finite mass. The Sobolev chain rule, \eqref{eq:weak-energy-ac-lower}, and Cauchy--Schwarz give
+The cofactor matrix of $A_{\mathrm{ac}}$ has smallest eigenvalue at least $\det A_{\mathrm{ac}}/\operatorname{tr}A_{\mathrm{ac}}\geq c_V/\operatorname{tr}A_{\mathrm{ac}}$. The trace is locally integrable because $A$ has finite mass. The Sobolev chain rule, \eqref{eq:weak-energy-ac-lower}, and Cauchy--Schwarz give
 \[
 \int_V|\mathrm{d}(p(w))|\,\mathrm{d}\lambda
 \leq C\left(\int_V|p'(w)|^2\,\mathrm{d} E\right)^{1/2}
-\left(\int_V\frac{\operatorname{tr}A_{\mathrm{ac}}}{F_0}\,\mathrm{d}\lambda\right)^{1/2}.
+\left(\int_V\frac{\operatorname{tr}A_{\mathrm{ac}}}{c_V}\,\mathrm{d}\lambda\right)^{1/2}.
 \]
 The last factor is finite and is absorbed into $C_V$. Values assigned to $p'$ at its finitely many corners are immaterial because $E$ charges no level of $w$.
 \end{proof}
 
 \begin{lemma}\label{lem:weak-null-extremum-levels}
-Assume in addition that $U=\{F>0\}$ is connected and dense. If $w=u-v$ is nonconstant, then
+Assume in addition that $F$ is continuous and $U=\{F>0\}$ is connected and dense. If $w=u-v$ is nonconstant, then
 \[
 F\omega^n(\{w=\min_Xw\})=F\omega^n(\{w=\max_Xw\})=0.
 \]
@@ -192,4 +192,16 @@ Take a smooth $0\leq\chi\leq1$ equal to one near $K_0$ and supported in $O$, and
 By \cref{prop:weak-uniform-test-potentials}, there is a smooth strictly $\omega$-plurisubharmonic $q$ with $\omega_q^n=G\omega^n\geq\varepsilon g\omega^n$. On $K_0$ we have $G\geq\varepsilon A>F$; on $K\setminus K_0$ we have $F<\varepsilon/2<\varepsilon\leq G$. Thus $G>F$ throughout the compact set $K$. Choose $0<\kappa<1$ such that $F<\kappa G$ on $K$, and put $W=\{F<\kappa G\}$. The complement of this open neighborhood of $K$ is compact, and $w-a$ has a strictly positive minimum there if it is nonempty. Hence some $\eta>0$ satisfies $\{w<a+\eta\}\subset W$.
 
 \Cref{prop:weak-extremum-localization} asserts that $\mu(\{w<a+\eta\}\cap\{F>\kappa G\})>0$. The set inside this measure is empty by the preceding inclusion. This contradiction makes $w$ constant. Equality of the suprema makes the constant zero.
+\end{proof}
+
+\Needspace{16\baselineskip}
+A positive lower bound on a bounded measurable density gives the same conclusion. In this case coercivity holds on all of $X$, and the concentrating test can dominate the essential upper bound on a whole neighborhood of the extreme set.
+
+\begin{corollary}\label{cor:bounded-positive-density-uniqueness}
+If $0<c_0\leq F\leq C_0<\infty$ almost everywhere and bounded $\omega$-plurisubharmonic functions satisfy $\omega_u^n=\omega_v^n=F\omega^n$, then $u-v$ is constant.
+\end{corollary}
+\begin{proof}
+Continuity follows from \cref{cor:bounded-lp-continuity}; dimension one follows from $\ddc(u-v)=0$. In higher dimension, suppose $w=u-v$ is nonconstant and put $K=\{w=\min_Xw\}$. The proof of \cref{lem:weak-null-extremum-levels} applies with $U=X$: \cref{prop:weak-level-energy} gives its pushforward identity and local coercivity on every chart. Thus $K$ has zero volume.
+
+Fix $B_0>\|1\|_{L^2(\omega^n)}$ and the corresponding $\varepsilon$ in \cref{prop:weak-uniform-test-potentials}. Choose $A>1$ with $\varepsilon A>C_0$ and a smooth cutoff $\chi$ equal to one on a neighborhood $W$ of $K$, supported in an open set of sufficiently small volume that $g=1+(A-1)\chi$ has $\|g\|_2<B_0$. The test potential has density $G\geq\varepsilon g$. Choose $\kappa<1$ with $C_0<\kappa\varepsilon A$. Then $F<\kappa G$ almost everywhere on $W$. Continuity of $w$ puts a sufficiently thin near-minimum set inside $W$, contradicting \cref{prop:weak-extremum-localization}. Hence $w$ is constant.
 \end{proof}
