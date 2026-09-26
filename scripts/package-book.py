@@ -104,6 +104,7 @@ for name in (
     "research/editorial/chapter-fifteen-rewrite-159.md",
     "research/editorial/restricted-invariants-integration-160.md",
     "research/editorial/chapter-sixteen-rewrite-161.md",
+    "research/editorial/chapter-seventeen-rewrite-162.md",
     "research/supplied-restricted-invariants-20260926.json",
     "research/source-disposition-145.json",
     "research/audits/source-ledger-145.json",
