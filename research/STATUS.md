@@ -2,6 +2,10 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Book-writing skill — 26 September 2026
+
+The user's dedicated `mingchen-book-writing` skill combines the base writing style with the chapter revision experience. Its maintained source is `research/editorial/skills/mingchen-book-writing/`, with a byte-identical discoverable installation in `/Users/mingchen/.codex/skills/mingchen-book-writing/`. `AGENTS.md` now routes book work through it and records the user's authorization to improve it when subsequent interventions add or change reusable guidance. The skill distinguishes general methods from this book's policies and records superseded rules and their boundaries. Schema, relative links and UI metadata pass validation; the direct scenario review is recorded in `research/editorial/book-writing-skill-review-20260926.md`. This is a workflow update; checkpoint138 remains the checked book release and Chapter 33 remains next.
+
 ## Checkpoint138 — complete Chapter 32 rewrite
 
 Chapter 32 completes its four-input rewrite and two direct mathematical/editorial reads. Its thirteen sections and eleven subsections develop the remaining equation, volume, singularity and geometric problems through the estimates they require. Repeated settings and definitions, a repeated implication in the collapse proposition, and the final work-plan recap are removed. The formerly open fixed-Lp-density selection question is replaced by the proved Chapter 14 theorem; selection remains distinct from uniqueness of all critical solutions. The admissible root space is always Banach in its sum norm, while root-norm completeness requires finite upper mass. The primitive elliptic-bundle and periodic-variance proofs retain their constants and sharpness arguments. General psh tools are internal references; paper citations remain in final Chapter 33.

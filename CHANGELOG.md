@@ -1,5 +1,9 @@
 # Modification history
 
+## Book-writing skill — 26 September 2026
+
+Created and installed `mingchen-book-writing`, extending `mingchen-writing` with complete chapter work, book architecture, foundation/citation placement, two-pass review and scoped learning from the author's interventions. The five-file skill is maintained in `research/editorial/skills/mingchen-book-writing/`; project instructions and the plan now make feedback-driven maintenance part of ongoing work. Validation, local reference links, UI metadata and byte equality of the maintained and installed copies pass. A direct scenario walkthrough is recorded in `research/editorial/book-writing-skill-review-20260926.md`. The manuscript, parent skill and checked PDFs are unchanged; no new mathematical release is claimed.
+
 ## Checkpoint138 — 26 September 2026
 
 Chapter 32 completes its four-input rewrite and two direct mathematical/editorial reads. Its thirteen sections and eleven subsections develop the remaining equation, volume, singularity and geometric problems through the estimates they require. Repeated settings and definitions, a repeated implication in the collapse proposition, and the final work-plan recap are removed. The formerly open fixed-Lp-density selection question is replaced by the proved Chapter 14 theorem; selection remains distinct from uniqueness of all critical solutions. The admissible root space is always Banach in its sum norm, while root-norm completeness requires finite upper mass. The primitive elliptic-bundle and periodic-variance proofs retain their constants and sharpness arguments. General psh tools are internal references; paper citations remain in final Chapter 33.
