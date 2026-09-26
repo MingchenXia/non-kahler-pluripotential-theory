@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint152 — 26 September 2026
+
+Chapter 8 completes its whole six-section rewrite and two direct revised mathematical/editorial reads. The heat-potential and mixed-derivative estimates form one argument. The square estimate explicitly has a constant uniform in its varying parameters, including the cutoff factor in its pointwise application. The mass formula uses the Chapter 2 mass polynomial. The sharp fiber-average inequality now supplies the minimum-mass corollary, removing a duplicate regularization proof and the repeated lower-mass definition. The complete heat-scale and base-correction construction remains, while the distant equation-solvability recap is removed.
+
+The changed author input has zero house-audit errors and the same two inherited warnings. Non-book citations remain in Chapter 33. The 804-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 44 selected final pages pass visual review, with 11 changed images directly inspected and 33 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-eight-rewrite-152.md, build-snapshot-152.json and source-package-portability-152.json.
+
+Continue with the complete present Chapter 9 and all its nested inputs, then Chapter 10. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint151 — 26 September 2026
 
 Chapter 7 completes its whole six-section rewrite, including the general-weight input, and two direct revised mathematical/editorial reads. One range estimate and one restricted-mass lemma supply the weight bounds. The general decreasing-weight theorem now includes capacity continuity and precedes its polynomial and logarithmic applications. The exponential transform retains its stronger explicit capacity estimate. A single cutoff identity uses the Chapter 1 weighted bounded-product calculus and serves the undamped tail and integrability criteria. The mass-concentration examples and arbitrary smooth-background extension keep their complete proofs. Repeated local setups, continuity proofs, notation and tiny sections are removed.
