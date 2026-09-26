@@ -92,6 +92,7 @@ for name in (
     "research/editorial/chapter-three-rewrite-147.md",
     "research/editorial/chapter-four-rewrite-148.md",
     "research/editorial/chapter-five-rewrite-149.md",
+    "research/editorial/chapter-six-rewrite-150.md",
     "research/source-disposition-145.json",
     "research/audits/source-ledger-145.json",
     "research/audits/comparison-history-through-checkpoint144.md",

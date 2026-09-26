@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint150 — 26 September 2026
+
+Chapter 6 completes its whole six-section rewrite and two direct revised mathematical/editorial reads. Restricted positivity now leads to one non-pluripolar measure construction for arbitrary smooth backgrounds. The bounded ordered-contact argument, including fixed positive complementary factors, belongs to Chapter 1 and is cited directly in Chapters 6 and 10. The convex-density lemma drops its unused bigness hypothesis, and the bounded-mass estimate states the general smooth-background conclusion directly. The infinite-mass construction, integrable coefficient refinement and prescribed smooth masses retain their full proofs and quantitative estimates. Repeated constructions, notation and distant recaps are removed.
+
+The five changed author inputs have zero house-audit errors and one inherited label warning. Non-book citations remain in Chapter 33. The 806-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 70 selected final pages pass visual review, with 45 changed images directly inspected and 25 byte-identical to inspected first-output images. Both outputs rebuild from a fresh empty source-package extraction, with every page text matching production. There are 33 active chapters and 216 author inputs; all 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-six-rewrite-150.md, build-snapshot-150.json and source-package-portability-150.json.
+
+Continue with the complete present Chapter 7, including its nested inputs, then Chapter 8. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint149 — 26 September 2026
 
 Chapter 5 completes its whole rewrite and two direct revised mathematical/editorial reads. Two sections distinguish the trace map and admissible data from the complete metric and sharp quantitative estimates. One scalar elliptic operator and its volume adjoint now serve the Green inverse and both estimates. Distributional positivity uses Chapter 1, and zero trace mass uses Chapter 4. The capacity counterexample moves beside its curve construction in Chapter 15, after damped continuity is available; the entire changed root input receives both reads, without a new recursive Chapter 15 review. The infinite-mass construction remains in Chapter 6. Repeated openings, scalar setups and recaps are removed without weakening the conclusions.
