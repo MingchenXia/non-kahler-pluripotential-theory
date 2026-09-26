@@ -89,6 +89,7 @@ for name in (
     "research/editorial/projective-cones-review-144.md",
     "research/editorial/source-ledger-review-145.md",
     "research/editorial/chapter-two-rewrite-146.md",
+    "research/editorial/chapter-three-rewrite-147.md",
     "research/source-disposition-145.json",
     "research/audits/source-ledger-145.json",
     "research/audits/comparison-history-through-checkpoint144.md",

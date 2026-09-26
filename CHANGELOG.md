@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint147 — 26 September 2026
+
+Chapter 3 completes its whole three-section rewrite and two direct revised mathematical/editorial reads. The radial integral and mixed-power sum define one energy for every smooth real background; closedness appears exactly where its derivative is identified with the Monge–Ampère one-form. The preliminary symmetry proposition and weaker obstruction corollary are absorbed into the complete primitive criterion. The first-jet, polarization and small-Hessian arguments remain complete. The first variation reuses the existing integration-by-parts and product identities, and the chapter ends with the surface Euler equation.
+
+The changed author input has zero house-audit errors and one inherited label warning. Paper citations remain in Chapter 33. The 812-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 28 selected final pages pass visual review: 14 changed images were directly inspected after the final edit and 14 are byte-identical to previously inspected images. Both PDFs rebuild from a fresh empty source-package extraction, with every page text matching production. The active book has 33 chapters and 216 author inputs. All 190 historical verifier reports and three hidden sources remain unchanged. Exact scopes are recorded in chapter-three-rewrite-147.md, build-snapshot-147.json and source-package-portability-147.json.
+
+Continue with the complete present Chapter 4, then Chapters 5–6, after the foundation relocations. The broader writing goal remains active and incomplete.
+
 ## Checkpoint146 — 26 September 2026
 
 Chapter 2 completes its whole five-section rewrite and two direct mathematical/editorial reads. The full smooth and bounded mass-invariance characterization moves from Chapter 25 to the mass polynomial, using only Chapter 1 foundations and preceding Chapter 2 identities. Its stable label and later callers are preserved; the redundant sufficient-condition corollary and duplicate Gauduchon definition are removed. Chapter 25 retains the volume, entropy and mass-extremum applications. Repeated settings and tangential recaps are removed, and four downstream page-break adjustments preserve the mathematical text.

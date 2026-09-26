@@ -4,13 +4,13 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint146: read and rewrite the complete present Chapter 3, then Chapters 4–6. Chapter 2 and the relocated Chapter 25 input have two complete revised reads and release checks in chapter-two-rewrite-146.md. The Chapter 3 edit is only a caller repair; its full review is still next. Earlier rows retain their historical review scopes.
+Current next unit after checkpoint147: read and rewrite the complete present Chapter 4, then Chapters 5–6. Chapter 3 has two complete revised mathematical/editorial reads and release checks in chapter-three-rewrite-147.md. Earlier rows retain their historical review scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
 | 1 | `chapter_framework.tex` | Complete integrated chapter and all eighteen nested-input first/second direct revised reads and release checks in checkpoint142; see foundations-integration-review-142.md. The checkpoint95 review retains its historical scope. Checkpoint144 adds two reads of the new input or bounded changed interface; see projective-cones-review-144.md. |
 | 2 | `chapter_mass.tex` | Complete integrated five-section rewrite and two direct revised mathematical/editorial reads in checkpoint146; includes the complete mass-invariance proof moved from Chapter 25. See chapter-two-rewrite-146.md. |
-| 3 | `chapter_energy.tex` | Complete first/second source pass and final layout check; see compact-growing-jets-energy-review-97.md |
+| 3 | `chapter_energy.tex` | Complete integrated three-section rewrite and two direct revised mathematical/editorial reads in checkpoint147; a single radial energy, complete primitive criterion and explicit surface Euler equation. See chapter-three-rewrite-147.md. |
 | 4 | `chapter_gauduchon.tex` | Complete first/second pass including nested linear-duality input and final layout; see gauduchon-persistence-review-98.md |
 | 5 | `chapter_compactness.tex` | Complete first/second pass including trace input and final layout; see quantitative-trace-compactness-review-99.md |
 | 6 | `chapter_products.tex` | Complete first/second pass including integrable-current input and final layout; see smooth-masses-products-review-100.md |
@@ -53,3 +53,5 @@ Checkpoint144 reconstructs the cone equations and bounded connected-positivity u
 Checkpoint145 replaces the chronological source/proof ledgers by current statements and locations, preserves the original records and checks all nineteen source-outline units. This research-only reconciliation changes no manuscript or prior audit scope. The integrated chapter sequence resumes at Chapter 2.
 
 Checkpoint146 completes the integrated Chapter 2 review and moves the mass-invariance characterization to its natural position after the mass polynomial. Both revised mathematical inputs receive two complete reads; the Chapter 3 surface example has only a reference repair. The next complete chapter is Chapter 3.
+
+Checkpoint147 completes the integrated Chapter 3 rewrite and release checks. The next complete chapter is Chapter 4, including its nested linear-duality input.
