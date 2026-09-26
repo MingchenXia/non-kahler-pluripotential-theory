@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint163: read and rewrite the complete present Chapter 19 and all its nested inputs, then Chapter 20. Chapter 18 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
+Current next unit after checkpoint164: read and rewrite the complete present Chapter 20 and all its nested inputs, then Chapter 21. Chapter 19 has two complete revised mathematical/editorial reads and release checks. Earlier rows retain their historical scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|
@@ -26,9 +26,9 @@ Current next unit after checkpoint163: read and rewrite the complete present Cha
 | 16 | `chapter_rays.tex` | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint161; no nested inputs. Endpoint control is grouped with subgeodesic calculus; explicit secant inequalities give the same-type time estimate. All 13 labels and 7 statement/proof pairs remain. See chapter-sixteen-rewrite-161.md. |
 | 17 | `chapter_testcurves.tex` | Complete integrated four-section rewrite and two direct revised mathematical/editorial reads in checkpoint162, with full nested-figure review. Dominated convergence simplifies initial attainment; the punctured-disc maximum principle gives the projective envelope. All 10 labels, 5 statements and 3 proofs remain. See chapter-seventeen-rewrite-162.md. |
 | 18 | `chapter_trace_data.tex` | Complete integrated seven-input rewrite and two direct revised mathematical/editorial reads in checkpoint163. Trace calculus and additivity are merged before curve realization; established domination and BMP estimates simplify proofs. All 34 labels remain. See chapter-eighteen-rewrite-163.md. |
-| 19 | `chapter_sections.tex` | Complete whole-chapter and both nested-input first/second direct proof-and-writing reads, with output checks in checkpoint125; see chapter-nineteen-rewrite-125.md. |
+| 19 | `chapter_sections.tex` | Complete integrated three-input rewrite and two direct revised mathematical/editorial reads in checkpoint164. Weighted sections and kernels are merged; residual effective divisors and normalized compactness give the trace obstruction in every dimension. All thirteen labels and eight formal statements remain. See chapter-nineteen-rewrite-164.md. |
 | 20 | `chapter_flag_bodies.tex` | Complete whole-chapter and all three nested-input first/second direct proof-and-writing reads, with output checks in checkpoint126; includes the inline figure; see chapter-twenty-rewrite-126.md. |
-| 21 | `chapter_hopf_reduction.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint127; the affected Chapter 1 product input receives both reads; see chapter-twenty-one-rewrite-127.md. |
+| 21 | `chapter_hopf_reduction.tex` | Complete whole-chapter first/second direct proof-and-writing reads, with output checks in checkpoint127; the affected Chapter 1 product input receives both reads; see chapter-twenty-one-rewrite-127.md. Checkpoint164 repairs only the duplicated merged-section reference in the first section opening. |
 | 22 | `chapter_divisorial_models.tex` | Complete whole-chapter and all nested-input first/second direct proof-and-writing reads, with output checks in checkpoint128; both affected Chapter 1 inputs receive the same reads; see chapter-twenty-two-rewrite-128.md. Checkpoint163 repairs only the merged-calculus reference in the compatibility proof. |
 | 23 | `chapter_nonclosed_bclasses.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint129; see chapter-twenty-three-rewrite-129.md. |
 | 24 | `chapter_envelope_systems.tex` | Complete whole-chapter and nested-input first/second direct proof-and-writing reads, with output checks in checkpoint130; the affected Chapter 1 input receives both reads; see chapter-twenty-four-rewrite-130.md. |
@@ -87,3 +87,5 @@ Checkpoint161 completes the integrated Chapter 16 rewrite. The next complete cha
 Checkpoint162 completes the integrated Chapter 17 rewrite. The next complete chapter is Chapter 18.
 
 Checkpoint163 completes the integrated Chapter 18 rewrite. The next complete chapter is Chapter 19.
+
+Checkpoint164 completes the integrated Chapter 19 rewrite. The next complete chapter is Chapter 20.

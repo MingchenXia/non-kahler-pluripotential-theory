@@ -1,7 +1,7 @@
 \chapter{Holomorphic sections and Hermitian mass}
 \label{chap:sections}
 
-A singular weight selects holomorphic sections by prescribing integrability at its poles. Their squared evaluations produce a positive current in the closed curvature class of the line bundle. Gauduchon degrees and divisorial trace data constrain these sections; on a curve, Riemann--Roch turns the local vanishing orders into an exact growth formula. The Hopf calculation and the infinite-mass example then show how section growth can differ from the Monge--Amp\`ere mass of a Hermitian background.
+Global sections retain those local singularity constraints that can be realized in a fixed line bundle. Integrability against a weight selects a finite-dimensional space, and its Bergman kernel produces a positive current in the curvature class of the bundle. The available degree limits the vanishing imposed by the weight, including the trace orders along a submanifold. On a curve this constraint determines the leading section growth through Riemann--Roch. On a Hopf manifold the sections instead come from homogeneous polynomials, whose growth detects the lower-dimensional projective base. These constructions relate section counts to closed line-bundle curvature; comparison with a Hermitian Monge--Amp\`ere mass requires a relation between the two backgrounds.
 
 Let $L$ be a holomorphic line bundle on $X$ with smooth Hermitian metric $h$, let $\mathrm{d}V$ be a smooth positive volume form, and let $u\in\QPSH(X)$. In a holomorphic frame $e$, write $|e|_h^2=\mathrm{e}^{-\chi}$. Its curvature form is
 \[
@@ -9,9 +9,9 @@ Let $L$ be a holomorphic line bundle on $X$ with smooth Hermitian metric $h$, le
 \]
 Thus $\beta$ is a smooth closed real $(1,1)$-form.
 
-\section{Weighted section spaces}\label{sec:weighted-section-spaces}
+\section{Weighted sections and Bergman currents}\label{sec:weighted-section-spaces}\label{sec:weighted-bergman-kernel}
 
-The multiplier ideal records exactly which sections have finite weighted norm. Compactness turns local integrability into a global Hilbert space.
+The multiplier ideal records which sections have finite weighted norm. Evaluation on the resulting Hilbert space gives the kernel; its extremal formula turns comparisons of norms into comparisons of potentials.
 
 For every positive integer $m$, set
 \[
@@ -32,12 +32,8 @@ Let $v\in\QPSH(X)$, let $D,E\geq0$, and let $F\in C^\infty(X,\mathbb R)$. Suppos
 \]
 \end{proposition}
 \begin{proof}
-The ratio of the two integrands is $\mathrm{e}^{-m(v-u)+F}$, which lies between the displayed constants. Integrability in either norm is therefore equivalent to integrability in the other. Integrating proves both estimates.
+The two integrands differ by the factor $\mathrm{e}^{-m(v-u)+F}$, which lies between the displayed constants. Integrability in either norm is therefore equivalent to integrability in the other. Integrating proves both estimates.
 \end{proof}
-
-\section{The kernel and its curvature}\label{sec:weighted-bergman-kernel}
-
-Evaluation on the weighted Hilbert space defines a kernel. Its extremal formula transfers norm estimates to potential estimates, while its local logarithmic expression identifies the curvature class.
 
 Fix $m\geq1$ and choose an orthonormal basis $s_1,\ldots,s_{N_m}$ of $\mathcal H_m(u)$. Define $K_{m,u}$ on $X$ and $B_{m,u}$ off the pole set by
 \[
@@ -62,6 +58,7 @@ This positive current is closed. If $N_m=0$, then $\Phi_m\equiv-\infty$.
 \begin{proof}
 Write a section in the orthonormal basis. The Cauchy--Schwarz inequality bounds its evaluation by the sum of squared basis evaluations, with equality for a coefficient vector proportional to their complex conjugates after trivializing the one-dimensional fiber. At a common zero both sides vanish. This proves the extremal formula. Integrating the defining finite sum for $B_{m,u}$ sums the squared norms of the basis vectors and gives $N_m$.
 
+\Needspace{5\baselineskip}
 Locally $s_j=f_j e^{\otimes m}$, so
 \[
  \Phi_m=\frac1m\log\sum_j|f_j|^2-\chi,
@@ -87,7 +84,7 @@ The current $\beta+\ddc\Phi_m$ is consequently unchanged.
 
 The zero divisor of a section is positive. Pairing its Poincar\'e--Lelong formula with a Gauduchon metric therefore bounds its size by the degree of the line bundle. Write $h^0(X,L^m)=\dim H^0(X,L^m)$.
 
-Let $\gamma$ be a Gauduchon metric on $X$, so $\ddc\gamma^{n-1}=0$. Define the degree
+For a Gauduchon metric $\gamma$ on $X$, define the degree
 \[
  \deg_\gamma L=\int_X\beta\wedge\gamma^{n-1}.
 \]
@@ -119,7 +116,7 @@ If the degree is zero, positivity and the strict positivity of $\gamma$ imply $T
 
 \section{Bounded weighted sections}\label{sec:bounded-section-algebra}
 
-The product of two integrable weighted norms need not be integrable. Thus the spaces $\mathcal H_m(u)$ need not form a graded algebra, as the following logarithmic example shows. Bounded weighted norms are preserved under multiplication and give a graded subalgebra instead. The nonmultiplicative family is treated by the almost-semigroup theory of \cite[chapter on the theory of Okounkov bodies]{SGPT}.
+Integrability of two weighted squared norms does not ensure integrability of their product. The logarithmic example below shows how this prevents multiplication of the selected section spaces. Bounded weighted norms are preserved under multiplication and give the graded algebra used in the next chapter.
 
 \begin{example}\label{ex:multiplier-sections-not-graded}
 Put $X=\mathbb P^1$, let $z$ be its affine coordinate, and let $\delta_0$ be the Dirac mass at the origin. Take $L=\mathcal O(1)$ with Fubini--Study curvature $\beta$, and let
@@ -133,7 +130,7 @@ $\mathcal I(u)=\mathcal O$ and $\mathcal I(2u)=\mathcal O(-[0])$. A section of $
 The weight has only one singularity, $\frac35\log|z|^2+O(1)$ at zero. The one-variable integrability calculation gives the two stated ideals. The curvature follows from Poincar\'e--Lelong and the Fubini--Study potential. The section assertion is precisely the failure to vanish at zero.
 \end{proof}
 
-The boundedness condition gives a graded alternative. Define $\mathcal W_0=\mathbb C$ and, for $m\geq1$,
+Define $\mathcal W_0=\mathbb C$ and, for $m\geq1$,
 \[
  \mathcal W_m(u)=\{s\in H^0(X,L^m):
              |s|_{h^m}^2\mathrm{e}^{-mu}\text{ is bounded off }\{u=-\infty\}\}.
@@ -145,6 +142,8 @@ These finite-dimensional vector spaces are unchanged when the smooth metric is c
   \bigl(|t|_{h^k}^2\mathrm{e}^{-ku}\bigr)
 \]
 proves $\mathcal W_m(u)\mathcal W_k(u)\subseteq\mathcal W_{m+k}(u)$. Closure under addition follows from $|s+t|^2\leq2|s|^2+2|t|^2$. Thus $\bigoplus_m\mathcal W_m(u)$ is a graded subalgebra of the section ring.
+
+On a smooth projective variety, the almost-semigroup construction of \cite[Section~10.3]{SGPT} treats metrics with positive curvature current on big line bundles with positive multiplier-ideal volume. It uses the integrable section spaces themselves.
 
 \section{Section growth on a curve}
 
@@ -178,16 +177,14 @@ A germ vanishing to order $k$ has weighted squared norm comparable to $|z_i|^{2(
 
 The positive curvature measure has atom $c_i$ at $p_i$ and total mass $\ell$. Subtracting these atoms leaves a positive measure, proving $d\leq\ell$. The remainder does not charge polar sets: after subtracting the logarithmic singularity, the local potential has a bounded quasi-plurisubharmonic representative. By \cref{prop:bounded-products}, its curvature gives polar sets zero mass. Thus this remaining measure is exactly the extended measure, of mass $\ell-d$.
 
-If $\ell>d$, the degrees of both line bundles in the display equal $m(\ell-d)+O(1)$ and tend to infinity. Let $g$ be the genus of $X$. The standard Riemann--Roch theorem and Serre duality on a curve give $h^0=\deg+1-g$ once the degree exceeds $2g-2$. Dividing by $m$ proves both limits. If $\ell=d$, both degrees remain bounded. A line bundle of negative degree has no nonzero section, and one of nonnegative degree $k$ has at most $k+1$ sections: impose vanishing at $k+1$ distinct points and use the negative-degree case for the kernel. Hence both dimensions are uniformly bounded, and both limits are zero. These arguments include $r=0$.
+If $\ell>d$, the degrees of both line bundles in the display equal $m(\ell-d)+O(1)$ and tend to infinity. Let $g$ be the genus of $X$. Riemann--Roch and Serre duality give $h^0=\deg+1-g$ once the degree exceeds $2g-2$. Dividing by $m$ proves both limits. If $\ell=d$, both degrees remain bounded. A line bundle of negative degree has no nonzero section, and one of nonnegative degree $k$ has at most $k+1$ sections: impose vanishing at $k+1$ distinct points and use the negative-degree case for the kernel. Hence both dimensions are uniformly bounded, and both limits are zero. These arguments include $r=0$.
 \end{proof}
-
-Here the common growth rate is the mass left after removing the logarithmic atoms from the line-bundle curvature measure.
 
 \input{author/section_hopf_sections}
 
 \section{Section counts and infinite Hermitian mass}
 
-Return to an arbitrary compact complex manifold $X$. When a Hermitian metric fails the bounded mass property, \cref{thm:infinite-mass-witness} supplies a potential with infinite mass and trivial multiplier ideals. For the trivial line bundle, every weighted section space then consists of constants. Its Bergman currents vanish at every degree.
+Return to an arbitrary compact complex manifold $X$. A weight with trivial multiplier ideals imposes no integrability restriction on global sections. The infinite-mass witness of \cref{thm:infinite-mass-witness} therefore leaves every section count unchanged. For the trivial bundle, all Bergman currents vanish while the Hermitian mass is infinite.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:sections-infinite-mass-obstruction}
@@ -202,6 +199,6 @@ The currents produced by its global Bergman potentials are identically zero.
 Take $U$ from \cref{thm:infinite-mass-witness}, which has $\mathcal I(tU)=\mathcal O_X$ at every positive weight and infinite extended mass. Global holomorphic functions on $X$ are constant, so every weighted section space is one-dimensional. The constant section is integrable by the ideal condition and compactness. Its normalized basis consists of a nonzero constant; therefore each $\Phi_m$ is constant. Since the trivial metric has curvature zero, its Bergman current is zero.
 \end{proof}
 
-In particular $m^{-n}\dim\mathcal H_m(U)\to0$ while the Hermitian mass is infinite. The curvature tested by the section spaces is zero, whereas the nonlinear operator uses $\omega$. Replacing one by the other would turn this example into a false section-volume formula.
+In particular $m^{-n}\dim\mathcal H_m(U)\to0$ while the Hermitian mass is infinite. Here the line-bundle curvature is zero and the nonlinear operator uses $\omega$; the two quantities arise from different backgrounds.
 
 The bounded section algebra now supplies the multiplicative structure for the flag bodies of \cref{chap:flag-bodies}. Quantitative kernel limits require further relations between the selecting weight and line-bundle curvature; these are developed in \cref{chap:partial-bergman}.
