@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Uniform strict barriers control changes of background, allowing this criterion to tolerate vanishing curvature loss.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -1259,4 +1259,112 @@ Both outer terms tend to $\overline{\operatorname{vol}}_\theta(p)$, proving $d_\
 For large $j$, \cref{lem:volume-deficit-stretch} with $b=2$ supplies a convex lower bound for $r_j$ whose first term is $\frac12\max(r_j,p)$. Volume addition gives $\underline{\operatorname{vol}}_\theta(r_j)\geq2^{-n}\delta$. Thus \cref{prop:model-volume-separation,thm:model-volume-capacity-convergence} give the asserted $L^1$ and capacity convergence of the models.
 \end{proof}
 
-The comparison is unchanged by bounded changes of the approximating potentials. The convergence of canonical models in the theorem therefore does not assert convergence of arbitrary analytic representatives. The allowed background error is an increase tending to zero; a general two-sided change requires a choice of admissible reference potentials in the varying backgrounds.
+The comparison is unchanged by bounded changes of the approximating potentials. The convergence of canonical models in the theorem therefore does not assert convergence of arbitrary analytic representatives. For two-sided background errors, the next section constructs admissible reference models in the varying backgrounds.
+
+\section{Two-sided background perturbations}
+\label{sec:two-sided-model-backgrounds}
+
+A potential in the original background may cease to be admissible when the background decreases. Mixing it with a strict potential restores positivity, and ordinary projection gives a model in the new background. The volume comparison controls the error of this transport uniformly on a positive lower-volume sector. It also makes the limiting notion of approximation independent of the strict potential used in the correction.
+
+The preceding estimate remains uniform when both backgrounds vary near $\theta$.
+
+\begin{lemma}\label{lem:nearby-background-volume-comparison}
+For every $\delta>0$ there are $C_\delta>0$ and $\varepsilon_0>0$ such that, whenever smooth backgrounds satisfy
+\[
+ \theta-\varepsilon h\leq\beta\leq\gamma\leq\theta+\varepsilon h,
+ \qquad 0\leq\varepsilon\leq\varepsilon_0,
+\]
+and $u\in\PSH(X,\beta)$ has lower volume at least $\delta$, either volume satisfies
+\[
+ 0\leq\operatorname{vol}_\gamma(u)-\operatorname{vol}_\beta(u)
+       \leq C_\delta\varepsilon.
+\]
+For two such potentials $u,v$, one also has
+\[
+ \left|d_\gamma(P_\gamma[u],P_\gamma[v])-d_\beta(u,v)\right|
+       \leq2C_\delta\varepsilon.
+\]
+\end{lemma}
+\begin{proof}
+Put $\theta_0=\theta-\kappa h/2$ and $h_0=(1+\kappa/2)h$. The fixed $\rho$ is strict in $\theta_0$, so this background is big. If $\varepsilon\leq\min(\kappa/2,1)$, then $\theta_0\leq\beta\leq\theta_0+h_0$ and $\gamma\leq\beta+2\varepsilon h_0$. Apply \cref{prop:uniform-background-volume-comparison} with reference background $\theta_0$ and comparison form $h_0$. Its strict margin and dominant Hermitian form can be fixed independently of $\beta$ and $\gamma$. Their common upper mass bound turns the multiplicative estimate into the stated additive estimate for $\varepsilon\leq1/2$. Apply it to $u$, $v$ and $\max(u,v)$; the same three-error calculation as in \cref{cor:vanishing-background-comparison}, followed by ordinary projection, gives the second assertion.
+\end{proof}
+
+Choose $A>0$ with $\theta\leq Ah$ and put $B=2(1+A/\kappa)$. For a smooth background $\eta$ with $\theta-\varepsilon h\leq\eta\leq\theta+\varepsilon h$, where $0<\varepsilon<\min(\kappa/2,1/B)$, set
+\begin{equation}\label{eq:two-sided-model-transport}
+ c_\varepsilon=1-\varepsilon/\kappa,\qquad
+ T^\rho_{\eta,\varepsilon}(p)
+   =P_\eta[c_\varepsilon p+(1-c_\varepsilon)\rho],\qquad
+ \widehat\theta_\varepsilon=\theta+B\varepsilon h.
+\end{equation}
+The mixed potential is $\eta$-plurisubharmonic, since its current is at least $\eta-\theta+\varepsilon h$.
+
+\Needspace{22\baselineskip}
+\begin{theorem}\label{thm:two-sided-model-transport}
+For $p\in\mathcal M_\delta(\theta)$, the transport in \eqref{eq:two-sided-model-transport} is an ordinary model in background $\eta$, of lower volume at least $c_\varepsilon^n\delta$. For either volume,
+\begin{equation}\label{eq:two-sided-transport-volume}
+ c_\varepsilon^n\operatorname{vol}_\theta(p)
+ \leq\operatorname{vol}_\eta(T^\rho_{\eta,\varepsilon}(p))
+ \leq c_\varepsilon^n\operatorname{vol}_{\widehat\theta_\varepsilon}(p).
+\end{equation}
+For $p,q\in\mathcal M_\delta(\theta)$,
+\begin{equation}\label{eq:two-sided-comparison-error}
+ \begin{split}
+ &\left|d_\eta(T^\rho_{\eta,\varepsilon}(p),T^\rho_{\eta,\varepsilon}(q))
+                  -c_\varepsilon^n d_\theta(p,q)\right|\\
+ &\qquad\leq2c_\varepsilon^nK
+       \left((1+B\varepsilon/\kappa_\delta)^n-1\right).
+ \end{split}
+\end{equation}
+For fixed $p$, these models tend to $p$ in $L^1$ and capacity as $\varepsilon\to0$. Two choices of strict analytic potential, rational margin and vanishing error bounds give $d_\eta$-comparison tending to zero between the transports of $p$ in any common sequence of admissible backgrounds.
+\end{theorem}
+\begin{proof}
+Write $c=c_\varepsilon$, $s=1-c$, and $v=cp+s\rho$. Addition in background $\theta-s\kappa h\leq\eta$ gives the lower bound in \eqref{eq:two-sided-transport-volume} for $v$. Its lower volume is positive, so \cref{thm:ordinary-envelope-volumes} gives the same two volumes for $T(p)=T^\rho_{\eta,\varepsilon}(p)$.
+
+The choices of $B$ and $c\geq1/2$ give
+\[
+ c\widehat\theta_\varepsilon-(\theta+\varepsilon h)
+ \geq\varepsilon(cB-1-A/\kappa)h\geq0.
+\]
+Every nonpositive $\eta$-plurisubharmonic competitor $w\preceq v$ satisfies $w/c\in\PSH(X,\widehat\theta_\varepsilon)$ and $w/c\preceq p$, since $\rho\leq0$. Taking envelopes yields
+\begin{equation}\label{eq:two-sided-transport-bounds}
+ cp+s\rho\leq T(p)\leq cP_{\widehat\theta_\varepsilon}[p].
+\end{equation}
+Volume monotonicity and the ordinary-envelope identity in the larger background prove \eqref{eq:two-sided-transport-volume}.
+
+Let $m=\max(p,q)$. The same pointwise bounds give
+\[
+ cm+s\rho\leq\max(T(p),T(q))
+       \leq cP_{\widehat\theta_\varepsilon}[m].
+\]
+Consequently the upper volumes of $T(p)$, $T(q)$ and their maximum lie between $c^n$ times the respective upper volumes of $p$, $q$, $m$ in backgrounds $\theta$ and $\widehat\theta_\varepsilon$. The lower volumes of all three original inputs are at least $\delta$, and their upper volumes are at most $K$. By \cref{prop:uniform-background-volume-comparison}, each of the three errors is nonnegative and at most $c^nK((1+B\varepsilon/\kappa_\delta)^n-1)$. This proves \eqref{eq:two-sided-comparison-error}.
+
+For fixed $p$, \cref{cor:ordinary-envelope-background-limit,lem:monotone-psh-capacity} give $P_{\widehat\theta_\varepsilon}[p]\to p$ in $L^1$ and capacity as $\varepsilon\downarrow0$. Decreasing tail suprema handle arbitrary error sequences. Quasi-continuity and integrability give $cp+s\rho\to p$ in both senses. The bounds \eqref{eq:two-sided-transport-bounds} prove the asserted limits.
+
+To compare two choices along a sequence $\eta_j$, denote their coefficients by $c_j^{(i)}$ and their upper backgrounds by $\theta+B_i\varepsilon_j^{(i)}h$, $i=0,1$. Put $c_j=\min_i c_j^{(i)}$ and $a_j=\max_i B_i\varepsilon_j^{(i)}$. Since the envelopes are nonpositive, both transported models lie below $c_jP_{\theta+a_jh}[p]$. Moreover $\eta_j\leq c_j(\theta+a_jh)$: use the previous form inequality for an index attaining the smaller coefficient. The upper volume of their maximum is therefore at most $c_j^n\overline{\operatorname{vol}}_{\theta+a_jh}(p)$, which tends to $\overline{\operatorname{vol}}_\theta(p)$. Each individual upper volume is at least $(c_j^{(i)})^n\overline{\operatorname{vol}}_\theta(p)$ and has the same limit. Their $d_{\eta_j}$-comparison tends to zero.
+\end{proof}
+
+For $p_j,p\in\mathcal M_\delta(\theta)$, \eqref{eq:two-sided-comparison-error} shows that $d_\theta(p_j,p)\to0$ if and only if the transported comparisons tend to zero along backgrounds with errors tending to zero. The next criterion permits approximants chosen directly in those backgrounds.
+
+\enlargethispage{2\baselineskip}
+\begin{theorem}\label{thm:two-sided-analytic-criterion}
+Let $p=P_\theta[p]$ have positive lower volume. Let smooth backgrounds $\eta_j$ satisfy $\theta-\varepsilon_jh\leq\eta_j\leq\theta+\varepsilon_jh$, where $0<\varepsilon_j<\min(\kappa/2,1/B)$ are rational and tend to zero. Put $p_j=T^\rho_{\eta_j,\varepsilon_j}(p)$. Then $p=P_\theta[p]_{\mathcal I}$ if and only if there are analytic $a_j\in\PSH(X,\eta_j)$ with
+\[
+ d_{\eta_j}(a_j,p_j)\longrightarrow0.
+\]
+The approximants may be required to be ordinary models. This convergence condition is independent of the fixed strict analytic potential and admissible vanishing error bounds used to transport $p$. Every such analytic approximation admits rational corrections in the original background whose ordinary models converge to $p$ for $d_\theta$, in $L^1$ and in capacity.
+\end{theorem}
+\begin{proof}
+Suppose $p=P_\theta[p]_{\mathcal I}$. Choose analytic ordinary models $r_j$ in background $\theta$ with $d_\theta(r_j,p)\to0$ by \cref{thm:fixed-big-analytic-approximation}. Their lower volumes have a common positive bound. The transports $a_j=T^\rho_{\eta_j,\varepsilon_j}(r_j)$ have analytic singularities: the convex coefficients are rational, and ordinary projection preserves the bounded-difference type of an analytic potential. The comparison estimate gives $d_{\eta_j}(a_j,p_j)\to0$.
+
+Conversely, assume these analytic approximants exist, and put $\delta=\underline{\operatorname{vol}}_\theta(p)$. For large $j$, the lower volume of $p_j$ is at least $2^{-n}\delta$. The upper-volume deficit from $a_j$ to $\max(a_j,p_j)$ tends to zero. Apply \cref{lem:volume-deficit-stretch} with $b=2$ in background $\eta_j$; addition gives
+\[
+ \underline{\operatorname{vol}}_{\eta_j}(a_j)\geq2^{-2n}\delta
+\]
+for all sufficiently large $j$.
+
+Put $\beta_j=\theta+\varepsilon_jh$. \Cref{lem:nearby-background-volume-comparison} and projection invariance imply $d_{\beta_j}(a_j,p_j)\to0$. Also $d_{\beta_j}(p_j,p)\to0$. Indeed \eqref{eq:two-sided-transport-bounds} bounds $\max(p_j,p)$ above by $c_{\varepsilon_j}P_{\widehat\theta_{\varepsilon_j}}[p]$, and the form inequality in its proof also dominates $\beta_j$. The upper volume of this maximum in background $\beta_j$ is squeezed to $\overline{\operatorname{vol}}_\theta(p)$, as are the upper volumes of $p_j$ and $p$.
+
+Project the three inputs to ordinary models in background $\beta_j$. Their lower volumes have a common positive bound, and a fixed dominant Hermitian form bounds their upper volumes. The three-point estimate \eqref{eq:model-volume-comparison-modulus} therefore gives $d_{\beta_j}(a_j,p)\to0$, with constants independent of $j$. Apply \cref{thm:analytic-approximation-curvature-error} to conclude that $p$ is an ideal envelope model and to obtain the stated corrections and convergence in the original background.
+
+For another choice of transport, \cref{thm:two-sided-model-transport} gives comparison tending to zero between the two reference models in background $\eta_j$. The lower bound just proved and the same uniform three-point estimate transfer the convergence condition in both directions. This proves independence of the choice.
+\end{proof}
