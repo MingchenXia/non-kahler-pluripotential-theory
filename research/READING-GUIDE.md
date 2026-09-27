@@ -1,4 +1,4 @@
-# Reading guide — checkpoint207
+# Reading guide — checkpoint208
 
 The chapter numbers below refer to the current book. Earlier review records keep the numbering of their own checkpoints. General psh tools are collected in Chapter 1. Paper sources and exact locators are collected in final Chapter 33; book citations may remain beside the mathematics.
 
@@ -55,3 +55,5 @@ Checkpoint205 completes the nonnegative-area extension and uniform zero-area col
 Checkpoint206 completes the three-input Chapter 15 revision: the ideal L1 completion is distinguished from the analytic closure of ordinary models, with the fixed-positive-mass curve sequence displaying ideal convergence and constant upper-volume distance 1-tau. The dyadic integral criterion follows directly from its established L1 convergence. All statements retain their effective hypotheses and conclusions; no additional theorem or external premise is introduced. See [the full chapter review](editorial/chapter-fifteen-reconciliation-206.md).
 
 Checkpoint207 completes the seven-input Chapter 18 revision. General polar identities are used from Chapter 1, the restricted-envelope limit supplies the positive-mass model argument, and the fibration theorem uses its contact and positivity dependencies directly. Exact divisorial realization remains distinct from envelope convergence and arbitrary background compatibility. All statements retain their effective hypotheses and conclusions; no additional theorem or external premise is introduced. See [the full chapter review](editorial/chapter-eighteen-reconciliation-207.md).
+
+Checkpoint208 integrates elliptic degeneration spectra, arbitrary-modification comparison, strict single-blowup jumps and positive-current residual comparison in Section 25.16. Equal lower/upper orders and integrality fail in general; the remaining questions concern additional geometry and equality in the comparisons. Residual nefness remains required, and actual boundary-minimal divisors are distinguished from perturbative minimal multiplicities. Manually supplied authorless papers now receive no citations or bibliography entries and their originals are excluded from GitHub and the source package. See [the integration review](editorial/nef-degeneration-integration-208.md). The queued complete Chapter 22 revision remains next.

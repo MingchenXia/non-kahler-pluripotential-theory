@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint208 — Nef degeneration orders and supplied-paper policy
+
+Section 25.16 now proves fractional, irrational and unequal degeneration orders on elliptic products, comparison under arbitrary modifications, strict jumps under a single smooth-center blowup, and monotonicity under positive-current subtraction with a nef residual. Explicit examples separate zero order from positive limiting volume and distinguish perturbative minimal multiplicities from the divisor of an actual minimal boundary current. The remaining order question is narrowed to equality and geometric restrictions; Chapters 25 and 32 explain the new boundary.
+
+The complete five-input Section 25.16 receives two revised mathematical/editorial reads, the second after first compilation and visual inspection. Ten results and ten proofs are added; the two original propositions and proofs remain byte-identical. Chapter 25/32/33 interfaces receive bounded reviews, and the neighboring current-test input changes only spacing. This is a section integration, not a whole-Chapter 25 revision.
+
+The author's 27 September instruction removes all eleven previously retained bibliography entries for manually supplied authorless papers and omits an entry for the new source. Source-only historical recaps are removed; independently used authored dependencies remain cited. Original papers are local, ignored by Git and excluded from the source archive. The four changed book-skill files are synchronized with the installed copy; both copies pass the official validator, with linked-file and scoped behavioral checks.
+
+The 870-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph and template warning remain. The scoped house audit has zero errors and one inherited label warning. All 76 selected final pages pass visual review: 3 changed images directly inspected and 73 identical to inspected preceding renders. The companion is byte-identical to checkpoint207. The book retains 33 chapters and now has 225 active author inputs. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged; hidden sources and original supplied papers are excluded from the archive.
+
+Review and rewrite the complete four-input Chapter 22, reconciling divisorial currents and exceptional-divisor formulas with intrinsic trace-envelope pullback, while distinguishing numerical compatibility from realization of an ordinary type. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint207 — Trace-envelope limits and exact realization
 
 Chapter 18 now develops restriction, atomic realization and trace-envelope limits through their proof mechanisms. The redundant final inventory is removed and its necessary comparisons are placed beside the relevant constructions. Three curve arguments use the Chapter 1 polar order and maximum identities directly. The positive-mass trace theorem invokes the previously proved restricted-envelope limit, while the fibration proof applies contact, smaller-background positivity and prescribed-type existence directly in its original background. The curve envelope comparison includes zero residual mass through the existing atomic-model lemma.

@@ -109,3 +109,7 @@ The user then explicitly required chapter-by-chapter rewriting according to all 
 ## User steering, 26 September 2026: maintain a dedicated book-writing skill
 
 Combine the experience of revising this book with `mingchen-writing` in a dedicated `mingchen-book-writing` skill. Improve that skill as the book improves under the user's interventions. Maintain its versioned source in `research/editorial/skills/mingchen-book-writing/` and its discoverable installation in the user's skill directory. Distinguish reusable book-writing methods from this book's specific policies, replace superseded rules, and record the evidence and scope of each substantive lesson. Keep this feedback step part of ongoing book work; do not require the user to repeat a correction or treat a skill-only update as a new mathematical release.
+
+## User steering, 27 September 2026: authorless supplied papers
+
+Papers manually supplied by the user without an author are to be integrated without citations or bibliography entries, including in the historical chapter. Do not back up their original files or archives to GitHub. This supersedes the earlier attribution practice for that specific source category. Read the originals locally and retain scoped mathematical review records; authored books and independently used published dependencies retain their usual citations.

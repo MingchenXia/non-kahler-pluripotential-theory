@@ -1,0 +1,89 @@
+\subsection{Comparison under an arbitrary modification}\label{sec:nef-modification-comparison}
+
+A pulled-back Gauduchon test becomes degenerate along the exceptional locus. Adding a small positive test repairs this degeneracy. To compare the perturbed volumes uniformly, we first bound the upstairs metric pairing by the downstairs one over the entire test cone.
+
+\Needspace{8\baselineskip}
+Here $\pi:Y\to X$ is a modification of connected compact complex $n$-folds, with $n\geq2$. We use Hironaka's analytic elimination of indeterminacies in the following form: the map $\pi$ is dominated by a composition of smooth-center blowups $p:Z\to X$, with a modification $F:Z\to Y$ satisfying $p=\pi\circ F$. It follows by resolving the inverse meromorphic map; the maps agree on the isomorphism locus and hence everywhere. This classical input is discussed in \cref{sec:history-gaud-volume}.
+
+\begin{lemma}\label{lem:nef-blowup-metric}
+Let $p:Z\to X$ be a finite composition of blowups along smooth centers of codimension at least two, and let $h_X$ be a Hermitian form. There are $C_0>0$, an effective $p$-exceptional real divisor $D$, and a smooth curvature representative $\eta_D$ such that
+\begin{equation}\label{eq:nef-blowup-positive-metric}
+ h_Z=C_0p^*h_X-\eta_D>0.
+\end{equation}
+Every component of $D$ maps into a set of complex codimension at least two in $X$.
+\end{lemma}
+
+\begin{proof}
+First let $q:M'\to M$ be one blowup, with exceptional divisor $E$. On $E$, the restriction of $\mathcal O(-E)$ is relatively positive on the projective fibers. A metric on the normal bundle of the center induces a Hermitian metric on this restriction whose curvature is positive on their tangent spaces. Extend the metric to $\mathcal O(-E)$ over $M'$ by extending the smooth logarithm of its ratio to a fixed reference metric from the closed submanifold $E$. Let $\beta$ be its curvature. The semipositive form $q^*h_M$ has, on $E$, kernel precisely the tangent space to the fiber, and $\beta$ is positive on that kernel; off $E$, $q^*h_M$ is positive. Compactness now gives $Cq^*h_M+\beta>0$ for a sufficiently large $C$. Indeed a contrary sequence of unit tangent vectors, with $C\to\infty$, would converge to a vector in the kernel of $q^*h_M$ on which $\beta$ is nonpositive. With $\eta_E=-\beta$, this is $Cq^*h_M-\eta_E>0$. Iterating the construction, pulling back preceding exceptional divisors with positive coefficients and adding the new exceptional divisor, proves \eqref{eq:nef-blowup-positive-metric} while retaining effectivity and exceptionality.
+\end{proof}
+
+\begin{lemma}\label{lem:nef-uniform-pairing}
+Fix Hermitian forms $h_X,h_Y$ for a modification $\pi:Y\to X$. There is $K>0$ such that
+\begin{equation}\label{eq:nef-uniform-pairing}
+ \int_Y h_Y\wedge\pi^*\Psi\leq K\int_X h_X\wedge\Psi
+\end{equation}
+for every smooth strictly positive $(n-1,n-1)$-form $\Psi$ on $X$ with $\ddc\Psi=0$. The constant is independent of $\Psi$.
+\end{lemma}
+
+\begin{proof}
+Use the analytic domination $p=\pi\circ F$ above and \cref{lem:nef-blowup-metric}. Compactness gives $a>0$ with $h_Z\geq aF^*h_Y$. Pulling back the semipositive form $\Psi$ and integrating yields
+\[
+ a\int_Yh_Y\wedge\pi^*\Psi
+ \leq\int_Zh_Z\wedge p^*\Psi
+ =C_0\int_Xh_X\wedge\Psi-\int_Dp^*\Psi.
+\]
+The change-of-variables equalities use the degree-one maps $F,p$, and Poincar\'e--Lelong converts the curvature pairing to the divisor pairing under $\ddc p^*\Psi=0$. The last integral vanishes: on the regular locus of each component of $D$, the restriction of $p$ has rank at most $n-2$, so the restriction of the $(n-1,n-1)$-form $p^*\Psi$ is zero. Taking $K=C_0/a$ proves the assertion.
+\end{proof}
+
+\Needspace{17\baselineskip}
+\begin{proposition}\label{prop:nef-modification-volume}
+Let $\pi:Y\to X$ be a modification of connected compact complex manifolds of dimension $n\geq2$, and let $\theta$ be a smooth nef background on $X$. Its pullback is nef. For fixed Hermitian forms $h_X,h_Y$ and smooth positive probability forms $\mu_X,\mu_Y$, there are $C,K>0$, independent of $\epsilon$, such that
+\begin{equation}\label{eq:nef-main-modification-comparison}
+ \mathcal V_{\mu_Y}(\pi^*\theta+\epsilon h_Y)
+ \leq C\mathcal V_{\mu_X}(\theta+K\epsilon h_X)
+ \qquad(\epsilon>0).
+\end{equation}
+Consequently
+\[
+ \underline a(\pi^*\theta)\geq\underline a(\theta),\qquad
+ \overline a(\pi^*\theta)\geq\overline a(\theta).
+\]
+In dimension one a modification is an isomorphism and preserves both orders.
+\end{proposition}
+
+\begin{proof}
+Pullback preserves nefness: pull back a smooth approximation $\theta+\ddc u_t\geq-t h_X$, compare $\pi^*h_X\leq C'h_Y$, and choose $t<\epsilon/C'$ to obtain a positive representative of $\pi^*\theta+\epsilon h_Y$. Thus both volumes in \eqref{eq:nef-main-modification-comparison} are positive.
+
+Choose $c>0$ with $\mu_Y\geq c\pi^*\mu_X$: the ratio $\pi^*\mu_X/\mu_Y$ is smooth, nonnegative, and bounded on compact $Y$. Fix a smooth positive Gauduchon metric $\gamma_0$ upstairs by \cref{thm:gauduchon}. For an arbitrary downstairs Gauduchon metric $\gamma$, write $\Psi=\gamma^{n-1}$ and define $\Gamma_\delta$, $\delta>0$, by
+\[
+ \Gamma_\delta^{n-1}=\pi^*\Psi+\delta\gamma_0^{n-1}.
+\]
+A strictly positive $(n-1,n-1)$-form has a unique smooth positive $(1,1)$-root of this form: solve for its Hermitian matrix from the positive cofactor matrix. Hence $\Gamma_\delta$ is a smooth positive Gauduchon metric.
+
+For $\theta$ nef and $\epsilon>0$, \cref{lem:nef-uniform-pairing} gives the numerator limit
+\begin{equation}\label{eq:nef-modification-numerator}
+ \lim_{\delta\downarrow0}\int_Y(\pi^*\theta+\epsilon h_Y)
+ \wedge\Gamma_\delta^{n-1}
+ =\int_X\theta\wedge\Psi+\epsilon\int_Yh_Y\wedge\pi^*\Psi
+ \leq\int_X(\theta+K\epsilon h_X)\wedge\Psi.
+\end{equation}
+The first term is nonnegative by nefness and the second is strictly positive on the isomorphism locus, so the limit is positive.
+
+The denominator satisfies
+\begin{equation}\label{eq:nef-modification-denominator}
+ \lim_{\delta\downarrow0}D_{\mu_Y}(\Gamma_\delta)
+ =\int_Y(\pi^*\gamma^n)^{(n-1)/n}\mu_Y^{1/n}
+ \geq c^{1/n}D_{\mu_X}(\gamma)>0.
+\end{equation}
+To justify the limit on the exceptional locus, represent $\Gamma_\delta^{n-1}$ by its positive cofactor matrix. The density $(\Gamma_\delta^n)^{(n-1)/n}$ is a fixed dimensional constant times the $1/n$ power of that matrix's determinant. It extends continuously to positive semidefinite matrices. Compactness gives dominated convergence. The inequality follows from $\mu_Y\geq c\pi^*\mu_X$, and the final equality is change of variables for the degree-one map $\pi$.
+
+Test upstairs with $\Gamma_\delta$, use \eqref{eq:nef-modification-numerator}--\eqref{eq:nef-modification-denominator}, and let $\delta\downarrow0$. For each downstairs $\gamma$ this gives
+\[
+ \lambda_{\mu_Y}(\pi^*\theta+\epsilon h_Y)
+ \leq c^{-1/n}
+ \frac{\int_X(\theta+K\epsilon h_X)\wedge\gamma^{n-1}}{D_{\mu_X}(\gamma)}.
+\]
+Taking the infimum over the full downstairs test family and then the $n$th power proves \eqref{eq:nef-main-modification-comparison} with $C=c^{-1}$.
+
+Divide its logarithm by $\log\epsilon<0$ and use the constant-factor and direction comparisons from \cref{prop:nef-degeneration-orders}; the inequality reverses and gives $\underline a(\pi^*\theta)\geq\underline a(\theta)$ and $\overline a(\pi^*\theta)\geq\overline a(\theta)$. A proper degree-one map of smooth compact curves is an isomorphism, settling $n=1$.
+\end{proof}
