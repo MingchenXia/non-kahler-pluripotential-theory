@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint183 — 27 September 2026
+
+Theorem 28.4.1 now has an internal proof from the smooth Hermitian equation. Flow invariance follows from normalized uniqueness; transverse Stokes integration fixes the scalar. The reconstructed Lee form is parallel because it is closed and has a Killing dual. Uniqueness identifies the canonical foliation and normalized fields, then determines the candidate metric's scale by integration. The theorem statement is unchanged. The conformal connection formula moves to the Lee-cover section and is shared with the rigidity proof. Six labels and one proof are added; every earlier label remains.
+
+Three mathematical inputs receive two complete revised direct reads; the historical paragraph and one cone-definition pagination guard receive bounded reviews. The original Ornea–Verbitsky mathematical text was reread, with the checked arXiv locators identified explicitly because the publication endpoint was inaccessible. The reconstructed argument adds no external premise, no Popovici reliance and no independent verifier run. The bibliography, 221-input inclusion graph, 190 historical verifier reports and hidden sources remain unchanged.
+
+The 807-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. All 52 selected final pages pass visual review: ten changed images are directly inspected and 42 match the inspected first render. The first render includes 34 directly inspected images. The house audit has zero errors and seventeen inherited warnings. Both outputs rebuild from a fresh empty source extraction with identical page text. Next develop the parabolic maximal-time input to Corollary 25.17.1. The singularity/I-goodness and trace program and the broader writing goal remain active and incomplete.
+
 ## Checkpoint182 — 27 September 2026
 
 The source-disposition and proof-obligation ledgers now describe checked checkpoint181: nineteen source inputs in eighteen subjects, 33 active chapters, 221 author inputs, all 23 formal questions and all ten supplied papers. Both revised ledgers received two complete direct reads. Their predecessors are archived verbatim. Current labels and compiled locations replace obsolete references; earlier source-proof reviews retain their exact scopes.

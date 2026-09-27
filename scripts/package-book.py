@@ -126,6 +126,8 @@ for name in (
     "research/editorial/frontmatter-rewrite-181.md",
     "research/supplied-geometric-normalization-20260926.json",
     "research/supplied-restricted-invariants-20260926.json",
+    "research/editorial/vaisman-volume-proof-183.md",
+    "research/audits/vaisman-volume-183.json",
     "research/source-disposition-182.json",
     "research/editorial/source-ledger-review-182.md",
     "research/audits/source-ledger-182.json",
