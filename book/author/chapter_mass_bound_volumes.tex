@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-A bound on Monge--Amp\`ere mass turns the extended singularity volumes into finite invariants. Their comparison rests on contact sets: rooftops transfer lower-volume competitors, while maxima transfer upper-volume competitors. Positive lower volume prevents stretching envelopes from collapsing, and the allowed stretch controls the change in Lelong numbers. For decreasing model potentials this gives continuity of both volumes and exact realization of trace data under the corresponding mass assumptions. At zero volume deficit, the same argument identifies relative full mass with the envelope condition.
+Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition. Domination then shows that ordinary envelopes preserve lower volume, and upper volume when the lower volume is positive. These comparisons give continuity for decreasing model potentials, exact trace realization under the mass assumptions, and a volume criterion for equality of ordinary and multiplier-ideal envelopes.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -174,6 +174,117 @@ Let $a\to1$. This proves equality of both volumes in this direction, even withou
 Conversely, equality of the upper volumes makes $D=0$ in \cref{lem:volume-deficit-stretch}, with $v=\varphi$. Every $Q_b(u,\varphi)$ is genuine, which is the envelope condition.
 \end{proof}
 
+\section{Domination and ordinary envelopes}
+
+Positive lower volume prevents comparison envelopes from collapsing. This gives a domination principle and identifies the limit of relative obstacle envelopes, which in turn compares a potential's volumes with those of its ordinary envelope. Write $\mu_w=\mathrm{MA}_\theta(w)$.
+
+\begin{theorem}\label{thm:big-relative-domination}
+Let $\varphi\in\PSH(X,\theta)$ have positive lower volume, let $u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$, $v\in\PSH(X,\theta)$ with $v\preceq\varphi$, and $0\leq c<1$. If
+\[
+ \mathbf1_{\{u<v\}}\mu_u\leq c\,\mathbf1_{\{u<v\}}\mu_v,
+\]
+then $u\geq v$.
+\end{theorem}
+\begin{proof}
+Put $\ell=\underline{\operatorname{vol}}_\theta(\varphi)>0$ and $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$. Replace $v$ by $\max(u,v)$. Locality preserves the hypothesis and upward stability puts the new $v$ in $\mathcal E_\varphi$. Translate $u,v$ by the same constant so that $v\leq\varphi$, and then translate all three potentials so that $\varphi\leq0$. Set
+\[
+ q_b=Q_b(u,v),\qquad
+ D_b=\{b^{-1}q_b+(1-b^{-1})v=u\}.
+\]
+\Cref{lem:relative-stretch-closure} gives $q_b\in\mathcal E_\varphi$ and $q_b\leq u$. Contact support and positivity of the mixed products give
+\[
+ b^{-n}\mu_{q_b}+(1-b^{-1})^n\mathbf1_{D_b}\mu_v
+ \leq\mathbf1_{D_b}\mu_u.
+\]
+Here $\mu_{q_b}$ is supported on $D_b$. Choose $b$ so large that $(1-b^{-1})^n>c$. Subtracting finite measures on $D_b\cap\{u<v\}$ shows that $\mu_{q_b}$ vanishes there. Thus it is supported on $D_b\cap\{u=v\}\subset\{q_b=u\}$. Since $q_b\leq u$, ordered contact with coefficient one and \cref{thm:relative-equivalence} now give
+\begin{equation}\label{eq:big-domination-fixed-tail}
+ \ell\leq\mu_{q_b}(X)\leq\mu_u(\{q_b=u\}).
+\end{equation}
+
+If $u<v$ anywhere, there is $\delta>0$ such that $\{u<v-\delta\}$ has positive smooth volume. Indeed, the contrary would give $u\geq v$ almost everywhere and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. On this set
+$q_b\leq u-(b-1)\delta$. The family $q_b$ decreases in $b$ and is bounded above by $u$. A genuine limit could not be $-\infty$ on a set of positive smooth volume. Hence its limit is identically $-\infty$, and \cref{thm:normalized-compactness} gives $\sup_Xq_b\to-\infty$. The sets $\{q_b=u\}$ then have $\mu_u$-mass tending to zero by dominated convergence off the pole set of $u$. This contradicts \eqref{eq:big-domination-fixed-tail}.
+\end{proof}
+
+\begin{corollary}\label{cor:big-relative-orders}
+For $u,v$ as in \cref{thm:big-relative-domination} and $\lambda>0$,
+\[
+ \mathrm{e}^{-\lambda u}\mu_u\leq\mathrm{e}^{-\lambda v}\mu_v
+ \quad\Longrightarrow\quad u\geq v.
+\]
+If $\mu_u\leq c\mu_v$ on $X$ for a finite $c\geq0$, then $c\geq1$.
+\end{corollary}
+\begin{proof}
+On $\{u<v-\delta\}$ the weighted inequality gives $\mu_u\leq\mathrm{e}^{-\lambda\delta}\mu_v$. Apply strict domination to $v-\delta$ and let $\delta\downarrow0$. If the second assertion failed, strict domination against every translate $v+A$ would contradict finiteness of $u,v$ at a common point.
+\end{proof}
+
+\begin{lemma}\label{lem:relative-obstacle-contact}
+Let $u,w\in\PSH(X,\theta)$ with $P_\theta(u,w)$ genuine, and put
+\[
+ P_\theta[u](w)=\left(\lim_{C\to\infty}P_\theta(u+C,w)\right)^*.
+\]
+Then
+\[
+ \mu_{P_\theta[u](w)}
+ \leq\mathbf1_{\{P_\theta[u](w)=w\}}\mu_w.
+\]
+\end{lemma}
+\begin{proof}
+Set $p_C=P_\theta(u+C,w)$ for $C\geq0$ and $p=P_\theta[u](w)$. The envelopes increase, are bounded below by $p_0$ and above by $w$, and converge in capacity by \cref{lem:monotone-psh-capacity}. Assigning ties in the contact set to $w$ gives
+\[
+ \mu_{p_C}\leq\mathbf1_{\{p_C=u+C<w\}}\mu_u
+                    +\mathbf1_{\{p_C=w\}}\mu_w.
+\]
+The first measure has total mass at most
+\[
+ \varepsilon_C=\mu_u(\{u\leq\sup_Xw-C\})\longrightarrow0,
+\]
+because $\mu_u$ is finite and non-pluripolar. Testing against nonnegative continuous functions and applying \cref{lem:weighted-extended-lsc} gives $\mu_p\leq\mu_w$.
+
+The bounded quasi-continuous weight $\chi=\min(1,(w-p)_+)$, defined arbitrarily on the polar indeterminacy set, vanishes on $\{p_C=w\}$, since $p_C\leq p\leq w$. Thus $\int_X\chi\,\mu_{p_C}\leq\varepsilon_C$. Weighted lower semicontinuity gives $\int_X\chi\,\mu_p=0$, so $\mu_p$ is carried by $\{p=w\}$. This proves the asserted restriction of $\mu_w$.
+\end{proof}
+
+\begin{theorem}\label{thm:ordinary-envelope-volumes}
+For $u\in\PSH(X,\theta)$ and $p=P_\theta[u]$,
+\[
+ \underline{\operatorname{vol}}_\theta(u)
+       =\underline{\operatorname{vol}}_\theta(p).
+\]
+If this volume is positive, then also
+\[
+ \overline{\operatorname{vol}}_\theta(u)
+       =\overline{\operatorname{vol}}_\theta(p),\qquad
+ u\in\mathcal E_{\mathrm{env}}(X,\theta,p),\qquad
+ P_\theta[p]=p.
+\]
+\end{theorem}
+\begin{proof}
+If $\underline{\operatorname{vol}}_\theta(p)=0$, lower-volume equality follows from monotonicity. Suppose henceforth that it is positive. Normalize $u\leq0$ and choose any $w\simeq p$ in $\PSH(X,\theta)$. Fix $K\geq0$ with $p-K\leq w\leq p+K$. Since $u\leq p$, the rooftop $p_C=P_\theta(u+C,w)$ satisfies $u-K\leq p_C\leq u+C$ for each $C\geq0$. In particular it is genuine and equivalent to $u$. Its increasing canonical limit $r=P_\theta[u](w)$ satisfies
+\[
+ P_\theta(u+C+K,0)-K\leq p_C\leq w,
+ \qquad p-K\leq r\leq w\leq p+K.
+\]
+Indeed, the leftmost potential lies below $u+C$ and below $p-K\leq w$, so is a rooftop competitor. Thus $r\simeq p$, and \cref{prop:relative-elementary} puts $r$ in $\mathcal E_{\mathrm{env}}(X,\theta,p)$.
+
+By \cref{lem:relative-obstacle-contact}, $\mu_r$ vanishes on $\{r<w\}$. \Cref{thm:big-relative-domination}, with coefficient zero and reference $p$, gives $r\geq w$; hence $r=w$. Capacity convergence and lower semicontinuity now yield
+\[
+ \int_X\mu_w\leq\liminf_{C\to\infty}\int_X\mu_{p_C}
+       \leq\overline{\operatorname{vol}}_\theta(u).
+\]
+Taking the supremum over $w\simeq p$ proves the upper-volume inequality in the required direction; the reverse inequality is monotonicity. \Cref{thm:relative-equivalence} then gives both relative-class membership and lower-volume equality. Finally \cref{prop:relative-envelope-equality} gives $P_\theta[p]=P_\theta[u]=p$.
+\end{proof}
+
+\begin{corollary}\label{cor:full-mass-envelope-characterization}
+If $\varphi=P_\theta[\varphi]$ has positive lower volume, then
+\[
+ \mathcal E_{\mathrm{env}}(X,\theta,\varphi)
+ =\mathcal E_{\mathrm{vol}}(X,\theta,\varphi)
+ =\{u\in\PSH(X,\theta):P_\theta[u]=\varphi\}.
+\]
+\end{corollary}
+\begin{proof}
+The first equality is \cref{thm:relative-equivalence}. Membership implies envelope equality by \cref{prop:relative-envelope-equality}; the converse follows from \cref{thm:ordinary-envelope-volumes}.
+\end{proof}
+
 \section{Decreasing model potentials}
 
 The upper volumes of decreasing ordinary model potentials form a Cauchy sequence. The deficit lemma gives convex comparisons with coefficients tending to one; ordinary envelopes normalize the remaining potentials so that compactness passes these comparisons to the limit.
@@ -200,7 +311,10 @@ Since $q\leq0$, monotonicity of ordinary envelopes gives $q\leq P_\theta[q]\leq 
  \qquad L=\lim_j\overline{\operatorname{vol}}_\theta(q_j),
  \qquad e_k=\overline{\operatorname{vol}}_\theta(q_k)-L.
 \]
-The limit exists by \cref{thm:volume-monotonicity} and bounded mass. After discarding finitely many indices, choose $b_k>1$ tending to infinity with $b_k^n e_k<\delta$, and set $a_k=1-b_k^{-1}$. For every $j\geq k$, the volume deficit between $q_j$ and $q_k$ is at most $e_k$, whereas the lower volume of $q_k$ is at least $\delta$. Thus \cref{lem:volume-deficit-stretch} supplies $h_{k,j}\in\PSH(X,\theta)$ with
+The limit exists by \cref{thm:volume-monotonicity} and bounded mass. After discarding finitely many indices, choose $b_k>1$ tending to infinity with $b_k^n e_k<\delta$, and set $a_k=1-b_k^{-1}$.
+
+\Needspace{7\baselineskip}
+For every $j\geq k$, the volume deficit between $q_j$ and $q_k$ is at most $e_k$, whereas the lower volume of $q_k$ is at least $\delta$. Thus \cref{lem:volume-deficit-stretch} supplies $h_{k,j}\in\PSH(X,\theta)$ with
 \[
  a_kq_k+(1-a_k)h_{k,j}\leq q_j.
 \]
@@ -334,16 +448,11 @@ They depend only on the multiplier-ideal class of $u$ in the fixed background. B
  \overline{\operatorname{vol}}_\theta(u)
  \leq\mathcal V^+_{\mathcal I,\theta}(u).
 \]
-The ideal envelope is an ordinary fixed point by \cref{cor:ordinary-preserves-i}. Thus relative full mass can detect equality with the ordinary envelope, provided its positive-volume hypothesis holds and $u$ belongs to the relative class of its ordinary envelope.
+The ideal envelope is an ordinary fixed point by \cref{cor:ordinary-preserves-i}. Its positive lower volume lets relative full mass detect equality with the ordinary envelope.
 
 \Needspace{14\baselineskip}
 \begin{proposition}\label{prop:conditional-i-characterization}
-Let $u\in\PSH(X,\theta)$, and put $q=P_\theta[u]_{\mathcal I}$. Suppose
-\[
- \underline{\operatorname{vol}}_\theta(q)>0,
- \qquad u\in\mathcal E_{\mathrm{env}}(X,\theta,P_\theta[u]).
-\]
-Then the following are equivalent:
+Let $u\in\PSH(X,\theta)$, and put $q=P_\theta[u]_{\mathcal I}$. Suppose $\underline{\operatorname{vol}}_\theta(q)>0$. Then the following are equivalent:
 \[
  P_\theta[u]=P_\theta[u]_{\mathcal I},\qquad
  \overline{\operatorname{vol}}_\theta(u)
@@ -352,17 +461,13 @@ Then the following are equivalent:
 If they hold, the corresponding equality for the lower volume also holds.
 \end{proposition}
 \begin{proof}
-If the envelopes agree, the relative-class hypothesis puts $u$ in $\mathcal E_{\mathrm{env}}(X,\theta,q)$. The proof of \cref{thm:relative-equivalence} gives equality of both volumes with those of $q$.
+If the envelopes agree, \cref{thm:ordinary-envelope-volumes} gives equality of both volumes with those of $q$.
 
-Conversely, equality of the upper volumes, together with $u\preceq q$ from \cref{prop:p-below-i}, puts $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. Positive lower volume and \cref{thm:relative-equivalence} imply membership in $\mathcal E_{\mathrm{env}}(X,\theta,q)$. By \cref{prop:relative-envelope-equality},
-\[
- P_\theta[u]=P_\theta[q]=q,
-\]
-as required.
+Conversely, upper-volume equality and $u\preceq q$ put $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. Since $q=P_\theta[q]$, \cref{cor:full-mass-envelope-characterization} gives $P_\theta[u]=q$.
 \end{proof}
 
 Under the hypotheses of the proposition, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$.
 
 \begin{problem}\label{qu:hermitian-i-characterization}
-For big non-closed backgrounds on manifolds with bounded mass, what is the weakest positive-volume assumption under which the hypotheses of \cref{prop:conditional-i-characterization} are automatic? Can that assumption be checked using only the ideal or divisorial data in the fixed background?
+For a big nonclosed background on a manifold with bounded mass, find criteria for $\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I})>0$ in terms of restricted multiplier ideals or divisorial orders. When this lower volume vanishes, which implications between envelope equality and upper-volume equality in \cref{prop:conditional-i-characterization} remain valid?
 \end{problem}
