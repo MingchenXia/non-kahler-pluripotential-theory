@@ -113,3 +113,7 @@ Combine the experience of revising this book with `mingchen-writing` in a dedica
 ## User steering, 27 September 2026: authorless supplied papers
 
 Papers manually supplied by the user without an author are to be integrated without citations or bibliography entries, including in the historical chapter. Do not back up their original files or archives to GitHub. This supersedes the earlier attribution practice for that specific source category. Read the originals locally and retain scoped mathematical review records; authored books and independently used published dependencies retain their usual citations.
+
+## User steering, 27 September 2026: introduction and index
+
+Give the entire book a substantive Introduction, especially explaining its differences from Kähler theory. Compare the roles of closedness, mass, comparison, energy, equations and singularity invariants, with the distinctions supported by internal results. Distinguish non-Kähler ambient geometry from a nonclosed background. Put a subject index with generated page references at the back and maintain it with future revisions. This front-matter and navigation task does not replace the outstanding complete-chapter revision.

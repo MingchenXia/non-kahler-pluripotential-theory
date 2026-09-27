@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint208: Review and rewrite the complete four-input Chapter 22, reconciling divisorial currents and exceptional-divisor formulas with intrinsic trace-envelope pullback, while distinguishing numerical compatibility from realization of an ordinary type. Checkpoint208 integrates the complete five-input nef-degeneration section and applies the authorless-paper policy; it does not replace the queued Chapter 22 revision. See nef-degeneration-integration-208.md.
+Current next unit after checkpoint209: Review and rewrite the complete four-input Chapter 22, reconciling divisorial currents and exceptional-divisor formulas with intrinsic trace-envelope pullback, while distinguishing numerical compatibility from realization of an ordinary type. Checkpoint209 rewrites the whole-book Introduction and adds a subject index; it does not replace the queued Chapter 22 revision. See introduction-and-index-209.md.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

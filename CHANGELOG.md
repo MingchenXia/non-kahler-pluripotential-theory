@@ -1,5 +1,17 @@
 # Modification history
 
+## Checkpoint209 — 27 September 2026
+
+The whole-book Introduction now explains how closedness links mass, comparison and energy in Kähler theory, and how nonclosed backgrounds separate these mechanisms. It distinguishes the ambient geometry from the chosen background, mass conservation from an energy primitive, trace measures from their conserved total mass, scalar uniqueness from potential uniqueness, and ideal-envelope approximation from ordinary singularity topology. It concludes with the roles of traces, sections, modifications and a concise reading route.
+
+A four-page subject index follows the bibliography and appears in the contents. Its 246 entries comprise 242 clickable page locators and four alternate-term cross-references, placed at definitions, results and examples in 113 author inputs. The supplied indexing typography is retained; a book-specific style keeps a main heading with its first subentry.
+
+The 878-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. MakeIndex accepts all 246 entries without rejection or warning. Every index link resolves to its printed page and every labeled locator matches the source label. The 848 body and bibliography pages have exactly the same text and printed page numbers as checkpoint208; their physical positions shift by four pages. The companion retains identical page text; rebuild metadata changes its PDF bytes. The Introduction house audit has zero errors and warnings; all 49 warnings across index-bearing inputs are inherited. The bibliography underfull paragraph and template warning are also inherited. The final 32-page visual selection passes: seven changed images inspected directly, twenty-five byte-identical to the inspected first pass.
+
+The Introduction and index guidance is integrated into the book-writing skill, with project scope and a dated feedback entry. The three edited skill files are reconciled with the identical previous installation, synchronized and validated in both locations. The general rule does not require repeated section introductions or impose a Kähler comparison on unrelated monographs.
+
+Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged; hidden sources and original supplied papers are excluded from the archive. Review and rewrite the complete four-input Chapter 22, reconciling divisorial currents and exceptional-divisor formulas with intrinsic trace-envelope pullback, while distinguishing numerical compatibility from realization of an ordinary type.
+
 ## Checkpoint208 — 27 September 2026
 
 Section 25.16 now proves fractional, irrational and unequal degeneration orders on elliptic products, comparison under arbitrary modifications, strict jumps under a single smooth-center blowup, and monotonicity under positive-current subtraction with a nef residual. Explicit examples separate zero order from positive limiting volume and distinguish perturbative minimal multiplicities from the divisor of an actual minimal boundary current. The remaining order question is narrowed to equality and geometric restrictions; Chapters 25 and 32 explain the new boundary.

@@ -29,6 +29,8 @@ Use chapter and section titles that name the mathematical objects, results or me
 
 ## Introductions and continuity of exposition
 
+A whole-book introduction should state the central mathematical question, explain its relation to the established theory, and show why the book's constructions are needed. When the book extends a familiar setting, compare the mechanisms that survive, those that fail, and their replacements, supported by precise examples and internal results. Distinguish changes in the ambient geometry from changes in the chosen data. A chapter inventory or a sequence of chapter openings does not supply this perspective; a brief reading route can follow the mathematical explanation.
+
 A chapter opening should explain the problem that now arises, the construction or result that addresses it, and the mechanism connecting them. A section opening should supply the local reason for the next argument. The length follows the mathematics; do not force every opening into the same three-sentence pattern.
 
 Replace inventories such as “we define, then prove, then discuss” with an explanation of why the definitions and estimates are needed. Remove repeated chapter roadmaps, ceremonial transitions and defensive lists of hypotheses that are absent. Preserve a short opening that already makes the argument intelligible.
@@ -36,6 +38,10 @@ Replace inventories such as “we define, then prove, then discuss” with an ex
 State a convention once at its natural global location. Keep a necessary source-normalization conversion beside the calculation using it. Across distant chapters, use a short reminder or internal reference when the reader needs one; do not reproduce a definition.
 
 Delete redundant qualifications only after identifying what already supplies their content. The author's rejection of a redundant representative qualification or an identically-minus-infinity clause is not a global ban on checking representatives, pole sets or degenerate limits. Likewise, a local need for a nonempty admissible class must not become a blanket assumption for the book.
+
+## Index and navigation
+
+Maintain a subject index when requested or established by the book. Place entries at definitions, substantive results and examples that a reader would want to find. Use subentries to separate meanings or regimes and cross-references for common alternate terms. Generate page locators from the source; preserve the book's indexing style and inspect the compiled alphabetization, wrapping and links. Cover the mathematical scope of the book without indexing every occurrence or copying the table of contents. Index-only changes should leave the printed mathematics unchanged. Keep the index current as the book develops.
 
 ## Mathematics and source integration
 

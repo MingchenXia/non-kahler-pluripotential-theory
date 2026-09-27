@@ -10,6 +10,8 @@ Use standard theorem environments, upright differential d and the standard multi
 
 ## Structure
 
+The book opens with a mathematical Introduction comparing the Hermitian and Kähler mechanisms. A generated subject index follows the bibliography; maintain its definition and result locators as the book develops.
+
 The book has 33 active chapters and an appendix. Chapter 1 collects general psh foundations: compactness, regularization, integrability, local capacity tools, multiplier ideals, divisorial estimates, general envelopes and descent. Later chapters use internal references to these results. Chapters 1–28 form the main mathematical sequence. Part XII separates the substantial mass-dependent theory:
 
 - Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, relative full mass and the conditional ideal-envelope volume characterization.
@@ -793,3 +795,10 @@ The author's 27 September instruction removes all eleven previously retained bib
 The 870-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph and template warning remain. The scoped house audit has zero errors and one inherited label warning. All 76 selected final pages pass visual review: 3 changed images directly inspected and 73 identical to inspected preceding renders. The companion is byte-identical to checkpoint207. The book retains 33 chapters and now has 225 active author inputs. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged; hidden sources and original supplied papers are excluded from the archive.
 
 Review and rewrite the complete four-input Chapter 22, reconciling divisorial currents and exceptional-divisor formulas with intrinsic trace-envelope pullback, while distinguishing numerical compatibility from realization of an ordinary type. The broader goal remains active and incomplete.
+
+
+## Introduction and subject index, checkpoint209
+
+The whole-book Introduction now explains how closedness links mass, comparison and energy in Kähler theory, and how nonclosed backgrounds separate these mechanisms. It distinguishes the ambient geometry from the chosen background, mass conservation from an energy primitive, trace measures from their conserved total mass, scalar uniqueness from potential uniqueness, and ideal-envelope approximation from ordinary singularity topology. It concludes with the roles of traces, sections, modifications and a concise reading route.
+
+A four-page subject index follows the bibliography and appears in the contents. Its 246 entries comprise 242 clickable page locators and four alternate-term cross-references, placed at definitions, results and examples in 113 author inputs. The supplied indexing typography is retained; a book-specific style keeps a main heading with its first subentry. The mathematical body and its proof boundary are unchanged. See `research/editorial/introduction-and-index-209.md`.
