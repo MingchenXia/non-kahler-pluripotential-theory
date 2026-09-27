@@ -2,6 +2,18 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint216 — Closed classes, density geometry and metric ends
+
+Chapter 27 now connects positivity of a closed class, mass of a specified divisorial trace and metric completeness. Its opening explains why these are distinct questions. The density examples are reconciled with the fixed regular locus in the interior-smoothness theorem, and the curve-product transition compares its single-logarithm threshold with the radial iterated-logarithm thresholds. The divisorial threshold opening separates annihilation of the class by a weak limit from attainment under uniform integrability.
+
+All sixteen recursive author inputs receive a complete original read and two complete revised mathematical/editorial reads, including every proof; the second follows the first build and complete visual review. All 44 formal statements, 34 proofs and 103 labels remain unchanged after removing index commands, local spacing controls and whitespace. The chapter retains fifteen sections and seven subsections, with no figures. Chapter-local display pagination and targeted opening/statement guards are checked in the final output. Other author inputs and the bibliography are unchanged.
+
+Five index entries cover residual mass on a resolution, divisorial Gauduchon constraints, limiting elliptic tests, exponential normal completeness and the critical logarithmic exponent. The index has 297 entries in 134 inputs, with 293 clickable page locators and four alternate-term references. Every link and labeled locator resolves, and each new statement locator matches its printed opening.
+
+The 897-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The companion is byte-identical to checkpoint215. The inherited bibliography underfull paragraph and amsmath template warning remain. The complete-chapter house audit has zero errors and one inherited label-prefix warning. Citation placement and MakeIndex pass. The final 80-page visual selection passes: 5 new images directly inspected and 75 byte-identical to inspected earlier images. There remain 33 numbered chapters and 232 active author inputs.
+
+Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged; hidden sources and original supplied papers are excluded from the archive. Review and rewrite the complete five-author-input Chapter 28 on locally conformally Kähler geometry, including its volume equation, Chern–Ricci rigidity and Lee–Gauduchon cone. Before any fresh reliance on Popovici, apply the private-reference and complete-proof review requirement in PLAN.md. Then continue to Chapter 29.
+
 ## Checkpoint215 — Partial kernels and quotient equilibrium
 
 Chapter 26 now opens with the information retained by global selected sections and the distinction between positivity against the closed line-bundle curvature and positivity against an unrelated Hermitian form. The point and divisor models connect loss of singularity information to binomial limits and conditional fiber probabilities. The fibration proof uses the Chapter 1 multiplier-ideal pullback formula, and the horizontal-center mass calculation uses the Chapter 14 divisorial residual-measure identity.
