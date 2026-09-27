@@ -1,0 +1,87 @@
+\Needspace{18\baselineskip}
+\section{Radial densities and metric completeness}\label{sec:radial}
+
+For a radial equation, the cumulative density determines the radial derivative of the potential and both Hessian eigenvalues. The potential integral and the radial length integral then give separate tests for boundedness and finite metric distance. Normalize $\int_{\mathbb P^n}\omega_{\mathrm{FS}}^n=1$ and, on its standard affine chart, $\omega_{\mathrm E}=\ddc|y|^2$ with $\int_{\{|y|^2<S\}}\omega_{\mathrm E}^n=S^n$.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:inverse-radial}\index{Radial equation!prescribed density}\index{Metric completeness!radial criterion}
+Fix $n\geq2$, $\lambda>0$, and a smooth positive $D:(0,\infty)\to(0,\infty)$ such that $D(s)=\lambda^n/(1+s)^{n+1}$ for all sufficiently large $s$, and
+\begin{equation}\label{eq:radial-total-mass}
+ n\int_0^\infty s^{n-1}D(s)\,\mathrm{d} s=\lambda^n.
+\end{equation}
+\Needspace{8\baselineskip}
+Continue $D(|y|^2)\omega_{\mathrm E}^n$ by the specified Fubini--Study density outside the affine construction. It has a unique normalized full-mass closed non-pluripolar solution in $[\lambda\omega_{\mathrm{FS}}]$. The solution is smooth off $y=0$ and has total radial local potential $U(s)$ satisfying
+\begin{equation}\label{eq:radial-mass-ode}
+\begin{aligned}
+ m(s)^n&=n\int_0^s t^{n-1}D(t)\,\mathrm{d} t,\qquad m(s)=sU'(s),\\
+ m'(s)&=\frac{s^{n-1}D(s)}{m(s)^{n-1}}>0.
+\end{aligned}
+\end{equation}
+Its tangential and radial Hessian eigenvalues are $m/s$ and $m'$. For any sufficiently small $s_0>0$, it has bounded minimal ordinary type precisely when
+\begin{equation}\label{eq:radial-bounded-criterion}
+ \int_0^{s_0}\frac{m(s)}s\,\mathrm{d} s<\infty.
+\end{equation}
+The distance of the punctured regular metric to the origin is finite precisely when
+\begin{equation}\label{eq:radial-distance-criterion}
+ \int_0^{s_0}\frac{\sqrt{m'(s)}}{2\sqrt{s}}\,\mathrm{d} s<\infty.
+\end{equation}
+If the integral diverges, the entire punctured compact regular metric is complete.
+
+Write $q$ for the global solution potential. On the point blowup, $\theta=\pi^*(\lambda\omega_{\mathrm{FS}})+c\Theta_E$ and $c>0$, the corresponding full-mass solution has potential $cL+q\circ\pi+C$, exact divisor coefficient $c$, mass $\lambda^n$, and density
+\begin{equation}\label{eq:blowup-radial-density}
+ |z|^{2(n-1)}D\bigl(|z|^2(1+|w|^2)\bigr)
+\end{equation}
+relative to the fixed local Euclidean volume convention. Its ordinary type is minimal precisely under \eqref{eq:radial-bounded-criterion}. In unbounded cases the residual is sublogarithmic with zero generic Lelong number, but the type is nonminimal. The regular metric has the same completeness criterion \eqref{eq:radial-distance-criterion}.
+\end{theorem}
+
+\begin{proof}
+Define $m$ by the first equation in \eqref{eq:radial-mass-ode}. It is positive for $s>0$ and tends to zero at the origin. Its total mass and the prescribed outer density make $m(s)=\lambda s/(1+s)$ on the outer region: both $m^n$ expressions have equal limits at infinity and equal tails there. Integrate $U'=m/s$ and choose the additive constant so that $U(s)=\lambda\log(1+s)$ on that region. The radial Hessian eigenvalues are $m/s$ and $m'$, and the determinant is $(m/s)^{n-1}m'=D$. Thus $q=U(|y|^2)-\lambda\log(1+|y|^2)$ extends by zero outside the affine construction and gives a positive current smooth off the point. Subtracting its supremum supplies the stated normalization.
+
+The increasing $U$ is bounded above near zero, so analytic-set removal gives a plurisubharmonic extension, possibly taking the value $-\infty$ at the origin by \cref{lem:qpsh-removable-analytic}. If unbounded, $m(s)\to0$ implies $U(s)=o(|\log s|)$: for each $\epsilon>0$, bound $m$ by $\epsilon$ on a small interval and integrate $m/s$. The closed non-pluripolar product equals the prescribed density off the point and ignores the point. The radial density has no atom there and has mass $\lambda^n$ by \eqref{eq:radial-total-mass}. Closed full-mass uniqueness proves the assertion as recalled in \cref{sec:history-regularity}. Integrating $U'=m/s$ gives precisely \eqref{eq:radial-bounded-criterion}.
+
+For a path approaching the origin, the metric norm of its velocity is at least a fixed multiple of $\sqrt{m'(R^2)}|\dot R|$, where $R=|y|$. Radial paths attain the resulting bound up to the fixed convention. Since $\mathrm{d} R=\mathrm{d} s/(2\sqrt{s})$, this is \eqref{eq:radial-distance-criterion}. The metric is smooth positive on compact subsets away from the origin, so divergence is equivalent to completeness of the entire punctured compact metric.
+
+On the blowup use \cref{prop:blowup-representation} and the squared Jacobian $|z|^{2(n-1)}$. The closed product is the zero extension of the pullback density, has mass $\lambda^n=\operatorname{vol}([\theta])$, and is unique in its full-mass class. The original operator agrees by \cref{thm:arbitrary-extended-ma} on the continuous-off-$E$ class, even when the residual tends to $-\infty$ there. Sublogarithmic growth gives zero residual Lelong number, fixing the coefficient $c$ without giving bounded difference. The regular metric is isometric to the punctured target metric, proving the same distance criterion.
+
+The permitted inner asymptotics below can be glued to the prescribed outer density while keeping \eqref{eq:radial-total-mass}: take a small inner amplitude or radius, join through a smooth positive annulus, and add a nonnegative smooth annular bump to fill the remaining mass. Thus the family is a genuine prescribed-density family. The assertions concern the total local potential $U$; subtracting a smooth background potential can alter a leading smooth term.
+\end{proof}
+
+\begin{theorem}\label{thm:radial-endpoints}\index{Radial equation!logarithmic thresholds}\index{Minimal singularity!complete regular metric}
+For the normalized family in \cref{thm:inverse-radial}, put $L=\log(1/s)$.
+\begin{enumerate}
+\item If $D(s)\sim Cs^{\ell-n+1}L^{-b}$ with $C>0$, $\ell>-1$ and $b\in\mathbb R$, put $\gamma=(\ell+1)/n$ and $K=(C/\gamma)^{1/n}$. Then
+\begin{equation}\label{eq:power-log-asymptotics}
+ m\sim Ks^\gamma L^{-b/n},\qquad
+ U(s)-U(0)\sim\frac K\gamma s^\gamma L^{-b/n},\qquad
+ m'\sim\gamma K s^{\gamma-1}L^{-b/n}.
+\end{equation}
+The residual is bounded H\"older. In bounded blowup charts its metric is comparable to
+$L^{-b/n}(|z|^{2\gamma-2}|\mathrm{d} z|^2+|z|^{2\gamma}|\mathrm{d} w|^2)$, and its distance to $E$ has order $|z|^\gamma(\log(1/|z|))^{-b/(2n)}$. The end is incomplete.
+\item If $D(s)\sim Cs^{-n}L^{-b}$, local mass is finite precisely for $b>1$. In that range put $a=(b-1)/n$ and $K=(nC/(b-1))^{1/n}$. Then
+\begin{equation}\label{eq:single-log-asymptotics}
+ m\sim KL^{-a},\qquad m'\sim Ka s^{-1}L^{-a-1}.
+\end{equation}
+The potential has a finite limit, minimal ordinary type, and finite distance precisely when $b>n+1$; its bounded tail is asymptotic to $K L^{1-a}/(a-1)$. At $b=n+1$ it diverges as $-K\log L$, and for $1<b<n+1$ as $-K L^{1-a}/(1-a)$. The unbounded cases are full mass but nonminimal and have complete regular ends. Their upstairs densities lie in no $L^p$, $p>1$.
+\item If $D(s)\sim Cs^{-n}L^{-(n+1)}(\log L)^{-d}$, $d\in\mathbb R$, put $C_*=C^{1/n}$. Then
+\begin{equation}\label{eq:iterated-log-asymptotics}
+ m\sim C_*L^{-1}(\log L)^{-d/n},\qquad
+ m'\sim C_*s^{-1}L^{-2}(\log L)^{-d/n}.
+\end{equation}
+The potential is bounded precisely when $d>n$, with tail of order $(\log L)^{1-d/n}$. At $d=n$ it diverges as $-C_*\log\log L$, and below $n$ as $-C_*(\log L)^{1-d/n}/(1-d/n)$. Distance is finite precisely when $d>2n$, with tail of order $(\log L)^{1-d/(2n)}$. Thus $n<d\leq2n$ gives bounded continuous minimal, non-H\"older residuals with complete regular ends. All these critical densities have finite mass and lie in no $L^p$, $p>1$.
+\end{enumerate}
+The logarithmic solution coefficient $c$ and stronger barrier coefficient $c+\delta$ are independent of $\ell,b,d$.
+\end{theorem}
+
+\begin{proof}
+Use the exact expressions \eqref{eq:radial-mass-ode}. Each asymptotic follows by bounding $D$ between $(1\pm\epsilon)$ times its displayed model and integrating the model; no derivative of an unspecified asymptotic error is taken. In the first case $m^n\sim nC s^{\ell+1}L^{-b}/(\ell+1)$, yielding \eqref{eq:power-log-asymptotics}. Both Hessian eigenvalues are comparable to $s^{\gamma-1}L^{-b/n}$, which gives the tensor and distance assertions after the blowup coordinate substitution. The positive power makes the potential H\"older, after absorbing logarithms by a slightly smaller exponent.
+
+In the second case $n\int_0^s t^{-1}C(\log(1/t))^{-b}\,\mathrm{d} t$ is finite precisely for $b>1$, and is asymptotic to $nC L^{1-b}/(b-1)$. This gives \eqref{eq:single-log-asymptotics}. Since $\mathrm{d} U=-m\,\mathrm{d} L$, its boundedness is equivalent to convergence of $\int^\infty L^{-a}\,\mathrm{d} L$, namely $a>1$. The distance is a constant multiple of $\int^\infty L^{-(a+1)/2}\,\mathrm{d} L$ and has the same strict threshold. Direct primitives give the stated finite and divergent branches, including the $a=1$ logarithm. Upstairs the density is comparable to $|z|^{-2}(\log(1/|z|))^{-b}$; every $p>1$ introduces an exponentially growing factor in logarithmic coordinates, so no such $L^p$ integrability holds.
+
+At the critical refinement, $m^n\sim C L^{-n}(\log L)^{-d}$. The potential and distance criteria become convergence of, respectively,
+\[
+ \int^\infty L^{-1}(\log L)^{-d/n}\,\mathrm{d} L
+ \quad\text{and}\quad
+ \int^\infty L^{-1}(\log L)^{-d/(2n)}\,\mathrm{d} L.
+\]
+Their thresholds are $d>n$ and $d>2n$. Direct integration gives the stated tails and negative divergent branches. A bounded tail in a positive power of $\log L$ decays more slowly than every positive power of $|z|$, so it is not H\"older. The mass integral is finite for every real $d$ because the principal factor is $L^{-(n+1)}$ with $n\geq2$; the same exponential argument excludes $L^p$, $p>1$. These calculations test all equality endpoints in the actual prescribed family.
+\end{proof}

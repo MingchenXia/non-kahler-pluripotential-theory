@@ -1,0 +1,82 @@
+\section{Density zeros and metric degeneration}\label{sec:geometric-zeros}
+
+In complex dimension $n\geq2$, a zero of the determinant can arise from a holomorphic map, from an exceptional fiber, or from a singular Hessian. These mechanisms give different relations between the regularity of the potential and the distance to the zero set. Bounded H\"older solutions on a positive background are supplied by \cref{thm:kn-continuous,thm:hermitian-holder-elementary}; their existence does not give a pointwise estimate for the metric at such a zero.
+
+\begin{proposition}\label{prop:finite-map-zero}\index{Density!ramification zeros}
+Let $F:X\to Y$ be finite surjective between compact K\"ahler $n$-folds, let $\omega_Y$ be K\"ahler, and suppose $F^*[\omega_Y]$ has a K\"ahler representative $\theta$. The full-mass solution for $(F^*\omega_Y)^n$ has a smooth bounded minimal potential and smooth semipositive current $F^*\omega_Y$. At a generic branch chart, disjoint from other branch components, where $F(z,w)=(z^k,w)$, $k\geq2$,
+\begin{equation}\label{eq:branch-tensor}
+ (F^*\omega_Y)^n=|z|^{2(k-1)}G\,\mathrm{d} V,
+ \qquad
+ F^*\omega_Y\asymp |z|^{2(k-1)}|\mathrm{d} z|^2+|\mathrm{d} w|^2,
+\end{equation}
+with $G$ smooth positive. The distance to the branch divisor is comparable to $|z|^k$. The deleted regular metric is incomplete, and the smooth current has no divisorial component. There is a strict logarithmic barrier with pole along the global ramification divisor.
+\end{proposition}
+
+\begin{proof}
+The K\"ahler $\partial\bar\partial$ lemma identifies the chosen class with its Bott--Chern class, as in \cref{sec:bc-closed-currents}. Thus $F^*\omega_Y=\theta+\ddc u$ for a global smooth $u$. Its class mass is the full background mass; closed full-mass uniqueness applies as recalled in \cref{sec:history-regularity}. The Jacobian of the displayed branch form is $kz^{k-1}$, and uniform comparison of $\omega_Y$ to the Euclidean form gives \eqref{eq:branch-tensor}. Every path to $z=0$ has length bounded below by the variation of a fixed multiple of $|z|^k$, and a fixed-$w$ radial path attains this order. The determinant section of $\mathrm{d} F$ defines the global ramification divisor $R$. With any smooth metric on $\mathcal O(R)$, $\theta-\epsilon\Theta_R>0$ for sufficiently small $\epsilon>0$, so $\epsilon\log|s_R|^2-C$ has a strict positive $\theta$-current. This uses the global divisor; no local branch coordinate is treated as a global line bundle.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{example}\label{ex:hopf-zero}
+For $n\geq2$, $q>1$ and integer $k\geq2$, let $H_q=(\mathbb C^n\setminus\{0\})/(Z\sim qZ)$. On the cover put $R=\sum_j|Z_j|^2$, $S=\sum_j|Z_j|^{2k}$,
+\[
+ h_0=\frac{\mathrm{i}}{2\pi}\frac{\sum_j\mathrm{d} Z_j\wedge\mathrm{d}\bar Z_j}{R},
+ \quad u_k=\log S-k\log R,
+\]
+\[
+ \theta_k=k\ddc\log R+
+  \frac{\mathrm{i}}{2\pi}\partial\log S\wedge\bar\partial\log S.
+\]
+These descend under $Z\mapsto qZ$. The coordinate-power map $F_k([Z])=[(Z_1^k,\ldots,Z_n^k)]$ on the Hopf quotient is finite surjective: $F_k(qZ)=q^kF_k(Z)$, and root choices are finite modulo source scaling. The form $\ddc\log R$ is positive transverse to the complex Euler direction, while $\partial\log S$ is nonzero on that direction; hence $\theta_k>0$. Direct differentiation gives
+\begin{equation}\label{eq:hopf-pullback}
+ \theta_k+\ddc u_k=F_k^*h_0
+ =\frac{\mathrm{i} k^2}{2\pi S}\sum_j|Z_j|^{2k-2}\mathrm{d} Z_j\wedge\mathrm{d}\bar Z_j.
+\end{equation}
+The background is genuinely nonclosed, since $\mathrm{d}\theta_k=F_k^*(\mathrm{d} h_0)$ is not identically zero. At a generic coordinate divisor the determinant has order $2(k-1)$, the regular metric is comparable to $|z|^{2(k-1)}|\mathrm{d} z|^2+|\mathrm{d} w|^2$, and its distance has order $|z|^k$. For a coordinate divisor $D$, a small logarithmic potential along $D$ is a strict barrier. For small $c>0$, set $h_c=\theta_k+c\Theta_D$ and $U_c=c\log|s_D|^2+u_k$. Then $h_c>0$ and
+\[
+ h_c+\ddc U_c=c[D]+F_k^*h_0.
+\]
+The solution has exact nonminimal ordinary type, the same smooth regular metric, and original singular measure $(F_k^*h_0)^n$ by \cref{thm:arbitrary-extended-ma}. Finally $H_q\cong S^{2n-1}\times S^1$ has $H^2(H_q;\mathbb R)=0$. A K\"ahler form would be exact, so Stokes would make its positive top-volume integral zero; thus the manifold is genuinely non-K\"ahler.
+\end{example}
+
+The residual currents in these constructions have bounded potentials. More generally, \cref{thm:holder-current-distance} bounds the path distance by the square root of a H\"older modulus wherever the current defines a smooth positive metric. Mere continuity does not have the same consequence, as the radial examples below will show.
+
+\subsection{Determinant and normal distance}
+
+\begin{proposition}\label{prop:determinant-limits}\index{Metric distance!determinant bound}
+Let $\eta$ be smooth semipositive on a containing polydisk, positive off $D=\{z=0\}$, with uniformly bounded Euclidean trace and determinant comparable to $|z|^{2\ell}$, $\ell\in\mathbb N$ and $\ell\geq1$. On a nested smaller chart,
+\begin{equation}\label{eq:determinant-distance-range}
+ c|z|^{\ell+1}\leq d_\eta^U((z,w),D)\leq C|z|.
+\end{equation}
+Both endpoints occur for smooth closed forms with the same determinant order. If the tangential block is uniformly positive, the distance has exact order $|z|^{\ell+1}$.
+\end{proposition}
+
+\begin{proof}
+The least eigenvalue obeys $\lambda_{\min}\geq\det\eta/(\operatorname{tr}\eta)^{n-1}\geq c|z|^{2\ell}$. Every path to $D$ therefore costs at least the normal integral of $|z|^\ell|\mathrm{d} z|$, while a radial path and the trace upper bound give the other inequality. In dimension two, for an integer $0\leq a\leq\ell$, take $\eta_a=\ddc|G_a|^2$ with $G_a(z,w)=(z^{a+1}/(a+1),z^{\ell-a}w)$ and append Euclidean coordinates for $n>2$. Its Jacobian is $z^\ell$, but at $(z,0)$ the first target coordinate forces distance of order $|z|^{a+1}$, attained radially. When the tangential block $C$ is uniformly positive, the Schur complement $A-b^*C^{-1}b=\det\eta/\det C$ is comparable to $|z|^{2\ell}$. Completing the square gives the lower bound, and solving $\mathrm{d} w/\mathrm{d} s=-C^{-1}b\,\mathrm{d} z/\mathrm{d} s$ along a radial normal curve on nested charts gives the matching upper bound.
+\end{proof}
+
+\subsection{Smoothness of exceptional residuals}
+
+\begin{proposition}\label{prop:exceptional-density-obstruction}\index{Density!exceptional vanishing order}
+In \cref{sec:blowups}, suppose a minimal-type solution has residual $S=(\theta+\ddc u)-c[E]$ extending smoothly and semipositively across $E$. On smaller adapted charts, $0\leq S^n/\mathrm{d} V\leq C|z|^{2(r-1)}$. Therefore a prescribed density $|z|^{2\ell}g$, with $g$ smooth strictly positive, requires $\ell\geq r-1$ for a smooth residual. The order condition is necessary but not sufficient; in particular a smooth strictly positive density is incompatible with a smooth minimal residual in this exceptional-pole regime.
+\end{proposition}
+
+\begin{proof}
+Write $u=cL+v$. Smoothness of $S=\pi^*h+\ddc v$ makes the distributional Laplacian of $v$ smooth, so local elliptic regularity makes $v$ smooth. On a compact exceptional fiber, $\pi^*h$ restricts to zero and $\ddc(v|_E)=S|_E\geq0$; the maximum principle makes $v$ constant there. Every vertical diagonal entry of $S$ is a smooth nonnegative function vanishing at $z=0$, hence is $O(|z|^2)$. The other diagonal entries are bounded. Hadamard's determinant inequality gives the stated order. The pullback $\pi^*h$ realizes equality, while the families below show nonsufficiency. This argument does not apply to the prescribed nonminimal regime where the residual is positive on exceptional fibers.
+\end{proof}
+
+\begin{example}\label{ex:compact-pogorelov}\index{Pogorelov example!compact models}
+On a polydisk set $P(z,w)=|z|^{2/n}(1+|w|^2)$. Off $z=0$, its tangential Hessian block is $|z|^{2/n}I$ and its normal Schur complement is $n^{-2}|z|^{2/n-2}$, so its determinant is the positive constant $n^{-2}$. Bounded plurisubharmonic removal extends it across $z=0$ without an extra Monge--Amp\`ere atom. Yet $P$ is not $C^1$ along that divisor.
+
+This local example extends to a compact K\"ahler model on $\mathbb P^n$. In an affine ball write $H=\lambda\log(1+|y|^2)$ and $Q=H-B$. Choose nested radii and parameters so $Q>P+2\epsilon$ on the outer collar and $Q<P-2\epsilon$ on the inner ball. A smooth convex regularized maximum $U=M_\epsilon(P,Q)$ equals $P$ inside and $Q$ outside. Put $v=U-H$ on the ball and $v=-B$ outside. Its current is positive and smooth off $\{z=0\}$; on the gluing annulus its density is at most $C|z|^{2/n-2}$, hence globally $L^p$ for every $1<p<n/(n-1)$. On the inner chart the density is smooth strictly positive but the potential is not $C^1$. There the metric is comparable to $|z|^{2/n-2}|\mathrm{d} z|^2+|z|^{2/n}|\mathrm{d} w|^2$ and distance to the divisor has order $|z|^{1/n}$. The construction also works on a Hopf manifold. Choose a global Hermitian form equal to $\ddc(\lambda|y|^2)$ on a coordinate ball and equal to a fixed nonclosed Hermitian form outside a slightly larger ball, using a convex interpolation of positive forms. Carry out the same regularized maximum with $H=\lambda|y|^2$ on the inner ball and set $v=-B$ outside it. The background is still nonclosed on the outer region and the local potential and density are unchanged. Global smoothness of the density is not claimed.
+\end{example}
+
+\begin{example}\label{ex:power-blowup-family}
+For every $\gamma>0$, $c>0$ and some $\lambda>0$, a compact point-blowup model in $\pi^*[\lambda\omega_{\mathrm{FS}}]+c[E]$ has a bounded H\"older minimal remainder with total residual potential $A|y|^{2\gamma}+B$ near the target point. To obtain it globally, choose $m(s)=sU'(s)>0$ with $m'(s)>0$, equal to $A\gamma s^\gamma$ near $s=0$ and $\lambda s/(1+s)$ outside a slightly larger ball. Small $A$ orders the endpoint values. Match the positive derivative germs on narrow collars, fill the positive integral deficit with a positive interior derivative and bump, and integrate $U'=m/s$ to match $\lambda\log(1+s)$ outside. Set $q(y)=U(|y|^2)-\lambda\log(1+|y|^2)$ on the affine chart and extend it by zero outside. Positivity and matching hold throughout the compact interpolation.
+
+On the blowup $u=cL+q\circ\pi$ has, in coordinates $y=(z,zw)$, total residual potential $A|z|^{2\gamma}(1+|w|^2)^\gamma+B$. Its density is $|z|^{2\ell}G$ with $G$ smooth positive and $\ell=n\gamma-1>-1$, since the target determinant is $A^n\gamma^{n+1}s^{n(\gamma-1)}$ and the squared blowup Jacobian is $|z|^{2(n-1)}$. Its regular metric is comparable to
+\begin{equation}\label{eq:power-blowup-metric}
+ |z|^{2\gamma-2}|\mathrm{d} z|^2+|z|^{2\gamma}|\mathrm{d} w|^2,
+\end{equation}
+distance to $E$ is $|z|^\gamma$, and the completion collapses $E$. Nonnegative integral $\ell$ makes the density smooth. At $\ell=0$, the density is smooth strictly positive, but the remainder has exact normal H\"older exponent $2/n$ for $n>2$, is Lipschitz but not $C^1$ for $n=2$, and has an unbounded normal metric coefficient. For $-1<\ell<0$ its $L^p$ condition is $p\ell>-1$. Taking $\ell=n$ gives a smooth density zero while the residual Hessian remains nonsmooth, proving the nonsufficiency in \cref{prop:exceptional-density-obstruction}. A small nonclosed perturbation supported away from the singular point preserves the local calculations and yields a genuinely nonclosed background with scalar one for its specified measure.
+\end{example}

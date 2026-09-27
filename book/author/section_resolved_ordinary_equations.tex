@@ -1,0 +1,87 @@
+\section{Equations with resolved logarithmic poles}\label{sec:prescribed}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$. A prescribed logarithmic singularity can be removed on a resolution. When its residual form is strictly positive, the bounded Hermitian equation supplies the remaining potential.
+
+Let $h>0$ be a smooth Hermitian form on $X$, and let $\psi\leq0$ be quasi-plurisubharmonic, smooth outside a nonempty analytic pole set $A$. Assume there is a modification $\pi:Y\to X$, biholomorphic over $X\setminus A$, such that $\pi^{-1}(A)=|D|$ is a simple normal crossing divisor and
+\begin{equation}\label{eq:resolved-type}
+ \psi\circ\pi=\sum_j c_j\log|s_j|^2+b,
+ \qquad
+ \beta=\pi^*h+\ddc b-\sum_jc_j\Theta_j>0,
+\end{equation}
+where $c_j>0$, $b$ is smooth, and $\ddc\log|s_j|^2=[D_j]-\Theta_j$.
+
+\begin{theorem}\label{thm:resolved-type}\index{Singularity type!resolved logarithmic poles}
+For every nonzero nonnegative $f\in L^p(X,h^n)$, $p>1$, there are $\kappa>0$ and a normalized $u\in\PSH(X,h)$ such that
+\begin{equation}\label{eq:resolved-equation}
+ \mathrm{MA}^{\mathrm{ext}}_h(u)=\kappa f h^n,
+ \qquad u=\psi+O(1).
+\end{equation}
+The lifted remainder $v=(u-\psi)\circ\pi$ extends H\"older continuously over $Y$, so $u$ is locally H\"older on $X\setminus A$. Its current is
+\begin{equation}\label{eq:resolved-current}
+ \pi^*h+\ddc(u\circ\pi)
+ =\sum_jc_j[D_j]+\beta+\ddc v.
+\end{equation}
+The positive residual current $\beta+\ddc v$ has zero Lelong numbers. If $h$ is K\"ahler, $\kappa=\int_Y\beta^n/\int_X f h^n$, and the normalized solution is unique among all exact-ordinary-type competitors for \eqref{eq:resolved-equation}, including discontinuous competitors. If the transported density in the proof is smooth and strictly positive, the residual may be chosen smooth and strictly positive.
+\end{theorem}
+
+\Needspace{8\baselineskip}
+\begin{proof}
+Define $J=\pi^*h^n/\beta^n$ and $g=(f\circ\pi)J$ off the exceptional set, assigning any value to $g$ on that volume-zero set. The smooth nonnegative $J$ is bounded. Change of variables on the biholomorphic locus gives
+\begin{equation}\label{eq:prescribed-transport}
+ \int_Yg\beta^n=\int_Xfh^n,
+ \qquad
+ \int_Yg^p\beta^n\leq \|J\|_\infty^{p-1}\int_Xf^ph^n.
+\end{equation}
+Thus $g$ is a nonzero $L^p$ density. \Cref{thm:kn-continuous,thm:hermitian-holder-elementary} give a bounded H\"older $\beta$-plurisubharmonic $v$ and $\kappa>0$ with $(\beta+\ddc v)^n=\kappa g\beta^n$. In the closed case, $\beta$ is K\"ahler and the mass identity fixes the stated scalar. For smooth positive $g$, use the smooth Hermitian theorem instead by \cref{thm:tw-smooth}.
+
+Set $u=\psi+v\circ\pi^{-1}$ on $X\setminus A$ and $u=-\infty$ on $A$. Push forward the positive current $\sum c_j[D_j]+\beta+\ddc v$. Pushforward commutes with $\ddc$, $\pi_*\pi^*h=h$, and the pushed locally integrable potential is $u$ almost everywhere. Its quasi-plurisubharmonic representative equals the displayed function off $A$ and tends to $-\infty$ on $A$ because $v$ is bounded. Hence $h+\ddc u\geq0$ and $u=\psi+O(1)$ in the two-sided ordinary sense. The pulled-back identity is \eqref{eq:resolved-current}; bounded residuals have zero Lelong number. The equation holds off $A$ by \eqref{eq:prescribed-transport}, and \cref{thm:arbitrary-extended-ma} extends it as \eqref{eq:resolved-equation}. Subtracting $\sup_Xu$ changes neither the equation nor the ordinary type.
+
+For closed-case uniqueness, let $u'$ be an exact-type competitor. On $Y\setminus D$, $w=(u'-\psi)\circ\pi$ is bounded and $\beta$-plurisubharmonic. Local bounded removal extends it to a bounded $\beta$-plurisubharmonic function on $Y$ by \cref{lem:qpsh-removable-analytic}. On each relatively compact subset of $Y\setminus D$, sufficiently deep truncations of $u'$ equal $u'$. Thus locality in \cref{thm:arbitrary-extended-ma} gives the bounded equation $\kappa g\beta^n$ there; both sides give $D$ zero mass. The global equation follows, its mass fixes $\kappa$, and closed full-mass uniqueness gives $w=v+$constant as recalled in \cref{sec:history-regularity}. Normalization fixes that constant.
+\end{proof}
+
+The H\"older constants depend on the fixed geometry and divisor metrics, the $c_j$, a lower positivity bound for $\beta$, $p$, and the actual normalized $L^p$ density $\kappa g$. No estimate uniform under degenerating $\beta$ or uncontrolled $\kappa$ follows. In simple normal crossing coordinates a density comparable to $\prod_j|z_j|^{-2a_j}$ belongs locally to $L^p$ exactly when
+\begin{equation}\label{eq:snc-integrability}
+ pa_j<1\quad\hbox{for every }j,
+\end{equation}
+by the factors $\int_0^\epsilon r_j^{1-2pa_j}\,\mathrm{d} r_j$. Smooth positive $f$ downstairs need not make $g$ strictly positive upstairs, since $J$ can vanish on the exceptional set.
+
+\begin{example}\label{ex:projective-point-nonminimal}
+Take $X=\mathbb P^n$, $h=\lambda\omega_{\mathrm{FS}}$, $\int_X\omega_{\mathrm{FS}}^n=1$, and $0<c<\lambda$. Put
+\[
+ \psi_c=c\log\frac{\sum_{j=1}^n|Z_j|^2}{\sum_{j=0}^n|Z_j|^2}.
+\]
+Its pole is $P=[1:0:\cdots:0]$. On the point blowup $\pi:Y\to X$, let $q:Y\to\mathbb P^{n-1}$ be the direction map. In affine blowup coordinates $x=(z,zw)$, Poincar\'e--Lelong gives
+\[
+ \pi^*h+\ddc(\psi_c\circ\pi)
+ =c[E]+(\lambda-c)\pi^*\omega_{\mathrm{FS}}+cq^*\omega_{\mathrm{FS}}.
+\]
+\Needspace{7\baselineskip}
+The residual form is positive: $\pi$ detects normal directions on $E$, and $q$ detects its tangent directions. Write $H=\pi^*[\omega_{\mathrm{FS}}]$. Since $H|_E=0$ and $E^n=(-1)^{n-1}$, its mass is
+\begin{equation}\label{eq:point-residual-mass}
+ \int_Y\bigl((\lambda-c)\pi^*\omega_{\mathrm{FS}}+cq^*\omega_{\mathrm{FS}}\bigr)^n=\lambda^n-c^n.
+\end{equation}
+This yields the exact nonminimal type for every nonnegative $L^p$ density of the prescribed residual mass. Choose a small smooth $v$ with $v|_E$ nonconstant and positive smooth residual $S=\beta+\ddc v$. Its pushforward density lies in every $L^p$ with $1<p<n/(n-1)$: $\pi^*h^n$ vanishes as $|z|^{2(n-1)}$, so the local $p$th-power integral is finite precisely when $(n-1)(p-1)<1$. Different directions towards $P$ give different limits of $u-\psi_c$. The downstairs current has no divisor supported at a point. The regular metric is $(Y\setminus E,S)$ and completes by restoring the whole divisor $E$; deletion of a smooth real-codimension-two subset does not alter the smooth ambient distance infimum. A sufficiently small nonclosed perturbation of $h$ preserving both positive forms retains the Hermitian existence conclusion.
+\end{example}
+
+\subsection{Residual mass}\label{sec:mass-deficit}
+
+The power condition of \cref{thm:mass-invariance-characterization} fixes the mass of every bounded residual solution. It persists under pullback and addition of a smooth closed form: expand each power and apply the original identities to its terms. On a Gauduchon surface the condition is simply $\ddc h=0$, so it includes the nonclosed Hopf metric of \cref{prop:hopf-bergman-exact}.
+
+\begin{proposition}\label{prop:mass-deficit}\index{Monge--Ampere mass@Monge--Amp\`ere mass!divisorial deficit}
+Under \eqref{eq:resolved-type}, assume $\ddc(h^k)=0$ for $1\leq k\leq n-1$, and put $H=\pi^*h$. Then
+\begin{equation}\label{eq:mass-deficit}
+ \int_Xh^n-\int_Y\beta^n
+ =\sum_jc_j\sum_{i=0}^{n-1}
+   \int_{D_j}H^i\wedge\beta^{n-1-i}>0.
+\end{equation}
+Thus the constructed solution of \cref{thm:resolved-type} has $\kappa=\int_Y\beta^n/\int_Xfh^n$. If $\int_Xfh^n=\int_Xh^n$, its scalar is strictly less than one.
+\end{proposition}
+
+\begin{proof}
+Let $C=\sum_jc_j\Theta_j-\ddc b$, so $\beta=H-C$ with $C$ closed. The mixed forms $Q_i=H^i\wedge\beta^{n-1-i}$ satisfy $\ddc Q_i=0$: expand $\beta=H-C$ and apply the power condition to each $H^k$. With $\Psi=\psi\circ\pi$, $\ddc\Psi=\sum_jc_j[D_j]-C$. Distributional integration by parts against the smooth $\ddc$-closed $Q_i$ gives
+\[
+ \int_Y(H^n-\beta^n)=\sum_i\int_Y C\wedge Q_i
+   =\sum_jc_j\sum_i\int_{D_j}Q_i.
+\]
+Change of variables gives $\int_YH^n=\int_Xh^n$. Every integrand on the right is nonnegative, since $H$ is semipositive and $\beta$ positive; the $i=0$ term on each nonempty $D_j$ is strictly positive. This includes exceptional divisors. By \cref{thm:mass-invariance-characterization}, the residual solution has mass $\int_Y\beta^n$, giving the scalar.
+\end{proof}
