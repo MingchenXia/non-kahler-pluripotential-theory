@@ -110,6 +110,38 @@ To justify the inequality, set $a_M=\max(a,-M)$. The bounded subharmonic chain r
 $\ddc \mathrm{e}^{a_M}\geq \mathrm{e}^{a_M}\ddc a_M$, which on $\{a>-M\}$ is at least $\mathrm{e}^a\tau$. Let $M\to\infty$, using decreasing convergence of the bounded subharmonic functions $\mathrm{e}^{a_M}$ and monotone convergence on the right. Since $\{a=-\infty\}$ is polar, $\mathrm{e}^a>0$ almost everywhere for $\tau$. Thus $\tau\ll\ddc v$. The chain inequality is \eqref{eq:bounded-convex-chain-rule} in dimension one.
 \end{proof}
 
+On a curve, the Green representation also controls capacity by the total variation of the Laplacian. The harmonic remainder contributes an additional $L^1$ term.
+
+\begin{lemma}\label{lem:planar-variation-capacity}
+Let $B'\Subset B$ be concentric discs in $\mathbb C$. There is a constant $C$, depending only on these discs, such that for quasi-subharmonic $u,v$ on a neighborhood of $\overline B$ and $t>0$,
+\begin{equation}\label{eq:planar-variation-capacity}
+ \operatorname{cap}(B'\cap\{|u-v|>t\},B)
+ \leq\frac Ct\left(\|u-v\|_{L^1(B)}
+                   +\|\ddc(u-v)\|_{\mathrm{TV}(B)}\right).
+\end{equation}
+Pole sets are omitted when forming the difference.
+\end{lemma}
+\begin{proof}
+Put $f=u-v$ and write the Jordan decomposition on $B$ as $\ddc f=\alpha^+-\alpha^-$. Let $g^\pm\leq0$ be the Dirichlet Green potentials of $\alpha^\pm$ on $B$. The $L^1(B)$ norm of the disc Green kernel is bounded uniformly over its pole, so
+\[
+ \|g^+\|_{L^1(B)}+\|g^-\|_{L^1(B)}
+ \leq C\|\ddc f\|_{\mathrm{TV}(B)}.
+\]
+Indeed, on the unit disc its kernel is $\log|(z-\zeta)/(1-\overline\zeta z)|^2$; the logarithmic singularity is uniformly integrable and $|1-\overline\zeta z|\leq2$. Scaling gives the bound on $B$.
+
+The distribution $h=f-g^++g^-$ is harmonic. The interior mean-value estimate gives
+\[
+ \|h\|_{L^\infty(B')}
+ \leq C\left(\|f\|_{L^1(B)}+\|\ddc f\|_{\mathrm{TV}(B)}\right).
+\]
+The identity $u+g^-=v+g^++h$ holds everywhere by almost-everywhere order for quasi-subharmonic functions. Thus $|u-v|\leq-g^+-g^-+|h|$ off their polar sets. For every subharmonic test $0\leq a\leq1$ on $B$, the weighted Chern--Levine--Nirenberg estimate and \eqref{eq:local-cln-range} yield
+\[
+ \int_{B'}|u-v|\,\ddc a
+ \leq C\left(\|f\|_{L^1(B)}+\|\ddc f\|_{\mathrm{TV}(B)}\right).
+\]
+The bounded test measure charges no polar set. Restrict to $\{|u-v|>t\}$, divide by $t$, and take the supremum over $a$.
+\end{proof}
+
 \subsection{Polar parts on curves}
 \label{sec:local-polar-parts}
 

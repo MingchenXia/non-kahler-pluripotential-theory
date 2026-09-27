@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint203 — 27 September 2026
+
+Section 29.12 now proves that metric convergence of normalized ordinary curve models implies L1 and capacity convergence, including zero-mass limits. At zero mass, full curvature currents converge in total variation with an explicit bound. Chapter 1 supplies the local variation-capacity estimate. Weak curvature convergence is distinguished from capacity convergence, and a moving pole on the projective line gives capacity convergence at constant model distance 2. Chapters 15, 32 and 33 record the implications and proof mechanism.
+
+The complete Section 29.12 and local-capacity input receive two direct mathematical/editorial reads, the second after the first build and visual inspection. The Chapter 29 opening and Chapters 15/32/33 interfaces receive bounded reviews. Three statements and proofs and five labels are added. All forty-nine prior Chapter 29 statements are byte-identical; forty-five prior proofs are byte-identical, and the atomic-completeness proof is clarified to use the sets of atoms instead of the ambiguous word supports. Five author inputs change; all prior labels, the bibliography and input graph remain. No new external premise, full external proof audit, novelty claim or independent verification is introduced. See research/editorial/curve-model-continuity-203.md and research/audits/curve-model-continuity-203.json.
+
+The 857-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph and template warning remain. The scoped house audit has zero errors and 30 inherited warnings. All 90 selected final pages pass visual review: 4 changed images directly inspected and 86 identical to an inspected preceding render. The first review directly inspects 69 images. The companion is byte-identical to checkpoint202. The 33-chapter, 221-input graph remains unchanged. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged.
+
+Compare all curve models under changes of smooth positive background, including zero residual mass, and determine which identifications preserve the total-variation metric. The broader writing and research goal remains active and incomplete.
+
 ## Cover correction — 27 September 2026
 
 Removed the subtitle “Envelopes, equations, and complex geometry” at the author's request. The 855-page book rebuilds cleanly with only its inherited bibliography underfull paragraph. The cover was rendered and visually checked; every other page has identical text to checkpoint202. The source package was regenerated and its manifest checked. This local cover correction does not change the mathematical review scope or the next writing unit.

@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion. On curves, polar curvature identifies the upper-volume comparison with total variation on all ordinary models, including zero volume; its diffuse part is exactly the defect of analytic approximation.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion. On curves, polar curvature identifies the upper-volume comparison with total variation on all ordinary models, including zero volume. This metric controls capacity convergence, and its diffuse part is exactly the defect of analytic approximation.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -1525,7 +1525,7 @@ By \cref{thm:analytic-model-volume-criterion}, a positive-lower-volume ordinary 
 \section{Model potentials on curves}
 \label{sec:curve-zero-volume-models}
 
-The curvature carried by the pole set determines the ordinary envelope on a curve. Its atomic part determines the ideal envelope. Comparing these two measures describes both the zero-volume boundary and the failure of analytic approximation for diffuse polar singularities.
+The curvature carried by the pole set determines the ordinary envelope on a curve. Its atomic part determines the ideal envelope. Comparing these two measures describes both the zero-volume boundary and the failure of analytic approximation for diffuse polar singularities. Total variation retains this singularity data while controlling convergence of the model potentials in capacity.
 
 Let $Y$ be a compact connected Riemann surface, let $\theta>0$ be smooth, and put $A=\int_Y\theta$. Write $T_u=\theta+\ddc u$ and $\mu_u=\mathbf1_{\{u=-\infty\}}T_u$ for $u\in\PSH(Y,\theta)$. By \cref{sec:local-polar-parts}, $\mu_u=T_u^{\mathrm{pol}}$. The two singularity volumes coincide with
 \[
@@ -1597,10 +1597,45 @@ The positive polar measures of mass at most $A$ are closed in total variation. A
 \]
 Their models give a constant-speed geodesic.
 
-The atomic measures form a closed convex subset: a total-variation limit is supported on the countable union of the supports of the sequence. Finite restriction and rational approximation of the coefficients from below, with an arbitrarily small further decrease if needed, approximate every such measure by finite atomic measures of mass strictly less than $A$. Their models have analytic singularities by \cref{lem:curve-atomic-ideal-model}. Apply \eqref{eq:curve-ideal-volume-distance}.
+The atomic measures form a closed convex subset: a total-variation limit is carried by the countable union of the sets of atoms of the sequence. Finite restriction and rational approximation of the coefficients from below, with an arbitrarily small further decrease if needed, approximate every such measure by finite atomic measures of mass strictly less than $A$. Their models have analytic singularities by \cref{lem:curve-atomic-ideal-model}. Apply \eqref{eq:curve-ideal-volume-distance}.
 \end{proof}
 
 The positive-mass part itself is incomplete for $d_\theta$. For a fixed $x\in Y$, the models of $tA\delta_x$, $t\uparrow1$, give a Cauchy family with a zero-mass limit. In contrast, the complete metric of \cref{thm:positive-model-complete-metric} makes this family non-Cauchy because its reciprocal lower volumes diverge. The two metrics induce the same topology on positive-mass models, but have different Cauchy sequences near the boundary.
+
+The metric also controls convergence of the potentials at the zero-mass boundary. There the polar part exhausts the limiting curvature, so its total variation controls the full current.
+
+\begin{theorem}\label{thm:curve-model-capacity-convergence}
+Let $p_j,p$ be normalized ordinary models on $Y$. If $d_\theta(p_j,p)\to0$, then $p_j\to p$ in $L^1$ and in capacity. If $U(p)=0$, then in addition
+\begin{equation}\label{eq:curve-zero-mass-current-variation}
+ \|T_{p_j}-T_p\|_{\mathrm{TV}}\leq2d_\theta(p_j,p)\longrightarrow0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Write $\mu_j=\mu_{p_j}$ and $\mu=\mu_p$. By \eqref{eq:curve-model-volume-distance}, $\mu_j\to\mu$ in total variation. Thus $U(p_j)=A-\mu_j(Y)\to U(p)$. If $U(p)>0$, the models lie in a common $\mathcal M_\delta(\theta)$ for all large $j$. Apply \cref{prop:model-volume-separation,thm:model-volume-capacity-convergence}.
+
+Suppose $U(p)=0$. Then $T_p=\mu$ and $R_j=T_{p_j}-\mu_j$ is positive of mass $A-\mu_j(Y)$. Consequently
+\[
+ \|T_{p_j}-T_p\|_{\mathrm{TV}}
+ \leq\|\mu_j-\mu\|_{\mathrm{TV}}+A-\mu_j(Y)
+ \leq2\|\mu_j-\mu\|_{\mathrm{TV}},
+\]
+which proves \eqref{eq:curve-zero-mass-current-variation}. By normalized compactness, each subsequence has an $L^1$-convergent further subsequence with a supremum-zero limit $q$. The current identity gives $\ddc(q-p)=0$. Harmonic uniqueness and normalization give $q=p$, proving $L^1$ convergence of the full sequence. Apply \cref{lem:planar-variation-capacity} on finitely many nested coordinate discs. Both terms on its right tend to zero, and the local-global capacity comparison in \cref{sec:hermitian-capacity} gives the result.
+\end{proof}
+
+For normalized potentials, $T_{p_j}\rightharpoonup T_p$ is equivalent to $p_j\to p$ in $L^1$, by \cref{thm:gaud-trace-homeomorphism} and normalized compactness. It need not imply capacity convergence even when the sequence and limit are ideal models. Scaling the area-one construction in \cref{thm:curve-ideal-lone-completion} gives zero-mass ideal models converging to zero in $L^1$. Capacity convergence would contradict \cref{thm:damped-continuity}, since their damped measures vanish and the limiting measure is $\theta$.
+
+Capacity convergence in turn need not retain total variation of the polar part. Moving a single pole gives an example within the zero-mass boundary itself.
+
+\begin{example}\label{ex:moving-pole-capacity-not-variation}
+On $\mathbb P^1$ with the Fubini--Study form $\theta$ of area one, there are zero-mass ideal models $p_j,p$ with $p_j\to p$ in capacity but $d_\theta(p_j,p)=2$ for every $j$.
+\end{example}
+\begin{proof}
+In the affine coordinate $z$, for $a\in\mathbb C$ put
+\[
+ p_a(z)=\log\frac{|z-a|^2}{(1+|z|^2)(1+|a|^2)}.
+\]
+This extends to $\mathbb P^1$, has supremum zero, and satisfies $T_{p_a}=\delta_a$. Hence it is the ideal model for $\delta_a$ by \cref{lem:curve-atomic-ideal-model}. Choose $a_j\ne0$ tending to zero and set $p_j=p_{a_j}$, $p=p_0$. On the complement of any fixed disc about zero the convergence is uniform, including at infinity. The capacities of these discs tend to zero by \eqref{eq:global-capacity-tail} applied to $p_0$. Therefore $p_j\to p$ in capacity. Since $\|\delta_{a_j}-\delta_0\|_{\mathrm{TV}}=2$, \eqref{eq:curve-model-volume-distance} gives the asserted distance.
+\end{proof}
 
 Write $\mu_u=D_u+\sigma_u$, where $D_u=\sum_{x\in Y}\nu(u,x)\delta_x$ is the atomic part and $\sigma_u$ has no atoms. Set $\tau(u)=\sigma_u(Y)=A-U(u)-D_u(Y)$, and let $\mathcal A_+(Y,\theta)$ denote the positive-mass analytic ordinary models.
 

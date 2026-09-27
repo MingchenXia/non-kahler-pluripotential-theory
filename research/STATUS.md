@@ -2,9 +2,19 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint203 — L1 and capacity convergence of curve models
+
+Section 29.12 now proves that metric convergence of normalized ordinary curve models implies L1 and capacity convergence, including zero-mass limits. At zero mass, full curvature currents converge in total variation with an explicit bound. Chapter 1 supplies the local variation-capacity estimate. Weak curvature convergence is distinguished from capacity convergence, and a moving pole on the projective line gives capacity convergence at constant model distance 2. Chapters 15, 32 and 33 record the implications and proof mechanism.
+
+The complete Section 29.12 and local-capacity input receive two direct mathematical/editorial reads, the second after the first build and visual inspection. The Chapter 29 opening and Chapters 15/32/33 interfaces receive bounded reviews. Three statements and proofs and five labels are added. All forty-nine prior Chapter 29 statements are byte-identical; forty-five prior proofs are byte-identical, and the atomic-completeness proof is clarified to use the sets of atoms instead of the ambiguous word supports. Five author inputs change; all prior labels, the bibliography and input graph remain. No new external premise, full external proof audit, novelty claim or independent verification is introduced. See research/editorial/curve-model-continuity-203.md and research/audits/curve-model-continuity-203.json.
+
+The 857-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph and template warning remain. The scoped house audit has zero errors and 30 inherited warnings. All 90 selected final pages pass visual review: 4 changed images directly inspected and 86 identical to an inspected preceding render. The first review directly inspects 69 images. The companion is byte-identical to checkpoint202. The 33-chapter, 221-input graph remains unchanged. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged.
+
+Compare all curve models under changes of smooth positive background, including zero residual mass, and determine which identifications preserve the total-variation metric. The broader writing and research goal remains active and incomplete.
+
 ## Cover correction — 27 September 2026
 
-The current PDF and source package omit the subtitle “Envelopes, equations, and complex geometry” at the author's request. The rebuilt cover passes visual inspection; all other page text matches checkpoint202. The mathematical checkpoint and next writing unit below remain current. See `research/audits/cover-subtitle-removal-20260927.json` for this local correction.
+The cover correction removed the subtitle “Envelopes, equations, and complex geometry” at the author's request. Its 855-page snapshot passed visual inspection, with all other page text matching checkpoint202. Later checkpoints preserve this correction. See `research/audits/cover-subtitle-removal-20260927.json` for the local check.
 
 ## Checkpoint202 — Polar curvature and all curve models
 
