@@ -1,9 +1,9 @@
 \chapter{Divisorial currents on compact modifications}
 \label{chap:divisorial-models}
 
-The trace numbers of \cref{chap:trace-data} prescribe a divisorial part on every modification, but a given model sees only the divisors it carries. A Gauduchon estimate makes these coefficients summable and defines a closed positive current on each model. Pushforward preserves this current; passage to a higher model can add an effective exceptional divisor. The resulting formula compares both the residual Bott--Chern classes and the ordinary singularity types of the divisorial parts. Its proof requires control of infinite divisor sums under pullback, which follows from a continuous choice of smooth Bott--Chern representatives.
+A model carries only part of the divisorial trace data: blowing up can reveal vanishing that had higher codimension on the original manifold. Summing the visible coefficients gives a closed positive current on each model, controlled by its Gauduchon mass. These currents agree under pushforward, while pullback acquires an effective exceptional correction. The full trace envelope, which imposes the inequalities on every model at once, pulls back exactly. Comparing these two constructions explains why the canonical ordinary type of a model's divisorial part need not realize the full trace data.
 
-Retain the trace setting of \cref{chap:trace-data}: $X$ is a connected compact complex manifold, $Y\subset X$ is a connected compact complex submanifold of dimension $r\geq1$, $\theta$ is a smooth real $(1,1)$-form, $\omega$ is Hermitian, and $u\in\PSH(X,\theta)$ satisfies $\nu(u,Y)=0$. For a smooth compact modification $\pi:Z\to Y$, put
+Use the setting and analytic approximants of \cref{chap:trace-data}, with $r=\dim Y$. For a smooth compact modification $\pi:Z\to Y$, put
 \[
  \theta_Z=\pi^*(\theta|_Y),\qquad
  \omega_Z^0=\pi^*(\omega|_Y),\qquad
@@ -15,7 +15,7 @@ Here $E$ is a prime divisor on $Z$, and the order is that of the image ideal pul
  \frac{b_m(E)}m\longrightarrow\tau_{Y,u}(E),\qquad
  \tau_{Y,u}(E)=\sup_{m\geq1}\frac{b_m(E)}m.
 \]
-Let $u_m$ be the analytic approximants of \cref{cor:nonclosed-analytic-approximation}, with curvature errors $\epsilon_m\to0$. Their restricted pullbacks have lower bound $-\theta_Z-\epsilon_m\omega_Z^0$.
+The restricted pullbacks of $u_m$ have lower bound $-\theta_Z-\epsilon_m\omega_Z^0$.
 
 \section{Divisorial trace currents}\label{sec:divisorial-model-bound}
 
@@ -101,11 +101,11 @@ Indeed on a smooth manifold a holomorphic function with the indicated generic or
 Divide by $m$ and pass to the limit; the sum is finite. Thus every coefficient of $g^*A_{\mathcal F}$ is at most $\tau_{Y,u}(F)$. Both sides are divisorial positive currents, which proves the asserted current inequality.
 \end{proof}
 
-\section{A common trace majorant}
+\section{The trace envelope as a common majorant}
 
-The trace currents on all models admit one common majorant: an $L^1$ limit of normalized restrictions of the analytic approximants. The vanishing curvature error places this limit in the original restricted background, and Lelong semicontinuity compares its pullbacks with the trace coefficients.
+The trace envelope imposes the inequalities for all divisors over $Y$, including those absent from any one model. It therefore supplies a single potential whose pullbacks dominate every divisorial trace current. Its background is the original restriction $\theta|_Y$.
 
-\begin{proposition}\label{prop:original-background-trace-majorant}
+\begin{proposition}\label{prop:original-background-trace-majorant}\index{Trace!common envelope majorant}
 There exists $v\in\PSH(Y,\theta|_Y)$ such that for every smooth compact modification $\pi:Z\to Y$,
 \[
  \nu(v\circ\pi,E)\geq\tau_{Y,u}(E)
@@ -117,20 +117,10 @@ and
 \]
 \end{proposition}
 \begin{proof}
-Normalize the restrictions $u_m|_Y$ to have supremum zero. They lie in a fixed Hermitian plurisubharmonic family, because their curvature lower bounds are $-(\theta+\epsilon_m\omega)|_Y$. \Cref{thm:normalized-compactness} gives a subsequence converging in $L^1(Y)$ to a quasi-plurisubharmonic function $v$. Passing to the distributional curvature inequality and using $\epsilon_m\to0$ gives $\theta|_Y+\ddc v\geq0$.
-
-Fix any compact modification $\pi$. The pullback $L^1$ lemma proved in \cref{lem:modification-lone-pullback} applies to this same subsequence in its fixed smooth lower bound. It gives $L^1$ convergence of the normalized pullbacks to $v\circ\pi$. The Lelong semicontinuity of \cref{lem:lelong-lone-semicontinuity} therefore gives
-\[
- \nu(v\circ\pi,E)
- \geq\limsup_m\nu((u_m|_Y)\circ\pi,E)
- =\tau_{Y,u}(E).
-\]
-Normalization by constants has not affected these numbers. The argument works for each fixed model and each divisor using the already chosen subsequence; no new subsequence is selected for any of them.
-
-Apply \cref{lem:nonclosed-divisorial-removal} to the positive current $\theta_Z+\ddc(v\circ\pi)$. Its divisorial coefficients dominate those of $S_Z$. Removal of every finite partial sum of $S_Z$ preserves positivity. Passing to the current limit from \cref{thm:trace-divisorial-current-budget} proves the final inequality.
+Take $v=\mathcal T_{\theta|_Y}(u;Y)$ from \eqref{eq:trace-profile-envelope}. By \cref{thm:restricted-analytic-envelope-limit}, it belongs to $\PSH(Y,\theta|_Y)$ and satisfies every defining trace inequality. On a fixed model $Z$, \cref{lem:nonclosed-divisorial-removal} therefore allows removal of every finite partial sum of $S_Z(u;Y)$ from $\theta_Z+\ddc(v\circ\pi)$. Passing to the current limit of these sums, constructed in \cref{thm:trace-divisorial-current-budget}, preserves positivity and proves the second assertion.
 \end{proof}
 
-The Lelong inequalities may be strict. Exact trace realization requires the additional arguments used for analytic singularities and curve fibrations in \cref{chap:trace-data}.
+The choice in the proof is canonical: \cref{thm:trace-envelope-modification} identifies $v\circ\pi$ with the trace envelope in background $\theta_Z$ for the inherited data. Its Lelong numbers may still be larger than those prescribed. Exact realization requires the reverse inequality, as established in \cref{chap:trace-data} for analytic singularities, K\"ahler targets in sufficiently large backgrounds, and curve fibrations. The ordinary type attached to $S_Z$ records only the divisorial part on that particular model.
 
 \input{author/section_bott_chern_bclasses}
 
