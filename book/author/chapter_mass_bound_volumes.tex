@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion. On curves, polar curvature identifies the upper-volume comparison with total variation on all ordinary models, including zero volume. This metric controls capacity convergence, and its diffuse part is exactly the defect of analytic approximation. Area rescaling identifies the curve model spaces in different positive backgrounds, while a smooth gauge controls their normalized representatives.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion. On curves, polar curvature identifies the upper-volume comparison with total variation on all ordinary models, including zero volume. This metric controls capacity convergence, and its diffuse part is exactly the defect of analytic approximation. Area rescaling and smooth gauges control these models under changes of background. When the backgrounds converge uniformly to a form of zero area, the model spaces and their normalized potentials collapse to a single point.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -1673,12 +1673,36 @@ Thus $u=-\infty$ on $K$, while it is smooth off $K$ by its current equation. Hen
 \section{Background changes on curves}
 \label{sec:curve-model-backgrounds}
 
-Polar curvature separates the area of the background from the singularity data of a curve model. Keeping the polar measure fixed preserves distances on the common admissible range. Rescaling it by the area ratio identifies the entire model spaces, including their zero-mass boundaries. A smooth potential for the change of background controls the resulting change of normalized representatives.
+Polar curvature separates the area of the background from the singularity data of a curve model. A smooth gauge reduces any positive-area background to a positive form. Keeping polar data fixed preserves distances on the common admissible range, while area rescaling identifies the entire model spaces. The gauge controls the normalized representatives. At zero area the whole space collapses to the unique normalized potential.
 
-Keep the curve $Y$ of \cref{sec:curve-zero-volume-models}. For a smooth positive form $\sigma$, write $A_\sigma=\int_Y\sigma$, let $\mathcal M(\sigma)$ be its normalized ordinary model space, and denote by $p_\sigma(\mu)$ the model of the polar measure $\mu$ in \cref{lem:curve-polar-model}. Put $U_\sigma(p)=\int_Y\mathrm{MA}_\sigma(p)$.
+Keep the curve $Y$ of \cref{sec:curve-zero-volume-models} and fix a smooth positive form $\eta$ of integral one. In this section allow any smooth real background $\sigma$ with $A_\sigma=\int_Y\sigma\geq0$, and let $\mathcal M(\sigma)$ be its normalized ordinary model space. Use $\eta$ for $L^1$ norms and capacity. Put $U_\sigma(p)=\int_Y\mathrm{MA}_\sigma(p)$; at zero area the volume-comparison formula of \cref{def:model-volume-comparison} is identically zero.
+
+\begin{proposition}\label{prop:curve-arbitrary-background-models}
+Polar curvature identifies $\mathcal M(\sigma)$ with the positive polar measures of mass at most $A_\sigma$. Write $p_\sigma(\mu)$ for the model of $\mu$. Then
+\[
+ U_\sigma(p_\sigma(\mu))=A_\sigma-\mu(Y),\qquad
+ d_\sigma(p_\sigma(\mu),p_\sigma(\nu))=\|\mu-\nu\|_{\mathrm{TV}},
+\]
+and ideal projection corresponds to taking the atomic part. The model space is complete and geodesic, and metric convergence implies $L^1$ and capacity convergence. If $A_\sigma=0$, its only member is the smooth potential $u_\sigma$ of \cref{lem:curve-background-area}.
+\end{proposition}
+\begin{proof}
+Suppose first that $A=A_\sigma>0$. By \cref{lem:curve-background-area}, write $\sigma=A\eta+\ddc h$. For $v\in\PSH(Y,A\eta)$, the ordinary-envelope inequalities of \cref{prop:i-envelope-gauge} give
+\[
+ P_{A\eta}[v]+\min_Yh
+ \leq P_\sigma[v-h]+h
+ \leq P_{A\eta}[v]+\max_Yh.
+\]
+For a model $p$ in background $A\eta$, the potential $q=P_\sigma[p-h]$ therefore satisfies $q+h\sim p$. Ordinary-type invariance of the envelope gives $P_\sigma[q]=q$. Conversely, for $q\in\mathcal M(\sigma)$, the same bounds show that $P_{A\eta}[q+h]\sim q+h$, and taking the envelope back recovers $q$. Thus this construction is a bijection of the model spaces.
+
+Smooth gauges preserve curvature measures, and ordinary equivalence preserves their polar parts by \cref{cor:polar-order-maximum}. The bijection consequently preserves polar curvature. It also preserves singularity volumes; subtracting the same smooth function commutes with maxima. The classification and distance formula in \cref{lem:curve-polar-model,thm:curve-model-volume-distance} now give the first assertions. The identical gauge bounds for ideal envelopes make the corresponding ideal projections ordinarily equivalent after transport. They are ordinary models by \cref{cor:ordinary-preserves-i}, so uniqueness in each ordinary type makes them equal. Thus the bijection commutes with ideal projection, which still takes the atomic part. Completeness and geodesics follow by the same identification with polar measures as in \cref{cor:curve-model-completeness}.
+
+For metric convergence to a model of positive mass, $\sigma$ is big because $\sigma+\ddc(-h)=A\eta>0$, and the converging polar masses give a common positive lower-volume bound. Apply \cref{prop:model-volume-separation,thm:model-volume-capacity-convergence}. At a zero-mass limit the current estimate \eqref{eq:curve-zero-mass-current-variation} follows from the same polar decomposition. Normalized compactness and harmonic uniqueness give $L^1$ convergence; \cref{lem:planar-variation-capacity} then gives capacity convergence on a finite cover.
+
+If $A_\sigma=0$, \cref{lem:curve-background-area} leaves only $u_\sigma$ after normalization. Its current vanishes, and both envelope operations fix it. All assertions reduce to the zero measure and the one-point metric space.
+\end{proof}
 
 \begin{theorem}\label{thm:curve-background-homothety}
-Let $\theta_0,\theta_1>0$ be smooth, put $A_i=A_{\theta_i}$ and $\lambda=A_1/A_0$. The map
+Let $\theta_0,\theta_1$ have positive areas $A_i=A_{\theta_i}$ and put $\lambda=A_1/A_0$. The map
 \[
  F_{10}:\mathcal M(\theta_0)\longrightarrow\mathcal M(\theta_1),
  \qquad F_{10}(p_{\theta_0}(\mu))=p_{\theta_1}(\lambda\mu),
@@ -1692,23 +1716,24 @@ is a bijection and satisfies
  &=F_{10}(P_{\theta_0}[p]_{\mathcal I}).
  \end{split}
 \end{equation}
-For a third smooth positive form $\theta_2$, the same construction gives $F_{21}F_{10}=F_{20}$.
+For a third smooth background $\theta_2$ of positive area, the same construction gives $F_{21}F_{10}=F_{20}$.
 \end{theorem}
 \begin{proof}
-Multiplication by $\lambda$ is a bijection between the positive polar measures of mass at most $A_0$ and those of mass at most $A_1$. The classification gives the asserted bijection. By \cref{thm:curve-model-volume-distance}, its distance is
+Multiplication by $\lambda$ is a bijection between the positive polar measures of mass at most $A_0$ and those of mass at most $A_1$. By \cref{prop:curve-arbitrary-background-models}, it gives the asserted bijection, with distance
 \[
  \|\lambda\mu-\lambda\nu\|_{\mathrm{TV}}
  =\lambda\|\mu-\nu\|_{\mathrm{TV}}.
 \]
-The volume identity follows from $A_1-\lambda\mu(Y)=\lambda(A_0-\mu(Y))$. Taking the atomic part commutes with multiplication by $\lambda$, so \cref{prop:curve-analytic-distance-defect} gives the ideal-envelope identity. The area ratios multiply, proving the composition rule.
+The volume identity follows from $A_1-\lambda\mu(Y)=\lambda(A_0-\mu(Y))$. Taking the atomic part commutes with multiplication by $\lambda$, which gives the ideal-envelope identity. The area ratios multiply, proving the composition rule.
 \end{proof}
 
-Thus $d_\sigma/A_\sigma$ gives isometric model spaces under these correspondences. The unscaled spaces have diameter $2A_\sigma$: this is an upper bound for the total variation of two positive measures of mass at most $A_\sigma$, and the models of $A_\sigma\delta_x$ and $A_\sigma\delta_y$, $x\ne y$, attain it. Consequently the full unscaled spaces can be isometric only when their areas agree.
+For $A_\sigma>0$, the distances $d_\sigma/A_\sigma$ give isometric model spaces under these correspondences. The unscaled spaces have diameter $2A_\sigma$: this is an upper bound for the total variation of two positive measures of mass at most $A_\sigma$, and the models of $A_\sigma\delta_x$ and $A_\sigma\delta_y$, $x\ne y$, attain it. Consequently the full unscaled spaces can be isometric only when their areas agree.
 
-Alternatively, $p_{\theta_0}(\mu)\mapsto p_{\theta_1}(\mu)$ is an isometry on the common range $\mu(Y)\leq\min(A_0,A_1)$. These two models have the same ordinary type. Indeed, their Green representatives have the same polar term, so their difference has smooth $\ddc$ and is smooth by elliptic regularity; \cref{lem:curve-polar-model} identifies the model with its Green representative up to a bounded function. Under this correspondence the non-pluripolar volume changes by $A_1-A_0$.
+Alternatively, $p_{\theta_0}(\mu)\mapsto p_{\theta_1}(\mu)$ is an isometry on the common range $\mu(Y)\leq\min(A_0,A_1)$. These two models have the same ordinary type. Indeed, their Green representatives have the same polar term, so their difference has smooth $\ddc$ and is smooth by elliptic regularity; \cref{lem:curve-polar-model,prop:curve-arbitrary-background-models} identify the model with its Green representative, corrected by a smooth gauge, up to a bounded function. Under this correspondence the non-pluripolar volume changes by $A_1-A_0$.
 
 The area-rescaling map preserves analytic models when $\lambda$ is rational, by the convention in \cref{sec:analytic-types}: on a curve their polar measures have finite support and rational coefficients. If $\lambda$ is irrational, an atom $a\delta_x$ with rational $0<a<A_0$ acquires an irrational Lelong number, so its image is not analytic in this convention. Ideal models are preserved for every $\lambda$ by \eqref{eq:curve-background-homothety}.
 
+\Needspace{15\baselineskip}
 \begin{proposition}\label{prop:curve-background-obstacle-bound}
 Choose a smooth real $h$ with $\theta_1=\lambda\theta_0+\ddc h$. For $p\in\mathcal M(\theta_0)$ and $q=F_{10}(p)$,
 \begin{equation}\label{eq:curve-background-obstacle-bound}
@@ -1723,43 +1748,45 @@ If $U_{\theta_0}(p)=0$, then
 \]
 \end{proposition}
 \begin{proof}
-The form $\theta_1-\lambda\theta_0$ has integral zero, so the scalar Poisson equation supplies $h$, as in \cref{sec:curve-trace-realization}. Write $p=p_{\theta_0}(\mu)$. The potential $\lambda p-h$ is $\theta_1$-plurisubharmonic, and its current is $\lambda(\theta_0+\ddc p)$. Its polar measure is therefore $\lambda\mu$. The classification \cref{lem:curve-polar-model} gives the first identity in \eqref{eq:curve-background-obstacle-bound}.
+The form $\theta_1-\lambda\theta_0$ has integral zero, so the scalar Poisson equation supplies $h$, as in \cref{lem:curve-background-area}. Write $p=p_{\theta_0}(\mu)$. Scaling the competitors in the ordinary envelope shows that $\lambda p$ is a normalized ordinary model for $\lambda\theta_0$. The smooth-gauge construction in \cref{prop:curve-arbitrary-background-models} therefore makes $P_{\theta_1}[\lambda p-h]$ a model. The current of $\lambda p-h$ is $\lambda(\theta_0+\ddc p)$, so its polar measure is $\lambda\mu$. The construction preserves this measure, giving the first identity in \eqref{eq:curve-background-obstacle-bound}.
 
-Scaling the competitors in the ordinary envelope shows that $\lambda p$ is a normalized ordinary model for $\lambda\theta_0$. The function $\lambda p-h+\min_Yh$ is a competitor for $q$, giving the lower bound. If $v\leq0$ is any competitor, then $v+h-\max_Yh$ is $\lambda\theta_0$-plurisubharmonic, nonpositive and more singular than $\lambda p$. It is therefore at most $\lambda p$. Taking the upper envelope gives the upper bound. The inequalities hold at the poles as well and, off their common pole set, imply $|q-\lambda p|\leq\operatorname{osc}_Yh$.
+The function $\lambda p-h+\min_Yh$ is a competitor for $q$, giving the lower bound. If $v\leq0$ is any competitor, then $v+h-\max_Yh$ is $\lambda\theta_0$-plurisubharmonic, nonpositive and more singular than $\lambda p$. It is therefore at most $\lambda p$. Taking the upper envelope gives the upper bound. The inequalities hold at the poles as well and, off their common pole set, imply $|q-\lambda p|\leq\operatorname{osc}_Yh$.
 
 At zero mass, the polar measures exhaust the currents of both $p$ and $q$. Hence $\ddc(q-\lambda p+h)=0$. Harmonic uniqueness and the supremum-zero normalization give the last formula.
 \end{proof}
 
 \begin{corollary}\label{cor:curve-varying-background-continuity}
-Suppose smooth positive forms $\theta_j$ converge uniformly to $\theta_0>0$. Put $\lambda_j=A_{\theta_j}/A_{\theta_0}$ and write $F_{j0}$ for the preceding correspondence. For every $t>0$,
+Suppose smooth real forms $\theta_j$ of positive area converge uniformly to a smooth form $\theta_0$ of positive area. Put $\lambda_j=A_{\theta_j}/A_{\theta_0}$ and write $F_{j0}$ for the preceding correspondence. For every $t>0$,
 \begin{equation}\label{eq:curve-background-uniform-continuity}
  \begin{split}
  \sup_{p\in\mathcal M(\theta_0)}
        \|F_{j0}(p)-p\|_{L^1(Y)}&\longrightarrow0,\\
  \sup_{p\in\mathcal M(\theta_0)}
-       \operatorname{Cap}_{\theta_0}(\{|F_{j0}(p)-p|>t\})&\longrightarrow0.
+       \operatorname{Cap}_\eta(\{|F_{j0}(p)-p|>t\})&\longrightarrow0.
  \end{split}
 \end{equation}
 More generally, let $q_j\in\mathcal M(\theta_j)$ have polar measures $\nu_j$, and let $p=p_{\theta_0}(\mu)$. If $\lambda_j^{-1}\nu_j\to\mu$ in total variation, then $q_j\to p$ in $L^1$ and in capacity.
 \end{corollary}
 \begin{proof}
-The mean-zero inverse of the self-adjoint scalar Laplacian for $\theta_0/A_{\theta_0}$ has a symmetric Green kernel $G$. Set
+The mean-zero inverse of the self-adjoint scalar Laplacian for $\eta$ has a symmetric Green kernel $G$. Set
 \[
  h_j(x)=\int_YG(x,y)\,(\theta_j-\lambda_j\theta_0)(y).
 \]
 The integrand form has integral zero, so $\ddc h_j=\theta_j-\lambda_j\theta_0$, and elliptic regularity makes $h_j$ smooth. Symmetry and the uniform $L^1$ bound from \cref{sec:curve-trace-realization} give
 \[
  \|h_j\|_{L^\infty(Y)}
- \leq C\left\|\frac{\theta_j-\lambda_j\theta_0}{\theta_0}\right\|_{L^\infty(Y)}
+ \leq C\left\|\frac{\theta_j-\lambda_j\theta_0}{\eta}\right\|_{L^\infty(Y)}
  \longrightarrow0.
 \]
-Here $C$ depends only on the fixed background $\theta_0$. The symmetric kernel may be made nonpositive by subtracting a constant, which does not change $h_j$.
+Here $C$ depends only on $\eta$. The symmetric kernel may be made nonpositive by subtracting a constant, which does not change $h_j$.
 
 By \eqref{eq:curve-background-obstacle-bound}, outside the common poles,
 \[
  |F_{j0}(p)-p|\leq\operatorname{osc}_Yh_j+|\lambda_j-1|\,|p|.
 \]
-Normalized compactness bounds $\|p\|_{L^1}$ uniformly over $\mathcal M(\theta_0)$, proving the first limit. The uniform sublevel estimate \eqref{eq:global-capacity-tail} proves the second, since $\lambda_j\to1$. Pole sets have zero capacity.
+Normalized compactness bounds $\|p\|_{L^1}$ uniformly over $\mathcal M(\theta_0)$, proving the first limit. Choose $C_0>0$ with $\theta_0\leq C_0\eta$. Then $p/C_0$ is normalized and $\eta$-plurisubharmonic, so the uniform sublevel estimate \eqref{eq:global-capacity-tail} proves the second limit. Pole sets have zero capacity.
 
-For the last assertion put $p_j=F_{0j}(q_j)$. Its polar measure is $\lambda_j^{-1}\nu_j$, so \cref{thm:curve-model-capacity-convergence} gives $p_j\to p$ in $L^1$ and capacity. The two uniform limits in \eqref{eq:curve-background-uniform-continuity}, applied to $p_j$, give $q_j-p_j\to0$ in the same senses. The triangle inequality for $L^1$ and subadditivity of capacity finish the proof.
+For the last assertion put $p_j=F_{0j}(q_j)$. Its polar measure is $\lambda_j^{-1}\nu_j$, so \cref{prop:curve-arbitrary-background-models} gives $p_j\to p$ in $L^1$ and capacity. The two uniform limits in \eqref{eq:curve-background-uniform-continuity}, applied to $p_j$, give $q_j-p_j\to0$ in the same senses. The triangle inequality for $L^1$ and subadditivity of capacity finish the proof.
 \end{proof}
+
+Finally suppose $\theta_j\to\theta_0$ uniformly, where $A_{\theta_j}\geq0$ and $A_{\theta_0}=0$. The limiting model space is $\{u_{\theta_0}\}$, and \cref{thm:curve-zero-area-collapse} gives uniform $L^1$ and capacity convergence to this point for all normalized potentials, hence for all models. The model spaces also collapse for their unscaled metrics: their diameters are $2A_{\theta_j}\to0$. At positive area, dividing the metric by the area instead retains the same polar-measure space as $\mathcal M(\eta)$ under \cref{thm:curve-background-homothety}. Thus the normalized metric retains singularity data that disappear in the limiting potentials.

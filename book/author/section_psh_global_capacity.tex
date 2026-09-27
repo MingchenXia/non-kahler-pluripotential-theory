@@ -192,3 +192,47 @@ where the second term is absent for $n=2$. Its absolute value is bounded by fixe
 \]
 Normalized $\theta$-plurisubharmonic functions have uniformly bounded $L^1$ norms. Summing the local bounds proves the assertion. For $n=1$, the second integral is zero by Stokes, and the result is immediate.
 \end{proof}
+
+\subsection{Vanishing area on curves}
+\label{sec:curve-vanishing-area}
+
+On a compact curve, the integral of the background is the total mass of every curvature current. When this integral vanishes, positivity forces the current to vanish. Normalized compactness and the local variation-capacity estimate make this uniqueness stable as the area tends to zero.
+
+Let $Y$ be a compact connected Riemann surface and fix a smooth positive form $\eta$ with $\int_Y\eta=1$. Use $\eta$ for $L^1$ norms and capacity on $Y$.
+
+\begin{lemma}\label{lem:curve-background-area}
+For a smooth real $(1,1)$-form $\sigma$ on $Y$, put $A=\int_Y\sigma$. There is a smooth real $h$ with $\sigma=A\eta+\ddc h$. The class $\PSH(Y,\sigma)$ is nonempty exactly when $A\geq0$. If $A=0$, it consists of the functions $-h+c$, $c\in\mathbb R$, and its unique supremum-zero member is $u_\sigma=-h+\min_Yh$.
+\end{lemma}
+\begin{proof}
+The smooth form $\sigma-A\eta$ has integral zero. The scalar Poisson equation on the compact connected surface therefore has a smooth solution $h$, unique up to a constant. If $u\in\PSH(Y,\sigma)$, Stokes gives
+\[
+ (\sigma+\ddc u)(Y)=A\geq0.
+\]
+Conversely, $-h$ has curvature $A\eta$, so is admissible when $A\geq0$. If $A=0$, every positive curvature measure has mass zero and vanishes. Thus $\ddc(u+h)=0$; elliptic regularity and harmonic uniqueness make $u+h$ constant. Supremum normalization gives the stated formula.
+\end{proof}
+
+\begin{theorem}\label{thm:curve-zero-area-collapse}
+Let smooth real forms $\sigma_j$ converge uniformly to a smooth form $\sigma_0$, and suppose
+\[
+ A_j=\int_Y\sigma_j\geq0,\qquad \int_Y\sigma_0=0.
+\]
+Let $u_0$ be the normalized $\sigma_0$-plurisubharmonic potential from \cref{lem:curve-background-area}. Then, for every $t>0$,
+\[
+ \begin{aligned}
+ \sup_{u\in\PSH(Y,\sigma_j),\ \sup_Yu=0}\|u-u_0\|_{L^1(Y)}&\longrightarrow0,\\
+ \sup_{u\in\PSH(Y,\sigma_j),\ \sup_Yu=0}
+       \operatorname{Cap}_\eta(\{|u-u_0|>t\})&\longrightarrow0.
+ \end{aligned}
+\]
+The full curvature measures tend uniformly to zero in total variation: each has norm $A_j$.
+\end{theorem}
+\begin{proof}
+Choose $C>0$ with $\sigma_j\leq C\eta$ for every $j$. Any sequence of normalized $\sigma_j$-plurisubharmonic functions belongs to the compact normalized family for $C\eta$. Every $L^1$ cluster limit $u$ is normalized and satisfies $\sigma_0+\ddc u\geq0$, by passing to distributions. The preceding lemma gives $u=u_0$. A sequence violating the first uniform limit would have a convergent subsequence with this same limit, a contradiction.
+
+For any potential in the $j$th normalized family, put $T=\sigma_j+\ddc u$. Positivity and Stokes give $\|T\|_{\mathrm{TV}}=A_j$. Since $\sigma_0+\ddc u_0=0$,
+\[
+ \|\ddc(u-u_0)\|_{\mathrm{TV}}
+ \leq A_j+\|\sigma_j-\sigma_0\|_{\mathrm{TV}}\longrightarrow0
+\]
+uniformly over that family. Apply \cref{lem:planar-variation-capacity} on a fixed finite cover by concentric coordinate discs. The first limit and the displayed bound make each local capacity tend uniformly to zero. The local-global capacity comparison then proves the second limit. The current norm identity also proves the final assertion.
+\end{proof}
