@@ -1,0 +1,31 @@
+# Zero lower-volume limits — checkpoint193
+
+Baseline: `5ff7499950e321209bc83e205404cbd5819dc35f`. The previous goal turn completed checkpoint192 and verified its private backup, so it was progress. The checkout was initially clean.
+
+## Mathematics
+
+Lemma 29.4.1 now makes its small-stretch scale explicit: b0 = 1 + lowerVol_theta(u)/(2^(n+1) n vPlus(Omega)), for a common Hermitian upper background Omega. Fixing a bad b in this interval and letting the contact-tail level tend to infinity gives a contradiction with an error at most half the positive lower volume. This uses a finite non-pluripolar tail for each potential, not a uniform tail assumption on the family.
+
+Theorem 29.5.2 now proves lower-volume continuity for decreasing ordinary model potentials in smooth backgrounds decreasing uniformly in form order to a smooth big limit, including zero-lower-volume limits. The fixed-point assertion follows from envelope order alone. Let ell be the limit of the approximating lower volumes. If ell is zero, monotonicity finishes the proof. If ell is positive, the common small stretch and normalized ordinary-envelope competitors give a limiting convex inequality with the minimal potential. Monotonicity already gives vMinus(Omega) >= ell. A strict current and addition transfer this positivity to the minimal potential in the limiting background and then to the limit q. The positive-limit proof reconstructed in checkpoint192 now applies. Upper-volume and uniform Lelong convergence retain the positive-lower-volume hypothesis.
+
+Proposition 29.4.2 adds a lower-volume perturbation bound 0 <= lowerVol_eta(u) - lowerVol_theta(u) <= C epsilon for every theta-psh u, with C independent of u and eta. A mixed-product bound in a common Hermitian background controls the positive smooth perturbation, after which the infimum over equivalent theta-potentials gives the claim. The previous multiplicative comparison for both volumes retains positive lower volume. Corollary 29.5.1 consequently gives lower-volume background continuity for every fixed potential, while its upper-volume and ordinary-envelope conclusions keep positivity.
+
+## Sources and review scope
+
+The complete Chapter 29 input received an original read and two complete direct mathematical/editorial revised reads. The second revised read followed the first build and page inspection. Section 32.7 and its trace transition, and Section 33.8 and its neighboring historical transitions, received bounded interface reads. Earlier internal dependencies were consulted at the needed scopes; this is not a whole-book proof audit.
+
+[Li version 1](https://arxiv.org/html/2601.13446v1), Propositions 3.1 and 3.5, were read with their complete statements and proofs. The standing Section 3 assumptions include both metric mass properties. The book assumes bounded mass and proves the necessary positive metric lower bound inside the nontrivial branch; it does not add an unmentioned global PVP premise. The new zero-volume reduction uses the uniform small stretch, and the varying-background step keeps the direct strict-correction and tail-envelope argument from checkpoint192. The source states theta + epsilon_j omega; the book proves arbitrary ordered smooth backgrounds converging uniformly from above.
+
+The published Boucksom–Guedj–Lu PDF was checked at Lemmas 2.3–2.4 and the complete Proposition 3.3 proof. The new adoption is only the smooth-perturbation case of Proposition 3.3(ii). Physical page 25 was visually inspected to distinguish the lower-volume symbols. The book reconstructs the mixed bound internally in its own normalization. The focused JSON records the exact PDF hash. No source theorem beyond this scope is declared newly verified.
+
+Four existing statements/proofs are strengthened. The chapter keeps twenty-two formal statements and twenty proofs; sixteen earlier proofs remain byte-identical. No formal block or label is added or removed. Only three author inputs change, and all other author inputs, the bibliography and the 33-chapter, 221-input graph remain unchanged. The second pass clarifies normalized competitors, explicitly identifies the residual background in the positivity transfer, corrects the mixed-estimate locator and repairs page breaks. Paper attribution stays in the final historical chapter. No new unproved external premise, novelty claim, Popovici reliance or independent verifier run is made. All supplied integrations, including Q8.2 in Sections 14.8–14.10, remain intact. No new author intervention requires a skill change.
+
+## Release checks
+
+The 823-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The companion is byte-identical to checkpoint192. The house audit has zero errors and 27 warnings, all reproduced in the same-scope baseline. The first visual selection directly inspected 25 changed images. The intermediate review directly inspected 9 changed images and identified the remaining statement and display breaks. All 52 final selected pages pass: 8 changed images directly inspected and 44 identical to the inspected intermediate render. The selection covers the complete Chapter 29 and transitions, changed contents, bounded Chapter 32/33 interfaces and every other changed body page.
+
+Both outputs rebuild from a fresh empty source-package extraction, and every page text agrees with production. The final package manuscript and build scripts match that rebuilt payload. All 221 active author inputs are included. The 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; the hidden sources remain excluded. See build-snapshot-193.json and source-package-portability-193.json.
+
+## Continuation
+
+Develop the upper-volume comparison on ordinary envelope fixed points with positive lower volume, checking separation and Cauchy completeness and distinguishing it from an actual metric before integrating it into the singularity-topology program. Li Section 4.2 is a source lead, not an imported completeness assertion. The zero-lower-volume upper-volume and envelope-characterization questions remain separate. The broader writing and research goal remains active and incomplete.
