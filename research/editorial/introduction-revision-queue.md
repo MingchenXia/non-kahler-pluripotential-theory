@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint224: Reconcile source dispositions and proof obligations with checkpoints209-224: research/comparison.md, research/source-disposition-182.json, research/proof-obligations.md, the supplied-papers integration queue, research/READING-GUIDE.md and research/source-outline.md. Preserve original-outline and historical-review scopes, and identify the actual remaining mathematics before choosing the next research unit. The broader writing and research goal remains active and incomplete. See frontmatter-reconciliation-224.md.
+Current next unit after checkpoint225: Read all thirteen pages and complete proofs of the newly discovered Q4.1 source, reconcile its operator/ideal and analytic-coefficient conventions, reconstruct the supported ordinary-type uniform topology in the book, and update the topology questions only to the extent actually proved. Keep nonseparation on ordinary classes distinct from the complete canonical-model metrics. The chapter reconciliation through front matter is complete at its recorded scopes. The new source was discovered by rechecking the expanded original archive; see source-ledger-review-225.md.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
