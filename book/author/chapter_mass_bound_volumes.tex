@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. The same volume identities detect when an ordinary envelope agrees with its multiplier-ideal envelope.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -975,8 +975,9 @@ The $w_j$ increase and satisfy $w_j\leq r_j\leq u_j,u$. After discarding finitel
 
 \Needspace{23\baselineskip}
 \section{Volumes of multiplier-ideal envelopes}
+\label{sec:ideal-volume-approximation}
 
-Ideal data determine the upper and lower volumes of their associated envelope. For $u\in\PSH(X,\theta)$, set
+Analytic regularizations recover the ideal envelope, whose volume may exceed that of the original potential. Decreasing-model continuity computes this excess. A strict analytic potential absorbs the curvature error, so the same comparison can be made entirely in the fixed background. For $u\in\PSH(X,\theta)$, set
 \[
  \mathcal V^-_{\mathcal I,\theta}(u)
    =\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I}),\qquad
@@ -990,7 +991,26 @@ They depend only on the multiplier-ideal class of $u$ in the fixed background. B
  \overline{\operatorname{vol}}_\theta(u)
  \leq\mathcal V^+_{\mathcal I,\theta}(u).
 \]
-The ideal envelope is an ordinary fixed point by \cref{cor:ordinary-preserves-i}. Its positive lower volume lets relative full mass detect equality with the ordinary envelope.
+The ideal envelope is an ordinary fixed point by \cref{cor:ordinary-preserves-i}. Its volumes are limits of the volumes of the dyadic analytic types.
+
+\Needspace{12\baselineskip}
+\begin{corollary}\label{cor:dyadic-ideal-volume-limit}
+For the regularizations $a_j$ and backgrounds $\theta_j=\theta+\epsilon_jh$ in \eqref{eq:dyadic-analytic-backgrounds},
+\[
+ \underline{\operatorname{vol}}_{\theta_j}(a_j)
+       \searrow\mathcal V^-_{\mathcal I,\theta}(u).
+\]
+If $\mathcal V^-_{\mathcal I,\theta}(u)>0$, then also
+\[
+ \overline{\operatorname{vol}}_{\theta_j}(a_j)
+       \searrow\mathcal V^+_{\mathcal I,\theta}(u).
+\]
+\end{corollary}
+\begin{proof}
+By \cref{thm:dyadic-analytic-envelope-limit}, the analytic ordinary models $q_j=P_{\theta_j}[a_j]$ decrease to $P_\theta[u]_{\mathcal I}$. Apply \cref{thm:decreasing-model-volume-continuity}. Since $q_j\simeq a_j$ by \cref{prop:analytic-envelope-type}, their two volumes agree term by term.
+\end{proof}
+
+Positive lower volume of the ideal envelope lets relative full mass detect when this limit also computes the upper volume of $u$.
 
 \Needspace{14\baselineskip}
 \begin{proposition}\label{prop:conditional-i-characterization}
@@ -1008,7 +1028,94 @@ If the envelopes agree, \cref{thm:ordinary-envelope-volumes} gives equality of b
 Conversely, upper-volume equality and $u\preceq q$ put $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. Since $q=P_\theta[q]$, \cref{cor:full-mass-envelope-characterization} gives $P_\theta[u]=q$.
 \end{proof}
 
-Under the hypotheses of the proposition, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$.
+Under the hypotheses of the proposition, \cref{cor:dyadic-goodness-criterion} also identifies equality of the upper volumes with convergence of the dyadic ordinary envelopes to $P_\theta[u]$. The next construction removes their background error while retaining the upper-volume limit. The corrected analytic types need not be ordered.
+
+\begin{theorem}\label{thm:fixed-big-analytic-approximation}
+Let $u\in\PSH(X,\theta)$, put $q=P_\theta[u]_{\mathcal I}$, and suppose $\underline{\operatorname{vol}}_\theta(q)>0$. There are analytic $b_j\in\PSH(X,\theta)$ with $b_j\to u$ in $L^1$ such that the ordinary models $r_j=P_\theta[b_j]$ satisfy
+\begin{equation}\label{eq:fixed-big-analytic-comparison}
+ d_\theta(r_j,q)\longrightarrow0,\qquad
+ d_\theta(r_j,u)\longrightarrow
+ \mathcal V^+_{\mathcal I,\theta}(u)
+       -\overline{\operatorname{vol}}_\theta(u).
+\end{equation}
+Their lower volumes converge to $\underline{\operatorname{vol}}_\theta(q)$, and $r_j\to q$ in $L^1$ and capacity. In particular $d_\theta(r_j,u)\to0$ if and only if $P_\theta[u]=P_\theta[u]_{\mathcal I}$.
+\end{theorem}
+\begin{proof}
+Fix a Hermitian form $h$. Bigness and \cref{thm:demailly-hermitian-input} supply an analytic $\rho\leq0$ and a rational $\kappa>0$ with $\theta+\ddc\rho\geq\kappa h$. Choose the dyadic $a_j$ in \eqref{eq:dyadic-analytic-backgrounds}, enlarging their errors to positive rational numbers $\epsilon_j\downarrow0$. Put
+\[
+ c_j=\frac{\kappa}{\kappa+\epsilon_j},\qquad
+ b_j=c_ja_j+(1-c_j)\rho.
+\]
+Then $\theta+\ddc b_j\geq((1-c_j)\kappa-c_j\epsilon_j)h=0$. The coefficients are rational, so \cref{prop:analytic-type-calculus} gives analytic singularities. Since $a_j\to u$ in $L^1$ and $c_j\to1$, also $b_j\to u$ there.
+
+Choose $A>0$ with $\theta\leq Ah$, and set
+\[
+ \widehat\theta_j=\theta+(1+A/\kappa)\epsilon_jh,
+ \qquad t_j=P_{\widehat\theta_j}[a_j].
+\]
+These backgrounds decrease to $\theta$ and dominate $\theta+\epsilon_jh$. The dyadic envelope theorem therefore gives $t_j\searrow q$. Moreover
+\[
+ c_j\widehat\theta_j-\theta
+  =(1-c_j)(Ah-\theta)+c_j\epsilon_jh\geq0.
+\]
+The analytic-envelope identity gives $r_j\simeq b_j$. Thus $r_j/c_j$ is a normalized $\widehat\theta_j$-plurisubharmonic competitor more singular than $a_j$, since $\rho$ is bounded above. It follows that $r_j\leq c_jt_j$. Also $q\leq t_j\leq c_jt_j$.
+
+For a lower bound, $q\sim_{\mathcal I}u\preceq_{\mathcal I}a_j$. Addition and scaling preserve this order by \cref{thm:local-i-inputs,lem:hermitian-i-calculus}. Thus $c_jq+(1-c_j)\rho\preceq_{\mathcal I}b_j$. This potential lies below zero, so envelope order and \cref{prop:analytic-envelope-type} give
+\[
+ c_jq+(1-c_j)\rho\leq P_\theta[b_j]_{\mathcal I}=r_j
+       \leq c_jt_j.
+\]
+For either singularity volume, homogeneity, addition and monotonicity now yield
+\[
+ c_j^n\operatorname{vol}_\theta(q)
+ \leq\operatorname{vol}_\theta(r_j)
+ \leq\operatorname{vol}_\theta(\max(r_j,q))
+ \leq c_j^n\operatorname{vol}_{\widehat\theta_j}(t_j).
+\]
+The last comparison uses both $\theta\leq c_j\widehat\theta_j$ and $\max(r_j,q)\leq c_jt_j$. By \cref{thm:decreasing-model-volume-continuity}, the outer terms tend to $\operatorname{vol}_\theta(q)$. This proves convergence of both volumes and the first limit in \eqref{eq:fixed-big-analytic-comparison}. In particular, $r_j$ and $q$ have a common positive lower-volume bound after discarding finitely many indices. Their $L^1$ and capacity convergence follow from \cref{prop:model-volume-separation,thm:model-volume-capacity-convergence}.
+
+To prove the second limit, shift $u$ below $q$; the comparison is invariant under constants. Then
+\[
+ \overline{\operatorname{vol}}_\theta(r_j)
+ \leq\overline{\operatorname{vol}}_\theta(\max(r_j,u))
+ \leq\overline{\operatorname{vol}}_\theta(\max(r_j,q)).
+\]
+Both bounds tend to $\overline{\operatorname{vol}}_\theta(q)$. Substitute in the definition of $d_\theta$. The last equivalence is \cref{prop:conditional-i-characterization}.
+\end{proof}
+
+For a Hermitian background the simpler rescaling in \cref{cor:fixed-hermitian-analytic-density} gives decreasing analytic models, with the same limits by \cref{thm:decreasing-model-volume-continuity}. In a general big background, the strict correction above may introduce additional poles. The upper-volume comparison still detects exactly the ideal-envelope excess.
+
+\begin{theorem}\label{thm:analytic-model-volume-criterion}
+Let $p=P_\theta[p]$ have positive lower volume. Then $p=P_\theta[p]_{\mathcal I}$ if and only if there are analytic ordinary models $p_j\in\PSH(X,\theta)$ with $d_\theta(p_j,p)\to0$.
+
+More generally, if $p_j=P_\theta[p_j]_{\mathcal I}$ and $d_\theta(p_j,p)\to0$, then $p=P_\theta[p]_{\mathcal I}$.
+\end{theorem}
+\begin{proof}
+If $p=P_\theta[p]_{\mathcal I}$, apply \cref{thm:fixed-big-analytic-approximation} with $u=p$. For the converse it suffices to prove the more general assertion, because analytic ordinary models are ideal envelope fixed points.
+
+Put $q=P_\theta[p]_{\mathcal I}$ and $\delta=\underline{\operatorname{vol}}_\theta(p)>0$. Choose $s_j\in(0,1)$ tending to zero with $d_\theta(p_j,p)<\delta s_j^n$, after discarding finitely many indices. For $m_j=\max(p_j,p)$ one has
+\[
+ \underline{\operatorname{vol}}_\theta(m_j)\geq\delta,
+ \qquad U(m_j)-U(p_j)\leq d_\theta(p_j,p).
+\]
+By \cref{lem:volume-deficit-stretch}, there is $h_j\in\PSH(X,\theta)$ with $(1-s_j)m_j+s_jh_j\leq p_j$. Set $H_j=P_\theta[h_j]_{\mathcal I}$. Monotonicity, addition and scaling in \cref{prop:i-envelope-operations} give
+\[
+ (1-s_j)q+s_jH_j
+ \leq P_\theta[(1-s_j)m_j+s_jh_j]_{\mathcal I}
+ \leq P_\theta[p_j]_{\mathcal I}=p_j.
+\]
+Consequently $\underline{\operatorname{vol}}_\theta(p_j)\geq(1-s_j)^n\delta$ by addition and volume monotonicity. The models $p_j,p$ eventually lie in $\mathcal M_{\delta/2}(\theta)$, so \cref{prop:model-volume-separation} gives $p_j\to p$ in $L^1$.
+
+The $H_j$ have supremum zero. Normalized compactness bounds $\int_X(-H_j)\,\mathrm{d}V$ by a constant $C_\theta$. Since $q\leq0$, the displayed convex inequality gives
+\[
+ \int_X(q-p_j)_+\,\mathrm{d}V
+       \leq s_j\int_X(-H_j)\,\mathrm{d}V
+       \leq C_\theta s_j\longrightarrow0.
+\]
+Passing to the $L^1$ limit gives $q\leq p$ almost everywhere and hence everywhere. The opposite inequality holds by the envelope comparison, so $p=q$.
+\end{proof}
+
+Thus the positive-lower-volume ideal envelope models are precisely the limits of analytic ordinary models for $d_\theta$. On each $\mathcal M_\delta(\theta)$ they form a closed set for this convergence and inherit Cauchy completeness from \cref{thm:model-volume-cauchy-completeness}. The approximants constructed above have a common positive lower-volume bound, which need not equal the lower volume of the limiting model.
 
 \begin{problem}\label{qu:hermitian-i-characterization}
 For a big nonclosed background on a manifold with bounded mass, find criteria for $\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I})>0$ in terms of restricted multiplier ideals or divisorial orders. When this lower volume vanishes, which implications between envelope equality and upper-volume equality in \cref{prop:conditional-i-characterization} remain valid?
