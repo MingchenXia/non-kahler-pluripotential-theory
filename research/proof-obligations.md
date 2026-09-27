@@ -1,6 +1,6 @@
-# Proof boundary and remaining obligations — checkpoint183
+# Proof boundary and remaining obligations — checkpoint184
 
-This ledger incorporates the checkpoint183 Vaisman proof into the checkpoint182 reconciliation of checked checkpoint181. It reconciles current statements, imported inputs and research questions after the integrated chapter rewrites. It is not a fresh audit of every proof or cited paper. The former ledger and its checkpoint160 and checkpoint167 supplements are preserved verbatim in [the historical archive](audits/proof-obligations-history-through-checkpoint181.md). [The source disposition](comparison.md) and [its current map](source-disposition-182.json) supply stable labels and compiled locations.
+This ledger incorporates the checkpoint183 Vaisman proof and checkpoint184 Chern–Ricci maximal-time proof into the checkpoint182 reconciliation of checked checkpoint181. It reconciles current statements, imported inputs and research questions after the integrated chapter rewrites. It is not a fresh audit of every proof or cited paper. The former ledger and its checkpoint160 and checkpoint167 supplements are preserved verbatim in [the historical archive](audits/proof-obligations-history-through-checkpoint181.md). [The source disposition](comparison.md) and [its checkpoint182 map](source-disposition-182.json) supply stable labels and the compiled locations at that reconciliation.
 
 The 190 historical verifier reports retain their original inputs and conclusions. Subsequent direct revisions do not enlarge those reports. Checkpoint183 supplies the internal Vaisman prescribed-volume proof without changing its statement or adding external reliance or independent verification.
 
@@ -35,11 +35,9 @@ These accepted interfaces are distinct from the recent specialized proof reconst
 
 The Vaisman prescribed-volume theorem, Theorem 28.4.1, is proved internally at checkpoint183. The smooth Hermitian equation supplies a basic potential by uniqueness, transverse Stokes integration fixes the scalar, and a closed Lee form with Killing dual is parallel. The uniqueness proof identifies the normalized Lee fields and fixes the arbitrary candidate metric scale before the transverse maximum principle. Its invariance and total-volume hypotheses are unchanged; see [the scoped proof review](editorial/vaisman-volume-proof-183.md).
 
-## Explicit imported arguments to develop
+## Specialized flow proof and contextual literature
 
-| Priority | Current location | Work still required |
-|---|---|---|
-| 1 | [Corollary 25.17.1](../book/author/section_smooth_cone_duality.tex), `cor:chern-ricci-current-lifetime` | The extremal-current calculation is proved, but its identification with maximal smooth flow time imports the Tosatti–Weinkove theorem. Audit the exact parabolic continuation argument and develop the needed proof, preserving the Ricci/time conversion. The current formula alone does not establish flow existence. |
+Theorem 25.17.2 now supplies the maximal-time argument used by Corollary 25.17.1. Positive affine reference paths, potential and time-derivative estimates, the internal elliptic trace calculation and classical parabolic regularity give smooth continuation. The numerical boundary formula follows by current duality. The retained classical inputs are short-time existence, the parabolic maximum principle, local Evans–Krylov and Schauder estimates; see [the scoped reconstruction](editorial/chern-ricci-maximal-time-184.md). This completes the two specialized proof obligations isolated at checkpoint182, not the broader research program or all contextual literature proofs.
 
 Chapter 32 additionally recalls closed-locus, nonclosed null-locus and parabolic convergence results to formulate geometric questions. For example, the conclusion of convergence once the limiting background is big explicitly invokes the parabolic theorem; it is not established by the elliptic envelope argument. These comparisons must retain attribution and source scope. They are not extra premises in the earlier elliptic proofs. Pan's singular Gauduchon theorem and extremal-function regularity results likewise motivate questions rather than supply a new proof of the appendix's general singular-space equations. The present inventory does not turn contextual literature into a claim of internal reconstruction.
 
@@ -57,4 +55,4 @@ The current map contains all 23 formal questions/conjectures in Chapters 15, 25,
 
 ## Continuation
 
-Proceed with the complete source/proof reconstruction of the parabolic maximal-time input. The Vaisman proof is complete at the scoped checkpoint183 review. Keep the singularity/I-goodness and trace program in the research queue alongside these self-containedness obligations. The chapter rewrite records retain their exact scopes; the broader writing and research goal remains active and incomplete.
+Return to Chapter 15: examine which convergence hypotheses on analytic approximants force equality of ordinary and multiplier-ideal envelopes, keeping the unrestricted singularity-topology and trace questions distinct. The Vaisman and maximal-time proofs are complete at their scoped checkpoint183 and checkpoint184 reviews. The chapter rewrite records retain their exact scopes; the broader writing and research goal remains active and incomplete.

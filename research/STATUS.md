@@ -2,6 +2,16 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Checkpoint184 — Chern–Ricci maximal time
+
+Theorem 25.17.2 now proves the Chern–Ricci maximal-time formula for every initial Hermitian metric. A positive representative at a later time supplies an affine positive reference path. Time-weighted potential identities bound the potential derivative, and the existing elliptic torsion calculation gives a parabolic trace estimate after the reference-metric derivative is retained. Uniform ellipticity, classical parabolic regularity and short-time existence give continuation. The current lifetime corollary now uses this internal theorem; its statement and the two earlier formal statements are unchanged. Four labels and one theorem/proof are added.
+
+The complete current-duality author input receives an original read and two revised direct mathematical/editorial reads, with the second after the first build and page inspection. The history paragraph and adjoining transitions receive bounded reviews. The earlier elliptic trace proof is reread for this application. Source review covers arXiv:1201.0312v3, Theorem 1.2, Proposition 3.1 with its proof, the Section 4 proof of Theorem 1.2 and the associated Section 9 trace calculation. Classical local parabolic short-time, Evans–Krylov and Schauder theorems remain accepted inputs. No whole-Chapter-25 reread, new independent verification, bibliography change or new Popovici reliance is claimed.
+
+The 811-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The house audit has zero errors and fourteen inherited warnings. All 38 selected final pages pass visual review: six changed images were directly inspected and 32 match the inspected first render. The first render included 21 directly inspected images. Both outputs rebuild from a fresh empty source extraction with identical page text; the companion remains byte-identical to checkpoint183. The 221-input graph, 190 historical verifier reports and three hidden sources are unchanged.
+
+Return to Chapter 15: examine which convergence hypotheses on analytic approximants force equality of ordinary and multiplier-ideal envelopes, keeping the unrestricted singularity-topology and trace questions distinct. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint183 — Internal Vaisman volume proof
 
 Theorem 28.4.1 now has an internal proof from the smooth Hermitian equation. Flow invariance follows from normalized uniqueness; transverse Stokes integration fixes the scalar. The reconstructed Lee form is parallel because it is closed and has a Killing dual. Uniqueness identifies the canonical foliation and normalized fields, then determines the candidate metric's scale by integration. The theorem statement is unchanged. The conformal connection formula moves to the Lee-cover section and is shared with the rigidity proof. Six labels and one proof are added; every earlier label remains.
