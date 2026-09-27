@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition. Domination then shows that ordinary envelopes preserve lower volume, and upper volume when the lower volume is positive. These comparisons give continuity for decreasing model potentials, exact trace realization under the mass assumptions, and a volume criterion for equality of ordinary and multiplier-ideal envelopes.
+Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. For a limit of positive lower volume, contact and deficit estimates control increasing potentials and decreasing model potentials. This continuity gives exact trace realization under the mass assumptions.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -285,9 +285,73 @@ If $\varphi=P_\theta[\varphi]$ has positive lower volume, then
 The first equality is \cref{thm:relative-equivalence}. Membership implies envelope equality by \cref{prop:relative-envelope-equality}; the converse follows from \cref{thm:ordinary-envelope-volumes}.
 \end{proof}
 
-\section{Decreasing model potentials}
+\section{Monotone limits}
+\label{sec:mass-bound-monotone-limits}
 
-The upper volumes of decreasing ordinary model potentials form a Cauchy sequence. The deficit lemma gives convex comparisons with coefficients tending to one; ordinary envelopes normalize the remaining potentials so that compactness passes these comparisons to the limit.
+For an increasing sequence, contact support identifies the limiting ordinary envelope before its volume is known. The upper-volume deficit then controls the lower volumes. Decreasing sequences require a different comparison: the model normalization lets compactness preserve the convex inequalities supplied by the deficit lemma.
+
+\begin{theorem}\label{thm:increasing-envelope-volume-continuity}
+Suppose $u_j\in\PSH(X,\theta)$ increases and $u=(\lim_j u_j)^*\in\PSH(X,\theta)$ has positive lower volume. Then
+\[
+ \left(\lim_jP_\theta[u_j]\right)^*=P_\theta[u],
+ \qquad P_\theta[u_j]\longrightarrow P_\theta[u]
+       \quad\text{in capacity},
+\]
+and
+\[
+ \underline{\operatorname{vol}}_\theta(u_j)\nearrow
+       \underline{\operatorname{vol}}_\theta(u),\qquad
+ \overline{\operatorname{vol}}_\theta(u_j)\nearrow
+       \overline{\operatorname{vol}}_\theta(u).
+\]
+For every fixed smooth compact modification $\pi:Z\to X$,
+\[
+ \sup_{z\in Z}\bigl|\nu(u_j\circ\pi,z)-\nu(u\circ\pi,z)\bigr|
+       \longrightarrow0.
+\]
+\end{theorem}
+\begin{proof}
+Translate so that $u\leq0$, and set $p_j=P_\theta[u_j]$, $p=P_\theta[u]$ and $s=(\lim_jp_j)^*$. Then $u\leq s\leq p\leq V_\theta$. By \cref{thm:ordinary-envelope-volumes}, the lower volume of $p$ is positive and $u\in\mathcal E_{\mathrm{env}}(X,\theta,p)$. Upward stability puts $s$ in the same class.
+
+The ordinary envelope can use $V_\theta$ as obstacle, by \cref{def:singularity-envelope}. Hence \cref{lem:relative-obstacle-contact} gives
+\[
+ \mu_{p_j}\leq\mathbf1_{\{p_j=V_\theta\}}\mu_{V_\theta}.
+\]
+The fixed bounded quasi-continuous weight $\chi=\min(1,(p-s)_+)$, defined arbitrarily on the polar indeterminacy set, vanishes on $\{p_j=V_\theta\}$. Since $p_j\to s$ in capacity, \cref{lem:weighted-extended-lsc} gives $\int_X\chi\,\mu_s=0$. Thus $\mu_s$ vanishes on $\{s<p\}$. Strict domination with reference $p$ and coefficient zero yields $s=p$.
+
+Choose any $w\simeq p$ in $\PSH(X,\theta)$ and $K\geq0$ with $p-K\leq w\leq p+K$. Define $r_j=P_\theta[u_j](w)$. The initial rooftop is genuine, since $u_j-K\leq w$. For $C\geq0$ the competitor comparison gives
+\[
+ P_\theta(u_j+C+K,0)-K
+       \leq P_\theta(u_j+C,w)\leq p_j+K.
+\]
+The leftmost potential lies below $u_j+C$ and below $p_j-K\leq p-K\leq w$. For the upper bound, subtract $K$ from the middle term: it lies below zero and is more singular than $u_j$. Taking the increasing limit in $C$ gives
+\[
+ p_j-K\leq r_j\leq p_j+K,\qquad r_j\leq w.
+\]
+The $r_j$ increase to $r=(\lim_jr_j)^*$ in capacity, and $p-K\leq r\leq w\leq p+K$. Thus $r\simeq p$. The contact lemma gives $\mu_{r_j}\leq\mathbf1_{\{r_j=w\}}\mu_w$. Applying weighted lower semicontinuity with $\min(1,(w-r)_+)$ shows that $\mu_r$ vanishes on $\{r<w\}$. Domination with reference $p$ gives $r=w$. Therefore
+\[
+ \int_X\mu_w\leq\liminf_j\int_X\mu_{r_j}
+       \leq\lim_j\overline{\operatorname{vol}}_\theta(p_j),
+\]
+where $r_j\simeq p_j$ justifies the last inequality. Taking the supremum over $w\simeq p$ and using volume monotonicity proves
+\[
+ \overline{\operatorname{vol}}_\theta(p_j)\nearrow
+       \overline{\operatorname{vol}}_\theta(p).
+\]
+
+Put $\delta=\underline{\operatorname{vol}}_\theta(p)>0$ and $D_j=\overline{\operatorname{vol}}_\theta(p)-\overline{\operatorname{vol}}_\theta(p_j)$. Since $D_j\to0$, \cref{lem:volume-deficit-stretch} supplies $a_j\to1$, $0<a_j<1$, and $h_j\in\PSH(X,\theta)$ such that
+\[
+ a_jp+(1-a_j)h_j\leq p_j
+\]
+for all sufficiently large $j$. Addition, homogeneity and monotonicity of the lower volume, together with \cref{thm:ordinary-envelope-volumes}, give
+\[
+ a_j^n\delta\leq\underline{\operatorname{vol}}_\theta(p_j)
+       =\underline{\operatorname{vol}}_\theta(u_j)\leq\delta.
+\]
+This proves lower-volume convergence and positivity for all large $j$. The same envelope theorem then identifies the upper volumes of $u_j$ and $p_j$, giving the asserted upper-volume limit. Finally \cref{prop:volume-deficit-lelong}, applied to $u_j\leq u$, gives the uniform Lelong-number convergence on each fixed model.
+\end{proof}
+
+For decreasing model potentials, the upper volumes are already a Cauchy sequence by monotonicity. Normalizing the auxiliary potentials in the deficit comparisons allows passage to the decreasing limit.
 
 \begin{theorem}\label{thm:decreasing-model-volume-continuity}
 Suppose $q_j=P_\theta[q_j]$ decreases to $q\in\PSH(X,\theta)$ and $\underline{\operatorname{vol}}_\theta(q)>0$. Then $P_\theta[q]=q$ and
@@ -336,7 +400,31 @@ For either volume, homogeneity, addition and monotonicity now yield
 Letting $k\to\infty$ proves both volume limits. Apply \cref{prop:volume-deficit-lelong} with $u=q$, $v=q_j$: its deficit tends to zero and its denominator is at least $\delta$. This proves the uniform Lelong-number convergence on each fixed model.
 \end{proof}
 
-We apply this theorem on the submanifold $Y$, returning to the ambient data of \cref{chap:trace-data}. The majorant in a smaller background gives the trace envelope positive lower volume.
+\Needspace{12\baselineskip}
+For an arbitrary decreasing sequence, envelope convergence is exactly the missing upper-volume continuity.
+
+\begin{proposition}\label{prop:decreasing-envelope-volume-criterion}
+Suppose $u_j\in\PSH(X,\theta)$ decreases to $u\in\PSH(X,\theta)$ with positive lower volume. Then
+\[
+ P_\theta[u_j]\searrow P_\theta[u]
+ \quad\Longleftrightarrow\quad
+ \overline{\operatorname{vol}}_\theta(u_j)\searrow
+       \overline{\operatorname{vol}}_\theta(u).
+\]
+When these conditions hold, the lower volumes also converge, and the Lelong numbers converge uniformly on every fixed smooth compact modification.
+\end{proposition}
+\begin{proof}
+Normalize $u_j\leq0$ by a common translation. Set $p_j=P_\theta[u_j]$, $p=P_\theta[u]$ and $q=\lim_jp_j$. The envelope-volume theorem makes every $p_j$ a fixed point of positive lower volume. Since $u\leq p\leq q$, the preceding decreasing-model theorem applies and gives, for either volume,
+\[
+ \operatorname{vol}_\theta(q)
+       =\lim_j\operatorname{vol}_\theta(p_j)
+       =\lim_j\operatorname{vol}_\theta(u_j),
+ \qquad P_\theta[q]=q.
+\]
+If $q=p$, these equalities and \cref{thm:ordinary-envelope-volumes} give both volume limits. Conversely, equality of the upper volumes of $u$ and $q$ puts $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. By \cref{cor:full-mass-envelope-characterization}, $P_\theta[u]=q$. The Lelong assertion follows from \cref{prop:volume-deficit-lelong}, applied to $u\leq u_j$, whose lower volumes are bounded below by that of $u$.
+\end{proof}
+
+We apply \cref{thm:decreasing-model-volume-continuity} on the submanifold $Y$, returning to the ambient data of \cref{chap:trace-data}. The majorant in a smaller background gives the trace envelope positive lower volume.
 
 \begin{corollary}\label{cor:mass-bound-exact-trace}
 Suppose $Y$ has bounded mass. Choose a Hermitian form $\Omega_0\geq\theta|_Y$ and a Hermitian form $\Omega\geq2\Omega_0$ with $v_-(\Omega)>0$. Then
@@ -353,7 +441,7 @@ Put $T=\mathcal T_\Omega(u;Y)$ and $r=\dim Y$. The normalized majorant $v$ of \c
  \underline{\operatorname{vol}}_\Omega(T)
        \geq2^{-r}v_-(\Omega)>0.
 \]
-The restricted approximants belong to $\PSH(Y,\Omega)$ for all sufficiently large indices. By \cref{thm:restricted-analytic-envelope-limit}, their dyadic ordinary envelopes $q_j=P_\Omega[u_{2^j}|_Y]$ decrease to $T$. The preceding theorem applies on $Y$ and gives
+The restricted approximants belong to $\PSH(Y,\Omega)$ for all sufficiently large indices. By \cref{thm:restricted-analytic-envelope-limit}, their dyadic ordinary envelopes $q_j=P_\Omega[u_{2^j}|_Y]$ decrease to $T$. The decreasing-model theorem applies on $Y$ and gives
 \[
  \nu(T\circ\pi,E)
  =\lim_j\nu(q_j\circ\pi,E)
