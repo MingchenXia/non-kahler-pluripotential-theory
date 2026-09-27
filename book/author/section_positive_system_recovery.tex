@@ -1,0 +1,61 @@
+\subsection{Recovery of envelope systems}
+\label{subsec:positive-system-recovery}
+
+For an envelope system, compatibility fixes every local divisorial order before taking the perturbation limit. A positive limiting lower volume rules out an increase of these orders. Concavity propagates positivity from the constant left part to every finite parameter, so one initial-volume condition suffices for the whole system.
+
+\begin{theorem}\label{thm:positive-volume-system-recovery}\index{Envelope system!positive-volume recovery}
+Let $a<c$ and $\boldsymbol\Gamma\in\mathscr S_{a,c}(\theta)$. Fix a Hermitian form $h$ and put $\Gamma=\mathsf R\boldsymbol\Gamma$. Then
+\[
+ \lim_{j\to\infty}\underline{\operatorname{vol}}_{\theta+h/j}
+       (\Gamma^{h/j}_a)
+       =\underline{\operatorname{vol}}_\theta(\Gamma_a).
+\]
+In particular this limit is independent of $h$. If it is positive, then
+$\boldsymbol\Gamma=\mathsf E(\Gamma)$. In this case, for every $\tau<c$, both singularity volumes satisfy
+\[
+ \operatorname{vol}_{\theta+h/j}(\Gamma^{h/j}_\tau)
+       \searrow\operatorname{vol}_\theta(\Gamma_\tau),
+ \qquad \underline{\operatorname{vol}}_\theta(\Gamma_\tau)>0.
+\]
+\end{theorem}
+\begin{proof}
+Every ideal-envelope fixed point is an ordinary-envelope fixed point by \cref{cor:ordinary-preserves-i}. The retraction theorem gives
+$\Gamma^{h/j}_\tau\searrow\Gamma_\tau$ in the decreasing backgrounds $\theta+h/j$. Thus \cref{thm:decreasing-model-volume-continuity} proves the initial lower-volume identity, including when the limit is zero.
+
+Suppose this limit is $\ell>0$. For $\tau\leq a$, the slice is $\Gamma_a$. For $a<\tau<c$, choose $r\in(\tau,c)$ and put $s=(\tau-a)/(r-a)$. Concavity gives
+\[
+ (1-s)\Gamma_a+s\Gamma_r\leq\Gamma_\tau.
+\]
+Homogeneity, \cref{prop:volume-addition} and volume monotonicity imply
+\[
+ \underline{\operatorname{vol}}_\theta(\Gamma_\tau)
+       \geq(1-s)^n\ell>0.
+\]
+The decreasing-model theorem now gives both volume limits for every fixed $\tau<c$.
+
+It remains to retain the multiplier ideals. Fix $\tau<c$ and write
+$q=\Gamma_\tau$, $q_j=\Gamma^{h/j}_\tau$ and $\theta_j=\theta+h/j$. By \cref{prop:positive-volume-background-comparison}, the upper volumes of the fixed $q$ in $\theta_j$ converge to its upper volume in $\theta$. Consequently
+\[
+ D_j=\overline{\operatorname{vol}}_{\theta_j}(q_j)
+          -\overline{\operatorname{vol}}_{\theta_j}(q)\longrightarrow0,
+ \qquad
+ \underline{\operatorname{vol}}_{\theta_j}(q_j)
+          \geq\underline{\operatorname{vol}}_\theta(q)>0.
+\]
+After discarding finitely many indices, choose $b_j\to+\infty$ with $b_j>1$ and
+$b_j^nD_j<\underline{\operatorname{vol}}_{\theta_j}(q_j)$.
+The stretching lemma \cref{lem:volume-deficit-stretch} supplies $v_j\in\PSH(X,\theta_j)$ such that
+\[
+ (1-b_j^{-1})q_j+b_j^{-1}v_j\leq q.
+\]
+
+\Needspace{12\baselineskip}
+Choose a Hermitian form $\Omega\geq\theta+h$. By \cref{lem:uniform-exponential}, there is $\alpha>0$ such that $\mathcal I(\alpha v_j)=\mathcal O_X$ for all $j$; additive normalization does not change these ideals. For a fixed local divisor $E$ over a coordinate neighborhood $U$, \cref{lem:bergman-divisorial-error} gives $\nu_E(v_j)\leq A_U(E)/\alpha$. Taking Lelong numbers in the convex inequality therefore yields
+\[
+ 0\leq\nu_E(q)-\nu_E(q_j)
+       \leq\frac{A_U(E)}{\alpha b_j}\longrightarrow0.
+\]
+Compatibility makes $\nu_E(q_j)$ independent of $j$, so it equals $\nu_E(q)$. Blowing up a point on a local modification converts its pointwise Lelong number into such a divisorial number; on a curve the point itself is a divisor. Thus \cref{thm:local-i-inputs} gives $q\sim_{\mathcal I}q_j$. This holds at every finite parameter, and \cref{prop:hermitian-system-realization-criterion} proves recovery.
+\end{proof}
+
+The lower bound may tend to zero as $\tau\uparrow c$; the theorem imposes no uniform positive bound up to the cutoff. For $\theta'=\theta+\ddc f$ with $f$ smooth and real, the hypothesis is preserved by the gauge bijection: the estimate in \cref{prop:hermitian-system-gauge} makes the transported initial slice ordinarily equivalent to $\Gamma_a-f$, and the map $u\mapsto u-f$ preserves the currents and the ordinary-type volume families. The ruled-surface system of \cref{thm:positive-background-system-nonrecovery} has zero initial limit and lies outside this positive-volume conclusion.
