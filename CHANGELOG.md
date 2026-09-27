@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint228 — All smooth obstacles
+
+Sections 15.6.4 and 29.12.3 develop convergence for every smooth obstacle. The resulting uniformity is covariant under smooth gauges and positive scaling, and its analytic closure is exactly ordinary/ideal envelope equality for all smooth obstacles. On curves this closure equals the zero-obstacle closure. The new pseudometric has complete canonical ideal loci, while the whole ordinary space remains incomplete even on a fixed positive-mass model family. On ordinary curve models its topology is strictly between the zero-obstacle topology and polar total variation.
+
+Both new inputs receive two complete revised proof and editorial reads, the second after the first build and image inspection. Four proved results, seven labels and three index entries are added; every prior statement, proof, label and all 23 formal questions remain. The book has 911 pages and 236 active author inputs in 33 chapters; the seventeen-page companion is unchanged. The index has 339 entries, 335 clickable locators and four alternate-term references. Builds, citation placement, statement preservation, same-scope house-audit comparison and affected-page inspection pass. Both outputs rebuild from a fresh empty source extraction with identical text on every page. See research/editorial/all-obstacle-topology-228.md.
+
+Determine whether zero-obstacle ordinary/ideal envelope equality implies equality at every smooth obstacle in higher-dimensional Hermitian backgrounds. Check the required projection or rooftop identity with its exact hypotheses; prove the implication or construct a counterexample, keeping the stronger complete model-topology extension separate. The broader goal remains active and incomplete.
+
 ## Checkpoint227 — Fixed-obstacle gauge discontinuity
 
 Complete Chapter 15 is reconciled after the ordinary-type topology integration. Ideal quotient notation is separated from ordinary classes. Proposition 15.6.4 proves that any nonconstant smooth gauge between positive unit-area curve backgrounds is discontinuous in both directions when both obstacles remain zero. Equivalently, the zero and corresponding smooth-obstacle topologies are incomparable. The counterexample lies inside a positive-mass cutoff and contrasts with the gauge-invariant complete polar-variation metric.
