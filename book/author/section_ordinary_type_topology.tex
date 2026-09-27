@@ -139,4 +139,32 @@ For two smooth obstacles, translation of competitors gives
  \leq P_{\omega,G}[u]
  \leq P_{\omega,F}[u]+\max_X(G-F),
 \]
-with the same inequalities for ideal envelopes. In particular, using zero obstacles in both backgrounds yields $P_{\omega',0}[u-\chi]=P_{\omega,\chi}[u]-\chi$, and its difference from $P_{\omega,0}[u]$ is bounded by $\operatorname{osc}_X\chi$. This bound alone does not identify the two fixed-zero-obstacle topologies. The paired transport above keeps the changed obstacle explicit. The associated extended measures satisfy $\mathrm{MA}_{\omega'}(u-\chi)=\mathrm{MA}_\omega(u)$ and $\mathrm{MA}_{s\omega}(su)=s^n\mathrm{MA}_\omega(u)$ by the local construction in \cref{thm:arbitrary-extended-ma}, including at infinite total mass.
+with the same inequalities for ideal envelopes. The associated extended measures satisfy $\mathrm{MA}_{\omega'}(u-\chi)=\mathrm{MA}_\omega(u)$ and $\mathrm{MA}_{s\omega}(su)=s^n\mathrm{MA}_\omega(u)$ by the local construction in \cref{thm:arbitrary-extended-ma}, including at infinite total mass. Keeping the zero obstacle fixed in both backgrounds instead gives $P_{\omega',0}[u-\chi]=P_{\omega,\chi}[u]-\chi$. The bounded comparison of the obstacles does not give continuity of this change.
+
+\begin{proposition}\label{prop:ordinary-topology-gauge-failure}\index{Singularity type!failure of smooth-gauge continuity}
+Let $Y$ be a compact connected Riemann surface and $\theta>0$ a smooth form of mass one. If $F$ is a nonconstant smooth function with $\theta'=\theta+\ddc F>0$, the bijection
+\[
+ \Gamma_F:(\mathfrak S(Y,\theta),\tau_{\theta,0})
+ \longrightarrow(\mathfrak S(Y,\theta'),\tau_{\theta',0}),
+ \qquad [u]\longmapsto[u-F],
+\]
+and its inverse are both discontinuous. Equivalently, $\tau_{\theta,0}$ and $\tau_{\theta,F}$ are incomparable topologies on the same ordinary-type space.
+\end{proposition}
+\begin{proof}
+The smooth function $\theta'/\theta$ has mean one and is not constant, since a harmonic function on $Y$ is constant. Choose $\min_Y(\theta'/\theta)<c<1$, so $\theta'\not\geq c\theta$.
+
+Choose nonatomic polar probability measures $\mu_j\rightharpoonup\theta$. To construct them, start with finite atomic probabilities converging weakly to $\theta$ as in \cref{thm:curve-ideal-lone-completion}. Replace each atom by a probability supported on a polar Cantor set in an arbitrarily small coordinate disc about that atom, preserving its weight. The construction in \cref{ex:diffuse-polar-zero-model} supplies such nonatomic probabilities in every disc. Choose the discs with diameters tending uniformly to zero. Uniform continuity of continuous test functions preserves weak convergence, and a finite union of their polar carriers is polar.
+
+Let $q_j$ be the normalized Green potentials with $\theta+\ddc q_j=\mu_j$ and $\sup_Yq_j=0$. Normalized compactness gives $L^1$ cluster limits, and every such limit has curvature $\theta$ and supremum zero. It is therefore zero, so $q_j\to0$ in $L^1$. Put $u_j=cq_j$. Then
+\[
+ \theta+\ddc u_j=(1-c)\theta+c\mu_j,\qquad
+ u_j\leq P_\theta[u_j]\leq0.
+\]
+All point Lelong numbers vanish. Since modifications of a smooth curve are isomorphisms, \cref{thm:local-i-inputs} gives trivial multiplier ideals at every weight. Thus $P_\theta[u_j]_{\mathcal I}=0$, all controlled ideal relations hold, and every divisorial distance to zero vanishes. The displayed bounds give ordinary-envelope convergence in $L^1$. Consequently $[u_j]\to[0]$ in $\tau_{\theta,0}$.
+
+Set $v_j=P_{\theta,F}[u_j]$. For every competitor $h\preceq u_j$, \cref{cor:polar-order-maximum} gives $\theta+\ddc h\geq c\mu_j$. The family below $F$ contains a translate of $u_j$ and is stable under finite maxima. Choquet selection and distributional convergence of its increasing maxima retain this inequality at $v_j$. If $[u_j]\to[0]$ in $\tau_{\theta,F}$, its ordinary-envelope coordinate would give $v_j\to P_{\theta,F}[0]=F$ in $L^1$, because $F$ is a bounded $\theta$-plurisubharmonic competitor. Passing the current inequality to the limit would give $\theta'\geq c\theta$, a contradiction.
+
+The exact paired transport in \cref{prop:ordinary-topology-background-transport} identifies this failure with discontinuity of $\Gamma_F$. Apply the same argument to $\theta'$ and $-F$ to prove discontinuity of its inverse. Under paired transport these are precisely the two directions of the identity between $\tau_{\theta,0}$ and $\tau_{\theta,F}$, proving incomparability.
+\end{proof}
+
+The sequence has trivial ideals and polar curvature $c\mu_j$. By \cref{lem:curve-polar-model} and the bounded obstacle comparison, its ordinary envelopes in both backgrounds have non-pluripolar mass $1-c$. The discontinuity therefore persists inside a positive-mass cutoff. On the same curve, the complete polar-variation metric of \cref{thm:curve-model-volume-distance} is invariant under smooth background changes after ordinary projection; it retains the diffuse curvature that the sequence above loses.
