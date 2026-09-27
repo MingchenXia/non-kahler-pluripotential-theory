@@ -1,0 +1,33 @@
+# Trace-envelope pullback — checkpoint187
+
+Baseline: `176f263b800505d723ecd34f4ac9a3053ed19400`. The preceding goal turn completed and privately synchronized checkpoint186, hence was progress. The checkout was clean at the beginning of this unit.
+
+## Mathematical change
+
+Theorem 18.6.2 identifies the envelope of the inherited trace inequalities on a compact modification with the pullback of the original envelope in the pulled-back smooth background. Adding a vanishing positive Hermitian error gives decreasing pointwise and L1 convergence to that pullback, independently of the perturbing metric. Restricted analytic envelopes on the model have the same L1 limit when their nonnegative curvature errors vanish; decreasing dyadic errors give decreasing pointwise convergence. The statement concerns all compact modifications, every admitted smooth background and the original ambient ideal data. It does not require a Kahler model, closedness or a metric mass bound.
+
+Chapter 1's modification-descent proposition now allows every smooth real background. A local strictly plurisubharmonic correction dominates the background and allows extension across the analytic exceptional image. Off that image the exact curvature inequality holds. On it, the smooth correction has zero coefficient-measure mass, leaving the restriction of a positive Hessian. This retains the exact nonclosed inequality. Equality of canonical psh pullbacks gives descent. The previous closed-background callers remain valid with their unchanged hypotheses.
+
+For the trace theorem, nonempty trace families have largest members by the existing finite-maxima, Choquet and Lelong-semicontinuity argument. Descent identifies potentials in the pulled-back background. Resolving the graph of two compact models gives a common refinement; the strict transform of a prime divisor retains its ideal orders and generic Lelong numbers. Thus the competitor families, not merely individual orders, correspond. No extension of a local modification to a compact model is used, and no interchange of an unverified regularized supremum with pullback is needed.
+
+The unperturbed envelope is a common integrable lower bound for the perturbed envelopes. Their decreasing limit retains the exact pulled-back curvature and every inherited trace inequality, so maximality identifies it. For the analytic envelopes, resolve each global extended coherent ideal, use the finite-divisor domination criterion, and compare with the unperturbed envelope. Lelong semicontinuity places every L1 cluster limit in the trace family, giving the full-sequence limit. The natural restricted curvature errors are dominated after pullback by a fixed multiple of the chosen metric on the model.
+
+The construction transports the original restricted ideals. It does not replace them by the multiplier ideals of a newly regularized ambient pullback, and no equality of those finite-weight ideals is claimed. Compatibility does not show that limiting Lelong numbers equal the prescribed lower bounds. General exact realization, ordinary-type independence under arbitrary background changes, and singular-space intrinsic traces retain their distinct obligations. Chapter 32 and the final Chapter 18 discussion record this boundary.
+
+## Review scope
+
+All seven recursive Chapter 18 inputs received an original read and two complete direct revised mathematical/editorial reads. The second revised read followed the first build and visual inspection. The modified Chapter 1 proposition and full proof, adjacent pullback-continuity input, and Chapter 32 trace-realization section received bounded direct reads. Existing Chapter 26 and 27 callers were inspected in their unchanged closed-background settings. The appendix's nonclosed descent and envelope arguments were consulted as a bounded comparison; they are unchanged. This is a direct scoped review, not independent verification or a fresh whole-book proof audit.
+
+All seventeen prior Chapter 18 formal blocks and all Chapter 32 formal statements remain byte-identical. One theorem/proof and two labels are added, giving eighteen Chapter 18 formal blocks and proofs. All thirty-six old Chapter 18 labels remain. Five Chapter 18 nested inputs, the bibliography and every author input outside the four-file change are unchanged. The Chapter 1 proposition is the only strengthened prior formal statement. The second pass shortens the new proof's opening and removes a repeated exact-realization qualification already stated in the chapter's final discussion.
+
+A bounded primary-source comparison opened the introduction of [Darvas--Xia, arXiv:2403.08259v2](https://arxiv.org/html/2403.08259v2). This is statement/context comparison, not a complete new proof audit. No new external premise or bibliography entry is adopted. Classical resolution, analytic removability, normalized compactness and the previously reconstructed envelope and divisorial inputs retain their recorded source scopes. No novelty claim, Popovici reliance or new independent verifier run is made. All supplied-paper integrations, including Q8.2 in Sections 14.8--14.10, retain their existing records. No new author correction requires a skill change.
+
+## Release checks
+
+Both revised builds pass. The book has 817 pages and the companion seventeen; the companion is byte-identical to checkpoint186. There are no unresolved references/citations, duplicate labels or overfull boxes; the inherited bibliography underfull paragraph remains. The house audit has zero errors and eleven warnings, all reproduced by the baseline audit. The first visual selection has 53 pages: 24 changed images directly inspected through six contact sheets and 29 images identical to the inspected checkpoint186 render. The final selection has 53 pages: both changed images directly inspected and 51 identical to the inspected first render. It covers the complete Chapter 18 and transitions, the changed foundation and research interfaces, the contents and every other changed body page. The graph remains 33 chapters and 221 author inputs.
+
+Both outputs rebuild from a fresh empty source-package extraction, and every page text agrees with production. Final package sources are checked against the reconstructed payload. The 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; all active author inputs are packaged. See build-snapshot-187.json and source-package-portability-187.json.
+
+## Continuation
+
+Investigate exact realization of trace data beyond curve fibrations, using model compatibility to seek upper bounds for the limiting divisorial orders. The broader writing and research goal remains active and incomplete.
