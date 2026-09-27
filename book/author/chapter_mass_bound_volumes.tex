@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. For a limit of positive lower volume, contact and deficit estimates control increasing potentials and decreasing model potentials. This continuity gives exact trace realization under the mass assumptions.
+Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. Positive lower volume also supplies strict barriers for changing the background. These barriers and the contact and deficit estimates give monotone volume continuity and exact trace realization under the mass assumptions.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -285,10 +285,136 @@ If $\varphi=P_\theta[\varphi]$ has positive lower volume, then
 The first equality is \cref{thm:relative-equivalence}. Membership implies envelope equality by \cref{prop:relative-envelope-equality}; the converse follows from \cref{thm:ordinary-envelope-volumes}.
 \end{proof}
 
+\section{Positive volume and strict barriers}
+\label{sec:positive-volume-barriers}
+
+Positive lower volume permits a small stretch away from any less singular potential. Mixing such a stretch with a strict potential then gives a strictly positive current whose potential lies below the original one. This controls both smaller backgrounds and volume changes. Fix a Hermitian form $\omega$.
+
+\begin{lemma}\label{lem:positive-volume-stretch}
+Let $u,r\in\PSH(X,\theta)$, with $u\leq r$, and assume
+$\underline{\operatorname{vol}}_\theta(u)>0$. There is $b_0>1$ such that $Q_b(u,r)$ is genuine for $1\leq b\leq b_0$. Moreover,
+\[
+ \lim_{b\downarrow1}\overline{\operatorname{vol}}_\theta(Q_b(u,r))
+ =\overline{\operatorname{vol}}_\theta(u).
+\]
+\end{lemma}
+\Needspace{7\baselineskip}
+\begin{proof}
+Translate so that $u\leq r\leq0$. Suppose, to the contrary, that $Q_b(u,r)$ is not genuine for any $b>1$. Fix $1<b\leq2$, and set
+\[
+ u_j=\max(u,r-j),\qquad v_j=u+(b-1)u_j,
+ \qquad q_j=P_\theta(v_j-(b-1)r).
+\]
+Differences at common poles are interpreted through the corresponding convex inequality. Off the poles the obstacle lies between $u-(b-1)j$ and $u$. Hence $q_j$ is genuine and $q_j\simeq u$. As $j$ increases it decreases. A genuine limit would be a competitor for $Q_b(u,r)$, so $\sup_Xq_j\to-\infty$.
+
+Let $C_j=\{q_j+(b-1)r=v_j\}$. The contact theorem puts $\mu_{q_j}$ on $C_j$. The positive current with potential $q_j+(b-1)r$ in background $b\theta$ contains the current with potential $q_j$ in background $\theta$. Ordered contact in background $b\theta$ therefore gives
+\[
+ \mu_{q_j}\leq\mathbf1_{C_j}\bigl((\theta+\ddc u)+(b-1)(\theta+\ddc u_j)\bigr)^n.
+\]
+On $C_j$ we have $q_j=u+(b-1)u_j-(b-1)r\geq bu$. For any $k>0$ and then all sufficiently large $j$, $q_j\leq-bk$ everywhere, and consequently
+\begin{equation}\label{eq:positive-volume-stretch-tail}
+ \underline{\operatorname{vol}}_\theta(u)
+ \leq\mu_{q_j}(X)
+ \leq\int_{\{u\leq-k\}}\bigl((\theta+\ddc u)+(b-1)(\theta+\ddc u_j)\bigr)^n.
+\end{equation}
+
+Choose a Hermitian metric $\Omega\geq\theta$ and put $K=v_+(\Omega)<\infty$. For any $s,t\in\PSH(X,\theta)$ and $0\leq q\leq n$, positivity of the non-pluripolar mixed products and \cref{prop:bmp-finite} imply
+\[
+ \begin{aligned}
+ &\binom nq\int_X(\theta+\ddc s)^{n-q}\wedge(\theta+\ddc t)^q\\
+ &\quad\leq\binom nq\int_X(\Omega+\ddc s)^{n-q}\wedge(\Omega+\ddc t)^q\\
+ &\quad\leq2^n\int_X\mathrm{MA}_\Omega((s+t)/2)\leq2^nK.
+ \end{aligned}
+\]
+\Needspace{9\baselineskip}
+Here the estimate for the possibly unbounded average follows by constant truncation in the positive background $\Omega$. All products in the display are positive. Expanding the last integrand in \eqref{eq:positive-volume-stretch-tail}, and using $(b-1)^q\leq b-1$ for $q\geq1$, gives
+\[
+ \underline{\operatorname{vol}}_\theta(u)
+ \leq\mu_u(\{u\leq-k\})+n2^nK(b-1).
+\]
+The measure $\mu_u$ is finite and ignores its pole set. Let $k\to\infty$, and then $b\downarrow1$. This contradicts the positive lower volume.
+
+Choose $b_0>1$ for which $h_0=Q_{b_0}(u,r)$ is genuine. For $1<b\leq b_0$ put $t=(b-1)/(b_0-1)$. The defining inequalities show that
+\[
+ (1-t)u+th_0\leq Q_b(u,r)\leq u.
+\]
+Thus all these envelopes exist. For $b<b_0$, addition, homogeneity and volume monotonicity give
+\[
+ (1-t)^n\overline{\operatorname{vol}}_\theta(u)
+ \leq\overline{\operatorname{vol}}_\theta(Q_b(u,r))
+ \leq\overline{\operatorname{vol}}_\theta(u).
+\]
+Letting $b\downarrow1$ proves the limit. Undoing the common translation changes neither ordinary-type volume nor genuineness.
+\end{proof}
+
+\begin{corollary}\label{cor:positive-volume-strict-barrier}
+If $u\in\PSH(X,\theta)$ has positive lower volume, then there are $w\in\PSH(X,\theta)$ and $\varepsilon>0$ with
+\[
+ w\leq u,\qquad \theta+\ddc w\geq\varepsilon\omega.
+\]
+\end{corollary}
+\begin{proof}
+Translate $u$ so that $u\leq V_\theta$. Choose a strict potential $\rho\leq V_\theta$ with $\theta+\ddc\rho\geq\delta\omega$, using bigness. For a genuine $h=Q_b(u,V_\theta)$ with $b>1$, put
+\[
+ w=b^{-1}h+(1-b^{-1})\rho.
+\]
+Its defining convex inequality gives $w\leq u$, and its current is at least $(1-b^{-1})\delta\omega$. Restore the translation of $u$ by the same translation of $w$.
+\end{proof}
+
+\Needspace{8\baselineskip}
+\begin{proposition}\label{prop:positive-volume-smaller-background}
+Assume also that $\theta\geq0$. If $u\in\PSH(X,\theta)$ and
+$\underline{\operatorname{vol}}_\theta(u)>0$, then
+$P_{\varepsilon\theta}(u)$ is genuine for some $\varepsilon\in(0,1)$.
+\end{proposition}
+\begin{proof}
+By \cref{cor:positive-volume-strict-barrier}, choose $w\leq u$ and $\delta>0$ with $\theta+\ddc w\geq\delta\omega$. Choose $C>0$ with $\theta\leq C\omega$, and $0<t<\min(1,\delta/C)$. Then
+\[
+ (1-t)\theta+\ddc w\geq(\delta-tC)\omega\geq0.
+\]
+Thus $w$ is a competitor for $P_{(1-t)\theta}(u)$.
+\end{proof}
+
+For model references, the positive-volume condition is
+\begin{equation}\label{eq:li-model-condition}
+ P_\theta[\varphi]=\varphi,\qquad
+ \underline{\operatorname{vol}}_\theta(\varphi)>0.
+\end{equation}
+When $\theta\geq0$, the proposition turns this into the smaller-background condition \eqref{eq:als-model-condition}. If also $v_-(\theta)>0$, the converse follows from \cref{lem:smaller-background-mass-lower}: every potential equivalent to $\varphi$ admits a smaller-background competitor with the same $\varepsilon$, and hence
+\[
+ \underline{\operatorname{vol}}_\theta(\varphi)
+ \geq(1-\varepsilon)^n v_-(\theta)>0.
+\]
+Without this additional lower bound, the smaller-background argument still gives individual positivity, as proved in \cref{sec:relative-envelope-room}.
+
+A strict lower potential also bounds the change in either volume when the background increases.
+
+\begin{proposition}\label{prop:positive-volume-background-comparison}
+Let $u\in\PSH(X,\theta)$ have positive lower volume. There is $\delta>0$ such that, for every smooth real $(1,1)$-form $\eta$ with $\theta\leq\eta\leq\theta+\varepsilon\omega$, $\varepsilon\geq0$, and for either volume,
+\[
+ \operatorname{vol}_\theta(u)
+ \leq\operatorname{vol}_\eta(u)
+ \leq(1+\varepsilon/\delta)^n\operatorname{vol}_\theta(u).
+\]
+\end{proposition}
+\begin{proof}
+Choose $w\leq u$ with $\theta+\ddc w\geq\delta\omega$ by \cref{cor:positive-volume-strict-barrier}. The case $\varepsilon=0$ is immediate. For $t=\varepsilon/\delta>0$, the potential $tw$ belongs to $\PSH(X,t(\theta-\delta\omega))$. Addition and monotonicity give
+\[
+ \begin{split}
+ \operatorname{vol}_\eta(u)
+ &\leq\operatorname{vol}_{\eta+t(\theta-\delta\omega)}(u+tw)\\
+ &\leq\operatorname{vol}_{(1+t)\theta}((1+t)u)
+ =(1+t)^n\operatorname{vol}_\theta(u).
+ \end{split}
+\]
+Here $\eta+t(\theta-\delta\omega)\leq(1+t)\theta$ and $u+tw\leq(1+t)u$. The lower bound is background monotonicity.
+\end{proof}
+
+\Needspace{12\baselineskip}
 \section{Monotone limits}
 \label{sec:mass-bound-monotone-limits}
 
-For an increasing sequence, contact support identifies the limiting ordinary envelope before its volume is known. The upper-volume deficit then controls the lower volumes. Decreasing sequences require a different comparison: the model normalization lets compactness preserve the convex inequalities supplied by the deficit lemma.
+For an increasing sequence, contact support identifies the limiting ordinary envelope before its volume is known. The upper-volume deficit then controls the lower volumes. For decreasing models, normalization lets compactness preserve the convex inequalities supplied by the deficit lemma. Strict barriers reduce decreasing backgrounds to this fixed-background argument.
 
 \begin{theorem}\label{thm:increasing-envelope-volume-continuity}
 Suppose $u_j\in\PSH(X,\theta)$ increases and $u=(\lim_j u_j)^*\in\PSH(X,\theta)$ has positive lower volume. Then
@@ -351,14 +477,14 @@ for all sufficiently large $j$. Addition, homogeneity and monotonicity of the lo
 This proves lower-volume convergence and positivity for all large $j$. The same envelope theorem then identifies the upper volumes of $u_j$ and $p_j$, giving the asserted upper-volume limit. Finally \cref{prop:volume-deficit-lelong}, applied to $u_j\leq u$, gives the uniform Lelong-number convergence on each fixed model.
 \end{proof}
 
-For decreasing model potentials, the upper volumes are already a Cauchy sequence by monotonicity. Normalizing the auxiliary potentials in the deficit comparisons allows passage to the decreasing limit.
+For the decreasing results, let $\theta_j$ be smooth real $(1,1)$-forms with $\theta\leq\theta_{j+1}\leq\theta_j$ and $\theta_j\to\theta$ uniformly. The constant sequence is allowed. Normalizing the auxiliary potentials first proves continuity in a fixed background; corrected tail envelopes then handle the varying forms.
 
 \begin{theorem}\label{thm:decreasing-model-volume-continuity}
-Suppose $q_j=P_\theta[q_j]$ decreases to $q\in\PSH(X,\theta)$ and $\underline{\operatorname{vol}}_\theta(q)>0$. Then $P_\theta[q]=q$ and
+Suppose $q_j\in\PSH(X,\theta_j)$ satisfies $q_j=P_{\theta_j}[q_j]$ and decreases to $q\in\PSH(X,\theta)$ with $\underline{\operatorname{vol}}_\theta(q)>0$. Then $P_\theta[q]=q$ and
 \[
- \underline{\operatorname{vol}}_\theta(q_j)\searrow
+ \underline{\operatorname{vol}}_{\theta_j}(q_j)\searrow
        \underline{\operatorname{vol}}_\theta(q),\qquad
- \overline{\operatorname{vol}}_\theta(q_j)\searrow
+ \overline{\operatorname{vol}}_{\theta_j}(q_j)\searrow
        \overline{\operatorname{vol}}_\theta(q).
 \]
 For every fixed smooth compact modification $\pi:Z\to X$,
@@ -369,7 +495,7 @@ For every fixed smooth compact modification $\pi:Z\to X$,
 In particular all generic divisorial Lelong numbers converge.
 \end{theorem}
 \begin{proof}
-Since $q\leq0$, monotonicity of ordinary envelopes gives $q\leq P_\theta[q]\leq P_\theta[q_j]=q_j$. Letting $j\to\infty$ proves the fixed-point assertion. Put
+Since $q\leq0$, background and obstacle monotonicity give $q\leq P_\theta[q]\leq P_{\theta_j}[q]\leq q_j$. Letting $j\to\infty$ proves the fixed-point assertion. First suppose $\theta_j=\theta$ for every $j$. Put
 \[
  \delta=\underline{\operatorname{vol}}_\theta(q)>0,
  \qquad L=\lim_j\overline{\operatorname{vol}}_\theta(q_j),
@@ -397,33 +523,80 @@ For either volume, homogeneity, addition and monotonicity now yield
  \leq\operatorname{vol}_\theta(q)
  \leq\operatorname{vol}_\theta(q_k).
 \]
-Letting $k\to\infty$ proves both volume limits. Apply \cref{prop:volume-deficit-lelong} with $u=q$, $v=q_j$: its deficit tends to zero and its denominator is at least $\delta$. This proves the uniform Lelong-number convergence on each fixed model.
+Letting $k\to\infty$ proves both volume limits in the fixed background.
+
+For the varying backgrounds, choose $w\leq q$ with $\theta+\ddc w\geq d\omega$, $d>0$, by \cref{cor:positive-volume-strict-barrier}. Choose $\varepsilon_j\downarrow0$ with $\varepsilon_j>0$ and $\theta_j\leq\theta+\varepsilon_j\omega$, and put
+\[
+ c_j=\frac d{d+\varepsilon_j},\qquad
+ f_j=c_jq_j+(1-c_j)w,
+\]
+\[
+ F_j=\left(\sup_{k\geq j}f_k\right)^*,\qquad
+ r_j=P_\theta[F_j].
+\]
+The background of the displayed convex combination is bounded above by $\theta$:
+\[
+ c_j\theta_j+(1-c_j)(\theta-d\omega)\leq\theta.
+\]
+Thus $f_j\in\PSH(X,\theta)$. Since $f_k\leq q_k\leq q_j$ for $k\geq j$, upper regularization gives $F_j\leq q_j$. Also $f_k\to q$ in $L^1$, so a subsequence converges almost everywhere and $q\leq F_j$ by \cref{lem:qpsh-almost-everywhere-order}. Background monotonicity now gives
+\[
+ q\leq r_j=P_\theta[F_j]\leq P_{\theta_j}[F_j]
+       \leq P_{\theta_j}[q_j]=q_j.
+\]
+The $r_j$ decrease to $q$. Their lower volumes are positive, so \cref{thm:ordinary-envelope-volumes} makes them ordinary model potentials. The fixed-background case just proved applies to $r_j$. Addition and background monotonicity also give, for either volume,
+\[
+ \operatorname{vol}_\theta(q)
+ \leq\operatorname{vol}_{\theta_j}(q_j)
+ \leq c_j^{-n}\operatorname{vol}_\theta(f_j)
+ \leq c_j^{-n}\operatorname{vol}_\theta(r_j).
+\]
+The outer terms tend to the same limit. Monotonicity in both background and potential gives the stated decreasing convergence.
+
+By \cref{prop:positive-volume-background-comparison}, the volumes of the fixed potential $q$ in background $\theta_j$ tend to its volumes in background $\theta$. Hence the upper-volume deficit between $q$ and $q_j$, measured in $\theta_j$, tends to zero, while the lower volume of $q_j$ is bounded below by $\underline{\operatorname{vol}}_\theta(q)>0$. Apply \cref{prop:volume-deficit-lelong} in each background. Its proof allows one common Lelong bound from $\pi^*\theta_1$, since $\theta_j\leq\theta_1$. This proves uniform convergence on each fixed model.
 \end{proof}
 
 \Needspace{12\baselineskip}
 For an arbitrary decreasing sequence, envelope convergence is exactly the missing upper-volume continuity.
 
 \begin{proposition}\label{prop:decreasing-envelope-volume-criterion}
-Suppose $u_j\in\PSH(X,\theta)$ decreases to $u\in\PSH(X,\theta)$ with positive lower volume. Then
+Suppose $u_j\in\PSH(X,\theta_j)$ decreases to $u\in\PSH(X,\theta)$ with positive lower volume. Then
 \[
- P_\theta[u_j]\searrow P_\theta[u]
+ P_{\theta_j}[u_j]\searrow P_\theta[u]
  \quad\Longleftrightarrow\quad
- \overline{\operatorname{vol}}_\theta(u_j)\searrow
+ \overline{\operatorname{vol}}_{\theta_j}(u_j)\searrow
        \overline{\operatorname{vol}}_\theta(u).
 \]
-When these conditions hold, the lower volumes also converge, and the Lelong numbers converge uniformly on every fixed smooth compact modification.
+When these conditions hold, the lower volumes converge to that of $u$ in background $\theta$, and the Lelong numbers converge uniformly on every fixed smooth compact modification.
 \end{proposition}
 \begin{proof}
-Normalize $u_j\leq0$ by a common translation. Set $p_j=P_\theta[u_j]$, $p=P_\theta[u]$ and $q=\lim_jp_j$. The envelope-volume theorem makes every $p_j$ a fixed point of positive lower volume. Since $u\leq p\leq q$, the preceding decreasing-model theorem applies and gives, for either volume,
+Normalize $u_j\leq0$ by a common translation. Set $p_j=P_{\theta_j}[u_j]$, $p=P_\theta[u]$ and $q=\lim_jp_j$. The envelope-volume theorem in background $\theta_j$ makes every $p_j$ a fixed point of positive lower volume. The envelopes decrease, and the uniform convergence of the backgrounds gives $q\in\PSH(X,\theta)$. Since $u\leq p\leq q$, the preceding decreasing-model theorem applies and gives, for either volume,
 \[
  \operatorname{vol}_\theta(q)
-       =\lim_j\operatorname{vol}_\theta(p_j)
-       =\lim_j\operatorname{vol}_\theta(u_j),
+       =\lim_j\operatorname{vol}_{\theta_j}(p_j)
+       =\lim_j\operatorname{vol}_{\theta_j}(u_j),
  \qquad P_\theta[q]=q.
 \]
-If $q=p$, these equalities and \cref{thm:ordinary-envelope-volumes} give both volume limits. Conversely, equality of the upper volumes of $u$ and $q$ puts $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. By \cref{cor:full-mass-envelope-characterization}, $P_\theta[u]=q$. The Lelong assertion follows from \cref{prop:volume-deficit-lelong}, applied to $u\leq u_j$, whose lower volumes are bounded below by that of $u$.
+If $q=p$, these equalities and \cref{thm:ordinary-envelope-volumes} give both volume limits. Conversely, equality of the upper volumes of $u$ and $q$ puts $u$ in $\mathcal E_{\mathrm{vol}}(X,\theta,q)$. By \cref{cor:full-mass-envelope-characterization}, $P_\theta[u]=q$. For the Lelong assertion, \cref{prop:positive-volume-background-comparison} makes the upper-volume deficit between $u$ and $u_j$ in background $\theta_j$ tend to zero. Apply \cref{prop:volume-deficit-lelong} with the common lower bound $\underline{\operatorname{vol}}_\theta(u)>0$ and the uniform Lelong bound from $\pi^*\theta_1$.
 \end{proof}
 
+\begin{corollary}\label{cor:ordinary-envelope-background-limit}
+If $u\in\PSH(X,\theta)$ has positive lower volume, then
+\[
+ P_{\theta_j}[u]\searrow P_\theta[u],
+\]
+and
+\[
+ \underline{\operatorname{vol}}_{\theta_j}(u)\searrow
+       \underline{\operatorname{vol}}_\theta(u),\qquad
+ \overline{\operatorname{vol}}_{\theta_j}(u)\searrow
+       \overline{\operatorname{vol}}_\theta(u).
+\]
+\end{corollary}
+\begin{proof}
+The volume limits follow from \cref{prop:positive-volume-background-comparison}. Apply \cref{prop:decreasing-envelope-volume-criterion} to the constant sequence $u_j=u$.
+\end{proof}
+
+\Needspace{13\baselineskip}
 We apply \cref{thm:decreasing-model-volume-continuity} on the submanifold $Y$, returning to the ambient data of \cref{chap:trace-data}. The majorant in a smaller background gives the trace envelope positive lower volume.
 
 \begin{corollary}\label{cor:mass-bound-exact-trace}
@@ -450,74 +623,6 @@ The restricted approximants belong to $\PSH(Y,\Omega)$ for all sufficiently larg
 \]
 as required.
 \end{proof}
-
-\section{Positive volume and smaller backgrounds}
-
-In a semipositive background, stretching $u$ by a factor $b>1$ and then dividing a competitor by $b$ produces a potential below $u$ in background $b^{-1}\theta$. Positive lower volume allows a small stretch: bounded mass controls its mixed-product error, while contact support excludes collapse of the approximating envelopes.
-
-\Needspace{8\baselineskip}
-\begin{proposition}\label{prop:positive-volume-smaller-background}
-Assume also that $\theta\geq0$. If $u\in\PSH(X,\theta)$ and
-$\underline{\operatorname{vol}}_\theta(u)>0$, then
-$P_{\varepsilon\theta}(u)$ is genuine for some $\varepsilon\in(0,1)$.
-\end{proposition}
-\begin{proof}
-Translate $u$ so that $u\leq0$, and put
-\[
- \delta=\underline{\operatorname{vol}}_\theta(u),\qquad
- M=\sup_{v\in\PSH(X,\theta)}\int_X\mathrm{MA}_\theta(v)<+\infty.
-\]
-\Needspace{9\baselineskip}
-Choose $b\in(1,2]$ with $2^n(b-1)M<\delta$, and write $s=b-1$.
-For integers $j\geq1$, set
-\[
- r_j=\max(u,-j/s),\qquad
- f_j=u+s r_j=\max(bu,u-j),\qquad p_j=P_\theta(f_j).
-\]
-Semipositivity makes $r_j$ a $\theta$-plurisubharmonic function. Since
-$u-j\leq f_j\leq u$, the envelopes are genuine, satisfy
-$u-j\leq p_j\leq u$ and are equivalent to $u$.
-
-\Needspace{11\baselineskip}
-Suppose $P_\theta(bu)\equiv-\infty$. Then $p_j\downarrow-\infty$, and
-\cref{thm:normalized-compactness} gives $\sup_Xp_j\to-\infty$.
-The contact theorem carries $\mathrm{MA}_\theta(p_j)$ on
-$D_j=\{p_j=f_j\}$. Since $f_j$ is $b\theta$-plurisubharmonic,
-\cref{prop:ordered-contact-general} and $\theta\leq b\theta$ give
-\[
- \mathrm{MA}_\theta(p_j)
- \leq\mathbf1_{D_j}\mathrm{MA}_{b\theta}(f_j).
-\]
-For $0<s\leq1$, expansion of the positive mixed products gives the measure inequality
-\[
- 0\leq\mathrm{MA}_{b\theta}(f_j)-\mathrm{MA}_\theta(u)
- \leq 2^n s\,\mathrm{MA}_\theta\bigl((u+r_j)/2\bigr).
-\]
-Indeed, each mixed term containing $k\geq1$ copies of
-$\theta+\ddc r_j$ has coefficient $s^k\leq s$; their sum is bounded by
-$s$ times the full power of
-$(\theta+\ddc u)+(\theta+\ddc r_j)$.
-
-Fix $C>0$. For large $j$, $p_j\leq-C$ on $X$. On $D_j$ we then have
-$bu\leq f_j=p_j\leq-C$, so $u\leq-C/b$. Integrating yields
-\[
- \delta\leq\int_X\mathrm{MA}_\theta(p_j)
- \leq\int_{\{u\leq-C/b\}}\mathrm{MA}_\theta(u)+2^n sM.
-\]
-The first term tends to zero as $C\to+\infty$, because the measure is finite and non-pluripolar. This contradicts the choice of $b$. Thus $P_\theta(bu)$ is genuine, and $b^{-1}P_\theta(bu)$ supplies a competitor for $P_{b^{-1}\theta}(u)$.
-\end{proof}
-
-For model references, the positive-volume condition is
-\begin{equation}\label{eq:li-model-condition}
- P_\theta[\varphi]=\varphi,\qquad
- \underline{\operatorname{vol}}_\theta(\varphi)>0.
-\end{equation}
-When $\theta\geq0$, the proposition turns this into the smaller-background condition \eqref{eq:als-model-condition}. If also $v_-(\theta)>0$, the converse follows from \cref{lem:smaller-background-mass-lower}: every potential equivalent to $\varphi$ admits a smaller-background competitor with the same $\varepsilon$, and hence
-\[
- \underline{\operatorname{vol}}_\theta(\varphi)
- \geq(1-\varepsilon)^n v_-(\theta)>0.
-\]
-Without this additional lower bound, the smaller-background argument still gives individual positivity, as proved in \cref{sec:relative-envelope-room}.
 
 \Needspace{11\baselineskip}
 \section{Volumes of multiplier-ideal envelopes}
