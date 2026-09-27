@@ -1,0 +1,29 @@
+# Cauchy completeness for model potentials — checkpoint194
+
+Baseline: `4d06f9c6343032c55558ec16ac52a3f5aeb1f7b1`. The preceding goal turn completed checkpoint193 and verified its private backup, so it was progress. This continuation completes the queued comparison and completeness unit.
+
+## Mathematics
+
+New Section 29.6 defines d_theta(u,v) = 2 U(max(u,v)) - U(u) - U(v), where U is the upper singularity volume in the fixed smooth big background theta. Bounded mass remains the chapter premise. The comparison is invariant under ordinary projection for positive-lower-volume potentials and vanishes exactly when their ordinary envelopes agree. On the fixed points with lowerVol >= delta > 0, normalized stretching gives the quantitative bound ||u-v||_1 <= 2 C_theta min(1,(2d_theta(u,v)/delta)^(1/n)). The smooth probability volume used for the norm is fixed.
+
+The same stretching argument proves d_theta(u,w) <= d_theta(u,v) + d_theta(v,w) + 2nM min(1,(2d_theta(v,w)/delta)^(1/n)), with M=U(V_theta). This three-point modulus makes convergence imply the Cauchy property, proves uniqueness and transfers subsequence convergence to the entire Cauchy sequence. It does not assert a triangle or quasi-triangle inequality.
+
+The completeness proof selects a subsequence with summably small deficits. Consistently indexed finite tail maxima have upper-volume increments bounded by nM 2^(-l). Increasing-volume continuity passes to the full tail supremum, and ordinary projection gives decreasing normalized models. Checkpoint193's lower-volume continuity preserves the closed bound delta at the limit; its positive-limit upper-volume continuity then proves comparison convergence. The three-point modulus completes the full-sequence argument.
+
+The strict cutoff lowerVol > delta is not complete. On any compact Riemann surface with total background mass one, the envelopes of a times a one-pole Green potential have mass 1-a and pairwise comparison |a-b|. Taking a up to 1-delta gives a Cauchy sequence with all masses >delta; every comparison limit has mass exactly delta. The example uses the existing Chapter 18 Green construction.
+
+## Source scope and review
+
+[Li version 1](https://arxiv.org/html/2601.13446v1), Section 4.2, was read through its complete statements and proofs, together with the introduction definitions and Theorems 1.5–1.6. Physical pages 4, 5, 19 and 20 were visually inspected. Page 5 explicitly defines the strict cutoff using the potential's lower volume; the Section 4.2 display omits the potential argument. The adopted material is the comparison, the normalized stretching mechanism of Lemma 4.2 and the tail-maximum construction of Theorem 4.3, with the closed-cutoff correction and an explicit three-point estimate. Rooftop continuity, two-sided monotone approximation, capacity convergence and equation stability from later results remain leads, not newly adopted conclusions. The source's two metric mass assumptions are not imported as an additional global PVP premise: the book proves the argument internally from bounded mass and the stated positive potential lower bound. No unproved external premise, novelty claim, Popovici reliance or independent verifier run is added.
+
+The complete Chapter 29 author input received an original read and two complete direct revised mathematical/editorial reads. The second revised read followed the first build and visual inspection. Bounded interfaces comprise Section 32.7 with the trace transition and Section 33.8 with adjacent historical transitions. Internal dependency reads include normalized compactness, normalized envelope competitors and the curve Green proof; their prior broader review scopes are retained. The second pass clarifies supremum-zero normalization, identifies the exact source version and improves proof pagination. All twenty-two old Chapter 29 formal statements and twenty old proofs remain byte-identical. Five formal blocks, four proofs and eight labels are new. Only three author inputs change; the bibliography and 33-chapter, 221-input graph remain unchanged. The former Section 29.6 becomes Section 29.7. Paper attribution stays in Chapter 33. All supplied integrations, including Q8.2 in Sections 14.8–14.10, remain intact. No new author intervention requires a skill change.
+
+## Release checks
+
+The 829-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The companion is byte-identical to checkpoint193. The house audit has zero errors and 27 warnings, all reproduced by the same-scope baseline. The first visual review directly inspects 29 changed images; the other selected images match the inspected previous render. All 62 final selected pages pass: 5 changed images directly inspected and 57 identical to the inspected first render. The selection covers all of Chapter 29 and its transitions, changed contents, bounded Chapter 32/33 interfaces and every other changed body page.
+
+Both outputs rebuild from a fresh empty source-package extraction, and every page text agrees with production. The final package manuscript and build scripts match that rebuilt payload. All 221 active author inputs are included. The 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; the hidden sources remain excluded. See build-snapshot-194.json and source-package-portability-194.json.
+
+## Continuation
+
+Reconstruct rooftop continuity and two-sided monotone approximation for the upper-volume comparison, then derive capacity convergence under the same positive lower-volume bound before applying it to varying prescribed singularities. Analytic approximation, changes of background and metric identification remain separate parts of the general singularity program. The broader writing and research goal remains active and incomplete.

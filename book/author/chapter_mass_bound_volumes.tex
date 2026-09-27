@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. A uniform small stretch proves lower-volume continuity for decreasing models, including zero-volume limits. At positive lower volume, strict barriers and deficit estimates also control upper volumes, Lelong numbers and exact trace realization.
+Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. A uniform small stretch proves lower-volume continuity for decreasing models, including zero-volume limits. At positive lower volume, strict barriers and deficit estimates also control upper volumes, Lelong numbers and exact trace realization. Comparing each pair through its maximum gives a separating function on ordinary models; its Cauchy sequences converge when their lower volumes have a common positive lower bound.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -678,6 +678,163 @@ The restricted approximants belong to $\PSH(Y,\Omega)$ for all sufficiently larg
  =\tau_{Y,u}(E),
 \]
 as required.
+\end{proof}
+
+\section{Cauchy convergence of model potentials}
+\label{sec:model-volume-comparison}
+
+For two potentials, the maximum gives a common upper bound. The sum of the two upper-volume deficits measures their separation after ordinary projection. A uniform positive lower-volume bound controls how this comparison changes when a third potential is introduced. This replaces the triangle inequality in the Cauchy argument below. Write $U(u)=\overline{\operatorname{vol}}_\theta(u)$ and $M=U(V_\theta)$, and fix a smooth positive probability volume $\mathrm{d}V$ for $L^1$ norms.
+
+\begin{definition}\label{def:model-volume-comparison}
+For $u,v\in\PSH(X,\theta)$, define
+\[
+ d_\theta(u,v)=2U(\max(u,v))-U(u)-U(v).
+\]
+For $\delta>0$, put
+\[
+ \mathcal M_\delta(\theta)=
+ \{u\in\PSH(X,\theta):P_\theta[u]=u,
+       \ \underline{\operatorname{vol}}_\theta(u)\geq\delta\}.
+\]
+A sequence is $d_\theta$-Cauchy if $d_\theta(u_j,u_k)\to0$ as $j,k\to\infty$, and converges to $u$ for this comparison if $d_\theta(u_j,u)\to0$.
+\end{definition}
+
+The function $d_\theta$ is finite, nonnegative and symmetric. It depends only on the ordinary singularity types, since replacing either input by an equivalent one changes the maximum by a bounded amount. Monotonicity also gives
+\begin{equation}\label{eq:volume-comparison-basic}
+ |U(u)-U(v)|\leq d_\theta(u,v),\qquad
+ u\leq v\ \Longrightarrow\ d_\theta(u,v)=U(v)-U(u).
+\end{equation}
+
+\begin{proposition}\label{prop:model-volume-separation}
+For potentials $u,v$ of positive lower volume,
+\[
+ d_\theta(u,v)=d_\theta(P_\theta[u],P_\theta[v]),\qquad
+ d_\theta(u,v)=0\ \Longleftrightarrow\ P_\theta[u]=P_\theta[v].
+\]
+There is $C_\theta>0$, depending on $\theta$ and $\mathrm{d}V$, such that, for $u,v\in\mathcal M_\delta(\theta)$,
+\[
+ \|u-v\|_{L^1}\leq
+ 2C_\theta\min\left\{1,
+       \left(\frac{2d_\theta(u,v)}\delta\right)^{1/n}\right\}.
+\]
+\end{proposition}
+\begin{proof}
+Translate the inputs below zero, and put $p=P_\theta[u]$, $q=P_\theta[v]$, $m=\max(u,v)$ and $r=P_\theta[m]$. Envelope order gives
+\[
+ m\leq\max(p,q)\leq r.
+\]
+All these potentials have positive lower volume. The ordinary-envelope volume identity and monotonicity give $U(m)=U(\max(p,q))=U(r)$, while $U(u)=U(p)$ and $U(v)=U(q)$. This proves projection invariance. If $d_\theta(u,v)=0$, then $U(u)=U(v)=U(m)$. The relative full-mass equivalence and \cref{prop:relative-envelope-equality} give $P_\theta[u]=P_\theta[m]=P_\theta[v]$. Conversely, if $p=q$, projection invariance gives zero.
+
+\Needspace{8\baselineskip}
+Now let $u,v\in\mathcal M_\delta(\theta)$ and set $s=d_\theta(u,v)$. Normalized compactness supplies $C_\theta$ bounding the $L^1$ norm of every $\theta$-plurisubharmonic potential with supremum zero. If $s\geq\delta/2$, the asserted estimate follows from the two individual norm bounds. Suppose $0<s<\delta/2$ and put $t=(2s/\delta)^{1/n}$. The deficit from $u$ to $m$ is at most $s$, and the lower volume of $m$ is at least $\delta$. Thus \cref{lem:volume-deficit-stretch}, with $b=t^{-1}$, gives $h\in\PSH(X,\theta)$ such that
+\[
+ (1-t)m+th\leq u.
+\]
+For each normalized competitor for $P_\theta[h]$, the corresponding convex combination with $m$ lies below zero and is more singular than $u$. Since $u=P_\theta[u]$, taking the envelope gives
+\[
+ (1-t)m+tP_\theta[h]\leq u.
+\]
+Hence $\int_X(m-u)\,\mathrm{d}V\leq tC_\theta$, because $m\leq0$ and $P_\theta[h]$ has supremum zero. Applying the same argument to $v$ and adding gives the estimate. If $s=0$, use any $t\in(0,1)$ and let $t\downarrow0$.
+\end{proof}
+
+The next bound supplies a uniform modulus for three-point comparisons. It does not assert the triangle inequality for $d_\theta$.
+
+\begin{proposition}\label{prop:model-volume-comparison-modulus}
+For $u,v,w\in\mathcal M_\delta(\theta)$,
+\begin{equation}\label{eq:model-volume-comparison-modulus}
+ d_\theta(u,w)\leq d_\theta(u,v)+d_\theta(v,w)
+ +2nM\min\left\{1,
+       \left(\frac{2d_\theta(v,w)}\delta\right)^{1/n}\right\}.
+\end{equation}
+Consequently every $d_\theta$-convergent sequence in $\mathcal M_\delta(\theta)$ is $d_\theta$-Cauchy, and its limit is unique.
+\end{proposition}
+\begin{proof}
+Put $s=d_\theta(v,w)$. If $s\geq\delta/2$, use $d_\theta(u,w)\leq2M$. If $0<s<\delta/2$, set $t=(2s/\delta)^{1/n}$. The deficit lemma supplies $h\leq v$ with
+\[
+ (1-t)\max(v,w)+th\leq v.
+\]
+Set $r=\max(u,v)$ and $z=\max(u,v,w)$. On the branch $z=\max(v,w)$ the displayed inequality applies; on the branch $z=u$, both $u$ and $h$ lie below $r$. Thus
+\[
+ (1-t)z+th\leq r.
+\]
+Addition, homogeneity and volume monotonicity give
+\[
+ U(z)-U(r)\leq\bigl(1-(1-t)^n\bigr)U(z)\leq nMt.
+\]
+Since $\max(u,w)\leq z$, it follows that
+\[
+ \begin{split}
+ d_\theta(u,w)
+ &\leq2U(r)+2nMt-U(u)-U(w)\\
+ &=d_\theta(u,v)+U(v)-U(w)+2nMt\\
+ &\leq d_\theta(u,v)+s+2nMt.
+ \end{split}
+\]
+For $s=0$, the same proof works with every $t\in(0,1)$; let $t\downarrow0$. This proves \eqref{eq:model-volume-comparison-modulus}. Applying it with the proposed limit as the middle point shows that a convergent sequence is Cauchy. Applying it with a sequence member as the middle point and then using separation proves uniqueness.
+\end{proof}
+
+\begin{theorem}\label{thm:model-volume-cauchy-completeness}
+Every $d_\theta$-Cauchy sequence in $\mathcal M_\delta(\theta)$ converges for $d_\theta$ to a unique element of $\mathcal M_\delta(\theta)$. It also converges to that element in $L^1(X,\mathrm{d}V)$.
+\end{theorem}
+\begin{proof}
+Choose a subsequence $a_j$ of the given sequence such that
+\[
+ d_\theta(a_j,a_{j+1})<\delta\,2^{-(j+1)n}
+ \qquad(j\geq1).
+\]
+For $k\geq0$, set
+\[
+ v_j^k=\max(a_j,\ldots,a_{j+k}),\qquad
+ v_j=\left(\sup_{l\geq j}a_l\right)^*.
+\]
+For every $l\geq j$, the deficit lemma with $b=2^l$ gives $h_l\leq a_l$ satisfying
+\[
+ (1-2^{-l})\max(a_l,a_{l+1})+2^{-l}h_l\leq a_l.
+\]
+The maximum argument used above gives
+\[
+ (1-2^{-l})v_j^{l+1-j}+2^{-l}h_l\leq v_j^{l-j}.
+\]
+Consequently
+\[
+ U(v_j^{l+1-j})-U(v_j^{l-j})\leq nM2^{-l}.
+\]
+Summing from $l=j$ to $j+k-1$ and then applying increasing-volume continuity as $k\to\infty$ yields
+\[
+ 0\leq U(v_j)-U(a_j)\leq nM2^{1-j}.
+\]
+Here $v_j$ is genuine and has lower volume at least $\delta$, because $a_j\leq v_j\leq0$.
+
+Put $q_j=P_\theta[v_j]$. The ordinary-envelope volume theorem makes $q_j$ a fixed point with the same two volumes as $v_j$. The sequence decreases, and each $q_j$ has supremum zero. Normalized compactness therefore gives a genuine decreasing limit $q$. By \cref{thm:decreasing-model-volume-continuity},
+\[
+ q=P_\theta[q],\qquad
+ \underline{\operatorname{vol}}_\theta(q)
+ =\lim_j\underline{\operatorname{vol}}_\theta(q_j)\geq\delta,
+ \qquad U(q_j)\longrightarrow U(q).
+\]
+Both $a_j$ and $q$ lie below $q_j$. Hence
+\[
+ \begin{split}
+ d_\theta(a_j,q)
+ &\leq\bigl(U(q_j)-U(a_j)\bigr)+\bigl(U(q_j)-U(q)\bigr)\\
+ &\leq nM2^{1-j}+U(q_j)-U(q)\longrightarrow0.
+ \end{split}
+\]
+To recover the whole sequence, choose a late subsequence member $a_j$ as the middle point in \eqref{eq:model-volume-comparison-modulus}. The Cauchy assumption makes the first term uniformly small for all sufficiently late original members, while $d_\theta(a_j,q)$ makes the other terms small. Thus the original sequence converges to $q$. Uniqueness follows from the preceding proposition, and the $L^1$ estimate in \cref{prop:model-volume-separation} proves the last assertion.
+\end{proof}
+
+The closed lower-volume bound is essential for this completeness statement.
+
+\begin{example}\label{ex:strict-volume-cutoff-incomplete}
+On a compact Riemann surface with a smooth positive form $\theta$ of integral one, the ordinary envelope fixed points of mass strictly greater than $\delta$, for $0<\delta<1$, do not form a complete space for $d_\theta$.
+\end{example}
+\begin{proof}
+Fix a point $p$ and use the nonpositive Green potential $g_p$ from \cref{thm:curve-trace-realization}, so that $\ddc g_p=\delta_p-\theta$. For $0\leq a<1$, put $q_a=P_\theta[ag_p]$. The current of $ag_p$ is $a\delta_p+(1-a)\theta$, with non-pluripolar mass $1-a$. Since the background is closed, its two singularity volumes equal this mass. The ordinary-envelope volume theorem gives
+\[
+ q_a=P_\theta[q_a],\qquad
+ \underline{\operatorname{vol}}_\theta(q_a)=U(q_a)=1-a.
+\]
+The potentials $q_a$ decrease as $a$ increases. Therefore \eqref{eq:volume-comparison-basic} gives $d_\theta(q_a,q_b)=|a-b|$. Choose $a_j\uparrow1-\delta$ with $a_j<1-\delta$. The resulting sequence is Cauchy and every term has mass greater than $\delta$. Any $d_\theta$ limit has upper volume $\delta$ by \eqref{eq:volume-comparison-basic}. On a curve the two volumes coincide, so no such limit belongs to the strict-cutoff space.
 \end{proof}
 
 \Needspace{23\baselineskip}
