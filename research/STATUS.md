@@ -2,6 +2,10 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+## Cover correction — 27 September 2026
+
+The current PDF and source package omit the subtitle “Envelopes, equations, and complex geometry” at the author's request. The rebuilt cover passes visual inspection; all other page text matches checkpoint202. The mathematical checkpoint and next writing unit below remain current. See `research/audits/cover-subtitle-removal-20260927.json` for this local correction.
+
 ## Checkpoint202 — Polar curvature and all curve models
 
 Section 29.12 is rewritten as Model potentials on curves. Every normalized ordinary model is uniquely determined by its polar curvature measure, including zero mass and diffuse polar data. For arbitrary curve potentials the upper-volume comparison equals total variation of their polar measures. The model space is complete and geodesic. Its ideal models form the closed complete analytic closure; the ideal envelope is a 1-Lipschitz retraction selecting the unique nearest ideal model, with distance equal to the nonatomic polar mass. Chapter 1 supplies direct proofs of the planar inverse maximum principle and the polar order/maximum identities. Chapters 15 and 32 narrow the remaining questions, and Chapter 33 supplies the precise historical attribution.

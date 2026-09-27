@@ -27,6 +27,7 @@ for name in (
     "scripts/build-numa-note.sh", "PLAN.md", "BLUEPRINT.md", "CHANGELOG.md", "research/comparison.md",
     "AGENTS.md", "research/STATUS.md",
     "research/audits/cover-revision-2026-09-21.json",
+    "research/audits/cover-subtitle-removal-20260927.json",
     "research/proof-obligations.md", "research/literature.md", "research/READING-GUIDE.md",
     "research/source-outline.md", "research/source-manifest.json",
     "research/sources/manifest.json",
