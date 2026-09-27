@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-A bound on Monge--Amp\`ere mass turns the extended singularity volumes into finite invariants. Their comparison rests on contact sets: rooftops transfer lower-volume competitors, while maxima transfer upper-volume competitors. Positive lower volume then prevents stretching envelopes from collapsing, so equality of upper volumes becomes an envelope condition. This connects relative full mass to the comparison between ordinary and multiplier-ideal envelopes.
+A bound on Monge--Amp\`ere mass turns the extended singularity volumes into finite invariants. Their comparison rests on contact sets: rooftops transfer lower-volume competitors, while maxima transfer upper-volume competitors. Positive lower volume prevents stretching envelopes from collapsing, and the allowed stretch controls the change in Lelong numbers. For decreasing model potentials this gives continuity of both volumes and exact realization of trace data under the corresponding mass assumptions. At zero volume deficit, the same argument identifies relative full mass with the envelope condition.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -76,9 +76,68 @@ Furthermore $p+v\leq w$ everywhere by \cref{lem:qpsh-almost-everywhere-order}. T
 Integrating and taking the infimum over $w$ proves the assertion.
 \end{proof}
 
-\section{Relative full mass}
+\section{Volume deficits and relative full mass}
 
-Fix a reference $\varphi\in\PSH(X,\theta)$. A potential more singular than $\varphi$ has at most its upper volume. Relative full mass requires equality; positive lower volume of $\varphi$ will turn this numerical condition into the existence of every stretching envelope $Q_b(u,\varphi)$ from \cref{def:relative-envelope-class}.
+The upper-volume deficit measures how far one potential can be stretched away from another. The positive lower volume of the less singular potential prevents the stretching envelopes from collapsing. We use $Q_b$ and its competitor family from \cref{def:relative-envelope-class}.
+
+\begin{lemma}\label{lem:volume-deficit-stretch}
+Let $u,v\in\PSH(X,\theta)$ satisfy $u\preceq v$, and put
+\[
+ \delta=\underline{\operatorname{vol}}_\theta(v)>0,
+ \qquad D=\overline{\operatorname{vol}}_\theta(v)
+             -\overline{\operatorname{vol}}_\theta(u).
+\]
+If $b>1$ and $b^nD<\delta$, then $Q_b(u,v)$ is genuine.
+\end{lemma}
+\begin{proof}
+Adding constants to $u$ and $v$ only translates the stretching envelope. Normalize $v\leq0$, and write $V=\overline{\operatorname{vol}}_\theta(v)$. Since $b^nD<\delta$, choose $w\simeq u$ in $\PSH(X,\theta)$ with
+\begin{equation}\label{eq:relative-volume-deficit}
+ V-\int_X\mathrm{MA}_\theta(w)<b^{-n}\delta.
+\end{equation}
+Translate $w$ so that $w\leq v$. For positive integers $j$, put
+\[
+ w_j=\max(w,v-j),\qquad h_j=Q_b(w_j,v).
+\]
+The competitor $v-bj$ and the defining inequality give $v-bj\leq h_j\leq v$. Thus $w_j,h_j\simeq v$, and $h_j$ decreases. If its limit were $-\infty$, \cref{thm:normalized-compactness} would give $\sup_Xh_j\to-\infty$.
+
+By \cref{thm:big-general-envelope-contact}, the measure of $h_j$ is carried by $C_j=\{b^{-1}h_j+(1-b^{-1})v=w_j\}$. Ordered contact and positivity of mixed products give
+\[
+ \mathrm{MA}_\theta(h_j)
+       \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(w_j).
+\]
+Fix a positive integer $k$. For large $j>k$, collapse would imply $h_j\leq-bk$ everywhere. Since $v\leq0$, contact then implies $w_j\leq-k$, hence $w\leq-k$. Locality on $\{w>-k\}\subset\{w>v-j\}$ gives
+\[
+ \begin{split}
+ \delta\leq\int_X\mathrm{MA}_\theta(h_j)
+ &\leq b^n\int_{\{w\leq-k\}}\mathrm{MA}_\theta(w_j)\\
+ &\leq b^n\left(V-\int_{\{w>-k\}}\mathrm{MA}_\theta(w)\right).
+ \end{split}
+\]
+Here the first inequality uses $h_j\simeq v$, and the last uses $w_j\simeq v$. Letting $k\to\infty$ contradicts \eqref{eq:relative-volume-deficit}, since the finite non-pluripolar measure $\mathrm{MA}_\theta(w)$ gives zero mass to the pole set. The limit $h$ is therefore genuine and satisfies $b^{-1}h+(1-b^{-1})v\leq w$. If $w\leq u+C$, then $h-bC\in\mathcal A_b(u,v)$, proving the assertion.
+\end{proof}
+
+\begin{proposition}\label{prop:volume-deficit-lelong}
+Fix a smooth compact modification $\pi:Z\to X$. There is a finite constant $C_\pi$, depending only on $\pi$ and $\theta$, such that, for $u,v,\delta,D$ as in \cref{lem:volume-deficit-stretch},
+\[
+ 0\leq\nu(u\circ\pi,z)-\nu(v\circ\pi,z)
+ \leq C_\pi\min\left\{1,\left(\frac D\delta\right)^{1/n}\right\}
+ \qquad(z\in Z).
+\]
+The same estimate holds for generic Lelong numbers along every prime divisor on $Z$.
+\end{proposition}
+\begin{proof}
+Apply \cref{lem:gauduchon-uniform-lelong} to the smooth background $\pi^*\theta$ on $Z$, and choose $C_\pi$ bounding all its Lelong numbers. Order gives the lower bound and the upper bound $C_\pi$, which proves the assertion when $D\geq\delta$.
+
+If $D<\delta$, every $b>1$ with $b^nD<\delta$ admits $h\in\mathcal A_b(u,v)$ by the lemma. Pulling back the defining convex inequality and taking Lelong numbers gives
+\[
+ \nu(u\circ\pi,z)-\nu(v\circ\pi,z)
+ \leq b^{-1}\bigl(\nu(h\circ\pi,z)-\nu(v\circ\pi,z)\bigr)
+ \leq b^{-1}C_\pi.
+\]
+For $D>0$, let $b\uparrow(\delta/D)^{1/n}$; for $D=0$, let $b\to\infty$. Taking generic values proves the divisorial assertion.
+\end{proof}
+
+At zero deficit, every finite stretch is possible. Fix a reference $\varphi\in\PSH(X,\theta)$.
 
 \begin{definition}\label{def:relative-volume-class}
 Define
@@ -90,7 +149,7 @@ Define
 \]
 \end{definition}
 
-Convex comparison proves one implication. For the converse, choose a representative whose mass is close to the common upper volume. If its stretching envelopes collapsed, contact support would bound their masses by the small remaining deficit, contradicting the positive lower volume of the reference.
+Convex comparison turns the envelope condition back into equality of volumes.
 
 \begin{theorem}\label{thm:relative-equivalence}
 Suppose $\underline{\operatorname{vol}}_\theta(\varphi)>0$. Then
@@ -112,46 +171,82 @@ First assume the envelope condition. For each $a\in(0,1)$ there is $h\in\PSH(X,\
 \]
 Let $a\to1$. This proves equality of both volumes in this direction, even without positive lower volume.
 
-Conversely, suppose equality of the upper volumes. Fix $b>1$ and put
-\[
- \delta=\underline{\operatorname{vol}}_\theta(\varphi)>0,
- \qquad V=\overline{\operatorname{vol}}_\theta(\varphi)
-         =\overline{\operatorname{vol}}_\theta(u).
-\]
-Choose $v\simeq u$ in $\PSH(X,\theta)$ such that
-\begin{equation}\label{eq:relative-volume-deficit}
- V-\int_X\mathrm{MA}_\theta(v)<b^{-n}\delta.
-\end{equation}
-\Needspace{7\baselineskip}
-Translating the potentials gives $v\leq\varphi\leq0$ without changing their masses. For positive integers $j$, put
-\[
- v_j=\max(v,\varphi-j),\qquad q_j=Q_b(v_j,\varphi).
-\]
-Each $q_j$ is genuine and equivalent to $\varphi$: the lower competitor $\varphi-bj$ and the defining inequality give
-$\varphi-bj\leq q_j\leq\varphi$.
-The sequence decreases. If its limit were $-\infty$, \cref{thm:normalized-compactness} would give $\sup_Xq_j\to-\infty$.
+Conversely, equality of the upper volumes makes $D=0$ in \cref{lem:volume-deficit-stretch}, with $v=\varphi$. Every $Q_b(u,\varphi)$ is genuine, which is the envelope condition.
+\end{proof}
 
-\Needspace{7\baselineskip}
-Set $C_j=\{b^{-1}q_j+(1-b^{-1})\varphi=v_j\}$. The contact theorem and positivity of mixed products give
+\section{Decreasing model potentials}
+
+The upper volumes of decreasing ordinary model potentials form a Cauchy sequence. The deficit lemma gives convex comparisons with coefficients tending to one; ordinary envelopes normalize the remaining potentials so that compactness passes these comparisons to the limit.
+
+\begin{theorem}\label{thm:decreasing-model-volume-continuity}
+Suppose $q_j=P_\theta[q_j]$ decreases to $q\in\PSH(X,\theta)$ and $\underline{\operatorname{vol}}_\theta(q)>0$. Then $P_\theta[q]=q$ and
 \[
- \mathrm{MA}_\theta(q_j)
- \leq b^n\mathbf1_{C_j}\mathrm{MA}_\theta(v_j).
+ \underline{\operatorname{vol}}_\theta(q_j)\searrow
+       \underline{\operatorname{vol}}_\theta(q),\qquad
+ \overline{\operatorname{vol}}_\theta(q_j)\searrow
+       \overline{\operatorname{vol}}_\theta(q).
 \]
-\Needspace{11\baselineskip}
-For a positive integer $k$, on $C_j\cap\{q_j\leq-bk\}$, the inequality $\varphi\leq0$ implies $v_j\leq-k$, hence $v\leq-k$. For $j>k$, locality on $\{v>-k\}\subset\{v>\varphi-j\}$ therefore yields
+For every fixed smooth compact modification $\pi:Z\to X$,
 \[
- \begin{split}
- \int_{\{q_j\leq-bk\}}\mathrm{MA}_\theta(q_j)
- &\leq b^n\int_{\{v\leq-k\}}\mathrm{MA}_\theta(v_j)\\
- &\leq b^n\left(V
- -\int_{\{v>-k\}}\mathrm{MA}_\theta(v)\right).
- \end{split}
+ \sup_{z\in Z}\bigl|\nu(q_j\circ\pi,z)-\nu(q\circ\pi,z)\bigr|
+       \longrightarrow0.
 \]
-If $\sup_Xq_j\to-\infty$, the domain on the left is all of $X$ for large $j$. Since $q_j\simeq\varphi$, its mass is at least $\delta$. Letting $k\to+\infty$ gives
+In particular all generic divisorial Lelong numbers converge.
+\end{theorem}
+\begin{proof}
+Since $q\leq0$, monotonicity of ordinary envelopes gives $q\leq P_\theta[q]\leq P_\theta[q_j]=q_j$. Letting $j\to\infty$ proves the fixed-point assertion. Put
 \[
- \delta\leq b^n\left(V-\int_X\mathrm{MA}_\theta(v)\right)<\delta,
+ \delta=\underline{\operatorname{vol}}_\theta(q)>0,
+ \qquad L=\lim_j\overline{\operatorname{vol}}_\theta(q_j),
+ \qquad e_k=\overline{\operatorname{vol}}_\theta(q_k)-L.
 \]
-by \eqref{eq:relative-volume-deficit}. Thus the decreasing limit is genuine and belongs to $\mathcal A_b(v,\varphi)$. If $v\leq u+C$, subtracting $bC$ gives a member of $\mathcal A_b(u,\varphi)$. Since $b>1$ was arbitrary, this proves the envelope condition.
+The limit exists by \cref{thm:volume-monotonicity} and bounded mass. After discarding finitely many indices, choose $b_k>1$ tending to infinity with $b_k^n e_k<\delta$, and set $a_k=1-b_k^{-1}$. For every $j\geq k$, the volume deficit between $q_j$ and $q_k$ is at most $e_k$, whereas the lower volume of $q_k$ is at least $\delta$. Thus \cref{lem:volume-deficit-stretch} supplies $h_{k,j}\in\PSH(X,\theta)$ with
+\[
+ a_kq_k+(1-a_k)h_{k,j}\leq q_j.
+\]
+Combining normalized ordinary-envelope competitors, as in the proof of \cref{prop:relative-envelope-equality}, gives
+\[
+ a_kq_k+(1-a_k)P_\theta[h_{k,j}]\leq q_j.
+\]
+The potentials $P_\theta[h_{k,j}]$ have supremum zero. For fixed $k$, normalized compactness gives a subsequential $L^1$ limit $h_k$ as $j\to\infty$. Passing to the limit and applying \cref{lem:qpsh-almost-everywhere-order} gives
+\[
+ a_kq_k+(1-a_k)h_k\leq q.
+\]
+For either volume, homogeneity, addition and monotonicity now yield
+\[
+ a_k^n\operatorname{vol}_\theta(q_k)
+ \leq\operatorname{vol}_\theta\bigl(a_kq_k+(1-a_k)h_k\bigr)
+ \leq\operatorname{vol}_\theta(q)
+ \leq\operatorname{vol}_\theta(q_k).
+\]
+Letting $k\to\infty$ proves both volume limits. Apply \cref{prop:volume-deficit-lelong} with $u=q$, $v=q_j$: its deficit tends to zero and its denominator is at least $\delta$. This proves the uniform Lelong-number convergence on each fixed model.
+\end{proof}
+
+We apply this theorem on the submanifold $Y$, returning to the ambient data of \cref{chap:trace-data}. The majorant in a smaller background gives the trace envelope positive lower volume.
+
+\begin{corollary}\label{cor:mass-bound-exact-trace}
+Suppose $Y$ has bounded mass. Choose a Hermitian form $\Omega_0\geq\theta|_Y$ and a Hermitian form $\Omega\geq2\Omega_0$ with $v_-(\Omega)>0$. Then
+\[
+ \nu\bigl(\mathcal T_\Omega(u;Y)\circ\pi,E\bigr)=\tau_{Y,u}(E)
+\]
+for every prime divisor $E$ on every smooth compact modification $\pi:Z\to Y$.
+\end{corollary}
+\begin{proof}
+Put $T=\mathcal T_\Omega(u;Y)$ and $r=\dim Y$. The normalized majorant $v$ of \cref{prop:trace-profile-majorant} lies below $T$ and belongs to $\PSH(Y,\Omega/2)$. For every $w\simeq T$ in $\PSH(Y,\Omega)$, a constant translate of $v$ lies below $w$. By \cref{lem:smaller-background-mass-lower},
+\[
+ \int_Y\mathrm{MA}_\Omega(w)\geq2^{-r}v_-(\Omega),
+ \qquad
+ \underline{\operatorname{vol}}_\Omega(T)
+       \geq2^{-r}v_-(\Omega)>0.
+\]
+The restricted approximants belong to $\PSH(Y,\Omega)$ for all sufficiently large indices. By \cref{thm:restricted-analytic-envelope-limit}, their dyadic ordinary envelopes $q_j=P_\Omega[u_{2^j}|_Y]$ decrease to $T$. The preceding theorem applies on $Y$ and gives
+\[
+ \nu(T\circ\pi,E)
+ =\lim_j\nu(q_j\circ\pi,E)
+ =\lim_j2^{-j}\operatorname{ord}_E\mathfrak a_{2^j}(u;Y)
+ =\tau_{Y,u}(E),
+\]
+as required.
 \end{proof}
 
 \section{Positive volume and smaller backgrounds}
