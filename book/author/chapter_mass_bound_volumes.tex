@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-Bounded mass makes singularity volumes finite, so a deficit between them can control stretching and Lelong numbers. At zero deficit, stretching identifies relative full mass with an envelope condition, and domination shows that ordinary envelopes preserve lower volume and, when positive, upper volume. These identities give a volume criterion for equality of ordinary and multiplier-ideal envelopes. A uniform small stretch proves lower-volume continuity for decreasing models, including zero-volume limits. At positive lower volume, strict barriers and deficit estimates also control upper volumes, Lelong numbers and exact trace realization. Comparing each pair through its maximum gives a separating function on ordinary models; its Cauchy sequences converge when their lower volumes have a common positive lower bound.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. The same volume identities detect when an ordinary envelope agrees with its multiplier-ideal envelope.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -835,6 +835,142 @@ Fix a point $p$ and use the nonpositive Green potential $g_p$ from \cref{thm:cur
  \underline{\operatorname{vol}}_\theta(q_a)=U(q_a)=1-a.
 \]
 The potentials $q_a$ decrease as $a$ increases. Therefore \eqref{eq:volume-comparison-basic} gives $d_\theta(q_a,q_b)=|a-b|$. Choose $a_j\uparrow1-\delta$ with $a_j<1-\delta$. The resulting sequence is Cauchy and every term has mass greater than $\delta$. Any $d_\theta$ limit has upper volume $\delta$ by \eqref{eq:volume-comparison-basic}. On a curve the two volumes coincide, so no such limit belongs to the strict-cutoff space.
+\end{proof}
+
+\section{Rooftops and capacity convergence}
+\label{sec:volume-rooftop-capacity}
+
+A small upper-volume deficit also controls the common lower envelope of two potentials. For a finite family, the sum of the deficits must stay below the lower volume of a common upper bound. Applying this criterion after stretching gives increasing lower bounds for a suitable subsequence of models. Together with the decreasing upper bounds from the preceding section, they turn comparison convergence into capacity convergence.
+
+\begin{lemma}\label{lem:finite-roof-volume-deficit}
+Let $u_1,\ldots,u_N,w\in\PSH(X,\theta)$, with $N\geq1$ and $u_i\preceq w$. If
+\[
+ \sum_{i=1}^N\bigl(U(w)-U(u_i)\bigr)
+       <\underline{\operatorname{vol}}_\theta(w),
+\]
+then $P_\theta(u_1,\ldots,u_N)$ is genuine.
+\end{lemma}
+\begin{proof}
+Genuineness of a finite rooftop is unchanged by bounded changes of its obstacles. Choose $v_i\simeq u_i$ whose masses satisfy
+\[
+ \sum_{i=1}^N\left(U(w)-\int_X\mu_{v_i}\right)
+       <\underline{\operatorname{vol}}_\theta(w).
+\]
+\Needspace{7\baselineskip}
+Translate so that $v_i\leq w\leq0$, and put
+\[
+ v_{i,k}=\max(v_i,w-k),\qquad
+ p_k=P_\theta(v_{1,k},\ldots,v_{N,k}).
+\]
+The common competitor $w-k$ gives $w-k\leq p_k\leq w$, so $p_k\simeq w$. If the desired rooftop were not genuine, $p_k$ would decrease to $-\infty$, and normalized compactness would give $\sup_Xp_k\to-\infty$.
+
+Fix $s>0$ and choose $k>s$ so large that $p_k\leq-s$. Iterating \cref{prop:rooftop-measure} and using locality on $\{v_i>-s\}$ gives
+\[
+ \begin{split}
+ \underline{\operatorname{vol}}_\theta(w)
+ &\leq\int_X\mu_{p_k}
+ \leq\sum_{i=1}^N\int_{\{v_{i,k}\leq-s\}}\mu_{v_{i,k}}\\
+ &\leq\sum_{i=1}^N\left(U(w)-\int_{\{v_i>-s\}}\mu_{v_i}\right).
+ \end{split}
+\]
+Here $v_{i,k}\simeq w$, and $w-k<-s$ makes $\{v_{i,k}>-s\}=\{v_i>-s\}$. Let $s\to\infty$. The measures are finite and non-pluripolar, so the resulting inequality contradicts the choice of $v_i$.
+\end{proof}
+
+To control a rooftop's volume, first stretch each obstacle, then move both stretches a fixed fraction back toward their maximum. The softened stretches have a genuine common rooftop by the lemma.
+
+\begin{proposition}\label{prop:volume-rooftop-continuity}
+Let $u_j,u\in\PSH(X,\theta)$, with $\underline{\operatorname{vol}}_\theta(u)>0$, and suppose $d_\theta(u_j,u)\to0$. For all sufficiently large $j$, the rooftop $p_j=P_\theta(u_j,u)$ is genuine, and
+\[
+ d_\theta(p_j,u)\longrightarrow0,\qquad
+ \underline{\operatorname{vol}}_\theta(p_j)
+       \longrightarrow\underline{\operatorname{vol}}_\theta(u).
+\]
+\end{proposition}
+\begin{proof}
+Put $\delta=\underline{\operatorname{vol}}_\theta(u)$, $m_j=\max(u_j,u)$ and $s_j=d_\theta(u_j,u)$. After discarding finitely many indices, choose $b_j\to\infty$ with $b_j>1$ and $b_j^ns_j<\delta$. The deficits of both $u_j$ and $u$ from $m_j$ are at most $s_j$, while $m_j$ has lower volume at least $\delta$. Thus \cref{lem:volume-deficit-stretch} makes
+\[
+ G_j=Q_{b_j}(u_j,m_j),\qquad H_j=Q_{b_j}(u,m_j)
+\]
+genuine. Choose $a\in(0,1)$ with $2nMa<\delta$, and set
+\[
+ g_j=(1-a)m_j+aG_j,\qquad h_j=(1-a)m_j+aH_j.
+\]
+These potentials lie below $m_j$. Addition and monotonicity give
+\[
+ 2U(m_j)-U(g_j)-U(h_j)
+ \leq2\bigl(1-(1-a)^n\bigr)U(m_j)
+ \leq2nMa<\delta.
+\]
+The preceding lemma therefore gives a genuine $r_j=P_\theta(g_j,h_j)$. For large $j$, put $t_j=(ab_j)^{-1}<1$. The defining inequalities for $G_j,H_j$ show that
+\[
+ (1-t_j)m_j+t_jr_j\leq u_j,u.
+\]
+\Needspace{7\baselineskip}
+Hence $p_j$ is genuine. For either volume, addition and monotonicity give
+\[
+ (1-t_j)^n\operatorname{vol}_\theta(u)
+ \leq(1-t_j)^n\operatorname{vol}_\theta(m_j)
+ \leq\operatorname{vol}_\theta(p_j)
+ \leq\operatorname{vol}_\theta(u).
+\]
+Since $t_j\to0$ and $p_j\leq u$, this proves both assertions.
+\end{proof}
+
+For ordinary models, the finite rooftops are again models. Their normalization prevents collapse when the number of obstacles tends to infinity.
+
+\begin{theorem}\label{thm:model-volume-capacity-convergence}
+Suppose $u_j,u\in\mathcal M_\delta(\theta)$ and $d_\theta(u_j,u)\to0$. After passing to a subsequence and relabeling it, there are ordinary model potentials $v_j,w_j\in\mathcal M_{\delta/2}(\theta)$ such that
+\[
+ w_j\leq u_j\leq v_j,\qquad w_j\leq u\leq v_j,
+\]
+$v_j$ decreases to $u$, $w_j$ increases with $(\lim_jw_j)^*=u$, and
+\[
+ d_\theta(v_j,u)+d_\theta(w_j,u)\longrightarrow0.
+\]
+The original sequence converges to $u$ in capacity.
+\end{theorem}
+\begin{proof}
+For large $j$, put $r_j=P_\theta(u_j,u)$, using \cref{prop:volume-rooftop-continuity}. It is a model: envelope order gives
+$r_j\leq P_\theta[r_j]\leq u_j,u$, so $P_\theta[r_j]$ is a competitor for the rooftop and equals $r_j$. The sequence $u_j$ is Cauchy by \cref{prop:model-volume-comparison-modulus}. Choose a subsequence so that
+\[
+ d_\theta(u_j,u_{j+1})<\delta\,2^{-(j+1)n},\qquad
+ U(u)-U(r_j)<\delta\,4^{-(j+1)n}.
+\]
+The tail-maximum construction in the proof of \cref{thm:model-volume-cauchy-completeness} gives
+\[
+ v_j=P_\theta\left[\left(\sup_{l\geq j}u_l\right)^*\right]
+       \searrow u,\qquad d_\theta(v_j,u)\longrightarrow0.
+\]
+Indeed that construction gives the unique comparison limit, which here is $u$. Its upper models satisfy $v_j\geq u_j,u$ and have lower volume at least $\delta$.
+
+For the lower bounds, the deficit lemma gives genuine potentials
+\[
+ H_l=Q_{4^l}(r_l,u),\qquad K_l=Q_{2^l}(r_l,u).
+\]
+Their defining inequalities give
+\[
+ (1-2^{-l})u+2^{-l}H_l\leq K_l\leq u,
+ \qquad U(u)-U(K_l)\leq nM2^{-l}.
+\]
+Choose $j$ so large that $nM2^{1-j}<\delta$. For every $k\geq0$, the sum of the deficits of $K_j,\ldots,K_{j+k}$ is less than $\delta$, so \cref{lem:finite-roof-volume-deficit} makes their rooftop genuine. Since $r_l\leq u$, stretching decreases with its parameter; for $l\geq j$,
+\[
+ Q_{2^j}(r_l,u)\geq K_l.
+\]
+\Needspace{8\baselineskip}
+Thus $R_j^k=P_\theta(Q_{2^j}(r_j,u),\ldots,Q_{2^j}(r_{j+k},u))$ is genuine. The convex inequality for each obstacle gives
+\[
+ (1-2^{-j})u+2^{-j}R_j^k
+       \leq w_j^k:=P_\theta(r_j,\ldots,r_{j+k})\leq u.
+\]
+For either volume,
+\begin{equation}\label{eq:tail-rooftop-volume-bound}
+ (1-2^{-j})^n\operatorname{vol}_\theta(u)
+ \leq\operatorname{vol}_\theta(w_j^k)
+ \leq\operatorname{vol}_\theta(u).
+\end{equation}
+The same envelope-order argument used for $r_j$ shows that $w_j^k$ is a model. For fixed $j$ it decreases in $k$, with supremum zero. Normalized compactness gives a genuine limit $w_j$. The lower-volume conclusion of \cref{thm:decreasing-model-volume-continuity} passes the lower bound in \eqref{eq:tail-rooftop-volume-bound} to $w_j$. It is positive, so the theorem's upper-volume conclusion passes that bound as well.
+
+The $w_j$ increase and satisfy $w_j\leq r_j\leq u_j,u$. After discarding finitely many indices, they have lower volume at least $\delta/2$, and \eqref{eq:tail-rooftop-volume-bound} gives $d_\theta(w_j,u)\leq nM2^{-j}$. By \cref{prop:model-volume-separation}, $w_j\to u$ in $L^1$, so $(\lim_jw_j)^*=u$. The two monotone sequences converge in capacity by \cref{lem:monotone-psh-capacity}. Their pointwise bounds squeeze the selected $u_j$ to $u$ in capacity. Applying the construction to every subsequence proves capacity convergence for the original sequence.
 \end{proof}
 
 \Needspace{23\baselineskip}
