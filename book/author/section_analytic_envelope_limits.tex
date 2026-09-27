@@ -1,15 +1,97 @@
-\section{Monotone limits of analytic envelopes}
+\section{Limits of analytic envelopes}
 \label{sec:analytic-envelope-limits}
 
-Demailly regularization preserves a curvature lower bound up to a vanishing error. Along dyadic indices, subadditivity also orders its analytic singularity types. The corresponding envelopes therefore decrease. Divisorial estimates identify the limit with the ideal envelope, by the same ideal-theoretic mechanism used in \cite[Theorem~7.1.1, proof of $(3)\Rightarrow(1)$, Step~1]{SGPT}.
+An ideal envelope can acquire additional singularities in an $L^1$ limit. A common lower envelope prevents this loss of integrability, while convergence of divisorial Lelong numbers prevents the limit from becoming less singular. These two bounds identify the limit without requiring a monotone sequence.
 
-Fix $u\in\PSH(X,\theta)$ and a Hermitian form $h$ on $X$. Choose the regularization from \cref{thm:demailly-hermitian-input} along $m_j=2^j$, starting at a sufficiently large index. Denote it by $a_j$ and choose numbers $\epsilon_j>0$ decreasing to zero such that
+Fix $u\in\PSH(X,\theta)$ and a Hermitian form $h$ on $X$.
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:ordered-ideal-envelope-convergence}
+Let $\epsilon_j\geq0$ tend to zero, and let $a_j\in\PSH(X,\theta+\epsilon_jh)$ satisfy
+\[
+ u\preceq_{\mathcal I}a_j,\qquad
+ \nu_E(a_j)\longrightarrow\nu_E(u)
+ \quad\text{for every local divisor }E\text{ over }X.
+\]
+Then
+\[
+ P_{\theta+\epsilon_jh}[a_j]_{\mathcal I}
+       \longrightarrow P_\theta[u]_{\mathcal I}
+       \quad\text{in }L^1.
+\]
+If the $a_j$ have analytic singularities, their ordinary envelopes converge to $P_\theta[u]$ in $L^1$ if and only if $P_\theta[u]=P_\theta[u]_{\mathcal I}$.
+\end{proposition}
+\begin{proof}
+Put $p=P_\theta[u]_{\mathcal I}$ and $q_j=P_{\theta+\epsilon_jh}[a_j]_{\mathcal I}$. Projection and ideal order give
+\[
+ p\leq P_{\theta+\epsilon_jh}[p]_{\mathcal I}\leq q_j\leq0.
+\]
+The first inequality uses $p$ as a competitor in the larger background. All $q_j$ have supremum zero and belong to $\PSH(X,\theta+Ch)$ for a fixed $C\geq\sup_j\epsilon_j$. Normalized compactness therefore gives an $L^1$-convergent further subsequence of every subsequence. Let $q$ be such a limit. Passing the current inequalities to the limit gives $q\in\PSH(X,\theta)$, and \cref{lem:qpsh-almost-everywhere-order} gives $p\leq q\leq0$.
+
+Fix a local modification $\pi:Z\to U$ and a prime divisor $E\subset Z$. By \cref{lem:modification-lone-pullback}, the chosen subsequence converges after pullback in $L^1_{\mathrm{loc}}$. The pointwise semicontinuity in \cref{lem:lelong-lone-semicontinuity} yields
+\[
+ \nu_E(q)\geq\limsup_j\nu_E(q_j)
+       =\lim_j\nu_E(a_j)=\nu_E(u).
+\]
+Indeed, at every point of $E$ each pullback has Lelong number at least its generic number on $E$; apply the pointwise inequality and then take the generic value of the limit. On the other hand, $p\leq q$ gives $\nu_E(q)\leq\nu_E(p)=\nu_E(u)$. Thus $q$ and $u$ have the same Lelong numbers on all local divisors. Blowing up a point on any local modification recovers its pointwise Lelong number as a generic divisorial number; on a curve the point is already a divisor. By \cref{thm:local-i-inputs}, $q\sim_{\mathcal I}u$.
+
+Consequently $q$ is a competitor for $p$, so $q\leq p$. Every cluster limit is therefore $p$, which proves convergence of the entire sequence. For analytic $a_j$, \cref{prop:analytic-envelope-type} identifies the ordinary and ideal envelopes. The last assertion follows from uniqueness of the $L^1$ limit and \cref{lem:qpsh-almost-everywhere-order}.
+\end{proof}
+
+The divisorial hypothesis can be checked using multiplier ideals at fixed weights. The small dilation of the weight allows for the discrepancy term in the local Bergman estimate.
+
+\begin{corollary}\label{cor:fixed-weight-envelope-convergence}
+Let $\epsilon_j\geq0$ tend to zero, and let $a_j\in\PSH(X,\theta+\epsilon_jh)$ satisfy $u\preceq_{\mathcal I}a_j$. Suppose that, for every integer $m\geq1$ and every $\delta>0$,
+\[
+ \mathcal I((1+\delta)m a_j)\subseteq\mathcal I(mu)
+ \quad\text{for all sufficiently large }j.
+\]
+Then the conclusions of \cref{prop:ordered-ideal-envelope-convergence} hold.
+\end{corollary}
+\begin{proof}
+Fix a local divisor $E$ over a coordinate neighborhood $U$. Write $A=A_U(E)$ for its log discrepancy. By \cref{lem:bergman-divisorial-error}, the asserted inclusion implies
+\[
+ (1+\delta)m\nu_E(a_j)
+ \geq\operatorname{ord}_E\mathcal I((1+\delta)m a_j)
+ \geq\operatorname{ord}_E\mathcal I(mu)
+ \geq m\nu_E(u)-A.
+\]
+Take the lower limit in $j$ first, then let $m\to\infty$ and $\delta\downarrow0$. It follows that $\liminf_j\nu_E(a_j)\geq\nu_E(u)$. The opposite inequality holds term by term because $u\preceq_{\mathcal I}a_j$. The preceding proposition applies.
+\end{proof}
+
+The common ideal bound is essential: convergence of the potentials and of all divisorial Lelong numbers does not by itself control their envelopes.
+
+\begin{example}\label{ex:divisorial-convergence-envelope-failure}
+On a compact connected curve $Y$ with a positive form $\theta$ of total mass one, there are normalized analytic $a_j\in\PSH(Y,\theta)$ and a smooth $u\in\PSH(Y,\theta)$ such that
+\[
+ a_j\longrightarrow u\text{ in }L^1,\qquad
+ \nu_E(a_j)\longrightarrow\nu_E(u)\text{ for every local divisor }E,
+\]
+but $P_\theta[a_j]=P_\theta[a_j]_{\mathcal I}\to u\ne P_\theta[u]=P_\theta[u]_{\mathcal I}$ in $L^1$.
+\end{example}
+\begin{proof}
+Choose $u$ smooth, nonconstant and normalized, with $\theta+\ddc u>0$. Apply the construction in \cref{thm:curve-ideal-lone-completion} to the smooth probability measure $\nu=\theta+\ddc u$. In partitions of vanishing diameter, the largest cell mass tends to zero because $\nu$ has no atoms. Choose the rational approximations of the weights so that their total absolute error tends to zero. The resulting atomic probability measures $\nu_j$ converge weakly to $\nu$, and their largest atoms tend to zero.
+
+Their normalized Green potentials $a_j$ are analytic, satisfy $P_\theta[a_j]=P_\theta[a_j]_{\mathcal I}=a_j$, and converge to $u$ in $L^1$, by the same theorem. At every point $y\in Y$,
+\[
+ 0\leq\nu(a_j,y)=\nu_j(\{y\})
+       \leq\max_{z\in Y}\nu_j(\{z\})\longrightarrow0=\nu(u,y).
+\]
+Local modifications of a smooth curve are isomorphisms, so this gives all the required divisorial limits. Since $u$ is bounded and $\theta>0$, both its envelopes are zero. Its nonconstancy proves the failure of envelope convergence. Each $a_j$ has a logarithmic pole, so $u\preceq_{\mathcal I}a_j$ fails.
+\end{proof}
+
+\subsection{Dyadic regularization}
+
+Demailly regularization supplies the ideal bound and the divisorial limits in \cref{prop:ordered-ideal-envelope-convergence}. Along dyadic indices, subadditivity also orders the analytic singularity types, so the envelopes decrease pointwise. The ideal-theoretic mechanism is the one used in \cite[Theorem~7.1.1, proof of $(3)\Rightarrow(1)$, Step~1]{SGPT}.
+
+Choose the regularization from \cref{thm:demailly-hermitian-input} along $m_j=2^j$, starting at a sufficiently large index. Denote it by $a_j$ and choose numbers $\epsilon_j>0$ decreasing to zero such that
 \begin{equation}\label{eq:dyadic-analytic-backgrounds}
  a_j\in\PSH(X,\theta+\epsilon_jh),\qquad
  a_j\geq u,\qquad
  a_j\text{ has type }(1/m_j,\mathcal I(m_ju)).
 \end{equation}
-The metric $h$ remains fixed, and the chosen regularization satisfies $a_j\to u$ in $L^1$. The values $a_j$ need not decrease. Their ordinary singularity types do: subadditivity in \eqref{eq:trace-local-ideal-inputs} gives
+\Needspace{6\baselineskip}
+The chosen regularization satisfies $a_j\to u$ in $L^1$. Its values need not decrease. Its ordinary singularity types do: subadditivity in \eqref{eq:trace-local-ideal-inputs} gives
 \[
  \mathcal I(2m_ju)\subseteq\mathcal I(m_ju)^2,
  \qquad a_{j+1}\preceq a_j.
@@ -31,22 +113,12 @@ pointwise and in $L^1$. The limit is independent of the regularizing representat
 \begin{proof}
 By \cref{prop:analytic-envelope-type}, $q_j=P_{\theta+\epsilon_jh}[a_j]_{\mathcal I}\sim a_j$. Since the backgrounds decrease and $a_{j+1}\preceq a_j$, the function $q_{j+1}$ is a competitor for $P_{\theta+\epsilon_jh}[a_j]$. Hence $q_{j+1}\leq q_j$.
 
-Put $p=P_\theta[u]_{\mathcal I}$. The inequality $a_j\geq u$ implies $u\preceq_{\mathcal I}a_j$. Regard $p$ in the larger background and use ideal projection and order preservation there. This gives
+The inequality $a_j\geq u$ gives $u\preceq_{\mathcal I}a_j$. For every local divisor $E$, \cref{lem:bergman-divisorial-error} gives
 \[
- u-\sup_Xu\leq p\leq
- P_{\theta+\epsilon_jh}[p]_{\mathcal I}\leq q_j\leq0.
+ \nu_E(a_j)=\frac1{m_j}\operatorname{ord}_E\mathcal I(m_ju)
+       \longrightarrow\nu_E(u).
 \]
-Thus the decreasing limit $q$ is genuine, has supremum zero and belongs to $\PSH(X,\theta)$: the current inequalities pass to the limit, and a nested intersection of the compact maximum sets preserves the supremum. The displayed lower bound also proves $L^1$ convergence by dominated convergence.
-
-\Needspace{6\baselineskip}
-Fix a local divisor $E$. The inequalities $u-\sup_Xu\leq q\leq q_j$ imply
-\[
- \nu_E(u)\geq\nu_E(q)\geq\nu_E(q_j)
-       =\frac1{m_j}\operatorname{ord}_E\mathcal I(m_ju).
-\]
-By \cref{lem:bergman-divisorial-error}, the last term tends to $\nu_E(u)$. Therefore $q$ and $u$ have the same Lelong number on every local divisor over $X$. This gives the pointwise data on every local modification as well: blow up the point and use that its Lelong number is the generic number on the exceptional divisor; on a curve the point already is a divisor. The local ideal criterion \cref{thm:local-i-inputs} now gives $q\sim_{\mathcal I}u$.
-
-Since $q\leq0$ is $\theta$-plurisubharmonic, it is a competitor for $p=P_\theta[u]_{\mathcal I}$. The earlier inequality $p\leq q$ proves equality. This identifies the limit solely from $\theta$ and the ideal class of $u$, proving every asserted independence.
+By \cref{prop:ordered-ideal-envelope-convergence}, $q_j\to p:=P_\theta[u]_{\mathcal I}$ in $L^1$ and $p\leq q_j\leq0$. The decreasing limit is a genuine $\theta$-plurisubharmonic function and agrees almost everywhere with $p$, hence everywhere. This identifies the limit solely from $\theta$ and the ideal class of $u$, proving every asserted independence.
 \end{proof}
 
 \Needspace{17\baselineskip}

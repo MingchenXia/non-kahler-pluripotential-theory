@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint185 — 27 September 2026
+
+Chapter 15 now proves L1 convergence of ideal envelopes under one-sided ideal order and convergence of every local divisorial Lelong number, with arbitrary vanishing nonnegative curvature errors. A fixed-weight multiplier-ideal inclusion criterion implies these divisorial limits. A curve example has analytic potentials converging in L1 and at every local divisor, but their envelopes fail to converge to the envelope of the limit. The dyadic theorem follows from the general criterion. Chapter 32 distinguishes these established results from the unresolved topology and background-compatibility problem. All eighteen earlier Chapter 15 statements and all Chapter 32 formal statements remain byte-identical; three statements, proofs and labels are added.
+
+All three Chapter 15 author inputs receive complete original and two revised direct mathematical/editorial reads; the second revised read follows the first build and page inspection. Chapter 32 receives a bounded review of its singularity-topology section and adjacent transition. The proof uses Chapter 1 pullback L1 convergence, Lelong semicontinuity, valuative ideal comparison and the Bergman discrepancy estimate. No new external theorem or bibliography entry is adopted. Existing source checks retain their scopes; no novelty claim or new independent verifier run is made.
+
+The 813-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The house audit has zero errors and twelve inherited warnings. All 45 selected final pages pass visual review: six changed images were directly inspected and 39 match the inspected first render. The first render included 31 directly inspected images. Both outputs rebuild from a fresh empty source extraction with identical page text; the companion remains byte-identical to checkpoint184. The 221-input graph, 190 historical verifier reports and three hidden sources are unchanged.
+
+Return to Chapter 18: examine whether ordered analytic-envelope convergence on resolutions identifies intrinsic traces beyond curve fibrations, keeping exact divisorial realization distinct from convergence and from background compatibility. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint184 — 27 September 2026
 
 Theorem 25.17.2 now proves the Chern–Ricci maximal-time formula for every initial Hermitian metric. A positive representative at a later time supplies an affine positive reference path. Time-weighted potential identities bound the potential derivative, and the existing elliptic torsion calculation gives a parabolic trace estimate after the reference-metric derivative is retained. Uniform ellipticity, classical parabolic regularity and short-time existence give continuation. The current lifetime corollary now uses this internal theorem; its statement and the two earlier formal statements are unchanged. Four labels and one theorem/proof are added.

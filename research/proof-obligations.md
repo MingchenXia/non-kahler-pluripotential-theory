@@ -1,6 +1,6 @@
-# Proof boundary and remaining obligations — checkpoint184
+# Proof boundary and remaining obligations — checkpoint185
 
-This ledger incorporates the checkpoint183 Vaisman proof and checkpoint184 Chern–Ricci maximal-time proof into the checkpoint182 reconciliation of checked checkpoint181. It reconciles current statements, imported inputs and research questions after the integrated chapter rewrites. It is not a fresh audit of every proof or cited paper. The former ledger and its checkpoint160 and checkpoint167 supplements are preserved verbatim in [the historical archive](audits/proof-obligations-history-through-checkpoint181.md). [The source disposition](comparison.md) and [its checkpoint182 map](source-disposition-182.json) supply stable labels and the compiled locations at that reconciliation.
+This ledger incorporates the checkpoint183 Vaisman proof and checkpoint184 Chern–Ricci maximal-time proof, together with the checkpoint185 envelope-convergence criterion, into the checkpoint182 reconciliation of checked checkpoint181. It reconciles current statements, imported inputs and research questions after the integrated chapter rewrites. It is not a fresh audit of every proof or cited paper. The former ledger and its checkpoint160 and checkpoint167 supplements are preserved verbatim in [the historical archive](audits/proof-obligations-history-through-checkpoint181.md). [The source disposition](comparison.md) and [its checkpoint182 map](source-disposition-182.json) supply stable labels and the compiled locations at that reconciliation.
 
 The 190 historical verifier reports retain their original inputs and conclusions. Subsequent direct revisions do not enlarge those reports. Checkpoint183 supplies the internal Vaisman prescribed-volume proof without changing its statement or adding external reliance or independent verification.
 
@@ -43,7 +43,7 @@ Chapter 32 additionally recalls closed-locus, nonclosed null-locus and parabolic
 
 ## Singularity, trace and geometric research
 
-Chapter 15 proves analytic ordinary/ideal envelope equality, decreasing analytic-envelope approximation and its criterion for equality. Analytic classes are dense throughout the elementary ideal L1 metric, so that density does not characterize goodness. Chapter 29's volume implications retain bounded mass and reference-volume assumptions. A useful Hermitian topology on ordinary types and an unrestricted approximation/volume characterization remain unestablished here.
+Chapter 15 proves analytic ordinary/ideal envelope equality and convergence of ideal envelopes under one-sided ideal order and divisorial convergence. Fixed-weight ideal inclusions give a sufficient criterion, and dyadic regularization is a monotone application. The curve counterexample shows that L1 and divisorial convergence alone are insufficient; see [the scoped review](editorial/ordered-envelope-convergence-185.md). Analytic classes are dense throughout the elementary ideal L1 metric, so that density does not characterize goodness. Chapter 29's volume implications retain bounded mass and reference-volume assumptions. A useful Hermitian topology on ordinary types and an unrestricted approximation/volume characterization remain unestablished here.
 
 Chapter 18 realizes curve and curve-fibration traces, with all-model orders and product equations. Linear compatibility and a canonical ordinary type on a fixed model do not realize every higher-dimensional profile. Chapter 24's retraction preserves ideal type under its recovery condition; the zero-residual-volume example does not decide positive-volume recovery. The finite closed-class and actual-trace results of Chapter 27 do not remove these distinctions.
 
@@ -55,4 +55,4 @@ The current map contains all 23 formal questions/conjectures in Chapters 15, 25,
 
 ## Continuation
 
-Return to Chapter 15: examine which convergence hypotheses on analytic approximants force equality of ordinary and multiplier-ideal envelopes, keeping the unrestricted singularity-topology and trace questions distinct. The Vaisman and maximal-time proofs are complete at their scoped checkpoint183 and checkpoint184 reviews. The chapter rewrite records retain their exact scopes; the broader writing and research goal remains active and incomplete.
+Return to Chapter 18: examine whether ordered analytic-envelope convergence on resolutions identifies intrinsic traces beyond curve fibrations, keeping exact divisorial realization distinct from convergence and from background compatibility. The Vaisman and maximal-time proofs are complete at their scoped checkpoint183 and checkpoint184 reviews. The chapter rewrite records retain their exact scopes; the broader writing and research goal remains active and incomplete.
