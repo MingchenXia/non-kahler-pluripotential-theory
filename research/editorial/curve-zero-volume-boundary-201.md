@@ -1,0 +1,37 @@
+# The zero-volume curve boundary — checkpoint201
+
+Baseline: `ce0709a63b131edba025c155b70f4fc87edf535d`. The preceding goal turn completed checkpoint200 and private synchronization, so it was progress. All ten supplied integrations, including Q8.2 in Sections 14.8–14.10, remain complete. This continuation treats the queued zero-volume curve boundary.
+
+## Mathematics
+
+New Section 29.12 treats the zero-volume boundary on curves. On all ideal models, the upper-volume comparison is exactly total variation of atomic curvature, and this complete space is the completion of positive-mass analytic ordinary models. For every curve potential, its infimum comparison to these analytic models is exactly its nonatomic polar curvature mass; vanishing is equivalent to equality of ordinary and ideal envelopes. A diffuse Cantor measure on a polar set yields a zero-mass ordinary model with trivial multiplier ideals and approximation defect A. Chapter 18 includes zero mass in its atomic ideal-model classification. Chapter 1 proves the needed closed-pluripolar removability lemma. Chapters 15 and 32 narrow the remaining questions, and Chapter 33 records the internal derivation.
+
+The Green potential of an atomic measure D has curvature D+(A-D(Y))theta/A. The existing divisorial domination gives ordinary equivalence with its ideal envelope, also when D(Y)=A. The bounded difference has a nonpolar residual curvature measure, yielding mass A-D(Y). Every ideal model is recovered from its point Lelong numbers. The later source-distance estimates retain their strict positive-mass domain.
+
+For finite atomic supports, the maximum has polar curvature D wedge E, so the upper-volume comparison equals total variation. For countable supports of mass below A, finite restrictions converge in the comparison, and the three-point modulus passes the equality to the limit. Linear scaling U(tu)=tU(u)+(1-t)A and d(tu,tv)=t d(u,v) then includes the zero-mass endpoint without invoking a positive-cutoff estimate there. Total-variation closedness of atomic measures and finite rational approximation prove completeness and analytic density. A sequence tA delta_x approaching A delta_x is Cauchy for this comparison but not for the earlier complete positive-volume metric, whose Cauchy condition controls reciprocal lower volume.
+
+For an arbitrary potential u and finite analytic atomic data E, the maximum is bounded off the finite pole set and has the minimum Lelong coefficient at each pole. Hence d(u,a)=tau(u)+norm(D_u-E)_TV, where tau(u) is the nonatomic polar mass. Finite rational approximation gives the exact infimum. Ordered comparison gives the same defect to the ideal envelope. If its atomic mass is below A, the existing positive-ideal-volume criterion applies; if the atomic mass equals A, it exhausts the current and harmonic uniqueness gives the envelope equality directly. Unconditional preservation of lower volume supplies the converse at zero mass.
+
+The Cantor construction uses level-k intervals of length exp(-4^(k+1)) carrying mass 2^(-k). The Green bound forces its potential to be minus infinity at every point of the Cantor set, while it is smooth off that set and has no point masses. The current is entirely polar, so its non-pluripolar mass vanishes. Ordinary-envelope fixedness is proved directly: subtracting this potential from any more singular competitor gives a bounded-above subharmonic function off the closed polar set. Removability and compactness make it constant. This avoids assuming ordinary projection is idempotent at zero mass. The ideal envelope is zero by its vanishing Lelong numbers, so the analytic approximation defect is A.
+
+The general removable-singularity result is located in Chapter 1. Adding t times a local psh barrier with poles on the exceptional set gives a psh extension for every t>0; the regularized increasing limit removes the barrier. Freezing the smooth background retains the exact curvature bound. This proves the local foundation used by the example, rather than importing an unchecked new result.
+
+## Sources and review scope
+
+The complete new Section 29.12 and the complete maxima and atomic-topology inputs receive two direct mathematical/editorial reads, the second after the first build and visual inspection. The Chapter 29 opening and Chapters 15/32/33 interfaces receive bounded reviews. Four statements, four proofs and nine labels are new; two existing lemmas are generalized and two questions narrowed. All forty-four previous Chapter 29 statements and forty-one proofs are byte-identical. Six author inputs change; all prior labels, the bibliography and input graph remain. No new external premise, complete source-proof audit, novelty claim or independent verification is introduced. See research/editorial/curve-zero-volume-boundary-201.md and research/audits/curve-zero-volume-boundary-201.json.
+
+The scopes and exact final input hashes are in the focused audit. Preliminary primary-source searches found statements of closed-polar removability, but did not establish a new complete source-proof audit. An available local SGPT excerpt was read for context. No new external premise or citation is added: the required removability proof is given internally. Existing Green-kernel, multiplier-ideal and positive-volume inputs retain their recorded dependencies. No general ordinary-model classification, higher-dimensional extension or novelty claim is made.
+
+The second pass clarifies the analytic-closure requirement in the Chapter 15 problem, removes the redundant isolated-puncture transition, and incorporates short setup/scaling equalities into prose to eliminate a final three-line proof page. The final layout correction keeps two formula lead-ins with their displays and the neighboring compactness statement together. No substantive author correction requires a skill update in this continuation. Unchanged chapters are not represented as newly reviewed.
+
+## Release checks
+
+The 853-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The house audit has zero errors and 29 inherited warnings. All 60 selected final pages pass visual review: 1 changed image directly inspected and 59 identical to an inspected preceding render. The first, intermediate and spacing-trial reviews directly inspect 38, 23 and 14 images respectively. The companion is byte-identical to checkpoint200. The 33-chapter, 221-input graph remains unchanged.
+
+Selected pages cover the new section and transitions, complete maxima and atomic-topology units, the Chapter 29 opening, bounded Chapter 15/32/33 interfaces, front matter and every changed body page. Prior visual review is carried only by exact image equality.
+
+Both outputs rebuild from a fresh empty source-package extraction, and every page text agrees with production. The final package manuscript and build scripts match that rebuilt payload. All 221 active author inputs are included. The 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; the hidden sources remain excluded. See build-snapshot-201.json and source-package-portability-201.json.
+
+## Continuation
+
+Determine the upper-volume comparison between arbitrary ordinary curve models through their polar curvature measures, separating atomic and diffuse contributions. The broader writing and research goal remains active and incomplete.

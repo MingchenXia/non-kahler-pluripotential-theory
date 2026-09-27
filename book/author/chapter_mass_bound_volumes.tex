@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion. On curves, atomic curvature extends the analytic criterion to zero volume, while diffuse polar curvature produces ordinary models outside the analytic closure.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -1520,4 +1520,118 @@ The ideal envelope models form a closed complete subspace of $(\mathcal M_+(\the
 \end{corollary}
 \begin{proof}
 By \cref{thm:analytic-model-volume-criterion}, a positive-lower-volume ordinary model limit of ideal models for $d_\theta$ is again an ideal model. The same theorem and \cref{thm:fixed-big-analytic-approximation} give analytic density. Apply \eqref{eq:positive-model-metric-convergence} and completeness of the ambient metric space.
+\end{proof}
+
+\section{The zero-volume boundary on curves}
+\label{sec:curve-zero-volume-models}
+
+On a curve, atomic curvature records every multiplier ideal. It also makes the upper-volume comparison explicit, including at zero mass. A diffuse measure carried by a polar set gives a different zero-mass model: it has trivial multiplier ideals and stays a positive comparison distance from every analytic model.
+
+Let $Y$ be a compact connected Riemann surface, let $\theta>0$ be smooth, and put $A=\int_Y\theta$. The two singularity volumes coincide with $U(u)=\int_Y\mathrm{MA}_\theta(u)$. Use the Green potentials $w_D$ and ideal models $q_D$ of \cref{lem:curve-atomic-ideal-model}, with $D(Y)\leq A$. Write $\|\cdot\|_{\mathrm{TV}}$ for the total variation norm of a signed measure.
+
+\begin{theorem}\label{thm:curve-ideal-volume-distance}
+For positive atomic measures $D,E$ of mass at most $A$,
+\begin{equation}\label{eq:curve-ideal-volume-distance}
+ d_\theta(q_D,q_E)=\|D-E\|_{\mathrm{TV}}.
+\end{equation}
+Thus $d_\theta$ is a metric on all normalized ideal models on $Y$, including those of zero mass.
+\end{theorem}
+\begin{proof}
+For finite supports, the maximum of $w_D$ and $w_E$ is locally bounded away from those supports and has the smaller logarithmic coefficient at every point. Its polar curvature is therefore $D\wedge E$, the atomic measure of pointwise minimum coefficients. Hence
+\[
+ U(\max(w_D,w_E))=A-(D\wedge E)(Y).
+\]
+Using $q_D\sim w_D$, $q_E\sim w_E$ and $U(q_D)=A-D(Y)$ gives \eqref{eq:curve-ideal-volume-distance} in this case.
+
+Suppose next that $D(Y),E(Y)<A$. Choose increasing finite restrictions $D_j\leq D$, $E_j\leq E$ with masses converging to the full masses. Ideal-envelope order gives $q_D\leq q_{D_j}$, and the ordered comparison formula gives
+\[
+ d_\theta(q_D,q_{D_j})=(D-D_j)(Y)\longrightarrow0.
+\]
+The same holds for $E$. All four families lie in $\mathcal M_\delta(\theta)$ for $\delta=\min\{A-D(Y),A-E(Y)\}>0$. Applying \eqref{eq:model-volume-comparison-modulus} twice in each direction shows that
+\[
+ d_\theta(q_{D_j},q_{E_j})\longrightarrow d_\theta(q_D,q_E).
+\]
+Their total-variation distances also converge, proving the identity for countable supports of mass less than $A$.
+
+For the boundary case, fix $0<t<1$. In dimension one, restricting the current identity
+\[
+ \theta+\ddc(tu)=t(\theta+\ddc u)+(1-t)\theta
+\]
+to the complement of the pole set gives $U(tu)=tU(u)+(1-t)A$. Since $\max(tu,tv)=t\max(u,v)$,
+\[
+ d_\theta(tu,tv)=t\,d_\theta(u,v).
+\]
+\Needspace{6\baselineskip}
+Now $w_{tD}=tw_D$, and $q_{tD}\sim tw_D$; likewise for $E$. The already proved identity for $tD,tE$ therefore reads
+\[
+ t\,d_\theta(q_D,q_E)=\|tD-tE\|_{\mathrm{TV}}
+                         =t\|D-E\|_{\mathrm{TV}}.
+\]
+Cancel $t$. The last assertion follows from the bijection in \cref{lem:curve-atomic-ideal-model}.
+\end{proof}
+
+\begin{corollary}\label{cor:curve-zero-volume-ideal-completion}
+All normalized ideal models on $Y$ form a complete metric space for $d_\theta$. It is the metric completion of the positive-mass analytic ordinary models with the restricted comparison.
+\end{corollary}
+\begin{proof}
+The positive atomic measures of mass at most $A$ are closed in total variation. Indeed, a total-variation limit is positive, retains the mass bound and is supported on the countable union of the supports of the sequence. This proves completeness. Finite restriction and rational approximation of the coefficients from below, with an arbitrarily small further decrease if needed, approximate every such measure in total variation by finite atomic measures of mass strictly less than $A$. Their ideal models are analytic ordinary models. Apply \eqref{eq:curve-ideal-volume-distance}.
+\end{proof}
+
+The positive-mass part itself is incomplete for this restricted comparison. For a fixed point $x\in Y$, the measures $tA\delta_x$, $t\uparrow1$, give a Cauchy family with a zero-mass limit. In contrast, the complete metric of \cref{thm:positive-model-complete-metric} makes this family non-Cauchy because its reciprocal lower volumes diverge. The two metrics induce the same topology on the positive-mass ideal models, but have different Cauchy sequences near the boundary.
+
+For $u\in\PSH(Y,\theta)$, write
+\[
+ D_u=\sum_{x\in Y}\nu(u,x)\delta_x,\qquad
+ \tau(u)=A-U(u)-D_u(Y)\geq0.
+\]
+Thus $\tau(u)$ is the mass of the nonatomic part of the curvature carried by the pole set. Let $\mathcal A_+(Y,\theta)$ denote the positive-mass analytic ordinary models.
+
+\begin{proposition}\label{prop:curve-analytic-distance-defect}
+For every $u\in\PSH(Y,\theta)$,
+\begin{equation}\label{eq:curve-analytic-distance-defect}
+ \inf_{a\in\mathcal A_+(Y,\theta)}d_\theta(u,a)
+ =d_\theta(u,P_\theta[u]_{\mathcal I})=\tau(u).
+\end{equation}
+There are $a_j\in\mathcal A_+(Y,\theta)$ with $d_\theta(u,a_j)\to0$ if and only if $P_\theta[u]=P_\theta[u]_{\mathcal I}$. In particular the analytic approximation criterion holds for ordinary models of zero mass as well.
+\end{proposition}
+\begin{proof}
+Let $a$ be an analytic ordinary model and put $E=D_a$. It has finitely many logarithmic poles and bounded local remainders. Thus $\max(u,a)$ is locally bounded off this finite set, and its Lelong number at each point is the minimum of the two Lelong numbers. Its polar curvature is exactly $D_u\wedge E$. Since $U(a)=A-E(Y)$,
+\begin{equation}\label{eq:curve-finite-analytic-comparison}
+ \begin{split}
+ d_\theta(u,a)
+ &=2\bigl(A-(D_u\wedge E)(Y)\bigr)-U(u)-A+E(Y)\\
+ &=\tau(u)+\|D_u-E\|_{\mathrm{TV}}.
+ \end{split}
+\end{equation}
+\Needspace{8\baselineskip}
+The finite rational approximations from the preceding corollary prove the infimum formula. Also $P_\theta[u]_{\mathcal I}=q_{D_u}$. After translating $u$ below zero, one has $u\leq q_{D_u}$, so the ordered comparison gives
+\[
+ d_\theta(u,q_{D_u})=A-D_u(Y)-U(u)=\tau(u).
+\]
+
+If $D_u(Y)<A$, \cref{prop:conditional-i-characterization} identifies $\tau(u)=0$ with equality of the two envelopes. If $D_u(Y)=A$, the atoms exhaust the full curvature measure: $\theta+\ddc u=D_u$. The same holds for $q_{D_u}$, so their difference is harmonic and hence constant. Thus their ordinary envelopes agree, and $\tau(u)=0$. Conversely, equality of the envelopes gives equality of their lower volumes with that of $u$ by \cref{thm:ordinary-envelope-volumes}, including when the volume is zero. On a curve this gives $\tau(u)=0$, completing the proof.
+\end{proof}
+
+\begin{example}\label{ex:diffuse-polar-zero-model}
+There is an ordinary model $p$ on $Y$ with zero mass and trivial multiplier ideals at every positive weight. It satisfies
+\[
+ P_\theta[p]_{\mathcal I}=0,\qquad
+ \inf_{a\in\mathcal A_+(Y,\theta)}d_\theta(p,a)=A.
+\]
+\end{example}
+\begin{proof}
+Choose a compact real interval inside a coordinate disc. Construct a binary Cantor set $K$ with $2^k$ pairwise disjoint level-$k$ intervals of length $r_k=\exp(-4^{k+1})$, each containing its two level-$(k+1)$ children. Let $\sigma$ be the probability measure assigning mass $2^{-k}$ to each level-$k$ interval. It has no atoms. Choose the nonpositive Green kernel for $\theta/A$ and put
+\[
+ u(x)=A\int_YG(x,y)\,\mathrm{d}\sigma(y).
+\]
+The Green construction gives $u\in\PSH(Y,\theta)$ with $\theta+\ddc u=A\sigma$. On the chosen compact coordinate disc,
+$G(x,y)\leq\log|x-y|^2+C$ for a fixed $C$. For $x\in K$, integration over its level-$k$ interval, using $G\leq0$ on the complement, gives
+\[
+ u(x)\leq A2^{-k}(2\log r_k+C)\longrightarrow-\infty.
+\]
+Thus $u=-\infty$ on $K$, while $u$ is smooth off $K$ by its current equation. Its non-pluripolar mass is zero and every point Lelong number is zero.
+
+Put $p=u-\sup_Yu$. To verify the ordinary model property, let $v\in\PSH(Y,\theta)$ satisfy $v\preceq p$. On $Y\setminus K$, the function $v-p$ is subharmonic and bounded above. The set $K$ is closed and polar, so \cref{lem:qpsh-removable-pluripolar} extends this difference to a subharmonic function on $Y$. Compactness makes it constant. Hence $v=p+c$, first off $K$ and then everywhere by almost-everywhere order. If $v\leq0$, normalization gives $c\leq0$. Therefore $P_\theta[p]=p$.
+
+The vanishing Lelong numbers imply trivial multiplier ideals, so the ideal envelope is zero. Finally $D_p=0$ and $U(p)=0$, and \eqref{eq:curve-analytic-distance-defect} gives the claimed distance.
 \end{proof}
