@@ -1,0 +1,31 @@
+# Model comparison under background changes — checkpoint198
+
+Baseline: `c400c596d3258278871c0d95ba12ac33ea2e5c55`. The preceding goal turn completed checkpoint197 and private synchronization, so it was progress. All ten supplied integrations, including Q8.2 in Sections 14.8–14.10, remain complete. This continuation completes the queued gauge and controlled-background unit.
+
+## Mathematics
+
+New Section 29.9 proves smooth-gauge invariance of the upper-volume comparison after ordinary projection. The explicit small-stretch scale supplies strict barriers uniform over a fixed positive lower-volume sector and bounded increases of the background. This gives a uniform comparison error for backgrounds approaching from above, without monotonicity of the sequence. The analytic-model criterion extends to analytic approximants with vanishing positive curvature error. Rational correction brings them into the original background, where their ordinary models converge for the volume comparison, in L1 and in capacity. Bounded mass and positive lower volume of the limit remain assumed. Chapters 15 and 32 narrow the remaining background questions; Chapter 33 records the internal derivation.
+
+Proposition 29.9.1 transports currents by u to u-f, then uses the gauge bounds to compare zero-obstacle envelopes. Taking the ordinary envelope again gives the explicit inverse. The bijection preserves both singularity volumes, the upper-volume comparison, analytic models and ideal models. Individual envelope masses are not identified with these invariants.
+
+Proposition 29.9.2 fixes a dominant Hermitian form Omega, a strict analytic potential rho and its curvature margin kappa. The stretch scale b_delta = 1 + delta/(2^(n+1) n v_+(Omega)) is valid for every beta between theta and theta+h and every beta-potential of lower volume at least delta. Mixing its genuine stretch with rho gives a common strict margin kappa_delta. Addition then yields the multiplicative comparison for both singularity volumes. Corollary 29.9.1 applies it to two inputs and their maximum: the three nonnegative upper-volume errors are bounded by the same quantity, giving the factor 2 in (29.9). Ordinary projection preserves the comparison.
+
+Theorem 29.9.1 uses this uniform estimate in both directions. Forward, the fixed-background analytic approximants already have a common positive lower-volume bound. Conversely, comparison convergence controls the upper volumes of the analytic a_j and max(a_j,p) in eta_j. Rational mixing with rho corrects a_j into theta. In the larger background theta_hat_j = theta + (1+A/kappa) epsilon_j h, r_j/c_j is admissible below the ordinary envelope M_j of max(a_j,p). The inequalities theta <= c_j theta_hat_j and theta_hat_j >= eta_j have distinct roles and are both checked. The common lower-volume bound for max(a_j,p) allows the uniform volume comparison to control M_j. Addition supplies the opposite bound for r_j, proving comparison convergence in theta. The preceding analytic criterion identifies the limiting model as ideal. A deficit stretch then derives a positive lower-volume bound for the corrected models and gives their L1 and capacity convergence. No such function convergence is asserted for arbitrary analytic representatives. Two-sided background changes require admissible references and remain the next unit.
+
+## Sources and review scope
+
+The complete new Section 29.9 receives two direct mathematical/editorial reads, the second after the first build and visual inspection; predecessor and dependency contexts are read before drafting. The Chapter 29 opening and Chapters 15/32/33 interfaces receive bounded reviews. Four statements, four proofs and six labels are new; two interface questions are narrowed. All thirty-three previous Chapter 29 statements and thirty proofs are byte-identical. Four author inputs change; all prior labels, the bibliography and input graph remain. No new external premise, complete source-proof audit, novelty claim or independent verification is introduced. See research/editorial/model-background-comparison-198.md and research/audits/model-background-comparison-198.json.
+
+The new section has no predecessor text; the original read concerns its preceding transition and the existing gauge, small-stretch and background-comparison dependencies. This is not a new full Chapter 29 review. The second pass specifies the inverse background map and smoothness of the varying forms, cites the deficit lemma at the final lower-bound step, keeps the gauge proposition together, and attaches the rational-correction paragraph to its display. All external inputs retain their previous scope. No Popovici reliance or new author correction requiring a skill change is introduced.
+
+## Release checks
+
+The 843-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The house audit has zero errors and 29 inherited warnings. All 43 selected final pages pass visual review: 4 changed images directly inspected and 39 identical to an inspected preceding render. The first review directly inspects 23 images. The companion is byte-identical to checkpoint197. The 33-chapter, 221-input graph remains unchanged.
+
+The selected pages include the complete new Section 29.9, preceding and following transitions, the Chapter 29 opening, front matter, bounded Chapter 15/32/33 interfaces and every other changed body page. Exact rendered-image equality carries prior visual review; text equality alone is not used for that purpose.
+
+Both outputs rebuild from a fresh empty source-package extraction, and every page text agrees with production. The final package manuscript and build scripts match that rebuilt payload. All 221 active author inputs are included. The 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; the hidden sources remain excluded. See build-snapshot-198.json and source-package-portability-198.json.
+
+## Continuation
+
+Treat two-sided small smooth background changes by constructing admissible reference models and comparing the choices, with explicit uniform positivity and curvature bounds. The broader writing and research goal remains active and incomplete.

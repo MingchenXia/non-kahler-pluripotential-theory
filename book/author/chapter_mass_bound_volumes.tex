@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Uniform strict barriers control changes of background, allowing this criterion to tolerate vanishing curvature loss.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -1120,3 +1120,143 @@ Thus the positive-lower-volume ideal envelope models are precisely the limits of
 \begin{problem}\label{qu:hermitian-i-characterization}
 For a big nonclosed background on a manifold with bounded mass, find criteria for $\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I})>0$ in terms of restricted multiplier ideals or divisorial orders. When this lower volume vanishes, which implications between envelope equality and upper-volume equality in \cref{prop:conditional-i-characterization} remain valid?
 \end{problem}
+
+\section{Model comparison under background changes}
+\label{sec:model-background-comparison}
+
+A smooth change of representative preserves the current but changes the zero obstacle used to normalize its model. Taking the ordinary envelope again gives an exact correspondence for the volume comparison. An increase of the background changes the volumes; a common positive lower-volume bound controls this error uniformly and allows analytic approximations to have vanishing curvature loss.
+
+\Needspace{14\baselineskip}
+\begin{proposition}\label{prop:model-comparison-gauge}
+Let $f\in C^\infty(X,\mathbb R)$ and $\theta'=\theta+\ddc f$. For every $\delta>0$, the map
+\[
+ G_f:\mathcal M_\delta(\theta)\longrightarrow\mathcal M_\delta(\theta'),
+ \qquad G_f(p)=P_{\theta'}[p-f],
+\]
+is a bijection with inverse $q\mapsto P_\theta[q+f]$. It preserves both singularity volumes, and
+\[
+ d_{\theta'}(G_f(p),G_f(q))=d_\theta(p,q).
+\]
+It takes analytic models to analytic models and ideal envelope models to ideal envelope models.
+\end{proposition}
+\begin{proof}
+The map $u\mapsto u-f$ identifies the competitor currents defining the two volumes. Also $\max(u-f,v-f)=\max(u,v)-f$, so
+\[
+ d_{\theta'}(u-f,v-f)=d_\theta(u,v).
+\]
+By \cref{prop:i-envelope-gauge}, $G_f(p)+f\simeq p$. Thus $G_f(p)$ has the same volumes as $p$ and, by \cref{thm:ordinary-envelope-volumes}, is an ordinary model. Dependence of $d$ only on ordinary types proves the displayed identity. Taking the ordinary envelope of $G_f(p)+f\simeq p$ gives $P_\theta[G_f(p)+f]=p$. The same argument with the two backgrounds interchanged proves bijectivity.
+
+Smooth subtraction and bounded changes preserve analytic singularities. If $p=P_\theta[p]_{\mathcal I}$, \cref{prop:i-envelope-gauge} also gives
+\[
+ P_{\theta'}[p-f]_{\mathcal I}\simeq p-f\simeq G_f(p).
+\]
+The ideal envelope is an ordinary model by \cref{cor:ordinary-preserves-i}. Ordinary models with the same ordinary type coincide, so it equals $G_f(p)$. The inverse map gives the converse.
+\end{proof}
+
+Fix a Hermitian form $h$. Choose a Hermitian $\Omega\geq\theta+2h$ and an analytic $\rho\leq0$ with $\theta+\ddc\rho\geq\kappa h$, where $\kappa>0$ is rational. Such a $\rho$ exists by bigness and \cref{thm:demailly-hermitian-input}. Put $K=v_+(\Omega)$. For $\delta>0$, set
+\[
+ b_\delta=1+\frac{\delta}{2^{n+1}nK},\qquad
+ \kappa_\delta=(1-b_\delta^{-1})\kappa.
+\]
+These constants will be fixed while the potentials and backgrounds vary.
+
+\begin{proposition}\label{prop:uniform-background-volume-comparison}
+Let $\beta$ be a smooth real $(1,1)$-form with $\theta\leq\beta\leq\theta+h$. Suppose $u\in\PSH(X,\beta)$ and $\underline{\operatorname{vol}}_\beta(u)\geq\delta>0$. For every smooth background $\gamma$ with $\beta\leq\gamma\leq\beta+\varepsilon h$, $0\leq\varepsilon\leq1$, either singularity volume satisfies
+\[
+ \operatorname{vol}_\beta(u)
+ \leq\operatorname{vol}_\gamma(u)
+ \leq(1+\varepsilon/\kappa_\delta)^n\operatorname{vol}_\beta(u).
+\]
+\end{proposition}
+\begin{proof}
+Normalize $u\leq0$, so $u\leq V_\beta$, and note that $\rho\leq V_\beta$. Since $\Omega\geq\beta$ and $\underline{\operatorname{vol}}_\beta(u)\geq\delta$, \cref{lem:positive-volume-stretch} makes $H=Q_{b_\delta}(u,V_\beta)$ genuine. The potential
+\[
+ w=b_\delta^{-1}H+(1-b_\delta^{-1})\rho
+\]
+satisfies $w\leq u$ and $\beta+\ddc w\geq\kappa_\delta h$. The addition argument of \cref{prop:positive-volume-background-comparison}, with $t=\varepsilon/\kappa_\delta$, therefore gives the upper bound. Its constants are independent of $\beta$ and $u$. The lower bound is volume monotonicity.
+\end{proof}
+
+\begin{corollary}\label{cor:vanishing-background-comparison}
+Let $u,v\in\PSH(X,\theta)$ have lower volume at least $\delta>0$, and let $\eta$ be a smooth background with $\theta\leq\eta\leq\theta+\varepsilon h$, where $0\leq\varepsilon\leq1$. Then
+\begin{equation}\label{eq:vanishing-background-comparison}
+ \left|d_\eta(P_\eta[u],P_\eta[v])-d_\theta(u,v)\right|
+ \leq2K\left((1+\varepsilon/\kappa_\delta)^n-1\right).
+\end{equation}
+\end{corollary}
+\begin{proof}
+The preceding proposition applies to $u$, $v$ and $m=\max(u,v)$, and their upper volumes in background $\theta$ are at most $K$. Thus, for $x=u,v,m$, the errors
+\[
+ e_x=\overline{\operatorname{vol}}_\eta(x)
+       -\overline{\operatorname{vol}}_\theta(x)
+\]
+lie between zero and $K((1+\varepsilon/\kappa_\delta)^n-1)$. The difference $d_\eta(u,v)-d_\theta(u,v)$ is $2e_m-e_u-e_v$, whose absolute value is at most twice this bound. Finally \cref{prop:model-volume-separation}, in background $\eta$, identifies $d_\eta(u,v)$ with the projected comparison in \eqref{eq:vanishing-background-comparison}.
+\end{proof}
+
+In particular, for $p_j,p\in\mathcal M_\delta(\theta)$ and $\theta\leq\eta_j\leq\theta+\varepsilon_jh$ with $\varepsilon_j\to0$,
+\[
+ d_\theta(p_j,p)\longrightarrow0
+ \quad\Longleftrightarrow\quad
+ d_{\eta_j}(P_{\eta_j}[p_j],P_{\eta_j}[p])\longrightarrow0.
+\]
+Monotonicity of the sequence of backgrounds is unnecessary for this estimate. The next result also allows the analytic approximants themselves to belong only to the larger backgrounds.
+
+\begin{theorem}\label{thm:analytic-approximation-curvature-error}
+Let $p=P_\theta[p]$ have positive lower volume, and let $\eta_j$ be smooth backgrounds with $\theta\leq\eta_j\leq\theta+\varepsilon_jh$, where $\varepsilon_j\geq0$ tends to zero. Then $p=P_\theta[p]_{\mathcal I}$ if and only if there are analytic $a_j\in\PSH(X,\eta_j)$ with
+\[
+ d_{\eta_j}(a_j,p)\longrightarrow0.
+\]
+The $a_j$ may be required to be ordinary models in their respective backgrounds. Given any such analytic approximants, rational convex combinations with the fixed $\rho$ produce analytic $b_j\in\PSH(X,\theta)$ whose models satisfy
+\[
+ d_\theta(P_\theta[b_j],p)\longrightarrow0,
+ \qquad P_\theta[b_j]\longrightarrow p
+       \quad\text{in }L^1\text{ and capacity}.
+\]
+\end{theorem}
+\begin{proof}
+Suppose first that $p=P_\theta[p]_{\mathcal I}$. By \cref{thm:fixed-big-analytic-approximation}, there are analytic ordinary models $r_j$ in background $\theta$ with $d_\theta(r_j,p)\to0$ and a common positive lower-volume bound. Applying \cref{cor:vanishing-background-comparison} gives $d_{\eta_j}(r_j,p)\to0$. One can also use $a_j=P_{\eta_j}[r_j]$, since the analytic-envelope identity preserves their ordinary types in background $\eta_j$.
+
+Conversely, normalize the given $a_j$ below zero and put $m_j=\max(a_j,p)$ and $\delta=\underline{\operatorname{vol}}_\theta(p)>0$. The basic comparison bound and the preceding uniform volume estimate give
+\[
+ \overline{\operatorname{vol}}_{\eta_j}(a_j),\quad
+ \overline{\operatorname{vol}}_{\eta_j}(m_j)
+       \longrightarrow\overline{\operatorname{vol}}_\theta(p).
+\]
+Indeed the upper volume of $p$ in background $\eta_j$ tends to its upper volume in background $\theta$, and both displayed differences from that volume are bounded in absolute value by $d_{\eta_j}(a_j,p)$.
+
+\Needspace{6\baselineskip}
+Enlarge the errors to positive rational numbers tending to zero, and put
+\[
+ c_j=\frac{\kappa}{\kappa+\varepsilon_j},\qquad
+ b_j=c_ja_j+(1-c_j)\rho,\qquad r_j=P_\theta[b_j].
+\]
+As in \cref{thm:fixed-big-analytic-approximation}, the current of $b_j$ in background $\theta$ is positive and its singularities are analytic. Choose $A>0$ with $\theta\leq Ah$, and set
+\[
+ \widehat\theta_j=\theta+(1+A/\kappa)\varepsilon_jh,
+ \qquad M_j=P_{\widehat\theta_j}[m_j].
+\]
+Then $\widehat\theta_j\geq\eta_j$ and $c_j\widehat\theta_j\geq\theta$. Since $r_j\simeq b_j$, the potential $r_j/c_j$ is a nonpositive $\widehat\theta_j$-plurisubharmonic competitor more singular than $a_j$, hence more singular than $m_j$. Therefore $r_j\leq c_jM_j$. Also $p\leq M_j\leq c_jM_j$.
+
+The lower volume of $m_j$ in background $\eta_j$ is at least $\delta$. For large $j$, \cref{prop:uniform-background-volume-comparison} applies with $\beta=\eta_j$, $\gamma=\widehat\theta_j$ and perturbation bound $(1+A/\kappa)\varepsilon_jh$. Consequently
+\[
+ \overline{\operatorname{vol}}_{\widehat\theta_j}(m_j)
+       \longrightarrow\overline{\operatorname{vol}}_\theta(p).
+\]
+The ordinary-envelope theorem gives the same upper volume for $M_j$. On the other hand,
+\[
+ c_j\eta_j+(1-c_j)(\theta-\kappa h)\leq\theta.
+\]
+Addition and background monotonicity therefore bound the upper volume of $b_j$ below by $c_j^n\overline{\operatorname{vol}}_{\eta_j}(a_j)$. Since $r_j\simeq b_j$, the two comparisons yield
+\[
+ \begin{split}
+ c_j^n\overline{\operatorname{vol}}_{\eta_j}(a_j)
+ &\leq\overline{\operatorname{vol}}_\theta(r_j)
+ \leq\overline{\operatorname{vol}}_\theta(\max(r_j,p))\\
+ &\leq c_j^n\overline{\operatorname{vol}}_{\widehat\theta_j}(m_j).
+ \end{split}
+\]
+Both outer terms tend to $\overline{\operatorname{vol}}_\theta(p)$, proving $d_\theta(r_j,p)\to0$. The analytic criterion \cref{thm:analytic-model-volume-criterion} gives $p=P_\theta[p]_{\mathcal I}$.
+
+For large $j$, \cref{lem:volume-deficit-stretch} with $b=2$ supplies a convex lower bound for $r_j$ whose first term is $\frac12\max(r_j,p)$. Volume addition gives $\underline{\operatorname{vol}}_\theta(r_j)\geq2^{-n}\delta$. Thus \cref{prop:model-volume-separation,thm:model-volume-capacity-convergence} give the asserted $L^1$ and capacity convergence of the models.
+\end{proof}
+
+The comparison is unchanged by bounded changes of the approximating potentials. The convergence of canonical models in the theorem therefore does not assert convergence of arbitrary analytic representatives. The allowed background error is an increase tending to zero; a general two-sided change requires a choice of admissible reference potentials in the varying backgrounds.
