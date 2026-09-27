@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint225: Read all thirteen pages and complete proofs of the newly discovered Q4.1 source, reconcile its operator/ideal and analytic-coefficient conventions, reconstruct the supported ordinary-type uniform topology in the book, and update the topology questions only to the extent actually proved. Keep nonseparation on ordinary classes distinct from the complete canonical-model metrics. The chapter reconciliation through front matter is complete at its recorded scopes. The new source was discovered by rechecking the expanded original archive; see source-ledger-review-225.md.
+Current next unit after checkpoint226: Reconcile complete Chapter 15 after the ordinary-type topology integration, including all four recursive author inputs and its Chapter 1 and Chapter 29 interfaces. Keep the ideal L1 completion, the nonseparated ordinary uniformity and the complete model metrics distinct; investigate fixed-zero-obstacle gauge compatibility without treating paired-obstacle transport as its proof. The Q4.1 bounded integration is recorded in ordinary-type-topology-integration-226.md; prior whole-chapter review scopes remain unchanged.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

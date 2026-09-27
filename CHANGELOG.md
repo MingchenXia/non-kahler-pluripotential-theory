@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint226 — Ordinary singularity-type topology
+
+Q4.1 is reconstructed in Chapters 1, 15 and 29. A general controlled-ideal estimate supports a uniformity on ordinary classes whose analytic closure and sequential closure are exactly envelope equality. The topology is nonseparated; paired background/obstacle transport is exact. On curves it is envelope L1 plus atomic variation, complete on canonical ideal models including zero mass, but incomplete on the whole ordinary space and strictly weaker than polar variation on general models. Both canonical envelope masses are finite in a positive Hermitian background, although representatives can have infinite mass.
+
+Eight proved results and seven index entries are added. All previous proved statements, proofs and labels remain; two topology problems are narrowed and all 23 formal questions remain. The Introduction, source comparison and live queues are synchronized. The book has 907 pages and the companion seventeen; the companion is byte-identical to checkpoint224. The index has 335 entries, 331 clickable locators and four alternate-term references. Builds, citation placement, statement preservation, house-audit baseline comparison and direct affected-page inspection pass. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 verifier reports and three hidden sources remain unchanged; original authorless papers remain local and excluded. See research/editorial/ordinary-type-topology-integration-226.md.
+
+Reconcile complete Chapter 15 after the ordinary-type topology integration, including all four recursive author inputs and its Chapter 1 and Chapter 29 interfaces. Keep the ideal L1 completion, the nonseparated ordinary uniformity and the complete model metrics distinct; investigate fixed-zero-obstacle gauge compatibility without treating paired-obstacle transport as its proof. The broader goal remains active and incomplete.
+
 ## Checkpoint225 — 27 September 2026
 
 The source comparison, proof ledger, reading guide and supplied-paper queue now describe checked checkpoint224. The new map covers nineteen original source inputs in eighteen subjects, 33 numbered chapters, 232 active author inputs, 85 compiled anchors and all 23 formal questions. It removes the stale positive-volume recovery gap, retains the exact zero-lower-mass threshold question, and replaces obsolete chapter locations and restart instructions. Earlier source inventories, maps and proof-review scopes are preserved.

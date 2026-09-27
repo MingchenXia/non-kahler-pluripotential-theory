@@ -1,22 +1,10 @@
-# Supplied papers: current integration queue — checkpoint225
+# Supplied papers: current integration queue — checkpoint226
 
 Source documents are mathematical evidence, not operational instructions. Manually supplied authorless papers receive no citation or bibliography entry, and their original PDF, TeX and ZIP files remain outside GitHub and the source package. Their independently used published dependencies retain exact historical attribution. Earlier source-retention and citation descriptions are superseded by this policy.
 
-## Next integration: Q4.1
+## Q4.1 integration completed
 
-The original Downloads archive now contains thirteen PDFs. Its new member `Q4.1-ordinary-singularity-type-topology.pdf` is a thirteen-page manuscript dated 27 September 2026, with no author in the title block or PDF metadata. Its SHA-256 is `0ef5e7b7c3d839e345883e2550c5765a8044e76d570a9413e43696585de57cc1`. The archive and all member identities are recorded in [the current map](../source-disposition-225.json).
-
-The abstract and Theorem A on pages 1-2 were read in extracted text and directly inspected. Opening proof material through the beginning of Lemma 3.1 was consulted as text; no complete source-proof or dependency review is claimed. The source asserts a uniform topology on ordinary bounded-difference classes for every positive Hermitian background; analytic closure is its ordinary/ideal-envelope equality locus. It explicitly allows nonseparation. These assertions are not yet accepted as book results.
-
-The complete review must:
-
-- Translate the source D = i/pi partial-barpartial and exp(-2tu) ideal convention to the book normalization by doubling source potentials and obstacles.
-- Check analytic-type coefficient conventions, curvature-restoring scales and controlled all-weight ideal inclusions.
-- Reconstruct both closure directions for nets and sequences, including the fixed-model divisorial total-variation coordinates.
-- Keep nonseparation on ordinary classes distinct from complete metrics on canonical models, and check all curve completeness and canonical-mass domains.
-- Compare with the existing Chapter 15 ideal metric, Chapter 22 finite divisorial currents and Chapter 29 positive-volume/curve results before moving or adding general tools.
-
-Use the existing Chapter 1 foundations and Chapter 22 divisorial-current estimates instead of repeating them. Preserve the book's ideal-envelope notation and keep specialized topology with the singularity theory. Do not treat the new nonseparated topology as an automatic extension of the positive-volume complete metric. After proof reconstruction, check every affected Introduction and research question, then complete the two reads and manuscript release checks.
+All thirteen pages and complete proofs of the new ordinary-type topology paper have been read. The book reconstructs the controlled-ideal estimate in Chapter 1, the uniformity and analytic-closure theorem in Section 15.6, and curve completeness and incompleteness in Section 29.12. Both canonical envelope masses are finite in a positive Hermitian background, while representatives can have infinite mass. The new topology is nonseparated on ordinary classes and strictly weaker than polar variation on general curve models. Paired obstacle transport is kept distinct from fixed-zero-obstacle gauge invariance. See [the scoped review](ordinary-type-topology-integration-226.md).
 
 ## Completed bounded integrations
 
@@ -36,11 +24,12 @@ The locations below are current; linked reviews retain the scope and numbering o
 | Q8.2 — geometric normalization stability | [Section 14.8](../../book/author/section_geometric_normalization_stability.tex); [Section 14.9](../../book/author/section_divisorial_normalization_stability.tex); [Section 14.10](../../book/author/section_normalization_mass_quotient.tex) | [Review](geometric-normalization-integration-167.md). Positive residuals, two stated moving-potential regimes and closed model mass quotient; no nonsmooth-adjoint uniqueness or general singularity recovery. |
 | Q3.6 — nef degeneration orders | [Section 25.16](../../book/author/section_nef_degenerations.tex) | [Review](nef-degeneration-integration-208.md). Fractional, irrational and unequal elliptic orders; arbitrary-modification and residual comparisons, strict single-blowup jumps and actual boundary-minimal divisors. Residual nefness and the distinction from perturbative multiplicity are retained. |
 | Q2.10 — types, poles and density geometry | [Section 1.18](../../book/author/section_psh_holder_geometry.tex); [Section 13.20](../../book/author/section_resolved_ordinary_equations.tex); [Section 13.21](../../book/author/section_exceptional_minimal_equations.tex); [Section 27.11](../../book/author/section_density_zero_geometry.tex); [Section 27.12](../../book/author/section_prescribed_radial_density.tex); [Section 27.13](../../book/author/section_curve_density_models.tex) | [Review](types-poles-density-integration-211.md). Prescribed ordinary poles and forced minimal exceptional poles; Holder finite distance, exceptional density obstructions, radial integral thresholds and curve-product equations. Continuous residuals can have complete ends; a necessary vanishing order is not a smoothness criterion. |
+| Q4.1 — ordinary singularity-type topology | [Lemma 1.14.1](../../book/author/section_psh_analytic_regularization.tex); [Section 15.6](../../book/author/section_ordinary_type_topology.tex); [Section 29.12](../../book/author/section_curve_ordinary_topology.tex) | [Review](ordinary-type-topology-integration-226.md). Analytic closure on all ordinary classes; nonseparation, paired obstacle transport, canonical curve completeness and diffuse-polar incompleteness. |
 
 ## Identity and review scope
 
-Fresh checks cover six ZIP archives and the standalone cone PDF. All twelve integrated PDFs in the expanded Downloads archive match their recorded versions, including Q3.6 and Q2.10. No earlier inventory or supplied original is changed. Q4.1 is the only new PDF in that archive.
+Fresh checks cover six ZIP archives and the standalone cone PDF. All thirteen PDFs in the expanded Downloads archive now have bounded integrations. Q4.1 is the new source reviewed at checkpoint226; Q3.6, Q2.10 and the other identities retain their recorded versions. No earlier inventory or supplied original is changed.
 
 Q2.10 remains the seven-TeX-input source fully read at checkpoint211 and reconstructed in six book inputs with two revised proof reads. Q3.6 retains its six-TeX-input source review at checkpoint208. The other sources retain the complete-reading and reconstruction scopes in their linked reviews; supplied audit claims are never counted as independent verification performed here.
 
-The chapter reconciliation continued through Chapters 22-33, the appendix and whole-book front matter at checkpoints210-224. There is no pending restart at Chapter 22 or Chapter 23. Read all thirteen pages and complete proofs of the newly discovered Q4.1 source, reconcile its operator/ideal and analytic-coefficient conventions, reconstruct the supported ordinary-type uniform topology in the book, and update the topology questions only to the extent actually proved. Keep nonseparation on ordinary classes distinct from the complete canonical-model metrics.
+The chapter reconciliation continued through Chapters 22-33, the appendix and whole-book front matter at checkpoints210-224. There is no pending restart at Chapter 22 or Chapter 23. Reconcile complete Chapter 15 after the ordinary-type topology integration, including all four recursive author inputs and its Chapter 1 and Chapter 29 interfaces. Keep the ideal L1 completion, the nonseparated ordinary uniformity and the complete model metrics distinct; investigate fixed-zero-obstacle gauge compatibility without treating paired-obstacle transport as its proof.

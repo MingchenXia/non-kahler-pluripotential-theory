@@ -1,0 +1,142 @@
+\section{A topology on ordinary singularity types}
+\label{sec:ordinary-type-topology}
+
+The two envelopes retain different parts of a singularity. Requiring both to converge makes their equality a closed condition. Controlled ideal inclusions and total variation of divisorial orders supply additional coordinates that the dyadic approximation can satisfy in a fixed Hermitian background. Together they give an analytic-closure criterion on the whole space of ordinary types.
+
+Fix a Hermitian form $\omega$ on connected compact $X$ and write
+\[
+ \mathfrak S(X,\omega)=\PSH(X,\omega)/{\sim}.
+\]
+In this section $[u]$ denotes the ordinary bounded-difference class. For each smooth compact modification $\pi:Y\to X$, fix a Hermitian form $\gamma_\pi$ on $Y$. For a prime divisor $E\subset Y$, set $w_E=\int_E\gamma_\pi^{n-1}$ and use the generic number $\nu_E(u)=\nu(u\circ\pi,E)$ of \cref{sec:psh-divisorial-estimates}.
+
+\begin{lemma}\label{lem:fixed-model-divisorial-variation}\index{Divisor!total variation on a fixed model}
+For $u,v\in\PSH(X,\omega)$, the sum
+\begin{equation}\label{eq:fixed-model-divisorial-variation}
+ d_\pi([u],[v])=\sum_{E\subset Y\text{ prime}}w_E|\nu_E(u)-\nu_E(v)|
+\end{equation}
+is finite and defines a pseudometric on $\mathfrak S(X,\omega)$. Changing $\gamma_\pi$ gives an equivalent pseudometric on this fixed model.
+\end{lemma}
+\begin{proof}
+The current $T=\pi^*\omega+\ddc(u\circ\pi)$ is positive. Divisorial removal in \cref{lem:nonclosed-divisorial-removal} gives, for every finite family of prime divisors,
+\[
+ \sum_Ew_E\nu_E(u)\leq\int_YT\wedge\gamma_\pi^{n-1}<\infty.
+\]
+Taking the supremum over finite families proves summability and countability of the positive coefficients. Apply the same bound to $v$. Bounded changes preserve the coefficients, and the triangle inequality holds term by term. On compact $Y$, two Hermitian forms bound one another by fixed positive multiples, so their divisor weights do also.
+\end{proof}
+
+For $t>0$ and $a>1$, let
+\begin{equation}\label{eq:controlled-ideal-entourage}
+ \mathcal U(t,a)=\{([u],[v]):\mathcal I(atu)\subseteq\mathcal I(tv),\quad
+                         \mathcal I(atv)\subseteq\mathcal I(tu)\}.
+\end{equation}
+These are relations between ordinary classes, since a bounded change leaves each ideal unchanged. Define two further pseudometrics by
+\[
+ \begin{split}
+ d_O([u],[v])&=\|P_\omega[u]-P_\omega[v]\|_{L^1(\mathrm dV)},\\
+ d_I([u],[v])&=\|P_\omega[u]_{\mathcal I}-P_\omega[v]_{\mathcal I}\|_{L^1(\mathrm dV)}.
+ \end{split}
+\]
+
+\begin{proposition}\label{prop:ordinary-type-uniformity}\index{Singularity type!uniform topology}
+Finite intersections of the relations $d_O<r$, $d_I<r$, $d_\pi<r$ and $\mathcal U(t,a)$, with $r,t>0$ and $a>1$, form a base of entourages for a uniformity on $\mathfrak S(X,\omega)$. Denote its topology by $\tau_{\omega,0}$. A net $[u_j]$ converges to $[u]$ precisely when both envelopes converge in $L^1$, $d_\pi([u_j],[u])\to0$ for every fixed $\pi$, and $([u_j],[u])\in\mathcal U(t,a)$ eventually for every fixed $t,a$. Smooth positive choices of $\mathrm dV$ and of the $\gamma_\pi$ do not change the uniformity.
+\end{proposition}
+\begin{proof}
+All generators are symmetric and contain the diagonal. Multiplier ideals decrease with the weight: locally subtract an upper bound from a potential to see this from integrability. For $b=\sqrt a$, put $\mathcal V=\mathcal U(t,b)\cap\mathcal U(bt,b)$. If $(x,y),(y,z)\in\mathcal V$, then
+\[
+ \mathcal I(atx)\subseteq\mathcal I(bty)\subseteq\mathcal I(tz),
+\]
+and the same argument with $x,z$ exchanged proves $\mathcal V\circ\mathcal V\subseteq\mathcal U(t,a)$. Halving a pseudometric radius gives the corresponding composition refinement. A finite intersection of these refinements proves the uniformity axiom. Its convergence criterion is exactly eventual membership in each generating entourage. Bounded ratios of smooth positive volumes and \cref{lem:fixed-model-divisorial-variation} prove independence of the auxiliary choices.
+\end{proof}
+
+Each entourage involves finitely many fixed models. The definition does not require a countable cofinal family of modifications or simultaneous uniform convergence over all models.
+
+\subsection{Analytic closure}
+
+Let $\mathcal A_\omega$ be the ordinary classes with analytic singularities in the rational-coefficient convention of \cref{sec:analytic-types}. The curvature correction in \cref{cor:fixed-hermitian-analytic-density} preserves this convention. The next theorem also retains the ideal weights affected by that correction.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:ordinary-topology-analytic-closure}\index{Analytic singularity!closure in the ordinary-type topology}
+The closure and sequential closure of $\mathcal A_\omega$ in $\tau_{\omega,0}$ are both
+\begin{equation}\label{eq:ordinary-topology-analytic-closure}
+ \mathcal G_\omega=\{[u]:P_\omega[u]=P_\omega[u]_{\mathcal I}\}.
+\end{equation}
+For every $u\in\PSH(X,\omega)$, the dyadic sequence $b_j$ of \cref{cor:fixed-hermitian-analytic-density} satisfies
+\[
+ [b_j]\longrightarrow[u]\text{ in }\tau_{\omega,0}
+ \quad\Longleftrightarrow\quad [u]\in\mathcal G_\omega.
+\]
+The approximants may be chosen with one positive rational analytic coefficient on all charts.
+\end{theorem}
+\begin{proof}
+Use the notation there: $m_j=2^j$, $a_j$ has type $(1/m_j,\mathcal I(m_ju))$, $c_j=(1+\epsilon_j)^{-1}\uparrow1$ is rational, and $b_j=c_ja_j$. Its ordinary and ideal envelopes agree and decrease to $P_\omega[u]_{\mathcal I}$. Thus the two envelope coordinates converge to those of $u$ precisely when $[u]\in\mathcal G_\omega$.
+
+Fix $t>0$, $a>1$, and choose $1<s<a$. For large $j$, $ac_j>s$ and $m_j\geq st/(s-1)$. By \cref{lem:bergman-controlled-ideals},
+\[
+ \mathcal I(atb_j)=\mathcal I(atc_ja_j)
+ \subseteq\mathcal I(sta_j)\subseteq\mathcal I(tu).
+\]
+Since $u\preceq a_j\preceq b_j$, the reverse relation $\mathcal I(atu)\subseteq\mathcal I(tb_j)$ holds for every $j$. The scale $c_j$ belongs inside the first ideal weight.
+
+For a divisor $E$ on a fixed $\pi$, the Bergman divisorial estimate gives
+\[
+ c_j\max\left\{\nu_E(u)-\frac{A(E)}{m_j},0\right\}
+ \leq\nu_E(b_j)\leq c_j\nu_E(u)\leq\nu_E(u).
+\]
+Here $A(E)$ is the log discrepancy, computed over a coordinate neighborhood of its center. Each coefficient converges to $\nu_E(u)$. The summability in \cref{lem:fixed-model-divisorial-variation} therefore gives $d_\pi([b_j],[u])\to0$ by dominated convergence. This proves every remaining coordinate of convergence.
+
+Finally analytic classes have equal envelopes by \cref{prop:analytic-envelope-type}. The map $[u]\mapsto(P_\omega[u],P_\omega[u]_{\mathcal I})$ is continuous into $L^1\times L^1$, whose diagonal is closed. Thus any limit of analytic nets lies in $\mathcal G_\omega$. The constructed sequence gives the converse and the sequential assertion.
+\end{proof}
+
+\subsection{Separation and mass}
+
+The topology is defined before identifying classes with their ordinary envelopes. Those envelopes can coincide for distinct ordinary types.
+
+\begin{proposition}\label{prop:ordinary-topology-nonseparation}\index{Singularity type!nonseparation}
+Two classes have the same $\tau_{\omega,0}$ neighborhoods if and only if their ordinary envelopes coincide. If $\dim X>0$, this topology is not $T_0$ and cannot be induced by a metric on $\mathfrak S(X,\omega)$.
+\end{proposition}
+\begin{proof}
+The $d_O$ coordinate distinguishes different ordinary envelopes. Conversely, equal ordinary envelopes have equal multiplier ideals at every weight by \cref{cor:ordinary-preserves-i}. Their ideal envelopes and all divisorial coefficients therefore agree, so every generating entourage has identical sections at the two classes.
+
+To produce distinct such classes, choose a cutoff logarithmic pole $w\leq0$ supported in a coordinate ball, with $w$ plurisubharmonic near its pole and smooth on the cutoff annulus. A small positive multiple makes $w\in\PSH(X,\omega)$. Put $\chi(s)=1-\sqrt{1-s}$ for $s\leq0$ and $u=\chi(w)$. The inequalities $0<\chi'\leq1/2$ and $\chi''\geq0$, applied first to bounded truncations, give $u\in\PSH(X,\omega)$. Near the pole, $u$ has magnitude comparable to $\sqrt{-\log|z|^2}$, so it is unbounded and $\mathrm e^{-tu}$ is integrable for every $t>0$. All its multiplier ideals are trivial and $P_\omega[u]_{\mathcal I}=0$.
+
+For every $0<\delta\leq1$, the function $\delta s-\chi(s)$ is bounded above on $(-\infty,0]$. Hence $\delta w\preceq u$ and $\delta w$ is an ordinary-envelope competitor. Letting $\delta\downarrow0$ off the pole gives $P_\omega[u]=0$. Thus $[u]\ne[0]$ have the same neighborhoods. In dimension zero the connected manifold is a point and the ordinary-type space is a singleton.
+\end{proof}
+
+The extended measures of \cref{thm:arbitrary-extended-ma} give two canonical mass labels
+\[
+ \int_X\mathrm{MA}_\omega(P_\omega[u]),\qquad
+ \int_X\mathrm{MA}_\omega(P_\omega[u]_{\mathcal I}).
+\]
+In the present positive background, both are at most $\int_X\omega^n$. For the ideal envelope this follows from \cref{cor:ordinary-preserves-i,prop:fixed-point-finite}. For the ordinary envelope, normalize $u\leq0$ and put $p_j=P_\omega(u+j,0)$ and $p=P_\omega[u]$. Then $p_j\to p$ in capacity by \cref{lem:monotone-psh-capacity}. For $k>0$, set $\eta_k=\min\{1,(u+k)_+\}$. If $j>k$, the contact with $u+j$ lies outside $\{\eta_k>0\}$, so \cref{prop:rooftop-measure} gives $\eta_k\mathrm{MA}_\omega(p_j)\leq\eta_k\omega^n$. Test against a nonnegative continuous function and apply \cref{lem:weighted-extended-lsc} to obtain the same inequality for $p$. Letting $k\to\infty$ proves $\mathrm{MA}_\omega(p)\leq\omega^n$, since the remaining set $\{u=-\infty\}$ is pluripolar.
+
+The original representative can nevertheless have infinite mass: \cref{prop:goodness-infinite-mass} gives such a $u$ with both envelopes equal to zero. The topology and its analytic-closure criterion include this ordinary class. A mass condition on the representative is therefore unnecessary, while infinite canonical mass does not arise for these two envelopes in a positive Hermitian background.
+
+\subsection{Transport with an obstacle}
+
+For a smooth real obstacle $F$, write $P_{\omega,F}[u]$ and $P_{\omega,F}[u]_{\mathcal I}$ for the same ordinary and ideal envelopes with $v\leq F$ in place of $v\leq0$. Their competitor families contain a translate of $u$. Replacing a competitor by its maximum with this translate shows that the ideal envelope can equivalently use $v\preceq_{\mathcal I}u$. Define $\tau_{\omega,F}$ by replacing the two envelope coordinates in \cref{prop:ordinary-type-uniformity} by these obstacle envelopes.
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:ordinary-topology-background-transport}
+Let $\chi\in C^\infty(X,\mathbb R)$ and $\omega'=\omega+\ddc\chi>0$. The map $[u]\mapsto[u-\chi]$ is a uniform isomorphism
+\[
+ (\mathfrak S(X,\omega),\tau_{\omega,F})
+ \longrightarrow(\mathfrak S(X,\omega'),\tau_{\omega',F-\chi}).
+\]
+For $s>0$, $[u]\mapsto[su]$ is a uniform isomorphism from $\tau_{\omega,F}$ to $\tau_{s\omega,sF}$. Both assertions transport the ordinary and ideal envelopes exactly.
+\end{proposition}
+\begin{proof}
+For either envelope operator $P$, its competitors give
+\[
+ P_{\omega',F-\chi}[u-\chi]=P_{\omega,F}[u]-\chi,
+ \qquad P_{s\omega,sF}[su]=sP_{\omega,F}[u].
+\]
+Smooth additions leave all ideals and divisorial numbers unchanged. Scaling multiplies the divisorial and envelope distances by $s$ and reindexes the ideal weights by $t\mapsto st$. Each map and its inverse therefore transport the generating entourages.
+\end{proof}
+
+For two smooth obstacles, translation of competitors gives
+\[
+ P_{\omega,F}[u]+\min_X(G-F)
+ \leq P_{\omega,G}[u]
+ \leq P_{\omega,F}[u]+\max_X(G-F),
+\]
+with the same inequalities for ideal envelopes. In particular, using zero obstacles in both backgrounds yields $P_{\omega',0}[u-\chi]=P_{\omega,\chi}[u]-\chi$, and its difference from $P_{\omega,0}[u]$ is bounded by $\operatorname{osc}_X\chi$. This bound alone does not identify the two fixed-zero-obstacle topologies. The paired transport above keeps the changed obstacle explicit. The associated extended measures satisfy $\mathrm{MA}_{\omega'}(u-\chi)=\mathrm{MA}_\omega(u)$ and $\mathrm{MA}_{s\omega}(su)=s^n\mathrm{MA}_\omega(u)$ by the local construction in \cref{thm:arbitrary-extended-ma}, including at infinite total mass.
