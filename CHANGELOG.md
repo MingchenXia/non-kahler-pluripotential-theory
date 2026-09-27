@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint204 — 27 September 2026
+
+New Section 29.13 compares all ordinary curve models across smooth positive backgrounds, including zero non-pluripolar mass. Rescaling polar curvature by the area ratio gives compatible homotheties commuting with ideal projection. Fixed polar data give an isometry on the common admissible range. A smooth-gauge obstacle bound controls normalized representatives, yielding uniform L1 and capacity continuity over the entire model space when the backgrounds converge uniformly. Analytic models are preserved by rational area ratios; an irrational ratio need not preserve rational analytic coefficients. Chapters 15, 32 and 33 record the implications and proof mechanism.
+
+The complete new Section 29.13 receives two direct mathematical/editorial reads, the second after the first build and visual inspection. The Chapter 29 opening and Chapters 15/32/33 interfaces receive bounded reviews. Three statements and proofs and seven labels are added. All fifty-one prior Chapter 29 statements and forty-eight proofs are byte-identical. Four author inputs change; all prior labels, the bibliography and input graph remain. No new external premise, full external proof audit, novelty claim or independent verification is introduced. See research/editorial/curve-backgrounds-204.md and research/audits/curve-backgrounds-204.json.
+
+The 859-page book and seventeen-page companion compile without errors, unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph and template warning remain. The scoped house audit has zero errors and 29 inherited warnings. All 36 selected final pages pass visual review: 1 changed image directly inspected and 35 identical to an inspected preceding render. The first review directly inspects 17 images. The companion is byte-identical to checkpoint203. The 33-chapter, 221-input graph remains unchanged. Both outputs rebuild from a fresh empty source extraction with identical page text. The 190 historical verifier reports and three hidden sources are unchanged.
+
+Extend the curve model description to arbitrary smooth backgrounds of nonnegative total area, and analyze collapse at zero area. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint203 — 27 September 2026
 
 Section 29.12 now proves that metric convergence of normalized ordinary curve models implies L1 and capacity convergence, including zero-mass limits. At zero mass, full curvature currents converge in total variation with an explicit bound. Chapter 1 supplies the local variation-capacity estimate. Weak curvature convergence is distinguished from capacity convergence, and a moving pole on the projective line gives capacity convergence at constant model distance 2. Chapters 15, 32 and 33 record the implications and proof mechanism.
