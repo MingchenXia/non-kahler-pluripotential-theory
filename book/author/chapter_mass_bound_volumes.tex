@@ -1,7 +1,7 @@
 \chapter{Volumes under bounded mass}
 \label{chap:mass-bound-volumes}
 
-For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On normalized models with a common positive lower-volume bound, comparison through maxima and rooftops yields Cauchy completeness and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion.
+For a nonclosed background, a potential's Monge--Ampère mass can vary within its ordinary singularity type. Upper and lower singularity volumes retain the comparisons needed for envelopes. Under bounded mass, upper-volume deficits control stretching, while a positive lower volume prevents collapse. This links relative full mass to ordinary envelopes and gives continuity along monotone families. On positive-volume models, comparison through maxima and rooftops yields a complete metrizable topology and capacity convergence. Analytic regularization then characterizes the ideal envelope models among these limits. Strict barriers and convex correction transport these models through small two-sided background changes, preserving the limiting comparison and analytic criterion.
 
 Assume throughout this chapter that $X$ has bounded mass, and fix a big smooth real $(1,1)$-form $\theta$. We use the volumes of \cref{def:singularity-volumes}.
 
@@ -737,7 +737,7 @@ For each normalized competitor for $P_\theta[h]$, the corresponding convex combi
 Hence $\int_X(m-u)\,\mathrm{d}V\leq tC_\theta$, because $m\leq0$ and $P_\theta[h]$ has supremum zero. Applying the same argument to $v$ and adding gives the estimate. If $s=0$, use any $t\in(0,1)$ and let $t\downarrow0$.
 \end{proof}
 
-The next bound supplies a uniform modulus for three-point comparisons. It does not assert the triangle inequality for $d_\theta$.
+The next bound supplies a uniform modulus for three-point comparisons. The triangle inequality itself fails, as \cref{ex:model-comparison-triangle-failure} shows.
 
 \begin{proposition}\label{prop:model-volume-comparison-modulus}
 For $u,v,w\in\mathcal M_\delta(\theta)$,
@@ -1367,4 +1367,157 @@ Put $\beta_j=\theta+\varepsilon_jh$. \Cref{lem:nearby-background-volume-comparis
 Project the three inputs to ordinary models in background $\beta_j$. Their lower volumes have a common positive bound, and a fixed dominant Hermitian form bounds their upper volumes. The three-point estimate \eqref{eq:model-volume-comparison-modulus} therefore gives $d_{\beta_j}(a_j,p)\to0$, with constants independent of $j$. Apply \cref{thm:analytic-approximation-curvature-error} to conclude that $p$ is an ideal envelope model and to obtain the stated corrections and convergence in the original background.
 
 For another choice of transport, \cref{thm:two-sided-model-transport} gives comparison tending to zero between the two reference models in background $\eta_j$. The lower bound just proved and the same uniform three-point estimate transfer the convergence condition in both directions. This proves independence of the choice.
+\end{proof}
+
+\section{A complete metric on positive-volume models}
+\label{sec:model-volume-metrization}
+
+The three-point modulus controls convergence even though $d_\theta$ need not satisfy the triangle inequality. Intersecting divisors already show this on a projective surface. A complete metric can nevertheless be constructed from finite chains: lower-volume continuity controls the chain estimates locally, and the reciprocal lower volume prevents Cauchy sequences from escaping to the zero-volume boundary.
+
+\begin{example}\label{ex:model-comparison-triangle-failure}
+On $\mathbf P^2$ with its Fubini--Study form $\theta$ normalized by $\int_{\mathbf P^2}\theta^2=1$, there are analytic ordinary models $p,q,r$ of positive lower volume such that
+\[
+ d_\theta(p,q)>d_\theta(p,r)+d_\theta(r,q).
+\]
+\end{example}
+\begin{proof}
+Write $|Z|^2=|Z_0|^2+|Z_1|^2+|Z_2|^2$ in homogeneous coordinates. Fix a rational $a\in(0,1/2)$ and put
+\[
+ u=a\log\frac{|Z_0|^2}{|Z|^2},\qquad
+ v=a\log\frac{|Z_1|^2}{|Z|^2},\qquad w=u+v.
+\]
+The corresponding currents have residual forms $(1-a)\theta$, $(1-a)\theta$ and $(1-2a)\theta$, respectively. The background is closed, so each singularity volume equals the non-pluripolar mass. Discarding the divisors gives
+\[
+ U(u)=U(v)=(1-a)^2,\qquad U(w)=(1-2a)^2.
+\]
+The maximum $\max(u,v)$ has the ordinary type of
+\[
+ z=a\log\frac{|Z_0|^2+|Z_1|^2}{|Z|^2}.
+\]
+Blow up the common point $[0:0:1]$. Denote the blowup by $\pi:Y\to\mathbf P^2$, its exceptional divisor by $E$, and the pencil map $[Z_0:Z_1]$ by $f:Y\to\mathbf P^1$. For the Fubini--Study form $\omega_1$ of mass one on $\mathbf P^1$, the Poincar\'e--Lelong formula gives
+\[
+ \pi^*\theta+\ddc(z\circ\pi)=a[E]+\beta,
+ \qquad \beta=(1-a)\pi^*\theta+af^*\omega_1.
+\]
+Here $\beta$ is smooth and semipositive. Also
+\[
+ \int_Y(\pi^*\theta)^2=1,\qquad
+ \int_Y\pi^*\theta\wedge f^*\omega_1=1,\qquad
+ (f^*\omega_1)^2=0.
+\]
+The mixed integral is one because every fiber of the pencil maps to a line. By \cref{lem:bounded-residual-mass-polynomial} and change of variables off $E$,
+\[
+ U(\max(u,v))=\int_Y\beta^2=1-a^2.
+\]
+\Needspace{7\baselineskip}
+Since $w\leq u,v$, it follows that
+\[
+ \begin{split}
+ d_\theta(u,v)&=4a-4a^2,\\
+ d_\theta(u,w)+d_\theta(w,v)&=4a-6a^2.
+ \end{split}
+\]
+Set $p=P_\theta[u]$, $q=P_\theta[v]$ and $r=P_\theta[w]$. These models retain the analytic types by \cref{prop:analytic-envelope-type}, and their lower volumes are at least $(1-2a)^2$. Projection invariance in \cref{prop:model-volume-separation} preserves the displayed comparisons, whose difference is $2a^2>0$.
+\end{proof}
+
+Write $L(p)=\underline{\operatorname{vol}}_\theta(p)$ and let
+\[
+ \mathcal M_+(\theta)=\bigcup_{\delta>0}\mathcal M_\delta(\theta)
+\]
+be the space of ordinary models of positive lower volume. We retain $U$ and $M$ from \cref{sec:model-volume-comparison}.
+
+\begin{proposition}\label{prop:model-lower-volume-modulus}
+For $p,q\in\mathcal M_\delta(\theta)$,
+\begin{equation}\label{eq:model-lower-volume-modulus}
+ |L(p)-L(q)|\leq nM\min\left\{1,
+       \left(\frac{2d_\theta(p,q)}\delta\right)^{1/n}\right\}.
+\end{equation}
+If $p_j,p\in\mathcal M_+(\theta)$ and $d_\theta(p_j,p)\to0$, then $L(p_j)\to L(p)>0$.
+\end{proposition}
+\begin{proof}
+Put $s=d_\theta(p,q)$ and $m=\max(p,q)$. If $0<s<\delta/2$, take $t=(2s/\delta)^{1/n}$. The upper-volume deficit from either $p$ or $q$ to $m$ is at most $s$, while $L(m)\geq\delta$. Thus \cref{lem:volume-deficit-stretch} gives a potential $h\in\PSH(X,\theta)$ with
+\[
+ (1-t)m+th\leq p.
+\]
+Volume addition and monotonicity imply $L(p)\geq(1-t)^nL(m)\geq(1-t)^nL(q)$. Interchanging $p$ and $q$ and using $L(p),L(q)\leq M$ proves the bound. If $s\geq\delta/2$, use $|L(p)-L(q)|\leq M$. If $s=0$, separation gives $p=q$.
+
+For the last assertion, put $s_j=d_\theta(p_j,p)$. Whenever $0<s_j<L(p)/2$, the same stretching argument applied to $\max(p_j,p)$ gives
+\[
+ L(p_j)\geq(1-t_j)^nL(p),\qquad
+ t_j=\left(\frac{2s_j}{L(p)}\right)^{1/n}.
+\]
+If $s_j=0$, then $p_j=p$. Hence $L(p_j)\geq L(p)/2$ for all sufficiently large $j$. Apply \eqref{eq:model-lower-volume-modulus} with this common positive bound.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{theorem}\label{thm:positive-model-complete-metric}
+There is a complete metric $\mathfrak d_\theta$ on $\mathcal M_+(\theta)$ such that
+\begin{equation}\label{eq:positive-model-metric-convergence}
+ \mathfrak d_\theta(p_j,p)\longrightarrow0
+ \quad\Longleftrightarrow\quad d_\theta(p_j,p)\longrightarrow0.
+\end{equation}
+A sequence is $\mathfrak d_\theta$-Cauchy if and only if it is $d_\theta$-Cauchy and the sequence $1/L(p_j)$ is Cauchy in $\mathbf R$. On each $\mathcal M_\delta(\theta)$, the two comparisons are uniformly equivalent, and the restriction of $\mathfrak d_\theta$ is complete.
+\end{theorem}
+\begin{proof}
+Set $C=1+M$ and $m(p)=L(p)/C$, so $0<m(p)<1$. Put $a_1=1$, $a_{k+1}=na_k+1$, and choose $0<\varepsilon_1<1$. Recursively choose $\varepsilon_{k+1}>0$ so small that, with $r_k=4^{a_{k+1}}\varepsilon_{k+1}$,
+\[
+ 3\varepsilon_{k+1}<\varepsilon_k,\qquad
+ 3r_k+4nM\left(\frac{2r_k}{C}\right)^{1/n}<\varepsilon_k.
+\]
+Let $\mathcal U_0=\mathcal M_+(\theta)^2$ and, for $k\geq1$, set
+\[
+ \mathcal U_k=\left\{(p,q):
+ \left|\frac1{m(p)}-\frac1{m(q)}\right|<\varepsilon_k,
+ \quad d_\theta(p,q)<\varepsilon_k\min\{m(p),m(q)\}^{a_k}\right\}.
+\]
+These symmetric sets contain the diagonal, decrease with $k$, and have diagonal intersection. We claim that
+\begin{equation}\label{eq:model-metric-triple-composition}
+ \mathcal U_{k+1}\circ\mathcal U_{k+1}\circ\mathcal U_{k+1}
+ \subset\mathcal U_k\qquad(k\geq0),
+\end{equation}
+where composition means joining successive pairs. For $k=0$ this is immediate. For $k\geq1$, suppose $(p_{i-1},p_i)\in\mathcal U_{k+1}$ for $i=1,2,3$, and put $m_* =\min_{0\leq i\leq3}m(p_i)$. The reciprocal differences along this chain have total less than $3\varepsilon_{k+1}<1$. In particular $m(p_i)\leq4m_*$ for every $i$. Each successive comparison is therefore less than
+\[
+ e=r_k m_*^{a_{k+1}}.
+\]
+All four models have lower volume at least $Cm_*$. Applying \eqref{eq:model-volume-comparison-modulus} twice, with the last edge providing its error term, yields
+\[
+ \begin{split}
+ d_\theta(p_0,p_3)
+ &\leq3e+4nM\left(\frac{2e}{Cm_*}\right)^{1/n}\\
+ &\leq\left(3r_k+4nM\left(\frac{2r_k}{C}\right)^{1/n}\right)m_*^{a_k}\\
+ &<\varepsilon_k\min\{m(p_0),m(p_3)\}^{a_k}.
+ \end{split}
+\]
+Here $(a_{k+1}-1)/n=a_k$, $a_{k+1}\geq a_k$ and $m_*<1$. The endpoint reciprocal difference is less than $3\varepsilon_{k+1}<\varepsilon_k$, proving \eqref{eq:model-metric-triple-composition}.
+
+Define
+\begin{equation}\label{eq:positive-model-chain-metric}
+ \mathfrak d_\theta(p,q)=\inf\sum_{i=1}^N2^{-k_i},
+\end{equation}
+where the infimum runs over finite chains $p=p_0,p_1,\ldots,p_N=q$ and integers $k_i\geq0$ with $(p_{i-1},p_i)\in\mathcal U_{k_i}$. A single edge in $\mathcal U_0$ gives $\mathfrak d_\theta\leq1$. Reversing and concatenating chains gives symmetry and the triangle inequality, while diagonal edges with arbitrarily large indices give $\mathfrak d_\theta(p,p)=0$.
+
+We verify the chain bound
+\begin{equation}\label{eq:model-chain-entourage-bounds}
+ \{\mathfrak d_\theta<2^{-(k+1)}\}
+ \subset\mathcal U_k\subset\{\mathfrak d_\theta\leq2^{-k}\}
+ \qquad(k\geq1).
+\end{equation}
+The second inclusion follows from a single edge. For the first, we prove by induction on the number of edges that every chain of cost less than $2^{-k}$ has endpoints in $\mathcal U_{k-1}$, simultaneously for all $k\geq1$. The one-edge case follows from nesting. For a chain of cost $A<2^{-k}$, choose $l\geq k$ with
+\[
+ 2^{-(l+1)}\leq A<2^{-l}.
+\]
+Split the chain at the first edge at which the cumulative cost reaches $2^{-(l+1)}$. Both the preceding and the following subchains have cost less than $2^{-(l+1)}$. By induction their endpoint pairs lie in $\mathcal U_l$, with an empty subchain interpreted as a diagonal pair. Every edge cost is a power of two smaller than $2^{-l}$, so the middle edge lies in $\mathcal U_{l+1}\subset\mathcal U_l$. The triple-composition bound places the full endpoint pair in $\mathcal U_{l-1}\subset\mathcal U_{k-1}$. This proves the induction and \eqref{eq:model-chain-entourage-bounds}. Since the $\mathcal U_k$ have diagonal intersection, $\mathfrak d_\theta$ separates points.
+
+The inclusions \eqref{eq:model-chain-entourage-bounds} identify convergence for $\mathfrak d_\theta$ with eventual membership in every $\mathcal U_k$. This implies $d_\theta$ convergence. Conversely, if $d_\theta(p_j,p)\to0$, then \cref{prop:model-lower-volume-modulus} gives $L(p_j)\to L(p)>0$. For each fixed $k$, both inequalities defining $\mathcal U_k$ hold eventually. This proves \eqref{eq:positive-model-metric-convergence}.
+
+The same inclusions show that a $\mathfrak d_\theta$-Cauchy sequence is $d_\theta$-Cauchy and has Cauchy reciprocal lower volumes. Those reciprocals are bounded, so its tail lies in some $\mathcal M_\delta(\theta)$. By \cref{thm:model-volume-cauchy-completeness}, it converges there for $d_\theta$, hence for $\mathfrak d_\theta$. This proves completeness. Conversely, a $d_\theta$-Cauchy sequence with Cauchy reciprocal lower volumes has a common positive lower-volume bound on a tail. Both inequalities defining each $\mathcal U_k$ then hold uniformly on that tail, proving the stated Cauchy criterion.
+
+On $\mathcal M_\delta(\theta)$, \eqref{eq:model-lower-volume-modulus} controls the reciprocal differences uniformly in terms of $d_\theta$, while $m(p)\geq\delta/C$ controls the second threshold in $\mathcal U_k$. Thus the comparisons are uniformly equivalent there. Lower-volume continuity makes $\mathcal M_\delta(\theta)$ closed for $\mathfrak d_\theta$, so its restriction is complete.
+\end{proof}
+
+\begin{corollary}\label{cor:positive-ideal-metric-completion}
+The ideal envelope models form a closed complete subspace of $(\mathcal M_+(\theta),\mathfrak d_\theta)$. Positive-volume analytic ordinary models are dense in this subspace. Equivalently, this subspace is the metric completion of the positive-volume analytic ordinary models with the restricted metric.
+\end{corollary}
+\begin{proof}
+By \cref{thm:analytic-model-volume-criterion}, a positive-lower-volume ordinary model limit of ideal models for $d_\theta$ is again an ideal model. The same theorem and \cref{thm:fixed-big-analytic-approximation} give analytic density. Apply \eqref{eq:positive-model-metric-convergence} and completeness of the ambient metric space.
 \end{proof}
