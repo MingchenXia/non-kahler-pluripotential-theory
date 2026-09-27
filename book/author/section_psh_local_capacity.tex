@@ -109,3 +109,44 @@ For completeness the required local assertion on a disk also follows from the Gr
 To justify the inequality, set $a_M=\max(a,-M)$. The bounded subharmonic chain rule gives
 $\ddc \mathrm{e}^{a_M}\geq \mathrm{e}^{a_M}\ddc a_M$, which on $\{a>-M\}$ is at least $\mathrm{e}^a\tau$. Let $M\to\infty$, using decreasing convergence of the bounded subharmonic functions $\mathrm{e}^{a_M}$ and monotone convergence on the right. Since $\{a=-\infty\}$ is polar, $\mathrm{e}^a>0$ almost everywhere for $\tau$. Thus $\tau\ll\ddc v$. The chain inequality is \eqref{eq:bounded-convex-chain-rule} in dimension one.
 \end{proof}
+
+\subsection{Polar parts on curves}
+\label{sec:local-polar-parts}
+
+A locally finite signed measure $\nu$ on a Riemann surface splits uniquely into its polar part $\nu^{\mathrm{pol}}$, carried by a polar Borel set, and a measure charging no polar set. Locally, take a countable union of polar sets whose $|\nu|$-masses approach the supremum over polar sets, and restrict $\nu$ to this union. Uniqueness patches these decompositions and makes the operation linear.
+
+For locally quasi-subharmonic $u$, its polar curvature is the positive measure $\mu_u=(\ddc u)^{\mathrm{pol}}=\mathbf1_{\{u=-\infty\}}\ddc u$. Indeed, bounded truncations and plurifine locality show that $\mathbf1_{\{u>-j\}}\ddc u$ charges no polar set; smooth corrections do not change polar parts. An upper bound on a difference of potentials forces an order on their polar measures.
+
+\begin{lemma}\label{lem:planar-inverse-maximum}
+Let $B\subset\mathbb C$ be a disc and let $f\in L^1_{\mathrm{loc}}(B)$ have a distributional Laplacian that is a signed Radon measure. If $f\leq0$ almost everywhere, then $(\Delta f)^{\mathrm{pol}}\geq0$.
+\end{lemma}
+\begin{proof}
+It suffices to prove $\Delta f(K)\geq0$ for every compact polar $K\Subset B$; restriction to smaller discs and inner regularity then give the assertion. Choose smooth open neighborhoods $O_j$ of $K$ with $\overline O_{j+1}\subset O_j\Subset B$ and $\bigcap_j\overline O_j=K$. Let $h_j$ equal one on $\overline O_j$, be harmonic on $B\setminus\overline O_j$, and vanish on $\partial B$. The Dirichlet problem on this smooth domain gives a continuous $0\leq h_j\leq1$. Its outward derivative from $O_j$ is nonpositive, so the distributional boundary jump gives $\Delta h_j\leq0$ on $B$. The maximum principle gives $h_{j+1}\leq h_j$.
+
+The bounded distributional limit $h$ is superharmonic and harmonic off $K$. Its Laplacian is supported on $K$, whereas the Laplacian of the bounded subharmonic representative of $-h$ charges no polar set by \cref{thm:bt-input}. Hence $h$ is harmonic on $B$. Since $0\leq h\leq h_1$ and $h_1$ tends to zero at $\partial B$, the maximum principle gives $h=0$. It follows that $h_j\to0$ smoothly on compact subsets of $B\setminus K$, while $h_j=1$ on $K$.
+
+Choose $0\leq\chi\in C_c^\infty(B)$ equal to one near $K$. For large $j$, smooth $h_j$ by convolution on a neighborhood of $\operatorname{supp}\chi$, obtaining $h_{j,\epsilon}$ with $\Delta h_{j,\epsilon}\leq0$. The sign of $f$ gives
+\[
+ \begin{split}
+ \int_B\chi h_{j,\epsilon}\,\mathrm{d}(\Delta f)
+ &=\int_B f\,\Delta(\chi h_{j,\epsilon})\,\mathrm{d}x\,\mathrm{d}y\\
+ &\geq\int_B f\bigl(2\nabla\chi\cdot\nabla h_{j,\epsilon}
+                  +h_{j,\epsilon}\Delta\chi\bigr)\,\mathrm{d}x\,\mathrm{d}y.
+ \end{split}
+\]
+For fixed $j$, continuity of $h_j$ gives uniform convergence of its convolutions on $\operatorname{supp}\chi$. On the support of the derivatives of $\chi$, the function $h_j$ is harmonic for all large $j$. We may therefore first let $\epsilon\downarrow0$ and then $j\to\infty$. Smooth convergence away from $K$ makes the right-hand side tend to zero. Dominated convergence for the signed measure $\Delta f$ makes the left-hand side tend to $\Delta f(K)$, proving the claim.
+\end{proof}
+
+\Needspace{8\baselineskip}
+\begin{corollary}\label{cor:polar-order-maximum}
+For locally quasi-subharmonic $u,v$, the local inequality $u\leq v+C$ implies $\mu_u\geq\mu_v$. Moreover,
+\begin{equation}\label{eq:polar-maximum-measure}
+ \mu_{\max(u,v)}=\mu_u\wedge\mu_v,
+\end{equation}
+where the right-hand side is the greatest measure dominated by both factors.
+\end{corollary}
+\begin{proof}
+Apply \cref{lem:planar-inverse-maximum} to $u-v-C$. Smooth corrections have zero polar part, so linearity gives the first assertion. Apply it to $u-\max(u,v)$ and $v-\max(u,v)$ to obtain the inequality $\leq$ in \eqref{eq:polar-maximum-measure}.
+
+For the reverse inequality, add a common smooth correction to make $u,v$ subharmonic on a coordinate disc. On a smaller disc let $g$ be the Green potential of $\lambda=\mu_u\wedge\mu_v$ restricted to that disc, so $\ddc g=\lambda$. The distributions $u-g$ and $v-g$ have positive Hessians and hence subharmonic representatives $a,b$. Since $\max(u,v)=g+\max(a,b)$ almost everywhere, its Hessian dominates $\lambda$. Restriction to a polar carrier of $\lambda$ proves the reverse inequality. Localizing over the surface completes the proof.
+\end{proof}
