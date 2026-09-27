@@ -1,17 +1,19 @@
 \section{The trace envelope}\label{sec:trace-envelope}
 
-Return to a submanifold $Y$ of arbitrary positive dimension. An $L^1$ limit of normalized restricted approximants has at least the prescribed divisorial Lelong numbers. Taking the largest potential with these inequalities removes the dependence on the extracted limit. A larger background leaves room for a smaller-background competitor, which supplies positivity of the envelope mass.
+Return to a submanifold $Y$ of arbitrary positive dimension. The vanishing curvature error places an $L^1$ limit of normalized restricted approximants in the original background $\theta|_Y$. Its divisorial Lelong numbers dominate the trace data. Taking the largest potential with these inequalities gives a canonical envelope, which is also the limit of the ordinary envelopes of the restricted approximants. Enlarging the background then supplies the positive mass needed for prescribed-type equations.
 
 \begin{proposition}\label{prop:trace-profile-majorant}
-There are a Hermitian form $\Omega_0$ on $Y$ and a potential $v\in\PSH(Y,\Omega_0)$ such that
+There is a potential $v\in\PSH(Y,\theta|_Y)$ such that
 \[
  \nu(v\circ\pi,E)\geq\tau_{Y,u}(E)
  \quad\hbox{for every divisor }E\hbox{ over }Y.
 \]
+In particular, $v\in\PSH(Y,\Omega_0)$ for every Hermitian form $\Omega_0\geq\theta|_Y$.
 \end{proposition}
 \begin{proof}
-Choose $\Omega_0$ dominating the common lower curvature bound of the genuine restrictions $u_m|_Y$. Subtract their suprema and extract an $L^1$ limit $v\in\PSH(Y,\Omega_0)$ by normalized compactness.
+The restrictions $u_m|_Y$ have a common smooth curvature lower bound. Subtract their suprema and extract an $L^1$ limit $v$ by normalized compactness. Their current inequalities pass to the limit as $\epsilon_m\to0$, giving $\theta|_Y+\ddc v\geq0$.
 
+\Needspace{8\baselineskip}
 For each fixed compact modification, \cref{lem:modification-lone-pullback} gives convergence of the pullbacks along that same subsequence. \Cref{lem:lelong-lone-semicontinuity} gives, at every point $z$ of $E$,
 \[
  \nu(v\circ\pi,z)
@@ -23,7 +25,7 @@ Taking the generic value proves the assertion. No simultaneous extraction over d
 \end{proof}
 
 \Needspace{10\baselineskip}
-For a Hermitian form $\Omega$ for which the following family is nonempty, define
+For a smooth real $(1,1)$-form $\Omega$ on $Y$ for which the following family is nonempty, define
 \begin{equation}\label{eq:trace-profile-envelope}
  \begin{split}
  \mathcal T_\Omega(u;Y):=\Bigl(\sup\{a\in\PSH(Y,\Omega):\ &a\leq0,\\
@@ -31,7 +33,61 @@ For a Hermitian form $\Omega$ for which the following family is nonempty, define
  \text{ for every }E\}\Bigr)^*.
  \end{split}
 \end{equation}
-The choice of $\Omega$ is part of this notation. The definition refers only to the intrinsic trace data, and therefore to the ambient multiplier-ideal class of $u$.
+The choice of $\Omega$ is part of this notation. The definition refers only to the intrinsic trace data, and therefore to the ambient multiplier-ideal class of $u$. The preceding proposition makes it available for $\Omega=\theta|_Y$ and for every larger background.
+
+\subsection{Limits of restricted analytic envelopes}
+
+The restricted ideal $\mathfrak a_m(u;Y)$ has a log resolution on a compact modification of $Y$. Its finitely many resolved coefficients are bounded by the trace data. Thus every trace competitor is more singular than the restricted analytic approximant. This comparison identifies the envelope limit even when an exact realization of the trace numbers is unavailable.
+
+\begin{theorem}\label{thm:restricted-analytic-envelope-limit}
+Let $\Omega$ be a smooth real $(1,1)$-form on $Y$, let $h$ be Hermitian, and choose $\delta_m\geq0$ tending to zero such that, for all sufficiently large $m$,
+\[
+ a_m:=u_m|_Y\in\PSH(Y,\Omega+\delta_m h).
+\]
+Then $T=\mathcal T_\Omega(u;Y)$ is genuine, and
+\begin{equation}\label{eq:restricted-analytic-envelope-limit}
+ q_m:=P_{\Omega+\delta_m h}[a_m]
+     =P_{\Omega+\delta_m h}[a_m]_{\mathcal I}
+       \longrightarrow T\quad\text{in }L^1(Y).
+\end{equation}
+If $\delta_{2^j}$ decreases, then $q_{2^j}\searrow T$ pointwise. The limit depends only on $\Omega$ and the ambient multiplier-ideal class of $u$. Moreover,
+\[
+ P_\Omega[T]_{\mathcal I}=P_\Omega[T]=T.
+\]
+\end{theorem}
+\begin{proof}
+The argument of \cref{prop:trace-profile-majorant}, applied to the assumed curvature bounds, gives a normalized $\Omega$-plurisubharmonic limit $v$ of a subsequence of the $a_m$. Its divisorial numbers dominate $\tau_{Y,u}$. Hence the family defining $T$ is nonempty, and its supremum lies between $v$ and zero. It is stable under finite maxima, since Lelong numbers of a maximum are the minima of the two Lelong numbers, also after pullback. Choquet extraction and finite maxima give an increasing sequence of competitors with canonical limit $T$. Pullback convergence and Lelong semicontinuity show that $T$ retains every defining inequality. Thus $T$ is itself a competitor and is the largest one.
+
+Fix $m$ and resolve $\mathfrak a_m(u;Y)$ on $\pi:Z\to Y$. For each prime component $E$ of the resolved ideal, \eqref{eq:trace-profile} gives
+\[
+ \nu(T\circ\pi,E)\geq\tau_{Y,u}(E)
+       \geq\frac1m\operatorname{ord}_E\mathfrak a_m(u;Y)
+       =\nu(a_m\circ\pi,E).
+\]
+The finite-divisor criterion in \cref{lem:analytic-ideal-dominance} gives $T\preceq a_m$. Since $T\leq0$ and $\delta_m\geq0$, it is a competitor for $q_m$. Also \cref{prop:analytic-envelope-type} identifies the two envelopes in \eqref{eq:restricted-analytic-envelope-limit} and gives $q_m\sim a_m$. Therefore
+\[
+ T\leq q_m\leq0,\qquad
+ \nu(q_m\circ\pi,E)=\frac1m\operatorname{ord}_E\mathfrak a_m(u;Y)
+\]
+for every divisor over $Y$.
+
+All $q_m$ have supremum zero and a common smooth curvature lower bound. Consider any $L^1$ cluster limit $q$. It belongs to $\PSH(Y,\Omega)$, lies between $T$ and zero, and has
+\[
+ \nu(q\circ\pi,E)\geq\limsup_m\nu(q_m\circ\pi,E)
+       =\tau_{Y,u}(E)
+\]
+along the convergent subsequence. Here the pullback and semicontinuity argument of \cref{prop:trace-profile-majorant} applies to each fixed compact modification. Thus $q$ is a competitor for $T$, which proves $q=T$. Normalized compactness now gives convergence of the full sequence in $L^1$.
+
+Subadditivity gives $\mathfrak a_{2m}(u;Y)\subseteq\mathfrak a_m(u;Y)^2$, hence $a_{2m}\preceq a_m$. When the dyadic backgrounds decrease, this implies $q_{2^{j+1}}\leq q_{2^j}$. The lower bound by $T$ makes the pointwise limit genuine, and its $L^1$ identification gives equality with $T$ everywhere. Finally the defining family for $T$ depends only on $\Omega$ and the ideals of $u$, proving the asserted independence.
+
+Ideal projection preserves all divisorial Lelong numbers, so $P_\Omega[T]_{\mathcal I}$ is a trace competitor. Maximality and the envelope inequality give $P_\Omega[T]_{\mathcal I}=T$. The ordinary fixed-point assertion follows from \cref{cor:ordinary-preserves-i}.
+\end{proof}
+
+Taking $\Omega=\theta|_Y$, $h=\omega|_Y$ and $\delta_m=\epsilon_m$ gives the limit in the original restricted background. Along dyadic indices the errors can be enlarged to a decreasing sequence with limit zero. A fixed sufficiently large Hermitian background permits $\delta_m=0$.
+
+Inclusion of the competitor families also orders the trace envelopes: increasing the prescribed data decreases $\mathcal T_\Omega$, whereas increasing the background increases it whenever both envelopes are defined.
+
+\subsection{Positive mass and prescribed equations}
 
 \begin{theorem}\label{thm:trace-profile-model-envelope}
 Choose $\Omega_0,v$ as in \cref{prop:trace-profile-majorant} and set $\Omega=2\Omega_0$. Then $T=\mathcal T_\Omega(u;Y)$ is genuine and satisfies all the divisorial inequalities in \eqref{eq:trace-profile-envelope}. Moreover,
@@ -48,14 +104,10 @@ Writing $r=\dim Y$, its extended measure satisfies
 \]
 \end{theorem}
 \begin{proof}
-Normalize $v\leq0$. It is a competitor, so the family is nonempty and its supremum lies between $v$ and zero. It is stable under finite maxima: Lelong numbers of a maximum are the minima of the two Lelong numbers, also after pullback. Choquet extraction and finite maxima give an increasing sequence of competitors with canonical limit $T$. It converges in $L^1(Y)$. The pullback and Lelong semicontinuity argument in \cref{prop:trace-profile-majorant} shows that $T$ retains every defining inequality. Thus $T$ is itself a competitor and is the largest one.
-
-The multiplier-ideal envelope preserves all multiplier ideals and hence all divisorial Lelong numbers, by \cref{thm:hermitian-i-projection} and the local valuative criterion used there. Since $T\leq0$, the potential $P_\Omega[T]_{\mathcal I}$ is also a competitor in \eqref{eq:trace-profile-envelope}. Maximality gives $P_\Omega[T]_{\mathcal I}\leq T$, while the reverse inequality follows because $T$ is admissible in its own multiplier-ideal envelope. Thus $P_\Omega[T]_{\mathcal I}=T$. The model consequence in \cref{cor:ordinary-preserves-i} gives $P_\Omega[T]=T$.
+Normalize $v\leq0$. It is a trace competitor in background $\Omega$, so the defining supremum lies between $v$ and zero. The finite-maxima and ideal-projection arguments in the proof of \cref{thm:restricted-analytic-envelope-limit} apply to this family. They give the genuine envelope $T$, all its defining inequalities and both fixed-point identities.
 
 The original $\Omega_0$-plurisubharmonic $v$ is below $T$, so it supplies a competitor for $P_{\Omega/2}(T)$. The fixed-point contact estimate \cref{prop:fixed-point-finite}, applied on $Y$, gives the displayed measure bound and finiteness. The smaller-background individual positivity in \cref{lem:smaller-background-mass-lower} gives strict positivity.
 \end{proof}
-
-This construction is independent of the extracted majorant: the supremum in \eqref{eq:trace-profile-envelope}, once $\Omega$ is fixed, does not refer to it. Increasing the prescribed trace data decreases $\mathcal T_\Omega$. Increasing the background increases it whenever both envelopes are defined. These facts follow from inclusion of the competitor families; they do not assert independence from the background.
 
 \Needspace{13\baselineskip}
 \begin{corollary}\label{cor:trace-envelope-prescribed-equation}

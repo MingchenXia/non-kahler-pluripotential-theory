@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint186 — 27 September 2026
+
+Chapter 18 now constructs the trace envelope in the original restricted background and identifies it as the L1 limit of the restricted analytic envelopes with vanishing nonnegative curvature errors. Decreasing dyadic errors give pointwise monotone convergence. The envelope is fixed by both ordinary and ideal projection. The majorant proposition retains the original restricted curvature bound. Chapter 1 makes explicit the finite set of divisorial comparisons on one log resolution sufficient for ordinary domination by an analytic singularity. Positive finite mass and prescribed equations retain the larger Hermitian background; exact realization of every trace order remains separate. Chapter 32 is synchronized. One theorem/proof and two labels are added; the majorant statement and the foundation lemma are strengthened, and all other formal statements are unchanged.
+
+All seven Chapter 18 author inputs receive complete original and two revised direct mathematical/editorial reads; the second revised read follows the first build and page inspection. Chapter 1 receives a bounded review of the analytic-dominance lemma and its proof; Chapter 32 receives a bounded review of the trace-realization section and its transition. These are direct reviews, not new independent verification. The bibliography and five unchanged Chapter 18 nested inputs are preserved.
+
+The 815-page book and seventeen-page companion compile without unresolved references/citations, duplicate labels or overfull boxes. The inherited bibliography underfull paragraph remains. The house audit has zero errors and eleven inherited warnings. All 76 selected final pages pass visual review: four changed images were directly inspected and 72 match the inspected first render. The first render included 63 directly inspected images. Both outputs rebuild from a fresh empty source extraction with identical page text; the companion remains byte-identical to checkpoint185. The 221-input graph, 190 historical verifier reports and three hidden sources are unchanged.
+
+Examine pullback compatibility of trace envelopes under compact modifications, keeping exact realization on all models and background-independent ordinary type as separate obligations. The broader writing and research goal remains active and incomplete.
+
 ## Checkpoint185 — 27 September 2026
 
 Chapter 15 now proves L1 convergence of ideal envelopes under one-sided ideal order and convergence of every local divisorial Lelong number, with arbitrary vanishing nonnegative curvature errors. A fixed-weight multiplier-ideal inclusion criterion implies these divisorial limits. A curve example has analytic potentials converging in L1 and at every local divisor, but their envelopes fail to converge to the envelope of the limit. The dyadic theorem follows from the general criterion. Chapter 32 distinguishes these established results from the unresolved topology and background-compatibility problem. All eighteen earlier Chapter 15 statements and all Chapter 32 formal statements remain byte-identical; three statements, proofs and labels are added.
