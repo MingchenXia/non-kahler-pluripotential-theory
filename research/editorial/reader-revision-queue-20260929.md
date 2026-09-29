@@ -2,15 +2,15 @@
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
-The first unit corrects the Introduction's undeclared X, n, variation direction and equation data, reviews front matter in actual reading order, and consolidates adjacent parts without changing the chapter sequence. Checkpoint231 completes the original and both revised proof/editorial reads of all twenty Chapter 1 inputs, final builds, page inspection and fresh source reconstruction. The original Chapter 2 input has also been read; its revision is next.
+The first unit corrects the Introduction's undeclared X, n, variation direction and equation data, reviews front matter in actual reading order, and consolidates adjacent parts without changing the chapter sequence. Checkpoint231 completes the original and both revised proof/editorial reads of all twenty Chapter 1 inputs, final builds, page inspection and fresh source reconstruction. Checkpoint232 completes the same full sequence for Chapter 2. The entire Chapter 3 original has been read; its revision is next.
 
 For each chapter, directly read every recursive input and track where spaces, dimensions, forms, measures, maps and auxiliary symbols are declared. Check openings before the first formal setting, later changes of setting, proof-local quantifiers and unexplained cross-chapter notation. Carry valid declarations forward; do not repeat a definition at every section. Improve the problem-to-proof transition and distinguish indispensable first-reading material from longer reusable tools. Complete the two revised reads, build and affected-page review before marking the chapter done.
 
 | Chapter | Root | Author inputs | Current pass |
 |---|---|---:|---|
 | 1 | `book/author/chapter_framework.tex` | 20 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint231. See chapter-one-reader-review-231.md. |
-| 2 | `book/author/chapter_mass.tex` | 1 | Complete original read finished; revision and both complete revised reads pending. Next active unit. |
-| 3 | `book/author/chapter_energy.tex` | 1 | Pending complete original and revised reads. |
+| 2 | `book/author/chapter_mass.tex` | 1 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint232. See chapter-two-reader-review-232.md. |
+| 3 | `book/author/chapter_energy.tex` | 1 | Complete 159-line original read finished; revision and both complete revised reads pending. Next active unit. |
 | 4 | `book/author/chapter_gauduchon.tex` | 2 | Pending complete original and revised reads. |
 | 5 | `book/author/chapter_compactness.tex` | 2 | Pending complete original and revised reads. |
 | 6 | `book/author/chapter_products.tex` | 2 | Pending complete original and revised reads. |

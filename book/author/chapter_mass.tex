@@ -1,6 +1,8 @@
 \chapter{Torsion and the variation of mass}
 \label{chap:mass}
 
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$.
+
 The total Monge--Amp\`ere mass need not be preserved by adding a complex Hessian to a Hermitian form. Integration by parts expresses its variation through derivatives of the background powers; polarization shows that the vanishing of these derivatives is also necessary for invariance. When they do not vanish, even smooth potentials of the same singularity type can have different masses, and the ordinary global comparison principle fails. Uniform upper bounds then provide a weaker property that depends only on the manifold.
 
 \section{Integration by parts with a non-closed form}
@@ -14,46 +16,44 @@ For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
 \]
 \end{lemma}
 \begin{proof}
-Stokes' theorem applied first to $\mathrm{d}(\dc f\wedge T)$ gives
+Stokes' theorem applied to $\mathrm{d}(\dc f\wedge T)$ gives the first equality in
 \[
- \int_X\ddc f\wedge T=\int_X\dc f\wedge \mathrm{d}T.
+ \int_X\ddc f\wedge T
+ =\int_X\dc f\wedge \mathrm{d}T
+ =\int_X f\ddc T.
 \]
-The operator $\dc$ also has zero integral on forms of total degree $2n-1$: on the possible bidegrees this follows from Stokes' theorem for $\partial$ and $\bar\partial$. Applying this to $\dc(f\,\mathrm{d}T)$ and using $\dc \mathrm{d}=-\mathrm{d}\dc$ yields
-\[
- 0=\int_X\dc f\wedge \mathrm{d}T-\int_X f\ddc T.
-\]
-Combining the two identities proves the claim.
+For the second, apply Stokes' theorem for $\dc$ to $f\,\mathrm{d}T$ and use $\dc\mathrm{d}=-\mathrm{d}\dc$. The integral of $\dc$ on forms of total degree $2n-1$ vanishes by Stokes' theorem for $\partial$ and $\bar\partial$.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:power-torsion}
-For a smooth real $(1,1)$-form $\omega$ and an integer $q\geq1$,
+For a smooth real $(1,1)$-form $\theta$ and an integer $q\geq1$,
 \[
- \ddc(\omega^q)
- =q\,\omega^{q-1}\wedge\ddc\omega
- +q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega,
+ \ddc(\theta^q)
+ =q\,\theta^{q-1}\wedge\ddc\theta
+ +q(q-1)\,\theta^{q-2}\wedge \mathrm{d}\theta\wedge\dc\theta,
 \]
 where the second term is omitted when $q=1$.
 \end{lemma}
 \begin{proof}
-For $q\geq2$, since $\omega$ has even degree, $\dc(\omega^q)=q\,\omega^{q-1}\wedge\dc\omega$. Applying $\mathrm{d}$ and again using the even degree of $\omega^{q-1}$ gives
+For $q\geq2$, since $\theta$ has even degree, $\dc(\theta^q)=q\,\theta^{q-1}\wedge\dc\theta$. Applying $\mathrm{d}$ and again using the even degree of $\theta^{q-1}$ gives
 \[
- \mathrm{d}\dc(\omega^q)
- =q(q-1)\,\omega^{q-2}\wedge \mathrm{d}\omega\wedge\dc\omega
- +q\,\omega^{q-1}\wedge \mathrm{d}\dc\omega.
+ \mathrm{d}\dc(\theta^q)
+ =q(q-1)\,\theta^{q-2}\wedge \mathrm{d}\theta\wedge\dc\theta
+ +q\,\theta^{q-1}\wedge \mathrm{d}\dc\theta.
 \]
 \end{proof}
 
-The term involving $\mathrm{d}\omega\wedge\dc\omega$ is one reason that the condition $\ddc\omega=0$ must not be confused with closedness. In higher dimension it need not imply $\ddc(\omega^q)=0$.
+For the Hermitian form $\omega$, the term $\mathrm{d}\omega\wedge\dc\omega$ can contribute to derivatives of higher powers even when $\ddc\omega=0$. The mass expansion below involves these powers separately.
 
 \section{The mass polynomial}
 
-Fix a Hermitian form $\omega$. Write $\omega_u=\omega+\ddc u$ and set
+For a smooth real function $u$ on $X$, write $\omega_u=\omega+\ddc u$ and set
 \[
  \HH_\omega=\{u\in C^\infty(X,\R):\omega+\ddc u>0\},
  \qquad \Mass_\omega(u)=\int_X(\omega+\ddc u)^n.
 \]
-Here $\Mass_\omega$ is defined for every smooth real $u$. The set $\HH_\omega$ is convex and open in the $C^2$ topology. Expanding the mass along a smooth direction gives a polynomial whose nonconstant coefficients detect the derivatives of the background.
+The set $\HH_\omega$ is convex and open in the $C^2$ topology. Expanding the mass along a smooth direction gives a polynomial whose nonconstant coefficients detect the derivatives of the background.
 
 \begin{theorem}\label{thm:mass-expansion}\index{Monge--Ampere mass@Monge--Amp\`ere mass!variation polynomial}
 For every smooth real function $u$,
@@ -76,7 +76,7 @@ $T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Both $\mathrm{d}$ and $\dc$ annihilate $\d
 This gives each of the terms in \eqref{eq:mass-expansion}. When $n=1$, the sum is empty and the mass is constant.
 \end{proof}
 
-The vanishing of all derivatives in \eqref{eq:mass-expansion} is sufficient for mass invariance. To prove necessity, vary the potential in several directions and recover each derivative by polarization.
+If every $\ddc(\omega^j)$ in \eqref{eq:mass-expansion} vanishes, the mass is constant. To prove necessity, vary the potential in several directions and recover each of these forms by polarization.
 
 \Needspace{18\baselineskip}
 \begin{theorem}[Chiose]\label{thm:mass-invariance-characterization}\index{Monge--Ampere mass@Monge--Amp\`ere mass!invariance}
@@ -120,7 +120,7 @@ The first derivative of the mass singles out the highest power of the perturbed 
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:mass-variation}
-For smooth $u,v$,
+For smooth real functions $u,v$ on $X$,
 \begin{equation}\label{eq:mass-first-variation}
  \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\Mass_\omega(u+tv)
  =n\int_X v\ddc(\omega_u^{n-1}).
@@ -136,7 +136,7 @@ Apply \cref{lem:ibp}. For the second assertion, every smooth direction $v$ gives
 \end{proof}
 
 \begin{corollary}\label{cor:surface-mass}
-If $n=2$, then
+If $n=2$, then for every smooth real function $u$ on $X$,
 \[
  \Mass_\omega(u)=\int_X\omega^2+2\int_Xu\ddc\omega.
 \]
@@ -206,7 +206,7 @@ All the potentials $u_t$ in \cref{ex:torus-mass} are smooth on compact $X$, so t
 Adding a constant to a potential leaves its measure unchanged. Consequently, a comparison inequality on strict sublevel sets would compare total masses after a suitable constant shift. The varying-mass example therefore obstructs the usual global inequality.
 
 \begin{proposition}\label{prop:comparison-forces-mass}\index{Comparison principle!mass obstruction}
-Suppose that a Hermitian form $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
+Suppose that $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
 \begin{equation}\label{eq:naive-comparison}
  \int_{\{u<v\}}\omega_v^n
  \leq\int_{\{u<v\}}\omega_u^n.

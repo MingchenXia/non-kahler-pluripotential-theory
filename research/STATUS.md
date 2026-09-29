@@ -2,8 +2,18 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
-Local intermediate storage through checkpoint230 has been consolidated into the archive recorded in `research/storage-archive-20260929.json`. Historical `tmp/` paths and snapshots before checkpoint230 are recoverable there; current outputs and all tracked sources remain local. iCloud account access is currently failing, so the archive is retained locally pending confirmed upload and removal of its download. This storage operation does not change the chapter-revision priority below.
+Completed intermediates and historical snapshots through checkpoint231 are consolidated into the two iCloud Drive folder archives recorded in `research/storage-archive-20260929.json` and `research/storage-archive-20260930.json`. Their 5393 archived files have been checksum-verified and local originals removed, reclaiming 508686336 allocated bytes net of the retained archives and cloud-folder metadata. Checkpoint232 outputs, snapshot and verification files, Chapter 3 planning, all tracked sources, original references and verifier state remain local. iCloud account access is failing, so neither archive has confirmed upload and both local archive downloads are retained. This storage operation does not change the chapter-revision priority below.
 
+
+## Checkpoint232 — The setting and mass formulas in Chapter 2
+
+The complete five-section Chapter 2 receives its original and two complete revised mathematical/editorial reads. X, its dimension and the Hermitian form are declared before the first integral; theta carries the arbitrary-form identity without changing its generality. Smooth real function variables are explicit, repeated setup is removed, and the mass-invariance transition names the forms recovered by polarization. The short integration-by-parts proof uses one equality chain, retaining both Stokes justifications on the same page.
+
+All eleven formal blocks, ten proofs, five sections and prior labels remain. The other 235 active author inputs and all 23 formal questions are unchanged. The book has 907 pages and the companion seventeen. Both builds pass without unresolved references/citations, duplicate labels or overfull boxes; the scoped house audit has zero errors and the same two inherited warnings. Fifteen selected pages cover the complete chapter, its adjoining pages and the index. All four images changed after the first review are inspected directly; eleven byte-identical images carry their earlier direct review.
+
+Both outputs rebuild from a fresh empty extraction with identical text on every page. The index retains 345 insertions, 341 clickable locators and four alternate-term references, with all destinations and labeled locators checked. All 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; supplied original papers remain excluded. The chapter review is not a new external-source proof audit. See research/editorial/chapter-two-reader-review-232.md.
+
+Continue with complete Chapter 3. Its full 159-line original has been read; revision and both revised reads remain pending. Declare its opening objects and tangent directions, distinguish the arbitrary-background radial functional from the fixed Hermitian setting, and check the function-space topology, primitive obstruction and variation. The broader goal remains active and incomplete.
 
 ## Checkpoint231 — Reading Chapter 1 with declared notation
 
