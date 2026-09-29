@@ -1,5 +1,17 @@
 # Modification history
 
+## Checkpoint230 — First-use notation and reading structure
+
+The Introduction now declares X and its dimension before their first use, introduces the variation direction, volume form and density data, and explicitly changes from a Kahler background to a general Hermitian background. Mean normalization is written with its fixed volume form. The reading route separates the initial psh tools from longer approximation and descent arguments, then distinguishes the equation and singularity routes.
+
+Thirteen parts become ten without changing chapter order or numbering. Interpolation and restriction share a part; holomorphic sections and geometric models share another. The mass-dependent theory remains separate as Part IX. All mathematical chapter and appendix sources, the conventions, bibliography, formal statements, proofs and 23 questions are unchanged. The index retains 341 entries, 337 clickable locators and four alternate-term references; every link and labeled locator resolves.
+
+The 907-page book and seventeen-page companion build successfully, and the affected output has been inspected. Two complete revised front-matter reads are finished; the second follows the first build and image inspection. The opening survey of all 33 chapters is bounded and does not count as a complete chapter read. A fresh reader-oriented chapter queue starts with all 20 recursive inputs of Chapter 1. The corresponding first-use, scope-change and reading-route rules are incorporated into the maintained and installed book-writing skill, both of which pass validation.
+
+Both outputs rebuild from a fresh empty source extraction with identical text on every page. All 190 historical verifier reports and three hidden Nakamaye sources are preserved; original supplied papers remain excluded.
+
+Read and improve complete Chapter 1, including all 20 recursive author inputs. Audit declarations in reading order, local-to-global changes of setting, proof transitions, and the separation between the first-reading route and reusable tools. Preserve the general psh foundations in Chapter 1, then continue with Chapter 2. The broader goal remains active and incomplete.
+
 ## Checkpoint229 — Relative envelopes and smooth obstacles
 
 Proposition 12.4.3 now proves equality of ordinary envelopes for every smooth obstacle throughout a relative envelope class, for any smooth real background admitting the potentials. Proposition 15.6.6 identifies the ideal envelope below an obstacle with the ordinary envelope of the zero-obstacle ideal representative. Under bounded mass and positive lower ideal volume, Proposition 29.8.1 makes zero-obstacle envelope equality equivalent to relative-envelope membership and equality at every smooth obstacle. The zero-lower-volume and general no-BMP implications in higher dimension remain unresolved.

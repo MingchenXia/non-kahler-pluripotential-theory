@@ -12,7 +12,7 @@ Use standard theorem environments, upright differential d and the standard multi
 
 The book opens with a mathematical Introduction comparing the Hermitian and Kähler mechanisms. A generated subject index follows the bibliography; maintain its definition and result locators as the book develops.
 
-The book has 33 active chapters and an appendix. Chapter 1 collects general psh foundations: compactness, regularization, integrability, local capacity tools, multiplier ideals, divisorial estimates, general envelopes and descent. Later chapters use internal references to these results. Chapters 1–28 form the main mathematical sequence. Part XII separates the substantial mass-dependent theory:
+The book has 33 active chapters and an appendix. Chapter 1 collects general psh foundations: compactness, regularization, integrability, local capacity tools, multiplier ideals, divisorial estimates, general envelopes and descent. Later chapters use internal references to these results. Chapters 1–28 form the main mathematical sequence. Part IX separates the substantial mass-dependent theory:
 
 - Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, relative full mass and the conditional ideal-envelope volume characterization.
 - Chapter 30, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references, without a blanket bounded mass assumption.
@@ -947,3 +947,15 @@ Proposition 12.4.3 now proves equality of ordinary envelopes for every smooth ob
 The book has 913 pages and 236 active author inputs in 33 chapters; the unchanged companion has seventeen pages. One proposition and proof and two index entries are added. All 23 formal questions remain unchanged. The index has 341 entries, 337 clickable locators and four alternate-term references. Both builds, citation placement, statement preservation and the same-scope house audit pass. The final visual review directly inspects 25 pages, including all three pages changed after the first review. Both outputs rebuild from a fresh empty source extraction with identical text on every page. All 190 historical verifier reports and three hidden sources remain unchanged; original supplied papers remain excluded. See research/editorial/obstacle-projection-229.md.
 
 Investigate the zero-lower-volume obstacle-projection problem in closed higher-dimensional backgrounds, using analytic residual classes and product or fibration reductions. Establish a valid criterion or counterexample without assuming that ordinary projection commutes with obstacle changes; retain the general no-BMP question separately. The broader goal remains active and incomplete.
+
+## Checkpoint230 — First-use notation and reading structure
+
+The Introduction now declares X and its dimension before their first use, introduces the variation direction, volume form and density data, and explicitly changes from a Kahler background to a general Hermitian background. Mean normalization is written with its fixed volume form. The reading route separates the initial psh tools from longer approximation and descent arguments, then distinguishes the equation and singularity routes.
+
+Thirteen parts become ten without changing chapter order or numbering. Interpolation and restriction share a part; holomorphic sections and geometric models share another. The mass-dependent theory remains separate as Part IX. All mathematical chapter and appendix sources, the conventions, bibliography, formal statements, proofs and 23 questions are unchanged. The index retains 341 entries, 337 clickable locators and four alternate-term references; every link and labeled locator resolves.
+
+The 907-page book and seventeen-page companion build successfully, and the affected output has been inspected. Two complete revised front-matter reads are finished; the second follows the first build and image inspection. The opening survey of all 33 chapters is bounded and does not count as a complete chapter read. A fresh reader-oriented chapter queue starts with all 20 recursive inputs of Chapter 1. The corresponding first-use, scope-change and reading-route rules are incorporated into the maintained and installed book-writing skill, both of which pass validation.
+
+Both outputs rebuild from a fresh empty source extraction with identical text on every page. All 190 historical verifier reports and three hidden Nakamaye sources are preserved; original supplied papers remain excluded.
+
+Read and improve complete Chapter 1, including all 20 recursive author inputs. Audit declarations in reading order, local-to-global changes of setting, proof transitions, and the separation between the first-reading route and reusable tools. Preserve the general psh foundations in Chapter 1, then continue with Chapter 2. The broader goal remains active and incomplete.

@@ -10,7 +10,7 @@ For an existing book, take the next authorized chapter from the live queue. Reco
 
 ## Plan the mathematical change before rewriting
 
-Use a short working map of the chapter's problem, main constructions, proof dependencies, examples and actual unresolved points. For each result being changed or relocated, compare:
+Use a short working map of the chapter's problem, main constructions, proof dependencies, examples and actual unresolved points. Include a first-use map of symbols and their scopes: ambient spaces, dimensions, backgrounds, measures, domains, maps and local auxiliary objects. Read introductions and theorem motivation as mathematics too. A declaration that occurs later, in an input filename, or only in the author's working context does not supply the reader's missing setup. Record which declarations carry through a section and where the setting actually changes. For each result being changed or relocated, compare:
 
 | Item | Questions that affect the edit |
 |---|---|

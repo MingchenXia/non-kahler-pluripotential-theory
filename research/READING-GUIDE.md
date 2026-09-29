@@ -1,6 +1,6 @@
-# Reading guide — checkpoint229
+# Reading guide — checkpoint230
 
-This guide follows the checked book at checkpoint229. The whole-book Introduction compares closedness, mass, comparison, energy and singularity information, distinguishing a non-Kahler manifold from a nonclosed background. General psh tools are in Chapter 1, paper attribution is in Chapter 33, and the generated subject index follows the bibliography. The [source comparison](comparison.md) records the relation with the original book; the [proof ledger](proof-obligations.md) specifies the retained hypotheses and unresolved work.
+This guide follows the checked book at checkpoint230. The whole-book Introduction compares closedness, mass, comparison, energy and singularity information, distinguishing a non-Kahler manifold from a nonclosed background. General psh tools are in Chapter 1, paper attribution is in Chapter 33, and the generated subject index follows the bibliography. The [source comparison](comparison.md) records the relation with the original book; the [proof ledger](proof-obligations.md) specifies the retained hypotheses and unresolved work.
 
 ## From local potentials to nonlinear mass
 
@@ -52,4 +52,6 @@ Chapter 32 distinguishes the remaining zero-lower-mass threshold problem from it
 
 Appendix A extends potentials, envelopes and extended measures to unibranch compact spaces through descent and resolution comparison. The projective-cone constructions give logarithmic ordinary-class and closed bounded equations, with both directions of the residual correspondence explicit. Their uniqueness, mass and deformation conditions do not solve arbitrary singular-space equations.
 
-The current chapter and front-matter reconciliation is recorded in the two editorial queues; historical reviews keep their actual reading scope. Q4.1 has been integrated at checkpoint226. Investigate the zero-lower-volume obstacle-projection problem in closed higher-dimensional backgrounds, using analytic residual classes and product or fibration reductions. Establish a valid criterion or counterexample without assuming that ordinary projection commutes with obstacle changes; retain the general no-BMP question separately. The broader writing and research goal remains active.
+The ten parts retain the chapter sequence while bringing interpolation and restriction together and joining holomorphic sections to their geometric models. On a first reading, begin with local correction, maxima, compactness and integrability in Chapter 1; consult the longer approximation and descent proofs when their later applications arise.
+
+The current chapter and front-matter reconciliation is recorded in the two editorial queues; historical reviews keep their actual reading scope. Q4.1 has been integrated at checkpoint226. Read and improve complete Chapter 1, including all 20 recursive author inputs. Audit declarations in reading order, local-to-global changes of setting, proof transitions, and the separation between the first-reading route and reusable tools. Preserve the general psh foundations in Chapter 1, then continue with Chapter 2. The zero-lower-volume obstacle-projection question remains deferred research. The broader writing and research goal remains active.

@@ -117,3 +117,7 @@ Papers manually supplied by the user without an author are to be integrated with
 ## User steering, 27 September 2026: introduction and index
 
 Give the entire book a substantive Introduction, especially explaining its differences from Kähler theory. Compare the roles of closedness, mass, comparison, energy, equations and singularity invariants, with the distinctions supported by internal results. Distinguish non-Kähler ambient geometry from a nonclosed background. Put a subject index with generated page references at the back and maintain it with future revisions. This front-matter and navigation task does not replace the outstanding complete-chapter revision.
+
+## User steering, 29 September 2026: declarations and reader-oriented revision
+
+The author reports undeclared notation, especially X, and asks for a fresh chapter-by-chapter improvement of readability and of the whole-book structure. Check first uses in actual reader order, including the Introduction before the conventions, and each genuine change of setting. Supply concise chapter-entry reminders where needed without repeating definitions or operator conventions at section boundaries. Assess the hierarchy, dependency order, transitions and first-reading route. This reader-oriented pass is the immediate priority; the zero-lower-volume obstacle-projection research remains recorded and must not displace it. Begin with front matter and structure, then read the complete Chapter 1 and continue in chapter order. Track the new scope separately from historical completed reviews.

@@ -1,0 +1,46 @@
+# Reader-oriented chapter revision — 29 September 2026
+
+This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
+
+The first unit corrects the Introduction's undeclared X, n, variation direction and equation data, reviews front matter in actual reading order, and consolidates adjacent parts without changing the chapter sequence. Complete chapter proof review has not yet begun in this cycle. Chapter 1 has 20 recursive author inputs.
+
+For each chapter, directly read every recursive input and track where spaces, dimensions, forms, measures, maps and auxiliary symbols are declared. Check openings before the first formal setting, later changes of setting, proof-local quantifiers and unexplained cross-chapter notation. Carry valid declarations forward; do not repeat a definition at every section. Improve the problem-to-proof transition and distinguish indispensable first-reading material from longer reusable tools. Complete the two revised reads, build and affected-page review before marking the chapter done.
+
+| Chapter | Root | Author inputs | Current pass |
+|---|---|---:|---|
+| 1 | `book/author/chapter_framework.tex` | 20 | Pending complete original and revised reads. |
+| 2 | `book/author/chapter_mass.tex` | 1 | Pending complete original and revised reads. |
+| 3 | `book/author/chapter_energy.tex` | 1 | Pending complete original and revised reads. |
+| 4 | `book/author/chapter_gauduchon.tex` | 2 | Pending complete original and revised reads. |
+| 5 | `book/author/chapter_compactness.tex` | 2 | Pending complete original and revised reads. |
+| 6 | `book/author/chapter_products.tex` | 2 | Pending complete original and revised reads. |
+| 7 | `book/author/chapter_damped_measures.tex` | 2 | Pending complete original and revised reads. |
+| 8 | `book/author/chapter_hopf.tex` | 1 | Pending complete original and revised reads. |
+| 9 | `book/author/chapter_smooth_equations.tex` | 10 | Pending complete original and revised reads. |
+| 10 | `book/author/chapter_weak_equations.tex` | 4 | Pending complete original and revised reads. |
+| 11 | `book/author/chapter_degenerate_uniqueness.tex` | 13 | Pending complete original and revised reads. |
+| 12 | `book/author/chapter_envelopes.tex` | 2 | Pending complete original and revised reads. |
+| 13 | `book/author/chapter_prescribed_equations.tex` | 35 | Pending complete original and revised reads. |
+| 14 | `book/author/chapter_normalization.tex` | 14 | Pending complete original and revised reads. |
+| 15 | `book/author/chapter_igood.tex` | 5 | Pending complete original and revised reads. |
+| 16 | `book/author/chapter_rays.tex` | 1 | Pending complete original and revised reads. |
+| 17 | `book/author/chapter_testcurves.tex` | 2 | Pending complete original and revised reads. |
+| 18 | `book/author/chapter_trace_data.tex` | 7 | Pending complete original and revised reads. |
+| 19 | `book/author/chapter_sections.tex` | 3 | Pending complete original and revised reads. |
+| 20 | `book/author/chapter_flag_bodies.tex` | 4 | Pending complete original and revised reads. |
+| 21 | `book/author/chapter_hopf_reduction.tex` | 1 | Pending complete original and revised reads. |
+| 22 | `book/author/chapter_divisorial_models.tex` | 4 | Pending complete original and revised reads. |
+| 23 | `book/author/chapter_nonclosed_bclasses.tex` | 2 | Pending complete original and revised reads. |
+| 24 | `book/author/chapter_envelope_systems.tex` | 2 | Pending complete original and revised reads. |
+| 25 | `book/author/chapter_gauduchon_variational_volume.tex` | 33 | Pending complete original and revised reads. |
+| 26 | `book/author/chapter_partial_bergman.tex` | 11 | Pending complete original and revised reads. |
+| 27 | `book/author/chapter_bott_chern_loci.tex` | 16 | Pending complete original and revised reads. |
+| 28 | `book/author/chapter_lck.tex` | 5 | Pending complete original and revised reads. |
+| 29 | `book/author/chapter_mass_bound_volumes.tex` | 4 | Pending complete original and revised reads. |
+| 30 | `book/author/chapter_relative_finite_measures.tex` | 9 | Pending complete original and revised reads. |
+| 31 | `book/author/chapter_bounded_mass_equations.tex` | 11 | Pending complete original and revised reads. |
+| 32 | `book/author/chapter_research_program.tex` | 4 | Pending complete original and revised reads. |
+| 33 | `book/author/chapter_history.tex` | 1 | Pending complete original and revised reads. |
+| A | `book/author/appendix_hermitian_spaces.tex` | 2 | Pending complete original and revised reads. |
+
+The appendix and a final whole-book consistency read follow Chapter 33. Research into zero-lower-volume obstacle projection remains deferred behind this authorized readability pass.

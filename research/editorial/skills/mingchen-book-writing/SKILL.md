@@ -25,6 +25,8 @@ Choose a natural home for each general definition, convention and reusable found
 
 Keep general theory and additional-hypothesis regimes visibly distinct. A condition on one density, reference potential or example is not a property of the entire manifold or all admissible potentials. Reorganization and shorter prose do not enlarge a theorem's scope.
 
+When reviewing the whole structure, compare the dependency order with a reader's path through the book. Group adjacent material by a sustained mathematical purpose; merge small parts that interrupt one argument, while retaining divisions that mark a genuine change of theory or hypotheses. Distinguish what is needed on a first reading from longer reusable tools that can be consulted later, without moving general foundations out of their designated home. A contents scan identifies candidates for change; only reading the dependencies justifies relocating arguments.
+
 Use chapter and section titles that name the mathematical objects, results or mechanisms. Avoid work-plan headings, evaluative titles and a final section that merely inventories what was just proved. Merge tiny sections when they divide a single argument; add a subsection only when it clarifies a genuine change of mathematical task.
 
 ## Introductions and continuity of exposition
@@ -35,7 +37,7 @@ A chapter opening should explain the problem that now arises, the construction o
 
 Replace inventories such as “we define, then prove, then discuss” with an explanation of why the definitions and estimates are needed. Remove repeated chapter roadmaps, ceremonial transitions and defensive lists of hypotheses that are absent. Preserve a short opening that already makes the argument intelligible.
 
-State a convention once at its natural global location. Keep a necessary source-normalization conversion beside the calculation using it. Across distant chapters, use a short reminder or internal reference when the reader needs one; do not reproduce a definition.
+State a convention once at its natural global location. Keep a necessary source-normalization conversion beside the calculation using it. Across distant chapters, use a short reminder or internal reference when the reader needs one; do not reproduce a definition. Check declarations in actual reading order, including an Introduction placed before the conventions. Name the ambient space and its relevant structure before formulas involving it; familiar letters such as $X$ are not self-declaring. At a chapter entry, supply a short setting reminder before symbol-bearing motivation when the reader would otherwise have to reconstruct the setting from an earlier chapter. Track later changes of space, dimension, background, measure and normalization at their point of use. This is a scope check, not a reason to repeat every section's setup.
 
 Delete redundant qualifications only after identifying what already supplies their content. The author's rejection of a redundant representative qualification or an identically-minus-infinity clause is not a global ban on checking representatives, pole sets or degenerate limits. Likewise, a local need for a nonempty admissible class must not become a blanket assumption for the book.
 
