@@ -1,8 +1,19 @@
-# Current research status — 29 September 2026
+# Current research status — 30 September 2026
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
 Local intermediate storage through checkpoint230 has been consolidated into the archive recorded in `research/storage-archive-20260929.json`. Historical `tmp/` paths and snapshots before checkpoint230 are recoverable there; current outputs and all tracked sources remain local. iCloud account access is currently failing, so the archive is retained locally pending confirmed upload and removal of its download. This storage operation does not change the chapter-revision priority below.
+
+
+## Checkpoint231 — Reading Chapter 1 with declared notation
+
+All twenty recursive Chapter 1 inputs receive the complete original and two complete revised mathematical/editorial reads. Definitions now precede their first use, local changes of ambient space and volume are explicit, and duplicate explanations are removed. A proved Hartogs upper-limit lemma supplies normalized compactness, tail envelopes and modification convergence. Direct rescaling compares Hermitian capacities; the general Chern curvature modulus is stated for any smooth real background admitting the bounded potential used by its proof. The later big-background barrier regime remains separate.
+
+The restriction corollary follows the modification and ideal arguments, and capacity and integration sections distinguish their different tasks. All prior chapter statements, proofs and labels remain; one lemma and proof are added. The 19 formal problems and four conjectures are unchanged. The index has 345 insertions, 341 clickable locators and four alternate-term references. Its new definitions and the local-correction proposition's actual page start have been checked.
+
+The book remains 907 pages with 236 active author inputs in 33 chapters and an appendix; the companion has seventeen pages. The scoped house audit has zero errors and the same five inherited warnings. Both builds pass without unresolved references/citations, duplicate labels or overfull boxes. All 104 selected pages are covered by direct review or byte-identical carry-forward from directly inspected images. Both outputs rebuild in a fresh empty extraction with identical text on every page. All 190 historical verifier reports and three hidden Nakamaye sources are preserved; original authorless papers remain excluded. This chapter review retains the recorded classical inputs and is not a new full audit of those external sources. See research/editorial/chapter-one-reader-review-231.md.
+
+Continue with complete Chapter 2, whose original has been read. Add the chapter-entry setting and reconcile its arbitrary-form notation, then complete both revised reads, builds and page review. Preserve the specialized mass arguments here and the reusable psh foundations in Chapter 1. The broader goal remains active and incomplete.
 
 ## Checkpoint230 — First-use notation and reading structure
 

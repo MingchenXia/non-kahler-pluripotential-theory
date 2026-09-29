@@ -2,6 +2,22 @@
 
 Fix a smooth positive probability volume $\mathrm{d}V$ for $L^1$ norms. The local compactness theorem for plurisubharmonic functions, recalled in \cite{SGPT}, gives an $L^1_{\loc}$-convergent subsequence or local uniform convergence to $-\infty$ for a locally uniformly upper-bounded sequence on a connected domain. A point at which the global maximum is attained excludes the second alternative, and connectedness propagates the first across $X$.
 
+The submean inequality also controls upper limits at moving points.
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:qpsh-hartogs}\index{Hartogs lemma}
+Let $u_j,u$ be quasi-plurisubharmonic on an open set $U$ in a complex manifold. Suppose that $u_j\to u$ in $L^1_{\loc}(U)$ and $\ddc u_j\geq-\beta$ for one smooth real $(1,1)$-form $\beta$ on $U$. If $x_j\to x$ in $U$, then
+\[
+ \limsup_{j\to\infty}u_j(x_j)\leq u(x).
+\]
+Moreover, the tail envelopes $h_j=(\sup_{k\geq j}u_k)^*$ decrease to $u$.
+\end{lemma}
+\begin{proof}
+On a coordinate ball about $x$, add a common smooth correction $q$ so that $u_j+q$ and $u+q$ are plurisubharmonic. For a fixed small radius, the submean inequality bounds $(u_j+q)(x_j)$ by its average on the ball centered at $x_j$. These averages converge to the corresponding average of $u+q$ centered at $x$: the error from $u_j-u$ tends to zero in $L^1$, and translations are continuous for the integral of a fixed $L^1$ function over a ball. Letting the radius decrease to zero proves the inequality.
+
+The same estimate gives local uniform upper bounds for the $u_j$, so the tail envelopes are quasi-plurisubharmonic with the same lower Hessian bound, by coefficient freezing and the local upper-envelope theorem. If their decreasing limit exceeded $u(x)$ at some $x$, the definition of regularization would give indices $k_j\geq j$ and points $x_j\to x$ contradicting the first assertion. An almost-everywhere convergent subsequence of $(u_j)$ shows that $h_j\geq u$ almost everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}. Thus $h_j\downarrow u$.
+\end{proof}
+
 \begin{theorem}\label{thm:normalized-compactness}\index{Compactness!normalized potentials}
 For any smooth real $(1,1)$-form $\theta$, the family
 \[
@@ -19,11 +35,7 @@ On a ball containing $x$ in its interior, the alternative of locally uniform con
 
 The inequalities $\ddc u_j\geq-\theta$ pass to distributions. The local canonical representatives of $u+r_i$ are plurisubharmonic and agree on overlaps after subtracting their corrections. They define a global $\theta$-plurisubharmonic representative, still denoted by $u$. Since $u_j\leq0$, it satisfies $u\leq0$.
 
-We check that the supremum has not decreased. For a fixed small radius around $x_j$ inside the first coordinate ball, apply the submean inequality to $u_j+r_i$. Local $L^1$ convergence allows passage to the limit in the ball averages, also as their centers approach $x$: the averages of the differences tend to zero by $L^1$ convergence, and translating the indicator of a fixed ball is continuous for the integral of a fixed $L^1$ function. Letting the radius tend to zero gives
-\[
- 0+r_i(x)=\lim_j(u_j+r_i)(x_j)\leq(u+r_i)(x).
-\]
-Thus $u(x)=0$, and the limit belongs to $\mathcal K_\theta$. This proves sequential compactness, which is compactness in the metric space $L^1(X)$.
+By \cref{lem:qpsh-hartogs}, $0=\lim_j u_j(x_j)\leq u(x)$. Thus $u(x)=0$, and the limit belongs to $\mathcal K_\theta$. This proves sequential compactness, which is compactness in the metric space $L^1(X)$.
 
 If the displayed norm bound failed, choose a sequence whose $L^1$ norms tend to infinity. Its convergent subsequence would have bounded norms, a contradiction.
 \end{proof}

@@ -1,6 +1,11 @@
 \section{Analytic types and restriction}\label{sec:analytic-types}\index{Lelong number}\index{Analytic singularity}
 
-Write $\nu(u,x)$ for the Lelong number of a quasi-plurisubharmonic function $u$, normalized by $\log|z|^2$ in local coordinates.
+Analytic singularities express the poles of a potential through finitely many holomorphic functions. Their logarithmic growth is measured by the Lelong number. For a quasi-plurisubharmonic function $u$ and a point $x\in X$, choose coordinates centered at $x$ and a smooth correction $q$ such that $p=u+q$ is plurisubharmonic. With $B(x,r)$ the coordinate Euclidean ball, set
+\[
+ \nu(u,x)=\lim_{r\downarrow0}
+       \frac{\sup_{B(x,r)}p}{\log r^2}.
+\]
+The limit exists and is independent of the coordinates and the smooth correction, by the local growth theorem recalled in \cite{SGPT}. Thus $\log|z|^2$ has Lelong number one at the origin.
 
 We follow the convention of \cite{SGPT}: a quasi-plurisubharmonic function $u$ has analytic singularities if locally there are holomorphic functions $f_1,\ldots,f_N$, not all identically zero, and a rational $c>0$ such that
 \[
@@ -42,7 +47,7 @@ Siu's analyticity theorem says that, for every $c>0$, the set $\{x:\nu(u,x)\geq 
 
 \section{The local Bergman estimates}
 
-Fix an integer $n\geq1$, a bounded pseudoconvex domain $\Omega\subset\mathbb C^n$, and a plurisubharmonic function $\psi$ on $\Omega$. Write $\mathrm{d}\lambda$ for Euclidean volume and $B(x,r)$ for the Euclidean ball of radius $r>0$ about $x$. For a positive integer $m$, define the weighted holomorphic Hilbert space
+Fix a bounded pseudoconvex domain $\Omega\subset\mathbb C^n$ and a plurisubharmonic function $\psi$ on $\Omega$. Write $\mathrm{d}\lambda$ for Euclidean volume and $B(x,r)$ for the Euclidean ball of radius $r>0$ about $x$. For a positive integer $m$, define the weighted holomorphic Hilbert space
 \[
  \mathcal H_m=\left\{f\in\mathcal O(\Omega):
           \|f\|_m^2:=\int_\Omega|f|^2\mathrm{e}^{-m\psi}\,\mathrm{d}\lambda<\infty\right\}.
@@ -119,7 +124,7 @@ H\"older's inequality with exponents $s$ and $s/(s-1)$ applies because $st/(m(s-
 Return to the compact manifold $X$ and its fixed Hermitian form $\omega$. The global regularization theorem glues the local Bergman constructions while controlling the curvature error. We retain it as a classical input in the following precise form.
 
 \begin{theorem}[Demailly regularization]\label{thm:demailly-hermitian-input}\index{Regularization!analytic singularities}
-Let $u$ be quasi-plurisubharmonic on a connected compact complex manifold and let $\gamma$ be a continuous real $(1,1)$-form with $\ddc u\geq\gamma$. Fix a Hermitian form $\omega$. There are quasi-plurisubharmonic $u_m$, for sufficiently large positive integers $m$, and numbers $\epsilon_m\downarrow0$ such that
+Let $u$ be quasi-plurisubharmonic on $X$ and let $\gamma$ be a continuous real $(1,1)$-form with $\ddc u\geq\gamma$. There are quasi-plurisubharmonic $u_m$, for sufficiently large positive integers $m$, and numbers $\epsilon_m\downarrow0$ such that
 \begin{enumerate}
 \item $u_m$ has analytic type $(1/m,\mathcal I(mu))$;
 \item $u_m\geq u$ and $u_m\to u$ pointwise and in $L^1(X)$;
@@ -148,7 +153,7 @@ These approximants retain the curvature lower bound up to a vanishing error. The
 \subsection{Regularization of closed currents}
 \label{subsec:psh-closed-regularization}
 
-We also use the closed-current form of regularization recalled in \cite{SGPT}. Let $T=\eta+\ddc v$ be an almost positive closed $(1,1)$-current, where $\eta$ is smooth and closed and $v$ is quasi-plurisubharmonic. If $T\geq\gamma$ for a smooth real $(1,1)$-form $\gamma$, there are smooth representatives $T_j=\eta+\ddc v_j$ with
+We also use the closed-current form of regularization recalled in \cite{SGPT}. Let $T=\eta+\ddc v$ be an almost positive closed $(1,1)$-current, where $\eta$ is smooth and closed and $v$ is quasi-plurisubharmonic. Its Lelong number is $\nu(T,x)=\nu(v,x)$. If $T\geq\gamma$ for a smooth real $(1,1)$-form $\gamma$, there are smooth representatives $T_j=\eta+\ddc v_j$ with
 \[
  T_j\geq\gamma-C\lambda_j\omega,
 \]
@@ -168,10 +173,10 @@ For arguments on a modification, the bounded remainder in an analytic presentati
 \begin{theorem}[Demailly regularization]\label{thm:resolvable-regularization-input}
 Let $\alpha$ be any smooth real $(1,1)$-form and let $u\in\PSH(X,\alpha)$. There are $\delta_j\downarrow0$ and $\widetilde u_j\in\PSH(X,\alpha+\delta_j\omega)$ decreasing to $u$ such that each $\widetilde u_j$ is smooth off an analytic pole set and, after a modification $\pi_j:Y_j\to X$ given by a finite sequence of blowups with smooth centers, has local expressions as follows. Let $s_\ell$ be local holomorphic defining functions of divisors, let $a_\ell>0$ be real numbers, and let $b$ be a smooth real function. Then
 \[
- \pi_j^*\widetilde u_j=\sum_\ell a_\ell\log|s_\ell|+b,
+ \pi_j^*\widetilde u_j=\sum_\ell a_\ell\log|s_\ell|^2+b,
  \qquad a_\ell>0,\quad b\in C^\infty.
 \]
-The divisors may be taken to have simple normal crossings. The coefficients include the fixed normalization of $\ddc$.
+The divisors may be taken to have simple normal crossings.
 \end{theorem}
 
 This classical input applies to the closed current $\ddc u$ with smooth lower bound $-\alpha$; its source is recorded in \cref{sec:history-psh}. Its lower bound is not required to be closed, and its ambient manifold is only Hermitian. The resolved expression supplies the smooth remainder after resolution; ordinary analytic type with merely a bounded remainder would not suffice here. This version need not be the particular multiplier-ideal sequence in \cref{thm:demailly-hermitian-input}. We do not assert that the additional conclusions of these two regularization statements hold for the same sequence. Applying this theorem with a sufficiently small curvature error preserves strict positivity.

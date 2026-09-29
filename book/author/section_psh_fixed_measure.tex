@@ -1,7 +1,9 @@
-\section{Convergence against a non-pluripolar measure}
+\section{Integration against non-pluripolar measures}
 \label{sec:psh-fixed-measure}
 
 A common bound on the potentials allows $L^1$ convergence for smooth volume to be transferred to a fixed finite measure that does not charge pluripolar sets. Bounded exponentials extend this statement to upper-bounded families.
+
+\subsection{A fixed measure}
 
 Cegrell's fixed-measure convergence lemma says that a uniformly bounded sequence of plurisubharmonic functions converging in $L^1_{\mathrm{loc}}$ converges in $L^1(\nu)$ on compact subsets for each finite non-pluripolar measure $\nu$ there. The usual formulation allowing extraction gives the same conclusion: apply it to every subsequence, extract almost-everywhere convergence for smooth volume, and use the subsequence criterion for convergence. This is the classical fixed-measure argument used in \cite[Section 11.1.2]{GZ17}. We retain this local lemma as a standard input.
 
@@ -22,6 +24,9 @@ For the first statement add a fixed smooth strictly plurisubharmonic correction 
 For the second statement choose $A\omega\geq\theta$. If $u_j\leq C$, the convex chain rule gives
 $\ddc \mathrm{e}^{bu_j}\geq-bA\mathrm{e}^{bC}\omega$, also for unbounded $u_j$ by bounded truncation. Thus $\mathrm{e}^{bu_j}$ are uniformly bounded quasi-plurisubharmonic functions in one lower curvature class. Their $L^1(\mathrm{d}V)$ convergence follows from the Lipschitz bound $b\mathrm{e}^{bC}$ for the exponential on $(-\infty,C]$. Apply the first statement. We assign the value zero to the exponential at a pole.
 \end{proof}
+
+\Needspace{12\baselineskip}
+\subsection{Vanishing exponents}
 
 \begin{proposition}\label{prop:singular-no-uniform-limit}
 Let $\theta$ be smooth and let $\varphi\in\PSH(X,\theta)$. Suppose $\varphi$ is unbounded below and $u_\lambda\sim\varphi$ for every $\lambda>0$. Then $\lambda u_\lambda$ cannot converge uniformly on $X$ to a finite constant as $\lambda\downarrow0$. Its distance to any finite constant is also infinite in $L^\infty(\mathrm{d}V)$ for each fixed $\lambda>0$.
@@ -65,6 +70,8 @@ give the claimed estimate for every $j$.
 \end{proof}
 
 \Needspace{15\baselineskip}
+\subsection{Measures with bounded potentials}
+
 A moving bounded-product measure can also be used if its potentials converge in capacity. The proof estimates the torsion terms in integration by parts.
 
 \begin{lemma}\label{lem:moving-bounded-integrals}
@@ -76,8 +83,7 @@ Let $a_j,a,w_j,w\in\PSH(X,\omega)$ be uniformly bounded. If $a_j\to a$ in $L^1(X
 The same conclusion holds when the $a_j$ have any fixed smooth lower curvature bound.
 \end{lemma}
 \begin{proof}
-By the subsequence criterion, we may first extract $a_j\to a$ almost everywhere for smooth volume. The upper tail envelopes
-$A_j=(\sup_{\ell\geq j}a_\ell)^*$ decrease to $a$: the local Hartogs lemma gives the upper inequality for the limit, and almost-everywhere convergence gives the reverse one. Bounded monotone capacity convergence therefore implies
+By \cref{lem:qpsh-hartogs}, the tail envelopes $A_j=(\sup_{\ell\geq j}a_\ell)^*$ decrease to $a$. Since $a\leq\max(a_j,a)\leq A_j$, bounded monotone capacity convergence implies
 \[
  \alpha_j:=\max(a_j,a)\longrightarrow a\quad\text{in capacity}.
 \]
@@ -126,11 +132,11 @@ as positive quadratic forms. This proves the asserted bound. The other gradient 
 
 These bounded integration-by-parts and energy identities may first be written for smooth decreasing regularizations in the exact Hermitian background. The local Bedford--Taylor chain rule, its gradient products and quasi-continuity give the displayed identities for bounded potentials. Equivalently they follow from the bounded current calculus of \cref{sec:psh-bounded-products}. Only the common bound on the potentials enters the estimates.
 
-We have shown that the difference of the two $h_j$ integrals tends uniformly to zero when $j,\ell$ are large. For a fixed sufficiently large $\ell$, \cref{lem:fixed-npp-integrals} gives
+We have shown that the difference of the two $h_j$ integrals tends uniformly to zero when $j,\ell$ are large. For a fixed sufficiently large $\ell$, apply \cref{lem:fixed-npp-integrals} separately to $\alpha_j\to a$ and $a_j\to a$ in $L^1(X)$. The triangle inequality gives
 \[
  \int_Xh_j\,\omega_{w_\ell}^{k}\wedge\omega^{n-k}\longrightarrow0.
 \]
-Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
+Then let $\ell\to\infty$. Together with the estimate for $\alpha_j-a$, this proves the result. If the $a_j$ have a larger fixed lower curvature bound, enlarge $\omega$ to $\Omega$ so that they are $\Omega$-plurisubharmonic. Capacity convergence is unchanged by this replacement, by \cref{sec:hermitian-capacity}. Apply the proved statement with $\Omega$; positivity bounds the original mixed measures by their $\Omega$ counterparts.
 \end{proof}
 
 \subsection{Smoothing the measure}
@@ -192,11 +198,11 @@ On each coordinate ball choose a fixed smooth function $q_a$ whose Levi form dom
 \]
 The constant is independent of $w$ and $j$. Integrating \eqref{eq:measure-smoothing-duality} proves $A_\theta(\nu_j)\leq A_\theta(\nu)+C$.
 
-For the second assertion start with any subsequence, and extract so that $z_j\to z$ almost everywhere for smooth volume. The upper envelopes
+For the second assertion the tail envelopes
 \[
  H_j=\left(\sup_{k\geq j}z_k\right)^*
 \]
-decrease to $z$ by \cref{thm:normalized-compactness} and this almost-everywhere convergence. Enlarge the fixed corrections $q_a$ so that $H_j+q_a,z_j+q_a,z+q_a$ are all plurisubharmonic. Since $H_j\geq z_j,z$, the dual identity and the submean inequality imply
+decrease to $z$ by \cref{lem:qpsh-hartogs}. Enlarge the fixed corrections $q_a$ so that $H_j+q_a,z_j+q_a,z+q_a$ are all plurisubharmonic. Since $H_j\geq z_j,z$, the dual identity and the submean inequality imply
 \[
  \begin{split}
  \int_X|z_j-z|\,\mathrm{d}\nu_j
@@ -208,7 +214,7 @@ decrease to $z$ by \cref{thm:normalized-compactness} and this almost-everywhere 
 \]
 All integrals are well defined: each function on the left of a submean inequality is bounded above, and its negative part is controlled by that of its integrable unsmoothed counterpart plus a constant.
 
-Radial averages of a plurisubharmonic function decrease when the radius decreases. Therefore $S_{a,j}(H_j+q_a)$ decreases to $z+q_a$ on the support of $\eta_a$. To identify the limit, fix an index $k$, bound $H_j\leq H_k$ for $j\geq k$, let $j\to\infty$ in the radius, and then let $k\to\infty$. The reverse inequality is the submean inequality. The nonnegative difference in the last display is dominated by an integrable constant minus $z$ on this compact support. Thus its integral tends to zero. The final integral tends to zero by $L^1(\nu)$ convergence. The subsequence criterion proves \eqref{eq:convolution-moving-integrals} for the original sequence.
+Radial averages of a plurisubharmonic function decrease when the radius decreases. Therefore $S_{a,j}(H_j+q_a)$ decreases to $z+q_a$ on the support of $\eta_a$. To identify the limit, fix an index $k$, bound $H_j\leq H_k$ for $j\geq k$, let $j\to\infty$ in the radius, and then let $k\to\infty$. The reverse inequality is the submean inequality. The nonnegative difference in the last display is dominated by an integrable constant minus $z$ on this compact support. Thus its integral tends to zero. The final integral tends to zero by $L^1(\nu)$ convergence. This proves \eqref{eq:convolution-moving-integrals}.
 
 The exponential is Lipschitz on the common upper range, so its moving $L^1$ error also tends to zero. If $\zeta>0$ is smooth, then $\zeta \mathrm{e}^{\lambda z}=\mathrm{e}^{\lambda z+\log\zeta}$ is bounded and quasi-plurisubharmonic. For any fixed bounded quasi-plurisubharmonic function $F$, the same local submean argument and dominated convergence in \eqref{eq:measure-smoothing-duality} give
 \[

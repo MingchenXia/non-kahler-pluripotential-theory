@@ -1,9 +1,9 @@
 \section{Chern-connection regularization}
 \label{sec:psh-chern-regularization}\index{Regularization!Chern connection}
 
-Fix $C_0>0$ and $u\in\PSH(X,\omega)$ with $-C_0\leq u\leq0$. Distances, gradients and tensor norms use a fixed smooth Riemannian metric.
+Fix $C_0>0$ and $u\in\PSH(X,\omega)$ with $-C_0\leq u\leq0$. Distances, gradients and tensor norms use the Riemannian metric associated to $\omega$.
 
-Let $R_tu$ be Demailly's Chern-connection regularization. It averages $u$ over the tangent fiber with a fixed smooth nonnegative radial kernel of integral one. The averaging map is a smooth realization of the holomorphic part of the formal fiberwise expansion of the exponential map; it need not be genuinely holomorphic in the fiber. The following classical estimate controls the truncated transform, including its mixed base--fiber terms; its sources are recorded in \cref{sec:history-psh}.
+Let $R_tu$ be Demailly's regularization formed with the Chern connection of $\omega$. It averages $u$ over the tangent fiber with a fixed smooth nonnegative radial kernel of integral one. The averaging map is a smooth realization of the holomorphic part of the formal fiberwise expansion of the exponential map; it need not be genuinely holomorphic in the fiber. The following classical estimate controls the truncated transform, including its mixed base--fiber terms; its sources are recorded in \cref{sec:history-psh}.
 
 \Needspace{23\baselineskip}
 \begin{lemma}\label{lem:chern-kiselman-input}
@@ -71,15 +71,15 @@ The first estimate uses cancellation of the odd first-order term of an averaging
 \subsection{The general curvature modulus}
 \label{subsec:general-curvature-modulus}
 
-Let $\theta$ now be a smooth semipositive big real $(1,1)$-form and let $u\in\PSH(X,\theta)\cap L^\infty(X)$. Use the same averaging operators and fixed smooth metrics.
+Let $\theta$ now be any smooth real $(1,1)$-form and let $u\in\PSH(X,\theta)\cap L^\infty(X)$. Use the same averaging operators and metric.
 
 \Needspace{10\baselineskip}
-We first specify the classical input for this background. Apply the classical Chern-connection regularization theorem to the closed current $\ddc u$ with smooth, possibly nonclosed lower bound $-\theta$. Its tangent-bundle curvature bound is dominated by a fixed multiple of $\omega$. Fix such a bounded potential $u$. The averaging operators have a constant $K_0>0$ such that
+We first specify the classical input for this background. Apply the classical Chern-connection regularization theorem to the closed current $\ddc u$ with smooth, possibly nonclosed lower bound $-\theta$. Its tangent-bundle curvature bound is dominated by a fixed multiple of $\omega$. The averaging operators have a constant $K_0>0$ such that
 \[
  R_tu+K_0t^2\downarrow u.
 \]
 In local base coordinates $z$ and a complex radius variable $w$, put $t=|w|$. Write $\zeta\in T_z^{1,0}X$ and $\eta\in\mathbb C$ for the base and radius components of a tangent vector, and set $\lambda(z,t)=t\partial_t(R_tu(z)+K_0t^2)$. With fixed constants $A,C>0$ and an error function $\epsilon_0(t)\geq0$ tending to zero, the theorem bounds the full base--fiber complex Hessian by the base form $-\theta-A\lambda(z,t)\omega-\epsilon_0(t)\omega$, together with mixed and vertical errors bounded by
-$C(|\zeta||\eta|+|\eta|^2)$. Here $\lambda$ is nonnegative and increasing in $t$, and $\epsilon_0(t)\downarrow0$ as $t\downarrow0$. This is the standard regularization estimate; it is not a global equation theorem.
+$C(|\zeta||\eta|+|\eta|^2)$. Here $\lambda$ is nonnegative and increasing in $t$, and $\epsilon_0(t)\downarrow0$ as $t\downarrow0$. This is the classical regularization estimate for a smooth lower bound.
 
 \Needspace{13\baselineskip}
 \begin{lemma}\label{lem:general-kiselman-modulus}
@@ -150,7 +150,7 @@ extends canonically to $X$ and satisfies
 \end{equation}
 At each point of $\Omega$ the infimum is attained at a positive radius.
 On every compact $K_1\Subset\Omega$, for sufficiently small $t$,
-$\|\nabla R_ta\|_{K_1}\leq C_{K_1}/t$.
+$\|\nabla R_ta\|_{L^\infty(K_1)}\leq C_{K_1}/t$.
 \end{lemma}
 
 \begin{proof}
@@ -191,16 +191,12 @@ $\nu=\ddc(a+Q)\wedge\beta^{n-1}$, the local Lelong mass inequality and
 a fixed larger-ball mass bound give
 $\nu(B_t(x))\leq Ct^{2n-2}$. The coefficients of
 $\partial\bar\partial(a+q_{x,t})$ are controlled in total variation
-by those of $\ddc(a+Q)$ plus a uniformly bounded smooth form. Let $\operatorname{exph}_x$ denote the fiber averaging map used to define $R_t$ at $x$, and let $\zeta\in\mathbb C^n$ be the integration variable in a tangent frame. Scaling
-therefore gives, uniformly in $x$ and $t$,
-
+by those of $\ddc(a+Q)$ plus a uniformly bounded smooth form. Write $|\partial\bar\partial(a+q_{x,t})|$ for the sum of the total variations of its coefficient measures. The rescaled averaging kernels are supported in $B(x,Ct)$ and bounded by a constant times $t^{-2n}$. Their integrals against this measure are therefore bounded by
 \[
- \int_{|\zeta|<1}|\partial\bar\partial(a+q_{x,t})|
-       (\operatorname{exph}_x(t\zeta))\,\mathrm{d}\zeta
- \leq Ct^{-2}.
+ C t^{-2n}|\partial\bar\partial(a+q_{x,t})|(B(x,Ct))
+ \leq C't^{-2}.
 \]
-The integral is understood as the pullback of coefficient measures for
-nonsmooth $a$. Thus the terms with a coefficient $O(t^3)$ contribute
+Thus the terms with a coefficient $O(t^3)$ contribute
 $O(t)$; the order-two expansion has an $O(t)$ remainder as well.
 The mixed and vertical contributions have bounds
 $C(|\xi||\tau|+|\tau|^2)$. The curvature term is bounded below by
@@ -210,7 +206,7 @@ Subtracting the regularization of $q_{x,t}$ restores $-\theta(x)$;
 its base Hessian differs from $\ddc q_{x,t}$ by $O(t)$, its mixed and
 vertical Hessians are bounded, and its radial logarithmic derivative
 is $O(t^2)$. The extra $Bt\beta$ also costs only $O(t)$.
-Consequently, for a fixed constant $C_1>0$, the full base--fiber Hessian satisfies
+For a real $(1,1)$-form $\alpha$, write $\alpha[v]^2$ for its associated Hermitian quadratic form evaluated on $v$. Consequently, for a fixed constant $C_1>0$, the full base--fiber Hessian satisfies
 \[
  \ddc_{x,w}R_{|w|}a[\xi,\tau]^2
  \geq-\theta_x[\xi]^2-(A\lambda(x,t)+Ct)|\xi|^2
