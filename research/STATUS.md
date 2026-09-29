@@ -2,6 +2,8 @@
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
 
+Local intermediate storage through checkpoint230 has been consolidated into the archive recorded in `research/storage-archive-20260929.json`. Historical `tmp/` paths and snapshots before checkpoint230 are recoverable there; current outputs and all tracked sources remain local. iCloud account access is currently failing, so the archive is retained locally pending confirmed upload and removal of its download. This storage operation does not change the chapter-revision priority below.
+
 ## Checkpoint230 — First-use notation and reading structure
 
 The Introduction now declares X and its dimension before their first use, introduces the variation direction, volume form and density data, and explicitly changes from a Kahler background to a general Hermitian background. Mean normalization is written with its fixed volume form. The reading route separates the initial psh tools from longer approximation and descent arguments, then distinguishes the equation and singularity routes.

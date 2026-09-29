@@ -1,5 +1,11 @@
 # Modification history
 
+## Storage maintenance — 29 September 2026
+
+At the author’s request, 3,504 ignored intermediate files were consolidated into a verified iCloud-directory archive: historical snapshots before checkpoint230, temporary previews and source rebuilds, and replaceable build products. Every archived file content was checked by SHA-256. All tracked sources, original references, verifier records, current PDFs, the current source ZIP and checkpoint230 snapshot remain local and unchanged. The project directory shrank from approximately 717 MiB to 89 MiB; after retaining the compressed archive, allocated local file storage decreased by approximately 460 MB.
+
+The archive is about 197 MB with its recovery metadata. macOS reports that the iCloud account cannot be accessed, so upload is unconfirmed and the local archive is retained. This is a completed local consolidation with cloud upload and eviction still pending, not a verified remote backup. The exact path, checksum, protected-output hashes and pending action are in `research/storage-archive-20260929.json`. No manuscript release or mathematical review scope changes.
+
 ## Checkpoint230 — First-use notation and reading structure
 
 The Introduction now declares X and its dimension before their first use, introduces the variation direction, volume form and density data, and explicitly changes from a Kahler background to a general Hermitian background. Mean normalization is written with its fixed volume form. The reading route separates the initial psh tools from longer approximation and descent arguments, then distinguishes the equation and singularity routes.
