@@ -7,6 +7,16 @@ Archive and verify 1889 completed checkpoint231 intermediate files and the older
 
 macOS still reports an iCloud account-access error. Both archives are in the iCloud Drive folder but upload is unconfirmed; neither local archive is evicted or deleted. The recovery paths, checksums and pending upload/Remove Download operation are recorded in `research/storage-archive-20260929.json` and `research/storage-archive-20260930.json`. This storage update adds no manuscript review claim.
 
+## Checkpoint233 — Potentials, directions and backgrounds in Chapter 3
+
+The complete three-section Chapter 3 receives its original and two complete revised mathematical/editorial reads. Its opening declares X, dimension and the fixed Hermitian form before the first integral, and identifies the potential and real variation direction. The primitive uses the C2 topology on smooth functions; mixed derivatives are compared on intersections with finite-dimensional affine planes. The radial functional uses theta for its original arbitrary smooth real background, then specializes explicitly to the fixed Hermitian omega. A one-use constant and redundant setup are removed; the surface potential and tangent direction are explicit.
+
+All six formal blocks, six proofs, three sections and existing labels remain; the other 235 active author inputs and all 23 formal questions are unchanged. The book remains 907 pages and the companion seventeen. Both builds pass without unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and the same single chapter-label warning. Eleven selected pages cover the complete chapter, adjoining pages and index: the sole image changed after the first review is inspected directly, and ten byte-identical images carry their direct review.
+
+Both outputs rebuild from a fresh empty extraction with identical text on every page. The index retains 345 insertions, 341 clickable locators and four alternate-term references. All 190 historical verifier reports and three hidden Nakamaye sources remain unchanged; original supplied papers remain excluded. This is a full chapter review, not a new external-paper proof audit. See research/editorial/chapter-three-reader-review-233.md.
+
+Continue with complete Chapter 4, including the linear-duality input. Both original files have been read in inclusion order (299 and 136 lines); revision and both revised reads remain pending. Resolve the opening declarations, the ambient dimension and curve exception, smooth equation data, normalized current tests and adjoint measures. Preserve the distinction between the compact closure of smooth Gauduchon tests and all normalized Gauduchon currents. The broader goal remains active and incomplete.
+
 ## Checkpoint232 — The setting and mass formulas in Chapter 2
 
 The complete five-section Chapter 2 receives its original and two complete revised mathematical/editorial reads. X, its dimension and the Hermitian form are declared before the first integral; theta carries the arbitrary-form identity without changing its generality. Smooth real function variables are explicit, repeated setup is removed, and the mass-invariance transition names the forms recovered by polarization. The short integration-by-parts proof uses one equality chain, retaining both Stokes justifications on the same page.

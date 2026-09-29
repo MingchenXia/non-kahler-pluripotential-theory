@@ -1,15 +1,17 @@
 \chapter{Monge--Amp\`ere energy and torsion}
 \label{chap:energy}
 
-An energy for the Monge--Amp\`ere operator would have directional derivative $v\mapsto\int_Xv\omega_u^n$. Such a primitive exists for a Hermitian background exactly when the background is closed: symmetry of mixed derivatives first detects $\mathrm d(\omega_u^{n-1})$, and varying the potential then detects $\mathrm d\omega$. This is stronger than the mass-invariance condition of \cref{chap:mass}. Integrating the one-form along radial segments still defines a functional for a nonclosed background; its first variation displays the torsion terms that change the Euler equation.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$. We use $\omega_u$ and $\HH_\omega$ as in \cref{chap:mass}.
+
+An energy for the Monge--Amp\`ere operator would have directional derivative $\int_Xv\,\omega_u^n$ at $u\in\HH_\omega$ in every smooth real direction $v$. Such a primitive exists exactly when $\omega$ is closed: symmetry of mixed derivatives first detects $\mathrm d(\omega_u^{n-1})$, and varying the potential then detects $\mathrm d\omega$. This is stronger than the mass-invariance condition of \cref{chap:mass}. Integrating the one-form along radial segments still defines a functional for a nonclosed background; its first variation displays the torsion terms that change the Euler equation.
 
 \section{Primitives of the Monge--Amp\`ere one-form}
 
-Fix a Hermitian form $\omega$. On $\HH_\omega$ consider the one-form
+On $\HH_\omega$ consider the Monge--Amp\`ere one-form
 \[
- \alpha_u(v)=\int_Xv\,\omega_u^n.
+ \alpha_u(v)=\int_Xv\,\omega_u^n,\qquad v\in C^\infty(X,\mathbb R).
 \]
-Here $v$ is a smooth real tangent direction. A primitive on a $C^2$-open subset $U\subseteq\HH_\omega$ is a functional $E$ satisfying $DE_u(v)=\alpha_u(v)$ for $u\in U$. On each finite-dimensional affine plane, these first derivatives depend smoothly on the parameters. Their mixed derivatives must therefore agree. The following integration-by-parts criterion identifies the differential condition imposed by that symmetry.
+A primitive on a subset $U\subseteq\HH_\omega$ open in the $C^2$ topology on smooth functions is a functional $E$ satisfying $DE_u(v)=\alpha_u(v)$ for every $u\in U$ and every smooth real direction $v$. Restrict $E$ to the intersection of $U$ with a finite-dimensional affine plane. Its first derivatives depend smoothly on the parameters, so its mixed derivatives agree. The following integration-by-parts criterion identifies the differential condition imposed by that symmetry.
 
 \begin{lemma}\label{lem:formal-symmetry}
 For a smooth real $(n-1,n-1)$-form $\Omega$, the pairing
@@ -21,9 +23,9 @@ By integration by parts and testing against every smooth real function $v$, symm
  \ddc(w\Omega)-\ddc w\wedge\Omega
  =w\ddc\Omega+\mathrm{d}w\wedge\dc\Omega-\dc w\wedge \mathrm{d}\Omega=0
 \]
-for every smooth $w$. Taking $w=1$ gives $\ddc\Omega=0$. The remaining expression is linear in the first jet of $w$, so we can complexify the test functions. At a chosen point take a cutoff holomorphic linear function with $\partial w=\lambda$ arbitrary and $\bar\partial w=0$. With $a=\mathrm i/(4\pi)$, the first-order expression is
+for every smooth $w$. Taking $w=1$ gives $\ddc\Omega=0$. The remaining expression is linear in the first jet of $w$, so we can complexify the test functions. At a chosen point take a cutoff holomorphic linear function with $\partial w=\lambda$ arbitrary and $\bar\partial w=0$. The first-order expression is
 \[
- 2a\bigl(\partial w\wedge\bar\partial\Omega
+ \frac{\mathrm i}{2\pi}\bigl(\partial w\wedge\bar\partial\Omega
              -\bar\partial w\wedge\partial\Omega\bigr).
 \]
 It follows that $\lambda\wedge\bar\partial\Omega=0$ for every $(1,0)$-covector $\lambda$. The pairing with $(n-1,n)$-forms is nondegenerate, hence $\bar\partial\Omega=0$. Reality gives $\partial\Omega=0$ as well. Conversely, if $\mathrm{d}\Omega=0$, its pure type implies $\dc\Omega=0$, and the same product formula proves symmetry.
@@ -41,7 +43,7 @@ The two type components of $T$ vanish separately after these wedges. Wedge the i
 \end{proof}
 
 \begin{theorem}\label{thm:raw-primitive}\index{Monge--Ampere energy@Monge--Amp\`ere energy!primitive obstruction}
-For $n\geq2$, the raw Monge--Amp\`ere one-form has a primitive on $\HH_\omega$ if and only if $\mathrm{d}\omega=0$. In fact, a primitive on a $C^2$-open neighborhood of $0$ already forces $\mathrm{d}\omega=0$.
+For $n\geq2$, the one-form $\alpha$ has a primitive on $\HH_\omega$ if and only if $\mathrm{d}\omega=0$. In fact, a primitive on a $C^2$-open neighborhood of $0$ already forces $\mathrm{d}\omega=0$.
 \end{theorem}
 \begin{proof}
 Suppose a primitive $E$ exists on such a neighborhood $U$. For $u\in U$ and smooth real directions $v,w$, differentiate $E(u+sv+tw)$ in both orders. Equality of its mixed derivatives, after division by $n$, gives
@@ -64,43 +66,43 @@ In dimension one every real $(1,1)$-form is closed, and \cref{prop:closed-energy
 \Needspace{17\baselineskip}
 \section{Radial energy and closed backgrounds}
 
-The segment from $0$ to $u$ suggests a candidate primitive. For a smooth real $(1,1)$-form $\omega$ and a smooth real function $u$, define
+Integrating along the segment from $0$ to $u$ gives a functional for an arbitrary background. Let $\theta$ be a smooth real $(1,1)$-form on $X$. For $u\in C^\infty(X,\mathbb R)$, put $\theta_u=\theta+\ddc u$ and define
 \begin{equation}\label{eq:closed-energy}
  \begin{aligned}
- E_\omega(u)
- &=\int_0^1\int_Xu(\omega+t\ddc u)^n\,\mathrm{d}t\\
+ E_\theta(u)
+ &=\int_0^1\int_Xu(\theta+t\ddc u)^n\,\mathrm{d}t\\
  &=\frac1{n+1}\sum_{j=0}^n
-       \int_Xu\,\omega_u^j\wedge\omega^{n-j}.
+       \int_Xu\,\theta_u^j\wedge\theta^{n-j}.
  \end{aligned}
 \end{equation}
-To obtain the second expression, write $\omega+t\ddc u=(1-t)\omega+t\omega_u$, expand, and use
+To obtain the second expression, write $\theta+t\ddc u=(1-t)\theta+t\theta_u$, expand, and use
 \[
  \binom nj\int_0^1t^j(1-t)^{n-j}\,\mathrm dt=\frac1{n+1}.
 \]
-Thus the definition is algebraic and does not require positivity or closedness. When $\omega$ is closed, integration by parts makes the derivatives of the mixed terms telescope.
+When $\theta$ is closed, integration by parts makes the derivatives of the mixed terms telescope.
 
 \begin{proposition}\label{prop:closed-energy}\index{Monge--Ampere energy@Monge--Amp\`ere energy!closed background}
-If $\mathrm d\omega=0$, then $DE_{\omega,u}(v)=\int_Xv\omega_u^n$ for every pair of smooth real functions $u,v$.
+If $\mathrm d\theta=0$, then $DE_{\theta,u}(v)=\int_Xv\theta_u^n$ for every pair of smooth real functions $u,v$.
 \end{proposition}
 \begin{proof}
 Differentiate the finite sum in \eqref{eq:closed-energy}. The term indexed by $j$ contributes
 \[
- \int_Xv\omega_u^j\wedge\omega^{n-j}
- +j\int_Xu\ddc v\wedge\omega_u^{j-1}\wedge\omega^{n-j},
+ \int_Xv\theta_u^j\wedge\theta^{n-j}
+ +j\int_Xu\ddc v\wedge\theta_u^{j-1}\wedge\theta^{n-j},
 \]
-with the second summand absent for $j=0$. For $j\geq1$, the form $\omega_u^{j-1}\wedge\omega^{n-j}$ is closed. By \cref{lem:formal-symmetry}, $u$ and $v$ may therefore be interchanged in the second summand. Using $\ddc u=\omega_u-\omega$, the contribution for $j\geq1$ becomes
+with the second summand absent for $j=0$. For $j\geq1$, the form $\theta_u^{j-1}\wedge\theta^{n-j}$ is closed. By \cref{lem:formal-symmetry}, $u$ and $v$ may therefore be interchanged in the second summand. Using $\ddc u=\theta_u-\theta$, the contribution for $j\geq1$ becomes
 \[
- (j+1)\int_Xv\omega_u^j\wedge\omega^{n-j}
- -j\int_Xv\omega_u^{j-1}\wedge\omega^{n-j+1}.
+ (j+1)\int_Xv\theta_u^j\wedge\theta^{n-j}
+ -j\int_Xv\theta_u^{j-1}\wedge\theta^{n-j+1}.
 \]
-Together with the $j=0$ term $\int_Xv\omega^n$, these terms telescope to $(n+1)\int_Xv\omega_u^n$. Division by $n+1$ completes the proof.
+Together with the $j=0$ term $\int_Xv\theta^n$, these terms telescope to $(n+1)\int_Xv\theta_u^n$. Division by $n+1$ completes the proof.
 \end{proof}
 
-For a closed Hermitian form, the restriction of $E_\omega$ to $\HH_\omega$ is the primitive required in \cref{thm:raw-primitive}.
+Taking $\theta=\omega$ when $\mathrm d\omega=0$, the restriction of $E_\omega$ to $\HH_\omega$ is the primitive required in \cref{thm:raw-primitive}.
 
 \section{First variation in a nonclosed background}
 
-Return to a Hermitian form $\omega$. The functional \eqref{eq:closed-energy} integrates $\alpha$ along the segment from $0$ to $u\in\HH_\omega$. Its derivative differs from $\alpha$ by the terms that remain when integration by parts differentiates the background powers. Computing this difference gives the Euler equation even when no primitive exists.
+For the fixed Hermitian background $\theta=\omega$, the functional \eqref{eq:closed-energy} integrates $\alpha$ along the segment from $0$ to $u\in\HH_\omega$. Its derivative differs from $\alpha$ by the terms that remain when integration by parts differentiates the background powers. Computing this difference gives the Euler equation even when no primitive exists.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:radial-torsion-defect}\index{Monge--Ampere energy@Monge--Amp\`ere energy!radial}\index{Torsion!energy variation}
@@ -135,13 +137,13 @@ The second equality is \cref{lem:ibp}. The product rule in the proof of \cref{le
 \end{proof}
 
 \begin{proposition}\label{prop:radial-surface}
-In complex dimension two,
+If $n=2$, then every $u\in\HH_\omega$ satisfies
 \[
  E_\omega(u)=\int_Xu\omega^2
  +\int_Xu\omega\wedge\ddc u
  +\frac13\int_Xu(\ddc u)^2.
 \]
-For a smooth direction $v$, its differential satisfies
+For every smooth real direction $v$, its differential satisfies
 \begin{equation}\label{eq:radial-defect}
  DE_{\omega,u}(v)-\int_Xv\omega_u^2
  =\int_Xv\bigl(u\ddc\omega+\mathrm{d}u\wedge\dc\omega
@@ -152,7 +154,7 @@ For a smooth direction $v$, its differential satisfies
 Expanding the radial integral gives the first identity. Here $\Omega_t=\omega+t\ddc u$, whose $\mathrm d$- and $\dc$-derivatives are those of $\omega$. Formula \eqref{eq:radial-torsion-defect} and $2\int_0^1t\,\mathrm dt=1$ give the second identity.
 \end{proof}
 
-For a fixed smooth real $(2,2)$-form $\mu$ on a surface, a critical point of $E_\omega(u)-\int_Xu\,\mu$ in $\HH_\omega$ therefore satisfies
+For a fixed smooth real $(2,2)$-form $\mu$ on $X$ with $n=2$, a critical point of $E_\omega(u)-\int_Xu\,\mu$ in $\HH_\omega$ therefore satisfies
 \[
  \omega_u^2+u\ddc\omega+\mathrm{d}u\wedge\dc\omega
                   -\dc u\wedge\mathrm{d}\omega=\mu.
