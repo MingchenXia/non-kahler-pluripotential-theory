@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint228: Determine whether zero-obstacle ordinary/ideal envelope equality implies equality at every smooth obstacle in higher-dimensional Hermitian backgrounds. Check the required projection or rooftop identity with its exact hypotheses; prove the implication or construct a counterexample, keeping the stronger complete model-topology extension separate. The bounded all-obstacle addition is recorded in all-obstacle-topology-228.md; earlier complete chapter reviews retain their original scopes.
+Current next unit after checkpoint229: Investigate the zero-lower-volume obstacle-projection problem in closed higher-dimensional backgrounds, using analytic residual classes and product or fibration reductions. Establish a valid criterion or counterexample without assuming that ordinary projection commutes with obstacle changes; retain the general no-BMP question separately. The bounded obstacle-projection revision is recorded in obstacle-projection-229.md; earlier complete chapter reviews retain their original scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

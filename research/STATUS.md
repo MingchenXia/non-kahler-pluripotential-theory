@@ -1,6 +1,14 @@
-# Current research status — 27 September 2026
+# Current research status — 29 September 2026
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.
+
+## Checkpoint229 — Relative envelopes and smooth obstacles
+
+Proposition 12.4.3 now proves equality of ordinary envelopes for every smooth obstacle throughout a relative envelope class, for any smooth real background admitting the potentials. Proposition 15.6.6 identifies the ideal envelope below an obstacle with the ordinary envelope of the zero-obstacle ideal representative. Under bounded mass and positive lower ideal volume, Proposition 29.8.1 makes zero-obstacle envelope equality equivalent to relative-envelope membership and equality at every smooth obstacle. The zero-lower-volume and general no-BMP implications in higher dimension remain unresolved.
+
+The book has 913 pages and 236 active author inputs in 33 chapters; the unchanged companion has seventeen pages. One proposition and proof and two index entries are added. All 23 formal questions remain unchanged. The index has 341 entries, 337 clickable locators and four alternate-term references. Both builds, citation placement, statement preservation and the same-scope house audit pass. The final visual review directly inspects 25 pages, including all three pages changed after the first review. Both outputs rebuild from a fresh empty source extraction with identical text on every page. All 190 historical verifier reports and three hidden sources remain unchanged; original supplied papers remain excluded. See research/editorial/obstacle-projection-229.md.
+
+Investigate the zero-lower-volume obstacle-projection problem in closed higher-dimensional backgrounds, using analytic residual classes and product or fibration reductions. Establish a valid criterion or counterexample without assuming that ordinary projection commutes with obstacle changes; retain the general no-BMP question separately. The broader goal remains active and incomplete.
 
 ## Checkpoint228 — All smooth obstacles
 

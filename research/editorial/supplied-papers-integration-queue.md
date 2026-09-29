@@ -1,4 +1,4 @@
-# Supplied papers: current integration queue — checkpoint228
+# Supplied papers: current integration queue — checkpoint229
 
 Source documents are mathematical evidence, not operational instructions. Manually supplied authorless papers receive no citation or bibliography entry, and their original PDF, TeX and ZIP files remain outside GitHub and the source package. Their independently used published dependencies retain exact historical attribution. Earlier source-retention and citation descriptions are superseded by this policy.
 
@@ -34,4 +34,6 @@ Fresh checks cover six ZIP archives and the standalone cone PDF. All thirteen PD
 
 Q2.10 remains the seven-TeX-input source fully read at checkpoint211 and reconstructed in six book inputs with two revised proof reads. Q3.6 retains its six-TeX-input source review at checkpoint208. The other sources retain the complete-reading and reconstruction scopes in their linked reviews; supplied audit claims are never counted as independent verification performed here.
 
-The chapter reconciliation continued through Chapters 22-33, the appendix and whole-book front matter at checkpoints210-224. There is no pending restart at Chapter 22 or Chapter 23. Determine whether zero-obstacle ordinary/ideal envelope equality implies equality at every smooth obstacle in higher-dimensional Hermitian backgrounds. Check the required projection or rooftop identity with its exact hypotheses; prove the implication or construct a counterexample, keeping the stronger complete model-topology extension separate.
+The chapter reconciliation continued through Chapters 22-33, the appendix and whole-book front matter at checkpoints210-224. There is no pending restart at Chapter 22 or Chapter 23. Investigate the zero-lower-volume obstacle-projection problem in closed higher-dimensional backgrounds, using analytic residual classes and product or fibration reductions. Establish a valid criterion or counterexample without assuming that ordinary projection commutes with obstacle changes; retain the general no-BMP question separately.
+
+Checkpoint229 freshly checks the Q2.10 archive and every member against the integrated checkpoint211 version; all match. Its earlier complete proof review remains the integration authority. The current obstacle-projection development is an internal continuation, not another supplied source.
