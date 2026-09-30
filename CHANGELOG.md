@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint240 — Continuous equations, capacity compactness and Hopf normalization
+
+The complete four-input Chapter 10 receives its original and two complete revised mathematical/editorial reads. Ambient data precede the opening discussion. The Gauduchon scalar bound is connected to uniform density control and then to uniform convergence; the capacity opening explains its backwards iteration without repeating the later compactness argument. The Hopf specialization declares its forms, projection, fiber action and measures, and uses the precise minimum-mass characterization. The oscillatory example declares its covering coordinate.
+
+All six sections, eighteen formal blocks, seventeen proofs and labels remain. The reads check mixed-product comparison, low-dimensional cases, positive individual mass, capacity iteration, root-integral and Jensen bounds, exponential order, scalar uniqueness versus potential clusters, and both Hopf equality directions. Weak density convergence is kept distinct from strong L1 convergence. General psh foundations remain in Chapter 1. The other 232 author inputs, all 23 formal questions, all 190 historical verifier reports and three hidden sources are unchanged. No new external-paper audit is claimed.
+
+The 907-page book and seventeen-page companion pass production builds and fresh-source reconstruction with identical text on every page. There are no unresolved references/citations, duplicate labels or overfull boxes. The chapter house audit has zero errors and three inherited warnings. All 21 selected final images are byte-identical to the directly inspected first-build images, covering the complete chapter, adjoining pages and all five index pages. Five new entries bring the index to 373 insertions, 369 clickable locators and four alternate-term references. See research/editorial/chapter-ten-reader-review-240.md.
+
+Continue with complete Chapter 11 and its thirteen recursive inputs. The root and first two nested originals (extrema and density threshold) have been read completely; ten originals and both complete revised reads remain pending. Review cofactor regularity, all uniqueness regimes and changes of setting, then the nonuniqueness constructions. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint239 — Smooth equations, adjoint normalization and derivative estimates
 
 The complete Chapter 9 and all ten recursive inputs receive their original and two complete revised mathematical/editorial reads. The chapter declares its ambient data before the opening equation, explains the normalization scalar through variable Hermitian mass, and recalls the Hopf rank-one form before its cube identity. The Chern coefficient convention and gradient-bound dependencies are explicit. The regularity proof distinguishes the arbitrary first-derivative Holder exponent from the positive exponent supplied by Evans--Krylov. The normalization-variation heading names its mathematical subject.
