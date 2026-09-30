@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint242: Improve complete Chapter 13 (book/author/chapter_prescribed_equations.tex) and all 35 recursive inputs. The root and first two nested originals have been read; the remaining 32 originals and both complete revised reads remain pending. Track background and reference regimes, capacity and Holder hypotheses, and scalar uniqueness versus potential selection. See reader-revision-queue-20260929.md; historical completion entries retain their earlier scope.
+Current next unit after checkpoint242: Complete the reader revision of Chapter 13 (book/author/chapter_prescribed_equations.tex) and all 35 recursive inputs. All originals are read and the initial structural/introductory draft is prepared; both complete revised reads, builds, page inspection and source reconstruction remain pending. Begin the first revised read in the new chapter order. See chapter-thirteen-reader-preparation-243.md and reader-revision-queue-20260929.md; historical completion entries retain their earlier scope.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
