@@ -1,5 +1,12 @@
 # Modification history
 
+## Storage consolidation, sixth batch — 30 September 2026
+
+Archive and verify 1598 obsolete intermediate files: the completed checkpoint238 temporary source rebuild, checkpoint237 review images, baseline and frozen copies, checkpoint232/233 frozen TeX copies, logs through checkpoint237, and the superseded checkpoint237 PDF snapshot. Each archived member is checked against its original SHA-256 before removal. All 2062 other project files remain unchanged, including the latest checkpoint238 outputs and review material, checkpoint239 work, original references and verifier state.
+
+This batch reclaims 37081088 allocated bytes net of its retained archive and recovery metadata; the six batches total 16358 files and 770867200 bytes reclaimed. All six archives remain locally available in the iCloud Drive folder because macOS still reports an account-access error and upload is unconfirmed. Recovery paths and checksums are recorded in `research/storage-archive-20260930-sixth.json`. This is a storage operation, not a manuscript release.
+
+
 ## Storage consolidation through checkpoint237 — 30 September 2026
 
 Archive and verify 4698 disposable files: completed source rebuild copies for checkpoints235–237, older previews and frozen review copies through checkpoint236, old build logs, and superseded snapshots234–236. The archive preserves relative paths, modes, timestamps and SHA-256 checksums. Remove the originals only after checking every archived file and all 2025 remaining project files. Keep the latest checkpoint237 PDF, source package, review images, Chapter 8 preparation, source/research files and verifier state local.
