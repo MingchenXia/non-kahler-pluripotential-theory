@@ -1,7 +1,9 @@
 \chapter{Weighted Monge--Amp\`ere measures}
 \label{chap:damped-measures}
 
-An extended Monge--Amp\`ere measure can have infinite mass, while its restriction away from deep sublevels admits a polynomial mass bound. A sufficiently fast decreasing function of the depth compensates for this growth and gives a finite measure that varies continuously with the potential in capacity. The required decay is governed by a polynomial range estimate: the Gauduchon trace bound and cancellation of the top exact wedge lower its degree to $\max(n-2,0)$. Removing the weight requires uniform control of the remaining mass on deep sublevels. The examples below show how this mass can survive even when the potentials converge in capacity.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$. Capacity refers to $\operatorname{Cap}_\omega$ from \cref{sec:hermitian-capacity}.
+
+An extended Monge--Amp\`ere measure can have infinite mass, while its restriction away from deep sublevels admits a polynomial mass bound. A sufficiently fast decreasing function of the depth compensates for this growth and gives a finite measure that varies continuously under capacity convergence of the potentials. Removing the weight requires uniform control of the remaining mass on deep sublevels. The examples below show how this mass can survive even when the potentials converge in capacity.
 
 For nonpositive $u\in\PSH(X,\omega)$, write
 \[
@@ -14,12 +16,13 @@ For nonpositive $u\in\PSH(X,\omega)$, write
 The first mixed mass has a uniform bound from the Gauduchon trace. Local cutoff estimates turn this into a bound of degree $j-1$ for the $j$th mixed mass. Stokes' theorem then expresses the top mass in terms of the lower ones.
 
 \begin{proposition}\label{prop:gauduchon-range-growth}\label{lem:bounded-range-mass}
-There is a constant $C_\omega$ such that
+There is a constant $C_\omega$ such that, for every $A\geq0$,
 \[
  \int_X(\omega+\ddc v)^n\leq C_\omega(1+A)^{r_n}
- \quad\text{if }v\in\PSH(X,\omega),\ 0\leq v\leq A.
+\quad\text{if }v\in\PSH(X,\omega),\ 0\leq v\leq A.
 \]
 \end{proposition}
+\Needspace{12\baselineskip}
 \begin{proof}
 Choose finitely many coordinate balls with smaller relatively compact balls covering $X$. On each larger ball choose a fixed quadratic $q$ with $\ddc q\geq\omega$ and shift it so that $p=v+q$ is plurisubharmonic with $0\leq p\leq A+C$. If $\kappa$ is the Euclidean form, the identity
 \[
@@ -71,7 +74,7 @@ Put $v_t=\max(u,-t-1)+t+1$. It is $\omega$-plurisubharmonic and has range $[0,t+
 
 An exponential transform has bounded range and preserves positivity. Its Hessian dominates an exponential multiple of the original positive current, so its top product controls the weighted measure.
 
-For $a>0$ put $F_a(t)=a^{-1}\mathrm{e}^{at}$ on $t\leq0$, with $F_a(-\infty)=0$. Then $0<F_a\leq a^{-1}$, $0<F_a'\leq1$, and $F_a''\geq0$.
+For $a>0$ put $F_a(t)=a^{-1}\mathrm{e}^{at}$ on $t\leq0$, with $F_a(-\infty)=0$. Then $0\leq F_a\leq a^{-1}$, while $0<F_a'\leq1$ and $F_a''\geq0$ at finite arguments.
 
 \Needspace{7\baselineskip}
 \begin{proposition}\label{prop:exponential-transform}
@@ -125,7 +128,7 @@ For a decreasing weight, integration over its level parameter converts \eqref{eq
 \input{author/section_general_damping_weights}
 
 \Needspace{15\baselineskip}
-\begin{theorem}\label{thm:polynomial-damping}
+\begin{theorem}\label{thm:polynomial-damping}\index{Damping!polynomial}
 For every $q>r_n$, the measures
 \[
  \sigma_{q,u}:=(1-u)^{-q}\mu_u
@@ -165,7 +168,7 @@ Indeed, writing $r=n-2>0$, differentiation gives
 The ratios $(\mathrm{e}+t)/(1+t)$ are bounded. Substitution $y=\log(\mathrm{e}+t)$ therefore bounds the two tail integrals by fixed multiples of $[\log(\mathrm{e}+T)]^{1-a}$ and $[\log(\mathrm{e}+T)]^{-a}$, respectively. Since $a>1$ and $\log(\mathrm{e}+T)\geq1$,
 $B_w(T)\leq C_{n,a}[\log(\mathrm{e}+T)]^{1-a}$. Thus $(1-u)^{-(n-2)}[\log(\mathrm{e}-u)]^{-a}\mu_u$ has uniformly bounded mass, the displayed logarithmic tail bound and capacity continuity. In dimensions one and two, $r_n=0$ and $B_w(T)=w(T)$, so every weight satisfying the stated monotonicity and vanishing conditions works.
 
-Choose the potential $U$ used in \cref{cor:strong-linear-infinite-mass} and normalize $\sup_XU=0$. For $0<\varepsilon<1$, the potentials $\varepsilon U$ approach zero in capacity as $\varepsilon\downarrow0$: by \eqref{eq:global-capacity-tail}, the capacity of $\{\varepsilon U<-\delta\}$ is at most $C\varepsilon/\delta$ for each fixed $\delta>0$ and small $\varepsilon$. Consequently, for $p>0$ and $q>r_n$,
+When bounded mass fails, choose the potential $U$ used in \cref{cor:strong-linear-infinite-mass} and normalize $\sup_XU=0$. For $0<\varepsilon<1$, the potentials $\varepsilon U$ approach zero in capacity as $\varepsilon\downarrow0$: by \eqref{eq:global-capacity-tail}, the capacity of $\{\varepsilon U<-\delta\}$ is at most $C\varepsilon/\delta$ for each fixed $\delta>0$ and small $\varepsilon$. Consequently, for $p>0$ and $q>r_n$,
 \[
  \mathrm{e}^{p\varepsilon U}\mu_{\varepsilon U}\rightharpoonup\omega^n,
  \qquad
@@ -207,7 +210,7 @@ Let $\chi:[0,+\infty)\to[1,+\infty)$ be continuous, increasing and unbounded. Fo
 with the value $+\infty$ allowed. A uniform bound for this functional forces the sublevel tails to vanish because $\chi(T)\to+\infty$.
 
 \begin{corollary}\label{cor:integrability-continuity}
-If $u_j\to u$ in capacity and $\sup_jJ_{\chi,\omega}(u_j)\leq C$, then
+Let $u_j,u\in\PSH(X,\omega)$ be nonpositive. If $u_j\to u$ in capacity and $\sup_jJ_{\chi,\omega}(u_j)\leq C$, then
 \[
  J_{\chi,\omega}(u)\leq C,\qquad
  \mu_{u_j}\rightharpoonup\mu_u.
@@ -221,8 +224,8 @@ Since $\chi\geq1$, the total masses are at most $C$, and
 Thus \cref{thm:undamped-tail-continuity} applies. For the integrability assertion, use \eqref{eq:weighted-truncation-identity} with the continuous function $s\mapsto\chi(s)\eta_T(s)$, which has compact support. The corresponding weighted integrals converge at each fixed $T$ and are at most $C$. Let $T\to\infty$ by monotone convergence.
 \end{proof}
 
-\begin{proposition}\label{prop:tail-integrability-equivalence}
-For a family of nonpositive potentials, the uniform tail condition in \cref{thm:undamped-tail-continuity} is equivalent to a uniform bound on $J_{\chi,\omega}$ for some continuous increasing unbounded $\chi\geq1$.
+\begin{proposition}\label{prop:tail-integrability-equivalence}\index{Uniform tails!integrability criterion}
+For a family of nonpositive potentials in $\PSH(X,\omega)$, the uniform tail condition in \cref{thm:undamped-tail-continuity} is equivalent to a uniform bound on $J_{\chi,\omega}$ for some continuous increasing unbounded $\chi\geq1$.
 \end{proposition}
 \begin{proof}
 One implication was proved in the preceding corollary. Conversely, write the family as $(u_j)_{j\in J}$, where $J$ is its index set. The tail condition and \cref{lem:sublevel-mass-growth} give a uniform bound for the total masses, as in \cref{thm:undamped-tail-continuity}. Choose numbers $T_k\to+\infty$, with $T_{k+1}>T_k+1$, such that the mass of $\{-u_j>T_k\}$ is at most $2^{-k}$ for every member of the family. Let $r_k$ be a continuous nondecreasing function, zero on $[0,T_k]$ and one on $[T_k+1,+\infty)$. Define
@@ -243,7 +246,7 @@ The sum is locally finite, so $\chi$ is continuous, increasing and unbounded. To
 The tail condition excludes mass carried by levels that disappear in the capacity limit. On a curve this mass can concentrate at a pole. When bounded mass fails, it can also persist along smooth potentials converging to zero.
 
 \Needspace{14\baselineskip}
-\begin{example}\label{ex:p1-raw-tail}
+\begin{example}\label{ex:p1-raw-tail}\index{Monge--Ampere mass@Monge--Amp\`ere mass!concentration at a pole}
 On $X=\mathbb P^1$, let $z$ be the standard affine coordinate and let $\delta_0$ denote the unit Dirac measure at its origin. Take the Fubini--Study form
 \[
  \omega=\ddc\log(1+|z|^2),\qquad \int_X\omega=1,
@@ -278,7 +281,9 @@ Nevertheless, $u_j\to u$ in capacity. Indeed, outside any neighborhood of the or
 \end{example}
 
 \Needspace{16\baselineskip}
-\begin{corollary}\label{cor:smooth-capacity-mass-defect}
+We return to the fixed compact Hermitian manifold $(X,\omega)$.
+
+\begin{corollary}\label{cor:smooth-capacity-mass-defect}\index{Monge--Ampere mass@Monge--Amp\`ere mass!smooth concentration}
 Assume $v_+(\omega)=+\infty$ and put $V_\omega=\int_X\omega^n$. Fix a real number $b>V_\omega$ and a sequence $0<\varepsilon_j<1$ tending to zero. The smooth potentials $w_j$ in \cref{cor:smooth-prescribed-masses}, chosen with mass $b$, converge to zero in capacity. For every $T>0$,
 \[
  \left\|\mathbf1_{\{w_j\geq-T\}}(\omega+\ddc w_j)^n-\omega^n
@@ -346,14 +351,11 @@ Choose $C_0\geq1$ such that $\theta\leq\Omega:=C_0\omega$. Then $u\in\PSH(X,\Ome
 \[
  0\leq\mu_{\theta,u}\leq\mathrm{MA}^{\mathrm{ext}}_\Omega(u).
 \]
-All the mass, tail and capacity bounds follow from the already proved estimates for $\Omega$. To express them in the original capacity, note that for every Borel set $E\subset X$,
+All the mass, tail and capacity bounds follow from the already proved estimates for $\Omega$. The metric comparison in \cref{sec:hermitian-capacity} gives, for every Borel set $E\subset X$,
 \[
  \operatorname{Cap}_\omega(E)
  \leq\operatorname{Cap}_\Omega(E)
  \leq C_0^n\operatorname{Cap}_\omega(E).
 \]
-The first inequality follows by inclusion of the test potentials and positivity of the added background. For the second, if $0\leq v\leq1$ is $\Omega$-plurisubharmonic, then $v/C_0$ is an admissible $\omega$-test potential and
-$(\Omega+\ddc v)^n=C_0^n(\omega+\ddc(v/C_0))^n$.
-
 For continuity, let nonpositive $u_j,u\in\PSH(X,\theta)$ converge in capacity. Use \eqref{eq:weighted-truncation-identity} with the $\theta$-product. Its truncations are bounded and $\Omega$-plurisubharmonic. The weighted capacity continuity in \cref{sec:psh-local-capacity,sec:hermitian-capacity} applies term by term to the local expansion of their signed $\theta$-products, with the same bounded quasi-continuous coefficients. The cutoff vanishes at the truncation level, giving exactly the restricted positive measure. The uniform tails supplied by domination remove the cutoff. Domination also supplies the sublevel estimate, so the preceding proofs of the undamped tail and integrability criteria apply verbatim.
 \end{proof}
