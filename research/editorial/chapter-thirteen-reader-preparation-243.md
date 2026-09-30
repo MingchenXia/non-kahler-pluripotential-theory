@@ -1,6 +1,8 @@
 # Chapter 13: original read and initial reader draft
 
-Status: work in progress toward checkpoint243. Checkpoint242 remains the latest checked PDF and source package. Neither complete revised read nor the Chapter 13 production, page-review or source-reconstruction checks has yet been completed.
+Historical preparation record. Subsequent revised reads and release checks are recorded in chapter-thirteen-reader-review-243.md.
+
+Status at preparation: work in progress toward checkpoint243. Checkpoint242 remains the latest checked PDF and source package. Neither complete revised read nor the Chapter 13 production, page-review or source-reconstruction checks has yet been completed.
 
 All 35 recursive author inputs, totaling 4270 original lines, have received a direct original mathematical/editorial read. The unit contains 28 sections, 24 subsections, 90 formal blocks and 87 proof environments. This includes the full interior-smoothness argument, its local counterexamples, the resolved equations, the individual-density threshold and the nested tail estimates. A scoped consultation of the unchanged Chapter 1 proper-gap lemma checks the interface used by interior smoothness. This is not a new external-paper audit or an independent verifier result.
 
