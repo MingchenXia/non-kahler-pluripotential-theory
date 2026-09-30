@@ -1,5 +1,17 @@
 # Modification history
 
+## Checkpoint247 — Test curves, Perron maximality and Legendre duality
+
+The complete Chapter17 root and recursive figure receive the reader review. The setting now precedes motivation, which explains the exchange between singularity-envelope fixed points and Perron maximality, valid also for nonclosed backgrounds. Transform notation is recalled at its use; the inverse proof identifies the initial limit on its almost-everywhere set. The projective-line example declares its new background setting and specifies the positive parameter interval in the logarithmic-pole conclusion. A second pass removes repeated introduction text and the final recap.
+
+All four sections, five formal blocks, three proofs and ten original labels remain. The other 235 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. The figure source is unchanged; all six curves and 906 sampled coordinates match the explicit formulas to their recorded precision. The source and mathematical figure checks, direct rendered review and bounded Chapter1 dependencies do not constitute a new external-paper proof audit or independent verification.
+
+Production builds and fresh-source reconstruction pass with identical text on all 909 book pages and all seventeen companion pages. The last printed page is 885; the companion is byte-identical to checkpoint246. There are no unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and two inherited warnings; the root keeps its established three errors and three warnings. Three new index locators give 406 insertions, 402 clickable locators and four alternate-term references. Index letter-heading spacing is adjusted locally to resolve overflow, with fonts and leading preserved. Final image checks cover the chapter, figure, adjacent pages and all five index pages. See research/editorial/chapter-seventeen-reader-review-247.md.
+
+The final public PDF checksum and homepage description are verified live after deployment. The homepage reads “A research monograph. 885 pages. Updated September 30, 2026.” Initial index-overflow builds were withheld by the publication guard; the corrected production builds publish through the standing hook. The source repository remains private.
+
+Continue with complete Chapter18, Restriction and intrinsic trace data, and all seven recursive inputs. Original and revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint246 — Perron interpolation and the variational geodesic equation
 
 Chapter 16 receives complete original and two revised mathematical/editorial reads of its single recursive input. The manifold, dimension, background and volume precede motivation. The opening explains how product positivity gives Perron interpolation while the L2 action can introduce torsion terms. The smooth path and coordinates, recalled path space and fixed-endpoint variation are explicit. The final comparison uses the three-dimensional Gauduchon torus and its non-Gauduchon perturbation to exhibit a Perron segment that is not stationary.
