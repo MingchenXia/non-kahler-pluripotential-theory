@@ -1,12 +1,24 @@
 # Current research status — 30 September 2026
 
+## Checkpoint244 — Normalization, entropy and moving divisors
+
+All fourteen recursive Chapter 14 inputs receive their original and two complete revised mathematical/editorial reads. The chapter declares X, dimension and volume before motivation, explains the scalar-to-adjoint-to-entropy argument, and marks changes to positive backgrounds, arbitrary divisorial backgrounds and the final general big setting. The projective-line example uses its own Fubini–Study background and volume, with its parameter range explicit.
+
+The moving-section proof now uses Chapter 1 normalized compactness and the Hartogs lemma for L1 convergence and supremum normalization, with the nonzero-section condition explicit. The general small-unbounded-locus definition moves to Chapter 1 unchanged in substance; that singularity-type seam receives its own bounded review. All eleven sections, ten subsections, thirty-three formal blocks, thirty-one proofs and original labels remain. Other proof bodies are unchanged apart from local spacing. The other 221 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. These direct reads do not claim a new external-paper audit or independent verification.
+
+The final book has 907 physical PDF pages and ends at printed page 883; the companion remains 17 pages and byte-identical to checkpoint243. Production and fresh-source builds pass with identical text on every page and no unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and two inherited label warnings; the root retains its established three errors and three warnings. Final visual coverage includes 50 selected pages through direct inspection and byte-identical image carry-forward. Six new index entries give 395 insertions, 391 clickable locators and four alternate-term references, all checked at the recorded scope. See research/editorial/chapter-fourteen-reader-review-244.md.
+
+Every production full-book build publishes through the authorized hook. The final public PDF checksum and homepage description are verified live; the description reads “A research monograph. 883 pages. Updated September 30, 2026.” The source repository remains private.
+
+Continue with complete Chapter 15, Multiplier-ideal envelopes and I-goodness, and its five recursive inputs. The new reader-oriented original and revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
+
 ## Public PDF publishing workflow — 30 September 2026
 
 The user authorizes replacing `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` after each successful full-book build and updating its matching homepage description using the final printed page number. The build now invokes `scripts/publish-homepage.py`, which commits only `Papers/SHPT_vibe.pdf` and the corresponding description in `readme.md` to the website repository in one non-forced update. It preserves concurrent website changes, retains a local PDF if publication fails, and skips source-package reconstruction and companion-only builds. The private source repository remains private.
 
-The current checkpoint243 PDF is published and deployed at website commit `4dc300c96a7ef166743aa75e47815b0427eebc54`. Its last printed page is 883, visually checked; the physical PDF length is 907. The homepage reads “A research monograph. 883 pages. Updated September 30, 2026.” The public PDF checksum and live description match the local publication receipt. Seven focused publisher checks and the actual build hook pass. The maintained and installed book skill are synchronized and validated. See `research/audits/homepage-publication-20260930.json`.
+The checkpoint243 PDF was initially published and deployed at website commit `4dc300c96a7ef166743aa75e47815b0427eebc54`. Its last printed page is 883, visually checked; the physical PDF length is 907. The homepage reads “A research monograph. 883 pages. Updated September 30, 2026.” The public PDF checksum and live description match the local publication receipt. Seven focused publisher checks and the actual build hook pass. The maintained and installed book skill are synchronized and validated. See `research/audits/homepage-publication-20260930.json`.
 
-This is a publishing-workflow change, with no mathematical source changes or new chapter-review claim. Checkpoint243 remains the latest checked manuscript release; Chapter14 remains the next reader-revision unit. The broader writing goal remains incomplete.
+This is a publishing-workflow change, with no mathematical source changes or new chapter-review claim. At that workflow-only update, checkpoint243 was the latest checked manuscript release and Chapter14 was the next reader-revision unit. The broader writing goal remains incomplete.
 
 
 The goal remains active and incomplete. The user reauthorized ongoing research, daily arXiv checks and chapter improvement on 23 September. The existing research heartbeat is active daily at 09:00 Asia/Shanghai under `research/daily-program.md`; the hourly GitHub heartbeat remains synchronization-only.

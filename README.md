@@ -6,7 +6,7 @@ The current structure has 33 chapters and an appendix. The main sequence develop
 
 The Introduction explains the differences from Kähler theory through mass, comparison, energy, equations and singularities. A subject index with clickable page references follows the bibliography; its locators are generated from the manuscript during the build.
 
-**Part XII, “Theory under mass bounds”, collects the substantial additional theory:**
+**Part IX, “Theory under mass bounds”, collects the substantial additional theory:**
 
 - Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, the relation between envelope and volume full mass classes, and the conditional volume characterization of ideal-envelope equality.
 - Chapter 30, *Relative equations under positive lower mass*: semipositive big backgrounds and smaller-background model references, assuming positive lower mass and allowing infinite upper mass.
