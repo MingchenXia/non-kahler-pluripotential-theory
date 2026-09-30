@@ -20,6 +20,16 @@ Archive and verify 1889 completed checkpoint231 intermediate files and the older
 
 macOS still reports an iCloud account-access error. Both archives are in the iCloud Drive folder but upload is unconfirmed; neither local archive is evicted or deleted. The recovery paths, checksums and pending upload/Remove Download operation are recorded in `research/storage-archive-20260929.json` and `research/storage-archive-20260930.json`. This storage update adds no manuscript review claim.
 
+## Checkpoint238 — Hopf mass, fixed parameters and the lower-mass definition
+
+The complete six-section Chapter 8 receives its original and two complete revised mathematical/editorial reads. The chapter opening connects Gauduchon cancellation to vertical energy, and the first section explains fiber-measure normalization without repeating that opening. The cutoffs are explicitly independent of eta, the defect assertion carries the sufficiently-small-eta regime, and sharpness states positivity of the perturbed form.
+
+An in-place traversal finds that lower mass was used in Chapter 8 before its definition. Chapter 6 now defines lower and upper Hermitian masses together; Chapter 12 explicitly extends the former to semipositive backgrounds. These two definition seams receive their actual scoped reads, without a new whole-Chapter 6 or 12 review claim or a standing mass assumption. All nine Chapter 8 formal blocks, eight proofs and labels remain. The other 233 active author inputs, all 23 formal questions, all 190 historical verifier reports and three hidden sources are unchanged. This is not a new external-paper audit.
+
+The 907-page book and seventeen-page companion pass production builds and fresh-source reconstruction, with identical text on every page. There are no unresolved references/citations, duplicate labels or overfull boxes. The house audit has zero errors and five inherited warnings, matching its baseline. Final image review covers 29 pages: 5 new or changed images are directly inspected, and 24 byte-identical images carry their first review. Three added index entries locate Hermitian lower mass, the Hopf positivity criterion and fiber averaging; the semipositive entry is clarified. All 362 index insertions, 358 clickable locators and four alternate-term references are retained and checked at their recorded scope. See research/editorial/chapter-eight-reader-review-238.md.
+
+Continue with complete Chapter 9 and its ten recursive inputs. Its original read is in progress; the complete original and both revised reads are not yet finished. Review ambient declarations before dimension-dependent motivation, the potential and derivative estimates, scalar/potential uniqueness and the Aeppli volume equation. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint237 — Weighted measures, tails and concentration in Chapter 7
 
 The complete six-section Chapter 7 and its general-weight input receive their original and two complete revised mathematical/editorial reads. The chapter setting precedes its formulas; the range parameter and integrability sequences are quantified. The infinite-mass example explicitly retains its conditional premise, and the original compact Hermitian setting resumes after the projective-line example. The repeated metric-capacity argument now cites its Chapter 1 proof.

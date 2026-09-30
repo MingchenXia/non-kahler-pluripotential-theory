@@ -1,7 +1,7 @@
 \chapter{Unbounded mass on a Gauduchon threefold}
 \label{chap:hopf}
 
-On the Hopf threefold below, a Gauduchon metric has a mass formula whose quadratic term is a positive multiple of the Dirichlet energy along the elliptic fibers. To make the mass unbounded, we construct smooth potentials with arbitrarily large vertical energy while keeping the perturbed form positive. The heat kernel supplies the concentration; varying its time parameter across the base controls the mixed derivatives, and a function of the base alone restores positivity while preserving the vertical energy. The same mass formula identifies the potentials of minimum mass through their fiber averages.
+The Gauduchon condition cancels the linear term in the mass polynomial. On the Hopf threefold below, the quadratic term is a positive multiple of the Dirichlet energy along the elliptic fibers. We construct smooth potentials with arbitrarily large vertical energy while keeping the perturbed form positive. The heat kernel supplies the concentration; varying its time parameter across the base controls the mixed derivatives, and a function of the base alone restores positivity while preserving the vertical energy. The same formula identifies all bounded potentials of minimum mass through their fiber averages.
 
 \begin{theorem}[Xia--Zhang]\label{thm:hopf-unbounded}\index{Hopf manifold!unbounded mass}
 The compact threefold
@@ -18,7 +18,7 @@ In particular, $X$ does not have the bounded mass property.
 
 \section{The Hopf metric and its mass}
 
-The projective fibration separates the horizontal and vertical parts of the metric. The Gauduchon identity removes the linear term in the mass polynomial, while the torsion formula turns the quadratic term into a positive vertical energy.
+The projective fibration separates the horizontal and vertical parts of the metric. Normalizing the fiber measure to have mass one fixes the constants in the total-mass formula.
 
 \Needspace{6\baselineskip}
 On the covering space $\C^3\setminus\{0\}$, with coordinates $z=(z_0,z_1,z_2)$, put
@@ -99,7 +99,7 @@ For $\xi\ne0$ introduce
 \]
 We use smooth real functions $V:\mathbb R\times E\to\mathbb R$, written $V=V(x,w)$, that are independent of $x$ near the negative end and constant in both variables near the positive end. These conditions give smooth extension across $\xi=0$ and over the complement of the affine chart, using the same constant at the positive end. The nonconstant base region may depend on $V$.
 
-\begin{lemma}\label{lem:hopf-positivity}
+\begin{lemma}\label{lem:hopf-positivity}\index{Hopf manifold!positivity criterion}
 For such a function, at $\xi\ne0$ the inequality $\omega+\ddc V>0$ is equivalent to
 \begin{equation}\label{eq:hopf-positivity}
  1+V_{w\bar w}>0,\qquad \mu+V_x>0,\qquad
@@ -307,7 +307,7 @@ All estimates below are for $\eta\downarrow0$, with $\kappa$ fixed. Write
  q_0=\sqrt{\log\frac1{\eta\varepsilon}},\quad
  a=\sqrt{\frac\kappa{2\eta}}.
 \]
-Choose a smooth nondecreasing $\chi:\R\to[0,1]$, equal to zero on $(-\infty,0]$ and one on $[1,+\infty)$, with $\int_0^1\chi=1/2$. Define
+Fix a smooth nondecreasing $\chi:\R\to[0,1]$, independent of $\eta$, equal to zero on $(-\infty,0]$ and one on $[1,+\infty)$, with $\int_0^1\chi=1/2$. Define
 \begin{equation}\label{eq:hopf-scale}
  q(x)=q_0-\int_0^{ax}\chi(s)\,\mathrm{d}s,
  \qquad t(x)=\eta^{-1}\mathrm{e}^{-q(x)^2}.
@@ -324,7 +324,7 @@ For small $\eta$, we have $0<a^{-1}<b<x_*$, with
  q(b)=1,\quad q(x_*)=0,\quad
  b,x_*=O\bigl(\sqrt{L/\eta}\bigr),\quad \eta b=o(1).
 \end{equation}
-Choose another smooth cutoff $\vartheta:\R\to[0,1]$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
+Fix also a smooth cutoff $\vartheta:\R\to[0,1]$, independent of $\eta$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
 \[
  W(x,w)=\vartheta(q(x))F_\eta(t(x),w).
 \]
@@ -339,12 +339,12 @@ For the functions just constructed, let
 \[
  d_\eta(x)=\max_{w\in E}\max\{-Q[W](x,w),0\}.
 \]
-Then $d_\eta$ is continuous, supported in $[0,b]$, and
+For all sufficiently small $\eta$, the function $d_\eta$ is continuous, supported in $[0,b]$, and
 \begin{equation}\label{eq:hopf-small-defect}
  \int_\R d_\eta(x)\,\mathrm{d}x=o(1),\qquad
  \sup_{\R\times E}\max\{-W_x,0\}=o(1).
 \end{equation}
-On $[-2,-1]\times E$, one also has $Q[W]\geq2/27$ for small $\eta$.
+On $[-2,-1]\times E$, one also has $Q[W]\geq2/27$.
 \end{lemma}
 \begin{proof}
 Write $F=F_\eta$ for the heat potential. We first work on $[0,b]$, where $\vartheta(q)=1$. Set
@@ -512,13 +512,13 @@ Let $E$ act on $X$ by scalar multiplication: $\tau_a[z]=[\mathrm{e}^a z]$ for $a
 \]
 Thus $Au$ is constant on each fiber, and $\nu$ is a probability measure whose fiber measures are $\mathrm{d}A_E$ and whose base measure is $\omega_{\FS}^2$.
 
-\begin{proposition}\label{prop:hopf-fiber-average}
+\begin{proposition}\label{prop:hopf-fiber-average}\index{Hopf manifold!fiber averaging}
 For every $u\in\PSH(X,\omega)\cap L^\infty(X)$, the average $Au$ is the pullback of a bounded $\omega_{\FS}$-plurisubharmonic function on $\mathbb P^2$, and
 \begin{equation}\label{eq:hopf-average-mass}
  \|u-Au\|_{L^2(X,\nu)}^2
  \leq\frac23\left(\int_X(\omega+\ddc u)^3-6\right).
 \end{equation}
-The coefficient $2/3$ is optimal, even among smooth strictly positive potentials. Moreover,
+The coefficient $2/3$ is optimal, even for smooth $u$ with $\omega+\ddc u>0$. Moreover,
 \[
  \int_X(\omega+\ddc u)^3=6
  \quad\Longleftrightarrow\quad
