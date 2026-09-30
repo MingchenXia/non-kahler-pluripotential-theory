@@ -1,0 +1,17 @@
+# Chapter 27: Bott–Chern classes and singular loci — reader review 257
+
+All sixteen recursive author inputs received their original and two revised statement-to-proof reads. The second read followed the first build and direct inspection of all 54 selected pages. Final production builds, page inspection, source reconstruction and live public deployment pass.
+
+The chapter now declares its ambient manifold, dimension and metric before motivation. The first section carries that setting. The elliptic construction recalls its covering-space coordinate and descending differentials; the subsequent Kähler setting restores arbitrary dimension. Local distance, volume, matrix blocks, blowup maps and radial coordinates are explicit. The normal-length explanation uses its symbols only after their definitions. Repeated introduction material is removed, and local spacing keeps definitions and the last example opening together.
+
+The complete reads cover fixed Gauduchon trace and cone compactness, minimal multiplicities and closed loci, finite mass on Kähler resolutions, actual divisorial traces, threshold divisor constraints, elliptic descent and degeneration, ample-locus regularity, density zeros, radial and curve equations, and normal completeness. Positive mass remains distinct from exact ordinary type; boundedness remains distinct from metric completeness. The fixed-barrier regularity hypothesis concerns its whole regular locus.
+
+All fifteen sections, seven subsections, 44 formal blocks, 34 proofs and 103 labels remain. Seven formal blocks clarify declarations or the fixed barrier increment; the determinant-distance proof declares its matrix blocks. The other 37 formal blocks and 33 proofs are byte-identical. The 220 other active author inputs, 23 formal questions, 190 historical verifier reports and three hidden sources remain unchanged.
+
+The bounded internal dependency reads are recorded in the accompanying audit. These complete direct reads do not constitute a new external-paper proof audit or independent verification. No new external source or novelty claim is introduced. Existing skill rules cover these corrections; no new rule is needed. The next full unit is Chapter 28 and its five recursive inputs.
+
+The final book has 910 physical pages and ends at printed page 886. All 54 selected final pages pass visual review: 15 inspected directly and 39 carried by exact rendered-image equality. Coverage includes the complete chapter, adjoining pages, changed contents and all six index pages. All 415 index insertions, 411 clickable locators and four alternate-term references pass the recorded checks; chapter locators also match their printed openings. Both book and seventeen-page companion rebuild from a fresh empty extraction with identical text on every page. The companion is byte-identical to checkpoint256. No build errors, unresolved references/citations, duplicate labels or overfull boxes remain. Inherited house-audit diagnostics are unchanged.
+
+Public deployment is verified at website commit `7808d5df13fd5b33d57f5b12945484b25ac9e745` by the served PDF checksum and homepage description: “A research monograph. 886 pages. Updated September 30, 2026.” The source repository remains private.
+
+After verification, the reproducible fresh-source extraction and duplicate deployment downloads are removed. Current source, PDFs, source ZIP, review images, logs and result records remain. See research/storage-cleanup-257.json.
