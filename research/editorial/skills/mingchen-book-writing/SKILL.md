@@ -43,7 +43,7 @@ Delete redundant qualifications only after identifying what already supplies the
 
 ## Index and navigation
 
-Maintain a subject index when requested or established by the book. Place entries at definitions, substantive results and examples that a reader would want to find. Use subentries to separate meanings or regimes and cross-references for common alternate terms. Generate page locators from the source; preserve the book's indexing style and inspect the compiled alphabetization, wrapping and links. Cover the mathematical scope of the book without indexing every occurrence or copying the table of contents. Index-only changes should leave the printed mathematics unchanged. Keep the index current as the book develops.
+Maintain a subject index when requested or established by the book. Place entries at definitions, substantive results and examples that a reader would want to find. Use subentries to separate meanings or regimes and cross-references for common alternate terms. Generate page locators from the source; preserve the book's indexing style and inspect the compiled alphabetization, wrapping and links. Cover the mathematical scope of the book without indexing every occurrence or copying the table of contents. Let the index grow naturally as entries are added; do not repeatedly compress its typography to preserve an old page count. When overflow recurs, inspect the template and column pagination before changing spacing. Index-only changes should leave the printed mathematics unchanged. Keep the index current as the book develops.
 
 ## Mathematics and source integration
 

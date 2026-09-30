@@ -1,5 +1,17 @@
 # Current research status — 30 September 2026
 
+## Checkpoint248 — Intrinsic traces, exact realization and reader navigation
+
+All seven Chapter18 inputs receive their complete original and two revised mathematical/editorial reads. The compact ambient setting precedes motivation. The opening distinguishes ordinary restriction from the ambient-ideal trace invariant, and divisorial lower bounds from exact realization. It identifies the closed-background mechanism on a Kähler target, the separate curve-fibration construction and the product obstruction to mass recovery. The local bidisc example, return to compact curves and later arbitrary-dimensional background are explicit. The Poisson opening specifies its psh class; the Green kernel and final ambient potential are named. Fiber multiplicities are located on modifications, and the finite-subsum explanation now precedes the atomic sum.
+
+All eight sections, five subsections, nineteen formal blocks, nineteen proofs and thirty-nine original labels remain. Formal statements and proof bodies are unchanged. The other 229 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. Bounded internal dependency and open-problem checks do not constitute a new external-paper proof audit or independent verification. General exact trace realization retains its stated unresolved scope.
+
+Production builds and fresh-source reconstruction pass with identical text on all 910 book pages and seventeen companion pages. The last printed page is 886; the companion is byte-identical to checkpoint247. There are no unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and one inherited warning; the root keeps its three established errors and three warnings. Two new index locators give 408 insertions, 404 clickable locators and four alternate-term references. Restoring the template's index line and letter spacing resolves recurring overflow and lets the index grow to six pages. Fonts and class are unchanged. The corresponding book-skill rule is validated and synchronized. See research/editorial/chapter-eighteen-reader-review-248.md.
+
+The final public PDF checksum and homepage description are verified live after deployment. The homepage reads “A research monograph. 886 pages. Updated September 30, 2026.” Builds with index overflow were withheld by the publication guard; the successful production builds publish through the standing hook. The source repository remains private.
+
+Continue with complete Chapter19, Holomorphic sections and Hermitian mass, and its three recursive inputs. Complete original and revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint247 — Test curves, Perron maximality and Legendre duality
 
 The complete Chapter17 root and recursive figure receive the reader review. The setting now precedes motivation, which explains the exchange between singularity-envelope fixed points and Perron maximality, valid also for nonclosed backgrounds. Transform notation is recalled at its use; the inverse proof identifies the initial limit on its almost-everywhere set. The projective-line example declares its new background setting and specifies the positive parameter interval in the logarithmic-pole conclusion. A second pass removes repeated introduction text and the final recap.
