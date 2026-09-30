@@ -1,7 +1,11 @@
 \chapter{Perron interpolation and the geodesic equation}
 \label{chap:hermitian-rays}
 
-Perron interpolation joins two potentials by taking the largest path whose complexification is positive relative to the pulled-back background. Convexity bounds this path by the endpoint chord; a lower barrier ensures that the prescribed endpoints are attained. For potentials of the same ordinary singularity type, two affine barriers suffice and give uniform Lipschitz control in time. This construction also supplies the finite-interval maximality used in Legendre duality. Its relation to the $L^2$ geometry depends on torsion: even a smooth Perron segment given by constant translation can fail to be stationary for the $L^2$ action.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form. Fix a smooth positive volume form $\mathrm{d}V$ for the $L^1(X)$ topology.
+
+In K\"ahler geometry, the smooth geodesic equation for the $L^2$ metric on potentials is a homogeneous Monge--Amp\`ere equation on a product. Product positivity also defines Perron interpolation for a nonclosed background, but the two constructions can differ: integration by parts in the action produces torsion terms. Even a smooth Perron segment given by constant translation can fail to be stationary for that action.
+
+The Perron construction itself rests on convexity and barriers. Convexity bounds every admissible path by the endpoint chord, while a lower barrier ensures that the envelope attains the endpoints. For potentials of the same ordinary singularity type, two affine barriers suffice and give uniform Lipschitz control in time. Maximality on each finite subinterval will supply the link with Legendre duality in the next chapter.
 
 \section{Subgeodesics and endpoint bounds}\label{sec:strip-positivity}
 
@@ -10,10 +14,11 @@ For a nonempty open interval $I\subset\R$, write
  S_I=\{z\in\C:\Real z\in I\},\qquad
  \pi:X\times S_I\longrightarrow X.
 \]
-A family $u_t\in\PSH(X,\theta)$, $t\in I$, is a \emph{subgeodesic} if its complexification $U(x,z)=u_{\Real z}(x)$ is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on the product. For finite $a<b$ and $u_a,u_b\in\PSH(X,\theta)$, a subgeodesic on $(a,b)$ is said to run from $u_a$ to $u_b$ if it converges to them in $L^1(X)$ at the respective endpoints.
+A family $u_t\in\PSH(X,\theta)$, $t\in I$, is a \emph{subgeodesic} if its complexification $U(x,z)=u_{\Real z}(x)$ is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on the product.\index{Subgeodesic} For finite $a<b$ and $u_a,u_b\in\PSH(X,\theta)$, a subgeodesic on $(a,b)$ is said to run from $u_a$ to $u_b$ if it converges to them in $L^1(X)$ at the respective endpoints.
 
 The elementary operations below construct lower barriers. Vertical convexity and the minimum principle from \cref{sec:psh-minimum} then give the continuity and upper bounds needed for the Perron envelope.
 
+\Needspace{8\baselineskip}
 \begin{proposition}\label{prop:hermitian-subgeodesic-calculus}
 Subgeodesics are preserved by adding an affine function of $t$, by a positive affine reparametrization of time, by finite maxima, and by convex combinations. For $h\in C^\infty(X,\mathbb R)$, replacing $\theta$ by $\theta+\ddc h$ and $u_t$ by $u_t-h$ also preserves them.
 \end{proposition}
@@ -75,7 +80,7 @@ For $0\leq a<b\leq1$, let $v_t$ be the Perron envelope between $u_a^{\mathrm P}$
 A bounded difference between the endpoints supplies the required lower barrier explicitly.
 
 \begin{theorem}
-\label{thm:ordinary-type-perron}
+\label{thm:ordinary-type-perron}\index{Perron interpolation!fixed ordinary type}
 Suppose $u_0\sim u_1$ and choose $C\geq0$ with
 $u_0-C\leq u_1\leq u_0+C$. The Perron segment exists and attains both endpoints. Every slice has their ordinary singularity type, and
 \[
@@ -110,7 +115,7 @@ For endpoints of different types, a common lower potential still gives an admiss
 \Needspace{25\baselineskip}
 \section{The smooth product equation}
 
-For a smooth path, product positivity compares acceleration with the spatial gradient of the velocity. Suppose $\eta_t=\theta+\ddc u_t>0$ and write, in local holomorphic coordinates,
+For a smooth path, product positivity compares acceleration with the spatial gradient of the velocity. Let $u_t$ be smooth in $(x,t)\in X\times I$, suppose $\eta_t=\theta+\ddc u_t>0$, and write, in local holomorphic coordinates $(x_1,\ldots,x_n)$,
 \[
  \theta=\frac{\mathrm i}{2\pi}\sum_{i,j=1}^n
         g_{i\bar j}\,\mathrm dx_i\wedge\mathrm d\bar x_j,
@@ -154,7 +159,7 @@ This calculation identifies the smooth homogeneous product equation. A weak form
 \Needspace{25\baselineskip}
 \section{The \texorpdfstring{$L^2$}{L2} action and torsion}
 
-The product equation uses the spatial form pointwise. In the $L^2$ action, integration by parts also differentiates its powers, producing terms absent from that equation. Fix a Hermitian form $\omega$ and equip $\HH_\omega$ with
+The product equation uses the spatial form pointwise. In the $L^2$ action, integration by parts also differentiates its powers, producing terms absent from that equation. Fix a Hermitian form $\omega$. On the space $\HH_\omega$ of \cref{chap:mass}, consider the metric
 \[
  G_u(v,w)=\int_Xvw\,\omega_u^n,
  \qquad v,w\in C^\infty(X,\mathbb R).
@@ -166,7 +171,7 @@ For a smooth path $u_t\in\HH_\omega$, $0\leq t\leq1$, its action is
 Stationarity under smooth variations fixing both endpoints gives the formal geodesic equation for this metric.
 
 \Needspace{10\baselineskip}
-\begin{theorem}\label{thm:hermitian-ltwo-stationarity}\index{Geodesic equation!Hermitian metric}
+\begin{theorem}\label{thm:hermitian-ltwo-stationarity}\index{Geodesic equation!Hermitian metric}\index{Torsion!geodesic equation}
 Put $\eta_t=\omega_{u_t}$ and $T_t=\eta_t^{n-1}$. The path is stationary for $\mathscr S$ if and only if
 \begin{equation}\label{eq:hermitian-ltwo-geodesic}
  \begin{split}
@@ -179,7 +184,7 @@ Put $\eta_t=\omega_{u_t}$ and $T_t=\eta_t^{n-1}$. The path is stationary for $\m
 All differentials on the right act only in the $X$ variable.
 \end{theorem}
 \begin{proof}
-Let $v_t$ be a smooth variation with $v_0=v_1=0$, and put $f=\dot u_t$. Differentiating the action in its variation parameter gives
+Vary the path as $u_t+s v_t$, where $v_t$ is smooth in $(x,t)$ and $v_0=v_1=0$, and put $f=\dot u_t$. Differentiating the action at $s=0$ gives
 \[
  \delta\mathscr S
  =\int_0^1\left(\int_X f\dot v_t\,\eta_t^n
@@ -201,14 +206,14 @@ The full product rule is
        +f^2\ddc T_t.
  \end{split}
 \]
-The first term cancels the volume derivative $-nf\ddc f\wedge T_t$, leaving the right side of \eqref{eq:hermitian-ltwo-geodesic} minus its left side, integrated against $v_t$. Positivity on the compact parameter interval permits every sufficiently small smooth variation with fixed endpoints. The fundamental lemma of the calculus of variations proves necessity, and substitution proves sufficiency.
+After cancellation with the volume derivative, the integrand is $v_t$ times the difference between the right and left sides of \eqref{eq:hermitian-ltwo-geodesic}. Positivity of $\eta_t$ on $X\times[0,1]$ permits every sufficiently small variation. The fundamental lemma of the calculus of variations gives both implications.
 \end{proof}
 
 For a K\"ahler background, $\mathrm{d}T_t=\dc T_t=0$ and the equation reduces to \eqref{eq:hermitian-hcma-smooth}. The Gauduchon condition on $\eta_t$ removes only the last term. Constant translations isolate that term and provide an exact test for stationarity.
 
 \Needspace{10\baselineskip}
 \begin{corollary}
-\label{cor:translations-gauduchon}
+\label{cor:translations-gauduchon}\index{Geodesic equation!constant translations}
 Fix $u\in\HH_\omega$ and a nonzero constant $a$. The path $u_t=u+at$ is a Perron segment and solves the smooth homogeneous product equation. It is stationary for the $L^2$ action if and only if
 \[
  \ddc(\omega_u^{n-1})=0.
@@ -220,4 +225,4 @@ The path is admissible and equals the chord between its endpoints, so no admissi
 $\frac n2a^2\ddc(\omega_u^{n-1})$. This vanishes exactly under the displayed condition.
 \end{proof}
 
-The perturbation in \cref{ex:gauduchon-persistence-torus} therefore gives a smooth Perron segment that is not stationary for the $L^2$ action, even though the background is Gauduchon. On a surface, the Gauduchon condition persists under potential perturbations by \cref{prop:gauduchon-potential-persistence}, but it does not cancel the first-derivative terms in \eqref{eq:hermitian-ltwo-geodesic}. The next chapter uses Perron maximality to pass between rays and singularity envelopes. Relating this correspondence to a complete metric on Hermitian singularity classes remains a separate problem.
+The three-dimensional torus in \cref{ex:gauduchon-persistence-torus} carries a Gauduchon form $\omega$ and a smooth potential $u\in\HH_\omega$ for which $\omega_u$ is not Gauduchon. Thus $u_t=u+t$ is a smooth Perron segment that is not stationary for the $L^2$ action. On a surface, the Gauduchon condition persists under potential perturbations by \cref{prop:gauduchon-potential-persistence}, but it does not cancel the first-derivative terms in \eqref{eq:hermitian-ltwo-geodesic}. Relating Perron interpolation to a complete metric on Hermitian singularity classes remains a separate problem.

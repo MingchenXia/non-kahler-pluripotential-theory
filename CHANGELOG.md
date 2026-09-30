@@ -1,5 +1,17 @@
 # Modification history
 
+## Checkpoint246 — Perron interpolation and the variational geodesic equation
+
+Chapter 16 receives complete original and two revised mathematical/editorial reads of its single recursive input. The manifold, dimension, background and volume precede motivation. The opening explains how product positivity gives Perron interpolation while the L2 action can introduce torsion terms. The smooth path and coordinates, recalled path space and fixed-endpoint variation are explicit. The final comparison uses the three-dimensional Gauduchon torus and its non-Gauduchon perturbation to exhibit a Perron segment that is not stationary.
+
+All four sections, seven statements, seven proofs and thirteen original labels remain. The other 235 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. Internal dependency checks concern Chapters 1, 2 and 4; these direct reads do not claim independent verification or a new external-paper audit. The nonsmooth product equation and metric completion retain their separate proof obligations.
+
+Production builds and fresh-source reconstruction pass with identical text on all 909 book pages and all seventeen companion pages. The last printed page is 885; the companion is byte-identical to checkpoint245. There are no unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and one inherited warning; the root keeps its established three errors and three warnings. Four new index entries give 403 insertions, 399 clickable locators and four alternate-term references. All five index pages are inspected. Final image coverage comprises 24 selected pages: four inspected at the final stage and twenty carried only by rendered-image byte identity. The later page relocation is checked separately by page text after removing only running page numbers. See research/editorial/chapter-sixteen-reader-review-246.md.
+
+The final public PDF checksum and homepage description are verified live after deployment. The homepage reads “A research monograph. 885 pages. Updated September 30, 2026.” Every successful production full-book build uses the standing publication hook. The source repository remains private.
+
+Continue with complete Chapter 17, Test curves and Legendre duality, and both recursive inputs. Original and revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint245 — Ideal envelopes, analytic limits and singularity topologies
 
 All five recursive Chapter 15 inputs receive complete original and two revised mathematical/editorial reads. The ambient connected compact manifold, dimension and probability volume precede the chapter motivation. The opening follows the information lost under ideal projection, the dyadic envelope limit and the distinction from the Kähler mass characterization. The changes from Kähler to general complex geometry, to curve examples and back to arbitrary-dimensional Hermitian backgrounds are explicit.
