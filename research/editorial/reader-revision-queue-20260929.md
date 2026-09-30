@@ -2,7 +2,7 @@
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
-The first unit corrects the Introduction's undeclared X, n, variation direction and equation data, reviews front matter in actual reading order, and consolidates adjacent parts without changing the chapter sequence. Checkpoint231 completes the original and both revised proof/editorial reads of all twenty Chapter 1 inputs, final builds, page inspection and fresh source reconstruction. Checkpoint232 completes the same full sequence for Chapter 2. Checkpoint233 completes the full sequence for Chapter 3. Checkpoint234 completes the full sequence for both Chapter 4 inputs. Checkpoint235 completes the full sequence for Chapter 5. Both Chapter 6 originals have been read in inclusion order; their revision is next.
+The first unit corrects the Introduction's undeclared X, n, variation direction and equation data, reviews front matter in actual reading order, and consolidates adjacent parts without changing the chapter sequence. Checkpoint231 completes the original and both revised proof/editorial reads of all twenty Chapter 1 inputs, final builds, page inspection and fresh source reconstruction. Checkpoint232 completes the same full sequence for Chapter 2. Checkpoint233 completes the full sequence for Chapter 3. Checkpoint234 completes the full sequence for both Chapter 4 inputs. Checkpoint235 completes the full sequence for Chapter 5. Checkpoint236 completes the full sequence for Chapter 6. Both Chapter 7 originals have been read in inclusion order; their revision is next.
 
 For each chapter, directly read every recursive input and track where spaces, dimensions, forms, measures, maps and auxiliary symbols are declared. Check openings before the first formal setting, later changes of setting, proof-local quantifiers and unexplained cross-chapter notation. Carry valid declarations forward; do not repeat a definition at every section. Improve the problem-to-proof transition and distinguish indispensable first-reading material from longer reusable tools. Complete the two revised reads, build and affected-page review before marking the chapter done.
 
@@ -13,8 +13,8 @@ For each chapter, directly read every recursive input and track where spaces, di
 | 3 | `book/author/chapter_energy.tex` | 1 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint233. See chapter-three-reader-review-233.md. |
 | 4 | `book/author/chapter_gauduchon.tex` | 2 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint234. See chapter-four-reader-review-234.md. |
 | 5 | `book/author/chapter_compactness.tex` | 2 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint235. See chapter-five-reader-review-235.md. |
-| 6 | `book/author/chapter_products.tex` | 2 | Complete original read of both inputs finished (308 + 155 lines); revision and both complete revised reads pending. Next active unit. |
-| 7 | `book/author/chapter_damped_measures.tex` | 2 | Pending complete original and revised reads. |
+| 6 | `book/author/chapter_products.tex` | 2 | Complete original and both complete revised reads, builds, final images and source reconstruction in checkpoint236. See chapter-six-reader-review-236.md. |
+| 7 | `book/author/chapter_damped_measures.tex` | 2 | Complete original read of both inputs finished (359 + 50 lines); revision and both complete revised reads pending. Next active unit. |
 | 8 | `book/author/chapter_hopf.tex` | 1 | Pending complete original and revised reads. |
 | 9 | `book/author/chapter_smooth_equations.tex` | 10 | Pending complete original and revised reads. |
 | 10 | `book/author/chapter_weak_equations.tex` | 4 | Pending complete original and revised reads. |
