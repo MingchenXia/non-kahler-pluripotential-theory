@@ -1,0 +1,21 @@
+# Chapter 12: reader-oriented revision, checkpoint242
+
+Status: Complete chapter reads, final production builds, image review and fresh-source reconstruction passed; private synchronization is the final release step.
+
+The complete unit comprises chapter_envelopes.tex and section_bounded_contacts.tex. Both receive an original and two complete revised mathematical/editorial reads. All six sections, nineteen formal blocks, seventeen proofs and labels remain.
+
+The chapter now declares X, dimension, the auxiliary metric and volume form before its motivation. The opening separates variation of mass within one ordinary type from the existence of stretched-envelope competitors. It identifies the semipositive big setting of the positive-mass mechanism and explains why individual positivity does not require a uniform positive lower bound. The domination opening declares its background, potentials and stretching parameter before the construction is discussed, and retains the measure inequality needed for the motivating estimate. The relative-class opening avoids an undeclared u, and the volume definition briefly recalls the role of V-theta without repeating its definition.
+
+The original six-section order is retained. Contact support leads to rooftop control and bounded domination; singularity volumes and the relative class then record different properties. The model-reference section explains how a competitor leaves a big complementary background and how contact transfers its positive mass. The last example distinguishes finite mass of an envelope fixed point from possibly infinite mass of representatives sharing that envelope.
+
+Both revised reads follow smooth exponential approximation, the lower-semicontinuous and quasi-continuous passages, the fixed-background expansion, and the two-cutoff unbounded limit. They check the rooftop partition, fixed-point estimate, strict-barrier transfer and the supremum contradiction in domination. The volume identities, pole-compatible convex inequalities, stretching closure, finite rooftops, normalized L1 envelope equality, smaller-background estimate and infinite-mass series remain under their original hypotheses. The audit records the precise checks. This is a direct chapter review, without a new external-paper audit or independent verifier result.
+
+All other 234 active author inputs, 23 formal questions, 190 historical verifier reports and three hidden Nakamaye sources remain unchanged. General psh foundations stay in Chapter1. Existing skill rules already cover these declaration and regime corrections, so no timestamp-only rule update is made.
+
+The book remains 907 pages and the companion seventeen; the companion PDF is unchanged from checkpoint241. Final builds have no errors, unresolved references/citations, duplicate labels or overfull boxes. The chapter house audit has zero errors and two inherited warnings; the root keeps its three inherited errors and three warnings. The definition of non-collapsing stays with its formula, and the contact-limit identity is stated directly after its convergence justification. Reducing the index letter gap from four to three points removes a small vertical overflow while keeping the existing fonts and five-page index.
+
+The final visual selection contains 20 pages, covering the entire chapter, adjoining pages, changed contents and all index pages. There are 4 newly inspected images and 16 byte-identical images carrying the first-build review. Five new entries give 384 insertions, 380 clickable locators and four alternate-term references. Labeled locators and page destinations resolve; earlier entries retain their recorded direct-review scope.
+
+Both outputs rebuild from a fresh empty extraction with identical text on all 907 book pages and seventeen companion pages. The final archive check compares the current source and the manuscript/build-script payloads actually rebuilt, including all 236 active author inputs and the established exclusions.
+
+Complete Chapter13 and all 35 recursive author inputs. The root and first two nested originals have been read; the remaining 32 originals and both complete revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
