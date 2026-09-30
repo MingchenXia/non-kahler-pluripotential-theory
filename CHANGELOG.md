@@ -1,5 +1,11 @@
 # Modification history
 
+## Storage maintenance — 30 September 2026, seventh archive
+
+Archived 3325 superseded intermediate files: checkpoint239/240 fresh-source build copies, and checkpoint238/239 page previews, baselines, frozen review copies, logs and PDF snapshots. The archive and every contained file were checked before removing their redundant project copies. All 2089 retained project files were unchanged, including the checked checkpoint240 release and current checkpoint241 work. The six earlier archive checksums were also reverified.
+
+This batch reclaims 81367040 allocated bytes net of its locally retained archive and recovery metadata; seven batches now reclaim 852234240 bytes. macOS reports an iCloud account-access error for all seven archives, so none has been evicted and cloud upload is not claimed. See research/storage-archive-20260930-seventh.json. The manuscript and chapter-revision priority are unchanged.
+
 ## Checkpoint240 — Continuous equations, capacity compactness and Hopf normalization
 
 The complete four-input Chapter 10 receives its original and two complete revised mathematical/editorial reads. Ambient data precede the opening discussion. The Gauduchon scalar bound is connected to uniform density control and then to uniform convergence; the capacity opening explains its backwards iteration without repeating the later compactness argument. The Hopf specialization declares its forms, projection, fiber action and measures, and uses the precise minimum-mass characterization. The oscillatory example declares its covering coordinate.
