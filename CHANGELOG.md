@@ -1,5 +1,17 @@
 # Modification history
 
+## Checkpoint245 — Ideal envelopes, analytic limits and singularity topologies
+
+All five recursive Chapter 15 inputs receive complete original and two revised mathematical/editorial reads. The ambient connected compact manifold, dimension and probability volume precede the chapter motivation. The opening follows the information lost under ideal projection, the dyadic envelope limit and the distinction from the Kähler mass characterization. The changes from Kähler to general complex geometry, to curve examples and back to arbitrary-dimensional Hermitian backgrounds are explicit.
+
+The curve argument now separates completion from mass and capacity convergence. The ideal metric is defined once; its pullback to ordinary classes replaces the repeated formula and explains why it is only a pseudometric there. Proof-local coordinates, representatives and the positive scale are explicit. All six sections, thirty formal blocks, twenty-seven proofs and original labels remain. Two subdivisions increase the subsections from ten to twelve. The other 231 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. These direct reads do not claim independent verification or a new external-paper audit.
+
+Production builds and fresh-source reconstruction pass with identical text on all 907 book pages and all seventeen companion pages. The final printed page is 883; the companion is byte-identical to checkpoint244. There are no unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and two inherited warnings; the root keeps its established three errors and three warnings. Four new index entries give 399 insertions, 395 clickable locators and four alternate-term references. A two-percent reduction in index leading retains five readable pages. Final image coverage includes the entire chapter, its neighbors, changed cross-reference pages, contents and index. See research/editorial/chapter-fifteen-reader-review-245.md.
+
+The final public PDF checksum and homepage description are verified live after deployment. The homepage reads “A research monograph. 883 pages. Updated September 30, 2026.” The earlier transient publication timeout was recovered; every successful production full-book build uses the standing publication hook. The source repository remains private.
+
+Continue with complete Chapter 16, Perron interpolation and the geodesic equation, and its single root input. Original and revised reads remain pending. The broader writing and source-integration goal remains active and incomplete.
+
 ## Checkpoint244 — Normalization, entropy and moving divisors
 
 All fourteen recursive Chapter 14 inputs receive their original and two complete revised mathematical/editorial reads. The chapter declares X, dimension and volume before motivation, explains the scalar-to-adjoint-to-entropy argument, and marks changes to positive backgrounds, arbitrary divisorial backgrounds and the final general big setting. The projective-line example uses its own Fubini–Study background and volume, with its parameter range explicit.
