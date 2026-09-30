@@ -2,6 +2,8 @@
 
 This ledger describes the checked manuscript at checkpoint229. It reconciles the current statements and their proof boundaries; it does not re-audit every chapter or cited source. [The source comparison](comparison.md) and [current machine-readable map](source-disposition-229.json) give the source dispositions, stable compiled anchors, recursive chapter graph and all 23 formal questions. The [checkpoint182 map](source-disposition-182.json), [older ledger archive](audits/proof-obligations-history-through-checkpoint181.md) and intervening Git history preserve earlier scopes.
 
+Checkpoint258 corrects the Lee--Gauduchon invariance dependency below after a complete Chapter28 read. The rest of this ledger retains its checkpoint229 review scope.
+
 The 190 historical verifier reports retain their original inputs and conclusions. This reconciliation performs no independent verifier run. Q4.1 has now received complete source-proof reading and a bounded reconstruction in Chapters 1, 15 and 29; the stronger complete model-topology problem remains separate.
 
 ## Established regimes
@@ -31,7 +33,7 @@ The positive-volume recovery argument is [Theorem 29.5.3](../book/author/section
 | Input | Actual use |
 |---|---|
 | Global analytic regularization, Skoda integrability, strong openness and valuative ideal theory | Named Chapter 1 inputs; nonclosed corrections and their derived envelope results are proved internally. |
-| Resolution, current theory, elliptic theory and classical closed geometry | Used at specified analytic/geometric steps. Resolution pullbacks may be degenerate. Weak factorization remains an explicit input to Lee-Gauduchon invariance. |
+| Resolution, current theory, elliptic theory and classical closed geometry | Used at specified analytic/geometric steps. Resolution pullbacks may be degenerate. Lee--Gauduchon invariance uses the degree-one cohomology restriction argument, pullback and pushforward of closed classes, and resolution of the graph. |
 | SGPT singularity, model and kernel theory | Its Kahler I-goodness theorem, positive-closed-mass decreasing-model divisorial continuity and partial-kernel asymptotics retain their closed hypotheses. The trace-realization use of Proposition 3.1.12 is confined to the Kahler target in Theorem 18.6.3. |
 | Local complex Dirichlet and elliptic regularity | Replacement/test-potential arguments retain strict quadratic subsolutions and precise normalization. A source statement/locator check is not a new complete external proof audit. |
 | Closed prescribed-type uniqueness | The closed model domain retains the DDNL scope recorded in the checkpoint167 review; existence also follows from Chapter 31. |
