@@ -1,5 +1,11 @@
 # Modification history
 
+## Storage consolidation through checkpoint237 — 30 September 2026
+
+Archive and verify 4698 disposable files: completed source rebuild copies for checkpoints235–237, older previews and frozen review copies through checkpoint236, old build logs, and superseded snapshots234–236. The archive preserves relative paths, modes, timestamps and SHA-256 checksums. Remove the originals only after checking every archived file and all 2025 remaining project files. Keep the latest checkpoint237 PDF, source package, review images, Chapter 8 preparation, source/research files and verifier state local.
+
+This batch reclaims 114565120 allocated bytes net of its retained compressed archive and recovery metadata. All five batches total 14760 files and 733786112 bytes reclaimed. Every earlier archive checksum was reverified. macOS reports that the iCloud account cannot be accessed, so cloud upload is not claimed and no local archive is evicted. Recovery details and the current cloud-status evidence are in `research/storage-archive-20260930-fifth.json`. This is a storage operation; manuscript content and checked release remain unchanged.
+
 ## Additional storage consolidation — 30 September 2026
 
 Archive and checksum-verify 3086 completed checkpoint232/233 temporary rebuild files, previews, baseline copies and the superseded checkpoint232 snapshot, then remove those local originals. All 1947 remaining project files were checked unchanged, including the ongoing Chapter 4 revision and its current verification material. The archive stores original relative paths, modes, timestamps and checksums; recovery details are in `research/storage-archive-20260930-third.json`.
