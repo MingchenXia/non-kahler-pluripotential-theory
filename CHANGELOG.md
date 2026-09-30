@@ -1,11 +1,28 @@
 # Modification history
 
+## Additional storage consolidation — 30 September 2026
+
+Archive and checksum-verify 3086 completed checkpoint232/233 temporary rebuild files, previews, baseline copies and the superseded checkpoint232 snapshot, then remove those local originals. All 1947 remaining project files were checked unchanged, including the ongoing Chapter 4 revision and its current verification material. The archive stores original relative paths, modes, timestamps and checksums; recovery details are in `research/storage-archive-20260930-third.json`.
+
+This batch reclaims 73322496 allocated bytes net of the retained compressed archive and metadata. All three batches total 8479 files and 582008832 bytes reclaimed. iCloud account access still fails, so the local archive is retained and cloud upload is not claimed. This is a storage operation, not a manuscript release.
+
+
 
 ## Storage consolidation — 30 September 2026
 
 Archive and verify 1889 completed checkpoint231 intermediate files and the older checkpoint230/231 PDF snapshots, then remove only those local originals. The second archive retains original paths, modes, timestamps and SHA-256 checksums. It frees a further 48537600 allocated bytes net of the retained archive and metadata; both batches total 5393 files and 508686336 bytes reclaimed. Latest checkpoint232 outputs and verification files, next-chapter planning, original references, curated research and verifier state remain local.
 
 macOS still reports an iCloud account-access error. Both archives are in the iCloud Drive folder but upload is unconfirmed; neither local archive is evicted or deleted. The recovery paths, checksums and pending upload/Remove Download operation are recorded in `research/storage-archive-20260929.json` and `research/storage-archive-20260930.json`. This storage update adds no manuscript review claim.
+
+## Checkpoint234 — Gauduchon settings, current tests and adjoint measures
+
+The complete six-section Chapter 4, including its linear-duality input, receives its original and two complete revised mathematical/editorial reads. The opening declares X, dimension and the standing Hermitian form; the smooth equation data, curvature threshold, current-test spaces and Holder orders are explicit at their uses. Repeated setup is removed, the fixed mass is defined once, and the zero-degree lemma states its local curve extension. The trace discussion avoids an undefined unbounded Monge--Ampere product. The closure of smooth normalized Gauduchon tests remains distinct from all normalized positive dd-c-closed currents, and the general weak-adjoint limit questions remain unresolved.
+
+All fourteen formal blocks, twelve proofs, six sections and existing labels remain; the other 234 author inputs and all 23 formal questions are unchanged. Four new subject-index entries locate the threshold, vanishing degree and two current-test spaces. The index has 349 insertions, 345 clickable locators and four alternate-term references. All links and labeled locators resolve; the two prose-definition locators are checked visually.
+
+The book remains 907 pages and the companion seventeen. Production builds pass without unresolved references/citations, duplicate labels or overfull boxes. The scoped house audit has zero errors and three inherited warnings. Nineteen final selected pages cover the complete chapter, adjoining pages and index; eight changed images are directly inspected and eleven byte-identical images carry their first direct review. The short zero-degree proof is kept whole. Both outputs rebuild from a fresh empty source extraction with identical text on every page. All 190 historical verifier reports and three hidden Nakamaye sources remain unchanged. See research/editorial/chapter-four-reader-review-234.md.
+
+Continue with complete Chapter 5, including its trace-topology input. Both originals have been read in order (6 and 136 lines); revision and both revised reads remain pending. Make the ambient data and probability-volume normalization explicit before the trace formulas, preserve full-current positivity in higher-dimensional image characterization, and retain the topology and sharp quantitative exponents. The broader writing and source-integration goal remains active and incomplete.
 
 ## Checkpoint233 — Potentials, directions and backgrounds in Chapter 3
 
