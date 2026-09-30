@@ -1,13 +1,13 @@
 \chapter{Smooth Monge--Amp\`ere equations}
 \label{chap:smooth-equations}
 
-A Hermitian Monge--Amp\`ere equation determines both a potential and a scalar multiplying the prescribed density. The scalar compensates for the variation of total mass. Weighted integration bounds the potential, a trace estimate gives uniform ellipticity, and the adjoint measure removes the one-dimensional obstruction in the continuity method. Differentiating the equation against that measure then describes the scalar as a concave functional of the logarithmic density. We also solve the volume equation for the $(n-1)$st power of a metric, where an exact Aeppli variation introduces first-order torsion terms. Its derivative estimates depend on their specific matrix structure and on a Euclidean rescaling argument.
-
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth positive volume form $\mathrm{d}V$ and a Hermitian form $\omega$ on $X$. Let $F\in C^\infty(X,\mathbb R)$ be prescribed and let $b\in\mathbb R$ be an unknown scalar. We study
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a Hermitian form $\omega$ and a smooth positive volume form $\mathrm{d}V$ on $X$. Given $F\in C^\infty(X,\mathbb R)$, we seek a smooth real potential $u$ and a scalar $b\in\mathbb R$ satisfying
 \begin{equation}\label{eq:smooth-ma}
  \omega_u^n=\mathrm{e}^{F+b}\mathrm{d}V,\qquad \omega_u>0.
 \end{equation}
-Adding a constant to $u$ does not change the equation.
+Here $\omega_u=\omega+\ddc u$, and adding a constant to $u$ does not change the equation. For a closed background, integration determines $b$ from the prescribed density. For a Hermitian background, the total mass can depend on $u$, so the potential and the scalar must be found together. The adjoint probability supplies their linearized compatibility condition. Weighted integration and a trace estimate give the compactness needed to continue solutions from the background density; the same adjoint probability then governs the variation of $b$.
+
+For $n\geq2$, prescribing the volume of a Gauduchon metric requires a different potential variation: we deform its $(n-1)$st power within an Aeppli class. The resulting first-order torsion terms have a specific matrix structure. Their coefficients make the derivative estimates possible, and rescaling reduces the gradient bound to a Liouville theorem on $\mathbb C^n$.
 
 \section{Scalar bounds and uniqueness}
 
@@ -147,6 +147,7 @@ Finally,
 \]
 \end{proof}
 
+\Needspace{10\baselineskip}
 \begin{theorem}\label{thm:smooth-czero}\index{A priori estimate!potential bound}
 For each $\Lambda>0$ there is $C_\Lambda$ such that every smooth $u$ with
 \[
@@ -188,6 +189,7 @@ when $-m\geq A$; otherwise the desired bound is immediate. Thus $-m\leq A+C_0/\d
 
 The linearized operator $L_u$ of \eqref{eq:linearized-ma} annihilates constants, and its range is the space of functions with zero mean under the adjoint probability $\mu_u$ of \cref{prop:adjoint-gauduchon}. Including the scalar as an unknown removes this obstruction. In dimension one, $\mu_u=\omega_u/\int_X\omega_u$; the compatibility condition follows from Stokes' theorem.
 
+\Needspace{7\baselineskip}
 The normalization $\sup_Xu=0$ is convenient for compactness, but need not vary differentiably with the data. For differentiating solutions, fix instead the linear normalization
 \[
  \int_Xu\,\mathrm{d}V=0.
@@ -251,7 +253,7 @@ If $v-w$ had a positive maximum at $x$, then $\omega_v(x)\leq\omega_w(x)$. Takin
 $\mathrm{e}^{\lambda v(x)+F(x)}\leq \mathrm{e}^{\lambda w(x)+F(x)}$, contradicting $v(x)>w(x)$. For two solutions, apply the comparison in both orders.
 \end{proof}
 
-\begin{theorem}\label{thm:smooth-proper-existence}
+\begin{theorem}\label{thm:smooth-proper-existence}\index{Monge--Ampere equation@Monge--Amp\`ere equation!smooth exponential equation}
 For every $\lambda>0$ and every smooth real $F$, there is a unique smooth $u$ with $\omega_u>0$ such that
 \[
  \omega_u^n=\mathrm{e}^{\lambda u+F}\omega^n.
@@ -279,13 +281,13 @@ For a fixed smooth real obstacle $f$ on $X$ and a parameter $\beta>0$, the choic
 \]
 These equations penalize values above the obstacle. In \cref{prop:smooth-obstacle-support} we use them to construct its envelope and prove contact support. The necessary convergence will use only bounded regularization and the comparison just proved.
 
-\section{The Gauduchon derivative of the constant}
+\section{Variation of the normalization scalar}
 
 Integration against the adjoint probability eliminates the derivatives of the potential from the first variation. In the second variation, the matrix logarithm leaves a nonnegative square with a minus sign. This gives concavity and identifies its equality case.
 
 Write $b(F)$ for the scalar in \eqref{eq:smooth-ma}, and use the linear normalization $\int_Xu\,\mathrm{d}V=0$. For a smooth family $F_t$, with $t$ in an open interval $I\subset\mathbb R$, write $(u_t,b_t)$ for its solutions and put $\eta_t=\omega_{u_t}$. A dot denotes differentiation in $t$.
 
-\begin{theorem}\label{thm:b-derivatives}
+\begin{theorem}\label{thm:b-derivatives}\index{Normalization scalar!smooth variation}
 Put $A_t=\eta_t^{-1}\ddc\dot u_t$, the Hermitian endomorphism determined by the indicated forms. The normalization constant satisfies
 \begin{align}
  \dot b_t&=-\int_X\dot F_t\,\mathrm{d}\mu_{u_t},\label{eq:b-first}\\
@@ -334,7 +336,7 @@ Thus $b$ is a decreasing, concave, Lipschitz functional of the logarithmic densi
 \section{Normalization on the Hopf threefold}
 \label{sec:hopf-normalization}
 
-The Hopf metric of \cref{chap:hopf} makes the discrepancy from the closed-background normalization explicit: it is the energy of the solution along the elliptic fibers. In this section use that threefold, its projection $\pi:X\to\mathbb P^2$, the probability measure $\nu=\omega^3/6$ and the averaging operator $A$ of \cref{prop:hopf-fiber-average}. The fiber derivative $u_w$ is independent of the base trivialization.
+The Hopf metric of \cref{chap:hopf} makes the discrepancy from the closed-background normalization explicit: it is the energy of the solution along the elliptic fibers. In this section use that threefold, its projection $\pi:X\to\mathbb P^2$, the probability measure $\nu=\omega^3/6$ and the averaging operator $A$ of \cref{prop:hopf-fiber-average}. Write $\beta=\omega-\pi^*\omega_{\FS}$ for the rank-one form in that construction. The fiber derivative $u_w$ is independent of the base trivialization.
 
 For $F\in C^\infty(X,\mathbb R)$, let $(u_F,b(F))$ be the solution of
 \[
@@ -348,7 +350,7 @@ Define
 The corresponding expression vanishes for a closed background by \eqref{eq:closed-b}.
 
 \Needspace{13\baselineskip}
-\begin{proposition}\label{prop:hopf-normalization-defect}
+\begin{proposition}\label{prop:hopf-normalization-defect}\index{Hopf manifold!normalization defect}
 For every smooth real $F$ on this threefold,
 \begin{align}
  \mathrm{e}^{D(F)}&=1+\int_X|(u_F)_w|^2\,\mathrm{d}\nu,
@@ -367,7 +369,7 @@ Integration of the equation and \eqref{eq:hopf-mass} give
 \]
 Substituting the first equality into \eqref{eq:hopf-average-mass} proves \eqref{eq:hopf-normalization-average}.
 
-If $D(F)=0$, smoothness gives $(u_F)_w=0$ everywhere. Since $u_F$ is real, it is constant on each connected fiber. It descends to a smooth real function $q$ on $\mathbb P^2$, with $\omega_{\FS}+\ddc q>0$. The identities $\beta^2=0$ and $\alpha=\pi^*\omega_{\FS}$ give
+If $D(F)=0$, smoothness gives $(u_F)_w=0$ everywhere. Since $u_F$ is real, it is constant on each connected fiber. It descends to a smooth real function $q$ on $\mathbb P^2$, with $\omega_{\FS}+\ddc q>0$. Since $\beta^2=0$ and $\omega=\pi^*\omega_{\FS}+\beta$, we have
 \[
  (\omega+\ddc\pi^*q)^3
        =3\pi^*(\omega_{\FS}+\ddc q)^2\wedge\beta.
@@ -425,7 +427,7 @@ We now return to a general connected compact complex manifold $X$ of dimension $
 
 \Needspace{22\baselineskip}
 \begin{theorem}[Sz\'ekelyhidi--Tosatti--Weinkove]
-\label{thm:stw-volume}
+\label{thm:stw-volume}\index{Gauduchon metric!prescribed volume}
 Fix a Hermitian form $\gamma_0$, a Gauduchon form $\gamma$, and smooth real $F$. There is a unique pair $(u,b)\in C^\infty(X,\mathbb R)\times\mathbb R$ with $\sup_Xu=0$ such that the positive $(n-1,n-1)$-form
 \[
  \Gamma_u=\gamma_0^{n-1}+\ddc u\wedge\gamma^{n-2}

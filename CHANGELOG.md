@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint239 — Smooth equations, adjoint normalization and derivative estimates
+
+The complete Chapter 9 and all ten recursive inputs receive their original and two complete revised mathematical/editorial reads. The chapter declares its ambient data before the opening equation, explains the normalization scalar through variable Hermitian mass, and recalls the Hopf rank-one form before its cube identity. The Chern coefficient convention and gradient-bound dependencies are explicit. The regularity proof distinguishes the arbitrary first-derivative Holder exponent from the positive exponent supplied by Evans--Krylov. The normalization-variation heading names its mathematical subject.
+
+All seventeen sections, thirty formal blocks, twenty-nine proofs and existing labels remain. The reads cover scalar/potential uniqueness, weighted torsion recurrence, the trace square, adjoint compatibility, Hopf equality, the Aeppli root and drift, torsion indices, both largest-eigenvalue cases, cone Liouville and rescaling, continuity and scalar variation. The other 229 active author inputs, all 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. This is not a new external-paper audit.
+
+The final book has 907 pages and the companion seventeen. Production and fresh-source builds pass with identical text on every page, without unresolved references/citations, duplicate labels or overfull boxes. The chapter house audit has zero errors and three inherited warnings. The root audit has exactly its three inherited alphabet-alias errors and three template warnings. Local spacing keeps the potential-bound theorem and mean-normalization formula together; smaller index letter gaps remove the sparse sixth index page. The final visual review covers 50 pages: 15 changed images are directly inspected, and 35 byte-identical images carry their first review. Six new index entries bring the index to 368 insertions, 364 clickable locators and four alternate-term references, checked at their recorded scope. See research/editorial/chapter-nine-reader-review-239.md.
+
+Continue with complete Chapter 10 and its four recursive inputs. All four originals have been read; revision and both revised reads remain pending. Review its density/capacity setting, approximation and convergence arguments, scalar uniqueness versus potential selection, and the precise Hopf lower-mass wording. The broader writing and source-integration goal remains active and incomplete.
+
 ## Storage consolidation, sixth batch — 30 September 2026
 
 Archive and verify 1598 obsolete intermediate files: the completed checkpoint238 temporary source rebuild, checkpoint237 review images, baseline and frozen copies, checkpoint232/233 frozen TeX copies, logs through checkpoint237, and the superseded checkpoint237 PDF snapshot. Each archived member is checked against its original SHA-256 before removal. All 2062 other project files remain unchanged, including the latest checkpoint238 outputs and review material, checkpoint239 work, original references and verifier state.
