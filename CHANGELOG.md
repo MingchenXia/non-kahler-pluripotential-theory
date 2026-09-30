@@ -1,5 +1,14 @@
 # Modification history
 
+## Public PDF publishing workflow — 30 September 2026
+
+The user authorizes replacing `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` after each successful full-book build and updating its matching homepage description using the final printed page number. The build now invokes `scripts/publish-homepage.py`, which commits only `Papers/SHPT_vibe.pdf` and the corresponding description in `readme.md` to the website repository in one non-forced update. It preserves concurrent website changes, retains a local PDF if publication fails, and skips source-package reconstruction and companion-only builds. The private source repository remains private.
+
+The current checkpoint243 PDF is published and deployed at website commit `4dc300c96a7ef166743aa75e47815b0427eebc54`. Its last printed page is 883, visually checked; the physical PDF length is 907. The homepage reads “A research monograph. 883 pages. Updated September 30, 2026.” The public PDF checksum and live description match the local publication receipt. Seven focused publisher checks and the actual build hook pass. The maintained and installed book skill are synchronized and validated. See `research/audits/homepage-publication-20260930.json`.
+
+This is a publishing-workflow change, with no mathematical source changes or new chapter-review claim. Checkpoint243 remains the latest checked manuscript release; Chapter14 remains the next reader-revision unit. The broader writing goal remains incomplete.
+
+
 ## Checkpoint243 — Prescribed types, strict barriers and regularity
 
 All 35 recursive Chapter 13 inputs receive their original and two complete revised mathematical/editorial reads. The chapter declares the ambient manifold, dimension and probability volume before motivation, distinguishes semipositive big complements from strict analytic barriers, and resumes the general setting after geometric examples. The interior-smoothness opening retains smooth strictly positive density on the whole regular locus. The complete projective symmetry and regularity block now follows that theorem, keeping the existence constructions continuous and grouping the limitations of regularity.

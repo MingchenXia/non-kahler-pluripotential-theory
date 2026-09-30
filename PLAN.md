@@ -1,5 +1,9 @@
 # Hermitian pluripotential theory: research and book plan
 
+## Public PDF publication, 30 September 2026
+
+After every successful full-book build in the authoring repository, publish the PDF at `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` and update its matching homepage description with the last printed page number and the publication date. The user expressly authorizes replacing the existing PDF and committing both website files. The private book source remains private. Follow the build hook, retry and deployment verification instructions in `AGENTS.md`; source-package reconstruction and companion builds remain local.
+
 Authorized start: 2026-09-14 10:19:41 UTC / 18:19:41 Asia/Shanghai.
 Original research period ended: 2026-09-15 06:19:41 UTC / 14:19:41 Asia/Shanghai.
 The user subsequently approved continuation. The goal remains active; the old deadline and phases below document the initial plan. On 23 September 2026 the user authorized continuing research, daily arXiv checks and ongoing chapter revision. The existing research heartbeat is now active daily at 09:00 Asia/Shanghai; see `research/daily-program.md`.

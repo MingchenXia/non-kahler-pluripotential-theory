@@ -62,4 +62,28 @@ another process is actively writing them. The separate research heartbeat was
 explicitly reactivated for daily arXiv reading, research and chapter revision by
 the user on 23 September 2026; follow `research/daily-program.md` for that work.
 Keep `.gitignore` exclusions: build products, downloaded full texts, temporary
-previews, credentials, raw verifier logs and verifier runtime state stay local.
+previews, credentials, raw verifier logs and verifier runtime state remain excluded
+from the source repository. The public PDF exception is specified below.
+
+## Public book PDF and homepage
+
+On 30 September 2026 the user explicitly authorized updating
+`https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` after every successful full-book
+build, together with this book's description in the homepage. This is standing
+authorization to commit those two files to `MingchenXia/mingchenxia.github.io`,
+branch `main`; it does not make the manuscript source repository public.
+
+`bash scripts/build-book.sh` now invokes `scripts/publish-homepage.py` from the
+authoring repository. The publisher replaces `Papers/SHPT_vibe.pdf` and only the
+matching description in `readme.md`, in one commit. Its page count comes from
+the last printed index page, not the physical PDF length; its date is the build's
+publication date. Verify the final printed page when layout changes. Preserve
+all other website content and concurrent commits; never force-push.
+
+If network access fails after compilation, the local PDF remains available.
+Retry `python3 scripts/publish-homepage.py` under this existing authorization.
+Verify the public PDF and description after GitHub Pages deploys; the script's
+remote-file check alone is not a claim that the website has finished deploying.
+Fresh source-package reconstruction and companion-only builds do not publish.
+No additional schedule is required. Continue the established mathematical and
+editorial review separately; compilation/publication does not certify the book.
