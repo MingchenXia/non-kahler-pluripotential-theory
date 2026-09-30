@@ -1,5 +1,11 @@
 # Modification history
 
+## Storage cleanup after checkpoint256 — 30 September 2026
+
+Under the author's explicit cleanup request, remove 292 reproducible or duplicate intermediate files from completed checkpoints254–255 and retire ten empty directories. Archive 63 superseded snapshots, frozen review sources, logs, helpers and metadata in iCloud Drive. All archive members and the copied archive pass SHA-256 verification; every deleted PDF is an exact duplicate of a retained local or archived copy. The compressed archive is 4,938,364 bytes, and this batch reclaims approximately 125 MB after accounting for the retained archive and cleanup records. All 2,224 protected files match their pre-cleanup hashes.
+
+The latest checked checkpoint256 materials and ongoing checkpoint257 work remain local. Current manuscript sources, production PDFs, the source package, original references, historical verifier reports, Git history and runtime are unchanged. The archive remains locally downloaded until cloud upload is confirmed. See research/storage-cleanup-20260930-review-254-255.json for the inventory, archive location and upload state. This is storage maintenance, with no manuscript build or publication.
+
 ## Checkpoint256 — Partial Bergman kernels, envelopes and fiber information
 
 Chapter26 receives complete original and two revised mathematical/editorial reads across ten mathematical inputs and the structure of its unchanged nested figure. The setting precedes motivation, which connects the partial-envelope upper bound, positive-mass convergence on a Kähler modification, loss of singularity information on fibers, and shrinking Gaussian transitions. Exceptional-set domains, homogeneous coordinates and the changed-volume kernel are explicit. Repeated exclusions and density declarations are removed. All thirteen sections, eight subsections, twenty-nine formal blocks, twenty-nine proofs and 71 labels remain; all statements and proof bodies are byte-identical. The other 226 author inputs, 23 formal questions, 190 historical verifier reports and three hidden sources are unchanged. Bounded internal reads and carried figure-coordinate checks do not constitute a new external-paper proof audit, numerical audit or independent verification.
