@@ -47,7 +47,7 @@ Maintain a subject index when requested or established by the book. Place entrie
 
 ## Mathematics and source integration
 
-Before changing a result, recover its hypotheses, conclusion, proof dependencies and exceptional cases. Keep the topology and norm attached to a convergence or completeness assertion. Keep existence, scalar uniqueness, potential uniqueness and selection of an approximation limit separate. Put the required justification at the operation that needs it.
+Before changing a result, recover its hypotheses, conclusion, proof dependencies and exceptional cases. Keep the topology and norm attached to a convergence or completeness assertion. When symmetry removes variables, identify the acting group or describe its action at first use, and check that the stated invariance justifies the reduction. A label such as “circle-invariant” can hide different actions. Keep existence, scalar uniqueness, potential uniqueness and selection of an approximation limit separate. Put the required justification at the operation that needs it.
 
 When incorporating a new result, search existing theorems, examples, introductions and open problems for claims that it supersedes. Replace the settled part by its internal theorem reference, retaining the genuinely unresolved cases. Do not leave contradictory research questions at the end of the book.
 
