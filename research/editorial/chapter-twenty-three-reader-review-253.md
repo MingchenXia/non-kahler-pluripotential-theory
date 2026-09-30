@@ -1,0 +1,21 @@
+# Affine residual classes and approximation — checkpoint253
+
+Baseline: `9f6f28e8314ab7180e57c299b5676a6cc2e76dca`. The preceding goal turn made authoritative progress by completing Chapter22, its verified release and storage cleanup. This turn continues the queued Chapter23 review.
+
+The complete root and nested input, chapter_nonclosed_bclasses.tex and section_affine_trace_difference.tex, receive their original and two complete revised mathematical/editorial reads. Final production builds, page inspection, source reconstruction and live public deployment pass.
+
+The chapter now declares its manifold, dimension, background and models before motivation. Its opening explains why prescribed exterior derivative leads from Bott–Chern cohomology to an affine space. Smooth representatives for pullback and current representatives for pushforward are explicit. Ambient trace data precede the envelope argument; the transition to self-traces stays in force for the rest of the chapter. The analytic realization opening explains the two roles of boundedness, while the final section states its positive Hermitian background and infinite-upper-mass assumption before using the witness.
+
+All four sections, six formal statements, six proofs and eleven labels are retained. No mathematical hypothesis or conclusion is changed. The complete proof review checks affine maps through smooth/current Bott–Chern representatives, pseudoeffectivity from the common envelope, exceptional translation and the sign of its potential term, self-trace, bounded residual nefness and pullback, full integer analytic approximation, modelwise weak residual convergence with a common curvature lower bound, and the infinite-mass witness with trivial multiplier ideals. Fixed-derivative nef approximation, general exact trace realization and nonlinear mass convergence are not inferred.
+
+Bounded internal reads: Chapter22 affine prerequisites (smooth/current Bott–Chern quotient, b-divisor definition, self-trace proof, trace-budget and common-majorant proofs, exceptional difference and cocycle proof); Chapter1 disk criterion and modification L1 pullback proofs, bounded almost regularization proof, analytic regularization theorem and nonclosed corollary; Chapter6 infinite-mass witness statement/setup. Prior complete Chapter22 and source reviews retain their exact checkpoint252 scope. No new external-paper proof audit or independent verification. Chapter24 opening and first definition/proposition/proof are a bounded transition check, not a full original chapter read.
+
+Existing book-skill rules cover these corrections, so no new rule is added. The next complete unit is Chapter24 and both recursive inputs. The broader writing and source-integration goal remains incomplete.
+
+The second complete read follows the first successful build and direct inspection of all fifteen selected page images. No further mathematical or layout change is needed. All six statements and all six proofs are byte-identical to the baseline. No general psh material is added outside Chapter1. The chapter remains six pages, and its four sections follow the construction-to-approximation-to-mass argument.
+
+The final book has 910 physical pages and ends at printed page 886. All fifteen final selected images are byte-identical to the inspected first stage: complete chapter, neighboring pages and all six index pages. Index entries retain 415 insertions, 411 clickable locators and four alternate-term references. Chapter locators also match the actual printed openings. The book and seventeen-page companion rebuild from a fresh empty extraction with identical text on every page; the companion is byte-identical to checkpoint252. No build errors, unresolved references/citations, duplicate labels or overfull boxes remain. Inherited house-audit diagnostics are unchanged.
+
+The public deployment is verified at website commit `d905c1b0e0ac9ec645926e8460ce49ddeae8ddd6` by the served PDF checksum and the homepage description: “A research monograph. 886 pages. Updated September 30, 2026.” The source repository remains private.
+
+After verification, the reproducible fresh-source extraction and duplicate deployment downloads are removed. Current source, PDFs, source ZIP, review images, logs and result records remain. See research/storage-cleanup-253.json.
