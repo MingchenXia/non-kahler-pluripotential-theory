@@ -1,5 +1,13 @@
 # Current research status — 1 October 2026
 
+## Checkpoint264 — Unibranch descent and cone settings
+
+The appendix and both recursive inputs receive an original read and two complete revised mathematical/editorial reads. The space and background precede motivation; cone forms, coordinates, tangent vectors and deformation parameters are declared before use. All nine formal statements and thirty-one labels remain; the formal blocks and six proof bodies are byte-identical, while one proof only declares its real parameter. Descent, resolution independence, ordinary-class uniqueness, non-descending residuals and closed-only whole-class mass invariance retain their established scope.
+
+Production and fresh-source book/companion builds pass with 912 physical book pages, last printed page 888 and seventeen companion pages. All 26 selected final images pass, including the complete appendix and bibliography/index. Final logs are clean, the index retains 415 insertions and 411 clickable locators, and reconstruction matches every page text and book source byte. Manifest checksums and exclusions pass. The served PDF and homepage description match production after successful Pages deployment at `4916e1c1e9f8876ebed018a2fe1b85f5f1c578ac`.
+
+Continue directly with the final front matter and whole-book acceptance checks. The completion goal remains active and incomplete. See research/editorial/appendix-reader-review-264.md and its audit. No new external proof audit or independent verification is claimed.
+
 ## Checkpoint263 — Historical settings and source conventions
 
 The complete single-input Chapter 33 receives an original read and two complete revised mathematical/editorial reads. The historical formulas now identify their ambient manifold and Hermitian form, regularization and conformal data, fixed point, density/exponent conversions, shrinking background errors, positive cutoff and initial flow metric. All 199 citation commands and exact locators, 68 cited works, nineteen labels and 226 distinct internal reference targets remain. Existing mathematical and source boundaries are preserved.
