@@ -1,5 +1,13 @@
 # Current research status — 1 October 2026
 
+## Checkpoint263 — Historical settings and source conventions
+
+The complete single-input Chapter 33 receives an original read and two complete revised mathematical/editorial reads. The historical formulas now identify their ambient manifold and Hermitian form, regularization and conformal data, fixed point, density/exponent conversions, shrinking background errors, positive cutoff and initial flow metric. All 199 citation commands and exact locators, 68 cited works, nineteen labels and 226 distinct internal reference targets remain. Existing mathematical and source boundaries are preserved.
+
+Production and fresh-source book/companion builds pass with 912 physical book pages, last printed page 888 and seventeen companion pages. All 43 selected final images pass, covering the contents, history, adjacent pages, bibliography and index. Final logs are clean; the index retains 415 insertions and 411 clickable locators. Reconstruction matches all page text and book source bytes, with valid manifest and source exclusions. The served PDF and homepage description match production after the successful Pages deployment at `575d091589cdfc52d796411d58032e386bea0cc3`.
+
+Continue directly with Appendix A and both inputs, then final front matter and whole-book acceptance checks. The completion goal remains active and incomplete. See research/editorial/chapter-thirty-three-reader-review-263.md and its audit. No new external proof audit or independent verification is claimed.
+
 ## Checkpoint262 — Research questions and local settings
 
 The complete Chapter 32 and all four recursive inputs receive an original read and two revised mathematical/editorial reads. The chapter declares its manifold, density-root variable, pseudoeffective background and trace data before use. It explicitly returns from the elliptic threefold to the general manifold and confines bounded mass to the volume-comparison subsection. Twenty-two formal blocks, five proofs and thirty-one labels remain; all proof bodies are byte-identical. The questions retain their established solved and unresolved regimes, without a new literature-status claim.
