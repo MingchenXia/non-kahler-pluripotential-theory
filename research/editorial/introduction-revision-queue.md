@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint279: Prove exact ordinary and ideal envelope transport through a finite unramified cover for pulled-back continuous obstacles. Use the fiber maximum of competitors to reflect relative-envelope membership. Apply this to divisorial submersions with disconnected fibers, retaining the original-base relative-class criterion without claiming unrestricted all-obstacle equivalence in higher dimensions. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint280: Determine whether the positive-curve polar/atomic criterion is exactly membership in the relative envelope class of the ideal model, including zero residual atomic-model mass. Check the positive-volume characterization and the zero-mass case separately, then carry the exact criterion to divisorial fibrations without imposing connected fibers. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
