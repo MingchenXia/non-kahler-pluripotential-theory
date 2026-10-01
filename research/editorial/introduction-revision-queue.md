@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint278: For a curve base, reflect the polar measure criterion through the finite unramified component cover. Prove zero-obstacle and all-obstacle equality for a divisorial submersion type exactly when the original base polar curvature is atomic, even with disconnected fibers. Retain the covering-base criterion in higher dimensions at its proved scope. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint279: Prove exact ordinary and ideal envelope transport through a finite unramified cover for pulled-back continuous obstacles. Use the fiber maximum of competitors to reflect relative-envelope membership. Apply this to divisorial submersions with disconnected fibers, retaining the original-base relative-class criterion without claiming unrestricted all-obstacle equivalence in higher dimensions. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
