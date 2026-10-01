@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint272: Determine which relative-envelope and zero-mass reductions survive for weighted divisors dominating the base when some complete fibers lie in the pole set. Prove any needed ideal cancellation and uniform base-competitor bound before broadening the statements. Retain the finite-obstacle all-obstacle equivalence, unrestricted zero-obstacle projection and stronger complete model topology at their established scopes. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the requested reader-revision cycle.
+Current next unit after checkpoint273: Extend the obstacle-envelope reduction to the infinite fiber minima induced by divisors containing complete fibers. Establish extended continuity and a uniform upper bound for base competitors from normalized compactness on one base ball with a section outside the divisor. Keep the all-obstacle equivalence under its established finite-obstacle hypothesis and retain unrestricted projection and complete model topology as separate research problems. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
