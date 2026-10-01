@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint277 — Connected total space with disconnected fibers
+
+A new elliptic-isogeny example shows why connected fibers are needed for both envelope identities. Its total space is a connected Kahler surface, with four components in every fiber, a smooth horizontal divisor and a smooth obstacle. The connected product projection computes both true envelopes. Their residual potential changes under a kernel translation, so it cannot descend to the proposed isogeny base. All existing reduction statements/proofs remain byte-identical.
+
+The complete original is reused from the unchanged checkpoint276 second read, followed by two fresh complete revised reads; the second follows the production build/images and needs no amendment. One example/proof, one label and two index insertions are added. The entire prior primary input, 237 other author inputs, both figures, all 23 questions and all 451 protected hashes are preserved. All 1691 labels and 1235 targets resolve; the actual house audit has zero errors and warnings. No fresh whole-chapter or independent full-proof review, verifier run, bibliography change or novelty claim is made.
+
+Book/companion builds pass at 924 physical/900 printed and 17 pages, with clean logs, 5074 valid internal destinations and 429 clickable index locators. All 46 selected images pass: nine direct inspections and 37 exact checkpoint276 carries. The successful production build publishes the PDF and homepage description; the live release is verified after deployment of `d44cc4466d72fa8b1d0aa7f41078516b7db17714`. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, manifest checksums and current payload bytes pass, final logs are clean and archive publication is disabled; see research/editorial/disconnected-fiber-obstruction-277.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked additions; research remains incomplete. Construct the finite unramified cover parametrizing connected components of a compact submersion fiber, with a self-contained local transport argument in Chapter1. Apply the divisorial reduction on that cover to obtain the corrected continuous-obstacle formula when the original fibers are disconnected. Keep the all-obstacle criterion on the covering base at its proved scope.
+
 ## Checkpoint276 — Arbitrary weighted divisors in the fibration reduction
 
 The divisor components in Section 15.6.5 may now be arbitrary prime divisors, including vertical components. Nonnegative pullback orders suffice for main divisor removal; base ordinary order forces the required stretching coefficients in the relative-envelope proof. A common competitor bound compares the extended-obstacle curve models with their zero-obstacle models, preserving the polar criterion even at infinite fiber minima. Continuous-obstacle identities, relative-envelope and full all-obstacle equivalences, and zero mass all retain their exact conclusions in the original background and given metrics. Connected fibers remain required.

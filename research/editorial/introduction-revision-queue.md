@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint276: Give an explicit connected-total-space counterexample showing why connected fibers are needed for obstacle-envelope descent. Use an elliptic isogeny composed with a product projection and an obstacle varying between fiber components. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint277: Construct the finite unramified cover parametrizing connected components of a compact submersion fiber, with a self-contained local transport argument in Chapter1. Apply the divisorial reduction on that cover to obtain the corrected continuous-obstacle formula when the original fibers are disconnected. Keep the all-obstacle criterion on the covering base at its proved scope. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
