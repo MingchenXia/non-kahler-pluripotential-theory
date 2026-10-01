@@ -1,5 +1,15 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint271 — Weighted fibration divisors and ramified ideals
+
+The fibration obstacle, zero-mass and relative-envelope reductions now allow finite positive real weighted prime divisors with singularities or ramification, provided each component dominates the base and every fiber meets their complement. Ideal equivalence follows from submersion pullback and addition, reflected by local sections. The explicit weighted multiplier-ideal product retains its relative simple normal-crossing hypothesis. A smooth bidegree(1,2) graph gives a counterexample to that product at weight 3/4 while both envelope reductions hold. No bounded mass hypothesis is added.
+
+The complete input receives original and two revised reads, with bounded Introduction/research and internal dependency checks. A product-input guard is its only change. All four existing formal texts and eight labels remain; two proof arguments broaden, one example/proof and one label are added, and two index entries are added. All 23 question texts and all 451 protected hashes are preserved. The graph retains 238 author inputs and two figures; all 1689 labels and 1235 distinct reference targets resolve. No bibliography change, new external full-proof audit, verifier run or novelty claim is made.
+
+Final production book/companion builds pass at 920 physical/896 printed and seventeen pages, with clean logs, 5040 valid internal destinations and 420 clickable index locators. All 34 selected final images pass: nine direct final inspections and 25 exact-image carries. The final served PDF and matching homepage description are verified after successful Pages deployment at `105a6ca79804ee7226f9e74450d8d49912a8108c`. Fresh empty source reconstruction passes for both outputs with every page text and book source byte matching, valid checksums and clean logs; see research/editorial/weighted-fibration-divisors-271.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked extension. The research program remains active and incomplete. Continue with the whole-fiber condition and an explicit incidence example, keeping unrestricted projection and complete model topology separate.
+
 ## Checkpoint270 — Whole-book writing acceptance
 
 The requested whole-book writing cycle passes acceptance at its recorded review scope. All 33 chapters, Appendix A and final front matter have complete reader reviews; all original source chapters have explicit dispositions; all thirteen supplied works are integrated. Named classical and SGPT inputs, reconstructed main arguments and attributed contextual results retain their actual source/proof scopes. The 23 precise research questions remain separate from established arguments. This acceptance is not a fresh independent mathematical certification.

@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint270: Continue the mathematical development by testing extension of the divisorial-fibration obstacle and relative-class reduction to finite weighted relative normal-crossing divisors. Check the local ideal calculation before broadening a statement; retain unrestricted zero-obstacle projection and the stronger complete model-topology problem separately. Writing acceptance passes at checkpoint270; no chapter remains in the requested reader-revision cycle.
+Current next unit after checkpoint271: Analyze the condition excluding complete fibers from the pole divisor: compute the induced obstacle in a compact incidence example with a whole fiber, and delimit which envelope or relative-class reductions can persist. Keep unrestricted zero-obstacle projection and the stronger complete model topology separate. Writing acceptance at checkpoint270 is carried with this checked extension; no chapter remains in the requested reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

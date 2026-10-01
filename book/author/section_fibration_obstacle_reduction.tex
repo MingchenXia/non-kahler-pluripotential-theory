@@ -1,19 +1,22 @@
 \subsection{Relative divisors and fiber obstacles}
 \label{subsec:fibration-obstacle-reduction}
 
-Removing a relative divisor leaves a current pulled back from the base. Compact fibers then force every envelope competitor to descend, so an obstacle upstairs can be replaced by its fiber minimum. The same reduction applies to both envelopes and gives zero top-degree mass, even when the base background has unbounded mass. All-obstacle equality and relative-envelope membership are exactly their corresponding base conditions.
+Removing weighted divisorial poles leaves a current pulled back from the base. Compact fibers force its potential to descend, and fiber minima reduce both obstacle envelopes to base envelopes. This gives zero top-degree mass and exact base criteria for all-obstacle equality and relative-envelope membership. Singular or ramified divisors are allowed; an explicit multiplier-ideal product requires relative normal crossings.
 
-Let $p:M\to Y$ be a surjective holomorphic submersion between connected compact complex manifolds, with connected fibers, and put $d=\dim Y$ and $n=\dim M$, where $1\leq d<n$. Let $H\subset M$ be a nonempty smooth reduced divisor such that $p|_H$ is a submersion. Choose a smooth Hermitian metric $h$ on $\mathcal O_M(H)$, let $s_H$ be its canonical section and let $\kappa_H$ be its Chern curvature. Set
+Let $p:M\to Y$ be a surjective holomorphic submersion between connected compact complex manifolds, with connected fibers, and put $d=\dim Y$ and $n=\dim M$, where $1\leq d<n$. Let $H_1,\ldots,H_s$ be a nonempty finite family of distinct prime divisors on $M$, each mapping onto $Y$, and suppose every fiber meets $M\setminus H$, where $H=\bigcup_jH_j$. For positive real weights $\lambda_j$, choose smooth Hermitian metrics $h_j$ on $\mathcal O_M(H_j)$, with canonical sections $s_j$ and Chern curvatures $\kappa_j$. Set
 \[
- \Psi=\log|s_H|_h^2,\qquad
- \kappa_H+\ddc\Psi=[H].
+ A=\sum_{j=1}^s\lambda_jH_j,\qquad
+ \Psi=\sum_{j=1}^s\lambda_j\log|s_j|_{h_j}^2,\qquad
+ \kappa_A=\sum_{j=1}^s\lambda_j\kappa_j.
 \]
+Thus $\kappa_A+\ddc\Psi=[A]=\sum_j\lambda_j[H_j]$.
 For a smooth real $(1,1)$-form $\beta$ on $Y$ and $w\in\PSH(Y,\beta)$, put
 \[
- \Theta=p^*\beta+\kappa_H,\qquad u=\Psi+w\circ p.
+ \Theta=p^*\beta+\kappa_A,\qquad u=\Psi+w\circ p.
 \]
 The form $\beta$ need not be closed or positive. For continuous real obstacles, use the same competitor definitions as for smooth obstacles.
 
+\Needspace{12\baselineskip}
 \begin{proposition}\label{prop:fibration-obstacle-reduction}\index{Envelope!fibration reduction}\index{Obstacle!fiber minimum}\index{Singularity volume!zero-volume fibration}
 For every $F\in C^\infty(M,\mathbb R)$, the function
 \[
@@ -32,19 +35,26 @@ Every representative of the ordinary type of $u$ or of $P_\Theta[u]_{\mathcal I}
 \begin{proof}
 Every fiber meets $M\setminus H$. A local holomorphic section through such a point stays outside $H$ after shrinking its base neighborhood. Evaluating $F-\Psi$ on finitely many such sections gives a uniform upper bound for the fiber minima. Since $\Psi\to-\infty$ uniformly near $H$, all minima are attained on one compact subset of $M\setminus H$. For~$y_j\to y$, a convergent subsequence of minimizers gives the lower semicontinuity inequality. A local section through a minimizer over $y$ gives the upper semicontinuity inequality. Thus $\widehat F$ is continuous.
 
-Let $v$ be an ordinary competitor for $u$, or an ideal competitor with $v\sim_{\mathcal I}u$. Its generic Lelong number along every component of $H$ is at least one, by ordinary order or \cref{thm:local-i-inputs}. Divisorial removal in \cref{lem:nonclosed-divisorial-removal} gives
+Since each $H_j$ maps onto $Y$, the pullback of $w$ has generic Lelong number zero along $H_j$. Let $v$ be an ordinary competitor for $u$, or an ideal competitor with $v\sim_{\mathcal I}u$. Its generic Lelong number along $H_j$ is at least $\lambda_j$, by ordinary order or \cref{thm:local-i-inputs}. Divisorial removal in \cref{lem:nonclosed-divisorial-removal} gives
 \[
- \Theta+\ddc v-[H]\geq0.
+ \Theta+\ddc v-[A]\geq0.
 \]
 Hence $v-\Psi$ has a quasi-plurisubharmonic representative $a$ satisfying $p^*\beta+\ddc a\geq0$. Compact-fiber descent in \cref{prop:psh-descent-submersion} gives $a=b\circ p$ for a unique $b\in\PSH(Y,\beta)$. The equality $v=\Psi+b\circ p$ holds for the canonical representatives. Conversely every potential of this form is $\Theta$-plurisubharmonic.
 
-Ordinary order is exactly $v\preceq u$ if and only if $b\preceq w$, by testing at points outside $H$ on each fiber. Ideal equivalence is exactly $b\sim_{\mathcal I}w$. To prove this, let $\mathcal J_H$ be the ideal sheaf of $H$. For every $t>0$,
+Ordinary order is exactly $v\preceq u$ if and only if $b\preceq w$, by testing at points outside $H$ on each fiber. Ideal equivalence is exactly $b\sim_{\mathcal I}w$. Indeed, $b\sim_{\mathcal I}w$ gives ideal equivalence of their pullbacks by \cref{lem:submersion-multiplier-pullback}; adding $\Psi$ preserves it by \cref{lem:hermitian-i-calculus}. Conversely, $v\sim_{\mathcal I}u$ gives equality of the pullback ideals outside $H$, where $\Psi$ is smooth. Every base point has a local section outside $H$. Restricting the extended ideals along that section recovers $\mathcal I(tb)=\mathcal I(tw)$ for every $t>0$. This argument uses no smoothness or crossing condition on $H$.
+
+If the divisors have relative simple normal crossings, the ideals have an explicit form. Here this means that near every point there are product coordinates $(y,z)$ with $p(y,z)=y$ and the components through the point given by distinct fiber coordinate hyperplanes. Then
 \begin{equation}\label{eq:divisorial-product-ideals}
  \mathcal I\bigl(t(\Psi+b\circ p)\bigr)
-   =\mathcal J_H^{\lfloor t\rfloor}
-                    \bigl(\mathcal I(tb)\mathcal O_M\bigr).
+   =\mathcal O_M\!\left(-\sum_j\lfloor t\lambda_j\rfloor H_j\right)
+                    \bigl(\mathcal I(tb)\mathcal O_M\bigr)
+       \qquad(t>0).
 \end{equation}
-Indeed, transversality gives local product coordinates $(y,z)$ with $p(y,z)=y$ and $H=\{z_1=0\}$. Up to a smooth correction, $\Psi=\log|z_1|^2$. Since $b$ is bounded above locally, weighted integrability forces a holomorphic germ to vanish to order at least $\lfloor t\rfloor$ along $H$. After factoring this power, the remaining weight $|z_1|^{-2(t-\lfloor t\rfloor)}$ is integrable and bounded below by a positive constant on a small polydisc. Weighted integrability thus implies unweighted integrability in the fiber variables, and \cref{lem:submersion-multiplier-pullback} puts the remaining germ in the extension of $\mathcal I(tb)$. Conversely, local generators of this extended ideal and the integrable one-variable weight give weighted integrability by Fubini. Outside $H$ the same pullback lemma applies directly. Equality of the upstairs ideals recovers equality of the base ideals along a local section outside $H$.
+To see this, work in such coordinates. Up to a smooth correction, $\Psi$ is a sum of weights $\lambda_j\log|z_j|^2$ over the components present. Since $b$ is bounded above locally, integrability forces vanishing to order at least $\lfloor t\lambda_j\rfloor$ along each hyperplane. After factoring their product, the remaining fiber weight is
+\[
+ \prod_j|z_j|^{-2(t\lambda_j-\lfloor t\lambda_j\rfloor)}.
+\]
+It is integrable and bounded below by a positive constant on a small polydisc. Integrability of the quotient against this weight implies its unweighted fiber integrability, so \cref{lem:submersion-multiplier-pullback} puts it in the extension of $\mathcal I(tb)$. Conversely, local generators of that ideal and the integrable product weight give weighted integrability by Fubini. The same pullback lemma applies outside $H$. For one smooth transverse divisor of weight one, this is the formula with its ideal sheaf raised to $\lfloor t\rfloor$.
 
 The bound $v\leq F$ is equivalent to $b\leq\widehat F$. The competitor families therefore give \eqref{eq:fibration-obstacle-reduction} outside $H$. Regularization commutes with pullback in product coordinates there. The common bound $b\leq\max_Y\widehat F$ and the divergence $\Psi\to-\infty$ prevent regularization from changing the pole on $H$.
 
@@ -78,11 +88,11 @@ Ordinary order $u\preceq v$ is equivalent to $w\preceq\varphi$ by the preceding 
 \]
 A base competitor $c\in\PSH(Y,\beta)$ with $a\varphi+(1-a)c\leq w$ gives such an $h$ by taking $h=\Psi+c\circ p$.
 
-Conversely, each component $H_j$ of $H$ has open and closed image in $Y$, so maps onto $Y$. The pullbacks of $w$ and $\varphi$ have generic Lelong number zero along these components, since there are base points where both are finite. Thus $u$ and $v$ have generic Lelong number one there. The displayed inequality forces
+Conversely, the pullbacks of $w$ and $\varphi$ have generic Lelong number zero along each $H_j$, since $H_j$ maps onto $Y$ and there are base points where both are finite. Thus $u$ and $v$ have generic Lelong number $\lambda_j$ there. The displayed inequality forces
 \[
- a+(1-a)\nu(h,H_j)\geq1
+ a\lambda_j+(1-a)\nu(h,H_j)\geq\lambda_j
 \]
-for every $j$, so $\nu(h,H_j)\geq1$. Divisorial removal and compact-fiber descent, as in \cref{prop:fibration-obstacle-reduction}, give $h=\Psi+c\circ p$ with $c\in\PSH(Y,\beta)$. Cancellation outside $H$ gives $a\varphi+(1-a)c\leq w$ off the base pole sets. The inequality extends to all of $Y$ by \cref{lem:qpsh-almost-everywhere-order}. This proves the first equivalence.
+for every $j$, so $\nu(h,H_j)\geq\lambda_j$. Divisorial removal and compact-fiber descent, as in \cref{prop:fibration-obstacle-reduction}, give $h=\Psi+c\circ p$ with $c\in\PSH(Y,\beta)$. Cancellation outside $H$ gives $a\varphi+(1-a)c\leq w$ off the base pole sets. The inequality extends to all of $Y$ by \cref{lem:qpsh-almost-everywhere-order}. This proves the first equivalence.
 
 For the second, put $G=\widehat 0$ and $q_G=P_{\beta,G}[w]_{\mathcal I}$. The reduction gives $q_M=\Psi+q_G\circ p$, and obstacle comparison gives $q_G\sim q_Y$. Apply the first equivalence with reference $q_G$ and reference invariance in \cref{prop:relative-elementary}.
 \end{proof}
@@ -118,6 +128,32 @@ In the curve case, $G=\widehat 0$ is continuous but need not be constant. Obstac
  \end{split}
 \]
 The polar curvatures of these two base envelopes are respectively $\mu_w$ and $D_w$, by \cref{lem:curve-polar-model,lem:curve-atomic-ideal-model,cor:polar-order-maximum}. Thus zero-obstacle equality upstairs forces $\mu_w=D_w$. Conversely, under this measure equality the curve classification in \cref{prop:curve-all-obstacle-topology} gives equality below every smooth base obstacle. Uniform approximation extends it to every $\widehat F$, and the reduction gives all-obstacle equality upstairs. Taking $F=0$ proves the remaining implication.
+\end{proof}
+
+The crossing hypothesis in \eqref{eq:divisorial-product-ideals} concerns the explicit ideal formula. The envelope reduction holds even when it fails.
+
+\Needspace{13\baselineskip}
+\begin{example}\label{ex:ramified-divisor-ideal-factorization}\index{Multiplier ideal!ramified divisor}\index{Envelope!ramified divisor reduction}
+On $M=\mathbb P^1\times\mathbb P^1$, let $p,r$ be the projections and let $\sigma$ be the probability Fubini--Study form. With homogeneous coordinates $[y_0:y_1]$ and $[z_0:z_1]$, the divisor
+\[
+ H=\{y_0z_0^2+y_1z_1^2=0\}
+\]
+is smooth, meets every fiber properly and ramifies over the first factor. Give $\mathcal O_M(H)=\mathcal O_M(1,2)$ its product metric, with logarithmic divisor potential $\Psi$ and curvature $\kappa_H=p^*\sigma+2r^*\sigma$. Put $\Theta=2p^*\sigma+2r^*\sigma$ and choose $w\in\PSH(\mathbb P^1,\sigma)$ with $\sigma+\ddc w=\delta_{[0:1]}$. Both obstacle envelopes of $u=\Psi+w\circ p$ reduce to the base, but the product formula for its multiplier ideal fails at a ramification point.
+\end{example}
+\begin{proof}
+For each $[z_0:z_1]$ there is a unique point $[y_0:y_1]=[-z_1^2:z_0^2]$ on $H$, so $H$ is a smooth graph and its map to the base has degree two. No fiber lies in $H$. Since $\Theta=p^*\sigma+\kappa_H$, \cref{prop:fibration-obstacle-reduction} gives both envelope identities.
+
+Near $([0:1],[1:0])$, use $y=y_0/y_1$ and $z=z_1/z_0$. Up to smooth additions,
+\[
+ \Psi=\log|y+z^2|^2,\qquad w=\log|y|^2,
+ \qquad u=\log|y(y+z^2)|^2.
+\]
+At $t=3/4$, each separate weight has trivial multiplier ideal, so the right side of \eqref{eq:divisorial-product-ideals} would be $\mathcal O_M$. However $1\notin\mathcal I(3u/4)$ at this point. Indeed, on the region $y=cz^2$ with $|c-1|<1/4$ and $0<|z|<\epsilon$, the volume change in the $y$ variable is $|z|^4$. The weighted integral of $1$ is bounded below by a positive constant times
+\[
+ \int_{0<|z|<\epsilon}|z|^{-6}|z|^4\,\mathrm d\lambda_z
+   =2\pi\int_0^\epsilon\frac{\mathrm dr}{r}=+\infty,
+\]
+where $\mathrm d\lambda_z$ is planar area. Thus the full ideal is proper. The envelope identity instead follows from ideal equivalence under addition and does not require this product formula.
 \end{proof}
 
 \begin{example}\label{ex:zero-volume-unbounded-mass-fibration}\index{Bounded mass property!failure with zero model volume}
