@@ -1,5 +1,15 @@
 # Modification history
 
+## Checkpoint274 — Envelope reduction with infinite fiber minima
+
+The weighted divisorial fibration envelope identities now allow complete fibers in the pole divisor. The induced obstacle is extended-continuous and infinite on those fibers. A local section on one base ball and normalized compactness give a uniform upper bound for every base competitor, preserving the divisor pole under regularization. Base all-obstacle equality implies upstairs equality by continuous truncations. The converse corollary retains its finite-obstacle hypothesis; relative-envelope equivalence and zero mass remain general.
+
+The complete fresh original and two revised reads of the fibration input are checked, with the second after the first build/images. All labels and formal blocks, other mathematical proofs, 237 other author inputs, both figures, all 23 questions and all 451 protected hashes are preserved. All 1690 labels and 1235 distinct targets resolve; the actual house audit has zero errors and warnings. No new external full-proof audit, verifier run, bibliography change or novelty claim is made.
+
+Final book/companion builds pass at 924 physical/900 printed and 17 pages, with clean logs, 5058 valid internal destinations and 425 clickable index locators. All 46 selected final images pass: 28 direct inspections and 18 exact carries from individually checked first-stage pages. Both production builds publish the PDF and matching homepage description; the live release is verified after deployment of `b0965fdf8c3b01e040b942119a9b1e4f91c91f76`. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, all manifest checksums and current payload bytes pass, final logs are clean and archive publication is disabled; see research/editorial/infinite-fiber-obstacles-274.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked additions; research remains incomplete. Prove the converse all-obstacle criterion across complete fibers using continuous truncated divisor obstacles, decreasing ideal models and Hartogs control of their excess above the target obstacle. Establish ideal equivalence of the limit and translate ordinary competitors before taking their supremum. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems.
+
 ## Checkpoint273 — Relative envelopes across complete fibers
 
 Relative-envelope membership and zero mass for weighted divisors dominating the base now hold when complete fibers lie in their union. Chapter 1 proves cancellation of a common quasi-plurisubharmonic summand from ideal equivalence. Removing the divisor from the existing upstairs ideal model gives a descended base potential, whose ideals and bounded comparison with the base ideal model supply the reference equivalence. The proof does not need a finite bound on the induced obstacle. The finite-obstacle envelope identity and all-obstacle equivalence keep their no-complete-fiber hypothesis.
