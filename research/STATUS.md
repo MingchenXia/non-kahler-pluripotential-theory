@@ -1,5 +1,13 @@
 # Current research status — 1 October 2026
 
+## Checkpoint262 — Research questions and local settings
+
+The complete Chapter 32 and all four recursive inputs receive an original read and two revised mathematical/editorial reads. The chapter declares its manifold, density-root variable, pseudoeffective background and trace data before use. It explicitly returns from the elliptic threefold to the general manifold and confines bounded mass to the volume-comparison subsection. Twenty-two formal blocks, five proofs and thirty-one labels remain; all proof bodies are byte-identical. The questions retain their established solved and unresolved regimes, without a new literature-status claim.
+
+Production and fresh-source book/companion builds pass with 912 physical book pages, last printed page 888 and seventeen companion pages. All 39 selected final images pass, including the whole chapter, Part X entry, following opening and six index pages. The index retains 415 insertions and 411 clickable locators. Final logs are clean; source reconstruction matches all page text and book source bytes, and manifest checksums and exclusions pass. The deployed PDF and homepage description match production after the successful Pages deployment at `7f21953c129ac70cd95de80a6fc1b3d08f3d97ea`.
+
+Continue directly with complete Chapter 33, then the appendix, final front matter and whole-book acceptance checks. The completion goal remains active and incomplete. See research/editorial/chapter-thirty-two-reader-review-262.md and its audit. Existing skill rules cover these changes; no new external proof audit or independent verification is claimed.
+
 ## Checkpoint261 — Big-background equations and the completion goal
 
 The complete Chapter 31 and all eleven recursive inputs receive an original read and two complete revised mathematical/editorial reads. The setting precedes motivation; potentials, upper models, lower bounds and bounded carriers are declared before use. Transitions explain the metric positive-volume input. All twenty-four statements, twenty-three proofs and fifty-eight labels remain; all proof bodies are byte-identical and the five changed statements retain their mathematical scope. Existing source and proof boundaries remain in force.
