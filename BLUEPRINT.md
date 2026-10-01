@@ -1,5 +1,15 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint282 — Arbitrary curve-background criterion
+
+Relative-envelope classes transport exactly under smooth gauges. On every admissible smooth real curve background, relative-envelope membership in the ideal reference, atomic polar curvature, zero-obstacle equality and all-obstacle equality are equivalent. At zero area all conditions hold automatically. Both divisorial fibration curve clauses now allow arbitrary admissible base forms, including zero area, connected/disconnected fibers and whole-fiber poles. The Introduction and Chapter32 overview cite the generalized criterion.
+
+Complete Section29.13 and the fibration input, the bounded full foundation unit and both overview paragraphs pass two fresh revised mathematical/editorial reads; the second follows the build and direct images. Original/dependency scopes are recorded. One corollary/proof/label and two index entries are added; one foundation proposition/proof and two fibration corollaries/proofs are extended. The other 142 formal/proof blocks, 233 author inputs, figures, bibliography/styles, 23 questions and 451 protected hashes are preserved. All 1696 labels and 1241 distinct targets resolve. The primary house audit has zero errors/warnings; 14 interface warnings match the originals exactly. No fresh whole-chapter or independent proof audit is claimed.
+
+The production build and 17-page companion pass with 932 physical/908 printed book pages, clean logs, 5117 valid destinations and 440 clickable index locators. All 69 selected images pass: 35 direct inspections and 34 exact checkpoint281 carries; all 23 changed page-text outputs are covered. The build publishes the PDF and matching homepage description; live deployment at b4a1c47f546eb7f0749a0ffe8f7876fceeb5a755 is verified. Fresh empty source reconstruction passes for both PDFs: all page text and 253 book source files match, 1614 archive files and 1613 manifest payload entries pass checksum/current-byte checks, final logs are clean and archive publication is disabled; see research/editorial/arbitrary-curve-background-criterion-282.md and its audit.
+
+Writing acceptance at checkpoint270 is carried at the recorded scopes; research remains active. Lift a diffuse polar curve model to a divisorial projective product and compute its distinct ordinary and ideal models, all with zero singularity volumes. Check how the upper-volume comparison degenerates on this higher-dimensional boundary, and give a precise internal example supporting the positive-lower-volume restriction.
+
 ## Checkpoint281 — Curve relative-envelope criterion
 
 On a positive compact curve, relative-envelope membership in the ideal reference, atomic polar curvature, zero-obstacle equality and all-obstacle equality are equivalent, including zero residual ideal-model mass. The four-way criterion holds for connected and disconnected divisorial fibrations. The zero-mass boundary uses harmonic uniqueness rather than a positive-volume characterization.

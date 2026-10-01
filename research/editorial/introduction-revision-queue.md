@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint281: Extend the curve relative-class/polar/zero-obstacle/all-obstacle equivalence to every admissible smooth real curve background, including zero area. Check smooth-gauge transport of stretching competitors and ideal references; apply the result to connected and disconnected divisorial fibrations and reconcile their overview clauses. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint282: Lift a diffuse polar curve model to a divisorial projective product and compute its distinct ordinary and ideal models, all with zero singularity volumes. Check how the upper-volume comparison degenerates on this higher-dimensional boundary, and give a precise internal example supporting the positive-lower-volume restriction. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
