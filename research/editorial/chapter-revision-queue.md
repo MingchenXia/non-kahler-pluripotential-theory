@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint266: Investigate zero-lower-volume obstacle projection in closed higher dimension using analytic residual and product/fibration reductions. The whole-book graph, source dispositions, formal questions and compiled anchors are reconciled in whole-book-reconciliation-266.md. Recorded reader and source-proof reviews retain their actual scopes; the broader writing/research goal remains active.
+Current next unit after checkpoint267: Extend the proved divisorial-product obstacle reduction to compact holomorphic submersions over curves with a smooth relative divisor. Check fiber-minimum continuity, multiplier ideals and local zero-mass products before integration. Retain the unrestricted higher-dimensional zero-volume and no-BMP questions separately. See zero-volume-product-obstacles-267.md; the broader writing/research goal remains active.
 
 | Chapter | Source | This cycle |
 |---|---|---|

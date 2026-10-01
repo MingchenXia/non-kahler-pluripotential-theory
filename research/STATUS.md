@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint267 — Divisorial products at zero model volume
+
+Chapter 15 gains exact ordinary and ideal obstacle-envelope reduction for divisorial products of curve potentials. Divisorial removal and compact-fiber descent identify every competitor; the product multiplier ideals and continuous fiber minimum then give both envelope identities. Zero-obstacle equality is equivalent to purely atomic polar curve curvature and to equality at every smooth obstacle. Every representative of the product ordinary types, including the ideal model, has zero extended mass. Projective examples in every dimension at least two have a nonanalytic ordinary type and satisfy the criterion.
+
+The new input and complete all-obstacle input receive two revised mathematical/editorial reads, followed by a bounded proof-ending correction. Introduction and research interfaces retain the unrestricted zero-volume/no-BMP boundary. Existing formal blocks, proofs and labels in the three changed interfaces remain byte-identical. The new input passes the house audit without errors or warnings; ten combined warnings are unchanged from Chapter 32. The current graph has 237 author inputs and two figures; all 23 formal questions retain their exact text and labels.
+
+Final production book/companion builds pass with 916 physical book pages, last printed page 892 and seventeen companion pages. All 35 selected final images pass, using two new final-correction images and 33 exact-image carries from checked stages. The index has 418 insertions and 414 clickable locators; all 5,008 internal PDF destinations are valid. Final logs are clean. Fresh empty source reconstruction matches all page text and book source bytes, with valid manifest checksums and clean final logs. The served PDF checksum and matching homepage description are verified after successful Pages deployment at `5ef38612b252d75792ecceca644b469086b9634d`; see research/editorial/zero-volume-product-obstacles-267.md and its audit.
+
+Continue with compact submersions over curves and a smooth relative divisor, checking the obstacle, ideal and local mass arguments before claiming that extension. The unrestricted higher-dimensional zero-volume/no-BMP implication and stronger model topology remain separate. The broader writing/research goal remains active.
+
 ## Checkpoint266 — Whole-book source and proof reconciliation
 
 The complete reader pass through all chapters, Appendix A and front matter is reconciled with the current graph and proof/source ledgers. The book has 236 author inputs and two included figures. All 1,676 source labels have compiled bindings; 1,227 distinct internal reference targets and all 74 cited keys resolve. Nineteen original inputs are explicitly disposed across eighteen subjects, and all thirteen supplied integrations retain their actual completed scopes. All 23 formal questions remain; compiled numbers and printed pages are refreshed.
