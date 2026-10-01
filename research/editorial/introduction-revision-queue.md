@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint269: Reconcile whole-book acceptance criteria, current source/proof dispositions and compiled graph after the fibration additions. Identify concrete remaining writing obligations and continue the whole-book completion goal. Retain precise unresolved research questions. See fibration-envelope-equivalences-269.md.
+Current next unit after checkpoint270: Continue the mathematical development by testing extension of the divisorial-fibration obstacle and relative-class reduction to finite weighted relative normal-crossing divisors. Check the local ideal calculation before broadening a statement; retain unrestricted zero-obstacle projection and the stronger complete model-topology problem separately. Writing acceptance passes at checkpoint270; no chapter remains in the requested reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

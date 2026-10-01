@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint269: Reconcile whole-book acceptance criteria, current source/proof dispositions and compiled graph after the fibration additions. Identify concrete remaining writing obligations and continue the whole-book completion goal. Retain precise unresolved research questions. See fibration-envelope-equivalences-269.md.
+Current next unit after checkpoint270: Continue the mathematical development by testing extension of the divisorial-fibration obstacle and relative-class reduction to finite weighted relative normal-crossing divisors. Check the local ideal calculation before broadening a statement; retain unrestricted zero-obstacle projection and the stronger complete model-topology problem separately. Writing acceptance passes at checkpoint270; no chapter remains in the requested reader-revision cycle.
 
 | Chapter | Source | This cycle |
 |---|---|---|

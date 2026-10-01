@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint270 — Whole-book writing acceptance
+
+The requested whole-book writing cycle passes acceptance at its recorded review scope. All 33 chapters, Appendix A and final front matter have complete reader reviews; all original source chapters have explicit dispositions; all thirteen supplied works are integrated. Named classical and SGPT inputs, reconstructed main arguments and attributed contextual results retain their actual source/proof scopes. The 23 precise research questions remain separate from established arguments. This acceptance is not a fresh independent mathematical certification.
+
+Fresh checks confirm the current graph, references, citations, index and all 451 protected hashes. Both outputs rebuild from an empty source extraction with every page text and all 253 book source bytes matching, valid checksums and clean logs. The checked manuscript remains 918 physical/894 printed book pages and seventeen companion pages. The served PDF and matching homepage description are freshly verified after successful Pages deployment; no production rebuild or new public artifact occurs. See research/editorial/whole-book-acceptance-270.md and its audit.
+
+The writing-release goal is fulfilled; the research program remains active and incomplete. Continue directly with weighted relative normal-crossing divisors in the fibration reduction, checking the ideal calculus before broadening the statements.
+
 ## Checkpoint269 — Exact fibration envelope equivalences
 
 Relative-envelope membership of a divisorial fibration type is exactly membership of its base type, including relative to the corresponding ideal models. Stretching competitors descend after removing their coefficient-one divisor; the inequalities extend across poles. The all-obstacle corollary now proves both directions of equality upstairs versus on the base, since pulled-back smooth obstacles give a uniformly dense translated family of continuous base obstacles. The general bounded-reference invariance needed by the proof is established in its existing Chapter 12 proposition. The Hopf product potential also belongs to the upstairs relative class of its zero-volume ideal model. No bounded mass hypothesis is added, and the unrestricted zero-obstacle implication remains unresolved.

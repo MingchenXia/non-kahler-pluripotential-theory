@@ -6,6 +6,8 @@ The author explicitly directs finishing the whole book and continuing work until
 
 Existing research questions may remain as precisely stated open problems. A writing-completion claim must identify any unfulfilled acceptance criterion or unresolved proof obligation; it cannot be inferred from compilation or from closing the editorial queue alone. Preserve the hidden Nakamaye chapter and the established mathematical scope. Continue directly from each checked unit to the next, without requesting routine confirmation.
 
+Checkpoint270 records acceptance of the reviewed writing release at checkpoint269: the requested reader/introduction cycle, source/proof reconciliation, checked outputs, empty source reconstruction and live publication checks pass. The acceptance record identifies retained standard inputs and precisely stated research boundaries; it is not an independent mathematical certification. The writing-release goal is fulfilled at that scope. The author’s direction to keep working remains active: continue the research and manuscript development, beginning with weighted relative normal-crossing divisors in the fibration reduction.
+
 ## Public PDF publication, 30 September 2026
 
 After every successful full-book build in the authoring repository, publish the PDF at `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` and update its matching homepage description with the last printed page number and the publication date. The user expressly authorizes replacing the existing PDF and committing both website files. The private book source remains private. Follow the build hook, retry and deployment verification instructions in `AGENTS.md`; source-package reconstruction and companion builds remain local.
