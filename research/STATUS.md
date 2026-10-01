@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint281 — Curve relative-envelope criterion
+
+On a positive compact curve, relative-envelope membership in the ideal reference, atomic polar curvature, zero-obstacle equality and all-obstacle equality are equivalent, including zero residual ideal-model mass. The four-way criterion holds for connected and disconnected divisorial fibrations. The zero-mass boundary uses harmonic uniqueness rather than a positive-volume characterization.
+
+Both complete primary inputs pass two fresh revised mathematical/editorial reads; the second follows the first build and direct images. Their original/dependency scopes are recorded precisely. One corollary/proof/label and two index insertions are added; two fibration corollaries/proofs are extended. Fifteen other formal/proof blocks are unchanged; the existing incompleteness proof has two explicit citation repairs and a display receives a layout-only line split. The other 236 author inputs, bibliography/styles/figures, 23 questions and 451 protected hashes are preserved. The house audit has zero errors/warnings, and all 1695 labels and 1240 distinct targets resolve.
+
+Both production builds publish the PDF and matching homepage description. Final output has 932 physical/908 printed pages and a 17-page companion, clean logs, 5106 valid internal destinations and 438 clickable index locators. The final page review passes four direct images and 59 exact first-stage carries, after 34 first-stage direct images; all changed/inserted page text is covered. Live publication at 3d71d9718fcd9fc733ce79e9bf2ec6fdbd5bfe19 is verified. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, 1611 archive files and 1610 manifest payload entries pass checksum/current-byte checks, final logs are clean, and archive publication is disabled; see research/editorial/curve-relative-envelope-criterion-281.md and its audit.
+
+Writing acceptance at checkpoint270 is carried at the recorded scopes; research remains active. Extend the curve relative-class/polar/zero-obstacle/all-obstacle equivalence to every admissible smooth real curve background, including zero area. Check smooth-gauge transport of stretching competitors and ideal references; apply the result to connected and disconnected divisorial fibrations and reconcile their overview clauses.
+
 ## Checkpoint280 — Finite-cover envelope transport
 
 Finite unramified coverings transport ordinary and ideal envelopes exactly for pulled-back continuous obstacles and reflect relative-envelope membership by taking fiber maxima. Divisorial submersions with disconnected fibers therefore retain the relative-class criterion on the original base, including ideal-model references. The higher-dimensional arbitrary all-obstacle criterion remains on the component cover. No closedness, positivity or bounded mass assumption is added.

@@ -8,8 +8,8 @@ Choose the countable dense family in \cref{prop:all-obstacle-uniformity} with $F
  \begin{split}
  d^{\mathrm{all}}_\theta([u],[v])
  &=\|D_u-D_v\|_{\mathrm{TV}}\\
- &\quad+\sum_{k=1}^\infty2^{-k}\bigl(\min\{1,d_{O,F_k}([u],[v])\}
-                   +\min\{1,d_{I,F_k}([u],[v])\}\bigr).
+ &\quad+\sum_{k=1}^\infty2^{-k}\bigl(\min\{1,d_{O,F_k}([u],[v])\}\\
+ &\qquad\qquad+\min\{1,d_{I,F_k}([u],[v])\}\bigr).
  \end{split}
 \end{equation}
 
@@ -30,20 +30,48 @@ The zero-obstacle classification shows that zero distance forces equal polar mea
 For a $d^{\mathrm{all}}_\theta$-Cauchy sequence in $\mathcal C_s$, its atomic measures have a total-variation limit of mass at most $s$, which is again atomic. The model convergence above gives convergence of every obstacle coordinate; the summable tail then gives convergence for $d^{\mathrm{all}}_\theta$. The converse implication to atomic total variation follows from the first summand. This proves completeness and equality of topologies on $\mathcal C_s$. Polar total variation controls the atomic part and all the ordinary-envelope coordinates, proving the last assertion.
 \end{proof}
 
+The relative envelope class has the same curve criterion, including the zero-mass ideal models.
+
+\Needspace{18\baselineskip}
+\begin{corollary}\label{cor:curve-relative-envelope-criterion}\index{Relative envelope class!polar criterion on a curve}\index{Relative envelope class!zero-mass curve model}
+For $u\in\PSH(Y,\theta)$ put $q=P_\theta[u]_{\mathcal I}$. The following are equivalent:
+\[
+ \begin{gathered}
+ u\in\mathcal E_{\mathrm{env}}(Y,\theta,q),\qquad \mu_u=D_u,\\
+ P_\theta[u]=P_\theta[u]_{\mathcal I},\\
+ P_{\theta,F}[u]=P_{\theta,F}[u]_{\mathcal I}
+       \quad\text{for every smooth real }F.
+ \end{gathered}
+\]
+This includes $D_u(Y)=A$.
+\end{corollary}
+\begin{proof}
+The ordinary and ideal classifications in \cref{lem:curve-polar-model,lem:curve-atomic-ideal-model} identify zero-obstacle equality with $\mu_u=D_u$. \Cref{prop:curve-all-obstacle-topology} identifies this with equality at every smooth obstacle. Relative-envelope membership implies the latter by \cref{prop:ideal-obstacle-reprojection}.
+
+Conversely, assume $\mu_u=D_u$. The atomic-model lemma gives $\mu_q=D_u$. Ordinary equivalence preserves polar curvature by \cref{cor:polar-order-maximum}, so Stokes gives
+\[
+ \underline{\operatorname{vol}}_\theta(q)
+ =\overline{\operatorname{vol}}_\theta(q)=A-D_u(Y).
+\]
+If $D_u(Y)<A$, zero-obstacle equality and \cref{prop:conditional-i-characterization} put $u$ in the stated relative class.
+
+If $D_u(Y)=A$, the positive curvature measures $T_u,T_q$ both dominate $D_u$ and both have total mass $A$. Hence $T_u=T_q=D_u$. The distribution $u-q$ is harmonic and therefore constant on the compact connected curve. Canonical representatives give $u=q+C$, so \cref{prop:relative-elementary} gives relative-envelope membership also in this case.
+\end{proof}
+
 \begin{proposition}\label{prop:curve-all-obstacle-incomplete}
 For the probability Fubini--Study form on $\mathbb P^1$, $d^{\mathrm{all}}_\theta$ is incomplete on the whole ordinary-type space, even on ordinary models of one fixed positive mass with trivial ideals. Its topology on ordinary models is strictly weaker than polar total variation and strictly stronger than $\tau_{\theta,0}$.
 \end{proposition}
 \begin{proof}
 Use the diffuse polar probabilities $\sigma_j$ concentrating at $p$ and the models $p_j=p_{c\sigma_j}$ from \cref{prop:curve-ordinary-topology-incomplete}, with $0<c<1$. Fix a smooth obstacle $F$ and put $q_{y,F}=P_{\theta,F}[q_{c\delta_y}]$. Rotations preserving $\theta$ and sending $p$ to $y$ can be chosen continuously near $p$. They transport the obstacle to its composition with the rotation. The uniform obstacle bound and continuity of rotations in $L^1$ consequently give $q_{y,F}\to q_{p,F}$ in $L^1$ as $y\to p$.
 
-The uniform $L^1$ bound near $p$ makes the average $w_{j,F}=\int q_{y,F}\,\mathrm d\sigma_j(y)$ well-defined. It lies below $F$, its curvature dominates $c\sigma_j$, and it converges to $q_{p,F}$ in $L^1$. The obstacle characterization in the preceding proof gives $w_{j,F}\leq P_{\theta,F}[p_j]\leq F$. These bounds and normalized compactness give $L^1$ precompactness. Any cluster limit of the envelopes has curvature at least $c\delta_p$, so is at most $q_{p,F}$. The lower bound gives the reverse inequality. Hence $P_{\theta,F}[p_j]\to q_{p,F}$ for every $F$. Their ideal envelopes are all $P_\theta(F)$, and their atomic parts vanish. Thus $[p_j]$ is $d^{\mathrm{all}}_\theta$-Cauchy. A limit would also be a $d^{\mathrm{ot}}_\theta$ limit, which the cited proposition excludes.
+The uniform $L^1$ bound near $p$ makes the average $w_{j,F}=\int q_{y,F}\,\mathrm d\sigma_j(y)$ well-defined. It lies below $F$, its curvature dominates $c\sigma_j$, and it converges to $q_{p,F}$ in $L^1$. The obstacle characterization in the proof of \cref{prop:curve-all-obstacle-topology} gives $w_{j,F}\leq P_{\theta,F}[p_j]\leq F$. These bounds and normalized compactness give $L^1$ precompactness. Any cluster limit of the envelopes has curvature at least $c\delta_p$, so is at most $q_{p,F}$. The lower bound gives the reverse inequality. Hence $P_{\theta,F}[p_j]\to q_{p,F}$ for every $F$. Their ideal envelopes are all $P_\theta(F)$, and their atomic parts vanish. Thus $[p_j]$ is $d^{\mathrm{all}}_\theta$-Cauchy. A limit would also be a $d^{\mathrm{ot}}_\theta$ limit, which the cited proposition excludes.
 
 For strict comparison with polar variation, use the rotated diffuse model $\widetilde p_j=p\circ R_j^{-1}$ from the end of that proof. For every smooth $F$,
 \[
  P_{\theta,F}[\widetilde p_j]
    =P_{\theta,F\circ R_j}[p]\circ R_j^{-1}.
 \]
-The obstacle bound and $L^1$ continuity of rotations give convergence to $P_{\theta,F}[p]$. All atomic parts vanish, so $d^{\mathrm{all}}_\theta([\widetilde p_j],[p])\to0$, whereas their polar total-variation distance remains $2c$. The preceding proposition supplies continuity in the other direction.
+The obstacle bound and $L^1$ continuity of rotations give convergence to $P_{\theta,F}[p]$. All atomic parts vanish, so $d^{\mathrm{all}}_\theta([\widetilde p_j],[p])\to0$, whereas their polar total-variation distance remains $2c$. \Cref{prop:curve-all-obstacle-topology} supplies continuity in the other direction.
 
 Finally, the sequence in \cref{prop:ordinary-topology-gauge-failure} converges for the zero obstacle and fails to converge for a smooth obstacle. Replacing its members by their ordinary models preserves every obstacle envelope by the curve classification, so the strict comparison already holds on ordinary models.
 \end{proof}
