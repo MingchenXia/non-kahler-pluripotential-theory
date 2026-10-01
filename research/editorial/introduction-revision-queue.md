@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint265: Reconcile whole-book source dispositions, current inclusion graph, proof boundaries and acceptance criteria. Every reader-queue chapter, appendix and final front-matter unit has its checked review recorded. Closing the editorial queue alone does not prove whole-book completion; see frontmatter-reader-review-265.md.
+Current next unit after checkpoint266: Investigate zero-lower-volume obstacle projection in closed higher dimension using analytic residual and product/fibration reductions. The whole-book graph, source dispositions, formal questions and compiled anchors are reconciled in whole-book-reconciliation-266.md. Recorded reader and source-proof reviews retain their actual scopes; the broader writing/research goal remains active.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

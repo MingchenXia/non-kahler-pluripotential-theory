@@ -1,5 +1,13 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint266 — Whole-book source and proof reconciliation
+
+The complete reader pass through all chapters, Appendix A and front matter is reconciled with the current graph and proof/source ledgers. The book has 236 author inputs and two included figures. All 1,676 source labels have compiled bindings; 1,227 distinct internal reference targets and all 74 cited keys resolve. Nineteen original inputs are explicitly disposed across eighteen subjects, and all thirteen supplied integrations retain their actual completed scopes. All 23 formal questions remain; compiled numbers and printed pages are refreshed.
+
+Fresh output checks confirm clean final logs and valid destinations for all 4,989 internal links, including 411 index locators. The existing checked production artifacts remain 912 physical/888 printed book pages and seventeen companion pages, with checkpoint265's verified public deployment. This research-only reconciliation introduces no mathematical premise, bibliography change or fresh external/verifier proof claim. Fresh empty source reconstruction passes for both outputs with all page text and book source bytes matching, clean final logs and valid manifest checksums. All 451 verifier/hidden-source files remain unchanged. Private synchronization follows; see research/editorial/whole-book-reconciliation-266.md and its audit.
+
+The live queues now continue with zero-lower-volume obstacle projection in closed higher dimension through analytic residual and product/fibration reductions. Recorded chapter/source proof scopes remain explicit, and the broader writing/research goal remains active. Do not infer whole-book completion from the closed reader queue.
+
 ## Checkpoint265 — Final introduction and conventions
 
 The Introduction, conventions and root document receive an original read and two complete revised mathematical/editorial reads. The setting specifies positive dimension; the smooth potential and positive scalar precede their equation, and the multiplier-ideal weight is declared. The title date is October 1, 2026. All six introductory sections, citations, internal references and root inclusions remain. Every mathematical-body, bibliography and index page text is unchanged from checkpoint264.

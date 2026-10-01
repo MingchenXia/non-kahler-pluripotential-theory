@@ -1,8 +1,8 @@
-# Proof boundary and remaining obligations — checkpoint229
+# Proof boundary and remaining obligations — checkpoint266
 
-This ledger describes the checked manuscript at checkpoint229. It reconciles the current statements and their proof boundaries; it does not re-audit every chapter or cited source. [The source comparison](comparison.md) and [current machine-readable map](source-disposition-229.json) give the source dispositions, stable compiled anchors, recursive chapter graph and all 23 formal questions. The [checkpoint182 map](source-disposition-182.json), [older ledger archive](audits/proof-obligations-history-through-checkpoint181.md) and intervening Git history preserve earlier scopes.
+This ledger reconciles the checked manuscript at checkpoint265 with the established proof boundaries. Checkpoint266 freshly checks the inclusion graph, compiled anchors, formal questions and output references; mathematical and source assessments retain their actual recorded review scopes. [The source comparison](comparison.md) and [current machine-readable map](source-disposition-266.json) give the source dispositions, stable compiled anchors, recursive chapter graph and all 23 formal questions. The [checkpoint182 map](source-disposition-182.json), [older ledger archive](audits/proof-obligations-history-through-checkpoint181.md) and intervening Git history preserve earlier scopes.
 
-Checkpoint258 corrects the Lee--Gauduchon invariance dependency below after a complete Chapter28 read. The rest of this ledger retains its checkpoint229 review scope.
+Checkpoint258 corrected the Lee--Gauduchon invariance dependency after a complete Chapter28 read. Complete reader reviews now cover all chapters, the appendix and final front matter at checkpoints231–265. They supplement the established reviews without implying a new full proof reconstruction of every classical or contextual external input.
 
 The 190 historical verifier reports retain their original inputs and conclusions. This reconciliation performs no independent verifier run. Q4.1 has now received complete source-proof reading and a bounded reconstruction in Chapters 1, 15 and 29; the stronger complete model-topology problem remains separate.
 
@@ -26,7 +26,7 @@ The 190 historical verifier reports retain their original inputs and conclusions
 
 The positive-volume recovery argument is [Theorem 29.5.3](../book/author/section_positive_system_recovery.tex); its initial lower-volume identity includes zero, but recovery requires a positive limit. Stretching controls each fixed local divisor, without assuming that a local modification extends globally. The remaining recovery problem asks for a replacement outside bounded mass.
 
-[Corollary 30.7.1](../book/author/section_positive_lower_mass_threshold.tex) identifies the exact L1 equation scalar with the individual subsolution threshold when lower mass is positive. Dominated continuity gives capacity convergence along normalized exponential L1 subsequences. This includes the Hopf example without upper bounded mass. These two complete input proofs are reread for this reconciliation; the surrounding chapters retain their prior review scopes.
+[Corollary 30.7.1](../book/author/section_positive_lower_mass_threshold.tex) identifies the exact L1 equation scalar with the individual subsolution threshold when lower mass is positive. Dominated continuity gives capacity convergence along normalized exponential L1 subsequences. This includes the Hopf example without upper bounded mass. These two complete input proofs were reread in checkpoint229; the complete Chapter 30 reader review is recorded at checkpoint260.
 
 ## Retained inputs and reconstructed specialized proofs
 
