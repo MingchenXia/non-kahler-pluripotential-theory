@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint267: Extend the proved divisorial-product obstacle reduction to compact holomorphic submersions over curves with a smooth relative divisor. Check fiber-minimum continuity, multiplier ideals and local zero-mass products before integration. Retain the unrestricted higher-dimensional zero-volume and no-BMP questions separately. See zero-volume-product-obstacles-267.md; the broader writing/research goal remains active.
+Current next unit after checkpoint268: Check exact equivalence of all-obstacle equality upstairs and on the base, and of relative-envelope membership for the divisorial fibration types. Prove both directions from the competitor reductions before integration. Retain unrestricted zero-obstacle projection and stronger complete model topology separately. See fibration-zero-volume-obstacles-268.md; the whole-book writing goal remains active.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
