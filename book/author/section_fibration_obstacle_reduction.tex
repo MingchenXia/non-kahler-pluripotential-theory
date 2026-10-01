@@ -156,6 +156,61 @@ At $t=3/4$, each separate weight has trivial multiplier ideal, so the right side
 where $\mathrm d\lambda_z$ is planar area. Thus the full ideal is proper. The envelope identity instead follows from ideal equivalence under addition and does not require this product formula.
 \end{proof}
 
+A divisor containing an entire fiber has an infinite fiber obstacle there. The next example still admits an explicit zero-obstacle model.
+
+\Needspace{16\baselineskip}
+\begin{example}\label{ex:whole-fiber-incidence-envelope}\index{Obstacle!infinite fiber minimum}\index{Envelope!incidence divisor}
+Let $M=\mathbb P^2\times\mathbb P^1$, with projections $p,r$, and let $\sigma_j$ be the standard Fubini--Study form on $\mathbb P^j$. In the positive closed background
+\[
+ \Theta=2p^*\sigma_2+r^*\sigma_1,
+\]
+there is a logarithmic potential $\Psi$ of a smooth prime divisor containing the fiber over $E=[0:0:1]$. Its zero-obstacle fiber infimum is finite and continuous off $E$ and tends to $+\infty$ there. Nevertheless,
+\[
+ P_\Theta[\Psi]=P_\Theta[\Psi]_{\mathcal I}=\Psi+q\circ p,
+\]
+where $q\in\PSH(\mathbb P^2,\sigma_2)$ is bounded, $0\leq q\leq\log4$ and $q(E)=\log4$. Every ordinary representative of this model has zero extended mass, so both singularity volumes vanish. The two envelopes also agree below every smooth obstacle.
+\end{example}
+\begin{proof}
+Use homogeneous coordinates $[y_0:y_1:y_2]$ and $[z_0:z_1]$, and take
+\[
+ H=\{y_0z_0+y_1z_1=0\},\qquad
+ \Psi=\log\frac{|y_0z_0+y_1z_1|^2}
+ {(|y_0|^2+|y_1|^2+|y_2|^2)(|z_0|^2+|z_1|^2)}.
+\]
+Outside $E$, the divisor is the graph $[z_0:z_1]=[-y_1:y_0]$. Its closure includes the whole fiber over $E$, so $H$ is prime. It is smooth outside that fiber by the graph description, and smooth along it because the derivatives in the $y_0,y_1$ directions are $z_0,z_1$, which cannot both vanish. Its product metric has curvature $p^*\sigma_2+r^*\sigma_1$, hence
+\[
+ \Theta+\ddc\Psi=p^*\sigma_2+[H].
+\]
+Writing $S=|y_0|^2+|y_1|^2$, Cauchy--Schwarz gives the fiber obstacle
+\[
+ G(y)=-\max_{z\in\mathbb P^1}\Psi(y,z)
+      =\log\frac{S+|y_2|^2}{S},\qquad G(E)=+\infty.
+\]
+It has no finite continuous extension at $E$.
+
+The largest $\sigma_2$-plurisubharmonic potential below $G$ is
+\[
+ q(y)=\begin{cases}
+ \displaystyle\log\frac{4|y_2|^2}{S+|y_2|^2},& S\leq|y_2|^2,\\[6pt]
+ \displaystyle\log\frac{S+|y_2|^2}{S},& S\geq|y_2|^2.
+ \end{cases}
+\]
+To verify positivity, work on $y_2\ne0$ with $x=(y_0/y_2,y_1/y_2)$ and $t=\log|x|^2$. Adding the Fubini--Study potential $L(x)=\log(1+|x|^2)$ gives
+\[
+ q+L=\begin{cases}
+ \log4,&t\leq0,\\
+ 2\log(1+\mathrm e^t)-t,&t\geq0.
+ \end{cases}
+\]
+This function and its first derivative match at zero. On $t>0$ its derivatives are $(\mathrm e^t-1)/(\mathrm e^t+1)\geq0$ and $2\mathrm e^t/(1+\mathrm e^t)^2>0$. The radial complex Hessian is therefore positive; the constant inner part and the matching first derivative give a plurisubharmonic function across the unit sphere. The expression is constant near $x=0$, and $q=G$ is smooth near $y_2=0$, so $q$ is globally $\sigma_2$-plurisubharmonic and bounded.
+
+If $b\in\PSH(\mathbb P^2,\sigma_2)$ lies below $G$, then $b+L\leq\log4$ on $|x|=1$. The maximum principle on the unit ball gives $b\leq q$ inside it. Outside, the obstacle already gives $b\leq G=q$. For $0<R=|x|^2\leq1$, the inequality $q\leq G$ is $4R\leq(1+R)^2$; at $E$ it is automatic. The displayed formula also gives the asserted bounds, proving maximality.
+
+For every ordinary or ideal competitor $v$ for $\Psi$, ordinary order or \cref{thm:local-i-inputs} gives $\nu(v,H)\geq1$. Divisorial removal and compact-fiber descent in \cref{lem:nonclosed-divisorial-removal,prop:psh-descent-submersion} give $v=\Psi+b\circ p$ with $b\in\PSH(\mathbb P^2,\sigma_2)$. The bound $v\leq0$ gives $b\leq G$ off $E$, hence everywhere with its extended value. Thus $v\leq\Psi+q\circ p$. Conversely, this upper bound is an admissible competitor for both envelopes, since it lies below zero and differs boundedly from $\Psi$. This proves the envelope identities without applying the preceding finite-obstacle proposition.
+
+On $M\setminus H$, bounded local truncations of $b$ have products pulled back from a two-dimensional base, so their third products vanish by \cref{lem:bounded-products-submersion}. Plurifine locality gives zero extended mass. Divisorial removal puts every ordinary representative of the model in this form, proving both volume assertions. Finally bounded equivalence gives $\Psi\in\mathcal E_{\mathrm{env}}(M,\Theta,P_\Theta[\Psi]_{\mathcal I})$ by \cref{prop:relative-elementary}; \cref{prop:ideal-obstacle-reprojection} gives equality at every smooth obstacle.
+\end{proof}
+
 \begin{example}\label{ex:zero-volume-unbounded-mass-fibration}\index{Bounded mass property!failure with zero model volume}
 There is a positive Hermitian background $\Theta$ on a compact fourfold which fails bounded mass and admits a potential $u$ with no analytic ordinary type such that
 \[

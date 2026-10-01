@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint272 — An envelope with a whole fiber in the pole divisor
+
+An explicit smooth incidence divisor on P2×P1 contains a complete fiber. Its induced zero obstacle tends to infinity at the exceptional base point, but a maximum-principle calculation gives a bounded base envelope with value log4 there. Both upstairs envelopes equal the divisor potential plus this correction. Every ordinary representative has zero extended mass; both singularity volumes vanish and the envelopes agree at every smooth obstacle. The existing finite-obstacle theorem is not broadened.
+
+The complete input has original and two revised mathematical/editorial reads, with the second after the build and images. All prior mathematical source text, the other 237 author inputs, both figures, all 23 formal questions and all 451 protected hashes are preserved. One example/proof, one label and two index insertions are added. The graph has 1690 labels and 1235 distinct reference targets, all resolved. The actual house audit has zero errors and warnings. No external full-proof audit, verifier run, bibliography change or novelty claim is made.
+
+The production book/companion builds pass at 922 physical/898 printed and 17 pages, with clean logs, 5048 valid internal destinations and 422 clickable index locators. All 36 selected images pass: 25 direct inspections and 11 exact checkpoint271 image carries. The served PDF and matching homepage description are verified after successful deployment of `31142af79050bcc671010914e528bb80d4a87bf6`. Fresh empty source reconstruction passes for both outputs with every page text and book source byte matching, valid manifest checksums and clean logs; see research/editorial/whole-fiber-incidence-272.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the scoped additions; research remains incomplete. Determine which relative-envelope and zero-mass reductions survive for weighted divisors dominating the base when some complete fibers lie in the pole set. Prove any needed ideal cancellation and uniform base-competitor bound before broadening the statements. Retain the finite-obstacle all-obstacle equivalence, unrestricted zero-obstacle projection and stronger complete model topology at their established scopes.
+
 ## Checkpoint271 — Weighted fibration divisors and ramified ideals
 
 The fibration obstacle, zero-mass and relative-envelope reductions now allow finite positive real weighted prime divisors with singularities or ramification, provided each component dominates the base and every fiber meets their complement. Ideal equivalence follows from submersion pullback and addition, reflected by local sections. The explicit weighted multiplier-ideal product retains its relative simple normal-crossing hypothesis. A smooth bidegree(1,2) graph gives a counterexample to that product at weight 3/4 while both envelope reductions hold. No bounded mass hypothesis is added.
