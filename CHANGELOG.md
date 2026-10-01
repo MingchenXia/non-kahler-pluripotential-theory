@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint261 — Big-background equations and the completion goal
+
+The complete Chapter 31 and all eleven recursive inputs receive an original read and two complete revised mathematical/editorial reads. The setting precedes motivation; potentials, upper models, lower bounds and bounded carriers are declared before use. Transitions explain the metric positive-volume input. All twenty-four statements, twenty-three proofs and fifty-eight labels remain; all proof bodies are byte-identical and the five changed statements retain their mathematical scope. Existing source and proof boundaries remain in force.
+
+Production book and companion builds pass with 912 physical book pages, last printed page 888 and seventeen companion pages. All 43 selected final images pass, covering the chapter, adjacent pages, Part X transition and six index pages. The index retains 415 insertions and 411 clickable locators. Final logs have no unresolved references/citations, duplicate labels or overfull boxes. Fresh-source builds match every production page text and book source byte; manifest checksums and exclusions pass. The served PDF checksum and matching homepage description are verified after the successful Pages deployment at `1289a7d1ed56dcdbbbb445936c78afc2a79a6bdb`.
+
+The author's explicit goal of finishing the whole book and continuing until told to stop is recorded in `PLAN.md`. Continue directly with complete Chapter 32 and its four recursive inputs, then Chapter 33, the appendix, front matter and whole-manuscript acceptance checks. The broader writing goal remains active and incomplete. See research/editorial/chapter-thirty-one-reader-review-261.md and its audit. Existing skill rules cover these edits; no new external proof audit is claimed.
+
 ## Checkpoint260 — Relative equations, common envelopes and normalization
 
 The complete Chapter 30 and all nine recursive inputs receive an original read and two revised mathematical/editorial reads. The chapter declares its setting before motivation, explains the ordered zero-domination argument, and identifies the strict comparison potential, carrier data and density spaces. The final section states its change of background and the varying projective examples. All fourteen statements, fourteen proofs and thirty-one labels remain; mathematical hypotheses and conclusions are unchanged. Positive lower mass, possibly infinite envelope-class measures, exponential potential uniqueness and zero-exponent scalar uniqueness retain their separate scopes. Two bounded layout repairs in Chapters 10 and 25 remove cloud-build overfull lines.

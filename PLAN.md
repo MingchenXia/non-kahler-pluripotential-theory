@@ -1,5 +1,11 @@
 # Hermitian pluripotential theory: research and book plan
 
+## Completion goal, 1 October 2026
+
+The author explicitly directs finishing the whole book and continuing work until told to stop. Complete the remaining units in the reader-revision queue, including the appendix and final front matter; reconcile source dispositions, historical attribution and proof boundaries; and check the whole manuscript's structure, notation, references and index. A completed writing release includes the final book and companion builds, inspected output, a fresh reconstructed source package, verified private synchronization and verified public PDF/homepage publication.
+
+Existing research questions may remain as precisely stated open problems. A writing-completion claim must identify any unfulfilled acceptance criterion or unresolved proof obligation; it cannot be inferred from compilation or from closing the editorial queue alone. Preserve the hidden Nakamaye chapter and the established mathematical scope. Continue directly from each checked unit to the next, without requesting routine confirmation.
+
 ## Public PDF publication, 30 September 2026
 
 After every successful full-book build in the authoring repository, publish the PDF at `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` and update its matching homepage description with the last printed page number and the publication date. The user expressly authorizes replacing the existing PDF and committing both website files. The private book source remains private. Follow the build hook, retry and deployment verification instructions in `AGENTS.md`; source-package reconstruction and companion builds remain local.
