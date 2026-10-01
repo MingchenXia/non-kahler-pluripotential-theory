@@ -1,5 +1,15 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint278 — Divisorial reduction on the cover of fiber components
+
+A new Chapter1 lemma directly constructs the finite unramified cover of a compact holomorphic submersion base whose points represent the connected components of each fiber. The induced quotient is a connected-fiber submersion. A Chapter15 corollary then gives both continuous-obstacle envelope identities, zero masses and singularity volumes, and exact all-obstacle equivalence on that covering base. The elliptic-isogeny counterexample is recovered. No further higher-dimensional criterion on the original base is asserted.
+
+Both complete edited inputs receive two fresh revised reads, the second after the first build and changed images. The original descent input is freshly read; the unchanged checkpoint277 fibration original is reused. All 34 previous formal/proof blocks remain byte-identical. Two statements/proofs/labels and four index insertions are added; the following product input changes only by a checked placement guard. The other 235 author inputs, figures, bibliography/styles, all 23 questions and all 451 protected hashes are preserved. All 1693 labels and 1237 targets resolve; the actual house audit has zero errors and warnings. No fresh whole-chapter or independent full-proof review is claimed.
+
+Book/companion builds pass at 928 physical/904 printed and 17 pages, with clean logs, 5083 valid internal destinations and 433 clickable index locators. All 61 selected final pages pass: four direct images and 57 exact first-stage carries, following 53 direct first-stage inspections and eight exact checkpoint277 carries. Both production builds publish the PDF and matching homepage description; the final live release is verified after deployment of `cff05532acd656d2d05feb5e65a2f786a1e00768`. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, manifest checksums and current payload bytes pass, final logs are clean and archive publication is disabled; see research/editorial/component-cover-reduction-278.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked additions; research remains incomplete. For a curve base, reflect the polar measure criterion through the finite unramified component cover. Prove zero-obstacle and all-obstacle equality for a divisorial submersion type exactly when the original base polar curvature is atomic, even with disconnected fibers. Retain the covering-base criterion in higher dimensions at its proved scope.
+
 ## Checkpoint277 — Connected total space with disconnected fibers
 
 A new elliptic-isogeny example shows why connected fibers are needed for both envelope identities. Its total space is a connected Kahler surface, with four components in every fiber, a smooth horizontal divisor and a smooth obstacle. The connected product projection computes both true envelopes. Their residual potential changes under a kernel translation, so it cannot descend to the proposed isogeny base. All existing reduction statements/proofs remain byte-identical.
