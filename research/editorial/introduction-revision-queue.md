@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint274: Prove the converse all-obstacle criterion across complete fibers using continuous truncated divisor obstacles, decreasing ideal models and Hartogs control of their excess above the target obstacle. Establish ideal equivalence of the limit and translate ordinary competitors before taking their supremum. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint275: Extend the fibration reduction to vertical pole components by absorbing pullbacks of base divisors into the base potential and background. Account for arbitrary smooth metric gauges and preserve the exact distinction between the full base type and its horizontal divisor part. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

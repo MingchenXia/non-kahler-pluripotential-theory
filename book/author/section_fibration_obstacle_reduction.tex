@@ -21,7 +21,7 @@ The form $\beta$ need not be closed or positive. For continuous real obstacles, 
 
 \Needspace{24\baselineskip}
 \begin{proposition}\label{prop:fibration-obstacle-reduction}\index{Envelope!fibration reduction}\index{Obstacle!fiber minimum}\index{Obstacle!extended fiber minimum}\index{Singularity volume!zero-volume fibration}
-For every $F\in C^\infty(M,\mathbb R)$, the function
+For every $F\in C(M,\mathbb R)$, the function
 \[
  \widehat F(y)=\inf_{x\in p^{-1}(y)\setminus H}\{F(x)-\Psi(x)\},
  \qquad\inf\varnothing=+\infty,
@@ -129,10 +129,8 @@ Thus $b\sim q_Y$. The first equivalence with reference $b$, and reference invari
 For any ordinary representative of $u$ or $q_M$, removal and descent give the form $\Psi+c\circ p$ with $c\in\PSH(Y,\beta)$. Outside $H$, replace $c$ locally by $\max(c,-k)$ and retain $\Psi$. These bounded quasi-plurisubharmonic potentials have currents pulled back from the $d$-dimensional base, whose $n$th products vanish by \cref{lem:bounded-products-submersion}, since $n>d$. Plurifine locality identifies this product with the original extended measure on $\{c\circ p>-k\}$. These sets cover its finite locus; the pole sets and $H$ receive no mass. This proves the mass and volume assertions.
 \end{proof}
 
-For the all-obstacle equivalence below, suppose every fiber meets $M\setminus H$, so that its induced obstacles are finite and continuous.
-
 \Needspace{18\baselineskip}
-\begin{corollary}\label{cor:fibration-obstacle-equality}\label{cor:zero-volume-product-obstacles}
+\begin{corollary}\label{cor:fibration-obstacle-equality}\label{cor:zero-volume-product-obstacles}\index{Envelope!all-obstacle fibration criterion}
 The ordinary and ideal envelopes of $u$ agree below every smooth obstacle on $M$ if and only if those of $w$ agree below every smooth obstacle on $Y$.
 
 Put $q=P_\beta[w]_{\mathcal I}$. If $w\in\mathcal E_{\mathrm{env}}(Y,\beta,q)$, then
@@ -149,11 +147,44 @@ If $Y$ is a curve and $\beta$ is positive, write
 Then zero-obstacle equality upstairs, the equality $\mu_w=D_w$, and equality upstairs at every smooth obstacle are equivalent.
 \end{corollary}
 \begin{proof}
-The uniform obstacle comparison extends base equality from smooth to continuous obstacles, so \eqref{eq:fibration-obstacle-reduction} gives the forward passage to $M$. Conversely, for a smooth $B$ on $Y$ take $F=B\circ p$. Then $\widehat F=B+\widehat 0$. Equality upstairs gives equality of the base envelopes below this obstacle. For any continuous $G$, choose smooth $B_j\to G-\widehat 0$ uniformly. The obstacle bound gives equality below $G$ by passage to the limit. This proves the all-obstacle equivalence.
+The forward implication is part of \cref{prop:fibration-obstacle-reduction}. For the converse, suppose the upstairs envelopes agree below every smooth obstacle. Uniform obstacle comparison extends this equality to continuous real obstacles. Fix a smooth real $B$ on $Y$ and put $G=\widehat 0$. The continuous obstacles
+\[
+ F_j=B\circ p+\max(\Psi,-j)\qquad(j\geq1)
+\]
+have induced base obstacles
+\[
+ G_j=B+\max(G-j,0),
+\]
+with value $+\infty$ on $Z$. By the reduction and the assumed equality,
+\[
+ q_j=P_{\beta,G_j}[w]_{\mathcal I}=P_{\beta,G_j}[w].
+\]
+Write $q_B=P_{\beta,B}[w]_{\mathcal I}$. Then $q_B\leq q_j\leq q_1$ and the $q_j$ decrease to a genuine $\beta$-plurisubharmonic potential $r$, with convergence in $L^1$. Indeed, their negative parts are bounded by those of $q_B$, and \cref{cor:decreasing-limit} applies. The set $Z$ has smooth volume zero: in each submersion product chart, the preimage of $Z$ lies in $H$, which has smooth volume zero, so Fubini gives this assertion on the base. Off $Z$, the bounds $q_j\leq G_j\downarrow B$ give $r\leq B$. Canonical almost-everywhere order in \cref{lem:qpsh-almost-everywhere-order} extends the inequality to all of $Y$.
+
+Each $q_j$ is ideal-equivalent to $w$. To see this without a finiteness assumption on $G_j$, put $Q_0=P_\Theta[u]_{\mathcal I}$ and $Q_j=P_{\Theta,F_j}[u]_{\mathcal I}$. Translation of the competitor families gives
+\[
+ Q_0+\min_MF_j\leq Q_j\leq Q_0+\max_MF_j.
+\]
+Thus $Q_j\sim Q_0\sim_{\mathcal I}u$ by \cref{thm:hermitian-i-projection}. Since $Q_j=\Psi+q_j\circ p$, ideal cancellation and submersion reflection in \cref{lem:hermitian-i-calculus,lem:submersion-multiplier-pullback} give $q_j\sim_{\mathcal I}w$. The same bounded comparison with $P_\beta[w]_{\mathcal I}$ gives $q_B\sim_{\mathcal I}w$.
+
+Let $\pi$ be any smooth local modification of a base coordinate neighborhood. The bounds $q_B\circ\pi\leq q_j\circ\pi\leq q_1\circ\pi$ imply decreasing local $L^1$ convergence to $r\circ\pi$. At every point $x$ of this modification, \cref{lem:lelong-lone-semicontinuity} and ordinary order give
+\[
+ \nu(w\circ\pi,x)
+ \leq\nu(r\circ\pi,x)
+ \leq\nu(q_B\circ\pi,x)=\nu(w\circ\pi,x).
+\]
+All these Lelong numbers are therefore equal. By \cref{thm:local-i-inputs}, $r\sim_{\mathcal I}w$. Together with $r\leq B$, this makes $r$ a competitor for $q_B$. Hence $r=q_B$.
+
+Put $\epsilon_j=\max\{0,\sup_Y(q_j-B)\}$. The moving-point estimate in \cref{lem:qpsh-hartogs} gives $\epsilon_j\to0$: otherwise maximizers have a subsequence tending to $y$, where that estimate contradicts $q_B(y)\leq B(y)$. Every ordinary competitor $b$ below $G_j$ satisfies $b\leq q_j$, so $b-\epsilon_j\leq B$ and $b-\epsilon_j\preceq w$. Taking regularized suprema yields
+\[
+ q_j-\epsilon_j\leq P_{\beta,B}[w].
+\]
+Letting $j\to\infty$ proves $q_B\leq P_{\beta,B}[w]$. The reverse inequality always holds, so the two envelopes agree below $B$. Since $B$ was arbitrary, this proves the converse.
 
 Under the relative-class hypothesis, \cref{prop:ideal-obstacle-reprojection} gives equality of both base envelopes at every smooth obstacle. The proved equivalence gives the stated equality upstairs.
 
-In the curve case, $G=\widehat 0$ is continuous but need not be constant. Obstacle comparison gives
+\Needspace{12\baselineskip}
+In the curve case, $Z$ is empty. Otherwise the connected smooth fiber, of dimension $n-1$, would lie in one of the finitely many prime divisors $H_j$ and hence equal it, contradicting that $H_j$ maps onto $Y$. Thus $G=\widehat 0$ is finite and continuous but need not be constant. Obstacle comparison gives
 \[
  \begin{split}
  P_\beta[w]+\min_YG&\leq P_{\beta,G}[w]

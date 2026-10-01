@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint275 — Full all-obstacle criterion across complete fibers
+
+The weighted horizontal-divisor fibration criterion now proves both directions of all-obstacle ordinary/ideal equality, even with complete fibers in the pole divisor. Truncated divisor potentials induce decreasing base ideal models. Modified Lelong semicontinuity identifies their limit, and Hartogs control lets ordinary competitors shift below the target obstacle by constants tending to zero. The reduction explicitly admits continuous real upstairs obstacles. For a curve base, horizontal primes cannot contain full fibers, so the finite-obstacle polar criterion remains valid.
+
+The complete fresh original and two revised reads of the fibration input and complete bounded internal dependencies are checked. The second read follows the first build/images. All primary labels and formal blocks, the other five mathematical proofs, 237 other author inputs, both figures, all 23 questions and all 451 protected hashes are preserved. All 1690 labels and 1235 targets resolve; the actual house audit has zero errors and warnings. No fresh whole-chapter or independent full-proof review, verifier run, bibliography change or novelty claim is made.
+
+Final book/companion builds pass at 924 physical/900 printed and 17 pages, with clean logs, 5067 valid internal destinations and 426 clickable index locators. All 46 selected final pages pass: four direct images and 42 exact carries from individually checked first-stage pages. Both production builds publish the PDF and homepage description; the final live release is verified after deployment of `c3f6b2312d33498d7ef790de231274eb61ce54f9`. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, manifest checksums and current payload bytes pass, final logs are clean and archive publication is disabled; see research/editorial/whole-fiber-all-obstacles-275.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked additions; research remains incomplete. Extend the fibration reduction to vertical pole components by absorbing pullbacks of base divisors into the base potential and background. Account for arbitrary smooth metric gauges and preserve the exact distinction between the full base type and its horizontal divisor part. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems.
+
 ## Checkpoint274 — Envelope reduction with infinite fiber minima
 
 The weighted divisorial fibration envelope identities now allow complete fibers in the pole divisor. The induced obstacle is extended-continuous and infinite on those fibers. A local section on one base ball and normalized compactness give a uniform upper bound for every base competitor, preserving the divisor pole under regularization. Base all-obstacle equality implies upstairs equality by continuous truncations. The converse corollary retains its finite-obstacle hypothesis; relative-envelope equivalence and zero mass remain general.
