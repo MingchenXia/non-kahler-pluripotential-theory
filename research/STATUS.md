@@ -1,4 +1,12 @@
-# Current research status — 30 September 2026
+# Current research status — 1 October 2026
+
+## Checkpoint260 — Relative equations, common envelopes and normalization
+
+The complete Chapter 30 and all nine recursive inputs receive an original read and two revised mathematical/editorial reads. The chapter declares its setting before motivation, explains the ordered zero-domination argument, and identifies the strict comparison potential, carrier data and density spaces. The final section states its change of background and the varying projective examples. All fourteen statements, fourteen proofs and thirty-one labels remain; mathematical hypotheses and conclusions are unchanged. Positive lower mass, possibly infinite envelope-class measures, exponential potential uniqueness and zero-exponent scalar uniqueness retain their separate scopes. Two bounded layout repairs in Chapters 10 and 25 remove cloud-build overfull lines.
+
+Production book and companion builds pass, with 912 physical book pages, last printed page 888 and seventeen companion pages. This pagination matches the cloud baseline; the preceding macOS edition had 910/886. All 28 selected final pages pass inspection, including the full chapter, adjacent pages, two layout contexts and six index pages. The index retains 415 insertions and 411 clickable locators. No unresolved references/citations, duplicate labels or overfull boxes remain. Fresh-source book and companion builds match all production page texts; the checksum manifest and source exclusions pass. The served public PDF checksum, matching homepage description and successful Pages deployment at `2bc46c96d49d7ea02a779ebf8a5de61c3e6ff996` are verified.
+
+Existing writing-skill rules cover these changes; no skill update or new external proof audit is claimed. See research/editorial/chapter-thirty-reader-review-260.md. Continue with complete Chapter 31 and all eleven recursive inputs. The broader writing goal remains active and incomplete.
 
 ## Checkpoint259 — Volume comparison, model completeness and curve boundaries
 
