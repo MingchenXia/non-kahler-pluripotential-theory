@@ -1,5 +1,15 @@
 # Current research status — 1 October 2026
 
+## Checkpoint276 — Arbitrary weighted divisors in the fibration reduction
+
+The divisor components in Section 15.6.5 may now be arbitrary prime divisors, including vertical components. Nonnegative pullback orders suffice for main divisor removal; base ordinary order forces the required stretching coefficients in the relative-envelope proof. A common competitor bound compares the extended-obstacle curve models with their zero-obstacle models, preserving the polar criterion even at infinite fiber minima. Continuous-obstacle identities, relative-envelope and full all-obstacle equivalences, and zero mass all retain their exact conclusions in the original background and given metrics. Connected fibers remain required.
+
+The complete original is reused from the unchanged checkpoint275 second read, followed by two fresh complete revised reads; the second follows the production build/images and needs no amendment. All formal statement mathematics and primary labels, every example statement/proof, 237 other author inputs, both figures, all 23 questions and all 451 protected hashes are preserved. All 1690 labels and 1235 targets resolve; the actual house audit has zero errors and warnings. No fresh whole-chapter or independent full-proof review, verifier run, bibliography change or novelty claim is made.
+
+Book/companion builds pass at 924 physical/900 printed and 17 pages, with clean logs, 5069 valid internal destinations and 427 clickable index locators. All 46 selected pages pass: eight direct images and 38 exact checkpoint275 carries. The successful production build publishes the PDF and matching homepage description; the live release is verified after deployment of `de755262f6a662fbf273c24530b91b7caf7759e1`. Fresh empty source reconstruction passes for both outputs: all page text and 253 book source files match, manifest checksums and current payload bytes pass, final logs are clean and archive publication is disabled; see research/editorial/arbitrary-fibration-divisors-276.md and its audit.
+
+Writing acceptance at checkpoint270 is carried with the checked additions; research remains incomplete. Give an explicit connected-total-space counterexample showing why connected fibers are needed for obstacle-envelope descent. Use an elliptic isogeny composed with a product projection and an obstacle varying between fiber components. Retain unrestricted zero-obstacle projection and complete model topology as separate research problems.
+
 ## Checkpoint275 — Full all-obstacle criterion across complete fibers
 
 The weighted horizontal-divisor fibration criterion now proves both directions of all-obstacle ordinary/ideal equality, even with complete fibers in the pole divisor. Truncated divisor potentials induce decreasing base ideal models. Modified Lelong semicontinuity identifies their limit, and Hartogs control lets ordinary competitors shift below the target obstacle by constants tending to zero. The reduction explicitly admits continuous real upstairs obstacles. For a curve base, horizontal primes cannot contain full fibers, so the finite-obstacle polar criterion remains valid.
