@@ -1,7 +1,7 @@
 \subsection{Relative divisors and fiber obstacles}
 \label{subsec:fibration-obstacle-reduction}
 
-Removing a relative divisor leaves a current pulled back from the base. Compact fibers then force every envelope competitor to descend, so an obstacle upstairs can be replaced by its fiber minimum. The same reduction applies to both envelopes and gives zero top-degree mass, even when the base background has unbounded mass.
+Removing a relative divisor leaves a current pulled back from the base. Compact fibers then force every envelope competitor to descend, so an obstacle upstairs can be replaced by its fiber minimum. The same reduction applies to both envelopes and gives zero top-degree mass, even when the base background has unbounded mass. All-obstacle equality and relative-envelope membership are exactly their corresponding base conditions.
 
 Let $p:M\to Y$ be a surjective holomorphic submersion between connected compact complex manifolds, with connected fibers, and put $d=\dim Y$ and $n=\dim M$, where $1\leq d<n$. Let $H\subset M$ be a nonempty smooth reduced divisor such that $p|_H$ is a submersion. Choose a smooth Hermitian metric $h$ on $\mathcal O_M(H)$, let $s_H$ be its canonical section and let $\kappa_H$ be its Chern curvature. Set
 \[
@@ -30,7 +30,7 @@ is finite and continuous, and
 Every representative of the ordinary type of $u$ or of $P_\Theta[u]_{\mathcal I}$ has zero extended mass. Consequently both singularity volumes of these types are zero.
 \end{proposition}
 \begin{proof}
-Every fiber meets $M\setminus H$. A local holomorphic section through such a point stays outside $H$ after shrinking its base neighborhood. Evaluating $F-\Psi$ on finitely many such sections gives a uniform upper bound for the fiber minima. Since $\Psi\to-\infty$ uniformly near $H$, all minima are attained on one compact subset of $M\setminus H$. For $y_j\to y$, a convergent subsequence of minimizers gives the lower semicontinuity inequality. A local section through a minimizer over $y$ gives the upper semicontinuity inequality. Thus $\widehat F$ is continuous.
+Every fiber meets $M\setminus H$. A local holomorphic section through such a point stays outside $H$ after shrinking its base neighborhood. Evaluating $F-\Psi$ on finitely many such sections gives a uniform upper bound for the fiber minima. Since $\Psi\to-\infty$ uniformly near $H$, all minima are attained on one compact subset of $M\setminus H$. For~$y_j\to y$, a convergent subsequence of minimizers gives the lower semicontinuity inequality. A local section through a minimizer over $y$ gives the upper semicontinuity inequality. Thus $\widehat F$ is continuous.
 
 Let $v$ be an ordinary competitor for $u$, or an ideal competitor with $v\sim_{\mathcal I}u$. Its generic Lelong number along every component of $H$ is at least one, by ordinary order or \cref{thm:local-i-inputs}. Divisorial removal in \cref{lem:nonclosed-divisorial-removal} gives
 \[
@@ -57,7 +57,39 @@ Its $n$th bounded product is zero by \cref{lem:bounded-products-submersion}, sin
 Divisorial removal and descent put every representative ordinarily equivalent to $u$ in this form. The ideal model is also of this form, with base potential $P_{\beta,\widehat 0}[w]_{\mathcal I}$, by the proved identity. The same removal and descent apply to every representative of its ordinary type. All their masses are zero, proving both volume assertions.
 \end{proof}
 
+\begin{proposition}\label{prop:fibration-relative-envelope-class}\index{Relative envelope class!fibration equivalence}
+For $\varphi\in\PSH(Y,\beta)$ put $v=\Psi+\varphi\circ p$. Then
+\[
+ u\in\mathcal E_{\mathrm{env}}(M,\Theta,v)
+ \quad\Longleftrightarrow\quad
+ w\in\mathcal E_{\mathrm{env}}(Y,\beta,\varphi).
+\]
+In particular, for $q_M=P_\Theta[u]_{\mathcal I}$ and $q_Y=P_\beta[w]_{\mathcal I}$,
+\[
+ u\in\mathcal E_{\mathrm{env}}(M,\Theta,q_M)
+ \quad\Longleftrightarrow\quad
+ w\in\mathcal E_{\mathrm{env}}(Y,\beta,q_Y).
+\]
+\end{proposition}
+\begin{proof}
+Ordinary order $u\preceq v$ is equivalent to $w\preceq\varphi$ by the preceding proof. Relative-envelope membership requires, for every $a\in(0,1)$, a potential $h\in\PSH(M,\Theta)$ with
+\[
+ av+(1-a)h\leq u.
+\]
+A base competitor $c\in\PSH(Y,\beta)$ with $a\varphi+(1-a)c\leq w$ gives such an $h$ by taking $h=\Psi+c\circ p$.
+
+Conversely, each component $H_j$ of $H$ has open and closed image in $Y$, so maps onto $Y$. The pullbacks of $w$ and $\varphi$ have generic Lelong number zero along these components, since there are base points where both are finite. Thus $u$ and $v$ have generic Lelong number one there. The displayed inequality forces
+\[
+ a+(1-a)\nu(h,H_j)\geq1
+\]
+for every $j$, so $\nu(h,H_j)\geq1$. Divisorial removal and compact-fiber descent, as in \cref{prop:fibration-obstacle-reduction}, give $h=\Psi+c\circ p$ with $c\in\PSH(Y,\beta)$. Cancellation outside $H$ gives $a\varphi+(1-a)c\leq w$ off the base pole sets. The inequality extends to all of $Y$ by \cref{lem:qpsh-almost-everywhere-order}. This proves the first equivalence.
+
+For the second, put $G=\widehat 0$ and $q_G=P_{\beta,G}[w]_{\mathcal I}$. The reduction gives $q_M=\Psi+q_G\circ p$, and obstacle comparison gives $q_G\sim q_Y$. Apply the first equivalence with reference $q_G$ and reference invariance in \cref{prop:relative-elementary}.
+\end{proof}
+
 \begin{corollary}\label{cor:fibration-obstacle-equality}\label{cor:zero-volume-product-obstacles}
+The ordinary and ideal envelopes of $u$ agree below every smooth obstacle on $M$ if and only if those of $w$ agree below every smooth obstacle on $Y$.
+
 Put $q=P_\beta[w]_{\mathcal I}$. If $w\in\mathcal E_{\mathrm{env}}(Y,\beta,q)$, then
 \[
  P_{\Theta,F}[u]=P_{\Theta,F}[u]_{\mathcal I}
@@ -72,7 +104,9 @@ If $Y$ is a curve and $\beta$ is positive, write
 Then zero-obstacle equality upstairs, the equality $\mu_w=D_w$, and equality upstairs at every smooth obstacle are equivalent.
 \end{corollary}
 \begin{proof}
-Under the relative-class hypothesis, \cref{prop:ideal-obstacle-reprojection} gives equality of both base envelopes at every smooth obstacle. The uniform obstacle bound extends this to continuous obstacles by smooth approximation. Apply \eqref{eq:fibration-obstacle-reduction} to $\widehat F$.
+The uniform obstacle comparison extends base equality from smooth to continuous obstacles, so \eqref{eq:fibration-obstacle-reduction} gives the forward passage to $M$. Conversely, for a smooth $B$ on $Y$ take $F=B\circ p$. Then $\widehat F=B+\widehat 0$. Equality upstairs gives equality of the base envelopes below this obstacle. For any continuous $G$, choose smooth $B_j\to G-\widehat 0$ uniformly. The obstacle bound gives equality below $G$ by passage to the limit. This proves the all-obstacle equivalence.
+
+Under the relative-class hypothesis, \cref{prop:ideal-obstacle-reprojection} gives equality of both base envelopes at every smooth obstacle. The proved equivalence gives the stated equality upstairs.
 
 In the curve case, $G=\widehat 0$ is continuous but need not be constant. Obstacle comparison gives
 \[
@@ -100,8 +134,9 @@ Let $(Y,\omega)$ be the Hopf threefold of \cref{thm:hopf-unbounded}. On $\mathbb
  \Theta=p^*\omega+r^*\sigma,\qquad
  H=Y\times D,\qquad \Psi=\psi\circ r.
 \]
-Choose the infinite-mass potential $U\in\mathcal E_{\mathrm{env}}(Y,\omega,0)$ of \cref{prop:infinite-envelope-class}, which gives $P_\omega[U]=0$. Its trivial multiplier ideals also give $P_\omega[U]_{\mathcal I}=0$. Set $u=\Psi+U\circ p$. Here $\widehat 0=0$, so the proposition and corollary give the envelope identities, all-obstacle equality and zero singularity volumes. Infinite extended mass makes $U$ unbounded; restricting to a section outside $H$ proves $u\not\sim\Psi$. If an analytic potential $a$ were ordinarily equivalent to $u$, \cref{prop:analytic-envelope-type} would give $u\sim a\sim P_\Theta[a]=P_\Theta[u]=\Psi$, a contradiction.
+Choose the infinite-mass potential $U\in\mathcal E_{\mathrm{env}}(Y,\omega,0)$ of \cref{prop:infinite-envelope-class}, which gives $P_\omega[U]=0$. Its trivial multiplier ideals also give $P_\omega[U]_{\mathcal I}=0$. Set $u=\Psi+U\circ p$. Here $\widehat 0=0$, so the obstacle reduction and corollary give the envelope identities, all-obstacle equality and zero singularity volumes. Moreover $u\in\mathcal E_{\mathrm{env}}(M,\Theta,\Psi)$ by \cref{prop:fibration-relative-envelope-class}. Infinite extended mass makes $U$ unbounded; restricting to a section outside $H$ proves $u\not\sim\Psi$. If an analytic potential $a$ were ordinarily equivalent to $u$, \cref{prop:analytic-envelope-type} would give $u\sim a\sim P_\Theta[a]=P_\Theta[u]=\Psi$, a contradiction.
 
+\Needspace{9\baselineskip}
 Finally, let $V_j$ be the smooth potentials of \cref{thm:hopf-unbounded}. Their pullbacks are bounded and $\Theta$-plurisubharmonic. By \cref{prop:curve-product-extended-ma},
 \[
  \int_M\mathrm{MA}_\Theta(V_j\circ p)
