@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint264: Complete the final Introduction, conventions and root document, then whole-book source/proof-ledger and acceptance checks. The appendix completes its reader review and verified release; see appendix-reader-review-264.md and reader-revision-queue-20260929.md. Historical entries retain their recorded scopes.
+Current next unit after checkpoint265: Reconcile whole-book source dispositions, current inclusion graph, proof boundaries and acceptance criteria. Every reader-queue chapter, appendix and final front-matter unit has its checked review recorded. Closing the editorial queue alone does not prove whole-book completion; see frontmatter-reader-review-265.md.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

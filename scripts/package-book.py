@@ -344,6 +344,8 @@ for name in (
     "research/audits/chapter-thirty-three-reader-review-263.json",
     "research/editorial/appendix-reader-review-264.md",
     "research/audits/appendix-reader-review-264.json",
+    "research/editorial/frontmatter-reader-review-265.md",
+    "research/audits/frontmatter-reader-review-265.json",
     "research/editorial/chapter-twenty-nine-reader-review-259.md",
     "research/editorial/subject-index-259.json",
     "research/audits/chapter-twenty-nine-reader-review-259.json",

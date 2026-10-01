@@ -1,5 +1,13 @@
 # Modification history
 
+## Checkpoint265 — Final introduction and conventions
+
+The Introduction, conventions and root document receive an original read and two complete revised mathematical/editorial reads. The setting specifies positive dimension; the smooth potential and positive scalar precede their equation, and the multiplier-ideal weight is declared. The title date is October 1, 2026. All six introductory sections, citations, internal references and root inclusions remain. Every mathematical-body, bibliography and index page text is unchanged from checkpoint264.
+
+Production and fresh-source book/companion builds pass with 912 physical book pages, last printed page 888 and seventeen companion pages. All 38 selected final images pass, covering complete front matter, contents, conventions, first-chapter entry and bibliography/index. Final logs and archive checks pass; reconstruction matches every page text and book source byte. The served PDF and homepage description match production after successful Pages deployment at `560021491e60c828e3e545f607f44c21df3e6164`.
+
+Every reader-queue unit now has its complete review recorded. Continue directly with whole-book source/proof-ledger and acceptance checks; the completion goal remains active and cannot be inferred from closing the queue. See research/editorial/frontmatter-reader-review-265.md and its audit. No new external proof audit or independent verification is claimed.
+
 ## Checkpoint264 — Unibranch descent and cone settings
 
 The appendix and both recursive inputs receive an original read and two complete revised mathematical/editorial reads. The space and background precede motivation; cone forms, coordinates, tangent vectors and deformation parameters are declared before use. All nine formal statements and thirty-one labels remain; the formal blocks and six proof bodies are byte-identical, while one proof only declares its real parameter. Descent, resolution independence, ordinary-class uniqueness, non-descending residuals and closed-only whole-class mass invariance retain their established scope.
