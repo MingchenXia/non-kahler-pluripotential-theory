@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint318: Chapter 22: divisorial currents on compact modifications, every recursive input; check current limits, exceptional corrections and closed-class compatibility.
+Current next unit after checkpoint319: Chapter 23: classes with a non-closed background, every recursive input; check prescribed derivatives, affine nef realizations and limits of residual currents.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
