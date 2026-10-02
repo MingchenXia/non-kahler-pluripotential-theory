@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint312: Chapter 16: Perron interpolation and the geodesic equation, every recursive input; preserve exact action, envelope and background hypotheses.
+Current next unit after checkpoint313: Chapter 17: test curves and Legendre duality, every recursive input; preserve cutoff, singularity-envelope and Perron-maximality hypotheses.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

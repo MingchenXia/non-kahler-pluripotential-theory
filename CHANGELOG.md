@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 313 — Chapter 16 unchanged coherence review
+
+Complete original and two follow-up reads, 22 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-sixteen-coherence-313.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint312 (1,719 archive entries). Chapter 17 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 312 — Chapter 15 model-topology coherence
 
 Complete original and two follow-up reads, corrected-parent supplement, 50 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-fifteen-coherence-312.md). The clean production PDF and homepage are deployed and verified. Empty-source reconstruction and archive checks pass: all 967 book and 17 companion page texts match, with 260 exact book-source files and 1,716 archive entries. Chapter 16 is next; the whole-book and open-problem goals remain active.

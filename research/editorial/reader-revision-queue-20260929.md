@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint312: Chapter 16: Perron interpolation and the geodesic equation, every recursive input; preserve exact action, envelope and background hypotheses.
+Current next unit after checkpoint313: Chapter 17: test curves and Legendre duality, every recursive input; preserve cutoff, singularity-envelope and Perron-maximality hypotheses.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
