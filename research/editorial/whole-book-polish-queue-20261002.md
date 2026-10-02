@@ -1,10 +1,10 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, and Chapter 9 is revised at 306; Chapter 10 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, and Chapter 10 passes an unchanged review at 307; Chapter 11 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
-The workspace has recovered. Checkpoint294 and the research programme were preserved, ordinarily merged and privately synchronized. Checkpoint295 completes the author-feedback Introduction rewrite. Checkpoint296 completes the pending Hopf auxiliary example at its recorded mathematical/output scope; fresh source reconstruction passes and private source3277aba is synchronized. The latest manuscript has 245 author / 247 recursive inputs and 963 physical / 939 printed pages. Begin the new full reading cycle after this release; earlier complete reads retain their own scopes.
+The workspace has recovered. Checkpoint294 and the research programme were preserved, ordinarily merged and privately synchronized. Checkpoint295 completes the author-feedback Introduction rewrite. Checkpoint296 completes the pending Hopf auxiliary example at its recorded mathematical/output scope; fresh source reconstruction passes and private source3277aba is synchronized. The checkpoint296 manuscript has 245 author / 247 recursive inputs and 963 physical / 939 printed pages. Begin the new full reading cycle after this release; earlier complete reads retain their own scopes.
 
 ## Review method
 
@@ -31,7 +31,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 7 | [chapter_damped_measures.tex](../../book/author/chapter_damped_measures.tex) | complete original and two revised recursive reads 304; release checks recorded |
 | Chapter 8 | [chapter_hopf.tex](../../book/author/chapter_hopf.tex) | complete original and two unchanged follow-up reads 305; full chapter page inspection passed |
 | Chapter 9 | [chapter_smooth_equations.tex](../../book/author/chapter_smooth_equations.tex) | complete original and two revised recursive reads 306; clean build and final chapter page inspection passed |
-| Chapter 10 | [chapter_weak_equations.tex](../../book/author/chapter_weak_equations.tex) | queued |
+| Chapter 10 | [chapter_weak_equations.tex](../../book/author/chapter_weak_equations.tex) | complete original and two unchanged follow-up reads 307; full chapter page inspection passed |
 | Chapter 11 | [chapter_degenerate_uniqueness.tex](../../book/author/chapter_degenerate_uniqueness.tex) | queued |
 | Chapter 12 | [chapter_envelopes.tex](../../book/author/chapter_envelopes.tex) | queued |
 | Chapter 13 | [chapter_prescribed_equations.tex](../../book/author/chapter_prescribed_equations.tex) | queued |

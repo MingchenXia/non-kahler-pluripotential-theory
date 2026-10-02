@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 307 — Chapter 10 unchanged coherence review
+
+Complete original and two follow-up reads, mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-ten-coherence-307.md). Source-package validation passes (1,701 archive entries). Chapter 11 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 306 — Chapter 9 coherence and layout
 
 Complete original and two revised reads, mathematical checks, restored gradient QED and intact torsion statement: [review record](research/editorial/chapter-nine-coherence-306.md). Clean production and live publication passed; final source-package reconstruction and payload validation passed. Chapter 10 is next; the whole-book and open-problem goals remain active.
