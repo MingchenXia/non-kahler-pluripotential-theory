@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint293: Determine which projection, all-obstacle and polar-metric statements survive after replacing the auxiliary curve by an arbitrary connected compact complex factor with a smooth semipositive vertical term. Check zero-area factors directly and do not impose ambient bounded mass without need. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint294: Construct a positive genuinely nonclosed background on a product with an auxiliary factor of unbounded mass, and verify ambient unbounded mass directly by smooth test potentials. Exhibit the complete zero-volume polar metric and distinct ideal models there; keep the product locus and ambient statements explicit. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
