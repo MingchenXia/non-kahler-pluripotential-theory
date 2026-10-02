@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–19 pass unchanged reviews at 313–316; Chapter 20 is revised at317; Chapters 21–24 pass unchanged reviews at318–321; Chapter 25 is revised at322; Chapter 26 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–19 pass unchanged reviews at 313–316; Chapter 20 is revised at317; Chapters 21–24 pass unchanged reviews at318–321; Chapter 25 is revised at322; Chapter 26 passes an unchanged review at323; Chapter 27 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -47,7 +47,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 23 | [chapter_nonclosed_bclasses.tex](../../book/author/chapter_nonclosed_bclasses.tex) | complete original and two unchanged follow-up reads 320; full chapter page inspection passed |
 | Chapter 24 | [chapter_envelope_systems.tex](../../book/author/chapter_envelope_systems.tex) | complete original and two unchanged follow-up reads 321; full chapter page inspection passed |
 | Chapter 25 | [chapter_gauduchon_variational_volume.tex](../../book/author/chapter_gauduchon_variational_volume.tex) | complete original and two revised follow-up reads322,33 recursive inputs; two measure qualifiers corrected and full chapter inspection passed |
-| Chapter 26 | [chapter_partial_bergman.tex](../../book/author/chapter_partial_bergman.tex) | queued |
+| Chapter 26 | [chapter_partial_bergman.tex](../../book/author/chapter_partial_bergman.tex) | complete original and two unchanged follow-up reads 323, including figure source; full chapter page inspection passed |
 | Chapter 27 | [chapter_bott_chern_loci.tex](../../book/author/chapter_bott_chern_loci.tex) | queued |
 | Chapter 28 | [chapter_lck.tex](../../book/author/chapter_lck.tex) | queued |
 | Chapter 29 | [chapter_mass_bound_volumes.tex](../../book/author/chapter_mass_bound_volumes.tex) | queued |
@@ -62,4 +62,4 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
 
-Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–322 record complete original and two follow-up reads of Chapters 1–25; Chapter 26 is next.
+Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–323 record complete original and two follow-up reads of Chapters 1–26; Chapter 27 is next.
