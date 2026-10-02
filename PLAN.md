@@ -149,3 +149,7 @@ The author then reported that the Introduction still looked unnatural: revise th
 ## User request, 2 October 2026: complete open-problem catalogue
 
 Provide the full open-problem list in standalone LaTeX, including exact problem statements and hypotheses, known results, the remaining gaps and references. The completed catalogue records23 formal questions and18 further questions/directions from the manuscript, with25 cited sources. State-of-the-art claims are limited to the manuscript and its cited literature. Checkpoint333 verifies all23 formal texts, numbers and printed pages against the final body. This inventory does not close any research question.
+
+## User steering, 2 October 2026: direct research
+
+The author explicitly removes Xean from the workflow: “你可以完全忘记Xean，不需要再考虑它”. Continue writing and solving the open problems directly, with complete proofs and the established mathematical/editorial and release checks. Xean execution, authentication and its model-role configuration are no longer requirements or blockers. Preserve historical records at their actual scopes. Continue the first topology problem; complete writing/polish acceptance does not close the all-problem research goal.

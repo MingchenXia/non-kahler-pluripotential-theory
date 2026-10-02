@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint333: Sequential open-problem research; resume the first exact Xean campaign with gpt-6.1-sol/xhigh when subscription authentication is available. No manuscript-polish unit remains after final acceptance.
+Current next unit after checkpoint334: Continue the first general topology problem directly: test whether local curve/polar data separate higher-dimensional ordinary models and whether compatible limits have realizations. Retain the exact general question until a complete verified construction or justified negative answer is established.
 
 | Chapter | Source | This cycle |
 |---|---|---|

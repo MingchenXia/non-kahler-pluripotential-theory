@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint333: Sequential open-problem research; resume the first exact Xean campaign with gpt-6.1-sol/xhigh when subscription authentication is available. No manuscript-polish unit remains after final acceptance.
+Current next unit after checkpoint334: Continue the first general topology problem directly: test whether local curve/polar data separate higher-dimensional ordinary models and whether compatible limits have realizations. Retain the exact general question until a complete verified construction or justified negative answer is established.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

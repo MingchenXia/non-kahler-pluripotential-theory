@@ -1,5 +1,7 @@
 # Sequential open-problem research with Xean
 
+Historical workflow, superseded on 2 October 2026: the author explicitly removes Xean from further work. Continue research and manuscript development directly under the repository standards. Its authentication and model configuration are no longer prerequisites. The configuration, drafts and qualification records below are retained solely as history.
+
 Requested by the author on 2 October 2026: use [chaoxu/xean](https://github.com/chaoxu/xean), `gpt-6.1-sol` and `xhigh`, trying the book's open problems one by one. Status: prepared, not executed. The workspace has recovered and the checked checkpoint294 source has been reconciled and synchronized. Runtime qualification is recorded in [runtime-qualification-20261002.md](runtime-qualification-20261002.md): installed and deterministic runs checked; exact Pi model/effort validated; native model authentication failed401. No Xean campaign has run.
 
 ## Execution and evidence

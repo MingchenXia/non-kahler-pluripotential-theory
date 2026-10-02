@@ -63,3 +63,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
 
 Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–330 record complete original and two follow-up reads of Chapters 1–33; Final front/root/contents and reader-route rereads333 pass; final reconstruction, archive validation, live publication and private synchronization pass. Writing/polish acceptance is complete; continue sequential open-problem research.
+
+## Subsequent direct research
+
+The author removes Xean from the workflow. Checkpoint334 adds and checks the joint curve/background space with complete proofs, gauge isometries and scaling compatibility; this is a bounded subsequent integration, not another full-book reading cycle. The historical complete polish at333 remains accepted. Continue the general higher-dimensional topology problem; all23 formal questions remain open.

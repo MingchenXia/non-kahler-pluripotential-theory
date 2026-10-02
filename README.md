@@ -8,6 +8,8 @@ The Introduction explains the differences from Kähler theory through mass, comp
 
 The fresh whole-book polish has completed the front units, Chapters 1–33, Appendix A, references and index at checkpoints 297–333. The final post-body Introduction and reader-route review passes; empty-source reconstruction, live publication and private synchronization pass. The writing/polish release is accepted at its recorded review scope. Open-problem research remains active. See [the reading queue](research/editorial/whole-book-polish-queue-20261002.md) for actual completed scopes.
 
+Further direct research adds the complete joint curve/background space in Section29.14, including zero-area limits, exact analytic closure and gauge/scaling compatibility. The unrestricted higher-dimensional topology problem remains open. The author has removed Xean from the workflow.
+
 **Part IX, “Theory under mass bounds”, collects the substantial additional theory:**
 
 - Chapter 29, *Volumes under bounded mass*: finite singularity volumes, comparison, the relation between envelope and volume full mass classes, and the conditional volume characterization of ideal-envelope equality.
