@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint317: Chapter 21: Hopf fibrations and toric potentials, every recursive input; check descended kernels, measures, equations and gradient-simplex normalizations.
+Current next unit after checkpoint318: Chapter 22: divisorial currents on compact modifications, every recursive input; check current limits, exceptional corrections and closed-class compatibility.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
