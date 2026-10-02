@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 322 — Chapter 25 coherence and measure qualifications
+
+Complete original and two revised follow-up reads,55 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twenty-five-coherence-322.md). Two prose summaries now specify nonzero finite measures. The clean967-page book is publicly deployed and verified. Empty-source reconstruction and archive checks pass: all 967 book and 17 companion page texts match, with 260 exact book-source files and 1,746 archive entries. Chapter26 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 321 — Chapter 24 unchanged coherence review
 
 Complete original and two follow-up reads, 47 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twenty-four-coherence-321.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint320 (1,743 archive entries). Chapter 25 is next; the whole-book and open-problem goals remain active.
