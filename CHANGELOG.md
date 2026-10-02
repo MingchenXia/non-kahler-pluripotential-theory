@@ -1,5 +1,9 @@
 # Modification history
 
+## Open-problem catalogue — 2 October 2026
+
+Created the standalone [LaTeX catalogue](research/open-problems-catalogue.tex) requested by the author: all 23 current formal problem statements, 18 additional unresolved questions or research directions from the prose, full setup, known results, remaining gaps, overlaps, and 25 references. Status is explicitly scoped to the accepted manuscript and its cited versions. The 23 statements match current sources before numeric cross-reference expansion; the active inventory contains 245 author inputs. Native editor compilation and the 28-page standalone PDF export pass with no undefined references or overfull boxes; final PDF spot checks cover equations, the crosswalk and references. [Inventory](research/open-problems-catalogue.json) and [scan audit](research/open-problems-catalogue-audit.json) record provenance. This research document does not close a book problem or finish the in-progress Chapter 27 review.
+
 ## Checkpoint 323 — Chapter 26 unchanged coherence review
 
 Complete original and two follow-up reads, 43 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twenty-six-coherence-323.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,751 archive entries). Chapter 27 is next; the whole-book and open-problem goals remain active.

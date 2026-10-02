@@ -1,0 +1,593 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype,longtable,booktabs,enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Open problems in non-Kahler pluripotential theory},pdfauthor={Mingchen Xia}}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep}
+\newcommand{\ddc}{\mathrm d\mathrm d^c}
+\newcommand{\dc}{\mathrm d^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\QPSH}{\operatorname{QPSH}}
+\newcommand{\MA}{\operatorname{MA}^{\mathrm{ext}}}
+\newcommand{\Real}{\operatorname{Re}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\field}[1]{\par\medskip\noindent\textbf{#1.}\ }
+\title{Open problems in non-K\"ahler pluripotential theory\\
+\large Full statements, known results, and remaining gaps}
+\author{Catalogue accompanying Mingchen Xia's monograph}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This catalogue records all 23 formally labelled open questions in the accepted manuscript, together with 18 further unresolved questions and research directions identified in its prose. It preserves overlapping labels, identifies partially settled formulations, and states the hypotheses of known results. The state-of-the-art discussion is based on the manuscript and the sources it cites; it is not a claim of an independently updated exhaustive literature survey.
+\end{abstract}
+\noindent\textbf{Source version.} Private source repository
+\href{https://github.com/MingchenXia/non-kahler-pluripotential-theory}{MingchenXia/non-kahler-pluripotential-theory}, accepted head
+\texttt{b7c7fc1448da}, source disposition checkpoint 323.
+Book numbering and printed pages refer to the corresponding manuscript; the public book is
+\href{https://mingchenxia.github.io/Papers/SHPT_vibe.pdf}{SHPT\_vibe.pdf}.
+``Open'' below means unresolved at this source version. Results proved in the manuscript are distinguished from cited literature; no new solver output is counted as a proof.
+\tableofcontents
+
+\section{Conventions and the main invariants}
+Unless otherwise specified, $X$ is a connected compact complex manifold of dimension $n$, $h>0$ is a Hermitian form, and $\mathrm dV$ and $\mu$ are smooth strictly positive probability volume forms. We use
+\[\dc=\frac{\mathrm i}{4\pi}(\bar\partial-\partial),\qquad
+ \ddc=\frac{\mathrm i}{2\pi}\partial\bar\partial.\]
+A background $\theta$ is a smooth real $(1,1)$-form, which need not be closed; $\PSH(X,\theta)$ consists of genuine quasi-psh functions $u$ with $\theta+\ddc u\geq0$. The measure $\MA_\theta(u)$ is the extended non-pluripolar product obtained on finite levels. It has no mass on pluripolar sets, but its total mass need not be finite. Ordinary type equivalence $u\sim v$ means bounded difference; $u\preceq v$ means $u\leq v+C$ for a constant $C$.
+
+\field{Mass properties}
+\[v_-(h)=\inf_{u\in\PSH(X,h)\cap L^\infty}\int_X(h+\ddc u)^n,
+ \qquad
+ v_+(h)=\sup_{u\in\PSH(X,h)\cap L^\infty}\int_X(h+\ddc u)^n.\]
+BMP means $v_+(h)<\infty$; positive lower mass means $v_-(h)>0$. These properties are independent of the choice of Hermitian metric, though their numerical values are not. Neither property follows from the other. The standard Hopf threefold has positive lower mass and infinite upper mass; a different balanced elliptic threefold has finite upper mass and zero lower mass.
+
+\field{Multiplier ideals and envelopes}
+The ideal $\mathcal I(tu)$ consists of holomorphic germs $g$ with $|g|^2\mathrm e^{-tu}$ locally integrable. Write $u\preceq_{\mathcal I}v$ when $\mathcal I(tu)\subseteq\mathcal I(tv)$ for every real $t>0$; equality at every weight defines ideal equivalence. For a smooth obstacle $F$, put
+\[
+\begin{split}
+P_{\theta,F}[u]&=\bigl(\sup\{v\in\PSH(X,\theta):v\leq F,\ v\preceq u\}\bigr)^*,\\
+P_{\theta,F}[u]_{\mathcal I}&=\bigl(\sup\{v\in\PSH(X,\theta):v\leq F,\ v\preceq_{\mathcal I}u\}\bigr)^*.
+\end{split}
+\]
+The star denotes upper semicontinuous regularization. Omitting $F$ means obstacle zero. An ordinary model is a normalized fixed point of $P_\theta[\cdot]$; an ideal model is a fixed point of $P_\theta[\cdot]_{\mathcal I}$. For an ordinary type, its lower and upper singularity volumes are
+\[\underline{\operatorname{vol}}_\theta(u)=\inf_{v\sim u}\MA_\theta(v)(X),\qquad
+\overline{\operatorname{vol}}_\theta(u)=\sup_{v\sim u}\MA_\theta(v)(X),\]
+with competitors $v\in\PSH(X,\theta)$. These are not generally equal to the mass of one chosen representative. For a reference $q$, the relative envelope class $\mathcal E_{\mathrm{env}}(X,\theta,q)$ consists of $u\preceq q$ for which, for every $b\geq1$, there is $v\in\PSH(X,\theta)$ with $b^{-1}v+(1-b^{-1})q\leq u$. This convex-inequality definition avoids subtracting two infinite values at common poles.
+
+\field{Fixed-density Gauduchon volume}
+A Hermitian $\gamma$ is Gauduchon if $\ddc(\gamma^{n-1})=0$. For a pseudoeffective background define
+\[D_\mu(\gamma)=\int_X(\mu/\gamma^n)^{1/n}\gamma^n,\quad
+\lambda_\mu(\theta)=\inf_{\gamma\text{ Gauduchon}}
+\frac{\int_X\theta\wedge\gamma^{n-1}}{D_\mu(\gamma)},\quad
+\mathcal V_\mu(\theta)=\lambda_\mu(\theta)^n.\]
+In dimension one the quotient is $\int_X\theta$. Pseudoeffective means the background has a positive current representative; big means one representative dominates $\delta h$ with $\delta>0$. This definition of bigness also applies to nonclosed backgrounds. The fixed-density volume is finite, gauge invariant, and positively homogeneous, but differs from upper singularity volume and from $v_-(h)$.
+
+\field{Determinant densities of current tests}
+For $n\geq2$, normalize positive $\ddc$-closed $(n-1,n-1)$-currents by $\int_Xh\wedge T=1$. Let $\sigma_T=h\wedge T$. In an $h$-unitary frame define $P_T\geq0$ by
+\[\beta\wedge T=\frac1n\operatorname{tr}(B_\beta P_T)\,\mathrm d\sigma_T,
+\qquad\operatorname{tr}P_T=n\quad\sigma_T\text{-a.e.}\]
+For a real continuous $F$, set
+\[\Gamma_F(T)=\left(\frac{\mathrm e^F\mathrm dV}{h^n}\right)^{1/n}
+(\det P_T)^{1/n}\sigma_T.\]
+The manuscript proves that these weighted determinant measures are absolutely continuous; write $\Gamma_0(T)=k_T\mathrm dV$. For smooth $T=\gamma^{n-1}$ the total mass of $\Gamma_F(T)$ is the Gauduchon denominator with volume $\mathrm e^F\mathrm dV$. Supporting probabilities are normalized versions of these measures when the current maximizes the relevant dual problem.
+
+\section{All formally labelled problems}
+Each entry preserves the original statement, with book cross-references expanded to their compiled numbers. The setup and discussion make that statement independently interpretable. P01 and P17 overlap; several entries have settled special cases but remain open in the full stated scope.
+\subsection{P01: A complete topology beyond positive lower volume}
+\label{P01}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 15.6.1, printed p.~463.
+\field{Setup and scope} An ordinary model is a normalized fixed point $p=P_\theta[p]$; it is an ideal model if also $p=P_\theta[p]_{\mathcal I}$. The desired topology must distinguish ordinary models and remember multiplier ideals on every modification. Zero lower volume and infinite upper mass are part of the requested domain.
+\field{Full problem statement} Extend the complete topology of Book, Theorem~29.11.1 to ordinary models of zero lower volume and beyond bounded mass, retaining analytic closure exactly at the ideal models. Recover the curve topology of Book, Corollary~29.12.1 and the background compatibility of Book, Section~29.9, Section~29.10, including higher-dimensional limits that lose bigness or positive lower volume.
+\field{State of the art} Under BMP, the positive-lower-volume models admit a complete metric inducing the upper-volume comparison topology; analytic models have closure exactly the ideal models in that regime (Book, Theorem~29.11.1, Theorem~29.8.2). On a curve, all ordinary models are described by positive polar curvature measures with total-variation distance, including zero non-pluripolar mass. Separated curve products and specified auxiliary products extend this description to some higher-dimensional loci. The existing general envelope uniformities characterize analytic closure but can identify distinct ordinary classes and have incomplete curve families.
+\field{Remaining gap} A replacement for finite upper-volume deficits must separate zero-volume models, preserve polar data under Cauchy limits, and handle backgrounds losing positivity. The all-obstacle topology repairs smooth-gauge dependence but does not solve completeness. This is the earlier formulation of P17; the two labels do not represent two independent conjectures.
+\field{Sources} \cite{SGPT,XL26}; Chapters 15 and 29, especially Book, Problem~32.7.1.
+\subsection{P02: Geometric restrictions on nef degeneration orders}
+\label{P02}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 25.16.1, printed p.~636.
+\field{Setup and scope} For a nef background $\theta$ and a Hermitian $h$, define
+\[a_-(\theta)=\liminf_{\epsilon\downarrow0}\frac{\log\mathcal V_\mu(\theta+\epsilon h)}{\log\epsilon},\qquad
+ a_+(\theta)=\limsup_{\epsilon\downarrow0}\frac{\log\mathcal V_\mu(\theta+\epsilon h)}{\log\epsilon}.\]
+The question concerns existence of a common order, its integrality, and equality after pullback or subtraction of an effective divisorial current with nef residual.
+\field{Full problem statement} Which geometric conditions on a nonclosed nef background force a common degeneration order, or an integral one? When is equality attained in the modification and residual order comparisons?
+\field{State of the art} Both orders lie in $[0,n]$ and are independent of $\mu$ and $h$, of positive scaling, and of smooth gauge. For closed nef backgrounds on a K\"ahler manifold they equal $n-\operatorname{nd}(\theta)$. Nonclosed examples on products of elliptic curves realize unequal orders, irrational common orders, and zero volume with decay slower than every positive power. A modification can strictly increase the orders; effective residual subtraction also gives a one-sided comparison. Explicit elliptic threefolds have integral orders determined by the rank of their boundary forms.
+\field{Remaining gap} No unrestricted common-order or integrality assertion survives the examples. Find hypotheses on geometry, torsion, or the degenerating positive representatives that force the closed-type behavior, and characterize equality in the comparison inequalities.
+\field{Sources} Book, Proposition~25.16.1, Proposition~25.16.2, Proposition~25.16.5, Proposition~25.16.6; Chapter 27's elliptic boundary calculation.
+\subsection{P03: Pseudoeffectivity of the Lee curvature class}
+\label{P03}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Conjecture 28.2.1, printed p.~744.
+\field{Setup and scope} Let $n\geq2$ and let $\omega$ be an LCK metric:
+\[\mathrm d\omega=\lambda\wedge\omega,\qquad \mathrm d\lambda=0.\]
+Strictly LCK means $\lambda$ is not exact. Put $\lambda^{\mathrm c}=\frac{\mathrm i}{4\pi}(\lambda^{0,1}-\lambda^{1,0})$ and $\kappa_\lambda=-\mathrm d\lambda^{\mathrm c}$. This is a closed, de Rham-exact real $(1,1)$-form defining an ordinary Bott--Chern class.
+\field{Full problem statement} For every compact strictly LCK manifold, the ordinary Bott--Chern class $\{\kappa_\lambda\}$ is pseudoeffective.
+\field{State of the art} The LCK metric's conformal Gauduchon representative pairs strictly positively with $\{\kappa_\lambda\}$, so this class is nonzero. On the Vaisman Hopf example it has a smooth semipositive representative. Lamari duality reduces general pseudoeffectivity to nonnegative pairing with every Gauduchon metric. If the conjecture holds, a strictly LCK manifold admits no balanced metric; the Lee--Gauduchon cone gives this obstruction throughout its bimeromorphic class.
+\field{Remaining gap} Positivity against the one Gauduchon metric arising from the LCK structure does not prove positivity against all tests. Establish this full dual inequality or find an LCK counterexample.
+\field{Sources} Ornea--Verbitsky \cite[arXiv version, Conjecture 4.14 and Remark 4.16]{OV25Balanced}; Book, Proposition~28.2.1, Proposition~28.2.2, Theorem~28.6.1.
+\subsection{P04: Uniqueness of Gauduchon LCK metrics with prescribed volume}
+\label{P04}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 28.4.1, printed p.~747.
+\field{Setup and scope} Fix a Lee de Rham class, an identification of its twisted Bott--Chern groups, and a smooth strictly positive volume form. For a representative $\lambda$, set $\mathrm d_\lambda=\mathrm d-\lambda\wedge$, $\mathrm d^c_\lambda=\mathrm d^c-\lambda^{\mathrm c}\wedge$, and $D_\lambda=\mathrm d_\lambda\mathrm d^c_\lambda$. The twisted class is a $\mathrm d_\lambda$-closed $(1,1)$-form modulo $D_\lambda$ of smooth real functions. If two candidate metrics have Lee forms $\lambda$ and $\lambda+\mathrm da$, the chosen identification gives
+\[\omega_2=\mathrm e^a A,\quad A=\omega_1+D_\lambda u>0,\quad
+ A^n=\mathrm e^{-na}\omega_1^n,\quad
+ \ddc(\mathrm e^{(n-1)a}A^{n-1})=0.\]
+\field{Full problem statement} Does a compact LCK manifold have at most one Gauduchon LCK metric with a specified Lee class, specified twisted Bott--Chern class and specified smooth positive volume form?
+\field{State of the art} The coupled system is derived in Chapter 28. Ordinary Hermitian Monge--Amp\`ere uniqueness does not impose the second equation or preserve the twisted class. A prescribed-volume theorem is available in the Vaisman setting for volume forms invariant under both Lee and anti-Lee vector fields; it supplies a restricted existence and uniqueness result.
+\field{Remaining gap} Prove that the coupled system determines the metric in the full LCK setting. Uniqueness of a function $u$ is stronger and must account for the kernel of $D_\lambda$. Ordinary-potential examples with degenerate densities do not answer this smooth positive twisted problem.
+\field{Sources} \cite[Question 47.56(3)]{OV24LCK}; \cite[Theorem 4.1 and Lemmas 4.2--4.4, arXiv version]{OV24Vaisman}; Book, Theorem~28.4.1.
+\subsection{P05: The LCK Calabi--Yau--Vaisman conjecture}
+\label{P05}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Conjecture 28.5.1, printed p.~752.
+\field{Setup and scope} Here $c_1^{\mathrm{BC}}(X)$ is the ordinary first Bott--Chern class of the holomorphic tangent bundle. A Vaisman metric is a strictly LCK metric whose Lee form is parallel for its Levi--Civita connection. The conclusion asks for existence of one such metric on the given manifold.
+\field{Full problem statement} A compact complex manifold with $c_1^{\mathrm{BC}}(X)=0$ that admits a strictly LCK metric admits a Vaisman metric.
+\field{State of the art} A Gauduchon LCK metric which is also Chern--Ricci flat is Vaisman by the rigidity result reconstructed in Book, Theorem~28.5.1. Vanishing $c_1^{\mathrm{BC}}$ gives a Chern--Ricci-flat conformal representative; Gauduchon's theorem gives a Gauduchon representative. These two representatives need not coincide. The Vaisman volume theorem retains the invariance hypotheses on the prescribed volume.
+\field{Remaining gap} Arrange Chern--Ricci flatness and the Gauduchon condition simultaneously within an LCK family. The rigidity theorem does not show that every LCK metric on such a manifold is Vaisman.
+\field{Sources} Barbaro--Otiman \cite[Introduction and Section 4]{BO25LCK}; Ornea--Verbitsky \cite{OV24Vaisman}; Chapter 28.
+\subsection{P06: Ideal-theoretic positivity and zero-volume envelope criteria}
+\label{P06}
+\noindent\textbf{Status:} partially resolved; general question open. \textbf{Book locator:} Problem 29.8.1, printed p.~790.
+\field{Setup and scope} Assume $\theta$ is a smooth big, possibly nonclosed background and $X$ has BMP. For $u\in\PSH(X,\theta)$ write $q=P_\theta[u]_{\mathcal I}$ and $\mathcal V^+_{\mathcal I,\theta}(u)=\overline{\operatorname{vol}}_\theta(q)$. Positivity is to be detected from the ideals $\mathcal I(tu)$, their restrictions, or their divisorial orders on modifications.
+\field{Full problem statement} For a big nonclosed background on a manifold with bounded mass, find criteria for $\underline{\operatorname{vol}}_\theta(P_\theta[u]_{\mathcal I})>0$ in terms of restricted multiplier ideals or divisorial orders. When this lower volume vanishes, which implications between envelope equality and upper-volume equality in Book, Proposition~29.8.1 remain valid?
+\field{State of the art} If $\underline{\operatorname{vol}}_\theta(q)>0$, envelope equality, upper-volume equality, membership in the relative envelope class of $q$, and envelope equality at every smooth obstacle are equivalent (Book, Proposition~29.8.1). Analytic approximation characterizes ideal models in the positive-volume comparison topology. At zero lower ideal volume, upper-volume equality does not imply envelope equality: the book constructs distinct ordinary and ideal models with both upper volumes zero in a positive nonclosed background on a projective manifold.
+\field{Remaining gap} Find intrinsic ideal/divisorial criteria for positive lower ideal volume, and classify the surviving zero-volume implications. The failed implication is settled negatively and must not be presented as an open conjecture. The implication from zero-obstacle equality to all-obstacle equality remains open in general (S09).
+\field{Sources} \cite{SGPT,XL26}; Book, Proposition~29.8.1, Theorem~29.8.2, Example~15.6.7.
+\subsection{P07: Exact equations at an individual positive threshold}
+\label{P07}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.1.1, printed p.~870.
+\field{Setup and scope} Fix a Hermitian $h$ with $v_-(h)=0$. For nonzero $f\geq0$ in $L^1(\mathrm dV)$ let $c_h(f_k)$ be the scalar of the continuous normalized equation for $f_k=\min(f,k)$, and let $b_h(f)=\lim_kc_h(f_k)$. This is the maximal coefficient of a genuine subsolution. The requested solution must have finite Monge--Amp\`ere mass because its prescribed right-hand side is finite.
+\field{Full problem statement} Suppose $v_-(h)=0$. For a nonzero $0\leq f\in L^1(\mathrm{d}V)$ with $b_h(f)>0$, does there exist $u\in\PSH(X,h)$ such that
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u)=b_h(f)f\,\mathrm{d}V?
+\]
+Determine the singularity or envelope class in which such an equation should be posed.
+\field{State of the art} Every positive threshold is attained by a subsolution, possibly with excess or infinite mass. For $L^p$ data, $p>1$, an exact continuous equation is available without positive lower mass. For all nonzero $L^1$ data when $v_-(h)>0$, an exact solution exists in the zero-reference relative envelope class, even without BMP. At positive individual threshold, greatest exponential solutions exist; their scalars approach $b_h(f)$ and their equation measures converge in total variation. Smooth positive or suitable smooth semipositive dual maximizers yield exactness and uniqueness. Moment bounds plus a genuine smaller-background envelope also yield an exact limit.
+\field{Remaining gap} For general $L^1$ data at zero lower mass, construct an exact finite-mass solution and identify its natural class. Scalar and measure convergence alone do not imply capacity convergence of normalized potentials. Root tails, dual attainment, and envelope genuineness are separate hypotheses.
+\field{Sources} \cite{TW10,KN15,Nguyen16,ALS26}; Book, Theorem~13.24.1, Corollary~13.28.1, Theorem~25.9.3.
+\subsection{P08: Positive Gauduchon volume and bigness for nef backgrounds}
+\label{P08}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Conjecture 32.2.1, printed p.~874.
+\field{Setup and scope} Nefness means that for every $\epsilon>0$ there is a smooth real $v_\epsilon$ with $\theta+\ddc v_\epsilon\geq-\epsilon h$. Bigness means $\theta+\ddc u\geq\delta h$ for some genuine quasi-psh $u$ and $\delta>0$. No closedness or mass property is assumed. The volume is the fixed-smooth-probability functional defined in Section 1.
+\field{Full problem statement} Let $\theta$ be a nef smooth real $(1,1)$-background on a compact complex manifold. Then
+\[
+ \mathcal V_\mu(\theta)>0
+ \quad\Longleftrightarrow\quad
+ \theta\text{ is big}.
+\]
+Here $\mu$ is any smooth strictly positive probability measure.
+\field{State of the art} Bigness always implies positive $\lambda_\mu$, by a strict-current lower bound and monotonicity. In dimension one the converse is the integral criterion. For a closed nef class on a compact K\"ahler manifold, $\mathcal V_\mu=\int_X\theta^n$, and the classical nef-and-big criterion applies. A closed nef positive-volume core plus a semipositive nonclosed summand is a further proved case. Positivity does not depend on the chosen smooth positive $\mu$.
+\field{Remaining gap} The remaining implication is positivity of this fixed-density functional $\Rightarrow$ bigness for an arbitrary nef smooth background. It cannot be replaced by a statement about the infimum over all densities: a Hermitian metric is big but can have zero lower mass. For nonclosed backgrounds, this conjecture has no implication that $X$ is in Fujiki's class.
+\field{Sources} \cite{DP04,BEGZ10,GL22,BGL25}; Book, Corollary~25.1.1, Theorem~25.11.1.
+\subsection{P09: Closed nef classes and the Gauduchon bridge}
+\label{P09}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.1, printed p.~877.
+\field{Setup and scope} Let $X$ be an arbitrary compact complex manifold, and let $\alpha$ be a smooth closed nef real $(1,1)$-form with $\int_X\alpha^n>0$. The classical conjecture asks that $\alpha$ be big, equivalently under these hypotheses that $X\in\mathcal C$. This entry isolates two bridges:
+\[\int_X\alpha^n>0\ \stackrel{?}{\Longrightarrow}\ \lambda_\mu(\alpha)>0
+ \ \stackrel{?}{\Longrightarrow}\ \alpha\text{ big}.\]
+Normalize test metrics by $\int_Xh\wedge\gamma^{n-1}=1$.
+\field{Full problem statement} Let $\alpha$ be closed and nef with $\int_X\alpha^n>0$. Prove a positive lower bound for $\lambda_\mu(\alpha)$, and rule out the collapse in Book, Proposition~32.2.1 for a sequence minimizing the bigness threshold of $\alpha$.
+\field{State of the art} Both bridges hold on compact K\"ahler manifolds. Guedj--Lu prove, under the stated nefness and positive intersection assumptions, bigness if and only if bounded upper mass holds. The book describes collapse of determinant denominators along threshold-minimizing Gauduchon tests. Neither its Hopf BMP counterexample nor its zero-lower-mass elliptic threefold provides a counterexample to the classical conjecture: neither carries the required closed nef class with positive top intersection.
+\field{Remaining gap} Prove a strictly positive Gauduchon root-volume bound from the closed intersection, then control the determinant denominator along at least one sequence minimizing the strict-current threshold. Prescribing a volume within an Aeppli class preserves the closed numerator but does not control trace normalization and denominator together.
+\field{Sources} \cite[Conjecture 0.8 and Theorem 0.7, published numbering]{DP04}; \cite[Theorem 4.9]{GL22}; \cite[Theorem C]{BGL25}; Book, Proposition~32.2.1.
+\subsection{P10: Geometric criteria for the critical determinant estimate}
+\label{P10}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.2, printed p.~878.
+\field{Setup and scope} For $n\geq2$, let
+\[\mathscr G_h=\{T\geq0:\ T\text{ has bidegree }(n-1,n-1),\ \ddc T=0,\ \int_Xh\wedge T=1\}.\]
+The determinant density $k_T$ is defined in Section 1. The target is a bound uniform over this entire current family, rather than for one maximizer.
+\field{Full problem statement} Find geometric conditions beyond the metric identities in Book, Corollary~25.14.1 that imply the endpoint estimate in (Book, equation~32.3), and identify how they exclude the lower-mass degeneration of Book, Section~25.15.
+\field{State of the art} The manuscript proves the exact equivalence
+\[v_-(h)>0\ \Longleftrightarrow\ \sup_{T\in\mathscr G_h}\|k_T\|_{L^{n/(n-1)}(\mathrm dV)}<\infty,\quad
+ \sup\|k_T\|_{n/(n-1)}=v_-(h)^{-1/n}.\]
+Every strictly smaller exponent is uniformly controlled on arbitrary compact complex manifolds. The endpoint holds if a metric's first two powers are $\ddc$-closed, including K\"ahler manifolds and compact complex surfaces. A balanced BMP threefold has zero lower mass and violates the endpoint even for smooth positive tests.
+\field{Remaining gap} Find geometric conditions beyond these differential identities that imply the endpoint and exclude the elliptic degeneration. Balancedness plus BMP is insufficient. A bounded determinant density for one smooth maximizer gives no bound for all tests or all near-maximizing sequences.
+\field{Sources} Book, Theorem~25.8.2, Theorem~25.8.1, Corollary~25.14.1, Theorem~25.15.1; \cite{GL22}.
+\subsection{P11: Lower mass on primitive elliptic bundles, especially over a curve-free K3}
+\label{P11}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.3, printed p.~882.
+\field{Setup and scope} Let $(B,\eta)$ be a compact K\"ahler surface and let $L\to B$ satisfy $\int_Bc_1(L)\wedge\eta=0$. Choose its primitive curvature $c$ representing $-c_1(L)$. For $q>1$, set
+\[X=L^\times/\langle w\mapsto qw\rangle,\quad t=\log|w|^2,
+ T=2\log q,\quad A=\int_B\eta^2,\quad
+ \omega=\pi^*\eta+\mathrm dt\wedge\mathrm d^ct.\]
+In particular, take a K3 surface with $\operatorname{Pic}(B)=\mathbb Z[L]$, $c_1(L)^2=-4$, and $[\eta]\perp c_1(L)$; this base has no curves.
+\field{Full problem statement} Determine the lower Monge--Amp\`ere mass of the primitive elliptic bundles
+above, in particular those of Book, Example~32.3.1.
+Does it vanish whenever the real Chern class is nonzero?
+\field{State of the art} The metric is balanced, $\ddc\omega=-\pi^*(c^2)\geq0$, and $v_+(\omega)=3TA$. Its smooth mass satisfies
+\[\int_X(\omega+\ddc u)^3=3TA-3\int_X\mathrm du\wedge\mathrm d^cu\wedge(-\pi^*c^2).\]
+If the real Chern class vanishes, the chosen metric is K\"ahler and $v_-=3TA$. For nonzero Chern class, separated potentials $f(t)+\pi^*v$ have a uniform positive mass lower bound; the purely vertical subclass has an explicitly computed positive infimum. A bundle over $\mathbb P^1\times\mathbb P^1$ has zero lower mass by a construction outside that subclass. The K3 example has no divisors and only vertical compact curves.
+\field{Remaining gap} Determine the infimum over all bounded admissible potentials, in particular on the K3 example. Decide whether every nonzero real Chern class forces zero lower mass. A positive bound for separated potentials gives no answer, and horizontal curve averaging cannot be transferred to the curve-free base.
+\field{Sources} \cite[Section 2]{GP04}; \cite[Theorems 7.4.1 and 8.5.2 in the author draft]{HuyK3}; Book, Proposition~32.3.1, Proposition~32.3.2, Example~32.3.1.
+\subsection{P12: Chern--Ricci singularities from positive variational volume}
+\label{P12}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.4, printed p.~884.
+\field{Setup and scope} Let $\omega(t)$ be a Chern--Ricci flow on compact $X$ with finite maximal time $\tau$, and let $\theta_\tau=\omega_0-\tau\operatorname{Ric}(\omega_0)$ be its nef limiting background. Assume $\mathcal V_\mu(\theta_\tau)>0$. For a big smooth background, $E_{\mathrm{nH}}$ is the intersection of singular loci of strict currents with almost analytic singularities. An annihilating normalized Gauduchon current satisfies $\int_X\theta_\tau\wedge T=0$.
+\field{Full problem statement} Suppose a Chern--Ricci flow has finite maximal time $\tau$ and $\mathcal V_\mu(\theta_\tau)>0$. Can one prove that $\theta_\tau$ is big and that the flow converges smoothly to a positive metric locally on $X\setminus E_{\mathrm{nH}}(\theta_\tau)$, without a bounded mass hypothesis? How do the annihilating Gauduchon currents describe the resulting degeneracy?
+\field{State of the art} Dang proves the qualitative null-locus equality for nef big backgrounds without closedness. A numerical version has additional BMP and positive lower-volume hypotheses on submanifolds. The cited flow theorem identifies singularities under positive limiting lower volume for arbitrary surface metrics and Guan--Li initial metrics in higher dimension. Once the limiting background is big, the cited parabolic theorem provides current convergence and smooth local convergence off $E_{\mathrm{nH}}$. In the proposed fixed-density regime, annihilating currents have zero determinant-weighted measure.
+\field{Remaining gap} The missing numerical step is bigness from positive fixed-density volume, a special case of P08. Rank deficiency does not imply that a current's trace is concentrated on an analytic set. Metric completeness at the exceptional set requires further estimates and is a separate question (S13).
+\field{Sources} \cite[Theorem 1.2 and Section 4, arXiv version]{TW15}; \cite[Theorems 1.1, A, C and 4.3]{DangNull26}; Book, Proposition~25.17.1.
+\subsection{P13: Balanced and pluriclosed metrics: closed positivity and flow estimates}
+\label{P13}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.5, printed p.~885.
+\field{Setup and scope} Assume $n\geq2$ and that $X$ admits a balanced metric $\beta$, $\mathrm d(\beta^{n-1})=0$, and a pluriclosed metric $\omega$, $\ddc\omega=0$. They may be different metrics. The associated geometric conjecture says that $X$ is K\"ahler. The flow variant assumes also $c_1(X)=0$ in real cohomology and asks for long-time existence and convergence of pluriclosed flow to a K\"ahler metric.
+\field{Full problem statement} Use the coexistence of a balanced metric and a pluriclosed metric to construct closed positive data, or to control a geometric flow that can change the torsion. Determine what estimate beyond the finite balanced trace prevents metric degeneration. Can determinant estimates for Gauduchon currents contribute to that estimate?
+\field{State of the art} If a single metric is both balanced and pluriclosed, it is already K\"ahler. A pluriclosed manifold in Fujiki's class is K\"ahler by Chiose, so producing a closed K\"ahler current would suffice. The balanced form supplies a conserved trace in the cited invariant flow examples. Scalar potential perturbations preserve torsion: $\mathrm d(\omega+\ddc u)=\mathrm d\omega$; a prescribed-volume equation cannot supply closedness.
+\field{Remaining gap} Produce closed positive data from the coexistence of the two metrics, or obtain flow estimates controlling torsion and pointwise ellipticity. A finite conserved balanced trace alone does not prevent metric degeneration. Determine whether Gauduchon determinant bounds help supply the missing local estimate.
+\field{Sources} \cite[Conjectures 1.1 and 1.2]{FV26}; \cite[Theorem 0.2 in the author manuscript]{Chiose14}; Chapter 32, closed positivity section.
+\subsection{P14: Morse-type subtraction estimates without a closed positive core}
+\label{P14}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.3.6, printed p.~886.
+\field{Setup and scope} Fix smooth backgrounds $\theta,\eta$ and a path $\theta_s=\theta-s\eta$ with smooth positive representatives for $0\leq s<t$, approaching a nef endpoint at $t$. Let $\gamma_s$ minimize the fixed-density quotient. The exact cost to control is
+\[\lambda_\mu(\theta-t\eta)=\lambda_\mu(\theta)
+ -\int_0^t\frac{\int_X\eta\wedge\gamma_s^{n-1}}{D_\mu(\gamma_s)}\,\mathrm ds,\]
+when the endpoint limit and improper integral are justified.
+\field{Full problem statement} Find geometric hypotheses controlling the cost in (Book, equation~32.5) up to a nef endpoint beyond the closed-core regime of Book, Theorem~25.11.1. Determine when positive root volume forces bigness without that core. For closed backgrounds, compare the estimate with classical Morse inequalities; for nonclosed backgrounds, retain the differential data and the dependence on $\mu$.
+\field{State of the art} First variation proves the identity on positive compact segments without an upper mass bound. A closed nef positive-volume core plus a semipositive summand gives an endpoint estimate and a strict current. In the closed K\"ahler setting, the cited transcendental Morse inequality bounds the usual class volume by $\int\alpha^n-n\int\alpha^{n-1}\beta$; volume differentiability and cone duality are retained as literature inputs.
+\field{Remaining gap} Control the cost near arbitrary nef endpoints without the closed core and obtain a criterion making positive root volume imply bigness. For nonclosed forms, ordinary intersection expressions need not be invariant under smooth gauge. An estimate must specify its volume, retain torsion terms such as $\ddc$ of the added form, and state its dependence on $\mu$.
+\field{Sources} \cite[Theorem 1.1 and Corollary 1.2, version 2]{Tosatti26}; \cite[Theorem 4.12]{GL22}; Book, Theorem~25.11.1.
+\subsection{P15: Completion of the unit-volume hypersurface in a background cone}
+\label{P15}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.5.1, printed p.~888.
+\field{Setup and scope} Choose a finite-dimensional real space $V$ of smooth $(1,1)$-forms with $V\cap\ddc C^\infty(X)=\{0\}$. Let $\mathscr C\subset V$ consist of backgrounds with a smooth positive representative, let $\lambda=\lambda_\mu$, and put
+\[g=-D^2\log\lambda,\qquad \mathscr S=\{\theta\in\mathscr C:\lambda(\theta)=1\}.\]
+The distance is the intrinsic Riemannian path distance in this specified cone or hypersurface.
+\field{Full problem statement} For a specified finite-dimensional cone of smooth background classes, describe the metric completion of its unit-volume hypersurface. Which boundary points admit a current representative, and what estimates on the minimizing Gauduchon metrics distinguish finite from infinite distance?
+\field{State of the art} Homogeneity gives an isometry $(\mathscr C,g)\simeq(\mathbb R\times\mathscr S,\mathrm dr^2+g_{\mathscr S})$ with $r=\log\lambda$. Thus paths with volume tending to zero or infinity have infinite length. The positive cone generated by the two factors of $\mathbb P^1\times\mathbb P^1$ is complete in logarithmic coordinates. On the blowup of $\mathbb P^2$, a boundary with positive nef volume can occur at finite distance.
+\field{Remaining gap} Classify Cauchy boundary points of $\mathscr S$, their possible current representatives, and estimates on minimizing metrics distinguishing finite from infinite distance. Adjoining all nef classes does not give the answer. Distances may shorten after enlarging the cone, so no conclusion about the entire infinite-dimensional quotient is implicit.
+\field{Sources} Book, Proposition~25.5.1, Example~25.5.1; Chapter 25's metric geometry section.
+\subsection{P16: Uniqueness of the adjoint probability at every continuous density}
+\label{P16}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Conjecture 32.6.1, printed p.~889.
+\field{Setup and scope} For a Hermitian $\omega$ and reference $0$, let $B_0(F)$ be the logarithm of the normalization scalar, and define
+\[\mathcal A_0(F)=\{\nu\text{ probability}:\ B_0(G)\leq B_0(F)-\int_X(G-F)\,\mathrm d\nu\ \forall G\in C(X,\mathbb R)\}.\]
+The conjecture is equivalently G\^ateaux differentiability of the concave functional $B_0$ at every continuous logarithmic density.
+\field{Full problem statement} For a Hermitian background $\omega$, the nonsingular reference $\varphi=0$, and every real $F\in C(X)$, the set $\mathcal A_0(F)$ consists of a single probability measure.
+\field{State of the art} Supporting sets are nonempty, convex, weakly compact and absolutely continuous. They are singletons for smooth $F$, for closed K\"ahler backgrounds by explicit normalization, and on a dense $G_\delta$ of $C(X)$ in every admissible fixed reference regime. In dimension at least two, all supports are exactly normalized determinant-weighted measures of maximizing Gauduchon currents. Their densities have uniform $L^q$ bounds for $1<q<n/(n-1)$ on bounded sets of $F$, and at the endpoint if lower mass is positive.
+\field{Remaining gap} Show that all maximizers induce the same weighted probability for every continuous $F$, or find an exceptional density. This asks less than uniqueness of the maximizing current. Compactness and subcritical moment bounds alone do not imply uniqueness; near-maximizers can have unbounded higher determinant moments even with fixed smooth data.
+\field{Sources} Book, Theorem~14.2.2, Theorem~25.7.1, Corollary~25.8.1, Proposition~25.14.1; \cite{TW10}.
+\subsection{P17: Complete metrization, analytic closure and degenerating backgrounds}
+\label{P17}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.7.1, printed p.~893.
+\field{Setup and scope} Use the ordinary and ideal models defined in Section 1. For BMP backgrounds, write $U(p)=\overline{\operatorname{vol}}_\theta(p)$ and
+\[d_\theta(p,q)=2U(\max(p,q))-U(p)-U(q).\]
+A complete metric already exists on the ordinary models of positive lower volume and induces the same convergence as this comparison. The problem asks for a higher-dimensional extension to all models and to varying backgrounds.
+\field{Full problem statement} Extend the complete metrizable topology of Book, Theorem~29.11.1 on ordinary models beyond bounded mass and positive lower volume, retaining analytic closure exactly at the ideal models. Preserve the smooth-gauge and two-sided background compatibility of Book, Section~29.9, Section~29.10, and treat background limits losing bigness or a uniform positive lower-volume bound. Recover the complete polar-variation topology of Book, Corollary~29.12.1 on all curve models, and determine whether the higher-dimensional extension is completely metrizable.
+\field{State of the art} The positive-volume construction is complete on each uniform positive-lower-volume cutoff and characterizes analytic closure there. General envelope uniformities retain ideals and divisorial variation but need not separate ordinary classes. Smooth-gauge invariance is restored using every smooth obstacle; that topology remains incomplete on curves. Curve polar total variation and specified product metrics provide complete alternatives, including zero-area background collapse.
+\field{Remaining gap} Require separation, complete metrization, analytic closure exactly at ideal models, and smooth-gauge and two-sided background compatibility simultaneously. Cover loss of bigness and of uniform positive lower volume. P01 is the earlier version; this entry adds the explicit full compatibility and complete-metrizability targets.
+\field{Sources} \cite{SGPT,XL26}; Book, Theorem~29.11.1, Corollary~29.12.1, Theorem~29.10.1.
+\subsection{P18: Exact intrinsic trace data on every modification}
+\label{P18}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.8.1, printed p.~894.
+\field{Setup and scope} Let $Y\subset X$ be a connected compact complex submanifold of positive dimension and $u$ a quasi-psh function with generic Lelong number $\nu(u,Y)=0$. For every prime divisor $E$ over $Y$ define
+\[\tau_{Y,u}(E)=\lim_{t\to\infty}t^{-1}\operatorname{ord}_E(\mathcal I(tu)\mathcal O_Y).\]
+The image ideal is restricted from $X$. For a sufficiently large Hermitian $\Omega$ on $Y$, let $\mathcal T_\Omega(u;Y)$ be the usc supremum of $\Omega$-psh functions $v\leq0$ with $\nu(v\circ\pi,E)\geq\tau_{Y,u}(E)$ on every smooth compact modification.
+\field{Full problem statement} If $Y$ fails at least one of the two mass properties, can the Hermitian background $\Omega$ in Book, Theorem~18.6.4 be chosen so that
+\[
+ \nu\bigl(\mathcal T_\Omega(u;Y)\circ\pi,E\bigr)
+       =\tau_{Y,u}(E)
+\]
+for every prime divisor $E$ on every smooth modification $\pi$ of $Y$? If so, determine a background-compatible ordinary or ideal singularity class of this realization, and prove its addition and approximation properties.
+\field{State of the art} The asymptotic orders exist, are finite, depend only on the ambient ideal class, and are additive. A common competitor and the trace envelope exist without mass properties; limits yield the required lower inequalities. Exact realization is proved on curves, in sufficiently large closed backgrounds for K\"ahler targets, and for pullback trace data through curve fibrations including some non-K\"ahler targets. Exceptional divisorial discrepancies between models have a cocycle and approximation in linear mass.
+\field{Remaining gap} When at least one of BMP and positive lower mass fails on $Y$, exclude extra Lelong numbers on all modifications simultaneously. One model's divisorial current cannot encode all exceptional orders. Increasing the background supplies curvature room, not exactness. After realization, establish compatible ordinary or ideal types, addition, and approximation. Exact divisorial data alone does not determine top Monge--Amp\`ere mass.
+\field{Sources} Book, Theorem~18.1.1, Theorem~18.6.4, Theorem~18.7.1, Theorem~22.8.1; Chapter 17.
+\subsection{P19: Recovery of compatible ideal-envelope systems without BMP}
+\label{P19}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.8.2, printed p.~895.
+\field{Setup and scope} Fix $a<c$. For each positive Hermitian perturbation $\eta$, let $(\Gamma^\eta_\tau)_{\tau<c}$ be a normalized ideal-model curve, pointwise concave and decreasing in $\tau$, constant for $\tau\leq a$. Compatibility is
+\[\Gamma^\eta_\tau=P_{\theta+\eta}[\Gamma^{\eta'}_\tau]_{\mathcal I}\quad(\eta\geq\eta').\]
+Let $\Gamma_\tau=\lim_{j\to\infty}\Gamma^{h/j}_\tau$. Recovery means $\Gamma^\eta_\tau=P_{\theta+\eta}[\Gamma_\tau]_{\mathcal I}$ at every finite $\tau<c$.
+\field{Full problem statement} For a smooth big background on a manifold without bounded mass, find a condition on a compatible Hermitian envelope system that forces recovery of its ideal type at every finite parameter. It should recover the positive limiting lower-volume criterion of Book, Theorem~29.5.3 when bounded mass holds. Specify the invariant and uniform estimates that replace the finite upper-volume deficit, and their behavior under modifications.
+\field{State of the art} The retraction produces the greatest realizable system below the original one and recovery is equivalent to survival of its ideal data. Under BMP and a smooth big background, positive limiting lower volume at the initial slice suffices; concavity propagates positivity to every finite slice. A finite upper-volume deficit gives stretches controlling divisorial orders. A zero-volume ruled-surface example shows nonrecovery even in a K\"ahler background.
+\field{Remaining gap} Replace the finite deficit by an invariant and estimates valid when upper mass is unbounded. The new condition must imply recovery of every finite slice, specialize to the positive-volume theorem, and behave correctly under modifications. Gauge transport alone does not ensure survival of ideals.
+\field{Sources} Book, Definition~24.2.1, Theorem~24.3.1, Theorem~29.5.3, Theorem~24.5.1; Chapters 24 and 29.
+\subsection{P20: Lower asymptotics and measures for partial section kernels}
+\label{P20}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.9.1, printed p.~897.
+\field{Setup and scope} Let $(L,h_L)$ be a Hermitian holomorphic line bundle, with closed curvature $\theta=c_1(L,h_L)$, and $V_m\subset H^0(X,L^m)$ a selecting series, for example $H^0(X,L^m\otimes\mathcal I(m\varphi))$. Fix a compact set $K$, a continuous weight $w$ on $K$, and a probability $\nu$ for which
+$\|s\|_m^2=\int_K|s|_{h_L^m}^2\mathrm e^{-mw}\,\mathrm d\nu$
+is a genuine Hilbert norm. For an orthonormal basis set $B_m=\sum_j|s_{m,j}|_{h_L^m}^2$ and $U_m=m^{-1}\log B_m$. The selected ideal envelope is
+\[E=\bigl(\sup\{v\in\PSH(X,\theta):v\preceq_{\mathcal I}\varphi,\ v\leq w\text{ quasi-everywhere on }K\}\bigr)^*.\]
+For general selecting series the corresponding constraints must be specified. The kernel measure is $q!m^{-q}\mathrm e^{-mw}B_m\nu$, where $q$ is determined by the section growth, not necessarily by $\dim X$. The upper theorem uses $\varphi\in\PSH(X,\theta)$ and the Bernstein--Markov property: for every $\epsilon>0$, the weighted supremum norm on $K$ is at most $C_\epsilon\mathrm e^{\epsilon m}\|s\|_m$.
+\field{Full problem statement} Identify hypotheses on a weighted section series and its intrinsic growth dimension under which the partial Fubini--Study potentials attain the envelope lower bound and the normalized kernel measures converge. Relate the limiting measure to the Hermitian background while retaining the closed curvature and the growth dimension of the series.
+\field{State of the art} The general upper-envelope bound is proved. A matching lower bound and kernel-measure convergence hold in the closed-curvature positive-mass setting with a K\"ahler modification, retaining its Jacobian and relative canonical bundle. Descended series on submersions give base-dimensional limits. Isolated-point conditions permit finite-codimension comparison; horizontal projective and explicit Hopf series give further exact limits. Hopf growth has degree $n-1$, so normalization by $m^n$ would discard its nonzero limit.
+\field{Remaining gap} Find intrinsic hypotheses producing enough sections with the full ideal constraints and controlling their measures. Preserve closed line-bundle curvature while relating the limit to a possibly nonclosed ambient background. No unqualified equality with the raw Hermitian Monge--Amp\`ere measure of the selecting weight follows from the upper bound.
+\field{Sources} \cite{SGPT}; Book, Theorem~26.6.1, Proposition~26.8.1; Chapter 26.
+\subsection{P21: Approximation of fiber-selected sections by a base singularity}
+\label{P21}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.9.2, printed p.~897.
+\field{Setup and scope} The complete statement below fixes every geometric datum. The descent $H^0(X,\pi^*A^m)=H^0(B,A^m)$ uses compact connected fibers. Its selected subspaces can nevertheless record singularities upstairs that are not pullbacks of any one base potential.
+\field{Full problem statement} Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds with connected fibers, where $B$ is K\"ahler of dimension $q\geq1$. Fix a Hermitian form $\omega$ on $X$, a holomorphic line bundle $A$ with a smooth Hermitian metric $h$ on $B$, and $\varphi\in\PSH(X,\omega)$. Set $\theta=c_1(A,h)$. For positive integers $m$, identify
+\[
+ V_m=H^0\bigl(X,\pi^*A^m\otimes\mathcal I(m\varphi)\bigr)
+          \subseteq H^0(B,A^m)
+\]
+by holomorphic descent. Find geometric or analytic conditions that produce $\psi\in\PSH(B,\theta)$ of positive non-pluripolar mass such that, for all sufficiently large $m$,
+\[
+ \begin{gathered}
+ W_m=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)\subseteq V_m,\\
+ \dim V_m-\dim W_m=o(m^q).
+ \end{gathered}
+\]
+Determine which features of the singularities of $\varphi$ along the fibers suffice for this approximation.
+\field{State of the art} When the selecting data descend, the base equilibrium theorem gives a precise limit. For isolated point constraints upstairs, fiberwise integrability yields base vanishing conditions; the resulting codimension is lower order and kernel differences have vanishing normalized mass. Horizontal projective regimes also have lower asymptotics stable under intermediate section spaces.
+\field{Remaining gap} Find fiberwise singularity or integrability hypotheses yielding one $\theta$-psh $\psi$ of positive mass and the stated $o(m^q)$ defect. A finite-codimension comparison is useful only after constructing the base ideal series. The requested $ \psi$ must retain the positive-mass premise needed for the base limit.
+\field{Sources} Book, Proposition~26.8.1, Theorem~26.6.1; Chapter 26's fiber and horizontal kernel sections.
+\subsection{P22: Moving Gaussian transitions for growing vanishing jets}
+\label{P22}
+\noindent\textbf{Status:} partially resolved; general question open. \textbf{Book locator:} Problem 32.9.3, printed p.~898.
+\field{Setup and scope} Here the selecting ideal itself varies with the tensor power. The full statement specifies the local weight, local volume normalization, orthonormal kernel, moving observation point, and limiting Gaussian distribution. All these normalizations are essential to the proposed law.
+\field{Full problem statement} Let $C$ be a connected compact Riemann surface, let $x\in C$, and let $(L,h)$ be a smooth Hermitian holomorphic line bundle whose curvature is semipositive and strictly positive on $C\setminus\{x\}$. Fix an integer $r\geq1$. Suppose that in a local coordinate $z$ centered at $x$ and a holomorphic frame $e$ one has
+\[
+ |e|_h^2=\mathrm{e}^{-\phi},\qquad
+ \phi(z)=|z|^{2r}+O(|z|^{2r+1}).
+\]
+Let $\nu$ be a smooth positive volume form with local expression $a(z)\,\mathrm{d}A$ and $a(0)=1$, where $\mathrm{d}A$ is Euclidean area. For positive integers $m$, choose integers $q_m\to\infty$ with $q_m=o(m)$. Give
+\[
+ V_m=H^0(C,L^m\otimes\mathfrak m_x^{q_m})
+\]
+the norm $\|s\|^2=\int_C|s|_{h^m}^2\,\mathrm{d}\nu$, where $\mathfrak m_x$ is the ideal sheaf of $x$. Write $B_m=\sum_j|s_{m,j}|_{h^m}^2$ for an orthonormal basis $(s_{m,j})$ of $V_m$, with value zero when $V_m=0$. Determine the growth ranges of $q_m$ for which, for each fixed real $\tau$, every sequence of points $x_m$ in the coordinate neighborhood satisfying
+\[
+ m|z(x_m)|^{2r}=q_m/r+\tau\sqrt{q_m/r}
+\]
+obeys
+\[
+ \frac{\pi B_m(x_m)}{mr^2|z(x_m)|^{2r-2}}
+ \longrightarrow
+ \Phi(\tau):=\frac1{\sqrt{2\pi}}\int_{-\infty}^{\tau}
+                         \mathrm{e}^{-s^2/2}\,\mathrm{d}s.
+\]
+When this transition law fails, determine how further terms of the local weight change its center and scale.
+\field{State of the art} The manuscript proves the asserted limit for
+\[q_m=o\bigl(m^{1/(2r+1)}\bigr).\]
+With $R_m=(q_m/(rm))^{1/(2r)}$, this range ensures $mR_m^{2r+1}=q_mR_m/r=o(1)$ and controls the local weight error throughout the transition region. The proof constructs compact global sections satisfying the growing vanishing order. Fixed-order local kernels and explicit model transitions are also computed.
+\field{Remaining gap} Determine the largest ranges of $q_m=o(m)$ that retain the stated center and scale under the given remainder. When they fail, derive the corrections from further weight terms, with the necessary uniformity in observation points. The settled small-growth range is not an open subproblem. Higher dimensions and transfer through fibrations are recorded separately as S14.
+\field{Sources} Book, Theorem~26.13.1; Chapter 26's growing-jet construction and Chapter 32's discussion of $R_m$.
+\subsection{P23: Equations in prescribed types on compact unibranch Hermitian spaces}
+\label{P23}
+\noindent\textbf{Status:} open in the stated generality. \textbf{Book locator:} Problem 32.10.1, printed p.~899.
+\field{Setup and scope} Let $X$ be a compact reduced locally irreducible (unibranch) complex space with a smooth Hermitian background in the local-embedding sense. Potentials are defined by holomorphic disk tests. On a resolution $\pi:Y\to X$, extended measures are computed upstairs and pushed forward; existence in a specified type also requires the upstairs potential to descend. The target is a geometric and measure criterion valid beyond explicit projective cones.
+\field{Full problem statement} Beyond the projective-cone constructions of Book, Section~A.6, determine geometric and measure conditions on compact unibranch Hermitian spaces that give existence and uniqueness in specified singularity classes. Identify estimates ensuring finite mass, descent and continuity, and their behavior under common refinements.
+\field{State of the art} The appendix proves disk-test descent under modifications and compatibility of ordinary envelopes, constructs resolution-independent non-pluripolar products, and gives explicit equations on projective cones under stated inequalities on their data. Dang provides continuity for bounded solutions under additional hypotheses, notably a log-terminal setting. Pan constructs a Gauduchon metric on the regular locus uniformly comparable to the prescribed metric, with conformal uniqueness up to scale.
+\field{Remaining gap} Find assumptions giving finite mass, existence, uniqueness in the specified class, and continuity downstairs, stable under common refinements. Arbitrary unibranch singularities are not covered by log-terminal results. Scalar bounds and resolution-level regularity do not alone supply descent or control near the singular locus.
+\field{Sources} \cite[Theorem B]{Dang26}; \cite[Theorems A and A']{Pan25}; Appendix A, especially Book, Section~A.6.
+\section{Further unresolved questions in the prose}
+These entries have no formal problem number in the accepted manuscript. Their statements are explicit formulations of the cited prose, not additional conjectures attributed to an external author. Overlaps with formal problems are recorded. S18 is a research objective whose precise invariant still needs formulation.
+\subsection{S01: Support and pluripolarity of excess-mass defect measures}
+\label{S01}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} For the smooth admissible sequence in Book, Corollary~7.5.1, $w_j\to0$ in capacity, the masses equal a prescribed $b>\int_X\omega^n$, and a subsequence satisfies
+\[(\omega+\ddc w_j)^n\rightharpoonup\omega^n+\sigma,\qquad
+ \sigma(X)=b-\int_X\omega^n.\]
+Determine which supports and pluripolar charging behaviors are possible for these defect measures.
+\field{State of the art} The shallow truncation regions converge in total variation to $\omega^n$; every fixed deep-tail restriction has weak limit $\sigma$. The currents converge in coefficient $L^1$ and their Gauduchon traces in total variation. These strong linear convergences do not remove the nonlinear defect.
+\field{Remaining gap} The proof determines only positivity and total mass of $\sigma$. Decide whether its support must obey additional restrictions, whether it may charge pluripolar sets, and whether specified measures can be realized. This is a question about the displayed construction, not an assertion that every defect has a universal support.
+\field{Source location} \path{book/author/chapter_damped_measures.tex:339}.
+\subsection{S02: Optimal damping on the Hopf BMP counterexample}
+\label{S02}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} For the standard Hermitian Hopf threefold, determine the optimal decay conditions on a decreasing weight $W(t)$ ensuring finite weighted measures $W(-u)\mathrm{MA}^{\mathrm{ext}}_\omega(u)$ for all normalized $u\leq0$, with uniform tail and capacity-continuity bounds.
+\field{State of the art} BMP fails on this threefold, while $v_-(\omega)=6$. The general damping theorem gives these conclusions for
+\[W(t)=(1+t)^{-1}[\log(\mathrm e+t)]^{-a},\qquad a>1.\]
+Exponential damping and stronger decay are available. The upper-mass counterexample is from Xia--Zhang \cite{XZ26}.
+\field{Remaining gap} Establish sharpness or improve the logarithmic factor, separating universal finiteness, uniform tails and capacity continuity if their thresholds differ. The critical power estimate is known; the optimal rate remains undetermined in the manuscript.
+\field{Source location} \path{book/author/chapter_hopf.tex:561}.
+\subsection{S03: Exponential solvability when the individual threshold is zero}
+\label{S03}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Let $v_-(h)=0$, let $f\geq0$ be a nonzero $L^1$ density with $b_h(f)=0$, and fix $\lambda>0$. Characterize when a genuine $s\in\PSH(X,h)$ satisfies
+\[\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm e^{\lambda s}f\,\mathrm dV,\]
+and hence when the greatest finite-mass exponential solution exists. In particular, test the obstructing concentration density constructed in the lower-mass chapter.
+\field{State of the art} Positive threshold supplies an exponential subsolution for every exponent. Any exponential subsolution gives a greatest exact solution by decreasing bounded-density approximation. The concentration example excludes all positive scaled subsolutions and therefore all bounded exponential solutions, but its argument does not exclude unbounded exponential solutions.
+\field{Remaining gap} Decide whether an unbounded potential can absorb the concentration through its exponential weight and find an intrinsic criterion at $b_h(f)=0$. This is distinct from P07, which assumes positive individual threshold.
+\field{Source location} \path{book/author/section_lower_mass_solvability.tex:92}; \path{book/author/section_individual_exponential_equations.tex:83}.
+\subsection{S04: Order-continuity of the density-root space at zero lower mass}
+\label{S04}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Write $\rho_h(p)=b_h(|p|^n)^{-1/n}$, $\mathcal D_h=\{p\in L^n:\rho_h(p)<\infty\}$, and let $\mathcal D_h^0$ be the closure of bounded roots in $\|p\|_{L^n}+\rho_h(p)$. If $v_-(h)=0$, is $\mathcal D_h^0=\mathcal D_h$? Separately, do uniform root tails suffice for the exact equation in P07?
+\field{State of the art} The manuscript proves
+\[p\in\mathcal D_h^0\ \Longleftrightarrow\ \rho_h(|p|\mathbf1_{\{|p|>K\}})\to0.\]
+This is equivalent to norm convergence under all dominated perturbations tending to zero in measure. Smooth functions are dense in $\mathcal D_h^0$, which contains $L^r$ for $r>n$. If lower mass is positive, both spaces equal $L^n$. Root tails give scalar continuity, dual attainment and error moduli for exponential approximations.
+\field{Remaining gap} Determine whether positive-threshold roots can have nonvanishing uniform tails. Even equality of the spaces would not automatically prove capacity convergence of equation potentials; that further implication needs a compactness argument.
+\field{Source location} \path{book/author/section_root_uniform_tails.tex:43}; \path{book/author/chapter_research_program.tex:51}.
+\subsection{S05: Canonical selection and whole-family convergence at exponent zero}
+\label{S05}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} For greatest positive-exponent solutions with fixed density and prescribed reference, determine conditions under which the normalized potentials converge to one canonical zero-exponent solution as $\lambda\downarrow0$. Extend the question to varying model references and densities while retaining their limiting type.
+\field{State of the art} Under suitable lower-mass or model-volume hypotheses, scalars and equation measures converge; each normalized cluster limit solves the zero-exponent equation. Smooth and specified semipositive dual maximizers give uniqueness and whole-family convergence. The symmetric projective example has an explicitly selected limit. General Hermitian zero-exponent potentials need not be unique: smooth, quadratic-zero and real-analytic-density counterexamples are constructed.
+\field{Remaining gap} A general selection requires more than uniqueness of the scalar. Prove uniqueness of the selected limit or provide a robust variational or order characterization, particularly for $L^1$ data. Separate selection from the disproved assertion that all normalized solutions are unique. Related targets are P07 and S16.
+\field{Source location} \path{book/author/section_positive_lower_mass_threshold.tex:4}; \path{book/author/chapter_research_program.tex:19,69,73}.
+\subsection{S06: Regularity for arbitrary prescribed types and at density zeros}
+\label{S06}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Find regularity and stability criteria for solutions in arbitrary prescribed ordinary or envelope types on a smooth big, possibly nonclosed background, beyond the resolved logarithmic and exceptional minimal types. At a density zero, identify conditions on the density and residual geometry that imply a smooth or H\"older residual, and state whether the conclusion extends across the singular set. Also obtain regularity criteria for general singular envelopes and weighted extremals beyond the stated density-in-capacity regimes.
+\field{State of the art} The manuscript gives local continuity above a locally bounded strict barrier, local H\"older control for minimal $L^p$ solutions, and interior smoothness on the full regular locus of a fixed analytic strict barrier with smooth positive density. Resolved logarithmic types with positive residual and exceptional blowups have quantified H\"older remainders. Smooth positive global volume forms give ample-locus smoothness in every closed big K\"ahler class. On a smaller smooth-density open set there are compact examples of discontinuous bounded solutions. Smooth density zeros and their necessary vanishing order do not suffice for a smooth Hessian. Weighted extremals have regularity in specified uniform density-in-capacity regimes, which do not cover every singular envelope.
+\field{Remaining gap} Find sufficient type-sensitive hypotheses covering the remaining cases. Local density smoothness alone and determinant vanishing order alone are already insufficient. Regularity across the pole set must be justified separately from regularity on its complement.
+\field{Source location} \path{book/author/chapter_research_program.tex:59--61,248}.
+\subsection{S07: Weak adjoints for singular references and a weak linearized equation}
+\label{S07}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} In every admissible singular-reference or degenerate-background regime of the normalization functional, determine when $\mathcal A_\varphi(F)$ is a singleton and when its probability is an approximation-independent adjoint of a weak linearized Monge--Amp\`ere operator. Specify a meaningful product and weight for
+\[\ddc\bigl(\rho(\theta+\ddc u)^{n-1}\bigr)=0.\]
+\field{State of the art} Supporting probabilities and their stability are constructed without declaring this product defined. Generic uniqueness holds on a dense $G_\delta$ for each fixed admissible reference. Smooth potentials have the classical adjoint. If every smooth positive potential perturbation is Gauduchon, normalized Monge--Amp\`ere measures extend bounded adjoints and are continuous under bounded capacity convergence; this includes Gauduchon surfaces.
+\field{Remaining gap} Control conformal multipliers as well as potentials, justify multiplication of the weak product by $\rho$, and prove independence of approximation. P16 asks the narrower singleton question with Hermitian background and nonsingular reference; it does not supply a weak operator for arbitrary unbounded potentials.
+\field{Source location} \path{book/author/chapter_gauduchon.tex:299}; \path{book/author/chapter_normalization.tex:196}; \path{book/author/chapter_research_program.tex:150}.
+\subsection{S08: Continuity when singular references or positive residuals degenerate}
+\label{S08}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Give geometric or singularity conditions on varying admissible references $\varphi_j$ and backgrounds that imply convergence of $B_{\varphi_j}$ on continuous tests and place all cluster supports in $\mathcal A_\varphi(F)$ for the limiting reference. Include degenerate residual forms and arbitrary singularities.
+\field{State of the art} A genuine smaller-background envelope tending to reference zero gives uniform convergence of scalar functionals and uniformly integrable supports. Relative comparison of positive divisorial residuals gives a geometric criterion. Entropy estimates yield compactness while references vary. BMP model-volume and fixed-divisor regimes supply additional equation stability.
+\field{Remaining gap} Identify the limiting functional when residual positivity fails or singularities cease to be divisorial. Compactness of measures alone does not identify their supporting functional. State assumptions ensuring the limiting reference is in a solvable regime rather than silently assuming existence there.
+\field{Source location} \path{book/author/section_reference_comparison.tex:45}; \path{book/author/section_prescribed_dual_entropy.tex:38}.
+\subsection{S09: Zero-obstacle equality versus equality at every obstacle}
+\label{S09}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} For an admissible smooth background $\theta$ and $u\in\PSH(X,\theta)$, does
+\[P_\theta[u]=P_\theta[u]_{\mathcal I}\]
+imply $P_{\theta,F}[u]=P_{\theta,F}[u]_{\mathcal I}$ for every smooth real obstacle $F$, without positive lower ideal volume or BMP?
+\field{State of the art} All-obstacle equality always implies zero-obstacle equality. The converse follows from membership in the relative envelope class of the ideal envelope. Under BMP and positive lower ideal volume it is a theorem; on curves it holds without volume restrictions. It also holds on specified separated products, auxiliary products without ambient BMP, and divisorial curve fibrations with the stated descent hypotheses. All-obstacle uniformity is smooth-gauge invariant.
+\field{Remaining gap} Establish the converse in unrestricted higher-dimensional zero-volume and unbounded-mass settings or give a counterexample. The positive-volume criterion cannot be applied at lower volume zero. This is an explicit subproblem overlapping P06 and the analytic-closure part of P01/P17.
+\field{Source location} \path{book/author/section_all_obstacle_topology.tex:117}; \path{book/author/chapter_research_program.tex:166}.
+\subsection{S10: Perron interpolation and a metric geometry of singularity classes}
+\label{S10}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Relate Hermitian Perron segments and their Legendre-dual test curves to geodesics for a complete metric on singularity classes. Identify hypotheses under which this interpolation is stationary for a specified action and compatible with a complete singularity topology.
+\field{State of the art} The minimum principle and Legendre duality give Perron interpolation without a closed background. For the raw $L^2$ action, the Euler equation has torsion terms. A primitive for the raw Monge--Amp\`ere one-form near zero forces closedness. On a Gauduchon three-torus, a smooth Perron segment need not be stationary; on surfaces the Gauduchon condition persists but does not remove the first-derivative terms.
+\field{Remaining gap} Specify a metric/action whose geometry fits the interpolation, rather than importing the K\"ahler energy primitive. The raw-primitive obstruction and nonstationary example are settled; the remaining target is a coherent replacement compatible with P01/P17.
+\field{Source location} \path{book/author/chapter_rays.tex:229}.
+\subsection{S11: Nonclosed restricted positivity and its relation to intrinsic traces}
+\label{S11}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Construct a restricted positivity invariant for general nonclosed backgrounds and relate it to intrinsic multiplier-ideal trace data. Determine when positive residual or restricted mass produces a strict current of a specified one-sided or ordinary singularity type.
+\field{State of the art} For closed classes on class-$\mathcal C$ manifolds, a finite resolution-independent restricted invariant is positive exactly when the resolved class is big; for nef classes its zero union is the null locus. For divisorial traces with bounded remainder, a mass polynomial and residual comparison produce strict currents more singular than the trace. Preserving bounded-difference type can fail even on a projective surface.
+\field{Remaining gap} Extend the invariant beyond the closed or bounded-residual regimes and separate one-sided domination from preservation of ordinary type. Universal equality of restricted mass and ambient positive-product data is contradicted by the trace examples. This connects P06, P18 and P14.
+\field{Source location} \path{book/author/chapter_research_program.tex:108}.
+\subsection{S12: Inverse realization of divisors at a global or prescribed-type threshold}
+\label{S12}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Given an effective real divisor $E$ and the annihilating face of normalized Gauduchon tests associated to its Bott--Chern class, determine when a threshold subsolution for $f$ has $\omega+\ddc u\geq[E]$. Separately formulate and characterize the maximal coefficient among potentials in one prescribed singularity type.
+\field{State of the art} If a coefficient-$c$ subsolution contains $[E]$, the manuscript proves
+\[c\leq b_\omega(f)(1-\kappa_\omega(\beta_E))^n,\]
+where $\beta_E$ represents $\{E\}$ and $\kappa_\omega$ is its linear positivity threshold. At $c=b_\omega(f)$, every smooth maximizing sequence annihilates $\beta_E$ in the limit; uniform integrability ensures its cluster current maximizes the dual functional. The corresponding exposed face lies in the weak closure of smooth tests.
+\field{Remaining gap} Determine sufficient conditions converting annihilation into an actual divisorial component. Do not assume all Gauduchon currents are smoothly approximable, or define $[E]\wedge T$ for a singular test merely by its smooth class pairing. A global threshold need not equal a threshold restricted to one type.
+\field{Source location} \path{book/author/section_threshold_divisorial_constraints.tex:44}.
+\subsection{S13: Completeness under nefness and geometric smoothing compatibility}
+\label{S13}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} For a divisorial exponential equation in a nef big class, or for data satisfying the geometric smoothing compatibility conditions of \cite[Section 3.1]{DNGL26}, determine whether its positive metric on the regular locus is complete. In the smoothing problem, retain the prescribed nonintegrable divisor pole with coefficient smooth and strictly positive across the divisor.
+\field{State of the art} The unrestricted big-class assertion is false: a unique finite-energy minimal solution in a non-nef big class is incomplete on every nonempty connected open subset of its ample locus. H\"older residuals give finite distance to a nonempty analytic boundary, whereas continuous residuals can have complete ends. Integrable logarithmically weakened poles admit a sharp normal-length criterion and both complete and incomplete torus models.
+\field{Remaining gap} Decide the nef and flow-compatible cases with their exact data. In the torus models the coefficient of the unweakened pole tends to zero at the divisor, so those examples do not answer the prescribed smooth-positive-coefficient problem. Completeness is separate from the smooth local convergence requested in P12.
+\field{Source location} \path{book/author/section_incomplete_divisorial_metric.tex:142}; \path{book/author/section_divisorial_normal_length.tex:202}.
+\subsection{S14: Higher-dimensional growing-jet limits and transfer through fibrations}
+\label{S14}
+\noindent\textbf{Status:} research direction; precise formulation pending.
+\field{Full problem description} Formulate and prove higher-dimensional analogues of the growing-jet transition in P22, and criteria transferring such local limits through Hermitian fibrations. Specify the vanishing ideal, local curvature degeneracy, moving observation scale, Hilbert norm, and intrinsic section-growth normalization.
+\field{State of the art} The compact one-dimensional law is proved in the small-growth range of P22. The manuscript also has descended and horizontal fibration kernel limits and finite-codimension comparisons. These results provide possible interfaces but do not combine growing vanishing orders with general fiber-selected singularities.
+\field{Remaining gap} Control anisotropic weight remainders, global section production and the fibration norm at the moving scale. This is an additional research direction in the prose, rather than a claim that the same one-dimensional Gaussian expression holds in every dimension.
+\field{Source location} \path{book/author/chapter_research_program.tex:300}.
+\subsection{S15: Individual solvability criteria for arbitrary non-pluripolar measures}
+\label{S15}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Extend the individual-density threshold criterion from $f\,\mathrm dV$ to a fixed finite nonzero non-pluripolar Borel measure $\nu$. Find an intrinsic criterion for a positive scaled subsolution, an exact normalized equation, and an exponential equation, distinguishing these three assertions.
+\field{State of the art} Positive lower mass characterizes solvability for every finite non-pluripolar measure. Prescribed-reference versions have their explicit model and lower-volume assumptions. At zero lower mass some absolutely continuous probability measures already admit no positive scaled subsolution, while smooth densities remain solvable. For individual densities, bounded truncations and the Gauduchon root formula give an exact subsolution criterion.
+\field{Remaining gap} For a general $\nu$, there is no canonical bounded-density truncation relative to smooth volume. Replace this construction while retaining measure domination and finite-mass compactness. This extends P07/S03 and is not implied by solving all smooth densities.
+\field{Source location} \path{book/author/chapter_research_program.tex:39}; \path{book/author/section_lower_mass_solvability.tex:92}.
+\subsection{S16: Automatic envelope genuineness in semipositive dual attainment}
+\label{S16}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} Suppose a positive-threshold $L^1$ density has a smooth semipositive maximizing Gauduchon current, strictly positive off a proper analytic set $Z$, and let $\Phi_f$ be the greatest normalized threshold subsolution. Find conditions making $P_{\delta h}(\Phi_f)$ genuine for some $0<\delta<1$, and determine regularity across $Z$. More generally, ask whether moment or entropy control forces this envelope condition.
+\field{State of the art} The semipositive maximizer gives a unique exact global threshold solution, smoothness off $Z$, a fixed lower barrier and whole-family normalized $L^1$ convergence of exponential solutions. A genuine smaller-background envelope upgrades to capacity convergence; $L^p$ data, $p>1$, give continuity and uniform convergence. For rough maximizing currents, first moments plus this envelope condition yield an exact cluster equation. Entropy bounds supply moments and uniform integrability but do not supply the envelope.
+\field{Remaining gap} Prove automatic genuineness under additional intrinsic assumptions or identify its failure, and separate regularity across $Z$ from off-$Z$ smoothness. These are stronger compactness and regularity questions than exact solvability in the already settled semipositive regime.
+\field{Source location} \path{book/author/chapter_research_program.tex:47,49}.
+\subsection{S17: Critical determinant bounds restricted to actual adjoint maximizers}
+\label{S17}
+\noindent\textbf{Status:} unresolved question in the manuscript.
+\field{Full problem description} When $v_-(h)=0$, determine whether the critical $L^{n/(n-1)}$ estimate can hold for the determinant-weighted probabilities of exact maximizing currents representing adjoints, uniformly as $F$ ranges over a specified bounded set. Identify geometric or density hypotheses for such a restricted estimate.
+\field{State of the art} All normalized Gauduchon tests can violate the endpoint, while their subcritical estimates hold universally. Adjoint densities inherit those subcritical bounds; positive lower mass supplies the endpoint. For one fixed smooth strictly positive density the exact maximizer is smooth and unique. Near-maximizing sequences can have divergent higher moments even on K\"ahler manifolds.
+\field{Remaining gap} The failure for the full test family does not decide estimates for exact maximizers. Conversely, boundedness for one smooth datum is not uniformity over a family. State precisely whether the estimated object is $k_T$ or the normalized $F$-weighted density. This may aid P16 but does not itself prove singleton supports.
+\field{Source location} \path{book/author/section_vanishing_lower_mass.tex:303--305}; \path{book/author/chapter_research_program.tex:146}.
+\subsection{S18: Moving positive products and birational volume formulas for nonclosed data}
+\label{S18}
+\noindent\textbf{Status:} research direction; precise formulation pending.
+\field{Full problem description} Develop a nonclosed analogue of moving intersection or birational volume data that records imposed poles and residual positivity, and relate it to the Gauduchon subtraction cost of P14. Specify the invariant and its gauge and modification behavior before asserting a volume formula.
+\field{State of the art} Finite divisor residuals have explicit mass polynomials and Gauduchon variation formulas. Closed class-$\mathcal C$ restricted invariants are resolution independent; closed K\"ahler positive products and volume differentiability are literature inputs. For nonclosed nef backgrounds, irrational or oscillatory volume orders and modification jumps obstruct direct transfer of the closed numerical formulas.
+\field{Remaining gap} This is a stated research objective, rather than a fully formulated conjecture in the manuscript. A solution needs a precise construction accounting for differential background data and the distinction between upper singularity volume and fixed-density variational volume.
+\field{Source location} \path{book/author/section_non_kahler_geometry.tex:153}.
+\section{Relationships and settled boundaries}
+The catalogue has 23 formal entries and 18 supplemental entries, not 41 independent conjectures. The main dependencies are:
+\begin{itemize}
+\item P01 and P17 are versions of one complete-topology program; S09 isolates its all-obstacle analytic-closure issue, also relevant to P06.
+\item P08 contains the bigness implication needed in P09 and P12. The closed-intersection-to-root-volume bridge in P09 is a separate requirement.
+\item P07 concerns exact equations at a positive individual threshold. S03 concerns exponential solvability at zero threshold; S04 concerns root tails; S05 concerns selection; S15 concerns arbitrary non-pluripolar measures. These assertions are not interchangeable.
+\item P10 concerns all normalized Gauduchon tests. S17 concerns exact adjoint maximizers. P16 concerns uniqueness of the induced probability, not uniqueness of every maximizing current.
+\item P20 concerns general kernel lower bounds and measures; P21 provides a specific base-series construction; P22 concerns growing jets on a curve; S14 proposes higher-dimensional and fibration extensions.
+\item S13 concerns metric completeness with nefness or smoothing compatibility. Smooth convergence off a null locus in P12 does not by itself prove completeness.
+\end{itemize}
+The following broader assertions are already refuted and are included only as boundaries on the open questions: universal BMP; positivity of a fixed-density volume as a uniform lower-mass bound; zero-volume upper-volume equality as a criterion for ideal-envelope equality; general uniqueness for zero-exponent equations with nonnegative density; completeness for all big divisorial exponential equations; and smooth residual Hessians determined solely by density vanishing order. The catalogue does not reopen these assertions.
+
+\section{Source crosswalk and verification scope}
+The formal inventory was checked against \texttt{research/source-disposition-323.json} and the current author sources. The active author-input inventory was searched for unresolved questions and then compared with the research-program and history discussions. Historical questions already answered in the book and ordinary uses of ``open set'' were excluded. Numbered statements below retain their stable source labels, allowing comparison if pagination changes.
+\small
+\begin{longtable}{@{}llp{0.59\linewidth}@{}}
+\toprule Entry & Book number & Stable source label \\\midrule\endhead
+P01 & 15.6.1 & \texttt{\detokenize{qu:i-good-no-bmp}} \\
+P02 & 25.16.1 & \texttt{\detokenize{qu:nef-degeneration-exponent}} \\
+P03 & 28.2.1 & \texttt{\detokenize{conj:lck-lee-psef}} \\
+P04 & 28.4.1 & \texttt{\detokenize{q:lck-gauduchon-volume}} \\
+P05 & 28.5.1 & \texttt{\detokenize{conj:lck-calabi-yau-vaisman}} \\
+P06 & 29.8.1 & \texttt{\detokenize{qu:hermitian-i-characterization}} \\
+P07 & 32.1.1 & \texttt{\detokenize{qu:individual-equation-threshold}} \\
+P08 & 32.2.1 & \texttt{\detokenize{conj:nef-gaud-volume-big}} \\
+P09 & 32.3.1 & \texttt{\detokenize{qu:closed-nef-gaud-bridge}} \\
+P10 & 32.3.2 & \texttt{\detokenize{qu:geometric-gaud-endpoint}} \\
+P11 & 32.3.3 & \texttt{\detokenize{prob:primitive-elliptic-lower-mass}} \\
+P12 & 32.3.4 & \texttt{\detokenize{qu:chern-ricci-gaud-singularities}} \\
+P13 & 32.3.5 & \texttt{\detokenize{qu:balanced-pluriclosed-program}} \\
+P14 & 32.3.6 & \texttt{\detokenize{qu:hermitian-morse-program}} \\
+P15 & 32.5.1 & \texttt{\detokenize{qu:gaud-metric-boundary}} \\
+P16 & 32.6.1 & \texttt{\detokenize{conj:continuous-gaud-adjoint}} \\
+P17 & 32.7.1 & \texttt{\detokenize{qu:singularity-topology-program}} \\
+P18 & 32.8.1 & \texttt{\detokenize{qu:exact-trace-program}} \\
+P19 & 32.8.2 & \texttt{\detokenize{qu:positive-system-recovery}} \\
+P20 & 32.9.1 & \texttt{\detokenize{qu:partial-kernel-lower-program}} \\
+P21 & 32.9.2 & \texttt{\detokenize{qu:fiber-selected-approximation}} \\
+P22 & 32.9.3 & \texttt{\detokenize{prob:growing-jets-localization}} \\
+P23 & 32.10.1 & \texttt{\detokenize{qu:singular-space-equations-program}} \\
+\bottomrule\end{longtable}
+\normalsize
+Literature locators follow the versions specified in the book. An external input is not re-certified by listing it here. In particular, the catalogue retains the scope restrictions on the parabolic theorems, the author-manuscript locator for Chiose, and the invariance hypotheses of the Vaisman volume theorem.
+
+\begin{thebibliography}{99}
+\bibitem{SGPT} Xia, Mingchen. \emph{Singularities in global pluripotential theory}. Reference version supplied by the author; accessed 14 September 2026. \url{https://mingchenxia.github.io/Lectures/SGPT_final.pdf}.
+
+\bibitem{XL26} Li, Xuan. \emph{{Monge--Amp\`ere} type equations on compact {Hermitian} manifolds with bounded mass property}. 2026. arXiv:2601.13446v1, 19 January 2026. \url{https://arxiv.org/abs/2601.13446v1}.
+
+\bibitem{OV25Balanced} Ornea, Liviu and Verbitsky, Misha. \emph{Balanced metrics and {Gauduchon} cone of locally conformally {K\"ahler} manifolds}. International Mathematics Research Notices. 2025. \url{https://arxiv.org/abs/2407.04623v2}.
+
+\bibitem{OV24LCK} Ornea, Liviu and Verbitsky, Misha. \emph{Principles of Locally Conformally {K\"ahler} Geometry}. 2024. Section numbers refer to arXiv:2208.07188v6. \url{https://arxiv.org/abs/2208.07188v6}.
+
+\bibitem{OV24Vaisman} Ornea, Liviu and Verbitsky, Misha. \emph{A {Calabi--Yau} theorem for {Vaisman} manifolds}. Communications in Analysis and Geometry. 2024. \url{https://arxiv.org/abs/2206.08808v2}.
+
+\bibitem{BO25LCK} Barbaro, Giuseppe and Otiman, Alexandra. \emph{{Calabi--Yau} locally conformally {K\"ahler} manifolds}. 2025. 7 December 2025. \url{https://arxiv.org/abs/2509.18364v2}.
+
+\bibitem{TW10} Tosatti, Valentino and Weinkove, Ben. \emph{The complex {Monge--Amp\`ere} equation on compact {Hermitian} manifolds}. Journal of the American Mathematical Society. 2010. Proof locations refer to arXiv:0910.1390v2, 11 November 2009. \url{https://arxiv.org/abs/0910.1390v2}.
+
+\bibitem{KN15} Ko{\l}odziej, S{\l}awomir and Nguyen, Ngoc Cuong. \emph{Weak solutions to the complex {Monge--Amp\`ere} equation on {Hermitian} manifolds}. 2015. Numbered statements and section locations refer to arXiv:1312.5491v2, 20 January 2015. \url{https://arxiv.org/abs/1312.5491v2}.
+
+\bibitem{Nguyen16} Nguyen, Ngoc Cuong. \emph{The complex {Monge--Amp\`ere} type equation on compact {Hermitian} manifolds and applications}. Advances in Mathematics. 2016. Numbered statements refer to arXiv:1501.00891v1, 5 January 2015. \url{https://arxiv.org/abs/1501.00891v1}.
+
+\bibitem{ALS26} Alehyane, Omar and Lu, Chinh H. and Salouf, Mohammed. \emph{{Monge--Amp\`ere} equations with prescribed singularities on compact {Hermitian} manifolds}. 2025. arXiv:2511.02339v1, 4 November 2025; preprint version. \url{https://arxiv.org/abs/2511.02339v1}.
+
+\bibitem{DP04} Demailly, Jean-Pierre and P{\u a}un, Mihai. \emph{Numerical characterization of the {K\"ahler} cone of a compact {K\"ahler} manifold}. Ann. of Math. (2). 2004. Published Theorem 0.7 and Conjecture 0.8 correspond to Theorem 0.6 and Conjecture 0.7 in arXiv:math/0105176v2, 24 September 2001; arXiv locators elsewhere are marked explicitly. \url{https://annals.math.princeton.edu/2004/159-3/p05}.
+
+\bibitem{BEGZ10} Boucksom, S\'ebastien and Eyssidieux, Philippe and Guedj,                   Vincent and Zeriahi, Ahmed. \emph{Monge--{A}mp\`ere Equations in Big Cohomology Classes}. Acta Math.. 2010. \url{https://doi.org/10.1007/s11511-010-0054-7}.
+
+\bibitem{GL22} Guedj, Vincent and Lu, Chinh H.. \emph{Quasi-plurisubharmonic envelopes 2: Bounds on {Monge--Amp\`ere} volumes}. Algebraic Geometry. 2022. \url{https://content.algebraicgeometry.nl/2022-6/2022-6-021.pdf}.
+
+\bibitem{BGL25} Boucksom, S{\'e}bastien and Guedj, Vincent and Lu, Chinh H.. \emph{Volumes of {Bott--Chern} classes}. Peking Mathematical Journal. 2025. Theorem locations refer to the 43-page publisher version, published online 16 June 2025. \url{https://doi.org/10.1007/s42543-025-00105-2}.
+
+\bibitem{GP04} Goldstein, Edward and Prokushkin, Sergey. \emph{Geometric model for complex non-{K}\"ahler manifolds with {$SU(3)$} structure}. Communications in Mathematical Physics. 2004. \url{https://arxiv.org/abs/hep-th/0212307v2}.
+
+\bibitem{HuyK3} Huybrechts, Daniel. \emph{Lectures on {K3} surfaces}. 2016. Author draft available online. \url{https://www.math.uni-bonn.de/people/huybrech/K3Global.pdf}.
+
+\bibitem{TW15} Tosatti, Valentino and Weinkove, Ben. \emph{On the evolution of a {Hermitian} metric by its {Chern--Ricci} form}. J. Differential Geom.. 2015. Trace calculation and elliptic estimate in Sections 3 and 9; the maximal-time statement is Theorem 1.2 in arXiv:1201.0312v3. \url{https://arxiv.org/abs/1201.0312}.
+
+\bibitem{DangNull26} Dang, Quang-Tuan. \emph{Hermitian null loci}. 2026. Accepted for publication in Transactions of the American Mathematical Society. Locators refer to arXiv:2404.01126v2, 17 June 2026; Theorem 1.1 assumes nefness and bigness, whereas Theorems A and C retain the stated volume and metric hypotheses. \url{https://arxiv.org/abs/2404.01126}.
+
+\bibitem{FV26} Fino, Anna and Vezzoni, Luigi. \emph{A note on the pluriclosed flow on balanced manifolds with {$c_1=0$}}. 2026. 2 June 2026; Conjectures 1.1--1.2. \url{https://arxiv.org/abs/2606.03176}.
+
+\bibitem{Chiose14} Chiose, Ionu{\c t}. \emph{Obstructions to the existence of {K\"ahler} structures on compact complex manifolds}. Proc. Amer. Math. Soc.. 2014. Theorem 0.2 in the ten-page author manuscript. \url{https://www.imar.ro/~cjoita/MC-SCV/Chiose-closedobstruction.pdf}.
+
+\bibitem{Tosatti26} Tosatti, Valentino. \emph{Transcendental {Morse} inequality on {K\"ahler} manifolds}. 2026. 8 September 2026; Theorem 1.1 and Corollary 1.2 in version 2. \url{https://arxiv.org/abs/2608.30153}.
+
+\bibitem{Dang26} Dang, Quang-Tuan. \emph{Regularity of solutions to {Monge--Amp\`ere} equations on compact {Hermitian} manifolds}. 2026. \url{https://arxiv.org/abs/2603.25520v1}.
+
+\bibitem{Pan25} Pan, Chung-Ming. \emph{Gauduchon metrics and {Hermite--Einstein} metrics on non-{K\"ahler} varieties}. 2025. \url{https://arxiv.org/abs/2503.02759v1}.
+
+\bibitem{XZ26} Xia, Mingchen and Zhang, Kewei. \emph{A counterexample to the bounded mass property}. 2026. arXiv:2608.21053v1, 21 August 2026. \url{https://arxiv.org/abs/2608.21053v1}.
+
+\bibitem{DNGL26} Di Nezza, Eleonora and Guedj, Vincent and Lu, Chinh Hoang. \emph{Geometric smoothing by the {K\"ahler--Ricci} flow}. 2026. arXiv:2607.08325v1. \url{https://arxiv.org/abs/2607.08325}.
+
+\end{thebibliography}
+\end{document}

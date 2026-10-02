@@ -16,6 +16,9 @@ Record useful lemmas, failed approaches, counterexamples, exact hypotheses, depe
 
 ## Queue in book order
 
+The current standalone [open-problem catalogue](../open-problems-catalogue.tex) expands the formal statements with setup, compiled book locators, known results and remaining gaps. Its [inventory](../open-problems-catalogue.json) retains all 23 formal labels and adds 18 narrative questions or research directions. These are manuscript-derived descriptions, not accepted Xean solutions; exact task initialization still requires checking every referenced definition and completion criterion.
+
+
 These are the 23 active formal questions at checkpoint293, sorted by their book numbers. Labels and exact statements are preserved. Refresh locations after manuscript revisions. The two topology questions overlap; successful work may be reused only after checking both exact completion criteria.
 
 | Order | Baseline number | Label | Source | Status |
