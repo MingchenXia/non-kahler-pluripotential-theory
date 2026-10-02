@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint294: Construct a positive genuinely nonclosed background on a product with an auxiliary factor of unbounded mass, and verify ambient unbounded mass directly by smooth test potentials. Exhibit the complete zero-volume polar metric and distinct ideal models there; keep the product locus and ambient statements explicit. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint295: Complete the positive nonclosed Hopf-product example with directly verified unbounded ambient mass and the restricted complete zero-volume polar metric; then begin the new cover-to-cover polish. Continue sequential Xean research and integrate each checked solution; all 23 formal questions remain unresolved at their recorded scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

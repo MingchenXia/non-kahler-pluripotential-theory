@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint294: Construct a positive genuinely nonclosed background on a product with an auxiliary factor of unbounded mass, and verify ambient unbounded mass directly by smooth test potentials. Exhibit the complete zero-volume polar metric and distinct ideal models there; keep the product locus and ambient statements explicit. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint295: Complete the positive nonclosed Hopf-product example with directly verified unbounded ambient mass and the restricted complete zero-volume polar metric; then begin the new cover-to-cover polish. Continue sequential Xean research and integrate each checked solution; all 23 formal questions remain unresolved at their recorded scopes.
 
 | Chapter | Source | This cycle |
 |---|---|---|

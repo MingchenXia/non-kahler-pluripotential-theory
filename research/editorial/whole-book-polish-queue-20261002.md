@@ -18,11 +18,11 @@ After the chapter pass, reread the Introduction and reader routes against the fi
 
 ## Actual reading order
 
-The table is initialized from the active checkpoint293 graph. Refresh it after the pending additions; the excluded chapter is not part of the queue. Each root includes all of its recursively included author sources.
+The table is initialized from the active checkpoint295 graph. Refresh it after the pending additions; the excluded chapter is not part of the queue. Each root includes all of its recursively included author sources.
 
 | Unit | Root source | New-cycle status |
 |---|---|---|
-| Introduction | [preface.tex](../../book/author/preface.tex) | queued |
+| Introduction | [preface.tex](../../book/author/preface.tex) | author-feedback rewrite checked at295; final new-cycle reread queued |
 | Conventions | [conventions.tex](../../book/author/conventions.tex) | queued |
 | Chapter 1 | [chapter_framework.tex](../../book/author/chapter_framework.tex) | queued |
 | Chapter 2 | [chapter_mass.tex](../../book/author/chapter_mass.tex) | queued |
