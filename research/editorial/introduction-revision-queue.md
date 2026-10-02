@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint295: Complete the positive nonclosed Hopf-product example with directly verified unbounded ambient mass and the restricted complete zero-volume polar metric; then begin the new cover-to-cover polish. Continue sequential Xean research and integrate each checked solution; all 23 formal questions remain unresolved at their recorded scopes.
+Current next unit after checkpoint296: Begin the fresh whole-book coherence/readability polish at the Introduction and Conventions, then read all 33 chapters and nested inputs in book order. Prepare the first exact Xean task; resume live model qualification when secure authentication is restored. Solve and integrate every checked solution sequentially; all 23 formal questions remain open at their recorded scopes.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -4,9 +4,7 @@ Status: queued; no unit has been read completely for this new cycle. The current
 
 ## Recovery and manuscript completion
 
-The remote source baseline is checkpoint293, commit `352a1160c692d80706adbba96cdf706615b3f274`. Checkpoint294 completed its two new-input reads, production and companion builds, direct-image review and fresh empty source reconstruction before the workspace failed. Its 937-page public PDF and homepage were verified live, but private source synchronization was still pending. A next Hopf auxiliary example was saved at `/tmp/book-review-295-draft.tex`; it remains a draft.
-
-When the workspace returns, inspect its Git status and saved files, reconcile these research-only remote commits with the pending local changes using ordinary Git history, and finish the checkpoint294 private synchronization. Preserve both sets of changes; do not reset or force-push. Complete and check the Hopf example, and refresh the active source graph before starting this cycle.
+The workspace has recovered. Checkpoint294 and the research programme were preserved, ordinarily merged and privately synchronized. Checkpoint295 completes the author-feedback Introduction rewrite. Checkpoint296 completes the pending Hopf auxiliary example at its recorded mathematical/output scope; fresh source reconstruction passes and the coherent private synchronization follows. The latest manuscript has 245 author / 247 recursive inputs and 963 physical / 939 printed pages. Begin the new full reading cycle after this release; earlier complete reads retain their own scopes.
 
 ## Review method
 
@@ -18,7 +16,7 @@ After the chapter pass, reread the Introduction and reader routes against the fi
 
 ## Actual reading order
 
-The table is initialized from the active checkpoint295 graph. Refresh it after the pending additions; the excluded chapter is not part of the queue. Each root includes all of its recursively included author sources.
+The table is initialized from the active checkpoint296 graph. Refresh it after the pending additions; the excluded chapter is not part of the queue. Each root includes all of its recursively included author sources.
 
 | Unit | Root source | New-cycle status |
 |---|---|---|
