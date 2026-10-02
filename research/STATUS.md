@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 311 — Chapter 14 unchanged coherence review
+
+Complete original and two follow-up reads, 36 mathematical checks and full chapter page inspection: [review record](editorial/chapter-fourteen-coherence-311.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint310 (1,713 archive entries). Chapter 15 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 310 — Chapter 13 coherence and pagination
 
 Complete original and follow-up recursive reads, 53 mathematical checks and five observed pagination repairs: [review record](editorial/chapter-thirteen-coherence-310.md). Clean production, live publication, empty-source reconstruction and final source-package validation passed. Chapter 14 is next; the whole-book and open-problem goals remain active.

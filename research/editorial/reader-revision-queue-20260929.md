@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint310: Read complete Chapter 14 and every recursive input, then continue the fresh whole-book cycle in actual order. The final Introduction reread against the finished body and all-problem research remain pending. Include unnumbered open research remarks encountered during this cycle. Resume the exact first Xean problem with gpt-6.1-sol/xhigh when secure authentication is restored; integrate each independently verified solution and complete proof into the book before advancing. All 23 formal questions remain open.
+Current next unit after checkpoint311: Chapter 15: multiplier-ideal envelopes and I-goodness, every recursive input; preserve exact open-problem and model-topology hypotheses.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
