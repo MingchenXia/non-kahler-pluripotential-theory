@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint335: Continue P01/P17 directly: test polar curvature on modifications as a detector of higher-codimensional logarithmic poles, then determine which ordinary singularities it still misses and whether compatible limits are realizable. Keep the exact general questions open until a complete checked argument settles them.
+Current next unit after checkpoint336: Continue P01/P17 directly: test polar-current data over all modifications for invariance under ordinary equivalence and separation, then study realization of compatible Cauchy limits. Retain the exact general questions; the prescribed-countable-detector obstruction alone does not decide complete metrizability.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

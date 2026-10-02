@@ -8,7 +8,7 @@ The Introduction explains the differences from Kähler theory through mass, comp
 
 The fresh whole-book polish has completed the front units, Chapters 1–33, Appendix A, references and index at checkpoints 297–333. The final post-body Introduction and reader-route review passes; empty-source reconstruction, live publication and private synchronization pass. The writing/polish release is accepted at its recorded review scope. Open-problem research remains active. See [the reading queue](research/editorial/whole-book-polish-queue-20261002.md) for actual completed scopes.
 
-Further direct research adds the complete joint curve/background space in Section 29.14, including zero-area limits, exact analytic closure and gauge/scaling compatibility. Proposition 15.6.19 shows that first polar curvature alone misses isolated logarithmic poles in higher dimension. The unrestricted higher-dimensional topology problem remains open. The author has removed Xean from the workflow.
+Further direct research adds the complete joint curve/background space in Section 29.14, including zero-area limits, exact analytic closure and gauge/scaling compatibility. Proposition 15.6.19 shows that first polar curvature alone misses isolated logarithmic poles in higher dimension. Corollaries 15.6.10 and 15.6.11 recover that pole after blowing up its point and show that any prescribed countable family of modifications misses some models. The unrestricted higher-dimensional topology problem remains open. The author has removed Xean from the workflow.
 
 **Part IX, “Theory under mass bounds”, collects the substantial additional theory:**
 

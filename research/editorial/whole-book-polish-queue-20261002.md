@@ -69,3 +69,5 @@ Actual complete/partial reads and source hashes are recorded in [the read ledger
 The author removes Xean from the workflow. Checkpoint334 adds and checks the joint curve/background space with complete proofs, gauge isometries and scaling compatibility; this is a bounded subsequent integration, not another full-book reading cycle. The historical complete polish at333 remains accepted. Continue the general higher-dimensional topology problem; all23 formal questions remain open.
 
 Checkpoint335 adds the first polar-current obstruction with a complete proof and reconciles the same open catalogue. General P01/P17 remain open; the next direct unit tests polar data on modifications.
+
+Checkpoint336 proves exceptional polar-current detection and the prescribed-countable-modification obstruction, with complete proofs and current catalogue reconciliation. Continue P01/P17 by checking all-modification data and compatible-limit realization; these two corollaries do not close the general question.

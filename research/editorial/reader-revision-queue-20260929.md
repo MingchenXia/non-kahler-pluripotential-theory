@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint335: Continue P01/P17 directly: test polar curvature on modifications as a detector of higher-codimensional logarithmic poles, then determine which ordinary singularities it still misses and whether compatible limits are realizable. Keep the exact general questions open until a complete checked argument settles them.
+Current next unit after checkpoint336: Continue P01/P17 directly: test polar-current data over all modifications for invariance under ordinary equivalence and separation, then study realization of compatible Cauchy limits. Retain the exact general questions; the prescribed-countable-detector obstruction alone does not decide complete metrizability.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

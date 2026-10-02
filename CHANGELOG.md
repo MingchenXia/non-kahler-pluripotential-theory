@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint336 — Polar curvature on modifications
+
+[Corollaries 15.6.10 and 15.6.11](research/editorial/modification-polar-current-obstruction-336.md) detect an isolated logarithmic pole on its exceptional divisor and prove that every predetermined countable family of modifications misses some inequivalent analytic ideal models. Complete proof reads, 22 mathematical checks and 21 direct final images pass. Both successful production builds publish; the final 947-printed-page book and homepage are live and verified. The same LaTeX catalogue is reconciled; its native compilation request remains pending. Empty-source reconstruction and current archive validation pass: all 262 exact book sources, 1,795 archive entries and identical text on all 971 book and 17 companion pages. All 21 affected final-source page renders are identical to the actual production inspections. Private synchronization follows this snapshot. The general topology problem remains open. Prior private checkpoint 335 is independently verified at 807d0ba0.
+
 ## Checkpoint335 — Polar current and isolated poles
 
 [Proposition 15.6.19](research/editorial/polar-current-topology-obstruction-335.md) proves that the first polar curvature current cannot separate distinct analytic ideal models with isolated poles in dimension at least two. Both complete proof reads, 22 internal mathematical checks and 18 direct final images pass. The clean 945-printed-page book and homepage are live and verified; the same catalogue source is reconciled and compiles in the native editor. Empty-source reconstruction and archive validation pass: 262 exact book sources, 1,792 archive entries and identical text on all 969 book and 17 companion pages. Private synchronization follows this snapshot. This obstruction does not close the general topology problem; research continues directly. Prior private checkpoint 334 is independently verified at 580ed256.
