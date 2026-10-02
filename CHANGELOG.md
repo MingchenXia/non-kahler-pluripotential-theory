@@ -1,5 +1,19 @@
 # Modification history
 
+## Checkpoint 299 — Chapter 2 coherence and proof boundaries
+
+Chapter 2 receives a complete original read and two complete revised reads. Two short proof-ending sentences make the proof boundaries visible in the compiled book: one supplies the q=1 case of the power derivative, and the other identifies the displayed strict mass inequality as a violation of comparison. Existing formal statements, hypotheses, formulas and labels are preserved.
+
+The read checks the integration-by-parts signs, the torsion term, polynomial polarization and the dimension-two degree argument; distinguishes stationarity from invariance; and rechecks the torus normalization, positivity interval and mass coefficient (4 minus pi squared times t)B. The constant-shift comparison obstruction and metric rescaling for the upper mass bound are also checked. Earlier foundational results and cited classical inputs retain their recorded scope.
+
+Complete original Chapter 2 (254 lines, one source) and two complete revised mathematical/editorial reads (256 lines each). The second revised read follows the final images. The Chapter 3 opening through line 45 is read as an adjacent seam only; no complete Chapter 3 read or independent external full-proof certification is claimed.
+
+The other 244 author sources, root, figures, bibliography/styles, all 23 exact formal question texts and 451 protected hashes remain unchanged. The graph retains 245 author/247 recursive inputs, 1737 labels and 1262 distinct reference targets. The house audit has zero errors and two reviewed existing warnings.
+
+One clean production build is published and verified against the live PDF, homepage description and successful Pages deployment. The publication is 3baef91b57b4a70d0ed2bfeafdac3d0bcdefed28, PDF SHA-256 a2a51851299a9954982c8abc3bc9972157ff2c4f7e8d4515efe80c9a4a1db49c; its description is “A research monograph. 939 pages. Updated October 2, 2026.”. The book has 963 physical/939 printed pages; the companion has 17 pages. All 5303 internal destinations and 477 index locators pass. The original chapter's eight pages are inspected directly. The final 47-page selection covers the whole chapter and adjacent seams, front matter, references and index: four directly inspected images and 43 exact whole-pixmap carries from inspected pages. Both changed page bodies are covered. Fresh empty source reconstruction passes both builds, all 963 book/17 companion page texts and all 260 book-source byte comparisons. The archive has 1677 entries and 1676 manifest payloads; checksums, current payload bytes and exclusions pass. Publication is disabled in the reconstructed build.
+
+The whole-book polish and all-problem goal remain unfinished. Xean authentication is blocked; no successful requested-model campaign, accepted solution or question closure is claimed. Next: Read complete Chapter 3 with all nested inputs, then continue the fresh whole-book cycle in actual book order. The final Introduction reread against the finished body remains queued. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
+
 ## Checkpoint298 — Chapter 1 coherence and proof wording
 
 Chapter 1 receives a complete original read and two complete revised reads across 20 recursive author sources. The final second read follows the inspected output. Two proof passages are clarified. Monotone capacity convergence uses continuity of the restriction outside a small-capacity open set; it does not assert that this set contains every ordinary discontinuity. The planar inverse-maximum proof identifies the canonical superharmonic representative of its distributional limit, distinguishing it from the pointwise values on the polar carrier.

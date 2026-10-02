@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint298: Read complete Chapter 2 with all nested inputs, then continue the new whole-book cycle in actual book order. The final Introduction reread against the finished body remains queued. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
+Current next unit after checkpoint299: Read complete Chapter 3 with all nested inputs, then continue the fresh whole-book cycle in actual book order. The final Introduction reread against the finished body remains queued. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
