@@ -1,0 +1,15 @@
+# Appendix A coherence and proof-end repair — checkpoint331
+
+Baseline: 5d0e5ea28dbeff062415106f496fc17adcabce29.
+
+The original appendix inspection found a missing proof-end square after the bounded cone-equation proof on physical page954. Removing its preceding blank line restores exactly one square. Every mathematical statement, formula, formal question and proof word is unchanged. The complete original and both revised follow-up reads pass33 concrete internal mathematical checks covering disk descent, envelopes, compactness, resolution-ideal projection, infinite measures and damping, radial cone equations, ordinary-class uniqueness, nonclosed determinant-preserving deformations, bounded energy uniqueness, angular-radial cancellation and the quadric normalization.
+
+Complete original Appendix A recursive source read369 lines and two complete revised follow-up reads368 lines each, two inputs. All fourteen original physical appendix pages943–956 were directly inspected. The final51-page selection has three directly inspected pages954,957,958 and48 exact whole-pixmap carries from actually inspected pages. The second complete source read follows final image inspection. References pages957–958 have transition scope only.
+
+The house audit has zero errors and one retained appendix-label prefix warning. All259 other book-source files and451 protected files are byte-exact to baseline; the245 author/247 recursive inputs,1737 source labels,1263 reference targets and23 formal question texts and compiled locations are unchanged. The source change is one blank line. The classical external inputs listed in the audit remain cited dependencies rather than freshly certified external proofs.
+
+One clean production full-book build and one companion build pass. The book remains967 physical/943 printed pages and the companion17 pages. All5299 internal destinations are valid and all477 index locators correspond to actual links. Public commit c5233dc6a28e223b9578ba792e04f3dea6c6e74c is deployed by successful Pages run37059647607. Actual HTTP checks confirm the exact current PDF and the matching description: A research monograph. 943 pages. Updated October 2, 2026.
+
+Empty-source reconstruction and archive validation pass: 1,778 archive entries, 1,777 manifest payloads, all 260 book-source files byte-exact, and every page of the reconstructed 967-page book and 17-page companion text-exact to the production outputs. Reconstructed builds skip homepage publication.
+
+The requested standalone catalogue is complete:23 formal questions and18 supplemental questions/directions, with known results, precise gaps and citations. Its formal statements are unchanged; the appendix whitespace repair is reconciled separately with its creation audit. No new solution, question closure or fresh external-literature survey is claimed. Exact-model Xean authentication remains unavailable in this environment. Next: References and subject index: complete bibliography read, citation/reference resolution and all index-page inspection; then final Introduction and reader-route reread.
