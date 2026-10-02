@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint291: Extend the separated product metric locus to arbitrary smooth admissible curve backgrounds, including zero areas. Transfer its ordinary and ideal projections through the nonclosed auxiliary term, and prove area-controlled bounded metric comparison without conflating smooth zero-area potentials with discarded singular coordinates. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint292: Determine whether zero-obstacle ordinary/ideal equality on a separated curve product implies equality for every smooth, possibly nonseparated obstacle. First handle factors whose atomic curvature exhausts their area by countable-divisor removal and compact-fiber descent; keep the positive-residual base conditions explicit. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
