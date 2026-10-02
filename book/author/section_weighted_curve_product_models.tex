@@ -1,0 +1,80 @@
+\Needspace{18\baselineskip}
+\subsection{Varying the curve coefficients}
+\label{subsec:weighted-curve-product-models}
+
+The auxiliary coefficient in \cref{cor:nonclosed-separated-product-metric} does not change the metric on the specified locus. Changing the coefficients of its curve models has a different effect: a zero coefficient discards a coordinate, and the diameter depends on the remaining curve areas.
+
+Keep the product $M=Y\times C_0\times Z$, its projections and the forms from that corollary. For $a=(a_1,\ldots,a_m)\in[0,\infty)^m$ and a smooth $f\geq0$ on $Y$, put
+\[
+ J(a)=\{i:a_i>0\},\qquad
+ \beta_a=\sum_i a_i\pi_i^*\eta_i,\qquad
+ \Theta_{a,f}=p^*\beta_a+(f\circ p)s^*\tau+r^*\kappa.
+\]
+For normalized ordinary models $q_i$ in the fixed curve backgrounds $\eta_i$, define
+\[
+ \Phi_a(q)=\Psi+\sum_{i\in J(a)}a_iq_i\circ\pi_i\circ p,
+ \qquad \Psi=\psi\circ r.
+\]
+Terms with zero coefficient are omitted, including on their pole sets. Thus $\Phi_a$ depends only on the active coordinates. Write $\mathcal S_a$ for this locus of potentials and $q_{i,\mathcal I}=P_{\eta_i}[q_i]_{\mathcal I}$.
+
+\Needspace{13\baselineskip}
+\begin{lemma}\label{lem:weighted-product-model-projections}\index{Envelope!separated curve models}
+For every $a$ and $f$ as above,
+\[
+ P_{\Theta_{a,f}}[\Phi_a(q)]=\Phi_a(q),\qquad
+ P_{\Theta_{a,f}}[\Phi_a(q)]_{\mathcal I}=\Phi_a(q_{\mathcal I}).
+\]
+Both potentials have supremum zero. In particular, $\mathcal S_0=\{\Psi\}$.
+\end{lemma}
+\begin{proof}
+For $a_i>0$, scaling the ordinary competitors shows that $a_iq_i$ is an ordinary model for $a_i\eta_i$. Its polar curvature is $a_i\mu_i$, where $\mu_i$ is the polar curvature of $q_i$. Taking atomic parts and \cref{thm:curve-background-homothety} give its ideal model $a_iq_{i,\mathcal I}$.
+
+Put $w_a=\sum_{i\in J(a)}a_iq_i\circ\pi_i$. If there are at least two active factors, \cref{lem:separated-curve-model-projections} makes the corresponding sum an ordinary model on their positive product background. One active factor uses the curve identity. Pullback over the inactive factors preserves this identity by \cref{prop:psh-descent-submersion}: every competitor in the pulled-back background descends, and its obstacle bound and ordinary order descend by surjectivity. With no active factors, the normalized model is zero by the maximum principle. Hence $P_{\beta_a}[w_a]=w_a$ in all cases.
+
+On $B=Y\times C_0$, use $\beta_{a,f}=\pi^*\beta_a+(f\circ\pi)s_0^*\tau$. As in \cref{cor:nonclosed-separated-product-metric}, replace an ordinary competitor by its maximum with $w_a\circ\pi$ and restrict to each section $Y\times\{z\}$. This gives $P_{\beta_{a,f}}[w_a\circ\pi]=w_a\circ\pi$.
+
+For the ideal identity take $g_a=\sum_{i\in J(a)}a_i g_i\circ\pi_i\circ\pi$, using the atomic Green potentials from \cref{lem:curve-atomic-ideal-model}. Scaling, addition and pullback preserve ideal equivalence by \cref{lem:hermitian-i-calculus,lem:submersion-multiplier-pullback}. The Hessian of $g_a$ is a closed finite-mass countable divisor current minus a smooth form, and $g_a$ is $\beta_{a,f}$-plurisubharmonic. It is ordinarily equivalent to $w_{a,\mathcal I}\circ\pi$, where $w_{a,\mathcal I}=\sum_{i\in J(a)}a_iq_{i,\mathcal I}\circ\pi_i$. By \cref{lem:divisorial-potential-domination}, every ideal competitor is an ordinary competitor for $g_a$ and is therefore bounded by $w_{a,\mathcal I}\circ\pi$. The latter is itself an ideal competitor, so the ideal envelope equals it. When $J(a)$ is empty both base envelopes are zero directly. The unit-divisor reduction of \cref{prop:fibration-obstacle-reduction} gives the upstairs identities. Independence of the factors gives normalization.
+\end{proof}
+
+For two tuples $q,\widetilde q$, let $\mu_i,\nu_i$ be their polar curvature measures in the fixed backgrounds $\eta_i$. Set
+\begin{equation}\label{eq:weighted-product-polar-metric}
+ \rho_a(\Phi_a(q),\Phi_a(\widetilde q))
+       =\sum_{i\in J(a)}a_i\|\mu_i-\nu_i\|_{\mathrm{TV}}.
+\end{equation}
+On the singleton $\mathcal S_0$ this distance is zero.
+
+\Needspace{20\baselineskip}
+\begin{proposition}\label{prop:weighted-product-polar-metric}\index{Metric completeness!vanishing curve coefficients}\index{Model potential!weighted product collapse}
+For every $a$, the locus $\mathcal S_a$ is a complete geodesic metric space for $\rho_a$, independently of $f$. Its ideal subspace is closed, geodesically convex and equal to the metric closure of its analytic models. Ideal projection is its unique nearest-point $1$-Lipschitz retraction, with distance
+\[
+ \rho_a\bigl(\Phi_a(q),\Phi_a(q_{\mathcal I})\bigr)
+       =\sum_{i\in J(a)}a_i\mu_i^{\mathrm{na}}(C_i).
+\]
+Here $\mu_i^{\mathrm{na}}$ is the nonatomic part of $\mu_i$. The diameter is $2\sum_i a_iA_i$, and metric convergence implies $L^1(M)$ convergence for every smooth positive volume form. The top-volume comparison expression vanishes on this locus.
+
+If $a,b$ have the same nonempty active set $J$, the correspondence $T_{ba}\Phi_a(q)=\Phi_b(q)$ is well defined, commutes with ideal projection and satisfies
+\[
+ \min_{i\in J}\frac{b_i}{a_i}\,\rho_a(u,v)
+ \leq\rho_b(T_{ba}u,T_{ba}v)
+ \leq\max_{i\in J}\frac{b_i}{a_i}\,\rho_a(u,v).
+\]
+For a fixed smooth positive volume form on $M$, there are constants $K_i$ independent of $a,b$ and of the normalized model tuple $q$ such that
+\[
+ \|\Phi_a(q)-\Phi_b(q)\|_{L^1(M)}
+       \leq\sum_i K_i|a_i-b_i|.
+\]
+Consequently, as all $a_i$ tend to zero, the diameter tends to zero and every potential in $\mathcal S_a$ tends to $\Psi$ in $L^1(M)$, uniformly over the normalized model tuples.
+\end{proposition}
+\begin{proof}
+Restriction to coordinate sections where the other potentials are finite determines every active $a_iq_i$ up to a constant. Normalization makes these constants zero. Thus \eqref{eq:weighted-product-polar-metric} is well defined and identifies $\mathcal S_a$ with the product of the active curve model spaces with their distances multiplied by $a_i$. There are no inactive coordinates to distinguish; the empty product is a singleton.
+
+The curve completeness, geodesic and atomic-projection results in \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect} apply coordinate by coordinate. Their weighted distances add, proving the metric assertions and the distance formula. The bound on the diameter is attained by choosing polar measures $A_i\delta_{x_i}$ and $A_i\delta_{y_i}$ with $x_i\ne y_i$ on each active curve. Fiber integration and \cref{thm:curve-model-capacity-convergence} give $L^1$ convergence upstairs. The preceding lemma makes the ideal projection independent of $f$. Rank deficiency in the unit-divisor reduction also gives zero upper volume for each model and pairwise maximum, hence zero for the comparison expression.
+
+For analytic density, approximate each actual atomic polar measure $a_i\mu_i^{\mathrm{at}}$ by a finite atomic measure with rational coefficients and mass at most $a_iA_i$. Such approximations converge in total variation. Their curve models in background $a_i\eta_i$ have finite rational logarithmic coefficients. Together with the unit coefficient of $D$, these clear denominators in local product monomials. They therefore give analytic models in $\mathcal S_a$ converging to every ideal model. Conversely, if $\Phi_a(q)$ is analytic, restrict to each active curve section with all other potentials finite and with the $Z$ coordinate outside $D$. By \cref{prop:analytic-type-calculus}, its genuine restriction $a_iq_i$ plus a constant is analytic. This is an ordinary model in the positive background $a_i\eta_i$, so \cref{prop:analytic-envelope-type} makes it its ideal projection. The preceding lemma now makes $\Phi_a(q)$ an ideal model. Closedness gives the claimed analytic closure. This argument uses rational coefficients of the actual scaled poles; an irrational $a_i$ need not preserve an analytic template model.
+
+For a common active set, the normalized tuple is determined by the potential. The displayed bounds for $T_{ba}$ follow by comparing each positive weight $b_i$ with $a_i$; the coordinatewise atomic projection commutes with this correspondence.
+
+Finally, normalized compactness in \cref{thm:normalized-compactness} uniformly bounds the $L^1(C_i)$ norms of all $q_i$. Integration along the compact fibers of $\pi_i\circ p$ gives constants $K_i$ bounding their pulled-back $L^1(M)$ norms. Off the pole sets, which have smooth volume zero, the difference of the two potentials is the sum of $(a_i-b_i)q_i\circ\pi_i\circ p$. The triangle inequality proves the uniform estimate, including at zero coefficients. Taking $b=0$ gives uniform convergence to $\Psi$; the diameter formula gives the metric collapse on precisely this restricted locus.
+\end{proof}
+
+Thus loss of the auxiliary coefficient leaves the metric in \cref{cor:nonclosed-separated-product-metric} fixed, whereas loss of a curve coefficient removes its coordinate and changes the diameter. These computations do not identify a metric on unrestricted higher-dimensional ordinary models.
