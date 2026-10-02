@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint289: Quantify metric comparison across different active curve sets, including discarded coordinates. Define the Hausdorff comparison for bounded metric spaces, construct a correspondence from the model tuples, prove the parameter bound and the exact comparison for componentwise ordered coefficients, and retain the restricted-locus boundary. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint290: Prove separability of ordinary and ideal envelopes for sums of arbitrary curve potentials under separated smooth obstacles. Allow arbitrary smooth admissible curve backgrounds, including zero areas, and check the countable-divisor argument without strict background positivity. Keep arbitrary nonseparated obstacles and the unrestricted higher-dimensional completion problem distinct. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
