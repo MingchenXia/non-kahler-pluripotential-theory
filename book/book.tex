@@ -90,11 +90,11 @@
 \bibliographystyle{sgptalpha}
 \bibliography{references}
 \cleardoublepage
-% Allow the index columns to end at their natural height.
+% Let the index paginate without balancing its final columns.
 \begingroup
 \raggedcolumns
-% Let index heading gaps shrink slightly when balancing the final columns.
-\renewcommand{\indexspace}{\par\vskip10pt plus5pt minus4pt\relax}
+\patchcmd{\theindex}{\begin{multicols}{2}}{\begin{multicols*}{2}}{}{}
+\patchcmd{\endtheindex}{\end{multicols}}{\end{multicols*}}{}{}
 \printindex
 \endgroup
 \end{document}
