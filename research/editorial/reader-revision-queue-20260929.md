@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint315: Chapter 19: holomorphic sections and Hermitian mass, every recursive input; check norm comparisons, concentration and Bergman-kernel hypotheses.
+Current next unit after checkpoint316: Chapter 20: flags, convex bodies and section growth, every recursive input; check flag valuations, semigroup counting and intrinsic lattice-volume normalization.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
