@@ -1,0 +1,17 @@
+# Chapter 30 relative finite-measure coherence — checkpoint 327
+
+Research baseline: 0c455e6ed3d74f380c3678c4e4bd9de1f9478922. Manuscript bytes unchanged from checkpoint322.
+
+Chapter 30 passes the original and two complete unchanged mathematical/editorial reads, 36 concrete internal mathematical checks and full chapter page inspection. No manuscript correction is indicated. Positive lower mass prevents collapse and supports extended domination; the ordinary-type moving-carrier alternative retains its distinct comparison hypothesis.
+
+Complete original and two unchanged follow-up reads of all nine recursive Chapter 30 inputs, 692 lines per pass. All 18 physical chapter pages 841–858 were directly inspected. The final 57-page selection covers both seams, contents, bibliography and index; the second complete read follows all final images. Chapter 31 opening pages 859–860 are transition inspection only.
+
+Finite domination localizes subtraction before exhausting extended measures, then obtains fixed-measure contact domination with coefficient one. Difference envelopes reduce zero domination to a finite scaled-background measure. Disjoint first-contact sets keep rooftop estimates independent of the number of obstacles. Prefix and tail stretches furnish every relative-class condition. The common lower envelope controls deep raw-measure tails; moving bounded carriers additionally use uniform capacity estimates.
+
+Minimal-reference equations are constructed before the prescribed-reference equations and provide their normalization bounds. Carrier regularization, bounded measurable approximation and monotone integrable truncation retain nonzero finite data, both scalar bounds and the appropriate relative class. Positive exponents determine the potential. Exponent-zero arguments identify only the scalar and the equations of cluster limits. The projective analytic examples preserve smooth normalized nonuniqueness despite positive lower and bounded upper mass.
+
+All 23 formal problems retain their exact texts and compiled locations. Cited external inputs have not been independently recertified, and no new solution or question closure is claimed. All 260 book-source files, 245 author/247 recursive inputs and 451 protected hashes are unchanged. The house audit has zero errors and one retained prefix warning. Final images contain two newly inspected Chapter 31 opening pages and 55 exact whole-pixmap carries from actually inspected pages. Chapter 31 has not received a fresh whole-unit review here.
+
+No production or reconstructed build is performed in this research-only checkpoint. The book and companion PDFs remain byte-identical to checkpoint322: 967 physical/943 printed and 17 pages. Their previous build, reconstruction and deployed PDF/homepage verification retain their recorded scopes; the public commit is dbbea86d884ac14078d8799750ece1ce5d21cbc2. Current archive payload/checksum/exclusion validation passes (1,766 archive entries, 1,765 manifest payloads), and all 260 book-source files are byte-identical to checkpoint322.
+
+The separate open-problem catalogue retains its completed manuscript scope: 23 formal problems and 18 supplemental questions or directions, with full statements, hypotheses and known cited results. Its status is not a fresh independent literature survey. Whole-book polish remains active. Next: Chapter 31: big backgrounds under bounded mass, every recursive input; check weighted moments, fixed-measure continuity, projection, weighted addition and model equations.
