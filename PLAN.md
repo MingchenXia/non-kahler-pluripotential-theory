@@ -8,7 +8,7 @@ Existing research questions may remain as precisely stated open problems. A writ
 
 Checkpoint270 records acceptance of the reviewed writing release at checkpoint269: the requested reader/introduction cycle, source/proof reconciliation, checked outputs, empty source reconstruction and live publication checks pass. The acceptance record identifies retained standard inputs and precisely stated research boundaries; it is not an independent mathematical certification. The writing-release goal is fulfilled at that scope. The author’s direction to keep working remains active: continue the research and manuscript development, following the current units in `research/STATUS.md` and the live queues.
 
-Current fresh review progress: front units 297 and complete original/two revised Chapter 1 and 2 reads 298–299. Continue at Chapter 3; finish each checked release before moving to the next unit. The all-problem goal remains pending.
+Current fresh review progress: front units 297 and complete original/two revised Chapter 1–3 reads 298–300. Continue at Chapter 4; finish each checked release before moving to the next unit. The all-problem goal remains pending.
 
 ## Public PDF publication, 30 September 2026
 
