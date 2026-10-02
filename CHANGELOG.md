@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint332 — References and index coherence
+
+Complete975-line bibliography reads, generated bibliography/index review and all11 final-page inspections: [review record](research/editorial/references-index-coherence-332.md). Protect two mathematical title expressions from BibTeX case conversion;74 citations and477 index destinations pass. The clean943-printed-page book is live and verified. Empty-source reconstruction and archive validation pass:260 exact book inputs,1,781 entries, and all967+17 output page texts match. Final Introduction and reader-route review is next.
+
 ## Checkpoint331 — Appendix A coherence and proof-end repair
 
 Complete original and two revised follow-up reads,33 internal mathematical checks and full appendix inspection: [review record](research/editorial/appendix-coherence-331.md). One proof-end blank line is removed; the clean967-page book is publicly deployed and verified. Empty-source reconstruction and archive checks pass: all 967 book and 17 companion page texts match, with 260 exact book-source files and 1,778 archive entries. References/index and the final Introduction reread are next; open-problem research remains active.
