@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 310 — Chapter 13 coherence and pagination
+
+Complete original and follow-up recursive reads, 53 mathematical checks and five observed pagination repairs: [review record](research/editorial/chapter-thirteen-coherence-310.md). Clean production, live publication, empty-source reconstruction and final source-package validation passed. Chapter 14 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 309 — Chapter 12 unchanged coherence review
 
 Complete original and two follow-up reads, 25 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twelve-coherence-309.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint308. Chapter 13 is next; the whole-book and open-problem goals remain active.

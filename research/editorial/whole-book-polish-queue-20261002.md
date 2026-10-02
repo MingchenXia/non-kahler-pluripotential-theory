@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, and Chapter 12 at 309; Chapter 13 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, and Chapter 13 is revised at 310; Chapter 14 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -34,7 +34,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 10 | [chapter_weak_equations.tex](../../book/author/chapter_weak_equations.tex) | complete original and two unchanged follow-up reads 307; full chapter page inspection passed |
 | Chapter 11 | [chapter_degenerate_uniqueness.tex](../../book/author/chapter_degenerate_uniqueness.tex) | complete original and two unchanged follow-up reads 308; full chapter page inspection passed; inherited house-audit findings retained |
 | Chapter 12 | [chapter_envelopes.tex](../../book/author/chapter_envelopes.tex) | complete original and two unchanged follow-up reads 309; full chapter page inspection passed |
-| Chapter 13 | [chapter_prescribed_equations.tex](../../book/author/chapter_prescribed_equations.tex) | queued |
+| Chapter 13 | [chapter_prescribed_equations.tex](../../book/author/chapter_prescribed_equations.tex) | complete original and follow-up recursive reads 310; 53 mathematical checks, final chapter images and live publication passed |
 | Chapter 14 | [chapter_normalization.tex](../../book/author/chapter_normalization.tex) | queued |
 | Chapter 15 | [chapter_igood.tex](../../book/author/chapter_igood.tex) | queued |
 | Chapter 16 | [chapter_rays.tex](../../book/author/chapter_rays.tex) | queued |
