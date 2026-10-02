@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint325: Chapter 29: volumes under bounded mass, every recursive input; check singularity-volume comparison, ordinary and ideal envelopes, distance completion and curve models.
+Current next unit after checkpoint326: Chapter 30: relative equations under positive lower mass, every recursive input; check finite nonzero measure data, domination, rooftop tails, capacity stability and exponent-zero uniqueness boundaries.
 
 | Chapter | Source | This cycle |
 |---|---|---|

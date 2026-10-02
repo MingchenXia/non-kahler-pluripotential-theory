@@ -1,0 +1,21 @@
+# Chapter 29 bounded-mass volumes and model comparison — checkpoint 326
+
+Research baseline: 27d9f81711169c05ff89d15c5349573823f0923e. Manuscript bytes unchanged from checkpoint322.
+
+Chapter 29 passes the original and two complete unchanged mathematical/editorial reads, 61 concrete internal mathematical checks and full chapter page inspection. No manuscript correction is indicated. Bounded mass controls upper volumes; positive lower volume is retained where stretching, domination, separation and volume continuity require it.
+
+Complete original and two unchanged follow-up reads of all four recursive Chapter 29 inputs, 2112 lines per pass. All 54 physical chapter pages 787–840 were directly inspected. The final 93-page selection covers both seams, contents, bibliography and index; the second complete read follows all final images. Chapter 30 opening pages 841–842 are transition inspection only.
+
+The contact and tail arguments keep the ordinary types of their competitors. Increasing limits identify the envelope before computing its volume. Decreasing models retain a positive lower bound through a normalized stretch and a strict barrier. Exact trace recovery explicitly assumes bounded mass on the submanifold; system recovery uses local divisorial control and compatibility without imposing a uniform lower-volume bound at the cutoff.
+
+The higher-dimensional maximum-volume comparison is kept separate from its complete chain metric. The projective-plane counterexample retains the difference 2a^2 in the failed triangle inequality, and zero-volume separation fails in its stated dimensions. Closed positive sectors remain complete; reciprocal lower volume excludes escape to zero in the complete metric. Rooftop normalization and monotone sandwiches supply capacity convergence. Analytic corrections retain rational coefficients and distinguish convergence of canonical models from arbitrary representatives.
+
+On curves, the comparison is exactly total variation of polar curvature, including zero mass. The atomic part is the unique nearest ideal model; diffuse polar mass gives the analytic approximation defect. Ordinary-type and all-obstacle pseudometrics retain their distinct incomplete ambient spaces and complete canonical atomic loci. Smooth gauges, arbitrary positive-area backgrounds and area homothety preserve their stated data; rational area ratios are required to preserve the book's analytic convention. The zero-area collapse concerns unscaled distances.
+
+Problem 29.8.1 retains its full statement. The nonclosed zero-volume example refutes upper-volume equality implying envelope equality, without deciding the other implications or the positivity criterion. All 23 formal problems retain their exact texts and compiled locations. Cited external inputs have not been independently recertified, and no new solution or question closure is claimed.
+
+All 260 book-source files, 245 author/247 recursive inputs and 451 protected hashes are unchanged. The house audit has zero errors and two retained prefix warnings. Final images contain two newly inspected Chapter 30 opening pages and 91 exact whole-pixmap carries from actually inspected pages. Chapter 30 has not received a fresh whole-unit review here.
+
+No production or reconstructed build is performed in this research-only checkpoint. The book and companion PDFs remain byte-identical to checkpoint322: 967 physical/943 printed and 17 pages. Their previous build, reconstruction and deployed PDF/homepage verification retain their recorded scopes; the public commit is dbbea86d884ac14078d8799750ece1ce5d21cbc2. Current archive payload/checksum/exclusion validation passes (1,763 archive entries, 1,762 manifest payloads), and all 260 book-source files are byte-identical to checkpoint322.
+
+The separate open-problem catalogue retains its completed manuscript scope: 23 formal problems and 18 supplemental questions or directions, with full statements, hypotheses and known cited results. Its status is not a fresh independent literature survey. Whole-book polish remains active. Next: Chapter 30: relative equations under positive lower mass, every recursive input; check finite nonzero measure data, domination, rooftop tails, capacity stability and exponent-zero uniqueness boundaries.
