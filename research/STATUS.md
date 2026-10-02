@@ -1,5 +1,15 @@
 # Current research status — 2 October 2026
 
+## Checkpoint285 — Nonclosed product polar metric
+
+The restricted complete polar-total-variation metric now exists on the full curve-induced ordinary-model locus in a positive genuinely nonclosed projective background. Both envelope projections are exact for every curve model, including countably atomic ideal data. Its ideal subspace is the closed analytic closure, ideal projection is the unique nearest-point 1-Lipschitz retraction, all top-degree volume comparisons vanish and metric convergence gives L1 convergence upstairs. Chapter15 and Chapter32 retain the general completion and background-compatibility problems.
+
+The complete product input and bounded complete interfaces pass two fresh revised reads, the second after the production build and all eight direct images. Original and dependency scopes are recorded. One corollary/proof, one label and two index insertions are added. All 30 existing formal/proof blocks, 235 other author inputs, figures, bibliography/styles, 23 questions and 451 protected hashes are preserved. All 1703 labels and 1247 distinct targets resolve. The primary house audit has zero errors/warnings; 12 interface warnings match their original messages. No fresh whole-chapter or independent proof audit is claimed.
+
+The production build publishes the PDF and matching homepage description. The 60-page selection passes with eight direct images and 52 exact inspected checkpoint284 pixmap carries; every changed complete-page body is covered. The book has 938 physical/914 printed pages and a 17-page companion, clean logs, 5168 valid destinations and 450 clickable index locators. Live deployment at 80cdad65040c6a66a8ab50c2b000ff58a54ade26 is verified. Fresh empty source reconstruction passes for both PDFs: all page text and 253 book source files match, 1623 archive files and 1622 manifest payload entries pass checksum/current-byte checks, final logs are clean and archive publication is disabled; see research/editorial/nonclosed-product-polar-metric-285.md and its audit.
+
+Writing acceptance at checkpoint270 is carried at the recorded scopes; research remains active. Transport the restricted product-model metric through nonnegative fiber coefficients, including the limit zero where the background loses bigness. Prove the ideal-envelope identities at degenerate coefficients directly from divisorial domination, and check exact normalization, ideal projection and metric compatibility on the fixed locus. Keep the general background-degeneration problem open.
+
 ## Checkpoint284 — Divisorial product polar metric
 
 The ordinary-model locus induced by a positive curve and a fixed divisor potential has a complete geodesic polar-total-variation metric, although top-degree volume comparison vanishes throughout it. Ideal models form the closed analytic closure, ideal projection is the unique nearest-point 1-Lipschitz retraction and diffuse polar mass gives its distance. Metric convergence controls L1 convergence upstairs for every smooth positive volume form. Chapter15 and Chapter32 retain the general completion and background-compatibility questions.
