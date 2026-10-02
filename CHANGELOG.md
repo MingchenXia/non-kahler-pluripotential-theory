@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 328 — Chapter 31 unchanged coherence review
+
+Complete original and two follow-up reads, 57 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-thirty-one-coherence-328.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,769 archive entries). Chapter 32 is next; whole-book polish and open-problem research remain active.
+
 ## Checkpoint 327 — Chapter 30 unchanged coherence review
 
 Complete original and two follow-up reads, 36 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-thirty-coherence-327.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,766 archive entries). Chapter 31 is next; whole-book polish and open-problem research remain active.
