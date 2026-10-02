@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint296: Begin the fresh whole-book coherence/readability polish at the Introduction and Conventions, then read all 33 chapters and nested inputs in book order. Prepare the first exact Xean task; resume live model qualification when secure authentication is restored. Solve and integrate every checked solution sequentially; all 23 formal questions remain open at their recorded scopes.
+Current next unit after checkpoint298: Read complete Chapter 2 with all nested inputs, then continue the new whole-book cycle in actual book order. The final Introduction reread against the finished body remains queued. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
 
 | Chapter | Source | This cycle |
 |---|---|---|

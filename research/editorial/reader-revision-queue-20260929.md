@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint296: Begin the fresh whole-book coherence/readability polish at the Introduction and Conventions, then read all 33 chapters and nested inputs in book order. Prepare the first exact Xean task; resume live model qualification when secure authentication is restored. Solve and integrate every checked solution sequentially; all 23 formal questions remain open at their recorded scopes.
+Current next unit after checkpoint298: Read complete Chapter 2 with all nested inputs, then continue the new whole-book cycle in actual book order. The final Introduction reread against the finished body remains queued. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

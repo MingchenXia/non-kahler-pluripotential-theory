@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapter1 and every remaining unit are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapter 1 is reviewed and revised at checkpoint298; Chapter 2 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -22,7 +22,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 |---|---|---|
 | Introduction | [preface.tex](../../book/author/preface.tex) | complete unchanged new-cycle read297; final post-body reread queued |
 | Conventions | [conventions.tex](../../book/author/conventions.tex) | complete unchanged new-cycle read297 |
-| Chapter 1 | [chapter_framework.tex](../../book/author/chapter_framework.tex) | queued |
+| Chapter 1 | [chapter_framework.tex](../../book/author/chapter_framework.tex) | complete original and two revised recursive reads298; output, publication and empty reconstruction pass |
 | Chapter 2 | [chapter_mass.tex](../../book/author/chapter_mass.tex) | queued |
 | Chapter 3 | [chapter_energy.tex](../../book/author/chapter_energy.tex) | queued |
 | Chapter 4 | [chapter_gauduchon.tex](../../book/author/chapter_gauduchon.tex) | queued |
@@ -62,4 +62,4 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
 
-Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records only the fresh unchanged front units and root; no body chapter is complete yet.
+Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoint298 records the complete original and two revised recursive reads of Chapter 1; Chapter 2 is next.
