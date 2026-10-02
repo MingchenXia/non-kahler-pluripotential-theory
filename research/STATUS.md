@@ -1,8 +1,12 @@
 # Current research status — 2 October 2026
 
+## Checkpoint333 — Final whole-book polish acceptance
+
+Final complete front/root reads and post-body reader-route review pass: [acceptance record](editorial/whole-book-polish-acceptance-333.md). All 245 current author inputs have actual complete-read receipts; all 33 chapters, appendix, references and index finish the fresh cycle. The clean 943-printed-page book is live, with actual PDF/homepage verification. Empty-source reconstruction and current archive validation pass: 260 exact book sources, 1,784 entries and identical text on all 967 book and 17 companion pages. Private synchronization is pending. The LaTeX catalogue contains 23 formal and 18 supplemental open questions; research completion remains pending.
+
 ## Checkpoint332 — References and index coherence
 
-Complete975-line bibliography reads, generated bibliography/index review and all11 final-page inspections: [review record](editorial/references-index-coherence-332.md). Protect two mathematical title expressions from BibTeX case conversion;74 citations and477 index destinations pass. The clean943-printed-page book is live and verified. Empty-source reconstruction and archive validation pass:260 exact book inputs,1,781 entries, and all967+17 output page texts match. Final Introduction and reader-route review is next.
+Complete975-line bibliography reads, generated bibliography/index review and all11 final-page inspections: [review record](editorial/references-index-coherence-332.md). Protect two mathematical title expressions from BibTeX case conversion;74 citations and477 index destinations pass. The clean 943-printed-page book is live and verified. Empty-source reconstruction and archive validation pass:260 exact book inputs,1,781 entries, and all967+17 output page texts match. Final Introduction and reader-route review is next.
 
 ## Checkpoint331 — Appendix A coherence and proof-end repair
 

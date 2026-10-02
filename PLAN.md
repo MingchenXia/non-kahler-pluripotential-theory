@@ -8,7 +8,7 @@ Existing research questions may remain as precisely stated open problems. A writ
 
 Checkpoint270 records acceptance of the reviewed writing release at checkpoint269: the requested reader/introduction cycle, source/proof reconciliation, checked outputs, empty source reconstruction and live publication checks pass. The acceptance record identifies retained standard inputs and precisely stated research boundaries; it is not an independent mathematical certification. The writing-release goal is fulfilled at that scope. The author’s direction to keep working remains active: continue the research and manuscript development, following the current units in `research/STATUS.md` and the live queues.
 
-Current fresh review progress: front units 297 and complete original/two follow-up Chapter 1–33 reads 298–330 and Appendix A reads331, references/index reads332, including complete affected-unit supplements for Chapter 13 pagination repairs and the corrected Chapter15 recap. Chapters 4–6, 8, 10–12, 14, 16–19, 21–24 and 26–33 are unchanged. Continue with the final Introduction/read-route reread; finish each checked release before moving to the next unit. The all-problem goal remains pending.
+Current fresh review progress: front units 297 and complete original/two follow-up Chapter 1–33 reads 298–330 and Appendix A reads331, references/index reads332, including complete affected-unit supplements for Chapter 13 pagination repairs and the corrected Chapter15 recap. Chapters 4–6, 8, 10–12, 14, 16–19, 21–24 and 26–33 are unchanged. Final Introduction/read-route rereads333 pass; final reconstruction and archive validation pass; finish private synchronization; finish each checked release before moving to the next unit. The all-problem goal remains pending.
 
 ## Public PDF publication, 30 September 2026
 
@@ -145,3 +145,7 @@ Also try to solve the open problems one by one using [Xean](https://github.com/c
 The standing instruction to continue until the author explicitly stops the work, and to publish the PDF and matching homepage description after every successful production full rebuild, remains in force. Workspace failures block execution; they do not establish completion of the writing or research goals.
 
 The author then reported that the Introduction still looked unnatural: revise that whole unit before the pending example. The latest instruction requires integrating every checked Xean solution and its proof into the book and continuing until all problems are resolved. Stay with one exact problem until resolution and checked manuscript integration, unless the author changes the order; preserve actual gaps and do not equate model acceptance with mathematical proof.
+
+## User request, 2 October 2026: complete open-problem catalogue
+
+Provide the full open-problem list in standalone LaTeX, including exact problem statements and hypotheses, known results, the remaining gaps and references. The completed catalogue records23 formal questions and18 further questions/directions from the manuscript, with25 cited sources. State-of-the-art claims are limited to the manuscript and its cited literature. Checkpoint333 verifies all23 formal texts, numbers and printed pages against the final body. This inventory does not close any research question.
