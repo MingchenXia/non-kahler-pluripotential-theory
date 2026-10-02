@@ -1,0 +1,15 @@
+# Chapter20 flags and section growth — checkpoint317
+
+Baseline: e76fbcada42bcec69dba4274b29a85c32be19644.
+
+The Chapter20 original read and page inspection identified a missing proof-end square after the Hopf simplex proof on physical page548. Removing the single blank line immediately before the proof environment closes restores exactly one square in the clean rebuild. All mathematical text and the figure are unchanged. The complete original and two revised follow-up reads pass31 concrete mathematical checks: flag leaves and degree bounds, the full-lattice semigroup hypotheses, the degree period and intrinsic-volume factor, the section-ratio transcendence argument, point-blowup descent, and the distinction between Hopf intrinsic area and ambient volume.
+
+Complete original Chapter20 recursive read372 lines, and two complete revised follow-up reads371 lines each, four author inputs including the triangle figure. All ten original physical chapter pages539–548 were directly viewed. The final49-page selection has three directly inspected pages548–550 and46 exact whole-pixmap carries from actually inspected pages. The second full recursive source read follows final visual inspection. Chapter21 opening source lines1–22 and physical pages549–550 have transition scope only.
+
+The house audit has zero errors and two retained prefix warnings. All259 other book-source files,245 author/247 recursive input counts,23 exact formal question texts and their compiled locations, and451 protected hashes retain their baseline content. The only book-source difference is the one removed blank line. Earlier Chapter1,6,8,19 inputs retain their recorded current-cycle scopes. The explicitly cited SGPT semigroup theorem, Hartogs extension and Moishezon projective-modification theorem remain classical inputs; their external proofs are not independently certified here.
+
+One clean production full-book build and the companion build pass. The book remains967 physical/943 printed pages; the companion has17 pages. All5299 internal destinations are valid, and all477 index locators correspond to actual index links. The new public commit is 9d437347a16be9ae4ccfb0db5edb31fe4c65721c; Pages run37030817422 succeeds, and actual live HTTP checks confirm both the new PDF SHA256 and matching homepage description. The verified homepage description remains at943 pages and the October2 date.
+
+Empty-source reconstruction and archive validation pass: 1,731 archive entries, 1,730 manifest payloads, all 260 book-source files byte-exact, and every page of the reconstructed 967-page book and 17-page companion text-exact to the production outputs. Reconstructed builds skip homepage publication.
+
+No additional open research occurrence, accepted Xean solution, novelty claim or question closure is made. The whole-book informal inventory is incomplete and exact-model authentication remains blocked. Next: Chapter 21: Hopf fibrations and toric potentials, every recursive input; check descended kernels, measures, equations and gradient-simplex normalizations.

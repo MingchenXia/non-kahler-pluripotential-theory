@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint316: Chapter 20: flags, convex bodies and section growth, every recursive input; check flag valuations, semigroup counting and intrinsic lattice-volume normalization.
+Current next unit after checkpoint317: Chapter 21: Hopf fibrations and toric potentials, every recursive input; check descended kernels, measures, equations and gradient-simplex normalizations.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
