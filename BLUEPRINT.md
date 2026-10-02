@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint335 — Polar current and isolated poles
+
+[Proposition 15.6.19](research/editorial/polar-current-topology-obstruction-335.md) proves that the first polar curvature current cannot separate distinct analytic ideal models with isolated poles in dimension at least two. Both complete proof reads, 22 internal mathematical checks and 18 direct final images pass. The clean 945-printed-page book and homepage are live and verified; the same catalogue source is reconciled and compiles in the native editor. Empty-source reconstruction and archive validation pass: 262 exact book sources, 1,792 archive entries and identical text on all 969 book and 17 companion pages. Private synchronization follows this snapshot. This obstruction does not close the general topology problem; research continues directly. Prior private checkpoint 334 is independently verified at 580ed256.
+
 ## Checkpoint334 — Joint curve/background model spaces
 
 The author removes Xean from the workflow; research continues directly. [New Section29.14](research/editorial/joint-curve-model-spaces-334.md) proves completeness, analytic closure, nearest ideal projection and smooth-gauge/scaling compatibility across all smooth curve backgrounds of nonnegative area. Both proof reads,29 mathematical checks and21 final image inspections pass. The clean945-printed-page book and homepage are live and verified; the catalogue is updated in place and compiles in the native editor. Empty-source reconstruction and archive validation pass: 261 exact book sources, 1,788 entries and identical text on all 969 book and 17 companion pages. Private synchronization is pending. The general higher-dimensional topology question remains open.

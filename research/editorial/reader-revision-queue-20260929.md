@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint334: Continue the first general topology problem directly: test whether local curve/polar data separate higher-dimensional ordinary models and whether compatible limits have realizations. Retain the exact general question until a complete verified construction or justified negative answer is established.
+Current next unit after checkpoint335: Continue P01/P17 directly: test polar curvature on modifications as a detector of higher-codimensional logarithmic poles, then determine which ordinary singularities it still misses and whether compatible limits are realizable. Keep the exact general questions open until a complete checked argument settles them.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
