@@ -1,10 +1,10 @@
 # Whole-book polish requested 2 October 2026
 
-Status: queued; no unit has been read completely for this new cycle. The current manuscript additions must be finished and released first. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapter1 and every remaining unit are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
-The workspace has recovered. Checkpoint294 and the research programme were preserved, ordinarily merged and privately synchronized. Checkpoint295 completes the author-feedback Introduction rewrite. Checkpoint296 completes the pending Hopf auxiliary example at its recorded mathematical/output scope; fresh source reconstruction passes and the coherent private synchronization follows. The latest manuscript has 245 author / 247 recursive inputs and 963 physical / 939 printed pages. Begin the new full reading cycle after this release; earlier complete reads retain their own scopes.
+The workspace has recovered. Checkpoint294 and the research programme were preserved, ordinarily merged and privately synchronized. Checkpoint295 completes the author-feedback Introduction rewrite. Checkpoint296 completes the pending Hopf auxiliary example at its recorded mathematical/output scope; fresh source reconstruction passes and private source3277aba is synchronized. The latest manuscript has 245 author / 247 recursive inputs and 963 physical / 939 printed pages. Begin the new full reading cycle after this release; earlier complete reads retain their own scopes.
 
 ## Review method
 
@@ -20,8 +20,8 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 
 | Unit | Root source | New-cycle status |
 |---|---|---|
-| Introduction | [preface.tex](../../book/author/preface.tex) | author-feedback rewrite checked at295; final new-cycle reread queued |
-| Conventions | [conventions.tex](../../book/author/conventions.tex) | queued |
+| Introduction | [preface.tex](../../book/author/preface.tex) | complete unchanged new-cycle read297; final post-body reread queued |
+| Conventions | [conventions.tex](../../book/author/conventions.tex) | complete unchanged new-cycle read297 |
 | Chapter 1 | [chapter_framework.tex](../../book/author/chapter_framework.tex) | queued |
 | Chapter 2 | [chapter_mass.tex](../../book/author/chapter_mass.tex) | queued |
 | Chapter 3 | [chapter_energy.tex](../../book/author/chapter_energy.tex) | queued |
@@ -61,3 +61,5 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 ## Sequential problem research
 
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
+
+Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records only the fresh unchanged front units and root; no body chapter is complete yet.
