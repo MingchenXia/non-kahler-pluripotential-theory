@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 302 — Chapter 5 unchanged coherence review
+
+Chapter 5 passes complete original and two follow-up reads of both inputs and all chapter pages without manuscript changes. See [the scoped review](editorial/chapter-five-coherence-302.md) and its audit. Chapter 6 is next; the whole-book and all-problem goals remain active.
+
 ## Checkpoint 301 — Chapter 4 unchanged coherence review
 
 Chapter 4 passes complete original and two follow-up reads of both inputs and the full chapter page inspection without manuscript changes. The production PDF and prior reconstruction remain unchanged. See [the scoped review](editorial/chapter-four-coherence-301.md) and its audit for evidence. Chapter 5 is next; the whole-book and all-problem goals remain active.

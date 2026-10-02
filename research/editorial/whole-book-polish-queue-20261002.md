@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, and Chapter 4 passes an unchanged review at 301; Chapter 5 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, and Chapters 4–5 pass unchanged reviews at 301–302; Chapter 6 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -26,7 +26,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 2 | [chapter_mass.tex](../../book/author/chapter_mass.tex) | complete original and two revised reads 299; release checks recorded |
 | Chapter 3 | [chapter_energy.tex](../../book/author/chapter_energy.tex) | complete original and two revised reads 300; release checks recorded |
 | Chapter 4 | [chapter_gauduchon.tex](../../book/author/chapter_gauduchon.tex) | complete original and two unchanged follow-up recursive reads 301; full page inspection passed |
-| Chapter 5 | [chapter_compactness.tex](../../book/author/chapter_compactness.tex) | queued |
+| Chapter 5 | [chapter_compactness.tex](../../book/author/chapter_compactness.tex) | complete original and two unchanged follow-up recursive reads 302; full page inspection passed |
 | Chapter 6 | [chapter_products.tex](../../book/author/chapter_products.tex) | queued |
 | Chapter 7 | [chapter_damped_measures.tex](../../book/author/chapter_damped_measures.tex) | queued |
 | Chapter 8 | [chapter_hopf.tex](../../book/author/chapter_hopf.tex) | queued |
@@ -62,4 +62,4 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
 
-Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–301 record complete original and two follow-up reads of Chapters 1–4; Chapter 5 is next.
+Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–302 record complete original and two follow-up reads of Chapters 1–5; Chapter 6 is next.
