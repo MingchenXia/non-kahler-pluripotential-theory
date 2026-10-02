@@ -2,7 +2,7 @@
 
 ## Checkpoint333 — Final whole-book polish acceptance
 
-Final complete front/root reads and post-body reader-route review pass: [acceptance record](editorial/whole-book-polish-acceptance-333.md). All 245 current author inputs have actual complete-read receipts; all 33 chapters, appendix, references and index finish the fresh cycle. The clean 943-printed-page book is live, with actual PDF/homepage verification. Empty-source reconstruction and current archive validation pass: 260 exact book sources, 1,784 entries and identical text on all 967 book and 17 companion pages. Private synchronization is pending. The LaTeX catalogue contains 23 formal and 18 supplemental open questions; research completion remains pending.
+Final complete front/root reads and post-body reader-route review pass: [acceptance record](editorial/whole-book-polish-acceptance-333.md). All 245 current author inputs have actual complete-read receipts; all 33 chapters, appendix, references and index finish the fresh cycle. The clean 943-printed-page book is live, with actual PDF/homepage verification. Empty-source reconstruction and current archive validation pass: 260 exact book sources, 1,784 entries and identical text on all 967 book and 17 companion pages. Private source synchronization is verified at 86469245; the writing and fresh-polish goal is accepted at its recorded scope. The LaTeX catalogue contains 23 formal and 18 supplemental open questions; research completion remains pending. The author directs continued manuscript development after this acceptance.
 
 ## Checkpoint332 — References and index coherence
 
