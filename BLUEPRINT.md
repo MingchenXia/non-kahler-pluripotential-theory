@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 301 — Chapter 4 unchanged coherence review
+
+Chapter 4 passes complete original and two follow-up reads of both inputs and the full chapter page inspection without manuscript changes. The production PDF and prior reconstruction remain unchanged. See [the scoped review](research/editorial/chapter-four-coherence-301.md) and its audit for evidence. Chapter 5 is next; the whole-book and all-problem goals remain active.
+
 ## Checkpoint 300 — Chapter 3 coherence and Gauduchon transition
 
 Chapter 3 receives a complete original read and two complete revised reads. Its new closing paragraph explains that on a Gauduchon surface the zeroth-order term in the radial energy defect vanishes, while first-order torsion can persist. It connects invariant mass with the remaining energy obstruction and leads into the next chapter's linear mass pairing. The entire original chapter is an unchanged source prefix; all existing statements, proofs, hypotheses, formulas and labels are preserved.

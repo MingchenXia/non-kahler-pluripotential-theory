@@ -1,0 +1,13 @@
+# Chapter 4 unchanged coherence review — checkpoint 301
+
+Baseline: 51d762f238cf883fa7ee79c91301c4fa703e75fd.
+
+Chapter 4 passes complete original and two follow-up mathematical/editorial reads of both recursive inputs, and inspection of all twelve chapter pages. No source correction is required. The review checks the positive adjoint multiplier, distributional trace conservation, the generalized Lamari separation and elliptic right inverse, attained curvature threshold, compactness and polar characterization of the smooth-test closure, minimizing-current convergence, adjoint range, the three-torus persistence counterexample and bounded adjoint measures. The distinction between the smooth-test closure and all normalized Gauduchon currents is retained.
+
+Complete unchanged Chapter 4: root chapter_gauduchon.tex (299 lines) and nested section_gauduchon_linear_duality.tex (130 lines), read in recursive book order; original plus two complete follow-up reads, the last after final images. The nine-line Chapter 5 root and two opening images are consulted as a seam; its nested input is not freshly read here. No manuscript changes or independent external full-proof certification.
+
+This is a research-record-only checkpoint. All 245 author inputs, root, figures, bibliography/styles and 451 protected files are byte-identical to the baseline; all 23 formal question texts and labels are unchanged. The house audit has zero errors and three reviewed existing warnings: the chapter prefix and the historical Gauduchon/Lamari titles. The final 51-page selection has fourteen directly inspected pages and 37 exact whole-pixmap carries from inspected checkpoint 300 pages. The production book and companion retain their exact checkpoint 300 hashes. No new manuscript build, production publication or fresh empty reconstruction is performed; checkpoint 300 retains its verified production and reconstruction scope.
+
+The refreshed archive passes current-payload and checksum validation: 1683 entries, 1682 manifest payloads and all 260 book-source files byte-identical to the checkpoint 300 archive. Both production PDF hashes are unchanged; archive exclusions pass. The whole-book polish remains unfinished, and Xean authentication remains blocked; no requested-model campaign, accepted solution or problem closure is claimed.
+
+Next: Read complete Chapter 5, including its nested Gauduchon trace-topology input, then continue the fresh whole-book cycle in actual order. The final Introduction reread against the finished body and all-problem research remain pending. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.
