@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint 338, based on independently verified private checkpoint 337, `4eaafdc2688b8595b17648d399d9b1fc2f7da8a9`.
+Research continuation through manuscript checkpoint 339, based on independently verified private checkpoint 338, `172af5b59d24a7eae454e805cde18fc32749ec61`.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). General separation, realization of limits, analytic closure and compatibility with the established higher-dimensional topology are unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -62,7 +62,7 @@ The smooth local correction used in that argument does not charge a divisor. Dis
 
 If \(D_\omega(p,q)=0\), equality holds in this coordinate. The logarithmic terms then cancel, giving bounded ordinary equivalence upstairs. A finite cover of the compact resolution bounds the difference away from the common pole set. Surjectivity descends the two inequalities to the complement of the pole set downstairs; canonical quasi-plurisubharmonic representatives extend them everywhere. Hence \(p\sim q\). Ordinary envelope projection depends only on this equivalence class, so the two normalized ordinary models are equal.
 
-This proves separation on analytic ordinary models. It uses the manuscript's existing analytic-resolution and divisorial-restriction inputs, not a fresh external proof audit. For arbitrary ordinary models, scalar traces could lose information carried by the coefficient measures; that issue remains part of the separation question.
+This proves separation on analytic ordinary models. It uses the manuscript's existing analytic-resolution and divisorial-restriction inputs, not a fresh external proof audit. For potentials with closed pole sets, checkpoint 339 recovers the whole polar currents from these scalar traces. General model separation from the currents is a further assertion; arbitrary nonclosed pole sets retain their separate proof obligation.
 
 ## Complete ambient coordinate space
 
@@ -98,6 +98,14 @@ The foundation proof has three components. A locally bounded function with measu
 For the bounded difference of two locally equivalent quasi-psh potentials, every real and imaginary Hessian coefficient is both a signed measure and a continuous functional on the local Sobolev space. On a compact subset of its positive Hahn set inside the common pole set, choose the test support so that the negative Jordan mass is arbitrarily small. The vanishing Sobolev norm then forces the positive mass of that compact set to vanish. Inner regularity and the same argument for the negative part exclude every coefficient from the pole set. Smooth backgrounds give no mass there either.
 
 This proves coefficientwise polar invariance on all complex manifolds, with locally bounded equivalence. It neither identifies a general ordinary model from its polar coordinates nor proves a general projection identity for arbitrary potentials. The argument is internal; no novelty or independently updated literature claim is attached to it.
+
+## Recovery for closed pole sets
+
+For two closed positive (1,1)-currents carried by a common Lebesgue null set, equality of the trace for one smooth Hermitian form forces equality of the currents. Locally write them as complex Hessians of psh potentials. The difference satisfies a homogeneous scalar uniformly elliptic equation with smooth coefficients, so elliptic regularity makes it smooth. Its Hessian is smooth and still carried by the null set; it therefore vanishes.
+
+For a potential with a closed pole set, add a local smooth correction to get a closed positive Hessian. The closed complete pluripolar restriction theorem makes its polar restriction closed and positive; the smooth remainder has no polar coefficient mass. Thus equality of the fixed Gauduchon traces on each modification is equivalent to equality of those full polar currents. This identifies what the scalar coordinates retain in this regime and does not separate general ordinary models.
+
+Exact classical inputs: Demailly's *Complex Analytic and Differential Geometry*, Chapter III, local-potential discussion and Proposition 1.19, page 135; Lemma 2.2, Theorem 2.3 and Corollary 2.4, pages 138-140. The complete relevant statements, extension proof and cutoff construction were read from the retrieved PDF whose SHA-256 is d7c7654a7417e8322e5dcf8fe8ec818b4c1a18cf280b41f2df5a871b776d89a1, identical to the earlier supplied local copy. Poincare/Dolbeault, Richberg smoothing and elliptic regularity remain classical dependencies, not a fresh whole-book audit. The theorem explicitly requires a **closed** complete pluripolar set; it is not cited for an arbitrary nonclosed pole set. The clean manuscript compilation, complete first and second proof reads and all affected output inspections pass. Source-package reconstruction and private synchronization follow the checkpoint 339 release record.
 
 ## Remaining obligations before a topology claim
 

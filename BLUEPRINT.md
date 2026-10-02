@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 339 — Closed-pole trace recovery
+
+[Lemma 1.25.3 and Corollary 15.6.13](research/editorial/closed-pole-trace-recovery-339.md) recover closed polar curvature currents from their fixed Gauduchon traces. The complete-pole extension theorem is checked with its closed-set hypothesis retained. Both complete proof reads, 22 internal mathematical checks and 30 direct final images pass. The clean 953-printed-page book and homepage are live and verified. The same catalogue source is reconciled; native compilation is unverified after a nonresponding request. Empty-source reconstruction and current archive validation pass: all 264 exact book sources, 1,807 archive entries, and identical text on all 977 book and 17 companion pages. Private synchronization follows this snapshot. General model separation and realization remain unresolved. Prior private checkpoint 338 is independently verified at 172af5b5.
+
 ## Checkpoint 338 — Bounded polar invariance and model gauges
 
 [Proposition 1.25.1 and Corollary 15.6.12](research/editorial/bounded-polar-invariance-338.md) prove bounded-equivalence invariance of the full polar curvature and smooth-gauge transport after ordinary-model projection. Both complete proof reads, 31 internal mathematical checks and 27 direct final images pass. The clean 951-printed-page book and homepage are live and verified. The same catalogue source is reconciled; its native compiler returns no diagnostics, so current preview compilation is unverified. Empty-source reconstruction and current archive validation pass: all 264 exact book sources, 1,804 archive entries, and identical text on all 975 book and 17 companion pages. Private synchronization follows this snapshot. General model separation and realization remain unresolved. Prior private checkpoint 337 is independently verified at 4eaafdc2.

@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 338: Continue P01/P17 directly: test whether equality of fixed Gauduchon traces forces equality of the full polar currents, checking closedness of polar restrictions and a local elliptic trace argument. Then examine general model separation, necessary compatibility of coordinate limits and simultaneous realization. Retain exact analytic-closure and two-sided background obligations.
+Current next unit after checkpoint 339: Continue P01/P17 directly: test whether Gauduchon forms approaching a pulled-back Kahler form can make fixed-strength moving point poles converge to zero in the polar comparison on the projective plane. If verified, compare with the existing positive-volume topology and isolate the required restriction on auxiliary forms. Then return to pushforward compatibility and compatible current limits; general model realization and exact analytic closure remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

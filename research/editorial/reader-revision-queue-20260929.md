@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 338: Continue P01/P17 directly: test whether equality of fixed Gauduchon traces forces equality of the full polar currents, checking closedness of polar restrictions and a local elliptic trace argument. Then examine general model separation, necessary compatibility of coordinate limits and simultaneous realization. Retain exact analytic-closure and two-sided background obligations.
+Current next unit after checkpoint 339: Continue P01/P17 directly: test whether Gauduchon forms approaching a pulled-back Kahler form can make fixed-strength moving point poles converge to zero in the polar comparison on the projective plane. If verified, compare with the existing positive-volume topology and isolate the required restriction on auxiliary forms. Then return to pushforward compatibility and compatible current limits; general model realization and exact analytic closure remain open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
