@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint320: Chapter 24: envelope systems over Hermitian perturbations, every recursive input; check system recovery, realizable minorants and limiting multiplier ideals.
+Current next unit after checkpoint321: Chapter 25: a Gauduchon variational volume, every recursive input; check equation scalars, dual thresholds, differentiability and nef degeneration.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

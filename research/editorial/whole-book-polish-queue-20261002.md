@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–19 pass unchanged reviews at 313–316; Chapter 20 is revised at317; Chapters 21–23 pass unchanged reviews at318–320; Chapter 24 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–19 pass unchanged reviews at 313–316; Chapter 20 is revised at317; Chapters 21–24 pass unchanged reviews at318–321; Chapter 25 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -45,7 +45,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 21 | [chapter_hopf_reduction.tex](../../book/author/chapter_hopf_reduction.tex) | complete original and two unchanged follow-up reads 318; full chapter page inspection passed |
 | Chapter 22 | [chapter_divisorial_models.tex](../../book/author/chapter_divisorial_models.tex) | complete original and two unchanged follow-up reads 319; full chapter page inspection passed |
 | Chapter 23 | [chapter_nonclosed_bclasses.tex](../../book/author/chapter_nonclosed_bclasses.tex) | complete original and two unchanged follow-up reads 320; full chapter page inspection passed |
-| Chapter 24 | [chapter_envelope_systems.tex](../../book/author/chapter_envelope_systems.tex) | queued |
+| Chapter 24 | [chapter_envelope_systems.tex](../../book/author/chapter_envelope_systems.tex) | complete original and two unchanged follow-up reads 321; full chapter page inspection passed |
 | Chapter 25 | [chapter_gauduchon_variational_volume.tex](../../book/author/chapter_gauduchon_variational_volume.tex) | queued |
 | Chapter 26 | [chapter_partial_bergman.tex](../../book/author/chapter_partial_bergman.tex) | queued |
 | Chapter 27 | [chapter_bott_chern_loci.tex](../../book/author/chapter_bott_chern_loci.tex) | queued |

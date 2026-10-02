@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 321 — Chapter 24 unchanged coherence review
+
+Complete original and two follow-up reads, 47 mathematical checks and full chapter page inspection: [review record](editorial/chapter-twenty-four-coherence-321.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint320 (1,743 archive entries). Chapter 25 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 320 — Chapter 23 unchanged coherence review
 
 Complete original and two follow-up reads, 30 mathematical checks and full chapter page inspection: [review record](editorial/chapter-twenty-three-coherence-320.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint319 (1,740 archive entries). Chapter 24 is next; the whole-book and open-problem goals remain active.

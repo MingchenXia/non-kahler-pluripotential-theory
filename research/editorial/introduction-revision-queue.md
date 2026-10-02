@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint320: Chapter 24: envelope systems over Hermitian perturbations, every recursive input; check system recovery, realizable minorants and limiting multiplier ideals.
+Current next unit after checkpoint321: Chapter 25: a Gauduchon variational volume, every recursive input; check equation scalars, dual thresholds, differentiability and nef degeneration.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
