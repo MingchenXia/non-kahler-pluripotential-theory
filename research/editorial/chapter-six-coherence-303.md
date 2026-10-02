@@ -1,0 +1,13 @@
+# Chapter 6 unchanged coherence review — checkpoint 303
+
+Baseline: 4007e1b39b54851269afb798790ec92bc04c428f.
+
+Chapter 6 passes complete original and two follow-up mathematical/editorial reads of both inputs; no source correction is required. The review checks arbitrary-background restricted positivity, non-pluripolar extension, contact and weighted lower semicontinuity, density inequalities and BMP. The infinite-mass construction retains exponential integrability at every exponent. Its strengthened version has integrable complex Hessian coefficients, a nonintegrable determinant and convergent full traces. The smooth prescribed-mass construction uses continuity of its polynomial, not monotonicity; its final convexity estimate gives convergence of every fixed exponential weight.
+
+Complete unchanged Chapter 6: chapter_products.tex (318 lines) and nested section_integrable_infinite_mass.tex (157 lines), in recursive book order. Original and two complete follow-up reads cover all 475 lines; the last follows final images. Chapter 7 lines 1–35 and two opening images are consulted as an adjacent seam only. Earlier classical foundational inputs retain their recorded scope; no fresh external full-proof certification.
+
+All 245 author inputs, root, figures, bibliography/styles and 451 protected files are byte-identical to the baseline; all 23 formal questions are unchanged. The house audit has zero errors and one reviewed existing chapter-prefix warning. All twelve chapter pages and two following opening pages are inspected directly. The final 51-page selection includes these fourteen images and 37 exact whole-pixmap carries from inspected checkpoint 302 pages. Production book and companion hashes remain exactly those of checkpoint 300. This research-record-only checkpoint performs no new production build, publication or fresh empty reconstruction; checkpoint 300 retains its recorded reconstruction scope.
+
+The refreshed archive passes current-payload and checksum validation: 1689 entries, 1688 manifest payloads and all 260 book-source files byte-identical to the checkpoint 302 archive. Both production PDF hashes remain unchanged; archive exclusions pass. The whole-book polish remains unfinished; Xean authentication is blocked, and no requested-model campaign, accepted solution or problem closure is claimed.
+
+Next: Read complete Chapter 7 and every recursive input, then continue the fresh whole-book cycle in actual order. The final Introduction reread against the finished body and all-problem research remain pending. Resume the exact first Xean problem when secure authentication is restored; all 23 formal questions remain open.

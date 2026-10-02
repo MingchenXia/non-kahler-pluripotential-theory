@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 303 — Chapter 6 unchanged coherence review
+
+Chapter 6 passes complete original and two follow-up reads of both inputs and all chapter pages without manuscript changes. See [the scoped review](research/editorial/chapter-six-coherence-303.md) and its audit. Chapter 7 is next; the whole-book and all-problem goals remain active.
+
 ## Checkpoint 302 — Chapter 5 unchanged coherence review
 
 Chapter 5 passes complete original and two follow-up reads of both inputs and all chapter pages without manuscript changes. See [the scoped review](research/editorial/chapter-five-coherence-302.md) and its audit. Chapter 6 is next; the whole-book and all-problem goals remain active.
