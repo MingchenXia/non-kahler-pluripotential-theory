@@ -1,0 +1,68 @@
+\section{Polar curvature and bounded changes}
+\label{sec:psh-polar-invariance}
+
+Bounded changes preserve more than logarithmic coefficients: they preserve the whole curvature measure on the common pole set. A local energy estimate puts the bounded difference in a Sobolev space, while pole sets admit smooth tests of arbitrarily small energy. These tests exclude every coefficient measure of its Hessian from the pole set.
+
+\begin{lemma}\label{lem:bounded-measure-laplacian-energy}
+Let $U\subset\mathbb R^d$ be open and let $w\in L^\infty_{\mathrm{loc}}(U)$. If $\Delta w$ is a locally finite signed Radon measure, then $w\in W^{1,2}_{\mathrm{loc}}(U)$.
+\end{lemma}
+\begin{proof}
+Fix $0\leq\psi\leq1$ smooth and compactly supported on $U$, and a relatively compact open neighborhood $V$ of its support. Mollify $w$ inside $V$, writing $w_\varepsilon=w*\rho_\varepsilon$ and $\nu_\varepsilon=(\Delta w)*\rho_\varepsilon$. For small $\varepsilon$, integration by parts and Young's inequality give
+\[
+ \begin{split}
+ \int\psi^2|\nabla w_\varepsilon|^2
+ &=-\int\psi^2w_\varepsilon\nu_\varepsilon
+       -2\int\psi w_\varepsilon\nabla\psi\cdot\nabla w_\varepsilon\\
+ &\leq \|w\|_{L^\infty(V)}|\Delta w|(V)
+       +\tfrac12\int\psi^2|\nabla w_\varepsilon|^2
+       +2\int w_\varepsilon^2|\nabla\psi|^2.
+ \end{split}
+\]
+The right side bounds the local gradient norm independently of $\varepsilon$. Taking $\psi=1$ on any prescribed smaller compact set, weak Sobolev compactness and convergence of mollifications in $L^2$ identify the weak limit with $w$. This proves the assertion.
+\end{proof}
+
+\begin{lemma}\label{lem:pole-small-energy-tests}\index{Pluripolar set!smooth energy tests}
+Let $v$ be quasi-plurisubharmonic on a complex manifold, let $U$ be a coordinate ball with compact closure in a larger chart, and let $K\subset U\cap\{v=-\infty\}$ be compact. For every open $O\subset U$ containing $K$, there are real $\varphi_j\in C^\infty_c(O)$ with $0\leq\varphi_j\leq1$, equal to one near $K$, such that $\|\varphi_j\|_{W^{1,2}(U)}\to0$. The norm uses the Euclidean coordinates.
+\end{lemma}
+\begin{proof}
+A smooth quadratic correction and subtraction of a constant give a negative plurisubharmonic function $h$ on $U$ with the same pole set as $v$. Put $h_M=\max(h,-M)$ for $M\geq1$ and choose $0\leq\psi\leq1$ in $C^\infty_c(O)$, equal to one near $K$. On a fixed compact neighborhood of $\operatorname{supp}\psi$, the positive measures $\Delta h_M$ have uniformly bounded mass: choose a nonnegative smooth compactly supported $\chi$ on $U$ equal to one there and use
+\[
+ \int\chi\,\Delta h_M=\int h_M\Delta\chi,
+ \qquad |h_M|\leq|h|\in L^1_{\mathrm{loc}}(U).
+\]
+Apply the preceding integration-by-parts estimate to mollifications of $h_M$. Their absolute values are at most $M$, and their squares are at most $M$ times their absolute values. The uniform Laplacian mass and local $L^1$ bounds therefore give, after passing to the weak Sobolev limit,
+\[
+ \int\psi^2|\nabla h_M|^2\leq CM,
+ \qquad
+ \left\|\frac{-\psi h_M}{M}\right\|_{W^{1,2}(U)}^2\leq\frac{C}{M}.
+\]
+Here $C$ depends on the fixed cutoffs and the local $L^1$ norm of $h$, but not on $M$. The second inequality also uses $h_M^2\leq M|h|$ in the terms containing $\psi$ and $\nabla\psi$.
+
+The Sobolev function $-\psi h_M/M$ lies between zero and one. It equals one on a neighborhood of $K$, since $h$ is upper semicontinuous and $\{h<-M\}$ is an open neighborhood of $K$. Extend it by zero and mollify with sufficiently small radius. Its support stays in $O$, it remains equal to one on a smaller neighborhood of $K$, and its Sobolev norm does not increase. Taking $M\to\infty$ gives the required smooth functions.
+\end{proof}
+
+Restrictions below are taken coefficientwise on the Radon measures of a current of order zero. They therefore commute with smooth changes of coordinates.
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:bounded-type-polar-invariance}\index{Singularity type!polar curvature invariance}\index{Polar curvature!bounded changes}
+Let $u,v$ be quasi-plurisubharmonic on a complex manifold and locally equivalent up to bounded constants. Their pole sets agree, say $S=\{u=-\infty\}=\{v=-\infty\}$, and
+\[
+ \mathbf1_S\ddc u=\mathbf1_S\ddc v.
+\]
+Consequently, for any smooth real $(1,1)$-forms $\theta,\beta$,
+\[
+ \mathbf1_S(\theta+\ddc u)=\mathbf1_S(\beta+\ddc v).
+\]
+\end{proposition}
+\begin{proof}
+The two local order inequalities give the same pole set. Off $S$ put $w=u-v$ and assign arbitrary bounded values on $S$. This defines the locally bounded distribution $u-v$, because $S$ has Lebesgue measure zero. The coefficient measures of $\ddc w$ are locally finite: after a smooth correction, each Hessian of $u$ and $v$ is a positive current of order zero. Its Euclidean trace makes $\Delta w$ a signed measure. Thus \cref{lem:bounded-measure-laplacian-energy} gives $w\in W^{1,2}_{\mathrm{loc}}$.
+
+Each real and imaginary part of a coefficient measure of $\ddc w$ is consequently a continuous functional on $W^{1,2}_0$ on a smaller ball, since a second distributional derivative of $w$ is a first derivative of its $L^2$ gradient. Let $\nu$ be any one of these real signed measures, with Jordan parts $\nu^+,\nu^-$. Choose a compact $K$ in the intersection of $S$ with a positive Hahn set, so $\nu^-(K)=0$. For $\epsilon>0$, take an open neighborhood $O$ of $K$ in the ball with $\nu^-(O)<\epsilon$. The tests of \cref{lem:pole-small-energy-tests}, applied to $u$, satisfy
+\[
+ \nu^+(K)\leq\int\varphi_j\,\mathrm d\nu^+
+       =\langle\nu,\varphi_j\rangle
+          +\int\varphi_j\,\mathrm d\nu^-
+       \leq|\langle\nu,\varphi_j\rangle|+\epsilon.
+\]
+Continuity on the Sobolev space makes the first term tend to zero. Letting $\epsilon\downarrow0$ and using inner regularity gives $\nu^+(S)=0$ locally. Applying the same argument to $-\nu$ gives $\nu^-(S)=0$. All coefficient measures of $\ddc w$ therefore vanish on $S$, proving the first identity. Smooth forms also assign zero mass to $S$, which proves the second.
+\end{proof}

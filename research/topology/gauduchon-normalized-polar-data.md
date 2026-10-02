@@ -1,8 +1,8 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation after manuscript checkpoint 336, based on private source `452b5c0e23ef40ea40f494cf106eb5d9d7cb8de3`.
+Research continuation through manuscript checkpoint 338, based on independently verified private checkpoint 337, `4eaafdc2688b8595b17648d399d9b1fc2f7da8a9`.
 
-Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). General separation, realization of limits, analytic closure and compatibility with the established higher-dimensional topology are unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
+Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). General separation, realization of limits, analytic closure and compatibility with the established higher-dimensional topology are unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
 ## Setting and comparison
 
@@ -89,7 +89,15 @@ In dimension one, every modification of smooth connected compact curves is an is
 \]
 For a fixed positive-area background this is a constant multiple of the complete curve metric already proved in manuscript Section 29.12. It has the same topology, completeness and analytic closure. It is not a construction over varying zero-area backgrounds, where this normalization has a zero denominator.
 
-Exact smooth-gauge transport also holds on genuine potentials. If \(\omega'=\omega+\operatorname{dd}^{\mathrm c}f\) and \(u'=u-f\), then their pulled-back curvature currents and pole sets agree. Distributional Stokes gives \(A_{\pi,\omega'}=A_{\pi,\omega}\), using the same Gauduchon forms. Thus their coordinate comparisons agree. Transport followed by normalized ordinary-model projection is a separate operation. Its effect on these polar traces has not been proved in general.
+Exact smooth-gauge transport also holds on genuine potentials. If \(\omega'=\omega+\operatorname{dd}^{\mathrm c}f\) and \(u'=u-f\), then their pulled-back curvature currents and pole sets agree. Distributional Stokes gives \(A_{\pi,\omega'}=A_{\pi,\omega}\), using the same Gauduchon forms. Thus their coordinate comparisons agree. For an ordinary fixed point, the gauge estimate bounds the projected model plus the smooth gauge between the original model plus the minimum and maximum of that gauge. The two potentials are therefore boundedly equivalent. The local bounded-invariance proposition proves equality of all their pulled-back polar current restrictions, so the comparison is also preserved after this projection. Ordinary-envelope dependence on the bounded class proves the inverse and fixed-point assertions; no unrestricted idempotence or positive-volume theorem is used. Analytic and ideal models are preserved by the existing ideal gauge and projection identities.
+
+## Local bounded-invariance proof boundary
+
+The foundation proof has three components. A locally bounded function with measure Laplacian has locally square-integrable gradient, obtained by testing its smooth mollifications against its product with a squared cutoff and absorbing the cross term. A negative quasi-psh potential after smooth correction has truncations whose Laplacian masses are bounded on each fixed compact set; their cutoff energies grow at most linearly in the truncation depth. Dividing by that depth gives smooth functions equal to one near any compact subset of the pole set, with Sobolev norm tending to zero.
+
+For the bounded difference of two locally equivalent quasi-psh potentials, every real and imaginary Hessian coefficient is both a signed measure and a continuous functional on the local Sobolev space. On a compact subset of its positive Hahn set inside the common pole set, choose the test support so that the negative Jordan mass is arbitrarily small. The vanishing Sobolev norm then forces the positive mass of that compact set to vanish. Inner regularity and the same argument for the negative part exclude every coefficient from the pole set. Smooth backgrounds give no mass there either.
+
+This proves coefficientwise polar invariance on all complex manifolds, with locally bounded equivalence. It neither identifies a general ordinary model from its polar coordinates nor proves a general projection identity for arbitrary potentials. The argument is internal; no novelty or independently updated literature claim is attached to it.
 
 ## Remaining obligations before a topology claim
 
@@ -97,6 +105,6 @@ Exact smooth-gauge transport also holds on genuine potentials. If \(\omega'=\ome
 2. Prove that limits in the complete ambient coordinate space are simultaneously realized by ordinary models. Coordinatewise positive measures and preserved carriers are insufficient.
 3. Identify the closure of analytic models and prove that it is exactly the ideal-model locus.
 4. Compare this pseudometric with the established complete topology under bounded mass and positive lower volume.
-5. Control ordinary-model projection under smooth gauges and two-sided background changes, and handle degeneration of the background normalization.
+5. Control two-sided background changes and degeneration of the background normalization. Smooth-gauge transport after model projection is covered by checkpoint 338; projection of an arbitrary non-model potential is not asserted to preserve its polar data.
 
 In dimension at least two, the manuscript's prescribed-countable-modification obstruction is respected: replacing \(\mathscr R\) by any fixed countable family leaves some analytic ideal models indistinguishable. The present construction uses a collection containing common resolutions and does not reduce that requirement to countably many fixed detectors.

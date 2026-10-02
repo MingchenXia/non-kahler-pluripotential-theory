@@ -73,3 +73,5 @@ Checkpoint335 adds the first polar-current obstruction with a complete proof and
 Checkpoint336 proves exceptional polar-current detection and the prescribed-countable-modification obstruction, with complete proofs and current catalogue reconciliation. Continue P01/P17 by checking all-modification data and compatible-limit realization; these two corollaries do not close the general question.
 
 Checkpoint337 integrates Gauduchon-normalized polar trace comparison with complete proofs. Its ambient coordinates are complete, while general model realization remains open. Continue bounded ordinary-class invariance and projected smooth-gauge transport; native catalogue compilation remains unverified after nonresponding requests.
+
+Checkpoint 338 integrates the Chapter 1 bounded polar-invariance foundation and exact model gauge transport, with full proofs and current catalogue reconciliation. General P01/P17 remain open. Continue general separation and compatible-limit realization; native catalogue compilation is unverified after its nonresponding check.
