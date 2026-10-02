@@ -1,0 +1,75 @@
+\subsubsection{Gauduchon polar trace comparisons}
+\label{subsec:gauduchon-polar-comparison}
+
+Gauduchon trace gives a uniform normalization for polar curvature on different modifications. The resulting comparison separates analytic models without a bound on top-degree mass. Its complete coordinate space isolates the further realization question.
+
+Let $X$ be connected and compact, of dimension $n\geq1$, and let $\omega$ be Hermitian. Fix a set $\mathscr R$ of smooth modifications $\pi:Y_\pi\to X$ containing the identity and common log resolutions for pairs of analytic singularity types. Choose a Gauduchon form $\eta_\pi$ on each $Y_\pi$. For genuine $u\in\PSH(X,\omega)$, set
+\[
+ \mu_\pi(u)=\mathbf1_{\{u\circ\pi=-\infty\}}
+       \bigl(\pi^*\omega+\ddc(u\circ\pi)\bigr)
+          \wedge\eta_\pi^{n-1},
+\]
+with coefficientwise current restriction, and define
+\begin{equation}\label{eq:gauduchon-polar-comparison}
+ \begin{gathered}
+ A_\pi=\int_{Y_\pi}\pi^*\omega\wedge\eta_\pi^{n-1},\\
+ \delta_\omega^{\mathrm{pol}}(u,v)
+       =\sup_{\pi\in\mathscr R}
+          \frac{\|\mu_\pi(u)-\mu_\pi(v)\|_{\mathrm{TV}}}{A_\pi}.
+ \end{gathered}
+\end{equation}
+The Gauduchon forms are fixed data. Positive scalar rescaling of any one of them leaves its coordinate comparison unchanged.
+
+\Needspace{16\baselineskip}
+\begin{proposition}\label{prop:gauduchon-polar-comparison}\index{Model potential!Gauduchon polar trace}\index{Gauduchon metric!polar trace comparison}
+Every $A_\pi$ is positive. The comparison in \eqref{eq:gauduchon-polar-comparison} is a pseudometric on $\PSH(X,\omega)$, bounded by two, and restricts to a metric on normalized ordinary models with analytic singularities. On all ordinary curve models,
+\[
+ \delta_\omega^{\mathrm{pol}}(p,q)
+       =\frac{\|\mu_{\operatorname{id}_X}(p)-\mu_{\operatorname{id}_X}(q)\|_{\mathrm{TV}}}{\int_X\omega},
+\]
+so it induces the complete curve topology with analytic closure exactly the ideal models.
+
+For real smooth $f$, put $\omega'=\omega+\ddc f$. Using the same Gauduchon forms and the same defining formula for $\omega'$, its denominators remain positive and
+\[
+ \delta_{\omega'}^{\mathrm{pol}}(u-f,v-f)
+       =\delta_\omega^{\mathrm{pol}}(u,v)
+       \qquad(u,v\in\PSH(X,\omega)).
+\]
+\end{proposition}
+\begin{proof}
+The form $\pi^*\omega$ is semipositive and is positive on the nonempty isomorphism locus, so $A_\pi>0$. Pullback is genuine and admissible by \cref{prop:psh-descent-modification}. Since $\ddc\eta_\pi^{n-1}=0$, distributional Stokes gives
+\[
+ \int_{Y_\pi}\bigl(\pi^*\omega+\ddc(u\circ\pi)\bigr)
+                 \wedge\eta_\pi^{n-1}=A_\pi.
+\]
+Thus $\mu_\pi(u)$ is positive and has mass at most $A_\pi$. The normalized variation distance of two such measures is at most two. Its triangle inequality and symmetry persist under the supremum, giving the pseudometric assertion.
+
+For analytic ordinary models $p,q$, choose a common log resolution in $\mathscr R$. If $\delta_\omega^{\mathrm{pol}}(p,q)=0$, their measures in this coordinate agree. If $E_i$ are its resolved prime components and $a_i,b_i$ their coefficients, the divisorial-restriction argument of \cref{lem:nonclosed-divisorial-removal} gives
+\[
+ \mu_\pi(p)=\sum_i a_i[E_i]\wedge\eta_\pi^{n-1},\qquad
+ \mu_\pi(q)=\sum_i b_i[E_i]\wedge\eta_\pi^{n-1}.
+\]
+A smooth local correction makes the Hessian closed and positive without changing its coefficient mass on a divisor. Distinct components have no overlapping trace mass on their intersections. Each component has strictly positive trace mass. Equality of these measures therefore implies $a_i=b_i$ for every $i$. The finite divisorial criterion of \cref{lem:analytic-ideal-dominance}, applied in both directions, gives $p\sim q$. Ordinary projection depends only on this bounded equivalence class, so normalized ordinary models in that class are equal. This proves separation.
+
+On a curve every smooth modification is an isomorphism, and the trace exponent is zero. Hence $A_\pi=\int_X\omega$, and pullback preserves polar total variation. The displayed curve formula and its assertions follow from \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect}.
+
+Finally $u-f$ has the same pulled-back curvature current and pole set in background $\omega'$ as $u$ in background $\omega$. Stokes also gives $A_{\pi,\omega'}=A_{\pi,\omega}$. The gauge formula follows. It applies to the genuine potentials before ordinary-model projection.
+\end{proof}
+
+The positive measure coordinates have a complete ambient space. For each $\pi$, let $\mathscr B_\pi$ consist of the positive finite Borel measures on $Y_\pi$ with mass at most $A_\pi$.
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:polar-trace-coordinate-completeness}\index{Metric completeness!polar trace coordinates}
+The space $\prod_{\pi\in\mathscr R}\mathscr B_\pi$ is complete for the metric
+\[
+ \widehat\delta((\lambda_\pi),(\nu_\pi))
+       =\sup_{\pi\in\mathscr R}
+          \frac{\|\lambda_\pi-\nu_\pi\|_{\mathrm{TV}}}{A_\pi}.
+\]
+The map $u\mapsto(\mu_\pi(u))_\pi$ takes values in this space and preserves the comparison $\delta_\omega^{\mathrm{pol}}$.
+\end{proposition}
+\begin{proof}
+The metric is finite, bounded by two, and separates coordinates. A Cauchy sequence is Cauchy in total variation in each coordinate. Completeness of finite signed measures gives its limit there; positivity and the mass bound pass to that limit. Given $\varepsilon>0$, choose $N$ so that for all $j,k\geq N$ every normalized coordinate distance is at most $\varepsilon$. Letting $k$ tend to infinity separately in each coordinate retains that inequality. Taking the supremum proves convergence in $\widehat\delta$. The final assertion follows from the definition and the mass bound already proved.
+\end{proof}
+
+Completeness of these coordinates leaves the realization of their limits by ordinary models to be proved. Separation on general ordinary models, identification of the analytic closure and comparison with the positive-volume topology are also needed. The raw gauge identity does not supply transport after ordinary projection, and this normalization does not treat backgrounds of zero curve area.

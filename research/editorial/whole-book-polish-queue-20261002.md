@@ -71,3 +71,5 @@ The author removes Xean from the workflow. Checkpoint334 adds and checks the joi
 Checkpoint335 adds the first polar-current obstruction with a complete proof and reconciles the same open catalogue. General P01/P17 remain open; the next direct unit tests polar data on modifications.
 
 Checkpoint336 proves exceptional polar-current detection and the prescribed-countable-modification obstruction, with complete proofs and current catalogue reconciliation. Continue P01/P17 by checking all-modification data and compatible-limit realization; these two corollaries do not close the general question.
+
+Checkpoint337 integrates Gauduchon-normalized polar trace comparison with complete proofs. Its ambient coordinates are complete, while general model realization remains open. Continue bounded ordinary-class invariance and projected smooth-gauge transport; native catalogue compilation remains unverified after nonresponding requests.

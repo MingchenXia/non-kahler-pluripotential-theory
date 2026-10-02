@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint336: Continue P01/P17 directly: test polar-current data over all modifications for invariance under ordinary equivalence and separation, then study realization of compatible Cauchy limits. Retain the exact general questions; the prescribed-countable-detector obstruction alone does not decide complete metrizability.
+Current next unit after checkpoint337: Continue P01/P17 directly: prove whether bounded ordinary equivalence preserves coefficientwise polar curvature using local energy estimates and tests near pole sets. If verified, apply it to smooth-gauge transport after ordinary projection. Then address separation of general models and realization of coordinate limits.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

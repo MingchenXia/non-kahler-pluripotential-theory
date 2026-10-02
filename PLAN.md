@@ -157,3 +157,5 @@ The author explicitly removes Xean from the workflow: “你可以完全忘记Xe
 Checkpoint 335 verifies a higher-dimensional obstruction to using only the first polar curvature current. Continue P01/P17 with polar data on modifications and compatible-limit realization. All 23 formal and 18 supplemental directions remain within the ongoing research goal; no solver service is required.
 
 Checkpoint 336 proves detection after blowing up the pole and failure of any predetermined countable family of modification detectors. Continue directly with all-modification data and compatible limits; all 23 formal and 18 supplemental research directions remain within the ongoing goal.
+
+Checkpoint337 adds checked Gauduchon normalization, analytic-model separation, the complete curve restriction and a complete ambient coordinate space. Continue bounded ordinary-class invariance and transport after ordinary projection; do not equate ambient completeness with model realization or research completion.

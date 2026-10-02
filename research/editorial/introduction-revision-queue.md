@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint336: Continue P01/P17 directly: test polar-current data over all modifications for invariance under ordinary equivalence and separation, then study realization of compatible Cauchy limits. Retain the exact general questions; the prescribed-countable-detector obstruction alone does not decide complete metrizability.
+Current next unit after checkpoint337: Continue P01/P17 directly: prove whether bounded ordinary equivalence preserves coefficientwise polar curvature using local energy estimates and tests near pole sets. If verified, apply it to smooth-gauge transport after ordinary projection. Then address separation of general models and realization of coordinate limits.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

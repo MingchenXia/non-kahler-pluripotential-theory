@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint336: Continue P01/P17 directly: test polar-current data over all modifications for invariance under ordinary equivalence and separation, then study realization of compatible Cauchy limits. Retain the exact general questions; the prescribed-countable-detector obstruction alone does not decide complete metrizability.
+Current next unit after checkpoint337: Continue P01/P17 directly: prove whether bounded ordinary equivalence preserves coefficientwise polar curvature using local energy estimates and tests near pole sets. If verified, apply it to smooth-gauge transport after ordinary projection. Then address separation of general models and realization of coordinate limits.
 
 | Chapter | Source | This cycle |
 |---|---|---|
