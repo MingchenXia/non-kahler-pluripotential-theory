@@ -1,5 +1,11 @@
 # Current research status — 2 October 2026
 
+## Active author programme — 2 October 2026
+
+The goal remains unfinished: finish the pending manuscript additions and releases, then complete [a fresh cover-to-cover polish](editorial/whole-book-polish-queue-20261002.md) for coherence and readability. Also try the [23 formal questions one by one with Xean](xean/README.md), using `gpt-6.1-sol` at `xhigh`. Both new queues are pending; no campaign has run. Historical writing acceptance below retains its own checked scope.
+
+The managed workspace failed to start. Checkpoint294 passed its recorded source/output/reconstruction checks and its 937-page PDF/homepage update was verified live, but its private source synchronization is still pending. The remote manuscript checkpoint remains293. Preserve and reconcile the local and remote work before continuing; do not force-push or discard either.
+
 ## Checkpoint294 — General auxiliary product models
 
 Proposition 15.6.18 on page455 proves the following. Arbitrary compact complex auxiliary factors and smooth semipositive vertical terms preserve the separated curve envelope identities, complete geodesic polar metric, ideal analytic closure and nearest-point ideal retraction without an ambient mass bound. Zero-obstacle equality, atomic polar curvature, relative-envelope membership and equality at every smooth obstacle remain equivalent. All model comparison volumes vanish. Vanishing auxiliary terms or curve areas force nonbigness; positive curve areas and strictly positive vertical terms give bigness, including genuinely nonclosed examples. Genuine curve-product slices and countable-divisor domination compute the base projections. Unit-divisor reduction transfers them upstairs and gives zero mass for every ordinary representative. The common potential on Y times Z identifies the polar and actual analytic loci across auxiliary factors. Pullback of curve stretching competitors proves the obstacle criterion. Compact-fiber descent and closed top-degree auxiliary test forms prove the nonbig cases; smooth curve gauges prove bigness, and the mixed derivative component proves genuine nonclosedness.
