@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint283: Construct a complete polar-total-variation metric on the divisorial product locus of ordinary models over a positive curve. Show that top-degree volume comparison vanishes throughout this locus, while the new restricted metric separates models, identifies the closed ideal subspace and controls convergence of the potentials. Keep the general higher-dimensional completion problem open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint284: Extend the restricted complete metric to the genuinely nonclosed projective construction. Compute both base projections for every curve model under the varying positive fiber coefficient, and verify the induced ideal subspace, analytic density and L1 convergence upstairs. Keep the general higher-dimensional completion and background-compatibility problem open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

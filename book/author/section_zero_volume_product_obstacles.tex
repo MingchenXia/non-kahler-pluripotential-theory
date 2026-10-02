@@ -2,7 +2,7 @@
 \subsection{Divisorial products and zero volume}
 \label{subsec:zero-volume-product-obstacles}
 
-For products over a curve, the fibration criterion becomes a classification by the polar curvature of one curve potential. A normalized divisor potential on the second factor makes the induced zero obstacle equal to zero on the curve. Projective products give examples with no analytic ordinary type, as well as distinct models with identical zero volumes.
+For products over a curve, the fibration criterion becomes a classification by the polar curvature of one curve potential. A normalized divisor potential on the second factor makes the induced zero obstacle equal to zero on the curve. Projective products give examples with no analytic ordinary type, as well as distinct models with identical zero volumes. Polar curvature on the base nevertheless gives a complete metric on this product locus.
 
 Let $C$ be a compact connected curve with a smooth positive form $\eta$, and let $Z$ be a connected compact K\"ahler manifold of dimension $k\geq1$. Suppose that $D\subset Z$ is a nonempty smooth reduced divisor, $\kappa$ is a K\"ahler form, and $\psi\in\PSH(Z,\kappa)$ is smooth off $D$ and satisfies
 \[
@@ -111,4 +111,53 @@ Set $k=n-2$ and $M=Y\times\mathbb P^k$, with projections $p,r$. On the second fa
 The form $\Theta$ is positive and nonclosed. A sufficiently large multiple of the closed positive product form dominates $\Theta$. The bounded mass property follows from Stokes' theorem for that closed form and metric independence in \cref{prop:bmp-metric}.
 
 Apply \cref{prop:fibration-obstacle-reduction} to $p:M\to Y$ and the divisor $Y\times D$. The induced zero obstacle is zero because $\sup\psi=0$. The two base-envelope identities give all four upstairs identities, and both functions have supremum zero. Ideal projection preserves the ideal type, so $a\sim_{\mathcal I}b$. Moreover, $a\leq b$, while their difference restricts to the unbounded $w$ on any section outside the divisor, so $a\not\sim b$. The same fibration proposition gives zero extended mass for every ordinary representative of $a$ or $b$, since $\dim Y=2<n$. This proves the volume assertions.
+\end{proof}
+
+Return to the original product $M=C\times Z$ and its fixed divisor potential $\Psi$. Although its top-degree volumes vanish, the polar curvature on $C$ still distinguishes the induced ordinary models.
+
+\begin{definition}\label{def:divisorial-product-model-locus}\index{Model potential!divisorial product locus}
+For a normalized ordinary model $q$ in background $\eta$ on $C$, put
+\[
+ \Phi(q)=\Psi+q\circ p,\qquad
+ \mathcal S_\Psi=\{\Phi(q):P_\eta[q]=q\}.
+\]
+Write $\mu_q=\mathbf1_{\{q=-\infty\}}(\eta+\ddc q)$ for its polar curvature. Define
+\begin{equation}\label{eq:divisorial-product-polar-metric}
+ \rho_\Psi(\Phi(q_1),\Phi(q_2))
+       =\|\mu_{q_1}-\mu_{q_2}\|_{\mathrm{TV}}.
+\end{equation}
+\end{definition}
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:divisorial-product-polar-metric}\index{Metric completeness!zero-volume product}\index{Model potential!polar product metric}
+The set $\mathcal S_\Psi$ consists of normalized ordinary models in background $\Theta$, and $(\mathcal S_\Psi,\rho_\Psi)$ is a complete geodesic metric space. The volume comparison of \cref{def:model-volume-comparison} satisfies
+\[
+ d_\Theta(a,b)=0\qquad(a,b\in\mathcal S_\Psi).
+\]
+The ideal models in $\mathcal S_\Psi$ form a closed geodesically convex subspace, equal to the $\rho_\Psi$-closure of its analytic models. Ideal projection is a $1$-Lipschitz retraction onto this subspace and selects the unique nearest ideal model. For $a=\Phi(q)$ its distance is the mass of the nonatomic part of $\mu_q$. If $\rho_\Psi(a_j,a)\to0$, then $a_j\to a$ in $L^1(M)$ for every smooth positive volume form.
+\end{proposition}
+\begin{proof}
+The zero-obstacle identities in \cref{prop:divisorial-product-obstacles} give
+\[
+ P_\Theta[\Phi(q)]=\Phi(q),\qquad
+ P_\Theta[\Phi(q)]_{\mathcal I}
+       =\Phi(P_\eta[q]_{\mathcal I}).
+\]
+Both summands have supremum zero on their respective factors, so $\Phi(q)$ is normalized. Restriction to any section outside $D$ shows that $\Phi$ is injective. The classification in \cref{lem:curve-polar-model} and the distance formula in \cref{thm:curve-model-volume-distance} therefore identify $\Phi$ with an isometry from the curve model space onto $\mathcal S_\Psi$. Completeness and geodesics follow from \cref{cor:curve-model-completeness}.
+
+Every ordinary representative of $\Phi(q)$ has zero extended mass by \cref{prop:fibration-obstacle-reduction}. Moreover,
+\[
+ \max(\Phi(q_1),\Phi(q_2))
+       =\Psi+\max(q_1,q_2)\circ p.
+\]
+The same proposition applies to this curve potential and gives zero upper volume for the maximum. Thus all three upper volumes in the definition of $d_\Theta$ vanish.
+
+Ideal projection corresponds under $\Phi$ to taking the atomic part of $\mu_q$. The closedness, convexity and nearest-point assertions follow from \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect}. To check analytic closure upstairs, approximate an atomic measure by finite rational atomic measures of mass less than $\int_C\eta$. Their curve models have the corresponding logarithmic poles up to bounded remainder, by \cref{lem:curve-atomic-ideal-model}. Adding $\Psi$ preserves an analytic presentation: clear the denominators of the rational pole coefficients and the unit coefficient of $D$ in the local product monomial. The resulting models in $\mathcal S_\Psi$ converge in $\rho_\Psi$. Conversely, every analytic ordinary model in this locus is its ideal projection by \cref{prop:analytic-envelope-type}, so its closure lies in the closed ideal subspace.
+
+Finally, \cref{thm:curve-model-capacity-convergence} gives $q_j\to q$ in $L^1(C)$ when $\rho_\Psi(\Phi(q_j),\Phi(q))\to0$. Off the pole sets, which have smooth volume zero, the difference of the two product potentials is $(q_j-q)\circ p$. For a smooth positive volume form $\mathrm dV$ on $M$, integration along the compact fibers makes $p_*\mathrm dV$ a smooth positive density on $C$. Fubini gives
+\[
+ \int_M|\Phi(q_j)-\Phi(q)|\,\mathrm dV
+       \leq C_{\mathrm dV}\|q_j-q\|_{L^1(C,\eta)}\longrightarrow0.
+\]
+Here $C_{\mathrm dV}$ bounds the density of $p_*\mathrm dV$ relative to $\eta$.
 \end{proof}
