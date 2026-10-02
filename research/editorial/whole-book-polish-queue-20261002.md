@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, and Chapter 7 is revised at 304; Chapter 8 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, and Chapter 8 passes an unchanged review at 305; Chapter 9 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -29,7 +29,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 5 | [chapter_compactness.tex](../../book/author/chapter_compactness.tex) | complete original and two unchanged follow-up recursive reads 302; full page inspection passed |
 | Chapter 6 | [chapter_products.tex](../../book/author/chapter_products.tex) | complete original and two unchanged follow-up recursive reads 303; full page inspection passed |
 | Chapter 7 | [chapter_damped_measures.tex](../../book/author/chapter_damped_measures.tex) | complete original and two revised recursive reads 304; release checks recorded |
-| Chapter 8 | [chapter_hopf.tex](../../book/author/chapter_hopf.tex) | queued |
+| Chapter 8 | [chapter_hopf.tex](../../book/author/chapter_hopf.tex) | complete original and two unchanged follow-up reads 305; full chapter page inspection passed |
 | Chapter 9 | [chapter_smooth_equations.tex](../../book/author/chapter_smooth_equations.tex) | queued |
 | Chapter 10 | [chapter_weak_equations.tex](../../book/author/chapter_weak_equations.tex) | queued |
 | Chapter 11 | [chapter_degenerate_uniqueness.tex](../../book/author/chapter_degenerate_uniqueness.tex) | queued |
@@ -62,4 +62,4 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 
 Use [the Xean queue](../xean/README.md) with the author's requested model and effort. Keep campaign acceptance, an independent check and the editorial decision about the book's exact question distinct. Any incorporated result triggers its proof/interface review and the ordinary publication workflow.
 
-Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–304 record complete original and two follow-up reads of Chapters 1–7; Chapter 8 is next.
+Actual complete/partial reads and source hashes are recorded in [the read ledger](whole-book-polish-read-ledger-20261002.json). Checkpoint297 records the fresh unchanged front units and root. Checkpoints 298–305 record complete original and two follow-up reads of Chapters 1–8; Chapter 9 is next.
