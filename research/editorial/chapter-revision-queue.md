@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint319: Chapter 23: classes with a non-closed background, every recursive input; check prescribed derivatives, affine nef realizations and limits of residual currents.
+Current next unit after checkpoint320: Chapter 24: envelope systems over Hermitian perturbations, every recursive input; check system recovery, realizable minorants and limiting multiplier ideals.
 
 | Chapter | Source | This cycle |
 |---|---|---|

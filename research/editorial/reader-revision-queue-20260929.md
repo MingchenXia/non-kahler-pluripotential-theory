@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint319: Chapter 23: classes with a non-closed background, every recursive input; check prescribed derivatives, affine nef realizations and limits of residual currents.
+Current next unit after checkpoint320: Chapter 24: envelope systems over Hermitian perturbations, every recursive input; check system recovery, realizable minorants and limiting multiplier ideals.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
