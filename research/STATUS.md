@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 306 — Chapter 9 coherence and layout
+
+Complete original and two revised reads, mathematical checks, restored gradient QED and intact torsion statement: [review record](editorial/chapter-nine-coherence-306.md). Clean production and live publication passed; final source-package reconstruction and payload validation passed. Chapter 10 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 305 — Chapter 8 unchanged coherence review
 
 Complete original and two follow-up reads, mathematical checks and full chapter page inspection: [review record](editorial/chapter-eight-coherence-305.md). Source-package checks pass; all 260 book-source files and both PDF hashes are unchanged. Chapter 9 is next; the whole-book and open-problem goals remain active.
