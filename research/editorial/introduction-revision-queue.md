@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint323: Chapter 27: Bott–Chern classes and geometric loci, every recursive input; check cone compactness, restricted masses, divisorial thresholds, elliptic descent and density geometry.
+Current next unit after checkpoint324: Chapter 28: locally conformally Kähler geometry and the Lee–Gauduchon cone, every recursive input; check exact positivity, LCK constructions, elliptic quotients and the remaining formal questions.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

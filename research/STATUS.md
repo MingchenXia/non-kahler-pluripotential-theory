@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 324 — Chapter 27 unchanged coherence review
+
+Complete original and two follow-up reads, 61 mathematical checks and full chapter page inspection: [review record](editorial/chapter-twenty-seven-coherence-324.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,757 archive entries). Chapter 28 is next; whole-book polish and open-problem research remain active.
+
 ## Standalone open-problem catalogue
 
 The author's requested [LaTeX catalogue](open-problems-catalogue.tex) is complete and compiled: 23 formal labels, 18 supplemental questions or research directions, and 25 bibliography entries. It gives full statements and hypotheses, the known manuscript and literature results, remaining gaps, and overlap boundaries. All formal statements match current source. The 28-page PDF has no unresolved references or overfull boxes; final layout spot checks pass. [Inventory](open-problems-catalogue.json) and [source scan audit](open-problems-catalogue-audit.json) preserve the accepted-head scope. No fresh literature survey or new proof is claimed. Chapter 27 review remains in progress; the full-book and exact-problem goals remain active.

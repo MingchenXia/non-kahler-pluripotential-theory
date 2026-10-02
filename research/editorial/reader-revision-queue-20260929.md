@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint323: Chapter 27: Bott–Chern classes and geometric loci, every recursive input; check cone compactness, restricted masses, divisorial thresholds, elliptic descent and density geometry.
+Current next unit after checkpoint324: Chapter 28: locally conformally Kähler geometry and the Lee–Gauduchon cone, every recursive input; check exact positivity, LCK constructions, elliptic quotients and the remaining formal questions.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

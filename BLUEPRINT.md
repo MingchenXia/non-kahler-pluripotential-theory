@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 324 — Chapter 27 unchanged coherence review
+
+Complete original and two follow-up reads, 61 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twenty-seven-coherence-324.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,757 archive entries). Chapter 28 is next; whole-book polish and open-problem research remain active.
+
 ## Checkpoint 323 — Chapter 26 unchanged coherence review
 
 Complete original and two follow-up reads, 43 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twenty-six-coherence-323.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint322 (1,751 archive entries). Chapter 27 is next; the whole-book and open-problem goals remain active.
