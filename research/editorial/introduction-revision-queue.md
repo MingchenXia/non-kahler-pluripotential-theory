@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint285: Transport the restricted product-model metric through nonnegative fiber coefficients, including the limit zero where the background loses bigness. Prove the ideal-envelope identities at degenerate coefficients directly from divisorial domination, and check exact normalization, ideal projection and metric compatibility on the fixed locus. Keep the general background-degeneration problem open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint286: Extend the complete metric to finite products of independent curve models. Prove the ordinary-envelope identity for separated sums by fiber suprema, compute ideal projection from the finite-mass divisorial current, and verify product completeness, analytic closure and L1 convergence. Keep the unrestricted higher-dimensional model-space problem open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -1,5 +1,15 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint286 — Degenerate product polar metric
+
+Both product-envelope identities and the complete polar-total-variation metric persist for every nonnegative second-curve coefficient, including zero. The same normalized functions and polar measures give an exact isometry commuting with ideal projection across these backgrounds. Analytic closure and L1 convergence remain compatible. A closed positive test form and Stokes prove loss of bigness at zero. Chapter15 and Chapter32 retain the unrestricted completion and degeneration problems.
+
+The complete product input and bounded interfaces pass two fresh revised reads, the second after the production build and all 33 direct images. Original/dependency scopes are recorded. One corollary/proof, one label and two index insertions are added. All 32 existing formal/proof blocks, 235 other author inputs, figures, bibliography/styles, 23 questions and 451 protected hashes are preserved. All 1704 labels and 1248 distinct targets resolve. The primary house audit has zero errors/warnings; 12 interface warnings match their original messages. No fresh whole-chapter or independent proof audit is claimed.
+
+The production build publishes the PDF and matching homepage description. The 65-page selection passes with 33 direct images and 32 exact inspected checkpoint285 pixmap carries; every changed complete-page body is covered. The book has 940 physical/916 printed pages and a 17-page companion, clean logs, 5178 valid destinations and 452 clickable index locators. Live deployment at a74e0dfea427f86ce0b59fdf3dbeefa0c33ab6c8 is verified. Fresh empty source reconstruction passes for both PDFs: all page text and 253 book source files match, 1626 archive files and 1625 manifest payload entries pass checksum/current-byte checks, final logs are clean and archive publication is disabled; see research/editorial/degenerate-product-polar-metric-286.md and its audit.
+
+Writing acceptance at checkpoint270 is carried at the recorded scopes; research remains active. Extend the complete metric to finite products of independent curve models. Prove the ordinary-envelope identity for separated sums by fiber suprema, compute ideal projection from the finite-mass divisorial current, and verify product completeness, analytic closure and L1 convergence. Keep the unrestricted higher-dimensional model-space problem open.
+
 ## Checkpoint285 — Nonclosed product polar metric
 
 The restricted complete polar-total-variation metric now exists on the full curve-induced ordinary-model locus in a positive genuinely nonclosed projective background. Both envelope projections are exact for every curve model, including countably atomic ideal data. Its ideal subspace is the closed analytic closure, ideal projection is the unique nearest-point 1-Lipschitz retraction, all top-degree volume comparisons vanish and metric convergence gives L1 convergence upstairs. Chapter15 and Chapter32 retain the general completion and background-compatibility problems.
