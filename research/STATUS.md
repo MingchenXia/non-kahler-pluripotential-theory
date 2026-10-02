@@ -1,5 +1,11 @@
 # Current research status — 2 October 2026
 
+## Active author programme — 2 October 2026
+
+The goal remains unfinished: finish the pending manuscript additions and releases, then complete [a fresh cover-to-cover polish](editorial/whole-book-polish-queue-20261002.md) for coherence and readability. Also try the [23 formal questions one by one with Xean](xean/README.md), using `gpt-6.1-sol` at `xhigh`. Both new queues are pending; no campaign has run. Historical writing acceptance below retains its own checked scope.
+
+The managed workspace failed to start. Checkpoint294 passed its recorded source/output/reconstruction checks and its 937-page PDF/homepage update was verified live, but its private source synchronization is still pending. The remote manuscript checkpoint remains293. Preserve and reconcile the local and remote work before continuing; do not force-push or discard either.
+
 ## Checkpoint293 — All-obstacle separated product criterion
 
 Lemma 15.6.6 on page452, Proposition 15.6.17 and Corollary 15.6.7 on page453 prove the following. Relative-envelope membership of a separated sum on a finite product is equivalent to membership of each coordinate in its own relative class. For arbitrary admissible curve backgrounds, zero-obstacle ordinary/ideal equality, equality of polar and atomic curvatures, relative membership in the ideal reference and equality at every smooth product obstacle are equivalent. Mixed obstacles, zero-area coordinates and zero-volume models are included. The same criterion holds through the nonnegative nonclosed auxiliary coefficient and unit-divisor extension. Add coordinate stretching competitors to obtain product membership; genuine coordinate restrictions and constant corrections give its converse. The separated zero-obstacle projections identify envelope equality factorwise, and the complete curve criterion and ideal obstacle reprojection give arbitrary mixed-obstacle equality. On the auxiliary extension, slices give the ordinary projection, preservation of ideals gives the ideal projection, and the same added competitors prove relative membership directly. A prose ending restores the missing automatic proof-ending symbol in the unchanged smooth geodesic equation.
