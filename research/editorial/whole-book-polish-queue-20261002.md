@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–17 pass unchanged reviews at 313–314; Chapter 18 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
+Status: in progress. The final pending addition is released at checkpoint296; the Introduction and Conventions receive fresh complete unchanged reads at checkpoint297. Chapters 1–3 are revised at checkpoints 298–300, Chapters 4–6 pass unchanged reviews at 301–303, Chapter 7 is revised at 304, Chapter 8 passes an unchanged review at 305, Chapter 9 is revised at 306, Chapter 10 passes an unchanged review at 307, Chapter 11 at 308, Chapter 12 at 309, Chapter 13 is revised at 310, and Chapter 14 passes an unchanged review at 311, and Chapter 15 is revised at 312, and Chapters 16–18 pass unchanged reviews at 313–315; Chapter 19 and the remaining units are pending. Historical acceptance and previous complete reads remain records of their own scopes.
 
 ## Recovery and manuscript completion
 
@@ -39,7 +39,7 @@ The table is initialized from the active checkpoint296 graph. Refresh it after t
 | Chapter 15 | [chapter_igood.tex](../../book/author/chapter_igood.tex) | complete original and two follow-up reads 312, including corrected-parent supplement; full chapter page inspection and live release passed |
 | Chapter 16 | [chapter_rays.tex](../../book/author/chapter_rays.tex) | complete original and two unchanged follow-up reads 313; full chapter page inspection passed |
 | Chapter 17 | [chapter_testcurves.tex](../../book/author/chapter_testcurves.tex) | complete original and two unchanged follow-up reads 314, including figure source; full chapter page inspection passed |
-| Chapter 18 | [chapter_trace_data.tex](../../book/author/chapter_trace_data.tex) | queued |
+| Chapter 18 | [chapter_trace_data.tex](../../book/author/chapter_trace_data.tex) | complete original and two unchanged follow-up reads 315, seven recursive inputs; full chapter page inspection passed |
 | Chapter 19 | [chapter_sections.tex](../../book/author/chapter_sections.tex) | queued |
 | Chapter 20 | [chapter_flag_bodies.tex](../../book/author/chapter_flag_bodies.tex) | queued |
 | Chapter 21 | [chapter_hopf_reduction.tex](../../book/author/chapter_hopf_reduction.tex) | queued |
