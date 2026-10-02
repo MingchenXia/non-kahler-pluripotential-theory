@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint287: Extend the several-curve metric locus to an auxiliary curve with a varying nonnegative coefficient. Prove both base projections by restriction and countable-divisor domination, preserve the fixed sum metric and ideal subspace, and test the zero coefficient where the background loses bigness. Keep the unrestricted higher-dimensional completion and degeneration problems open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
+Current next unit after checkpoint288: Vary the coefficients of the curve factors themselves, including zero coefficients. Prove both model projections and a complete weighted polar metric on the reduced product locus, compute its diameter and ideal distance, and distinguish loss of an auxiliary coefficient from collapse of the active curve areas. Check uniform L1 parameter continuity and keep the general higher-dimensional completion problem open. Writing acceptance at checkpoint270 is carried with the checked additions; no chapter remains in the reader-revision cycle.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
