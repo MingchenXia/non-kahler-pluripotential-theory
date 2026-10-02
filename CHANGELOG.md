@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 309 — Chapter 12 unchanged coherence review
+
+Complete original and two follow-up reads, 25 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-twelve-coherence-309.md). Source-package validation passes with all 260 book-source files byte-identical to checkpoint308. Chapter 13 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 308 — Chapter 11 unchanged coherence review
 
 Complete original and two follow-up reads, 28 mathematical checks and full chapter page inspection: [review record](research/editorial/chapter-eleven-coherence-308.md). The compatibility audit retains its documented inherited findings. Source-package validation passes (1,704 archive entries). Chapter 12 is next; the whole-book and open-problem goals remain active.
