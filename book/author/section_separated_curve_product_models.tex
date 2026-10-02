@@ -1,0 +1,78 @@
+\Needspace{18\baselineskip}
+\subsection{Several curve factors}
+\label{subsec:separated-curve-product-models}
+
+For several independent curve factors, the sum of their polar distances gives a complete metric on the induced product models. The envelope identities follow from taking a supremum over one group of factors and then restricting to its slices.
+
+Let $C_1,\ldots,C_m$ be connected compact curves with smooth positive forms $\eta_i$, where $m\geq2$, and put $A_i=\int_{C_i}\eta_i$. Set
+\[
+ Y=\prod_{i=1}^m C_i,\qquad
+ \beta=\sum_{i=1}^m\pi_i^*\eta_i,
+\]
+where $\pi_i:Y\to C_i$ are the projections. For normalized ordinary models $q_i$ on $(C_i,\eta_i)$, write
+\[
+ w=\sum_{i=1}^m q_i\circ\pi_i,\qquad
+ q_{i,\mathcal I}=P_{\eta_i}[q_i]_{\mathcal I}.
+\]
+
+\Needspace{13\baselineskip}
+\begin{lemma}\label{lem:separated-curve-model-projections}\index{Envelope!separated curve models}
+The function $w$ is a normalized ordinary model on $(Y,\beta)$, and
+\[
+ P_\beta[w]_{\mathcal I}
+       =\sum_{i=1}^m q_{i,\mathcal I}\circ\pi_i.
+\]
+\end{lemma}
+\begin{proof}
+The function $w$ is $\beta$-plurisubharmonic and has supremum zero. We prove $P_\beta[w]=w$ by induction on $m$, starting with the curve model identity. Let $v\leq0$ be an ordinary competitor, and replace it by $\max(v,w)$. This preserves $v\preceq w$ and makes the slices genuine whenever the corresponding curve potentials are finite.
+
+Write $Y=Y'\times C_m$, and take the regularized partial supremum
+\[
+ a(t)=\left(\sup_{y'\in Y'}v(y',t)\right)^*.
+\]
+The restrictions to $C_m$ are $\eta_m$-plurisubharmonic or identically $-\infty$. They are bounded above by zero, and at least one is genuine, since $v\geq w$. The local upper-envelope theorem from \cref{chap:framework} makes $a$ $\eta_m$-plurisubharmonic. The global inequality $v\leq w+C$ gives $a\leq q_m+C$, because the other normalized potentials have supremum zero. Thus $a\leq P_{\eta_m}[q_m]=q_m$.
+
+For $t$ where $q_m(t)$ is finite, the function $v(\cdot,t)-q_m(t)$ is a genuine potential in the product background on $Y'$, lies below zero and is more singular than $\sum_{i<m}q_i\circ\pi_i$. The induction hypothesis bounds it by that sum. Hence $v\leq w$ off the poles of $q_m$. At those poles the original bound $v\leq w+C$ gives the same inequality. Taking the envelope proves the ordinary identity.
+
+For the ideal identity, let $E_i$ be the atomic part of the polar curvature of $q_i$, and take the Green potentials $g_i$ from \cref{lem:curve-atomic-ideal-model}. They satisfy
+\[
+ q_i\sim_{\mathcal I}g_i,\qquad
+ q_{i,\mathcal I}\sim g_i,\qquad
+ \ddc g_i=E_i-\frac{E_i(C_i)}{A_i}\eta_i.
+\]
+By \cref{lem:submersion-multiplier-pullback,lem:hermitian-i-calculus}, $g=\sum_i g_i\circ\pi_i$ is ideally equivalent to $w$. Its curvature is a closed countable sum of the divisors $\pi_i^{-1}(x)$ minus the smooth form $\sum_i E_i(C_i)\pi_i^*\eta_i/A_i$. Each coordinate fiber has constant mass for the product metric, so these divisor sums have finite mass. Also $g$ is $\beta$-plurisubharmonic since $E_i(C_i)\leq A_i$. Therefore \cref{cor:divisorial-envelope-equality} gives $P_\beta[g]_{\mathcal I}=P_\beta[g]$. Ordinary equivalence with $\sum_iq_{i,\mathcal I}\circ\pi_i$ and the proved ordinary identity compute this last envelope, proving the assertion.
+\end{proof}
+
+Let $Z$ be a connected compact K\"ahler manifold of dimension $k\geq1$, and let $D\subset Z$ be a nonempty smooth reduced divisor with a K\"ahler form $\kappa$ and a normalized potential $\psi$ satisfying $\kappa+\ddc\psi=[D]$. On $M=Y\times Z$, write $p,r$ for the projections, set $h_i=\pi_i\circ p$, and put
+\[
+ \Theta=p^*\beta+r^*\kappa,\qquad
+ \Psi=\psi\circ r,\qquad
+ \Phi(q_1,\ldots,q_m)=\Psi+\sum_i q_i\circ h_i.
+\]
+Let $\mathcal S_\Psi^{(m)}$ be the set of these potentials. For $\mu_i=\mathbf1_{\{q_i=-\infty\}}(\eta_i+\ddc q_i)$ and the analogous $\nu_i$ from models $b_i$, define
+\begin{equation}\label{eq:separated-product-polar-metric}
+ \rho_\Psi^{(m)}(\Phi(q_1,\ldots,q_m),\Phi(b_1,\ldots,b_m))
+       =\sum_i\|\mu_i-\nu_i\|_{\mathrm{TV}}.
+\end{equation}
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:separated-product-polar-metric}\index{Metric completeness!several curve factors}\index{Model potential!separated product metric}
+The set $\mathcal S_\Psi^{(m)}$ consists of normalized ordinary models and is a complete geodesic metric space for $\rho_\Psi^{(m)}$. Its ideal models form a closed geodesically convex subspace, equal to the metric closure of its analytic models. Ideal projection is the unique nearest-point $1$-Lipschitz retraction, and the distance to that subspace is the sum of the nonatomic polar masses. Metric convergence implies $L^1(M)$ convergence for every smooth positive volume form. The top-volume comparison $d_\Theta$ vanishes on every pair in this locus.
+\end{proposition}
+\begin{proof}
+The preceding lemma and \cref{prop:fibration-obstacle-reduction} give
+\[
+ \begin{gathered}
+ P_\Theta[\Phi(q_1,\ldots,q_m)]=\Phi(q_1,\ldots,q_m),\\
+ P_\Theta[\Phi(q_1,\ldots,q_m)]_{\mathcal I}
+       =\Phi(q_{1,\mathcal I},\ldots,q_{m,\mathcal I}).
+ \end{gathered}
+\]
+The induced zero obstacle is zero, and independence of the factors gives normalization. Restriction to sections where the other potentials are finite shows that equality of two product potentials forces each coordinate difference to be constant. Normalization makes every such constant zero. Thus $\Phi$ identifies this locus with the finite product of the curve model spaces, equipped with the sum of their metrics.
+
+Completeness follows coordinate by coordinate from \cref{cor:curve-model-completeness}. Interpolating each polar measure with the same parameter gives a constant-speed geodesic for the sum metric. The ideal projection takes the atomic part in each coordinate. The closedness, convexity, unique nearest-point and $1$-Lipschitz assertions follow coordinate by coordinate from \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect}; their distances add. Finite rational atomic approximations in each coordinate have local logarithmic coefficients that, together with the unit coefficient of $D$, clear denominators in a product monomial. They give analytic density in this subspace. Conversely, every analytic ordinary model is its ideal projection by \cref{prop:analytic-envelope-type}, proving that its closure is exactly the ideal subspace.
+
+Metric convergence gives $L^1$ convergence on each curve by \cref{thm:curve-model-capacity-convergence}. The difference of the product potentials off their pole sets is the sum of the pulled-back coordinate differences. Integrating each term along the compact fibers of $h_i$ bounds its upstairs $L^1$ norm by a constant times its curve $L^1$ norm, as in \cref{prop:divisorial-product-polar-metric}. Their finite sum tends to zero.
+
+Finally, every model in this locus has zero upper singularity volume by \cref{prop:fibration-obstacle-reduction}, since $\dim Y=m<\dim M$. A pairwise maximum is still $\Psi$ plus the pullback of a $\beta$-plurisubharmonic function on $Y$, so the same proposition gives its zero upper volume. All three terms of $d_\Theta$ therefore vanish.
+\end{proof}
