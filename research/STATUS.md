@@ -1,5 +1,9 @@
 # Current research status — 2 October 2026
 
+## Checkpoint 304 — Chapter 7 proof endings and coherence
+
+Complete original and two revised recursive reads, mathematical checks, four published production builds and page inspection: [review record](editorial/chapter-seven-coherence-304.md). Fresh empty source reconstruction passes both builds, all 965 book/17 companion page texts and all 260 book-source byte comparisons. The archive has 1692 entries and 1691 manifest payloads; checksums, current payload bytes and exclusions pass. Publication is disabled in the reconstructed build. Chapter 8 is next; the whole-book and open-problem goals remain active.
+
 ## Checkpoint 303 — Chapter 6 unchanged coherence review
 
 Chapter 6 passes complete original and two follow-up reads of both inputs and all chapter pages without manuscript changes. See [the scoped review](editorial/chapter-six-coherence-303.md) and its audit. Chapter 7 is next; the whole-book and all-problem goals remain active.
