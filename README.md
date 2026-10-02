@@ -6,7 +6,7 @@ The current structure has 33 chapters and an appendix. The main sequence develop
 
 The Introduction explains the differences from Kähler theory through mass, comparison, energy, equations and singularities. A subject index with clickable page references follows the bibliography; its locators are generated from the manuscript during the build.
 
-The fresh whole-book polish has completed the front units and Chapters 1–16 at checkpoints 298–313. Chapter 17 is next; the final Introduction reread and open-problem research remain active. See [the reading queue](research/editorial/whole-book-polish-queue-20261002.md) for actual completed scopes.
+The fresh whole-book polish has completed the front units and Chapters 1–17 at checkpoints 298–314. Chapter 18 is next; the final Introduction reread and open-problem research remain active. See [the reading queue](research/editorial/whole-book-polish-queue-20261002.md) for actual completed scopes.
 
 **Part IX, “Theory under mass bounds”, collects the substantial additional theory:**
 

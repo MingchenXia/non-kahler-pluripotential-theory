@@ -1,0 +1,13 @@
+# Chapter 17 test curves and duality — checkpoint 314
+
+Baseline: ce8cec2ceb7dd767bf2abf6f2ce590a06efc3ad4.
+
+Chapter 17 passes the complete original and two unchanged follow-up reads, 24 concrete mathematical checks and full chapter page inspection. No source correction is indicated. The finite Perron replacement estimate preserves the ordinary singularity type of each inverse transform; the normalized envelope property forces maximality. The reverse transform uses affine rooftops on arbitrary finite intervals to recover envelope fixedness. The projective-line example retains all negative parameters, both coordinate charts and the cutoff convention. All six plotted curves and 906 coordinates agree with the formulas within the stated five-decimal rounding precision.
+
+Complete original and two unchanged follow-up reads of the entire Chapter17 recursive unit: 193 author lines and 20 figure-source lines, 213 lines per pass. All six physical chapter pages 499–504 were viewed directly. The final 45-page selection includes both seams, contents, bibliography and index. The second complete source read follows final visual inspection. Chapter18 opening source lines 1–22 and pages 505–506 are a transition review only.
+
+The house audit has zero errors and two retained prefix warnings. All 260 book-source files, 245 author/247 recursive inputs, 23 exact formal question texts and compiled locations, and 451 protected hashes remain unchanged. The cited Chapter1 duality/envelope and Chapter16 Perron/gluing inputs retain their recorded current-cycle scope. This is a direct review, not a new independent reproof of the cited SGPT correspondence.
+
+The final selection has two directly inspected Chapter18 opening pages and 43 exact whole-pixmap carries from actually inspected pages. This research-record-only release performs neither a production rebuild nor a fresh reconstructed build. Both PDFs remain byte-identical to checkpoint312: 967 physical/943 printed book pages and 17 companion pages. Its production, empty-source reconstruction and deployed PDF/homepage checks retain their recorded scope; the last verified public commit is c746e40b15cf8b3fb478d8a0dacc6bc2dc28277b. Current archive payload/checksum/exclusion validation passes (1,722 archive entries, 1,721 manifest payloads), and all 260 book-source files are byte-identical to checkpoint313.
+
+No additional open research occurrence is found in this complete unit. No accepted Xean solution, novelty claim or question closure is made. Exact-model authentication remains blocked; the whole-book informal inventory is incomplete. Next: Chapter 18: restriction and intrinsic trace data, every recursive input; preserve exact divisorial realization and mass-comparison hypotheses.
