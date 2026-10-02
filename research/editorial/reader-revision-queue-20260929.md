@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint328: Chapter 32: Problems in Hermitian pluripotential theory, every recursive input; check exact problem texts, known-result boundaries, hypotheses and consistency with the standalone catalogue.
+Current next unit after checkpoint329: Chapter 33: Historical notes, every recursive input; reconcile cited theorem scopes, attribution and the book versus external proof boundary.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
