@@ -421,3 +421,7 @@ Qin, Xiangsen, Prescribed Limits and Cluster Sets of Complex Monge–Ampère Mea
 ## Fixed-background local measure addition — checkpoint 365
 
 Qin2609.06568v1 Theorem B p.3 and pp.11–14 addition/determining-family arguments actually reread under 364 full 30-page primary reading. Section 1.6.5 reconstructs fixed-background prescribed local Radon excess by direct smooth lower-degree ridge limits, mixed CLN and finite atomic iteration, with all finite Lp/local capacity convergence and smooth approximants for smooth backgrounds. No new source dependency or full classification adopted. [Review](editorial/local-prescribed-excess-365.md).
+
+## Full local vague cluster sets at zero — checkpoint 366
+
+Qin arXiv:2609.06568v1 pp.2,12,14–16,28–30 actually reread under 364 full thirty-page primary reading. Section 1.6.6 gives the separable vague metric, moving-measure counterexample and zero-potential full vaguely closed cluster-set realization, including empty, with smooth bounded negative psh approximants converging in all finite Lp and local capacity. General nonzero-background/domain and external maximal/Richberg chains remain separate. [Review](editorial/zero-local-cluster-sets-366.md).

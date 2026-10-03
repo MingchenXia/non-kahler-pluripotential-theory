@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 365: Reconstruct the zero-potential case of prescribed vaguely closed full cluster sets, including the empty set, using the checked finite-test addition and a vague metric. Read the precise primary metric/cluster arguments and avoid importing maximal-approximation chains. Keep the fixed global Hermitian defect, all formal/supplemental problems and retained literature/spectral/domain/Hessian gaps open.
+Current next unit after checkpoint 366: Read the complete 25-page Hanwen Liu arXiv:2609.08113v1 primary, Non-Kähler Critical Hermitian Metrics of the Dinew–Popovici Functional. Check variation, normalizations and self-contained geometric constructions. Before adopting any Popovici result consult the supplied private main15 assessment, then its exact primary proof and dependencies. Keep wider Qin classification, fixed global defects and all formal/supplemental problems open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

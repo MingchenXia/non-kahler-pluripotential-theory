@@ -1,0 +1,63 @@
+\subsection{Full cluster sets at the zero potential}
+\label{subsec:zero-local-cluster-sets}
+
+Prescribing a single limit does not describe all the subsequential limits of one sequence. We now make this distinction explicit. For a domain $\Omega\subset\mathbb C^n$, write $\mathcal M_+(\Omega)$ for the positive Radon measures, including zero and measures of infinite total mass. Its vague topology is defined by integration against $C_c(\Omega)$.
+
+\begin{lemma}\label{lem:local-vague-metric}\index{Vague convergence!metric}
+There are real $f_i\in C_c^\infty(\Omega)$ such that
+\[
+ d_v(\alpha,\beta)=\sum_{i\geq1}2^{-i}
+ \frac{\left|\int_\Omega f_i(\alpha-\beta)\right|}
+      {1+\left|\int_\Omega f_i(\alpha-\beta)\right|}
+\]
+is a metric inducing the vague topology on $\mathcal M_+(\Omega)$. This metric space is separable.
+\end{lemma}
+\begin{proof}
+Choose relatively compact open sets $U_\ell$ exhausting $\Omega$, with $\overline U_\ell\subset U_{\ell+1}$. For each $\ell$, choose a countable uniformly dense subset of $C_0(U_{\ell+1};\mathbb R)$ consisting of smooth compactly supported functions, extended by zero to $\Omega$. Add a nonnegative smooth cutoff equal to one near $\overline U_{\ell+1}$, and enumerate the union as $(f_i)$. The existence of these dense families follows from separability of $C_0$ and smooth uniform approximation.
+
+Coordinate convergence of positive measures to a fixed measure gives a common mass bound on each $\overline U_{\ell+1}$, by the cutoff coordinate. Uniform approximation then proves convergence against every $g\in C_c(\Omega)$. The same argument in a neighborhood of any fixed measure proves continuity of its $g$ coordinate: restrict the cutoff integral to a bounded neighborhood, choose one uniformly close smooth test, and restrict that test's coordinate. Thus these coordinates induce exactly the vague topology and separate measures.
+
+The function $s\mapsto s/(1+s)$ is increasing and subadditive on $[0,\infty)$. Applying this to the coordinate triangle inequalities gives the triangle inequality for $d_v$. Its positivity follows from separation. Each coordinate is continuous for this metric, and the series has uniformly bounded tails, so the metric induces precisely the coordinate topology.
+
+Finite atomic measures with nonnegative rational weights at points of one countable dense subset of $\Omega$ form a countable dense family. To approximate finitely many tests, partition a compact neighborhood of their supports into sets of small oscillation, choose an atom for each nonzero mass, then perturb its location and weight. Only the finite mass of that compact neighborhood is used. The remaining metric tail is arbitrarily small.
+\end{proof}
+
+The metric controls limits along corresponding subsequences. If $d_v(\alpha_j,\beta_j)\to0$ and one sequence tends vaguely to a fixed measure along a subsequence, the triangle inequality gives the same limit for the other. Without common local mass bounds, this need not make $\int g(\alpha_j-\beta_j)$ tend to zero for every $g\in C_c(\Omega)$. For example, fix $a\in\Omega$, a unit vector $e$ and $r_j\downarrow0$ with $a+r_je\in\Omega$. Put
+\[
+ \alpha_j=r_j^{-1/2}\delta_{a+r_je},\qquad
+ \beta_j=r_j^{-1/2}\delta_a.
+\]
+Every smooth compactly supported coordinate difference is $O(r_j^{1/2})$, so $d_v(\alpha_j,\beta_j)\to0$ by the bounded series tail. For $\chi\in C_c^\infty(\Omega)$ equal to one near $a$, the continuous test $g(z)=\chi(z)|z-a|^{1/2}$ instead gives $\int g(\alpha_j-\beta_j)=1$ for all large $j$.
+
+\Needspace{13\baselineskip}
+\begin{theorem}\label{thm:zero-local-cluster-sets}\index{Monge--Ampere product@Monge--Amp\`ere product!full cluster sets}
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain. A set $F\subset\mathcal M_+(\Omega)$ is vaguely closed if and only if there are smooth bounded plurisubharmonic $u_j\leq0$, tending to zero in $L^p(\Omega)$ for every $1\leq p<\infty$ and in local capacity, whose full vague cluster set is $F$:
+\[
+ F=\left\{\mu\in\mathcal M_+(\Omega):\ (\ddc u_{j_k})^n\longrightarrow\mu
+        \text{ vaguely for some }j_1<j_2<\cdots\right\}.
+\]
+The empty set is allowed.
+\end{theorem}
+\begin{proof}
+In a metric space, the full cluster set of a sequence is the intersection of the closures of its tails. Indeed, a point in this intersection can be approximated successively within $1/k$ at indices larger than the preceding index. It is therefore closed. By \cref{lem:local-vague-metric}, this proves necessity.
+
+Suppose first that $F$ is nonempty and closed. A subset of a separable metric space is separable, so choose a dense sequence $\mu_1,\mu_2,\ldots$ in $F$, allowing repetitions. Concatenate the finite lists $(\mu_1)$, $(\mu_1,\mu_2)$, $(\mu_1,\mu_2,\mu_3)$, and so on. Denote the resulting sequence by $(\nu_j)$. Every point of $F$ is approached along a subsequence, because every dense-family member appears arbitrarily late; closedness excludes any other subsequential limit. If $F$ is empty, take $\nu_j=j\delta_a$ at one fixed $a\in\Omega$. A nonnegative compactly supported test equal to one at $a$ has integral $j$, so this sequence has no vaguely convergent subsequence.
+
+\Needspace{13\baselineskip}
+For either choice of $(\nu_j)$, perform the finite atomic construction in the proof of \cref{thm:local-prescribed-excess} separately at each $j$, with background zero, target $\nu_j$ and tests~$f_1,\ldots,f_j$. Approximate these coordinates by a finite atomic measure with error less than $1/j$. If it has $N_j>0$ atoms, use \cref{prop:local-one-atom-addition} successively with $t=\tau=(jN_j)^{-1}$; if it has none, take $u_j=0$. The resulting smooth bounded psh $u_j\leq0$ satisfy
+\[
+ \|u_j\|_{L^p(\Omega)}\leq C_{\Omega,p}/j,
+ \qquad
+ \left|\int_\Omega f_i\bigl((\ddc u_j)^n-\nu_j\bigr)\right|
+       <2/j\quad(i\leq j).
+\]
+The normalized psh-test bound in that proposition also sums to $C_{B',B,\Omega}/j$ on every fixed pair of concentric balls $B'\Subset B\Subset\Omega$. Dividing by a positive threshold and taking the supremum gives local capacity convergence. These estimates do not require convergence or a common local mass bound for the targets $\nu_j$.
+
+Splitting the metric at its first $j$ coordinates gives
+\[
+ d_v\bigl((\ddc u_j)^n,\nu_j\bigr)\leq 2/j+2^{-j}\longrightarrow0.
+\]
+The two measure sequences consequently have the same limits along corresponding subsequences, hence the same full cluster set $F$.
+\end{proof}
+
+For subharmonic functions on a planar domain, $L^1_{\mathrm{loc}}$ convergence to zero instead forces $\ddc u_j\to0$ distributionally. Positivity and compactly supported cutoffs then give vague convergence to zero. The freedom in the theorem therefore begins in dimension two.
