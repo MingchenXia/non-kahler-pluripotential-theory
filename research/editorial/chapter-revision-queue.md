@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 351: Read the complete historical chapter in actual order, consolidate the diffuse foundation source discussion and move model-topology consequences to their natural historical home; then reread the Introduction to retain a coherent governing argument before further multi-pole research. Keep full P01/P17 and all remaining formal questions open.
+Current next unit after checkpoint 352: Check the separable anisotropic maximum product formula completely, including its normalization and critical levels; use it to test whether distinct positive-volume models can share the complete base residual measure, both scalar volumes, every multiplier ideal and all-modification first polar currents. Integrate only fully checked statements. Keep full P01/P17 and all remaining formal questions open.
 
 | Chapter | Source | This cycle |
 |---|---|---|

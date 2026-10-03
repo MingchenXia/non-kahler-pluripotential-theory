@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 351: Read the complete historical chapter in actual order, consolidate the diffuse foundation source discussion and move model-topology consequences to their natural historical home; then reread the Introduction to retain a coherent governing argument before further multi-pole research. Keep full P01/P17 and all remaining formal questions open.
+Current next unit after checkpoint 352: Check the separable anisotropic maximum product formula completely, including its normalization and critical levels; use it to test whether distinct positive-volume models can share the complete base residual measure, both scalar volumes, every multiplier ideal and all-modification first polar currents. Integrate only fully checked statements. Keep full P01/P17 and all remaining formal questions open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

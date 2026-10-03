@@ -101,3 +101,5 @@ Checkpoint349 proves the diffuse ordinary-model obstruction under both Hermitian
 Checkpoint350 proves scalar residual preservation by small-pole ordinary projection and the complete diffuse interval for all Hermitian backgrounds with both mass properties. Complete first/second source, final output and public975-page checks pass. Reconstruct/synchronize, then check localized residual measures and independent pole regions, keeping the exposition and proof scopes coherent.
 
 Checkpoint351 preserves residual measures under ordinary projection and gives disjoint-region scalar counterexamples. Complete source/output and public977-page checks pass. Reconstruct/synchronize, then consolidate the complete historical chapter and reread the Introduction before further multi-pole research.
+
+Checkpoint352 completes a coherence pass of the historical chapter and Introduction with retained citations, formal mathematics and full open-problem status. Next check anisotropic product residuals completely and integrate any verified obstruction.

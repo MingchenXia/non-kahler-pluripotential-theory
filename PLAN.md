@@ -187,3 +187,5 @@ Checkpoint349 extends the diffuse first-polar ordinary-model obstruction to both
 Checkpoint350 proves scalar residual preservation and the complete strict-range diffuse interval under both Hermitian mass properties. Next investigate localized residual-measure preservation and whether independent pole regions defeat scalar residual separation. Full formal topology questions remain open.
 
 Checkpoint351 proves residual-measure preservation and disjoint-region failure of scalar separation. Next consolidate the historical chapter in actual reading order and reread the Introduction, then continue multi-pole/topology research. All formal problems remain open at full scope.
+
+Checkpoint352 completes a coherence pass of the historical chapter and Introduction with retained citations, formal mathematics and full open-problem status. Next check anisotropic product residuals completely and integrate any verified obstruction.
