@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 379: Prioritize the author-supplied P21 sufficient-condition paper in incoming commit 8965fb4: read its full argument and dependencies, compare with the current section-over-divisor theorem and original P21 scope, and integrate only verified improvements. Continue checking incoming research commits before private synchronization. Positivity functors/K3 existence and high-dimensional ideal-distance optimality remain separate pending units.
+Current next unit after checkpoint 380: Check incoming author commits. Extend the verified P21 bounded-band criterion to finitely many simple-normal-crossing divisors, with exact multiplier-ideal contraction and a uniform finite-family twist estimate. Verify all positivity, chart and endpoint assumptions before integration; full arbitrary-selector classification remains open. Continue recent-primary positivity functors and high-dimensional ideal-distance optimality as separate pending directions.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

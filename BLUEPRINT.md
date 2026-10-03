@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 380 — Author P21 fiber-integrability criterion
+
+[Review](research/editorial/fiber-integrability-band-380.md): Subsection 26.10.1 integrates the supplied P21 sufficient condition, strict anisotropic integrability threshold, exact selected series and sharp error model. Two complete scoped reads, 40 obligations and 44 final selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; 1048 printed pages. All 23 formal and 19 supplemental directions stay open at full scope; P21 is explicitly partially resolved. Same-editor native catalogue compilation remains unverified. Fresh empty-source reconstruction passes with 287 exact book sources, all 1072+17 page texts matching and 1953 checksum-validated archive entries; authorized private 380 synchronization follows.
+
 ## Checkpoint 379 — Ricci-flat surface curvature
 
 [Review](research/editorial/ricci-flat-surface-curvature-379.md): Section 4.8 proves directional tangent positivity on a given compact nonflat Ricci-flat Kähler surface, with a nonclosed conformal metric and flat-determinant obstructions. Two complete scoped reads, 37 obligations and 41 selected pages pass. The actual live public PDF/homepage/Pages deployment is verified; 1044 printed pages. All 23 formal and 19 supplemental directions remain open. Incoming author P21 commit 8965fb4 is preserved and selected for full review. Native catalogue compilation remains unverified; fresh empty-source reconstruction passes with 286 exact book sources, all 1068+17 page texts matching and 1947 checksum-validated archive entries; authorized private 379 synchronization follows.

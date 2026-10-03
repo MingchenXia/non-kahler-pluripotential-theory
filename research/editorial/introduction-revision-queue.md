@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 379: Prioritize the author-supplied P21 sufficient-condition paper in incoming commit 8965fb4: read its full argument and dependencies, compare with the current section-over-divisor theorem and original P21 scope, and integrate only verified improvements. Continue checking incoming research commits before private synchronization. Positivity functors/K3 existence and high-dimensional ideal-distance optimality remain separate pending units.
+Current next unit after checkpoint 380: Check incoming author commits. Extend the verified P21 bounded-band criterion to finitely many simple-normal-crossing divisors, with exact multiplier-ideal contraction and a uniform finite-family twist estimate. Verify all positivity, chart and endpoint assumptions before integration; full arbitrary-selector classification remains open. Continue recent-primary positivity functors and high-dimensional ideal-distance optimality as separate pending directions.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -180,3 +180,7 @@ All 16 physical pages of Chou–Wu 2609.33656v1 are actually read; its current v
 ## Ricci-flat surface curvature — checkpoint 379
 
 The previously fully read Chou–Wu 2609.33656v1 given-metric surface result is integrated with a direct ASD curvature argument. Derdziński 1983 actual scope is physical 2 and 4–13 of 30, including the scalar formulas on printed p.414 and commuting-factor Lemma 2 on p.412; ten page images viewed. Wu 1410.7260v2 actual scope is physical 1–9 of 17, as an alternate formula check only. No new listing coverage. K3 existence and positivity functor/rational-connectedness arguments remain unadopted. Incoming author P21 commit 8965fb4 is prioritized for complete review. [Review](editorial/ricci-flat-surface-curvature-379.md).
+
+## Author P21 sufficient condition — checkpoint 380
+
+The incoming supplied paper is fully read and its argument integrated as Subsection 26.10.1, with direct strict-threshold, positive-mass and uniform dimension proofs. P21 is explicitly partially resolved; no arbitrary-selector classification or necessity claim. All six incoming research files remain exact. No fresh arXiv listing coverage, campaign or external novelty claim. [Review](editorial/fiber-integrability-band-380.md).
