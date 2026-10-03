@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 371: Reconstruct the explicit Kummer semipositive nonrigid irrational boundary class from Fu–Ouyang Section 7, checking quotient charts, smooth extension across the sixteen exceptional curves, the periodic ddc primitive, rational-ray detection and the nefness interface before adoption. Keep general K3 collapse and external lattice/dynamics dependencies separate; if those interfaces fail, retain a research note and continue the other fully read primary candidates.
+Current next unit after checkpoint 372: Read the complete exact Barbaro 2609.35313v1 primary on pluriclosed deformations of Bismut-flat metrics, including its proof dependencies and relation to the book’s parallel-torsion and balanced/pluriclosed sections. Select only a coherent result whose required hypotheses and proof can be checked; retain the general K3 metric and all existing open-problem boundaries.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

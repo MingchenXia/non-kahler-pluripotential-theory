@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 371: Reconstruct the explicit Kummer semipositive nonrigid irrational boundary class from Fu–Ouyang Section 7, checking quotient charts, smooth extension across the sixteen exceptional curves, the periodic ddc primitive, rational-ray detection and the nefness interface before adoption. Keep general K3 collapse and external lattice/dynamics dependencies separate; if those interfaces fail, retain a research note and continue the other fully read primary candidates.
+Current next unit after checkpoint 372: Read the complete exact Barbaro 2609.35313v1 primary on pluriclosed deformations of Bismut-flat metrics, including its proof dependencies and relation to the book’s parallel-torsion and balanced/pluriclosed sections. Select only a coherent result whose required hypotheses and proof can be checked; retain the general K3 metric and all existing open-problem boundaries.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

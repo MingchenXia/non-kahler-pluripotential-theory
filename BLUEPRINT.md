@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 372 — Kummer boundary classes
+
+[Review](research/editorial/kummer-boundary-classes-372.md): Section 27.17 constructs the smooth semipositive nonrigid irrational zero-square class on a quotient resolution, with direct local Kähler smoothing and a global periodic ddc primitive. Two complete new-input reads, 49 internal obligations and 39 final selected pages pass. Both successful full-book publications are checked at the actual live PDF/homepage and successful Pages workflows; final 1,028 printed pages. All 23 formal statements and 451 protected files remain exact. P02 and catalogue locators are reconciled; native compilation remains unverified. Fresh empty-source reconstruction passes with 279 exact book sources, all 1,052+17 page texts matching and 1,919 checksum-validated archive entries; private 372 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Checkpoint 371 — Flat-torus boundary rigidity
 
 [Review](research/editorial/flat-torus-boundary-rigidity-371.md): Section 27.16 proves the torus current-rigidity/dense-kernel/radial-collapse equivalence and computes a mixed-form counterexample for unrestricted class convergence. Two scoped complete reads, 39 internal obligations and 38 final selected pages pass. Both successful full-book publications are checked at the actual live PDF/homepage and successful Pages workflows; final 1,024 printed pages. All 23 formal statements and 451 protected files remain exact. P02 and catalogue locators are reconciled; native compilation remains unverified. Fresh empty-source reconstruction passes with 278 exact book sources, all 1,048+17 page texts matching and 1,915 checksum-validated archive entries; private 371 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.

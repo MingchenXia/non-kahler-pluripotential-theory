@@ -148,3 +148,7 @@ Four-category current/recent listings are checked at their rendered count scope;
 ## Flat-torus boundary rigidity — checkpoint 371
 
 Fu–Ouyang 2609.33632v1 retains the full 30-page reading at 370; pp.5–6 are reread. The book directly proves rigidity/dense kernel/radial collapse and gives a mixed-form counterexample to unrestricted class convergence. General K3, Green-kernel, fibration/period and lattice-dynamics inputs remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/flat-torus-boundary-rigidity-371.md).
+
+## Kummer boundary class — checkpoint 372
+
+The exact Fu–Ouyang primary retains the full 30-page reading at 370; pp.18–20 are reread. Section 27.17 reconstructs the nonrigid irrational semipositive class, including local Kähler smoothing and global periodic ddc equivalence. General Ricci-flat diameter, spectral and limit-space inputs remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/kummer-boundary-classes-372.md).
