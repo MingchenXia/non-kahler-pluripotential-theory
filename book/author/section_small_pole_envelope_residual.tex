@@ -1,13 +1,14 @@
-Ordinary projection can change the singularity type. At a sufficiently small compact pole set, its full top-degree residual mass nevertheless remains fixed. Bounded mass controls the local approximations in every degree; the lower degrees carry no mass on that set.
+Ordinary projection can change the singularity type. At a sufficiently small compact pole set, it nevertheless preserves the full residual measure. Bounded mass controls the local approximations in every degree; the lower degrees carry no mass on that set.
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:small-pole-envelope-residual}\index{Residual mass!ordinary envelope}
-Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be compact of Hausdorff dimension zero, contained in a coordinate chart. Suppose $u\in\PSH(X,\omega)$ is locally bounded off $S$, has pole set $S$, and has positive lower singularity volume. Put $p=P_\omega[u]$. For a fixed smooth Euclidean correction $q$ making $u+q$ and $p+q$ plurisubharmonic near $S$,
+Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be compact of Hausdorff dimension zero. Suppose $u\in\PSH(X,\omega)$ is locally bounded off $S$, has pole set $S$, and has positive lower singularity volume. Put $p=P_\omega[u]$. For $v=u,p$, the bounded truncations define a finite positive full measure
 \[
- (\ddc(p+q))^n_{\mathrm{full}}(S)
-       =(\ddc(u+q))^n_{\mathrm{full}}(S).
+ \Phi_v=\lim_{k\to\infty}
+                 (\omega+\ddc\max(v,-k))^n,
+ \qquad \mathbf1_S\Phi_p=\mathbf1_S\Phi_u.
 \]
-These scalar masses are independent of the correction.
+On each coordinate chart, the residual restriction equals $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ for any fixed smooth Euclidean correction $q$ making $v+q$ plurisubharmonic there. It is independent of that correction. The full measures of $P_\omega(u+m,0)$ converge weakly to $\Phi_p$ as $m\to\infty$.
 \end{theorem}
 \begin{proof}
 Normalize $u\leq0$ and set $p_m=P_\omega(u+m,0)$ for positive integers $m$. Then
@@ -29,7 +30,7 @@ Expand in the corrected closed positive powers and smooth forms. The expressions
        \sum_{j=1}^{n-1}\binom nj
               \int_XW_j(v)\wedge\omega^{n-j}.
 \end{equation}
-The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every lower corrected closed power has zero coefficient mass on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\Phi_v(S)$; this identifies it with the displayed local residual and proves independence of the smooth correction. Also $J(v)\leq v_+(\omega)$, by the bounded truncation masses.
+The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every lower corrected closed power has zero coefficient mass on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\mathbf1_S\Phi_v$; this identifies it with the local residual measure and proves independence of the smooth correction. These assertions are local on each chart and require no single chart containing $S$. Also $J(v)\leq v_+(\omega)$, by the bounded truncation masses.
 
 We need uniform local trace bounds for the closed powers of $p_m$. Fix a relatively compact coordinate neighborhood and write $\kappa=\ddc|z|^2$. Choose $B>0$ so that $B\kappa\geq\omega$ there, and $A>1$ so that $A\omega-B\kappa\geq\kappa$. For $p_{m,k}=\max(p_m,-k)$, the closed current
 $T_{m,k}=B\kappa+\ddc p_{m,k}$ is positive and
@@ -51,9 +52,9 @@ For $j<n$, every subsequential weak limit of these closed positive powers gives 
 \]
 Hence \eqref{eq:small-pole-full-total} gives $J(p_m)\to J(p)$.
 
-Let $R=\Phi_u(S)$. Bounded residual invariance gives $\Phi_{p_m}(S)=R$ for every $m$. Their total masses are bounded by $v_+(\omega)$, so take a weak subsequential limit $\eta$. Off $S$, it equals $\mathrm{MA}_\omega(p)$, and its total mass is $J(p)$. The closed-set bound under weak convergence gives $\eta(S)\geq R$. Since $\Phi_p$ has the same total mass and the same restriction off $S$,
+Let $R=\mathbf1_S\Phi_u$. Apply bounded residual invariance in \cref{lem:small-pole-residual-invariance} on each chart, after a common correction. This gives $\mathbf1_S\Phi_{p_m}=R$ for every $m$. Their total masses are bounded by $v_+(\omega)$, so take a weak subsequential limit $\eta$. Since $\Phi_{p_m}-R$ is positive, $\eta-R$ is positive. Off $S$, the limit equals $\mathrm{MA}_\omega(p)$, and its total mass is $J(p)$. The measure $\Phi_p$ has the same total mass and the same restriction off $S$, so
 \[
- \Phi_p(S)=\eta(S)\geq R.
+ \Phi_p(S)=\eta(S)\geq R(S).
 \]
-The reverse inequality follows from $u\leq p$ and the residual-order part of \cref{lem:small-pole-residual-invariance}, after a common correction near $S$. This proves equality.
+On each chart, $u\leq p$ and the residual-order part of \cref{lem:small-pole-residual-invariance} give $\mathbf1_S\Phi_p\leq R$. The last display forces equality of their total masses, hence equality of these positive measures. It also gives $\mathbf1_S\eta=R$. Equality off $S$ now implies $\eta=\Phi_p$. Every weak subsequential limit is therefore $\Phi_p$, proving the asserted full-measure convergence of the rooftops.
 \end{proof}

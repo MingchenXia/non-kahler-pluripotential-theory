@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 350: Check whether residual comparison and ordinary projection preserve the full residual measure on arbitrary compact Hausdorff-zero-dimensional pole sets, then test independent diffuse pole regions to determine whether one scalar top residual can repair first-polar separation. Keep the full P01/P17 research scope open and preserve readable chapter interfaces.
+Current next unit after checkpoint 351: Read the complete historical chapter in actual order, consolidate the diffuse foundation source discussion and move model-topology consequences to their natural historical home; then reread the Introduction to retain a coherent governing argument before further multi-pole research. Keep full P01/P17 and all remaining formal questions open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

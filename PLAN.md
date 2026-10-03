@@ -185,3 +185,5 @@ Checkpoint348 proves finite torsion formulas and fixed top residual loss for eve
 Checkpoint349 extends the diffuse first-polar ordinary-model obstruction to both Hermitian mass properties and all Hermitian metrics on compact complex surfaces. Next investigate scalar top residual preservation by projection and the scaled family’s parameter distances.
 
 Checkpoint350 proves scalar residual preservation and the complete strict-range diffuse interval under both Hermitian mass properties. Next investigate localized residual-measure preservation and whether independent pole regions defeat scalar residual separation. Full formal topology questions remain open.
+
+Checkpoint351 proves residual-measure preservation and disjoint-region failure of scalar separation. Next consolidate the historical chapter in actual reading order and reread the Introduction, then continue multi-pole/topology research. All formal problems remain open at full scope.

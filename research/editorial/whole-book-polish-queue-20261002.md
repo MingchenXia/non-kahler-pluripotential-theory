@@ -99,3 +99,5 @@ Checkpoint348 computes the entire diffuse class’s representative masses and pr
 Checkpoint349 proves the diffuse ordinary-model obstruction under both Hermitian mass properties and every Hermitian metric on a compact complex surface. Complete source/output/public971-page checks pass. Reconstruct/synchronize, then investigate scalar residual preservation by projection and parameter separation/completeness.
 
 Checkpoint350 proves scalar residual preservation by small-pole ordinary projection and the complete diffuse interval for all Hermitian backgrounds with both mass properties. Complete first/second source, final output and public975-page checks pass. Reconstruct/synchronize, then check localized residual measures and independent pole regions, keeping the exposition and proof scopes coherent.
+
+Checkpoint351 preserves residual measures under ordinary projection and gives disjoint-region scalar counterexamples. Complete source/output and public977-page checks pass. Reconstruct/synchronize, then consolidate the complete historical chapter and reread the Introduction before further multi-pole research.
