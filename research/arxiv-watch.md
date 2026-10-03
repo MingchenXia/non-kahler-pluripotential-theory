@@ -144,3 +144,7 @@ The exact Qin primary retains the complete 30-page reading at 364; physical pp.2
 ## Recent versions and flat-torus approximation — checkpoint 370
 
 Four-category current/recent listings are checked at their rendered count scope; historical replacements and inconsistent October monthly diagnostics remain explicit. All 30 pages of Fu–Ouyang 2609.33632v1 are read. A direct square-torus counterexample shows why its unrestricted flat-sequence clause needs a positive-direction restriction. The next book unit uses direct radial/Fourier proofs. General K3 and Qin–Tian v3 curvature dependencies remain unadopted. Manuscript/public PDF remain 369. [Review](editorial/recent-literature-flat-torus-review-370.md).
+
+## Flat-torus boundary rigidity — checkpoint 371
+
+Fu–Ouyang 2609.33632v1 retains the full 30-page reading at 370; pp.5–6 are reread. The book directly proves rigidity/dense kernel/radial collapse and gives a mixed-form counterexample to unrestricted class convergence. General K3, Green-kernel, fibration/period and lattice-dynamics inputs remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/flat-torus-boundary-rigidity-371.md).

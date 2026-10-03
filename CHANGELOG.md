@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 371 — Flat-torus boundary rigidity
+
+[Review](research/editorial/flat-torus-boundary-rigidity-371.md): Section 27.16 proves the torus current-rigidity/dense-kernel/radial-collapse equivalence and computes a mixed-form counterexample for unrestricted class convergence. Two scoped complete reads, 39 internal obligations and 38 final selected pages pass. Both successful full-book publications are checked at the actual live PDF/homepage and successful Pages workflows; final 1,024 printed pages. All 23 formal statements and 451 protected files remain exact. P02 and catalogue locators are reconciled; native compilation remains unverified. Fresh empty-source reconstruction passes with 278 exact book sources, all 1,048+17 page texts matching and 1,915 checksum-validated archive entries; private 371 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Research checkpoint 370 — Recent literature and flat-torus scope
 
 [Review](research/editorial/recent-literature-flat-torus-review-370.md): Research-only review of four-category current/recent listings, seven exact abstract/version histories and all 30 pages of Fu–Ouyang 2609.33632v1. A direct flat-torus mixed-term example disproves the unrestricted flat-sequence clause in its Section 3, while preserving the distinction for positive perturbations. The selected next unit proves the radial/current-rigidity model directly. Historical replacement and October monthly diagnostic gaps remain explicit. Checked manuscript/public PDF remain 369; no full-book build or question closure.

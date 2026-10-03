@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after research checkpoint 370: Write a coherent section on flat-torus boundary classes: prove current rigidity exactly when the kernel leaves are dense, prove its equivalence to point collapse for radial positive perturbations, and give the explicit mixed-term counterexample for unrestricted class convergence. Use direct Fourier, character and lattice-distance proofs. Keep general K3 collapse, lattice-dynamics, Green-kernel and Kummer-resolution dependencies separate until checked.
+Current next unit after checkpoint 371: Reconstruct the explicit Kummer semipositive nonrigid irrational boundary class from Fu–Ouyang Section 7, checking quotient charts, smooth extension across the sixteen exceptional curves, the periodic ddc primitive, rational-ray detection and the nefness interface before adoption. Keep general K3 collapse and external lattice/dynamics dependencies separate; if those interfaces fail, retain a research note and continue the other fully read primary candidates.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
