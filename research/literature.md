@@ -413,3 +413,7 @@ Chen–Zheng2609.27809v1, nine pages, SHA-256 `de555bde4b45f73c650278d75c121855f
 ## Fixed-point logarithmic Bergman scale — checkpoint 363
 
 Chiang, Yueh-Lin, Bergman Kernel Asymptotics for Semipositive Line Bundles near Curvature-Degenerate Points, arXiv:2609.24869v1, 21 September2026 16:38:20 UTC. Complete 46-page primary reading; SHA-256 `5dc10a4acd2f2ca3f0395650315c3b35bbc73479886b23aa057bb4b7787ae1b7`. Only Example I.15 pp.9–10 exact metric is adopted; the new compact norm asymptotic is independent of the general spectral/Newton arguments. Printed checks at III.20p18, the p19 growing-ball remainder, IX.7p44 and IX.3p41 are recorded at their exact scope, not as a rejection of all main conclusions. [Review](editorial/logarithmic-projective-kernel-363.md).
+
+## Smooth local Dirac concentration — checkpoint 364
+
+Qin, Xiangsen, Prescribed Limits and Cluster Sets of Complex Monge–Ampère Measures, arXiv:2609.06568v1, 6 September 2026 12:28:29 UTC. Complete thirty-page primary reading, SHA-256 `772af6fca9e8e960c0ea3701fc80eb78f494700ef237778a33209336b3a1a304`. Selected exact locators: Theorem B p.3, Lemma 2.1 pp.6–7, Lemma 2.4 pp.9–10, Corollary 3.6 p.14 and Proposition 7.2 p.26. The direct smooth point-mass variant avoids the general singular truncation formula; its capacity deduction uses the accepted local weighted/range estimates. The paper's general maximal-approximation/classification and external domain chains remain unadopted at this checkpoint. [Review](editorial/local-dirac-concentration-364.md).

@@ -1,0 +1,116 @@
+\subsection{Measure concentration under integrable convergence}
+\label{subsec:local-measure-concentration}
+
+Decreasing approximation controls the Bedford--Taylor product, while convergence of potentials in $L^1$ alone can lose that control. A common local bound rules out concentration at the zero potential. We first prove this consequence of the range estimate, then construct smooth bounded potentials whose measures converge to a point mass.
+
+\begin{lemma}\label{lem:common-bound-zero-measure}\index{Monge--Ampere product@Monge--Amp\`ere product!common local bounds}
+Let $\Omega\subset\mathbb C^n$ be a domain. Suppose $u_j\in\PSH(\Omega)\cap L^\infty_{\mathrm{loc}}(\Omega)$ tend to zero in $L^1_{\mathrm{loc}}(\Omega)$ and satisfy $\sup_j\|u_j\|_{L^\infty(K)}<\infty$ for every compact $K\Subset\Omega$. Then $(\ddc u_j)^n(K)\to0$ for every such $K$.
+\end{lemma}
+\begin{proof}
+Work on nested balls $B'\Subset B\Subset B_1\Subset\Omega$, and put $\beta=\ddc|z|^2$. A nonnegative smooth cutoff $\psi$ supported in $B_1$ and equal to one near $\overline B$ gives
+\[
+ 0\leq\int_B\ddc u_j\wedge\beta^{n-1}
+ \leq\int_{B_1}u_j\ddc\psi\wedge\beta^{n-1}
+ \leq C\|u_j\|_{L^1(B_1)}\longrightarrow0.
+\]
+Choose one $M>0$ with $|u_j|\leq M$ on $B$ for all $j$. Apply \eqref{eq:local-cln-range} to $u_j+M$, whose range is contained in $[0,2M]$. It bounds the top-degree mass on $B'$ by $C(2M)^{n-1}$ times the trace integral on $B$. This tends to zero; for $n=1$ the trace estimate itself suffices. A finite ball covering handles any compact $K$.
+\end{proof}
+
+A smooth maximum of a logarithm in one variable and a potential in the remaining variables has an exact transverse integral. This identity will keep its top-degree mass fixed while the logarithmic coefficient tends to zero.
+
+\begin{lemma}\label{lem:smooth-logarithmic-ridge}
+Let $n\geq2$, $U\subset\mathbb C^{n-1}$ be a domain and $v$ a smooth plurisubharmonic function on $U$. Fix $\varepsilon,R,\eta>0$ and $A\in\mathbb R$. Let $\chi_\eta$ be the convolution of $t\mapsto\max(t,0)$ with a smooth even probability density supported in $[-\eta,\eta]$, and put
+\[
+ \begin{split}
+ q(\zeta)&=\varepsilon\log(|\zeta|^2/R^2),\qquad
+ T(\zeta,z')=v(z')-A-q(\zeta),\\
+ h(\zeta,z')&=q(\zeta)+\chi_\eta(T(\zeta,z'))
+ \end{split}
+\]
+for $\zeta\ne0$. Then $h$ extends smoothly and plurisubharmonically to $\mathbb C\times U$. Set
+\[
+ w_\eta(t)=n\chi_\eta'(t)^{n-1}\chi_\eta''(t),\qquad
+ r_t(z')=R\exp\bigl((v(z')-A-t)/(2\varepsilon)\bigr).
+\]
+The function $w_\eta$ is nonnegative, supported in $[-\eta,\eta]$, and has integral one. For every $f\in C_c(\mathbb C\times U)$,
+\begin{equation}\label{eq:smooth-ridge-transverse-integral}
+ \begin{split}
+ \int f(\ddc h)^n
+ =\varepsilon\int_U\biggl[\int_{-\eta}^{\eta}w_\eta(t)
+       \int_0^{2\pi}f(r_t(z')\mathrm e^{\mathrm i\vartheta},z')
+                    \frac{\mathrm d\vartheta}{2\pi}\,\mathrm dt\biggr]
+                    (\ddc v)^{n-1}.
+ \end{split}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Convexity gives $0\leq\chi_\eta'\leq1$ and $\chi_\eta''\geq0$. The function $\chi_\eta$ equals zero below $-\eta$ and equals $t$ above $\eta$. Thus $h=v-A$ near each point with $\zeta=0$, which gives the smooth extension. Off that hyperplane, $q$ is pluriharmonic and
+\[
+ \ddc h=\chi_\eta'(T)\ddc v
+       +\chi_\eta''(T)\,\mathrm dT\wedge\dc T\geq0.
+\]
+The second summand has rank at most one; the first has rank at most $n-1$. Their top power is
+\[
+ (\ddc h)^n=n\chi_\eta'(T)^{n-1}\chi_\eta''(T)
+           \,\mathrm dT\wedge\dc T\wedge(\ddc v)^{n-1}.
+\]
+The last factor has top degree in the $z'$ variables, so the derivatives of $v$ in $\mathrm dT\wedge\dc T$ contribute zero. Write $s=\log(|\zeta|^2/R^2)$. In polar coordinates, $\mathrm dq=\varepsilon\,\mathrm ds$ and $\dc q=\varepsilon\,\mathrm d\vartheta/(2\pi)$. At fixed $z'$, changing from $s$ to $t=v-A-\varepsilon s$ gives \eqref{eq:smooth-ridge-transverse-integral}. There is no contribution at $\zeta=0$, since the smooth form has rank at most $n-1$ there. Finally $w_\eta$ is the derivative of $(\chi_\eta')^n$, whose endpoint values are zero and one.
+\end{proof}
+
+\begin{proposition}\label{prop:smooth-dirac-concentration}\index{Monge--Ampere product@Monge--Amp\`ere product!concentration}\index{Plurisubharmonic function!integrable convergence}\index{Capacity!convergence and concentration}
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain and $a\in\Omega$. For every $c>0$, there are smooth bounded plurisubharmonic functions $u_j\leq0$ on $\Omega$ such that
+\[
+ \|u_j\|_{L^p(\Omega)}\longrightarrow0\quad(1\leq p<\infty),
+ \qquad (\ddc u_j)^n\longrightarrow c\delta_a
+ \quad\text{vaguely}.
+\]
+The same sequence tends to zero in local capacity. The norms use Lebesgue volume, and vague convergence means convergence against every compactly supported continuous test function.
+\end{proposition}
+\begin{proof}
+Translate $a$ to zero and write $z=(\zeta,z')\in\mathbb C\times\mathbb C^m$, $m=n-1$. It suffices to construct mass one, then multiply the potentials by $c^{1/n}$. For $\delta>0$, put $H_\delta(z')=\log(|z'|^2+\delta^2)$. Writing $s=|z'|^2$, its complex Hessian has tangential eigenvalue $(s+\delta^2)^{-1}$ with multiplicity $m-1$ and radial eigenvalue $\delta^2(s+\delta^2)^{-2}$. Taking the determinant and integrating in polar coordinates gives
+\[
+ (\ddc H_\delta)^m=
+ \frac{m!}{\pi^m}\frac{\delta^2}{(|z'|^2+\delta^2)^{m+1}}
+                       \,\mathrm d\lambda_{2m},
+ \qquad
+ \int_{|z'|<b}(\ddc H_\delta)^m
+       =\left(\frac{b^2}{b^2+\delta^2}\right)^m.
+\]
+Here $\lambda_{2m}$ is Lebesgue measure. These probability measures tend to $\delta_0$ as $\delta\downarrow0$, since their mass outside each ball about zero tends to zero.
+
+Choose $R>\max(1,\sup_\Omega|\zeta|)$ and a ball $P\subset\mathbb C^m$ containing the $z'$ projection of $\Omega$. Set
+\[
+ \begin{gathered}
+ \delta_j=\varepsilon_j=j^{-1},\qquad \eta_j=j^{-2},
+ \qquad v_j=\varepsilon_j^{-1/m}H_{\delta_j},\\
+ A_j=\sup_Pv_j+2\varepsilon_j\log(Rj).
+ \end{gathered}
+\]
+Apply \cref{lem:smooth-logarithmic-ridge} to these data and define $u_j=h_j-\eta_j$. The convolution satisfies $0\leq\chi_{\eta_j}(t)-\max(t,0)\leq\eta_j$. Both branches of the maximum are nonpositive on $\Omega$, so
+\[
+ \varepsilon_j\log(|\zeta|^2/R^2)-\eta_j
+       \leq u_j\leq0.
+\]
+Each $u_j$ is smooth and bounded on $\Omega$: the second branch is bounded below on its bounded $z'$ projection. The logarithm has a finite $L^p(\Omega)$ norm for every finite $p$, by polar integration on a fixed containing polydisc. Thus the same sequence tends to zero in all these norms.
+
+For concentric balls $B'\Subset B\Subset\Omega$ and a bounded test $0\leq w\leq1$ in $\PSH(B)$, the weighted Chern--Levine--Nirenberg estimate applied to $\log(|\zeta|^2/R^2)$ gives
+\[
+ \int_{B'}|u_j|(\ddc w)^n\leq C_B(\varepsilon_j+\eta_j).
+\]
+The ordinary range estimate bounds the term with $\eta_j$. Restrict to $B'\cap\{|u_j|>t\}$, divide by $t>0$ and take the supremum over $w$. Its capacity relative to $B$ tends to zero. The constants depend on the fixed balls and logarithm, and are independent of $j$ and $w$.
+
+In \eqref{eq:smooth-ridge-transverse-integral}, the factor $\varepsilon_j(\ddc v_j)^m$ equals $(\ddc H_{\delta_j})^m$. For $z'\in P$ and $|t|\leq\eta_j$, the radii satisfy
+\[
+ r_t(z')\leq j^{-1}\exp(\eta_j/(2\varepsilon_j))
+                    \leq \mathrm e^{1/2}/j.
+\]
+Extend $f\in C_c(\Omega)$ by zero to $\mathbb C^n$. Outside the $z'$ projection of its support both $f(r_t\mathrm e^{\mathrm i\vartheta},z')$ and $f(0,z')$ vanish. On that projection, uniform continuity of the extension and the radius bound make their difference tend uniformly to zero. The two averaging weights have total mass one, as does $(\ddc H_{\delta_j})^m$. Consequently
+\[
+ \int_\Omega f(\ddc u_j)^n
+       -\int_{\mathbb C^m}f(0,z')(\ddc H_{\delta_j})^m
+       \longrightarrow0.
+\]
+The second integral tends to $f(0)$, proving the asserted vague limit.
+\end{proof}
+
+Each approximating measure has a smooth density and charges no pluripolar set, whereas its limit is supported at one point. By \cref{lem:common-bound-zero-measure}, the potentials have no common lower bound on some compact subset. Capacity convergence here coexists with concentration because those common bounds fail.

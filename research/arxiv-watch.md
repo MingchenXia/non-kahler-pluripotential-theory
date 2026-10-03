@@ -116,3 +116,7 @@ Chen–Zheng2609.27809v1 Theorem1.2 and its core projection/slice proof are reco
 ## Checkpoint 363 — logarithmic projective kernel
 
 All 46 pages of Chiang2609.24869v1 are read. Only the exact metric of Example I.15 is integrated into Section 26.14, with a direct global norm proof of the m/logm kernel and Fubini–Study coefficient3/2. Four precise printed formula/estimate diagnostics are retained without rejecting all conclusions; general external kernel dependencies and listing coverage gaps remain. [Review](editorial/logarithmic-projective-kernel-363.md).
+
+## Checkpoint 364 — smooth local concentration
+
+All thirty pages of Qin2609.06568v1 are read. The zero-potential point-mass case is reconstructed by an exact smooth logarithmic ridge in Section 1.6.4, with all finite Lp and local capacity convergence and a direct common-bound obstruction. General classification and unconsulted AWNW/Lelong dependencies remain separate. [Review](editorial/local-dirac-concentration-364.md).

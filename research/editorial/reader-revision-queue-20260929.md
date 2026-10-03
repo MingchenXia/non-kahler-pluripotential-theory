@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 363: Read the complete primary Qin2609.06568v1 on prescribed limits and cluster sets of complex Monge–Ampère measures, retaining exact version/history, local-domain hypotheses and truncation/localization dependencies. Continue related kernel directions only with direct remainder and norm proofs. Retain all historical replacement and unconsulted spectral/Newton, curvature/domain/Hessian dependency gaps. All 23 formal and 18 supplemental directions remain open at full scope.
+Current next unit after checkpoint 364: Investigate the extension of the direct smooth ridge to arbitrary prescribed Radon measures and bounded background potentials by controlling lower-degree trace currents and mixed terms. Reconstruct needed arguments before integrating them; keep the general AWNW truncation and Lelong/maximal-approximation classification dependencies separate until consulted. Retain outstanding literature replacement, spectral/Newton and domain/Hessian gaps. All 23 formal and 18 supplemental directions remain open at full scope.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
