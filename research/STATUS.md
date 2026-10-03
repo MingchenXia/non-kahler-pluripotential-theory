@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 383 — Semipositive fiber reference
+
+[Review](editorial/semipositive-fiber-integrability-383.md): Subsection 26.10.4 proves the positive-top-volume semipositive extension of the three P21 band criteria and an exact exceptional fixed-divisor model outside the strict-gauge regime. Two complete scoped reads, 34 obligations and 57 selected pages pass. Actual live PDF/homepage/Pages are verified; 1058 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. Native catalogue compilation remains unverified. Fresh reconstruction passes with 290 exact book sources, all 1082+17 page texts matching and 1965 checksum-validated archive entries; authorized private 383 synchronization follows.
+
 ## Checkpoint 382 — Modified-base fiber integrability
 
 [Review](editorial/modified-base-fiber-integrability-382.md): Subsection 26.10.3 proves a specified-modification P21 criterion with the canonical Jacobian correction and an exact sharp point-ideal model. Two complete scoped reads, 42 obligations and 53 selected pages pass. The actual live PDF/homepage/Pages publication is verified; 1054 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. All eight recent/new arXiv roots equal the prior complete listings, and all 16 day offsets are checked. Native catalogue compilation remains unverified. Fresh reconstruction passes with 289 exact book sources, all 1078+17 page texts matching and 1961 checksum-validated archive entries; authorized private 382 synchronization follows.

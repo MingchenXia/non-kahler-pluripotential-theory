@@ -192,3 +192,7 @@ Subsection 26.10.2 proves the finite-SNC sufficient criterion, uniform mixed-twi
 ## Modified-base P21 criterion — checkpoint 382
 
 The eight CV/DG/AG/AP new/recent roots exactly match the complete prior listing bytes; all sixteen day offsets are retrieved and contain only IDs already in the complete roots. Current coverage remains 28 September--2 October, with replacements on 2 October; historical gaps remain. No new primary-paper read or exhaustive absence claim. Subsection 26.10.3 proves the specified-modification/Jacobian criterion and exact sharp point-ideal example; arbitrary-selector existence/necessity remains open. [Review](editorial/modified-base-fiber-integrability-382.md).
+
+## Semipositive positive-volume P21 extension — checkpoint 383
+
+Subsection 26.10.4 weakens strict residual positivity to semipositivity with positive top integral in the three band criteria and exact-model corollary. An exceptional fixed-divisor example has positive mass, no strict smooth gauge and exact zero section defect. No new external primary paper or listing scan; prior coverage and gaps retained. General-selector existence and necessity remain open. [Review](editorial/semipositive-fiber-integrability-383.md).
