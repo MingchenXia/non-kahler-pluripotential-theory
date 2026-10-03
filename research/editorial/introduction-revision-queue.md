@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 358: Verify the closed-pullback strict-barrier construction and geometric degeneration hypotheses of2610.00942v1; read the needed GL22/CT15 primary proofs and ZhangSection7/EGZ normal-space chain before adopting conifold metric conclusions. Continue pending Blocki domain and Szekelyhidi Hessian checks, related directions and precise arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
+Current next unit after checkpoint 359: Check bounded potential descent and sharp pushed-forward density integrability for the explicit standard nodal small resolution, using direct local calculations and the existing normal-space appendix. Continue the separate EGZ uniqueness and Zhang Section 7/metric no-neck chain before geometric completion or GH conclusions; retain pending domain/Hessian checks and precise arXiv listing catch-up. All 23 formal and 18 supplemental directions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

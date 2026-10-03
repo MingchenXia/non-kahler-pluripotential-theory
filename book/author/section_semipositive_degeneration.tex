@@ -167,3 +167,72 @@ Normalized compactness in the fixed background $\theta+\eta$, followed by a diag
 \end{proof}
 
 The intrinsic scalar $c_0$ is also the nef boundary value $\mathcal V_\mu(\theta)$ of \cref{thm:gaud-volume-nef-limit}. A uniform mass property is not used in the proof above: the bounds concern the solutions for this fixed smooth density. If the bounded normalized limiting equation has a unique solution, every cluster limit agrees and the whole family converges in $L^1(X)\cap C^\infty_{\mathrm{loc}}(X\setminus Z)$.
+
+\subsection{Small resolutions of nodes}
+\label{subsec:nodal-small-resolution}\index{Small resolution}
+
+The pullback of a positive form from a singular space loses positivity along the contracted curves. In the standard small resolution of a node, a logarithm of the normal bundle norm supplies the missing curvature along the exceptional curve. Cutting this logarithm off where the pullback is already positive gives a global strict barrier.
+
+Assume now $n=3$. Let $Y$ be a connected compact normal complex threefold, smooth outside a finite set $\Sigma$ of nodes. A node is locally the hypersurface
+\[
+ \{x_1x_4-x_2x_3=0\}\subset\mathbb C^4.
+\]
+Let $\pi:X\to Y$ be a proper holomorphic map that is biholomorphic over $Y\setminus\Sigma$. Assume each local resolution is the standard small resolution: a neighborhood of its exceptional curve is identified with a neighborhood of the zero section of
+\[
+ \mathcal O_{\mathbb P^1}(-1)\oplus\mathcal O_{\mathbb P^1}(-1),
+\]
+and the contraction, in bundle coordinates $(z,y_1,y_2)$, is
+\begin{equation}\label{eq:nodal-contraction-chart}
+ \pi(z,y_1,y_2)=(y_1,zy_1,y_2,zy_2).
+\end{equation}
+Interchanging the two rulings gives the other standard model. Write $E=\pi^{-1}(\Sigma)$; its components $E_j$ are disjoint copies of $\mathbb P^1$.
+
+Fix a positive form $\omega_Y$ on $Y$ in the local embedding sense: in each ambient chart it is induced by a smooth strictly positive real $(1,1)$-form. Set $\theta=\pi^*\omega_Y$, and retain an arbitrary Hermitian form $\eta$ on $X$.
+
+\begin{lemma}\label{lem:nodal-strict-barrier}\index{Barrier!small resolution}
+The form $\theta$ is smooth and semipositive, positive on $X\setminus E$. There are $\delta>0$ and $\rho\in\PSH(X,\theta)$ with analytic poles precisely on $E$, smooth on $X\setminus E$, such that
+\[
+ \sup_X\rho=0,\qquad \theta+\ddc\rho\geq\delta\eta.
+\]
+\end{lemma}
+\begin{proof}
+Smoothness and positivity off $E$ follow from the pullback and the biholomorphism. In one standard model put
+\[
+ r^2=(1+|z|^2)(|y_1|^2+|y_2|^2),\qquad
+ b=\ddc\log(1+|z|^2).
+\]
+The function $r^2$ is the sum of the squared absolute values of the four contracted coordinates. It is therefore globally defined on the bundle; $b$ is the pullback of the Fubini--Study form from its base. In the displayed chart,
+\begin{equation}\label{eq:nodal-logarithmic-curvature}
+ \ddc\log r^2
+ =b+\ddc\log(|y_1|^2+|y_2|^2)\geq b.
+\end{equation}
+This is an inequality of currents across the zero section as well as a smooth inequality off it.
+
+Ambient positivity gives $\theta\geq c\ddc r^2$ on a sufficiently small tube, for some $c>0$. The smooth form $\ddc r^2+b$ is positive definite there. Indeed the contraction is an immersion off the zero section, and on that section $\ddc r^2$ is positive in both fiber directions while $b$ is positive along the base. Compactness of the zero section and a smaller closed tube give a uniform lower bound by a positive multiple of $\eta$. Thus, for every fixed $a>0$,
+\[
+ \theta+a\ddc\log r^2
+ \geq c\ddc r^2+ab
+ \geq\delta_a\eta
+\]
+near the zero section, with $\delta_a>0$.
+
+Choose disjoint model tubes with nonempty complement and numbers $0<t_1<t_2<1$ in each. Let $0\leq\chi\leq1$ be a smooth cutoff of $r^2$, equal to one for $r^2\leq t_1$ and zero for $r^2\geq t_2$. Extend $\chi(r^2)\log r^2$ by zero outside its tube. On the compact transition annuli, the pullback $\theta$ is uniformly positive and the second derivatives of this cutoff potential are bounded. A sufficiently small positive rational $a$ therefore makes
+\[
+ \rho=a\sum_j\chi_j(r_j^2)\log r_j^2
+\]
+satisfy $\theta+\ddc\rho\geq\delta\eta$ there and near every $E_j$. On the remaining compact set, $\rho=0$ and $\theta$ is positive, so decreasing $\delta$ proves the global inequality. Near $E_j$ the function is
+$a\log(|y_1|^2+|y_2|^2)+a\log(1+|z|^2)$, hence has analytic singularities with rational coefficient and pole set exactly $E_j$. It is smooth elsewhere and nonpositive; its zero extension gives supremum zero. If $E$ is empty, take $\rho=0$ and use the positivity of $\theta$ on compact $X$.
+\end{proof}
+
+\begin{corollary}\label{cor:nodal-potential-degeneration}\index{Monge--Ampere equation@Monge--Amp\`ere equation!small resolution}
+For the preceding geometric data and every smooth positive probability volume form $\mu$ on $X$, the solutions of \eqref{eq:semipositive-smooth-approximation} have the bounds and subsequential convergence of \cref{thm:semipositive-smooth-degeneration}, with $Z=E$. Moreover, for each exceptional curve,
+\[
+ \int_{E_j}\omega_\varepsilon
+       =\varepsilon\int_{E_j}\eta\longrightarrow0.
+\]
+\end{corollary}
+\begin{proof}
+Apply the theorem using \cref{lem:nodal-strict-barrier}. Since $\pi$ contracts $E_j$, the restriction of $\theta$ to it is zero. Stokes on the compact smooth curve gives $\int_{E_j}\ddc u_\varepsilon=0$, proving the area identity.
+\end{proof}
+
+When $K_X$ is torsion, the density can be chosen to make these metrics Chern--Ricci flat. Choose a nowhere vanishing holomorphic section of $K_X^{\otimes m}$ for some $m\geq1$. If its local expression is $f(\mathrm{d}z_1\wedge\mathrm{d}z_2\wedge\mathrm{d}z_3)^{\otimes m}$, use $|f|^{2/m}$ as the density relative to the standard coordinate volume. The coordinate Jacobians cancel, giving a smooth positive volume form on $X$. Its logarithmic density is pluriharmonic, so its Chern--Ricci form vanishes; normalization to total mass one preserves this property. Applying $-\mathrm{i}\partial\bar\partial\log$ to $\omega_\varepsilon^3=c_\varepsilon\mu$ now gives $\operatorname{Ric}^{\mathrm{Ch}}(\omega_\varepsilon)=0$, and the same holds for the smooth limiting metric on $X\setminus E$.

@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 359 — Nodal small-resolution barrier
+
+[Review](research/editorial/nodal-small-resolution-barrier-359.md): Section 13.18.1 constructs a strict analytic barrier for an explicitly assumed standard nodal small resolution, proves fixed-density subsequential potential degeneration and exact exceptional-area decay, and explains the Chern–Ricci-flat density when the canonical bundle is torsion. Two complete revised reads, 24 internal obligations and all 27 selected output pages pass. All 23 formal statements and 451 protected files remain exact. One production build gives 1,001 printed pages; actual public PDF/homepage/Pages deployment verified. Catalogue statements and current locators retained. Fresh empty-source reconstruction passes with 270 exact book sources, all 1,025+17 page texts matching and 1,873 checksum-validated archive entries; authorized private 359 synchronization follows. All 23 formal and 18 supplemental directions remain open.
+
 ## Checkpoint358 — Semipositive smooth degeneration
 
 [Review](research/editorial/semipositive-smooth-degeneration-358.md): Section13.18 proves uniform fixed-smooth-density potential/scalar bounds and smooth off-pole subsequential degeneration under an explicit strict analytic barrier, without a metric-wide mass property. Complete scoped first/second reads,41 internal obligations and25 final output checks pass; all23 formal statements and451 protected files remain exact. Both publicPDFs/homepage descriptions/Pages deployments are verified; final999 printedpages. Catalogue locators/statements retained, native compilation unverified after no diagnostics. Fresh empty-source reconstruction passes with270 exact book sources, all1023+17 page texts matching and1870 checksum-validated archive entries; authorized private358 sync follows. All23 formal and18 supplemental directions remain open.
