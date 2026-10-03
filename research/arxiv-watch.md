@@ -100,3 +100,7 @@ The complete 28-page [Guyett–Mc Gowan2610.00942v1](https://arxiv.org/abs/2610.
 ## Checkpoint 359 — standard nodal local model
 
 Section 13.18.1 constructs a strict analytic barrier directly in the displayed O(-1) plus O(-1) model, applies potential degeneration and computes exact exceptional-area decay. The source model/norm is checked at [2610.00942v1](https://arxiv.org/abs/2610.00942v1), pp. 3–4 and 15–16, with its complete 28-page read retained. GL22 pp. 1–4/13–17 are actually read at their bounded scope; CT15 v5 PDF remains unread. No classification, full-family uniqueness, metric-completion/GH conclusion, complete new listing scan or full formal problem closure. See [the audit](audits/nodal-small-resolution-barrier-359.json).
+
+## Checkpoint 360 — nodal density and closed potential limit
+
+Section 13.18.2 computes the exact p<3 and weak L3 density threshold, applies the existing arbitrary-background descent proof and proves closed bounded uniqueness/full-family convergence by energy. Source and version scopes are in [the audit](audits/nodal-density-closed-potential-limit-360.json). EGZ v2 pp. 1–2, 5–7, 27–30 are actually read; no full general continuity chain or new complete listing scan.

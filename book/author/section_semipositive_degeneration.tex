@@ -236,3 +236,74 @@ Apply the theorem using \cref{lem:nodal-strict-barrier}. Since $\pi$ contracts $
 \end{proof}
 
 When $K_X$ is torsion, the density can be chosen to make these metrics Chern--Ricci flat. Choose a nowhere vanishing holomorphic section of $K_X^{\otimes m}$ for some $m\geq1$. If its local expression is $f(\mathrm{d}z_1\wedge\mathrm{d}z_2\wedge\mathrm{d}z_3)^{\otimes m}$, use $|f|^{2/m}$ as the density relative to the standard coordinate volume. The coordinate Jacobians cancel, giving a smooth positive volume form on $X$. Its logarithmic density is pluriharmonic, so its Chern--Ricci form vanishes; normalization to total mass one preserves this property. Applying $-\mathrm{i}\partial\bar\partial\log$ to $\omega_\varepsilon^3=c_\varepsilon\mu$ now gives $\operatorname{Ric}^{\mathrm{Ch}}(\omega_\varepsilon)=0$, and the same holds for the smooth limiting metric on $X\setminus E$.
+
+\subsection{Measures and bounded potentials at a node}
+\label{subsec:nodal-measures-potentials}
+
+Retain the standard small resolution and the smooth positive probability volume form $\mu$ above. Write $\mu_Y=\pi_*\mu$, and let $\nu_Y$ be $\omega_Y^3$ on the regular locus, extended by zero at the nodes. The ambient volume vanishes on pullback along the exceptional curves. Its exact order determines the integrability of the pushed-forward density.
+
+\begin{lemma}\label{lem:nodal-pushforward-density}\index{Density!small resolution}\index{Small resolution!density integrability}
+The measures $\mu_Y$ and $\nu_Y$ are finite and give the nodes zero mass. There is a positive density $F$ with $\mu_Y=F\nu_Y$. If $\Sigma$ is nonempty, then for $1\leq p<\infty$,
+\[
+ F\in L^p(Y,\nu_Y)\quad\Longleftrightarrow\quad p<3.
+\]
+At each node, $F$ is comparable to $r^{-2}$, where $r^2=\sum_{j=1}^4|x_j|^2$ in its displayed local model. There are $c,C,T_0>0$ such that
+\[
+ cT^{-3}\leq\nu_Y(\{F>T\})\leq CT^{-3}
+ \qquad(T\geq T_0).
+\]
+Thus the endpoint is weak $L^3$, with $F\notin L^3$. If $\Sigma$ is empty, $F$ is smooth and bounded.
+\end{lemma}
+\begin{proof}
+The map is biholomorphic off $E$, and both smooth measures $\mu$ and $\theta^3$ give $E$ zero mass. Hence $\nu_Y=\pi_*\theta^3$ is finite, $\mu_Y$ has no node atom, and on the regular locus
+\[
+ F\circ\pi=\mu/\theta^3.
+\]
+In the chart \eqref{eq:nodal-contraction-chart}, put $h=1+|z|^2$ and $s=|y_1|^2+|y_2|^2$, so $r^2=hs$. The fiber block of the complex Hessian of $r^2$ is $h$ times the identity, and its Schur complement is $s/h$. Consequently
+\begin{equation}\label{eq:nodal-ambient-volume}
+ \det\bigl((r^2)_{j\bar k}\bigr)=hs=r^2,
+ \qquad \frac{(\ddc r^2)^3}{3!}
+       =\frac{r^2}{\pi^3}\,\mathrm{d}\lambda_6,
+\end{equation}
+where $\lambda_6$ is Euclidean volume in $(z,y_1,y_2)$. Ambient positivity bounds $\theta$ above and below by positive multiples of $\ddc r^2$ on a smaller tube. The smooth density of $\mu$ is bounded above and below there. On compact subcharts covering the base $\mathbb P^1$, it follows that
+\[
+ \theta^3\asymp r^2\,\mathrm{d}\lambda_6,
+ \qquad F\circ\pi\asymp r^{-2}.
+\]
+The other bundle chart gives the same comparison, since $r$ is the norm of the contracted coordinates.
+
+On each bounded base subchart, $r$ is comparable to the Euclidean radius $R$ in the two complex fiber variables. Up to fixed positive constants, the contribution to $\int F^p\,\mathrm{d}\nu_Y$ is therefore
+\[
+ \int_0^{R_0}R^{2-2p}R^3\,\mathrm{d}R
+       =\int_0^{R_0}R^{5-2p}\,\mathrm{d}R.
+\]
+Two compact base subcharts give the upper estimate; a fixed open base subchart gives the lower estimate. The integral is finite precisely when $p<3$, and diverges logarithmically at $p=3$. Away from the finitely many nodes the density is smooth. The same comparisons give $\nu_Y(\{r<t\})\asymp t^6$ near a node. The two bounds for $F$ sandwich $\{F>T\}$ between such tubes of radii comparable to $T^{-1/2}$, proving the endpoint estimate.
+\end{proof}
+
+The descent theorem \cref{thm:hermitian-space-descent} applies to this normal target and its resolution, also for the nonclosed ambient background. Every bounded $\theta$-plurisubharmonic function is constant on each exceptional curve and is the pullback of a unique bounded $\omega_Y$-plurisubharmonic function. Thus each cluster limit has the form $u_0=\psi_0\circ\pi$, with $\sup_Y\psi_0=0$. By the resolution-independent measure construction \eqref{eq:space-extended-ma},
+\begin{equation}\label{eq:nodal-descended-equation}
+ \mathrm{MA}^{\mathrm{ext}}_{Y,\omega_Y}(\psi_0)
+       =c_0\mu_Y=c_0F\nu_Y.
+\end{equation}
+The equality includes the nodes, since both measures give them zero mass. This identifies a bounded equation on the singular space without asserting continuity at a node.
+
+\begin{theorem}\label{thm:nodal-closed-full-convergence}\index{Small resolution!closed potential limit}
+Suppose additionally that $\theta$ is closed. The equation
+\[
+ \mathrm{MA}_\theta(u)=c\mu,
+ \qquad u\in\PSH(X,\theta)\cap L^\infty(X),
+ \qquad \sup_Xu=0,
+\]
+has a unique pair $(c,u)$ with $c>0$. Its scalar is $c=c_0=\int_X\theta^3$. The entire family $u_\varepsilon$ converges to $u$ in $L^1(X)$ and smoothly on compact subsets of $X\setminus E$. The limit is independent of $\eta$, and its descended potential is the unique bounded normalized solution of \eqref{eq:nodal-descended-equation}.
+\end{theorem}
+\begin{proof}
+Existence follows from \cref{cor:nodal-potential-degeneration}. Fix one cluster limit $u_0$ and put $A=\theta+\ddc u_0$. This is a positive closed current with bounded local potentials, smooth and strictly positive on $X\setminus E$ by the trace bounds. If $v$ is another bounded solution with scalar $c$, bounded closed-background Stokes gives $c=\int_X\theta^3=c_0$. Put $B=\theta+\ddc v$ and $w=v-u_0$. The bounded integration-by-parts calculus of \cref{sec:psh-local-capacity} gives
+\[
+ 0=\int_Xw(B^3-A^3)
+   =-\sum_{j=0}^2\int_X\mathrm{d}w\wedge\dc w
+                         \wedge B^j\wedge A^{2-j}.
+\]
+All three energies are nonnegative. The term with $A^2$ therefore vanishes. On every relatively compact chart of $X\setminus E$, its smooth positive factor controls the weak gradient of $w$, so $\mathrm{d}w=0$ there. The complement of a proper complex analytic subset in the connected manifold $X$ is connected. Thus $w$ is constant almost everywhere off $E$. Since $E$ has ordinary volume zero, canonical almost-everywhere equality of quasi-plurisubharmonic functions, \cref{lem:qpsh-almost-everywhere-order}, gives $v=u_0+C$ on all of $X$. Normalization fixes $C=0$.
+
+The compactness and smooth local estimates of \cref{thm:semipositive-smooth-degeneration} now make every subsequential limit equal to $u_0$, proving convergence of the whole family. The equation and its unique normalized solution do not depend on $\eta$. Descent and the zero exceptional mass identify bounded solutions upstairs and downstairs, proving the final assertion.
+\end{proof}

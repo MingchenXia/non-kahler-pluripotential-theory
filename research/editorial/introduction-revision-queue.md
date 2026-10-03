@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 359: Check bounded potential descent and sharp pushed-forward density integrability for the explicit standard nodal small resolution, using direct local calculations and the existing normal-space appendix. Continue the separate EGZ uniqueness and Zhang Section 7/metric no-neck chain before geometric completion or GH conclusions; retain pending domain/Hessian checks and precise arXiv listing catch-up. All 23 formal and 18 supplemental directions remain open.
+Current next unit after checkpoint 360: Catch up the remaining recent arXiv new/cross/replacement listing gaps, then read the full Windare 2609.38551v1 and Thiella 2609.35625v1 candidates before any new integration. Continue the separate Zhang Section 7/no-neck geometric chain and pending Blocki domain/Szekelyhidi Hessian proofs. All 23 formal and 18 supplemental directions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

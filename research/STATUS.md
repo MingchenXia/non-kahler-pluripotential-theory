@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 360 — Nodal density and closed potential limit
+
+[Review](editorial/nodal-density-closed-potential-limit-360.md): Section 13.18.2 proves exact nodal pushed-forward density p<3 and weak L3 endpoint, bounded arbitrary-background descent, and closed-background uniqueness/full-family potential convergence. Two complete revised reads, 30 internal obligations and all 32 selected final output pages pass. All 23 formal statements and 451 protected files remain exact. All three public PDF/homepage/Pages deployments are verified; final 1,003 printed pages. P23 state of the art and current locators reconciled. Fresh empty-source reconstruction passes with 270 exact book sources, all 1,027+17 page texts matching and 1,876 checksum-validated archive entries; authorized private 360 synchronization follows. All 23 formal and 18 supplemental directions remain open.
+
 ## Checkpoint 359 — Nodal small-resolution barrier
 
 [Review](editorial/nodal-small-resolution-barrier-359.md): Section 13.18.1 constructs a strict analytic barrier for an explicitly assumed standard nodal small resolution, proves fixed-density subsequential potential degeneration and exact exceptional-area decay, and explains the Chern–Ricci-flat density when the canonical bundle is torsion. Two complete revised reads, 24 internal obligations and all 27 selected output pages pass. All 23 formal statements and 451 protected files remain exact. One production build gives 1,001 printed pages; actual public PDF/homepage/Pages deployment verified. Catalogue statements and current locators retained. Fresh empty-source reconstruction passes with 270 exact book sources, all 1,025+17 page texts matching and 1,873 checksum-validated archive entries; authorized private 359 synchronization follows. All 23 formal and 18 supplemental directions remain open.

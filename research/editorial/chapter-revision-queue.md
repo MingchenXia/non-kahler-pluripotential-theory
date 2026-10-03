@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 359: Check bounded potential descent and sharp pushed-forward density integrability for the explicit standard nodal small resolution, using direct local calculations and the existing normal-space appendix. Continue the separate EGZ uniqueness and Zhang Section 7/metric no-neck chain before geometric completion or GH conclusions; retain pending domain/Hessian checks and precise arXiv listing catch-up. All 23 formal and 18 supplemental directions remain open.
+Current next unit after checkpoint 360: Catch up the remaining recent arXiv new/cross/replacement listing gaps, then read the full Windare 2609.38551v1 and Thiella 2609.35625v1 candidates before any new integration. Continue the separate Zhang Section 7/no-neck geometric chain and pending Blocki domain/Szekelyhidi Hessian proofs. All 23 formal and 18 supplemental directions remain open.
 
 | Chapter | Source | This cycle |
 |---|---|---|
