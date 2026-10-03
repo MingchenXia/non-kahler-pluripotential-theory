@@ -1,5 +1,12 @@
 # Sequential open-problem research with Xean
 
+## Standalone-paper request, 3 October 2026
+
+The current author request uses Xean with gpt-6.1-sol xhigh for the uploaded catalogue and asks that fully checked papers be pushed to this private repository. This is a standalone-paper task; the historical book-workflow withdrawal below is preserved as history. A separately frozen checkout at a2a581701d0ee0f45188f3041553ce5353d18cb2, Bun 1.4.2 and inherited official Codex login now pass actual native-research and full-solver smoke calls. No credential is stored here.
+
+The original P21 condition-finding task completes without a supplied proof or trusted imports. Both generated notes pass correctness, source and independent reconstruction, and the candidate passes requirements. The [paper](../papers/P21-bounded-fiber-integrability.tex), [accepted proof](results/P21-20261003.accepted.md) and [review](results/P21-20261003.review.json) retain its sufficient conditions and limitations. The unrestricted P21 programme and the overall catalogue remain open. Other original tasks are being prepared with definitions and references expanded; an unfinished draft is not acceptance. Campaign databases and raw worker histories stay outside the source repository.
+
+
 Historical workflow, superseded on 2 October 2026: the author explicitly removes Xean from further work. Continue research and manuscript development directly under the repository standards. Its authentication and model configuration are no longer prerequisites. The configuration, drafts and qualification records below are retained solely as history.
 
 Requested by the author on 2 October 2026: use [chaoxu/xean](https://github.com/chaoxu/xean), `gpt-6.1-sol` and `xhigh`, trying the book's open problems one by one. Status: prepared, not executed. The workspace has recovered and the checked checkpoint294 source has been reconciled and synchronized. Runtime qualification is recorded in [runtime-qualification-20261002.md](runtime-qualification-20261002.md): installed and deterministic runs checked; exact Pi model/effort validated; native model authentication failed401. No Xean campaign has run.

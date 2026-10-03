@@ -2663,3 +2663,7 @@ recorded in `research/audits/github-source-setup.json`.
 Earlier scopes, corrections and checks remain in `research/audits/` and
 `research/editorial/`. Historical adverse audit reports are retained together
 with the records resolving their findings.
+
+## Standalone P21 paper — Xean, 3 October 2026
+
+The [standalone paper](research/papers/P21-bounded-fiber-integrability.tex) gives a complete explicit sufficient-condition answer to P21's condition-finding request: a global logarithmic lower bound and one anisotropic fiber witness produce a positive-mass base potential and an O(m^(q-1)) section defect. The independent original-task campaign completes with correctness/source/reconstruction PASS on both generated notes and requirements PASS on the candidate, using gpt-6.1-sol xhigh and no trusted imports. [Review](research/papers/P21-bounded-fiber-integrability.review.md) records the exact scope and checks. The paper compiles locally in six pages; native compilation remains unverified. Arbitrary-selector classification and the broader catalogue remain open. This standalone source release does not modify or rebuild the checked book.

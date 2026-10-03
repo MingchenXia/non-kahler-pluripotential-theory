@@ -2325,3 +2325,7 @@ Chapter19's curve source metric compares with total variation of atomic data und
 ## Preservation and publication
 
 Checkpoint90 was remotely verified at `0f3dfa696032aa543352acb019836de7547e4da5`. Review the full eligible diff and run the authorized private synchronization command after the release checks. Git history and an exact remote-head check record backup; do not infer successful publication merely from a local commit. Keep the original template, upright differential d, standard environments, standard ideal-envelope notation and no formal NUM citation. Never edit verifier records.
+
+## Standalone P21 paper — Xean, 3 October 2026
+
+The [standalone paper](papers/P21-bounded-fiber-integrability.tex) gives a complete explicit sufficient-condition answer to P21's condition-finding request: a global logarithmic lower bound and one anisotropic fiber witness produce a positive-mass base potential and an O(m^(q-1)) section defect. The independent original-task campaign completes with correctness/source/reconstruction PASS on both generated notes and requirements PASS on the candidate, using gpt-6.1-sol xhigh and no trusted imports. [Review](papers/P21-bounded-fiber-integrability.review.md) records the exact scope and checks. The paper compiles locally in six pages; native compilation remains unverified. Arbitrary-selector classification and the broader catalogue remain open. This standalone source release does not modify or rebuild the checked book.

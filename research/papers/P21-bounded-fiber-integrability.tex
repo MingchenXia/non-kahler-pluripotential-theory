@@ -1,0 +1,370 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newcommand{\ddc}{dd^c}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\PP}{\mathbb P}
+\title{Fiber integrability and base multiplier-ideal approximation}
+\author{}
+\date{3 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a compact holomorphic submersion with connected fibers, we give sufficient
+conditions under which sections selected by an upstairs singularity are
+approximated by the multiplier ideals of one base potential of positive mass.
+A global logarithmic lower bound and one anisotropic upper-bound chart place
+the descended section spaces between divisorial series whose vanishing orders
+differ by a bounded amount. Their dimension defect is $O(m^{q-1})$ on a base
+of dimension $q$. Exact local models give the selected series explicitly,
+with fiber-integrability gain $p\sum_j b_j^{-1}$. Product examples show that
+the selecting singularity can be supported on a proper subset of each fiber.
+The result answers the request for sufficient conditions in catalogue P21;
+it gives no necessity-and-sufficiency classification for arbitrary selectors.
+\end{abstract}
+
+\section{The approximation question}
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact
+complex manifolds with connected fibers. Suppose that $B$ is K\"ahler, and
+put $q=\dim B\geq1$ and $f=\dim X-q\geq1$. Fix a Hermitian form $\omega$
+on $X$, a holomorphic line bundle $A$ with smooth Hermitian metric $h$ on
+$B$, and $\varphi\in\PSH(X,\omega)$. Write $\theta=c_1(A,h)$.
+We use $\ddc=\frac{i}{2\pi}\partial\bar\partial$ and define $\cI(tu)$ by
+local integrability of $|g|^2e^{-tu}$ for holomorphic germs $g$.
+
+The spaces in P21 of the attached catalogue~\cite{catalogue} are
+\[
+ V_m=H^0(X,\pi^*A^m\otimes\cI(m\varphi))\subset H^0(B,A^m).
+\]
+The identification follows from compact connected fibers. The question asks
+for conditions producing $\psi\in\PSH(B,\theta)$ of positive
+non-pluripolar mass such that
+\[
+ W_m=H^0(B,A^m\otimes\cI(m\psi))\subset V_m,
+ \qquad \dim V_m-\dim W_m=o(m^q).
+\]
+No section norm is part of this assertion.
+
+The isotropic section-over-divisor result is already proved in
+Theorem 26.10.1 of Xia's working monograph~\cite{book}. Its error order and
+sharp product example are established background. Here only one chart is
+needed to detect the leading base vanishing order. Separate powers in that
+chart measure the bounded relaxation supplied by fiber integration. A global
+lower bound ensures that stronger selecting conditions elsewhere do not
+destroy the base inclusion.
+
+\section{A bounded divisorial band}
+Let $D\subset B$ be a nonempty smooth connected reduced effective divisor.
+Choose a smooth metric $H_D$ on $\cO(D)$, let $s_D$ be its defining section,
+and write $\eta=c_1(\cO(D),H_D)$.
+
+\begin{theorem}\label{thm:criterion}
+Assume that there are $c>0$ and $u\in C^\infty(B,\mathbb R)$ such that
+\begin{equation}\label{eq:positive}
+ \beta=\theta+\ddc u-c\eta>0.
+\end{equation}
+Suppose that for some constant $C$ one has
+\begin{equation}\label{eq:global}
+ \varphi\geq c\log\|\pi^*s_D\|^2-C
+ \quad\hbox{on }X,
+\end{equation}
+where the divisor norm uses the pulled-back metric $H_D$ and the inequality
+is interpreted for extended-real values.
+
+Suppose further that one coordinate polydisc on $X$ has submersion
+coordinates
+\[
+ \pi(z,t,w,v)=(z,t),\quad D=\{z=0\},\quad
+ t\in\mathbb C^{q-1},\ w\in\mathbb C^r,\ v\in\mathbb C^{f-r},
+\]
+with $1\leq r\leq f$, and throughout this polydisc
+\begin{equation}\label{eq:witness}
+ \varphi\leq\frac cp\log\left(|z|^{2p}+
+                  \sum_{j=1}^r|w_j|^{2b_j}\right)+C'
+\end{equation}
+for positive integers $p,b_1,\ldots,b_r$. The chart lies over a nonempty
+open subset of $D$.
+
+Set
+\[
+ a=p\sum_{j=1}^r b_j^{-1},\qquad
+ L_m=\lfloor mc\rfloor,\qquad
+ K_m=\max\{\lfloor mc-a\rfloor,0\}.
+\]
+Then
+\begin{equation}\label{eq:reference}
+ \psi=u+c\log\|s_D\|^2\in\PSH(B,\theta),\qquad
+ \int_B\langle(\theta+\ddc\psi)^q\rangle=\int_B\beta^q\in(0,\infty).
+\end{equation}
+For every positive integer $m$,
+\begin{equation}\label{eq:band}
+ W_m=H^0(B,A^m(-L_mD))\subset V_m
+                  \subset H^0(B,A^m(-K_mD)),
+\end{equation}
+and
+\begin{equation}\label{eq:defect}
+ 0\leq\dim V_m-\dim W_m=O(m^{q-1})=o(m^q).
+\end{equation}
+When $q=1$, the defect is at most $\lceil a\rceil$.
+\end{theorem}
+
+The positivity condition constructs the base reference. The two singularity
+bounds then compare its ideal series with the selected series. The upper
+bound needs neither a global section over $D$ nor a global normal-coordinate
+splitting.
+
+\subsection{Two elementary estimates}
+\begin{lemma}\label{lem:integral}
+Let $p,b_1,\ldots,b_r$ be positive integers, $P>0$, and $\ell\geq0$ an
+integer. Near the origin in $\mathbb C^{r+1}$,
+\[
+ |z|^{2\ell}\left(|z|^{2p}+\sum_{j=1}^r|w_j|^{2b_j}\right)^{-P}
+ \in L^1_{\rm loc}
+ \quad\Longleftrightarrow\quad
+ \frac{\ell+1}{p}+\sum_{j=1}^r\frac1{b_j}>P.
+\]
+Equality of the two sides in the last inequality gives logarithmic divergence.
+\end{lemma}
+\begin{proof}
+Integrate the angular variables and put
+$x_0=|z|^{2p}$ and $x_j=|w_j|^{2b_j}$. Up to positive constants the integral
+becomes
+\[
+ \int (x_0+\cdots+x_r)^{-P}
+ x_0^{(\ell+1)/p-1}\prod_{j=1}^r x_j^{1/b_j-1}\,dx_0\cdots dx_r.
+\]
+A small simplex $\sum x_j<\delta$ is contained in the integration box, and
+the box is contained in a larger simplex. On either simplex use
+$\rho=\sum x_j$ and $x_j=\rho y_j$. The angular simplex integral is finite
+and positive since all its exponents are greater than $-1$. The radial
+integral is
+\[
+ \int_0^\delta\rho^{(\ell+1)/p+\sum b_j^{-1}-P-1}\,d\rho.
+\]
+This proves the assertion and the equality endpoint. Additional tangential
+variables on bounded polydiscs, bounded remainders in the weight, and a
+holomorphic unit multiplying $z^\ell$ do not change local integrability.
+\end{proof}
+
+\begin{lemma}\label{lem:dimension}
+Let $Y$ be a compact complex manifold of dimension $s$ and let $E,F$ be
+fixed holomorphic line bundles. Uniformly for integers $j,k$,
+\[
+ h^0(Y,E^j\otimes F^k)=O((1+|j|+|k|)^s).
+\]
+Consequently, if $0\leq K_m\leq L_m=O(m)$ and $L_m-K_m$ is bounded, then
+\[
+ h^0(B,A^m(-K_mD))-h^0(B,A^m(-L_mD))=O(m^{q-1}).
+\]
+\end{lemma}
+\begin{proof}
+Choose smooth bundle metrics, a smooth positive volume, and finitely many
+coordinate charts and frames with smaller charts covering $Y$. Put
+$N=1+|j|+|k|$. All second derivatives of the metric weight of
+$E^j\otimes F^k$ are $O(N)$. At a point in a smaller chart, a holomorphic
+affine exponential change of frame removes the constant and real-linear
+terms of that weight. The new weight is uniformly bounded on a ball of
+radius $\epsilon N^{-1/2}$ about the point. Submean therefore gives
+\[
+ |\sigma(y)|^2\leq C N^s\|\sigma\|_{L^2}^2.
+\]
+For an orthonormal basis, the sum of the squared evaluations is the squared
+operator norm of evaluation into a one-dimensional fiber. It is thus at
+most $CN^s$. Integrating the sum bounds the dimension. In dimension zero
+the assertion follows from the finite number of points.
+
+For the second assertion use the restriction sequences
+\[
+ 0\longrightarrow A^m(-(j+1)D)\longrightarrow A^m(-jD)
+ \longrightarrow A^m(-jD)|_D\longrightarrow0
+\]
+for $K_m\leq j<L_m$. Each successive dimension difference is at most
+$h^0(D,A^m(-jD)|_D)$. Apply the first assertion on the compact complex
+$(q-1)$-fold $D$ with $j=O(m)$, and sum over the bounded number of steps.
+No surjectivity of restriction or cohomology vanishing is required. If
+$q=1$, the connected smooth divisor is one point and each restriction space
+has dimension one.
+\end{proof}
+
+\subsection{Proof of the criterion}
+\begin{proof}[Proof of Theorem \ref{thm:criterion}]
+In a local frame of $A$, a section of $\pi^*A^m$ is a holomorphic function
+on each compact connected fiber, and is consequently constant there. Local
+holomorphic right inverses of the submersion show that its descended
+coefficient is holomorphic. These coefficients glue, giving
+\[
+ H^0(X,\pi^*A^m)=H^0(B,A^m).
+\]
+
+Poincar\'e--Lelong gives
+$\theta+\ddc\psi=\beta+c[D]\geq0$. Off $D$ the current is $\beta$.
+The non-pluripolar construction discards the locus $\psi=-\infty$, which
+is $D$, so its top product is the extension of $\beta^q$ from $B\setminus D$.
+Since a smooth volume gives $D$ zero measure, that extension is $\beta^q$.
+Strict positivity and compactness prove \eqref{eq:reference}, including
+when $q=1$.
+
+Locally $\psi=c\log|z|^2+O(1)$. For a germ of divisor order $\ell$,
+one-variable integrability requires $\ell+1>mc$. Thus
+\[
+ \cI(m\psi)=\cO(-\lfloor mc\rfloor D).
+\]
+In particular, if $mc$ is an integer, order $mc-1$ fails and order $mc$
+succeeds. The bounded function $u$ and \eqref{eq:global} give
+$\varphi\geq\pi^*\psi-C''$. In submersion coordinates, integrability
+on the base implies integrability of the pullback on a bounded fiber
+polydisc. Therefore $W_m\subset V_m$ for every $m$.
+
+Take a nonzero descended section $\sigma\in V_m$ and put
+$\ell=\ord_D(\sigma)$. Since the smooth connected divisor is irreducible,
+in the witness chart its coefficient is $z^\ell g(z,t)$ with $g(0,t)$
+not identically zero. Otherwise the identity theorem on $D$ would increase
+its divisor order. Choose a smaller chart where $g$ is a unit.
+The upper bound \eqref{eq:witness} implies that integrability of
+$|\pi^*\sigma|^2e^{-m\varphi}$ requires integrability of
+\[
+ |z|^{2\ell}\left(|z|^{2p}+\sum|w_j|^{2b_j}\right)^{-mc/p}.
+\]
+Lemma \ref{lem:integral} gives $\ell+1>mc-a$. For integer $\ell\geq0$
+this is exactly $\ell\geq\max\{\lfloor mc-a\rfloor,0\}=K_m$.
+When $q=1$ the coefficient $g$ has no $t$ variables and its leading value
+is nonzero. This proves the upper inclusion of \eqref{eq:band}.
+
+Finally
+\[
+ 0\leq L_m-K_m\leq\lceil a\rceil,
+\]
+by the elementary floor inequality and truncation at zero. Both orders
+are $O(m)$. Lemma \ref{lem:dimension} and \eqref{eq:band} give
+\eqref{eq:defect}. Its dimension-zero restriction argument also proves the
+stated bound when $q=1$.
+\end{proof}
+
+\section{Exact models and non-descended examples}
+\begin{corollary}\label{cor:exact}
+Retain \eqref{eq:positive}. Suppose $Z\subset\pi^{-1}D$ is a nonempty
+compact smooth submanifold projecting submersively onto $D$, and that near
+each point of $Z$ there are the submersion coordinates above with
+\[
+ Z=\{z=w_1=\cdots=w_r=0\},\qquad
+ \varphi=\frac cp\log\left(|z|^{2p}+\sum_{j=1}^r|w_j|^{2b_j}\right)+O(1),
+\]
+with fixed $p,b_j,c$. Suppose $\varphi$ is locally bounded outside $Z$.
+Then the conclusions of Theorem \ref{thm:criterion} hold and, for every $m$,
+\[
+ V_m=H^0(B,A^m(-K_mD)).
+\]
+\end{corollary}
+\begin{proof}
+The local model dominates $c\log|z|^2$ up to a constant. Away from $Z$,
+local boundedness gives the same lower bound near $\pi^{-1}D$, and outside
+$\pi^{-1}D$ both functions are locally bounded. A finite covering of
+compact $X$ proves \eqref{eq:global}. The upper witness is immediate.
+
+For the remaining inclusion, a section divisible by $z^{K_m}$ has a bounded
+holomorphic residual coefficient in every pole chart. The strict inequality
+$K_m+1>mc-a$ and Lemma \ref{lem:integral} imply local integrability there.
+Outside $Z$ the weight is locally bounded. Thus every section of
+$H^0(B,A^m(-K_mD))$ belongs to $V_m$.
+\end{proof}
+
+For a nonempty family, take $X=B\times(\PP^1)^f$ with a projective base,
+an ample $A$, and the divisor $D$ above. In the first $r$ fiber factors mark
+points $o_j$ and let $E_j$ be their inverse-image divisors. Choose smooth
+metrics on the corresponding divisor bundles and set
+\[
+ Q=\|\pi^*s_D\|^{2p}+\sum_{j=1}^r\|s_{E_j}\|^{2b_j},\qquad
+ \varphi=\lambda\log Q,\qquad c=p\lambda.
+\]
+The common zero set is
+$D\times\{o_1\}\times\cdots\times\{o_r\}\times(\PP^1)^{f-r}$.
+Near it, smooth positive metric factors give the exact model of
+Corollary \ref{cor:exact}; elsewhere the function is smooth.
+The inequality $Q\geq\|\pi^*s_D\|^{2p}$ gives \eqref{eq:global}.
+
+There is a constant $C_0$ with $\ddc\log Q\geq-C_0\omega$. Indeed, $Q$
+is the squared norm of a holomorphic section of the direct sum of the
+divisor line bundles with powers $p,b_j$. Locally the log-sum-exp Hessian
+is a weighted average of their smooth negative curvatures plus a positive
+variance term. A local quadratic correction gives a psh function away from
+the component zeros, and the locally bounded-above psh extension preserves
+the inequality across the common zero set. Compactness makes $C_0$ uniform.
+Thus $\lambda C_0\leq1$ ensures $\varphi\in\PSH(X,\omega)$ for the
+fixed Hermitian background. A positive metric on $A$ differs smoothly from
+the prescribed $h$. Choose $u$ giving its curvature; for sufficiently small
+$c=p\lambda$, \eqref{eq:positive} holds as well. Both smallness conditions
+can be imposed simultaneously.
+
+These potentials are singular on a proper subset of each fiber over $D$ and
+finite elsewhere on that fiber. Hence they cannot be pullbacks of a base
+potential up to bounded difference.
+
+\begin{example}\label{ex:explicit}
+Let $B=\PP^q$, let $D$ be a hyperplane, take $A=\cO(1)$, and put
+$X=B\times\PP^1$. Use Fubini--Study divisor metrics and choose a point
+$o\in\PP^1$. Set
+\[
+ \varphi=\tfrac14\log\bigl(\|s_D\|^4+\|s_o\|^6\bigr),\qquad
+ p=2,\quad b_1=3,\quad c=\tfrac12.
+\]
+For $\omega=\omega_B+\omega_F$, the curvature estimate just used gives
+$\ddc\varphi\geq-\frac12\omega_B-\frac34\omega_F$, so the selector
+is admissible. The residual is $\beta=\frac12\omega_B$, with mass $2^{-q}$
+when $\int_B\omega_B^q=1$.
+
+Here $a=2/3$, $L_m=\lfloor m/2\rfloor$, and
+$K_m=\max\{\lfloor m/2-2/3\rfloor,0\}$. For $m=1$ both selected
+spaces are $H^0(\cO(1))$. For every $m\geq2$, $K_m=L_m-1$, and
+\[
+ V_m=H^0(\PP^q,\cO(m-L_m+1)),\qquad
+ W_m=H^0(\PP^q,\cO(m-L_m)).
+\]
+Consequently
+\[
+ \dim V_m-\dim W_m
+ =\binom{\lceil m/2\rceil+q}{q-1}
+ \sim\frac{2^{1-q}}{(q-1)!}m^{q-1}.
+\]
+For $q=1$ the defect is exactly one for $m\geq2$. Thus the error order
+is sharp in this anisotropic class.
+\end{example}
+
+The common horizontal coefficient $c$, a witness over an open part of $D$,
+and the finite weighted transverse gain $p\sum b_j^{-1}$ suffice for the
+approximation. The global lower bound excludes additional constraints that
+would obstruct the inclusion. With $p=b_j=1$ and $r=f$, the exact order is
+$\max\{\lfloor mc\rfloor-f,0\}$, recovering the established isotropic
+section-over-divisor case. Separate powers, positive-dimensional pole sets
+inside the fibers, and the one-chart sandwich criterion extend that regime.
+
+If the fibers have dimension zero, the connected-fiber submersion is a
+biholomorphism. When the descended selector itself is $\theta$-psh of finite
+positive mass, taking it as $\psi$ gives $V_m=W_m$. The examples above concern
+the additional integrability supplied by positive-dimensional fibers.
+
+The positivity assumption cannot simply be omitted. If $A$ is trivial with
+flat metric, global plurisubharmonic functions on compact connected $B$
+are constant and have zero non-pluripolar top mass. The theorem provides
+explicit sufficient conditions for P21 and leaves arbitrary singularities,
+more general base images, and necessity questions open.
+
+\begin{thebibliography}{9}
+\bibitem{catalogue}
+\emph{Open problems in non-K\"ahler pluripotential theory: full statements,
+known results, and remaining gaps}, catalogue accompanying Mingchen Xia's
+monograph, 2 October 2026, supplied as \texttt{document.pdf}, P21.
+\bibitem{book}
+M. Xia, \emph{Singularities in Hermitian pluripotential theory}, public
+working manuscript, \url{https://mingchenxia.github.io/Papers/SHPT_vibe.pdf},
+Lemma 26.10.1, Theorem 26.10.1, and Example 26.10.1.
+\end{thebibliography}
+\end{document}
