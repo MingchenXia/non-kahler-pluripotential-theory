@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 378: Check incoming author research commits. Verify the exact four-dimensional Weyl/Weitzenbock and nonflat Ricci-flat dependencies before adopting global surface/K3 consequences. Continue high-dimensional ideal-distance optimality, general division/extension, Green/SID and pluriclosed questions with explicit proof boundaries.
+Current next unit after checkpoint 379: Prioritize the author-supplied P21 sufficient-condition paper in incoming commit 8965fb4: read its full argument and dependencies, compare with the current section-over-divisor theorem and original P21 scope, and integrate only verified improvements. Continue checking incoming research commits before private synchronization. Positivity functors/K3 existence and high-dimensional ideal-distance optimality remain separate pending units.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

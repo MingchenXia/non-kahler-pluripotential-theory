@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 379 — Ricci-flat surface curvature
+
+[Review](research/editorial/ricci-flat-surface-curvature-379.md): Section 4.8 proves directional tangent positivity on a given compact nonflat Ricci-flat Kähler surface, with a nonclosed conformal metric and flat-determinant obstructions. Two complete scoped reads, 37 obligations and 41 selected pages pass. The actual live public PDF/homepage/Pages deployment is verified; 1044 printed pages. All 23 formal and 19 supplemental directions remain open. Incoming author P21 commit 8965fb4 is preserved and selected for full review. Native catalogue compilation remains unverified; fresh empty-source reconstruction passes with 286 exact book sources, all 1068+17 page texts matching and 1947 checksum-validated archive entries; authorized private 379 synchronization follows.
+
 ## Checkpoint 378 — Gauduchon equations and directional curvature
 
 [Review](research/editorial/gauduchon-directional-curvature-378.md): Section 4.7 globalizes directional bundle curvature positivity using the scalar Gauduchon equation, with a direct local quantifier example and determinant obstruction. Two complete scoped reads, all 16 primary pages, 33 internal obligations and 39 final selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; final 1042 printed pages. All 23 formal and 19 supplemental directions remain open; catalogue statements/statuses are preserved and all single book page locators reconciled. Same-editor native catalogue compilation remains unverified. Fresh empty-source reconstruction passes with 285 exact book sources, all 1066+17 page texts matching and 1943 checksum-validated archive entries; private 378 synchronization follows.

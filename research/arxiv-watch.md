@@ -176,3 +176,7 @@ Subsection 1.16.3 constructs positive distance at reciprocal sum in [1,n) for ev
 ## Gauduchon directional curvature — checkpoint 378
 
 All 16 physical pages of Chou–Wu 2609.33656v1 are actually read; its current version history and physical p.6 formula image are checked. Section 4.7 reconstructs only the pointwise mean criterion and conformal globalization, with a direct local quantifier example and determinant obstruction. The four-dimensional Weyl/Weitzenbock, Ricci-flat/K3 and positivity-functor chains remain unadopted. No new listing coverage or existing question closure. [Review](editorial/gauduchon-directional-curvature-378.md).
+
+## Ricci-flat surface curvature — checkpoint 379
+
+The previously fully read Chou–Wu 2609.33656v1 given-metric surface result is integrated with a direct ASD curvature argument. Derdziński 1983 actual scope is physical 2 and 4–13 of 30, including the scalar formulas on printed p.414 and commuting-factor Lemma 2 on p.412; ten page images viewed. Wu 1410.7260v2 actual scope is physical 1–9 of 17, as an alternate formula check only. No new listing coverage. K3 existence and positivity functor/rational-connectedness arguments remain unadopted. Incoming author P21 commit 8965fb4 is prioritized for complete review. [Review](editorial/ricci-flat-surface-curvature-379.md).

@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 378: Check incoming author research commits. Verify the exact four-dimensional Weyl/Weitzenbock and nonflat Ricci-flat dependencies before adopting global surface/K3 consequences. Continue high-dimensional ideal-distance optimality, general division/extension, Green/SID and pluriclosed questions with explicit proof boundaries.
+Current next unit after checkpoint 379: Prioritize the author-supplied P21 sufficient-condition paper in incoming commit 8965fb4: read its full argument and dependencies, compare with the current section-over-divisor theorem and original P21 scope, and integrate only verified improvements. Continue checking incoming research commits before private synchronization. Positivity functors/K3 existence and high-dimensional ideal-distance optimality remain separate pending units.
 
 | Chapter | Source | This cycle |
 |---|---|---|
