@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 381: Check incoming author commits and new arXiv versions. Examine a modification-based P21 criterion for analytic base ideals, with canonical Jacobian correction, positive residual and divisor witnesses all explicit. General necessity remains open; do not adopt an unchecked resolution argument.
+Current next unit after checkpoint 382: Check incoming author progress. Examine weakening smooth residual positivity to semipositivity with positive top volume, preserving the actual positive-mass premise. Construct a model outside the strict-residual regime and verify its ideal series. Continue recent-primary and general-selector dependency checks.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

@@ -485,3 +485,7 @@ The incoming supplied paper is fully read and its argument integrated as Subsect
 ## Crossing-divisor P21 extension — checkpoint 381
 
 Subsection 26.10.2 proves the finite-SNC sufficient criterion, uniform mixed-twist dimension bound and exact sharp independent-pair model. General base ideals and necessity remain open. No fresh arXiv coverage or external novelty claim; supplied author source/review remain exact. [Review](editorial/crossing-fiber-integrability-381.md).
+
+## Modified-base P21 criterion — checkpoint 382
+
+The eight CV/DG/AG/AP new/recent roots exactly match the complete prior listing bytes; all sixteen day offsets are retrieved and contain only IDs already in the complete roots. Current coverage remains 28 September--2 October, with replacements on 2 October; historical gaps remain. No new primary-paper read or exhaustive absence claim. Subsection 26.10.3 proves the specified-modification/Jacobian criterion and exact sharp point-ideal example; arbitrary-selector existence/necessity remains open. [Review](editorial/modified-base-fiber-integrability-382.md).

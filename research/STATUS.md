@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 382 — Modified-base fiber integrability
+
+[Review](editorial/modified-base-fiber-integrability-382.md): Subsection 26.10.3 proves a specified-modification P21 criterion with the canonical Jacobian correction and an exact sharp point-ideal model. Two complete scoped reads, 42 obligations and 53 selected pages pass. The actual live PDF/homepage/Pages publication is verified; 1054 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. All eight recent/new arXiv roots equal the prior complete listings, and all 16 day offsets are checked. Native catalogue compilation remains unverified. Fresh reconstruction passes with 289 exact book sources, all 1078+17 page texts matching and 1961 checksum-validated archive entries; authorized private 382 synchronization follows.
+
 ## Checkpoint 381 — Crossing divisors and fiber integrability
 
 [Review](editorial/crossing-fiber-integrability-381.md): Subsection 26.10.2 extends P21 sufficient conditions to finite SNC divisor families and proves exact sharp simultaneous-pole models. Two complete scoped reads, 36 obligations and 49 selected final pages pass. The actual live PDF/homepage/Pages publication is verified; 1052 printed pages. All 23 formal and 19 supplemental directions remain open at full scope; P21 stays partially resolved. Native catalogue compilation remains unverified. Fresh reconstruction passes with 288 exact book sources, all 1076+17 page texts matching and 1957 checksum-validated archive entries; authorized private 381 synchronization follows.

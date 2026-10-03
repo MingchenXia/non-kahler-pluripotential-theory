@@ -1,0 +1,98 @@
+\subsection{Fiber integrability on a modified base}
+\label{sec:modified-base-fiber-integrability}
+
+Retain $\pi:X\to B$, $(A,h)$, $\theta$, $\varphi$ and $V_m$ from \cref{sec:fiber-integrability-band}. A modification of the base can turn a higher-codimension singularity into divisorial data. The integrability test then acts on the pulled-back section multiplied by the Jacobian. This fixed factor changes the exact orders, while the restriction estimate still bounds the section loss.
+
+Let $\rho:Y\to B$ be a modification of connected compact complex manifolds. Form the fiber product and its projections
+\[
+ X'=X\times_B Y,\qquad \pi':X'\to Y,\qquad \mu:X'\to X.
+\]
+Local submersion coordinates show that $X'$ is smooth, $\pi'$ is a submersion with the same compact connected fibers, and $\mu$ is a modification. The relative canonical bundle $R_\rho$ and Jacobian section $J_\rho$ are those of \cref{sec:psh-birational-ideals}. The coordinate Jacobian of $\mu$ is the base Jacobian times the identity in the fiber variables, giving
+\[
+ R_\mu=\pi'^*R_\rho,\qquad J_\mu=\pi'^*J_\rho.
+\]
+Put $\varphi'=\varphi\circ\mu$ and $\theta'=\rho^*\theta$. Choose distinct nonempty smooth connected reduced divisors $D_1,\ldots,D_N$ on $Y$ with simple-normal-crossing union, smooth metrics $H_i$, defining sections $s_i$ and curvatures $\eta_i$.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:modified-base-fiber-band}\index{Holomorphic section!modified base band}
+Suppose $c_i>0$ and $u\in C^\infty(Y,\mathbb R)$ satisfy
+\[
+ \beta=\theta'+\ddc u-\sum_i c_i\eta_i>0,
+ \qquad \varphi'\geq\sum_i c_i\log\|\pi'^*s_i\|_{H_i}^2-C.
+\]
+For each $D_i$, assume one anisotropic upper witness for $\varphi'$ and $\pi'$ away from the other divisors, as in \cref{thm:crossing-fiber-integrability-band}, with fixed $p_i,b_{ij}$. Define $a_i,L_{m,i},K_{m,i}$ by the formulas in that theorem, and put
+\[
+ \psi'=u+\sum_i c_i\log\|s_i\|_{H_i}^2,
+ \qquad M_m=\rho^*A^m\otimes R_\rho.
+\]
+There is a unique $\psi\in\PSH(B,\theta)$ with $\psi\circ\rho=\psi'$, and
+\[
+ \mathrm{MA}_\theta(\psi)=\rho_*(\beta^q),\qquad
+ \int_B\mathrm{MA}_\theta(\psi)=\int_Y\beta^q\in(0,\infty).
+\]
+The map $T_m(s)=J_\rho\rho^*s$ identifies $H^0(B,A^m)$ with $H^0(Y,M_m)$. For $W_m=H^0(B,A^m\otimes\mathcal I(m\psi))$,
+\[
+ \begin{split}
+ T_m(W_m)&=H^0\left(Y,M_m\left(-\sum_iL_{m,i}D_i\right)\right),\\
+ T_m(W_m)&\subseteq T_m(V_m)
+       \subseteq H^0\left(Y,M_m\left(-\sum_iK_{m,i}D_i\right)\right).
+ \end{split}
+\]
+Consequently $W_m\subseteq V_m$ and $\dim V_m-\dim W_m=O(m^{q-1})$. On a curve the defect is at most $\sum_i\lceil a_i\rceil$ for every $m$.
+\end{theorem}
+\begin{proof}
+Poincar\'e--Lelong gives $\theta'+\ddc\psi'=\beta+\sum_i c_i[D_i]$. Thus $\psi'\in\PSH(Y,\rho^*\theta)$, and \cref{prop:psh-descent-modification} gives the unique descended potential. The non-pluripolar measure upstairs is $\beta^q$ by locality off the divisor union and exclusion of that union. Apply the measure identity in \cref{prop:birational-partial-envelopes} to obtain the asserted pushforward and mass.
+
+\Cref{lem:adjoint-ideal-transform}, first with weight zero and then with $m\psi$, gives the whole-space identification and the identity for $T_m(W_m)$. The simple-normal-crossing integrability calculation in \cref{thm:crossing-fiber-integrability-band} supplies $\mathcal I(m\psi')=\mathcal O_Y(-\sum_iL_{m,i}D_i)$. Boundedness of $u$ and the global lower bound give $\varphi'\geq\psi'\circ\pi'-C'$. Since $\rho\circ\pi'=\pi\circ\mu$ and $\mu$ is surjective, this descends to $\varphi\geq\psi\circ\pi-C'$. Integrability in bounded submersion charts proves $W_m\subseteq V_m$.
+
+For $s\in V_m$, the adjoint transformation for $\mu$ gives
+\[
+ J_\mu\mu^*s=\pi'^*T_m(s)
+ \in H^0\bigl(X',\pi'^*M_m\otimes\mathcal I(m\varphi')\bigr).
+\]
+Its descended coefficient in each upper witness therefore has order at least $K_{m,i}$, by \cref{lem:anisotropic-fiber-integrability} and the generic unit-coefficient argument of \cref{thm:fiber-integrability-band}. This order is the order of $T_m(s)$, including its Jacobian factor. It proves the upper inclusion.
+
+The divisor restriction chain on $Y$ has at most $\sum_i\lceil a_i\rceil$ steps. On $D_i$, each target twists $(\rho^*A|_{D_i})^m$ by the powers $\mathcal O_Y(-D_j)|_{D_i}$ in a linear range and by the fixed bundle $R_\rho|_{D_i}$. Include this last bundle with exponent one in \cref{lem:finite-family-section-bound}; every target has dimension $O(m^{q-1})$ uniformly. Summing gives the estimate. For $q=1$, each divisor is a point and every target has dimension one.
+\end{proof}
+
+The theorem uses a specified smooth modification and divisorial data with a positive residual. It does not assume that arbitrary selecting potentials furnish these data. The following point-pole model makes both the residual and the Jacobian correction explicit.
+
+\Needspace{14\baselineskip}
+\begin{example}\label{ex:modified-point-fiber-series}\index{Holomorphic section!point pole Jacobian}
+Let $q\geq2$, $B=\mathbb P^q$, $A=\mathcal O_B(1)$, $p=[1:0:\cdots:0]$ and $X=B\times\mathbb P^1$. In normalized Fubini--Study metrics, for a marked fiber point $o$ put
+\[
+ R=\frac{\sum_{j=1}^q|Z_j|^2}{\sum_{j=0}^q|Z_j|^2},\quad
+ T=\|s_o\|^2,\quad \varphi=\tfrac14\log(R^2+T^3),\quad
+ \psi=\tfrac12\log R.
+\]
+Then $\varphi\in\PSH(X,\omega_B+\omega_F)$ and $\psi\in\PSH(B,\omega_B)$ has mass $1-2^{-q}$. With the ideal sheaf $\mathfrak m_p$ of $p$, the exact spaces are
+\[
+ \begin{gathered}
+ V_m=H^0\bigl(B,A^m\otimes\mathfrak m_p^{k_m}\bigr),\qquad
+ W_m=H^0\bigl(B,A^m\otimes\mathfrak m_p^{\ell_m}\bigr),\\
+ k_m=\max\{\lfloor m/2-2/3\rfloor-q+1,0\},\qquad
+ \ell_m=\max\{\lfloor m/2\rfloor-q+1,0\}.
+ \end{gathered}
+\]
+Their defect vanishes for $m<2q$. For $m\geq2q$ it is
+\[
+ \dim V_m-\dim W_m=\binom{\lfloor m/2\rfloor-1}{q-1}
+       \sim\frac{2^{1-q}}{(q-1)!}m^{q-1}.
+\]
+\end{example}
+\begin{proof}
+A common denominator writes $R^2+T^3$ as a sum of squared holomorphic section coefficients in $\mathcal O_X(2,3)$ divided by its smooth metric denominator. Hence $\ddc\varphi\geq-\tfrac12\omega_B-\tfrac34\omega_F$, including across the common zero set by local psh extension.
+
+Let $\rho:Y\to B$ be the blowup of $p$, with exceptional divisor $E$, and let $\tau:Y\to\mathbb P^{q-1}$ be the resolved projection $[Z_0:\cdots:Z_q]\mapsto[Z_1:\cdots:Z_q]$. The graph embedding $(\rho,\tau)$ shows that
+\[
+ \alpha=\rho^*\omega_B,\quad\gamma=\tau^*\omega_{\mathbb P^{q-1}},\qquad
+ \beta=\tfrac12(\alpha+\gamma)>0.
+\]
+The divisor bundle is $\mathcal O_Y(E)=\rho^*\mathcal O_B(1)\otimes\tau^*\mathcal O_{\mathbb P^{q-1}}(-1)$. Its quotient metric has curvature $\alpha-\gamma$ and satisfies $R\circ\rho=\|s_E\|^2$. Thus the theorem applies with $u=0$, $c=1/2$, $a=2/3$, and residual $\beta$. The pulled-back selector has the exact model $\tfrac14\log(|z|^4+|w|^6)+O(1)$ along $E\times\{o\}$ and is locally bounded elsewhere. Divisibility by $z^{K_m}$, where $K_m=\max\{\lfloor m/2-2/3\rfloor,0\}$, gives the reverse upper inclusion by \cref{lem:anisotropic-fiber-integrability} in every pole chart.
+
+In blowup coordinates $Z_1/Z_0=z$, $Z_j/Z_0=zt_j$ for $j\geq2$, the Jacobian is $z^{q-1}$. A section of base order $n$ therefore gives $T_m(s)$ of generic order $n+q-1$ along $E$. The two divisorial thresholds yield exactly $k_m,\ell_m$ above. Homogeneous monomials realize every jet of total degree at most $m$ at $p$. For $m\geq2q$, $k_m=\ell_m-1$ and the newly allowed homogeneous degree $\ell_m-1$ has $\binom{\ell_m+q-2}{q-1}$ monomials, giving the defect. For $m<2q$ both orders are zero.
+
+Finally, in cohomology $[\beta]=\rho^*c_1(A)-\tfrac12[E]$. The mixed intersection numbers containing both $\rho^*c_1(A)$ and $[E]$ vanish because the pullback restricts to zero on $E$. The normal bundle of $E\simeq\mathbb P^{q-1}$ is $\mathcal O_E(-1)$, so $\int_Y[E]^q=(-1)^{q-1}$, while $\int_Y(\rho^*c_1(A))^q=1$. Expanding gives $\int_Y\beta^q=1-2^{-q}$, which is the mass of $\psi$ by the theorem.
+\end{proof}
+
+The selector is finite at most points of the fiber over $p$ and equals $-\infty$ at $o$, so it does not descend up to bounded difference. Its base reference has a higher-codimension pole; the Jacobian is what converts the resolved divisor orders into the base point-ideal orders.
