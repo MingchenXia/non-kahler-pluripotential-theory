@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 360: Catch up the remaining recent arXiv new/cross/replacement listing gaps, then read the full Windare 2609.38551v1 and Thiella 2609.35625v1 candidates before any new integration. Continue the separate Zhang Section 7/no-neck geometric chain and pending Blocki domain/Szekelyhidi Hessian proofs. All 23 formal and 18 supplemental directions remain open.
+Current next unit after research checkpoint 361: Reconstruct and integrate the parallel-torsion positivity projection and balanced/pluriclosed determinant maximum at the explicit D T^D=0 scope. Refresh P13 without closing its general geometric/flow program. Retain the precise historical replacement gaps, pending Windare curvature/endpoint dependencies, Thiella comparison repairs and the separate geometric/domain/Hessian chains.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

@@ -104,3 +104,7 @@ Section 13.18.1 constructs a strict analytic barrier directly in the displayed O
 ## Checkpoint 360 — nodal density and closed potential limit
 
 Section 13.18.2 computes the exact p<3 and weak L3 density threshold, applies the existing arbitrary-background descent proof and proves closed bounded uniqueness/full-family convergence by energy. Source and version scopes are in [the audit](audits/nodal-density-closed-potential-limit-360.json). EGZ v2 pp. 1–2, 5–7, 27–30 are actually read; no full general continuity chain or new complete listing scan.
+
+## Research checkpoint 361 — September primary dependencies
+
+[Primary review](editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.

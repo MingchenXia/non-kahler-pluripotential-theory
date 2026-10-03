@@ -1,5 +1,9 @@
 # Modification history
 
+## Research checkpoint 361 — September primary literature and dependency review
+
+[Primary review](research/editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.
+
 ## Checkpoint 360 — Nodal density and closed potential limit
 
 [Review](research/editorial/nodal-density-closed-potential-limit-360.md): Section 13.18.2 proves exact nodal pushed-forward density p<3 and weak L3 endpoint, bounded arbitrary-background descent, and closed-background uniqueness/full-family potential convergence. Two complete revised reads, 30 internal obligations and all 32 selected final output pages pass. All 23 formal statements and 451 protected files remain exact. All three public PDF/homepage/Pages deployments are verified; final 1,003 printed pages. P23 state of the art and current locators reconciled. Fresh empty-source reconstruction passes with 270 exact book sources, all 1,027+17 page texts matching and 1,876 checksum-validated archive entries; authorized private 360 synchronization follows. All 23 formal and 18 supplemental directions remain open.

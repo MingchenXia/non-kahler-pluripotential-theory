@@ -347,6 +347,8 @@ for name in (
     "research/open-problems-catalogue.tex",
     "research/open-problems-catalogue.json",
     "research/open-problems-catalogue-audit.json",
+    "research/editorial/september-literature-dependency-review-361.md",
+    "research/audits/september-literature-dependency-review-361.json",
     "research/source-disposition-360.json",
     "research/editorial/nodal-density-closed-potential-limit-360.md",
     "research/audits/nodal-density-closed-potential-limit-360.json",

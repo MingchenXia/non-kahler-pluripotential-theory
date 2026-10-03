@@ -401,3 +401,7 @@ The local model and norm from Guyett–Mc Gowan 2610.00942v1, pp. 3–4 and 15�
 ## Nodal density and closed convergence — checkpoint 360
 
 Guyett–Mc Gowan v1 pp. 13–14 are actually reread, retaining its complete prior reading. EGZ math/0603431v2, 35 pages, SHA-256 849c50224382b01317f67b2d23f11f6a1d8a9a8d589f9ad87b0ce44a0344b06e, has pp. 1–2, 5–7 and 27–30 actually read, including full Theorem 6.3 and Lemma 6.4 on pp. 28–29. Crossref verifies JAMS22(3)2009pp607–639/DOI10.1090/S0894-0347-09-00629-8; publisher PDF returned HTTP403, so precise locators use v2. The adapted-density reciprocal comparison has an apparent typo; the book computes its standard-node determinant directly instead. No full general dependency-chain audit or new geometric completion theorem. [Review](editorial/nodal-density-closed-potential-limit-360.md).
+
+## Research checkpoint 361 — September primary dependencies
+
+[Primary review](editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.
