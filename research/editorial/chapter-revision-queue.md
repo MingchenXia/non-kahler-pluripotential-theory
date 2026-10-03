@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 340: Continue P01/P17 directly: prove pushforward compatibility of the full polar currents under compositions of modifications. For closed-pole comparison-Cauchy sequences, construct uniquely determined compatible weak current limits without asserting strong coefficient variation or realization by an ordinary model. Investigate auxiliary-form restrictions separately; general model separation, exact analytic closure and realization remain open.
+Current next unit after checkpoint 341: Continue P01/P17 directly: read the local non-pluripolar first-current construction and its closedness proof at their full needed scope before testing removal of the closed-pole condition. Then study simultaneous ordinary-model realization, general separation and exact analytic closure, keeping the auxiliary-choice compatibility obstruction.
 
 | Chapter | Source | This cycle |
 |---|---|---|

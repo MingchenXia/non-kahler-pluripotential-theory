@@ -79,3 +79,5 @@ Checkpoint 338 integrates the Chapter 1 bounded polar-invariance foundation and 
 Checkpoint 339 checks closed-pole trace recovery with both complete proof reads, exact classical source locators and final output inspection. First test possible failure of compatibility with the positive-volume topology under allowed auxiliary Gauduchon choices. Pushforward compatibility and compatible closed-current limits follow; general model realization remains open. Native catalogue compilation is unverified after its nonresponding check.
 
 Checkpoint340: complete comparison-input reads, arbitrary-choice compatibility obstruction, both public releases and 25 final direct images pass. Native catalogue preview remains unverified; reconstruct and synchronize this snapshot, then continue compatible polar-current limits.
+
+Checkpoint341: complete revised-input reads and arbitrary-pole pushforward/closed-pole compatible current limits checked; public 957-page release verified. Reconstruct and synchronize, then check the local non-pluripolar first-current closedness proof before extending the pole-set scope.

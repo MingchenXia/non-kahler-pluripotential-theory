@@ -165,3 +165,5 @@ Checkpoint 338 proves bounded polar invariance and model gauge transport, with b
 Checkpoint 339 recovers full polar currents from fixed Gauduchon traces when the pole sets are closed. The closed complete pluripolar extension input is checked at its exact book scope. Continue pushforward compatibility, current limits and model realization directly; the general research goal remains active.
 
 Checkpoint 340 gives a fixed Gauduchon-choice obstruction to positive-volume compatibility on P2, with both complete proof reads and direct output checks. Continue full polar-current pushforward compatibility and compatible limits directly. No formal research question is closed.
+
+Checkpoint 341 proves arbitrary-pole pushforward and compatible weak polar-current limits for comparison-Cauchy models with closed poles. A single genuine pole carrier is supplied, without asserting model realization. Continue the local first-current closedness proof and general realization directly; no formal question is closed.
