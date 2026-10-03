@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 344: Compute the exact volume of the scaled diffuse family using higher-degree closed-current trace growth, and test its ordered model distances. Preserve the unresolved complete-topology and simultaneous-realization targets of P01/P17.
+Current next unit after checkpoint 345: Check the same diffuse cutoff in a nonclosed Hermitian background: identify the local top-degree pole loss and the finite lower-degree torsion terms, without asserting ordinary-model realization or volume invariance.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

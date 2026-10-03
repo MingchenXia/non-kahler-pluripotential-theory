@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint 344, based on independently verified private checkpoint 343, 8eacdb8fab639f9a9724bacb464efbba274f2b29.
+Research continuation through manuscript checkpoint345, based on independently verified private checkpoint344, 557d70a2ec01c8c1bb7467c5095033afcb5eb87b.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). Checkpoint343 disproves general separation and exact ideal analytic closure for this first-polar candidate, even at positive lower volume and independently of all Gauduchon choices. Simultaneous realization remains a further problem; the required complete replacement topology is unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -148,3 +148,9 @@ Checkpoint 344 generalizes Lemma15.6.8 and Proposition15.6.24 to every compact K
 Fresh complete CADG support Theorems2.10/2.13 and Corollaries2.11/2.14 proofs on actual PDF141–143 justify removing smaller exceptional components and reducing the polar current to divisorial coefficients. Images not contained in the zero-dimensional joint pole set have a regular point where the pulled-back model is bounded. Every other image is a point; transverse coordinate multiplicity and the zero curve Lelong number force its coefficient to vanish. Thus all modifications and all allowed Gauduchon choices remain blind to the model in every such manifold. The earlier343 surface construction retains its historical scope.
 
 This does not close P01/P17 or realize compatible current limits. Next compute exact volume loss along the scaled family using higher-degree closed-current trace growth; that next formula is not asserted by this checkpoint.
+
+## Exact scaled-volume interval
+
+Checkpoint345 extends the Hausdorff trace estimate to closed positive(j,j) currents for1<=j<n. Their weak limits give the zero-dimensional joint pole set no coefficient mass. Bounded closed mixed Stokes, a fixed-parameter finite-degree weak subsequence and the local top mass M give exact NPP loss Mt^n. The zero endpoint is defined separately. Ordinary projection preserves both volumes, and envelope order gives d(p_s,p_t)=M|s^n-t^n|. The parameter Mt^n identifies this restricted family with a complete real interval. All first polar coordinates collapse it, and its positive-parameter members are nonideal. Choosing the endpoint sufficiently small places it in any prescribed cutoff0<delta<A.
+
+No unique top-degree residue distribution, higher-degree all-modification polar invariance, general complete model topology or simultaneous realization is asserted. All full P01/P17 statements stay open. Next check how the local pole loss interacts with lower-degree torsion terms for the same cutoff in a nonclosed Hermitian background.

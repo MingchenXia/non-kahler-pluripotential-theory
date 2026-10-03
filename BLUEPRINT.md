@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint345 — Exact diffuse model volumes
+
+[Corollary15.6.14](research/editorial/exact-diffuse-model-volume-345.md) proves volumes A-Mt^n and ordered distances M|s^n-t^n| for a complete interval collapsed by all first polar coordinates, in any prescribed positive cutoff below A. The foundation Hausdorff estimate covers every degree below top. Both complete revised-input/second reads and26 internal checks pass. One clean production rebuild publishes and verifies the963-page PDF/homepage. All42 selected pages pass:30 direct images and12 exact actual-image carries. The same catalogue source is reconciled; native compilation is unverified after no response. Fresh reconstruction/current archive validation pass: all265 exact book sources,1826 archive entries and all987+17 page texts match. Private synchronization follows this snapshot. Full P01/P17 remain open; prior private344 independently verified at557d70a2.
+
 ## Checkpoint 344 — N-fold diffuse polar obstruction
 
 [Proposition 15.6.24](research/editorial/n-fold-diffuse-polar-obstruction-344.md) now disproves first-polar separation and exact ideal analytic closure on every compact Kähler manifold of dimension at least two, independently of Gauduchon choices. Complete revised-input/second reads and 31 internal checks pass. Three successful full rebuilds each verify public PDF/homepage; final book remains 961 printed pages. The lemma ending is repaired; 30 final selected pages pass through three direct views and 27 exact prior-image carries. The same catalogue source is reconciled, with native compilation unverified after no response. Empty-source reconstruction and current archive validation pass: all 265 exact book sources, 1823 archive entries and all 985+17 page texts match. Private synchronization follows this snapshot. Full P01/P17 remain open. Prior private checkpoint 343 is independently verified at 8eacdb8f.
