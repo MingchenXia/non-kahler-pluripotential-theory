@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint346, based on independently verified private checkpoint345, 38c5ae227bc923fc8555dd7dedddfea38271403c.
+Research continuation through manuscript checkpoint347, based on independently verified private checkpoint346, 215870599210b88db11de8051c9136250dffb2f4.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). Checkpoint343 disproves general separation and exact ideal analytic closure for this first-polar candidate, even at positive lower volume and independently of all Gauduchon choices. Simultaneous realization remains a further problem; the required complete replacement topology is unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -160,3 +160,9 @@ No unique top-degree residue distribution, higher-degree all-modification polar 
 Checkpoint346 computes A+sum binomial(n,j)c_j t^j-Mt^n for the displayed cutoff tH in any compact Hermitian background. A local Euclidean closed correction and compactly supported bounded Stokes give uniform traces of every degree. Hausdorff-null coefficient estimates make all lower-degree weak limits unique, so the finite torsion coefficients exist as bounded-truncation limits. The pure top global Hessian has zero integral, while the local top polar mass is exactly Mt^n. The explicit surface formula is A+2t integral H ddc omega-Mt^2. The power identities ddc omega^q=0 remove all lower coefficients.
 
 This is a formula for specified potentials, not invariance over all bounded-equivalent representatives or an ordinary-model volume formula. No unique top residue distribution or higher-degree all-modification invariant is asserted. Full P01/P17 stay open. Next check the bounded-equivalence gap under the Guan–Li power identities.
+
+## Hermitian invariant-mass model interval
+
+Checkpoint347 proves full residual-mass invariance on the zero-dimensional compact common pole set using a decreasing maximum and the compact-set weak-mass bound. The checked Hausdorff-small unbounded-product theorem supplies full products and weighted integrability, distinguished from NPP. For every bounded-equivalent diffuse representative, lower closed powers give zero pole coefficient mass and the top residual is Mt^n. When ddc omega^q=0 for1<=q<n, bounded global mass is A. Subtracting the fixed pole loss proves mass A-Mt^n for every representative and both singularity volumes. Ordinary projection yields the same complete ordered interval, first-polar blindness on all modifications and nonideal positive members as in the Kähler case. Every Gauduchon surface qualifies.
+
+This supersedes the special-regime bounded-equivalence gap recorded at346. Arbitrary Hermitian torsion terms and the complete topology problem remain further tasks. No higher-degree all-modification invariant, general realization or full formal problem closure is asserted.

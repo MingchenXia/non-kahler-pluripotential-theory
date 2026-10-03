@@ -177,3 +177,5 @@ Checkpoint 344 extends the checked first-polar obstruction to every compact Käh
 Checkpoint345 proves the exact diffuse volume interval in every compact Kähler dimension>=2. Continue with the nonclosed cutoff mass calculation, keeping potential mass, singularity volumes and ordinary-model realization distinct.
 
 Checkpoint346 separates finite torsion coefficients from the exact diffuse top-degree pole loss in arbitrary Hermitian backgrounds. Next check bounded-equivalence mass control under the Guan–Li power identities; keep specific potential mass and singularity volumes distinct until proved.
+
+Checkpoint347 settles the diffuse bounded-equivalence mass proof under the Hermitian power identities and extends the ordinary-model interval to Gauduchon surfaces. Next compute every class representative’s torsion terms and test the precise failure outside this regime, retaining the full topology problem.

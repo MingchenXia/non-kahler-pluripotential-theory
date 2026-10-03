@@ -91,3 +91,5 @@ Checkpoint344 generalizes the diffuse-polar obstruction to every compact Kähler
 Checkpoint345 proves exact scaled diffuse volumes/distances and a complete ordered interval collapsed by first polar coordinates. Complete source reads, actual final output and public963-page release pass. Empty-source reconstruction passes; synchronize, then check the top-degree pole loss and lower-degree torsion terms in nonclosed backgrounds.
 
 Checkpoint346 proves the displayed diffuse potential-mass polynomial in every compact Hermitian background; final source reads and public965-page release pass. Empty-source reconstruction passes; synchronize, then check bounded-equivalence under the Guan–Li power identities before inferring any Hermitian ordinary-model extension.
+
+Checkpoint347 extends the diffuse ordinary-model interval to invariant-mass Hermitian backgrounds, including every Gauduchon surface, using complete small-pole products and a residual comparison proof. Final source/output/public969-page checks pass. Reconstruct/synchronize, then examine the torsion-dependent mass of the entire class in unrestricted Hermitian metrics.
