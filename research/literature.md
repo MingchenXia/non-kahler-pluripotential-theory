@@ -405,3 +405,7 @@ Guyett–Mc Gowan v1 pp. 13–14 are actually reread, retaining its complete pri
 ## Research checkpoint 361 — September primary dependencies
 
 [Primary review](editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.
+
+## Parallel-torsion balanced/pluriclosed coexistence — checkpoint 362
+
+Chen–Zheng2609.27809v1, nine pages, SHA-256 `de555bde4b45f73c650278d75c121855fc8de7c8ef954883727cb3b776939014`. Theorem1.2 pp2/8; Lemmas3.1–3.2 and Propositions3.3–3.5 pp3–6; Propositions4.2/4.5 and Lemmas4.3/4.4 pp7–8. The full primary reading at361 supports the now-reconstructed core theorem, while the Corollary1.3 Zhao–Zheng obstruction remains separate and unadopted. The displayed August18 date agrees across three primary metadata surfaces; no September first-submission claim. [Review](editorial/parallel-torsion-positivity-362.md).

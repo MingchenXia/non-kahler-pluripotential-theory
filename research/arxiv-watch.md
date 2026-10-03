@@ -108,3 +108,7 @@ Section 13.18.2 computes the exact p<3 and weak L3 density threshold, applies th
 ## Research checkpoint 361 — September primary dependencies
 
 [Primary review](editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.
+
+## Checkpoint 362 — parallel torsion and coexistence
+
+Chen–Zheng2609.27809v1 Theorem1.2 and its core projection/slice proof are reconstructed in Section32.3.5; the general P13 problem remains. The full nine-page prior reading and exact date discrepancy are retained. No new listing scan or non-balanced BTP obstruction is adopted. [Review](editorial/parallel-torsion-positivity-362.md).

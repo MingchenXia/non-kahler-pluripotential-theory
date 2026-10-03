@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 362 — Parallel torsion and positive projection
+
+[Review](research/editorial/parallel-torsion-positivity-362.md): Section 32.3.5 reconstructs the explicit parallel-torsion balanced/pluriclosed coexistence theorem, including the positive projection and fixed-trace determinant maximum. Two complete scoped revised reads, 35 internal obligations and 23 direct selected-page checks pass. All 23 raw formal statements and 451 protected files remain exact. One 1,005-page production rebuild and actual public PDF/homepage/Pages deployment are verified. P13 and current catalogue locators are reconciled; native catalogue compilation remains unverified. Fresh empty-source reconstruction passes with 271 exact book sources, all 1,029+17 page texts matching and 1,882 checksum-validated archive entries; private 362 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Research checkpoint 361 — September primary literature and dependency review
 
 [Primary review](research/editorial/september-literature-dependency-review-361.md): all four September monthly lists retrieved (2,927 raw entries); 119 additional unique keyword candidate titles and ten exact abstract histories read. Full Windare (33 pages), Thiella (24 pages) and Chen–Zheng (nine pages) primary readings completed. The parallel-torsion core theorem is selected for reconstruction; the Thiella comparison arguments and external curvature/endpoint dependencies remain unadopted. Historical replacement coverage remains incomplete. The checked manuscript and public PDF remain checkpoint 360; no new book build or formal problem closure.

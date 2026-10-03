@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after research checkpoint 361: Reconstruct and integrate the parallel-torsion positivity projection and balanced/pluriclosed determinant maximum at the explicit D T^D=0 scope. Refresh P13 without closing its general geometric/flow program. Retain the precise historical replacement gaps, pending Windare curvature/endpoint dependencies, Thiella comparison repairs and the separate geometric/domain/Hessian chains.
+Current next unit after checkpoint 362: Read the complete primary Chiang2609.24869v1 kernel preprint and its selected spectral/localization dependencies before any extension of P22 or the partial-kernel chapter. Retain precise historical replacement gaps, unadopted Windare curvature/endpoint and Thiella comparison chains, and separate Zhang/domain/Hessian dependencies. All23 formal and18 supplemental directions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

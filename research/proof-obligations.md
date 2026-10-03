@@ -60,3 +60,5 @@ Checkpoint358 integrates explicit strict-analytic-barrier semipositive potential
 Checkpoint 359 integrates the directly proved standard nodal local-model strict barrier and potential/area application; no classification or metric-completion/GH inference. Continue the bounded-potential descent and sharp density calculation, then separate normal-space uniqueness/geometric dependencies, domain/Hessian chains and precise literature catch-up. All full formal/supplemental directions remain open.
 
 Checkpoint 360 integrates the exact nodal density p<3/weak L3 calculation, arbitrary-background bounded descended equation and closed uniqueness/full-family convergence. Continue precise literature catch-up and separate geometric/domain/Hessian dependency chains. All full formal/supplemental directions remain open.
+
+Checkpoint362 reconstructs the explicit Dg=DJ=DT^D=0 balanced/pluriclosed theorem with strictly positive differential-compatible averaging and compact fixed-trace slice maximization. Continue the complete Chiang primary/dependency reading and related kernel question, retaining other open chains. No full formal/supplemental question closure.
