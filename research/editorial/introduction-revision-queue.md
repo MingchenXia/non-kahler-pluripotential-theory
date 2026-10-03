@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 372: Read the complete exact Barbaro 2609.35313v1 primary on pluriclosed deformations of Bismut-flat metrics, including its proof dependencies and relation to the book’s parallel-torsion and balanced/pluriclosed sections. Select only a coherent result whose required hypotheses and proof can be checked; retain the general K3 metric and all existing open-problem boundaries.
+Current next unit after checkpoint 373: Read the complete exact Dao–Nguyen–Tran 2610.00909v1 primary on Green functions with hypersurface poles. Check the B-regular/SID/domain/analytic-disc/comparison hypotheses against the book before selecting a coherent result. Retain the pending Barbaro Theorem A foliation/cohomology/classification chain and its missing product mixed-term count; retain all general open-problem boundaries.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

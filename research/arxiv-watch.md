@@ -152,3 +152,7 @@ Fu–Ouyang 2609.33632v1 retains the full 30-page reading at 370; pp.5–6 are r
 ## Kummer boundary class — checkpoint 372
 
 The exact Fu–Ouyang primary retains the full 30-page reading at 370; pp.18–20 are reread. Section 27.17 reconstructs the nonrigid irrational semipositive class, including local Kähler smoothing and global periodic ddc equivalence. General Ricci-flat diameter, spectral and limit-space inputs remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/kummer-boundary-classes-372.md).
+
+## Conditional pluriclosed persistence — checkpoint 373
+
+All 15 pages of exact Barbaro 2609.35313v1 are read. The selected persistence input is checked through Cavalcanti v5 Section 8.3 and Schweitzer v1 Sections 2.b–2.c, at their recorded partial-paper scopes. Section 32.3.6 reconstructs its elliptic projection and positivity proof. The source p.10 product dimension sentence omits mixed-factor terms; this does not refute Theorem A, whose separate dependencies remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/pluriclosed-deformation-persistence-373.md).

@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 373 — Pluriclosed deformation persistence
+
+[Review](editorial/pluriclosed-deformation-persistence-373.md): Section 32.3.6 proves conditional pluriclosed metric persistence under smooth complex-structure deformation with locally constant Aeppli h11. The explicit fourth-order projection and positivity argument pass two scoped complete reads and 35 internal obligations. Final 39 selected pages and all three live public PDF/homepage/Pages deployments pass; final 1,030 printed pages. All 23 raw formal statements and 451 protected files remain exact. P13 and all locators are reconciled, with the P14 equation-number correction; native compilation remains unverified. Fresh empty-source reconstruction passes with 280 exact book sources, all 1,054+17 page texts matching and 1,923 checksum-validated archive entries; private 373 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Checkpoint 372 — Kummer boundary classes
 
 [Review](editorial/kummer-boundary-classes-372.md): Section 27.17 constructs the smooth semipositive nonrigid irrational zero-square class on a quotient resolution, with direct local Kähler smoothing and a global periodic ddc primitive. Two complete new-input reads, 49 internal obligations and 39 final selected pages pass. Both successful full-book publications are checked at the actual live PDF/homepage and successful Pages workflows; final 1,028 printed pages. All 23 formal statements and 451 protected files remain exact. P02 and catalogue locators are reconciled; native compilation remains unverified. Fresh empty-source reconstruction passes with 279 exact book sources, all 1,052+17 page texts matching and 1,919 checksum-validated archive entries; private 372 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
