@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 373: Read the complete exact Dao–Nguyen–Tran 2610.00909v1 primary on Green functions with hypersurface poles. Check the B-regular/SID/domain/analytic-disc/comparison hypotheses against the book before selecting a coherent result. Retain the pending Barbaro Theorem A foliation/cohomology/classification chain and its missing product mixed-term count; retain all general open-problem boundaries.
+Current next unit after checkpoint 374: Read all ten pages of exact Takakura 2609.36420v1 on generalized L2 division and strong openness. Check the multivariate weights, constants and division/extension dependencies against the existing local multiplier-ideal chapter before adopting a result. Retain general hypersurface Green/SID questions and the pending Barbaro foliation/classification chain.
 
 | Chapter | Source | This cycle |
 |---|---|---|

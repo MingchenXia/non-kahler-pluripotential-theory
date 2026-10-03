@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 374 — Ball divisor Green envelopes
+
+[Review](research/editorial/ball-divisor-green-envelopes-374.md): Subsection 1.19.1 proves the explicit hyperplane Green formula, bounded obstacle convergence at every interior point with an exponential compact error, and the full divisor-boundary cluster interval. Two scoped complete reads and 28 internal obligations pass; all 35 primary pages are actually read. Final 40 selected pages and both actual live public PDF/homepage/Pages deployments pass; final 1030 printed pages. All 23 raw formal statements and 451 protected files remain exact. The same catalogue has current locators and source version; native compilation remains unverified. Fresh empty-source reconstruction passes with 281 exact book sources, all 1,054+17 page texts matching and 1,927 checksum-validated archive entries; private 374 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Checkpoint 373 — Pluriclosed deformation persistence
 
 [Review](research/editorial/pluriclosed-deformation-persistence-373.md): Section 32.3.6 proves conditional pluriclosed metric persistence under smooth complex-structure deformation with locally constant Aeppli h11. The explicit fourth-order projection and positivity argument pass two scoped complete reads and 35 internal obligations. Final 39 selected pages and all three live public PDF/homepage/Pages deployments pass; final 1,030 printed pages. All 23 raw formal statements and 451 protected files remain exact. P13 and all locators are reconciled, with the P14 equation-number correction; native compilation remains unverified. Fresh empty-source reconstruction passes with 280 exact book sources, all 1,054+17 page texts matching and 1,923 checksum-validated archive entries; private 373 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
