@@ -175,3 +175,5 @@ Checkpoint343 proves that all-modifications first polar curvature misses a posit
 Checkpoint 344 extends the checked first-polar obstruction to every compact Kähler manifold of dimension at least two, preserving the open full topology program. Continue directly with exact higher-degree volume loss along its scaled ordinary-model family.
 
 Checkpoint345 proves the exact diffuse volume interval in every compact Kähler dimension>=2. Continue with the nonclosed cutoff mass calculation, keeping potential mass, singularity volumes and ordinary-model realization distinct.
+
+Checkpoint346 separates finite torsion coefficients from the exact diffuse top-degree pole loss in arbitrary Hermitian backgrounds. Next check bounded-equivalence mass control under the Guan–Li power identities; keep specific potential mass and singularity volumes distinct until proved.

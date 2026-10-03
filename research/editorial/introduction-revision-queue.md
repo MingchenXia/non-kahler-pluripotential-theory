@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 345: Check the same diffuse cutoff in a nonclosed Hermitian background: identify the local top-degree pole loss and the finite lower-degree torsion terms, without asserting ordinary-model realization or volume invariance.
+Current next unit after checkpoint 346: Determine whether the displayed diffuse mass is invariant over all bounded-equivalent potentials under the Guan–Li power identities; check whether this yields the corresponding Hermitian ordinary-model obstruction, retaining every unresolved hypothesis.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint345, based on independently verified private checkpoint344, 557d70a2ec01c8c1bb7467c5095033afcb5eb87b.
+Research continuation through manuscript checkpoint346, based on independently verified private checkpoint345, 38c5ae227bc923fc8555dd7dedddfea38271403c.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). Checkpoint343 disproves general separation and exact ideal analytic closure for this first-polar candidate, even at positive lower volume and independently of all Gauduchon choices. Simultaneous realization remains a further problem; the required complete replacement topology is unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -154,3 +154,9 @@ This does not close P01/P17 or realize compatible current limits. Next compute e
 Checkpoint345 extends the Hausdorff trace estimate to closed positive(j,j) currents for1<=j<n. Their weak limits give the zero-dimensional joint pole set no coefficient mass. Bounded closed mixed Stokes, a fixed-parameter finite-degree weak subsequence and the local top mass M give exact NPP loss Mt^n. The zero endpoint is defined separately. Ordinary projection preserves both volumes, and envelope order gives d(p_s,p_t)=M|s^n-t^n|. The parameter Mt^n identifies this restricted family with a complete real interval. All first polar coordinates collapse it, and its positive-parameter members are nonideal. Choosing the endpoint sufficiently small places it in any prescribed cutoff0<delta<A.
 
 No unique top-degree residue distribution, higher-degree all-modification polar invariance, general complete model topology or simultaneous realization is asserted. All full P01/P17 statements stay open. Next check how the local pole loss interacts with lower-degree torsion terms for the same cutoff in a nonclosed Hermitian background.
+
+## Hermitian potential-mass polynomial
+
+Checkpoint346 computes A+sum binomial(n,j)c_j t^j-Mt^n for the displayed cutoff tH in any compact Hermitian background. A local Euclidean closed correction and compactly supported bounded Stokes give uniform traces of every degree. Hausdorff-null coefficient estimates make all lower-degree weak limits unique, so the finite torsion coefficients exist as bounded-truncation limits. The pure top global Hessian has zero integral, while the local top polar mass is exactly Mt^n. The explicit surface formula is A+2t integral H ddc omega-Mt^2. The power identities ddc omega^q=0 remove all lower coefficients.
+
+This is a formula for specified potentials, not invariance over all bounded-equivalent representatives or an ordinary-model volume formula. No unique top residue distribution or higher-degree all-modification invariant is asserted. Full P01/P17 stay open. Next check the bounded-equivalence gap under the Guan–Li power identities.

@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint346 — Diffuse Hermitian mass polynomial
+
+[Proposition15.6.25](editorial/diffuse-hermitian-mass-polynomial-346.md) proves the displayed cutoff mass A+sum binomial(n,j)c_j t^j-Mt^n in arbitrary Hermitian backgrounds, with finite torsion coefficients and an explicit surface formula. Both complete revised-input/second reads and21 internal checks pass. All prior formal/proof blocks stay exact. One clean production rebuild publishes and verifies the965-page PDF/homepage. All34 selected pages pass:27 direct images and7 exact345 actual-image carries. The same catalogue is reconciled; native compilation is unverified after50 seconds without a response. Fresh reconstruction/current archive validation pass: all265 exact book sources,1829 archive entries and all989+17 page texts match. Private synchronization follows this snapshot. Full P01/P17 and the bounded-equivalence/ordinary-model gap remain open; prior private345 independently verified at38c5ae22.
+
 ## Checkpoint345 — Exact diffuse model volumes
 
 [Corollary15.6.14](editorial/exact-diffuse-model-volume-345.md) proves volumes A-Mt^n and ordered distances M|s^n-t^n| for a complete interval collapsed by all first polar coordinates, in any prescribed positive cutoff below A. The foundation Hausdorff estimate covers every degree below top. Both complete revised-input/second reads and26 internal checks pass. One clean production rebuild publishes and verifies the963-page PDF/homepage. All42 selected pages pass:30 direct images and12 exact actual-image carries. The same catalogue source is reconciled; native compilation is unverified after no response. Fresh reconstruction/current archive validation pass: all265 exact book sources,1826 archive entries and all987+17 page texts match. Private synchronization follows this snapshot. Full P01/P17 remain open; prior private344 independently verified at557d70a2.

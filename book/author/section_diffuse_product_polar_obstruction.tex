@@ -179,3 +179,55 @@ $d_\omega(p_s,p_t)=M(t^n-s^n)$. The parameter $Mt^n$ proves the claimed isometry
 
 The proof of \cref{prop:all-modifications-diffuse-polar-blindness} applies to every $0<t\leq t_0$: all first polar currents vanish on all modifications, and all multiplier ideals are trivial. The polar currents also vanish for $p_0=0$, giving the zero polar comparison. For $t>0$, the strict volume deficit makes $p_t\ne0$, so its trivial ideals make it nonideal. Finally choose $t_0<1/C$ so small that $(1-Ct_0)^nA>\delta$. The uniform lower-volume bound puts every $p_t$ in the prescribed sector.
 \end{proof}
+
+For a nonclosed background, the derivatives in \eqref{eq:mass-expansion} also contribute. Bounded cutoff approximations isolate those lower-degree terms from the top-degree loss on $S$.
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:diffuse-hermitian-mass-polynomial}\index{Monge--Ampere mass@Monge--Amp\`ere mass!diffuse cutoff polynomial}
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$, with Hermitian form $\omega$. Place the polydisc of \cref{lem:diffuse-product-truncation-mass} in a coordinate chart. Choose $0\leq\chi\leq1$ smooth, compactly supported there and equal to one near $S=K^n$. Extend $H=\chi h$ and $H_L=\chi h_L$ by zero. There is $C>0$ such that $\ddc H,\ddc H_L\geq-C\omega$ for all sufficiently large $L$. Put $A=\int_X\omega^n$. The finite real limits
+\[
+ c_j=\lim_{L\to\infty}\int_X
+       H_L(\ddc H_L)^{j-1}\wedge\ddc(\omega^{n-j}),
+       \qquad 1\leq j<n,
+\]
+exist, and, for $0<t<1/C$,
+\[
+ \int_X\mathrm{MA}_\omega(tH)
+       =A+\sum_{j=1}^{n-1}\binom nj c_jt^j-Mt^n.
+\]
+If $\ddc(\omega^q)=0$ for $1\leq q<n$, this mass is $A-Mt^n$. On a surface the formula is
+\[
+ \int_X\mathrm{MA}_\omega(tH)
+       =A+2t\int_X H\ddc\omega-Mt^2.
+\]
+\end{proposition}
+\begin{proof}
+Outside a fixed neighborhood of $S$, the truncations $h_L$ eventually agree with $h$ on every compact set. In particular they agree on the supports of the derivatives of $\chi$. The cutoff calculation in \cref{prop:all-modifications-diffuse-polar-blindness} gives one uniform lower bound for $H_L$ and $H$.
+
+Let $\kappa=\ddc|z|^2$ on the coordinate polydisc $D$, and choose $B>0$ so that $T_L=B\kappa+\ddc H_L$ is positive and closed on $D$. The potentials of $T_L$ are locally bounded. Since $H_L$ has compact support, bounded integration by parts gives, for $1\leq j\leq n$,
+\[
+ \int_D T_L^j\wedge\kappa^{n-j}
+       =B^j\int_D\kappa^n.
+\]
+Indeed, every nonconstant term in the binomial expansion is the complex Hessian of a compactly supported bounded-product current wedged with a closed power of $\kappa$. Thus all degrees have uniform trace bounds, independently of $L$.
+
+For $j<n$, every subsequential weak limit of $T_L^j$ has coefficient measures vanishing on $S$, by \cref{cor:closed-current-hausdorff-null}. Off $S$, local boundedness and eventual equality identify it with $(B\kappa+\ddc H)^j$. These two properties identify the limit uniquely. Expanding $(T_L-B\kappa)^j$ therefore proves full weak convergence of $(\ddc H_L)^j$ to a finite signed current $W_j$, with no coefficient mass on $S$. It vanishes near $\partial D$ and extends by zero to $X$. Bounded integration by parts then gives
+\[
+ \int_X(\ddc H_L)^j\wedge\omega^{n-j}
+       =\int_X H_L(\ddc H_L)^{j-1}
+                         \wedge\ddc(\omega^{n-j}).
+\]
+The left side converges to $\int_XW_j\wedge\omega^{n-j}$, proving existence and finiteness of $c_j$.
+
+Fix $0<t<1/C$. The positive measures $(\omega+t\ddc H_L)^n$ have uniformly bounded mass, by their local expansion in the powers of $T_L$ and smooth forms. Their total masses also satisfy
+\[
+ \int_X(\omega+t\ddc H_L)^n
+       =A+\sum_{j=1}^{n-1}\binom nj t^j
+                    \int_X(\ddc H_L)^j\wedge\omega^{n-j};
+\]
+the pure top Hessian integrates to zero by bounded Stokes. Take a weak subsequential limit $\eta$. Its total mass is the polynomial $A+\sum_{j=1}^{n-1}\binom nj c_jt^j$.
+
+Near $S$, where $\chi=1$, expand $(\omega+t\ddc h_L)^n$. All lower-degree limits give $S$ zero mass. The top-degree measures have mass $M$ and supports tending to $S$, by \cref{lem:diffuse-product-truncation-mass}. Hence $\eta(S)=Mt^n$. Off $S$, eventual equality with the locally bounded $tH$ identifies $\eta$ with its non-pluripolar measure. Subtracting the mass on $S$ proves the formula.
+
+If all displayed background derivatives vanish, every $c_j$ is zero. For $n=2$, dominated $L^1$ convergence $H_L\to H$ gives $c_1=\int_XH\ddc\omega$, proving the surface identity. These are the masses of the displayed potentials; passing to singularity volumes in a nonclosed background requires control of their entire bounded-equivalence classes.
+\end{proof}

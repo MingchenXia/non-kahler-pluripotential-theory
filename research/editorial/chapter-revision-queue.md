@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 345: Check the same diffuse cutoff in a nonclosed Hermitian background: identify the local top-degree pole loss and the finite lower-degree torsion terms, without asserting ordinary-model realization or volume invariance.
+Current next unit after checkpoint 346: Determine whether the displayed diffuse mass is invariant over all bounded-equivalent potentials under the Guan–Li power identities; check whether this yields the corresponding Hermitian ordinary-model obstruction, retaining every unresolved hypothesis.
 
 | Chapter | Source | This cycle |
 |---|---|---|

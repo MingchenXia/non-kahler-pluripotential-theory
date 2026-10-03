@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 345: Check the same diffuse cutoff in a nonclosed Hermitian background: identify the local top-degree pole loss and the finite lower-degree torsion terms, without asserting ordinary-model realization or volume invariance.
+Current next unit after checkpoint 346: Determine whether the displayed diffuse mass is invariant over all bounded-equivalent potentials under the Guan–Li power identities; check whether this yields the corresponding Hermitian ordinary-model obstruction, retaining every unresolved hypothesis.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
