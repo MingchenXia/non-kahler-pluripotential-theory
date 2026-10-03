@@ -120,3 +120,7 @@ All 46 pages of Chiang2609.24869v1 are read. Only the exact metric of Example I.
 ## Checkpoint 364 — smooth local concentration
 
 All thirty pages of Qin2609.06568v1 are read. The zero-potential point-mass case is reconstructed by an exact smooth logarithmic ridge in Section 1.6.4, with all finite Lp and local capacity convergence and a direct common-bound obstruction. General classification and unconsulted AWNW/Lelong dependencies remain separate. [Review](editorial/local-dirac-concentration-364.md).
+
+## Local prescribed excess — checkpoint 365
+
+Qin2609.06568v1 Theorem B p.3 and pp.11–14 addition/determining-family arguments actually reread under 364 full 30-page primary reading. Section 1.6.5 reconstructs fixed-background prescribed local Radon excess by direct smooth lower-degree ridge limits, mixed CLN and finite atomic iteration, with all finite Lp/local capacity convergence and smooth approximants for smooth backgrounds. No new source dependency or full classification adopted. [Review](editorial/local-prescribed-excess-365.md).

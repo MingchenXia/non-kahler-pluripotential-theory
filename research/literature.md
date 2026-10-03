@@ -417,3 +417,7 @@ Chiang, Yueh-Lin, Bergman Kernel Asymptotics for Semipositive Line Bundles near 
 ## Smooth local Dirac concentration — checkpoint 364
 
 Qin, Xiangsen, Prescribed Limits and Cluster Sets of Complex Monge–Ampère Measures, arXiv:2609.06568v1, 6 September 2026 12:28:29 UTC. Complete thirty-page primary reading, SHA-256 `772af6fca9e8e960c0ea3701fc80eb78f494700ef237778a33209336b3a1a304`. Selected exact locators: Theorem B p.3, Lemma 2.1 pp.6–7, Lemma 2.4 pp.9–10, Corollary 3.6 p.14 and Proposition 7.2 p.26. The direct smooth point-mass variant avoids the general singular truncation formula; its capacity deduction uses the accepted local weighted/range estimates. The paper's general maximal-approximation/classification and external domain chains remain unadopted at this checkpoint. [Review](editorial/local-dirac-concentration-364.md).
+
+## Fixed-background local measure addition — checkpoint 365
+
+Qin2609.06568v1 Theorem B p.3 and pp.11–14 addition/determining-family arguments actually reread under 364 full 30-page primary reading. Section 1.6.5 reconstructs fixed-background prescribed local Radon excess by direct smooth lower-degree ridge limits, mixed CLN and finite atomic iteration, with all finite Lp/local capacity convergence and smooth approximants for smooth backgrounds. No new source dependency or full classification adopted. [Review](editorial/local-prescribed-excess-365.md).

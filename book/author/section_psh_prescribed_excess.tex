@@ -1,0 +1,136 @@
+\subsection{Adding a prescribed local measure}
+\label{subsec:local-prescribed-excess}
+
+Point concentration extends to a prescribed excess measure if the lower-degree currents are kept small. A mixed Chern--Levine--Nirenberg estimate then controls their interaction with a given bounded potential.
+
+\begin{lemma}\label{lem:ridge-lower-degree-limit}
+Fix the data $n,U,v,\varepsilon,R,\eta,\chi_\eta$ of \cref{lem:smooth-logarithmic-ridge}, and let $h_A$ be its smooth potential as $A\to\infty$. Put $D=\{0\}\times U$, and write $[D]$ for integration over this hypersurface. For every $1\leq r\leq n$,
+\[
+ (\ddc h_A)^r\longrightarrow
+       \varepsilon[D]\wedge(\ddc v)^{r-1}
+ \quad\text{as currents on }\mathbb C\times U.
+\]
+The product on the right is integration of the restricted smooth form over $D$.
+\end{lemma}
+\begin{proof}
+Write $S=\ddc v$, $q=\varepsilon\log(|\zeta|^2/R^2)$ and $T_A=v-A-q$. Off $D$, the rank-one calculation gives
+\[
+ (\ddc h_A)^r=\chi_\eta'(T_A)^rS^r
+       +r\chi_\eta'(T_A)^{r-1}\chi_\eta''(T_A)
+                   \,\mathrm dT_A\wedge\dc T_A\wedge S^{r-1}.
+\]
+Fix a smooth compactly supported test form. On its projected support, $v$ and its derivatives are bounded. The support of $\chi_\eta'(T_A)$ lies in $|\zeta|\leq s_A$, where $s_A=C\exp(-A/(2\varepsilon))$ and $C$ depends on this compact set and the fixed data. The first summand therefore has pairing $O(s_A^2)$. In the second summand, the term with two derivatives of $v$ also has pairing $O(s_A^2)$, and the two cross terms have pairing $O(s_A)$: the transverse derivative of $q$ has size $O(|\zeta|^{-1})$, whose area integral over this disc is $O(s_A)$. All coefficients involving $v$ and $\chi_\eta$ are bounded at the fixed parameters.
+
+It remains to integrate the term with $\mathrm dq\wedge\dc q$. The logarithmic radial change used in \eqref{eq:smooth-ridge-transverse-integral} leaves the factor $\varepsilon$ and the probability weight
+\[
+ r\chi_\eta'(t)^{r-1}\chi_\eta''(t)\,\mathrm dt,
+ \qquad -\eta\leq t\leq\eta.
+\]
+Only the horizontal part of the test form enters this term. Its coefficients on the shrinking circles tend uniformly to their restrictions at $\zeta=0$. Integration in the angle gives precisely the pairing with $\varepsilon[D]\wedge S^{r-1}$. The potentials are smooth on $D$, so the expansion introduces no additional supported measure there. This proves the current limit in every degree.
+\end{proof}
+
+\begin{lemma}\label{lem:local-mixed-cln-trace}
+Let $\Omega\subset\mathbb C^n$ be a domain, $K\subset L^\circ$ compact subsets of $\Omega$, and $\beta=\ddc|z|^2$. Let $b$ be locally bounded and plurisubharmonic, and $T$ a smooth positive closed $(r,r)$-form, $1\leq r<n$. Then
+\[
+ \int_K(\ddc b)^{n-r}\wedge T
+ \leq C_{K,L,n}(1+\|b\|_{L^\infty(L)})^{n-r}
+                     \int_L T\wedge\beta^{n-r}.
+\]
+\end{lemma}
+\begin{proof}
+Put $M=1+\|b\|_{L^\infty(L)}$. Cover $K$ by finitely many balls whose larger concentric balls have closure in $L^\circ$. Replace $b$ by $b+M$, which lies between zero and $2M$ there and has the same Hessian. For nested cutoffs, integration by parts against the closed form $T$ bounds
+\[
+ \int\psi\ddc b\wedge W
+       =\int b\ddc\psi\wedge W
+       \leq CM
+                   \int_{\operatorname{supp}\psi}\beta\wedge W,
+\]
+where $W$ is $T$ multiplied by the remaining positive closed factors. Apply this successively to the $n-r$ Hessians of $b$. Local decreasing regularization and \cref{thm:bt-input} justify the integrations for bounded $b$, with one common range bound. Summing over the finite covering gives the asserted constant.
+\end{proof}
+
+\Needspace{18\baselineskip}
+\begin{proposition}\label{prop:local-one-atom-addition}
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, $b\in\PSH(\Omega)\cap L^\infty(\Omega)$, $a\in\Omega$ and $c>0$. Given finitely many $f_i\in C_c(\Omega)$ and numbers $\tau,t>0$, there is a smooth bounded plurisubharmonic $h\leq0$ such that
+\[
+ \begin{gathered}
+ \|h\|_{L^p(\Omega)}\leq C_{\Omega,p}t\quad(1\leq p<\infty),\\
+ \left|\int_\Omega f_i\bigl((\ddc(b+h))^n-(\ddc b)^n\bigr)
+                         -cf_i(a)\right|<\tau\quad\text{for every }i.
+ \end{gathered}
+\]
+For concentric balls $B'\Subset B\Subset\Omega$ and $0\leq w\leq1$ in $\PSH(B)$, it also satisfies
+\[
+ \int_{B'}|h|(\ddc w)^n\leq C_{B',B,\Omega}t.
+\]
+These constants are independent of $b,a,c$, the test family and its tolerances.
+\end{proposition}
+\begin{proof}
+Write $a=(a_1,a')$ and $m=n-1$. Fix $R=2\sup_\Omega|z_1|+2$. For $\delta>0$, put $H_\delta(z')=\log(|z'-a'|^2+\delta^2)$. The radial calculation in \cref{prop:smooth-dirac-concentration} shows that $(\ddc H_\delta)^m$ is a probability measure tending to $\delta_{a'}$. Extend every $f_i$ by zero outside $\Omega$. Choose $\delta$ so that
+\[
+ \left|c\int_{\mathbb C^m}f_i(a_1,z')(\ddc H_\delta)^m
+                  -cf_i(a)\right|<\tau/3\quad\text{for all }i.
+\]
+Choose compact sets $K\subset L^\circ\Subset\Omega$ containing the test supports, and a nonnegative smooth cutoff $\psi$ equal to one near $L$. The mixed estimate of \cref{lem:local-mixed-cln-trace} gives a number $\gamma>0$ such that the total mixed contribution to every test is less than $\tau/3$ whenever
+\[
+ \int_L(\ddc h)^r\wedge\beta^{n-r}<\gamma,
+ \qquad 1\leq r<n,\qquad \beta=\ddc|z|^2.
+\]
+Indeed, expand the top power and sum the finitely many bounds with their binomial coefficients and $\|f_i\|_\infty$.
+
+Fix $0<\eta\leq t/2$. Use \cref{lem:smooth-logarithmic-ridge} with transverse variable $\zeta=z_1-a_1$ and $v=c^{1/m}\varepsilon^{-1/m}H_\delta$. For $r<n$, \cref{lem:ridge-lower-degree-limit} gives
+\[
+ (\ddc h_A)^r\longrightarrow
+ \varepsilon^{(n-r)/(n-1)}c^{(r-1)/(n-1)}
+               [\{z_1=a_1\}]\wedge(\ddc H_\delta)^{r-1}.
+\]
+At the fixed $\delta$, all these limit trace integrals against $\psi$ are finite. Choose $0<\varepsilon\leq t/2$ so that each is less than $\gamma/2$. At these fixed parameters, choose $A$ large enough that the actual trace integrals are less than $\gamma$, that $v-A\leq0$ on the projection of $\Omega$, and that the top-degree test integrals differ from the displayed slice measure by less than $\tau/3$. The last choice follows directly from \eqref{eq:smooth-ridge-transverse-integral}: its circles shrink uniformly on the projected test supports, and $\varepsilon(\ddc v)^m=c(\ddc H_\delta)^m$.
+
+Set $h=h_A-\eta$. As in \cref{prop:smooth-dirac-concentration}, it is smooth, bounded and nonpositive on $\Omega$, with
+\[
+ \varepsilon\log(|z_1-a_1|^2/R^2)-\eta\leq h\leq0.
+\]
+The logarithm has uniformly bounded $L^p(\Omega)$ norm for $a_1$ in the first-coordinate projection: after translation its one-variable integral is bounded by polar integration on one fixed containing disc. The same uniform $L^1$ bound, the weighted Chern--Levine--Nirenberg estimate and the ordinary range bound give the asserted test integral over $B'$. Since $\varepsilon+\eta\leq t$, both estimates follow with the stated constants.
+
+Finally, bounded multilinearity gives
+\[
+ (\ddc(b+h))^n=(\ddc b)^n+(\ddc h)^n
+       +\sum_{r=1}^{n-1}\binom nr
+                     (\ddc b)^{n-r}\wedge(\ddc h)^r.
+\]
+The slice approximation, top-degree limit and mixed estimate contribute less than $\tau/3$ each. This proves the required inequalities with one choice of $h$ for every finite~$p$.
+\end{proof}
+
+\begin{theorem}\label{thm:local-prescribed-excess}\index{Monge--Ampere product@Monge--Amp\`ere product!prescribed excess measure}
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b\in\PSH(\Omega)\cap L^\infty(\Omega)$, and let $\nu$ be a positive Radon measure on $\Omega$. There are bounded plurisubharmonic $u_j\leq b$ such that
+\[
+ \begin{gathered}
+ \|u_j-b\|_{L^p(\Omega)}\longrightarrow0\quad(1\leq p<\infty),\\
+ (\ddc u_j)^n\longrightarrow(\ddc b)^n+\nu
+                    \quad\text{vaguely}.
+ \end{gathered}
+\]
+The same sequence converges to $b$ in local capacity. If $b$ is smooth, every $u_j$ can be chosen smooth. The measure $\nu$ may have infinite total mass.
+\end{theorem}
+\begin{proof}
+Choose relatively compact open sets exhausting $\Omega$, with each closure contained in the next set. On each set take a countable uniformly dense family of smooth compactly supported functions in its space of continuous functions vanishing at the boundary, and add nonnegative smooth cutoffs equal to one on the closures. Enumerate the union as $(f_i)$. Convergence against this family to a fixed positive Radon measure implies vague convergence: the cutoff integrals give common local mass bounds, and uniform approximation then handles every continuous compactly supported test.
+
+For each $j$, approximate $\nu$ against $f_1,\ldots,f_j$ by a finite positive atomic measure
+\[
+ \nu_j=\sum_{s=1}^{N_j}c_{j,s}\delta_{a_{j,s}},\qquad
+ \left|\int_\Omega f_i(\nu_j-\nu)\right|<j^{-1}\quad(i\leq j).
+\]
+Such an approximation uses only the finite mass on a compact neighborhood of these supports: a finite partition with small oscillation of all the tests supplies the atoms and positive weights. Zero weights are omitted. If $N_j=0$, set $u_j=b$. Otherwise start at $b_{j,0}=b$ and apply \cref{prop:local-one-atom-addition} successively to $b_{j,s-1}$, $a_{j,s}$ and $c_{j,s}$, with the first $j$ tests and $\tau=t=(jN_j)^{-1}$. Define
+\[
+ b_{j,s}=b_{j,s-1}+h_{j,s},\qquad u_j=b_{j,N_j}.
+\]
+Every intermediate potential is bounded and plurisubharmonic. The next choice may depend on its bound; the proposition gives one perturbation for all finite $p$. Summing the norm estimates yields $\|u_j-b\|_{L^p(\Omega)}\leq C_{\Omega,p}/j$. Negativity gives $u_j\leq b$. Summing the measure errors gives
+\[
+ \left|\int_\Omega f_i\bigl((\ddc u_j)^n-(\ddc b)^n-\nu\bigr)\right|
+       <2/j\quad(i\leq j).
+\]
+The determining family therefore gives the asserted vague limit, including when $\nu(\Omega)=\infty$.
+
+For any fixed concentric balls $B'\Subset B\Subset\Omega$, negativity makes $|u_j-b|=\sum_s|h_{j,s}|$. The final estimate of \cref{prop:local-one-atom-addition} bounds its integral against every normalized bounded psh test measure on $B'$ by $C_{B',B,\Omega}/j$. Dividing by a fixed threshold and taking the supremum proves local capacity convergence. If $b$ is smooth, the finite sums defining $u_j$ are smooth as well.
+\end{proof}
+
+The construction prescribes one fixed excess measure in a bounded Euclidean domain. It does not impose boundary values or a common bound on the approximating potentials. These freedoms allow concentration even under local capacity convergence; a fixed global Hermitian background imposes further constraints.
