@@ -163,3 +163,5 @@ Checkpoint337 adds checked Gauduchon normalization, analytic-model separation, t
 Checkpoint 338 proves bounded polar invariance and model gauge transport, with both complete reads and direct output inspection. General P01/P17 and the remaining open-problem research goal stay active. Continue general separation, coordinate compatibility and simultaneous realization directly.
 
 Checkpoint 339 recovers full polar currents from fixed Gauduchon traces when the pole sets are closed. The closed complete pluripolar extension input is checked at its exact book scope. Continue pushforward compatibility, current limits and model realization directly; the general research goal remains active.
+
+Checkpoint 340 gives a fixed Gauduchon-choice obstruction to positive-volume compatibility on P2, with both complete proof reads and direct output checks. Continue full polar-current pushforward compatibility and compatible limits directly. No formal research question is closed.

@@ -108,4 +108,62 @@ Let $u,v\in\PSH(X,\omega)$ have closed pole sets. For every $\pi\in\mathscr R$, 
 The pulled-back pole sets are closed and locally complete pluripolar. On a coordinate ball upstairs, add a smooth correction $r$ to $u\circ\pi$ so that its Hessian is closed and positive. The closed complete pluripolar restriction theorem, \cite[Chapter III, Corollary 2.4, p.~140]{DemCADG}, makes its restriction to the pole set closed and positive. That restriction equals the polar part of $\pi^*\omega+\ddc(u\circ\pi)$, because the smooth difference assigns no mass to the pole set. Apply the same argument to $v$. These local polar currents glue to the indicated closed positive currents. Both are carried by the union of the two pole sets, which has Lebesgue measure zero. Equality of their $\eta_\pi$-traces now gives equality of the currents by \cref{lem:closed-null-current-trace}; the converse is immediate. Positivity of every $A_\pi$ proves the last assertion.
 \end{proof}
 
-Completeness of these coordinates leaves the realization of their limits by ordinary models to be proved. Separation on general ordinary models, identification of the analytic closure and comparison with the positive-volume topology are also needed. This normalization does not treat backgrounds of zero curve area.
+The choice of Gauduchon forms also affects convergence. On a surface, a form close to a pulled-back K\"ahler form assigns little trace mass to exceptional curves. Choosing these forms independently can suppress a sequence of moving point poles of fixed strength. We compare with the upper-volume comparison $d_\omega$ and the positive lower-volume sectors $\mathcal M_\delta(\omega)$ of \cref{def:model-volume-comparison}.
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:gauduchon-choice-topology-obstruction}\index{Gauduchon metric!choice and model topology}\index{Model potential!moving point poles}
+Let $X=\mathbb P^2$ and let $\omega$ be the Fubini--Study form normalized by $\int_X\omega^2=1$. For every set $\mathscr R$ as above and every rational $a\in(0,1)$, there are fixed Gauduchon forms $\eta_\pi$ and analytic ideal models $p_j$ with pairwise distinct single-point pole sets, each of logarithmic coefficient $a$, such that
+\[
+ \delta_\omega^{\mathrm{pol}}(p_j,0)\leq\frac1j,
+ \qquad d_\omega(p_j,0)=a^2.
+\]
+All $p_j$ and $0$ belong to $\mathcal M_{(1-a^2)/2}(\omega)$. Thus these allowed choices of the forms do not induce the positive-volume topology of \cref{thm:positive-model-complete-metric}.
+\end{proposition}
+\begin{proof}
+At $x=[1:0:0]$, put
+\[
+ u_x([Z_0:Z_1:Z_2])
+   =a\log\frac{|Z_1|^2+|Z_2|^2}
+                    {|Z_0|^2+|Z_1|^2+|Z_2|^2}.
+\]
+The homogeneous quotient defines a global nonpositive potential. Its curvature is positive, since the logarithm of the numerator has positive Hessian in a local projective trivialization and the remaining background is $(1-a)\omega$. Its only pole is $x$, with local expression $a\log|z|^2+O(1)$. By \cref{prop:analytic-envelope-type}, $p_x=P_\omega[u_x]$ is an analytic ideal model ordinarily equivalent to $u_x$. Unitary projective automorphisms preserve $\omega$ and commute with its zero-obstacle envelopes. Transport this construction to pairwise distinct points $x_j$ and write the resulting models as $p_j$.
+
+Fix $\pi:Y_\pi\to X$ and an initial Gauduchon form $\gamma_\pi$. The closed polar current of $p_j\circ\pi$ is supported on the analytic fiber over $x_j$. The divisorial restriction in \cref{lem:nonclosed-divisorial-removal} and the support theorem, \cite[Chapter III, Corollaries 2.11 and 2.14, pp.~141--143]{DemCADG}, give
+\[
+ \operatorname{Pol}_\pi(p_j)
+    =\sum_{E\mapsto x_j}b_{E,j}[E],
+ \qquad b_{E,j}=a\operatorname{ord}_E
+                         (\mathfrak m_{x_j}\mathcal O_{Y_\pi}).
+\]
+Indeed, \cref{cor:closed-pole-trace-recovery} supplies closedness, and after removing the curve components the remaining closed order-zero current is supported at finitely many points and vanishes. The sum is finite. Every such curve is contracted by $\pi$, so the restriction of $\pi^*\omega$ to it is zero. Put
+\[
+ C_{\pi,j}=\sum_{E\mapsto x_j}b_{E,j}\int_E\gamma_\pi,
+ \qquad J_\pi=\{j:C_{\pi,j}>0\}.
+\]
+A surface modification has finitely many exceptional curves and hence finitely many images of such curves. Since the points $x_j$ are distinct, $J_\pi$ is finite. Choose $\varepsilon_\pi>0$ with $\varepsilon_\pi C_{\pi,j}\leq1/j$ for every $j\in J_\pi$; if $J_\pi$ is empty, take $\varepsilon_\pi=1$. Now fix
+\[
+ \eta_\pi=\pi^*\omega+\varepsilon_\pi\gamma_\pi.
+\]
+\Needspace{6\baselineskip}
+This is positive and Gauduchon: on a surface its Gauduchon equation is $\ddc\eta_\pi=0$. Moreover
+\[
+ A_\pi=1+\varepsilon_\pi
+                  \int_{Y_\pi}\pi^*\omega\wedge\gamma_\pi\geq1,
+ \qquad \|\mu_\pi(p_j)\|_{\mathrm{TV}}
+                  =\varepsilon_\pi C_{\pi,j}\leq\frac1j.
+\]
+These choices are fixed for the whole sequence, and the estimate holds for every modification. Since $\mu_\pi(0)=0$, taking the supremum gives the asserted convergence.
+
+To compute singularity volumes, let $\rho:Y\to X$ be the blowup at $x$, with exceptional curve $E$, and let $F:Y\to\mathbb P^1$ resolve the pencil $[Z_1:Z_2]$. Write $\omega_1$ for the normalized Fubini--Study form on $\mathbb P^1$. The current identity is
+\[
+ \rho^*\omega+\ddc(u_x\circ\rho)=a[E]+H_a,
+ \qquad H_a=(1-a)\rho^*\omega+aF^*\omega_1.
+\]
+For every $v\sim u_x$, divisorial removal gives $H_a+\ddc w\geq0$ with $w=v\circ\rho-u_x\circ\rho$ bounded after extension across $E$. The bounded product of \cref{prop:bounded-products} assigns no mass to $E$. Change of variables off $E$ therefore identifies the non-pluripolar mass of $v$ with $\int_Y(H_a+\ddc w)^2$. Since $H_a$ is closed, bounded Bedford--Taylor integration by parts gives
+\[
+ \int_Y(H_a+\ddc w)^2=\int_YH_a^2=1-a^2.
+\]
+For the last equality, the residual class is $H-a[E]$, where $H=\rho^*[\omega]$, with $H^2=1$, $H\cdot E=0$ and $E^2=-1$. Hence both singularity volumes of $p_x$, and by unitary transport of every $p_j$, are $1-a^2$. The zero model has both volumes equal to one. Since $p_j\leq0$, \cref{def:model-volume-comparison} gives $d_\omega(p_j,0)=1-(1-a^2)=a^2$. This also proves the common positive lower-volume bound and the topological incompatibility.
+\end{proof}
+
+General model separation, realization of coordinate limits and exact analytic closure remain unresolved. The preceding obstruction shows that compatibility with the positive-volume topology requires more than an arbitrary independent choice of Gauduchon forms. This normalization does not treat backgrounds of zero curve area.

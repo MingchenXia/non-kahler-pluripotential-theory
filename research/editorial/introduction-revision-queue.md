@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 339: Continue P01/P17 directly: test whether Gauduchon forms approaching a pulled-back Kahler form can make fixed-strength moving point poles converge to zero in the polar comparison on the projective plane. If verified, compare with the existing positive-volume topology and isolate the required restriction on auxiliary forms. Then return to pushforward compatibility and compatible current limits; general model realization and exact analytic closure remain open.
+Current next unit after checkpoint 340: Continue P01/P17 directly: prove pushforward compatibility of the full polar currents under compositions of modifications. For closed-pole comparison-Cauchy sequences, construct uniquely determined compatible weak current limits without asserting strong coefficient variation or realization by an ordinary model. Investigate auxiliary-form restrictions separately; general model separation, exact analytic closure and realization remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

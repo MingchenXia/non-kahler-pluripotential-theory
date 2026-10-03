@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 339: Continue P01/P17 directly: test whether Gauduchon forms approaching a pulled-back Kahler form can make fixed-strength moving point poles converge to zero in the polar comparison on the projective plane. If verified, compare with the existing positive-volume topology and isolate the required restriction on auxiliary forms. Then return to pushforward compatibility and compatible current limits; general model realization and exact analytic closure remain open.
+Current next unit after checkpoint 340: Continue P01/P17 directly: prove pushforward compatibility of the full polar currents under compositions of modifications. For closed-pole comparison-Cauchy sequences, construct uniquely determined compatible weak current limits without asserting strong coefficient variation or realization by an ordinary model. Investigate auxiliary-form restrictions separately; general model separation, exact analytic closure and realization remain open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

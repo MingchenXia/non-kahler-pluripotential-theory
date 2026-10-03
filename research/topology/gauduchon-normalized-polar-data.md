@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint 339, based on independently verified private checkpoint 338, `172af5b59d24a7eae454e805cde18fc32749ec61`.
+Research continuation through manuscript checkpoint 340, based on independently verified private checkpoint 339, `9418d6d3d4a20d4b1962e5eb8caf464ab8f6343c`.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). General separation, realization of limits, analytic closure and compatibility with the established higher-dimensional topology are unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -116,3 +116,7 @@ Exact classical inputs: Demailly's *Complex Analytic and Differential Geometry*,
 5. Control two-sided background changes and degeneration of the background normalization. Smooth-gauge transport after model projection is covered by checkpoint 338; projection of an arbitrary non-model potential is not asserted to preserve its polar data.
 
 In dimension at least two, the manuscript's prescribed-countable-modification obstruction is respected: replacing \(\mathscr R\) by any fixed countable family leaves some analytic ideal models indistinguishable. The present construction uses a collection containing common resolutions and does not reduce that requirement to countably many fixed detectors.
+
+## Auxiliary choices and positive-volume compatibility
+
+Checkpoint 340, Proposition 15.6.22, proves that arbitrary independent Gauduchon choices can fail compatibility even on a common positive-volume sector of analytic ideal models on P2. Fix a rational coefficient a between zero and one and distinct point poles. Each modification contracts curves over only finitely many of those points. Choosing eta_pi=pi*omega+epsilon_pi gamma_pi with the fixed epsilon_pi small enough gives polar distance to zero at most 1/j on all modifications. The denominator is at least one, and contracted curves see only the epsilon term. The single-point blowup and bounded residual Stokes give both singularity volumes 1-a^2, so the upper-volume comparison with zero stays a^2. The complete source/proof reads and exact support theorem checks are recorded in research/editorial/gauduchon-choice-topology-obstruction-340.md. Analytic separation remains valid; auxiliary-form restrictions, general model separation, realization and exact analytic closure remain open.

@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 340 — Gauduchon choices and model convergence
+
+[Proposition 15.6.22](research/editorial/gauduchon-choice-topology-obstruction-340.md) proves that arbitrary independent Gauduchon choices can fail to recover the positive-volume topology, already on analytic ideal models on P2. Both complete revised proof reads, 22 internal mathematical checks and 25 direct final images pass. Both successful full rebuilds publish and separately verify the public PDF and matching homepage description; the final book has 955 printed pages. The same catalogue source is reconciled, with native compilation unverified after a nonresponding 25-second request. Empty-source reconstruction and current archive validation pass: all 264 exact book sources, 1,810 archive entries and identical text on all 979 book and 17 companion pages. Private synchronization follows this snapshot. General P01/P17 remain open. Prior private checkpoint 339 is independently verified at 9418d6d3.
+
 ## Checkpoint 339 — Closed-pole trace recovery
 
 [Lemma 1.25.3 and Corollary 15.6.13](research/editorial/closed-pole-trace-recovery-339.md) recover closed polar curvature currents from their fixed Gauduchon traces. The complete-pole extension theorem is checked with its closed-set hypothesis retained. Both complete proof reads, 22 internal mathematical checks and 30 direct final images pass. The clean 953-printed-page book and homepage are live and verified. The same catalogue source is reconciled; native compilation is unverified after a nonresponding request. Empty-source reconstruction and current archive validation pass: all 264 exact book sources, 1,807 archive entries, and identical text on all 977 book and 17 companion pages. Private synchronization follows this snapshot. General model separation and realization remain unresolved. Prior private checkpoint 338 is independently verified at 172af5b5.
