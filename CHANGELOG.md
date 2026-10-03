@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 381 — Crossing divisors and fiber integrability
+
+[Review](research/editorial/crossing-fiber-integrability-381.md): Subsection 26.10.2 extends P21 sufficient conditions to finite SNC divisor families and proves exact sharp simultaneous-pole models. Two complete scoped reads, 36 obligations and 49 selected final pages pass. The actual live PDF/homepage/Pages publication is verified; 1052 printed pages. All 23 formal and 19 supplemental directions remain open at full scope; P21 stays partially resolved. Native catalogue compilation remains unverified. Fresh reconstruction passes with 288 exact book sources, all 1076+17 page texts matching and 1957 checksum-validated archive entries; authorized private 381 synchronization follows.
+
 ## Checkpoint 380 — Author P21 fiber-integrability criterion
 
 [Review](research/editorial/fiber-integrability-band-380.md): Subsection 26.10.1 integrates the supplied P21 sufficient condition, strict anisotropic integrability threshold, exact selected series and sharp error model. Two complete scoped reads, 40 obligations and 44 final selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; 1048 printed pages. All 23 formal and 19 supplemental directions stay open at full scope; P21 is explicitly partially resolved. Same-editor native catalogue compilation remains unverified. Fresh empty-source reconstruction passes with 287 exact book sources, all 1072+17 page texts matching and 1953 checksum-validated archive entries; authorized private 380 synchronization follows.

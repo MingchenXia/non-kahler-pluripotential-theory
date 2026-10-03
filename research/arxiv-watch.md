@@ -184,3 +184,7 @@ The previously fully read Chou–Wu 2609.33656v1 given-metric surface result is 
 ## Author P21 sufficient condition — checkpoint 380
 
 The incoming supplied paper is fully read and its argument integrated as Subsection 26.10.1, with direct strict-threshold, positive-mass and uniform dimension proofs. P21 is explicitly partially resolved; no arbitrary-selector classification or necessity claim. All six incoming research files remain exact. No fresh arXiv listing coverage, campaign or external novelty claim. [Review](editorial/fiber-integrability-band-380.md).
+
+## Crossing-divisor P21 extension — checkpoint 381
+
+Subsection 26.10.2 proves the finite-SNC sufficient criterion, uniform mixed-twist dimension bound and exact sharp independent-pair model. General base ideals and necessity remain open. No fresh arXiv coverage or external novelty claim; supplied author source/review remain exact. [Review](editorial/crossing-fiber-integrability-381.md).

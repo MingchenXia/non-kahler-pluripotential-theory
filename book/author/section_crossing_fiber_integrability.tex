@@ -1,0 +1,103 @@
+\subsection{Several crossing base divisors}
+\label{sec:crossing-fiber-integrability}
+
+Retain the submersion $\pi:X\to B$, the line bundle $(A,h)$, the selecting potential $\varphi$ and the descended spaces $V_m$ from \cref{sec:fiber-integrability-band}. Several divisorial singularities can be treated at once. At their intersections the base integrability test separates in normal coordinates, while a bounded change of each divisor order costs only $O(m^{q-1})$ sections. The restriction estimate must now allow all the divisor twists simultaneously.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:finite-family-section-bound}
+Let $M$ be a compact complex manifold of dimension $d\geq0$, and let $E,F_1,\ldots,F_N$ be fixed holomorphic line bundles on $M$. For each $C_0>0$ there is $C_1$ such that
+\[
+ h^0\left(M,E^m\otimes\bigotimes_{i=1}^NF_i^{j_i}\right)\leq C_1m^d
+ \qquad(m\geq1,\ |j_i|\leq C_0m).
+\]
+\end{lemma}
+\begin{proof}
+For $d=0$ the dimension is the number of points of $M$. For $d\geq1$, use fixed smooth metrics, a smooth positive volume and finitely many framed charts as in \cref{lem:linear-range-section-bound}. The metric weight is $m\phi_E+\sum_i j_i\phi_{F_i}$, whose second derivatives are bounded by $Cm$ uniformly over the stated range. After removing its constant and real-linear terms by a holomorphic affine frame change, it is bounded in absolute value on a ball of radius $\varepsilon m^{-1/2}$ by a fixed constant. The submean inequality gives $|s(x)|^2\leq Cm^d\|s\|_{L^2}^2$, uniformly in $x,m$ and the integers $j_i$. Evaluation has one-dimensional target, so an orthonormal basis satisfies $\sum_\ell|s_\ell(x)|^2\leq Cm^d$. Integration gives the estimate. The constants depend only on the fixed bundles, metrics, charts, volume and $C_0$.
+\end{proof}
+
+Let $D_1,\ldots,D_N$ be distinct nonempty smooth connected reduced divisors on $B$, whose union has simple normal crossings. For each $i$, choose a smooth metric $H_i$ on $\mathcal O_B(D_i)$, its defining section $s_i$, and its curvature $\eta_i$.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:crossing-fiber-integrability-band}\index{Holomorphic section!crossing divisorial band}
+Suppose that $c_1,\ldots,c_N>0$ and $u\in C^\infty(B,\mathbb R)$ satisfy
+\[
+ \beta=\theta+\ddc u-\sum_{i=1}^Nc_i\eta_i>0,
+ \qquad \varphi\geq\sum_{i=1}^Nc_i\log\|\pi^*s_i\|_{H_i}^2-C
+                         \quad\hbox{on }X.
+\]
+For each $i$, suppose there is a submersion polydisc over an open part of $D_i\setminus\bigcup_{j\ne i}D_j$, with coordinates $(z_i,t_i,w_i,v_i)$ as in \cref{thm:fiber-integrability-band}, such that
+\[
+ \varphi\leq\frac{c_i}{p_i}\log\left(|z_i|^{2p_i}
+                  +\sum_{j=1}^{r_i}|w_{ij}|^{2b_{ij}}\right)+C_i,
+ \qquad 1\leq r_i\leq f,
+\]
+where $p_i,b_{ij}$ are positive integers. Put
+\[
+ \begin{gathered}
+ a_i=p_i\sum_{j=1}^{r_i}b_{ij}^{-1},\quad
+ L_{m,i}=\lfloor mc_i\rfloor,\quad
+ K_{m,i}=\max\{\lfloor mc_i-a_i\rfloor,0\},\\
+ \psi=u+\sum_{i=1}^Nc_i\log\|s_i\|_{H_i}^2.
+ \end{gathered}
+\]
+Then $\psi\in\PSH(B,\theta)$ has non-pluripolar mass $\int_B\beta^q\in(0,\infty)$. For every $m\geq1$,
+\[
+ \begin{split}
+ W_m&:=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
+      =H^0\left(B,A^m\left(-\sum_iL_{m,i}D_i\right)\right)\subseteq V_m,\\
+ V_m&\subseteq H^0\left(B,A^m\left(-\sum_iK_{m,i}D_i\right)\right).
+ \end{split}
+\]
+Moreover $\dim V_m-\dim W_m=O(m^{q-1})$. For $q=1$ this difference is at most $\sum_i\lceil a_i\rceil$ for every $m$.
+\end{theorem}
+\begin{proof}
+Poincar\'e--Lelong gives $\theta+\ddc\psi=\beta+\sum_i c_i[D_i]$. Off the divisors the non-pluripolar measure equals $\beta^q$, and both measures give their union zero mass. Thus $\mathrm{MA}_\theta(\psi)=\beta^q$, with finite positive total mass.
+
+Near an intersection, the divisors through the point are different coordinate hyperplanes. A holomorphic germ divisible by each corresponding $z_i^{L_{m,i}}$ is divisible by their product. Its bounded residual coefficient and the inequalities $L_{m,i}+1>mc_i$ give integrability by Fubini. Conversely, integrability at generic nearby points of each coordinate divisor forces that divisibility by the one-variable threshold. The germ's divisor order then gives divisibility throughout the chart. These facts prove
+\[
+ \mathcal I(m\psi)=\mathcal O_B\left(-\sum_iL_{m,i}D_i\right).
+\]
+Since $u$ is bounded, the global lower bound implies $\varphi\geq\pi^*\psi-C'$. Submersion coordinates then give $W_m\subseteq V_m$. For a nonzero section in $V_m$, the witness over $D_i$ detects its generic order along that irreducible divisor. The unit-coefficient argument and strict integrability threshold in \cref{thm:fiber-integrability-band,lem:anisotropic-fiber-integrability} give order at least $K_{m,i}$. Imposing all these divisor orders proves the upper inclusion.
+
+Increase the orders from the vector $(K_{m,i})_i$ to $(L_{m,i})_i$, one divisor and one integer at a time. Each restriction sequence loses at most
+\[
+ h^0\left(D_i,\left.A^m\left(-\sum_j n_jD_j\right)\right|_{D_i}\right),
+ \qquad 0\leq n_j\leq mc_j.
+\]
+Apply \cref{lem:finite-family-section-bound} with $E=A|_{D_i}$ and $F_j=\mathcal O_B(-D_j)|_{D_i}$. This is $O(m^{q-1})$ uniformly over every step. There are at most $\sum_i\lceil a_i\rceil$ steps. When $q=1$, the distinct connected divisors are points and each restriction space has dimension one.
+\end{proof}
+
+The upper witnesses are away from the crossings; the global lower bound controls integrability at every crossing. Exact models can also realize simultaneous fiber poles there, using separate fiber coordinates for the different divisor factors.
+
+\Needspace{14\baselineskip}
+\begin{example}\label{ex:crossing-fiber-sharp-error}\index{Holomorphic section!crossing sharp error}
+Let $B=(\mathbb P^1)^q$, $X=B\times(\mathbb P^1)^q$ and $A=\mathcal O_B(1,\ldots,1)$. For each $i$, let $D_i$ be the inverse image of a marked point in the $i$th base factor and $E_i$ the corresponding marked-point divisor in the $i$th fiber factor. Use normalized Fubini--Study divisor metrics, and write $\omega_{B,i},\omega_{F,i}$ for their pullbacks. Put
+\[
+ \begin{gathered}
+ R_i=\|\pi^*s_i\|^2,\quad T_i=\|s_{E_i}\|^2,\quad
+ \varphi=\frac14\sum_{i=1}^q\log(R_i^2+T_i^3),\\
+ \omega=\sum_i(\omega_{B,i}+\omega_{F,i}),\qquad
+ \psi=\frac12\sum_i\log\|s_i\|^2.
+ \end{gathered}
+\]
+Then $\varphi\in\PSH(X,\omega)$ and the preceding theorem applies with $c_i=1/2$, $p_i=2$, $b_{i1}=3$ and $a_i=2/3$. The base reference has mass $q!/2^q$. For $L_m=\lfloor m/2\rfloor$ and $K_m=\max\{\lfloor m/2-2/3\rfloor,0\}$, the exact spaces are
+\[
+ \begin{split}
+ V_m&=H^0\bigl(B,\mathcal O_B(m-K_m,\ldots,m-K_m)\bigr),\\
+ W_m&=H^0\bigl(B,\mathcal O_B(m-L_m,\ldots,m-L_m)\bigr).
+ \end{split}
+\]
+They agree for $m=1$. For $m\geq2$ the defect is
+\[
+ \dim V_m-\dim W_m
+       =(\lceil m/2\rceil+2)^q-(\lceil m/2\rceil+1)^q.
+\]
+For $q\geq2$ this is $q2^{1-q}m^{q-1}+O(m^{q-2})$; for $q=1$ it is exactly one.
+\end{example}
+\begin{proof}
+Each summand has Hessian bounded below by $-\tfrac12\omega_{B,i}-\tfrac34\omega_{F,i}$, by the log-sum calculation in \cref{ex:anisotropic-fiber-sharp-error}. The inequality extends across its common zero set by a quadratic correction and local psh extension. Summing proves $\varphi\in\PSH(X,\omega)$. The global lower bound follows from $R_i^2+T_i^3\geq R_i^2$. For a witness over $D_i$ away from the other divisors, place the $i$th fiber coordinate at its marked point; all other summands are smooth there. The upper model follows. The residual is $\beta=\tfrac12\sum_i\omega_{B,i}>0$, whose top integral is $q!/2^q$.
+
+The theorem gives the required generic orders along every $D_i$. Conversely, near a point where several pairs $(R_i,T_i)$ vanish, the selecting density is comparable to the product of the factors $(|z_i|^4+|w_i|^6)^{-m/4}$ in disjoint variable pairs. A descended coefficient divisible by every $z_i^{K_m}$ has a bounded holomorphic residual. Each factor is integrable because $K_m+1>m/2-2/3$; Fubini proves integrability at their intersections. Elsewhere the same argument uses fewer factors. This proves the exact identity for $V_m$, and the theorem gives $W_m$. A line bundle $\mathcal O_B(d,\ldots,d)$ with $d\geq0$ has $(d+1)^q$ sections, by its separate homogeneous monomials. Since $K_m=L_m-1$ for $m\geq2$, subtraction gives the displayed defect and its leading term.
+\end{proof}
+
+The selector varies from finite values to $-\infty$ within fibers over the divisors, so these are again non-descended examples. The crossing theorem extends the sufficient conditions for \cref{qu:fiber-selected-approximation}; it leaves arbitrary base ideals and necessary conditions open.

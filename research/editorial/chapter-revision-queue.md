@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 380: Check incoming author commits. Extend the verified P21 bounded-band criterion to finitely many simple-normal-crossing divisors, with exact multiplier-ideal contraction and a uniform finite-family twist estimate. Verify all positivity, chart and endpoint assumptions before integration; full arbitrary-selector classification remains open. Continue recent-primary positivity functors and high-dimensional ideal-distance optimality as separate pending directions.
+Current next unit after checkpoint 381: Check incoming author commits and new arXiv versions. Examine a modification-based P21 criterion for analytic base ideals, with canonical Jacobian correction, positive residual and divisor witnesses all explicit. General necessity remains open; do not adopt an unchecked resolution argument.
 
 | Chapter | Source | This cycle |
 |---|---|---|
