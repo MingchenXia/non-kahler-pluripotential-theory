@@ -88,3 +88,5 @@ Checkpoint 373 reconstructs conditional pluriclosed persistence via the explicit
 Checkpoint 374 reconstructs the exact ball divisor Green envelope, quantitative bounded obstacle convergence and complete boundary clusters after all 35 pages of the recent primary are actually read. General SID/B-regular, disc, comparison and hull inputs remain unadopted. Continue the exact generalized L2 division primary. No formal/supplemental closure.
 
 Checkpoint 375 reconstructs quantitative two-summand division and one-weight ideal distance, then proves the successive product constant, sharp for r <= n. All ten recent primary pages are read; general division/extension/converse and r > n optimality remain unadopted. Continue the one-dimensional optimal-constant investigation. No existing formal/supplemental closure.
+
+Checkpoint 376 proves the optimal planar multiweight ideal distance by exact point orders and global ideal lifting. Retain n>=2,r>n optimality as new supplemental S19. No existing formal/supplemental direction closes.

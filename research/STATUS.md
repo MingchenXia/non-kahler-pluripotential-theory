@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 376 — Planar optimal ideal distance
+
+[Review](editorial/planar-optimal-ideal-distance-376.md): Subsection 1.16.2 determines the optimal planar multiweight distance, including its zero regime and equality examples. Two scoped complete reads, 37 internal obligations and 48 selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; final 1038 printed pages. All 23 formal source statements and 451 protected files remain exact. New catalogue S19 records the unresolved n>=2,r>n optimum; all 23 formal and 19 supplemental directions remain open. Same-editor native compilation remains unverified. Fresh empty-source reconstruction passes with 283 exact book sources, all 1062+17 page texts matching and 1935 checksum-validated archive entries; private 376 synchronization follows.
+
 ## Checkpoint 375 — Product multiplier-ideal distance
 
 [Review](editorial/product-multiplier-ideal-distance-375.md): Subsection 1.16.1 proves two-summand division, weighted one-ideal distance and a successive product estimate, sharp for r <= n. Two scoped complete reads and 40 internal obligations pass; all ten primary pages are actually read. Final 44 selected pages and all five actual live public PDF/homepage/Pages deployments pass; final 1034 printed pages. All 23 raw formal statements and 451 protected files remain exact. Catalogue locators/source version are current; native compilation remains unverified. Fresh empty-source reconstruction passes with 282 exact book sources, all 1058+17 page texts matching and 1931 checksum-validated archive entries; private 375 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.

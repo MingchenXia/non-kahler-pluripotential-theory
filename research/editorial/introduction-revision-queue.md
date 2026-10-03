@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 375: Investigate the optimal multiweight distance in dimension one, including global ideal-section lifting and the common-pole equality model. Verify the one-dimensional multiplier-ideal formula before adoption. Retain higher-dimensional r > n optimality and the pending general Green/SID and pluriclosed classification dependencies.
+Current next unit after checkpoint 376: Check the private remote for author-supplied open-problem progress and read the next exact recent primary before adoption. Continue higher-dimensional r>n optimal-distance investigation with concrete equality/counterexample models, retaining general division/extension and Green/SID/pluriclosed dependencies.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

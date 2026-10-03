@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 375: Investigate the optimal multiweight distance in dimension one, including global ideal-section lifting and the common-pole equality model. Verify the one-dimensional multiplier-ideal formula before adoption. Retain higher-dimensional r > n optimality and the pending general Green/SID and pluriclosed classification dependencies.
+Current next unit after checkpoint 376: Check the private remote for author-supplied open-problem progress and read the next exact recent primary before adoption. Continue higher-dimensional r>n optimal-distance investigation with concrete equality/counterexample models, retaining general division/extension and Green/SID/pluriclosed dependencies.
 
 | Chapter | Source | This cycle |
 |---|---|---|

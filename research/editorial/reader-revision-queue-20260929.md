@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 375: Investigate the optimal multiweight distance in dimension one, including global ideal-section lifting and the common-pole equality model. Verify the one-dimensional multiplier-ideal formula before adoption. Retain higher-dimensional r > n optimality and the pending general Green/SID and pluriclosed classification dependencies.
+Current next unit after checkpoint 376: Check the private remote for author-supplied open-problem progress and read the next exact recent primary before adoption. Continue higher-dimensional r>n optimal-distance investigation with concrete equality/counterexample models, retaining general division/extension and Green/SID/pluriclosed dependencies.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

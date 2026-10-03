@@ -164,3 +164,7 @@ All 35 pages of exact Dao–Nguyen–Tran 2610.00909v1 are actually read. Subsec
 ## Quantitative multiplier-ideal distance — checkpoint 375
 
 All ten pages of exact Takakura 2609.36420v1 are actually read. Subsection 1.16.1 reconstructs scalar-kernel two-summand division and the one-weight distance, then iterates global congruences. The product constant is sharp for r <= n; for r > n no optimality or superiority is asserted. Demailly physical 123–125 is read; its printed constant 2 is distinguished from the directly reconstructed 1. Earlier 2505.05938v1 is read only on 1–11 and 16–17. General division/extension/converse inputs remain unadopted. No new listing scan or existing formal/supplemental closure. [Review](editorial/product-multiplier-ideal-distance-375.md).
+
+## Planar optimal distance — checkpoint 376
+
+Subsection 1.16.2 proves the optimal planar multiweight constant max(1-sum_i1/p_i,0), with point-order and global bundle-valued dbar proofs. Classical CADG 30–36 and AM11 30,33–34 are actually read; no full 455/228-page source review is claimed. The exact ten-page recent primary reading is retained from 375. No new listing scan or existing question closure; new S19 retains the n>=2,r>n optimum. [Review](editorial/planar-optimal-ideal-distance-376.md).
