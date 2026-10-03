@@ -109,3 +109,5 @@ Checkpoint353 proves an exact anisotropic maximum formula and failure of separat
 Checkpoint354 completes the uniform positive-weight proof internally. The author now directs continuation into other book-related directions and recent arXiv papers, with exact hypotheses/proof review before adoption in existing or new chapters. GitHub authentication is pending for354 publication/private backup; mathematical and editorial work continues.
 
 Checkpoint355 integrates precisely checked recent divisorial Sobolev results after the whole-book polish acceptance. Continue complete Hermitian stability/gradient and Fujiki-degeneration proof checks and other related directions; adoption requires exact assumptions and dependencies. Public355 includes354 and is verified; private354 backup is independently verified. All full formal/supplemental problems remain open.
+
+Checkpoint356 integrates precisely checked strict-gap Hermitian stability after accepted whole-book polish. Continue primary gradient/Hessian and Fujiki-degeneration chains, other related directions and literature coverage catch-up. All formal/supplemental directions remain open.

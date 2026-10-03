@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint356 — Concave strict-gap stability
+
+[Review](editorial/concave-strict-gap-stability-356.md): Section10.7 reconstructs fixed strict-gap concave C0 bounds, linear density/L1 stability and uniform C0 compactness on a fixed Hermitian manifold. The full28-page Guo–Song source and bounded primary Guo–Phong proof are actually read; gradient/Hessian dependencies remain pending. Scoped first/second source reads,35 internal obligations and37 direct final-page views pass. The989-page public PDF, matching homepage and successful deployment are independently verified. Same catalogue23 exact full statements/current locators retained; native compiler returned no diagnostics and remains unverified. Fresh reconstruction passes with268 exact book sources and every1013+17 page text matching;1862 archive entries validate. Authorized private356 sync follows. All23 formal and18 supplemental directions remain open.
+
 ## Checkpoint355 — Divisorial Sobolev regularity
 
 [Review](editorial/divisorial-sobolev-regularity-355.md): New subsection1.6.3 reconstructs sharp divisorial gradient/Laplacian integrability and retains the residual divisor measure, with a power endpoint counterexample. Complete scoped first/second reads,28 internal obligations and29 final page checks pass. The985-page public PDF/homepage and successful deployment are actually verified after all four production builds. All23 formal statements/current locators are retained in the same catalogue. Fresh reconstruction passes with267 exact book sources and all1009+17 page texts matching;1858 archive entries validate. Private355 sync follows. Private354 independently verified at8a804606; the355 public build includes354 and supersedes its pending public upload. Recent primary arXiv listings and candidate source scopes are recorded with explicit coverage/dependency gaps. All23 formal and18 supplemental directions remain open.
