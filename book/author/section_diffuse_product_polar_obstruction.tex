@@ -262,3 +262,59 @@ Both singularity volumes of $tH$ thus equal $A-Mt^n$. The strict current bound g
 
 The support and Lelong-number argument in \cref{prop:all-modifications-diffuse-polar-blindness} uses smoothness of the background and closedness of its polar restriction, not closedness of the background. It therefore gives zero first polar currents on all modifications and trivial all-weight ideals here as well. The strict volume deficit makes every positive-parameter model nonideal. Choosing $t_0$ small enough gives the prescribed cutoff. Finally, on a surface the Gauduchon condition is $\ddc\omega=0$; the remaining power identities are automatic by degree. Such forms exist by \cref{thm:gauduchon}.
 \end{proof}
+
+In an arbitrary Hermitian background, bounded equivalence still preserves the top-degree pole loss. The total mass of the full truncation limit can vary with the representative, through the lower-degree background derivatives.
+
+\Needspace{17\baselineskip}
+\begin{proposition}\label{prop:diffuse-representative-mass}\index{Monge--Ampere mass@Monge--Amp\`ere mass!bounded-equivalent diffuse representatives}
+Let $\omega$ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq2$. Fix the cutoff $H$, constant $C$ and mass $M$ of \cref{prop:diffuse-hermitian-mass-polynomial}, and $0<t<1/C$. For every $v\in\PSH(X,\omega)$ ordinarily bounded-equivalent to $tH$, put $v_k=\max(v,-k)$. The limits
+\[
+ c_j(v)=\lim_{k\to\infty}\int_X
+     v_k(\ddc v_k)^{j-1}\wedge\ddc(\omega^{n-j}),
+       \qquad 1\leq j<n,
+\]
+are finite real numbers, and
+\[
+ \int_X\mathrm{MA}_\omega(v)
+       =A+\sum_{j=1}^{n-1}\binom nj c_j(v)-Mt^n,
+       \qquad A=\int_X\omega^n.
+\]
+In particular
+\[
+ v_-(\omega)-Mt^n
+       \leq\int_X\mathrm{MA}_\omega(v)
+       \leq v_+(\omega)-Mt^n.
+\]
+On a surface this mass is $A+2\int_Xv\ddc\omega-Mt^2$.
+\end{proposition}
+\begin{proof}
+The pole set of $v$ is $S$, and $v$ is locally bounded off $S$. On each relatively compact coordinate neighborhood choose a fixed smooth Euclidean correction $q$ making $v+q$ and every $v_k+q$ plurisubharmonic. By \cref{thm:small-pole-local-products}, all closed powers of $\ddc(v_k+q)$ converge weakly to finite order-zero currents. Expanding $\ddc v_k=\ddc(v_k+q)-\ddc q$ gives full weak convergence in every degree. The limits patch because the bounded currents $(\ddc v_k)^j$ are global. Write their limits as $W_j$.
+
+Bounded integration by parts gives
+\[
+ \int_X(\ddc v_k)^j\wedge\omega^{n-j}
+       =\int_Xv_k(\ddc v_k)^{j-1}
+                           \wedge\ddc(\omega^{n-j}).
+\]
+This follows by uniformly bounded decreasing regularization as in \cref{thm:mass-expansion,thm:bounded-exact-regularization}. Pairing $W_j$ with the smooth background power proves existence and finiteness of $c_j(v)$. The pure top Hessian has zero integral for every $k$, by bounded Stokes. Expanding the positive bounded measures $(\omega+\ddc v_k)^n$ therefore gives a global positive weak limit $T_v$, of finite total mass
+$A+\sum_{j=1}^{n-1}\binom nj c_j(v)$.
+
+Near $S$, compare $a=v+q$ with $th$. Their difference is bounded there. The full top mass of $h$ is $M$, supported on $S$, by \cref{thm:small-pole-local-products,lem:diffuse-product-truncation-mass}. Hence \cref{lem:small-pole-residual-invariance} gives $(\ddc a)^n_{\mathrm{full}}(S)=Mt^n$. Every lower closed power has zero coefficient mass on $S$ by \cref{cor:closed-current-hausdorff-null}. In the expansion with the smooth form $\omega-\ddc q$, only the top power contributes to $T_v(S)$, giving $T_v(S)=Mt^n$. Off $S$, eventual truncation equality identifies $T_v$ with the non-pluripolar measure of $v$. Subtraction proves the formula.
+
+Every bounded global measure has total mass between $v_-(\omega)$ and $v_+(\omega)$. Passing to its global weak limit and subtracting $Mt^n$ gives the two bounds, with the upper one interpreted in the extended real sense. In dimension two, $L^1$ convergence of $v_k$ to $v$ gives $c_1(v)=\int_Xv\ddc\omega$, proving the surface formula.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{corollary}\label{cor:diffuse-surface-mass-invariance}\index{Gauduchon metric!diffuse bounded-equivalence mass}
+On a connected compact complex surface with Hermitian form $\omega$, fix the preceding cutoff and $0<t<1/C$. The non-pluripolar mass is constant over the ordinary bounded-equivalence class of $u=tH$ if and only if $\omega$ is Gauduchon. More precisely, for every smooth real $f$ and every sufficiently small real $\varepsilon$,
+\[
+ \int_X\mathrm{MA}_\omega(u+\varepsilon f)
+       -\int_X\mathrm{MA}_\omega(u)
+       =2\varepsilon\int_Xf\ddc\omega.
+\]
+\end{corollary}
+\begin{proof}
+The strict bound $\omega+\ddc u\geq(1-Ct)\omega$ makes $u+\varepsilon f$ admissible for both signs of sufficiently small $\varepsilon$. Indeed choose $D>0$ with $-D\omega\leq\ddc f\leq D\omega$ and take $|\varepsilon|<(1-Ct)/D$. These potentials differ boundedly from $u$, so \cref{prop:diffuse-representative-mass} gives the displayed difference.
+
+If $\ddc\omega=0$, the same proposition gives mass $A-Mt^2$ for every bounded-equivalent representative. Conversely write $\ddc\omega=\rho\omega^2$ with $\rho$ smooth and real. If this form is nonzero, choose $f=\rho$. Then $\int_Xf\ddc\omega=\int_X\rho^2\omega^2>0$, so the masses of the admissible smooth perturbations vary. Thus constancy forces $\ddc\omega=0$, which is the Gauduchon condition on a surface.
+\end{proof}

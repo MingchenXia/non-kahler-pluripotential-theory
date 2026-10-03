@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 347: Compute the torsion-dependent mass of every bounded-equivalent diffuse representative in an arbitrary Hermitian background, and determine whether mass invariance actually fails outside the power-identity regime; retain the distinction from ordinary-model singularity volumes.
+Current next unit after checkpoint 348: Use the invariant residual loss and representative mass bounds to establish the first-polar model obstruction in arbitrary Hermitian backgrounds with bounded mass and positive lower mass, including every Hermitian metric on a compact complex surface; check the exact needed metric/volume dependencies without asserting a general exact distance formula.
 
 | Chapter | Source | This cycle |
 |---|---|---|

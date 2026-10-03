@@ -179,3 +179,5 @@ Checkpoint345 proves the exact diffuse volume interval in every compact Kähler 
 Checkpoint346 separates finite torsion coefficients from the exact diffuse top-degree pole loss in arbitrary Hermitian backgrounds. Next check bounded-equivalence mass control under the Guan–Li power identities; keep specific potential mass and singularity volumes distinct until proved.
 
 Checkpoint347 settles the diffuse bounded-equivalence mass proof under the Hermitian power identities and extends the ordinary-model interval to Gauduchon surfaces. Next compute every class representative’s torsion terms and test the precise failure outside this regime, retaining the full topology problem.
+
+Checkpoint348 proves finite torsion formulas and fixed top residual loss for every diffuse bounded-equivalent representative in arbitrary Hermitian backgrounds. Surface class-wide constancy is equivalent to Gauduchon. Next use the bounds for model separation under the two mass properties, without assuming equal volumes or exact distance outside the invariant-mass regime.

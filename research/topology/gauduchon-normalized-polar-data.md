@@ -1,6 +1,6 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint347, based on independently verified private checkpoint346, 215870599210b88db11de8051c9136250dffb2f4.
+Research continuation through manuscript checkpoint348, based on independently verified private checkpoint347, c30d063bcdea59a1f7912f75e97780d4db3628a8.
 
 Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). Checkpoint343 disproves general separation and exact ideal analytic closure for this first-polar candidate, even at positive lower volume and independently of all Gauduchon choices. Simultaneous realization remains a further problem; the required complete replacement topology is unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
@@ -166,3 +166,9 @@ This is a formula for specified potentials, not invariance over all bounded-equi
 Checkpoint347 proves full residual-mass invariance on the zero-dimensional compact common pole set using a decreasing maximum and the compact-set weak-mass bound. The checked Hausdorff-small unbounded-product theorem supplies full products and weighted integrability, distinguished from NPP. For every bounded-equivalent diffuse representative, lower closed powers give zero pole coefficient mass and the top residual is Mt^n. When ddc omega^q=0 for1<=q<n, bounded global mass is A. Subtracting the fixed pole loss proves mass A-Mt^n for every representative and both singularity volumes. Ordinary projection yields the same complete ordered interval, first-polar blindness on all modifications and nonideal positive members as in the Kähler case. Every Gauduchon surface qualifies.
 
 This supersedes the special-regime bounded-equivalence gap recorded at346. Arbitrary Hermitian torsion terms and the complete topology problem remain further tasks. No higher-degree all-modification invariant, general realization or full formal problem closure is asserted.
+
+## Entire diffuse class in arbitrary Hermitian backgrounds
+
+Checkpoint348 computes A+sum binomial(n,j)c_j(v)-Mt^n for every bounded-equivalent representative, with finite truncation coefficients, by full local every-degree convergence and bounded global Stokes. Each individual mass is finite without BMP. The full global truncation total lies between the bounded mass extrema; subtracting the fixed residual gives bounds v_minus-Mt^n and v_plus-Mt^n, with infinite upper bound permitted. On a surface, the mass is A+2 integral v ddc omega-Mt^2. Class-wide constancy is equivalent to Gauduchon, detected in the converse by an admissible smooth perturbation using the nonzero ddc omega density.
+
+This resolves the formula for every representative, while optimization defining singularity volumes and the complete topology problem remain distinct. No general exact distance formula, higher-degree all-modification invariant or complete model realization is asserted. Next apply these bounds when both mass properties hold.
