@@ -112,3 +112,7 @@ Section 13.18.2 computes the exact p<3 and weak L3 density threshold, applies th
 ## Checkpoint 362 — parallel torsion and coexistence
 
 Chen–Zheng2609.27809v1 Theorem1.2 and its core projection/slice proof are reconstructed in Section32.3.5; the general P13 problem remains. The full nine-page prior reading and exact date discrepancy are retained. No new listing scan or non-balanced BTP obstruction is adopted. [Review](editorial/parallel-torsion-positivity-362.md).
+
+## Checkpoint 363 — logarithmic projective kernel
+
+All 46 pages of Chiang2609.24869v1 are read. Only the exact metric of Example I.15 is integrated into Section 26.14, with a direct global norm proof of the m/logm kernel and Fubini–Study coefficient3/2. Four precise printed formula/estimate diagnostics are retained without rejecting all conclusions; general external kernel dependencies and listing coverage gaps remain. [Review](editorial/logarithmic-projective-kernel-363.md).

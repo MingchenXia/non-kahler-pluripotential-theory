@@ -62,3 +62,5 @@ Checkpoint 359 integrates the directly proved standard nodal local-model strict 
 Checkpoint 360 integrates the exact nodal density p<3/weak L3 calculation, arbitrary-background bounded descended equation and closed uniqueness/full-family convergence. Continue precise literature catch-up and separate geometric/domain/Hessian dependency chains. All full formal/supplemental directions remain open.
 
 Checkpoint362 reconstructs the explicit Dg=DJ=DT^D=0 balanced/pluriclosed theorem with strictly positive differential-compatible averaging and compact fixed-trace slice maximization. Continue the complete Chiang primary/dependency reading and related kernel question, retaining other open chains. No full formal/supplemental question closure.
+
+Checkpoint363 integrates only the exact projective metric from the completely read 46-page Chiang primary version, with an independent elementary global monomial norm proof of the fixed-point m/logm kernel. Keep general spectral/localization/Newton and moving-growing-jet chains unadopted; continue complete Qin primary reading and exact related directions. No full formal/supplemental closure.

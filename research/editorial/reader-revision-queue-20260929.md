@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 362: Read the complete primary Chiang2609.24869v1 kernel preprint and its selected spectral/localization dependencies before any extension of P22 or the partial-kernel chapter. Retain precise historical replacement gaps, unadopted Windare curvature/endpoint and Thiella comparison chains, and separate Zhang/domain/Hessian dependencies. All23 formal and18 supplemental directions remain open.
+Current next unit after checkpoint 363: Read the complete primary Qin2609.06568v1 on prescribed limits and cluster sets of complex Monge–Ampère measures, retaining exact version/history, local-domain hypotheses and truncation/localization dependencies. Continue related kernel directions only with direct remainder and norm proofs. Retain all historical replacement and unconsulted spectral/Newton, curvature/domain/Hessian dependency gaps. All 23 formal and 18 supplemental directions remain open at full scope.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

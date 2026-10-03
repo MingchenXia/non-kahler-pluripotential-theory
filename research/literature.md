@@ -409,3 +409,7 @@ Guyett–Mc Gowan v1 pp. 13–14 are actually reread, retaining its complete pri
 ## Parallel-torsion balanced/pluriclosed coexistence — checkpoint 362
 
 Chen–Zheng2609.27809v1, nine pages, SHA-256 `de555bde4b45f73c650278d75c121855fc8de7c8ef954883727cb3b776939014`. Theorem1.2 pp2/8; Lemmas3.1–3.2 and Propositions3.3–3.5 pp3–6; Propositions4.2/4.5 and Lemmas4.3/4.4 pp7–8. The full primary reading at361 supports the now-reconstructed core theorem, while the Corollary1.3 Zhao–Zheng obstruction remains separate and unadopted. The displayed August18 date agrees across three primary metadata surfaces; no September first-submission claim. [Review](editorial/parallel-torsion-positivity-362.md).
+
+## Fixed-point logarithmic Bergman scale — checkpoint 363
+
+Chiang, Yueh-Lin, Bergman Kernel Asymptotics for Semipositive Line Bundles near Curvature-Degenerate Points, arXiv:2609.24869v1, 21 September2026 16:38:20 UTC. Complete 46-page primary reading; SHA-256 `5dc10a4acd2f2ca3f0395650315c3b35bbc73479886b23aa057bb4b7787ae1b7`. Only Example I.15 pp.9–10 exact metric is adopted; the new compact norm asymptotic is independent of the general spectral/Newton arguments. Printed checks at III.20p18, the p19 growing-ball remainder, IX.7p44 and IX.3p41 are recorded at their exact scope, not as a rejection of all main conclusions. [Review](editorial/logarithmic-projective-kernel-363.md).
