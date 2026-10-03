@@ -83,3 +83,5 @@ Checkpoint340: complete comparison-input reads, arbitrary-choice compatibility o
 Checkpoint341: complete revised-input reads and arbitrary-pole pushforward/closed-pole compatible current limits checked; public 957-page release verified. Reconstruct and synchronize, then check the local non-pluripolar first-current closedness proof before extending the pole-set scope.
 
 Checkpoint342: arbitrary-pole closedness, trace recovery and compatible weak polar-current limits checked with scoped classical attribution. Final 957-page public release verified. Empty-source reconstruction passes; synchronize, then continue general separation and model realization.
+
+Checkpoint343: diffuse-product model disproves general separation and exact ideal analytic closure for first polar currents on all modifications. Final961-page public release verified. Reconstruct/synchronize, then check the arbitrary-dimensional extension.

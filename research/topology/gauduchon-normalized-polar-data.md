@@ -1,8 +1,8 @@
 # Gauduchon normalization of polar trace data
 
-Research continuation through manuscript checkpoint 342, based on independently verified private checkpoint 341, `3eefeb97f78dd4f29649c5ff0c317e345678af4f`.
+Research continuation through manuscript checkpoint343, based on independently verified private checkpoint342, 28497ba8434b014d2c91a84b671665ab21a45dfc.
 
-Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). General separation, realization of limits, analytic closure and compatibility with the established higher-dimensional topology are unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
+Status: the elementary comparison, analytic-model separation, curve reduction, raw gauge identity and ambient completeness are integrated in manuscript continuation 337, Propositions 15.6.20 and 15.6.21. Checkpoint 338 adds a complete local proof of polar-current invariance under bounded equivalence and applies it to ordinary-model gauge transport. Its clean manuscript compilation, both complete source/proof reads and affected output review pass. Empty-source reconstruction and private synchronization follow the release record. The book writes this comparison as \(\delta_\omega^{\mathrm{pol}}\). Checkpoint343 disproves general separation and exact ideal analytic closure for this first-polar candidate, even at positive lower volume and independently of all Gauduchon choices. Simultaneous realization remains a further problem; the required complete replacement topology is unresolved. The comparison does not solve P01/P17. No novelty claim or independent external certification is made.
 
 ## Setting and comparison
 
@@ -42,7 +42,7 @@ Thus \(\mu_\pi(u)\) is a positive finite measure with
 \]
 This uses linear trace mass, not a top-degree volume bound. The background need not be closed.
 
-For each coordinate, total variation is a norm on finite signed measures. Dividing by the fixed positive \(A_\pi\) preserves symmetry and the triangle inequality. Taking the supremum preserves both. Consequently \(D_\omega\) is a bounded pseudometric. A proof of separation on all ordinary models is still needed; the formula is not called a metric there.
+For each coordinate, total variation is a norm on finite signed measures. Dividing by the fixed positive \(A_\pi\) preserves symmetry and the triangle inequality. Taking the supremum preserves both. Consequently \(D_\omega\) is a bounded pseudometric. Separation on all ordinary models fails by checkpoint343; the formula remains a pseudometric there.
 
 Multiplying any \(\eta_\pi\) by a positive constant multiplies both its numerator and denominator by the same factor. The coordinate comparison is unchanged. This removes scalar rescaling of the chosen Gauduchon forms, but does not compare different Gauduchon shapes on infinitely many modifications.
 
@@ -62,7 +62,7 @@ The smooth local correction used in that argument does not charge a divisor. Dis
 
 If \(D_\omega(p,q)=0\), equality holds in this coordinate. The logarithmic terms then cancel, giving bounded ordinary equivalence upstairs. A finite cover of the compact resolution bounds the difference away from the common pole set. Surjectivity descends the two inequalities to the complement of the pole set downstairs; canonical quasi-plurisubharmonic representatives extend them everywhere. Hence \(p\sim q\). Ordinary envelope projection depends only on this equivalence class, so the two normalized ordinary models are equal.
 
-This proves separation on analytic ordinary models. It uses the manuscript's existing analytic-resolution and divisorial-restriction inputs, not a fresh external proof audit. Checkpoint 342 extends recovery of the whole polar currents from these scalar traces to arbitrary pole sets, after the local complete-pluripolar restriction proof is checked. General model separation from the currents is a further assertion.
+This proves separation on analytic ordinary models. It uses the manuscript's existing analytic-resolution and divisorial-restriction inputs, not a fresh external proof audit. Checkpoint 342 extends recovery of the whole polar currents from these scalar traces to arbitrary pole sets, after the local complete-pluripolar restriction proof is checked. General model separation from these currents fails by the diffuse-product example below.
 
 ## Complete ambient coordinate space
 
@@ -109,9 +109,9 @@ Exact classical inputs: Demailly's *Complex Analytic and Differential Geometry*,
 
 ## Remaining obligations before a topology claim
 
-1. Prove separation on every normalized ordinary model, or find two different models with identical scalar polar traces on all modifications.
+1. Separation is disproved by checkpoint343: a nonzero positive-volume ordinary model and zero have identical first polar currents on every modification.
 2. Prove that limits in the complete ambient coordinate space are simultaneously realized by ordinary models. Coordinatewise positive measures and preserved carriers are insufficient.
-3. Identify the closure of analytic models and prove that it is exactly the ideal-model locus.
+3. Exact ideal analytic closure fails by the same example: the polar-comparison closure contains the nonideal model. A replacement requires richer data.
 4. Compare this pseudometric with the established complete topology under bounded mass and positive lower volume.
 5. Control two-sided background changes and degeneration of the background normalization. Smooth-gauge transport after model projection is covered by checkpoint 338; projection of an arbitrary non-model potential is not asserted to preserve its polar data.
 
@@ -132,3 +132,11 @@ Checkpoint 342 reconstructs the complete-pluripolar restriction cutoff argument 
 On a local ball let a be a negative psh correction of the potential and Theta=ddc a. Bounded psh cutoffs w_k=chi(exp(a/k)) vanish on the pole set and tend to one elsewhere. The differentiated weighted currents have a uniform local energy bound. The derivative of the outer cutoff tends to zero everywhere, including on the pole set; dominated convergence uses the fixed locally finite trace of Theta. Thus the complementary restriction and its polar difference are closed. A smooth correction has no coefficient mass on the pole set. Foundation Proposition 1.25.3 therefore proves closed positive polar curvature for every quasi-psh potential and smooth real background, without requiring that full background current be closed.
 
 Corollary 15.6.13 and Proposition 15.6.22 consequently lose their closed-pole hypothesis. The latter still gives weak current convergence, total-variation trace convergence and one genuine pole carrier, without ordinary-model realization or strong coefficient variation. Earlier closed-pole source checks above retain their historical scope and are superseded by this argument for the current theorem scope. No degree-one non-pluripolar identification or unchecked EK24 proposition is needed. Citation attribution and exact author-version locators are confined to the history chapter. General separation, simultaneous model realization, exact analytic closure and auxiliary-choice compatibility remain open. Final complete source reads, selected output review and empty-source reconstruction pass; see research/editorial/arbitrary-pole-polar-closedness-342.md. Private synchronization follows this snapshot.
+
+## Diffuse product obstruction on every modification
+
+Checkpoint343, Proposition15.6.24, gives a normalized ordinary model p on P1 times P1 in a common positive-lower-volume sector with zero. Its volume is strictly between zero and the smooth background volume A, while all first polar currents vanish on every modification and all-weight multiplier ideals are trivial. Hence p is nonideal, has positive upper-volume distance from zero, and has zero polar pseudodistance from the analytic zero model for every family and choice of forms. This disproves both candidate general separation and exact ideal analytic closure; it is not a closure of full P01/P17.
+
+The local maximum of two diffuse Green potentials has a zero-dimensional joint pole set. Its bounded truncations keep one finite positive top-degree mass supported on levels approaching that set. A small smooth cutoff globalizes it with strict positive curvature and a strict volume deficit. Ordinary projection preserves both volumes. The new Hausdorff trace corollary excludes the polar current away from exceptional curves; the analytic support theorem leaves only those curves. A generic coordinate pullback is a normal power times a unit, and the zero one-variable Lelong number forces every exceptional coefficient to vanish. No exact unbounded divisorial-restriction identity is assumed. Complete proof reads,31 internal checks and final image inspections are recorded in research/editorial/diffuse-product-polar-obstruction-343.md.
+
+Next check the n-fold construction on arbitrary compact Kähler manifolds, then seek richer detectors. Ordinary-model realization of the compatible current limits remains separate and does not restore the separation lost here.

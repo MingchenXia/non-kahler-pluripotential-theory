@@ -169,3 +169,5 @@ Checkpoint 340 gives a fixed Gauduchon-choice obstruction to positive-volume com
 Checkpoint 341 proves arbitrary-pole pushforward and compatible weak polar-current limits for comparison-Cauchy models with closed poles. A single genuine pole carrier is supplied, without asserting model realization. Continue the local first-current closedness proof and general realization directly; no formal question is closed.
 
 Checkpoint 342 removes the closed-pole condition from polar trace recovery and compatible weak current limits through the checked complete-pluripolar cutoff proof. No formal question is closed. Continue general separation and simultaneous ordinary-model realization directly.
+
+Checkpoint343 proves that all-modifications first polar curvature misses a positive-volume nonideal model on P1 times P1, independently of Gauduchon choices. The candidate separation/analytic-closure targets fail; no full formal problem is closed. Continue the higher-dimensional construction and richer complete-topology data directly.
