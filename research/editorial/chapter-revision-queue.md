@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 343: Generalize the checked diffuse-product obstruction from P1 times P1 to compact Kähler manifolds of every dimension at least two, checking n-fold truncation mass and exceptional support. Then test richer singularity detectors for P01/P17; retain ordinary-model realization as a separate obligation.
+Current next unit after checkpoint 344: Compute the exact volume of the scaled diffuse family using higher-degree closed-current trace growth, and test its ordered model distances. Preserve the unresolved complete-topology and simultaneous-realization targets of P01/P17.
 
 | Chapter | Source | This cycle |
 |---|---|---|

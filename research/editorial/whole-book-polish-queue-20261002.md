@@ -85,3 +85,5 @@ Checkpoint341: complete revised-input reads and arbitrary-pole pushforward/close
 Checkpoint342: arbitrary-pole closedness, trace recovery and compatible weak polar-current limits checked with scoped classical attribution. Final 957-page public release verified. Empty-source reconstruction passes; synchronize, then continue general separation and model realization.
 
 Checkpoint343: diffuse-product model disproves general separation and exact ideal analytic closure for first polar currents on all modifications. Final961-page public release verified. Reconstruct/synchronize, then check the arbitrary-dimensional extension.
+
+Checkpoint344 generalizes the diffuse-polar obstruction to every compact Kähler manifold in dimension at least two; final source reads and public961-page release pass. Reconstruct/synchronize, then compute the scaled-family volume via higher-degree trace growth.

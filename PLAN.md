@@ -171,3 +171,5 @@ Checkpoint 341 proves arbitrary-pole pushforward and compatible weak polar-curre
 Checkpoint 342 removes the closed-pole condition from polar trace recovery and compatible weak current limits through the checked complete-pluripolar cutoff proof. No formal question is closed. Continue general separation and simultaneous ordinary-model realization directly.
 
 Checkpoint343 proves that all-modifications first polar curvature misses a positive-volume nonideal model on P1 times P1, independently of Gauduchon choices. The candidate separation/analytic-closure targets fail; no full formal problem is closed. Continue the higher-dimensional construction and richer complete-topology data directly.
+
+Checkpoint 344 extends the checked first-polar obstruction to every compact Kähler manifold of dimension at least two, preserving the open full topology program. Continue directly with exact higher-degree volume loss along its scaled ordinary-model family.
