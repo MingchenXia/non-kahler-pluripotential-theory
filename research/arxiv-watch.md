@@ -168,3 +168,7 @@ All ten pages of exact Takakura 2609.36420v1 are actually read. Subsection 1.16.
 ## Planar optimal distance — checkpoint 376
 
 Subsection 1.16.2 proves the optimal planar multiweight constant max(1-sum_i1/p_i,0), with point-order and global bundle-valued dbar proofs. Classical CADG 30–36 and AM11 30,33–34 are actually read; no full 455/228-page source review is claimed. The exact ten-page recent primary reading is retained from 375. No new listing scan or existing question closure; new S19 retains the n>=2,r>n optimum. [Review](editorial/planar-optimal-ideal-distance-376.md).
+
+## Several-hyperplane ideal distance — checkpoint 377
+
+Subsection 1.16.3 constructs positive distance at reciprocal sum in [1,n) for every n>=2,r>n, using equal exponents and normalized general-position forms. All 17 internal obligations and two complete scoped reads pass. No new external reading/listing or existing question closure; S19 gains an explicit positive lower model. [Review](editorial/hyperplane-positive-ideal-distance-377.md).

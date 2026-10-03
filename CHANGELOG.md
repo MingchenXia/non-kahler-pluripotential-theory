@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 377 — Several-hyperplane ideal distance
+
+[Review](research/editorial/hyperplane-positive-ideal-distance-377.md): Subsection 1.16.3 gives positive hyperplane-model ideal distance with reciprocal sum in [1,n), excluding the unqualified planar zero-regime extension. Two complete scoped reads, 17 obligations and 32 selected pages pass. The actual live public PDF/homepage/Pages deployment is verified; final 1040 printed pages. All 23 formal statements and 451 protected files remain exact; all 23 formal and 19 supplemental directions remain open. S19 is reconciled; same-editor native compilation remains unverified. Fresh empty-source reconstruction passes with 284 exact book sources, all 1064+17 page texts matching and 1939 checksum-validated archive entries; private 377 synchronization follows.
+
 ## Checkpoint 376 — Planar optimal ideal distance
 
 [Review](research/editorial/planar-optimal-ideal-distance-376.md): Subsection 1.16.2 determines the optimal planar multiweight distance, including its zero regime and equality examples. Two scoped complete reads, 37 internal obligations and 48 selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; final 1038 printed pages. All 23 formal source statements and 451 protected files remain exact. New catalogue S19 records the unresolved n>=2,r>n optimum; all 23 formal and 19 supplemental directions remain open. Same-editor native compilation remains unverified. Fresh empty-source reconstruction passes with 283 exact book sources, all 1062+17 page texts matching and 1935 checksum-validated archive entries; private 376 synchronization follows.

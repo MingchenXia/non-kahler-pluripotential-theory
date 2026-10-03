@@ -239,3 +239,5 @@ Checkpoint 375 reconstructs quantitative two-summand division and one-weight ide
 Checkpoint 376 proves the optimal planar multiweight ideal distance by exact point orders and global ideal lifting. Retain n>=2,r>n optimality as new supplemental S19. No existing formal/supplemental direction closes.
 
 On 3 October 2026 the author reaffirmed regular GitHub pushes and authorized incorporating additional open-problem progress supplied through the private repository. Check the remote between coherent units and before synchronization; inspect incoming diffs, verify their mathematics and dependencies, integrate supported conclusions and reconcile remaining problems. Preserve concurrent commits; never force-push or overwrite author changes.
+
+Checkpoint 377 proves positive hyperplane-model multiweight distance at reciprocal sum in [1,n), in every n>=2 with r>n. S19 receives the model; the optimal constant and universal dimension-dependent zero regime remain unresolved. No existing direction closes.
