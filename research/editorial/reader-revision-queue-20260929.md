@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 356: Check the primary Szekelyhidi Proposition6 matrix alternative, operator hypotheses and uniformity before any Guo–Song gradient adoption; continue the Fujiki-degeneration and pending Blocki Monge–Ampere-domain proof chains and arXiv coverage catch-up. Integrate only precisely verified hypotheses and proofs, preserving book coherence. All23 formal and18 supplemental directions remain open.
+Current next unit after checkpoint 357: Actually read the complete Fujiki-class Monge–Ampere degeneration candidate2610.00942v1, verify its normal projective Calabi–Yau/conifold and small crepant resolution hypotheses, potential bounds and any dimension-specific metric conclusion before adoption. Continue primary Blocki domain and Szekelyhidi Hessian dependency checks, other related directions and arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint357 — Concave uniform gradient
+
+[Review](editorial/concave-uniform-gradient-357.md): Section10.8 proves fixed strict-gap Hermitian gradient bounds via a direct all-positive-level matrix alternative and nearby smooth comparison. First/second scoped source reads,41 internal obligations and39 final output checks pass; all23 formal statements and451 protected files remain exact. Both productionPDFs/homepage descriptions/Pages deployments are actually verified; final993printedpages. Same catalogue/current locators retained, with native compilation unverified after no diagnostics. Fresh empty-source reconstruction passes with269 exact book sources and all1017+17 page texts matching;1866 archive entries validate. Authorized private357 sync follows. All23 formal and18 supplemental directions remain open.
+
 ## Checkpoint356 — Concave strict-gap stability
 
 [Review](editorial/concave-strict-gap-stability-356.md): Section10.7 reconstructs fixed strict-gap concave C0 bounds, linear density/L1 stability and uniform C0 compactness on a fixed Hermitian manifold. The full28-page Guo–Song source and bounded primary Guo–Phong proof are actually read; gradient/Hessian dependencies remain pending. Scoped first/second source reads,35 internal obligations and37 direct final-page views pass. The989-page public PDF, matching homepage and successful deployment are independently verified. Same catalogue23 exact full statements/current locators retained; native compiler returned no diagnostics and remains unverified. Fresh reconstruction passes with268 exact book sources and every1013+17 page text matching;1862 archive entries validate. Authorized private356 sync follows. All23 formal and18 supplemental directions remain open.

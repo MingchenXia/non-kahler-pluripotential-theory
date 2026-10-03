@@ -197,3 +197,5 @@ Checkpoint354 completes the uniform positive-weight proof internally. The author
 Checkpoint355 integrates precisely checked recent divisorial Sobolev results after the whole-book polish acceptance. Continue complete Hermitian stability/gradient and Fujiki-degeneration proof checks and other related directions; adoption requires exact assumptions and dependencies. Public355 includes354 and is verified; private354 backup is independently verified. All full formal/supplemental problems remain open.
 
 Checkpoint356 integrates precisely checked strict-gap Hermitian stability after accepted whole-book polish. Continue primary gradient/Hessian and Fujiki-degeneration chains, other related directions and literature coverage catch-up. All formal/supplemental directions remain open.
+
+Checkpoint357 integrates precisely checked uniform Hermitian gradient estimates after accepted whole-book polish. Continue complete Fujiki/conifold primary proof review, pending domain/Hessian chains, related directions and literature coverage catch-up. All full formal/supplemental directions remain open.
