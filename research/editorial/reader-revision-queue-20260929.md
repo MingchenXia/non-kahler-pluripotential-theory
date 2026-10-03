@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 367: Relate potential completion-energy flatness and the local-minimum condition to the Chapter 2 mass-invariance criterion. Construct a one-nonclosed-factor square-torus product with positive completion energy constant on its entire potential leaf, yet nonstationary in the full Aeppli class. Check directly; avoid general canonical-surface or global-flow dependencies. Keep all formal/supplemental problems open at full scope.
+Current next unit after checkpoint 368: Investigate full vague cluster sets for a fixed bounded local psh background, starting with a cutoff proof that any limit of individually bounded approximants below it dominates its Monge–Ampère measure. Combine checked finite atomic addition and the vague metric if justified. Reread exact Qin locators; keep general unbounded/maximal/Richberg chains and the fixed global S01 problem unresolved.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

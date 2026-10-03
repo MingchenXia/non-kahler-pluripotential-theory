@@ -90,7 +90,21 @@ The error constant depends on the fixed form, chart and cutoff, and is independe
 If $\Psi=0$, \cref{lem:power-torsion} and pluriclosedness give $\ddc(\omega^3)=3\omega\wedge\Psi=0$. Both derivatives of the quadratic energy polynomial vanish, so it is constant on the positivity interval. The segment to any positive $\omega_\varphi$ lies in that interval. Finally, a local minimum cannot have a negative potential Hessian direction.
 \end{proof}
 
-\subsection{A nonclosed critical form on a complex torus}
+\Needspace{16\baselineskip}
+\begin{corollary}\label{cor:completion-flat-invariant-mass}\index{Completion energy!invariant mass}
+For a Hermitian symplectic form $\omega$ on $X$, the following conditions are equivalent:
+\begin{enumerate}
+\item $F(\omega+\ddc\varphi)$ is independent of the real smooth potential $\varphi$ whenever $\omega+\ddc\varphi>0$;
+\item $\ddc(\omega^2)=0$;
+\item $\int_X(\omega+\ddc u)^4$ is independent of the bounded $\omega$-plurisubharmonic function $u$.
+\end{enumerate}
+The common mass in the third condition is $24V(\omega)$. Every local minimum of $F$ in the full Aeppli class has these properties.
+\end{corollary}
+\begin{proof}
+The identity \eqref{eq:completion-energy-volume} equates constancy of $F$ on smooth positive potential variations with constancy of their volume. Since $\ddc\omega=0$, \cref{lem:power-torsion,thm:mass-invariance-characterization} equate this smooth mass invariance with $\ddc(\omega^2)=0$ and with bounded mass invariance. The zero potential gives the common mass. The last assertion follows from \cref{thm:completion-potential-hessian}.
+\end{proof}
+
+\subsection{Completion energy on products of complex tori}
 \label{subsec:torus-completion-critical}
 
 Consider the square complex two-torus $S=\mathbb C^2/(\mathbb Z+\mathrm i\mathbb Z)^2$. Write $z_j=x_j+\mathrm i y_j$ on its cover and put $\eta=\mathrm i\sum_{j=1}^2\mathrm dz_j\wedge\mathrm d\bar z_j$. For $0<s<1$, the periodic form
@@ -124,4 +138,23 @@ Put $\Theta_i=\alpha_i+\rho_i+\bar\rho_i$ and $\Theta=\Theta_1+\Theta_2$. For an
 Indeed, mixed components have odd degree on both factors and contribute zero. The pure components on the left give $(\psi+\sigma+\bar\sigma)\wedge(\Theta_1\wedge\mu_2+\Theta_2\wedge\mu_1)$. Since $\Theta_i^2=4\mu_i$, the cube on the right is twelve times the same complementary form. Apply \cref{lem:completion-first-variation} with $\psi=\partial\bar u+\bar\partial u$ and $\sigma=\partial u$. The derivative is $\frac1{12}\int_X\mathrm d(u+\bar u)\wedge\Theta^3=0$, since $\Theta$ is closed. This proves full criticality.
 
 Each $\partial\alpha_i=-\bar\partial\rho_i$ is nonzero. In $\partial\omega\wedge\bar\partial\omega$, the same-factor terms vanish by dimension, while the two nonzero cross terms have different bidegrees on the factors and cannot cancel. Hence $\ddc(\omega^2)\ne0$ by \cref{lem:power-torsion}. Apply \cref{thm:completion-potential-hessian}.
+\end{proof}
+
+A single nonclosed factor gives a flat potential leaf. The same explicit family then detects an energy variation in the larger Aeppli class.
+
+\Needspace{13\baselineskip}
+\begin{example}\label{ex:torus-flat-nonstationary}\index{Completion energy!positive flat leaf}\index{Complex torus!invariant mass}
+For $0<s<1$, let $\widehat\omega_s$ on $X=S\times S$ be the sum of $\alpha_s$ from the first factor and $\eta$ from the second, and set $V_0=\int_S\mu_0$. Then $\mathrm d\widehat\omega_s\ne0$ and
+\[
+ F(\widehat\omega_s)=s^2V_0^2,\qquad
+ V(\widehat\omega_s)=(1-s^2)V_0^2.
+\]
+The energy is constant on every positive smooth potential variation of $\widehat\omega_s$, and every bounded $\widehat\omega_s$-plurisubharmonic function has mass $24(1-s^2)V_0^2$. The form $\widehat\omega_s$ is not a critical point in the full Aeppli class. Its Monge--Amp\`ere one-form has no primitive on any $C^2$-open neighborhood of zero.
+\end{example}
+\begin{proof}
+The completion is the pullback of $\rho_s$ from the first factor. It is canonical: pure and mixed holomorphic two-forms are orthogonal for the product metric, and its pure-factor pairing vanishes by the surface Stokes argument in the proof of \cref{ex:torus-completion-critical}. The integral for $F$ is $\int_X\rho_s\wedge\bar\rho_s\wedge\eta^2/2=s^2V_0^2$. The volume is the product of the two surface volumes, giving the second formula.
+
+The exterior derivatives of $\widehat\omega_s$ come entirely from the first surface. Their wedge $\mathrm d\widehat\omega_s\wedge\dc\widehat\omega_s$ vanishes there for degree reasons, while $\ddc\widehat\omega_s=0$. Thus $\ddc(\widehat\omega_s^2)=0$ by \cref{lem:power-torsion}. Apply \cref{cor:completion-flat-invariant-mass} to obtain potential flatness and the common bounded mass.
+
+The forms $\widehat\omega_{(1+t)s}$ are positive for small $|t|$ and lie in the same Aeppli class, since $v_{(1+t)s}=(1+t)v_s$. Their energy derivative at zero is $2s^2V_0^2>0$, so $\widehat\omega_s$ is not a critical point in its Aeppli class. Finally, $\partial\alpha_s=-\bar\partial\rho_s\ne0$. Hence $\mathrm d\widehat\omega_s\ne0$, and \cref{thm:raw-primitive} gives the primitive obstruction.
 \end{proof}

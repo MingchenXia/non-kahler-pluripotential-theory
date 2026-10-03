@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 367: Relate potential completion-energy flatness and the local-minimum condition to the Chapter 2 mass-invariance criterion. Construct a one-nonclosed-factor square-torus product with positive completion energy constant on its entire potential leaf, yet nonstationary in the full Aeppli class. Check directly; avoid general canonical-surface or global-flow dependencies. Keep all formal/supplemental problems open at full scope.
+Current next unit after checkpoint 368: Investigate full vague cluster sets for a fixed bounded local psh background, starting with a cutoff proof that any limit of individually bounded approximants below it dominates its Monge–Ampère measure. Combine checked finite atomic addition and the vague metric if justified. Reread exact Qin locators; keep general unbounded/maximal/Richberg chains and the fixed global S01 problem unresolved.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

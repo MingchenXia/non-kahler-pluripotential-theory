@@ -429,3 +429,7 @@ Qin arXiv:2609.06568v1 pp.2,12,14–16,28–30 actually reread under 364 full th
 ## Completion energy and potential variations — checkpoint 367
 
 All 25 physical pages of Liu arXiv:2609.08113v1 actually read; versioned abstract history rechecked. Section 3.4 directly reconstructs canonical completion, Aeppli first variation, potential energy/volume identity, infinite-index Hessian/flatness and a nonclosed full-critical torus product. General compact ambient conclusions are proved without a Kähler reference. No general canonical-surface or global-flow theorem is imported. [Review](editorial/fourfold-completion-energy-367.md).
+
+## Potential flatness versus Aeppli criticality — checkpoint 368
+
+Direct continuation from the exact complete Liu primary reading at 367 and the internally proved mass/primitive criteria. Corollary 3.4.1 equates potential energy flatness with bounded mass invariance; Example 3.4.2 has positive energy and a flat potential leaf but an explicit nonzero Aeppli derivative. No new external theorem or full problem closure. [Review](editorial/completion-flatness-invariant-mass-368.md).
