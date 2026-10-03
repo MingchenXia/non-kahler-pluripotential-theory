@@ -457,3 +457,7 @@ All 15 pages of exact Barbaro 2609.35313v1 are read. The selected persistence in
 ## Hypersurface poles and bounded envelope approximation — checkpoint 374
 
 All 35 pages of exact Dao–Nguyen–Tran 2610.00909v1 are actually read. Subsection 1.19.1 reconstructs the normal-fiber model, gives bounded obstacle minorants with an explicit compact error, and computes all boundary cluster values. General SID/B-regular/disc/comparison/hull inputs remain unadopted. No new listing scan or formal/supplemental closure. [Review](editorial/ball-divisor-green-envelopes-374.md).
+
+## Global ideal congruences and product constants — checkpoint 375
+
+All ten pages of exact Takakura 2609.36420v1 are actually read. Subsection 1.16.1 reconstructs scalar-kernel two-summand division and the one-weight distance, then iterates global congruences. The product constant is sharp for r <= n; for r > n no optimality or superiority is asserted. Demailly physical 123–125 is read; its printed constant 2 is distinguished from the directly reconstructed 1. Earlier 2505.05938v1 is read only on 1–11 and 16–17. General division/extension/converse inputs remain unadopted. No new listing scan or existing formal/supplemental closure. [Review](editorial/product-multiplier-ideal-distance-375.md).

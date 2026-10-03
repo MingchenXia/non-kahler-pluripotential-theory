@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 375 — Product multiplier-ideal distance
+
+[Review](research/editorial/product-multiplier-ideal-distance-375.md): Subsection 1.16.1 proves two-summand division, weighted one-ideal distance and a successive product estimate, sharp for r <= n. Two scoped complete reads and 40 internal obligations pass; all ten primary pages are actually read. Final 44 selected pages and all five actual live public PDF/homepage/Pages deployments pass; final 1034 printed pages. All 23 raw formal statements and 451 protected files remain exact. Catalogue locators/source version are current; native compilation remains unverified. Fresh empty-source reconstruction passes with 282 exact book sources, all 1058+17 page texts matching and 1931 checksum-validated archive entries; private 375 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
+
 ## Checkpoint 374 — Ball divisor Green envelopes
 
 [Review](research/editorial/ball-divisor-green-envelopes-374.md): Subsection 1.19.1 proves the explicit hyperplane Green formula, bounded obstacle convergence at every interior point with an exponential compact error, and the full divisor-boundary cluster interval. Two scoped complete reads and 28 internal obligations pass; all 35 primary pages are actually read. Final 40 selected pages and both actual live public PDF/homepage/Pages deployments pass; final 1030 printed pages. All 23 raw formal statements and 451 protected files remain exact. The same catalogue has current locators and source version; native compilation remains unverified. Fresh empty-source reconstruction passes with 281 exact book sources, all 1,054+17 page texts matching and 1,927 checksum-validated archive entries; private 374 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.
