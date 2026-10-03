@@ -95,3 +95,5 @@ Checkpoint346 proves the displayed diffuse potential-mass polynomial in every co
 Checkpoint347 extends the diffuse ordinary-model interval to invariant-mass Hermitian backgrounds, including every Gauduchon surface, using complete small-pole products and a residual comparison proof. Final source/output/public969-page checks pass. Reconstruct/synchronize, then examine the torsion-dependent mass of the entire class in unrestricted Hermitian metrics.
 
 Checkpoint348 computes the entire diffuse class’s representative masses and proves the exact surface Gauduchon invariance criterion. Complete source/output/public969-page checks pass. Reconstruct/synchronize, then apply the mass bounds to model separation under the two mass properties and verify the all-surface specialization.
+
+Checkpoint349 proves the diffuse ordinary-model obstruction under both Hermitian mass properties and every Hermitian metric on a compact complex surface. Complete source/output/public971-page checks pass. Reconstruct/synchronize, then investigate scalar residual preservation by projection and parameter separation/completeness.

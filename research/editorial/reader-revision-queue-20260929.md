@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 348: Use the invariant residual loss and representative mass bounds to establish the first-polar model obstruction in arbitrary Hermitian backgrounds with bounded mass and positive lower mass, including every Hermitian metric on a compact complex surface; check the exact needed metric/volume dependencies without asserting a general exact distance formula.
+Current next unit after checkpoint 349: Investigate whether ordinary projection preserves the diffuse scalar top residual Mt^n, then establish parameter separation and a complete ordered interval in Hermitian backgrounds with both mass properties; check the strict-parameter and volume-addition bounds without claiming an explicit general torsion distance formula.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

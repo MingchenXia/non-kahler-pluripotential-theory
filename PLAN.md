@@ -181,3 +181,5 @@ Checkpoint346 separates finite torsion coefficients from the exact diffuse top-d
 Checkpoint347 settles the diffuse bounded-equivalence mass proof under the Hermitian power identities and extends the ordinary-model interval to Gauduchon surfaces. Next compute every class representative’s torsion terms and test the precise failure outside this regime, retaining the full topology problem.
 
 Checkpoint348 proves finite torsion formulas and fixed top residual loss for every diffuse bounded-equivalent representative in arbitrary Hermitian backgrounds. Surface class-wide constancy is equivalent to Gauduchon. Next use the bounds for model separation under the two mass properties, without assuming equal volumes or exact distance outside the invariant-mass regime.
+
+Checkpoint349 extends the diffuse first-polar ordinary-model obstruction to both Hermitian mass properties and all Hermitian metrics on compact complex surfaces. Next investigate scalar top residual preservation by projection and the scaled family’s parameter distances.
