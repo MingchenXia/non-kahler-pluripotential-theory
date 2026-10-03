@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 369: Retrieve the complete October and overlapping late-September arXiv announcements in math.CV, math.DG and relevant math.AG/math.AP, distinguishing new submissions, cross-lists and replacements. Verify promising exact versions and full proof dependencies before adding another coherent research unit. Historical replacement gaps remain explicit; no formal or supplemental question is closed by local cluster-set classification.
+Current next unit after research checkpoint 370: Write a coherent section on flat-torus boundary classes: prove current rigidity exactly when the kernel leaves are dense, prove its equivalence to point collapse for radial positive perturbations, and give the explicit mixed-term counterexample for unrestricted class convergence. Use direct Fourier, character and lattice-distance proofs. Keep general K3 collapse, lattice-dynamics, Green-kernel and Kummer-resolution dependencies separate until checked.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -1,5 +1,9 @@
 # Modification history
 
+## Research checkpoint 370 — Recent literature and flat-torus scope
+
+[Review](research/editorial/recent-literature-flat-torus-review-370.md): Research-only review of four-category current/recent listings, seven exact abstract/version histories and all 30 pages of Fu–Ouyang 2609.33632v1. A direct flat-torus mixed-term example disproves the unrestricted flat-sequence clause in its Section 3, while preserving the distinction for positive perturbations. The selected next unit proves the radial/current-rigidity model directly. Historical replacement and October monthly diagnostic gaps remain explicit. Checked manuscript/public PDF remain 369; no full-book build or question closure.
+
 ## Checkpoint 369 — Cluster sets at a bounded background
 
 [Review](research/editorial/bounded-background-cluster-sets-369.md): Subsection 1.6.7 proves that full local cluster sets at a fixed bounded psh background, under approximation from below in local capacity and all finite Lp, are exactly the vaguely closed families above its Monge–Ampère measure, including the empty family. Smooth approximants are obtained for smooth backgrounds. The cutoff measure-floor proof and finite atomic construction pass two scoped reads and 33 internal obligations; 40 final selected pages pass. Both full-book publications and actual live PDF/homepage/Pages deployments are verified; final 1,022 printed pages. All 23 formal statements and 451 protected files remain exact. S01 and catalogue locators are reconciled; native compilation remains unverified. Fresh empty-source reconstruction passes with 277 exact book sources, all 1,046+17 page texts matching and 1,909 checksum-validated archive entries; private 369 synchronization follows. All 23 formal and 18 supplemental directions remain open at full scope.

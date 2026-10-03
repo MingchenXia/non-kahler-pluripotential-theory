@@ -437,3 +437,7 @@ Direct continuation from the exact complete Liu primary reading at 367 and the i
 ## Capacity convergence and the background measure — checkpoint 369
 
 The exact Qin primary retains the complete 30-page reading at 364; physical pp.2–4 and 13–16 are actually reread. Lemma 1.6.11 and Theorem 1.6.6 prove the measure floor and full cluster sets for bounded-background approximation from below in local capacity. General L1 zero reachability and its external maximal approximation/domain dependencies remain separate. No new source entry, listing scan or full problem closure. [Review](editorial/bounded-background-cluster-sets-369.md).
+
+## Recent versions and flat-torus approximation — checkpoint 370
+
+Four-category current/recent listings are checked at their rendered count scope; historical replacements and inconsistent October monthly diagnostics remain explicit. All 30 pages of Fu–Ouyang 2609.33632v1 are read. A direct square-torus counterexample shows why its unrestricted flat-sequence clause needs a positive-direction restriction. The next book unit uses direct radial/Fourier proofs. General K3 and Qin–Tian v3 curvature dependencies remain unadopted. Manuscript/public PDF remain 369. [Review](editorial/recent-literature-flat-torus-review-370.md).

@@ -349,6 +349,8 @@ for name in (
     "research/open-problems-catalogue-audit.json",
     "research/editorial/september-literature-dependency-review-361.md",
     "research/audits/september-literature-dependency-review-361.json",
+    "research/editorial/recent-literature-flat-torus-review-370.md",
+    "research/audits/recent-literature-flat-torus-review-370.json",
     "research/source-disposition-369.json",
     "research/editorial/bounded-background-cluster-sets-369.md",
     "research/audits/bounded-background-cluster-sets-369.json",
