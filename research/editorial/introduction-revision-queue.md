@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 383: Check incoming author research. Examine exact exceptional-divisor selected series as the selecting coefficient varies, including where fixed vanishing ceases to suffice, with positive reference mass and every endpoint explicit. Continue recent-primary and general-selector dependency checks.
+Current next unit after checkpoint 384: Check incoming author research. Examine two exceptional points with a semipositive residual at the sum-of-coefficients boundary, positive reference mass and sharp nonzero section defect. Prove the required simultaneous point-jet interpolation directly. Continue recent-primary and general-selector dependency checks.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -493,3 +493,7 @@ The eight CV/DG/AG/AP new/recent roots exactly match the complete prior listing 
 ## Semipositive positive-volume P21 extension — checkpoint 383
 
 Subsection 26.10.4 weakens strict residual positivity to semipositivity with positive top integral in the three band criteria and exact-model corollary. An exceptional fixed-divisor example has positive mass, no strict smooth gauge and exact zero section defect. No new external primary paper or listing scan; prior coverage and gaps retained. General-selector existence and necessity remain open. [Review](editorial/semipositive-fiber-integrability-383.md).
+
+## Exceptional coefficient family — checkpoint 384
+
+Subsection 26.10.5 computes exact point-ideal spaces for every positive coefficient, positive displayed-reference mass before c=e+k, zero mass and degree drop at equality, and the first empty power beyond it. No new external primary paper or listing scan; prior coverage and gaps retained. General necessity remains open. [Review](editorial/exceptional-coefficient-thresholds-384.md).

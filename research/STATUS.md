@@ -1,5 +1,9 @@
 # Current research status — 3 October 2026
 
+## Checkpoint 384 — Exceptional coefficient thresholds
+
+[Review](editorial/exceptional-coefficient-thresholds-384.md): Subsection 26.10.5 proves the exact exceptional-divisor series for every positive coefficient, the mass of the constructed reference, its critical degree drop and the exact first empty tensor power. Two complete scoped reads, 36 obligations and 60 selected pages pass. Actual live PDF/homepage/Pages are verified; 1062 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. Native catalogue compilation remains unverified. Fresh reconstruction passes with 291 exact book sources, all 1086+17 page texts matching and 1969 checksum-validated archive entries; authorized private 384 synchronization follows.
+
 ## Checkpoint 383 — Semipositive fiber reference
 
 [Review](editorial/semipositive-fiber-integrability-383.md): Subsection 26.10.4 proves the positive-top-volume semipositive extension of the three P21 band criteria and an exact exceptional fixed-divisor model outside the strict-gauge regime. Two complete scoped reads, 34 obligations and 57 selected pages pass. Actual live PDF/homepage/Pages are verified; 1058 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. Native catalogue compilation remains unverified. Fresh reconstruction passes with 290 exact book sources, all 1082+17 page texts matching and 1965 checksum-validated archive entries; authorized private 383 synchronization follows.

@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 383: Check incoming author research. Examine exact exceptional-divisor selected series as the selecting coefficient varies, including where fixed vanishing ceases to suffice, with positive reference mass and every endpoint explicit. Continue recent-primary and general-selector dependency checks.
+Current next unit after checkpoint 384: Check incoming author research. Examine two exceptional points with a semipositive residual at the sum-of-coefficients boundary, positive reference mass and sharp nonzero section defect. Prove the required simultaneous point-jet interpolation directly. Continue recent-primary and general-selector dependency checks.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
