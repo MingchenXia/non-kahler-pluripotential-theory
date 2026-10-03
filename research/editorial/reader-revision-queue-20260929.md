@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 368: Investigate full vague cluster sets for a fixed bounded local psh background, starting with a cutoff proof that any limit of individually bounded approximants below it dominates its Monge–Ampère measure. Combine checked finite atomic addition and the vague metric if justified. Reread exact Qin locators; keep general unbounded/maximal/Richberg chains and the fixed global S01 problem unresolved.
+Current next unit after checkpoint 369: Retrieve the complete October and overlapping late-September arXiv announcements in math.CV, math.DG and relevant math.AG/math.AP, distinguishing new submissions, cross-lists and replacements. Verify promising exact versions and full proof dependencies before adding another coherent research unit. Historical replacement gaps remain explicit; no formal or supplemental question is closed by local cluster-set classification.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

@@ -1,0 +1,60 @@
+\subsection{Cluster sets at a bounded background}
+\label{subsec:bounded-background-cluster-sets}
+
+Let $\Omega\subset\mathbb C^n$ be a domain, $n\geq1$. For a locally bounded plurisubharmonic function $b$, write $\mu_b=(\ddc b)^n$. If the potentials approach $b$ from below in local capacity, any measure limit must retain $\mu_b$. Truncation at a fixed distance below $b$ supplies a common bound, while plurifine locality retains the measure outside the exceptional set.
+
+\begin{lemma}\label{lem:capacity-limit-measure-floor}\index{Monge--Ampere product@Monge--Amp\`ere product!capacity limit order}
+Let $b,u_j$ be locally bounded plurisubharmonic functions on $\Omega$, with $u_j\leq b$ and $u_j\to b$ in local capacity. Then, for every nonnegative $f\in C_c(\Omega)$,
+\[
+ \liminf_{j\to\infty}\int_\Omega f(\ddc u_j)^n
+      \geq\int_\Omega f\,\mathrm d\mu_b.
+\]
+In particular, every vague subsequential limit of $(\ddc u_j)^n$ dominates $\mu_b$.
+\end{lemma}
+\begin{proof}
+First take $f$ supported on $B'\Subset B\Subset\Omega$, where $B',B$ are concentric balls. Put $v_j=\max(u_j,b-1)$ and $E_j=\{u_j\leq b-1\}$. The functions $v_j$ lie between $b-1$ and $b$ and tend to $b$ in local capacity. Their common range bound and the bounded product continuity recalled in \cref{sec:psh-local-capacity} give $(\ddc v_j)^n\to\mu_b$ vaguely on $B$. With $R=\sup_B b-\inf_B b+1$, the capacity bound there gives
+\[
+ (\ddc v_j)^n(E_j\cap\operatorname{supp}f)
+ \leq R^n\operatorname{cap}(E_j\cap\operatorname{supp}f,B)
+ \longrightarrow0.
+\]
+The last limit follows since $E_j\subset\{|u_j-b|>1/2\}$. On the plurifine open Borel set $\{u_j>b-1\}$, one has $v_j=u_j$, so \cref{thm:bt-input} identifies their restricted measures. Positivity therefore gives
+\[
+ \int f(\ddc u_j)^n
+ \geq\int f(\ddc v_j)^n
+       -\|f\|_\infty(\ddc v_j)^n(E_j\cap\operatorname{supp}f).
+\]
+Taking the lower limit proves the assertion for this support. A nonnegative finite partition of unity over a ball covering of any compact support gives the general case. Applying the inequality along a vaguely convergent subsequence proves the measure order.
+\end{proof}
+
+\Needspace{17\baselineskip}
+\begin{theorem}\label{thm:bounded-background-cluster-sets}\index{Monge--Ampere product@Monge--Amp\`ere product!cluster sets at a bounded background}
+Assume that $\Omega$ is bounded, $n\geq2$, and $b\in\PSH(\Omega)\cap L^\infty(\Omega)$. For a set $F\subset\mathcal M_+(\Omega)$, the following are equivalent:
+\begin{enumerate}
+\item $F$ is vaguely closed and every $\mu\in F$ satisfies $\mu\geq\mu_b$;
+\item there are bounded plurisubharmonic $u_j\leq b$, converging to $b$ in $L^p(\Omega)$ for every $1\leq p<\infty$ and in local capacity, whose full vague cluster set is $F$.
+\end{enumerate}
+The empty set is allowed. If $b$ is smooth, every approximant in the second condition can be chosen smooth.
+\end{theorem}
+\begin{proof}
+Necessity of the measure order is \cref{lem:capacity-limit-measure-floor}. The full cluster set is closed in the metrizable vague topology by the tail-closure argument in the proof of \cref{thm:zero-local-cluster-sets}.
+
+For sufficiency, use the dense-family concatenation in that proof to choose $\nu_j\in F$ whose full vague cluster set is $F$ when $F$ is nonempty. If $F$ is empty, take $\nu_j=\mu_b+j\delta_a$ at a fixed $a\in\Omega$. A nonnegative compactly supported test equal to one at $a$ has integral at least $j$, so this sequence has no vague convergent subsequence. In either case $\nu_j-\mu_b$ is a positive Radon measure.
+
+Fix the smooth tests $f_i$ and metric $d_v$ of \cref{lem:local-vague-metric}. At each $j$, approximate the excess $\nu_j-\mu_b$ by a positive finite atomic measure against $f_1,\ldots,f_j$, with each error less than $1/j$. If it has $N_j>0$ atoms, perform the finite-test construction in the proof of \cref{thm:local-prescribed-excess}, starting at $b$ and using $\tau=t=(jN_j)^{-1}$ for each atom. If there are no atoms, take $u_j=b$. The summed estimates of \cref{prop:local-one-atom-addition} give
+\[
+ \|u_j-b\|_{L^p(\Omega)}\leq C_{\Omega,p}/j,
+ \qquad
+ \left|\int_\Omega f_i\bigl((\ddc u_j)^n-\nu_j\bigr)\right|
+       <2/j\quad(i\leq j).
+\]
+For every fixed pair of concentric balls $B'\Subset B\Subset\Omega$, the same construction bounds the integral of $|u_j-b|$ against every normalized bounded psh test measure on $B'$ by $C_{B',B,\Omega}/j$. Dividing by a fixed positive threshold and taking the supremum gives local capacity convergence. Each $u_j$ is bounded and lies below $b$; it is smooth when $b$ is smooth. These estimates hold for all finite $p$ with one sequence and require no common local mass bound on $\nu_j$.
+
+The finite-coordinate error and the bounded series tail yield
+\[
+ d_v\bigl((\ddc u_j)^n,\nu_j\bigr)\leq 2/j+2^{-j}\longrightarrow0.
+\]
+By \cref{lem:local-vague-metric}, the two measure sequences have the same limits along corresponding subsequences. Hence their full vague cluster sets coincide.
+\end{proof}
+
+On the unit ball, $b=|z|^2-1$ has a nonzero measure $\mu_b$. For every point $a$ in the ball, the theorem permits the cluster sets $\{\mu_b\}$, $\{\mu_b+\delta_a\}$ and the empty set, but excludes $\{0\}$. The measure order uses the local capacity convergence assumed here. In dimension one, the $L^1$ convergence required above forces $\ddc u_j\to\ddc b$ vaguely, so the full cluster set is always $\{\mu_b\}$.

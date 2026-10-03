@@ -136,3 +136,7 @@ All 25 physical pages of Liu arXiv:2609.08113v1 actually read; versioned abstrac
 ## Completion-energy flatness and mass — checkpoint 368
 
 Direct continuation from the exact complete Liu primary reading at 367 and the internally proved mass/primitive criteria. Corollary 3.4.1 equates potential energy flatness with bounded mass invariance; Example 3.4.2 has positive energy and a flat potential leaf but an explicit nonzero Aeppli derivative. No new external theorem or full problem closure. [Review](editorial/completion-flatness-invariant-mass-368.md).
+
+## Fixed-background full cluster sets — checkpoint 369
+
+The exact Qin primary retains the complete 30-page reading at 364; physical pp.2–4 and 13–16 are actually reread. Lemma 1.6.11 and Theorem 1.6.6 prove the measure floor and full cluster sets for bounded-background approximation from below in local capacity. General L1 zero reachability and its external maximal approximation/domain dependencies remain separate. No new source entry, listing scan or full problem closure. [Review](editorial/bounded-background-cluster-sets-369.md).
