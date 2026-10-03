@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 377: Check incoming author research commits. Continue the higher-dimensional quantitative ideal-distance question, especially whether the universal zero regime begins at reciprocal sum n, with full source/dependency checks before adoption; retain the general division/extension, Green/SID and pluriclosed gaps. Resume complete reading of a selected recent geometry primary after this model unit.
+Current next unit after checkpoint 378: Check incoming author research commits. Verify the exact four-dimensional Weyl/Weitzenbock and nonflat Ricci-flat dependencies before adopting global surface/K3 consequences. Continue high-dimensional ideal-distance optimality, general division/extension, Green/SID and pluriclosed questions with explicit proof boundaries.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

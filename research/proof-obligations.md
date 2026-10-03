@@ -92,3 +92,5 @@ Checkpoint 375 reconstructs quantitative two-summand division and one-weight ide
 Checkpoint 376 proves the optimal planar multiweight ideal distance by exact point orders and global ideal lifting. Retain n>=2,r>n optimality as new supplemental S19. No existing formal/supplemental direction closes.
 
 Checkpoint 377 proves positive hyperplane-model multiweight distance at reciprocal sum in [1,n), in every n>=2 with r>n. S19 receives the model; the optimal constant and universal dimension-dependent zero regime remain unresolved. No existing direction closes.
+
+Checkpoint 378 integrates the directly reconstructed Gauduchon directional-curvature construction after a complete 16-page recent primary reading. Its four-dimensional Ricci-flat/K3 and positivity-functor chains remain unadopted. The local quantifier distinction and global determinant obstruction are proved separately; no formal/supplemental direction closes. Continue exact dependency verification and incoming author progress checks.

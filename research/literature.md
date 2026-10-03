@@ -469,3 +469,7 @@ Subsection 1.16.2 proves the optimal planar multiweight constant max(1-sum_i1/p_
 ## Several-hyperplane ideal distance — checkpoint 377
 
 Subsection 1.16.3 constructs positive distance at reciprocal sum in [1,n) for every n>=2,r>n, using equal exponents and normalized general-position forms. All 17 internal obligations and two complete scoped reads pass. No new external reading/listing or existing question closure; S19 gains an explicit positive lower model. [Review](editorial/hyperplane-positive-ideal-distance-377.md).
+
+## Gauduchon directional curvature — checkpoint 378
+
+All 16 physical pages of Chou–Wu 2609.33656v1 are actually read; its current version history and physical p.6 formula image are checked. Section 4.7 reconstructs only the pointwise mean criterion and conformal globalization, with a direct local quantifier example and determinant obstruction. The four-dimensional Weyl/Weitzenbock, Ricci-flat/K3 and positivity-functor chains remain unadopted. No new listing coverage or existing question closure. [Review](editorial/gauduchon-directional-curvature-378.md).

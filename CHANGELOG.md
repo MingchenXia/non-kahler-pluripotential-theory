@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 378 — Gauduchon equations and directional curvature
+
+[Review](research/editorial/gauduchon-directional-curvature-378.md): Section 4.7 globalizes directional bundle curvature positivity using the scalar Gauduchon equation, with a direct local quantifier example and determinant obstruction. Two complete scoped reads, all 16 primary pages, 33 internal obligations and 39 final selected pages pass. Both actual live public PDF/homepage/Pages deployments are verified; final 1042 printed pages. All 23 formal and 19 supplemental directions remain open; catalogue statements/statuses are preserved and all single book page locators reconciled. Same-editor native catalogue compilation remains unverified. Fresh empty-source reconstruction passes with 285 exact book sources, all 1066+17 page texts matching and 1943 checksum-validated archive entries; private 378 synchronization follows.
+
 ## Checkpoint 377 — Several-hyperplane ideal distance
 
 [Review](research/editorial/hyperplane-positive-ideal-distance-377.md): Subsection 1.16.3 gives positive hyperplane-model ideal distance with reciprocal sum in [1,n), excluding the unqualified planar zero-regime extension. Two complete scoped reads, 17 obligations and 32 selected pages pass. The actual live public PDF/homepage/Pages deployment is verified; final 1040 printed pages. All 23 formal statements and 451 protected files remain exact; all 23 formal and 19 supplemental directions remain open. S19 is reconciled; same-editor native compilation remains unverified. Fresh empty-source reconstruction passes with 284 exact book sources, all 1064+17 page texts matching and 1939 checksum-validated archive entries; private 377 synchronization follows.

@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 377: Check incoming author research commits. Continue the higher-dimensional quantitative ideal-distance question, especially whether the universal zero regime begins at reciprocal sum n, with full source/dependency checks before adoption; retain the general division/extension, Green/SID and pluriclosed gaps. Resume complete reading of a selected recent geometry primary after this model unit.
+Current next unit after checkpoint 378: Check incoming author research commits. Verify the exact four-dimensional Weyl/Weitzenbock and nonflat Ricci-flat dependencies before adopting global surface/K3 consequences. Continue high-dimensional ideal-distance optimality, general division/extension, Green/SID and pluriclosed questions with explicit proof boundaries.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
