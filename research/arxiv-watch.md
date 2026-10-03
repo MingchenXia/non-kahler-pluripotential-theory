@@ -128,3 +128,7 @@ Qin2609.06568v1 Theorem B p.3 and pp.11–14 addition/determining-family argumen
 ## Zero-potential full local cluster sets — checkpoint 366
 
 Qin arXiv:2609.06568v1 pp.2,12,14–16,28–30 actually reread under 364 full thirty-page primary reading. Section 1.6.6 gives the separable vague metric, moving-measure counterexample and zero-potential full vaguely closed cluster-set realization, including empty, with smooth bounded negative psh approximants converging in all finite Lp and local capacity. General nonzero-background/domain and external maximal/Richberg chains remain separate. [Review](editorial/zero-local-cluster-sets-366.md).
+
+## Fourfold completion energy — checkpoint 367
+
+All 25 physical pages of Liu arXiv:2609.08113v1 actually read; versioned abstract history rechecked. Section 3.4 directly reconstructs canonical completion, Aeppli first variation, potential energy/volume identity, infinite-index Hessian/flatness and a nonclosed full-critical torus product. General compact ambient conclusions are proved without a Kähler reference. No general canonical-surface or global-flow theorem is imported. [Review](editorial/fourfold-completion-energy-367.md).

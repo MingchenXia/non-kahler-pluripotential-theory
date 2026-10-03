@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 366: Read the complete 25-page Hanwen Liu arXiv:2609.08113v1 primary, Non-Kähler Critical Hermitian Metrics of the Dinew–Popovici Functional. Check variation, normalizations and self-contained geometric constructions. Before adopting any Popovici result consult the supplied private main15 assessment, then its exact primary proof and dependencies. Keep wider Qin classification, fixed global defects and all formal/supplemental problems open.
+Current next unit after checkpoint 367: Relate potential completion-energy flatness and the local-minimum condition to the Chapter 2 mass-invariance criterion. Construct a one-nonclosed-factor square-torus product with positive completion energy constant on its entire potential leaf, yet nonstationary in the full Aeppli class. Check directly; avoid general canonical-surface or global-flow dependencies. Keep all formal/supplemental problems open at full scope.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

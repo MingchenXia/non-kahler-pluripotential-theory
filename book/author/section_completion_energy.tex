@@ -1,0 +1,127 @@
+\section{Symplectic completions and potential variations}
+\label{sec:completion-energy}
+
+The radial energy records the failure of the Monge--Amp\`ere one-form to be closed. A different energy is available when a Hermitian form admits a closed real completion. Its potential variation is governed by the change of volume, rather than by a primitive of that one-form.
+
+In this section let $X$ be a connected compact complex manifold of dimension four. A Hermitian form $\omega$ is \emph{Hermitian symplectic} if there is a smooth $(2,0)$-form $\rho$ such that
+\[
+ \partial\rho=0,\qquad \bar\partial\rho=-\partial\omega.
+\]
+Equivalently, $\omega+\rho+\bar\rho$ is closed. Applying $\bar\partial$ shows that $\omega$ is pluriclosed, meaning $\ddc\omega=0$. The differences of its completions form the finite-dimensional space of closed holomorphic $(2,0)$-forms. Minimizing the positive quadratic norm
+\[
+ \|\rho\|_{L^2(\omega)}^2
+   =\frac12\int_X\rho\wedge\bar\rho\wedge\omega^2
+\]
+over this affine space gives a unique \emph{canonical completion} $\rho_\omega$. It is orthogonal to every closed holomorphic $(2,0)$-form. Define
+\[
+ F(\omega)=\|\rho_\omega\|_{L^2(\omega)}^2,
+ \qquad V(\omega)=\frac1{4!}\int_X\omega^4.
+\]
+\index{Hermitian symplectic metric}\index{Completion energy}\index{Symplectic completion!canonical}
+The energy is nonnegative and vanishes exactly when $\omega$ is K\"ahler: a zero canonical completion forces $\partial\omega=0$, while a closed $\omega$ has the zero completion.
+
+An Aeppli variation is a real form $\psi=\partial\bar u+\bar\partial u$, with $u$ a smooth $(1,0)$-form. For small real $t$, the positive form $\omega+t\psi$ has completion $\rho+t\partial u$ whenever $\rho$ completes $\omega$. The positive representatives of its Aeppli class are the forms $\omega+\partial\bar u+\bar\partial u>0$. In particular, every positive potential variation $\omega+\ddc\varphi$ belongs to that class and preserves $\mathrm d\omega$.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{lem:completion-first-variation}
+For a Hermitian symplectic $\omega$, write $\rho=\rho_\omega$. Every Aeppli direction $\psi=\partial\bar u+\bar\partial u$ satisfies
+\begin{equation}\label{eq:completion-first-variation}
+ DF_\omega(\psi)=\int_X\left(
+  \operatorname{Re}(\partial u\wedge\bar\rho\wedge\omega^2)
+  +\rho\wedge\bar\rho\wedge\psi\wedge\omega\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The canonical completion of $\omega+t\psi$ is $\rho+t\partial u-h(t)$, where $h(t)$ is a closed holomorphic $(2,0)$-form and $h(0)=0$. In a fixed basis, the orthogonal projection defining $h(t)$ solves a positive definite Gram system; its coefficients are smooth in $t$. Orthogonality of $\rho$ makes the first derivative of the squared norm contributed by $h'(0)$ zero. We may therefore differentiate using $\rho+t\partial u$. Differentiating its two completion factors and the factor $(\omega+t\psi)^2/2$ gives the formula.
+\end{proof}
+
+\begin{proposition}\label{prop:completion-energy-volume}
+For every real smooth $\varphi$ with $\omega_\varphi=\omega+\ddc\varphi>0$, one has $\rho_{\omega_\varphi}=\rho_\omega$ and
+\begin{equation}\label{eq:completion-energy-volume}
+ F(\omega_\varphi)+V(\omega_\varphi)=F(\omega)+V(\omega).
+\end{equation}
+Stationarity of $F$ under all potential directions is equivalent to $\ddc(\omega^3)=0$. Thus every critical point in the full Aeppli class is Gauduchon.
+\end{proposition}
+\begin{proof}
+Fix any completion $\zeta$ and put $\Theta_\zeta=\omega+\zeta+\bar\zeta$. Expansion by type gives
+\[
+ \frac1{4!}\int_X\Theta_\zeta^4
+ =V(\omega)+\frac12\int_X\zeta\wedge\bar\zeta\wedge\omega^2
+       +\frac14\int_X\zeta^2\wedge\bar\zeta^2.
+\]
+The completions of $\omega_\varphi$ and $\omega$ are the same, since their $\partial$ derivatives agree. With $\zeta$ fixed, replacing $\omega$ by $\omega_\varphi$ changes $\Theta_\zeta$ by an exact form. Its completed volume and the last integral are unchanged. Hence
+\[
+ \|\zeta\|_{L^2(\omega_\varphi)}^2
+ -\|\zeta\|_{L^2(\omega)}^2=V(\omega)-V(\omega_\varphi).
+\]
+This difference is independent of $\zeta$, so the unique minimizers coincide, giving \eqref{eq:completion-energy-volume}. Differentiating at $t=0$ along $\omega+t\ddc\varphi$ and using \cref{lem:ibp} yields
+\[
+ DF_\omega(\ddc\varphi)=-\frac16\int_X\varphi\ddc(\omega^3).
+\]
+Testing every real $\varphi$ proves the remaining assertions.
+\end{proof}
+
+The positive index of a real quadratic form is infinite if it is positive definite on subspaces of arbitrarily large finite dimension; the negative index is defined in the same way.
+
+\Needspace{12\baselineskip}
+\begin{theorem}\label{thm:completion-potential-hessian}\index{Completion energy!potential Hessian}
+Let $H_\omega$ be the real affine Hessian of $F$ on the Aeppli class. If $\ddc(\omega^2)\ne0$, its restriction to potential directions has infinite positive and negative index. If $\ddc(\omega^2)=0$, the energy is constant on every positive potential variation. Consequently, every local minimum in the full Aeppli class satisfies $\ddc(\omega^2)=0$.
+\end{theorem}
+\begin{proof}
+Pluriclosedness and Stokes' theorem give $\int_X\omega\wedge(\ddc\varphi)^3=\int_X(\ddc\varphi)^4=0$. Thus the volume and, by \eqref{eq:completion-energy-volume}, the energy along a potential line are polynomials of degree at most two. Twice differentiating and integrating by parts gives
+\begin{equation}\label{eq:completion-potential-hessian}
+ \begin{aligned}
+ H_\omega(\ddc\varphi,\ddc\varphi)
+ &=-\frac12\int_X\omega^2\wedge(\ddc\varphi)^2\\
+ &=\frac12\int_X\ddc(\omega^2)\wedge\mathrm d\varphi\wedge\dc\varphi.
+ \end{aligned}
+\end{equation}
+For the second equality, use $\ddc(\varphi^2/2)=\varphi\ddc\varphi+\mathrm d\varphi\wedge\dc\varphi$ against the closed form $\ddc(\omega^2)$, after one application of \cref{lem:ibp}.
+
+Put $\Psi=\ddc(\omega^2)$. At each point, $\Psi\wedge\mathrm i\xi\wedge\bar\xi$ defines a Hermitian quadratic form in a $(1,0)$-covector $\xi$, after division by a positive volume form. These quadratic forms determine $\Psi$. Their traces against $\omega$ are positive multiples of the density $\Psi\wedge\omega$, whose integral is zero by Stokes' theorem and $\ddc\omega=0$. If $\Psi\ne0$, the quadratic forms therefore take a strictly positive value somewhere and a strictly negative value somewhere: a semidefinite form everywhere would have a nonzero trace of one sign on an open set, contradicting that integral.
+
+Fix either strict sign. Choose holomorphic coordinates on a ball where $\Psi\wedge\mathrm dx\wedge\dc x$ has that sign, with $x=\operatorname{Re}z_1$. For a nonzero real cutoff $a$ supported there, set $\varphi_N=a\cos(Nx)$. Formula \eqref{eq:completion-potential-hessian} gives
+\[
+ H_\omega(\ddc\varphi_N,\ddc\varphi_N)
+ =\frac{N^2}{2}\int_Xa^2\sin^2(Nx)\Psi\wedge\mathrm dx\wedge\dc x+O(N).
+\]
+The error constant depends on the fixed form, chart and cutoff, and is independent of $N$. The integral tends to half the same integral without $\sin^2(Nx)$, by integration by parts in $x$. The Hessian has the chosen sign for large $N$. For every positive integer $k$, apply this construction on $k$ disjoint smaller balls in that region. The resulting nonzero directions are independent and have zero pairwise Hessian pairing, by the local integral formula. Their span is a definite $k$-dimensional subspace. Repeating in the opposite-sign region proves both infinite indices. Each finite-dimensional span admits sufficiently small variations preserving positivity.
+
+If $\Psi=0$, \cref{lem:power-torsion} and pluriclosedness give $\ddc(\omega^3)=3\omega\wedge\Psi=0$. Both derivatives of the quadratic energy polynomial vanish, so it is constant on the positivity interval. The segment to any positive $\omega_\varphi$ lies in that interval. Finally, a local minimum cannot have a negative potential Hessian direction.
+\end{proof}
+
+\subsection{A nonclosed critical form on a complex torus}
+\label{subsec:torus-completion-critical}
+
+Consider the square complex two-torus $S=\mathbb C^2/(\mathbb Z+\mathrm i\mathbb Z)^2$. Write $z_j=x_j+\mathrm i y_j$ on its cover and put $\eta=\mathrm i\sum_{j=1}^2\mathrm dz_j\wedge\mathrm d\bar z_j$. For $0<s<1$, the periodic form
+\[
+ v_s=\frac{s}{\pi}\mathrm e^{2\pi\mathrm i x_1}\mathrm dz_2,
+ \qquad \alpha_s=\eta+\partial\bar v_s+\bar\partial v_s
+\]
+is well defined on $S$. Its Hermitian matrix in the global coframe is
+\[
+ \begin{pmatrix}1&-s\mathrm e^{-2\pi\mathrm i x_1}\\
+ -s\mathrm e^{2\pi\mathrm i x_1}&1\end{pmatrix},
+\]
+with eigenvalues $1-s,1+s$. Its completion $\rho_s=\partial v_s=\mathrm i s\mathrm e^{2\pi\mathrm i x_1}\mathrm dz_1\wedge\mathrm dz_2$ satisfies, with $\mu_0=\eta^2/2$,
+\[
+ \frac{\alpha_s^2}{2}=(1-s^2)\mu_0,
+ \qquad \rho_s\wedge\bar\rho_s=s^2\mu_0.
+\]
+
+\begin{example}\label{ex:torus-completion-critical}\index{Complex torus!nonclosed critical metric}\index{Completion energy!nonzero critical point}
+On $X=S\times S$, let $\omega$ be the sum of the pullbacks of $\alpha_{1/\sqrt2}$ from its two factors. This non-K\"ahler form is critical for $F$ under every Aeppli variation, including those with mixed factor components. If $V_0=\int_S\mu_0$, then $F(\omega)=V_0^2/2>0$. Its potential Hessian has infinite positive and negative index, even though potential variations preserve its exterior torsion form $\mathrm d\omega$.
+\end{example}
+\begin{proof}
+Denote the two factor forms by $\alpha_i,\rho_i$ and put $\mu_i=\alpha_i^2/2$, $\nu_i=\rho_i\wedge\bar\rho_i$, suppressing their pullbacks. Every holomorphic form on the square torus has constant coefficients. On each surface, the pairing of $\rho_i=\partial v_i$ with a holomorphic two-form is its integral wedge pairing, which vanishes by Stokes. On the product, pure and mixed two-forms are pointwise orthogonal; a pure-factor pairing is the vanishing surface pairing times the other factor's volume. Thus $\rho=\rho_1+\rho_2$ is the canonical completion of $\omega$. Since each $\mu_i=\nu_i$ is half the pullback of $\mu_0$, expansion gives $F(\omega)=\int_X(\nu_1\wedge\mu_2+\mu_1\wedge\nu_2)=V_0^2/2$.
+
+Put $\Theta_i=\alpha_i+\rho_i+\bar\rho_i$ and $\Theta=\Theta_1+\Theta_2$. For an arbitrary real $(1,1)$-form $\psi$ and $(2,0)$-form $\sigma$, expansion on the two surfaces gives
+\[
+ \operatorname{Re}(\sigma\wedge\bar\rho\wedge\omega^2)
+   +\rho\wedge\bar\rho\wedge\psi\wedge\omega
+ =\frac1{12}(\psi+\sigma+\bar\sigma)\wedge\Theta^3.
+\]
+Indeed, mixed components have odd degree on both factors and contribute zero. The pure components on the left give $(\psi+\sigma+\bar\sigma)\wedge(\Theta_1\wedge\mu_2+\Theta_2\wedge\mu_1)$. Since $\Theta_i^2=4\mu_i$, the cube on the right is twelve times the same complementary form. Apply \cref{lem:completion-first-variation} with $\psi=\partial\bar u+\bar\partial u$ and $\sigma=\partial u$. The derivative is $\frac1{12}\int_X\mathrm d(u+\bar u)\wedge\Theta^3=0$, since $\Theta$ is closed. This proves full criticality.
+
+Each $\partial\alpha_i=-\bar\partial\rho_i$ is nonzero. In $\partial\omega\wedge\bar\partial\omega$, the same-factor terms vanish by dimension, while the two nonzero cross terms have different bidegrees on the factors and cannot cancel. Hence $\ddc(\omega^2)\ne0$ by \cref{lem:power-torsion}. Apply \cref{thm:completion-potential-hessian}.
+\end{proof}
