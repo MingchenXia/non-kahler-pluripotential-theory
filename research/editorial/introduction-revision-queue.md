@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 357: Actually read the complete Fujiki-class Monge–Ampere degeneration candidate2610.00942v1, verify its normal projective Calabi–Yau/conifold and small crepant resolution hypotheses, potential bounds and any dimension-specific metric conclusion before adoption. Continue primary Blocki domain and Szekelyhidi Hessian dependency checks, other related directions and arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
+Current next unit after checkpoint 358: Verify the closed-pullback strict-barrier construction and geometric degeneration hypotheses of2610.00942v1; read the needed GL22/CT15 primary proofs and ZhangSection7/EGZ normal-space chain before adopting conifold metric conclusions. Continue pending Blocki domain and Szekelyhidi Hessian checks, related directions and precise arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

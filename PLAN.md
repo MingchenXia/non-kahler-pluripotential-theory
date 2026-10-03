@@ -199,3 +199,5 @@ Checkpoint355 integrates precisely checked recent divisorial Sobolev results aft
 Checkpoint356 integrates precisely checked strict-gap Hermitian stability after accepted whole-book polish. Continue primary gradient/Hessian and Fujiki-degeneration chains, other related directions and literature coverage catch-up. All formal/supplemental directions remain open.
 
 Checkpoint357 integrates precisely checked uniform Hermitian gradient estimates after accepted whole-book polish. Continue complete Fujiki/conifold primary proof review, pending domain/Hessian chains, related directions and literature coverage catch-up. All full formal/supplemental directions remain open.
+
+Checkpoint358 integrates explicit strict-analytic-barrier semipositive potential degeneration for a fixed smooth positive density. The no-metric-wide-mass C0/scalar proof uses the existing subsolution/exponential comparison. Continue geometric/conifold dependency review, pending domain/Hessian chains, related directions and literature coverage catch-up. All full formal/supplemental directions remain open.

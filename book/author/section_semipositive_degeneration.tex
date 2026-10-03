@@ -1,0 +1,169 @@
+\section{Degenerating semipositive backgrounds}
+\label{sec:semipositive-degeneration}
+
+Adding a small Hermitian form makes a semipositive background strictly positive. The resulting smooth equations can be controlled uniformly as this addition tends to zero: bounded subsolutions control the potentials, and a strict singular barrier controls the trace away from its poles. Smooth local convergence then identifies the limiting equation without a global continuity assertion for the Monge--Amp\`ere operator.
+
+In this section assume $n\geq2$ and let $\theta\geq0$ be smooth. Fix a Hermitian form $\eta$ and a smooth positive probability volume form $\mu$. Suppose there are $\delta>0$ and $\rho\in\PSH(X,\theta)$ with analytic singularities such that
+\begin{equation}\label{eq:degeneration-strict-barrier}
+ \theta+\ddc\rho\geq\delta\eta,
+ \qquad \sup_X\rho=0.
+\end{equation}
+Write $Z=\{\rho=-\infty\}$ and assume $\rho$ is smooth on $X\setminus Z$. For $0<\varepsilon\leq1$, the smooth Hermitian equation theorem gives $u_\varepsilon\in C^\infty(X)$ and $c_\varepsilon>0$ with
+\begin{equation}\label{eq:semipositive-smooth-approximation}
+ \omega_\varepsilon:=\theta+\varepsilon\eta+\ddc u_\varepsilon>0,
+ \qquad \omega_\varepsilon^n=c_\varepsilon\mu,
+ \qquad \sup_Xu_\varepsilon=0.
+\end{equation}
+
+\begin{lemma}\label{lem:degeneration-potential-bound}
+There are constants $b,B,C>0$, independent of $\varepsilon$, such that
+\[
+ b\leq c_\varepsilon\leq B,
+ \qquad -C\leq u_\varepsilon\leq0.
+\]
+\end{lemma}
+\begin{proof}
+Write $\mu=f\,\mathrm{d}V$. The strict barrier makes $\theta$ big. By \cref{lem:big-lp-subsolution}, there is a bounded $s\in\PSH(X,\theta)$ with $-1\leq s\leq0$ and $\mathrm{MA}_\theta(s)\geq b\mu$ for some fixed $b>0$. If $c_\varepsilon<b$, positivity gives
+\[
+ \mathrm{MA}_{\theta+\varepsilon\eta}(u_\varepsilon)
+ \leq(c_\varepsilon/b)\mathrm{MA}_{\theta+\varepsilon\eta}(s+A)
+\]
+for every constant $A$. Strict bounded domination would imply $u_\varepsilon\geq s+A$ for every $A$, a contradiction.
+
+For an upper bound, choose a fixed Gauduchon form $\gamma$. The arithmetic--geometric mean inequality and Stokes give
+\[
+ c_\varepsilon^{1/n}
+ \int_X\left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n
+ \leq\int_X\omega_\varepsilon\wedge\gamma^{n-1}
+ =\int_X(\theta+\varepsilon\eta)\wedge\gamma^{n-1}
+ \leq\int_X(\theta+\eta)\wedge\gamma^{n-1}.
+\]
+The first integral is fixed and positive, giving $c_\varepsilon\leq B$.
+
+All $u_\varepsilon$ are normalized $(\theta+\eta)$-plurisubharmonic. Uniform exponential integrability, \cref{lem:uniform-exponential}, supplies $a>0$ such that $g_\varepsilon=\mathrm{e}^{-a u_\varepsilon}f$ has a common $L^2$ bound. Also $g_\varepsilon\geq f$. By \cref{thm:big-bounded-exponential}, the solutions
+\[
+ w_\varepsilon\in\PSH(X,\theta),
+ \qquad \mathrm{MA}_\theta(w_\varepsilon)
+       =\mathrm{e}^{a w_\varepsilon}g_\varepsilon\,\mathrm{d}V
+\]
+are uniformly bounded. Put $B_0=\max\{1,B\}$ and $z_\varepsilon=w_\varepsilon-a^{-1}\log B_0$. Then
+\[
+ \mathrm{MA}_{\theta+\varepsilon\eta}(z_\varepsilon)
+ \geq \mathrm{e}^{a z_\varepsilon}c_\varepsilon g_\varepsilon\,\mathrm{d}V,
+ \qquad
+ \mathrm{MA}_{\theta+\varepsilon\eta}(u_\varepsilon)
+ =\mathrm{e}^{a u_\varepsilon}c_\varepsilon g_\varepsilon\,\mathrm{d}V.
+\]
+Exponential comparison gives $z_\varepsilon\leq u_\varepsilon\leq0$, proving the bound.
+\end{proof}
+
+The reference form can degenerate at $Z$, so the local trace constants must be obtained from a maximum taken on all of $X\setminus Z$. The barrier makes this maximum stay off $Z$. The additional logarithm in the weight absorbs the torsion term without a gradient bound for $\rho$.
+
+\begin{lemma}\label{lem:degeneration-barrier-trace}\index{Interior regularity!degenerating backgrounds}
+For every compact $K\Subset X\setminus Z$, there is $C_K>1$, independent of $\varepsilon$, such that
+\[
+ C_K^{-1}\eta\leq\omega_\varepsilon\leq C_K\eta
+ \quad\hbox{on }K.
+\]
+\end{lemma}
+\begin{proof}
+For the differentiated calculation write $U=u_\varepsilon/(2\pi)$ and $P=\rho/(2\pi)$, so that $\ddc u_\varepsilon=\mathrm{i}\partial\bar\partial U$. Put
+\[
+ S=\operatorname{tr}_\eta\omega_\varepsilon,
+ \quad R=\operatorname{tr}_{\omega_\varepsilon}\eta,
+ \quad D=\omega_\varepsilon^n/\eta^n.
+\]
+The previous lemma and the smooth positive density give $0<d_1\leq D\leq d_2$. Choose a fixed $C_0$ so that $v=U-P+C_0>1$, and set
+\[
+ H=\log S-\gamma(v),\qquad \gamma(v)=Av+\log v,
+\]
+where $A$ will be fixed below. For each $\varepsilon$, $S$ is smooth on $X$ and $v$ tends to infinity at $Z$. Thus $H\to-\infty$ there and attains its maximum on $X\setminus Z$.
+
+At a maximum choose holomorphic coordinates in which the matrices $h$ of $\eta$ and $g$ of $\omega_\varepsilon$ satisfy
+\[
+ h_{i\bar j}=\delta_{ij},\qquad h_{i\bar i,k}=0,
+ \qquad g_{i\bar j}=\lambda_i\delta_{ij}.
+\]
+A linear change first normalizes $h$ and diagonalizes $g$. In these coordinates, the quadratic change $z_i=w_i+\frac12\sum_{j,k}a^i_{jk}w_jw_k$, with symmetric coefficients chosen so that $a^i_{ik}=-h_{i\bar i,k}$, then kills $h_{i\bar i,k}$. Its coefficients are uniformly bounded on a fixed finite cover. Write
+\[
+ \Delta_g=\sum_i\lambda_i^{-1}\partial_i\partial_{\bar i},
+ \quad T_{ij\bar k}=g_{j\bar k,i}-g_{i\bar k,j},
+ \quad E_i=\sum_jT_{ij\bar j}.
+\]
+The lowered torsion coefficients $T_{ij\bar k}$ and their first derivatives are uniformly bounded: the potential Hessian cancels, leaving only derivatives of $\theta+\varepsilon\eta$.
+
+Differentiating $S=h^{k\bar\ell}g_{k\bar\ell}$ and the equation $\log\det g=\log c_\varepsilon+\log\mu_{\mathrm{loc}}$ gives
+\begin{equation}\label{eq:degeneration-trace-calculus}
+ \Delta_g S\geq Q-CRS-CR,
+ \qquad
+ Q=\sum_{i,j}\frac{|g_{i\bar j,j}|^2}{\lambda_i\lambda_j}.
+\end{equation}
+The second derivatives of $g$ contribute
+$\sum_{i,j,k}|g_{i\bar j,k}|^2/(\lambda_i\lambda_j)$, up to $-CR-C$, by commuting the potential derivatives. The first derivatives of $h$ contribute
+$-2\operatorname{Re}\sum_{i,j,k}\lambda_i^{-1}h_{j\bar k,\bar i}g_{k\bar j,i}$. Its terms with $j=k$ vanish. Replace $g_{k\bar j,i}$ by $g_{i\bar j,k}+T_{ik\bar j}$ and apply weighted Cauchy--Schwarz. This consumes exactly the terms of the preceding square with $j\ne k$ and costs at most $CRS+CR$. The second derivatives of $h^{-1}$ cost $CRS$. Finally the fixed density term $-C$ is absorbed using $SR\geq n^2$.
+
+Since $S_i=\sum_jg_{i\bar j,j}+E_i$, weighted Cauchy--Schwarz also gives
+\[
+ |\partial S|_g^2
+ \leq SQ+2\operatorname{Re}\langle E,\partial S\rangle_g.
+\]
+Indeed expand around $\partial S-E$ and discard the resulting term $-|E|_g^2$. Combining with \eqref{eq:degeneration-trace-calculus} yields
+\[
+ \Delta_g\log S\geq-CR-CR/S
+       -\frac2S\operatorname{Re}\langle E,\partial\log S\rangle_g.
+\]
+At the maximum, $\partial\log S=\gamma'\partial v$. Moreover \eqref{eq:degeneration-strict-barrier} gives $\Delta_gv\leq n-\delta R$, and $|E|_g^2\leq CR$. Young's inequality with the positive coefficient $-\gamma''=v^{-2}$ therefore gives
+\[
+ 0\geq\Delta_g H
+ \geq(\delta\gamma'-C)R-n\gamma'-CR/S
+       -\frac{CR}{S^2}\frac{\gamma'^2}{-\gamma''}.
+\]
+Since $\gamma'=A+v^{-1}$, choose $A$ with $\delta A-C\geq1$. The resulting inequality is
+\begin{equation}\label{eq:degeneration-maximum-trace}
+ 0\geq R-C\left(1+\frac RS+\frac{R(1+v^2)}{S^2}\right).
+\end{equation}
+All constants are independent of $\varepsilon$.
+
+If the maxima of $H$ were unbounded, then at a sequence of maximizing points
+\[
+ \log(S/v)=H+Av\longrightarrow+\infty.
+\]
+Thus $S/v\to\infty$ and $S\to\infty$. Inequality \eqref{eq:degeneration-maximum-trace} would imply $R\leq2C$ along this sequence. But
+\[
+ S=D\sum_i\prod_{j\ne i}\lambda_j^{-1}
+       \leq nDR^{n-1}\leq nd_2(2C)^{n-1},
+\]
+a contradiction. Hence $H$ is uniformly bounded. On $K$, both $U$ and $P$ are bounded, so $S\leq C_K$. The determinant lower bound then gives $\lambda_i\geq d_1/C_K^{n-1}$, completing the proof.
+\end{proof}
+
+\begin{theorem}\label{thm:semipositive-smooth-degeneration}\index{Monge--Ampere equation@Monge--Amp\`ere equation!degenerating background}
+In the preceding setting, $c_\varepsilon$ decreases to a positive number $c_0$ as $\varepsilon\downarrow0$. This number is independent of the perturbing Hermitian form $\eta$. For every sequence $\varepsilon_j\downarrow0$, a subsequence satisfies
+\[
+ u_{\varepsilon_j}\longrightarrow u_0
+       \quad\hbox{in }L^1(X)\cap C^\infty_{\mathrm{loc}}(X\setminus Z),
+\]
+where $u_0\in\PSH(X,\theta)\cap L^\infty(X)$, $\sup_Xu_0=0$, and
+\[
+ \mathrm{MA}_\theta(u_0)=c_0\mu.
+\]
+If $\theta$ is closed, then $c_0=\int_X\theta^n$.
+\end{theorem}
+\begin{proof}
+If smooth Hermitian backgrounds $\alpha\leq\beta$ have normalized equation solutions $u_\alpha,u_\beta$ for $\mu$, take a maximum of $u_\alpha-u_\beta$. At that point
+\[
+ \alpha+\ddc u_\alpha\leq\beta+\ddc u_\beta,
+\]
+so $c_\alpha\leq c_\beta$. This proves monotonicity; \cref{lem:degeneration-potential-bound} gives $c_0\geq b>0$. For two perturbations with $M^{-1}\eta_1\leq\eta_2\leq M\eta_1$, the same comparison gives
+\[
+ c_{\eta_1}(\varepsilon/M)
+ \leq c_{\eta_2}(\varepsilon)
+ \leq c_{\eta_1}(M\varepsilon).
+\]
+Letting $\varepsilon\downarrow0$ proves independence.
+
+The trace bound gives uniform ellipticity on compact subsets of $X\setminus Z$. The smooth coefficients of $\theta+\varepsilon\eta$ and all derivatives of $\log\mu_{\mathrm{loc}}$ have common bounds there. Interior complex Evans--Krylov and Schauder estimates, as in the ellipticity argument of \cref{prop:interior-criterion}, give uniform $C^k$ bounds on smaller compact subsets for every $k$.
+
+Normalized compactness in the fixed background $\theta+\eta$, followed by a diagonal extraction, now gives the stated convergence. The uniform potential bound passes to the canonical limit; normalized compactness preserves its supremum. Current convergence gives $\theta+\ddc u_0\geq0$, and smooth convergence identifies the equation on $X\setminus Z$. The bounded non-pluripolar measure $\mathrm{MA}_\theta(u_0)$ and the smooth measure $\mu$ both vanish on the analytic set $Z$. This proves the equation on all of $X$. For closed $\theta$, bounded closed-background Stokes gives $\int_X\mathrm{MA}_\theta(u_0)=\int_X\theta^n$, proving the last assertion.
+\end{proof}
+
+The intrinsic scalar $c_0$ is also the nef boundary value $\mathcal V_\mu(\theta)$ of \cref{thm:gaud-volume-nef-limit}. A uniform mass property is not used in the proof above: the bounds concern the solutions for this fixed smooth density. If the bounded normalized limiting equation has a unique solution, every cluster limit agrees and the whole family converges in $L^1(X)\cap C^\infty_{\mathrm{loc}}(X\setminus Z)$.

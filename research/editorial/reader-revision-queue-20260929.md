@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 357: Actually read the complete Fujiki-class Monge–Ampere degeneration candidate2610.00942v1, verify its normal projective Calabi–Yau/conifold and small crepant resolution hypotheses, potential bounds and any dimension-specific metric conclusion before adoption. Continue primary Blocki domain and Szekelyhidi Hessian dependency checks, other related directions and arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
+Current next unit after checkpoint 358: Verify the closed-pullback strict-barrier construction and geometric degeneration hypotheses of2610.00942v1; read the needed GL22/CT15 primary proofs and ZhangSection7/EGZ normal-space chain before adopting conifold metric conclusions. Continue pending Blocki domain and Szekelyhidi Hessian checks, related directions and precise arXiv coverage catch-up. All23 formal and18 supplemental directions remain open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

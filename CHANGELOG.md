@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint358 — Semipositive smooth degeneration
+
+[Review](research/editorial/semipositive-smooth-degeneration-358.md): Section13.18 proves uniform fixed-smooth-density potential/scalar bounds and smooth off-pole subsequential degeneration under an explicit strict analytic barrier, without a metric-wide mass property. Complete scoped first/second reads,41 internal obligations and25 final output checks pass; all23 formal statements and451 protected files remain exact. Both publicPDFs/homepage descriptions/Pages deployments are verified; final999 printedpages. Catalogue locators/statements retained, native compilation unverified after no diagnostics. Fresh empty-source reconstruction passes with270 exact book sources, all1023+17 page texts matching and1870 checksum-validated archive entries; authorized private358 sync follows. All23 formal and18 supplemental directions remain open.
+
 ## Checkpoint357 — Concave uniform gradient
 
 [Review](research/editorial/concave-uniform-gradient-357.md): Section10.8 proves fixed strict-gap Hermitian gradient bounds via a direct all-positive-level matrix alternative and nearby smooth comparison. First/second scoped source reads,41 internal obligations and39 final output checks pass; all23 formal statements and451 protected files remain exact. Both productionPDFs/homepage descriptions/Pages deployments are actually verified; final993printedpages. Same catalogue/current locators retained, with native compilation unverified after no diagnostics. Fresh empty-source reconstruction passes with269 exact book sources and all1017+17 page texts matching;1866 archive entries validate. Authorized private357 sync follows. All23 formal and18 supplemental directions remain open.
