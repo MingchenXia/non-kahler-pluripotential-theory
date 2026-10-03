@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 353: Check the full positive-weight family on a compact parameter box: establish one uniform cutoff curvature bound, compute the comparison as the symmetric-difference volume of coordinate boxes, and test complete constant-product fibers with identical full base residuals. Integrate only complete proofs, then return to the other open directions. Keep full P01/P17 and all23 formal questions open.
+Current next unit after checkpoint 354: Explore other directions related to the existing book and recent arXiv papers, following the author instruction of3 October2026. Check exact versions, assumptions, statements and proof dependencies before adoption into existing or new chapters. Prioritize Hermitian fully nonlinear stability, Fujiki-class Monge–Ampere degenerations and PSH Sobolev regularity candidates; continue coherence and polishing and retain all full-scope open problems.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

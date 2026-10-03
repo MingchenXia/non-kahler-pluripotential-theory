@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 353: Check the full positive-weight family on a compact parameter box: establish one uniform cutoff curvature bound, compute the comparison as the symmetric-difference volume of coordinate boxes, and test complete constant-product fibers with identical full base residuals. Integrate only complete proofs, then return to the other open directions. Keep full P01/P17 and all23 formal questions open.
+Current next unit after checkpoint 354: Explore other directions related to the existing book and recent arXiv papers, following the author instruction of3 October2026. Check exact versions, assumptions, statements and proof dependencies before adoption into existing or new chapters. Prioritize Hermitian fully nonlinear stability, Fujiki-class Monge–Ampere degenerations and PSH Sobolev regularity candidates; continue coherence and polishing and retain all full-scope open problems.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

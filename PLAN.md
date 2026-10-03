@@ -191,3 +191,5 @@ Checkpoint351 proves residual-measure preservation and disjoint-region failure o
 Checkpoint352 completes a coherence pass of the historical chapter and Introduction with retained citations, formal mathematics and full open-problem status. Next check anisotropic product residuals completely and integrate any verified obstruction.
 
 Checkpoint353 proves an exact anisotropic maximum formula and failure of separation even with the entire base residual measure and scalar/ideal/first-polar data. Next check a uniform positive-weight family and its constant-product fibers, then continue other open directions. Full formal problems remain open.
+
+Checkpoint354 completes the uniform positive-weight proof internally. The author now directs continuation into other book-related directions and recent arXiv papers, with exact hypotheses/proof review before adoption in existing or new chapters. GitHub authentication is pending for354 publication/private backup; mathematical and editorial work continues.
