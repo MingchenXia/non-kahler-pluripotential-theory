@@ -81,3 +81,5 @@ Checkpoint 339 checks closed-pole trace recovery with both complete proof reads,
 Checkpoint340: complete comparison-input reads, arbitrary-choice compatibility obstruction, both public releases and 25 final direct images pass. Native catalogue preview remains unverified; reconstruct and synchronize this snapshot, then continue compatible polar-current limits.
 
 Checkpoint341: complete revised-input reads and arbitrary-pole pushforward/closed-pole compatible current limits checked; public 957-page release verified. Reconstruct and synchronize, then check the local non-pluripolar first-current closedness proof before extending the pole-set scope.
+
+Checkpoint342: arbitrary-pole closedness, trace recovery and compatible weak polar-current limits checked with scoped classical attribution. Final 957-page public release verified. Empty-source reconstruction passes; synchronize, then continue general separation and model realization.

@@ -1,7 +1,7 @@
 \section{Polar curvature}
 \label{sec:psh-polar-invariance}
 
-Bounded changes preserve more than logarithmic coefficients: they preserve the whole curvature measure on the common pole set. A local energy estimate puts the bounded difference in a Sobolev space, while pole sets admit smooth tests of arbitrarily small energy. These tests exclude every coefficient measure of its Hessian from the pole set. For closed currents carried by null sets, a local elliptic equation also recovers the current from its scalar Hermitian trace.
+Bounded changes preserve more than logarithmic coefficients: they preserve the whole curvature measure on the common pole set. A local energy estimate puts the bounded difference in a Sobolev space, while pole sets admit smooth tests of arbitrarily small energy. These tests exclude every coefficient measure of its Hessian from the pole set. Polar curvature is closed even when the pole set is not closed. A local elliptic equation therefore recovers it from its scalar Hermitian trace.
 
 \begin{lemma}\label{lem:bounded-measure-laplacian-energy}
 Let $U\subset\mathbb R^d$ be open and let $w\in L^\infty_{\mathrm{loc}}(U)$. If $\Delta w$ is a locally finite signed Radon measure, then $w\in W^{1,2}_{\mathrm{loc}}(U)$.
@@ -99,4 +99,47 @@ Then
 Pullback is genuine and admissible by \cref{prop:psh-descent-modification}. Change of variables on the isomorphism locus, whose complement has Lebesgue measure zero on both spaces, gives $\pi_*(u\circ\pi)=u$ as distributions and $\pi_*\pi^*\theta=\theta$ as currents. Proper pushforward commutes with $\ddc$, so $\pi_*T_Y=T$.
 
 For any Borel $B\subset X$, the coefficient measures of $\pi_*T_Y$ are pushforwards of the coefficient measures of $T_Y$ multiplied by the smooth coefficients arising from pullback of a test form. Restriction therefore gives $\pi_*(\mathbf1_{\pi^{-1}(B)}T_Y)=\mathbf1_B\pi_*T_Y$. Apply this to the Borel pole set $S$. No closedness of its restricted current is used.
+\end{proof}
+
+The closedness of polar curvature follows from the bounded cutoff argument for complete pluripolar restrictions. The cutoff approaches the complement of the pole set pointwise, so the pole set need not be closed.
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:polar-curvature-closedness}\index{Polar curvature!closedness}
+Let $X$ be a complex manifold of dimension $n\geq1$, let $u$ be quasi-plurisubharmonic on $X$, and let $\theta$ be a smooth real $(1,1)$-form. Then
+\[
+ \operatorname{Pol}_\theta(u)
+       :=\mathbf1_{\{u=-\infty\}}(\theta+\ddc u)
+\]
+is a closed positive $(1,1)$-current.
+\end{proposition}
+\begin{proof}
+Locally, a smooth quadratic correction and subtraction of a constant give a negative plurisubharmonic function $a$ with pole set $S=\{u=-\infty\}$. Put $\Theta=\ddc a$. Since smooth forms have no coefficient mass on $S$, the polar current equals $\mathbf1_S\Theta$ and is positive. In dimension one it is closed by degree.
+
+Suppose $n\geq2$. Choose a smooth convex nondecreasing function $\chi$ on $\mathbb R$ with $\chi(t)=0$ for $t\leq1/2$ and $\chi(1)=1$, and a smooth function $0\leq\vartheta\leq1$ which is zero near zero and one near one. Set
+\[
+ w_k=\chi(e^{a/k}),\qquad k\geq1.
+\]
+These functions are bounded plurisubharmonic, with $0\leq w_k\leq1$. They vanish on $S$ and tend to one at every point outside $S$. Hence $\vartheta(w_k)\Theta$ converges coefficientwise locally in total variation to $\mathbf1_{X\setminus S}\Theta$. Also $\vartheta'(w_k)$ vanishes on $S$ and tends to zero everywhere.
+
+Fix a constant strongly positive $(n-2,n-2)$-form $\beta$ and put $\Xi=\Theta\wedge\beta$. The bounded Bedford--Taylor chain rule gives
+\[
+ \mathrm d\bigl(\vartheta(w_k)\Xi\bigr)
+       =\vartheta'(w_k)\,\mathrm dw_k\wedge\Xi.
+\]
+Indeed, decrease smooth plurisubharmonic functions to $w_k$ on a smaller ball. Dominated convergence gives convergence of their $\vartheta$-weighted currents. The bounded Bedford--Taylor energy convergence and Cauchy--Schwarz give convergence of the differentiated expressions, proving the chain rule for $w_k$.
+For a smooth compactly supported test one-form $\alpha$, choose a nonnegative smooth cutoff $\tau$ equal to one near its support. Since $w_k\geq0$ and $\Xi$ is closed and positive, bounded integration by parts gives
+\[
+ 2\int\tau\,\mathrm dw_k\wedge\dc w_k\wedge\Xi
+       \leq\int\tau\,\ddc(w_k^2)\wedge\Xi
+       =\int w_k^2\ddc\tau\wedge\Xi\leq C.
+\]
+Here $C$ depends only on the local mass of $\Xi$ and the fixed cutoff. The Cauchy--Schwarz inequality for a positive current now yields
+\[
+ \bigl|\langle\vartheta'(w_k)\,\mathrm dw_k\wedge\Xi,
+                    \alpha\rangle\bigr|^2
+       \leq C_\alpha\int_{\operatorname{supp}\alpha}
+                 |\vartheta'(w_k)|^2\,\Xi\wedge\kappa
+       \longrightarrow0,
+\]
+where $\kappa$ is the Euclidean Hermitian form. The limit follows by dominated convergence against the fixed locally finite trace measure. Thus $\mathbf1_{X\setminus S}\Theta\wedge\beta$ is closed. Constant strongly positive forms span the needed test forms, so $\mathbf1_{X\setminus S}\Theta$ is closed. Subtracting it from $\Theta$ proves closedness of $\mathbf1_S\Theta$. The local currents agree on overlaps and give the asserted global current.
 \end{proof}

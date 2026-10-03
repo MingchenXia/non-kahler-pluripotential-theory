@@ -1,4 +1,8 @@
-# Current research status — 2 October 2026
+# Current research status — 3 October 2026
+
+## Checkpoint 342 — Arbitrary-pole polar closedness
+
+[Proposition 1.25.3](editorial/arbitrary-pole-polar-closedness-342.md) proves closed positive polar curvature for nonclosed pole sets using the checked BEGZ author-version cutoff proof. Trace recovery and compatible weak current limits lose their closed-pole hypothesis. Complete revised-input/second reads, 20 internal checks, 19 direct final images and 20 exact image carries pass. Both successful full rebuilds publish and independently verify PDF/homepage; final book is 957 printed pages. The existing catalogue is reconciled; native compilation remains unverified after no response. Empty-source reconstruction and current archive validation pass: all 264 exact book sources, 1,816 archive entries and all 981+17 page texts match. Private synchronization follows this snapshot. General model separation and realization remain open. Prior private checkpoint 341 is independently verified at 3eefeb97.
 
 ## Checkpoint 341 — Polar pushforward and compatible current limits
 

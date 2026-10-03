@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 341: Continue P01/P17 directly: read the local non-pluripolar first-current construction and its closedness proof at their full needed scope before testing removal of the closed-pole condition. Then study simultaneous ordinary-model realization, general separation and exact analytic closure, keeping the auxiliary-choice compatibility obstruction.
+Current next unit after checkpoint 342: Continue P01/P17 directly: test separation of all ordinary models by polar currents on every modification, then simultaneous model realization and exact analytic closure; retain the proved auxiliary-choice compatibility obstruction.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

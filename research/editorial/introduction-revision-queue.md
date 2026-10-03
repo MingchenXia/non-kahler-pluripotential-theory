@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 341: Continue P01/P17 directly: read the local non-pluripolar first-current construction and its closedness proof at their full needed scope before testing removal of the closed-pole condition. Then study simultaneous ordinary-model realization, general separation and exact analytic closure, keeping the auxiliary-choice compatibility obstruction.
+Current next unit after checkpoint 342: Continue P01/P17 directly: test separation of all ordinary models by polar currents on every modification, then simultaneous model realization and exact analytic closure; retain the proved auxiliary-choice compatibility obstruction.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -167,3 +167,5 @@ Checkpoint 339 recovers full polar currents from fixed Gauduchon traces when the
 Checkpoint 340 gives a fixed Gauduchon-choice obstruction to positive-volume compatibility on P2, with both complete proof reads and direct output checks. Continue full polar-current pushforward compatibility and compatible limits directly. No formal research question is closed.
 
 Checkpoint 341 proves arbitrary-pole pushforward and compatible weak polar-current limits for comparison-Cauchy models with closed poles. A single genuine pole carrier is supplied, without asserting model realization. Continue the local first-current closedness proof and general realization directly; no formal question is closed.
+
+Checkpoint 342 removes the closed-pole condition from polar trace recovery and compatible weak current limits through the checked complete-pluripolar cutoff proof. No formal question is closed. Continue general separation and simultaneous ordinary-model realization directly.
