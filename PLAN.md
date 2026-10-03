@@ -189,3 +189,5 @@ Checkpoint350 proves scalar residual preservation and the complete strict-range 
 Checkpoint351 proves residual-measure preservation and disjoint-region failure of scalar separation. Next consolidate the historical chapter in actual reading order and reread the Introduction, then continue multi-pole/topology research. All formal problems remain open at full scope.
 
 Checkpoint352 completes a coherence pass of the historical chapter and Introduction with retained citations, formal mathematics and full open-problem status. Next check anisotropic product residuals completely and integrate any verified obstruction.
+
+Checkpoint353 proves an exact anisotropic maximum formula and failure of separation even with the entire base residual measure and scalar/ideal/first-polar data. Next check a uniform positive-weight family and its constant-product fibers, then continue other open directions. Full formal problems remain open.

@@ -103,3 +103,5 @@ Checkpoint350 proves scalar residual preservation by small-pole ordinary project
 Checkpoint351 preserves residual measures under ordinary projection and gives disjoint-region scalar counterexamples. Complete source/output and public977-page checks pass. Reconstruct/synchronize, then consolidate the complete historical chapter and reread the Introduction before further multi-pole research.
 
 Checkpoint352 completes a coherence pass of the historical chapter and Introduction with retained citations, formal mathematics and full open-problem status. Next check anisotropic product residuals completely and integrate any verified obstruction.
+
+Checkpoint353 proves an exact anisotropic maximum formula and failure of separation even with the entire base residual measure and scalar/ideal/first-polar data. Next check a uniform positive-weight family and its constant-product fibers, then continue other open directions. Full formal problems remain open.

@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 352: Check the separable anisotropic maximum product formula completely, including its normalization and critical levels; use it to test whether distinct positive-volume models can share the complete base residual measure, both scalar volumes, every multiplier ideal and all-modification first polar currents. Integrate only fully checked statements. Keep full P01/P17 and all remaining formal questions open.
+Current next unit after checkpoint 353: Check the full positive-weight family on a compact parameter box: establish one uniform cutoff curvature bound, compute the comparison as the symmetric-difference volume of coordinate boxes, and test complete constant-product fibers with identical full base residuals. Integrate only complete proofs, then return to the other open directions. Keep full P01/P17 and all23 formal questions open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

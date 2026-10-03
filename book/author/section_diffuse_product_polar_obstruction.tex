@@ -64,6 +64,67 @@ is nonempty. It is relatively compact in $D$, because $h_L=0$ on the boundary an
 Finally, $g$ is bounded on compact subsets of $\overline\Delta\setminus K$. Its deep level sets therefore approach $K$, and $Q_L$ approaches $S$.
 \end{proof}
 
+The separable maximum also permits an exact calculation. Different positive weights can preserve its entire residual measure while changing its singularity type.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{lem:anisotropic-diffuse-product}\index{Monge--Ampere measure@Monge--Amp\`ere measure!separable maximum}
+Use the Green potential $g$, probability $\sigma$ and sets $D=\Delta^n$, $S=K^n$ from \cref{lem:diffuse-product-truncation-mass}. For $s,L>0$ and $a=(a_1,\ldots,a_n)\in(0,+\infty)^n$, put
+\[
+ \mu_s=\ddc\max(g,-s),\qquad h_a(z)=\max_j a_jg(z_j),
+\]
+and $h_{a,L}=\max(h_a,-L)$. Each $\mu_s$ is a nonatomic probability supported on $\{g=-s\}$, and $\mu_s\to\sigma$ weakly as $s\to\infty$. The bounded products satisfy
+\[
+ (\ddc h_{a,L})^n
+   =\left(\prod_{j=1}^n a_j\right)
+           \mu_{L/a_1}\otimes\cdots\otimes\mu_{L/a_n}.
+\]
+The function $h_a$ has pole set $S$, is locally Lipschitz off $S$, and has zero bounded top product there. Its full product is
+\[
+ (\ddc h_a)^n_{\mathrm{full}}
+       =\left(\prod_{j=1}^n a_j\right)\sigma^{\otimes n}.
+\]
+In particular, the common mass $M$ in \cref{lem:diffuse-product-truncation-mass} is $1$.
+\end{lemma}
+\begin{proof}
+The curve truncation agrees with $g$ near the boundary of $\Delta$. Their difference is a compactly supported integrable function, so its complex Hessian has integral zero. Thus $\mu_s(\Delta)=\sigma(\Delta)=1$. The truncation is constant near $K$ and harmonic wherever $g\ne-s$ off $K$, proving the support assertion. Its boundedness gives no point masses, by \cref{thm:bt-input}. Decreasing local $L^1$ convergence to $g$ gives $\mu_s\to\ddc g=\sigma$; for large $s$ the supports lie in one fixed compact subset of $\Delta$.
+
+The rank argument of \cref{lem:diffuse-product-truncation-mass} applies with the weights $a_j$. Away from $S$, finite branches suppress the pole branches, giving a locally Lipschitz maximum of at most $n$ pluriharmonic functions and zero top product. For the bounded maximum with the constant branch $-L$, that argument shows that its top product is supported on
+\[
+ Q_{a,L}=\{z:a_jg(z_j)=-L\text{ for every }j\}.
+\]
+Indeed, off this set one branch is strictly below the maximum, leaving at most $n$ active pluriharmonic branches. This also applies near pole branches, which the constant branch suppresses.
+
+Near a point of $Q_{a,L}$ at which all $\mathrm dg(z_j)\ne0$, set $x_j=a_jg(z_j)+L$. Each $x_j$ is the real part of a local holomorphic coordinate in its own factor. For $\varepsilon>0$, smooth the maximum locally by
+\[
+ f_\varepsilon(x)=\varepsilon\log\left(1+\sum_{j=1}^n e^{x_j/\varepsilon}\right),
+\]
+with weights
+\[
+ w_0=\frac1{1+\sum_j e^{x_j/\varepsilon}},\qquad
+ w_j=e^{x_j/\varepsilon}w_0.
+\]
+Then $-L+f_\varepsilon$ decreases to $h_{a,L}$. Its Hessian matrix is $\varepsilon^{-1}(\operatorname{diag}(w_j)-w_jw_k)$, whose determinant is $\varepsilon^{-n}w_0\prod_jw_j$. Hence
+\[
+ (\ddc f_\varepsilon)^n
+   =n!\varepsilon^{-n}w_0\prod_{j=1}^n w_j
+           \bigwedge_{j=1}^n(\mathrm dx_j\wedge\dc x_j).
+\]
+The scalar kernel on $\mathbb R^n$ is an approximate identity of mass $1$. To check the constant, write $y=x/\varepsilon$. The map
+\[
+ y\longmapsto\left(\frac{e^{y_j}}{1+\sum_k e^{y_k}}\right)_{j=1}^n
+\]
+is a diffeomorphism onto the open simplex $\{w_j>0,\ \sum_jw_j<1\}$, with Jacobian $w_0\prod_jw_j$. Its volume is $1/n!$, so the displayed kernel has integral $1$. Integrability of the fixed kernel in $y$ gives concentration at $x=0$ as $\varepsilon\downarrow0$.
+
+Bounded decreasing product convergence therefore identifies the local limit with the tensor product of the one-variable level measures. In the $j$-th factor, the chain rule for $\max(x_j,0)$ gives
+\[
+ \delta_0(x_j)\,\mathrm dx_j\wedge\dc x_j
+      =a_j\ddc\max(g,-L/a_j).
+\]
+Here the Dirac notation denotes the level measure in the real normal coordinate $x_j$. The critical points of the nonconstant harmonic function $g$ off $K$ are isolated. In each such coordinate neighborhood their inverse images are analytic hypersurfaces, hence pluripolar. The bounded top product gives them zero mass by \cref{thm:bt-input}; the candidate tensor measure does so because each $\mu_{L/a_j}$ has no point masses. Thus the formula extends across these points and, together with the support assertion, holds throughout $D$.
+
+Tensor products of the curve probabilities converge to $\sigma^{\otimes n}$. This follows first for products of continuous one-variable test functions, and then for all continuous tests by uniform approximation on a common compact product. Finally $h_{a,L}\downarrow h_a$, whose unbounded locus is the closed Hausdorff-zero-dimensional set $S$. By \cref{thm:small-pole-local-products}, the weak limit is its full top product. Taking $a_j=1$ proves $M=1$.
+\end{proof}
+
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:all-modifications-diffuse-polar-blindness}\index{Polar curvature!diffuse product poles}\index{Model potential!all modifications and separation}
 Let $X$ be a connected compact K\"ahler manifold of dimension $n\geq2$, with K\"ahler form $\omega$. There are a normalized ordinary model $p\ne0$ and $\delta>0$ such that $p,0\in\mathcal M_\delta(\omega)$, all multiplier ideals of $p$ are trivial, and
@@ -443,4 +504,58 @@ The cutoff supports are disjoint. At every point at least one $p_i$ is zero, and
  d_\omega(p_1,p_2)=2v_+(\omega)-U_1-U_2\geq2r.
 \]
 Every first polar coordinate of both models is zero, giving their zero polar comparison. In the invariant-mass regime, \cref{cor:diffuse-mass-invariant-models} gives both volumes $A-M_it_i^n=A-r$ and $v_+(\omega)=A$. Substitution yields the exact distance $2r$ and the final nonseparation assertion.
+\end{proof}
+
+Knowing the location and size of the whole residual measure still does not determine the model. Anisotropic maxima on the same pole set have residual measure determined by the product of their weights; the volume of their maximum also detects the individual weights.
+
+\Needspace{18\baselineskip}
+\begin{proposition}\label{prop:equal-residual-anisotropic-models}\index{Residual mass!failure of measure separation}\index{Model potential!anisotropic diffuse poles}
+Let $\omega$ be a Hermitian form on a connected compact complex manifold $X$ of dimension $n\geq2$, with $\ddc(\omega^q)=0$ for $1\leq q<n$. Put $A=\int_X\omega^n$, and fix $0<\delta<A$. There are a compact Hausdorff-zero-dimensional set $S\subset X$, a nonatomic probability $\rho$ supported there, and $t_0>0$ such that, for every $0<t\leq t_0$, two normalized ordinary models $p_a,p_b\in\mathcal M_\delta(\omega)$ satisfy
+\[
+ \mathbf1_S\Phi_{p_a}=\mathbf1_S\Phi_{p_b}=t^n\rho.
+\]
+Their lower and upper singularity volumes satisfy
+\[
+ \underline{\operatorname{vol}}_\omega(p_e)
+ =\overline{\operatorname{vol}}_\omega(p_e)=A-t^n,
+ \qquad e=a,b,
+\]
+but
+\[
+ d_\omega(p_a,p_b)=t^n>0.
+\]
+Both models are nonideal, all their multiplier ideals are trivial, and their first polar currents vanish on every smooth modification. Thus even the complete base residual measure, both scalar singularity volumes, all multiplier ideals and all-modification first polar currents together fail to separate ordinary models.
+\end{proposition}
+\begin{proof}
+Place $D$ from \cref{lem:anisotropic-diffuse-product} in a coordinate chart and use one cutoff $\chi$ as before, equal to one near $S=K^n$. Set
+\[
+ a=(2,1/2,1,\ldots,1),\qquad
+ b=(1,1,1,\ldots,1),\qquad
+ c=(1,1/2,1,\ldots,1).
+\]
+For $e=a,b,c$, extend $H_e=\chi h_e$ by zero and put $u_e=tH_e$. The cutoff proof of \cref{prop:diffuse-hermitian-mass-polynomial} gives one $C>0$ with $\ddc H_e\geq-C\omega$ for all three functions. Take $t_0<1/C$ so small that $(1-Ct_0)^nA>\delta$. Then every $u_e$, $0<t\leq t_0$, is normalized and has current at least $(1-Ct)\omega$.
+
+Bounded mass invariance gives $v_-(\omega)=v_+(\omega)=A$. For any $v\sim u_e$, the full global truncation measure has total mass $A$, as in the proof of \cref{cor:diffuse-mass-invariant-models}. Near $S$, the difference of a smooth corrected $v$ and $th_e$ is bounded. By \cref{lem:small-pole-residual-invariance,lem:anisotropic-diffuse-product}, its top residual measure is
+\[
+ t^n\left(\prod_j e_j\right)\rho,\qquad \rho=\sigma^{\otimes n},
+\]
+extended by zero from the chart. Every lower corrected closed power gives $S$ zero coefficient mass. Thus this is also the residual of the full global truncation measure. Off $S$ that full measure equals the non-pluripolar measure, proving that every such representative has mass
+\[
+ V(u_e)=A-t^n\prod_j e_j.
+\]
+The strict current bound for $u_e$ gives $V(u_e)\geq(1-Ct)^nA>\delta$. Hence ordinary projection preserves both singularity volumes by \cref{thm:ordinary-envelope-volumes}, and preserves the residual measure by \cref{thm:small-pole-envelope-residual}. Set $p_e=P_\omega[u_e]$. Since $\prod_ja_j=\prod_jb_j=1$, this proves the common residual and volume assertions for $p_a,p_b$.
+
+The weights are positive and $g\leq0$, so pointwise, including the poles,
+\[
+ \max(h_a,h_b)=h_c,\qquad \max(u_a,u_b)=u_c.
+\]
+Projection invariance in \cref{prop:model-volume-separation} and the definition of the comparison now give
+\[
+ \begin{split}
+ d_\omega(p_a,p_b)&=d_\omega(u_a,u_b)\\
+ &=2\left(A-\tfrac12t^n\right)
+       -(A-t^n)-(A-t^n)=t^n.
+ \end{split}
+\]
+Finally the support and Lelong-number proof of \cref{prop:all-modifications-diffuse-polar-blindness} applies with these positive weights. Every exceptional divisor mapping into $S$ maps to a point, and a comparison with $te_1g(z_1\circ\pi)$ gives zero divisorial Lelong number. Thus every first polar current is zero. The same comparison gives zero point Lelong numbers and trivial multiplier ideals at all weights. The strict volume deficit $t^n$ makes $p_a,p_b$ nonzero, whereas their ideal envelope is zero, so both are nonideal. Their distance is positive despite all the asserted common data.
 \end{proof}

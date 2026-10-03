@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 352: Check the separable anisotropic maximum product formula completely, including its normalization and critical levels; use it to test whether distinct positive-volume models can share the complete base residual measure, both scalar volumes, every multiplier ideal and all-modification first polar currents. Integrate only fully checked statements. Keep full P01/P17 and all remaining formal questions open.
+Current next unit after checkpoint 353: Check the full positive-weight family on a compact parameter box: establish one uniform cutoff curvature bound, compute the comparison as the symmetric-difference volume of coordinate boxes, and test complete constant-product fibers with identical full base residuals. Integrate only complete proofs, then return to the other open directions. Keep full P01/P17 and all23 formal questions open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
