@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 349: Investigate whether ordinary projection preserves the diffuse scalar top residual Mt^n, then establish parameter separation and a complete ordered interval in Hermitian backgrounds with both mass properties; check the strict-parameter and volume-addition bounds without claiming an explicit general torsion distance formula.
+Current next unit after checkpoint 350: Check whether residual comparison and ordinary projection preserve the full residual measure on arbitrary compact Hausdorff-zero-dimensional pole sets, then test independent diffuse pole regions to determine whether one scalar top residual can repair first-polar separation. Keep the full P01/P17 research scope open and preserve readable chapter interfaces.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

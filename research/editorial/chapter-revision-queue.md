@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 349: Investigate whether ordinary projection preserves the diffuse scalar top residual Mt^n, then establish parameter separation and a complete ordered interval in Hermitian backgrounds with both mass properties; check the strict-parameter and volume-addition bounds without claiming an explicit general torsion distance formula.
+Current next unit after checkpoint 350: Check whether residual comparison and ordinary projection preserve the full residual measure on arbitrary compact Hausdorff-zero-dimensional pole sets, then test independent diffuse pole regions to determine whether one scalar top residual can repair first-polar separation. Keep the full P01/P17 research scope open and preserve readable chapter interfaces.
 
 | Chapter | Source | This cycle |
 |---|---|---|

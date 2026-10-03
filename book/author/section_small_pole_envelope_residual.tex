@@ -1,0 +1,59 @@
+Ordinary projection can change the singularity type. At a sufficiently small compact pole set, its full top-degree residual mass nevertheless remains fixed. Bounded mass controls the local approximations in every degree; the lower degrees carry no mass on that set.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:small-pole-envelope-residual}\index{Residual mass!ordinary envelope}
+Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be compact of Hausdorff dimension zero, contained in a coordinate chart. Suppose $u\in\PSH(X,\omega)$ is locally bounded off $S$, has pole set $S$, and has positive lower singularity volume. Put $p=P_\omega[u]$. For a fixed smooth Euclidean correction $q$ making $u+q$ and $p+q$ plurisubharmonic near $S$,
+\[
+ (\ddc(p+q))^n_{\mathrm{full}}(S)
+       =(\ddc(u+q))^n_{\mathrm{full}}(S).
+\]
+These scalar masses are independent of the correction.
+\end{theorem}
+\begin{proof}
+Normalize $u\leq0$ and set $p_m=P_\omega(u+m,0)$ for positive integers $m$. Then
+\[
+ u\leq p_m\leq\min(u+m,0),\qquad p_m\uparrow p
+\]
+with canonical regularization of the limit. Thus $p_m\sim u$, while $p_m,p$ are locally bounded off $S$. The model assertion follows from \cref{thm:ordinary-envelope-volumes}. By \cref{lem:monotone-psh-capacity}, the increasing convergence is in capacity. On compact subsets off $S$ the potentials have common bounded ranges, so all bounded local products converge there, by \cref{sec:psh-local-capacity}.
+
+For any $v\in\PSH(X,\omega)$ locally bounded off $S$, put $v_k=\max(v,-k)$. Fixed local Euclidean corrections and \cref{thm:small-pole-local-products} give full weak limits in every degree,
+\[
+ W_j(v)=\lim_{k\to\infty}(\ddc v_k)^j,
+ \qquad
+ \Phi_v=\lim_{k\to\infty}(\omega+\ddc v_k)^n.
+\]
+Expand in the corrected closed positive powers and smooth forms. The expressions patch because the approximating bounded currents are global. They are finite order-zero currents on compact $X$, and $\Phi_v$ is positive. Bounded Stokes gives $\int_XW_n(v)=0$. Consequently
+\begin{equation}\label{eq:small-pole-full-total}
+ J(v):=\Phi_v(X)
+ =\int_X\omega^n+
+       \sum_{j=1}^{n-1}\binom nj
+              \int_XW_j(v)\wedge\omega^{n-j}.
+\end{equation}
+The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every lower corrected closed power has zero coefficient mass on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\Phi_v(S)$; this identifies it with the displayed local residual and proves independence of the smooth correction. Also $J(v)\leq v_+(\omega)$, by the bounded truncation masses.
+
+We need uniform local trace bounds for the closed powers of $p_m$. Fix a relatively compact coordinate neighborhood and write $\kappa=\ddc|z|^2$. Choose $B>0$ so that $B\kappa\geq\omega$ there, and $A>1$ so that $A\omega-B\kappa\geq\kappa$. For $p_{m,k}=\max(p_m,-k)$, the closed current
+$T_{m,k}=B\kappa+\ddc p_{m,k}$ is positive and
+\[
+ Q_{m,k}:=A\omega+\ddc p_{m,k}\geq T_{m,k}+\kappa.
+\]
+Expanding against the positive smooth difference gives, for $1\leq j\leq n$,
+\[
+ \binom nj T_{m,k}^j\wedge\kappa^{n-j}
+       \leq Q_{m,k}^n,
+ \qquad
+ \int_XQ_{m,k}^n\leq A^n v_+(\omega).
+\]
+The last bound uses the bounded $\omega$-plurisubharmonic potential $p_{m,k}/A$. Passing $k\to\infty$ gives uniform trace bounds for every full closed power of $\ddc(p_m+B|z|^2)$, independently of $m$.
+
+For $j<n$, every subsequential weak limit of these closed positive powers gives $S$ zero coefficient mass. Off $S$ the bounded capacity convergence identifies it with the corresponding full power of $p+B|z|^2$. That power also gives $S$ zero mass, so the limit is unique. Expanding back in the smooth correction and using a finite coordinate cover yields
+\[
+ W_j(p_m)\longrightarrow W_j(p),\qquad 1\leq j<n.
+\]
+Hence \eqref{eq:small-pole-full-total} gives $J(p_m)\to J(p)$.
+
+Let $R=\Phi_u(S)$. Bounded residual invariance gives $\Phi_{p_m}(S)=R$ for every $m$. Their total masses are bounded by $v_+(\omega)$, so take a weak subsequential limit $\eta$. Off $S$, it equals $\mathrm{MA}_\omega(p)$, and its total mass is $J(p)$. The closed-set bound under weak convergence gives $\eta(S)\geq R$. Since $\Phi_p$ has the same total mass and the same restriction off $S$,
+\[
+ \Phi_p(S)=\eta(S)\geq R.
+\]
+The reverse inequality follows from $u\leq p$ and the residual-order part of \cref{lem:small-pole-residual-invariance}, after a common correction near $S$. This proves equality.
+\end{proof}

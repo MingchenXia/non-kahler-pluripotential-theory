@@ -97,3 +97,5 @@ Checkpoint347 extends the diffuse ordinary-model interval to invariant-mass Herm
 Checkpoint348 computes the entire diffuse class’s representative masses and proves the exact surface Gauduchon invariance criterion. Complete source/output/public969-page checks pass. Reconstruct/synchronize, then apply the mass bounds to model separation under the two mass properties and verify the all-surface specialization.
 
 Checkpoint349 proves the diffuse ordinary-model obstruction under both Hermitian mass properties and every Hermitian metric on a compact complex surface. Complete source/output/public971-page checks pass. Reconstruct/synchronize, then investigate scalar residual preservation by projection and parameter separation/completeness.
+
+Checkpoint350 proves scalar residual preservation by small-pole ordinary projection and the complete diffuse interval for all Hermitian backgrounds with both mass properties. Complete first/second source, final output and public975-page checks pass. Reconstruct/synchronize, then check localized residual measures and independent pole regions, keeping the exposition and proof scopes coherent.

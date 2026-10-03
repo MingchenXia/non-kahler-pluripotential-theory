@@ -183,3 +183,5 @@ Checkpoint347 settles the diffuse bounded-equivalence mass proof under the Hermi
 Checkpoint348 proves finite torsion formulas and fixed top residual loss for every diffuse bounded-equivalent representative in arbitrary Hermitian backgrounds. Surface class-wide constancy is equivalent to Gauduchon. Next use the bounds for model separation under the two mass properties, without assuming equal volumes or exact distance outside the invariant-mass regime.
 
 Checkpoint349 extends the diffuse first-polar ordinary-model obstruction to both Hermitian mass properties and all Hermitian metrics on compact complex surfaces. Next investigate scalar top residual preservation by projection and the scaled family’s parameter distances.
+
+Checkpoint350 proves scalar residual preservation and the complete strict-range diffuse interval under both Hermitian mass properties. Next investigate localized residual-measure preservation and whether independent pole regions defeat scalar residual separation. Full formal topology questions remain open.
