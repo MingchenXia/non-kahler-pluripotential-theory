@@ -1,0 +1,180 @@
+\subsection{Sobolev regularity at divisorial poles}
+\label{subsec:divisorial-sobolev}\index{Sobolev regularity!divisorial poles}
+
+At a divisorial pole, the rate of a convex transform determines which derivatives are integrable. The gradient and the classical Laplacian have different thresholds. The distributional Laplacian also retains a divisor measure unless the slope of the transform tends to zero.
+
+Let $U\subset\mathbb C^n$ be a sufficiently small neighborhood of $0$, and let $f$ be a nonzero holomorphic function with $f(0)=0$. Write
+\[
+ f=u\prod_{j=1}^N h_j^{m_j},\qquad
+ m_0=\min_jm_j,
+\]
+where $u$ is a holomorphic unit and the $h_j$ are distinct irreducible germs represented on $U$. Fix a convex nondecreasing $\chi\in C^2(({-\infty},A])$ and shrink $U$ so that $\log|f|<A-1$. Set $v=\chi(\log|f|)$ off $Z=\{f=0\}$, with its canonical plurisubharmonic extension across $Z$. All gradients, Laplacians, volumes and Sobolev spaces in this subsection are real Euclidean ones. Write $|\partial f|^2=\sum_j|\partial f/\partial z_j|^2$. Then $|\nabla|f||=|\partial f|$ off $Z$.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:holomorphic-small-level-energy}
+After shrinking $U$, there is $C>0$ such that
+\[
+ |\partial f|\leq C|f|^{1-1/m_0}\quad\text{on }U\setminus Z.
+\]
+For each $K\Subset U$, there are $C_K,r_K>0$ with
+\[
+ \int_{K\cap\{|f|=r\}}|\partial f|\,\mathrm dS\leq C_Kr
+ \qquad(0<r<r_K),
+\]
+where $\mathrm dS$ is real hypersurface measure. In particular, for nonnegative measurable $\Psi$,
+\[
+ \int_{K\cap\{0<|f|<r_K\}}\Psi(|f|)|\partial f|^2\,\mathrm dV
+ \leq C_K\int_0^{r_K}\Psi(r)r\,\mathrm dr.
+\]
+\end{lemma}
+\begin{proof}
+Shrink $U$ so that $|h_j|\leq1$ and the unit, its inverse and all first derivatives are bounded. For each $j$,
+$|f|^{1/m_0}\leq C|h_j|^{m_j/m_0}\leq C|h_j|$.
+Logarithmic differentiation of the factorization therefore gives
+\[
+ \frac{|\partial f|}{|f|}
+ \leq C\left(1+\sum_j|h_j|^{-1}\right)
+ \leq C|f|^{-1/m_0},
+\]
+which proves the first bound.
+
+For small $\zeta\in\mathbb C$, let $\mu_\zeta$ be the Euclidean volume measure of the fiber divisor $\{f=\zeta\}$, with multiplicity. The local compactness recalled in \cref{lem:qpsh-hartogs} and its preceding discussion gives $\log|f-\zeta|\to\log|f|$ in $L^1_{\mathrm{loc}}$ as $\zeta\to0$: every subsequential limit is identified off $Z$, where the convergence is locally uniform, and the same set excludes convergence to $-\infty$. The Poincar\'e--Lelong formula implies weak convergence of the fiber currents, hence of their Euclidean traces. Pairing with a fixed nonnegative cutoff equal to one near $K$ shows $\sup_{|\zeta|<r_K}\mu_\zeta(K)<\infty$.
+
+The critical locus of $f$ has finitely many local components, and $f$ is constant on each. After shrinking $U$, every remaining critical component passes through $0$ and has value zero. Thus the small nonzero fibers are smooth. On $\{|f|=r\}$ the coarea formula for the map $f$ to the circle gives
+\[
+ \int_{K\cap\{|f|=r\}}|\partial f|\,\mathrm dS
+ =\int_{|\zeta|=r}\mu_\zeta(K)\,\mathrm dS(\zeta)
+ \leq C_Kr.
+\]
+Scalar coarea for $|f|$, using $|\nabla|f||=|\partial f|$, proves the last inequality. The same formulas hold in dimension one, with fiber volume interpreted as counting measure.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:divisorial-first-sobolev}\index{Sobolev regularity!sharp first-order criterion}
+For each $2\leq p<\infty$,
+\[
+ v\in W^{1,p}_{\mathrm{loc}}(U)
+ \quad\Longleftrightarrow\quad
+ \int_{-\infty}^A|\chi'(s)|^p
+          \mathrm e^{(2-p)s/m_0}\,\mathrm ds<\infty.
+\]
+When this holds, its weak gradient is the zero extension of
+$\chi'(\log|f|)\nabla\log|f|$ from $U\setminus Z$.
+\end{proposition}
+\begin{proof}
+At a smooth point of a component of multiplicity $m_0$, outside the other components, a holomorphic root of the local unit changes the normal coordinate so that $f=w_1^{m_0}$. Bounded coordinate derivatives and Jacobians preserve local first-order Sobolev integrability. With $r=|w_1|$ and $s=m_0\log r$, polar integration of the classical gradient gives, up to fixed positive factors,
+\[
+ \int_0^{r_0}|\chi'(m_0\log r)|^p r^{1-p}\,\mathrm dr
+ =\frac1{m_0}\int_{-\infty}^{m_0\log r_0}
+       |\chi'(s)|^p\mathrm e^{(2-p)s/m_0}\,\mathrm ds.
+\]
+Such smooth points occur in every neighborhood of $0$. This proves necessity; changing the finite upper endpoint does not affect convergence.
+
+For sufficiency put
+\[
+ s_\varepsilon=\tfrac12\log(|f|^2+\varepsilon^2),
+ \qquad v_\varepsilon=\chi(s_\varepsilon).
+\]
+For small $\varepsilon>0$ these are $C^2$ plurisubharmonic functions decreasing to $v$. Convexity gives $|\chi(s)|\leq C(1+|s|)$ for $s\leq A$; local exponential integrability of $\log|f|$, recalled in \cite{SGPT}, therefore gives convergence in every finite local $L^p$ space. By the chain rule,
+\[
+ |\nabla v_\varepsilon|
+ =\chi'(s_\varepsilon)
+       \frac{|f|}{|f|^2+\varepsilon^2}|\partial f|.
+\]
+\Needspace{7\baselineskip}
+Use \cref{lem:holomorphic-small-level-energy} in scalar coarea, leaving two powers of $|\partial f|$ for the level estimate and bounding the other $p-2$ powers by its first inequality. The resulting local gradient integral is bounded by
+\[
+ C\int_0^{r_K}
+  |\chi'(\tfrac12\log(r^2+\varepsilon^2))|^p
+  \frac{r^{p+(p-2)(1-1/m_0)+1}}{(r^2+\varepsilon^2)^p}
+       \,\mathrm dr.
+\]
+With $s=\tfrac12\log(r^2+\varepsilon^2)$, use $\mathrm ds=r\,\mathrm dr/(r^2+\varepsilon^2)$ and $r\leq(r^2+\varepsilon^2)^{1/2}$ to bound this by
+\[
+ C\int_{-\infty}^A|\chi'(s)|^p
+         \mathrm e^{(2-p)s/m_0}\,\mathrm ds.
+\]
+The part where $|f|\geq r_K$ is uniformly bounded as well. Weak Sobolev compactness and the local $L^p$ convergence identify the limit as $v\in W^{1,p}_{\mathrm{loc}}$. Its weak gradient agrees with the classical one off $Z$, and $Z$ has Lebesgue measure zero, proving the final assertion.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:divisorial-laplacian-residual}\index{Laplacian!residual divisor measure}
+Let $G$ be the zero extension of
+$\chi''(\log|f|)|\nabla\log|f||^2$ from $U\setminus Z$, and put $\ell=\lim_{s\to-\infty}\chi'(s)$. For each $1\leq p<\infty$,
+\[
+ G\in L^p_{\mathrm{loc}}(U)
+ \quad\Longleftrightarrow\quad
+ \int_{-\infty}^A|\chi''(s)|^p
+        \mathrm e^{2(1-p)s/m_0}\,\mathrm ds<\infty.
+\]
+As distributions,
+\[
+ \Delta v=G+\ell\,\Delta\log|f|.
+\]
+The second term is the positive divisor measure with coefficient $\ell$. In particular, $\Delta v$ is represented by a local $L^p$ function exactly when $\ell=0$ and the displayed integral is finite.
+\end{proposition}
+\begin{proof}
+The limit $\ell\geq0$ exists because $\chi'$ is nonnegative and nondecreasing. Near a smooth divisor point, the coordinate reduction to $f=w_1^{m_0}$ makes the positive complex Hessian a single normal factor. Its Euclidean traces in the two coordinate systems are uniformly comparable, so polar integration gives necessity. In general,
+$G=\chi''(\log|f|)|\partial f|^2/|f|^2$ off $Z$.
+Scalar coarea and \cref{lem:holomorphic-small-level-energy}, now bounding the remaining $2p-2$ powers of $|\partial f|$, give
+\[
+ \int_{K\cap\{0<|f|<r_K\}}G^p\,\mathrm dV
+ \leq C\int_0^{r_K}|\chi''(\log r)|^p
+             r^{-1-2(p-1)/m_0}\,\mathrm dr.
+\]
+The substitution $s=\log r$ proves sufficiency. For $p=1$ the integral is always finite, since $\int_{-\infty}^A\chi''=\chi'(A)-\ell$.
+
+\Needspace{7\baselineskip}
+For the distribution identity, use $s_\varepsilon,v_\varepsilon$ from the preceding proof. Direct differentiation gives
+\[
+ \begin{aligned}
+ \Delta v_\varepsilon
+ &=\chi''(s_\varepsilon)
+       \frac{|f|^2|\partial f|^2}{(|f|^2+\varepsilon^2)^2}
+       +\chi'(s_\varepsilon)\Delta s_\varepsilon,\\
+ \Delta s_\varepsilon
+ &=\frac{2\varepsilon^2|\partial f|^2}
+         {(|f|^2+\varepsilon^2)^2}.
+ \end{aligned}
+\]
+\Needspace{5\baselineskip}
+Off $Z$, the first term tends locally uniformly to $G$. Its integral over $K\cap\{|f|<r_0\}$ is at most
+\[
+ C\int_{-\infty}^{\frac12\log(r_0^2+\varepsilon^2)}
+                  \chi''(s)\,\mathrm ds,
+\]
+by the level-energy estimate and the same substitution. First let $\varepsilon\to0$ and then $r_0\to0$. The bound tends to zero, so this term converges locally in $L^1$ to $G$.
+
+The positive measures $\Delta s_\varepsilon$ converge weakly to $\Delta\log|f|$, with locally bounded masses. The Poincar\'e--Lelong formula identifies this limit as a measure supported on $Z$. On $\{|f|<r_0\}$,
+\[
+ 0\leq\chi'(s_\varepsilon)-\ell
+ \leq\chi'(\tfrac12\log(r_0^2+\varepsilon^2))-\ell;
+\]
+on compact subsets where $|f|\geq r_0$, $\Delta s_\varepsilon\to0$ uniformly. The same successive limits show that
+$(\chi'(s_\varepsilon)-\ell)\Delta s_\varepsilon\to0$ weakly. Passing to distributions gives the identity. Since the nonzero divisor measure is singular with respect to Lebesgue measure, uniqueness of the Lebesgue decomposition proves the final criterion.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{example}\label{ex:divisorial-sobolev-endpoint}\index{Sobolev regularity!endpoint failure}
+Shrink $U$ so that $\log|f|<-1$. For $0<a<1$, the plurisubharmonic function
+\[
+ v_a=-(-\log|f|)^a
+\]
+has $\Delta v_a\in L^1_{\mathrm{loc}}$, while
+\[
+ v_a\in W^{1,2}_{\mathrm{loc}}
+       \quad\Longleftrightarrow\quad a<\tfrac12.
+\]
+It belongs to no $W^{1,p}_{\mathrm{loc}}$ with $p>2$ and to no $W^{2,1}_{\mathrm{loc}}$.
+\end{example}
+\begin{proof}
+Here $\chi'(s)=a(-s)^{a-1}$ and $\chi''(s)=a(1-a)(-s)^{a-2}$, with $\ell=0$. The preceding two propositions give the Laplacian assertion and the first-order thresholds. At $a=1/2$ the first-order integral diverges logarithmically; for $p>2$ its exponential factor forces divergence.
+
+For second derivatives, take a smooth divisor point with normal coordinate $w_1$ and write $F(r)=\chi(m\log r)$, $r=|w_1|$. The real tangential Hessian in the unit direction along the circle has value $F'(r)/r=m\chi'(m\log r)/r^2$. Thus its absolute integral in the normal disc is bounded below, up to a fixed positive factor, by
+\[
+ \int_0^{r_0}\chi'(m\log r)\frac{\mathrm dr}{r}
+ =\frac1m\int_{-\infty}^{m\log r_0}\chi'(s)\,\mathrm ds
+ =+\infty.
+\]
+The classical Hessian off the divisor therefore fails local $L^1$ integrability, which is necessary for $W^{2,1}_{\mathrm{loc}}$. Smooth coordinate changes preserve that Sobolev class, completing the argument.
+\end{proof}

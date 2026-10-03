@@ -193,3 +193,5 @@ Checkpoint352 completes a coherence pass of the historical chapter and Introduct
 Checkpoint353 proves an exact anisotropic maximum formula and failure of separation even with the entire base residual measure and scalar/ideal/first-polar data. Next check a uniform positive-weight family and its constant-product fibers, then continue other open directions. Full formal problems remain open.
 
 Checkpoint354 completes the uniform positive-weight proof internally. The author now directs continuation into other book-related directions and recent arXiv papers, with exact hypotheses/proof review before adoption in existing or new chapters. GitHub authentication is pending for354 publication/private backup; mathematical and editorial work continues.
+
+Checkpoint355 integrates precisely checked recent divisorial Sobolev results after the whole-book polish acceptance. Continue complete Hermitian stability/gradient and Fujiki-degeneration proof checks and other related directions; adoption requires exact assumptions and dependencies. Public355 includes354 and is verified; private354 backup is independently verified. All full formal/supplemental problems remain open.

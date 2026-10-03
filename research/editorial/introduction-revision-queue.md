@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 354: Explore other directions related to the existing book and recent arXiv papers, following the author instruction of3 October2026. Check exact versions, assumptions, statements and proof dependencies before adoption into existing or new chapters. Prioritize Hermitian fully nonlinear stability, Fujiki-class Monge–Ampere degenerations and PSH Sobolev regularity candidates; continue coherence and polishing and retain all full-scope open problems.
+Current next unit after checkpoint 355: Read the complete Guo–Song2609.39726v1 proof and dependencies, distinguishing the fixed strict-gap Hermitian subsolution from its separate Kähler Hessian regime; then check Fujiki-class degenerations and the pending primary Blocki Monge–Ampere-domain criterion. Continue other related directions and arXiv coverage catch-up, integrating only precise supported results and maintaining coherence. All23 formal and18 supplemental directions remain open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
