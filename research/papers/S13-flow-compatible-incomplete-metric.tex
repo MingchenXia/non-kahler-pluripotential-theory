@@ -1,0 +1,394 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\ddc}{dd^c}
+\newcommand{\CP}{\mathbb P}
+\newcommand{\C}{\mathbb C}
+\newcommand{\FS}{\omega_{\rm FS}}
+\title{An incomplete divisorial metric with exact geometric-smoothing data}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct geometric-smoothing data on the blowup of a product of
+projective lines for which the auxiliary divisorial exponential metric
+is incomplete on every dense Zariski open positive regular locus.
+The initial potential has analytic singularities, its resolved residual
+is K\"ahler, and the prescribed source volume is exactly the square of
+the background K\"ahler form. All class, discrepancy and smooth-volume
+identities are explicit. A rotational cusp on one factor solves the
+remaining equation. Its existence follows from ordered barriers and a
+radial integral equation. The full-mass solution has finite relative
+energy and the Lelong numbers of a minimal potential. Its exceptional
+pole is canceled by that minimal divisorial singularity, leaving a
+finite-distance boundary. The result concerns the auxiliary metric;
+it makes no assertion about completeness of the evolving maximal flow.
+\end{abstract}
+
+\section{The compatible completeness question}
+We use $\ddc=(i/(2\pi))\partial\bar\partial$.
+Let $(X,\omega)$ be compact K\"ahler with an $\omega$-psh initial
+potential $\phi_0$ having analytic singularities. On a log resolution
+$\pi:Y\to X$ write
+\begin{gather}\label{eq:resolved}
+ \pi^*\phi_0=\sum_jm_j\log|\sigma_j|^2+\ell_0,\qquad
+ \pi^*(\omega+\ddc\phi_0)=\sum_jm_j[D_j]+R_0,
+\end{gather}
+where $R_0$ is smooth closed semipositive and $D=\sum_jD_j$ is SNC.
+The section norms come from smooth Hermitian metrics, whose curvatures
+are $\Theta_j$. If $K_Y=\pi^*K_X+\sum_jb_jD_j$, set
+\begin{gather}\label{eq:compatible}
+ \lambda=\max_j\frac{m_j}{1+b_j},\qquad
+ \Theta=\sum_j(1+b_j)\Theta_j,\qquad\theta=\lambda\Theta+R_0,\\
+ |\sigma|^2=\prod_j|\sigma_j|^2,\qquad
+ \pi^*dV_X=\prod_j|\sigma_j|^{2b_j}dV_Y.\notag
+\end{gather}
+Here $dV_Y$ is smooth and strictly positive. These are the data in
+\cite[Sections 1.3 and 3.1]{DGL}. The class of $\theta$ is big and can
+be non-nef. Its designated full-mass finite-energy solution satisfies
+\begin{equation}\label{eq:target}
+ \langle(\theta+\ddc\rho)^2\rangle
+                      =e^\rho|\sigma|^{-2}dV_Y,
+\end{equation}
+with the density extended by zero on $D$.
+
+\begin{theorem}\label{thm:main}
+There are data \eqref{eq:resolved}--\eqref{eq:compatible} on compact
+K\"ahler surfaces with $dV_X=\omega^2$, $R_0$ K\"ahler and
+$D$ a disjoint union of two smooth curves, for which the solution
+of \eqref{eq:target} has full mass and belongs to
+$\mathcal E^1(Y,\theta)$ relative to a minimal potential.
+Its Lelong numbers equal those of that minimal potential.
+Every dense Zariski open set on which its current is smooth and
+strictly positive has an incomplete intrinsic metric.
+The prescribed pole coefficient is globally smooth and strictly
+positive across both components of $D$.
+\end{theorem}
+
+\section{A curve cusp with fixed smooth volume}
+On $\CP^1$ let $z=Z_1/Z_0$, $r=|z|^2$,
+$\alpha=\ddc\log(1+r)$ and $h=r/(1+r)$, so $\int\alpha=1$.
+\begin{lemma}\label{lem:cusp}
+For every $c>2$ there is a rotational function $u$, smooth on
+$\CP^1\setminus\{0\}$, such that
+\begin{equation}\label{eq:curve}
+ g_1=c\alpha+\ddc u=e^u h^{-1}c\alpha.
+\end{equation}
+It extends as a $c\alpha$-psh function with zero Lelong number at $0$,
+$\int g_1=c$, and $\int|u|\alpha+\int|u|g_1<\infty$.
+For $s=-\log r\to\infty$ and a real constant $A$,
+\begin{gather}\label{eq:cusp}
+ u=\log(2/c)-2\log(s+A)+O(e^{-s}),\\
+ u_t=2/(s+A)+O(e^{-s}),\qquad
+ u_{tt}=2/(s+A)^2+O(e^{-s}),\qquad t=\log r.\notag
+\end{gather}
+\end{lemma}
+\begin{proof}
+Put $L=1-\log h=1+\log(1+1/r)$ and $w=-2\log L$.
+Direct differentiation gives
+\[
+ \ddc w=\left(-\frac2L+\frac2{rL^2}\right)\alpha,\qquad
+ Q(r):=\frac{c\alpha+\ddc w}{e^wh^{-1}c\alpha}
+       =\frac{crL^2-2rL+2}{c(1+r)}.
+\]
+Since $L\geq1$ and $c>2$, $Q$ is positive, with positive limits
+$2/c$ at $0$ and $1-2/c$ at infinity. Thus
+$0<q_-\leq Q\leq q_+<\infty$.
+Choose $a_0\leq\min(0,\log q_-)$ and
+$b_0\geq\max(0,\log q_+)$. Then $l=w+a_0$, $H=w+b_0$ obey
+\[
+ c\alpha+\ddc l\geq e^lh^{-1}c\alpha,\qquad
+ c\alpha+\ddc H\leq e^Hh^{-1}c\alpha,\qquad l\leq w\leq H.
+\]
+
+We give the radial Dirichlet construction explicitly. The exhaustion
+$\CP^1\setminus\{|z|\leq\varepsilon\}$ is the disk
+$|\zeta|<R=1/\varepsilon$ in $\zeta=1/z$.
+With $q=|\zeta|^2$, its Euclidean equation is
+\[
+ \Delta u=f(q)e^u-g(q),\qquad
+ f(q)=\frac{4c}{1+q},\quad g(q)=\frac{4c}{(1+q)^2},
+\]
+with boundary value $w$. All these radial data are smooth at $q=0$.
+For $k>0$, the regular radial solution of
+$(-\Delta+k)v=F(q)$ with $V(R^2)=b$ is elementary.
+Writing $v=V(q)$ gives $4(qV')'=kV-F$ and the integral equation
+\begin{equation}\label{eq:volterra}
+ V(q)=A_0+\frac14\int_0^q\log(q/t)\bigl(kV(t)-F(t)\bigr)\,dt.
+\end{equation}
+Successive integration converges on every finite interval: the iterates
+of the positive kernel on $1$ give $q^j/(4^j(j!)^2)$.
+The coefficient of $A_0$ is
+$\sum_{j\geq0}(kq/4)^j/(j!)^2>0$, so a unique $A_0$
+enforces the boundary value. Differentiation gives
+\[
+ V'(q)=\frac1{4q}\int_0^q(kV-F)\,dt,
+\]
+with its continuous value at zero. Smooth data imply smooth $V$ by
+induction. The usual interior-maximum argument for $-\Delta+k$
+proves uniqueness and order preservation of this radial inverse.
+
+Choose $k\geq\sup f e^H$, positive, on the fixed disk.
+Let $T(v)$ be that inverse with boundary $w$ and right side
+$kv-fe^v+g$. This right side is nondecreasing on $[l,H]$.
+The barrier inequalities and the maximum argument give
+$l\leq T(l)$, $T(H)\leq H$, and order preservation.
+Starting from $l$, the iterates increase and remain below $H$.
+Their bounded right sides and the integrated derivative formula give
+uniform bounds for their derivatives in $q$ on the fixed disk.
+Compactness and monotonicity give uniform convergence; passing in
+\eqref{eq:volterra} gives a solution, and the derivative formula
+bootstraps it to smoothness, including the center.
+For exhaustion radii tending to infinity the same barriers bound
+solutions on each fixed disk. The nonlinear identity
+\[
+ U_q(q)=\frac1{4q}\int_0^q(f(t)e^{U(t)}-g(t))\,dt
+\]
+gives all derivative bounds there by induction.
+Diagonal compactness supplies a smooth solution on the reciprocal
+plane, including $z=\infty$, with
+$u=-2\log(-\log r)+O(1)$ at $z=0$.
+
+For the sharper expansion the radial equation in $t=\log r$ is
+\[
+ u_{tt}=\frac{ce^u}{1+e^t}-\frac{ce^t}{(1+e^t)^2}.
+\]
+Set $v(t)=u(t)+c\log(1+e^t)$ and $V(s)=v(-s)$.
+Then
+\[
+ V''=k_0(s)e^V,\qquad k_0(s)=c(1+e^{-s})^{-(c+1)},
+ \qquad V=-2\log s+O(1).
+\]
+Convexity gives $V'<0$ eventually and $V'\to0$.
+The quantity $J=(V')^2-2k_0e^V$ satisfies
+$J'=-2k_0'e^V$ and tends to zero. Since
+$k_0'=O(e^{-s})$, $e^V\asymp s^{-2}$,
+\[
+ J(s)=2\int_s^\infty k_0'(\tau)e^{V(\tau)}\,d\tau
+                         =O(e^{-s}s^{-2}).
+\]
+Therefore $(e^{-V/2})'=\sqrt{c/2}(1+O(e^{-s}))$,
+and integration gives
+$e^{-V/2}=\sqrt{c/2}(s+A)+O(e^{-s})$.
+This identity and the ODE prove \eqref{eq:cusp}.
+The local subharmonic potential $u+c\log(1+r)$ is bounded above
+at the puncture and extends there \cite[Proposition 3.3.25]{JP}.
+Its log-log growth gives zero Lelong number. The radial slope tends to
+zero, so integration by parts on punctured disks adds no point mass.
+Its positive density is asymptotic to
+$(i/(2\pi))\,2(r s^2)^{-1}\,dz\wedge d\bar z$.
+Distributional Stokes gives mass $c$. The only singular energy integral
+is bounded by $C\int^\infty\log s/s^2\,ds$; both asserted integrals
+are finite. This proves the lemma.
+\end{proof}
+
+\section{Exact compact geometry and initial data}
+Take $X=\CP^1_Z\times\CP^1_W$, with normalized FS forms
+$\alpha,\beta$, and put
+\[
+ \omega=6(\alpha+\beta),\qquad dV_X=\omega^2=72\alpha\wedge\beta.
+\]
+Let $H=\{Z_1=0\}$ and $p=([0:1],[1:0])=(\infty,0)$.
+The smooth functions
+\[
+ h_H=\frac{|Z_1|^2}{|Z_0|^2+|Z_1|^2},\qquad
+ \eta=\frac{|Z_0|^2}{|Z_0|^2+|Z_1|^2}
+                 +\frac{|W_1|^2}{|W_0|^2+|W_1|^2}
+\]
+have zero sets $H$ and $\{p\}$ respectively. Define
+$\phi_0=2\log h_H+2\log\eta$.
+Blow up $p$: $\pi:Y\to X$. Its exceptional curve $E$ is disjoint
+from $H_Y=\pi^{-1}H$. This is a smooth compact connected K\"ahler
+surface; for instance the projective blowup embeds in a product of
+projective spaces. Put $D=H_Y+E$.
+
+Set $|\sigma_H|^2=\pi^*h_H$ and $|\sigma_E|^2=\pi^*\eta$.
+The latter really is a smooth Hermitian section norm. Near $p$ write
+$x=Z_0/Z_1$, $y=W_1/W_0$. In the blowup chart $x=t$, $y=tv$,
+\[
+ \pi^*\eta=|t|^2A(t,v),\qquad
+ A(t,v)=\frac1{1+|t|^2}+\frac{|v|^2}{1+|tv|^2}>0.
+\]
+Thus the metric factor extends smoothly and positively across $E$;
+the chart with $x,y$ exchanged covers the remaining points.
+The factors agree by the Hermitian transition rule.
+
+The sections $Z_0W_0,\sqrt2Z_0W_1,Z_1W_1$ of $\mathcal O(1,1)$
+have summed squared norm $\eta$ and base ideal $(x,\sqrt2xy,y)=(x,y)$.
+After division by $\sigma_E$ they have no common zero and define
+$F:Y\to\CP^2$. If $\gamma$ is its normalized FS form, the induced
+metric gives the exact identity
+\begin{equation}\label{eq:curvatures}
+ F^*\gamma=\pi^*(\alpha+\beta)-\Theta_E,\qquad
+ \Theta_H=\pi^*\alpha.
+\end{equation}
+In the first blowup chart $F=[1:\sqrt2tv:v]$, so it is an
+isomorphism from $E$ onto a line.
+The initial logarithms have analytic singularities: near $p$,
+\[
+ \eta=\frac{|x|^2+|y|^2+2|xy|^2}{(1+|x|^2)(1+|y|^2)},
+\]
+and near $H$ the other term is smooth. The integer coefficient $2$
+can also be expressed with the usual reciprocal-integer coefficient
+by taking holomorphic powers in the sum of squares.
+Globally $\pi^*\phi_0=2\log|\sigma_H|^2+2\log|\sigma_E|^2$,
+so $\ell_0=0$, $m_H=m_E=2$, and
+\begin{align}\label{eq:residual}
+ \pi^*(\omega+\ddc\phi_0)&=2[H_Y]+2[E]+R_0,\\
+ R_0&=\pi^*\omega-2\Theta_H-2\Theta_E
+      =2\pi^*\alpha+4\pi^*\beta+2F^*\gamma.\notag
+\end{align}
+The residual is K\"ahler: away from $E$ its first two terms are
+positive; on $E$ their kernel is $TE$ and $F^*\gamma$ is positive
+there. This also proves that $\phi_0$ is $\omega$-psh.
+
+The Jacobian of $(t,v)\mapsto(t,tv)$ is $t$, giving
+$b_E=1$, $b_H=0$. Integrability at $H$ requires an exponential
+coefficient $q<1/2$, whereas at the isolated point it requires $q<1$.
+Thus $\lambda=2$ directly and from \eqref{eq:compatible}.
+Consequently
+\begin{equation}\label{eq:theta}
+ \theta=2\Theta_H+4\Theta_E+R_0=\pi^*\omega+2\Theta_E,
+ \qquad\{\theta\}=\pi^*\{\omega\}+2\{E\}.
+\end{equation}
+Its intersection with $E$ is $-2$, so the class is non-nef.
+It is big by the explicit K\"ahler current
+\[
+ \theta+\ddc(3\log|\sigma_E|^2)
+           =(\pi^*\omega-\Theta_E)+3[E],\qquad
+ \pi^*\omega-\Theta_E=5\pi^*(\alpha+\beta)+F^*\gamma>0.
+\]
+Finally define $dV_Y=\pi^*\omega^2/|\sigma_E|^2$ off $E$.
+The blowup Jacobian contributes $|t|^2$ in the numerator, canceled
+exactly by $|t|^2A(t,v)$ in the denominator. It therefore extends
+smoothly and strictly positively everywhere and satisfies
+\begin{equation}\label{eq:volume}
+ \pi^*dV_X=|\sigma_E|^2dV_Y.
+\end{equation}
+The unweighted pole $dV_Y/(|\sigma_H|^2|\sigma_E|^2)$ is
+nonintegrable along each component, with smooth strictly positive
+coefficient. All identities in the flow setup have now been checked.
+
+\section{The exact solution and its minimal reference}
+Take $u$ from Lemma~\ref{lem:cusp} with $c=6$ on the first factor,
+and write $g_X=(6\alpha+\ddc u)+6\beta$. Then
+\[
+ g_X^2=e^uh_H^{-1}\omega^2.
+\]
+It is smooth and strictly positive near $p$. Put
+\begin{equation}\label{eq:rho}
+ P=2\log|\sigma_E|^2,\qquad\rho=P+\pi^*u.
+\end{equation}
+Poincar\'e--Lelong and \eqref{eq:theta} give
+\begin{equation}\label{eq:current}
+ \theta+\ddc\rho=2[E]+\pi^*g_X.
+\end{equation}
+Off $D$, the required density is identically
+\[
+ e^\rho(|\sigma_H|^2|\sigma_E|^2)^{-1}dV_Y
+       =e^{\pi^*u}|\sigma_H|^{-2}|\sigma_E|^2dV_Y
+       =\pi^*g_X^2.
+\]
+Both measures extend by zero on $D$, so this is the global
+non-pluripolar equation \eqref{eq:target}.
+The prescribed unweighted pole is unchanged. Its exceptional factor
+is suppressed by the solution's minimal divisorial singularity.
+
+We verify minimality without assuming it from the class description.
+For any positive closed current $T$ in $\pi^*\{\omega\}+2\{E\}$,
+let $S=\pi_*T$. It is positive closed in $\{\omega\}$, and its
+pullback by local psh potentials is well defined and positive.
+Off $E$, $T=\pi^*S$. Thus $T-\pi^*S$ is closed, has order zero and
+is supported on $E$. The support theorem
+\cite[Chapter III, Corollary 2.14]{Dem} makes it a constant multiple
+of $[E]$; cohomology fixes that constant to $2$, since $E^2=-1$.
+By the K\"ahler $\partial\bar\partial$ lemma write
+$S=\omega+\ddc v$ with $v$ $\omega$-psh. Every $\theta$-psh
+potential is consequently $P+\pi^*v$ plus a constant.
+Every such $v$ is bounded above on compact $X$. Hence $P$ has
+minimal singularities.
+
+Its minimal current is $2[E]+\pi^*\omega$, whose non-pluripolar
+square has mass $\int_X\omega^2=72$. This is the volume of the
+big class \cite[Definition 1.17]{BEGZ}; the ordinary cup-product square
+is $68$ and is not the relevant mass. Lemma~\ref{lem:cusp} gives
+\[
+ \int_Y\langle(\theta+\ddc\rho)^2\rangle
+                         =\int_Xg_X^2=72.
+\]
+Thus $\rho$ has full mass. The difference $\rho-P=\pi^*u$
+is integrable for this measure, since $g_X^2=12g_1\wedge\beta$ and
+$\int|u|g_1<\infty$. Shift the minimal reference by a constant so that $\rho$ lies below it.
+The full-mass energy criterion
+\cite[Proposition 2.11(ii)]{BEGZ} proves relative $\mathcal E^1$
+membership. In fact all mixed energy integrals are finite:
+\[
+ \omega^2=72\alpha\wedge\beta,\qquad
+ g_X\wedge\omega=6g_1\wedge\beta+36\alpha\wedge\beta,
+ \qquad g_X^2=12g_1\wedge\beta,
+\]
+and $\int|u|\alpha$ is also finite. These mixed products put no
+mass on the two divisors. Near $E$, $\pi^*u$ is smooth, giving
+exactly the Lelong coefficient $2$ of $P$. The cusp on $H_Y$ has
+zero Lelong number; elsewhere everything is smooth. This verifies
+minimal Lelong numbers everywhere. For completeness, if $v$ is another
+full-mass solution, the comparison principle \cite[Corollary 2.3]{BEGZ}
+on $\{v<\rho\}$ gives
+$\int e^\rho|\sigma|^{-2}dV_Y\leq\int e^v|\sigma|^{-2}dV_Y$
+over that set. Both integrals are finite. Strict inequality of the
+integrands forces that set to have zero smooth volume; interchange
+$v$ and $\rho$ to obtain equality almost everywhere. Quasi-psh
+representatives then agree everywhere. Thus \eqref{eq:rho} is the
+equation's designated solution.
+
+\section{An unavoidable finite-distance boundary}
+The positive smooth locus of \eqref{eq:current} is
+$U_0=Y\setminus(H_Y\cup E)$. The cusp density diverges on $H_Y$;
+the nonzero integration current $2[E]$ excludes all points of $E$.
+Even the smooth metric part $\pi^*g_X$ is degenerate on $TE$.
+Let $U$ be any dense Zariski open positive regular locus.
+Its proper analytic complement has finitely many curve and point
+components \cite[Theorem 7.8 and Corollary 7.10]{Adamus} and contains
+$E$. Choose an exceptional point avoiding its intersections with all
+other components. A small coordinate neighborhood there has complement
+exactly $E$. The transverse path $(t,v_0)$, $0<t\leq\varepsilon$,
+lies in $U$ and tends to that removed point.
+Since $g_X$ is smooth near $p$ and $\pi$ is smooth, $\pi^*g_X$ has
+bounded coefficients in the whole neighborhood. This path has bounded
+speed and finite length. Its tail lengths give an intrinsic Cauchy
+sequence with no limit in $U$, since a positive smooth Riemannian
+metric induces the manifold topology. Every such $U$ is incomplete,
+proving Theorem~\ref{thm:main}.
+
+The example verifies the complete compatible data for the auxiliary
+class $\lambda\Theta+R_0$, including $dV_X=\omega^2$.
+It does not identify this auxiliary metric with the evolving maximal
+flow at other times. The distinct nefness branch has a separate
+counterexample with zero Lelong numbers; here non-nefness allows the
+minimal exceptional component that cancels its prescribed pole. Completeness
+under the simultaneous imposition of nefness and these compatible-data
+identities is a stronger question left open by the two examples.
+
+\begin{thebibliography}{9}
+\bibitem{Adamus} J.~Adamus, \emph{Complex Analytic Geometry},
+lecture notes, revised 8 December 2015,
+\href{https://www.math.uwo.ca/faculty/adamus/teaching/9607b2019/CAGI.pdf}{author's notes}.
+\bibitem{BEGZ} S.~Boucksom, P.~Eyssidieux, V.~Guedj and A.~Zeriahi,
+Monge--Amp\`ere equations in big cohomology classes,
+\emph{Acta Mathematica} 205 (2010), 199--262,
+\href{https://arxiv.org/abs/0812.3674}{arXiv:0812.3674}.
+\bibitem{Dem} J.-P.~Demailly, \emph{Complex Analytic and Differential Geometry},
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf}{author's manuscript}.
+\bibitem{DGL} E.~Di Nezza, V.~Guedj and C.~H.~Lu,
+Geometric smoothing by the K\"ahler--Ricci flow,
+\href{https://arxiv.org/abs/2607.08325}{arXiv:2607.08325v1},
+Sections 1.3 and 3.1, Theorem 3.4 and Question 3.5.
+\bibitem{JP} M.~Jarnicki and P.~Pflug, \emph{Separately analytic functions},
+manuscript, 11 November 2008,
+\href{https://www.math.stonybrook.edu/~ebedford/PapersForM537/JarnickiPflugSepHolo081111.pdf}{source copy}.
+\end{thebibliography}
+\end{document}

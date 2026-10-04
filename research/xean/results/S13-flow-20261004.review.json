@@ -1,0 +1,478 @@
+{
+  "problem": "S13-compatible-data",
+  "scope": "Complete compatible-data branch: exact geometric-smoothing initial/resolution/divisor/discrepancy/Arnold/residual/class identities, with dV_X=omega^2 and smooth strictly positive dV_Y; non-nef big auxiliary class, full mass, relative E1, minimal Lelong numbers, genuine unweakened poles, incompleteness of every dense Zariski open positive regular locus.",
+  "campaign_status": "completed",
+  "accepted_note_id": "w7-1/n3",
+  "exact_task_sha256": "c8a7179df3aa21f4347d36822bde021dfa3e244a895370a3aac22140135558bc",
+  "exact_task": {
+    "problem": "Let X be a connected compact Kahler manifold, omega a Kahler form, and dV_X a fixed globally smooth strictly positive volume form in the flow (omega+dd^c phi_t)^n=exp(partial_t phi_t)dV_X. Use dd^c=(i/(2 pi))partial barpartial. Let phi_0 be omega-psh with nonempty analytic singularities. Choose a log resolution pi:Y->X, isomorphic off the singular locus, such that\n pi^*phi_0=sum_j m_j log|sigma_j|^2+ell_0,\n pi^*(omega+dd^c phi_0)=sum_j m_j[D_j]+R_0,\nwhere m_j>0, ell_0 is smooth, D=sum_j D_j is simple normal crossing, sigma_j is the canonical defining section with a smooth Hermitian squared norm, and R_0 is a smooth closed semipositive form. Put Theta_j=curv(|sigma_j|^2). The discrepancies b_j are specified by K_Y=pi^*K_X+sum_j b_jD_j, where b_j=0 on nonexceptional strict transforms. They are nonnegative integers for this resolution of a smooth X. Let dV_Y be the globally smooth strictly positive form determined by\n pi^*dV_X=product_j |sigma_j|^(2b_j)dV_Y.\nThe global Arnold multiplicity is lambda=max_j m_j/(1+b_j), the inverse of the exponential integrability index of phi_0. Define\n Theta=sum_j(1+b_j)Theta_j,\n theta=lambda Theta+R_0,\n |sigma|^2=product_j|sigma_j|^2.\nThus {theta}=pi^*{omega}+sum_j(lambda(1+b_j)-m_j){D_j} is big. It need not be nef. These are the exact geometric-smoothing compatibility identities, and arbitrary unrelated data on Y are not a substitute for them.\nLet rho be the unique full-mass finite-energy solution, relative to a minimal theta-psh potential, of\n <(theta+dd^c rho)^n>=exp(rho)|sigma|^(-2)dV_Y,\nwith the right-hand side extended by zero on D. The pole coefficient dV_Y is smooth and strictly positive across every component of D; the prescribed unweighted pole is genuinely nonintegrable. The solution has the Lelong numbers of a minimal potential.\nQuestion: do these geometric-smoothing compatibility conditions force the induced positive metric to be complete on some dense Zariski open set where its current is smooth and strictly positive? Prove this for all these data, or disprove it by an exact compatible compact example whose metric is incomplete on every such candidate open set. The separate mere-nefness branch does not settle this question. A counterexample for an unrelated non-nef big class does not settle it until all the identities above, including the volume pushforward identity, are verified. An integrable logarithmically weakened pole with a vanishing smooth coefficient also does not settle it.\nRelevant primary source: Di Nezza, Guedj and Lu, Geometric smoothing by the Kahler-Ricci flow, arXiv:2607.08325v1, Sections1.1,1.3 and3.1, Theorem3.4 and Question3.5. For a counterexample, additionally impose dV_X=omega^n so that it also applies with the specific background volume used in the displayed flow computations. No candidate family, construction or proof is supplied. The question concerns the auxiliary divisorial metric at theta=lambda Theta+R_0, and does not assert that it is the metric of the evolving maximal flow at every time.",
+    "completionCriteria": "Resolve the geometric-smoothing-compatible branch of the original completeness question. For a negative answer explicitly verify the compact Kahler source X and resolution Y, the initial omega-psh analytic singularity, all positive coefficients and discrepancies, semipositivity of R_0, the defining smooth divisor metrics, Arnold multiplicity and exact theta identity, and the exact globally smooth positive dV_X,dV_Y with dV_X=omega^n and their discrepancy volume identity. Prove the actual divisorial equation, full non-pluripolar mass, relative E^1 finite energy and minimal Lelong numbers; identify the smooth positive locus and prove finite intrinsic distance to an unavoidable missing boundary of every dense Zariski open regular locus. Prove existence and asymptotics of auxiliary functions. Check every primary-source premise and independently reconstruct the full proof. Do not silently add nefness to this compatibility branch, weaken the prescribed pole, or claim a result for the actual time-dependent flow without proving that extra assertion."
+  },
+  "xean_commit": "a2a581701d0ee0f45188f3041553ce5353d18cb2",
+  "profile": {
+    "provider": "openai-codex",
+    "model": "gpt-6.1-sol",
+    "reasoning": "xhigh"
+  },
+  "candidate_proof_supplied": false,
+  "trusted_imports": 0,
+  "verification_counts_in_accepted_chain": {
+    "correctness": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "unchecked": 0
+    },
+    "source": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "unchecked": 0
+    },
+    "requirements": {
+      "PASS": 1,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "unchecked": 2
+    },
+    "reconstruction": {
+      "PASS": 3,
+      "FAIL": 0,
+      "INCONCLUSIVE": 0,
+      "unchecked": 0
+    }
+  },
+  "notes": [
+    {
+      "id": "w7-1/n1",
+      "summary": "Constructs, without a singular Monge–Ampère existence theorem, a rotational cusp solution on P1 with standard divisor norm and background c·FS (c>2). Proves its exact equation, logarithmic-cusp asymptotic, full mass, and finite energy; c=6 is used in the compatible counterexample.",
+      "detailedSummary": "Let α=dd^c log(1+|z|²), h=|z|²/(1+|z|²), and c>2. A smooth rotational u on P1\\{0} exists with cα+dd^c u=e^u h^{-1}cα. It extends as a cα-psh potential with zero Lelong number at 0. With s=-log|z|², u=log(2/c)-2log(s+A)+O(e^{-s}) for some real A, and the corresponding metric is a genuine cusp. Its mass is c, and both ∫|u|α and ∫|u|(cα+dd^c u) are finite. The proof uses explicit ordered barriers, Dirichlet monotone iteration on exhaustion domains, and an ODE first-integral calculation. No external existence result for the task's big-class equation is used.",
+      "text": "Auxiliary cusp lemma. Throughout dd^c=(i/(2π))∂bar∂. On P1, write z=Z1/Z0 and put α=dd^c log(1+|z|²), so ∫α=1. The standard squared norm of the section Z1 of O(1) is h=|z|²/(1+|z|²); its zero divisor is {0}. For every c>2 there is a rotational function u, smooth on P1\\{0}, such that\n\n    g1:=cα+dd^c u=e^u h^{-1}cα.                    (1)\n\nIt extends as a cα-psh function on P1, has zero Lelong number at 0, and has full mass and finite energy. More precisely, if s=-log|z|² tends to +∞, then for some A∈R,\n\n    u=log(2/c)-2log(s+A)+O(e^{-s}),\n    du/dt=2/(s+A)+O(e^{-s}),  t=log|z|²,\n    d²u/dt²=2/(s+A)²+O(e^{-s}).                  (2)\n\nExistence by explicit barriers. Set r=|z|², L=1-log h=1+log(1+1/r), and w=-2log L. Away from 0, dd^c L=α and\n\n    dd^c w=(-2/L+2/(rL²))α.\n\nConsequently g_w=cα+dd^c w is strictly positive for c>2. Its ratio to the desired right-hand side at w is\n\n    Q(r)=g_w/(e^w h^{-1}cα)\n        =(c rL²-2rL+2)/(c(1+r)).\n\nThis is positive, extends continuously to r=0 and r=∞, and has limits 2/c and 1-2/c respectively. Thus 0<q_-≤Q≤q_+<∞. Choose a≤min(0,log q_-) and b≥max(0,log q_+). Then l=w+a and H=w+b satisfy\n\n    cα+dd^c l ≥ e^l h^{-1}cα,\n    cα+dd^c H ≤ e^H h^{-1}cα,\n    l≤w≤H.                                                   (3)\n\nOn Ω_ε=P1\\{|z|≤ε}, solve (1) with Dirichlet boundary value w. Here everything is smooth and the domain has a smooth boundary. For completeness, the usual sub/supersolution construction can be reduced to elementary linear elliptic Dirichlet problems: write the equation as Δu=f e^u-g in a fixed smooth background metric. On the bounded interval [l,H] choose k≥sup f e^H. Invert -Δ+k with boundary value w, iterating\n\n    (-Δ+k)u_{j+1}=ku_j-f e^{u_j}+g,\n\nstarting from l. Inequalities (3), the linear maximum principle, and monotonicity of the right-hand side in u_j show that the iterates increase and remain below H. Their limit solves the equation. The nonlinear maximum principle gives uniqueness on Ω_ε. Since the data and domain are rotational, so is this solution.\n\nThe bounds l≤u_ε≤H are uniform on compact subsets of P1\\{0}. Interior elliptic estimates, followed by a diagonal subsequence, give a smooth rotational limit u satisfying (1) and\n\n    u=-2log(-log r)+O(1)  as r→0.                             (4)\n\nThe exhaustion includes a neighborhood of ∞, so the resulting function is smooth there. This argument establishes existence, not just a formal asymptotic solution.\n\nSharper asymptotics. For a radial function use t=log r. Equation (1) is\n\n    u''(t)=c e^{u(t)}/(1+e^t)-c e^t/(1+e^t)².\n\nSet v(t)=u(t)+c log(1+e^t), V(s)=v(-s). Then\n\n    V''(s)=k(s)e^{V(s)},\n    k(s)=c(1+e^{-s})^{-(c+1)},\n    V(s)=-2log s+O(1).\n\nConvexity and the last bound imply V'(s)→0 and V'(s)<0 for all sufficiently large s. Also k'(s)>0 and k'(s)=O(e^{-s}). The quantity F=(V')²-2k e^V obeys F'=-2k'e^V and tends to zero at infinity. Therefore\n\n    F(s)=2∫_s^∞ k'(τ)e^{V(τ)}dτ=O(e^{-s}s^{-2}).\n\nSince e^V is comparable to s^{-2}, it follows that\n\n    (d/ds)e^{-V/2}=sqrt(c/2)(1+O(e^{-s})).\n\nIntegration gives e^{-V/2}=sqrt(c/2)(s+A)+O(e^{-s}) for a real constant A. Substitution proves the first statement in (2); the derivative statements follow from the same identity and the ODE. In particular g1 is asymptotic to the usual positive cusp form, with its radial coefficient asymptotic to 2/(r s²) in the normalization (i/(2π))dz∧dbar z.\n\nExtension, mass, and energy. Locally u+c log(1+r) is subharmonic on the punctured disk and bounded above near 0; it extends subharmonically. Bound (4) implies zero Lelong number, hence no Dirac mass at 0. The density in (1) is integrable and comparable near 0 to the cusp density 1/(r s²). Globally, distributional Stokes gives ∫g1=c, so this is full mass. Moreover\n\n    ∫_{P1}|u|α<∞,\n    ∫_{P1}|u|g1<∞,\n\nbecause the only potentially singular second integral is bounded by a constant times ∫^∞ (log s)/s² ds. These integrals give the usual E1 condition on a compact curve. Finally, the right-hand coefficient cα is smooth and strictly positive, and h^{-1}cα by itself is nonintegrable: the pole has not been weakened by a vanishing coefficient.",
+      "support": [],
+      "revision": 0,
+      "imported": false,
+      "checks": [
+        {
+          "noteId": "w7-1/n1",
+          "correctness": {
+            "verdict": "PASS",
+            "report": "The barriers, their signs, and the monotone Dirichlet iteration are consistent. In particular, Q has strictly positive endpoint limits precisely under the stated sufficient condition c>2. Exhaustion gives an actual solution smooth at infinity. The radial equation and the identity F'=-2k'e^V give the asserted asymptotics, including the derivative estimates. The logarithmic-cusp growth implies zero atomic mass, while Stokes and the two weighted integrability estimates establish full mass and finite energy. Both summaries accurately preserve the range c>2 and the exact, genuinely unweakened pole. This check uses the standard analytic facts listed below, not a singular Monge–Ampère existence theorem.",
+            "premises": [
+              "On a compact smooth Riemannian surface with nonempty smooth boundary, for k>0 the Dirichlet problem for -Δ+k has a unique smooth solution for smooth forcing and boundary data, where Δ has the maximum-principle sign. Its inverse preserves inequalities. For equations Δu=f e^u-g with fixed smooth f and g, locally uniform bounds on u imply bounds on every derivative on smaller interior compact sets.",
+              "A subharmonic function on a punctured disk that is bounded above near the puncture extends subharmonically across it by upper-semicontinuous regularization. Its distributional dd^c has zero mass at the puncture when its Lelong number there is zero.",
+              "Let C be a compact Riemann surface and η a smooth positive (1,1)-form. If an η-psh potential u has full non-pluripolar mass and both ∫_C |u|η and ∫_C |u|⟨η+dd^c u⟩ are finite, then u belongs to the finite-energy class E^1(C,η), relative to the bounded minimal potential 0."
+            ]
+          },
+          "source": {
+            "verdict": "PASS",
+            "report": "All three supplied premises are established. [Taylor, §1, Theorem 1.6](https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2020/08/nlellip.pdf) supplies smooth Dirichlet solvability; the maximum principle gives the stated inequality preservation. [Binz, Appendix A](https://link.springer.com/article/10.1007/s00233-021-10192-z) supplies local elliptic estimates, which bootstrap the bounded semilinear solutions to uniform derivative bounds. Demailly’s removable-singularity theorem applies at the puncture; his Lelong mass formula identifies the atom in dimension one. BEGZ Proposition 2.11(ii), with linear weight and minimal reference 0, gives the stated E¹ implication. The note uses these results with the appropriate signs and hypotheses.",
+            "passages": [
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/0",
+                "statement": "On a compact smooth Riemannian surface with nonempty smooth boundary, for k>0 the Dirichlet problem for -Δ+k has a unique smooth solution for smooth forcing and boundary data, where Δ has the maximum-principle sign. Its inverse preserves inequalities. For equations Δu=f e^u-g with fixed smooth f and g, locally uniform bounds on u imply bounds on every derivative on smaller interior compact sets.",
+                "url": "https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2020/08/nlellip.pdf",
+                "quote": "Given g ∈ C∞(∂M), there is a unique solution u ∈ C∞(M) to (1.1)–(1.2).",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/1",
+                "statement": "On a compact smooth Riemannian surface with nonempty smooth boundary, for k>0 the Dirichlet problem for -Δ+k has a unique smooth solution for smooth forcing and boundary data, where Δ has the maximum-principle sign. Its inverse preserves inequalities. For equations Δu=f e^u-g with fixed smooth f and g, locally uniform bounds on u imply bounds on every derivative on smaller interior compact sets.",
+                "url": "https://link.springer.com/article/10.1007/s00233-021-10192-z",
+                "quote": "for all compact subsets \\(K \\subset M\\cup T\\) we have",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/2",
+                "statement": "On a compact smooth Riemannian surface with nonempty smooth boundary, for k>0 the Dirichlet problem for -Δ+k has a unique smooth solution for smooth forcing and boundary data, where Δ has the maximum-principle sign. Its inverse preserves inequalities. For equations Δu=f e^u-g with fixed smooth f and g, locally uniform bounds on u imply bounds on every derivative on smaller interior compact sets.",
+                "url": "https://link.springer.com/article/10.1007/s00233-021-10192-z",
+                "quote": "\\Vert f \\Vert _{\\mathrm {W}^{2,q}(K)} \\le C \\cdot (\\Vert f \\Vert _{\\mathrm {L}^q(M)} + \\Vert h \\Vert _{\\mathrm {L}^q(M)} )",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/3",
+                "statement": "A subharmonic function on a punctured disk that is bounded above near the puncture extends subharmonically across it by upper-semicontinuous regularization. Its distributional dd^c has zero mass at the puncture when its Lelong number there is zero.",
+                "url": "https://totomityann.github.io/pdf/lua_agbook.pdf",
+                "quote": "Then v has a unique extension",
+                "premise": 1
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/4",
+                "statement": "A subharmonic function on a punctured disk that is bounded above near the puncture extends subharmonically across it by upper-semicontinuous regularization. Its distributional dd^c has zero mass at the puncture when its Lelong number there is zero.",
+                "url": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/analmeth.pdf",
+                "quote": "ν(Θ, x) = limr→0+ν(Θ, x, r)",
+                "premise": 1
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/0/5",
+                "statement": "Let C be a compact Riemann surface and η a smooth positive (1,1)-form. If an η-psh potential u has full non-pluripolar mass and both ∫_C |u|η and ∫_C |u|⟨η+dd^c u⟩ are finite, then u belongs to the finite-energy class E^1(C,η), relative to the bounded minimal potential 0.",
+                "url": "https://arxiv.org/pdf/0812.3674v2",
+                "quote": "Eχ(ϕ)<+∞ iff ∫X(−χ)(ϕ−ϕmin)MA(ϕ)<+∞.",
+                "premise": 2
+              }
+            ],
+            "premises": [
+              "On a compact smooth Riemannian surface with nonempty smooth boundary, for k>0 the Dirichlet problem for -Δ+k has a unique smooth solution for smooth forcing and boundary data, where Δ has the maximum-principle sign. Its inverse preserves inequalities. For equations Δu=f e^u-g with fixed smooth f and g, locally uniform bounds on u imply bounds on every derivative on smaller interior compact sets.",
+              "A subharmonic function on a punctured disk that is bounded above near the puncture extends subharmonically across it by upper-semicontinuous regularization. Its distributional dd^c has zero mass at the puncture when its Lelong number there is zero.",
+              "Let C be a compact Riemann surface and η a smooth positive (1,1)-form. If an η-psh potential u has full non-pluripolar mass and both ∫_C |u|η and ∫_C |u|⟨η+dd^c u⟩ are finite, then u belongs to the finite-energy class E^1(C,η), relative to the bounded minimal potential 0."
+            ],
+            "kind": "codex-report",
+            "operationId": "ceb31882-173a-4cd0-9f6f-02aa5bcec458",
+            "reportedAt": "2026-10-04T02:11:10.233Z"
+          }
+        },
+        {
+          "noteId": "w7-1/n1",
+          "reconstruction": {
+            "verdict": "PASS",
+            "report": "The original claim, extracted statement, and both summaries agree. The barrier inequalities have the correct signs, and the Dirichlet iteration is ordered and bounded. The independent construction validly establishes existence and smoothness at infinity. Rechecking the radial ODE gives the stated constant log(2/c), shift A, and all three O(e^{-s}) estimates. The extension has zero Lelong number and no atom; distributional Stokes gives mass c. The energy integrals reduce near the puncture to convergent integrals of (log s)e^{-s} and (log s)/s². The recorded elliptic, extension, and curve-energy premises apply. The prescribed pole remains nonintegrable with a smooth positive coefficient.",
+            "statement": "Use dd^c=(i/(2π))∂∂̄. On ℙ¹, let z=Z₁/Z₀, let α=dd^c log(1+|z|²) be the normalized Fubini–Study form, so that ∫ℙ¹α=1, and let h=|z|²/(1+|z|²) be the standard squared norm of the section Z₁ of O(1), with zero divisor {0}.\n\nFor every real c>2, there exists a rotational function u, smooth on ℙ¹\\{0}, such that\n  g₁:=cα+dd^c u=e^u h⁻¹cα\non ℙ¹\\{0}. The function extends as a cα-psh function on ℙ¹, with u(0)=−∞ and zero Lelong number at 0. Its current g₁ has no atom at 0 and equals the zero-extension of the displayed density.\n\nThere is a real constant A such that, with t=log|z|² and s=−t→+∞,\n  u=log(2/c)−2log(s+A)+O(e^(−s)),\n  du/dt=2/(s+A)+O(e^(−s)),\n  d²u/dt²=2/(s+A)²+O(e^(−s)).\nIn particular u=−2log(−log|z|²)+O(1), and the coefficient of g₁ relative to (i/(2π))dz∧d z̄ is asymptotic to 2/(|z|²s²) at 0. The function is smooth at ∞.\n\nThe current has full non-pluripolar mass ∫ℙ¹g₁=c, and\n  ∫ℙ¹|u|α<∞,   ∫ℙ¹|u|g₁<∞.\nConsequently u∈E¹(ℙ¹,cα), relative to the bounded minimal potential 0. The coefficient cα in its equation is globally smooth and strictly positive, whereas the prescribed unweighted pole measure h⁻¹cα is nonintegrable near 0.",
+            "proof": "Write Lf=(dd^c f)/α. This is a positive elliptic Laplacian with the maximum-principle sign. All differential inequalities below use this normalization.\n\n1. Global barriers and existence. On the punctured affine chart put t=log|z|², h=e^t/(1+e^t), q=1-h and r=-log h=log(1+e^(-t)). For a radial function v, the equation in the note becomes\n  v''+c hq=c e^v q.                                      (1)\nHere and below primes in this equation mean t-derivatives. Notice that r'=-q and r''=hq. Choose a>0 sufficiently large that ca²-2a-2≥0, and define\n  l=log(2/c)-2log(a+r).\nThe function l is smooth on P¹\\{0}, including at infinity: in the coordinate ζ=1/z, r=log(1+|ζ|²). Direct differentiation gives\n  l''+c hq=hq(c-2/(a+r))+2q²/(a+r)².\nConsequently the ratio of this expression to c e^l q is\n  K(r)=1+(e^(-r)/2)(c(a+r)²-2(a+r)-2).\nOur choice of a makes K≥1. The function K is bounded on [0,∞), and tends to 1 at infinity. Let B=log(sup K)≥0 and b=l+B. Thus, globally on P¹\\{0},\n  Ll≥c h^(-1)e^l-c,       Lb≤c h^(-1)e^b-c.             (2)\nThese inequalities also hold at infinity by smooth continuation. In particular l and b are ordered lower and upper barriers.\n\nHere is an existence argument using the permitted linear Dirichlet premise. Let Ω_ε=P¹\\{|z|<ε}, with 0<ε<1. Set f=c h^(-1), and choose k>0 with k≥sup_{Ω_ε} f e^b. Starting from v₀=l, solve successively\n  (-L+k)v_{j+1}=c+kv_j-f e^{v_j},    v_{j+1}|_{∂Ω_ε}=l.\nEvery step has a unique smooth solution by that premise. The right side, considered as a function of v_j, is nondecreasing on [l,b]. Applying positivity of the Dirichlet inverse to (2) and then inductively gives\n  l≤v_j≤v_{j+1}≤b.\nUniqueness at each linear step also makes every v_j rotational.\n\nFor completeness, convergence in this iteration does not require assuming nonlinear existence. On any compact t-interval inside Ω_ε, its linear equation says\n  v_{j+1}''=hq[k(v_{j+1}-v_j)-c+f e^{v_j}].\nThe barrier bounds give uniform bounds for these second derivatives. The functions and their first derivatives therefore have compactness in C¹ on smaller intervals (a first-derivative bound follows from the mean value theorem and the second-derivative bound). Monotonicity identifies every limit with the same pointwise limit v. The displayed equation then gives convergence of second derivatives and shows that v solves (1); ordinary differentiation bootstraps it to smoothness on every finite t-interval.\n\nThe limit is also smooth at infinity. It is bounded there, and (1) gives v''=O(e^(-t)). Hence v' has a limit, which must be zero by boundedness, and v'=O(e^(-t)); thus v has a finite limit. With ξ=e^(-t)=|ζ|² and V(ξ)=v(-log ξ), equation (1) is\n  (ξ V')'=c e^V/(1+ξ)-c/(1+ξ)²=:F(ξ,V).\nWe have ξV'→0. Integrating yields\n  V'(ξ)=∫₀¹ F(τξ,V(τξ)) dτ.\nFirst this proves C¹ regularity at ξ=0, and successive differentiation proves C^∞ regularity there. It also proves the equation at infinity. We have consequently obtained a smooth solution on Ω_ε with l≤v≤b.\n\nTake ε tending to zero. On every compact subset of P¹\\{0}, the barriers bound these solutions uniformly; the stated nonlinear interior regularity premise applies to Lv=f e^v-c, whose coefficients are fixed and smooth on that subset. A diagonal smooth limit gives a rotational solution u on P¹\\{0}, smooth also at infinity, with l≤u≤b. Equation (1) implies strict positivity of cα+dd^c u there.\n\n2. Precise cusp asymptotics. Let s=-t and U(s)=u(-s). The barriers give U=-2log s+O(1). Equation (1) becomes\n  U''=c e^U+F₀(s),\nwhere\n  F₀=c e^U(q-1)-c hq=O(e^(-s)).                       (3)\nHere h=e^(-s)/(1+e^(-s)) and q=1/(1+e^(-s)). In particular U''=O(s^(-2)), and U''>0 for sufficiently large s, because the lower barrier makes e^U bounded below by a positive multiple of s^(-2). The derivative U' has a finite limit; the estimate U=-2log s+O(1) forces that limit to be zero. Integrating U'' from infinity shows U'=O(1/s) and U'<0 eventually.\n\nDefine E=U'²-2c e^U. Then E'=2U'F₀=O(e^(-s)/s), and E tends to zero. Thus E=O(e^(-s)/s). For W=e^(-U/2), we have W comparable to s, W'>0 eventually, and\n  W'²=c/2+(W²/4)E=c/2+O(s e^(-s)).\nWriting k₀=√(c/2), it follows that W'=k₀+O(s e^(-s)). The error is integrable, so for a real constant A,\n  W=k₀(s+A)+O(s e^(-s)).\nTaking logarithms and using the derivative estimate and (3), respectively, gives\n  U=log(2/c)-2log(s+A)+O(e^(-s)),\n  U'=-2/(s+A)+O(e^(-s)),\n  U''=2/(s+A)²+O(e^(-s)).\nSince du/dt=-U' and d²u/dt²=U'', these are exactly the three asserted expansions.\n\n3. Extension, mass, and energy. Near zero the local potential u+c log(1+|z|²) is subharmonic and bounded above. The permitted removable-singularity premise extends it subharmonically across zero. The expansion shows that its upper-semicontinuous value there is -∞ and that its Lelong number is zero: its growth divided by log|z|² tends to zero. Thus u extends as a cα-psh function, and the same premise says that its current has no atom at zero.\n\nIn the z coordinate,\n  cα+dd^c u=(i/(2π))(c/(1+|z|²)²+u_tt/|z|²) dz∧d z̄.\nThe coefficient is asymptotic to 2/(|z|²s²). This density is integrable at zero. Since there is no atom, the global current equals the zero-extension of e^u h^(-1)cα. Its total mass is c: u is globally locally integrable, and dd^c u evaluated on the constant test function has integral zero. The non-pluripolar current is this same measure, since the only infinite locus is {0} and the measure does not charge it. It therefore has full non-pluripolar mass.\n\nNear zero, the two relevant integrals are bounded, up to constants, by\n  ∫^∞ (log s)e^(-s) ds  and  ∫^∞ (log s)s^(-2) ds,\nrespectively. They converge; elsewhere u and the densities are smooth. Hence ∫|u|α and ∫|u|g₁ are finite. Applying the stated E¹ premise to the compact curve, with η=cα, proves u∈E¹(P¹,cα), relative to the bounded minimal potential 0. Finally h^(-1)cα has local density asymptotic to c/|z|². It is nonintegrable, and its coefficient cα is a smooth strictly positive form across zero. All statements of this note follow."
+          }
+        }
+      ],
+      "verified": true,
+      "dead": false,
+      "accepted": false,
+      "candidate": false
+    },
+    {
+      "id": "w7-1/n2",
+      "summary": "Exact compact compatible geometry: X=P1×P1, ω=6(FS1+FS2), initial φ0=2log h_H+2log η, H={z=0}, isolated pole p=(∞,0), and Y=Bl_p X. All coefficients are 2, discrepancies are 0 and 1, λ=2, R0 is actually Kähler, and θ=πω+2Θ_E is big non-nef. The divisor norms and the smooth positive discrepancy volume dVY are explicit; dVX=ω².",
+      "detailedSummary": "With homogeneous coordinates, h_H=|Z1|²/(|Z0|²+|Z1|²), η=|Z0|²/(|Z0|²+|Z1|²)+|W1|²/(|W0|²+|W1|²). η vanishes only at p=(∞,0) and is the sum of squared norms of sections Z0W0, sqrt(2)Z0W1, Z1W1 of O(1,1). Blowing up p resolves their base ideal. Define |σ_E|²=πη and |σ_H|²=πh_H. The induced morphism F:Y→P2 gives Θ_E=π(α+β)-F*FS, and R0=2πα+4πβ+2F*FS is Kähler. Thus πφ0=2log|σ_H|²+2log|σ_E|² with ell0=0 and θ=πω+2Θ_E. D=H_Y⊔E is SNC, m_H=m_E=2, b_H=0,b_E=1, λ=2. Set dVX=ω² and dVY=πω²/|σ_E|²; the Jacobian calculation proves this quotient smooth and strictly positive on all Y, yielding the exact required volume identity. θ·E=-2.",
+      "text": "Exact compact geometric data. Let X=P1_Z×P1_W, with z=Z1/Z0 and w=W1/W0. Denote the normalized Fubini–Study forms on the two factors by α and β, and choose\n\n    ω=6(α+β),             dV_X=ω²=72 α∧β.\n\nLet H={Z1=0}={z=0}, and let p=([0:1],[1:0])=(∞,0), which is disjoint from H. Define globally smooth nonnegative functions\n\n    h_H=|Z1|²/(|Z0|²+|Z1|²),\n    η=|Z0|²/(|Z0|²+|Z1|²)+|W1|²/(|W0|²+|W1|²).\n\nHere h_H is the standard squared norm of the canonical section of O(H). The zero set of η is exactly {p}. Put\n\n    φ0=2log h_H+2log η,\n\nwith value -∞ on H∪{p}.\n\nLet π:Y=Bl_p X→X be the ordinary blowup. Write H_Y=π^{-1}H and E for its exceptional curve. Then D=H_Y+E is a disjoint union of two smooth divisors, hence is SNC. The blowup is an isomorphism off p, and in particular off the singular locus H∪{p}.\n\nExplicit smooth divisor metrics. Use |σ_H|²=πh_H, giving Θ_H=πα. Use\n\n    |σ_E|²=πη.                                                (5)\n\nEquation (5) really defines a smooth Hermitian metric on O(E), not only a function off E. For example, near p use coordinates x=Z0/Z1, y=W1/W0. Then\n\n    η=|x|²/(1+|x|²)+|y|²/(1+|y|²).\n\nIn the blowup chart x=t, y=tv, this becomes\n\n    πη=|t|² A(t,v),\n    A(t,v)=1/(1+|t|²)+|v|²/(1+|tv|²)>0.\n\nThus the local metric factor A is smooth and strictly positive across t=0; the other chart is identical with x,y interchanged. These local factors transform by the Hermitian metric rule.\n\nA useful globally exact curvature formula follows from the three sections\n\n    S0=Z0W0,  S1=sqrt(2) Z0W1,  S2=Z1W1\n\nof L=O(1,1), equipped with the product FS metric. Their summed squared norm is η. Their common base locus is only p, and in the coordinates above their ideal is (x,sqrt(2)xy,y)=(x,y). After blowing up and dividing by σ_E, they have no common zero and define a morphism F:Y→P2. If γ is the normalized FS form on P2, the induced FS metric on πL−E gives\n\n    F*γ=π(α+β)−Θ_E.                                         (6)\n\nThis is also obtained locally by taking dd^c of the logarithm of the sum of squared holomorphic coordinates. On E, F is an isomorphism onto a line: in the first blowup chart F=[1:sqrt(2)tv:v], so on E it is [1:0:v].\n\nAnalytic singularities and positivity. Near H, φ0=2log|z|² plus a smooth term. Near p,\n\n    η=(|x|²+|y|²+2|xy|²)/((1+|x|²)(1+|y|²)),\n\nso φ0 has analytic singularities from the holomorphic ideal (x,y), with coefficient 2. On Y there is the exact identity\n\n    πφ0=2log|σ_H|²+2log|σ_E|²,\n\nso ell0=0 and m_H=m_E=2. Poincaré–Lelong gives\n\n    π(ω+dd^c φ0)=2[H_Y]+2[E]+R0,\n    R0=πω−2Θ_H−2Θ_E\n      =2πα+4πβ+2F*γ.                                        (7)\n\nThe last expression is smooth, closed, and semipositive. In fact it is Kähler: away from E the first two summands are already positive; on E they are positive in the nonvertical normal direction and F*γ is positive on TE. Thus φ0 is ω-psh and (7) verifies the required residual semipositivity directly, rather than assuming a suitable analytic pole exists.\n\nDiscrepancies and Arnold multiplicity. The usual blowup Jacobian in the chart x=t,y=tv has complex determinant t. Hence K_Y=π*K_X+E; b_H=0 and b_E=1. Therefore\n\n    λ=max{m_H/(1+b_H),m_E/(1+b_E)}=max{2,1}=2.\n\nThis also follows directly from exponential integrability: at H, e^{-qφ0} is integrable exactly for q<1/2; the isolated point singularity in complex dimension two has threshold q<1. Thus the global threshold is 1/2 and its inverse is 2.\n\nExact theta identity. The task's Θ is Θ_H+2Θ_E, so\n\n    θ=λΘ+R0=2Θ_H+4Θ_E+R0=πω+2Θ_E.                         (8)\n\nConsequently {θ}=π{ω}+2{E}, precisely the required class formula: the added coefficient at H is 2−2=0, and that at E is 4−2=2. This class is non-nef, since its intersection with E is −2. It is big: the smooth form πω−Θ_E=5π(α+β)+F*γ is Kähler, by the same tangent-space argument as above, and\n\n    θ+dd^c(3log|σ_E|²)=(πω−Θ_E)+3[E]\n\nis a Kähler current in its class.\n\nExact smooth positive volume identity. Set\n\n    dV_Y=πω²/|σ_E|²                                         (9)\n\noff E. In the chart x=t,y=tv, the numerator is |t|² times a smooth strictly positive volume coefficient, because the Jacobian is t. The denominator is |t|²A(t,v), with A strictly positive and smooth. Thus (9) extends to a globally smooth strictly positive volume form on Y. The other blowup chart verifies the extension everywhere on E; away from E the quotient was already smooth positive. We have identically on Y\n\n    π*dV_X=|σ_H|^{2b_H}|σ_E|^{2b_E}dV_Y=|σ_E|²dV_Y.\n\nThis checks the volume pushforward/discrepancy identity with the requested dV_X=ω², not an independently chosen unrelated volume. Finally, dV_Y/(|σ_H|²|σ_E|²) is genuinely nonintegrable near each component: locally it has a positive smooth coefficient times the ordinary unweighted |t|^{-2} pole. No logarithmic weakening or vanishing pole coefficient is present.",
+      "support": [],
+      "revision": 0,
+      "imported": false,
+      "checks": [
+        {
+          "noteId": "w7-1/n2",
+          "correctness": {
+            "verdict": "PASS",
+            "report": "All compatibility identities check directly. The three sections have summed squared norm η and base ideal (x,y); dividing on the blowup gives F and Θ_E=π*(α+β)-F*γ. Consequently R0=2π*α+4π*β+2F*γ is Kähler: the pullback terms control directions transverse to E and F controls TE. The coefficients, discrepancies, integrability thresholds, λ=2, and θ=π*ω+2Θ_E agree exactly. Restricting the curvature formula to E gives degree -1, hence θ·E=-2. The displayed Kähler current proves bigness without nefness. Finally, the Jacobian factor |t|² cancels the divisor norm factor |t|²A in dV_Y, leaving a smooth strictly positive coefficient. Thus dV_X=ω² and the discrepancy volume identity hold globally, and the prescribed pole remains nonintegrable at both components. Both summaries match the full note.",
+            "premises": []
+          },
+          "source": {
+            "verdict": "PASS",
+            "report": "The correctness check identified no nonroutine external premise."
+          }
+        },
+        {
+          "noteId": "w7-1/n2",
+          "reconstruction": {
+            "verdict": "PASS",
+            "report": "All geometric compatibility identities check exactly. The local factor |σ_E|²=|t|²A defines a smooth positive Hermitian metric. The divided sections give F*γ=π*(α+β)−Θ_E; their differential along E supplies the missing tangent positivity, proving both R₀ and π*ω−Θ_E Kähler. The initial analytic singularities have m_H=m_E=2, discrepancies 0 and 1, and global Arnold multiplicity 2. Consequently θ=π*ω+2Θ_E, with θ·E=−2 and the displayed Kähler current proving bigness. With dV_X=ω², the Jacobian factor |t|² cancels exactly against the divisor norm in dV_Y, producing a globally smooth strictly positive volume and the required discrepancy identity. The unweighted pole diverges near both divisors. The extraction, independent proof, and summaries faithfully preserve these findings.",
+            "statement": "Use dd^c=(i/(2π))∂∂̄. Let X=ℙ¹_Z×ℙ¹_W, with affine coordinates z=Z₁/Z₀ and w=W₁/W₀. Let α and β be the pullbacks of the normalized Fubini–Study forms on the respective factors. Set\n  ω=6(α+β),   dV_X=ω²=72α∧β.\nThus X is a connected compact Kähler surface and dV_X is globally smooth and strictly positive. Let H={Z₁=0} and p=([0:1],[1:0])=(∞,0), so p∉H. Define the globally smooth nonnegative functions\n  h_H=|Z₁|²/(|Z₀|²+|Z₁|²),\n  η=|Z₀|²/(|Z₀|²+|Z₁|²)+|W₁|²/(|W₀|²+|W₁|²),\nand set φ₀=2log h_H+2log η, with value −∞ on H∪{p}. The function h_H is the standard squared norm of the canonical section of O(H), and η vanishes exactly at p.\n\nLet π:Y=Bl_pX→X be the ordinary blowup, let E be its exceptional curve, and let H_Y=π⁻¹H. The surface Y is compact Kähler, π is an isomorphism off p and hence off the singular locus of φ₀, and D=H_Y+E is a disjoint union of smooth divisors, hence simple normal crossing. Give the canonical defining sections the squared norms\n  |σ_H|²=π*h_H,   |σ_E|²=π*η.\nThese are smooth Hermitian divisor metrics. More explicitly, near p take x=Z₀/Z₁ and y=W₁/W₀, so that\n  η=|x|²/(1+|x|²)+|y|²/(1+|y|²).\nIn the blowup chart x=t, y=tv,\n  |σ_E|²=|t|²A(t,v),\n  A(t,v)=1/(1+|t|²)+|v|²/(1+|tv|²)>0.\nThe corresponding formula with x and y interchanged holds in the other chart; these smooth positive factors define the global Hermitian metric on O(E).\n\nWrite Θ_H and Θ_E for the curvatures, with dd^c log|σ_j|²=[D_j]−Θ_j. Then Θ_H=π*α. The three sections\n  S₀=Z₀W₀,   S₁=√2 Z₀W₁,   S₂=Z₁W₁\nof O(1,1), equipped with the product Fubini–Study metric, have summed squared norm η and common base locus exactly p. Their local ideal at p is (x,√2xy,y)=(x,y). After pullback and division by σ_E they have no common zero and define a morphism F:Y→ℙ². If γ is the normalized Fubini–Study form on ℙ², then\n  F*γ=π*(α+β)−Θ_E.\nOn E, F is an isomorphism onto a line; in the chart x=t,y=tv it is F=[1:√2tv:v], restricting to [1:0:v] on E.\n\nThe function φ₀ is ω-psh with analytic singularities and singular locus exactly H∪{p}. Near H it is 2log|z|² plus a smooth function. Near p,\n  η=(|x|²+|y|²+2|xy|²)/((1+|x|²)(1+|y|²)),\nand its analytic singularity has ideal (x,y) and coefficient 2. On Y the exact identities are\n  π*φ₀=2log|σ_H|²+2log|σ_E|²,\n  π*(ω+dd^cφ₀)=2[H_Y]+2[E]+R₀,\n  R₀=π*ω−2Θ_H−2Θ_E=2π*α+4π*β+2F*γ.\nIn particular ℓ₀=0, m_H=m_E=2, and R₀ is smooth, closed and Kähler, hence semipositive.\n\nThe discrepancies satisfy\n  K_Y=π*K_X+E,   b_H=0,   b_E=1.\nThe global Arnold multiplicity is\n  λ=max{m_H/(1+b_H),m_E/(1+b_E)}=max{2,1}=2.\nEquivalently, e^(−qφ₀) is locally integrable along H exactly for q<1/2, locally integrable at p exactly for q<1, and globally integrable exactly for q<1/2.\n\nWith the required definition Θ=Θ_H+2Θ_E, one has the exact identity\n  θ=λΘ+R₀=2Θ_H+4Θ_E+R₀=π*ω+2Θ_E.\nThus\n  {θ}=π*{ω}+2{E}\n       =π*{ω}+Σ_{j∈{H,E}}(λ(1+b_j)−m_j){D_j},\nwhere the added coefficients at H_Y and E are respectively 0 and 2. This class is non-nef, since {θ}·E=−2, and big. More specifically,\n  π*ω−Θ_E=5π*(α+β)+F*γ\nis Kähler, and\n  θ+dd^c(3log|σ_E|²)=(π*ω−Θ_E)+3[E]\nis a Kähler current.\n\nThe form defined off E by\n  dV_Y=π*(ω²)/|σ_E|²\nextends to a globally smooth strictly positive volume form on Y. In the chart x=t,y=tv, its numerator is |t|² times a smooth strictly positive volume coefficient and its denominator is |t|²A(t,v). The exact global discrepancy volume identity is\n  π*dV_X=|σ_H|^(2b_H)|σ_E|^(2b_E)dV_Y=|σ_E|²dV_Y.\nFinally, with |σ|²=|σ_H|²|σ_E|², the prescribed measure |σ|⁻²dV_Y is genuinely nonintegrable near each component of D: its local pole is |t|⁻² multiplied by a smooth strictly positive coefficient. Its coefficient does not vanish, and the prescribed pole has no logarithmic weakening.",
+            "proof": "We verify the data directly, using the normalization dd^c=(i/(2π))∂∂̄ and hence dd^c log|σ_j|²=[D_j]-Θ_j.\n\n1. Source, blowup, and divisor metrics. The product X=P¹×P¹ is connected, compact and projective. Its normalized product forms α,β satisfy ∫_X α∧β=1 and α²=β²=0. Therefore ω=6(α+β) is Kähler and\n  dV_X=ω²=72α∧β\nis globally smooth and strictly positive. The stated function h_H is the squared norm of Z₁ for the Fubini–Study metric on O(1) from the first factor; its zero divisor is H. The function η is smooth and nonnegative and vanishes precisely when Z₀=W₁=0, namely at p=(∞,0). This point does not lie on H.\n\nLet Y be the ordinary blowup of p. It is a connected compact projective surface; below we also construct an explicit Kähler form on it. Its exceptional curve E is P¹. Since p∉H, the strict transform H_Y equals π^(-1)H and is disjoint from E. Thus D=H_Y+E is simple normal crossing, and π is an isomorphism outside p, in particular outside H∪{p}.\n\nSet |σ_H|²=π*h_H. This is the smooth pullback Hermitian metric on O(H_Y). Near p use x=Z₀/Z₁, y=W₁/W₀. Then\n  η=|x|²/(1+|x|²)+|y|²/(1+|y|²).\nIn the chart x=t,y=tv of the blowup,\n  π*η=|t|²A(t,v),\n  A(t,v)=1/(1+|t|²)+|v|²/(1+|tv|²).\nThe factor A is smooth and strictly positive, including on t=0. In the other chart y=τ,x=τu, the corresponding factor is\n  1/(1+|τ|²)+|u|²/(1+|τu|²).\nConsequently π*η divided by the squared modulus of a local defining equation for E is a smooth positive factor. The factors transform by the squared moduli of the divisor transition functions. They define a global smooth Hermitian metric on O(E) for which the canonical section satisfies |σ_E|²=π*η. This equality also holds on E, where both functions vanish. Denote the two smooth curvature forms by Θ_H,Θ_E. We have Θ_H=π*α.\n\n2. The morphism F and positivity. For the product Fubini–Study metric on O(1,1), the three sections\n  S₀=Z₀W₀, S₁=√2 Z₀W₁, S₂=Z₁W₁\nhave summed squared norm\n  (|Z₀W₀|²+2|Z₀W₁|²+|Z₁W₁|²)/((|Z₀|²+|Z₁|²)(|W₀|²+|W₁|²))=η.\nTheir sole common zero is p. In the local frame Z₁W₀ near p their functions are x,√2xy,y, which generate (x,y). Pullback to the blowup and division by the canonical section σ_E gives three sections without a common zero, defining a morphism F:Y→P². Indeed in the first chart their homogeneous coordinates are\n  F=[1:√2tv:v].\nIn the second chart they are [u:√2τu:1]. On E these formulas give [1:0:v] and [u:0:1], so F|_E is an isomorphism onto the line with middle coordinate zero.\n\nThe three divided sections lie in L=π*O(1,1)⊗O(-E). Their summed squared norm for the induced metric is η pulled back divided by |σ_E|², hence identically 1. The local Fubini–Study formula, or equivalently the curvature formula for these sections, gives the exact smooth-form identity\n  F*γ=π*(α+β)-Θ_E.                                  (4)\nIt follows that\n  κ:=π*ω-Θ_E=5π*(α+β)+F*γ\nis Kähler. To check strict positivity, outside E the first summand is strictly positive because π is an isomorphism. At a point of E, the kernel of π*(α+β) is exactly TE, as dπ has rank one and kernel TE. The restriction of F*γ to TE is strictly positive because F|_E is an immersion. The two semipositive forms therefore have no common nonzero null vector. This proves positivity at E as well, and supplies the promised Kähler form on Y.\n\nThe same argument proves that\n  R₀=2π*α+4π*β+2F*γ\nis a smooth closed Kähler form: the first two summands have common kernel TE on E and are strictly positive outside E, while the last is positive on TE.\n\n3. Initial potential and exact resolution identities. The function φ₀=2log h_H+2log η has analytic singularities. In local frames, h_H is a squared holomorphic defining function times a smooth positive factor, and η is the sum of squared moduli of the three section functions times a smooth positive factor. Their product is again a sum of squared moduli of holomorphic functions times a smooth positive factor. Thus φ₀ is exactly twice a logarithm of such a sum, plus a smooth function. Its singular locus is H∪{p}. Near H, η is strictly positive, so the singularity is 2log|z|² plus a smooth function. Near p,\n  η=(|x|²+|y|²+2|xy|²)/((1+|x|²)(1+|y|²)),\nwhich exhibits the ideal (x,√2xy,y)=(x,y) and coefficient 2.\n\nBy the prescribed divisor metrics, there is no residual function in the pullback potential:\n  π*φ₀=2log|σ_H|²+2log|σ_E|².\nPoincaré–Lelong therefore gives\n  π*(ω+dd^cφ₀)=2[H_Y]+2[E]+R₀,\n  R₀=π*ω-2Θ_H-2Θ_E.\nUsing (4) turns this last expression into precisely the Kähler form already proved positive. In particular ℓ₀=0 and m_H=m_E=2. This also establishes that φ₀ is ω-psh on X: push forward the positive current on the right. Proper pushforward commutes with dd^c; π_*π*φ₀=φ₀ as locally integrable functions, π_*π*ω=ω, and π_*[E]=0. The resulting current is ω+dd^cφ₀ and is positive.\n\n4. Discrepancies, Arnold multiplicity, and θ. In the chart x=t,y=tv,\n  π*(dx∧dy)=t dt∧dv.\nThus the Jacobian has a simple zero on E and no other zero divisor. The analogous calculation in the other chart gives\n  K_Y=π*K_X+E.\nAccordingly b_E=1 and b_H=0. All discrepancy and multiplicity coefficients have the required values and signs.\n\nNear H, exp(-qφ₀) is a positive smooth factor times |z|^(-4q), whose one-complex-dimensional integral is finite exactly when q<1/2. Near p it is comparable to (|x|²+|y|²)^(-2q), whose two-complex-dimensional integral is finite exactly when q<1. At the endpoints the integrals diverge. Compactness and smoothness away from these sets show that the global integrability threshold is 1/2. Hence the stated Arnold multiplicity is\n  λ=max{2/(1+0),2/(1+1)}=2.\nThe required weighted curvature sum and θ are therefore\n  Θ=Θ_H+2Θ_E,\n  θ=2Θ_H+4Θ_E+R₀=π*ω+2Θ_E.                         (5)\nBecause Θ_E represents {E}, this proves the exact compatibility identity\n  {θ}=π*{ω}+2{E}=π*{ω}+Σ_j(λ(1+b_j)-m_j){D_j},\nwith coefficients 0 at H_Y and 2 at E.\n\nThe exceptional curve has normal bundle O_P¹(-1), as also follows from the two blowup coordinate transitions, so E²=-1; moreover π*{ω}·E=0. Thus {θ}·E=-2 and the class is not nef. It is big, without any nefness assertion: by (5),\n  θ+dd^c(3log|σ_E|²)=(π*ω-Θ_E)+3[E]=κ+3[E]\nis a Kähler current. The form κ was explicitly proved Kähler above.\n\n5. Exact volumes and unmodified poles. Off E define dV_Y=π*(ω²)/|σ_E|². Let ν_{t,v}=(i/(2π))dt∧d t̄ ∧ (i/(2π))dv∧d v̄. In the first blowup chart the exact expressions are\n  π*(ω²)=72|t|²/((1+|t|²)²(1+|tv|²)²) ν_{t,v},\n  dV_Y=72/((1+|t|²)²(1+|tv|²)² A(t,v)) ν_{t,v}.\nThe second coefficient is smooth and strictly positive through t=0. The other chart has the analogous formula, and the extensions agree on overlaps because they already agree off E. Away from E the original quotient is smooth and positive. Consequently this defines a globally smooth strictly positive volume form on Y, with the exact global identity\n  π*dV_X=|σ_E|²dV_Y=|σ_H|^(2b_H)|σ_E|^(2b_E)dV_Y.\nThere is no volume adjustment: dV_X is exactly ω².\n\nFinally H_Y and E are disjoint. Near either component, the squared norm of its defining section is |t|² times a smooth strictly positive function, the other section norm is strictly positive, and dV_Y is strictly positive. Therefore |σ|^(-2)dV_Y has local density |t|^(-2) times a smooth strictly positive coefficient. Its transverse integral diverges logarithmically at every point of either component. This is exactly the prescribed unweighted pole, with neither a vanishing coefficient nor a logarithmic weakening. All geometric-smoothing identities and all assertions of the note have now been verified."
+          }
+        }
+      ],
+      "verified": true,
+      "dead": false,
+      "accepted": false,
+      "candidate": false
+    },
+    {
+      "id": "w7-1/n3",
+      "summary": "Complete negative solution: for the exact compatible data in n2, ρ=2log|σ_E|²+πu (u from n1, c=6) solves the required divisorial equation, is full-mass relative E1 and has the minimal Lelong numbers. Its metric is the pullback of a smooth positive product metric near the blown-up point, hence has finite distance to E. Every dense Zariski open regular positive locus necessarily excludes E and remains incomplete at a generic point of E.",
+      "detailedSummary": "For ω=6(α+β), take the cusp u on the first P1 from n1 and g_X=(6α+dd^c u)+6β. Then g_X²=e^u h_H^{-1}ω², while g_X is smooth positive near p=(∞,0). With θ=πω+2Θ_E from n2, set P=2log|σ_E|² and ρ=P+πu. Its current is 2[E]+πg_X, and the exact discrepancy identity turns e^ρ/(|σ_H|²|σ_E|²)dV_Y into πg_X². P has minimal singularities: any positive current in π{ω}+2{E} equals πS+2[E], where S is a positive current in {ω}; this follows by pushforward, pullback, and the support theorem on E. Thus the class volume is 72, and ρ has this full non-pluripolar mass. Its relative energy is finite by the two one-dimensional integrals proved in n1, and its Lelong numbers agree with P. The smooth strictly positive locus is exactly Y\\(H_Y∪E). Any dense Zariski open regular locus removes E; choosing a generic point of E away from all other removed components gives a transverse path entirely in that open set. The pullback metric has bounded path speed and finite length to E, producing a Cauchy sequence without an interior limit. This disproves completeness for all such candidates, without asserting anything about the actual evolving flow.",
+      "text": "Complete counterexample to the geometric-smoothing-compatible completeness question.\n\nUse exactly the compact data of n2. In particular X=P1×P1, ω=6(α+β), dV_X=ω², Y=Bl_(∞,0)X, D=H_Y⊔E, m_H=m_E=2, b_H=0,b_E=1, λ=2, ell0=0, R0 is Kähler, and\n\n    θ=πω+2Θ_E,\n    πω²=|σ_E|²dV_Y.\n\nAll divisor metrics and dV_Y are globally smooth Hermitian/volume metrics with the strictly positive coefficients specified there.\n\nActual solution and equation. Take the function u on the first P1 from n1 with c=6, pull it to X by the first projection, and put\n\n    g_X=(6α+dd^c u)+6β.\n\nOn X\\H this is a smooth strictly positive Kähler metric. Since p=(∞,0) is not on H, it is smooth strictly positive on a whole neighborhood of p. Its exact equation is\n\n    g_X²=e^u h_H^{-1}ω²,                                    (10)\n\nas follows by wedging the one-dimensional equation with 6β. Define on Y\n\n    P=2log|σ_E|²,\n    ρ=P+πu.                                                  (11)\n\nPoincaré–Lelong and the exact form identity for θ give\n\n    θ+dd^cρ=2[E]+πg_X.                                      (12)\n\nThus ρ is θ-psh. Outside D its current is the smooth positive metric πg_X. The non-pluripolar square discards the divisorial mass and is the zero-extension from Y\\D of πg_X². On that open set the required right-hand side is exactly\n\n    e^ρ |σ|^{-2}dV_Y\n      =(|σ_E|²)² e^{πu} (|σ_H|²|σ_E|²)^{-1}dV_Y\n      =e^{πu}|σ_H|^{-2}|σ_E|²dV_Y\n      =π(e^u h_H^{-1}ω²)\n      =πg_X².                                               (13)\n\nBoth sides have no mass on D and the prescribed right-hand side is extended by zero there. Thus (13) proves the actual global divisorial equation, not an equation for a modified pole coefficient. Notice that the pole measure before multiplication by e^ρ remains the genuinely nonintegrable unweighted pole from n2. The exceptional pole is suppressed by the positive minimal Lelong coefficient of the solution, not by weakening the data.\n\nMinimal singularities of P. Here is a direct description of all positive currents in this particular big class. If T is any positive closed (1,1) current on Y in π{ω}+2{E}, push it forward to S=π_*T. Then S is positive closed in {ω}. The pullback π*S is well-defined and positive: locally pull back a plurisubharmonic potential of S. On Y\\E it equals T. Hence T−π*S is a closed order-zero (1,1) current supported on the smooth irreducible divisor E. The elementary support theorem says that such a current is a constant multiple of [E]. One can see this locally by testing tangential and normal components: closedness rules out all components except integration in the tangential variables, whose coefficient must be constant along the connected divisor; order zero excludes normal derivatives of delta distributions. The coefficient is 2 by cohomology, since {π*S}=π{ω} and {E} is nonzero. Consequently\n\n    T=π*S+2[E].                                              (14)\n\nUsing the dd^c lemma on the compact Kähler X, write S=ω+dd^c v with v ω-psh. Equations (14) and θ=πω+2Θ_E show that every θ-psh potential is P+πv plus a constant. Since every ω-psh potential on compact X is bounded above, every such potential is at most P+C. Therefore P has minimal singularities. This argument also confirms the fixed coefficient 2 along E; it does not insert nefness into the theta class.\n\nVolume and full non-pluripolar mass. The minimal current at P is 2[E]+πω, whose non-pluripolar square has total mass\n\n    ∫_Y〈(θ+dd^cP)²〉=∫_Xω²=72.\n\nThis is the volume of the big class. In particular the volume is 72, not its cup-product square 68; the difference matters because the class is non-nef. By n1, the first-factor metric has mass 6 and no atom at its cusp, so\n\n    ∫_Y〈(θ+dd^cρ)²〉=∫_Xg_X²=72.\n\nThus ρ has full non-pluripolar mass. There is no hidden mass at the exceptional curve or at the cusp divisor: all these measures are the extensions of their displayed densities and assign zero mass to those divisors.\n\nRelative E1 energy. The difference ρ−P=πu is bounded above. One may add a constant to the reference minimal potential to make the difference nonpositive. On Y\\D all mixed non-pluripolar products of the currents at ρ and P are pullbacks of the corresponding mixed products of g_X and ω. The extensions charge neither E nor H_Y. For j=0,1,2 their energy integrals are therefore\n\n    ∫_Y |πu|〈(θ+dd^cρ)^j∧(θ+dd^cP)^{2-j}〉\n      =∫_X |u|g_X^j∧ω^{2-j}.\n\nWriting g1=6α+dd^c u, the measures on the right are linear combinations with positive constant coefficients of g1∧β and α∧β: ω²=72αβ, g_X∧ω=6g1β+36αβ, and g_X²=12g1β. Both ∫|u|g1 and ∫|u|α are finite by n1. All three energy integrals are finite. This verifies the relative E1 condition with respect to the minimal potential P, hence also with respect to any boundedly equivalent minimal reference.\n\nMinimal Lelong numbers. Near E, πu is smooth, because u is smooth at z=∞. Thus ρ has coefficient exactly 2 along E, the same as P. At H_Y, u has logarithmic-cusp growth −2log(−log|z|²)+O(1), whose Lelong number is zero. Everywhere else it is smooth. Hence all the Lelong numbers of ρ agree with those of the minimal potential P. We have now exhibited a full-mass relative E1 solution of the exact equation specified in the question. By the uniqueness stipulated there (or the full-mass comparison principle with the strictly increasing factor e^ρ), it is its designated solution.\n\nRegular locus. The current (12) is smooth and strictly positive exactly on\n\n    U0=Y\\(H_Y∪E).\n\nOutside these two curves, π is a biholomorphism and g_X is smooth positive. At H_Y, its normal density has the cusp divergence furnished by n1, so the current is not smooth. At E, the current has its nonzero integration-current component 2[E], so again it is not smooth. Even if one considered only the non-pluripolar metric part, its smooth extension across E would be the pullback of g_X, which is degenerate in TE and not strictly positive there.\n\nIncompleteness on every candidate dense Zariski open set. Let U be any dense Zariski open subset of Y on which this current is smooth and strictly positive. Necessarily U⊂U0. The analytic complement B=Y\\U has finitely many curve and point components. It contains E. Every other curve component meets E only at finitely many points unless it is E itself. Choose q∈E away from all those intersections and away from the other point components. A sufficiently small coordinate neighborhood N of q satisfies N\\E⊂U.\n\nTake a smooth transverse path γ(t)=(t,v0), 0<t≤ε, in such a blowup chart, tending to q as t↓0. It lies entirely in U. Since g_X is smooth positive near p and π is a smooth map, the pullback tensor πg_X has bounded coefficients on N, including across E. In particular |γ'(t)|_{πg_X}≤C, and the path has finite length, at most Cε. Its points γ(t_k), for any t_k↓0, form a Cauchy sequence in the intrinsic Riemannian distance of U: join two points by their intervening segment of γ. They have no limit in U, since they converge in the manifold topology to q∉U, and a smooth positive Riemannian distance induces the manifold topology at every point of U. Equivalently, this is finite intrinsic distance to an unavoidable missing boundary component. Thus U is incomplete.\n\nThis works for every dense Zariski open regular positive locus, not merely for the natural one U0. The example is compact, satisfies every geometric-smoothing compatibility identity including dV_X=ω² and its exact discrepancy volume identity, has a genuinely nonintegrable prescribed pole with smooth positive coefficient, and uses the actual full-mass relative E1 solution. It disproves the proposed completeness implication in the geometric-compatible branch. No assertion is made about the metric of the actual time-dependent maximal flow.",
+      "support": [
+        "w7-1/n1",
+        "w7-1/n2"
+      ],
+      "revision": 0,
+      "imported": false,
+      "checks": [
+        {
+          "noteId": "w7-1/n3",
+          "correctness": {
+            "verdict": "PASS",
+            "report": "Conditional on its declared supports, the counterexample is established. The product equation gives g_X²=e^u h_H^{-1}ω², and the exact discrepancy identity converts the prescribed right-hand side into π*g_X² for ρ=2log|σ_E|²+π*u. Non-pluripolar products discard E and charge neither cusp divisor nor exceptional divisor. The pushforward/pullback argument, together with the divisor support theorem, gives T=π*S+2[E] for every positive current in the class; therefore P is minimal. Its non-pluripolar mass is 72, as is that of ρ, rather than the cup-product square 68. The mixed energy measures reduce to positive linear combinations of g1∧β and α∧β, so the support lemma supplies the required relative energy integrability. The Lelong numbers and the exact regular positive locus are correctly identified. For any candidate dense Zariski open set, a generic point of E avoids every other removed component. A transverse path there has bounded speed in π*g_X and finite length to the excluded point, giving an intrinsic Cauchy sequence without a limit. This proves incompleteness for every candidate, not merely the maximal regular locus. The summaries preserve this conclusion and correctly exclude any assertion about the evolving flow. Uniqueness of the designated solution is granted by the task.",
+            "premises": [
+              "On a compact Kähler manifold, every real closed (1,1)-current S cohomologous to a smooth real closed (1,1)-form η can be written S=η+dd^c v for a global real distribution v. If S is positive, v can be chosen η-psh.",
+              "Let M be a complex surface and E a connected smooth irreducible divisor. Every d-closed real current of bidegree (1,1) and order zero supported on E is c[E] for a real constant c.",
+              "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, and P a θ-psh potential with minimal singularities. Then ∫_M ⟨(θ+dd^c P)^n⟩ equals vol({θ}).",
+              "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, P a θ-psh potential with minimal singularities, and ψ a θ-psh potential with full non-pluripolar mass. Then ψ has finite E^1 energy relative to P if and only if ∫_M |ψ-P|⟨(θ+dd^c ψ)^n⟩ is finite. Differences are interpreted outside the pluripolar sets, which these measures do not charge. The condition is unchanged when P is replaced by another minimal potential."
+            ]
+          },
+          "source": {
+            "verdict": "PASS",
+            "report": "All four external premise strings are established. Kawaguchi–Moriwaki–Yamaki, Lemma 1.2.10, gives the ddᶜ lemma for arbitrary currents; taking the real part gives a real distribution. [Dinh–Sibony](https://arxiv.org/pdf/0804.0860) confirms the quasi-psh representative for positive currents. Demailly III, Corollary 2.14, covers signed order-zero currents supported on a divisor. [BEGZ](https://arxiv.org/pdf/0812.3674v2), Definition 2.1 and Proposition 2.11(ii), establish the volume and relative-energy claims; minimal references differ by a bounded function. These results fit the displayed applications. This premise approval does not establish the compatibility construction delegated to the unsupplied n2, or assume another note’s conclusion.",
+            "passages": [
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/0",
+                "statement": "On a compact Kähler manifold, every real closed (1,1)-current S cohomologous to a smooth real closed (1,1)-form η can be written S=η+dd^c v for a global real distribution v. If S is positive, v can be chosen η-psh.",
+                "url": "https://www.scribd.com/document/1068197301/ALGEBRAIC-GEOMETRY-IN-EAST-ASIA-ISBN-9789812382658-9812382658-Premium-Download",
+                "quote": "Lemma 1.2.10 (ddc-lemma for currents). Let X be a compact Kahler manifold",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/1",
+                "statement": "On a compact Kähler manifold, every real closed (1,1)-current S cohomologous to a smooth real closed (1,1)-form η can be written S=η+dd^c v for a global real distribution v. If S is positive, v can be chosen η-psh.",
+                "url": "https://arxiv.org/pdf/0804.0860",
+                "quote": "The function u is quasi-p.s.h.;",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/2",
+                "statement": "On a compact Kähler manifold, every real closed (1,1)-current S cohomologous to a smooth real closed (1,1)-form η can be written S=η+dd^c v for a global real distribution v. If S is positive, v can be chosen η-psh.",
+                "url": "https://arxiv.org/pdf/0804.0860",
+                "quote": "ddcu = S − α",
+                "premise": 0
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/3",
+                "statement": "Let M be a complex surface and E a connected smooth irreducible divisor. Every d-closed real current of bidegree (1,1) and order zero supported on E is c[E] for a real constant c.",
+                "url": "https://totomityann.github.io/pdf/lua_agbook.pdf",
+                "quote": "of order 0 with support in A is of the form Θ = ∑λj[Aj]",
+                "premise": 1
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/4",
+                "statement": "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, and P a θ-psh potential with minimal singularities. Then ∫_M ⟨(θ+dd^c P)^n⟩ equals vol({θ}).",
+                "url": "https://arxiv.org/pdf/0812.3674v2",
+                "quote": "minimal singularities have full Monge-Ampère mass.",
+                "premise": 2
+              },
+              {
+                "id": "ceb31882-173a-4cd0-9f6f-02aa5bcec458/1/5",
+                "statement": "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, P a θ-psh potential with minimal singularities, and ψ a θ-psh potential with full non-pluripolar mass. Then ψ has finite E^1 energy relative to P if and only if ∫_M |ψ-P|⟨(θ+dd^c ψ)^n⟩ is finite. Differences are interpreted outside the pluripolar sets, which these measures do not charge. The condition is unchanged when P is replaced by another minimal potential.",
+                "url": "https://arxiv.org/pdf/0812.3674v2",
+                "quote": "Eχ(ϕ)<+∞ iff ∫X(−χ)(ϕ−ϕmin)MA(ϕ)<+∞.",
+                "premise": 3
+              }
+            ],
+            "premises": [
+              "On a compact Kähler manifold, every real closed (1,1)-current S cohomologous to a smooth real closed (1,1)-form η can be written S=η+dd^c v for a global real distribution v. If S is positive, v can be chosen η-psh.",
+              "Let M be a complex surface and E a connected smooth irreducible divisor. Every d-closed real current of bidegree (1,1) and order zero supported on E is c[E] for a real constant c.",
+              "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, and P a θ-psh potential with minimal singularities. Then ∫_M ⟨(θ+dd^c P)^n⟩ equals vol({θ}).",
+              "Let M be a compact Kähler manifold, θ a smooth real closed (1,1)-form with big class, P a θ-psh potential with minimal singularities, and ψ a θ-psh potential with full non-pluripolar mass. Then ψ has finite E^1 energy relative to P if and only if ∫_M |ψ-P|⟨(θ+dd^c ψ)^n⟩ is finite. Differences are interpreted outside the pluripolar sets, which these measures do not charge. The condition is unchanged when P is replaced by another minimal potential."
+            ],
+            "kind": "codex-report",
+            "operationId": "ceb31882-173a-4cd0-9f6f-02aa5bcec458",
+            "reportedAt": "2026-10-04T02:11:10.233Z"
+          }
+        },
+        {
+          "noteId": "w7-1/n3",
+          "requirements": {
+            "verdict": "PASS",
+            "report": "The argument establishes the required compatible counterexample. Established support n2 verifies all geometric identities, including semipositivity, discrepancies, Arnold multiplicity, the genuine unweighted poles, and the smooth positive discrepancy volume with dV_X=ω². Support n1 applies with c=6 and supplies the auxiliary solution, asymptotics, mass and energy estimates.\n\nThe equation follows exactly from e^ρ=|σ_E|⁴e^{π*u} and |σ_E|²dV_Y=π*ω². The pushforward–pullback argument and the order-zero support theorem apply to arbitrary positive currents in this class, proving that P has minimal singularities. The displayed mass and mixed-energy calculations then establish full mass, relative E¹ membership and minimal Lelong numbers; stipulated uniqueness identifies the designated solution.\n\nThe regular positive locus is exactly Y\\(H_Y∪E). For every dense Zariski open subset of it, a generic point of E admits the stated transverse finite-length path. Its intrinsic Cauchy sequence cannot converge inside the open set, proving incompleteness. Both summaries accurately preserve the hypotheses, dependencies and negative conclusion, without claiming anything about the time-dependent flow."
+          },
+          "reconstruction": {
+            "verdict": "PASS",
+            "report": "Using the two declared supports, the exact equation follows from θ+dd^cρ=2[E]+π*g_X and π*ω²=|σ_E|²dV_Y; no pole coefficient is modified. The current decomposition T=π*(π_*T)+2[E] is justified: the pullback is well-defined, the difference is closed and order zero supported on E, and cohomology fixes its coefficient. This establishes minimality of P. The class volume and solution mass are both 72, distinct from the cup-product square 68. The displayed mixed-product integrals are finite by the cusp lemma, so the recorded relative-energy criterion applies. Lelong numbers agree with P. Identification with the designated solution uses uniqueness stipulated in the task. The regular positive locus is exactly Y\\(H_Y∪E). Every candidate dense Zariski open contains a punctured neighborhood of a generic point of E, where a transverse path has bounded speed and finite length, yielding a Cauchy sequence without an interior limit. Thus the compatible counterexample resolves the auxiliary-metric question negatively. The statement, independent proof, and summaries agree; no time-dependent-flow conclusion is asserted.",
+            "statement": "Take exactly the compact geometric data of w7-1/n2: X=ℙ¹×ℙ¹, ω=6(α+β), dV_X=ω², π:Y=Bl_(∞,0)X→X, D=H_Y+E with H_Y∩E=∅, m_H=m_E=2, b_H=0, b_E=1, λ=2, ℓ₀=0, the specified smooth Hermitian divisor metrics, the Kähler residual form R₀, and\n  θ=π*ω+2Θ_E,   π*(ω²)=|σ_E|²dV_Y.\nIn particular dV_Y is globally smooth and strictly positive and the prescribed unweighted pole |σ|⁻²dV_Y, where |σ|²=|σ_H|²|σ_E|², is nonintegrable near both components of D.\n\nLet u be a function supplied by w7-1/n1 with c=6, and also write u for its pullback to X by the first projection. Define\n  g₁=6α+dd^c u,   g_X=g₁+6β,\n  P=2log|σ_E|²,   ρ=P+π*u.\nThe current g_X is smooth and strictly positive on X\\H, including a neighborhood of p=(∞,0), and its square satisfies\n  g_X²=e^u h_H⁻¹ω²,\nwhere the measures are extended by zero on H. The function ρ is θ-psh and has the exact current identity\n  θ+dd^cρ=2[E]+π*g_X.\nIts non-pluripolar square is the zero-extension from Y\\D of π*(g_X²), and it satisfies the actual global divisorial equation\n  ⟨(θ+dd^cρ)²⟩=e^ρ|σ|⁻²dV_Y,\nwith the right-hand side extended by zero on D. On Y\\D the density identity is\n  e^ρ|σ|⁻²dV_Y\n   =e^(π*u)|σ_H|⁻²|σ_E|²dV_Y\n   =π*(e^u h_H⁻¹ω²)\n   =π*(g_X²).\nNeither side charges D. These statements concern the unmodified prescribed pole with its smooth strictly positive coefficient.\n\nFor every positive closed (1,1)-current T on Y in the class π*{ω}+2{E}, the current S=π_*T is positive closed in {ω}, its pullback is well-defined, and\n  T=π*S+2[E].\nEvery θ-psh potential on Y is consequently of the form P+π*v+C for an ω-psh function v on X and a real constant C. For every such potential ψ there is a constant C_ψ with ψ≤P+C_ψ. Thus P has minimal singularities, and\n  θ+dd^cP=2[E]+π*ω.\n\nThe class volume and full non-pluripolar masses are\n  vol({θ})=∫_Y⟨(θ+dd^cP)²⟩=∫_Xω²=72,\n  ∫_Y⟨(θ+dd^cρ)²⟩=∫_Xg_X²=72.\nThe cup-product square of {θ} is 68, not 72. All displayed non-pluripolar measures assign zero mass to E and H_Y.\n\nFor each j∈{0,1,2}, the mixed non-pluripolar products satisfy\n  ∫_Y|π*u|⟨(θ+dd^cρ)^j∧(θ+dd^cP)^(2−j)⟩\n   =∫_X|u|g_X^j∧ω^(2−j)<∞.\nHere\n  ω²=72α∧β,\n  g_X∧ω=6g₁∧β+36α∧β,\n  g_X²=12g₁∧β.\nIn particular ρ has finite E¹ energy relative to P, and hence relative to any minimal θ-psh reference potential. Its Lelong numbers are precisely those of P: at every point of E they equal 2, and at every point outside E they equal 0. At H_Y its singularity is the zero-Lelong logarithmic cusp furnished by w7-1/n1; near E the difference ρ−P=π*u is smooth. Thus ρ is the designated unique full-mass relative-E¹ solution of the stated divisorial equation.\n\nThe locus on which θ+dd^cρ is smooth and strictly positive is exactly\n  U₀=Y\\(H_Y∪E),\nand its metric there is π*g_X. At H_Y its normal density has the cusp divergence of w7-1/n1. At E the current has the nonzero component 2[E]; its non-pluripolar metric part has a smooth extension near E equal to π*g_X, which is degenerate on TE.\n\nFor every dense Zariski open subset U⊂Y on which θ+dd^cρ is smooth and strictly positive, necessarily U⊂U₀, and its intrinsic Riemannian metric is incomplete. More precisely, for every such U there is a point q∈E away from all components of Y\\U other than E, a blowup coordinate neighborhood N of q satisfying N\\E⊂U, and constants ε>0 and C<∞ such that a transverse path γ(t)=(t,v₀), 0<t≤ε, lies in U, tends to q as t↓0, and satisfies\n  |γ′(t)|_(π*g_X)≤C,\n  length_(π*g_X)(γ|_[a,b])≤C(b−a)  for 0<a<b≤ε.\nFor every sequence t_k↓0 the points γ(t_k) form an intrinsic Cauchy sequence in U with no limit in U. Hence there is finite intrinsic distance to an unavoidable missing boundary at E for every candidate dense Zariski open regular positive locus. These exact geometric-smoothing-compatible data, with dV_X=ω², therefore disprove the proposed completeness implication for the auxiliary divisorial metric.",
+            "proof": "Use the data reconstructed in w7-1/n2 and the function from w7-1/n1 with c=6. These are precisely this note's declared supports. Write u also for its pullback to X by the first projection. Every measure appearing below is interpreted by zero-extension across the indicated pluripolar sets.\n\n1. The actual equation. Set\n  g₁=6α+dd^c u,  g_X=g₁+6β,  P=2log|σ_E|²,  ρ=P+π*u.\nBy the first supporting note, g₁ is smooth and strictly positive on the first P¹ minus {0}, including at infinity, has no atom at zero, and has total mass 6. It follows that g_X is a positive closed current, smooth and strictly positive on X\\H, including a neighborhood of p=(∞,0). On that smooth locus,\n  g_X²=12g₁∧β=e^u h_H^(-1)72α∧β=e^u h_H^(-1)ω².   (6)\nThese formulas hold globally as non-pluripolar measures: the only omitted divisor is H, and g₁∧β assigns it zero mass by the no-atom assertion of the first support.\n\nUsing θ=π*ω+2Θ_E and Poincaré–Lelong yields the exact current identities\n  θ+dd^c P=2[E]+π*ω,\n  θ+dd^cρ=2[E]+π*g_X.                               (7)\nIn particular P and ρ are θ-psh. On Y\\D, the second current is π*g_X and is smooth and strictly positive. Its non-pluripolar square is the zero-extension of π*(g_X²) there: the infinite locus of ρ is precisely D, and a non-pluripolar product assigns that locus no mass. Thus no divisorial contribution from (7) enters that product.\n\nOn Y\\D, the discrepancy identity from the second support gives\n  e^ρ|σ|^(-2)dV_Y\n   =e^(π*u)|σ_E|²|σ_H|^(-2)dV_Y\n   =π*(e^u h_H^(-1)ω²)\n   =π*(g_X²).                                      (8)\nBoth sides are assigned zero on D. They are finite measures by (6), so (8) proves the actual global divisorial equation\n  ⟨(θ+dd^cρ)²⟩=e^ρ|σ|^(-2)dV_Y.\nThe prescribed pole is the unmodified one from the second support. Although the solution supplies its compensating exponential factor, dV_Y itself remains smooth and strictly positive across both components.\n\n2. Minimal singularities in this non-nef class. We prove the structural assertion about all positive currents, rather than assuming a Zariski decomposition. Let T be any positive closed (1,1)-current in π*{ω}+2{E}. Proper pushforward S=π_*T is positive and closed. Since π_*{E}=0 and π_*π*{ω}={ω}, it lies in {ω}. The global potential premise on the compact Kähler manifold X gives\n  S=ω+dd^c v\nwith v ω-psh. Its pullback is well-defined and positive: locally add a smooth potential for ω to v and compose the resulting psh function with π. This composition is not identically -∞ on any blowup coordinate neighborhood, because that neighborhood contains an open set on which π is an isomorphism. Thus the compositions define a locally integrable psh pullback, and\n  π*S=π*ω+dd^c(π*v).\nOutside E, T=π*S, since π is an isomorphism there. Their difference is a closed real (1,1)-current of order zero supported on the connected smooth irreducible divisor E. The support premise in the note therefore gives T-π*S=a[E]. Cohomology gives a{E}=2{E}; because E²=-1, its class is nonzero, and a=2. We have proved\n  T=π*S+2[E].                                      (9)\n\nFor any θ-psh potential ψ, apply (9) to T=θ+dd^cψ. Comparing with (7) gives dd^c(ψ-P-π*v)=0. A real distribution with dd^c zero on a connected compact Kähler manifold is constant: its trace is a distributionally harmonic function, hence smooth and constant. Consequently\n  ψ=P+π*v+C.\nEvery ω-psh v on compact X is bounded above. It follows that ψ≤P+C_ψ for a constant C_ψ. Since P is itself θ-psh, this is exactly the assertion that P has minimal singularities.\n\nThe class is big by the second support, so the stipulated volume premise applies to this minimal potential. Its non-pluripolar square is π*ω² with zero-extension on E; the pullback is a smooth volume density away from E, vanishes on E, and has the same integral as ω². Therefore\n  vol({θ})=∫_Y⟨(θ+dd^cP)²⟩=∫_Xω²=72.              (10)\nOn the other hand (6) and the mass of g₁ give\n  ∫_Y⟨(θ+dd^cρ)²⟩=∫_Xg_X²\n    =12(∫_{P¹}g₁)(∫_{P¹}β)=72.\nThus ρ has full non-pluripolar mass. The cohomological cup-product square is different:\n  {θ}²=(π*{ω}+2{E})²=72+4E²=68,\nusing π*{ω}·E=0. We have not substituted this cup product for the class volume.\n\n3. Energy and Lelong numbers. For j=0,1,2, the mixed non-pluripolar products of the two currents in (7) equal, away from D, the pullbacks of g_X^j∧ω^(2-j). No such product charges E. Nor does it charge H_Y: on X the corresponding measures are combinations of α∧β and g₁∧β, and neither charges H. For j=0 this also follows directly from the smooth pullback density. Proper change of variables outside the exceptional and singular sets therefore gives\n  ∫_Y|π*u|⟨(θ+dd^cρ)^j∧(θ+dd^cP)^(2-j)⟩\n   =∫_X|u|g_X^j∧ω^(2-j).                            (11)\nThe measures on the right are explicitly\n  ω²=72α∧β,\n  g_X∧ω=6g₁∧β+36α∧β,\n  g_X²=12g₁∧β.\nThe first supporting note proves both ∫|u|α<∞ and ∫|u|g₁<∞. Integration over the second factor, whose normalized mass is one, proves finiteness in every case of (11). In particular\n  ∫_Y|ρ-P|⟨(θ+dd^cρ)²⟩<∞.\nThe E¹ criterion supplied in this note applies: Y is compact Kähler, the class is big, P is minimal, and ρ has full mass by (10). It proves that ρ has finite E¹ energy relative to P, and that this remains true for any other minimal reference potential.\n\nNear E, u is smooth because its first-factor coordinate is near infinity. Hence ρ-P=π*u is smooth there. The Lelong number of P is 2 at every point of E and zero elsewhere. At H_Y, the first supporting note gives a logarithmic cusp with zero Lelong number; π is an isomorphism near H_Y. Elsewhere ρ is smooth. Thus ρ has Lelong number 2 at every point of E and zero at every point outside E, exactly the Lelong numbers of a minimal potential. We have established all the defining properties of the solution in the question. By the uniqueness stipulated there, the constructed ρ is the designated solution.\n\n4. Exact regular positive locus. Off H_Y∪E the current in (7) is the pullback of the smooth Kähler metric g_X by an isomorphism, so it is smooth and strictly positive. At H_Y, π is an isomorphism and the normal coefficient of g₁ is asymptotic to\n  2/(|z|²(-log|z|²)²).\nThis diverges; consequently the current cannot be smooth on any neighborhood of a point of H_Y. At E, π*g_X extends as a smooth semipositive form because g_X is smooth near p, but its restriction to TE is zero. Moreover the current in (7) has the nonzero singular component 2[E]. It is therefore not smooth at any point of E, and even its smooth non-pluripolar part is not strictly positive there. This proves that the smooth strictly positive locus is exactly\n  U₀=Y\\(H_Y∪E).\nIts metric is π*g_X.\n\n5. Incompleteness on every candidate Zariski open. Let U be any dense Zariski open subset on which the current is smooth and strictly positive. The preceding paragraph forces U⊂U₀. Write Z=Y\\U. It is a proper algebraic closed subset of the projective surface Y, so it has finitely many irreducible curve components and finitely many isolated points. It contains E. Every other curve component intersects E in only finitely many points, since a distinct irreducible curve cannot contain E. Choose q∈E outside all those intersections and all isolated points. There is then a coordinate neighborhood N of q with\n  N\\E⊂U.\nIn an appropriate blowup chart write q=(0,v₀), π(t,v)=(t,tv) in local source coordinates near p. Choose ε>0 small enough that\n  γ(t)=(t,v₀),  0<t≤ε,\nlies in N\\E. This path tends to q. Its image under π is (t,tv₀), with derivative (1,v₀). Because g_X is smooth and strictly positive near p, that derivative has bounded g_X norm along the image. Consequently there is C<∞ such that\n  |γ'(t)|_{π*g_X}≤C,\n  length_{π*g_X}(γ|_[a,b])≤C(b-a),  0<a<b≤ε.         (12)\nThus γ has finite length all the way to the missing divisor E.\n\nFor any t_k decreasing to zero, (12) makes γ(t_k) an intrinsic Cauchy sequence in the component of U containing the path. It cannot converge intrinsically to a point of U: Riemannian distance induces the manifold topology on U, whereas this sequence converges in the Hausdorff ambient surface Y to q∉U. Hence the metric on U is incomplete. This argument applies to every candidate dense Zariski open regular positive locus, not just U₀.\n\nThe second supporting proof verified every compatibility identity, the analytic initial singularity, semipositivity (indeed positivity) of R₀, all discrepancies and divisor metrics, and the exact smooth positive volumes with dV_X=ω². The argument above verifies the actual equation, full mass, relative finite energy, minimal Lelong numbers, and the unavoidable finite-distance boundary. These compatible compact data therefore disprove the completeness implication for the auxiliary metric at θ=λΘ+R₀. No assertion about the metric of the time-dependent flow is used or made."
+          }
+        }
+      ],
+      "verified": true,
+      "dead": false,
+      "accepted": true,
+      "candidate": true
+    }
+  ],
+  "nondependency_notes": [
+    {
+      "id": "w7-2/n1",
+      "verified": true,
+      "accepted_dependency": false
+    },
+    {
+      "id": "w7-2/n2",
+      "verified": true,
+      "accepted_dependency": false
+    },
+    {
+      "id": "w7-2/n3",
+      "verified": false,
+      "accepted_dependency": false
+    },
+    {
+      "id": "w7-2/n4",
+      "verified": false,
+      "accepted_dependency": false
+    }
+  ],
+  "publication_limits": "Immutable model verdicts and full blind proofs are evidence requiring mathematical assessment. This concerns the auxiliary divisorial metric, not the actual evolving maximal flow. Simultaneous nefness and compatible-data identities remain a stronger open refinement. No arbitrary catalogue closure or monograph rebuild is claimed.",
+  "root_paper_audit": {
+    "problem": "S13-compatible-data",
+    "scope": "Complete original compatible-data branch; simultaneous nef+compatibility and evolving-flow assertions remain open",
+    "campaign_status": "completed",
+    "accepted_note_id": "w7-1/n3",
+    "accepted_chain": [
+      "w7-1/n1",
+      "w7-1/n2",
+      "w7-1/n3"
+    ],
+    "all_original_statements_and_proofs_root_read": true,
+    "all_full_blind_statements_and_proofs_root_read": true,
+    "all_verdicts_and_source_bindings_root_read": true,
+    "primary_source_audit": "S13-flow-primary-source-audit.json",
+    "full_final_tex_root_read": true,
+    "root_additions": "Self-contained radial Volterra inverse/iteration/center regularity instead of the model general PDE premise; no atom via radial slope; correct volume locator; reference shift; full-mass comparison uniqueness; exact scope. Root additions are not immutable model verdicts.",
+    "source_sha256": "2b970486d075c5616dd090ba2ba34111fdc8b28ea41ec76d46bc1ca512a75ae2",
+    "local_pdf_sha256": "6fba93260b86db528e17bf4071bb191a9657e10c5a01f4eb1d722b2087475008",
+    "local_pdf_bytes": 216872,
+    "local_pdf_pages": 6,
+    "local_compile_passes": 2,
+    "unresolved_references_citations_overfull_boxes": false,
+    "all_final_pages_visually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "native_editor_open_attempted": true,
+    "native_compilation": "Unverified: native editor/compiler calls returned no diagnostics; preserved source/editor, no close action. Two preinstalled-pdflatex passes succeed.",
+    "candidate_proof_supplied": false,
+    "trusted_imports": 0,
+    "book_rebuilt_by_this_release": false,
+    "original_catalogue_fully_closed": false,
+    "recorded_utc": "2026-10-04T02:39:35.089120+00:00"
+  },
+  "root_primary_source_audit": {
+    "observed_utc": "2026-10-04T02:04:29.902924+00:00",
+    "scope": "S13-flow root primary-source audit; immutable model verdicts kept separately",
+    "sources": [
+      {
+        "name": "Di-Nezza-Guedj-Lu-geometric-smoothing-2607.08325v1",
+        "url": "https://arxiv.org/pdf/2607.08325v1",
+        "sha256": "10f2d3df60864198822de9dd63666321d2f11060b9a1e31828c4e0ef0dc2980a",
+        "pages_read": "printed 12-15",
+        "scope_checked": "Section 3.1, Theorem 3.4 and Question 3.5. The theorem assumes full E^1 energy, not bounded ordinary minimal type; zero Lelong numbers are required under nefness. Flow data additionally constrain class, divisor, discrepancies, semipositive residual and the pulled-back smooth volume.",
+        "root_read": true
+      },
+      {
+        "name": "BEGZ-Monge-Ampere-big-classes-0812.3674",
+        "url": "https://arxiv.org/pdf/0812.3674",
+        "sha256": "43097be8459edfd948929fade34367fa7bbd0fe691d9cba1a4f27a11181214cd",
+        "pages_read": "printed preprint 22-23",
+        "scope_checked": "Proposition 2.2 and Corollary 2.3: generalized comparison with nonnegative volume defect; defect disappears for full mass, sufficient for exponential-solution uniqueness.",
+        "root_read": true,
+        "additional_pages_read": "printed preprint 26-27, Proposition 2.11(ii) and its full proof with Lemma 2.12",
+        "finite_energy_scope": "Full non-pluripolar mass plus integral |rho-V_theta| MA(rho)<infinity implies E1; this removes reliance on merely formal mixed-energy integrals.",
+        "additional_nonpluripolar_pages_read": "printed 4-8 Section1.2 and full Prop1.6 proof; printed19 nef cup-product; printed39-40 minimal envelope",
+        "flow_additional_scope": "printed12-13 Section1.3 global potentials and1.4 minimal singularities; printed17-18 Def1.17 positive product and volume; full-mass finite-energy Prop2.11(ii) and comparison Cor2.3 already root-read"
+      },
+      {
+        "name": "Jarnicki-Pflug-separately-holomorphic",
+        "url": "https://www.math.stonybrook.edu/~ebedford/PapersForM537/JarnickiPflugSepHolo081111.pdf",
+        "sha256": "35a2a6fe28b61c8e7777f17646da6251893921da6282efb75c3516cc13359ec1",
+        "pages_read": "printed 35",
+        "scope_checked": "Proposition3.3.25 locally bounded-above psh extension across closed pluripolar sets; analytic sets are locally pluripolar",
+        "root_read": true
+      },
+      {
+        "name": "Bedford-Taylor-new-capacity",
+        "url": "https://www.math.stonybrook.edu/~ebedford/PapersForM655/BTNewCapacity.pdf",
+        "sha256": "e75ea91e48c14a9838a800aee25b68ed04169c4372f2ce4b399967b53005b758",
+        "pages_read": "printed 4-5,10,25-26",
+        "scope_checked": "Recursive bounded products, Theorem2.1, Cor2.2, mass estimates Theorem2.10 and capacity-zero Theorem6.9; mixed non-charging by polarization. Convex regularization can be chosen decreasing.",
+        "root_read": true
+      },
+      {
+        "name": "BBGZ-variational-0907.4490v1",
+        "url": "https://arxiv.org/pdf/0907.4490v1",
+        "sha256": "23ec237d3278d77899b094c5acd4609644d816daada246b4f40bfb26dbb0d45f",
+        "pages_read": "printed 13-15",
+        "scope_checked": "Equation2.1 Aubin-Mabuchi energy, Prop2.4 decreasing extension, Def2.5 E1 and canonical max truncations with reference0",
+        "root_read": true
+      },
+      {
+        "name": "Adamus-complex-analytic-geometry",
+        "url": "https://www.math.uwo.ca/faculty/adamus/teaching/9607b2019/CAGI.pdf",
+        "sha256": "c17977e5f327ef0a03d8af0b1406c39b7e5caa136a81cd8a4cc9650ccc206399",
+        "pages_read": "printed 37-38",
+        "scope_checked": "Full Theorem7.8 proof and Cor7.10: locally finite components, dimension drop, compact surface curve intersection finiteness",
+        "root_read": true
+      },
+      {
+        "name": "Demailly-agbook",
+        "url": "https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf",
+        "sha256": "d7c7654a7417e8322e5dcf8fe8ec818b4c1a18cf280b41f2df5a871b776d89a1",
+        "pages_read": "printed141-143 full support theorems2.10/2.13 and Cor2.11/2.14 with proofs",
+        "scope_checked": "Closed order-zero current supported on smooth irreducible divisor is a constant multiple of its integration current; positivity of the difference is not required",
+        "root_read": true
+      },
+      {
+        "name": "Taylor-nonlinear-elliptic",
+        "url": "https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2020/08/nlellip.pdf",
+        "sha256": "85a088aaed8fc306f9bba9c618629a4334c6bd29522832ed44e7e66ec3b1028b",
+        "pages_read": "printed4-8 and29-32 full Section1 semilinear existence proof and Theorems4.2-4.3 proof",
+        "scope_checked": "Smooth semilinear monotone Dirichlet problems on compact manifolds with smooth nonempty boundary; C0 bounds, truncation and interior elliptic regularity. Final article replaces this external premise by an explicit radial integral-equation proof.",
+        "root_read": true
+      },
+      {
+        "name": "Dinh-Sibony-super-potentials",
+        "url": "https://arxiv.org/pdf/0804.0860",
+        "sha256": "c31a081c32cad02425f2b52f635c41ec5c99cbd6e0cf6efb202bab3982af4a00",
+        "pages_read": "printed2 Introduction full positive (1,1) potential statement",
+        "scope_checked": "For the positive closed (1,1) current S actually used, a smooth cohomological representative admits a global quasi-psh potential. Root additionally read BEGZ Section1.3; does not claim to have read the source-checker Scribd reproduction for arbitrary signed currents.",
+        "root_read": true
+      },
+      {
+        "name": "Binz-Dirichlet-to-Neumann",
+        "url": "https://link.springer.com/article/10.1007/s00233-021-10192-z",
+        "sha256": "77200ed670fb85c1afdea206404e7135cc3caeeb6aab087abd8d9517efe8a9df",
+        "pages_read": "AppendixA full TheoremsA.1-A.3",
+        "scope_checked": "Primary full HTML elliptic interior W2p estimates and maximum principles; model proof source subject, absent as an external dependence in final radial paper.",
+        "root_read": true
+      }
+    ],
+    "status": "All primary-source subjects needed by the final article have been read; immutable accepted chain completed.",
+    "paper_external_scope": "The paper gives the needed radial Dirichlet inverse/regularity directly by an integral equation, so it does not import the general elliptic-surface premise of the model proof. Its additional uniqueness argument uses the already-read BEGZ full-mass comparison.",
+    "volume_exact_locator": "BEGZ Definition1.17 at printed17-18",
+    "model_source_stage_pending": false,
+    "updated_utc": "2026-10-04T02:11:56.920687+00:00",
+    "model_source_binding": "Immutable verifier source checks are all PASS for explorer nodes n1,n2,n3; blind reconstruction still pending.",
+    "final_acceptance_pending": false
+  },
+  "reported_calls": {
+    "admitted": 12,
+    "allowance": null,
+    "limitReached": false,
+    "settled": 12,
+    "unknownUsage": 0,
+    "unsettled": 0,
+    "byModel": [
+      {
+        "provider": "openai-codex",
+        "model": "gpt-6.1-sol",
+        "api": "openai-codex-responses",
+        "admitted": 10,
+        "settled": 10,
+        "unknownUsage": 0,
+        "reportedUsage": {
+          "input": 72180,
+          "output": 83691,
+          "cacheRead": 2688,
+          "cacheWrite": 0,
+          "reasoning": 63076,
+          "totalTokens": 158559
+        },
+        "unsettled": 0
+      },
+      {
+        "provider": "codex-cli",
+        "model": "gpt-6.1-sol",
+        "api": "codex-exec",
+        "admitted": 2,
+        "settled": 2,
+        "unknownUsage": 0,
+        "reportedUsage": {
+          "input_tokens": 2178643,
+          "cached_input_tokens": 1901568,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 22811,
+          "reasoning_output_tokens": 15070
+        },
+        "unsettled": 0
+      }
+    ],
+    "byModelOmitted": 0
+  }
+}
