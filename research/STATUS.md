@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint395 — Actual pencil ideal kernel limits
+
+[Independent integration](research/editorial/pencil-ideal-kernel-limits-395.md) reconstructs the incoming P20 actual pencil series: full noninvariant competitor classes, complete specified-obstacle envelope, exact 3m+1 three-band spaces, global potential lower bound and intrinsic kernel mass three. Every finite-Lp convergence and the arbitrary Hermitian shell density are established within the stated compact-box norm. General P20 remains open. Forty-one proof obligations and six symbolic identities pass. The 1120-page final manuscript, both clean live releases and 71 catalogue locators are checked; native catalogue compilation remains unverified. Author originals and reports are preserved; no runtime/model verdict is used. Fresh empty-source reconstruction passes for all 1146 book and seventeen companion pages; all 303 book source files and package checksums match. Regular private synchronization follows diff review. The new P23 author source will receive independent review next.
+
 ## Checkpoint394 — Weighted-kernel parameter dependence
 
 [Primary review](research/editorial/weighted-kernel-parameter-review-394.md): all 30 pages of Marinescu–Xing arXiv2609.24258v1 and Chen’s complete printed existence proof on pages 4–6 are actually read. The smooth-weight, Gevrey and boundary-distance arguments are assessed at an explicit external premise boundary; three directly reconstructed identities pass. Fixed-space finite-parameter regularity does not control changing multiplier ideals or degree limits. No new theorem or closure is adopted. The checked 1114-page manuscript and published PDF remain checkpoint393; no book rebuild. Full independent review of the incoming P20 ideal extension follows.
