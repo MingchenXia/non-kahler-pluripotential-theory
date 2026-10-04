@@ -1,0 +1,415 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[expansion=false]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\ddc}{\mathrm d\mathrm d^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\CP}{\mathbb P}
+\newcommand{\vol}{\mathrm dV}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\title{Curvature pairs and the full determinant endpoint on elliptic threefolds}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+A sign condition on the two real curvature forms of a principal elliptic
+bundle over a K\"ahler surface gives an explicit determinant estimate over
+all normalized positive Gauduchon currents, including singular and degenerate
+currents. A local bounded-potential energy identity proves the exact lower
+Monge--Amp\`ere mass of a split metric. A matrix calculation transports the
+endpoint to every Hermitian background. Under the stated sign condition,
+\(Q\not\equiv0\) excludes every pluriclosed metric, so the criterion extends beyond the mechanism requiring
+the first two metric powers to be \(\ddc\)-closed. Concrete examples include
+negative-line-bundle quotients over \(\CP^1\times\CP^1\) and a complex structure
+on \(S^3\times S^3\) admitting no LCK metric. Primitive curvature on the base
+has the opposite sign. The result is restricted to the stated threefold
+geometry; higher dimensions and general elliptic lower-mass collapse are
+not resolved here.
+\end{abstract}
+
+\section{Framework and the geometric statement}
+
+Use \(\mathrm d^c=(i/(4\pi))(\bar\partial-\partial)\) and
+\(\ddc=(i/(2\pi))\partial\bar\partial\), with exterior powers without
+factorials. All quasi-psh potentials are genuine canonical upper
+representatives. For a Hermitian form \(h\) on a compact complex threefold,
+put
+\[
+ v_-(h)=\inf_{u\in\PSH(X,h)\cap L^\infty(X)}
+                     \int_X(h+\ddc u)^3.
+\]
+\[
+ {\cal G}_h=\{T\ge0:\deg T=(2,2),\
+             \ddc T=0,\ \int_Xh\wedge T=1\}.
+\]
+The bounded products are the local Bedford--Taylor products with smooth
+nonclosed-background corrections \cite[Section 2.1]{BGL}.
+
+Fix a smooth positive probability \(\vol\). Write \(\sigma_h=h\wedge T\).
+In an \(h\)-unitary frame the positive matrix density \(P_h\), with
+\(\operatorname{tr}P_h=3\), is specified by
+\[
+ \beta\wedge T=\tfrac13\operatorname{tr}(BP_h)\,\sigma_h,
+ \qquad
+ \Gamma_0(T)=\left(\frac{\vol}{h^3}\right)^{1/3}
+                   \det(P_h)^{1/3}\sigma_h,
+ \qquad k_T=\frac{\mathrm d\Gamma_0(T)}{\vol}.
+\]
+Here \(B\) is the relative matrix of a smooth real \((1,1)\)-form.
+We use as an explicit input the critical determinant/lower-mass duality
+of the underlying framework:
+\begin{equation}\label{eq:duality}
+ v_-(h)>0\ \Longleftrightarrow\
+ \sup_{T\in{\cal G}_h}\norm{k_T}_{L^{3/2}(\vol)}<\infty,
+ \qquad
+ \sup_{T\in{\cal G}_h}\norm{k_T}_{L^{3/2}(\vol)}
+                       =v_-(h)^{-1/3}.
+\end{equation}
+Its current family includes singular and degenerate tests, and
+\(\Gamma_0(T)\) is absolutely continuous as specified in that framework.
+The geometric and bounded-potential conclusions below establish its
+antecedent; no estimate on one maximizing test is substituted for it.
+
+Let \(B\) be a compact connected K\"ahler surface with K\"ahler form
+\(\omega\). Let \(\pi:X\to B\) be a holomorphic principal elliptic bundle
+with fiber \(E=\mathbb C/\Lambda\). Suppose there is an invariant smooth
+\((1,0)\)-form \(\eta\), restricting to \(\mathrm dz\) on every fiber,
+such that
+\[
+ \mathrm d\eta=\pi^*F,\qquad F=\alpha+i\beta,
+\]
+where \(\alpha,\beta\) are smooth closed real \((1,1)\)-forms on \(B\).
+Set
+\[
+ Q=\alpha^2+\beta^2,\qquad
+ e=i\eta\wedge\bar\eta,\qquad g=\pi^*\omega+s e,\quad s>0,
+ \qquad A_E=\int_E i\,\mathrm dz\wedge\mathrm d\bar z.
+\]
+
+\begin{theorem}\label{thm:bundle}
+Assume \(Q\ge0\) as a top-degree form on \(B\), and \(Q\not\equiv0\).
+Then \(g\) is Hermitian and
+\[
+ V:=\int_Xg^3=3s A_E\int_B\omega^2,\qquad v_-(g)=V.
+\]
+Every bounded genuine \(g\)-psh \(u\) has the exact mass formula
+\begin{equation}\label{eq:bundle-mass}
+ \int_X(g+\ddc u)^3
+ =V+\frac{3s}{2\pi}\int_X E_u\wedge\pi^*Q\ge V,
+ \qquad E_u=\tfrac12\ddc(u^2)-u\ddc u\ge0.
+\end{equation}
+For every Hermitian \(h\ge c g\), \(c>0\),
+\begin{equation}\label{eq:endpoint}
+ \sup_{T\in{\cal G}_h}\norm{k_T}_{L^{3/2}(\vol)}
+       \le c^{-1}V^{-1/3},\qquad v_-(h)\ge c^3 V.
+\end{equation}
+In particular these bounds apply to every Hermitian metric on \(X\),
+with its own positive comparison constant. No pluriclosed Hermitian
+metric exists on \(X\).
+\end{theorem}
+
+The signed-torsion lower-mass lemma used in the proof is already present
+in Angella--Guedj--Lu \cite[Theorem 3.2]{AGL}. Their Vaisman threefold
+result is also known \cite[Proposition 3.10]{AGL}. We give the bounded
+local proof, the full-current change of background, and explicit
+curvature-pair applications. No literature-priority assertion is made.
+The hypotheses do not require bounded upper mass, a bound on potential
+oscillations, or a pluriclosed metric.
+
+\section{Bounded energy and the cubic lower mass}
+
+\begin{lemma}\label{lem:energy}
+For every bounded genuine quasi-psh \(u\), the signed closed products
+\(C_r=(\ddc u)^r\) satisfy
+\(\ddc(u C_r)=C_{r+1}\), for \(r=0,1,2\).
+The current \(E_u=\frac12\ddc(u^2)-u\ddc u\) is positive.
+\end{lemma}
+\begin{proof}
+Locally write \(u=p-a\), with bounded psh \(p\) and smooth real \(a\).
+Define \(C_r\) by expanding \(\ddc p-\ddc a\).
+The recursive products, closedness, multilinearity and decreasing
+continuity are precisely \cite[(2.1), Theorem 2.1, Corollary 2.2]{BT}.
+The weighted continuity needed here is
+\cite[Theorem 2.4]{BT}. Multiplying by \(p-a\) and applying \(\ddc\)
+inserts \(\ddc p-\ddc a\); expansion and Pascal's identity prove the
+recursion. The local definitions agree under a change of smooth
+decomposition, hence define global order-zero currents.
+
+On a smaller ball let smooth bounded psh \(p_j\downarrow p\), by local
+convolution, and put \(u_j=p_j-a\). Local uniform boundedness gives
+\(u_j^2\to u^2\) in \(L^1\). Expand
+\[
+ u_j\ddc u_j
+ =p_j\ddc p_j-a\ddc p_j-p_j\ddc a+a\ddc a.
+\]
+Weighted Bedford--Taylor continuity handles the first term;
+distributional convergence and dominated convergence handle the others.
+Consequently
+\[
+ \mathrm du_j\wedge\mathrm d^c u_j
+ =\tfrac12\ddc(u_j^2)-u_j\ddc u_j\longrightarrow E_u.
+\]
+Each smooth term is positive. Thus the weak limit is a positive
+order-zero current, and the intrinsic formula glues it globally.
+No global smooth approximation preserving the Hermitian background
+has been used.
+\end{proof}
+
+\begin{proposition}\label{prop:cubic}
+If a Hermitian form \(g\) on a compact complex threefold satisfies
+\(\ddc(g^2)=0\) and \(S=-\ddc g\ge0\), then
+\[
+ \int_X(g+\ddc u)^3=\int_Xg^3+3\int_XE_u\wedge S
+\]
+for every bounded genuine \(g\)-psh \(u\). In particular
+\(v_-(g)=\int_Xg^3\).
+\end{proposition}
+\begin{proof}
+The bounded-product expansion is
+\[
+ (g+\ddc u)^3=g^3+3g^2 C_1+3g C_2+C_3.
+\]
+Lemma~\ref{lem:energy} and distributional Stokes give
+\[
+ \int_X C_3=0,\qquad
+ \int_X g^2 C_1=\int_Xu\ddc(g^2)=0,\qquad
+ \int_X g C_2=\int_Xu C_1\ddc g.
+\]
+Since \(\ddc g\) is closed, the definition of \(E_u\) gives
+\[
+ \int_X u C_1\ddc g=-\int_XE_u\ddc g=\int_XE_u S.
+\]
+This proves the identity and positivity. The constant \(u=0\) attains
+the lower bound. The nonclosed product convention and positivity for
+bounded potentials are those of \cite[Section 2.1, Proposition 2.1]{BGL};
+the BMP hypothesis in their following subsection is not needed here.
+\end{proof}
+
+If \(S\not\equiv0\) and a positive Hermitian \(b\) were pluriclosed, then
+\[
+ 0=\int_Xg\wedge\ddc b=\int_X b\wedge\ddc g
+                   =-\int_Xb\wedge S<0.
+\]
+A nonzero smooth positive \((2,2)\)-form has strictly positive pairing
+with \(b\) on an open set. This excludes every pluriclosed metric, hence
+every metric satisfying both identities \(\ddc b=\ddc(b^2)=0\).
+
+\section{Change of background for all currents}
+
+The matrix density definition is independent of the auxiliary Hermitian
+form. Work in an \(h\)-unitary frame, with \(G\) the relative positive
+matrix of \(g\), and \(P=P_h\). Put
+\[
+ a=\tfrac13\operatorname{tr}(GP),\qquad
+ \sigma_g=a\sigma_h,\qquad P_g=a^{-1}G^{1/2}PG^{1/2}.
+\]
+Then \(\operatorname{tr}P_g=3\). A form with \(h\)-matrix \(B\) has
+\(g\)-matrix \(G^{-1/2}BG^{-1/2}\), which verifies the trace pairing.
+Moreover
+\[
+ \det P_g=a^{-3}\det G\det P,\qquad g^3=\det G\,h^3.
+\]
+Substitution into \(\Gamma_0(T)\) cancels both \(a\) and \(\det G\).
+The calculation holds \(\sigma_h\)-almost everywhere for the
+Radon matrix density of any positive current. Since \(G>0\) and
+\(\operatorname{tr}P=3\), \(a>0\); no invertibility of \(P\), smooth
+coefficient density or removal of a singular trace component is needed.
+For a constant \(m>0\) one also has \(k_{mT}=m k_T\).
+
+Take any \(T\in{\cal G}_h\). If \(h\ge c g\), then
+\[
+ 0<m:=\int_Xg\wedge T\le c^{-1},\qquad U=T/m\in{\cal G}_g.
+\]
+Proposition~\ref{prop:cubic} and the explicit input
+\eqref{eq:duality} give
+\[
+ \norm{k_T}_{3/2}=m\norm{k_U}_{3/2}
+                         \le c^{-1}\left(\int_Xg^3\right)^{-1/3}.
+\]
+The same duality gives the all-bounded-potential lower mass for \(h\).
+This argument treats the full normalized-current family.
+
+\section{Curvature computation and primitive exclusion}
+
+Suppress pullbacks. The type and closedness assumptions give
+\(\partial\eta=0\), \(\bar\partial\eta=F\),
+\(\partial\bar\eta=\bar F\) and \(\bar\partial\bar\eta=0\).
+Thus
+\[
+ \partial e=-i\eta\wedge\bar F,\qquad
+ \bar\partial e=iF\wedge\bar\eta,\qquad
+ \ddc e=-\frac1{2\pi}F\wedge\bar F=-\frac1{2\pi}Q.
+\]
+Since \(e^2=0\) and the base has complex dimension two,
+\[
+ \ddc g=-\frac{s}{2\pi}\pi^*Q,\qquad
+ \ddc(g^2)=-\frac{s}{\pi}\pi^*(\omega\wedge Q)=0,\qquad
+ g^3=3s\,\pi^*(\omega^2)\wedge e.
+\]
+Positivity on the horizontal quotient and on the vertical kernel proves
+that \(g\) is Hermitian. Fiber integration gives \(V\) and completes
+Theorem~\ref{thm:bundle}.
+
+Balancedness of this split metric is equivalent to \(\omega\wedge F=0\):
+\(\mathrm d(g^2)=2s\,\omega\wedge\mathrm de\), and its two independent
+vertical types force the equivalence. Hence a primitive pair satisfies
+\(\omega\wedge\alpha=\omega\wedge\beta=0\). Diagonalizing a primitive
+real \((1,1)\)-form on a surface gives eigenvalues \(\lambda,-\lambda\),
+so
+\[
+ \alpha^2=-\tfrac12|\alpha|_\omega^2\omega^2,\qquad
+ Q=-\tfrac12(|\alpha|_\omega^2+|\beta|_\omega^2)\omega^2.
+\]
+For a nonzero primitive pair the sign required by
+Theorem~\ref{thm:bundle} fails somewhere. In the primitive line-bundle
+model \(F=2\pi i c\), this is \(Q=4\pi^2c^2\le0\).
+The mass identity then has the opposite energy sign. The sufficient
+condition excludes that degeneration; it does not determine the
+unrestricted primitive-bundle infimum.
+
+\section{Negative-line-bundle examples beyond scalar Hopf}
+
+Let \(B=\CP^1\times\CP^1\) with normalized Fubini--Study forms
+\(\omega_1,\omega_2\), and set
+\[
+ \Omega=a\omega_1+b\omega_2,\quad a,b\in\mathbb N_{>0},\qquad
+ L={\cal O}(-a,-b),\qquad
+ X=(L^\times)/\langle v\mapsto\rho v\rangle,\quad0<\rho<1.
+\]
+Use the tensor-product tautological norm, with squared local frame norm
+\((1+|z_1|^2)^a(1+|z_2|^2)^b\). For
+\(r=\log\|v\|^2\),
+\[
+ \ddc r=\pi^*\Omega,\qquad\eta=\partial r,\qquad
+ \mathrm d\eta=2\pi i\,\pi^*\Omega.
+\]
+The form descends because multiplication changes \(r\) by a constant.
+The quotient is a holomorphic elliptic bundle with fiber
+\(\mathbb C^*/\rho^{\mathbb Z}\). Freeness, properness and compactness
+follow from the nonzero radial period and the compact unit-circle bundle
+with a fundamental radial interval. Thus
+for the split metric \(g=\pi^*\Omega+s i\eta\wedge\bar\eta\),
+\[
+ Q=4\pi^2\Omega^2>0,\quad
+ A_E=4\pi\log(1/\rho),\quad \int_B\Omega^2=2ab,\quad
+ v_-(g)=24\pi s ab\log(1/\rho).
+\]
+The corresponding bound \eqref{eq:endpoint} holds for every \(h\).
+
+These examples are not scalar Hopf threefolds. Put
+\(A=\eta+\bar\eta\), \(B_1=i(\eta-\bar\eta)\).
+Then \(\mathrm dA=0\) and
+\(\mathrm dB_1=-4\pi\pi^*\Omega\).
+If \(\pi^*(\omega_1-\omega_2)=\mathrm d\zeta\), average \(\zeta\)
+over the compact elliptic group. An invariant one-form has the unique
+decomposition
+\(\zeta=\pi^*\xi+(\pi^*f)A+(\pi^*j)B_1\).
+Evaluation on one vertical and one horizontal vector gives
+\(\mathrm df=\mathrm dj=0\). The resulting basic equation is
+\[
+ \omega_1-\omega_2=\mathrm d\xi-4\pi j\Omega.
+\]
+Integration over the two factor spheres forces
+\(1=-4\pi ja\) and \(-1=-4\pi jb\), a contradiction.
+Thus \(H^2(X,\mathbb R)\ne0\), whereas a scalar Hopf threefold is
+diffeomorphic to \(S^5\times S^1\) and has \(H^2=0\).
+The exact nonzero semipositive form \(\pi^*\Omega\) also excludes every
+balanced metric: its pairing with a closed positive metric square would
+be both zero by Stokes and strictly positive.
+
+\section{A supplementary Calabi--Eckmann example with no LCK metric}
+
+This construction is a supplementary instance of
+Theorem~\ref{thm:bundle}. Let \(\tau=A+iB\), \(A<0\), \(B>0\), and
+take the holomorphic \(\mathbb C\)-action
+\[
+ t\cdot(z,w)=(e^t z,e^{\tau t}w)
+ \quad\hbox{on }(\mathbb C^2\setminus\{0\})^2.
+\]
+Put \(r_1=\log|z|^2\), \(r_2=\log|w|^2\).
+Each orbit meets \(|z|=|w|=1\) at exactly one point, using
+\[
+ \Re t=-r_1/2,\qquad \Im t=(r_2-A r_1)/(2B).
+\]
+These formulas give a smooth product trivialization by
+\(\mathbb C\times(S^3\times S^3)\); hence the action is free and proper.
+Local holomorphic slices set a nonzero \(z\)-coordinate to one using a
+branch of its logarithm, with coordinates
+\(z_{\rm other}/z_{\rm chosen}\) and \(w_j z_{\rm chosen}^{-\tau}\).
+Their transitions are holomorphic. The quotient \(X_\tau\) is therefore
+a compact complex threefold diffeomorphic to \(S^3\times S^3\).
+The slice coordinates use local logarithm branches; their residual
+periods are accounted for in the elliptic fibers below.
+
+Projectivization gives an elliptic bundle over \(\CP^1\times\CP^1\).
+The form
+\[
+ \eta=\tau\partial r_1-\partial r_2
+\]
+is invariant and annihilates the holomorphic action generator, so it
+descends. On a fiber it is \(\mathrm d\chi\), with
+\(\chi=\tau\log v_1-\log v_2\) and lattice
+\(\langle2\pi i\tau,-2\pi i\rangle\).
+Consequently \(A_E=8\pi^2B\). With \(\omega=\omega_1+\omega_2\),
+\[
+ F=2\pi i(\tau\omega_1-\omega_2),\quad
+ \alpha=-2\pi B\omega_1,\quad
+ \beta=2\pi(A\omega_1-\omega_2),\quad
+ Q=-8\pi^2A\,\omega_1\wedge\omega_2>0.
+\]
+The split metric therefore has
+\[
+ v_-(g)=48\pi^2sB,\qquad
+ \sup_{T\in{\cal G}_h}\norm{k_T}_{3/2}
+                         \le c^{-1}(48\pi^2sB)^{-1/3}
+ \quad(h\ge c g).
+\]
+
+For every parameter in this range, the equation
+\[
+ \mathrm d\Re\eta=-2\pi B\,\pi^*\omega_1
+\]
+makes the nonzero semipositive form \(\pi^*\omega_1\) exact. It excludes
+every balanced metric and hence every K\"ahler metric. The quotient is simply connected,
+so every closed real one-form is exact. Any LCK metric would therefore
+be globally conformal to a K\"ahler metric, a contradiction.
+Thus every example in this range admits no LCK metric, and in particular no Vaisman
+metric. The nonzero \(Q\) also excludes every pluriclosed metric.
+This family supplies nonclosed endpoint examples beyond both the
+old identities and the scalar Hopf or Vaisman geometries.
+
+\section{Scope}
+
+The conclusions are quantitative for all normalized currents and all
+bounded admissible potentials on the stated elliptic threefolds.
+They do not classify all positive-lower manifolds or solve higher
+dimensions, changing-sign curvature, or primitive elliptic bundles,
+including the curve-free K3 problem. The signed-torsion lemma and the
+input duality are explicitly attributed or stipulated; the examples
+and change-of-background calculation give the claimed geometric
+sufficient conditions. No estimate on a selected adjoint family or
+publication-priority claim replaces those conclusions.
+
+\begin{thebibliography}{9}
+\bibitem{BT}
+E. Bedford and B. A. Taylor, \emph{A new capacity for plurisubharmonic
+functions}, Acta Math. \textbf{149} (1982), 1--40, Section 2.
+\href{https://www.math.stonybrook.edu/~ebedford/PapersForM655/BTNewCapacity.pdf}
+{Author's university copy}.
+\bibitem{BGL}
+S. Boucksom, V. Guedj and C. H. Lu, \emph{Volumes of Bott--Chern classes},
+arXiv:2406.01090v1 (3 June 2024), Section 2.1.
+\href{https://arxiv.org/abs/2406.01090v1}{Official primary manuscript}.
+\bibitem{AGL}
+D. Angella, V. Guedj and C. H. Lu, \emph{Plurisigned hermitian metrics},
+arXiv:2207.04705v1 (11 July 2022), Theorem 3.2 and Proposition 3.10;
+published in Trans. Amer. Math. Soc. \textbf{376} (2023), 4631--4659.
+\href{https://arxiv.org/abs/2207.04705v1}{Primary preprint}.
+\end{thebibliography}
+\end{document}
