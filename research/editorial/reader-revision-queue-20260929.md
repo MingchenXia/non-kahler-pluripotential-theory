@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research423
+
+[The affine-slope review](research/editorial/affine-envelope-slopes-review-423.md) checks 41 direct obligations and four actual primary images. Bounded obstacles give finite initial slopes and uniform later-secant bounds at every affine point; continuous weights give attained supporting-probability and derivative formulas. Regular-contact threshold consequences retain global raw contact. All 328 book files, 994 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, publication or original problem closure. Next: scoped Chapter 12 integration.
+
 ## Continuing research422
 
 [The compact-obstacle integration](research/editorial/compact-obstacle-polar-invariance-422.md) adds the big-background pointwise/quasi-everywhere equality, minimal singularities and affine logarithmic pole barriers. Three proofs, both complete local rereads and 24 actual final images pass. Of 991 old proofs, 990 remain exact; one repeated compact bound is replaced by its existing general lemma. Original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1195-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. The inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
