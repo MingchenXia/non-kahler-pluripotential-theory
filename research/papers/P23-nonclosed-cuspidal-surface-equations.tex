@@ -1,0 +1,645 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[expansion=false]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ddc}{\mathrm{d}\mathrm{d}^c}
+\newcommand{\dc}{\mathrm{d}^c}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Om}{\Omega}
+\title{Nonclosed Monge--Amp\`ere equations on cuspidal products}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+In every complex dimension $n\ge2$, we construct a compact nonnormal
+unibranch space with a genuinely nonclosed Hermitian background in the local
+embedding sense. Its normalization is a flat
+complex torus, and the pullback background degenerates along the cusp divisor.
+An explicit bounded reference repairs it to a positive metric whose powers
+are all $\ddc$-closed, because its torsion is supported on two factors.
+Fourier inversion and a contraction solve the nonlinear equation for an open
+family of positive Sobolev densities depending on all complex variables.
+A decreasing-convolution energy argument gives uniqueness against every
+bounded canonical competitor. We identify the normalization constant, prove
+continuity of the entire potential across the cusp with exponent $1/3$, and
+verify independence under every resolution refinement. The result concerns
+this product family and bounded ordinary type; it does not classify arbitrary
+unibranch singularities or potentials with poles.
+\end{abstract}
+
+\section{Conventions and result}
+
+Throughout,
+\[
+ \ddc=\frac{i}{2\pi}\partial\bar\partial,
+ \qquad \dc=\frac{i}{4\pi}(\bar\partial-\partial).
+\]
+Volume forms are $n$th powers without a factor $1/n!$.
+All potentials have their genuine canonical upper values. On a complex space
+with a smooth local embedding background $h$, its disk definition requires
+$u\circ f+p_f$ to be subharmonic or identically $-\infty$ for every
+holomorphic disk $f$, where $\ddc p_f=f^*h$ locally. Ordinary type zero is the
+entire class of bounded genuine $h$-plurisubharmonic functions.
+
+The extended measure is computed on a smooth model and pushed down.
+For bounded potentials its local products are Bedford--Taylor products with
+the smooth background corrections. We prove the required independence of
+the smooth model in Section~\ref{sec:refinements}.
+
+Let $E_1,\ldots,E_n$ be copies of the square elliptic curve
+$E=\mathbb C/(\mathbb Z+i\mathbb Z)$, let $p\in E_1$, and let $C$ be the cuspidal
+pinching at $p$ constructed in Section~\ref{sec:geometry}. Set
+\[
+ X=C\times\prod_{j=2}^n E_j,\qquad Y=\prod_{j=1}^n E_j,\qquad
+ \pi=\pi_1\times\mathrm{id}:Y\longrightarrow X.
+\]
+The smooth forms and constants in the following statement are explicitly
+constructed before any equation is solved.
+
+\begin{theorem}\label{thm:main}
+For every $n\ge2$ there are a smooth local embedding Hermitian background $h$ on $X$ with
+$\mathrm{d}h\ne0$, a bounded continuous genuine $h$-psh reference descending
+from a smooth function $v_0$ on $Y$, and a flat K\"ahler form $K_0$ on $Y$,
+such that
+\[
+ H=\pi^*h,\qquad k=H+\ddc v_0\ge\tfrac12K_0,
+ \qquad \ddc(k^r)=\ddc(H^r)=0\quad(r\ge0).
+\]
+The form $H$ has rank $n-1$ along $D=\{p\}\times\prod_{j=2}^nE_j$.
+For each integer $s\ge n+3$, the construction allows a sufficiently small
+nonzero background perturbation and an explicit $\delta>0$ with the
+following property. Put
+\[
+ \Om=K_0^n,\qquad M=\int_Y k^n,\qquad f_\eps=\frac{k^n}{\Om}.
+\]
+Let $f>0$ be real and in $H^s(Y)$, and assume
+\begin{equation}\label{eq:data-condition}
+ \left\|\frac{M}{\int_Yf\Om}f-f_\eps\right\|_{H^s}\le\delta.
+\end{equation}
+Then for $\nu=\pi_*(f\Om)$ there is a unique supremum-normalized solution
+in ordinary type zero of
+\[
+ \MA^{\mathrm{ext}}_h(u)=c\nu,\qquad
+ c=\frac{M}{\nu(X)}>0,\qquad \sup_Xu=0.
+\]
+Its full potential is locally H\"older continuous with exponent $1/3$ in
+local ambient coordinates, including along the cusp. Its pullback is
+$v_0+w$ up to a constant with $w\in H^{s+2}(Y)$; in particular the solution
+is $C^2$ on the regular locus. Every bounded genuine potential in the
+specified type has finite total Monge--Amp\`ere mass $M$.
+Both the type and measure are independent of every resolution and common
+refinement.
+\end{theorem}
+
+The data condition is invariant under positive rescaling of $f$. After fixing
+its integral, strict inequality defines an open set in the full Sobolev
+space. Densities need not separate into functions of the factors.
+
+\section{The cusp and a nonclosed background}\label{sec:geometry}
+
+Choose a coordinate $z$ on a small disk centered at $p$ in $E_1$. Replace
+the disk by the cusp $y^2=x^3$, with normalization
+\[
+ z\longmapsto (x,y)=(z^2,z^3),
+\]
+and glue its puncture to $E_1\setminus\{p\}$ by this map.
+The resulting compact curve $C$ has the same underlying topological space
+as $E_1$ and one singular point $q$. Its local ring is
+$\mathbb C\{z^2,z^3\}$, a domain with one analytic branch. The normalization
+$\pi_1:E_1\to C$ is finite: locally $z$ is integral, with $z^2=x$, and
+the map is proper. It is bijective of degree one, hence a homeomorphism.
+Consequently $X$ is a compact, connected, reduced, locally irreducible
+complex space of pure dimension $n$, with singular locus
+$\{q\}\times\prod_{j=2}^nE_j$.
+
+Choose the flat forms $\kappa_j=(i/2\pi)\,\mathrm{d}z_j\wedge
+\mathrm{d}\bar z_j$ on $E_j$ and a local embedding
+Hermitian form $h_C$ on $C$ which near $q$ equals
+\[
+ \ddc(|x|^2+|y|^2)|_C.
+\]
+Away from $q$ one may glue positive curve metrics by smooth partitions;
+the gluing occurs on the regular curve and admits positive ambient
+extensions. Near the singular point the displayed extension is already
+strictly positive. The smooth pullback $\eta=\pi_1^*h_C$ satisfies
+\[
+ \eta=\frac{i}{2\pi}(4|z|^2+9|z|^4)\,\mathrm{d}z\wedge
+                  \mathrm{d}\bar z
+ \quad\hbox{near }p.
+\]
+It is nonnegative, positive away from $p$, and vanishes at $p$.
+Write $\eta=\rho\kappa_1$ and define
+\[
+ \lambda=\frac{\int_{E_1}\eta}{\int_{E_1}\kappa_1}>0,
+ \qquad h_0=h_C+\sum_{j=2}^n\kappa_j,
+\]
+\[
+ H_0=\pi^*h_0=\eta+\sum_{j=2}^n\kappa_j,
+ \qquad K_0=\lambda\kappa_1+\sum_{j=2}^n\kappa_j.
+\]
+Product pullbacks are suppressed in this notation. The form $H_0$ is
+closed and has rank $n-1$ on $D$.
+
+Take a smooth real function $A$ on $C$ supported away from $q$ and a
+smooth real function $B$ on $E_2$. The real $(1,1)$-form
+\begin{equation}\label{eq:alpha}
+ \alpha=\partial A\wedge\bar\partial B+
+                  \bar\partial A\wedge\partial B
+\end{equation}
+is smooth in the local embedding sense and vanishes near the singular locus.
+It is pulled back from the first two factors only.
+Indeed,
+\[
+ \alpha=\partial(A\bar\partial B)+\bar\partial(A\partial B),
+ \qquad \ddc\alpha=0,
+\]
+where the two terms involving $A\partial\bar\partial B$ cancel.
+On the other hand,
+\[
+ \partial\alpha=-\partial A\wedge\partial\bar\partial B
+                      +\partial\bar\partial A\wedge\partial B.
+\]
+Choose a regular point where $\partial A=0$ and
+$\partial\bar\partial A\ne0$, and a point of $E_2$ where
+$\partial B\ne0$. Local quadratic and linear functions with cutoffs
+provide such choices. Thus $\mathrm{d}\alpha\ne0$.
+
+Denote its pullback to $Y$ by $\widetilde\alpha$. Both constants
+\[
+ r_H=\sup_{Y\setminus D}|\widetilde\alpha|_{H_0,\mathrm{op}},
+ \qquad r_K=\sup_Y|\widetilde\alpha|_{K_0,\mathrm{op}}
+\]
+are finite; the first uses its vanishing near $D$.
+Choose $\eps\ne0$ with $|\eps|r_H<1/2$ and $|\eps|r_K<1/2$.
+Then
+\[
+ h=h_0+\eps\alpha,\qquad H=H_0+\eps\widetilde\alpha
+\]
+defines a positive local embedding background with
+$\mathrm{d}h=\eps\mathrm{d}\alpha\ne0$. It equals $h_0$ near the cusp.
+Upstairs $H$ remains degenerate on $D$, and $\ddc H=0$.
+
+The smooth function $\lambda-\rho$ has zero $\kappa_1$-integral.
+Fourier division on $E_1$ gives a unique smooth mean-zero real $v$ with
+\[
+ \ddc v=(\lambda-\rho)\kappa_1.
+\]
+Each nonzero Fourier coefficient is divided by a nonzero negative
+Laplacian eigenvalue comparable to the squared frequency; rapid decay
+preserves smoothness. With $v_0=\mathrm{pr}_1^*v$,
+\begin{equation}\label{eq:repaired}
+ k=H+\ddc v_0=K_0+\eps\widetilde\alpha\ge\tfrac12K_0,
+ \qquad \ddc k=0.
+\end{equation}
+This proves the positive repair rather than assuming positivity of a
+normalization pullback.
+
+Moreover $\mathrm{d}k$ and $\dc k$ are pulled back from the smooth complex
+surface $E_1\times E_2$. They are three-forms, so their wedge is a
+six-form on a real four-dimensional source and vanishes identically.
+The same holds for $H$, since $H_0$ is closed. Thus
+\[
+ \ddc k=\ddc H=0,\qquad
+ \mathrm{d}k\wedge\dc k=\mathrm{d}H\wedge\dc H=0.
+\]
+The Leibniz rule gives $\ddc(k^r)=\ddc(H^r)=0$ for every $r\ge0$.
+This additional torsion identity is essential in dimension greater than two;
+a generic pluriclosed metric need not have $\ddc$-closed powers.
+
+\section{Fourier inversion and nonlinear existence}\label{sec:existence}
+
+Use Fourier Sobolev norms on the real $2n$-dimensional torus $Y$, and let
+$H^r_0$ consist of real functions of zero $\Om$-integral. In this section
+write $\alpha$ for $\widetilde\alpha$ and fix an integer $s\ge n+3$.
+Define
+\[
+ L_0w=\frac{nK_0^{n-1}\wedge\ddc w}{\Om},\qquad
+ L_\eps w=\frac{nk^{n-1}\wedge\ddc w}{\Om}.
+\]
+Write $b_1=\lambda$ and $b_j=1$ for $j\ge2$. The operator $L_0$ is the
+constant coefficient Laplacian
+\[
+ L_0=\sum_{j=1}^n b_j^{-1}\partial_{z_j}\partial_{\bar z_j},
+ \qquad \ell(m)=-\pi^2\sum_{j=1}^n b_j^{-1}
+                       (m_{2j-1}^2+m_{2j}^2).
+\]
+Its nonzero Fourier eigenvalues are negative and comparable in magnitude to $|m|^2$.
+Fourier division therefore gives a bounded inverse
+$L_0^{-1}:H^s_0\to H^{s+2}_0$. Put
+\[
+ A_0=\sup_{m\ne0}\frac{1+|m|^2}{|\ell(m)|}
+                  \le\frac{2\max_j b_j}{\pi^2}.
+\]
+The perturbed operator preserves zero mean, since
+\[
+ \int_Y L_\eps w\Om=n\int_Yk^{n-1}\wedge\ddc w
+                         =n\int_Yw\ddc(k^{n-1})=0.
+\]
+Fix $0<\eps_0\le1$ with $\eps_0r_H<1/2$ and $\eps_0r_K<1/2$.
+The linear perturbation has the finite expansion
+\[
+ L_\eps-L_0=\sum_{j=1}^{n-1}\eps^jP_j,\qquad
+ P_jw=n\binom{n-1}{j}
+       \frac{K_0^{n-1-j}\wedge\alpha^j\wedge\ddc w}{\Om}.
+\]
+Let $E_j$ be a Sobolev multiplication upper bound for
+$\|P_j\|_{H^{s+2}\to H^s}$, obtained from the fixed smooth coefficient
+Fourier norms, and put
+$B_{n,s}=\sum_{j=1}^{n-1}\eps_0^{j-1}E_j$.
+These constants are finite and fixed before solving the equation. For
+$|\eps|\le\eps_0$ they give
+\[
+ \|L_\eps-L_0\|_{H^{s+2}\to H^s}\le|\eps|B_{n,s}.
+\]
+Impose also $|\eps|\le\eps_0$ and $|\eps|A_0B_{n,s}\le1/2$,
+compatible with a nonzero $\eps$.
+The Neumann series for $I+L_0^{-1}(L_\eps-L_0)$ gives an inverse
+$L_\eps^{-1}:H^s_0\to H^{s+2}_0$ of norm at most
+$A=2A_0$.
+
+Set
+\[
+ Q_\eps(w)=\sum_{r=2}^n\binom nr
+                   \frac{k^{n-r}\wedge(\ddc w)^r}{\Om}.
+\]
+On the unit ball of $H^{s+2}$, for a fixed finite $C_{n,s}$,
+\begin{align}
+ \|Q_\eps(w)\|_{H^s}&\le C_{n,s}\|w\|_{H^{s+2}}^2,\label{eq:quadratic}\\
+ \|Q_\eps(w)-Q_\eps(z)\|_{H^s}&\le C_{n,s}
+  (\|w\|_{H^{s+2}}+\|z\|_{H^{s+2}})\|w-z\|_{H^{s+2}}.
+ \nonumber
+\end{align}
+The constant is uniform for $|\eps|\le\eps_0$ and is obtained by summing
+the finite wedge coefficients, the fixed coefficient norms of
+$k^{n-r}/\Om$ and the Sobolev algebra constant.
+These are Sobolev algebra estimates: Fourier convolution and
+Cauchy--Schwarz use
+$\sum_{m\in\mathbb Z^{2n}}(1+|m|^2)^{-s}<\infty$ for $s>n$.
+There is no mean obstruction in the nonlinear term. For $r\ge2$,
+\[
+ \int_Y k^{n-r}\wedge(\ddc w)^r
+ =\int_Yw\,\ddc(k^{n-r})\wedge(\ddc w)^{r-1}=0,
+\]
+first for Fourier polynomials and then by Sobolev approximation.
+The same Fourier estimate supplies a finite $D_{n,s}$ with
+\[
+ \|\ddc w\|_{L^\infty,K_0,\mathrm{op}}
+                         \le D_{n,s}\|w\|_{H^{s+2}}.
+\]
+Choose
+\begin{equation}\label{eq:radius}
+ 0<R\le\min\left\{1,\frac1{4AC_{n,s}},\frac1{4D_{n,s}}\right\},
+ \qquad \delta=\frac{R}{2A}.
+\end{equation}
+
+For $g\in H^s_0$ with $\|g\|_{H^s}\le\delta$, the map
+\[
+ w\longmapsto L_\eps^{-1}(g-Q_\eps(w))
+\]
+maps the closed radius $R$ ball in $H^{s+2}_0$ into itself, with
+image norm at most $A\delta+AC_{n,s}R^2\le3R/4$ and Lipschitz constant
+at most $2AC_{n,s}R\le1/2$. Successive approximation gives a solution of
+$L_\eps w+Q_\eps(w)=g$. It satisfies
+\[
+ k+\ddc w\ge\tfrac14K_0.
+\]
+The Sobolev embedding gives $w\in C^2$, so this is an equality of
+ordinary continuous positive volume forms.
+
+For the data in Theorem~\ref{thm:main}, put $F=cf$ with
+$c=M/\int_Yf\Om$. Then $g=F-f_\eps$ has zero mean and satisfies the
+required norm bound. Expanding the $n$th power gives
+\begin{equation}\label{eq:upstairs-equation}
+ (k+\ddc w)^n=(f_\eps+L_\eps w+Q_\eps(w))\Om=F\Om.
+\end{equation}
+The construction permits full variable perturbations. For example, in
+periodic real coordinates on all elliptic factors,
+\[
+ g=\prod_{j=1}^n\cos(2\pi x_j)
+     +\prod_{j=1}^n\cos(2\pi y_j)
+\]
+has zero mean. For a sufficiently small nonzero $t$, the density
+$f=f_\eps+tg$ is positive, obeys \eqref{eq:data-condition}, and has
+$c=1$. The prescribed equation has a nonconstant solution and treats
+the full degree $n$ Monge--Amp\`ere polynomial.
+
+\section{Bounded products and uniqueness}\label{sec:rough}
+
+We use the following precise local facts. For decreasing locally bounded
+psh functions $a_{0,j},\ldots,a_{r,j}$ with locally bounded psh limits,
+both
+\[
+ \ddc a_{1,j}\wedge\cdots\wedge\ddc a_{r,j},\qquad
+ a_{0,j}\ddc a_{1,j}\wedge\cdots\wedge\ddc a_{r,j}
+\]
+converge weakly to the corresponding products of their limits.
+These are \cite[Theorems 2.1 and 2.4]{BT82}. Bounded recursive positivity
+is also proved in \cite[Proposition 2.9]{BT76}; the locally uniform
+continuous-potential result there is not used for discontinuous limits.
+Their proofs in \cite{BT82} include the
+top degree weighted case. We also reconstruct the weighted step below
+from ordinary convergence alone. Bounded local products give no mass to
+pluripolar sets: the capacity definition and
+\cite[Theorem 6.9]{BT82} give this for top degree, and positivity applied
+to sums of bounded psh functions with a positive quadratic gives the
+mixed and lower degree versions needed here. Changing the normalization
+of $\ddc$ multiplies products and capacities by fixed positive constants
+and changes neither conclusion.
+
+\begin{lemma}\label{lem:weighted}
+For locally uniformly bounded decreasing psh sequences, weighted
+decreasing convergence follows from ordinary mixed decreasing
+convergence in one additional complex dimension.
+\end{lemma}
+\begin{proof}
+First consider top degree on a ball in $\mathbb C^m$. Write
+$\mu_j=\ddc b_{1,j}\wedge\cdots\wedge\ddc b_{m,j}$, with limit
+$\mu$, and let the weight $a_j$ decrease to $a$. On a relatively
+compact ball all the weights lie between constants $L$ and $U$.
+Choose $0<r<R$ with $\log r^2<L-1$ and $\log R^2>U+1$.
+On its product with $\{|w|<R\}$ put
+\[
+ v_j(z,w)=\max\{a_j(z),\log|w|^2\},\qquad
+ v(z,w)=\max\{a(z),\log|w|^2\}.
+\]
+These are locally bounded psh functions decreasing to $v$, including
+at $w=0$. Ordinary mixed decreasing convergence gives
+\[
+ T_j=\mu_j\wedge\ddc v_j\longrightarrow
+ T=\mu\wedge\ddc v.
+\]
+The defining bounded-product recursion writes $T=\ddc(v\mu)$.
+Since $\mu$ has top base degree, only the vertical $w$ derivatives
+survive. For each fixed $z$ the resulting vertical measure is the
+uniform probability on $|w|=\exp(a(z)/2)$: the radial derivative of
+$\max\{t,\log|w|^2\}$ jumps from $0$ to $2/|w|$, with Euclidean
+Laplacian mass $4\pi$, while our $\ddc$ is the planar Laplacian
+measure divided by $4\pi$. The identical formula holds for $T_j$.
+This follows by distributional testing and Fubini against the bounded
+Borel function $v$; continuity of $a$ is not required.
+
+Choose a smooth radial compactly supported test $\vartheta(w)$ in
+$r<|w|<R$ equal to $\log|w|^2$ near every circle between
+$\exp(L/2)$ and $\exp(U/2)$. For a smooth compactly supported base
+test $\xi$ the identities are
+\[
+ \langle T_j,\xi\vartheta\rangle=\int\xi a_j\,\mathrm{d}\mu_j,
+ \qquad \langle T,\xi\vartheta\rangle=\int\xi a\,\mathrm{d}\mu.
+\]
+The weak convergence proves the weighted assertion. For lower degree
+currents, wedge with fixed flat psh quadratics to reach top degree;
+polarization of those constant test factors recovers all current
+coefficients. A quasi-psh weight is handled by adding a fixed local
+psh quadratic and subtracting its smooth contribution. Uniformly
+converging smooth coefficient forms may be replaced by their limits
+using the uniform local product mass bounds.
+\end{proof}
+
+For a bounded canonical $k$-psh function $W$, choose locally a fixed
+positive quadratic $q$ with $\ddc q\ge k$. Then $W+q$ is locally
+bounded psh. Expanding relative to $\ddc(W+q)$ defines
+$(k+\ddc W)^n$ by the stated products and smooth coefficient forms,
+independently of $q$. This also explains its non-pluripolar property.
+
+\begin{lemma}\label{lem:mass}
+Every bounded genuine $k$-psh function $W$ satisfies
+\[
+ \int_Y(k+\ddc W)^n=\int_Yk^n=M.
+\]
+The same mass formula holds for every bounded genuine $H$-psh function.
+\end{lemma}
+\begin{proof}
+Expand the $n$th power into terms $k^{n-r}\wedge(\ddc W)^r$.
+For $r\ge1$, bounded-product recursion and compact distributional
+Stokes give
+\[
+ \int_Yk^{n-r}\wedge(\ddc W)^r
+ =\int_Y W\,\ddc(k^{n-r})\wedge(\ddc W)^{r-1}=0.
+\]
+This can also be obtained from the decreasing convolutions below and
+unweighted product convergence; each smooth integral vanishes by the
+same identity. Subtracting or adding the bounded smooth $v_0$
+interchanges the $H$ and $k$ backgrounds. The identical calculation
+for $H$, whose powers are also $\ddc$-closed, gives
+$\int_YH^n=\int_Yk^n$.
+\end{proof}
+
+\begin{proposition}\label{prop:uniqueness}
+Let $V$ be the solution of Section~\ref{sec:existence}, so
+$k+\ddc V\ge\beta K_0$ with $\beta=1/4$.
+If $U$ is any bounded canonical $k$-psh function with
+$(k+\ddc U)^n=(k+\ddc V)^n$, then $U-V$ is constant.
+\end{proposition}
+\begin{proof}
+On the flat torus convolve with a nonnegative radial kernel of radius
+$r_j\downarrow0$. Set
+\[
+ U_j=U*\varrho_j,\quad V_j=V*\varrho_j,\quad
+ k_j=k*\varrho_j,\quad
+ A_j=k_j+\ddc U_j,\quad B_j=k_j+\ddc V_j.
+\]
+Translation preserves positive currents, so $A_j\ge0$ and
+$B_j\ge\beta K_0$. Moreover $k_j\to k$ smoothly and
+$\ddc k_j=0$, while $V_j\to V$ in $C^2$.
+The convolved torsion remains pulled back from the first two factors,
+so $\mathrm{d}k_j\wedge\dc k_j=0$ as well.
+
+To check the monotone hypotheses, bound $\ddc U$ and $\ddc V$
+below by a fixed negative flat form. Locally add the same positive
+quadratic to each function. The spherical averages of a subharmonic
+function increase with their radius, as do their radial weighted
+averages. Consequently for one fixed $b\ge0$,
+\[
+ U_j+br_j^2\downarrow U,\qquad V_j+br_j^2\downarrow V
+\]
+in canonical values. The constants are the convolution correction of
+the quadratic. After the local quadratic shifts, these are precisely
+locally uniformly bounded decreasing psh sequences. The constants
+cancel in their differences and do not change their Hessians.
+
+Put $\varphi_j=U_j-V_j$ and
+$T_j=\sum_{r=0}^{n-1}A_j^r\wedge B_j^{n-1-r}$. Smooth algebra gives
+\[
+ A_j^n-B_j^n=\ddc\varphi_j\wedge T_j.
+\]
+All $A_j,B_j$ have the same $\mathrm{d}$ and $\dc$ derivatives as
+$k_j$. The Leibniz rule for $\ddc$ of each mixed monomial in $T_j$
+therefore contains only factors $\ddc k_j$ or
+$\mathrm{d}k_j\wedge\dc k_j$, both zero. Thus $\ddc T_j=0$.
+Integrate
+$\ddc(\varphi_j^2)=2\varphi_j\ddc\varphi_j+
+2\mathrm{d}\varphi_j\wedge\dc\varphi_j$ against $T_j$.
+Compact Stokes yields
+\begin{equation}\label{eq:energy}
+ -\int_Y\varphi_j(A_j^n-B_j^n)
+ =\int_Y\mathrm{d}\varphi_j\wedge\dc\varphi_j\wedge T_j
+ \ge\beta^{n-1}\int_Y\mathrm{d}\varphi_j\wedge\dc\varphi_j\wedge K_0^{n-1}.
+\end{equation}
+Only $\ddc T_j=0$ is used; $\mathrm{d}T_j$ need not vanish.
+
+Here the left side actually tends to zero. To see each required limit,
+expand $A_j$ locally relative to the positive closed current
+$P_j=\ddc(U_j+br_j^2+q)$ and the smooth forms
+$k_j-\ddc q$. Weighted monotone convergence applies to
+$U_jA_j^n$ by adding and then subtracting $q+br_j^2$.
+Unweighted convergence and uniform convergence of $V_j$ apply to
+$V_jA_j^n$. The terms $U_jB_j^n$ converge by dominated convergence:
+$U_j$ are uniformly bounded and converge pointwise, and $B_j^n$
+have uniformly converging continuous densities. The terms $V_jB_j^n$
+converge by $C^2$ convergence. A finite partition of unity patches
+these local product limits. Thus the limit of the left side is
+\[
+ -\int_Y(U-V)\big((k+\ddc U)^n-(k+\ddc V)^n\big)=0.
+\]
+The flat Dirichlet energy on the right of \eqref{eq:energy} therefore
+tends to zero. Bounded pointwise convergence gives
+$\varphi_j\to U-V$ in $L^2$. Fourier Poincar\'e then makes
+$U-V$ constant almost everywhere, and the canonical quasi-psh
+representatives give this identity at every point.
+\end{proof}
+
+Lemma~\ref{lem:mass} first forces equality of the constants in any
+two equations with the same nonzero datum. Proposition~\ref{prop:uniqueness}
+then compares a rough solution with the constructed positive solution;
+the competitor is not required to lie in the contraction ball or to be smooth.
+
+\section{Disk descent, measure factors and continuity}
+
+Every holomorphic disk into the cusp lifts holomorphically. If its
+components satisfy $y^2=x^3$ and $x\not\equiv0$, define $z=y/x$ off
+the zeros of $x$. Then $z^2=x$, $z^3=y$, and $|z|^2=|x|$;
+the bounded removable singularities extend $z$ across those zeros.
+If $x\equiv0$, also $y\equiv0$, and the lift is constant.
+All other elliptic components are unchanged. This proves disk lifting
+for every disk into $X$.
+
+Since $\pi$ is a homeomorphism, the function
+\[
+ u=(v_0+w)\circ\pi^{-1}-\sup_Y(v_0+w)
+\]
+is continuous. For any disk $f$ and its holomorphic lift $\widetilde f$,
+\[
+ \ddc(u\circ f+p_f)
+ =\widetilde f^*(H+\ddc(v_0+w))\ge0.
+\]
+It is therefore genuinely $h$-psh, with finite canonical values, and
+\eqref{eq:upstairs-equation} gives the desired pushed-forward equation.
+Conversely a bounded genuine $h$-psh function pulls back to a bounded
+genuine $H$-psh function by disk composition. Pushforward by the Borel
+homeomorphism $\pi$ is injective on finite measures: for Borel $B\subset Y$,
+$\mu(B)=(\pi_*\mu)(\pi(B))$. Thus any bounded downstairs equation
+with datum $\pi_*(f\Om)$ lifts to exactly
+$(H+\ddc(u\circ\pi))^n=cf\Om$, with the same constant.
+Subtracting $v_0$ reduces
+its equation to the positive $k$ background of Section~\ref{sec:rough}.
+Thus the upstairs uniqueness covers the entire downstairs ordinary type.
+
+The datum has no mass on the singular locus, whose inverse image $D$
+has smooth $\Om$-measure zero. A local nontrivial psh pole witness pulls
+back through this finite bijective normalization to a nontrivial psh
+witness; such witnesses are locally integrable and their pole sets are
+smooth-volume-null \cite[Chapter I, (5.3) and Theorem (4.17)]{Dem}.
+Consequently $\nu$ is non-pluripolar.
+
+The generic degree of $\pi$ is one. On $Y\setminus D$ set
+$J=H^n/\Om>0$. Under the biholomorphic identification with $X_{\rm reg}$,
+the density is exactly $f/J$ relative to $h^n$.
+Near the cusp, where $\alpha=0$,
+\[
+ \pi^*h^n=n!\rho\kappa_1\wedge\cdots\wedge\kappa_n,
+ \qquad \Om=n!\lambda\kappa_1\wedge\cdots\wedge\kappa_n.
+\]
+Thus on this punctured cusp chart the density transformation is
+\[
+ \nu=\frac{f\lambda}{\rho}\,h^n.
+\]
+Here $\rho=4|z|^2+9|z|^4$. The reciprocal factor has order
+$|z|^{-2}$; the measure is the pushforward of a finite volume with
+continuous density and carries no exceptional mass. The equation constant is forced
+by $M=c\nu(X)$, with no missing degree or factorial.
+
+For the continuity estimate, let $d=z-z'$ and $a'=z+z'$. Then
+\[
+ z^2-z'^2=da',\qquad
+ z^3-z'^3=\frac{d(3a'^2+d^2)}4.
+\]
+If $|a'|\ge|d|/4$, the first difference has magnitude at least
+$|d|^2/4$, which controls $|d|^3$ on a bounded chart. Otherwise the
+second has magnitude at least $13|d|^3/64$. Hence
+\[
+ |z-z'|\le C\bigl(|z^2-z'^2|+|z^3-z'^3|\bigr)^{1/3}.
+\]
+Combining this with the ordinary other factor coordinates and the
+$C^1$ regularity of $v_0+w$ proves the asserted H\"older bound for the
+full potential across the cusp.
+
+\section{All refinements and the scope}\label{sec:refinements}
+
+Every smooth resolution $Z\to X$ factors through $Y$. Locally, pull back
+the cusp coordinates $x,y$ and extend $z=y/x$ from the dense regular
+preimage. The estimate $|z|^2=|x|$ and normality of the smooth source
+give its holomorphic extension; the resulting lifts glue uniquely.
+The factor $\mu:Z\to Y$ is a proper birational modification.
+
+For every bounded canonical $H$-psh $W$, the pullback $W\circ\mu$
+has bounded local psh shifts. Its bounded products give no mass to the
+analytic exceptional locus. Outside that locus, $\mu$ is biholomorphic
+and the products agree by ordinary local change of variables. Therefore
+\[
+ \mu_*\MA_{\mu^*H}(W\circ\mu)=\MA_H(W).
+\]
+The same reasoning applies to every common refinement. None of these
+pullback backgrounds is declared strictly positive. The constructed
+solution on each model is literally a composition with $\mu$, so it
+is constant on every compact $\mu$-fiber with its finite canonical value.
+This proves the measure independence and the actual descent assertion.
+
+The specified ordinary type is preserved and recovered under these
+surjective pullbacks. For functions $a,b$ on $X$, the inequality
+$a\le b+C$ holds downstairs if and only if
+$a\circ\sigma\le b\circ\sigma+C$ holds on a resolution: the reverse
+implication follows by choosing a preimage of each point. Apply this
+in both directions. In particular boundedness relative to the zero
+reference, and hence exactly the stated bounded ordinary type, is
+independent of the chosen resolution or common refinement.
+
+The examples exist in every complex dimension $n\ge2$ with a nonnormal cusp
+divisor and a genuinely nonclosed background. The Fourier primitive on
+$E_1$ repairs the reference; the prescribed density equation is a nonlinear
+equation on all $2n$ real variables. The result concerns bounded ordinary
+type and an open positive Sobolev density family on this geometry. It makes
+no claim for arbitrary prescribed pole types, arbitrary Borel data, arbitrary
+unibranch spaces, or arbitrary nonclosed torsion. Those parts of P23 remain open.
+
+These spaces also differ globally from projective cones. Every holomorphic
+map $\mathbb P^1\to X$ lifts locally by the disk calculation, and the lifts
+glue uniquely to a map into $Y$. Each flat holomorphic one-form
+$\mathrm{d}z_j$ pulls back to zero on $\mathbb P^1$. Thus the lifted map
+has zero derivative and is constant. The space $X$ contains no nonconstant
+rational curves, whereas a nontrivial projective cone contains its ruling
+projective lines.
+
+\begin{thebibliography}{9}
+\bibitem{BT76} E. Bedford and B. A. Taylor,
+\emph{The Dirichlet problem for a complex Monge--Amp\`ere equation},
+Invent. Math. \textbf{37} (1976), 1--44.
+\href{https://doi.org/10.1007/BF01418826}{doi:10.1007/BF01418826}.
+\bibitem{BT82} E. Bedford and B. A. Taylor,
+\emph{A new capacity for plurisubharmonic functions},
+Acta Math. \textbf{149} (1982), 1--40.
+\href{https://doi.org/10.1007/BF02392348}{doi:10.1007/BF02392348}.
+\bibitem{Dem} J.-P. Demailly,
+\emph{Complex Analytic and Differential Geometry}, version of 21 June 2012.
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf}{Author's manuscript}.
+\end{thebibliography}
+\end{document}
