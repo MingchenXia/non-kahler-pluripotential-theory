@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\ddc}{dd^c}
+\newcommand{\dc}{d^c}
+\newcommand{\dA}{\mathrm dA}
+\newcommand{\CP}{\mathbb P}
+\newcommand{\C}{\mathbb C}
+\title{A nef and big divisorial equation with an incomplete null end}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a compact K\"ahler surface, a nef and big background and a
+divisorial exponential Monge--Amp\`ere equation with a globally smooth
+strictly positive pole coefficient. Its solution has full mass, finite
+energy and zero Lelong numbers, but its positive metric is incomplete on
+every dense Zariski open regular locus. The failure occurs at a null
+exceptional curve disjoint from the pole divisor. Two exact radial ends
+and a positive-derivative interpolation give all the data. Exact Jacobian
+cancellation proves smoothness of the volume, and radial shell masses
+prove finite energy by bounded truncations. Mere nefness and bigness
+therefore do not suffice for completeness; additional geometric-smoothing
+compatibility is a separate question.
+\end{abstract}
+
+\section{The completeness question}
+Use $\ddc=(i/(2\pi))\partial\bar\partial$ and Euclidean area $\dA$.
+For a compact K\"ahler manifold, a big class represented by $\theta$,
+a simple-normal-crossing divisor $D$ with smooth squared section norm
+$|\sigma|^2$, and a smooth strictly positive volume $dV_Y$, consider
+\begin{equation}\label{eq:equation}
+ \langle(\theta+\ddc\rho)^n\rangle=e^\rho|\sigma|^{-2}dV_Y.
+\end{equation}
+The product is non-pluripolar and the density is extended by zero on $D$.
+The equation's full-mass finite-energy solution is the one in the
+completeness question of \cite[Section 3.1]{DGL}. We ask whether nefness
+and bigness alone force a complete positive metric on some dense Zariski
+open set where that current is smooth and strictly positive.
+
+\begin{theorem}\label{thm:main}
+There are such data on a compact connected K\"ahler surface $Y$, with
+$\theta$ smooth closed semipositive and $\{\theta\}$ nef and big, for
+which a full-mass solution $\rho\in\mathcal E^1(Y,\theta)$ has zero
+Lelong numbers and is smooth on $Y\setminus(E\cup D)$. Its current
+$\Omega=\theta+\ddc\rho$ is strictly positive there. The divisors
+$E$ and $D$ are disjoint, and $E$ is a null curve. Every dense Zariski
+open positive regular locus is incomplete, although every approach to
+$D$ within $Y\setminus(E\cup D)$ has infinite length.
+\end{theorem}
+
+The prescribed measure has the exact nonintegrable pole
+$|\sigma|^{-2}dV_Y$ with a smooth strictly positive coefficient across
+$D$. The conclusion concerns mere nefness and bigness. The class,
+discrepancy, residual and volume identities in the flow setup of
+\cite{DGL} will not be asserted for this example.
+
+\section{An exact radial profile}
+Primes in this section denote differentiation in $t\in\mathbb R$.
+\begin{lemma}\label{lem:profile}
+There is $F\in C^\infty(\mathbb R)$ with $0<p:=F'<1$, $p'>0$,
+and constants $c=1/100$, $B\in\mathbb R$, $K>0$, such that
+\begin{align}
+ F(t)&=B-3\log(1-ce^{t/2}),&
+ pp'&=Ke^{F+t},&& t\leq-2,\label{eq:left}\\
+ F(t)&=t+\log H(p(t)),&
+ pp'&=e^{F-t},&& t\geq2,\label{eq:right}\\
+ H(p)&=\frac{(1-p)^2(1+2p)}6,&&&0<p<1.
+\end{align}
+Moreover,
+\begin{gather}
+ F(t)=B+3ce^{t/2}+O(e^t),\quad
+ p'(t)\sim(3c/4)e^{t/2}\quad(t\to-\infty),\label{eq:left-asymptotic}\\
+ 1-p(t)\sim2/t,\qquad p'(t)\sim2/t^2\quad(t\to\infty),\notag\\
+ F(t)-t=-2\log t+\log2+o(1)\quad(t\to\infty).\label{eq:right-asymptotic}
+\end{gather}
+\end{lemma}
+
+\begin{proof}
+Put $L(t)=-3\log(1-ce^{t/2})$ on a neighborhood of $(-\infty,-2]$.
+With $q=ce^{t/2}$, differentiation gives
+\[
+ p_L=L'=\frac{3q}{2(1-q)},\quad p_L'=\frac{3q}{4(1-q)^2},\quad
+ p_Lp_L'=\frac{9c^2}8e^t(1-ce^{t/2})^{-3}.
+\]
+Thus \eqref{eq:left} holds for any additive $B$, with
+$K=(9c^2/8)e^{-B}$; $p_L(-2)<1/50$.
+
+For the other end $H'(p)=(p-1)p$. Define
+\[
+ \mathcal T(p)=2+\int_{3/4}^p\frac{q}{H(q)}\,dq.
+\]
+It is strictly increasing, and tends to infinity as $p\uparrow1$,
+since its integrand is asymptotic to $2/(1-p)^2$. Its inverse $p_R(t)$
+exists for $t\geq2$, extends across $2$, and satisfies
+$p_R(2)=3/4$, $p_R'=H(p_R)/p_R>0$. Set
+$F_R=t+\log H(p_R)$. The derivative identity for $H$ gives
+$F_R'=p_R$, proving \eqref{eq:right}.
+Writing $q=1-p_R$ gives
+\[
+ (1/q)'=\frac{3-2q}{6(1-q)}\longrightarrow\frac12.
+\]
+Hence $q\sim2/t$, $H(p_R)\sim2/t^2$ and
+\eqref{eq:right-asymptotic} follows. This proves existence and all
+needed asymptotics without a shooting parameter.
+
+To patch derivatives on $[-2,2]$, let $d=p_R(2)-p_L(-2)>0$.
+Choose disjoint short endpoint collars and cutoffs $\alpha_L,\alpha_R$
+equal to one on smaller collars and supported in the larger ones. For
+a small $\varepsilon>0$ the function
+\[
+ Q_0=\alpha_Lp_L'+\alpha_Rp_R'
+              +\varepsilon(1-\alpha_L-\alpha_R)
+\]
+is strictly positive and matches both endpoint derivative germs.
+Shortening the collars and decreasing $\varepsilon$ makes its integral
+less than $d$. Add a nonnegative smooth interior bump with integral
+$d-\int Q_0$ to obtain $Q>0$ with integral $d$.
+Then $p=p_L(-2)+\int_{-2}^tQ$ agrees with both endpoint functions
+on their smaller collars, so it patches smoothly to $p_L,p_R$.
+It is increasing and stays in $(0,1)$. Choose $F(2)=F_R(2)$ and
+integrate $F'=p$. The left primitive differs from $L$ by a constant $B$;
+the right one equals $F_R$. The left expansion is immediate.
+\end{proof}
+
+\section{The compact data}
+Let $\pi:Y\to\CP^2$ be the blowup at $[1:0:0]$, represented by
+\[
+ Y=\{([Z_0:Z_1:Z_2],[\ell_1:\ell_2])\in\CP^2\times\CP^1:
+                                      Z_1\ell_2=Z_2\ell_1\}.
+\]
+This smooth incidence surface is compact, connected and K\"ahler.
+Write $f$ for its second projection, $E$ for the exceptional curve,
+and $D=\pi^{-1}(Z_0=0)$. The latter is a smooth projective line
+disjoint from $E$. Let $H=\pi^*c_1(\mathcal O_{\CP^2}(1))$.
+It has a smooth semipositive representative, so it is nef, and $H^2=1$.
+For bigness, $f^*c_1(\mathcal O_{\CP^1}(1))=H-[E]$, as seen from
+the total transform of a line through the blown-up point. If $\beta,\eta$
+are the two pulled-back Fubini--Study forms, then $\beta+\varepsilon\eta$
+is K\"ahler, by the incidence embedding, and
+\[
+ \frac{\beta+\varepsilon\eta}{1+\varepsilon}
+                         +\frac\varepsilon{1+\varepsilon}[E]
+\]
+is a K\"ahler current in $H$. This proves bigness directly.
+
+Choose an even nonnegative smooth function $\zeta$, positive on $(-1,1)$,
+supported in $[-1,1]$, of integral one. Define
+\[
+ U(t)=\int_{\mathbb R}\max(0,t-x)\zeta(x)\,dx.
+\]
+Then $U$ is smooth convex, $U=0$ for $t\leq-1$, $U=t$ for
+$t\geq1$, and $U',U''\geq0$. On $Z_0\ne0$, set
+$z=(Z_1/Z_0,Z_2/Z_0)$, $s=|z|^2$, $t=\log s$.
+Give the frame $Z_0$ of $\mathcal O(1)$ squared norm $e^{-U(t)}$.
+Near the origin this is constant. At infinity, in coordinates
+\[
+ w=Z_0/Z_1,\qquad v=Z_2/Z_1,\qquad h=1+|v|^2,
+ \qquad s=h/|w|^2,
+\]
+the frame $Z_1$ has norm $e^{-U}/|w|^2=1/h$ near $w=0$.
+Thus this is a smooth strictly positive bundle metric globally.
+Pull it back to $\mathcal O_Y(D)$ and write $\sigma=\pi^*Z_0$.
+Its curvature $\theta$ is smooth closed semipositive in $H$, with
+\begin{align}
+ |\sigma|^2&=e^{-U(t)},&\theta&=\ddc U(t)&&\text{on the affine chart},\label{eq:background}\\
+ |\sigma|^2&=|w|^2/h,&\theta&=\ddc\log h&&\text{near infinity}.
+\end{align}
+Semipositivity follows from the radial Hessian and $U',U''\geq0$.
+The form vanishes near $E$, and has rank one near $D$.
+The normalized minimal potential is zero; the volume of the class is
+$\int_Y\theta^2=H^2=1$, as in the semipositive volume description
+of \cite[Sections 1.5 and 4]{BEGZ}.
+
+\section{The solution and exact smooth volume}
+On $Y\setminus(E\cup D)\simeq\C^2\setminus\{0\}$ put
+\begin{equation}\label{eq:solution}
+ \rho=F(t)-U(t),\qquad \Omega=\ddc F(t),\qquad
+ dV_Y=e^{-F(t)}\Omega^2.
+\end{equation}
+The radial Hessian of $F(\log|z|^2)$ has eigenvalues $p/s,p'/s$.
+Both are positive, and with our convention
+\begin{equation}\label{eq:determinant}
+ \Omega^2=\frac2{\pi^2}\frac{pp'}{s^2}\dA_{z_1}\dA_{z_2}.
+\end{equation}
+Extend $\rho$ to $E$ by its limit $B$ and to $D$ by $-\infty$.
+Near $E$, use $z=(u,uv)$, so $s=|u|^2h$. Its local potential is
+\[
+ F(t)=B-3\log(1-c|u|\sqrt h).
+\]
+It is the pullback of a locally bounded plurisubharmonic extension at
+the affine origin, so it is continuous and plurisubharmonic near $E$.
+Near $D$, the local potential is $\rho+\log h$, which is psh off
+$w=0$, locally bounded above and tends to $-\infty$.
+Its bounded-above psh extension \cite[Proposition 3.3.25]{JP} proves that the global $\rho$ is
+$\theta$-psh. Boundedness at $E$ and the log-log growth at $D$ give
+zero Lelong numbers everywhere.
+
+We verify smoothness of the volume through exact identities. At $E$
+the Jacobian is $|u|^2$, so
+\[
+ \Omega^2=\frac2{\pi^2}\frac{pp'}{|u|^2h^2}\dA_u\dA_v.
+\]
+Using \eqref{eq:left}, $e^{-F}pp'=Ks=K|u|^2h$, and therefore
+\begin{equation}\label{eq:volume-E}
+ dV_Y=\frac{2K}{\pi^2h}\dA_u\dA_v
+ \qquad\text{near }E.
+\end{equation}
+This extends smoothly and strictly positively across $u=0$.
+At $D$, $z=(1/w,v/w)$ has real Jacobian $|w|^{-6}$, so
+\[
+ \Omega^2=\frac2{\pi^2}\frac{pp'}{|w|^2h^2}\dA_w\dA_v.
+\]
+Now \eqref{eq:right} gives $e^{-F}pp'=e^{-t}=|w|^2/h$ and
+\begin{equation}\label{eq:volume-D}
+ dV_Y=\frac2{\pi^2h^3}\dA_w\dA_v
+ \qquad\text{near }D.
+\end{equation}
+The other exceptional and infinity charts give the same conclusion.
+The extensions agree on overlaps since they agree on the dense punctured
+overlaps. Between the ends \eqref{eq:solution} is smooth and positive.
+Thus $dV_Y$ is globally smooth and strictly positive. In particular,
+\[
+ |\sigma|^{-2}dV_Y=\frac2{\pi^2|w|^2h^2}\dA_w\dA_v
+ \qquad\text{near }D;
+\]
+its transverse integral diverges, with a smooth positive coefficient.
+
+On the complement the equation is exact:
+\[
+ e^\rho|\sigma|^{-2}dV_Y
+          =e^{F-U}e^Ue^{-F}\Omega^2=\Omega^2.
+\]
+The non-pluripolar product has no mass on the two divisors, and the
+right side has no mass there, with the stipulated extension at $D$.
+Consequently the global measure identity holds once its finite mass
+is checked below.
+
+\section{Full mass and finite energy by bounded truncations}
+Polar integration in $\C^2$ has radial density $\pi^2s\,ds$.
+Equation~\eqref{eq:determinant} therefore yields
+\begin{equation}\label{eq:mass}
+ \int_Y\langle\Omega^2\rangle
+                 =\int_{-\infty}^{\infty}2pp'\,dt=1.
+\end{equation}
+This is the class volume, so the solution has full mass.
+Near $E$, $\rho$ is bounded and $\theta=0$. Away from the two ends
+all data are smooth on a compact set. On the cusp end write
+\[
+ \alpha=\ddc t=\ddc\log h,\qquad
+ \beta_t=\frac i{2\pi}\partial t\wedge\bar\partial t.
+\]
+Both have rank one, and
+\begin{gather*}
+ \theta=\alpha,\qquad \Omega=p\alpha+p'\beta_t,\\
+ \Omega^2=2pp'\alpha\wedge\beta_t,\qquad
+ \Omega\wedge\theta=p'\alpha\wedge\beta_t,\qquad\theta^2=0.
+\end{gather*}
+Integrating $\alpha\wedge\beta_t$ in its angular and projective
+variables gives $dt$. Since $|\rho|=O(\log t)$ and $p'=O(t^{-2})$,
+both $\int|\rho|\Omega^2$ and $\int|\rho|\Omega\wedge\theta$
+are finite at that end.
+
+We spell out the bounded approximation to verify the finite-energy
+definition. Choose $M$ with $\phi=\rho-M\leq0$, and let
+$\phi_k=\max(\phi,-k)$. For large $k$ truncation changes the potential
+only near $D$. There $\phi=\log H(p(t))-M$ decreases strictly to
+$-\infty$; denote its level $-k$ by $t=T_k$. Then
+\[
+ k=2\log T_k+O(1).
+\]
+On the punctured chart the radial primitive for the truncated current is
+\[
+ G_k(t)=\max(F(t)-M,t-k).
+\]
+A genuine local psh potential is $G_k(t)+\log|w|^2$, which equals
+$\log h-k$ near $D$. Thus no divisor mass is added by writing the
+primitive in the punctured coordinate. Its derivative is $p$ before
+$T_k$ and $1$ after $T_k$, with an upward jump.
+Convolution in $t$ with an even nonnegative smooth kernel gives smooth
+convex primitives decreasing to $G_k$ as its scale decreases. The bounded
+local potentials converge locally uniformly, and the Bedford--Taylor
+products converge \cite[Theorems 2.1 and 2.10]{BT}. Their radial
+top-degree measures are $d((G_k')^2)$ and $dG_k'$ for the square and the
+wedge with $\theta$. Hence the shell masses are respectively
+\[
+ 1-p(T_k)^2,\qquad 1-p(T_k).
+\]
+This follows by integrating $2q\,dq$ and $dq$ through the transition;
+it does not multiply delta currents. Beyond it the top-degree measures
+vanish because both primitives are linear. On the shell $\phi_k=-k$,
+so its absolute energy contributions are
+\[
+ k(1-p(T_k)^2),\qquad k(1-p(T_k)),
+\]
+and tend to zero by $1-p(T_k)\sim2/T_k$. Interior contributions converge
+absolutely by the preceding integrability. The bounded psh potential
+near $E$ contributes no mass to that analytic curve, also seen from
+the zero radial boundary mass $p(-\infty)=0$.
+Consequently the relative energies
+\[
+ E_\theta(\phi_k)=\frac13\sum_{j=0}^2
+       \int_Y\phi_k(\theta+\ddc\phi_k)^j\wedge\theta^{2-j}
+\]
+have a finite limit and are uniformly bounded below. This proves
+$\rho\in\mathcal E^1(Y,\theta)$ by the truncation definition
+\cite[equation (2.1), Proposition 2.4 and Definition 2.5]{BBGZ}. By the uniqueness in the
+problem this is its finite-energy solution. Equivalently, the full-mass
+comparison principle of \cite[Corollary 2.3]{BEGZ} compares the two
+exponential densities on each strict sublevel set and forces equality.
+
+\section{Finite distance to the null curve}
+Fix $v=v_0$ in an exceptional chart and put $h_0=1+|v_0|^2$.
+The normal restriction is
+\[
+ \Omega\big|_{v=v_0}=\frac i{2\pi}
+        \frac{p'(\log(|u|^2h_0))}{|u|^2}\,du\wedge d\bar u.
+\]
+Its coefficient is asymptotic to
+$(3c\sqrt{h_0}/4)|u|^{-1}$ and diverges at every point of $E$.
+Thus every positive smooth regular locus excludes $E$.
+Along $u=r>0$ its squared real speed is bounded by $C/r$.
+Its remaining length is at most $C\int_0^{r_0}r^{-1/2}\,dr<\infty$.
+The divisor $D$ is also excluded from the smooth locus, since its normal
+coefficient is asymptotic to $2/(|w|^2t^2)$ and diverges.
+
+Let $U$ be any dense Zariski open positive regular locus and
+$A=Y\setminus U$. On this compact surface $A$ has finitely many curve
+and point components \cite[Theorem 7.8 and Corollary 7.10]{Adamus}, and contains $E$. Every other curve meets $E$
+in only finitely many points. Choose a point of $E$ avoiding these
+intersections and the point components. A sufficiently small coordinate
+neighborhood has $A$ equal to $E$ there. The fixed-$v$ radial path
+above therefore lies in $U$ for all sufficiently small positive $r$.
+Its points approaching zero form an intrinsic Cauchy sequence, since
+the tail lengths tend to zero. They have no limit in $U$: the smooth
+positive metric induces the manifold topology, and their only limit
+in $Y$ is the removed point of $E$. This proves incompleteness of every
+such $U$.
+
+The pole itself has a complete cusp end. On the punctured affine chart,
+\[
+ \Omega=p\ddc t+p'\,dt\wedge\dc t.
+\]
+Both terms are nonnegative and $p'\geq c/t^2$ for large $t$.
+Length of any path to $D$ bounds below $c\int|dt|/t$, which diverges
+as $t\to\infty$. The finite missing boundary is the disjoint null curve
+$E$, not the prescribed pole. Theorem~\ref{thm:main} follows.
+
+\section{Scope}
+The smooth volume is chosen as part of the example. Exact identities
+prove that it stays strictly positive across both ends; asymptotic
+cancellation alone would not suffice. The construction retains the
+actual divisorial equation, full mass, finite energy and minimal Lelong
+numbers, and disproves completeness under mere nefness and bigness.
+It does not assert failure or validity under the additional flow-compatible
+data in \cite[Section 3.1]{DGL}; that branch remains open here.
+
+\begin{thebibliography}{9}
+\bibitem{Adamus} J.~Adamus, \emph{Complex Analytic Geometry},
+lecture notes, revised 8 December 2015,
+\href{https://www.math.uwo.ca/faculty/adamus/teaching/9607b2019/CAGI.pdf}{author's notes}.
+\bibitem{BBGZ} R.~Berman, S.~Boucksom, V.~Guedj and A.~Zeriahi,
+A variational approach to complex Monge--Amp\`ere equations,
+\href{https://arxiv.org/abs/0907.4490}{arXiv:0907.4490v1}.
+\bibitem{BEGZ} S.~Boucksom, P.~Eyssidieux, V.~Guedj and A.~Zeriahi,
+Monge--Amp\`ere equations in big cohomology classes,
+\emph{Acta Mathematica} 205 (2010), 199--262,
+\href{https://arxiv.org/abs/0812.3674}{arXiv:0812.3674}.
+\bibitem{BT} E.~Bedford and B.~A.~Taylor,
+A new capacity for plurisubharmonic functions,
+\emph{Acta Mathematica} 149 (1982), 1--40,
+\href{https://www.math.stonybrook.edu/~ebedford/PapersForM655/BTNewCapacity.pdf}{author's copy}.
+\bibitem{DGL} E.~Di Nezza, V.~Guedj and C.~H.~Lu,
+Geometric smoothing by the K\"ahler--Ricci flow,
+\href{https://arxiv.org/abs/2607.08325}{arXiv:2607.08325v1},
+Theorem 3.4 and Question 3.5.
+\bibitem{JP} M.~Jarnicki and P.~Pflug, \emph{Separately analytic functions},
+manuscript, 11 November 2008,
+\href{https://www.math.stonybrook.edu/~ebedford/PapersForM537/JarnickiPflugSepHolo081111.pdf}{source copy}.
+\end{thebibliography}
+\end{document}

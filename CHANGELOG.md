@@ -1,5 +1,9 @@
 # Modification history
 
+## Standalone S13 nefness-branch paper — 4 October 2026
+
+[Paper](research/papers/S13-nef-big-incomplete-cusp.tex) and [review](research/papers/S13-nef-big-incomplete-cusp.review.md): completely resolve the original nefness branch by an exact compact nef-big counterexample, incomplete on every dense Zariski open positive regular locus. Both generated proofs pass correctness/source/full blind reconstruction; original requirements PASS. Full root proof and primary-source review, two clean local builds and all six final-page visual checks pass. Native compilation remains unverified. The distinct flow-compatible branch is still open and has a separate original-only gpt-6.1-sol xhigh campaign. Concurrent book work is retained; no book rebuild is claimed.
+
 ## Checkpoint 386 — Two-point semipositive boundary
 
 [Review](research/editorial/two-point-fiber-integrability-386.md): Subsection 26.10.6 proves positive reference mass without a strict residual gauge and a nonzero sharp section defect on a two-point blowup. Two complete scoped reads, 39 obligations and 52 selected-page checks pass. Eight complete current arXiv roots match prior checked listings. Actual live PDF/homepage/Pages are verified; 1076 printed pages. P22 stays resolved in its original scope; 22 formal and 19 supplemental directions remain open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 295 exact book sources, all 1100+17 page texts matching and 1981 checksum-validated archive entries; authorized private 386 synchronization follows.
