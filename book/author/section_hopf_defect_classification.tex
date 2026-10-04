@@ -1,0 +1,261 @@
+\section{Limits of shrinking smooth potentials}\label{sec:hopf-defect-classification}
+
+Retain the Hopf threefold $X$, its projection $\pi:X\to\mathbb P^2$, and the forms $\omega=\alpha+\beta$ introduced above. The elliptic fibers carry the Haar probability measures $h_p$, $p\in\mathbb P^2$. For a finite positive measure $\mu$ on the base, define its fiberwise lift by
+\[
+ \int_X\varphi\,\mathrm{d}\mathcal L\mu
+ =\int_{\mathbb P^2}\left(\int_{\pi^{-1}(p)}\varphi\,\mathrm{d}h_p\right)\mathrm{d}\mu(p),
+ \qquad\varphi\in C(X).
+\]
+Fiber integration is continuous in $p$, so $\mathcal L$ is weakly continuous. The normalization $\int_{\pi^{-1}(p)}\beta=2$ gives
+\begin{equation}\label{eq:hopf-fiber-lift-normalization}
+ \mathcal L\mu=\tfrac12\beta\wedge\pi^*\mu,
+ \qquad \mathcal L(\omega_{\mathrm{FS}}^2)=\tfrac16\omega^3.
+\end{equation}
+Here $\pi^*\mu$ denotes the pullback of a top-degree current by the submersion $\pi$; locally it is the base measure with constant coefficients in the fiber directions.
+
+For a Hermitian form $\eta$ on $X$, put
+\[
+ M_\eta(f)=\int_X(\eta+\ddc f)^3,\qquad V_\eta=\int_X\eta^3
+\]
+for smooth real $f$. A positive measure $\sigma$ will be called a \emph{shrinking defect} for $(\eta,b)$ if, for every sequence $0<\varepsilon_j<1$ tending to zero, there are smooth $U_j\in\PSH(X,\eta)$ and numbers $0<r_j<\varepsilon_j$ such that
+\begin{equation}\label{eq:hopf-shrinking-realization}
+ \sup_XU_j=0,\qquad w_j=r_jU_j,\qquad
+ M_\eta(w_j)=b,\qquad
+ (\eta+\ddc w_j)^3\rightharpoonup\eta^3+\sigma.
+\end{equation}
+The weak convergence here tests every continuous function on $X$. For the standard metric $\omega$, write $m=b-6>0$. We first classify its defects, then change the metric.
+
+\subsection{Positive quadratic measures}
+
+The mass formula in \cref{prop:hopf-mass} gives
+\[
+ M_\omega(\lambda f)-6=\lambda^2\bigl(M_\omega(f)-6\bigr)
+\]
+for every smooth real $f$ and real $\lambda$. To use this scalar identity in a weak limit, we also need a positive measure controlling the quadratic term.
+
+\begin{lemma}\label{lem:hopf-positive-quadratic-measure}
+Let $f$ be smooth, $0<t<1$, and $\ddc f\geq-t\omega$. Set $H=\ddc f+t\omega$, $d=M_\omega(f)-6$, and $\nu=3\omega\wedge H^2$. Then $d\geq0$ and
+\[
+ \begin{gathered}
+ \int_X\omega^2\wedge H=6t,\qquad
+ \int_X\omega\wedge H^2=d/3+6t^2,\qquad
+ \int_XH^3=td+6t^3,\\
+ \bigl\|(\omega+\ddc f)^3-\omega^3-\nu\bigr\|_{\mathrm{TV}}
+ \leq36t+2td+24t^3.
+ \end{gathered}
+\]
+\end{lemma}
+\begin{proof}
+The Gauduchon identity $\ddc\omega^2=0$ cancels $\int_X\omega^2\wedge\ddc f$, while Stokes' formula gives $\int_X(\ddc f)^3=0$. Expanding the three integrals proves their values; \cref{prop:hopf-mass} gives $d\geq0$. The measure identity
+\[
+ (\omega+\ddc f)^3
+ =(1-t)^3\omega^3+3(1-t)^2\omega^2\wedge H
+   +(1-t)\nu+H^3
+\]
+has four positive terms. After subtracting $\omega^3+\nu$, their total masses bound the total variation by $18t+18t+t(d+18t^2)+td+6t^3$, as asserted.
+\end{proof}
+
+\subsection{Orbital mixtures}
+
+The compact group $G=U(3)\times(\mathbb R/\mathbb Z)$ acts transitively by the holomorphic maps $g[z]=[\mathrm{e}^tAz]$, $g=(A,t)$, and preserves $\omega$. Let $h_G$ be its Haar probability measure. For a probability measure $\rho$ on $G$, write
+\[
+ \mathcal A_\rho\sigma=\int_Gg^*\sigma\,\mathrm{d}\rho(g).
+\]
+Pullback of measures is interpreted by testing $\varphi\circ g^{-1}$. In particular, transitivity gives
+\[
+ \int_Gg^*\zeta\,\mathrm{d}h_G(g)
+ =\frac{\zeta(X)}6\omega^3
+\]
+for every finite measure $\zeta$ on $X$.
+
+\begin{proposition}\label{prop:hopf-orbital-defects}
+\index{Mass defect!orbital mixtures}
+If $\sigma$ is a shrinking defect for $(\omega,6+m)$, then so is $\mathcal A_\rho\sigma$ for every probability measure $\rho$ on $G$.
+\end{proposition}
+\begin{proof}
+Fix bounds $\varepsilon_j$ as in \eqref{eq:hopf-shrinking-realization}. Take a realizing sequence $f_k=t_ku_k$ with exact mass $6+m$, and put $H_k=\ddc f_k+t_k\omega$. By \cref{lem:hopf-positive-quadratic-measure}, the positive measures $\nu_k=3\omega\wedge H_k^2$ have masses $m+18t_k^2$ and tend weakly to $\sigma$.
+
+First suppose that $\rho$ has density at most $L$ relative to $h_G$. Choose $N$ independent group elements $g_1,\ldots,g_N$ with law $\rho$, and set
+\[
+ W=N^{-1/2}\sum_{a=1}^Nf_k\circ g_a,\qquad
+ \tau=t_k\sqrt N,\qquad
+ K=\ddc W+\tau\omega=N^{-1/2}\sum_{a=1}^Ng_a^*H_k\geq0.
+\]
+Their quadratic measure is
+\[
+ 3\omega\wedge K^2=D+C,\qquad
+ D=N^{-1}\sum_{a=1}^Ng_a^*\nu_k,\qquad
+ C=\frac6N\sum_{a<c}\omega\wedge g_a^*H_k\wedge g_c^*H_k\geq0.
+\]
+Averaging $u_k\circ g$ against $h_G$ gives a constant, hence $\int_Gg^*H_k\,\mathrm{d}h_G=t_k\omega$. Consequently $B=\int_Gg^*H_k\,\mathrm{d}\rho\leq Lt_k\omega$, and independence gives
+\[
+ \mathbb E[C(X)]=3(N-1)\int_X\omega\wedge B^2
+ \leq18(N-1)L^2t_k^2.
+\]
+For any real $\varphi\in C(X)$ with $\|\varphi\|_\infty\leq1$, the variance of $D(\varphi)$ is at most $(m+18t_k^2)^2/N$.
+
+For general $\rho$, convolve it with normalized Haar restrictions to shrinking identity neighborhoods. This gives $\rho_j\rightharpoonup\rho$ with bounded densities $L_j$; every nonempty open neighborhood has positive Haar measure. Fix a countable dense set $(\varphi_l)$ in the real unit ball of $C(X)$ and numbers $0<\delta_j<\min(1,m/4)$ tending to zero. Choose $N_j$ large enough that
+\[
+ \frac{j(m+18)^2}{N_j\delta_j^2}<\frac14.
+\]
+Next choose $k_j$ large enough that $t_{k_j}<1$, $\tau_j=t_{k_j}\sqrt{N_j}<\min(\varepsilon_j/4,1/j,1/4)$, $18N_jt_{k_j}^2<m/4$, and the expected cross-term mass is less than $\delta_j/4$. Chebyshev's inequality for the first $j$ tests and Markov's inequality for $C(X)$ show that a deterministic tuple exists with
+\[
+ |D_j(\varphi_l)-(\mathcal A_{\rho_j}\nu_{k_j})(\varphi_l)|<\delta_j
+ \quad(l\leq j),\qquad C_j(X)<\delta_j.
+\]
+The choices may also ensure $k_j\to\infty$. For each fixed test function, the family $\{\varphi\circ g^{-1}:g\in G\}$ is compact in $C(X)$. A finite uniform net and the bounded masses of $\nu_k$ therefore give uniform convergence of its pairings in $g$. It follows that $\mathcal A_{\rho_j}\nu_{k_j}\rightharpoonup\mathcal A_\rho\sigma$. The dense tests and bounded masses now imply $D_j\rightharpoonup\mathcal A_\rho\sigma$, while $C_j\to0$ in total variation.
+
+By the integral identity of \cref{lem:hopf-positive-quadratic-measure},
+\[
+ d_j=M_\omega(W_j)-6
+ =m+C_j(X)-18(N_j-1)t_{k_j}^2\longrightarrow m,
+ \qquad d_j>3m/4.
+\]
+Put $\lambda_j=\sqrt{m/d_j}$, so $\lambda_j\to1$ and $\lambda_j<2$. The average $a_j=N_j^{-1}\sum_a u_{k_j}\circ g_a$ is smooth and $\omega$-plurisubharmonic. With
+\[
+ U_j=a_j-\sup_Xa_j,\qquad r_j=\lambda_j\tau_j<\varepsilon_j,
+\]
+the potential $r_jU_j$ differs from $\lambda_jW_j$ by a constant and has exact mass $6+m$. Its positive quadratic measure is $\lambda_j^2(D_j+C_j)$. The total-variation estimate of \cref{lem:hopf-positive-quadratic-measure}, with parameter $r_j$, proves the required weak limit.
+\end{proof}
+
+Since $v_+(\omega)=+\infty$, \cref{cor:smooth-capacity-mass-defect} supplies a convergent subsequence with some defect of mass $m$. Thinning that subsequence meets any new prescribed shrinking bounds without changing its defect. Applying \cref{prop:hopf-orbital-defects} with $\rho=h_G$ shows that $(m/6)\omega^3$ is a shrinking defect. In particular, excess mass can persist in a smooth limiting density.
+
+\subsection{Fiber measures}
+
+\begin{lemma}\label{lem:hopf-defect-fiber-necessity}
+Suppose that smooth $f_j=t_ju_j$, $u_j\in\PSH(X,\omega)$, $\sup_Xu_j=0$, $0<t_j\to0$, have exact mass $6+m$ and defect $\sigma$. There is a unique positive base measure $\mu$ of mass $m$ such that
+\[
+ \sigma=\mathcal L\mu,\qquad
+ (\ddc f_j+t_j\omega)^2\rightharpoonup\tfrac16\pi^*\mu.
+\]
+\end{lemma}
+\begin{proof}
+Put $H_j=\ddc f_j+t_j\omega$. By \cref{prop:shrinking-intermediate-currents}, every convergent subsequence of $H_j^2$ has a positive closed limit $K$ satisfying $\alpha\wedge K=0$ and $\sigma=3\omega\wedge K$. In holomorphic coordinates $(x_1,x_2,w)$ on a local trivialization of the elliptic bundle, the coefficient matrix of $K$ on the three exterior pairs is positive semidefinite as a matrix of measures. To see this directly, positivity of the matrices of $H_j^2$ passes to each constant-vector test; take Radon--Nikodym derivatives with respect to their diagonal trace. Since $\alpha$ is strictly positive in the horizontal directions, $\alpha\wedge K=0$ makes both diagonal entries containing $\mathrm{d}w$ vanish. Positivity then makes their rows and columns vanish. Only the horizontal top-degree coefficient remains.
+
+Closedness makes both real fiber derivatives of that coefficient zero in distributions. Testing against a compactly supported base function times a nonconstant Fourier mode on $E=\mathbb C/(\mathbb Z+2\pi\mathrm{i}\mathbb Z)$ shows that every such mode vanishes. Density of trigonometric polynomials in $C(E)$ identifies the coefficient as a base measure times constant fiber area. Changes of bundle coordinates translate $w$ by a holomorphic base function and preserve that area. Thus $K=\pi^*\tau$ for a positive measure $\tau$ on $\mathbb P^2$.
+
+The horizontal term $\alpha\wedge K$ vanishes, so \eqref{eq:hopf-fiber-lift-normalization} gives $\sigma=3\beta\wedge\pi^*\tau=\mathcal L(6\tau)$. Therefore $\mu=6\tau=\pi_*\sigma$ is unique and has mass $m$. Every subsequential limit of $H_j^2$ is the same, proving convergence of the entire sequence.
+\end{proof}
+
+\begin{lemma}\label{lem:hopf-fiber-defect-realization}
+For every $p\in\mathbb P^2$, the measure $mh_p$ is a shrinking defect for $(\omega,6+m)$.
+\end{lemma}
+\begin{proof}
+Start with smooth $f_j=t_ju_j$ realizing $(m/6)\omega^3$, and put $H_j=\ddc f_j+t_j\omega$. By \cref{lem:hopf-defect-fiber-necessity}, $H_j^2\rightharpoonup(m/6)\alpha^2$, while $H_j$ has trace mass $O(t_j)$. Fix $A\in GL(3,\mathbb C)$, regarded as an automorphism of $X$, and let $a$ be the induced projective map. Choose $C_A\geq1$ with $A^*\omega\leq C_A\omega$, and put
+\[
+ R_A=C_A\omega-A^*\omega\geq0,\qquad
+ H_j^A=\ddc(f_j\circ A)+C_At_j\omega=A^*H_j+t_jR_A.
+\]
+For this fixed $A$, the trace mass of $A^*H_j$ is $O_A(t_j)$. The positive difference $(H_j^A)^2-A^*(H_j^2)$ has trace mass $O_A(t_j^2)$. Thus
+\[
+ (H_j^A)^2\rightharpoonup\frac m6\pi^*(a^*\omega_{\mathrm{FS}}^2),
+ \qquad 3\omega\wedge(H_j^A)^2\rightharpoonup\mathcal L(m a^*\omega_{\mathrm{FS}}^2).
+\]
+The limiting mass is $m$. The integral identity of \cref{lem:hopf-positive-quadratic-measure} implies $d_j^A=M_\omega(f_j\circ A)-6\to m$. For large $j$, multiply $f_j\circ A$ by $\sqrt{m/d_j^A}$. The mass is then exactly $6+m$, and the weak limit is unchanged. The underlying normalized potential is $u_j\circ A/C_A\in\PSH(X,\omega)$, and the shrinking parameter is $C_At_j\sqrt{m/d_j^A}\to0$. The same total-variation estimate proves realization with any prescribed bounds, by taking a sufficiently late subsequence.
+
+Now take $A_l=\operatorname{diag}(R_l^{-1},1,1)$, $R_l\to+\infty$. Since
+\[
+ a_l^*\omega_{\mathrm{FS}}^2=(a_l^{-1})_*\omega_{\mathrm{FS}}^2,
+\]
+and $a_l^{-1}[q_0:q_1:q_2]=[R_lq_0:q_1:q_2]\to[1:0:0]$ outside the zero-volume hyperplane $q_0=0$, dominated convergence gives $a_l^*\omega_{\mathrm{FS}}^2\rightharpoonup\delta_{[1:0:0]}$. Weak continuity of $\mathcal L$ gives the fiber measure. For each fixed $A_l$, choose one sufficiently late corrected potential with parameter less than $\varepsilon_l$ and error less than $1/l$ on the first $l$ dense tests. This diagonal sequence has exact mass and the asserted limit. Unitary automorphisms move this fiber to any prescribed fiber.
+\end{proof}
+
+\begin{theorem}\label{thm:hopf-standard-defect-classification}
+\index{Hopf manifold!shrinking defects}\index{Mass defect!fiberwise classification}
+For $b>6$, the shrinking defects for $(\omega,b)$ are exactly $\mathcal L\mu$, where $\mu$ ranges over all positive measures on $\mathbb P^2$ of mass $b-6$. Each such defect has support $\pi^{-1}(\operatorname{supp}\mu)$ and has no point atoms. It charges no pluripolar sets if and only if $\mu$ charges no pluripolar sets on $\mathbb P^2$.
+\end{theorem}
+\begin{proof}
+Necessity follows from \cref{lem:hopf-defect-fiber-necessity}. Finite convex combinations of fiber measures are realized by \cref{lem:hopf-fiber-defect-realization,prop:hopf-orbital-defects}, using unitary maps that move a fixed fiber to the desired fibers. Approximate an arbitrary base measure of mass $m$ by finite atomic measures of the same mass, using finite partitions of diameter tending to zero. Weak continuity of $\mathcal L$ and the diagonal choice on dense tests used in the preceding proof give a realization for every prescribed sequence $\varepsilon_j$.
+
+Every nonempty open piece of a fiber has positive Haar measure. Local trivializations and the support of the base measure therefore give the stated support, and the fiber measures have no point atoms. If $B$ is pluripolar on the base, local plurisubharmonic functions whose pole sets contain $B$ pull back by the submersion to such functions on $X$. Hence $\pi^{-1}(B)$ is pluripolar, and $\mathcal L\mu(\pi^{-1}(B))=\mu(B)$.
+
+Conversely, suppose that $\mu$ charges no base pluripolar sets. Cover a pluripolar set in $X$ by countably many local product charts with genuine plurisubharmonic functions $q(x,w)$ whose pole sets contain it. On a smaller relatively compact fiber disc $D$, the function
+\[
+ F(x)=\frac1{|D|}\int_Dq(x,w)\,\mathrm{d}A(w)
+\]
+is plurisubharmonic on a smaller base chart. Indeed, joint local integrability and Fubini give finiteness almost everywhere and local integrability of $F$; a common upper bound and reverse Fatou give upper semicontinuity; integrating the base submean inequalities gives the submean property. A fiber restriction of $q$ is either subharmonic with an area-null pole set or identically $-\infty$. The second case lies in the base pole set $\{F=-\infty\}$, which has zero $\mu$-measure. Integrating the Haar measures on fibers proves that each local pole set has zero $\mathcal L\mu$-measure. The countable cover proves the conclusion. For arbitrary pluripolar subsets, the same argument uses Borel pole-set envelopes and outer measure. Conversely, a Borel null envelope of a lifted set has a measurable fiber-mass function equal to one on the base set, giving the corresponding outer-measure assertion there as well.
+\end{proof}
+
+For every nonempty closed $F\subseteq\mathbb P^2$, a measure $m\sum_{l\geq1}2^{-l}\delta_{p_l}$ on a countable dense subset of $F$ has support $F$. Thus every saturated closed set $\pi^{-1}(F)$ occurs as a defect support. The fibers themselves are globally pluripolar: for the fiber over $[1:0:0]$,
+\[
+ \psi=\log\frac{|z_1|^2+|z_2|^2}{|z|^2},\qquad
+ \ddc\psi\geq-\alpha,\qquad \omega+\ddc\psi\geq\beta\geq0.
+\]
+Its pole set is exactly that fiber, and unitary maps give the other fibers. In particular, for $0\leq\theta\leq1$ the measure
+\[
+ m\theta h_p+\frac{m(1-\theta)}6\omega^3
+\]
+is realized by a shrinking smooth sequence. It gives mass $m\theta$ to the pluripolar fiber, while every pluripolar set has mass at most $m\theta$. For $0<\theta<1$ its support is all of $X$ despite this positive pluripolar charge.
+
+\subsection{Changing the Hermitian metric}
+
+Let $\Omega$ be any Hermitian form on the same Hopf threefold. Its restriction to each elliptic fiber has positive area
+\[
+ A_\Omega(p)=\int_{\pi^{-1}(p)}\Omega.
+\]
+These areas depend smoothly on $p$ and are bounded above and below by positive constants. Define $h_p^\Omega=\Omega|_{\pi^{-1}(p)}/A_\Omega(p)$, and let $\mathcal L_\Omega\mu$ be the lift obtained by integrating these probability measures against $\mu$.
+
+\begin{theorem}\label{thm:hopf-hermitian-defect-classification}
+For every Hermitian form $\Omega$ on $X$ and every $b>V_\Omega$, the shrinking defects for $(\Omega,b)$ are exactly
+\[
+ \mathcal L_\Omega\mu,\qquad
+ \mu\geq0,\qquad \mu(\mathbb P^2)=b-V_\Omega.
+\]
+Their supports are $\pi^{-1}(\operatorname{supp}\mu)$, they have no point atoms, and they charge no pluripolar sets exactly when $\mu$ charges no base pluripolar sets. Moreover, $v_+(\Omega)=+\infty$.
+\end{theorem}
+\begin{proof}
+Put $m=b-V_\Omega>0$. For necessity, \cref{prop:shrinking-intermediate-currents} gives a positive closed limit $K$ with $\alpha\wedge K=0$ and $\sigma=3\Omega\wedge K$. The local coefficient and Fourier argument in \cref{lem:hopf-defect-fiber-necessity} gives $K=\pi^*\tau$. Consequently
+\[
+ \sigma=\mathcal L_\Omega\mu,\qquad
+ \mu=3A_\Omega\tau=\pi_*\sigma,
+\]
+and $\mu$ has mass $m$.
+
+Conversely, fix such a $\mu$ and set $\tau=\mu/(3A_\Omega)$. By \cref{thm:hopf-standard-defect-classification}, choose a standard-metric sequence $f_j=t_ju_j$ realizing $\mathcal L(6\tau)$. Its positive forms $H_j=\ddc f_j+t_j\omega$ have trace mass $O(t_j)$, and $H_j^2\rightharpoonup\pi^*\tau$ by \cref{lem:hopf-defect-fiber-necessity}. Choose $C\geq1$ with $\omega\leq C\Omega$, and put
+\[
+ R=C\Omega-\omega\geq0,\qquad
+ G_j=\ddc f_j+Ct_j\Omega=H_j+t_jR\geq0.
+\]
+The trace mass of $G_j$ is $O(t_j)$, and $G_j^2-H_j^2$ has trace mass $O(t_j^2)$. Thus $G_j^2\rightharpoonup\pi^*\tau$ and $3\Omega\wedge G_j^2\rightharpoonup\mathcal L_\Omega\mu$.
+
+Unlike the standard metric, $\Omega$ can contribute a linear term to the mass polynomial. Define
+\[
+ \ell_j=3\int_X\Omega^2\wedge\ddc f_j=O(t_j),\qquad
+ q_j=3\int_X\Omega\wedge(\ddc f_j)^2\longrightarrow m.
+\]
+These estimates follow by expanding $\ddc f_j=G_j-Ct_j\Omega$ and using the preceding trace bounds. Stokes' formula removes the cubic integral, so
+\[
+ M_\Omega(\lambda f_j)=V_\Omega+\lambda\ell_j+\lambda^2q_j.
+\]
+For large $j$, $q_j>0$. The positive root
+\begin{equation}\label{eq:hopf-hermitian-mass-correction}
+ \lambda_j=\frac{-\ell_j+\sqrt{\ell_j^2+4mq_j}}{2q_j}
+ \longrightarrow1
+\end{equation}
+gives exact mass $b$. The normalized function $U_j=u_j/C$ is $\Omega$-plurisubharmonic, and $w_j=\lambda_j f_j=r_jU_j$ with $r_j=\lambda_jCt_j\to0$.
+
+To verify the full weak limit, first note that positivity and expansion give
+\[
+ \int_XG_j^3=Ct_jq_j+(Ct_j)^2\ell_j+(Ct_j)^3V_\Omega=O(t_j).
+\]
+Hence $G_j^3\to0$ in total variation. The positive expansion
+\[
+ (\Omega+\ddc w_j)^3
+ =(1-r_j)^3\Omega^3
+  +3(1-r_j)^2\lambda_j\Omega^2\wedge G_j
+  +3(1-r_j)\lambda_j^2\Omega\wedge G_j^2
+  +\lambda_j^3G_j^3
+\]
+converges weakly to $\Omega^3+\mathcal L_\Omega\mu$: the second and fourth terms tend to zero in total variation. Given the particular bounds $\varepsilon_j$, select a sufficiently late subsequence with $r_j<\varepsilon_j$ at every index. This preserves normalization, exact mass and the full weak limit.
+
+The fiber probabilities $h_p^\Omega$ have uniformly positive smooth densities relative to $h_p$. Thus $\mathcal L_\Omega\mu$ and $\mathcal L\mu$ are mutually bounded by fixed positive multiples; support, absence of point atoms and the pluripolar equivalence follow from \cref{thm:hopf-standard-defect-classification}. The global fiber pole functions also remain available: if $\Omega\geq c\omega$, then $c\psi\in\PSH(X,\Omega)$.
+
+Finally, for smooth $u\in\PSH(X,\omega)$ and $\Omega\geq c\omega$,
+\[
+ \Omega+\ddc(cu)\geq c(\omega+\ddc u),\qquad
+ M_\Omega(cu)\geq c^3M_\omega(u).
+\]
+The unbounded standard masses therefore imply $v_+(\Omega)=+\infty$.
+\end{proof}
+
+The classification uses the elliptic bundle and its automorphisms to realize every permitted base measure. On a general Hermitian manifold, the intermediate-current restrictions in \cref{prop:shrinking-intermediate-currents} remain necessary; their sufficiency and the resulting support and pluripolar behavior are separate questions.
