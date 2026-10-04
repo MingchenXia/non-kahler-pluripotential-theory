@@ -1,0 +1,175 @@
+\subsection{A nef class with an incomplete null end}
+\label{sec:nef-incomplete-cusp}
+
+Nefness does not prevent the failure of completeness. The next construction keeps a complete cusp at the prescribed pole, while a disjoint null curve lies at finite distance.
+
+\begin{theorem}\label{thm:nef-incomplete-cusp}\index{Metric completeness!nef big counterexample}
+There are a smooth projective surface $Y$, disjoint smooth divisors $E,D$, a smooth closed semipositive form $\theta$ with nef and big class, a smooth Hermitian norm on $\mathcal O_Y(D)$, its defining section $\sigma$, and a smooth strictly positive volume form $\mathrm{d}V_Y$, such that
+\begin{equation}\label{eq:nef-incomplete-cusp-equation}
+ \left\langle(\theta+\ddc\rho)^2\right\rangle
+ =\mathrm{e}^{\rho}|\sigma|^{-2}\,\mathrm{d}V_Y
+\end{equation}
+has a unique full-mass solution $\rho\in\mathcal E^1(Y,\theta)$. The solution has zero Lelong numbers and is smooth on $Y\setminus(E\cup D)$, where its current $\Omega=\theta+\ddc\rho$ is strictly positive. The curve $E$ is null for $\{\theta\}$. Every dense Zariski open set on which $\Omega$ is smooth and strictly positive is incomplete, although every path approaching $D$ in $Y\setminus(E\cup D)$ has infinite length.
+\end{theorem}
+
+The measure $|\sigma|^{-2}\mathrm{d}V_Y$ has a nonintegrable divisorial pole with smooth strictly positive coefficient. The solution is unbounded at $D$ and does not have ordinary minimal singularities: semipositivity makes the normalized minimal envelope equal to zero. The theorem concerns nefness and bigness; the additional identities required by geometric smoothing remain a separate question.
+
+\begin{lemma}\label{lem:nef-cusp-radial-profile}
+There is $F\in C^\infty(\R)$ with $0<p:=F'<1$ and $p'>0$ such that, for $c=1/100$, some $B\in\R$ and $K=(9c^2/8)\mathrm{e}^{-B}>0$,
+\begin{align}
+ F(t)&=B-3\log(1-c\mathrm{e}^{t/2}),&
+ pp'&=K\mathrm{e}^{F+t} &&(t\leq-2),\label{eq:nef-cusp-left-profile}\\
+ F(t)&=t+\log H(p(t)),&
+ pp'&=\mathrm{e}^{F-t} &&(t\geq2),\label{eq:nef-cusp-right-profile}
+\end{align}
+where $H(p)=(1-p)^2(1+2p)/6$. At the two ends,
+\begin{align*}
+ F(t)&=B+3c\mathrm{e}^{t/2}+O(\mathrm{e}^t),&
+ p'(t)&\sim(3c/4)\mathrm{e}^{t/2} &&(t\to-\infty),\\
+ 1-p(t)&\sim2/t,&p'(t)&\sim2/t^2 &&(t\to+\infty),
+\end{align*}
+and $F(t)-t=-2\log t+\log2+o(1)$ as $t\to+\infty$.
+\end{lemma}
+
+\begin{proof}
+Put $L(t)=-3\log(1-c\mathrm{e}^{t/2})$ near $(-\infty,-2]$. With $q=c\mathrm{e}^{t/2}$,
+\[
+ p_L=L'=\frac{3q}{2(1-q)},\qquad
+ p_L'=\frac{3q}{4(1-q)^2},\qquad
+ p_Lp_L'=\frac{9c^2}{8}\mathrm{e}^{t}(1-c\mathrm{e}^{t/2})^{-3}.
+\]
+This proves the left identity for every additive constant $B$.
+
+Since $H'(p)=(p-1)p$, the increasing function
+\[
+ \mathcal T(p)=2+\int_{3/4}^{p}\frac{q}{H(q)}\,\mathrm{d}q
+\]
+has an inverse $p_R(t)$ for $t\geq2$, extending across $2$, with $p_R(2)=3/4$ and $p_R'=H(p_R)/p_R$. Indeed, its integrand is asymptotic to $2/(1-p)^2$ at $1$. The function $F_R=t+\log H(p_R)$ has derivative $p_R$ and satisfies the right identity. For $q=1-p_R$,
+\[
+ (1/q)'=\frac{3-2q}{6(1-q)}\longrightarrow\frac12.
+\]
+Hence $q\sim2/t$, $H(p_R)\sim2/t^2$, and the right-end asymptotics follow.
+
+It remains to interpolate the derivatives. Set $d=p_R(2)-p_L(-2)>0$. Choose disjoint short endpoint collars in $[-2,2]$ and cutoffs $\alpha_L,\alpha_R$ equal to one on smaller collars. For small $\varepsilon>0$,
+\[
+ Q_0=\alpha_Lp_L'+\alpha_Rp_R'
+       +\varepsilon(1-\alpha_L-\alpha_R)
+\]
+is positive and agrees with the endpoint derivative germs. The collars and $\varepsilon$ can be chosen so that $\int_{-2}^2Q_0<d$. Add a nonnegative smooth interior bump with integral $d-\int_{-2}^2Q_0$. The resulting $Q>0$ gives
+\[
+ p(t)=p_L(-2)+\int_{-2}^tQ(x)\,\mathrm{d}x.
+\]
+This matches both endpoint germs, is increasing, and stays in $(0,1)$. Integrating $F'=p$ with $F(2)=F_R(2)$ gives the required $F$ and fixes the left constant $B$. The left expansion follows directly.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:nef-incomplete-cusp}]
+\emph{The background and the pole.}
+Use the incidence surface of \cref{thm:incomplete-divisorial-metric}, with blowup projection $\pi:Y\to\mathbb P^2$, second projection $f:Y\to\mathbb P^1$, and exceptional curve $E$ over $[1:0:0]$. Put $D=\pi^{-1}(Z_0=0)$ and $A=\pi^*c_1(\mathcal O(1))$. Then $E\cap D=\varnothing$, $A^2=1$, and $A\cdot E=0$. The class $A$ is nef, since it has a smooth semipositive representative. If $\beta,\gamma$ are the pulled-back Fubini--Study forms, then $\{\gamma\}=A-[E]$ and $\beta+\varepsilon\gamma$ is K\"ahler. Thus
+\[
+ \frac{\beta+\varepsilon\gamma}{1+\varepsilon}
+       +\frac{\varepsilon}{1+\varepsilon}[E]
+\]
+is a K\"ahler current in $A$, proving bigness.
+
+Choose an even nonnegative smooth function $\zeta$, supported in $[-1,1]$, positive on its interior and of integral one. The smooth convex function
+\[
+ U(t)=\int_\R\max(0,t-x)\zeta(x)\,\mathrm{d}x
+\]
+has $U=0$ for $t\leq-1$, $U=t$ for $t\geq1$, and $U',U''\geq0$. On $Z_0\ne0$, write $z=(Z_1/Z_0,Z_2/Z_0)$, $s=|z|^2$, and $t=\log s$. Give the frame $Z_0$ squared norm $\mathrm{e}^{-U(t)}$. It is constant near the affine origin. At infinity, use
+\[
+ w=Z_0/Z_1,\qquad v=Z_2/Z_1,\qquad h=1+|v|^2,
+ \qquad s=h/|w|^2.
+\]
+The frame $Z_1$ then has squared norm $\mathrm{e}^{-U}/|w|^2=1/h$ near $w=0$. These formulas define a smooth Hermitian metric globally. Pull it back to $\mathcal O_Y(D)$ and let $\sigma=\pi^*Z_0$. Its curvature satisfies
+\[
+ \theta=\ddc U(t),\quad |\sigma|^2=\mathrm{e}^{-U(t)},\qquad
+ \theta=\ddc\log h,\quad |\sigma|^2=|w|^2/h\quad\hbox{near }D.
+\]
+The radial Hessian proves semipositivity. The form vanishes near $E$ and has rank one near $D$. In particular $V_\theta=0$; the nef class has volume $A^2=1$.
+
+\emph{Extension of the potential.}
+On $Y\setminus(E\cup D)\simeq\C^2\setminus\{0\}$, set
+\[
+ \rho=F(t)-U(t),\qquad \Omega=\ddc F(t).
+\]
+Its radial Hermitian eigenvalues are $p/s$ and $p'/s$, hence positive. Extend $\rho$ to $E$ by $B$ and to $D$ by $-\infty$.
+
+Near the affine origin the smooth functions $F(\log(|z|^2+\varepsilon))$ are psh and decrease to the continuous extension of $F(\log|z|^2)$. For example, the two Hessian eigenvalues are $p/(s+\varepsilon)$ and $(s p'+\varepsilon p)/(s+\varepsilon)^2$, with $p,p'$ evaluated at $\log(s+\varepsilon)$. Pullback proves positivity near $E$.
+
+Near $D$ put $t_\varepsilon=\log h-\log(|w|^2+\varepsilon)$ and $g(t)=F(t)-t$. The local potentials $g(t_\varepsilon)+\log h$ decrease to $\rho+\log h$. Their Hessians are
+\[
+ p(t_\varepsilon)\ddc\log h
+ +(1-p(t_\varepsilon))\ddc\log(|w|^2+\varepsilon)
+ +p'(t_\varepsilon)\frac{\mathrm{i}}{2\pi}
+       \partial t_\varepsilon\wedge\bar\partial t_\varepsilon\geq0.
+\]
+Thus $\rho$ is globally $\theta$-psh. Boundedness at $E$ and the log-log growth at $D$ give zero Lelong numbers everywhere.
+
+\emph{The volume form and full mass.}
+With Euclidean area $\mathrm{d}A$, the radial determinant is
+\begin{equation}\label{eq:nef-cusp-radial-determinant}
+ \Omega^2=\frac{2}{\pi^2}\frac{pp'}{s^2}
+                  \mathrm{d}A_{z_1}\mathrm{d}A_{z_2}.
+\end{equation}
+Define $\mathrm{d}V_Y=\mathrm{e}^{-F}\Omega^2$ off the two divisors. In an exceptional chart $z=(u,uv)$, the real Jacobian is $|u|^2$ and $s=|u|^2h$. The left profile identity gives
+\[
+ \mathrm{d}V_Y=\frac{2K}{\pi^2h}\,\mathrm{d}A_u\mathrm{d}A_v.
+\]
+At infinity $z=(1/w,v/w)$ has real Jacobian $|w|^{-6}$. The right identity gives
+\[
+ \mathrm{d}V_Y=\frac{2}{\pi^2h^3}\,\mathrm{d}A_w\mathrm{d}A_v,
+ \qquad
+ |\sigma|^{-2}\mathrm{d}V_Y
+ =\frac{2}{\pi^2|w|^2h^2}\,\mathrm{d}A_w\mathrm{d}A_v.
+\]
+The analogous second charts cover each divisor. The extensions are smooth and strictly positive, and agree on overlaps by their equality on the punctured overlaps. The last expression proves the nonintegrable pole with smooth positive coefficient.
+
+On the complement, $\mathrm{e}^{\rho}|\sigma|^{-2}\mathrm{d}V_Y=\Omega^2$. Extend this density by zero on $D$. Both measures give zero mass to the two divisors. Polar integration on $\C^2$ has density $\pi^2s\,\mathrm{d}s$, so
+\[
+ \int_Y\langle\Omega^2\rangle
+ =\int_{-\infty}^{\infty}2pp'\,\mathrm{d}t
+ =p(+\infty)^2-p(-\infty)^2=1.
+\]
+This proves the global equation and full mass.
+
+\emph{Bounded truncations and energy.}
+Near $D$ write $\alpha=\ddc t=\ddc\log h$ and $\beta_t=(\mathrm{i}/2\pi)\partial t\wedge\bar\partial t$. They have rank one, and
+\[
+ \theta=\alpha,\quad \Omega=p\alpha+p'\beta_t,\quad
+ \Omega^2=2pp'\alpha\wedge\beta_t,\quad
+ \Omega\wedge\theta=p'\alpha\wedge\beta_t,\quad \theta^2=0.
+\]
+Angular and projective integration of $\alpha\wedge\beta_t$ gives $\mathrm{d}t$. Since $|\rho|=O(\log t)$ and $p'=O(t^{-2})$, its integrals against $\Omega^2$ and $\Omega\wedge\theta$ are finite there. Near $E$ the potential is bounded and $\theta=0$; the remaining region is compact with smooth data.
+
+Choose $M$ so that $\phi=\rho-M\leq0$, and set $\phi_k=\max(\phi,-k)$. For large $k$ the truncation changes only the cusp. There $\phi=\log H(p(t))-M$ is strictly decreasing. If $\phi(T_k)=-k$, then $k=2\log T_k+O(1)$. The punctured radial primitive is
+\[
+ G_k(t)=\max(F(t)-M,t-k).
+\]
+Its genuine local potential is $G_k(t)+\log|w|^2$, equal to $\log h-k$ near $D$. This local frame term prevents a spurious divisor mass. The derivative jumps upward from $p(T_k)$ to $1$.
+
+Convolving $G_k$ in $t$ with an even nonnegative smooth kernel gives convex primitives decreasing to $G_k$ as the scale decreases. The local bounded potentials converge uniformly on compact sets, so their Bedford--Taylor products converge. Integrating the smooth radial square and mixed measures through the transition gives respectively the shell masses
+\[
+ 1-p(T_k)^2,\qquad 1-p(T_k).
+\]
+Beyond the transition the primitives are linear and both top-degree measures vanish. On the shell $\phi_k=-k$, so the absolute energy contributions are $k(1-p(T_k)^2)$ and $k(1-p(T_k))$. Both tend to zero, since $1-p(T_k)\sim2/T_k$. The interior contributions converge absolutely by the preceding bounds. At $E$, bounded potentials have no mass on the curve, consistent with the zero radial boundary mass $p(-\infty)^2=0$. Consequently
+\[
+ E_\theta(\phi_k)=\frac13\sum_{j=0}^2
+       \int_Y\phi_k(\theta+\ddc\phi_k)^j\wedge\theta^{2-j}
+\]
+has a finite limit and is uniformly bounded below. This proves $\rho\in\mathcal E^1(Y,\theta)$.
+
+Uniqueness follows by the full-mass comparison argument in \cref{thm:incomplete-divisorial-metric}, with $\mathrm{d}\mu=|\sigma|^{-2}\mathrm{d}V_Y$ off $D$, extended by zero on $D$. Its total mass is infinite, but each exponential density is a finite measure of mass $1$. Comparison on the two strict sublevel sets forces equality almost everywhere, and \cref{lem:qpsh-almost-everywhere-order} gives equality of the potentials everywhere.
+
+\emph{The two metric ends.}
+Fix $v=v_0$ in an exceptional chart and write $h_0=1+|v_0|^2$. The normal restriction is
+\[
+ \Omega|_{v=v_0}=\frac{\mathrm{i}}{2\pi}
+       \frac{p'(\log(|u|^2h_0))}{|u|^2}
+       \,\mathrm{d}u\wedge\mathrm{d}\bar u.
+\]
+The coefficient is asymptotic to $(3c\sqrt{h_0}/4)|u|^{-1}$, so the current has no smooth extension at any point of $E$. The radial path $u=r>0$ has finite remaining length, bounded by $C\int_0^{r_0}r^{-1/2}\,\mathrm{d}r$. At $D$ the normal coefficient is asymptotic to $2/(|w|^2t^2)$ and also diverges. Thus every smooth positive regular locus excludes both curves.
+
+Let $W$ be any dense Zariski open positive regular locus. The proper analytic set $Y\setminus W$ has finitely many curve and point components, by local finiteness of irreducible components and compactness. Distinct curves meet $E$ in finitely many points. Choose a point of $E$ avoiding all these intersections and point components. In a sufficiently small chart the complement is exactly $E$, so a tail of the preceding radial path lies in $W$. Its points approaching $E$ form an intrinsic Cauchy sequence with no limit in $W$: the smooth positive metric induces its manifold topology, while the only ambient limit is the removed point. Hence $W$ is incomplete.
+
+Finally, on the cusp $\Omega=p\ddc t+p'\,\mathrm{d}t\wedge\dc t$, with both terms nonnegative and $p'\geq c_0/t^2$ for large $t$. The length of any path with $t\to\infty$ is bounded below by a positive multiple of $\int|\mathrm{d}t|/t$, which diverges. The missing finite-distance end is therefore the null curve disjoint from the pole.
+\end{proof}

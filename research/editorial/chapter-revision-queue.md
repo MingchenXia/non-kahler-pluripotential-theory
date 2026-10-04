@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 387: Directly review the preserved incoming S13 complete nef-big incomplete-cusp proof and its actual primary dependencies before adoption; keep the smoothing-compatible branch distinct. Then consolidate the expanded P21/kernel/jet overview and historical interface for readability, preserving every original question and exact hypothesis/norm boundary, and continue primary-paper reading.
+Current next unit after checkpoint 388: Check incoming author research. Consolidate the expanded P21/kernel/jet overview and historical interface for readability while preserving original questions, exact sufficient criteria and Hilbert norm/normalization boundaries. Then continue exact primary-proof reading and recent related arXiv directions; S13 geometric smoothing compatibility stays open.
 
 | Chapter | Source | This cycle |
 |---|---|---|

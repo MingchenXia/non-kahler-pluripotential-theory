@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint388 — Nef big incomplete cusp
+
+[Review](research/editorial/nef-incomplete-cusp-388.md): Subsection27.14.1 directly verifies the supplied nef-big incomplete-cusp counterexample. Complete supplied/book reads,48 obligations and44 selected final pages pass. One successful full-book build has actual live PDF/homepage/Pages verification;1088 printed pages. Mere nefness and bigness are disproved for completeness; exact smoothing-compatible S13 remains open. All original formal questions remain exact;22 formal plus19 supplemental directions open. Native catalogue compilation remains unverified. Fresh reconstruction passes with297 exact book sources, all1114+17 page texts matching and1993 checksum-validated archive entries; authorized private synchronization follows.
+
 ## Checkpoint 387 — Anisotropic point jets and fiber selectors
 
 [Review](editorial/anisotropic-growing-jets-387.md): Section 26.15 integrates the directly checked S14 sufficient-condition class: all-sublinear anisotropic point-jet transitions, sharp radial center corrections, total-variation measures and exact matched-norm transfer by a non-descending moving selector. Complete supplied proof reads, two complete book-source reads, 46 direct obligations and 54 selected final pages pass. Every successful build invocation has actual live PDF/homepage/Pages verification; 1082 printed pages. P21 and S14 remain partial; original P22 stays resolved, leaving 22 formal and 19 supplemental directions open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 296 exact book sources, all 1108+17 page texts matching and 1987 checksum-validated archive entries; authorized private 387 synchronization follows. Incoming author S13 commit 43660ae is preserved with all five research files exact; direct proof/dependency review follows.

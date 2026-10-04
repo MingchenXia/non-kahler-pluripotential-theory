@@ -509,3 +509,7 @@ The two-point blowup has positive reference mass, no strict smooth residual gaug
 ## Anisotropic growing point jets — checkpoint387
 
 The author-supplied compact radial class is directly checked and integrated: ordinary total-order point jets, positive interior allocations, nonzero specified radial remainders and exact matched-norm transfer by a moving isolated selector. The general S14 programme remains open. The current arXiv listing coverage is carried as actually retrieved at386, not freshly retrieved or an exhaustive absence claim. No new full external primary adoption. [Review](editorial/anisotropic-growing-jets-387.md).
+
+## Nef big incomplete cusp — checkpoint388
+
+The author-supplied385-line construction is checked twice and integrated with exact primary passage review, positive local regularizations and direct shell energies. Mere nef-big completeness fails; flow-compatible S13 remains open. Six exact versions acquired, not six full-document reviews; dated386 listing coverage carried, no exhaustive current absence claim. Bibliography and source manifests unchanged. [Review](editorial/nef-incomplete-cusp-388.md).

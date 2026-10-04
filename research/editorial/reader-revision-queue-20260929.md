@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 387: Directly review the preserved incoming S13 complete nef-big incomplete-cusp proof and its actual primary dependencies before adoption; keep the smoothing-compatible branch distinct. Then consolidate the expanded P21/kernel/jet overview and historical interface for readability, preserving every original question and exact hypothesis/norm boundary, and continue primary-paper reading.
+Current next unit after checkpoint 388: Check incoming author research. Consolidate the expanded P21/kernel/jet overview and historical interface for readability while preserving original questions, exact sufficient criteria and Hilbert norm/normalization boundaries. Then continue exact primary-proof reading and recent related arXiv directions; S13 geometric smoothing compatibility stays open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
