@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 386: Check incoming author research. Reread the expanded P21 overview and its history interface for coherence; consolidate repeated descriptions while preserving the exact criteria, examples, original questions and P22 resolution. Then continue precise primary-paper reading and related open directions.
+Current next unit after checkpoint 386: Directly review incoming author S14 paper and accepted dependency argument before adoption; verify the separable radial hypotheses, all-sublinear moment estimates, exact selector ideals, matched fibration norm and remaining mixed/face/general-selector gaps. Then consolidate the expanded P21 overview for coherence and continue precise primary-paper reading.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|
