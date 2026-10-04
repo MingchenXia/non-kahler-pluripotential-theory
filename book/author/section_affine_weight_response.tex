@@ -1,0 +1,115 @@
+\subsubsection{Variation of continuous weights}
+\label{sec:affine-weight-response}
+
+Supporting probabilities describe changes of the obstacle as well as the growth allowance. Keep the non-pluripolar compact $K\subset\mathbb C^n$ fixed. For $a\in\mathbb C^n$, $\delta>0$ and $q\in C(K,\mathbb R)$, put
+\begin{equation}\label{eq:affine-active-supports}
+ \mathcal A_a(\delta,q)=
+ \left\{(\mu,c)\in\mathcal J_a(K):
+   \int_Kq\,\mathrm{d}\mu+\delta c=F_{\delta,q}(a)\right\}.
+\end{equation}
+The weights carry the uniform norm, probabilities carry the weak topology, and constants carry the ordinary topology.
+
+\begin{lemma}\label{lem:affine-active-support-stability}
+The set $\mathcal A_a(\delta,q)$ is nonempty, convex and compact. For $\delta,\eta\geq\epsilon>0$ and $p,q\in C(K,\mathbb R)$,
+\begin{equation}\label{eq:affine-weight-growth-lipschitz}
+ |F_{\eta,p}(a)-F_{\delta,q}(a)|
+ \leq\|p-q\|_\infty+
+ |\eta-\delta|\left(V_K^*(a)+
+                    \frac{\operatorname{osc}_Kq}{\epsilon}\right).
+\end{equation}
+If $\delta_j\to\delta>0$, $q_j\to q$ uniformly and $(\mu_j,c_j)\in\mathcal A_a(\delta_j,q_j)$, then these pairs have a convergent subsequence, and every subsequential limit belongs to $\mathcal A_a(\delta,q)$.
+\end{lemma}
+\begin{proof}
+Nonemptiness follows from \cref{thm:affine-supporting-probabilities}. The continuous test inequalities make $\mathcal J_a(K)$ closed and convex. The active equality is also closed and affine. For an active pair, \eqref{eq:affine-obstacle-sandwich} gives
+\[
+ 0\leq c\leq\frac{F_{\delta,q}(a)-\inf_Kq}{\delta}
+ \leq V_K^*(a)+\frac{\operatorname{osc}_Kq}{\delta}.
+\]
+The bounded constant slice is compact, as in the proof of \cref{thm:affine-supported-growth-derivative}; hence the active set is compact.
+
+With $q$ fixed, \cref{lem:affine-growth-increment-bounds} and \eqref{eq:affine-obstacle-sandwich} bound a growth increment by its length times $V_K^*(a)+\operatorname{osc}_Kq/\epsilon$. Obstacle order and constant translation bound the change from $q$ to $p$ at fixed $\eta$ by $\|p-q\|_\infty$. Their sum is \eqref{eq:affine-weight-growth-lipschitz}.
+
+For the sequence in the statement, the active constants have a common bound because the weights are uniformly bounded and the growth allowances stay bounded below. Weak compactness of probabilities gives subsequential pair convergence. Closedness retains membership in $\mathcal J_a(K)$. The displayed Lipschitz estimate gives envelope-value convergence, while uniform convergence of $q_j$ and weak convergence of $\mu_j$ give convergence of the integrals. Passing to the active equality proves the last assertion.
+\end{proof}
+\index{Envelope!weight variation}
+
+\begin{proposition}\label{prop:affine-joint-directional-response}
+For $r\in C(K,\mathbb R)$ and $s\in\mathbb R$, one has
+\begin{equation}\label{eq:affine-joint-directional-response}
+ \lim_{h\downarrow0}
+ \frac{F_{\delta+hs,q+hr}(a)-F_{\delta,q}(a)}h
+ =\min_{(\mu,c)\in\mathcal A_a(\delta,q)}
+       \left(\int_Kr\,\mathrm{d}\mu+sc\right).
+\end{equation}
+The same limit holds along $h_j\downarrow0$ with $s_j\to s$ and $r_j\to r$ uniformly, replacing $s,r$ in the quotient by $s_j,r_j$. Thus the one-sided directional derivative is stable under convergent directions.
+\end{proposition}
+\begin{proof}
+Compactness of the active set attains the minimum on the right. For a fixed base active pair, the representation at the perturbed parameters gives
+\[
+ F_{\delta+hs,q+hr}(a)
+ \leq F_{\delta,q}(a)+h\left(\int_Kr\,\mathrm{d}\mu+sc\right).
+\]
+A minimizing base pair therefore bounds the limsup by the stated minimum. Conversely, choose a minimizing pair $(\mu_h,c_h)$ at $(\delta+hs,q+hr)$. The representation at the base parameters gives
+\[
+ \frac{F_{\delta+hs,q+hr}(a)-F_{\delta,q}(a)}h
+ \geq\int_Kr\,\mathrm{d}\mu_h+sc_h.
+\]
+The local Lipschitz estimate bounds the quotients. Along a sequence approaching their liminf, \cref{lem:affine-active-support-stability} supplies a convergent subsequence of pairs with a base active limit. Its directional value is at least the minimum. This proves \eqref{eq:affine-joint-directional-response}.
+
+For convergent directions, the same two inequalities hold. The fixed minimizing base pair gives a convergent upper bound. Perturbed minimizing pairs still have uniformly bounded constants and base active limits. Uniform convergence of $r_j$ controls their moving integrals, and $s_j\to s$ controls the constant terms. The lower bound therefore has the same limit. All perturbed growth allowances are positive for sufficiently small increments.
+\end{proof}
+
+\begin{corollary}\label{cor:affine-two-sided-growth-slopes}
+For fixed $a$ and $q$, the function $\delta\mapsto F_{\delta,q}(a)$ has finite left and right derivatives $D^-_{\delta,q}(a)$ and $D^+_{\delta,q}(a)$ at every positive parameter, with
+\begin{equation}\label{eq:affine-two-sided-growth-slopes}
+ D^-_{\delta,q}(a)=\max_{\mathcal A_a(\delta,q)}c,
+ \qquad
+ D^+_{\delta,q}(a)=\min_{\mathcal A_a(\delta,q)}c.
+\end{equation}
+It is differentiable exactly when all active pairs have the same constant $c$. For each fixed $a,q$, the set of positive parameters where it fails to be differentiable is at most countable.
+\end{corollary}
+\begin{proof}
+Apply \eqref{eq:affine-joint-directional-response} with $r=0$ and $s=1,-1$. The negative direction gives minus the left derivative, proving \eqref{eq:affine-two-sided-growth-slopes}. Concavity gives
+\[
+ D^+_{\alpha,q}(a)\geq D^-_{\beta,q}(a)
+ \qquad(0<\alpha<\beta).
+\]
+Hence the nonempty open intervals $(D^+_{\delta,q}(a),D^-_{\delta,q}(a))$ at exceptional parameters are pairwise disjoint. Assigning a rational number in each interval proves countability.
+\end{proof}
+\index{Envelope!growth differentiability}
+
+\begin{corollary}\label{cor:affine-weight-differentiability}
+At fixed $a$ and $\delta>0$, the map $q\mapsto F_{\delta,q}(a)$ on $C(K,\mathbb R)$ is G\^ateaux differentiable at $q$ if and only if the active probability is unique. In that case its derivative is
+\[
+ r\longmapsto\int_Kr\,\mathrm{d}\mu.
+\]
+\end{corollary}
+\begin{proof}
+With $s=0$, \eqref{eq:affine-joint-directional-response} gives the minimum of $\int_Kr\,\mathrm{d}\mu$ over active pairs. The negative direction gives minus the maximum. If the active probability is unique, these values give the same continuous linear two-sided derivative. Conversely, a linear two-sided derivative forces the minimum and maximum to agree for every continuous $r$. Such tests separate Borel probabilities on $K$, so all active probabilities coincide. Their constant is then fixed by \eqref{eq:affine-active-supports} and $\delta>0$.
+\end{proof}
+\index{Envelope!weight differentiability}
+
+\begin{example}\label{ex:affine-quadratic-weight-corner}
+Let $K=\overline D\subset\mathbb C$ be the closed unit disk and fix $\delta>0$. For $q_t(z)=-t|z|^2$,
+\begin{equation}\label{eq:affine-quadratic-weight-corner}
+ F_{\delta,q_t}(0)=
+ \begin{cases}
+ -t,&t\geq0,\\
+ 0,&-\delta/2\leq t\leq0.
+ \end{cases}
+\end{equation}
+Thus the weight functional at the origin is not G\^ateaux differentiable at the zero weight, and it has more than one active probability there.
+\end{example}
+\begin{proof}
+For $t\geq0$, each raw competitor is at most $-t$ on the boundary circle. The subharmonic maximum principle bounds it by $-t$ on $D$. Regularization retains that bound near zero, and the constant $-t$ is a global competitor.
+
+For $t=-b$ with $0\leq b\leq\delta/2$, define
+\[
+ u_b(z)=
+ \begin{cases}
+ b|z|^2,&|z|\leq1,\\
+ b+\delta\log|z|,&|z|>1.
+ \end{cases}
+\]
+This function is continuous and subharmonic. Its ordinary Laplacian has interior density $4b$, zero exterior density and a nonnegative circle contribution from the outward derivative jump $\delta-2b$. It belongs to $\mathcal L_\delta$ and meets $q_{-b}$ on $K$. Hence $F_{\delta,q_{-b}}(0)\geq0$. On the open disk the raw envelope is at most the continuous function $b|z|^2$, so regularization gives the reverse inequality at zero. This proves \eqref{eq:affine-quadratic-weight-corner}. The right and left derivatives in $t$ are $-1$ and $0$. \Cref{cor:affine-weight-differentiability} gives the final assertion.
+\end{proof}

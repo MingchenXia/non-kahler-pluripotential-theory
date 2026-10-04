@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint426 — Affine envelope joint response
+
+[The weight-response integration](research/editorial/affine-envelope-weight-response-426.md) adds five proofs of compact active-pair stability, joint directional response, exact differentiability criteria and a disk weight corner. The recorded complete first reads and fresh six-input second reread pass, with 26 actual final images. All 999 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1201-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no additions. Forty original directions remain open.
+
 ## Checkpoint425 — Affine envelope weight response
 
 [The weight-response review](research/editorial/affine-envelope-weight-response-review-425.md) checks 38 direct obligations. Compact active pairs control joint Hadamard directions, left/right growth slopes and weight Gateaux differentiability; a closed-disk quadratic obstacle gives a genuine corner. All 330 book files, 999 proofs, both catalogues/manifests and 451 protected files remain exact. The four September archive requests fail with HTTP404, so historical gaps remain. No author build, native call, publication, novelty claim or original problem closure. Next: scoped Chapter12 integration.
