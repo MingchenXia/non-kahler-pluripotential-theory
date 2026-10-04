@@ -220,3 +220,7 @@ The author-supplied385-line construction is checked twice and integrated with ex
 ## Compatible initial data and incompleteness — checkpoint389
 
 The394-line author construction is directly read twice and integrated with exact fixed-volume/resolution identities, internal minimal-reference proof and canonical relative energy. Original S13 is resolved in its two separate regimes; joint nef/compatibility and actual evolving flows remain further questions. Precise DNG/BEGZ passage reading is recorded, not full-paper review or fresh listing coverage. No bibliography or source-manifest changes. [Review](editorial/flow-compatible-incomplete-metric-389.md).
+
+## Checkpoint390 — Complete invariant background cones
+
+[Review](research/editorial/parallelizable-gauduchon-cones-390.md): Subsection25.5.2 directly reconstructs the restricted P15 classification. Determinant volume, unique minimizing metric, internal subspace completeness and the Iwasawa example pass52 direct obligations and38 actual selected images. One full compilation and its network-enabled publication retry produce1128 physical/1102 printed pages; live PDF/homepage/Pages match. P15 remains partial and40 original directions remain open. Original statements/descriptions and protected sources stay exact. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with299 exact book sources, all1128+17 page texts matching, and2005 checksum-validated archive entries; authorized private synchronization follows.

@@ -1,5 +1,10 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint390 — Complete invariant background cones
+
+[Review](research/editorial/parallelizable-gauduchon-cones-390.md): Subsection25.5.2 directly reconstructs the restricted P15 classification. Determinant volume, unique minimizing metric, internal subspace completeness and the Iwasawa example pass52 direct obligations and38 actual selected images. One full compilation and its network-enabled publication retry produce1128 physical/1102 printed pages; live PDF/homepage/Pages match. P15 remains partial and40 original directions remain open. Original statements/descriptions and protected sources stay exact. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with299 exact book sources, all1128+17 page texts matching, and2005 checksum-validated archive entries; authorized private synchronization follows.
+
+
 ## Checkpoint389 — Compatible initial data and incompleteness
 
 [Review](research/editorial/flow-compatible-incomplete-metric-389.md): Subsection27.14.2 independently reconstructs the exact smoothing-compatible incomplete auxiliary metric. Complete supplied/book reads,55 direct obligations and32 selected final pages pass. Three successful clean authoring builds have actual live PDF/homepage/Pages verification;1094 printed pages. Original S13 is resolved in its two separate regimes; joint nef/compatibility and actual evolving flows remain further questions. All original formal statements and catalogue descriptions stay exact;22 formal plus18 supplemental directions open. Final native catalogue preview remains unverified. Fresh reconstruction passes with298 exact book sources, all1120+17 page texts matching and1999 checksum-validated archive entries; private synchronization follows; incoming P15 is fetched, not adopted.

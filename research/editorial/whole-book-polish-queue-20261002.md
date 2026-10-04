@@ -113,3 +113,7 @@ Checkpoint355 integrates precisely checked recent divisorial Sobolev results aft
 Checkpoint356 integrates precisely checked strict-gap Hermitian stability after accepted whole-book polish. Continue primary gradient/Hessian and Fujiki-degeneration chains, other related directions and literature coverage catch-up. All formal/supplemental directions remain open.
 
 Checkpoint357 integrates precisely checked uniform Hermitian gradient estimates after accepted whole-book polish. Continue complete Fujiki/conifold primary proof review, pending domain/Hessian chains, related directions and literature coverage catch-up. All full formal/supplemental directions remain open.
+
+## Checkpoint390 — Complete invariant background cones
+
+[Review](research/editorial/parallelizable-gauduchon-cones-390.md): Subsection25.5.2 directly reconstructs the restricted P15 classification. Determinant volume, unique minimizing metric, internal subspace completeness and the Iwasawa example pass52 direct obligations and38 actual selected images. One full compilation and its network-enabled publication retry produce1128 physical/1102 printed pages; live PDF/homepage/Pages match. P15 remains partial and40 original directions remain open. Original statements/descriptions and protected sources stay exact. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with299 exact book sources, all1128+17 page texts matching, and2005 checksum-validated archive entries; authorized private synchronization follows.
