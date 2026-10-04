@@ -1,0 +1,221 @@
+\subsection{Integer orders in fixed projective cones}
+\label{sec:nef-projective-integer-cones}
+\index{Nef degeneration!nonclosed projective cones}
+
+The variable-rank examples show that nefness alone does not force an integral order. Strictly positive coefficients on fixed projective generators give a different regime. A logarithmic divisor potential compares their full Gauduchon quotient with a closed form, even when the background is nonclosed and a pullback loses rank along an exceptional divisor.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{lem:nef-logarithmic-rank-comparison}
+Let $X$ be a compact K\"ahler $n$-fold, $\Omega$ a K\"ahler form, and $B$ a smooth closed semipositive form. Suppose a smooth nef background $\theta$ satisfies
+\[
+ \theta\leq CB,\qquad \theta+\ddc\varphi\geq cB
+\]
+as currents, for $c,C>0$ and a global real $\varphi\in L^1(X)$. For every Hermitian $h$ and smooth strictly positive probability $\mu$, there are $k,K>0$ such that, for $0<\epsilon\leq1$,
+\begin{equation}\label{eq:nef-logarithmic-quotient-comparison}
+ k\lambda_\mu(B+\epsilon\Omega)
+ \leq\lambda_\mu(\theta+\epsilon h)
+ \leq K\lambda_\mu(B+\epsilon\Omega).
+\end{equation}
+If $B$ has constant rank $R$, then for $L,U>0$,
+\[
+ L\epsilon^{n-R}\leq\mathcal V_\mu(\theta+\epsilon h)
+                       \leq U\epsilon^{n-R}.
+\]
+In particular the common order is $n-R$.
+\end{lemma}
+\begin{proof}
+Choose $c_h,C_h>0$ with $c_h\Omega\leq h\leq C_h\Omega$. For every smooth positive Gauduchon test $\gamma$, distributional Stokes gives
+\[
+ \int_X\ddc\varphi\wedge\gamma^{n-1}
+       =\langle\varphi,\ddc\gamma^{n-1}\rangle=0.
+\]
+The lower current bound therefore gives the lower numerator inequality with $k=\min(c,c_h)$; the upper bound gives the upper one with $K=\max(C,C_h)$. Divide by the same strictly positive $D_\mu(\gamma)$ and take infima over all Gauduchon tests. This proves \eqref{eq:nef-logarithmic-quotient-comparison} without a rank hypothesis.
+
+When $B$ has constant rank, its $R$ positive eigenvalues relative to $\Omega$ are uniformly bounded above and away from zero. With $A_\epsilon=B+\epsilon\Omega$, compactness gives
+\begin{equation}\label{eq:nef-projective-pointwise-volume}
+ l\epsilon^{n-R}\mu\leq A_\epsilon^n
+                         \leq u\epsilon^{n-R}\mu
+\end{equation}
+for $l,u>0$. Matrix arithmetic--geometric mean gives, for every test,
+\[
+ A_\epsilon\wedge\gamma^{n-1}
+ \geq\left(\frac{A_\epsilon^n}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+Thus $\lambda_\mu(A_\epsilon)\geq l^{1/n}\epsilon^{(n-R)/n}$. The positive closed form $\gamma=A_\epsilon$ is itself an admissible test. Writing $A_\epsilon^n=f_\epsilon\mu$ gives
+\[
+ \begin{aligned}
+ D_\mu(A_\epsilon)&=\int_X f_\epsilon^{(n-1)/n}\mu\\
+ &\geq l^{(n-1)/n}\epsilon^{(n-R)(n-1)/n},\\
+ \int_X A_\epsilon^n&\leq u\epsilon^{n-R}.
+ \end{aligned}
+\]
+Its quotient is at most $ul^{-(n-1)/n}\epsilon^{(n-R)/n}$. Raise both bounds to the $n$th power and apply the comparison. The calculation includes $R=0$ and $n=1$, where $D_\mu=1$. Fixed positive factors vanish after division of their logarithms by $\log\epsilon$.
+\end{proof}
+
+\subsubsection{Linear blowups and the fixed generators}
+For a plain factor $Z_i=\mathbb P^{m_i}$, $m_i\geq1$, let $H_i$ be normalized Fubini--Study and set $\kappa_i=H_i$. A blown factor has the form
+\[
+ Z_i=\operatorname{Bl}_{\mathbb P^{\ell_i}}\mathbb P^{m_i},
+ \qquad m_i\geq2,\quad 0\leq\ell_i\leq m_i-2,
+ \qquad r_i=m_i-\ell_i-1.
+\]
+Suppress the index temporarily. In coordinates $[z_0:\cdots:z_\ell:w_0:\cdots:w_r]$, its incidence model is
+\[
+ Z=\{(x,[t])\in\mathbb P^m\times\mathbb P^r:
+                         w_at_b=w_bt_a\text{ for all }a,b\}.
+\]
+Let $p:Z\to\mathbb P^m$ and $q:Z\to\mathbb P^r$ be the projections. In a chart $t_j=1$, the equations $w_a=t_aw_j$ are the charts of the blowup of $(w_0,\ldots,w_r)$. Writing $w=\lambda t$ identifies $q$ locally as a $\mathbb P^{\ell+1}$-bundle, with fiber coordinates $[z:\lambda]$. Thus $Z$ is smooth, $q$ is a submersion, and the incidence inclusion is an embedding. Set
+\[
+ H=p^*\omega_m,\qquad Q=q^*\omega_r,\qquad \kappa=H+Q.
+\]
+The form $\kappa$ is K\"ahler as the restricted product form, whereas $Q$ has constant rank $r$.
+
+Let $E=\{w=0\}$ be the exceptional divisor. The coordinate section $w_j=\lambda t_j$ has divisor $E+q^{-1}\{t_j=0\}$, so $\mathcal O(E)=p^*\mathcal O(1)\otimes q^*\mathcal O(-1)$. Give it the product metric of curvature $H-Q$. For its canonical section, $\psi_E=\log|s_E|^2$ is locally integrable and the curvature identity of \cref{sec:divisorial-gaud-volume} gives
+\begin{equation}\label{eq:nef-projective-exceptional-potential}
+ \ddc\psi_E=[E]-H+Q,\qquad
+ H+\ddc(\psi_E/2)=\tfrac12(\kappa+[E])\geq\kappa/2.
+\end{equation}
+
+\Needspace{9\baselineskip}
+On $X=\prod_i Z_i$, put $n=\sum_i m_i$ and pull back all factor forms. Fix smooth strictly positive functions $f_i$ and, on blown factors, $g_i$ on $X$. These functions may depend on every product coordinate. The cone consists of
+\begin{equation}\label{eq:nef-fixed-projective-cone}
+ \theta=\sum_i\bigl((a_i+b_if_i)H_i+(c_i+d_ig_i)Q_i\bigr),
+ \qquad a_i,b_i,c_i,d_i\geq0,
+\end{equation}
+with the $Q_i$ terms and their parameters omitted on plain factors. All coefficient functions and generators are fixed. Every member is smooth semipositive, hence nef for every Hermitian perturbation direction. Call $H_i$ active if $a_i+b_i>0$, and $Q_i$ active if $c_i+d_i>0$. Define
+\begin{equation}\label{eq:nef-projective-effective-rank}
+ R_i(\theta)=
+ \begin{cases}
+ m_i,&H_i\text{ active},\\
+ r_i,&H_i\text{ inactive and }Q_i\text{ active},\\
+ 0,&\text{both inactive},
+ \end{cases}
+ \qquad R(\theta)=\sum_i R_i(\theta).
+\end{equation}
+The middle case occurs only on blown factors.
+
+\Needspace{9\baselineskip}
+\begin{theorem}\label{thm:nef-projective-integer-orders}
+Every fixed-cone member in \eqref{eq:nef-fixed-projective-cone} has common order $n-R(\theta)$. For arbitrary smooth positive $\mu$ and $h$, its variational volume has two-sided bounds for $0<\epsilon\leq1$:
+\begin{equation}\label{eq:nef-projective-power-bounds}
+ L\epsilon^{n-R(\theta)}
+ \leq\mathcal V_\mu(\theta+\epsilon h)
+ \leq U\epsilon^{n-R(\theta)},
+\end{equation}
+with $L,U>0$ depending on the fixed background and data.
+\end{theorem}
+\begin{proof}
+Let $B_\theta$ be the sum of $\kappa_i$ on $H_i$-active blocks and $Q_i$ on $Q_i$-only blocks, with zero on inactive blocks. It is closed semipositive of constant rank $R(\theta)$. Bounded coefficients and $H_i,Q_i\leq\kappa_i$ give $\theta\leq CB_\theta$.
+
+For every active blown $H_i$, let $u_i=\min_X(a_i+b_if_i)>0$ and put
+\[
+ \varphi=\sum_{\substack{i\text{ blown}\\H_i\text{ active}}}
+                          (u_i/2)\psi_{E_i}.
+\]
+By \eqref{eq:nef-projective-exceptional-potential}, $u_iH_i$ becomes at least $(u_i/2)\kappa_i$, with a nonnegative divisor current. The remaining $(a_i+b_if_i-u_i)H_i$ and all $Q_i$ terms are nonnegative. On plain active blocks and $Q_i$-only blocks, use the positive minimum of their active coefficient. Taking the minimum over the active blocks gives $\theta+\ddc\varphi\geq cB_\theta$. For the zero member take $\varphi=0$ and any $c>0$. Apply \cref{lem:nef-logarithmic-rank-comparison} with $\Omega=\sum_i\kappa_i$.
+\end{proof}
+
+Nonclosed members occur whenever a fixed generator derivative is nonzero, since
+\[
+ \mathrm d\theta=\sum_i b_i\,\mathrm df_i\wedge H_i
+                  +\sum_{i\text{ blown}}d_i\,\mathrm dg_i\wedge Q_i.
+\]
+Activating that generator alone prevents cancellation. On a blown factor, a small positive bump perturbation of one varying in a $q$-fiber has $\mathrm dg\wedge Q\ne0$, since $r\geq1$. On $\mathbb P^p\times\mathbb P^q$, $p,q\geq1$, a positive $f$ varying on the second factor gives nonclosed $fH_1$ of order $q$. Adding a smooth $\ddc$ potential preserves the exterior derivative.
+
+\subsubsection{Modification equality}
+\Needspace{11\baselineskip}
+\begin{proposition}\label{prop:nef-projective-modification-equality}
+Every product modification obtained by replacing plain factors with the indicated linear blowups preserves the order of a fixed-cone member. More generally, for every modification $\pi:Y\to X$ with $Y$ a compact K\"ahler manifold, the pullback has common order $n-R(\theta)$ and two-sided power bounds with that exponent, for arbitrary smooth positive probability and Hermitian perturbation on $Y$.
+\end{proposition}
+\begin{proof}
+For product linear blowups, pull back the old coefficient functions. The new $Q_i$ coefficients are zero. Active plain $H_i$ become active blown $H_i$ of the same effective rank $m_i$, and inactive blocks stay inactive. Apply \cref{thm:nef-projective-integer-orders} on both products.
+
+For general K\"ahler $Y$, pull back the explicit nonnegative smooth remainders and divisor-section identities above. Each nonzero divisor section remains nonzero under the surjective modification. Its pulled-back squared logarithm is locally integrable and gives the curvature of its effective zero divisor, so
+\[
+ \pi^*\theta\leq C\pi^*B_\theta,\qquad
+ \pi^*\theta+\ddc(\varphi\circ\pi)\geq c\pi^*B_\theta.
+\]
+Use the rank-free part of \cref{lem:nef-logarithmic-rank-comparison} with a K\"ahler form $\Omega_Y$. The pulled-back background is semipositive and hence nef. Put $R=R(\theta)$. Pullback cannot increase rank, so $(\pi^*B_\theta)^{R+1}=0$, while
+\[
+ \int_Y(\pi^*B_\theta)^R\wedge\Omega_Y^{n-R}>0.
+\]
+For $R>0$ this is positive on the nonempty isomorphism locus; for $R=0$ it is the K\"ahler volume. The closed-background formula following \cref{thm:gaud-volume-nef-limit} gives, for the chosen probability $\mu_Y$,
+\[
+ \mathcal V_{\mu_Y}(\pi^*B_\theta+\epsilon\Omega_Y)
+ =\sum_{k=0}^{R}\binom nk\epsilon^{n-k}
+       \int_Y(\pi^*B_\theta)^k\wedge\Omega_Y^{n-k}.
+\]
+Every coefficient is nonnegative and the coefficient at $k=R$ is positive. Thus this polynomial has two-sided bounds by $\epsilon^{n-R}$ for $0<\epsilon\leq1$. The quotient comparison gives the same bounds for $\pi^*\theta+\epsilon h_Y$. This also proves equality with the downstairs order. No pullback of a positive probability is assumed to remain strictly positive on the exceptional locus.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\subsubsection{Specified effective divisors}
+Fix the pullback Fubini--Study metrics on $\mathcal O(H_i)$ and $\mathcal O(Q_i)$. Allow tensor products of their integer powers, including negative powers. For finite nonnegative real sums of zero divisors of nonzero holomorphic sections of these bundles, write
+\[
+ \begin{gathered}
+ D=\sum_\nu t_\nu\operatorname{div}(s_\nu),\quad t_\nu\geq0,\\
+ \eta_D=\sum_i(\delta_iH_i+\rho_iQ_i),\qquad
+ \Phi_D=\sum_\nu t_\nu\log|s_\nu|^2.
+ \end{gathered}
+\]
+The metrics fix the representatives, and $[D]=\eta_D+\ddc\Phi_D$. Omit $Q_i$ terms on plain factors.
+
+\Needspace{8\baselineskip}
+\begin{lemma}\label{lem:nef-projective-effective-divisor-range}
+The exact coefficient range of this real divisor family is
+\[
+ \delta_i\geq0\text{ on plain factors};\qquad
+ \delta_i\geq0,\quad\delta_i+\rho_i\geq0
+                         \text{ on blown factors}.
+\]
+\end{lemma}
+\begin{proof}
+For one nonzero holomorphic section $s$, choose a point where it is nonzero and outside all exceptional divisors, then fix the other factor coordinates. A projective line through that point in a $q_i$-fiber has $H_i$-degree one and $Q_i$-degree zero. The restriction of $s$ is nonzero, so its $H_i$ exponent is nonnegative. On a plain factor the line argument gives the same inequality.
+
+On a blown factor, write the chosen point as $([z:w],[w])$ with $w\ne0$, and choose a linear map $A$ with $Aw=z$. The section of $q_i$ given by $[t]\mapsto([At:t],[t])$ contains the point. Both $H_i$ and $Q_i$ have degree one on any of its projective lines. Such a line exists because $r_i\geq1$, and the original holomorphic section $s$ restricts nontrivially to it. Its degree gives the nonnegative sum of the two exponents. Nonnegative real sums preserve these inequalities.
+
+Conversely, let $F_i$ be a $Q_i$-hyperplane divisor. A permitted pair is represented by $\delta_iE_i+(\delta_i+\rho_i)F_i$, since $E_i$ has curvature $H_i-Q_i$. Plain coefficients are represented by hyperplanes. These are allowed effective real sums and give every coefficient tuple in the stated range.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{theorem}\label{thm:nef-projective-residual-equality}
+Let $\theta$ have the fixed-cone parameters above, and let $D$ be in the specified divisor family. Assume
+\[
+ a_i\geq\delta_i\text{ for all }i,\qquad
+ c_i\geq\rho_i\text{ for every blown }i.
+\]
+Then $\beta=\theta-\eta_D$ is in the same cone, and its common order satisfies
+\[
+ a(\beta)-a(\theta)=\sum_i\bigl(R_i(\theta)-R_i(\beta)\bigr)\geq0.
+\]
+Equality holds if and only if
+\begin{align*}
+ a_i-\delta_i+b_i&>0&&\text{whenever }a_i+b_i>0,\\
+ c_i-\rho_i+d_i&>0&&\text{whenever }a_i=b_i=0,\quad c_i+d_i>0.
+\end{align*}
+Here $a$ denotes the common order; the second condition concerns blown factors only.
+\end{theorem}
+\begin{proof}
+The residual parameters $(a_i-\delta_i,b_i,c_i-\rho_i,d_i)$ are nonnegative, so $\beta$ is smooth semipositive and nef. Also
+\[
+ (\theta-\beta)+\ddc\Phi_D=[D]\geq0,
+\]
+which is the actual positive-current comparison of \cref{prop:nef-positive-current-subtraction}. Apply \cref{thm:nef-projective-integer-orders} to both members. If an active $H_i$ disappears, its rank drops from $m_i$ to either $r_i<m_i$ or zero. If $H_i$ was absent, then $a_i=b_i=0$; the divisor range and residual conditions force $\delta_i=0$ and $\rho_i\geq0$. Such a block cannot gain $Q_i$. Therefore each rank loss is nonnegative and the losses cannot cancel. Their sum vanishes precisely when every initially leading generator remains active, giving the two conditions.
+\end{proof}
+
+The parameter inequalities ensure that this displayed representation stays in the fixed cone. They do not characterize every nef residual or every alternative representation by its generators.
+
+\Needspace{10\baselineskip}
+\begin{example}\label{ex:nef-nonclosed-projective-order-jumps}
+On $Z=\operatorname{Bl}_{\mathbb P^\ell}\mathbb P^m$, choose $g>0$ with $\mathrm dg\wedge Q\ne0$. For $t>0$, the genuinely nonclosed positive background $\theta_t=tH+gQ$ has order zero. Removing $sE$, with its fixed curvature $s(H-Q)$ and $0\leq s\leq t$, gives
+\[
+ \beta_s=(t-s)H+(g+s)Q,\qquad
+ \theta_t+\ddc(s\psi_E)=s[E]+\beta_s.
+\]
+Every residual is nef and nonclosed. Equality of orders holds exactly for $s<t$; at $s=t$ the jump is $\ell+1$. These examples realize each integer jump $1,\ldots,m-1$.
+\end{example}
+\begin{proof}
+The lower bound $\theta_t\geq\min(t,\min g)\kappa>0$ verifies positivity. For $s<t$, $H$ is active and the effective rank is $m$; at $s=t$ only $Q$ is active, of rank $r=m-\ell-1$. The order formula gives zero and $m-r=\ell+1$, respectively. The exterior derivative of every residual is $\mathrm dg\wedge Q\ne0$. Vary $\ell$ from zero to $m-2$.
+\end{proof}
+
+At the endpoint the chosen current contains the actual divisor $t[E]$ before removal. The perturbative minimal divisorial multiplicities are nevertheless zero, since all residual backgrounds admit smooth positive perturbations. Strict positivity of the fixed coefficient functions, the specified cone-preserving divisor inequalities and a K\"ahler source for the general modification statement are essential hypotheses of this construction. The general problem in \cref{qu:nef-degeneration-exponent} remains open.
