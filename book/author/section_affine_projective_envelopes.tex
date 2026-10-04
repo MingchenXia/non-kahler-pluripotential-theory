@@ -1,0 +1,96 @@
+\subsection{Affine growth and projective envelopes}
+\label{sec:affine-projective-envelopes}
+\index{Envelope!affine growth}
+\index{Contact set!growth parameter}
+
+An obstacle imposed on a compact subset of an affine chart can also be studied on projective space. The logarithmic growth becomes part of the background. This correspondence separates contact with the raw supremum from contact with its upper semicontinuous regularization.
+
+In this subsection write $\chi(z)=\log(1+\lVert z\rVert^2)$ on $\mathbb C^n$, and let $\omega_{\mathrm{FS}}$ be the Fubini--Study form on $\mathbb P^n$ with this local potential. Thus $\int_{\mathbb P^n}\omega_{\mathrm{FS}}^n=1$ in the book convention. For $\delta>0$ put
+\[
+ \theta_\delta=\tfrac\delta2\omega_{\mathrm{FS}},\qquad
+ \mathcal L_\delta=
+ \{u\in\PSH(\mathbb C^n):
+    u(z)\leq\delta\log^+\lVert z\rVert+C_u\}.
+\]
+Here $\log^+0=0$. Let $\mathcal L_\delta^+$ consist of the members also bounded below by $\delta\log^+\lVert z\rVert-C$ for some constant $C$.
+
+\Needspace{8\baselineskip}
+\begin{lemma}\label{lem:affine-projective-growth}
+The map $u\mapsto u-\delta\chi/2$, followed by canonical extension across the hyperplane at infinity, identifies $\mathcal L_\delta$ with $\PSH(\mathbb P^n,\theta_\delta)$.
+\end{lemma}
+\begin{proof}
+Use homogeneous coordinates $[Z_0:\cdots:Z_n]$ and the affine chart $Z_0\ne0$. On a chart $Z_i\ne0$ meeting $H=\{Z_0=0\}$, the local plurisubharmonic representative of $p=u-\delta\chi/2$ is
+\[
+ p+\frac\delta2\log\frac{\sum_{j=0}^n|Z_j|^2}{|Z_i|^2}
+ =u+\delta\log|Z_0/Z_i|.
+\]
+It is locally bounded above near $H$: the norm of the affine coordinates is at most a fixed chart constant divided by $|Z_0/Z_i|$. The growth bound and \cref{lem:qpsh-removable-pluripolar} therefore give a canonical extension. The smooth potential transitions make the extensions agree on overlaps.
+
+Conversely, a compact $\theta_\delta$-plurisubharmonic $p$ is bounded above. The function $u=p+\delta\chi/2$ is plurisubharmonic on the affine chart, and
+\[
+ 0\leq\tfrac12\chi-\log^+\lVert z\rVert\leq\tfrac12\log2
+\]
+gives the required upper growth. Neither restriction is identically $-\infty$. Canonical extension gives uniqueness in both directions.
+\end{proof}
+
+Fix a non-pluripolar compact $K\subset\mathbb C^n$ and a bounded real function $\psi$ on $K$. Define
+\[
+ V_\delta=\sup\{u\in\mathcal L_\delta:u|_K\leq\psi\},
+ \qquad F_\delta=V_\delta^*,
+\]
+where the obstacle is required everywhere on $K$ before regularization. On $\mathbb P^n$ put
+\[
+ G_\delta=\sup\{p\in\PSH(\mathbb P^n,\theta_\delta):
+                 p|_K\leq\psi-\delta\chi/2\}.
+\]
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:affine-projective-envelope}
+The compact envelope $G_\delta^*$ is bounded and $\theta_\delta$-plurisubharmonic. On the affine chart,
+\begin{equation}\label{eq:affine-projective-envelope}
+ V_\delta=\tfrac\delta2\chi+G_\delta,\qquad
+ F_\delta=\tfrac\delta2\chi+G_\delta^*\in\mathcal L_\delta^+.
+\end{equation}
+The raw envelope agrees with its regularization almost everywhere.
+\end{proposition}
+\begin{proof}
+The lemma identifies the competitor families and proves the raw identity. Constants below $\inf_K(\psi-\delta\chi/2)$ supply compact competitors.
+
+These competitors have a uniform upper bound on $\mathbb P^n$. Otherwise choose $p_j$ with $M_j=\sup p_j$ and
+\[
+ M_j-\sup_K(\psi-\delta\chi/2)\geq j2^j.
+\]
+Normalize $v_j=p_j-M_j\leq0$. By \cref{thm:normalized-compactness}, their $L^1$ norms are uniformly bounded. The partial sums $\sum_{j\leq N}2^{-j}v_j$ decrease, remain $\theta_\delta$-plurisubharmonic, and have uniformly bounded $L^1$ norms. Their genuine limit $v$ exists by \cref{cor:decreasing-limit}, whereas $v=-\infty$ on $K$. The global plurisubharmonic function $v+\delta\chi/2$ on the affine chart would make $K$ pluripolar, a contradiction. A common constant lower competitor and the upper-envelope theorem now give bounded $G_\delta^*$. The smooth addition in \eqref{eq:affine-projective-envelope} commutes with regularization and gives the two-sided growth bounds.
+
+Locally adding a potential of $\theta_\delta$ makes the competitor family plurisubharmonic. The upper-envelope theorem recalled in \cref{chap:framework} says that regularization changes its supremum only on a pluripolar set. Thus $G_\delta=G_\delta^*$ almost everywhere; smooth addition gives the same assertion for $V_\delta$.
+\end{proof}
+
+Changing $\delta$ changes both $\theta_\delta$ and the obstacle $\psi-\delta\chi/2$. The raw contact condition nevertheless has a simple parameter structure. Put
+\[
+ \Lambda=\{\delta>0:V_\delta|_K=\psi\},\qquad
+ \Lambda_{\mathrm{reg}}(a)=
+ \{\delta\in\Lambda:F_\delta(a)=\psi(a)\}\quad(a\in K).
+\]
+
+\Needspace{10\baselineskip}
+\begin{theorem}\label{thm:affine-growth-contact-ray}
+The contact set of parameters $\Lambda$ is empty, $(0,\infty)$, or $[\lambda,\infty)$ for some $\lambda>0$. If $\Lambda=[\lambda,\infty)$, each $\Lambda_{\mathrm{reg}}(a)$ is empty, $\{\lambda\}$, or $\Lambda$. If $\Lambda=(0,\infty)$, it is empty or $\Lambda$. The same alternatives hold for $\bigcap_{a\in K}\Lambda_{\mathrm{reg}}(a)$.
+\end{theorem}
+\begin{proof}
+Let $m=\inf_K\psi$. Inclusion of growth classes and scaling of competitors give, for $0<\alpha<\beta$,
+\begin{equation}\label{eq:affine-growth-raw-slope}
+ 0\leq V_\beta-V_\alpha
+ \leq\frac{\beta-\alpha}{\alpha}(V_\alpha-m).
+\end{equation}
+Indeed, if $u$ is a $\beta$-competitor, then $(\alpha/\beta)(u-m)+m$ is an $\alpha$-competitor, since $\psi\geq m$. The constant $m$ is also a competitor, so all terms are finite and the right side is nonnegative. The estimate gives continuity of each raw value in the positive parameter. Since $V_\delta\leq\psi$ on $K$, monotonicity makes $\Lambda$ upward closed; continuity makes it relatively closed in $(0,\infty)$. This proves its three possible forms.
+
+For $0\leq t\leq1$, convex combinations of competitors give
+\[
+ V_{(1-t)\alpha+t\beta}\geq(1-t)V_\alpha+tV_\beta.
+\]
+The preceding proposition turns this into the same inequality for the regularized envelopes almost everywhere, then everywhere by \cref{lem:qpsh-almost-everywhere-order}. Thus $F_\delta$ is concave and nondecreasing in $\delta$ at every point.
+
+For $a\in K$ and $\delta\in\Lambda$, the defect $d_\delta=F_\delta(a)-\psi(a)$ is nonnegative, concave and nondecreasing. Suppose $d_\alpha=0$ and choose $\eta\in\Lambda$ with $\eta<\alpha$. For every $\beta>\alpha$, express $\alpha$ as a strict convex combination of $\eta$ and $\beta$. Concavity forces both nonnegative endpoint defects to vanish. Monotonicity gives vanishing at all smaller parameters in $\Lambda$. Hence any zero other than the smallest contact parameter forces every defect to vanish. This proves the pointwise alternatives. Their intersection gives the asserted global alternatives.
+\end{proof}
+
+The distinction concerns the regularized value at a point of $K$. Raw contact persists as the growth allowance increases; regularized contact can be restricted to the first positive contact parameter. The compact correspondence keeps the background and obstacle matched throughout this variation.

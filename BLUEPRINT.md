@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint 414 — Affine/projective envelopes
+
+[The affine/projective envelope integration](research/editorial/affine-projective-envelopes-414.md) adds the scaled-class correspondence, bounded compact-set envelopes and growth-parameter contact rays in Section 12.1.1. The complete new input is read twice, all three proofs reconstructed and 19 actual pages inspected. All 973 old proofs, original problem descriptions/statuses, manifests, 451 protected files and six incoming S08 blobs remain exact. The 1174-page release, actual live PDF and homepage are verified; fresh empty-source reconstruction passes. Both catalogues use current compiled anchors, including a page-only repair of stale machine state/gap locators. Native catalogue compilation remains unverified. Forty original directions remain open; independent S08 review and recent dependent primary checks continue.
+
 ## Checkpoint413 — Weighted regularity and S08 intake
 
 [Primary review and direct bridge](research/editorial/weighted-regularity-primary-review-413.md) actually reads all 22 pages of arXiv 2609.23530v1 and inspects 15 original images. The dependent product/thinness and historical premises remain pending; no paper assertion is yet adopted. Sixteen direct obligations independently establish the affine/projective class correspondence, bounded compact-set envelopes and contact-ray alternatives using existing book foundations. Growth delta log norm gives background (delta/2)omega_FS and a moving obstacle. The incoming anonymous S08 source from 60161d2 is preserved with all six research blobs and queued for full independent review. All 318 book files, 973 proofs, both catalogues/manifests and 451 protected files remain exact; manuscript 412 and its 1170-page live release remain unchanged. No new author build, native call or publication. Forty original directions remain open.
