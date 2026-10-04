@@ -1,4 +1,8 @@
-# Current research status — 3 October 2026
+# Current research status — 4 October 2026
+
+## Checkpoint 385 — Mesoscopic growing jets and P22 resolution
+
+[Review](editorial/mesoscopic-growing-jets-385.md): Subsections 26.13.1–26.13.4 resolve the original compact-curve P22 question with the optimal universal raw range and actual-curvature correction for every sublinear growing order. Direct incoming-paper verification, 55 obligations, two complete scoped reads and 59 selected-page checks pass. Actual live PDF/homepage/Pages are verified; 1074 printed pages. All original statements are retained; 22 formal and 19 supplemental directions remain open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 294 exact book sources, all 1098+17 page texts matching and 1977 checksum-validated archive entries; authorized private 385 synchronization follows.
 
 ## Checkpoint 384 — Exceptional coefficient thresholds
 

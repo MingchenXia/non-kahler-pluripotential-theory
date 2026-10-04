@@ -497,3 +497,7 @@ Subsection 26.10.4 weakens strict residual positivity to semipositivity with pos
 ## Exceptional coefficient family — checkpoint 384
 
 Subsection 26.10.5 computes exact point-ideal spaces for every positive coefficient, positive displayed-reference mass before c=e+k, zero mass and degree drop at equality, and the first empty power beyond it. No new external primary paper or listing scan; prior coverage and gaps retained. General necessity remains open. [Review](editorial/exceptional-coefficient-thresholds-384.md).
+
+## Mesoscopic growing jets — checkpoint 385
+
+Original P22 is resolved at compact-curve scope after direct proof review. The existing Demailly July 2011 source is reread at pages 33–35, including its pointwise singular-metric estimate and Hilbert proof. No new bibliography entry, whole-primary-book review or listing scan. Prior coverage and gaps remain. S14/general fiber-selected transfers remain open. [Review](editorial/mesoscopic-growing-jets-385.md).

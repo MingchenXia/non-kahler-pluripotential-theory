@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint 385 — Mesoscopic growing jets and P22 resolution
+
+[Review](research/editorial/mesoscopic-growing-jets-385.md): Subsections 26.13.1–26.13.4 resolve the original compact-curve P22 question with the optimal universal raw range and actual-curvature correction for every sublinear growing order. Direct incoming-paper verification, 55 obligations, two complete scoped reads and 59 selected-page checks pass. Actual live PDF/homepage/Pages are verified; 1074 printed pages. All original statements are retained; 22 formal and 19 supplemental directions remain open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 294 exact book sources, all 1098+17 page texts matching and 1977 checksum-validated archive entries; authorized private 385 synchronization follows.
+
 ## Checkpoint 384 — Exceptional coefficient thresholds
 
 [Review](research/editorial/exceptional-coefficient-thresholds-384.md): Subsection 26.10.5 proves the exact exceptional-divisor series for every positive coefficient, the mass of the constructed reference, its critical degree drop and the exact first empty tensor power. Two complete scoped reads, 36 obligations and 60 selected pages pass. Actual live PDF/homepage/Pages are verified; 1062 printed pages. All 23 formal and 19 supplemental directions stay open at full scope. Native catalogue compilation remains unverified. Fresh reconstruction passes with 291 exact book sources, all 1086+17 page texts matching and 1969 checksum-validated archive entries; authorized private 384 synchronization follows.
