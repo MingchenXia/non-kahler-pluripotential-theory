@@ -1,0 +1,513 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[expansion=false]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ddc}{\mathrm{d}\mathrm{d}^c}
+\newcommand{\Ga}{\mathcal G_h}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\title{Local critical bounds for exact Hermitian adjoints}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+On a fixed compact Hermitian manifold, an explicit small ball of smooth
+logarithmic densities in the $C^{2,\alpha}$ topology has uniformly bounded
+densities for its exact Gauduchon maximizers. We estimate both the determinant
+density and the associated adjoint probability density in $L^\infty$, hence
+at the critical exponent $n/(n-1)$. The construction applies when the global
+lower Monge--Amp\`ere mass is zero. A nonlinear contraction produces solution
+forms close to the background, and a second contraction controls their
+positive Gauduchon factors. Matrix arithmetic--geometric mean proves exact
+maximality against every current test and identifies all equality cases.
+The probability-normalized density family is infinite dimensional and
+contains a path of distinct data with distinct exact maximizers. The result
+is local in a strong density topology; weaker or larger bounded families
+remain outside its scope.
+\end{abstract}
+
+\section{The two densities and the result}
+
+Let $X$ be a connected compact complex manifold of dimension $n\ge3$,
+let $h$ be a smooth positive Hermitian form, and let $\mathrm dV$ be a
+smooth positive probability volume. We use
+\[
+ \ddc=\frac{i}{2\pi}\partial\bar\partial
+\]
+and exterior powers without divided factorials. Fix $0<\alpha<1$ and
+H\"older norms from a finite smooth atlas and background connections.
+Put
+\[
+ H=\frac{h^n}{\mathrm dV},\qquad V=\int_Xh^n,
+ \qquad F_* =\log(H/V).
+\]
+Thus $e^{F_*}\mathrm dV=h^n/V$ is a probability measure.
+
+The compact test class consists of positive $(n-1,n-1)$-currents
+\[
+ \Ga=\left\{T:\ddc T=0,\ \int_Xh\wedge T=1\right\}.
+\]
+In an $h$-unitary frame set $\sigma_T=h\wedge T$ and use the positive
+Hermitian matrix density $P_T$ characterized by
+\[
+ \beta\wedge T=\frac1n\operatorname{tr}(BP_T)\,\sigma_T,
+ \qquad \operatorname{tr}P_T=n,
+\]
+where $B$ is the matrix of $\beta$. For real $F$ define
+\[
+ \Gamma_F(T)=\left(\frac{e^F\mathrm dV}{h^n}\right)^{1/n}
+                  \det(P_T)^{1/n}\sigma_T,
+ \qquad M(F)=\max_{T\in\Ga}\Gamma_F(T)(X).
+\]
+At an exact maximizer, its determinant-weighted probability is
+$\nu_{T,F}=\Gamma_F(T)/M(F)$. We write $q_T=\mathrm d\nu_{T,F}/\mathrm dV$.
+For a smooth positive $T=\gamma^{n-1}$ its determinant density is
+\[
+ k_T=\left(\frac{\gamma^n}{\mathrm dV}\right)^{(n-1)/n}.
+\]
+The identity $M(F)=e^{-B_0(F)/n}$ identifies $\nu_{T,F}$ with an adjoint
+probability of the functional $B_0$ that normalizes the equation. In this paper
+exact maximality and both density formulas will be proved directly for
+the constructed family.
+
+\begin{theorem}\label{thm:endpoint}
+There is an explicit $\eps>0$, defined in Section~\ref{sec:constants}
+using only the fixed background and linear elliptic inverse norms, with
+the following property. For
+\[
+ \mathcal F_\eps=\left\{F\in C^\infty(X,\mathbb R):
+       \int_Xe^F\mathrm dV=1,\quad
+       \norm{F-F_*}_{C^{2,\alpha}}\le\eps\right\},
+\]
+every exact maximizing current is the same smooth strictly positive
+current $T_F$. Its two densities satisfy
+\[
+ \norm{q_{T_F}}_{L^\infty(\mathrm dV)}\le C_\nu,
+ \qquad \norm{k_{T_F}}_{L^\infty(\mathrm dV)}\le C_k,
+\]
+where, for the normalized baseline factor $\chi_0$ constructed below,
+\[
+ a=\max_X\chi_0,\qquad H_{\max}=\max_XH,
+ \qquad C_\nu=\frac{3^{n+1}}4aH_{\max},
+ \qquad C_k=\frac{3^n}2aH_{\max}^{(n-1)/n}.
+\]
+Consequently, at $p=n/(n-1)$,
+\[
+ \norm{q_{T_F}}_{L^p(\mathrm dV)}\le C_\nu^{1/n},
+ \qquad \norm{k_{T_F}}_{L^p(\mathrm dV)}\le C_k.
+\]
+The family is infinite dimensional and contains a path of distinct data
+and distinct exact maximizing currents. The theorem holds on the same
+fixed $h$ when $v_-(h)=0$; no positive lower mass is assumed.
+\end{theorem}
+
+All data here are smooth. Their boundedness is in the specified
+$C^{2,\alpha}$ norm, with no uniform bounds on higher derivatives.
+The estimates also hold on the entire small smooth ball if the
+probability-normalization condition is omitted.
+
+\section{Linear inverses and a baseline factor}\label{sec:linear}
+
+We use real scalar elliptic theory on a compact manifold without boundary.
+For clarity, the passage to the full H\"older spaces is as follows.
+For a smooth elliptic second-order operator $P$, a two-sided parametrix
+$E$ has order $-2$ and
+\[
+ EP=I-S,\qquad PE=I-R,
+\]
+where $R,S$ have smooth kernels. The construction and distributional
+regularity are given in \cite[Chapter 7, Sections 4 and 10]{Taylor7}.
+The H\"older mapping property is
+$E:C^{s,\alpha}\longrightarrow C^{s+2,\alpha}$;
+see \cite[Chapter 13, Section 8, particularly (8.7), (8.17) and
+(8.22)]{Taylor13}. Consequently $v=EPv+Sv$ gives
+\[
+ \norm{v}_{C^{s+2,\alpha}}
+  \le C\bigl(\norm{Pv}_{C^{s,\alpha}}+\norm{v}_{C^0}\bigr),
+\]
+for each nonnegative integer $s$. A distribution with $Pv$ smooth is
+smooth by the same parametrix identity.
+
+The Fredholm alternative in \cite[Chapter 7, (10.4)--(10.6)]{Taylor7}
+first applies on $H^2\to L^2$. If $f\in C^{s,\alpha}$ is orthogonal
+to all smooth formal-adjoint kernel elements, it therefore has an
+$H^2$ solution. The parametrix identity upgrades that solution to
+$C^{s+2,\alpha}$. Conversely, integration by parts gives the same
+orthogonality condition. This identifies the H\"older range as the
+closed intersection of finitely many smooth integral constraints.
+Its kernel is smooth and finite dimensional, so the H\"older operator
+is Fredholm, with the same kernel, cokernel and index as the Sobolev
+operator. This argument does not require smooth functions to be dense
+in the full H\"older norm. Index invariance follows from
+\cite[Section 7, Proposition 7.4 and its proof]{TaylorFA}.
+A real Laplacian has index zero by its self-adjointness and the same
+smooth kernel--cokernel description. Changing the reference volume
+changes the adjoint representatives by a smooth positive factor,
+without changing the dimension or compatibility condition.
+
+We also recall the strong maximum principle in the form needed here.
+If $P=a^{ij}\partial_i\partial_j+b^i\partial_i+c$ is locally uniformly
+elliptic, $c\le0$, $Pv\ge0$ and $v$ attains a nonnegative interior
+maximum $M$, put $w=M-v\ge0$. Then $Pw=cM-Pv\le0$.
+If $w$ were positive somewhere and zero somewhere in the connected
+domain, a coordinate ball $B_R(y)$ in its positive set could touch
+its zero set at an interior point $z$. On the annulus
+$R/2<|x-y|<R$, the barrier
+\[
+ b_\kappa(x)=e^{-\kappa|x-y|^2}-e^{-\kappa R^2}
+\]
+satisfies $Pb_\kappa>0$ for sufficiently large $\kappa$: its positive
+$4\kappa^2a^{ij}(x_i-y_i)(x_j-y_j)$ term dominates the bounded
+terms of order $\kappa$ and order zero. Choose $\tau>0$ so that
+$w-\tau b_\kappa\ge0$ on both boundary spheres. A negative interior
+minimum would give $P(w-\tau b_\kappa)\ge0$, contradicting its strict
+negativity. Thus $w\ge\tau b_\kappa$ on the annulus. Its inward
+derivative at $z$ is then positive, contradicting $\nabla w(z)=0$.
+This proves that $v$ is constant. Applying the result to $-v$ gives
+the strong minimum principle used below. The argument is local and
+then propagates through connected coordinate neighborhoods.
+
+Define
+\[
+ L_hv=\frac{n\ddc v\wedge h^{n-1}}{h^n}.
+\]
+Its coefficients are smooth, its principal part is uniformly elliptic,
+and it has no zeroth-order term. The maximum principle and connectedness
+give $\ker L_h=\mathbb R$. Deform its principal coefficients through
+positive definite coefficients to a real Laplacian and its lower-order
+coefficients to those of that Laplacian. The index is therefore zero,
+so its formal adjoint relative to $\mathrm dV$ has a one-dimensional
+smooth kernel. Let $p_0$ be a nonzero real generator.
+
+The generator has one sign. Indeed, the range of $L_h$ contains no
+nonzero nonnegative smooth function: $L_hv\ge0$ on the compact manifold
+forces $v$ constant. If $p_0$ took both signs, nonnegative smooth bumps
+supported in its positive and negative sets would give a nonzero
+nonnegative $g$ with $\int_Xgp_0\mathrm dV=0$. Fredholm compatibility
+would put $g$ in the range, a contradiction. Choose $p_0\ge0$.
+It is strictly positive. In coordinates the adjoint has a zeroth-order
+coefficient $c_0$; subtract a constant $C\ge\max\{0,\sup c_0\}$.
+The resulting operator $P$ has nonpositive zeroth-order coefficient
+and $Pp_0=-Cp_0\le0$. An interior zero would force $p_0\equiv0$
+by the strong minimum principle. Normalize $\int_Xp_0\mathrm dV=1$.
+
+Set $\chi_0=p_0/H$. Integration by parts gives
+\[
+ \int_XL_hv\,p_0\mathrm dV
+       =n\int_Xv\,\ddc(\chi_0h^{n-1}),
+\]
+and hence
+\begin{equation}\label{eq:baseline}
+ \ddc(\chi_0h^{n-1})=0,\qquad
+ \int_X\chi_0h^n=1,\qquad \chi_0>0.
+\end{equation}
+Write $\mathrm d\mu_0=\chi_0h^n$.
+
+Let $E_4=\{v\in C^{4,\alpha}:\int_Xv\mathrm dV=0\}$. The map
+\[
+ \mathcal L:E_4\times\mathbb R\longrightarrow C^{2,\alpha},
+ \qquad \mathcal L(v,c)=L_hv-c
+\]
+is an isomorphism. For prescribed $g$ its scalar is
+$c=-\int_Xg\mathrm d\mu_0$, and the remaining equation is
+$L_hv=g-\int_Xg\mathrm d\mu_0$. Compatibility and the normalization
+give existence and uniqueness. Fix $K\ge1$ bounding its inverse for
+the product norm $\norm{v}_{C^{4,\alpha}}+|c|$.
+
+For a positive smooth $(1,1)$-form $\omega$, define
+\[
+ A_\omega\eta=\frac{\ddc(\eta\omega^{n-1})}{\mathrm dV}.
+\]
+The formal adjoint of $A_h$ is
+$\eta\mapsto(\ddc\eta\wedge h^{n-1})/\mathrm dV=(H/n)L_h\eta$.
+It has constant kernel and index zero. Thus $A_h$ has kernel spanned
+by $\chi_0$ and range
+$Z_0=\{g\in C^{0,\alpha}:\int_Xg\mathrm dV=0\}$.
+Its restriction to
+\[
+ E_\chi=\left\{\eta\in C^{2,\alpha}:\int_X\eta h^n=0\right\}
+\]
+is an isomorphism onto $Z_0$. Denote its inverse by $\mathcal R$ and
+fix $G\ge1$ bounding $\norm{\mathcal R}$.
+
+\section{Explicit radius and two contractions}\label{sec:constants}
+
+Rescale the fixed form and endomorphism H\"older norms so that
+endomorphism composition is submultiplicative and the norms dominate
+pointwise operator norms. Choose $D\ge1$ with
+\[
+ \norm{\ddc v}_{C^{2,\alpha}}\le D\norm{v}_{C^{4,\alpha}},
+ \qquad
+ \norm{h^{-1}\ddc v}_{C^{2,\alpha},\mathrm{alg}}
+                          \le D\norm{v}_{C^{4,\alpha}}.
+\]
+Let $C_{\mathrm{tr}}\ge1$ bound the trace map and put
+$Q=2C_{\mathrm{tr}}D^2$. For $\norm{v}_{C^{4,\alpha}}\le1/(2D)$ set
+\[
+ N(v)=\log\det(I+h^{-1}\ddc v)-L_hv.
+\]
+The Banach algebra series
+\[
+ N(v)=\sum_{j\ge2}\frac{(-1)^{j+1}}j
+                  \operatorname{tr}\bigl((h^{-1}\ddc v)^j\bigr)
+\]
+and the telescoping formula for a difference of matrix powers imply
+\begin{align}
+ \norm{N(v)}_{C^{2,\alpha}}&\le Q\norm{v}_{C^{4,\alpha}}^2,\label{eq:remainder}\\
+ \norm{N(v)-N(w)}_{C^{2,\alpha}}
+  &\le Q\bigl(\norm{v}_{C^{4,\alpha}}+
+          \norm{w}_{C^{4,\alpha}}\bigr)\norm{v-w}_{C^{4,\alpha}}.
+ \nonumber
+\end{align}
+Indeed, if $\rho\le1/2$ bounds both matrix norms, the difference
+series is bounded by
+$C_{\mathrm{tr}}\rho(1-\rho)^{-1}$ times the matrix difference.
+
+Choose $C_A\ge1$ so that, for $\norm{\omega-h}_{C^{2,\alpha}}\le1$,
+\[
+ \norm{A_\omega-A_h}_{C^{2,\alpha}\to C^{0,\alpha}}
+                         \le C_A\norm{\omega-h}_{C^{2,\alpha}}.
+\]
+This is a finite polynomial coefficient estimate: expand
+$\omega^{n-1}-h^{n-1}$, multiply by $\eta$ and apply $\ddc$.
+It uses at most two derivatives of $\omega$.
+
+All constants so far are fixed before solving the equation. Define
+\begin{equation}\label{eq:radius}
+ m=\min_X\chi_0>0,\qquad C_0=\norm{\chi_0}_{C^{2,\alpha}},\qquad
+ r=\min\left\{\frac1{2D},\frac1{4KQ},
+                   \frac{m}{4GC_ADC_0}\right\},\qquad
+ \eps=\frac r{2K}.
+\end{equation}
+In particular $m\le C_0$. There is no lower mass or inverse lower
+mass in these formulas.
+
+For $f=F-F_*$ consider the map on the closed radius-$r$ ball in
+$E_4\times\mathbb R$
+\[
+ (v,c)\longmapsto\mathcal L^{-1}\bigl(f-N(v)\bigr).
+\]
+When $\norm f_{C^{2,\alpha}}\le\eps$, its image has norm at most
+$K\eps+KQr^2\le3r/4$ and its Lipschitz constant is at most
+$2KQr\le1/2$. Contraction therefore gives $(u,c)$ with
+\[
+ \norm u_{C^{4,\alpha}}+|c|\le r,\qquad
+ \log(\omega^n/h^n)-c=f,\qquad \omega=h+\ddc u.
+\]
+The pointwise norm bound $\norm{h^{-1}\ddc u}\le Dr\le1/2$ gives
+\begin{equation}\label{eq:metric-comparison}
+ \tfrac12h\le\omega\le\tfrac32h,\qquad
+ \omega^n=e^{F+b}\mathrm dV,\quad b=\log V+c.
+\end{equation}
+For smooth $F$, $u$ is smooth. Differentiate the local log-determinant
+equation; its linearization has uniformly positive principal
+coefficients $\omega^{-1}$, initially in $C^{2,\alpha}$.
+Interior Schauder estimates on the differentiated equations improve
+the regularity one order at a time. Equivalently, the local nonlinear
+elliptic bootstrap in \cite[Proposition and complete proof]{TaylorReg}
+applies with order two, initial regularity $C^{4,\alpha}$, smooth
+right side and positive definite linearization. It gives all
+derivatives. Uniform higher derivative bounds on $F$ are not used.
+
+Now set $\Delta A=A_\omega-A_h$. Each $A_\omega$ has integral zero,
+so the following right side belongs to $Z_0$. On $E_\chi$ solve
+\[
+ \eta=-\mathcal R\Delta A(\chi_0+\eta).
+\]
+It is an affine contraction on this complete space, since
+$G\norm{\Delta A}\le GC_ADr\le m/(4C_0)\le1/4$.
+Its unique fixed point satisfies
+\[
+ \norm\eta_{C^{2,\alpha}}
+  \le\frac{GC_ADrC_0}{1-GC_ADr}\le2GC_ADrC_0\le m/2.
+\]
+Thus $\chi=\chi_0+\eta$ obeys
+\begin{equation}\label{eq:factor}
+ \ddc(\chi\omega^{n-1})=0,\quad \int_X\chi h^n=1,
+ \quad \chi\ge m/2,
+ \quad \chi\le\chi_0+m/2\le\tfrac32\max_X\chi_0.
+\end{equation}
+It is smooth by elliptic regularity. Every $C^{2,\alpha}$ solution
+with this normalization satisfies the same affine equation, so it
+equals $\chi$.
+
+\section{Exact maximizers and both uniform bounds}
+
+Define
+\[
+ Z=\int_X\chi h\wedge\omega^{n-1},\qquad
+ T_F=\frac\chi Z\omega^{n-1}.
+\]
+It is a smooth strictly positive member of $\Ga$. Integration by parts
+and \eqref{eq:factor} give
+\[
+ \int_X\chi(\omega-h)\wedge\omega^{n-1}
+       =\int_Xu\ddc(\chi\omega^{n-1})=0,
+ \qquad Z=\int_X\chi\omega^n.
+\]
+Diagonalizing $\omega$ relative to $h$, the ratio
+$h\wedge\omega^{n-1}/h^n$ is the average of products of $n-1$
+eigenvalues. Consequently
+\begin{equation}\label{eq:Z}
+ 2^{-(n-1)}\le Z\le(3/2)^{n-1}.
+\end{equation}
+
+For any $S\in\Ga$, smoothness of $u$ and $\ddc S=0$ imply
+$\int_X\omega\wedge S=1$. Let $W$ be the matrix of $\omega$ in the
+$h$-unitary frame and put $P=P_S$. By \eqref{eq:metric-comparison},
+$e^F\mathrm dV/h^n=e^{-b}\det W$. Matrix arithmetic--geometric mean gives
+\[
+ \det(W)^{1/n}\det(P)^{1/n}
+ =\det(W^{1/2}PW^{1/2})^{1/n}\le\frac1n\operatorname{tr}(WP).
+\]
+It follows as an inequality of measures that
+\[
+ \Gamma_F(S)\le e^{-b/n}\omega\wedge S,
+ \qquad \Gamma_F(S)(X)\le e^{-b/n}.
+\]
+This includes singular test currents. For $T=t\omega^{n-1}$ with a
+smooth positive factor $t$, its trace-normalized matrix is
+$P_T=nW^{-1}/\operatorname{tr}(W^{-1})$. Thus equality holds for $T_F$:
+\begin{equation}\label{eq:exact}
+ M(F)=e^{-b/n},\qquad
+ \Gamma_F(T_F)=e^{-b/n}\omega\wedge T_F.
+\end{equation}
+In particular $b=B_0(F)$ by the stated normalizing-functional identity.
+
+Every exact maximizer equals $T_F$. Equality of the total integrals
+forces the nonnegative deficit measure to be zero. Equality in matrix
+arithmetic--geometric mean then gives, $\sigma_S$-almost everywhere,
+\[
+ W^{1/2}P_SW^{1/2}=\lambda I,\qquad
+ \lambda=\frac n{\operatorname{tr}(W^{-1})}>0.
+\]
+Hence $S=\rho\omega^{n-1}$ for a nonnegative scalar measure coefficient
+$\rho$. The distributional equation $\ddc S=0$ is $A_\omega\rho=0$.
+Smooth-coefficient elliptic regularity makes $\rho$ smooth. Normalize
+it by its positive finite integral against $h^n$. The uniqueness in
+\eqref{eq:factor} identifies it with $\chi$, and the $h$-trace
+normalization fixes its remaining scale to $1/Z$. This proves
+uniqueness by the equality equation and ellipticity.
+
+The probability and determinant densities are now explicit:
+\begin{equation}\label{eq:densities}
+ \nu_{T_F,F}=\omega\wedge T_F=\frac\chi Z\omega^n,
+ \qquad q_F=\frac\chi Z\frac{\omega^n}{\mathrm dV},\qquad
+ k_{T_F}=\frac\chi Z
+                 \left(\frac{\omega^n}{\mathrm dV}\right)^{(n-1)/n}.
+\end{equation}
+For the last identity take
+$\gamma=(\chi/Z)^{1/(n-1)}\omega$, so $T_F=\gamma^{n-1}$.
+Equivalently $k_{T_F}=e^{-F/n}M(F)q_F$.
+The adjoint and supporting properties can also be checked directly.
+For every smooth $v$,
+\[
+ \int_X\frac{n\ddc v\wedge\omega^{n-1}}{\omega^n}
+                  q_F\mathrm dV
+       =\frac nZ\int_X\ddc v\wedge\chi\omega^{n-1}=0.
+\]
+For another continuous log-density $G$, testing its maximum at $T_F$
+gives
+\[
+ M(G)\ge M(F)\int_Xe^{(G-F)/n}\mathrm d\nu_{T_F,F}.
+\]
+Jensen's inequality and $M=e^{-B_0/n}$ therefore give
+$B_0(G)\le B_0(F)-\int_X(G-F)\mathrm d\nu_{T_F,F}$,
+the required supporting inequality with its negative sign.
+Equation \eqref{eq:Z} gives
+\[
+ \frac\chi Z\le\frac{3a}2\,2^{n-1},\qquad
+ \frac{\omega^n}{\mathrm dV}\le(3/2)^nH_{\max}.
+\]
+Multiplication gives exactly $q_F\le C_\nu$ and $k_{T_F}\le C_k$
+in Theorem~\ref{thm:endpoint}. Since $\mathrm dV$ is a probability volume,
+$\norm{k_{T_F}}_{L^p}\le C_k$. Since $q_F$ itself integrates to one,
+\[
+ \int_Xq_F^p\mathrm dV\le C_\nu^{p-1},\qquad
+ \norm{q_F}_{L^p}\le C_\nu^{(p-1)/p}=C_\nu^{1/n}.
+\]
+
+\section{Nontriviality at the fixed zero-mass background}
+
+The radius in \eqref{eq:radius} is positive for every smooth positive
+$h$, including the given one with $v_-(h)=0$. The background remains
+fixed throughout the following density variations.
+
+Choose a point $x_0$ and holomorphic coordinates unitary for $h$ there.
+A cutoff equal to one near $x_0$, multiplied by
+$|z_1|^2-|z_2|^2$, gives a global smooth real bump $\psi$ whose
+complex Hessian matrix at $x_0$ is nonzero and non-scalar. Adjust its
+$\mathrm dV$-mean to zero. For sufficiently small real $t$ put
+\[
+ \omega_t=h+t\ddc\psi,\qquad V_t=\int_X\omega_t^n,
+ \qquad F_t=\log\frac{\omega_t^n}{V_t\mathrm dV}.
+\]
+These forms are positive, $F_t$ are smooth probability log-densities,
+and $F_t\to F_*$ in $C^{2,\alpha}$. Shrink the interval so they lie
+in $\mathcal F_\eps$ and the exact solution
+$u=t\psi$, $b=\log V_t$ lies in the local contraction ball.
+
+They are pairwise distinct. If $F_s=F_t$, then
+$\log(\omega_s^n/\omega_t^n)=\log(V_s/V_t)$ is constant.
+At a maximum and minimum of $(s-t)\psi$, the Hessian sign makes this
+constant respectively nonpositive and nonnegative. Thus it is zero.
+The mean-value formula for log determinants gives
+\[
+ \int_0^1\operatorname{tr}_{\omega_t+\tau(\omega_s-\omega_t)}
+                          \ddc((s-t)\psi)\,\mathrm d\tau=0.
+\]
+This is a uniformly elliptic scalar equation without a zeroth-order
+term. The maximum principle forces $(s-t)\psi$ constant, hence $s=t$.
+Probability normalization also forbids nonzero constant shifts between
+these data.
+
+Their exact currents are distinct as well. If $T_s=T_t$, their positive
+smooth factors imply that $\omega_s^{n-1}$ and $\omega_t^{n-1}$ are
+proportional at $x_0$. The cofactor matrix identity implies that the
+positive forms themselves are proportional. Their matrices there are
+$I+sQ$ and $I+tQ$ with $Q$ non-scalar. Linear independence of $I,Q$
+then forces $s=t$.
+
+The entire family is infinite dimensional. Every sufficiently small
+smooth perturbation $f$ can be normalized by
+\[
+ F=F_*+f-\log\int_Xe^{F_*+f}\mathrm dV.
+\]
+The derivative at zero is $f-\int_Xf e^{F_*}\mathrm dV$, whose only
+constant-direction kernel is the constants. Arbitrarily many independent
+nonconstant smooth directions remain inside $\mathcal F_\eps$.
+
+The density hypothesis proved here is strong-topology smallness around
+the explicit probability density $h^n/V$. It gives the requested
+critical estimate at zero lower mass, and in fact an $L^\infty$ estimate.
+It gives no estimate for arbitrary $C^0$-bounded or merely
+$L^\infty$-bounded continuous log-densities, large $C^{2,\alpha}$
+families, all normalized Gauduchon tests or near-maximizers. No general
+singleton-support assertion is inferred from an endpoint estimate.
+Those broader questions remain open.
+\begin{thebibliography}{4}
+\bibitem{Taylor7} M.~E.~Taylor,
+\emph{Pseudodifferential Operators}, Chapter 7 of
+\emph{Partial Differential Equations}, author-hosted chapter,
+\url{https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/chap7.pdf}.
+\bibitem{Taylor13} M.~E.~Taylor,
+\emph{Function Space and Operator Theory for Nonlinear Analysis},
+Chapter 13 of \emph{Partial Differential Equations}, author-hosted chapter,
+\url{https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/chap13.pdf}.
+\bibitem{TaylorFA} M.~E.~Taylor,
+\emph{Functional Analysis}, Section 7,
+author-hosted notes,
+\url{https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/fctnl.pdf}.
+\bibitem{TaylorReg} M.~E.~Taylor,
+\emph{Regularity of Solutions to Nonlinear Overdetermined Elliptic PDE},
+author-hosted note,
+\url{https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2022/05/overellip.pdf}.
+\end{thebibliography}
+\end{document}
