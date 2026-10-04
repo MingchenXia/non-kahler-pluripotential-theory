@@ -1,5 +1,10 @@
 # Current research status — 4 October 2026
 
+## Checkpoint391 — Invariant mass and reference densities
+
+[Review](research/editorial/invariant-mass-reference-densities-391.md): Subsubsection25.5.2.1 proves the invariant threefold upper mass/BMP and singular-coefficient zero top mass, and classifies all Iwasawa smooth maximizing densities. A closed Schur base equation extends the complete coefficient metric to every fixed fiber-invariant smooth density. Coefficient-mean estimates are distinguished from pointwise metric estimates. All35 direct obligations, four exact algebraic identities and40 selected final pages pass. Two full clean builds have actual live PDF/homepage/Pages checks;1106 printed pages. All original descriptions/statuses and protected sources stay exact;40 directions remain open. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with300 exact book sources, all1132+17 page texts matching and2009 checksum-validated archive entries; authorized private synchronization follows.
+
+
 ## Checkpoint390 — Complete invariant background cones
 
 [Review](research/editorial/parallelizable-gauduchon-cones-390.md): Subsection25.5.2 directly reconstructs the restricted P15 classification. Determinant volume, unique minimizing metric, internal subspace completeness and the Iwasawa example pass52 direct obligations and38 actual selected images. One full compilation and its network-enabled publication retry produce1128 physical/1102 printed pages; live PDF/homepage/Pages match. P15 remains partial and40 original directions remain open. Original statements/descriptions and protected sources stay exact. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with299 exact book sources, all1128+17 page texts matching, and2005 checksum-validated archive entries; authorized private synchronization follows.
