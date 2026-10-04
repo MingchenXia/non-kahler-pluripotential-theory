@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint422 — Compact-obstacle polar invariance
+
+[The compact-obstacle integration](research/editorial/compact-obstacle-polar-invariance-422.md) adds the big-background pointwise/quasi-everywhere equality, minimal singularities and affine logarithmic pole barriers. Three proofs, both complete local rereads and 24 actual final images pass. Of 991 old proofs, 990 remain exact; one repeated compact bound is replaced by its existing general lemma. Original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1195-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. The inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
+
 ## Checkpoint421 — Compact-obstacle polar invariance
 
 [The compact-obstacle review](research/editorial/compact-obstacle-polar-invariance-review-421.md) checks 26 direct obligations and seven actual primary images. Pointwise and quasi-everywhere compact-obstacle regularizations agree in smooth big backgrounds; the canonical series supplies logarithmic pole barriers for affine pluripolar sets. Global Josefson remains an explicit accepted foundation, with its exact statement checked and its full cited proof tree not newly certified. All 326 book files, 991 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, new publication or original problem closure. Next: scoped Chapter 1/12 integration.
