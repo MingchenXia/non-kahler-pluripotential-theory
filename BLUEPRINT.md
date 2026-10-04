@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint425 — Affine envelope weight response
+
+[The weight-response review](research/editorial/affine-envelope-weight-response-review-425.md) checks 38 direct obligations. Compact active pairs control joint Hadamard directions, left/right growth slopes and weight Gateaux differentiability; a closed-disk quadratic obstacle gives a genuine corner. All 330 book files, 999 proofs, both catalogues/manifests and 451 protected files remain exact. The four September archive requests fail with HTTP404, so historical gaps remain. No author build, native call, publication, novelty claim or original problem closure. Next: scoped Chapter12 integration.
+
 ## Checkpoint424 — Affine growth slopes and probabilities
 
 [The affine-slope integration](research/editorial/affine-envelope-slopes-424.md) adds five proofs of all-point growth derivatives, uniform later-secant error, attained continuous-weight supporting probabilities and active-pair derivative minima. Both complete subsection rereads and 24 actual final images pass. All 994 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1199-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
