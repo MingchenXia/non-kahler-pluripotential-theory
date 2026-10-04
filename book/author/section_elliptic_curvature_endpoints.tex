@@ -1,0 +1,121 @@
+\section{Curvature pairs and positive lower mass}
+\label{sec:elliptic-curvature-endpoints}
+\index{Elliptic fibration!positive lower mass}
+
+The sign of the curvature of an elliptic connection gives a geometric lower-mass criterion. Its split metric is Gauduchon and has a nonpositive complex Hessian. The cubic mass identity then bounds every bounded admissible potential, and the determinant estimate transfers that bound to every Hermitian background.
+
+In this section $X$ is a connected compact complex threefold, and $\mathrm dV$ is a smooth positive probability volume form. The products of bounded potentials are those of \cref{prop:bounded-products}.
+
+\subsection{The bounded cubic identity}
+
+\begin{lemma}\label{lem:bounded-cubic-lower-mass}
+Let $g$ be Hermitian with $\ddc(g^2)=0$, and let $u\in\PSH(X,g)$ be bounded. The current
+\[
+ E_u=\tfrac12\ddc(u^2)-u\ddc u
+\]
+is positive, and
+\begin{equation}\label{eq:bounded-cubic-energy}
+ \int_X(g+\ddc u)^3
+ =\int_Xg^3-3\int_XE_u\wedge\ddc g.
+\end{equation}
+If $-\ddc g\geq0$, then $v_-(g)=\int_Xg^3$.
+\end{lemma}
+\begin{proof}
+Locally write $u=p-a$, with $p$ bounded plurisubharmonic and $a$ smooth. Multilinearity defines the signed closed products $C_r=(\ddc u)^r$, with $C_0=1$. Bounded recursion, expanded in $p-a$, gives
+\[
+ \ddc(uC_r)=C_{r+1},\qquad r=0,1,2.
+\]
+Weighted products are intrinsic by \cref{lem:weighted-decreasing-products} and smooth-correction invariance. On a smaller ball choose smooth bounded $p_j\downarrow p$ and put $u_j=p_j-a$. That lemma gives $u_j\ddc u_j\to u\ddc u$, while boundedness gives $u_j^2\to u^2$ in $L^1$. Hence
+\[
+ \mathrm du_j\wedge\dc u_j
+ =\tfrac12\ddc(u_j^2)-u_j\ddc u_j\longrightarrow E_u.
+\]
+The smooth currents are positive, so their intrinsic weak limit is positive and has order zero.
+
+Expand the cubic product. Recursive distributional Stokes gives
+\[
+ \int_XC_3=0,\qquad
+ \int_Xg^2\wedge C_1=\int_Xu\ddc(g^2)=0,
+ \qquad
+ \int_Xg\wedge C_2=\int_XuC_1\wedge\ddc g.
+\]
+Since $\ddc g$ is closed, the last integral equals $-\int_XE_u\wedge\ddc g$. This proves \eqref{eq:bounded-cubic-energy}. Its correction is nonnegative if $-\ddc g\geq0$, and $u=0$ attains the lower bound.
+\end{proof}
+
+\begin{lemma}\label{lem:determinant-background-transport}
+Suppose $v_-(g)=V>0$ and $h\geq c g$ for Hermitian forms $g,h$ and $c>0$. For the full normalized current cone $\mathscr G_h$,
+\begin{equation}\label{eq:determinant-background-transport}
+ \sup_{T\in\mathscr G_h}\|k_T\|_{L^{3/2}(\mathrm dV)}
+ \leq c^{-1}V^{-1/3},\qquad v_-(h)\geq c^3V.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The determinant measure in \eqref{eq:weak-gaud-functional} is unchanged by expressing it in a different background. Indeed, in an $h$-unitary frame let $G$ be the matrix of $g$, let $P=P_h$, and set
+\[
+ a=\tfrac13\operatorname{tr}(GP),\qquad
+ \sigma_g=a\sigma_h,\qquad
+ P_g=a^{-1}G^{1/2}PG^{1/2}.
+\]
+The trace pairing verifies the formula for $P_g$ and gives $\operatorname{tr}P_g=3$. Moreover $\det P_g=a^{-3}\det G\det P$ and $g^3=\det G\,h^3$, so both factors cancel in $\Gamma_0(T)$. This calculation holds for the Radon matrix density on the full trace measure. Since $G>0$ and $\operatorname{tr}P=3$, one has $a>0$ even when $P$ is singular.
+
+For $T\in\mathscr G_h$ put $m=\int_Xg\wedge T$. Then $0<m\leq c^{-1}$ and $U=T/m\in\mathscr G_g$. Constant homogeneity gives $k_T=m k_U$. Apply \cref{thm:gaud-determinant-endpoint} first to $g$ to get the norm bound and then to $h$ to get the lower-mass bound. All singular and degenerate currents remain in the test family.
+\end{proof}
+
+\subsection{The curvature criterion}
+
+Let $\pi:X\to B$ be a holomorphic principal elliptic bundle over a compact connected K\"ahler surface $(B,\omega)$, with fiber $E=\C/\Lambda$. Assume there is an invariant smooth $(1,0)$-form $\eta$, restricting to $\mathrm dz$ on every fiber, such that
+\[
+ \mathrm d\eta=\pi^*F,\qquad F=\alpha+\mathrm i\beta,
+\]
+where $\alpha,\beta$ are smooth closed real $(1,1)$-forms on $B$. Put
+\[
+ Q=\alpha^2+\beta^2,\qquad e=\mathrm i\eta\wedge\bar\eta,
+ \qquad g=\pi^*\omega+s e,\quad s>0,
+ \qquad A_E=\int_E\mathrm i\,\mathrm dz\wedge\mathrm d\bar z.
+\]
+
+\begin{theorem}\label{thm:elliptic-curvature-endpoint}
+Suppose $Q\geq0$ and $Q\not\equiv0$. The split form $g$ is Hermitian and has exact lower mass
+\begin{equation}\label{eq:elliptic-curvature-lower-mass}
+ v_-(g)=V=3sA_E\int_B\omega^2.
+\end{equation}
+Every bounded $u\in\PSH(X,g)$ satisfies
+\[
+ \int_X(g+\ddc u)^3
+ =V+\frac{3s}{2\pi}\int_XE_u\wedge\pi^*Q\geq V.
+\]
+Every Hermitian $h\geq c g$, $c>0$, satisfies \eqref{eq:determinant-background-transport}. Thus the endpoint holds for every Hermitian metric on $X$, with its own comparison constant. The manifold admits no pluriclosed Hermitian metric.
+\end{theorem}
+\begin{proof}
+Suppress pullbacks in the curvature calculation. The type assumptions give $\partial\eta=0$, $\bar\partial\eta=F$, $\partial\bar\eta=\bar F$ and $\bar\partial\bar\eta=0$. Hence
+\[
+ \partial e=-\mathrm i\eta\wedge\bar F,\qquad
+ \bar\partial e=\mathrm iF\wedge\bar\eta,
+ \qquad\ddc e=-\frac1{2\pi}F\wedge\bar F=-\frac1{2\pi}Q.
+\]
+Since $e^2=0$ and the base has dimension two,
+\[
+ \ddc g=-\frac{s}{2\pi}\pi^*Q,\qquad
+ \ddc(g^2)=-\frac{s}{\pi}\pi^*(\omega\wedge Q)=0,
+ \qquad g^3=3s\pi^*(\omega^2)\wedge e.
+\]
+The horizontal quotient and vertical kernel are positive for $g$. Fiber integration gives $V$, and \cref{lem:bounded-cubic-lower-mass,lem:determinant-background-transport} give the mass and endpoint conclusions. Compactness compares any Hermitian $h$ with $g$.
+
+Finally $S=-\ddc g$ is smooth, positive and nonzero. If a Hermitian form $b$ were pluriclosed, Stokes would give
+\[
+ 0=\int_Xg\wedge\ddc b
+   =\int_Xb\wedge\ddc g=-\int_Xb\wedge S<0.
+\]
+The last inequality follows from strict positivity of $b$ and nonzero positivity of $S$ on an open set.
+\end{proof}
+
+\begin{proposition}\label{prop:primitive-curvature-opposite-sign}
+The split metric $g$ is balanced if and only if $\omega\wedge\alpha=\omega\wedge\beta=0$. For such a primitive pair one has $Q\leq0$, with strict negativity wherever the pair is nonzero. It therefore fails the nonzero nonnegative hypothesis of \cref{thm:elliptic-curvature-endpoint}.
+\end{proposition}
+\begin{proof}
+One has $\mathrm d(g^2)=2s\pi^*\omega\wedge\mathrm de$. The two independent vertical types in $\mathrm de$ force $\omega\wedge F=0$, equivalently both stated real identities. A primitive real $(1,1)$-form on a surface has eigenvalues $\lambda,-\lambda$ in an $\omega$-unitary frame, so its square is $-\lambda^2\omega^2$. Apply this to both members of the pair. The opposite energy sign in \eqref{eq:bounded-cubic-energy} alone does not determine their unrestricted lower-mass infimum.
+\end{proof}
+
+\input{author/section_elliptic_line_endpoint_examples}
+
+\input{author/section_calabi_eckmann_endpoints}

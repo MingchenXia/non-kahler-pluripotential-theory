@@ -1,5 +1,9 @@
 # Modification history
 
+## 4 October2026 — P10 elliptic integration418
+
+[The P10 integration](research/editorial/elliptic-curvature-endpoints-418.md) adds Section 25.14: bounded cubic energy, full-current background transport, signed elliptic curvature and two explicit quotient families. Six proofs, both complete new-input reads and 23 actual images pass. All 983 old proofs, 451 protected sources and original manifests remain exact. The 1191-page release and homepage are live-verified. Both catalogues retain mathematical descriptions/statuses and actual anchors; general P10 remains open. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no added findings. Forty original directions remain open.
+
 ## 4 October2026 — Independent P10 curvature review417
 
 [Independent P10 review](research/editorial/elliptic-curvature-endpoint-review-417.md) reads all415 original source lines and reconstructs56 direct obligations, with20 actual primary images and exact published AGL attribution. The nonnegative curvature-pair criterion gives bounded lower mass and full-current determinant endpoints in every Hermitian background; line quotients and a Calabi--Eckmann family provide direct non-Hopf/non-LCK examples. General P10 remains open. All322 book files,983 proofs, both catalogues/manifests,451 protected files and six incoming author blobs remain exact; manuscript416 and its1183-page live release are unchanged. No author build, native call or new publication. Next: checked Chapter25 integration and continued recent primary research.
