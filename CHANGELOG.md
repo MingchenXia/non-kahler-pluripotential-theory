@@ -1,5 +1,9 @@
 # Modification history
 
+## Standalone P20 interior Newton-series paper — 4 October 2026
+
+[Paper](research/papers/P20-convex-spectrum-partial-kernels.tex) and [review](research/papers/P20-convex-spectrum-partial-kernels.review.md): complete explicit interior Newton-series envelope and intrinsic kernel-limit theorem, with entire selected spaces, genuine representatives, derived norm estimates, moment-shell geometry and closed-curvature comparisons. Three fresh accepted-chain nodes pass correctness/source/full blind reconstruction; candidate requirements PASS. All proofs, reports, source passages and final source were read. Two clean local builds and all seven final-page visual checks pass. The earlier malformed definition and its rejected reconstruction are preserved separately. Native compilation remains unverified. General selecting and multiplier-ideal series remain open. Concurrent checkpoint390 book work is preserved; this standalone release does not rebuild the book.
+
 ## Checkpoint390 — Complete invariant background cones
 
 [Review](research/editorial/parallelizable-gauduchon-cones-390.md): Subsection25.5.2 directly reconstructs the restricted P15 classification. Determinant volume, unique minimizing metric, internal subspace completeness and the Iwasawa example pass52 direct obligations and38 actual selected images. One full compilation and its network-enabled publication retry produce1128 physical/1102 printed pages; live PDF/homepage/Pages match. P15 remains partial and40 original directions remain open. Original statements/descriptions and protected sources stay exact. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with299 exact book sources, all1128+17 page texts matching, and2005 checksum-validated archive entries; authorized private synchronization follows.
