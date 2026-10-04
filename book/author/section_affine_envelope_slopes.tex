@@ -1,0 +1,69 @@
+\subsubsection{Growth slopes and supporting probabilities}
+\label{sec:affine-envelope-slopes}
+
+Concavity compares the initial response to a larger growth allowance with the slope at large parameters. The latter is the unweighted extremal function. For continuous weights, supporting probabilities recover the initial slope from tests in the fixed class $\mathcal L_1$.
+
+When the weight varies, write $V_{\delta,q}$ and $F_{\delta,q}=V_{\delta,q}^*$ for the raw and regularized envelopes with bounded obstacle $q$ on the fixed compact $K$. Thus $F_\delta=F_{\delta,\psi}$. Set
+\[
+ V_K=V_{1,0},\qquad V_K^*=F_{1,0},\qquad
+ m=\inf_K\psi,\qquad M=\sup_K\psi.
+\]
+Constants and scaling give $V_K^*\geq0$ and
+\begin{equation}\label{eq:affine-obstacle-sandwich}
+ \delta V_K^*+m\leq F_\delta\leq\delta V_K^*+M.
+\end{equation}
+
+\begin{lemma}\label{lem:affine-growth-increment-bounds}
+For $0<\alpha<\beta$, one has on $\mathbb C^n$
+\begin{equation}\label{eq:affine-growth-increment-bounds}
+ (\beta-\alpha)V_K^*\leq F_\beta-F_\alpha
+ \leq\frac{\beta-\alpha}{\alpha}(F_\alpha-m).
+\end{equation}
+\end{lemma}
+\begin{proof}
+If $u$ is an $\alpha$-competitor for $\psi$ and $v$ is a growth-one competitor for the zero obstacle, then $u+(\beta-\alpha)v$ is a $\beta$-competitor for $\psi$. Taking the two independent suprema gives
+\[
+ V_\beta\geq V_\alpha+(\beta-\alpha)V_K.
+\]
+The raw functions agree almost everywhere with their regularizations by \cref{prop:affine-projective-envelope}. Canonical order gives the first inequality everywhere. The same almost-everywhere passage applied to \eqref{eq:affine-growth-raw-slope} gives the second.
+\end{proof}
+
+\begin{proposition}\label{prop:affine-envelope-slopes}
+For every $a\in\mathbb C^n$ and $\tau>0$, the finite right derivative
+\[
+ D_\tau(a)=\lim_{h\downarrow0}\frac{F_{\tau+h}(a)-F_\tau(a)}{h}
+\]
+exists. The secants decrease as $h>0$ increases, and
+\begin{equation}\label{eq:affine-initial-slope-bounds}
+ V_K^*(a)\leq\frac{F_{\tau+h}(a)-F_\tau(a)}h
+ \leq D_\tau(a)\leq\frac{F_\tau(a)-m}{\tau}.
+\end{equation}
+Their convergence at large increments has the uniform error bound
+\begin{equation}\label{eq:affine-large-increment-error}
+ 0\leq\frac{F_{\tau+h}(a)-F_\tau(a)}h-V_K^*(a)
+ \leq\frac{M-m}h.
+\end{equation}
+Moreover, $D_\tau(a)=V_K^*(a)$ if and only if
+\begin{equation}\label{eq:affine-envelope-affine-ray}
+ F_\delta(a)=F_\tau(a)+(\delta-\tau)V_K^*(a)
+ \qquad(\delta\geq\tau).
+\end{equation}
+\end{proposition}
+\begin{proof}
+For $0<h_1<h_2$, concavity of $F_\delta(a)$ gives
+\[
+ F_{\tau+h_1}(a)-F_\tau(a)
+ \geq\frac{h_1}{h_2}\bigl(F_{\tau+h_2}(a)-F_\tau(a)\bigr).
+\]
+Thus the secants decrease with $h$. \Cref{lem:affine-growth-increment-bounds} bounds them between $V_K^*(a)$ and $(F_\tau(a)-m)/\tau$, proving existence, finiteness and \eqref{eq:affine-initial-slope-bounds}. Combining the lower increment bound with \eqref{eq:affine-obstacle-sandwich} gives \eqref{eq:affine-large-increment-error} at every $a$, with a constant independent of $a$. If $D_\tau(a)=V_K^*(a)$, the lower and upper secant bounds coincide, giving \eqref{eq:affine-envelope-affine-ray}. That formula conversely gives the derivative equality.
+\end{proof}
+\index{Envelope!growth derivative}
+
+\begin{corollary}\label{cor:affine-slope-regular-contact}
+Let $a\in K$ and $\tau\in\Lambda_{\mathrm{reg}}(a)$. Regularity persists at every $\delta>\tau$ if and only if $D_\tau(a)=0$. If $D_\tau(a)>0$, regularity fails at every $\delta>\tau$ and $\tau$ is the smallest contact parameter.
+\end{corollary}
+\begin{proof}
+At $\tau$ one has $F_\tau(a)=\psi(a)$, and raw contact persists for larger parameters. If $D_\tau(a)=0$, \eqref{eq:affine-initial-slope-bounds} makes every later secant zero. If the derivative is positive, sufficiently small increments have positive defect, and monotonicity propagates that defect to every later parameter. The smallest-parameter conclusion follows from \cref{thm:affine-growth-contact-ray}.
+\end{proof}
+
+\input{author/section_affine_supporting_probabilities}

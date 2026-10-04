@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research424
+
+[The affine-slope integration](research/editorial/affine-envelope-slopes-424.md) adds five proofs of all-point growth derivatives, uniform later-secant error, attained continuous-weight supporting probabilities and active-pair derivative minima. Both complete subsection rereads and 24 actual final images pass. All 994 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1199-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
+
 ## Continuing research423
 
 [The affine-slope review](research/editorial/affine-envelope-slopes-review-423.md) checks 41 direct obligations and four actual primary images. Bounded obstacles give finite initial slopes and uniform later-secant bounds at every affine point; continuous weights give attained supporting-probability and derivative formulas. Regular-contact threshold consequences retain global raw contact. All 328 book files, 994 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, publication or original problem closure. Next: scoped Chapter 12 integration.
