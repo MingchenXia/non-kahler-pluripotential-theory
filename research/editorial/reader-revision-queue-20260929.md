@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research407
+
+[Independent review](research/editorial/local-critical-adjoints-review-407.md) actually reads all513 lines of the preserved anonymous S17 source and reconstructs44 direct obligations. The two explicit contractions, all-current equality cases, exact Linfinity and critical density bounds, supporting sign and distinct probability-normalized data/current path pass. The specified Taylor parametrix, compact Fredholm, full Holder mapping, index-invariance and nonlinear-regularity portions are freshly read; eleven original formula images are actually inspected, with recursive-source limits explicit. Existing smooth-data current uniqueness is retained; the prospective addition is a uniform strong-topology family estimate, including fixed zero-lower-mass backgrounds. All316 tracked book files, both catalogues/manifests and451 protected sources remain exact. Manuscript406 and its1160-page live release are retained; no author build, new publication or problem closure. Checked book integration is next, then complete independent S07 review. Generated reports remain provenance, never premises.
+
 Current next unit after checkpoint 389: Independently review incoming P15 parallelizable-background cone construction, exact domain and positivity assertions; preserve supplied originals before any adoption. Then consolidate P21/kernel/jet exposition and resume exact primary reading and recent related arXiv directions. Joint nef/compatibility and evolving-flow refinements stay open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
