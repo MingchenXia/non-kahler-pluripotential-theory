@@ -1,5 +1,9 @@
 # Modification history
 
+## 4 October 2026 — Local strict-weight review427
+
+[The local-strict-weight review](research/editorial/affine-local-strict-weight-review-427.md) checks 47 direct obligations and six actual primary images. Explicit logarithmic pasting proves the relative/global zero-value comparison; USC weights retain raw contact, and local strictness with a global growth-class extension gives quantitative defect, exact regularity persistence and a C2 degeneracy consequence. All 331 book files, 1004 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, new publication, novelty claim or original problem closure. Next: scoped Chapter1/12 integration.
+
 ## 4 October 2026 — Affine joint-response integration426
 
 [The weight-response integration](research/editorial/affine-envelope-weight-response-426.md) adds five proofs of compact active-pair stability, joint directional response, exact differentiability criteria and a disk weight corner. The recorded complete first reads and fresh six-input second reread pass, with 26 actual final images. All 999 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. The 1201-page release and homepage are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no additions. Forty original directions remain open.
