@@ -1,0 +1,182 @@
+\section{Anisotropic point jets and fiber selectors}
+\label{sec:anisotropic-growing-jets}
+
+Ordinary point jets couple the variables through their total degree, even when the metric separates. On a compact product this coupling becomes a half-space condition on independent monomial indices. The curve transition then determines the higher-dimensional local law. An isolated pole on a connected-fiber submersion provides a further application: its ideal need not descend, although its condition on pullback sections does.
+
+Let $q\geq2$, choose integers $r_j\geq2$ with at least two unequal, and fix $\varepsilon_j>0$, for $1\leq j\leq q$. Put
+\[
+ Y=(\mathbb P^1)^q,\qquad x=(0,\ldots,0),\qquad
+ d_j=r_j+1,\qquad L=\boxtimes_j\mathcal O_{\mathbb P^1}(d_j).
+\]
+In the product affine frame use $t_j=|z_j|^2$ and the smooth metric and volume
+\[
+ \begin{gathered}
+ |e|_h^2=\mathrm e^{-\phi},\qquad
+ \phi=\sum_j\psi_j(t_j),\qquad
+ \psi_j(t)=\log(1+t^{r_j}+\varepsilon_jt^{r_j+1}),\\
+ \nu_Y=a(t)\prod_j\mathrm dA_j,\qquad
+ a(t)=\prod_j a_j(t_j),\qquad a_j(t)=(1+t)^{-2},
+ \end{gathered}
+\]
+where $\mathrm dA_j$ is Euclidean area. In particular $\nu_Y(Y)=\pi^q$ and $a(0)=1$. Define
+\[
+ H_j(t)=t\psi_j'(t),\qquad G_j(t)=tH_j'(t),\qquad
+ g_j(t)=G_j(t)/t,\qquad \theta=c_1(L,h).
+\]
+The metric extends across infinity: its weight there, with $u=|z_j|^{-2}$, is $\log(\varepsilon_j+u+u^{d_j})$. It has positive curvature at infinity. For $t>0$, $H_j(t)$ and $G_j(t)$ are respectively the mean and variance of the exponents $0,r_j,d_j$ with probabilities proportional to $1,t^{r_j},\varepsilon_jt^{d_j}$. Hence $G_j>0$, and $H_j$ increases from $0$ to $d_j$. Near zero,
+\begin{equation}\label{eq:anisotropic-weight-expansion}
+ \begin{aligned}
+ H_j(t)&=r_jt^{r_j}+(r_j+1)\varepsilon_jt^{r_j+1}+O(t^{2r_j}),\\
+ G_j(t)&=r_j^2t^{r_j}+(r_j+1)^2\varepsilon_jt^{r_j+1}+O(t^{2r_j}).
+ \end{aligned}
+\end{equation}
+Thus $\theta$ is semipositive, with rank loss along the coordinate divisors.
+
+For integers $k_m\to\infty$, $k_m=o(m)$, let $B_m$ be the diagonal kernel of
+\[
+ V_m=H^0(Y,L^m\otimes\mathfrak m_x^{k_m}),\qquad
+ \|s\|^2=\int_Y|s|_{h^m}^2\nu_Y.
+\]
+The point ideal imposes ordinary total-order vanishing, rather than separate orders in the individual variables.
+
+\Needspace{17\baselineskip}
+\begin{theorem}\label{thm:anisotropic-growing-jets}\index{Bergman kernel!anisotropic growing jets}
+Suppose that $t_j\to0$, $\mu_j:=mH_j(t_j)$ satisfies
+$\mu_j/k_m\to\alpha_j>0$, and $\sum_j\alpha_j=1$. Set $V=\sum_jmG_j(t_j)$. If $(\sum_j\mu_j-k_m)/\sqrt V\to\tau\in\mathbb R$, then
+\begin{equation}\label{eq:anisotropic-growing-transition}
+ \frac{\pi^q a(t)B_m(z)}{m^q\prod_jg_j(t_j)}\longrightarrow\Phi(\tau).
+\end{equation}
+Every choice of coordinate arguments is allowed. Eventually,
+\begin{equation}\label{eq:anisotropic-jet-dimension}
+ N_m:=\dim V_m=\prod_j(d_jm+1)-\binom{k_m+q-1}{q},
+ \qquad N_m/m^q\longrightarrow D:=\prod_jd_j.
+\end{equation}
+Moreover $m^{-q}B_m\nu_Y\to\theta^q/q!$ in total variation.
+\end{theorem}
+\begin{proof}
+A section on each projective line is a polynomial of degree at most $d_jm$: the affine coefficient is entire and its change of frame must be holomorphic at infinity. Applying this in every variable gives the global monomial basis $z^\ell e^m$, $0\leq\ell_j\leq d_jm$. The selected basis consists of those with $\sum_j\ell_j\geq k_m$. All jets of degree below $k_m$ occur once $k_m\leq\min_j(d_jm)+1$, which holds eventually. Their number gives \eqref{eq:anisotropic-jet-dimension}.
+
+Rotation in each coordinate makes these monomials orthogonal. Their squared norms are $\prod_jJ_{j,m,\ell_j}$, where
+\[
+ J_{j,m,\ell}=\pi\int_0^\infty t^\ell\mathrm e^{-m\psi_j(t)}a_j(t)\,\mathrm dt,
+ \qquad
+ w_{j,m,\ell}(t)=\frac{t^\ell\mathrm e^{-m\psi_j(t)}}{J_{j,m,\ell}}.
+\]
+These integrals converge even at $\ell=d_jm$. Write $K_{j,m}=\sum_{\ell=0}^{d_jm}w_{j,m,\ell}$ and introduce independent integer variables $\mathsf L_j$ with probabilities $w_{j,m,\ell}(t_j)/K_{j,m}(t_j)$. Then exactly
+\begin{equation}\label{eq:anisotropic-kernel-halfspace}
+ B_m(z)=\prod_jK_{j,m}(t_j)\,
+             \Pr\left\{\sum_j\mathsf L_j\geq k_m\right\}.
+\end{equation}
+
+Each factor meets the hypotheses of \cref{thm:curvature-boundary-jets}. Put $V_j=mG_j(t_j)$. The full density \eqref{eq:mesoscopic-full-density} gives $K_{j,m}=mg_j(t_j)/(\pi a_j(t_j))(1+o(1))$. For any fixed $y\in\mathbb R$, apply the radial argument \eqref{eq:radial-growing-jet-argument} to the integer order
+\[
+ b_{j,m}=\lfloor\mu_j+y\sqrt{V_j}\rfloor+1.
+\]
+This order tends to infinity and is sublinear. The selected one-factor kernel divided by its full kernel is $\Pr\{\mathsf L_j\geq b_{j,m}\}$, which tends to $\Phi(-y)$. Hence
+\[
+ \frac{\mathsf L_j-\mu_j}{\sqrt{V_j}}\ \Longrightarrow\ N(0,1).
+\]
+The parameters $\mu_j,V_j$ are the saddle center and Gaussian scale; no exact finite-$m$ mean or variance identity is needed. Since $V_j/V\to r_j\alpha_j/\sum_i r_i\alpha_i>0$, independence gives a standard Gaussian limit for $(\sum_j\mathsf L_j-\sum_j\mu_j)/\sqrt V$. One may check this directly on bounded rectangles using the product of the limiting Gaussian laws, then use tightness and the zero Gaussian mass of a half-space boundary. The selected probability in \eqref{eq:anisotropic-kernel-halfspace} tends to $\Phi(\tau)$, proving the local assertion, with no lower growth bound on $k_m$.
+
+For the global assertion we also need the full kernel at a fixed $t>0$, where the shrinking-radius formula alone does not apply. Suppress the factor index. Set $F(u)=\psi(\mathrm e^u)$. Then $F'(u)=H(\mathrm e^u)$ and $F''(u)=G(\mathrm e^u)>0$. For $\ell/m$ in a compact subinterval of $(0,d)$, the saddle $s=H^{-1}(\ell/m)$ stays compact, and Laplace expansion gives uniformly
+\[
+ J_{m,\ell}=\pi a(s)s\sqrt{\frac{2\pi}{mG(s)}}
+       \mathrm e^{\ell\log s-m\psi(s)}(1+o(1)).
+\]
+Indeed the logarithmic phase has a uniformly positive Hessian there; outside a fixed saddle neighborhood, convexity and its endpoint slopes bound the tails exponentially. At $\ell=mH(t)+O(\sqrt m)$, evaluation yields
+\[
+ w_{m,\ell}(t)=\frac{\sqrt{mG(t)}}{\pi a(t)t\sqrt{2\pi}}
+   \mathrm e^{-(\ell-mH(t))^2/(2mG(t))}(1+o(1)).
+\]
+On a compact saddle interval the phase loss has second derivative $1/(mG(s))\geq c/m$, giving summable Gaussian tails. To handle the remaining indices, choose a fixed small $h>0$ and integrate their norms over an interval of length $1/m$ about $t\mathrm e^{-h}$ or $t\mathrm e^h$. If $|\ell/m-H(t)|\geq\delta$, the appropriate choice gains at least $m(\delta h-Ch^2)\geq cm$ in the exponent. Each such evaluation weight is at most $Cm\mathrm e^{-cm}$, and there are $dm+1$ indices. Gaussian summation therefore gives $K_m(t)/m\to g(t)/(\pi a(t))$.
+
+In the product chart, $\theta^q/q!=\prod_j(g_j(t_j)/\pi)\mathrm dA_j$ and its mass is $D$, since $\int_0^\infty g_j(t)\,\mathrm dt=H_j(\infty)-H_j(0)=d_j$. The full normalized kernel density tends to this density almost everywhere; the coordinate divisors have zero smooth volume. Its total mass is $m^{-q}\prod_j(d_jm+1)\to D$. For these nonnegative densities $f_m,f$ relative to $\nu_Y$, dominated convergence applied to $\min(f_m,f)$ gives
+\[
+ \int|f_m-f|\nu_Y
+ =\int f_m\nu_Y+\int f\nu_Y-2\int\min(f_m,f)\nu_Y\longrightarrow0.
+\]
+Finally the full-minus-selected kernel is nonnegative and has integral $\binom{k_m+q-1}{q}=o(m^q)$. This proves total-variation convergence.
+\end{proof}
+
+\subsection{Actual and homogeneous centers}
+Fix positive $\alpha_j$ with sum one and a real $\tau$, and set
+\begin{equation}\label{eq:anisotropic-corrected-radii}
+ R=\sum_j\alpha_jr_j,\qquad T_m=k_m+\tau\sqrt{Rk_m},\qquad
+ t_j=H_j^{-1}(\alpha_jT_m/m).
+\end{equation}
+Then $\sum_j\mu_j=T_m$ and $V\sim Rk_m$, so \eqref{eq:anisotropic-growing-transition} holds for every sublinear growing order. The physical radii have leading orders $(\alpha_jk_m/(r_jm))^{1/(2r_j)}$.
+
+\Needspace{17\baselineskip}
+\begin{proposition}\label{prop:anisotropic-homogeneous-center}
+Instead set $t_j=(\alpha_jT_m/(r_jm))^{1/r_j}$ and $r_*:=\max_jr_j$. For the specified radial class, the law
+\[
+ \frac{\pi^qB_m(z)}{m^q\prod_jr_j^2|z_j|^{2r_j-2}}\longrightarrow\Phi(\tau)
+\]
+holds for every fixed $\tau$ along the whole sequence if and only if $k_m=o(m^{2/(r_*+2)})$. If $k_m/m^{2/(r_*+2)}\to c\in(0,\infty)$, its limit is
+\[
+ \Phi\bigl(\tau+C_\alpha c^{(r_*+2)/(2r_*)}\bigr),\qquad
+ C_\alpha=\frac1{\sqrt R}\sum_{j:r_j=r_*}
+ (r_*+1)\varepsilon_j(\alpha_j/r_*)^{1+1/r_*}.
+\]
+If that ratio tends to infinity while $k_m=o(m)$, the limit is $1$.
+\end{proposition}
+\begin{proof}
+By \eqref{eq:anisotropic-weight-expansion}, $\sum_j\mu_j=T_m+\Delta_m$ with
+\[
+ \Delta_m=\sum_j(r_j+1)\varepsilon_jmt_j^{r_j+1}
+                    +O\left(\sum_jmt_j^{2r_j}\right),\qquad V\sim Rk_m.
+\]
+Each error is little-o of its positive correction because $r_j\geq2$. Consequently
+\[
+ \frac{\Delta_m}{\sqrt{Rk_m}}=(1+o(1))\sum_j
+ \frac{(r_j+1)\varepsilon_j(\alpha_j/r_j)^{1+1/r_j}}{\sqrt R}
+ k_m^{1/2+1/r_j}m^{-1/r_j}.
+\]
+At the critical scale only indices with $r_j=r_*$ survive. Below it every term tends to zero; above it a positive term diverges. The Gaussian law of the normalized sum proved above applies in all three cases; its tightness gives probability one in the last case. Also $a(t)\to1$ and $g_j(t_j)/(r_j^2t_j^{r_j-1})\to1$. If the growth ratio does not tend to zero, a subsequence has a positive finite or infinite limit, which disproves the unshifted law at $\tau=0$. This proves necessity as well as sufficiency within this class.
+\end{proof}
+
+\subsection{An isolated selector on a submersion}
+Let $\pi:X\to Y$ be a surjective holomorphic submersion of compact complex manifolds with connected fibers of dimension $f\geq1$, and put $N=q+f$. Give $X$ a Hermitian form $\omega_X$. Use $E=\pi^*L$, $h_E=\pi^*h$, and a smooth positive volume satisfying
+\begin{equation}\label{eq:anisotropic-matched-volume}
+ \pi_*\nu_X=\nu_Y.
+\end{equation}
+Choose $p\in\pi^{-1}(x)$. In adapted coordinates $(z,w)$ centered at $p$, let $\chi_p$ equal $\log(|z|^2+|w|^2)$ near $p$, be smooth elsewhere, and be cut off to zero outside a larger coordinate ball. Define the moving selector
+\[
+ \varphi_m=\frac{k_m+N-1}{m}\chi_p,\qquad
+ \mathcal I_m=\mathcal I(m\varphi_m).
+\]
+The ideal uses the convention $|F|^2\mathrm e^{-m\varphi_m}$ for local integrability. The selected sections retain the smooth norm from $h_E^m$ and $\nu_X$.
+
+\Needspace{17\baselineskip}
+\begin{theorem}\label{thm:anisotropic-fiber-selector}\index{Multiplier ideal!isolated fiber selector}
+For all large $m$, $\varphi_m\in\PSH(X,\omega_X)$ and $\mathcal I_m=\mathfrak m_p^{k_m}$. Its pole and ideal do not descend, but pullback gives an exact Hilbert isometry
+\[
+ H^0(X,E^m\otimes\mathcal I_m)=\pi^*V_m,\qquad
+ B_{X,m}=B_m\circ\pi.
+\]
+Thus the local laws above hold for every upstairs sequence projecting to an admissible base observation. The section-growth exponent is $q$, and
+\begin{equation}\label{eq:anisotropic-lifted-measure}
+ m^{-q}B_{X,m}\nu_X\longrightarrow
+ \left(\frac{\theta^q/q!}{\nu_Y}\circ\pi\right)\nu_X
+ \quad\hbox{in total variation}.
+\end{equation}
+Normalizing by $N_m$ instead gives the limit divided by $D$, a probability measure.
+\end{theorem}
+\begin{proof}
+The cutoff logarithm has $dd^c\chi_p\geq-C\omega_X$: it is psh near its pole and smooth on the cutoff annulus. Its coefficient tends to zero, giving the asserted positivity. A germ of order $\ell$ has a nonzero initial homogeneous term; its squared spherical integral at radius $s$ is $cs^{2\ell}(1+o(1))$, $c>0$. Radial integrability is therefore equivalent to
+\[
+ \int_0^{s_0}s^{2\ell-2(k_m+N-1)+2N-1}\,\mathrm ds
+ =\int_0^{s_0}s^{2\ell-2k_m+1}\,\mathrm ds<\infty,
+\]
+or $\ell\geq k_m$. Away from $p$ the ideal is the unit ideal. This proves its stated value and coherence. It is proper at $p$ but the unit ideal at other points of the same fiber; a pulled-back base ideal cannot have this property. The pole likewise occurs only at $p$.
+
+Every section of $\pi^*L^m$ is constant on each compact connected fiber in a base trivialization, by the maximum modulus principle. Local holomorphic sections of the submersion show that the resulting base coefficient is holomorphic, and fiberwise constancy makes these coefficients glue. In adapted coordinates a pulled-back coefficient depends only on $z$, so its order at $p$ equals its order at $x$. This proves the selected-space equality. Fiber integration and \eqref{eq:anisotropic-matched-volume} give
+\[
+ \int_X|\pi^*s|_{h_E^m}^2\nu_X=\int_Y|s|_{h^m}^2\nu_Y.
+\]
+Pulling back an orthonormal basis proves the kernel identity. If $b_m,b$ are the base densities in the total-variation limit, the corresponding upstairs densities are $b_m\circ\pi,b\circ\pi$; their $L^1$ difference is exactly $\int_Y|b_m-b|\nu_Y$. This proves \eqref{eq:anisotropic-lifted-measure}. The dimension formula gives $\log N_m/\log m\to q$ and the final normalization.
+\end{proof}
+
+Matched volumes exist on every such submersion. For any smooth positive $\mu_X$, write $\pi_*\mu_X=b\nu_Y$. Submersion boxes and a finite partition of unity express $b$ as integrals of smooth compactly supported densities in the fiber variables; differentiation under the integrals proves smoothness. Nonempty fibers give $b>0$. Thus $\nu_X=\mu_X/(b\circ\pi)$ satisfies \eqref{eq:anisotropic-matched-volume}. For $X=Y\times F$, any compact connected Hermitian $F$, including a non-K\"ahler one, works. Both product volumes with fiber mass one and nonproduct volumes $W(y,u)\nu_Y\nu_F$, with $W>0$ and $\int_FW(y,u)\nu_F=1$, are matched.
+
+For an arbitrary smooth positive $\nu'_X$, the exact transformed base norm instead uses $\pi_*\nu'_X$. The local theorem above requires the specified matched volume. Its selector also varies with $m$, so it does not give a criterion for all fixed fiber-selected singularities in \cref{qu:fiber-selected-approximation}. Mixed or angular weight remainders, observation faces with some $\alpha_j=0$, and other base ideals remain further questions. The lifted measure retains the chosen conditional fiber volume; it is not an ambient-dimensional Monge--Amp\`ere measure.

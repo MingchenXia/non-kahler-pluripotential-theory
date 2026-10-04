@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint 387 — Anisotropic point jets and fiber selectors
+
+[Review](editorial/anisotropic-growing-jets-387.md): Section 26.15 integrates the directly checked S14 sufficient-condition class: all-sublinear anisotropic point-jet transitions, sharp radial center corrections, total-variation measures and exact matched-norm transfer by a non-descending moving selector. Complete supplied proof reads, two complete book-source reads, 46 direct obligations and 54 selected final pages pass. Every successful build invocation has actual live PDF/homepage/Pages verification; 1082 printed pages. P21 and S14 remain partial; original P22 stays resolved, leaving 22 formal and 19 supplemental directions open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 296 exact book sources, all 1108+17 page texts matching and 1987 checksum-validated archive entries; authorized private 387 synchronization follows. Incoming author S13 commit 43660ae is pending preservation and direct proof/dependency review.
+
 ## Checkpoint 386 — Two-point semipositive boundary
 
 [Review](editorial/two-point-fiber-integrability-386.md): Subsection 26.10.6 proves positive reference mass without a strict residual gauge and a nonzero sharp section defect on a two-point blowup. Two complete scoped reads, 39 obligations and 52 selected-page checks pass. Eight complete current arXiv roots match prior checked listings. Actual live PDF/homepage/Pages are verified; 1076 printed pages. P22 stays resolved in its original scope; 22 formal and 19 supplemental directions remain open. Native catalogue compilation remains unverified. Fresh reconstruction passes with 295 exact book sources, all 1100+17 page texts matching and 1981 checksum-validated archive entries; authorized private 386 synchronization follows.

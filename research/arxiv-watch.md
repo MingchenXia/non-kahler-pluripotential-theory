@@ -208,3 +208,7 @@ Original P22 is resolved at compact-curve scope after direct proof review. The e
 ## Two-point boundary — checkpoint 386
 
 The two-point blowup has positive reference mass, no strict smooth residual gauge and exact nonzero defect of degree q-1. Direct jet interpolation uses the stated degree bound. All eight current arXiv roots retrieved on 4 October equal checkpoint 382 and have complete showing counts; prior title coverage and replacement/dependency gaps remain. No new full primary adoption. [Review](editorial/two-point-fiber-integrability-386.md).
+
+## Anisotropic growing point jets — checkpoint387
+
+The author-supplied compact radial class is directly checked and integrated: ordinary total-order point jets, positive interior allocations, nonzero specified radial remainders and exact matched-norm transfer by a moving isolated selector. The general S14 programme remains open. The current arXiv listing coverage is carried as actually retrieved at386, not freshly retrieved or an exhaustive absence claim. No new full external primary adoption. [Review](editorial/anisotropic-growing-jets-387.md).
