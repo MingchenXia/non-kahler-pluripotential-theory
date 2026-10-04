@@ -1,5 +1,9 @@
 # Modification history
 
+## Standalone P23 curve sufficient conditions — Xean, 4 October 2026
+
+The [P23 paper](research/papers/P23-unibranch-torus-normalization.tex) completely proves the torus-normalized unibranch curve theorem: arbitrary local-embedding background with possibly degenerate pullback, prescribed finite logarithmic ordinary type, normalization-side Lp data, exact mass and full rough-class uniqueness, genuine disk descent, continuous residual and every-refinement independence. An explicit nonnormal projective cusp has genus-one normalization, H=6, a=1 and nonconstant equation c=5. Both accepted-chain nodes pass correctness/source/complete independent reconstruction and candidate requirements PASS, using gpt-6.1-sol xhigh without supplied proof or trusted imports. All proofs, reports and final source were read; two clean local builds and all seven final-page visual checks pass. Native compilation remains unverified. The [review](research/papers/P23-unibranch-torus-normalization.review.md) records the exact scope. Higher-dimensional nonclosed P23 remains open and no original catalogue closure is added. Concurrent book work is preserved without a book rebuild.
+
 ## Checkpoint394 — Weighted-kernel parameter dependence
 
 [Primary review](research/editorial/weighted-kernel-parameter-review-394.md): all 30 pages of Marinescu–Xing arXiv2609.24258v1 and Chen’s complete printed existence proof on pages 4–6 are actually read. The smooth-weight, Gevrey and boundary-distance arguments are assessed at an explicit external premise boundary; three directly reconstructed identities pass. Fixed-space finite-parameter regularity does not control changing multiplier ideals or degree limits. No new theorem or closure is adopted. The checked 1114-page manuscript and published PDF remain checkpoint393; no book rebuild. Full independent review of the incoming P20 ideal extension follows.
