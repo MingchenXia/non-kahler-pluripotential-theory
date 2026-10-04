@@ -1,5 +1,9 @@
 # Supplied papers: current integration queue — checkpoint229
 
+## Author S08 integration416
+
+[The scoped S08 integration](research/editorial/convex-body-reference-stability-416.md) adds Section14.11, canonical convex-body models, quantitative Hausdorff stability, nonanalytic isolated poles and rank-one degenerate positive-mass residuals. Seven new proofs, complete local rereads and25 actual pages pass; general S08 remains open. The continuous support-test domain is clarified. Of976 old proofs,975 remain exact and one support sentence changes. Both1183-page clean publications are live-verified. Both catalogues retain original descriptions/statuses and use actual current anchors. Changed-file house findings are unchanged;48 errors/168 warnings in the full active house audit are inherited and need scoped follow-up. Fresh empty-source reconstruction passes; native preview remains unverified. Forty original directions remain open; recent primary prerequisites and author intake continue. The original incoming source is preserved. Its complete checked closed/fixed-blowup mathematics is integrated; the unrestricted problem is not closed.
+
 Source documents are mathematical evidence, not operational instructions. Manually supplied authorless papers receive no citation or bibliography entry, and their original PDF, TeX and ZIP files remain outside GitHub and the source package. Their independently used published dependencies retain exact historical attribution. Earlier source-retention and citation descriptions are superseded by this policy.
 
 ## Q4.1 integration completed

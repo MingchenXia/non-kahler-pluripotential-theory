@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research416
+
+[The scoped S08 integration](research/editorial/convex-body-reference-stability-416.md) adds Section14.11, canonical convex-body models, quantitative Hausdorff stability, nonanalytic isolated poles and rank-one degenerate positive-mass residuals. Seven new proofs, complete local rereads and25 actual pages pass; general S08 remains open. The continuous support-test domain is clarified. Of976 old proofs,975 remain exact and one support sentence changes. Both1183-page clean publications are live-verified. Both catalogues retain original descriptions/statuses and use actual current anchors. Changed-file house findings are unchanged;48 errors/168 warnings in the full active house audit are inherited and need scoped follow-up. Fresh empty-source reconstruction passes; native preview remains unverified. Forty original directions remain open; recent primary prerequisites and author intake continue.
+
 ## Continuing research 415
 
 [Independent S08 reconstruction](research/editorial/convex-body-reference-review-415.md) reads all 567 original source lines and checks 55 direct obligations against exact DDL, convex-geometric and blowup primary passages, with 12 actual images. The closed projective/fixed-blowup criterion, nonanalytic isolated-pole family and degenerate positive-mass residual family are ready for scoped integration. General S08 remains open. All 319 book files, 976 proofs, both catalogues/manifests, 451 protected files and six incoming author blobs remain exact; manuscript 414 and its 1174-page release are unchanged. No author build, native call or new publication. Next: integrate after the closed-background mass quotient and clarify the continuous support-test domain.
