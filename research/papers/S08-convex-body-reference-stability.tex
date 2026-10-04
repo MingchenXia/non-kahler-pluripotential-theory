@@ -1,0 +1,567 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[expansion=false]{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\ddc}{\mathrm d\mathrm d^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\CP}{\mathbb P}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\title{Hausdorff stability of relative normalization functionals}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+A common translated simplex gives an explicit geometric criterion for
+stability of ordinary relative Monge--Amp\`ere normalization functionals
+on projective space and a fixed point blowup. Hausdorff convergence of
+the defining convex bodies gives a quantitative uniform bound on the
+functionals over all continuous tests. The limiting reference is an
+explicit admissible ordinary model, and its bounded-type solvability is
+verified before identifying the limiting functional. Every supporting
+probability is the same normalized exponential density. One concrete
+family has isolated singularities that are not bounded-equivalent to
+analytic singularities, including a positive-mass endpoint. A second
+family has smooth residual forms of rank one on an exceptional divisor
+and positive top mass. The result concerns these closed projective
+backgrounds; unrestricted Hermitian degeneration remains open.
+\end{abstract}
+
+\section{The geometric criterion}
+
+Use $\ddc=(i/(2\pi))\partial\bar\partial$, with exterior powers without
+divided factorials. All potentials have their canonical upper
+representatives. Write $v\preceq u$ if $v\le u+C$ and $v\sim u$ for
+mutual bounded difference, including common poles. The ordinary envelope is
+\[
+ P_\theta[u]=\left(\lim_{C\to\infty}
+ P_\theta(\min\{u+C,0\})\right)^*.
+\]
+An ordinary model reference satisfies $\sup_X\phi=0$ and
+$P_\theta[\phi]=\phi$. We also verify a genuine
+$P_{\varepsilon\theta}(\phi)$ for some $0<\varepsilon<1$.
+
+Let $n\ge2$ and put
+\[
+ \Sigma=\{p\in\mathbb R^n:p_i\ge0,\ \textstyle\sum_i p_i\le1\}.
+\]
+On $T=(\mathbb C^*)^n\subset\CP^n$ use
+\[
+ x_i=\log|z_i|^2,\qquad L(x)=\log(1+\textstyle\sum_i e^{x_i}),
+ \qquad\omega=\ddc\log(1+\textstyle\sum_i|z_i|^2).
+\]
+Thus $\int_{\CP^n}\omega^n=1$. Set
+\[
+ \ell(p)=\sum_i p_i\log p_i+
+       (1-\textstyle\sum_i p_i)\log(1-\textstyle\sum_i p_i),
+ \qquad 0\log0=0.
+\]
+For a convex body $K\subset\Sigma$ define
+\[
+ h_K(x)=\sup_{p\in K}p\cdot x,\qquad
+ g_K(x)=\sup_{p\in K}\{p\cdot x-\ell(p)\}.
+\]
+Let $\psi_K$ and $\Phi_K$ denote the canonical extensions of
+$h_K-L$ and $g_K-L$; their existence will be proved below.
+
+Take $X=\CP^n$ with $\pi=\mathrm{id}$, or
+$X=\operatorname{Bl}_q\CP^n$ for a fixed point $q$, with blowdown $\pi$.
+Put $\Theta=\pi^*\omega$ and fix any smooth positive probability
+volume $\mathrm dV$ on $X$. For an admissible ordinary reference write
+$B_{\theta,\phi}(F)=\log c_{\theta,\phi}(F)$, where
+\[
+ \MA_\theta^{\mathrm{NP}}(u)=c_{\theta,\phi}(F)e^F\mathrm dV,
+ \qquad u\sim\phi.
+\]
+Scalar uniqueness is part of the specified admissible framework.
+Its supporting set $A_{\theta,\phi}(F)$ consists of probabilities $\nu$ with
+\[
+ B_{\theta,\phi}(G)\le B_{\theta,\phi}(F)
+                   -\int_X(G-F)\,\mathrm d\nu
+ \quad(G\in C(X,\mathbb R)).
+\]
+
+\begin{theorem}\label{thm:criterion}
+Suppose convex bodies $P_j,P\subset\Sigma$ contain the same translated
+simplex $p_*+\delta\Sigma$, where $0<\delta<1$, and
+$h_j=d_H(P_j,P)\to0$ in Euclidean Hausdorff distance. Let
+$r_j>0$ tend to $r>0$. Define
+\[
+ \theta_j=r_j\Theta,\quad \theta=r\Theta,\qquad
+ \phi_j=r_j\pi^*\Phi_{P_j},\quad \phi=r\pi^*\Phi_P.
+\]
+The backgrounds are smooth closed semipositive and big, and all references,
+including the limit, are ordinary models with genuine smaller-background
+envelopes for $\varepsilon=1-\delta$. Their reference masses are
+\[
+ m_j=r_j^n n!\Vol(P_j),\qquad m=r^n n!\Vol(P)>0.
+\]
+Every bounded real Borel $F$ admits an ordinary-type solution at every
+datum, including the limit, and with $Z(F)=\int_Xe^F\mathrm dV$ one has
+\[
+ c_j(F)=\frac{m_j}{Z(F)},\quad B_j(F)=\log m_j-\log Z(F),\qquad
+ c(F)=\frac m{Z(F)},\quad B(F)=\log m-\log Z(F).
+\]
+Set $s=\delta/(n+\sqrt n)$. Then
+\begin{align}
+ \sup_{G\in C(X,\mathbb R)}|B_j(G)-B(G)|
+ &=\left|\log\frac{r_j^n\Vol(P_j)}{r^n\Vol(P)}\right|\notag\\
+ &\le n|\log(r_j/r)|+n\log(1+h_j/s).\label{eq:functional-bound}
+\end{align}
+Moreover $n!\Vol(P_j),n!\Vol(P)\ge\delta^n$,
+$\theta_j\to\theta$ smoothly, and $\phi_j\to\phi$ in
+$L^1(X,\mathrm dV)$ and locally uniformly on $\pi^{-1}(T)$.
+For every continuous real $F$,
+\[
+ A_j(F)=A(F)=\{\nu_F\},\qquad
+ \nu_F=\frac{e^F\mathrm dV}{Z(F)}.
+\]
+If $F_j\to F$ uniformly and $\nu_j\in A_j(F_j)$, then
+\[
+ \int_X\left|\frac{\mathrm d\nu_j}{\mathrm dV}
+             -\frac{\mathrm d\nu_F}{\mathrm dV}\right|\mathrm dV
+ \le e^{2\norm{F_j-F}_\infty}-1.
+\]
+Thus all support clusters are identified, with convergence in total
+variation for uniformly varying tests.
+\end{theorem}
+
+The condition is geometric and supplies the limiting solvable class.
+It does not assume functional convergence. The existence input is the
+prescribed-singularity theorem of Darvas--Di Nezza--Lu
+\cite[Theorem A(i); Theorems 4.3 and 4.7]{DDL}.
+The convex and pluripotential dictionary is classical
+\cite[Sections 2.1--2.3]{BB}\cite[Section 7]{DDL}; the explicit envelope, constants, common
+admissibility witness and concrete families are established here.
+
+\section{Canonical models and smaller-background witnesses}
+
+Convex conjugation gives $L^*=\ell$ on $\Sigma$ and $+\infty$ elsewhere.
+In the interior, $\nabla L(x)=p$ is equivalent to
+$e^{x_i}=p_i/(1-\sum p_i)$; boundary values follow by limits. Since
+$-\log(n+1)\le\ell\le0$, one obtains
+\begin{equation}\label{eq:bounded-type}
+ h_K\le g_K\le h_K+\log(n+1),\qquad g_K\le L,
+ \qquad h_K\le h_\Sigma\le L.
+\end{equation}
+Convex functions of logarithmic moduli are psh on $T$: the assertion
+follows from the Hessian for smooth convex functions and from convolution
+for arbitrary finite convex functions. After adding a smooth local
+projective potential, the upper bound by zero permits canonical psh
+extension across the coordinate boundary
+\cite[I.5.23--5.24]{Demailly}. Hence $\psi_K,\Phi_K$ are genuine
+$\omega$-psh potentials and
+$0\le\Phi_K-\psi_K\le\log(n+1)$ off their common poles.
+Choose $p\in\operatorname{int}K\subset\operatorname{int}\Sigma$ and
+$x$ with $\nabla L(x)=p$. Fenchel equality gives $g_K(x)=L(x)$, so
+$\sup\Phi_K=0$.
+
+\begin{lemma}\label{lem:model}
+One has $P_\omega[\psi_K]=\Phi_K=P_\omega[\Phi_K]$.
+\end{lemma}
+\begin{proof}
+For $C\ge\log(n+1)$ let
+$v_C=P_\omega(\min\{\psi_K+C,0\})$. The reference $\Phi_K$ itself is
+a competitor by \eqref{eq:bounded-type}. Canonical envelope regularization
+\cite[I.5.7]{Demailly} gives $\Phi_K\le v_C\le0$ and
+$v_C\le\psi_K+C$. Rotations preserve the background and obstacle,
+so the envelope is invariant. On $T$ its local potential $f=v_C+L$ is
+a finite convex function, with $f\le L$ and $f\le h_K+C$.
+Separation shows $\operatorname{dom}f^*\subset K$; the first bound gives
+$f^*\ge\ell$. Therefore
+\[
+ f(x)=\sup_{p\in\operatorname{dom}f^*}\{p\cdot x-f^*(p)\}
+       \le g_K(x).
+\]
+Thus $v_C\le\Phi_K$ on $T$, and canonically at the boundary.
+The opposite inequality was supplied by the actual competitor.
+The finite envelopes therefore equal $\Phi_K$ once $C\ge\log(n+1)$.
+Bounded-equivalent obstacles have interlacing finite-$C$ families;
+hence their limiting envelopes agree. This proves both identities.
+\end{proof}
+
+The inclusion $p_*+\delta\Sigma\subset K\subset\Sigma$ implies
+$p_{*,i}\ge0$ and $b=\sum p_{*,i}\le1-\delta=\varepsilon$.
+On $T$ set
+\[
+ \chi=p_*\cdot x-\varepsilon L.
+\]
+Its canonical projective extension satisfies the exact current identity
+\[
+ \varepsilon\omega+\ddc\chi
+ =\sum_i p_{*,i}[Z_i=0]+(\varepsilon-b)[Z_0=0]\ge0.
+\]
+Since $h_K\ge p_*\cdot x+\delta h_\Sigma$ and
+$0\le L-h_\Sigma\le\log(n+1)$,
+\[
+ \Phi_K\ge\chi-\delta\log(n+1).
+\]
+This supplies an actual genuine $\varepsilon\omega$-psh competitor.
+Its envelope is nonempty and bounded above by $\Phi_K\le0$, so its
+regularization is genuine. Scaling and pullback give the same witnesses
+for every approximating and limiting reference.
+
+\section{The blowup, mass and limiting equation}
+
+A genuine $\pi^*\omega$-psh potential descends under a point blowup.
+Off the exceptional divisor, add a local downstairs $\omega$-potential.
+The resulting psh function is upper bounded near the center because
+the upstairs potential is upper bounded near the compact exceptional
+fiber. Removable extension gives a canonical downstairs psh potential.
+Its pullback agrees with the original off the divisor, hence everywhere
+as a canonical representative. Conversely genuine potentials pull back.
+This bijection preserves inequalities and envelopes. Scaling therefore
+proves the asserted ordinary model identities on $X$.
+
+For completeness, $\Theta$ is big by an explicit K\"ahler current.
+Choose coordinates with $q=[1:0:\cdots:0]$ and let
+\[
+ \psi_q=\log\frac{\sum_{i=1}^n|Z_i|^2}{\sum_{i=0}^n|Z_i|^2}.
+\]
+The resolved direction map $Q:X\to\CP^{n-1}$ gives, for $0<t<1$,
+\[
+ \Theta+\ddc(t\pi^*\psi_q)
+ =(1-t)\pi^*\omega+tQ^*\omega_{n-1}+t[E_q].
+\]
+The smooth sum is K\"ahler: $(\pi,Q)$ is the incidence graph embedding
+into $\CP^n\times\CP^{n-1}$ and both coefficients are positive.
+Thus $X$ is K\"ahler and $\Theta$ is smooth semipositive and big.
+The local blowup charts and exceptional normal bundle used here are
+described in \cite[VII.12]{Demailly}.
+
+\begin{lemma}\label{lem:mass}
+The non-pluripolar reference mass of $\Phi_K$ on $\CP^n$ is
+$n!\Vol(K)$; that of $r\pi^*\Phi_K$ is $r^n n!\Vol(K)$.
+\end{lemma}
+\begin{proof}
+Let $M_g$ be the Alexandrov measure of a finite convex function, using
+Euclidean volume of subgradient images. With
+$z_i=e^{x_i/2+i\vartheta_i}$ and $0\le\vartheta_i<2\pi$, direct
+differentiation gives
+\[
+ \mathrm d^cg=\frac1{2\pi}\sum_i g_i\,\mathrm d\vartheta_i,
+ \qquad
+ \int_T(\ddc g)^n=n!\int_{\mathbb R^n}\det(D^2g)\,\mathrm dx
+\]
+for smooth convex $g$. The angular integrals cancel $(2\pi)^n$.
+Convolution, local Bedford--Taylor continuity and the Alexandrov
+description extend the identity to finite convex $g$
+\cite[Sections 2.1--2.2]{BB}.
+The numerical coefficient here is computed in our operator and
+$x=\log|z|^2$ normalization, rather than imported from another convention.
+Local uniform continuity of bounded psh products follows by telescoping
+the products against a smooth compactly supported test; each term contains
+the potential difference and a mixed product whose local mass is bounded
+by repeated cutoff integration by parts \cite[Section 2]{BT}.
+The precise locally uniform continuity statement is also
+\cite[III.3.6]{Demailly}; the finite convex limits used here are continuous.
+
+For $g=g_K$, all subgradients lie in $K$ by separation and the bound
+$g_K\le h_K+\log(n+1)$. Conversely, if $p\in\operatorname{int}K$ and
+$p+cB\subset K$, then $g_K(x)-p\cdot x\ge c|x|$.
+This function attains a minimum, so $p$ is a subgradient at some point.
+Consequently
+\[
+ \operatorname{int}K\subset\partial g_K(\mathbb R^n)\subset K,
+ \qquad M_{g_K}(\mathbb R^n)=\Vol(K).
+\]
+The boundary of a convex body has zero Euclidean volume. The analytic
+complement of $T$ receives no non-pluripolar mass
+\cite[Section 1.2]{BEGZ}; thus the computed torus mass is the full mass.
+For a blowup, locality gives equality outside the exceptional divisor,
+while both non-pluripolar products give that divisor and its image zero
+mass. Positive scaling multiplies the top product by $r^n$.
+\end{proof}
+
+Apply Lemma~\ref{lem:mass} at each datum, including the limit. The common
+simplex gives $m>0$. The smooth closed background is big on compact
+K\"ahler $X$, and the reference is an ordinary model. For bounded $F$,
+the measure $m e^F\mathrm dV/Z(F)$ has mass exactly $m$ and a bounded
+nonnegative density relative to an auxiliary K\"ahler volume.
+The precise prescribed-singularity existence theorem
+\cite[Theorem A(i)]{DDL} produces $u\sim\phi$ solving that equation.
+This proves the limiting solvability; the same argument works for all $j$.
+Scalar uniqueness then identifies $c(F)=m/Z(F)$ and $c_j(F)=m_j/Z(F)$.
+One may normalize solutions by $\sup_Xu=0$.
+
+The operator conversion in this application is explicit. If the source
+uses $D=i\partial\bar\partial$, replace the background by $2\pi\theta$
+and the right-hand measure by $(2\pi)^n m e^F\mathrm dV/Z(F)$.
+Potentials, psh cones, envelopes and bounded-difference types coincide,
+and the matching-mass hypothesis remains exact. Potential uniqueness
+is not needed to identify the scalar.
+
+\section{Functional estimates and all support clusters}
+
+The common simplex has an inscribed ball $B(c,s)$ with
+$s=\delta/(n+\sqrt n)$. Hausdorff distance gives
+$P_j\subset P+h_jB$. Since $sB\subset P-c$, convexity implies
+\[
+ P+h_jB\subset c+(1+h_j/s)(P-c).
+\]
+Reverse $P$ and $P_j$ to bound both volume ratios by $(1+h_j/s)^n$.
+This proves \eqref{eq:functional-bound}; the simplex volume is
+$\delta^n/n!$. The functional difference is independent of the test $G$.
+
+Let $\omega_\ell$ be the uniform-continuity modulus of $\ell$ on $\Sigma$.
+Matching maximizers through Hausdorff distance yields
+\[
+ |g_{P_j}(x)-g_P(x)|\le h_j|x|+\omega_\ell(h_j).
+\]
+This gives local uniform convergence over $T$ and after pullback.
+The common bound $\chi-\delta\log(n+1)\le\Phi_{P_j}\le0$ supplies
+an integrable logarithmic lower bound on $X$, including after blowup.
+Since $r_j$ is bounded, dominated convergence outside the analytic
+coordinate boundary gives the claimed $L^1$ convergence.
+
+For $\nu_F=e^F\mathrm dV/Z(F)$, Jensen's inequality gives
+\[
+ \log Z(G)-\log Z(F)=\log\int_Xe^{G-F}\mathrm d\nu_F
+                \ge\int_X(G-F)\,\mathrm d\nu_F.
+\]
+Thus $\nu_F$ supports the functional. If another probability $\nu$
+supports it, use $G=F+th$ for any continuous real $h$ and both signs
+of $t$. Differentiation at zero gives
+$\int h\,\mathrm d\nu=\int h\,\mathrm d\nu_F$; hence $\nu=\nu_F$.
+If $\norm{F_j-F}_\infty\le\eta$, the density ratio
+$\mathrm d\nu_{F_j}/\mathrm d\nu_F$ lies in
+$[e^{-2\eta},e^{2\eta}]$, which proves the stated $L^1$ bound.
+Theorem~\ref{thm:criterion} follows. Cluster identification has been
+proved explicitly, rather than inferred from probability compactness.
+
+\section{Isolated poles of genuinely nonanalytic type}
+
+For $0<a\le1$ let
+\[
+ P_a=\{p_i\ge0,\ \textstyle\sum_i p_i\le1,
+                      \textstyle\sum_i\sqrt{p_i}\ge\sqrt a\}.
+\]
+The square-root sum is concave, so these are compact convex sets.
+Put
+\[
+ b=\frac{n+1}{2n},\qquad p_{*,i}=\frac bn,
+ \qquad\delta=\frac{n-1}{4n}.
+\]
+Then $b+\delta<1$ and $\sum_i\sqrt{p_{*,i}}=\sqrt{(n+1)/2}>1$.
+Adding a point of $\delta\Sigma$ preserves the square-root inequality.
+Thus the common simplex is contained in every $P_a$, including $P_1$.
+
+\begin{proposition}\label{prop:nonanalytic}
+The ordinary model $\Phi_{P_a}$ has exactly the isolated pole
+$p=[1:0:\cdots:0]$ and is not bounded-equivalent to an analytic
+singularity. Every generic divisorial Lelong number is zero. Its mass is
+\[
+ n!\Vol(P_a)=1-\kappa_n a^n,\qquad
+ \kappa_n=\frac{2^n n!}{(2n)!}=\frac1{(2n-1)!!}<1.
+\]
+The same pole assertions hold on $\operatorname{Bl}_q\CP^n$ when $q\ne p$.
+\end{proposition}
+\begin{proof}
+Since all $e_i$ belong to $P_a$,
+\[
+ \psi_{P_a}\ge
+ \log\frac{\max_{1\le i\le n}|Z_i|^2}{\sum_{i=0}^n|Z_i|^2},
+\]
+which is locally bounded below away from $p$.
+Cauchy--Schwarz gives $\sum p_i\ge a/n$ on $P_a$. When all $x_i<0$,
+$h_{P_a}(x)\le(a/n)\max_i x_i\to-\infty$ as $z\to p$.
+The bounded-equivalence estimate proves the canonical pole assertion.
+Away from this single point the potentials are locally bounded, proving
+the generic divisorial assertion; pullback at a distinct point adds no pole.
+
+For $\lambda_i>0$ take $|z_i|^2=e^{-R\lambda_i}$.
+Writing $y_i=\sqrt{p_i}$ and minimizing by Cauchy--Schwarz gives
+\[
+ y_i=\frac{\sqrt a}{\lambda_i\sum_k\lambda_k^{-1}},\qquad
+ \min_{p\in P_a}\sum_i\lambda_i p_i
+       =\frac a{\sum_i\lambda_i^{-1}}=:d_a(\lambda).
+\]
+The minimizer has $\sum p_i\le a\le1$.
+Since $L(-R\lambda)\to0$ and $\Phi_{P_a}-\psi_{P_a}$ is bounded,
+$-\Phi_{P_a}/R\to d_a(\lambda)$ along these logarithmic directions.
+
+If this type were $c\log\sum_k|f_k|^2+O(1)$, phase averaging and Taylor
+orthogonality would give the positive series
+\[
+ \sum_{k,\alpha}|c_{k,\alpha}|^2e^{-R\alpha\cdot\lambda}.
+\]
+Bounded equivalence makes its exponential rate $d_a(\lambda)/c$.
+For a convergent positive series the rate is the minimum exponent:
+one minimizing term bounds it below, and convergence at a fixed $R_0$
+bounds the sum above by a constant times
+$e^{-(R-R_0)\min\alpha\cdot\lambda}$.
+On a compact neighborhood of a strictly positive $\lambda$, only
+finitely many monomials can minimize, since each $\lambda_i$ has a
+positive lower bound and one fixed nonzero coefficient bounds the degree.
+The resulting rate is locally piecewise linear. But
+\[
+ d_a(s,1,\ldots,1)=\frac{as}{1+(n-1)s},\qquad
+ \frac{\mathrm d^2}{\mathrm ds^2}d_a(s,1,\ldots,1)
+   =-\frac{2a(n-1)}{(1+(n-1)s)^3}<0.
+\]
+This contradicts piecewise linearity on every open interval.
+
+The removed corner $C_a=\{p_i\ge0:\sum_i\sqrt{p_i}<\sqrt a\}$
+equals $aC_1$ and lies in $\Sigma$. Substitution $p_i=y_i^2$ gives
+\[
+ \Vol(C_1)=2^n\int_{y_i\ge0,\,\sum y_i<1}\prod_i y_i\,\mathrm dy
+          =\frac{2^n}{(2n)!}.
+\]
+Iterated monomial integration on a simplex proves the last equality.
+Subtracting the corner from $\Sigma$ proves the mass formula.
+\end{proof}
+
+For $\theta_r=r\Theta$ and $\phi_{r,a}=r\pi^*\Phi_{P_a}$,
+\[
+ B_{r,a}(F)=n\log r+\log(1-\kappa_n a^n)-\log Z(F),
+ \qquad A_{r,a}(F)=\{\nu_F\}.
+\]
+Take $a_j=1-1/(j+2)$ and $r_j=1+1/(j+2)$, $j\ge1$.
+For $p\in P_{a_j}\setminus P_1$, set $u=(\sum\sqrt{p_i})^2\in[a_j,1)$.
+Then $p/u\in P_1$ and $|p/u-p|\le1-u\le1-a_j$.
+Consequently $d_H(P_{a_j},P_1)\le1-a_j$ and
+\[
+ \sup_G|B_{r_j,a_j}(G)-B_{1,1}(G)|
+ \le n|\log r_j|+\frac{n\kappa_n}{1-\kappa_n}|1-a_j|\longrightarrow0.
+\]
+The endpoint $a=1$ is an actual admissible solvable ordinary class of
+positive mass $1-\kappa_n$, equal to $2/3$ for $n=2$.
+The prototypes have different directional coefficients when $a$ changes;
+even the scaled sequence has $r_ja_j=1-(j+2)^{-2}$ strictly varying.
+Thus its ordinary types vary, as do its masses.
+
+\section{A smooth degenerate residual with positive mass}
+
+Fix distinct points $p,q\in\CP^n$, take $X=\operatorname{Bl}_q\CP^n$
+and $\Theta=\pi^*\omega$. Choose $p=[1:0:\cdots:0]$. For $0<t<1$ set
+\[
+ \psi_t=t\log\frac{\sum_{i=1}^n|Z_i|^2}{\sum_{i=0}^n|Z_i|^2},
+ \qquad K_t=\{p\in\Sigma:\textstyle\sum_i p_i\ge t\}.
+\]
+The local current potential of $\psi_t$ is
+$(1-t)L+t\log\sum e^{x_i}$. Its bounded-distance support function is
+$(1-t)h_\Sigma+t\max_i x_i$, the support function of
+\[
+ (1-t)\Sigma+t\operatorname{conv}(e_1,\ldots,e_n)=K_t.
+\]
+The log-sum-exp errors are bounded, so
+$\psi_t\sim\psi_{K_t}\sim\Phi_{K_t}$.
+For $0<t_{\min}\le t\le t_{\max}<1$, choose
+$p_{*,i}=t_{\max}/n$ and $\delta=(1-t_{\max})/2$.
+This is a common translated simplex in all $K_t$.
+For $s\ge t$ in this interval, move a point of $K_t$ toward a fixed
+vertex until its coordinate sum reaches $s$. Since $\operatorname{diam}\Sigma=\sqrt2$,
+this gives $d_H(K_s,K_t)\le\sqrt2(s-t)/(1-t_{\max})$.
+Thus $t_j\to t$ supplies the Hausdorff hypothesis.
+Since $n!\Vol(K_t)=1-t^n$, Theorem~\ref{thm:criterion} gives
+\[
+ \sup_G|B_j(G)-B(G)|
+ \le n|\log(r_j/r)|+
+       \frac{nt_{\max}^{n-1}}{1-t_{\max}^n}|t_j-t|.
+\]
+For example, $t_j=1/2+1/[4(j+1)]$ and $r_j=1+1/(j+2)$
+have limiting reference mass $1-2^{-n}$ and the explicit support
+probabilities $\nu_F$.
+
+Let $Y=\operatorname{Bl}_p\CP^n$, with blowdown $\pi_p$ and resolved
+direction map $Q_p:Y\to\CP^{n-1}$. Put
+\[
+ \beta_t=(1-t)\pi_p^*\omega+tQ_p^*\omega_{n-1}.
+\]
+This is K\"ahler by the incidence graph embedding.
+Resolve the pole on $X$ by $\tau:Z=\operatorname{Bl}_{\pi^{-1}(p)}X\to X$.
+The disjoint centers also identify $Z$ with the blowup
+$\sigma:Z\to Y$ at the point above $q$. Set $\alpha_t=\sigma^*\beta_t$.
+Poincar\'e--Lelong gives
+\begin{equation}\label{eq:residual}
+ (\pi\circ\tau)^*\omega+\ddc(\psi_t\circ\pi\circ\tau)
+                 =\alpha_t+t[E_p].
+\end{equation}
+There is no $E_q$ coefficient, since the prototype is bounded near $q$.
+For the ordinary model, bounded equivalence changes the residual to
+$\alpha_t+\ddc w_t$ with a bounded canonical $\alpha_t$-psh $w_t$.
+The bounded remainder extends canonically across $E_p$ after adding
+local smooth residual potentials. Its value on the divisor is not
+inserted into an unbounded product.
+
+\begin{proposition}
+For $0<t<1$, the smooth $\alpha_t$ has rank exactly one at every point
+of $E_q$, is positive away from $E_q$, and satisfies
+$\int_Z\alpha_t^n=1-t^n>0$.
+\end{proposition}
+\begin{proof}
+In a blowup chart the map is
+$(s,w_2,\ldots,w_n)\mapsto(s,sw_2,\ldots,sw_n)$.
+At $s=0$ its differential has rank one and kills the $n-1$ tangential
+directions of the exceptional divisor. Since $\beta_t$ is K\"ahler,
+the pullback has exactly the stated rank and is positive elsewhere.
+
+For the mass, write $H=\pi_p^*[\omega]$, $E=[E_p]$.
+The current identity gives $[\beta_t]=H-tE$. The restriction of $H$
+to $E_p$ is zero, so $\int H^{n-k}E^k=0$ for $1\le k<n$.
+The exceptional normal line is $\mathcal O_{\CP^{n-1}}(-1)$
+\cite[VII.12.4]{Demailly}; hence $\int E^n=(-1)^{n-1}$.
+Expanding gives $\int_Y\beta_t^n=1-t^n$.
+The degree-one blowup preserves the top integral, proving the claim.
+\end{proof}
+
+Thus there is no positive lower bound for $\alpha_t$ against a K\"ahler
+metric, although its top mass is positive. Scaling by $r$ scales the
+residual and the exceptional coefficient in \eqref{eq:residual} by $r$.
+Solvability is established on $X$ by the model criterion and the precise
+existence theorem, without treating the resolved residual as strictly positive.
+
+At $t=1$ the residual is pulled back from $\CP^{n-1}$ and has zero top
+integral. Every ordinary-type potential lifts to a bounded residual-psh
+remainder. The bounded Bedford--Taylor telescoping identity and Stokes
+give the same zero top mass for every such remainder
+\cite[Theorem 1.14, with the exceptional set empty]{BEGZ}. Positivity then
+forces its top measure to vanish, so no positive-density equation
+$c e^F\mathrm dV$ with $c>0$ is solvable in that type. This endpoint is
+excluded; the curved-family endpoint $a=1$ has positive mass and is included.
+
+\section{Scope of the conclusion}
+
+The geometric criterion applies to the specified closed projective
+backgrounds and fixed blowups. It supplies varying ordinary types with
+nondivisorial, genuinely nonanalytic poles and an explicit family of
+smooth degenerate positive-mass residuals. It proves the limiting
+admissible class, its equation, the functional estimates and every
+support-cluster identity. Arbitrary nonclosed Hermitian torsion, moving
+modifications and unrestricted singularity degeneration are outside
+this theorem. No convergence of solution potentials or weighted rough
+adjoint product is asserted. The broader question S08 remains open.
+
+\begin{thebibliography}{9}
+\bibitem{BB}
+R. J. Berman and B. Berndtsson,
+\emph{Real Monge--Amp\`ere equations and K\"ahler--Ricci solitons on toric
+log Fano varieties}, arXiv:1207.6128v1 (25 July 2012), Sections 2.1--2.3.
+\href{https://arxiv.org/abs/1207.6128v1}{Official primary version}.
+\bibitem{DDL}
+T. Darvas, E. Di Nezza and C. H. Lu,
+\emph{Log-concavity of volume and complex Monge--Amp\`ere equations with
+prescribed singularity}, arXiv:1807.00276v3 (12 March 2020).
+\href{https://arxiv.org/abs/1807.00276v3}{Official primary version}.
+\bibitem{Demailly}
+J.-P. Demailly, \emph{Complex Analytic and Differential Geometry},
+Chapters I, III and VII.
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf}
+{Author's manuscript}.
+\bibitem{BT}
+E. Bedford and B. A. Taylor,
+\emph{A new capacity for plurisubharmonic functions},
+Acta Math. \textbf{149} (1982), 1--40.
+\bibitem{BEGZ}
+S. Boucksom, P. Eyssidieux, V. Guedj and A. Zeriahi,
+\emph{Monge--Amp\`ere equations in big cohomology classes},
+Acta Math. \textbf{205} (2010), 199--262.
+\end{thebibliography}
+\end{document}
