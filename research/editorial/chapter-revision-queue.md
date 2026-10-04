@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 384: Check incoming author research. Examine two exceptional points with a semipositive residual at the sum-of-coefficients boundary, positive reference mass and sharp nonzero section defect. Prove the required simultaneous point-jet interpolation directly. Continue recent-primary and general-selector dependency checks.
+Current next unit after checkpoint 385: Check incoming author research before writing. Develop the two-point exceptional blowup model with semipositive positive-volume residual at the coefficient-sum boundary, direct simultaneous jet interpolation and sharp nonzero section defect. Continue higher-dimensional/fibration interfaces and recent primary-paper checks within their verified scope.
 
 | Chapter | Source | This cycle |
 |---|---|---|
