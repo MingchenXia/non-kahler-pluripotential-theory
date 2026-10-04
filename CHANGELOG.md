@@ -1,5 +1,9 @@
 # Modification history
 
+## Standalone P15 specified-cone paper — 4 October 2026
+
+[Paper](research/papers/P15-parallelizable-background-cones.tex) and [review](research/papers/P15-parallelizable-background-cones.review.md): complete intrinsic unit-volume completion theorem for the specified parallelizable invariant cones, including the explicit genuinely nonclosed Iwasawa cone. Exact volume/minimizer/Hessian, fixed-cone Cauchy classification and positive-current boundary are proved self-contained. Three accepted-chain nodes pass correctness/source/full blind reconstruction; candidate requirements PASS. All proofs/reports/final source, two local builds and all six final-page visual checks pass. Native compilation remains unverified. Arbitrary cones and arbitrary probability volumes remain open. Concurrent checkpoint388 book work and its pending compatible-data intake are preserved without a book rebuild here.
+
 ## Checkpoint388 — Nef big incomplete cusp
 
 [Review](research/editorial/nef-incomplete-cusp-388.md): Subsection27.14.1 directly verifies the supplied nef-big incomplete-cusp counterexample. Complete supplied/book reads,48 obligations and44 selected final pages pass. One successful full-book build has actual live PDF/homepage/Pages verification;1088 printed pages. Mere nefness and bigness are disproved for completeness; exact smoothing-compatible S13 remains open. All original formal questions remain exact;22 formal plus19 supplemental directions open. Native catalogue compilation remains unverified. Fresh reconstruction passes with297 exact book sources, all1114+17 page texts matching and1993 checksum-validated archive entries; authorized private synchronization follows.
