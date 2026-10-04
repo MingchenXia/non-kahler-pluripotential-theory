@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 388: Check incoming author research. Consolidate the expanded P21/kernel/jet overview and historical interface for readability while preserving original questions, exact sufficient criteria and Hilbert norm/normalization boundaries. Then continue exact primary-proof reading and recent related arXiv directions; S13 geometric smoothing compatibility stays open.
+Current next unit after checkpoint 388: Directly review the preserved incoming S13 flow-compatible incomplete-metric proof, including exact initial/resolution/divisor/discrepancy/residual/class/volume identities and relative-energy dependencies, before adoption or closure. Preserve the distinct simultaneous-nefness and actual evolving-flow questions. Then consolidate the P21/kernel/jet overview and continue recent primary-paper reading.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
