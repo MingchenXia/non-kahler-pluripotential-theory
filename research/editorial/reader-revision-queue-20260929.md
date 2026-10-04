@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research419
+
+[Direct contact-defect review](research/editorial/affine-contact-defect-review-419.md) reconstructs28 obligations and inspects three actual primary images. A compact with a transverse complex disk has raw contact at every positive growth parameter but regularized defect at least4 delta log2/9; everywhere-obstacle competitors prove this without the pending general product formula. Non-plurithinness is checked at the stated interior-fiber point. All325 book files,989 proofs, both catalogues/manifests and451 protected files remain exact. Manuscript418 and its1191-page live release are unchanged; no author build, native call, new publication or problem closure. Next: scoped Chapter12 integration and continued primary research.
+
 ## Continuing research418
 
 [The P10 integration](research/editorial/elliptic-curvature-endpoints-418.md) adds Section 25.14: bounded cubic energy, full-current background transport, signed elliptic curvature and two explicit quotient families. Six proofs, both complete new-input reads and 23 actual images pass. All 983 old proofs, 451 protected sources and original manifests remain exact. The 1191-page release and homepage are live-verified. Both catalogues retain mathematical descriptions/statuses and actual anchors; general P10 remains open. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no added findings. Forty original directions remain open.
