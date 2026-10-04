@@ -1,5 +1,9 @@
 # Modification history
 
+## 4 October 2026 — Compact-obstacle polar invariance review421
+
+[The compact-obstacle review](research/editorial/compact-obstacle-polar-invariance-review-421.md) checks 26 direct obligations and seven actual primary images. Pointwise and quasi-everywhere compact-obstacle regularizations agree in smooth big backgrounds; the canonical series supplies logarithmic pole barriers for affine pluripolar sets. Global Josefson remains an explicit accepted foundation, with its exact statement checked and its full cited proof tree not newly certified. All 326 book files, 991 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, new publication or original problem closure. Next: scoped Chapter 1/12 integration.
+
 ## 4 October2026 — Affine contact-defect integration420
 
 [The scoped affine-contact integration](research/editorial/affine-contact-defects-420.md) adds the canonical planar barrier and quantitative regularization defect along a transverse complex disk. Two proofs, both complete new-source reads and 18 actual final images pass. All 989 old proofs, original mathematical descriptions/statuses, manifests and 451 protected sources remain exact. All three 1193-page publications are live-checked at their recorded evidence scopes. Both catalogues use actual anchors. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
