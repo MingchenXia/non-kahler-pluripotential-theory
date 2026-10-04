@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint420 — Affine contact defects
+
+[The scoped affine-contact integration](research/editorial/affine-contact-defects-420.md) adds the canonical planar barrier and quantitative regularization defect along a transverse complex disk. Two proofs, both complete new-source reads and 18 actual final images pass. All 989 old proofs, original mathematical descriptions/statuses, manifests and 451 protected sources remain exact. All three 1193-page publications are live-checked at their recorded evidence scopes. Both catalogues use actual anchors. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings, with no additions. Forty original directions remain open.
+
 ## Checkpoint419 — Affine contact-defect review
 
 [Direct contact-defect review](research/editorial/affine-contact-defect-review-419.md) reconstructs28 obligations and inspects three actual primary images. A compact with a transverse complex disk has raw contact at every positive growth parameter but regularized defect at least4 delta log2/9; everywhere-obstacle competitors prove this without the pending general product formula. Non-plurithinness is checked at the stated interior-fiber point. All325 book files,989 proofs, both catalogues/manifests and451 protected files remain exact. Manuscript418 and its1191-page live release are unchanged; no author build, native call, new publication or problem closure. Next: scoped Chapter12 integration and continued primary research.
