@@ -10,7 +10,7 @@
 \newcommand{\PSH}{\operatorname{PSH}}
 \newcommand{\vol}{\operatorname{vol}}
 \newcommand{\NP}[1]{\langle #1\rangle}
-\title{Sparse Newton series: envelopes, intrinsic growth and moment-shell kernel limits}
+\title{Partial kernels from Newton and multiplier-ideal series}
 \author{}
 \date{4 October 2026}
 \begin{document}
@@ -28,8 +28,14 @@ from the actual spaces. The limit is relative lattice volume lifted by the
 inverse weight gradient and angular Haar measure. Lower-dimensional
 selection gives a positive singular measure although the top
 nonpluripolar curvature power vanishes. An explicit rational-map example
-admits a nonclosed sampling background. Arbitrary selecting series and
-multiplier-ideal envelopes remain outside the theorem.
+admits a nonclosed sampling background. Independently, an actual
+multiplier-ideal series on a product of two projective lines has
+Hilbert growth exponent one and three adjacent monomial bands. We
+identify its full ideal envelope among arbitrary competitors, prove
+equality with the ordinary upper type class, and compute its original-norm
+kernel limits. Its intrinsic limiting mass is three; pole-sensitive
+bounds give global lower convergence and uniform convergence after
+exponentiation. The general selecting-series programme remains open.
 \end{abstract}
 
 \section{The specified series and its target}
@@ -444,6 +450,338 @@ $d\omega=e^fdf\wedge\omega_0\ne0$ where $df\ne0$.
 Sampling with $\nu=\omega^2/\int_X\omega^2$ meets the hypotheses and
 gives the same mass-one limit. The curvature is still $\theta=4\omega_0$.
 
+\section{An actual multiplier-ideal series}
+The preceding theorem prescribes a multiplicative Newton series. We now
+compute a distinct, actual multiplier-ideal selection, including its full
+class of possibly non-invariant competitors. This calculation uses its own
+compact sampling set and norm; it does not apply the preceding whole-space
+sampling theorem to different data.
+
+Let $X=\mathbb P^1\times\mathbb P^1$, $L=\mathcal O(1,1)$ with the
+product Fubini--Study metric, and $\theta=c_1(L,h)$. In coordinates
+$(Z_i:T_i)$ put $z_i=Z_i/T_i$ and
+\[
+ \psi=\max\{\log|T_1T_2|_h^2,\log|Z_1Z_2|_h^2\},\qquad
+ p_+=(0,\infty),\quad p_-=(\infty,0).
+\]
+These are the only pole points. On the torus let
+\[
+ x_i=\log|z_i|^2,\qquad s=x_1+x_2,\qquad
+ \varphi_X=\log(1+e^{x_1})+\log(1+e^{x_2}).
+\]
+Then $\psi=\max(0,s)-\varphi_X$. For every real $t>0$,
+$\mathcal I(tv)$ consists of germs $f$ for which $|f|^2e^{-tv}$
+is locally integrable. Write $v\preceq_{\mathcal I}\psi$ when
+$\mathcal I(tv)\subseteq\mathcal I(t\psi)$ for all $t>0$.
+The ordinary upper type constraint is $v\leq\psi+C_v$ for some
+finite constant. Both constraints concern genuine $\theta$-psh functions.
+Every analytic neighborhood used below is connected, and a psh function
+invoked as locally integrable is not identically $-\infty$ on that
+neighborhood. Restriction to a connected submanifold is either genuine
+or identically $-\infty$; this alternative is retained explicitly.
+
+Take the compact sampling set with logarithmic radii in
+$D=[-1,2]^2$ and all angles, and use
+\[
+ w=\frac{x_1^2+x_2^2}{2}-\varphi_X,\qquad
+ d\nu=\frac19\,dx_1\,dx_2\,d\tau_1\,d\tau_2.
+\]
+Each $d\tau_i$ is angular Haar probability. The norm is precisely
+$\int_K|\sigma|_{h^m}^2e^{-mw}d\nu$. Define the actual spaces
+$V_m=H^0(X,L^m\otimes\mathcal I(m\psi))$ and their $B_m,U_m$
+using this norm. The ideal envelope uses $v\leq w$ quasi-everywhere
+on $K$, meaning outside a pluripolar set.
+
+\begin{theorem}\label{thm:actual-ideal}
+For all genuine $\theta$-psh functions, including non-invariant ones,
+\[
+ v\preceq_{\mathcal I}\psi\quad\Longleftrightarrow\quad
+ v\leq\psi+C_v.
+\]
+Consequently ideal and ordinary envelopes agree for every common obstacle
+problem, in particular for every smooth obstacle on all $X$.
+For the stated $K,w$, their envelope is
+\[
+ P=g(s)-\varphi_X,\qquad
+ g(s)=\sup_{0\leq t\leq1}(ts-t^2)
+ =\begin{cases}0&s\leq0,\\s^2/4&0\leq s\leq2,\\s-1&s\geq2.\end{cases}
+\]
+It has its canonical global extension, with $P(p_\pm)=-\infty$.
+For every $m\geq1$ the entire selected space is
+\begin{equation}\label{eq:actual-three-bands}
+ V_m=\operatorname{span}\{Z_1^aT_1^{m-a}Z_2^bT_2^{m-b}:
+       0\leq a,b\leq m,\ |a-b|\leq1\},\qquad N_m=3m+1.
+\end{equation}
+Its Hilbert growth exponent is one. The kernels satisfy the global
+lower bound, with extended-real interpretation at the poles,
+\begin{equation}\label{eq:actual-lower}
+ U_m\geq P+\frac{\log(9m/(2\pi))}{m}-\frac1{4m^2}.
+\end{equation}
+They converge locally uniformly on $X\setminus\{p_+,p_-\}$,
+globally in $L^1$ at rate $O(\log m/m)$,
+and extended-pointwise on $X$. Moreover $e^{U_m}\to e^P$
+uniformly on $X$. For each fixed $m\geq2$, the additive difference
+$U_m-P$ is unbounded above near either pole.
+
+The probability trace measures $N_m^{-1}e^{-mw}B_m\nu$
+converge weakly to the probability $\mu$ given by
+\[
+ \int_X f\,d\mu=\int_0^1\int f(e^{t/2}\tau_1,e^{t/2}\tau_2)
+                         \,d\tau_1\,d\tau_2\,dt.
+\]
+The intrinsic normalization $m^{-1}e^{-mw}B_m\nu$ converges to
+$3\mu$, of mass three. Ambient normalization by $m^2$ gives zero.
+\end{theorem}
+
+\subsection{All-weight ideals detect the full ordinary constraint}
+Near $p_+$ use $u=z_1$, $v=1/z_2$ and the frame $T_1Z_2$.
+The two pencil sections become $v,u$, so
+\[
+ \psi=\log\max(|u|^2,|v|^2)
+            -\log(1+|u|^2)-\log(1+|v|^2).
+\]
+The same formula holds near $p_-$. If a holomorphic germ has order $k$,
+its leading homogeneous term and spherical squared average reduce
+integrability to $\int_0^\epsilon r^{2k-2t+3}dr$.
+The strict threshold is $k+2>t$, with logarithmic divergence at equality.
+Thus at either pole
+\begin{equation}\label{eq:actual-local-ideal}
+ \mathcal I(t\psi)=\mathfrak m^{\max(0,\lfloor t\rfloor-1)};
+\end{equation}
+away from them it is the full structure sheaf. In particular the
+integer degree $m$ imposes order $m-1$.
+
+We use the weighted point extension consequence of Ohsawa--Takegoshi:
+for a psh weight $\Phi$ on a bounded ball and a point $a$ in a fixed
+smaller ball with $\Phi(a)>-\infty$, there is a holomorphic $f$
+with $f(a)=1$ and
+\[
+ \int |f|^2e^{-\Phi}\,dV\leq C e^{-\Phi(a)}.
+\]
+The constant is independent of $a$ and $\Phi$, and singular weights
+are permitted. Theorem A of \cite{Berndtsson} proves singular-weight hyperplane
+extension with the exponent $e^{-\Phi}$ and constant $4\pi$
+when the transverse coordinate has modulus less than one.
+Use an affine flag through $a$ inside a ball of radius $R$.
+Every slice is a connected ball and its weight is finite at $a$.
+Scaling its coordinates by $2R$ gives an ambient-to-slice volume
+ratio $(2R)^2$. Iterating from the point, whose zero-dimensional
+measure is one, gives a valid constant $(16\pi R^2)^n$,
+independent of the weight and point. An alternative primary proof
+is in \cite[Corollary 12.9, Remark 12.10 and proof of Theorem 12.11]{DemaillyTrieste}.
+Here the weight is $\Phi=t\phi$, without an extra factor two.
+For a local genuine potential $\phi=v+\varphi_h$, smooth metric
+weights do not change multiplier ideals. Shrink the ball inside its
+domain so that $\phi$ is bounded above on the closure.
+
+If every germ in $\mathcal I(t\phi)$ has order at least $k$, every
+holomorphic function of finite weighted norm on that ball has the same
+vanishing jets. Ordinary $L^2$ control from the upper bound for $\phi$
+and Cauchy estimates give, on a further smaller ball,
+\[
+ |f(z)|^2\leq A_{t,k}|z|^{2k}\int |f|^2e^{-t\phi}dV.
+\]
+Apply point extension at each $z$ with $\phi(z)>-\infty$ to get
+$\phi(z)\leq(k/t)\log|z|^2+C_{t,k}$. It holds trivially at
+the other points. If $k>0$, a finite $\phi(0)$ would let point
+extension produce a function equal to one at the origin, contradicting
+its forced vanishing. Thus the origin has the correct value too.
+The constants need not be uniform in $t$.
+
+To retain the endpoint coefficient, set
+$M(s)=\sup_{|z|\leq e^{s/2}}\phi(z)$. It is finite, nondecreasing
+and convex. Indeed the one-variable three-circles maximum on every
+complex line is convex, and their supremum is convex; identically
+$-\infty$ restrictions do not affect the supremum.
+Its limiting left slope $\ell$ is at least every $k(t)/t$ when
+the ideal order is $k(t)=\max(0,\lfloor t\rfloor-1)$.
+Thus $\ell\geq1$. Convexity gives
+\[
+ M(s)\leq M(s_0)+\ell(s-s_0)\leq s+C\quad(s<s_0).
+\]
+It follows that $v\leq\psi+C$ near both poles. On the compact
+complement, $\psi$ is finite and continuous and $v$ has a finite
+upper bound; a single global constant results. Conversely
+$v\leq\psi+C$ immediately implies
+$e^{-t\psi}\leq e^{tC}e^{-tv}$ and all the ideal inclusions.
+This proves equality of the unrestricted competitor classes before
+any obstacle is imposed, and hence equality of their envelopes for
+every common obstacle.
+
+\subsection{Pencil rigidity and non-invariant competitors}
+Off $p_\pm$ define
+\[
+ \mathfrak f=[T_1T_2:Z_1Z_2],\qquad
+ \psi_{\rm FS}=\log(|T_1T_2|_h^2+|Z_1Z_2|_h^2).
+\]
+Then $\psi\leq\psi_{\rm FS}\leq\psi+\log2$.
+Every admissible $v$ is of the form
+\begin{equation}\label{eq:actual-pencil}
+ v=\psi_{\rm FS}+u\circ\mathfrak f,\qquad
+                   u\in\PSH(\mathbb P^1,\omega_{\rm FS}),
+\end{equation}
+with canonical extension at the two base points.
+
+To prove this, for $\xi\in\C^*$ the pencil fiber
+$C_\xi=\{Z_1Z_2=\xi T_1T_2\}$ is a smooth rational $(1,1)$
+curve containing both poles. Its $\theta$-degree is two.
+Every genuine restriction of $v$ has a positive curvature measure
+of total mass two, and its logarithmic upper bounds force an atom
+of mass at least one at each pole. These two atoms exhaust the
+measure. The curvature of $\psi|_{C_\xi}$ is exactly these two
+unit atoms by Poincare--Lelong. Hence $v-\psi$ is harmonic in
+distributions on the compact curve and is constant.
+The normalization and logarithmic-atom statement also follow directly
+from \cite[III, Sections 2.C and 6]{DemaillyBook}, after replacing
+their $\log|z|$ by $\log|z|^2$ and their $\ddc$ by half of it.
+
+In holomorphic torus coordinates $(z_1,\xi=z_1z_2)$, local
+integrability and Fubini show that almost every fiber restriction
+is genuine. The transverse section $S=\{z_1=1\}$ is a copy of
+$\mathbb P^1$; its restriction of $v$ is therefore genuine: almost every good fiber is constant after adding
+the metric potential, and hence is finite at its point on $S$.
+Put $u=v|_S+\log2$. Since $\theta|_S=\omega_{\rm FS}$ and
+$\psi_{\rm FS}|_S=-\log2$, the fiber constants give
+\eqref{eq:actual-pencil} almost everywhere on the torus. Both
+sides have canonical psh frame potentials, so equality holds
+everywhere off the poles. Their logarithmic upper bounds force
+value $-\infty$ at the poles. Conversely any such $u$ gives a
+positive pulled-back curvature off the poles, and its local
+potential is at most $\log(|u_0|^2+|v_0|^2)+C$ there. The
+canonical removable psh extension is global and has the required
+ordinary upper type. This proves the full description.
+
+On the affine base write $\chi(\xi)=\log(1+|\xi|^2)+u(\xi)$.
+For any competitor, $v=\chi(z_1z_2)-\varphi_X$. On the open
+interior of $K$ the quasi-everywhere obstacle inequality is an
+almost-everywhere inequality. Submean inequalities for the genuine
+frame potential and continuity of the obstacle make it pointwise.
+Taking $x_1=x_2=s/2$ yields $\chi(\xi)\leq s^2/4$ for
+$-2<s<4$, with any argument of $\xi$.
+
+The bound at $s=0$ is $\chi\leq0$ on $|\xi|=1$.
+The subharmonic maximum principle gives $\chi\leq0$ on that disk.
+At infinity use the genuine local potential
+\[
+ \chi_\infty(\eta)=\chi(1/\eta)+\log|\eta|^2
+                  =\log(1+|\eta|^2)+u(1/\eta).
+\]
+On $|\eta|=e^{-1}$, the obstacle bound at $s=2$ gives
+$\chi_\infty\leq-1$. The same maximum principle on this disk
+therefore gives $\chi(\xi)\leq\log|\xi|^2-1$ for $s\geq2$.
+Together with the obstacle bound for $0\leq s\leq2$, these are
+exactly $\chi(\xi)\leq g(\log|\xi|^2)$ for every $\xi\in\C^*$,
+without an angular-invariance hypothesis.
+Thus every full competitor is at most $P$. Conversely $g$ is
+convex with slopes in $[0,1]$, and defines a base Fubini--Study
+psh potential. Also $\psi-1\leq P\leq\psi$ and
+$g(s)\leq s^2/4\leq(x_1^2+x_2^2)/2$. Hence $P$ itself is
+an admissible global competitor. This identifies the full envelope.
+
+\subsection{The entire selected spaces and exact norms}
+At the two poles, the monomial indexed by $(a,b)$ has orders
+$a+m-b$ and $b+m-a$. By \eqref{eq:actual-local-ideal} these
+must be at least $m-1$, giving exactly $|a-b|\leq1$.
+Distinct local exponent pairs cannot cancel; this proves the
+entire space \eqref{eq:actual-three-bands}. There are $m+1$
+diagonal terms and $m$ in each neighboring band. Ordinary upper
+type for each degree-$m$ logarithmic section would instead impose
+order $m$ and select only $a=b$. Equality of the all-weight
+competitor classes does not identify these finite-degree spaces.
+
+The actual spaces are not multiplicative: the square of an
+offset-one section of $V_1$ has offset two and is outside $V_2$.
+Their rational maps can recover both $z_1$ and $z_2$ from section
+ratios. Their Hilbert growth exponent one is consequently not an
+Iitaka-dimension assertion for a graded section ring.
+
+Angular integration makes all monomials orthogonal. For $t\in[0,1]$
+set
+\[
+ I_m(t)=\int_{-1}^2e^{m(tx-x^2/2)}dx
+       =e^{mt^2/2}J_m(t),\qquad
+ J_m(t)=\int_{-1}^2e^{-m(x-t)^2/2}dx.
+\]
+The exact original squared norm is
+\[
+ A_m(a,b)=\frac19 I_m(a/m)I_m(b/m).
+\]
+Uniformly in $t\in[0,1]$,
+\[
+ \frac c{\sqrt m}\leq J_m(t)\leq\sqrt{\frac{2\pi}m},\qquad
+ J_m(t)=\sqrt{\frac{2\pi}m}
+             \bigl(1+O(m^{-1/2}e^{-m/2})\bigr),
+\]
+where $c=\int_{-1}^1e^{-y^2/2}dy$. The centers are at least
+distance one from the endpoints, so each omitted Gaussian tail
+is at most $e^{-m/2}/m$. In particular
+\begin{equation}\label{eq:actual-norms}
+ \frac{c^2}{9m}e^{(a^2+b^2)/(2m)}\leq A_m(a,b)
+             \leq\frac{2\pi}{9m}e^{(a^2+b^2)/(2m)}.
+\end{equation}
+
+Every basis contribution to $e^{-mw}B_m\nu$ is exactly the
+product of the two truncated Gaussian probabilities with centers
+$(a/m,b/m)$, times independent angular Haar. They concentrate
+uniformly at their centers. Averaging the diagonal and neighboring
+bands gives three Riemann sums with the same diagonal limit;
+each has asymptotic proportion $1/3$ in $N_m$. This proves the
+probability and intrinsic mass-three limits. They are carried
+by the contact set $x_1=x_2=t\in[0,1]$, since $g(2t)=t^2$.
+
+\subsection{Global lower bounds and the pole error}
+The diagonal sections belong to the actual space. Their upper
+norm bound in \eqref{eq:actual-norms} gives
+\[
+ B_m\geq\frac{9m}{2\pi}e^{-m\varphi_X}
+                    \max_{0\leq j\leq m}e^{js-j^2/m}.
+\]
+The nearest grid point to $s/2$ loses at most $1/(4m^2)$ in
+$g(s)$ when $0\leq s\leq2$; outside this interval the
+maximizing endpoint is on the grid. This proves
+\eqref{eq:actual-lower} globally.
+
+For the upper bound use all three bands. Comparing an offset-one
+term to its two neighboring diagonal terms bounds its exponent
+by $mg(s)+\min(x_1,1-x_2)$; the other band interchanges the
+indices. Set
+\[
+ R(x)=1+\min(e^{x_1},e^{1-x_2})
+             +\min(e^{x_2},e^{1-x_1}).
+\]
+Counting terms and using the lower norm bound yields
+\begin{equation}\label{eq:actual-upper}
+ U_m\leq P+\frac{C+2\log(m+1)+\log R(x)}m.
+\end{equation}
+$R$ extends continuously across coordinate divisors away from
+the poles. Near $p_+$ set $A=|u|^2$, $B=|v|^2$.
+Its only possibly large term satisfies
+$\min(1/B,e/A)\leq(e+1)/(A+B)$; the other is bounded.
+The same holds near $p_-$. Thus $R\leq C(1+r^{-2})$ near
+either pole, with $r$ a smooth local distance, and $\log R$
+is integrable against any smooth volume.
+
+The two bounds prove local uniform convergence off the poles
+and the global $L^1$ rate.
+For $m\geq2$ every selected section vanishes at both poles,
+so $U_m(p_\pm)=-\infty=P(p_\pm)$. The degree-one space is
+base-point free and does not affect extended-pointwise convergence.
+
+For a fixed $m\geq2$, the lowest local terms include every
+degree-$(m-1)$ binary monomial. Their positive sum of squares
+is comparable to $r^{2(m-1)}$ in all directions. Therefore
+\[
+ U_m=(1-1/m)\log r^2+O_m(1),\qquad
+ P=\log r^2+O(1).
+\]
+The additive difference diverges to $+\infty$ on punctured
+approaches to either pole. Finally \eqref{eq:actual-upper},
+$P\leq\log r^2+C$ and $R\leq C/r^2$ give
+$e^{U_m}\leq C r^{2-2/m}\leq Cr$ for $m\geq2$, uniformly
+in $m$ and $r<1$. Also $e^P\leq Cr^2$. Together with uniform
+convergence on compacta off the poles these bounds prove the
+asserted uniform exponential convergence.
+
 \section{Scope and excluded cases}
 Without the integral offset a rational affine hull can lack lattice
 points in infinitely many degrees: a half-integral singleton is empty
@@ -452,14 +790,17 @@ spaces but guarantee nonzero spaces in every sufficiently large degree.
 Every nonempty allowed polytope has positive relative volume, including
 a singleton with the stated convention.
 
-Polytopes touching the degree-box boundary, nonconvex logarithmic
+For the Newton theorem, polytopes touching the degree-box boundary,
+nonconvex logarithmic
 weights, non-invariant sampling or obstacles, singular sampling
 probabilities and arbitrary compact sampling sets are not covered.
-Neither are arbitrary selecting series nor
-$H^0(X,L^m\mathcal I(m\phi))$ without an additional proof identifying
-their exact Newton constraint and target. The theorem completely proves
-the stated sufficient-condition answer to P20; the broader programme
-and the original problem catalogue remain open.
+The actual ideal example uses the specific compact sampling set, weight
+and singularity computed above. Its all-weight competitor classes agree,
+while its finite-degree ideal spaces have neighboring bands and are not
+multiplicative. The two independent theorems completely prove these
+explicit sufficient-condition answers to P20. Arbitrary selecting or
+multiplier-ideal series, universal ideal-envelope identities and the
+broader original programme remain open.
 \begin{thebibliography}{9}
 \bibitem{BEGZ} S. Boucksom, P. Eyssidieux, V. Guedj and A. Zeriahi,
 \emph{Monge--Amp\`ere equations in big cohomology classes},
@@ -470,5 +811,20 @@ Section 3.4, pp.~78--81.
 \bibitem{Hunter} J. K. Hunter, \emph{Differentiation},
 \href{https://www.math.ucdavis.edu/~hunter/m206/ch5_measure_notes.pdf}{measure-theory notes},
 Theorem 6.10, pp.~68--70.
+
+\bibitem{Berndtsson} B. Berndtsson,
+\emph{The extension theorem of Ohsawa--Takegoshi and the theorem of
+Donnelly--Fefferman}, Ann. Inst. Fourier 46 (1996), 1083--1094,
+\href{https://www.numdam.org/item/10.5802/aif.1541.pdf}{primary text},
+Theorem A and Section 2.
+\bibitem{DemaillyTrieste} J.-P. Demailly,
+\emph{Multiplier ideal sheaves and analytic methods in algebraic geometry},
+Trieste lecture notes (2000),
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/trieste.pdf}{primary text},
+Section 12, especially Corollary 12.9, Remark 12.10 and Theorem 12.11.
+\bibitem{DemaillyBook} J.-P. Demailly,
+\emph{Complex Analytic and Differential Geometry},
+\href{https://people.math.harvard.edu/~demarco/Math274/Demailly_ComplexAnalyticDiffGeom.pdf}{primary text},
+I.4--5 and III.2.C, III.6.
 \end{thebibliography}
 \end{document}
