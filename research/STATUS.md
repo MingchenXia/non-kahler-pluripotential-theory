@@ -1,5 +1,10 @@
 # Current research status — 4 October 2026
 
+## Checkpoint392 — Interior Newton selection and moment-shell limits
+
+[Review](research/editorial/newton-selected-kernels-392.md): Section26.16 independently integrates the author P20 paper with exact global selection, the genuine growth envelope, all-degrees lattice lower bounds, derived Bernstein–Markov and positive relative-dimensional kernel limits. The closed curvature and arbitrary auxiliary Hermitian metric remain distinct; lower-dimensional limits differ from mixed envelope curvature. All45 direct obligations and37 selected final pages pass. Both clean full builds have live PDF/homepage/Pages checks;1110 printed pages. All original descriptions/statuses and protected sources stay exact;40 directions remain open. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with 301 exact book sources, all 1136+17 page texts matching and 2015 checksum-validated archive entries. Regular private synchronization follows actual diff review.
+
+
 ## Checkpoint391 — Invariant mass and reference densities
 
 [Review](research/editorial/invariant-mass-reference-densities-391.md): Subsubsection25.5.2.1 proves the invariant threefold upper mass/BMP and singular-coefficient zero top mass, and classifies all Iwasawa smooth maximizing densities. A closed Schur base equation extends the complete coefficient metric to every fixed fiber-invariant smooth density. Coefficient-mean estimates are distinguished from pointwise metric estimates. All35 direct obligations, four exact algebraic identities and40 selected final pages pass. Two full clean builds have actual live PDF/homepage/Pages checks;1106 printed pages. All original descriptions/statuses and protected sources stay exact;40 directions remain open. Native catalogue preview is unverified. Fresh empty-source reconstruction passes with300 exact book sources, all1132+17 page texts matching and2009 checksum-validated archive entries; authorized private synchronization follows.
