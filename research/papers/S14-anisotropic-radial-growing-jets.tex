@@ -1,0 +1,511 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dA}{\mathrm dA}
+\newcommand{\ddc}{dd^c}
+\newcommand{\CP}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\II}{\mathcal I}
+\newcommand{\mm}{\mathfrak m}
+\DeclareMathOperator{\Var}{Var}
+\title{Anisotropic growing point jets on compact products\\
+and transfer by non-descending fiber selectors}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We formulate an explicit higher-dimensional growing-jet theorem for compact
+products of projective lines. Unequal curvature degeneracies and nonzero smooth
+radial remainders are allowed. For every sublinear growing vanishing order,
+the actual saddle center and variance give a Gaussian transition. The leading
+homogeneous center has a smaller, sharp range in this class. A uniform estimate
+for the full compact monomial norms proves the global comparison, including
+arbitrarily slowly growing orders. An isolated singularity on a compact
+connected-fiber holomorphic submersion selects exactly the base point jets,
+although the singularity and its multiplier ideal do not descend. Matched
+smooth volumes give exact Hilbert isometries and preserve the intrinsic base
+growth exponent. The results are sufficient conditions for a specified radial
+class; mixed remainders and arbitrary fiber selectors are outside their scope.
+\end{abstract}
+
+\section{Compact data and the transition}
+We use $\ddc=(i/(2\pi))\partial\bar\partial$ and Euclidean area $\dA$.
+Fix $n\geq2$, integers $r_j\geq2$, with at least two unequal, and
+$\varepsilon_j>0$. Set $d_j=r_j+1$ and
+\[
+ Y=(\CP^1)^n,\quad x=(0,\ldots,0),\quad
+ L=\boxtimes_{j=1}^n\OO_{\CP^1}(d_j).
+\]
+In the product affine frame, with $t_j=|z_j|^2$, put
+\begin{align}
+ |e|_h^2&=e^{-\phi},&
+ \phi(z)&=\sum_j\psi_j(t_j),&
+ \psi_j(t)&=\log(1+t^{r_j}+\varepsilon_jt^{r_j+1}),\label{eq:metric}\\
+ \nu_Y&=a(t)\prod_j\dA_j,&
+ a(t)&=\prod_j a_j(t_j),& a_j(t)&=(1+t)^{-2}.
+\end{align}
+Define
+\[
+ H_j(t)=t\psi_j'(t),\qquad G_j(t)=tH_j'(t),\qquad
+ g_j(t)=G_j(t)/t=\psi_j'(t)+t\psi_j''(t),\qquad
+ \omega=c_1(L,h).
+\]
+For integers $q=q_m\to\infty$, $q=o(m)$, give
+\[
+ V_m=H^0(Y,L^m\otimes\mm_x^q),\qquad
+ \|s\|^2=\int_Y|s|_{h^m}^2\nu_Y
+\]
+the indicated smooth norm. Its diagonal kernel is
+$B_m=\sum_\ell |s_\ell|_{h^m}^2$ for an orthonormal basis.
+
+\begin{theorem}\label{thm:base}
+For every observation sequence with $t_j\to0$,
+\[
+ \mu_j=mH_j(t_j),\qquad \mu_j/q\longrightarrow\alpha_j>0,
+ \qquad \sum_j\alpha_j=1,
+\]
+set $V=\sum_j mG_j(t_j)$. If
+$ (\sum_j\mu_j-q)/\sqrt V\to\tau\in\R$, then
+\begin{equation}\label{eq:transition}
+ \frac{\pi^n a(t)B_m(z)}{m^n\prod_jg_j(t_j)}\longrightarrow
+ \Phi(\tau),\qquad
+ \Phi(\tau)=\frac1{\sqrt{2\pi}}\int_{-\infty}^{\tau}e^{-s^2/2}\,ds.
+\end{equation}
+All choices of coordinate arguments are allowed. The dimension is eventually
+\begin{equation}\label{eq:dimension}
+ N_m=\prod_j(d_jm+1)-\binom{q+n-1}{n},\qquad
+ N_m/m^n\longrightarrow D:=\prod_jd_j.
+\end{equation}
+In particular the section-growth exponent is $n$. Globally,
+\begin{equation}\label{eq:measure}
+ m^{-n}B_m\nu_Y\longrightarrow\omega^n/n!
+ \quad\text{in total variation}.
+\end{equation}
+\end{theorem}
+
+An explicit corrected observation scale is obtained by fixing
+$\alpha_j>0$, $\sum\alpha_j=1$, and writing
+\begin{equation}\label{eq:corrected}
+ R=\sum_j\alpha_jr_j,\qquad T_m=q+\tau\sqrt{Rq},\qquad
+ t_j=H_j^{-1}(\alpha_jT_m/m).
+\end{equation}
+Then $\sum\mu_j=T_m$ and $V\sim Rq$, so \eqref{eq:transition} holds
+throughout $q=o(m)$. The radii have leading orders
+$(\alpha_jq/(r_jm))^{1/(2r_j)}$.
+
+\begin{proposition}\label{prop:shift}
+Instead prescribe the homogeneous radii
+\begin{equation}\label{eq:homogeneous}
+ t_j=\left(\frac{\alpha_j T_m}{r_jm}\right)^{1/r_j},
+ \qquad r_*:=\max_j r_j.
+\end{equation}
+For this radial class the unshifted law
+\[
+ \frac{\pi^nB_m(z)}{m^n\prod_j r_j^2|z_j|^{2r_j-2}}
+ \longrightarrow\Phi(\tau)
+\]
+holds for every fixed $\tau$ along the whole sequence if and only if
+$q=o(m^{2/(r_*+2)})$. If $q/m^{2/(r_*+2)}\to c\in(0,\infty)$,
+the limit is
+\[
+ \Phi\left(\tau+C_\alpha c^{(r_*+2)/(2r_*)}\right),\qquad
+ C_\alpha=\frac1{\sqrt R}\sum_{j:r_j=r_*}
+ (r_*+1)\varepsilon_j(\alpha_j/r_*)^{1+1/r_*}.
+\]
+If that growth ratio tends to infinity while $q=o(m)$, the limit is $1$.
+\end{proposition}
+
+The hypotheses describe genuine global metrics. In the infinity chart of a
+factor, with $u=|w|^2=1/t$, the weight after its frame change is
+$\log(\varepsilon_j+u+u^{d_j})$. It is smooth with positive curvature
+at $u=0$. On $0<t<\infty$, $H_j$ is the mean and $G_j$ the variance
+of the three distinct exponents $0,r_j,d_j$, with probabilities proportional
+to $1,t^{r_j},\varepsilon_jt^{d_j}$. Thus $G_j>0$. At the origin
+\begin{align}
+ \psi_j(t)&=t^{r_j}+\varepsilon_jt^{r_j+1}+O(t^{2r_j}),\label{eq:expansion}\\
+ H_j(t)&=r_jt^{r_j}+(r_j+1)\varepsilon_jt^{r_j+1}+O(t^{2r_j}),\\
+ G_j(t)&=r_j^2t^{r_j}+(r_j+1)^2\varepsilon_jt^{r_j+1}+O(t^{2r_j}).
+\end{align}
+The curvature is semipositive; in the product it loses rank along coordinate
+divisors. The remainders in \eqref{eq:expansion} are genuinely nonzero.
+The volume also extends smoothly and positively at infinity, and $a(0)=1$.
+
+\section{Uniform global moment estimates}
+We prove the estimate needed for moving orders rather than appeal to a
+fixed-order localization theorem. Suppress the coordinate index and set
+\[
+ P(t)=1+t^r+\varepsilon t^{r+1},\quad \psi=\log P,\quad
+ a(t)=(1+t)^{-2},\quad d=r+1,
+\]
+where $r\geq2$. Write $H=t\psi'$, $G=tH'$, $g=G/t$, and define
+\begin{equation}\label{eq:moment}
+ J_{m,k}=\pi\int_0^\infty t^ke^{-m\psi(t)}a(t)\,dt,
+ \quad w_{m,k}(t)=\frac{t^ke^{-m\psi(t)}}{J_{m,k}},
+ \quad K_m(t)=\sum_{k=0}^{dm}w_{m,k}(t).
+\end{equation}
+These compact norms are finite even at $k=dm$, since the integrand is
+$O(t^{k-dm-2})$ at infinity.
+
+\begin{lemma}\label{lem:moments}
+If $t=t_m\to0$ and $\mu=mH(t)\to\infty$, then, with $V=mG(t)$,
+\begin{equation}\label{eq:fullkernel}
+ K_m(t)=\frac{V}{\pi a(t)t}(1+o(1)),\qquad
+ \sum_k\frac{w_{m,k}(t)}{K_m(t)}\,
+ \delta_{(k-\mu)/\sqrt V}\ \Longrightarrow\ N(0,1).
+\end{equation}
+There is no lower bound on how fast $\mu$ grows. For every fixed $t>0$,
+locally uniformly on $(0,\infty)$,
+$K_m(t)=mg(t)/(\pi a(t))(1+o(1))$.
+If $k\to\infty$, $k=o(m)$, and $H(s)=k/m$, then uniformly along all
+such sequences
+\begin{equation}\label{eq:laplace}
+ J_{m,k}=\pi a(s)s\sqrt{\frac{2\pi}{mG(s)}}
+ \exp(k\log s-m\psi(s))(1+o(1)).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $F(u)=\psi(e^u)$ and $A(u)=a(e^u)e^u$. Then $F'=H(e^u)$,
+$F''=G(e^u)>0$. Near zero $H\asymp t^r$, $G/H\to r$, and every
+fixed positive-order $u$ derivative of $F$ is $O(H)$. Choose $b>0$
+small and constants
+\[
+ 1<\rho_-<r<\rho_+,
+ \qquad \rho_-\leq G(t)/H(t)\leq\rho_+\quad(0<t\leq b).
+\]
+The logarithmic derivatives of $A$ are bounded, and $A(u)\asymp e^u$
+for $e^u\leq b$. There is a unique saddle $s$ for $0<k<dm$ because
+$H$ increases from $0$ to $d$.
+
+Let $v=\log s$ and
+$E(h)=m(F(v+h)-F(v))-kh$. Choose $\eta_0>0$ small enough that
+$k\leq\eta_0m$ implies $s\leq b/e^2$ and $k<mH(b)/2$.
+On $|h|\leq1$ one has
+\[
+ E(h)\geq ck h^2,\qquad
+ E(h)=\tfrac12mG(s)h^2+O(k|h|^3).
+\]
+Integration of the elasticity bounds gives
+\begin{align*}
+ E(h)&\geq k\left(|h|-\frac{1-e^{\rho_-h}}{\rho_-}\right)
+ &&(h\leq-1),\\
+ E(h)&\geq k\left(\frac{e^{\rho_-h}-1}{\rho_-}-h\right)
+ &&(1\leq h\leq\log(b/s)).
+\end{align*}
+The amplitude ratio is at most $Ce^h$. Outside any fixed small saddle
+neighborhood these estimates give exponentially small normalized tails
+in $k$. At $h_b=\log(b/s)$, after reducing $\eta_0$,
+$E(h_b)\geq cm$: the positive term $m\psi(b)$ dominates
+$m\psi(s)=O(k)$ and
+$k\log(b/s)\leq Cm\eta_0\log(1/\eta_0)$.
+For $h\geq h_b$, $E'(h)\geq cm$. Consequently the remaining normalized
+tail is bounded by
+\[
+ C(b/s)e^{-cm}/(cm-1).
+\]
+Since $s\asymp(k/m)^{1/r}$ for $1\leq k\leq\eta_0m$, this is a
+polynomial factor times $e^{-cm}$.
+Rescale $h=y/\sqrt{mG(s)}$. Taylor expansion and the preceding domination
+give the Gaussian integral and prove \eqref{eq:laplace}. The same local
+argument, without taking a limit, gives
+\begin{equation}\label{eq:lower-moment}
+ J_{m,k}\geq c a(s)s k^{-1/2}e^{k\log s-m\psi(s)}
+ \qquad(1\leq k\leq\eta_0m).
+\end{equation}
+Indeed one may integrate on $|h|\leq k^{-1/2}$.
+
+Now let $t\to0$, $\mu=mH(t)\to\infty$, so $\mu=o(m)$ and
+$V\sim r\mu$. For $|k-\mu|\leq M\sqrt V$, the saddle equation gives
+\[
+ \log(s/t)=\frac{k-\mu}{V}+O((k-\mu)^2/\mu^2).
+\]
+Define
+$I(k)=m(\psi(t)-\psi(s))-k\log(t/s)$, extending $k$ to real
+values through its saddle. Then $I(\mu)=I'(\mu)=0$ and
+$I''(k)=1/(mG(s))$. Formula \eqref{eq:laplace} yields
+\begin{equation}\label{eq:central}
+ w_{m,k}(t)=\frac{\sqrt V}{\pi a(t)t\sqrt{2\pi}}
+ \exp\left(-\frac{(k-\mu)^2}{2V}\right)(1+o(1))
+\end{equation}
+uniformly on each such interval. The natural sum scale is
+$T=V/(\pi a(t)t)$.
+
+We give summable estimates for the other indices. For
+$1\leq k\leq\eta_0m$, \eqref{eq:lower-moment} implies
+\[
+ \frac{w_{m,k}}T\leq C\frac{\sqrt k}{\mu}\frac ts e^{-I(k)}.
+\]
+Along the interval between $k$ and $\mu$,
+$I''(k)\geq1/(\rho_+k)$, so
+\[
+ I(k)\geq\rho_+^{-1}\bigl(k\log(k/\mu)-k+\mu\bigr).
+\]
+If $k\leq\mu$, then $t/s\leq(\mu/k)^\alpha$ with
+$\alpha=1/\rho_-<1$; if $k\geq\mu$, then $t/s\leq1$.
+On $\mu/2\leq k\leq2\mu$ this gives
+\[
+ \frac{w_{m,k}}T\leq C\mu^{-1/2}
+ e^{-c(k-\mu)^2/\mu}.
+\]
+Its sum outside $|k-\mu|\leq M\sqrt V$ is bounded by a Gaussian
+tail tending to zero as $M\to\infty$. The lower indices satisfy
+\[
+ \sum_{1\leq k<\mu/2}\frac{w_{m,k}}T
+ \leq Ce^{-c\mu}\mu^{\alpha-1}
+ \sum_{k<\mu/2}k^{1/2-\alpha}
+ \leq C\sqrt\mu e^{-c\mu}.
+\]
+For $2\mu<k\leq\eta_0m$, the deviance is at least $ck$, and
+$\sum C\sqrt{k}e^{-ck}/\mu=o(1)$.
+For $k=0$, integration over $0\leq s\leq m^{-1/r}$ gives
+$J_{m,0}\geq cm^{-1/r}$, hence
+$w_{m,0}/T\leq C\mu^{1/r-1}e^{-c\mu}=o(1)$.
+
+For $k>\eta_0m$, fix $s_0>0$ and integrate the compact moment on an
+interval of length $c/m$ next to $s_0$. Uniformly for $0\leq k\leq dm$,
+\[
+ J_{m,k}\geq cm^{-1}s_0^ke^{-m\psi(s_0)}.
+\]
+Eventually $t<s_0$, and therefore
+\[
+ \sum_{k>\eta_0m}w_{m,k}(t)
+ \leq Cm e^{m\psi(s_0)}
+ \frac{(t/s_0)^{\eta_0m}}{1-t/s_0}.
+\]
+After division by $T$ this tends to zero: $\log(s_0/t)\to\infty$
+and its negative exponent dominates $m\psi(s_0)$ and the polynomial
+factors. In particular no factor $m$ multiplies an error $e^{-c\mu}$.
+This matters when $\mu$ grows slowly.
+
+The central Gaussian Riemann sums \eqref{eq:central} and these tails
+give \eqref{eq:fullkernel}.
+For $t$ in a fixed compact subinterval of $(0,\infty)$, the relevant
+saddles stay in a compact interval, $V\asymp m$, and the same argument
+gives central Gaussian sums and tails with $m$ in place of $\mu$.
+Indices separated by a fixed amount in $k/m$ from $H(t)$ are handled
+without endpoint saddle asymptotics. Integrate their moments on a
+width-$1/m$ interval at $s_-=te^{-h}$ or $s_+=te^h$; a fixed small
+$h>0$ gives an exponent gain at least $cm$. Their individual evaluation
+weights are at most $Cm e^{-cm}$, and there are only $dm+1$ indices.
+This proves the fixed-positive-$t$ assertion.
+\end{proof}
+
+\section{Proofs on the compact base}
+An affine section of $\OO_{\CP^1}(dm)$ is a polynomial of degree at
+most $dm$. Indeed it is entire, and holomorphicity of
+$z^{-dm}f(z)$ at infinity kills all larger Taylor coefficients.
+Apply this observation successively to each variable. The full product
+space has basis $z^ke^m$, $0\leq k_j\leq d_jm$.
+Membership in $\mm_x^q$ is exactly the condition that all Taylor
+coefficients of total degree below $q$ vanish. Its selected basis is thus
+\begin{equation}\label{eq:basis}
+ z^ke^m,\qquad 0\leq k_j\leq d_jm,\quad \sum_jk_j\geq q.
+\end{equation}
+Angular integration makes these global sections orthogonal with squared
+norm $\prod_jJ_{j,m,k_j}$. Every jet of total degree below $q$ is
+globally realized once $q\leq\min_j(d_jm)+1$. Counting these jets gives
+\eqref{eq:dimension}; their number is $\binom{q+n-1}{n}=O(q^n)$.
+This proves global section production and determines the Hilbert norms
+on the full compact manifold.
+
+Let $\mathsf K_j$ be independent integer variables with laws
+$\Pr(\mathsf K_j=k)=w_{j,m,k}(t_j)/K_{j,m}(t_j)$.
+The exact global kernel identity is
+\begin{equation}\label{eq:probability}
+ B_m(z)=\left(\prod_jK_{j,m}(t_j)\right)
+ \Pr\left\{\sum_j\mathsf K_j\geq q\right\}.
+\end{equation}
+At the observations of Theorem~\ref{thm:base},
+$\mu_j\to\infty$, $\mu_j=o(m)$ and $mG_j(t_j)\sim r_j\alpha_jq$.
+Lemma~\ref{lem:moments} gives the product amplitude in
+\eqref{eq:transition}. It also gives the Gaussian law of the normalized
+sum: on bounded product intervals the central estimates are Riemann
+sums for the product Gaussian density; the tails just proved make the
+complement arbitrarily small. A half-space boundary has zero Gaussian
+measure, so enclosing it in a strip of small Gaussian mass proves
+\[
+ \frac{\sum_j\mathsf K_j-\sum_j\mu_j}{\sqrt V}
+ \Longrightarrow N(0,1).
+\]
+A linear combination of independent standard Gaussians whose squared
+coefficients sum to one is standard Gaussian, by an orthogonal change
+of variables in $e^{-|v|^2/2}$. The moving threshold tends to $-\tau$,
+and its lattice spacing tends to zero. Equation~\eqref{eq:probability}
+now proves the local assertion.
+
+On \eqref{eq:homogeneous}, expansion \eqref{eq:expansion} gives
+\[
+ \sum_j\mu_j=T_m+\Delta_m,\qquad
+ \Delta_m=\sum_j(r_j+1)\varepsilon_j mt_j^{r_j+1}
+              +O\left(\sum_jmt_j^{2r_j}\right),\qquad V\sim Rq.
+\]
+Since $r_j\geq2$, each remainder is little-o of its own positive
+correction. Hence
+\[
+ \frac{\Delta_m}{\sqrt{Rq}}=(1+o(1))\sum_j
+ \frac{(r_j+1)\varepsilon_j(\alpha_j/r_j)^{1+1/r_j}}{\sqrt R}
+ q^{1/2+1/r_j}m^{-1/r_j}.
+\]
+This proves the three ranges in Proposition~\ref{prop:shift}.
+In the supercritical case tightness of the normalized sum makes the
+selected probability tend to one. Also $a(t)\to1$ and
+$g_j(t_j)/(r_j^2t_j^{r_j-1})\to1$ in every case.
+If the growth ratio fails to tend to zero, pass to a subsequence with
+a positive finite or infinite limit; positivity of the displayed constants
+then disproves the unshifted law, for example at $\tau=0$.
+
+For the measure assertion, in the affine chart
+\[
+ \omega=\sum_j\frac{g_j(t_j)}\pi\dA_j,\qquad
+ \frac{\omega^n}{n!}=\prod_j\frac{g_j(t_j)}\pi\dA_j,
+ \qquad \int_Y\omega^n/n!=D.
+\]
+The last identity follows from
+$\int_0^\infty g_j(t)\,dt=H_j(\infty)-H_j(0)=d_j$.
+The full kernel is $\prod_jK_{j,m}$. Lemma~\ref{lem:moments} gives
+almost-everywhere convergence of its $m^{-n}$ density relative to
+$\nu_Y$ to that of $\omega^n/n!$; the omitted coordinate divisors
+have zero smooth-volume measure. Its mass is
+$\prod_j(d_jm+1)/m^n\to D$. If $f_m,f$ are these nonnegative
+densities, then $\min(f_m,f)\to f$ almost everywhere and is dominated
+by $f$. Therefore
+\[
+ \int|f_m-f|\,\nu_Y
+ =\int f_m\nu_Y+\int f\nu_Y-2\int\min(f_m,f)\nu_Y\longrightarrow0.
+\]
+Finally the full-minus-selected kernel is nonnegative and has integral
+$\binom{q+n-1}{n}=o(m^n)$ by orthogonal decomposition. This proves
+\eqref{eq:measure}.
+
+\section{Non-descending selectors and exact fibration transfer}
+Let $\pi:X\to Y$ be a surjective holomorphic submersion of compact
+complex manifolds with connected fibers of dimension $f\geq1$.
+Write $N=n+f$ and $E=\pi^*L$, $h_E=\pi^*h$. Fix a Hermitian
+form $\omega_X$ on $X$ and a smooth positive volume $\nu_X$ satisfying
+\begin{equation}\label{eq:matched}
+ \pi_*\nu_X=\nu_Y.
+\end{equation}
+Choose $p\in\pi^{-1}(x)$ and adapted holomorphic coordinates $(z,w)$
+centered at $p$. Let $\chi_p$ equal $\log(|z|^2+|w|^2)$ on a
+small coordinate ball, be smooth away from $p$, and be cut off to zero
+outside a larger ball. Define
+\begin{equation}\label{eq:selector}
+ \varphi_m=\frac{q_m+N-1}{m}\chi_p,\qquad
+ \II_m=\II(m\varphi_m).
+\end{equation}
+Here $\II(\Psi)$ uses $|F|^2e^{-\Psi}$ local integrability, with
+no extra factor two in the exponent. The selector chooses the section
+space; the Hilbert norm below remains smooth.
+
+\begin{theorem}\label{thm:fibration}
+For all large $m$, $\varphi_m$ is $\omega_X$-plurisubharmonic and
+$\II_m=\mm_p^{q_m}$. Both its pole and its ideal fail to descend.
+Nevertheless pullback gives an exact isometric identification
+\[
+ H^0(X,E^m\otimes\II_m)=\pi^*V_m,
+ \qquad \|\pi^*s\|_{h_E^m,\nu_X}=\|s\|_{h^m,\nu_Y}.
+\]
+Consequently $B_{X,m}=B_m\circ\pi$ and all local laws above transfer
+to every upstairs sequence projecting to an admissible base observation.
+The section-growth exponent is $n$, rather than $N$, and
+\begin{equation}\label{eq:lifted}
+ m^{-n}B_{X,m}\nu_X\longrightarrow
+ \left(\frac{\omega^n/n!}{\nu_Y}\circ\pi\right)\nu_X
+ \quad\text{in total variation}.
+\end{equation}
+Division by $\dim V_m$ instead gives the probability measure obtained
+by dividing the limit by $D$.
+\end{theorem}
+
+\begin{proof}
+The cutoff logarithm is plurisubharmonic near its sole pole; on the
+cutoff annulus its negative Hessian is bounded. Thus
+$\ddc\chi_p\geq-C\omega_X$ globally. Since
+$(q_m+N-1)/m\to0$, \eqref{eq:selector} is $\omega_X$-psh eventually.
+
+A nonzero holomorphic germ in $N$ variables has a first homogeneous
+Taylor term of degree $\ell$. Its squared modulus averaged on a sphere
+of radius $R$ is $cR^{2\ell}(1+o(1))$, $c>0$; the initial polynomial
+has nonzero squared spherical integral and the higher terms are uniformly
+smaller. Its weighted radial integral is finite precisely when
+\[
+ \int_0^{R_0}R^{2\ell}R^{-2(q+N-1)}R^{2N-1}\,dR
+ =\int_0^{R_0}R^{2\ell-2q+1}\,dR<\infty,
+\]
+or $\ell\geq q$. Smooth positive volume factors do not change this.
+Away from $p$ the weight is smooth. Hence $\II_m=\mm_p^q$, a
+coherent ideal generated locally by degree-$q$ monomials.
+The selector is infinite at $p$ and finite at other points of the same
+positive-dimensional fiber. A pulled-back ideal would impose the same
+base constraint at each point of that fiber, whereas this ideal is the
+unit ideal except at $p$. Neither descends.
+
+Every section of $\pi^*L^m$ descends. Over a trivializing base open
+set its coefficient is holomorphic and constant on each connected compact
+fiber, by the maximum modulus principle. Local holomorphic sections of
+the submersion show that the resulting base coefficient is holomorphic;
+fiberwise constancy makes these coefficients glue. In adapted coordinates
+the pulled-back coefficient is $f(z)$, independent of $w$, so its order
+at $p$ equals its order at $x$. This proves the selected-space equality.
+Condition~\eqref{eq:matched} gives the norm equality by integration
+along fibers. Pulling back an orthonormal basis proves the kernel identity.
+
+If $b_m,b$ are the base densities in \eqref{eq:measure}, the corresponding
+upstairs densities are $b_m\circ\pi,b\circ\pi$. Their $L^1$ difference
+is exactly $\int_Y|b_m-b|\nu_Y$ by \eqref{eq:matched}, proving
+\eqref{eq:lifted}. Dimension equality and \eqref{eq:dimension} give
+the intrinsic exponent and the final probability normalization.
+\end{proof}
+
+The matched-volume hypothesis is nonempty for every such submersion.
+Start from any smooth positive volume $\mu_X$. Its pushforward is
+$b\nu_Y$ with $b$ smooth and positive: in finitely many submersion
+boxes, a partition of unity compactly supported in the boxes reduces
+fiber integration to integrals of smooth compactly supported densities
+in $w$. Differentiation under these integrals proves smoothness, and
+nonempty fibers give positivity. Set
+\[
+ \nu_X=\mu_X/(b\circ\pi).
+\]
+Then \eqref{eq:matched} holds. In particular $X=Y\times F$ for any
+compact connected Hermitian $F$ is a realization; $F$ may be non-K\"ahler.
+Product volumes with fiber mass one are matched. Nonproduct matched
+volumes include $W(y,u)\nu_Y\nu_F$ with $W>0$ and
+$\int_FW(y,u)\nu_F=1$ for all $y$.
+
+For an arbitrary smooth positive volume $\nu'_X$, the exact identity is
+\[
+ \|\pi^*s\|^2_{\nu'_X}=\int_Y|s|_{h^m}^2\,\pi_*\nu'_X.
+\]
+Thus the transformed base volume, rather than the original product volume,
+governs the kernel. The numerical local constants proved here require
+the stated matched volume; the displayed identity alone does not give a
+new local theorem for arbitrary transformed volumes.
+
+\section{Scope}
+The base theorem treats the specified separable radial compact metrics,
+their genuinely nonzero smooth remainders, ordinary total-order point
+ideals, and interior energy allocations. It proves global comparison
+through exact global monomials and uniform compact moments. Mixed or
+angular remainders, other bases and observation faces require further
+analysis. Its homogeneous-center range is sharp within this class.
+
+The fibration theorem requires pullback bundles and metrics, compact
+connected fibers, and a matched smooth norm. The isolated moving selector
+gives an explicit non-descending singularity with exactly computable
+selected sections. Arbitrary fiber selectors can impose different base
+constraints; singular Hilbert weights and disconnected fibers are outside
+the theorem. The lifted limit retains the chosen conditional fiber volume
+and is not an ambient-dimensional Monge--Amp\`ere measure. These explicit
+sufficient conditions do not close the unrestricted higher-dimensional
+programme or classify arbitrary fiber-selected singularities.
+\end{document}
