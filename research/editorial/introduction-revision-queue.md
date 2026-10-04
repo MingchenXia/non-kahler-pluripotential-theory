@@ -4,7 +4,7 @@ This is a new whole-book editorial pass, separate from the mathematical chapter-
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
 
-Current next unit after checkpoint 388: Directly review the preserved incoming S13 flow-compatible incomplete-metric proof, including exact initial/resolution/divisor/discrepancy/residual/class/volume identities and relative-energy dependencies, before adoption or closure. Preserve the distinct simultaneous-nefness and actual evolving-flow questions. Then consolidate the P21/kernel/jet overview and continue recent primary-paper reading.
+Current next unit after checkpoint 389: Independently review incoming P15 parallelizable-background cone construction, exact domain and positivity assertions; preserve supplied originals before any adoption. Then consolidate P21/kernel/jet exposition and resume exact primary reading and recent related arXiv directions. Joint nef/compatibility and evolving-flow refinements stay open.
 
 | Chapter | Source | Sections and subsections | Status |
 |---|---|---:|---|

@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 388: Directly review the preserved incoming S13 flow-compatible incomplete-metric proof, including exact initial/resolution/divisor/discrepancy/residual/class/volume identities and relative-energy dependencies, before adoption or closure. Preserve the distinct simultaneous-nefness and actual evolving-flow questions. Then consolidate the P21/kernel/jet overview and continue recent primary-paper reading.
+Current next unit after checkpoint 389: Independently review incoming P15 parallelizable-background cone construction, exact domain and positivity assertions; preserve supplied originals before any adoption. Then consolidate P21/kernel/jet exposition and resume exact primary reading and recent related arXiv directions. Joint nef/compatibility and evolving-flow refinements stay open.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

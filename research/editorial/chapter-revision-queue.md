@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current next unit after checkpoint 388: Directly review the preserved incoming S13 flow-compatible incomplete-metric proof, including exact initial/resolution/divisor/discrepancy/residual/class/volume identities and relative-energy dependencies, before adoption or closure. Preserve the distinct simultaneous-nefness and actual evolving-flow questions. Then consolidate the P21/kernel/jet overview and continue recent primary-paper reading.
+Current next unit after checkpoint 389: Independently review incoming P15 parallelizable-background cone construction, exact domain and positivity assertions; preserve supplied originals before any adoption. Then consolidate P21/kernel/jet exposition and resume exact primary reading and recent related arXiv directions. Joint nef/compatibility and evolving-flow refinements stay open.
 
 | Chapter | Source | This cycle |
 |---|---|---|

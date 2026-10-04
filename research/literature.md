@@ -513,3 +513,7 @@ The author-supplied compact radial class is directly checked and integrated: ord
 ## Nef big incomplete cusp — checkpoint388
 
 The author-supplied385-line construction is checked twice and integrated with exact primary passage review, positive local regularizations and direct shell energies. Mere nef-big completeness fails; flow-compatible S13 remains open. Six exact versions acquired, not six full-document reviews; dated386 listing coverage carried, no exhaustive current absence claim. Bibliography and source manifests unchanged. [Review](editorial/nef-incomplete-cusp-388.md).
+
+## Compatible initial data and incompleteness — checkpoint389
+
+The394-line author construction is directly read twice and integrated with exact fixed-volume/resolution identities, internal minimal-reference proof and canonical relative energy. Original S13 is resolved in its two separate regimes; joint nef/compatibility and actual evolving flows remain further questions. Precise DNG/BEGZ passage reading is recorded, not full-paper review or fresh listing coverage. No bibliography or source-manifest changes. [Review](editorial/flow-compatible-incomplete-metric-389.md).

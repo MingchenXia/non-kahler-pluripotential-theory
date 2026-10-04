@@ -116,3 +116,7 @@ Checkpoint 387 integrates the directly checked S14 compact radial point-jet clas
 ## Nef big incomplete cusp — checkpoint388
 
 All48 scoped obligations pass; exact local regularizations, smooth positive pole cancellation, full radial mass, bounded shell energy, comparison with infinite unweighted measure, generic-null-curve incompleteness and arbitrary cusp paths are reconstructed. The ordinary-minimal and exact flow-compatible boundaries remain explicit. [Audit](audits/nef-incomplete-cusp-388.json).
+
+## Compatible initial data and incompleteness — checkpoint389
+
+All55 scoped obligations and six exact symbolic identities pass. Exact fixed volume, initial Kähler residual, minimal reference, mass72 rather than cup square68, canonical cutoff energy and generic exceptional-curve incompleteness are reconstructed. [Audit](audits/flow-compatible-incomplete-metric-389.json). Stronger joint/evolving-flow scopes are not inferred.

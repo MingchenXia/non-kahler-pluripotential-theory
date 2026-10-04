@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint389 — Compatible initial data and incompleteness
+
+[Review](research/editorial/flow-compatible-incomplete-metric-389.md): Subsection27.14.2 independently reconstructs the exact smoothing-compatible incomplete auxiliary metric. Complete supplied/book reads,55 direct obligations and32 selected final pages pass. Three successful clean authoring builds have actual live PDF/homepage/Pages verification;1094 printed pages. Original S13 is resolved in its two separate regimes; joint nef/compatibility and actual evolving flows remain further questions. All original formal statements and catalogue descriptions stay exact;22 formal plus18 supplemental directions open. Final native catalogue preview remains unverified. Fresh reconstruction passes with298 exact book sources, all1120+17 page texts matching and1999 checksum-validated archive entries; private synchronization follows; incoming P15 is fetched, not adopted.
+
 ## Checkpoint388 — Nef big incomplete cusp
 
 [Review](research/editorial/nef-incomplete-cusp-388.md): Subsection27.14.1 directly verifies the supplied nef-big incomplete-cusp counterexample. Complete supplied/book reads,48 obligations and44 selected final pages pass. One successful full-book build has actual live PDF/homepage/Pages verification;1088 printed pages. Mere nefness and bigness are disproved for completeness; exact smoothing-compatible S13 remains open. All original formal questions remain exact;22 formal plus19 supplemental directions open. Native catalogue compilation remains unverified. Fresh reconstruction passes with297 exact book sources, all1114+17 page texts matching and1993 checksum-validated archive entries; authorized private synchronization follows.
