@@ -1,0 +1,212 @@
+\section{Logarithmic equations on normalized curves}
+\label{sec:unibranch-curve-equations}
+\index{Unibranch space!torus normalization}
+
+On a curve the pulled-back background can be degenerate, but its total mass still determines the equation. A periodic Green function compensates for that degeneracy. The normalization also gives direct control of descent, the pole atoms and continuity.
+
+Let $X$ be a connected compact reduced unibranch curve with finite bijective normalization
+\[
+ \pi:E=\mathbb C/\Lambda\longrightarrow X.
+\]
+It is biholomorphic outside a finite set. Let $h$ be a Hermitian form in the local-embedding sense used in \cref{def:space-theta-psh}. In the flat coordinate $z=x+\mathrm iy$ set
+\[
+ dA=dx\,dy,\qquad V=\int_EdA,\qquad
+ \beta_0=dA/V,\qquad \beta=\pi^*h=b\beta_0.
+\]
+Here $b$ is smooth and nonnegative, positive over $X_{\rm reg}$, and may vanish at the other points. Put $H=\int_E\beta>0$. Every two-form on a curve is closed; this feature is essential to the following construction.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:torus-logarithmic-green}
+There is a real mean-zero periodic distribution $G$, smooth off zero, such that
+\begin{equation}\label{eq:torus-logarithmic-green}
+ \ddc G=\delta_0-\beta_0,\qquad
+ G(z)=\log|z|^2+\text{a smooth function near }0.
+\end{equation}
+For $r\in L^p(E,\beta_0)$, $p>1$, its convolution satisfies
+\[
+ \ddc\bigl(G*(r\beta_0)\bigr)
+       =\left(r-\int_Er\beta_0\right)\beta_0.
+\]
+The convolution is bounded and continuous. It is smooth if $r$ is smooth.
+\end{lemma}
+\begin{proof}
+The book's normalization gives $\ddc v=(\Delta v)/(4\pi)\,dA$ and $\ddc\log|z|^2=\delta_0$, as in \cref{lem:planar-multiplier-ideal}. Cut off this logarithm in a coordinate disk, with the cutoff equal to one near zero, obtaining $L$. Then $\ddc L=\delta_0+q\beta_0$, with $q$ smooth and $\int_Eq\beta_0=-1$ by distributional Stokes.
+
+Let $e_\xi$ be the torus characters, with $-\Delta e_\xi=\lambda_\xi e_\xi$. The nonconstant characters have $\lambda_\xi>0$, growing quadratically on the dual lattice. Define the mean-zero correction by
+\[
+ S_\xi=\frac{4\pi}{V}\frac{(q+1)_\xi}{\lambda_\xi}
+       \quad(\xi\ne0),\qquad S_0=0.
+\]
+Integration by parts gives arbitrarily rapid decay of the numerator. The series and all its derivatives converge uniformly, and $\ddc S=-(q+1)\beta_0$. Conjugate symmetry makes $S$ real. Subtracting the mean of $L+S$ proves \eqref{eq:torus-logarithmic-green}. In particular $G$ belongs to every finite $L^r$.
+
+Convolution uses the group law and Haar probability $\beta_0$. Write $K=G*(r\beta_0)$. Testing against smooth functions and using Fubini proves its distributional equation. Smooth input gives smooth output by the same Fourier argument. For $p'=p/(p-1)$, H\"older gives
+\[
+ \begin{aligned}
+ \|K\|_\infty&\leq\|G\|_{p'}\|r\|_p,\\
+ |K(z+s)-K(z)|
+     &\leq\|r\|_p\|G(\cdot+s)-G\|_{p'}.
+ \end{aligned}
+\]
+Approximation of $G$ by smooth functions proves translation continuity in $L^{p'}$, hence the asserted continuity.
+\end{proof}
+
+Choose finitely many distinct $q_1,\ldots,q_k\in E$ and weights $a_j>0$, allowing the empty list, with
+\[
+ \begin{aligned}
+ A&=\sum_j a_j<H,& M&=H-A,\\
+ \Phi&=G*((H-b)\beta_0),&
+ \Psi&=\Phi+\sum_j a_jG(\cdot-q_j).
+ \end{aligned}
+\]
+The function $\Phi$ is smooth and
+\begin{equation}\label{eq:unibranch-curve-reference}
+ \beta+\ddc\Psi=M\beta_0+\sum_j a_j\delta_{q_j}.
+\end{equation}
+Thus $\Psi$ is a genuine $\beta$-psh potential with precisely these logarithmic poles. The coefficients are measured on the normalization. The proper bijection $\pi$ is a homeomorphism, so define $\psi=\Psi\circ\pi^{-1}$. Its disk inequalities are proved below. Its ordinary type consists of genuine potentials $w\in\PSH(X,h)$ with
+\[
+ w\leq\psi+C,\qquad \psi\leq w+C
+\]
+for a finite constant $C$. These are inequalities of extended values.
+
+\Needspace{15\baselineskip}
+\begin{theorem}\label{thm:unibranch-torus-curve-equation}
+Let $0\leq f\in L^p(E,\beta_0)$ for some finite $p>1$, with $F=\int_Ef\beta_0>0$, and set $\nu=\pi_*(f\beta_0)$. Every genuine potential in the ordinary type of $\psi$ has extended nonpluripolar mass $M$. There is a unique normalized solution in that entire type of
+\[
+ \mathrm{MA}^{\mathrm{ext}}_{X,h}(u)=c\nu,
+ \qquad \sup_Xu=0,
+ \qquad c=\frac{H-A}{F}>0.
+\]
+Every solution in the type, including initially rough solutions with an unknown positive proportionality constant, differs from it by a constant and has the same $c$.
+
+The solution is real-continuous off its finite pole set, and continuous into $\mathbb R\cup\{-\infty\}$ at the poles with the order topology. Its residual relative to $\psi$ extends to a continuous real function on $X$. For the empty pole list, the solution itself is real-continuous everywhere. The type and equation are independent of every resolution and common refinement. The measure $\nu$ is nonpluripolar.
+\end{theorem}
+\begin{proof}
+Set $c=M/F$ and
+\[
+ v=G*((cf-M)\beta_0),\qquad U=\Psi+v.
+\]
+The lemma gives a bounded continuous $v$ and the positive current
+\begin{equation}\label{eq:unibranch-curve-solution-current}
+ \beta+\ddc U=cf\beta_0+\sum_j a_j\delta_{q_j}.
+\end{equation}
+In each disk add a smooth local primitive of $\beta$. The positive distributional Laplacian then has its genuine subharmonic representative. The continuity off the poles and the explicit logarithmic values identify it with the displayed $U$. The same argument applies to $\Psi$. The supremum $S=\sup_EU$ is finite, so put $u=(U-S)\circ\pi^{-1}$.
+
+Every holomorphic disk $g:\Delta\to X$ lifts holomorphically to $\widetilde g=\pi^{-1}\circ g$. For a nonconstant disk the inverse image of the finite singular set is discrete. Off that set the lift is holomorphic. The homeomorphism $\pi^{-1}$ makes $\widetilde g$ continuous on the entire disk. Near an omitted point its image therefore stays in a bounded coordinate neighborhood of $E$, and the one-variable removable-singularity theorem extends it holomorphically. Constant disks lift constantly. A nonconstant disk cannot have image in a finite set.
+
+\Needspace{7\baselineskip}
+Choose a smooth local primitive $p$ of $\beta$ near the lifted image. Then $p\circ\widetilde g$ is a primitive of $g^*h$, and
+\[
+ u\circ g+p\circ\widetilde g=(U-S+p)\circ\widetilde g
+\]
+is subharmonic or identically $-\infty$. Composition follows from decreasing smooth local regularizations and the holomorphic chain rule for the Laplacian. Any other disk primitive differs harmonically. These are exactly the disk tests of \cref{def:space-theta-psh}; they also prove descent of $\Psi$. A constant disk in a pole has the allowed identically $-\infty$ restriction. A nonconstant lift meeting $q_j$ with order $\ell$ has coefficient $\ell a_j$.
+
+The homeomorphism proves continuity off the poles. Near a pole the smooth logarithmic remainder of $\Psi$ and bounded continuous $v$ give the extended-value continuity. The residual is the descent of $v-S$, including at the poles, without subtracting two infinite values. The solution belongs to the stated ordinary type.
+
+For its mass and uniqueness, let $w$ be any genuine member of that type and put $W=w\circ\pi$. The normalization coordinate disks give genuine $\beta$-psh pullback. The two type inequalities make $W$ locally bounded away from $Q=\{q_j\}$ and give
+\[
+ W=a_j\log|z-q_j|^2+O(1)
+\]
+at each pole, with canonical value $-\infty$. The positive Radon measure $T_W=\beta+\ddc W$ has total mass $H$ by distributional Stokes. Its atom at $q_j$ has weight exactly $a_j$. This follows from the planar atom identity of \cref{lem:planar-multiplier-ideal}; explicitly, the circular mean $m(r)$ after smooth local correction satisfies
+\[
+ m'(r)=\frac{2T_W(B_r)}r
+\]
+for almost every $r$, by the divergence theorem and regularization. If $\tau=T_W(\{q_j\})$, integration gives $m(r)/\log r^2\to\tau$. The bounded logarithmic remainder gives the same limit $a_j$.
+
+The one-dimensional truncation product is therefore
+\[
+ \langle\beta+\ddc W\rangle=\mathbf1_{E\setminus Q}T_W.
+\]
+Indeed a sufficiently low truncation equals $W$ on each relatively compact set avoiding $Q$; the indicator removes the poles. Its mass is $H-A=M$ for the entire type. For \eqref{eq:unibranch-curve-solution-current}, removing the atoms leaves $cf\beta_0$. The definition \eqref{eq:space-extended-ma} gives the asserted equation downstairs. Locally pluripolar sets pull back to negative-infinite sets of genuine quasi-subharmonic functions; these have flat area zero. Hence $\nu$ is nonpluripolar.
+
+If $w$ solves the equation with a positive constant $d$, its total mass gives $dF=M$, so $d=c$. The Borel homeomorphism and the fixed atoms then imply $T_W=T_U$. Thus $\ddc(W-U)=0$ as an $L^1$ distribution. Every nonconstant Fourier coefficient vanishes, so the difference is constant almost everywhere. Genuine subharmonic representatives are determined by shrinking disk averages. Consequently their canonical values differ by that constant everywhere, and the same is true downstairs. This includes rough competitors in the full type.
+
+\Needspace{7\baselineskip}
+Finally a resolution $\rho:Y\to X$ factors through $E$ by the disk-lifting argument. The resulting proper holomorphic map $Y\to E$ has generic degree one. For smooth compact curves, the multiplicities in a fiber sum to the degree, so every fiber is a singleton of multiplicity one. The map is biholomorphic. The same holds for every common refinement, proving the last independence assertion directly.
+\end{proof}
+
+The density hypothesis is relative to flat area on $E$. On $X_{\rm reg}$ the density of $\nu$ relative to $h$ is $(f/b)\circ\pi^{-1}$. Both measures give the finite singular set zero mass, and this formula is not used there. No positive lower bound for $b$ or bounded downstairs density has been imposed.
+
+\subsection{A projective cusp with a degenerate pullback}
+\label{subsec:unibranch-projective-cusp}
+
+The following example has genus-one normalization and a nonnormal singularity. Its background and equation can both be computed explicitly.
+
+\Needspace{12\baselineskip}
+\begin{example}\label{ex:unibranch-elliptic-cusp}\index{Unibranch space!projective cusp}
+There is a projective unibranch curve with one ordinary cusp, normalized by $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$, for which the restricted Fubini--Study background has mass $H=6$. A weight-one normalization pole at the cusp gives the entire ordinary type mass five. With
+\[
+ f(z)=1+\tfrac12\cos(2\pi\operatorname{Re}z),\qquad
+ \nu=\pi_*(f\beta_0),
+\]
+the normalized equation has $c=5$. Its residual is continuous on the curve, although the regular-locus density relative to the background is unbounded at the cusp. That density belongs to $L^r(X,h)$ exactly for $1\leq r<2$.
+\end{example}
+\begin{proof}
+For the square lattice define
+\[
+ x(z)=z^{-2}+\sum_{\substack{\lambda\in\mathbb Z+\mathrm i\mathbb Z\\\lambda\ne0}}
+       \bigl((z-\lambda)^{-2}-\lambda^{-2}\bigr),
+ \qquad y=x'.
+\]
+The summands are $O(|\lambda|^{-3})$ on compacta away from the lattice, so the series converges normally. Opposite lattice points give evenness of $x$. The differentiated series is absolutely normally convergent and reindexing makes $y$ periodic. Thus $x(z+\omega)-x(z)$ is constant for $\omega=1,\mathrm i$; evaluation at $-\omega/2$ and evenness make it zero. Both functions are meromorphic on $E$, with their only poles at zero and expansions
+\[
+ x=z^{-2}+a_2z^2+a_4z^4+\cdots,
+ \qquad y=-2z^{-3}+2a_2z+4a_4z^3+\cdots.
+\]
+Laurent cancellation leaves an elliptic function with no poles and zero constant term. The maximum principle gives
+\begin{equation}\label{eq:unibranch-elliptic-cubic}
+ y^2=4x^3-g_2x-g_3,
+ \qquad g_2=20a_2,\quad g_3=28a_4.
+\end{equation}
+\Needspace{7\baselineskip}
+The argument principle on a translated fundamental parallelogram gives two zeros of $x-c$ counted with multiplicity for every finite $c$. Its fibers are therefore $z,-z$. If $y(z)=0$, the local multiplicity is at least two. Distinct $z,-z$ would give at least four zeros, so $z=-z$ on $E$, the multiplicity is exactly two and $x''(z)\ne0$. Since $y$ is odd, $(x,y)$ is injective and immersive away from zero: use $dx$ when $y\ne0$, and $dy=x''dz$ otherwise.
+
+Define
+\[
+ \pi(z)=[1:x:y:x^2:x^3],\qquad
+ \pi(0)=[0:0:0:0:1].
+\]
+In the last chart its holomorphic coordinates are
+\[
+ [s^3:s^2:t:s:1],\qquad
+ s=1/x=z^2+O(z^6),\qquad t=y/x^3=-2z^3+O(z^7).
+\]
+Equation \eqref{eq:unibranch-elliptic-cubic} becomes
+\[
+ t^2=s^3(4-g_2s^2-g_3s^3).
+\]
+Dividing $t$ by the analytic square root of the nonvanishing factor gives the ordinary cusp $t'^2=s^3$. Choose the local parameter $\zeta$ so that $s=\zeta^2$, $t'=\zeta^3$. Its local ring is $\mathbb C\{\zeta^2,\zeta^3\}$, with normalization $\mathbb C\{\zeta\}$. To see this directly, division by $t'^2-s^3$ gives $A(s)+t'B(s)$; the even and odd parts identify the image ring. Its fraction field contains $\zeta$, integral because $\zeta^2=s$, and the larger ring is a finite module generated by $1,\zeta$. An integral meromorphic germ cannot have negative order: its highest power in a monic equation would have strictly smallest order. Thus this is the full integral closure.
+
+The image is the reduced projective locus
+\[
+ \begin{aligned}
+ Z_1^2&=Z_0Z_3,& Z_1Z_3&=Z_0Z_4,\\
+ Z_3^2&=Z_1Z_4,&
+ Z_2^2&=4Z_0Z_4-g_2Z_0Z_1-g_3Z_0^2.
+ \end{aligned}
+\]
+On $Z_0\ne0$ these equations give the affine cubic graph, and the degree-two fibers of $x$ give both square-root values of $y$. On $Z_0=0$ they force $Z_1=Z_3=Z_2=0$, leaving just $\pi(0)$. In the last chart they give the displayed cusp exactly. The finite local module at the cusp and the biholomorphic charts elsewhere show that $\pi$ is finite. It is therefore the bijective normalization of a connected curve smooth away from this one cusp.
+
+For restricted Fubini--Study curvature, $\beta=b\beta_0$ is positive away from zero and
+\[
+ C_1|z|^2\leq b(z)\leq C_2|z|^2
+\]
+near zero. The last-chart derivatives vanish there, and $ds=2z\,dz+O(z^5)dz$ supplies the leading term. On the complement of zero the Fubini--Study potential is
+\[
+ L=\log(1+|x|^2+|y|^2+|x|^4+|x|^6)
+   =-6\log|z|^2+\text{a smooth function near }0.
+\]
+Globally $\ddc L=\beta-6\delta_0$, so pairing with one gives $H=6$. The full normalization has generic degree one; the degree two of $x$ adds no measure factor.
+
+For the weight-one pole, the reference and continuous correction are
+\[
+ \Psi=G*((6-b)\beta_0)+G,
+ \qquad v=-\frac5{2\pi}\cos(2\pi\operatorname{Re}z).
+\]
+Direct differentiation gives $\beta+\ddc\Psi=5\beta_0+\delta_0$ and $\ddc v=(5f-5)\beta_0$. Since $F=1$, \cref{thm:unibranch-torus-curve-equation} gives $c=5$, the mass and full-type uniqueness. The residual is the descent of $v-\sup_E(\Psi+v)$. Finally $f/b$ is comparable to $|z|^{-2}$ near zero, and its $r$th power integrated against $\beta=b\beta_0$ is comparable to
+\[
+ \int_0^\epsilon \rho^{3-2r}\,d\rho.
+\]
+This is finite exactly when $r<2$, with logarithmic divergence at equality.
+\end{proof}
+
+The cusp is nonnormal and lies outside normal log-terminal hypotheses. It is also not an irreducible reduced projective cone of dimension one: such a cone has a single-point base and is a projective line, while the normalization here has genus one. With the empty pole list the same data instead give $c=6$ and $v=-(3/\pi)\cos(2\pi\operatorname{Re}z)$, and the solution is real-continuous even at the cusp. These are dimension-one sufficient conditions; the general singular-space problem in \cref{qu:singular-space-equations-program} remains open.
