@@ -2775,3 +2775,5 @@ Added the ten-page original-task P22 paper, full accepted argument and immutable
 ## 4 October 2026 — Checked standalone S14 sufficient conditions
 
 Added the eight-page anisotropic radial growing-jet and fibration-transfer paper, its complete accepted argument and immutable scoped review. Three generated notes pass correctness/source/blind reconstruction; the candidate passes requirements. All original and independent proofs, reports and final source were read. Two local compilation passes and visual inspection of all final pages find no unresolved references or overfull boxes. Native compilation remains unverified. The unrestricted S14 direction remains open; the older INCONCLUSIVE review and concurrent book work are preserved. No book rebuild or catalogue-wide closure is claimed.
+
+Author P23 commit f3d8f9b99ef12833646363db52dc294626cdfe6f is merged with all six research files, metadata blocks and all 306 checked book files preserved. Full independent proof review is pending; no P23 result or model verdict is adopted. This metadata-only intake does not rebuild the book.

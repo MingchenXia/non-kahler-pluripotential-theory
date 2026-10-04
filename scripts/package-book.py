@@ -376,6 +376,8 @@ for name in (
     "research/source-disposition-395.json",
     "research/audits/pencil-ideal-kernel-limits-395.json",
     "research/editorial/pencil-ideal-kernel-limits-395.md",
+    "research/papers/P23-unibranch-torus-normalization.tex",
+    "research/papers/P23-unibranch-torus-normalization.review.md",
     "research/papers/P20-convex-spectrum-partial-kernels.tex",
     "research/papers/P20-convex-spectrum-partial-kernels.review.md",
     "research/audits/invariant-mass-reference-densities-391.json",
