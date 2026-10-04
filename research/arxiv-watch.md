@@ -204,3 +204,7 @@ Subsection 26.10.5 computes exact point-ideal spaces for every positive coeffici
 ## Mesoscopic growing jets — checkpoint 385
 
 Original P22 is resolved at compact-curve scope after direct proof review. The existing Demailly July 2011 source is reread at pages 33–35, including its pointwise singular-metric estimate and Hilbert proof. No new bibliography entry, whole-primary-book review or listing scan. Prior coverage and gaps remain. S14/general fiber-selected transfers remain open. [Review](editorial/mesoscopic-growing-jets-385.md).
+
+## Two-point boundary — checkpoint 386
+
+The two-point blowup has positive reference mass, no strict smooth residual gauge and exact nonzero defect of degree q-1. Direct jet interpolation uses the stated degree bound. All eight current arXiv roots retrieved on 4 October equal checkpoint 382 and have complete showing counts; prior title coverage and replacement/dependency gaps remain. No new full primary adoption. [Review](editorial/two-point-fiber-integrability-386.md).

@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 385: Check incoming author research before writing. Develop the two-point exceptional blowup model with semipositive positive-volume residual at the coefficient-sum boundary, direct simultaneous jet interpolation and sharp nonzero section defect. Continue higher-dimensional/fibration interfaces and recent primary-paper checks within their verified scope.
+Current next unit after checkpoint 386: Check incoming author research. Reread the expanded P21 overview and its history interface for coherence; consolidate repeated descriptions while preserving the exact criteria, examples, original questions and P22 resolution. Then continue precise primary-paper reading and related open directions.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 

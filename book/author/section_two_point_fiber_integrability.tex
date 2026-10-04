@@ -1,0 +1,105 @@
+\subsection{A positive-volume boundary with nonzero defect}
+\label{sec:two-point-fiber-integrability}
+
+With two exceptional divisors, the residual can lose strict positivity while retaining positive top volume. Unlike the one-point fixed-divisor example, the local order gap can then produce a nonzero defect of the full allowed degree. We first give the elementary simultaneous-jet calculation needed to count the spaces.
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:finite-point-jet-interpolation}
+Let $x_1,\ldots,x_N$ be distinct points of $\mathbb P^q$, $q\geq1$, and let $d,j_1,\ldots,j_N$ be nonnegative integers with $\sum_i j_i\leq d+1$. The evaluation map to jets of order less than $j_i$ at each $x_i$ is surjective. In particular,
+\[
+ h^0\left(\mathbb P^q,\mathcal O(d)\otimes\bigcap_i\mathfrak m_{x_i}^{j_i}\right)
+ =\binom{d+q}{q}-\sum_i\binom{j_i+q-1}{q},
+\]
+where $\binom{q-1}{q}=0$.
+\end{lemma}
+\begin{proof}
+Discard the zero orders. Choose an affine chart containing all the remaining points and use its trivialization of $\mathcal O(d)$. For each pair $i\ne k$, choose an affine linear function $L_{ik}$ vanishing at $x_k$ and nonzero at $x_i$. Set
+\[
+ Q_i=\prod_{k\ne i}L_{ik}^{j_k}.
+\]
+For any prescribed jet $b_i$, divide it by the invertible jet of $Q_i$ at $x_i$ and choose its Taylor polynomial $T_i$ of degree at most $j_i-1$. The polynomial $Q_iT_i$ has the required jet at $x_i$ and vanishes to order at least $j_k$ at every other $x_k$. Its degree is at most $\sum_kj_k-1\leq d$. Thus $\sum_iQ_iT_i$, homogenized to degree $d$, realizes all the jets. If every order is zero the target is zero. In $q$ local variables the number of monomials of total degree below $j_i$ is $\binom{j_i+q-1}{q}$, which gives the dimension formula.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{example}\label{ex:two-point-semipositive-fiber-series}\index{Holomorphic section!two-point boundary defect}
+Let $q\geq2$ and let $\rho:B\to\mathbb P^q$ be the blowup of
+$x_1=[1:0:\cdots:0]$ and $x_2=[0:1:0:\cdots:0]$, with exceptional divisors $E_1,E_2$. Let $\tau_i:B\to\mathbb P^{q-1}$ resolve projection from $x_i$. Use normalized Fubini--Study forms and put
+\[
+ \alpha=\rho^*\omega_{\mathbb P^q},\qquad
+ \gamma_i=\tau_i^*\omega_{\mathbb P^{q-1}},\qquad
+ \kappa=\alpha+\gamma_1+\gamma_2>0.
+\]
+Equip $\mathcal O_B(E_i)=\rho^*\mathcal O(1)\otimes\tau_i^*\mathcal O(-1)$ with its quotient metric, of curvature $\eta_i=\alpha-\gamma_i$, and denote its defining section by $s_i$. Equip
+\[
+ A=\rho^*\mathcal O(2)\otimes\mathcal O_B(E_1+E_2),
+ \qquad \theta=2\alpha+\eta_1+\eta_2
+\]
+with the product metric. For $X=B\times\mathbb P^1$, its projection $\pi$ and a marked fiber point $o$, set
+\[
+ \begin{gathered}
+ R_i=\|\pi^*s_i\|^2,\qquad T=\|s_o\|^2,\\
+ \varphi=\log(R_1^2+T^3)+\log(R_2^2+T^3),\\
+ \omega=4\pi^*\kappa+7\omega_{\mathbb P^1},\\
+ \psi=2\log\|s_1\|^2+2\log\|s_2\|^2,
+ \qquad \beta=\gamma_1+\gamma_2.
+ \end{gathered}
+\]
+Then $\varphi\in\PSH(X,\omega)$, $\psi\in\PSH(B,\theta)$, and
+\[
+ \mathrm{MA}_\theta(\psi)=\beta^q,\qquad
+ \int_B\beta^q=2^q-2>0.
+\]
+No smooth gauge makes $\beta$ strictly positive. Nevertheless, writing $V_m$ and $W_m$ for the selected and reference spaces as above, for every $m\geq1$ their exact images in $H^0(B,A^m)$ are
+\[
+ \begin{aligned}
+ V_m&=s_1^ms_2^m\rho^*H^0\left(\mathbb P^q,\mathcal O(2m)
+                 \otimes\mathfrak m_{x_1}^{m-1}\mathfrak m_{x_2}^{m-1}\right),\\
+ W_m&=s_1^ms_2^m\rho^*H^0\left(\mathbb P^q,\mathcal O(2m)
+                 \otimes\mathfrak m_{x_1}^{m}\mathfrak m_{x_2}^{m}\right).
+ \end{aligned}
+\]
+Their defect and common leading dimension are
+\[
+ \begin{gathered}
+ \dim V_m-\dim W_m=2\binom{m+q-2}{q-1}
+       \sim\frac{2}{(q-1)!}m^{q-1},\\
+ \dim V_m=\frac{2^q-2}{q!}m^q+O(m^{q-1}),\qquad
+ \dim W_m=\frac{2^q-2}{q!}m^q+O(m^{q-1}).
+ \end{gathered}
+\]
+\end{example}
+\begin{proof}
+The simultaneous graph $(\rho,\tau_1,\tau_2)$ is an embedding. Away from the exceptional divisors $\rho$ already embeds; on $E_i$ the map $\tau_i$ distinguishes tangent directions and $\rho$ detects the normal direction. This proves $\kappa>0$. The quotient metric identity is the one-point identity of \cref{ex:exceptional-semipositive-fiber-series}, applied at each center. For each $i$, the common-denominator calculation writes $R_i^2+T^3$ as a sum of squared holomorphic coefficients over the metric denominator for $\mathcal O(2,3)$. Therefore, including the pole set by local psh extension,
+\[
+ \ddc\varphi\geq-4\pi^*\alpha-6\omega_{\mathbb P^1}.
+\]
+It follows that $\omega+\ddc\varphi\geq4\pi^*\beta+\omega_{\mathbb P^1}\geq0$.
+
+Poincar\'e--Lelong gives
+\[
+ \theta+\ddc\psi=\beta+2[E_1]+2[E_2]\geq0.
+\]
+The non-pluripolar product discards the divisors and equals $\beta^q$. Its class is $2H-[E_1]-[E_2]$, with $H=\rho^*c_1(\mathcal O(1))$. As in \cref{ex:modified-point-fiber-series}, $H^q=1$, mixed intersections with $H$ vanish, and $E_i^q=(-1)^{q-1}$. The two exceptional divisors are disjoint. Expansion gives $\int_B\beta^q=2^q-2$.
+
+Let $C$ be the strict transform of the projective line joining the two centers. Both $\tau_i$ are constant on $C$, so $\int_C\beta=0$. Stokes' theorem gives $\int_C(\beta+\ddc u)=0$ for every smooth real $u$, whereas a strictly positive form has positive integral there. This proves the obstruction even though the top volume is positive.
+
+The selector satisfies $\varphi\geq\pi^*\psi$. Its pole set is the disjoint union of $E_i\times\{o\}$. Near either component the other summand is smooth, and
+\[
+ \varphi=\log(|z|^4+|w|^6)+O(1),\qquad
+ E_i=\{z=0\},\quad o=\{w=0\}.
+\]
+Thus $c_i=p_i=2$, $b_{i1}=3$ and $a_i=2/3$. \Cref{thm:crossing-fiber-integrability-band,cor:semipositive-fiber-band} give $W_m=H^0(B,A^m(-2m(E_1+E_2)))$ and the upper inclusion of $V_m$ in $H^0(B,A^m(-(2m-1)(E_1+E_2)))$. The strict local integrability condition is $\ell+1>2m-2/3$, or $\ell\geq2m-1$. Divisibility by these orders suffices in every pole chart by \cref{lem:anisotropic-fiber-integrability}; off the pole set the weight is locally bounded. This proves equality for $V_m$.
+
+Dividing any section of $A^m$ by $s_1^ms_2^m$ gives a section of $\mathcal O(2m)$ off the two centers. Hartogs extension applies at each because $q\geq2$. The pullback of an extended section, multiplied by that fixed factor, agrees with the original everywhere by the identity theorem. A point order $n_i$ gives generic order $m+n_i$ along $E_i$. The two divisor conditions therefore give exactly the point orders displayed in the example. The point ideals have disjoint supports, so their product equals their intersection.
+
+Apply \cref{lem:finite-point-jet-interpolation} with $d=2m$ and orders $m,m$, or $m-1,m-1$. In both cases their sum is at most $d+1$. It gives
+\[
+ \begin{aligned}
+ \dim W_m&=\binom{2m+q}{q}-2\binom{m+q-1}{q},\\
+ \dim V_m&=\binom{2m+q}{q}-2\binom{m+q-2}{q}.
+ \end{aligned}
+\]
+Pascal's identity gives the exact defect; the leading terms give both stated growth laws. For $m=1$ the selected point orders are zero and the defect is already two. For $q=2$ the dimensions are $\dim W_m=(m+1)^2$ and $\dim V_m=m^2+4m+1$.
+\end{proof}
+
+The residual has zero degree on the joining curve at the sum-of-coefficients boundary, but has positive top mass. Thus the bound $O(m^{q-1})$ in the semipositive band criterion cannot in general be improved to $o(m^{q-1})$, even outside the strictly positive residual regime. The selector is finite on most of a fiber over $E_i$ and is $-\infty$ at $o$, so it does not descend up to bounded difference. This example supplies the sufficient data explicitly; it does not provide a necessity criterion for arbitrary fiber selectors.
