@@ -1,0 +1,453 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\ddc}{dd^c}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\V}{\mathcal V}
+\title{Integer degeneration orders in nonclosed projective background cones}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We specify cones of smooth semipositive, possibly nonclosed backgrounds
+on products of projective spaces and their linear blowups. Every
+background in these fixed cones has a common integer degeneration
+order for its Gauduchon variational volume, independently of the
+positive smooth probability and perturbation metric. Quantitative
+bounds follow from the full Gauduchon infimum: an explicit logarithmic
+exceptional-divisor potential compares the background with a closed
+constant-rank form. Product linear blowups preserve the order. For
+specified effective real divisors satisfying explicit cone-preserving
+parameter conditions, we give a necessary and sufficient equality criterion and the
+exact integer gap. Nonclosed exceptional-divisor examples realize
+every jump from one to the dimension minus one. An extension to
+arbitrary modifications with K\"ahler source uses the known closed-nef
+order theorem. These are sufficient conditions for P02, rather than
+a classification of arbitrary nonclosed backgrounds.
+\end{abstract}
+
+\section{The volume and a full-infimum comparison}
+Throughout use $\ddc=(i/(2\pi))\partial\bar\partial$, so
+$\ddc\log|z|^2=\delta_0$ on a transverse disk. Let $M$ be a
+connected compact complex manifold of dimension $n$, $\mu$ a smooth
+strictly positive probability volume and $h$ a smooth positive Hermitian
+form. For a smooth real background $A$ admitting a positive smooth
+potential representative, put
+\[
+ D_\mu(\gamma)=\int_M
+       \left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n,
+ \qquad
+ \lambda_\mu(A)=\inf_{\gamma}
+       \frac{\int_M A\wedge\gamma^{n-1}}{D_\mu(\gamma)},
+ \qquad \V_\mu(A)=\lambda_\mu(A)^n.
+\]
+The infimum ranges over \emph{all} smooth positive Hermitian forms
+$\gamma$ with $\ddc\gamma^{n-1}=0$. No invariant or product
+restriction is imposed on these tests. When $n=1$ the denominator is
+one, and $\lambda_\mu(A)=\int_M A$.
+
+A background $\theta$ is nef here if for every $\varepsilon>0$,
+$\theta+\varepsilon h$ has a positive smooth potential representative.
+Its lower and upper degeneration orders are the liminf and limsup of
+\[
+ \frac{\log\V_\mu(\theta+\varepsilon h)}{\log\varepsilon}
+ \qquad(\varepsilon\downarrow0).
+\]
+The quantitative results below prove that these two orders coincide.
+They concern this variational volume, rather than extrema of
+Monge--Amp\`ere masses over bounded potentials.
+
+\begin{lemma}\label{lem:sandwich}
+Suppose $M$ has a K\"ahler form $\Omega$, and $B$ is a smooth
+closed semipositive $(1,1)$-form. Let $\theta$ be smooth nef and
+assume, for constants $c,C>0$ and a global real $\varphi\in L^1(M)$,
+\[
+ \theta\leq CB,\qquad \theta+\ddc\varphi\geq cB.
+\]
+There are constants $k,K>0$, independent of $0<\varepsilon\leq1$,
+such that
+\[
+ k\lambda_\mu(B+\varepsilon\Omega)
+ \leq\lambda_\mu(\theta+\varepsilon h)
+ \leq K\lambda_\mu(B+\varepsilon\Omega).
+\]
+If $B$ has constant complex rank $r$, there are $L,U>0$ with
+\[
+ L\varepsilon^{n-r}\leq\V_\mu(\theta+\varepsilon h)
+                  \leq U\varepsilon^{n-r}.
+\]
+In particular both orders equal $n-r$.
+\end{lemma}
+\begin{proof}
+Choose $c_h,C_h>0$ with $c_h\Omega\leq h\leq C_h\Omega$.
+For every smooth Gauduchon test, distributional integration by parts
+gives
+\[
+ \int_M\ddc\varphi\wedge\gamma^{n-1}
+       =\int_M\varphi\ddc\gamma^{n-1}=0.
+\]
+The integrals are well defined because $\varphi$ is locally integrable
+and the test is smooth. Positivity of the current lower bound implies
+\[
+ \int_M(\theta+\varepsilon h)\wedge\gamma^{n-1}
+ \geq\min(c,c_h)\int_M(B+\varepsilon\Omega)
+                                      \wedge\gamma^{n-1}.
+\]
+The pointwise upper bound gives the reverse inequality with
+$\max(C,C_h)$. Divide by the identical positive denominator and
+take both infima over the entire test cone.
+
+For the constant-rank assertion set $A_\varepsilon=B+\varepsilon\Omega$.
+The $r$ positive eigenvalues of $B$ relative to $\Omega$ have a
+uniform positive lower bound and finite upper bound. Compactness and
+the positive smooth density $\mu$ give constants $l,u>0$ such that
+\begin{equation}\label{eq:pointwise-volume}
+ l\varepsilon^{n-r}\mu\leq A_\varepsilon^n
+                         \leq u\varepsilon^{n-r}\mu.
+\end{equation}
+For any positive test, matrix arithmetic--geometric mean gives
+\[
+ A_\varepsilon\wedge\gamma^{n-1}
+ \geq\left(\frac{A_\varepsilon^n}{\gamma^n}\right)^{1/n}
+                                                      \gamma^n.
+\]
+The lower bound in \eqref{eq:pointwise-volume}, integrated against
+every Gauduchon test, proves
+$\lambda_\mu(A_\varepsilon)\geq
+ l^{1/n}\varepsilon^{(n-r)/n}$.
+For the upper bound use the admissible test $\gamma=A_\varepsilon$,
+which is positive and closed. If $A_\varepsilon^n=f_\varepsilon\mu$,
+then
+\[
+ D_\mu(A_\varepsilon)=\int_Mf_\varepsilon^{(n-1)/n}\mu
+ \geq l^{(n-1)/n}\varepsilon^{(n-r)(n-1)/n},
+ \qquad \int_M A_\varepsilon^n\leq u\varepsilon^{n-r}.
+\]
+Thus $\lambda_\mu(A_\varepsilon)\leq
+ ul^{-(n-1)/n}\varepsilon^{(n-r)/n}$. Raising to the $n$th power
+and applying the comparison proves the quantitative assertion,
+including $r=0$ and $n=1$. Fixed multiplicative constants disappear
+after taking logarithms and dividing by $\log\varepsilon$.
+\end{proof}
+
+\section{The geometry and the fixed cone}
+A plain factor is $Z=\PP^m$, $m\geq1$, with normalized
+Fubini--Study form $H$ and $\kappa=H$. A blown factor is
+\[
+ Z=\operatorname{Bl}_{\PP^\ell}\PP^m,
+ \qquad m\geq2,\quad0\leq\ell\leq m-2,
+ \qquad r=m-\ell-1.
+\]
+Writing projective coordinates as $[z_0:\cdots:z_\ell:w_0:\cdots:w_r]$,
+its explicit model is
+\[
+ Z=\{(x,[t])\in\PP^m\times\PP^r:
+                        w_at_b=w_bt_a\text{ for all }a,b\}.
+\]
+Let $p:Z\to\PP^m$ and $q:Z\to\PP^r$ be the projections. In a
+chart $t_j=1$ the equations are $w_a=t_aw_j$, the blowup charts
+of the ideal $(w_0,\ldots,w_r)$. Equivalently write $w=\lambda t$;
+the fiber coordinates $[z_0:\cdots:z_\ell:\lambda]$ exhibit $q$
+as a locally trivial $\PP^{\ell+1}$-bundle. These descriptions
+prove smoothness and that $q$ is a submersion.
+
+Set $H=p^*\omega_m$, $Q=q^*\omega_r$, and $\kappa=H+Q$.
+Both $H,Q$ are closed semipositive, and $Q$ has constant rank $r$.
+The incidence inclusion is a smooth holomorphic embedding in
+$\PP^m\times\PP^r$, so its restricted product form $\kappa$
+is K\"ahler. The exceptional divisor $E=\{w=0\}$ satisfies
+\[
+ \mathcal O(E)=p^*\mathcal O(1)\otimes q^*\mathcal O(-1).
+\]
+Indeed the coordinate section $w_j$ has divisor
+$E+q^{-1}\{t_j=0\}$, as is also seen from $w_j=\lambda t_j$.
+Use the indicated product metric of curvature $H-Q$. For the
+canonical section $s_E$, put $\psi_E=\log|s_E|^2$. The transverse
+disk normalization and the smooth metric term give the
+Poincar\'e--Lelong identity \cite[III.2.15 and V.13.2]{Demailly}
+\begin{equation}\label{eq:exceptional}
+ \ddc\psi_E=[E]-H+Q,
+ \qquad H+\ddc(\psi_E/2)=\tfrac12(\kappa+[E])\geq\kappa/2.
+\end{equation}
+These logarithms are locally integrable. The identity supplies the
+current lower bound without an analytic existence theorem.
+
+Let $X=\prod_{i=1}^s Z_i$ be a product of these factors,
+$m_i=\dim Z_i$, $n=\sum_i m_i$, with all factor forms understood
+as pullbacks. Fix once and for all smooth strictly positive functions
+$f_i$ on $X$, and $g_i$ for the blown factors. They may depend on
+every product coordinate. Define the fixed cone
+\begin{equation}\label{eq:cone}
+ \theta=\sum_i\bigl((a_i+b_if_i)H_i+(c_i+d_ig_i)Q_i\bigr),
+ \qquad a_i,b_i,c_i,d_i\geq0,
+\end{equation}
+omitting the $Q_i$ terms and their parameters on plain factors.
+All functions and generators are fixed independently of the parameters,
+the perturbation, the probability and the divisors.
+
+Every background is smooth semipositive. Thus $\theta+\varepsilon h$
+itself is positive for every $h>0$ and $\varepsilon>0$; the precise
+smooth-nef condition is verified. Say $H_i$ is active if $a_i+b_i>0$,
+and $Q_i$ is active if $c_i+d_i>0$. Strict positivity of the fixed
+functions gives a uniform positive lower bound for every active
+coefficient. Define
+\[
+ R_i(\theta)=
+ \begin{cases}
+ m_i,&H_i\text{ active},\\
+ r_i=m_i-\ell_i-1,&H_i\text{ inactive and }Q_i\text{ active},\\
+ 0,&\text{both inactive},
+ \end{cases}
+ \qquad R(\theta)=\sum_iR_i(\theta),
+\]
+where the middle alternative applies only to blown factors.
+
+\begin{theorem}\label{thm:orders}
+For every background in \eqref{eq:cone}, every positive smooth
+$h$ and every strictly positive smooth probability $\mu$, there
+are constants $L,U>0$ such that
+\[
+ L\varepsilon^{n-R(\theta)}
+ \leq\V_\mu(\theta+\varepsilon h)
+ \leq U\varepsilon^{n-R(\theta)}\qquad(0<\varepsilon\leq1).
+\]
+Its common degeneration order is the integer $n-R(\theta)$.
+\end{theorem}
+\begin{proof}
+Let $B_\theta$ be the sum of $\kappa_i$ on $H_i$-active blocks,
+$Q_i$ on $Q_i$-only blocks, and zero on inactive blocks. It is
+closed semipositive of constant rank $R(\theta)$. The form
+$\Omega=\sum_i\kappa_i$ is K\"ahler. Boundedness of the fixed
+coefficients and $H_i,Q_i\leq\kappa_i$ imply
+$\theta\leq CB_\theta$.
+
+On each $H_i$-active blown block put
+$u_i=\min_X(a_i+b_if_i)>0$, and set
+\[
+ \varphi=\sum_{\substack{i\text{ blown}\\H_i\text{ active}}}
+                                                   (u_i/2)\psi_{E_i}.
+\]
+By \eqref{eq:exceptional}, the corresponding $u_iH_i$ becomes
+at least $(u_i/2)\kappa_i$, with a positive divisor current. The
+remainder $(a_i+b_if_i-u_i)H_i$ and all $Q_i$ terms remain
+nonnegative. On plain active blocks use the positive minimum of
+$a_i+b_if_i$; on $Q_i$-only blocks use that of $c_i+d_ig_i$.
+The minimum of these finitely many constants gives
+$\theta+\ddc\varphi\geq cB_\theta$.
+For the zero background use $\varphi=0$. Lemma~\ref{lem:sandwich}
+proves the assertion from the full variational definition.
+\end{proof}
+
+The exterior derivative of a cone member is
+\[
+ d\theta=\sum_i b_i\,df_i\wedge H_i
+       +\sum_{i\text{ blown}}d_i\,dg_i\wedge Q_i.
+\]
+If a fixed generator derivative is nonzero, activating that generator
+alone gives a genuinely nonclosed member. Such choices of the fixed
+functions exist. On a blown factor choose $g>0$ with a nonzero
+derivative along a $q$-fiber, using a small
+smooth bump perturbation of one in a local product chart. Then
+$dg\wedge Q\ne0$, so $gQ$ is nonclosed and has order $\ell+1$.
+On $\PP^p\times\PP^q$, $p,q\geq1$, take $f>0$ varying
+nontrivially on the second factor. The background $fH_1$ is
+nonclosed and has order $q$. These exterior derivatives cannot
+be removed by adding $\ddc$ of a smooth function, because
+$d\ddc=0$. The manifold being projective does not make its
+background closed.
+
+\section{Modification equality}
+Replace any collection of plain $\PP^{m_i}$ factors by the indicated
+linear blowups, leaving all other factors unchanged. Let $\pi:Y\to X$
+be this product modification. Fix the old coefficient functions by
+pullback; choose any positive functions for the new $Q$ generators.
+The pulled-back old cone lies in the new fixed cone with all new
+$Q$ coefficients zero. An active plain $H_i$ becomes an active blown
+$H_i$ of the same effective rank $m_i$; inactive blocks remain
+inactive. Theorem~\ref{thm:orders} on both products gives
+\begin{equation}\label{eq:modification}
+ a_-(\pi^*\theta)=a_+(\pi^*\theta)
+                     =a_-(\theta)=a_+(\theta)=n-R(\theta).
+\end{equation}
+Every allowed modification satisfies equality, including when the
+pointwise rank of a pulled-back $H_i$ drops on its exceptional divisor.
+The logarithmic-current lower bound accounts for that drop. Both
+sides have the proved quantitative power bounds.
+
+There is a further extension with a stated additional premise.
+Use the known theorem that on a compact K\"ahler manifold the
+degeneration orders of a smooth closed nef form equal the dimension
+minus its numerical dimension. Then \eqref{eq:modification} holds
+for every holomorphic modification $\pi:Y\to X$ with $Y$ compact
+K\"ahler. To see the entire reduction, pull back the explicit
+logarithmic identities and nonnegative smooth remainders in the proof
+above. Nonzero divisor sections remain nonzero holomorphic sections
+under the surjective modification; their logarithms remain locally
+integrable. Hence
+\[
+ \pi^*\theta\leq C\pi^*B_\theta,
+ \qquad \pi^*\theta+\ddc(\varphi\circ\pi)\geq c\pi^*B_\theta.
+\]
+The comparison part of Lemma~\ref{lem:sandwich}, which does not
+require constant rank, compares the full infimum with that of
+$\pi^*B_\theta+\varepsilon\Omega_Y$ for a K\"ahler form
+$\Omega_Y$. Put $R=R(\theta)$. Then
+$(\pi^*B_\theta)^{R+1}=0$ identically, whereas
+\[
+ \int_Y(\pi^*B_\theta)^R\wedge\Omega_Y^{n-R}>0.
+\]
+The latter is positive over a nonempty open set where $\pi$ is an
+isomorphism; for $R=0$ it is the positive K\"ahler volume.
+Thus its numerical dimension is $R$. The stated closed-nef theorem
+proves the extension. This step claims common orders, and does not
+assert quantitative two-sided power bounds for arbitrary $Y$ from
+that premise alone. The product-modification result needs no such
+external order theorem. Arbitrary non-K\"ahler sources are excluded.
+
+\section{Effective divisors and the exact equality criterion}
+Fix the line bundles $\mathcal O(H_i)$ and, on blown factors,
+$\mathcal O(Q_i)$ with the pullback Fubini--Study metrics used above.
+Consider tensor products of their integer powers, permitting negative
+powers, with these induced metrics. Let
+\[
+ D=\sum_\nu t_\nu\operatorname{div}(s_\nu),\qquad t_\nu\geq0,
+\]
+where the sum is finite and every $s_\nu$ is a nonzero holomorphic
+section of one such tensor product. This specifies effective real divisors and their
+curvature representatives:
+\[
+ \eta_D=\sum_i(\delta_iH_i+\rho_iQ_i),
+ \qquad \Phi_D=\sum_\nu t_\nu\log|s_\nu|^2,
+ \qquad [D]=\eta_D+\ddc\Phi_D\geq0.
+\]
+Again omit $Q$ terms on plain factors. The section norms fix the
+smooth curvature; arbitrary changes of representatives are not hidden
+in the definition.
+
+The coefficient range of effective divisors is
+\begin{equation}\label{eq:effective-range}
+ \delta_i\geq0\quad\text{on plain factors},\qquad
+ \delta_i\geq0,\quad\delta_i+\rho_i\geq0
+                                      \quad\text{on blown factors}.
+\end{equation}
+For a nonzero section choose a point where it is nonzero and which
+lies outside all exceptional divisors. Hold the other factor
+coordinates fixed. A line through this point in a $q_i$-fiber
+$\PP^{\ell_i+1}$ has $H_i$-degree one and $Q_i$-degree zero,
+so the $H_i$ exponent is nonnegative. For the other inequality write
+the chosen blown-factor point as $([z:w],[w])$, $w\ne0$. Choose
+a linear map $A$ with $Aw=z$. The section of $q_i$ given by
+\[
+ [t]\longmapsto([At:t],[t])
+\]
+contains this point, and both $H_i,Q_i$ have degree one on its
+projective lines. Since $r_i\geq1$, choose such a line through
+the point. Its section restriction is nonzero, so the sum of the
+exponents is nonnegative. The plain-factor line argument gives
+the other inequality. These degree inequalities also follow directly
+by integrating the section's Poincar\'e--Lelong formula on the line.
+Positive real sums preserve the conditions. Conversely every pair
+in the blown-factor range
+is represented by
+$\delta_iE_i+(\delta_i+\rho_i)$ times a $Q_i$-hyperplane divisor.
+The plain range is represented by hyperplanes. Thus these are exact
+numerical ranges for the specified real divisor family.
+
+\begin{theorem}\label{thm:residual}
+Let $\theta$ have the parameters in \eqref{eq:cone}, and let $D$
+be as above. Suppose
+\[
+ a_i\geq\delta_i\text{ for every }i,
+ \qquad c_i\geq\rho_i\text{ for every blown }i.
+\]
+Then $\beta=\theta-\eta_D$ belongs to the same fixed cone and is
+smooth semipositive and nef. Its common order satisfies
+\[
+ a(\beta)-a(\theta)=\sum_i\bigl(R_i(\theta)-R_i(\beta)\bigr).
+\]
+Equality in both residual-order comparisons holds if and only if
+\begin{align*}
+ a_i-\delta_i+b_i&>0&&\text{whenever }a_i+b_i>0,\\
+ c_i-\rho_i+d_i&>0&&\text{whenever }a_i=b_i=0,
+                                  \ c_i+d_i>0.
+\end{align*}
+The second condition applies only on blown factors. Here $a$ denotes
+the common order, and every summand in the gap is nonnegative.
+\end{theorem}
+\begin{proof}
+The residual parameters are
+$(a_i-\delta_i,b_i,c_i-\rho_i,d_i)$, all nonnegative.
+Thus $\beta+\varepsilon h$ itself is positive for every $h>0$.
+Moreover $(\theta-\beta)+\ddc\Phi_D=[D]\geq0$, the required
+actual positive-current comparison. Theorem~\ref{thm:orders} gives
+the displayed difference of orders.
+
+If an initially active $H_i$ is erased, its effective rank drops
+from $m_i$ to either $r_i<m_i$ or zero. If $H_i$ was absent, then
+$a_i=b_i=0$, and \eqref{eq:effective-range} and the residual
+conditions force $\delta_i=0$ and $\rho_i\geq0$. Such a block
+cannot gain $Q_i$; a $Q_i$-only block can keep or lose its rank.
+Therefore ranks cannot increase in any block, and rank losses cannot
+cancel between blocks. Equality holds exactly when no initially
+leading active generator is erased, as stated.
+\end{proof}
+
+The stated conditions ensure that the displayed residual parameters
+remain nonnegative. They are sufficient conditions for this theorem,
+and do not characterize all nef residual backgrounds or all alternative
+representations in the cone.
+
+\section{Nonclosed examples with sharp integer gaps}
+On $Z=\operatorname{Bl}_{\PP^\ell}\PP^m$ choose fixed $g>0$
+with $dg\wedge Q\ne0$. For $t>0$ put
+\[
+ \theta_t=tH+gQ.
+\]
+It is genuinely nonclosed and strictly positive, since
+$\theta_t\geq\min(t,\min g)(H+Q)>0$. Its order is zero.
+For $0\leq s\leq t$ remove $sE$ with the fixed curvature
+$s(H-Q)$. The residual and actual boundary current are
+\[
+ \beta_s=(t-s)H+(g+s)Q,
+ \qquad \theta_t+\ddc(s\psi_E)=s[E]+\beta_s.
+\]
+Every $\beta_s$ is smooth semipositive, nef and nonclosed, and
+\[
+ a(\beta_s)=0\quad(s<t),\qquad
+ a(\beta_t)=m-r=\ell+1.
+\]
+Equality thus holds precisely for $s<t$. Varying $\ell$ realizes
+all gaps $1,\ldots,m-1$. At $s=t$ the chosen current contains
+the actual divisorial mass $t[E]$ before removal. This does not
+assert a positive minimal perturbative divisorial multiplicity:
+the smooth positive representatives $\theta_t+\varepsilon h$ and
+$\beta_s+\varepsilon h$ show those minimal multiplicities are zero.
+
+For a nonclosed degenerate example with modification equality take
+$\theta=fH_1$ on $\PP^p\times\PP^q$, where $f>0$ varies on
+the second factor. Its order is $q$, and every allowed product
+linear blowup preserves it, including blowups in active or inactive
+directions. The stated extension gives the same conclusion for every
+modification with K\"ahler source.
+
+\section{Scope}
+These sufficient conditions and equality criteria use fixed strictly
+positive coefficient functions and explicitly cone-preserving divisors
+with fixed curvature metrics. The probability and perturbation metric
+are arbitrary smooth positive data; every bound uses the full
+Gauduchon infimum. The product results use elementary geometry and
+current integration. The arbitrary-K\"ahler-modification extension
+uses the closed-nef order theorem supplied in P02. Coefficient functions
+with zeros, arbitrary residual cones and non-K\"ahler sources are not
+covered. The general P02 programme remains open.
+\begin{thebibliography}{9}
+\bibitem{Demailly}
+J.-P. Demailly, \emph{Complex Analytic and Differential Geometry},
+version of 21 June 2012, III.2.10--2.15 and V.13.1--13.8.
+\end{thebibliography}
+\end{document}
