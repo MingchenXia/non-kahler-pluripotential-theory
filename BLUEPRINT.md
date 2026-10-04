@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint417 — Elliptic curvature endpoint review
+
+[Independent P10 review](research/editorial/elliptic-curvature-endpoint-review-417.md) reads all415 original source lines and reconstructs56 direct obligations, with20 actual primary images and exact published AGL attribution. The nonnegative curvature-pair criterion gives bounded lower mass and full-current determinant endpoints in every Hermitian background; line quotients and a Calabi--Eckmann family provide direct non-Hopf/non-LCK examples. General P10 remains open. All322 book files,983 proofs, both catalogues/manifests,451 protected files and six incoming author blobs remain exact; manuscript416 and its1183-page live release are unchanged. No author build, native call or new publication. Next: checked Chapter25 integration and continued recent primary research.
+
 ## Checkpoint416 — Convex-body reference stability
 
 [The scoped S08 integration](research/editorial/convex-body-reference-stability-416.md) adds Section14.11, canonical convex-body models, quantitative Hausdorff stability, nonanalytic isolated poles and rank-one degenerate positive-mass residuals. Seven new proofs, complete local rereads and25 actual pages pass; general S08 remains open. The continuous support-test domain is clarified. Of976 old proofs,975 remain exact and one support sentence changes. Both1183-page clean publications are live-verified. Both catalogues retain original descriptions/statuses and use actual current anchors. Changed-file house findings are unchanged;48 errors/168 warnings in the full active house audit are inherited and need scoped follow-up. Fresh empty-source reconstruction passes; native preview remains unverified. Forty original directions remain open; recent primary prerequisites and author intake continue.
