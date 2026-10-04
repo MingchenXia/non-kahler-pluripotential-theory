@@ -163,7 +163,7 @@ The logarithmic difference satisfies
 \]
 off $D$. The right side tends to zero and is dominated by an integrable logarithmic pole, proving $L^1$ convergence. Continuity of distributional differentiation then gives the cofactor limit. A locally integrable scalar times smooth $\beta$ has absolutely continuous coefficients; it cannot produce the singular coefficients of $[D]$.
 
-Define $\operatorname{Cap}_\omega(E)=\sup\{\int_E(\omega+\ddc v)^2:v\in\PSH(X,\omega),\ -1\leq v\leq0\}$. Apply the smooth-cutoff argument of \eqref{eq:divisorial-cutoff-bound} with $\beta$ replaced by $\omega$ and $w=v+1$. Stokes gives $\int_X\omega_1\wedge(2\omega+\ddc v)=2$, so
+Use the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}. Subtracting one from its test potentials gives the equivalent range $-1\leq v\leq0$. For such $v\in\PSH(X,\omega)$, apply the smooth-cutoff argument of \eqref{eq:divisorial-cutoff-bound} with $\beta$ replaced by $\omega$ and $w=v+1$. Stokes gives $\int_X\omega_1\wedge(2\omega+\ddc v)=2$, so
 \[
  \operatorname{Cap}_\omega\{\psi<-t\}
  \leq\int_X(-f_t)\omega^2+2/t\longrightarrow0.
@@ -181,4 +181,56 @@ Finally $\Omega_{\delta,g}\geq\omega$ gives $F_{\delta,g}\geq-\log2$. In the aff
 Every finite power of this logarithmic bound is integrable. Smooth convergence off $D$ gives $F_{\delta,g}\to0$ there, and dominated convergence proves the finite-$L^p$ assertion.
 \end{proof}
 
-The exponential densities satisfy $\int_X\mathrm e^{F_{\delta,g}}\mathrm dV=2$ for every $\delta$, whereas their pointwise limit has integral one. They are therefore not uniformly integrable. These smoothings change the ordinary type and retain mass eight instead of the relative mass four. The example identifies the concentration that a recovery theorem must exclude. Uniform convergence in \cref{prop:weak-adjoint-stability}, and uniformly bounded $L^1$ changes in \cref{thm:normalization-bounded-lone}, control more than the finite-$L^p$ convergence here. Fixed-type or mass-preserving approximation requires separate analysis.
+The exponential densities satisfy $\int_X\mathrm e^{F_{\delta,g}}\mathrm dV=2$ for every $\delta$, whereas their pointwise limit has integral one. They are therefore not uniformly integrable. These smoothings change the ordinary type and retain mass eight instead of the relative mass four. The example identifies the concentration that a recovery theorem must exclude. Uniform convergence in \cref{prop:weak-adjoint-stability}, and uniformly bounded $L^1$ changes in \cref{thm:normalization-bounded-lone}, control more than the finite-$L^p$ convergence here. In the fixed divisor type, a common bound on the residual potentials instead gives a direct recovery estimate.
+
+\Needspace{12\baselineskip}
+\begin{corollary}\label{cor:divisorial-residual-recovery}\index{Adjoint measure!fixed-divisor recovery}
+Let $w_j,w\in\PSH(X,\beta)$ satisfy $|w_j|,|w|\leq M$ for a fixed $M\geq1$, and suppose $w_j\to w$ in capacity. Put
+\[
+ \begin{gathered}
+ T_j=\beta+\ddc w_j,\qquad T=\beta+\ddc w,\\
+ Q_j=T_j/4,\quad Q=T/4,\qquad
+ \nu_j=T_j^2/4,\quad\nu=T^2/4.
+ \end{gathered}
+\]
+Then $Q_j\rightharpoonup Q$ as currents and $\nu_j\rightharpoonup\nu$ as probabilities. For real $f\in C^\infty(X)$ choose $C_f\geq0$ with $-C_f\beta\leq\ddc f\leq C_f\beta$. For every $\eta>0$, writing $E_{j,\eta}=\{|w_j-w|>\eta\}$, one has
+\begin{equation}\label{eq:divisorial-residual-recovery}
+ \left|\int_X f\,(\mathrm d\nu_j-\mathrm d\nu)\right|
+ \leq C_f\bigl(2\eta+2M^2\operatorname{Cap}_\beta(E_{j,\eta})\bigr).
+\end{equation}
+If each $T_j$ is smooth and strictly positive, $Q_j$ and $\nu_j$ are its classical residual adjoints. If $\psi+w$ solves the relative equation at $F\in C(X)$, their limiting probability is the sole member of $\mathcal A_\varphi(F)$.
+\end{corollary}
+\begin{proof}
+The global capacity is the one in \cref{sec:hermitian-capacity}; $\beta\leq2\omega$ gives $\operatorname{Cap}_\beta\leq4\operatorname{Cap}_\omega$. Set $a_j=(w_j+M)/(2M)$ and $S_j=\beta+\ddc a_j$. Then $0\leq a_j\leq1$ and
+\[
+ \begin{gathered}
+ S_j=\left(1-\frac1{2M}\right)\beta+\frac1{2M}T_j,\\
+ S_j^2\geq\left(\frac1M-\frac1{2M^2}\right)\beta\wedge T_j
+ \geq\frac1{2M}\beta\wedge T_j.
+ \end{gathered}
+\]
+Positive bounded mixed products justify the inequalities. Thus $\int_E\beta\wedge T_j\leq2M\operatorname{Cap}_\beta(E)$ for every Borel $E$, and the same bound holds for $T$. By closedness and Stokes, $\int_X\beta\wedge(T_j+T)=8$. Test
+\[
+ T_j^2-T^2=\ddc\bigl((w_j-w)(T_j+T)\bigr)
+\]
+against $f$. On $X\setminus E_{j,\eta}$ the potential difference has absolute value at most $\eta$, and on $E_{j,\eta}$ at most $2M$. Consequently
+\[
+ \begin{aligned}
+ \left|\int_Xf(T_j^2-T^2)\right|
+ &\leq C_f\left(8\eta+2M\int_{E_{j,\eta}}\beta\wedge(T_j+T)\right)\\
+ &\leq C_f\left(8\eta+8M^2\operatorname{Cap}_\beta(E_{j,\eta})\right).
+ \end{aligned}
+\]
+Division by four proves \eqref{eq:divisorial-residual-recovery}. First let $j\to\infty$ with $\eta$ fixed, then let $\eta\downarrow0$. All $\nu_j$ and $\nu$ have mass one by \cref{prop:divisorial-residual-adjoint}, and smooth tests are uniformly dense in $C(X)$, proving weak probability convergence.
+
+The constant capacity test gives $4\mathrm dV(E)\leq\operatorname{Cap}_\beta(E)$. Splitting the potential difference over the same sets yields
+\[
+ \|w_j-w\|_{L^1(\mathrm dV)}
+ \leq\eta+\tfrac M2\operatorname{Cap}_\beta(E_{j,\eta}).
+\]
+Taking the limits in the same order proves $L^1$ convergence, hence current convergence by distributional differentiation. The limiting cofactor satisfies $\ddc Q=0$, $\int_X\beta\wedge Q=1$, and $T\wedge Q=\nu$ as a bounded product. For smooth real $h$, the signed measure $2\ddc h\wedge T$ is a defined formal residual linearization; its integral against the constant factor $1/4$ vanishes by Stokes. Actual potential derivatives are asserted along variations preserving positivity.
+
+For smooth strictly positive $T_j$, the connected maximum principle makes the classical adjoint factor constant, and mass four normalizes it to $1/4$. The support identification follows from \cref{prop:divisorial-residual-adjoint}.
+\end{proof}
+
+Here the canonical potentials $\psi+w_j$ retain their divisor pole; the classical adjoints refer to the smooth residual forms $T_j$. The estimate applies whenever the stated residual approximation exists. Recovery for more general singular references, unbounded residual sequences or varying conformal multipliers remains open.
