@@ -1,0 +1,67 @@
+\subsection{A maximum-rank comparison criterion}
+\label{sec:nef-maximum-rank-comparison}
+\index{Nef degeneration!maximum-rank comparison}
+
+The closed-volume polynomial also gives a comparison when the rank varies. Its leading coefficient detects the largest rank attained anywhere. This covers backgrounds that vanish on an open set and positive variable coefficients on arbitrary closed semipositive generators.
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:nef-maximum-rank-comparison}
+Let $X$ be a compact K\"ahler $n$-fold and $B$ a smooth closed semipositive form, with $R=\max_X\operatorname{rank}B$. Suppose a smooth nef background $\theta$ satisfies
+\[
+ \theta\leq CB,\qquad \theta+\ddc\varphi\geq cB
+\]
+as currents, for $c,C>0$ and a global real $\varphi\in L^1(X)$. For every smooth positive probability $\mu$ and Hermitian $h$, there are $L,U>0$ such that
+\[
+ L\epsilon^{n-R}\leq\mathcal V_\mu(\theta+\epsilon h)
+                       \leq U\epsilon^{n-R},\qquad 0<\epsilon\leq1.
+\]
+Thus the common order is $n-R$, without a constant-rank hypothesis.
+\end{proposition}
+\begin{proof}
+Fix a K\"ahler form $\Omega$. The rank-free comparison in \cref{lem:nef-logarithmic-rank-comparison} bounds the two variational quotients by fixed positive factors. The closed-background formula following \cref{thm:gaud-volume-nef-limit} gives
+\[
+ \mathcal V_\mu(B+\epsilon\Omega)
+ =\sum_{k=0}^{R}\binom nk\epsilon^{n-k}
+                         \int_X B^k\wedge\Omega^{n-k}.
+\]
+Indeed $B^{R+1}=0$. All displayed coefficients are nonnegative. If $R>0$, at a point of rank $R$ an $R\times R$ positive minor remains positive nearby, so $B^R\wedge\Omega^{n-R}$ has positive integral. For $R=0$ its integral is the K\"ahler volume. The coefficient of $\epsilon^{n-R}$ is therefore positive. For $0<\epsilon\leq1$, every higher power is at most $\epsilon^{n-R}$; the polynomial is bounded below by its leading term and above by the sum of its coefficients times that power. Raise the quotient comparison to the $n$th power and take logarithms to obtain the assertions.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{corollary}\label{cor:nef-variable-semipositive-generators}
+On a compact K\"ahler $n$-fold, fix finitely many smooth closed semipositive forms $B_j$ and smooth strictly positive functions $f_j$. For $t_j\geq0$, put
+\[
+ \theta=\sum_jt_jf_jB_j,\qquad
+ B=\sum_{j:t_j>0}B_j,\qquad R=\max_X\operatorname{rank}B.
+\]
+The background $\theta$ is nef, has common order $n-R$, and has the two-sided power bounds of \cref{prop:nef-maximum-rank-comparison}. Every modification $\pi:Y\to X$ with $Y$ a compact K\"ahler manifold preserves this order and the exponent in those bounds, for independently chosen smooth positive probability and Hermitian direction on $Y$.
+\end{corollary}
+\begin{proof}
+Semipositivity gives nefness. For a nonempty active set, compactness and strict positivity give
+\[
+ \begin{gathered}
+ cB\leq\theta\leq CB,\qquad
+ c=\min_{j:t_j>0}\bigl(t_j\min_X f_j\bigr)>0,\\
+ C=\max_{j:t_j>0}\bigl(t_j\max_X f_j\bigr).
+ \end{gathered}
+\]
+Apply \cref{prop:nef-maximum-rank-comparison} with $\varphi=0$. If all parameters vanish, use $B=\theta=0$ and any $c,C>0$; then $R=0$ and the order is $n$.
+
+Pullback preserves these smooth form inequalities. The rank of $\pi^*B$ is at most $R$. The rank-$R$ set is nonempty and open when $R>0$, and it meets the dense open set where the modification is an isomorphism. Hence the maximum pulled-back rank is $R$; the assertion is immediate for $R=0$. Since $\dim Y=n$, apply the same proposition upstairs with its own data. No singular potential is pulled back in this argument.
+\end{proof}
+
+The constants are attached to one fixed parameter tuple; they need not be uniform as an active coefficient tends to zero. The rank of a sum records overlap between generators and need not equal the sum of their individual ranks. Nonclosed members occur when $\sum_jt_j\,\mathrm df_j\wedge B_j\ne0$.
+
+\Needspace{10\baselineskip}
+\begin{example}\label{ex:nef-open-zero-rank-background}
+Let $X=\mathbb P^1\times\mathbb P^q$, $q\geq1$, with projections $p_1,p_2$. Choose a smooth nonnegative nonzero function $b$ on $\mathbb P^1$ that vanishes on a nonempty open set, and a smooth strictly positive nonconstant $f$ on $\mathbb P^q$. For normalized Fubini--Study $\omega_1$, set
+\[
+ B=p_1^*(b\omega_1),\qquad \theta=(f\circ p_2)B.
+\]
+The smooth nef background $\theta$ is nonclosed, vanishes on an open set and has common order $q$, with two-sided bounds by $\epsilon^q$.
+\end{example}
+\begin{proof}
+The form $b\omega_1$ is closed because the first factor is a curve, and it is semipositive. Its pullback has rank one where $b>0$ and zero where $b=0$, so the maximum rank is one. Apply \cref{cor:nef-variable-semipositive-generators}, since $n=q+1$. A nonconstant smooth $f$ on the connected second factor has $\mathrm df\ne0$ somewhere. At a product point with this property and $b>0$, the horizontal two-form $B$ wedges nontrivially with the vertical one-form $p_2^*\mathrm df$. Thus $\mathrm d\theta=p_2^*\mathrm df\wedge B\ne0$.
+\end{proof}
+
+These are geometric sufficient conditions for the common integer order in \cref{qu:nef-degeneration-exponent}. They leave open backgrounds without such a closed semipositive comparator, coefficient functions allowed to vanish, and general residual or non-K\"ahler modification comparisons.
