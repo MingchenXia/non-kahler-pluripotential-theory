@@ -1,5 +1,9 @@
 # Modification history
 
+## Checkpoint394 — Weighted-kernel parameter dependence
+
+[Primary review](research/editorial/weighted-kernel-parameter-review-394.md): all 30 pages of Marinescu–Xing arXiv2609.24258v1 and Chen’s complete printed existence proof on pages 4–6 are actually read. The smooth-weight, Gevrey and boundary-distance arguments are assessed at an explicit external premise boundary; three directly reconstructed identities pass. Fixed-space finite-parameter regularity does not control changing multiplier ideals or degree limits. No new theorem or closure is adopted. The checked 1114-page manuscript and published PDF remain checkpoint393; no book rebuild. Full independent review of the incoming P20 ideal extension follows.
+
 ## Checkpoint393 — Critical multiplier-ideal rounding
 
 [Review](research/editorial/ideal-rounding-kernel-limits-393.md): Section26.17 identifies the genuine ideal envelope and computes two parity-dependent positive kernel limits for an actual multiplier-ideal family with positive growth exponent. Division by the actual dimension restores a probability limit. All30 direct obligations, three symbolic identities and36 selected final pages pass. Both clean full builds have live PDF/homepage/Pages checks;1114 printed pages. All original statements/descriptions/statuses and protected sources stay exact;40 directions remain open. Native catalogue preview is unverified after the compiler connection closes without diagnostics. The exact30-page recent weighted-kernel primary is downloaded, with full proof review pending. Fresh empty-source reconstruction passes with 302 exact book sources, all 1140+17 page texts matching and 2019 checksum-validated archive entries. Regular private synchronization follows actual diff review.

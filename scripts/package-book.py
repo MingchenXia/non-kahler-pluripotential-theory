@@ -371,6 +371,8 @@ for name in (
     "research/source-disposition-393.json",
     "research/audits/ideal-rounding-kernel-limits-393.json",
     "research/editorial/ideal-rounding-kernel-limits-393.md",
+    "research/audits/weighted-kernel-parameter-review-394.json",
+    "research/editorial/weighted-kernel-parameter-review-394.md",
     "research/papers/P20-convex-spectrum-partial-kernels.tex",
     "research/papers/P20-convex-spectrum-partial-kernels.review.md",
     "research/audits/invariant-mass-reference-densities-391.json",
