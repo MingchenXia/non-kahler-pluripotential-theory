@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint428 — Local affine regularity and strict weights
+
+[The local-strict-weight integration](research/editorial/affine-local-strict-weight-428.md) adds the relative-extremal foundation and four proofs of local regularity, quantitative strict-weight defect and pointwise Hessian degeneracy. The recorded complete first reads and fresh seven-input/capacity-root second read pass with 34 actual final images. All 1004 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. Both 1203-page publications and descriptions are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no additions. Forty original directions remain open.
+
 ## Checkpoint427 — Local affine regularity and strict weights
 
 [The local-strict-weight review](research/editorial/affine-local-strict-weight-review-427.md) checks 47 direct obligations and six actual primary images. Explicit logarithmic pasting proves the relative/global zero-value comparison; USC weights retain raw contact, and local strictness with a global growth-class extension gives quantitative defect, exact regularity persistence and a C2 degeneracy consequence. All 331 book files, 1004 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, new publication, novelty claim or original problem closure. Next: scoped Chapter1/12 integration.

@@ -1,0 +1,96 @@
+\subsubsection{Local regularity and strict weights}
+\label{sec:affine-local-regularity}
+
+Local contact depends on the compact pieces near the point. The relative extremal function of \cref{def:relative-extremal-function} detects their unweighted regularity. A strict lower Hessian bound on a global extending weight then turns failure of that regularity into a quantitative weighted defect.
+
+For a non-pluripolar compact $E\subset\mathbb C^n$, write $V_E$ and $V_E^*$ for its raw and regularized growth-one envelopes with zero obstacle. For other weights and growth allowances, write $F_{\delta,E,q}$ for the regularized envelope on $E$ with the everywhere obstacle $q$.
+
+\begin{lemma}\label{lem:relative-affine-zero-value}
+Let $0<r<R$, $B=B(a,R)$, and let $E\subseteq\overline B(a,r)$ be compact. If $E$ is pluripolar, then $h_{E,B}^*=0$ on $B$. If $E$ is non-pluripolar, then
+\[
+ h_{E,B}^*(a)=-1\quad\Longleftrightarrow\quad V_E^*(a)=0.
+\]
+\end{lemma}
+\begin{proof}
+In the pluripolar case, choose $b\in\mathcal L_1$ with poles on $E$ by \cref{lem:affine-logarithmic-pole-barrier}, and choose a finite upper bound $C$ for $b$ on $B$. The relative competitors
+\[
+ u_\epsilon=\max\{-1,\epsilon(b-C)\}
+\]
+tend to zero almost everywhere as $\epsilon\downarrow0$. Their upper bound $h_{E,B}^*$ is therefore nonnegative almost everywhere, then everywhere by canonical order. Since it is also nonpositive, it vanishes.
+
+Suppose $E$ is non-pluripolar. \Cref{prop:affine-projective-envelope} gives a finite upper bound $M\geq1$ for $V_E^*$ on $B$. For each raw global competitor $v$, the function $\max(-1,v/M-1)$ is a relative competitor. Taking suprema and regularizing gives
+\[
+ h_{E,B}^*(a)\geq\max\{-1,V_E^*(a)/M-1\}.
+\]
+As $V_E^*\geq0$, the relative value $-1$ forces the global value zero.
+
+For the converse choose $r<R_0<R$ and $k>0$ with $k\log(R_0/r)>1$. The plurisubharmonic function
+\[
+ L(z)=k\log\bigl(\lVert z-a\rVert/r\bigr)
+\]
+has growth allowance $k$, with value $-\infty$ at $a$. For a relative competitor $u$, paste $W=\max(u+1,L)$ on $B$ with $W=L$ outside $B$. On the outer collar $L>1\geq u+1$, so the pieces agree and \cref{lem:qpsh-gluing} applies. On $E$ one has $W=0$; on the open inner ball one has $W=u+1$. Hence $W/k$ is a global growth-one competitor, and the same $k$ works for the whole relative family. Supremum and regularization near $a$ give
+\[
+ V_E^*(a)\geq(1+h_{E,B}^*(a))/k.
+\]
+A zero global value thus forces the relative value $-1$.
+\end{proof}
+
+Fix again a non-pluripolar compact $K\subset\mathbb C^n$. For $a\in K$ put $K_r=K\cap\overline B(a,r)$.
+
+\begin{definition}\label{def:affine-local-pluriregularity}\index{Pluriregular compact!local}
+The compact $K$ is locally pluriregular at $a$ if every $K_r$, $r>0$, is non-pluripolar and $V_{K_r}^*(a)=0$. It is locally $(\delta,q)$-regular there if $F_{\delta,K_r,q}(a)=q(a)$ for every $r>0$.
+\end{definition}
+
+It suffices to check arbitrarily small radii: compact-set monotonicity handles the larger pieces. \Cref{lem:relative-affine-zero-value} identifies local pluriregularity with the relative values $h_{K_r,B(a,R)}^*(a)=-1$ on small concentric balls.
+
+\begin{lemma}\label{lem:affine-local-weighted-regularity}
+Let $q$ be bounded and upper semicontinuous on $K$, and suppose $\delta>0$ is a global raw-contact parameter for $q$. If $K$ is locally pluriregular at $a$, then $F_{\delta,K,q}(a)=q(a)$ and $K$ is locally $(\delta,q)$-regular there. These equalities persist at every later growth parameter.
+\end{lemma}
+\begin{proof}
+Put $M_r=\sup_{K_r}q$. Raw contact, compact-set monotonicity and the obstacle sandwich give
+\[
+ q(a)\leq F_{\delta,K,q}(a)
+ \leq F_{\delta,K_r,q}(a)
+ \leq M_r+\delta V_{K_r}^*(a)=M_r.
+\]
+Since $q$ is upper semicontinuous and $a\in K_r$, one has $M_r\downarrow q(a)$, giving the global equality.
+
+Every compact subset $E\subseteq K$ inherits raw contact: on $E$ its raw envelope lies between the original envelope $q$ and its obstacle $q$. For fixed $s>0$, apply the same bounds with $r<s$ and $K_s$ in place of $K$, then let $r\downarrow0$. This proves local weighted regularity. The raw contact ray contains every later parameter by \cref{thm:affine-growth-contact-ray}; applying the proved criterion at each of them gives persistence.
+\end{proof}
+
+\begin{theorem}\label{thm:affine-local-strict-weight}
+Let $a\in K$, $\tau>0$ and $\Psi\in\mathcal L_\tau\cap C(\mathbb C^n)$, and put $q=\Psi|_K$. Suppose that, for some $R,c>0$,
+\[
+ \ddc\Psi\geq c\omega_0\quad\text{on }B(a,R),
+ \qquad\omega_0=\ddc\lVert z\rVert^2.
+\]
+For $0<r<R$ and $\delta\geq\tau$,
+\begin{equation}\label{eq:affine-local-strict-weight-defect}
+ F_{\delta,K,q}(a)-\Psi(a)
+ \geq cr^2\bigl(1+h_{K_r,B(a,R)}^*(a)\bigr).
+\end{equation}
+Regular contact at $a$ for one $\delta\geq\tau$ is equivalent to local pluriregularity at $a$. In that case regular contact holds for every $\delta\geq\tau$.
+\end{theorem}
+\begin{proof}
+Set $B=B(a,R)$ and $E=K_r$. For a relative competitor $u$, the function
+\[
+ H_u(z)=\Psi(z)-c\lVert z-a\rVert^2+cr^2(u(z)+1)
+\]
+is plurisubharmonic on $B$. Indeed, the current inequality makes its first two terms plurisubharmonic, and the last term is plurisubharmonic. Since $u\leq0$, one has $H_u\leq\Psi$ where $\lVert z-a\rVert\geq r$. Paste $W=\max(\Psi,H_u)$ on $B$ with $W=\Psi$ outside $B$. The pieces agree on an outer collar, so $W$ is globally plurisubharmonic. It belongs to $\mathcal L_\tau$ because it equals $\Psi$ outside the ball. On $E$, $u=-1$ gives $H_u\leq\Psi$; on $K\setminus E$ the distance bound gives the same inequality. Thus $W=q$ everywhere on $K$ and is a raw competitor for each $\delta\geq\tau$. Taking the supremum of $H_u$ near $a$ and regularizing, with the continuous $\Psi$ retained, proves \eqref{eq:affine-local-strict-weight-defect}.
+
+The global extension $\Psi$ itself gives raw contact for every $\delta\geq\tau$. If regular contact holds at one such parameter, the left side of the estimate is zero. Each relative value must then be $-1$. \Cref{lem:relative-affine-zero-value} excludes polar pieces and gives $V_{K_r}^*(a)=0$ for all $r<R$; larger pieces follow by monotonicity. Conversely, local pluriregularity and \cref{lem:affine-local-weighted-regularity} give regular contact at every $\delta\geq\tau$.
+\end{proof}
+\index{Envelope!locally strict weight}
+
+In this regular case, $V_K^*(a)=0$ by compact-set monotonicity and the initial growth derivative at $\tau$ is zero by persistence and \cref{cor:affine-slope-regular-contact}.
+
+\Needspace{10\baselineskip}
+\begin{corollary}\label{cor:affine-weight-degenerate-hessian}\index{Contact set!weight Hessian degeneracy}
+Let $\tau>0$, $\Psi\in\mathcal L_\tau\cap C^2(\mathbb C^n)$ and $a\in K$. If $F_{\tau,K,\Psi|_K}(a)=\Psi(a)$ but regular contact fails at some later parameter, then
+\[
+ (\ddc\Psi)^n(a)=0.
+\]
+\end{corollary}
+\begin{proof}
+The smooth Hessian of $\Psi$ is semipositive. A nonzero top power at $a$ would make it positive definite. Continuity would then give $\ddc\Psi\geq c\omega_0$ on a neighborhood of $a$ for some $c>0$. \Cref{thm:affine-local-strict-weight} would force persistence of regular contact, a contradiction.
+\end{proof}
