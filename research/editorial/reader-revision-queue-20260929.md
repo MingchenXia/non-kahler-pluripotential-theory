@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current next unit after checkpoint 387: Preserve incoming author S13 commit 43660aecebcac958d550e57a5dbccf1febcf52ce. Directly read and reconstruct the complete nef-big incomplete-cusp proof and its actual primary dependencies before adoption; keep the smoothing-compatible branch distinct. Then consolidate the expanded P21/kernel/jet overview and history for readability, preserving all original questions and exact hypothesis/norm boundaries, and continue primary-paper reading.
+Current next unit after checkpoint 387: Directly review the preserved incoming S13 complete nef-big incomplete-cusp proof and its actual primary dependencies before adoption; keep the smoothing-compatible branch distinct. Then consolidate the expanded P21/kernel/jet overview and historical interface for readability, preserving every original question and exact hypothesis/norm boundary, and continue primary-paper reading.
 
 This is the new pass requested by the author after checkpoint229. Earlier chapter reviews remain valid at their recorded scope, but do not count as completion of this new reader-oriented pass.
 
