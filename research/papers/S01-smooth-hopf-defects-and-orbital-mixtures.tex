@@ -1,0 +1,944 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\ddc}{dd^c}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\E}{\mathbb E}
+\title{Shrinking Hermitian potentials and Hopf defect measures}
+\author{}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Every defect of an honest fixed-mass shrinking sequence on a compact
+Hermitian manifold is a sum of traces of positive closed intermediate
+currents annihilating smooth $dd^c$-closed complementary test forms.
+Its support lies in the
+degeneracy locus of every global closed semipositive $(1,1)$-form.
+On the standard Hopf threefold we classify all such defects: they are
+exactly the probability-Haar fiber lifts of arbitrary positive measures
+on $\mathbb P^2$ of the prescribed excess mass. We construct actual
+smooth admissible sequences, with exact mass and any prescribed
+shrinking bounds, by controlling mixed quadratic terms, repairing
+pullbacks through linear automorphisms and taking diagonal limits.
+Possible supports are exactly the nonempty closed fiber-saturated sets.
+A lift charges no pluripolar set precisely when its base measure
+charges none. Defects may therefore have any fraction of their mass
+on a pluripolar elliptic fiber, while every defect is atomless as a
+point measure. For every Hermitian metric on the same Hopf manifold,
+the complete classification persists, with conditional fiber probability given
+by normalized metric area. Exact mass is then obtained by a
+quadratic-plus-linear root. Sufficiency on arbitrary Hermitian
+manifolds remains open.
+\end{abstract}
+
+\section{The setting and the results}
+Use $\ddc=(i/(2\pi))\partial\bar\partial$ and
+$d^c=(i/(4\pi))(\bar\partial-\partial)$. Let
+\[
+ X=(\mathbb C^3\setminus\{0\})/\langle z\mapsto e^{-1}z\rangle,
+ \quad a=\log|z|^2,
+ \quad \alpha=\ddc a,\quad \beta=da\wedge d^c a,
+ \quad \omega=\alpha+\beta.
+\]
+The forms descend, and $\omega$ is a smooth positive Hermitian form.
+We use the background identities supplied in S01:
+\[
+ \ddc\omega=-\alpha^2,\qquad
+ \ddc\omega^2=0,\qquad V:=\int_X\omega^3=6,
+\]
+and the existence of smooth normalized $\omega$-psh functions of
+arbitrarily large Monge--Amp\`ere mass. Here $u$ is a genuine smooth
+$\omega$-psh function when $\omega+\ddc u\geq0$. Put
+\[
+ \MA(f)=(\omega+\ddc f)^3,\qquad M(f)=\int_X\MA(f)
+\]
+for a smooth real function $f$.
+
+An honest shrinking sequence with excess mass $m=b-V>0$ has
+\[
+ w_j=r_jU_j,\qquad \sup_X U_j=0,\qquad
+ \omega+\ddc U_j\geq0,\qquad r_j\longrightarrow0,
+ \qquad M(w_j)=b.
+\]
+Its defect is a weak limit $\MA(w_j)\rightharpoonup\omega^3+\sigma$.
+The shrinking results stated in S01 give capacity convergence to zero,
+the fixed shallow/deep conclusions and the linear-current conclusions
+for precisely these sequences. We preserve all their hypotheses.
+
+\begin{theorem}\label{thm:smooth}
+For every $b>V$ and every positive sequence $\varepsilon_j\to0$,
+there is an honest smooth shrinking sequence with
+$0<r_j<\varepsilon_j$ such that
+\[
+ M(w_j)=b,\qquad
+ \MA(w_j)\rightharpoonup\frac bV\omega^3.
+\]
+Its defect is the prescribed smooth measure
+$\sigma=((b-V)/V)\omega^3$. Its support is $X$, and it charges no
+pluripolar set.
+\end{theorem}
+
+The group $G=U(3)\times(\mathbb R/\mathbb Z)$ acts by
+$(A,t)[z]=[e^tAz]$. For a probability $\rho$ on $G$ and a finite
+measure $\sigma$, define the orbital average by continuous tests:
+\[
+ \mathcal A_\rho\sigma=\int_G g^*\sigma\,d\rho(g),\qquad
+ \int_X\varphi\,g^*\sigma=
+ \int_X\varphi\circ g^{-1}\,d\sigma.
+\]
+
+\begin{theorem}\label{thm:orbit}
+Suppose $\sigma$ is already realized by an honest smooth shrinking
+sequence on this $(X,\omega)$ with fixed mass $b>V$.
+For every probability $\rho$ on $G$, including singular or atomic
+probabilities, $\mathcal A_\rho\sigma$ is realized by another such
+sequence of exactly the same mass. Its shrinking parameters can satisfy
+any prescribed bounds $0<r_j<\varepsilon_j\to0$.
+\end{theorem}
+
+This is closure under the orbital convex hull of realizable defects.
+Combined with the necessary nonlinear current structure and repaired
+linear automorphisms, it yields a complete classification below.
+
+Let $\pi:X\to\mathbb P^2$ be the projectivization, and $h_p$ the
+probability Haar measure on the elliptic fiber $E_p=\pi^{-1}(p)$.
+For a positive finite base measure $\mu$, its Haar lift $L\mu$ is
+defined by
+\[
+ \int_X\varphi\,d(L\mu)=\int_{\mathbb P^2}
+       \left(\int_{E_p}\varphi\,dh_p\right)d\mu(p).
+\]
+
+\begin{theorem}\label{thm:classification}
+At fixed mass $b>6$, the defects of all honest smooth shrinking
+sequences on this Hopf threefold are exactly
+\[
+ \{L\mu:\mu\geq0,\ \mu(\mathbb P^2)=b-6\}.
+\]
+Every such measure is realized with any prescribed bounds
+$0<r_j<\varepsilon_j\to0$. Possible supports are precisely
+$\pi^{-1}(F)$ for nonempty closed $F\subset\mathbb P^2$.
+Every defect has no point atoms. The lift $L\mu$ charges no pluripolar
+set if and only if $\mu$ charges no pluripolar set on $\mathbb P^2$.
+\end{theorem}
+
+\section{The positive quadratic carrier}
+\begin{lemma}\label{lem:carrier}
+For every smooth real $f$,
+\[
+ M(f)=V+3Q(f),\qquad
+ Q(f)=\int_X\omega\wedge(\ddc f)^2
+     =\int_X df\wedge d^c f\wedge\alpha^2\geq0.
+\]
+Consequently $M(\lambda f)-V=\lambda^2(M(f)-V)$ for real $\lambda$.
+If $0<t<1$, $\ddc f\geq-t\omega$ and $m=M(f)-V$, put
+$H=\ddc f+t\omega\geq0$ and $\nu=3\omega\wedge H^2$. Then
+\[
+ \int_X\omega^2H=tV,\qquad
+ \int_X\omega H^2=m/3+t^2V,\qquad
+ \int_XH^3=tm+t^3V
+\]
+and
+\[
+ \|\MA(f)-\omega^3-\nu\|_{\TV}
+       \leq 6tV+2tm+4t^3V.
+\]
+Thus the complete defect limit of an honest fixed-mass sequence
+equals the weak limit of its positive quadratic carriers.
+\end{lemma}
+
+\begin{proof}
+Stokes and $\ddc\omega^2=0$ give
+$\int\omega^2\ddc f=0$. Also
+$\int(\ddc f)^3=0$, because this smooth form is exact. Expanding
+$M(f)$ proves the first equality. As
+$\ddc(f\ddc f)=(\ddc f)^2$, integration by parts gives
+$Q(f)=\int f\ddc f\wedge\ddc\omega$. The identity
+\[
+ \ddc(f^2/2)=df\wedge d^c f+f\ddc f
+\]
+and closedness of $\ddc\omega$ yield
+$Q(f)=-\int df\wedge d^c f\wedge\ddc\omega$.
+Substitute $\ddc\omega=-\alpha^2$. Positivity follows from
+$df\wedge d^c f\geq0$ and $\alpha\geq0$.
+Expanding the three integrals involving $H$ gives the stated masses.
+
+The actual positive-form expansion is
+\[
+ \MA(f)=(1-t)^3\omega^3+3(1-t)^2\omega^2H
+                     +(1-t)\nu+H^3.
+\]
+All four terms are positive. The triangle inequality therefore bounds
+the total variation after subtracting $\omega^3+\nu$ by
+\[
+ [1-(1-t)^3]V+3(1-t)^2tV+t(m+3t^2V)+(tm+t^3V),
+\]
+which is at most the claimed expression. This is a measure estimate,
+rather than merely an equality of integrated masses.
+\end{proof}
+
+\section{Averaging actual potentials}
+The group action is holomorphic, transitive and preserves $\omega$:
+unitaries preserve $a$, while real scaling adds a constant to it.
+There is an invariant probability $h$ on $G$. One explicit construction
+takes a complex $3\times3$ Gaussian matrix $Z$, sets
+$A=Z(Z^*Z)^{-1/2}$ almost surely and independently chooses $t$
+uniformly modulo one. The Gaussian matrix is invertible almost surely.
+Its left and right unitary invariance and the equivariance of this
+polar expression give left and right invariance of $h$.
+
+For a smooth $q$, transitivity and invariance make
+$\int_G q\circ g\,dh(g)$ constant. Differentiating the smooth average
+and using preservation of $\omega$ gives
+\[
+ \int_Gg^*(\ddc q+s\omega)\,dh(g)=s\omega.
+ \tag{1}\label{eq:form-average}
+\]
+For every finite positive measure $\eta$,
+\[
+ \int_Gg^*\eta\,dh(g)=\frac{\eta(X)}V\omega^3.
+ \tag{2}\label{eq:measure-average}
+\]
+Indeed the average of $\varphi\circ g^{-1}$ is constant in the point;
+integrating that constant against the invariant probability
+$\omega^3/V$ identifies it as $V^{-1}\int\varphi\omega^3$.
+
+Let $f=su$ be an honest fixed-mass shrink with $M(f)=V+m$, and put
+$H=\ddc f+s\omega$, $\nu=3\omega H^2$.
+For any $N$ translates define the actual smooth potential and form
+\[
+ W=N^{-1/2}\sum_{l=1}^N f\circ g_l,\qquad
+ \tau=s\sqrt N,\qquad
+ K=\ddc W+\tau\omega=N^{-1/2}\sum_{l=1}^Ng_l^*H\geq0.
+\]
+Their quadratic carrier decomposes into positive measures
+\[
+ 3\omega K^2=D+C,\qquad
+ D=\frac1N\sum_lg_l^*\nu,\qquad
+ C=\frac6N\sum_{l<a}\omega\wedge g_l^*H\wedge g_a^*H.
+ \tag{3}\label{eq:diagonal}
+\]
+In particular nonlinear products are not assumed to commute with
+averaging. We will estimate the actual mixed term $C$.
+
+Suppose the $g_l$ are independent with law $\rho$ having density
+at most $L<\infty$ relative to $h$. Positivity and
+\eqref{eq:form-average} show
+\[
+ 0\leq B:=\int_Gg^*H\,d\rho(g)\leq Ls\omega.
+\]
+Independence and Fubini imply
+\[
+ \E[C(X)]=3(N-1)\int_X\omega B^2
+                    \leq3(N-1)L^2s^2V.
+ \tag{4}\label{eq:cross}
+\]
+For $\rho=h$ the expectation is exactly $3(N-1)s^2V$.
+For a real test $\varphi$ with $\|\varphi\|_\infty\leq1$, the
+independent variables $\int\varphi\,g_l^*\nu$ have absolute value
+at most $m+3s^2V$. Their empirical mean $\int\varphi D$ has expectation
+$\int\varphi\,\mathcal A_\rho\nu$ and variance at most
+\[
+ \frac{(m+3s^2V)^2}{N}.
+ \tag{5}\label{eq:variance}
+\]
+
+\section{The smooth prescribed defect}
+\begin{proof}[Proof of Theorem~\ref{thm:smooth}]
+Fix $m=b-V>0$ and a countable uniformly dense collection
+$(\varphi_k)$ in the real unit ball of $C(X)$. Choose
+$\delta_j\downarrow0$ with $\delta_j<m/10$. First choose
+$N_j\to\infty$ so large that
+\[
+ \frac{j(m+3V)^2}{N_j\delta_j^2}<\frac14.
+\]
+Then choose a smooth normalized $\omega$-psh $u_j$ of sufficiently
+large mass and set
+\[
+ s_j=\sqrt{\frac{m}{M(u_j)-V}},\qquad f_j=s_ju_j.
+\]
+Lemma~\ref{lem:carrier} gives $M(f_j)=b$. Large source mass makes
+$s_j$ arbitrarily small, so we impose
+\[
+ s_j\sqrt{N_j}<\min(\varepsilon_j/4,1/j,1/4),\qquad
+ 3VN_js_j^2<m/2,\qquad
+ 3(N_j-1)s_j^2V<\delta_j/4.
+\]
+
+Sample $N_j$ independent translates with law $h$. Chebyshev's
+inequality, \eqref{eq:variance} and a union bound show that the
+probability of an empirical error exceeding $\delta_j$ on any of
+the first $j$ tests is less than $1/4$. Markov's inequality and
+\eqref{eq:cross} show that the probability of $C(X)>\delta_j$ is
+less than $1/4$. Thus a deterministic tuple satisfies both bounds.
+Fix one such tuple at each step. Equations~\eqref{eq:measure-average}
+and \eqref{eq:diagonal} imply
+\[
+ D_j\rightharpoonup\frac mV\omega^3,\qquad
+ \|C_j\|_{\TV}=C_j(X)\leq\delta_j\longrightarrow0,
+ \qquad 3\omega K_j^2\rightharpoonup\frac mV\omega^3.
+\]
+The dense tests suffice because all these measure masses are bounded.
+
+We now fix the mass exactly. With $\tau_j=s_j\sqrt{N_j}$,
+Lemma~\ref{lem:carrier} and $D_j(X)=m+3s_j^2V$ give
+\[
+ d_j:=M(W_j)-V=m+C_j(X)-3(N_j-1)s_j^2V\longrightarrow m,
+ \qquad d_j>m/2.
+\]
+Set $\lambda_j=\sqrt{m/d_j}\to1$, so $\lambda_j\leq\sqrt2$.
+Let
+\[
+ a_j=\frac1{N_j}\sum_lu_j\circ g_l,\qquad
+ U_j=a_j-\sup_Xa_j,\qquad r_j=\lambda_j\tau_j,
+ \qquad w_j=r_jU_j.
+\]
+The normalized $U_j$ is smooth and $\omega$-psh, and
+$0<r_j<\varepsilon_j$. Since $w_j$ differs from
+$\lambda_jW_j$ by a constant, the exact quadratic scaling gives
+\[
+ M(w_j)=V+\lambda_j^2d_j=b,\qquad
+ \omega+\ddc w_j\geq(1-r_j)\omega,
+ \qquad \ddc w_j+r_j\omega=\lambda_jK_j.
+\]
+Its quadratic carrier tends to $(m/V)\omega^3$. The total-variation
+estimate in Lemma~\ref{lem:carrier} proves
+$\MA(w_j)\rightharpoonup(b/V)\omega^3$ against every continuous test.
+All potentials and products are actual smooth objects at each step.
+
+This is exactly an honest shrinking sequence, so the supplied capacity,
+shallow/deep and linear-current conclusions apply. Its defect has full
+support because $\omega$ is positive. Locally a pluripolar set lies in
+the $-\infty$ locus of a non-identically-$-\infty$ psh function.
+Local integrability \cite[I.4.17 and I.5.3]{Demailly} makes that
+locus Lebesgue-null, and hence null
+for the smooth measure $(m/V)\omega^3$.
+\end{proof}
+
+\section{Arbitrary orbital laws}
+\begin{proof}[Proof of Theorem~\ref{thm:orbit}]
+Write the source sequence as $f_k=s_ku_k$, and put
+$H_k=\ddc f_k+s_k\omega$, $\nu_k=3\omega H_k^2$.
+Lemma~\ref{lem:carrier} yields
+\[
+ \nu_k\rightharpoonup\sigma,\qquad
+ \nu_k(X)=m+3s_k^2V,
+ \qquad\int_Gg^*H_k\,dh(g)=s_k\omega.
+\]
+Approximate $\rho$ weakly by probabilities $\rho_j$ with finite
+density bounds $L_j$ relative to $h$. Explicitly, restrict $h$
+to a shrinking neighborhood $B_j$ of the identity, normalize by
+$h(B_j)$, and convolve with $\rho$. Nonempty neighborhoods have
+positive invariant mass: finitely many translates cover the compact
+group, so zero mass would contradict $h(G)=1$. The resulting density
+is at most $L_j=1/h(B_j)$. Uniform continuity on the compact group
+shows that these convolutions tend weakly to $\rho$.
+
+Choose $\delta_j\downarrow0$ and $N_j\to\infty$ to meet the same
+variance/union bound as above. Choose increasing source indices $k_j$
+so large that $s_{k_j}<1$ and
+\[
+ s_{k_j}\sqrt{N_j}<\min(\varepsilon_j/4,1/j,1/4),\qquad
+ 3VN_js_{k_j}^2<m/2,\qquad
+ 3(N_j-1)L_j^2s_{k_j}^2V<\delta_j/4.
+\]
+The limits $s_k\to0$ make all these conditions possible.
+Sample with law $\rho_j$ and select deterministic tuples using
+\eqref{eq:cross}--\eqref{eq:variance}. Their diagonal measures differ
+from $\mathcal A_{\rho_j}\nu_{k_j}$ by at most $\delta_j$ on the
+first $j$ dense tests, and their mixed measures have mass at most
+$\delta_j$.
+
+For completeness, the expectation measures have the desired limit.
+For fixed continuous $\varphi$, the family
+$\{\varphi\circ g^{-1}:g\in G\}$ is compact in the uniform topology.
+Take a finite uniform net of this family. Weak convergence at its
+finitely many functions, together with uniformly bounded masses,
+proves
+\[
+ \sup_{g\in G}\left|
+      \int_X\varphi\,g^*\nu_k-\int_X\varphi\,g^*\sigma
+                  \right|\longrightarrow0.
+\]
+Also $g\mapsto\int\varphi\,g^*\sigma$ is continuous. Hence
+$\mathcal A_{\rho_j}\nu_{k_j}\rightharpoonup\mathcal A_\rho\sigma$.
+The selected tuples give
+\[
+ D_j\rightharpoonup\mathcal A_\rho\sigma,\qquad
+ C_j\longrightarrow0\ \text{in total variation},\qquad
+ 3\omega K_j^2\rightharpoonup\mathcal A_\rho\sigma.
+\]
+
+Repeat the exact normalization from the preceding proof, now with
+$s_j=s_{k_j}$. The same formula gives
+$d_j=m+C_j(X)-3(N_j-1)s_j^2V>m/2$ and $d_j\to m$.
+Set $\lambda_j=\sqrt{m/d_j}$, normalize the average of the
+$u_{k_j}\circ g_l$ to supremum zero and take
+$r_j=\lambda_js_j\sqrt{N_j}<\varepsilon_j$.
+The resulting actual smooth $w_j=r_jU_j$ has $M(w_j)=b$ and
+quadratic carrier $\lambda_j^2(D_j+C_j)$ tending to
+$\mathcal A_\rho\sigma$. Lemma~\ref{lem:carrier} gives the complete
+weak limit $\MA(w_j)\rightharpoonup\omega^3+\mathcal A_\rho\sigma$.
+The honest shrinking hypotheses, including their capacity and
+fixed-level consequences, are retained.
+\end{proof}
+
+Finite laws realize every convex combination
+$\sum_a\theta_ag_a^*\sigma$ with $\theta_a\geq0$ and
+$\sum_a\theta_a=1$. Its support is the union of the supports of
+the positively weighted translates. Taking
+$\rho=\theta\delta_e+(1-\theta)h$ realizes
+\[
+ \theta\sigma+(1-\theta)\frac mV\omega^3,
+ \qquad 0\leq\theta\leq1.
+\]
+For $\theta<1$ its support is $X$. If the source $\sigma$ charges
+a pluripolar set $P$ and $\theta>0$, the mixture charges $P$ with
+mass $\theta\sigma(P)$. The fiber constructions below supply such
+charging sources.
+
+\section{Necessary currents on arbitrary Hermitian manifolds}
+In this section $(Y,h)$ is any connected compact Hermitian manifold
+of dimension $n$, and $v_j=s_ju_j$ is an honest shrinking sequence
+with fixed mass $b$ and defect $\sigma$:
+\[
+ \sup_Yu_j=0,\quad h+\ddc u_j\geq0,\quad s_j\to0,\quad
+ \int_Y(h+\ddc v_j)^n=b,\quad
+ (h+\ddc v_j)^n\rightharpoonup h^n+\sigma.
+\]
+
+\begin{theorem}\label{thm:general}
+After a common subsequence there are positive $d$-closed currents
+$K_k$ of bidegree $(k,k)$, $2\leq k\leq n-1$, such that
+\[
+ \sigma=\sum_{k=2}^{n-1}\binom nk h^{n-k}\wedge K_k.
+ \tag{6}\label{eq:general-defect}
+\]
+Each $K_k$ has zero pairing with every smooth $d$-closed real form
+of complementary degree and every smooth $dd^c$-closed form of
+bidegree $(n-k,n-k)$. The first and top positive powers vanish,
+the top one in total variation. For every global smooth closed
+semipositive real $(1,1)$-form $\vartheta$,
+\[
+\operatorname{supp}\sigma\subset\{\vartheta^n=0\}.
+\]
+In dimension three the same support conclusion holds for every
+global smooth semipositive pluriclosed $(1,1)$-form $\vartheta$.
+These conditions are necessary; their sufficiency is not asserted.
+\end{theorem}
+
+\begin{proof}
+Put $H_j=\ddc v_j+s_jh=s_j(h+\ddc u_j)\geq0$.
+Discard finitely many indices so that $s_j<1/2$. Positivity in the
+actual expansion
+\[
+ (h+\ddc v_j)^n=\sum_{k=0}^n\binom nk
+                  (1-s_j)^{n-k}h^{n-k}H_j^k
+\]
+and the fixed mass give
+\[
+ \int_Yh^{n-k}H_j^k\leq\frac{2^{n-k}b}{\binom nk}.
+ \tag{7}\label{eq:power-bounds}
+\]
+In finitely many charts these positive traces bound the coefficients;
+positivity also bounds off-diagonal coefficients by diagonal ones.
+Weak compactness of bounded coefficient measures gives simultaneous
+positive current limits $H_j^k\rightharpoonup K_k$.
+
+The first power has mass $O(s_j)$. Use a smooth Gauduchon metric
+$\gamma$ from the supplied trace statement, so
+$\ddc\gamma^{n-1}=0$. Smooth Stokes gives
+\[
+ \int_Y\gamma^{n-1}H_j=s_j\int_Y\gamma^{n-1}h.
+\]
+Metric comparison bounds the $h$-trace by this one. Thus $K_1=0$.
+Since $dH_j=s_jdh$,
+\[
+ d(H_j^k)=ks_jdh\wedge H_j^{k-1}\longrightarrow0
+\]
+against every fixed smooth test, by \eqref{eq:power-bounds}.
+Hence $dK_k=0$.
+
+Let $\eta$ be a smooth $d$-closed real complementary form.
+The smooth exactness
+$(\ddc v_j)^k=d(d^cv_j\wedge(\ddc v_j)^{k-1})$ yields
+$\int\eta(\ddc v_j)^k=0$. Expanding $\ddc v_j=H_j-s_jh$ gives
+\[
+ \int_Y\eta H_j^k
+ =-\sum_{r=0}^{k-1}\binom kr(-s_j)^{k-r}
+                 \int_Y\eta\wedge h^{k-r}H_j^r=O(s_j).
+\]
+Indeed the absolute value of each integral is bounded by a fixed
+multiple of the corresponding trace in \eqref{eq:power-bounds}.
+Passing to limits proves the asserted zero pairings. Taking $k=n$
+and $\eta=1$ shows $\int H_j^n=O(s_j)$; positivity gives total-variation
+convergence to zero and $K_n=0$. Passing to limits in the actual
+positive expansion now proves \eqref{eq:general-defect}.
+
+For the stronger test-form assertion, take a smooth $(n-k,n-k)$-form
+$\eta$ with $\ddc\eta=0$. The exact smooth identity
+\[
+ (\ddc v_j)^k=\ddc\bigl(v_j(\ddc v_j)^{k-1}\bigr)
+\]
+and integration by parts again give $\int\eta(\ddc v_j)^k=0$.
+The same binomial expansion and trace bounds give
+$\int\eta H_j^k=O(s_j)$, and hence $\int\eta K_k=0$.
+
+For a global closed semipositive $\vartheta$, take
+$\eta=\vartheta^{n-k}$. The positive measure
+$\vartheta^{n-k}\wedge K_k$ has total mass zero and thus is zero.
+Where $\vartheta$ is strictly positive, its power dominates a positive
+multiple of $h^{n-k}$ on every relatively compact subregion. Therefore
+each $K_k$ vanishes there, proving the support assertion.
+The form must be global: a local K\"ahler form cannot be used in
+the closed-form pairing argument.
+
+In dimension three use any global $\vartheta\geq0$ with
+$\ddc\vartheta=0$ as the stronger complementary test. Its positive
+pairing with $K_2$ has zero mass, so $K_2$ vanishes where
+$\vartheta$ is strictly positive. This proves the pluriclosed
+support assertion. More generally a global $dd^c$-closed complementary
+form whose wedge with positive currents is nonnegative eliminates
+its corresponding $K_k$ wherever it dominates a positive multiple
+of $h^{n-k}$.
+\end{proof}
+
+For $n=3$, the formula is $\sigma=3h\wedge K_2$.
+For $n\leq2$ the sum is empty, so these honest shrinking hypotheses
+cannot hold with positive excess mass. No cohomological
+representation theorem is required: the pairings themselves are
+the precise assertion. In particular a positive pluriclosed metric
+on a threefold excludes these positive fixed-mass defects. We do not
+infer $dd^c$-exactness of a limiting current merely from limits of
+$dd^c$-exact smooth forms without a closed-range argument.
+
+\section{Every Hopf defect has Haar fibers}
+The Hopf fibration is locally a holomorphic product $U\times E$,
+with $E=\mathbb C/(\mathbb Z+2\pi i\mathbb Z)$ and fiber coordinate
+$w=\log z_0$ in a base chart. Transition functions translate $w$
+by a holomorphic base function. Thus fiber Haar probability is
+canonical. Its average of a continuous function is continuous in the
+base, by a product chart and uniform continuity. Consequently $L$
+preserves weak convergence of finite base measures.
+
+\begin{lemma}\label{lem:necessity}
+Every Hopf defect has the form $\sigma=L\mu$ with
+$\mu=\pi_*\sigma\geq0$ of mass $m=b-6$. Along the sequence on which
+the defect limit is fixed,
+\[
+ (\ddc w_j+s_j\omega)^2\rightharpoonup\frac16\pi^*\mu.
+\]
+Moreover $\operatorname{supp}L\mu=\pi^{-1}(\operatorname{supp}\mu)$,
+and $L\mu$ has no point atoms.
+\end{lemma}
+
+\begin{proof}
+Theorem~\ref{thm:general} gives a positive closed $(2,2)$-current
+$K$ with $\sigma=3\omega K$. Its pairing with
+$\alpha=\pi^*\omega_{\mathrm{FS}}$ is zero. Since both are positive,
+$\alpha\wedge K=0$ as a measure.
+
+In a product chart with base coordinates $x_1,x_2$, the positive
+Hermitian coefficient matrix of $K$ is indexed by
+\[
+ dx_1\wedge dx_2,\qquad dx_1\wedge dw,\qquad dx_2\wedge dw.
+\]
+This can be interpreted rigorously using Radon--Nikodym densities
+relative to the sum of its diagonal coefficient measures.
+The form $\alpha$ is strictly positive horizontally. Thus
+$\alpha K=0$ forces the two diagonal entries containing $dw$ to
+vanish. The positive-matrix inequality
+$|a_{ij}|^2\leq a_{ii}a_{jj}$ forces their cross entries to vanish too.
+Only the horizontal top-base coefficient remains.
+
+Closedness says that both real vertical distributional derivatives
+of that coefficient are zero. Test it against a compactly supported
+base function times a Fourier mode
+$e^{2\pi ik\operatorname{Re}w+i\ell\operatorname{Im}w}$.
+For every nonconstant mode at least one derivative kills its
+coefficient. Density of trigonometric polynomials then shows that
+the scalar measure is a product of a base measure with constant
+fiber area. The translation transition functions preserve this
+description, so globally
+\[
+ K=\pi^*\tau
+\]
+for a positive top-degree base current, equivalently a positive
+measure $\tau$. This is pullback through a submersion, defined by
+the local horizontal product construction.
+
+On the fiber,
+\[
+ \beta|_E=\frac1\pi\,d(\operatorname{Re}w)
+                      \wedge d(\operatorname{Im}w),
+ \qquad \int_E\beta=2.
+\]
+Hence $L\mu=(1/2)\beta\wedge\pi^*\mu$. Horizontal components of
+$\beta$ disappear in this wedge, and $\alpha\pi^*\tau=0$.
+Therefore
+\[
+ \sigma=3\beta\wedge\pi^*\tau=L(6\tau).
+\]
+Set $\mu=6\tau=\pi_*\sigma$; its mass is $m$.
+Once $\sigma$ is fixed, every subsequential current limit is the
+same $K=\pi^*\mu/6$. The trace bounds give precompactness, so the
+entire carrier-current sequence converges to this $K$.
+Locally the lift is a product with full-support atomless Haar
+probability, proving the support and atom assertions.
+\end{proof}
+
+\section{Prescribing a pluripolar fiber}
+\begin{lemma}\label{lem:fiber}
+For every $p\in\mathbb P^2$, the measure $mh_p$ is an honest
+shrinking defect with exactly mass $b=6+m$ and any prescribed
+shrinking bounds. The fiber $E_p$ is globally $\omega$-pluripolar.
+\end{lemma}
+
+\begin{proof}
+Take the diffuse sequence of Theorem~\ref{thm:smooth}, writing
+$f_k=s_ku_k$ and $H_k=\ddc f_k+s_k\omega$.
+Since $\omega^3=3\alpha^2\beta$ and $\int_E\beta=2$, the base
+normalization is $\int_{\mathbb P^2}\omega_{\mathrm{FS}}^2=1$.
+Its defect $(m/6)\omega^3=L(m\omega_{\mathrm{FS}}^2)$ and
+Lemma~\ref{lem:necessity} give the indispensable current limit
+\[
+ H_k^2\rightharpoonup(m/6)\alpha^2,
+ \qquad \operatorname{mass}(H_k)=O(s_k).
+\]
+
+Every $A\in GL(3,\mathbb C)$ commutes with the deck dilation and
+defines an automorphism of $X$ and a projective automorphism $a$
+of the base. Fix $A$. Choose $C_A\geq1$ with
+$A^*\omega\leq C_A\omega$, and set
+$R_A=C_A\omega-A^*\omega\geq0$.
+For $f_k^A=f_k\circ A$ and $t_k=C_As_k$ the repaired positive
+carrier is
+\[
+ H_k^A=\ddc f_k^A+t_k\omega=A^*H_k+s_kR_A\geq0.
+\]
+The difference
+\[
+ (H_k^A)^2-A^*(H_k^2)
+        =2s_kA^*H_k\wedge R_A+s_k^2R_A^2
+\]
+has current mass $O_A(s_k^2)$: fixed-metric comparison gives
+$\operatorname{mass}(A^*H_k)=O_A(s_k)$.
+It follows that
+\[
+ (H_k^A)^2\rightharpoonup(m/6)\pi^*(a^*\omega_{\mathrm{FS}}^2),
+ \quad
+ 3\omega(H_k^A)^2\rightharpoonup L(m a^*\omega_{\mathrm{FS}}^2).
+\]
+The latter measure has mass $m$, by change of variables on the base.
+
+Let $d_k^A=M(f_k^A)-6$. Lemma~\ref{lem:carrier} gives
+$d_k^A=3\int\omega(H_k^A)^2-3t_k^2V\to m$.
+For sufficiently late $k$, take
+$\lambda_k^A=\sqrt{m/d_k^A}\to1$. Exact scaling gives
+$M(\lambda_k^Af_k^A)=b$. The underlying function
+\[
+ u_k^A=(u_k\circ A)/C_A
+\]
+is smooth, has supremum zero, and satisfies
+$\omega+\ddc u_k^A\geq\omega-C_A^{-1}A^*\omega\geq0$.
+Thus $\lambda_k^Af_k^A=r_k^Au_k^A$ with
+$r_k^A=\lambda_k^AC_As_k\to0$. Its carrier is
+$\lambda_k^AH_k^A$. The total-variation reduction proves the complete
+limit $\MA(\lambda_k^Af_k^A)\rightharpoonup
+\omega^3+L(m a^*\omega_{\mathrm{FS}}^2)$.
+The background stays $\omega$ throughout; the repair proves actual
+admissibility rather than assuming a pullback formula for these
+nonlinear measures.
+
+For $p_0=[1:0:0]$, take
+$A_j=\operatorname{diag}(R_j^{-1},1,1)$ with $R_j\to\infty$.
+Since
+$a_j^*\omega_{\mathrm{FS}}^2=(a_j^{-1})_*\omega_{\mathrm{FS}}^2$
+and
+\[
+ a_j^{-1}[q_0:q_1:q_2]=[R_jq_0:q_1:q_2]\longrightarrow p_0
+       \quad(q_0\ne0),
+\]
+dominated convergence on continuous tests gives
+$a_j^*\omega_{\mathrm{FS}}^2\rightharpoonup\delta_{p_0}$.
+The exceptional hyperplane is null for smooth base volume.
+Weak continuity of $L$ yields
+$L(m a_j^*\omega_{\mathrm{FS}}^2)\rightharpoonup mh_{p_0}$.
+
+For each fixed $A_j$, choose a sufficiently late actual member of
+its just-constructed honest sequence. Require parameter less than
+$\varepsilon_j$ and error at most $1/j$ on the first $j$ functions
+of a fixed dense continuous test collection. The mass is already
+exactly $b$. These diagonal choices give the complete weak limit
+$\omega^3+mh_{p_0}$, with all the original shrinking constraints.
+A fixed unitary rotation gives any other $p$.
+
+Finally
+\[
+ \psi([z])=\log\frac{|z_1|^2+|z_2|^2}{|z|^2}
+\]
+is well-defined on $X$, locally a genuine psh logarithm minus a
+smooth function, and $\ddc\psi\geq-\alpha$.
+Thus $\omega+\ddc\psi\geq\beta\geq0$, and its pole set is exactly
+$E_{p_0}$. This proves global $\omega$-pluripolarity, also for
+unitary images $E_p$. The realized defect assigns its full mass
+$m$ to that fiber.
+\end{proof}
+
+\section{Classification, supports and pluripolar charging}
+\begin{proof}[Proof of Theorem~\ref{thm:classification}]
+Necessity is Lemma~\ref{lem:necessity}. For finite atomic
+\[
+ \mu=m\sum_{a=1}^N\theta_a\delta_{p_a},\qquad
+ \theta_a\geq0,\quad\sum_a\theta_a=1,
+\]
+start with the fiber realization $mh_{p_0}$ of Lemma~\ref{lem:fiber}.
+Choose unitary $g_a$ with $g_a^{-1}(p_0)=p_a$ on the base.
+Their maps between fibers are translations and preserve Haar
+probability. Theorem~\ref{thm:orbit} with the finite law
+$\sum_a\theta_a\delta_{g_a}$ realizes
+$\sum_a\theta_amh_{p_a}=L\mu$, by actual smooth potentials of
+exact mass and arbitrarily small parameters.
+
+For arbitrary $\mu$, take finite Borel partitions of $\mathbb P^2$
+whose diameters tend to zero. Replace the mass of each element by
+an atom in that element, obtaining $\mu_j\rightharpoonup\mu$ with
+$\mu_j(\mathbb P^2)=m$. From each honest realization of $L\mu_j$
+choose a late member with parameter $r_j<\varepsilon_j$ and error
+at most $1/j$ on the first $j$ dense tests. The selected potentials
+are smooth and normalized, their mass remains exactly $b$, and weak
+continuity of $L$ gives the full limit
+\[
+ \MA(r_jU_j)\rightharpoonup\omega^3+L\mu.
+\]
+Their positivity is $\omega+\ddc(r_jU_j)\geq(1-r_j)\omega$.
+The supplied capacity, shallow/deep and linear-current conclusions
+apply to these honest shrinking sequences.
+
+By Lemma~\ref{lem:necessity}, supports are exactly preimages of base
+supports. Every nonempty closed $F\subset\mathbb P^2$ supports a
+measure of mass $m$ with support $F$: take a countable dense sequence
+$(p_l)$ in $F$ and the measure $\sum_{l\geq1}m2^{-l}\delta_{p_l}$.
+Its realization proves the claimed complete support description.
+Atomlessness also follows from the lemma.
+
+It remains to prove the pluripolarity equivalence. If $B$ is a base
+pluripolar set, pull back its local nontrivial psh pole witnesses
+through the holomorphic submersion. They remain nontrivial, and
+$\pi^{-1}(B)$ is pluripolar. Since
+$L\mu(\pi^{-1}(B))=\mu(B)$, a non-pluripolar-charging lift forces
+the same property for $\mu$.
+
+Conversely suppose $\mu$ charges no base pluripolar set, and let
+$P\subset X$ be a measurable pluripolar set. Use countably many
+relatively compact product charts $U\times D$ with local nontrivial
+psh functions $q(x,w)$ whose pole loci contain the corresponding
+pieces of $P$. Smaller product charts still cover $X$. On a fixed
+smaller fiber disc $D'$, each restriction $q(x,\cdot)$ is either
+nontrivial subharmonic, with area-null pole set, or identically
+$-\infty$. The exceptional parameters in the second case are
+base-pluripolar. Indeed
+\[
+ F(x)=\frac1{\operatorname{area}(D')}
+                   \int_{D'}q(x,w)\,dA(w)
+\]
+is a genuine nontrivial base psh function. Joint local integrability
+and Fubini make it finite almost everywhere. A common local upper
+bound and reverse Fatou prove upper semicontinuity; integrating the
+base submean inequalities proves the psh inequalities. If the fiber
+restriction is identically $-\infty$, then $F(x)=-\infty$.
+
+Outside the countable union of these base pole sets, every piece of
+$P$ has fiber Haar measure zero. The union is $\mu$-null by
+hypothesis, and the defining fiber integral shows $L\mu(P)=0$.
+Using the local Borel pole supersets proves the same forward assertion
+with outer measures. For the reverse assertion, let a Borel null set
+$C$ contain $\pi^{-1}(B)$, where $B$ is a possibly nonmeasurable base
+pluripolar set. The fiber kernel $p\mapsto h_p(C)$ is Borel: this holds
+first for continuous tests by the product trivializations, then for
+Borel tests by the monotone-class argument. It equals one on $B$ and
+has $\mu$-integral $L\mu(C)=0$, so $\mu^*(B)=0$.
+An outer-null set has such a Borel null envelope. This proves the
+outer-measure equivalence as well.
+\end{proof}
+
+For each $p$ and $0\leq\theta\leq1$, the classification realizes
+\[
+ \mu=m\theta\delta_p+m(1-\theta)\omega_{\mathrm{FS}}^2,
+ \qquad
+ \sigma=m\theta h_p+\frac{m(1-\theta)}6\omega^3.
+\]
+The globally pluripolar fiber $E_p$ carries exactly $m\theta$.
+The smooth part charges no pluripolar set. Thus every fraction of
+the excess mass can be a pluripolar part, including full-support
+charging examples for $0<\theta<1$, a smooth noncharging example
+for $\theta=0$ and a fully fiber-supported example for $\theta=1$.
+All remain atomless as point measures.
+
+\section{Every Hermitian metric on the same Hopf manifold}
+Let $\Omega$ now be any smooth Hermitian metric on this scalar
+Hopf threefold. Put $V_\Omega=\int_X\Omega^3$ and
+\[
+ a_\Omega(p)=\int_{E_p}\Omega>0,\qquad
+ h_p^\Omega=\Omega|_{E_p}/a_\Omega(p).
+\]
+Fiber integration in local smooth bundle trivializations shows that
+$a_\Omega$ is smooth and bounded above and below by positive constants.
+Define the weighted lift $L_\Omega\mu$ by averaging against
+$h_p^\Omega$ in each fiber. These fiber averages are continuous,
+so the weighted lift is weakly continuous.
+
+\begin{theorem}\label{thm:arbitrary-metric}
+For every $b>V_\Omega$, the defects of all honest smooth
+$\Omega$-psh shrinking sequences of exact mass $b$ are precisely
+\[
+ \{L_\Omega\mu:\mu\geq0,\ \mu(\mathbb P^2)=b-V_\Omega\}.
+\]
+Every such measure is realized with any prescribed shrinking bounds.
+The possible supports are exactly nonempty closed fiber-saturated
+sets, defects have no point atoms, and $L_\Omega\mu$ charges no
+pluripolar set if and only if $\mu$ charges none.
+\end{theorem}
+
+\begin{proof}
+Set $m=b-V_\Omega>0$. For necessity apply
+Theorem~\ref{thm:general} with $h=\Omega$.
+The carrier is positive and closed and annihilates the closed
+semipositive $\alpha$. The horizontal-coefficient and vertical-Fourier
+argument of Lemma~\ref{lem:necessity} gives $K=\pi^*\tau$, independent
+of the background metric. Hence
+\[
+ \sigma=3\Omega\wedge\pi^*\tau=L_\Omega\mu,
+ \qquad \mu=3a_\Omega\tau=\pi_*\sigma,
+ \qquad\mu(\mathbb P^2)=m.
+\]
+
+Conversely let $\mu$ have mass $m$, and set
+$\tau=\mu/(3a_\Omega)$ by multiplication with that positive
+continuous function. Put $m_0=6\tau(\mathbb P^2)$ and $\mu_0=6\tau$.
+The standard-metric classification realizes $L\mu_0$ with source
+mass $6+m_0$. Write its smooth functions as $f_j=s_ju_j$.
+Lemma~\ref{lem:necessity} gives
+\[
+ H_j=\ddc f_j+s_j\omega\geq0,\qquad
+ H_j^2\rightharpoonup\pi^*\tau,\qquad
+ \operatorname{mass}(H_j)=O(s_j).
+\]
+Choose $C\geq1$ with $\omega\leq C\Omega$, and put
+$R=C\Omega-\omega\geq0$, $t_j=Cs_j$.
+The repaired carrier
+\[
+ G_j=\ddc f_j+t_j\Omega=H_j+s_jR\geq0
+\]
+has mass $O(s_j)$. Its square differs from $H_j^2$ by
+$2s_jH_jR+s_j^2R^2$, a positive current of mass $O(s_j^2)$.
+Therefore $G_j^2\rightharpoonup\pi^*\tau$ and
+$3\Omega G_j^2\rightharpoonup L_\Omega\mu$.
+
+The exact mass adjustment includes a linear term. Define
+\[
+ \ell_j=3\int_X\Omega^2\ddc f_j,
+ \qquad q_j=3\int_X\Omega(\ddc f_j)^2.
+\]
+Smooth Stokes eliminates the cubic exact integral, giving
+\[
+ M_\Omega(\lambda f_j):=\int_X(\Omega+\ddc(\lambda f_j))^3
+       =V_\Omega+\lambda\ell_j+\lambda^2q_j.
+\]
+The carrier estimates give
+\[
+ \ell_j=3\int\Omega^2G_j-3t_jV_\Omega=O(s_j),
+\]
+\[
+ q_j=3\int\Omega G_j^2-6t_j\int\Omega^2G_j
+                               +3t_j^2V_\Omega\longrightarrow m.
+\]
+For sufficiently late $j$, $q_j>0$. The positive root
+\[
+ \lambda_j=\frac{-\ell_j+\sqrt{\ell_j^2+4mq_j}}{2q_j}
+             \longrightarrow1
+\]
+satisfies $\lambda_j\ell_j+\lambda_j^2q_j=m$.
+Thus $M_\Omega(\lambda_jf_j)=b$ exactly.
+The function $U_j=u_j/C$ has supremum zero and
+$\Omega+\ddc U_j\geq\Omega-\omega/C\geq0$.
+Set $r_j=\lambda_jCs_j$ and $w_j=r_jU_j=\lambda_jf_j$.
+Subsequence selection gives $0<r_j<\varepsilon_j$ for every
+prescribed sequence of positive bounds. All these functions are
+smooth genuine normalized $\Omega$-psh underlying potentials.
+
+The positive carrier of $w_j$ is $\lambda_jG_j$.
+Its square tends to $\pi^*\tau$ and its first-power trace tends
+to zero. Also
+\[
+ \int_XG_j^3=t_jq_j+t_j^2\ell_j+t_j^3V_\Omega=O(s_j).
+\]
+This follows by smooth expansion and Stokes, and positivity makes
+it total-variation convergence to zero. The actual positive expansion
+is
+\[
+ \begin{split}
+ (\Omega+\ddc w_j)^3={}&(1-r_j)^3\Omega^3
+       +3(1-r_j)^2\lambda_j\Omega^2G_j\\
+       &+3(1-r_j)\lambda_j^2\Omega G_j^2+\lambda_j^3G_j^3.
+ \end{split}
+\]
+The first term tends to $\Omega^3$, the second and fourth vanish
+in total variation, and the third tends weakly to $L_\Omega\mu$.
+This proves the complete local weak limit, with exact mass at every
+step. The honest shrinking class retains the supplied capacity and
+fixed-level conclusions.
+
+The metric has infinite smooth upper mass: choose $c>0$ with
+$\Omega\geq c\omega$. For any smooth $\omega$-psh $u$,
+\[
+ \Omega+\ddc(cu)=c(\omega+\ddc u)+(\Omega-c\omega)
+                           \geq c(\omega+\ddc u),
+\]
+so $M_\Omega(cu)\geq c^3M_\omega(u)$.
+The same $c$ times the logarithmic witness in
+Lemma~\ref{lem:fiber} makes each $E_p$ globally
+$\Omega$-pluripolar, since $\Omega+\ddc(c\psi)\geq
+\Omega-c\alpha\geq0$.
+Finally $h_p^\Omega$ has smooth strictly positive density relative
+to Haar probability, with uniform positive upper and lower bounds
+on the compact bundle. The same holds between $L_\Omega\mu$ and
+$L\mu$ for any base measure. They have the same supports and the
+same pluripolar noncharging property, and neither has point atoms.
+Theorem~\ref{thm:classification} finishes the assertions.
+\end{proof}
+
+In particular any desired charging fraction is obtained from a
+base point mass plus smooth base volume. The conditional density
+is the normalized $\Omega$-area; it is Haar for the standard metric.
+
+\section{Scope}
+The necessary intermediate-current and closed-semipositive support
+and $dd^c$-closed complementary-test restrictions hold for arbitrary
+honest shrinking sequences on compact Hermitian manifolds. The complete
+support and prescribed-measure classification holds for all such
+sequences with every Hermitian metric on the named scalar Hopf
+threefold. The construction uses the standard Hopf differential
+identities, arbitrarily large
+smooth masses and the stipulated shrinking properties as supplied
+background. The current structure, averaging, mixed-term controls,
+curvature repairs, exact mass corrections and complete weak limits
+are proved here. No defect of a particular radial profile or formal
+averaging of nonlinear measures is assumed.
+
+The Hopf examples settle both possibilities in the universal
+pluripolar-charging question: defects may charge none, or may place
+their full excess mass on a pluripolar set. They do not give a
+sufficiency theorem for the necessary current conditions on every
+Hermitian manifold. The general S01 programme remains open.
+\begin{thebibliography}{9}
+\bibitem{Demailly}
+J.-P. Demailly, \emph{Complex Analytic and Differential Geometry},
+version of 21 June 2012, I.4.15--4.24 and I.5.1--5.16.
+\end{thebibliography}
+\end{document}
