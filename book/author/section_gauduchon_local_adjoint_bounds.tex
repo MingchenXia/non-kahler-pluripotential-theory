@@ -1,0 +1,174 @@
+\Needspace{12\baselineskip}
+\subsection{Uniform bounds near a smooth density}
+\label{sec:gaud-local-adjoint-bounds}
+
+The endpoint estimate for all tests can fail while the exact maximizing tests for a family of densities remain uniformly controlled. Near the density of the background, the solution forms and their Gauduchon factors stay close to fixed positive ones. This gives uniform bounds for both the determinant density and the adjoint probability density.
+
+In this subsection assume $n\geq3$ and fix $0<\alpha<1$. All H\"older norms are fixed using a finite atlas and smooth connections. Put
+\[
+ H=\frac{\omega^n}{\mathrm{d}V},\qquad
+ V=\int_X\omega^n,\qquad F_*=\log(H/V).
+\]
+Thus $\mathrm{e}^{F_*}\mathrm{d}V=\omega^n/V$ is a probability measure. By \cref{thm:gauduchon}, there is a unique smooth positive factor $\chi_0$ such that
+\[
+ \ddc(\chi_0\omega^{n-1})=0,\qquad
+ \int_X\chi_0\omega^n=1.
+\]
+Write $m=\min_X\chi_0$, $a=\max_X\chi_0$ and $C_0=\|\chi_0\|_{C^{2,\alpha}}$.
+
+We first specify the constants controlling the neighbourhood. For a smooth positive form $\Omega$, set
+\[
+ L_\omega v=\frac{n\ddc v\wedge\omega^{n-1}}{\omega^n},
+ \qquad A_\Omega\eta=\frac{\ddc(\eta\Omega^{n-1})}{\mathrm{d}V}.
+\]
+The compatibility argument of \cref{prop:adjoint-gauduchon,prop:smooth-dependence} gives a bounded inverse for
+\[
+ \mathcal L(v,c)=L_\omega v-c,
+ \qquad \int_Xv\,\mathrm{d}V=0,
+\]
+from $C^{4,\alpha}\times\R$ with this normalization onto $C^{2,\alpha}$. Let $K\geq1$ bound its inverse for the norm $\|v\|_{C^{4,\alpha}}+|c|$. The formal adjoint of $A_\omega$, relative to $\mathrm{d}V$, is $(H/n)L_\omega$. Its kernel consists of constants and its index is zero. Consequently $A_\omega$ has kernel $\R\chi_0$ and range
+\[
+ Z_0=\left\{g\in C^{0,\alpha}:\int_Xg\,\mathrm{d}V=0\right\}.
+\]
+Its restriction to
+\[
+ E_\chi=\left\{\eta\in C^{2,\alpha}:\int_X\eta\omega^n=0\right\}
+\]
+has a bounded inverse $\mathcal R:Z_0\to E_\chi$. Fix $G\geq1$ bounding that inverse.
+
+Rescale the fixed form and endomorphism norms to dominate pointwise operator norms and make endomorphism composition submultiplicative. Choose $D\geq1$ so that
+\[
+ \|\ddc v\|_{C^{2,\alpha}}\leq D\|v\|_{C^{4,\alpha}},\qquad
+ \|\omega^{-1}\ddc v\|_{C^{2,\alpha},\mathrm{alg}}
+                      \leq D\|v\|_{C^{4,\alpha}}.
+\]
+Let $C_{\mathrm{tr}}\geq1$ bound the matrix trace map, and put $Q=2C_{\mathrm{tr}}D^2$. Expanding $\Omega^{n-1}-\omega^{n-1}$ gives a constant $C_A\geq1$ such that
+\[
+ \|A_\Omega-A_\omega\|_{C^{2,\alpha}\to C^{0,\alpha}}
+       \leq C_A\|\Omega-\omega\|_{C^{2,\alpha}}
+ \quad\text{if }\|\Omega-\omega\|_{C^{2,\alpha}}\leq1.
+\]
+Only two derivatives of the form enter this polynomial estimate. Define
+\begin{equation}\label{eq:gaud-local-adjoint-radius}
+ r=\min\left\{\frac1{2D},\frac1{4KQ},
+                   \frac{m}{4GC_ADC_0}\right\},
+ \qquad \varepsilon=\frac r{2K}.
+\end{equation}
+These constants depend only on the fixed background, volume and norms.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:gaud-local-controlled-solution}
+If $F$ is smooth and $\|F-F_*\|_{C^{2,\alpha}}\leq\varepsilon$, its solution form $\Omega_F=\omega+\ddc u_F$ and normalized Gauduchon factor $\chi_F$ satisfy
+\begin{gather*}
+ \tfrac12\omega\leq\Omega_F\leq\tfrac32\omega,
+ \qquad \frac m2\leq\chi_F\leq\frac{3a}2,\\
+ \ddc(\chi_F\Omega_F^{n-1})=0,
+ \qquad \int_X\chi_F\omega^n=1.
+\end{gather*}
+The potential can be normalized by $\int_Xu_F\,\mathrm{d}V=0$ with
+$\|u_F\|_{C^{4,\alpha}}+|B_0(F)-\log V|\leq r$.
+\end{lemma}
+\begin{proof}
+For $\|v\|_{C^{4,\alpha}}\leq1/(2D)$ put
+\[
+ N(v)=\log\det(I+\omega^{-1}\ddc v)-L_\omega v.
+\]
+The logarithm series starts at degree two. If the endomorphism norms of $\omega^{-1}\ddc v$ and $\omega^{-1}\ddc w$ are at most $\rho\leq1/2$, telescoping their powers bounds the difference series by $C_{\mathrm{tr}}\rho/(1-\rho)$ times the endomorphism difference. Hence
+\begin{align*}
+ \|N(v)\|_{C^{2,\alpha}}&\leq Q\|v\|_{C^{4,\alpha}}^2,\\
+ \|N(v)-N(w)\|_{C^{2,\alpha}}
+ &\leq Q(\|v\|_{C^{4,\alpha}}+\|w\|_{C^{4,\alpha}})
+                                      \|v-w\|_{C^{4,\alpha}}.
+\end{align*}
+On the closed radius-$r$ ball of normalized pairs $(v,c)$, the map
+\[
+ (v,c)\longmapsto\mathcal L^{-1}(F-F_*-N(v))
+\]
+has image norm at most $K\varepsilon+KQr^2\leq3r/4$ and Lipschitz constant at most $2KQr\leq1/2$. Its fixed point $(u,c)$ satisfies
+\[
+ \log\frac{(\omega+\ddc u)^n}{\omega^n}-c=F-F_*.
+\]
+The estimate $Dr\leq1/2$ gives the form comparison. The scalar is $b=\log V+c$. Differentiating the local equation gives a uniformly elliptic equation for each first derivative of $u$, with coefficients initially in $C^{2,\alpha}$. Interior Schauder estimates improve the regularity one order at a time, so $u$ is smooth. Uniqueness in \cref{thm:tw-smooth} identifies it with $u_F$ and gives $b=B_0(F)$. No uniform higher-derivative bounds on $F$ enter the estimates above.
+
+Put $\Delta A=A_{\Omega_F}-A_\omega$. Stokes' theorem makes its image lie in $Z_0$. On the complete space $E_\chi$, the affine map
+\[
+ \eta\longmapsto-\mathcal R\Delta A(\chi_0+\eta)
+\]
+has Lipschitz constant
+$\kappa=GC_ADr\leq m/(4C_0)\leq1/4$. Its fixed point obeys
+\[
+ \|\eta\|_{C^{2,\alpha}}
+       \leq\frac{\kappa C_0}{1-\kappa}
+       \leq2\kappa C_0\leq m/2.
+\]
+Thus $\chi_F=\chi_0+\eta$ has the stated normalization, adjoint equation and bounds. Elliptic regularity makes it smooth. Every factor with the same normalization satisfies this affine equation, so its uniqueness agrees with \cref{thm:gauduchon}.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{theorem}\label{thm:gaud-local-adjoint-endpoint}\index{Adjoint measure!local uniform density bounds}\index{Gauduchon metric!local determinant bounds}
+For every smooth $F$ in the ball of \cref{lem:gaud-local-controlled-solution}, let $T_F$ be its exact maximizing current and $\nu_F$ its supporting probability. Both are unique. With
+\[
+ H_{\max}=\max_XH,\qquad
+ C_\nu=\frac{3^{n+1}}4aH_{\max},\qquad
+ C_k=\frac{3^n}2aH_{\max}^{(n-1)/n},
+\]
+their densities satisfy
+\[
+ \nu_F=q_F\,\mathrm{d}V,\qquad
+ \|q_F\|_{L^\infty}\leq C_\nu,\qquad
+ \|k_{T_F}\|_{L^\infty}\leq C_k.
+\]
+In particular, for $p=n/(n-1)$,
+\[
+ \|q_F\|_{L^p}\leq C_\nu^{1/n},\qquad
+ \|k_{T_F}\|_{L^p}\leq C_k.
+\]
+The same constants apply when $v_-(\omega)=0$.
+\end{theorem}
+\begin{proof}
+Set $\Omega=\Omega_F$, $\chi=\chi_F$ and
+\[
+ Z=\int_X\chi\omega\wedge\Omega^{n-1}.
+\]
+The form comparison and $\int_X\chi\omega^n=1$ give
+\begin{equation}\label{eq:gaud-local-factor-normalization}
+ 2^{-(n-1)}\leq Z\leq(3/2)^{n-1}.
+\end{equation}
+Since $\ddc(\chi\Omega^{n-1})=0$, Stokes also gives $Z=\int_X\chi\Omega^n$. The current $T=(\chi/Z)\Omega^{n-1}$ is trace normalized and is a constant multiple of the power of the Gauduchon metric conformal to $\Omega$. By \cref{thm:weak-gaud-compact-duality}, it is the unique maximizing current, so $T=T_F$. The cofactor equality in that theorem gives
+\begin{equation}\label{eq:gaud-local-adjoint-densities}
+ \begin{aligned}
+ T_F&=\frac\chi Z\Omega^{n-1},\\
+ \nu_F&=\Omega\wedge T_F=\frac\chi Z\Omega^n,\\
+ q_F&=\frac\chi Z\frac{\Omega^n}{\mathrm{d}V},\\
+ k_{T_F}&=\frac\chi Z
+             \left(\frac{\Omega^n}{\mathrm{d}V}\right)^{(n-1)/n}.
+ \end{aligned}
+\end{equation}
+The last identity uses the positive root $\gamma=(\chi/Z)^{1/(n-1)}\Omega$, for which $T_F=\gamma^{n-1}$. Uniqueness of the supporting probability follows from \cref{thm:gaud-current-all-adjoints}.
+
+Now $\chi/Z\leq(3a/2)2^{n-1}$ and $\Omega^n/\mathrm{d}V\leq(3/2)^nH_{\max}$. Multiplying gives exactly $q_F\leq C_\nu$ and $k_{T_F}\leq C_k$. Since $\int_Xq_F\,\mathrm{d}V=1$, one has $\int_Xq_F^p\,\mathrm{d}V\leq C_\nu^{p-1}$, yielding the sharper probability estimate. The determinant estimate uses $\int_X\mathrm{d}V=1$.
+\end{proof}
+
+\Needspace{11\baselineskip}
+\begin{corollary}\label{cor:gaud-local-density-family}
+The probability-normalized data in this ball contain arbitrarily large finite-dimensional smooth families. They also contain a smooth path of pairwise distinct data whose exact maximizing currents are pairwise distinct, on the same fixed background.
+\end{corollary}
+\begin{proof}
+Normalize a small smooth function $f$ by
+\[
+ F(f)=F_*+f-\log\int_X\mathrm{e}^{F_*+f}\,\mathrm{d}V.
+\]
+If $F(f)=F(g)$, then $f-g$ is constant. Restricting to functions of zero $\mathrm{d}V$-mean makes this map injective. Its continuity in $C^{2,\alpha}$ places a sufficiently small neighbourhood of zero in any fixed finite-dimensional subspace inside the ball. Such subspaces can have arbitrary dimension.
+
+For the path, choose a smooth real $\psi$ of zero $\mathrm{d}V$-mean whose complex Hessian has a nonscalar matrix $Q$ at a point $x_0$ in an $\omega$-unitary frame. A cutoff of $|z_1|^2-|z_2|^2$ provides such a function. For small real $t$ put
+\[
+ \Omega_t=\omega+t\ddc\psi,\qquad
+ V_t=\int_X\Omega_t^n,\qquad
+ F_t=\log\frac{\Omega_t^n}{V_t\,\mathrm{d}V}.
+\]
+These probability-normalized data tend to $F_*$ in $C^{2,\alpha}$. Their solution forms are $\Omega_t$ by smooth uniqueness. If $F_s=F_t$, the logarithmic determinant ratio is the constant $\log(V_s/V_t)$. The complex Hessian signs at a maximum and minimum of $(s-t)\psi$ force this constant to be zero. Integrating the differential of the logarithmic determinant along the segment between $\Omega_t$ and $\Omega_s$ then gives a uniformly elliptic equation for $(s-t)\psi$ with no zeroth-order term. The maximum principle forces it constant, hence $s=t$.
+
+If their exact currents agree, \eqref{eq:gaud-local-adjoint-densities} makes $\Omega_s^{n-1}$ and $\Omega_t^{n-1}$ proportional at $x_0$. Positive cofactor matrices determine positive forms up to scale, so $I+sQ$ and $I+tQ$ are proportional. Since $I$ and $Q$ are linearly independent, comparison of their two coefficients gives $s=t$.
+\end{proof}
+
+These estimates concern exact maximizers for smooth data small in $C^{2,\alpha}$. Uniform estimates for larger or merely continuous bounded families remain open. The concentrating near-maximizers of \cref{prop:gaud-determinant-concentration} lie outside this assertion.
