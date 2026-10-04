@@ -1,5 +1,9 @@
 # Modification history
 
+## 4 October 2026 — Continuous-weight parameter review429
+
+[The parameter-dependence review](research/editorial/partial-kernel-parameter-review-429.md) reads the complete 30-page exact preprint, checks 47 obligations and inspects eight actual primary images. A fixed Gram inverse reconstructs bounded-weight analyticity, ordered derivatives and Gevrey bounds; the disk example identifies missing uniform parameter control. Boundary-distance dependencies remain outside adoption. All 332 book files, 1008 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, publication, novelty claim or original problem closure. Next: scoped Chapter26 integration.
+
 ## 4 October 2026 — Local-strict-weight integration428
 
 [The local-strict-weight integration](research/editorial/affine-local-strict-weight-428.md) adds the relative-extremal foundation and four proofs of local regularity, quantitative strict-weight defect and pointwise Hessian degeneracy. The recorded complete first reads and fresh seven-input/capacity-root second read pass with 34 actual final images. All 1004 old proofs, original problem descriptions/statuses, manifests and 451 protected files remain exact. Both 1203-page publications and descriptions are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no additions. Forty original directions remain open.
