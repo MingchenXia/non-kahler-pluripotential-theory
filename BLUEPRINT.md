@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint436 — P08 counterexample integrated
+
+[The independently checked P08 integration](research/editorial/P08-radial-counterexample-436.md) refutes positive-volume bigness for general nef nonclosed backgrounds in every dimension at least three. Global bounded radial potentials, all original Gauduchon tests, explicit balanced minimizers and a separate closed-current obstruction are reconstructed. Both catalogues now retain42 historical descriptions with P08/P22/S13 resolved and39 directions open. Scoped first/second reads and30 actual final images pass; all1017 old proof bodies remain exact. The1215-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native catalogue preview remains unverified. House findings are unchanged.
+
 ## Checkpoint435 — Independent P08 radial counterexample review
 
 [The independent P08 review](research/editorial/P08-radial-counterexample-review-435.md) reconstructs40 obligations from the complete267-line source. Global bounded radial approximation gives exact positive fixed-density volume n in every n>=3; a localized closed test excludes all strict quasi-psh representatives. Original P08 is independently disproved; surface and flow questions remain separate. Both complete source/reconstruction reads pass at the recorded scope. All334 book files,1017 proofs, both catalogues/manifests and451 protected files remain exact. The434 live release is unchanged. No new author build, native call, publication, broad scan or verifier runtime. Next: manuscript integration and migration from40 to39 open original directions.
