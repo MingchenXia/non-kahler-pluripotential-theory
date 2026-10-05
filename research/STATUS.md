@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint437 — Radial test families reviewed
+
+[The independent test-family review](research/editorial/radial-gauduchon-test-limits-review-437.md) checks32 obligations: the volume-minimizing radial tests concentrate on the degenerate fiber in dimension three, whereas in dimension at least four their threshold quotient stays positive. A different explicit smooth balanced family approaches zero threshold and the fiber current in every dimension at least three. Both complete reconstruction reads pass; all335 book files/1019 proofs, both catalogues/manifests and451 protected sources remain exact. No new author build, native call, publication, external premise or arXiv scan. P08/P22/S13 retain their recorded resolutions;39 original directions remain open. Package validation passes against current checksums and the actual436 reconstructed book bytes. Next: scoped manuscript integration.
+
 ## Checkpoint436 — P08 counterexample integrated
 
 [The independently checked P08 integration](research/editorial/P08-radial-counterexample-436.md) refutes positive-volume bigness for general nef nonclosed backgrounds in every dimension at least three. Global bounded radial potentials, all original Gauduchon tests, explicit balanced minimizers and a separate closed-current obstruction are reconstructed. Both catalogues now retain42 historical descriptions with P08/P22/S13 resolved and39 directions open. Scoped first/second reads and30 actual final images pass; all1017 old proof bodies remain exact. The1215-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native catalogue preview remains unverified. House findings are unchanged.
