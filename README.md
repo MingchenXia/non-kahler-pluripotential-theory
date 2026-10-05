@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The inactive [four-point metric reconstruction](research/editorial/four-point-metric-nonextension-483.md) proves a prescribed analytic semipositive metric cannot extend in the constructed smooth projective family. Four reviewed proofs await integration; the full exact primary and omitted dependency scopes are recorded.
+The [four-point metric integration](research/editorial/four-point-metric-integration-484.md) adds four complete proofs on failure of prescribed semipositive metric extension. The verified public book has 1294 printed pages; the construction, direct proof and excluded wider dependency claims are recorded.
 
 Working manuscript for the compact Hermitian generalization of Mingchen Xia’s *Singularities in global pluripotential theory*. The supplied svmono template, fonts and conventions are retained. This is an AI-assisted draft for mathematical review; the research remains incomplete.
 
