@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint462 — Third-projection pluriharmonic pairing
+
+[The third-projection proof](research/editorial/third-projection-pluriharmonic-pairing-462.md) resolves three disjoint centers, proves the locally trivial fiber geometry and obtains an exact smooth-base pairing for positive dd c-closed currents. Complete first/automatic second prototype reads and strict lint pass, with 30 direct obligations. The exact Vigny source cohomology locator is corrected to 304. Original exceptional lifting, cut-off and full transform/Siu adoption remain pending. All 350 book files/1057 proofs, both catalogues/manifests, 451 protected sources and immutable author originals remain exact. The live 1255-page release and 38 open directions are unchanged. Research-package validation passes against actual 460 empty-source outputs; no new build or publication. Next: smooth-hypersurface support and natural-home mass-bound adoption.
+
 ## Checkpoint461 — Pluriharmonic transform proof review
 
 [The transform proof review](research/editorial/pluriharmonic-transform-proof-review-461.md) checks three complete research proofs: a radial exponent countercheck, an exceptional-space cohomology countercheck and a smooth pluriharmonic pullback mass bound. All 13 published Dinh–Sibony page texts/images and the complete composite Vigny source first read are recorded; 18 actual primary images are inspected. Strict fragment lint passes. General transform/Siu adoption and older support/extension inputs remain pending. All 350 book files/1057 proofs, both catalogues/manifests, 451 protected sources and immutable author originals remain exact. The live 1255-page release and 38 open directions are unchanged. Research-package validation passes against actual 460 empty-source outputs; no new build or publication. Next: third-resolution smooth pairing and compact support/continuous-product interfaces.
