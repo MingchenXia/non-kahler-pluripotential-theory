@@ -1,5 +1,10 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research453
+
+[The warped-current integration](research/editorial/P15-warped-current-endpoint-integration-453.md) adds two complete proofs determining the full current cones and continuous prescribed-volume solutions at finite faces, with no globally C11 solution. Complete scoped first/second/post-image readings and 23 actual final images pass; all 1049 older proofs remain exact. The 1249-page PDF and homepage description are live-verified. Both catalogues retain 42 original descriptions and 38 open directions, with 143 typed locators and 26 ranges verified. Fresh empty-source reconstruction passes all 1275 book and 17 companion page texts and 342 book files/2245 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Next: general C11 ellipticity and closed-base endpoint convergence.
+
+
 ## Continuing research452
 
 [The warped-current review](research/editorial/P15-warped-current-endpoint-review-452.md) reconstructs two complete proofs through 47 direct obligations. Localized closed tests determine the full pseudoeffective, nef and strict-current cones. Every finite power-stratum unit-volume face admits a continuous potential solving the smooth positive prescribed-volume equation; no solution can be globally C11. The 47-line prototype and exact scoped foundations are read, and strict lint is clean. All 344 book files/1049 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1247-page release and 38 open directions are unchanged. No author build, native call, publication or new arXiv scan. Next: two-proof manuscript adoption and the general C11 ellipticity consequence.
