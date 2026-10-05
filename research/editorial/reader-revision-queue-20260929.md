@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research448
+
+[The P15 integration](research/editorial/P15-warped-cone-completion-448.md) adds six complete proofs of full warped-cone volume, actual balanced tests, global flat coordinates, sharp endpoint trace estimates and all Cauchy points, with projective-strip/torus-plane examples. Complete scoped first/second/post-image reads and33 actual final images pass; all1036 old proofs remain exact. The1241-page PDF and homepage description are live-verified. Both catalogues preserve42 original descriptions and38 open directions, with141 typed references/26 ranges verified. Fresh empty-source reconstruction passes all1267 book and17 companion page texts and338 packaged book files/2226 payload checksums; native catalogue preview remains unverified. House findings add nothing. General P15 stays open. Next: the reviewed ramified first-jet model and exact Dang v2 proof.
+
 ## Continuing research447
 
 [The P15 review](research/editorial/P15-warped-cone-completion-review-447.md) completely reads the362-line author source first and automatically second, reconstructing50 obligations and the complete33-line review. Full Gauduchon volume, actual balanced minimizers, flat unit coordinates, sharp endpoint lengths, every Cauchy point and projective/torus examples are supported for the specified cone/product probability. General P15 stays open. All340 book files/1036 proofs, both catalogues/manifests,451 protected sources and author originals (5/5/5/5/6) remain exact. The live1233-page release and38 open directions are unchanged. No author rebuild/native call/publication. Next: scoped P15 integration, followed by the reviewed first-jet model and exact Dang v2 proof.
