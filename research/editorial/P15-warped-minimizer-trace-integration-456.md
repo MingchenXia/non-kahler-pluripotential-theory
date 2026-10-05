@@ -1,0 +1,19 @@
+# Warped minimizing-test trace limits — integration 456
+
+Two complete proofs determine the finite-trace threshold and the concentrating trace-normalized tests in the fixed warped product model. They follow the already integrated endpoint-potential theorem in Chapter 25, before the projective and torus examples. General P15 remains open.
+
+On the unit surface, the balanced cofactor is sigma/(n L_j^2)+m A_j^(m-1) wedge w. Closed base Stokes fixes the second trace contribution. The first has the reciprocal-square tube threshold two: power divergence for 1<r<2, logarithmic divergence for r=2, and an integrable finite limit for r>2. The last regime combines total variation convergence of the base term with the retained whole-family bounded-product convergence.
+
+When the trace diverges, its normalization removes the second cofactor term. Compact base probabilities describe every remaining cluster, and the tube estimates exclude every extreme component with a larger codimension-to-order ratio. The limiting pullback current is closed, has trace one, and annihilates the semipositive face. A single extreme point determines the whole sequence's curve-fiber integration-current limit.
+
+Both smooth quotient quantities scale by the inverse trace. Their equal power or reciprocal-logarithmic rates tend to zero while the quotient remains one. The projective strip has a single extreme point at each end and lies in the logarithmic regime. No continuity of the nonlinear functional on the limiting current or pointwise metric limit is asserted.
+
+The final 56-line prototype is completely read first and automatically second; its exact adopted source is read again and completely reread after the final images. Actual scoped readings cover the cofactor construction, power-stratum hypotheses and radial estimates, the complete 34-line endpoint-potential input, the insertion seam and historical explanation. Closed base mass and weak product foundations are reused at their recorded scopes. No whole recursive chapter or secondary external proof tree is newly certified.
+
+All 347 previous book files are preserved except the input placement and historical explanation; every one of their 1053 proof bodies remains exact. The new input has two proofs. Both original manifests, 451 protected sources and all immutable author uploads remain exact. Strict new-input lint has no findings, and the active and changed-old baseline findings do not increase. Twenty-six actual final page images pass, including the complete two-proof output, both seams, changed contents and all nine index pages.
+
+The author book and unchanged companion builds pass. The 1251-page public book and matching homepage description are verified as actually served after successful Pages deployment. Both catalogues preserve all 42 original descriptions and 38 open directions; 147 typed locators, 26 ranges and 105 JSON assessment locators are checked. The actual native saved-source catalogue call returned no compiler diagnostic before its wait was terminated; its preview remains unverified in the existing editor; no separate catalogue PDF is created.
+
+The source package's fresh empty-directory reconstruction passes all 1277 book and 17 companion page texts, all 345 packaged book files and 2257 payload checksums/current bytes; reconstruction publication is disabled. Next: complete the release checks and private synchronization, then read the exact recent Dinh--Nguyen--Nguyen primary paper and its proof dependencies before any adoption. No new arXiv subject scan or Xean premise occurs.
+
+Final validation repeats every checksum and current-payload comparison after updating the saved validation metadata. The actual empty-source outputs are retained, and the manuscript and saved catalogue TeX remain unchanged after inspection.
