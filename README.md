@@ -1,14 +1,16 @@
 # Singularities in Hermitian pluripotential theory
 
-The [pairwise total-variation integration](research/editorial/parabolic-total-variation-integration-490.md) adds three proofs as Subsection 4.6.2. The public repository has the 1300-page PDF and matching description; actual website verification is pending.
+The [tautological positivity integration](research/editorial/tautological-homogeneous-integration-497.md) supplies the strict homogeneous function under dual ampleness as Subsection 4.5.2. The actual website serves the verified 1312-page PDF and matching description. Strong fibre convexity is still required in the continuous obstruction; polar-metric and stable ample geometry are next.
 
-The [convex bundle norm integration](research/editorial/convex-bundle-norm-integration-492.md) adds four analytic proofs as Section 4.5. The public repository has the 1304-page PDF and matching description; actual website verification is pending. Broader stable/ample and complement claims await dependency review.
+The [pairwise total-variation integration](research/editorial/parabolic-total-variation-integration-490.md) adds three proofs as Subsection 4.6.2. At checkpoint 490, the public repository had the 1300-page PDF and matching description; actual website verification was pending.
+
+The [convex bundle norm integration](research/editorial/convex-bundle-norm-integration-492.md) adds four analytic proofs as Section 4.5. At checkpoint 492, the public repository had the 1304-page PDF and matching description; actual website verification was pending. Broader stable/ample and complement claims await dependency review.
 
 The [homogeneous regularization integration](research/editorial/homogeneous-convex-integration-494.md) adds five analytic proofs as Subsection 4.5.1. At checkpoint 494, the public repository and actual website had the verified 1308-page PDF and matching description. Weak psh replacement assumes a specified H and retains strong fibre convexity.
 
-The [P07 split-product integration](research/editorial/zero-lower-mass-product-integration-496.md) adds exact finite equations for explicit merely integrable positive-threshold densities at zero lower mass. The actual website serves the verified 1310-page PDF and matching description. General P07 stays open; the reviewed tautological proofs are next.
+The [P07 split-product integration](research/editorial/zero-lower-mass-product-integration-496.md) adds exact finite equations for explicit merely integrable positive-threshold densities at zero lower mass. At checkpoint 496, the actual website served the verified 1310-page PDF and matching description. General P07 stays open.
 
-The [tautological positivity review](research/editorial/tautological-homogeneous-positivity-495.md) reconstructs the classical strict homogeneous function needed under dual ampleness. Three proofs await integration; the polar-metric and stable ample construction scopes remain pending.
+The [tautological positivity review](research/editorial/tautological-homogeneous-positivity-495.md) reconstructs the classical strict homogeneous function needed under dual ampleness. Its three proofs are adopted in checkpoint 497; the polar-metric and stable ample construction scopes remain pending.
 
 The [Hermitian entropy integration](research/editorial/hermitian-parabolic-entropy-integration-488.md) adds three reviewed proofs as 4.6.1. Its preceding local release had 1298 printed pages; website verification was not completed.
 
