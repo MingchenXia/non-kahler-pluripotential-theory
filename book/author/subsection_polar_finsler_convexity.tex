@@ -1,0 +1,137 @@
+\subsection{Polar norms of semipositive Finsler metrics}
+\label{subsec:polar-finsler-convexity}
+\index{Kobayashi curvature!polar norm}
+\index{Finsler metric!semipositive curvature}
+
+Let $E\to X$ be a holomorphic vector bundle of positive rank over a compact complex manifold of dimension $n\geq1$. Write $E^\times$ for the complement of its zero section. A squared Finsler metric is a positive smooth function $G$ on $E^\times$ with
+\[
+ G(x,tv)=|t|^2G(x,v),\qquad t\in\mathbb C\setminus\{0\},
+\]
+extended continuously by zero. Strong pseudoconvexity means that its vertical complex Hessian $(G_{i\bar j})$ is positive definite. It does not require convexity in the real fibre variables.
+
+In local holomorphic base and fibre coordinates $(z,v)$, put
+\[
+ \begin{gathered}
+ S_{\alpha\bar\beta}
+ =G_{\alpha\bar\beta}
+  -G_{\alpha\bar j}G^{\bar j i}G_{i\bar\beta},\\
+ \mathcal K_G=-\frac{\mathrm i}{2\pi G}
+ S_{\alpha\bar\beta}\,\mathrm dz^\alpha\wedge\mathrm d\bar z^\beta,
+ \end{gathered}
+\]
+where $(G^{\bar j i})$ is the inverse vertical Hessian. This is the Kobayashi curvature convention used here. Semipositivity of $\mathcal K_G$ means $S\leq0$.
+
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:polar-finsler-osculating-section}
+\index{Holomorphic section!osculating quadratic jet}
+If $G$ is strongly pseudoconvex and $\mathcal K_G>0$, then for every $v_0\in E_{x_0}^\times$ there is a local holomorphic section $\sigma$ with $\sigma(x_0)=v_0$ and
+\[
+ G(z,\sigma(z))\leq G(x_0,v_0).
+\]
+For $\varphi=|z|^2$ and $\varepsilon>0$, the metric $G_\varepsilon=\mathrm e^{-\varepsilon\varphi}G$ satisfies
+\[
+ \mathcal K_{G_\varepsilon}=\mathcal K_G+\varepsilon\ddc\varphi.
+\]
+\end{lemma}
+\begin{proof}
+The vertical Hessian is positive, so its Levi-orthogonal complement $H_{G,v}$ projects isomorphically onto the base tangent space. Its Levi form is the Schur complement $S$, and hence is negative definite when $\mathcal K_G>0$. For the vertical radial vector $R=v_i\partial_{v_i}$, complex homogeneity and differentiation give
+\[
+ \partial G(R)=G,\qquad
+ \mathcal L_G(a,\bar R)=\partial G(a).
+\]
+Since $R$ is vertical, the second identity implies $\partial G|_{H_{G,v}}=0$.
+
+Choose a holomorphic section $\sigma_0$ through $v_0$ with first jet equal to $H_{G,v_0}$. In coordinates centred at $x_0$, the function $G\circ\sigma_0$ has zero first derivative and Taylor expansion
+\[
+ G(x_0,v_0)+P(z)+\overline{P(z)}
+ +S_{\alpha\bar\beta}z^\alpha\bar z^\beta+O(|z|^3),
+\]
+where $P$ is a homogeneous holomorphic quadratic polynomial. The identity $\partial_vG(v_0)(v_0)=G(v_0)>0$ gives a vertical vector $b$ with $\partial_vG(v_0)(b)=1$. Set $\sigma=\sigma_0-bP$ in the local frame. This changes only the pure quadratic terms, cancelling $P+\bar P$. The remaining quadratic form is negative definite, and therefore dominates the cubic remainder on a sufficiently small ball. The section stays nonzero there and has the asserted inequality.
+
+For the last assertion, differentiate $\mathrm e^{-\varepsilon\varphi}G$ in the displayed Schur complement. Euler's identity gives $G_{\bar j}=v_iG_{i\bar j}$ and $G_\alpha=G_{\alpha\bar j}\bar v_j$. Thus the terms containing $\partial\varphi$, including its square, cancel between the base Hessian and the mixed block product, leaving
+\[
+ S(G_\varepsilon)=\mathrm e^{-\varepsilon\varphi}
+       \bigl(S(G)-\varepsilon G(\varphi_{\alpha\bar\beta})\bigr).
+\]
+Division by $G_\varepsilon$ proves the curvature formula. Its vertical Hessian is the positive multiple $\mathrm e^{-\varepsilon\varphi}(G_{i\bar j})$.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{proposition}\label{prop:semipositive-finsler-polar-psh}
+\index{Polar norm!plurisubharmonic square}
+Suppose $G$ is strongly pseudoconvex and $\mathcal K_G\geq0$. Its polar square
+\[
+ Q(x,\xi)=\max_{[v]\in\mathbb P(E_x)}
+                \frac{|\xi(v)|^2}{G(x,v)},\qquad \xi\in E_x^*,
+\]
+is continuous and plurisubharmonic on $E^*$, positive off zero and complex homogeneous of degree two. The function $\log Q$ is plurisubharmonic off zero, and $\sqrt Q$ is a complex norm in each fibre.
+\end{proposition}
+\begin{proof}
+The ratio is invariant under complex rescaling of $v$. Maximization on the compact unit sphere in a local frame proves continuity. Positive upper and lower bounds for $G$ on that sphere compare $Q$ with a Hermitian squared dual norm. They prove positivity off zero, continuity at zero and complex homogeneity. Moreover,
+\[
+ \sqrt{Q(x,\xi)}=\sup_{v\ne0}\frac{|\xi(v)|}{\sqrt{G(x,v)}}.
+\]
+Each term satisfies the triangle inequality in $\xi$, so their supremum does too.
+
+On a coordinate ball set $G_\varepsilon=\mathrm e^{-\varepsilon|z|^2}G$. By \cref{lem:polar-finsler-osculating-section}, its curvature is strictly positive and its polar square is $Q_\varepsilon=\mathrm e^{\varepsilon|z|^2}Q$. At $(x_0,\xi_0)$ with $\xi_0\ne0$, choose a maximizing line and $v_0$ on it. The lemma supplies a holomorphic section $\sigma$ such that
+\[
+ \log Q_\varepsilon(z,\xi)
+ \geq\log|\xi(\sigma(z))|^2-\log G_\varepsilon(x_0,v_0),
+\]
+with equality at $(x_0,\xi_0)$. The pairing is nonzero on a neighbourhood of that point, so the right side is pluriharmonic there. Restriction to any sufficiently small holomorphic disc centred at the point therefore gives the submean inequality for $\log Q_\varepsilon$. This argument applies at every point off zero; continuity gives plurisubharmonicity there.
+
+As $\varepsilon\downarrow0$, $\log Q_\varepsilon=\log Q+\varepsilon|z|^2$ converges locally uniformly off zero. Passing to the disc submean inequalities proves the assertion for $\log Q$. The exponential is increasing and convex, so Jensen's inequality makes $Q$ plurisubharmonic off zero. At a point of the zero section, $Q=0$ and $Q\geq0$; hence every centred disc already satisfies its submean inequality there. Together with continuity and the local disc inequalities at nonzero points, this proves plurisubharmonicity on all of $E^*$.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:polar-finsler-uniform-strong-convexity}
+\index{Legendre duality!strong fibre convexity}
+Let $k$ be a smooth Hermitian metric on $E$. For every positive smooth complex homogeneous $G$ of degree two on $E^\times$, its polar square $Q$ has a constant $c>0$ such that
+\[
+ Q(x,\xi)-c|\xi|_{k^*}^2
+\]
+is real convex on every dual fibre. Strong pseudoconvexity and real convexity of $G$ are not required for this assertion.
+\end{lemma}
+\begin{proof}
+The real fibre Hessian of $G$ is bounded above by $2L$ times $k$ on its compact unit sphere bundle, for some $L>0$. Homogeneity extends this bound to every nonzero vector. Also $G$ is $C^1$ at zero with derivative zero: its value is $O(|v|^2)$ and its first fibre derivative is $O(|v|)$, uniformly over the base. Integrating the Hessian estimate along a segment gives
+\begin{equation}\label{eq:polar-finsler-upper-quadratic}
+ G(v+w)\leq G(v)+\mathrm d_vG(w)+L|w|_k^2.
+\end{equation}
+A segment passing through zero is handled by splitting there and using continuity of the first derivative.
+
+Complex homogeneity and completing the square on each complex line give the exact identity
+\begin{equation}\label{eq:polar-finsler-legendre}
+ Q(x,\xi)=\max_{v\in E_x}
+                  \{2\operatorname{Re}\xi(v)-G(x,v)\}.
+\end{equation}
+The maximum exists because $G(v)\geq a|v|_k^2$ for a uniform $a>0$. Fix a maximizer $v_0$ for $\xi_0$. Differentiation, including when $\xi_0=v_0=0$, gives $\mathrm dG(v_0)=2\operatorname{Re}\xi_0$. Evaluate \eqref{eq:polar-finsler-legendre} for $\xi_0+\zeta$ at $v_0+w$ and apply \eqref{eq:polar-finsler-upper-quadratic}. The terms involving $\xi_0(w)$ cancel, giving
+\[
+ Q(\xi_0+\zeta)\geq Q(\xi_0)+2\operatorname{Re}\zeta(v_0)
+                 +2\operatorname{Re}\zeta(w)-L|w|_k^2.
+\]
+Taking the supremum in $w$ yields
+\[
+ Q(\xi_0+\zeta)\geq Q(\xi_0)+2\operatorname{Re}\zeta(v_0)
+                         +L^{-1}|\zeta|_{k^*}^2.
+\]
+Set $c=L^{-1}$ and $\Phi=Q-c|\cdot|_{k^*}^2$. After subtracting the square, this inequality gives a global real affine support below $\Phi$, equal to $\Phi$ at $\xi_0$. The supremum of these supports is exactly $\Phi$, so $\Phi$ is convex. Neither uniqueness of the maximizer nor real convexity of $G$ is used.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{corollary}\label{cor:ample-semipositive-finsler-smooth-dual}
+If $E$ is ample and has a strongly pseudoconvex squared Finsler metric with semipositive Kobayashi curvature, then $E^*$ admits a smooth complex norm whose square is strictly plurisubharmonic off zero and locally strongly convex in the real fibres.
+\end{corollary}
+\begin{proof}
+The polar square is a positive continuous plurisubharmonic complex homogeneous function by \cref{prop:semipositive-finsler-polar-psh}. It has the strong fibre convexity required in \cref{prop:weak-homogeneous-convex-replacement}, by \cref{lem:polar-finsler-uniform-strong-convexity}. Apply \cref{prop:ample-dual-strict-homogeneous-function} to $F=E^*$, since $F^*=E$ is ample. It supplies the positive smooth strictly plurisubharmonic homogeneous function $H$ on $E^*$. The construction in \cref{prop:weak-homogeneous-convex-replacement} uses \cref{thm:homogeneous-convex-regularization}, which retains strong fibre convexity. Its square root is the asserted smooth norm.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{corollary}\label{cor:gauduchon-semipositive-finsler-obstruction}
+\index{Vector bundle!semipositive curvature obstruction}
+Let $F$ carry a holomorphic structure in the neighbourhood of \cref{thm:convex-norm-deformation-obstruction}. If $F^*$ is ample, it admits no strongly pseudoconvex squared Finsler metric with semipositive Kobayashi curvature.
+\end{corollary}
+\begin{proof}
+Apply \cref{cor:ample-semipositive-finsler-smooth-dual} to $E=F^*$. Such a metric would produce a smooth complex norm on $F$ with plurisubharmonic square, contrary to \cref{thm:convex-norm-deformation-obstruction}.
+\end{proof}
+
+This conclusion retains the specific Gauduchon degree hypotheses and the nearby holomorphic structure. It does not assert existence of an ample stable family in that neighbourhood. The polar square can be nonsmooth; regularization is an essential separate step.
