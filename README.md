@@ -1,8 +1,8 @@
 # Singularities in Hermitian pluripotential theory
 
-The inactive [pairwise total-variation example](research/editorial/parabolic-total-variation-growth-489.md) has three reviewed proofs of positive initial distance growth despite individual convex entropy dissipation.
+The [pairwise total-variation integration](research/editorial/parabolic-total-variation-integration-490.md) adds three proofs as Subsection 4.6.2. The public repository has the 1300-page PDF and matching description; actual website verification is pending.
 
-The [Hermitian entropy integration](research/editorial/hermitian-parabolic-entropy-integration-488.md) adds three reviewed proofs as 4.6.1. The public repository has the final 1298-page book; actual website verification is pending.
+The [Hermitian entropy integration](research/editorial/hermitian-parabolic-entropy-integration-488.md) adds three reviewed proofs as 4.6.1. Its preceding local release had 1298 printed pages; website verification was not completed.
 
 The [metric restriction integration](research/editorial/four-point-metric-restriction-integration-486.md) adds five complete proofs classifying all genuine extendable metrics in the four-point family. That release had 1296 printed pages.
 

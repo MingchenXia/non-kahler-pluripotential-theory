@@ -1,0 +1,114 @@
+\subsection{Total variation between two evolving probabilities}
+\label{subsec:parabolic-total-variation-growth}\index{Total variation!parabolic initial growth}
+
+Comparing two evolving probabilities introduces terms which are absent from an entropy relative to the fixed target. On a flat surface, short positive paths with the parabolic initial velocities can have increasing total-variation distance. For this comparison, allow distinct smooth initial potentials.
+
+For this example, let $E=\mathbb C/(\mathbb Z+\mathrm i\mathbb Z)$ and $X=E^2$, with covering coordinates $z_j=x_j+\mathrm i y_j$. Write
+\[
+ \eta_j=\frac{\mathrm i}2\mathrm dz_j\wedge\mathrm d\bar z_j,
+ \qquad \kappa=\eta_1+\eta_2,
+ \qquad \mu=\eta_1\wedge\eta_2=\frac{\kappa^2}2.
+\]
+Thus $\mu$ is a probability volume form and $\int_X\kappa^2=2$. Put
+\[
+ c_j=\cos(2\pi x_j),\qquad S=c_1+c_2,\qquad P=c_1c_2.
+\]
+
+\begin{lemma}\label{lem:torus-total-variation-averages}
+The normalized averages satisfy
+\[
+ \int_X|S|\mu=\frac8{\pi^2},
+ \qquad \int_XP|S|\mu=\frac8{3\pi^2}.
+\]
+\end{lemma}
+\begin{proof}
+The imaginary coordinates contribute factors one. The degree-two map of real tori $(a,b)\mapsto(a+b,a-b)$ preserves normalized Haar averages. With angles $A=2\pi a$ and $B=2\pi b$, it gives
+\[
+ S=2\cos A\cos B,\qquad
+ P=\frac{\cos(2A)+\cos(2B)}2.
+\]
+The one-variable averages of $|\cos A|$ and $|\cos A|^3$ are $2/\pi$ and $4/(3\pi)$, respectively. Hence the average of $\cos(2A)|\cos A|$ is $2/(3\pi)$. Multiplying the independent averages gives both formulas.
+\end{proof}
+
+For a fixed real $K>3$, define the smooth target probability
+\[
+ Z_K=\int_X\mathrm e^{KP}\mu,
+ \qquad f_K=Z_K^{-1}\mathrm e^{KP},
+ \qquad \nu_K=f_K\mu.
+\]
+For $0<\varepsilon<1/\pi$, the initial potentials $\varepsilon S$ and zero give positive forms. Set
+\[
+ A_\varepsilon=1-\pi\varepsilon c_1,
+ \qquad B_\varepsilon=1-\pi\varepsilon c_2,
+ \qquad r_\varepsilon=A_\varepsilon B_\varepsilon,
+\]
+so that $\kappa+\ddc(\varepsilon S)=A_\varepsilon\eta_1+B_\varepsilon\eta_2$ and its normalized Monge--Amp\`ere probability is $r_\varepsilon\mu$.
+
+Consider the short smooth paths
+\begin{equation}\label{eq:torus-parabolic-initial-paths}
+ U_\varepsilon(t)=\varepsilon S+t\log\frac{r_\varepsilon}{f_K},
+ \qquad V(t)=-t\log f_K.
+\end{equation}
+They remain positive for sufficiently small $|t|$ and have exactly the logarithmic Monge--Amp\`ere velocities for target $\nu_K$ at zero. Their normalized probabilities are
+\[
+ \mu_\varepsilon(t)=\frac{(\kappa+\ddc U_\varepsilon(t))^2}2,
+ \qquad \mu_0(t)=\frac{(\kappa+\ddc V(t))^2}2.
+\]
+Their mass is one by closed-background mass invariance. Define the total-variation distance with the probability convention
+\[
+ D_\varepsilon(t)
+ =\frac12\int_X|\mu_\varepsilon(t)-\mu_0(t)|.
+\]
+
+\begin{proposition}\label{prop:parabolic-total-variation-growth}\index{Complex torus!parabolic total-variation example}
+For the paths \eqref{eq:torus-parabolic-initial-paths},
+\[
+ D'_\varepsilon(0)
+ =4\varepsilon\left(\frac K3-1\right)+o(\varepsilon)
+ \quad\text{as }\varepsilon\downarrow0.
+\]
+In particular, this derivative is positive for sufficiently small $\varepsilon>0$. Any two smooth logarithmic Monge--Amp\`ere flows with these initial potentials and the same target $\nu_K$ have the same positive initial derivative.
+\end{proposition}
+\begin{proof}
+For a real function $h$ depending only on $x_1,x_2$, the coefficient matrix of $\ddc h$ in the frame $(\mathrm i/2)\mathrm dz_j\wedge\mathrm d\bar z_k$ is $(4\pi)^{-1}(h_{x_jx_k})$. Differentiating the determinant at the diagonal initial metric therefore gives, with $R_\varepsilon(t)=\mathrm d\mu_\varepsilon(t)/\mathrm d\mu$ and $R_0(t)=\mathrm d\mu_0(t)/\mathrm d\mu$,
+\[
+\begin{split}
+ \left.\partial_t(R_\varepsilon-R_0)\right|_{t=0}
+ =\frac1{4\pi}\bigl(&B_\varepsilon\partial_{x_1}^2\log A_\varepsilon
+             +A_\varepsilon\partial_{x_2}^2\log B_\varepsilon\\
+ &-K(B_\varepsilon-1)\partial_{x_1}^2P
+             -K(A_\varepsilon-1)\partial_{x_2}^2P\bigr).
+\end{split}
+\]
+Since $\partial_{x_j}^2P=-4\pi^2P$, Taylor expansion yields the uniform estimate
+\[
+ \left.\partial_t(R_\varepsilon-R_0)\right|_{t=0}
+ =\pi^2\varepsilon S(1-KP)+O(\varepsilon^2).
+\]
+At zero, the density difference is
+\[
+ q_\varepsilon=r_\varepsilon-1
+ =-\pi\varepsilon S+\pi^2\varepsilon^2P.
+\]
+For each $x_2$, its coefficient of $c_1$ is $-\pi\varepsilon(1-\pi\varepsilon c_2)\ne0$. It consequently has at most two zeros as a function of $x_1$, so its zero set has measure zero. Differentiation under the integral, using the uniform bound on the smooth density derivatives, gives
+\[
+ D'_\varepsilon(0)=\frac12\int_X\operatorname{sgn}(q_\varepsilon)
+       \left.\partial_t(R_\varepsilon-R_0)\right|_{t=0}\mu.
+\]
+The set $S=0$ also has measure zero, and $\operatorname{sgn}(q_\varepsilon)\to-\operatorname{sgn}(S)$ off that set. Dominated convergence and \cref{lem:torus-total-variation-averages} give
+\[
+ \lim_{\varepsilon\downarrow0}\frac{D'_\varepsilon(0)}\varepsilon
+ =\frac{\pi^2}2\int_X|S|(KP-1)\mu
+ =4\left(\frac K3-1\right).
+\]
+Every smooth flow with the stated initial data has the velocities in \eqref{eq:torus-parabolic-initial-paths}, so its initial density derivatives and the resulting distance derivative coincide with this computation.
+\end{proof}
+
+\begin{corollary}\label{cor:individual-entropy-pair-growth}\index{Monge--Ampere equation@Monge--Amp\`ere equation!pairwise parabolic variation}
+For these paths, the initial derivative of every $C^2$ convex entropy of each probability relative to $\nu_K$ is nonpositive, while their total-variation distance has positive initial derivative for sufficiently small $\varepsilon>0$.
+\end{corollary}
+\begin{proof}
+The initial velocities satisfy the logarithmic equation and both initial forms are closed. The local chain-rule calculation in \cref{prop:hermitian-parabolic-entropy-identity} therefore applies at zero; its background derivative vanishes and its gradient term is nonpositive. The preceding proposition gives the assertion about the pair.
+\end{proof}
+
+The constructed paths realize the parabolic velocity only at the initial time. They give an explicit obstruction to infinitesimal total-variation contraction, without using a theorem about existence or convergence for all time.
