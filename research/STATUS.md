@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint459 — Horizontal pluriharmonic descent
+
+[The horizontal-descent integration](research/editorial/horizontal-pluriharmonic-descent-integration-459.md) adds a complete general proof and strengthens the elliptic (1,1)-current descent to positive ddc-closed currents. Complete scoped first/second/post-image reads and 40 actual final images pass; 1054 old proof bodies remain exact and one becomes an internal-reference argument. The 1253-page PDF and homepage description are live-verified. Both catalogues retain 42 descriptions and 38 open directions, with 147 typed locators and 26 ranges checked. Fresh empty-source reconstruction passes all 1279 book and 17 companion page texts and 346 book sources/2267 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Full Siu and movable-class adoption remain separate. Next: exact external dependency checks and incoming/recent primary reading.
+
 ## Checkpoint458 — Pluriharmonic critical inputs
 
 [The critical-input review](research/editorial/pluriharmonic-critical-input-review-458.md) checks the exact compact tangent conditions and published total/strict transform distinction, records three exact-version locator mismatches, and directly proves whole-fiber horizontal descent with a local countercheck. Both complete prototype reads and strict lint pass; eight actual primary images are inspected. The full Siu theorem and movable-class assertion are not adopted. All 348 book files/1055 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1251-page release and 38 open directions are unchanged. Research-package validation passes against the actual 456 empty-source outputs; no new build or publication. Next: natural-home horizontal descent adoption and exact external dependency checks.
