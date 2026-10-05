@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research441
+
+[The first-jet review](research/editorial/first-jet-positive-metric-review-441.md) reads the complete exact preprint and source, inspects10 actual primary images and reconstructs 55 obligations. A direct Bernstein/projector argument proves C2 density without importing the cited Bergman proof tree. The finite metric/convex/positive-measure criterion and untwisted immersion test are supported; the full abelian-surface model and unpublished ampleness claim are deferred. Both complete37-line reconstruction reads pass. All337 book files/1023 proofs, both catalogues/manifests and451 protected sources remain exact. The1219-page live440 release is unchanged;38 original directions remain open. No author build, native call, publication or broad listing scan. Next: scoped Chapter4 integration.
+
 ## Continuing research440
 
 [The checked P12 integration](research/editorial/P12-actual-flow-counterexample-440.md) realizes the positive-volume nonbig radial background at the maximal time of an actual Chern--Ricci flow in every n>=3. Book time is1/(2pi); all normalized annihilators are fiber supported with vertical rank-one matrices. The two new proofs, complete scoped automatic second reads and26 actual final images pass; all1021 old proof bodies remain exact. Both catalogues preserve42 original descriptions and now record38 open directions. The1219-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. House findings add nothing and remove one retired-label warning. Conditional big-endpoint convergence remains intact.
