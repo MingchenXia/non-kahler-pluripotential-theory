@@ -1,5 +1,9 @@
 # Modification history
 
+## 5 October 2026 — Warped-current equation review452
+
+[The warped-current review](research/editorial/P15-warped-current-endpoint-review-452.md) reconstructs two complete proofs through 47 direct obligations. Localized closed tests determine the full pseudoeffective, nef and strict-current cones. Every finite power-stratum unit-volume face admits a continuous potential solving the smooth positive prescribed-volume equation; no solution can be globally C11. The 47-line prototype and exact scoped foundations are read, and strict lint is clean. All 344 book files/1049 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1247-page release and 38 open directions are unchanged. No author build, native call, publication or new arXiv scan. Next: two-proof manuscript adoption and the general C11 ellipticity consequence.
+
 ## 5 October 2026 — Dini distances and twisted flows451
 
 [The Dini-distance integration](research/editorial/dini-distance-twisting-integration-451.md) adds four complete proofs of local distances, explicit rates, uniform subsequential pseudometric limits and flat twisted-flow parameter tests. Complete scoped first/second/post-image reads and 23 actual final images pass; all 1045 older proofs remain exact. The 1247-page PDF and homepage description are live-verified. Both catalogues retain 42 original descriptions and 38 open directions, with 141 typed references and 26 ranges verified. Fresh empty-source reconstruction passes all 1273 book and 17 companion page texts and 341 book files/2238 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Next: strict-current warped cones and continuous endpoint equations.
