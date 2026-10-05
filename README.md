@@ -1,8 +1,8 @@
 # Singularities in Hermitian pluripotential theory
 
-The inactive [Hermitian entropy derivation](research/editorial/hermitian-parabolic-entropy-487.md) gives three reviewed proofs of the torsion identity, Gauduchon dissipation and its sharp initial criterion.
+The [Hermitian entropy integration](research/editorial/hermitian-parabolic-entropy-integration-488.md) adds three reviewed proofs as 4.6.1. The public repository has the final 1298-page book; actual website verification is pending.
 
-The [metric restriction integration](research/editorial/four-point-metric-restriction-integration-486.md) adds five complete proofs classifying all genuine extendable metrics in the four-point family. The verified public book has 1296 printed pages.
+The [metric restriction integration](research/editorial/four-point-metric-restriction-integration-486.md) adds five complete proofs classifying all genuine extendable metrics in the four-point family. That release had 1296 printed pages.
 
 The earlier [four-point metric integration](research/editorial/four-point-metric-integration-484.md) added the prescribed nonextension example. Its construction, direct proof and excluded wider dependency claims remain recorded.
 
