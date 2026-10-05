@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research443
+
+[The incoming S16 review](research/editorial/S16-envelope-rank-extension-review-443.md) completely reads the444-line article first/automatically second and reconstructs56 obligations using exact existing-book dependencies. Invariant mass or quantitative sublinear singularities give all-scale smaller-background envelopes; a globally smooth rank-at-least-two root gives across-set smoothness under attainment. Actual Hopf/quadric instances and a full-mass non-Lp example without a smooth maximizer are checked. The point-pole greatest-solution identification is deferred. All338 book files/1029 proofs, both catalogues/manifests and451 protected sources remain exact;38 original directions stay open. The live1227-page release is unchanged. No author build, native call, publication or broad scan. Next: scoped S16 integration.
+
 ## Continuing research442
 
 [The projective first-jet integration](research/editorial/projective-first-jet-positive-metrics-442.md) adds Section4.9 with six proofs: finite convex tests, direct C2 polynomial density, the positive adjoint measure alternative and untwisted evaluation immersion. The complete scoped readings and27 actual final images pass; all1023 old proofs remain exact. The1227-page PDF and homepage description are live-verified. Both catalogues retain42 exact original descriptions and38 open directions, with128 typed single-page references/25 ranges verified. Fresh empty-source reconstruction passes all1253 book and17 companion page texts; native catalogue preview remains unverified. The sole additional house warning records the exact arXiv-only primary citation. Next: independently review incoming S16; retain the explicit first-jet model for a later unit.
