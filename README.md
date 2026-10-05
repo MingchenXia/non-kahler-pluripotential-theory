@@ -10,6 +10,8 @@ The fresh whole-book polish has completed the front units, Chapters 1–33, Appe
 
 The latest independently reconstructed extension shows that shrinking approximating tubes do not force shrinking limiting punctures for general Hermitian metrics, even with fixed smooth volume; see [the surface example](research/editorial/hermitian-tube-puncture-integration-472.md). It follows the curve and radial estimates in Section 13.18.3. The 1273-page PDF and homepage are live-verified. The geometric pointwise bounds and limiting punctured-diameter condition for the nodal approximations remain under review. The continuous Hermitian trace product from 466 retains its bidimension-one/continuous-potential scope. Full pluriharmonic transform/Siu and analytic cut-off remain under dependency review. P08 and P12 are negatively resolved; P22 and S13 retain their recorded resolutions. Thirty-eight original directions remain open. Related research continues.
 
+A checked inactive [elliptic quotient fragment](research/editorial/elliptic-affine-quotient-hulls-473.md) supplies a direct Laurent hull obstruction and a non-Stein quotient with Stein universal cover. It is ready for natural-home integration; full canonical-extension and finite-generation dependencies remain under review.
+
 The [surface-example review 471](research/editorial/hermitian-tube-puncture-separation-471.md) supplies the complete direct construction and checks for the integrated fixed-volume example.
 
 The [curve and tube review 469](research/editorial/conformal-curve-tube-diameter-469.md) supplies the complete prototype reconstruction and scoped exact-version primary evidence for the three integrated proofs.

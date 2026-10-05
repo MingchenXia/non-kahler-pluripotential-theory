@@ -1,0 +1,125 @@
+\section{Punctured line bundles and affine quotients}
+\label{sec:elliptic-affine-quotient-hulls}
+
+For a compact subset $K$ of a complex manifold $Y$, its holomorphic hull is
+\[
+ \widehat K_Y=\{y\in Y:|f(y)|\leq\max_K|f|\text{ for every }f\in\mathcal O(Y)\}.
+\]
+Holomorphic convexity requires every such hull to be compact. A Stein manifold is holomorphically convex and holomorphically separable.
+
+\begin{lemma}\label{lem:positive-line-puncture-hull}
+Let $C$ be a compact connected Riemann surface, and let $A\to C$ be a holomorphic line bundle of positive degree. Write $A^\times$ for its total space with the zero section removed. Then $A^\times$ is not holomorphically convex. More precisely, put $B=A^*$ and choose a smooth Hermitian norm on $B$. Every holomorphic function on $B^\times$ extends holomorphically to $B$, and the holomorphic hull in $B^\times$ of
+\[
+ K_r=\{v\in B:|v|=r\},\qquad r>0,
+\]
+contains $\{v:0<|v|\leq r\}$ and is not compact.
+\end{lemma}
+\begin{proof}
+In a local holomorphic frame of $B$, a function $f\in\mathcal O(B^\times)$ has a fiberwise Laurent expansion
+\[
+ f(z,t)=\sum_{k\in\mathbb Z}a_k(z)t^k.
+\]
+The Cauchy integral formula makes each coefficient holomorphic in $z$, and the change of frame identifies the coefficients with global sections of $B^{-k}$. For $k<0$, this line bundle has negative degree. It has no nonzero section, since the zero divisor of a nonzero holomorphic section has nonnegative degree. Thus all negative coefficients vanish. On a smaller base chart, Cauchy estimates on a fixed fiber circle give locally uniform convergence of the remaining power series at $t=0$. These extensions agree on overlaps and define a holomorphic function on all of $B$.
+
+The maximum modulus principle on the disk in each fiber gives
+\[
+ |f(v)|\leq\max_{K_r}|f|\qquad(0<|v|\leq r).
+\]
+The circle bundle $K_r$ is compact because $C$ is compact. A sequence in one fiber whose positive norms tend to zero lies in its hull and has no convergent subsequence in $B^\times$. Hence the hull is not compact. Fiberwise inversion identifies $A^\times$ biholomorphically with $B^\times$: a nonzero $v\in A$ corresponds to the unique $\ell\in A^*$ with $\ell(v)=1$. This proves the assertion for $A^\times$.
+\end{proof}
+
+The following quotient isolates the holomorphic obstruction in an affine-bundle model. Its universal cover is Stein, although the quotient is not.
+
+Let $\Lambda=\mathbb Z+\mathbb Z\tau\subset\mathbb C$, with $\operatorname{Im}\tau>0$, and put $E=\mathbb C/\Lambda$. Let $b_\lambda(z)$ be nowhere-zero holomorphic functions satisfying
+\[
+ b_{\lambda+\gamma}(z)=b_\lambda(z+\gamma)b_\gamma(z).
+\]
+Suppose the line bundle
+\[
+ A=(\mathbb C_z\times\mathbb C_t)/\Lambda,
+ \qquad\lambda\cdot(z,t)=(z+\lambda,b_\lambda(z)t),
+\]
+has positive degree.
+
+\begin{example}\label{ex:positive-elliptic-automorphy}
+The factors
+\[
+ b_{m\tau+n}(z)=\exp\bigl(-\pi\mathrm{i}(m^2\tau+2mz)\bigr)
+\]
+define a degree-one line bundle on $E$.
+\end{example}
+\begin{proof}
+For $\gamma=r\tau+s$, the cocycle identity follows from
+\[
+ b_{m\tau+n}(z+\gamma)b_{r\tau+s}(z)
+       =b_{(m+r)\tau+n+s}(z)\exp(-2\pi\mathrm{i}ms)
+       =b_{(m+r)\tau+n+s}(z).
+\]
+Put $v=\operatorname{Im}\tau$. The squared norm
+\[
+ |t|^2\exp\bigl(-2\pi(\operatorname{Im}z)^2/v\bigr)
+\]
+is invariant under the action, because $\operatorname{Im}(z+m\tau+n)=\operatorname{Im}z+mv$ and
+\[
+ |b_{m\tau+n}(z)|^2=\exp\bigl(2\pi(m^2v+2m\operatorname{Im}z)\bigr).
+\]
+Its first Chern form is
+\[
+ \frac{\mathrm{i}}{2\pi}\partial\bar\partial
+              \left(\frac{2\pi(\operatorname{Im}z)^2}{v}\right)
+       =\frac{\mathrm{i}}{2v}\,\mathrm{d}z\wedge\mathrm{d}\bar z.
+\]
+This positive form integrates to one on a fundamental parallelogram of area $v$. Thus the degree is one.
+\end{proof}
+
+On
+\[
+ Q=\{([x_0:x_1],[w_0:w_1])\in\mathbb P^1\times\mathbb P^1:
+                    D=x_0w_1-x_1w_0\ne0\}
+\]
+define the holomorphic function $\sigma=x_1w_0/D$.
+
+\begin{proposition}\label{prop:elliptic-affine-quotient-nonstein}
+Fix $\kappa\in\mathbb C^*$ and $K\in\mathbb C$. For $\lambda=m\tau+n\in\Lambda$, the formula
+\[
+ \lambda\cdot(z,u,[x],[w])=
+ \bigl(z+\lambda,u+m(K+\kappa\sigma),
+       [x_0:b_\lambda(z)x_1],[w_0:b_\lambda(z)w_1]\bigr)
+\]
+defines a free properly discontinuous holomorphic action on $\mathbb C^2\times Q$. The quotient $Z$ is not Stein. If $K\notin\{0,\kappa\}$, the descended function $\sigma:Z\to\mathbb C$ has the closed smooth fiber
+\[
+ \sigma^{-1}(-K/\kappa)\simeq\mathbb C\times A^\times,
+\]
+which is not holomorphically convex. If $K=0$ or $K=\kappa$, the quotient contains a compact elliptic curve. In every case its universal cover is the Stein manifold $\mathbb C^2\times Q$.
+\end{proposition}
+\begin{proof}
+Simultaneously multiplying $x_1,w_1$ by $b_\lambda(z)$ multiplies $D$ and $x_1w_0$ by the same factor. Thus $\sigma$ is invariant. Its invariance and the cocycle identity for $b$ prove the group law, including addition of the integer $m$. Translation in the $z$ coordinate makes the action free and properly discontinuous: only finitely many lattice translates of the projection of a compact set can meet another fixed compact set. The quotient is therefore a complex manifold, and $\sigma$ descends holomorphically.
+
+Set $a=-K/\kappa$. If $a\notin\{0,-1\}$, every point of $\{\sigma=a\}\subset Q$ has $x_0x_1\ne0$. In the chart
+\[
+ (t,y)\longmapsto([1:t],[y:ty+1]),
+\]
+the equation is $ty=a$. Hence this fiber is $\mathbb C^*$, with parameter $t$, and the group action on its preimage is
+\[
+ \lambda\cdot(z,u,t)=(z+\lambda,u,b_\lambda(z)t).
+\]
+This gives the asserted biholomorphism with $\mathbb C\times A^\times$. Its submanifold $u=0$ is closed in the fiber and therefore closed in $Z$. Under fiberwise inversion, let $K_r$ be the compact circle bundle in this submanifold from \cref{lem:positive-line-puncture-hull}. Every holomorphic function on $Z$ restricts to a function on $B^\times$. Consequently its hull in $Z$ contains the same sequence with fiber norms tending to zero. That sequence has no convergent subsequence in the closed submanifold, and hence none in $Z$. Thus $Z$ is not holomorphically convex.
+
+For $K=0$, take $q_+=([1:0],[0:1])$, where $\sigma=0$. The invariant submanifold $\{u=0,q=q_+\}$ descends to a copy of $E$. For $K=\kappa$, use $q_-=([0:1],[1:0])$, where $\sigma=-1$. The same conclusion holds. Every holomorphic function on $Z$ is constant on this compact curve by the maximum modulus principle, so holomorphic separation fails.
+
+Finally, the map
+\[
+ Q\longrightarrow\{(s,c,d)\in\mathbb C^3:cd=s(s-1)\},
+ \qquad ([x],[w])\longmapsto
+ \left(\frac{x_0w_1}{D},\frac{x_0w_0}{D},\frac{x_1w_1}{D}\right)
+\]
+is an isomorphism. Its inverse recovers $[x],[w]$ from the column and row lines of the rank-one matrix
+\[
+ \begin{pmatrix}c&s\\s-1&d\end{pmatrix}.
+\]
+The matrix never vanishes, and the hypersurface is smooth: simultaneous vanishing of its three defining derivatives would give $c=d=0$, $s=1/2$, contradicting its equation. Thus $Q$ is affine and Stein. Projection to $[x]\in\mathbb P^1$ makes it a locally trivial affine-line bundle. The chart above and the chart over $x_1\ne0$ have transition
+\[
+ v=1/t,\qquad y_\infty=-t^2y-t.
+\]
+Its contractible fibers give $\pi_1(Q)=\pi_1(\mathbb P^1)=0$. Therefore $\mathbb C^2\times Q$ is simply connected and Stein, and is the universal cover of $Z$.
+\end{proof}
