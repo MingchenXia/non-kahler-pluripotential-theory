@@ -1,5 +1,9 @@
 # arXiv watch — first daily scan
 
+## Exact Han review 487
+
+[The Hermitian entropy review](editorial/hermitian-parabolic-entropy-487.md) completes the exact Han 2610.01202v1 source read twice and inspects all 20 PDF pages. Three direct proofs give the torsion entropy identity, Gauduchon dissipation and exact all-target initial criterion. Complete fragment reads, 21 obligations and strict house 0/0 pass. Full degeneration/Green dependency chains are outside adoption. All 351 book files/1095 proofs, catalogues and protected sources remain exact; publication retains 486 scope and 38 directions remain open. Research-package checks pass all 2368 current payload checksums against actual 486 outputs, all 1322 book/17 companion page texts and 348 book-source bytes; no new empty-source build is claimed. Next: Integrate the three direct Hermitian entropy proofs beside Gauduchon potential persistence with exact Han Lemma3.2 attribution; rebuild and publish. Continue related primary research and incoming author progress.
+
 ## 5 October 2026 — Bounded follow-up 467
 
 Keyword/date metadata (7 rows) and the first 50 math.CV update entries supplement earlier listing coverage; 25 recent titles and 8 complete selected abstracts are actually read. The keyword query misses known relevant versions and is not exhaustive. Exact Dang v2 and GM v1 bytes match earlier reviews. The newly read complete GM source supports only the scoped reconstructed metric mechanism here; the other abstract claims and Denisi introduction are not proof adoption. See [the metric review](editorial/finite-collapse-distance-467.md).

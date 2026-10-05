@@ -1,0 +1,104 @@
+\subsection{Convex entropies along a Monge--Amp\`ere flow}
+\label{subsec:hermitian-parabolic-entropy}
+
+The Gauduchon identity also determines whether the volume ratio of a parabolic equation has decreasing convex entropies. Fix a smooth strictly positive probability volume form $\nu$ on $X$, assume $n\geq2$, and write $M=\int_X\omega^n$. Consider a smooth solution on an interval $[0,T)$ of
+\begin{equation}\label{eq:hermitian-parabolic-entropy-flow}
+ \dot u_t=\log\rho_t,\qquad
+ \rho_t=\frac{\omega_{u_t}^n}{M\nu},\qquad
+ u_0=0,\qquad \omega_{u_t}>0.
+\end{equation}
+The denominator $M$ remains fixed. Define the linearized operator by
+\[
+ \Delta_t v\,\omega_{u_t}^n
+ =n\ddc v\wedge\omega_{u_t}^{n-1}.
+\]
+Logarithmic differentiation gives $\partial_t\log\rho_t=\Delta_t\log\rho_t$. The term produced by integration by parts is the same background derivative that appears in the mass variation.
+
+\begin{proposition}\label{prop:hermitian-parabolic-entropy-identity}
+Let $\Phi\in C^2((0,+\infty),\R)$ and choose $G$ with $G'(r)=\Phi'(r)/r$. Along \eqref{eq:hermitian-parabolic-entropy-flow},
+\begin{equation}\label{eq:hermitian-parabolic-entropy-identity}
+\begin{split}
+ \frac{\mathrm{d}}{\mathrm{d}t}\int_X\Phi(\rho_t)\nu
+ ={}&\frac nM\int_XG(\rho_t)\ddc(\omega_{u_t}^{n-1})\\
+ &-\frac nM\int_X\frac{\Phi''(\rho_t)}{\rho_t}
+       \mathrm{d}\rho_t\wedge\dc\rho_t\wedge\omega_{u_t}^{n-1}.
+\end{split}
+\end{equation}
+In particular, for $p>1$,
+\begin{equation}\label{eq:hermitian-parabolic-power-entropy}
+\begin{split}
+ \frac{\mathrm{d}}{\mathrm{d}t}\int_X\rho_t^p\nu
+ ={}&\frac{np}{(p-1)M}\int_X\rho_t^{p-1}\ddc(\omega_{u_t}^{n-1})\\
+ &-\frac{np(p-1)}M\int_X\rho_t^{p-3}
+       \mathrm{d}\rho_t\wedge\dc\rho_t\wedge\omega_{u_t}^{n-1}.
+\end{split}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Using $\partial_t\rho_t=\rho_t\Delta_t\log\rho_t$ and $\rho_t\nu=M^{-1}\omega_{u_t}^n$, the entropy derivative is
+\[
+ \frac nM\int_X\Phi'(\rho_t)\ddc\log\rho_t
+                  \wedge\omega_{u_t}^{n-1}.
+\]
+The scalar chain rule and the definition of $G$ give
+\[
+ \Phi'(r)\ddc\log r
+ =\ddc G(r)-\frac{\Phi''(r)}r\mathrm{d}r\wedge\dc r.
+\]
+Apply \cref{lem:ibp} to the first term. An additive constant in $G$ contributes zero, since $\int_X\ddc(\omega_{u_t}^{n-1})=0$. Taking $\Phi(r)=r^p$ and $G(r)=p r^{p-1}/(p-1)$ proves the second formula.
+\end{proof}
+
+\begin{corollary}\label{cor:gauduchon-parabolic-entropies}
+Suppose every $\omega_{u_t}$ in \eqref{eq:hermitian-parabolic-entropy-flow} is Gauduchon. Then $\int_X\rho_t\nu=1$, and $t\mapsto\int_X\Phi(\rho_t)\nu$ is nonincreasing for every convex $\Phi\in C^2((0,+\infty),\R)$. In particular,
+\[
+ \|\rho_t\|_{L^p(\nu)}\leq\|\rho_s\|_{L^p(\nu)}
+ \quad(0\leq s\leq t<T,\ p>1).
+\]
+If $\Phi''>0$, equality in the entropy derivative at a time $t$ holds precisely when $\rho_t=1$, in which case $\dot u_t=0$.
+
+The hypothesis holds on a Gauduchon surface. In any dimension it holds if $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$.
+\end{corollary}
+\begin{proof}
+The mass derivative is
+\[
+ \frac{\mathrm{d}}{\mathrm{d}t}\int_X\rho_t\nu
+ =\frac nM\int_X\dot u_t\ddc(\omega_{u_t}^{n-1})=0,
+\]
+and its initial value is one. In \eqref{eq:hermitian-parabolic-entropy-identity} the first term vanishes, while the second is nonpositive: $\mathrm{d}\rho_t\wedge\dc\rho_t$ is a positive $(1,1)$-form. If $\Phi''>0$, vanishing of that term forces $\mathrm{d}\rho_t=0$. Connectedness and the mass normalization give $\rho_t=1$. The converse and the assertion about $\dot u_t$ follow from the equation.
+
+On a surface, $\ddc\omega_{u_t}=\ddc\omega=0$. Under the stated power identities, expand $\omega_{u_t}^{n-1}$: the factors $\ddc u_t$ are closed, so each term has vanishing complex Hessian. These are also the persistence conditions of \cref{prop:gauduchon-potential-persistence,thm:mass-invariance-characterization}.
+\end{proof}
+
+For $\Phi(r)=r\log r$ the same formula gives entropy dissipation. In higher dimension, the Gauduchon condition on the initial form alone need not persist, as \cref{ex:gauduchon-persistence-torus} shows. The next criterion detects its exact role at the initial time without assuming that a flow exists for all time.
+
+\begin{proposition}\label{prop:gauduchon-initial-entropy-criterion}
+Fix $p>1$. For each smooth strictly positive probability volume form $\nu$, put $\rho_\nu=\omega^n/(M\nu)$ and define
+\[
+ \mathcal D_p(\omega,\nu)
+ :=\left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}
+   \int_X\left(\frac{(\omega+t\ddc\log\rho_\nu)^n}{M\nu}\right)^p\nu.
+\]
+Then $\mathcal D_p(\omega,\nu)\leq0$ for every such $\nu$ if and only if $\omega$ is Gauduchon. If $\omega$ is not Gauduchon, there is such a $\nu$ with $\mathcal D_p(\omega,\nu)>0$.
+\end{proposition}
+\begin{proof}
+The form in the definition is positive for sufficiently small $|t|$. The path $u_t=t\log\rho_\nu$ has the prescribed parabolic velocity at zero, so \eqref{eq:hermitian-parabolic-power-entropy} holds for its derivative at that time. If $\omega$ is Gauduchon, this derivative is nonpositive.
+
+Conversely, suppose $\lambda:=\ddc(\omega^{n-1})\ne0$. Write $\lambda=f\omega^n/M$, where $f$ is smooth and real. Stokes' theorem gives $\int_Xf\omega^n=0$, whereas
+\[
+ \int_Xf\lambda=\frac1M\int_Xf^2\omega^n>0.
+\]
+For small $\varepsilon>0$, set
+\[
+ c_\varepsilon=\frac1M\int_X\mathrm{e}^{-\varepsilon f}\omega^n,
+ \qquad r_\varepsilon=c_\varepsilon\mathrm{e}^{\varepsilon f},
+ \qquad \nu_\varepsilon=\frac{\omega^n}{M r_\varepsilon}.
+\]
+Then $\nu_\varepsilon$ is a smooth strictly positive probability volume form and $\rho_{\nu_\varepsilon}=r_\varepsilon$. Since $c_\varepsilon=1+O(\varepsilon^2)$, $\int_X\lambda=0$, and $\mathrm{d}r_\varepsilon=\varepsilon r_\varepsilon\mathrm{d}f$, the two terms in \eqref{eq:hermitian-parabolic-power-entropy} yield
+\[
+ \mathcal D_p(\omega,\nu_\varepsilon)
+ =\frac{np}M\varepsilon\int_Xf\lambda+O(\varepsilon^2)>0
+\]
+for sufficiently small $\varepsilon>0$. This proves necessity and the last assertion.
+\end{proof}
+
+The path used in the criterion only prescribes the initial velocity. Any smooth solution with the same initial data has the same initial entropy derivative; its later existence and convergence are separate questions.
