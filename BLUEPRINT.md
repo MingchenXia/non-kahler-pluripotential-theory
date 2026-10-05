@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint442 — Projective first-jet metrics integrated
+
+[The projective first-jet integration](research/editorial/projective-first-jet-positive-metrics-442.md) adds Section4.9 with six proofs: finite convex tests, direct C2 polynomial density, the positive adjoint measure alternative and untwisted evaluation immersion. The complete scoped readings and27 actual final images pass; all1023 old proofs remain exact. The1227-page PDF and homepage description are live-verified. Both catalogues retain42 exact original descriptions and38 open directions, with128 typed single-page references/25 ranges verified. Fresh empty-source reconstruction passes all1253 book and17 companion page texts; native catalogue preview remains unverified. The sole additional house warning records the exact arXiv-only primary citation. Next: independently review incoming S16; retain the explicit first-jet model for a later unit.
+
 ## Checkpoint441 — First-jet criterion reconstructed
 
 [The first-jet review](research/editorial/first-jet-positive-metric-review-441.md) reads the complete exact preprint and source, inspects10 actual primary images and reconstructs 55 obligations. A direct Bernstein/projector argument proves C2 density without importing the cited Bergman proof tree. The finite metric/convex/positive-measure criterion and untwisted immersion test are supported; the full abelian-surface model and unpublished ampleness claim are deferred. Both complete37-line reconstruction reads pass. All337 book files/1023 proofs, both catalogues/manifests and451 protected sources remain exact. The1219-page live440 release is unchanged;38 original directions remain open. No author build, native call, publication or broad listing scan. Next: scoped Chapter4 integration.
