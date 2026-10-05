@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint439 — Actual P12 flow independently checked
+
+[The independent P12 review](research/editorial/P12-actual-flow-counterexample-review-439.md) reconstructs 38 flow/current obligations from the complete 413-line author source. Book Ricci normalization gives actual maximal time 1/(2pi), with a nef nonbig endpoint of positive volume and fiber-supported rank-one annihilators. Both complete source/reconstruction reads pass at the stated dependency scope. All 336 book files, 1021 proofs, both catalogues/manifests and 451 protected sources remain exact. Original P12 is negatively resolved; catalogue migration from 39 to 38 remains pending. The live 438 release is unchanged. No author build, native call, publication, broad scan or verifier runtime. The freshly retrieved first-jet preprint is only partially read and not adopted.
+
 ## Checkpoint438 — Radial test limits integrated
 
 [The checked radial test extension](research/editorial/radial-gauduchon-test-limits-438.md) adds two propositions explaining the distinct volume and bigness quotients, logarithmic fiber concentration in dimension three and actual localized balanced smoothing in every dimension of the model. All1019 old proofs and22 active raw formal questions remain exact; both catalogues retain all42 original descriptions/statuses and39 open directions. Complete scoped first/second reads pass with24 actual final images. The1217-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. House findings are unchanged.
