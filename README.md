@@ -10,7 +10,9 @@ The fresh whole-book polish has completed the front units, Chapters 1–33, Appe
 
 An independently reconstructed extension shows that shrinking approximating tubes do not force shrinking limiting punctures for general Hermitian metrics, even with fixed smooth volume; see [the surface example](research/editorial/hermitian-tube-puncture-integration-472.md). It follows the curve and radial estimates in Section 13.18.3. The geometric pointwise bounds and limiting punctured-diameter condition for the nodal approximations remain under review. The continuous Hermitian trace product from 466 retains its bidimension-one/continuous-potential scope. Full pluriharmonic transform/Siu and analytic cut-off remain under dependency review. P08 and P12 are negatively resolved; P22 and S13 retain their recorded resolutions. Thirty-eight original directions remain open. Related research continues.
 
-The [cotangent torsor integration](research/editorial/elliptic-cotangent-torsor-integration-476.md) identifies Kähler canonical extensions on split elliptic ruled surfaces with the checked non-Stein quotient, for every positive line degree. The public book now has 1280 printed pages; symmetric-tangent finite generation remains under review.
+The inactive [symmetric-tangent reconstruction](research/editorial/elliptic-symmetric-tangent-ring-477.md) gives the exact section dimensions and tautological volume on the split elliptic ruled surface, and proves nonfinite generation directly. Four complete proofs await integration; the manuscript remains at checkpoint476.
+
+The [cotangent torsor integration](research/editorial/elliptic-cotangent-torsor-integration-476.md) identifies Kähler canonical extensions on split elliptic ruled surfaces with the checked non-Stein quotient, for every positive line degree. The public book now has 1280 printed pages; the symmetric-tangent reconstruction awaits integration.
 
 The [elliptic quotient integration](research/editorial/elliptic-affine-quotient-integration-474.md) supplies the punctured-line hull obstruction and the non-Stein quotient with Stein universal cover used by the cotangent class computation.
 
