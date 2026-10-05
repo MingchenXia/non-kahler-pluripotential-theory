@@ -6,6 +6,8 @@ The [convex bundle norm integration](research/editorial/convex-bundle-norm-integ
 
 The [homogeneous regularization integration](research/editorial/homogeneous-convex-integration-494.md) adds five analytic proofs as Subsection 4.5.1. The public repository and actual website have the verified 1308-page PDF and matching description. Weak psh replacement assumes a specified H and retains strong fibre convexity.
 
+The [tautological positivity review](research/editorial/tautological-homogeneous-positivity-495.md) reconstructs the classical strict homogeneous function needed under dual ampleness. Three proofs await integration; the polar-metric and stable ample construction scopes remain pending.
+
 The [Hermitian entropy integration](research/editorial/hermitian-parabolic-entropy-integration-488.md) adds three reviewed proofs as 4.6.1. Its preceding local release had 1298 printed pages; website verification was not completed.
 
 The [metric restriction integration](research/editorial/four-point-metric-restriction-integration-486.md) adds five complete proofs classifying all genuine extendable metrics in the four-point family. That release had 1296 printed pages.
