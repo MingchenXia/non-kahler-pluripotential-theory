@@ -1,5 +1,13 @@
 # Supplied papers: current integration queue — checkpoint229
 
+## Author P12 integration440
+
+[The checked P12 integration](research/editorial/P12-actual-flow-counterexample-440.md) realizes the positive-volume nonbig radial background at the maximal time of an actual Chern--Ricci flow in every n>=3. Book time is1/(2pi); all normalized annihilators are fiber supported with vertical rank-one matrices. The two new proofs, complete scoped automatic second reads and26 actual final images pass; all1021 old proof bodies remain exact. Both catalogues preserve42 original descriptions and now record38 open directions. The1219-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. House findings add nothing and remove one retired-label warning. Conditional big-endpoint convergence remains intact.
+
+## Author P12 independent review439
+
+[The independent P12 review](research/editorial/P12-actual-flow-counterexample-review-439.md) reconstructs 38 flow/current obligations from the complete 413-line author source. Book Ricci normalization gives actual maximal time 1/(2pi), with a nef nonbig endpoint of positive volume and fiber-supported rank-one annihilators. Both complete source/reconstruction reads pass at the stated dependency scope. All 336 book files, 1021 proofs, both catalogues/manifests and 451 protected sources remain exact. Original P12 is negatively resolved; catalogue migration from 39 to 38 remains pending. The live 438 release is unchanged. No author build, native call, publication, broad scan or verifier runtime. The freshly retrieved first-jet preprint is only partially read and not adopted.
+
 ## Author P10 integration418
 
 [The P10 integration](research/editorial/elliptic-curvature-endpoints-418.md) adds Section 25.14: bounded cubic energy, full-current background transport, signed elliptic curvature and two explicit quotient families. Six proofs, both complete new-input reads and 23 actual images pass. All 983 old proofs, 451 protected sources and original manifests remain exact. The 1191-page release and homepage are live-verified. Both catalogues retain mathematical descriptions/statuses and actual anchors; general P10 remains open. Fresh empty-source reconstruction passes; native preview remains unverified. Inherited active house findings remain 48 errors/168 warnings with no added findings. Forty original directions remain open. The preserved source is integrated at its checked threefold scope; the general problem is not closed.
