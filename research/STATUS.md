@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint 483 — Prescribed metric nonextension
+
+[The four-point metric reconstruction](editorial/four-point-metric-nonextension-483.md) supplies four complete proofs of a prescribed analytic semipositive metric nonextension, using a direct degree-zero conic argument. The exact Qin2609.36410v1 primary is completely read twice and all six PDF pages are inspected. The source's global extension and minimal-singularity dependency chains remain outside adoption. All 350 book files/1086 retained proofs and both catalogues remain exact; the verified 1290-page book and 38 open directions retain 482 scope. Research-package checks pass current payloads and actual 482 outputs; no new build is claimed. Next: Integrate the four-point semipositive metric nonextension beside the relevant positivity/deformation discussion; rebuild and publish with exact source attribution. Then continue related primary research and author updates.
+
 ## Checkpoint 482 — Zero-ruling cotangent extensions integrated
 
 [The zero-ruling integration](editorial/elliptic-zero-ruling-integration-482.md) adopts three direct proofs as 25.18.13. Its section algebra agrees with the nonzero-ruling case, but its universal cover is not Stein. All 1083 previous retained proof bodies remain exact; the total is 1086, with 1072 active author proofs. Complete first/automatic second reads and 43 actual final images pass. The 1290-page public PDF/homepage and successful Pages deployment are verified. Both catalogues retain 42 descriptions/38 open directions; 147 single-page/26 range locators are checked. No new house finding is added. Native call 1588 remains pending without diagnostics. Actual empty-source reconstruction passes all 1316 book/17 companion page texts and 347 book-source byte comparisons; all 2349 final current payload checksums pass. Next: the complete Qin primary and its dependencies.
