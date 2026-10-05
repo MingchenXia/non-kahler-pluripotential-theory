@@ -4,7 +4,7 @@ Checkpoint94's complete local-notation pass remains the baseline. This queue rec
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.
 
-Current continuation is recorded in the reader and whole-book queues. Research 467 prepares two finite-region metric proofs for the semipositive-degeneration section; the writing/polish acceptance 333 and later scoped integrations retain their recorded boundaries.
+Current continuation is recorded in the reader and whole-book queues. Integration 468 adopts the two finite-region metric proofs and relocates their general comparison foundation; both local geometric diameter inputs remain separate. Writing/polish acceptance 333 and later scoped integrations retain their recorded boundaries.
 
 | Chapter | Source | This cycle |
 |---|---|---|

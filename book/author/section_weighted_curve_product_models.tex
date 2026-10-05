@@ -83,59 +83,7 @@ Thus loss of the auxiliary coefficient leaves the metric in \cref{cor:nonclosed-
 \subsubsection{Comparing bounded model spaces}
 \label{subsec:weighted-product-metric-comparison}
 
-The weighted spaces can be compared even when their active sets differ. They are bounded, but a positive curve coefficient already prevents compactness. We state the comparison through metric embeddings so that no compactness hypothesis is needed.
-
-\Needspace{14\baselineskip}
-\begin{definition}\label{def:bounded-gh-comparison}\index{Gromov--Hausdorff comparison!bounded model spaces}
-For nonempty subsets $E,F$ of a metric space $(W,d_W)$, their Hausdorff distance is
-\[
- d_{\mathrm H}^W(E,F)=\max\left\{
- \sup_{x\in E}\inf_{y\in F}d_W(x,y),
- \sup_{y\in F}\inf_{x\in E}d_W(x,y)\right\}.
-\]
-For nonempty bounded metric spaces $E,F$, put
-\[
- d_{\mathrm{GH}}(E,F)
-       =\inf_{W,\iota,\jmath}d_{\mathrm H}^W(\iota(E),\jmath(F)),
-\]
-where $\iota,\jmath$ are isometric embeddings into a common metric space $W$. A correspondence is a subset $R\subset E\times F$ whose two coordinate projections are surjective. Its distortion is
-\[
- \operatorname{dis}R
-       =\sup_{(x,y),(x',y')\in R}
-              |d_E(x,x')-d_F(y,y')|.
-\]
-\end{definition}
-
-\Needspace{13\baselineskip}
-\begin{lemma}\label{lem:bounded-metric-correspondence}
-For any correspondence $R$ between nonempty bounded metric spaces,
-\[
- \frac12|\operatorname{diam}E-\operatorname{diam}F|
-       \leq d_{\mathrm{GH}}(E,F)
-       \leq\frac12\operatorname{dis}R.
-\]
-\end{lemma}
-\begin{proof}
-Choose $\varepsilon>0$ with $2\varepsilon\geq\operatorname{dis}R$. Give the disjoint union $E\sqcup F$ its original distances within each space, and use the symmetric cross distance
-\[
- D(x,y)=\inf_{(x_0,y_0)\in R}
-       \bigl(d_E(x,x_0)+\varepsilon+d_F(y_0,y)\bigr),
-       \qquad x\in E,\ y\in F.
-\]
-It is finite and at least $\varepsilon$. The triangle inequalities involving one cross distance follow from the triangle inequality within the corresponding space and the infimum. For two cross distances, take $(x_0,y_0),(x_1,y_1)\in R$. The distortion bound gives
-\[
- \begin{split}
- d_E(x,x')
- &\leq d_E(x,x_0)+d_F(y_0,y_1)
-                    +2\varepsilon+d_E(x_1,x')\\
- &\leq d_E(x,x_0)+d_F(y_0,y)+\varepsilon
-       +\varepsilon+d_F(y,y_1)+d_E(x_1,x').
- \end{split}
-\]
-Taking the two infima gives $d_E(x,x')\leq D(x,y)+D(y,x')$. The same argument with $E,F$ exchanged treats the other case. Hence $D$ is a metric extending both metrics. Each point has a correspondent at cross distance at most $\varepsilon$, so its Hausdorff comparison is at most $\varepsilon$. Letting $\varepsilon$ decrease to half the distortion proves the upper bound, including zero distortion.
-
-For the lower bound, suppose two isometric images have Hausdorff distance $h$. For every $\delta>0$, two points in the first image have points in the second within $h+\delta$. Their distance is at most $\operatorname{diam}F+2h+2\delta$. Taking the supremum and then $\delta\downarrow0$ gives $\operatorname{diam}E\leq\operatorname{diam}F+2h$. Exchanging the images and taking the infimum over embeddings proves the lower bound.
-\end{proof}
+The weighted spaces can be compared even when their active sets differ. They are bounded, but a positive curve coefficient already prevents compactness. The embedding comparison of \cref{def:bounded-gh-comparison,lem:bounded-metric-correspondence} applies to these spaces without a compactness hypothesis.
 
 Write $\mathcal I_a\subset\mathcal S_a$ for the ideal subspace in \cref{prop:weighted-product-polar-metric}, with the restricted metric $\rho_a$.
 
@@ -161,7 +109,7 @@ Use the correspondence
  R_{ab}=\{(\Phi_a(q),\Phi_b(q)):q_i
                 \text{ are normalized ordinary curve models}\}.
 \]
-Every potential in either locus has such a tuple, with arbitrary normalized models in its inactive coordinates, so both projections are surjective. For any two tuples, put $d_i=\|\mu_i-\nu_i\|_{\mathrm{TV}}$. By \eqref{eq:weighted-product-polar-metric}, the difference of their two distances is $\sum_i(a_i-b_i)d_i$, with $0\leq d_i\leq2A_i$. Thus $\operatorname{dis}R_{ab}\leq2\sum_i|a_i-b_i|A_i$. The preceding lemma gives the upper bound in \eqref{eq:weighted-product-gh-bounds}. The diameter formula in \cref{prop:weighted-product-polar-metric} gives the lower bound.
+Every potential in either locus has such a tuple, with arbitrary normalized models in its inactive coordinates, so both projections are surjective. For any two tuples, put $d_i=\|\mu_i-\nu_i\|_{\mathrm{TV}}$. By \eqref{eq:weighted-product-polar-metric}, the difference of their two distances is $\sum_i(a_i-b_i)d_i$, with $0\leq d_i\leq2A_i$. Thus $\operatorname{dis}R_{ab}\leq2\sum_i|a_i-b_i|A_i$. \Cref{lem:bounded-metric-correspondence} gives the upper bound in \eqref{eq:weighted-product-gh-bounds}. The diameter formula in \cref{prop:weighted-product-polar-metric} gives the lower bound.
 
 Restrict the tuple correspondence to ideal curve models. It still projects onto both ideal subspaces, and the same distortion bound holds. Atomic measures $A_i\delta_{x_i}$ and $A_i\delta_{y_i}$ attain their full diameters, so the lower bound also agrees. When $b\leq a$, the upper and lower bounds coincide, including when $b=0$.
 
