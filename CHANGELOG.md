@@ -1,5 +1,9 @@
 # Modification history
 
+## 5 October 2026 — C11 and warped potential limits455
+
+[The warped-potential integration](research/editorial/P15-warped-potential-limit-integration-455.md) adds the general C11 ellipticity foundation and whole-sequence uniform finite-face convergence of constructed potentials, all-product weak convergence and normalized bounded pulled-back uniqueness. Complete scoped first/second/post-image readings and 29 actual final images pass. One repeated proof paragraph becomes an internal reference; the other 1050 old proofs are exact. The 1249-page PDF and homepage description are live-verified. Both catalogues retain 42 original descriptions and 38 open directions, with 145 typed locators and 26 ranges verified. Fresh empty-source reconstruction passes all 1275 book and 17 companion page texts and 344 book files/2253 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Next: minimizing-test trace limits and recent primary papers.
+
 ## 5 October 2026 — C11 and warped-potential limit review454
 
 [The warped-potential review](research/editorial/P15-warped-potential-limit-review-454.md) reconstructs two complete proofs through 42 direct obligations: general C11 ellipticity, whole-sequence uniform convergence of constructed warped potentials, weak convergence of their products and uniqueness among normalized bounded pulled-back endpoint solutions. The 13/34-line prototypes and exact scoped foundations are read and strict lint is clean. All 345 book files/1051 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1249-page release and 38 open directions are unchanged. No author build, native call, publication or new arXiv scan. Next: natural-home adoption, minimizing-test trace limits and recent primary papers.
