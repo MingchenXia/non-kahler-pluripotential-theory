@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint458 — Pluriharmonic critical inputs
+
+[The critical-input review](research/editorial/pluriharmonic-critical-input-review-458.md) checks the exact compact tangent conditions and published total/strict transform distinction, records three exact-version locator mismatches, and directly proves whole-fiber horizontal descent with a local countercheck. Both complete prototype reads and strict lint pass; eight actual primary images are inspected. The full Siu theorem and movable-class assertion are not adopted. All 348 book files/1055 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1251-page release and 38 open directions are unchanged. Research-package validation passes against the actual 456 empty-source outputs; no new build or publication. Next: natural-home horizontal descent adoption and exact external dependency checks.
+
 ## Checkpoint457 — Pluriharmonic-current primary review
 
 [The pluriharmonic-current primary review](research/editorial/pluriharmonic-Siu-primary-review-457.md) reads all 859 source lines, automatically rereads 594 active lines and all eight proofs, and reads all 13 PDF page texts and 13 actual images of arXiv:2606.29680v2. Whole-fiber containment, trace-density and a noncompact countercheck are expanded directly. The main theorem retains compact Kähler scope; exact transform/tangent inputs need verification before adoption. The movable-class conclusion depends on an unverified To-appear identity and is deferred. All 348 book files and 1055 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1251-page release and 38 open directions are unchanged. Research-package validation passes against the actual 456 empty-source outputs, with no new build or publication. Next: exact critical-input review.
