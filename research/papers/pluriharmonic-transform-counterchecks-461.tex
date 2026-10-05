@@ -1,0 +1,63 @@
+% Research proof fragment using book macros; not an active book input.
+\begin{lemma}\label{lem:radial-exponent-countercheck}
+On $\mathbb C^2$ let $T=[H]$, where $H=\{z_2=0\}$, and put $\kappa=\ddc|z|^2$. Then
+\[
+ r^{-1}\int_{B(0,r)}T\wedge\kappa=r,
+ \qquad
+ \int_{B(0,r_2)\setminus B(0,r_1)}T\wedge\ddc\log|z|^2=0
+ \quad(0<r_1<r_2).
+\]
+Thus the difference of the first quantities at $r_2$ and $r_1$ is not the displayed annular integral. The normalized line mass uses $r^{-2}$ instead.
+\end{lemma}
+\begin{proof}
+The restriction of $\kappa$ to $H$ is Euclidean area divided by $\pi$, so the radius-$r$ disc has mass $r^2$. On its punctured part, $\log|z|^2=\log|z_1|^2$ is harmonic and its $\ddc$ vanishes. Both identities follow directly.
+\end{proof}
+
+\begin{lemma}\label{lem:exceptional-cohomology-countercheck}
+Write $\mathbb P^5=\mathbb P(\mathbb C^3_u\oplus\mathbb C^3_v)$, put $A=\{u=0\}$ and $B=\{v=0\}$, and let $\Pi:E\to\mathbb P^5$ be the blow-up of the disjoint planes $A,B$. Let $\rho_u,\rho_v:E\to\mathbb P^2$ resolve the two linear projections. With $\sigma_m$ the normalized Fubini--Study form on $\mathbb P^m$, set
+\[
+ h=\Pi^*\sigma_5,\qquad
+ \theta_u=\rho_u^*\sigma_2,\qquad
+ \theta_v=\rho_v^*\sigma_2,\qquad
+ Q=h^4,\quad L=\theta_u^2\wedge\theta_v^2.
+\]
+Both pushforwards have mass one on $\mathbb P^5$:
+\[
+ \int_{\mathbb P^5}\Pi_*Q\wedge\sigma_5
+ =\int_{\mathbb P^5}\Pi_*L\wedge\sigma_5=1.
+\]
+The classes of $Q$ and $L$ on $E$ differ: if $E_A=\Pi^{-1}(A)$, then
+\[
+ \int_{E_A}Q=0,\qquad \int_{E_A}L=1.
+\]
+In particular $Q-L$ cannot be $\ddc f$ for a global distributional form $f$ on $E$.
+\end{lemma}
+\begin{proof}
+The incidence description of the two blow-ups identifies $E$ with the space of $([u],[v],[tu:sv])$, where $([u],[v])\in\mathbb P^2\times\mathbb P^2$ and $[t:s]$ parametrizes the projective line joining $[u:0]$ to $[0:v]$. Indeed, in a chart where $v\neq0$, its incidence condition is the ordinary blow-up of $u=0$; the analogous $u\neq0$ chart resolves $v=0$. These charts cover $\mathbb P^5$. The fiber coordinates glue as the projectivization of $\mathcal O(-1,0)\oplus\mathcal O(0,-1)$, using lines in its fibers. Consequently $\rho=(\rho_u,\rho_v)$ is a holomorphic $\mathbb P^1$-bundle, and $h$ has degree one on every fiber. Fiber integration gives
+\[
+ \int_E L\wedge h
+ =\int_{\mathbb P^2\times\mathbb P^2}
+       \sigma_2^2\boxtimes\sigma_2^2=1.
+\]
+Also $\int_E h^5=\int_{\mathbb P^5}\sigma_5^5=1$, since $\Pi$ has degree one. This proves the pushforward-mass identities.
+
+The exceptional divisor $E_A$ is the section $t=0$, identified with $\mathbb P^2_u\times\mathbb P^2_v$. On it, $h$ is the pullback of $\sigma_2$ from the $v$ factor, whereas $\theta_u,\theta_v$ are pulled back from the indicated factors. Thus $h^4$ vanishes there and $\theta_u^2\wedge\theta_v^2$ has integral one. The classes are distinct. Equivalently, pair $Q-L$ with a smooth closed representative of the divisor class of $E_A$; its integral is $-1$. A distributional $\ddc$-exact form would pair to zero by Stokes, so no such $f$ exists.
+\end{proof}
+
+\begin{lemma}\label{lem:smooth-pluriharmonic-pullback-mass}
+Let $F:Y\to X$ be a holomorphic map between compact K\"ahler manifolds of dimensions $N\geq n$, with K\"ahler forms $\Omega$ and $\omega$. For $1\leq p\leq n$ there is a constant $C$ such that every smooth positive $(p,p)$-form $S$ on $X$ satisfying $\ddc S=0$ obeys
+\[
+ \int_Y F^*S\wedge\Omega^{N-p}
+ \leq C\int_X S\wedge\omega^{n-p}.
+\]
+\end{lemma}
+\begin{proof}
+The positive closed current $\Gamma=F_*(\Omega^{N-p})$ has bidegree $(n-p,n-p)$ on $X$. The classical K\"ahler $\ddc$ lemma for currents gives a smooth real closed form $\gamma$ of this bidegree and a distributional form $U$ with $\Gamma=\gamma+\ddc U$. For $p=n$, a closed degree-zero current is already smooth and locally constant, and one may take $U=0$. Since $S$ is smooth, pairing it with $U$ is legitimate and
+\[
+ \int_Y F^*S\wedge\Omega^{N-p}
+ =\langle\Gamma,S\rangle
+ =\int_X\gamma\wedge S+\langle U,\ddc S\rangle
+ =\int_X\gamma\wedge S.
+\]
+The pairing with the fixed smooth form $\gamma$ is bounded in absolute value by a constant times the positive-current trace mass of $S$. This proves the estimate. The argument uses the K\"ahler $\ddc$ lemma and smoothness of $S$, and does not require exterior closedness of $S$.
+\end{proof}

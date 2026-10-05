@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research461
+
+[The transform proof review](research/editorial/pluriharmonic-transform-proof-review-461.md) checks three complete research proofs: a radial exponent countercheck, an exceptional-space cohomology countercheck and a smooth pluriharmonic pullback mass bound. All 13 published Dinh–Sibony page texts/images and the complete composite Vigny source first read are recorded; 18 actual primary images are inspected. Strict fragment lint passes. General transform/Siu adoption and older support/extension inputs remain pending. All 350 book files/1057 proofs, both catalogues/manifests, 451 protected sources and immutable author originals remain exact. The live 1255-page release and 38 open directions are unchanged. Research-package validation passes against actual 460 empty-source outputs; no new build or publication. Next: third-resolution smooth pairing and compact support/continuous-product interfaces.
+
 ## Continuing research460
 
 [The strict-level integration](research/editorial/strict-lelong-level-integration-460.md) adds a complete compact projective example showing why Siu levels use the non-strict threshold. Complete scoped first/second/post-image reads and 38 actual final images pass; all 1056 old proof bodies remain exact. The 1255-page PDF and homepage description are live-verified. Both catalogues retain 42 descriptions and 38 open directions, with 147 typed locators and 26 ranges checked. Fresh empty-source reconstruction passes all 1281 book and 17 companion page texts and 347 book sources/2271 payload checksums; the native catalogue preview remains unverified without a returned diagnostic. House findings add nothing. Full current-transform and pluriharmonic Siu adoption remain separate. Next: exact external dependencies and incoming/recent primary reading.
