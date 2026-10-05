@@ -1,8 +1,12 @@
 # Literature and verification ledger
 
+## 5 October 2026 — Bounded recent intake and finite-region metric proof 467
+
+Exact newly retrieved Dang 2603.25520v2 PDF/source bytes match review 450 and scoped adoption 451; GM 2610.00942v1 PDF bytes match review 358. The GM source has a complete 1389-line first read, while only Lemma 5.2/Proposition 5.1 receive direct reconstruction, a scoped second source read and actual page 23–26 text/image checks. Denisi–Höring 2610.03048v1 is read only at introduction 276–374, with its proofs pending. Two bounded metadata queries and eight selected abstracts do not certify other results or exhaustive coverage. See [the metric review](editorial/finite-collapse-distance-467.md). Full conifold/asymptotic geometric adoption remains separate.
+
 ## 5 October2026 — Exact current intake446
 
-[The current intake and direct model review](editorial/ramified-root-first-jet-review-446.md) completely retrieves the eight new/recent lists and checks five exact abstracts: Dang2603.25520v2, Dinh–Nguyen–Nguyen2606.29680v2, Denisi–Höring2610.03048v1, Fino–Saavedra2610.02519v1 and Ge2610.03535v1. Their new primary proofs remain pending. Dang v1 is already cited and reconstructed in the current history chapter; the older statement below that it was not yet used records an earlier stage. Version2 and its added twisted-flow diameter statement are not yet adopted or bibliography-upgraded. Historical announcement/replacement gaps remain.
+[The historical intake 446](editorial/ramified-root-first-jet-review-446.md) retrieved the eight new/recent lists and checked five exact abstracts. Subsequent Dang v2 review 450/scoped adoption 451 and Dinh–Nguyen–Nguyen review 457 supersede its pending-proof wording at their recorded scopes. Dang v2 did not newly add the flow statement; its corrected wording and explicit applicability limits are recorded in 450–451. Historical announcement/replacement coverage gaps remain.
 
 Cutoff: 14 September 2026. Search snippets locate sources; they do not certify mathematical statements. Exact versions and theorem numbers must be entered after reading the paper. Absence of a search result is not proof of novelty or openness.
 

@@ -1,5 +1,9 @@
 # arXiv watch — first daily scan
 
+## 5 October 2026 — Bounded follow-up 467
+
+Keyword/date metadata (7 rows) and the first 50 math.CV update entries supplement earlier listing coverage; 25 recent titles and 8 complete selected abstracts are actually read. The keyword query misses known relevant versions and is not exhaustive. Exact Dang v2 and GM v1 bytes match earlier reviews. The newly read complete GM source supports only the scoped reconstructed metric mechanism here; the other abstract claims and Denisi introduction are not proof adoption. See [the metric review](editorial/finite-collapse-distance-467.md).
+
 Recorded 24 September 2026, Asia/Shanghai. The latest announcements present on the retrieved primary pages are **23 September**, not 24 September. New/cross submissions cover 17–23 September. Current replacement lists cover 23 September only; replacements from 17–22 September remain a catch-up gap. All listings were retrieved in full, then title-screened by subject keywords. This scan does not establish that every relevant paper was found.
 
 | Category | Recent entries | Current new/cross/replacement entries |

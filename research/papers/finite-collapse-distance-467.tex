@@ -1,0 +1,91 @@
+% Inactive research fragment: direct reconstruction of the completion and distance mechanism in GM26 v1, Section 5; no conifold asymptotics are imported.
+\subsection{Distances across finitely many contracting regions}
+\label{subsec:finite-collapse-distance}
+
+Smooth convergence away from exceptional fibers controls the lengths of curves that avoid them. To compare global distances, one must also control the cost of crossing the exceptional neighborhoods. With finitely many such neighborhoods, a path can be shortened so that each is crossed at most once.
+
+Let $Y$ be a compact metrizable space and let $S=\{s_1,\ldots,s_N\}$ be finite. Assume $Y^\circ=Y\setminus S$ is a dense connected smooth manifold. Let $g_0$ be a smooth Riemannian metric on $Y^\circ$, and denote its intrinsic length distance by $d_0$.
+
+\begin{lemma}\label{lem:finite-puncture-completion}
+Suppose every $s_a$ has a neighborhood basis of open sets $V_{a,r}$ such that
+\[
+ \lim_{r\downarrow0}\operatorname{diam}_{d_0}(V_{a,r}\setminus S)=0.
+\]
+Then the metric completion $(\widehat Y,\widehat d_0)$ of $(Y^\circ,d_0)$ is compact, and the identity on $Y^\circ$ extends to a homeomorphism $\iota:Y\to\widehat Y$.
+\end{lemma}
+\begin{proof}
+The neighborhoods can be chosen nested, with closures avoiding the other points of $S$. Every sequence of regular points converging to $s_a$ is $d_0$-Cauchy: its tail lies in each prescribed neighborhood, whose punctured diameter tends to zero. Interleaving two such sequences shows that they define the same completion point, denoted by $\widehat s_a$. Density of $Y^\circ$ guarantees the existence of these sequences.
+
+For each prescribed positive diameter, remove sufficiently small neighborhoods of all the points of $S$. Their complement is a compact subset of $Y^\circ$ and hence is totally bounded for $d_0$. The removed punctured neighborhoods each have the prescribed small diameter. Thus $Y^\circ$ is totally bounded, and its completion is compact.
+
+The points $\widehat s_a$ are distinct from one another and from the regular points. To see this, fix $s_a$ and a different point $y\in Y$. Choose an open neighborhood $V$ of $s_a$ whose closure avoids $y$ and $S\setminus\{s_a\}$, and choose $W\Subset V$ containing $s_a$. There is a smooth function $\chi$ on $Y^\circ$, equal to one on $W\setminus S$ and zero outside $V$, whose derivative has compact support in $Y^\circ$. Indeed the transition takes place in the compact regular set $\overline V\setminus W$, where smooth cutoffs exist. Therefore $|\mathrm{d}\chi|_{g_0}\leq C$ for some finite $C$. Integration along curves gives
+\[
+ |\chi(p)-\chi(q)|\leq C d_0(p,q),\qquad p,q\in Y^\circ.
+\]
+The Lipschitz extension of $\chi$ to the completion has value one at $\widehat s_a$ and zero at the regular point $y$, or at $\widehat s_b$ if $y=s_b$. This proves the assertion.
+
+Define $\iota$ by the identity on the regular locus and by $\iota(s_a)=\widehat s_a$. The intrinsic distance induces the smooth topology at each regular point. At $s_a$, adjoining $\widehat s_a$ to a punctured neighborhood does not increase its diameter, so the diameter hypothesis proves continuity of $\iota$. Every completion point is represented by a Cauchy sequence in $Y^\circ$. Compact metrizability of $Y$ gives a subsequence converging topologically either to a regular point or to some $s_a$; the preceding arguments give its metric limit. Hence $\iota$ is surjective as well as injective. A continuous bijection from compact $Y$ to Hausdorff $\widehat Y$ is a homeomorphism.
+\end{proof}
+
+Let $X$ be a compact connected smooth manifold and let $\pi:X\to Y$ be a continuous surjection, with $E=\pi^{-1}(S)$ and with $\pi:X\setminus E\to Y^\circ$ a diffeomorphism. Suppose $\iota:Y\to\widehat Y$ is the homeomorphism in the preceding lemma, or assume such a homeomorphism directly. Write $G=\iota\circ\pi$. For a smooth Riemannian metric $g$ on $X$ and an open subset $U$, let $\operatorname{diam}^{\mathrm{int}}(U,g)$ denote its diameter for lengths of piecewise smooth curves contained in $U$.
+
+\begin{proposition}\label{prop:finite-collapse-distance}
+Let $g_j$ be smooth Riemannian metrics on $X$ such that $g_j\to\pi^*g_0$ uniformly on every compact subset of $X\setminus E$. Suppose each $s_a$ has a nested neighborhood basis $V_{a,r}$, with $U_{a,r}=\pi^{-1}(V_{a,r})$, satisfying
+\[
+ \lim_{r\downarrow0}\operatorname{diam}_{\widehat d_0}(\iota(V_{a,r}))=0,
+ \qquad
+ \lim_{r\downarrow0}\limsup_{j\to\infty}
+       \operatorname{diam}^{\mathrm{int}}(U_{a,r},g_j)=0.
+\]
+Then, for the global length distances $d_j$ of $g_j$,
+\[
+ \lim_{j\to\infty}\sup_{x,x'\in X}
+    |d_j(x,x')-\widehat d_0(G(x),G(x'))|=0.
+\]
+Consequently $(X,d_j)$ converges to $(\widehat Y,\widehat d_0)$ in Gromov--Hausdorff distance.
+\end{proposition}
+\begin{proof}
+If $S$ is empty, uniform metric comparison on compact $X$ proves the distance convergence. Assume $N\geq1$. Fix $\tau>0$. Choose pairwise disjoint neighborhoods $V_a$ from the specified bases with
+\[
+ \operatorname{diam}_{\widehat d_0}(\iota(V_a))<\tau,
+ \qquad \operatorname{diam}^{\mathrm{int}}(U_a,g_j)<\tau
+\]
+for all sufficiently large $j$, where $U_a=\pi^{-1}(V_a)$. Pick $q_a\in V_a\setminus S$, and then choose open neighborhoods $W_a$ of $s_a$ with $\overline W_a\subset V_a$ and $q_a\notin\overline W_a$. The regular cores
+\[
+ K_Y=Y\setminus\bigcup_a W_a,
+ \qquad K_X=\pi^{-1}(K_Y)
+\]
+are compact and identified by $\pi$. Uniform convergence and positivity of $g_0$ on this core give numbers $A_j\geq1$, with $A_j\to1$, such that lengths of curves contained in the cores compare in both directions by the factor $A_j$.
+
+Consider a piecewise smooth path in $Y^\circ$ joining two points of $K_Y$. The preimages of the closed sets $\overline W_a$ are compact subsets of its parameter interval. At its first visit to any such set, delete the portion from that visit through its last visit to the same set. Resume with the remaining tail. That set is never visited again; thus there are at most $N$ deleted portions. Each retained segment lies in $K_Y$, and each deleted portion has endpoints in a single $\overline W_a\subset V_a$. The lifts of those endpoints can be joined in $U_a$ with $g_j$-length less than $\tau$, up to an arbitrarily small error. Applying this procedure to almost minimizing paths, comparing retained lengths, and letting the errors tend to zero gives, for $x,x'\in K_X$,
+\[
+ d_j(x,x')\leq A_j\widehat d_0(G(x),G(x'))+N\tau.
+\]
+
+Conversely start with an almost minimizing $g_j$-path in $X$ and apply the same deletion procedure to the closed sets $\pi^{-1}(\overline W_a)$. Project its retained segments, which avoid $E$, to $K_Y$. The two images of each deleted portion have completion distance less than $\tau$. The triangle inequality in $\widehat Y$ therefore gives
+\[
+ \widehat d_0(G(x),G(x'))\leq A_j d_j(x,x')+N\tau,
+ \qquad x,x'\in K_X.
+\]
+
+For any $x\notin K_X$ with $\pi(x)\in W_a$, replace $x$ by $p=\pi^{-1}(q_a)\in U_a\cap K_X$. Then $d_j(x,p)<\tau$ and $\widehat d_0(G(x),G(p))<\tau$. Leave points of $K_X$ fixed. Replacing both endpoints extends the two inequalities to all $x,x'\in X$, with the same error
+\[
+ C_j=(N+2+2A_j)\tau.
+\]
+If $D=\operatorname{diam}(\widehat Y,\widehat d_0)$, the first inequality gives $\operatorname{diam}(X,d_j)\leq A_jD+C_j$. The positive and negative distance errors are consequently bounded by
+\[
+ (A_j-1)D+C_j,
+ \qquad (A_j-1)(A_jD+C_j)+C_j,
+\]
+respectively. Their upper limits are at most $(N+4)\tau$. Letting $\tau\downarrow0$ proves uniform convergence.
+
+For completeness let $b_j$ be the displayed supremum of the absolute distance error and fix $t>b_j/2$. On the disjoint union $X\sqcup\widehat Y$ extend the two given metrics by the cross distance
+\[
+ D_j(x,y)=\inf_{z\in X}
+   \{d_j(x,z)+t+\widehat d_0(G(z),y)\}.
+\]
+The two triangle inequalities passing through the other component follow from
+$|d_j(z,z')-\widehat d_0(G(z),G(z'))|\leq b_j<2t$; the remaining triangle inequalities follow directly from the infimum formula. Hence this is a metric extending both metrics. Since $G$ is surjective, every point of either component is within $t$ of the other component. Taking the infimum over common metric embeddings and then $t\downarrow b_j/2$ gives $d_{\mathrm{GH}}((X,d_j),(\widehat Y,\widehat d_0))\leq b_j/2\to0$.
+\end{proof}
+
+For the standard nodal small resolutions of \cref{subsec:nodal-small-resolution}, smooth full-family convergence off $E$ in \cref{thm:nodal-closed-full-convergence} supplies the compact-core hypothesis. To apply the proposition one must additionally prove that the punctured limiting neighborhoods have diameter tending to zero and that the approximating saturated neighborhoods have uniformly vanishing intrinsic diameter. Exceptional-curve area decay alone does not supply either distance hypothesis.
