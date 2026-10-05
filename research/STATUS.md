@@ -1,5 +1,9 @@
 # Current research status — 5 October 2026
 
+## Checkpoint460 — Strict Lelong levels
+
+[The strict-level integration](research/editorial/strict-lelong-level-integration-460.md) adds a complete compact projective example showing why Siu levels use the non-strict threshold. Complete scoped first/second/post-image reads and 38 actual final images pass; all 1056 old proof bodies remain exact. The 1255-page PDF and homepage description are live-verified. Both catalogues retain 42 descriptions and 38 open directions, with 147 typed locators and 26 ranges checked. Fresh empty-source reconstruction passes all 1281 book and 17 companion page texts and 347 book sources/2271 payload checksums; the native catalogue preview remains unverified without a returned diagnostic. House findings add nothing. Full current-transform and pluriharmonic Siu adoption remain separate. Next: exact external dependencies and incoming/recent primary reading.
+
 ## Checkpoint459 — Horizontal pluriharmonic descent
 
 [The horizontal-descent integration](research/editorial/horizontal-pluriharmonic-descent-integration-459.md) adds a complete general proof and strengthens the elliptic (1,1)-current descent to positive ddc-closed currents. Complete scoped first/second/post-image reads and 40 actual final images pass; 1054 old proof bodies remain exact and one becomes an internal-reference argument. The 1253-page PDF and homepage description are live-verified. Both catalogues retain 42 descriptions and 38 open directions, with 147 typed locators and 26 ranges checked. Fresh empty-source reconstruction passes all 1279 book and 17 companion page texts and 346 book sources/2267 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Full Siu and movable-class adoption remain separate. Next: exact external dependency checks and incoming/recent primary reading.
