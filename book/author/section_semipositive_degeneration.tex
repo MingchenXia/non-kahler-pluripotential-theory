@@ -445,4 +445,135 @@ The graph of $G$ is a correspondence with distortion equal to the displayed supr
 \]
 \end{proof}
 
-For the standard nodal small resolutions of \cref{subsec:nodal-small-resolution}, smooth full-family convergence off $E$ in \cref{thm:nodal-closed-full-convergence} supplies the compact-core hypothesis. To apply the proposition one must additionally prove that the punctured limiting neighborhoods have diameter tending to zero and that the approximating saturated neighborhoods have uniformly vanishing intrinsic diameter. Exceptional-curve area decay alone does not supply either distance hypothesis.
+For the standard nodal small resolutions of \cref{subsec:nodal-small-resolution}, smooth full-family convergence off $E$ in \cref{thm:nodal-closed-full-convergence} supplies the compact-core hypothesis. It remains to verify the two neighborhood diameter conditions. The next estimates control the approximating neighborhoods from metric bounds on and normal to the exceptional curves.
+
+\subsubsection{Curve areas and radial tube lengths}
+\label{subsec:curve-tube-diameters}
+
+Let $C$ be a connected compact Riemann surface. Fix a smooth Hermitian metric $h$ of area one, and use the associated real metrics for lengths and areas.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{lem:conformal-area-diameter}\index{Metric diameter!curve area bound}
+There is $K_h>0$ such that every smooth Hermitian metric $g\leq M h$, with $M>0$ and $A=\operatorname{Area}_g(C)$, satisfies
+\[
+ \operatorname{diam}(C,g)
+ \leq K_h\sqrt{A\bigl(1+\log(M/A)\bigr)}.
+\]
+Here $0<A\leq M$. In particular, for a fixed upper bound $M$, area tending to zero implies diameter tending to zero.
+\end{lemma}
+\begin{proof}
+Replace $g$ by $g/M$. Its area is $a=A/M\leq1$, and it is bounded above by $h$. We prove the estimate for this normalized metric.
+
+Choose a finite cover by holomorphic coordinate disks $U_i$ represented by $\{|z|<1\}$, with each coordinate defined on the larger disk $\{|z|<2\}$. Write $g=\rho_i|\mathrm{d}z|^2$ there. There is a common $L>0$ such that $0<\rho_i\leq L$ on all the closed unit disks, and
+\[
+ \int_{U_i}\rho_i\,\mathrm{d}\lambda_2\leq a,
+\]
+where $\lambda_2$ is Euclidean area. For $p,z\in U_i$, let $\ell_p(z)$ be the $g$-length of their straight coordinate segment, which stays in $U_i$. Polar coordinates about $p$ and Fubini give
+\[
+ \int_{U_i}\ell_p(z)\,\mathrm{d}\lambda_2(z)
+ \leq 2\int_{U_i}\frac{\sqrt{\rho_i(w)}}{|w-p|}
+                    \,\mathrm{d}\lambda_2(w).
+\]
+Indeed each ray meets the convex unit disk in an interval of length $R\leq2$. Interchanging the radial integrals multiplies the length integrand at radius $s$ by $(R^2-s^2)/2\leq2$.
+
+For $0<a\leq1/4$, put $t=\sqrt a$. The integral on the right, without its factor two, is bounded by
+\[
+ \begin{split}
+ \sqrt L\int_{\{|w-p|<t\}}\frac{\mathrm{d}\lambda_2(w)}{|w-p|}
+ &+\left(\int_{U_i}\rho_i\,\mathrm{d}\lambda_2\right)^{1/2}
+   \left(\int_{\{t<|w-p|<2\}}\frac{\mathrm{d}\lambda_2(w)}{|w-p|^2}\right)^{1/2}\\
+ &\leq 2\pi\sqrt L\,t+\sqrt{2\pi a\log(2/t)}
+ \leq K\sqrt{a\bigl(1+\log(1/a)\bigr)}.
+ \end{split}
+\]
+Thus for any $p,q\in U_i$, averaging $\ell_p(z)+\ell_q(z)$ over $z\in U_i$ supplies a two-segment path of length at most $K\sqrt{a(1+\log(1/a))}$. The constant is common to the finite cover.
+
+The overlap graph of this cover is connected because $C$ is connected. Choose points in consecutive overlaps along a simple path in this finite graph. The local estimates join any two points of $C$ through at most the number of covering disks, proving the global bound for $a\leq1/4$. For $1/4\leq a\leq1$, the comparison $g\leq h$ gives $\operatorname{diam}(C,g)\leq\operatorname{diam}(C,h)$, and increasing $K_h$ gives the same estimate. Restoring the factor $M$ scales lengths by $\sqrt M$ and proves the assertion.
+\end{proof}
+
+\Needspace{15\baselineskip}
+\begin{example}\label{ex:conformal-log-diameter-sharpness}\index{Metric diameter!logarithmic sharpness}
+On every such $(C,h)$ there are smooth Hermitian metrics $g_\varepsilon\leq h$, for $\varepsilon\downarrow0$, such that
+\[
+ \begin{aligned}
+ A_\varepsilon:=\operatorname{Area}_{g_\varepsilon}(C)
+       &\asymp\varepsilon^2\log(1/\varepsilon),\\
+ \operatorname{diam}(C,g_\varepsilon)
+       &\asymp\varepsilon\log(1/\varepsilon).
+ \end{aligned}
+\]
+Consequently the preceding diameter bound has sharp order under its uniform upper bound. Without that bound, area can tend to zero while diameter stays bounded below by a positive constant.
+\end{example}
+\begin{proof}
+Choose a coordinate disk $\{|z|<R\}$ with $0<R<1$, on whose closure $h=\lambda(z)|\mathrm{d}z|^2$ with $\lambda>0$ smooth. Choose a smooth cutoff $0\leq\chi\leq1$, supported in this disk and equal to one for $|z|\leq R/2$, and a constant $c>0$ with $c\leq\min\lambda$. For sufficiently small $\varepsilon>0$, set
+\[
+ g_\varepsilon=
+ \left(\chi\frac{c\varepsilon^2}{\lambda(z)(\varepsilon^2+|z|^2)}
+             +(1-\chi)\varepsilon^2\right)h
+\]
+in the disk, and set $g_\varepsilon=\varepsilon^2h$ outside it. The cutoff makes this a smooth positive metric, and both coefficients in its convex combination are at most one.
+
+On $|z|\leq R/2$ its metric density is $c\varepsilon^2/(\varepsilon^2+|z|^2)$, whose area is
+\[
+ \pi c\varepsilon^2
+       \log\left(1+\frac{R^2}{4\varepsilon^2}\right).
+\]
+The remaining area is $O(\varepsilon^2)$, proving the asserted area comparison. Any path from the origin to a point outside this smaller disk must first cross its boundary. Radial variation is bounded by Euclidean speed, so that initial portion has length at least
+\[
+ \sqrt c\,\varepsilon\int_0^{R/2}
+                 \frac{\mathrm{d}r}{\sqrt{\varepsilon^2+r^2}}
+       =\sqrt c\,\varepsilon\operatorname{arsinh}(R/(2\varepsilon))
+       \asymp\varepsilon\log(1/\varepsilon).
+\]
+This gives the diameter lower bound. The upper bound follows from \cref{lem:conformal-area-diameter}, since $A_\varepsilon(1+\log(1/A_\varepsilon))\asymp\varepsilon^2\log^2(1/\varepsilon)$. Finally rescale by
+\[
+ \widetilde g_\varepsilon
+       =\frac{g_\varepsilon}{\varepsilon^2\log^2(1/\varepsilon)}.
+\]
+Its area is comparable to $1/\log(1/\varepsilon)$ and tends to zero, whereas its diameter is comparable to one. At the origin its ratio to $h$ tends to infinity, so it has no uniform upper bound.
+\end{proof}
+
+\Needspace{25\baselineskip}
+Let $V\to C$ be a holomorphic vector bundle of positive rank with a fixed smooth Hermitian fiber norm. Write $U_\delta=\{v\in V:|v|<\delta\}$ and identify its zero section with $C$.
+
+\begin{proposition}\label{prop:radial-tube-diameter}\index{Metric diameter!radial bundle tubes}
+Let $g_j$ be smooth Hermitian metrics on $U_{\delta_0}$. Suppose their restrictions to $C$ satisfy
+\[
+ g_j|_C\leq M h,\qquad
+ A_j=\operatorname{Area}_{g_j|_C}(C)\longrightarrow0
+\]
+for a fixed $M>0$. Suppose also that there are $B>0$ and $0<\alpha\leq1$ such that, for every unit fiber vector $v$ over any $x\in C$, the ray $\gamma_{x,v}(s)=sv$ satisfies
+\[
+ g_j(\gamma_{x,v}'(s),\gamma_{x,v}'(s))
+       \leq B s^{2\alpha-2},
+       \qquad 0<s<\delta_0,
+\]
+uniformly in $j,x,v$. Then
+\[
+ \operatorname{diam}^{\mathrm{int}}(U_\delta,g_j)
+ \leq\frac{2\sqrt B}{\alpha}\delta^\alpha
+       +K_h\sqrt{A_j\bigl(1+\log(M/A_j)\bigr)},
+       \qquad 0<\delta<\delta_0.
+\]
+In particular,
+\[
+ \lim_{\delta\downarrow0}\limsup_{j\to\infty}
+       \operatorname{diam}^{\mathrm{int}}(U_\delta,g_j)=0.
+\]
+\end{proposition}
+\begin{proof}
+A point of fiber radius $r<\delta$ joins its base point on the zero section along the radial segment, entirely inside $U_\delta$. Its length is at most
+\[
+ \sqrt B\int_0^r s^{\alpha-1}\,\mathrm{d}s
+       =\frac{\sqrt B}{\alpha}r^\alpha.
+\]
+The metric is smooth at the zero section for each $j$; the integrable uniform bound controls the whole segment. Join the two base points by an almost minimizing path in $(C,g_j|_C)$. This path also lies in $U_\delta$, and \cref{lem:conformal-area-diameter} bounds its length after its arbitrarily small error tends to zero. The two radial segments give the displayed intrinsic-diameter bound. Since $A_j(1+\log(M/A_j))\to0$, taking $j\to\infty$ and then $\delta\downarrow0$ proves the final assertion.
+\end{proof}
+
+Return to the standard nodal small resolutions of \cref{subsec:nodal-small-resolution}. On a nodal tube put $r^2=\sum_{k=1}^4|x_k\circ\pi|^2$, the squared bundle norm used in \cref{lem:nodal-strict-barrier}. Let $V_\delta\subset Y$ be the nodal coordinate ball $\sum_k|x_k|^2<\delta^2$. For sufficiently small $\delta$, properness gives $\pi^{-1}(V_\delta)=\{r<\delta\}$. Write $g_\varepsilon$ for the Riemannian metric associated to $\omega_\varepsilon$. Its area on $E_a$ is $\varepsilon\int_{E_a}\eta$ by \cref{cor:nodal-potential-degeneration}. Fix an area-one Hermitian metric $h_a$ on $E_a$. If $g_\varepsilon|_{E_a}\leq M h_a$ uniformly and the radial bound of \cref{prop:radial-tube-diameter} holds with $\alpha=1/2$, substitution in that proposition gives
+\[
+ \operatorname{diam}^{\mathrm{int}}(\{r<\delta\},g_\varepsilon)
+       \leq K\delta^{1/2}
+                 +K\sqrt{\varepsilon\bigl(1+\log(1/\varepsilon)\bigr)}
+\]
+for sufficiently small $\varepsilon$ and $\delta$, with $K$ independent of both. This verifies the approximating-neighborhood condition under the two pointwise metric bounds. The punctured limiting-neighborhood condition of \cref{prop:finite-collapse-distance} remains to be checked.
