@@ -1,7 +1,55 @@
-\section{Horizontal pluriharmonic currents}
+\section{Pluriharmonic currents}
 \label{sec:horizontal-pluriharmonic-currents}
 
-A current is \emph{pluriharmonic} if its $\ddc$ vanishes. A vanishing vertical trace removes the vertical and mixed coefficients of a positive $(1,1)$-current. For a closed current the remaining coefficients are constant along the fibers. For a pluriharmonic current they are harmonic; positivity gives the same descent when the fiber is the whole complex line or a compact connected curve.
+A current is \emph{pluriharmonic} if its $\ddc$ vanishes. Positivity and this second-order equation control its concentration on a smooth hypersurface. More generally, the same support conclusion holds when its $\ddc$ merely has measure coefficients.
+
+\begin{lemma}\label{lem:smooth-hypersurface-current-support}\index{Positive current!hypersurface support}\index{Pluriharmonic current!hypersurface support}
+Let $Z$ be a complex manifold of dimension $m\geq2$, and let $j:D\hookrightarrow Z$ be a smooth closed hypersurface. If a positive $(q,q)$-current $R$, $1\leq q\leq m$, is supported on $D$ and $\ddc R$ has order zero, then there is a unique positive $(q-1,q-1)$-current $S$ on $D$ such that $R=j_*S$. If $\ddc R=0$, then $\ddc S=0$. In particular, if $q=1$, $D$ is compact and connected, and $\ddc R=0$, then $R=c[D]$ for some $c\geq0$.
+\end{lemma}
+\begin{proof}
+Use local coordinates $(z,w_1,\ldots,w_{m-1})$ with $D=\{z=0\}$. Both $R$ and $\ddc R$ have measure coefficients supported there. Suppose first that $q<m$. For every compactly supported smooth form $\eta$ of bidegree $(m-q-1,m-q-1)$, we have
+\[
+ 0=\langle\ddc R,|z|^2\eta\rangle
+  =\langle R,\ddc(|z|^2\eta)\rangle
+  =\langle R,\ddc|z|^2\wedge\eta\rangle.
+\]
+The terms containing $|z|^2$ or its first derivatives vanish on $D$. Thus $R\wedge\mathrm{i}\,\mathrm{d}z\wedge\mathrm{d}\bar z=0$, which removes the coefficients containing neither normal differential.
+
+Fix a constant positive Hermitian form $\tau$ in the $w$ variables. The current $M_\tau=R\wedge\tau^{m-q-1}$ is positive of bidegree $(m-1,m-1)$, and
+$M_\tau\wedge\mathrm{i}\,\mathrm{d}z\wedge\mathrm{d}\bar z=0$.
+Its Hermitian matrix of measure densities therefore has zero normal diagonal entry. Positivity removes the corresponding row and column, so
+\[
+ M_\tau\wedge\mathrm{d}z=0,
+ \qquad M_\tau\wedge\mathrm{d}\bar z=0.
+\]
+Put $r=m-q-1$. The powers $\tau^r$, as $\tau$ varies over the positive Hermitian forms, span the real horizontal $(r,r)$-forms. Indeed, a linear functional vanishing on these powers vanishes on a polynomial over an open cone. Polarization makes it vanish on products of arbitrary real $(1,1)$-forms, and these products span the indicated bidegree. Their products with a horizontal one-form span the complementary test forms for the mixed coefficients of $R$. The displayed identities consequently remove every coefficient containing just one normal differential. For $q=m$, every top-degree coefficient already contains both normal differentials, so this reduction is unnecessary.
+
+The remaining coefficients are measures on $\{z=0\}$ multiplying both normal differentials. They therefore define a unique current $S$ on $D$ with $R=j_*S$. Testing against extensions of strongly positive forms on $D$ proves positivity of $S$. Uniqueness makes these local currents agree on overlaps. Pushforward commutes with $\ddc$ and is injective for a closed embedding, so $\ddc R=0$ implies $\ddc S=0$.
+
+When $q=1$, $S$ is a nonnegative distribution on $D$. The equation $\ddc S=0$ and Weyl's lemma make it a smooth nonnegative pluriharmonic function. If $D$ is compact and connected, the maximum principle makes it a constant $c\geq0$, proving the last assertion.
+\end{proof}
+
+For smooth pluriharmonic forms, K\"ahler geometry also bounds the mass of pullback under a fixed holomorphic map. The closed form supplied by the map is the test object; the form being pulled back need only be $\ddc$-closed.
+
+\begin{lemma}\label{lem:smooth-pluriharmonic-pullback-mass}\index{Pluriharmonic current!pullback mass}
+Let $F:Y\to X$ be a holomorphic map between compact K\"ahler manifolds of dimensions $N\geq n$, with K\"ahler forms $\Omega$ and $\omega$. For $1\leq p\leq n$ there is a constant $C$ such that every smooth positive $(p,p)$-form $S$ on $X$ satisfying $\ddc S=0$ obeys
+\[
+ \int_Y F^*S\wedge\Omega^{N-p}
+ \leq C\int_X S\wedge\omega^{n-p}.
+\]
+\end{lemma}
+\begin{proof}
+The positive closed current $\Gamma=F_*(\Omega^{N-p})$ has bidegree $(n-p,n-p)$ on $X$. The classical K\"ahler $\ddc$ lemma for currents gives a smooth real closed form $\gamma$ of this bidegree and a distributional form $U$ with $\Gamma=\gamma+\ddc U$. For $p=n$, a closed degree-zero current is already smooth and locally constant, and one may take $U=0$. Since $S$ is smooth, pairing it with $U$ is legitimate and
+\[
+ \int_Y F^*S\wedge\Omega^{N-p}
+ =\langle\Gamma,S\rangle
+ =\int_X\gamma\wedge S+\langle U,\ddc S\rangle
+ =\int_X\gamma\wedge S.
+\]
+The pairing with the fixed smooth form $\gamma$ is bounded in absolute value by a constant times the positive-current trace mass of $S$. This proves the estimate.
+\end{proof}
+
+We next consider a positive $(1,1)$-current with vanishing vertical trace. Positivity removes its vertical and mixed coefficients. For a closed current the remaining coefficients are constant along the fibers. For a pluriharmonic current they are harmonic; positivity gives the same descent when the fiber is the whole complex line or a compact connected curve.
 
 \begin{lemma}\label{lem:horizontal-pluriharmonic-descent}\index{Positive current!horizontal descent}\index{Pluriharmonic current!horizontal descent}
 Let $Y$ be a complex manifold of dimension $\ell\geq1$, let $\eta$ be a Hermitian form on $Y$, and let $\pi:Z\to Y$ be a holomorphic fiber bundle with fiber either $\mathbb C$ or a compact connected Riemann surface. If $S$ is a positive real $(1,1)$-current on $Z$ with $\ddc S=0$ and $S\wedge\pi^*\eta^\ell=0$, then there is a unique positive $\ddc$-closed $(1,1)$-current $R$ on $Y$ such that $S=\pi^*R$. If $S$ is closed, then $R$ is closed.
