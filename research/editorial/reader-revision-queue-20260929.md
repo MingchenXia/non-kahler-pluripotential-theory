@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research449
+
+[The ramified-model integration](research/editorial/ramified-root-section-tests-449.md) adds three complete proofs of the complete section decomposition, positive root metric, exact root-family first success and lower-level atomic witnesses. Complete scoped first/second/post-image reads and25 actual final images pass; all1042 old proofs remain exact. The1243-page PDF and homepage description are live-verified. Both catalogues preserve42 original descriptions and38 open directions, with141 typed references/26 ranges verified. Fresh empty-source reconstruction passes all1269 book and17 companion page texts and339 packaged book files/2230 payload checksums; native catalogue preview remains unverified after a connection failure. House findings add nothing. The original very ample first-success bound remains open. Next: the complete exact Dang v2 proof and related warped-cone foundations.
+
 ## Continuing research448
 
 [The P15 integration](research/editorial/P15-warped-cone-completion-448.md) adds six complete proofs of full warped-cone volume, actual balanced tests, global flat coordinates, sharp endpoint trace estimates and all Cauchy points, with projective-strip/torus-plane examples. Complete scoped first/second/post-image reads and33 actual final images pass; all1036 old proofs remain exact. The1241-page PDF and homepage description are live-verified. Both catalogues preserve42 original descriptions and38 open directions, with141 typed references/26 ranges verified. Fresh empty-source reconstruction passes all1267 book and17 companion page texts and338 packaged book files/2226 payload checksums; native catalogue preview remains unverified. House findings add nothing. General P15 stays open. Next: the reviewed ramified first-jet model and exact Dang v2 proof.
