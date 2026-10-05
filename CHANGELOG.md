@@ -1,5 +1,9 @@
 # Modification history
 
+## 5 October2026 — Actual P12 flow integration440
+
+[The checked P12 integration](research/editorial/P12-actual-flow-counterexample-440.md) realizes the positive-volume nonbig radial background at the maximal time of an actual Chern--Ricci flow in every n>=3. Book time is1/(2pi); all normalized annihilators are fiber supported with vertical rank-one matrices. The two new proofs, complete scoped automatic second reads and26 actual final images pass; all1021 old proof bodies remain exact. Both catalogues preserve42 original descriptions and now record38 open directions. The1219-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. House findings add nothing and remove one retired-label warning. Conditional big-endpoint convergence remains intact.
+
 ## 5 October 2026 — Actual P12 flow review439
 
 [The independent P12 review](research/editorial/P12-actual-flow-counterexample-review-439.md) reconstructs 38 flow/current obligations from the complete 413-line author source. Book Ricci normalization gives actual maximal time 1/(2pi), with a nef nonbig endpoint of positive volume and fiber-supported rank-one annihilators. Both complete source/reconstruction reads pass at the stated dependency scope. All 336 book files, 1021 proofs, both catalogues/manifests and 451 protected sources remain exact. Original P12 is negatively resolved; catalogue migration from 39 to 38 remains pending. The live 438 release is unchanged. No author build, native call, publication, broad scan or verifier runtime. The freshly retrieved first-jet preprint is only partially read and not adopted.
