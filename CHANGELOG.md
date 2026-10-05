@@ -1,5 +1,9 @@
 # Modification history
 
+## 5 October 2026 — Pluriharmonic-current primary review457
+
+[The pluriharmonic-current primary review](research/editorial/pluriharmonic-Siu-primary-review-457.md) reads all 859 source lines, automatically rereads 594 active lines and all eight proofs, and reads all 13 PDF page texts and 13 actual images of arXiv:2606.29680v2. Whole-fiber containment, trace-density and a noncompact countercheck are expanded directly. The main theorem retains compact Kähler scope; exact transform/tangent inputs need verification before adoption. The movable-class conclusion depends on an unverified To-appear identity and is deferred. All 348 book files and 1055 proofs, both catalogues/manifests, 451 protected sources and author originals remain exact. The live 1251-page release and 38 open directions are unchanged. Research-package validation passes against the actual 456 empty-source outputs, with no new build or publication. Next: exact critical-input review.
+
 ## 5 October 2026 — Warped minimizing-test trace limits456
 
 [The minimizing-test integration](research/editorial/P15-warped-minimizer-trace-integration-456.md) adds two complete proofs of the reciprocal-square finite-trace threshold, normalized concentrating current clusters, single-point fiber-current whole limits and matching vanishing smooth quotient quantities. Scoped first/second/post-image reads and 26 actual final images pass; all 1053 previous proof bodies remain exact. The 1251-page PDF and homepage description are live-verified. Both catalogues preserve 42 original descriptions and 38 open directions, with 147 typed locators and 26 ranges verified. Fresh empty-source reconstruction passes all 1277 book and 17 companion page texts and 345 book files/2257 payload checksums; the native catalogue preview remains unverified without a returned compiler diagnostic. House findings add nothing. Next: complete recent primary-paper reading.
