@@ -1,0 +1,84 @@
+% Checkpoint465 research proof; not yet integrated into the manuscript.
+\begin{lemma}\label{lem:continuous-potential-smooth-loss}
+Let $(X,\omega)$ be a compact Hermitian manifold, let $\alpha$ be a smooth real $(1,1)$-form, and let $u\in\PSH(X,\alpha)\cap C^0(X)$. There are smooth real functions $u_j$ and numbers $\varepsilon_j\downarrow0$ such that $u_j\to u$ uniformly and
+\[
+ \alpha+\ddc u_j\geq-\varepsilon_j\omega.
+\]
+\end{lemma}
+\begin{proof}
+Use the Chern averaging operators and their classical smooth-lower-bound estimate preceding \cref{lem:general-kiselman-modulus}. For some $K_0,A>0$ and $\epsilon_0(t)\to0$, put $\lambda(x,t)=t\partial_t(R_tu(x)+K_0t^2)$. The estimate with zero radius component gives
+\[
+ \alpha+\ddc R_tu\geq-(A\lambda(\cdot,t)+\epsilon_0(t))\omega.
+\]
+The function $\lambda$ is nonnegative, continuous for $t>0$, and increasing in $t$. For fixed $x$, the convex function $s\mapsto R_{\mathrm{e}^s}u(x)+K_0\mathrm{e}^{2s}$ has the finite limit $u(x)$ as $s\to-\infty$. Its nonnegative derivative must tend to zero: a positive limiting derivative would make its integral over $(-\infty,s_0]$ infinite. Thus $\lambda(x,t)\to0$. For any sequence $t_j\downarrow0$, Dini's theorem gives $\|\lambda(\cdot,t_j)\|_\infty\to0$.
+
+The averaging kernels have mass one and sample points at distance at most $Ct$ from their base point. Uniform continuity of $u$ therefore gives $\|R_tu-u\|_\infty\to0$. Set $u_j=R_{t_j}u$ and choose a decreasing positive majorant $\varepsilon_j\to0$ of $A\|\lambda(\cdot,t_j)\|_\infty+\epsilon_0(t_j)$.
+\end{proof}
+
+\begin{lemma}\label{lem:pluriharmonic-gradient-energy}
+Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n\geq2$, and let $G$ be a positive $(n-1,n-1)$-current with $\ddc G=0$. Put $\mu=\omega\wedge G$ and $M=\mu(X)$. If $a,b$ are smooth real functions with $\ddc a,\ddc b\geq-C\omega$, where $C\geq0$, then
+\[
+ 0\leq\int_X\mathrm{d}(a-b)\wedge\mathrm{d}^c(a-b)\wedge G
+ \leq2C M\|a-b\|_\infty.
+\]
+For every smooth real function $v$, the total variation norms of the order-zero currents satisfy
+\[
+ \|\mathrm{d}v\wedge G\|_{\mathrm{TV}}+
+ \|\mathrm{d}^cv\wedge G\|_{\mathrm{TV}}
+ \leq C_\omega M^{1/2}
+       \left(\int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G\right)^{1/2}.
+\]
+Here the norms use the metric $\omega$, and $C_\omega$ depends only on that fixed geometry and the operator normalization.
+\end{lemma}
+\begin{proof}
+Set $v=a-b$. The identity $\ddc(v^2)=2\mathrm{d}v\wedge\mathrm{d}^cv+2v\ddc v$ and $\ddc G=0$ give
+\[
+ \int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G
+ =-\int_Xv\ddc v\wedge G.
+\]
+The measures $(\ddc a+C\omega)\wedge G$ and $(\ddc b+C\omega)\wedge G$ are positive, each of mass $CM$, since their potential terms integrate to zero. Their difference is $\ddc v\wedge G$ and has total variation at most $2CM$. This proves the first estimate; nonnegativity follows from positivity of $\mathrm{d}v\wedge\mathrm{d}^cv=(\mathrm{i}/2\pi)\partial v\wedge\bar\partial v$.
+
+In a unitary frame, positivity represents $G$ by a positive semidefinite matrix of measures. Its entries are absolutely continuous with respect to its trace measure $\mu$: the diagonal entries are dominated by the trace, and the off-diagonal entries satisfy the matrix Cauchy--Schwarz inequality. The resulting measurable matrix has trace bounded by a fixed normalization constant. Pairing $\mathrm{d}v\wedge G$ or $\mathrm{d}^cv\wedge G$ with a test one-form $\eta$ and applying the matrix inequality and then integral Cauchy--Schwarz gives
+\[
+ |\langle\mathrm{d}v\wedge G,\eta\rangle|
+ +|\langle\mathrm{d}^cv\wedge G,\eta\rangle|
+ \leq C_\omega\|\eta\|_\infty M^{1/2}
+ \left(\int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G\right)^{1/2}.
+\]
+A finite frame cover and partition of unity give the global estimate. Taking the supremum over smooth tests of norm at most one yields the total variation bound for these measure-valued currents. When $M=0$, positivity gives $G=0$, so both estimates hold.
+\end{proof}
+
+\begin{theorem}\label{thm:continuous-pluriharmonic-trace-product}
+Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n\geq2$, let $\alpha$ be a smooth real $(1,1)$-form, and let $u\in\PSH(X,\alpha)\cap C^0(X)$. For every positive $(n-1,n-1)$-current $G$ with $\ddc G=0$, the product
+\[
+ (\alpha+\ddc u)\wedge G
+\]
+is a canonically defined positive measure of mass $\int_X\alpha\wedge G$. It agrees with smooth multiplication if $u$ or $G$ is smooth. If $u_j,u\in\PSH(X,\alpha)\cap C^0(X)$ converge uniformly and positive pluriharmonic currents $G_j\rightharpoonup G$ converge weakly, then
+\[
+ (\alpha+\ddc u_j)\wedge G_j
+ \rightharpoonup(\alpha+\ddc u)\wedge G.
+\]
+\end{theorem}
+\begin{proof}
+Choose smooth approximants $a_k\to u$ from \cref{lem:continuous-potential-smooth-loss}. There is a common $C>0$ such that $\ddc a_k\geq-C\omega$. Write $M=\int_X\omega\wedge G$. By \cref{lem:pluriharmonic-gradient-energy}, $\mathrm{d}a_k\wedge G$ and $\mathrm{d}^ca_k\wedge G$ are Cauchy in total variation. Denote their order-zero limits by $\mathrm{d}u\wedge G$ and $\mathrm{d}^cu\wedge G$. Comparing two uniformly convergent smooth sequences with a common lower Hessian bound proves independence of the sequence. Continuous multiplication also gives $a_kG\to uG$ in total variation.
+
+Define the product by the distributional formula
+\begin{equation}\label{eq:continuous-pluriharmonic-product}
+ (\alpha+\ddc u)\wedge G
+ =\alpha\wedge G+\mathrm{d}(\mathrm{d}^cu\wedge G)
+   -\mathrm{d}^c(\mathrm{d}u\wedge G)-\ddc(uG).
+\end{equation}
+For smooth $u$, the full Leibniz identity gives this formula because $\ddc G=0$. Consequently $(\alpha+\ddc a_k)\wedge G$ converges to the displayed distribution. The measures $(\alpha+\ddc a_k+\varepsilon_k\omega)\wedge G$ are positive, with masses $\int_X\alpha\wedge G+\varepsilon_kM$. Their distributional limit is therefore a positive measure, and testing on the constant function one gives its asserted mass. The uniform mass bound upgrades distributional convergence to weak convergence of measures. If $G$ is smooth, uniform convergence of $a_k$ also identifies the limit by distributional multiplication with that smooth form.
+
+Adding a smooth function $h$ to $u$ adds $\mathrm{d}h\wedge G$ and $\mathrm{d}^ch\wedge G$ to its gradient limits. Replacing $\alpha$ by $\alpha-\ddc h$ therefore leaves the product unchanged. If two continuous representations define the same $(1,1)$-current, their potential difference has smooth $\ddc$; taking its trace in a coordinate chart and applying elliptic regularity makes that difference smooth. Thus the product depends only on the current $\alpha+\ddc u$ and on $G$.
+
+It remains to prove joint continuity. For each of $u$ and the $u_j$, retain a smooth approximating tail with curvature errors at most one. By \cref{lem:continuous-potential-smooth-loss} and a fixed bound $\alpha\leq(C-1)\omega$, all these approximants then satisfy the same lower Hessian bound $-C\omega$. The numbers $M_j=\int_X\omega\wedge G_j$ are bounded by weak convergence. Fix a smooth approximant $a_k$ of $u$. Apply the energy and total variation estimates to smooth approximants of $u_j$ and to $a_k$, then pass to their gradient limits. With $\delta_{j,k}=\|u_j-a_k\|_\infty$, the gradient differences have total variation at most $C' M_j\sqrt{\delta_{j,k}}$, where $C'$ is independent of $j,k$.
+
+For a smooth real test function $\phi$, \eqref{eq:continuous-pluriharmonic-product} now gives
+\[
+ \left|\left\langle(\alpha+\ddc u_j)\wedge G_j
+       -(\alpha+\ddc a_k)\wedge G_j,\phi\right\rangle\right|
+ \leq C_\phi M_j(\sqrt{\delta_{j,k}}+\delta_{j,k}),
+\]
+where $C_\phi$ depends on the first two derivatives of $\phi$, the fixed geometry and $C$. The same estimate holds for $u,G$. For fixed $k$, smooth multiplication gives $(\alpha+\ddc a_k)\wedge G_j\rightharpoonup(\alpha+\ddc a_k)\wedge G$. First let $j\to\infty$, and then $k\to\infty$; since $u_j\to u$ uniformly, the error tends to zero. This proves distributional convergence. Positivity and the bounded masses $\int_X\alpha\wedge G_j$ upgrade it to weak convergence of measures.
+\end{proof}
