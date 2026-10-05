@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+## Continuing research 482
+
+[The zero-ruling integration](elliptic-zero-ruling-integration-482.md) adopts three direct proofs as 25.18.13. Its section algebra agrees with the nonzero-ruling case, but its universal cover is not Stein. All 1083 previous retained proof bodies remain exact; the total is 1086, with 1072 active author proofs. Complete first/automatic second reads and 43 actual final images pass. The 1290-page public PDF/homepage and successful Pages deployment are verified. Both catalogues retain 42 descriptions/38 open directions; 147 single-page/26 range locators are checked. No new house finding is added. Native call 1588 remains pending without diagnostics. Actual empty-source reconstruction passes all 1316 book/17 companion page texts and 347 book-source byte comparisons; all 2349 final current payload checksums pass. Next: the complete Qin primary and its dependencies.
+
 ## Continuing research 481
 
 [The zero-ruling reconstruction](elliptic-zero-ruling-section-algebra-481.md) proves the same polynomial section algebra for zero ruling component, but a non-Stein universal cover. Three complete proofs, two complete reads, 22 obligations and strict house 0/0 pass. Current four-subject arXiv intake screens 751 title rows/666 unique papers and reads 18 exact abstracts/version histories; no new primary theorem is adopted. All 350 book files/1083 retained proofs and both catalogues remain exact. The live 1288-page book and 38 open directions retain 480 scope. Research-package checks pass current payloads and actual 480 outputs; no new build is claimed. Next: Integrate the zero-ruling algebra and non-Stein universal-cover result beside the nonzero-ruling case, rebuild and publish; then read an unreviewed exact primary such as Qin 2609.36410v1 and its required dependencies.
