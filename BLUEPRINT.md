@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint435 — Independent P08 radial counterexample review
+
+[The independent P08 review](research/editorial/P08-radial-counterexample-review-435.md) reconstructs40 obligations from the complete267-line source. Global bounded radial approximation gives exact positive fixed-density volume n in every n>=3; a localized closed test excludes all strict quasi-psh representatives. Original P08 is independently disproved; surface and flow questions remain separate. Both complete source/reconstruction reads pass at the recorded scope. All334 book files,1017 proofs, both catalogues/manifests and451 protected files remain exact. The434 live release is unchanged. No new author build, native call, publication, broad scan or verifier runtime. Next: manuscript integration and migration from40 to39 open original directions.
+
 ## Checkpoint434 — Optimal kernel weight modulus
 
 [The optimal-modulus integration](research/editorial/sharp-kernel-weight-modulus-434.md) strengthens the existing normalized-kernel stability proposition and adds a smooth rank-one sharpness example. Complete scoped first/second reads pass with26 actual final images. Of1016 old proofs,1015 remain exact; one is strengthened and one is added. Original problem descriptions/statuses, manifests and451 protected files remain exact. The1211-page release and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Active house findings remain48 errors/169 warnings with no additions. Forty original directions remain open.
