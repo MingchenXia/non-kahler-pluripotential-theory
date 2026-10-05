@@ -1,0 +1,413 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newcommand{\ddc}{dd^c}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Positive fixed-density volume at a nonbig\newline Chern--Ricci flow endpoint}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We exhibit a finite-time Chern--Ricci flow whose nef limiting background
+has strictly positive fixed-density Gauduchon volume and is not big.
+On $\mathbb P^{n-1}\times\mathbb P^1$, $n\geq3$, we construct a smooth
+semipositive nonclosed form with exact variational volume $n$, although
+its vertical coefficient vanishes on one fiber. We realize its smooth
+gauge class as the actual endpoint background of a smooth positive
+Hermitian initial metric. The maximal-time theorem of Tosatti--Weinkove
+identifies the endpoint time, including the normalization change.
+An explicit normalized closed current on the exceptional fiber
+annihilates the endpoint and has zero determinant measure. We also specify
+the support and matrix of every annihilator in this example and the exact
+averaged trace identity at arbitrary finite flow endpoints. No local
+convergence theorem on a big locus is contradicted or claimed.
+\end{abstract}
+
+We use $\ddc=\frac{i}{2\pi}\partial\bar\partial$, ordinary wedge powers,
+and genuine canonical quasi-psh representatives. For a smooth positive
+probability $\mu$ and every smooth positive Gauduchon metric $\gamma$, set
+\[
+ D_\mu(\gamma)=\int_X(\mu/\gamma^n)^{1/n}\gamma^n,
+ \quad \lambda_\mu(\theta)=\inf_{\ddc\gamma^{n-1}=0}
+ \frac{\int_X\theta\wedge\gamma^{n-1}}{D_\mu(\gamma)},
+ \quad V_\mu(\theta)=\lambda_\mu(\theta)^n.
+\]
+All such metrics participate. At a nef boundary the equivalent decreasing
+positive regularization is understood. A smooth background is nef if it
+admits arbitrarily small smooth positive perturbations by $\ddc$-potentials,
+and big if $\theta+\ddc v\geq\delta h$ for a global quasi-psh $v$, a
+Hermitian $h$, and $\delta>0$. Neither definition assumes closedness.
+Our flow convention is $\partial_t\omega=-\operatorname{Ric}(\omega)$,
+where $\operatorname{Ric}(\omega)=-\ddc\log\omega^n$.
+
+\begin{theorem}\label{th:flow}
+For every $n\geq3$ the construction below gives a smooth positive
+Hermitian initial metric $\omega_0$ on $X=\mathbb P^{n-1}\times\mathbb P^1$
+whose smooth Chern--Ricci flow has finite maximal time $\tau=1$.
+For a smooth strictly positive probability $\mu$, its actual limiting
+background
+\[
+ \theta_\tau=\omega_0-\operatorname{Ric}(\omega_0)
+\]
+is nef and nonbig, while $V_\mu(\theta_\tau)=n>0$.
+There is a positive closed $(n-1,n-1)$ current $T$ with
+$\int_X\omega_0\wedge T=1$, $\int_X\theta_\tau\wedge T=0$, and
+zero determinant measure. This is a counterexample to the
+unrestricted numerical-to-big implication for actual flow endpoints.
+\end{theorem}
+
+Put $m=n-1\geq2$, $\beta=(m-1)/m$, $B=\mathbb P^m$ and
+$X=B\times\mathbb P^1$. Normalize Fubini--Study forms by
+$\int_B\omega^m=\int_{\mathbb P^1}w=1$, and put
+\[
+ x([Z])=\frac{\sum_{j=1}^m|Z_j|^2}{\sum_{j=0}^m|Z_j|^2},
+ \quad a=x/\beta,\quad h=\omega+w,\quad\mu=\omega^m\wedge w,
+ \quad\theta=\omega+a w.
+\]
+For positive $\epsilon$, write
+$H_\epsilon=m\int_0^1y^{m-1}/(y/\beta+\epsilon)\,dy$.
+Set $\theta_\epsilon=\theta+\epsilon w=\omega+(a+\epsilon)w$.
+All pullbacks are implicit. The following construction is explicit and
+self-contained; no companion result is a trusted premise.
+
+\section{Global smooth radial positive forms}
+The function $x$ is smooth globally, ranges in $[0,1]$, vanishes only at
+$p=[1:0:\cdots:0]$, and equals one on the hyperplane $Z_0=0$.
+In the chart $Z_0=1$, write $s=|z|^2$; then $x=s/(1+s)$ and
+$\omega=\ddc\log(1+s)$.
+Polar integration of the Fubini--Study determinant $(1+s)^{-m-1}$,
+with normalization $\int\omega^m=1$, gives
+\begin{equation}\label{eq:radial}
+ \int_B b(x)\omega^m=m\int_0^1 b(y)y^{m-1}\,dy.
+\end{equation}
+Indeed the radial density in $s$ is
+$m s^{m-1}(1+s)^{-m-1}ds$, which becomes $m x^{m-1}dx$.
+In particular $\int_B\omega^m/a=m\beta/(m-1)=1$.
+
+For $\epsilon>0$ use the preceding $H_\epsilon$ and define
+\begin{equation}\label{eq:flux}
+ q_\epsilon(x)^m=\frac{m}{H_\epsilon}
+ \int_0^x\frac{y^{m-1}}{y/\beta+\epsilon}\,dy,
+ \qquad
+ \varphi_\epsilon(x)=\int_0^x
+ \frac{q_\epsilon(y)-y}{y(1-y)}\,dy.
+\end{equation}
+The positive real root is used. At zero,
+\[
+ q_\epsilon(x)=x\left(\frac{m}{H_\epsilon}
+ \int_0^1\frac{u^{m-1}}{xu/\beta+\epsilon}\,du\right)^{1/m},
+\]
+so it is $x$ times a smooth positive function. At one,
+$q_\epsilon(1)=1$. Both apparent singularities in
+$\varphi_\epsilon'$ are removable smoothly. Thus
+$\varphi_\epsilon(x)$ is a global smooth base function.
+
+For any radial local potential $F(s)$, put $q=sF'(s)$.
+The tangential Hessian eigenvalue is $F'=q/s$ and the radial one is $dq/ds$.
+For $F_\epsilon=\log(1+s)+\varphi_\epsilon(s/(1+s))$, direct
+differentiation of \eqref{eq:flux} gives $sF_\epsilon'=q_\epsilon(x)$.
+Both eigenvalues are positive, including at $s=0$ by the preceding smooth
+factorization. If $A_\epsilon=\omega+\ddc\varphi_\epsilon$, the determinant
+ratio in the affine chart is
+\begin{equation}\label{eq:density}
+ \frac{A_\epsilon^m}{\omega^m}
+ =\frac{q_\epsilon^{m-1}\,dq_\epsilon/dx}{x^{m-1}}
+ =\frac1{H_\epsilon(a+\epsilon)}.
+\end{equation}
+At the hyperplane $x=1$ the globally smooth form is the continuous limit
+of positive forms, and its determinant ratio in \eqref{eq:density} tends
+to a strictly positive number. Thus it is strictly positive there too.
+Equivalently its tangential coefficient is that of $\omega$, and its normal
+coefficient is $(dq_\epsilon/dx)(1)=1/[H_\epsilon(1/\beta+\epsilon)]>0$.
+This proves global smooth strict positivity. It is closed by construction.
+
+\section{A genuine bounded limiting potential}
+By monotone convergence $H_\epsilon\to1$ as $\epsilon\downarrow0$.
+For each $0<x\leq1$, \eqref{eq:flux} then gives
+$q_\epsilon(x)\to x^\beta$.
+We justify the limit of the potentials at the singular point as well.
+Relative to the probability density $m y^{m-1}dy$, the weight
+$(y/\beta+\epsilon)^{-1}$ is decreasing. Its normalized cumulative mass
+is therefore at least the unweighted cumulative mass $x^m$.
+Relative to the endpoint probability density $(m-1)y^{m-2}dy$, its weight
+ratio is proportional to $y/(y+\beta\epsilon)$, which is increasing; its
+normalized cumulative mass is at most $x^{m-1}$.
+These two elementary comparisons follow by splitting either probability
+at $x$: a decreasing weight has at least as large an average on $[0,x]$
+as on $[x,1]$, and an increasing weight has the reverse inequality.
+Taking positive $m$th roots yields
+\begin{equation}\label{eq:bounds}
+ x\leq q_\epsilon(x)\leq x^\beta.
+\end{equation}
+
+Define
+\[
+ \varphi(x)=\int_0^x\frac{y^\beta-y}{y(1-y)}\,dy.
+\]
+Its derivative is integrable at zero because $\beta>0$, and extends smoothly
+at one with value $1-\beta$. Hence $\varphi$ is globally bounded continuous,
+smooth off $p$, and $\varphi(p)=0$.
+Equation~\eqref{eq:bounds} supplies the integrable derivative majorant
+$(y^\beta-y)/[y(1-y)]$. Dominated convergence in $L^1([0,1])$ gives
+\[
+ \sup_{[0,1]}|\varphi_\epsilon-\varphi|\longrightarrow0.
+\]
+Consequently $A=\omega+\ddc\varphi$ is a positive closed current by
+distributional convergence. Local smooth potentials for $\omega$ plus
+$\varphi$ are continuous uniform limits of psh functions, so they are
+genuinely psh, with the canonical value at $p$. This establishes admissibility
+on the whole compact base, not only on its punctured affine chart.
+
+Off $p$ the limiting radial flux is $q=x^\beta$, and the determinant formula
+gives
+\begin{equation}\label{eq:enddensity}
+ \frac{A^m}{\omega^m}=
+ \frac{(x^\beta)^{m-1}\beta x^{\beta-1}}{x^{m-1}}=\beta/x=1/a.
+\end{equation}
+The form is smooth strictly positive there, including at infinity by
+the same determinant and continuity argument as before.
+No power of this current at $p$ is needed in the following all-test bound.
+
+\section{Exact volume over every smooth Gauduchon test}
+On $X$, the probability $\mu$ is smooth strictly positive and
+$\theta=\omega+a w$ is smooth semipositive. Thus $\theta+\eta h>0$
+for every $\eta>0$, with zero perturbation potential, proving nefness.
+Also $d\theta=da\wedge w\ne0$.
+The bounded canonical potential pulled back from $B$ gives the positive
+current $\Omega=\theta+\ddc\varphi=A+a w$. Off
+$Z=\{p\}\times\mathbb P^1$ it is smooth strictly positive, and
+\[
+ \Omega^n=n a A^m\wedge w=n\mu.
+\]
+For every smooth positive Gauduchon $\gamma$, put $S=\gamma^{n-1}$.
+Distributional Stokes gives $\int_X\theta\wedge S=\int_X\Omega\wedge S$,
+because $\ddc S=0$ and $\varphi$ is bounded.
+Matrix AM--GM off $Z$ and positivity of the global left measure imply
+\begin{equation}\label{eq:lower}
+ \int_X\theta\wedge\gamma^{n-1}\geq
+ n^{1/n}\int_X(\mu/\gamma^n)^{1/n}\gamma^n.
+\end{equation}
+The set $Z$ has zero smooth volume; any singular left measure there only
+strengthens this inequality. Thus $\lambda_\mu(\theta)\geq n^{1/n}$
+over the entire original family. Using the closed metric $h$ shows finiteness.
+
+We next give exact smooth minimizing tests for the positive perturbations.
+Set $c_\epsilon=n/H_\epsilon$ and
+\[
+ \Omega_\epsilon=A_\epsilon+(a+\epsilon)w,
+ \qquad\gamma_\epsilon=(a+\epsilon)^{-1/m}\Omega_\epsilon.
+\]
+These are smooth strictly positive. Equation~\eqref{eq:density} gives
+$\Omega_\epsilon^n=c_\epsilon\mu$, and
+\[
+ T_\epsilon=\gamma_\epsilon^m
+ =(a+\epsilon)^{-1}A_\epsilon^m
+       +m A_\epsilon^{m-1}\wedge w
+\]
+is closed: its first term is a base top-degree form and its second term is
+a wedge of closed forms. Therefore $\gamma_\epsilon$ is admissible.
+Smooth Stokes for $\varphi_\epsilon$ gives exactly
+\begin{align*}
+ \int_X\theta_\epsilon\wedge T_\epsilon
+ &=\int_X\Omega_\epsilon\wedge T_\epsilon
+ =c_\epsilon\int_X(a+\epsilon)^{-1}\mu=n,\\
+ D_\mu(\gamma_\epsilon)&=c_\epsilon^{m/n}H_\epsilon.
+\end{align*}
+Their quotient is $c_\epsilon^{1/n}$. For any smooth Gauduchon test,
+the smooth positive representative $\Omega_\epsilon$ and matrix AM--GM
+give the matching lower bound $c_\epsilon^{1/n}$. Hence
+$V_\mu(\theta_\epsilon)=n/H_\epsilon$.
+Since $\theta\leq\theta_\epsilon$, the same tests have unperturbed
+quotient at most $c_\epsilon^{1/n}$. Letting $\epsilon\downarrow0$
+and using \eqref{eq:lower} proves $V_\mu(\theta)=n$.
+
+The decreasing nef definition with $\theta+\eta h$ agrees as well.
+Its infima are at least $\lambda_\mu(\theta)$; for every fixed admissible
+$\gamma$ its perturbed quotient converges to the unperturbed quotient.
+Taking the infimum in this fixed-test upper bound proves the reverse limit
+inequality. No smooth minimizer for the endpoint itself is asserted.
+
+\section{Failure of bigness against all quasi-psh potentials}
+Suppose $\theta+\ddc v\geq\delta h$ for a global genuine quasi-psh $v$
+and $\delta>0$. Average over the holomorphic transitive fiber action
+of $G=\mathrm{SU}(2)$ with Haar probability. The forms $\theta,h$ and
+probability $\mu$ are invariant. Since $v\in L^1(\mu)$, Fubini defines
+its average as an $L^1$ distribution; differentiation commutes with averaging
+and the positive-current inequality is preserved.
+The average is $q\circ\operatorname{pr}_1$ almost everywhere, where
+$q\in L^1(B)$ is the fiber integral of $v$. Therefore
+\[
+ \theta+\ddc(q\circ\operatorname{pr}_1)-\delta h\geq0.
+\]
+Wedge this positive current with the base top form $\omega^m$, whose
+pullback is strongly semipositive. All horizontal terms vanish by base dimension, including the
+distributional $\ddc(q\circ\operatorname{pr}_1)$. The resulting measure is
+\[
+ (a-\delta)\mu\geq0.
+\]
+It would imply $a\geq\delta$ almost everywhere. But $a$ is smooth,
+$a(p)=0$, and $a<\delta$ on a nonempty open neighborhood of $p$.
+This contradiction excludes every strict current representative.
+No singular-current restriction to a fiber or alteration of a canonical
+potential was used. This proves nonbigness.
+
+\section{Realization as the endpoint of an actual smooth flow}
+The averaging argument also shows the following necessary condition:
+if $c\omega+d w+\ddc v$ is positive for a real constant $c$ and a smooth
+base function $d$, then wedging its fiber average with $\omega^m$ gives
+\begin{equation}\label{eq:vertical}
+ d\mu\geq0,\qquad d\geq0\text{ almost everywhere}.
+\end{equation}
+This remains a distributional argument for every global quasi-psh $v$.
+Choose the smooth strictly positive initial Hermitian metric
+\[
+ \omega_0=(n+1)\omega+(a+2)w.
+\]
+Its volume is $n(n+1)^m(a+2)\mu$. Fubini--Study has normalized Ricci
+forms $n\omega$ on $\mathbb P^m$ and $2w$ on $\mathbb P^1$.
+Consequently
+\[
+ \operatorname{Ric}(\omega_0)=n\omega+2w-\ddc\log(a+2),
+\]
+and its actual Chern--Ricci background is
+\begin{equation}\label{eq:background}
+ \alpha_t=(n+1-nt)\omega+(a+2-2t)w+t\ddc\log(a+2).
+\end{equation}
+For $0\leq t<1$, the smooth potential $-t\log(a+2)$ makes this
+background strictly positive: the horizontal coefficient is at least one,
+and the vertical coefficient is at least $2(1-t)>0$.
+At $t=1$,
+\begin{equation}\label{eq:endpoint}
+ \alpha_1=\theta+\ddc\log(a+2).
+\end{equation}
+For every $t>1$, a positive current representative of $\alpha_t$ would,
+after this smooth gauge removal and fiber averaging, imply
+$a+2-2t\geq0$ almost everywhere by \eqref{eq:vertical}.
+Its negative values on an open neighborhood of $p$ make this impossible.
+In particular no smooth strictly positive representative exists for $t>1$.
+At $t=1$ a smooth strict representative would be big, also impossible.
+
+We now apply the exact maximal-time theorem \cite[Theorem 1.2]{TW}.
+On any compact complex manifold with smooth positive Hermitian initial
+metric, it gives the unique smooth Chern--Ricci solution until the
+supremum of times when the background has a smooth strict potential
+representative. It requires no bounded-mass, Gauduchon, pluriclosed or
+Guan--Li assumption. The explicit representatives and obstruction above
+make that supremum exactly one in our convention.
+The source uses $\operatorname{Ric}_{\mathrm{std}}
+=-i\partial\bar\partial\log\det g=2\pi\operatorname{Ric}$.
+Thus $t=2\pi s$ for source time $s$ and
+$\omega(t)=\omega_{\mathrm{std}}(t/(2\pi))$ solves our flow.
+The source maximal time is $1/(2\pi)$, hence ours is $\tau=1$.
+Its smooth-potential condition is equivalent after multiplying potentials
+by $2\pi$. This is an application to the actual flow from $\omega_0$,
+not merely a line of backgrounds designated as a flow.
+
+Equation~\eqref{eq:endpoint} identifies the nef limiting background.
+Smooth gauge gives exact potential bijections, so it preserves nefness
+and bigness. Distributional Stokes against every smooth Gauduchon test
+preserves each numerator, including after positive regularization.
+The preceding exact volume computation and \eqref{eq:endpoint} give
+$V_\mu(\alpha_1)=n>0$, although $\alpha_1$ is not big.
+This establishes the numerical counterexample in Theorem~\ref{th:flow}.
+
+\section{Annihilating currents and averaged degeneration}
+\begin{lemma}\label{lem:averaged}
+For any actual smooth Chern--Ricci flow on $[0,\tau)$, where
+$0<\tau<\infty$, let $T$ be a positive $(n-1,n-1)$ current with
+$\ddc T=0$, $\int_X\omega_0\wedge T=1$ and
+$\int_X(\omega_0-\tau\operatorname{Ric}(\omega_0))\wedge T=0$.
+Then
+\[
+ \int_X\omega(t)\wedge T=1-t/\tau,\qquad 0\leq t<\tau.
+\]
+\end{lemma}
+\begin{proof}
+Set $\alpha_t=\omega_0-t\operatorname{Ric}(\omega_0)$.
+The flow equation gives the global smooth gauge
+\[
+ \omega(t)=\alpha_t+\ddc\phi_t,\qquad
+ \phi_t=\int_0^t\log\frac{\omega(s)^n}{\omega_0^n}\,ds.
+\]
+The volume ratio is a global smooth positive function on every compact
+time interval before $\tau$. Distributional Stokes against the fixed
+$\ddc$-closed current removes the smooth potential. The endpoint pairing
+gives $\int_X\operatorname{Ric}(\omega_0)\wedge T=1/\tau$, proving the
+identity. No smoothness or $d$-closedness of $T$ is required.
+\end{proof}
+This identity gives averaged trace degeneration. It does not by itself
+give analytic support, pointwise collapse, local convergence or completeness.
+
+The analytic fiber $Z=\{p\}\times\mathbb P^1$ has complex dimension one.
+Its integration current has bidegree $(n-1,n-1)$ and is positive closed.
+Put $T=\frac12[Z]$. Restrictions here are only of smooth forms:
+$\omega_0|_Z=2w$ and $\alpha_1|_Z=0$. Therefore
+\[
+ \ddc T=0,\qquad \int_X\omega_0\wedge T=1,
+ \qquad \int_X\alpha_1\wedge T=0.
+\]
+Its trace probability is $\sigma_T=\omega_0\wedge T$ and is supported
+on the explicitly given analytic fiber. In an $\omega_0$-unitary frame
+along $Z$, let $\Pi_{\mathrm{vert}}$ be orthogonal projection onto its
+complex tangent line. In the convention
+\[
+ \beta\wedge T=\frac1n\operatorname{tr}(B_\beta P_T)\,d\sigma_T,
+ \qquad\operatorname{tr}P_T=n,
+\]
+we have $P_T=n\Pi_{\mathrm{vert}}$ for $\sigma_T$-almost every point.
+Its rank is one, and $\det P_T=0$. Thus for any smooth positive reference
+probability $dV$, the determinant measure
+\[
+ \Gamma_0(T)=(dV/\omega_0^n)^{1/n}(\det P_T)^{1/n}\sigma_T
+\]
+is identically zero. Positive fixed-density volume over all smooth
+positive tests therefore coexists with this singular annihilator.
+There is no claim that rank deficiency in general forces analytic support;
+support here follows from the actual definition $T=[Z]/2$.
+
+In fact every normalized annihilator $S$ of this particular endpoint has
+trace supported on $Z$ and the same rank-one Radon matrix there. Smooth
+gauge Stokes gives $\int_X\theta\wedge S=0$. The measure
+$\theta\wedge S$ is nonnegative, so it is identically zero. On every
+compact subset $K$ of $X\setminus Z$, one has
+$\theta\geq c_K\omega_0$ for some $c_K>0$. Thus its trace
+$\sigma_S=\omega_0\wedge S$ vanishes on $K$, and exhaustion gives
+$\operatorname{supp}\sigma_S\subset Z$.
+In the stated Radon-matrix convention, positive-current coefficient
+calculus \cite[III.1.13--1.16, pp.~132--134]{Demailly} makes all coefficient
+measures absolutely continuous with respect to $\sigma_S$, giving
+$P_S\geq0$ and $\operatorname{tr}P_S=n$ almost everywhere.
+Along $Z$ the matrix of $\theta$ is strictly positive on the horizontal
+$m$-plane and zero on the vertical line. Its zero pairing with $P_S$
+forces every horizontal diagonal entry of $P_S$ to vanish. The inequality
+$|(P_S)_{ij}|^2\leq(P_S)_{ii}(P_S)_{jj}$ then removes their rows and
+columns. The remaining vertical entry is $n$, so
+$P_S=n\Pi_{\mathrm{vert}}$ and $\Gamma_0(S)=0$.
+This argument uses the explicit semipositive representative and its kernel;
+it is not an inference from determinant vanishing alone.
+Lemma~\ref{lem:averaged} specializes to $\int_X\omega(t)\wedge T=1-t$
+for the named current. No uniqueness of annihilators is asserted.
+
+\begin{remark}
+The non-Hermitian locus of a big background is not assigned to this
+nonbig endpoint. We neither refute the local convergence theorems that
+assume bigness nor prove weak continuation, completeness near $Z$, or
+detailed collapse of the evolving metrics. The base dimension $m\geq2$
+is essential for the bounded radial potential and the integrable
+$s^{-1}$ determinant majorant. The example is in dimension at least
+three and has a genuinely nonclosed initial background. No surface
+counterexample or literature-priority claim is made.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{Demailly} J.-P. Demailly, \emph{Complex Analytic and Differential
+Geometry}, manuscript, 21 June 2012, III.1.13--1.16, pp.~132--134;
+\url{https://people.math.harvard.edu/~demarco/Math274/Demailly.pdf}.
+\bibitem{TW} V. Tosatti and B. Weinkove, \emph{On the evolution of a Hermitian
+metric by its Chern--Ricci form}, arXiv:1201.0312v3 (19 June 2014),
+Theorem 1.2 and Sections 3--4; \url{https://arxiv.org/abs/1201.0312}.
+\end{thebibliography}
+\end{document}
