@@ -123,6 +123,25 @@ The classical theorem supplies a modulus $\epsilon$, not a rate claimed here to 
 Indeed the averaging map is unchanged, $u$ is bounded, and the monotone lower bound just proved is all that argument uses.
 
 
+For continuous potentials, the curvature loss of the averages becomes uniformly small.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:continuous-potential-smooth-loss}\index{Regularization!continuous potentials}
+Let $(X,\omega)$ be a compact Hermitian manifold, let $\alpha$ be a smooth real $(1,1)$-form, and let $u\in\PSH(X,\alpha)\cap C^0(X)$. There are smooth real functions $u_j$ and numbers $\varepsilon_j\downarrow0$ such that $u_j\to u$ uniformly and
+\[
+ \alpha+\ddc u_j\geq-\varepsilon_j\omega.
+\]
+\end{lemma}
+\begin{proof}
+Use the Chern averaging operators and their classical smooth-lower-bound estimate preceding \cref{lem:general-kiselman-modulus}. For some $K_0,A>0$ and $\epsilon_0(t)\to0$, put $\lambda(x,t)=t\partial_t(R_tu(x)+K_0t^2)$. The estimate with zero radius component gives
+\[
+ \alpha+\ddc R_tu\geq-(A\lambda(\cdot,t)+\epsilon_0(t))\omega.
+\]
+The function $\lambda$ is nonnegative, continuous for $t>0$, and increasing in $t$. For fixed $x$, the convex function $s\mapsto R_{\mathrm{e}^s}u(x)+K_0\mathrm{e}^{2s}$ has the finite limit $u(x)$ as $s\to-\infty$. Its nonnegative derivative must tend to zero: a positive limiting derivative would make its integral over $(-\infty,s_0]$ infinite. Thus $\lambda(x,t)\to0$. For any sequence $t_j\downarrow0$, Dini's theorem gives $\|\lambda(\cdot,t_j)\|_\infty\to0$.
+
+The averaging kernels have mass one and sample points at distance at most $Ct$ from their base point. Uniform continuity of $u$ therefore gives $\|R_tu-u\|_\infty\to0$. Set $u_j=R_{t_j}u$ and choose a decreasing positive majorant $\varepsilon_j\to0$ of $A\|\lambda(\cdot,t_j)\|_\infty+\epsilon_0(t_j)$.
+\end{proof}
+
 \subsection{A linear error for a smooth background}
 
 Let $\theta$ be a smooth big real $(1,1)$-form. Choose a strict potential $\rho$ with analytic poles and smooth resolved remainder as in \cref{thm:resolvable-regularization-input}, and put $\Omega=X\setminus\{\rho=-\infty\}$. The next estimate refines the curvature error for normalized potentials locally bounded on $\Omega$.
