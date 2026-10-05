@@ -1,5 +1,7 @@
 # Singularities in Hermitian pluripotential theory
 
+The inactive [metric restriction classification](research/editorial/four-point-metric-restriction-image-485.md) gives the exact extendable central metric class in the four-point family. Five reviewed proofs await integration.
+
 The [four-point metric integration](research/editorial/four-point-metric-integration-484.md) adds four complete proofs on failure of prescribed semipositive metric extension. The verified public book has 1294 printed pages; the construction, direct proof and excluded wider dependency claims are recorded.
 
 Working manuscript for the compact Hermitian generalization of Mingchen Xia’s *Singularities in global pluripotential theory*. The supplied svmono template, fonts and conventions are retained. This is an AI-assisted draft for mathematical review; the research remains incomplete.
