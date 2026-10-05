@@ -1,5 +1,9 @@
 # Whole-book polish requested 2 October 2026
 
+## Continuing research432
+
+[The normalized-kernel integration](research/editorial/normalized-kernel-stability-432.md) adds four direct proofs of dimension-independent probability stability, uniform rescaled analytic bounds and a nonzero inverse-degree fiber limit. Complete scoped first/second reads pass with24 actual final images. All1012 old proofs, original problem descriptions/statuses, manifests and451 protected files remain exact. The1209-page release and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Active house findings remain48 errors/169 warnings with no additions. Forty original directions remain open.
+
 ## Continuing research431
 
 [The normalized-kernel review](research/editorial/normalized-kernel-stability-review-431.md) checks 48 direct obligations. A positive coherent-state Markov operator gives a dimension-independent total-variation derivative bound; a rescaled Gram inverse gives uniform analytic control. An exact product example distinguishes inverse-degree weight changes from unchanged logarithmic-potential limits. All eight current arXiv lists match424 mechanically (972 rows/706 IDs), still through2 October; historical gaps remain. All333 book files,1012 proofs, both catalogues/manifests and451 protected files remain exact. No author build, native call, publication or original-problem closure. Next: scoped Chapter26 integration.
