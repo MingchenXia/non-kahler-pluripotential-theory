@@ -1,0 +1,164 @@
+\section{Convex norms and Gauduchon degrees}
+\label{sec:convex-bundle-norm-obstruction}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$. A smooth strictly positive real $(n-1,n-1)$-form $\Theta$ with $\ddc\Theta=0$ measures the curvature of a holomorphic line bundle by
+\[
+ \deg_\Theta F=\int_XR_k\wedge\Theta,
+ \qquad R_k=-\ddc\log k.
+\]
+Here $k$ is a Hermitian metric, expressed in a local holomorphic frame. The degree is independent of $k$ by \cref{lem:ibp}. The form $\Theta$ need not be closed under $\mathrm d$.
+
+For a smooth complex vector bundle $F$, a \emph{smooth complex norm} is a continuous function $p:F\to[0,+\infty)$, positive away from the zero section and smooth there, such that
+\[
+ p(\lambda v)=|\lambda|p(v),\qquad p(v+w)\leq p(v)+p(w)
+\]
+for vectors in the same fibre. Its square $G=p^2$ is homogeneous of degree two under real dilations. The triangle inequality controls its fibre derivatives near each line summand. Averaging horizontal complex Hessians near these lines gives a negative integral which persists when the holomorphic structure changes.
+
+\begin{lemma}\label{lem:bundle-degree-normalization}
+Fix a smooth positive volume form $\mu$ on $X$. Every holomorphic line bundle $F$ has a Hermitian metric $k$ satisfying
+\[
+ R_k\wedge\Theta=\lambda\mu,
+ \qquad \lambda=\frac{\deg_\Theta F}{\int_X\mu}.
+\]
+\end{lemma}
+\begin{proof}
+Start with $k^0$ and put $\mathcal Lu=(\ddc u\wedge\Theta)/\mu$. This scalar operator is uniformly elliptic, has no zeroth-order term and has kernel the constants by the maximum principle. On H\"older spaces, the elliptic interpolation used in \cref{thm:gauduchon} gives index zero. Its cokernel is consequently one-dimensional. Since $\ddc\Theta=0$, integration by parts gives $\int_X\mathcal Lu\,\mu=0$, so its image is exactly the smooth functions of zero $\mu$-mean. Solve
+\[
+ \ddc u\wedge\Theta=\lambda\mu-R_{k^0}\wedge\Theta.
+\]
+The right-hand side has integral zero; elliptic regularity makes $u$ smooth. Then $k=k^0\mathrm e^{-u}$ has the required curvature.
+\end{proof}
+
+Let $F_0=\bigoplus_{s=1}^rF_s$ be a sum of holomorphic line bundles, with $r\geq2$. Choose Hermitian metrics $k_s$ and write $k=\bigoplus_sk_s$. Let $P_s$ be the orthogonal projection onto $F_s$, and let
+\[
+ \Sigma=\{v\in F_0:|v|_k=1\}.
+\]
+On each fibre sphere use the round probability measure $\mathrm d\sigma_x$. Fix a nonnegative smooth function $\chi$ supported in $(-1,1)$ and positive near zero. For $0<\varepsilon<1/2$, put
+\[
+ \rho_s(v)=c_\varepsilon\chi\left(\frac{|(I-P_s)v|_k^2}{\varepsilon^2}\right),
+ \qquad \int_{\Sigma_x}\rho_s\,\mathrm d\sigma_x=1.
+\]
+In unitary frames respecting the splitting, these weights and their normalization are independent of the base point and the index $s$. Independent phase rotations preserve them, so they are globally defined. Their supports lie within distance $\varepsilon$ of the respective line axes.
+
+\begin{lemma}\label{lem:convex-norm-axis-estimates}
+For a smooth complex norm with square $G$, put
+\[
+ a_s(x)=G(e_s),\qquad N(x)=\sum_sa_s(x),\qquad
+ D_jG(v)=\mathrm d_vG(P_jv),
+\]
+where $e_s$ is any $k_s$-unit vector in $F_s$. Complex homogeneity makes $a_s$ well defined. Then
+\[
+ G(v)\leq N|v|_k^2,\qquad
+ |\mathrm d_vG(w)|\leq2N|v|_k|w|_k.
+\]
+On the support of $\rho_s$,
+\[
+ |D_jG|\leq2\varepsilon N\quad(j\ne s),\qquad
+ |D_sG-2a_s|\leq10\varepsilon N.
+\]
+\end{lemma}
+\begin{proof}
+The triangle inequality and Cauchy--Schwarz give
+$p(v)\leq\sum_s|v_s|\sqrt{a_s}\leq\sqrt N|v|_k$.
+Differentiating $|p(v+tw)-p(v)|\leq|t|p(w)$ in real $t$ gives
+$|\mathrm d_vp(w)|\leq p(w)$, which proves both global bounds.
+
+For $v\in\operatorname{supp}\rho_s$, set $w=(I-P_s)v$ and
+$e_s=P_sv/|P_sv|_k$. Then $|w|_k<\varepsilon$ and
+$|v-e_s|_k\leq|w|_k+1-|P_sv|_k<2\varepsilon$.
+The segment from $e_s$ to $v$ stays in the unit ball and avoids zero. Integration of the derivative bound gives $|G(v)-a_s|\leq4\varepsilon N$. For $j\ne s$, $|P_jv|_k<\varepsilon$, giving the first axis bound. Euler's identity yields
+\[
+ D_sG-2a_s=2(G(v)-a_s)-\sum_{j\ne s}D_jG.
+\]
+The sum on the right is $\mathrm d_vG(w)$, whose absolute value is at most $2\varepsilon N$. This proves the second axis bound.
+\end{proof}
+
+Write $\pi:F_0\to X$ for the bundle projection. Let $H_{0,v}:T_xX\to T_vF_0$ be the real horizontal lift for the Chern connection of $k$. It is complex linear and tangent to $\Sigma$ at its unit vectors. For a smooth real function $G$ on $F_0\setminus\{0\}$, define
+\[
+ \beta_s(G)=\int_{\Sigma_x}\rho_s H_{0,v}^*(\ddc G)\,\mathrm d\sigma_x,
+ \qquad U_s=\int_{\Sigma_x}G\rho_s\,\mathrm d\sigma_x,
+ \qquad V_{sj}=\int_{\Sigma_x}D_jG\rho_s\,\mathrm d\sigma_x.
+\]
+
+\begin{lemma}\label{lem:convex-norm-horizontal-average}
+With $R_j$ the curvature of $k_j$,
+\[
+ \beta_s(G)=\ddc U_s-\frac12\sum_jR_jV_{sj}.
+\]
+\end{lemma}
+\begin{proof}
+At a fixed base point choose holomorphic line frames with
+$k_j=\mathrm e^{-\varphi_j}$ and $\mathrm d\varphi_j=0$. The horizontal lift has zero vertical component there. Write the smooth unitary fibre coordinates as
+$\zeta_j=\mathrm e^{-\varphi_j/2}v_j$ and $G(z,v)=g(z,\zeta)$.
+Their first base derivatives vanish at that point, and their mixed second derivatives are
+$-\frac12(\varphi_j)_{\alpha\bar\beta}\zeta_j$ and its conjugate. The chain rule therefore gives
+\[
+ G_{\alpha\bar\beta}
+ =g_{\alpha\bar\beta}-\frac12\sum_j(\varphi_j)_{\alpha\bar\beta}
+       (\zeta_jg_{\zeta_j}+\bar\zeta_jg_{\bar\zeta_j}).
+\]
+The expression in parentheses is $D_jG$. Both the spherical measure and $\rho_s$ are independent of $z$ in unitary coordinates. Averaging the identity gives the result, since $R_j=\ddc\varphi_j$.
+\end{proof}
+
+\begin{theorem}\label{thm:convex-norm-deformation-obstruction}
+Suppose that each $F_s$ has a smooth strictly positive real $(n-1,n-1)$-form $\Theta_s$ satisfying
+\[
+ \ddc\Theta_s=0,\qquad \deg_{\Theta_s}F_s>0.
+\]
+There is a $C^4$ neighbourhood of the split Dolbeault operator on the underlying smooth bundle of $F_0$ such that every integrable operator in this neighbourhood admits no smooth complex norm with plurisubharmonic square off the zero section.
+\end{theorem}
+\begin{proof}
+Fix $\mu$ and use \cref{lem:bundle-degree-normalization} to choose $k_s$ with
+$R_s\wedge\Theta_s=\lambda_s\mu$, where $\lambda_s>0$. Put
+\[
+ \lambda_* =\min_s\lambda_s,\qquad
+ C=5\sum_s\lambda_s+
+   \sum_s\sum_{j\ne s}\sup_X\left|\frac{R_j\wedge\Theta_s}{\mu}\right|.
+\]
+For a squared norm define $I_0(G)=\sum_s\int_X\beta_s(G)\wedge\Theta_s$. The averaged identity, integration by parts and the axis estimates give
+\[
+ I_0(G)=-\frac12\sum_{s,j}\int_XV_{sj}R_j\wedge\Theta_s
+ \leq-(\lambda_* -\varepsilon C)\int_XN\mu.
+\]
+Choose $\varepsilon$ so that $\varepsilon C<\lambda_*/2$, and keep all weights fixed.
+
+Write the nearby operator as $\bar\partial_A=\bar\partial_0+A$, with
+$\bar\partial_A^2=0$. Its Chern connection is $D_A=D_0+A-A^{*k}$, where the adjoint changes the type from $(0,1)$ to $(1,0)$. Let $J_A$ be the total-space complex structure and $H_{A,v}$ its Chern horizontal lift. These depend smoothly on $A$, and $H_{A,v}$ is complex linear and tangent to the fixed sphere $\Sigma$.
+
+For $g\in C^\infty(\Sigma,\mathbb R)$, extend it radially by
+\[
+ (\mathcal Eg)(v)=|v|_k^2g(v/|v|_k).
+\]
+Define the real differential operator on $\Sigma$ by
+\[
+ (\mathcal P_Ag)(v)=\sum_s\rho_s(v)
+ \frac{H_{A,v}^*(\ddc_{J_A}\mathcal Eg)_v\wedge\Theta_s(x)}{\mu(x)},
+ \qquad x=\pi(v).
+\]
+It has order at most two. The identity
+$\dc_Jf=-(4\pi)^{-1}\mathrm df\circ J$ shows that its coefficients depend on $A$ and its first derivatives, as well as the fixed smooth data. They consequently converge in $C^2$ when $A\to0$ in $C^4$.
+
+Take its formal adjoint for the fixed density
+$\mathrm d\nu=\mathrm d\sigma_x\mu(x)$ on the compact sphere bundle, and put $b_A=\mathcal P_A^*1$. Locally, if
+$\mathrm d\nu=m(y)\mathrm dy$ and
+$\mathcal P_A=\sum_{|\alpha|\leq2}c_{\alpha,A}\partial^\alpha$, then
+\[
+ b_A=m^{-1}\sum_{|\alpha|\leq2}(-1)^{|\alpha|}
+                 \partial^\alpha(mc_{\alpha,A}).
+\]
+Thus $\|b_A-b_0\|_{C^0}\to0$.
+For $g=G|_\Sigma$, homogeneity gives $\mathcal Eg=G$ and
+\[
+ I_A(G):=\int_\Sigma\mathcal P_Ag\,\mathrm d\nu
+        =\int_\Sigma gb_A\,\mathrm d\nu.
+\]
+Since $0<g\leq N\circ\pi$ and the spherical measure has mass one,
+\[
+ |I_A(G)-I_0(G)|
+ \leq\|b_A-b_0\|_{C^0}\int_XN\mu.
+\]
+Choose a neighbourhood in which this coefficient is less than $\lambda_*/4$. Then
+$I_A(G)\leq-\frac14\lambda_*\int_XN\mu<0$ for every smooth squared complex norm. If $G$ were plurisubharmonic for $J_A$, all horizontal pullbacks of $\ddc_{J_A}G$ would be semipositive. Their positive weighted pairings with $\Theta_s$ would give $I_A(G)\geq0$, a contradiction.
+\end{proof}
+
+The neighbourhood depends on the bundle and the testing forms. Its size is independent of all derivatives of the candidate norms: integration on the fixed sphere transfers those derivatives to the coefficients of the adjoint operator. Different line summands may require different Gauduchon tests.
