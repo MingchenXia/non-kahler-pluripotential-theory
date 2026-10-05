@@ -1,5 +1,9 @@
 # Modification history
 
+## 5 October 2026 — Radial test integration438
+
+[The checked radial test extension](research/editorial/radial-gauduchon-test-limits-438.md) adds two propositions explaining the distinct volume and bigness quotients, logarithmic fiber concentration in dimension three and actual localized balanced smoothing in every dimension of the model. All1019 old proofs and22 active raw formal questions remain exact; both catalogues retain all42 original descriptions/statuses and39 open directions. Complete scoped first/second reads pass with24 actual final images. The1217-page PDF and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. House findings are unchanged.
+
 ## 5 October 2026 — Radial test-family review437
 
 [The independent test-family review](research/editorial/radial-gauduchon-test-limits-review-437.md) checks32 obligations: the volume-minimizing radial tests concentrate on the degenerate fiber in dimension three, whereas in dimension at least four their threshold quotient stays positive. A different explicit smooth balanced family approaches zero threshold and the fiber current in every dimension at least three. Both complete reconstruction reads pass; all335 book files/1019 proofs, both catalogues/manifests and451 protected sources remain exact. No new author build, native call, publication, external premise or arXiv scan. P08/P22/S13 retain their recorded resolutions;39 original directions remain open. Package validation passes against current checksums and the actual436 reconstructed book bytes. Next: scoped manuscript integration.
