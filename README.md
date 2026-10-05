@@ -1,6 +1,8 @@
 # Singularities in Hermitian pluripotential theory
 
-The [P04 radial Gauduchon LCK integration](research/editorial/radial-gauduchon-lck-integration-498.md) gives existence and metric uniqueness for all smooth positive radial densities and negative Lee periods on scalar Hopf manifolds, with positive twisted potentials and non-Vaisman examples. General P04 remains open. The actual website serves the verified 1318-page PDF and matching homepage description. Polar-metric positivity and related ample geometry are next.
+The [polar Finsler integration](research/editorial/polar-finsler-integration-500.md) adds plurisubharmonicity and strong convexity of dual polar norms, their ample smooth replacement and the scoped Gauduchon curvature obstruction. The actual website serves the verified 1320-page PDF and matching homepage description. Stable ample geometry and further related research are next; 38 original directions remain open.
+
+The [P04 radial Gauduchon LCK integration](research/editorial/radial-gauduchon-lck-integration-498.md) gives existence and metric uniqueness for all smooth positive radial densities and negative Lee periods on scalar Hopf manifolds, with positive twisted potentials and non-Vaisman examples. General P04 remains open. At checkpoint 498, the actual website served the verified 1318-page PDF and matching homepage description.
 
 The [tautological positivity integration](research/editorial/tautological-homogeneous-integration-497.md) supplies the strict homogeneous function under dual ampleness as Subsection 4.5.2. At checkpoint 497, the actual website served the verified 1312-page PDF and matching description. Strong fibre convexity is still required in the continuous obstruction; polar-metric and stable ample geometry are next.
 
