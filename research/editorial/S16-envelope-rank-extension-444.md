@@ -1,0 +1,39 @@
+# S16 envelope criteria and smooth extension — integration 444
+
+This integration uses the complete independent author-source review at checkpoint 443. The preserved source is the anonymous 444-line article `research/papers/S16-smaller-background-envelopes-and-rank-extension.tex`, commit e2a7157d6960995e275f14a9b30160344c56aaf9, SHA256 bca94446537e4614386b0099661078dcbaa0d57f3c811ad855f587a4089eed5c. Its reports supply provenance, not proof premises. This unit adopts five complete reconstructed proofs; it does not freshly certify an external primary proof tree or all recursively included chapters.
+
+The new 121-line subsection is read completely first, automatically second before the production build, and again after the final page images. The current 63-line placement root and 14-line capacity corollary are read completely after images; the historical attribution is read at lines 303–313. The complete source first/second reading and specified existing-foundation scopes are reused from 443.
+
+The convention is ddc=i/(2pi) partial barpartial, ordinary exterior powers and canonical genuine potentials. The fixed background is positive, the manifold compact connected, and n>=2. All smaller-background competitors are actual potentials satisfying pointwise canonical order.
+
+Invariant bounded mass gives every bounded truncation total mass V and every extended measure total mass at most V. The bounded normalizers V/integral f_k converge to V/M. Thus b=V/M and a threshold subsolution has both mass V and exact measure bf dV. No attainment hypothesis is used in this step.
+
+For a full-mass u<=0, u_j=max(u,-j) and a>1, the bounded envelopes w_j=P_omega(a u_j) lie between -aj and zero. Contact support, positivity after changing to background a omega and ordered contact give MA_omega(w_j)<=a^n 1_Cj MA_omega(u_j). These are the existing bounded contact and comparison facts, at their recorded 443 scopes.
+
+For j>=N, locality and constant bounded mass give tail mass V-mu({u>-N})=mu({u<=-N}). This tends to zero because the finite extended measure gives no mass to poles. Sup w_j<-aN puts the contact set in the small tail and contradicts its total mass V. A uniform lower supremum makes the decreasing envelope limit genuine. Scaling by delta=1/a supplies every requested smaller-background competitor.
+
+The fixed-background uniform Lelong lemma gives nu(v_delta)<=delta C_omega, while v_delta<=u gives nu(u)<=nu(v_delta). Sending delta to zero proves zero Lelong numbers. This uses the existing book lemma and introduces no additional primary Gauduchon proof premise.
+
+For u>=-A(1-psi)^alpha-B, alpha<beta<1 and epsilon beta C<=delta, the finite K=B+sup(At^alpha-epsilon t^beta) makes -epsilon(1-psi)^beta-K an actual competitor. Its increasing convex composition has derivative at most epsilon beta and nonnegative second derivative. Truncation and decreasing passage give the claimed background; psi finite almost everywhere makes the limit genuine. This quantitative hypothesis is not deduced from moments or entropy.
+
+Under existing semipositive dual attainment, the integrated AM--GM gap is continuous and nonnegative off Z and has integral zero. With a globally smooth semipositive root T=gamma^(n-1), equality gives A=r gamma, including the zero branch. Closedness of ddc Phi gives dr wedge gamma+r dgamma=domega.
+
+Rank at least two makes W_gamma:xi to xi wedge gamma injective: each coordinate has a positive diagonal two-plane not containing it, and that triple coefficient receives no other disjoint paired contribution. Compactness makes the smooth left inverse uniformly bounded. Consequently dr=alpha-r beta with globally smooth coefficients, and d log(1+r) is bounded.
+
+Analytic strata have real codimension at least two. Segment cones from any fixed outside point are null; a generic third point supplies two short avoiding segments between nearby outside points. A finite connected chart cover gives bounded global connecting lengths. The logarithmic gradient bound then bounds r, and the first-order equation bounds dr.
+
+The short paths give a unique Lipschitz extension. Its weak derivative agrees with the first-order equation almost everywhere because Z is null. A continuous right side gives C1 regularity, and iteration gives smoothness. This step does not assume prior boundedness of Phi.
+
+S=r gamma is smooth semipositive and dS=domega. The closed positive residual A-S is the positive coefficient-measure part on Z. The existing analytic support theorem leaves only divisors; local smooth potentials identify their coefficients with the Lelong numbers of Phi. Those vanish, so elliptic regularity gives a smooth canonical Phi everywhere. The smooth root and its rank are explicit extra hypotheses; a smooth semipositive T alone does not ensure them.
+
+On the Hopf surface, omega=s^-1 ddc s descends under dilation, is positive nonclosed, and ddc omega=0 follows from sF''+2F'=0 for F=s^-1. For a sufficiently small nonconstant smooth perturbation A=omega+ddc(epsilon q)>0, invariant mass gives b=1. T=A/V is ddc-closed and trace-normalized; its determinant-weight functional equals one. AM--GM and Stokes bound every competing positive test by one, so this is actual attainment and existing attained uniqueness identifies the normalized solution.
+
+On the smooth quadric w^2=sum z_i^2, the finite degree-two projection has differential rank n-1 on its smooth ramification divisor and n off it. The global potential log(sum|z_i|^2/(|w|^2+sum|z_i|^2)) is smooth between -log2 and zero; it gives A=F*omega_FS. Branched integration and closed Stokes give both top masses two. T=A^(n-1)/V is an actual semipositive maximizer; its smooth root has rank at least two even on the divisor when n>=3. The supplied-source surface and ramified examples are checked in the book normalization.
+
+The invariant-mass and sublinear criteria answer restricted S16 instances. General moment/entropy implications and removal of the smooth-root rank assumption remain open. The point-pole full-mass non-Lp/no-smooth-maximizer example reviewed at 443 is deferred to the next book unit; its optional greatest-solution identification is not a premise here.
+
+Validation: all 1029 existing proof bodies and 335 of the 338 existing book files remain byte exact; the other three files change only placement, transition and historical attribution. Five new proofs give 1034 total. Both original manifests, 451 protected sources and author blobs P10/P08/P12/S16 (5/5/5/6) remain exact. The active house audit has the same 48 errors and 169 warnings as its baseline, with no added finding; the new input has zero findings.
+
+One production rebuild gives 1257 physical pages and 1231 printed pages. Twenty-seven final page images are actually inspected, including all new pages, seams and index pages; all 6768 internal links and 686 clickable index locators pass their destination checks. The served PDF checksum and the 1231-page homepage description match the published release. The catalogue has 133 typed single-page references, 25 ranges and 91 JSON assessment references; all original 42 mathematical descriptions, 23 historical raw formal texts and 21 active raw formal texts remain exact. S16 alone gains restricted assessment content; the 38 open original directions are unchanged. The native catalogue compiler was called but returned no diagnostic before bounded waiting ended; it is unverified and the existing editor is retained.
+
+The current source archive passes empty-extraction book and companion-note rebuilds with publication disabled. All 1257 book-page texts and 17 companion-page texts match the author outputs; all 336 packaged book-source files, 2212 payload checksums and current payload bytes pass. This record claims no standalone source-PDF inspection, new broad arXiv scan, whole-recursive Chapter 25/history certification or new original-problem closure.

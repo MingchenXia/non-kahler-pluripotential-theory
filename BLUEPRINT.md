@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint444 — Restricted S16 criteria integrated
+
+[The S16 integration](research/editorial/S16-envelope-rank-extension-444.md) adds five complete proofs for invariant-mass and sublinear envelope criteria, rank-two smooth-root extension, and actual Hopf/quadric attainment. Three complete new-input readings, scoped placement/history readings and27 actual final images pass; all1029 old proofs remain exact. The1231-page PDF and homepage description are live-verified. Both catalogues retain42 exact original descriptions and38 open directions, with133 typed single-page references/25 ranges verified. Fresh empty-source reconstruction passes for all1257 book pages and17 companion pages, with all336 book-source files/2212 payload checksums exact; native catalogue preview remains unverified. The house findings are unchanged. General S16 moment/entropy implications remain open. Next: the point-pole full-mass non-Lp/no-smooth-maximizer example.
+
 ## Checkpoint443 — Incoming S16 independently reviewed
 
 [The incoming S16 review](research/editorial/S16-envelope-rank-extension-review-443.md) completely reads the444-line article first/automatically second and reconstructs56 obligations using exact existing-book dependencies. Invariant mass or quantitative sublinear singularities give all-scale smaller-background envelopes; a globally smooth rank-at-least-two root gives across-set smoothness under attainment. Actual Hopf/quadric instances and a full-mass non-Lp example without a smooth maximizer are checked. The point-pole greatest-solution identification is deferred. All338 book files/1029 proofs, both catalogues/manifests and451 protected sources remain exact;38 original directions stay open. The live1227-page release is unchanged. No author build, native call, publication or broad scan. Next: scoped S16 integration.
