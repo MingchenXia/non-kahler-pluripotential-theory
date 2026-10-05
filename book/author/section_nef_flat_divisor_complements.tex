@@ -356,3 +356,162 @@ agree on overlaps and identify these charts with $Q$. In the first chart, $\sigm
 
 Finally, a K\"ahler class has nonzero restriction to a ruling fiber, because its integral on that fiber is positive. Its cotangent extension therefore has $\rho\ne0$. For an extension $0\to\mathcal O_M\to V\to T_M\to0$ associated with this class, the dual extension has the negative of that class, so still has nonzero fiber restriction. The complement $\mathbb P(V)\setminus\mathbb P(T_M)$, using the quotient convention for projectivization, identifies with $\epsilon^{-1}(1)\subset V^*$: normalize a nonzero quotient functional to take value one on the distinguished copy of $\mathcal O_M$. This proves the final assertion.
 \end{proof}
+
+\subsection{Symmetric tensors on split elliptic ruled surfaces}
+\label{subsec:split-elliptic-symmetric-tensors}
+
+Let $E=\mathbb C/\Lambda$, where $\Lambda=\mathbb Z+\mathbb Z\tau$ and $\operatorname{Im}\tau>0$. Let $A$ have positive degree $d$, and put $M=\mathbb P_{\mathrm{lines}}(\mathcal O_E\oplus A)$. Use the normalized factors of \cref{lem:elliptic-degree-automorphy-normalization}, so that
+\[
+ b_\lambda(z)=\chi_\lambda
+       \exp\bigl(-\pi\mathrm{i}d(m^2\tau+2mz)\bigr),
+ \qquad q_\lambda=-b_\lambda'/b_\lambda=2\pi\mathrm{i}dm,
+ \qquad \lambda=m\tau+n.
+\]
+A symmetric tangent tensor is a polynomial function on the cotangent bundle, homogeneous in its cotangent fiber variables. Write $u\,\mathrm{d}z+y\,\mathrm{d}t$ for a cotangent vector in the finite ruling chart. The Euler field $t\partial/\partial t$ gives the global linear function $h=ty$. The ruling action decomposes these polynomials into weights. Their dimensions measure the abundance of symmetric tensors, while their products detect the obstruction to finite generation.
+
+Let $U$ be the rank-two bundle on $E$ whose sections on the universal cover are linear polynomials in formal variables $h,u$ satisfying
+\[
+ F(z+\lambda,h,u)=F(z,h,u-q_\lambda h).
+\]
+Thus the invariant polynomial $h$ and the coefficient of $u$ give an exact sequence $0\to\mathcal O_Eh\to U\to\mathcal O_E\to0$.
+
+\begin{lemma}\label{lem:split-elliptic-tensor-weights}
+\index{Weight decomposition!cotangent polynomials}
+\index{Symmetric tensor!elliptic ruled surface}
+For every integer $r\geq0$, the space $H^0(M,\operatorname{Sym}^rT_M)$ has a finite weight decomposition with weights $-r\leq\ell\leq r$. The weight-zero space is $H^0(E,\operatorname{Sym}^rU)$. For $1\leq k\leq r$, the weight $-k$ space is
+\[
+ H^0(E,A^k\otimes\operatorname{Sym}^{r-k}U),
+\]
+and the weight $k$ space is $H^0(E,A^{-k}\otimes\operatorname{Sym}^{r-k}U)$. Multiplication adds the tensor degrees and the weights.
+\end{lemma}
+\begin{proof}
+On the cover $\mathbb C\times\mathbb P^1$, ordinary cotangent coordinates change by
+\[
+ v=1/t,\qquad u_\infty=u,\qquad y_\infty=-t^2y.
+\]
+The lattice acts by
+\[
+ (z,t,u,y)\longmapsto
+ (z+\lambda,b_\lambda t,u+q_\lambda ty,y/b_\lambda).
+\]
+These formulas follow by preserving the one-form $u\,\mathrm{d}z+y\,\mathrm{d}t$. In the other ruling chart the action is
+\[
+ (z,v,u_\infty,y_\infty)\longmapsto
+ (z+\lambda,b_\lambda^{-1}v,
+ u_\infty-q_\lambda v y_\infty,b_\lambda y_\infty).
+\]
+It is holomorphic at $v=0$ and agrees with the finite-chart formula. Both formulas preserve $h=ty=-v y_\infty$.
+
+A degree-$r$ homogeneous function is a sum of terms $g_b(z,t)y^bu^{r-b}$ for $0\leq b\leq r$, with $g_b$ holomorphic on $\mathbb C^2$. Holomorphy at $v=0$ says that $v^{2b}g_b(z,1/v)$ is holomorphic there. Its Taylor or Laurent expansion consequently gives
+\[
+ g_b(z,t)=\sum_{a=0}^{2b}c_{a,b}(z)t^a,
+\]
+with entire coefficients. No cancellation between different $b$ is possible, since the monomials in $u_\infty,y_\infty$ are independent.
+
+Give $t$ weight $1$, $y$ weight $-1$ and $u$ weight $0$. A term $t^ay^bu^{r-b}$ has weight $\ell=a-b$. Both chart changes and the lattice preserve this grading; equivalently, it is the cotangent lift of the global action $t\mapsto at$ for $a\in\mathbb C^*$. The bounds on $a$ imply $-r\leq\ell\leq r$.
+
+For $\ell=-k<0$, a weight block is uniquely $y^kF(z,h,u)$, with $F$ homogeneous of degree $r-k$. Its invariance is equivalent to
+\[
+ F(z+\lambda,h,u)
+       =b_\lambda(z)^kF(z,h,u-q_\lambda h).
+\]
+This is the factor for $A^k\otimes\operatorname{Sym}^{r-k}U$. Conversely, each such polynomial defines a function holomorphic in both ruling charts: the exponents satisfy $0\leq a\leq2b$. For $\ell=k>0$, a weight block is uniquely $t^kh^kF(z,h,u)$ of the same remaining degree. Its invariance has the factor $b_\lambda^{-k}$, giving $A^{-k}\otimes\operatorname{Sym}^{r-k}U$. Weight zero consists precisely of homogeneous polynomials $F(z,h,u)$ with the factor defining $\operatorname{Sym}^rU$. Products of polynomial functions add degrees and weights, proving the last assertion.
+\end{proof}
+
+\begin{lemma}\label{lem:elliptic-unipotent-symmetric-cohomology}
+\index{Unipotent bundle!elliptic symmetric powers}
+The extension $U$ is nonsplit. For every $s\geq0$, one has
+\[
+ H^0(E,\operatorname{Sym}^sU)=\mathbb C h^s.
+\]
+For $k\geq1$ and $s\geq0$, one has
+\[
+ \begin{aligned}
+ H^0(E,A^{-k}\otimes\operatorname{Sym}^sU)&=0,\\
+ H^1(E,A^k\otimes\operatorname{Sym}^sU)&=0,\\
+ h^0(E,A^k\otimes\operatorname{Sym}^sU)&=kd(s+1).
+ \end{aligned}
+\]
+For $s\geq1$, the map taking the coefficient of $u^s$ gives a surjection
+\[
+ H^0(E,A\otimes\operatorname{Sym}^sU)\longrightarrow H^0(E,A),
+\]
+whose kernel is $hH^0(E,A\otimes\operatorname{Sym}^{s-1}U)$.
+\end{lemma}
+\begin{proof}
+A splitting of $U$ would give a section $u+a(z)h$ lifting $1$, with $a$ entire and
+\[
+ a(z+1)=a(z),\qquad a(z+\tau)=a(z)-2\pi\mathrm{i}d.
+\]
+Differentiating shows that $a'$ is lattice periodic, hence constant on the compact torus. The first identity forces that constant to vanish, contradicting the second. Thus the extension is nonsplit.
+
+More generally, write an invariant polynomial of degree $s$ as
+\[
+ F(z,h,u)=\sum_{j=0}^s a_j(z)h^{s-j}u^j.
+\]
+If its largest nonzero $u$-degree is $j>0$, then $a_j$ is lattice periodic and therefore a nonzero constant. Comparing the next coefficient gives
+\[
+ a_{j-1}(z+1)=a_{j-1}(z),\qquad
+ a_{j-1}(z+\tau)=a_{j-1}(z)-j(2\pi\mathrm{i}d)a_j.
+\]
+The same derivative argument gives a contradiction. Hence $F=a_0h^s$, with $a_0$ constant. This also treats $s=0$.
+
+The powers of the invariant line $\mathcal O_Eh$ give a filtration of $\operatorname{Sym}^sU$ with $s+1$ trivial line quotients. A negative-degree line bundle on a compact curve has no nonzero section, since the zero divisor of a nonzero section has nonnegative degree. The filtration twisted by $A^{-k}$ thus has no global section. Serre duality and $\Omega_E^1\simeq\mathcal O_E$ give $H^1(E,A^k)=0$. The positive twist of the filtration and its cohomology exact sequences then give $H^1(E,A^k\otimes\operatorname{Sym}^sU)=0$. Riemann--Roch on the genus-one curve, with rank $s+1$ and degree $kd(s+1)$, gives the dimension formula.
+
+Finally, the leading coefficient gives the bundle exact sequence
+\[
+ 0\longrightarrow A\otimes\operatorname{Sym}^{s-1}U
+ \xrightarrow{\ h\ }A\otimes\operatorname{Sym}^sU
+ \longrightarrow A\longrightarrow0.
+\]
+Indeed, translation of $u$ by a multiple of $h$ leaves its leading coefficient unchanged, and a polynomial with zero leading coefficient is divisible by $h$. The vanishing just proved gives the asserted surjectivity and kernel on global sections.
+\end{proof}
+
+\begin{theorem}\label{thm:split-elliptic-symmetric-dimensions}
+\index{Vector bundle!big tangent bundle}
+\index{Volume!tautological line bundle}
+For every integer $r\geq0$,
+\[
+ h^0(M,\operatorname{Sym}^rT_M)
+       =1+\frac{d\,r(r+1)(r+2)}6.
+\]
+In the quotient convention for $\pi:\mathbb P(T_M)\to M$, the tautological line bundle $\mathcal O_{\mathbb P(T_M)}(1)$ is big and has volume $d$.
+\end{theorem}
+\begin{proof}
+The positive weights vanish, the zero weight contributes one dimension and the weight $-k$ contributes $kd(r-k+1)$. Thus
+\[
+ h^0(M,\operatorname{Sym}^rT_M)
+ =1+d\sum_{k=1}^r k(r-k+1)
+ =1+\frac{d\,r(r+1)(r+2)}6.
+\]
+The elliptic curve and its holomorphic line bundle are algebraic, so $M$ and $\mathbb P(T_M)$ are projective. The projective-bundle identity $\pi_*\mathcal O_{\mathbb P(T_M)}(r)=\operatorname{Sym}^rT_M$ identifies their section spaces. Since $\mathbb P(T_M)$ has dimension three, the definition of volume gives
+\[
+ \operatorname{vol}\bigl(\mathcal O_{\mathbb P(T_M)}(1)\bigr)
+ =\limsup_{r\to\infty}\frac{6h^0(M,\operatorname{Sym}^rT_M)}{r^3}=d>0.
+\]
+Positive volume is the section-growth criterion for bigness.
+\end{proof}
+
+\begin{theorem}\label{thm:split-elliptic-tangent-ring-nonfinite}
+\index{Section ring!nonfinite generation}
+The complex algebra
+\[
+ R=\bigoplus_{r\geq0}H^0(M,\operatorname{Sym}^rT_M)
+\]
+is not finitely generated.
+\end{theorem}
+\begin{proof}
+Write $R_{r,k}$ for tensor degree $r$ and weight $-k$. The surviving weights have $k\geq0$, and multiplication adds these indices. The zero-weight subalgebra is $\mathbb C[h]$. Let $I$ be the ideal consisting of all components of positive $k$, and form
+\[
+ S=R/(hR+I^2).
+\]
+Its zero-weight component is $\mathbb C$. Its positive-weight ideal $J$ satisfies $J^2=0$, so $S=\mathbb C\oplus J$ as a vector space.
+
+For every $r\geq1$, products in $I^2$ have weight index at least two. Consequently, the degree-$r$, weight-index-one component of $S$ is
+\[
+ R_{r,1}/hR_{r-1,1}\simeq H^0(E,A).
+\]
+For $r=1$, this is the identity and $R_{0,1}=0$. For $r\geq2$, it follows from the last assertion of \cref{lem:elliptic-unipotent-symmetric-cohomology}, with $s=r-1$. Each of these components has dimension $d>0$. Since their degrees are distinct, $J$ is infinite dimensional.
+
+If $R$ were finitely generated, its quotient $S$ would be finitely generated. Write a finite set of algebra generators of $S$ as $c_i+j_i$, with $c_i\in\mathbb C$ and $j_i\in J$. Because $J^2=0$, every polynomial in these generators lies in the finite-dimensional span of $1,j_1,\ldots,j_N$. This contradicts the infinite dimension of $J$, proving the assertion.
+\end{proof}
