@@ -1,5 +1,9 @@
 # Current research status — 4 October 2026
 
+## Checkpoint430 — Continuous-weight partial kernels
+
+[The continuous-weight kernel integration](research/editorial/partial-kernel-parameters-430.md) adds four proofs of Banach analyticity, ordered derivatives, Gevrey bounds, diagonal response and the explicit disk cusp in Section26.5.1. Complete scoped first/second reads and24 actual final images pass. All1008 old proofs, original problem descriptions/statuses, manifests and451 protected files remain exact. Both1207-page releases and homepage descriptions are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Active house findings retain48 inherited errors; the sole new warning is the checked preprint-publication prompt. Forty original directions remain open.
+
 ## Checkpoint429 — Continuous-weight parameter dependence
 
 [The parameter-dependence review](research/editorial/partial-kernel-parameter-review-429.md) reads the complete 30-page exact preprint, checks 47 obligations and inspects eight actual primary images. A fixed Gram inverse reconstructs bounded-weight analyticity, ordered derivatives and Gevrey bounds; the disk example identifies missing uniform parameter control. Boundary-distance dependencies remain outside adoption. All 332 book files, 1008 proofs, both catalogues/manifests and 451 protected files remain exact. No author build, native call, publication, novelty claim or original problem closure. Next: scoped Chapter26 integration.
