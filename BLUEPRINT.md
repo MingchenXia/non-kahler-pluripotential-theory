@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint447 — P15 warped-cone completion reviewed
+
+[The P15 review](research/editorial/P15-warped-cone-completion-review-447.md) completely reads the362-line author source first and automatically second, reconstructing50 obligations and the complete33-line review. Full Gauduchon volume, actual balanced minimizers, flat unit coordinates, sharp endpoint lengths, every Cauchy point and projective/torus examples are supported for the specified cone/product probability. General P15 stays open. All340 book files/1036 proofs, both catalogues/manifests,451 protected sources and author originals (5/5/5/5/6) remain exact. The live1233-page release and38 open directions are unchanged. No author rebuild/native call/publication. Next: scoped P15 integration, followed by the reviewed first-jet model and exact Dang v2 proof.
+
 ## Checkpoint446 — Ramified first-jet model reviewed
 
 [The ramified-model review](research/editorial/ramified-root-first-jet-review-446.md) reconstructs40 obligations and three proofs, with complete initial95-line/final101-line first and automatic second readings. Complete section spaces give a positive root metric, exact first root-family success j=q-1 and one/two-atom lower-level witnesses. The original very ample criterion uses j=qm; its first successful level is not bounded here. All340 book files/1036 proofs, both catalogues/manifests and451 protected sources stay exact. Current arXiv intake covers all eight lists (903 rows/703 IDs),129 unseen titles and43 current replacement titles, plus five exact abstract checks; primary proofs and citation upgrades remain pending. The live1233-page release and38 open directions are unchanged. No author rebuild/native call/publication. Next: normally reconcile and independently review the newly arrived P15 source25f19e4; scoped model integration and the exact Dang v2 review remain queued.
