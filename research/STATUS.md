@@ -1,4 +1,8 @@
-# Current research status — 4 October 2026
+# Current research status — 5 October 2026
+
+## Checkpoint434 — Optimal kernel weight modulus
+
+[The optimal-modulus integration](research/editorial/sharp-kernel-weight-modulus-434.md) strengthens the existing normalized-kernel stability proposition and adds a smooth rank-one sharpness example. Complete scoped first/second reads pass with26 actual final images. Of1016 old proofs,1015 remain exact; one is strengthened and one is added. Original problem descriptions/statuses, manifests and451 protected files remain exact. The1211-page release and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Active house findings remain48 errors/169 warnings with no additions. Forty original directions remain open.
 
 ## Checkpoint433 — Optimal kernel weight modulus
 

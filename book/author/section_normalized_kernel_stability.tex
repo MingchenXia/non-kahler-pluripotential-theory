@@ -48,7 +48,7 @@ For $q,v,w\in C(X,\mathbb R)$, write $\operatorname{osc}_Xq=\sup_Xq-\inf_Xq$. Th
 Consequently
 \begin{equation}\label{eq:normalized-kernel-weight-stability}
  \|\mu_w-\mu_v\|_{\mathrm{TV}}
- \leq\min\left\{2,\frac m2\operatorname{osc}_X(w-v)\right\}.
+ \leq2\tanh\left(\frac m4\operatorname{osc}_X(w-v)\right).
 \end{equation}
 These bounds are independent of $N_m$. For a sequence of nonempty selected spaces, $m\operatorname{osc}_X(w_m-v_m)\to0$ makes the two probability sequences have the same weak or total-variation limit whenever either converges in that topology.
 \end{proposition}
@@ -71,7 +71,44 @@ $\langle\mathbf1_A,\mathcal Q_v\mathbf1_A\rangle\geq p^2$; the cross terms vanis
  \leq2\operatorname{osc}_Xq\,p(1-p)
  \leq\tfrac12\operatorname{osc}_Xq.
 \]
-Here total variation is the full signed-measure norm, the integral of the absolute density. This proves \eqref{eq:normalized-kernel-response-bound}. Integrating the derivative along the segment from $v$ to $w$ and using the distance bound two for probabilities proves \eqref{eq:normalized-kernel-weight-stability}. Its right-hand side tends to zero under the sequence hypothesis, which proves the final assertion.
+Here total variation is the full signed-measure norm, the integral of the absolute density. This proves \eqref{eq:normalized-kernel-response-bound}.
+
+For the global estimate take $q=w-v$, $v_t=v+tq$, $\mu_t=\mu_{v_t}$ and $\mathcal Q_t=\mathcal Q_{v_t}$ for $0\leq t\leq1$. Put $a=m\operatorname{osc}_Xq$. For any Borel set $E$, its probability $p_t=\mu_t(E)$ is differentiable, since integration against $\mathbf1_E$ is a bounded linear functional on measures in total variation. Selfadjointness gives
+\[
+ p'_t=-m\langle q,(I-\mathcal Q_t)\mathbf1_E\rangle_{L^2(\mu_t)}.
+\]
+The function $(I-\mathcal Q_t)\mathbf1_E$ has positive and negative parts whose integrals both equal $p_t-\langle\mathbf1_E,\mathcal Q_t\mathbf1_E\rangle$. Bounding $q$ between its infimum and supremum on those pieces, and applying positivity to $\mathbf1_E-p_t$, gives
+\[
+ |p'_t|\leq a\bigl(p_t-\langle\mathbf1_E,\mathcal Q_t\mathbf1_E\rangle\bigr)
+          \leq ap_t(1-p_t).
+\]
+Every kernel is positive precisely off the same common zero locus $Z_m$, so the probabilities $\mu_t$ are mutually absolutely continuous. If $p_0$ is zero or one, $p_t=p_0$ throughout. Otherwise $0<p_t<1$, and integration gives
+\[
+ \left|\log\frac{p_1}{1-p_1}-\log\frac{p_0}{1-p_0}\right|\leq a.
+\]
+With $\sigma(z)=\mathrm{e}^z/(1+\mathrm{e}^z)$, if $p_1\geq p_0$ and $z=\log(p_0/(1-p_0))$, then
+\[
+ p_1-p_0\leq\sigma(z+a)-\sigma(z)
+ =\frac{\sinh(a/2)}{\cosh(z+a/2)+\cosh(a/2)}
+ \leq\tanh(a/4).
+\]
+Swapping the endpoints handles the other order. The zero-mass signed difference has norm $2\sup_E|\mu_w(E)-\mu_v(E)|$, proving \eqref{eq:normalized-kernel-weight-stability}. Its right-hand side tends to zero under the sequence hypothesis, giving the final assertion.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{example}\label{ex:sharp-kernel-weight-modulus}\index{Bergman kernel!optimal oscillation modulus}
+For each $a>0$ and $m\geq1$, the bound \eqref{eq:normalized-kernel-weight-stability} is optimal as a supremum over smooth weights, already when the selected space has dimension one. On $X=\mathbb P^1$, take the trivial line bundle with unit metric, selecting potential zero and normalized Fubini--Study area $\nu$. There are smooth real weights $w_j$ with $m\operatorname{osc}_Xw_j=a$ such that
+\[
+ \|\mu_{w_j}-\mu_0\|_{\mathrm{TV}}\longrightarrow2\tanh(a/4).
+\]
+\end{example}
+\begin{proof}
+The selected space consists of constants, so its probability at weight $u$ is $\mathrm{e}^{-mu}\nu/\int_X\mathrm{e}^{-mu}\,\mathrm{d}\nu$. Choose a spherical cap $E$ of mass $p=(1+\mathrm{e}^{a/2})^{-1}$. Its smooth boundary has zero area. Choose smooth cutoffs $0\leq\chi_j\leq1$, equal to one on an inner cap and zero outside an outer cap, converging almost everywhere to $\mathbf1_E$. Their oscillations are one. Put $w_j=-a\chi_j/m$. Bounded convergence of their exponential densities and positive normalizing constants gives total-variation convergence to
+\[
+ \frac{\mathrm{e}^{a\mathbf1_E}}{Z}\nu,
+ \qquad Z=1-p+\mathrm{e}^ap=\mathrm{e}^{a/2}.
+\]
+The limiting mass of $E$ is $1-p$. Its density exceeds one on $E$ and is less than one outside. Its distance from $\nu$ is therefore $2(1-2p)=2\tanh(a/4)$. The triangle inequality transfers this limit to the smooth weights. This proves supremal sharpness without an assertion of exact smooth attainment.
 \end{proof}
 
 At the inverse-degree scale, the analytic control also becomes independent of the selected-space dimension.

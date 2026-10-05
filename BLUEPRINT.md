@@ -1,5 +1,9 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint434 — Optimal kernel weight modulus
+
+[The optimal-modulus integration](research/editorial/sharp-kernel-weight-modulus-434.md) strengthens the existing normalized-kernel stability proposition and adds a smooth rank-one sharpness example. Complete scoped first/second reads pass with26 actual final images. Of1016 old proofs,1015 remain exact; one is strengthened and one is added. Original problem descriptions/statuses, manifests and451 protected files remain exact. The1211-page release and homepage description are live-verified. Fresh empty-source reconstruction passes; native preview remains unverified. Active house findings remain48 errors/169 warnings with no additions. Forty original directions remain open.
+
 ## Checkpoint433 — Optimal kernel weight modulus
 
 [The optimal-modulus review](research/editorial/sharp-kernel-weight-modulus-review-433.md) checks35 direct obligations. Log odds for each Borel set sharpen normalized-kernel stability to2 tanh(m osc(w-v)/4); smooth projective-line weights prove its optimality as a supremum. Complete first/second reads pass at the recorded scope. All334 book files,1016 proofs, both catalogues/manifests and451 protected files remain exact. No new external input, arXiv retrieval, author build, native call, publication or original-problem closure. Next: strengthen the existing proposition with a compact sharpness example.
