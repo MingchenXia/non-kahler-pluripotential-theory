@@ -1,5 +1,9 @@
 # Literature and verification ledger
 
+## 5 October2026 — Exact current intake446
+
+[The current intake and direct model review](editorial/ramified-root-first-jet-review-446.md) completely retrieves the eight new/recent lists and checks five exact abstracts: Dang2603.25520v2, Dinh–Nguyen–Nguyen2606.29680v2, Denisi–Höring2610.03048v1, Fino–Saavedra2610.02519v1 and Ge2610.03535v1. Their new primary proofs remain pending. Dang v1 is already cited and reconstructed in the current history chapter; the older statement below that it was not yet used records an earlier stage. Version2 and its added twisted-flow diameter statement are not yet adopted or bibliography-upgraded. Historical announcement/replacement gaps remain.
+
 Cutoff: 14 September 2026. Search snippets locate sources; they do not certify mathematical statements. Exact versions and theorem numbers must be entered after reading the paper. Absence of a search result is not proof of novelty or openness.
 
 | Key | Primary source | Status and use |
