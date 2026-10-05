@@ -1,0 +1,145 @@
+\section{Cotangent torsors on split elliptic ruled surfaces}
+\label{sec:elliptic-cotangent-torsor-classes}
+
+Let $E=\mathbb C/\Lambda$, where $\Lambda=\mathbb Z+\mathbb Z\tau$ and $\operatorname{Im}\tau>0$. Write $\theta$ for the holomorphic one-form on $E$ whose pullback is $\mathrm{d}z$. On a complex manifold $Y$, a holomorphic vector bundle extension
+\[
+ 0\longrightarrow\Omega_Y^1\longrightarrow W
+       \xrightarrow{\epsilon}\mathcal O_Y\longrightarrow0,
+\]
+defines the affine bundle $T_W=\epsilon^{-1}(1)$ modeled on $\Omega_Y^1$. Its class is represented by the differences $s_j-s_i$ of local holomorphic lifts of $1$.
+
+\begin{lemma}\label{lem:elliptic-additive-class}
+Choose local lifts $z_i:U_i\to\mathbb C$ of $E$, and on each component of an overlap write
+\[
+ z_i-z_j=m_{ij}\tau+n_{ij},\qquad m_{ij},n_{ij}\in\mathbb Z.
+\]
+The cocycle $\{m_{ij}\theta\}$ defines a nonzero class $\eta\in H^1(E,\Omega_E^1)$, and this class spans that space.
+\end{lemma}
+\begin{proof}
+Consider the vector bundle obtained from $\mathbb C_z\times\mathbb C_a\times\mathbb C_b$ by the action
+\[
+ (m\tau+n)\cdot(z,a,b)=(z+m\tau+n,a+mb,b).
+\]
+Its quotient map to $b$ gives an extension of $\mathcal O_E$ by $\Omega_E^1$, identifying the kernel coordinate $a$ with $a\theta$. The local lifts $s_i=(z_i,0,1)$ satisfy $s_j-s_i=m_{ij}\theta$, by expressing $s_i$ in the frame over $z_j$. Thus the extension has class $\eta$.
+
+If it split, its pulled-back holomorphic lift of $1$ would have the form $(z,h(z),1)$ with $h$ entire and
+\[
+ h(z+1)=h(z),\qquad h(z+\tau)=h(z)+1.
+\]
+The derivative $h'$ would be lattice periodic, hence constant by the maximum principle on the compact torus. The first identity then forces that constant to be zero, contradicting the second identity. Hence $\eta\ne0$. Serre duality on the compact connected curve gives $H^1(E,\Omega_E^1)\simeq H^0(E,\mathcal O_E)^*\simeq\mathbb C$, proving the spanning assertion.
+\end{proof}
+
+\begin{lemma}\label{lem:elliptic-degree-automorphy-normalization}
+Every holomorphic line bundle $A$ of positive degree $d$ on $E$ admits factors
+\[
+ b_{m\tau+n}(z)=\chi_{m\tau+n}
+       \exp\bigl(-\pi\mathrm{i}d(m^2\tau+2mz)\bigr),
+\]
+where $\chi:\Lambda\to\mathrm U(1)$ is a character. In particular,
+\[
+ \frac{b_{m\tau+n}'(z)}{b_{m\tau+n}(z)}=-2\pi\mathrm{i}dm.
+\]
+\end{lemma}
+\begin{proof}
+Let $A_d$ be the $d$th tensor power of the degree-one bundle in \cref{ex:positive-elliptic-automorphy}. Its factors are the stated exponential factors and its degree is $d$. The bundle $F=A\otimes A_d^*$ has degree zero. Start with a smooth Hermitian metric on $F$. Its Chern curvature has integral zero. Solvability of the scalar Poisson equation on the flat compact torus supplies a smooth real function whose addition to the metric weight makes that curvature zero. The resulting Chern connection is flat and unitary.
+
+On the simply connected cover $\mathbb C$, parallel transport gives a global parallel unit frame of the pullback of $F$. It is holomorphic because the $(0,1)$ part of the Chern connection is the holomorphic structure. Each lattice element changes this frame by a constant unitary factor. These factors form a character. Tensoring with the given frame of $A_d$ supplies the factors for $A$. Differentiation gives the last formula.
+\end{proof}
+
+Put $M=\mathbb P_{\mathrm{lines}}(\mathcal O_E\oplus A)$ and let $f:M\to E$ be its projection. Let $C_\infty=\mathbb P_{\mathrm{lines}}(A)$. Use affine coordinates $t_i$ away from $C_\infty$ and $v_i=1/t_i$ away from the other section. Over $U_i\cap U_j$,
+\[
+ t_i=b_{ij}t_j,\quad v_i=b_{ij}^{-1}v_j,
+ \qquad b_{ij}=b_{m_{ij}\tau+n_{ij}}(z_j).
+\]
+Define $\xi\in H^1(M,\Omega_M^1)$ by the logarithmic cocycle of $\mathcal O_M(-C_\infty)$. More precisely, use its local defining functions $q_{i,0}=1$ and $q_{i,\infty}=v_i$ and the cocycle $\mathrm{d}\log(q_{j,b}/q_{i,a})$. This convention contains no factor $1/(2\pi\mathrm{i})$.
+
+\begin{lemma}\label{lem:split-elliptic-cotangent-cohomology}
+There is a direct sum
+\[
+ H^1(M,\Omega_M^1)=\mathbb C\xi\oplus\mathbb C f^*\eta.
+\]
+The restriction of $c=\rho\xi+Kf^*\eta$ to any ruling fiber is nonzero exactly when $\rho\ne0$.
+\end{lemma}
+\begin{proof}
+The relative cotangent sequence is
+\[
+ 0\longrightarrow f^*\Omega_E^1\longrightarrow\Omega_M^1
+      \longrightarrow\Omega_{M/E}^1\longrightarrow0.
+\]
+The two affine charts of a projective line compute
+\[
+ f_*\mathcal O_M=\mathcal O_E,\quad R^1f_*\mathcal O_M=0,
+ \qquad f_*\Omega_{M/E}^1=0,\quad
+ R^1f_*\Omega_{M/E}^1=\mathcal O_E.
+\]
+For the last identity, a Laurent cocycle $g(z,t)\,\mathrm{d}t$ is reduced, by forms holomorphic on the two charts, to its coefficient of $\mathrm{d}t/t$. Its residue is unchanged by $t_i=b_{ij}t_j$, with differentials taken relative to the base. Thus the local generators glue to the trivial line. For functions the two Laurent halves exhaust the cocycle, giving the vanishing of $R^1f_*\mathcal O_M$. The degree-zero direct images follow from the absence of nonconstant functions and holomorphic one-forms on $\mathbb P^1$.
+
+The Leray exact sequences and the one-dimensional base now give
+\[
+ H^1(M,f^*\Omega_E^1)\simeq H^1(E,\Omega_E^1),\quad
+ H^2(M,f^*\Omega_E^1)=0,\quad
+ H^1(M,\Omega_{M/E}^1)\simeq\mathbb C.
+\]
+The cotangent sequence consequently gives an exact sequence
+\[
+ 0\longrightarrow\mathbb C f^*\eta
+ \longrightarrow H^1(M,\Omega_M^1)\longrightarrow\mathbb C\longrightarrow0.
+\]
+On a fiber, the class $\xi$ is represented on the two affine charts by $\mathrm{d}\log v=-\mathrm{d}t/t$, whose residue is nonzero. It splits the sequence. The pulled-back base class restricts to zero, proving both assertions.
+\end{proof}
+
+\begin{theorem}\label{thm:split-elliptic-cotangent-torsor}
+Let $W$ be a holomorphic extension of $\mathcal O_M$ by $\Omega_M^1$ with class $c=\rho\xi+Kf^*\eta$, where $\rho\ne0$. Then $T_W$ is biholomorphic to the quotient in \cref{prop:elliptic-affine-quotient-nonstein}, with the factors of \cref{lem:elliptic-degree-automorphy-normalization} and
+\[
+ \kappa=2\pi\mathrm{i}d\rho.
+\]
+In particular, $T_W$ is not Stein and its universal cover is Stein. This applies to the canonical extension associated with any K\"ahler class on $M$.
+\end{theorem}
+\begin{proof}
+Over $\mathbb C_z\times\mathbb P^1$, glue two affine cotangent charts by
+\[
+ v=1/t,\qquad u_\infty=u,\qquad
+ y_\infty=-t^2y-\rho t.
+\]
+The linear part is the change of coefficients of $u\,\mathrm{d}z+y\,\mathrm{d}t$. If $s_0,s_\infty$ are the zero lifts in these charts, the affine term says
+\[
+ s_\infty-s_0=\rho\,\mathrm{d}v/v.
+\]
+For $\lambda=m\tau+n$, give the first chart the lattice action
+\[
+ (z,t,u,y)\longmapsto
+ \bigl(z+\lambda,b_\lambda(z)t,
+ u+Km-(b_\lambda'/b_\lambda)ty,y/b_\lambda(z)\bigr).
+\]
+Its linear fiber part is the transport of cotangent vectors under $(z,t)\mapsto(z+\lambda,b_\lambda(z)t)$. The factor identity and invariance of $ty$ give the group law. In the other chart it becomes
+\[
+ (z,v,u_\infty,y_\infty)\longmapsto
+ \bigl(z+\lambda,b_\lambda^{-1}v,
+ u_\infty+Km+(b_\lambda'/b_\lambda)(v y_\infty+\rho),
+ b_\lambda y_\infty\bigr),
+\]
+which is holomorphic also at $v=0$. The two formulas agree on their overlap. Lattice translation in $z$ gives a free properly discontinuous action.
+
+We compute the descended torsor class using the local lifts $z_i$. On the two types of base overlaps its zero lifts satisfy
+\[
+ \begin{aligned}
+ s_{j,0}-s_{i,0}&=Km_{ij}f^*\theta,\\
+ s_{j,\infty}-s_{i,\infty}
+   &=Km_{ij}f^*\theta+\rho\,\mathrm{d}\log(v_j/v_i).
+ \end{aligned}
+\]
+For a mixed overlap the same formulas and $s_{j,\infty}-s_{j,0}=\rho\,\mathrm{d}v_j/v_j$ give
+\[
+ s_{j,\infty}-s_{i,0}=Km_{ij}f^*\theta+\rho\,\mathrm{d}v_j/v_j.
+\]
+These are precisely the cocycles defining $Kf^*\eta+\rho\xi$. Two extensions with the same class have local splitting cocycles differing by a coboundary. Changing their local lifts by that coboundary identifies their inverse images of $1$. Thus this constructed torsor is $T_W$.
+
+Since $\rho\ne0$, set $Y=y/\rho$ and $Y_\infty=y_\infty/\rho$. Their transition is $Y_\infty=-t^2Y-t$. The maps
+\[
+ (t,Y)\longmapsto([1:t],[Y:tY+1]),\qquad
+ (v,Y_\infty)\longmapsto([v:1],[vY_\infty+1:Y_\infty])
+\]
+agree on overlaps and identify these charts with $Q$. In the first chart, $\sigma=tY=ty/\rho$. Substituting $b_\lambda'/b_\lambda=-2\pi\mathrm{i}dm$ gives the quotient action with $\kappa=2\pi\mathrm{i}d\rho$. The non-Stein assertion and the Stein universal cover follow from \cref{prop:elliptic-affine-quotient-nonstein}.
+
+Finally, a K\"ahler class has nonzero restriction to a ruling fiber, because its integral on that fiber is positive. Its cotangent extension therefore has $\rho\ne0$. For an extension $0\to\mathcal O_M\to V\to T_M\to0$ associated with this class, the dual extension has the negative of that class, so still has nonzero fiber restriction. The complement $\mathbb P(V)\setminus\mathbb P(T_M)$, using the quotient convention for projectivization, identifies with $\epsilon^{-1}(1)\subset V^*$: normalize a nonzero quotient functional to take value one on the distinguished copy of $\mathcal O_M$. This proves the final assertion.
+\end{proof}
