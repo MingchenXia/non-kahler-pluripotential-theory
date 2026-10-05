@@ -18,4 +18,6 @@ Current research-package checks pass all 2400 payload checksums in 2401 safe uni
 
 After validation, the private remote advances to 7a244bc4938c5b918f7d906c7201f9385e4188f4 with a supplied P07 product-equation source. Synchronization stops before staging, preserving all local work. The result is incoming evidence awaiting a complete independent mathematical review and book integration; no unrestricted P07 resolution or new Xean use is inferred. The reviewed 495 snapshot is preserved in a local commit before ordinary reconciliation.
 
+Ordinary reconciliation creates merge commit 965aa7767d9bc9436e4cefe4017d091c808e30e5. The only textual conflict is in the changelog; both coherent entries are retained. All five incoming paper/review/report files remain byte exact to the author commit. The P07 source remains an incoming result awaiting our full mathematical review; unrestricted P07 and the 38-open-direction count stay unchanged.
+
 Next: Integrate the three tautological-positivity proofs after homogeneous regularization, with exact classical-step attribution and Liu--Wan Lemma 3.4 locator; rebuild and publish, then review the polar-metric argument and stable ample geometry.
