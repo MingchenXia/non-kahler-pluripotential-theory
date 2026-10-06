@@ -1,0 +1,66 @@
+% Inactive research fragment; verification is recorded separately.
+\subsection{Nonpositive curvature and split Hopf complement indices}
+\label{subsec:split-hopf-complement-indices}
+
+Let $F\to B$ be a holomorphic bundle of rank $r\geq1$ on a connected compact complex manifold of dimension $n\geq1$, and put
+\[
+ U_F=\mathbb P(\mathcal O_B\oplus F)\setminus\mathbb P(\mathcal O_B).
+\]
+Use the smooth exhaustion definition of $q$-convexity in \cref{subsec:concave-neighbourhood-dual-norms} and the Chern curvature convention in \cref{subsec:projective-complement-curvature-index}. Nonpositive curvature makes the homogeneous plurisubharmonic obstruction applicable. Closed bundle restrictions give lower bounds when that curvature condition fails on the whole bundle.
+
+\begin{corollary}\label{cor:griffiths-nonpositive-exact-complement-index}
+If $F$ admits a smooth Hermitian metric $h$ with
+\[
+ h(R_h(u,\bar u)v,v)\leq0
+ \quad\text{for every }x\in B,\ u\in T_x^{1,0}B,\ v\in F_x,
+\]
+then the least smooth convexity index of $U_F$ is $n+r$.
+\end{corollary}
+\begin{proof}
+Put $G(v)=h(v,v)$. At $x\in B$, take a Chern-normal holomorphic frame and write a tangent vector to $F$ at $v\in F_x$ as $(u,w)$, with $u\in T_x^{1,0}B$ and $w\in F_x$. The calculation in the proof of \cref{lem:reciprocal-bundle-norm-levi} gives
+\[
+ \mathcal L_G(u,w)=-h(R_h(u,\bar u)v,v)+|w|_h^2\geq0,
+\]
+with zero mixed block. Thus $G$ is smooth and plurisubharmonic, positive off the zero section, and satisfies $G(cv)=|c|^2G(v)$. Apply \cref{prop:homogeneous-psh-sharp-complement-index}.
+\end{proof}
+
+\begin{lemma}\label{lem:closed-submanifold-complement-index-bound}
+Let $Y$ be a complex manifold of dimension $N$, and let $Z\subset Y$ be a closed complex submanifold of dimension $D\geq1$. If the least smooth convexity index of $Z$ is $\kappa\leq D$, then every smooth convexity index of $Y$ is at least $\kappa$.
+\end{lemma}
+\begin{proof}
+Suppose that $Y$ is $p$-convex for an integer $1\leq p<\kappa$. A smooth exhaustion $\psi$ has at least $N-p+1$ positive Levi eigenvalues outside a compact set $K\subset Y$. Its restriction to the closed submanifold is an exhaustion, since its sublevels are closed subsets of the compact sublevels of $\psi$. The set $K\cap Z$ is compact.
+
+At a point of $Z\setminus K$, choose a complex subspace $P\subset T^{1,0}Y$ of dimension $N-p+1$ on which the Levi form is positive definite. Then
+\[
+ \dim_{\mathbb C}(P\cap T^{1,0}Z)\geq (N-p+1)+D-N=D-p+1.
+\]
+The restricted Levi form is positive definite on this intersection, so it has at least $D-p+1$ positive eigenvalues. The holomorphic inclusion identifies it with the Levi form of $\psi|_Z$. Since $p<\kappa\leq D$, this proves $p$-convexity of $Z$, a contradiction.
+\end{proof}
+
+Fix now $n\geq2$, a real $0<q<1$, an integer $r\geq1$ and complex numbers $a_1,\ldots,a_r\ne0$. On the scalar Hopf manifold $X_q$ of \cref{ex:hopf-exact-complement-index}, take
+\[
+ F=\bigoplus_{j=1}^r E_{a_j},\qquad
+ b_j=-\frac{\log|a_j|}{\log q},\qquad
+ G(z,v)=\sum_{j=1}^r |z|^{2b_j}|v_j|^2.
+\]
+Here $E_{a_j}$ has the quotient rule $(z,v_j)\sim(qz,a_jv_j)$. Since $q^{2b_j}|a_j|^2=1$, $G$ descends to the squared norm of the direct-sum Hermitian metric on $F$.
+
+\begin{proposition}\label{prop:split-hopf-pure-complement-indices}
+The least smooth convexity index of $U_F$ is $r+1$ if every $|a_j|<1$, and $n+r$ if every $|a_j|\geq1$.
+\end{proposition}
+\begin{proof}
+Put $\alpha=\ddc\log|z|^2$. The calculation in \cref{ex:hopf-exact-complement-index} gives a semipositive form of rank $n-1$ with radial kernel. The direct-sum metric has diagonal curvature, and the normalized curvature evaluated at $v$ is
+\[
+ \frac{\mathrm i}{2\pi}h(F_hv,v)
+ =\left(\sum_{j=1}^r(-b_j)|z|^{2b_j}|v_j|^2\right)\alpha.
+\]
+If every $|a_j|<1$, then every $b_j<0$. The coefficient is strictly positive for $v\ne0$, so \cref{thm:bundle-curvature-complement-convexity} with $s=n-1$ makes $U_F$ $(r+1)$-convex. On any embedded elliptic fibre $C$ of $X_q\to\mathbb P^{n-1}$, each line metric has flat Chern connection by the logarithmic calculation in \cref{ex:hopf-exact-complement-index}. Their direct sum is flat. Hence \cref{cor:unitary-flat-exact-complement-index} gives least index $r+1$ for $U_{F|_C}$. This is a closed complex submanifold of $U_F$, being its inverse image over $C$. Apply \cref{lem:closed-submanifold-complement-index-bound} for the lower bound.
+
+If every $|a_j|\geq1$, then every $b_j\geq0$. For $v_j\ne0$, the function $|z|^{2b_j}|v_j|^2$ is plurisubharmonic by the logarithm and exponential calculation in \cref{ex:hopf-exact-complement-index}. It is smooth also at $v_j=0$, because $z\ne0$, and continuity of its complex Hessian preserves nonnegativity there. The sum $G$ is therefore plurisubharmonic on the covering total space and descends to $F$. It is positive on $F^\times$ and homogeneous of degree two under complex scalars. Apply \cref{prop:homogeneous-psh-sharp-complement-index}.
+\end{proof}
+
+For a mixed sum, let $t=\#\{j:|a_j|\geq1\}$ and assume $0<t<r$. If $\kappa(F)$ denotes the least smooth convexity index of $U_F$, then
+\[
+ \max\{r+1,n+t\}\leq\kappa(F)\leq n+r.
+\]
+Indeed, the same flat elliptic restriction gives the first lower bound. The direct sum of the $t$ noncontracting summands is a holomorphic subbundle $F_0\subset F$, and $U_{F_0}$ is closed in $U_F$ by the projective subbundle inclusion. Its least index is $n+t$ by \cref{prop:split-hopf-pure-complement-indices}; apply \cref{lem:closed-submanifold-complement-index-bound} again. The upper bound is \cref{thm:bundle-curvature-complement-convexity} at $s=0$. These bounds do not determine the mixed case's least index.
