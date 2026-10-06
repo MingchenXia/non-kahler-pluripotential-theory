@@ -14,7 +14,7 @@ Six independent audits re-read all changes and found no reviewer correction wron
 
 Build: clean, 1520 physical / 1492 printed pages, 117 references and 910 index entries. Pages inspected: the notation table, the Chapter 25 opening, the LCK flux statement, the Fujiki-class note in the historical notes, and the last index page.
 
-Publication: website commit 335edc6, PDF SHA-256 `ba538a54…`, with the remote blobs verified. Live GitHub Pages check pending at the time of this entry.
+Publication: website commit 335edc6, PDF SHA-256 `ba538a54…`, with the remote blobs verified. The live GitHub Pages PDF matches SHA-256 `ba538a54…`, and the live homepage shows "1492 pages. Updated October 6, 2026".
 
 Deferred items are listed in the record, for example the general-manifold source for mass invariance in closed backgrounds and an expert check of `thm:flat-anticanonical-neighborhood`. All 38 original directions remain open.
 
