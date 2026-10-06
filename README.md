@@ -1,6 +1,8 @@
 # Singularities in Hermitian pluripotential theory
 
-The [polar Finsler integration](research/editorial/polar-finsler-integration-500.md) adds plurisubharmonicity and strong convexity of dual polar norms, their ample smooth replacement and the scoped Gauduchon curvature obstruction. The actual website serves the verified 1320-page PDF and matching homepage description. Stable ample geometry and further related research are next; 38 original directions remain open.
+The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. The actual website serves the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
+
+The [polar Finsler integration](research/editorial/polar-finsler-integration-500.md) adds plurisubharmonicity and strong convexity of dual polar norms, their ample smooth replacement and the scoped Gauduchon curvature obstruction. At checkpoint 500, the actual website served the verified 1320-page PDF and matching homepage description. Stable ample geometry and further related research are next; 38 original directions remain open.
 
 The [P04 radial Gauduchon LCK integration](research/editorial/radial-gauduchon-lck-integration-498.md) gives existence and metric uniqueness for all smooth positive radial densities and negative Lee periods on scalar Hopf manifolds, with positive twisted potentials and non-Vaisman examples. General P04 remains open. At checkpoint 498, the actual website served the verified 1318-page PDF and matching homepage description.
 
