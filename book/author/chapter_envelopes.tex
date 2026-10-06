@@ -1,56 +1,60 @@
 \chapter{Envelopes and volumes of singularities}
 \label{chap:envelopes}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix an auxiliary Hermitian metric $\omega$ and a smooth positive volume form $\mathrm{d}V$.
+Throughout this chapter, $X$ is a connected compact complex manifold of dimension $n\geq1$, with an auxiliary Hermitian metric $\omega$ and a smooth positive volume form $\mathrm{d}V$, and $\theta$ denotes a smooth real $(1,1)$-form on $X$ whose positivity is specified in each section.
 
-A singularity type can contain potentials with different Monge--Amp\`ere masses. Its lower and upper volumes record this variation. Stretching a potential away from a reference gives a different test of its singularities: requiring a competitor for every finite stretch defines a relative envelope class without a mass condition.
+In a closed background, the non-pluripolar Monge--Amp\`ere mass of a potential depends only on its singularity type; this is what makes mass a tool for comparing singularities. In a nonclosed background, a bounded change of the potential can change the mass, and a singularity type may contain potentials of different, even infinite, masses. This chapter opens the part of the book on relative singularities and the equations they govern, and introduces two kinds of invariants that take this into account.
 
-Contact support supplies the measure estimates needed for domination. For a semipositive big background, a competitor in a smaller background then forces positive mass. The argument uses individual positivity and allows the infimum over bounded potentials to be zero. Conversely, the relative envelope class can contain potentials of infinite mass. The distinction between envelope conditions and mass bounds is essential for the prescribed-singularity equations of the next chapter.
+The first records the variation of mass: the lower and upper volumes $\underline{\operatorname{vol}}_\theta(u)$ and $\overline{\operatorname{vol}}_\theta(u)$ of a potential $u$ are the infimum and the supremum of the masses of all potentials of the same singularity type. The second replaces a mass condition by a condition on envelopes. Fix a reference potential $\varphi$. Stretching a potential $u$ away from $\varphi$ by a factor $b\geq1$ gives the obstacle $bu-(b-1)\varphi$, which is more singular than $u$ where $u$ lies below $\varphi$. The \emph{relative envelope class} $\mathcal E_\varphi$ consists of the potentials $u$ at least as singular as $\varphi$ for which every such stretched obstacle lies above some $\theta$-plurisubharmonic function. This class is convex and stable under finite rooftops, its members have the same singularity envelope as $\varphi$, and its definition involves no mass.
+
+The main tool is the contact property of envelopes: the Monge--Amp\`ere measure of an envelope is carried by the set where it touches its obstacle. Together with ordered contact, this gives the domination principle for bounded potentials in a semipositive background and bounds the measures of rooftop envelopes. For a semipositive big background and a model reference $\varphi$, a member $u$ of $\mathcal E_\varphi$ has a competitor in a smaller background $a\theta$, $0<a<1$; an envelope in the remaining big background $(1-a)\theta$ then has positive mass and transfers it to $u$ on the contact set. Thus every member of $\mathcal E_\varphi$ has positive mass. The argument uses only that each bounded potential has positive mass, so it applies even when the infimum of these masses is zero. Conversely, if the Hermitian metric $\omega$ does not have bounded mass, the relative envelope class of the zero potential contains potentials of infinite mass. The distinction between envelope conditions and mass bounds is essential for the equations with prescribed singularities in the next chapter. On $\mathbb C^n$, envelopes with logarithmic growth correspond to envelopes on $\mathbb P^n$, and there the contact of the regularized envelope with its obstacle depends on the growth parameter in a precise way.
+
+We use the following notation from \cref{chap:framework}. For quasi-plurisubharmonic functions $u,v$, we write $u\preceq v$ if $u\leq v+C$ for a constant $C$, and $u\sim v$ if $u\preceq v$ and $v\preceq u$; the equivalence class of $u$ is its \emph{singularity type} (\cref{def:singularity-order}). For an obstacle $f$, the envelope $P_\theta(f)$ is the upper semicontinuous regularization of the supremum of all $v\in\PSH(X,\theta)$ with $v\leq f$ quasi-everywhere; it may be identically $-\infty$, and then it does not belong to $\PSH(X,\theta)$. For $u,v\in\PSH(X,\theta)$, the rooftop envelope is $P_\theta(u,v)=P_\theta(\min(u,v))$, and $V_\theta=P_\theta(0)$ is the potential with minimal singularities; see \cref{sec:obstacle-envelopes}. The singularity envelope $P_\theta[u]$, its variant $P_{\theta,F}[u]$ with a smooth obstacle $F$, and envelope fixed points, that is, potentials with $P_\theta[u]=u$, are defined in \cref{def:singularity-envelope}. We write $\theta_u=\theta+\ddc u$ and $\omega_u=\omega+\ddc u$. For $u\in\PSH(X,\theta)$, $\mathrm{MA}_\theta(u)$ denotes the extended Monge--Amp\`ere measure $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ of \cref{thm:arbitrary-extended-ma}. It is the Bedford--Taylor measure $(\theta+\ddc u)^n$ when $u$ is bounded, it puts no mass on pluripolar sets, and its total mass, the \emph{extended mass} of $u$, may be infinite.
 
 \section{Contact sets}
 
-An envelope's measure is concentrated where it meets its obstacle. For a smooth obstacle, exponential equations approximate the envelope and their densities vanish in the limit on every region with a strict gap. Bounded-product continuity carries this property through quasi-continuous approximation and truncation.
+The Monge--Amp\`ere measure of an envelope is concentrated on the contact set, where the envelope meets its obstacle. For a smooth obstacle and a Hermitian background, the envelope is the uniform limit of solutions of exponential equations whose densities tend to zero wherever the envelope stays strictly below the obstacle. Continuity of bounded products then carries this property to quasi-continuous obstacles, first bounded ones, through monotone approximation, and then general ones, through truncation.
 
 \input{author/section_bounded_contacts}
 
 \Needspace{8\baselineskip}
 \begin{theorem}
 \label{thm:envelope-contact}\index{Contact set!envelope}
-Let $\theta\geq0$ be smooth. If $f$ is quasi-continuous and $p=P_\theta(f)$ is a genuine potential, then $p\leq f$ quasi-everywhere and
+Let $\theta$ be smooth and semipositive, and let $f$ be a quasi-continuous obstacle. If $p=P_\theta(f)$ is not identically $-\infty$, then $p\leq f$ quasi-everywhere and
 \[
  \mathbf1_{\{p<f\}}\mathrm{MA}_\theta(p)=0.
 \]
-The total extended mass is allowed to be infinite.
+Here the total extended mass of $p$ may be infinite.
 \end{theorem}
 \begin{proof}
-The local envelope theorem and a countable Choquet family give $p\leq f$ outside a pluripolar set. Choose $M>\sup_Xp$ and replace $f$ by $\min(f,M)$. This does not change its envelope: $p$ itself is a competitor for the smaller obstacle. It suffices to prove support on the contact set for this smaller obstacle, because $p<M$ and therefore it has the same contact set as the original one.
+The local envelope theorem, applied to a countable family realizing the supremum (Choquet's lemma), gives $p\leq f$ outside a pluripolar set. Choose $M>\sup_Xp$ and replace $f$ by $\min(f,M)$. This does not change the envelope, since $p$ itself is a competitor for the smaller obstacle. Since $p<M$, the contact set is also unchanged, so it suffices to prove the theorem for the smaller obstacle; that is, we may assume that $f$ is bounded above.
 
-Set $f_j=\max(f,-j)$ and $p_j=P_\theta(f_j)$. The constants $-j$ are admissible, so $p_j$ is bounded. \Cref{thm:bounded-contact-support} gives $p_j\leq f_j$ quasi-everywhere and
+Set $f_j=\max(f,-j)$ and $p_j=P_\theta(f_j)$. The constants $-j$ are competitors, so $p_j$ is bounded. \Cref{thm:bounded-contact-support} gives $p_j\leq f_j$ quasi-everywhere and
 \[
  \mathbf1_{\{p_j<f_j\}}\mathrm{MA}_\theta(p_j)=0.
 \]
-The sequence $p_j$ decreases and stays above $p$. Its limit is a genuine $\theta$-plurisubharmonic function, lies below $f$ quasi-everywhere, and is therefore a competitor for $p$. Hence $p_j\downarrow p$.
+The sequence $p_j$ decreases and stays above $p$. Its limit is therefore $\theta$-plurisubharmonic, it lies below $f$ quasi-everywhere, and so it is a competitor for $p$. Hence $p_j\downarrow p$.
 
-Fix an integer $k\geq1$ and $C>0$. Define the bounded nonnegative quasi-continuous function
+Fix an integer $k\geq1$ and $C>0$, and define the bounded nonnegative quasi-continuous function
 \[
  H_{k,C}=\min\{1,(f-p_k)_+\}\,
                   \min\{1,(p+C)_+\}.
 \]
-Values on pluripolar exceptional sets are immaterial. Where this coefficient is positive, $p_k<f$ and $p>-C$. For $j\geq k$, we then have
-$p_j\leq p_k<f\leq f_j$ and $p_j\geq p>-C$. Locality and \cref{thm:bounded-contact-support} imply
+Its values on pluripolar sets are immaterial. Where this coefficient is positive, $p_k<f$ and $p>-C$. For $j\geq k$, we then have
+$p_j\leq p_k<f\leq f_j$ and $p_j\geq p>-C$ there. Plurifine locality and \cref{thm:bounded-contact-support} therefore imply
 \[
  \int_X H_{k,C}\,
        \mathrm{MA}_\theta(\max(p_j,-C))=0.
 \]
-The truncated potentials are uniformly bounded and decrease to $\max(p,-C)$. Their measures converge weakly by bounded Bedford--Taylor continuity. The uniform capacity bounds and weighted convergence in \cref{sec:hermitian-capacity} also allow testing against $H_{k,C}$. Hence the displayed identity holds with $p$ in place of $p_j$.
-By locality this says that the extended measure of $p$ vanishes on
-$\{p_k<f\}\cap\{p>-C\}$. These sets increase to $\{p<f\}$ off the pole set when first $k$ and then $C$ tend to infinity. Continuity from below of positive measures proves the assertion, even if the total extended mass is infinite.
+The truncated potentials are uniformly bounded and decrease to $\max(p,-C)$, so their measures converge weakly by bounded Bedford--Taylor continuity. The uniform capacity bounds and the weighted convergence in \cref{sec:hermitian-capacity} also allow testing against $H_{k,C}$. Hence the last identity holds with $p$ in place of $p_j$.
+By plurifine locality, this says that the extended measure of $p$ vanishes on
+$\{p_k<f\}\cap\{p>-C\}$. Off the pole set of $p$, these sets increase to $\{p<f\}$ as first $k$ and then $C$ tend to infinity. Continuity of positive measures along increasing sequences proves the assertion, even if the total extended mass is infinite.
 \end{proof}
 
-For a smooth big background, a strict singular barrier replaces the constant lower truncations. The same contact assertion for quasi-continuous obstacles finite almost everywhere is proved in \cref{thm:big-general-envelope-contact}, using local homogeneous replacements. Combining that result, or \cref{thm:envelope-contact} in a semipositive background, with ordered contact controls rooftop measures. The strict inequality in the first term below assigns the common contact set to the second term.
+For a smooth big background, constants need not be competitors, and a strictly $\theta$-plurisubharmonic barrier with poles replaces the constant lower truncations. The same contact property for quasi-continuous obstacles finite almost everywhere is proved in this setting in \cref{thm:big-general-envelope-contact}. Combined with ordered contact, either contact theorem controls the measures of rooftop envelopes. In the following bound, the strict inequality in the first term assigns the common contact set $\{p=u=v\}$ to the second term.
 
 \begin{proposition}\label{prop:rooftop-measure}\index{Envelope!rooftop}
-Let $\theta$ be a smooth real $(1,1)$-form that is semipositive or big, and let $u,v\in\PSH(X,\theta)$. If $p=P_\theta(u,v)$ is genuine, then
+Let $\theta$ be a smooth real $(1,1)$-form that is semipositive or big, and let $u,v\in\PSH(X,\theta)$. If $p=P_\theta(u,v)$ is not identically $-\infty$, then
 \[
  \mathrm{MA}_\theta(p)
  \leq\mathbf1_{\{p=u<v\}}\mathrm{MA}_\theta(u)
@@ -58,46 +62,46 @@ Let $\theta$ be a smooth real $(1,1)$-form that is semipositive or big, and let 
 \]
 \end{proposition}
 \begin{proof}
-The envelope is below both obstacles; their upper semicontinuity gives this inequality everywhere. Its measure is supported on $\{p=\min(u,v)\}$ by the contact theorem. Partition this set into $\{p=u<v\}$ and $\{p=v\}$. On each part apply \cref{prop:ordered-contact-general}. All measures vanish on the pluripolar pole sets, which can be discarded throughout.
+The envelope lies below both obstacles quasi-everywhere, hence everywhere, since the obstacles are upper semicontinuous. By the contact theorem (\cref{thm:envelope-contact} or \cref{thm:big-general-envelope-contact}), its measure is carried by $\{p=\min(u,v)\}$. Partition this set into $\{p=u<v\}$ and $\{p=v\}$, and apply \cref{prop:ordered-contact-general} on each part. All measures vanish on the pluripolar pole sets, which can therefore be discarded throughout.
 \end{proof}
 
 \begin{proposition}\label{prop:fixed-point-finite}
-Let $\theta\geq0$ be smooth. Every envelope fixed point $\varphi$ satisfies
+Let $\theta$ be smooth and semipositive. Every envelope fixed point $\varphi$ satisfies
 \[
  \mathrm{MA}_\theta(\varphi)
  \leq\mathbf1_{\{\varphi=0\}}\theta^n.
 \]
-In particular, its mass is finite.
+In particular, its extended mass is finite.
 \end{proposition}
 \begin{proof}
-Since $\varphi\leq0$, it is a competitor for $P_\theta(\varphi+1,0)$. This rooftop is also at most $P_\theta[\varphi]=\varphi$, so it equals $\varphi$. Apply \cref{prop:rooftop-measure}. The contact set $\{\varphi=\varphi+1<0\}$ is contained in the pole set, which the extended measure does not charge. Only contact with zero contributes, giving the asserted measure bound.
+Since $\varphi=P_\theta[\varphi]\leq0$, the function $\varphi$ is a competitor for $P_\theta(\varphi+1,0)$. This rooftop is also a competitor for $P_\theta[\varphi]=\varphi$, being at most $\varphi+1$ and at most zero, so it equals $\varphi$. Now apply \cref{prop:rooftop-measure} with $u=\varphi+1$ and $v=0$. The contact set $\{\varphi=\varphi+1<0\}$ is contained in the pole set of $\varphi$, which the extended measure does not charge. Only contact with zero contributes, and this gives the asserted bound.
 \end{proof}
 
 \input{author/section_affine_projective_envelopes}
 
 \section{Bounded domination in a semipositive background}
 
-Return to the connected compact complex manifold $X$ of dimension $n\geq1$.
+We return to the compact manifold $X$.
 
-The Hermitian domination theorem used above extends to a smooth semipositive background $\theta$ when every bounded $\theta$-plurisubharmonic potential has positive mass. For bounded potentials $u,v$ satisfying the measure inequality below, contact support bounds $\sup_XP_\theta(bu-(b-1)v)$ from below as the stretching parameter $b>1$ increases. A fixed gap between $u$ and $v$ would then force the normalized $L^1$ norms of these envelopes to diverge, contradicting compactness.
+The domination principle for Hermitian backgrounds, \cref{thm:bounded-strict-domination}, extends to a smooth semipositive background $\theta$ provided every bounded $\theta$-plurisubharmonic potential has positive mass. For bounded potentials $u,v$ satisfying the measure inequality below, contact support bounds $\sup_XP_\theta(bu-(b-1)v)$ from below as the stretching parameter $b>1$ increases. A fixed gap between $u$ and $v$ would then force the $L^1$ norms of these envelopes, normalized by their suprema, to diverge, contradicting compactness.
 
 \Needspace{5\baselineskip}
-Call a smooth semipositive form $\theta$ \emph{non-collapsing on bounded potentials} if
+We call a smooth semipositive form $\theta$ \emph{non-collapsing on bounded potentials} if
 \[
  \int_X\mathrm{MA}_\theta(w)>0
  \quad\hbox{for every }w\in\PSH(X,\theta)\cap L^\infty(X).
 \]
-Every Hermitian form has this property by \cref{cor:bounded-mass-positive}. Bigness also supplies it, by an envelope argument.
+Every Hermitian form has this property by \cref{cor:bounded-mass-positive}. Bigness also implies it, by the following envelope argument.
 
 \begin{proposition}\label{prop:big-noncollapsing}\index{Monge--Ampere mass@Monge--Amp\`ere mass!individual positivity}
-If a smooth real background $\theta$ is big, every bounded $u\in\PSH(X,\theta)$ has strictly positive Monge--Amp\`ere mass.
+If a smooth real $(1,1)$-form $\theta$ is big, every bounded $u\in\PSH(X,\theta)$ has strictly positive Monge--Amp\`ere mass.
 \end{proposition}
 \begin{proof}
-Choose $\rho\in\PSH(X,\theta)$ and $a>0$ with $\theta_\rho\geq a\omega$. Normalize $\rho\leq0$ and put
+Choose $\rho\in\PSH(X,\theta)$ and $a>0$ with $\theta_\rho\geq a\omega$, normalize $\rho\leq0$, and put
 \[
  p=P_{a\omega}(u-\rho).
 \]
-The obstacle is finite almost everywhere and bounded below, so \cref{lem:bounded-below-envelope} gives bounded $p$. The obstacle is quasi-continuous off a pluripolar set. Contact support, applied in the Hermitian background $a\omega$, gives $\mathrm{MA}_{a\omega}(p)$ carried by
+The obstacle is finite almost everywhere and bounded below, so \cref{lem:bounded-below-envelope} shows that $p$ is bounded. The obstacle is quasi-continuous off the pluripolar pole set of $\rho$. The contact theorem, \cref{thm:envelope-contact}, applied in the Hermitian background $a\omega$, shows that $\mathrm{MA}_{a\omega}(p)$ is carried by
 $D=\{p+\rho=u\}$, outside the pole set of $\rho$.
 
 By \cref{lem:qpsh-almost-everywhere-order}, $p+\rho\leq u$ everywhere, and
@@ -112,12 +116,12 @@ On common finite truncation levels, positivity of the mixed products and ordered
  \leq\mathbf1_D\mathrm{MA}_\theta(p+\rho)
  \leq\mathbf1_D\mathrm{MA}_\theta(u).
 \]
-Exhausting these levels proves the same inequalities for the extended measures. Since $p$ is bounded, its Hermitian Monge--Amp\`ere mass is positive by \cref{cor:bounded-mass-positive}. Integrating proves the assertion.
+Exhausting by these levels proves the same inequalities for the extended measures. Since $p$ is bounded, its Monge--Amp\`ere mass with respect to the Hermitian form $a\omega$ is positive by \cref{cor:bounded-mass-positive}. Integrating the inequalities proves the assertion.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{theorem}[Guedj--Lu]\label{thm:semipositive-bounded-domination}\index{Domination principle!bounded potentials}
-Let $\theta\geq0$ be non-collapsing on bounded potentials. Suppose $u,v\in\PSH(X,\theta)\cap L^\infty(X)$ and $0\leq c<1$. If
+Let $\theta\geq0$ be non-collapsing on bounded potentials. Suppose that $u,v\in\PSH(X,\theta)\cap L^\infty(X)$ and $0\leq c<1$. If
 \[
  \mathbf1_{\{u<v\}}\mathrm{MA}_\theta(u)
  \leq c\,\mathbf1_{\{u<v\}}\mathrm{MA}_\theta(v),
@@ -125,40 +129,40 @@ Let $\theta\geq0$ be non-collapsing on bounded potentials. Suppose $u,v\in\PSH(X
 then $u\geq v$.
 \end{theorem}
 \begin{proof}
-If the conclusion failed, choose $a>0$ such that $E=\{u<v-a\}$ is nonempty. This set has positive volume by \cref{lem:strict-set-positive-volume}. Fix $C$ with $|u|,|v|\leq C$.
+If the conclusion failed, we could choose $a>0$ such that $E=\{u<v-a\}$ is nonempty. This set has positive volume by \cref{lem:strict-set-positive-volume}. Fix $C$ with $|u|,|v|\leq C$.
 
 For $b>1$ define the bounded envelope
 \[
  w_b=P_\theta\bigl(bu-(b-1)v\bigr),\qquad
  D_b=\{w_b=bu-(b-1)v\}.
 \]
-Constants bounded below are competitors, since $\theta\geq0$. Bounded contact support gives $\mathrm{MA}_\theta(w_b)$ concentrated on $D_b$. The potential
-$b^{-1}w_b+(1-b^{-1})v$ lies below $u$ quasi-everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}, and equals $u$ on $D_b$ outside a pluripolar set. Ordered contact and positivity of the mixed terms give
+Since $\theta\geq0$, constants below the obstacle are competitors. By the bounded contact theorem, \cref{thm:bounded-contact-support}, the measure $\mathrm{MA}_\theta(w_b)$ is concentrated on $D_b$. The potential
+$b^{-1}w_b+(1-b^{-1})v$ lies below $u$ quasi-everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}, and it equals $u$ on $D_b$ outside a pluripolar set. Ordered contact and positivity of the mixed terms give
 \[
  \mathbf1_{D_b}\left[b^{-n}\mathrm{MA}_\theta(w_b)
               +(1-b^{-1})^n\mathrm{MA}_\theta(v)\right]
  \leq\mathbf1_{D_b}\mathrm{MA}_\theta(u).
 \]
-Choose $b$ sufficiently large that $(1-b^{-1})^n>c$. On $D_b\cap\{u<v\}$ this forces $\mathrm{MA}_\theta(w_b)=0$. Non-collapsing gives positive total mass for $w_b$, so some mass is carried by $D_b\cap\{u\geq v\}$. At a point of that set outside the exceptional pluripolar set,
+Choose $b$ so large that $(1-b^{-1})^n>c$. Then the hypothesis forces $\mathrm{MA}_\theta(w_b)=0$ on $D_b\cap\{u<v\}$. Since $\theta$ is non-collapsing, $w_b$ has positive total mass, so some of this mass is carried by $D_b\cap\{u\geq v\}$. At a point of this set outside the exceptional pluripolar set,
 \[
  w_b=bu-(b-1)v=u+(b-1)(u-v)\geq-C.
 \]
-Consequently $\sup_Xw_b\geq-C$, uniformly as $b\to\infty$.
+Consequently $\sup_Xw_b\geq-C$ for all large $b$.
 
-On the fixed set $E$, the obstacle bound gives
+On the other hand, on the fixed set $E$ the obstacle bound gives
 $w_b\leq C-(b-1)a$ quasi-everywhere. Hence
 \[
  \int_X|w_b-\sup_Xw_b|\,\mathrm{d}V
  \geq\bigl((b-1)a-2C\bigr)\operatorname{vol}_{\mathrm{d}V}(E)
 \]
-for all sufficiently large $b$. This contradicts the normalized $L^1$ bound of \cref{thm:normalized-compactness}.
+for all sufficiently large $b$. This contradicts the uniform $L^1$ bound for normalized potentials in \cref{thm:normalized-compactness}.
 \end{proof}
 
-Exponential comparison follows as in \cref{cor:bounded-exponential-comparison}. For unbounded potentials, the stretched envelopes must also be kept in the required singularity class; this is the role of the relative classes introduced below.
+The exponential comparison principle follows as in \cref{cor:bounded-exponential-comparison}. For unbounded potentials, the stretched envelopes must also be kept in the required singularity class; this is the role of the relative classes introduced below.
 
 \section{Upper and lower volumes}
 
-Let $\theta$ be any smooth real $(1,1)$-form. Taking the infimum and supremum of mass over an ordinary singularity type gives two invariants with values in $[0,+\infty]$. They can differ because a bounded change of potential need not preserve mass.
+Let $\theta$ be any smooth real $(1,1)$-form. Taking the infimum and the supremum of the mass over a singularity type gives two invariants with values in $[0,+\infty]$. They can differ, because a bounded change of potential need not preserve the mass.
 
 \begin{definition}\label{def:singularity-volumes}\index{Singularity volume!upper and lower}
 For $u\in\PSH(X,\theta)$, define
@@ -172,42 +176,43 @@ For $u\in\PSH(X,\theta)$, define
        \int_X\mathrm{MA}_\theta(v).
  \end{split}
 \]
-These are the lower and upper volumes of the singularity type of $u$ in the fixed background. We write $\underline{\operatorname{vol}}(\theta)$ and $\overline{\operatorname{vol}}(\theta)$ for their values at the potential $V_\theta$ with minimal singularities.
+These are the \emph{lower} and \emph{upper volumes} of the singularity type of $u$ in the background $\theta$. When $\PSH(X,\theta)$ is nonempty, we write $\underline{\operatorname{vol}}(\theta)$ and $\overline{\operatorname{vol}}(\theta)$ for their values at the potential $V_\theta$ with minimal singularities.
 \end{definition}
 
-\index{Positive lower mass!semipositive backgrounds}For semipositive $\theta$, the type of zero consists of the bounded potentials. Extending the lower mass in \cref{def:bmp} to this background gives
+\index{Positive lower mass!semipositive backgrounds}For semipositive $\theta$, the singularity type of the zero potential consists of the bounded potentials. Extending the lower mass of \cref{def:bmp} to this background, we put
 \[
  v_-(\theta)=\underline{\operatorname{vol}}_\theta(0)
  =\inf_{v\in\PSH(X,\theta)\cap L^\infty(X)}
                       \int_X\mathrm{MA}_\theta(v).
 \]
-The condition $v_-(\theta)>0$ is stronger than the non-collapsing property used in bounded domination: it requires one positive lower bound for every bounded potential. Comparison of singularity volumes under bounded mass is developed in \cref{chap:mass-bound-volumes}.
+The condition $v_-(\theta)>0$ is stronger than the non-collapsing property used in bounded domination: it requires a single positive lower bound for the masses of all bounded potentials. Singularity volumes under a bounded mass hypothesis are compared in \cref{chap:mass-bound-volumes}.
 
-The two volumes are invariant under bounded changes of $u$ by definition. They are also invariant under the smooth gauge change $(\theta,u)\mapsto(\theta+\ddc f,u-f)$, for $f\in C^\infty(X,\mathbb R)$: the map $v\mapsto v-f$ identifies the competitor currents and their measures. Scaling gives
+Both volumes are invariant under bounded changes of $u$, by definition. They are also invariant under the smooth change of decomposition $(\theta,u)\mapsto(\theta+\ddc f,u-f)$, for $f\in C^\infty(X,\mathbb R)$: the map $v\mapsto v-f$ identifies the competitors, their currents and their measures. Scaling gives
 \[
  \underline{\operatorname{vol}}_{t\theta}(tu)
   =t^n\underline{\operatorname{vol}}_\theta(u),\qquad
  \overline{\operatorname{vol}}_{t\theta}(tu)
   =t^n\overline{\operatorname{vol}}_\theta(u)\quad(t>0).
 \]
+
 \section{Relative envelope classes}
 
-Fix a reference $\varphi\in\PSH(X,\theta)$. Stretching a potential away from $\varphi$ makes the obstacle more singular when the potential lies below the reference. Requiring a competitor after every finite stretch gives a relative class stable under convex combinations and finite rooftops.
+Fix a reference potential $\varphi\in\PSH(X,\theta)$. For $b\geq1$, the stretched obstacle $bu-(b-1)\varphi=\varphi+b(u-\varphi)$ magnifies the difference between $u$ and $\varphi$ by the factor $b$, and so becomes more singular where $u$ lies below $\varphi$. Requiring a competitor below every finite stretch defines a relative class that is stable under convex combinations and finite rooftops.
 
-For $u\in\PSH(X,\theta)$ and $b\geq1$, define the competitor family
+For $u\in\PSH(X,\theta)$ and $b\geq1$, define the family of competitors
 \[
  \mathcal A_b(u,\varphi)=
  \left\{h\in\PSH(X,\theta):
  b^{-1}h+(1-b^{-1})\varphi\leq u\right\}.
 \]
-For $b=1$ the inequality means $h\leq u$. For $b>1$ the displayed sum of quasi-plurisubharmonic functions is defined also at poles. This notation avoids assigning a value to $bu-(b-1)\varphi$ at a common pole. When the family is nonempty, its upper envelope is denoted
+For $b=1$ the inequality means $h\leq u$. Away from the poles of $u$ and $\varphi$, the inequality means $h\leq bu-(b-1)\varphi$. The convex combination on the left is defined everywhere, so the definition does not require a value of $bu-(b-1)\varphi$ at common poles. When $\mathcal A_b(u,\varphi)$ is nonempty, we write
 \[
- Q_b(u,\varphi)=P_\theta(bu-(b-1)\varphi).
+ Q_b(u,\varphi)=P_\theta(bu-(b-1)\varphi)
 \]
-The finite-sublevel bound in \cref{sec:obstacle-envelopes} makes this a genuine potential whenever the competitor family is nonempty. The upper-envelope theorem gives the convex inequality almost everywhere, and \cref{lem:qpsh-almost-everywhere-order} makes it pointwise.
+for its upper envelope. By the bound in \cref{sec:obstacle-envelopes} for obstacles with a finite sublevel set of positive volume, $Q_b(u,\varphi)$ is then not identically $-\infty$. The upper-envelope theorem gives its defining inequality almost everywhere, and \cref{lem:qpsh-almost-everywhere-order} makes it pointwise; thus $Q_b(u,\varphi)$ is the largest member of $\mathcal A_b(u,\varphi)$.
 
 \begin{definition}\label{def:relative-envelope-class}\index{Relative envelope class}
-Define
+The \emph{relative envelope class} of $\varphi$ is
 \[
  \mathcal E_{\mathrm{env}}(X,\theta,\varphi)
  =\{u\in\PSH(X,\theta):u\preceq\varphi,
@@ -216,11 +221,11 @@ Define
 \]
 \end{definition}
 
-Write $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$.
+When the background $\theta$ is fixed, we abbreviate $\mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$.
 
 \begin{proposition}\label{prop:relative-elementary}\index{Relative envelope class!smooth gauge transport}
-The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all potentials equivalent to $\varphi$, and is stable under bounded changes of its members. If $u$ belongs to it, $v\in\PSH(X,\theta)$, $u\leq v$ and $v\preceq\varphi$, then $v$ belongs to it. In particular, it is stable under taking maxima of two members. Replacing $\varphi$ by an ordinarily equivalent member of $\PSH(X,\theta)$ does not change the class.
-For every smooth real $f$, one also has
+The class $\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ is convex, contains all potentials of the singularity type of $\varphi$, and is stable under bounded changes of its members. If $u$ belongs to it, $v\in\PSH(X,\theta)$, $u\leq v$ and $v\preceq\varphi$, then $v$ belongs to it. In particular, it is stable under maxima of two members. Replacing $\varphi$ by another member of $\PSH(X,\theta)$ of the same singularity type does not change the class.
+For every smooth real function $f$,
 \[
  u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)
  \quad\Longleftrightarrow\quad
@@ -228,15 +233,15 @@ For every smooth real $f$, one also has
 \]
 \end{proposition}
 \begin{proof}
-If $u\geq\varphi-C$, use $h=\varphi-bC$ for each $b$. More generally, if $u'\geq u-C$ and $h\in\mathcal A_b(u,\varphi)$, then $h-bC\in\mathcal A_b(u',\varphi)$. The singularity-order condition persists under bounded changes. Convex combinations of two competitors give competitors for the same convex combination of their target functions. Finally a competitor for $u$ is a competitor for any larger $v$; the assumed relation $v\preceq\varphi$ supplies the other defining condition.
+If $u\geq\varphi-C$, then $h=\varphi-bC$ belongs to $\mathcal A_b(u,\varphi)$ for each $b$. More generally, if $u'\geq u-C$ and $h\in\mathcal A_b(u,\varphi)$, then $h-bC\in\mathcal A_b(u',\varphi)$. Since the condition $u\preceq\varphi$ also persists under bounded changes, this proves the first two assertions about bounded changes and the singularity type of $\varphi$. A convex combination of two competitors is a competitor for the same convex combination of the two potentials, which proves convexity. Finally, a competitor for $u$ is a competitor for any larger $v$, and the assumption $v\preceq\varphi$ gives the remaining condition.
 
-If $\varphi'\in\PSH(X,\theta)$ and $\varphi'\sim\varphi$, choose $C\geq0$ with $|\varphi'-\varphi|\leq C$ off their common pole set. For $h\in\mathcal A_b(u,\varphi)$, the function $h-(b-1)C$ belongs to $\mathcal A_b(u,\varphi')$. The convex inequality holds off the poles and extends by \cref{lem:qpsh-almost-everywhere-order}. The reverse implication follows by interchanging the references, and $u\preceq\varphi$ is equivalent to $u\preceq\varphi'$.
+If $\varphi'\in\PSH(X,\theta)$ and $\varphi'\sim\varphi$, choose $C\geq0$ with $|\varphi'-\varphi|\leq C$ off their common pole set. For $h\in\mathcal A_b(u,\varphi)$, the function $h-(b-1)C$ belongs to $\mathcal A_b(u,\varphi')$: the required inequality holds off the poles, and it extends everywhere by \cref{lem:qpsh-almost-everywhere-order}. The reverse implication follows by interchanging the references, and $u\preceq\varphi$ is equivalent to $u\preceq\varphi'$.
 
-For the last assertion, $h\mapsto h-f$ is a bijection between the two potential spaces. It preserves ordinary order and transforms each stretching inequality into
+For the last assertion, note that $h\mapsto h-f$ is a bijection from $\PSH(X,\theta)$ onto $\PSH(X,\theta+\ddc f)$. It preserves the order $\preceq$ and transforms each stretching inequality into
 \[
  b^{-1}(h-f)+(1-b^{-1})(\varphi-f)\leq u-f.
 \]
-The identity holds also at poles because $f$ is smooth and finite. Thus the corresponding competitor families are in bijection for every $b\geq1$.
+This identity also holds at poles, because $f$ is smooth and finite. Thus the corresponding families of competitors are in bijection for every $b\geq1$.
 \end{proof}
 
 \begin{lemma}\label{lem:relative-stretch-closure}
@@ -247,68 +252,67 @@ Fix $b,s\geq1$ and put $h=Q_{bs}(u,\varphi)$. Its defining inequality gives, off
 \[
  s^{-1}h+(1-s^{-1})\varphi\leq bu-(b-1)\varphi.
 \]
-The left side is $\theta$-plurisubharmonic, so it is at most $Q_b(u,\varphi)$. Hence $h\in\mathcal A_s(Q_b(u,\varphi),\varphi)$ for every $s$. Also $Q_b(u,\varphi)\leq u\leq\varphi$. The inequalities between convex combinations extend across the poles by \cref{lem:qpsh-almost-everywhere-order}, proving the first assertion.
+The left-hand side is $\theta$-plurisubharmonic, so it is at most $Q_b(u,\varphi)$. Hence $h\in\mathcal A_s(Q_b(u,\varphi),\varphi)$ for every $s$. Also $Q_b(u,\varphi)\leq u\leq\varphi$, so $Q_b(u,\varphi)\preceq\varphi$. The inequalities between convex combinations extend across the poles by \cref{lem:qpsh-almost-everywhere-order}, which proves the first assertion.
 
-For the second assertion choose a constant $C$ such that $u-C\leq\varphi$ and $w-C\leq\varphi$. Translation reduces to $u,w\leq\varphi$. The obstacle for $Q_b(u,w)$ lies above that for $Q_b(u,\varphi)$ and below $u$, because $u\leq w\leq\varphi$. Thus
+For the second assertion, choose a constant $C$ such that $u-C\leq\varphi$ and $w-C\leq\varphi$. Since $Q_b(u-C,w-C)=Q_b(u,w)-C$ and class membership is unchanged by translation, we may assume $u,w\leq\varphi$. Because $u\leq w\leq\varphi$, the obstacle for $Q_b(u,w)$ lies above that for $Q_b(u,\varphi)$ and below $u$. Thus
 \[
  Q_b(u,\varphi)\leq Q_b(u,w)\leq u\leq\varphi.
 \]
-Upward stability of the relative class, proved in \cref{prop:relative-elementary}, gives the conclusion. Restoring the translation does not change class membership.
+Since $Q_b(u,\varphi)\in\mathcal E_\varphi$ by the first assertion, the stability under increase proved in \cref{prop:relative-elementary} gives the conclusion.
 \end{proof}
 
 \begin{proposition}\label{prop:relative-finite-rooftops}\index{Relative envelope class!finite rooftops}
-The rooftop of any nonempty finite collection of members of $\mathcal E_\varphi$ is genuine and belongs to $\mathcal E_\varphi$.
+If $u_1,\ldots,u_N\in\mathcal E_\varphi$, $N\geq1$, then the rooftop envelope $P_\theta(\min_iu_i)$ is not identically $-\infty$ and belongs to $\mathcal E_\varphi$.
 \end{proposition}
 \begin{proof}
-Let $u_1,\ldots,u_N\in\mathcal E_\varphi$, with $N\geq1$. A common constant translation reduces to $u_i\leq\varphi$. By \cref{lem:relative-stretch-closure,prop:relative-elementary},
+Adding a common constant to all $u_i$, we may assume $u_i\leq\varphi$. By \cref{lem:relative-stretch-closure,prop:relative-elementary},
 \[
  h=\frac1N\sum_{i=1}^N Q_N(u_i,\varphi)\in\mathcal E_\varphi.
 \]
-Each summand is at most $\varphi$. For every $i$, its defining inequality therefore gives
+Each summand is at most $\varphi$. For every $i$, the defining inequality of $Q_N(u_i,\varphi)$ therefore gives
 \[
  h\leq N^{-1}Q_N(u_i,\varphi)+(1-N^{-1})\varphi\leq u_i.
 \]
-These convex-combination inequalities are meaningful also at common poles. Thus $h$ is a competitor for $p=P_\theta(\min_i u_i)$, which is genuine and satisfies $h\leq p\leq u_1\preceq\varphi$. Upward stability gives $p\in\mathcal E_\varphi$. Restoring the translation preserves this conclusion.
+These inequalities between convex combinations also hold at common poles. Thus $h$ is a competitor for $p=P_\theta(\min_i u_i)$, so $p$ is not identically $-\infty$, and $h\leq p\leq u_1\preceq\varphi$. Stability under increase gives $p\in\mathcal E_\varphi$, and undoing the translation preserves this conclusion.
 \end{proof}
 
-The finiteness of the family is essential: every $\varphi-j$ belongs to $\mathcal E_\varphi$, whereas $P_\theta(\inf_{j\geq1}(\varphi-j))\equiv-\infty$. The common-envelope constructions for sequences in \cref{chap:relative-finite-measures} require additional estimates.
+The finiteness of the family is essential: every $\varphi-j$ belongs to $\mathcal E_\varphi$, whereas $P_\theta(\inf_{j\geq1}(\varphi-j))\equiv-\infty$. The constructions of common envelopes for sequences in \cref{chap:relative-finite-measures} require additional estimates.
 
 \Needspace{9\baselineskip}
 \begin{proposition}\label{prop:relative-envelope-equality}
-If $u\in\mathcal E_\varphi$, then for every smooth real obstacle $F$,
+If $u\in\mathcal E_\varphi$, then for every smooth real function $F$,
 \[
  P_{\theta,F}[u]=P_{\theta,F}[\varphi].
 \]
 In particular, $P_\theta[u]=P_\theta[\varphi]$.
 \end{proposition}
 \begin{proof}
-The relation $u\preceq\varphi$ gives one inequality. For $a\in(0,1)$ choose $h_a\in\PSH(X,\theta)$ with $a\varphi+(1-a)h_a\leq u$. Combining competitors below $F$ gives
+The relation $u\preceq\varphi$ gives $P_{\theta,F}[u]\leq P_{\theta,F}[\varphi]$. For the reverse inequality, let $a\in(0,1)$ and choose $h_a\in\mathcal A_{1/(1-a)}(u,\varphi)$, so that $a\varphi+(1-a)h_a\leq u$. Combining competitors below $F$ gives
 \[
  aP_{\theta,F}[\varphi]+(1-a)P_{\theta,F}[h_a]
  \leq P_{\theta,F}[u].
 \]
-Indeed, their convex combination lies below $F$ and is more singular than $u$; taking the two upper envelopes preserves the inequality by local regularization. Write $m=\min_XF$ and $M=\max_XF$. Translation of competitors gives
+Indeed, if $g_1$ and $g_2$ are competitors for $P_{\theta,F}[\varphi]$ and $P_{\theta,F}[h_a]$, then $ag_1+(1-a)g_2$ lies below $F$ and is at least as singular as $a\varphi+(1-a)h_a\leq u$; taking the two upper envelopes preserves the inequality, by local regularization. Write $m=\min_XF$ and $M=\max_XF$. Translating competitors gives
 \[
  P_\theta[h_a]+m\leq P_{\theta,F}[h_a]\leq P_\theta[h_a]+M.
 \]
-Every $P_\theta[h_a]$ has supremum zero, since it lies above $h_a-\sup_Xh_a$ and below zero. Normalized compactness therefore bounds the $L^1$ norms of $P_{\theta,F}[h_a]$ uniformly in $a$. Letting $a\uparrow1$ in the first inequality gives $P_{\theta,F}[\varphi]\leq P_{\theta,F}[u]$ almost everywhere. By \cref{lem:qpsh-almost-everywhere-order} the inequality is pointwise.
+Every $P_\theta[h_a]$ has supremum zero, since it lies above $h_a-\sup_Xh_a$ and below zero. The uniform $L^1$ bound for normalized potentials in \cref{thm:normalized-compactness} therefore bounds the $L^1$ norms of the $P_{\theta,F}[h_a]$ uniformly in $a$. Letting $a\uparrow1$ in the first inequality gives $P_{\theta,F}[\varphi]\leq P_{\theta,F}[u]$ almost everywhere, and by \cref{lem:qpsh-almost-everywhere-order} the inequality holds everywhere.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \section{Model references and positive mass}
 \label{sec:relative-envelope-room}
 
-Assume now that $\theta$ is semipositive and big. A competitor for $u$ in background $a\theta$, with $0<a<1$, leaves the big form $(1-a)\theta$ available. An envelope in that remaining background has positive mass and transfers it to $u$ on the contact set. To obtain such competitors throughout a relative class, take a reference satisfying
-
+In this section $\theta$ is semipositive and big. Suppose that a potential $u\in\PSH(X,\theta)$ has a competitor in a smaller background $a\theta$, $0<a<1$, that is, $P_{a\theta}(u)\not\equiv-\infty$. Then the big form $(1-a)\theta$ remains available: an envelope in this background has positive mass, and the contact property transfers this mass to $u$. To obtain such competitors for all members of a relative class, we use a reference $\varphi$ satisfying
 \begin{equation}\label{eq:als-model-condition}
  P_\theta[\varphi]=\varphi,\qquad
  P_{\varepsilon\theta}(\varphi)\not\equiv-\infty
  \quad\text{for some }0<\varepsilon<1.
 \end{equation}
-Fix one such $\varepsilon$. The difference envelope separates a member of $\mathcal E_\varphi$ from the reference, and stretching realizes that difference in an arbitrarily small background. Write $\mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0)$. Under bounded mass, \eqref{eq:li-model-condition} uses positive lower volume in place of the smaller-background condition; the comparison of these conditions belongs to that regime.
+We call such a $\varphi$ a \emph{model reference}\index{Model potential!model reference} and fix one such $\varepsilon$. Note that $\varphi=P_\theta[\varphi]\leq0$. For $u\in\mathcal E_\varphi$, the envelope of $u-\varphi$ belongs to the relative envelope class $\mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0)$ of the zero potential, and stretching realizes it in an arbitrarily small background. Under a bounded mass hypothesis, \cref{chap:mass-bound-volumes} uses instead the condition \eqref{eq:li-model-condition}, in which a positive lower volume replaces the condition on the smaller background; the two conditions are compared there.
 
 \begin{lemma}\label{lem:relative-difference-envelope}
-If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then
+Let $\varphi$ be a model reference. If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then
 \[
  w=P_\theta(u-\varphi)\in\mathcal E_0,
  \qquad w\leq0,
@@ -316,34 +320,34 @@ If $u\in\mathcal E_\varphi$ and $u\leq\varphi$, then
 \]
 \end{lemma}
 \begin{proof}
-Since $\varphi\leq0$, the potential $u$ is a competitor for the obstacle $u-\varphi$ away from its pole set. The envelope is genuine, bounded above by zero, and satisfies the asserted sum inequality by \cref{lem:qpsh-almost-everywhere-order}. For $b\geq1$, let $h_b=Q_b(u,\varphi)$. Then
+Since $\varphi\leq0$, the potential $u$ lies below the obstacle $u-\varphi$ away from the pole set of $\varphi$, so it is a competitor. Hence the envelope $w$ is not identically $-\infty$. It is at most zero, since $u-\varphi\leq0$, and it satisfies $w+\varphi\leq u$ off the poles, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}. For $b\geq1$, let $h_b=Q_b(u,\varphi)$. Then, off the poles,
 \[
  h_b\leq bu-(b-1)\varphi\leq b(u-\varphi).
 \]
-Semipositivity makes $b^{-1}h_b$ a $\theta$-plurisubharmonic competitor for $w$. Hence $h_b\leq bw$, supplying a competitor for $P_\theta(bw)$ for every $b$. This is exactly $w\in\mathcal E_0$.
+Since $\theta\geq0$, the function $b^{-1}h_b$ is $\theta$-plurisubharmonic, and so it is a competitor for $w$. Hence $h_b\leq bw$, so $\mathcal A_b(w,0)$ is nonempty for every $b$. Since also $w\leq0$, this means exactly that $w\in\mathcal E_0$.
 \end{proof}
 
 \begin{lemma}\label{lem:smaller-background-mass-lower}
-If $0<a<1$ and $q=P_{a\theta}(u)$ is genuine for $u\in\PSH(X,\theta)$, then
+Let $0<a<1$ and $u\in\PSH(X,\theta)$. If $q=P_{a\theta}(u)$ is not identically $-\infty$, then
 \[
- \int_X\mathrm{MA}_\theta(u)\geq(1-a)^n v_-(\theta).
+ \int_X\mathrm{MA}_\theta(u)\geq(1-a)^n v_-(\theta),
 \]
-The mass on the left is also strictly positive individually, even if $v_-(\theta)=0$.
+and the mass on the left is strictly positive, even when $v_-(\theta)=0$.
 \end{lemma}
 \begin{proof}
-The obstacle $u-q$ is nonnegative away from the poles. The bounded-below envelope lemma makes
-$p=P_{(1-a)\theta}(u-q)$ bounded. Its measure is carried by $D=\{p+q=u\}$, and $p+q\leq u$ everywhere. Positivity of mixed products and ordered contact imply
+The obstacle $u-q$ is nonnegative away from the poles, so by \cref{lem:bounded-below-envelope} the envelope
+$p=P_{(1-a)\theta}(u-q)$ is bounded. By the contact theorem, its measure is carried by $D=\{p+q=u\}$, and $p+q\leq u$ everywhere. Since $p+q$ is $\theta$-plurisubharmonic, positivity of mixed products and ordered contact imply
 \[
  \mathrm{MA}_{(1-a)\theta}(p)
  \leq\mathbf1_D\mathrm{MA}_\theta(p+q)
- \leq\mathbf1_D\mathrm{MA}_\theta(u).
+ \leq\mathbf1_D\mathrm{MA}_\theta(u),
 \]
-All assertions are first restricted away from the poles. Integrating and writing $p=(1-a)\widetilde p$ proves the lower bound from the definition of $v_-(\theta)$. The bounded potential $p$ has strictly positive mass by \cref{prop:big-noncollapsing}, since $(1-a)\theta$ is big. This proves the individual assertion as well.
+where all assertions are first restricted to the complement of the poles. Writing $p=(1-a)\widetilde p$ with $\widetilde p\in\PSH(X,\theta)\cap L^\infty(X)$ and integrating, we obtain the lower bound from the definition of $v_-(\theta)$. Finally, the bounded potential $p$ has strictly positive mass by \cref{prop:big-noncollapsing}, since $(1-a)\theta$ is big.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{theorem}\label{thm:relative-uniform-mass-lower}\index{Relative envelope class!positive mass}
-Every $u\in\mathcal E_\varphi$ admits a genuine $P_{(\varepsilon+\delta)\theta}(u)$ whenever $0<\delta<1-\varepsilon$. Consequently
+Let $\varphi$ be a model reference, with $\varepsilon$ as in \eqref{eq:als-model-condition}. For every $u\in\mathcal E_\varphi$ and every $0<\delta<1-\varepsilon$, the envelope $P_{(\varepsilon+\delta)\theta}(u)$ is not identically $-\infty$. Consequently,
 \[
  \int_X\mathrm{MA}_\theta(u)\geq(1-\varepsilon)^n v_-(\theta),
  \qquad \int_X\mathrm{MA}_\theta(u)>0.
@@ -351,17 +355,17 @@ Every $u\in\mathcal E_\varphi$ admits a genuine $P_{(\varepsilon+\delta)\theta}(
 The mass may be infinite.
 \end{theorem}
 \begin{proof}
-Translate $u$ below $\varphi$ and use $w\in\mathcal E_0$ from \cref{lem:relative-difference-envelope}. The potential
+After adding a constant to $u$, we may assume $u\leq\varphi$. Let $w\in\mathcal E_0$ be as in \cref{lem:relative-difference-envelope}. Since $w\in\mathcal E_0$, the envelope $P_\theta(w/\delta)$ is not identically $-\infty$, and $\delta P_\theta(w/\delta)\leq w$. The potential
 \[
  P_{\varepsilon\theta}(\varphi)+\delta P_\theta(w/\delta)
  \leq\varphi+w\leq u
 \]
-has background $(\varepsilon+\delta)\theta$. It supplies the asserted competitor. Apply \cref{lem:smaller-background-mass-lower} and let $\delta\downarrow0$ for the uniform estimate. The individual conclusion follows by taking any one such $\delta$.
+belongs to $\PSH(X,(\varepsilon+\delta)\theta)$, so it is a competitor for $P_{(\varepsilon+\delta)\theta}(u)$. Applying \cref{lem:smaller-background-mass-lower} with $a=\varepsilon+\delta$ and letting $\delta\downarrow0$ gives the uniform estimate. The positivity follows from the same lemma with any one such $\delta$.
 \end{proof}
 
 \section{Infinite mass inside the envelope class}
 
-Return to the Hermitian background $\omega$ and reference zero. The infinite-mass series of \cref{thm:infinite-mass-witness} splits into a smooth finite sum and a tail whose negative curvature bound tends to zero. Multiplying a sufficiently late tail supplies a competitor for any prescribed stretch, placing the series in the relative envelope class.
+We now take the Hermitian background $\theta=\omega$ and the reference $\varphi=0$. If $\omega$ does not have the bounded mass property, that is, if the upper mass $v_+(\omega)$ of \cref{def:bmp} is infinite, then the series constructed in \cref{thm:infinite-mass-witness} has infinite mass. It splits into a smooth finite sum and a tail whose curvature is bounded below by an arbitrarily small multiple of $-\omega$. Multiplying a sufficiently late tail by the stretching factor gives a competitor for that stretch, so the series lies in the relative envelope class of zero.
 
 \begin{proposition}\label{prop:infinite-envelope-class}\index{Relative envelope class!infinite mass}
 If $v_+(\omega)=+\infty$, the potential $U$ in \cref{thm:infinite-mass-witness} can be chosen so that, in addition,
@@ -378,19 +382,19 @@ Use the smooth nonpositive $\omega$-plurisubharmonic functions $u_j$, $j\geq1$, 
  A_N=\sum_{j\leq N}2^{-j}u_j,\qquad
  V_N=\sum_{j>N}2^{-j}u_j,\qquad \delta_N=2^{-N}.
 \]
-The head $A_N$ is smooth, and the decreasing finite sums of the tail give $V_N\in\PSH(X,\delta_N\omega)$. The identity $U=A_N+V_N$ makes each tail genuine.
+The head $A_N$ is smooth, and since the finite partial sums of the tail decrease, $V_N\in\PSH(X,\delta_N\omega)$; the tail is not identically $-\infty$, because $U=A_N+V_N$ is not.
 
 Fix $b>1$ and choose $N$ so large that $b\delta_N\leq1$. Then
 \[
  h_b=bV_N+\min_X(bA_N)
 \]
-is $\omega$-plurisubharmonic: its curvature is bounded below by $-b\delta_N\omega\geq-\omega$. Moreover $h_b\leq bU$. This gives a member of $\mathcal A_b(U,0)$ for every $b$, proving the relative-class assertion. For $\varepsilon U$, use the tails $\varepsilon V_N$ and choose $N$ with $b\varepsilon\delta_N\leq1$. By \cref{prop:relative-envelope-equality}, the ordinary envelope of each of these potentials is $P_\omega[0]=0$. Their infinite mass and trivial multiplier ideals are supplied by \cref{cor:bmp-characterization}.
+is $\omega$-plurisubharmonic, because $\ddc h_b\geq-b\delta_N\omega\geq-\omega$. Moreover, $h_b\leq bU$. Thus $h_b\in\mathcal A_b(U,0)$ for every $b$, and since $U\leq0$, this proves $U\in\mathcal E_{\mathrm{env}}(X,\omega,0)$. For $\varepsilon U$, use the tails $\varepsilon V_N$, and choose $N$ with $b\varepsilon\delta_N\leq1$. By \cref{prop:relative-envelope-equality}, the singularity envelope of each of these potentials is $P_\omega[0]=0$. Their infinite mass and trivial multiplier ideals are given by \cref{cor:bmp-characterization}.
 \end{proof}
 
-The finite-mass bound of \cref{prop:fixed-point-finite} concerns the envelope fixed point itself. This example shows that equality of ordinary envelopes, even together with trivial multiplier ideals at every positive weight, does not give finite mass to its representatives.
+The bound on the mass in \cref{prop:fixed-point-finite} concerns the envelope fixed point itself. This example shows that potentials with the same singularity envelope as a fixed point, even with trivial multiplier ideals at every positive weight, need not have finite mass.
 
 \begin{corollary}\label{cor:bmp-relative-finiteness}
-The following are equivalent for a Hermitian metric $\omega$:
+The following conditions on a Hermitian metric $\omega$ are equivalent:
 \begin{enumerate}
 \item $v_+(\omega)<+\infty$;
 \item every member of $\mathcal E_{\mathrm{env}}(X,\omega,0)$ has finite extended mass;
@@ -398,5 +402,5 @@ The following are equivalent for a Hermitian metric $\omega$:
 \end{enumerate}
 \end{corollary}
 \begin{proof}
-Bounded mass gives finiteness for all $\omega$-plurisubharmonic functions by \cref{prop:bmp-finite}. If it fails, \cref{prop:infinite-envelope-class} contradicts each of the other two assertions.
+If $v_+(\omega)<+\infty$, all $\omega$-plurisubharmonic functions have finite extended mass by \cref{prop:bmp-finite}. If $v_+(\omega)=+\infty$, \cref{prop:infinite-envelope-class} contradicts each of the other two conditions.
 \end{proof}
