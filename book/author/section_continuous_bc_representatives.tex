@@ -2,13 +2,13 @@
 \section{Continuous representatives and pullback}
 \label{sec:continuous-bc-representatives}
 
-A finite divisorial sum pulls back by its local equations. Passing to an infinite sum requires continuity for closed positive currents whose Bott--Chern classes may vary. A scalar Gauduchon equation selects a smooth representative in each class; the complementary normalized potentials then converge in $L^1$, where the pullback theorem of \cref{lem:modification-lone-pullback} applies.
+A finite divisorial sum is pulled back through the local equations of its divisors. For an infinite sum we need pullback to be continuous on closed positive currents whose Bott--Chern classes vary. Solving a scalar equation for the Gauduchon trace selects a smooth representative in each class; the complementary normalized potentials then converge in $L^1$, and \cref{lem:modification-lone-pullback} shows that their pullbacks converge as well.
 
-Fix a Gauduchon metric $\gamma$ on a connected compact complex manifold $Y$ of dimension $n\geq1$. In dimension one any Hermitian metric will do. Fix smooth norms on tensor fields induced by $\gamma$. Put $V_\gamma=\int_Y\gamma^n$ and, for a real $(1,1)$-form or current $B$, define the scalar trace by
+In this section, $Y$ denotes an arbitrary connected compact complex manifold of dimension $n\geq1$, and $\gamma$ is a Gauduchon metric on $Y$; in dimension one, any Hermitian metric will do. Fix smooth norms on tensor fields induced by $\gamma$. Put $V_\gamma=\int_Y\gamma^n$ and, for a real $(1,1)$-form or current $B$, define its \emph{scalar trace} $\sigma_\gamma(B)$ by
 \[
  \sigma_\gamma(B)\,\gamma^n=B\wedge\gamma^{n-1}.
 \]
-For a current this is an identity of distributions. We use the classical elliptic Fredholm theorem, regularity, and the continuity on distributions of the normalized elliptic inverse, as in the proof of \cref{thm:gauduchon}.
+For a current this is an identity of distributions. As in the proof of \cref{thm:gauduchon}, we use the classical elliptic Fredholm theorem, elliptic regularity, and the continuity on distributions of the normalized elliptic inverse.
 
 \Needspace{18\baselineskip}
 \begin{lemma}\label{lem:constant-trace-bc-representative}\index{Bott--Chern class!constant-trace representative}
@@ -17,85 +17,83 @@ Every closed real $(1,1)$-current $T$ has a unique decomposition
  T=B_\gamma(T)+\ddc v_\gamma(T),\qquad
  \int_Yv_\gamma(T)\,\gamma^n=0,
 \]
-where $v_\gamma(T)$ is a real distribution and $B_\gamma(T)$ is a smooth closed real form with constant scalar trace. Both assignments are linear and continuous from weak convergence of currents to convergence of distributions. The forms $B_\gamma(T)$ lie in a finite-dimensional space, and their convergence is in $C^\infty$.
+where $v_\gamma(T)$ is a real distribution and $B_\gamma(T)$ is a smooth closed real form with constant scalar trace. Both assignments are linear and continuous from weak convergence of currents to convergence of distributions. The forms $B_\gamma(T)$ lie in a finite-dimensional space, and their convergence takes place in $C^\infty$.
 
-That space maps isomorphically to $H^{1,1}_{\mathrm{BC}}(Y,\mathbb R)$. If $T\geq0$, then $v_\gamma(T)$ is quasi-plurisubharmonic. On the cone of positive closed currents its dependence on $T$ is continuous in $L^1$, and for every nonnegative integer $l$,
+This space maps isomorphically onto $H^{1,1}_{\mathrm{BC}}(Y,\mathbb R)$. If $T\geq0$, then $v_\gamma(T)$ is quasi-plurisubharmonic. On the cone of positive closed currents, $v_\gamma(T)$ depends continuously on $T$ in $L^1$, and for every nonnegative integer $l$,
 \begin{equation}\label{eq:constant-trace-representative-bound}
  \|B_\gamma(T)\|_{C^l}+\|v_\gamma(T)\|_{L^1(\gamma^n)}
-       \leq C_l\int_YT\wedge\gamma^{n-1}.
+       \leq C_l\int_YT\wedge\gamma^{n-1},
 \end{equation}
-The constants depend on the fixed metric and norms.
+where the constants $C_l$ depend only on the fixed metric and norms.
 \end{lemma}
 \begin{proof}
-Set $L_\gamma f=\sigma_\gamma(\ddc f)$. Use the inverse $G_\gamma$ in \eqref{eq:gaud-trace-green}, normalized with volume form $\gamma^n/V_\gamma$. It acts on top-degree distributions of total mass zero and is continuous by the elliptic estimates for the inverse and its transpose.
+Set $L_\gamma f=\sigma_\gamma(\ddc f)$. We use the inverse $G_\gamma$ of \eqref{eq:gaud-trace-green}, normalized with the volume form $\gamma^n/V_\gamma$. It acts on top-degree distributions of total mass zero and is continuous by the elliptic estimates for the operator and its transpose.
 
-\Needspace{6\baselineskip}
-Define
+\emph{Step 1: construction.} Define
 \[
  c_T=\frac{\int_YT\wedge\gamma^{n-1}}{V_\gamma},\qquad
  v_\gamma(T)=G_\gamma\bigl((\sigma_\gamma(T)-c_T)\gamma^n\bigr),\qquad
  B_\gamma(T)=T-\ddc v_\gamma(T).
 \]
-The last current is closed and has scalar trace $c_T$. We verify its smoothness and the finite-dimensional assertion without a K\"ahler identity.
+The current $B_\gamma(T)$ is closed and has scalar trace $c_T$. We now prove its smoothness and the finite-dimensionality assertion without using any K\"ahler identity.
 
 \Needspace{7\baselineskip}
-Let $J$ be the complex structure acting on real covectors. On real $(1,1)$-forms consider the first-order operator
+\emph{Step 2: an elliptic system.} Let $J$ be the complex structure acting on real covectors. On real $(1,1)$-forms consider the first-order operator
 \[
  \mathscr P B=(\mathrm{d}B,\mathrm{d}\sigma_\gamma(B)).
 \]
-Its principal symbol is injective at every nonzero real covector $\xi$. Indeed, $\xi\wedge B=0$ and the $(1,1)$ condition force $B$ to be a real multiple of $\xi\wedge J\xi$. To check this, choose unitary real coordinates with $\xi=\mathrm{d}x_1$. Every term of $B$ contains $\mathrm{d}x_1$, and invariance under $J$ forces every term to contain $\mathrm{d}y_1$ as well. The scalar trace of this remaining term is nonzero unless its coefficient is zero. The other symbol equation is $\xi\,\sigma_\gamma(B)=0$, so it removes that coefficient.
+Its principal symbol at a nonzero real covector $\xi$ is $B\mapsto(\xi\wedge B,\xi\,\sigma_\gamma(B))$, and we claim that it is injective. If $\xi\wedge B=0$, then the $(1,1)$ condition forces $B$ to be a real multiple of $\xi\wedge J\xi$. To check this, choose unitary real coordinates with $\xi=\mathrm{d}x_1$: every term of $B$ contains $\mathrm{d}x_1$, and invariance under $J$ forces every term to contain $\mathrm{d}y_1$ as well. If moreover $\xi\,\sigma_\gamma(B)=0$, then $\sigma_\gamma(B)=0$; since the scalar trace of $\xi\wedge J\xi$ is nonzero, the multiple is zero.
 
-Let $\mathscr P^*$ be the formal adjoint for the fixed metric and volume. Consequently $\mathscr P^*\mathscr P$ is elliptic. Its distributional kernel is a finite-dimensional space of smooth forms, by elliptic regularity and compactness. Since $\mathscr P B_\gamma(T)=0$, the representative belongs to this space. Conversely its smooth kernel consists exactly of closed forms with constant scalar trace: integration of $\langle\mathscr P^*\mathscr P B,B\rangle$ gives $\mathscr P B=0$, and connectedness makes the trace constant. Denote this kernel by $\mathscr H_\gamma$.
+Let $\mathscr P^*$ be the formal adjoint of $\mathscr P$ for the fixed metric and volume. Since the symbol of $\mathscr P$ is injective, $\mathscr P^*\mathscr P$ is elliptic. By elliptic regularity and compactness, its distributional kernel is a finite-dimensional space of smooth forms. Since $\mathscr P B_\gamma(T)=0$, the form $B_\gamma(T)$ belongs to this space. Conversely, the kernel consists exactly of the closed forms with constant scalar trace: integrating $\langle\mathscr P^*\mathscr P B,B\rangle$ gives $\mathscr P B=0$, and connectedness makes the trace constant. Denote this kernel by $\mathscr H_\gamma$.
 
-The construction is linear and continuous on distributions. Convergence of its $B$ components therefore takes place in the finite-dimensional space $\mathscr H_\gamma$, hence in every smooth norm. If $T=\ddc f$ for a distribution $f$, then $c_T=0$ and the inverse gives $v_\gamma(T)=f-V_\gamma^{-1}\int_Yf\gamma^n$, so $B_\gamma(T)=0$. Applied to smooth closed forms, this proves that $\mathscr H_\gamma$ is a system of representatives for Bott--Chern cohomology, with exactly one representative in each class. For uniqueness of the displayed decomposition directly, the difference of the two potentials has $L_\gamma$ equal to a constant. Integration forces that constant to be zero, and the normalized kernel is zero.
+\emph{Step 3: Bott--Chern representatives.} The construction is linear and continuous on distributions. Convergence of the components $B_\gamma(T)$ therefore takes place in the finite-dimensional space $\mathscr H_\gamma$, hence in every smooth norm. If $T=\ddc f$ for a distribution $f$, then $c_T=0$ and the inverse gives $v_\gamma(T)=f-V_\gamma^{-1}\int_Yf\gamma^n$, so $B_\gamma(T)=0$. Applied to smooth closed forms, this shows that $\mathscr H_\gamma$ contains exactly one representative of each Bott--Chern class. Uniqueness of the decomposition can also be seen directly: if two decompositions are given, $L_\gamma$ of the difference of the two potentials is a constant, integration forces this constant to be zero, and the normalized kernel of $L_\gamma$ is zero.
 
-Suppose now that $T\geq0$. The inequality $\ddc v_\gamma(T)\geq-B_\gamma(T)$ gives a quasi-plurisubharmonic representative of this distribution. If positive closed currents $T_j$ converge weakly to $T$, their $B$ components converge smoothly, so the potentials have one common lower curvature bound. By \cref{thm:normalized-compactness}, subtracting their suprema gives an $L^1$ precompact family. If $a_j=\sup_Yv_\gamma(T_j)$, the zero-mean normalization yields
+\emph{Step 4: positive currents.} Suppose now that $T\geq0$. The inequality $\ddc v_\gamma(T)\geq-B_\gamma(T)$ gives a quasi-plurisubharmonic representative of the distribution $v_\gamma(T)$. Let positive closed currents $T_j$ converge weakly to $T$. Their components $B_\gamma(T_j)$ converge smoothly, so the potentials $v_\gamma(T_j)$ have a common smooth lower curvature bound. By \cref{thm:normalized-compactness}, after subtracting their suprema they form an $L^1$-precompact family. If $a_j=\sup_Yv_\gamma(T_j)$, the zero-mean normalization gives
 \[
- 0\leq a_j V_\gamma=\int_Y\bigl(a_j-v_\gamma(T_j)\bigr)\,\gamma^n.
+ 0\leq a_j V_\gamma=\int_Y\bigl(a_j-v_\gamma(T_j)\bigr)\,\gamma^n,
 \]
-The right side is uniformly bounded, so the original potentials are also $L^1$ precompact. Every cluster limit equals their distributional limit $v_\gamma(T)$. Thus the whole sequence converges in $L^1$.
+and the right-hand side is uniformly bounded. Hence the potentials $v_\gamma(T_j)$ themselves are $L^1$-precompact. Every cluster point equals their distributional limit $v_\gamma(T)$, so the whole sequence converges in $L^1$.
 
-Finally the positive closed currents of trace mass one form a weakly compact set. Positivity bounds their coefficient measures, weak limits remain positive and closed, and testing with $\gamma^{n-1}$ preserves their mass. The smooth and $L^1$ continuity just proved bounds both norms on this set. Positive homogeneity gives \eqref{eq:constant-trace-representative-bound}. A positive current of mass zero is zero, so that case is included.
+Finally, the positive closed currents with trace mass $\int_YT\wedge\gamma^{n-1}=1$ form a weakly compact set: positivity bounds their coefficient measures, weak limits remain positive and closed, and testing with $\gamma^{n-1}$ preserves the trace mass. The smooth and $L^1$ continuity just proved bounds both norms on this set, and positive homogeneity gives \eqref{eq:constant-trace-representative-bound}. A positive current of trace mass zero is zero, so this case is included.
 \end{proof}
 
-The smooth representatives give a common curvature bound for converging normalized potentials. This is precisely the hypothesis needed to pull back their $L^1$ convergence.
+The smooth representatives give a common curvature bound for converging normalized potentials. This is exactly the hypothesis needed to pull back their $L^1$ convergence.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:closed-current-modification-continuity}\index{Closed positive current!pullback continuity}
-Let $g:Z\to Y$ be a smooth compact modification, and fix a Gauduchon metric $\gamma'$ on $Z$. Pullback of positive closed $(1,1)$-currents by their local potentials is weakly continuous. There is a constant $C_g$ such that
+Let $g:Z\to Y$ be a smooth compact modification, and fix a Gauduchon metric $\gamma'$ on $Z$. Pullback of positive closed $(1,1)$-currents, defined through their local potentials, is weakly continuous. Moreover, there is a constant $C_g$, depending only on the modification and the fixed metrics, such that
 \begin{equation}\label{eq:modification-linear-mass-bound}
  \int_Zg^*T\wedge(\gamma')^{n-1}
        \leq C_g\int_YT\wedge\gamma^{n-1}
        \qquad(T\geq0,\ \mathrm{d}T=0).
 \end{equation}
-The constant depends on the fixed modification and metrics.
 \end{proposition}
 \begin{proof}
 Write $T=B_\gamma(T)+\ddc v_\gamma(T)$. The pullback is
 \[
  g^*T=g^*B_\gamma(T)+\ddc(v_\gamma(T)\circ g).
 \]
-It is positive and closed by local psh potentials, and the composed potential is genuine because the modification is dominant. This formula agrees with the local definition, so it is independent of the decomposition.
+This current is positive and closed, since it is locally $\ddc$ of plurisubharmonic functions, and the composed potential is not identically $-\infty$ because $g$ is surjective. The formula agrees with the definition through local potentials, so it does not depend on the decomposition.
 
-For $T_j\to T$, the smooth parts converge in $C^\infty$ and the potentials converge in $L^1(Y)$ with a common lower curvature bound. \Cref{lem:modification-lone-pullback} gives convergence of their compositions in $L^1(Z)$. Taking $\ddc$ proves weak convergence of the pullbacks.
+If $T_j\to T$, the smooth parts converge in $C^\infty$, and the potentials converge in $L^1(Y)$ with a common lower curvature bound. By \cref{lem:modification-lone-pullback}, their compositions with $g$ converge in $L^1(Z)$, and taking $\ddc$ proves the weak convergence of the pullbacks.
 
 \Needspace{7\baselineskip}
-Current Stokes on $Z$ gives
+Integration by parts on $Z$ gives
 \[
  \int_Zg^*T\wedge(\gamma')^{n-1}
    =\int_Zg^*B_\gamma(T)\wedge(\gamma')^{n-1}.
 \]
-The absolute value of the right side is bounded by a fixed constant times $\|B_\gamma(T)\|_{C^0}$. Apply \eqref{eq:constant-trace-representative-bound}. The left side is nonnegative, giving \eqref{eq:modification-linear-mass-bound}.
+The absolute value of the right-hand side is at most a fixed constant times $\|B_\gamma(T)\|_{C^0}$. Since the left-hand side is nonnegative, \eqref{eq:constant-trace-representative-bound} gives \eqref{eq:modification-linear-mass-bound}.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:countable-divisorial-pullback}\index{Divisorial current!countable pullback}
-Fix the modification $g:Z\to Y$ and metrics of \cref{prop:closed-current-modification-continuity}. Let $D_j$ be prime divisors on $Y$, $[D_j]$ their integration currents, and $c_j>0$. If $S=\sum_j c_j[D_j]$ is a positive closed current of finite mass, then
+Let $g:Z\to Y$, $\gamma$ and $\gamma'$ be as in \cref{prop:closed-current-modification-continuity}. Let $D_j$ be prime divisors on $Y$, with integration currents $[D_j]$, and let $c_j>0$. If $S=\sum_j c_j[D_j]$ is a positive closed current of finite mass, then
 \[
  g^*S=\sum_j c_j[g^*D_j]
 \]
-as positive currents of finite mass. The partial sums converge with vanishing trace mass of their positive tails on $Z$. In particular $g^*S$ is again purely divisorial.
+as positive currents of finite mass. The trace masses on $Z$ of the positive tails of this series tend to zero. In particular, $g^*S$ is again purely divisorial.
 \end{corollary}
 \begin{proof}
-Apply the proposition to the increasing finite partial sums $S_N$ and their positive closed tails $S-S_N$. Pullback is additive on positive closed currents by addition of local potentials. Thus $g^*S-g^*S_N=g^*(S-S_N)\geq0$, and its trace mass is bounded by $C_g$ times the trace mass of $S-S_N$, which tends to zero. Pullback of a finite divisor is the usual Cartier pullback by its local equation. This identifies the series and its limit. Its terms are integration currents of prime divisors with nonnegative coefficients; regrouping this countable positive finite-mass sum preserves equality.
+Apply the proposition to the increasing finite partial sums $S_N$ and to their positive closed tails $S-S_N$. Pullback is additive on positive closed currents, by addition of local potentials. Thus $g^*S-g^*S_N=g^*(S-S_N)\geq0$, and its trace mass is at most $C_g$ times the trace mass of $S-S_N$, which tends to zero. The pullback of a finite divisor is the usual pullback of its local equations, which identifies $g^*S_N$ with the corresponding partial sum of the series, and hence $g^*S$ with its limit. Its terms are integration currents of prime divisors with nonnegative coefficients, and regrouping this countable positive sum of finite mass does not change it.
 \end{proof}

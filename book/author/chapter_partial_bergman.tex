@@ -175,59 +175,60 @@ For example, suppose that $X$ is not Moishezon. By \cref{cor:non-moishezon-secti
 
 \section{Kernels on a fibration}\label{sec:partial-submersion}
 
-Compact connected fibers make every section of a pulled-back line bundle descend. Choosing probability measures on the fibers makes this descent an isometry; the kernel measures then lift by fiber integration.
+On a fibration with compact connected fibers, every section of a pulled-back line bundle is constant along the fibers and descends to the base. If probability measures are chosen on the fibers, this descent becomes an isometry, and the kernel measures on the total space are obtained from those on the base by integration along the fibers.
 
-Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Let $A$ be a holomorphic line bundle on $B$ with smooth metric $h_A$, and choose a quasi-plurisubharmonic function $\psi$ on $B$. Set
+Let $\pi:X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds, with connected fibers. Write $n=\dim X$ and $q=\dim B\geq1$. Let $A$ be a holomorphic line bundle on $B$ with a smooth Hermitian metric $h_A$, choose a quasi-plurisubharmonic function $\psi$ on $B$, and set
 \[
  (L,h)=(\pi^*A,\pi^*h_A),\qquad \varphi=\pi^*\psi.
 \]
 \Needspace{9\baselineskip}
-For $y\in B$, write $X_y=\pi^{-1}(y)$. Choose a smoothly varying family of smooth strictly positive probability measures $\nu_y$ on these fibers. Such a family is obtained by restricting any smooth positive vertical volume density and dividing by its fiber integral. For $F\in C(X)$ set
+For $y\in B$ write $X_y=\pi^{-1}(y)$. Choose a family of smooth positive probability measures $\nu_y$ on the fibers $X_y$ that varies smoothly with $y$; for instance, restrict a smooth positive vertical volume density to the fibers and divide by its fiber integrals. For $F\in C(X)$ set
 \[
  \mathcal A F(y)=\int_{X_y}F\,\mathrm{d}\nu_y.
 \]
-The function $\mathcal A F$ is continuous. Indeed, a proper smooth submersion is locally a smooth fiber bundle; in a trivialization the smooth densities vary smoothly, and uniform continuity of $F$ on compact pieces gives continuity of the integrals. For a finite Borel measure $\mu$ on $B$, define its lift $\mathcal L\mu$ by
+The function $\mathcal A F$ is continuous: a proper submersion is locally a smooth fiber bundle, the densities vary smoothly in a local trivialization, and $F$ is uniformly continuous on compact sets. For a finite positive Borel measure $\mu$ on $B$, define its \emph{lift} $\mathcal L\mu$ by
 \[
- \int_X F\,\mathrm{d}\mathcal L\mu=\int_B\mathcal A F\,\mathrm{d}\mu.
+ \int_X F\,\mathrm{d}\mathcal L\mu=\int_B\mathcal A F\,\mathrm{d}\mu
+ \qquad(F\in C(X)).
 \]
-Positivity and the Riesz representation theorem give a finite measure with the same total mass as $\mu$. In particular, weak convergence of finite measures on the base implies weak convergence of their lifts.
+Since $\mathcal A$ is positive and $\mathcal A1=1$, the Riesz representation theorem makes $\mathcal L\mu$ a finite positive measure with the same total mass as $\mu$. Since $\mathcal AF$ is continuous, weak convergence of finite measures on $B$ implies weak convergence of their lifts.
 
 \Needspace{20\baselineskip}
 \begin{proposition}\label{prop:partial-kernel-submersion}
-Pullback identifies
+Pullback of sections induces an isomorphism
 \[
  H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
        \simeq H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr).
 \]
-Let $K\subseteq B$ be closed and non-pluripolar, let $w\in C(K)$, and let $\mu$ be a Bernstein--Markov probability measure for $(K,w)$ on $B$. Set $K_X=\pi^{-1}(K)$, $w_X=\pi^*w$ and $\mu_X=\mathcal L\mu$. The identified spaces have identical norms for these weighted sets and measures. Their partial kernel measures, normalized with the same integer $r$, satisfy
+Let $K\subseteq B$ be closed and non-pluripolar, let $w\in C(K)$, and let $\mu$ be a Bernstein--Markov probability measure for $(K,w)$ on $B$. Set $K_X=\pi^{-1}(K)$, $w_X=w\circ\pi$ and $\mu_X=\mathcal L\mu$. Then pullback is an isometry from the norm $\|\cdot\|_{m,w,\mu}$ on $B$ to the norm $\|\cdot\|_{m,w_X,\mu_X}$ on $X$, the measure $\mu_X$ is Bernstein--Markov for $(K_X,w_X)$, and the partial kernel measures on $B$ and $X$, normalized with the same integer $r$, satisfy
 \[
  \beta_{X,m}^{(r)}=\mathcal L\bigl(\beta_{B,m}^{(r)}\bigr).
 \]
-The Bernstein--Markov inequality itself also transfers to the unweighted section spaces on $X$.
 \end{proposition}
 \begin{proof}
-Every section of $\pi^*A^m$ descends. On the inverse image of a trivializing base chart, its coefficient is a holomorphic function and is constant on every compact connected fiber. Local holomorphic sections of the submersion show that the descended coefficient is holomorphic. These coefficients glue by the transition functions of $A^m$, giving the unweighted identification.
+Let $s$ be a holomorphic section of $\pi^*A^m$. Over an open set of $B$ on which $A^m$ is trivial, the coefficient of $s$ is a holomorphic function on the inverse image, and it is constant on each fiber, since the fibers are compact and connected. It is therefore the pullback of a function on the base, which is holomorphic because it is the composition of the coefficient with a local holomorphic section of the submersion. These local functions transform by the transition functions of $A^m$, so they define a section of $A^m$ whose pullback is $s$. This proves the identification without multiplier ideals.
 
-By \cref{lem:submersion-multiplier-pullback}, the upstairs multiplier ideal is the extension of $\mathcal I(m\psi)$. A descended coefficient belongs to this extended ideal exactly when its base coefficient belongs to $\mathcal I(m\psi)$: pullback gives one implication, and restriction to a local holomorphic section gives the other. This proves the selected-space identification.
+By \cref{lem:submersion-multiplier-pullback}, the multiplier ideal $\mathcal I(m\varphi)$ on $X$ is generated by the pullbacks of the germs in $\mathcal I(m\psi)$. A pulled-back germ belongs to it exactly when the base germ belongs to $\mathcal I(m\psi)$: pullback gives one implication, and restriction to a local holomorphic section of $\pi$ gives the other. This identifies the selected spaces.
 
-Pointwise norms of corresponding sections agree and are constant along fibers. Since $\nu_y$ has mass one,
+Pointwise norms of corresponding sections agree and are constant along the fibers. Since each $\nu_y$ has mass one,
 \[
  \int_{K_X}|\pi^*s|_{h^m}^2\mathrm{e}^{-mw_X}\,\mathrm{d}\mu_X
        =\int_K|s|_{h_A^m}^2\mathrm{e}^{-mw}\,\mathrm{d}\mu.
 \]
-Their supremum norms also agree by surjectivity. Thus the Bernstein--Markov inequality transfers, and the integral norms are nondegenerate. Pulling back an orthonormal basis proves $B_{X,m}=\pi^*B_{B,m}$ on $K_X$. Integrating a continuous test function first along the fibers proves the measure identity. Kernels may be set to zero off their respective weighted sets.
+The supremum norms on $K_X$ and $K$ also agree, because $\pi$ is surjective. Thus the Bernstein--Markov inequality transfers from $(K,w,\mu)$ to $(K_X,w_X,\mu_X)$, and the integral norms on $X$ are nondegenerate. Pulling back an orthonormal basis gives $B_{X,m}=B_{B,m}\circ\pi$ on $K_X$, where each kernel is set to zero outside its weighted set. Integrating a continuous test function first along the fibers proves the identity of measures.
 \end{proof}
 
 \Needspace{10\baselineskip}
-\subsection{The lifted equilibrium measure}
+\subsection{The quotient equilibrium measure}
 \label{sec:partial-base-equilibrium}
 
-On a K\"ahler base, the partial kernel measures converge to the Monge--Amp\`ere measure of the partial envelope. Continuity of fiber integration then gives a limit upstairs with the base-dimensional normalization.
+On a K\"ahler base, the partial kernel measures converge to the Monge--Amp\`ere measure of the partial envelope. Since lifting is continuous, the kernel measures on the total space converge to the lift of this measure, with the normalization given by the dimension of the base.
 
-Keep the submersion and weighted compact set $(K,w,\mu)$ above. Assume that $B$ is K\"ahler, put $\theta=c_1(A,h_A)$, and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Write $B_{B,m},B_{X,m}$ for the corresponding kernels, $\mu_X=\mathcal L\mu$, and
+Keep the submersion and the weighted compact set $(K,w,\mu)$ above. Assume that $B$ is K\"ahler, put $\theta=c_1(A,h_A)$, and take $\psi\in\PSH(B,\theta)$ with positive non-pluripolar Monge--Amp\`ere mass. Write $B_{B,m}$ and $B_{X,m}$ for the partial Bergman kernels on $K$ and $K_X$, put $\mu_X=\mathcal L\mu$, and let
 \[
- E=E_{\theta,K}[\psi]_{\mathcal I}(w).
+ E=E_{\theta,K}[\psi]_{\mathcal I}(w)
 \]
+be the partial envelope of \cref{sec:hermitian-partial-envelopes}. We call $\mathcal L(\mathrm{MA}_\theta(E))$ the \emph{quotient equilibrium measure} of these data on $X$.
 
 \begin{theorem}\label{thm:partial-kernel-quotient-limit}\index{Equilibrium measure!quotient}
 Under these hypotheses,
@@ -235,35 +236,36 @@ Under these hypotheses,
  \frac{q!}{m^q}B_{X,m}\,\mu_X
        \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E)\bigr).
 \]
-If $n>q$, the measures with normalization $n!/m^n$ tend to zero in total variation.
+If $n>q$, then $(n!/m^n)B_{X,m}\,\mu_X\to0$ in total variation.
 \end{theorem}
 \begin{proof}
-Apply \cite[Theorem~14.3.1]{SGPT} on the compact K\"ahler base, with its auxiliary twisting line bundle trivial. Its hypotheses are precisely the positive-mass potential $\psi$, the closed non-pluripolar set $K$, the continuous weight $w$, and the Bernstein--Markov probability $\mu$. It gives
+Apply \cite[Theorem~14.3.1]{SGPT} on the compact K\"ahler manifold $B$, with trivial auxiliary twisting line bundle. Its hypotheses are exactly our assumptions: $\psi$ has positive mass, $K$ is closed and non-pluripolar, $w$ is continuous, and $\mu$ is a Bernstein--Markov probability measure. It gives
 \[
  \frac{q!}{m^q}B_{B,m}\,\mu
           \rightharpoonup\mathrm{MA}_\theta(E).
 \]
-\Cref{prop:partial-kernel-submersion} and continuity of the lifting operation give the asserted upstairs limit. In particular the $q$-normalized total masses are bounded. Multiplying them by $(n!/q!)m^{q-n}$ proves the last statement when $n>q$.
+By \cref{prop:partial-kernel-submersion}, the corresponding measures on $X$ are the lifts of these measures, and lifting preserves weak convergence; this proves the first assertion. In particular the $q$-normalized total masses are bounded, and multiplying them by $(n!/q!)m^{q-n}\to0$ proves the last assertion when $n>q$.
 \end{proof}
 
 \Needspace{13\baselineskip}
 \subsection{The Hopf equilibrium measure}
+\label{sec:partial-hopf-equilibrium}
 
-The vertical part of the Hopf metric converts the lifted base equilibrium measure into a Hermitian Monge--Amp\`ere measure. Its coefficient records both the fiber probability and the top-product expansion.
+On the Hopf manifold, the quotient equilibrium measure is a Hermitian Monge--Amp\`ere measure: the vertical part of the Hopf metric supplies the missing fiber direction. The constant relating the two measures combines the fiber probability with a coefficient of the top power.
 
-Use $X_n$, $n\geq2$, its projection $\pi:X_n\to\mathbb P^{n-1}$ and the forms $\sigma,\alpha,\zeta,\omega$ of \cref{chap:hopf-reduction}. Take $A=\mathcal O(1)$ with curvature $\theta=\sigma$ and retain the selecting potential $\psi$ and weighted data $(K,w,\mu)$ above. On each elliptic fiber set $\nu_y=\zeta|_{X_y}/2$. For any base measure $\tau$ its lift is
+Use the Hopf manifold $X_n$, $n\geq2$, its projection $\pi:X_n\to\mathbb P^{n-1}$, the Fubini--Study form $\sigma$ on $\mathbb P^{n-1}$ with $\int\sigma^{n-1}=1$, and the forms $\alpha=\pi^*\sigma$, $\zeta$ and $\omega=\alpha+\zeta$ of \cref{chap:hopf-reduction}; recall that $\zeta^2=0$ and that $\zeta$ has integral two on each fiber. Take $A=\mathcal O(1)$ with its Fubini--Study metric, so that $\theta=\sigma$, and keep the selecting potential $\psi$ and the weighted data $(K,w,\mu)$ above. On each elliptic fiber put $\nu_y=\zeta|_{X_y}/2$. The lift of a base measure $\tau$ is then
 \[
- \mathcal L\tau=\tfrac12\pi^*\tau\wedge\zeta
+ \mathcal L\tau=\tfrac12\pi^*\tau\wedge\zeta,
 \]
-in the precise fiber-integration notation of that chapter. Since $E\in\PSH(B,\sigma)$, \cref{thm:hopf-descended-hermitian-ma} identifies the limit as
+in the fiber-integration notation of \cref{chap:hopf-reduction}. Since $E\in\PSH(\mathbb P^{n-1},\sigma)$, \cref{thm:hopf-descended-hermitian-ma} gives $\mathcal L(\mathrm{MA}_\sigma(E))=\frac1{2n}\mathrm{MA}^{\mathrm{ext}}_\omega(\pi^*E)$, and \cref{thm:partial-kernel-quotient-limit} becomes
 \begin{equation}\label{eq:hopf-partial-equilibrium}
  \frac{(n-1)!}{m^{n-1}}B_{X_n,m}\,\mu_X
        \rightharpoonup
        \frac{1}{2n}\mathrm{MA}^{\mathrm{ext}}_\omega(\pi^*E).
 \end{equation}
-The factor $1/(2n)$ combines the fiber probability with the top-product coefficient in $\omega=\alpha+\zeta$. The closed curvature $\alpha$ has zero top product on these descended potentials; the vertical form supplies the nonzero Hermitian measure. For $n=3$ this gives a nonzero limit on a manifold failing BMP, with normalization $2/m^2$.
+The factor $1/(2n)$ combines the fiber probability $1/2$ with the coefficient $n$ of $\alpha^{n-1}\wedge\zeta$ in $\omega^n=(\alpha+\zeta)^n$. The closed curvature form $\alpha$ alone gives nothing: by \cref{thm:hopf-descended-hermitian-ma}, descended potentials have zero Monge--Amp\`ere measure with respect to $\alpha$, and the nonzero limit comes from the vertical form $\zeta$. For $n=3$ this gives a nonzero limit, with the normalization $2/m^2$, on a manifold without the bounded mass property (\cref{thm:hopf-unbounded}).
 
-Every potential positive against the closed line-bundle curvature $k\alpha$, for a positive integer $k$, descends by \cref{thm:hopf-weighted-section-descent}. A potential positive only against $\omega$ can instead have an isolated pole. Its sections still descend, so the selected space records the pole through a condition on the base. We now determine that condition.
+For a positive integer $k$, every $k\alpha$-plurisubharmonic function on $X_n$ is pulled back from $\mathbb P^{n-1}$, by \cref{thm:hopf-weighted-section-descent}. An $\omega$-plurisubharmonic function, by contrast, can have an isolated pole, and then it does not descend. Its selected sections still descend, so the pole is recorded by a vanishing condition on the base. The next two sections determine this condition and its effect on the kernels.
 
 \input{author/section_fiber_point_kernels}
 

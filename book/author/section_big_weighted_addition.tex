@@ -1,7 +1,7 @@
 \subsection{Ordinary types and bounded carriers}
 \label{sec:big-weighted-addition}
 
-When one input has ordinary reference type or a bounded carrier measure, first moments control the rooftops of the approximating solutions. These rooftops provide the common lower bound required by the preceding limiting argument. The resulting solution lies below both inputs, so its unweighted measure is finite.
+We first solve the weighted addition equation when one input has the ordinary type of $\varphi$, or a measure dominated by the Monge--Amp\`ere measure of a bounded potential. In both cases first moments control the rooftops of the approximating solutions, and these rooftops give the common lower bound required by \cref{lem:big-truncated-addition-limit}. The solution lies below both inputs, so its measure is finite.
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:big-weighted-addition}
@@ -9,53 +9,55 @@ Let $u,v\in\mathcal E_\varphi$ and $\lambda>0$. Suppose either $v\sim\varphi$, o
 \[
  \mu_v\leq A\,\mathrm{MA}_\omega(\psi).
 \]
-There is a unique $a\in\mathcal E_\varphi$ satisfying
+Then there is a unique $a\in\mathcal E_\varphi$ satisfying
 \[
  \mu_a=\mathrm{e}^{\lambda(a-u)}\mu_u+\mathrm{e}^{\lambda(a-v)}\mu_v.
 \]
 It satisfies $a\leq\min(u,v)$, and hence $\mu_a\leq\mu_u+\mu_v$. If both $u,v\sim\varphi$, then also $a\sim\varphi$.
 \end{theorem}
 \begin{proof}
-It suffices to prove the result for $\lambda=1$. Indeed replace $(\theta,\varphi,u,v)$ by $(\lambda\theta,\lambda\varphi,\lambda u,\lambda v)$. Envelopes and relative classes scale with the potentials, and their volumes and Monge--Amp\`ere measures scale by $\lambda^n$. A bounded-carrier domination remains such a domination after changing its constant. Dividing the resulting solution by $\lambda$ gives the desired equation. A common downward translation of $u,v$ and the solution similarly allows us to assume $u,v\leq\varphi\leq0$; the envelope identity gives this inequality after a sufficiently large common translation. We restore the translation at the end.
+The proof has four steps: two inputs of minimal singularity type, two inputs of the ordinary type of $\varphi$, one input of that type, and finally an input with a bounded carrier measure.
 
-\emph{Ordinary minimal singularities.}
-First take $\varphi=V$ and $u,v\sim V$. Truncate only the weights and define the finite nonzero measures
+It suffices to prove the result for $\lambda=1$. Indeed, replace $(\theta,\varphi,u,v)$ by $(\lambda\theta,\lambda\varphi,\lambda u,\lambda v)$: envelopes and relative classes scale with the potentials, volumes and Monge--Amp\`ere measures scale by $\lambda^n$, and a bounded-carrier domination remains one after changing its constant. Dividing the resulting solution by $\lambda$ gives the desired equation. Similarly, a common downward translation of $u$, $v$ and the solution allows us to assume $u,v\leq\varphi\leq0$; by the envelope identity, these inequalities hold after a sufficiently large common translation. We restore the translation at the end.
+
+\emph{Step 1: inputs of minimal singularity type.}
+First take $\varphi=V$ and $u,v\sim V$. Truncating only the weights, define the finite nonzero measures
 \[
  \tau_j=\mathrm{e}^{-\max(u,-j)}\mu_u+\mathrm{e}^{-\max(v,-j)}\mu_v.
 \]
-The functions $\max(u,-j)$ need not be $\theta$-plurisubharmonic; they occur only as weights in this step. The minimal-reference theorem supplies $a_j\in\mathcal E_V$ with $\mu_{a_j}=\mathrm{e}^{a_j}\tau_j$.
+The functions $\max(u,-j)$ need not be $\theta$-plurisubharmonic; they occur only as weights. \Cref{thm:big-minimal-general-measures} gives $a_j\in\mathcal E_V$ with $\mu_{a_j}=\mathrm{e}^{a_j}\tau_j$.
 
 Choose $D\geq\tfrac12\|u-v\|_\infty+n\log2$, where the difference is taken off the common poles, and put $w=(u+v)/2-D$. Positivity of mixed products gives
 \[
  \mu_w\geq2^{-n}(\mu_u+\mu_v)\geq \mathrm{e}^w\tau_j.
 \]
-Exponential order in $\mathcal E_V$ gives $a_j\geq w$. As $\tau_j$ increases, the same order shows that $a_j$ decreases. The envelope identity gives $a_1\leq V+\sup_Xa_1$, so $a_1\sim V$ by the lower bound $w$. Consequently
+Exponential order in $\mathcal E_V$ (\cref{cor:big-relative-orders}) gives $a_j\geq w$. Since $\tau_j$ increases with $j$, the same order shows that $a_j$ decreases. The envelope identity gives $a_1\leq V+\sup_Xa_1$, so $a_1\sim V$ by the lower bound $w$. Consequently
 \[
  \mu_{a_j}
  \leq \mathrm{e}^{a_1-u}\mu_u+\mathrm{e}^{a_1-v}\mu_v
  \leq C(\mu_u+\mu_v).
 \]
 \Needspace{8\baselineskip}
-The decreasing limit $a\geq w$ is genuine and has ordinary type $V$. Fixed-dominator continuity gives weak convergence of the left sides. The right sides converge in total variation by dominated convergence with respect to $\mu_u+\mu_v$. Therefore
+The decreasing limit $a\geq w$ is not identically $-\infty$ and has the ordinary type of $V$. Fixed-dominator continuity (\cref{thm:big-relative-fixed-continuity}) gives weak convergence of the left-hand sides, and the right-hand sides converge in total variation by dominated convergence with respect to $\mu_u+\mu_v$. Therefore
 \[
  \mu_a=\mathrm{e}^{a-u}\mu_u+\mathrm{e}^{a-v}\mu_v.
 \]
-Exponential order, now comparing this equality with each input measure, gives $a\leq u,v$. This order is asserted after passing to the equation; the truncated weights alone would not give it against $u$ and $v$.
+Comparing this equation with each input measure, exponential order now gives $a\leq u,v$. This comparison uses the limiting equation; the truncated weights alone would not give it.
 
-\emph{Two inputs of the same ordinary type.}
-Suppose $u,v\sim\varphi$, and put $u_j=\max(u,V-j)$ and $v_j=\max(v,V-j)$. The preceding step gives solutions $a_j\sim V$ with
+\emph{Step 2: two inputs of the ordinary type of $\varphi$.}
+Suppose $u,v\sim\varphi$, and put $u_j=\max(u,V-j)$ and $v_j=\max(v,V-j)$. Step 1 gives solutions $a_j\sim V$ with
 \[
  \mu_{a_j}=\mathrm{e}^{a_j-u_j}\mu_{u_j}+\mathrm{e}^{a_j-v_j}\mu_{v_j},
  \qquad a_j\leq\min(u_j,v_j).
 \]
-The differences $u_j-v_j$ have the same uniform bound as $u-v$. With $D$ as above, $w_j=(u_j+v_j)/2-D$ satisfies the opposite equation inequality, and exponential order gives
+The differences $u_j-v_j$ satisfy the same uniform bound as $u-v$. With $D$ as above, $w_j=(u_j+v_j)/2-D$ satisfies the reverse inequality for this equation, and exponential order gives
 \[
  (u+v)/2-D\leq w_j\leq a_j\leq\min(u_j,v_j).
 \]
-The fixed lower bound $w=(u+v)/2-D$ has ordinary type $\varphi$, hence lies in $\mathcal E_\varphi$. Extract a genuine $L^1$ limit $a$; it satisfies $w\leq a\leq\min(u,v)$, so $a\sim\varphi$. The input masses are at most $M_V$. \Cref{lem:big-truncated-addition-limit}, with truncation reference $V$ and lower bound $w$, proves capacity convergence and the equation. Its use is legitimate although the finite-index solutions have type $V$ and the limit has type $\varphi$.
+The fixed lower bound $w=(u+v)/2-D$ has the ordinary type of $\varphi$, and hence lies in $\mathcal E_\varphi$. Extract an $L^1$ limit $a\not\equiv-\infty$; it satisfies $w\leq a\leq\min(u,v)$, so $a\sim\varphi$. The input masses are at most $M_V$. \Cref{lem:big-truncated-addition-limit}, with $\sigma=V$ and lower bound $h=w$, proves convergence in capacity and the equation. The lemma applies although the approximating solutions have the type of $V$ and the limit has the type of $\varphi$.
 
-\emph{One input of ordinary type.}
-Now let $u\in\mathcal E_\varphi$ and $v\sim\varphi$. Set $u_j=\max(u,\varphi-j)$. The second step supplies $a_j\sim\varphi$ with
+\emph{Step 3: one input of the ordinary type of $\varphi$.}
+Now let $u\in\mathcal E_\varphi$ and $v\sim\varphi$, and set $u_j=\max(u,\varphi-j)$. Step 2 gives $a_j\sim\varphi$ with
 \[
  \mu_{a_j}=\mathrm{e}^{a_j-u_j}\mu_{u_j}+\mathrm{e}^{a_j-v}\mu_v,
  \qquad a_j\leq\min(u_j,v).
@@ -66,25 +68,25 @@ We construct a common lower bound in $\mathcal E_\varphi$. Put $\delta=n\log2>0$
  \qquad C_j=\{s_j+u_j=2a_j\}.
 \]
 \Needspace{6\baselineskip}
-Stretching and contact give $s_j\leq a_j$ and
+By stretching and contact, $s_j\leq a_j$ and
 \begin{equation}\label{eq:big-addition-stretch-contact}
  2^{-n}\mu_{s_j}+2^{-n}\mathbf1_{C_j}\mu_{u_j}
  \leq\mathbf1_{C_j}\mu_{a_j}.
 \end{equation}
-On $D_j=\{s_j\leq u-2\delta\}$, contact implies $a_j\leq u_j-\delta$. Since $\mathrm{e}^{-\delta}=2^{-n}$, the $\mu_{u_j}$ term cancels in \eqref{eq:big-addition-stretch-contact}. Also $v\geq\varphi-C\geq u_j-C$ for a fixed $C$. Hence
+On $D_j=\{s_j\leq u-2\delta\}$, contact implies $a_j\leq u_j-\delta$. Since $\mathrm{e}^{-\delta}=2^{-n}$, the $\mu_{u_j}$ terms cancel in \eqref{eq:big-addition-stretch-contact}. Also $v\geq\varphi-C\geq u_j-C$ for a fixed constant $C$. Hence
 \begin{equation}\label{eq:big-addition-ordinary-tail}
  \mathbf1_{D_j}\mu_{s_j}
  \leq2^n \mathrm{e}^C\mathbf1_{D_j\cap C_j}
                 \mathrm{e}^{(s_j-u_j)/2}\mu_v.
 \end{equation}
-All measures being subtracted are finite.
+All measures being subtracted here are finite.
 
 \Needspace{6\baselineskip}
-For $N\geq1$ form the finite roofs
+For $N\geq1$ form the finite rooftops
 \[
  R_N=P_\theta(s_1,\ldots,s_N),\qquad q_N=P_\theta(u,R_N).
 \]
-They belong to $\mathcal E_\varphi$ by the same-class finite-rooftop theorem. On the set $\{R_N\leq u-2\delta\}$, partition contact according to the first index $i$ with $R_N=s_i$. Since $u_i\geq u_N$, \eqref{eq:big-addition-ordinary-tail} gives
+They belong to $\mathcal E_\varphi$ by the finite-rooftop proposition. On the set $\{R_N\leq u-2\delta\}$, partition the contact set according to the first index $i$ with $R_N=s_i$. Since $u_i\geq u_N$, \eqref{eq:big-addition-ordinary-tail} gives
 \[
  \mathbf1_{\{R_N\leq u-2\delta\}}\mu_{R_N}
  \leq2^n \mathrm{e}^C \mathrm{e}^{(R_N-u_N)/2}\mu_v.
@@ -95,32 +97,32 @@ The contact pieces are disjoint, so there is no factor $N$. On $\{q_N\leq u-2\de
  \int_X(u-q_N)\,\mu_{q_N}
  \leq 2\delta M+2^{n+1}\mathrm{e}^{C-1}\mu_v(X).
 \]
-The first term bounds the complementary set, including any contact with $u$. The first-moment criterion, with the fixed reference $u$, implies that the decreasing sequence $q_N$ has a genuine limit $h\in\mathcal E_\varphi$. For each fixed $j$ and every $N\geq j$, $q_N\leq s_j\leq a_j$, so $h\leq a_j$ for every $j$.
+The first term bounds the contribution of the complementary set, including any contact with $u$. The first-moment criterion \cref{prop:big-relative-first-moment}, with fixed reference $u$, implies that the decreasing sequence $q_N$ has a limit $h\in\mathcal E_\varphi$, not identically $-\infty$. For each fixed $j$ and every $N\geq j$, we have $q_N\leq s_j\leq a_j$, so $h\leq a_j$ for every $j$.
 
-The $a_j$ now have a genuine $L^1$ subsequential limit, bounded above by $u,v$. Apply \cref{lem:big-truncated-addition-limit}, with reference $\varphi$, fixed second input $v$, and this common lower bound $h$. The input masses are at most $M$. It proves the required equation in $\mathcal E_\varphi$.
+The $a_j$ now have a subsequence converging in $L^1$ to a limit not identically $-\infty$, bounded above by $u$ and $v$. \Cref{lem:big-truncated-addition-limit}, with reference $\varphi$, fixed second input $v$ and common lower bound $h$, proves the required equation in $\mathcal E_\varphi$; here the input masses are at most $M$.
 
-\emph{A bounded reference measure for the second input.}
-Finally let $u,v\in\mathcal E_\varphi$ and $\mu_v\leq A\nu$, with $\nu=\mathrm{MA}_\omega(\psi)$ and $\psi$ bounded. Again put $u_j=\max(u,\varphi-j)$. By the preceding step, applied with the inputs interchanged, there are $a_j\in\mathcal E_\varphi$ satisfying the same equations and bounds as in the third step.
+\emph{Step 4: a bounded carrier measure for the second input.}
+Finally let $u,v\in\mathcal E_\varphi$ and $\mu_v\leq A\nu$, with $\nu=\mathrm{MA}_\omega(\psi)$ and $\psi$ bounded. Again put $u_j=\max(u,\varphi-j)$. By Step 3, applied with the inputs interchanged, there are $a_j\in\mathcal E_\varphi$ satisfying the same equations and bounds as in Step 3.
 
-Let $r=P_\theta(u,v)\in\mathcal E_\varphi$. On $\{a_j<r\}$ one has $r\leq u_j,v$, so $t \mathrm{e}^{-t}\leq1/\mathrm{e}$ gives
+Let $r=P_\theta(u,v)\in\mathcal E_\varphi$. On $\{a_j<r\}$ one has $r\leq u_j,v$, so the inequality $t \mathrm{e}^{-t}\leq1/\mathrm{e}$ gives
 \[
  \int_X(r-a_j)_+\,\mu_{a_j}
  \leq \mathrm{e}^{-1}\bigl(\mu_{u_j}(X)+\mu_v(X)\bigr)\leq2M/\mathrm{e}.
 \]
 \Needspace{7\baselineskip}
-The one-sided first-moment criterion gives a uniform lower bound for $\sup_Xa_j$, since $a_j\leq\varphi$. By \cref{lem:bounded-carrier-integrability},
+Since $a_j\leq\varphi$, the one-sided first-moment criterion gives a uniform lower bound for $\sup_Xa_j$. By \cref{lem:bounded-carrier-integrability},
 \[
  \sup_{\substack{z\in\PSH(X,\theta)\\\sup_Xz=0}}
        \int_X(-z)\,\mathrm{d}\nu<\infty.
 \]
 \Needspace{6\baselineskip}
-Applying it to $a_j-\sup_Xa_j$ and using the lower bound for the suprema, we obtain
+Applying this to $a_j-\sup_Xa_j$ and using the lower bound for the suprema, we obtain
 \begin{equation}\label{eq:big-addition-carrier-moment}
  \sup_j\int_X(u_j-a_j)\,\mu_v
  \leq\sup_j\int_X(-a_j)\,\mu_v<\infty.
 \end{equation}
 
-Keep $s_j=Q_2(a_j,u_j)$, $C_j$ and $D_j$ from the third step. The same cancellation in \eqref{eq:big-addition-stretch-contact}, now using only $a_j\leq v$, gives
+Keep $s_j=Q_2(a_j,u_j)$, $C_j$ and $D_j$ from Step 3. The same cancellation in \eqref{eq:big-addition-stretch-contact}, now using only $a_j\leq v$, gives
 \[
  \mathbf1_{D_j}\mu_{s_j}
  \leq2^n\mathbf1_{D_j\cap C_j}\mathrm{e}^{a_j-v}\mu_v
@@ -131,20 +133,20 @@ Take one additional rooftop,
 \[
  q_j=P_\theta(s_j,u-2\delta)\in\mathcal E_\varphi.
 \]
-On its contact with $u-2\delta$ its measure is at most $\mu_u$; on its other contact part $q_j=s_j\leq u-2\delta$, the preceding inequality applies. Thus
+On its contact set with $u-2\delta$ its measure is at most $\mu_u$; on its other contact part, where $q_j=s_j\leq u-2\delta$, the preceding inequality applies. Thus
 \begin{equation}\label{eq:big-addition-fixed-roof-measure}
  \mu_{q_j}\leq\mu_u+2^n\mu_v.
 \end{equation}
-Moreover the energy vanishes on the first contact part. On the other part, the measure is supported on $C_j$, where $u_j-s_j=2(u_j-a_j)$. Therefore
+Moreover the integrand $u-2\delta-q_j$ vanishes on the first contact part. On the other part, the measure is carried by $C_j$, where $u_j-s_j=2(u_j-a_j)$. Therefore
 \[
  \int_X(u-2\delta-q_j)\,\mu_{q_j}
- \leq2^{n+1}\int_X(u_j-a_j)\,\mu_v.
+ \leq2^{n+1}\int_X(u_j-a_j)\,\mu_v,
 \]
-This is uniformly bounded by \eqref{eq:big-addition-carrier-moment}. The first-moment criterion with reference $u-2\delta$ prevents collapse of $q_j$. Extract genuine $L^1$ limits of $a_j$ and $q_j$. The fixed-dominator theorem applies to \eqref{eq:big-addition-fixed-roof-measure} and, after a further extraction, gives
+which is uniformly bounded by \eqref{eq:big-addition-carrier-moment}. The first-moment criterion with reference $u-2\delta$ prevents collapse of the $q_j$. Extract $L^1$ limits of the $a_j$ and of the $q_j$, not identically $-\infty$. The fixed-dominator theorem applies to \eqref{eq:big-addition-fixed-roof-measure} and, after a further extraction, gives
 \[
  h=P_\theta\left(\inf_jq_j\right)\in\mathcal E_\varphi.
 \]
-Since $q_j\leq s_j\leq a_j$, this is a common lower bound for the extracted solutions. \Cref{lem:big-truncated-addition-limit} completes the passage to the equation. Its truncation levels are the original indices of the retained subsequence, not newly assigned levels.
+Since $q_j\leq s_j\leq a_j$, this is a common lower bound for the extracted solutions, and \cref{lem:big-truncated-addition-limit} gives the equation. Its truncation levels are the original indices of the retained subsequence.
 
-In every stage the solution is at most $u,v$, so its measure is bounded by $\mu_u+\mu_v$. Two solutions have the same exponentially weighted measure, so \cref{cor:big-relative-orders} in both directions gives uniqueness, even when that weighted measure has infinite mass. Restoring the common translation and the exponent finishes the proof.
+In every step the solution lies below $u$ and $v$, so its measure is bounded by $\mu_u+\mu_v$. Two solutions have the same exponentially weighted measure, so \cref{cor:big-relative-orders}, applied in both directions, gives uniqueness, even when that weighted measure has infinite mass. Restoring the common translation and the exponent finishes the proof.
 \end{proof}
