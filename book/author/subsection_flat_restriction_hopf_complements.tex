@@ -1,52 +1,89 @@
-\subsection{Flat restrictions and Hopf complements}
+\subsection{Homogeneous plurisubharmonic functions and Hopf complements}
 \label{subsec:flat-restriction-hopf-complements}
 
-Let $F\to B$ be a holomorphic bundle of positive rank on a connected compact complex manifold $B$ of positive dimension, and put
+Let $F\to B$ be a holomorphic bundle of rank $r\geq1$ on a connected compact complex manifold of dimension $n\geq1$. Write $F^\times$ for its complement of the zero section, and put $N=n+r$ and
 \[
  U_F=\mathbb P(\mathcal O_B\oplus F)\setminus\mathbb P(\mathcal O_B).
 \]
-A flat restriction obstructs strict plurisubharmonicity near the removed zero section. This supplies a lower convexity bound for the Hopf example below.
+The reciprocal-norm exhaustion in \cref{thm:bundle-curvature-complement-convexity} at $s=0$ makes $U_F$ $N$-convex. A homogeneous plurisubharmonic function forces this upper bound to be sharp. Flat restrictions then give a lower bound for the Hopf example.
 
-\Needspace{11\baselineskip}
-\begin{lemma}\label{lem:unitary-flat-complement-obstruction}
-\index{Unitary flat bundle!complement obstruction}\index{Projective bundle!flat restriction}
-Let $B$ be a connected compact complex manifold of positive dimension, and let $F\to B$ be a holomorphic vector bundle of positive rank which admits a Hermitian metric with flat Chern connection. Then $U_F$ is not $1$-convex.
-\end{lemma}
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:homogeneous-psh-sharp-complement-index}
+\index{Plurisubharmonic function!homogeneous complement obstruction}\index{Projective bundle!least convexity index}
+Suppose that $F^\times$ admits a smooth positive plurisubharmonic function $G$ satisfying $G(cv)=|c|^2G(v)$ for every $c\in\mathbb C^*$ and $v\in F^\times$. Then the least smooth convexity index of $U_F$ is $N$.
+\end{proposition}
 \begin{proof}
-Fix a Hermitian metric on $F$ with flat Chern connection. Suppose that a smooth exhaustion $\psi$ is strictly plurisubharmonic outside a compact set $K\subset U_F$. A sufficiently small punctured metric disc bundle about the removed zero section is disjoint from $K$. Indeed, otherwise a sequence in $K$ with fibre norm tending to zero would accumulate on that section in the compact ambient projective bundle.
+It remains to exclude $(N-1)$-convexity, since every smaller convexity index would imply it. Suppose that a smooth exhaustion $\psi$ has at least two positive Levi eigenvalues outside a compact set $K\subset U_F$.
 
-Fix a radius $t>0$ inside this disc bundle. On a simply connected coordinate neighbourhood choose a parallel holomorphic unitary frame for the flat Chern connection. Such frames have constant unitary transition matrices. Let $\mathrm d\sigma$ be the rotation-invariant probability measure on the unit sphere in $\mathbb C^{\operatorname{rank}F}$, and put
+Fix a reference Hermitian norm on $F$. On its compact unit sphere bundle, $G$ has a positive minimum and a finite maximum. Homogeneity consequently compares $G$ with that squared norm uniformly on $F^\times$. Thus
 \[
- A(x)=\int_{|v|=1}\psi([1:tv])\,\mathrm d\sigma(v).
+ \Sigma_t=\{G=t^2\},\qquad t>0,
 \]
-The transitions preserve the sphere and its measure, so $A$ is a global smooth real function on $B$. For each fixed $v$, the map $x\mapsto[1:tv]$ in a parallel frame is holomorphic. Differentiating the compact sphere integral gives a positive definite complex Hessian for $A$, since each horizontal Hessian of $\psi$ is positive definite. This contradicts the nonpositive complex Hessian at a maximum of $A$ on $B$.
+are compact smooth hypersurfaces, and multiplication by $t$ identifies $\Sigma_1$ with $\Sigma_t$. Smoothness follows also from the Euler identity: if $R_v=v$ is the real radial vector at $v$, then $\mathrm dG(R_v)=2G(v)>0$. Since $K$ stays away from the removed zero section, there is $\epsilon>0$ such that every $\Sigma_t$, $0<t<\epsilon$, is disjoint from $K$.
+
+Put
+\[
+ M(t)=\max_{v\in\Sigma_1}\psi([1:tv]),\qquad 0<t<\epsilon.
+\]
+On any closed interval inside $(0,\epsilon)$, the radial derivatives of the smooth function under the maximum are uniformly bounded over the compact sphere. Hence $M$ is locally Lipschitz. Properness of the exhaustion implies $M(t)\to+\infty$ as $t\to0$: otherwise maximizing points along a sequence tending to zero would lie in one compact sublevel while accumulating on the removed section. Choose $0<t_0<t_1<\epsilon$ with $M(t_0)>M(t_1)$. The absolute continuity of a Lipschitz function and its integral derivative formula give a differentiability point $t\in(t_0,t_1)$ with $M'(t)<0$.
+
+Choose $v\in\Sigma_1$ attaining $M(t)$, and set $p=tv$. For both signs of $h$, the comparison
+\[
+ M(t+h)\geq\psi([1:(t+h)v])
+\]
+is an equality at $h=0$. Differentiability of $M$ therefore gives $\frac{\mathrm d}{\mathrm dt}\psi([1:tv])=M'(t)$. Since $\psi$ has a constrained maximum on $\Sigma_t$ at $p$ and $\mathrm dG\ne0$, there is a real $\lambda$ with $\mathrm d\psi=\lambda\,\mathrm dG$ at $p$. The radial derivative gives
+\[
+ \lambda=\frac{M'(t)}{2t}<0.
+\]
+The function $\psi-\lambda G$ has zero differential at $p$ and nonpositive real Hessian on $T_p\Sigma_t$. Indeed, its restriction to the sphere is $\psi$ minus a constant, and its zero differential removes the second derivative of a curve realizing a tangent vector. On the complex tangent hyperplane $H=T_p\Sigma_t\cap\mathrm iT_p\Sigma_t$, this implies
+\[
+ \mathcal L_\psi|_H\leq\lambda\mathcal L_G|_H\leq0.
+\]
+The first inequality follows by adding the real Hessian inequalities in a tangent vector and its complex rotation; the second uses plurisubharmonicity and $\lambda<0$. A two-dimensional complex subspace on which $\mathcal L_\psi$ is positive definite would meet the complex codimension-one space $H$ nontrivially, a contradiction. Thus $\psi$ has at most one positive Levi eigenvalue at $p\notin K$. Combine this contradiction with \cref{thm:bundle-curvature-complement-convexity} at $s=0$.
+\end{proof}
+
+\Needspace{10\baselineskip}
+\begin{corollary}\label{cor:unitary-flat-exact-complement-index}\label{lem:unitary-flat-complement-obstruction}
+\index{Unitary flat bundle!least complement convexity index}\index{Projective bundle!flat restriction}
+If $F$ admits a Hermitian metric with flat Chern connection, then the least smooth convexity index of $U_F$ is $n+r$.
+\end{corollary}
+\begin{proof}
+In parallel holomorphic unitary frames, the squared norm is $G(v)=\sum_j|v_j|^2$, which is plurisubharmonic on the total space. Constant unitary transitions make it global, smooth, positive on $F^\times$ and homogeneous of degree two under complex scalars. Apply \cref{prop:homogeneous-psh-sharp-complement-index}.
 \end{proof}
 
 \Needspace{8\baselineskip}
-Fix $n\geq2$ and real numbers $0<q,a<1$. On the scalar Hopf manifold
+Fix $n\geq2$, a real $0<q<1$ and a complex $a\ne0$. On the scalar Hopf manifold
 \[
  X_q=(\mathbb C^n\setminus\{0\})/\langle z\mapsto qz\rangle
 \]
 let $E_a$ be the holomorphic line bundle defined by $(z,v)\sim(qz,av)$. Put
 \[
- b=-\frac{\log a}{\log q}<0,
+ b=-\frac{\log|a|}{\log q},
  \qquad G(z,v)=|z|^{2b}|v|^2.
 \]
-The identity $q^{2b}a^2=1$ makes $G$ the squared norm of a Hermitian metric on $E_a$.
+The identity $q^{2b}|a|^2=1$ makes $G$ the squared norm of a Hermitian metric on $E_a$.
 
 \Needspace{10\baselineskip}
 \begin{example}\label{ex:hopf-exact-complement-index}
 \index{Hopf manifold!least complement convexity index}\index{Gauduchon degree!de Rham trivial line bundle}\index{$q$-convexity!Hopf complement}
-The complement $U_{E_a}$ is $2$-convex but not $1$-convex, so its least smooth convexity index is two. The de Rham class $c_1(E_a)$ vanishes, whereas $\deg_\gamma E_a>0$ for every Gauduchon form $\gamma$ on $X_q$.
+The least smooth convexity index of $U_{E_a}$ is two when $0<|a|<1$, and $n+1$ when $|a|\geq1$. For every Gauduchon form $\gamma$ on $X_q$, the degree of $E_a$ is positive, zero or negative according as $|a|<1$, $|a|=1$ or $|a|>1$. Its de Rham first Chern class vanishes in all cases.
 \end{example}
 \begin{proof}
 Write $\alpha=\ddc\log|z|^2$. This form descends because the contraction changes its potential by a constant. For $u\in T_z^{1,0}(\mathbb C^n\setminus\{0\})$, its coefficient form, apart from the positive factor $1/(2\pi)$, is
 \[
  \frac{|u|^2}{|z|^2}-\frac{|\langle u,z\rangle|^2}{|z|^4},
 \]
-where $\langle\cdot,\cdot\rangle$ is the Euclidean Hermitian inner product. Cauchy--Schwarz shows that it is positive semidefinite with kernel $\mathbb Cz$, hence of rank $n-1$. The normalized line curvature of $G$ is $-b\alpha$. Thus every nonzero fibre vector supplies $n-1$ positive curvature directions. Apply \cref{thm:bundle-curvature-complement-convexity} with $r=1$ and $s=n-1$ to obtain $2$-convexity.
+where $\langle\cdot,\cdot\rangle$ is the Euclidean Hermitian inner product. Cauchy--Schwarz shows that it is positive semidefinite with kernel $\mathbb Cz$, hence of rank $n-1$. The normalized line curvature of $G$ is $-b\alpha$. The integral of $\alpha\wedge\gamma^{n-1}$ is strictly positive, so the degree has the sign of $-b$, giving the three stated cases. The map $z\mapsto(z/|z|,\log|z|)$ identifies the covering space with $S^{2n-1}\times\mathbb R$, and the contraction translates the second coordinate by $\log q$. Hence $X_q$ is diffeomorphic to $S^{2n-1}\times S^1$ and $H^2_{\mathrm{dR}}(X_q,\mathbb R)=0$.
 
-The map $\pi:X_q\to\mathbb P^{n-1}$, $[z]\mapsto[z]$, has compact embedded elliptic fibres $B\simeq\mathbb C^*/q^{\mathbb Z}$. On a lifted fibre $z=\zeta z_0$, the logarithm of the metric coefficient is $b\log|\zeta|^2+b\log|z_0|^2$, which is pluriharmonic. Thus $E_a|_B$ has flat Chern connection. The complement $U_{E_a|_B}$ is a closed complex submanifold of $U_{E_a}$. A $1$-convex exhaustion of the latter would restrict to a proper exhaustion of the former, strictly plurisubharmonic outside the compact intersection of its exceptional set with the submanifold. This contradicts \cref{lem:unitary-flat-complement-obstruction}.
+If $|a|<1$, then $b<0$, so every nonzero fibre vector supplies $n-1$ positive curvature directions. Apply \cref{thm:bundle-curvature-complement-convexity} with $r=1$ and $s=n-1$ to obtain $2$-convexity. The map $\pi:X_q\to\mathbb P^{n-1}$, $[z]\mapsto[z]$, has compact embedded elliptic fibres $B\simeq\mathbb C^*/q^{\mathbb Z}$. On a lifted fibre $z=\zeta z_0$, the logarithm of the metric coefficient is $b\log|\zeta|^2+b\log|z_0|^2$, which is pluriharmonic. Thus $E_a|_B$ has flat Chern connection. The complement $U_{E_a|_B}$ is a closed complex submanifold of $U_{E_a}$. A $1$-convex exhaustion of the latter would restrict to a proper exhaustion of the former, strictly plurisubharmonic outside the compact intersection of its exceptional set with the submanifold. This contradicts \cref{cor:unitary-flat-exact-complement-index}, since the restricted bundle has base dimension one and rank one. The phase of $a$ affects the gluing but not these metric and curvature calculations.
 
-The map $z\mapsto(z/|z|,\log|z|)$ identifies the covering space with $S^{2n-1}\times\mathbb R$, and the contraction translates the second coordinate by $\log q$. Hence $X_q$ is diffeomorphic to $S^{2n-1}\times S^1$ and $H^2_{\mathrm{dR}}(X_q,\mathbb R)=0$. Nevertheless $-b\alpha$ is a nonzero positive semidefinite form at every point, so $(-b\alpha)\wedge\gamma^{n-1}$ is strictly positive. Its integral is $\deg_\gamma E_a>0$.
+If $|a|\geq1$, then $b\geq0$. On the covering of $E_a^\times$, the function
+\[
+ \log G=b\log|z|^2+\log|v|^2
+\]
+is plurisubharmonic: the first summand has semipositive Levi form and the second is pluriharmonic for $v\ne0$. Consequently
+\[
+ \mathcal L_G=G\bigl(\mathcal L_{\log G}+\partial\log G\otimes\overline{\partial\log G}\bigr)\geq0.
+\]
+The descended $G$ is smooth, positive and homogeneous of degree two under complex scalars. Apply \cref{prop:homogeneous-psh-sharp-complement-index} with rank one and total dimension $n+1$.
 \end{proof}

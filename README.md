@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [Gauduchon and Hopf integration](research/editorial/gauduchon-hopf-complement-integration-515.md) extends the positive-degree complement criteria to Gauduchon forms and gives the exact scalar Hopf complement index. The actual website serves the verified 1345-page PDF and matching homepage description; 38 original directions remain open.
+The [homogeneous and Hopf integration](research/editorial/homogeneous-hopf-index-integration-517.md) gives a sharp complement index from homogeneous plurisubharmonic functions and the full scalar Hopf line-automorphy classification. The actual website serves the verified 1345-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
