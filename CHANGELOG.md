@@ -10,6 +10,8 @@
 - Several descriptions of cited results are made precise, among them DNGL26, Dinew09, Dinew16, OV11OT, BEGZ10 and Liu–Wan.
 - Locators that could not be checked against paywalled journal text are listed in the checkpoint 529 record.
 
+**DX24.** At the author's request, the continuity of model envelopes is cited from SGPT Proposition 3.1.12, (3.23)–(3.24). The attribution to Darvas–Xia stays, without a locator in their published version.
+
 **Mass invariance.** After the BGL25 check, the author chose to state that the non-pluripolar mass in a closed background depends only on the singularity type under the bounded mass property, in particular on compact Kähler manifolds (BGL25 Theorem 2.8, Example 3.2). This replaces the Kähler-only wording of the previous follow-up. No proof changes.
 
 ## 6 October 2026 — Mass invariance only in the Kähler theory (529, follow-up)

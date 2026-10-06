@@ -183,7 +183,7 @@ The author's rule (6 October 2026): “You should always use the journal version
 The published text was paywalled or unreachable. Each of these locators is supported only by the final arXiv or author version, or by later citations:
 - ALS26: 19 statement numbers.
 - FV26: Conjectures 1.1–1.2.
-- DangNull26 and DX24: statement numbers.
+- DangNull26: statement numbers. (DX24 now has no locator: at the author's request of 6 October 2026, the published version is not consulted for now, and the statement used is cited from SGPT Proposition 3.1.12, (3.23)–(3.24).)
 - OV24Vaisman: Theorem 4.1 and Lemmas 4.2–4.4.
 - OV25Balanced: Conjecture 4.14 and Remark 4.16.
 - OV25LeeGauduchon: Remark 5.6 and Theorem 3.11.
