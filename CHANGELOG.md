@@ -1,5 +1,16 @@
 # Modification history
 
+## 6 October 2026 — Oeljeklaus–Toma manifolds 528
+
+[The new direction](research/editorial/oeljeklaus-toma-directions-528.md) answers the author's request to explore themes not yet in the literature. New Section 27.19 treats Inoue surfaces and Oeljeklaus–Toma manifolds:
+
+- For the natural closed semipositive form, every potential is a continuous function of `Im w`, convex after subtracting a fixed logarithmic term. Consequently the class has no singular potentials, but it carries positive currents on Levi-flat tori, and the form represents `c_1^BC(K)` on Inoue surfaces.
+- When `t = 1`, Lelong level sets are finite for every background.
+- For type (2,1), the natural Gauduchon metric has an exact indefinite quadratic mass. On fiber-invariant potentials the mass satisfies explicit two-sided bounds, and `v_- < vol < v_+`.
+- Type (s,1) with s ≥ 2 carries no metric whose `dd^c` has a sign.
+
+Two new problems: bounded and positive mass on OT threefolds, and rigidity of potentials along Liouville foliations. Two independent referee reads were done; all their errors and gaps are corrected. The build is clean (1486 printed pages) and was published in website commit c7aba05.
+
 ## 6 October 2026 — Whole-book presentation revision 527
 
 [The presentation revision](research/editorial/whole-book-presentation-revision-527.md) answers the author's request for textbook presentation without stiff language or undeclared nonstandard notation. Every active unit (Introduction, Conventions, Chapters 1–33, problems, historical notes, Appendix A) is revised line by line. The changes:

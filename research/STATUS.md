@@ -1,5 +1,18 @@
 # Current research status — 6 October 2026
 
+## Checkpoint 528 — Oeljeklaus–Toma manifolds
+
+[The OT record](editorial/oeljeklaus-toma-directions-528.md) adds new Section 27.19 and Problems 32.3.6–32.3.7, following the author's request for new directions. Proved there:
+- the description of all θ-plurisubharmonic functions;
+- the absence of singular potentials;
+- finite Lelong level sets when t = 1;
+- the exact quadratic mass formula and its consequences on OT threefolds;
+- the absence of plurisigned metrics on type (s,1), s ≥ 2.
+
+Literature checks are recorded, and two independent referee reads are resolved. The full build is clean: 1514 physical / 1486 printed pages. Published in website commit c7aba05, with the remote blobs verified; the live GitHub Pages check is pending at the time of writing.
+
+Next: try to decide Problem 32.3.6 for invariant-plus-one-mode potentials, and look for further test manifolds (Kato surfaces, nilmanifolds) where the book's singularity theory gives new information.
+
 ## Checkpoint 527 — Whole-book presentation revision
 
 [The presentation revision](editorial/whole-book-presentation-revision-527.md) answers the author's 6 October request. Every active unit is revised for textbook presentation: connected prose, visible proof steps, Part and chapter openings, single definitions of book-wide notation, a front-matter notation table and no workflow vocabulary. Several local mathematical slips are corrected (listed in the record).
