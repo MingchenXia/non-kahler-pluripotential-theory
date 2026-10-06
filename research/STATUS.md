@@ -9,7 +9,7 @@
 - the exact quadratic mass formula and its consequences on OT threefolds;
 - the absence of plurisigned metrics on type (s,1), s ≥ 2.
 
-Literature checks are recorded, and two independent referee reads are resolved. The full build is clean: 1514 physical / 1486 printed pages. Published in website commit c7aba05, with the remote blobs verified; the live GitHub Pages check is pending at the time of writing.
+Literature checks are recorded, and two independent referee reads are resolved. The full build is clean: 1514 physical / 1486 printed pages. Published in website commit c7aba05, with the remote blobs verified; the live GitHub Pages PDF matches SHA-256 `4f519d18…` and the live homepage shows "1486 pages. Updated October 6, 2026".
 
 Next: try to decide Problem 32.3.6 for invariant-plus-one-mode potentials, and look for further test manifolds (Kato surfaces, nilmanifolds) where the book's singularity theory gives new information.
 
