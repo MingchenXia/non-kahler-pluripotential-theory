@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [fixed-hypersurface integration](research/editorial/fixed-stein-finsler-integration-508.md) adds one Stein hypersurface testing every candidate Finsler metric on the stable ample Hirzebruch bundles. The actual website serves the verified 1333-page PDF and matching homepage description; 38 original directions remain open.
+The [concave-neighbourhood integration](research/editorial/concave-neighbourhood-integration-510.md) adds the dual support-norm construction and stable ample Hirzebruch complements that are not 2-convex. The actual website serves the verified 1337-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
