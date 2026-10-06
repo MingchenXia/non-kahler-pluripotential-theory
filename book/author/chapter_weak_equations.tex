@@ -1,25 +1,25 @@
 \chapter{Continuous solutions and normalization}
 \label{chap:weak-equations}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\omega$ be a Hermitian form, and fix a smooth positive volume form $\mathrm{d}V$. Fix $p>1$ and a nonnegative $f\in L^p(X,\mathrm{d}V)$ with $\int_Xf\,\mathrm{d}V>0$. Norms and almost-everywhere statements use $\mathrm{d}V$ unless another measure is specified.
+Throughout this chapter, $X$ is a connected compact complex manifold of dimension $n\geq1$, $\omega$ is a Hermitian form and $\mathrm{d}V$ is a smooth positive volume form on $X$. As in \cref{chap:smooth-equations}, we write $\omega_u=\omega+\ddc u$; for a bounded $\omega$-plurisubharmonic function $u$, the power $\omega_u^n$ is the Bedford--Taylor product of \cref{prop:bounded-products}. We fix $p>1$ and a nonnegative $f\in L^p(X,\mathrm{d}V)$ with $\int_Xf\,\mathrm{d}V>0$. Norms and almost-everywhere statements refer to $\mathrm{d}V$ unless another measure is specified.
 
-Smooth approximations of $f$ give solutions by the preceding chapter, but normalized $L^1$ compactness alone does not identify the limit of their Monge--Amp\`ere measures. A Gauduchon trace bounds the normalization scalars, giving uniform $L^p$ control of the equation densities. Modified comparison then strengthens normalized $L^1$ convergence to uniform convergence. For the exponential equation, the same trace controls the additive constants of the potentials. Letting the exponent tend to zero determines a unique scalar for the prescribed density, even when the normalized potential is not unique.
+We look for continuous $\omega$-plurisubharmonic solutions of the equations $(\omega+\ddc u)^n=cf\,\mathrm{d}V$, with an unknown constant $c>0$, and $(\omega+\ddc u)^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$, with $\lambda>0$. Approximating $f$ by smooth positive densities, the preceding chapter gives smooth solutions, but normalized $L^1$ compactness of the potentials does not by itself identify the limit of their Monge--Amp\`ere measures. Two estimates close this gap. Integration against a Gauduchon metric bounds the normalization constants, and hence gives uniform $L^p$ control of the densities of the approximating equations. A modified comparison principle, which compensates for the variation of the total mass, then upgrades normalized $L^1$ convergence of the potentials to uniform convergence. For the exponential equation, the same Gauduchon trace controls the additive constants. Letting the exponent $\lambda$ tend to zero shows that the constant $c$ is determined by $f$, even though the normalized potential need not be unique.
 
-For concave equations with a fixed admissible reference and a strict asymptotic gap, an auxiliary equation gives a uniform stability estimate. This compactness also supplies smooth comparison functions for the gradient bound at the end of the chapter.
+On the Hopf threefold, the normalization constant satisfies a sharp lower bound, with equality exactly for densities pulled back from the projective plane. Finally, for concave fully nonlinear equations with a fixed admissible reference satisfying a strict asymptotic gap, an auxiliary Monge--Amp\`ere equation gives a uniform stability estimate. The resulting compactness provides the smooth comparison functions for a gradient bound.
 
 \section{Continuous solvability}
 
-The prescribed density can be normalized by an unknown scalar or by an exponential of the potential:
+There are two natural ways to normalize the prescribed density: by an unknown positive constant, or by an exponential of the potential.
 
 \begin{theorem}[Ko{\l}odziej--Nguyen]\label{thm:kn-continuous}\index{Monge--Ampere equation@Monge--Amp\`ere equation!continuous solution}
 There are $c>0$ and $u\in\PSH(X,\omega)\cap C(X)$ such that
 \[
  (\omega+\ddc u)^n=c f\,\mathrm{d}V.
 \]
-One may normalize $\sup_Xu=0$.
+The potential can be normalized by $\sup_Xu=0$.
 \end{theorem}
 
-The scalar is unique by \cref{prop:vanishing-exponent}. The normalized potential need not be unique, even for a smooth density; \cref{thm:degenerate-hermitian-nonuniqueness} gives an example.
+The constant $c$ is uniquely determined by $f$, by \cref{prop:vanishing-exponent}. The normalized potential, however, need not be unique, even for a smooth density; see \cref{thm:degenerate-hermitian-nonuniqueness}.
 
 \Needspace{7\baselineskip}
 \begin{theorem}[Nguyen]\label{thm:nguyen-exp}\index{Monge--Ampere equation@Monge--Amp\`ere equation!positive exponent}
@@ -33,41 +33,40 @@ For every $\lambda>0$, there is a unique continuous $\omega$-plurisubharmonic fu
 
 \input{author/section_weak_estimates}
 
-Increasing the prescribed density decreases the solution: the exponential factor compensates for the change. Bounded exponential comparison gives this order even where the densities vanish.
+For the exponential equation, a larger density gives a smaller solution, since the factor $\mathrm{e}^{\lambda u}$ has to compensate for the increase. Bounded exponential comparison gives this monotonicity even where the densities vanish.
 
 \begin{lemma}\label{lem:exp-order}
-Let $a,b\in\PSH(X,\omega)\cap L^\infty(X)$ solve
+Let $\lambda>0$, and let $f_a,f_b$ be nonnegative nonzero $L^p$ densities. Suppose that $a,b\in\PSH(X,\omega)\cap L^\infty(X)$ solve
 \[
  \omega_a^n=\mathrm{e}^{\lambda a}f_a\,\mathrm{d}V,\qquad
- \omega_b^n=\mathrm{e}^{\lambda b}f_b\,\mathrm{d}V,
+ \omega_b^n=\mathrm{e}^{\lambda b}f_b\,\mathrm{d}V.
 \]
-where $\lambda>0$ and $f_a,f_b$ are nonnegative nonzero $L^p$ densities. If $f_a\leq f_b$ almost everywhere, then $b\leq a$ on $X$.
+If $f_a\leq f_b$ almost everywhere, then $b\leq a$ on $X$.
 \end{lemma}
 
 \begin{proof}
-The equations and $f_a\leq f_b$ give
-$\mathrm{e}^{-\lambda b}\omega_b^n\geq \mathrm{e}^{-\lambda a}\omega_a^n$.
-Apply \cref{cor:bounded-exponential-comparison} with $u=a$ and $v=b$.
+Since $f_a\leq f_b$, the two equations give
+$\mathrm{e}^{-\lambda b}\omega_b^n\geq \mathrm{e}^{-\lambda a}\omega_a^n$. Hence $b\leq a$ by \cref{cor:bounded-exponential-comparison}, applied with $u=a$ and $v=b$.
 \end{proof}
 
 \begin{corollary}\label{cor:bounded-lp-continuity}
 Every bounded $\omega$-plurisubharmonic solution of $\omega_u^n=f\,\mathrm{d}V$ is continuous.
 \end{corollary}
 \begin{proof}
-The density $\mathrm{e}^{-u}f$ is nonnegative, nonzero and belongs to $L^p$. By \cref{thm:nguyen-exp}, there is a continuous solution $r$ of
+Since $u$ is bounded, the density $\mathrm{e}^{-u}f$ is nonnegative, nonzero and belongs to $L^p$. By \cref{thm:nguyen-exp}, applied with $\lambda=1$ to this density, there is a continuous solution $r$ of
 \[
  \omega_r^n=\mathrm{e}^{r-u}f\,\mathrm{d}V.
 \]
-The bounded potential $u$ satisfies this same proper equation. Applying \cref{lem:exp-order} in both directions gives $u=r$.
+The bounded potential $u$ solves the same exponential equation. Applying \cref{lem:exp-order} with $f_a=f_b=\mathrm{e}^{-u}f$ in both orders gives $u=r$, so $u$ is continuous.
 \end{proof}
 
 \section{The vanishing exponent and scalar uniqueness}
 
-For the fixed density $f$, compare $u_\lambda$ from \eqref{eq:weak-exp} with constant translates of any solution of the normalized equation. The maximum and minimum of that solution give two barriers whose separation is its oscillation. After multiplication by $\lambda$, both converge to the logarithm of the same scalar.
+To show that the constant in \cref{thm:kn-continuous} is unique, we compare the solution $u_\lambda$ of \eqref{eq:weak-exp} with constant translates of a solution $u$ of the normalized equation. Translating $u$ by its maximum and by its minimum gives two barriers for the exponential equation, whose separation is the oscillation of $u$. After multiplication by $\lambda$, both barriers converge to the logarithm of the constant as $\lambda\downarrow0$. Since $u_\lambda$ depends only on $f$ and $\lambda$, the constant is determined by $f$.
 
 \Needspace{16\baselineskip}
 \begin{proposition}\label{prop:vanishing-exponent}\index{Normalization scalar!uniqueness}\index{Exponential approximation!vanishing exponent}
-Suppose $u\in\PSH(X,\omega)\cap C(X)$ and $c>0$ satisfy $\omega_u^n=cf\,\mathrm{d}V$. Set $m=\inf_Xu$ and $M=\sup_Xu$. Then the solution of \eqref{eq:weak-exp} obeys
+Suppose $u\in\PSH(X,\omega)\cap C(X)$ and $c>0$ satisfy $\omega_u^n=cf\,\mathrm{d}V$. Set $m=\inf_Xu$ and $M=\sup_Xu$. Then, for every $\lambda>0$, the solution of \eqref{eq:weak-exp} satisfies
 \begin{equation}\label{eq:exp-barriers}
  u+\frac{\log c}{\lambda}-M
  \leq u_\lambda\leq
@@ -79,26 +78,25 @@ In particular,
  \leq\lambda(M-m),
  \qquad
  \mathrm{e}^{\lambda u_\lambda}\longrightarrow c
- \quad\hbox{uniformly on }X.
+ \quad\hbox{uniformly on }X\hbox{ as }\lambda\downarrow0.
 \]
-The scaling constant $c$ is unique.
+Consequently, $c$ is the only constant for which the equation $\omega_v^n=cf\,\mathrm{d}V$ has a solution $v\in\PSH(X,\omega)\cap C(X)$.
 \end{proposition}
 \begin{proof}
-Put $a=u+\lambda^{-1}\log c-M$ and $b=u+\lambda^{-1}\log c-m$. Both have the same Monge--Amp\`ere measure as $u$, and
+Set $a=u+\lambda^{-1}\log c-M$ and $b=u+\lambda^{-1}\log c-m$. These translates of $u$ have the same Monge--Amp\`ere measure as $u$, and since $m\leq u\leq M$,
 \[
  \mathrm{e}^{\lambda a}f\,\mathrm{d}V
  \leq cf\,\mathrm{d}V=\omega_a^n=\omega_b^n
  \leq\mathrm{e}^{\lambda b}f\,\mathrm{d}V.
 \]
-Apply \cref{cor:bounded-exponential-comparison} first to $a,u_\lambda$ and then to $u_\lambda,b$. This gives $a\leq u_\lambda\leq b$, proving \eqref{eq:exp-barriers}. Multiplication by $\lambda$, together with $m\leq u\leq M$, gives the norm bound and the uniform limit.
+Thus $\mathrm{e}^{-\lambda a}\omega_a^n\geq f\,\mathrm{d}V=\mathrm{e}^{-\lambda u_\lambda}\omega_{u_\lambda}^n\geq\mathrm{e}^{-\lambda b}\omega_b^n$. Applying \cref{cor:bounded-exponential-comparison} first to the pair $(u_\lambda,a)$ and then to the pair $(b,u_\lambda)$ gives $a\leq u_\lambda\leq b$, which is \eqref{eq:exp-barriers}. Multiplying these inequalities by $\lambda$ and using $m\leq u\leq M$ gives the norm bound, and the uniform convergence follows.
 
-If another pair $(v,c')$ solves the equation with the same $f$, the same unique functions $u_\lambda$ satisfy
-$\lambda u_\lambda\to\log c'$ as well. Hence $c'=c$.
+If $(v,c')$ is another such pair, the same argument applied to $v$ gives $\lambda u_\lambda\to\log c'$, because $u_\lambda$ depends only on $f$ and $\lambda$. Hence $c'=c$.
 \end{proof}
 
-The barriers bound $\operatorname{osc}_X u_\lambda$ by $2(M-m)$. Moreover, the densities $\mathrm{e}^{\lambda u_\lambda}f$ converge to $cf$ in $L^p$. By \cref{thm:lp-uniform-compactness}, the normalized potentials $u_\lambda-\sup_Xu_\lambda$ are uniformly precompact as $\lambda\downarrow0$. Every cluster limit solves the equation with scalar $c$, but scalar uniqueness does not identify a unique cluster potential. \Cref{prop:symmetric-equation-clusters} describes the symmetries preserved by these limits.
+The barriers also give $\operatorname{osc}_Xu_\lambda\leq2(M-m)$, and the densities $\mathrm{e}^{\lambda u_\lambda}f$ converge to $cf$ in $L^p$. By \cref{thm:lp-uniform-compactness}, the normalized potentials $u_\lambda-\sup_Xu_\lambda$ are therefore precompact in $C^0(X)$ as $\lambda\downarrow0$, and every cluster point solves the equation with constant $c$. Uniqueness of the constant does not, however, single out one cluster point; \cref{prop:symmetric-equation-clusters} describes the symmetries that these limits inherit.
 
-For classical potentials, a strict positivity reserve at an extremum gives a direct proof of scalar uniqueness.
+For $C^2$ potentials, uniqueness of the constant also follows directly from the maximum principle: replacing one potential $v$ by $(1+\varepsilon)v$ leaves a strictly positive multiple of $\omega$ in reserve at an extremum.
 
 \input{author/section_classical_scalar_uniqueness}
 
@@ -106,12 +104,12 @@ For classical potentials, a strict positivity reserve at an extremum gives a dir
 \section{Normalization on the Hopf threefold}
 \label{sec:hopf-lp-normalization}
 
-In this section, use the Hopf threefold $X$, Hermitian form $\omega$ and projection $\pi:X\to\mathbb P^2$ of \cref{chap:hopf}. Recall $\alpha=\pi^*\omega_{\FS}$ and $\beta=\omega-\alpha$, and put $\nu=\omega^3/6$. Write $E$ for the elliptic fiber, $\tau_a$ for translation by $a\in E$, and $\mathrm{d}A_E$ for its probability Haar measure. The fiber-averaging operator is denoted by $A$, as in \cref{prop:hopf-fiber-average}.
+In this section, $X$ is the Hopf threefold of \cref{chap:hopf}, with its Hermitian form $\omega$ and projection $\pi:X\to\mathbb P^2$. Recall that $\alpha=\pi^*\omega_{\FS}$ and $\beta=\omega-\alpha$, and that $\nu=\omega^3/6$ is a probability measure. We write $E$ for the elliptic fiber, $\tau_a$ for the translation by $a\in E$, $\mathrm{d}A_E$ for the probability Haar measure of $E$, and $A$ for the fiber-averaging operator of \cref{prop:hopf-fiber-average}.
 
-The minimum-mass characterization in that proposition gives a lower bound for the normalization scalar. Equality forces every solution to descend to the projective base. Uniform $L^p$ control makes this equality stable under limits of data, although the densities themselves need only converge weakly.
+The minimum-mass characterization in that proposition gives a lower bound for the normalization constant, and equality forces every solution to descend to the projective base. The uniform $L^p$ control of this chapter makes the equality case stable under limits of the data, although the densities themselves need only converge weakly.
 
 \Needspace{9\baselineskip}
-Here take $\mathrm{d}V=\omega^3$ and retain the nonnegative nonzero density $f$. By \cref{thm:kn-continuous,prop:vanishing-exponent}, there is a unique positive scalar $c_f$ for which
+Here we take $\mathrm{d}V=\omega^3$; the density $f$ is still a nonnegative nonzero function in $L^p$. By \cref{thm:kn-continuous,prop:vanishing-exponent}, there is a unique positive constant $c_f$ for which the equation
 \[
  (\omega+\ddc u)^3=c_f f\,\omega^3
 \]
@@ -125,37 +123,37 @@ One has $c_f I_f\geq1$, and every continuous solution $u$ satisfies
 Moreover, $c_f I_f=1$ if and only if $f=\pi^*g$ almost everywhere with respect to $\nu$, for some nonnegative $g\in L^p(\mathbb P^2,\omega_{\FS}^2)$. In this case every continuous solution is the pullback of a continuous $\omega_{\FS}$-plurisubharmonic function.
 \end{proposition}
 \begin{proof}
-Integrating the equation gives $\int_X\omega_u^3=6c_f I_f$. The lower mass bound and \eqref{eq:hopf-average-mass} give the first two assertions.
+Integrating the equation gives $\int_X\omega_u^3=6c_f I_f$. Both the inequality $c_fI_f\geq1$ and \eqref{eq:hopf-lp-average} therefore follow from \eqref{eq:hopf-average-mass}, whose left-hand side is nonnegative.
 
-Suppose $c_f I_f=1$. By \cref{prop:hopf-fiber-average}, $u=\pi^*q$ for a bounded $\omega_{\FS}$-plurisubharmonic function $q$. Local holomorphic sections of $\pi$ show that $q$ is continuous. Thus $u\circ\tau_a=u$ for every $a\in E$. Naturality of bounded products and invariance of $\omega$ give
+Suppose $c_f I_f=1$. By \cref{prop:hopf-fiber-average}, $u=\pi^*q$ for a bounded $\omega_{\FS}$-plurisubharmonic function $q$; local holomorphic sections of $\pi$ show that $q$ is continuous. Thus $u\circ\tau_a=u$ for every $a\in E$. Since bounded products are natural under biholomorphisms and $\omega$ is invariant under the translations, it follows that
 \[
  \tau_a^*(f\nu)=f\nu\qquad(a\in E).
 \]
-We use this invariance as an identity of measures.
+As $f$ is defined only almost everywhere, we use this invariance as an identity of measures.
 
-Fubini's theorem defines the fiber average $Af$ almost everywhere. It equals $\pi^*g$ for a measurable function $g$ on the base: local trivializations differ by translations of the Haar variable. Jensen's inequality gives
+By Fubini's theorem, the fiber average $Af$ is defined almost everywhere. It equals $\pi^*g$ for a measurable function $g$ on the base, because local trivializations differ by translations of the Haar variable. Jensen's inequality gives
 \[
  \int_{\mathbb P^2}|g|^p\omega_{\FS}^2
  \leq\int_X|f|^p\,\mathrm{d}\nu.
 \]
-For every continuous real test function $\chi$ on $X$, measure invariance gives $\int_X\chi f\,\mathrm{d}\nu=\int_X(\chi\circ\tau_a)f\,\mathrm{d}\nu$. Integrate in $a$ and use Fubini and invariance of Haar measure under $a\mapsto-a$. The result is $\int_X\chi f\,\mathrm{d}\nu=\int_X\chi Af\,\mathrm{d}\nu$. Hence $f=Af=\pi^*g$ almost everywhere, with $g\geq0$.
+For every continuous real test function $\chi$ on $X$, the invariance of the measure gives $\int_X\chi f\,\mathrm{d}\nu=\int_X(\chi\circ\tau_a)f\,\mathrm{d}\nu$. Integrating in $a$, and using Fubini's theorem together with the invariance of Haar measure under $a\mapsto-a$, we obtain $\int_X\chi f\,\mathrm{d}\nu=\int_X\chi Af\,\mathrm{d}\nu$. Hence $f=Af=\pi^*g$ almost everywhere, with $g\geq0$.
 
-Conversely, suppose $f=\pi^*g$ almost everywhere. Disintegration gives $I_f=\int_{\mathbb P^2}g\omega_{\FS}^2$. Apply \cref{thm:kn-continuous} on the base. There are a continuous $\omega_{\FS}$-plurisubharmonic function $q$ and a scalar $k>0$ with $(\omega_{\FS}+\ddc q)^2=kg\,\omega_{\FS}^2$. Bounded decreasing regularization and Stokes give $\int_{\mathbb P^2}(\omega_{\FS}+\ddc q)^2=1$, so $k=I_f^{-1}$.
+Conversely, suppose $f=\pi^*g$ almost everywhere. Disintegration gives $I_f=\int_{\mathbb P^2}g\omega_{\FS}^2$. Applying \cref{thm:kn-continuous} on the base, we find a continuous $\omega_{\FS}$-plurisubharmonic function $q$ and a constant $k>0$ with $(\omega_{\FS}+\ddc q)^2=kg\,\omega_{\FS}^2$. Bounded decreasing regularization and Stokes' theorem give $\int_{\mathbb P^2}(\omega_{\FS}+\ddc q)^2=1$, so $k=I_f^{-1}$.
 
-Put $u=\pi^*q$. To compute its bounded product, take smooth strictly $\omega_{\FS}$-plurisubharmonic $q_j\downarrow q$ by \cref{thm:bounded-exact-regularization}. Their pullbacks decrease to $u$ and are strictly $\omega$-plurisubharmonic. For each $j$, the smooth cube identity gives
+Put $u=\pi^*q$. To compute its bounded product, take smooth strictly $\omega_{\FS}$-plurisubharmonic functions $q_j\downarrow q$ by \cref{thm:bounded-exact-regularization}. Their pullbacks decrease to $u$ and are strictly $\omega$-plurisubharmonic. Since $\alpha^3=\beta^2=0$, the smooth cube identity gives, for each $j$,
 \[
  (\omega+\ddc\pi^*q_j)^3
  =3\pi^*(\omega_{\FS}+\ddc q_j)^2\wedge\beta.
 \]
 \Needspace{11\baselineskip}
-On a local trivialization, the right side is $6\mathrm{d}A_E$ times the base measure $(\omega_{\FS}+\ddc q_j)^2$: horizontal components of $\beta$ vanish against the base top-degree form, and its vertical restriction is $2\mathrm{d}A_E$. Bounded-product continuity on the base and on $X$, tested in these trivializations and patched by a partition of unity, therefore gives
+In a local trivialization, the right-hand side is $6\mathrm{d}A_E$ times the base measure $(\omega_{\FS}+\ddc q_j)^2$: the horizontal components of $\beta$ vanish against the base top-degree form, and its vertical restriction is $2\mathrm{d}A_E$. Continuity of bounded products on the base and on $X$, tested in these trivializations and patched by a partition of unity, therefore gives
 \[
  (\omega+\ddc u)^3=\frac{f}{I_f}\,\omega^3.
 \]
-Uniqueness of the scalar implies $c_f=I_f^{-1}$. Every continuous solution then has mass $6$, so the same mass characterization makes it a base pullback. Its descended potential is continuous by local sections, as above.
+Uniqueness of the constant implies $c_f=I_f^{-1}$. Every continuous solution then has mass $6$, so the mass characterization in \cref{prop:hopf-fiber-average} makes it a pullback from the base, and the descended potential is continuous by local sections, as above.
 \end{proof}
 
-Near equality, compactness gives uniform convergence of subsequences of potentials and weak convergence of their densities. The exact equality case identifies the limits.
+When $c_fI_f$ is close to one, compactness gives uniform convergence of subsequences of potentials and weak convergence of their densities, and the equality case identifies the limits.
 
 \begin{proposition}\label{prop:hopf-near-equality-compactness}\index{Hopf manifold!near-minimum mass}
 Fix $1<p<\infty$ and $M\geq1$. Suppose $f_j\geq0$ satisfy
@@ -163,30 +161,30 @@ Fix $1<p<\infty$ and $M\geq1$. Suppose $f_j\geq0$ satisfy
  \int_X f_j\,\mathrm{d}\nu=1,\qquad
  \|f_j\|_{L^p(X,\nu)}\leq M,\qquad c_{f_j}\longrightarrow1.
 \]
-For each $j$, choose any continuous solution $u_j$ of $\omega_{u_j}^3=c_{f_j}f_j\omega^3$, normalized by $\sup_Xu_j=0$. Then
+For each $j$, let $u_j$ be any continuous solution of $\omega_{u_j}^3=c_{f_j}f_j\omega^3$ normalized by $\sup_Xu_j=0$. Then
 \[
  \|u_j-Au_j\|_{C^0(X)}\longrightarrow0,\qquad
- f_j-Af_j\rightharpoonup0\quad\hbox{in }L^p(X,\nu).
+ f_j-Af_j\rightharpoonup0\quad\hbox{weakly in }L^p(X,\nu).
 \]
-Every subsequence has a further subsequence with $u_j\to\pi^*q$ uniformly and $f_j\rightharpoonup\pi^*g$ weakly in $L^p$, where $q$ is continuous and $\omega_{\FS}$-plurisubharmonic, $g\geq0$, $\int_{\mathbb P^2}g\omega_{\FS}^2=1$, and
+Every subsequence has a further subsequence with $u_j\to\pi^*q$ uniformly and $f_j\rightharpoonup\pi^*g$ weakly in $L^p$, where $q$ is a continuous $\omega_{\FS}$-plurisubharmonic function, $g\geq0$, $\int_{\mathbb P^2}g\omega_{\FS}^2=1$, and
 \[
  (\omega_{\FS}+\ddc q)^2=g\omega_{\FS}^2.
 \]
 \end{proposition}
 \begin{proof}
-The equation densities $c_{f_j}f_j$ have a common $L^p$ bound because the scalars converge. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence on which $u_j\to u$ uniformly. Reflexivity of $L^p$ permits a further extraction with $f_j\rightharpoonup f$ weakly in $L^p$. Positivity, unit integral and the bound $\|f\|_p\leq M$ pass to the limit. Bounded-product continuity under uniform convergence identifies
+Since the constants $c_{f_j}$ converge, the densities $c_{f_j}f_j$ have a common $L^p$ bound. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence on which $u_j\to u$ uniformly. Since $L^p$ is reflexive, a further extraction gives $f_j\rightharpoonup f$ weakly in $L^p$. Positivity, the unit integral and the bound $\|f\|_p\leq M$ pass to the limit, and continuity of bounded products under uniform convergence gives
 \[
  (\omega+\ddc u)^3=f\omega^3.
 \]
-Thus $c_f=1$, and \cref{prop:hopf-lp-normalization} gives $u=\pi^*q$ and $f=\pi^*g$. The bounded cube identity proved there identifies the displayed base equation by testing against pullbacks of continuous base functions. In particular, both limits are fixed by $A$.
+Thus $c_f=1$. Since also $I_f=1$, \cref{prop:hopf-lp-normalization} gives $u=\pi^*q$ and $f=\pi^*g$. The bounded cube identity proved there, tested against pullbacks of continuous functions on the base, gives the asserted base equation. In particular, both limits are fixed by $A$.
 
-Haar averaging is a contraction on $C^0(X)$ and on $L^p(X,\nu)$. It is also self-adjoint for integration against $\nu$: Fubini and invariance under the fiber translations give $\int\chi Af\,\mathrm{d}\nu=\int A\chi f\,\mathrm{d}\nu$ for $\chi\in L^{p'}$. Along the extracted subsequence, therefore, $u_j-Au_j\to0$ uniformly and $f_j-Af_j\rightharpoonup0$ in $L^p$. If either asserted convergence failed for the original sequence, a subsequence witnessing that failure, with one fixed $L^{p'}$ test in the weak case, would have a further subsequence of this kind. This contradiction proves both whole-sequence conclusions.
+Haar averaging is a contraction on $C^0(X)$ and on $L^p(X,\nu)$. It is also self-adjoint with respect to $\nu$: Fubini's theorem and the invariance of $\nu$ under the fiber translations give $\int\chi Af\,\mathrm{d}\nu=\int A\chi f\,\mathrm{d}\nu$ for $\chi\in L^{p'}$. Along the extracted subsequence, therefore, $u_j-Au_j\to0$ uniformly and $f_j-Af_j\rightharpoonup0$ in $L^p$. If either convergence failed for the original sequence, some subsequence would stay away from the limit (for the weak convergence, when tested against one fixed function in $L^{p'}$), and a further subsequence of the kind just constructed would give a contradiction. This proves both conclusions for the whole sequence.
 \end{proof}
 
 \Needspace{11\baselineskip}
 \begin{example}\label{ex:hopf-oscillating-near-minimizers}\index{Hopf manifold!oscillating densities}
 \enlargethispage{2\baselineskip}
-Choose $0<a<1/2$ and write $z\in\mathbb C^3\setminus\{0\}$ for a point of the covering space. Set $s=\log|z|^2$. Since $s$ changes by $-2$ under the defining contraction, every $2$-periodic function of $s$ descends to $X$. For an integer $m\geq1$, define the smooth normalized potential
+Choose $0<a<1/2$, and use the function $s=\log|z|^2$ on the covering space $\mathbb C^3\setminus\{0\}$ from \cref{chap:hopf}. Since $s$ changes by $-2$ under the defining contraction, every $2$-periodic function of $s$ descends to $X$. For an integer $m\geq1$, define the smooth normalized potential
 \[
  u_m=\frac{a}{\pi^2m^2}\bigl(\cos(\pi m s)-1\bigr),
  \qquad \|u_m-Au_m\|_{C^0}=\frac{a}{\pi^2m^2}\longrightarrow0.
@@ -203,18 +201,18 @@ Both coefficients are bounded below by positive constants independent of $m$. Th
  H_m=\left(1-\frac{a}{\pi m}\sin(\pi m s)\right)^2
           \bigl(1-a\cos(\pi m s)\bigr).
 \]
-On each fiber $s$ is twice the real Haar coordinate plus a base-dependent constant. Its distribution modulo $2$ is uniform. Averaging the periodic expression, the terms containing $u_m''$, $u_m'u_m''$ and $(u_m')^2u_m''$ integrate to zero, as derivatives of periodic functions. Hence
+On each fiber, $s$ is twice the real Haar coordinate plus a constant depending on the base point, so its distribution modulo $2$ is uniform. When the periodic expression $H_m=(1+u_m')^2(1+u_m'')$ is averaged, the terms $u_m'$, $u_m''$, $u_m'u_m''$ and $(u_m')^2u_m''$ contribute zero, since they are derivatives of periodic functions. Hence
 \[
  I_m:=\int_XH_m\,\mathrm{d}\nu=AH_m
       =1+\frac{a^2}{2\pi^2m^2}.
 \]
-Set $f_m=H_m/I_m$. These smooth densities have unit integral and common strictly positive lower and finite upper bounds. Scalar uniqueness gives $c_{f_m}=I_m\to1$, and $Af_m=1$. Nevertheless,
+Set $f_m=H_m/I_m$. These smooth densities have unit integral and common strictly positive lower and finite upper bounds. Uniqueness of the constant gives $c_{f_m}=I_m\to1$, and $Af_m=1$. Nevertheless,
 \[
  \|f_m-1+a\cos(\pi m s)\|_{C^0(X)}=O(m^{-1}),
  \qquad
  \lim_{m\to\infty}\|f_m-Af_m\|_{L^1(X,\nu)}=\frac{2a}{\pi}>0.
 \]
-Here the constant in $O(m^{-1})$ depends only on $a$, and the last identity uses the period average of $|\cos|$, which is $2/\pi$. Thus near equality does not imply strong $L^1$ convergence to the fiber average, even for uniformly positive bounded smooth densities. For any base pullback $g$, the contraction property gives $\|f_m-Af_m\|_1\leq2\|f_m-g\|_1$, so approximation by base pullbacks also fails in $L^1$.
+Here the constant in $O(m^{-1})$ depends only on $a$, and the last identity uses the fact that the average of $|\cos|$ over a period is $2/\pi$. Thus near equality does not imply strong $L^1$ convergence to the fiber average, even for uniformly positive bounded smooth densities. For any pullback $g$ of a function on the base, the contraction property gives $\|f_m-Af_m\|_1\leq2\|f_m-g\|_1$, so approximation by such pullbacks also fails in $L^1$.
 \end{example}
 
 \input{author/section_concave_strict_gap_stability}

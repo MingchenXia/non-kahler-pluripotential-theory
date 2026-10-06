@@ -1,11 +1,11 @@
 \Needspace{17\baselineskip}
 \begin{theorem}\label{thm:damped-continuity}\index{Damping!capacity continuity}\label{prop:general-damping-weights}\index{Damping!general weights}
-Let $w:[0,+\infty)\to(0,+\infty)$ be continuously differentiable and nonincreasing, with $w(t)\to0$. For $T\geq0$ define
+Let $w:[0,+\infty)\to(0,+\infty)$ be continuously differentiable and nonincreasing, with $w(t)\to0$ as $t\to+\infty$. For $T\geq0$ define
 \[
  B_w(T)=\int_T^\infty(1+t)^{r_n}(-w'(t))\,\mathrm{d}t.
 \]
-Assume $B_w(0)<+\infty$. For nonpositive $u\in\PSH(X,\omega)$, the measures
-$\nu_{w,u}=w(-u)\mu_u$, with weight zero on the pole set, satisfy
+Assume $B_w(0)<+\infty$. For nonpositive $u\in\PSH(X,\omega)$, the damped measures
+$\nu_{w,u}=w(-u)\mu_u$ satisfy
 \[
  \nu_{w,u}(X)\leq C_\omega B_w(0),\qquad
  \nu_{w,u}(\{u<-T\})\leq C_\omega B_w(T).
@@ -15,37 +15,37 @@ For every Borel set $E$ and $T\geq0$,
  \nu_{w,u}(E)\leq
  w(0)(1+T)^n\operatorname{Cap}_\omega(E)+C_\omega B_w(T).
 \]
-In particular they are uniformly absolutely continuous with respect to capacity. If nonpositive $u_j,u\in\PSH(X,\omega)$ satisfy $u_j\to u$ in capacity, then $\nu_{w,u_j}\rightharpoonup\nu_{w,u}$.
+In particular, these measures are uniformly absolutely continuous with respect to capacity. If nonpositive $u_j,u\in\PSH(X,\omega)$ satisfy $u_j\to u$ in capacity, then $\nu_{w,u_j}\rightharpoonup\nu_{w,u}$.
 \end{theorem}
 \Needspace{6\baselineskip}
 \begin{proof}
-Write $s=-u$. Since $w(s)=\int_s^\infty(-w'(t))\,\mathrm{d}t$, Tonelli's theorem and \cref{lem:sublevel-mass-growth} give
+Write $s=-u$. Since $w(s)=\int_s^\infty(-w'(t))\,\mathrm{d}t$ for finite $s$, and since $\mu_u$ does not charge the pole set $\{s=+\infty\}$, Tonelli's theorem and \cref{lem:sublevel-mass-growth} give
 \[
  \int_X w(s)\,\mathrm{d}\mu_u
  =\int_0^\infty(-w'(t))\mu_u(\{s\leq t\})\,\mathrm{d}t
  \leq C_\omega B_w(0).
 \]
-This identity includes the set $\{s=0\}$; the pole set has zero $\mu_u$-mass. Restricting the integral to $\{s>T\}$ gives the same bound with $B_w(T)$, since the inner set is then $\{T<s\leq t\}$ and $t\geq T$.
+Restricting the integral to $\{s>T\}$ gives the same bound with $B_w(T)$ in place of $B_w(0)$, since the inner set is then $\{T<s\leq t\}$, which is empty unless $t>T$.
 
-The second bound in \eqref{eq:restricted-mass-growth} gives
+For the capacity bound, the second estimate in \eqref{eq:restricted-mass-growth} gives
 \[
  \int_{E\cap\{s\leq T\}}w(s)\,\mathrm{d}\mu_u
  \leq w(0)(1+T)^n\operatorname{Cap}_\omega(E).
 \]
-Add the tail estimate. Since $B_w(T)\to0$, first taking $T$ large and then the capacity small gives uniform absolute continuity.
+Adding the tail estimate for $\{s>T\}$ proves the asserted bound. Since $B_w(T)\to0$, choosing first $T$ large and then the capacity small gives uniform absolute continuity.
 
-For continuity, fix a continuous nonincreasing $\eta:[0,+\infty)\to[0,1]$, equal to one on $[0,1]$ and zero on $[2,+\infty)$, and put $\eta_T(s)=\eta(s/T)$. For fixed $T>0$, set $v_{j,T}=\max(u_j,-2T)$ and $g_T(t)=\eta_T(-t)w(-t)$ on $[-2T,0]$. Since $g_T(-2T)=0$, locality gives
+To prove continuity, fix a continuous nonincreasing $\eta:[0,+\infty)\to[0,1]$, equal to one on $[0,1]$ and zero on $[2,+\infty)$, and put $\eta_T(s)=\eta(s/T)$. For fixed $T>0$, set $v_{j,T}=\max(u_j,-2T)$ and $g_T(t)=\eta_T(-t)w(-t)$ on $[-2T,0]$. Since $g_T(-2T)=0$, locality gives
 \begin{equation}\label{eq:weighted-truncation-identity}
  \eta_T(-u_j)w(-u_j)\mu_{u_j}
  =g_T(v_{j,T})\,\mathrm{MA}_\omega(v_{j,T}).
 \end{equation}
-Truncation preserves capacity convergence. The functions $g_T(v_{j,T})$ are uniformly bounded and quasi-continuous, and converge in capacity to the corresponding coefficient for $u$. The weighted bounded-product continuity in \cref{sec:psh-local-capacity,sec:hermitian-capacity} therefore gives weak convergence in \eqref{eq:weighted-truncation-identity} at each fixed $T$. The tail bounds control the error by $C_\omega B_w(T)$ times the supremum norm of a continuous test function, uniformly in $j$ and for $u$. Let $T\to\infty$ to conclude.
+Truncation preserves convergence in capacity. The functions $g_T(v_{j,T})$ are uniformly bounded and quasi-continuous, and they converge in capacity to the corresponding function for $u$. The weighted continuity of bounded products in \cref{sec:psh-local-capacity,sec:hermitian-capacity} therefore gives weak convergence of the measures in \eqref{eq:weighted-truncation-identity} for each fixed $T$. The measure $(1-\eta_T(-u_j))\nu_{w,u_j}$ is carried by $\{u_j<-T\}$, so by the tail bound its integral against a continuous test function $f$ is at most $C_\omega B_w(T)\|f\|_\infty$, uniformly in $j$; the same holds for $u$. Letting $T\to\infty$ completes the proof.
 \end{proof}
 
-For $w(t)=\mathrm{e}^{-pt}$, $p>0$, the integral $B_w(0)$ is finite because the exponential dominates the polynomial factor. Thus the exponential measures of \cref{thm:exponential-damping} are continuous under capacity convergence. Their tails satisfy the useful bound
+For $w(t)=\mathrm{e}^{-pt}$, $p>0$, the integral $B_w(0)$ is finite because the exponential dominates the polynomial factor. Thus the exponentially damped measures of \cref{thm:exponential-damping} are continuous under convergence in capacity. By that theorem, their tails also satisfy
 \[
  \nu_{p,u}(\{u<-T\})
  \leq\mathrm{e}^{-pT/2}\nu_{p/2,u}(X)
  \leq C_p\mathrm{e}^{-pT/2}.
 \]
-Polynomial weights give a more explicit form of the general estimate.
+For polynomial weights, the general estimate takes the following explicit form.

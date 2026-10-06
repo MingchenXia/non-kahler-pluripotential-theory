@@ -4,43 +4,44 @@
 \begingroup
 \predisplaypenalty=10000
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $(L,h)$ be a holomorphic line bundle on $X$ with a smooth Hermitian metric.
+Throughout this chapter, $L$ is a holomorphic line bundle on $X$ with a smooth Hermitian metric $h$. In a local holomorphic frame $e$ write $|e|_h^2=\mathrm{e}^{-\chi}$; the curvature form $c_1(L,h)=\ddc\chi$ is a smooth closed real $(1,1)$-form, independent of the frame, as in \cref{chap:sections}.
 
-Partial Bergman kernels use a singular weight to select global holomorphic sections and a continuous weight in their norm. When the selecting potential is plurisubharmonic relative to the curvature of $(L,h)$, the Bernstein--Markov estimate preserves the obstacle, while Lelong-number estimates on modifications preserve the multiplier-ideal constraint. Together they give the partial envelope as an upper bound. A matching lower bound requires global section approximation. With a K\"ahler modification and positive non-pluripolar mass, the closed theory also gives measure convergence; a Jacobian isometry transfers it to $X$.
+A quasi-plurisubharmonic function $\varphi$ on $X$, the selecting potential, selects in each tensor power $L^m$, the holomorphic sections $s$ for which $|s|_{h^m}^2\mathrm{e}^{-m\varphi}$ is locally integrable. A partial Bergman kernel is the Bergman kernel of this space of sections for a Hilbert norm defined by a continuous weight: the singular function $\varphi$ decides which sections occur, but it does not enter their norms. On a compact K\"ahler manifold, if $\varphi$ is $c_1(L,h)$-plurisubharmonic with positive non-pluripolar Monge--Amp\`ere mass, the normalized kernel measures converge to the Monge--Amp\`ere measure of a partial envelope \cite[Section~14.3]{SGPT}. This envelope is the largest $c_1(L,h)$-plurisubharmonic function that is at most as singular as $\varphi$ in the sense of multiplier ideals and lies below the continuous weight on the set where the norm is computed. This chapter studies how much of this equilibrium theory survives when $X$ is not K\"ahler, and when the selecting potential is plurisubharmonic only with respect to a Hermitian form unrelated to the curvature of $L$.
 
-Positivity against an unrelated Hermitian form permits different behavior. On a fibration, every section of a pulled-back line bundle descends even when the selecting potential does not. Moving a pole along a fiber can then preserve every kernel while changing the multiplier-ideal type. Point and divisor models exhibit this loss through explicit binomial tails. Section growth determines the normalization, and changing the integration volume separates the base equilibrium measure from the conditional fiber probabilities retained by its lift.
+Half of the K\"ahler argument is local and holds on every compact complex manifold. A Bernstein--Markov estimate, which follows from the submean inequality, keeps the partial Fubini--Study potentials below the weight, and Lelong-number estimates on local modifications keep their limits within the multiplier-ideal class of $\varphi$. Together these bound every limit of the potentials by the partial envelope. A matching lower bound requires global sections approximating the envelope, and this is where the K\"ahler hypothesis enters. If $X$ admits a modification from a compact K\"ahler manifold, the relative canonical bundle with a Jacobian metric makes the selected spaces upstairs and downstairs isometric, and the K\"ahler theorem gives convergence of the kernel measures on $X$ itself.
 
-When vanishing orders grow sublinearly in the tensor degree, a weighted entire-function model gives a Gaussian transition on a shrinking scale. A uniform local norm comparison and a global $L^2$ correction show how far the same transition persists on a compact curve.
+Fibrations show what can happen without such a modification. On a holomorphic submersion with compact connected fibers, every section of a pulled-back line bundle is constant along the fibers and descends to the base. Probability measures on the fibers make this descent an isometry, so the kernel measures on the total space are lifts of kernel measures on the base. Their limit, the quotient equilibrium measure, is the lift of the equilibrium measure of the base, and it appears at the growth rate $m^{\dim B}$ of the section spaces rather than at $m^{\dim X}$. On the Hopf manifold it is a Hermitian Monge--Amp\`ere measure; in dimension three this gives a nonzero limit on a manifold without the bounded mass property.
 
-A two-dimensional projective example then shows how competing monomials produce a logarithmic factor at a fixed curvature zero. Its section norm can be computed directly, without a general kernel expansion.
+A selecting potential that is plurisubharmonic only with respect to a Hermitian form need not descend, but the sections it selects still do, so its singularities act only through a vanishing condition on the base. For isolated logarithmic poles, for poles along a section over a base divisor, and for anisotropic singularities controlled by integrability along the fibers, this condition differs from a multiplier-ideal condition on the base by a bounded number of vanishing orders. Such shifts cost only $O(m^{\dim B-1})$ sections, and for point poles and for poles along a section over a divisor the kernel measures still converge to a quotient equilibrium measure. The price is a loss of information: moving a pole along its fiber changes the multiplier ideals on $X$ but leaves every kernel unchanged. Explicit point and divisor models on projective bases compute the limits through binomial tails, and a change of the integration volume separates the base equilibrium measure from the conditional fiber probabilities carried by its lift.
 
-An interior Newton polytope gives a different explicit selection. Its logarithmic growth constraint determines an envelope, while lattice counting and concentration of the monomial norms determine the measure limit. Lower-dimensional polytopes give positive limits on real tori even though the envelope's higher curvature powers vanish.
+The remaining sections compute kernels for selections that are not linear in the tensor power or not given by a single multiplier ideal. When vanishing orders grow sublinearly in $m$, an entire-function model gives a Gaussian transition on a shrinking scale; a uniform local norm comparison and a global $L^2$ correction show how far this transition persists on a compact curve. In two dimensions, competing monomials at a fixed zero of the curvature produce a logarithmic factor in the kernel scale, which an explicit metric on $\mathbb P^2$ makes computable. A Newton polytope selects monomials directly: its logarithmic growth constraint determines the envelope, while lattice counting and concentration of the monomial norms determine the measure limit. For a lower-dimensional polytope this limit is a positive measure carried by real tori, although the higher curvature powers of the envelope vanish. Finally, multiplier ideals need not form a graded series of section spaces. At critical divisors, rounding can make the leading section count oscillate between even and odd degrees, while at the two base points of a pencil three neighboring bands of monomials contribute to a single positive limit.
 
-Actual multiplier ideals need not give a graded section series. At critical divisors, rounding can make the leading section count oscillate. At the isolated base points of a pencil, three neighboring monomial bands give a single positive measure limit. Exact integrability and norm calculations distinguish these behaviors.
+We use the following notation from earlier chapters. For quasi-plurisubharmonic functions $u,v$, we write $u\preceq v$ if $u\leq v+C$ for a constant $C$, and $u\sim v$ if $u\preceq v\preceq u$ (\cref{def:singularity-order}); we write $u\preceq_{\mathcal I}v$ if $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$, and $u\sim_{\mathcal I}v$ if these ideals are equal for every $k>0$ (\cref{sec:psh-singularity-types}). For a smooth real $(1,1)$-form $\theta$, $P_\theta[u]_{\mathcal I}$ is the multiplier-ideal envelope of \cref{def:hermitian-i-envelope}, and $V_\theta$ is the upper envelope of all nonpositive $\theta$-plurisubharmonic functions, which has minimal singularities (\cref{sec:obstacle-envelopes}). The non-pluripolar Monge--Amp\`ere measure of $u\in\PSH(X,\theta)$ is written $\mathrm{MA}_\theta(u)$, or $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ when its mass may be infinite (\cref{thm:arbitrary-extended-ma}).
 
-\section{The selected space and the continuous weight}\label{sec:partial-selected-space}\index{Bergman kernel!partial}
+\section{Selected spaces and partial Bergman kernels}\label{sec:partial-selected-space}\index{Bergman kernel!partial}
 
-Fix a quasi-plurisubharmonic function $\varphi$ and a smooth positive probability measure $\nu$ on $X$. For each integer $m\geq1$ set
+Fix a quasi-plurisubharmonic function $\varphi$ on $X$, the \emph{selecting potential}, and a smooth positive probability measure $\nu$ on $X$. For each integer $m\geq1$, the \emph{selected space}\index{Selected space} of degree $m$ and its dimension are
 \[
  V_m=H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr),
  \qquad N_m=\dim V_m.
 \]
-For a real $v\in C(X)$ define the norm
+Instead of $\varphi$, the Hilbert norm on $V_m$ uses a real continuous weight $v\in C(X)$:
 \[
  \|s\|_{m,v,\nu}^2=\int_X|s|_{h^m}^2\mathrm{e}^{-mv}\,\mathrm{d}\nu
  \quad(s\in V_m).
 \]
-The continuous weight is bounded, so the norm is finite on every global section. Its nondegeneracy follows from the strictly positive density and the identity theorem. This separation of the selecting weight from the norm follows \cite[Section 14.3]{SGPT}.
+Since $v$ is bounded, this integral is finite for every global section. It vanishes only for $s=0$, because $\nu$ has a positive density and a holomorphic section vanishing almost everywhere vanishes identically. This separation of the selecting potential from the norm follows \cite[Section~14.3]{SGPT}.
 
 \Needspace{13\baselineskip}
-Fix an integer $r\geq1$ for the normalization. Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis of $V_m$ for this norm, and for $x\in X$ put
+Fix also an integer $r\geq1$, which determines the normalization below; it will be chosen as the growth degree of $N_m$, which may be smaller than $n$. Let $s_1,\ldots,s_{N_m}$ be an orthonormal basis of $V_m$ for the norm $\|\cdot\|_{m,v,\nu}$. The \emph{partial Bergman kernel} and the \emph{partial kernel measure} are
 \[
  B_{m,v,\varphi,\nu}(x)
-       =\mathrm{e}^{-mv(x)}\sum_j|s_j(x)|_{h^m}^2,
+       =\mathrm{e}^{-mv(x)}\sum_j|s_j(x)|_{h^m}^2
+ \quad(x\in X),
  \qquad
  \beta_m^{(r)}=\frac{r!}{m^r}B_{m,v,\varphi,\nu}\,\nu.
 \]
-Empty spaces give zero kernels and zero measures. Unitary invariance and the evaluation argument of \cref{prop:finite-bergman-identities} give
+By unitary invariance they do not depend on the orthonormal basis, and both are zero when $V_m=\{0\}$. The evaluation argument of \cref{prop:finite-bergman-identities} gives the extremal formula and the total mass:
 \[
  B_{m,v,\varphi,\nu}(x)
  =\sup_{\substack{s\in V_m\\\|s\|_{m,v,\nu}\leq1}}
@@ -48,47 +49,51 @@ Empty spaces give zero kernels and zero measures. Unitary invariance and the eva
  \qquad
  \int_X\beta_m^{(r)}=\frac{r!N_m}{m^r}.
 \]
-The singular weight occurs only in $V_m$. In particular, ordering its multiplier ideals orders the kernels when $h,v,\nu$ are fixed, because it orders the spaces in the displayed supremum.
+The selecting potential enters only through $V_m$. In particular, for fixed $h$, $v$ and $\nu$, if the multiplier ideals $\mathcal I(m\varphi)$ are contained in those of another selecting potential, then so are the selected spaces, and the extremal formula shows that the kernels are ordered in the same way.
 
-Replacing $h$ by $h\mathrm{e}^{-a}$ and $v$ by $v-a$, for smooth real $a$, leaves both the norm and the kernel measure unchanged.
+Replacing $h$ by $h\mathrm{e}^{-a}$ and $v$ by $v-a$, for a smooth real function $a$, leaves $h^m\mathrm{e}^{-mv}$, and hence the norm and the kernel measure, unchanged.
 
 \section{A local Bernstein--Markov estimate}
 \label{sec:partial-bernstein-markov}
 
-A Bernstein--Markov estimate compares the supremum norm with the integral norm up to an arbitrarily small exponential loss in the degree. The local submean inequality supplies it for a smooth positive volume and a continuous weight on the whole manifold.
+A Bernstein--Markov estimate compares the supremum norm of sections on a weighted compact set with an integral norm, up to an exponential loss in the degree whose rate can be made arbitrarily small. It is what keeps partial Fubini--Study potentials below the weight in the limit. For a smooth positive volume and a continuous weight on the whole manifold, it follows from the submean inequality.
 
-For a compact set $K\subseteq X$ and $v\in C(K)$, write
+For a compact set $K\subseteq X$ and $w\in C(K)$, write
 \[
- \|s\|_{m,v,K}=\sup_K |s|_{h^m}\mathrm{e}^{-mv/2}.
+ \|s\|_{m,w,K}=\sup_K |s|_{h^m}\mathrm{e}^{-mw/2}.
 \]
-A probability measure $\mu$ on $K$ is Bernstein--Markov for $(K,v)$ if, for every $\epsilon>0$, there is $C_\epsilon$ such that
+A probability measure $\mu$ on $K$ is \emph{Bernstein--Markov} for $(K,w)$ if, for every $\epsilon>0$, there is a constant $C_\epsilon$ such that
 \[
- \|s\|_{m,v,K}\leq C_\epsilon \mathrm{e}^{\epsilon m}
-          \left(\int_K|s|_{h^m}^2\mathrm{e}^{-mv}\,\mathrm{d}\mu\right)^{1/2}
+ \|s\|_{m,w,K}\leq C_\epsilon \mathrm{e}^{\epsilon m}
+          \left(\int_K|s|_{h^m}^2\mathrm{e}^{-mw}\,\mathrm{d}\mu\right)^{1/2}
 \]
-for all $m\geq1$ and all $s\in H^0(X,L^m)$. If $K$ is non-pluripolar, the supremum norm is nondegenerate: the zero set of a nonzero section is an analytic divisor, hence pluripolar. The Bernstein--Markov inequality then makes the integral norm nondegenerate as well. The same inequality holds on any selected subspace $V_m$.
+for all $m\geq1$ and all $s\in H^0(X,L^m)$. If $K$ is non-pluripolar, the supremum norm is a norm: the zero set of a nonzero section is an analytic hypersurface, hence pluripolar, and cannot contain $K$. The Bernstein--Markov inequality then shows that the integral
+\[
+ \|s\|_{m,w,\mu}^2=\int_K|s|_{h^m}^2\mathrm{e}^{-mw}\,\mathrm{d}\mu
+\]
+is also a norm on $H^0(X,L^m)$, and in particular on every selected space $V_m$. The definitions of \cref{sec:partial-selected-space} therefore apply with $(X,v,\nu)$ replaced by $(K,w,\mu)$. We write $B_{m,w,\varphi,\mu}$ for the resulting partial Bergman kernel on $K$ and $\beta_m^{(r)}=(r!/m^r)B_{m,w,\varphi,\mu}\,\mu$ for the partial kernel measure; the extremal formula and the total mass $r!N_m/m^r$ hold as before.
 
 \begin{proposition}\label{prop:hermitian-full-bm}\index{Bernstein--Markov estimate}
-Every smooth positive probability measure is Bernstein--Markov for $(X,v)$ when $v\in C(X)$, on an arbitrary compact complex manifold.
+Let $v\in C(X)$. Every smooth positive probability measure on $X$ is Bernstein--Markov for $(X,v)$.
 \end{proposition}
 \begin{proof}
-Let $\nu$ be the smooth strictly positive probability measure under consideration. Choose finitely many nested coordinate charts with holomorphic frames for $L$. In a holomorphic frame $e$, write $|e|_h^2=\mathrm{e}^{-\chi}$ and $s=f e^{\otimes m}$. Uniform continuity permits, for any $\epsilon>0$, a uniform small radius $r$ such that every point lies at the center of a coordinate ball of radius $r$ contained in one of the larger charts, and the oscillation of $\chi+v$ on that ball is at most $2\epsilon$. The radius and the volume comparison constants can be chosen uniformly using the finite covering.
+Let $\nu$ be a smooth positive probability measure, and fix $\epsilon>0$. Cover $X$ by finitely many coordinate charts on which $L$ has holomorphic frames, and choose relatively compact open subsets of these charts that still cover $X$. In a frame $e$ write $|e|_h^2=\mathrm{e}^{-\chi}$ and $s=f e^{\otimes m}$, so that $|s|_{h^m}^2\mathrm{e}^{-mv}=|f|^2\mathrm{e}^{-m(\chi+v)}$. By compactness and uniform continuity of the finitely many functions $\chi+v$, there is a radius $\delta>0$ with the following property: every point $x$ lies in one of the smaller sets, the coordinate ball $B(x,\delta)$ lies in the corresponding chart, and the oscillation of $\chi+v$ on $B(x,\delta)$ is at most $2\epsilon$. On these balls the density of $\nu$ with respect to coordinate Lebesgue measure is bounded below by a positive constant independent of $x$.
 
 \Needspace{8\baselineskip}
-The submean inequality for the holomorphic function $f$ and the lower bound for the density of $\nu$ give
+The submean inequality for the holomorphic function $f$ on $B(x,\delta)$ therefore gives
 \[
  \begin{split}
  |s(x)|_{h^m}^2\mathrm{e}^{-mv(x)}
  &=|f(x)|^2\mathrm{e}^{-m(\chi+v)(x)}\\
- &\leq C_r \mathrm{e}^{2\epsilon m}
-                 \int_{B(x,r)}|f|^2\mathrm{e}^{-m(\chi+v)}\,\mathrm{d}\nu\\
- &\leq C_r \mathrm{e}^{2\epsilon m}\|s\|_{m,v,\nu}^2.
+ &\leq C_\delta \mathrm{e}^{2\epsilon m}
+                 \int_{B(x,\delta)}|f|^2\mathrm{e}^{-m(\chi+v)}\,\mathrm{d}\nu\\
+ &\leq C_\delta \mathrm{e}^{2\epsilon m}\|s\|_{m,v,\nu}^2,
  \end{split}
 \]
-Take the supremum over $x$ and then the square root.
+with $C_\delta$ independent of $x$ and $m$. Taking the supremum over $x$ and then the square root gives the Bernstein--Markov inequality with $C_\epsilon=C_\delta^{1/2}$.
 \end{proof}
 
-For a general weighted compact subset, the Bernstein--Markov property will be an explicit hypothesis.
+For a general compact set $K$ and weight $w\in C(K)$, the Bernstein--Markov property is not automatic, and we assume it explicitly whenever it is needed.
 
 \input{author/section_partial_envelopes}
 
@@ -97,25 +102,25 @@ For a general weighted compact subset, the Bernstein--Markov property will be an
 \section{The determinant functional}
 \label{sec:partial-determinant}
 
-The logarithm of the Gram determinant integrates the partial kernel measure as the continuous weight varies. Orthogonal projection expresses its second derivative as a negative squared norm, giving concavity and a uniform bound in terms of the section dimension.
+As the continuous weight varies, the partial kernel measures are the derivatives of a single functional, the logarithm of a Gram determinant. Orthogonal projection expresses its second derivative as minus a sum of squared norms, which gives concavity, and the total mass identity gives a Lipschitz bound in terms of the dimension of the selected space.
 
 \Needspace{11\baselineskip}
-Return to the full-manifold norm $\|\cdot\|_{m,v,\nu}$ of \cref{sec:partial-selected-space}, with a quasi-plurisubharmonic selecting weight $\varphi$. Fix $m$ with $N_m>0$ and a basis of $V_m$. Let $G_m(v)$ be its positive Hermitian Gram matrix in this norm. Define
+We return to the norm $\|\cdot\|_{m,v,\nu}$ on the whole manifold from \cref{sec:partial-selected-space}, with selecting potential $\varphi\in\QPSH(X)$. Fix $m$ with $N_m>0$ and a basis of $V_m$, and let $G_m(v)$ be the Gram matrix of this basis for $\|\cdot\|_{m,v,\nu}$, a positive definite Hermitian matrix. The \emph{determinant functional} is
 \[
  \mathcal F_m^{(r)}(v)
  =-\frac{r!}{m^{r+1}}
        \log\frac{\det G_m(v)}{\det G_m(0)}.
 \]
-The quotient makes the definition independent of the chosen basis. Put $\mathcal F_m^{(r)}=0$ if $N_m=0$.
+A change of basis multiplies both determinants by the same positive factor, so $\mathcal F_m^{(r)}$ does not depend on the basis. If $N_m=0$, put $\mathcal F_m^{(r)}=0$.
 
 \Needspace{18\baselineskip}
 \begin{proposition}\label{prop:partial-kernel-variation}\index{Determinant functional!partial kernels}
-For $v,f\in C(X,\mathbb R)$,
+For $v,f\in C(X,\mathbb R)$, the measure $\beta_m^{(r)}$ at the weight $v$ satisfies
 \[
  \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\mathcal F_m^{(r)}(v+tf)
        =\int_X f\,\mathrm{d}\beta_m^{(r)}.
 \]
-For constants $c\in\mathbb R$ and weights $w\in C(X,\mathbb R)$, the functional is concave and satisfies
+The functional $\mathcal F_m^{(r)}$ is concave on $C(X,\mathbb R)$, and for $v,w\in C(X,\mathbb R)$ and $c\in\mathbb R$,
 \[
  \mathcal F_m^{(r)}(v+c)=\mathcal F_m^{(r)}(v)
                          +\frac{r!N_m}{m^r}c,
@@ -123,44 +128,44 @@ For constants $c\in\mathbb R$ and weights $w\in C(X,\mathbb R)$, the functional 
  |\mathcal F_m^{(r)}(v)-\mathcal F_m^{(r)}(w)|
        \leq\frac{r!N_m}{m^r}\|v-w\|_\infty.
 \]
-If $N_m>0$, its second derivative along $v+tf$ is strictly negative unless $f$ is constant.
+If $N_m>0$, the second derivative of $t\mapsto\mathcal F_m^{(r)}(v+tf)$ is strictly negative unless $f$ is constant.
 \end{proposition}
 \begin{proof}
-Use a basis $s_1,\ldots,s_{N_m}$ orthonormal at $v$, so $G_m(v)=I$, the identity matrix of size $N_m$. Matrix indices $i,j$ below range from $1$ to $N_m$. Boundedness of the weights justifies differentiation under the integral. With pointwise inner products taken in $h^m$, put
+Choose a basis $s_1,\ldots,s_{N_m}$ that is orthonormal for the weight $v$, so that $G_m(v)=I$ is the identity matrix of size $N_m$; the indices $i,j$ below range from $1$ to $N_m$. Since the weights are bounded, we may differentiate under the integral sign. With pointwise inner products taken in $h^m$, put
 \[
  A_{ij}=\int_X f\langle s_i,s_j\rangle_{h^m}\mathrm{e}^{-mv}\,\mathrm{d}\nu,
  \qquad
  C_{ij}=\int_X f^2\langle s_i,s_j\rangle_{h^m}\mathrm{e}^{-mv}\,\mathrm{d}\nu.
 \]
-Then $G'_m=-mA$ and $G''_m=m^2C$. The identity
-$(\log\det G)'=\operatorname{tr}(G^{-1}G')$ gives the first derivative. Differentiating it once more yields
+The first and second derivatives of $t\mapsto G_m(v+tf)$ at $t=0$ are $-mA$ and $m^2C$. The identity
+$(\log\det G)'=\operatorname{tr}(G^{-1}G')$ gives the first derivative of $\mathcal F_m^{(r)}$, and differentiating it once more yields
 \[
  \left.\frac{\mathrm{d}^2}{\mathrm{d}t^2}\right|_{t=0}\mathcal F_m^{(r)}(v+tf)
  =-\frac{r!}{m^{r-1}}
        \left(\int_X f^2B_{m,v,\varphi,\nu}\,\mathrm{d}\nu
                      -\sum_{i,j}|A_{ij}|^2\right).
 \]
-Let $P_v$ be the orthogonal projection of the full weighted $L^2$ space of measurable sections onto $V_m$. The quantity in parentheses equals
+Let $P_v$ be the orthogonal projection of the weighted $L^2$ space of measurable sections of $L^m$ onto $V_m$. Since $P_v(fs_j)=\sum_i\langle fs_j,s_i\rangle_{m,v,\nu}\,s_i$, Pythagoras' theorem shows that the quantity in parentheses equals
 \[
  \sum_j\|(I-P_v)(fs_j)\|_{m,v,\nu}^2\geq0.
 \]
-This proves concavity. Multiplication of every Gram entry by $\mathrm{e}^{-mc}$ proves the translation rule. The first derivative and the total mass identity bound the derivative along the segment from $v$ to $w$, giving the Lipschitz estimate.
+This proves concavity. Multiplying every Gram entry by $\mathrm{e}^{-mc}$ shows that $\det G_m(v+c)=\mathrm{e}^{-mcN_m}\det G_m(v)$, which is the translation rule. By the first-variation formula and the total mass identity, the derivative of $\mathcal F_m^{(r)}$ along the segment from $w$ to $v$ is bounded by $(r!N_m/m^r)\|v-w\|_\infty$, which gives the Lipschitz estimate.
 
-If the second derivative vanishes, choose $0\ne s\in V_m$ with $fs=\widetilde s\in V_m$ in $L^2$. Continuity and the positive density give equality everywhere. The real holomorphic quotient $\widetilde s/s=f$ is constant, say $c$, on a ball where $s\ne0$. The identity theorem gives $\widetilde s=cs$ on connected $X$, and continuity gives $f=c$ everywhere. The translation rule proves the converse.
+Suppose finally that the second derivative vanishes. Then $fs_j\in V_m$ in $L^2$ for every $j$, so there are $0\ne s\in V_m$ and $\widetilde s\in V_m$ with $fs=\widetilde s$ almost everywhere. Both sides are continuous and $\nu$ has a positive density, so $fs=\widetilde s$ everywhere. On a ball where $s\ne0$, the quotient $\widetilde s/s=f$ is a real-valued holomorphic function, hence a constant $c$. The identity theorem gives $\widetilde s=cs$ on the connected manifold $X$, so $f=c$ wherever $s\neq0$, and by continuity everywhere. Conversely, for constant $f$ the translation rule shows that the second derivative vanishes.
 \end{proof}
 
-The derivative here is a partial kernel measure. The obstruction to a primitive for the raw Hermitian Monge--Amp\`ere operator remains the one proved in \cref{chap:energy}.
+Thus $\mathcal F_m^{(r)}$ is a primitive of the partial kernel measures on every compact complex manifold. This does not affect the obstruction proved in \cref{chap:energy} to a primitive of the Hermitian Monge--Amp\`ere operator, since the derivative here is a partial kernel measure and not a Monge--Amp\`ere measure.
 
 \Needspace{8\baselineskip}
 \begin{corollary}\label{cor:partial-kernel-zero-scale}
-If $N_m=o(m^n)$, then $\beta_m^{(n)}\to0$ in total variation. Also $\mathcal F_m^{(n)}(v)\to0$ uniformly when $v$ ranges over a bounded subset of $C(X)$.
+If $N_m=o(m^n)$, then $\beta_m^{(n)}\to0$ in total variation, and $\mathcal F_m^{(n)}(v)\to0$ uniformly for $v$ in any bounded subset of $C(X)$.
 \end{corollary}
 \begin{proof}
-The measures are positive and their total masses are $n!N_m/m^n$. Use the Lipschitz estimate and $\mathcal F_m^{(n)}(0)=0$ for the second assertion.
+The measures $\beta_m^{(n)}$ are positive with total masses $n!N_m/m^n\to0$. The second assertion follows from the Lipschitz estimate, since $\mathcal F_m^{(n)}(0)=0$.
 \end{proof}
 
 \Needspace{8\baselineskip}
-For example, let $X$ be any connected compact complex manifold that is not Moishezon. By \cref{cor:non-moishezon-section-vanishing}, either every positive-degree section space of $L$ is zero, or $h^0(X,L^m)=O(m^d)$ for some $d<n$. Every selected subspace therefore satisfies \cref{cor:partial-kernel-zero-scale}. This applies in particular whenever $X$ fails the bounded mass property.
+For example, suppose that $X$ is not Moishezon. By \cref{cor:non-moishezon-section-vanishing}, either every positive-degree section space of $L$ is zero, or $h^0(X,L^m)=O(m^d)$ for some $d<n$. Since $V_m\subseteq H^0(X,L^m)$, every sequence of selected spaces satisfies the hypothesis of \cref{cor:partial-kernel-zero-scale}. By the last assertion of \cref{cor:non-moishezon-section-vanishing}, this applies in particular whenever $X$ fails the bounded mass property of \cref{def:bmp}.
 
 \input{author/section_partial_kernel_parameters}
 

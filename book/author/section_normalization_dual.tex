@@ -1,16 +1,16 @@
 \section{A convex functional on probability measures}\label{sec:normalization-dual}
 
-To pass to limits in the supporting inequality, we need control of the mass that supporting probabilities can put on small sets. The convex dual of $B_\varphi$ supplies this control: its sublevels are uniformly absolutely continuous. This will allow the logarithmic density and the supporting measure to vary together.
+To pass to the limit in the supporting inequality, we need to control the mass that supporting probabilities can put on small sets. The convex dual of $B_\varphi$ provides this control: the measures in each of its sublevel sets are uniformly absolutely continuous. This allows the logarithmic density and the supporting measure to vary simultaneously.
 
-Let $\mathcal P(X)$ denote the Borel probability measures on $X$. Define
+Let $\mathcal P(X)$ denote the set of Borel probability measures on $X$, with the weak topology. Define
 \index{Normalization scalar!convex dual}
 \begin{equation}\label{eq:normalization-dual-definition}
  H_\varphi(\nu)
  =\sup_{G\in C(X)}\left(B_\varphi(G)+\int_XG\,\mathrm{d}\nu\right),
  \qquad \nu\in\mathcal P(X).
 \end{equation}
-The value $+\infty$ is allowed. Taking $G=0$ shows that
-$H_\varphi\geq B_\varphi(0)$, so the value $-\infty$ never occurs.
+The value $+\infty$ is allowed, while taking $G=0$ shows that
+$H_\varphi\geq B_\varphi(0)>-\infty$.
 
 \begin{proposition}\label{prop:normalization-dual}
 The functional $H_\varphi$ is convex and weakly lower semicontinuous. For every $F\in C(X)$,
@@ -22,15 +22,14 @@ The functional $H_\varphi$ is convex and weakly lower semicontinuous. For every 
 The minimizers are exactly $\mathcal A_\varphi(F)$.
 \end{proposition}
 \begin{proof}
-Every function of $\nu$ in the supremum defining $H_\varphi$ is affine and weakly continuous. Their supremum is convex and lower semicontinuous. The definition gives
-$H_\varphi(\nu)-\int_XF\,\mathrm{d}\nu\geq B_\varphi(F)$.
-Equality holds precisely when
+Each function of $\nu$ in the supremum defining $H_\varphi$ is affine and weakly continuous, so their supremum is convex and lower semicontinuous. By definition,
+$H_\varphi(\nu)-\int_XF\,\mathrm{d}\nu\geq B_\varphi(F)$, with equality precisely when
 \[
  B_\varphi(G)+\int_XG\,\mathrm{d}\nu
  \leq B_\varphi(F)+\int_XF\,\mathrm{d}\nu
  \quad\text{for every }G\in C(X).
 \]
-This is the defining inequality for $\mathcal A_\varphi(F)$. Its nonemptiness, proved in \cref{thm:weak-adjoint-probabilities}, proves attainment.
+This is the defining inequality of $\mathcal A_\varphi(F)$, and the minimum is attained because $\mathcal A_\varphi(F)$ is nonempty by \cref{thm:weak-adjoint-probabilities}.
 \end{proof}
 
 \Needspace{14\baselineskip}
@@ -48,35 +47,35 @@ for every Borel set $E$. In particular, writing $\mathrm{d}\nu=h_\nu \mathrm{d}V
 \end{theorem}
 \Needspace{9\baselineskip}
 \begin{proof}
-Weak compactness follows from lower semicontinuity and compactness of $\mathcal P(X)$. We may assume that the sublevel is nonempty, so $L\geq B_\varphi(0)$.
-Fix $t>0$. By \cref{thm:normalization-bounded-lone} there is $\delta_t>0$ such that
+Weak compactness follows from lower semicontinuity and compactness of $\mathcal P(X)$. We may assume that the sublevel set is nonempty, so that $L\geq B_\varphi(0)$.
+Fix $t>0$. By \cref{thm:normalization-bounded-lone}, there is $\delta_t>0$ such that
 \[
  0\leq\chi\leq1,\quad \chi\in C(X),\quad
  \int_X\chi\,\mathrm{d}V<\delta_t
  \quad\Longrightarrow\quad
  B_\varphi(t\chi)>B_\varphi(0)-1.
 \]
-Indeed, failure would give a sequence of such $\chi$ tending to zero in $L^1$, contrary to that theorem. For $\nu\in\mathcal K_L$, the defining supremum gives
+Indeed, otherwise there would be a sequence of such functions $\chi$ tending to zero in $L^1$ with $B_\varphi(t\chi)\leq B_\varphi(0)-1$, contrary to that theorem. For $\nu\in\mathcal K_L$, the defining supremum gives
 \[
  t\int_X\chi\,\mathrm{d}\nu
  \leq L-B_\varphi(t\chi)
  <L-B_\varphi(0)+1.
 \]
-Choose $t$ so large that the last numerator divided by $t$ is less than $\epsilon/2$. If $\mathrm{d}V(E)<\delta_t/2$, outer regularity supplies an open neighborhood $O$ of $E$ with $\mathrm{d}V(O)<\delta_t$. For any compact $K\subset E$, choose a continuous cutoff equal to one on $K$, between zero and one, and supported in $O$. The last inequality gives $\nu(K)<\epsilon/2$, uniformly in $\nu$. Inner regularity yields $\nu(E)\leq\epsilon/2<\epsilon$, proving \eqref{eq:normalization-dual-uniform-ac}.
+Choose $t$ so large that $(L-B_\varphi(0)+1)/t<\epsilon/2$. If $\mathrm{d}V(E)<\delta_t/2$, outer regularity gives an open neighborhood $O$ of $E$ with $\mathrm{d}V(O)<\delta_t$. For any compact $K\subset E$, choose a continuous cutoff $0\leq\chi\leq1$ equal to one on $K$ and supported in $O$. The last inequality gives $\nu(K)<\epsilon/2$, uniformly in $\nu\in\mathcal K_L$, and inner regularity yields $\nu(E)\leq\epsilon/2<\epsilon$. This proves \eqref{eq:normalization-dual-uniform-ac}.
 
-This proves absolute continuity of every measure in the sublevel, and the uniform small-set criterion for the densities, whose integrals all equal one. These two facts are exactly uniform integrability on a finite measure space.
+In particular, every measure in the sublevel set is absolutely continuous, with a density of integral one. Together with the uniform small-set estimate, this is exactly uniform integrability on the finite measure space $(X,\mathrm{d}V)$.
 
-Finally suppose $\nu_j\to\nu$ weakly within the sublevel. For a bounded measurable $G$, choose continuous $G_k$ with
-$|G_k|\leq\|G\|_\infty$ and $G_k\to G$ in $\mathrm{d}V$-measure. Such approximations follow, for example, by approximating simple functions using regularity and continuous cutoffs. Uniform absolute continuity gives
+Finally, suppose that $\nu_j\to\nu$ weakly within the sublevel set. For a bounded measurable $G$, choose continuous $G_k$ with
+$|G_k|\leq\|G\|_\infty$ and $G_k\to G$ in $\mathrm{d}V$-measure; such approximations exist by Lusin's theorem. Uniform absolute continuity gives
 \[
  \sup_{\sigma\in\mathcal K_L}\int_X|G_k-G|\,\mathrm{d}\sigma\longrightarrow0.
 \]
-To see this, split into $\{|G_k-G|\leq a\}$ and its complement; the first integral is at most $a$, and the second is bounded by $2\|G\|_\infty$ times a uniformly small measure. For fixed $k$, weak convergence applies to $G_k$. Passing first $j\to\infty$ and then $k\to\infty$ proves convergence against $G$. This is precisely weak $L^1(\mathrm{d}V)$ convergence of the densities. In particular every sequence in the sublevel has a weakly convergent $L^1$ subsequence.
+To see this, split $X$ into $\{|G_k-G|\leq a\}$ and its complement; the integral over the first set is at most $a$, and the integral over the second is at most $2\|G\|_\infty$ times a uniformly small measure. For fixed $k$, weak convergence applies to $G_k$. Letting first $j\to\infty$ and then $k\to\infty$ proves convergence of the integrals against $G$, which is precisely weak $L^1(\mathrm{d}V)$ convergence of the densities. In particular, every sequence in the sublevel set has a subsequence whose densities converge weakly in $L^1$.
 \end{proof}
 
 \section{Bounded measurable densities and stability}
 
-Continuous approximations of a bounded measurable logarithmic density have supporting probabilities in one dual sublevel. Uniform integrability then permits both the density and the supporting measure to vary in the limiting inequality.
+The supporting probabilities of continuous approximations of a bounded measurable logarithmic density lie in one sublevel set of $H_\varphi$. Uniform integrability then allows both the density and the supporting measure to vary when we pass to the limit in the supporting inequality.
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:normalization-measurable-adjoint}
@@ -85,12 +84,12 @@ For every $F\in L^\infty(\mathrm{d}V)$ there is a nonempty set of absolutely con
  B_\varphi(G)\leq B_\varphi(F)-\int_X(G-F)\,\mathrm{d}\nu
  \qquad\text{for every }G\in L^\infty(\mathrm{d}V).
 \end{equation}
-For continuous $F$, this agrees with the preceding definition. Formula \eqref{eq:normalization-dual-minimum} holds for bounded measurable $F$ as well, with these measures as its minimizers. In that formula the objective is declared to be $+\infty$ whenever $H_\varphi(\nu)=+\infty$; otherwise $\nu$ is absolutely continuous and the integral of the $L^\infty$ class $F$ is well defined.
+For continuous $F$, this set agrees with the one defined by \eqref{eq:adjoint-probability-set}. Formula \eqref{eq:normalization-dual-minimum} also holds for bounded measurable $F$, with these measures as its minimizers; there the objective is interpreted as $+\infty$ whenever $H_\varphi(\nu)=+\infty$, and otherwise $\nu$ is absolutely continuous, so that the integral of the $L^\infty$ class $F$ is well defined.
 
-Suppose $F_j,F$ are uniformly bounded and $F_j\to F$ in $L^1(\mathrm{d}V)$. If $\nu_j\in\mathcal A_\varphi(F_j)$, their densities are uniformly integrable. Every weak $L^1$ cluster point belongs to $\mathcal A_\varphi(F)$. If the latter is a singleton, the full sequence converges to it weakly in $L^1(\mathrm{d}V)$.
+Suppose that $F_j,F\in L^\infty(\mathrm{d}V)$ are uniformly bounded and $F_j\to F$ in $L^1(\mathrm{d}V)$, and let $\nu_j\in\mathcal A_\varphi(F_j)$. Then the densities of the $\nu_j$ are uniformly integrable, and every weak $L^1$ cluster point belongs to $\mathcal A_\varphi(F)$. If the latter is a singleton, the whole sequence converges to it weakly in $L^1(\mathrm{d}V)$.
 \end{theorem}
 \begin{proof}
-First, if $H_\varphi(\nu)<\infty$, the measure $\nu$ is absolutely continuous by \cref{thm:normalization-dual-compactness}. A bounded measurable $G$ admits uniformly bounded continuous approximations $G_k\to G$ in $L^1(\mathrm{d}V)$. Absolute continuity and the common bound imply $\int_XG_k\,\mathrm{d}\nu\to\int_XG\,\mathrm{d}\nu$. Together with \cref{thm:normalization-bounded-lone}, this proves
+First, if $H_\varphi(\nu)<\infty$, the measure $\nu$ is absolutely continuous by \cref{thm:normalization-dual-compactness}. A bounded measurable $G$ admits uniformly bounded continuous approximations $G_k\to G$ in $L^1(\mathrm{d}V)$, and absolute continuity together with the common bound gives $\int_XG_k\,\mathrm{d}\nu\to\int_XG\,\mathrm{d}\nu$. Combined with \cref{thm:normalization-bounded-lone}, this proves
 \begin{equation}\label{eq:dual-measurable-tests}
  H_\varphi(\nu)
  =\sup_{G\in L^\infty(\mathrm{d}V)}
@@ -98,67 +97,67 @@ First, if $H_\varphi(\nu)<\infty$, the measure $\nu$ is absolutely continuous by
 \end{equation}
 for such $\nu$.
 
-Choose continuous $F_j$ with $|F_j|\leq M=\|F\|_\infty$ and $F_j\to F$ in $L^1(\mathrm{d}V)$, and choose $\nu_j\in\mathcal A_\varphi(F_j)$. The preceding duality and Lipschitz bound give
+To construct supporting probabilities at $F$, choose continuous $F_j$ with $|F_j|\leq M=\|F\|_\infty$ and $F_j\to F$ in $L^1(\mathrm{d}V)$, and choose $\nu_j\in\mathcal A_\varphi(F_j)$. The minimum formula of \cref{prop:normalization-dual} and the Lipschitz bound give
 \[
  H_\varphi(\nu_j)
  =B_\varphi(F_j)+\int_XF_j\,\mathrm{d}\nu_j
  \leq B_\varphi(0)+2M.
 \]
-Thus a subsequence converges weakly in $L^1$ to a probability measure $\nu$. Uniform absolute continuity gives
+By \cref{thm:normalization-dual-compactness}, a subsequence converges weakly in $L^1$ to a probability measure $\nu$. Uniform absolute continuity gives
 \[
- \int_X|F_j-F|\,\mathrm{d}\nu_j\longrightarrow0.
+ \int_X|F_j-F|\,\mathrm{d}\nu_j\longrightarrow0,
 \]
-Here again one splits at a fixed small positive threshold; the exceptional sets have $\mathrm{d}V$-measure tending to zero. Since $F$ is bounded measurable, weak $L^1$ convergence applies to its integral. Lower semicontinuity and continuity of $B_\varphi$ yield
+by splitting again at a fixed small positive threshold: the sets where $|F_j-F|$ exceeds it have $\mathrm{d}V$-measure tending to zero. Since $F$ is bounded and measurable, weak $L^1$ convergence applies to its integral. Lower semicontinuity of $H_\varphi$ and continuity of $B_\varphi$ yield
 \[
  H_\varphi(\nu)
  \leq\liminf_j H_\varphi(\nu_j)
  =B_\varphi(F)+\int_XF\,\mathrm{d}\nu.
 \]
-The reverse inequality follows from \eqref{eq:dual-measurable-tests}. Equality and that same supremum formula prove \eqref{eq:measurable-adjoint-support} and the minimum formula.
+The reverse inequality follows from \eqref{eq:dual-measurable-tests} with $G=F$. Equality, combined with the same supremum formula, proves \eqref{eq:measurable-adjoint-support} for $\nu$ and the minimum formula.
 
-For continuous $F$, every measure in the old supporting set has finite dual value by \cref{prop:normalization-dual}, so \eqref{eq:dual-measurable-tests} extends all its inequalities to bounded measurable tests. This proves agreement of the definitions. Conversely, an absolutely continuous probability satisfying \eqref{eq:measurable-adjoint-support} has finite dual value and achieves the minimum. Hence the characterization is exact.
+For continuous $F$, every measure satisfying \eqref{eq:adjoint-probability-set} has finite dual value by \cref{prop:normalization-dual}, so \eqref{eq:dual-measurable-tests} extends its supporting inequality to all bounded measurable tests; the converse inclusion is trivial. Thus the two definitions agree. Conversely, an absolutely continuous probability satisfying \eqref{eq:measurable-adjoint-support} has finite dual value and attains the minimum, so the characterization is exact.
 
-For the stability assertion, begin with the stated $F_j,\nu_j$ rather than with an approximating construction. The common uniform bound again places all $\nu_j$ in a single finite sublevel of $H_\varphi$. The same compactness and limiting argument show that every weak $L^1$ cluster point achieves the minimum for $F$. If the minimizing set is a singleton, subsequence compactness forces convergence of the full sequence to that measure.
+For the stability assertion, we start from the given $F_j$ and $\nu_j$ instead of an approximating construction. The common uniform bound again places all $\nu_j$ in a single finite sublevel set of $H_\varphi$, and the same compactness and limiting argument shows that every weak $L^1$ cluster point attains the minimum for $F$. If the set of minimizers is a singleton, compactness forces the whole sequence to converge to its member.
 \end{proof}
 
 \section{Entropy and the closed case}\label{sec:normalization-entropy}
 
-When closedness fixes the mass of an ordinary singularity type, integration determines the scalar explicitly. Its convex dual is then relative entropy. The variational identity below also supplies the estimates for nonclosed backgrounds.
+In a closed background, all potentials of an ordinary singularity type have the same mass, and integrating the equation determines the scalar explicitly; its convex dual is then the relative entropy. The variational formula for the entropy also gives estimates in nonclosed backgrounds.
 
-For a Borel probability measure $\nu$ absolutely continuous with respect to $\mathrm{d}V$, let $h$ be its nonnegative density and define
+For a Borel probability measure $\nu$ absolutely continuous with respect to $\mathrm{d}V$, let $h$ be its nonnegative density and define the \emph{relative entropy}
 \[
  \operatorname{Ent}_{\mathrm{d}V}(\nu)=\int_Xh\log h\,\mathrm{d}V,
  \qquad 0\log0=0,
 \]
-and set its entropy to $+\infty$ if it is not absolutely continuous. This entropy may be negative when $\mathrm{d}V(X)\ne1$, but its negative part is finite since $h\log h\geq-\mathrm{e}^{-1}$.
+and set $\operatorname{Ent}_{\mathrm{d}V}(\nu)=+\infty$ if $\nu$ is not absolutely continuous. The integral is well defined in $(-\infty,+\infty]$, since $h\log h\geq-\mathrm{e}^{-1}$; it may be negative when $\mathrm{d}V(X)\ne1$.
 
 \input{author/section_entropy_variational}
 
-If $\theta$ is K\"ahler, the ordinary type $\varphi$ has a fixed non-pluripolar mass $m_\varphi>0$ under the standing hypotheses, by the closed-background theory of \cite{SGPT}. For $F\in L^\infty(\mathrm{d}V)$, integrating the equation gives
+Suppose now that $\theta$ is a K\"ahler form. By the closed-background theory of \cite{SGPT}, all potentials of the ordinary type of $\varphi$ have the same non-pluripolar mass $m_\varphi$, which is positive under the standing hypotheses. For $F\in L^\infty(\mathrm{d}V)$, integrating the equation gives
 \begin{equation}\label{eq:normalization-closed-formula}
  B_\varphi(F)=\log m_\varphi-\log\int_X\mathrm{e}^F\,\mathrm{d}V,
  \qquad
  \mathcal A_\varphi(F)
  =\left\{\frac{\mathrm{e}^F\,\mathrm{d}V}{\int_X\mathrm{e}^F\,\mathrm{d}V}\right\}.
 \end{equation}
-The second identity follows by differentiating in bounded directions and testing the supporting inequality with both signs of the parameter.
+For the second identity, Jensen's inequality shows, as in \cref{prop:divisorial-residual-adjoint}, that the normalized exponential measure is a supporting probability; differentiating in bounded directions and testing the supporting inequality with both signs of the parameter shows that it is the only one.
 
 \begin{proposition}\label{prop:normalization-dual-entropy}
 If $\theta$ is K\"ahler, then
 \[
  H_\varphi(\nu)=\log m_\varphi+\operatorname{Ent}_{\mathrm{d}V}(\nu).
 \]
-Thus the minimum formula becomes the usual entropy variational formula for the logarithmic integral in \eqref{eq:normalization-closed-formula}.
+Thus the minimum formula \eqref{eq:normalization-dual-minimum} becomes the usual variational formula for the logarithmic integral in \eqref{eq:normalization-closed-formula}.
 \end{proposition}
 \begin{proof}
 Substitute \eqref{eq:normalization-closed-formula} into the defining supremum and apply \cref{lem:entropy-variational}.
 \end{proof}
 
-The reference volume is part of this dual functional. If it is replaced by $\mathrm{d}V'=\mathrm{e}^a \mathrm{d}V$ for a continuous real $a$, then
+The dual functional depends on the reference volume. If $\mathrm{d}V$ is replaced by $\mathrm{d}V'=\mathrm{e}^a \mathrm{d}V$ for a continuous real $a$, the corresponding functionals satisfy
 \[
  B'_\varphi(F)=B_\varphi(F+a),\qquad
  H'_\varphi(\nu)=H_\varphi(\nu)-\int_Xa\,\mathrm{d}\nu.
 \]
-The first identity follows from the equation; the second follows by the change of variable $G=F+a$ in the defining supremum. The displayed identity for the dual is valid with infinite values as well. In a nonclosed background, $H_\varphi$ is still defined by the same supremum, but total mass need not be fixed on an ordinary type, so the entropy computation does not determine it.
+The first identity follows from the equation, and the second, which also holds when the values are infinite, from the change of variable $G\mapsto G+a$ in the defining supremum. In a nonclosed background, $H_\varphi$ is still defined by the same supremum, but the total mass need not be constant on an ordinary type, so the entropy computation no longer determines it.
 
 \input{author/section_hermitian_dual_entropy}

@@ -1,19 +1,19 @@
 \subsection{Weighted distance from a sum of multiplier ideals}
 \label{subsec:psh-quantitative-ideals}
 
-Multiplier ideals record local integrability. On a pseudoconvex domain, a weighted norm also measures how much of a holomorphic function remains after subtracting global sections of these ideals. The single-weight estimate can be applied successively, leaving the later weights in the auxiliary measure at each step.
+Membership in a multiplier ideal is a local integrability condition. On a pseudoconvex domain one can ask, more quantitatively, how small the weighted norm of a holomorphic function can be made by subtracting global sections of such ideals. A sharp $L^2$ estimate answers this question for one weight. Applied successively, with the remaining weights kept in the auxiliary weight at each step, it gives a product bound for several weights.
 
-Let $\Omega\subset\mathbb C^n$ be pseudoconvex, with $n\geq1$, and write $\mathrm{d}V$ for Euclidean volume. For a genuine psh weight $\rho$, put
+Throughout this subsection, $\Omega\subset\mathbb C^n$ is a pseudoconvex domain, $n\geq1$, and $\mathrm{d}V$ denotes Euclidean volume. For a plurisubharmonic weight $\rho$ on $\Omega$, put
 \[
  \|f\|_\rho^2=\int_\Omega |f|^2\mathrm e^{-\rho}\,\mathrm{d}V.
 \]
-For a psh function $v$, $\Gamma(\Omega,\mathcal I(v))$ denotes the holomorphic functions whose germs belong to $\mathcal I(v)$ at every point. Membership requires local weighted integrability, without a finite global norm.
+For a plurisubharmonic function $v$ on $\Omega$, we write $\Gamma(\Omega,\mathcal I(v))$ for the space of holomorphic functions on $\Omega$ whose germs belong to $\mathcal I(v)$ at every point. Membership requires only local weighted integrability, not a finite global norm.
 
-We first establish the two-summand estimate needed below. Its sharp constant comes from retaining the sum of the twisting weights in the $\bar\partial$ estimate.
+We first prove a division estimate with two summands. Its sharp constant comes from keeping the full sum of the twisting functions in the $\bar\partial$-estimate.
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:two-weight-l2-division}\index{Multiplier ideal!weighted division}
-Let $\psi,\phi_1,\phi_2$ be genuine psh functions on $\Omega$, and suppose $S=\mathrm e^{\phi_1}+\mathrm e^{\phi_2}<1$. If $f$ is holomorphic and
+Let $\psi,\phi_1,\phi_2$ be plurisubharmonic functions on $\Omega$, and suppose that $S=\mathrm e^{\phi_1}+\mathrm e^{\phi_2}<1$. If $f$ is holomorphic and
 \[
  J=\int_\Omega\frac{|f|^2\mathrm e^{-\psi}}{S^2}\,\mathrm{d}V<+\infty,
 \]
@@ -25,30 +25,26 @@ then there are holomorphic $F_1,F_2$ with $F_1+F_2=f$ and
 \end{equation}
 \end{lemma}
 \begin{proof}
-First suppose that the weights are smooth on a neighborhood of the closure of a bounded pseudoconvex domain, with $S<1$ there, and that $\Phi=\log S$ is strictly psh. Set $\chi=\phi_1+\phi_2+\psi$ and $A=(\Phi_{j\bar k})$. For a $(0,1)$-form $b$, write $|b|_A^2$ for its squared norm in the dual of this positive Hermitian matrix. We use
+\emph{Step 1: a twisted $\bar\partial$-estimate.} Suppose first that $\Omega$ is bounded, that the weights are smooth on a neighborhood of $\overline\Omega$ with $S<1$ there, and that $\Phi=\log S$ is strictly plurisubharmonic. Set $\chi=\phi_1+\phi_2+\psi$ and $A=(\Phi_{j\bar k})$. For a $(0,1)$-form $b$, write $|b|_A^2$ for its squared norm with respect to the dual of this positive Hermitian matrix. We claim that every $\bar\partial$-closed $(0,1)$-form $b$ for which the right-hand side below is finite admits a solution $u$ of
 \begin{equation}\label{eq:negative-weight-dbar}
  \bar\partial u=b,\qquad
  \int |u|^2\mathrm e^{\Phi-\chi}\,\mathrm{d}V
  \leq\int (1-\mathrm e^\Phi)|b|_A^2
-                         \mathrm e^{-\chi}\,\mathrm{d}V
+                         \mathrm e^{-\chi}\,\mathrm{d}V.
 \end{equation}
-for $\bar\partial$-closed $b$ with finite right-hand side.
-
-Here is the constant in this estimate. For $x<0$, define
+To prove this, define for $x<0$
 \[
  T(x)=-\log(1-\mathrm e^x),\qquad
  \eta(x)=\frac{-x}{1-\mathrm e^x}-1,\qquad
  \lambda(x)=-\frac{\eta'(x)}{T'(x)}.
 \]
-The inequality $-x>1-\mathrm e^x$ gives $\eta>0$. Also
-$\eta'= -[1-(1-x)\mathrm e^x]/(1-\mathrm e^x)^2<0$, whereas $T'>0$, so $\lambda>0$.
-Direct differentiation gives
+The inequality $-x>1-\mathrm e^x$ gives $\eta>0$. Also $\eta'= -[1-(1-x)\mathrm e^x]/(1-\mathrm e^x)^2<0$, whereas $T'>0$, so $\lambda>0$. Direct differentiation gives
 \[
  \eta T'-\eta'=1,\qquad
  \eta T''-\eta''-\frac{(\eta')^2}{\lambda}=0,\qquad
  \frac{\mathrm e^{-T}}{\eta+\lambda}=\mathrm e^x.
 \]
-Use the line metric $h=\mathrm e^{-\chi-T(\Phi)}$ and evaluate the twisting functions at $\Phi$. The twisted curvature is
+Use the weight $h=\mathrm e^{-\chi-T(\Phi)}$ on the trivial line bundle and evaluate the twisting functions at $\Phi$. The twisted curvature is
 \[
  \begin{aligned}
  B_0&=\eta\,\mathrm i\partial\bar\partial(\chi+T(\Phi))
@@ -59,18 +55,13 @@ Use the line metric $h=\mathrm e^{-\chi-T(\Phi)}$ and evaluate the twisting func
      \geq\mathrm i\partial\bar\partial\Phi.
  \end{aligned}
 \]
-Let $\Lambda$ denote contraction by the K\"ahler form and $\bar\partial_h^*$ the weighted adjoint. For a compactly supported line-valued $(n,1)$-form $v$, the twisted Bochner identity and weighted Cauchy inequality give
+Let $\Lambda$ denote contraction by the Euclidean K\"ahler form and $\bar\partial_h^*$ the weighted adjoint. For a compactly supported $(n,1)$-form $v$, the twisted Bochner identity and the weighted Cauchy--Schwarz inequality give
 \begin{equation}\label{eq:sharp-twisted-apriori}
  \langle[B_0,\Lambda]v,v\rangle_h
  \leq\|\sqrt{\eta+\lambda}\,\bar\partial_h^*v\|_h^2
        +\|\sqrt\eta\,\bar\partial v\|_h^2.
 \end{equation}
-More explicitly, the cross term is bounded by
-$\lambda|\bar\partial_h^*v|^2+
- \lambda^{-1}|(\bar\partial\eta)^*v|^2$;
-the latter term is exactly the commutator contribution of
-$\mathrm i\lambda^{-1}\partial\eta\wedge\bar\partial\eta$.
-The terms of type $(n+1,1)$ vanish and the remaining connection norm has a favorable sign.
+More explicitly, the cross term is bounded by $\lambda|\bar\partial_h^*v|^2+\lambda^{-1}|(\bar\partial\eta)^*v|^2$; the latter term is exactly the commutator contribution of $\mathrm i\lambda^{-1}\partial\eta\wedge\bar\partial\eta$. The terms of type $(n+1,1)$ vanish, and the remaining connection norm has a favorable sign.
 
 \Needspace{5\baselineskip}
 The Hilbert space existence argument applied to \eqref{eq:sharp-twisted-apriori} therefore gives
@@ -78,9 +69,9 @@ The Hilbert space existence argument applied to \eqref{eq:sharp-twisted-apriori}
  \int\frac{|u|^2h}{\eta+\lambda}\,\mathrm{d}V
  \leq\int |b|_A^2h\,\mathrm{d}V.
 \]
-To see the coefficient, project a test form to $\ker\bar\partial$. On this kernel the second term of \eqref{eq:sharp-twisted-apriori} vanishes, and Cauchy inequality in the curvature norm bounds the functional $v\mapsto\langle b,v\rangle_h$ by $(\int |b|_A^2h)^{1/2}\|\sqrt{\eta+\lambda}\,\bar\partial_h^*v\|_h$. Riesz representation gives a solution with the displayed norm. The twisting functions are bounded on the present domain since $\Phi$ is smooth and bounded away from both $-\infty$ and $0$. The argument first uses a complete K\"ahler metric; approximation by the Euclidean metric plus a positive multiple of a complete metric gives the Euclidean statement. Under the identification with canonical-valued forms, the $(n,0)$ norm integral and the curvature-dual $(n,1)$ integral have these same coordinate expressions. The identities for $T,\eta,\lambda$ now give \eqref{eq:negative-weight-dbar}.
+To see the coefficient, project a test form to $\ker\bar\partial$. On this kernel the second term of \eqref{eq:sharp-twisted-apriori} vanishes, and the Cauchy--Schwarz inequality in the curvature norm bounds the functional $v\mapsto\langle b,v\rangle_h$ by $(\int |b|_A^2h)^{1/2}\|\sqrt{\eta+\lambda}\,\bar\partial_h^*v\|_h$. The Riesz representation theorem gives a solution with the asserted norm. The twisting functions are bounded on $\Omega$, since $\Phi$ is smooth and bounded away from both $-\infty$ and $0$. The argument first uses a complete K\"ahler metric; approximating the Euclidean metric by the Euclidean metric plus small positive multiples of a complete metric gives the Euclidean statement. Under the identification with canonical-bundle-valued forms, the $(n,0)$ norm integral and the curvature-dual $(n,1)$ integral have the same coordinate expressions as above. Since $h=\mathrm e^{-\chi}(1-\mathrm e^\Phi)$, the identities for $T,\eta,\lambda$ now give \eqref{eq:negative-weight-dbar}.
 
-Put $v_i=\mathrm e^{\phi_i}/S$ and $\ell=(v_1f,v_2f)$. Equip $\mathbb C^2$ with the diagonal metric $(\mathrm e^{-\phi_1},\mathrm e^{-\phi_2})$. Then $\ell$ is orthogonal to the kernel line of the sum map, generated by $(1,-1)$, and $|\ell|^2=|f|^2/S$. Write $\delta=\phi_1-\phi_2$. The Hessian formula gives
+\emph{Step 2: division for smooth weights.} Put $v_i=\mathrm e^{\phi_i}/S$ and $\ell=(v_1f,v_2f)$. Equip $\mathbb C^2$ with the diagonal metric $(\mathrm e^{-\phi_1},\mathrm e^{-\phi_2})$. Then $\ell$ is orthogonal to the kernel line of the sum map, generated by $(1,-1)$, and $|\ell|^2=|f|^2/S$. Write $\delta=\phi_1-\phi_2$. The Hessian formula gives
 \[
  \begin{aligned}
  A&=v_1(\phi_{1,j\bar k})+v_2(\phi_{2,j\bar k})
@@ -93,7 +84,7 @@ Thus $v_1v_2|\bar\partial\delta|_A^2\leq1$ and, for $b=\bar\partial(v_1f)$,
  |b|_A^2\mathrm e^{-\chi}
  \leq\frac{|f|^2\mathrm e^{-\psi}}{S^2}.
 \]
-Solve \eqref{eq:negative-weight-dbar} and set $F=\ell-u(1,-1)$. It is holomorphic and its components sum to $f$. The kernel norm is $\mathrm e^{-\phi_1}+\mathrm e^{-\phi_2}=S\mathrm e^{-\phi_1-\phi_2}$. Orthogonality consequently gives
+Solve \eqref{eq:negative-weight-dbar} for this $b$ and set $F=\ell-u(1,-1)$. Since $v_1+v_2=1$, the vector $F=(F_1,F_2)$ is holomorphic and its components sum to $f$. The squared norm of $(1,-1)$ is $\mathrm e^{-\phi_1}+\mathrm e^{-\phi_2}=S\mathrm e^{-\phi_1-\phi_2}$. Orthogonality and \eqref{eq:negative-weight-dbar} consequently give
 \[
  \begin{aligned}
  \int |F|^2\mathrm e^{-\psi}
@@ -102,13 +93,14 @@ Solve \eqref{eq:negative-weight-dbar} and set $F=\ell-u(1,-1)$. It is holomorphi
  &\leq\int\frac{|f|^2\mathrm e^{-\psi}}{S^2}.
  \end{aligned}
 \]
+This proves \eqref{eq:two-weight-l2-division} for smooth weights.
 
-For general weights, exhaust $\Omega$ by bounded relatively compact pseudoconvex domains. Convolve each weight on a slightly larger neighborhood and add a sufficiently small positive multiple of $|z|^2$. These smooth psh weights dominate the original weights, converge to them almost everywhere, preserve $S<1$ on the chosen closure, and make $\Phi$ strictly psh. Their right-hand sides are bounded by $J$. On every compact subset the weights have common upper bounds, so \eqref{eq:two-weight-l2-division} gives uniform unweighted local $L^2$ bounds for both components. The holomorphic mean-value inequality and a diagonal extraction give holomorphic limits. Almost-everywhere convergence of the weights and Fatou's lemma yield \eqref{eq:two-weight-l2-division} on $\Omega$, while $F_1+F_2=f$ passes to the limit.
+\emph{Step 3: general weights.} Exhaust $\Omega$ by bounded pseudoconvex domains with compact closures in $\Omega$. On each of them, convolve the weights on a slightly larger neighborhood and add a sufficiently small positive multiple of $|z|^2$. These smooth plurisubharmonic weights dominate the original weights, converge to them almost everywhere, preserve $S<1$ on the chosen closure, and make $\Phi$ strictly plurisubharmonic. The corresponding integrals $J$ are bounded by the original one. On every compact subset the weights have common upper bounds, so \eqref{eq:two-weight-l2-division} gives uniform unweighted local $L^2$ bounds for both components. The holomorphic mean-value inequality and a diagonal extraction give holomorphic limits. Almost-everywhere convergence of the weights and Fatou's lemma yield \eqref{eq:two-weight-l2-division} on $\Omega$, and $F_1+F_2=f$ passes to the limit.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:one-weight-ideal-distance}\index{Multiplier ideal!weighted distance}
-Let $\psi$ be genuine psh, let $\phi<0$ be genuine psh, and let $p>1$. For holomorphic $f$ with $I=\|f\|_{\psi+\phi}^2<+\infty$, define
+Let $\psi$ and $\phi$ be plurisubharmonic functions on $\Omega$ with $\phi<0$, and let $p>1$. For holomorphic $f$ with $I=\|f\|_{\psi+\phi}^2<+\infty$, define
 \[
  c=\inf\{\|g\|_\psi^2:g\in\mathcal O(\Omega),\quad
                    f-g\in\Gamma(\Omega,\mathcal I(p\phi+\psi))\}.
@@ -121,19 +113,18 @@ For $t>0$, apply \cref{lem:two-weight-l2-division} with
  \phi_1=\log\frac{t}{1+t}+p\phi,\qquad
  \phi_2=-\log(1+t).
 \]
-Their exponential sum is $(1+t\mathrm e^{p\phi})/(1+t)<1$. Its right-hand side is finite since $\|f\|_\psi^2\leq I$ and the sum is at least $1/(1+t)$. The first component belongs to $\Gamma(\Omega,\mathcal I(p\phi+\psi))$. The second is admissible for $c$, and the norm estimate gives
+Their exponential sum is $S=(1+t\mathrm e^{p\phi})/(1+t)<1$. The integral $J$ of the lemma is finite, since $\|f\|_\psi^2\leq I$ and $S\geq1/(1+t)$. The first component $F_1$ belongs to $\Gamma(\Omega,\mathcal I(p\phi+\psi))$, so the second component $F_2=f-F_1$ is admissible for $c$, and the norm estimate gives
 \[
  \frac{c}{1+t}\leq
    \int_\Omega\frac{|f|^2\mathrm e^{-\psi}}
                          {(1+t\mathrm e^{p\phi})^2}\,\mathrm{d}V.
 \]
-Set $t=x^p$ and integrate in $x>0$. With
-$\theta_k=\int_0^\infty(1+x^p)^{-k}\,\mathrm{d}x$, Tonelli and the change of variable $x\mathrm e^\phi$ give $c\theta_1\leq I\theta_2$. The pole set is Lebesgue null. Since $p>1$, both integrals are finite, and integrating the derivative of $x/(1+x^p)$ gives $\theta_2=(1-1/p)\theta_1$. No attainment of the infimum is needed.
+Set $t=x^p$ and integrate over $x>0$. With $\kappa_k=\int_0^\infty(1+x^p)^{-k}\,\mathrm{d}x$, Tonelli's theorem and the change of variable $x\mapsto x\mathrm e^\phi$ give $c\kappa_1\leq I\kappa_2$; the pole set of $\phi$ is Lebesgue null. Since $p>1$, both integrals are finite, and integrating the derivative of $x/(1+x^p)$ over $(0,\infty)$ gives $\kappa_2=(1-1/p)\kappa_1$. The infimum need not be attained.
 \end{proof}
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:product-ideal-distance}\index{Multiplier ideal!sum of ideals}
-Let $\psi$ and $\phi_1,\ldots,\phi_r<0$ be genuine psh functions on $\Omega$, with $r\geq1$, and choose $p_i>1$. For holomorphic $f$ with
+Let $\psi$ and $\phi_1,\ldots,\phi_r$ be plurisubharmonic functions on $\Omega$, with $r\geq1$ and $\phi_i<0$, and choose $p_i>1$. For holomorphic $f$ with
 \[
  I=\|f\|_{\psi+\sum_i\phi_i}^2<+\infty,
 \]
@@ -157,15 +148,15 @@ Set $\psi_i=\psi+\sum_{j>i}\phi_j$, $a_i=1-1/p_i$, and $f_0=f$. For arbitrary $\
  \end{aligned}
 \]
 \Needspace{8\baselineskip}
-Since $\psi_i\leq\psi$, these ideals are contained in $\mathcal I(p_i\phi_i+\psi)$. The sum of the remainders makes $f_r$ admissible for $c$. Also $\psi_i+\phi_i=\psi_{i-1}$ for $i>1$, so iteration gives
+Since $\psi_i\leq\psi$, these ideals are contained in $\mathcal I(p_i\phi_i+\psi)$. As $f-f_r$ is the sum of the differences $f_{i-1}-f_i$, the function $f_r$ is admissible for $c$. Moreover, $\psi_i+\phi_i=\psi_{i-1}$ for $i\geq1$ and $\psi_r=\psi$, so iteration gives
 \[
  c\leq\left(\prod_i a_i\right)I
           +\sum_{i=1}^r\varepsilon_i\prod_{j>i}a_j.
 \]
-Let every $\varepsilon_i$ tend to zero.
+Letting every $\varepsilon_i$ tend to zero proves \eqref{eq:product-ideal-distance}.
 
 \Needspace{9\baselineskip}
-For sharpness when $r\leq n$, take $\Omega=\Delta^n$, $f=1$, $\psi=0$, and $\phi_i=p_i^{-1}\log|z_i|^2$ for $i\leq r$. By \cref{lem:smooth-center-multiplier-ideal}, $\mathcal I(p_i\phi_i)=(z_i)$. Every admissible $g$ equals one on $Y=\{z_1=\cdots=z_r=0\}$, hence $g(0)=1$. Orthogonality of polydisc monomials gives $\|g\|_0^2\geq\pi^n$, with equality for $g=1$. Direct radial integration gives $I=\pi^n\prod_i p_i/(p_i-1)$. Equality follows in \eqref{eq:product-ideal-distance}.
+For sharpness when $r\leq n$, take the unit polydisc $\Omega=\Delta^n$, $f=1$, $\psi=0$, and $\phi_i=p_i^{-1}\log|z_i|^2$ for $i\leq r$. By \cref{lem:smooth-center-multiplier-ideal}, $\mathcal I(p_i\phi_i)=(z_i)$. Every admissible $g$ equals one on $Y=\{z_1=\cdots=z_r=0\}$, hence $g(0)=1$. Orthogonality of the monomials on the polydisc gives $\|g\|_0^2\geq\pi^n$, with equality for $g=1$. Direct radial integration gives $I=\pi^n\prod_i p_i/(p_i-1)$, so equality holds in \eqref{eq:product-ideal-distance}.
 \end{proof}
 
-The congruence in this theorem uses a sum of global sections. A condition at one germ alone does not supply these successive global remainders. The estimate holds for any number of weights; the optimality assertion uses distinct coordinate directions and applies only when $r\leq n$.
+The congruence condition in \cref{thm:product-ideal-distance} involves a sum of global sections, and the successive remainders in its proof are global; a condition on a single germ would not produce them. The estimate holds for any number of weights, whereas the optimality assertion uses distinct coordinate directions and therefore requires $r\leq n$.

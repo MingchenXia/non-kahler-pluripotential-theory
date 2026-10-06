@@ -1,11 +1,11 @@
 \Needspace{10\baselineskip}
 \section{Adding weighted Monge--Amp\`ere measures}
 
-Weighted measures of two solutions in the same ordinary type can be added while retaining that type. Truncation gives bounded equations whose solutions have a common lower barrier. Their exponential error tends to zero even if the approximating masses grow, so the lower-barrier criterion identifies the limit. This addition step will remove a measure deficit in the prescribed-type existence proof.
+Let $u$ and $v$ be potentials of the same ordinary singularity type. We show that the sum of their weighted measures $\mathrm{e}^{-\lambda u}\mathrm{MA}_\theta(u)+\mathrm{e}^{-\lambda v}\mathrm{MA}_\theta(v)$ is again of the form $\mathrm{e}^{-\lambda a}\mathrm{MA}_\theta(a)$ for a potential $a$ of that type. Truncating $u$ and $v$ gives bounded equations, solved by the bounded subsolution theorem, whose solutions have a common lower barrier. Their exponential error tends to zero even though the approximating masses may grow, so the lower-barrier criterion identifies the limit. This addition step will remove a deficit of mass in the existence proof of \cref{sec:ordinary-type-equations}.
 
 \Needspace{15\baselineskip}
 \begin{theorem}\label{thm:weighted-measure-addition}\index{Monge--Ampere measure@Monge--Amp\`ere measure!weighted addition}
-Let $\theta\geq0$ be big, and suppose $\varphi\in\PSH(X,\theta)$ admits $P_{\delta\theta}(\varphi)\not\equiv-\infty$ for some $0<\delta<1$. Let $u,v\in\PSH(X,\theta)$ satisfy $u,v\sim\varphi$, and let $\lambda>0$. If
+Let $\theta\geq0$ be big, and suppose $\varphi\in\PSH(X,\theta)$ satisfies $P_{\delta\theta}(\varphi)\not\equiv-\infty$ for some $0<\delta<1$. Let $u,v\in\PSH(X,\theta)$ satisfy $u,v\sim\varphi$, and let $\lambda>0$. If
 \[
  \mu=\mathrm{e}^{-\lambda u}\mathrm{MA}^{\mathrm{ext}}_\theta(u)
        +\mathrm{e}^{-\lambda v}\mathrm{MA}^{\mathrm{ext}}_\theta(v)
@@ -14,71 +14,70 @@ is a finite measure, then there exists $a\in\PSH(X,\theta)$, with $a\sim\varphi$
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(a)=\mathrm{e}^{\lambda a}\mu.
 \]
-Weights are interpreted off the pluripolar pole sets. The solution is unique in this ordinary singularity type.
+Here the weights are evaluated off the pole sets. The solution $a$ is unique in the ordinary singularity type of $\varphi$.
 \end{theorem}
 \begin{proof}
-Choose $S\geq\max(\sup_Xu,\sup_Xv)$. A common translation reduces to $u,v\leq0$: translating by $-S$ multiplies $\mu$ by $\mathrm{e}^{\lambda S}$ and translates the resulting solution back by $S$.
+\emph{Step 1: truncated equations and barriers.} Choose $S\geq\max(\sup_Xu,\sup_Xv)$. A common translation reduces the theorem to the case $u,v\leq0$: translating $u$ and $v$ by $-S$ multiplies $\mu$ by $\mathrm{e}^{\lambda S}$, and the resulting solution is then translated back by $S$.
 
 For integers $j\geq1$, set $u_j=\max(u,-j)$, $v_j=\max(v,-j)$ and
 \[
  \mu_j=\mathrm{e}^{-\lambda u_j}\mathrm{MA}_\theta(u_j)
            +\mathrm{e}^{-\lambda v_j}\mathrm{MA}_\theta(v_j).
 \]
-For $s_j=(u_j+v_j)/2$, positivity gives
+For $s_j=(u_j+v_j)/2$, positivity of mixed products gives
 \[
  \mu_j\leq2^n \mathrm{e}^{\lambda j}\mathrm{MA}_\theta(s_j).
 \]
-Each measure is finite and nonzero by individual bounded noncollapse. The bounded subsolution theorem gives $a_j$ with
-$\mathrm{MA}_\theta(a_j)=\mathrm{e}^{\lambda a_j}\mu_j$.
-Bounded exponential order yields
+Thus $\mu_j$ has a bounded density with respect to the Monge--Amp\`ere measure of the bounded potential $s_j$, and $\mu_j\neq0$ by \cref{prop:big-noncollapsing}. The bounded subsolution theorem \cref{thm:bounded-subsolution} therefore gives bounded $a_j\in\PSH(X,\theta)$ with
+$\mathrm{MA}_\theta(a_j)=\mathrm{e}^{\lambda a_j}\mu_j$, and bounded exponential comparison yields
 \[
  a_j\leq\min(u_j,v_j)\leq0.
 \]
-Choose $C$ with $|u-v|\leq C$ off the common poles; then $|u_j-v_j|\leq C$. Put
+Choose $C$ with $|u-v|\leq C$ off the common pole set; then $|u_j-v_j|\leq C$. Put
 \[
  D=C/2+n\lambda^{-1}\log2,\qquad b_j=s_j-D.
 \]
-The inequality
+Because $|u_j-v_j|\leq C$, positivity of mixed products gives
 \[
  \mathrm{e}^{-\lambda b_j}\mathrm{MA}_\theta(b_j)
  \geq2^{-n}\mathrm{e}^{\lambda D-\lambda s_j}
             \bigl(\mathrm{MA}_\theta(u_j)+\mathrm{MA}_\theta(v_j)\bigr)
- \geq\mu_j
+ \geq\mu_j.
 \]
-follows from $|u_j-v_j|\leq C$. Hence $a_j\geq b_j\geq w$, where
+Hence $a_j\geq b_j\geq w$, where
 \[
  w=(u+v)/2-D\sim\varphi
 \]
-is a fixed genuine potential. Extract $a_j\to a$ in $L^1(X)$. The upper barriers decrease to $\min(u,v)$, so $w\leq a\leq\min(u,v)$ and $a\sim\varphi$.
+is a fixed $\theta$-plurisubharmonic function. Extract a subsequence with $a_j\to a$ in $L^1(X)$. The upper barriers decrease to $\min(u,v)$, so $w\leq a\leq\min(u,v)$ and $a\sim\varphi$.
 
-To prove convergence in capacity, write $E_j=\{\min(u,v)>-j\}$. Locality gives $\mu_j=\mu$ there. Thus
+\emph{Step 2: convergence in capacity.} Write $E_j=\{\min(u,v)>-j\}$. By locality, $\mu_j=\mu$ on $E_j$; since $a_j\leq0$, it follows that
 \[
  \int_{E_j}|\mathrm{e}^{a_j}-\mathrm{e}^a|\,\mathrm{MA}_\theta(a_j)
  \leq\int_X|\mathrm{e}^{a_j}-\mathrm{e}^a|\,\mathrm{d}\mu\longrightarrow0
 \]
-by \cref{lem:fixed-npp-integrals}. On $X\setminus E_j$ we have $a_j\leq-j$ and $a\leq-j$, whence $|\mathrm{e}^{a_j}-\mathrm{e}^a|\leq \mathrm{e}^{-j}$. Also
+by \cref{lem:fixed-npp-integrals}. On $X\setminus E_j$ we have $a_j\leq-j$ and $a\leq-j$, whence $|\mathrm{e}^{a_j}-\mathrm{e}^a|\leq \mathrm{e}^{-j}$. Moreover
 \[
  \mathrm{MA}_\theta(a_j)
  =\mathrm{e}^{\lambda(a_j-u_j)}\mathrm{MA}_\theta(u_j)
     +\mathrm{e}^{\lambda(a_j-v_j)}\mathrm{MA}_\theta(v_j)
  \leq\mathrm{MA}_\theta(u_j)+\mathrm{MA}_\theta(v_j).
 \]
-Choose a Hermitian $\Omega\geq\theta$. Write $r_n=\max(n-2,0)$. The bounded-range estimate gives
+Choose a Hermitian form $\Omega\geq\theta$. Since $\mathrm{MA}_\theta(u_j)\leq\mathrm{MA}_\Omega(u_j)$ and $-j\leq u_j\leq0$, and similarly for $v_j$, the range estimate of \cref{prop:gauduchon-range-growth}, with $r_n=\max(n-2,0)$, gives
 \[
  \int_{X\setminus E_j}|\mathrm{e}^{a_j}-\mathrm{e}^a|\,\mathrm{MA}_\theta(a_j)
  \leq C'\mathrm{e}^{-j}(1+j)^{r_n}\longrightarrow0.
 \]
-The lower-barrier criterion \cref{prop:lower-barrier-criterion} now gives $a_j\to a$ in capacity. Only polynomial control of the approximating masses was needed.
+The lower-barrier criterion \cref{prop:lower-barrier-criterion} now gives $a_j\to a$ in capacity. Note that only a polynomial bound for the masses of the approximating measures was needed.
 
-It remains to identify the equation. This can be done on bounded levels without claiming raw weak convergence prematurely. For $T>0$ choose the continuous cutoff $g_T$ from \cref{lem:weighted-extended-lsc} and put $\zeta_T=g_T(w)$. Where $\zeta_T>0$, we have $w>-2T$, hence every $a_j$ and $a$ is above $-2T$. If $j>2T$ and $x\notin E_j$, the inequalities $w(x)\leq a_j(x)\leq-j$ force $\zeta_T(x)=0$. Consequently, for all $j>2T$,
+\emph{Step 3: the limiting equation.} We identify the equation on sets where $w$ is bounded below, without first proving weak convergence of the measures $\mathrm{MA}_\theta(a_j)$. For $T>0$, let $g_T$ be the continuous cutoff from the proof of \cref{lem:weighted-extended-lsc}, and put $\zeta_T=g_T(w)$. Where $\zeta_T>0$, we have $w>-2T$, hence every $a_j$ and $a$ is above $-2T$. If $j>2T$ and $x\notin E_j$, the inequalities $w(x)\leq a_j(x)\leq-j$ force $\zeta_T(x)=0$. Consequently, for all $j>2T$,
 \[
  \zeta_T\mathrm{MA}_\theta(a_j)
        =\zeta_T \mathrm{e}^{\lambda a_j}\mu.
 \]
-Test this identity against any continuous function. On the left, replace $a_j$ by $\max(a_j,-2T)$ and use bounded capacity continuity with the fixed bounded quasi-continuous weight $\zeta_T$. On the right, fixed-measure exponential convergence gives convergence in total variation. Therefore
+We test this identity against a continuous function. On the left we may replace $a_j$ by $\max(a_j,-2T)$ and use continuity of bounded products under convergence in capacity, with the fixed bounded quasi-continuous weight $\zeta_T$. On the right, the exponentials converge against the fixed measure $\mu$, which gives convergence in total variation. Therefore
 \[
  \zeta_T\mathrm{MA}^{\mathrm{ext}}_\theta(a)
        =\zeta_T\mathrm{e}^{\lambda a}\mu.
 \]
-Let $T\to\infty$. The cutoffs increase to one off the pole set of the genuine $w$; all measures ignore that set. This proves the equation and, in particular, finiteness of the limiting raw measure. Uniqueness follows from singular exponential order.
+As $T\to\infty$, the cutoffs increase to one off the pole set of $w$, which no measure involved charges. This proves the equation and, in particular, shows that $\mathrm{MA}^{\mathrm{ext}}_\theta(a)$ has finite mass. Uniqueness follows from \cref{cor:singular-exponential-order}.
 \end{proof}

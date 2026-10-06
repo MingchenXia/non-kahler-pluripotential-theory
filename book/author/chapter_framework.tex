@@ -1,13 +1,15 @@
 \chapter{Plurisubharmonic functions and singularities}
 \label{chap:framework}
 
-A potential with a smooth lower Hessian bound becomes plurisubharmonic after a local smooth correction. This brings the local compactness and approximation theorems to a compact complex manifold, provided the correction is retained when potentials are glued or their Hessians multiplied. Normalization controls the resulting families globally. To keep track of singularities under these operations, we compare potentials both by domination up to a constant and by the local integrability of holomorphic functions against their exponential weights.
+A function whose complex Hessian is bounded below by a smooth form becomes plurisubharmonic after a local smooth correction. This brings the local theory of plurisubharmonic functions to a compact complex manifold, provided the smooth remainder left by the correction is kept when potentials are glued, when their Hessians are multiplied and when one integrates by parts. Normalization by the supremum then controls the resulting families globally, giving compactness, uniform exponential integrability and capacity estimates on the whole manifold. Products of Hessians require more care than the potentials themselves: without a common bound, convergence of potentials in $L^1$, or even in capacity, does not prevent their Monge--Amp\`ere measures from concentrating.
+
+To keep track of singularities under these operations, we compare potentials in two ways: by domination up to an additive constant, which leads to ordinary singularity types and their envelopes, and by the local integrability of holomorphic functions against exponential weights, which leads to multiplier ideals. Lelong numbers, analytic approximation and modifications are the main tools for computing the latter.
 
 \section{Plurisubharmonic potentials}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth real $(1,1)$-form, and let $\omega$ be a Hermitian form on $X$. There are two distinct extensions of the K\"ahler setting: one can study a closed background on a non-K\"ahler manifold, or allow the background itself to be nonclosed. In both cases positivity is expressed through quasi-plurisubharmonic functions.
+Throughout the chapter, $X$ is a connected compact complex manifold of dimension $n\geq1$, $\theta$ is a smooth real $(1,1)$-form and $\omega$ is a Hermitian form on $X$, unless a statement specifies another setting. There are two distinct extensions of the K\"ahler setting: one can study a closed background on a non-K\"ahler manifold, or allow the background itself to be nonclosed. In both cases positivity is expressed through quasi-plurisubharmonic functions.
 
-On an open set $U$ in a complex manifold, a \emph{plurisubharmonic function} is a locally integrable upper semicontinuous function satisfying the submean inequality on every complex line in local coordinates. We write $\PSH(U)$ for these functions.\index{Plurisubharmonic function!local definition} A function is \emph{quasi-plurisubharmonic} if it is locally the sum of a plurisubharmonic function and a smooth real function; their space is denoted by $\QPSH(U)$. The following relative positivity condition also makes sense on any such open set.
+On an open set $U$ in a complex manifold, a \emph{plurisubharmonic function} is a locally integrable upper semicontinuous function satisfying the submean inequality on every complex line in local coordinates. We write $\PSH(U)$ for the set of these functions.\index{Plurisubharmonic function!local definition} A function is \emph{quasi-plurisubharmonic} if it is locally the sum of a plurisubharmonic function and a smooth real function; the set of such functions is denoted by $\QPSH(U)$. The following relative positivity condition makes sense on any such open set as well.
 
 \begin{definition}\label{def:theta-psh}\index{PSH|see{Plurisubharmonic function}}\index{Quasi-plurisubharmonic function|see{Plurisubharmonic function}}\index{Plurisubharmonic function!relative to a background}
 A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic} if
@@ -17,12 +19,12 @@ A quasi-plurisubharmonic function $u$ on $X$ is \emph{$\theta$-plurisubharmonic}
 as a current. We denote the set of these functions by $\PSH(X,\theta)$.
 \end{definition}
 
-If $\theta=\omega$, every constant belongs to $\PSH(X,\omega)$.
+Since $\omega>0$, every constant function belongs to $\PSH(X,\omega)$.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:local-correction}\index{Local correction}\index{Background form!local correction}
-Every real distribution $u$ with $\theta+\ddc u\geq0$ has a unique $\theta$-plurisubharmonic representative. On each relatively compact coordinate ball with coordinates $z=(z_1,\ldots,z_n)$, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
-Conversely, if $u$ is quasi-plurisubharmonic on the compact manifold $X$, then there is a constant $C>0$ such that $u\in\PSH(X,C\omega)$.
+Every real distribution $u$ on $X$ with $\theta+\ddc u\geq0$ has a unique $\theta$-plurisubharmonic representative. On each relatively compact coordinate ball with coordinates $z=(z_1,\ldots,z_n)$, there is a constant $A>0$ such that $u+A|z|^2$ is plurisubharmonic.
+Conversely, every quasi-plurisubharmonic function $u$ on $X$ belongs to $\PSH(X,C\omega)$ for some constant $C>0$.
 \end{proposition}
 \Needspace{7\baselineskip}
 \begin{proof}
@@ -34,30 +36,30 @@ for a sufficiently large $A$. Consequently,
 \[
  \ddc(u+A|z|^2)\geq A\ddc|z|^2-\theta\geq0.
 \]
-The local distributional characterization of plurisubharmonic functions, \cite[Chapter~I, Theorem~5.8]{DemCADG}, gives a unique plurisubharmonic representative of $u+A|z|^2$. Subtracting the smooth correction gives a quasi-plurisubharmonic representative of $u$ on the ball. These representatives agree on overlaps: after one common local smooth correction, they are plurisubharmonic functions equal almost everywhere, hence everywhere. They therefore glue to a unique $\theta$-plurisubharmonic representative.
+The local distributional characterization of plurisubharmonic functions, \cite[Chapter~I, Theorem~5.8]{DemCADG}, gives a unique plurisubharmonic representative of $u+A|z|^2$. Subtracting the smooth correction gives a quasi-plurisubharmonic representative of $u$ on the ball. These representatives agree on overlaps: after a common local smooth correction, two of them become plurisubharmonic functions that are equal almost everywhere, hence everywhere. They therefore glue to a unique $\theta$-plurisubharmonic representative.
 
-For the converse, choose finitely many relatively compact charts covering $X$ on which $u=p_j+f_j$, with $p_j$ plurisubharmonic and $f_j$ smooth. On the closure of each smaller chart, the smooth form $\ddc f_j$ is bounded below by $-C_j\omega$. Thus $\ddc u\geq-C_j\omega$ there. Taking the maximum of finitely many $C_j$ proves the global inequality.
+For the converse, cover $X$ by finitely many open sets $V_j\Subset U_j$, where each $U_j$ is a chart on which $u=p_j+f_j$, with $p_j$ plurisubharmonic and $f_j$ smooth. On the compact set $\overline V_j$, the smooth form $\ddc f_j$ is bounded below by $-C_j\omega$ for some constant $C_j$, so $\ddc u\geq\ddc f_j\geq-C_j\omega$ on $V_j$. Any constant $C>0$ larger than all the $C_j$ gives $\ddc u\geq-C\omega$ on $X$.
 \end{proof}
 
 For $u\in\PSH(X,\theta)$, choose coordinates $z$ and a constant $A>0$ as in \cref{prop:local-correction}, and put $p=u+A|z|^2$. Then
 \[
  \theta+\ddc u=\ddc p+(\theta-A\ddc|z|^2).
 \]
-Thus local plurisubharmonic theory applies to $p$, while the smooth remainder records the original background. It must be retained when forming products or integrating by parts.
+Thus local plurisubharmonic theory applies to $p$, while the smooth remainder $\theta-A\ddc|z|^2$ records the original background; this remainder must be kept when forming products or integrating by parts.
 
 \begin{proposition}\label{prop:no-local-potential}\index{Background form!local potentials}
 If $\theta=\ddc\rho$ on an open set for a smooth function $\rho$, then $\mathrm{d}\theta=0$ on that set. In particular, at a point where $\mathrm{d}\theta\neq0$, no neighborhood admits such a representation.
 \end{proposition}
 \begin{proof}
-The identity follows from $\mathrm{d}\ddc=0$.
+Apply $\mathrm{d}$ and use $\mathrm{d}\ddc=0$.
 \end{proof}
 
-For a closed real $(1,1)$-form, smooth local $\ddc$-potentials do exist on sufficiently small coordinate balls by the local $\partial\bar\partial$-lemma. This local fact does not require the compact manifold to admit a K\"ahler metric.
+Conversely, a closed real $(1,1)$-form has smooth local $\ddc$-potentials on sufficiently small coordinate balls, by the local $\partial\bar\partial$-lemma; this local fact does not require $X$ to admit a K\"ahler metric.
 
-A smooth conformal direction also constrains the regularity of a potential. In dimension at least two, the identity below determines the derivative of the conformal factor from smooth coefficients.
+The exterior derivative also constrains the regularity of a potential whose current is pointwise proportional to a Hermitian form. In dimension at least two, differentiating such an identity expresses the derivative of the proportionality factor through smooth coefficients.
 
 \begin{lemma}\label{lem:smooth-conformal-current}
-Let $X$ be a complex manifold of dimension $n\geq2$, let $\theta$ be a smooth real $(1,1)$-form and let $\gamma$ be Hermitian. Suppose real-valued $u,a\in L^1_{\mathrm{loc}}(X)$ satisfy
+Let $X$ be a complex manifold of dimension $n\geq2$, let $\theta$ be a smooth real $(1,1)$-form and let $\gamma$ be a Hermitian form on $X$. Suppose that real-valued $u,a\in L^1_{\mathrm{loc}}(X)$ satisfy
 \[
  \theta+\ddc u=a\gamma
 \]
@@ -74,31 +76,31 @@ At each point, $\xi\mapsto\xi\wedge\gamma^{n-1}$ is an isomorphism from real one
 \[
  \mathrm{d}a=B-aC
 \]
-in distributions. Since $a\in L^1_{\mathrm{loc}}$, this first gives $a\in W^{1,1}_{\mathrm{loc}}$. Differentiating the equation and using smoothness of its coefficients gives $a\in W^{k,1}_{\mathrm{loc}}$ for every integer $k$. Local Sobolev embedding makes $a$ smooth. Now $\ddc u=a\gamma-\theta$ is smooth; taking its trace in local coordinates and applying elliptic regularity makes $u$ smooth as well.
+in the sense of distributions. Since $a\in L^1_{\mathrm{loc}}$, the right-hand side is locally integrable, so $a\in W^{1,1}_{\mathrm{loc}}$. Differentiating the equation and using the smoothness of its coefficients, we obtain inductively $a\in W^{k,1}_{\mathrm{loc}}$ for every integer $k$, and the local Sobolev embedding shows that $a$ is smooth. Consequently $\ddc u=a\gamma-\theta$ is smooth; taking its trace in local coordinates and applying elliptic regularity shows that $u$ is smooth as well.
 \end{proof}
 
 \section{Changes of background}
 
-Let $\eta$ be another smooth real $(1,1)$-form on $X$. A positive current can be written as a smooth background plus a complex Hessian in more than one way. A smooth change of decomposition changes the potential by a bounded function; positive linear combinations also allow us to compare potentials belonging to different backgrounds.
+A positive current can be written as a smooth form plus a complex Hessian in more than one way. Changing the decomposition by a smooth $\ddc$-exact form changes the potential by a bounded function, and positive linear combinations allow us to compare potentials belonging to different backgrounds. In this section, $\eta$ denotes a second smooth real $(1,1)$-form on $X$.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:gauge}\index{Background form!change of representative}
-Let $f$ be smooth and real, and set $\theta'=\theta+\ddc f$. Then
+Let $f$ be a smooth real function on $X$, and set $\theta'=\theta+\ddc f$. Then
 \[
  \PSH(X,\theta)\longrightarrow\PSH(X,\theta'),
  \qquad u\longmapsto u-f
 \]
-is a bijection. It preserves the positive current and changes the potential by a bounded function. Moreover, $\mathrm{d}\theta'=\mathrm{d}\theta$.
+is a bijection. It preserves the positive current and changes each potential by a bounded function. Moreover, $\mathrm{d}\theta'=\mathrm{d}\theta$.
 \end{proposition}
 \begin{proof}
-For every $u$ in the source,
+For every $u\in\PSH(X,\theta)$,
 \[
  \theta'+\ddc(u-f)=\theta+\ddc u.
 \]
-The inverse is $v\mapsto v+f$, and $f$ is bounded by compactness. The last assertion follows from $\mathrm{d}\ddc f=0$.
+The inverse map is $v\mapsto v+f$, and $f$ is bounded because $X$ is compact. The last assertion follows from $\mathrm{d}\ddc f=0$.
 \end{proof}
 
-The quotient of smooth real $(1,1)$-forms by smooth $\ddc$-terms thus permits nonclosed representatives. The usual Bott--Chern cohomology group is the corresponding quotient of closed forms.
+Thus the natural object is the class of $\theta$ modulo smooth $\ddc$-exact forms. This quotient of all smooth real $(1,1)$-forms contains nonclosed classes; the usual Bott--Chern cohomology group is the corresponding quotient of closed forms.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:convexity}\index{Plurisubharmonic function!convex combinations}
@@ -109,15 +111,15 @@ If $u\in\PSH(X,\theta)$ and $v\in\PSH(X,\eta)$, then, for $a,b\geq0$ with $a+b>0
 In particular, $\PSH(X,\theta)$ is convex. If $\eta\geq\theta$, then $\PSH(X,\theta)\subseteq\PSH(X,\eta)$.
 \end{proposition}
 \begin{proof}
-Sums with nonnegative coefficients preserve quasi-plurisubharmonicity, with zero-coefficient terms omitted. The curvature identity is
+Omitting a term whose coefficient is zero, we see that $au+bv$ is quasi-plurisubharmonic. Moreover,
 \[
  a\theta+b\eta+\ddc(au+bv)
  =a(\theta+\ddc u)+b(\eta+\ddc v)\geq0.
 \]
-For the inclusion, add the positive smooth form $\eta-\theta$ to $\theta+\ddc u$.
+For the inclusion, add the semipositive smooth form $\eta-\theta$ to $\theta+\ddc u$.
 \end{proof}
 
-By \cref{prop:local-correction}, any two quasi-plurisubharmonic functions belong to $\PSH(X,C\omega)$ for a common sufficiently large $C$. This lets us compare their singularities within one positive background.
+By \cref{prop:local-correction}, any two quasi-plurisubharmonic functions on $X$ belong to $\PSH(X,C\omega)$ for a common sufficiently large constant $C$. This allows us to compare their singularities within one positive background.
 
 \input{author/section_psh_maxima}
 \input{author/section_psh_compactness}
@@ -129,34 +131,34 @@ By \cref{prop:local-correction}, any two quasi-plurisubharmonic functions belong
 
 \section{Singularity type and multiplier ideals}\label{sec:psh-singularity-types}
 
-We compare quasi-plurisubharmonic functions on $X$ first by domination up to a constant, then through weighted local integrability of holomorphic functions. The first comparison gives ordinary singularity types; the second gives multiplier ideals. A logarithmic pole on a disc will show why the ideals at all positive weights enter the comparison.
+There are two natural ways to compare the singularities of quasi-plurisubharmonic functions on $X$. The first asks whether one function is bounded above by the other up to an additive constant; it leads to the ordinary singularity type. The second records only which holomorphic functions are locally square integrable against the weights $\mathrm{e}^{-ku}$, $k>0$; it leads to multiplier ideals. Domination implies the corresponding inclusion of multiplier ideals. A logarithmic pole on a disc shows that a single weight loses information, which is why the second comparison uses all positive weights.
 
 \begin{definition}\label{def:singularity-order}\index{Singularity type!ordinary}\index{Singularity order}
-For quasi-plurisubharmonic functions $u,v$, write $u\preceq v$ if $u\leq v+C$ for some $C\in\R$. Write $u\sim v$ if $u\preceq v$ and $v\preceq u$.
+Let $u,v$ be quasi-plurisubharmonic functions on $X$. We write $u\preceq v$ if there is a constant $C\in\R$ such that $u\leq v+C$ on $X$, and $u\sim v$ if both $u\preceq v$ and $v\preceq u$; in the latter case $u$ and $v$ have the same \emph{singularity type}. When this has to be distinguished from the multiplier-ideal type introduced below, we speak of the \emph{ordinary singularity type}, or simply the \emph{ordinary type}.
 \end{definition}
 
-The convention $u\preceq v$ means that $u$ is at least as singular as $v$. In particular, a logarithmic pole lies below a bounded potential in this order.
+Thus $u\preceq v$ means that $u$ is at least as singular as $v$. For instance, a quasi-plurisubharmonic function with a logarithmic pole lies below every bounded potential in this order, but not conversely.
 
 \begin{proposition}\label{prop:singularity-elementary}
-The relation $\preceq$ is a preorder, and $\sim$ is an equivalence relation. Adding a bounded smooth function preserves the equivalence class. In particular, all smooth functions on $X$ have the same singularity type.
+The relation $\preceq$ is a preorder, and $\sim$ is an equivalence relation. If $u$ is quasi-plurisubharmonic and $f$ is a smooth function on $X$, then $u+f\sim u$. In particular, all smooth functions on $X$ have the same singularity type.
 \end{proposition}
 \begin{proof}
-Reflexivity follows with $C=0$. If $u\leq v+C$ and $v\leq w+D$, then $u\leq w+C+D$, proving transitivity. The usual equivalence relation associated to a preorder gives $\sim$. If $|f|\leq A$, then $u-A\leq u+f\leq u+A$. Finally, every smooth function on compact $X$ is bounded.
+Reflexivity follows with $C=0$. If $u\leq v+C$ and $v\leq w+D$, then $u\leq w+C+D$, which proves transitivity. As for every preorder, comparison in both directions defines an equivalence relation. Since $X$ is compact, a smooth function $f$ satisfies $|f|\leq A$ for some constant $A$, and then $u-A\leq u+f\leq u+A$. Taking $u=0$ shows that every smooth function has the singularity type of the constants.
 \end{proof}
 
-A quasi-plurisubharmonic function has \emph{small unbounded locus} if it is locally bounded outside a closed complete pluripolar set.\index{Small unbounded locus}
+Some later results require the singularities of a potential to be concentrated on a small closed set. A closed subset $A\subseteq X$ is \emph{complete pluripolar} if every point of $X$ has a neighborhood $U$ with a plurisubharmonic function $p$ on $U$ such that $A\cap U=\{p=-\infty\}$. A quasi-plurisubharmonic function has \emph{small unbounded locus} if it is locally bounded outside a closed complete pluripolar set.\index{Small unbounded locus}
 
 \begin{definition}\label{def:multiplier-ideal}\index{Singularity type!multiplier ideal}\index{Multiplier ideal!definition}
-Let $\mathcal O_X$ denote the sheaf of holomorphic functions. For a quasi-plurisubharmonic function $u$ on $X$, the multiplier ideal $\mathcal I(u)\subseteq\mathcal O_X$ is the sheaf whose local sections are holomorphic functions $g$ for which $|g|^2\mathrm{e}^{-u}$ is locally integrable against a smooth positive volume form.
+Let $\mathcal O_X$ denote the sheaf of holomorphic functions on $X$. For a quasi-plurisubharmonic function $u$ on $X$, the \emph{multiplier ideal} $\mathcal I(u)\subseteq\mathcal O_X$ is the ideal sheaf whose sections over an open set $U$ are the holomorphic functions $g$ on $U$ for which $|g|^2\mathrm{e}^{-u}$ is locally integrable on $U$ with respect to a smooth positive volume form. Its stalk at $x$ is denoted by $\mathcal I(u)_x$.
 \end{definition}
 
-Changing the volume form does not change local integrability: on relatively compact coordinate neighborhoods, the ratio of two smooth positive volume forms is bounded above and below by positive constants. This definition thus requires no chosen Hermitian metric.
+Changing the volume form does not change local integrability: on relatively compact coordinate neighborhoods, the ratio of two smooth positive volume forms is bounded above and below by positive constants. In particular, the definition does not involve a choice of Hermitian metric, and it applies verbatim to quasi-plurisubharmonic functions on any complex manifold.
 
 \begin{proposition}\label{prop:ideal-order}
 If $u\preceq v$, then $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$. If $u\sim v$, then these ideals agree for every $k>0$.
 \end{proposition}
 \begin{proof}
-Let $g$ be a local holomorphic function on $X$. An inequality $u\leq v+C$ implies $\mathrm{e}^{-kv}\leq \mathrm{e}^{kC}\mathrm{e}^{-ku}$. Multiplying by $|g|^2$ shows that local integrability for $ku$ implies local integrability for $kv$. Apply the same argument in both directions when $u\sim v$.
+Let $g$ be a local holomorphic function on $X$. If $u\leq v+C$, then $\mathrm{e}^{-kv}\leq \mathrm{e}^{kC}\mathrm{e}^{-ku}$. Multiplying by $|g|^2$ shows that local integrability of $|g|^2\mathrm{e}^{-ku}$ implies local integrability of $|g|^2\mathrm{e}^{-kv}$. If $u\sim v$, the same argument applies in both directions.
 \end{proof}
 
 \begin{example}\label{ex:ideal-disc}\index{Multiplier ideal!logarithmic pole}
@@ -165,17 +167,17 @@ On a disc in $\mathbb C$ centered at the origin, with coordinate $z$, let $\lamb
  \mathcal I(u)_0=(z^{\lfloor\lambda\rfloor}).
 \]
 \Needspace{8\baselineskip}
-Indeed, if a nonzero holomorphic germ has order $m$, its squared modulus is comparable to $|z|^{2m}$ near the origin. For a sufficiently small radius $\epsilon>0$, its weighted integral is finite precisely when
+Indeed, if a nonzero holomorphic germ has order $m$ at the origin, its squared modulus is comparable to $|z|^{2m}$ near the origin. In polar coordinates, its weighted integral over a disc of sufficiently small radius $\epsilon>0$ is finite precisely when
 \[
  \int_0^\epsilon r^{2m-2\lambda+1}\,\mathrm{d}r<\infty,
  \qquad\text{equivalently}\qquad m>\lambda-1.
 \]
-The smallest nonnegative integer satisfying this strict inequality is $\lfloor\lambda\rfloor$. At an integer value of $\lambda$, the excluded borderline exponent is $-1$, so the strictness of the integrability condition matters.
+The smallest nonnegative integer satisfying this strict inequality is $\lfloor\lambda\rfloor$. When $\lambda$ is an integer, the borderline exponent $-1$ occurs for $m=\lambda-1$ and gives a divergent integral; this is where the strictness of the inequality matters.
 \end{example}
 
-The example also explains why one multiplier ideal is insufficient to compare singularities: different coefficients $\lambda$ can have the same integer part. For a real weight $k>0$, applying the calculation to $ku$ gives $\mathcal I(ku)_0=(z^{\lfloor k\lambda\rfloor})$. The ideals at all $k>0$ recover $\lambda$, since for real coefficients $0\leq\lambda<\mu$ the two integer parts differ as soon as $k(\mu-\lambda)>1$.
+The example also shows that a single multiplier ideal does not determine the singularity: different coefficients $\lambda$ can have the same integer part. For a real weight $k>0$, the same calculation applied to $ku$ gives $\mathcal I(ku)_0=(z^{\lfloor k\lambda\rfloor})$. The ideals at all weights $k>0$ recover $\lambda$: if $0\leq\lambda<\mu$, the integer parts of $k\lambda$ and $k\mu$ differ as soon as $k(\mu-\lambda)>1$.
 
-Write $u\preceq_{\mathcal I}v$ if $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$, and $u\sim_{\mathcal I}v$ if equality holds at all these weights. Both definitions make sense on any complex manifold; their relation to envelopes and global masses requires further arguments.
+We therefore compare multiplier ideals at all positive weights. For quasi-plurisubharmonic functions $u,v$, we write $u\preceq_{\mathcal I}v$ if $\mathcal I(ku)\subseteq\mathcal I(kv)$ for every real $k>0$, and $u\sim_{\mathcal I}v$ if $\mathcal I(ku)=\mathcal I(kv)$ for every real $k>0$.\index{Multiplier ideal!ideal order and ideal type} We call $\preceq_{\mathcal I}$ the \emph{ideal order}; if $u\sim_{\mathcal I}v$, then $u$ and $v$ have the same \emph{multiplier-ideal type}, or \emph{ideal type}. By \cref{prop:ideal-order}, $u\preceq v$ implies $u\preceq_{\mathcal I}v$, and $u\sim v$ implies $u\sim_{\mathcal I}v$. These relations make sense on any complex manifold. Their relation to envelopes and to global masses requires further arguments; see \cref{chap:hermitian-igood}.
 
 \input{author/section_psh_analytic_regularization}
 \input{author/section_psh_local_ideals}
@@ -191,19 +193,19 @@ Write $u\preceq_{\mathcal I}v$ if $\mathcal I(ku)\subseteq\mathcal I(kv)$ for ev
 
 \section{Curvature of line bundles}
 
-Let $M$ be a complex manifold and let $\theta$ be a smooth real $(1,1)$-form on $M$. To connect potentials with holomorphic sections, we ask when a current $\theta+\ddc u$, with $u$ locally integrable, can be the curvature of a line-bundle metric. The transition law for its local weights forces a closedness condition on the background.
+Let $M$ be a complex manifold and let $\theta$ be a smooth real $(1,1)$-form on $M$. To relate potentials to holomorphic sections, we ask when a current $\theta+\ddc u$, with $u$ locally integrable, can be the curvature current of a metric on a line bundle. The transition law for the local weights of such a metric forces a closedness condition on the background.
 
 \begin{proposition}\label{prop:chern-closed}\index{Line bundle!curvature}
-The curvature current of a singular Hermitian metric with locally integrable weights on a holomorphic line bundle is closed. In particular, a non-closed form $\theta$ cannot itself be the curvature of such a metric, nor can $\theta+\ddc u$ be closed at a point where $\mathrm{d}\theta\neq0$.
+The curvature current of a singular Hermitian metric with locally integrable weights on a holomorphic line bundle is closed. In particular, a nonclosed form $\theta$ cannot itself be the curvature current of such a metric, and $\theta+\ddc u$ is not closed on any neighborhood of a point where $\mathrm{d}\theta\neq0$.
 \end{proposition}
 \begin{proof}
-Let $h$ be the singular Hermitian metric on the holomorphic line bundle $L\to M$ in the statement. Choose a local holomorphic frame $e$ of $L$ and write its squared norm as $|e|_h^2=\mathrm{e}^{-\varphi}$. The curvature current is locally $\ddc\varphi$. If $e'=ge$ is another frame, with $g$ holomorphic and nowhere zero, the new weight is $\varphi-\log|g|^2$. Since $\log|g|^2$ is pluriharmonic, these local currents glue. Each is closed because $\mathrm{d}\ddc=0$. The final assertion follows from
+Let $h$ be a singular Hermitian metric on a holomorphic line bundle $L\to M$. Choose a local holomorphic frame $e$ of $L$ and write its squared norm as $|e|_h^2=\mathrm{e}^{-\varphi}$; the curvature current is then locally $\ddc\varphi$. If $e'=ge$ is another frame, with $g$ holomorphic and nowhere zero, the new weight is $\varphi-\log|g|^2$. Since $\log|g|^2$ is pluriharmonic, these local currents agree on overlaps and glue to a global current, which is closed because $\mathrm{d}\ddc=0$. The final assertion follows from the identity
 \[
  \mathrm{d}(\theta+\ddc u)=\mathrm{d}\theta
 \]
-in the sense of currents.
+of currents.
 \end{proof}
 
-When studying sections with multiplier-ideal conditions, we shall therefore specify both the line bundle with its closed curvature and any auxiliary Hermitian form on $M$. An algebraic interpretation then requires an argument relating the line bundle's invariants to that analytic background.
+Accordingly, when we study sections subject to multiplier-ideal conditions, we specify both the line bundle, whose curvature is closed, and any auxiliary Hermitian form on $M$. An algebraic interpretation then requires relating the invariants of the line bundle to this analytic background.
 
 \input{author/section_psh_polar_invariance}

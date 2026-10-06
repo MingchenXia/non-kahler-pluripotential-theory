@@ -1,12 +1,21 @@
 \section{Lower mass and solvability for all measures}
 \label{sec:lower-mass-solvability}
 
-For a Hermitian background $h$, solvability for every finite non-pluripolar measure is equivalent to positive lower mass. When $v_-(h)=0$, smooth densities with rapidly decreasing normalizers can be summed to produce a density admitting no positive scaled subsolution. Strict domination supplies the bound that makes this construction work. In the remaining sections, $h$ denotes a Hermitian form on $X$.
+Throughout the rest of the chapter, $h$ denotes a Hermitian form on $X$, used as the background; the sections that use another background say so explicitly. Densities, $L^p$ norms and ``almost everywhere'' refer to the fixed smooth positive probability volume form $\mathrm{d}V$. No singularity type is prescribed: the unknown potentials range over all of $\PSH(X,h)$. Constants belong to $\PSH(X,h)$, and every $u\in\PSH(X,h)$ is bounded above, so $u\preceq v$ for every bounded $v\in\PSH(X,h)$.
 
-For nonzero $0\leq q\in L^p(\mathrm{d}V)$ with $p>1$, let $c_h(q)>0$ be the scalar in its continuous equation, supplied by \cref{thm:kn-continuous,prop:vanishing-exponent}. For the measure $\nu=q\,\mathrm{d}V$ we also write $c_h(\nu)=c_h(q)$.
+The masses of bounded potentials are measured by the lower and upper masses of \cref{def:bmp},
+\[
+ v_-(h)=\inf_v\int_X(h+\ddc v)^n,\qquad
+ v_+(h)=\sup_v\int_X(h+\ddc v)^n,
+\]
+where $v$ ranges over the bounded functions in $\PSH(X,h)$. The form $h$ has \emph{positive lower mass} if $v_-(h)>0$. If $h$ is K\"ahler, Stokes' theorem gives $v_-(h)=v_+(h)=\int_Xh^n$; on a non-K\"ahler manifold the lower mass can vanish (\cref{thm:vanishing-lower-mass}).
+
+For a nonzero nonnegative $q\in L^p(\mathrm{d}V)$ with $p>1$, \cref{thm:kn-continuous} gives a constant $c>0$ and a continuous $u\in\PSH(X,h)$ with $\mathrm{MA}_h(u)=cq\,\mathrm{d}V$, and \cref{prop:vanishing-exponent} shows that $c$ is determined by $q$. We call $c_h(q)=c$ the \emph{normalization scalar}\index{Normalization scalar!definition} of $q$, and for the measure $\nu=q\,\mathrm{d}V$ we also write $c_h(\nu)=c_h(q)$. We say that a finite measure $\nu$ admits a \emph{positive scaled subsolution} if there are $u\in\PSH(X,h)$ and a constant $a>0$ such that $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\nu$.
+
+A solution of $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\nu$ with $c>0$ is in particular a positive scaled subsolution. We show that every nonzero finite non-pluripolar measure admits such a solution if and only if $h$ has positive lower mass. The key estimate is a consequence of strict domination: the coefficient $a$ of any subsolution of $q\,\mathrm{d}V$ is at most $c_h(q)$. When $v_-(h)=0$, there are smooth probability densities with arbitrarily small normalization scalars, and a weighted sum of such densities, with scalars decreasing fast enough, is a single probability density admitting no positive scaled subsolution.
 
 \begin{lemma}\label{lem:bounded-normalizer-subsolution}\label{lem:smooth-normalizer-subsolution-bound}
-If $u\in\PSH(X,h)$ and $a>0$ satisfy
+Let $0\leq q\in L^p(\mathrm{d}V)$, $p>1$, be nonzero. If $u\in\PSH(X,h)$ and $a>0$ satisfy
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(u)\geq aq\,\mathrm{d}V,
 \]
@@ -17,32 +26,41 @@ then $a\leq c_h(q)$. Consequently, for nonzero nonnegative bounded densities $q,
 \]
 \end{lemma}
 \begin{proof}
-Let $v$ be a continuous solution for $q$. If $a>c_h(q)$, put $\tau=c_h(q)/a<1$. Every translate $v+A$ admits a genuine envelope in background $h/2$, and $u\preceq v+A$. The inequality
+Let $v$ be a continuous solution of $\mathrm{MA}_h(v)=c_h(q)q\,\mathrm{d}V$, and suppose, to reach a contradiction, that $a>c_h(q)$. Then $\tau=c_h(q)/a<1$ and, for every real $A$,
 \[
  \mathrm{MA}_h(v+A)=c_h(q)q\,\mathrm{d}V
-       \leq\tau\,\mathrm{MA}^{\mathrm{ext}}_h(u)
+       \leq\tau\,\mathrm{MA}^{\mathrm{ext}}_h(u).
 \]
-and \cref{thm:singular-strict-domination} give $v+A\geq u$ for every real $A$. Letting $A\to-\infty$ at a point where $u$ is finite is a contradiction.
+The translate $v+A$ is bounded, so $P_{h/2}(v+A)\geq\inf_Xv+A$ is not identically $-\infty$, and $u\preceq v+A$. \Cref{thm:singular-strict-domination}, with $\delta=1/2$ and $c=\tau$, therefore gives $v+A\geq u$ for every real $A$. Letting $A\to-\infty$ at a point where $u$ is finite gives a contradiction. Hence $a\leq c_h(q)$.
 
-If $q\leq r$, a continuous solution for $r$ is a subsolution for $c_h(r)q\,\mathrm{d}V$, giving the order inequality. Scalar uniqueness gives the homogeneity. The comparison used only boundedness of $v$, so its first conclusion also holds for any nonnegative density that has a bounded solution with scalar $c_h(q)$.
+If $q\leq r$, a continuous solution of $\mathrm{MA}_h(w)=c_h(r)r\,\mathrm{d}V$ satisfies $\mathrm{MA}_h(w)\geq c_h(r)q\,\mathrm{d}V$, so the first assertion gives $c_h(r)\leq c_h(q)$. Finally, the equation $\mathrm{MA}_h(v)=c_h(q)q\,\mathrm{d}V$ can be written as $\mathrm{MA}_h(v)=t^{-1}c_h(q)\,(tq)\,\mathrm{d}V$, and uniqueness of the scalar gives $c_h(tq)=t^{-1}c_h(q)$.
 \end{proof}
+
+The proof uses only that $v$ is bounded. Hence, more generally, if a nonnegative density $g$ satisfies $\mathrm{MA}_h(v)=c\,g\,\mathrm{d}V$ for some bounded $v\in\PSH(X,h)$ and some $c>0$, then every $u\in\PSH(X,h)$ and $a>0$ with $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq ag\,\mathrm{d}V$ satisfy $a\leq c$.
 
 \begin{lemma}\label{lem:lp-normalizer-continuity}
 Fix $p>1$. If nonzero nonnegative densities $q_j,q\in L^p(\mathrm{d}V)$ satisfy $q_j\to q$ in $L^p$, then $c_h(q_j)\to c_h(q)$.
 \end{lemma}
 \begin{proof}
-The Gauduchon trace inequality bounds $c_h(q_j)$ above, since $q_j^{1/n}\to q^{1/n}$ in $L^n$ and every fixed positive trace test has a positive integral at $q$. The lower-density estimate of \cref{thm:lp-potential-estimate} bounds the scalars away from zero. Normalized continuous solutions consequently have uniformly bounded $L^p$ densities. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence on which the potentials converge uniformly and the scalars converge to some $c>0$. Bounded product continuity identifies the limit equation as $\mathrm{MA}_h(u)=cq\,\mathrm{d}V$. Scalar uniqueness gives $c=c_h(q)$, proving convergence of the original sequence.
+We first show that the scalars $c_h(q_j)$ lie in a compact subset of $(0,+\infty)$. Fix a Gauduchon metric $\gamma$ on $X$ (\cref{def:gauduchon-metric}; in dimension one, any Hermitian metric). Pairing the equation for $q_j$ with $\gamma^{n-1}$, as in \cref{prop:big-singular-gauduchon-trace} with $\theta=h$ and barrier $\rho=0$, gives
+\[
+ c_h(q_j)^{1/n}\int_X\left(\frac{q_j\,\mathrm{d}V}{\gamma^n}\right)^{1/n}\gamma^n
+ \leq\int_Xh\wedge\gamma^{n-1}.
+\]
+Since $q_j^{1/n}\to q^{1/n}$ in $L^n$, the integrals on the left converge to the corresponding integral for $q$, which is positive. Hence the scalars are bounded above. The lower-density estimate of \cref{thm:lp-potential-estimate} gives $c_h(q_j)\|q_j\|_{L^p}\geq c_p>0$, so they are also bounded away from zero.
+
+Consequently, the normalized continuous solutions $u_j$ of $\mathrm{MA}_h(u_j)=c_h(q_j)q_j\,\mathrm{d}V$ have uniformly bounded $L^p$ densities. By \cref{thm:lp-uniform-compactness}, every subsequence has a further subsequence along which $u_j$ converges uniformly to some $u$ and $c_h(q_j)$ converges to some $c>0$. Continuity of bounded Monge--Amp\`ere products under uniform convergence gives $\mathrm{MA}_h(u)=cq\,\mathrm{d}V$, and uniqueness of the scalar gives $c=c_h(q)$. Since every subsequence of $(c_h(q_j))$ has a further subsequence converging to $c_h(q)$, the whole sequence converges to $c_h(q)$.
 \end{proof}
 
 \begin{theorem}\label{thm:lower-mass-obstructing-measure}\index{Non-pluripolar measure!solvability obstruction}
-Suppose $v_-(h)=0$. There is a probability measure $\mu=f\,\mathrm{d}V$ with $f\in L^1(\mathrm{d}V)$ and $f\geq m>0$ almost everywhere such that no $u\in\PSH(X,h)$ and $a>0$ satisfy
+Suppose $v_-(h)=0$. There is a probability measure $\mu=f\,\mathrm{d}V$, with $f\in L^1(\mathrm{d}V)$ and $f\geq m$ almost everywhere for a constant $m>0$, such that no $u\in\PSH(X,h)$ and $a>0$ satisfy
 \begin{equation}\label{eq:lower-mass-impossible-subsolution}
  \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a\mu.
 \end{equation}
-In particular, the equation $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$ has no solution for any $c>0$, even without a prescribed singularity type or a finite-mass requirement on the candidate potential.
+In particular, the equation $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$ has no solution $u\in\PSH(X,h)$ for any $c>0$; neither a singularity type nor finiteness of the mass of $u$ is imposed.
 \end{theorem}
 \begin{proof}
-By \cref{thm:gaud-volume-mass-extrema}, there are smooth strictly positive probability measures $\nu_j=f_j\,\mathrm{d}V$ such that
+By \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula}, $v_-(h)$ is the infimum of the normalization scalars $c_h(\nu)$ over smooth strictly positive probability measures $\nu$. Since $v_-(h)=0$, we can choose such measures $\nu_j=f_j\,\mathrm{d}V$ with
 \[
  c_h(\nu_j)\leq 2^{-2j}\qquad(j\geq1).
 \]
@@ -51,42 +69,44 @@ Set
  \mu=\sum_{j=1}^{\infty}2^{-j}\nu_j,
  \qquad f=\sum_{j=1}^{\infty}2^{-j}f_j.
 \]
-Monotone convergence gives $\int_Xf\,\mathrm{d}V=1$, so $f\in L^1$. Also $f\geq\tfrac12\min_X f_1=:m>0$ almost everywhere. Absolute continuity with respect to smooth volume makes $\mu$ non-pluripolar.
+By monotone convergence, $\int_Xf\,\mathrm{d}V=1$, so $f\in L^1$. Moreover $f\geq\tfrac12\min_X f_1=:m>0$, and $\mu$ is non-pluripolar, being absolutely continuous with respect to $\mathrm{d}V$.
 
-If \eqref{eq:lower-mass-impossible-subsolution} held, then for every $j$
+Suppose that \eqref{eq:lower-mass-impossible-subsolution} held for some $u$ and $a>0$. Since $\mu\geq2^{-j}\nu_j$, we would have
 \[
- \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a2^{-j}\nu_j.
+ \mathrm{MA}^{\mathrm{ext}}_h(u)\geq a2^{-j}\nu_j
 \]
-\Cref{lem:bounded-normalizer-subsolution} would imply $a2^{-j}\leq c_h(\nu_j)\leq2^{-2j}$. Thus $a\leq2^{-j}$ for all $j$, contradicting $a>0$.
+for every $j$, and \cref{lem:bounded-normalizer-subsolution} would give $a2^{-j}\leq c_h(\nu_j)\leq2^{-2j}$. Thus $a\leq2^{-j}$ for every $j$, contradicting $a>0$.
 \end{proof}
+
+For the reference $0$, \cref{def:relative-envelope-class} says that $u\in\PSH(X,h)$ belongs to the relative envelope class $\mathcal E_{\mathrm{env}}(X,h,0)$ if, for every $b\geq1$, some $g\in\PSH(X,h)$ satisfies $g\leq bu$.
 
 \begin{corollary}\label{cor:positive-lower-mass-solvability}
 The following conditions are equivalent:
 \begin{enumerate}
 \item $v_-(h)>0$.
-\item Every nonzero finite positive non-pluripolar measure $\mu$ admits $c>0$ and $u\in\mathcal E_{\mathrm{env}}(X,h,0)$ such that
+\item For every nonzero finite non-pluripolar measure $\mu$ there are $c>0$ and $u\in\mathcal E_{\mathrm{env}}(X,h,0)$ such that
 $\mathrm{MA}^{\mathrm{ext}}_h(u)=c\mu$.
 \item For every probability density $f\in L^1(\mathrm{d}V)$ bounded below by a positive constant, there are $u\in\PSH(X,h)$ and $a>0$ such that
 $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$.
 \end{enumerate}
 \end{corollary}
 \begin{proof}
-For the reference zero, $P_h[0]=0$ and $P_{\varepsilon h}(0)=0$ for every $0<\varepsilon<1$. The form $h$ is semipositive and big. Thus (1) implies (2) by \cref{thm:als-general-measure}. Condition (2) implies (3), since an absolutely continuous measure is non-pluripolar. The preceding theorem proves the contrapositive of (3) implies (1).
+The Hermitian form $h$ is semipositive and big, and the reference $0$ satisfies \eqref{eq:als-model-condition}, since $P_h[0]=0$ and $P_{\varepsilon h}(0)=0$ for every $0<\varepsilon<1$. Hence, if $v_-(h)>0$, \cref{thm:als-general-measure}, applied with $\theta=h$ and $\varphi=0$, gives (2). Condition (2) implies (3), because a finite measure that is absolutely continuous with respect to $\mathrm{d}V$ is non-pluripolar. Finally, if $v_-(h)=0$, the density of \cref{thm:lower-mass-obstructing-measure} violates (3); thus (3) implies (1).
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:lower-mass-lone-instability}
-Assume $v_-(h)=0$, and let $\mu=f\,\mathrm{d}V$ be the measure constructed above. Then $f\notin L^p(\mathrm{d}V)$ for every $p>1$. Moreover, for every nonnegative probability density $g\in L^1(\mathrm{d}V)$ and every $0<t<1$, the probability density
+Assume $v_-(h)=0$, and let $\mu=f\,\mathrm{d}V$ be the measure of \cref{thm:lower-mass-obstructing-measure}. Then $f\notin L^p(\mathrm{d}V)$ for every $p>1$. Moreover, for every probability density $g\in L^1(\mathrm{d}V)$ and every $0<t<1$, the probability density
 \[
  g_t=(1-t)g+tf
 \]
-admits no positive scaled subsolution as in \eqref{eq:lower-mass-impossible-subsolution}. Nevertheless $\|g_t-g\|_{L^1}\leq2t$. In particular, densities with this obstruction are dense among probability densities in $L^1$.
+admits no positive scaled subsolution, although $\|g_t-g\|_{L^1}\leq2t$. In particular, the probability densities admitting no positive scaled subsolution are dense among all probability densities in $L^1(\mathrm{d}V)$.
 \end{corollary}
 \begin{proof}
-If $f\in L^p$ for some $p>1$, \cref{thm:kn-continuous} would give a continuous solution of $\mathrm{MA}_h(u)=cf\,\mathrm{d}V$ with $c>0$, contradicting the theorem. Since $g_t\,\mathrm{d}V\geq t\mu$, a positive scaled subsolution for $g_t\,\mathrm{d}V$ would give one for $\mu$. Finally
-$\|g_t-g\|_1=t\|f-g\|_1\leq2t$.
+If $f\in L^p$ for some $p>1$, \cref{thm:kn-continuous} would give a continuous solution of $\mathrm{MA}_h(u)=cf\,\mathrm{d}V$ with $c>0$, contradicting the theorem. Since $g_t\,\mathrm{d}V\geq t\mu$, a positive scaled subsolution for $g_t\,\mathrm{d}V$ would also give one for $\mu$. Finally,
+$\|g_t-g\|_{L^1}=t\|f-g\|_{L^1}\leq2t$.
 \end{proof}
 
-Smooth strictly positive probability densities are also dense in $L^1$ and always admit a smooth normalized solution. Thus ordinary $L^1$ approximation alone cannot preserve solvability when the lower mass vanishes. The obstruction concerns the concentration of the density; it occurs even when that density is bounded below by a positive constant. It is realized on the compact threefold of \cref{thm:vanishing-lower-mass}.
+Smooth strictly positive probability densities are also dense in $L^1(\mathrm{d}V)$, and each of them admits a smooth solution of the normalized equation. Thus, when the lower mass vanishes, solvability is not preserved under $L^1$ approximation. The obstruction comes from the way the density concentrates, not from its size: the density in \cref{thm:lower-mass-obstructing-measure} is bounded below by a positive constant. It occurs, for instance, on the compact threefold of \cref{thm:vanishing-lower-mass}, where every Hermitian form has zero lower mass.
 
-This argument does not exclude unbounded solutions of the exponential equation. If $\mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}\mu$ with $\lambda>0$, the factor $\mathrm{e}^{\lambda u}$ need not have a positive lower bound. It does exclude bounded solutions for the measure above. On a split product, \cref{thm:zero-threshold-solvable-concentration} chooses the concentration components so that one zero-threshold density admits a genuine exponential solution for every positive exponent. Solvability for an arbitrary previously prescribed concentration density, and the classification of individual measures admitting a normalized equation when $v_-(h)=0$, remain distinct questions.
+The theorem does not exclude unbounded solutions of the exponential equation $\mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}\mu$ with $\lambda>0$, because the factor $\mathrm{e}^{\lambda u}$ need not have a positive lower bound. It does exclude bounded solutions, since a bounded solution would satisfy $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq\mathrm{e}^{\lambda\inf_Xu}\mu$. On suitable products, \cref{thm:zero-threshold-solvable-concentration} chooses the concentrating components of such a density so that its exponential equation has a solution for every positive exponent. We do not know whether this holds for every density admitting no positive scaled subsolution, nor which individual measures admit a solution of the normalized equation when $v_-(h)=0$.

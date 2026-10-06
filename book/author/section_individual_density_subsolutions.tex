@@ -2,98 +2,101 @@
 \section{Subsolutions for an individual density}
 \label{sec:individual-density-subsolutions}
 
-For one fixed density, the normalizers of its bounded truncations give an exact test for the existence of a positive scaled subsolution. A cluster limit attains the threshold because density lower bounds survive $L^1$ convergence of potentials through upper envelopes.
+When $v_-(h)=0$, some densities admit no positive scaled subsolution. For one fixed density $f$, we now determine the largest coefficient $a$ for which $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ has a solution. The bounded truncations of $f$ have normalization scalars, and their limit is the answer. This limit is attained: the normalized continuous solutions for the truncations have an $L^1$ cluster limit, and a lower bound for Monge--Amp\`ere densities passes to $L^1$ limits of potentials by means of monotone upper envelopes.
 
-Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral, and put
+Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral. Its truncations are bounded and nonzero, and we put
 \begin{equation}\label{eq:individual-truncated-normalizer}
  f_k=\min(f,k),\qquad
  b_h(f)=\lim_{k\to\infty}c_h(f_k).
 \end{equation}
-The limit exists in $[0,+\infty)$ because the constants decrease and $c_h(f_1)$ is finite. The order lemma also gives
+By \cref{lem:bounded-normalizer-subsolution}, the scalars $c_h(f_k)$ decrease as $k$ increases, so the limit exists in $[0,c_h(f_1)]$. We call $b_h(f)$ the \emph{subsolution threshold}\index{Subsolution threshold} of $f$; \cref{thm:individual-density-subsolution} below justifies the name. The same lemma gives
 \begin{equation}\label{eq:individual-bounded-tests}
  b_h(f)=\inf\{c_h(q):0\leq q\leq f,\ q\in L^\infty,
                                       \ \textstyle\int_Xq\,\mathrm{d}V>0\}.
 \end{equation}
-In fact every such $q$ is bounded above by $f_k$ for sufficiently large $k$, and the $f_k$ themselves are admissible tests.
+Indeed, every such $q$ satisfies $q\leq f_k$ for $k\geq\|q\|_{L^\infty}$, hence $c_h(q)\geq c_h(f_k)\geq b_h(f)$, while the truncations $f_k$ are themselves admissible.
 
-A lower bound for a Monge--Amp\`ere density survives $L^1$ convergence of potentials. This uses upper envelopes and damped continuity, rather than continuity of the original Monge--Amp\`ere measures.
+The Monge--Amp\`ere operator is not continuous under $L^1$ convergence of potentials, but a lower bound for a Monge--Amp\`ere density survives such convergence. The proof replaces the sequence by monotone upper envelopes, which converge in capacity, and uses the continuity of damped measures, \cref{thm:damped-continuity}, applied with the Hermitian form $h$ and the weight $t\mapsto\mathrm{e}^{-t}$. For nonpositive $v\in\PSH(X,h)$, the corresponding damped measure is $\mathrm{e}^{v}\mathrm{MA}^{\mathrm{ext}}_h(v)$, with weight zero on the pole set; it has finite mass and depends weakly continuously on $v$ under convergence in capacity.
 
 \Needspace{8\baselineskip}
 \begin{lemma}\label{lem:density-subsolution-lone-closure}
-Let $s_j,s\in\PSH(X,h)$ have a common upper bound and satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
+Let $s_j,s\in\PSH(X,h)$ be bounded above by a common constant and satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
 \[
- \mathrm{MA}^{\mathrm{ext}}_h(s_j)\geq g_j\,\mathrm{d}V.
+ \mathrm{MA}^{\mathrm{ext}}_h(s_j)\geq g_j\,\mathrm{d}V
+ \quad\text{for every }j.
 \]
 Then $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq g\,\mathrm{d}V$.
 \end{lemma}
 \begin{proof}
-Translate the potentials to be nonpositive and extract a subsequence for which both convergences hold almost everywhere. Set
+Subtracting a common constant, which does not change the extended measures, we may assume that all potentials are nonpositive. Pass to a subsequence along which $s_j\to s$ and $g_j\to g$ almost everywhere, and set
 \[
  a_j=\inf_{\ell\geq j}g_\ell,\qquad
  w_j=\left(\sup_{\ell\geq j}s_\ell\right)^*.
 \]
-Then $0\leq a_j\uparrow g$ almost everywhere and $w_j\downarrow s$. For fixed $j$, the finite maxima $\max_{j\leq\ell\leq N}s_\ell$ have measures at least $a_j\,\mathrm{d}V$ by ordered contact. They increase to $w_j$ after regularization, with the genuine lower bound $s_j$ and upper bound zero. The convergence holds in capacity by \cref{lem:monotone-psh-capacity}. Damped continuity therefore gives
+Then $0\leq a_j\uparrow g$ almost everywhere, and $w_j\in\PSH(X,h)$ decreases to $s$.
+
+\emph{Step 1: $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.} Fix $j$. For $N\geq j$, the finite maximum $m_N=\max_{j\leq\ell\leq N}s_\ell$ satisfies $\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq a_j\,\mathrm{d}V$: on the set $\{m_N=s_\ell\}$, \cref{prop:ordered-contact-general} gives $\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq\mathrm{MA}^{\mathrm{ext}}_h(s_\ell)\geq g_\ell\,\mathrm{d}V\geq a_j\,\mathrm{d}V$, and these sets cover $X$. As $N\to\infty$, the functions $m_N$ increase, are bounded above by zero, and have regularized limit $w_j$. By \cref{lem:monotone-psh-capacity}, $m_N\to w_j$ in capacity, so the damped measures $\mathrm{e}^{m_N}\mathrm{MA}^{\mathrm{ext}}_h(m_N)$ converge weakly to $\mathrm{e}^{w_j}\mathrm{MA}^{\mathrm{ext}}_h(w_j)$. Since $m_N\to w_j$ almost everywhere and $a_j\leq g$, dominated convergence gives $\mathrm{e}^{m_N}a_j\to\mathrm{e}^{w_j}a_j$ in $L^1(\mathrm{d}V)$. Passing to the limit in $\mathrm{e}^{m_N}\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq\mathrm{e}^{m_N}a_j\,\mathrm{d}V$ gives
 \[
  \mathrm{e}^{w_j}\mathrm{MA}^{\mathrm{ext}}_h(w_j)
        \geq \mathrm{e}^{w_j}a_j\,\mathrm{d}V.
 \]
-Indeed the right sides for the finite maxima converge by dominated convergence, since $a_j\leq g$ almost everywhere. Divide by the positive weight off the pole set to obtain $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.
+The pole set of $w_j$ has zero volume and is not charged by $\mathrm{MA}^{\mathrm{ext}}_h(w_j)$. Dividing by the positive weight off this set gives $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.
 
-Now $w_j\downarrow s$ is again convergence in capacity with a genuine lower bound. Apply damped continuity once more. Since $0\leq\mathrm{e}^{w_j}a_j\leq g$, dominated convergence gives
+\emph{Step 2: passage to $s$.} Since $w_j$ decreases to $s\in\PSH(X,h)$, \cref{lem:monotone-psh-capacity} gives $w_j\to s$ in capacity, and the damped measures of $w_j$ converge weakly to $\mathrm{e}^s\mathrm{MA}^{\mathrm{ext}}_h(s)$. Moreover $0\leq\mathrm{e}^{w_j}a_j\leq g$ and $\mathrm{e}^{w_j}a_j\to\mathrm{e}^sg$ almost everywhere, so dominated convergence and Step 1 give
 \[
  \mathrm{e}^s\mathrm{MA}^{\mathrm{ext}}_h(s)
        \geq\mathrm{e}^s g\,\mathrm{d}V.
 \]
-Divide on $\{s>-N\}$ and let $N\to\infty$. Both sides of the desired inequality give zero mass to the pole set. Restore the common translation.
+Dividing by $\mathrm{e}^s$ on $\{s>-N\}$ and letting $N\to\infty$ gives $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq g\,\mathrm{d}V$ off the pole set of $s$. Both measures give zero mass to the pole set, which proves the lemma.
 \end{proof}
 
 \Needspace{9\baselineskip}
 \begin{theorem}\label{thm:individual-density-subsolution}\index{Subsolution!individual density threshold}
-For every such $f$,
+For every nonnegative $f\in L^1(\mathrm{d}V)$ with positive integral,
 \[
  b_h(f)=\max\{a\geq0:\text{there exists }u\in\PSH(X,h)
        \text{ with }\mathrm{MA}^{\mathrm{ext}}_h(u)
                          \geq af\,\mathrm{d}V\}.
 \]
-In particular, a positive scaled subsolution exists if and only if $b_h(f)>0$.
+In particular, $f\,\mathrm{d}V$ admits a positive scaled subsolution if and only if $b_h(f)>0$.
 \end{theorem}
 \begin{proof}
-If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then it dominates $af_k\,\mathrm{d}V$. \Cref{lem:bounded-normalizer-subsolution} gives $a\leq c_h(f_k)$ for every $k$, hence $a\leq b_h(f)$. If $b_h(f)=0$, the zero potential realizes the coefficient zero.
+If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then also $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af_k\,\mathrm{d}V$ for every $k$, and \cref{lem:bounded-normalizer-subsolution} gives $a\leq c_h(f_k)$. Letting $k\to\infty$ gives $a\leq b_h(f)$. If $b_h(f)=0$, the coefficient zero is attained by the zero potential.
 
 \Needspace{7\baselineskip}
-Suppose $b=b_h(f)>0$. Choose continuous normalized solutions
+Suppose now that $b=b_h(f)>0$, and let $u_k$ be continuous solutions of
 \[
  \mathrm{MA}_h(u_k)=c_h(f_k)f_k\,\mathrm{d}V,
  \qquad \sup_Xu_k=0.
 \]
-After extraction, $u_{k_j}\to u$ in $L^1$, where $u$ is a genuine normalized $h$-plurisubharmonic function. The densities $c_h(f_{k_j})f_{k_j}$ converge to $bf$ in $L^1$: they are dominated by $c_h(f_1)f$ and converge pointwise almost everywhere. \Cref{lem:density-subsolution-lone-closure} gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq bf\,\mathrm{d}V$, attaining the maximum.
+By \cref{thm:normalized-compactness}, a subsequence $u_{k_j}$ converges in $L^1$ to some $u\in\PSH(X,h)$ with $\sup_Xu=0$. The densities $c_h(f_{k_j})f_{k_j}$ are dominated by $c_h(f_1)f$ and converge to $bf$ almost everywhere, hence in $L^1$. \Cref{lem:density-subsolution-lone-closure} now gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq bf\,\mathrm{d}V$, so the maximum is attained at $a=b$.
 \end{proof}
 
-The argument preserves a density lower bound. It does not claim that the original normalized solutions converge in capacity, that their limit has finite mass, or that the limiting inequality is an equality. These are additional requirements in the individual equation problem. The definition is unchanged if truncation is replaced by any increasing sequence of nonzero bounded densities tending to $f$: necessity bounds its limiting constants below by $b_h(f)$, and the same upper-envelope construction bounds them above by $b_h(f)$.
+When $b_h(f)>0$, a function $u\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq b_h(f)f\,\mathrm{d}V$ is called a \emph{threshold subsolution}\index{Subsolution!threshold subsolution} for $f$; the theorem shows that threshold subsolutions exist. Its proof preserves only a lower bound for the density. It shows neither that the normalized solutions $u_k$ converge in capacity, nor that their limit has finite mass, nor that equality holds in the limit; these are the additional difficulties of the exact equation for an individual density. The threshold does not depend on the choice of truncations. If $(q_k)$ is any increasing sequence of nonzero bounded densities converging to $f$ almost everywhere, then $c_h(q_k)\geq b_h(f)$ by \eqref{eq:individual-bounded-tests}; conversely, the second half of the proof, applied to normalized solutions for $q_k$, gives a subsolution with coefficient $\lim_kc_h(q_k)$, which is therefore at most $b_h(f)$. Hence $\lim_kc_h(q_k)=b_h(f)$.
 
 \input{author/section_threshold_subsolution_envelope}
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:individual-normalizer-lp}
-If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)$ equals the normalization constant of the continuous equation for $f$. In general,
+Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral. If $f\in L^p(\mathrm{d}V)$ for some $p>1$, then $b_h(f)=c_h(f)$. In general,
 \[
  b_h(f)\geq\frac{v_-(h)}{\int_Xf\,\mathrm{d}V}.
 \]
-If $h$ is K\"ahler, then $b_h(f)=\int_Xh^n/\int_Xf\,\mathrm{d}V$ for every nonzero nonnegative $L^1$ density.
+If $h$ is K\"ahler, then $b_h(f)=\int_Xh^n/\int_Xf\,\mathrm{d}V$.
 \end{proposition}
 \begin{proof}
-Let $v$ be a continuous solution for $f\in L^p$, with scalar $c>0$. It is a subsolution for $cf\,\mathrm{d}V$, so the maximal-subsolution characterization gives $c\leq b_h(f)$. Conversely, the bounded-solution comparison in \cref{lem:bounded-normalizer-subsolution}, applied to the attained threshold subsolution and $v$, gives $b_h(f)\leq c$.
+Suppose that $f\in L^p$ with $p>1$, and let $v$ be a continuous solution of $\mathrm{MA}_h(v)=c_h(f)f\,\mathrm{d}V$. It is a subsolution with coefficient $c_h(f)$, so \cref{thm:individual-density-subsolution} gives $c_h(f)\leq b_h(f)$. Conversely, \cref{lem:bounded-normalizer-subsolution}, applied to a threshold subsolution, gives $b_h(f)\leq c_h(f)$.
 
-Each bounded solution has total mass at least $v_-(h)$, so $c_h(f_k)\int_Xf_k\,\mathrm{d}V\geq v_-(h)$. Take the limit. In the K\"ahler case, bounded Stokes instead gives the exact identity $c_h(f_k)\int_Xf_k\,\mathrm{d}V=\int_Xh^n$, which proves the last assertion.
+For general $f$, the continuous solution for $f_k$ has total mass $c_h(f_k)\int_Xf_k\,\mathrm{d}V$, which is at least $v_-(h)$ by the definition of the lower mass. Letting $k\to\infty$ and using monotone convergence gives the lower bound for $b_h(f)$. If $h$ is K\"ahler, Stokes' theorem for bounded potentials gives instead the identity $c_h(f_k)\int_Xf_k\,\mathrm{d}V=\int_Xh^n$, and the same limit proves the last assertion.
 \end{proof}
 
 \subsection{Smooth comparison tests}\label{subsec:individual-smooth-tests}
 
-Bounded measurable tests in \eqref{eq:individual-bounded-tests} detect concentrations that smooth tests can miss. To compare them, let $f$ be a probability density bounded below by a positive constant and define
+The infimum \eqref{eq:individual-bounded-tests} runs over bounded measurable densities below $f$. One may ask whether smooth densities suffice to compute the threshold. A smooth test $g$ is in general not below $f$, so we compare it with $f$ through the ratio $\|g/f\|_{L^\infty}$. Thus let $f$ be a probability density bounded below by a positive constant, and define
 \[
  C_h^{\mathrm{sm}}(f)=\inf_g c_h(g)\|g/f\|_{L^\infty},
 \]
-where $g$ ranges over smooth strictly positive probability densities. The subsolution bound gives $b_h(f)\leq C_h^{\mathrm{sm}}(f)$, with equality for smooth $f$. The next construction separates even their positivity when lower mass vanishes.
+where $g$ ranges over smooth strictly positive probability densities. For each such $g$, with $R=\|g/f\|_{L^\infty}$, a subsolution with coefficient $a$ for $f\,\mathrm{d}V$ is a subsolution with coefficient $a/R$ for $g\,\mathrm{d}V$, so $a\leq Rc_h(g)$ by \cref{lem:bounded-normalizer-subsolution}. Hence $b_h(f)\leq C_h^{\mathrm{sm}}(f)$, with equality if $f$ is smooth (take $g=f$). When the lower mass vanishes, the two quantities can differ even in their positivity.
 
 \Needspace{10\baselineskip}
 \begin{theorem}\label{thm:smooth-tests-insufficient}
@@ -101,23 +104,25 @@ If $v_-(h)=0$, there is a probability density $f\in L^1(\mathrm{d}V)$ bounded be
 \[
  b_h(f)=0<C_h^{\mathrm{sm}}(f).
 \]
-Thus no positive multiple of $f\,\mathrm{d}V$ is dominated by an extended Monge--Amp\`ere measure, although every smooth comparison test gives a common positive bound.
+Thus $f\,\mathrm{d}V$ admits no positive scaled subsolution, although $c_h(g)\|g/f\|_{L^\infty}$ is bounded below by a positive constant for all smooth strictly positive probability densities $g$.
 \end{theorem}
 \begin{proof}
-Let $(U_i)_{i\geq1}$ be a countable basis of nonempty open subsets of $X$. We construct numbers $\alpha_j>0$, bounded densities $q_j\not\equiv0$, and closed nowhere dense sets $K_j$ such that
+We construct $f=(1+Q)/M$, where $Q\geq0$ concentrates on closed nowhere dense sets in such a way that it has essential infimum zero on every nonempty open set.
+
+\emph{Step 1: the pieces.} Let $(U_i)_{i\geq1}$ be a countable basis of nonempty open subsets of $X$. We construct inductively numbers $\alpha_j>0$, nonzero bounded densities $q_j$, and closed nowhere dense sets $K_j\subset X$ such that
 \[
  \int_Xq_j\,\mathrm{d}V\leq1,\qquad
- \operatorname{supp}q_j\subset K_j,\qquad
+ q_j=0\text{ outside }K_j,\qquad
  c_h(q_j)\leq\alpha_j2^{-j}.
 \]
-Start with $\alpha_1=1/4$. Once $\alpha_j$ is chosen, the identity between lower mass and the infimum of smooth normalization constants gives a smooth strictly positive probability density $g_j$ with $c_h(g_j)<\alpha_j2^{-j}$. Choose a closed nowhere dense $K_j$ so that $q_j=g_j\mathbf1_{K_j}$ is sufficiently close to $g_j$ in $L^2$ for the displayed scalar bound to hold, using \cref{lem:lp-normalizer-continuity}. Such sets exist: remove an open dense set of arbitrarily small measure from $X$; boundedness of the fixed $g_j$ makes the $L^2$ error arbitrarily small. Choose it small enough also that $q_j$ is nonzero.
+Start with $\alpha_1=1/4$. Once $\alpha_j$ has been chosen, \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula} and $v_-(h)=0$ give a smooth strictly positive probability density $g_j$ with $c_h(g_j)<\alpha_j2^{-j}$. Removing from $X$ an open dense set of small volume, we obtain a closed nowhere dense set $K_j$ for which $q_j=g_j\mathbf1_{K_j}$ is nonzero and, since $g_j$ is bounded, arbitrarily close to $g_j$ in $L^2$. By \cref{lem:lp-normalizer-continuity} with $p=2$, we can therefore choose $K_j$ so that $c_h(q_j)\leq\alpha_j2^{-j}$.
 
-After choosing $K_1,\ldots,K_N$, put
+After $K_1,\ldots,K_N$ have been chosen, put
 \[
  m_N=\min_{1\leq i\leq N}
-    \mathrm{d}V\left(U_i\setminus\bigcup_{j=1}^NK_j\right)>0.
+    \mathrm{d}V\left(U_i\setminus\bigcup_{j=1}^NK_j\right)>0;
 \]
-Each set inside the minimum is nonempty and open. Choose
+each set inside the minimum is open and nonempty, since a finite union of closed nowhere dense sets is closed and nowhere dense. Choose
 \[
  0<\alpha_{N+1}\leq
        \min\{\alpha_N/2,\ 2^{-N-2}m_N\},
@@ -127,27 +132,28 @@ and continue. In particular,
  \sum_{j>N}\alpha_j\leq2\alpha_{N+1}
              \leq2^{-N-1}m_N.
 \]
-The function $Q=\sum_j\alpha_jq_j$ is nonnegative and integrable. Its essential infimum on every nonempty open set is zero. To see this on $U_i$, take $N\geq i$ and remove the first $N$ sets $K_j$. On the remaining set the first $N$ summands vanish. Markov's inequality bounds the measure where the tail exceeds $2^{-N}$ by
+
+\emph{Step 2: the concentrating part.} The function $Q=\sum_j\alpha_jq_j$ is nonnegative and integrable. We claim that its essential infimum on every nonempty open set is zero. Since every nonempty open set contains some $U_i$, it suffices to consider $U_i$. Take $N\geq i$ and remove $K_1,\ldots,K_N$ from $U_i$. On the remaining set, whose volume is at least $m_N$, the first $N$ summands of $Q$ vanish. By Markov's inequality, the set where the tail $\sum_{j>N}\alpha_jq_j$ exceeds $2^{-N}$ has volume at most
 \[
  2^N\sum_{j>N}\alpha_j\int_Xq_j\,\mathrm{d}V
        \leq m_N/2.
 \]
-The remaining set originally has measure at least $m_N$. A positive-measure subset therefore satisfies $Q\leq2^{-N}$. Let $N\to\infty$ and use the basis property.
+Hence $Q\leq2^{-N}$ on a subset of $U_i$ of positive volume. Letting $N\to\infty$ proves the claim.
 
 \Needspace{8\baselineskip}
-Set $M=\int_X(1+Q)\,\mathrm{d}V$ and $f=(1+Q)/M$. If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then the bounded comparison lemma gives
+\emph{Step 3: $b_h(f)=0$.} Set $M=\int_X(1+Q)\,\mathrm{d}V$ and $f=(1+Q)/M$, a probability density with $f\geq1/M$. If $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq af\,\mathrm{d}V$ with $a>0$, then $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq(a\alpha_j/M)q_j\,\mathrm{d}V$, and \cref{lem:bounded-normalizer-subsolution} gives
 \[
  \frac{a\alpha_j}{M}\leq c_h(q_j)\leq\alpha_j2^{-j}
  \quad\text{for every }j.
 \]
-This is impossible. Hence $b_h(f)=0$.
+This is impossible. Hence $b_h(f)=0$ by \cref{thm:individual-density-subsolution}.
 
-Finally let $g$ be any smooth strictly positive probability density and put $R=\|g/f\|_\infty$. The inequality $g\leq R(1+Q)/M$ almost everywhere forces $g\leq R/M$ everywhere. Otherwise continuity would give a nonempty open set on which $g>R(1+\varepsilon)/M$ for some $\varepsilon>0$, contradicting the essential infimum property of $Q$ on that set. Order and homogeneity of the scalar now give
+\emph{Step 4: $C_h^{\mathrm{sm}}(f)>0$.} Let $g$ be a smooth strictly positive probability density and put $R=\|g/f\|_{L^\infty}$. Then $g\leq R(1+Q)/M$ almost everywhere, and this forces $g\leq R/M$ everywhere. Otherwise, by continuity, $g>R(1+\varepsilon)/M$ on a nonempty open set for some $\varepsilon>0$, while $Q<\varepsilon$ on a subset of positive volume of this set by Step 2, a contradiction. The order and homogeneity of the scalar in \cref{lem:bounded-normalizer-subsolution} now give $c_h(g)\geq c_h(R/M)=(M/R)c_h(1)$, that is,
 \[
  R c_h(g)\geq M c_h(1).
 \]
-The constant test $g=1$ attains this value, since $\operatorname*{ess\,inf}_XQ=0$. Thus
+The constant density $g=1$ attains this value, since $\operatorname*{ess\,inf}_XQ=0$ gives $\|1/f\|_{L^\infty}=M$. Thus
 $C_h^{\mathrm{sm}}(f)=M c_h(1)>0$, as required.
 \end{proof}
 
-The distinction is caused by the order restriction on a smooth test: it cannot use a measurable increase of a density whose essential lower value is unchanged in every open set. Bounded measurable tests retain this information. The theorem concerns subsolution existence for individual $L^1$ densities. A characterization of exact normalized equations at $b_h(f)$, including their natural singularity class and finite-mass compactness, remains a separate problem.
+The point is that a smooth test $g$ with $\|g/f\|_{L^\infty}\leq R$ is controlled by the essential infimum of $f$ on open sets. It therefore cannot detect an increase of $f$ that leaves this essential infimum unchanged on every open set, whereas bounded measurable tests below $f$ do detect it. The theorem concerns only the existence of subsolutions. Exact solutions of $\mathrm{MA}^{\mathrm{ext}}_h(u)=b_h(f)f\,\mathrm{d}V$, the singularity class in which they should be sought, and compactness of their normalized solutions are further problems; see \cref{qu:individual-equation-threshold}.
