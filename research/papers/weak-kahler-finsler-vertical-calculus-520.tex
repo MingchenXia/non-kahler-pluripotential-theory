@@ -1,0 +1,67 @@
+\subsection{Vertical calculus for complex Finsler torsion}
+\label{subsec:weak-kahler-finsler-vertical-calculus}
+
+Let $M$ be a complex manifold of dimension $n\geq1$. Let $G$ be a smooth positive function on $T^{1,0}M\setminus0$ such that $G(z;cv)=|c|^2G(z;v)$ for $c\in\mathbb C^*$ and the fibre Levi matrix $H_{i\bar j}=G_{i\bar j}$ is positive definite. Then $F=\sqrt G$, extended by zero on the zero section, is a strongly pseudoconvex complex Finsler metric. Subscripts denote fibre derivatives; a semicolon followed by $k$ denotes $\partial/\partial z^k$. Repeated indices are summed from $1$ to $n$, and $H^{\bar j i}$ denotes the inverse matrix.
+
+In local holomorphic coordinates $(z,v)$ on the tangent bundle, put
+\[
+ N^i_k=H^{\bar a i}G_{\bar a;k},\qquad
+ \delta_k=\frac{\partial}{\partial z^k}-N^a_k\frac{\partial}{\partial v^a},\qquad
+ \Gamma^i_{j;k}=H^{\bar a i}\delta_kH_{j\bar a}.
+\]
+These are the nonlinear and horizontal Chern--Finsler coefficients. Define the complex vertical vector fields
+\[
+ D_j=\frac{\partial}{\partial v^j}-G_{ja}H^{\bar b a}\frac{\partial}{\partial\bar v^b},
+ \qquad E=v^jD_j.
+\]
+The Euler identities give $v^jG_{ja}=0$ and $G_i=H_{i\bar a}\bar v^a$. Consequently
+\[
+ E=v^j\frac{\partial}{\partial v^j},\qquad
+ G_i\Gamma^i_{j;k}=\delta_kG_j=D_jG_{;k}.
+\]
+
+\begin{lemma}\label{lem:finsler-adapted-vertical-commutation}
+The vertical vector fields satisfy $[D_i,D_j]=0$.
+\end{lemma}
+\begin{proof}
+Fix a base point and let $d_v$ denote the exterior differential on its punctured fibre. The $2n$ forms $dv^1,\ldots,dv^n,d_vG_1,\ldots,d_vG_n$ form a coframe of the complexified vertical cotangent bundle: relative to $(dv,d\bar v)$ their coefficient matrix is
+\[
+ \begin{pmatrix}I&0\\ (G_{ij})&(H_{i\bar j})\end{pmatrix},
+\]
+whose lower diagonal block is invertible. Since $D_iv^k=\delta_i^k$ and $D_iG_k=G_{ki}-G_{ia}H^{\bar b a}H_{k\bar b}=0$, the vertical bracket $[D_i,D_j]$ annihilates every member of this coframe. Hence the bracket vanishes.
+\end{proof}
+
+\begin{lemma}\label{lem:homogeneous-vertical-skew-contraction}
+Let $A_{jk}$ be smooth skew-symmetric functions on a coordinate domain of the punctured tangent bundle. Suppose
+\[
+ D_lA_{jk}+D_jA_{kl}+D_kA_{lj}=0,\qquad EA_{jk}=0.
+\]
+If $v^jA_{jk}=0$ for every $k$, then $A_{jk}=0$ for every $j,k$.
+\end{lemma}
+\begin{proof}
+Skew symmetry also gives $v^lA_{kl}=0$. Differentiating the two contractions, using $D_jv^l=\delta_j^l$, gives
+\[
+ v^lD_jA_{kl}=-A_{kj}=A_{jk},\qquad
+ v^lD_kA_{lj}=-A_{kj}=A_{jk}.
+\]
+Contracting the cyclic identity with $v^l$ therefore yields $EA_{jk}+2A_{jk}=0$. The assumed Euler identity gives $A_{jk}=0$.
+\end{proof}
+
+\begin{proposition}\label{prop:finsler-torsion-contraction-equivalences}
+For the metric $F$, the weakly K\"ahler--Finsler condition
+\[
+ v^jG_i(\Gamma^i_{j;k}-\Gamma^i_{k;j})=0\quad\text{for every }k
+\]
+is equivalent to $G_i(\Gamma^i_{j;k}-\Gamma^i_{k;j})=0$ for every $j,k$. The K\"ahler--Finsler condition $v^j(\Gamma^i_{j;k}-\Gamma^i_{k;j})=0$ for every $i,k$ is equivalent to the strongly K\"ahler--Finsler condition $\Gamma^i_{j;k}=\Gamma^i_{k;j}$ for every $i,j,k$.
+\end{proposition}
+\begin{proof}
+Put $T_{jk}=G_i(\Gamma^i_{j;k}-\Gamma^i_{k;j})$. The identity $T_{jk}=D_jG_{;k}-D_kG_{;j}$ and \cref{lem:finsler-adapted-vertical-commutation} give $D_lT_{jk}+D_jT_{kl}+D_kT_{lj}=0$. Complex homogeneity gives $T_{jk}(z;cv)=\bar cT_{jk}(z;v)$, so $ET_{jk}=0$. Thus \cref{lem:homogeneous-vertical-skew-contraction} removes the $v$-contraction in the weak condition. Its converse follows by contracting again.
+
+For the second equivalence, differentiating the inverse matrix in $N^i_k$ gives $\Gamma^i_{j;k}=\partial N^i_k/\partial v^j$. Since $N^i_k(z;cv)=cN^i_k(z;v)$, its Euler identity is $v^j\partial N^i_k/\partial v^j=N^i_k$. The K\"ahler--Finsler condition therefore gives
+\[
+ 2N^i_k=\frac{\partial}{\partial v^k}(v^jN^i_j).
+\]
+Differentiating once more in $v^j$ expresses $2\Gamma^i_{j;k}$ as the symmetric second fibre derivative of $v^aN^i_a$. Thus $\Gamma^i_{j;k}=\Gamma^i_{k;j}$. The reverse implication is obtained by contraction.
+\end{proof}
+
+For a Hermitian squared norm $G=h_{i\bar a}(z)v^i\bar v^a$, one has $T_{jk}=(h_{j\bar a;k}-h_{k\bar a;j})\bar v^a$. Since the coefficients are independent of $v$, the first equivalence forces $h_{j\bar a;k}=h_{k\bar a;j}$. Together with its conjugate, this is $d\omega_h=0$, where $\omega_h=\mathrm i h_{j\bar a}dz^j\wedge d\bar z^a$. Thus all four conditions coincide for Hermitian metrics. For a general Finsler metric the two equivalences above concern different contractions.

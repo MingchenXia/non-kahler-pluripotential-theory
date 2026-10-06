@@ -83,3 +83,256 @@ For a general positive individual threshold, the corollary gives
 The next estimate quantifies this scalar error when the density root is approximable by bounded roots. Whether an exponential subsolution exists when $b_h(f)=0$ is a separate question; \cref{thm:individual-exponential-subsolution} applies whenever such a subsolution is available.
 
 \input{author/section_exponential_tail_modulus}
+
+\Needspace{12\baselineskip}
+\subsection{Exponential equations at zero threshold}
+\label{subsec:zero-threshold-product-exponential}
+
+Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$ with $v_-(h_0)=0$. Put $Y=\mathbf P^k$, $k\geq1$, with normalized Fubini--Study form $\kappa$, and set $X=X_0\times Y$, $H=h_0+\kappa$, $N=m+k$ and
+\[
+ C=\binom Nm,\qquad V_0=\int_{X_0}h_0^m,\qquad
+ \mu=V_0^{-1}h_0^m\wedge\kappa^k,\qquad R=\mu/\mathrm dV.
+\]
+Here $\mathrm dV$ is any smooth strictly positive probability volume form on $X$, and factor pullbacks are understood. The potential $u_\alpha=1-(1-\psi)^\alpha$ and its density $q_\alpha$ are those of \cref{lem:projective-sublogarithmic-density}, for fixed $0<\alpha<1$ and pole $o=[1:0:\cdots:0]$. Its exponential weight can absorb a concentration. Choosing the projective components accordingly gives one zero-threshold density with genuine exponential solutions for every positive exponent. On $Y\setminus\{o\}$ put $L=1-\psi\geq1$, $t=\mathrm e^{1-L}$ and
+\[
+ a=\alpha L^{\alpha-1},\qquad Q=t+(1-t)a,\qquad
+ D=t(1-a)+(1-t)\alpha(1-\alpha)L^{\alpha-2},
+\]
+\[
+ W=kQ^{k-1}D,\qquad
+ B_\tau=q_\alpha\mathrm e^{\tau(L^\alpha-1)}\quad(\tau>0),\qquad
+ b_0=(1-\alpha)^k.
+\]
+
+\begin{lemma}\label{lem:projective-exponential-barrier-growth}
+The radial expressions are
+\[
+ q_\alpha=Q^{k-1}D\,\mathrm e^{k(L-1)},\qquad q_\alpha\geq b_0,
+ \qquad W(L)\sim k\alpha^k(1-\alpha)L^{-1-k(1-\alpha)}.
+\]
+For every $\tau>0$, $\mathrm e^{\tau(L^\alpha-1)}W(L)\to+\infty$ as $L\to+\infty$. In particular, $B_\tau\kappa^k$ has infinite mass on every punctured neighbourhood of $o$.
+\end{lemma}
+\begin{proof}
+In the radial calculation of \cref{lem:projective-sublogarithmic-density}, $t=r/(1+r)$ and $-dQ/dL=D$. The Fubini--Study radial probability is $k\mathrm e^{-k(L-1)}\mathrm dL$, whereas the radial mass of $q_\alpha\kappa^k$ is $W(L)\mathrm dL$. Their ratio gives the formula for $q_\alpha$. The lower bound follows from $\kappa+\ddc u_\alpha\geq(1-\alpha)\kappa$ away from the pole. Since $Q\sim\alpha L^{\alpha-1}$ and $D\sim\alpha(1-\alpha)L^{\alpha-2}$, the displayed asymptotic follows. The logarithm of the weighted radial density is $\tau L^\alpha-[1+k(1-\alpha)]\log L+O(1)$, which tends to infinity. Its integral over every tail is therefore infinite.
+\end{proof}
+
+\begin{theorem}\label{thm:product-zero-threshold-exponential-criterion}\index{Monge--Ampere equation@Monge--Amp\`ere equation!zero threshold criterion}
+Let $f\geq0$ be nonzero and integrable on $X$, and put $F=f/R$. If $\lambda>0$ and $F\leq AB_\lambda$ almost everywhere for some finite $A>0$, then
+\[
+ s_\lambda=u_\alpha+\lambda^{-1}\log(CV_0/A)
+\]
+is a genuine exponential subsolution of actual mass $CV_0$. The exponential equation has a greatest genuine solution of finite positive mass. This conclusion holds for every $\lambda>0$ if $F$ is locally essentially bounded off $X_0\times\{o\}$ and
+\[
+ \lim_{T\to+\infty}\operatorname*{ess\,sup}_{x\in X_0,\ L(y)>T}
+ \frac{\log^+(F(x,y)/q_\alpha(y))}{L(y)^\alpha}=0,
+ \qquad \log^+t=\log\max(1,t).
+\]
+\end{theorem}
+\begin{proof}
+The product measure in \cref{thm:zero-lower-mass-product-equation} is $\mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=CV_0q_\alpha\mu$. Since $\mathrm e^{\lambda u_\alpha}B_\lambda=q_\alpha$ off the pole,
+\[
+ \mathrm e^{\lambda s_\lambda}f\,\mathrm dV
+ \leq(CV_0/A)\mathrm e^{\lambda u_\alpha}AB_\lambda\mu
+ =\mathrm{MA}^{\mathrm{ext}}_H(s_\lambda).
+\]
+Both measures vanish on the polar fibre. Adding the constant preserves admissibility and mass, and \cref{thm:individual-exponential-subsolution} gives the greatest exact solution. Its mass is finite because its supremum is finite and $f\in L^1$; it is positive because a genuine quasi-plurisubharmonic function is finite almost everywhere and $f$ has positive integral.
+
+Under the limit condition, $F/q_\alpha\leq\mathrm e^{(\lambda/2)L^\alpha}$ almost everywhere sufficiently near the pole. On the remaining compact set the ratio is bounded. Increasing a finite constant $A$ therefore gives $F\leq AB_\lambda$ on all of $X$.
+\end{proof}
+
+\begin{theorem}\label{thm:zero-threshold-solvable-concentration}\index{Monge--Ampere density@Monge--Amp\`ere density!solvable concentration}\index{Subsolution!zero threshold exponential equation}
+Let $F_j$ be any smooth strictly positive probability densities relative to $\mathrm dV_0=V_0^{-1}h_0^m$ satisfying $c_{h_0}(F_j)\leq2^{-2j}/C$. There are smooth strictly positive probability densities $g_j$ relative to $\kappa^k$ such that
+\[
+ f_j=RF_jg_j,\qquad f=\sum_{j\geq1}2^{-j}f_j,
+ \qquad c_H(f_j)\leq2^{-2j},\qquad b_H(f)=0.
+\]
+The function $f$ is finite everywhere, smooth off the polar fibre, has integral one and is bounded below by a positive constant. This single density has a genuine exponential subsolution and a greatest finite-mass exact solution for every $\lambda>0$. Every genuine exact solution is unbounded.
+\end{theorem}
+\begin{proof}
+Put $w_j=2^{-j}$ and $M_j=\max F_j$. Using an increasing sequence of smooth coordinate seminorms on $X_0$, choose $0<\varepsilon_j\leq1/2$ so that
+\[
+ w_j\varepsilon_jM_j\leq b_0 2^{-j-2},\qquad
+ w_j\varepsilon_j\|F_j\|_{C^j}\leq2^{-j}.
+\]
+Then $E=\sum_jw_j\varepsilon_jF_j$ is smooth and satisfies $0<E\leq b_0/4$.
+
+Choose a smooth function $0\leq\rho\leq1$ on $\mathbb R$, supported in $[0,1]$, positive inside and flat at the endpoints. Starting with $A_0=0$, inductively choose $A_j\geq2$, $A_j>A_{j-1}+2$, with
+\[
+ Z_j=\int_{A_j}^{A_j+1}\rho(L-A_j)
+       \mathrm e^{(L^\alpha-1)/j}W(L)\,\mathrm dL
+       \geq2w_jM_j.
+\]
+For each fixed $j$, \cref{lem:projective-exponential-barrier-growth} makes the integrand's weighted radial factor uniformly large on sufficiently distant intervals. Thus such a choice is possible. On that annulus put $b_j=\rho(L-A_j)B_{1/j}/Z_j$, extend it by zero elsewhere and set $g_j=\varepsilon_j+(1-\varepsilon_j)b_j$. Flatness makes $b_j$ smooth across the annulus boundaries; it vanishes near the pole and the infinity hyperplane. The integral of $b_j$ is one, so $g_j$ is a smooth strictly positive probability density. Moreover,
+\[
+ w_jM_j(1-\varepsilon_j)b_j\leq B_{1/j}/2.
+\]
+
+Apply \cref{thm:tw-smooth} on $Y$ to solve $(\kappa+\ddc\phi_j)^k=g_j\kappa^k$ with a smooth positive form; closed integration fixes its scalar as one. On $X_0$ the same theorem gives a smooth potential $v_j$ with $(h_0+\ddc v_j)^m=c_{h_0}(F_j)F_j\,\mathrm dV_0$. The product potential $v_j+\phi_j$ satisfies
+\[
+ (H+\ddc(v_j+\phi_j))^N
+ =C c_{h_0}(F_j)F_jg_j\mu
+ =C c_{h_0}(F_j)f_j\,\mathrm dV.
+\]
+The factor dimensions leave only the displayed binomial term. Scalar uniqueness gives $c_H(f_j)=C c_{h_0}(F_j)\leq2^{-2j}$.
+
+Tonelli's theorem gives $\int_Xf\,\mathrm dV=\sum_jw_j=1$. The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact set outside the polar fibre. Hence $F=E+\sum_jw_j(1-\varepsilon_j)F_jb_j$ is smooth there. At the fibre the pointwise sum equals $E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. If a positive coefficient $a$ were admitted by the maximal-subsolution characterization in \cref{thm:individual-density-subsolution}, then comparison with each smooth component would give
+\[
+ aw_j\leq c_H(f_j)\leq2^{-2j},\qquad a\leq2^{-j}
+ \quad\text{for every }j.
+\]
+This is impossible; thus $b_H(f)=0$.
+
+Fix $\lambda>0$ and choose $J$ with $1/j\leq\lambda$ for $j\geq J$. Since $u_\alpha\leq0$, one has $B_{1/j}\leq B_\lambda$ for these indices. Disjointness bounds the sum of their contributions by $B_\lambda/2$, and the baseline is at most $B_\lambda/4$. The remaining finitely many bumps have a finite bound
+\[
+ K_\lambda=\max_Y\sum_{j<J}w_j(1-\varepsilon_j)M_jb_j,
+ \qquad D_\lambda=3/4+K_\lambda/b_0.
+\]
+Thus $F\leq D_\lambda B_\lambda$. The preceding criterion gives the explicit subsolution $u_\alpha+\lambda^{-1}\log(CV_0/D_\lambda)$ and the greatest exact solution. A bounded exponential subsolution would give a positive constant coefficient for $f$, contradicting its zero threshold. Every genuine exact solution is therefore unbounded.
+\end{proof}
+
+The constructed density also satisfies the logarithmic criterion: on the $j$th annulus, $F/q_\alpha\leq1/4+\frac12\mathrm e^{(L^\alpha-1)/j}$, and away from all annuli the ratio is at most $1/4$. Approaching the pole through annuli forces $j\to\infty$, giving the required uniform limit. Since $b_H(f)=0$, \cref{prop:individual-normalizer-lp} also shows that $f$ belongs to no $L^p$ for $p>1$.
+
+For the elliptic threefold, \cref{thm:vanishing-lower-mass} supplies smooth positive forms with masses $\delta_\ell\to0$. Normalize their volume densities by $\delta_\ell$ and choose a subsequence with $\delta_{\ell_j}\leq2^{-2j}/C$. Scalar uniqueness gives the required $F_j$ with $c_{h_0}(F_j)=\delta_{\ell_j}$. Thus the construction applies to this threefold times $\mathbf P^k$ for every $k\geq1$. By \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $96\pi$ on the fourfold and $240\pi$ on the fivefold. These numerical values concern the subsolutions; the greatest exact solutions have their own finite positive masses.
+
+The projective components are chosen after the base sequence. The theorem does not determine solvability for an arbitrary previously prescribed concentration family or give a necessary criterion at zero threshold.
+
+\Needspace{12\baselineskip}
+\subsection{Solvable exponents and collapse at zero threshold}
+
+Fix a nonzero nonnegative $f\in L^1(\mathrm dV)$ on a connected compact Hermitian manifold $(X,h)$. Let $\Lambda_h(f)$ consist of the positive exponents for which
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm e^{\lambda u}f\,\mathrm dV
+\]
+has a genuine $h$-plurisubharmonic solution. Existence of an exponential subsolution is equivalent to membership by \cref{thm:individual-exponential-subsolution}.
+
+\Needspace{9\baselineskip}
+\begin{proposition}\label{prop:solvable-exponents-upper-interval}\index{Monge--Ampere equation@Monge--Amp\`ere equation!solvable exponents}
+If $\lambda_0\in\Lambda_h(f)$, then $[\lambda_0,+\infty)\subset\Lambda_h(f)$. Consequently this set is empty, equals $(a,+\infty)$ for some $a\geq0$, or equals $[a,+\infty)$ for some $a>0$. If $b_h(f)>0$, then $\Lambda_h(f)=(0,+\infty)$.
+\end{proposition}
+\begin{proof}
+Let $u$ solve the equation at $\lambda_0$, and put $s=u-\max(0,\sup_Xu)$. Then $s\leq0$ and
+\begin{align*}
+ \mathrm{MA}^{\mathrm{ext}}_h(s)
+ &=\mathrm e^{\lambda_0u}f\,\mathrm dV\\
+ &\geq\mathrm e^{\lambda_0s}f\,\mathrm dV
+ \geq\mathrm e^{\lambda s}f\,\mathrm dV
+ \qquad(\lambda\geq\lambda_0).
+\end{align*}
+The greatest-solution theorem supplies an exact solution at each such $\lambda$. Every nonempty upper set of positive real numbers has the stated form, determined by its infimum and whether that infimum is attained. The positive-threshold case follows from \cref{cor:individual-positive-threshold-exponential}.
+\end{proof}
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:zero-threshold-exponential-mass-collapse}\index{Normalization scalar!zero threshold collapse}\index{Monge--Ampere mass@Monge--Amp\`ere mass!zero threshold exponential limit}
+Suppose $b_h(f)=0$. Let $\lambda_j>0$ decrease to zero, and let $u_j$ be any genuine exact solution at $\lambda_j$. Put
+\[
+ M_j=\sup_Xu_j,\qquad v_j=u_j-M_j,\qquad
+ c_j=\mathrm e^{\lambda_jM_j}.
+\]
+Then
+\begin{gather*}
+ c_j\longrightarrow0,\qquad \lambda_jM_j\longrightarrow-\infty,\\
+ \|\mathrm{MA}^{\mathrm{ext}}_h(u_j)\|_{\mathrm{TV}}
+ =\|\mathrm{MA}^{\mathrm{ext}}_h(v_j)\|_{\mathrm{TV}}
+ \longrightarrow0.
+\end{gather*}
+Moreover $\mathrm e^{\lambda_ju_j}\to0$ uniformly on $X$, with value zero at poles, and $u_j\to-\infty$ uniformly in the sense that $\sup_Xu_j\to-\infty$.
+\end{proposition}
+\begin{proof}
+For $g_j=\mathrm e^{\lambda_jv_j}f$, \cref{lem:normalized-exponential-npp} applied to the fixed finite non-pluripolar measure $f\,\mathrm dV$ gives $g_j\to f$ in $L^1$. Each $g_j$ is nonzero, because $v_j$ is finite almost everywhere. Constant invariance gives
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(v_j)=c_jg_j\,\mathrm dV,
+ \qquad 0<c_j\leq b_h(g_j)
+\]
+by \cref{thm:individual-density-subsolution}. Upper semicontinuity, \cref{thm:individual-threshold-semicontinuity}, now gives $\limsup_jc_j\leq b_h(f)=0$. Since $0\leq g_j\leq f$, the total mass is at most $c_j\|f\|_1$ and tends to zero. Also $\lambda_jM_j=\log c_j\to-\infty$ and $0\leq\mathrm e^{\lambda_ju_j}\leq c_j$. For all sufficiently large $j$, $\lambda_j<1$ and $\log c_j<0$, so $M_j=(\log c_j)/\lambda_j\leq\log c_j\to-\infty$.
+\end{proof}
+
+For the tailored density of \cref{thm:zero-threshold-solvable-concentration}, solutions exist for every positive exponent, so the collapse applies as $\lambda\downarrow0$ to any choice of genuine exact solutions, including the greatest ones. The subsolutions in \cref{thm:product-zero-threshold-exponential-criterion} retain actual mass $CV_0$ for every exponent, while the exact-solution masses tend to zero. Order of potentials does not give order of their total Monge--Amp\`ere masses on a nonclosed background. Convergence of normalized potentials in capacity and an exact equation for a normalized cluster limit remain separate questions at exponent zero. Positive exponent endpoints are governed instead by the compactness criterion below.
+
+\Needspace{12\baselineskip}
+\subsection{Positive endpoints and right limits}
+
+For $\lambda\in\Lambda_h(f)$, write $U_\lambda$ for the greatest solution of \cref{thm:individual-exponential-subsolution}. A bounded truncated-density equation gives a common upper barrier when the exponents stay away from zero. Greatest-subsolution maximality then supplies an order estimate, which controls positive endpoints and right limits.
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:positive-exponent-uniform-upper-barrier}\index{Subsolution!common upper barrier}\index{Monge--Ampere equation@Monge--Amp\`ere equation!positive exponent order}
+For every $\tau>0$, there is a nonnegative $t_\tau\in\PSH(X,h)\cap C(X)$ such that every genuine exponential subsolution at an exponent $\lambda\geq\tau$ lies below $t_\tau$. Put $K_\tau=\sup_Xt_\tau$. For $\tau\leq\lambda_1\leq\lambda_2$ in $\Lambda_h(f)$,
+\[
+ U_{\lambda_2}\geq U_{\lambda_1}
+             -K_\tau\frac{\lambda_2-\lambda_1}{\lambda_2}.
+\]
+Consequently $U_\lambda+K_\tau\log(\lambda/\tau)$ is increasing on $\Lambda_h(f)\cap[\tau,+\infty)$.
+\end{lemma}
+\begin{proof}
+Set $q=\min(f,1)$. This is a bounded nonzero density, so \cref{thm:nguyen-exp} gives a continuous solution $w$ of $\mathrm{MA}_h(w)=\mathrm e^{\tau w}q\,\mathrm dV$. Put $t_\tau=w+\max(0,-\inf_Xw)$. Then $t_\tau\geq0$ and, for $\lambda\geq\tau$,
+\[
+ \mathrm{MA}_h(t_\tau)=\mathrm e^{\tau w}q\,\mathrm dV
+       \leq\mathrm e^{\lambda t_\tau}f\,\mathrm dV.
+\]
+If $u$ is a genuine subsolution at $\lambda$, then on $\{t_\tau<u-\epsilon\}$,
+\[
+ \mathrm{MA}_h(t_\tau)
+       \leq\mathrm e^{-\lambda\epsilon}
+                  \mathrm{MA}^{\mathrm{ext}}_h(u-\epsilon).
+\]
+The bounded first potential admits a genuine $h/2$-envelope, and $u-\epsilon\preceq t_\tau$. Thus \cref{thm:singular-strict-domination} gives $t_\tau\geq u-\epsilon$. Let $\epsilon\downarrow0$.
+
+For the order estimate, put $\delta=K_\tau(\lambda_2-\lambda_1)/\lambda_2$. Since $U_{\lambda_1}\leq K_\tau$, constant invariance gives
+\begin{align*}
+ \mathrm{MA}^{\mathrm{ext}}_h(U_{\lambda_1}-\delta)
+   &=\mathrm e^{\lambda_1U_{\lambda_1}}f\,\mathrm dV\\
+   &\geq\mathrm e^{\lambda_2(U_{\lambda_1}-\delta)}f\,\mathrm dV.
+\end{align*}
+Greatest-subsolution maximality yields $U_{\lambda_2}\geq U_{\lambda_1}-\delta$. Finally $\log x\geq1-x^{-1}$ for $x\geq1$, which proves the logarithmically corrected order.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{proposition}\label{prop:positive-exponent-endpoint-attainment}\index{Monge--Ampere equation@Monge--Amp\`ere equation!positive endpoint}
+Suppose $\Lambda_h(f)\ne\varnothing$ and $a=\inf\Lambda_h(f)>0$. Then $a\in\Lambda_h(f)$ if and only if there are exponents $\lambda_j>a$ decreasing to $a$ and genuine exact solutions $u_j$ at $\lambda_j$ with $\inf_j\sup_Xu_j> -\infty$.
+
+If $a\notin\Lambda_h(f)$, every sequence of genuine exact solutions at exponents $\lambda_j>a$ decreasing to $a$ satisfies
+\begin{gather*}
+ \sup_Xu_j\longrightarrow-\infty,\qquad
+ \mathrm e^{\lambda_ju_j}\longrightarrow0\ \text{uniformly on }X,\\
+ \|\mathrm{MA}^{\mathrm{ext}}_h(u_j)\|_{\mathrm{TV}}
+                \longrightarrow0.
+\end{gather*}
+The exponential has value zero at poles.
+\end{proposition}
+\begin{proof}
+If $u_a$ is an exact solution at $a$, put $s=u_a-\max(0,\sup_Xu_a)$. Then $s\leq0$ and $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm e^{\lambda s}f\,\mathrm dV$ for every $\lambda\geq a$. Thus $U_\lambda\geq s$, which supplies the required sequence.
+
+Conversely, the lemma with $\tau=a$ gives a common upper bound $K_a$ for $u_j$. Write $M_j=\sup_Xu_j$. Extract a subsequence for which $M_j\to M\in\mathbb R$ and, by \cref{thm:normalized-compactness}, $u_j-M_j\to v\in\PSH(X,h)$ in $L^1$. Then $u_j\to u=v+M$ in $L^1$, with a genuine limit and a common upper bound. After a further extraction the convergence holds almost everywhere. Since $\lambda_j\leq\lambda_1$ and $K_a\geq0$, dominated convergence gives
+\[
+ \mathrm e^{\lambda_ju_j}f\longrightarrow\mathrm e^{au}f
+              \quad\text{in }L^1(\mathrm dV).
+\]
+Indeed all these densities are at most $\mathrm e^{\lambda_1K_a}f$. The lower-density closure \cref{lem:density-subsolution-lone-closure} gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq\mathrm e^{au}f\,\mathrm dV$. The greatest-solution theorem now supplies an exact solution at $a$.
+
+If $a$ is not admitted and the suprema of an exact solution sequence failed to tend to $-\infty$, a subsequence would satisfy the lower-bound condition just proved. Thus $M_j\to-\infty$. Eventually $M_j<0$; since $\lambda_j\geq a>0$,
+\[
+ 0\leq\mathrm e^{\lambda_ju_j}\leq\mathrm e^{aM_j}
+                 \longrightarrow0.
+\]
+The exact mass is at most $\mathrm e^{aM_j}\|f\|_1$, proving the last assertion.
+\end{proof}
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:greatest-exponential-right-continuity}\index{Monge--Ampere equation@Monge--Amp\`ere equation!right continuity}\index{Convergence!greatest exponential solutions}
+For every $a\in\Lambda_h(f)$, the greatest solutions satisfy
+\[
+ U_\lambda\longrightarrow U_a
+       \quad\text{in }L^1\text{ and in capacity}\quad(\lambda\downarrow a).
+\]
+Their Monge--Amp\`ere measures converge in total variation to $\mathrm e^{aU_a}f\,\mathrm dV$.
+\end{proposition}
+\begin{proof}
+Put $K=K_a$ from the lemma. For any $\lambda_j>a$ decreasing to $a$, the potentials
+\[
+ V_j=U_{\lambda_j}+K\log(\lambda_j/a)
+\]
+decrease and lie above $U_a$. Their limit $V$ is genuine. Dominated convergence between the integrable bounds $U_a$ and $V_1$ gives $L^1$ convergence, and \cref{lem:monotone-psh-capacity} gives capacity convergence. Since the added constants tend to zero, $U_{\lambda_j}\to V$ in both topologies.
+
+Apply \cref{thm:exponential-closedness} to the nonpositive potentials $U_{\lambda_j}-K$, the exponents $\lambda_j\to a>0$ and the densities $\mathrm e^{\lambda_jK}f\to\mathrm e^{aK}f$ in $L^1$. It gives $\mathrm{MA}^{\mathrm{ext}}_h(V)=\mathrm e^{aV}f\,\mathrm dV$, with total-variation convergence of the equation measures. Hence $V\leq U_a$ by greatest-solution maximality, while the lower bound gives $V\geq U_a$. Thus $V=U_a$. The argument applies to every decreasing sequence of exponents, giving the stated right limit.
+\end{proof}
+
+The endpoint test is expressed in terms of existing solutions. An intrinsic criterion on $f$, the existence or nonexistence of a positive excluded endpoint, and continuity from the left remain separate questions. The right limit selects greatest solutions; it does not identify limits of arbitrary solutions with other singularities.

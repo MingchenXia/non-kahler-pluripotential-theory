@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [split Hopf integration](research/editorial/split-hopf-index-integration-519.md) adds exact complement indices for nonpositive curvature and the two pure scalar Hopf direct-sum regimes. The actual website serves the verified 1347-page PDF and matching homepage description; 38 original directions remain open.
+The [positive-exponent integration](research/editorial/positive-exponent-endpoint-integration-525.md) gives a compactness criterion for positive exponential endpoints and right continuity of greatest solutions. The website serves the verified 1357-page PDF and matching description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
