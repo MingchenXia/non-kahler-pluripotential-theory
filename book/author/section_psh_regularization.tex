@@ -1,16 +1,16 @@
 \Needspace{10\baselineskip}
 \section{Comparing local regularizations}
 
-To glue local convolutions, we need them to agree up to an error tending uniformly to zero on overlaps. A bounded plurisubharmonic function need not be continuous, so this comparison cannot come from uniform convergence to the original function. Instead, logarithmic convexity of its suprema on balls controls the change of scale and the change of coordinates.
+To glue local convolutions, we need them to agree on overlaps up to an error tending uniformly to zero. A bounded plurisubharmonic function need not be continuous, so this comparison cannot come from uniform convergence to the original function. Instead, the logarithmic convexity of its suprema over balls controls both the change of scale and the change of coordinates.
 
 \Needspace{9\baselineskip}
-Let $U\subset\mathbb C^n$ be a domain and $u$ a bounded plurisubharmonic function on $U$. On a fixed relatively compact subset, for small $\delta>0$ put
+Let $U\subset\mathbb C^n$ be a domain and $u$ a bounded plurisubharmonic function on $U$. For $z$ in a fixed relatively compact subset of $U$ and small $\delta>0$, put
 \[
  S_\delta u(z)=\sup_{|\zeta-z|\leq\delta}u(\zeta),\qquad
  A_\delta u(z)=\fint_{|\zeta-z|=\delta}u(\zeta)\,\mathrm{d}\sigma(\zeta),
  \qquad u_\delta=u*\rho_\delta,
 \]
-where $\mathrm{d}\sigma$ is Euclidean surface measure and $\rho$ is a smooth nonnegative radial mollifier of integral one, supported in the unit ball, with $\rho_\delta(\zeta)=\delta^{-2n}\rho(\zeta/\delta)$. A fixed larger neighborhood contains all balls below, and $B$ denotes a bound for the oscillation of $u$ there.
+where $\mathrm{d}\sigma$ is the Euclidean surface measure and $\rho$ is a smooth nonnegative radial mollifier of integral one, supported in the unit ball, with $\rho_\delta(\zeta)=\delta^{-2n}\rho(\zeta/\delta)$. All balls below lie in a fixed larger relatively compact subset of $U$, and $B$ denotes a bound for the oscillation of $u$ on that subset.
 
 \Needspace{16\baselineskip}
 \begin{lemma}\label{lem:bounded-local-regularization}
@@ -22,29 +22,29 @@ For each fixed $A>1$,
 uniformly on compact subsets as $\delta\downarrow0$.
 \end{lemma}
 \begin{proof}
-The maximum of a plurisubharmonic function on concentric balls is convex as a function of the logarithm of the radius. This follows by restricting to each complex line through the center and comparing on an annulus with the harmonic function affine in $\log|\zeta|$. For a fixed admissible radius $r>A\delta$, convexity gives
+The maximum of a plurisubharmonic function over concentric balls is a convex function of the logarithm of the radius. This follows by restricting to each complex line through the center and comparing, on an annulus, with the harmonic function that is affine in $\log|\zeta|$. Fix a radius $r>A\delta$ for which all the balls of radius $r$ about points of the given compact set lie in the larger subset. Comparing secant slopes of this convex function between $\log\delta$, $\log(A\delta)$ and $\log r$ gives
 \begin{equation}\label{eq:bounded-log-radius}
  0\leq S_{A\delta}u-S_\delta u
- \leq\frac{B\log A}{\log(r/\delta)}.
+ \leq\frac{B\log A}{\log(r/\delta)},
 \end{equation}
-This proves the first assertion.
+which proves the first assertion.
 
-We compare the maximum with the spherical mean using the Poisson kernel in real dimension $2n$. For a point at distance at most $\delta/2$ from the center, the normalized Poisson kernel of the ball of radius $\delta$ is bounded below by a positive dimensional constant $c_n$. Since $u\leq S_\delta u$, the submean comparison with its harmonic extension gives
+To compare the maximum with the spherical mean, we use the Poisson kernel in real dimension $2n$. For a point at distance at most $\delta/2$ from the center, the normalized Poisson kernel of the ball of radius $\delta$ is bounded below by a positive dimensional constant $c_n$. Since $u$ is bounded above by $S_\delta u$ and by its harmonic extension from the sphere of radius $\delta$, we obtain
 \[
  S_\delta u-S_{\delta/2}u
  \geq c_n(S_\delta u-A_\delta u).
 \]
-These inequalities are valid for bounded plurisubharmonic functions by local smoothing, followed by a decreasing limit. Equation \eqref{eq:bounded-log-radius} shows that $S_\delta u-A_\delta u$ tends uniformly to zero.
+These inequalities hold for bounded plurisubharmonic functions by local smoothing followed by a decreasing limit. By \eqref{eq:bounded-log-radius}, $S_\delta u-A_\delta u$ therefore tends uniformly to zero.
 
-For $0<t\leq1$, the spherical mean is increasing with radius, and
+For $0<t\leq1$, the spherical mean is increasing in the radius, and
 \[
  0\leq A_\delta u-A_{t\delta}u
  \leq (S_\delta u-S_{t\delta}u)
                 +(S_{t\delta}u-A_{t\delta}u).
 \]
-The first term is at most
-$B\log(1/t)/\log(r/(t\delta))$ by logarithmic convexity of $S$, and the second is at most $C_nB/\log(r/(t\delta))$ by the preceding estimate. Write the radial convolution as an average of $A_{t\delta}u$ with the probability density
-$\widehat\rho(t)=|\mathbb S^{2n-1}|t^{2n-1}\rho(t)$. Since
+By logarithmic convexity, the first term is at most
+$B\log(1/t)/\log(r/(t\delta))$, and by the preceding estimate the second is at most $C_nB/\log(r/(t\delta))$. Write the radial convolution as an average of the spherical means $A_{t\delta}u$ with respect to the probability density
+$\widehat\rho(t)=|\mathbb S^{2n-1}|t^{2n-1}\rho(t)$ on $[0,1]$, where $\rho(t)$ denotes the value of $\rho$ at radius $t$. Since
 $\int_0^1(1+\log(1/t))\widehat\rho(t)\,\mathrm{d}t<\infty$, integration gives
 \[
  0\leq A_\delta u-u_\delta
@@ -55,42 +55,42 @@ Combining the two comparisons proves the second assertion.
 
 \Needspace{9\baselineskip}
 \begin{corollary}\label{cor:coordinate-convolution}
-Let $U,V\subset\mathbb C^n$ be domains and let $F:U\to V$ be biholomorphic and $u$ bounded and plurisubharmonic on $U$. The difference
+Let $U,V\subset\mathbb C^n$ be domains, let $F:U\to V$ be biholomorphic, and let $u$ be bounded and plurisubharmonic on $U$. Then
 \[
  u_\delta-\bigl((u\circ F^{-1})*\rho_\delta\bigr)\circ F
 \]
 tends locally uniformly to zero as $\delta\downarrow0$.
 \end{corollary}
 \begin{proof}
-On a compact subset, $F$ and its inverse have uniformly bounded first derivatives. Thus, for a fixed $A>1$, the inverse image of a radius-$\delta$ ball about $F(z)$ lies between balls about $z$ of radii $\delta/A$ and $A\delta$. The two supremum regularizations are therefore bounded by one another at these enlarged radii. The first assertion of \cref{lem:bounded-local-regularization} makes their difference uniformly small. Its second assertion compares each of the two convolutions with the corresponding supremum regularization.
+On a compact subset, $F$ and its inverse have uniformly bounded first derivatives. Thus, for a fixed $A>1$, the inverse image under $F$ of the ball of radius $\delta$ about $F(z)$ lies between the balls about $z$ of radii $\delta/A$ and $A\delta$. Consequently, $S_\delta(u\circ F^{-1})(F(z))$ and $S_\delta u(z)$ both lie between $S_{\delta/A}u(z)$ and $S_{A\delta}u(z)$, and the first assertion of \cref{lem:bounded-local-regularization} shows that their difference tends to zero uniformly. The second assertion of the lemma, applied to $u$ and to $u\circ F^{-1}$, compares each of the two convolutions with the corresponding supremum regularization.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \section{Gluing with a small curvature error}
 
-The overlap estimate permits gluing by a smooth maximum. Small boundary corrections make each local branch irrelevant near the edge of its chart, while convexity of the maximum preserves a common lower curvature bound. Use $\omega$ to measure the curvature error.
+The overlap estimate allows local regularizations to be glued by a regularized maximum. Small corrections near the boundary of each chart make the corresponding local branch irrelevant there, while convexity of the regularized maximum preserves a common lower curvature bound. The curvature error is measured by the Hermitian form $\omega$.
 
 For an integer $N\geq1$, choose independent real random variables $Z_1,\ldots,Z_N$ with a common smooth even probability density supported in $[-1,1]$, and define
 \[
  M_\tau(t_1,\ldots,t_N)
      =\mathbb E\max_i(t_i+\tau Z_i)\quad(\tau>0).
 \]
-Convolution makes $M_\tau$ smooth. It is convex, increasing in every argument, and, with $\mathbf1=(1,\ldots,1)$, satisfies
+As a convolution, $M_\tau$ is smooth. It is convex and increasing in every argument, and, with $\mathbf1=(1,\ldots,1)$, it satisfies
 \[
  \max_i t_i\leq M_\tau(t)\leq\max_i t_i+\tau,
  \qquad M_\tau(t+c\mathbf1)=M_\tau(t)+c
 \]
-for $t\in\mathbb R^N$ and $c\in\mathbb R$. If $t_i<\max_{j\ne i}t_j-2\tau$, the $i$th argument can be removed without changing the value. Also $M_\tau(t)$ is nondecreasing in $\tau$: it is a convex even function of $\tau$ because the distribution of $Z$ is symmetric.
+for $t\in\mathbb R^N$ and $c\in\mathbb R$. If $t_i<\max_{j\ne i}t_j-2\tau$, then the $i$-th argument can be removed without changing the value. Moreover, $M_\tau(t)$ is nondecreasing in $\tau$, because it is a convex even function of $\tau$, the distribution of each $Z_i$ being symmetric.
 
-The second identity expresses translation invariance. If smooth real functions $f_i$, $1\leq i\leq N$, satisfy $\ddc f_i\geq-\gamma$ for a common smooth real $(1,1)$-form $\gamma$, then
+The second identity expresses invariance under translations. If smooth real functions $f_i$, $1\leq i\leq N$, satisfy $\ddc f_i\geq-\gamma$ for a common smooth real $(1,1)$-form $\gamma$, then
 \begin{equation}\label{eq:smooth-max-curvature}
  \ddc M_\tau(f_1,\ldots,f_N)\geq-\gamma.
 \end{equation}
-Indeed, the first-derivative coefficients are nonnegative and sum to one, by the translation identity, while the real Hessian of the convex function $M_\tau$ contributes a semipositive $(1,1)$-form in the chain rule.
+Indeed, in the chain rule the first partial derivatives of $M_\tau$ are nonnegative and, by the translation identity, sum to one, while the real Hessian of the convex function $M_\tau$ contributes a semipositive $(1,1)$-form.
 
 \Needspace{8\baselineskip}
 \begin{proposition}\label{prop:bounded-almost-regularization}
-Let $\theta$ be smooth and real, $\omega$ Hermitian, and
+Let $\theta$ be a smooth real $(1,1)$-form, let $\omega$ be a Hermitian form, and let
 $u\in\PSH(X,\theta)\cap L^\infty(X)$. There are smooth functions $v_j$ and positive numbers $\varepsilon_j\downarrow0$ such that
 \[
  v_j\downarrow u,\qquad
@@ -99,47 +99,50 @@ $u\in\PSH(X,\theta)\cap L^\infty(X)$. There are smooth functions $v_j$ and posit
 \end{proposition}
 \Needspace{9\baselineskip}
 \begin{proof}
-Fix $\epsilon>0$. By continuity of $\theta$, choose finitely many nested coordinate neighborhoods
+For fixed $\epsilon>0$, we first glue the local convolutions of $u$ by a regularized maximum, obtaining smooth functions that decrease to $u$ and have curvature error $2\epsilon\omega$; a diagonal sequence then proves the proposition.
+
+\emph{Step 1: local regularizations.} Fix $\epsilon>0$. By continuity of $\theta$, we can choose finitely many nested coordinate neighborhoods
 $V_i\Subset W_i\Subset U_i$, with the $V_i$ covering $X$, and smooth quadratic functions $r_i$ such that
 \[
  0\leq\ddc r_i-\theta\leq\epsilon\omega\quad\hbox{on }U_i.
 \]
-To make this choice, freeze the coefficients of $\theta$ at the center, add a small positive constant form, and shrink the coordinate neighborhood. Put $p_i=u+r_i$, a bounded plurisubharmonic function, and let $p_{i,\delta}$ be its convolution in $U_i$.
+To do so, freeze the coefficients of $\theta$ at the center of a chart, add a small positive constant form, and shrink the coordinate neighborhood. Then $p_i=u+r_i$ is a bounded plurisubharmonic function on $U_i$; let $p_{i,\delta}$ be its convolution in the coordinates of $U_i$.
 
-On an overlap, express both $p_i$ and $p_j$ in the $j$th coordinates. Their difference is the smooth function $r_i-r_j$, so the difference of their convolutions tends uniformly to $r_i-r_j$. By \cref{cor:coordinate-convolution}, changing the coordinates used to convolve $p_i$ introduces another uniformly vanishing error. Thus, on overlaps of the closures of the $W_i$,
+On an overlap, express both $p_i$ and $p_j$ in the coordinates of $U_j$. Their difference is the smooth function $r_i-r_j$, so the difference of their convolutions in these coordinates tends uniformly to $r_i-r_j$. By \cref{cor:coordinate-convolution}, changing the coordinates in which $p_i$ is convolved introduces another uniformly vanishing error. Thus, on the intersections of the closures of the $W_i$,
 \begin{equation}\label{eq:overlap-regularization}
  (p_{i,\delta}-r_i)-(p_{j,\delta}-r_j)\longrightarrow0
  \quad\hbox{uniformly}.
 \end{equation}
-Choose $\eta_i\in C^\infty(U_i,[-1,0])$, zero on $V_i$ and equal to $-1$ near the boundary of $W_i$, and $C\geq1$ with $\ddc\eta_i\geq-C\omega$. The cover, the functions $r_i,\eta_i$ and the constant $C$ may depend on $\epsilon$; they are fixed while $\delta$ tends to zero. Set
+
+\emph{Step 2: gluing.} Choose functions $\eta_i\in C^\infty(U_i,[-1,0])$ that vanish on $V_i$ and equal $-1$ near the boundary of $W_i$, and a constant $C\geq1$ with $\ddc\eta_i\geq-C\omega$. The cover, the functions $r_i,\eta_i$ and the constant $C$ may depend on $\epsilon$; they are fixed while $\delta$ tends to zero. Set
 \[
  f_{i,\delta}=p_{i,\delta}-r_i+(\epsilon/C)\eta_i
  \quad\hbox{on }W_i.
 \]
-Each satisfies $\ddc f_{i,\delta}\geq-\theta-2\epsilon\omega$. Near a boundary point of $W_i$, some $V_j$ contains that point. Equation \eqref{eq:overlap-regularization} implies, for all small $\delta$,
+Each of these functions satisfies $\ddc f_{i,\delta}\geq-\theta-2\epsilon\omega$. Every boundary point of $W_i$ lies in some $V_j$, and there $\eta_j=0$ while $\eta_i=-1$. By \eqref{eq:overlap-regularization}, for all small $\delta$,
 \[
  f_{i,\delta}<f_{j,\delta}-\epsilon/(2C)
 \]
-on a neighborhood of that boundary point. Finiteness of the cover makes this separation uniform.
+on a neighborhood of that boundary point. Since the cover is finite, this separation holds uniformly.
 
-Take $\tau(\delta)\downarrow0$ as $\delta\downarrow0$, with $\tau(\delta)<\epsilon/(8C)$, and define on each point the smooth maximum of the branches whose $W_i$ contain it. A branch disappears only near the boundary of its $W_i$, where it is below another branch by more than $2\tau$. The removal property of $M_\tau$ therefore proves that these formulas define a global smooth function $\psi_{\epsilon,\delta}$. Equation \eqref{eq:smooth-max-curvature} gives
+Let $\tau(\delta)\downarrow0$ as $\delta\downarrow0$, with $\tau(\delta)<\epsilon/(8C)$, and define the value at each point as the regularized maximum $M_{\tau(\delta)}$ of the functions $f_{i,\delta}$ for those $i$ with the point in $W_i$. A branch disappears only near the boundary of its $W_i$, where it lies below another branch by more than $2\tau$. By the removal property of $M_\tau$, these local formulas therefore define a global smooth function $\psi_{\epsilon,\delta}$, and \eqref{eq:smooth-max-curvature} gives
 \[
  \theta+2\epsilon\omega+\ddc\psi_{\epsilon,\delta}\geq0.
 \]
-At every point there is a branch with $\eta_i=0$, and $p_{i,\delta}\geq p_i$. Hence $\psi_{\epsilon,\delta}\geq u$. For fixed $\epsilon$, the local convolutions decrease with $\delta$, and so does the smooth maximum when both its arguments and $\tau$ decrease. Its pointwise limit is
+At every point there is a branch with $\eta_i=0$, and $p_{i,\delta}\geq p_i$; hence $\psi_{\epsilon,\delta}\geq u$. For fixed $\epsilon$, the local convolutions decrease with $\delta$, and the regularized maximum decreases when both its arguments and $\tau$ decrease. Its pointwise limit is
 \[
  \max_{i:x\in W_i}\bigl(u(x)+(\epsilon/C)\eta_i(x)\bigr)=u(x).
 \]
-Thus $\psi_{\epsilon,\delta}\downarrow u$ as $\delta\downarrow0$, also in $L^1$.
+Thus $\psi_{\epsilon,\delta}\downarrow u$ as $\delta\downarrow0$, and also in $L^1$.
 
-Choose a decreasing diagonal as follows. Take $\epsilon_j\downarrow0$ and put
-$v_j=\psi_{\epsilon_j,\delta_j}+2^{-j}$. Choose $\delta_j$ so small that
+\emph{Step 3: a diagonal sequence.} Take $\epsilon_j\downarrow0$ and put
+$v_j=\psi_{\epsilon_j,\delta_j}+2^{-j}$, where $\delta_j$ is chosen so small that
 \[
  \|\psi_{\epsilon_j,\delta_j}-u\|_{L^1}\leq2^{-j},
  \qquad v_j<v_{j-1}\quad(j\geq2).
 \]
-The second choice is possible because $v_{j-1}\geq u+2^{-j+1}$. More explicitly, the continuous functions
-$\psi_{\epsilon_j,\delta}+2^{-j}-v_{j-1}$ decrease pointwise to a function bounded above by $-2^{-j}$. Their nonnegative level sets are decreasing compact sets with empty intersection, so one of them is empty. The resulting sequence decreases, converges to $u$ in $L^1$, and stays above $u$. Its pointwise limit equals $u$ by uniqueness of canonical quasi-plurisubharmonic representatives. Taking $\varepsilon_j=2\epsilon_j$ proves the proposition.
+The second requirement can be met because $v_{j-1}\geq u+2^{-j+1}$. Indeed, as $\delta\downarrow0$, the continuous functions
+$\psi_{\epsilon_j,\delta}+2^{-j}-v_{j-1}$ decrease pointwise to a function bounded above by $-2^{-j}$. Their sets of nonnegative values are decreasing compact sets with empty intersection, so one of them is empty. The resulting sequence $(v_j)$ decreases, converges to $u$ in $L^1$, and stays above $u$. Its pointwise limit is $(\theta+2\epsilon_k\omega)$-plurisubharmonic for every $k$, hence $\theta$-plurisubharmonic, and it equals $u$ almost everywhere; by \cref{lem:qpsh-almost-everywhere-order}, it equals $u$ everywhere. Taking $\varepsilon_j=2\epsilon_j$ proves the proposition.
 \end{proof}
 
 \Needspace{16\baselineskip}
@@ -148,14 +151,14 @@ $\psi_{\epsilon_j,\delta}+2^{-j}-v_{j-1}$ decrease pointwise to a function bound
 For $\theta=\omega$, rescaling the approximants absorbs the curvature error into the positive background. Subtracting a constant first makes the approximants negative, so that this rescaling preserves their decreasing order.
 
 \begin{theorem}\label{thm:bounded-exact-regularization}\index{Regularization!bounded potentials}
-For $u\in\PSH(X,\omega)\cap L^\infty(X)$ there are smooth functions $u_j\downarrow u$ such that
+For every $u\in\PSH(X,\omega)\cap L^\infty(X)$, there are smooth functions $u_j\downarrow u$ such that
 \[
  \omega+\ddc u_j>0.
 \]
 The functions $u_j$ are uniformly bounded.
 \end{theorem}
 \begin{proof}
-Subtract a constant so that $u\leq-2$. Apply \cref{prop:bounded-almost-regularization} with $\theta=\omega$, obtaining smooth $v_j\downarrow u$ and positive $\varepsilon_j\downarrow0$ with $(1+\varepsilon_j)\omega+\ddc v_j\geq0$. The compact sets $\{v_j\geq-1\}$ decrease to the empty set, since $u\leq-2$. Discarding finitely many terms therefore gives $v_j<0$ everywhere. Write
+Subtracting a constant, we may assume $u\leq-2$. Apply \cref{prop:bounded-almost-regularization} with $\theta=\omega$, obtaining smooth functions $v_j\downarrow u$ and positive numbers $\varepsilon_j\downarrow0$ with $(1+\varepsilon_j)\omega+\ddc v_j\geq0$. The compact sets $\{v_j\geq-1\}$ decrease to the empty set, since $u\leq-2$. After discarding finitely many terms, we may therefore assume $v_j<0$ everywhere. Put
 \[
  u_j=\frac{v_j}{1+2\varepsilon_j}.
 \]
@@ -164,7 +167,7 @@ Then
  \omega+\ddc u_j
  \geq\frac{\varepsilon_j}{1+2\varepsilon_j}\omega>0.
 \]
-Because $v_j$ is negative and decreases while the positive denominator decreases to one, $u_j$ also decreases and converges to $u$. It lies between $u$ and its first smooth member, which gives uniform boundedness. Restore the subtracted constant.
+Since $v_j$ is negative and decreases, while the positive denominator decreases to one, $u_j$ also decreases, and it converges to $u$. Moreover, $u\leq v_j\leq u_j\leq u_1$, which gives uniform boundedness. Adding back the subtracted constant proves the theorem.
 \end{proof}
 
-This regularization supplies the approximation used for products and mass in \cref{chap:products}. For an arbitrary smooth $\theta$, \cref{prop:bounded-almost-regularization} retains a vanishing curvature error.
+This regularization provides the approximation used for products and mass in \cref{chap:products}. For an arbitrary smooth form $\theta$, \cref{prop:bounded-almost-regularization} only gives approximants whose curvature error tends to zero.

@@ -3,27 +3,29 @@
 
 Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and let $\theta$ be a smooth real $(1,1)$-form. Fix a smooth positive volume form $\mathrm{d}V$ for the $L^1(X)$ topology.
 
-In K\"ahler geometry, the smooth geodesic equation for the $L^2$ metric on potentials is a homogeneous Monge--Amp\`ere equation on a product. Product positivity also defines Perron interpolation for a nonclosed background, but the two constructions can differ: integration by parts in the action produces torsion terms. Even a smooth Perron segment given by constant translation can fail to be stationary for that action.
+This part studies two ways of passing between potentials: interpolation in an auxiliary real parameter, and restriction to a complex submanifold. A one-parameter family of $\theta$-plurisubharmonic functions can be regarded as a single function on the product of $X$ with a strip in $\mathbb C$, and positivity of its curvature current on the product is a convexity condition in the parameter. The largest such family with prescribed endpoints, the Perron envelope, interpolates between two potentials; in this chapter it replaces the geodesics of K\"ahler geometry. A Legendre transform in the parameter turns Perron rays into decreasing families of envelope fixed points, the test curves of \cref{chap:hermitian-testcurves}. Restriction behaves differently: the restriction of a potential to a submanifold can acquire poles that are invisible to its multiplier ideals, and \cref{chap:trace-data} records instead the information carried by the restricted ideals. All these constructions use only positivity of currents, so they apply to nonclosed backgrounds.
 
-The Perron construction itself rests on convexity and barriers. Convexity bounds every admissible path by the endpoint chord, while a lower barrier ensures that the envelope attains the endpoints. For potentials of the same ordinary singularity type, two affine barriers suffice and give uniform Lipschitz control in time. Maximality on each finite subinterval will supply the link with Legendre duality in the next chapter.
+In K\"ahler geometry, the smooth geodesic equation for the Mabuchi $L^2$ metric on potentials is a homogeneous Monge--Amp\`ere equation on such a product. Positivity on the product still defines Perron interpolation for a nonclosed background, but the two constructions can now differ: integration by parts in the $L^2$ action produces torsion terms. Even a smooth Perron segment given by translation by constants can fail to be stationary for that action.
+
+The Perron construction itself rests on convexity and barriers. Convexity in the parameter bounds every admissible path by the chord between its endpoints, while a lower barrier ensures that the envelope attains the endpoints. For two potentials of the same ordinary singularity type, two affine barriers suffice and give a Lipschitz bound in the parameter. Maximality on each finite subinterval is the property that links Perron segments with Legendre duality in \cref{chap:hermitian-testcurves}.
 
 \section{Subgeodesics and endpoint bounds}\label{sec:strip-positivity}
 
-For a nonempty open interval $I\subset\R$, write
+As in \cref{lem:invariant-strip-convexity}, for a nonempty open interval $I\subset\R$ write
 \[
  S_I=\{z\in\C:\Real z\in I\},\qquad
  \pi:X\times S_I\longrightarrow X.
 \]
-A family $u_t\in\PSH(X,\theta)$, $t\in I$, is a \emph{subgeodesic} if its complexification $U(x,z)=u_{\Real z}(x)$ is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on the product.\index{Subgeodesic} For finite $a<b$ and $u_a,u_b\in\PSH(X,\theta)$, a subgeodesic on $(a,b)$ is said to run from $u_a$ to $u_b$ if it converges to them in $L^1(X)$ at the respective endpoints.
+where $\pi$ is the projection. A family $u_t\in\PSH(X,\theta)$, $t\in I$, is a \emph{subgeodesic} if its complexification $U(x,z)=u_{\Real z}(x)$ is quasi-plurisubharmonic and satisfies $\pi^*\theta+\ddc U\geq0$ on $X\times S_I$.\index{Subgeodesic} For finite $a<b$ and $u_a,u_b\in\PSH(X,\theta)$, a subgeodesic on $(a,b)$ \emph{runs from $u_a$ to $u_b$} if $u_t\to u_a$ in $L^1(X)$ as $t\downarrow a$ and $u_t\to u_b$ as $t\uparrow b$.
 
-The elementary operations below construct lower barriers. Vertical convexity and the minimum principle from \cref{sec:psh-minimum} then give the continuity and upper bounds needed for the Perron envelope.
+The elementary operations below produce lower barriers. Convexity in $t$, given by \cref{lem:invariant-strip-convexity}, and the minimum principle of \cref{sec:psh-minimum} then give the continuity and upper bounds needed for the Perron envelope.
 
 \Needspace{8\baselineskip}
 \begin{proposition}\label{prop:hermitian-subgeodesic-calculus}
 Subgeodesics are preserved by adding an affine function of $t$, by a positive affine reparametrization of time, by finite maxima, and by convex combinations. For $h\in C^\infty(X,\mathbb R)$, replacing $\theta$ by $\theta+\ddc h$ and $u_t$ by $u_t-h$ also preserves them.
 \end{proposition}
 \begin{proof}
-Affine functions of $\Real z$ have zero complex Hessian, and a positive affine change of time is induced by a holomorphic change of strip coordinates. Convex combinations preserve the current inequality, and smooth gauge changes preserve the current itself. Maxima are covered by \cref{lem:max-psh}.
+Affine functions of $\Real z$ have zero complex Hessian, and a positive affine change of time is induced by a holomorphic affine change of the strip coordinate. Convex combinations preserve the inequality between currents, and the change $(\theta,u_t)\mapsto(\theta+\ddc h,u_t-h)$ preserves the current itself. Maxima are covered by \cref{lem:max-psh}.
 \end{proof}
 
 \begin{proposition}
@@ -33,7 +35,7 @@ A subgeodesic is continuous in $L^1(X)$ on the interior of its parameter interva
  u_t\leq\frac{b-t}{b-a}u_a+\frac{t-a}{b-a}u_b,
  \qquad a<t<b.
 \end{equation}
-Moreover the boundary upper limits hold jointly in space and time:
+Moreover, the following upper limits, taken jointly in space and time, hold at the endpoints:
 \[
  \limsup_{\substack{y\to x\\t\downarrow a}}u_t(y)\leq u_a(x),
  \qquad
@@ -41,29 +43,29 @@ Moreover the boundary upper limits hold jointly in space and time:
 \]
 \end{proposition}
 \begin{proof}
-For a compact interval $J\Subset I$, choose $a'<\inf J\leq\sup J<b'$ in $I$. By \cref{lem:invariant-strip-convexity}, the path lies below the chord through $u_{a'},u_{b'}$, hence below a constant on $J$. The function $\inf_{a'<t<b'}u_t$ is an integrable lower bound by \cref{prop:hermitian-kiselman}. For almost every $x$, the function $t\mapsto u_t(x)$ is finite and convex, hence continuous. Dominated convergence proves continuity in $L^1$ on $J$.
+For a compact interval $J\Subset I$, choose $a'<\inf J\leq\sup J<b'$ in $I$. By \cref{lem:invariant-strip-convexity}, the path lies below the chord through $u_{a'}$ and $u_{b'}$, hence below a constant on $J$, and by \cref{prop:hermitian-kiselman} the function $\inf_{a'<t<b'}u_t$ is an integrable lower bound. For almost every $x$, the function $t\mapsto u_t(x)$ is finite and convex, hence continuous, and dominated convergence proves continuity in $L^1$ on $J$.
 
-For the endpoint inequality, choose sequences approaching $a,b$ along which the stipulated $L^1$ convergence holds almost everywhere. Apply convexity between these times and pass to the limit. For each $t$, this proves \eqref{eq:hermitian-chord-bound} almost everywhere in $x$, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}.
+For the chord bound, choose sequences of times tending to $a$ and $b$ along which the assumed $L^1$ convergence holds almost everywhere. Applying convexity between these times and passing to the limit proves \eqref{eq:hermitian-chord-bound} almost everywhere in $x$, for each $t$, and hence everywhere by \cref{lem:qpsh-almost-everywhere-order}.
 
-For the joint limit at $a$, the coefficient of $u_a$ tends to one and the term involving $u_b$ has a vanishing coefficient and a uniform upper bound. Upper semicontinuity of $u_a$ gives the assertion when $u_a(x)$ is finite. At a pole, bound $u_a$ above near $x$ by an arbitrary real number, take the joint limit, and let that number tend to $-\infty$. The argument at $b$ is the same.
+For the joint upper limit at $a$, note that in \eqref{eq:hermitian-chord-bound} the coefficient of $u_a$ tends to one, while the term involving $u_b$ has a vanishing coefficient and a uniform upper bound. Upper semicontinuity of $u_a$ gives the assertion when $u_a(x)$ is finite. At a pole of $u_a$, bound $u_a$ near $x$ above by an arbitrary real number, take the joint upper limit, and let that number tend to $-\infty$. The argument at $b$ is the same.
 \end{proof}
 
 \Needspace{14\baselineskip}
 \section{Perron segments}\label{sec:perron-segments}
 
-The chord bound survives taking a regularized supremum. A single competitor attaining the endpoints will bound that supremum from below and force the same endpoint limits. Fix $u_0,u_1\in\PSH(X,\theta)$ and call a subgeodesic on $(0,1)$ \emph{admissible} if its joint boundary upper limits are at most $u_0,u_1$, respectively. Define
+The chord bound survives taking a regularized supremum, and a single competitor attaining the endpoints bounds that supremum from below and forces the same endpoint limits. Fix $u_0,u_1\in\PSH(X,\theta)$ and call a subgeodesic on $(0,1)$ \emph{admissible} if its joint upper limits at $t=0$ and $t=1$, in the sense of \cref{prop:subgeodesic-endpoint-control}, are at most $u_0$ and $u_1$, respectively. Define
 \[
  U=\left(\sup\{V:V\text{ is an admissible complexification}\}\right)^*.
 \]
-The regularization is taken on $X\times S_{(0,1)}$. Denote its slices by $u_t^{\mathrm P}$. When these form a subgeodesic attaining the prescribed endpoints in $L^1$, they define the \emph{Perron segment}, with $u_0^{\mathrm P}=u_0$ and $u_1^{\mathrm P}=u_1$. Affine reparametrization gives the same construction on any finite interval.
+where the upper semicontinuous regularization is taken on $X\times S_{(0,1)}$, and denote the slices of $U$ by $u_t^{\mathrm P}$. When these slices form a subgeodesic running from $u_0$ to $u_1$, they define the \emph{Perron segment} from $u_0$ to $u_1$, and we set $u_0^{\mathrm P}=u_0$ and $u_1^{\mathrm P}=u_1$. An affine change of parameter gives the same construction on any finite interval.
 
 \begin{proposition}\label{prop:hermitian-perron}\index{Perron interpolation}
-If an admissible competitor exists, the Perron envelope is the largest admissible subgeodesic. If one competitor attains $u_0,u_1$ in $L^1$, so does the envelope. In that case, its restriction to each $[a,b]\subset[0,1]$, $a<b$, is the Perron segment between its own endpoints.
+If an admissible subgeodesic exists, the Perron envelope is the largest admissible subgeodesic. If some admissible subgeodesic runs from $u_0$ to $u_1$, so does the envelope, which is then the Perron segment. In that case, for every $[a,b]\subset[0,1]$ with $a<b$, its restriction to $[a,b]$ is the Perron segment between $u_a^{\mathrm P}$ and $u_b^{\mathrm P}$.
 \end{proposition}
 \begin{proof}
-Vertical convexity and the boundary inequalities bound every competitor by $(1-t)u_0+t u_1$. This bound is jointly upper semicontinuous on the interior and locally bounded above, so it holds after regularization. The local envelope theorem of \cref{sec:obstacle-envelopes} gives a product potential, still invariant in $\Im z$. It dominates an admissible competitor, so each slice belongs to $\PSH(X,\theta)$. The chord bound gives the joint boundary inequalities by the endpoint argument in \cref{prop:subgeodesic-endpoint-control}. The envelope therefore belongs to its defining family and is its largest member.
+Convexity in $t$ and the upper limits at the endpoints bound every competitor by $(1-t)u_0+t u_1$. This bound is jointly upper semicontinuous on the interior and locally bounded above, so it persists after regularization. The local envelope theorem of \cref{sec:obstacle-envelopes} shows that $U$ is quasi-plurisubharmonic with $\pi^*\theta+\ddc U\geq0$, and $U$ is still independent of $\Im z$. Since it dominates an admissible competitor, each slice belongs to $\PSH(X,\theta)$. The chord bound gives the joint upper limits at the endpoints, by the argument at the end of the proof of \cref{prop:subgeodesic-endpoint-control}. The envelope therefore belongs to its defining family and is its largest member.
 
-If a competitor $w_t$ has the required $L^1$ endpoints, then
+If a competitor $w_t$ runs from $u_0$ to $u_1$, then
 \[
  w_t\leq u_t^{\mathrm P}\leq(1-t)u_0+t u_1.
 \]
@@ -71,24 +73,24 @@ In particular, almost everywhere,
 \[
  |u_t^{\mathrm P}-u_0|\leq |w_t-u_0|+t|u_1-u_0|,
 \]
-which proves $u_t^{\mathrm P}\to u_0$ in $L^1$ as $t\downarrow0$. The argument at $1$ is identical.
+which proves $u_t^{\mathrm P}\to u_0$ in $L^1$ as $t\downarrow0$. The argument at $t=1$ is the same.
 
-For $0\leq a<b\leq1$, let $v_t$ be the Perron envelope between $u_a^{\mathrm P}$ and $u_b^{\mathrm P}$. The original path restricted to $(a,b)$ attains these endpoints and is admissible by \cref{prop:subgeodesic-endpoint-control}. Thus $v_t$ attains them and dominates $u_t^{\mathrm P}$. Its joint boundary bounds permit gluing its complexification to $U$ outside the smaller strip by \cref{lem:qpsh-gluing}. At an original endpoint, the same bounds preserve admissibility for $u_0,u_1$. The resulting competitor cannot exceed $U$, proving equality on $(a,b)$.
+For $0\leq a<b\leq1$, let $v_t$ be the Perron envelope on $(a,b)$ between $u_a^{\mathrm P}$ and $u_b^{\mathrm P}$. The original path restricted to $(a,b)$ runs between these endpoints and is admissible by \cref{prop:subgeodesic-endpoint-control}. Thus $v_t$ also runs between them and dominates $u_t^{\mathrm P}$. The joint upper limits of $v_t$ at $a$ and $b$ allow us to glue its complexification to $U$ outside the smaller strip, by \cref{lem:qpsh-gluing}; if $a=0$ or $b=1$, the same upper limits show that the glued family is still admissible for $u_0,u_1$. The resulting competitor cannot exceed $U$, which proves $v_t=u_t^{\mathrm P}$ on $(a,b)$.
 \end{proof}
 
 \Needspace{15\baselineskip}
-A bounded difference between the endpoints supplies the required lower barrier explicitly.
+When the endpoints differ by a bounded function, an explicit lower barrier is available.
 
 \begin{theorem}
 \label{thm:ordinary-type-perron}\index{Perron interpolation!fixed ordinary type}
-Suppose $u_0\sim u_1$ and choose $C\geq0$ with
-$u_0-C\leq u_1\leq u_0+C$. The Perron segment exists and attains both endpoints. Every slice has their ordinary singularity type, and
+Suppose that $u_0\sim u_1$, and choose $C\geq0$ with
+$u_0-C\leq u_1\leq u_0+C$. Then the Perron segment from $u_0$ to $u_1$ exists, every slice has the ordinary singularity type of $u_0$ and $u_1$, and
 \[
  u_0-Ct\leq u_t^{\mathrm P}\leq u_0+Ct,
  \qquad
  u_1-C(1-t)\leq u_t^{\mathrm P}\leq u_1+C(1-t).
 \]
-Away from the common pole set,
+Moreover, away from the common pole set,
 \[
  |u_t^{\mathrm P}-u_s^{\mathrm P}|\leq C|t-s|,
  \qquad0\leq s,t\leq1.
@@ -99,30 +101,30 @@ Consider the barrier
 \[
  w_t=\max\{u_0-Ct,\ u_1-C(1-t)\}.
 \]
-It is a subgeodesic by \cref{prop:hermitian-subgeodesic-calculus}, and the bounded difference gives $w_0=u_0,w_1=u_1$. Upper semicontinuity gives the joint boundary upper limits. Off the common poles, $|w_t-u_0|\leq Ct$ and $|w_t-u_1|\leq C(1-t)$, so $w_t$ attains both endpoints in $L^1$. Apply \cref{prop:hermitian-perron}.
+It is a subgeodesic by \cref{prop:hermitian-subgeodesic-calculus}, and the bounded difference gives $w_0=u_0$ and $w_1=u_1$. Upper semicontinuity gives the joint upper limits at the endpoints. Off the common poles, $|w_t-u_0|\leq Ct$ and $|w_t-u_1|\leq C(1-t)$, so $w_t$ runs from $u_0$ to $u_1$, and \cref{prop:hermitian-perron} applies.
 
-The lower bounds follow from $w_t\leq u_t^{\mathrm P}$ and the upper bounds from the chord estimate. They also give the asserted singularity type. Off the common poles, put $f(t)=u_t^{\mathrm P}(x)$. For $0<s<t<1$, monotonicity of convex secant slopes gives
+The lower bounds follow from $w_t\leq u_t^{\mathrm P}$, and the upper bounds from the chord estimate; together they give the asserted singularity type. Off the common poles, put $f(t)=u_t^{\mathrm P}(x)$. For $0<s<t<1$, monotonicity of the slopes of secants of the convex function $f$ gives
 \[
  -C\leq\frac{f(s)-f(0)}s
  \leq\frac{f(t)-f(s)}{t-s}
  \leq\frac{f(1)-f(t)}{1-t}\leq C.
 \]
-The endpoint estimates cover $s=0$ and $t=1$, proving the Lipschitz bound on $[0,1]$.
+The two-sided estimates at the endpoints cover the cases $s=0$ and $t=1$, which proves the Lipschitz bound on $[0,1]$.
 \end{proof}
 
-For endpoints of different types, a common lower potential still gives an admissible constant path. Endpoint attainment requires a barrier approaching the prescribed values; \cref{prop:hermitian-perron} separates this requirement from existence of the envelope.
+For endpoints of different types, a common lower potential still gives an admissible constant path, so the envelope exists. Attaining the endpoints requires a barrier approaching the prescribed values; \cref{prop:hermitian-perron} separates this requirement from the existence of the envelope.
 
 \Needspace{25\baselineskip}
 \section{The smooth product equation}
 
-For a smooth path, product positivity compares acceleration with the spatial gradient of the velocity. Let $u_t$ be smooth in $(x,t)\in X\times I$, suppose $\eta_t=\theta+\ddc u_t>0$, and write, in local holomorphic coordinates $(x_1,\ldots,x_n)$,
+For a smooth path, positivity on the product compares the acceleration with the spatial gradient of the velocity. Let $u_t$ be smooth in $(x,t)\in X\times I$, suppose that $\eta_t=\theta+\ddc u_t>0$, and write, in local holomorphic coordinates $(x_1,\ldots,x_n)$,
 \[
  \theta=\frac{\mathrm i}{2\pi}\sum_{i,j=1}^n
         g_{i\bar j}\,\mathrm dx_i\wedge\mathrm d\bar x_j,
  \qquad H=(g_{i\bar j}+\partial_i\partial_{\bar j}u),
  \qquad \xi=(\partial_i\dot u)_{i=1}^n.
 \]
-Dots denote time derivatives, $\xi$ is a column vector, and $\xi^*$ is its conjugate transpose. Since $t=\Real z$, the product form $\pi^*\theta+\ddc U$ has coefficient matrix
+Here dots denote derivatives in $t$, $\xi$ is a column vector, and $\xi^*$ is its conjugate transpose. Since $t=\Real z$, the form $\pi^*\theta+\ddc U$ on the product has, in the coordinates $(x_1,\ldots,x_n,z)$, the coefficient matrix
 \[
  \begin{pmatrix}
  H&\tfrac12\xi\\
@@ -132,35 +134,35 @@ Dots denote time derivatives, $\xi$ is a column vector, and $\xi^*$ is its conju
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:hermitian-schur-geodesic}\index{Geodesic equation!homogeneous product equation}
-The product form is semipositive exactly when
+The form $\pi^*\theta+\ddc U$ is semipositive exactly when
 \[
  \ddot u\geq\xi^*H^{-1}\xi.
 \]
-Its $(n+1)$st power vanishes exactly when equality holds. Equivalently, the homogeneous product equation is
+Its $(n+1)$st power vanishes exactly when equality holds. Equivalently, the homogeneous Monge--Amp\`ere equation on the product is
 \begin{equation}\label{eq:hermitian-hcma-smooth}
  \ddot u\,\eta_t^n
  =n\,\mathrm{d}\dot u\wedge\dc\dot u\wedge\eta_t^{n-1}.
 \end{equation}
 \end{proposition}
 \begin{proof}
-The Schur complement of $H$ is $(\ddot u-\xi^*H^{-1}\xi)/4$. Since $H>0$, the block matrix is semipositive exactly when this complement is nonnegative, and its determinant vanishes exactly when the complement vanishes.
+The Schur complement of $H$ in the block matrix is $(\ddot u-\xi^*H^{-1}\xi)/4$. Since $H>0$, the block matrix is semipositive exactly when this complement is nonnegative, and its determinant, which is $\det H$ times the complement, vanishes exactly when the complement vanishes.
 
-The scalar identity is
+To rewrite the equation in terms of forms, note that
 \[
  \mathrm{d}\dot u\wedge\dc\dot u=\frac{\mathrm i}{2\pi}\partial\dot u\wedge\bar\partial\dot u,
  \qquad
  n\frac{\mathrm{d}\dot u\wedge\dc\dot u\wedge\eta_t^{n-1}}{\eta_t^n}
  =\operatorname{tr}(H^{-1}\xi\xi^*)=\xi^*H^{-1}\xi.
 \]
-Since $\eta_t^n>0$, multiplying this identity by $\eta_t^n$ gives \eqref{eq:hermitian-hcma-smooth}.
+Multiplying the second identity by $\eta_t^n>0$ gives \eqref{eq:hermitian-hcma-smooth}.
 \end{proof}
 
-This calculation identifies the smooth homogeneous product equation. A weak formulation and proof for nonsmooth Perron segments require a separate argument.
+This calculation identifies the homogeneous equation for smooth paths. Whether nonsmooth Perron segments solve a weak form of this equation is a separate question, which we do not address.
 
 \Needspace{25\baselineskip}
 \section{The \texorpdfstring{$L^2$}{L2} action and torsion}
 
-The product equation uses the spatial form pointwise. In the $L^2$ action, integration by parts also differentiates its powers, producing terms absent from that equation. Fix a Hermitian form $\omega$. On the space $\HH_\omega$ of \cref{chap:mass}, consider the metric
+The homogeneous equation on the product involves the spatial form $\eta_t$ only pointwise. In the $L^2$ action, integration by parts also differentiates the powers of $\eta_t$, which produces terms absent from that equation. Fix a Hermitian form $\omega$, write $\omega_u=\omega+\ddc u$, and recall from \cref{chap:mass} the space $\HH_\omega$ of smooth real functions $u$ with $\omega_u>0$. On $\HH_\omega$ consider the Riemannian metric
 \[
  G_u(v,w)=\int_Xvw\,\omega_u^n,
  \qquad v,w\in C^\infty(X,\mathbb R).
@@ -169,7 +171,7 @@ For a smooth path $u_t\in\HH_\omega$, $0\leq t\leq1$, its action is
 \[
  \mathscr S(u)=\frac12\int_0^1\int_X\dot u_t^{\,2}\,\omega_{u_t}^n\,\mathrm{d}t.
 \]
-Stationarity under smooth variations fixing both endpoints gives the formal geodesic equation for this metric.
+Stationarity under smooth variations fixing both endpoints is the formal geodesic equation of this metric.
 
 \Needspace{10\baselineskip}
 \begin{theorem}\label{thm:hermitian-ltwo-stationarity}\index{Geodesic equation!Hermitian metric}\index{Torsion!geodesic equation}
@@ -185,20 +187,20 @@ Put $\eta_t=\omega_{u_t}$ and $T_t=\eta_t^{n-1}$. The path is stationary for $\m
 All differentials on the right act only in the $X$ variable.
 \end{theorem}
 \begin{proof}
-Vary the path as $u_t+s v_t$, where $v_t$ is smooth in $(x,t)$ and $v_0=v_1=0$, and put $f=\dot u_t$. Differentiating the action at $s=0$ gives
+Vary the path as $u_t+s v_t$, where $v_t$ is smooth in $(x,t)$ and $v_0=v_1=0$, and put $f=\dot u_t$. Differentiating the action at $s=0$, using $\partial_s(\omega_{u_t+sv_t}^n)|_{s=0}=n\ddc v_t\wedge T_t$, gives
 \[
  \delta\mathscr S
  =\int_0^1\left(\int_X f\dot v_t\,\eta_t^n
        +\frac n2\int_X f^2\ddc v_t\wedge T_t\right)\mathrm{d}t.
 \]
-Integration in time uses
-$\partial_t(\eta_t^n)=n\ddc f\wedge T_t$. Integration on $X$ uses \cref{lem:ibp} with the entire form $f^2T_t$. Thus
+We integrate by parts in $t$ in the first term, using
+$\partial_t(\eta_t^n)=n\ddc f\wedge T_t$, and on $X$ in the second, using \cref{lem:ibp} with the whole form $f^2T_t$. Thus
 \[
  \delta\mathscr S
  =\int_0^1\int_Xv_t\left(-\ddot u_t\eta_t^n
        -nf\ddc f\wedge T_t+\frac n2\ddc(f^2T_t)\right)\mathrm{d}t.
 \]
-The full product rule is
+The product rule gives
 \[
  \begin{split}
  \ddc(f^2T_t)={}&2f\ddc f\wedge T_t
@@ -207,23 +209,23 @@ The full product rule is
        +f^2\ddc T_t.
  \end{split}
 \]
-After cancellation with the volume derivative, the integrand is $v_t$ times the difference between the right and left sides of \eqref{eq:hermitian-ltwo-geodesic}. Positivity of $\eta_t$ on $X\times[0,1]$ permits every sufficiently small variation. The fundamental lemma of the calculus of variations gives both implications.
+After the term $nf\ddc f\wedge T_t$ cancels, the integrand is $v_t$ times the difference between the right-hand and left-hand sides of \eqref{eq:hermitian-ltwo-geodesic}. Since $\eta_t>0$ on the compact set $X\times[0,1]$, every smooth $v_t$ gives an admissible variation for small $|s|$, and the fundamental lemma of the calculus of variations gives both implications.
 \end{proof}
 
-For a K\"ahler background, $\mathrm{d}T_t=\dc T_t=0$ and the equation reduces to \eqref{eq:hermitian-hcma-smooth}. The Gauduchon condition on $\eta_t$ removes only the last term. Constant translations isolate that term and provide an exact test for stationarity.
+For a K\"ahler background, $\mathrm{d}T_t=\dc T_t=0$, and the equation reduces to \eqref{eq:hermitian-hcma-smooth}. The Gauduchon condition $\ddc T_t=0$ on $\eta_t$ removes only the last term. Translations by constants isolate that term and give an exact test for stationarity.
 
 \Needspace{10\baselineskip}
 \begin{corollary}
 \label{cor:translations-gauduchon}\index{Geodesic equation!constant translations}
-Fix $u\in\HH_\omega$ and a nonzero constant $a$. The path $u_t=u+at$ is a Perron segment and solves the smooth homogeneous product equation. It is stationary for the $L^2$ action if and only if
+Fix $u\in\HH_\omega$ and a nonzero constant $a$. The path $u_t=u+at$, $0\leq t\leq1$, is a Perron segment and solves the homogeneous equation \eqref{eq:hermitian-hcma-smooth}. It is stationary for the $L^2$ action if and only if
 \[
  \ddc(\omega_u^{n-1})=0.
 \]
-For $n\geq2$, this says precisely that $\omega_u$ is Gauduchon.
+For $n\geq2$, this means that $\omega_u$ is a Gauduchon metric.
 \end{corollary}
 \begin{proof}
-The path is admissible and equals the chord between its endpoints, so no admissible competitor can be larger. It is therefore the Perron segment. Its time acceleration and the spatial derivatives of its velocity vanish, which proves the homogeneous product equation. In \eqref{eq:hermitian-ltwo-geodesic}, the sole remaining term is
-$\frac n2a^2\ddc(\omega_u^{n-1})$. This vanishes exactly under the displayed condition.
+The path is admissible and equals the chord between its endpoints, so by the chord bound no admissible competitor can be larger; it is therefore the Perron segment. Its acceleration and the spatial derivatives of its velocity vanish, which proves \eqref{eq:hermitian-hcma-smooth}. In \eqref{eq:hermitian-ltwo-geodesic}, the only remaining term is
+$\frac n2a^2\ddc(\omega_u^{n-1})$, which vanishes exactly under the stated condition.
 \end{proof}
 
-The three-dimensional torus in \cref{ex:gauduchon-persistence-torus} carries a Gauduchon form $\omega$ and a smooth potential $u\in\HH_\omega$ for which $\omega_u$ is not Gauduchon. Thus $u_t=u+t$ is a smooth Perron segment that is not stationary for the $L^2$ action. On a surface, the Gauduchon condition persists under potential perturbations by \cref{prop:gauduchon-potential-persistence}, but it does not cancel the first-derivative terms in \eqref{eq:hermitian-ltwo-geodesic}. Relating Perron interpolation to a complete metric on Hermitian singularity classes remains a separate problem.
+The three-dimensional torus in \cref{ex:gauduchon-persistence-torus} carries a Gauduchon form $\omega$ and a smooth potential $u\in\HH_\omega$ for which $\omega_u$ is not Gauduchon. Thus $u_t=u+t$ is a smooth Perron segment that is not stationary for the $L^2$ action. On a surface, the Gauduchon condition persists under perturbation of the potential by \cref{prop:gauduchon-potential-persistence}, but it does not cancel the terms in \eqref{eq:hermitian-ltwo-geodesic} involving first derivatives of $T_t$. We do not know how to relate Perron interpolation to a complete metric on singularity types in the Hermitian setting.

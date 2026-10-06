@@ -1,9 +1,9 @@
 \section{The gradient bound by rescaling}
 \label{sec:stw-gradient-reduction}
 
-The Hessian estimate makes a sequence rescaled by its maximum gradient compact in $C^1$ on every fixed Euclidean ball. A hypothetical gradient blowup would therefore give a bounded Lipschitz function with a nonzero derivative at the origin. The rescaled determinant tends to zero, so the limit is maximal for the cone of \cref{sec:stw-liouville}, contradicting its Liouville theorem.
+If the gradients of a family of solutions were unbounded, rescaling at points of maximal gradient would produce functions on growing Euclidean balls with gradient one at the origin. The Hessian estimate makes these functions compact in $C^1$ on every fixed ball, so a limit is a bounded Lipschitz function on $\mathbb C^n$ with nonzero gradient at the origin. The rescaled determinant tends to zero, so the limit is maximal for the cone of \cref{sec:stw-liouville}, which contradicts \cref{thm:stw-cone-liouville}.
 
-Consider a family of normalized solutions of \cref{thm:stw-volume} with $\|F\|_{C^0}\leq M$ for a fixed $M>0$. The potential estimate bounds $\|u\|_{C^0}$ and $|b|$ uniformly. We isolate the consequence of a Hessian estimate for this family.
+Consider a family of smooth solutions $(u,b)$ of the equation in \cref{thm:stw-volume}, normalized by $\sup_Xu=0$, with $\|F\|_{C^0}\leq M$ for a fixed $M>0$. By \cref{prop:stw-czero-reconstructed}, $\|u\|_{C^0}$ and $|b|$ are uniformly bounded. The following proposition shows that a Hessian estimate in terms of the squared gradient implies bounds for both.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:stw-gradient-from-second-order}
@@ -15,29 +15,29 @@ Suppose there is a constant $K$ such that every solution in this family satisfie
 Then $\sup_X|\partial u|_\gamma$ and $\sup_X|\ddc u|_\gamma$ are bounded by a constant depending only on $X,\gamma_0,\gamma,M$ and $K$.
 \end{proposition}
 \begin{proof}
-Use the cofactor matrices $Q_u$ of \eqref{eq:stw-cofactor-matrix-scaling}. Their background term is fixed, and $Z$ is linear in the first derivatives of $u/(2\pi)$.
+We use the matrices $Q_u$ of \eqref{eq:stw-cofactor-matrix-scaling}. Their background term $Q_0$ is fixed, and $Z$ is linear in the first derivatives of $u/(2\pi)$.
 
-Suppose the gradient bound fails. Choose solutions $(u_j,b_j)$ with prescribed functions $F_j$ such that
+Suppose that the gradient bound fails. Then there are solutions $(u_j,b_j)$ with prescribed functions $F_j$ such that
 \[
  A_j=\sup_X|\partial u_j|_\gamma
        =|\partial u_j(x_j)|_\gamma\longrightarrow\infty.
 \]
-After extraction the points lie in one fixed coordinate neighborhood. Translate their coordinate centers to zero and make a uniformly controlled complex linear change so that $\gamma(x_j)$ is the identity. A fixed-radius coordinate ball remains available at every center. On balls whose radii tend to infinity define
+After passing to a subsequence, the points $x_j$ lie in one fixed coordinate neighborhood. Translate the coordinates so that $x_j$ becomes the origin, and apply a uniformly controlled complex linear change of coordinates so that the matrix of $\gamma$ at $x_j$ is the identity; a coordinate ball of fixed radius remains available around every $x_j$. On balls whose radii tend to infinity define
 \[
  v_j(z)=u_j(x_j+z/A_j),
 \]
-where the preceding linear changes are understood. The coefficient matrices $g_j(z)$ of $\gamma$ evaluated at these scaled points converge smoothly on every fixed ball to the Euclidean identity. In this notation
+in these coordinates. The coefficient matrices $g_j(z)$ of $\gamma$ at the points $x_j+z/A_j$ converge smoothly to the identity on every fixed ball. In this notation
 \[
  |v_j|\leq C,
  \qquad |\partial v_j|_{g_j}\leq1,
  \qquad |\partial v_j(0)|=1.
 \]
-The assumed estimate gives a uniform bound for all complex Hessian entries of $v_j$ on every fixed ball, since two derivatives contribute $A_j^{-2}$. Hence their Euclidean Laplacians are uniformly bounded. The standard interior estimates for the scalar Laplacian give local $W^{2,p}$ bounds for every finite $p$. Choose $p>2n$ and use Sobolev embedding and compactness to extract a diagonal subsequence converging in $C^1$ on compact subsets to a function $v$ on $\mathbb C^n$. It is bounded and globally Lipschitz, and
+The assumed estimate \eqref{eq:stw-second-order-required} gives a uniform bound for all complex Hessian entries of $v_j$ on every fixed ball, since two derivatives contribute the factor $A_j^{-2}$. Hence the Euclidean Laplacians of the $v_j$ are uniformly bounded, and the interior estimates for the Laplacian give local $W^{2,p}$ bounds for every finite $p$. Choosing $p>2n$ and using Sobolev embedding and compactness, we extract a diagonal subsequence converging in $C^1$ on compact subsets to a function $v$ on $\mathbb C^n$. This function is bounded and globally Lipschitz, and
 \[
  |\partial v(0)|=1.
 \]
 
-Divide the cofactor matrix in \eqref{eq:stw-cofactor-matrix-scaling} by $A_j^2$ and evaluate at the scaled points. The background term is $O(A_j^{-2})$. The first-order term is $O(A_j^{-1})$, since one derivative of $u_j$ is $A_j$ times a derivative of $v_j$. The uniformly bounded complex Hessians and $g_j\to I$ therefore give, in fixed Euclidean coordinates on any fixed ball,
+Now divide the matrix in \eqref{eq:stw-cofactor-matrix-scaling} by $A_j^2$ and evaluate it at the scaled points. The background term becomes $O(A_j^{-2})$, and the first-order term becomes $O(A_j^{-1})$, since one derivative of $u_j$ is $A_j$ times a derivative of $v_j$. Since the complex Hessians of $v_j$ are uniformly bounded and $g_j\to I$, we obtain on any fixed ball
 \begin{equation}\label{eq:stw-rescaled-matrix}
  A_j^{-2}Q_{u_j}
        =P_n\left(\frac{H(v_j)}{2\pi}\right)+o(1),
@@ -45,15 +45,15 @@ Divide the cofactor matrix in \eqref{eq:stw-cofactor-matrix-scaling} by $A_j^2$ 
  \det(A_j^{-2}Q_{u_j})
        =A_j^{-2n}\mathrm{e}^{(n-1)(F_j+b_j)}\longrightarrow0.
 \end{equation}
-For precision, take the compatible unitary frames obtained from the positive square roots $S_j=g_j^{-1/2}$. The principal matrix in these frames is $P_n(S_jH(v_j)S_j/(2\pi))$, which differs from $P_n(H(v_j)/(2\pi))$ by a uniformly vanishing error. No derivatives of these frames are taken, and the determinant identity is exact in the unitary frames. The positive factor $1/(2\pi)$ does not change the cone. The positive matrices on the left imply, by passage to distributions, $P_n(H(v))\geq0$.
+To be precise, we compute in the unitary frames obtained from the positive square roots $S_j=g_j^{-1/2}$. In these frames the principal matrix is $P_n(S_jH(v_j)S_j/(2\pi))$, which differs from $P_n(H(v_j)/(2\pi))$ by an error tending to zero uniformly; no derivatives of the frames are taken, and the determinant identity is exact in unitary frames. Since the matrices on the left of \eqref{eq:stw-rescaled-matrix} are positive and the positive factor $1/(2\pi)$ does not change the cone, passing to the limit in the sense of distributions gives $P_n(H(v))\geq0$.
 
-We check maximality. Suppose a smooth $h$ touches $v$ from below at $z_0$ and $P_n(H(h)(z_0))>0$. Subtract $\delta|z-z_0|^2$ with $\delta>0$ small. On a small ball this makes the contact strict and preserves strict positivity of the matrix. Local uniform convergence supplies interior lower contact points $z_j\to z_0$ for $v_j$ and this perturbed test function, after adding constants to the latter. The complex Hessian inequality at a minimum gives
+It remains to check maximality. Suppose that a smooth function $h$ touches $v$ from below at $z_0$ and $P_n(H(h)(z_0))>0$. Subtract $\delta|z-z_0|^2$ with $\delta>0$ small; on a small ball this makes the contact strict and preserves strict positivity of the matrix. Local uniform convergence gives points $z_j\to z_0$ at which $v_j$ minus this perturbed test function has an interior local minimum. At such a minimum,
 \[
  H(v_j)(z_j)\geq H(h)(z_j)-\delta I.
 \]
-Because $P_n$ preserves nonnegative matrices, \eqref{eq:stw-rescaled-matrix} now implies $A_j^{-2}Q_{u_j}(z_j)\geq cI$ for a fixed $c>0$ and all sufficiently large $j$. Its determinant is at least $c^n$, contradicting the limit zero in that equation. Thus $v$ is maximal for the cone of \cref{sec:stw-liouville}.
+Because $P_n$ preserves nonnegative matrices, \eqref{eq:stw-rescaled-matrix} now implies $A_j^{-2}Q_{u_j}(z_j)\geq cI$ for a fixed $c>0$ and all sufficiently large $j$. The determinant of this matrix is then at least $c^n$, which contradicts the limit zero in \eqref{eq:stw-rescaled-matrix}. Thus $v$ is maximal for the cone of \cref{sec:stw-liouville}.
 
-The Liouville theorem makes $v$ constant, contradicting $|\partial v(0)|=1$. This proves the uniform gradient bound. Substitution in \eqref{eq:stw-second-order-required} gives the uniform complex Hessian bound.
+By \cref{thm:stw-cone-liouville}, $v$ is constant, which contradicts $|\partial v(0)|=1$. This proves the uniform gradient bound, and substitution in \eqref{eq:stw-second-order-required} gives the uniform complex Hessian bound.
 \end{proof}
 
-For prescribed functions bounded in $C^2$, the potential estimate bounds $u$ and $b$, and \cref{thm:stw-second-order-reconstructed}, after the fixed conversion $v=u/(2\pi)$, proves \eqref{eq:stw-second-order-required}. Thus both the gradient and the complex Hessian are uniformly bounded.
+For prescribed functions $F$ bounded in $C^2$, \cref{prop:stw-czero-reconstructed} bounds $u$ and $b$, and \cref{thm:stw-second-order-reconstructed}, applied to $v=u/(2\pi)$ and $h=(n-1)(F+b)$, proves \eqref{eq:stw-second-order-required}. Thus both the gradient and the complex Hessian are uniformly bounded.
