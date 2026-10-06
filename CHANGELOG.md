@@ -1,5 +1,9 @@
 # Modification history
 
+## 6 October 2026 — Mass invariance only in the Kähler theory (529, follow-up)
+
+Following the author's correction, statements made without a Kähler hypothesis that the non-pluripolar mass in a closed background depends only on the singularity type are now restricted to compact Kähler manifolds. They are in the openings of Chapters 12 and 29, the singularity-volume remark and its uses, the normalization chapter, Chapter 15 and the historical notes. Every use in a proof was already on a Kähler manifold, so no proof changes. Stokes' theorem for bounded potentials of a closed background is unaffected. The rule is added to the book-writing skill. Clean rebuild (1492 printed pages), republished in website commit 9b3a351.
+
 ## 6 October 2026 — Second whole-book review 529
 
 [The second review](research/editorial/whole-book-accuracy-review-529.md) answers the author's request to check the whole book again for accurate details and clear, readable exposition. The book was read in 29 parts, line by line. Formulas were re-derived and every cross-reference target was checked against its hypotheses.

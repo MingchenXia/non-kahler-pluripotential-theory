@@ -121,9 +121,23 @@ Each correction is local; no theorem's scope changed except where stated.
 
 This is a review and comparison of the text, not a new independent certification of every proof.
 
+## Follow-up: mass invariance only in the Kähler theory
+
+The author then pointed out (6 October 2026): “‘闭背景下非多极质量只依赖奇异性类型’这只在Kähler的时候成立” (that the non-pluripolar mass in a closed background depends only on the singularity type holds only in the Kähler case).
+
+Statements of this invariance made without the Kähler hypothesis are now restricted to compact Kähler manifolds:
+- the openings of Chapters 12 and 29;
+- the remark on singularity volumes in `sec:bounded-mass-volume-comparison`, and its three uses on Riemann surfaces and ℙ²;
+- the normalization chapter, including the projective example;
+- the gauge remark in Chapter 15 and the diffuse product example;
+- the attribution of the coincidence of volumes in the historical notes.
+
+The Chapter 12 and 29 openings now say that without the Kähler hypothesis this invariance is not available, even for closed backgrounds. Every use of the invariance in a proof was already on a Kähler manifold: Riemann surfaces, projective spaces, Kähler tori, Kähler resolutions and compact Kähler X in Chapter 14. No proof changes.
+
+The equality of the masses of bounded potentials in a closed background, given by Stokes' theorem and `thm:mass-invariance-characterization`, holds on every compact complex manifold and is unchanged. The rule is now in the book-writing skill's project profile and editorial memory.
+
 ## Deferred items (no change made)
 
-- The claim that, in a closed background, non-pluripolar mass depends only on the singularity type is cited to SGPT, which works on Kähler manifolds. It is used in the book on Kähler manifolds and curves. A general reference or argument for arbitrary compact complex manifolds could be added.
 - `thm:small-pole-envelope-residual` assumes positive lower singularity volume, which its proof uses only for a side remark.
 - Some hypotheses are stronger than their proofs need (for example `cor:i-envelope-finite`, `birational_partial_kernels`, `section_bounded_connected_uniqueness`); they are kept.
 - `thm:flat-anticanonical-neighborhood`: Step 2 of Lemma 2 is only outlined; an expert check is advisable.
