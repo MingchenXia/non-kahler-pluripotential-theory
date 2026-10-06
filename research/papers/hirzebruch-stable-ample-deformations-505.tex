@@ -1,0 +1,206 @@
+\subsection{Deforming to stable ample bundles}
+\label{subsec:hirzebruch-stable-ample-deformations}
+
+Use the Hirzebruch surface and the data $H,P,L_1,L_2,E_0$ of
+\cref{subsec:hirzebruch-ample-comparison,subsec:hirzebruch-stable-extensions}.
+The ample quotient and a nonsplit extension give two prioritary bundles
+with the same Chern classes. The former is ample and the latter is stable.
+To obtain bundles with both properties near $E_0$, we first prove the
+openness assertions needed in a parameter family.
+
+Let $T$ be a smooth complex algebraic variety. A flat family below means
+a coherent sheaf on $X\times T$ that is flat over $T$.
+
+\begin{lemma}\label{lem:hirzebruch-family-local-freeness}
+If a flat family $\mathcal E$ has a locally free fibre at $t_0\in T$,
+then $\mathcal E$ is a vector bundle on $X\times T'$ for some Zariski-open
+neighbourhood $T'$ of $t_0$.
+\end{lemma}
+\begin{proof}
+At a point of $X\times\{t_0\}$, lift a local basis of the fibre to
+$\mathcal E$. Nakayama's lemma makes the resulting map from a finite
+free module surjective. Tensor its kernel sequence with the residue field
+of $t_0$. Flatness over $T$ makes the first Tor term zero, so the kernel
+restricts to the kernel of the chosen fibre isomorphism, namely zero.
+Nakayama's lemma kills the kernel at that point. Thus $\mathcal E$ is
+locally free near every point of the central fibre. Its non-locally-free
+locus is closed. The projection $X\times T\to T$ is proper, so the image
+of that locus is closed and misses $t_0$. Remove this image.
+\end{proof}
+
+\begin{lemma}\label{lem:hirzebruch-family-ample-open}
+For a vector bundle $\mathcal E$ on $X\times T$, the parameters $t$
+for which $\mathcal E_t$ is ample form a Zariski-open subset of $T$.
+\end{lemma}
+\begin{proof}
+Put $Y=\mathbb P_{X\times T}(\mathcal E^*)$, with the line convention,
+and let $p:Y\to T$. This morphism is projective and flat. Write
+$\mathcal L=\mathcal O_Y(1)$. If $\mathcal E_{t_0}$ is ample,
+$\mathcal L_{t_0}$ is ample. Choose $k$ so that its $k$th power is very
+ample and has zero higher cohomology. Serre vanishing, semicontinuity and
+cohomology and base change show, after shrinking around $t_0$, that
+$\mathcal V=p_*\mathcal L^k$ is locally free and commutes with fibre
+restriction. The evaluation $p^*\mathcal V\to\mathcal L^k$ is surjective:
+its cokernel vanishes on the central fibre, and its support has closed
+image under the proper map $p$.
+
+Evaluation gives a proper morphism
+\[
+ g:Y\longrightarrow\mathbb P_T(\mathcal V^*),
+ \qquad g^*\mathcal O(1)=\mathcal L^k,
+\]
+whose central fibre is a closed immersion. The quasi-finite locus of $g$
+is open. Its complement has closed image in $T$ by properness and misses
+$t_0$, so another shrinking makes $g$ proper and quasi-finite, hence
+finite. For a finite morphism, pushforward commutes with base change.
+The cokernel of
+\[
+ \mathcal O_{\mathbb P_T(\mathcal V^*)}\longrightarrow g_*\mathcal O_Y
+\]
+therefore vanishes on the central fibre. Its support projects to a closed
+subset of $T$ missing $t_0$. After removing that subset, the displayed map
+is surjective, so $g$ is a closed immersion. Consequently $\mathcal L^k$
+is very ample on every fibre, and $\mathcal E_t$ is ample there.
+\end{proof}
+
+\begin{lemma}\label{lem:hirzebruch-family-stability-open}
+For a rank-two vector bundle family $\mathcal E$ with fixed first Chern
+class, the $\mu_P$-stable fibre locus is Zariski open in $T$.
+\end{lemma}
+\begin{proof}
+Fix a stable fibre at $t_0$ and set
+$\nu=c_1(\mathcal E_t)\cdot P/2$, which is constant. Choose $k\geq1$
+so that $\mathcal E_{t_0}^*(kP)$ is globally generated and has zero
+higher cohomology. The same Serre, base-change and evaluation argument
+gives, on a neighbourhood of $t_0$, a fibrewise injection
+\[
+ \mathcal E_t\longrightarrow\mathcal O_X(kP)^{\oplus N}.
+\]
+By the rank-one double-dual argument in the proof of
+\cref{prop:hirzebruch-stable-extensions}, a destabilizing subsheaf yields
+a nonzero map from a line bundle $M=\mathcal O_X(aS+bf)$ with
+$\deg_P M\geq\nu$. At least one component of its composite with the
+displayed injection is nonzero. The effective-cone calculation gives
+\[
+ a\leq4k,\qquad b\leq(12e+3)k.
+\]
+Since $\deg_P M=(8e+3)a+4b$, the slope inequality also gives
+\[
+ a\geq\frac{\nu-4(12e+3)k}{8e+3},
+ \qquad b\geq\frac{\nu-4k(8e+3)}4.
+\]
+Only finitely many integral pairs satisfy these four bounds.
+For each pair with $\deg_P M\geq\nu$, semicontinuity makes
+\[
+ \{t:H^0(X,\mathcal E_t\otimes M^*)\neq0\}
+\]
+closed. Each such subset misses $t_0$. Conversely a nonzero map from
+such an $M$ is injective as a sheaf map and violates slope-stability.
+Thus the unstable locus on this neighbourhood is exactly the finite
+union of these closed subsets. Removing the union proves the claim.
+\end{proof}
+
+\begin{lemma}\label{lem:dense-family-smooth-dolbeault-convergence}
+Let $T$ be smooth and irreducible, let $U\subset T$ be a nonempty
+Zariski-open subset, and let $\mathcal E$ be a vector bundle on
+$X\times T$. For any $t_0\in T$, there are $t_j\in U$ tending to $t_0$
+in the analytic topology and smooth complex-linear identifications with
+$\mathcal E_{t_0}$ under which the fibre Dolbeault operators converge
+in the $C^m$ norm for every integer $m\geq0$. The dual operators converge
+in the same sense.
+\end{lemma}
+\begin{proof}
+The proper algebraic closed subset $T\setminus U$ has empty interior
+in the complex-analytic topology. In an analytic coordinate ball $B$
+around $t_0$, choose $t_j\in U\cap B$ with $t_j\to t_0$.
+Choose a smooth complex connection on $\mathcal E|_{X\times B}$.
+Parallel transport along radial paths in $B$, keeping $x\in X$ fixed,
+gives identifications
+\[
+ \Phi_t:\mathcal E_{t_0}^{\mathrm{sm}}\longrightarrow
+          \mathcal E_t^{\mathrm{sm}},\qquad \Phi_{t_0}=\operatorname{id},
+\]
+depending smoothly on $(x,t)$. The superscript $\mathrm{sm}$ denotes
+the underlying smooth complex bundle. These identifications need not
+be holomorphic.
+Transport the Dolbeault operators by these maps and write
+\[
+ \bar\partial_t=\Phi_t^{-1}\bar\partial_{\mathcal E_t}\Phi_t,
+ \qquad A_t=\bar\partial_t-\bar\partial_{\mathcal E_{t_0}}.
+\]
+Their common Leibniz rule makes $A_t$ an endomorphism-valued $(0,1)$-form.
+Its coefficients are smooth in $(x,t)$ and $A_{t_0}=0$. Fix background
+metrics and a smooth connection on the central bundle. Compactness of
+$X$ and continuity of every finite collection of derivatives give
+\[
+ \|A_{t_j}\|_{C^m(X)}\longrightarrow0
+ \qquad\text{for every integer }m\geq0.
+\]
+The dual identifications are $(\Phi_t^{-1})^*$. In transported dual
+frames the perturbation is $-A_t^{\mathsf T}$, so the same convergence
+holds for the dual Dolbeault operators.
+\end{proof}
+
+We use Walter's prioritary-stack theorem: on a birationally ruled
+surface, a nonempty stack of prioritary torsion-free sheaves with fixed
+rank $r\geq2$ and numerical Chern classes is smooth and irreducible.
+Here prioritary means $\operatorname{Ext}^2(E,E(-f))=0$ for every ruling
+fibre. On $X$ all ruling fibres are linearly equivalent.
+This theorem concerns the full prioritary stack and has no semistability
+hypothesis.
+
+\begin{theorem}\label{thm:hirzebruch-stable-ample-approximation}
+For every $e\geq0$, there are integrable Dolbeault operators on the fixed
+smooth bundle underlying $E_0$ that converge to its split operator in
+every finite $C^m$ norm and define ample $\mu_P$-stable bundles of rank
+two with $c_1=4H$ and $c_2=13H^2$. The induced dual operators converge
+to the split dual operator in every finite $C^m$ norm.
+\end{theorem}
+\begin{proof}
+Let $\mathcal P$ be the prioritary stack with invariants
+$(2,4H,13H^2)$. It contains $E_0$ by
+\cref{prop:hirzebruch-extension-prioritary}. Walter's theorem makes it
+smooth and irreducible.
+The loci $\mathcal A$ of ample vector bundles and $\mathcal S$ of
+$\mu_P$-stable vector bundles are open by the three family lemmas.
+These lemmas apply on smooth local charts of $\mathcal P$; the first
+allows restriction to locally free families near a vector-bundle point.
+The ample bundle of \cref{prop:hirzebruch-ample-comparison} is prioritary
+by \cref{lem:hirzebruch-prioritary-comparison}, so $\mathcal A$ is nonempty.
+A nonsplit extension is stable and prioritary by
+\cref{prop:hirzebruch-stable-extensions,prop:hirzebruch-extension-prioritary},
+so $\mathcal S$ is nonempty. Irreducibility makes
+$\mathcal U=\mathcal A\cap\mathcal S$ nonempty and dense.
+
+Choose a smooth local chart
+$q:T\to\mathcal P$ of finite type over $\mathbb C$, with a point $t_0$
+representing $E_0$ and its flat family $\mathcal E$ on $X\times T$.
+Fix an identification $\mathcal E_{t_0}\simeq E_0$.
+The variety $T$ is smooth because the stack and chart are smooth.
+Shrink to an irreducible neighbourhood of $t_0$ and use
+\cref{lem:hirzebruch-family-local-freeness} to make $\mathcal E$ a vector
+bundle on the whole product. The inverse image $q^{-1}(\mathcal U)$ is
+dense: any nonempty open $T'\subset T$ has nonempty open image $q(T')$
+under the smooth map, and that image meets $\mathcal U$.
+Apply \cref{lem:dense-family-smooth-dolbeault-convergence} to this dense
+open set. Each transported operator defines a bundle isomorphic to the
+corresponding ample stable fibre. The fixed stack invariants give its
+Chern classes, and the lemma also gives convergence of the dual operators.
+\end{proof}
+
+\begin{corollary}\label{cor:hirzebruch-stable-ample-finsler-obstruction}
+For every $e\geq0$, there is an ample $\mu_P$-stable rank-two bundle $E$
+on $X$ with $c_1(E)=4H$ and $c_2(E)=13H^2$ that admits no smooth strongly
+pseudoconvex squared Finsler metric with semipositive Kobayashi curvature.
+\end{corollary}
+\begin{proof}
+The two dual lines of $E_0^*$ have the positive individual Gauduchon
+tests of \cref{prop:hirzebruch-positive-dual-tests}. The preceding theorem
+gives an ample stable bundle $E$ whose dual Dolbeault operator is as
+close to that split operator in $C^4$ as required. Apply
+\cref{cor:gauduchon-semipositive-finsler-obstruction} to $F=E^*$.
+\end{proof}
+
+% Exact inputs: Walter alg-geom/9311005v1, Proposition 2, p. 2.
+% Approximation: Liu--Wan 2609.37309v1, Theorem 4.1, p. 17; proof, p. 22.
+% Curvature conclusion: Liu--Wan v1, Theorem 1.1, p. 2; proof, p. 23.

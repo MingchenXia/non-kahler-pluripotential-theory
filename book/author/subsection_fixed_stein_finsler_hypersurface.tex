@@ -1,0 +1,212 @@
+\subsection{A fixed Stein hypersurface for all Finsler metrics}
+\label{subsec:fixed-stein-finsler-hypersurface}
+\index{Stein manifold!fixed Finsler test hypersurface}
+
+Let $X$ be a connected smooth projective variety of dimension $n\geq1$,
+and let $E\to X$ be an algebraic vector bundle of rank $r\geq2$,
+viewed as a holomorphic bundle. Use the squared Finsler metrics and
+Kobayashi curvature convention of \cref{subsec:polar-finsler-convexity}.
+A failure of semipositive curvature gives a local hypersurface on which
+a metric has a critical point with too many positive Levi directions.
+Holomorphic approximation lets one hypersurface detect this failure
+for every metric.
+
+We use the classical Oka--Weil theorem in the following form:
+a function holomorphic near a holomorphically convex compact subset
+of a Stein manifold can be approximated uniformly there by global
+holomorphic functions. We also use one-variable polynomial Runge
+approximation on a union of two disjoint closed discs.
+
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:separated-holomorphic-convex-compacts}
+\index{Holomorphic convexity!separated compact sets}
+Let $K,L$ be holomorphically convex compact subsets of a Stein manifold
+$Y$. If a global holomorphic function maps them into disjoint closed
+discs in $\mathbb C$, then $K\cup L$ is holomorphically convex.
+\end{lemma}
+\begin{proof}
+Write $h$ for the function and $\Delta_K,\Delta_L$ for the discs.
+Their union is polynomially convex. Polynomials in $h$ therefore force
+the holomorphic hull of $K\cup L$ to lie over their union.
+Suppose that $p\notin K\cup L$ and $h(p)\in\Delta_K$.
+Holomorphic convexity of $K$ gives $a\in\mathcal O(Y)$ with
+$|a(p)|>\sup_K|a|$. Choose polynomials tending uniformly to one on
+$\Delta_K$ and zero on $\Delta_L$. Their products with $a$ converge
+to $a$ at $p$ and on $K$, and to zero on $L$.
+For a sufficiently good approximation the product separates $p$
+from $K\cup L$. The case $h(p)\in\Delta_L$ is identical with $K,L$
+interchanged. Points outside the two discs are already separated by
+polynomials in $h$. Thus no point outside the union belongs to its hull.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:dilated-countable-holomorphic-tests}
+\index{Holomorphic approximation!countable dilated tests}
+Let $U$ be a connected smooth affine variety and let $q\geq0$ be an integer.
+Put $B=U\times\mathbb C^*\times\mathbb C^q$, with coordinates $(x,t,s)$.
+For each $j\geq1$, let $C_j\subset B$ be a holomorphically convex compact
+set, let $g_j$ be holomorphic near $C_j$, and let $\delta_j>0$.
+Suppose $t(C_j)$ lies in the disc
+$|t-t_j|\leq|t_j|/4$ for some $t_j\neq0$.
+There are $\lambda_j\in\mathbb C^*$ and $f\in\mathcal O(B)$ such that,
+for $d_\lambda(x,t,s)=(x,\lambda t,\lambda s)$,
+\[
+ \sup_{d_{\lambda_j}(C_j)}
+ |f-\lambda_j g_j\circ d_{\lambda_j}^{-1}|<|\lambda_j|\delta_j
+ \qquad(j\geq1).
+\]
+\end{lemma}
+\begin{proof}
+Choose a holomorphically convex compact exhaustion $(L_j)_{j\geq0}$
+of the affine Stein manifold $B$, with $L_j\subset\operatorname{int}L_{j+1}$.
+Start with $f_0=0$ and $K_0=L_0$.
+At stage $j$, choose $M>0$ with $t(K_{j-1})\subset\{|t|\leq M\}$,
+and choose $R>4M/3$. Dilation by $\lambda_j=R/t_j$ puts the new
+$t$-projection in $|t-R|\leq R/4$, disjoint from $|t|\leq M$.
+Relabel the dilated compact, function and tolerance as
+$C_j,g_j,\delta_j$ for the remainder of the induction.
+The preceding lemma makes $K_{j-1}\cup C_j$ holomorphically convex.
+
+On disjoint neighbourhoods prescribe $f_{j-1}$ and $g_j$.
+Oka--Weil approximation gives $f_j\in\mathcal O(B)$ with
+\[
+ \sup_{K_{j-1}}|f_j-f_{j-1}|<\epsilon_j,
+ \qquad \sup_{C_j}|f_j-g_j|<\epsilon_j,
+ \qquad
+ \epsilon_j=2^{-j-2}\min(1,\delta_1,\ldots,\delta_j).
+\]
+Choose $K_j$ to be a member of the fixed exhaustion containing
+$K_{j-1}\cup C_j\cup L_j$ in its interior. The interiors exhaust $B$,
+and the summable errors make $f_j$ converge locally uniformly to
+$f\in\mathcal O(B)$. For a fixed $j$, every subsequent approximation
+controls its error on $C_j$, since $C_j\subset K_{m-1}$ for $m>j$.
+Consequently
+\[
+ \sup_{C_j}|f-g_j|
+ \leq\sum_{m\geq j}\epsilon_m
+ \leq2^{-j-1}\delta_j<\delta_j.
+\]
+Restoring the original data gives the stated scaled tolerances.
+\end{proof}
+
+\Needspace{6\baselineskip}
+\begin{theorem}\label{thm:fixed-stein-finsler-hypersurface}
+\index{Finsler metric!fixed hypersurface test}
+\index{Kobayashi curvature!critical hyperplane test}
+\index{Critical point!holomorphic quadratic jet}
+\index{Levi index!fixed hypersurface test}
+Suppose $E$ admits no smooth strongly pseudoconvex squared Finsler
+metric with semipositive Kobayashi curvature. There is a connected
+smooth Stein hypersurface $\mathcal S\subset E^\times$, locally closed
+in the complex-analytic topology, such that every smooth strongly
+pseudoconvex squared Finsler metric $G$ has a nondegenerate critical
+point on $\mathcal S$ with at least $r$ positive Levi eigenvalues.
+Its negative Levi index there is at most $n-1$.
+\end{theorem}
+\begin{proof}
+An algebraic rational frame trivializes $E$ over a nonempty affine
+open subset $U\subset X$. Smoothness and connectedness make $X$
+irreducible, so $U$ is dense and connected. Write fibre coordinates as
+$(w,t,s)\in\mathbb C\times\mathbb C\times\mathbb C^{r-2}$, and put
+$B=U\times\mathbb C^*\times\mathbb C^{r-2}$.
+We seek a graph $w=f(x,t,s)$. Such a graph avoids the zero section.
+
+Fix a candidate metric $G$. Its horizontal Schur complement has a
+positive direction somewhere, since its Kobayashi curvature is not
+semipositive. This condition is open. It therefore holds at a point
+$v_0=(x_0,w_0,t_0,s_0)$ with $x_0\in U$, $t_0\neq0$ and $G_w(v_0)\neq0$.
+The first two conditions give a dense open set. The zero set of $G_w$
+has empty interior: vanishing on an open set would give
+$G_{w\bar w}=0$ there, contradicting vertical positivity.
+
+Let $H$ be the Levi-orthogonal complement of the vertical tangent
+space $V$ at $v_0$. The Euler identities in the proof of
+\cref{lem:polar-finsler-osculating-section} give
+\[
+ K:=\ker\partial G(v_0)=H\oplus(V\cap K),
+ \qquad \dim_{\mathbb C}(V\cap K)=r-1.
+\]
+Indeed $\partial G$ vanishes on $H$, and its value on the vertical radial
+vector is $G(v_0)>0$. The summands are Levi orthogonal. The vertical
+summand is positive definite, and the horizontal summand has a positive
+direction. Thus the restricted Levi form on $K$ has at least $r$
+positive eigenvalues.
+
+Since $G_w(v_0)\neq0$, $K$ is the graph of a linear map over
+$T_{b_0}^{1,0}B$, where $b_0=(x_0,t_0,s_0)$.
+Choose a local holomorphic graph $g$ with value $w_0$ and this first jet.
+Then $F=G\circ\operatorname{Graph}(g)$ has a critical point at $b_0$
+with the specified Levi eigenvalues.
+Keep this first jet fixed and vary the quadratic jet of $g$.
+Its mixed second derivatives do not change, while in local coordinates
+$z$ on $B$ the pure derivatives satisfy
+\[
+ F_{\alpha\beta}(b_0)=A_{\alpha\beta}+G_w(v_0)g_{\alpha\beta}(b_0),
+\]
+where $A$ is fixed. Prescribe the pure quadratic part of $F$ to be
+$\tau\operatorname{Re}\sum_\alpha z_\alpha^2$.
+Its real Hessian has eigenvalues $\pm2\tau$.
+For $\tau$ larger than half the operator norm of the fixed mixed real
+Hessian, the full Hessian is invertible by the Neumann-series criterion.
+The critical point is then nondegenerate, with the same Levi form.
+
+Choose compact neighbourhoods $C'\subset\operatorname{int}C$ of $b_0$
+where $g$ is defined, with $C$ holomorphically convex and
+$t(C)\subset\{|t-t_0|\leq|t_0|/4\}$.
+A small closed Euclidean ball in a closed affine embedding of $B$
+provides such a $C$; linear functions separate points outside the ball.
+Fix a smooth Hermitian background metric and its compact unit sphere
+bundle $\Sigma$. Homogeneity makes $C^2$ distance on $\Sigma$ control
+$C^2$ distance on each fixed compact subset of $E^\times$.
+Persistence of a nondegenerate critical point and openness of the
+specified positive Levi directions give a $C^2$ metric neighbourhood
+$\mathcal V_G$ and $\delta_G>0$ such that any metric in $\mathcal V_G$
+and any holomorphic graph within $\delta_G$ uniformly on $C$ retain
+that critical point nearby. Cauchy estimates on $C'$ supply the needed
+$C^2$ graph control.
+
+Restrictions of the candidate metrics form a subspace of the separable
+metrizable space $C^2(\Sigma)$. This subspace is second countable and
+Lindel\"of. Choose a countable subcover $(\mathcal V_j)_{j\geq1}$,
+with its graph data $C_j,g_j,\delta_j$.
+For $D_\lambda(x,w,t,s)=(x,\lambda w,\lambda t,\lambda s)$,
+\[
+ G\circ D_\lambda=|\lambda|^2G.
+\]
+Dilation therefore preserves critical points, real nondegeneracy and
+Levi inertia for every candidate metric. A graph tolerance $\delta_j$
+becomes $|\lambda|\delta_j$; pulling a perturbed graph back by dilation
+restores its original tolerance. In particular the metric neighbourhood
+$\mathcal V_j$ stays the same.
+
+Apply \cref{lem:dilated-countable-holomorphic-tests} to obtain one
+$f\in\mathcal O(B)$ satisfying every dilated test.
+Its graph $\mathcal S$ is biholomorphic to the connected affine Stein
+manifold $B$. It is smooth and closed in the open set
+$\{x\in U,t\neq0\}\subset E^\times$.
+Every candidate metric belongs to some $\mathcal V_j$, so it has the
+required nondegenerate critical point on this same graph.
+Since $\dim_{\mathbb C}\mathcal S=n+r-1$, at least $r$ positive Levi
+eigenvalues leave at most $n-1$ negative eigenvalues.
+\end{proof}
+
+\Needspace{10\baselineskip}
+\begin{corollary}\label{cor:hirzebruch-fixed-stein-hypersurface}
+\index{Hirzebruch surface!fixed Stein hypersurface}
+For each $e\geq0$, the stable ample bundle of
+\cref{cor:hirzebruch-stable-ample-finsler-obstruction} can be chosen with
+a connected smooth Stein hypersurface in $E^\times$ on which every
+smooth strongly pseudoconvex squared Finsler metric has a nondegenerate
+critical point with at least two positive and at most one negative
+Levi eigenvalue.
+\end{corollary}
+\begin{proof}
+The bundle is a fibre of an algebraic family on the prioritary chart
+used in \cref{thm:hirzebruch-stable-ample-approximation}, so is algebraic.
+Apply the theorem with $n=r=2$ and the retained curvature obstruction.
+\end{proof}
+
+% Source reconstruction: Liu--Wan 2609.37309v1, Proposition 5.1, pp. 24--27.
+% Algebraicity is explicit here; the general holomorphic-to-algebraic GAGA step is not needed.
+% Classical accepted inputs: Oka--Weil, one-variable Runge, affine Stein theory.
+% The complement-convexity application and Fulton primary proof are not certified here.
