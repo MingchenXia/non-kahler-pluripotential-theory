@@ -12,7 +12,7 @@ Current fresh review progress: front units 297 and complete original/two follow-
 
 ## Presentation revision and new directions, 6 October 2026
 
-The author requested a whole-book revision focused on presentation: the book must read like a normal textbook, without stiff language or undeclared nonstandard notation, with all results correct, and each full-book compilation published to the homepage as authorized. Checkpoint 527 records the revision and its checks. The author then asked, after the revision, for free exploration of new research directions that fit the book's theme and are not yet in the literature; proposed additions must still pass the book's proof and scope checks before integration, and must be identified as new.
+The author requested a whole-book revision focused on presentation: the book must read like a normal textbook, without stiff language or undeclared nonstandard notation, with all results correct, and each full-book compilation published to the homepage as authorized. Checkpoint 527 records the revision and its checks. The author then asked, after the revision, for free exploration of new research directions that fit the book's theme and are not yet in the literature; proposed additions must still pass the book's proof and scope checks before integration, and must be identified as new. A further request on the same day asks for a second whole-book check of accuracy of details and readability; checkpoint 529 records it.
 
 ## Public PDF publication, 30 September 2026
 

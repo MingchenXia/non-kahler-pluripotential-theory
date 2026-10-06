@@ -1,5 +1,32 @@
 # Modification history
 
+## 6 October 2026 — Second whole-book review 529
+
+[The second review](research/editorial/whole-book-accuracy-review-529.md) answers the author's request to check the whole book again for accurate details and clear, readable exposition. The book was read in 29 parts, line by line. Formulas were re-derived and every cross-reference target was checked against its hypotheses.
+
+Mathematical corrections (all local; listed in the record):
+- the multiplier-ideal direction in the partial envelope (reversed by the previous pass);
+- the sign of the Hessian metric and the concavity statement in Chapter 25;
+- O(−E)|_E as the dual tautological bundle;
+- pluripolar rather than almost-everywhere agreement of affine envelopes;
+- a false radius reduction for weighted regularity;
+- the sign of an entropy bound and of a radial tail exponent;
+- the wrong density in an interior Dirichlet step;
+- several missing hypotheses or steps.
+
+The weaker closedness hypothesis of the residual b-class proposition is now stated. The LCK radial flux constant is settled as 4πnk. Five open problems that the book already partly answers now state what is proved and what remains open.
+
+Citations:
+- All numbered SGPT locators are correct.
+- Unnumbered citations of facts that SGPT does not contain now point to Demailly's books or to Guedj–Zeriahi.
+- The historical notes attribute Demailly's regularization (Dem92) and the converse of the Fujiki-class equivalence (DP04, Theorem 0.5).
+
+Checks:
+- Six independent audits re-read all changes. They found two imprecise wordings and three issues in the historical notes, all fixed; no reviewer correction was judged wrong.
+- Citation placement passes.
+- The clean build has 1520 physical and 1492 printed pages, with no errors, no overfull boxes and no undefined references.
+- Published in website commit 335edc6.
+
 ## 6 October 2026 — Oeljeklaus–Toma manifolds 528
 
 [The new direction](research/editorial/oeljeklaus-toma-directions-528.md) answers the author's request to explore themes not yet in the literature. New Section 27.19 treats Inoue surfaces and Oeljeklaus–Toma manifolds:

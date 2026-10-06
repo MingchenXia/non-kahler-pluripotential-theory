@@ -1,5 +1,7 @@
 # Singularities in Hermitian pluripotential theory
 
+The [second whole-book review](research/editorial/whole-book-accuracy-review-529.md) rechecks every chapter for accuracy and clarity. It corrects a set of local mathematical slips, including one direction reversed by the previous pass, and fixes book citations that SGPT does not support. Problems that the book partly answers now say so. The website serves the 1492-page PDF.
+
 The [Oeljeklaus–Toma direction](research/editorial/oeljeklaus-toma-directions-528.md) adds Section 27.19 and two new problems. On Inoue surfaces and OT manifolds the transverse class has only continuous potentials. On OT threefolds of type (2,1) the masses of a natural Gauduchon metric are an exact indefinite quadratic, and no metric with signed `dd^c` exists. The website serves the 1486-page PDF.
 
 The [whole-book presentation revision](research/editorial/whole-book-presentation-revision-527.md) rewrites every unit for textbook presentation, defines all book-wide notation once (with a notation table in the front matter) and corrects several local slips found on the way; independent comparison of all changed formulas passes after two fixes. The website serves the 1475-page PDF.

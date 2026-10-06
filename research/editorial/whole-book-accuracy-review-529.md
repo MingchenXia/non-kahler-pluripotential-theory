@@ -116,7 +116,8 @@ Each correction is local; no theorem's scope changed except where stated.
    - `eq:divisorial-trace-loss-bound`
    - `eq:two-sided-transport-form`
 2. Six independent audits re-read all changes of this pass (about 400 content changes), re-deriving the main corrections. They found two imprecise wordings, both fixed: an incidence-variety dimension, and a finiteness condition in the scope clause for the volume comparison formula. No reviewer correction was judged wrong.
-3. The full build, page inspection and publication are recorded in `research/STATUS.md`.
+3. A clean full build has no errors, no overfull boxes and no undefined references: 1520 physical pages, last index page printed as **1492**, 117 bibliography entries and 910 index entries. The only warning is the known underfull line in a bibliography entry. Pages inspected: the notation table, the Chapter 25 opening, the LCK flux statement, the Fujiki-class note and the last index page.
+4. Publication: homepage commit `335edc6127716777ba67fe1d3a1cb1baba43511a` on `MingchenXia/mingchenxia.github.io` replaces `Papers/SHPT_vibe.pdf` and the matching description (“A research monograph. 1492 pages. Updated October 6, 2026.”); the remote files were verified by blob hash. The live check is recorded in `research/STATUS.md`.
 
 This is a review and comparison of the text, not a new independent certification of every proof.
 

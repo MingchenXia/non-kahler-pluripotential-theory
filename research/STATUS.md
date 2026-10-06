@@ -1,5 +1,23 @@
 # Current research status — 6 October 2026
 
+## Checkpoint 529 — Second whole-book review
+
+[The second review](editorial/whole-book-accuracy-review-529.md) answers the author's request to recheck the whole book for accurate details and clear exposition. It covers every active unit in 29 parts.
+
+Corrections:
+- local mathematical slips, listed in the record, including one direction error introduced by checkpoint 527;
+- citations that SGPT does not support;
+- the scope of five partly settled open problems;
+- book-wide notation and terminology.
+
+Six independent audits re-read all changes and found no reviewer correction wrong; their five small fixes are applied.
+
+Build: clean, 1520 physical / 1492 printed pages, 117 references and 910 index entries. Pages inspected: the notation table, the Chapter 25 opening, the LCK flux statement, the Fujiki-class note in the historical notes, and the last index page.
+
+Publication: website commit 335edc6, PDF SHA-256 `ba538a54…`, with the remote blobs verified. Live GitHub Pages check pending at the time of this entry.
+
+Deferred items are listed in the record, for example the general-manifold source for mass invariance in closed backgrounds and an expert check of `thm:flat-anticanonical-neighborhood`. All 38 original directions remain open.
+
 ## Checkpoint 528 — Oeljeklaus–Toma manifolds
 
 [The OT record](editorial/oeljeklaus-toma-directions-528.md) adds new Section 27.19 and Problems 32.3.6–32.3.7, following the author's request for new directions. Proved there:
