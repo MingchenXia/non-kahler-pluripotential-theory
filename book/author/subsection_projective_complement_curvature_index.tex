@@ -1,0 +1,92 @@
+\subsection{Curvature and projective complement exhaustions}
+\label{subsec:projective-complement-curvature-index}
+
+The preceding obstruction excludes $r$-convexity without deciding which larger indices occur. A Hermitian metric with positive horizontal curvature directions gives an exhaustion by taking the reciprocal of its squared norm.
+
+Let $E\to X$ be a holomorphic bundle of rank $r\geq1$ on a compact complex manifold of dimension $n\geq1$, and let $h$ be a smooth Hermitian metric. Write its matrix as $M$ in a holomorphic frame, using column vectors, an inner product linear in its first argument, and $h(v,v)=v^*Mv$. Put
+\[
+ F_h=\bar\partial(M^{-1}\partial M)
+     =\sum_{\alpha,\beta}F_{\alpha\bar\beta}\,\mathrm dz_\alpha\wedge\mathrm d\bar z_\beta,
+ \qquad R_h(u,\bar u)=\sum_{\alpha,\beta}F_{\alpha\bar\beta}u_\alpha\bar u_\beta.
+\]
+For $v\in E_x$, the real $(1,1)$-form $\alpha_{h,v}=\mathrm i\,h(F_hv,v)$ has Hermitian coefficient form $u\mapsto h(R_h(u,\bar u)v,v)$. \index{Chern curvature!of a bundle metric}For a Hermitian form $\omega$ on $X$, write $K_{\omega,h}=\Lambda_\omega(\mathrm iF_h)$ for the mean curvature, an $h$-Hermitian endomorphism.\index{Mean curvature!of a bundle metric} Here $F_h$ is unscaled: for a line bundle, the curvature $-\ddc\log h$ used earlier is $\mathrm iF_h/(2\pi)$.
+
+Use the line convention for projectivization and put
+\[
+ U_E=\mathbb P(\mathcal O_X\oplus E)\setminus\mathbb P(\mathcal O_X).
+\]
+It contains $E^\times$ as the chart $[1:v]$ with the zero section removed. Its complex dimension is $n+r$. We use the smooth exhaustion definition of $q$-convexity in \cref{subsec:concave-neighbourhood-dual-norms}.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{lem:reciprocal-bundle-norm-levi}
+\index{Chern curvature!reciprocal norm Hessian}
+Put $G(v)=h(v,v)$ and $\rho=G^{-1}$ on $E^\times$. In a holomorphic frame that is unitary and Chern-normal at $x$, the complex Hessian at $(x,v)$ is
+\[
+ \mathcal L_\rho(u,w)
+ =\frac{h(R_h(u,\bar u)v,v)}{G^2}
+  -\frac{|w|_h^2}{G^2}
+  +\frac{2|h(w,v)|^2}{G^3},
+ \qquad u\in T_x^{1,0}X,\quad w\in E_x.
+\]
+There are no mixed horizontal--vertical terms. Its vertical block has exactly one positive and $r-1$ negative eigenvalues.
+\end{lemma}
+\begin{proof}
+At the centre of the frame, $M$ is the identity and its first derivatives vanish. Such a frame is obtained by a constant change making it unitary at $x$, followed by a holomorphic linear first-jet change cancelling $\partial M$. Then $F_{\alpha\bar\beta}=-\partial_\alpha\partial_{\bar\beta}M$. The horizontal first derivatives of $G$ and its mixed horizontal--vertical second derivatives vanish. The horizontal complex Hessian of $G$ is $-h(R_h(u,\bar u)v,v)$, its vertical complex Hessian is $|w|_h^2$, and its vertical first derivative in direction $w$ is $h(w,v)$. Apply
+\[
+ \partial\bar\partial(G^{-1})
+ =2G^{-3}\partial G\wedge\bar\partial G-G^{-2}\partial\bar\partial G.
+\]
+The vertical block equals $G^{-1}>0$ at $w=v$ and equals $-|w|_h^2/G^2$ when $w\perp_h v$. These spaces are orthogonal for that block, proving its inertia.
+\end{proof}
+
+\Needspace{8\baselineskip}
+\begin{theorem}\label{thm:bundle-curvature-complement-convexity}
+\index{Projective bundle!curvature exhaustion}\index{$q$-convexity!bundle complements}
+Let $1\leq s\leq n$. Suppose that for every $x\in X$ and every $0\ne v\in E_x$, the coefficient form of $\alpha_{h,v}$ has at least $s$ positive eigenvalues. Then $U_E$ is $(n+r-s)$-convex.
+\end{theorem}
+\begin{proof}
+By \cref{lem:reciprocal-bundle-norm-levi}, the horizontal block of $\mathcal L_\rho$ has at least $s$ positive eigenvalues and the vertical block has one. Their direct sum thus has at least $s+1$ positive eigenvalues at every point of $E^\times$.
+
+Choose $\epsilon>0$ and a smooth function $\chi:[0,+\infty)\to[0,1]$ equal to one on $[0,\epsilon]$ and zero on $[2\epsilon,+\infty)$. Define
+\[
+ \psi([1:v])=\frac{\chi(G(v))}{G(v)}\quad(v\ne0),
+\]
+and extend it by zero at infinity. This extension is smooth. Indeed, near a point $[0:v]$ with $v\ne0$, use a local representative $[u:v]$ in a projective chart. On its intersection with the affine chart, $G(v/u)=h(v,v)/|u|^2$ tends to infinity as $u\to0$, so $\chi(G)$ vanishes in a neighbourhood of the point.
+
+The function $\psi$ tends to infinity near the removed zero section. Since the ambient projective bundle is compact, every sublevel of $\psi$ is compact in $U_E$: it is closed there and cannot accumulate on the removed section. Put $D=\{G<\epsilon\}\subset E$, including the zero section, and $K=\mathbb P(\mathcal O_X\oplus E)\setminus D$. Then $K$ is compact in $U_E$, and $\psi=\rho$ on $U_E\setminus K$. Thus the exhaustion has at least $s+1$ positive Levi eigenvalues outside a compact set. In dimension $n+r$, this is $(n+r-s)$-convexity.
+\end{proof}
+
+For $s=1$, the curvature hypothesis is precisely RC-positivity of the metric, as in \cref{def:directional-rc-positivity}. A positive mean curvature provides this direction by taking a trace.
+
+\Needspace{10\baselineskip}
+\begin{corollary}\label{cor:positive-mean-complement-convexity}
+\index{Hermitian--Einstein metric!positive degree}\index{Mean curvature!complement convexity}
+If $K_{\omega,h}$ is positive definite for a Hermitian form $\omega$ on $X$, then $U_E$ is $(n+r-1)$-convex. This holds, in particular, when $\omega$ is K\"ahler, $E$ is slope-stable with respect to $\omega$, and
+\[
+ \int_Xc_1(E)\wedge\omega^{n-1}>0.
+\]
+\end{corollary}
+\begin{proof}
+For $v\ne0$, the $\omega$-trace of $\alpha_{h,v}$ is $h(K_{\omega,h}v,v)>0$. A Hermitian form with positive trace has a positive eigenvalue. Apply \cref{thm:bundle-curvature-complement-convexity} with $s=1$.
+
+Under the K\"ahler and stability hypotheses, the stable-bundle Hermitian--Einstein existence theorem supplies $h$ with $K_{\omega,h}=\lambda\operatorname{Id}_E$, where $\lambda$ is constant. Taking the trace and integrating the contraction identity gives
+\[
+ r\lambda\int_X\omega^n
+ =n\int_X\operatorname{tr}(\mathrm iF_h)\wedge\omega^{n-1}
+ =2\pi n\int_Xc_1(E)\wedge\omega^{n-1}>0.
+\]
+Here $\operatorname{tr}F_h=\bar\partial\partial\log\det M$, so $\mathrm i\operatorname{tr}F_h/(2\pi)$ is the curvature representative of $c_1(E)$. Thus $\lambda>0$, and the first assertion applies.
+\end{proof}
+
+\Needspace{9\baselineskip}
+\begin{corollary}\label{cor:hirzebruch-exact-complement-index}
+\index{Hirzebruch surface!least complement convexity index}
+For every $e\geq0$, there is a stable ample rank-two bundle $E$ on $X=\mathbb F_e$ as in \cref{cor:hirzebruch-non-two-convex-complement} for which $U_E$ is $3$-convex but not $2$-convex. Its least smooth convexity index is three.
+\end{corollary}
+\begin{proof}
+Use the ruling section $S$ and fibre $f$ of \cref{lem:hirzebruch-ruling-sections}, and put $H=S+(3e+1)f$ and $P=4H-f$. Choose $E$ from \cref{cor:hirzebruch-non-two-convex-complement}, retaining its $\mu_P$-stability and $c_1(E)=4H$. The ruling intersection identities of \cref{lem:hirzebruch-ruling-sections} give
+\[
+ c_1(E)\cdot P=4H\cdot(4H-f)=80e+28>0.
+\]
+The same ruling criterion makes $P=4S+(12e+3)f$ very ample. Choose the pulled-back Fubini--Study K\"ahler form with class $c_1(\mathcal O_X(P))$. The bundle is slope-stable for this form, so \cref{cor:positive-mean-complement-convexity} gives $3$-convexity, since $n=r=2$. The chosen bundle has the dual-norm obstruction excluding $2$-convexity. Finally, $1$-convexity implies $2$-convexity directly from their positive Levi counts, so the least index is three.
+\end{proof}
