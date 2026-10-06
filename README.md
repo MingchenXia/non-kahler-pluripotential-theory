@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [stable-extension integration](research/editorial/hirzebruch-stable-extension-integration-504.md) adds stable comparison bundles and an explicit smooth degeneration to the split point, while explaining their negative fibre quotient. Stable ample approximation remains a separate step. The actual website serves the verified 1326-page PDF and matching homepage description; 38 original directions remain open.
+The [stable ample integration](research/editorial/hirzebruch-stable-ample-integration-506.md) constructs stable ample Hirzebruch bundles near the split point and proves the scoped semipositive Kobayashi curvature obstruction. The actual website serves the verified 1330-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
