@@ -1,5 +1,7 @@
 # Singularities in Hermitian pluripotential theory
 
+The [whole-book presentation revision](research/editorial/whole-book-presentation-revision-527.md) rewrites every unit for textbook presentation, defines all book-wide notation once (with a notation table in the front matter) and corrects several local slips found on the way; independent comparison of all changed formulas passes after two fixes. The website serves the 1475-page PDF.
+
 The [positive-exponent integration](research/editorial/positive-exponent-endpoint-integration-525.md) gives a compactness criterion for positive exponential endpoints and right continuity of greatest solutions. The website serves the verified 1357-page PDF and matching description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.

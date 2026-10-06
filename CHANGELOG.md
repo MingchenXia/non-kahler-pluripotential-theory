@@ -1,5 +1,26 @@
 # Modification history
 
+## 6 October 2026 — Whole-book presentation revision 527
+
+[The presentation revision](research/editorial/whole-book-presentation-revision-527.md) answers the author's request for textbook presentation without stiff language or undeclared nonstandard notation. Every active unit (Introduction, Conventions, Chapters 1–33, problems, historical notes, Appendix A) is revised line by line. The changes:
+
+- Telegraphic prose becomes connected argument, long proofs show their steps, and Part entries and chapter/section openings explain problem and mechanism.
+- Workflow vocabulary leaves the reader-facing text, and the undefined term "genuine" is replaced throughout.
+- Book-wide terms receive single definitions: balanced/pluriclosed metrics, ordinary models, BMP, threshold subsolutions, ideal type and the `⟨·⟩` notation.
+- A one-page table of frequently used notation closes the Conventions.
+
+Local mathematical corrections are listed in the record. They include the Sobolev endpoint example, the tail-modulus constant, a cuspidal operator, the "positive volume property" hypothesis, the general-density Dirichlet lemma, the Hopf hyperplane volume argument and a Hessian sign.
+
+Checks:
+
+- No label, reference target or citation was removed.
+- Citation placement passes.
+- Four independent comparisons covered all 1066 non-punctuation math changes against `dfb285d`. They found one reworded determinant-density formula with the wrong normalization and one hypothesis dropped in revision; both were corrected.
+- The full build is clean (1501 physical / 1475 printed pages).
+- The PDF and homepage description were published in website commit 265ec71.
+
+This is an editorial and comparison check, not a new proof certification. Work is on branch `claude/friendly-fermi-jzw1o1`.
+
 ## Standalone S04 closed-factor density roots — Xean, 6 October 2026
 
 The [S04 paper](research/papers/S04-closed-factor-root-spaces-and-exact-equations.tex) computes the exact original threshold for every integrable closed-factor density on a Hermitian product and proves an actual finite-mass pullback equation, a closed L^N root subspace and vanishing amplitude tails using the entire original test family. Its projective endpoint is integrable but lies in no higher L^p; the retained elliptic factor supplies a nonclosed zero-lower-mass fivefold with mass 240 pi. Complete original-task review remains INCONCLUSIVE; seven statement-only proofs and a separate scoped comparison establish the limited theorem. All use Xean gpt-6.1-sol xhigh, concurrency one. The complete prior factor dependency and its five independent proofs are retained and assessed. Exact primary hypotheses, native compilation, two clean exports and all five final page views are checked. The [review](research/papers/S04-closed-factor-root-spaces-and-exact-equations.review.md) preserves raw reports while excluding misbound task quotations from external evidence. This is the programme's twenty-third standalone article and seventeenth original ID with a checked scoped result. The four completely resolved originals remain P08,P12,P22,S13; both unrestricted S04 questions remain unresolved. All 55 existing standalone sources and concurrent book history are preserved without a book rebuild.
