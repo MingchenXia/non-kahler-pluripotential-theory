@@ -1,14 +1,14 @@
 \subsection{External tensor products and complement convexity}
 \label{subsec:external-tensor-complement-curvature}
 
-On a product base, separate positive curvature traces give separate positive tangent directions. The external tensor metric has no curvature terms between different factors, so this count applies to every fibre vector, including those that are not decomposable tensors.
+On a product of $k$ manifolds, the external tensor product of bundles with positive mean curvature has, at every nonzero fiber vector, a positive curvature direction tangent to each factor. Indeed, the curvature of the tensor product metric has no components mixing different factors, so this count applies to every fiber vector, including vectors that are not decomposable tensors. \Cref{thm:bundle-curvature-complement-convexity} then improves the convexity bound by $k$.
 
-Let $k\geq2$. For $1\leq i\leq k$, let $X_i$ be a connected compact complex manifold of dimension $n_i\geq1$, let $E_i\to X_i$ have rank $r_i\geq1$, and choose a smooth Hermitian metric $h_i$ and a Hermitian form $\omega_i$. With $p_i:X=\prod_iX_i\to X_i$ the projections, put
+Let $k\geq2$. For $1\leq i\leq k$, let $X_i$ be a connected compact complex manifold of dimension $n_i\geq1$, let $E_i\to X_i$ be a holomorphic vector bundle of rank $r_i\geq1$, and choose a smooth Hermitian metric $h_i$ on $E_i$ and a Hermitian form $\omega_i$ on $X_i$. With $p_i:X=\prod_iX_i\to X_i$ the projections, put
 \[
  E=\bigotimes_{i=1}^kp_i^*E_i,\qquad h=\bigotimes_{i=1}^kp_i^*h_i,
  \qquad n=\sum_i n_i,\quad r=\prod_i r_i.
 \]
-For an endomorphism $A_i$ of $E_i$, write $\widehat A_i$ for its action on the $i$th tensor factor, with the identity on every other factor. Use the Chern and mean curvatures of \cref{subsec:projective-complement-curvature-index}.
+For an endomorphism $A_i$ of $E_i$, write $\widehat A_i$ for its action on the $i$th tensor factor, with the identity on every other factor. We use the Chern curvature, the forms $\alpha_{h,v}$ and the mean curvatures of \cref{subsec:projective-complement-curvature-index}.
 
 \Needspace{14\baselineskip}
 \begin{lemma}\label{lem:external-tensor-curvature-traces}
@@ -17,18 +17,18 @@ The curvature of $h$ is
 \[
  F_h=\sum_i\widehat{p_i^*F_{h_i}}.
 \]
-For every $v\in E_x$, the coefficient form of $\alpha_{h,v}$ is block diagonal for $T_x^{1,0}X=\bigoplus_iT_{x_i}^{1,0}X_i$, and
+For every $v\in E_x$, the coefficient form of $\alpha_{h,v}$ is block diagonal with respect to the decomposition $T_x^{1,0}X=\bigoplus_iT_{x_i}^{1,0}X_i$, and
 \[
  \operatorname{tr}_{\omega_i}\bigl(\alpha_{h,v}|_{T_{x_i}X_i}\bigr)
  =h\bigl(\widehat K_i v,v\bigr),\qquad K_i=K_{\omega_i,h_i}.
 \]
 \end{lemma}
 \begin{proof}
-In product holomorphic frames the metric matrix is $M=\bigotimes_iM_i$. Its connection matrix is
+In product holomorphic frames, the matrix of the metric is $M=\bigotimes_iM_i$, and its connection matrix is
 \[
  M^{-1}\partial M=\sum_i\widehat{M_i^{-1}\partial M_i}.
 \]
-Each summand depends only on the coordinates of $X_i$. Applying $\bar\partial$ gives the curvature formula and shows that all mixed factor components vanish. Pairing with $v$ gives the block diagonal form. Contracting its $i$th block with $\omega_i$ commutes with the identity actions on the remaining tensor factors and gives the trace identity.
+Each summand depends only on the coordinates of $X_i$. Applying $\bar\partial$ gives the curvature formula and shows that all components mixing different factors vanish. Pairing with $v$ gives the block diagonal form. Contracting the $i$th block with $\omega_i$ commutes with the identity actions on the other tensor factors, which gives the trace identity.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -41,17 +41,16 @@ If every $K_i$ is positive definite, then
 is $(n+r-k)$-convex.
 \end{theorem}
 \begin{proof}
-At each point choose an $h_i$-orthonormal eigenbasis of $K_i$. The resulting product basis is $h$-orthonormal, and $\widehat K_i$ has the positive eigenvalues of $K_i$, repeated for the other tensor factors. Hence $h(\widehat K_i v,v)>0$ for every nonzero $v$, without a decomposability assumption.
+At each point, choose an $h_i$-orthonormal eigenbasis of $K_i$. The resulting product basis is $h$-orthonormal, and $\widehat K_i$ has the positive eigenvalues of $K_i$, repeated according to the dimensions of the other tensor factors. Hence $h(\widehat K_i v,v)>0$ for every nonzero $v$, whether or not $v$ is decomposable.
 
-By \cref{lem:external-tensor-curvature-traces}, each tangent block of $\alpha_{h,v}$ has positive trace and thus a positive eigenvalue. The block diagonal form has at least $k$ positive eigenvalues. Since $k\leq n$, apply \cref{thm:bundle-curvature-complement-convexity} with $s=k$.
+By \cref{lem:external-tensor-curvature-traces}, each diagonal block of $\alpha_{h,v}$ has positive trace and therefore a positive eigenvalue, so the block diagonal form has at least $k$ positive eigenvalues. Since $k\leq n$, \cref{thm:bundle-curvature-complement-convexity} with $s=k$ gives the assertion.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:stable-factor-complement-convexity}
 \index{Hermitian--Einstein metric!external tensor factors}
-Suppose that each $\omega_i$ is Gauduchon, that $E_i$ is $\omega_i$-slope-stable as in \cref{def:gauduchon-bundle-slope}, and that $\deg_{\omega_i}E_i>0$.
-Then the external tensor complement is $(n+r-k)$-convex. For $k$ stable ample Hirzebruch examples of \cref{cor:hirzebruch-exact-complement-index}, with their specified polarizations, this gives $(2^k+k)$-convexity.
+Suppose that each $\omega_i$ is Gauduchon, that $E_i$ is $\omega_i$-slope-stable as in \cref{def:gauduchon-bundle-slope}, and that $\deg_{\omega_i}E_i>0$. Then the complement $\mathbb P(\mathcal O_X\oplus E)\setminus\mathbb P(\mathcal O_X)$ is $(n+r-k)$-convex. For $k$ stable ample Hirzebruch examples as in \cref{cor:hirzebruch-exact-complement-index}, with their polarizations, this gives $(2^k+k)$-convexity.
 \end{corollary}
 \begin{proof}
-As in the proof of \cref{cor:positive-mean-complement-convexity}, choose the Hermitian--Einstein metric on each $E_i$. Its mean curvature is $\lambda_i\operatorname{Id}_{E_i}$, with $\lambda_i>0$ by the positive degree and integrated Chern trace identity. Apply \cref{thm:external-tensor-complement-convexity}. For the Hirzebruch factors, $n_i=r_i=2$, so $n+r-k=2k+2^k-k=2^k+k$.
+As in the proof of \cref{cor:positive-mean-complement-convexity}, choose a Hermitian--Einstein metric on each $E_i$. Its mean curvature is $\lambda_i\operatorname{Id}_{E_i}$, with $\lambda_i>0$ by the positivity of the degree and the integrated trace identity. Apply \cref{thm:external-tensor-complement-convexity}. For the Hirzebruch factors, $n_i=r_i=2$, so $n+r-k=2k+2^k-k=2^k+k$.
 \end{proof}
