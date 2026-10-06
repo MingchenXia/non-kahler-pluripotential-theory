@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [homogeneous and Hopf integration](research/editorial/homogeneous-hopf-index-integration-517.md) gives a sharp complement index from homogeneous plurisubharmonic functions and the full scalar Hopf line-automorphy classification. The actual website serves the verified 1345-page PDF and matching homepage description; 38 original directions remain open.
+The [split Hopf integration](research/editorial/split-hopf-index-integration-519.md) adds exact complement indices for nonpositive curvature and the two pure scalar Hopf direct-sum regimes. The actual website serves the verified 1347-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
