@@ -1,0 +1,49 @@
+% Inactive proof fragment; the existing book macros are used.
+\subsection{Solvable exponents and collapse at zero threshold}
+
+Fix a nonzero nonnegative $f\in L^1(\mathrm dV)$ on a connected compact Hermitian manifold $(X,h)$. Let $\Lambda_h(f)$ consist of the positive exponents for which
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm e^{\lambda u}f\,\mathrm dV
+\]
+has a genuine $h$-plurisubharmonic solution. Existence of an exponential subsolution is equivalent to membership by \cref{thm:individual-exponential-subsolution}.
+
+\begin{proposition}\label{prop:solvable-exponents-upper-interval}
+If $\lambda_0\in\Lambda_h(f)$, then $[\lambda_0,+\infty)\subset\Lambda_h(f)$. Consequently this set is empty, equals $(a,+\infty)$ for some $a\geq0$, or equals $[a,+\infty)$ for some $a>0$. If $b_h(f)>0$, then $\Lambda_h(f)=(0,+\infty)$.
+\end{proposition}
+\begin{proof}
+Let $u$ solve the equation at $\lambda_0$, and put $s=u-\max(0,\sup_Xu)$. Then $s\leq0$ and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(s)
+ =\mathrm e^{\lambda_0u}f\,\mathrm dV
+ \geq\mathrm e^{\lambda_0s}f\,\mathrm dV
+ \geq\mathrm e^{\lambda s}f\,\mathrm dV
+ \qquad(\lambda\geq\lambda_0).
+\]
+The greatest-solution theorem supplies an exact solution at each such $\lambda$. Every nonempty upper set of positive real numbers has the stated form, determined by its infimum and whether that infimum is attained. The positive-threshold case follows from \cref{cor:individual-positive-threshold-exponential}.
+\end{proof}
+
+\begin{proposition}\label{prop:zero-threshold-exponential-mass-collapse}
+Suppose $b_h(f)=0$. Let $\lambda_j>0$ decrease to zero, and let $u_j$ be any genuine exact solution at $\lambda_j$. Put
+\[
+ M_j=\sup_Xu_j,\qquad v_j=u_j-M_j,\qquad
+ c_j=\mathrm e^{\lambda_jM_j}.
+\]
+Then
+\[
+ c_j\longrightarrow0,\qquad
+ \|\mathrm{MA}^{\mathrm{ext}}_h(u_j)\|_{\mathrm{TV}}
+ =\|\mathrm{MA}^{\mathrm{ext}}_h(v_j)\|_{\mathrm{TV}}
+ \longrightarrow0,\qquad \lambda_jM_j\longrightarrow-\infty.
+\]
+Moreover $\mathrm e^{\lambda_ju_j}\to0$ uniformly on $X$, with value zero at poles, and $u_j\to-\infty$ uniformly in the sense that $\sup_Xu_j\to-\infty$.
+\end{proposition}
+\begin{proof}
+For $g_j=\mathrm e^{\lambda_jv_j}f$, \cref{lem:normalized-exponential-npp} applied to the fixed finite non-pluripolar measure $f\,\mathrm dV$ gives $g_j\to f$ in $L^1$. Each $g_j$ is nonzero, because $v_j$ is finite almost everywhere. Constant invariance gives
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(v_j)=c_jg_j\,\mathrm dV,
+ \qquad 0<c_j\leq b_h(g_j)
+\]
+by \cref{thm:individual-density-subsolution}. Upper semicontinuity, \cref{thm:individual-threshold-semicontinuity}, now gives $\limsup_jc_j\leq b_h(f)=0$. Since $0\leq g_j\leq f$, the total mass is at most $c_j\|f\|_1$ and tends to zero. Also $\lambda_jM_j=\log c_j\to-\infty$ and $0\leq\mathrm e^{\lambda_ju_j}\leq c_j$. For all sufficiently large $j$, $\lambda_j<1$ and $\log c_j<0$, so $M_j=(\log c_j)/\lambda_j\leq\log c_j\to-\infty$.
+\end{proof}
+
+For the tailored density of \cref{thm:zero-threshold-solvable-concentration}, solutions exist for every positive exponent, so the collapse applies as $\lambda\downarrow0$ to any choice of genuine exact solutions, including the greatest ones. The subsolutions in \cref{thm:product-zero-threshold-exponential-criterion} retain actual mass $CV_0$ for every exponent, while the exact-solution masses tend to zero. Order of potentials does not give order of their total Monge--Amp\`ere masses on a nonclosed background. Convergence of normalized potentials in capacity, an exact equation for a normalized cluster limit and an endpoint criterion for $\Lambda_h(f)$ remain separate questions.
