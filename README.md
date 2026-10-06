@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [tensor and tangent integration](research/editorial/tensor-and-tangent-complement-integration-513.md) adds external tensor complement bounds and a 3-convex tangent complement on nonflat Ricci-flat surfaces. The actual website serves the verified 1343-page PDF and matching homepage description; 38 original directions remain open.
+The [Gauduchon and Hopf integration](research/editorial/gauduchon-hopf-complement-integration-515.md) extends the positive-degree complement criteria to Gauduchon forms and gives the exact scalar Hopf complement index. The actual website serves the verified 1345-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
