@@ -121,30 +121,94 @@ Each correction is local; no theorem's scope changed except where stated.
 
 This is a review and comparison of the text, not a new independent certification of every proof.
 
-## Follow-up: mass invariance only in the Kähler theory
+## Follow-up 1: mass invariance in closed backgrounds
 
-The author then pointed out (6 October 2026): “‘闭背景下非多极质量只依赖奇异性类型’这只在Kähler的时候成立” (that the non-pluripolar mass in a closed background depends only on the singularity type holds only in the Kähler case).
+The author first pointed out (6 October 2026): “‘闭背景下非多极质量只依赖奇异性类型’这只在Kähler的时候成立” (that the non-pluripolar mass in a closed background depends only on the singularity type holds only in the Kähler case). Statements of this invariance made without a hypothesis were restricted to compact Kähler manifolds.
 
-Statements of this invariance made without the Kähler hypothesis are now restricted to compact Kähler manifolds:
-- the openings of Chapters 12 and 29;
-- the remark on singularity volumes in `sec:bounded-mass-volume-comparison`, and its three uses on Riemann surfaces and ℙ²;
-- the normalization chapter, including the projective example;
-- the gauge remark in Chapter 15 and the diffuse product example;
-- the attribution of the coincidence of volumes in the historical notes.
+The journal-version check (Follow-up 2) then read Boucksom–Guedj–Lu, Peking Math. J. 2025:
+- Their Theorem 2.8 holds on compact complex manifolds with the bounded mass property: if φ ≤ ψ + O(1), then ∫⟨(θ+dd^cφ)^n⟩ ≤ ∫⟨(θ+dd^cψ)^n⟩ + ‖θ‖.
+- The defect ‖θ‖ vanishes for closed θ by Stokes' theorem.
+- Their Example 3.2 deduces that a closed current has equal lower and upper volumes.
 
-The Chapter 12 and 29 openings now say that without the Kähler hypothesis this invariance is not available, even for closed backgrounds. Every use of the invariance in a proof was already on a Kähler manifold: Riemann surfaces, projective spaces, Kähler tori, Kähler resolutions and compact Kähler X in Chapter 14. No proof changes.
+Asked how to state the invariance, the author chose the bounded mass property with a citation of BGL25. The book now says:
+- **Chapters 12 and 29 (openings):** the invariance holds on compact Kähler manifolds and, more generally, under the bounded mass property. The claim that it fails without the Kähler hypothesis is removed.
+- **Chapter 29 (singularity-volume remark):** cites the classical Kähler case (SGPT) and the general source in the historical notes.
+- **Normalization chapter:** states the invariance on compact Kähler manifolds and, more generally, under the bounded mass property.
+- **Historical notes:** attribute the invariance to BGL25 (Theorem 2.8 with the vanishing defect (2.7), and Example 3.2) on manifolds with the bounded mass property.
 
-The equality of the masses of bounded potentials in a closed background, given by Stokes' theorem and `thm:mass-invariance-characterization`, holds on every compact complex manifold and is unchanged. The rule is now in the book-writing skill's project profile and editorial memory.
+Every use of the invariance in a proof is on a Kähler manifold, or in Chapter 29, which assumes the bounded mass property. No proof changes.
+
+Stokes' theorem for bounded potentials in a closed background (`thm:mass-invariance-characterization`) holds on every compact complex manifold and is unchanged. The rule is recorded in the book-writing skill.
+
+## Follow-up 2: journal versions of cited papers
+
+The author's rule (6 October 2026): “You should always use the journal version when possible.” Eight agents checked the 105 cited papers, excluding books, notes and theses: publication status, bibliographic data, and every locator against the published text when it could be reached. The coordinator applied their patch lists and checked every replaced string for uniqueness.
+
+**Bibliography and locators**
+- The following entries now cite published versions, and their locators follow the journal numbering and pagination: BEGZ10, Sze18, TW10, TW15, STW17, EGZ09, BT82, DP04, Dem94, KN15, KN19, KN21, KN22, Nguyen16, BBToric13, Chiose14, Pop13SG, CT15Loci, GP04, ADOS24, OV11OT, OV24LCK, OV24Vaisman, OV25LeeGauduchon, OV25Balanced, GL23E, AKMW02, FTWZ16, Siu74, Inoue74, Barlet00 and WalterPrioritary93.
+- Papers that appeared after they were first cited: ALS26 (J. Funct. Anal.), FV26 (Proc. Amer. Math. Soc.), DangNull26 (Trans. Amer. Math. Soc., Early View) and DX24 (Trans. Amer. Math. Soc.).
+- Remaining arXiv citations name the version used (v1, v2, …).
+- Cavalcanti's published paper (Adv. Math. 2020) omits the stability section, so Theorem 8.11 is still cited from arXiv v5, with a note in the bibliography.
+
+**Changes of numbering found**
+- **Sze18:** in the journal, Propositions 10 and 11 are swapped relative to arXiv v3.
+- **Dem94:** the printed chapter numbers differ from the manuscript: Lemma 4.4 → 4.2, Proposition 3.8 → 3.1, equations (3.11), (4.3), (4.5) → (3.19), (4.21), (4.22), and Remark 4.7 → 4.4.
+- **DP04:** the Annals numbering (Theorems 0.5, 0.7, Conjecture 0.8) is confirmed, and the arXiv remark is dropped.
+- **Dem92:** the smooth regularization is Main Theorem 1.1.
+- **KN22:** the old book title was wrong; the paper is in Springer Proc. Math. Stat. 481 (2025).
+
+**Answers to the author's questions**
+- **Ceg98:** Theorem 6.3 holds for compactly supported measures, with n ≥ 2 as the standing hypothesis of its Section 2.
+- **BT82:** Theorem 7.4 (p. 27) covers bounded monotone sequences; Theorem 2.1 is on pp. 4–7.
+- **DNGL26:** Theorem 3.4 asserts no completeness, and Question 3.5 is an open problem. The book's examples now "answer it negatively".
+- **Fu–Ouyang:** Lemma 3.1 and Proposition 3.2 do allow arbitrary approximating forms, so the book's counterexample bears on their conclusion and on (iii)⇒(i).
+- **TaylorReg:** the note has a single unnumbered Proposition.
+
+**Descriptions corrected**
+- DP04: the converse of the Fujiki-class equivalence.
+- Dinew16: Proposition 6.2 is a uniform L¹ bound.
+- Dinew09: Theorem 1.2 is Kołodziej's inequality.
+- OV11OT: the null leaves are Zariski dense.
+- BEGZ10: attainment by minimal singularities holds for big classes.
+- Wu: compact bases.
+- Liu–Wan Theorem 2.1 is Kobayashi's criterion.
+- DangNull26 Theorem 1.1 is Collins–Tosatti's argument without closedness.
+- Tosatti26: differences of nef classes.
+- BGL25 Lemma 1.15 comes from Hahn–Banach.
+- GL22: the range estimate.
+- Sze18 §6 has no first-order term.
+
+**Not confirmed against the published text**
+
+The published text was paywalled or unreachable. Each of these locators is supported only by the final arXiv or author version, or by later citations:
+- ALS26: 19 statement numbers.
+- FV26: Conjectures 1.1–1.2.
+- DangNull26 and DX24: statement numbers.
+- OV24Vaisman: Theorem 4.1 and Lemmas 4.2–4.4.
+- OV25Balanced: Conjecture 4.14 and Remark 4.16.
+- OV25LeeGauduchon: Remark 5.6 and Theorem 3.11.
+- OV24LCK: Question 47.56(3).
+- Dem94: Remark 4.4 and equation (4.22).
+- Dem92: Main Theorem 1.1.
+- Nguyen16: Corollary 0.2 and Proposition 2.5.
+- KN19: Remark 3.13.
+- Collins21: Theorem 2.13.
+- TWWY15: Definition 3.2 and Theorem 3.4.
+- GL23E: Lemma 3.3 and Theorem 3.4.
+- Dinew09: Theorem 1.2.
+- FTWZ16: Lemma 2.1.
+- CT15Loci: Theorem 1.1.
+- GP04: Section 2.
+- DPS94: Example 1.7.
+- DDNL21: Lemma 4.3.
+- BG18: Proposition 2.4 and Theorem 2.5.
+- WalterPrioritary93: the page of Proposition 2.
 
 ## Deferred items (no change made)
 
 - `thm:small-pole-envelope-residual` assumes positive lower singularity volume, which its proof uses only for a side remark.
 - Some hypotheses are stronger than their proofs need (for example `cor:i-envelope-finite`, `birational_partial_kernels`, `section_bounded_connected_uniqueness`); they are kept.
 - `thm:flat-anticanonical-neighborhood`: Step 2 of Lemma 2 is only outlined; an expert check is advisable.
-- Historical claims about other papers that could not be checked here:
-  - DNGL26 Theorem 3.4 and Question 3.5;
-  - Fu–Ouyang Lemma 3.1 and Proposition 3.2;
-  - BT82 Theorem 7.4;
-  - the TaylorReg proposition;
-  - the BEGZ10 version locators.
+- The locators not confirmed against the published text are listed in Follow-up 2. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
+- The hidden Nakamaye chapter cites CT22 Lemma 4.2 for arbitrary modifications; the lemma assumes compositions of blowups with smooth centers. Hidden files are not edited.
 - Local reuse of letters across sections (Ω, r versus f for fiber dimension, L in Section 27.19) is declared locally and kept.

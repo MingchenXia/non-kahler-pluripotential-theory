@@ -1,5 +1,17 @@
 # Modification history
 
+## 6 October 2026 — Journal versions of citations; mass invariance under bounded mass (529, follow-ups)
+
+**Journal versions.** Following the author's rule "always use the journal version when possible", all 105 cited papers were checked against their published versions.
+- Bibliography entries and locators now follow the journal numbering and pagination.
+- Four papers that have since appeared in journals (ALS26, FV26, DangNull26, DX24) are cited there.
+- arXiv-only citations name their version.
+- Numbering changes were found and fixed in Sze18 and Dem94. The KN22 volume was wrong and is corrected.
+- Several descriptions of cited results are made precise, among them DNGL26, Dinew09, Dinew16, OV11OT, BEGZ10 and Liu–Wan.
+- Locators that could not be checked against paywalled journal text are listed in the checkpoint 529 record.
+
+**Mass invariance.** After the BGL25 check, the author chose to state that the non-pluripolar mass in a closed background depends only on the singularity type under the bounded mass property, in particular on compact Kähler manifolds (BGL25 Theorem 2.8, Example 3.2). This replaces the Kähler-only wording of the previous follow-up. No proof changes.
+
 ## 6 October 2026 — Mass invariance only in the Kähler theory (529, follow-up)
 
 Following the author's correction, statements made without a Kähler hypothesis that the non-pluripolar mass in a closed background depends only on the singularity type are now restricted to compact Kähler manifolds. They are in the openings of Chapters 12 and 29, the singularity-volume remark and its uses, the normalization chapter, Chapter 15 and the historical notes. Every use in a proof was already on a Kähler manifold, so no proof changes. Stokes' theorem for bounded potentials of a closed background is unaffected. The rule is added to the book-writing skill. Clean rebuild (1492 printed pages), republished in website commit 9b3a351.

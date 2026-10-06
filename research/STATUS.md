@@ -16,7 +16,7 @@ Build: clean, 1520 physical / 1492 printed pages, 117 references and 910 index e
 
 Publication: website commit 335edc6, PDF SHA-256 `ba538a54…`, with the remote blobs verified. The live GitHub Pages PDF matches SHA-256 `ba538a54…`, and the live homepage shows "1492 pages. Updated October 6, 2026".
 
-Follow-up: following the author's correction, mass invariance in closed backgrounds is stated only on compact Kähler manifolds (see the record); clean rebuild republished in website commit 9b3a351; the live GitHub Pages PDF matches SHA-256 `1d1e3f3d…` and the homepage shows "1492 pages. Updated October 6, 2026". Deferred items are listed in the record, for example an expert check of `thm:flat-anticanonical-neighborhood`. All 38 original directions remain open.
+Follow-up: following the author's correction, mass invariance in closed backgrounds is stated only on compact Kähler manifolds (see the record); clean rebuild republished in website commit 9b3a351; the live GitHub Pages PDF matches SHA-256 `1d1e3f3d…` and the homepage shows "1492 pages. Updated October 6, 2026". Further follow-ups the same day: all 105 cited papers checked against their published versions (journal-version rule), and mass invariance in closed backgrounds stated under the bounded mass property (BGL25), as the author chose. Clean rebuild republished in website commit ce71cb5 (live check pending at the time of this entry); locators that could not be checked against paywalled journal text are listed in the record. Deferred items are listed in the record, for example an expert check of `thm:flat-anticanonical-neighborhood`. All 38 original directions remain open.
 
 ## Checkpoint 528 — Oeljeklaus–Toma manifolds
 
