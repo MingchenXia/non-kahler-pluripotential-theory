@@ -1,6 +1,6 @@
 # Singularities in Hermitian pluripotential theory
 
-The [S03 concentration integration](research/editorial/zero-threshold-concentration-integration-521.md) gives a zero-threshold density with greatest unbounded exponential solutions for every positive exponent on tailored split products. The website serves the verified 1353-page PDF and matching homepage description; 38 original directions remain open.
+The [exponent integration](research/editorial/zero-threshold-exponent-integration-523.md) describes the solvable-exponent interval and mass collapse of existing zero-threshold exponential solutions. The website serves the verified 1355-page PDF and matching homepage description; 38 original directions remain open.
 
 The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
