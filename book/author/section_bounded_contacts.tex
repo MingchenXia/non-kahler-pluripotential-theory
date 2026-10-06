@@ -1,32 +1,32 @@
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:smooth-obstacle-support}\index{Contact set!exponential approximation}
-Let $\omega$ be Hermitian and $f\in C^\infty(X,\mathbb R)$. For $\beta>0$, denote by $u_\beta$ the smooth strictly $\omega$-plurisubharmonic solution of
+Let $f\in C^\infty(X,\mathbb R)$. For $\beta>0$, denote by $u_\beta$ the smooth strictly $\omega$-plurisubharmonic solution of
 \[
  \omega_{u_\beta}^n=\mathrm{e}^{\beta(u_\beta-f)}\omega^n.
 \]
-These solutions converge uniformly as $\beta\to+\infty$ to $p=P_\omega(f)$. Moreover,
+As $\beta\to+\infty$, these solutions converge uniformly to $p=P_\omega(f)$. Moreover,
 \[
  \mathbf1_{\{p<f\}}\omega_p^n=0.
 \]
 \end{proposition}
 \begin{proof}
-Existence is \cref{thm:smooth-proper-existence}. Choose $A\geq0$ with $\ddc f\leq A\omega$. At a maximum of $u_\beta-f$,
+The solutions exist by \cref{thm:smooth-proper-existence}. Choose $A\geq0$ with $\ddc f\leq A\omega$. At a maximum point of $u_\beta-f$, the second derivative test gives
 \[
  \omega_{u_\beta}\leq\omega+\ddc f\leq(1+A)\omega.
 \]
 \Needspace{5\baselineskip}
-The equation gives
+Evaluating the equation at this point, we obtain
 \[
  u_\beta\leq f+\frac{C_f}{\beta},\qquad C_f=n\log(1+A).
 \]
-Thus $u_\beta-C_f/\beta$ is an envelope competitor, and
+Thus $u_\beta-C_f/\beta$ is a competitor for $P_\omega(f)$, and
 $u_\beta\leq p+C_f/\beta$.
 
-The function $p$ is continuous by \cref{prop:continuous-obstacle-envelope}. Choose smooth strictly $\omega$-plurisubharmonic $v_j\downarrow p$ by \cref{thm:bounded-exact-regularization}; convergence is uniform by compactness. For any $\delta>0$, choose $j$ so that
+For the lower bound, note that $p$ is continuous by \cref{prop:continuous-obstacle-envelope}, and choose smooth strictly $\omega$-plurisubharmonic functions $v_j\downarrow p$ by \cref{thm:bounded-exact-regularization}; by Dini's theorem the convergence is uniform. For any $\delta>0$, choose $j$ so that
 \[
  p\leq v_j\leq p+\delta/2.
 \]
-Then $v_j-\delta\leq f$. Positivity and compactness give a number $c_j>0$ such that $\omega_{v_j}^n\geq c_j\omega^n$. Put $C_j=\max(0,-\log c_j)$. The function
+Then $v_j-\delta\leq f-\delta/2$, since $p\leq f$. Since $\omega_{v_j}>0$ and $X$ is compact, there is $c_j>0$ such that $\omega_{v_j}^n\geq c_j\omega^n$. Put $C_j=\max(0,-\log c_j)$. The function
 \[
  w_{j,\beta}=v_j-\delta-C_j/\beta
 \]
@@ -36,35 +36,35 @@ satisfies
  \geq \mathrm{e}^{-C_j}\omega^n
  \geq \mathrm{e}^{\beta(w_{j,\beta}-f)}\omega^n.
 \]
-Smooth exponential comparison gives $w_{j,\beta}\leq u_\beta$. Consequently
+Exponential comparison, \cref{cor:bounded-exponential-comparison} with $\lambda=\beta$, gives $w_{j,\beta}\leq u_\beta$. Consequently
 \[
  p-\delta-C_j/\beta\leq u_\beta\leq p+C_f/\beta.
 \]
-First let $\beta$ tend to infinity with $j$ fixed, so no uniform lower bound on $c_j$ is needed, and then let $\delta\downarrow0$. This proves uniform convergence. Bounded Bedford--Taylor continuity gives weak convergence of the measures.
+Letting first $\beta\to\infty$ with $j$ fixed, so that no lower bound for $c_j$ uniform in $j$ is needed, and then $\delta\downarrow0$, we obtain uniform convergence. Bounded Bedford--Taylor continuity then gives weak convergence of the measures.
 
-On a compact subset of the open set $\{p<f\}$, uniform convergence gives $u_\beta-f\leq-\epsilon$ for all large $\beta$, with some $\epsilon>0$. There the measures have densities at most $\mathrm{e}^{-\beta\epsilon}$. Testing with continuous functions of compact support in that open set and passing to the bounded-product limit gives $\omega_p^n=0$ there.
+On a compact subset of the open set $\{p<f\}$, uniform convergence gives $u_\beta-f\leq-\epsilon$ for some $\epsilon>0$ and all large $\beta$. There the measures $\omega_{u_\beta}^n$ have densities at most $\mathrm{e}^{-\beta\epsilon}$ with respect to $\omega^n$. Testing against continuous functions with compact support in $\{p<f\}$ and passing to the limit gives $\omega_p^n=0$ on this open set.
 \end{proof}
 
 \begin{proposition}
 \label{prop:lsc-obstacle-support}
-If $\omega$ is Hermitian and $f$ is bounded and lower semicontinuous, then $P_\omega(f)$ is bounded, lies below $f$ quasi-everywhere, and its measure is concentrated on $\{P_\omega(f)=f\}$.
+If $f$ is bounded and lower semicontinuous, then $P_\omega(f)$ is bounded, lies below $f$ quasi-everywhere, and its Monge--Amp\`ere measure is concentrated on $\{P_\omega(f)=f\}$.
 \end{proposition}
 \begin{proof}
-Suppose first that $f$ is continuous. Choose smooth $f_j\to f$ uniformly. The envelope Lipschitz bound gives $p_j=P_\omega(f_j)\to p=P_\omega(f)$ uniformly. On every compact subset of $\{p<f\}$, the inequalities $p_j<f_j$ hold on a neighborhood for all large $j$. The preceding proposition and bounded-product convergence then give $\omega_p^n=0$ on $\{p<f\}$.
+Suppose first that $f$ is continuous. Choose smooth functions $f_j\to f$ uniformly. The Lipschitz bound for envelopes in \cref{prop:continuous-obstacle-envelope} gives $p_j=P_\omega(f_j)\to p=P_\omega(f)$ uniformly. Every compact subset of the open set $\{p<f\}$ has a neighborhood on which $p_j<f_j$ for all large $j$. The preceding proposition and convergence of bounded products then give $\omega_p^n=0$ on $\{p<f\}$.
 
-For lower semicontinuous $f$, choose continuous $f_j\uparrow f$, with common upper and lower bounds. For example, for a fixed compatible distance $d$ one may take
+For lower semicontinuous $f$, choose continuous functions $f_j\uparrow f$ with common upper and lower bounds. For example, for a fixed distance $d$ inducing the topology of $X$, one may take
 \[
  f_j(x)=\inf_{y\in X}\bigl(f(y)+j d(x,y)\bigr).
 \]
-These functions are Lipschitz and increase to $f$: if convergence failed at $x$, approximate minimizers would approach $x$, contradicting lower semicontinuity.
+These functions are Lipschitz and increase to $f$: if convergence failed at $x$, approximate minimizers $y$ would approach $x$, contradicting lower semicontinuity of $f$ at $x$.
 
-The functions $p_j=P_\omega(f_j)$ increase, stay bounded, and have a bounded $\omega$-plurisubharmonic regularized limit $p_\infty=(\lim_jp_j)^*$. A countable union of pluripolar exceptional sets shows that $p_\infty\leq f$ quasi-everywhere. Thus $p_\infty\leq P_\omega(f)$.
+The functions $p_j=P_\omega(f_j)$ increase and stay bounded, so the regularized limit $p_\infty=(\lim_jp_j)^*$ is a bounded $\omega$-plurisubharmonic function. It agrees with $\lim_jp_j$ outside a pluripolar set, and since each $p_j$ lies below $f_j\leq f$ outside a pluripolar set, we obtain $p_\infty\leq f$ quasi-everywhere. Thus $p_\infty\leq P_\omega(f)$.
 
-For fixed $k$, the set $\{p_\infty<f_k\}$ is open. If $j\geq k$, then $p_j\leq p_\infty<f_k\leq f_j$ there, so the continuous-obstacle case gives zero measure on that open set. Increasing bounded Bedford--Taylor convergence applies after adding a fixed smooth local correction whose Hessian dominates $\omega$ and expanding against the resulting smooth background. Together with the weak-limit inequality for open sets, it yields
+For fixed $k$, the set $\{p_\infty<f_k\}$ is open, since $p_\infty$ is upper semicontinuous and $f_k$ is continuous. If $j\geq k$, then $p_j\leq p_\infty<f_k\leq f_j$ there, so the continuous case gives $\omega_{p_j}^n=0$ on that open set. Bedford--Taylor continuity along increasing sequences applies after adding a fixed smooth local function whose Hessian dominates $\omega$ and expanding with respect to the resulting smooth form. Together with the lower semicontinuity of the mass of open sets under weak convergence, it yields
 \[
  \omega_{p_\infty}^n(\{p_\infty<f_k\})=0.
 \]
-Taking the union over $k$ gives zero measure on $\{p_\infty<f\}$, hence also on $\{p_\infty<P_\omega(f)\}$ outside a pluripolar set. By bounded domination, \cref{thm:bounded-strict-domination}, $p_\infty\geq P_\omega(f)$. They are therefore equal, and the assertion follows.
+Taking the union over $k$ gives zero measure on $\{p_\infty<f\}$, hence also on $\{p_\infty<P_\omega(f)\}$ outside a pluripolar set, since $P_\omega(f)\leq f$ quasi-everywhere. Bounded measures of this kind do not charge pluripolar sets, so the domination principle, \cref{thm:bounded-strict-domination}, gives $p_\infty\geq P_\omega(f)$. The two functions are therefore equal, and the assertion follows.
 \end{proof}
 
 \begin{theorem}\label{thm:bounded-contact-support}
@@ -74,18 +74,18 @@ Let $\theta\geq0$ be smooth and let $f$ be bounded and quasi-continuous. Then $p
 \]
 \end{theorem}
 \begin{proof}
-First suppose $\theta=\omega$ is Hermitian. Choose $f_j\downarrow f$ quasi-everywhere as in \cref{lem:quasicont-lsc-approximation}. The bounded functions $p_j=P_\omega(f_j)$ decrease to $p$. Indeed their limit is a competitor for $p$, since it lies below $f$ quasi-everywhere; the reverse inequality follows from monotonicity.
+First suppose that $\theta=\omega$ is Hermitian. Choose bounded lower semicontinuous functions $f_j\downarrow f$ quasi-everywhere, with common bounds, as in \cref{lem:quasicont-lsc-approximation}. The bounded functions $p_j=P_\omega(f_j)$ decrease to $p$. Indeed, their limit is a competitor for $p$, since it lies below $f$ quasi-everywhere, and the reverse inequality follows from monotonicity.
 
-For fixed $k$, put $H_k=\min\{1,(f-p_k)_+\}$. It is bounded and quasi-continuous. Where $H_k>0$ and $j\geq k$, we have $p_j\leq p_k<f\leq f_j$, outside a pluripolar set. The lower semicontinuous case therefore gives
+For fixed $k$, put $H_k=\min\{1,(f-p_k)_+\}$, a bounded quasi-continuous function. Where $H_k>0$ and $j\geq k$, we have $p_j\leq p_k<f\leq f_j$ outside a pluripolar set. The lower semicontinuous case therefore gives
 \[
  \int_X H_k\,\omega_{p_j}^n=0.
 \]
-The weighted bounded-product convergence in \cref{sec:hermitian-capacity} gives
-$\int_XH_k\,\omega_p^n=0$. The sets $\{p_k<f\}$ increase to $\{p<f\}$, proving support.
+The convergence of bounded products against quasi-continuous weights in \cref{sec:hermitian-capacity} gives
+$\int_XH_k\,\omega_p^n=0$. Since the sets $\{p_k<f\}$ increase to $\{p<f\}$, this proves the assertion for Hermitian $\theta$.
 
-For general semipositive $\theta$, set $\theta_j=\theta+j^{-1}\omega$ with $\omega$ Hermitian. The functions $p_j=P_{\theta_j}(f)$ have the common bounds $\inf_Xf\leq p_j\leq\sup_Xf$ and decrease. Their limit is $\theta$-plurisubharmonic by distributional convergence, lies below $f$ quasi-everywhere, and hence equals $p=P_\theta(f)$. For each fixed $k$, the same coefficient $H_k=\min\{1,(f-p_k)_+\}$ gives
+For general semipositive $\theta$, set $\theta_j=\theta+j^{-1}\omega$. The functions $p_j=P_{\theta_j}(f)$ have the common bounds $\inf_Xf\leq p_j\leq\sup_Xf$ and decrease. Their limit is $\theta$-plurisubharmonic by distributional convergence and lies below $f$ quasi-everywhere, so it is at most $p=P_\theta(f)$; since $p\leq p_j$ for all $j$, it equals $p$. For each fixed $k$, the same coefficient $H_k=\min\{1,(f-p_k)_+\}$ gives
 \[
  \int_XH_k\,\mathrm{MA}_{\theta_j}(p_j)=0\qquad(j\geq k).
 \]
-All $p_j$ are bounded potentials for the fixed Hermitian form $\theta+\omega$. Expand the products with $\theta_j$ against that fixed background. Bounded-product convergence and uniform capacity control pass the displayed identity to $\mathrm{MA}_\theta(p)$, including its quasi-continuous coefficient. Exhausting $\{p<f\}$ as before completes the proof.
+All $p_j$ are bounded potentials for the fixed Hermitian form $\theta+\omega$. Expanding the products with background $\theta_j$ with respect to this fixed background, we may use convergence of bounded products and uniform capacity bounds to pass the last identity to the limit, with the quasi-continuous weight $H_k$; this gives $\int_XH_k\,\mathrm{MA}_\theta(p)=0$. Exhausting $\{p<f\}$ as before completes the proof.
 \end{proof}
