@@ -83,3 +83,115 @@ For a general positive individual threshold, the corollary gives
 The next estimate quantifies this scalar error when the density root is approximable by bounded roots. Whether an exponential subsolution exists when $b_h(f)=0$ is a separate question; \cref{thm:individual-exponential-subsolution} applies whenever such a subsolution is available.
 
 \input{author/section_exponential_tail_modulus}
+
+\Needspace{12\baselineskip}
+\subsection{Exponential equations at zero threshold}
+\label{subsec:zero-threshold-product-exponential}
+
+Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$ with $v_-(h_0)=0$. Put $Y=\mathbf P^k$, $k\geq1$, with normalized Fubini--Study form $\kappa$, and set $X=X_0\times Y$, $H=h_0+\kappa$, $N=m+k$ and
+\[
+ C=\binom Nm,\qquad V_0=\int_{X_0}h_0^m,\qquad
+ \mu=V_0^{-1}h_0^m\wedge\kappa^k,\qquad R=\mu/\mathrm dV.
+\]
+Here $\mathrm dV$ is any smooth strictly positive probability volume form on $X$, and factor pullbacks are understood. The potential $u_\alpha=1-(1-\psi)^\alpha$ and its density $q_\alpha$ are those of \cref{lem:projective-sublogarithmic-density}, for fixed $0<\alpha<1$ and pole $o=[1:0:\cdots:0]$. Its exponential weight can absorb a concentration. Choosing the projective components accordingly gives one zero-threshold density with genuine exponential solutions for every positive exponent. On $Y\setminus\{o\}$ put $L=1-\psi\geq1$, $t=\mathrm e^{1-L}$ and
+\[
+ a=\alpha L^{\alpha-1},\qquad Q=t+(1-t)a,\qquad
+ D=t(1-a)+(1-t)\alpha(1-\alpha)L^{\alpha-2},
+\]
+\[
+ W=kQ^{k-1}D,\qquad
+ B_\tau=q_\alpha\mathrm e^{\tau(L^\alpha-1)}\quad(\tau>0),\qquad
+ b_0=(1-\alpha)^k.
+\]
+
+\begin{lemma}\label{lem:projective-exponential-barrier-growth}
+The radial expressions are
+\[
+ q_\alpha=Q^{k-1}D\,\mathrm e^{k(L-1)},\qquad q_\alpha\geq b_0,
+ \qquad W(L)\sim k\alpha^k(1-\alpha)L^{-1-k(1-\alpha)}.
+\]
+For every $\tau>0$, $\mathrm e^{\tau(L^\alpha-1)}W(L)\to+\infty$ as $L\to+\infty$. In particular, $B_\tau\kappa^k$ has infinite mass on every punctured neighbourhood of $o$.
+\end{lemma}
+\begin{proof}
+In the radial calculation of \cref{lem:projective-sublogarithmic-density}, $t=r/(1+r)$ and $-dQ/dL=D$. The Fubini--Study radial probability is $k\mathrm e^{-k(L-1)}\mathrm dL$, whereas the radial mass of $q_\alpha\kappa^k$ is $W(L)\mathrm dL$. Their ratio gives the formula for $q_\alpha$. The lower bound follows from $\kappa+\ddc u_\alpha\geq(1-\alpha)\kappa$ away from the pole. Since $Q\sim\alpha L^{\alpha-1}$ and $D\sim\alpha(1-\alpha)L^{\alpha-2}$, the displayed asymptotic follows. The logarithm of the weighted radial density is $\tau L^\alpha-[1+k(1-\alpha)]\log L+O(1)$, which tends to infinity. Its integral over every tail is therefore infinite.
+\end{proof}
+
+\begin{theorem}\label{thm:product-zero-threshold-exponential-criterion}\index{Monge--Ampere equation@Monge--Amp\`ere equation!zero threshold criterion}
+Let $f\geq0$ be nonzero and integrable on $X$, and put $F=f/R$. If $\lambda>0$ and $F\leq AB_\lambda$ almost everywhere for some finite $A>0$, then
+\[
+ s_\lambda=u_\alpha+\lambda^{-1}\log(CV_0/A)
+\]
+is a genuine exponential subsolution of actual mass $CV_0$. The exponential equation has a greatest genuine solution of finite positive mass. This conclusion holds for every $\lambda>0$ if $F$ is locally essentially bounded off $X_0\times\{o\}$ and
+\[
+ \lim_{T\to+\infty}\operatorname*{ess\,sup}_{x\in X_0,\ L(y)>T}
+ \frac{\log^+(F(x,y)/q_\alpha(y))}{L(y)^\alpha}=0,
+ \qquad \log^+t=\log\max(1,t).
+\]
+\end{theorem}
+\begin{proof}
+The product measure in \cref{thm:zero-lower-mass-product-equation} is $\mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=CV_0q_\alpha\mu$. Since $\mathrm e^{\lambda u_\alpha}B_\lambda=q_\alpha$ off the pole,
+\[
+ \mathrm e^{\lambda s_\lambda}f\,\mathrm dV
+ \leq(CV_0/A)\mathrm e^{\lambda u_\alpha}AB_\lambda\mu
+ =\mathrm{MA}^{\mathrm{ext}}_H(s_\lambda).
+\]
+Both measures vanish on the polar fibre. Adding the constant preserves admissibility and mass, and \cref{thm:individual-exponential-subsolution} gives the greatest exact solution. Its mass is finite because its supremum is finite and $f\in L^1$; it is positive because a genuine quasi-plurisubharmonic function is finite almost everywhere and $f$ has positive integral.
+
+Under the limit condition, $F/q_\alpha\leq\mathrm e^{(\lambda/2)L^\alpha}$ almost everywhere sufficiently near the pole. On the remaining compact set the ratio is bounded. Increasing a finite constant $A$ therefore gives $F\leq AB_\lambda$ on all of $X$.
+\end{proof}
+
+\begin{theorem}\label{thm:zero-threshold-solvable-concentration}\index{Monge--Ampere density@Monge--Amp\`ere density!solvable concentration}\index{Subsolution!zero threshold exponential equation}
+Let $F_j$ be any smooth strictly positive probability densities relative to $\mathrm dV_0=V_0^{-1}h_0^m$ satisfying $c_{h_0}(F_j)\leq2^{-2j}/C$. There are smooth strictly positive probability densities $g_j$ relative to $\kappa^k$ such that
+\[
+ f_j=RF_jg_j,\qquad f=\sum_{j\geq1}2^{-j}f_j,
+ \qquad c_H(f_j)\leq2^{-2j},\qquad b_H(f)=0.
+\]
+The function $f$ is finite everywhere, smooth off the polar fibre, has integral one and is bounded below by a positive constant. This single density has a genuine exponential subsolution and a greatest finite-mass exact solution for every $\lambda>0$. Every genuine exact solution is unbounded.
+\end{theorem}
+\begin{proof}
+Put $w_j=2^{-j}$ and $M_j=\max F_j$. Using an increasing sequence of smooth coordinate seminorms on $X_0$, choose $0<\varepsilon_j\leq1/2$ so that
+\[
+ w_j\varepsilon_jM_j\leq b_0 2^{-j-2},\qquad
+ w_j\varepsilon_j\|F_j\|_{C^j}\leq2^{-j}.
+\]
+Then $E=\sum_jw_j\varepsilon_jF_j$ is smooth and satisfies $0<E\leq b_0/4$.
+
+Choose a smooth function $0\leq\rho\leq1$ on $\mathbb R$, supported in $[0,1]$, positive inside and flat at the endpoints. Starting with $A_0=0$, inductively choose $A_j\geq2$, $A_j>A_{j-1}+2$, with
+\[
+ Z_j=\int_{A_j}^{A_j+1}\rho(L-A_j)
+       \mathrm e^{(L^\alpha-1)/j}W(L)\,\mathrm dL
+       \geq2w_jM_j.
+\]
+For each fixed $j$, \cref{lem:projective-exponential-barrier-growth} makes the integrand's weighted radial factor uniformly large on sufficiently distant intervals. Thus such a choice is possible. On that annulus put $b_j=\rho(L-A_j)B_{1/j}/Z_j$, extend it by zero elsewhere and set $g_j=\varepsilon_j+(1-\varepsilon_j)b_j$. Flatness makes $b_j$ smooth across the annulus boundaries; it vanishes near the pole and the infinity hyperplane. The integral of $b_j$ is one, so $g_j$ is a smooth strictly positive probability density. Moreover,
+\[
+ w_jM_j(1-\varepsilon_j)b_j\leq B_{1/j}/2.
+\]
+
+Apply \cref{thm:tw-smooth} on $Y$ to solve $(\kappa+\ddc\phi_j)^k=g_j\kappa^k$ with a smooth positive form; closed integration fixes its scalar as one. On $X_0$ the same theorem gives a smooth potential $v_j$ with $(h_0+\ddc v_j)^m=c_{h_0}(F_j)F_j\,\mathrm dV_0$. The product potential $v_j+\phi_j$ satisfies
+\[
+ (H+\ddc(v_j+\phi_j))^N
+ =C c_{h_0}(F_j)F_jg_j\mu
+ =C c_{h_0}(F_j)f_j\,\mathrm dV.
+\]
+The factor dimensions leave only the displayed binomial term. Scalar uniqueness gives $c_H(f_j)=C c_{h_0}(F_j)\leq2^{-2j}$.
+
+Tonelli's theorem gives $\int_Xf\,\mathrm dV=\sum_jw_j=1$. The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact set outside the polar fibre. Hence $F=E+\sum_jw_j(1-\varepsilon_j)F_jb_j$ is smooth there. At the fibre the pointwise sum equals $E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. If a positive coefficient $a$ were admitted by the maximal-subsolution characterization in \cref{thm:individual-density-subsolution}, then comparison with each smooth component would give
+\[
+ aw_j\leq c_H(f_j)\leq2^{-2j},\qquad a\leq2^{-j}
+ \quad\text{for every }j.
+\]
+This is impossible; thus $b_H(f)=0$.
+
+Fix $\lambda>0$ and choose $J$ with $1/j\leq\lambda$ for $j\geq J$. Since $u_\alpha\leq0$, one has $B_{1/j}\leq B_\lambda$ for these indices. Disjointness bounds the sum of their contributions by $B_\lambda/2$, and the baseline is at most $B_\lambda/4$. The remaining finitely many bumps have a finite bound
+\[
+ K_\lambda=\max_Y\sum_{j<J}w_j(1-\varepsilon_j)M_jb_j,
+ \qquad D_\lambda=3/4+K_\lambda/b_0.
+\]
+Thus $F\leq D_\lambda B_\lambda$. The preceding criterion gives the explicit subsolution $u_\alpha+\lambda^{-1}\log(CV_0/D_\lambda)$ and the greatest exact solution. A bounded exponential subsolution would give a positive constant coefficient for $f$, contradicting its zero threshold. Every genuine exact solution is therefore unbounded.
+\end{proof}
+
+The constructed density also satisfies the logarithmic criterion: on the $j$th annulus, $F/q_\alpha\leq1/4+\frac12\mathrm e^{(L^\alpha-1)/j}$, and away from all annuli the ratio is at most $1/4$. Approaching the pole through annuli forces $j\to\infty$, giving the required uniform limit. Since $b_H(f)=0$, \cref{prop:individual-normalizer-lp} also shows that $f$ belongs to no $L^p$ for $p>1$.
+
+For the elliptic threefold, \cref{thm:vanishing-lower-mass} supplies smooth positive forms with masses $\delta_\ell\to0$. Normalize their volume densities by $\delta_\ell$ and choose a subsequence with $\delta_{\ell_j}\leq2^{-2j}/C$. Scalar uniqueness gives the required $F_j$ with $c_{h_0}(F_j)=\delta_{\ell_j}$. Thus the construction applies to this threefold times $\mathbf P^k$ for every $k\geq1$. By \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $96\pi$ on the fourfold and $240\pi$ on the fivefold. These numerical values concern the subsolutions; the greatest exact solutions have their own finite positive masses.
+
+The projective components are chosen after the base sequence. The theorem does not determine solvability for an arbitrary previously prescribed concentration family or give a necessary criterion at zero threshold.
