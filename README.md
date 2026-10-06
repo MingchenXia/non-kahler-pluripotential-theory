@@ -1,6 +1,8 @@
 # Singularities in Hermitian pluripotential theory
 
-The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. The actual website serves the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
+The [stable-extension integration](research/editorial/hirzebruch-stable-extension-integration-504.md) adds stable comparison bundles and an explicit smooth degeneration to the split point, while explaining their negative fibre quotient. Stable ample approximation remains a separate step. The actual website serves the verified 1326-page PDF and matching homepage description; 38 original directions remain open.
+
+The [Hirzebruch comparison integration](research/editorial/hirzebruch-comparison-integration-502.md) gives an ample comparison quotient, ruling cohomology and positive dual Gauduchon tests on every Hirzebruch surface. Stable ample approximation remains a separate research step. At checkpoint 502, the website served the verified 1324-page PDF and matching homepage description; 38 original directions remain open.
 
 The [polar Finsler integration](research/editorial/polar-finsler-integration-500.md) adds plurisubharmonicity and strong convexity of dual polar norms, their ample smooth replacement and the scoped Gauduchon curvature obstruction. At checkpoint 500, the actual website served the verified 1320-page PDF and matching homepage description. Stable ample geometry and further related research are next; 38 original directions remain open.
 
