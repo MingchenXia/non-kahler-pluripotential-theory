@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint546 integrates singular radial obstacles with47 direct obligations and complete509-line/12-proof adjacent-unit reads. Fresh empty-source reconstruction reproduces all1584 book and17 companion page texts with382 exact book-source files, safe archive paths, clean logs and publication skipped; final current-payload comparisons pass. Both actual1556-page public deployments and44-page visual coverage pass. Continue the complete616-line Chapter1 Sections1.7–1.11 automatic second read, then recursive Section1.12 and current primary/author updates. These scoped reads do not complete a recursive chapter. See [the singular-obstacle integration](singular-radial-obstacles-546.md).
+Current continuation: checkpoint547 completes original first/automatic-second reads of recursive Sections1.7–1.17, including1576 source lines and53 proofs, with47 actual final page views. All manuscript sources and both catalogues remain exact to the published546 release. Current package checks against actual546 reconstruction pass. Continue Sections1.18–1.23, then line bundles/polar curvature and Chapter2. No whole recursive Chapter1 completion is claimed. See [the reader review](products-ideals-reader-continuity-547.md).
 
 ## Greatest exponential left-limit review 526
 
