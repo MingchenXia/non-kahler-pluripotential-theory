@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint 549 completes the current recursive Chapter 1 reader pass cumulatively across545–549: 35 exact current sources, 4130 lines, 138 proofs and physical pages29–154. Sections1.24–1.25 and the entire parent have complete first/post-inspection second reads. No new manuscript edit or rebuild occurs. Current package checks against actual548 reconstruction pass. Continue complete recursive Chapter2, then the live queue and incoming author/primary-source updates. See [the chapter review](polar-curvature-chapter-one-reader-549.md).
+Current continuation: checkpoint550 completes recursive Chapters2–3 first/post-inspection automatic second reads (594 lines,22 proofs), with20 actual final page views and no source changes. Current reader passes for Chapters1–3 are complete. Current package checks against actual548 reconstruction pass. Continue complete recursive Chapter4 Gauduchon, then the live queue and incoming author/primary-source updates. See [the reader review](torsion-mass-energy-reader-550.md).
 
 ## Greatest exponential left-limit review 526
 
