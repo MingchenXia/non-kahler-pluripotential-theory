@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint 531 integrates P05 fixed-metric divergence/rigidity and the Kodaira conformal-gauge example; general P05 stays open. Publication and fresh reconstruction pass; synchronize, then independently reconstruct S05, S07, S06 and the newly received S12, and continue selected primary proofs/arXiv intake. See [the scoped integration](flat-lck-integration-531.md).
+Current continuation: checkpoint 532 integrates the radial non-Lp S05 family, joint density/exponent selection and the first-moment centering boundary. General S05 stays open. Final reads, three publications and visual checks pass; fresh empty reconstruction also passes; final metadata package checks pass; synchronize privately, then reconstruct the moving-logarithmic S05 source. Continue S07, S06, incoming S12 and selected current primary proofs/arXiv intake. See [the scoped integration](radial-integrable-selection-532.md).
 
 ## Greatest exponential left-limit review 526
 
