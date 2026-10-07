@@ -1,5 +1,14 @@
 # Modification history
 
+## 7 October 2026 — Crelle papers (529, follow-up 5)
+
+Publisher PDFs of GL23E and DDNL21 were checked against the book.
+- **GL23E:** the journal version has no Lemma 3.3. The bounded subsolution of arXiv v1 is split into Lemma 2.1 (big case, which is the one the book uses) and Lemma 2.5. The locator now reads Lemma 2.1, pp. 270–271, and Theorem 3.4, p. 279.
+- **DDNL21:** Lemma 4.3 is confirmed, on p. 154.
+- Seven papers remain without a publisher text: DangNull26, FV26, OV24Vaisman, Dem94 (p. 121), Dem92, DPS94 and Walter.
+
+Clean rebuild (1492 printed pages), republished in website commit 9339368; the live PDF matches SHA-256 `ac7cad6d…`. The author has no access to the remaining seven; their locators stay as they are.
+
 ## 7 October 2026 — Second set of publisher texts (529, follow-up 4)
 
 The author supplied six more publisher PDFs. Every citation site was compared with the published statements.

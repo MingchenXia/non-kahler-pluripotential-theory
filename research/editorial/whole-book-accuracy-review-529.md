@@ -186,12 +186,10 @@ The published text was paywalled or unreachable. Each of these locators is suppo
 - OV24Vaisman: Theorem 4.1 and Lemmas 4.2–4.4.
 - Dem94: Remark 4.4 and equation (4.22).
 - Dem92: Main Theorem 1.1.
-- GL23E: Lemma 3.3 and Theorem 3.4.
 - DPS94: Example 1.7.
-- DDNL21: Lemma 4.3.
 - WalterPrioritary93: the page of Proposition 2.
 
-Items removed on 7 October 2026 after the checks in Follow-ups 3 and 4: TWWY15, Dinew09, CT15Loci, GP04, BG18, OV25LeeGauduchon, OV24LCK, ALS26, OV25Balanced, Nguyen16, KN19, Collins21 and FTWZ16.
+Items removed on 7 October 2026 after the checks in Follow-ups 3–5: TWWY15, Dinew09, CT15Loci, GP04, BG18, OV25LeeGauduchon, OV24LCK, ALS26, OV25Balanced, Nguyen16, KN19, Collins21, FTWZ16, GL23E and DDNL21.
 
 ## Follow-up 3: publisher texts supplied by the author
 
@@ -242,11 +240,27 @@ DangNull26 and FV26 (AMS member access only), OV24Vaisman (International Press, 
 
 Build: clean, 1520 physical / 1492 printed pages. Publication: website commit 7df5ee1 with the remote blob verified; the live GitHub Pages PDF matches SHA-256 `604c576c…`.
 
+## Follow-up 5: the two Crelle papers
+
+The author then supplied the published PDFs of GL23E and DDNL21. They are evidence only and are not added to the repository.
+
+- **GL23E** (J. Reine Angew. Math. 800, 2023): **renumbered.**
+  - The journal version has no Lemma 3.3; Section 3.1 has Corollary 3.3 (bounds for the normalizing constant).
+  - arXiv v1 Lemma 3.3 (a bounded subsolution with −1 ≤ u ≤ 0, for ω big or v₋(ω) > 0) is split in print. The big case is Lemma 2.1 (pp. 270–271); the case v₋(ω) > 0 is Lemma 2.5 (p. 274).
+  - The book's `lem:big-lp-subsolution` is the big case, with the same (−ρ)^{2n} f construction. The locator is now Lemma 2.1, pp. 270–271.
+  - Theorem 3.4 (p. 279) is unchanged and matches `thm:big-bounded-exponential`.
+  - The earlier "confirmation" of Lemma 3.3 rested on a later paper's citation of that number. It evidently referred to the preprint, so such citations are not evidence for journal numbering.
+- **DDNL21** (J. Reine Angew. Math. 771, 2021): Lemma 4.3 is unchanged, on p. 154: P(bu + (1−b)v) is θ-psh when bⁿ∫uⁿ > (b−1)ⁿ∫vⁿ. This is the small convex correction the book uses. The page is added.
+
+Build: clean, 1520 physical / 1492 printed pages. Publication: website commit 9339368 with the remote blob verified; the live GitHub Pages PDF matches SHA-256 `ac7cad6d…`.
+
+The author has no access to the remaining seven publisher texts (DangNull26, FV26, OV24Vaisman, Dem94, Dem92, DPS94, Walter). Their locators stay as they are, supported by the evidence listed in Follow-up 2, and remain open items.
+
 ## Deferred items (no change made)
 
 - `thm:small-pole-envelope-residual` assumes positive lower singularity volume, which its proof uses only for a side remark.
 - Some hypotheses are stronger than their proofs need (for example `cor:i-envelope-finite`, `birational_partial_kernels`, `section_bounded_connected_uniqueness`); they are kept.
 - `thm:flat-anticanonical-neighborhood`: Step 2 of Lemma 2 is only outlined; an expert check is advisable.
-- The locators not confirmed against the published text are listed in Follow-up 2, as reduced by Follow-ups 3 and 4. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
+- The locators not confirmed against the published text are listed in Follow-up 2, as reduced by Follow-ups 3–5. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
 - The hidden Nakamaye chapter cites CT22 Lemma 4.2 for arbitrary modifications; the lemma assumes compositions of blowups with smooth centers. Hidden files are not edited.
 - Local reuse of letters across sections (Ω, r versus f for fiber dimension, L in Section 27.19) is declared locally and kept.
