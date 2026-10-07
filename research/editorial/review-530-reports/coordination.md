@@ -1,0 +1,18 @@
+# Coordination items for the third review (collected from reports)
+- r3g01: notation table points D_h, rho_h to prop:individual-density-banach, sec:integrable-gauduchon-tests; confirm the name "space of density roots" is still used there (r3g12 area).
+- r3g01: sec:psh-bounded-products defines theta_v and "similarly omega_v"; later chapters restating omega_u=omega+ddc u as a definition could use a reminder.
+- r3g09: unit disk written D, \mathbb D, Delta in different chapters (cosmetic).
+- r3g17: six SGPT locators by section name without numbers: section_bott_chern_bclasses.tex:4,53,120,153; chapter_envelope_systems.tex:214; section_envelope_boundary.tex:137. Check against SGPT text and replace with numbers.
+- section_psh_minimum.tex:50: \cite[appendix on convex analysis]{SGPT} -> \cite[Appendix~A]{SGPT} (r3g03 file; apply after r3g03 finishes)
+- DONE: section_psh_minimum.tex SGPT appendix -> Appendix~A; conventions.tex notation row now also cites sec:gauduchon-trace-metric; SGPT section-name locators in r3g17 files replaced by numbers (11.1, 11.1.2, Thm 1.6.1, 13.1); section_bounded_connected_uniqueness W^{1,2} justification (mollification of gradient).
+- TODO after r3g25: section_lee_gauduchon_cone.tex:63 "used in the proof of \cref{thm:lamari}" -> "preceding the proof of" (r3g19).
+- TERM: "adjoint probability" (smooth_equations, gauduchon_variational_volume, geometric_normalization_stability) vs "adjoint measure" (chapter_gauduchon definition) (r3g18). Decide at end.
+- r3g06: check theorem header "[Xia--Zhang]" in chapter_hopf vs history (asked r3g29).
+- r3g15: d_theta called "volume comparison" in def:model-volume-comparison but "upper-volume comparison" in chapter_igood; diffuse:473 says "volume comparison".
+- r3g07: Q_u defined twice (stw_czero:69 and stw_structure:27,31), optional.
+- r3g11: prop:vanishing-exponent uniqueness stated for continuous solutions; section_symmetric_equation_selection uses it for bounded (proof works verbatim) - optional remark.
+- TODO after r3g29: chapter_history.tex:89 "least convexity index" -> "least smooth convexity index" (defined term) (r3g05).
+- OPTIONAL: LaTeX comments with workflow notes (e.g. subsection_concave_neighbourhood_dual_norms.tex:149 "% Exact primary: Liu--Wan ...") - non-printing; consider stripping at the end.
+- r3g16: model terminology (envelope fixed point / ordinary model / model potential) mixed across chapters.
+- TODO after r3g28: section_non_kahler_geometry.tex:92 'determinant-weighted measure' -> 'determinant measure' (r3g20).
+- TERM (end): 'multiplier-ideal class' -> 'multiplier-ideal type' book-wide (framework's defined term) (r3g21).
