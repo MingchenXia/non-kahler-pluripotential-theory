@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint547 completes original first/automatic-second reads of recursive Sections1.7–1.17, including1576 source lines and53 proofs, with47 actual final page views. All manuscript sources and both catalogues remain exact to the published546 release. Current package checks against actual546 reconstruction pass. Continue Sections1.18–1.23, then line bundles/polar curvature and Chapter2. No whole recursive Chapter1 completion is claimed. See [the reader review](products-ideals-reader-continuity-547.md).
+Current continuation: checkpoint 548 completes original first/automatic-second reads of recursive Sections 1.18–1.23 (1207 lines, 38 proofs), corrects the ordinary-domination direction in Proposition 1.23.1 and inspects all 39 final pages. The final 1556-page October 7 publication is verified live. Empty-source reconstruction passes. Continue Sections 1.24–1.25 and Chapter 2; no whole recursive Chapter 1 completion is claimed. See [the reader revision](potentials-envelopes-reader-continuity-548.md).
 
 ## Greatest exponential left-limit review 526
 
