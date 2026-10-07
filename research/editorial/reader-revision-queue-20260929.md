@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint 530 integrates the checked incoming S04 closed-factor equations and root subspace; general S04/P07 remain open. Final source reconstruction passes; synchronize and independently review P05, S05, S07 and S06 and continue selected primary proofs/arXiv intake. See [the scoped integration](closed-factor-integration-530.md).
+Current continuation: checkpoint 531 integrates P05 fixed-metric divergence/rigidity and the Kodaira conformal-gauge example; general P05 stays open. Publication and fresh reconstruction pass; synchronize, then independently reconstruct S05, S07, S06 and the newly received S12, and continue selected primary proofs/arXiv intake. See [the scoped integration](flat-lck-integration-531.md).
 
 ## Greatest exponential left-limit review 526
 
