@@ -1,50 +1,50 @@
 \subsection{Dependence on the continuous weight}
 \label{sec:partial-kernel-parameters}
 
-The selected space stays fixed when only its norm weight changes. A compressed multiplication operator then compares the norms and recovers the reproducing vectors by inversion. This gives the kernel itself a parameter regularity stronger than the first variation of its determinant functional.
+When only the continuous weight changes, the selected space stays the same, and the two norms are related by a multiplication operator compressed to that space. Inverting this operator expresses the new reproducing vectors through the old ones. As a consequence the kernel itself, and not only the determinant functional, depends analytically on the weight.
 
-Keep $m\geq1$, the selecting potential $\varphi$, the metric $h$ and the probability measure $\nu$ fixed as in \cref{sec:partial-selected-space}. Write $B_v=B_{m,v,\varphi,\nu}$ and $\beta_v=\beta_m^{(r)}$. Let $P_v$ be the orthogonal projection of the weighted $L^2$ space of measurable sections onto $V_m$, and put
+Keep $m\geq1$, the selecting potential $\varphi$, the metric $h$ and the probability measure $\nu$ fixed as in \cref{sec:partial-selected-space}, and write $B_v=B_{m,v,\varphi,\nu}$ and $\beta_v=\beta_m^{(r)}$ for the kernel and the kernel measure at the weight $v$. Let $P_v$ be the orthogonal projection of the weighted $L^2$ space of measurable sections of $L^m$, with the norm $\|\cdot\|_{m,v,\nu}$, onto $V_m$, and let
 \[
- Z_m=\{x\in X:s(x)=0\text{ for every }s\in V_m\}.
+ Z_m=\{x\in X:s(x)=0\text{ for every }s\in V_m\}
 \]
-At each $x$ choose a unit covector of $(L^m)_x$ to define the complex-linear evaluation $\ell_x$. Its Riesz vector $k_{v,x}\in V_m$ satisfies $\ell_x(s)=\langle s,k_{v,x}\rangle_{m,v,\nu}$. Thus
+be the common zero set of the selected sections. At each $x\in X$ choose a covector of unit length on the fiber $(L^m)_x$; it defines a complex-linear evaluation $\ell_x:V_m\to\mathbb C$. Let $k_{v,x}\in V_m$ be its Riesz vector, so that $\ell_x(s)=\langle s,k_{v,x}\rangle_{m,v,\nu}$ for all $s\in V_m$. Then
 \begin{equation}\label{eq:partial-kernel-weighted-riesz}
  B_v(x)=\mathrm{e}^{-mv(x)}\ell_x(k_{v,x})
        =\mathrm{e}^{-mv(x)}\|k_{v,x}\|_{m,v,\nu}^2.
 \end{equation}
-These scalar values are independent of the phase of the unit covector.
+These values do not depend on the phase of the chosen covector.
 
 \begin{proposition}\label{prop:partial-kernel-weight-analyticity}\index{Bergman kernel!parameter dependence}
-The map $v\mapsto B_v$ from $C(X,\mathbb R)$ to $C(X,\mathbb R)$ is real analytic. The map $v\mapsto\beta_v$ is real analytic in total variation. If $V_m=\{0\}$, both maps vanish identically.
+The map $v\mapsto B_v$ from $C(X,\mathbb R)$ to $C(X,\mathbb R)$ is real analytic. The map $v\mapsto\beta_v$ is real analytic with values in the finite signed measures on $X$, equipped with the total variation norm $\|\cdot\|_{\mathrm{TV}}$. If $V_m=\{0\}$, both maps vanish identically.
 \end{proposition}
 \begin{proof}
-The zero-dimensional case follows from the definition. Fix a real base weight $v_0$. For $f\in C(X,\mathbb C)$ define on $V_m$
+If $V_m=\{0\}$ there is nothing to prove. Fix a real weight $v_0$. For $f\in C(X,\mathbb C)$ define an operator on $V_m$ by
 \[
  T(f)s=P_{v_0}(\mathrm{e}^{-mf}s).
 \]
-The exponential power series converges in the uniform norm, so $T$ is an entire operator-valued map. Projection contractivity gives
+Since the exponential series converges in the uniform norm, $T$ is an entire function of $f$ with values in the endomorphisms of $V_m$. Since $P_{v_0}$ is a contraction,
 \[
  \|T(f)-I\|\leq\mathrm{e}^{m\|f\|_\infty}-1.
 \]
-For $m\|f\|_\infty<\log(3/2)$, its Neumann inverse converges in operator norm and has norm at most two. For real $f$, $T(f)$ is selfadjoint and represents the changed inner product:
+Hence, for $m\|f\|_\infty<\log(3/2)$, we have $\|T(f)-I\|<1/2$, so the Neumann series for $T(f)^{-1}$ converges in operator norm and $\|T(f)^{-1}\|\leq2$. For real $f$, the operator $T(f)$ is selfadjoint and represents the new inner product:
 \[
  \langle s,u\rangle_{m,v_0+f,\nu}
  =\langle T(f)s,u\rangle_{m,v_0,\nu}.
 \]
-It is positive definite, bounded below by $\mathrm{e}^{-m\|f\|_\infty}I$. The Riesz identity therefore gives
+In particular it is positive definite, bounded below by $\mathrm{e}^{-m\|f\|_\infty}I$. The Riesz identity therefore gives
 \[
  k_{v_0+f,x}=T(f)^{-1}k_{v_0,x}.
 \]
-For complex $f$ the right-hand side remains holomorphic as an operator construction. Consequently
+For complex $f$ the right-hand side is still a holomorphic function of $f$. Consequently
 \[
  f\longmapsto
  \mathrm{e}^{-m(v_0(x)+f(x))}
        \ell_x\bigl(T(f)^{-1}k_{v_0,x}\bigr)
 \]
-is a holomorphic continuation of the weighted diagonal. Evaluations on the fixed finite-dimensional section space are uniformly bounded over compact $X$. The map $A\mapsto[x\mapsto\ell_x(Ak_{v_0,x})]$ is therefore bounded from its endomorphism space to $C(X)$; phase independence makes its local expressions agree. The continuation is holomorphic in the $C(X)$ norm. Finally, $B\mapsto(r!/m^r)B\nu$ is bounded linear into finite measures with total variation, proving the measure assertion. At $Z_m$ the Riesz vector is zero, so the same argument includes the common zero locus.
+is a holomorphic extension of $f\mapsto B_{v_0+f}(x)$. Evaluations on the finite-dimensional space $V_m$ are uniformly bounded over the compact manifold $X$, so the linear map $A\mapsto[x\mapsto\ell_x(Ak_{v_0,x})]$ from the endomorphisms of $V_m$ to $C(X)$ is bounded; it is well defined because the phases of $\ell_x$ and $k_{v_0,x}$ cancel. Hence the extension is holomorphic as a map with values in $C(X)$. Finally, $B\mapsto(r!/m^r)B\nu$ is a bounded linear map into finite measures with the total variation norm, which proves the assertion about $\beta_v$. At points of $Z_m$ the Riesz vector is zero, so the argument includes the common zero set.
 \end{proof}
 
-Let $I\subset\mathbb R$ be open and let $t\mapsto v_t$ be a smooth curve in $C(X,\mathbb R)$. Define the complete exponential Bell polynomials by
+Now let $I\subset\mathbb R$ be an open interval and let $t\mapsto v_t$ be a smooth curve in $C(X,\mathbb R)$. The complete exponential Bell polynomials are
 \[
  \mathcal B_j(x_1,\ldots,x_j)
  =\sum_{\sum_{\ell=1}^j\ell n_\ell=j}
@@ -52,13 +52,12 @@ Let $I\subset\mathbb R$ be open and let $t\mapsto v_t$ be a smooth curve in $C(X
      \frac{(x_\ell/\ell!)^{n_\ell}}{n_\ell!},
  \qquad j\geq1,
 \]
-where each $n_\ell$ is a nonnegative integer. Write $\mathcal B_j(-mv_t)$ for evaluation at the first $j$ parameter derivatives of $-mv_t$, so that
-$\partial_t^j\mathrm{e}^{-mv_t}=\mathrm{e}^{-mv_t}\mathcal B_j(-mv_t)$. Put
+where the sum runs over nonnegative integers $n_1,\ldots,n_j$. Write $\mathcal B_j(-mv_t)$ for $\mathcal B_j$ evaluated at the first $j$ derivatives of $-mv_t$ with respect to $t$, so that $\partial_t^j\mathrm{e}^{-mv_t}=\mathrm{e}^{-mv_t}\mathcal B_j(-mv_t)$ by Fa\`a di Bruno's formula. Define operators on $V_m$ by
 \[
- \mathcal T_{t,j}s=-P_{v_t}\bigl(\mathcal B_j(-mv_t)s\bigr),
- \qquad s\in V_m.
+ \mathcal T_{t,j}u=-P_{v_t}\bigl(\mathcal B_j(-mv_t)u\bigr),
+ \qquad u\in V_m.
 \]
-For $k\geq1$, let $\Lambda_k$ consist of the ordered compositions $\alpha=(\alpha_1,\ldots,\alpha_p)$ of $k$ into positive integers, and set $\alpha!=\prod_{j=1}^p\alpha_j!$.
+For $k\geq1$, let $\Lambda_k$ be the set of compositions of $k$, that is, of ordered tuples $\alpha=(\alpha_1,\ldots,\alpha_p)$ of positive integers with sum $k$, and set $\alpha!=\prod_{j=1}^p\alpha_j!$.
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:partial-kernel-parameter-derivatives}
@@ -69,45 +68,45 @@ For every $k\geq1$,
        \mathcal T_{t,\alpha_p}\cdots
        \mathcal T_{t,\alpha_1}k_{v_t,x}.
 \end{equation}
-Suppose that $s\geq1$ and, on a compact parameter interval $J\Subset I$, constants $A,R>0$ satisfy
+Suppose moreover that $s\geq1$, that $J\Subset I$ is a compact interval, and that constants $A,R>0$ satisfy
 \[
  \sup_{t\in J}\|\partial_t^jv_t\|_\infty
  \leq AR^j(j!)^s\qquad(j\geq1).
 \]
-Then there are $C,L>0$, depending on the fixed data, $m,r,J,A,R,s$, such that
+Then there are constants $C,L>0$, depending only on the fixed data and on $m,r,J,A,R,s$, such that
 \begin{equation}\label{eq:partial-kernel-gevrey-bounds}
  \sup_{t\in J}
  \left(\|\partial_t^kB_{v_t}\|_\infty
        +\|\partial_t^k\beta_{v_t}\|_{\mathrm{TV}}\right)
  \leq CL^k(k!)^s\qquad(k\geq0).
 \end{equation}
-Thus the kernel and its measure retain Gevrey order $s$ in the parameter.
+Thus the kernel and the kernel measure are of Gevrey class $s$ in the parameter.
 \end{theorem}
 \begin{proof}
-The preceding proposition gives smoothness in any fixed norm on $V_m$. At a real base parameter $t$, set
+\emph{The derivative formula.} By \cref{prop:partial-kernel-weight-analyticity}, $k_{v_t,x}$ depends smoothly on $t$, for any fixed norm on $V_m$. Fix a real parameter $t$ and set
 \[
  H(a)=P_{v_t}\bigl(\mathrm{e}^{-m(v_{t+a}-v_t)}\,\cdot\,\bigr)|_{V_m}.
 \]
-Then $H(0)=I$, $H^{(j)}(0)=-\mathcal T_{t,j}$ and
-$k_{v_{t+a},x}=H(a)^{-1}k_{v_t,x}$. Since $H(a)-I=O(|a|)$, truncating the Neumann inverse after $k$ powers has remainder $O(|a|^{k+1})$. Expanding this finite jet gives \eqref{eq:partial-kernel-parameter-derivatives}, with its ordered products and coefficients $k!/\alpha!$. This uses only a finite Taylor jet of the smooth curve.
+Then $H(0)=I$, $H^{(j)}(0)=-\mathcal T_{t,j}$ by Fa\`a di Bruno's formula, and
+$k_{v_{t+a},x}=H(a)^{-1}k_{v_t,x}$ as in the proof of \cref{prop:partial-kernel-weight-analyticity}. Since $H(a)-I=O(|a|)$, truncating the Neumann series of $H(a)^{-1}$ after $k$ powers leaves a remainder $O(|a|^{k+1})$. Expanding the truncated series to order $k$ in $a$ gives \eqref{eq:partial-kernel-parameter-derivatives}, with its ordered products and coefficients $k!/\alpha!$. Only a finite Taylor jet of the smooth curve is used.
 
-For the factorial estimate, a partition $\sum\ell n_\ell=j$ satisfies
+\emph{Gevrey bounds.} For nonnegative integers $n_\ell$ with $\sum\ell n_\ell=j$,
 \[
  \prod_{\ell=1}^j(\ell!)^{(s-1)n_\ell}
  \leq(j!)^{s-1}.
 \]
-The coefficient sum $\sum_{\sum\ell n_\ell=j}\prod(n_\ell!)^{-1}$ is the coefficient of $u^j$ in $\exp(u/(1-u))$, and is at most $\mathrm{e}\,2^j$ by evaluation at $u=1/2$. The assumed bounds therefore give
+The sum $\sum\prod_\ell(n_\ell!)^{-1}$ over these tuples is the coefficient of $z^j$ in $\exp(z/(1-z))$, and evaluation at $z=1/2$ shows that it is at most $\mathrm{e}\,2^j$. Together with the assumed bounds this gives
 \[
  \sup_{t\in J}\|\mathcal B_j(-mv_t)\|_\infty
  \leq L_0^j(j!)^s
 \]
-for one $L_0>0$. Contractivity of $P_{v_t}$ bounds each ordered product in \eqref{eq:partial-kernel-parameter-derivatives} by $L_0^k(\alpha!)^s$. There are $2^{k-1}$ compositions, and $\alpha!\leq k!$. The curve $v_t$ is uniformly bounded on $J$, so its section norms are uniformly equivalent, and its evaluations and Riesz vectors have common bounds over $J\times X$. Hence the unweighted diagonal derivatives have bounds $C(2L_0)^k(k!)^s$ in $C(X)$. The exponential factor has the same factorial order. Leibniz's formula and $j!(k-j)!\leq k!$ give \eqref{eq:partial-kernel-gevrey-bounds} for the weighted diagonal. The bounded linear passage to its measure gives the total-variation bound.
+for some $L_0>0$. Since $P_{v_t}$ is a contraction, each ordered product in \eqref{eq:partial-kernel-parameter-derivatives} has operator norm at most $L_0^k(\alpha!)^s$. There are $2^{k-1}$ compositions of $k$, and $\alpha!\leq k!$. Since $v_t$ is uniformly bounded for $t\in J$, the norms $\|\cdot\|_{m,v_t,\nu}$ are uniformly equivalent, and the evaluations and Riesz vectors are bounded uniformly on $J\times X$. Hence the $t$-derivatives of the unweighted diagonal $x\mapsto\ell_x(k_{v_t,x})$ are bounded in $C(X)$ by $C(2L_0)^k(k!)^s$. The factor $\mathrm{e}^{-mv_t}$ satisfies bounds of the same Gevrey order, by the estimate for $\mathcal B_j(-mv_t)$. Leibniz's formula and $j!(k-j)!\leq k!$ then give \eqref{eq:partial-kernel-gevrey-bounds} for $B_{v_t}$, and the bounded linear map $B\mapsto(r!/m^r)B\nu$ gives the bound in total variation.
 \end{proof}
 \index{Bergman kernel!Gevrey parameter regularity}
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:partial-kernel-pointwise-response}
-Let $v_t=v+tq$ for $v,q\in C(X,\mathbb R)$. For $x\notin Z_m$, the probability
+Let $v_t=v+tq$ with $v,q\in C(X,\mathbb R)$. For $x\notin Z_m$, the probability measure
 \begin{equation}\label{eq:partial-kernel-response-probability}
  \mathrm{d}\sigma_{t,x}(y)
  =\frac{|k_{v_t,x}(y)|_{h^m}^2\mathrm{e}^{-mv_t(y)}}
@@ -118,28 +117,28 @@ satisfies
  \frac{\mathrm{d}}{\mathrm{d}t}\log B_{v_t}(x)
  =m\left(\int_Xq\,\mathrm{d}\sigma_{t,x}-q(x)\right).
 \end{equation}
-At $Z_m$ the kernel and its derivatives vanish. On all of $X$,
+On $Z_m$ the kernel and all its $t$-derivatives vanish. Moreover,
 $\int_X\partial_tB_{v_t}\,\mathrm{d}\nu=0$.
 \end{corollary}
 \begin{proof}
-The case $k=1$ of \eqref{eq:partial-kernel-parameter-derivatives} gives
-$\partial_tk_{v_t,x}=mP_{v_t}(qk_{v_t,x})$. Applying the fixed evaluation and its Riesz identity gives
+Since $\mathcal T_{t,1}u=mP_{v_t}(qu)$, the case $k=1$ of \eqref{eq:partial-kernel-parameter-derivatives} gives
+$\partial_tk_{v_t,x}=mP_{v_t}(qk_{v_t,x})$. Applying the fixed evaluation $\ell_x$ and the Riesz identity gives
 \[
  \partial_t\ell_x(k_{v_t,x})
  =m\int_Xq|k_{v_t,x}|_{h^m}^2
                 \mathrm{e}^{-mv_t}\,\mathrm{d}\nu.
 \]
-Dividing by its positive reproducing value and differentiating the exponential in \eqref{eq:partial-kernel-weighted-riesz} proves \eqref{eq:partial-kernel-pointwise-response}. The density in \eqref{eq:partial-kernel-response-probability} has integral one by the norm definition. Common zeros give zero evaluations and Riesz vectors for every weight. Finally, differentiation in $C(X)$ of $\int_XB_{v_t}\,\mathrm{d}\nu=N_m$ proves the integral identity. Constant directions cancel in \eqref{eq:partial-kernel-pointwise-response}, as required by constant translation of the norm weight.
+Dividing by the positive number $\ell_x(k_{v_t,x})=\|k_{v_t,x}\|_{m,v_t,\nu}^2$ and differentiating the factor $\mathrm{e}^{-mv_t(x)}$ in \eqref{eq:partial-kernel-weighted-riesz} proves \eqref{eq:partial-kernel-pointwise-response}; the density in \eqref{eq:partial-kernel-response-probability} has integral one by the definition of the norm. At points of $Z_m$ the evaluations and Riesz vectors vanish for every weight. Finally, differentiating the identity $\int_XB_{v_t}\,\mathrm{d}\nu=N_m$ in $C(X)$ proves the last assertion. For constant $q$ the right-hand side of \eqref{eq:partial-kernel-pointwise-response} vanishes, in accordance with the invariance of the kernel under adding a constant to the weight.
 \end{proof}
 
-The uniform norm controls the entire integration region. Interior parameter regularity on a domain can fail to supply that control.
+The uniform norm on the weights is essential in these results, because it controls the weight on the whole region of integration. The next example shows that real-analytic dependence of the weight on a parameter at each interior point of a domain does not suffice.
 
 \begin{example}\label{ex:bergman-interior-parameter-cusp}\index{Bergman kernel!failure of parameter differentiability}
-On the unit disk $D\subset\mathbb C$, let $K_t$ be the full Bergman kernel for the density
+On the unit disk $D\subset\mathbb C$ with Euclidean area $\mathrm{d}A$, let $K_t$ be the Bergman kernel of the Hilbert space of holomorphic functions $f$ on $D$ with the norm $(\int_D|f|^2\rho_t\,\mathrm{d}A)^{1/2}$, where
 \[
  \rho_t(z)=1+\frac{t^2}{(1-|z|^2)^2+t^2},\qquad t\in\mathbb R.
 \]
-The weights $-\log\rho_t$ are bounded and jointly real analytic on $D\times\mathbb R$, but
+The weights $-\log\rho_t$ are bounded and depend real analytically on $(z,t)\in D\times\mathbb R$, but
 \begin{equation}\label{eq:bergman-interior-parameter-cusp}
  K_t(0,0)=
  \begin{cases}
@@ -147,16 +146,16 @@ The weights $-\log\rho_t$ are bounded and jointly real analytic on $D\times\math
  \pi^{-1},&t=0.
  \end{cases}
 \end{equation}
-In particular, $K_t(0,0)=\pi^{-1}-|t|/2+O(t^2)$, so it is not differentiable at zero.
+In particular, $K_t(0,0)=\pi^{-1}-|t|/2+O(t^2)$, so $K_t(0,0)$ is not differentiable at $t=0$.
 \end{example}
 \begin{proof}
-The density lies between one and two and is radial. Constants are orthogonal to the holomorphic functions vanishing at zero, so the center reproducing value is the reciprocal of $\int_D\rho_t\,\mathrm{d}A$, where $\mathrm{d}A$ is Euclidean area. Polar coordinates and the substitution $a=1-r^2$ give, for $t\ne0$,
+The density $\rho_t$ is radial and lies between one and two. By radial symmetry, the constant functions are orthogonal to the holomorphic functions vanishing at the origin, so the reproducing value at the center is the reciprocal of $\int_D\rho_t\,\mathrm{d}A$. Polar coordinates and the substitution $a=1-r^2$ give, for $t\ne0$,
 \[
  \int_D\rho_t\,\mathrm{d}A
  =\pi\int_0^1\left(1+\frac{t^2}{a^2+t^2}\right)\mathrm{d}a
  =\pi\bigl(1+|t|\arctan(1/|t|)\bigr).
 \]
-At zero the integral is $\pi$. This proves \eqref{eq:bergman-interior-parameter-cusp} and its expansion. For each nonzero $t$, $\|\log\rho_t\|_{L^\infty(D)}=\log2$, whereas $\rho_0=1$. Thus the weight curve is not continuous in the uniform norm at zero, and the example does not contradict the fixed-space analyticity statement.
+For $t=0$ the integral is $\pi$. This proves \eqref{eq:bergman-interior-parameter-cusp} and the expansion. For every $t\ne0$ we have $\|\log\rho_t\|_{L^\infty(D)}=\log2$, whereas $\rho_0=1$. Thus the curve $t\mapsto\log\rho_t$ is not continuous at $t=0$ for the uniform norm, and the example does not contradict \cref{prop:partial-kernel-weight-analyticity}.
 \end{proof}
 
-The degree and selecting ideal stayed fixed throughout the parameter estimates. Differentiating a limiting envelope requires additional uniform estimates; the weight corner in \cref{ex:affine-quadratic-weight-corner} illustrates the regularity that such a passage must test.
+Throughout these estimates the degree $m$ and the selected space were fixed, and the constants depend on $m$. A limit envelope need not even be differentiable in the weight, as the corner in \cref{ex:affine-quadratic-weight-corner} shows; differentiating limits would require estimates uniform in $m$.

@@ -10,6 +10,10 @@ Checkpoint270 records acceptance of the reviewed writing release at checkpoint26
 
 Current fresh review progress: front units 297 and complete original/two follow-up Chapter 1–33 reads 298–330 and Appendix A reads331, references/index reads332, including complete affected-unit supplements for Chapter 13 pagination repairs and the corrected Chapter15 recap. Chapters 4–6, 8, 10–12, 14, 16–19, 21–24 and 26–33 are unchanged. Final Introduction/read-route rereads333 pass; final reconstruction, archive validation, live publication and private synchronization pass. Writing and fresh-polish acceptance is recorded at333; continue manuscript development and sequential open-problem research. The all-problem goal remains pending.
 
+## Presentation revision and new directions, 6 October 2026
+
+The author requested a whole-book revision focused on presentation: the book must read like a normal textbook, without stiff language or undeclared nonstandard notation, with all results correct, and each full-book compilation published to the homepage as authorized. Checkpoint 527 records the revision and its checks. The author then asked, after the revision, for free exploration of new research directions that fit the book's theme and are not yet in the literature; proposed additions must still pass the book's proof and scope checks before integration, and must be identified as new.
+
 ## Public PDF publication, 30 September 2026
 
 After every successful full-book build in the authoring repository, publish the PDF at `https://mingchenxia.github.io/Papers/SHPT_vibe.pdf` and update its matching homepage description with the last printed page number and the publication date. The user expressly authorizes replacing the existing PDF and committing both website files. The private book source remains private. Follow the build hook, retry and deployment verification instructions in `AGENTS.md`; source-package reconstruction and companion builds remain local.

@@ -1,14 +1,14 @@
 \section{Local density and boundary control}
 \label{sec:local-density-boundary}
 
-Return to the compact complex manifold $X$ and its auxiliary Hermitian metric $\omega$. Let $\theta$ be smooth, and let $\rho\in\PSH(X,\theta)$ satisfy $\theta_\rho\geq\varepsilon\omega$ for some $\varepsilon>0$. In this section $\Omega$ denotes an open set where $\rho$ is smooth and $\mathrm{d}\theta=0$.
+\Cref{thm:nonclosed-interior-smoothness} requires a smooth positive density on the whole regular locus of a global strict barrier, and the global minimum of the difference between the solution and the barrier drives its proof. If the density is smooth and positive only on a smaller open set, smoothness can fail there. A bounded solution with minimal singularities can be discontinuous on a ball where its density is constant (\cref{thm:compact-local-density-discontinuity}), and a locally Lipschitz plurisubharmonic function with constant density need not be $C^1$ (\cref{ex:local-lipschitz-constant-measure}). Boundary data give a different route to regularity: if the solution has smooth boundary values on small balls, uniqueness for the bounded Dirichlet problem identifies it with the smooth Dirichlet solution.
 
-\Cref{thm:nonclosed-interior-smoothness} uses the equation on the whole regular locus of a global strict barrier. On the present open set, smooth positive density alone does not give the same conclusion. A smooth boundary trace provides a different route: Dirichlet uniqueness identifies the bounded solution with a smooth one. The examples below show why both the domain and its boundary data matter.
+In this section $\theta$ is a smooth real $(1,1)$-form on $X$, and $\rho\in\PSH(X,\theta)$ satisfies $\theta+\ddc\rho\geq\varepsilon\omega$ for some $\varepsilon>0$; in particular $\theta$ is big. We fix an open set $\Omega\subset X$ on which $\rho$ is smooth and $\mathrm{d}\theta=0$.
 
 \Needspace{13\baselineskip}
 \subsection{Smooth boundary traces}
 
-For a coordinate ball $B\Subset\Omega$, a boundary trace $g$ means that $u(z)\to g(\xi)$ as $B\ni z\to\xi$, for every $\xi\in\partial B$.
+Let $B\Subset\Omega$ be a coordinate ball. A function $u$ on $B$ has \emph{boundary trace} $g$, a function on $\partial B$, if $u(z)\to g(\xi)$ as $B\ni z\to\xi$, for every $\xi\in\partial B$.
 
 \begin{theorem}\label{thm:smooth-boundary-trace-regularity}
 Suppose that $u\in\PSH(X,\theta)$ has minimal ordinary singularities and
@@ -20,21 +20,21 @@ Assume that $\Omega$ is covered by coordinate Euclidean balls $B_j\Subset\Omega$
 \end{theorem}
 
 \begin{proof}
-Minimality gives $u\geq\rho-C$ for a constant $C$. Thus $u$ is locally bounded on $\Omega$. Fix one of the balls, write it as $B_R(z_0)$, and choose a smooth function $h$ near its closure with $\ddc h=\theta$. The bounded plurisubharmonic function $v=u+h$ has, by \cref{prop:bounded-products}, Bedford--Taylor measure $f\,\mathrm{d}V$ and smooth boundary trace $\varphi=g+h|_{\partial B}$.
+Since $\rho-\sup_X\rho\leq V_\theta$, minimal singularities give $u\geq\rho-C$ for a constant $C$. Thus $u$ is locally bounded on $\Omega$. Fix one of the balls, write it as $B=B_R(z_0)$, let $g$ be the boundary trace of $u$ on $\partial B$, and choose a smooth function $h$ near $\overline B$ with $\ddc h=\theta$. By \cref{prop:bounded-products}, the bounded plurisubharmonic function $v=u+h$ has Bedford--Taylor measure $f\,\mathrm{d}V$ and smooth boundary trace $\varphi=g+h|_{\partial B}$.
 
-For smooth $V$, Euclidean volume $\mathrm{d}\Lambda$ gives
+For a smooth function $V$ and the Euclidean volume $\mathrm{d}\Lambda$,
 \begin{equation}\label{eq:local-density-determinant}
  (\ddc V)^n=\frac{n!}{\pi^n}\det(V_{j\bar k})\,\mathrm{d}\Lambda.
 \end{equation}
-The smooth Dirichlet input of \cref{sec:interior-approximants}, with zero background and density $f\,\mathrm{d}V$, gives a smooth strictly plurisubharmonic $V$ on $\overline B$ with $(\ddc V)^n=f\,\mathrm{d}V$ and boundary value $\varphi$. A smooth extension $\Phi$ of $\varphi$ gives the required strict subsolution $\Phi+A(|z-z_0|^2-R^2)$ for large $A$. In dimension one this is the Poisson Dirichlet problem.
+The smooth Dirichlet theorem recalled in \cref{sec:interior-approximants}, with zero background and density $f\,\mathrm{d}V$, gives a smooth strictly plurisubharmonic $V$ on $\overline B$ with $(\ddc V)^n=f\,\mathrm{d}V$ and boundary value $\varphi$; a smooth extension $\Phi$ of $\varphi$ gives the required strict subsolution $\Phi+A(|z-z_0|^2-R^2)$ for large $A$. In dimension one this is the Dirichlet problem for the Poisson equation.
 
-The difference $v-V$ tends to zero at every boundary point. Compactness of $\partial B$ makes this convergence uniform near the boundary: otherwise a sequence approaching the boundary with difference bounded away from zero would have a subsequence approaching one fixed boundary point. Bounded Dirichlet uniqueness gives $v=V$. Therefore $u=V-h$ is smooth and its background form is positive on $B$. The balls cover $\Omega$.
+The difference $v-V$ tends to zero at every boundary point. Compactness of $\partial B$ makes this convergence uniform near the boundary: otherwise a sequence approaching the boundary with difference bounded away from zero would have a subsequence approaching one fixed boundary point. Uniqueness for the bounded Dirichlet problem, that is, the Bedford--Taylor comparison principle, gives $v=V$. Therefore $u=V-h$ is smooth on $B$, and $\theta+\ddc u=\ddc V>0$ there. Since the balls cover $\Omega$, the theorem follows.
 \end{proof}
 
-The proof uses minimality only to obtain the local lower bound from $\rho$. Consequently the same conclusion holds for any solution already known to be locally bounded on $\Omega$ and satisfying the same trace condition. Local closedness supplies the potentials after the coordinate balls are made small enough; the background may be nonclosed elsewhere.
+The proof uses minimal singularities only to obtain the local lower bound by $\rho$. Consequently the same conclusion holds for any solution already known to be locally bounded on $\Omega$ and satisfying the same trace condition. Closedness of $\theta$ on $\Omega$ provides the local potentials $h$ once the coordinate balls are small enough; the background may be nonclosed elsewhere.
 
 \begin{example}\label{ex:logarithmic-continuous-density}
-For every $n\geq1$, the trace criterion admits a bounded continuous solution whose global density belongs to $L^1$ and to no $L^p$ with $p>1$. The solution need not be H\"older at the complement of $\Omega$.
+For every $n\geq1$, the trace criterion applies to a bounded continuous solution whose global density belongs to $L^1$ but to no $L^p$ with $p>1$, and which is not H\"older continuous at the points of $X\setminus\Omega$.
 
 Let $E=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, $X=E^n$, and
 \[
@@ -42,18 +42,18 @@ Let $E=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, $X=E^n$, and
  \qquad \theta=\sum_{j=1}^n\omega_j,
  \qquad D=\{0\}\times E^{n-1}.
 \]
-Take $\mathrm{d}V=\theta^n$ and $\rho=0$. Choose a nonnegative smooth cutoff $\chi$ supported in a coordinate disc $|z|<r_0<1$ of $E$ and equal to one near zero. For $\beta>0$, define
+Take $\mathrm{d}V=\theta^n$ and $\rho=0$. Choose a nonnegative smooth cutoff $\chi$ supported in a coordinate disk $|z|<r_0<1$ of $E$ and equal to one near zero. For $\beta>0$, define
 \[
  \psi(z)=\chi(z)(-\log|z|^2)^{-\beta}\quad(z\ne0),
  \qquad \psi(0)=0,
 \]
-and extend by zero. On the smaller punctured disc put $t=|z|^2$ and $L=-\log t$. Differentiation gives
+and extend by zero. On the smaller punctured disk put $t=|z|^2$ and $L=-\log t$. Differentiation gives
 \begin{equation}\label{eq:continuous-logarithmic-profile}
  \psi_{z\bar z}=\frac{\beta(\beta+1)}{tL^{\beta+2}},
  \qquad t\frac{\mathrm{d}}{\mathrm{d}t}L^{-\beta}
        =\beta L^{-\beta-1}\longrightarrow0.
 \end{equation}
-The first expression is integrable and the second is the radial flux. Integration by parts on punctured discs, using also $\psi\to0$, shows that the distributional Hessian has no atom at zero. On the cutoff annulus its negative part is bounded. Hence, for a sufficiently small fixed $\eta>0$, $u=\eta\psi(z_1)$ satisfies $\theta+\ddc u\geq\theta/2$.
+The first expression is integrable and the second is the radial flux. Integration by parts on punctured disks, using also $\psi\to0$, shows that the distributional Hessian has no atom at zero. On the cutoff annulus its negative part is bounded. Hence, for a sufficiently small fixed $\eta>0$, $u=\eta\psi(z_1)$ satisfies $\theta+\ddc u\geq\theta/2$.
 
 Only one coordinate contributes to $\ddc u$. Locally approximate the bounded subharmonic potential in that coordinate from above and use \cref{thm:bt-input}; the smooth diagonal determinant identity passes to the limit and yields
 \[
@@ -69,6 +69,8 @@ Also $(-\log|z|^2)^{-\beta}/|z|^\alpha\to+\infty$ for every $\alpha>0$, so $u$ i
 \end{example}
 
 \subsection{A bounded discontinuous potential}
+
+We construct a bounded plurisubharmonic function on a bidisk whose Monge--Amp\`ere measure is a constant multiple of Lebesgue measure, but which is discontinuous. The construction places logarithmic poles with summable weights at points accumulating at the origin; the resulting weight $b$ vanishes at the poles but not at their limit. It is the local model for \cref{thm:compact-local-density-discontinuity}.
 
 Let $U=W=\{|z|<1/4\}\subset\mathbb C$, with coordinates $z$ and $w$ on the two factors. Write $\mathrm{d}A$ for planar Lebesgue measure and set
 \[
@@ -116,7 +118,7 @@ The second summand of $P$ is $\exp(h(z)+\log|w|^2)$, a convex increasing composi
  \det(P_{j\bar k})
  =ba_{z\bar z}+|w|^2\bigl(bb_{z\bar z}-|b_z|^2\bigr)=1.
 \]
-The set $S\times W$ is contained in the pole set of $h(z)+\log|z|$, a plurisubharmonic function not identically $-\infty$. It is also Lebesgue-null. Pluripolar nullity in \cref{thm:bt-input} and \eqref{eq:local-density-determinant} prove \eqref{eq:discontinuous-constant-measure} throughout the bidisc. Finally,
+The set $S\times W$ is contained in the pole set of $h(z)+\log|z|$, a plurisubharmonic function not identically $-\infty$. It is also Lebesgue-null. Pluripolar nullity in \cref{thm:bt-input} and \eqref{eq:local-density-determinant} prove \eqref{eq:discontinuous-constant-measure} throughout the bidisk. Finally,
 \[
  P(a_k,w_0)=a(a_k)\longrightarrow a(0)
  <a(0)+b(0)|w_0|^2=P(0,w_0)
@@ -125,6 +127,8 @@ when $w_0\ne0$.
 \end{proof}
 
 \subsection{Compact gluing}
+
+We now glue the local example into a compact torus by a regularized maximum with a quadratic function. The result is a bounded solution with minimal singularities whose density is constant on a ball, where the solution is discontinuous; in the transition region the density acquires singularities that destroy every $L^p$ bound with $p>1$.
 
 We work on the flat complex torus $X=(\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z))^2$, identifying a small coordinate ball with a ball in $U\times W$. For a smooth function $v$ on the ball write $H_v=(v_{j\bar k})$ for its complex Hessian and $I$ for the two-dimensional identity matrix.
 
@@ -197,7 +201,7 @@ where $c_k>0$ may depend on $k$ and $C$. Here $P_{z\bar z}=b^{-1}+|w|^2b_{z\bar 
        \left|\frac{\alpha_k}{\zeta}+\partial_zH_k\right|^2
        \geq c'_k|\zeta|^{2\alpha_k-2}
 \]
-for some $c'_k>0$. Since $F=C^{-2}\det H_v$, this lower bound implies $F\notin L^p$ whenever $p(1-\alpha_k)\geq1$: the $w$-disc has positive area and the radial integral in $z$ contains
+for some $c'_k>0$. Since $F=C^{-2}\det H_v$, this lower bound implies $F\notin L^p$ whenever $p(1-\alpha_k)\geq1$: the $w$-disk has positive area and the radial integral in $z$ contains
 \[
  \int_0^{\delta_k}r^{1-2p(1-\alpha_k)}\,\mathrm{d}r=+\infty.
 \]
@@ -207,7 +211,7 @@ For each $p>1$ such a $k$ exists because $\alpha_k\downarrow0$.
 The bounded-product capacity estimate in \cref{sec:psh-local-capacity} also holds for the discontinuous potential $P$. Thus a first-order capacity bound, even together with a constant positive density, cannot supply the missing boundary control.
 
 \begin{example}\label{ex:local-lipschitz-constant-measure}
-On the bidisc in $\mathbb C^2$ with coordinates $(z,w)$, the function
+On the bidisk in $\mathbb C^2$ with coordinates $(z,w)$, the function
 \[
  H(z,w)=2|z|(1+|w|^2)
 \]
@@ -217,7 +221,7 @@ is locally Lipschitz, plurisubharmonic and not $C^1$ along $\{z=0\}$. Plurisubha
  H_{w\bar w}=2|z|,\qquad
  |H_{z\bar w}|^2=|w|^2.
 \]
-Hence $\det(H_{j\bar k})=1$, and pluripolar nullity gives $(\ddc H)^2=2\pi^{-2}\,\mathrm{d}\Lambda$ on the entire bidisc.
+Hence $\det(H_{j\bar k})=1$, and pluripolar nullity gives $(\ddc H)^2=2\pi^{-2}\,\mathrm{d}\Lambda$ on the entire bidisk.
 \end{example}
 
-This last example rules out a purely local implication from H\"older continuity and a smooth positive density to smoothness. It does not supply the global hypotheses on the regular locus in \cref{thm:nonclosed-interior-smoothness}. In \cref{thm:compact-local-density-discontinuity}, the solution lacks local H\"older continuity on the indicated ball and the density is rough elsewhere on $X$, which is the regular locus of the chosen barrier $\rho=0$. The trace criterion instead identifies the given bounded solution with a smooth Dirichlet solution on each ball.
+The last example rules out a purely local implication from H\"older continuity and a smooth positive density to smoothness; being local, it says nothing about the global hypotheses of \cref{thm:nonclosed-interior-smoothness}. Nor does \cref{thm:compact-local-density-discontinuity} contradict that theorem: there the solution is not locally H\"older continuous on the ball $\Omega$, and its density is not smooth on the rest of $X$, which is the regular locus of the barrier $\rho=0$. The trace criterion of \cref{thm:smooth-boundary-trace-regularity} avoids both global hypotheses by identifying the bounded solution with a smooth Dirichlet solution on each ball.

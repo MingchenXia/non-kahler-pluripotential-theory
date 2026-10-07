@@ -1,10 +1,10 @@
 \subsection{Existence for a positive exponent}
 
-We prove part (1) of \cref{thm:als-prescribed-lp} by maximizing the weighted mass below $\mu=f\,\mathrm{d}V$. The relative estimate supplies compactness of the potentials. If the maximizing measure leaves a nonzero deficit, the addition theorem increases its mass, giving a contradiction.
+We prove part (1) of \cref{thm:als-prescribed-lp} by maximizing a weighted mass. Among the potentials $z\sim\varphi$ whose weighted measure $\mathrm{e}^{-\lambda z}\mathrm{MA}_\theta(z)$ lies below $\mu=f\,\mathrm{d}V$, we find one of maximal weighted mass; \cref{thm:relative-linfty} provides the compactness needed for this. If its weighted measure were strictly smaller than $\mu$, the addition theorem would produce a potential of larger weighted mass.
 
 \Needspace{12\baselineskip}
 \begin{proof}[of \cref{thm:als-prescribed-lp}, part (1)]
-Fix $\lambda>0$. By \cref{lem:relative-lp-supersolution}, choose $w\sim\varphi$ such that
+\emph{Step 1: a maximizing sequence.} Fix $\lambda>0$. By \cref{lem:relative-lp-supersolution}, there is $w\sim\varphi$ such that
 \[
  \nu_0:=\mathrm{e}^{-\lambda w}\mathrm{MA}^{\mathrm{ext}}_\theta(w)
  \leq\mu=f\,\mathrm{d}V.
@@ -14,113 +14,112 @@ Consider all potentials $z\sim\varphi$ for which
  \nu_0\leq\nu_z:=\mathrm{e}^{-\lambda z}
                    \mathrm{MA}^{\mathrm{ext}}_\theta(z)\leq\mu,
 \]
-and let $B$ be the supremum of their weighted masses $\nu_z(X)$. This is a nonempty family, since it contains $w$, and $B\leq\mu(X)<+\infty$. Choose $u_j$ in the family with $\nu_{u_j}(X)\to B$. Singular exponential order gives $u_j\leq w$.
+and let $B$ be the supremum of their weighted masses $\nu_z(X)$. This family is nonempty, since it contains $w$, and $B\leq\mu(X)<+\infty$. Choose $u_j$ in the family with $\nu_{u_j}(X)\to B$. Since $\nu_0\leq\nu_{u_j}$, \cref{cor:singular-exponential-order} gives $u_j\leq w$.
 
-We need a lower bound for their suprema. Put
-$\varphi_\varepsilon=P_{\varepsilon\theta}(\varphi)\leq0$ and solve the bounded equation
+\emph{Step 2: uniform bounds.} We need a lower bound for the suprema of the $u_j$. Put
+$\varphi_\varepsilon=P_{\varepsilon\theta}(\varphi)\leq0$, and let $\psi$ be the bounded solution of
 \[
  ((1-\varepsilon)\theta+\ddc\psi)^n=\mathrm{e}^{\lambda\psi}f\,\mathrm{d}V
 \]
-using \cref{thm:big-bounded-exponential}. For $h=\psi+\varphi_\varepsilon$, positivity of the current splitting gives
+given by \cref{thm:big-bounded-exponential}. For $h=\psi+\varphi_\varepsilon$, positivity of the splitting $\theta_h=(\varepsilon\theta+\ddc\varphi_\varepsilon)+((1-\varepsilon)\theta+\ddc\psi)$ gives
 \[
  \mathrm{e}^{-\lambda h}\mathrm{MA}^{\mathrm{ext}}_\theta(h)
  \geq \mathrm{e}^{-\lambda\varphi_\varepsilon}f\,\mathrm{d}V
  \geq\mu\geq\nu_{u_j}.
 \]
-Here $h\preceq u_j$ because $h\preceq\varphi$ and $u_j\sim\varphi$. Each $u_j$ admits a smaller-background envelope by bounded equivalence with $\varphi$. Singular exponential order therefore gives $u_j\geq h$. Consequently
+Here $h\preceq u_j$, because $h\preceq\varphi$ and $u_j\sim\varphi$, and each $u_j$ admits a smaller-background envelope because $u_j\sim\varphi$. \Cref{cor:singular-exponential-order} therefore gives $u_j\geq h$. Consequently
 \[
- \sup_Xh\leq M_j:=\sup_Xu_j\leq\sup_Xw.
+ \sup_Xh\leq M_j:=\sup_Xu_j\leq\sup_Xw,
 \]
-The lower bound is finite because $h$ is genuine.
+and the lower bound is finite.
 
-Apply the relative uniform estimate to $v_j=u_j-M_j$. Their measures satisfy
+We now apply \cref{thm:relative-linfty} to $v_j=u_j-M_j$. Their measures satisfy
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(v_j)
  =\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
- \leq \mathrm{e}^{\lambda\sup_Xw}f\,\mathrm{d}V.
+ \leq \mathrm{e}^{\lambda\sup_Xw}f\,\mathrm{d}V,
 \]
-Thus $\varphi-C\leq v_j\leq\varphi$. The bounds for $M_j$ give a fixed bounded distance between all $u_j$ and $\varphi$. Extract an $L^1$ limit $u$. The common-barrier dominated continuity theorem gives convergence in capacity and
+so $\varphi-C\leq v_j\leq\varphi$. Together with the bounds for $M_j$, this shows that all $u_j$ lie within a fixed bounded distance of $\varphi$.
+
+\emph{Step 3: the limit.} Extract an $L^1$ limit $u$. By \cref{cor:common-barrier-continuity}, applied with the dominating measure $\mathrm{e}^{\lambda\sup_Xw}\mu$, the convergence holds in capacity, $u\sim\varphi$, and
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
- \rightharpoonup\mathrm{MA}^{\mathrm{ext}}_\theta(u),
- \qquad u\sim\varphi.
+ \rightharpoonup\mathrm{MA}^{\mathrm{ext}}_\theta(u).
 \]
-
-Extract also $\nu_{u_j}\rightharpoonup\nu$. Since $\nu_0\leq\nu_{u_j}\leq\mu$, the limit satisfies the same inequalities. We claim that
+After a further extraction we may also assume $\nu_{u_j}\rightharpoonup\nu$. Since $\nu_0\leq\nu_{u_j}\leq\mu$, the limit satisfies the same inequalities. We claim that
 \[
  \mathrm{e}^{\lambda u_j}\nu_{u_j}\rightharpoonup \mathrm{e}^{\lambda u}\nu.
 \]
-Indeed $\mathrm{e}^{\lambda u_j}\to \mathrm{e}^{\lambda u}$ in $L^1(\mu)$ by \cref{lem:fixed-npp-integrals}, and the measures $\nu_{u_j}$ are all at most $\mu$. This controls the error from changing the weight. For the fixed bounded weight $\mathrm{e}^{\lambda u}$, approximate it in $L^1(\mu)$ by continuous functions; the domination of both $\nu_{u_j}$ and $\nu$ makes this approximation uniform in the integrals. Their weak convergence then gives the claim. The same argument works after multiplication by any continuous test function.
+Indeed, $\mathrm{e}^{\lambda u_j}\to \mathrm{e}^{\lambda u}$ in $L^1(\mu)$ by \cref{lem:fixed-npp-integrals}, and all the measures $\nu_{u_j}$ are at most $\mu$; this controls the error caused by changing the weight. The fixed bounded weight $\mathrm{e}^{\lambda u}$ can be approximated in $L^1(\mu)$ by continuous functions, and since both $\nu_{u_j}$ and $\nu$ are dominated by $\mu$, this approximation is uniform in the integrals. The weak convergence $\nu_{u_j}\rightharpoonup\nu$ then gives the claim, and the same argument applies after multiplication by any continuous test function.
 
 \Needspace{7\baselineskip}
-It follows that
+Since $\mathrm{e}^{\lambda u_j}\nu_{u_j}=\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)$, it follows that
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)=\mathrm{e}^{\lambda u}\nu,
  \qquad \mathrm{e}^{-\lambda u}\mathrm{MA}^{\mathrm{ext}}_\theta(u)=\nu,
  \qquad\nu(X)=B.
 \]
-The second identity is taken off the pole set, which has zero $\mu$-measure. Hence $u$ belongs to the maximizing family. Write $\nu=g\,\mathrm{d}V$, with $0\leq g\leq f$.
+The second identity holds off the pole set of $u$, which has zero $\mu$-measure. Hence $u$ belongs to the family and attains the supremum $B$. Write $\nu=g\,\mathrm{d}V$, with $0\leq g\leq f$.
 
-Suppose $g\neq f$ in $L^1(\mathrm{d}V)$. Apply the supersolution lemma to $f-g$ to find $v\sim\varphi$ with
+\emph{Step 4: no deficit.} Suppose that $g\neq f$ in $L^1(\mathrm{d}V)$. Applying \cref{lem:relative-lp-supersolution} to $f-g$, we find $v\sim\varphi$ with
 \[
  \nu_v:=\mathrm{e}^{-\lambda v}\mathrm{MA}^{\mathrm{ext}}_\theta(v)
  \leq(f-g)\,\mathrm{d}V.
 \]
-This measure is nonzero. More generally, a potential $v$ with a genuine smaller-background envelope cannot have zero Monge--Amp\`ere measure: applying strict domination with coefficient zero to $v$ and $v+1$ would give $v\geq v+1$. Thus $\nu_v(X)>0$.
+This measure is nonzero. In fact, no potential $v$ admitting a smaller-background envelope has zero Monge--Amp\`ere measure, since \cref{thm:singular-strict-domination}, applied with coefficient zero to $v$ and $v+1$, would give $v\geq v+1$. Thus $\nu_v(X)>0$.
 
-The sum $\nu+\nu_v$ is finite, so \cref{thm:weighted-measure-addition} supplies $a\sim\varphi$ with
+The sum $\nu+\nu_v$ is finite, so \cref{thm:weighted-measure-addition} gives $a\sim\varphi$ with
 \[
  \mathrm{e}^{-\lambda a}\mathrm{MA}^{\mathrm{ext}}_\theta(a)=\nu+\nu_v.
 \]
-This measure still lies between $\nu_0$ and $\mu$, but has mass $B+\nu_v(X)>B$, a contradiction. Therefore $g=f$ and $u$ solves the required equation. Uniqueness is singular exponential order in the prescribed ordinary type.
+This measure still lies between $\nu_0$ and $\mu$, but its mass is $B+\nu_v(X)>B$, a contradiction. Therefore $g=f$, and $u$ solves the required equation. Uniqueness in the prescribed ordinary type follows from \cref{cor:singular-exponential-order}.
 \end{proof}
 
 \subsection{The normalized equation}
 
-Let the positive exponent tend to zero. Bounded comparison controls the normalization from above, while the relative lower-density estimate keeps it positive. The common barriers then give convergence of the Monge--Amp\`ere measures and preserve the prescribed type.
+For the normalized equation we let the positive exponent tend to zero. Bounded comparison controls the normalizing constants from above, while the lower density estimate of \cref{lem:relative-density-lower-bound} keeps them away from zero. The common barriers then give convergence of the Monge--Amp\`ere measures and keep the limit in the prescribed type.
 
 \Needspace{8\baselineskip}
 \begin{proof}[of \cref{thm:als-prescribed-lp}, part (2)]
-For each $j\geq1$, use part (1) to solve
+For each $j\geq1$, part (1) gives $u_j\sim\varphi$ with
 \[
- \mathrm{MA}^{\mathrm{ext}}_\theta(u_j)=\mathrm{e}^{u_j/j}f\,\mathrm{d}V,
- \qquad u_j\sim\varphi.
+ \mathrm{MA}^{\mathrm{ext}}_\theta(u_j)=\mathrm{e}^{u_j/j}f\,\mathrm{d}V.
 \]
-Write $M_j=\sup_Xu_j$, $v_j=u_j-M_j$ and $c_j=\mathrm{e}^{M_j/j}$. Choose a bounded normalized solution $h$ and $\alpha>0$ of
-$\mathrm{MA}_\theta(h)=\alpha f\,\mathrm{d}V$, supplied by \cref{thm:big-bounded-normalized}.
+Write $M_j=\sup_Xu_j$, $v_j=u_j-M_j$ and $c_j=\mathrm{e}^{M_j/j}$. Let $h$ be a bounded normalized solution of
+$\mathrm{MA}_\theta(h)=\alpha f\,\mathrm{d}V$, with $\alpha>0$, given by \cref{thm:big-bounded-normalized}.
 
 \Needspace{5\baselineskip}
-For $H_j=h+\|h\|_\infty+j\log\alpha$, we have
+For $H_j=h+\|h\|_\infty+j\log\alpha$ we have
 \[
  \mathrm{e}^{-H_j/j}\mathrm{MA}_\theta(H_j)
  =\mathrm{e}^{-(h+\|h\|_\infty)/j}f\,\mathrm{d}V
  \leq f\,\mathrm{d}V
  =\mathrm{e}^{-u_j/j}\mathrm{MA}^{\mathrm{ext}}_\theta(u_j).
 \]
-The bounded $H_j$ admits a smaller-background envelope, and $u_j\preceq H_j$. Exponential order gives $u_j\leq H_j$. In particular
+The bounded function $H_j$ admits a smaller-background envelope, and $u_j\preceq H_j$, so \cref{cor:singular-exponential-order} gives $u_j\leq H_j$. In particular,
 \[
  0<c_j\leq\alpha\exp(2\|h\|_\infty/j).
 \]
 
-The lower-density bound of \cref{lem:relative-density-lower-bound}, applied to $v_j$, gives
+The lower density bound of \cref{lem:relative-density-lower-bound}, applied to $v_j$ with $q=p$, gives
 \[
  b_p\leq\|c_j\mathrm{e}^{v_j/j}f\|_p\leq c_j\|f\|_p,
 \]
-so $c_j$ is also bounded away from zero.
+so the $c_j$ are also bounded away from zero.
 
 Since $\sup_Xv_j=0$ and
 $\mathrm{MA}^{\mathrm{ext}}_\theta(v_j)=c_j\mathrm{e}^{v_j/j}f\,\mathrm{d}V\leq C f\,\mathrm{d}V$,
-the relative uniform estimate gives $\varphi-C'\leq v_j\leq\varphi$. Extract $v_j\to v$ in $L^1(X)$ and $c_j\to c>0$. The common-barrier dominated continuity theorem yields capacity convergence, $v\sim\varphi$, and raw weak convergence. Meanwhile \cref{lem:normalized-exponential-lp} gives
+\cref{thm:relative-linfty} gives $\varphi-C'\leq v_j\leq\varphi$. Extract a subsequence with $v_j\to v$ in $L^1(X)$ and $c_j\to c>0$. By \cref{cor:common-barrier-continuity}, the convergence holds in capacity, $v\sim\varphi$, and the Monge--Amp\`ere measures converge weakly. Meanwhile, \cref{lem:normalized-exponential-lp} gives
 \[
  \int_X|\mathrm{e}^{v_j/j}-1|f\,\mathrm{d}V\longrightarrow0.
 \]
-Thus the right sides converge in total variation to $cf\,\mathrm{d}V$, and
+Thus the right-hand sides converge in total variation to $cf\,\mathrm{d}V$, and
 $\mathrm{MA}^{\mathrm{ext}}_\theta(v)=cf\,\mathrm{d}V$.
 
-For uniqueness of the scalar, suppose $a,b\sim\varphi$ solve the normalized equation with constants $c_a<c_b$. For every real $t$,
+For the uniqueness of the constant, suppose that $a,b\sim\varphi$ solve the normalized equation with constants $c_a<c_b$. For every real $t$,
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(a)
- =\frac{c_a}{c_b}\mathrm{MA}^{\mathrm{ext}}_\theta(b+t).
+ =\frac{c_a}{c_b}\mathrm{MA}^{\mathrm{ext}}_\theta(b+t),
 \]
-Strict domination gives $a\geq b+t$. At a point where both are finite this is impossible as $t\to+\infty$. Interchanging the two constants proves uniqueness. This argument does not assert uniqueness of the potential after the constants have been shown equal.
+so \cref{thm:singular-strict-domination} gives $a\geq b+t$. This is impossible as $t\to+\infty$, at any point where both potentials are finite. Interchanging the roles of the two constants proves that $c$ is unique.
 \end{proof}

@@ -2,44 +2,51 @@
 \section{The trace map}
 \label{sec:gauduchon-trace-topology}
 
-Adding a constant leaves the trace unchanged. We therefore use the mean normalization
+Adding a constant to a potential does not change its current, so we normalize potentials by their mean and consider
 \[
  \mathcal K^0_{\theta,\mathrm{d}V}
    =\left\{u\in\PSH(X,\theta):\int_Xu\,\mathrm{d}V=0\right\}.
 \]
-For such a potential put
+For $u\in\mathcal K^0_{\theta,\mathrm{d}V}$ we call the measure
 \[
  \mathcal T_\gamma(u)
-     =(\theta+\ddc u)\wedge\gamma^{n-1},
- \qquad M_{\theta,\gamma}=\int_X\theta\wedge\gamma^{n-1}.
+     =(\theta+\ddc u)\wedge\gamma^{n-1}
 \]
-By \cref{prop:gauduchon-trace}, the measure $\mathcal T_\gamma(u)$ is positive and has mass $M_{\theta,\gamma}$. In dimension one this follows from Stokes' theorem. For $f\in C^\infty(X,\mathbb R)$, set $Af=(\ddc f\wedge\gamma^{n-1})/\mathrm{d}V$.
+the \emph{Gauduchon trace} of $u$,\index{Gauduchon trace!trace map} and $\mathcal T_\gamma$ the \emph{trace map}. By \cref{prop:gauduchon-trace} (by Stokes' theorem when $n=1$), $\mathcal T_\gamma(u)$ is a positive measure of total mass
+\[
+ M_{\theta,\gamma}=\int_X\theta\wedge\gamma^{n-1}.
+\]
+The trace map is governed by the linear operator
+\[
+ Af=\frac{\ddc f\wedge\gamma^{n-1}}{\mathrm{d}V},\qquad f\in C^\infty(X,\mathbb R).
+\]
+It is a real second-order elliptic operator without zeroth-order term, and $\mathcal T_\gamma(u)-\mathcal T_\gamma(v)=A(u-v)\,\mathrm{d}V$ in the sense of distributions.
 
 \Needspace{13\baselineskip}
 \begin{theorem}\label{thm:gaud-trace-homeomorphism}\index{Gauduchon trace!topology of potentials}
-The map $\mathcal T_\gamma$ is an affine homeomorphism from the compact convex space $\mathcal K^0_{\theta,\mathrm{d}V}$, with its $L^1$ topology, onto a compact convex subset of the positive measures of mass $M_{\theta,\gamma}$, with their weak topology. For $u_j,u\in\mathcal K^0_{\theta,\mathrm{d}V}$,
+The trace map $\mathcal T_\gamma$ is an affine homeomorphism from the compact convex set $\mathcal K^0_{\theta,\mathrm{d}V}$, with its $L^1$ topology, onto a compact convex set of positive measures of mass $M_{\theta,\gamma}$, with the weak topology. In other words, for $u_j,u\in\mathcal K^0_{\theta,\mathrm{d}V}$,
 \[
  u_j\longrightarrow u\text{ in }L^1
  \quad\Longleftrightarrow\quad
  \mathcal T_\gamma(u_j)\rightharpoonup\mathcal T_\gamma(u).
 \]
-If $M_{\theta,\gamma}=0$, both spaces consist of a single point.
+If $M_{\theta,\gamma}=0$ and $\PSH(X,\theta)\ne\varnothing$, both sets consist of a single point.
 \end{theorem}
 \begin{proof}
-The mean-normalized space is convex. It is the image of the compact space in \cref{thm:normalized-compactness} under the continuous surjection $v\mapsto v-\int_Xv\,\mathrm{d}V$, hence compact.
+The set $\mathcal K^0_{\theta,\mathrm{d}V}$ is convex. It is the image of the compact set $\mathcal K_\theta$ of \cref{thm:normalized-compactness} under the continuous map $v\mapsto v-\int_Xv\,\mathrm{d}V$, and is therefore compact.
 
-If $u_j\to u$ in $L^1$, their trace measures converge in distributions. Their common finite mass upgrades this to weak convergence, by uniform approximation of continuous tests by smooth functions.
+If $u_j\to u$ in $L^1$, then $\ddc u_j\to\ddc u$ as currents, so the trace measures converge in the sense of distributions. Since they are positive measures of the same finite mass, and every continuous function is a uniform limit of smooth functions, they also converge weakly as measures. Thus $\mathcal T_\gamma$ is continuous.
 
-For injectivity, equality of traces gives $A(u-v)=0$. Elliptic regularity for $A$ makes $u-v$ smooth, and the maximum principle makes it constant. Its mean is zero, so it vanishes. The potentials agree everywhere by \cref{lem:qpsh-almost-everywhere-order}.
+To prove injectivity, suppose that $\mathcal T_\gamma(u)=\mathcal T_\gamma(v)$. Then $A(u-v)=0$ in the sense of distributions. Elliptic regularity for $A$ shows that $u-v$ agrees almost everywhere with a smooth function, and the maximum principle shows that this function is constant. Its mean is zero, so $u=v$ almost everywhere, and hence everywhere by \cref{lem:qpsh-almost-everywhere-order}.
 
-A continuous injection from a compact space to the Hausdorff space of finite measures is a homeomorphism onto its image. Affineness gives convexity of the image. If its common mass is zero, every trace is the zero measure, and injectivity makes the potential space a singleton. In this case \cref{lem:zero-gauduchon-degree} also gives $\theta+\ddc u=0$ and smoothness of the unique normalized potential.
+A continuous injection from a compact space into a Hausdorff space is a homeomorphism onto its image; here the target is the space of positive measures of mass $M_{\theta,\gamma}$ with the weak topology. Since $\mathcal T_\gamma$ is affine, its image is convex. If $M_{\theta,\gamma}=0$, every trace measure is zero, so injectivity shows that $\mathcal K^0_{\theta,\mathrm{d}V}$ has at most one point; it has exactly one when $\PSH(X,\theta)$ is nonempty, since the mean of any $\theta$-plurisubharmonic function can be subtracted. In this case \cref{lem:zero-gauduchon-degree} also gives $\theta+\ddc u=0$ for the unique normalized potential $u$, which is therefore smooth.
 \end{proof}
 
-Admissibility for the scalar inverse requires positivity of the full current. For a finite signed measure $\sigma$ of total mass zero, let $G_\gamma\sigma$ denote the mean-zero distribution solving
+The inverse of the trace map can be described by a Green operator for $A$. By the maximum principle, $\ker A=\R$, and $A$ has Fredholm index zero, because the linear path joining it to a Laplace operator consists of elliptic operators. Let $A^*$ be the formal adjoint of $A$ with respect to $\mathrm{d}V$. Stokes' theorem gives $\int_XAf\,\mathrm{d}V=0$ for all smooth $f$, that is, $A^*1=0$; hence $\ker A^*=\R$ as well. By the Fredholm alternative, $A$ maps smooth functions onto the smooth functions $g$ with $\int_Xg\,\mathrm{d}V=0$, and the same holds for $A^*$. In particular, $A^*$ has a continuous inverse on smooth functions of mean zero, normalized to take values of mean zero. By duality with this inverse, every top-degree distribution $\sigma$ of total mass zero, and in particular every finite signed measure with $\sigma(X)=0$, determines a unique distribution $G_\gamma\sigma$ with mean zero against $\mathrm{d}V$ such that
 \begin{equation}\label{eq:gaud-trace-green}
  \ddc(G_\gamma\sigma)\wedge\gamma^{n-1}=\sigma.
 \end{equation}
-Indeed, $\ker A=\R$ by the maximum principle, and $A$ has index zero because its linear homotopy to a Laplace operator stays elliptic. Let $A^*$ be its formal adjoint with respect to $\mathrm{d}V$. Stokes' theorem gives $A^*1=0$, so $\ker A^*=\R$ as well. The Fredholm alternative solves the equation for smooth data exactly when $\int_X\sigma=0$. Duality with the continuous inverse of $A^*$ on smooth functions of mean zero extends $G_\gamma$ to top-degree distributions of total mass zero, including finite signed measures; imposing zero mean fixes the additive constant.
+Inverting the trace map at a positive measure therefore amounts to solving \eqref{eq:gaud-trace-green} and then checking positivity of the full current.
 
 \begin{proposition}\label{prop:gaud-trace-admissible-data}
 \index{Gauduchon trace!admissible measures}
@@ -47,32 +54,32 @@ A positive measure $\nu$ of mass $M_{\theta,\gamma}$ belongs to the image of $\m
 \[
  w=G_\gamma\bigl(\nu-\theta\wedge\gamma^{n-1}\bigr)
 \]
-satisfies $\theta+\ddc w\geq0$. In that case its canonical representative is the corresponding member of $\mathcal K^0_{\theta,\mathrm{d}V}$.
+satisfies $\theta+\ddc w\geq0$. In that case the $\theta$-plurisubharmonic representative of $w$ is the unique $u\in\mathcal K^0_{\theta,\mathrm{d}V}$ with $\mathcal T_\gamma(u)=\nu$.
 \end{proposition}
 \begin{proof}
-If $\nu=\mathcal T_\gamma(u)$, uniqueness in \eqref{eq:gaud-trace-green} gives $w=u$ as distributions. Conversely, \cref{prop:local-correction} gives a $\theta$-plurisubharmonic representative of $w$. Its mean is zero by construction, and \eqref{eq:gaud-trace-green} identifies its trace with $\nu$.
+If $\nu=\mathcal T_\gamma(u)$ with $u\in\mathcal K^0_{\theta,\mathrm{d}V}$, then $u$ is a mean-zero solution of \eqref{eq:gaud-trace-green} with $\sigma=\nu-\theta\wedge\gamma^{n-1}$, so uniqueness gives $w=u$ as distributions. Conversely, if $\theta+\ddc w\geq0$, then \cref{prop:local-correction} gives a $\theta$-plurisubharmonic representative $u$ of $w$. It has mean zero by construction, and \eqref{eq:gaud-trace-green} gives $\mathcal T_\gamma(u)=\nu$.
 \end{proof}
 
-In dimension one the positivity condition is automatic: $\theta+\ddc w=\nu$. Thus every positive measure of the specified mass occurs. In higher dimension, the scalar trace condition must be supplemented by positivity of the full current.
+In dimension one the positivity condition is automatic, because $\theta+\ddc w=\nu$; thus every positive measure of mass $M_{\theta,\gamma}$ is the trace of a normalized potential. In higher dimensions, positivity of the trace measure $\nu$ does not imply positivity of the $(1,1)$-current $\theta+\ddc w$, and the condition in \cref{prop:gaud-trace-admissible-data} must be checked separately.
 
 \section{A metric on normalized potentials}
 \label{sec:gauduchon-trace-metric}
 
-Testing trace differences against bounded Lipschitz functions gives a complete metric, which the elliptic inverse compares quantitatively with the $L^1$ norm. Fix a distance $d$ induced by a smooth Riemannian metric on $X$. For a real Lipschitz function $f$ on $X$, write $\operatorname{Lip}_d(f)=\sup_{x\ne y}|f(x)-f(y)|/d(x,y)$.
-
-\begin{corollary}\label{cor:gaud-trace-metric}\index{Gauduchon trace!metric}
-For $u,v\in\mathcal K^0_{\theta,\mathrm{d}V}$, the formula
+By \cref{thm:gaud-trace-homeomorphism}, every metric for the weak topology on positive measures of mass $M_{\theta,\gamma}$ pulls back to a metric for the $L^1$ topology on $\mathcal K^0_{\theta,\mathrm{d}V}$. We use the bounded Lipschitz metric on measures, which can be compared quantitatively with the $L^1$ norm through the inverse of $A$. Fix a distance $d$ on $X$ induced by a smooth Riemannian metric. For a real Lipschitz function $f$ on $X$, write $\operatorname{Lip}_d(f)=\sup_{x\ne y}|f(x)-f(y)|/d(x,y)$, and for $u,v\in\mathcal K^0_{\theta,\mathrm{d}V}$ put
 \[
  d_{\gamma,d}(u,v)
  =\sup_{\substack{\|f\|_\infty\leq1\\\operatorname{Lip}_d(f)\leq1}}
-       \left|\int_X f\,\mathrm{d}\bigl(\mathcal T_\gamma(u)-\mathcal T_\gamma(v)\bigr)\right|
+       \left|\int_X f\,\mathrm{d}\bigl(\mathcal T_\gamma(u)-\mathcal T_\gamma(v)\bigr)\right|.
 \]
-is a bounded complete metric on $\mathcal K^0_{\theta,\mathrm{d}V}$, inducing its $L^1$ topology. Changing $\gamma$ or $d$ gives the same topology and a uniformly equivalent metric on this compact space.
+We call $d_{\gamma,d}$ the \emph{Gauduchon trace metric}.
+
+\begin{corollary}\label{cor:gaud-trace-metric}\index{Gauduchon trace!metric}
+The function $d_{\gamma,d}$ is a bounded complete metric on $\mathcal K^0_{\theta,\mathrm{d}V}$ inducing its $L^1$ topology. Changing $\gamma$ or $d$ gives the same topology and a uniformly equivalent metric on this compact space.
 \end{corollary}
 \begin{proof}
-Lipschitz functions are uniformly dense in continuous functions, and the test family in the supremum is uniformly bounded and equicontinuous. The first fact separates measures and gives weak convergence from metric convergence. The Arzel\`a--Ascoli theorem supplies finite uniform nets for the test family and gives the converse. Symmetry and the triangle inequality follow directly from the formula, and its value is at most $2M_{\theta,\gamma}$.
+Symmetry and the triangle inequality follow directly from the definition, and $d_{\gamma,d}\leq2M_{\theta,\gamma}$ because both trace measures have mass $M_{\theta,\gamma}$. Let $\mathcal F$ denote the family of test functions in the supremum. After rescaling, $\mathcal F$ contains a positive multiple of every Lipschitz function, and Lipschitz functions are uniformly dense in $C(X)$. Hence $\mathcal F$ separates finite measures, and together with the injectivity of $\mathcal T_\gamma$ this shows that $d_{\gamma,d}$ is a metric. The same density, together with the common mass bound, shows that convergence in $d_{\gamma,d}$ implies weak convergence of the trace measures. Conversely, $\mathcal F$ is uniformly bounded and equicontinuous, so the Arzel\`a--Ascoli theorem gives a finite uniform $\epsilon$-net in $\mathcal F$ for every $\epsilon>0$. Weak convergence on the finitely many functions of the net, and the bound $2M_{\theta,\gamma}\epsilon$ for the remaining error, give convergence in $d_{\gamma,d}$.
 
-Pull back this metric by the homeomorphism in \cref{thm:gaud-trace-homeomorphism}. The resulting metric space is compact, hence complete. For two choices of the auxiliary data, both metrics induce the same compact $L^1$ topology, so the identity maps in both directions are uniformly continuous.
+Thus $d_{\gamma,d}$ is the pullback by the homeomorphism of \cref{thm:gaud-trace-homeomorphism} of a metric for the weak topology. The resulting metric space is compact, hence complete. For two choices of the auxiliary data, both metrics induce the same compact $L^1$ topology, so the identity map is uniformly continuous in both directions.
 \end{proof}
 
 \begin{proposition}\label{prop:gaud-trace-quantitative}
@@ -86,43 +93,45 @@ There is a constant $C\geq1$, depending only on $X,\theta,\gamma,\mathrm{d}V$ an
 \]
 \end{proposition}
 \begin{proof}
-Put $w=u-v$, $\sigma=\mathcal T_\gamma(u)-\mathcal T_\gamma(v)$ and $M=M_{\theta,\gamma}$, and write $\|\sigma\|_{\mathrm{TV}}$ for the total variation of $\sigma$. Then $\int_Xw\,\mathrm{d}V=0$, $\sigma=\ddc w\wedge\gamma^{n-1}$ and $\|\sigma\|_{\mathrm{TV}}\leq2M$. If $M=0$, \cref{thm:gaud-trace-homeomorphism} gives $u=v$, so both estimates hold.
+The lower bound follows by duality from the inverse of $A^*$, and the upper bound by smoothing the test functions. Put $w=u-v$, $\sigma=\mathcal T_\gamma(u)-\mathcal T_\gamma(v)$ and $M=M_{\theta,\gamma}$, and write $\|\sigma\|_{\mathrm{TV}}$ for the total variation of $\sigma$. Then $\int_Xw\,\mathrm{d}V=0$, $\sigma=\ddc w\wedge\gamma^{n-1}$ and $\|\sigma\|_{\mathrm{TV}}\leq2M$. If $M=0$, \cref{thm:gaud-trace-homeomorphism} gives $u=v$, and both estimates hold trivially.
 
-Since $\ker A=\ker A^*=\R$, for a smooth real function $g$, the equation
+For the lower bound, let $g$ be a smooth real function. Since $\ker A=\ker A^*=\R$, the equation
 \[
  A^*\phi=g-\int_Xg\,\mathrm{d}V,\qquad
- \int_X\phi\,\mathrm{d}V=0
+ \int_X\phi\,\mathrm{d}V=0,
 \]
-has a unique smooth solution. For $p>2n$, elliptic $W^{2,p}$ estimates on mean-zero functions and Sobolev embedding give $\|\phi\|_\infty+\operatorname{Lip}_d(\phi)\leq C\|g\|_\infty$.
+has a unique smooth solution. For $p>2n$, elliptic $W^{2,p}$ estimates on functions of mean zero and the Sobolev embedding theorem give $\|\phi\|_\infty+\operatorname{Lip}_d(\phi)\leq C\|g\|_\infty$.
 \Needspace{6\baselineskip}
-Pairing the distributional equation $Aw\,\mathrm{d}V=\sigma$ with $\phi$ yields
+Pairing the distributional equation $Aw\,\mathrm{d}V=\sigma$ with $\phi$, and using $\int_Xw\,\mathrm{d}V=0$, we obtain
 \[
  \left|\int_Xwg\,\mathrm{d}V\right|
  =\left|\int_X\phi\,\mathrm{d}\sigma\right|
  \leq C\|g\|_\infty d_{\gamma,d}(u,v).
 \]
-Taking the supremum over smooth real $g$ with $\|g\|_\infty\leq1$ gives $\|w\|_{L^1}$ and proves the first estimate.
+Taking the supremum over smooth real $g$ with $\|g\|_\infty\leq1$ gives $\|w\|_{L^1}\leq C d_{\gamma,d}(u,v)$.
 
-For the second estimate, let $f$ be any test function in the definition of $d_{\gamma,d}$. A fixed finite coordinate cover, smooth partition of unity and convolution at scale $0<\epsilon<\epsilon_0$ give smooth functions $f_\epsilon$ satisfying
+For the upper bound, let $f$ be any test function in the definition of $d_{\gamma,d}$. Using a fixed finite coordinate cover, a smooth partition of unity and convolution at scale $0<\epsilon<\epsilon_0$, we obtain smooth functions $f_\epsilon$ satisfying
 \[
  \|f-f_\epsilon\|_\infty\leq C\epsilon,
- \qquad \|A^*f_\epsilon\|_\infty\leq C\epsilon^{-1}.
+ \qquad \|A^*f_\epsilon\|_\infty\leq C\epsilon^{-1},
 \]
-The constants are uniform over this test family. To see the second bound, localize $f$ by the fixed partition. The localized functions have uniformly bounded values and first weak derivatives. In each second derivative of their convolution, move one derivative onto the mollifier; its $L^1$ norm is $O(\epsilon^{-1})$. The lower-order terms of $A^*$ have fixed smooth coefficients and satisfy the same bound. Hence
+with constants uniform over this family of test functions. To see the second bound, localize $f$ by the fixed partition of unity. The localized functions have uniformly bounded values and first weak derivatives. In each second derivative of their convolutions, move one derivative onto the mollifier, whose derivative has $L^1$ norm $O(\epsilon^{-1})$. The lower-order terms of $A^*$ have fixed smooth coefficients and satisfy the same bound. Since $\int_Xf_\epsilon\,\mathrm{d}\sigma=\int_XwA^*f_\epsilon\,\mathrm{d}V$, it follows that
 \[
  \left|\int_Xf\,\mathrm{d}\sigma\right|
  \leq C\bigl(M\epsilon+\epsilon^{-1}\|w\|_{L^1}\bigr).
 \]
-If $0<\|w\|_{L^1}<\epsilon_0^2$, choose $\epsilon=\|w\|_{L^1}^{1/2}$. For larger norms use $d_{\gamma,d}(u,v)\leq2M$, and for $w=0$ use injectivity. Taking the supremum over $f$ proves the asserted bound.
+If $0<\|w\|_{L^1}<\epsilon_0^2$, choose $\epsilon=\|w\|_{L^1}^{1/2}$. For larger norms use $d_{\gamma,d}(u,v)\leq2M$, and for $w=0$ use injectivity. Taking the supremum over $f$ proves the upper bound.
 \end{proof}
+
+Both exponents in \cref{prop:gaud-trace-quantitative} are optimal, already on an elliptic curve.
 
 \begin{example}\label{ex:gaud-trace-sharp-exponents}
 \index{Gauduchon trace!sharp exponents}
-Let $X=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, with $z=x+\mathrm{i}y$, $\theta=\gamma=\eta=(\mathrm{i}/2)\mathrm{d}z\wedge\mathrm{d}\bar z$, $\mathrm{d}V=\eta$ and the flat distance $d$. For integers $k\geq1$, set
+Let $X=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, with coordinate $z=x+\mathrm{i}y$. Take $\theta=\gamma=\eta$, where $\eta=(\mathrm{i}/2)\mathrm{d}z\wedge\mathrm{d}\bar z$, together with $\mathrm{d}V=\eta$ and the flat distance $d$. For integers $k\geq1$, set
 \[
  u_k=\frac{\cos(2\pi kx)}{2\pi k^2}.
 \]
-These smooth mean-zero potentials satisfy
+These smooth potentials have mean zero and satisfy
 \[
  \theta+\ddc u_k=\left(1-\frac12\cos(2\pi kx)\right)\eta>0,
  \qquad \|u_k\|_{L^1}=\frac1{\pi^2k^2}.
@@ -133,45 +142,45 @@ The function $f_k=\cos(2\pi kx)/(2\pi k)$ has supremum norm at most one and Lips
  \geq\left|\int_Xf_k\,\ddc u_k\right|
  =\frac1{8\pi k}.
 \]
-Consequently, the exponent $1/2$ in \cref{prop:gaud-trace-quantitative} cannot be replaced by any larger exponent, even for smooth strictly positive potentials on a fixed curve. The power one in the lower bound cannot be replaced by a smaller positive power: for $0<t\leq1$, both $\|tu_1\|_{L^1}$ and $d_{\gamma,d}(tu_1,0)$ equal $t$ times their positive values at $t=1$.
+Consequently, the exponent $1/2$ in \cref{prop:gaud-trace-quantitative} cannot be replaced by any larger exponent, even for smooth strictly positive potentials on a fixed curve. Nor can the power one in the lower bound be replaced by a smaller positive power: for $0<t\leq1$, both $\|tu_1\|_{L^1}$ and $d_{\gamma,d}(tu_1,0)$ equal $t$ times their positive values at $t=1$.
 \end{example}
 
 \section{Continuous potentials and pluriharmonic traces}
 \label{sec:continuous-pluriharmonic-traces}
 
-For $n\geq2$, let $\omega$ be a Hermitian form on $X$, and let $G$ be a positive $(n-1,n-1)$-current with $\ddc G=0$. Such currents include $\gamma^{n-1}$, but their coefficients may be singular measures. The equation $\ddc G=0$ converts uniform control of a potential difference into a gradient-energy bound. This bound permits a canonical trace measure for continuous potentials.
+The Gauduchon trace pairs $\theta+\ddc u$ with the smooth form $\gamma^{n-1}$, which is positive and pluriharmonic. In this section $n\geq2$, $\omega$ is a Hermitian form on $X$, and $G$ is a positive pluriharmonic $(n-1,n-1)$-current, that is, a positive current with $\ddc G=0$ (see \cref{sec:horizontal-pluriharmonic-currents}). Such currents include $\gamma^{n-1}$, but in general their coefficients are only measures, and the product $(\theta+\ddc u)\wedge G$ is not defined a priori. The equation $\ddc G=0$ converts uniform control of a potential difference into a bound for its gradient energy against $G$, and this is enough to define the product for continuous potentials.
 
 \begin{lemma}\label{lem:pluriharmonic-gradient-energy}\index{Pluriharmonic current!gradient energy}
-Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n\geq2$, and let $G$ be a positive $(n-1,n-1)$-current with $\ddc G=0$. Put $\mu=\omega\wedge G$ and $M=\mu(X)$. If $a,b$ are smooth real functions with $\ddc a,\ddc b\geq-C\omega$, where $C\geq0$, then
+Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n\geq2$, and let $G$ be a positive $(n-1,n-1)$-current with $\ddc G=0$. Put $\mu=\omega\wedge G$ and $M=\mu(X)$. If $a,b$ are smooth real functions and $C\geq0$ is a constant with $\ddc a,\ddc b\geq-C\omega$, then
 \[
  0\leq\int_X\mathrm{d}(a-b)\wedge\mathrm{d}^c(a-b)\wedge G
  \leq2C M\|a-b\|_\infty.
 \]
-For every smooth real function $v$, the total variation norms of the order-zero currents satisfy
+For every smooth real function $v$, the total variation norms of the order-zero currents $\mathrm{d}v\wedge G$ and $\mathrm{d}^cv\wedge G$ satisfy
 \[
  \|\mathrm{d}v\wedge G\|_{\mathrm{TV}}+
  \|\mathrm{d}^cv\wedge G\|_{\mathrm{TV}}
  \leq C_\omega M^{1/2}
        \left(\int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G\right)^{1/2}.
 \]
-Here the norms use the metric $\omega$, and $C_\omega$ depends only on that fixed geometry and the operator normalization.
+Here the total variation norms are computed with respect to $\omega$, and $C_\omega$ depends only on $(X,\omega)$.
 \end{lemma}
 \begin{proof}
-Set $v=a-b$. The identity $\ddc(v^2)=2\mathrm{d}v\wedge\mathrm{d}^cv+2v\ddc v$ and $\ddc G=0$ give
+Set $v=a-b$. The identity $\ddc(v^2)=2\mathrm{d}v\wedge\mathrm{d}^cv+2v\ddc v$, integrated against $G$, and the equation $\ddc G=0$ give
 \[
  \int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G
  =-\int_Xv\ddc v\wedge G.
 \]
-The measures $(\ddc a+C\omega)\wedge G$ and $(\ddc b+C\omega)\wedge G$ are positive, each of mass $CM$, since their potential terms integrate to zero. Their difference is $\ddc v\wedge G$ and has total variation at most $2CM$. This proves the first estimate; nonnegativity follows from positivity of $\mathrm{d}v\wedge\mathrm{d}^cv=(\mathrm{i}/2\pi)\partial v\wedge\bar\partial v$.
+The measures $(\ddc a+C\omega)\wedge G$ and $(\ddc b+C\omega)\wedge G$ are positive, and each has mass $CM$, because the terms $\ddc a\wedge G$ and $\ddc b\wedge G$ integrate to zero. Their difference $\ddc v\wedge G$ therefore has total variation at most $2CM$, which proves the upper bound. The lower bound holds because $\mathrm{d}v\wedge\mathrm{d}^cv=(\mathrm{i}/2\pi)\partial v\wedge\bar\partial v$ is a positive $(1,1)$-form.
 
-In a unitary frame, positivity represents $G$ by a positive semidefinite matrix of measures. Its entries are absolutely continuous with respect to its trace measure $\mu$: the diagonal entries are dominated by the trace, and the off-diagonal entries satisfy the matrix Cauchy--Schwarz inequality. The resulting measurable matrix has trace bounded by a fixed normalization constant. Pairing $\mathrm{d}v\wedge G$ or $\mathrm{d}^cv\wedge G$ with a test one-form $\eta$ and applying the matrix inequality and then integral Cauchy--Schwarz gives
+For the second estimate, work in a local unitary frame for $\omega$. Positivity of $G$ means that its coefficients form a positive semidefinite matrix of measures. These entries are absolutely continuous with respect to the trace measure $\mu$: the diagonal entries are dominated by the trace, and the off-diagonal entries by the Cauchy--Schwarz inequality for positive semidefinite matrices. The resulting matrix of densities has trace bounded by a constant depending only on the normalization. Pairing $\mathrm{d}v\wedge G$ or $\mathrm{d}^cv\wedge G$ with a test one-form $\eta$, and applying the matrix Cauchy--Schwarz inequality and then the integral Cauchy--Schwarz inequality, we obtain
 \[
  |\langle\mathrm{d}v\wedge G,\eta\rangle|
  +|\langle\mathrm{d}^cv\wedge G,\eta\rangle|
  \leq C_\omega\|\eta\|_\infty M^{1/2}
  \left(\int_X\mathrm{d}v\wedge\mathrm{d}^cv\wedge G\right)^{1/2}.
 \]
-A finite frame cover and partition of unity give the global estimate. Taking the supremum over smooth tests of norm at most one yields the total variation bound for these measure-valued currents. When $M=0$, positivity gives $G=0$, so both estimates hold.
+A finite cover by such frames and a partition of unity give the global estimate. Taking the supremum over smooth test forms of norm at most one yields the total variation bound. When $M=0$, positivity gives $G=0$, and both estimates hold trivially.
 \end{proof}
 
 \begin{theorem}\label{thm:continuous-pluriharmonic-trace-product}\index{Pluriharmonic current!continuous-potential product}\index{Gauduchon trace!pluriharmonic current tests}
@@ -179,34 +188,36 @@ Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n\geq2$, let $\al
 \[
  (\alpha+\ddc u)\wedge G
 \]
-is a canonically defined positive measure of mass $\int_X\alpha\wedge G$. It agrees with smooth multiplication if $u$ or $G$ is smooth. If $u_j,u\in\PSH(X,\alpha)\cap C^0(X)$ converge uniformly and positive pluriharmonic currents $G_j\rightharpoonup G$ converge weakly, then
+has a canonical definition as a positive measure of mass $\int_X\alpha\wedge G$, which agrees with the usual product if $u$ or $G$ is smooth. If $u_j,u\in\PSH(X,\alpha)\cap C^0(X)$ and $u_j\to u$ uniformly, and if positive pluriharmonic currents $G_j$ converge weakly to $G$, then
 \[
  (\alpha+\ddc u_j)\wedge G_j
  \rightharpoonup(\alpha+\ddc u)\wedge G.
 \]
 \end{theorem}
 \begin{proof}
-Choose smooth approximants $a_k\to u$ from \cref{lem:continuous-potential-smooth-loss}. There is a common $C>0$ such that $\ddc a_k\geq-C\omega$. Write $M=\int_X\omega\wedge G$. By \cref{lem:pluriharmonic-gradient-energy}, $\mathrm{d}a_k\wedge G$ and $\mathrm{d}^ca_k\wedge G$ are Cauchy in total variation. Denote their order-zero limits by $\mathrm{d}u\wedge G$ and $\mathrm{d}^cu\wedge G$. Comparing two uniformly convergent smooth sequences with a common lower Hessian bound proves independence of the sequence. Continuous multiplication also gives $a_kG\to uG$ in total variation.
+We first define the gradient currents $\mathrm{d}u\wedge G$ and $\mathrm{d}^cu\wedge G$ as limits, then define the product by an integration-by-parts formula, and finally prove joint continuity.
 
-Define the product by the distributional formula
+\medskip\noindent\emph{Step 1: gradient currents.} Choose smooth approximants $a_k\to u$ as in \cref{lem:continuous-potential-smooth-loss}. There is a common constant $C>0$ such that $\ddc a_k\geq-C\omega$. Write $M=\int_X\omega\wedge G$. Since $a_k$ converges uniformly, \cref{lem:pluriharmonic-gradient-energy} shows that $\mathrm{d}a_k\wedge G$ and $\mathrm{d}^ca_k\wedge G$ are Cauchy sequences in total variation. Denote their limits, which are currents of order zero, by $\mathrm{d}u\wedge G$ and $\mathrm{d}^cu\wedge G$. Applying the same lemma to two uniformly convergent smooth sequences with a common lower Hessian bound shows that the limits do not depend on the sequence. Uniform convergence also gives $a_kG\to uG$ in total variation.
+
+\medskip\noindent\emph{Step 2: the product.} Define
 \begin{equation}\label{eq:continuous-pluriharmonic-product}
  (\alpha+\ddc u)\wedge G
  =\alpha\wedge G+\mathrm{d}(\mathrm{d}^cu\wedge G)
-   -\mathrm{d}^c(\mathrm{d}u\wedge G)-\ddc(uG).
+   -\mathrm{d}^c(\mathrm{d}u\wedge G)-\ddc(uG)
 \end{equation}
-For smooth $u$, the full Leibniz identity gives this formula because $\ddc G=0$. Consequently $(\alpha+\ddc a_k)\wedge G$ converges to the displayed distribution. The measures $(\alpha+\ddc a_k+\varepsilon_k\omega)\wedge G$ are positive, with masses $\int_X\alpha\wedge G+\varepsilon_kM$. Their distributional limit is therefore a positive measure, and testing on the constant function one gives its asserted mass. The uniform mass bound upgrades distributional convergence to weak convergence of measures. If $G$ is smooth, uniform convergence of $a_k$ also identifies the limit by distributional multiplication with that smooth form.
+in the sense of distributions. For smooth $u$, the Leibniz rule and $\ddc G=0$ show that this agrees with the usual product. Consequently $(\alpha+\ddc a_k)\wedge G$ converges in distributions to the right-hand side of \eqref{eq:continuous-pluriharmonic-product}. With $\varepsilon_k\to0$ as in \cref{lem:continuous-potential-smooth-loss}, the measures $(\alpha+\ddc a_k+\varepsilon_k\omega)\wedge G$ are positive, with masses $\int_X\alpha\wedge G+\varepsilon_kM$. Their distributional limit is therefore a positive measure, and testing against the constant function one gives its mass. The uniform mass bound upgrades distributional convergence to weak convergence of measures. If $G$ is smooth, the uniform convergence of $a_k$ also identifies the limit with the product of the current $\alpha+\ddc u$ and the smooth form $G$.
 
-Adding a smooth function $h$ to $u$ adds $\mathrm{d}h\wedge G$ and $\mathrm{d}^ch\wedge G$ to its gradient limits. Replacing $\alpha$ by $\alpha-\ddc h$ therefore leaves the product unchanged. If two continuous representations define the same $(1,1)$-current, their potential difference has smooth $\ddc$; taking its trace in a coordinate chart and applying elliptic regularity makes that difference smooth. Thus the product depends only on the current $\alpha+\ddc u$ and on $G$.
+\medskip\noindent\emph{Step 3: independence of the decomposition.} Adding a smooth function $h$ to $u$ adds $\mathrm{d}h\wedge G$ and $\mathrm{d}^ch\wedge G$ to the gradient currents, so replacing $(\alpha,u)$ by $(\alpha-\ddc h,u+h)$ leaves the product unchanged. If two continuous decompositions define the same $(1,1)$-current, the difference of their potentials has smooth $\ddc$; taking its trace in a coordinate chart and applying elliptic regularity shows that this difference is smooth. Thus the product depends only on the current $\alpha+\ddc u$ and on $G$.
 
-It remains to prove joint continuity. For each of $u$ and the $u_j$, retain a smooth approximating tail with curvature errors at most one. By \cref{lem:continuous-potential-smooth-loss} and a fixed bound $\alpha\leq(C-1)\omega$, all these approximants then satisfy the same lower Hessian bound $-C\omega$. The numbers $M_j=\int_X\omega\wedge G_j$ are bounded by weak convergence. Fix a smooth approximant $a_k$ of $u$. Apply the energy and total variation estimates to smooth approximants of $u_j$ and to $a_k$, then pass to their gradient limits. With $\delta_{j,k}=\|u_j-a_k\|_\infty$, the gradient differences have total variation at most $C' M_j\sqrt{\delta_{j,k}}$, where $C'$ is independent of $j,k$.
+\medskip\noindent\emph{Step 4: joint continuity.} For $u$ and for each $u_j$, keep only those smooth approximants from \cref{lem:continuous-potential-smooth-loss} whose curvature errors are at most one. Choosing $C$ with $\alpha\leq(C-1)\omega$, all these approximants satisfy the same lower Hessian bound $-C\omega$. The numbers $M_j=\int_X\omega\wedge G_j$ are bounded, by weak convergence. Fix a smooth approximant $a_k$ of $u$, and put $\delta_{j,k}=\|u_j-a_k\|_\infty$. Applying \cref{lem:pluriharmonic-gradient-energy} to $a_k$ and to smooth approximants of $u_j$, and passing to the gradient limits, we find that the total variations of the differences $(\mathrm{d}u_j-\mathrm{d}a_k)\wedge G_j$ and $(\mathrm{d}^cu_j-\mathrm{d}^ca_k)\wedge G_j$ are at most $C'M_j\sqrt{\delta_{j,k}}$, where $C'$ is independent of $j$ and $k$.
 
-For a smooth real test function $\phi$, \eqref{eq:continuous-pluriharmonic-product} now gives
+For a smooth real test function $\phi$, formula \eqref{eq:continuous-pluriharmonic-product} now gives
 \[
  \left|\left\langle(\alpha+\ddc u_j)\wedge G_j
        -(\alpha+\ddc a_k)\wedge G_j,\phi\right\rangle\right|
  \leq C_\phi M_j(\sqrt{\delta_{j,k}}+\delta_{j,k}),
 \]
-where $C_\phi$ depends on the first two derivatives of $\phi$, the fixed geometry and $C$. The same estimate holds for $u,G$. For fixed $k$, smooth multiplication gives $(\alpha+\ddc a_k)\wedge G_j\rightharpoonup(\alpha+\ddc a_k)\wedge G$. First let $j\to\infty$, and then $k\to\infty$; since $u_j\to u$ uniformly, the error tends to zero. This proves distributional convergence. Positivity and the bounded masses $\int_X\alpha\wedge G_j$ upgrade it to weak convergence of measures.
+where $C_\phi$ depends on the first two derivatives of $\phi$, on $\omega$ and on $C$. The same estimate holds with $u_j,G_j$ replaced by $u,G$. For fixed $k$, the products $(\alpha+\ddc a_k)\wedge G_j$ of a fixed smooth form with $G_j$ converge weakly to $(\alpha+\ddc a_k)\wedge G$. Let first $j\to\infty$ and then $k\to\infty$; since $u_j\to u$ uniformly, the error tends to zero. This proves convergence in distributions, and positivity together with the bounded masses $\int_X\alpha\wedge G_j$ upgrades it to weak convergence of measures.
 \end{proof}
 
-For $G=\gamma^{n-1}$, the product in \cref{thm:continuous-pluriharmonic-trace-product} is the Gauduchon trace of a continuous potential. Its gradient construction also allows singular pluriharmonic test currents.
+For $G=\gamma^{n-1}$ and $\alpha=\theta$, the product in \cref{thm:continuous-pluriharmonic-trace-product} is the Gauduchon trace of a continuous potential. Since the construction uses only the gradient energy, it also applies to pluriharmonic currents $G$ with singular coefficients.

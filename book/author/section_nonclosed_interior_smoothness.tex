@@ -3,7 +3,9 @@
 \section{Interior smoothness on the regular locus}
 \label{sec:nonclosed-interior-smoothness}
 
-A smooth strictly positive density on the whole regular locus $\Omega$ of the fixed strict barrier gives interior smoothness of a minimal-type solution once local H\"older continuity is known there. The proper gap from \cref{lem:interior-proper-gap} forces the difference between the solution and the barrier to attain a minimum on any nonregular set. Near that minimum, smooth Dirichlet approximants have polynomial trace growth; localization improves this growth until a uniform trace bound yields elliptic regularity.
+Throughout this section, $\theta$ is a smooth big real $(1,1)$-form, and $\rho$, $Z=\{\rho=-\infty\}$ and $\Omega=X\setminus Z$ are the strict analytic barrier and its regular locus fixed in \cref{sec:big-minimal-comparison}. Thus $\rho\leq0$ has analytic singularities with smooth remainder, and $\theta+\ddc\rho\geq\omega$. If $\varphi\in\PSH(X,\theta)$ has minimal singularities, then $\varphi\geq V_\theta-C\geq\rho-C$ for a constant $C$. Hence $\varphi$ is locally bounded on $\Omega$, and its Monge--Amp\`ere measure there is the bounded-potential product.
+
+For such a potential, \cref{thm:big-minimal-holder} gives local H\"older continuity on $\Omega$ when the density belongs to $L^p$ for some $p>1$. We show that a smooth strictly positive density on the whole of $\Omega$ then makes the potential smooth on $\Omega$. Local information alone cannot give this: \cref{ex:local-lipschitz-constant-measure} below is a locally Lipschitz plurisubharmonic function with constant Monge--Amp\`ere density that is not $C^1$. The argument therefore uses the barrier globally. By the proper gap of \cref{lem:interior-proper-gap}, the difference between the solution and the barrier attains a minimum on the closed set where smoothness fails, and strict positivity of $\theta+\ddc\rho$ turns this minimum into a quadratic separation. Near the minimum, smooth Dirichlet approximants have traces of polynomial growth; the separation improves this growth until a uniform trace bound yields elliptic regularity.
 
 \begin{theorem}\label{thm:nonclosed-interior-smoothness}\index{Interior regularity}
 Suppose $\varphi\in\PSH(X,\theta)$ has minimal singularities and is locally
@@ -15,16 +17,21 @@ Then
 $\varphi\in C^\infty(\Omega)$ and $\theta+\ddc\varphi>0$ there.
 \end{theorem}
 
-Subtracting a constant, we may assume $\sup_X\varphi=0$ and choose $C>0$ such that $V_\theta-C\leq\varphi\leq V_\theta$.
-A sufficient condition for the H\"older premise is $0\leq f\in L^p(X,\omega^n)$ for some $p>1$, by \cref{thm:big-minimal-holder}. The theorem also applies when local H\"older continuity is obtained by another argument.
+The H\"older hypothesis holds when, in addition, $f\in L^p(X,\omega^n)$ for some $p>1$, by \cref{thm:big-minimal-holder}; see \cref{cor:big-lp-interior-smoothness}. The theorem also applies when local H\"older continuity is obtained by another argument.
 
-All coordinate balls have compact closure in a larger chart.
+The proof is by contradiction and occupies the rest of the section. Let $\mathcal S\subset\Omega$ be the closed set of points near which $\varphi$ is not smooth, suppose that $\mathcal S\neq\varnothing$, and let $p\in\mathcal S$ minimize $\varphi-\rho$ on $\mathcal S$. On a small ball centered at $p$ the argument has four steps.
+\begin{enumerate}
+\item A comparison principle for continuous solutions (\cref{sec:interior-calculus}) and the smooth Dirichlet problem give smooth solutions $u_j$ of the equation that converge uniformly to $\varphi$ at a polynomial rate in $j$, while the traces of $\theta+\ddc u_j$, measured in Euclidean coordinates, grow at most polynomially in $j$ (\cref{sec:interior-approximants}).
+\item Near $p$, the quadratic separation along $\mathcal S$, together with uniform trace bounds on compact sets where $\varphi$ is already smooth, improves the trace growth to $O(j^\gamma)$ for every $\gamma>0$. Interpolation with the convergence rate then gives uniform $C^{1,\alpha}$ bounds for every $\alpha<1$ (\cref{sec:interior-localization}).
+\item A third-order estimate whose constants depend polynomially on the ellipticity turns uniform $C^{1,\alpha}$ bounds, for $\alpha$ close to one, into a uniform trace bound (\cref{sec:interior-calabi}).
+\item A continuous solution with bounded trace is smooth (\cref{sec:interior-criterion}). Hence $\varphi$ is smooth near $p$, contradicting $p\in\mathcal S$ (\cref{sec:interior-main-proof}).
+\end{enumerate}
 
 \subsection{Local comparison}\label{sec:interior-calculus}
 
-Local comparison identifies the given continuous potential with limits of smooth Dirichlet solutions. Its proof uses the mixed inequalities of \cref{lem:interior-mixed-background,lem:interior-convolution} and the closed-current comparison formula \eqref{eq:interior-power-comparison}.
+The comparison principle below, for continuous sub- and supersolutions on a bounded domain, identifies the given continuous potential with limits of smooth Dirichlet solutions. Since the background need not be closed, the classical Bedford--Taylor comparison does not apply directly. We freeze the background at a point, apply the closed-current comparison formula \eqref{eq:interior-power-comparison} to quadratic modifications, and control the error by the mixed inequalities of \cref{lem:interior-mixed-background,lem:interior-convolution}.
 
-In the local arguments, put $\beta=\ddc|z|^2$ in Euclidean coordinates and take coefficient matrices relative to $\beta$. Write $\partial_i=\partial/\partial z_i$, $\partial_{\bar i}=\partial/\partial\bar z_i$ and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. Repeated indices run from $1$ to $n$; $I$ denotes the identity matrix. The smooth real background is denoted by $\vartheta$.
+The local arguments of this section take place in coordinate balls, always with compact closure in a larger coordinate chart. There we put $\beta=\ddc|z|^2$, write $\partial_i=\partial/\partial z_i$ and $\partial_{\bar i}=\partial/\partial\bar z_i$, and take coefficient matrices of real $(1,1)$-forms relative to $\beta$. For such a form $A$, $\operatorname{tr}_\beta A$ and $\det_\beta A$ denote the trace and the determinant of its coefficient matrix, so that $A^n=(\det_\beta A)\beta^n$, and $\Delta_\beta=\operatorname{tr}_\beta\ddc$. For a positive form $T$, $\operatorname{tr}_T$ is the trace computed with the inverse of the coefficient matrix of $T$. Indices run from $1$ to $n$, repeated indices in tensor expressions are summed, and $I$ denotes the identity matrix. In local statements, $\vartheta$ denotes a smooth real $(1,1)$-form, not necessarily closed, which plays the role of $\theta$.
 
 \begin{proposition}\label{prop:interior-comparison}
 Let $D\Subset\mathbb C^n$ be a bounded domain and let $\vartheta$ be a smooth real $(1,1)$-form near $\overline D$. Suppose $u,v\in C(\overline D)$ are $\vartheta$-plurisubharmonic,
@@ -37,19 +44,19 @@ where $F>0$ is continuous on $D$. If $u\leq v$ on $\partial D$, then $u\leq v$ i
 \end{proposition}
 
 \begin{proof}
-We first prove the lower-test property for $v$. Suppose that a $C^2$ function $q$ touches $v$ from below at $p$ and, at $p$,
+\emph{Step 1: $v$ admits no strict smooth lower test.} Suppose, to the contrary, that a $C^2$ function $q$ touches $v$ from below at a point $p\in D$ and that, at $p$,
 \[
   \vartheta+\ddc q>0,
   \qquad
   \det_\beta(\vartheta+\ddc q)>F.
 \]
 \Needspace{6\baselineskip}
-Choose a sufficiently small $a>0$. After replacing $q$ by $q-a|z-p|^2$ and shrinking a ball $B_r(p)$, there are fixed $\lambda,\eta>0$ such that
+Choose a sufficiently small $a>0$. After replacing $q$ by $q-a|z-p|^2$, which makes the contact strict, and restricting to a small ball $B_r(p)$, there are fixed $\lambda,\eta>0$ such that
 \[
   A:=\vartheta+\ddc q\geq\lambda\beta,
   \qquad A^n\geq(F+\eta)\beta^n.
 \]
-Put $\kappa=\sup_{B_r}\lVert\vartheta-\vartheta(p)\rVert_\beta$ and $B_0=\vartheta(p)+\kappa\beta$. Thus $S=B_0-\vartheta$ satisfies $0\leq S\leq2\kappa\beta$. For small $s>0$ the set $E=\{v<q+s\}$ is nonempty and relatively compact in $B_r$. If $Q_0$ is a quadratic potential for $B_0$, then
+To compare with closed currents, freeze the background at $p$: put $\kappa=\sup_{B_r}\lVert\vartheta-\vartheta(p)\rVert_\beta$ and $B_0=\vartheta(p)+\kappa\beta$. Then $S=B_0-\vartheta$ satisfies $0\leq S\leq2\kappa\beta$. For small $s>0$ the set $E=\{v<q+s\}$ is nonempty and relatively compact in $B_r$. If $Q_0$ is a quadratic potential for the constant form $B_0$, then
 \[
   P=\ddc(v+Q_0)=\vartheta+\ddc v+S,
   \qquad
@@ -61,13 +68,15 @@ are closed positive Hessians. Applying \eqref{eq:interior-power-comparison}, exp
   \qquad
   e_\kappa=\left(1+\frac{2\kappa}{\lambda}\right)^n-1.
 \]
-On the other hand, comparison gives
+On the other hand, \eqref{eq:interior-power-comparison} with $j=n$ gives
 \[
   \int_E P^n\geq\int_E Q^n\geq\int_E(F+\eta)\beta^n.
 \]
-If $M$ bounds $F$ on the ball, then $(1-e_\kappa)\eta\leq e_\kappa M$, which is impossible after $r$ is decreased because $e_\kappa\to0$. Thus no such lower test exists.
+If $M$ bounds $F$ on the ball, the two estimates give $(1-e_\kappa)\eta\leq e_\kappa M$. Since $\kappa\to0$, and hence $e_\kappa\to0$, as $r\downarrow0$, this is impossible for small $r$. Thus no such lower test exists.
 
-Suppose now that $\max_D(u-v)>0$. Let $\chi_\delta$ be a nonnegative smooth mollifier of mass one and radius $\delta>0$. For small $t>0$ and $C\geq\sup_D|z|^2$, set
+\emph{Step 2: comparison.}
+
+Suppose that $\max_D(u-v)>0$. We regularize $u$ to produce a forbidden lower test for $v$. Let $\chi_\delta$ be a nonnegative smooth mollifier of mass one and radius $\delta>0$. For small $t>0$ and $C\geq\sup_D|z|^2$, set
 \[
   u_t=u+t(|z|^2-C).
 \]
@@ -93,19 +102,19 @@ $\epsilon_\delta=\|\vartheta-\vartheta*\chi_\delta\|_{C^0(W)}$, then
 \]
 For fixed $t>0$, uniform convergence of the convolved density and
 $\epsilon_\delta\to0$ show that the left-hand side is positive and has
-determinant strictly larger than $F$ for small $\delta$. Uniform convergence preserves an interior maximum of $u_t*\chi_\delta-v$. Subtracting its value produces a forbidden smooth lower test for $v$, a contradiction.
+determinant strictly larger than $F$ on $W$ for small $\delta$. Since $u_t*\chi_\delta\to u_t$ uniformly on $W$, the difference $u_t*\chi_\delta-v$ still attains its maximum over $\overline W$ at an interior point of $W$ for small $\delta$. Subtracting this maximum from $u_t*\chi_\delta$ produces a smooth function touching $v$ from below with the properties excluded in Step~1, a contradiction.
 \end{proof}
 
 \subsection{Bounded traces and smoothness}\label{sec:interior-criterion}
 
-A bounded trace of a positive current bounds all its coefficient measures. The equation then gives a lower eigenvalue bound, so it becomes uniformly elliptic. We record this criterion before constructing approximants whose traces can be controlled.
+We begin with the criterion used in the last step of the proof. A bounded trace of a positive current bounds all its coefficient measures, so a continuous solution with bounded trace is a strong solution with $W^{2,q}$ regularity for every finite $q$. The equation then bounds the eigenvalues from below, so it becomes uniformly elliptic. Since the solution is not yet known to be $C^2$, the Evans--Krylov theory is applied to it as a viscosity solution of a concave extension of the operator.
 
 \begin{proposition}\label{prop:interior-criterion}
 Let $B\subset\mathbb C^n$ be a coordinate ball, let $\vartheta$ be a smooth real $(1,1)$-form there and let $F\in C^\infty(B)$ be strictly positive. Suppose $u$ is continuous, $T=\vartheta+\ddc u\geq0$, and
 \begin{equation}\label{eq:interior-local-ma}
   T^n=F\beta^n.
 \end{equation}
-At a point $p$, the following are locally equivalent:
+For a point $p\in B$, the following conditions, each required on some neighborhood of $p$, are equivalent:
 \begin{enumerate}
 \item $u$ is smooth;
 \item $T\geq\delta\beta$ for some $\delta>0$;
@@ -120,7 +129,7 @@ Choose $C$ so that $v=u+C|z|^2$ is plurisubharmonic, and use nonnegative radial 
 \]
 Bedford--Taylor monotone continuity and smooth convergence of the background imply $T_\eta^k\to T^k$ for every $k$.
 
-Assume (2). For every Hermitian matrix $M\geq\delta I$,
+\emph{(2)$\Rightarrow$(3).} Assume (2). For every Hermitian matrix $M\geq\delta I$,
 \[
   \det M\geq\delta^{n-1}\bigl(\operatorname{tr} M-(n-1)\delta\bigr).
 \]
@@ -130,14 +139,14 @@ Apply this to the regularizations and pass to currents. Equation \eqref{eq:inter
 \]
 which is (3).
 
-Conversely assume (3), say $\operatorname{tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q>2n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det_\beta T=F$ almost everywhere. On a smaller ball with $F\geq m>0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so
+\emph{(3)$\Rightarrow$(1).} Assume (3), say $\operatorname{tr}_\beta T\leq L$. Positivity makes every coefficient of the matrix-valued current $T$ a bounded density. Hence the Euclidean Laplacian of $u$ is locally bounded, and interior Poisson estimates give $u\in W^{2,q}_{\mathrm{loc}}$ for every finite $q$. Mollification converges in $W^{2,q}$; taking $q>2n$ identifies the bounded-potential determinant with the ordinary almost-everywhere determinant. Thus $\det_\beta T=F$ almost everywhere. On a smaller ball with $F\geq m>0$, all eigenvalues of $T$ are at most $L$ and their product is at least $m$, so
 \[
   \frac{m}{L^{n-1}}I\leq T\leq LI
 \]
 almost everywhere.
 
 \Needspace{9\baselineskip}
-It remains to regularize a strong solution. Let $P$ be the real linear map from real symmetric $2n\times2n$ Hessian matrices to Hermitian $n\times n$ matrices, sending $D^2u$ to the coefficient matrix of $\ddc u$ relative to $\beta$, and let $\Theta(x)$ be the matrix of $\vartheta$. With $\delta=mL^{1-n}$, define the concave extension
+It remains to show that this strong solution is smooth. Let $P$ be the real linear map from real symmetric $2n\times2n$ Hessian matrices to Hermitian $n\times n$ matrices, sending $D^2u$ to the coefficient matrix of $\ddc u$ relative to $\beta$, and let $\Theta(x)$ be the matrix of $\vartheta$. With $\delta=mL^{1-n}$, define the concave extension
 \[
   G(x,M)=\inf_{\delta I\leq A\leq LI}
   \left\{\log\det A+\operatorname{tr}\!\left[A^{-1}\bigl(\Theta(x)+P(M)-A\bigr)\right]\right\}-\log F(x).
@@ -149,22 +158,24 @@ minus $\log F(x)$. The tangent-plane formula for $\log\det$ gives
 \]
 The operator $G$ is concave and uniformly elliptic on real symmetric matrices. The affine operators $\mathcal E_A$ have constant principal matrices with eigenvalues bounded above and below in terms of $\delta$ and $L$. Their $x$-dependence is smooth uniformly in $A$, so $G$ has a uniform local Lipschitz modulus in $x$.
 
-We verify that the strong solution is a viscosity solution. Suppose that a smooth function $p$ touches $u$ from above at $x_0$ and that $G(x_0,D^2p)<0$. Some fixed matrix $A$ then satisfies $\mathcal E_A(x,D^2p)<-\eta$ on a small ball. Since $G(x,D^2u)=0$ almost everywhere, $\mathcal E_A(x,D^2u)\geq0$ there. Thus $u-p$ has an interior maximum and satisfies
+We claim that $u$ is a viscosity solution of $G(x,D^2u)=0$. Suppose that a smooth function $\psi$ touches $u$ from above at $x_0$ and that $G(x_0,D^2\psi)<0$. Some fixed matrix $A$ then satisfies $\mathcal E_A(x,D^2\psi)<-\eta$ on a small ball. Since $G(x,D^2u)=0$ almost everywhere, $\mathcal E_A(x,D^2u)\geq0$ there. Thus $u-\psi$ has an interior maximum and satisfies
 \[
-  \operatorname{tr}\!\left(A^{-1}P(D^2(u-p))\right)\geq\eta
+  \operatorname{tr}\!\left(A^{-1}P(D^2(u-\psi))\right)\geq\eta
   \quad\text{almost everywhere}.
 \]
-After a small quadratic perturbation makes the contact strict, this contradicts the Aleksandrov maximum principle \cite[Chapter~9, Theorem~9.1]{GT01}. If instead $p$ touches $u$ from below and $G(x_0,D^2p)>0$, then $\mathcal E_A(x,D^2p)>\eta$ for every admissible $A$ on a small ball. At almost every point choose an admissible $A(x)$ with $\mathcal E_{A(x)}(x,D^2u)<\eta/2$. A measurable choice is obtained by taking the first qualifying element of a countable dense family. The function $p-u$ then violates the same maximum principle for the measurable uniformly elliptic coefficients $A(x)^{-1}$. Hence $u$ is a viscosity solution of $G(x,D^2u)=0$.
+After a small quadratic perturbation makes the contact strict, this contradicts the Aleksandrov maximum principle \cite[Chapter~9, Theorem~9.1]{GT01}. If instead $\psi$ touches $u$ from below and $G(x_0,D^2\psi)>0$, then $\mathcal E_A(x,D^2\psi)>\eta$ for every admissible $A$ on a small ball. At almost every point choose an admissible $A(x)$ with $\mathcal E_{A(x)}(x,D^2u)<\eta/2$. A measurable choice is obtained by taking the first qualifying element of a countable dense family. The function $\psi-u$ then violates the same maximum principle for the measurable uniformly elliptic coefficients $A(x)^{-1}$. This proves the claim.
 
-The classical variable-coefficient Evans--Krylov theorem gives $u\in C^{2,\alpha}_{\mathrm{loc}}$ for some $0<\alpha<1$. The original equation is now uniformly elliptic with smooth data. Difference quotients satisfy linear equations whose principal coefficients are averages of inverse matrices along positive definite segments. Interior Schauder estimates first give $u\in C^{3,\alpha}_{\mathrm{loc}}$ and then, by iteration, $u\in C^\infty$. This proves (3)$\Rightarrow$(1). Finally, (1) and $F>0$ imply that the smooth semipositive matrix $T$ is positive definite, giving (2) and (3).
+The classical variable-coefficient Evans--Krylov theorem gives $u\in C^{2,\alpha}_{\mathrm{loc}}$ for some $0<\alpha<1$. The original equation is now uniformly elliptic with smooth data. Difference quotients satisfy linear equations whose principal coefficients are averages of inverse matrices along positive definite segments. Interior Schauder estimates first give $u\in C^{3,\alpha}_{\mathrm{loc}}$ and then, by iteration, $u\in C^\infty$. This proves (3)$\Rightarrow$(1).
+
+\emph{(1)$\Rightarrow$(2).} If $u$ is smooth, then $T$ is a smooth semipositive form with determinant $F>0$, so it is positive definite; on a smaller neighborhood this gives (2).
 \end{proof}
 
 \Needspace{12\baselineskip}
 \subsection{Smooth exact approximants}\label{sec:interior-approximants}
 
-The smooth Dirichlet theorem in \cref{lem:ball-smooth-dirichlet} also applies to a smooth positive density $F$: a smooth extension of the boundary value plus a large quadratic function is a strict subsolution. We need its dependence on the boundary data explicitly. The next estimates make that dependence polynomial, so H\"older approximation of the boundary values gives a polynomial rate in both the uniform error and the trace.
+We now construct the approximants of the first step. The smooth Dirichlet theorem, \cref{lem:ball-smooth-dirichlet}, applies to every smooth positive density $F$. Approximating the H\"older boundary values of $\varphi$ by smooth functions therefore gives smooth solutions, and the point is to control them quantitatively. The estimates below bound the trace of a smooth solution by a power of the $C^4$ norm of its boundary value. The $C^4$ norms of the boundary approximations grow polynomially while their uniform errors decay polynomially, so both the convergence and the trace growth have polynomial rates.
 
-The balls are centered at the origin. On their boundaries, $\nu$ is the outward Euclidean unit normal and $\nabla_{\tan}$ denotes tangential differentiation. For a positive form $T$, covector inner products with subscript $T$ use its inverse matrix.
+In this subsection balls are centered at the origin. On the boundary sphere, $\nu$ is the outward Euclidean unit normal and $\nabla_{\tan}$ denotes tangential differentiation. For a positive form $T$, inner products $\langle\cdot,\cdot\rangle_T$ and norms $|\cdot|_T$ of $(1,0)$-covectors are computed with the inverse of the coefficient matrix of $T$.
 
 \Needspace{20\baselineskip}
 \begin{lemma}\label{lem:interior-trace-peak}
@@ -182,10 +193,12 @@ There are $A_0,C$, depending only on the fixed data and $L$, such that at every 
 \begin{equation}\label{eq:interior-trace-peak}
   S\leq C\sqrt A.
 \end{equation}
-No gradient bound for $u$ is assumed.
+The constants do not depend on any bound for the gradient of $u$.
 \end{lemma}
 
 \begin{proof}
+This is the maximum-principle computation behind the classical second-order estimate. The non-closedness of $\vartheta$ produces a first-order error term, which is absorbed by the convex term $\mathrm{e}^{-v}$.
+
 At the point in question make a constant unitary change of coordinates so that the matrix of $T$ is diagonal, with eigenvalues $\lambda_i$. Write
 \[
   \Delta_T=\sum_i\lambda_i^{-1}\partial_i\partial_{\bar i},
@@ -219,7 +232,7 @@ Set $g_A(s)=-As+\mathrm{e}^{-s}$. At a local maximum of $Q_A$, $\partial\log S=-
 Here $|E|_T^2\leq CH$ and the bounds for $v$ have been used. If $S\geq K\sqrt A$ and $K$ is large, the bracket is at least $\varepsilon A/2$. Thus $H\leq C$ independently of $A$ and $u$. The determinant upper bound then gives $S\leq C'$. Enlarging $K$ makes this incompatible with $S\geq K\sqrt A$, proving \eqref{eq:interior-trace-peak}.
 \end{proof}
 
-We shall also use the following gradient-controlled variant. If $|\nabla(u-q)|_\beta$ is bounded, then at an interior maximum of $\log S-A(u-q)$ the trace is bounded independently of $A$ for all large $A$. Indeed, at the maximum $\partial\log S=A\partial(u-q)$, and \eqref{eq:interior-log-trace} gives
+We shall also use the following variant, in which a gradient bound replaces the convex term. If $|\nabla(u-q)|_\beta$ is bounded, then at an interior maximum of $\log S-A(u-q)$ the trace is bounded independently of $A$ for all large $A$. Indeed, at the maximum $\partial\log S=A\partial(u-q)$, and \eqref{eq:interior-log-trace} gives
 \[
   0\geq\left[A\varepsilon-\frac CS-\frac{CA}{S}\right]H-nA-\frac CS.
 \]
@@ -244,7 +257,9 @@ satisfies
 \end{proposition}
 
 \begin{proof}
-Fix a sufficiently large constant $K>0$, depending only on the fixed data. Put $L=1+\lVert g\rVert_{C^4}$. Extend $g$ to $G$ on $\overline B$ with $\lVert G\rVert_{C^4}\leq CL$. For $A=CL$ large enough,
+We follow the classical boundary estimates for the Dirichlet problem on a ball and keep track of the dependence on $L=1+\lVert g\rVert_{C^4}$. Barriers bound the first derivatives, and differentiation along rotations bounds the mixed normal--tangential second derivatives on the boundary. A lower bound for the tangential block of $T$ then bounds the double normal derivative through the equation, and \cref{lem:interior-trace-peak} reduces the interior bound to the boundary bound.
+
+\emph{Step 1: first derivatives.} Fix a sufficiently large constant $K>0$, depending only on the fixed data. Extend $g$ to $G$ on $\overline B$ with $\lVert G\rVert_{C^4}\leq CL$. For $A=CL$ large enough,
 \[
   \underline u=G+A(|z|^2-1),
   \qquad
@@ -258,22 +273,22 @@ Fix a sufficiently large constant $K>0$, depending only on the fixed data. Put $
   \quad\text{on }\partial B.
 \end{equation}
 
-Let $H=\operatorname{tr}_T\beta$, $\mathcal L=\operatorname{tr}_T\ddc$, and $w=u-\underline u\geq0$. Taking $K$ fixed and sufficiently large gives
+Let $H=\operatorname{tr}_T\beta$, $\mathcal L=\operatorname{tr}_T\ddc$, and $w=u-\underline u\geq0$, the linearized operator and the barrier function used below. Taking $K$ fixed and sufficiently large gives
 \begin{equation}\label{eq:interior-w-barrier}
   \mathcal Lw=n-\operatorname{tr}_T\underline T\leq-(1+H).
 \end{equation}
 Let $E=\sum_k(z_k\partial_{z_k}+\bar z_k\partial_{\bar z_k})$ be the real radial field. Write $\Theta$ for the coefficient matrix of $\vartheta$. Differentiating $\log\det T=\log F$ and commuting $E$ with complex second derivatives yields
 \[
-  \mathcal L(Eu)=E(\log F)+2n-\operatorname{tr}_T(E\Theta+2\Theta),
+  \mathcal L(Eu)=E(\log F)+2n-\operatorname{tr}_T(E\Theta+2\Theta).
 \]
 Hence $|\mathcal L(Eu)|\leq C(1+H)$. The same estimate holds for $Zu$ when $Z$ is an infinitesimal unitary rotation. Applying the minimum principle to $CL+C'w\pm Yu$, with $Y=E$ or $Z$, gives
 \begin{equation}\label{eq:interior-first-fields}
   |Eu|+|Zu|\leq CL\quad\text{on }B.
 \end{equation}
 
-For a rotation $Z$, the function $R_Z=Z(u-G)$ vanishes on $\partial B$ and satisfies $|\mathcal LR_Z|\leq CL(1+H)$. The barriers $CLw\pm R_Z$ and \eqref{eq:interior-w-barrier} imply $|\partial_\nu R_Z|\leq CL^2$ on the boundary. Rotations span its real tangent space, so all real mixed normal--tangential second derivatives are $O(L^2)$. Pure tangential second derivatives are $O(L)$ by differentiating $u=g$ twice and using \eqref{eq:interior-first-boundary}. Thus all complex Hessian entries except the complex normal--normal entry are $O(L^2)$.
+\emph{Step 2: mixed second derivatives on the boundary.} For a rotation $Z$, the function $R_Z=Z(u-G)$ vanishes on $\partial B$ and satisfies $|\mathcal LR_Z|\leq CL(1+H)$. The barriers $CLw\pm R_Z$ and \eqref{eq:interior-w-barrier} imply $|\partial_\nu R_Z|\leq CL^2$ on the boundary. Rotations span the real tangent space of $\partial B$, so all real mixed normal--tangential second derivatives are $O(L^2)$. Pure tangential second derivatives are $O(L)$ by differentiating $u=g$ twice and using \eqref{eq:interior-first-boundary}. Thus all complex Hessian entries except the complex normal--normal entry are $O(L^2)$.
 
-It remains to bound the tangential block from below. For $n\geq2$, let
+\emph{Step 3: the double normal derivative.} It remains to bound the tangential block of $T$ from below. For $n\geq2$, let
 \[
   \lambda_0=\min\{T_p(\xi,\bar\xi):p\in\partial B,
   \ \xi\in T_p^{1,0}(\partial B),\ |\xi|_\beta=1\}.
@@ -290,7 +305,7 @@ Define
 \]
 Then $P\geq0$ on the nearby spherical boundary and $P(p)=0$.
 The boundary first-derivative bound also gives $\lambda_0\leq CL$ by
-the displayed tangential identity. Consequently
+the tangential identity above. Consequently
 \[
   |P|\leq CL,
   \qquad
@@ -321,13 +336,13 @@ in tangential--normal blocks, with $B_0$ an $(n-1)\times(n-1)$ Hermitian matrix,
 \]
 which is polynomial in $L$. For $n=1$, the trace is $F$ and this argument is unnecessary.
 
-Finally, choose a fixed quadratic $q$ with $\vartheta+\ddc q\geq\varepsilon\beta$. Apply \cref{lem:interior-trace-peak} with one fixed $A$. At an interior maximum of its auxiliary function the trace is uniformly bounded, while at a boundary maximum the preceding estimate applies. Since the remaining terms are uniformly bounded, \eqref{eq:interior-polynomial-global-trace} follows.
+\emph{Step 4: the interior.} Choose a fixed quadratic $q$ with $\vartheta+\ddc q\geq\varepsilon\beta$. Apply \cref{lem:interior-trace-peak} with one fixed $A$. At an interior maximum of its auxiliary function the trace is uniformly bounded, while at a boundary maximum the preceding estimate applies. Since the remaining terms are uniformly bounded, \eqref{eq:interior-polynomial-global-trace} follows.
 \end{proof}
 
 \Needspace{23\baselineskip}
 \paragraph{Exact approximation}
 
-Apply these estimates to the boundary values of $\varphi$ on a ball in $\Omega$.
+We apply these estimates to smooth approximations of the boundary values of $\varphi$ on a ball in $\Omega$. Recall that $\theta$, $\omega$, $c$ and $f$ are the data of \cref{thm:nonclosed-interior-smoothness}.
 
 \Needspace{18\baselineskip}
 \begin{proposition}\label{prop:interior-tame-approximants}
@@ -350,7 +365,7 @@ and
 \end{proposition}
 
 \begin{proof}
-Local H\"older continuity of $\varphi$ gives smooth boundary approximations $g_j$ with
+Since $\varphi$ is H\"older continuous near $\overline B$, mollification at scale $1/j$ gives smooth boundary approximations $g_j$ with
 \[
   \lVert g_j-\varphi\rVert_{L^\infty(\partial B)}\leq Cj^{-a},
   \qquad
@@ -368,14 +383,14 @@ has boundary value $g_j-q$ and satisfies
   \qquad
   (\eta+\ddc\underline w_j)^n\geq F\beta^n.
 \]
-Apply the smooth Dirichlet theorem just recalled with density $H=F\beta^n/\eta^n$ to obtain a solution $w_j$ for the Hermitian background $\eta$; put $u_j=w_j+q$. Comparing $u_j$ with $\varphi\pm\lVert g_j-\varphi\rVert_\infty$ by \cref{prop:interior-comparison} proves the first bound in \eqref{eq:interior-tame-rates}. The functions $u_j$ are therefore uniformly bounded. \Cref{prop:interior-global-trace} and the polynomial $C^4$ boundary norm give the second bound.
+Apply the smooth Dirichlet theorem recalled at the beginning of this subsection, with density $H=F\beta^n/\eta^n$ to obtain a solution $w_j$ for the Hermitian background $\eta$; put $u_j=w_j+q$. Comparing $u_j$ with $\varphi\pm\lVert g_j-\varphi\rVert_\infty$ by \cref{prop:interior-comparison} proves the first bound in \eqref{eq:interior-tame-rates}. The functions $u_j$ are therefore uniformly bounded. \Cref{prop:interior-global-trace} and the polynomial $C^4$ boundary norm give the second bound.
 \end{proof}
 
 \subsection{Localization near the nonregular set}\label{sec:interior-localization}
 
-A quadratic gap along the nonregular set suppresses the boundary contribution to a maximum-principle estimate. Choosing the coefficient of that gap proportional to $\log j$ improves polynomial trace growth to growth smaller than every positive power. Combining this improvement with the approximation rate gives uniform $C^{1,\alpha}$ bounds.
+In the auxiliary function of \cref{lem:interior-trace-peak}, the term $-A(u_j-q)$ penalizes points where $u_j-q$ is large. A quadratic gap of $u-q$ along the nonregular set therefore suppresses the contribution of the boundary of a neighborhood of that set. Taking $A$ proportional to $\log j$ makes this suppression beat the polynomial growth of the boundary trace, and near the point of minimal $u-q$ the trace then grows more slowly than every positive power of $j$. Interpolation with the polynomial approximation rate gives uniform $C^{1,\alpha}$ bounds.
 
-Distances and norms below are Euclidean. A smooth exact solution for $(\vartheta,F)$ satisfies $\vartheta+\ddc u_j>0$ and $(\vartheta+\ddc u_j)^n=F\beta^n$.
+Distances and norms below are Euclidean. By a smooth exact solution for $(\vartheta,F)$ we mean a smooth function $u_j$ with $\vartheta+\ddc u_j>0$ and $(\vartheta+\ddc u_j)^n=F\beta^n$.
 
 \Needspace{28\baselineskip}
 \begin{proposition}\label{prop:interior-subpower}\label{prop:interior-uniform-c1a}
@@ -401,21 +416,21 @@ For every $0<\alpha<1$, there is also a neighborhood $U$ of $0$ on which $u_j\to
 \end{proposition}
 
 \begin{proof}
-Write $e_j=Cj^{-a}$, fix $d=\kappa R^2/2$, and choose $D>(b+1)/d$. Choose $\eta>0$ so that $2D\eta<\gamma/2$. For small $\delta>0$, the neighborhood
+\emph{Step 1: the trace bound \eqref{eq:interior-subpower-trace}.} Write $e_j=Cj^{-a}$, fix $d=\kappa R^2/2$, and choose $D>(b+1)/d$. Choose $\eta>0$ so that $2D\eta<\gamma/2$. For small $\delta>0$, the neighborhood
 \[
   W_\delta=\{z\in B:\operatorname{dist}(z,\mathcal S)<\delta\}
 \]
-contains $0$, has $v\geq m-\eta$ on its closure, and satisfies $v\geq m+d$ on $\partial B\cap\overline W_\delta$ with the fixed $d$ above. This follows from \eqref{eq:interior-quadratic-separation}, continuity, and compactness. The other boundary portion is a compact subset of $\overline B\setminus\mathcal S$, where \eqref{eq:interior-localization-c} applies.
+contains $0$, has $v\geq m-\eta$ on its closure, and satisfies $v\geq m+d$ on $\partial B\cap\overline W_\delta$ with the fixed $d$ above. These properties follow from \eqref{eq:interior-quadratic-separation}, continuity, and compactness. The remaining part of the boundary of $W_\delta$ is a compact subset of $\overline B\setminus\mathcal S$, where \eqref{eq:interior-localization-c} applies.
 
 Set $A_j=D\log j$. Apply the maximum principle on $\overline W_\delta$ to
 \[
   Q_j=\log\operatorname{tr}_\beta(\vartheta+\ddc u_j)-A_j(u_j-q)+\mathrm{e}^{-(u_j-q)}.
 \]
-At an interior maximum \cref{lem:interior-trace-peak} gives $\log\operatorname{tr}_\beta(\vartheta+\ddc u_j)\leq C+\frac12\log A_j$. On the boundary away from $\mathcal S$ there is a fixed trace bound. On the outer boundary, \eqref{eq:interior-localization-b} and the gap $d$ give
+At an interior maximum, \cref{lem:interior-trace-peak} gives $\log\operatorname{tr}_\beta(\vartheta+\ddc u_j)\leq C+\frac12\log A_j$. On the part of $\partial W_\delta$ inside $B$, which stays away from $\mathcal S$, the trace has a bound independent of $j$. On the outer part $\partial B\cap\overline W_\delta$, \eqref{eq:interior-localization-b} and the gap $d$ give
 \[
   Q_j\leq C+b\log j-A_j(m+d-e_j),
 \]
-which is suppressed by the choice of $D$. Hence throughout $W_\delta$,
+and the choice $Dd>b+1$ makes this smaller than the bound below for large $j$. Hence throughout $W_\delta$,
 \[
   Q_j\leq C_\delta+\tfrac12\log A_j-A_j(m-\eta-e_j).
 \]
@@ -426,7 +441,7 @@ On a small ball about $0$ where $v\leq m+\eta$, this implies
 \]
 By the choice of $\eta$, the logarithmic factor and $A_je_j$ are absorbed into the remaining power. This proves \eqref{eq:interior-subpower-trace}.
 
-On a smaller ball, the real Laplacian of $u_j$ is bounded by $Cj^\gamma$. Interior Poisson estimates and Sobolev embedding give, for every finite $q_0$ and every $\sigma<1$ obtainable by taking $q_0$ large,
+\emph{Step 2: $C^{1,\alpha}$ convergence.} On a smaller ball, the real Laplacian of $u_j$ is bounded by $Cj^\gamma$. Interior Poisson estimates give a $W^{2,q_0}$ bound for every finite $q_0$, and Sobolev embedding with $q_0$ large then gives, for every $\sigma<1$,
 \[
   \lVert u_j\rVert_{W^{2,q_0}}+\lVert u_j\rVert_{C^{1,\sigma}}
   \leq Cj^\gamma.
@@ -453,6 +468,8 @@ Suppose $u_j$ solve the same smooth equation as in \cref{prop:interior-subpower}
 \end{proposition}
 
 \begin{proof}
+Where $u$ is smooth and strictly $\vartheta$-plurisubharmonic, it provides its own quadratic separation, so the argument of \cref{prop:interior-subpower} applies around every point of $O$. A first application gives trace growth of order $\sqrt{\log j}$; the resulting gradient convergence then allows the variant of \cref{lem:interior-trace-peak} with a gradient bound, which removes this growth.
+
 For $p$ in a fixed compact subset of $O$, take a uniformly sized ball $B_r(p)\Subset O$ and set
 \[
   q_p(z)=u(z)-\kappa|z-p|^2
@@ -474,7 +491,7 @@ Put $T_j=\vartheta+\ddc u_j$ and $w_j=u_j-u$. On slightly larger compact sets, \
   \lVert w_j\rVert_{C^{1,\sigma}}\leq C_\sigma\sqrt{\log j},
   \qquad \sigma<1.
 \]
-Interpolating with $\lVert w_j\rVert_\infty\leq Cj^{-a}$ shows $\nabla w_j\to0$ uniformly on smaller compact sets. The gradients of $v_{j,p}$ are therefore uniformly bounded. Repeat the maximum argument with $\log\operatorname{tr}_\beta T_j-A_jv_{j,p}$ and use the gradient-controlled version of \cref{lem:interior-trace-peak}. Its interior trace bound is now independent of $A_j$, while the boundary term is suppressed as before. Evaluation at $p$ gives
+Interpolating with $\lVert w_j\rVert_\infty\leq Cj^{-a}$ shows $\nabla w_j\to0$ uniformly on smaller compact sets. The gradients of $v_{j,p}$ are therefore uniformly bounded. Repeat the maximum argument with $\log\operatorname{tr}_\beta T_j-A_jv_{j,p}$, now using the variant of \cref{lem:interior-trace-peak} with a gradient bound. Its interior trace bound is now independent of $A_j$, while the boundary term is suppressed as before. Evaluation at $p$ gives
 \[
   \operatorname{tr}_\beta T_j(p)\leq C\exp(2A_je_j)\leq C,
 \]
@@ -486,9 +503,9 @@ proving \eqref{eq:interior-regular-stability}.
 \Needspace{24\baselineskip}
 \subsection{Derivative estimates and bounded traces}\label{sec:interior-calabi}
 
-To turn the $C^{1,\alpha}$ bounds into bounded traces, we need a derivative estimate whose dependence on ellipticity is polynomial. The Chern-connection calculation below retains the torsion of the background. An averaging estimate for the trace then closes a nonlinear iteration when $\alpha$ is sufficiently close to one.
+Uniform $C^{1,\alpha}$ bounds control averages of the trace $\operatorname{tr}_\beta(\vartheta+\ddc u_j)=\operatorname{tr}_\beta\vartheta+\Delta_\beta u_j$ over small balls. To pass from averages to pointwise values we need a bound for the gradient of the trace, that is, a third-order estimate, whose dependence on the ellipticity constants is polynomial. We prove it by Calabi's maximum-principle argument, computed with the Chern connection of the solution so that the torsion of the nonclosed background appears explicitly. The resulting averaging inequality is nonlinear in the trace, and it closes under iteration when $\alpha$ is sufficiently close to one.
 
-Here $B$ is the unit ball, $B_r(p)$ is a Euclidean ball, and $\partial g$ denotes ordinary coordinate derivatives of its coefficient matrix. Tensor derivatives in the proof use the specified Chern connection.
+In this subsection $B$ is the unit ball and $B_r(p)$ is the Euclidean ball of radius $r$ centered at $p$. For a Hermitian metric $g$, $\partial g$ denotes the ordinary coordinate derivatives of its coefficient matrix, while tensor derivatives in the proofs are taken with respect to the Chern connection of $g$.
 
 \begin{proposition}\label{prop:interior-calabi}
 Fix smooth $\vartheta$ and smooth $F>0$ near the closed unit ball. There are $C,N<\infty$, depending only on finitely many derivatives of the fixed data, such that any smooth solution
@@ -510,12 +527,14 @@ If only $\sup_B\operatorname{tr}_\beta g\leq L$ is given, the same bound holds w
 \end{proposition}
 
 \begin{proof}
-Use the flat connection of $\beta$ and the Chern connection $\nabla$ of $g$. Write $g^{k\bar\ell}$ for inverse matrix coefficients, and $\bar\nabla$ for covariant differentiation in $(0,1)$ directions. Unsubscripted tensor norms and inner products in this calculation use $g$. Their connection difference is
+The quantity $\mathcal R$ below is the squared norm of the difference between the Chern connection of $g$ and the flat connection. We derive a differential inequality for $\mathcal R$ in which the torsion enters through fixed derivatives of $\vartheta$, and combine it with the trace in a maximum principle; every constant is kept a power of $M$.
+
+We compare the flat connection of $\beta$ with the Chern connection $\nabla$ of $g$. Write $g^{k\bar\ell}$ for the coefficients of the inverse matrix and $\bar\nabla$ for covariant differentiation in $(0,1)$ directions; tensor norms and inner products without subscript are computed with $g$. The difference of the two connections and its squared norm are
 \[
   \Psi^k_{ij}=g^{k\bar\ell}\partial_i g_{j\bar\ell},
   \qquad \mathcal R=|\Psi|_g^2.
 \]
-The lowered torsion tensor is determined by the fixed background. Put
+The torsion of $\nabla$ is determined by the fixed background, because the third derivatives of $u$ cancel in it. Its lowered and raised components are
 \begin{equation}\label{eq:interior-torsion-background}
   C_{ij\bar\ell}
   =\partial_i\vartheta_{j\bar\ell}-\partial_j\vartheta_{i\bar\ell},
@@ -534,7 +553,7 @@ Consequently, for a fixed integer $N$,
 Every factor here is either a fixed derivative of $\vartheta$, a connection factor $\Psi$, or a factor of $g^{\pm1}$; this explains the polynomial dependence.
 
 For tensor fields, use $\Delta_g=g^{p\bar q}\nabla_p\nabla_{\bar q}$.
-We record the curvature identities used in the estimate. With
+We need the following curvature identities. With
 \[
   \operatorname{Rm}^k{}_{i\bar j l}=-\partial_{\bar j}\Psi^k_{il},
   \qquad
@@ -656,7 +675,7 @@ then $\operatorname{tr}_\beta(\vartheta+\ddc u_j)$ is uniformly bounded on every
 \end{proposition}
 
 \begin{proof}
-Fix the center of the smaller concentric balls $B_r\Subset B_0$. Put $s_j=\operatorname{tr}_\beta(\vartheta+\ddc u_j)$ and, for their radii $r$,
+Fix a center for concentric balls $B_r\Subset B_0$, put $s_j=\operatorname{tr}_\beta(\vartheta+\ddc u_j)$, and set
 \[
   M_j(r)=1+\sup_{B_r}s_j.
 \]
@@ -665,11 +684,11 @@ For concentric balls $B_r\Subset B_R\Subset B_0$, $d=R-r\leq1$, \cref{prop:inter
   |\nabla s_j|\leq Cd^{-1}M_j(R)^N
   \quad\text{on }B_{r+d/2}.
 \end{equation}
-Let $\chi_h$ be a nonnegative mollifier of radius $h\leq d/4$. Since
+Fix $p\in B_r$ and let $\chi_h$ be a nonnegative mollifier of radius $h\leq d/4$. Since
 \[
   s_j=\operatorname{tr}_\beta\vartheta+\Delta_\beta u_j,
 \]
-integration by parts, after subtracting the constant vector $\nabla u_j(p)$, gives
+integration by parts, after subtracting the constant vector $\nabla u_j(p)$, and the uniform $C^{1,\alpha}$ bound give
 \[
   (s_j*\chi_h)(p)\leq C(1+h^{\alpha-1}).
 \]
@@ -682,7 +701,7 @@ Choose
 \[
   h=\frac d4M_j(R)^{-N/(2-\alpha)}.
 \]
-After absorbing fixed powers of $d^{-1}$, we obtain
+Taking the supremum over $p\in B_r$ and absorbing fixed powers of $d^{-1}$, we obtain
 \begin{equation}\label{eq:interior-nonlinear-iteration}
   M_j(r)\leq Cd^{-1}M_j(R)^q,
   \qquad
@@ -701,7 +720,7 @@ The infinite product converges because $\sum q^k(1+k)<\infty$. For each fixed $j
 \Needspace{8\baselineskip}
 \subsection{Proof of the main theorem}\label{sec:interior-main-proof}
 
-If a nonregular point exists, minimize $\varphi-\rho$ over the nonregular set. The strict barrier gives quadratic separation at that point. The preceding estimates then supply a bounded trace in a neighborhood, contradicting its choice.
+We now assemble the four steps outlined after \cref{thm:nonclosed-interior-smoothness}. The barrier enters only once, but globally: it locates a point of the nonsmooth set at which the quadratic separation required in \cref{prop:interior-subpower} holds.
 
 \begin{proof}[of \cref{thm:nonclosed-interior-smoothness}]
 If $n=1$, the equation is the linear identity
@@ -723,13 +742,13 @@ Choose nested coordinate balls
 \]
 centered at $p$. On $B_0$, \cref{prop:interior-tame-approximants} gives smooth exact Dirichlet solutions $u_j$ converging uniformly to $\varphi$ at a polynomial rate and having polynomial global trace growth.
 
-On the regular set $\mathcal R=\Omega\setminus\mathcal S$, the function $\varphi$ is smooth. There $\theta+\ddc\varphi$ is semipositive and has positive determinant, hence is positive definite. \Cref{prop:interior-regular-stability} therefore gives a uniform trace bound for the $u_j$ on every compact subset of $\mathcal R\cap B_0$.
+On the open set $\Omega\setminus\mathcal S$ the function $\varphi$ is smooth, and $\theta+\ddc\varphi$ is semipositive with positive determinant, hence positive definite. \Cref{prop:interior-regular-stability} therefore gives a uniform trace bound for the $u_j$ on every compact subset of $B_0\setminus\mathcal S$.
 
 In coordinates centered at $p$, take $\kappa>0$ small and set
 \[
   q(z)=\rho(z)-\kappa|z|^2.
 \]
-After shrinking $B$, the strict lower bound for $\theta_\rho$ gives $\theta+\ddc q>0$. If $v=\varphi-q$, then the minimizing property of $p$ gives
+After shrinking $B$, the lower bound $\theta+\ddc\rho\geq\omega$ gives $\theta+\ddc q>0$ on $\overline B$. If $v=\varphi-q$, then the minimizing property of $p$ gives
 \[
   v(p)=m,
   \qquad
@@ -737,9 +756,9 @@ After shrinking $B$, the strict lower bound for $\theta_\rho$ gives $\theta+\ddc
   \geq m+\kappa|z|^2
   \quad(z\in\mathcal S\cap\overline B).
 \]
-Thus \cref{prop:interior-subpower} applies on $B$ with the closed set $\mathcal S\cap\overline B$: the approximation rate and global polynomial trace bound come from \cref{prop:interior-tame-approximants}, and the bound away from $\mathcal S$ comes from \cref{prop:interior-regular-stability}. The same proposition gives, for every $0<\alpha<1$, a neighborhood of $p$ on which the approximants have a uniform $C^{1,\alpha}$ bound.
+Thus \cref{prop:interior-subpower} applies on $B$ with the closed set $\mathcal S\cap\overline B$: the approximation rate and global polynomial trace bound come from \cref{prop:interior-tame-approximants}, and the bound away from $\mathcal S$ comes from \cref{prop:interior-regular-stability}. Its second assertion gives, for every $0<\alpha<1$, a neighborhood of $p$ on which the approximants have a uniform $C^{1,\alpha}$ bound.
 
-Choose $\alpha>\alpha_*$ as in \cref{prop:interior-c1a-to-trace}. That proposition yields
+Choose $\alpha>\alpha_*$ as in \cref{prop:interior-c1a-to-trace}, and apply that proposition on a ball centered at $p$ inside this neighborhood. It yields
 \[
   \sup_j\operatorname{tr}_\beta(\theta+\ddc u_j)<\infty
 \]
@@ -766,11 +785,9 @@ so it suffices to know the equation in the bounded-potential sense on
 $\Omega$. Apply \cref{thm:big-minimal-holder} with density $cf$ to obtain
 local H\"older continuity. All hypotheses of
 \cref{thm:nonclosed-interior-smoothness} are now satisfied.
-The existence of a normalized minimal-singularity solution is already
-proved in \cref{thm:big-minimal-normalized}.
 \end{proof}
 
-For a smooth closed big representative on a compact K\"ahler manifold,
+By \cref{thm:big-minimal-normalized}, such a solution exists, with a uniquely determined $c>0$. For a smooth closed big representative on a compact K\"ahler manifold,
 \cref{thm:big-class-ample-smoothness} applies this conclusion to the
 classical full-mass solution and identifies the regular open set with
 the ample locus.

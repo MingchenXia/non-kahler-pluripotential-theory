@@ -1,9 +1,9 @@
 \subsection{An error bound for the scalar limit}
 
-When $f^{1/n}\in\mathcal D_h^0$, the uniform tail condition quantifies the scalar limit. Split the root at height $K$: its bounded part has a linear exponential error, while its tail is small in the $\mathcal D_h$ norm. Optimizing $K$ gives a modulus valid for every normalized potential.
+Suppose that $f^{1/n}$ belongs to the space $\mathcal D_h^0$ of \cref{subsec:bounded-root-approximation}. The uniform tail condition of \cref{prop:root-uniform-tails} then gives a rate for the convergence $c_\lambda\to b_h(f)$ in \cref{cor:individual-positive-threshold-exponential}. Split the root $p=f^{1/n}$ at a height $K$. On $\{p\leq K\}$, the error $p(1-\mathrm{e}^{\lambda v/n})$ of the damped root has norm $O(K\lambda)$ in $\mathcal D_h$, uniformly over normalized potentials $v$, while on $\{p>K\}$ it is bounded by the tail of $p$, which is small in that norm. Optimizing over $K$ gives a modulus valid for every normalized potential.
 
 \begin{proposition}\label{prop:exponential-root-tail-modulus}
-Let $0\leq p\in\mathcal D_h^0$ be nonzero, put $f=p^n$, $R=\rho_h(p)$ and $b=R^{-n}$. There is a constant $C_h$ such that the function
+Let $0\leq p\in\mathcal D_h^0$ be nonzero, and put $f=p^n$, $R=\rho_h(p)$ and $b=R^{-n}=b_h(f)$. There is a constant $C_h$, depending only on $h$ and $\mathrm{d}V$, such that the function
 \[
  \eta_p(\lambda)=\inf_{K>0}
  \left(\|p\mathbf1_{\{p>K\}}\|_{\mathcal D_h}+C_hK\lambda\right)
@@ -14,7 +14,7 @@ tends to zero as $\lambda\downarrow0$ and satisfies
  \leq\eta_p(\lambda)
  \qquad\bigl(v\in\PSH(X,h),\ \sup_Xv=0\bigr).
 \end{equation}
-For the greatest exponential solution and the normalizations of \cref{cor:individual-positive-threshold-exponential}, if $\eta_p(\lambda)<R$, then
+Let $u_\lambda$, $v_\lambda$ and $c_\lambda$ be the greatest exponential solutions and their normalizations from \cref{cor:individual-positive-threshold-exponential}. If $\eta_p(\lambda)<R$, then
 \[
  b\leq c_\lambda\leq\bigl(R-\eta_p(\lambda)\bigr)^{-n}
 \]
@@ -25,42 +25,47 @@ and
  &\leq(c_\lambda-b)\|p\|_{L^n}^{n}
        +nb\|p\|_{L^n}^{n-1}\eta_p(\lambda).
 \end{align*}
-If $p\in L^r$ for some finite $r>n$, the same bounds hold with $\eta_p(\lambda)$ replaced by $C_{h,r}\|p\|_{L^r}\lambda$. In particular the scalar and total-variation errors are $O(\lambda)$ for each such fixed density.
+If $p\in L^r$ for some finite $r>n$, the same bounds hold with $\eta_p(\lambda)$ replaced by $C_{h,r}\|p\|_{L^r}\lambda$, where $C_{h,r}$ depends only on $h$, $\mathrm{d}V$ and $r$. In particular, for each such $p$ the scalar and total-variation errors are $O(\lambda)$.
 \end{proposition}
 \Needspace{10\baselineskip}
 \begin{proof}
-By \cref{lem:uniform-exponential}, normalized $h$-plurisubharmonic functions have uniformly bounded norms in every finite $L^s$. Equation~\eqref{eq:root-subcritical-bound}, with $s=2n$, therefore gives a uniform bound for $\|v\|_{\mathcal D_h}$. On $\{p\leq K\}$ use
+By \cref{lem:uniform-exponential}, normalized $h$-plurisubharmonic functions are uniformly bounded in every $L^s$ with $s<+\infty$. By \eqref{eq:root-subcritical-bound} with $r=2n$, their norms $\|v\|_{\mathcal D_h}$ are therefore uniformly bounded; let $C_h$ be $1/n$ times this bound. Let $v$ be normalized and $K>0$. On $\{p\leq K\}$ we have
 \[
  0\leq p(1-\mathrm{e}^{\lambda v/n})
-     \leq K\lambda(-v)/n;
+     \leq K\lambda(-v)/n,
 \]
-on its complement use the upper bound $p$. Solidity and the triangle inequality give \eqref{eq:uniform-root-damping} for a fixed constant $C_h$, after taking the infimum over $K$. The root-tail criterion and the $L^n$ tail estimate make the first term tend to zero as $K\to\infty$. Choose $K$ first and then let $\lambda\downarrow0$ to obtain $\eta_p(\lambda)\to0$.
+since $1-\mathrm{e}^{-x}\leq x$ for $x\geq0$, while on $\{p>K\}$ we use the bound $p(1-\mathrm{e}^{\lambda v/n})\leq p$. The monotonicity of $\|\cdot\|_{\mathcal D_h}$ and the triangle inequality give
+\[
+ \big\|p(1-\mathrm{e}^{\lambda v/n})\big\|_{\mathcal D_h}
+ \leq\|p\mathbf1_{\{p>K\}}\|_{\mathcal D_h}+C_hK\lambda,
+\]
+and taking the infimum over $K$ proves \eqref{eq:uniform-root-damping}. By \cref{prop:root-uniform-tails}, and since the $L^n$ tails of $p$ tend to zero, $\|p\mathbf1_{\{p>K\}}\|_{\mathcal D_h}\to0$ as $K\to\infty$. Choosing $K$ first and then letting $\lambda\downarrow0$ shows that $\eta_p(\lambda)\to0$.
 
-Set $q_\lambda=p\mathrm{e}^{\lambda v_\lambda/n}$, so that $q_\lambda^n=g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$. The triangle inequality gives
+Now set $q_\lambda=p\,\mathrm{e}^{\lambda v_\lambda/n}$, so that $q_\lambda^n=g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$, with $g_\lambda$ as in the proof of \cref{cor:individual-positive-threshold-exponential}. Since $0\leq q_\lambda\leq p$ and $\rho_h(p-q_\lambda)\leq\eta_p(\lambda)$ by \eqref{eq:uniform-root-damping}, the triangle inequality and monotonicity give
 \[
  R-\eta_p(\lambda)\leq\rho_h(q_\lambda)\leq R.
 \]
-The previously proved inequalities $b\leq c_\lambda\leq b_h(g_\lambda)=\rho_h(q_\lambda)^{-n}$ give the scalar bound. Since $0\leq q_\lambda\leq p$, the elementary factorization of $p^n-q_\lambda^n$ and H\"older's inequality imply
+The same proof gives $b\leq c_\lambda\leq b_h(g_\lambda)=\rho_h(q_\lambda)^{-n}$, which yields the scalar bound. For the measures, the factorization of $p^n-q_\lambda^n$ gives $0\leq p^n-q_\lambda^n\leq np^{n-1}(p-q_\lambda)$, and H\"older's inequality implies
 \[
  \|f-g_\lambda\|_{L^1}
  \leq n\|p\|_{L^n}^{n-1}\|p-q_\lambda\|_{L^n}
  \leq n\|p\|_{L^n}^{n-1}\eta_p(\lambda).
 \]
-The identity $c_\lambda g_\lambda-bf=(c_\lambda-b)g_\lambda-b(f-g_\lambda)$, together with $\|g_\lambda\|_{L^1}\leq\|f\|_{L^1}$, proves the total-variation bound.
+Since $\mathrm{MA}^{\mathrm{ext}}_h(v_\lambda)=c_\lambda g_\lambda\,\mathrm{d}V$, the identity $c_\lambda g_\lambda-bf=(c_\lambda-b)g_\lambda-b(f-g_\lambda)$, together with $\|g_\lambda\|_{L^1}\leq\|f\|_{L^1}=\|p\|_{L^n}^n$, proves the total-variation bound.
 
-Finally suppose $p\in L^r$ with $n<r<+\infty$, and choose $n<s<r$. By the same subcritical estimate and H\"older,
+Finally, suppose $p\in L^r$ with $n<r<+\infty$, and choose $n<s<r$. By \eqref{eq:root-subcritical-bound} with exponent $s$, and since $\|\cdot\|_{L^n}\leq\|\cdot\|_{L^s}$, we have $\|\cdot\|_{\mathcal D_h}\leq(1+C_s)\|\cdot\|_{L^s}$. H\"older's inequality and \cref{lem:uniform-exponential} then give, for every normalized $v$,
 \[
  \|p(-v)\|_{\mathcal D_h}
- \leq C_s\|p(-v)\|_{L^s}
- \leq C_s\|p\|_{L^r}\|v\|_{L^{rs/(r-s)}}
- \leq C_{h,r}\|p\|_{L^r}.
+ \leq(1+C_s)\|p(-v)\|_{L^s}
+ \leq(1+C_s)\|p\|_{L^r}\|v\|_{L^{rs/(r-s)}}
+ \leq nC_{h,r}\|p\|_{L^r}.
 \]
-Thus the bound $1-\mathrm{e}^{\lambda v/n}\leq\lambda(-v)/n$ gives the asserted linear replacement in \eqref{eq:uniform-root-damping}. Repeat the two estimates with this replacement. For small $\lambda$, the function $t\mapsto(R-t)^{-n}$ has bounded derivative on $0\leq t\leq R/2$, proving the stated error orders.
+Since $0\leq1-\mathrm{e}^{\lambda v/n}\leq\lambda(-v)/n$, the left side of \eqref{eq:uniform-root-damping} is therefore at most $C_{h,r}\|p\|_{L^r}\lambda$, and the two estimates above can be repeated with this bound in place of $\eta_p(\lambda)$. For $\lambda$ so small that $C_{h,r}\|p\|_{L^r}\lambda\leq R/2$, the function $t\mapsto(R-t)^{-n}$ has bounded derivative on $[0,R/2]$, so the scalar error $c_\lambda-b$, and hence the total-variation error, is $O(\lambda)$.
 \end{proof}
 
-The general modulus tends to zero but has not been shown to be $O(\lambda)$. In particular,
+For a general $p\in\mathcal D_h^0$ the modulus $\eta_p(\lambda)$ tends to zero, but we do not know whether it is $O(\lambda)$. Combined with the lower bound $v_\lambda\geq v-\lambda^{-1}\log(c_\lambda/b)$ for normalized threshold subsolutions $v$, the proposition gives
 \[
  0\leq\lambda^{-1}\log(c_\lambda/b)
- \leq-\frac n\lambda\log\bigl(1-\eta_p(\lambda)/R\bigr)
+ \leq-\frac n\lambda\log\bigl(1-\eta_p(\lambda)/R\bigr),
 \]
-does not provide a uniform bound from root tails alone. Even when a uniform lower barrier is obtained, a capacity argument must check the singularity-type or lower-mass hypotheses of its continuity theorem. The proposition estimates scalars and measures; it does not supply exact threshold existence when lower mass vanishes.
+which stays bounded as $\lambda\downarrow0$ when $\eta_p(\lambda)=O(\lambda)$, in particular for $p\in L^r$ with $r>n$; root tails alone do not give such a bound. Even when a uniform lower barrier for $v_\lambda$ is available, passing to the limit in capacity requires the singularity-type or lower-mass hypotheses of a continuity theorem. The proposition estimates only scalars and measures; when the lower mass vanishes, it does not give an exact equation at the threshold.

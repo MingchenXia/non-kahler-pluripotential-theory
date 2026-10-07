@@ -2,13 +2,15 @@
 \section{Integrable densities in the compact Gauduchon problem}
 \label{sec:integrable-gauduchon-currents}
 
-Return to the fixed Hermitian background $\omega$ on $X$. For an unbounded density, weak compactness of the test currents alone does not pass the determinant integral to the limit. Uniform control of the weighted tails supplies the missing upper semicontinuity. Use the root norm $\rho_\omega$, its finite domain $\mathcal D_\omega$ and its vanishing-tail subspace $\mathcal D_\omega^0$ from \cref{prop:root-uniform-tails}, and the determinant densities $k_T$ from \cref{thm:gaud-determinant-subcritical}.
+We keep the Hermitian background $\omega$ and replace the continuous logarithmic density by an integrable density. For an unbounded density, weak compactness of the test currents alone does not pass the determinant integral to the limit; uniform control of the weighted tails provides the missing upper semicontinuity.
+
+We use the following notation from \cref{sec:individual-density-subsolutions,sec:integrable-gauduchon-tests}, with $\omega$ in place of $h$. For a nonzero nonnegative $f\in L^1(\mathrm{d}V)$, the \emph{subsolution threshold} $b_\omega(f)\geq0$ is, by \cref{thm:individual-density-subsolution}, the largest $b\geq0$ for which some $u\in\PSH(X,\omega)$ satisfies $\mathrm{MA}^{\mathrm{ext}}_\omega(u)\geq bf\,\mathrm{d}V$. For $p\in L^n$, the \emph{root norm} is $\rho_\omega(p)=b_\omega(|p|^n)^{-1/n}$ if $p\ne0$, and $\rho_\omega(0)=0$. The space $\mathcal D_\omega$ of \cref{prop:individual-density-banach} consists of the $p\in L^n$ with $\rho_\omega(p)<+\infty$, and $\mathcal D_\omega^0$ is the closure of the bounded functions in $\mathcal D_\omega$, characterized by vanishing tails in \cref{prop:root-uniform-tails}. For a Gauduchon metric $\gamma$, $L_{\omega,\gamma}(p)$ denotes the test quotient of \cref{sec:integrable-gauduchon-tests}, and \cref{thm:integrable-gauduchon-formula} gives $\rho_\omega(p)=\sup_\gamma L_{\omega,\gamma}(|p|)$. Finally, $k_T$ is the determinant density of $T\in\mathscr G_\omega$ from \cref{thm:gaud-determinant-subcritical}.
 
 If $p\geq0$ is measurable, define
 \[
- D_p(T)=\int_Xp k_T\,\mathrm{d}V,
+ D_p(T)=\int_Xp k_T\,\mathrm{d}V\qquad(T\in\mathscr G_\omega),
 \]
-allowing $+\infty$. For a smooth positive normalized Gauduchon form this is the test $L_{\omega,\gamma}(p)$. For nonzero $p\in L^n$ with $p\geq0$, the threshold formula is $b_\omega(p^n)=\rho_\omega(p)^{-n}$.
+allowing the value $+\infty$. If $T=\gamma^{n-1}/\int_X\omega\wedge\gamma^{n-1}$ for a Gauduchon metric $\gamma$, then $D_p(T)=L_{\omega,\gamma}(p)$.
 
 \Needspace{11\baselineskip}
 \begin{theorem}\label{thm:integrable-current-attainment}\index{Gauduchon duality!current attainment}
@@ -16,55 +18,55 @@ For every nonnegative $p\in L^n$,
 \begin{equation}\label{eq:integrable-current-supremum}
  \sup_{T\in\mathscr G_\omega}D_p(T)=\rho_\omega(p),
 \end{equation}
-with $+\infty$ allowed. If $p\in\mathcal D_\omega^0$, the functional $D_p$ is finite, concave and weakly upper semicontinuous on $\mathscr G_\omega$. Its maximum is attained, and the measures $p k_T\,\mathrm{d}V$, as $T$ ranges over this set, have uniformly integrable densities.
+with the value $+\infty$ allowed. If $p\in\mathcal D_\omega^0$, the functional $D_p$ is finite, concave and weakly upper semicontinuous on $\mathscr G_\omega$, its maximum is attained, and the densities $p k_T$, for $T\in\mathscr G_\omega$, are uniformly integrable.
 \end{theorem}
 \begin{proof}
-For a smooth strictly positive $p$, \cref{thm:weak-gaud-compact-duality} applied to $F=n\log p$ proves \eqref{eq:integrable-current-supremum}. By \cref{thm:gaud-determinant-subcritical}, for every real $r>n$ and every $q\in L^r$, there is a constant $C_r$ such that
+For a smooth strictly positive $p$, we have $D_p=\mathfrak D_{n\log p}$ and $\mathrm{e}^{-B_0(n\log p)/n}=\rho_\omega(p)$, so \cref{thm:weak-gaud-compact-duality}, applied to $F=n\log p$, proves \eqref{eq:integrable-current-supremum}. By H\"older's inequality and \cref{thm:gaud-determinant-subcritical}, for every real $r>n$ there is a constant $C_r$ such that, for every $q\in L^r$,
 \begin{equation}\label{eq:current-root-test-bound}
  \sup_{T\in\mathscr G_\omega}\int_X|q| k_T\,\mathrm{d}V
        \leq C_r\|q\|_{L^r}.
 \end{equation}
-Approximate a bounded nonnegative $p$ in $L^{2n}$ by smooth strictly positive functions. This estimate and \eqref{eq:root-subcritical-bound} give uniform convergence of the current functionals and convergence of the root norms. Thus the supremum formula holds for bounded $p$. Their current functionals are also upper semicontinuous and concave, by \cref{lem:weak-gaud-determinant-dual} and uniform convergence. For general $p\in L^n$, use positive integer truncation levels $K$. Monotone truncation gives
+Next, approximate a bounded nonnegative $p$ in $L^{2n}$ by smooth strictly positive functions. This estimate and \eqref{eq:root-subcritical-bound} give uniform convergence on $\mathscr G_\omega$ of the corresponding functionals $D$ and convergence of the root norms, so the supremum formula holds for bounded $p$. For such $p$, the functional $D_p$ is also upper semicontinuous and concave, by \cref{lem:weak-gaud-determinant-dual} and uniform convergence. For general $p\in L^n$, we use the truncations $\min(p,K)$ at positive integer levels $K$. Monotone convergence and the definition of $b_\omega$ through truncations give
 \[
  \sup_T D_p(T)=\sup_T\sup_K D_{\min(p,K)}(T)
        =\sup_K\rho_\omega(\min(p,K))=\rho_\omega(p).
 \]
-Only two suprema have been interchanged; this step alone gives no attainment.
+This step only interchanges two suprema and gives no attainment.
 
-Now suppose $p\in\mathcal D_\omega^0$. By the supremum formula applied to the tail,
+Now suppose $p\in\mathcal D_\omega^0$. The supremum formula applied to the tail gives
 \[
  0\leq D_p(T)-D_{\min(p,K)}(T)
  \leq \rho_\omega(p\mathbf1_{\{p>K\}})\longrightarrow0
 \]
-uniformly in $T$. Hence $D_p$ is finite and a uniform limit of upper semicontinuous concave functionals. Compactness of $\mathscr G_\omega$ gives a maximizer. Finally, fix $1<q<n/(n-1)$. For every measurable $E$,
+uniformly in $T$, by \cref{prop:root-uniform-tails}. Hence $D_p$ is finite and is a uniform limit of upper semicontinuous concave functionals, and compactness of $\mathscr G_\omega$ gives a maximizer. Finally, fix $1<q<n/(n-1)$. By H\"older's inequality and \cref{thm:gaud-determinant-subcritical}, for every measurable set $E$,
 \[
  \sup_T\int_Ep k_T\,\mathrm{d}V
  \leq\rho_\omega(p\mathbf1_{\{p>K\}})
        +K C_q\,\mathrm{d}V(E)^{1-1/q}.
 \]
-Choosing first $K$ and then the volume of $E$ proves uniform absolute continuity. The total masses are bounded by $\rho_\omega(p)$, so the densities are uniformly integrable.
+Choosing first $K$ large and then the volume of $E$ small proves uniform absolute continuity. Since the total masses are bounded by $\rho_\omega(p)$, the densities are uniformly integrable.
 \end{proof}
 
-For a nonzero density, current attainment gives a supporting probability for the threshold. Its relation to an exact equation depends on the regularity of the maximizing current, which will enter through the trace inequalities below.
+For a nonzero density, a maximizing current gives a supporting probability for the threshold, as we show below. Whether the threshold is attained by an exact equation depends on the regularity of the maximizing current, which enters through the trace inequalities of \cref{subsec:threshold-trace-inequalities}.
 
 \input{author/section_root_tail_continuity}
 
 \subsection{Supporting probabilities for an integrable density}
 
-The vanishing-tail condition also permits continuous multiplicative perturbations of the density. Their logarithmic thresholds have supporting probabilities given by the maximizing currents, just as for the positive continuous densities above.
+Under the vanishing-tail condition, we can also perturb the density by continuous multiplicative factors $\mathrm{e}^F$. The logarithm of the threshold is then a concave function of $F$, and its supporting probabilities are given by the maximizing currents, just as for the continuous densities in \cref{sec:gaud-current-adjoints}.
 
-Let $f\in L^1$ be nonzero and nonnegative, and assume $p=f^{1/n}\in\mathcal D_\omega^0$. For a continuous real $F$, set
+Let $f\in L^1(\mathrm{d}V)$ be nonzero and nonnegative, and assume $p=f^{1/n}\in\mathcal D_\omega^0$. For a continuous real $F$, set
 \[
  B_f(F)=\log b_\omega(\mathrm{e}^Ff)
        =-n\log\rho_\omega(p \mathrm{e}^{F/n}),\qquad
  M_f(F)=\rho_\omega(p \mathrm{e}^{F/n}).
 \]
-Both quantities are finite and $M_f(F)>0$, by the order-ideal property. Let $\mathscr M_f(F)$ be the currents maximizing $D_{p \mathrm{e}^{F/n}}$, and put
+Both quantities are finite and $M_f(F)>0$, since $\mathcal D_\omega^0$ is an order ideal. Let $\mathscr M_f(F)$ be the set of currents in $\mathscr G_\omega$ maximizing $D_{p \mathrm{e}^{F/n}}$, which is nonempty by \cref{thm:integrable-current-attainment}, and put
 \[
  \nu_{T,F}=\frac{p \mathrm{e}^{F/n} k_T}{M_f(F)}\,\mathrm{d}V
  \quad(T\in\mathscr M_f(F)).
 \]
-These are probability measures. Define $\mathcal A_f(F)$ to be all Borel probability measures satisfying
+These are probability measures. Let $\mathcal A_f(F)$, the set of \emph{supporting probabilities} of $B_f$ at $F$, consist of all Borel probability measures $\nu$ satisfying
 \begin{equation}\label{eq:integrable-threshold-support}
  B_f(G)\leq B_f(F)-\int_X(G-F)\,\mathrm{d}\nu
  \qquad(G\in C(X,\mathbb R)).
@@ -76,7 +78,7 @@ The functional $B_f$ is concave, decreasing and $1$-Lipschitz for the uniform no
 \[
  \mathcal A_f(F)=\{\nu_{T,F}:T\in\mathscr M_f(F)\}.
 \]
-This set is nonempty, convex and weakly compact. Its measures are absolutely continuous. For each $R>0$, their densities, with $\|F\|_\infty\leq R$, are uniformly integrable. For $H\in C(X,\mathbb R)$, its one-sided derivatives satisfy
+This set is nonempty, convex and weakly compact, and its measures are absolutely continuous. For each $R>0$, the densities of all these measures, for all $F$ with $\|F\|_\infty\leq R$, are uniformly integrable. For $H\in C(X,\mathbb R)$, the one-sided directional derivatives of $B_f$ at $F$ are
 \[
  (B_f)'_+(F;H)=-\max_{\nu\in\mathcal A_f(F)}\int_XH\,\mathrm{d}\nu,
  \qquad
@@ -84,35 +86,35 @@ This set is nonempty, convex and weakly compact. Its measures are absolutely con
 \]
 \end{proposition}
 \begin{proof}
-For each $T$, H\"older's inequality makes $F\mapsto\int_Xp \mathrm{e}^{F/n}k_T\,\mathrm{d}V$ logarithmically convex. Taking suprema preserves the inequality defining logarithmic convexity. Thus $B_f=-n\log M_f$ is concave. Order and homogeneity give the translation rule and, by comparison with constant translates, the Lipschitz estimate.
+For each $T$, H\"older's inequality makes $F\mapsto\int_Xp \mathrm{e}^{F/n}k_T\,\mathrm{d}V$ logarithmically convex, and taking suprema preserves the inequality defining logarithmic convexity. Thus $M_f$ is logarithmically convex and $B_f=-n\log M_f$ is concave. Monotonicity and homogeneity of $\rho_\omega$ give the translation rule and, by comparison with constant translates, the Lipschitz estimate.
 
-For fixed $F$, the weight $p\mathrm{e}^{F/n}$ belongs to $\mathcal D_\omega^0$, so its determinant-weighted densities are uniformly integrable. If $T_j\to T$ and $D_{p\mathrm{e}^{F/n}}(T_j)\to M_f(F)$, \cref{prop:selected-gauduchon-attainment} makes $T$ a maximizer and gives convergence of the weighted measures. For $T_1,T_2\in\mathscr G_\omega$ and real $0\leq t\leq1$, matrix determinant concavity gives
+For fixed $F$, the weight $p\mathrm{e}^{F/n}$ belongs to $\mathcal D_\omega^0$, so the densities $p\mathrm{e}^{F/n}k_T$, $T\in\mathscr G_\omega$, are uniformly integrable by \cref{thm:integrable-current-attainment}. If $T_j\to T$ and $D_{p\mathrm{e}^{F/n}}(T_j)\to M_f(F)$, \cref{prop:selected-gauduchon-attainment} makes $T$ a maximizer and gives convergence of the weighted measures. For $T_1,T_2\in\mathscr G_\omega$ and real $0\leq t\leq1$, matrix determinant concavity gives
 \[
  p \mathrm{e}^{F/n}k_{tT_1+(1-t)T_2}\,\mathrm{d}V
  \geq t p \mathrm{e}^{F/n}k_{T_1}\,\mathrm{d}V
        +(1-t)p \mathrm{e}^{F/n}k_{T_2}\,\mathrm{d}V.
 \]
-For two maximizing currents, equal total masses turn this into equality. The set $\mathscr N_f(F)$ of displayed probabilities is therefore nonempty, compact and convex.
+For two maximizing currents, the current on the left also maximizes, and equal total masses turn this inequality into an equality. The set $\mathscr N_f(F)=\{\nu_{T,F}:T\in\mathscr M_f(F)\}$ is therefore nonempty, compact and convex.
 
 \Needspace{6\baselineskip}
 A maximizing $T$ gives
 \[
  M_f(G)\geq M_f(F)\int_X\mathrm{e}^{(G-F)/n}\,\mathrm{d}\nu_{T,F}.
 \]
-Jensen's inequality proves \eqref{eq:integrable-threshold-support}, so $\mathscr N_f(F)\subset\mathcal A_f(F)$. For the reverse inclusion, uniform Taylor expansion gives
+Taking $-n$ times the logarithm and applying Jensen's inequality proves \eqref{eq:integrable-threshold-support}, so $\mathscr N_f(F)\subset\mathcal A_f(F)$. For the reverse inclusion, a Taylor expansion of the exponential gives
 \[
  D_{p \mathrm{e}^{(F+tH)/n}}(T)
  =D_{p \mathrm{e}^{F/n}}(T)+\frac tn\int_X H p \mathrm{e}^{F/n} k_T\,\mathrm{d}V+O(t^2),
 \]
-where the error is uniform in $T$ since $D_{p \mathrm{e}^{F/n}}(T)\leq M_f(F)$. Maximizers at $F+tH$ are near-maximizers at $F$, by the uniform multiplicative bounds. The convergence of their weighted measures proved above and this uniform expansion are exactly the two inputs to the one-sided differentiation argument in \cref{thm:gaud-current-all-adjoints}. It gives
+where the error is uniform in $T$ since $D_{p \mathrm{e}^{F/n}}(T)\leq M_f(F)$. Maximizers at $F+tH$ are near-maximizers at $F$, by the multiplicative bounds $\mathrm{e}^{-t\|H\|_\infty/n}\leq M_f(F+tH)/M_f(F)\leq\mathrm{e}^{t\|H\|_\infty/n}$. The convergence of their weighted measures proved above and this uniform expansion are exactly the two inputs of the one-sided differentiation argument in the proof of \cref{thm:gaud-current-all-adjoints}, which gives
 \[
  (B_f)'_+(F;H)=-\max_{\nu\in\mathscr N_f(F)}\int_XH\,\mathrm{d}\nu.
 \]
-The same compact-convex separation argument in that theorem identifies all supporting probabilities with $\mathscr N_f(F)$. Replacing $H$ by $-H$ gives the left derivative.
+The separation argument of that proof then identifies all supporting probabilities with $\mathscr N_f(F)$, and replacing $H$ by $-H$ gives the left derivative.
 
-Finally $M_f(F)\geq \mathrm{e}^{-R/n}\rho_\omega(p)$ when $\|F\|_\infty\leq R$. Thus the displayed probability densities are at most $\mathrm{e}^{2R/n}\rho_\omega(p)^{-1}p k_T$. The uniform integrability in the preceding theorem proves all the stated absolute-continuity assertions.
+Finally, $M_f(F)\geq \mathrm{e}^{-R/n}\rho_\omega(p)$ when $\|F\|_\infty\leq R$, so the densities of the probabilities $\nu_{T,F}$ are at most $\mathrm{e}^{2R/n}\rho_\omega(p)^{-1}p k_T$. The uniform integrability of the densities $pk_T$ in \cref{thm:integrable-current-attainment} proves the remaining assertions.
 \end{proof}
 
-When $f=1$, this is the zero-reference construction of \cref{chap:normalization}. For general $f$, the functional is defined by the maximal subsolution coefficient; it does not presume exact equation existence. Under positive lower mass, every nonnegative $L^1$ density satisfies the root-space hypothesis; for nonzero densities, \cref{cor:positive-lower-mass-exact-threshold} also identifies $b_\omega(f)$ as the unique envelope-class equation scalar. Without that property, the uniform tail condition gives an explicit sufficient hypothesis for this compact dual description.
+When $f=1$, we have $B_f=B_0$, and the proposition reduces to \cref{thm:gaud-current-all-adjoints}. For general $f$, the functional $B_f$ is defined through the subsolution threshold and does not presuppose that the corresponding equation has a solution. If $v_-(\omega)>0$, every nonzero nonnegative $f\in L^1$ satisfies $f^{1/n}\in\mathcal D_\omega^0$ by \cref{prop:root-uniform-tails}, and \cref{cor:positive-lower-mass-exact-threshold} identifies $b_\omega(f)$ as the unique constant for which the equation $\mathrm{MA}^{\mathrm{ext}}_\omega(v)=b\,f\,\mathrm{d}V$ has a solution $v$ in the envelope class $\mathcal E_{\mathrm{env}}(X,\omega,0)$ of that corollary. Without positive lower mass, the uniform tail condition is an explicit sufficient hypothesis for this compact dual description.
 
 \input{author/section_threshold_trace_saturation}

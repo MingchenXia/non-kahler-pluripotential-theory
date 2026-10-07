@@ -1,70 +1,71 @@
 \section{Equations with a model reference}
 \label{sec:general-measure-relative}
 
-To retain the reference $\varphi$, first smooth the bounded carrier potential. Exponential comparison supplies a common lower envelope, so moving-measure continuity preserves the equation. With the carrier fixed, approximate its integrable density by bounded ones. Minimal-class solutions give upper bounds, while positive lower mass prevents collapse.
+We now prove \cref{thm:als-general-measure}. Write the given measure as $\mu=f\nu$, where $\nu$ is the Monge--Amp\`ere measure of a bounded potential $\psi$. To keep the reference $\varphi$, we first smooth $\psi$: the prescribed ordinary-type theorem applies to the approximating data, exponential comparison provides a common lower envelope, and moving-measure continuity preserves the equation in the limit. With $\psi$ fixed, we then approximate the integrable density $f$ by bounded densities. Here the solutions for the reference zero give upper bounds, while positive lower mass prevents collapse.
 
 \begin{proof}[of \cref{thm:als-general-measure}]
-Let $\mu$ be the given nonzero finite non-pluripolar measure. Apply \cref{lem:bounded-measure-carrier} to the big background $\omega$ to write
+The proof has four steps: continuous positive densities, bounded densities, integrable densities, and finally the zero exponent.
+
+Let $\mu$ be the given nonzero finite non-pluripolar measure. Apply \cref{lem:bounded-measure-carrier} to the Hermitian, hence semipositive and big, background $\omega$ to write
 \[
  \mu=f\nu,\qquad \nu=\omega_\psi^n,\qquad
  \psi\in\PSH(X,\omega)\cap L^\infty(X),\qquad
  0\leq f\in L^1(\nu).
 \]
-\emph{Positive continuous density.} Fix $\lambda>0$ and first suppose $f$ is continuous and strictly positive. Choose smooth strictly $\omega$-plurisubharmonic $\psi_j\downarrow\psi$ by \cref{thm:bounded-exact-regularization}. These potentials are uniformly bounded; write $\|\psi_j\|_\infty\leq L$ and $\nu_j=\omega_{\psi_j}^n$. Bounded Bedford--Taylor continuity gives $\nu_j\rightharpoonup\nu$. The prescribed ordinary-type theorem \cref{thm:als-prescribed-lp} supplies $u_j\sim\varphi$ with
+\emph{Step 1: positive continuous density.} Fix $\lambda>0$ and suppose first that $f$ is continuous and strictly positive. By \cref{thm:bounded-exact-regularization}, choose smooth strictly $\omega$-plurisubharmonic $\psi_j\downarrow\psi$. These potentials are uniformly bounded; write $\|\psi_j\|_\infty\leq L$ and $\nu_j=\omega_{\psi_j}^n$. Bounded Bedford--Taylor continuity gives $\nu_j\rightharpoonup\nu$. The measure $f\nu_j$ has a continuous positive density with respect to smooth volume, so it belongs to every finite $L^p$ space. Hence the prescribed ordinary-type theorem \cref{thm:als-prescribed-lp} gives $u_j\sim\varphi$ with
 \[
  \mu_{u_j}=\mathrm{e}^{\lambda u_j}f\nu_j.
 \]
-Indeed $f\nu_j$ has a continuous positive density relative to smooth volume, hence belongs to every finite $L^p$ space.
 
-We first give a common upper bound. Choose $K$ with
-$\mathrm{e}^{-\lambda(\psi_j+K)}\leq\min_Xf$ for all $j$. Since $\omega\geq\theta$, positivity of extended mixed products gives
+We first bound the $u_j$ from above, uniformly in $j$. Choose $K$ with
+$\mathrm{e}^{-\lambda(\psi_j+K)}\leq\min_Xf$ for all $j$. Then
 \[
  \mathrm{e}^{-\lambda(\psi_j+K)}\omega_{\psi_j+K}^n
  \leq f\nu_j
  =\mathrm{e}^{-\lambda u_j}\mu_{u_j}
- \leq \mathrm{e}^{-\lambda u_j}\mathrm{MA}^{\mathrm{ext}}_\omega(u_j).
+ \leq \mathrm{e}^{-\lambda u_j}\mathrm{MA}^{\mathrm{ext}}_\omega(u_j),
 \]
-Apply \cref{cor:singular-exponential-order} in background $\omega$, with first potential $\psi_j+K$ and second potential $u_j$. The first is bounded and admits a smaller-background envelope, and $u_j\preceq\psi_j+K$. Thus $u_j\leq\psi_j+K\leq L+K=:C$.
+where the last inequality follows from $\omega\geq\theta$ and positivity of extended mixed products. Apply \cref{cor:singular-exponential-order} in the background $\omega$, with first potential $\psi_j+K$ and second potential $u_j$. Its hypotheses hold: the first potential is bounded, so it admits a smaller-background envelope, and $u_j\preceq\psi_j+K$. Thus $u_j\leq\psi_j+K\leq L+K=:C$.
 
-By \eqref{eq:relative-normalized-model-bound}, $u_j\leq\varphi+C$. The exponential common-envelope proposition gives a single $h\in\mathcal E_\varphi$ below all $u_j$, since
+By \eqref{eq:relative-normalized-model-bound}, $u_j\leq\varphi+C$. Since
 \[
- \mu_{u_j}\leq\|f\|_\infty \mathrm{e}^{\lambda u_j}\omega_{\psi_j}^n.
+ \mu_{u_j}\leq\|f\|_\infty \mathrm{e}^{\lambda u_j}\omega_{\psi_j}^n,
 \]
-The bounds $h\leq u_j\leq\varphi+C$ and \cref{thm:normalized-compactness} give a genuine $L^1$ limit $u$ after extraction. The moving-measure theorem now applies: $\psi_j\to\psi$ in capacity and $\mu_{u_j}\leq \mathrm{e}^{\lambda C}\|f\|_\infty\nu_j$. It gives $u\in\mathcal E_\varphi$, capacity convergence and $\mu_{u_j}\rightharpoonup\mu_u$.
+\cref{prop:exponential-common-rooftop} gives a single $h\in\mathcal E_\varphi$ below all $u_j$. The bounds $h\leq u_j\leq\varphi+C$ and \cref{thm:normalized-compactness} give, after extraction, an $L^1$ limit $u\not\equiv-\infty$. The moving-measure theorem \cref{thm:relative-moving-measure-continuity} now applies, because $\psi_j\to\psi$ in capacity and $\mu_{u_j}\leq \mathrm{e}^{\lambda C}\|f\|_\infty\nu_j$. It gives $u\in\mathcal E_\varphi$, convergence in capacity and $\mu_{u_j}\rightharpoonup\mu_u$.
 
-The right-hand sides converge weakly to $\mathrm{e}^{\lambda u}f\nu$. To see this, $\mathrm{e}^{\lambda u_j}-\mathrm{e}^{\lambda u}\to0$ in capacity with a common bound, so its integral against $\nu_j$ tends to zero by their uniform capacity estimate. The fixed function $\mathrm{e}^{\lambda u}$ is bounded and quasi-continuous. Approximate it by a continuous function outside an open set of arbitrarily small capacity; bounded product continuity and the same capacity bound allow this fixed weight in $\nu_j\rightharpoonup\nu$. Multiplication by the continuous $f$ and a continuous test function preserves both estimates. Hence $\mu_u=\mathrm{e}^{\lambda u}f\nu$.
+The right-hand sides converge weakly to $\mathrm{e}^{\lambda u}f\nu$. Indeed, $\mathrm{e}^{\lambda u_j}-\mathrm{e}^{\lambda u}\to0$ in capacity with a common bound, so its integral against $\nu_j$ tends to zero by the uniform capacity estimate for these measures. The fixed function $\mathrm{e}^{\lambda u}$ is bounded and quasi-continuous. Approximating it by a continuous function outside an open set of arbitrarily small capacity, bounded product continuity and the same capacity estimate allow this fixed weight in $\nu_j\rightharpoonup\nu$. Multiplication by the continuous function $f$ and by a continuous test function preserves both estimates. Hence $\mu_u=\mathrm{e}^{\lambda u}f\nu$.
 
-\emph{Bounded measurable density.} Suppose next $0\leq f\in L^\infty(\nu)$ and $\int_Xf\,\mathrm{d}\nu>0$. Choose positive continuous $f_j$, uniformly bounded by a constant $F$, with $f_j\to f$ almost everywhere for $\nu$. Such a sequence follows from density of continuous functions in $L^1(\nu)$, clipping to a common interval, adding positive constants tending to zero and extracting a summably convergent subsequence.
+\emph{Step 2: bounded density.} Suppose next that $0\leq f\in L^\infty(\nu)$ and $\int_Xf\,\mathrm{d}\nu>0$. Choose positive continuous functions $f_j$, uniformly bounded by a constant $F$, with $f_j\to f$ almost everywhere for $\nu$. Such a sequence is obtained from the density of continuous functions in $L^1(\nu)$ by clipping to a common interval, adding positive constants tending to zero, and extracting a summably convergent subsequence.
 
-There is a bounded nonnegative $g$, nonzero as a measure, such that $g\leq f_j$ for all $j$. Indeed, choose $a>0$ with $\nu(\{f\geq2a\})>0$. Egorov's theorem gives a measurable subset $E$ of positive measure on which the convergence is uniform. For some $N$, $f_j\geq a$ on $E$ for $j\geq N$. The finitely many remaining positive continuous functions have positive minima on $X$. Their minima and $a$ have a positive lower bound $b$, so $g=b\mathbf1_E$ works.
+There is a bounded nonnegative function $g$ with $g\nu\ne0$ and $g\leq f_j$ for all $j$. Indeed, choose $a>0$ with $\nu(\{f\geq2a\})>0$. By Egorov's theorem, there is a measurable subset $E\subseteq\{f\geq2a\}$ of positive measure on which the convergence is uniform; hence $f_j\geq a$ on $E$ for all $j\geq N$, for some $N$. The finitely many remaining functions $f_1,\ldots,f_{N-1}$ are positive and continuous, so they have positive minima on $X$. If $b>0$ is a lower bound for these minima and for $a$, then $g=b\mathbf1_E$ works.
 
-By the first step, let $u_j\in\mathcal E_\varphi$ solve $\mu_{u_j}=\mathrm{e}^{\lambda u_j}f_j\nu$. The already proved minimal-reference theorem \cref{thm:general-measure-minimal}, applied to the finite nonzero measure $g\nu$, gives $s\in\mathcal E_0$ satisfying
+By Step 1, let $u_j\in\mathcal E_\varphi$ solve $\mu_{u_j}=\mathrm{e}^{\lambda u_j}f_j\nu$. The theorem for the reference zero, \cref{thm:general-measure-minimal}, applied to the finite nonzero measure $g\nu$, gives $s\in\mathcal E_0$ satisfying
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(s)=\mathrm{e}^{\lambda s}g\nu.
 \]
-Apply \cref{cor:relative-extended-exponential-order} with reference zero, first potential $s\in\mathcal E_0$ and second potential $u_j\preceq0$. The measure inequality is $g\nu\leq f_j\nu$, so $u_j\leq s$. With $C=\sup_Xs$ we have
+Apply \cref{cor:relative-extended-exponential-order} with reference zero, first potential $s\in\mathcal E_0$ and second potential $u_j\preceq0$. Since $g\nu\leq f_j\nu$, it gives $u_j\leq s$. With $C=\sup_Xs$ we have
 \[
  \mu_{u_j}\leq \mathrm{e}^{\lambda C}F\nu,
  \qquad
- \kappa\leq \mathrm{e}^{\lambda\sup_Xu_j}F\nu(X).
+ \kappa\leq \mathrm{e}^{\lambda\sup_Xu_j}F\nu(X),
 \]
-The two bounds on the suprema give a genuine $L^1$ convergent subsequence. The fixed-measure continuity theorem puts its limit $u$ in $\mathcal E_\varphi$ and identifies the weak limit as $\mu_u$.
+where the second inequality uses $\mu_{u_j}(X)\geq\kappa$. These two bounds on the suprema give a subsequence converging in $L^1$ to some $u\not\equiv-\infty$. The fixed-measure continuity theorem \cref{thm:relative-fixed-measure-continuity} puts $u$ in $\mathcal E_\varphi$ and identifies the weak limit of $\mu_{u_j}$ as $\mu_u$.
 
-\Cref{lem:fixed-npp-integrals} gives $\mathrm{e}^{\lambda u_j}\to \mathrm{e}^{\lambda u}$ in $L^1(\nu)$. Also $f_j\to f$ in $L^1(\nu)$ by dominated convergence. Since both factors have uniform bounds,
+By \cref{lem:fixed-npp-integrals}, $\mathrm{e}^{\lambda u_j}\to \mathrm{e}^{\lambda u}$ in $L^1(\nu)$, and $f_j\to f$ in $L^1(\nu)$ by dominated convergence. Since both factors are uniformly bounded,
 \[
  \mathrm{e}^{\lambda u_j}f_j\longrightarrow \mathrm{e}^{\lambda u}f
  \quad\hbox{in }L^1(\nu).
 \]
-Thus the right-hand sides converge in total variation, proving the equation for $f$.
+Thus the right-hand sides converge in total variation, which proves the equation for $f$.
 
-\emph{Integrable density.} For general $f\in L^1(\nu)$, apply the second step to $f_j=\min(f,j)$ and obtain $u_j\in\mathcal E_\varphi$ with $\mu_{u_j}=\mathrm{e}^{\lambda u_j}f_j\nu$. Exponential order gives $u_{j+1}\leq u_j$, because $f_j\leq f_{j+1}$. Furthermore
+\emph{Step 3: integrable density.} For general $f\in L^1(\nu)$, apply Step 2 to $f_j=\min(f,j)$ and obtain $u_j\in\mathcal E_\varphi$ with $\mu_{u_j}=\mathrm{e}^{\lambda u_j}f_j\nu$. Since $f_j\leq f_{j+1}$, exponential order gives $u_{j+1}\leq u_j$. Furthermore
 \[
  \kappa\leq \mathrm{e}^{\lambda\sup_Xu_j}\mu(X),
  \qquad \mu_{u_j}\leq \mathrm{e}^{\lambda\sup_Xu_1}\mu.
 \]
-The decreasing limit is genuine, and the fixed-measure continuity theorem gives $u\in\mathcal E_\varphi$ and $\mu_{u_j}\rightharpoonup\mu_u$. Dominated convergence gives $\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^1(\nu)$, so $\mu_u=\mathrm{e}^{\lambda u}\mu$. \Cref{cor:relative-extended-exponential-order}, applied in both directions, proves uniqueness.
+Hence the decreasing limit $u$ is not identically $-\infty$, and the fixed-measure continuity theorem gives $u\in\mathcal E_\varphi$ and $\mu_{u_j}\rightharpoonup\mu_u$. Dominated convergence gives $\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^1(\nu)$, so $\mu_u=\mathrm{e}^{\lambda u}\mu$. Uniqueness follows from \cref{cor:relative-extended-exponential-order}, applied in both directions.
 
-\emph{Zero exponent.} For each positive integer $j$, solve the equation just proved with exponent $1/j$, obtaining $u_j\in\mathcal E_\varphi$ with $\mu_{u_j}=\mathrm{e}^{u_j/j}\mu$. By the minimal-reference theorem, choose $s\in\mathcal E_0$ solving
+\emph{Step 4: zero exponent.} For each positive integer $j$, Step 3 with exponent $1/j$ gives $u_j\in\mathcal E_\varphi$ with $\mu_{u_j}=\mathrm{e}^{u_j/j}\mu$. By \cref{thm:general-measure-minimal}, choose $s\in\mathcal E_0$ solving
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(s)=\mathrm{e}^s\mu.
 \]
@@ -74,7 +75,7 @@ Put $H=\max(0,\sup_Xs)$ and $w_j=s+(j-1)H$. Then $w_j/j\geq s$, whence
  \leq\mu
  =\mathrm{e}^{-u_j/j}\mu_{u_j}.
 \]
-As in the bounded-density step, exponential order applies with reference zero, first potential $w_j\in\mathcal E_0$ and second potential $u_j\preceq0$. It gives $u_j\leq w_j\leq jH$. Only an upper bound for $s$ is needed; its mass is finite by its equation.
+As in Step 2, exponential order applies with reference zero, first potential $w_j\in\mathcal E_0$ and second potential $u_j\preceq0$. It gives $u_j\leq w_j\leq jH$. Only an upper bound for $s$ is used here; the mass of $s$ is finite by its equation.
 
 Set $M_j=\sup_Xu_j$, $v_j=u_j-M_j$ and $c_j=\mathrm{e}^{M_j/j}$. Then
 \[
@@ -82,8 +83,8 @@ Set $M_j=\sup_Xu_j$, $v_j=u_j-M_j$ and $c_j=\mathrm{e}^{M_j/j}$. Then
  \frac{\kappa}{\mu(X)}\leq c_j\leq \mathrm{e}^H,\qquad
  \mu_{v_j}=c_j\mathrm{e}^{v_j/j}\mu\leq \mathrm{e}^H\mu.
 \]
-The lower bound follows from $\mu_{v_j}(X)\geq\kappa$ and $v_j\leq0$. Extract so that $v_j\to v$ in $L^1(X)$ and $c_j\to c>0$. The limit $v$ is genuine and normalized.
+The lower bound for $c_j$ follows from $\mu_{v_j}(X)\geq\kappa$ and $v_j\leq0$. Extract so that $v_j\to v$ in $L^1(X)$ and $c_j\to c>0$; the limit $v$ is not identically $-\infty$ and satisfies $\sup_Xv=0$.
 
 \Needspace{9\baselineskip}
-By \cref{lem:normalized-exponential-npp}, $a_j=\mathrm{e}^{v_j/j}\to1$ in $L^1(\mu)$. Consequently $\mu_{v_j}=c_ja_j\mu\to c\mu$ in total variation. The fixed-measure continuity theorem gives $v\in\mathcal E_\varphi$ and identifies $\mu_v=c\mu$. Finally, applying the scalar assertion of \cref{cor:relative-extended-exponential-order} in both directions proves that $c$ is unique.
+By \cref{lem:normalized-exponential-npp}, $a_j=\mathrm{e}^{v_j/j}\to1$ in $L^1(\mu)$. Consequently $\mu_{v_j}=c_ja_j\mu\to c\mu$ in total variation. The fixed-measure continuity theorem gives $v\in\mathcal E_\varphi$ and $\mu_v=c\mu$. Finally, the scalar assertion of \cref{cor:relative-extended-exponential-order}, applied in both directions, shows that $c$ is unique.
 \end{proof}

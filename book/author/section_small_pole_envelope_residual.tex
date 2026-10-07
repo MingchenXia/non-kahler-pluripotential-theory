@@ -1,60 +1,63 @@
-Ordinary projection can change the singularity type. At a sufficiently small compact pole set, it nevertheless preserves the full residual measure. Bounded mass controls the local approximations in every degree; the lower degrees carry no mass on that set.
+The ordinary envelope $P_\theta[u]$ is in general less singular than $u$. When the pole set of $u$ is a compact set of Hausdorff dimension zero, however, the full local Monge--Amp\`ere product of \cref{thm:small-pole-local-products} is defined, and the ordinary envelope preserves its restriction to the pole set. Bounded mass controls the local approximations in every degree, and the products of lower degree put no mass on the pole set.
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:small-pole-envelope-residual}\index{Residual mass!ordinary envelope}
-Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be compact of Hausdorff dimension zero. Suppose $u\in\PSH(X,\omega)$ is locally bounded off $S$, has pole set $S$, and has positive lower singularity volume. Put $p=P_\omega[u]$. For $v=u,p$, the bounded truncations define a finite positive full measure
+Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be a compact set of Hausdorff dimension zero. Suppose $u\in\PSH(X,\omega)$ is locally bounded on $X\setminus S$, has pole set $\{u=-\infty\}=S$, and has positive lower singularity volume. Put $p=P_\omega[u]$ and $p_m=P_\omega(u+m,0)$ for real $m>0$. For $v=u$, $v=p$ and $v=p_m$, the weak limit
 \[
  \Phi_v=\lim_{k\to\infty}
-                 (\omega+\ddc\max(v,-k))^n,
- \qquad \mathbf1_S\Phi_p=\mathbf1_S\Phi_u.
+                 (\omega+\ddc\max(v,-k))^n
 \]
-On each coordinate chart, the residual restriction equals $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ for any fixed smooth Euclidean correction $q$ making $v+q$ plurisubharmonic there. It is independent of that correction. The full measures of $P_\omega(u+m,0)$ converge weakly to $\Phi_p$ as $m\to\infty$.
+of the bounded truncations exists and is a finite positive measure, which we call the full Monge--Amp\`ere measure of $v$. On each coordinate chart, its restriction $\mathbf1_S\Phi_v$ equals $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ for every smooth function $q$ making $v+q$ plurisubharmonic there; in particular, it does not depend on $q$. Moreover,
+\[
+ \mathbf1_S\Phi_p=\mathbf1_S\Phi_u,
+\]
+and $\Phi_{p_m}\to\Phi_p$ weakly as $m\to\infty$.
 \end{theorem}
 \begin{proof}
-Normalize $u\leq0$ and set $p_m=P_\omega(u+m,0)$ for positive integers $m$. Then
+\emph{Step 1: the rooftops.} Adding a constant to $u$ changes neither $p$ nor the family $(p_m)_{m>0}$, apart from a shift of the parameter $m$. We may therefore assume $u\leq0$. Then
 \[
- u\leq p_m\leq\min(u+m,0),\qquad p_m\uparrow p
+ u\leq p_m\leq\min(u+m,0),\qquad p_m\uparrow p,
 \]
-with canonical regularization of the limit. Thus $p_m\sim u$, while $p_m,p$ are locally bounded off $S$. The model assertion follows from \cref{thm:ordinary-envelope-volumes}. By \cref{lem:monotone-psh-capacity}, the increasing convergence is in capacity. On compact subsets off $S$ the potentials have common bounded ranges, so all bounded local products converge there, by \cref{sec:psh-local-capacity}.
+where the increasing limit is understood after upper semicontinuous regularization. Thus $p_m\sim u$, and $p_m$ and $p$ are locally bounded off $S$. By \cref{thm:ordinary-envelope-volumes}, $p$ is an ordinary model with the same volumes as $u$. By \cref{lem:monotone-psh-capacity}, $p_m\to p$ in capacity. On compact subsets of $X\setminus S$ the potentials have a common bounded range, so all bounded local products converge there, by the bounded product theory of \cref{sec:psh-local-capacity}.
 
-For any $v\in\PSH(X,\omega)$ locally bounded off $S$, put $v_k=\max(v,-k)$. Fixed local Euclidean corrections and \cref{thm:small-pole-local-products} give full weak limits in every degree,
+\emph{Step 2: full measures.} Let $v\in\PSH(X,\omega)$ be locally bounded off $S$, and put $v_k=\max(v,-k)$. On each chart choose a smooth $q$ with $\ddc q\geq\omega$, so that the functions $v_k+q$ are plurisubharmonic and decrease to $v+q$. \Cref{thm:small-pole-local-products} then gives full weak limits in every degree,
 \[
  W_j(v)=\lim_{k\to\infty}(\ddc v_k)^j,
  \qquad
  \Phi_v=\lim_{k\to\infty}(\omega+\ddc v_k)^n.
 \]
-Expand in the corrected closed positive powers and smooth forms. The expressions patch because the approximating bounded currents are global. They are finite order-zero currents on compact $X$, and $\Phi_v$ is positive. Bounded Stokes gives $\int_XW_n(v)=0$. Consequently
+Indeed, $\ddc v_k=\ddc(v_k+q)-\ddc q$, and the powers can be expanded in the closed positive powers of $\ddc(v_k+q)$ and smooth forms. The local limits patch together because the approximating bounded currents are global. The limits are currents of order zero with finite mass on the compact manifold $X$, and $\Phi_v$ is positive. Stokes' theorem for the bounded potentials $v_k$ gives $\int_XW_n(v)=0$. Consequently
 \begin{equation}\label{eq:small-pole-full-total}
  J(v):=\Phi_v(X)
  =\int_X\omega^n+
        \sum_{j=1}^{n-1}\binom nj
               \int_XW_j(v)\wedge\omega^{n-j}.
 \end{equation}
-The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every lower corrected closed power has zero coefficient mass on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\mathbf1_S\Phi_v$; this identifies it with the local residual measure and proves independence of the smooth correction. These assertions are local on each chart and require no single chart containing $S$. Also $J(v)\leq v_+(\omega)$, by the bounded truncation masses.
+The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every closed positive power of degree less than $n$ in this expansion has coefficient measures vanishing on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\mathbf1_S\Phi_v$. This identifies $\mathbf1_S\Phi_v$ with $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ and proves independence of $q$. These assertions are local on each chart and do not require a single chart containing $S$. Finally, $J(v)\leq v_+(\omega)$, since every truncation $v_k$ has mass at most $v_+(\omega)$.
 
-We need uniform local trace bounds for the closed powers of $p_m$. Fix a relatively compact coordinate neighborhood and write $\kappa=\ddc|z|^2$. Choose $B>0$ so that $B\kappa\geq\omega$ there, and $A>1$ so that $A\omega-B\kappa\geq\kappa$. For $p_{m,k}=\max(p_m,-k)$, the closed current
+\emph{Step 3: convergence of the lower-degree powers.} We need local trace bounds for the closed powers of $p_m$ that are uniform in $m$. Fix a relatively compact coordinate neighborhood and write $\kappa=\ddc|z|^2$. Choose $B>0$ with $B\kappa\geq\omega$ there, and $A>1$ with $A\omega-B\kappa\geq\kappa$. For $p_{m,k}=\max(p_m,-k)$, the closed current
 $T_{m,k}=B\kappa+\ddc p_{m,k}$ is positive and
 \[
  Q_{m,k}:=A\omega+\ddc p_{m,k}\geq T_{m,k}+\kappa.
 \]
-Expanding against the positive smooth difference gives, for $1\leq j\leq n$,
+Expanding $Q_{m,k}^n$ with the smooth positive difference $Q_{m,k}-T_{m,k}\geq\kappa$ gives, for $1\leq j\leq n$,
 \[
  \binom nj T_{m,k}^j\wedge\kappa^{n-j}
        \leq Q_{m,k}^n,
  \qquad
  \int_XQ_{m,k}^n\leq A^n v_+(\omega).
 \]
-The last bound uses the bounded $\omega$-plurisubharmonic potential $p_{m,k}/A$. Passing $k\to\infty$ gives uniform trace bounds for every full closed power of $\ddc(p_m+B|z|^2)$, independently of $m$.
+The last bound holds because $Q_{m,k}=A(\omega+\ddc(p_{m,k}/A))$ and $p_{m,k}/A$ is a bounded $\omega$-plurisubharmonic function. Letting $k\to\infty$ gives trace bounds, independent of $m$, for every full closed power of $\ddc(p_m+B|z|^2)$.
 
-For $j<n$, every subsequential weak limit of these closed positive powers gives $S$ zero coefficient mass. Off $S$ the bounded capacity convergence identifies it with the corresponding full power of $p+B|z|^2$. That power also gives $S$ zero mass, so the limit is unique. Expanding back in the smooth correction and using a finite coordinate cover yields
+For $j<n$, every subsequential weak limit of these closed positive $(j,j)$-currents puts no mass on $S$, again by \cref{cor:closed-current-hausdorff-null}. Off $S$ the bounded capacity convergence identifies the limit with the corresponding full power of $\ddc(p+B|z|^2)$, which also puts no mass on $S$. Hence the limit is unique. Expanding back in the smooth correction and using a finite coordinate cover yields
 \[
  W_j(p_m)\longrightarrow W_j(p),\qquad 1\leq j<n.
 \]
 Hence \eqref{eq:small-pole-full-total} gives $J(p_m)\to J(p)$.
 
-Let $R=\mathbf1_S\Phi_u$. Apply bounded residual invariance in \cref{lem:small-pole-residual-invariance} on each chart, after a common correction. This gives $\mathbf1_S\Phi_{p_m}=R$ for every $m$. Their total masses are bounded by $v_+(\omega)$, so take a weak subsequential limit $\eta$. Since $\Phi_{p_m}-R$ is positive, $\eta-R$ is positive. Off $S$, the limit equals $\mathrm{MA}_\omega(p)$, and its total mass is $J(p)$. The measure $\Phi_p$ has the same total mass and the same restriction off $S$, so
+\emph{Step 4: the residual measures.} Let $R=\mathbf1_S\Phi_u$. Since $p_m-u$ is bounded, the equality case of \cref{lem:small-pole-residual-invariance}, applied on each chart after a common smooth correction, gives $\mathbf1_S\Phi_{p_m}=R$ for every $m$. The total masses $J(p_m)$ are bounded by $v_+(\omega)$, so along any sequence $m_i\to\infty$ a subsequence of $\Phi_{p_{m_i}}$ converges weakly to a measure $\eta$. Since $\Phi_{p_m}-R$ is positive, so is $\eta-R$. Off $S$, $\eta$ equals $\mathrm{MA}_\omega(p)$, by the bounded convergence of Step~1, and its total mass is $\lim_mJ(p_m)=J(p)$ by Step~3. The measure $\Phi_p$ has the same total mass and the same restriction to $X\setminus S$, so
 \[
  \Phi_p(S)=\eta(S)\geq R(S).
 \]
-On each chart, $u\leq p$ and the residual-order part of \cref{lem:small-pole-residual-invariance} give $\mathbf1_S\Phi_p\leq R$. The last display forces equality of their total masses, hence equality of these positive measures. It also gives $\mathbf1_S\eta=R$. Equality off $S$ now implies $\eta=\Phi_p$. Every weak subsequential limit is therefore $\Phi_p$, proving the asserted full-measure convergence of the rooftops.
+On the other hand, $u\leq p$, so the inequality in \cref{lem:small-pole-residual-invariance} gives $\mathbf1_S\Phi_p\leq R$ on each chart. Together with the previous inequality, this forces $\Phi_p(S)=R(S)$, hence $\mathbf1_S\Phi_p=R$, which is the asserted equality of residual measures. It also gives $\mathbf1_S\eta=R$, since $\eta-R\geq0$ and $\eta(S)=R(S)$. As $\eta$ and $\Phi_p$ also agree off $S$, we conclude that $\eta=\Phi_p$. Every weak subsequential limit of $\Phi_{p_m}$ is therefore $\Phi_p$, which proves the convergence $\Phi_{p_m}\to\Phi_p$.
 \end{proof}

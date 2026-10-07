@@ -1,11 +1,11 @@
 \section{Representing measures in an ordinary type}
 \label{sec:relative-measure-carrier}\label{sec:bounded-measure-carrier}
 
-Return to a connected compact complex manifold $X$ of dimension $n\geq1$, with auxiliary Hermitian metric $\omega$ and smooth positive probability volume form $\mathrm{d}V$. Local measure representations can be patched with a strict barrier and truncated relative to a prescribed potential. A decreasing convex sum then gives a single Monge--Amp\`ere measure dominating every local piece in the sense of absolute continuity. Its potential has the prescribed ordinary type, and the given measure is an integrable density against it.
+We return to the general setting of the chapter, with the Hermitian form $\omega$ fixed at its beginning. Locally, every finite non-pluripolar measure is absolutely continuous with respect to the Monge--Amp\`ere measure of a bounded plurisubharmonic function (\cref{lem:local-bounded-measure-carrier}). We globalize this statement in a prescribed ordinary type. The local potentials are glued to a strictly $\theta$-plurisubharmonic potential lying below the reference and are then truncated relative to the reference. A decreasing convex sum of the resulting countable family has a Monge--Amp\`ere measure that dominates every local piece in the sense of absolute continuity. Its potential has the prescribed ordinary type, and the given measure has an integrable density with respect to its Monge--Amp\`ere measure.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:relative-measure-carrier}\index{Non-pluripolar measure!ordinary-type representation}
-Let $\theta\geq0$ be smooth and big, and let $\varphi\in\PSH(X,\theta)$ admit a genuine $P_{\epsilon\theta}(\varphi)$ for some $0<\epsilon<1$. For every finite non-pluripolar measure $\mu$ there are
+Let $\theta\geq0$ be a smooth big real $(1,1)$-form, and let $\varphi\in\PSH(X,\theta)$ be such that the envelope $P_{\epsilon\theta}(\varphi)$ of \cref{sec:obstacle-envelopes} is not identically $-\infty$ for some $0<\epsilon<1$. For every finite non-pluripolar measure $\mu$ there are
 \[
  \psi\in\PSH(X,\theta),\qquad\psi\sim\varphi,
  \qquad 0\leq f\in L^1\bigl(\mathrm{MA}^{\mathrm{ext}}_\theta(\psi)\bigr)
@@ -14,7 +14,7 @@ such that
 \[
  \mu=f\,\mathrm{MA}^{\mathrm{ext}}_\theta(\psi).
 \]
-The reference measure may have infinite mass; its density $f$ is integrable.
+The measure $\mathrm{MA}^{\mathrm{ext}}_\theta(\psi)$ may have infinite mass, but the density $f$ is integrable with respect to it.
 \end{proposition}
 \begin{proof}
 Translate $\varphi$ below zero. Put $q=P_{\epsilon\theta}(\varphi)\leq\varphi$, and choose a strict big potential $\rho\leq0$ with $\theta+\ddc\rho\geq a\omega$, where $a>0$. Then
@@ -22,9 +22,9 @@ Translate $\varphi$ below zero. Put $q=P_{\epsilon\theta}(\varphi)\leq\varphi$, 
  s=q+(1-\epsilon)\rho\leq\varphi,\qquad
  \theta+\ddc s\geq(1-\epsilon)a\omega.
 \]
-In particular $s$ is genuine. Its pole set is pluripolar, as is that of $\varphi$, so both are negligible for $\mu$.
+In particular $s$ is $\theta$-plurisubharmonic and not identically $-\infty$. Its pole set is pluripolar, as is that of $\varphi$, so both are negligible for $\mu$.
 
-Choose finitely many compact inner coordinate balls $K_i$ covering $X$, with larger balls $B_i$. Apply \cref{lem:local-bounded-measure-carrier} to $\mu_i=\mathbf1_{K_i}\mu$. This gives bounded local plurisubharmonic $v_i$, normalized by $1\leq v_i\leq2$, with
+Cover $X$ by finitely many closed coordinate balls $K_i$, each contained in a larger coordinate ball $B_i$. Apply \cref{lem:local-bounded-measure-carrier} to $\mu_i=\mathbf1_{K_i}\mu$. This gives bounded local plurisubharmonic $v_i$, normalized by $1\leq v_i\leq2$, with
 \[
  \mu_i\ll\nu_i:=(\ddc v_i)^n.
 \]
@@ -56,7 +56,7 @@ in that neighborhood, restricting to points where the potentials are finite. Thi
  \mathbf1_{D_{i,m}}\mathrm{MA}^{\mathrm{ext}}_\theta(q_{i,m})
  \geq\delta_i^n\mathbf1_{D_{i,m}}\nu_i.
 \end{equation}
-Here no boundedness of $s$ is being assumed. After a local smooth correction, the positive product inequality holds at every common finite truncation level of $s$ and the bounded potential $v_i$. Exhaust the complement of the pole set of $s$. The measure $\nu_i$ is non-pluripolar, so it loses no mass in that exhaustion. Then restrict the resulting inequality by plurifine locality. This proves \eqref{eq:relative-carrier-local-domination} for the extended measures.
+Here $s$ need not be bounded. After a local smooth correction, the positive product inequality holds at every common finite truncation level of $s$ and the bounded potential $v_i$. Exhaust the complement of the pole set of $s$. The measure $\nu_i$ is non-pluripolar, so it loses no mass in that exhaustion. Then restrict the resulting inequality by plurifine locality. This proves \eqref{eq:relative-carrier-local-domination} for the extended measures.
 
 For $\mu_i$-almost every point of $K_i$, both $s$ and $\varphi$ are finite, and hence that point belongs to $D_{i,m}$ for some $m$. Consequently, a Borel set which is null for every $\mathrm{MA}^{\mathrm{ext}}_\theta(q_{i,m})$ is null for every $\mu_i$, and therefore for $\mu$.
 
@@ -70,7 +70,7 @@ The finite convex combinations
  \psi_N=\sum_{k=1}^N t_kq_k
                +\left(1-\sum_{k=1}^N t_k\right)\varphi
 \]
-decrease and lie between $\varphi-B$ and $\varphi$. Their genuine limit $\psi$ is $\theta$-plurisubharmonic and satisfies $\psi\sim\varphi$. For any fixed $k$, separate its summand to write
+decrease and lie between $\varphi-B$ and $\varphi$. Their limit $\psi$ is $\theta$-plurisubharmonic, satisfies $\psi\geq\varphi-B$, and hence $\psi\sim\varphi$. For any fixed $k$, separate its summand to write
 \[
  \psi=t_kq_k+(1-t_k)w_k,
  \qquad w_k\in\PSH(X,\theta),\qquad w_k\sim\varphi.
@@ -84,7 +84,7 @@ This is valid also for infinite measures: first restrict away from the common po
 $\mu\ll\mathrm{MA}^{\mathrm{ext}}_\theta(\psi)$.
 
 \Needspace{10\baselineskip}
-By \cref{thm:arbitrary-extended-ma}, the reference measure is $\sigma$-finite. The Radon--Nikodym theorem applies to this $\sigma$-finite measure and the finite $\mu$. It gives a nonnegative density $f$ with
+By \cref{thm:arbitrary-extended-ma}, the measure $\mathrm{MA}^{\mathrm{ext}}_\theta(\psi)$ is $\sigma$-finite. The Radon--Nikodym theorem applies to this $\sigma$-finite measure and the finite $\mu$. It gives a nonnegative density $f$ with
 \[
  \int_X f\,\mathrm{MA}^{\mathrm{ext}}_\theta(\psi)=\mu(X)<\infty,
 \]

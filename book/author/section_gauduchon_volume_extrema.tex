@@ -2,18 +2,18 @@
 \subsection{Upper and lower masses}
 \label{sec:gaud-volume-extrema}
 
-As the probability measure varies, the equation realizes every smooth strictly positive potential mass. Exact-background regularization gives the same extrema over bounded potentials. The infimum has a further simplification: maximizing the denominator at each Gauduchon metric removes the density entirely.
+As the probability measure varies, the smooth equation realizes the mass of every smooth strictly positive potential, by the proof of \cref{prop:gaud-volume-density-independence}. The extrema of the volume over all measures are therefore the extrema of these masses, and regularization of bounded potentials identifies them with the lower and upper masses $v_-(\omega)$ and $v_+(\omega)$ of \cref{def:bmp}. The infimum simplifies further: at each Gauduchon metric an explicit measure maximizes the denominator, and this removes the density from the formula entirely.
 
-Fix a Hermitian form $\omega$, and let $\mathscr M$ be the set of smooth strictly positive probability measures on $X$.
+Throughout this subsection $\omega$ is a Hermitian form on $X$, and $\mathscr M$ denotes the set of smooth strictly positive probability measures on $X$.
 
 \begin{theorem}\label{thm:gaud-volume-mass-extrema}\index{Monge--Ampere mass@Monge--Amp\`ere mass!extrema by duality}
 One has
 \[
  \inf_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_-(\omega),
  \qquad
- \sup_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_+(\omega).
+ \sup_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_+(\omega),
 \]
-The supremum is allowed to be infinite. Moreover
+where the supremum may be infinite. Moreover,
 \begin{equation}\label{eq:gaud-lower-mass-formula}
  v_-(\omega)^{1/n}
  =\inf_{\gamma\text{ Gauduchon}}
@@ -22,61 +22,60 @@ The supremum is allowed to be infinite. Moreover
 \end{equation}
 \end{theorem}
 \begin{proof}
-The smooth normalized equation realizes every value $\mathcal V_\mu(\omega)$ as the mass of a smooth strictly positive potential. Conversely every such potential $v$ realizes its mass by the probability measure $\mu_v$ in the proof of \cref{prop:gaud-volume-density-independence}. Thus the two ranges, as subsets of $(0,+\infty)$, are equal.
+For each $\mu\in\mathscr M$, the smooth normalized equation realizes $\mathcal V_\mu(\omega)$ as the mass $\int_X(\omega+\ddc v)^n$ of a smooth potential $v$ with $\omega+\ddc v>0$. Conversely, every such potential realizes its mass as $\mathcal V_{\mu_v}(\omega)$ for the measure $\mu_v$ in the proof of \cref{prop:gaud-volume-density-independence}. Thus the set of volumes $\mathcal V_\mu(\omega)$, $\mu\in\mathscr M$, coincides with the set of these smooth masses.
 
-We justify replacing bounded potentials by smooth strictly positive ones in the extrema defining $v_\pm$. If $u\in\PSH(X,\omega)\cap L^\infty$, \cref{thm:bounded-exact-regularization} gives uniformly bounded smooth strictly $\omega$-plurisubharmonic $u_j$ decreasing to $u$. Their Monge--Amp\`ere measures converge by bounded monotone continuity, including their total masses on compact $X$. Every bounded mass is therefore a limit of strictly positive smooth masses. The reverse inclusion is immediate. This proves the first two identities, without a uniform bound on those masses.
+It remains to show that the smooth masses have the same extrema as the masses of bounded potentials, which define $v_\pm(\omega)$. If $u\in\PSH(X,\omega)\cap L^\infty$, \cref{thm:bounded-exact-regularization} gives uniformly bounded smooth strictly $\omega$-plurisubharmonic functions $u_j$ decreasing to $u$. Their Monge--Amp\`ere measures converge by the monotone continuity of bounded products, and so do their total masses, since $X$ is compact. Every bounded mass is therefore a limit of smooth strictly positive masses. Conversely, smooth potentials are bounded. This proves the first two identities; no uniform bound on the masses is needed.
 
-For the last formula, take the $n$th root and commute the infima over $\mu$ and $\gamma$ in the dual formula. At fixed $\gamma$, H\"older's inequality and $\int_X\mu=1$ give
+For the last formula, take $n$th roots and interchange the infima over $\mu$ and over $\gamma$ in \cref{thm:gaud-volume-dual-formula}. For a fixed Gauduchon metric $\gamma$, H\"older's inequality and $\int_X\mu=1$ give
 \[
  D_\mu(\gamma)
- \leq\left(\int_X\gamma^n\right)^{(n-1)/n}.
+ \leq\left(\int_X\gamma^n\right)^{(n-1)/n},
 \]
-Equality holds for the smooth probability measure
-$\mu=\gamma^n/\int_X\gamma^n$. The numerator is positive and does not depend on $\mu$, so this maximization of the denominator computes the infimum of the quotient. Substitution gives \eqref{eq:gaud-lower-mass-formula}. For $n=1$ both denominators are one, and the same argument applies.
+with equality for the smooth probability measure
+$\mu=\gamma^n/\int_X\gamma^n$. The numerator is positive and does not depend on $\mu$, so the infimum of the quotient over $\mu$ is obtained by maximizing the denominator. This gives \eqref{eq:gaud-lower-mass-formula}. For $n=1$ both denominators equal one, and the same argument applies.
 \end{proof}
 
-Thus $v_-(\omega)>0$ is equivalent to a positive lower bound for
-$\int_X\omega\wedge\gamma^{n-1}$ among Gauduchon metrics of volume one. This lower bound fails on the threefold constructed in \cref{thm:vanishing-lower-mass}. By \cref{cor:positive-lower-mass-solvability}, it is also equivalent to solvability of the normalized equation for every nonzero finite non-pluripolar measure in a Hermitian background. Likewise every fixed smooth density gives a finite normalization, while their supremum can be infinite.
+Thus $v_-(\omega)>0$ if and only if $\int_X\omega\wedge\gamma^{n-1}$ has a positive lower bound over all Gauduchon metrics $\gamma$ with $\int_X\gamma^n=1$. This lower bound fails on the threefold constructed in \cref{thm:vanishing-lower-mass}. By \cref{cor:positive-lower-mass-solvability}, positivity of $v_-(\omega)$ is also equivalent to solvability, in the background $\omega$, of the normalized equation for every nonzero finite non-pluripolar measure. In the same way, each individual volume $\mathcal V_\mu(\omega)$ is finite, while their supremum $v_+(\omega)$ can be infinite.
 
 \Needspace{25\baselineskip}
 \begin{proposition}\label{prop:lower-mass-smooth-attainment}\index{Monge--Ampere mass@Monge--Amp\`ere mass!smooth minimum}
-For a Hermitian $\omega$, the infimum in \eqref{eq:gaud-lower-mass-formula} is attained if and only if the infimum of smooth strictly positive Monge--Amp\`ere masses is attained. Every such minimizing potential has a Gauduchon metric $\omega+\ddc v$.
+The infimum in \eqref{eq:gaud-lower-mass-formula} is attained if and only if the infimum of the masses $\int_X(\omega+\ddc v)^n$ over smooth functions $v$ with $\omega+\ddc v>0$ is attained. For every such minimizing potential $v$, the metric $\omega+\ddc v$ is Gauduchon.
 \end{proposition}
 \begin{proof}
-Suppose a test metric $\gamma$ attains the first infimum, and put $m=v_-(\omega)^{1/n}$. Its numerator is strictly positive, so $m>0$. For $\mu_\gamma=\gamma^n/\int_X\gamma^n$, the same test metric gives
+Suppose that a Gauduchon metric $\gamma$ attains the infimum in \eqref{eq:gaud-lower-mass-formula}, and put $m=v_-(\omega)^{1/n}$. The numerator of its quotient is strictly positive, so $m>0$. For the measure $\mu_\gamma=\gamma^n/\int_X\gamma^n$, equality holds in the H\"older inequality above, so the test $\gamma$ gives
 $\lambda_{\mu_\gamma}(\omega)\leq m$.
-The mass-extrema theorem gives the opposite inequality. Hence the smooth equation for $\mu_\gamma$ has mass $m^n=v_-(\omega)$, giving a minimizing smooth potential. For $n\geq2$, equality in the dual formula makes its solution conformal to $\gamma$. The fixed proportional volume forms make the conformal factor constant, so the solution metric is Gauduchon.
+\Cref{thm:gaud-volume-mass-extrema} gives the opposite inequality. Hence the solution of the smooth equation for $\mu_\gamma$ has mass $m^n=v_-(\omega)$, which gives a minimizing smooth potential. For $n\geq2$, $\gamma$ also minimizes the quotient for $\mu_\gamma$, so by \cref{thm:gaud-volume-dual-formula} the solution form is conformal to $\gamma$. Since both have volume forms proportional to $\mu_\gamma$, the conformal factor is constant, and the solution metric is Gauduchon.
 
-Conversely, at a smooth strictly positive mass minimizer $v$, both signs of every smooth variation are admissible for sufficiently small parameters. The first variation of the raw mass therefore gives
+Conversely, let $v$ be a smooth potential minimizing the mass. For every smooth real $f$, the potentials $v\pm tf$ are admissible for sufficiently small $t>0$. The vanishing of the first variation of the mass therefore gives
 \[
  \int_X f\,\ddc\bigl((\omega+\ddc v)^{n-1}\bigr)=0
  \quad\hbox{for every smooth real }f.
 \]
-Thus $\Omega=\omega+\ddc v$ is Gauduchon. Using $\gamma=\Omega$ in the quotient and Gauduchon Stokes gives
+Thus $\Omega=\omega+\ddc v$ is Gauduchon. Taking $\gamma=\Omega$ in the quotient and using Stokes' theorem for the Gauduchon metric $\Omega$ gives
 \[
  \frac{\int_X\omega\wedge\Omega^{n-1}}
       {(\int_X\Omega^n)^{(n-1)/n}}
              =(\int_X\Omega^n)^{1/n}=v_-(\omega)^{1/n},
 \]
-so the test infimum is attained. In dimension one all metrics are Gauduchon, and all masses equal $\int_X\omega$.
+so the infimum in \eqref{eq:gaud-lower-mass-formula} is attained. In dimension one all metrics are Gauduchon and all masses equal $\int_X\omega$.
 \end{proof}
 
 \Needspace{9\baselineskip}
-The density infimum also has a definition beyond the positive cone. For a pseudoeffective smooth real $(1,1)$-background $\theta$ on $X$, put
+The infimum over densities also makes sense beyond the positive cone. For a pseudoeffective smooth real $(1,1)$-form $\theta$ on $X$, put
 \[
  \lambda_*(\theta)=
  \inf_{\gamma\text{ Gauduchon}}
  \frac{\int_X\theta\wedge\gamma^{n-1}}
       {(\int_X\gamma^n)^{(n-1)/n}}.
 \]
-The same H\"older argument proves
+The H\"older argument above proves
 \[
  \lambda_*(\theta)=\inf_{\mu\in\mathscr M}\lambda_\mu(\theta).
 \]
-It is finite, nonnegative, concave, homogeneous, and invariant under smooth $\ddc$ changes. If $\theta$ is nef, fix a Hermitian form $h$ and, for real $\epsilon>0$, choose a smooth Hermitian representative $\omega_\epsilon$ of $\theta+\epsilon h$. Commuting the infima over the test metric and $\epsilon>0$ also gives
+Like each $\lambda_\mu$, the function $\lambda_*$ is finite, nonnegative, concave, positively homogeneous, and invariant under smooth $\ddc$ changes of $\theta$. Suppose $\theta$ is nef, fix a Hermitian form $h$, and for real $\epsilon>0$ choose a Hermitian representative $\omega_\epsilon$ of $\theta+\epsilon h$. Interchanging the infima over the test metric and over $\epsilon>0$, as in \cref{thm:gaud-volume-nef-limit}, gives
 \[
  \lambda_*(\theta)
  =\lim_{\epsilon\downarrow0}\lambda_*(\theta+\epsilon h)
  =\lim_{\epsilon\downarrow0}v_-(\omega_\epsilon)^{1/n}.
 \]
-Gauge invariance makes the last expression independent of that representative. This extends the lower-mass formula to the nef boundary. It does not identify the resulting value with every lower-volume definition for an arbitrary singular class.
+By gauge invariance, the last expression does not depend on the choice of representatives. This extends the lower-mass formula to the nef boundary. We do not compare $\lambda_*$ with other notions of lower volume for singular classes.

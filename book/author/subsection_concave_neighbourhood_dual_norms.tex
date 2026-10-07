@@ -1,26 +1,28 @@
-\subsection{Concave neighbourhoods and dual norms}
+\subsection{Concave neighborhoods and dual norms}
 \label{subsec:concave-neighbourhood-dual-norms}
-\index{Concave neighbourhoods!dual support norms}
+\index{Concave neighborhoods!dual support norms}
 \index{Convex norm!supporting balls}
 \index{Plurisubharmonic function!dual support norms}
 
-Let $E\to X$ be a holomorphic vector bundle of rank $r\geq1$ over a compact complex manifold of dimension $n\geq1$. Fix a smooth Hermitian metric $k$ on $E$, with real inner product $k_{\mathbb R}=\operatorname{Re}k$ and dual norm $|\cdot|_{k^*}$. For a smooth real function $f$, write $\mathcal L_f$ for its complex Hessian. A smooth boundary has at least $n$ negative Levi directions if $\mathcal L_f$ has at least $n$ negative eigenvalues on $\ker\partial f$, where $f<0$ defines the interior. The following construction turns this boundary condition into a plurisubharmonic dual norm.
+A relatively compact neighborhood $\Omega$ of the zero section of a vector bundle $E$ determines a norm on $E^*$, the support function $\xi\mapsto\max_{v\in\overline\Omega\cap E_x}|\xi(v)|$ of its fibers. If the boundary of $\Omega$ is sufficiently concave in the horizontal directions, holomorphic sections touching the boundary from inside show that this support norm has plurisubharmonic square, and supporting balls give it uniform convexity in the fibers. Consequently, when the dual norms are obstructed as in \cref{thm:convex-norm-deformation-obstruction}, such neighborhoods cannot exist. In terms of exhaustion functions, this bounds the convexity of the complement of the zero section in the projective completion of $E$.
+
+In this subsection, $E\to X$ is a holomorphic vector bundle of rank $r\geq1$, and $n\geq1$. Fix a smooth Hermitian metric $k$ on $E$, with real inner product $k_{\mathbb R}=\operatorname{Re}k$ and dual norm $|\cdot|_{k^*}$. For a smooth real function $f$, write $\mathcal L_f$ for its complex Hessian. Let $\Omega$ be an open set with smooth boundary, defined near $\partial\Omega$ by $f<0$ with $\mathrm df\ne0$ on $\partial\Omega$. We say that $\partial\Omega$ has \emph{at least $n$ negative Levi directions} if, at every boundary point, $\mathcal L_f$ has at least $n$ negative eigenvalues on $\ker\partial f$.
 
 \Needspace{7\baselineskip}
 \begin{lemma}\label{lem:ball-support-uniform-convexity}
 \index{Convex norm!uniform strong convexity}
 Fix $\delta,B>0$. On a finite-dimensional Hermitian vector space, put
 \[
- s_c(\xi)=|\xi(c)|+\delta|\xi|,\qquad |c|\leq B.
+ s_c(\xi)=|\xi(c)|+\delta|\xi|
 \]
-There is $\gamma>0$, depending only on $\delta,B$, such that $s_c^2-\gamma|\xi|^2$ is real convex for every such $c$.
+for covectors $\xi$ and vectors $c$ with $|c|\leq B$. There is $\gamma>0$, depending only on $\delta$ and $B$, such that $s_c^2-\gamma|\xi|^2$ is real convex for every such $c$.
 \end{lemma}
 \begin{proof}
-For $0<\tau\leq1$, replace $s_c$ by the smooth norm off zero
+For $0<\tau\leq1$, replace $s_c$ by the norm
 \[
- s_{c,\tau}(\xi)=\sqrt{|\xi(c)|^2+\tau|\xi|^2}+\delta|\xi|.
+ s_{c,\tau}(\xi)=\sqrt{|\xi(c)|^2+\tau|\xi|^2}+\delta|\xi|,
 \]
-Its Lipschitz constant is at most $L=\sqrt{B^2+1}+\delta$, uniformly in $c,\tau$. All derivatives below are real fibre derivatives. At $\xi\ne0$, set $u=\xi/|\xi|$ and decompose $w=\alpha u+b$, where $b\perp_{\mathbb R}u$. Write $s=s_{c,\tau}$ and $A=\mathrm ds_\xi(w)$. Convexity of its first summand gives
+which is smooth off zero. Its Lipschitz constant is at most $L=\sqrt{B^2+1}+\delta$, uniformly in $c$ and $\tau$. All derivatives below are real derivatives on the dual space. At $\xi\ne0$, set $u=\xi/|\xi|$ and decompose a vector as $w=\alpha u+b$ with $b$ orthogonal to $u$ for the real inner product. Write $s=s_{c,\tau}$ and $A=\mathrm ds_\xi(w)$. Since the first summand of $s$ is convex and $s\geq\delta|\xi|$,
 \[
  D^2s(w,w)\geq\delta\frac{|b|^2}{|\xi|},\qquad
  D^2(s^2)(w,w)\geq2A^2+2\delta^2|b|^2.
@@ -32,75 +34,75 @@ Homogeneity gives $\mathrm ds_\xi(u)=s(\xi)/|\xi|\geq\delta$. Since $|\mathrm ds
 \]
 Take $\gamma=\delta^4/(\delta^2+2L^2)$. Then $\gamma\leq\delta^2/2$ and $\gamma(1+2L^2/\delta^2)=\delta^2$, so $D^2(s^2)(w,w)\geq2\gamma|w|^2$.
 
-The degree-two homogeneous function $s^2-\gamma|\xi|^2$ extends as a $C^1$ function at zero with differential zero. Its restriction to every real line is convex, including at zero, by the nonnegative Hessian away from zero and the matching first derivatives there. Thus it is convex on the whole fibre. Finally,
+The homogeneous function $s^2-\gamma|\xi|^2$ of degree two extends as a $C^1$ function at zero with differential zero. Its restriction to every real line is convex, including at zero, because its second derivative is nonnegative away from zero and its first derivatives match there. Thus it is convex on the whole space. Finally,
 \[
- 0\leq s_{c,\tau}(\xi)-s_c(\xi)\leq\sqrt\tau\,|\xi|.
+ 0\leq s_{c,\tau}(\xi)-s_c(\xi)\leq\sqrt\tau\,|\xi|,
 \]
-The locally uniform limit as $\tau\downarrow0$ proves the assertion with the same $\gamma$.
+and the locally uniform limit as $\tau\downarrow0$ proves the assertion with the same $\gamma$.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{theorem}\label{thm:concave-neighbourhood-dual-norm}
-\index{Concave neighbourhoods!smooth dual norms}
-Suppose that a relatively compact neighbourhood $\Omega\Subset E$ of the zero section has smooth boundary with at least $n$ negative Levi directions. Then
+\index{Concave neighborhoods!smooth dual norms}
+Suppose that a relatively compact neighborhood $\Omega\Subset E$ of the zero section has smooth boundary with at least $n$ negative Levi directions. Then
 \[
  p(x,\xi)=\max_{v\in\overline\Omega\cap E_x}|\xi(v)|
 \]
-is a continuous complex norm on $E^*$ whose square $Q=p^2$ is plurisubharmonic. For some $\gamma>0$, each $Q(x,\cdot)-\gamma|\cdot|_{k^*}^2$ is real convex. If $E$ is ample, $E^*$ also admits a smooth complex norm with strictly plurisubharmonic square off zero.
+is a continuous complex norm on $E^*$ whose square $Q=p^2$ is plurisubharmonic on the total space of $E^*$. For some $\gamma>0$, each function $Q(x,\cdot)-\gamma|\cdot|_{k^*}^2$ is real convex. If $E$ is ample, $E^*$ also admits a smooth complex norm with strictly plurisubharmonic square off the zero section.
 \end{theorem}
 \begin{proof}
-Put $A_x=\overline\Omega\cap E_x$. Compactness of $X$ gives $0<a_0<b_0$ such that the closed $k$-ball of radius $a_0$ is contained in $\Omega$ in every fibre and $\overline\Omega$ lies in the open ball of radius $b_0$. The maximum is attained, and
+\emph{Step 1: basic bounds.} Put $A_x=\overline\Omega\cap E_x$. By compactness of $X$ there are $0<a_0<b_0$ such that, in every fiber, the closed $k$-ball of radius $a_0$ is contained in $\Omega$ and $\overline\Omega$ lies in the open ball of radius $b_0$. The maximum defining $p$ is attained, and
 \[
  a_0|\xi|_{k^*}\leq p(x,\xi)\leq b_0|\xi|_{k^*}.
 \]
-Taking a supremum of absolute values of linear functionals proves complex homogeneity and the triangle inequality.
+As a supremum of absolute values of linear functionals, $p$ is complex homogeneous and satisfies the triangle inequality.
 
-Fix $\xi_0\ne0$ and a maximizing point $v_0\in A_{x_0}$. It lies on $\partial\Omega$, since an interior point allows a small vertical displacement increasing $|\xi_0(v)|$. Multiply $\xi_0$ by a unit complex number to obtain $\eta$ with $\eta(v_0)=p(x_0,\xi_0)=a>0$. Then $\ell=\operatorname{Re}\eta$ satisfies $\ell\leq a$ on $A_{x_0}$. Choose a smooth defining function $f$ near the boundary, with $\Omega=\{f<0\}$ and $\mathrm df\ne0$ there.
+\emph{Step 2: support points.} Fix $\xi_0\ne0$ and a maximizing point $v_0\in A_{x_0}$. It lies on $\partial\Omega$, since at an interior point a small vertical displacement would increase $|\xi_0(v)|$. Multiply $\xi_0$ by a complex number of modulus one to obtain $\eta$ with $\eta(v_0)=p(x_0,\xi_0)=a>0$. Then $\ell=\operatorname{Re}\eta$ satisfies $\ell\leq a$ on $A_{x_0}$. Choose a smooth defining function $f$ near the boundary, with $\Omega=\{f<0\}$ and $\mathrm df\ne0$ there.
 
-Let $V=T^{1,0}_{v_0}E_{x_0}$ and $T=\ker\partial f(v_0)$. Choose an $n$-dimensional complex subspace $W\subset T$ on which $\mathcal L_f$ is negative definite. We first show $\mathrm d_vf(v_0)\ne0$. Otherwise $V\subset T$, and dimension counting gives $W\cap V\ne\{0\}$. A vector in this intersection has negative vertical Levi form. The two corresponding real directions show that the real vertical Hessian has a negative direction. Its negative cone is open, hence contains a direction $w$ with $\ell(w)>0$. Since the vertical first derivative vanishes, Taylor expansion gives $f(v_0+tw)<0$ for small $t>0$, contradicting $\ell\leq a$ on $A_{x_0}$.
+Let $V=T^{1,0}_{v_0}E_{x_0}$ be the vertical tangent space and $T=\ker\partial f(v_0)$. Choose an $n$-dimensional complex subspace $W\subset T$ on which $\mathcal L_f$ is negative definite. We first show that the vertical differential $\mathrm d_vf(v_0)$ is nonzero. Otherwise $V\subset T$, and counting dimensions gives $W\cap V\ne\{0\}$. A vector in this intersection has negative vertical Levi form, and the two corresponding real directions show that the real vertical Hessian of $f$ has a negative direction. Its negative cone is open, hence contains a direction $w$ with $\ell(w)>0$. Since the vertical first derivative vanishes, Taylor expansion gives $f(v_0+tw)<0$ for small $t>0$, contradicting $\ell\leq a$ on $A_{x_0}$.
 
-The fibre boundary is therefore smooth at $v_0$. The supporting functional has its maximum there, so
+The boundary of $A_{x_0}$ is therefore smooth at $v_0$. Since the supporting functional $\ell$ attains its maximum on $A_{x_0}$ there,
 \[
- \mathrm d_vf(v_0)=c\,\mathrm d\ell,\qquad c>0.
+ \mathrm d_vf(v_0)=c\,\mathrm d\ell,\qquad c>0;
 \]
-The sign follows by taking an inward vertical direction: an inward direction with increasing $\ell$ would contradict the maximum. On the affine hyperplane $\ell=a$, the restriction of $f$ has a local minimum zero. Indeed, a point there with $f<0$ would permit an additional displacement increasing $\ell$ within $\Omega$. The real vertical Hessian is thus nonnegative on $\ker\mathrm d\ell$. Consequently $\mathcal L_f$ is nonnegative on the complex space $V\cap T$ of dimension $r-1$. Hence $W\cap V=\{0\}$, and the projection $W\to T^{1,0}_{x_0}X$ is an isomorphism.
+the sign follows because an inward direction along which $\ell$ increases would contradict the maximality. On the affine hyperplane $\{\ell=a\}$ of the fiber, the restriction of $f$ has a local minimum zero at $v_0$: a point there with $f<0$ would allow an additional displacement increasing $\ell$ within $\Omega$. The real vertical Hessian of $f$ is thus nonnegative on $\ker\mathrm d\ell$. Consequently $\mathcal L_f$ is nonnegative on the complex space $V\cap T$, of dimension $r-1$. Hence $W\cap V=\{0\}$, and the projection $W\to T^{1,0}_{x_0}X$ is an isomorphism.
 
-In local coordinates $z$ centred at $x_0$, a holomorphic section $\sigma_0$ through $v_0$ can be chosen with tangent space $W$. The function $f\circ\sigma_0$ has zero first derivative and negative definite mixed Hessian. Its quadratic expansion is
+\emph{Step 3: plurisubharmonicity.} In local coordinates $z$ centered at $x_0$, choose a holomorphic section $\sigma_0$ through $v_0$ with tangent space $W$. The function $f\circ\sigma_0$ has zero first derivative and negative definite mixed Hessian. Its quadratic expansion is
 \[
  f(\sigma_0(z))=\sum H_{\alpha\bar\beta}z_\alpha\bar z_\beta
                     +2\operatorname{Re}P(z)+O(|z|^3),
 \]
-where $P$ is a holomorphic quadratic polynomial. Choose a vertical vector $b$ with $\partial_vf(b)=1$ and replace $\sigma_0$ by $\sigma=\sigma_0-bP$. This preserves the first jet and cancels the pure quadratic part. Thus, after shrinking the chart,
+where $P$ is a holomorphic quadratic polynomial. Choose a vertical vector $b$ with $\partial_vf(b)=1$, and replace $\sigma_0$ by $\sigma=\sigma_0-bP$. This preserves the first jet and cancels the pure quadratic part. Thus, after shrinking the chart,
 \[
  f(\sigma(z))\leq-\epsilon|z|^2,
  \qquad \sigma(0)=v_0,
 \]
 for some $\epsilon>0$. In particular $\sigma(z)\in A_z$ throughout the chart.
 
-Compactness of $\overline\Omega$ makes $p$ upper semicontinuous: convergent covectors and maximizing vectors have a subsequence whose limit remains in the limiting fibre slice. The supporting section gives the opposite inequality $p(z,\xi)\geq|\xi(\sigma(z))|$, with equality at $(x_0,\xi_0)$. Therefore $p$ is continuous off zero; its upper bound gives continuity at zero. The holomorphic pairing $\xi(\sigma(z))$ is nonzero near the contact point. Its logarithmic absolute value is a pluriharmonic lower support for $\log p$. The mean-value property on small holomorphic discs gives the submean inequality for $\log p$ at every point off zero. Thus $\log p$, and then $Q=\exp(2\log p)$ by Jensen's inequality, are plurisubharmonic there. At zero the continuous nonnegative function $Q$ has value zero, so its disc submean inequality also holds.
+Compactness of $\overline\Omega$ makes $p$ upper semicontinuous: for convergent covectors, the corresponding maximizing vectors have a subsequence whose limit lies in the limiting fiber of $\overline\Omega$. The supporting section gives the opposite inequality $p(z,\xi)\geq|\xi(\sigma(z))|$, with equality at $(x_0,\xi_0)$. Therefore $p$ is continuous off the zero section, and its upper bound gives continuity at zero. The holomorphic pairing $\xi(\sigma(z))$ is nonzero near the contact point, and its logarithmic absolute value is a pluriharmonic function lying below $\log p$ and equal to it at $(x_0,\xi_0)$. The mean-value property on small holomorphic disks therefore gives the submean inequality for $\log p$ at every point off the zero section. Thus $\log p$, and then $Q=\exp(2\log p)$ by Jensen's inequality, are plurisubharmonic there. At the zero section the continuous nonnegative function $Q$ vanishes, so its submean inequality on disks also holds there.
 
-Consider all maximizing triples $(x,\xi,v)$ with $|\xi|_{k^*}=1$. They form a compact set, since $p$ is continuous. On its support points $\mathrm d_vf$ never vanishes. Thus there are uniform constants $m>0$, $\rho>0$ and $C\geq1$ with
+\emph{Step 4: uniform convexity in the fibers.} Consider all maximizing triples $(x,\xi,v)$ with $|\xi|_{k^*}=1$. They form a compact set, since $p$ is continuous, and by Step~2 the vertical differential $\mathrm d_vf$ does not vanish at these support points. Thus there are uniform constants $m>0$, $\rho>0$ and $C\geq1$ such that, for vertical vectors $w$,
 \[
  |\mathrm d_vf|\geq m,\qquad
  f(v+w)\leq\mathrm d_vf(w)+C|w|_k^2\quad (|w|_k\leq\rho).
 \]
-Choose $0<\delta<\min\{a_0/2,\rho/2,m/(2C)\}$. At a support point write $N$ for the outward real vertical unit normal and set $c=v-\delta N$. If $|w+\delta N|_k\leq\delta$, then
+Choose $0<\delta<\min\{a_0/2,\rho/2,m/(2C)\}$. At a support point, write $N$ for the outward real vertical unit normal and set $c=v-\delta N$. If $|w+\delta N|_k\leq\delta$, then
 \[
  k_{\mathbb R}(w,N)\leq-\frac{|w|_k^2}{2\delta},\qquad
  f(v+w)\leq-\left(\frac{m}{2\delta}-C\right)|w|_k^2\leq0.
 \]
-All these points lie in the defining-function neighbourhood, so $\overline B_k(c,\delta)\subset A_x$.
+All these points lie in the neighborhood where $f$ is defined, so the closed ball $\overline B_k(c,\delta)$ is contained in $A_x$.
 
-The support norm of this ball is $s_c(\xi)=|\xi(c)|+\delta|\xi|_{k^*}\leq p(x,\xi)$. For a unit maximizing covector with phase chosen as above, $\operatorname{Re}\eta$ has real dual norm one, and its metric dual is $N$. Hence $\operatorname{Re}\eta(N)=1$; the bound $|\eta(N)|\leq1$ gives $\eta(N)=1$. We obtain $\eta(c)=a-\delta>0$, and therefore $s_c(\xi)=a$. Homogeneity now gives
+The support function of this ball is $s_c(\xi)=|\xi(c)|+\delta|\xi|_{k^*}\leq p(x,\xi)$. For a maximizing covector of unit norm, with its phase normalized as in Step~2, the real part $\operatorname{Re}\eta$ has real dual norm one and its metric dual vector is $N$. Hence $\operatorname{Re}\eta(N)=1$, and since $|\eta(N)|\leq1$, also $\eta(N)=1$. We obtain $\eta(c)=a-\delta>0$, and therefore $s_c(\xi)=a$. Homogeneity now gives
 \[
  Q(x,\xi)=\sup_c s_c(\xi)^2,
 \]
-where $c$ ranges over the supporting-ball centres in the fibre. Every such centre has $|c|_k\leq b_0+\delta$. By \cref{lem:ball-support-uniform-convexity}, all $s_c^2-\gamma|\xi|_{k^*}^2$ are convex for the same $\gamma>0$. Their finite-valued supremum proves the asserted strong convexity of $Q$.
+where $c$ ranges over the centers of the supporting balls in the fiber. Every such center satisfies $|c|_k\leq b_0+\delta$, so by \cref{lem:ball-support-uniform-convexity} all the functions $s_c^2-\gamma|\xi|_{k^*}^2$ are convex for the same $\gamma>0$. Their supremum is finite, and it proves the asserted strong convexity of $Q$.
 
-Finally, if $E$ is ample, \cref{prop:ample-dual-strict-homogeneous-function} supplies the smooth strictly plurisubharmonic homogeneous function on $E^*$ needed in \cref{prop:weak-homogeneous-convex-replacement}. Applying that proposition to $Q$ gives the smooth norm.
+\emph{Step 5: smoothing.} Finally, if $E$ is ample, \cref{prop:ample-dual-strict-homogeneous-function} gives the smooth strictly plurisubharmonic homogeneous function on $E^*$ required in \cref{prop:weak-homogeneous-convex-replacement}, and applying that proposition to $Q$ gives the smooth norm.
 \end{proof}
 
-For a complex manifold of dimension $N$ and $1\leq q\leq N$, we say that it is $q$-convex if it has a smooth real exhaustion with at least $N-q+1$ positive Levi eigenvalues outside a compact set. Here an exhaustion has compact sublevel sets.
+For a complex manifold of dimension $N$ and an integer $1\leq q\leq N$, we say that the manifold is \emph{$q$-convex} if it has a smooth real exhaustion function with at least $N-q+1$ positive Levi eigenvalues outside a compact set; here an exhaustion function is one whose sublevel sets are compact. A $q$-convex manifold is also $q'$-convex for $q\leq q'\leq N$. We call such integers $q$ the \emph{smooth convexity indices} of the manifold, and the smallest of them, when one exists, its \emph{least smooth convexity index}.\index{$q$-convexity!least smooth convexity index}
 
 \Needspace{9\baselineskip}
 \begin{lemma}\label{lem:closed-submanifold-complement-index-bound}
@@ -108,21 +110,21 @@ For a complex manifold of dimension $N$ and $1\leq q\leq N$, we say that it is $
 Let $Y$ be a complex manifold of dimension $N$, and let $Z\subset Y$ be a closed complex submanifold of dimension $D\geq1$. If the least smooth convexity index of $Z$ is $\kappa\leq D$, then every smooth convexity index of $Y$ is at least $\kappa$.
 \end{lemma}
 \begin{proof}
-Suppose that $Y$ is $p$-convex for an integer $1\leq p<\kappa$. A smooth exhaustion $\psi$ has at least $N-p+1$ positive Levi eigenvalues outside a compact set $K\subset Y$. Its restriction to the closed submanifold is an exhaustion, since its sublevels are closed subsets of the compact sublevels of $\psi$. The set $K\cap Z$ is compact.
+Suppose that $Y$ is $p$-convex for an integer $1\leq p<\kappa$. Then a smooth exhaustion function $\psi$ has at least $N-p+1$ positive Levi eigenvalues outside a compact set $K\subset Y$. Its restriction to the closed submanifold $Z$ is an exhaustion function, since its sublevel sets are closed subsets of the compact sublevel sets of $\psi$, and $K\cap Z$ is compact.
 
-At a point of $Z\setminus K$, choose a complex subspace $P\subset T^{1,0}Y$ of dimension $N-p+1$ on which the Levi form is positive definite. Then
+At a point of $Z\setminus K$, choose a complex subspace $P\subset T^{1,0}Y$ of dimension $N-p+1$ on which the Levi form of $\psi$ is positive definite. Then
 \[
  \dim_{\mathbb C}(P\cap T^{1,0}Z)\geq (N-p+1)+D-N=D-p+1.
 \]
-The restricted Levi form is positive definite on this intersection, so it has at least $D-p+1$ positive eigenvalues. The holomorphic inclusion identifies it with the Levi form of $\psi|_Z$. Since $p<\kappa\leq D$, this proves $p$-convexity of $Z$, a contradiction.
+The Levi form of $\psi|_Z$ is the restriction of the Levi form of $\psi$, since the inclusion is holomorphic, so it has at least $D-p+1$ positive eigenvalues. Since $p<\kappa\leq D$, this shows that $Z$ is $p$-convex, which contradicts the definition of $\kappa$.
 \end{proof}
 
-In the following result, projectivizations parametrize complex lines.
+In the following results, projectivizations parametrize complex lines.
 
 \Needspace{9\baselineskip}
 \begin{corollary}\label{cor:dual-norm-complement-convexity-obstruction}
 \index{Projective bundle!complement convexity obstruction}
-Suppose that $E$ is ample and $E^*$ admits no smooth complex norm with plurisubharmonic square off zero. Then
+Suppose that $E$ is ample and that $E^*$ admits no smooth complex norm with plurisubharmonic square off the zero section. Then the complement
 \[
  Z\setminus Y,\qquad Z=\mathbb P(\mathcal O_X\oplus E),
  \quad Y=\mathbb P(\mathcal O_X),
@@ -130,9 +132,9 @@ Suppose that $E$ is ample and $E^*$ admits no smooth complex norm with plurisubh
 is not $r$-convex.
 \end{corollary}
 \begin{proof}
-The chart with nonzero $\mathcal O_X$-coordinate identifies with the total space of $E$, and $Y$ is its zero section. If $Z\setminus Y$ were $r$-convex, a smooth exhaustion $\psi$ would have at least $n+1$ positive Levi eigenvalues outside a compact set $K$. Choose a relatively compact disc neighbourhood $D\Subset E$ of $Y$. The set $Z\setminus D$ is compact and disjoint from $Y$. Choose a regular value $c$ of $\psi$ greater than its maximum on both $Z\setminus D$ and $K$.
+The chart of $Z$ where the $\mathcal O_X$-coordinate is nonzero is identified with the total space of $E$, and $Y$ is its zero section. Suppose that $Z\setminus Y$ is $r$-convex. Since $\dim Z=n+r$, a smooth exhaustion function $\psi$ then has at least $n+1$ positive Levi eigenvalues outside a compact set $K$. Choose a relatively compact disk-bundle neighborhood $D\Subset E$ of $Y$. The set $Z\setminus D$ is compact and disjoint from $Y$. Choose a regular value $c$ of $\psi$ greater than its maximum on $Z\setminus D$ and on $K$.
 
-Compactness of $\{\psi\leq c\}$ in $Z\setminus Y$ implies that $\Omega=\{\psi>c\}\cup Y$ is an open neighbourhood of $Y$. Its closure is a compact subset of $D$, and its boundary is the regular level $\psi=c$. The outward defining function $f=c-\psi$ has at least $n+1$ negative Levi eigenvalues there. Restriction to its complex tangent hyperplane removes at most one negative direction, leaving at least $n$. Apply \cref{thm:concave-neighbourhood-dual-norm}. It produces a smooth dual norm with plurisubharmonic square, a contradiction.
+Since $\{\psi\leq c\}$ is compact in $Z\setminus Y$, the set $\Omega=\{\psi>c\}\cup Y$ is an open neighborhood of $Y$. Its closure is a compact subset of $D$, and its boundary is the regular level set $\{\psi=c\}$. The defining function $f=c-\psi$ has at least $n+1$ negative Levi eigenvalues there. Restriction to the complex tangent hyperplane removes at most one negative direction, leaving at least $n$. Since $E$ is ample, \cref{thm:concave-neighbourhood-dual-norm} produces a smooth complex norm on $E^*$ with plurisubharmonic square, a contradiction.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -141,7 +143,7 @@ Compactness of $\{\psi\leq c\}$ in $Z\setminus Y$ implies that $\Omega=\{\psi>c\
 For every $e\geq0$, there is an ample rank-two bundle $E$ on the Hirzebruch surface $X=\mathbb F_e$ such that $\mathbb P(\mathcal O_X\oplus E)\setminus\mathbb P(\mathcal O_X)$ is not $2$-convex. The bundle may be chosen with the slope-stability and Chern classes of \cref{thm:hirzebruch-stable-ample-approximation}.
 \end{corollary}
 \begin{proof}
-Use \cref{thm:hirzebruch-stable-ample-approximation} to choose $E$ whose dual Dolbeault operator is in the $C^4$ neighbourhood of \cref{thm:convex-norm-deformation-obstruction}. The split dual has the required positive individual Gauduchon tests by \cref{prop:hirzebruch-positive-dual-tests}. Thus $E^*$ admits no smooth complex norm with plurisubharmonic square. Apply \cref{cor:dual-norm-complement-convexity-obstruction} with $r=2$.
+Use \cref{thm:hirzebruch-stable-ample-approximation} to choose $E$ whose dual Dolbeault operator lies in the $C^4$ neighborhood of \cref{thm:convex-norm-deformation-obstruction}; the split dual bundle satisfies the hypotheses of that theorem by \cref{prop:hirzebruch-positive-dual-tests}. Thus $E^*$ admits no smooth complex norm with plurisubharmonic square, and \cref{cor:dual-norm-complement-convexity-obstruction} with $r=2$ gives the assertion.
 \end{proof}
 
 % Exact primary: Liu--Wan 2609.37309v1, Lemma 5.2, pp. 27--32,

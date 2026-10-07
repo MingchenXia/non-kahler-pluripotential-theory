@@ -1,25 +1,26 @@
 \section{Normalized compactness}
+\label{sec:psh-compactness}
 
-Fix a smooth positive probability volume $\mathrm{d}V$ for $L^1$ norms. The local compactness theorem for plurisubharmonic functions, recalled in \cite{SGPT}, gives an $L^1_{\loc}$-convergent subsequence or local uniform convergence to $-\infty$ for a locally uniformly upper-bounded sequence on a connected domain. A point at which the global maximum is attained excludes the second alternative, and connectedness propagates the first across $X$.
+Fix a smooth positive probability volume form $\mathrm{d}V$ on $X$, used for $L^1$ norms. Consider a sequence of plurisubharmonic functions on a connected domain that is locally uniformly bounded above. By the local compactness theorem recalled in \cite{SGPT}, it has a subsequence that either converges in $L^1_{\loc}$ or converges locally uniformly to $-\infty$. For normalized $\theta$-plurisubharmonic functions on $X$, a point at which the maximum is attained excludes the second alternative, and connectedness of $X$ propagates the first one across $X$.
 
 The submean inequality also controls upper limits at moving points.
 
 \Needspace{12\baselineskip}
 \begin{lemma}\label{lem:qpsh-hartogs}\index{Hartogs lemma}
-Let $u_j,u$ be quasi-plurisubharmonic on an open set $U$ in a complex manifold. Suppose that $u_j\to u$ in $L^1_{\loc}(U)$ and $\ddc u_j\geq-\beta$ for one smooth real $(1,1)$-form $\beta$ on $U$. If $x_j\to x$ in $U$, then
+Let $u_j,u$ be quasi-plurisubharmonic functions on an open set $U$ in a complex manifold. Suppose that $u_j\to u$ in $L^1_{\loc}(U)$ and that $\ddc u_j\geq-\beta$ for a fixed smooth real $(1,1)$-form $\beta$ on $U$. If $x_j\to x$ in $U$, then
 \[
  \limsup_{j\to\infty}u_j(x_j)\leq u(x).
 \]
 Moreover, the tail envelopes $h_j=(\sup_{k\geq j}u_k)^*$ decrease to $u$.
 \end{lemma}
 \begin{proof}
-On a coordinate ball about $x$, add a common smooth correction $q$ so that $u_j+q$ and $u+q$ are plurisubharmonic. For a fixed small radius, the submean inequality bounds $(u_j+q)(x_j)$ by its average on the ball centered at $x_j$. These averages converge to the corresponding average of $u+q$ centered at $x$: the error from $u_j-u$ tends to zero in $L^1$, and translations are continuous for the integral of a fixed $L^1$ function over a ball. Letting the radius decrease to zero proves the inequality.
+On a coordinate ball about $x$, add a common smooth correction $q$ so that $u_j+q$ and $u+q$ are plurisubharmonic. For a fixed small radius, the submean inequality bounds $(u_j+q)(x_j)$ by the average of $u_j+q$ over the ball of that radius centered at $x_j$. As $j\to\infty$, these averages converge to the average of $u+q$ over the ball of the same radius centered at $x$: the contribution of $u_j-u$ tends to zero in $L^1$, and the integral of the fixed locally integrable function $u+q$ over a ball depends continuously on its center. Letting the radius decrease to zero proves the inequality.
 
-The same estimate gives local uniform upper bounds for the $u_j$, so the tail envelopes are quasi-plurisubharmonic with the same lower Hessian bound, by coefficient freezing and the local upper-envelope theorem. If their decreasing limit exceeded $u(x)$ at some $x$, the definition of regularization would give indices $k_j\geq j$ and points $x_j\to x$ contradicting the first assertion. An almost-everywhere convergent subsequence of $(u_j)$ shows that $h_j\geq u$ almost everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}. Thus $h_j\downarrow u$.
+The same estimate gives local uniform upper bounds for the $u_j$ with $j$ large. By coefficient freezing and the local upper-envelope theorem, the tail envelopes are therefore quasi-plurisubharmonic, with the same lower Hessian bound. They decrease with $j$. If their limit exceeded $u(x)$ at some point $x$, the definition of the regularization would give indices $k_j\geq j$ and points $x_j\to x$ contradicting the first assertion for the subsequence $(u_{k_j})$. On the other hand, an almost everywhere convergent subsequence of $(u_j)$ shows that $h_j\geq u$ almost everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}. Thus $h_j\downarrow u$.
 \end{proof}
 
 \begin{theorem}\label{thm:normalized-compactness}\index{Compactness!normalized potentials}
-For any smooth real $(1,1)$-form $\theta$, the family
+For every smooth real $(1,1)$-form $\theta$ on $X$, the family
 \[
  \mathcal K_\theta=\{u\in\PSH(X,\theta):\sup_Xu=0\}
 \]
@@ -29,20 +30,18 @@ is compact in $L^1(X,\mathrm{d}V)$. In particular, there is a constant $C_\theta
 \]
 \end{theorem}
 \begin{proof}
-Let $(u_j)$ be a sequence in this family and choose $x_j$ with $u_j(x_j)=0$. Passing to a subsequence, suppose $x_j\to x$. Cover $X$ by finitely many connected coordinate balls, and on a slightly larger ball choose a fixed smooth correction $r_i$ for which $u_j+r_i$ is plurisubharmonic. Such corrections exist because $\theta$ is smooth. These local functions are uniformly bounded above, since $u_j\leq0$.
+Let $(u_j)$ be a sequence in $\mathcal K_\theta$. By upper semicontinuity, there are points $x_j$ with $u_j(x_j)=0$; passing to a subsequence, we may assume that $x_j\to x$. Cover $X$ by finitely many connected coordinate balls, and on a slightly larger ball around each of them choose a fixed smooth function $r_i$ such that every $u_j+r_i$ is plurisubharmonic; such corrections exist because $\theta$ is smooth. Since $u_j\leq0$, these local functions are uniformly bounded above.
 
-On a ball containing $x$ in its interior, the alternative of locally uniform convergence to $-\infty$ is impossible: the values at $x_j$ stay bounded below. Local compactness therefore gives an $L^1$-convergent subsequence on this ball. If a second ball overlaps it, local compactness on the second ball cannot yield convergence to $-\infty$ on compact subsets of the overlap, since the first limit is finite almost everywhere there. Thus a further subsequence converges in $L^1$ on the second ball. The intersection graph of a finite connected open cover of connected $X$ is connected. Repeating along that graph and taking finitely many subsequences gives local $L^1$ convergence everywhere. A partition of unity then gives convergence in $L^1(X)$ to a function $u$.
+On a ball containing $x$ in its interior, locally uniform convergence to $-\infty$ is impossible, because the values $(u_j+r_i)(x_j)=r_i(x_j)$ stay bounded below. Local compactness therefore gives a subsequence converging in $L^1$ on this ball. If a second ball meets the first, local compactness on the second ball cannot yield convergence to $-\infty$ on compact subsets of the intersection, since the first limit is finite almost everywhere there. Thus a further subsequence converges in $L^1$ on the second ball. Since $X$ is connected, the intersection graph of the finite cover by connected balls is connected. Proceeding along this graph and passing to subsequences finitely many times, we obtain local $L^1$ convergence on every ball, and a partition of unity then gives convergence in $L^1(X)$ to a function $u$.
 
-The inequalities $\ddc u_j\geq-\theta$ pass to distributions. The local canonical representatives of $u+r_i$ are plurisubharmonic and agree on overlaps after subtracting their corrections. They define a global $\theta$-plurisubharmonic representative, still denoted by $u$. Since $u_j\leq0$, it satisfies $u\leq0$.
+The inequalities $\theta+\ddc u_j\geq0$ pass to the limit in the sense of distributions. By \cref{prop:local-correction}, $u$ has a $\theta$-plurisubharmonic representative, still denoted by $u$. Since $u_j\leq0$, we have $u\leq0$ almost everywhere, hence everywhere by \cref{lem:qpsh-almost-everywhere-order}.
 
-By \cref{lem:qpsh-hartogs}, $0=\lim_j u_j(x_j)\leq u(x)$. Thus $u(x)=0$, and the limit belongs to $\mathcal K_\theta$. This proves sequential compactness, which is compactness in the metric space $L^1(X)$.
-
-If the displayed norm bound failed, choose a sequence whose $L^1$ norms tend to infinity. Its convergent subsequence would have bounded norms, a contradiction.
+By \cref{lem:qpsh-hartogs}, $0=\lim_j u_j(x_j)\leq u(x)$. Thus $u(x)=0$, and the limit belongs to $\mathcal K_\theta$. This proves sequential compactness, which is compactness in the metric space $L^1(X)$. The norm bound follows, since a compact subset of $L^1(X)$ is bounded.
 \end{proof}
 
 \begin{corollary}\label{cor:decreasing-limit}
-A decreasing sequence in $\PSH(X,\theta)$ with uniformly bounded $L^1$ norms has a genuine $\theta$-plurisubharmonic limit and converges to it in $L^1$.
+Let $(u_j)$ be a decreasing sequence in $\PSH(X,\theta)$ with uniformly bounded $L^1$ norms. Then its pointwise limit $u$ belongs to $\PSH(X,\theta)$; in particular, $u$ is not identically $-\infty$. Moreover, $u_j\to u$ in $L^1$.
 \end{corollary}
 \begin{proof}
-Local decreasing-limit theory gives a quasi-plurisubharmonic limit or the function $-\infty$ on each connected coordinate neighborhood. The $L^1$ bound excludes the latter alternative, by Fatou's lemma applied to the negative parts. The local representatives glue. Finally, the sequence is bounded above by its first member; subtracting the sequence from that member and applying monotone convergence proves $L^1$ convergence.
+On each connected coordinate ball, after a common smooth correction, the limit of a decreasing sequence of plurisubharmonic functions is either plurisubharmonic or identically $-\infty$. Fatou's lemma, applied to the negative parts, excludes the second alternative because of the $L^1$ bound. Hence $u$ is quasi-plurisubharmonic, and the inequality $\theta+\ddc u\geq0$ passes to the decreasing limit. Finally, the nonnegative functions $u_1-u_j$ increase to $u_1-u$, so monotone convergence gives $u_j\to u$ in $L^1$.
 \end{proof}

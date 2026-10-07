@@ -1,5 +1,37 @@
 # Modification history
 
+## 6 October 2026 — Oeljeklaus–Toma manifolds 528
+
+[The new direction](research/editorial/oeljeklaus-toma-directions-528.md) answers the author's request to explore themes not yet in the literature. New Section 27.19 treats Inoue surfaces and Oeljeklaus–Toma manifolds:
+
+- For the natural closed semipositive form, every potential is a continuous function of `Im w`, convex after subtracting a fixed logarithmic term. Consequently the class has no singular potentials, but it carries positive currents on Levi-flat tori, and the form represents `c_1^BC(K)` on Inoue surfaces.
+- When `t = 1`, Lelong level sets are finite for every background.
+- For type (2,1), the natural Gauduchon metric has an exact indefinite quadratic mass. On fiber-invariant potentials the mass satisfies explicit two-sided bounds, and `v_- < vol < v_+`.
+- Type (s,1) with s ≥ 2 carries no metric whose `dd^c` has a sign.
+
+Two new problems: bounded and positive mass on OT threefolds, and rigidity of potentials along Liouville foliations. Two independent referee reads were done; all their errors and gaps are corrected. The build is clean (1486 printed pages) and was published in website commit c7aba05.
+
+## 6 October 2026 — Whole-book presentation revision 527
+
+[The presentation revision](research/editorial/whole-book-presentation-revision-527.md) answers the author's request for textbook presentation without stiff language or undeclared nonstandard notation. Every active unit (Introduction, Conventions, Chapters 1–33, problems, historical notes, Appendix A) is revised line by line. The changes:
+
+- Telegraphic prose becomes connected argument, long proofs show their steps, and Part entries and chapter/section openings explain problem and mechanism.
+- Workflow vocabulary leaves the reader-facing text, and the undefined term "genuine" is replaced throughout.
+- Book-wide terms receive single definitions: balanced/pluriclosed metrics, ordinary models, BMP, threshold subsolutions, ideal type and the `⟨·⟩` notation.
+- A one-page table of frequently used notation closes the Conventions.
+
+Local mathematical corrections are listed in the record. They include the Sobolev endpoint example, the tail-modulus constant, a cuspidal operator, the "positive volume property" hypothesis, the general-density Dirichlet lemma, the Hopf hyperplane volume argument and a Hessian sign.
+
+Checks:
+
+- No label, reference target or citation was removed.
+- Citation placement passes.
+- Four independent comparisons covered all 1066 non-punctuation math changes against `dfb285d`. They found one reworded determinant-density formula with the wrong normalization and one hypothesis dropped in revision; both were corrected.
+- The full build is clean (1501 physical / 1475 printed pages).
+- The PDF and homepage description were published in website commit 265ec71.
+
+This is an editorial and comparison check, not a new proof certification. Work is on branch `claude/friendly-fermi-jzw1o1`.
+
 ## Standalone S04 closed-factor density roots — Xean, 6 October 2026
 
 The [S04 paper](research/papers/S04-closed-factor-root-spaces-and-exact-equations.tex) computes the exact original threshold for every integrable closed-factor density on a Hermitian product and proves an actual finite-mass pullback equation, a closed L^N root subspace and vanishing amplitude tails using the entire original test family. Its projective endpoint is integrable but lies in no higher L^p; the retained elliptic factor supplies a nonclosed zero-lower-mass fivefold with mass 240 pi. Complete original-task review remains INCONCLUSIVE; seven statement-only proofs and a separate scoped comparison establish the limited theorem. All use Xean gpt-6.1-sol xhigh, concurrency one. The complete prior factor dependency and its five independent proofs are retained and assessed. Exact primary hypotheses, native compilation, two clean exports and all five final page views are checked. The [review](research/papers/S04-closed-factor-root-spaces-and-exact-equations.review.md) preserves raw reports while excluding misbound task quotations from external evidence. This is the programme's twenty-third standalone article and seventeenth original ID with a checked scoped result. The four completely resolved originals remain P08,P12,P22,S13; both unrestricted S04 questions remain unresolved. All 55 existing standalone sources and concurrent book history are preserved without a book rebuild.

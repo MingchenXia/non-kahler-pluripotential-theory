@@ -1,19 +1,22 @@
 \section{Gauduchon tests for integrable densities}
 \label{sec:integrable-gauduchon-tests}
 
-The dual formula for smooth normalization constants extends to the threshold of an integrable density. First bound all Gauduchon tests in one norm to pass to bounded measurable densities. Monotone truncation then gives the formula at the $L^1$ endpoint, including a zero threshold.
+For a smooth strictly positive probability density, the normalization scalar is an infimum of Gauduchon quotients by \cref{thm:gaud-volume-dual-formula}. We extend this dual formula to the threshold of an arbitrary integrable density. A uniform bound for all Gauduchon tests in a single $L^r$ norm allows the passage from smooth to bounded densities, and monotone truncation then reaches all integrable densities, including those with zero threshold. The formula is most naturally written for the $n$th root of the density.
 
-For $\gamma$ Gauduchon and a nonnegative measurable function $p$, put
+Recall that a Hermitian form $\gamma$ is \emph{Gauduchon} if $\ddc(\gamma^{n-1})=0$ (\cref{def:gauduchon-metric}); in dimension one every Hermitian form is Gauduchon. For a Gauduchon form $\gamma$ and a nonnegative measurable function $p$, put
 \[
  L_{h,\gamma}(p)=
  \frac{\displaystyle\int_Xp(\mathrm{d}V/\gamma^n)^{1/n}\gamma^n}
-      {\displaystyle\int_Xh\wedge\gamma^{n-1}}.
+      {\displaystyle\int_Xh\wedge\gamma^{n-1}}
+ =\int_Xp\,a_\gamma\,\mathrm{d}V,
+ \qquad
+ a_\gamma=\frac{(\gamma^n/\mathrm{d}V)^{(n-1)/n}}{\int_Xh\wedge\gamma^{n-1}}.
 \]
-For real $p\in L^n(\mathrm{d}V)$, define
+Since the coefficient $a_\gamma$ is smooth and strictly positive, each individual test $L_{h,\gamma}$ is finite on $L^n$; the supremum over $\gamma$ may be infinite. In dimension one the test is $\int_Xp\,\mathrm{d}V/\int_Xh$. For real $p\in L^n(\mathrm{d}V)$, define the \emph{root functional}\index{Density space!root functional}
 \[
  \rho_h(p)=b_h(|p|^n)^{-1/n}\quad(p\ne0),\qquad\rho_h(0)=0,
 \]
-with $0^{-1/n}=+\infty$. Each individual test is finite on $L^n$, since its coefficient relative to $\mathrm{d}V$ is smooth. The supremum over $\gamma$ may be infinite. In dimension one, the test is $\int_Xp\,\mathrm{d}V/\int_Xh$.
+with the convention $0^{-1/n}=+\infty$.
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:integrable-gauduchon-formula}\index{Gauduchon duality!integrable density}
@@ -28,53 +31,57 @@ Equivalently, for every nonzero nonnegative $f\in L^1(\mathrm{d}V)$,
  \frac{\displaystyle\int_Xh\wedge\gamma^{n-1}}
       {\displaystyle\int_X(f\,\mathrm{d}V/\gamma^n)^{1/n}\gamma^n}.
 \end{equation}
-The formulas allow $\rho_h(p)=+\infty$ and $b_h(f)=0$. No attainment of the infimum for a nonsmooth density is asserted.
+Both sides of \eqref{eq:integrable-gauduchon-root} may be $+\infty$, and both sides of \eqref{eq:integrable-gauduchon-threshold} may vanish.
 \end{theorem}
 \begin{proof}
-It suffices to prove \eqref{eq:integrable-gauduchon-root} for $p\geq0$, since both sides depend only on $|p|$; the case $p=0$ is immediate. If $p$ is smooth and strictly positive, \cref{thm:gaud-volume-dual-formula}, with the density $p^n$ divided by its integral, gives
+It suffices to prove \eqref{eq:integrable-gauduchon-root} for $p\geq0$, since both sides depend only on $|p|$; the case $p=0$ is immediate.
+
+\emph{Step 1: smooth strictly positive $p$.} Apply \cref{thm:gaud-volume-dual-formula}, with background $h$, to the probability measure $\mu=p^n\mathrm{d}V/Z$, where $Z=\int_Xp^n\,\mathrm{d}V$. By homogeneity (\cref{lem:bounded-normalizer-subsolution}) its scalar is $c_h(\mu)=Zc_h(p^n)$, while the denominator of each Gauduchon quotient is $Z^{-1/n}\int_Xp(\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. The factors of $Z$ cancel, and the dual formula becomes
 \[
  c_h(p^n)^{-1/n}=\sup_\gamma L_{h,\gamma}(p).
 \]
-The integral normalization cancels by homogeneity. Also $b_h(p^n)=c_h(p^n)$.
+Since $b_h(p^n)=c_h(p^n)$ by \cref{prop:individual-normalizer-lp}, this proves \eqref{eq:integrable-gauduchon-root} for such $p$.
 
-We need uniformity in $\gamma$ before approximating a measurable density. The lower-density estimate in \cref{thm:lp-potential-estimate}, with exponent two, gives a constant $a_h>0$ such that
+\emph{Step 2: a uniform bound for the tests.} The lower-density estimate of \cref{thm:lp-potential-estimate}, with exponent two, gives a constant $m_h>0$ such that
 \[
- c_h(p^n)\|p^n\|_{L^2}\geq a_h
+ c_h(p^n)\|p^n\|_{L^2}\geq m_h
 \]
-for smooth strictly positive $p$. Therefore
+for smooth strictly positive $p$. By Step 1, therefore,
 \begin{equation}\label{eq:gauduchon-test-uniform-bound}
- L_{h,\gamma}(p)\leq a_h^{-1/n}\|p\|_{L^{2n}}
+ L_{h,\gamma}(p)\leq m_h^{-1/n}\|p\|_{L^{2n}}
  \quad\text{for every }\gamma.
 \end{equation}
-Positive smooth approximation and duality show that the smooth coefficient of each $L_{h,\gamma}$ has $L^{2n/(2n-1)}$ norm at most $a_h^{-1/n}$. In particular, the supremum of these functionals is Lipschitz on the positive cone of $L^{2n}$, with that same bound.
+Approximating nonnegative functions in $L^{2n}$ by smooth strictly positive ones extends this bound to all nonnegative $p\in L^{2n}$. Since $a_\gamma>0$, duality gives $\|a_\gamma\|_{L^{2n/(2n-1)}}\leq m_h^{-1/n}$ for every $\gamma$. In particular, $p\mapsto\sup_\gamma L_{h,\gamma}(p)$ is Lipschitz on the cone of nonnegative functions in $L^{2n}$, with the same constant.
 
-Now let $p\geq0$ be bounded and nonzero. Approximate it in $L^{2n}$ by smooth strictly positive $p_j$. Then $p_j^n\to p^n$ in $L^2$. By \cref{lem:lp-normalizer-continuity},
+\emph{Step 3: bounded $p$.} Let $p\geq0$ be bounded and nonzero, and approximate it in $L^{2n}$ by smooth strictly positive functions $p_j$. By H\"older's inequality, $p_j^n\to p^n$ in $L^2$, so \cref{lem:lp-normalizer-continuity} gives
 \[
  c_h(p_j^n)\longrightarrow c_h(p^n)>0.
 \]
-The uniform bound \eqref{eq:gauduchon-test-uniform-bound} also gives
+By the Lipschitz bound derived from \eqref{eq:gauduchon-test-uniform-bound},
 \[
  \sup_\gamma L_{h,\gamma}(p_j)
        \longrightarrow\sup_\gamma L_{h,\gamma}(p).
 \]
-The formula follows for bounded $p$.
+Passing to the limit in the identity of Step 1 for $p_j$, and using $b_h(p^n)=c_h(p^n)$ (\cref{prop:individual-normalizer-lp}), we obtain \eqref{eq:integrable-gauduchon-root} for bounded $p$.
 
-For general nonnegative $p\in L^n$, put $p_k=\min(p,k)$. The definition of $b_h$ gives
+\emph{Step 4: general $p$.} For nonnegative $p\in L^n$, put $p_k=\min(p,k)$. Then $p_k^n=\min(p^n,k^n)$ are truncations of $p^n$, so the definition of $b_h$ and Step 3 give
 \[
  \rho_h(p)=\lim_{k\to\infty}c_h(p_k^n)^{-1/n}
           =\sup_k\sup_\gamma L_{h,\gamma}(p_k).
 \]
 For each fixed $\gamma$, monotone convergence gives
-$\sup_kL_{h,\gamma}(p_k)=L_{h,\gamma}(p)$. The two suprema commute, proving \eqref{eq:integrable-gauduchon-root}. Every denominator in \eqref{eq:integrable-gauduchon-threshold} is positive; taking reciprocals proves that formula, including the zero endpoint.
+$\sup_kL_{h,\gamma}(p_k)=L_{h,\gamma}(p)$. Interchanging the two suprema proves \eqref{eq:integrable-gauduchon-root}. Finally, every denominator in \eqref{eq:integrable-gauduchon-threshold} is positive; taking reciprocals in \eqref{eq:integrable-gauduchon-root} with $p=f^{1/n}$ proves \eqref{eq:integrable-gauduchon-threshold}, including the case $b_h(f)=0$.
 \end{proof}
 
-For $n\geq2$, write $L_{h,\gamma}(p)=\int_Xp\,a_\gamma\,\mathrm{d}V$. Its coefficient satisfies
+For a nonsmooth density we do not claim that the infimum in \eqref{eq:integrable-gauduchon-threshold} is attained by a Gauduchon form; attainment by Gauduchon currents is studied in \cref{sec:integrable-gauduchon-currents}.
+
+For $n\geq2$, the coefficient of the test has norm
 \[
  \|a_\gamma\|_{L^{n/(n-1)}}
  =\frac{(\int_X\gamma^n)^{(n-1)/n}}
-        {\int_Xh\wedge\gamma^{n-1}}.
+        {\int_Xh\wedge\gamma^{n-1}}
 \]
-Thus \cref{thm:gaud-volume-mass-extrema} identifies positive lower mass with a uniform bound for these endpoint norms. The weaker bound used above is available on every compact Hermitian manifold. It suffices to pass from smooth tests to bounded densities; monotone truncation then treats all integrable densities.
+in the exponent dual to $n$. By \eqref{eq:gaud-lower-mass-formula} in \cref{thm:gaud-volume-mass-extrema}, positive lower mass is therefore equivalent to a uniform bound for these norms, that is, for all tests on $L^n$ simultaneously. Without positive lower mass, Step 2 of the proof still bounds the coefficients uniformly in the weaker norm of $L^{2n/(2n-1)}$, on every compact Hermitian manifold. This suffices to pass from smooth to bounded densities, and monotone truncation then treats all integrable densities.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:individual-threshold-backgrounds}
@@ -84,10 +91,15 @@ Let $f$ be a nonzero nonnegative function in $L^1(\mathrm{d}V)$ and let $p\in L^
  \qquad
  M^{-1}\rho_{h_1}(p)\leq\rho_{h_2}(p)\leq m^{-1}\rho_{h_1}(p).
 \]
-If $h_2-h_1=\ddc a$ for a smooth real function $a$, their thresholds agree.
+If $h_2-h_1=\ddc a$ for a smooth real function $a$, then $b_{h_1}(f)=b_{h_2}(f)$ and $\rho_{h_1}(p)=\rho_{h_2}(p)$.
 \end{proposition}
 \begin{proof}
-For every Gauduchon metric the numerators in \eqref{eq:integrable-gauduchon-threshold} satisfy the same bounds with factors $m,M$; the denominators agree. Taking the infimum and then the $n$th power proves the threshold bounds. Taking reciprocals gives the bounds for $\rho$, with the stated conventions at zero and infinity. In the last assertion, distributional Stokes makes the numerators equal.
+For every Gauduchon form $\gamma$, the numerators in \eqref{eq:integrable-gauduchon-threshold} satisfy
+\[
+ m\int_Xh_1\wedge\gamma^{n-1}\leq\int_Xh_2\wedge\gamma^{n-1}
+ \leq M\int_Xh_1\wedge\gamma^{n-1},
+\]
+while the denominators do not depend on the background. Taking the infimum over $\gamma$ and then $n$th powers proves the bounds for the thresholds; taking reciprocal $n$th roots gives the bounds for $\rho$, with the stated conventions at zero and infinity. If $h_2-h_1=\ddc a$, the numerators agree by Stokes' theorem, since $\ddc(\gamma^{n-1})=0$.
 \end{proof}
 
-All Hermitian metrics on compact $X$ are comparable. Thus positivity of the individual threshold and the set of admissible density roots are independent of the chosen Hermitian metric. If the reference volume is replaced by $\mathrm{d}V'=a\,\mathrm{d}V$ with $a>0$ smooth, the same measure has density $f'=f/a$. The maximal-subsolution characterization gives $b'_h(f')=b_h(f)$, and $p\mapsto a^{-1/n}p$ preserves both the root functional and the $L^n$ norm. This identifies the construction under a change of reference volume.
+Any two Hermitian metrics on the compact manifold $X$ are comparable. Hence the positivity of $b_h(f)$, and the set of real $p\in L^n$ with $\rho_h(p)<+\infty$, do not depend on the choice of $h$. The dependence on the reference volume is equally simple. If $\mathrm{d}V$ is replaced by $\mathrm{d}V'=\sigma\,\mathrm{d}V$ with a smooth function $\sigma>0$, the measure $f\,\mathrm{d}V$ has density $f'=f/\sigma$ with respect to $\mathrm{d}V'$, and \cref{thm:individual-density-subsolution} shows that the threshold of $f'$ relative to $\mathrm{d}V'$ equals $b_h(f)$. Correspondingly, the map $p\mapsto\sigma^{-1/n}p$ from $L^n(\mathrm{d}V)$ to $L^n(\mathrm{d}V')$ preserves both the $L^n$ norm and the root functional.

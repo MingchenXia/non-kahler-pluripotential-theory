@@ -1,5 +1,32 @@
 # Current research status — 6 October 2026
 
+## Checkpoint 528 — Oeljeklaus–Toma manifolds
+
+[The OT record](editorial/oeljeklaus-toma-directions-528.md) adds new Section 27.19 and Problems 32.3.6–32.3.7, following the author's request for new directions. Proved there:
+- the description of all θ-plurisubharmonic functions;
+- the absence of singular potentials;
+- finite Lelong level sets when t = 1;
+- the exact quadratic mass formula and its consequences on OT threefolds;
+- the absence of plurisigned metrics on type (s,1), s ≥ 2.
+
+Literature checks are recorded, and two independent referee reads are resolved. The full build is clean: 1514 physical / 1486 printed pages. Published in website commit c7aba05, with the remote blobs verified; the live GitHub Pages PDF matches SHA-256 `4f519d18…` and the live homepage shows "1486 pages. Updated October 6, 2026".
+
+Next: try to decide Problem 32.3.6 for invariant-plus-one-mode potentials, and look for further test manifolds (Kato surfaces, nilmanifolds) where the book's singularity theory gives new information.
+
+## Checkpoint 527 — Whole-book presentation revision
+
+[The presentation revision](editorial/whole-book-presentation-revision-527.md) answers the author's 6 October request. Every active unit is revised for textbook presentation: connected prose, visible proof steps, Part and chapter openings, single definitions of book-wide notation, a front-matter notation table and no workflow vocabulary. Several local mathematical slips are corrected (listed in the record).
+
+Checks:
+- An audit against `dfb285d` finds no removed label, reference target or citation.
+- Four independent comparisons of all 1066 changed math fragments found one revision-introduced formula error (determinant density normalization) and one dropped hypothesis (moving-divisorial stability); both are corrected.
+- The clean full build has 1501 physical and 1475 printed pages, 111 references and 898 index entries.
+- Publication: website commit 265ec71, with the remote blobs verified. The live GitHub Pages PDF matches SHA-256 `d8f5fddb…` and the live homepage shows "1475 pages. Updated October 6, 2026".
+
+No source-package reconstruction was performed in this cloud session. The work is on branch `claude/friendly-fermi-jzw1o1`, not `main`. All 38 original directions remain open.
+
+Next: per the author's follow-up, explore new research directions fitting the book that are not in the literature. Integrate only checked results.
+
 ## Checkpoint 526 — Greatest exponential left limits
 
 [The left-limit review](editorial/greatest-exponential-left-limits-526.md) checks two inactive proofs: exact positive left limits of greatest exponential solutions, and at most countably many exponents where that limit differs from the greatest solution. Thirty-two analytic obligations, strict 0/0 and final complete first/automatic second reads pass. All 368 book assets / 1171 proofs, both catalogues/manifests, 451 protected and sixteen incoming files remain exact. Six official abstracts and two selected source introductions are read; no external proof is adopted. No author rebuild/publication occurs, and native 522 is pending without diagnostics. Current-package checks against actual 525 reconstruction pass: 2525 safe paths / 2524 payloads, 365 book-source byte comparisons and all 1383 book / 17 companion page texts, clean logs and publication exclusions. No new extraction/build is claimed. All 38 original directions remain open. Next: Integrate the checked positive-exponent left-limit and countable-jump propositions after greatest right continuity, update the corresponding S03 scope and history, then rebuild, inspect, publish, refresh locators and reconstruct sources. Continue exact bounded-to-smooth Hermitian equation proof review and incoming-author checks.

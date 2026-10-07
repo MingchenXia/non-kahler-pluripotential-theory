@@ -1,13 +1,11 @@
 \chapter{Torsion and the variation of mass}
 \label{chap:mass}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$, and fix a Hermitian form $\omega$ on $X$.
+Throughout this chapter, $\omega$ is a Hermitian form on $X$. If $\omega$ were closed, Stokes' theorem would make the total Monge--Amp\`ere mass $\int_X(\omega+\ddc u)^n$ independent of the potential $u$. For a nonclosed Hermitian form this invariance can fail. Integration by parts expresses the mass of a smooth potential as a polynomial whose coefficients pair the potential with the complex Hessians of the powers of $\omega$, and polarization shows that the vanishing of these Hessians is also necessary for invariance. When they do not vanish, even smooth potentials of the same singularity type can have different masses, and the usual global comparison principle fails. The masses may nevertheless remain bounded, and whether they do depends only on the manifold, not on the chosen Hermitian form.
 
-The total Monge--Amp\`ere mass need not be preserved by adding a complex Hessian to a Hermitian form. Integration by parts expresses its variation through derivatives of the background powers; polarization shows that the vanishing of these derivatives is also necessary for invariance. When they do not vanish, even smooth potentials of the same singularity type can have different masses, and the ordinary global comparison principle fails. Uniform upper bounds then provide a weaker property that depends only on the manifold.
+\section{Integration by parts with a nonclosed form}
 
-\section{Integration by parts with a non-closed form}
-
-Integration by parts transfers the complex Hessian of a function to the form against which it is integrated. For powers of a nonclosed background, the resulting derivative contains both its complex Hessian and a quadratic torsion term.
+Integration by parts moves the complex Hessian of a function onto the form against which it is integrated. When that form is a power of a nonclosed $(1,1)$-form, its complex Hessian contains, besides the complex Hessian of the form itself, a quadratic term in its exterior derivative.
 
 \begin{lemma}\label{lem:ibp}\index{Integration by parts}\index{Torsion!integration by parts}
 For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
@@ -16,13 +14,13 @@ For a smooth real function $f$ and a smooth form $T$ of bidegree $(n-1,n-1)$,
 \]
 \end{lemma}
 \begin{proof}
-Stokes' theorem applied to $\mathrm{d}(\dc f\wedge T)$ gives the first equality in
+Since $\dc f$ is a one-form, $\mathrm{d}(\dc f\wedge T)=\ddc f\wedge T-\dc f\wedge\mathrm{d}T$, and Stokes' theorem gives the first equality in
 \[
  \int_X\ddc f\wedge T
  =\int_X\dc f\wedge \mathrm{d}T
  =\int_X f\ddc T.
 \]
-For the second, apply Stokes' theorem for $\dc$ to $f\,\mathrm{d}T$ and use $\dc\mathrm{d}=-\mathrm{d}\dc$. The integral of $\dc$ on forms of total degree $2n-1$ vanishes by Stokes' theorem for $\partial$ and $\bar\partial$.
+For the second, recall that the integral of $\dc\sigma$ vanishes for every form $\sigma$ of total degree $2n-1$, by Stokes' theorem for $\partial$ and $\bar\partial$. We apply this to $\sigma=f\,\mathrm{d}T$ and use $\dc\mathrm{d}=-\mathrm{d}\dc$.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -36,25 +34,24 @@ For a smooth real $(1,1)$-form $\theta$ and an integer $q\geq1$,
 where the second term is omitted when $q=1$.
 \end{lemma}
 \begin{proof}
-For $q\geq2$, since $\theta$ has even degree, $\dc(\theta^q)=q\,\theta^{q-1}\wedge\dc\theta$. Applying $\mathrm{d}$ and again using the even degree of $\theta^{q-1}$ gives
+For $q=1$ there is nothing to prove. For $q\geq2$, since $\theta$ has even degree, $\dc(\theta^q)=q\,\theta^{q-1}\wedge\dc\theta$. Applying $\mathrm{d}$ and using again that $\theta^{q-1}$ has even degree, we obtain
 \[
  \mathrm{d}\dc(\theta^q)
  =q(q-1)\,\theta^{q-2}\wedge \mathrm{d}\theta\wedge\dc\theta
  +q\,\theta^{q-1}\wedge \mathrm{d}\dc\theta.
 \]
-For $q=1$, the formula is the identity $\ddc(\theta)=\ddc\theta$.
 \end{proof}
 
-For the Hermitian form $\omega$, the term $\mathrm{d}\omega\wedge\dc\omega$ can contribute to derivatives of higher powers even when $\ddc\omega=0$. The mass expansion below involves these powers separately.
+Thus the quadratic torsion term $\mathrm{d}\omega\wedge\dc\omega$ can make the higher powers of $\omega$ fail to be $\ddc$-closed even when $\ddc\omega=0$. The mass expansion below involves the complex Hessians of all these powers separately.
 
 \section{The mass polynomial}
 
-For a smooth real function $u$ on $X$, write $\omega_u=\omega+\ddc u$ and set
+For a smooth real function $u$ on $X$, write $\omega_u=\omega+\ddc u$, and set
 \[
  \HH_\omega=\{u\in C^\infty(X,\R):\omega+\ddc u>0\},
  \qquad \Mass_\omega(u)=\int_X(\omega+\ddc u)^n.
 \]
-The set $\HH_\omega$ is convex and open in the $C^2$ topology. Expanding the mass along a smooth direction gives a polynomial whose nonconstant coefficients detect the derivatives of the background.
+The set $\HH_\omega$ of smooth strictly $\omega$-plurisubharmonic functions is convex and open in the $C^2$ topology, while the mass $\Mass_\omega(u)$ is defined for every smooth real $u$. Expanding it along a smooth direction gives a polynomial whose nonconstant coefficients detect the complex Hessians of the powers of the background.
 
 \begin{theorem}\label{thm:mass-expansion}\index{Monge--Ampere mass@Monge--Amp\`ere mass!variation polynomial}
 For every smooth real function $u$,
@@ -65,19 +62,19 @@ For every smooth real function $u$,
 \end{equation}
 \end{theorem}
 \begin{proof}
-Expand $(\omega+\ddc u)^n$ by the binomial theorem. The term with $k=n$ integrates to zero, since
+Expand $(\omega+\ddc u)^n$ by the binomial theorem. The term with $k=n$ integrates to zero, since it is exact:
 \[
  (\ddc u)^n=\mathrm{d}\bigl(\dc u\wedge(\ddc u)^{n-1}\bigr).
 \]
-For $1\leq k\leq n-1$, apply \cref{lem:ibp} with
-$T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Both $\mathrm{d}$ and $\dc$ annihilate $\ddc u$, so
+For $1\leq k\leq n-1$, apply \cref{lem:ibp} with $f=u$ and
+$T=(\ddc u)^{k-1}\wedge\omega^{n-k}$. Since both $\mathrm{d}$ and $\dc$ annihilate $\ddc u$,
 \[
- \ddc T=(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}).
+ \ddc T=(\ddc u)^{k-1}\wedge\ddc(\omega^{n-k}),
 \]
-This gives each of the terms in \eqref{eq:mass-expansion}. When $n=1$, the sum is empty and the mass is constant.
+which gives the $k$th term of \eqref{eq:mass-expansion}. When $n=1$, the sum is empty and the mass is constant.
 \end{proof}
 
-If every $\ddc(\omega^j)$ in \eqref{eq:mass-expansion} vanishes, the mass is constant. To prove necessity, vary the potential in several directions and recover each of these forms by polarization.
+If every $\ddc(\omega^j)$ with $1\leq j\leq n-1$ vanishes, \eqref{eq:mass-expansion} shows that the mass is constant. Conversely, varying the potential in several independent directions recovers each of these forms by polarization.
 
 \Needspace{18\baselineskip}
 \begin{theorem}[Chiose]\label{thm:mass-invariance-characterization}\index{Monge--Ampere mass@Monge--Amp\`ere mass!invariance}
@@ -87,37 +84,36 @@ Assume $n\geq2$. The following conditions are equivalent:
 \item $\ddc(\omega^j)=0$ for $1\leq j\leq n-1$;
 \item $\ddc\omega=0$ and $\mathrm{d}\omega\wedge\dc\omega=0$.
 \end{enumerate}
-They are also equivalent to constancy of the mass over all bounded $\omega$-plurisubharmonic functions. Under these conditions the common mass is $\int_X\omega^n$.
+They are also equivalent to the condition that $\int_X(\omega+\ddc u)^n$ be the same for all bounded $\omega$-plurisubharmonic functions $u$, where $(\omega+\ddc u)^n$ is the Bedford--Taylor product of \cref{sec:psh-bounded-products}. Under these conditions the common mass is $\int_X\omega^n$.
 \end{theorem}
 \begin{proof}
-Assume the first condition. For every smooth real $u$, both signs of $tu$ are admissible when $|t|$ is small. The polynomial
-$\int_X(\omega+t\ddc u)^n$ is therefore constant on an interval. Its nonconstant coefficients vanish. For $1\leq j\leq n-1$ this gives
+\emph{Step 1: the first condition implies the second.} Let $u$ be a smooth real function. For $|t|$ small, $tu$ belongs to $\HH_\omega$ for both signs of $t$, so the polynomial $t\mapsto\int_X(\omega+t\ddc u)^n$ is constant on an interval and its nonconstant coefficients vanish. For $1\leq j\leq n-1$ this gives
 \[
  \int_X\omega^j\wedge(\ddc u)^{n-j}=0.
 \]
-Replace $u$ by a linear combination of $n-j$ smooth real functions and compare the coefficient containing every parameter once. We obtain
+Replace $u$ by a linear combination of $n-j$ smooth real functions $u_1,\ldots,u_{n-j}$ and compare the coefficients of the monomial in which every parameter appears once. We obtain
 \[
  \int_X\omega^j\wedge\ddc u_1\wedge\cdots\wedge\ddc u_{n-j}=0.
 \]
-Integration by parts in the first factor, followed by testing arbitrary $u_1$, yields the pointwise identity
+Integrating by parts in the first factor and using that $u_1$ is arbitrary, we obtain the pointwise identity
 \[
  \ddc(\omega^j)\wedge\ddc u_2\wedge\cdots\wedge\ddc u_{n-j}=0
 \]
-for every choice of the remaining functions. At a given point their complex Hessians can be prescribed arbitrarily: multiply a quadratic polynomial in a coordinate chart by a cutoff equal to one near that point. Complexifying the multilinear identity permits the quadratic monomials $z_a\bar z_b$. Products of their Hessians give all coordinate forms of complementary bidegree. Pairing with those forms shows that every coefficient of $\ddc(\omega^j)$ vanishes. When $j=n-1$, there are no remaining factors, and the same conclusion follows directly from testing $u_1$. This proves the second condition.
+for every choice of the remaining functions. At a given point, the complex Hessians of these functions can be prescribed arbitrarily: multiply a quadratic polynomial in a coordinate chart by a cutoff function equal to one near that point. Since the identity is multilinear, we may complexify it and use the quadratic monomials $z_a\bar z_b$. Wedge products of their complex Hessians give all coordinate forms of the complementary bidegree, and pairing with these forms shows that every coefficient of $\ddc(\omega^j)$ vanishes. When $j=n-1$ there are no remaining factors, and the same conclusion follows directly from the arbitrariness of $u_1$. This proves the second condition.
 
-The second condition implies the first by \cref{thm:mass-expansion}. For $n\geq3$, the identities for $j=1,2$ give
+\emph{Step 2: the remaining equivalences for smooth potentials.} The second condition implies the first by \cref{thm:mass-expansion}. For $n\geq3$, the identities for $j=1,2$ and \cref{lem:power-torsion} give $\ddc\omega=0$ and
 \[
  0=\ddc(\omega^2)=2\omega\wedge\ddc\omega
                          +2\mathrm{d}\omega\wedge\dc\omega,
 \]
-so the second condition implies the third. For $n=2$, the last torsion form vanishes for degree reasons, and the implication is immediate. Conversely \cref{lem:power-torsion} proves all the power identities from the third condition.
+so the second condition implies the third. For $n=2$, the second condition is $\ddc\omega=0$, while $\mathrm{d}\omega\wedge\dc\omega$ vanishes for degree reasons; the implication is again immediate. Conversely, \cref{lem:power-torsion} derives all the identities of the second condition from the third.
 
-For a bounded potential, \cref{thm:bounded-exact-regularization} gives uniformly bounded smooth strictly positive approximants decreasing to it. The bounded-product continuity of \cref{sec:psh-bounded-products} passes their common mass to the limit. Conversely, constancy for bounded potentials implies constancy on $\HH_\omega$. The zero potential gives the value of the common mass.
+\emph{Step 3: bounded potentials.} Assume the first condition and let $u$ be a bounded $\omega$-plurisubharmonic function. By \cref{thm:bounded-exact-regularization}, there are uniformly bounded functions $u_j\in\HH_\omega$ decreasing to $u$. Their masses all equal $\int_X\omega^n$, and the continuity of the bounded products of \cref{sec:psh-bounded-products} along such sequences passes this common value to the limit. Conversely, every element of $\HH_\omega$ is a bounded $\omega$-plurisubharmonic function, so constancy for bounded potentials implies the first condition. The zero potential shows that the common mass is $\int_X\omega^n$.
 \end{proof}
 
-In particular, a closed background has invariant mass. More generally, under the equivalent conditions above, \eqref{eq:mass-expansion} gives the same identity for every smooth real $u$. In dimension one the mass is always $\int_X\omega$.
+In particular, a closed background has invariant mass. Under the equivalent conditions above, \eqref{eq:mass-expansion} even gives $\Mass_\omega(u)=\int_X\omega^n$ for every smooth real $u$, not only for $u\in\HH_\omega$. In dimension one the mass is always $\int_X\omega$.
 
-The first derivative of the mass singles out the highest power of the perturbed background.
+The first variation of the mass involves only the complex Hessian of the power $\omega_u^{n-1}$ of the perturbed form.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:mass-variation}
@@ -129,11 +125,11 @@ For smooth real functions $u,v$ on $X$,
 If $\Mass_\omega$ is constant on $\HH_\omega$, then $\ddc(\omega_u^{n-1})=0$ for every $u\in\HH_\omega$.
 \end{proposition}
 \begin{proof}
-Differentiating the finite polynomial gives
+Since $\Mass_\omega(u+tv)$ is a polynomial in $t$, its derivative at $t=0$ is
 \[
- n\int_X\ddc v\wedge\omega_u^{n-1}.
+ n\int_X\ddc v\wedge\omega_u^{n-1},
 \]
-Apply \cref{lem:ibp}. For the second assertion, every smooth direction $v$ gives a line segment in $\HH_\omega$ for sufficiently small $|t|$, so the right side vanishes for all test functions $v$. The smooth top-degree form $\ddc(\omega_u^{n-1})$ must therefore vanish.
+and \cref{lem:ibp} turns this into the right-hand side of \eqref{eq:mass-first-variation}. For the second assertion, fix $u\in\HH_\omega$. For every smooth real direction $v$, the segment $u+tv$ lies in $\HH_\omega$ when $|t|$ is sufficiently small, so the right-hand side of \eqref{eq:mass-first-variation} vanishes for all smooth real $v$. Hence the smooth top-degree form $\ddc(\omega_u^{n-1})$ vanishes.
 \end{proof}
 
 \begin{corollary}\label{cor:surface-mass}
@@ -144,27 +140,26 @@ If $n=2$, then for every smooth real function $u$ on $X$,
 Consequently, $\Mass_\omega$ is constant on $\HH_\omega$ if and only if $\ddc\omega=0$.
 \end{corollary}
 \begin{proof}
-The formula is \eqref{eq:mass-expansion} for $n=2$. It proves one implication directly; the other follows from \cref{prop:mass-variation} at $u=0$.
+The formula is the case $n=2$ of \eqref{eq:mass-expansion}, and it shows that $\ddc\omega=0$ implies constancy. Conversely, if the mass is constant, \cref{prop:mass-variation} at $u=0$ gives $\ddc\omega=0$.
 \end{proof}
 
-The identity $\ddc(\omega^{n-1})=0$ makes the first variation vanish at $u=0$; it will be studied in \cref{chap:gauduchon}. On a surface this already gives mass invariance. In dimension three, however,
+The identity $\ddc(\omega^{n-1})=0$ makes the first variation vanish at $u=0$; Hermitian forms satisfying it are the Gauduchon metrics of \cref{chap:gauduchon}. On a surface this identity already gives mass invariance. In dimension three, however, \eqref{eq:mass-expansion} reads
 \[
  \Mass_\omega(u)=\int_X\omega^3
  +3\int_Xu\ddc(\omega^2)
  +3\int_Xu\ddc u\wedge\ddc\omega.
 \]
-Vanishing of $\ddc(\omega^2)$ removes the linear term, while $\ddc\omega$ still governs the quadratic term. Thus stationarity at one potential must be distinguished from invariance on $\HH_\omega$.
+Vanishing of $\ddc(\omega^2)$ removes the linear term, while $\ddc\omega$ still governs the quadratic term. Thus stationarity of the mass at one potential must be distinguished from its invariance on $\HH_\omega$; an explicit example is given in \cref{ex:gauduchon-persistence-torus}.
 
 \Needspace{23\baselineskip}
 \section{Mass variation on a complex torus}
 
-The surface formula suggests choosing a background whose complex Hessian is nonzero and a potential that pairs nontrivially with it. A product of elliptic curves gives an explicit example in which the mass varies along a family of smooth potentials.
+By \cref{cor:surface-mass}, the mass on a surface varies precisely through the pairing $2\int_Xu\ddc\omega$ of the potential with the complex Hessian of the background. A product of elliptic curves gives an explicit background and a family of smooth potentials for which this pairing is nonzero.
 
 \begin{example}\label{ex:torus-mass}\index{Torus!varying mass}
-Let $X=(\C/(\mathbb Z+\mathrm i\mathbb Z))^2$. For $j=1,2$, let $x_j,y_j$ be the real coordinates on its universal cover and put
+Let $X=(\C/(\mathbb Z+\mathrm i\mathbb Z))^2$. For $j=1,2$, let $z_j=x_j+\mathrm i y_j$ be the standard coordinates on the universal cover $\C^2$, with $x_j,y_j$ real, and put
 \[
- z_j=x_j+\mathrm i y_j,
- \qquad \beta_j=\frac{\mathrm i}{2\pi}\,\mathrm{d}z_j\wedge \mathrm{d}\bar z_j.
+ \beta_j=\frac{\mathrm i}{2\pi}\,\mathrm{d}z_j\wedge \mathrm{d}\bar z_j.
 \]
 The forms $\beta_j$ descend to $X$. For a real parameter $t$, define
 \[
@@ -172,42 +167,43 @@ The forms $\beta_j$ descend to $X$. For a real parameter $t$, define
  \omega=\beta_1+b(x_1)\beta_2,\qquad
  u_t=t\cos(2\pi x_1).
 \]
-Since $1\leq b\leq3$, the form $\omega$ is Hermitian. It is not closed: $\mathrm{d}\omega=\mathrm{d}b\wedge\beta_2$ is not identically zero.
+Since $1\leq b\leq3$, the form $\omega$ is Hermitian. It is not closed, because $\mathrm{d}\omega=\mathrm{d}b\wedge\beta_2$ is not identically zero.
 
-For a function $f$ of $x_1$ alone, with derivatives taken in $x_1$, one has $\ddc f=(f''/4)\beta_1$. Hence
+For a function $f$ of $x_1$ alone, one has $\ddc f=(f''/4)\beta_1$, where the prime denotes differentiation in $x_1$. Hence
 \[
  \omega_{u_t}
  =\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)\beta_1+b\beta_2>0
  \quad\text{if}\quad |t|<\pi^{-2}.
 \]
-Writing $B=\int_X\beta_1\wedge\beta_2>0$, direct expansion and integration give
+Writing $B=\int_X\beta_1\wedge\beta_2>0$, we have
 \begin{equation}\label{eq:torus-mass}
  \Mass_\omega(u_t)=(4-\pi^2t)B.
 \end{equation}
-Indeed, the average of $\cos(2\pi x_1)$ is zero and that of its square is $1/2$, while
+Indeed,
 \[
  \omega_{u_t}^2
  =2\bigl(1-\pi^2t\cos(2\pi x_1)\bigr)
-       \bigl(2+\cos(2\pi x_1)\bigr)\beta_1\wedge\beta_2.
+       \bigl(2+\cos(2\pi x_1)\bigr)\beta_1\wedge\beta_2,
 \]
+and over a period the average of $\cos(2\pi x_1)$ is zero while that of its square is $1/2$.
 \end{example}
 
-The complex torus admits K\"ahler metrics, but the chosen equation form is nonclosed. Mass variation already occurs in this setting. The Hopf example in \cref{chap:hopf} will exhibit the further failure of an upper mass bound on a non-K\"ahler manifold.
+Although the complex torus is K\"ahler, the background $\omega$ chosen above is not closed, and this already allows the mass to vary. On non-K\"ahler manifolds even an upper bound for the mass can fail; the Hopf manifolds of \cref{chap:hopf} give examples.
 
 \begin{corollary}\label{cor:mass-not-singularity-invariant}\index{Singularity type!variation of mass}
 In general, the total Monge--Amp\`ere mass is not determined by the ordinary singularity type or by the multiplier ideals, even among smooth strictly $\omega$-plurisubharmonic potentials.
 \end{corollary}
 \begin{proof}
-All the potentials $u_t$ in \cref{ex:torus-mass} are smooth on compact $X$, so they have the same singularity type. Their multiplier ideals are the structure sheaf for every positive multiple of the weight. Their masses differ by \eqref{eq:torus-mass}.
+The potentials $u_t$ of \cref{ex:torus-mass} are smooth on the compact manifold $X$, so any two of them differ by a bounded function and have the same singularity type in the sense of \cref{sec:psh-singularity-types}. For the same reason, their multiplier ideals are the structure sheaf for every positive multiple of the weight. By \eqref{eq:torus-mass}, their masses differ.
 \end{proof}
 
 \Needspace{15\baselineskip}
 \section{Comparison and mass invariance}
 
-Adding a constant to a potential leaves its measure unchanged. Consequently, a comparison inequality on strict sublevel sets would compare total masses after a suitable constant shift. The varying-mass example therefore obstructs the usual global inequality.
+The global comparison principle of K\"ahler geometry compares the Monge--Amp\`ere measures of two potentials on the set where one lies below the other. Adding a constant to a potential leaves its Monge--Amp\`ere measure unchanged, and after a large constant shift this set becomes the whole manifold. Such an inequality would therefore compare total masses, and the varying mass of \cref{ex:torus-mass} rules it out.
 
 \begin{proposition}\label{prop:comparison-forces-mass}\index{Comparison principle!mass obstruction}
-Suppose that $\omega$ has the following property for every pair $u,v\in\HH_\omega$:
+Suppose that every pair $u,v\in\HH_\omega$ satisfies
 \begin{equation}\label{eq:naive-comparison}
  \int_{\{u<v\}}\omega_v^n
  \leq\int_{\{u<v\}}\omega_u^n.
@@ -215,29 +211,31 @@ Suppose that $\omega$ has the following property for every pair $u,v\in\HH_\omeg
 Then $\Mass_\omega$ is constant on $\HH_\omega$.
 \end{proposition}
 \begin{proof}
-Fix $u,v\in\HH_\omega$. By compactness choose a constant $C$ such that $u<v+C$ everywhere. Since $\omega_{v+C}=\omega_v$, applying \eqref{eq:naive-comparison} to $u$ and $v+C$ gives $\Mass_\omega(v)\leq\Mass_\omega(u)$. Exchange $u$ and $v$ and repeat the argument to obtain the opposite inequality.
+Fix $u,v\in\HH_\omega$. By compactness there is a constant $C$ such that $u<v+C$ everywhere. Since $\omega_{v+C}=\omega_v$, applying \eqref{eq:naive-comparison} to $u$ and $v+C$ gives $\Mass_\omega(v)\leq\Mass_\omega(u)$. Exchanging the roles of $u$ and $v$ gives the opposite inequality.
 \end{proof}
 
 \begin{corollary}\label{cor:comparison-fails}
-The inequality \eqref{eq:naive-comparison} is false for general compact Hermitian backgrounds.
+The inequality \eqref{eq:naive-comparison} does not hold for every Hermitian form on a compact complex manifold.
 \end{corollary}
 \begin{proof}
-Use the torus $X$, form $\omega$, potentials $u_t$ and constant $B=\int_X\beta_1\wedge\beta_2$ of \cref{ex:torus-mass}. For $-\pi^{-2}<t<0$, set $u=0$ and $v=u_t+C$ with $C>|t|$. Then $\{u<v\}=X$, but
+Let $X$, $\omega$, $u_t$ and $B=\int_X\beta_1\wedge\beta_2$ be as in \cref{ex:torus-mass}. For $-\pi^{-2}<t<0$, set $u=0$ and $v=u_t+C$ with $C>|t|$. Then $\{u<v\}=X$, but
 \[
  \int_X\omega_v^2=(4-\pi^2t)B>4B=\int_X\omega_u^2.
 \]
 Thus this pair violates \eqref{eq:naive-comparison}.
 \end{proof}
 
-The modified comparison theorem in \cref{thm:modified-comparison} accounts for the derivatives of the background. Conversely, the mass identity in \cref{thm:mass-invariance-characterization} yields ordinary comparison for bounded potentials, as proved in \cref{uni-thm:GL-equivalence}.
+The modified comparison principle of \cref{thm:modified-comparison} compensates for the derivatives of the background. Conversely, under the equivalent conditions of \cref{thm:mass-invariance-characterization}, the ordinary comparison principle holds for bounded potentials, by \cref{uni-thm:GL-equivalence}.
 
 \Needspace{20\baselineskip}
 \section{Uniform mass bounds}
 
-Masses can vary while remaining uniformly bounded. Comparing two Hermitian forms and rescaling their potentials shows that finiteness of the upper bound depends only on $X$. Define
+Although the mass varies, it may remain bounded. Set
 \[
- \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty].
+ \Vsm(\omega)=\sup_{u\in\HH_\omega}\Mass_\omega(u)\in(0,+\infty],
 \]
+the supremum of the masses of smooth strictly $\omega$-plurisubharmonic potentials. Comparing two Hermitian forms and rescaling the potentials shows that the finiteness of this supremum depends only on $X$.
+
 \begin{proposition}\label{prop:smooth-bmp-metric}
 If $\eta$ is another Hermitian form and $\omega\leq C\eta$ for a constant $C>0$, then
 \[
@@ -246,11 +244,11 @@ If $\eta$ is another Hermitian form and $\omega\leq C\eta$ for a constant $C>0$,
 In particular, finiteness of $\Vsm$ is independent of the Hermitian form.
 \end{proposition}
 \begin{proof}
-For $u\in\HH_\omega$, the function $u/C$ belongs to $\HH_\eta$, because $C\eta+\ddc u$ is positive and dominates $\omega+\ddc u$. For positive Hermitian matrices $A\leq B$, all eigenvalues of $A^{-1/2}BA^{-1/2}$ are at least one, so $\det A\leq\det B$. Applying this pointwise gives monotonicity of the top exterior power. Therefore
+Let $u\in\HH_\omega$. Since $C\eta+\ddc u\geq\omega+\ddc u>0$, the function $u/C$ belongs to $\HH_\eta$. The top exterior power is monotone on positive $(1,1)$-forms: for positive Hermitian matrices $A\leq B$, all eigenvalues of $A^{-1/2}BA^{-1/2}$ are at least one, so $\det A\leq\det B$. Applying this pointwise gives
 \[
  \int_X(\omega+\ddc u)^n
  \leq C^n\int_X\bigl(\eta+\ddc(u/C)\bigr)^n
  \leq C^n\Vsm(\eta).
 \]
-Take the supremum over $u$. Any two Hermitian forms on compact $X$ are comparable in both directions, proving the last assertion.
+Taking the supremum over $u$ proves the inequality. Since any two Hermitian forms on the compact manifold $X$ are comparable in both directions, the last assertion follows.
 \end{proof}

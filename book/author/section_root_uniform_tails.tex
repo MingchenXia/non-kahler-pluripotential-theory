@@ -1,12 +1,11 @@
 \Needspace{14\baselineskip}
 \subsection{Approximation by bounded density roots}\label{subsec:bounded-root-approximation}
 
-Bounded approximation in the norm of $\mathcal D_h$ requires the tails to tend to zero uniformly over all Gauduchon tests. Denote the closure of bounded functions by $\mathcal D_h^0$. For every $r>n$, the lower-density estimate in \cref{thm:lp-potential-estimate}, with exponent $r/n$, and \cref{prop:individual-normalizer-lp} give
-
+Bounded functions are dense in $\mathcal D_h$ for the $L^n$ norm, but not obviously for the norm $\|\cdot\|_{\mathcal D_h}$. Let $\mathcal D_h^0$ denote the closure of $L^\infty$ in $\mathcal D_h$ for this norm. We show that a function belongs to $\mathcal D_h^0$ exactly when its tails are small uniformly over all Gauduchon tests. The basic tool is a subcritical estimate. For every $r>n$,
 \begin{equation}\label{eq:root-subcritical-bound}
- \rho_h(p)\leq C_r\|p\|_{L^r}\qquad(p\in L^r).
+ \rho_h(p)\leq C_r\|p\|_{L^r}\qquad(p\in L^r),
 \end{equation}
-The constant depends on $h$, the reference volume and $r$, but not on $p$.
+where the constant $C_r$ depends on $h$, the reference volume and $r$, but not on $p$. Indeed, for nonzero $p\in L^r$ the density $|p|^n$ belongs to $L^{r/n}$, so $b_h(|p|^n)=c_h(|p|^n)$ by \cref{prop:individual-normalizer-lp}, and the lower-density estimate of \cref{thm:lp-potential-estimate}, with exponent $r/n$, gives $c_h(|p|^n)\||p|^n\|_{L^{r/n}}\geq c_{r/n}>0$.
 
 \begin{proposition}\label{prop:root-uniform-tails}\index{Uniform tails!root density}
 For $p\in\mathcal D_h$, the following conditions are equivalent:
@@ -15,12 +14,13 @@ For $p\in\mathcal D_h$, the following conditions are equivalent:
 \item $\rho_h(|p|\mathbf1_{\{|p|>K\}})\to0$ as $K\to\infty$;
 \item whenever $|q_j|\leq|p|$ and $q_j\to0$ in measure, one has $\|q_j\|_{\mathcal D_h}\to0$.
 \end{enumerate}
-Equivalently, the second condition is
+By \eqref{eq:integrable-gauduchon-root}, the second condition can be written as
 \[
  \sup_{\gamma\text{ Gauduchon}}
-       L_{h,\gamma}(|p|\mathbf1_{\{|p|>K\}})\longrightarrow0.
+       L_{h,\gamma}(|p|\mathbf1_{\{|p|>K\}})\longrightarrow0
+ \qquad(K\to\infty).
 \]
-The space $\mathcal D_h^0$ is a closed order ideal. It contains $L^r$ for every $r>n$, and smooth functions are dense in it. If $v_-(h)>0$, then $\mathcal D_h^0=\mathcal D_h=L^n$.
+The space $\mathcal D_h^0$ is a closed order ideal in $\mathcal D_h$. It contains $L^r$ for every $r>n$, and smooth functions are dense in it. If $v_-(h)>0$, then $\mathcal D_h^0=\mathcal D_h=L^n$.
 \end{proposition}
 \begin{proof}
 For $K>0$, set $p_K=\operatorname{sgn}(p)\min(|p|,K)$. Then $|p-p_K|=(|p|-K)_+$ and
@@ -28,16 +28,16 @@ For $K>0$, set $p_K=\operatorname{sgn}(p)\min(|p|,K)$. Then $|p-p_K|=(|p|-K)_+$ 
  (|p|-K)_+\leq |p|\mathbf1_{\{|p|>K\}},\qquad
  |p|\mathbf1_{\{|p|>2K\}}\leq2(|p|-K)_+.
 \]
-The $L^n$ tails tend to zero. These inequalities show that the second condition is equivalent to $p_K\to p$ in $\mathcal D_h$. Conversely, if $a$ is bounded and $K\geq\|a\|_\infty$, then $(|p|-K)_+\leq|p-a|$. Approximation by bounded $a$ therefore proves the equivalence of the first two conditions.
+Since the $L^n$ norms of the tails tend to zero, these inequalities and the monotonicity of $\rho_h$ show that the second condition is equivalent to $p_K\to p$ in $\mathcal D_h$; in particular, it implies the first. Conversely, if $a$ is bounded and $K\geq\|a\|_{L^\infty}$, then $(|p|-K)_+\leq|p-a|$, so $\|p-p_K\|_{\mathcal D_h}\leq\|p-a\|_{\mathcal D_h}$. Approximating $p$ by bounded functions $a$ shows that the first condition implies $p_K\to p$, hence the second.
 
-Assume the second condition and let $q_j$ be as in the third. Fix $K$. On $\{|p|\leq K\}$, the functions $q_j$ are uniformly bounded and tend to zero in measure, hence in $L^{2n}$. Equation~\eqref{eq:root-subcritical-bound} makes the root norm of this part tend to zero. On the complementary set it is at most $\rho_h(|p|\mathbf1_{\{|p|>K\}})$. Let first $j$ and then $K$ tend to infinity. This proves $\rho_h(q_j)\to0$. The same split, or dominated convergence in measure, gives $\|q_j\|_{L^n}\to0$. Conversely, apply the third condition to $q_j=|p|\mathbf1_{\{|p|>j\}}$.
+Assume the second condition, and let $q_j$ be as in the third. Fix $K$. On $\{|p|\leq K\}$, the functions $q_j$ are bounded by $K$ and tend to zero in measure, hence in $L^{2n}$; by \eqref{eq:root-subcritical-bound} with $r=2n$, the root functional of $q_j\mathbf1_{\{|p|\leq K\}}$ tends to zero. On the complementary set, $\rho_h(q_j\mathbf1_{\{|p|>K\}})\leq\rho_h(|p|\mathbf1_{\{|p|>K\}})$. Letting first $j$ and then $K$ tend to infinity gives $\rho_h(q_j)\to0$, and dominated convergence gives $\|q_j\|_{L^n}\to0$. Conversely, the third condition applied to $q_j=|p|\mathbf1_{\{|p|>j\}}$ gives the second.
 
-The Gauduchon version is \eqref{eq:integrable-gauduchon-root}. Solidity transfers the tail condition from $p$ to every function dominated by $|p|$, proving the order-ideal assertion. For $p\in L^r$, its bounded truncations converge in $L^r$, hence in $\mathcal D_h$ by \eqref{eq:root-subcritical-bound}. Bounded functions admit smooth $L^{2n}$ approximations, which converge in $\mathcal D_h$ by the same estimate; smooth functions are thus dense in the closure. Under positive lower mass, \cref{prop:individual-density-banach} identifies the $\mathcal D_h$ and $L^n$ norms up to equivalence, proving the last assertion.
+Since the second condition passes from $p$ to every function dominated by $|p|$, the space $\mathcal D_h^0$ is an order ideal; it is closed by definition. For $p\in L^r$ with $r>n$, the truncations $p_K$ converge to $p$ in $L^r$, hence in $\mathcal D_h$ by \eqref{eq:root-subcritical-bound}. Bounded functions can be approximated in $L^{2n}$ by smooth functions, which then converge in $\mathcal D_h$ by the same estimate; hence smooth functions are dense in $\mathcal D_h^0$. Under positive lower mass, \cref{prop:individual-density-banach} shows that $\mathcal D_h=L^n$ with an equivalent norm, and bounded functions are dense in $L^n$; hence $\mathcal D_h^0=\mathcal D_h=L^n$.
 \end{proof}
 
-The metric comparisons in \cref{prop:individual-threshold-backgrounds} identify $\mathcal D_h^0$ for different Hermitian metrics. Its defining closure is therefore intrinsic to the compact complex manifold and the identification of density roots. The tail condition controls the scalar threshold under approximation: if $p_j\to p\ne0$ in $\mathcal D_h$, then
+By \cref{prop:individual-threshold-backgrounds}, the space $\mathcal D_h^0$ does not depend on the choice of the Hermitian form $h$. Convergence in $\mathcal D_h$ controls the threshold: if $p_j\to p\ne0$ in $\mathcal D_h$, then
 \[
  |\rho_h(p_j)-\rho_h(p)|\leq\rho_h(p_j-p)\longrightarrow0,
  \qquad b_h(|p_j|^n)\longrightarrow b_h(|p|^n)>0.
 \]
-The same tail estimate gives a uniform exponential-damping modulus and scalar error bounds in \cref{prop:exponential-root-tail-modulus}. It does not, by itself, give capacity convergence of equation potentials. When lower mass vanishes, equality of $\mathcal D_h^0$ and $\mathcal D_h$ remains a separate question.
+For $p\in\mathcal D_h^0$, the uniform tail condition also gives a uniform modulus for exponential damping and error bounds for the scalars of the exponential equations; see \cref{prop:exponential-root-tail-modulus}. It does not by itself give capacity convergence of the solutions. We do not know whether $\mathcal D_h^0=\mathcal D_h$ when $v_-(h)=0$.

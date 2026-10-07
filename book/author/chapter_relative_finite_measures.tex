@@ -4,42 +4,45 @@
 \begingroup
 \predisplaypenalty=10000
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a smooth semipositive big real $(1,1)$-form $\theta$ and a model reference $\varphi$ satisfying \eqref{eq:als-model-condition}.
+Let $X$ be a connected compact complex manifold of dimension $n\geq1$, let $\theta$ be a smooth semipositive big real $(1,1)$-form on $X$, and let $\varphi\in\PSH(X,\theta)$ be a model reference satisfying \eqref{eq:als-model-condition}: $\varphi$ is an envelope fixed point, $P_\theta[\varphi]=\varphi$ in the sense of \cref{def:singularity-envelope}, and $P_{\varepsilon\theta}(\varphi)\not\equiv-\infty$ for some $\varepsilon\in(0,1)$.
 
-Approximating a finite non-pluripolar measure on $X$ gives solutions of the ordinary type of $\varphi$, but their bounded-difference constants need not remain uniform. Relative envelopes retain a singularity condition at the limit: stretching away from $\varphi$ by any finite factor must leave a genuine envelope.
-
-Positive lower mass prevents these envelopes from collapsing. Disjoint contact sets let one finite measure control arbitrarily many rooftop obstacles. The resulting common lower envelope preserves the relative class and controls deep sublevel tails, so capacity convergence passes to the undamped measures. Exponential comparison supplies a common envelope when bounded carrier measures vary.
-
-A positive exponent determines a unique potential. At exponent zero the geometry determines a unique scalar, while smooth projective examples admit several normalized potentials for the same measure in a nonclosed Hermitian background.
-
-Unless explicitly stated otherwise, assume
+Throughout this chapter, unless explicitly stated otherwise, we assume that $\theta$ has positive lower mass:
 \begin{equation}\label{eq:relative-positive-lower-volume}
  v_-(\theta)>0.
 \end{equation}
-Fix $\varepsilon\in(0,1)$ with $P_{\varepsilon\theta}(\varphi)$ genuine, and write
+Here $v_-(\theta)=\underline{\operatorname{vol}}_\theta(0)$ is the infimum of $\int_X\mathrm{MA}_\theta(v)$ over all bounded $v\in\PSH(X,\theta)$; see \cref{def:bmp} and the discussion following \cref{def:singularity-volumes}. The bounded mass property is not assumed.
+
+Given a nonzero finite non-pluripolar measure $\mu$, we look for solutions of $\mathrm{MA}_\theta(u)=\mathrm{e}^{\lambda u}\mu$, $\lambda>0$, and of $\mathrm{MA}_\theta(u)=c\mu$, $c>0$, with the singularities of $\varphi$. Approximating $\mu$ by measures with $L^p$ densities gives solutions of the ordinary singularity type of $\varphi$ by \cref{thm:als-prescribed-lp}, but the constants in their bounds $|u-\varphi|\leq C$ need not remain uniform, so a limit can leave this type. What survives the limit is membership in the relative envelope class of \cref{def:relative-envelope-class}: stretching the potential away from $\varphi$ by any finite factor still leaves an envelope that is not identically $-\infty$.
+
+Positive lower mass of $\theta$ prevents these stretched envelopes from collapsing. On disjoint contact sets, one finite measure controls the rooftop envelopes of arbitrarily many potentials. Consequently, a sequence of potentials whose measures are dominated by a fixed finite measure has, after extraction, a common lower envelope in the relative class. This envelope keeps limits in the class and controls the measures of deep sublevel sets, so convergence in capacity passes to the Monge--Amp\`ere measures themselves. When the dominating measures are bounded Monge--Amp\`ere measures that vary with the potentials, exponential comparison provides the common envelope instead.
+
+For a positive exponent the solution is unique. At exponent zero the scalar is unique, but the normalized potential need not be: on projective manifolds with nonclosed Hermitian backgrounds, the same smooth measure can have several smooth normalized solutions (\cref{cor:analytic-nonuniqueness-envelope-class}).
+
+Since bounded mass is not assumed, members of the relative class may have infinite extended mass; the envelope constructions of \cref{sec:relative-envelope-room} remain available for them. The solutions constructed below have finite mass because the right-hand sides of their equations are finite.
+
+Fix $\varepsilon\in(0,1)$ with $P_{\varepsilon\theta}(\varphi)\not\equiv-\infty$, and write
 \[
  \mathcal E_\varphi=\mathcal E_{\mathrm{env}}(X,\theta,\varphi),
  \qquad \mathcal E_0=\mathcal E_{\mathrm{env}}(X,\theta,0),
  \qquad \mu_u=\mathrm{MA}^{\mathrm{ext}}_\theta(u).
 \]
-Fix also a Hermitian form $\omega\geq\theta$ for capacity and a smooth positive volume form $\mathrm{d}V$ for $L^1$ convergence. The envelope constructions of \cref{sec:relative-envelope-room} remain available when members of $\mathcal E_\varphi$ have infinite mass. The solutions below have finite mass because their equations have finite right-hand sides.
+Here $\mathcal E_{\mathrm{env}}(X,\theta,\psi)$ denotes the relative envelope class of a reference $\psi$ (\cref{def:relative-envelope-class}), and $\mathrm{MA}^{\mathrm{ext}}_\theta$ is the extended non-pluripolar Monge--Amp\`ere measure of \cref{thm:arbitrary-extended-ma}, a positive measure whose total mass may be infinite. As in \cref{def:singularity-order}, $u\preceq v$ means $u\leq v+C$ for a constant $C$, and $u\sim v$ means $u\preceq v\preceq u$. For $u,w\in\PSH(X,\theta)$ and $b\geq1$, we use the stretching envelopes $Q_b(u,w)=P_\theta(bu-(b-1)w)$ introduced before \cref{def:relative-envelope-class}, and the rooftop envelopes $P_\theta(u_1,\ldots,u_N)=P_\theta(\min_iu_i)$. Fix also a Hermitian form $\omega\geq\theta$ for capacity and a smooth positive volume form $\mathrm{d}V$ for $L^1$ convergence.
 
-For $a\in\mathcal E_\varphi$, \cref{prop:relative-envelope-equality} gives
+For $a\in\mathcal E_\varphi$, \cref{prop:relative-envelope-equality} gives $P_\theta[a]=P_\theta[\varphi]=\varphi$. Since $a-\sup_Xa$ is one of the competitors defining $P_\theta[a]$, it follows that
 \begin{equation}\label{eq:relative-normalized-model-bound}
  a-\sup_Xa\leq P_\theta[a]=\varphi.
 \end{equation}
-The inequality follows by using $a-\sup_Xa$ as a normalized envelope competitor.
 
 \clearpage
 \section{Equations for finite measures}
 \label{sec:relative-general-setting}
 
-For a fixed positive exponent, the right-hand side changes under translation of the potential. At exponent zero, translation leaves the equation unchanged, and a positive scalar is needed to normalize the prescribed measure.
+For a positive exponent, the right-hand side $\mathrm{e}^{\lambda u}\mu$ changes when $u$ is translated, and this fixes the additive constant. At exponent zero, translation leaves the equation unchanged; instead, a positive scalar in front of the prescribed measure is needed to match its mass.
 
 \Needspace{15\baselineskip}
 \begin{theorem}
 \label{thm:als-general-measure}\index{Monge--Ampere equation@Monge--Amp\`ere equation!relative finite measures}
-Let $\mu$ be a nonzero finite non-pluripolar measure. Then:
+Let $\mu$ be a nonzero finite non-pluripolar measure on $X$. Then:
 \begin{enumerate}
 \item For every $\lambda>0$ there is a unique
 $u\in\mathcal E_\varphi$ with $\mu_u=\mathrm{e}^{\lambda u}\mu$.
@@ -47,12 +50,12 @@ $u\in\mathcal E_\varphi$ with $\mu_u=\mathrm{e}^{\lambda u}\mu$.
 \end{enumerate}
 \end{theorem}
 
-The proof first treats the minimal reference in \cref{thm:general-measure-minimal}; those solutions then serve as comparison potentials in \cref{sec:general-measure-relative}. For general measure data, the conclusion is membership in $\mathcal E_\varphi$, rather than bounded difference from $\varphi$.
+The theorem is proved in \cref{sec:general-measure-relative}. The case of the reference zero, which has minimal singularities because $\theta\geq0$, is treated first in \cref{thm:general-measure-minimal}; its solutions then serve as comparison potentials for the reference $\varphi$. For general measures the theorem asserts membership in $\mathcal E_\varphi$, not a bounded difference from $\varphi$.
 
 \section{Domination}
 \label{sec:relative-finite-domination}
 
-We first compare with one finite measure. Contact support bounds the measures of stretched envelopes by that fixed measure, and its small tails exclude collapse. The stretching envelopes $Q_b$ are those of \cref{def:relative-envelope-class}; the uniform lower bound from \cref{thm:relative-uniform-mass-lower} is
+The domination principle compares a potential $u\in\mathcal E_\varphi$ with a potential $v$ whose measure is larger on $\{u<v\}$. We first treat the case in which $\mu_u$ is finite. Stretching $u$ away from $\max(u,v)$ produces envelopes whose measures are bounded, by contact support, by the fixed measure $\mu_u$; the small tails of this finite measure then exclude collapse. By \cref{thm:relative-uniform-mass-lower} and \eqref{eq:relative-positive-lower-volume}, the uniform lower mass bound is
 \[
  \mu_a(X)\geq\kappa:=(1-\varepsilon)^n v_-(\theta)>0
  \qquad(a\in\mathcal E_\varphi).
@@ -66,28 +69,28 @@ Let $u\in\mathcal E_\varphi$ have finite $\mu_u$, and let $v\in\PSH(X,\theta)$ s
 then $u\geq v$.
 \end{theorem}
 \begin{proof}
-Replace $v$ by $w=\max(u,v)$. Upward stability gives $w\in\mathcal E_\varphi$ and locality gives $\mu_u\leq c\mu_w$ on $\{u<w\}$. For $b>1$ put $q_b=Q_b(u,w)\in\mathcal E_\varphi$. It satisfies $q_b\leq u$, and its measure is carried by
+It suffices to prove $u\geq w$ for $w=\max(u,v)$. Upward stability (\cref{prop:relative-elementary}) gives $w\in\mathcal E_\varphi$, and locality gives $\mu_u\leq c\mu_w$ on $\{u<w\}$. For $b>1$ put $q_b=Q_b(u,w)$, which belongs to $\mathcal E_\varphi$ by \cref{lem:relative-stretch-closure}. It satisfies $q_b\leq u$, and by contact support its measure is carried by
 \[
  D_b=\{b^{-1}q_b+(1-b^{-1})w=u\}.
 \]
-On $D_b$, positivity and ordered contact give
+On $D_b$ the potential $b^{-1}q_b+(1-b^{-1})w$ touches $u$ from below, so positivity of mixed products and ordered contact give
 \[
  b^{-n}\mu_{q_b}+(1-b^{-1})^n\mu_w\leq\mu_u.
 \]
-Choose $b$ so large that $(1-b^{-1})^n>c$. On $D_b\cap\{u<w\}$ the preceding inequality forces both $\mu_w$ and $\mu_{q_b}$ to vanish. To justify this even when $\mu_w(X)=+\infty$, restrict first to common finite truncation levels of the potentials. On each such set the measures are finite and subtraction is legitimate. Exhausting the complements of the pole sets proves the assertion for the extended measures.
+Choose $b$ so large that $(1-b^{-1})^n>c$. Comparing this inequality with $\mu_u\leq c\mu_w$ on $D_b\cap\{u<w\}$ forces both $\mu_w$ and $\mu_{q_b}$ to vanish there. Since $\mu_w(X)$ may be infinite, this subtraction is first carried out on common finite truncation levels of the potentials, where all measures are finite; exhausting the complements of the pole sets then gives the assertion for the extended measures.
 
-It follows that $\mu_{q_b}$ is carried by $D_b\cap\{u=w\}\subseteq\{q_b=u\}$. Since $q_b\leq u$, another application of ordered contact gives the bound with coefficient one
+It follows that $\mu_{q_b}$ is carried by $D_b\cap\{u=w\}\subseteq\{q_b=u\}$. Since $q_b\leq u$, ordered contact applied once more gives
 \begin{equation}\label{eq:relative-contact-fixed-measure}
- \mu_{q_b}\leq\mathbf1_{\{q_b=u\}}\mu_u.
+ \mu_{q_b}\leq\mathbf1_{\{q_b=u\}}\mu_u,
 \end{equation}
-This coefficient is independent of $b$.
+with coefficient one, independent of $b$.
 
-Along integers $b\to\infty$, the potentials $q_b$ decrease. If they collapsed identically to $-\infty$, \cref{thm:normalized-compactness} would give $M_b:=\sup_Xq_b\to-\infty$. But \eqref{eq:relative-contact-fixed-measure} would then imply
+As $b\to\infty$ through the integers, the potentials $q_b$ decrease, because the obstacles $bu-(b-1)w=u-(b-1)(w-u)$ do. Suppose that they decreased to $-\infty$ identically. Then \cref{thm:normalized-compactness} would give $M_b:=\sup_Xq_b\to-\infty$, and \eqref{eq:relative-contact-fixed-measure} would imply
 \[
  \kappa\leq\int_X\mu_{q_b}
- \leq\mu_u(\{u\leq M_b\})\longrightarrow0.
+ \leq\mu_u(\{u\leq M_b\})\longrightarrow0,
 \]
-Here finiteness of $\mu_u$ and its vanishing on the pole set are exactly what gives the limit. This is impossible. Hence the decreasing limit $q$ is genuine. On $\{u<w-a\}$, for any $a>0$, the defining inequality gives $q_b\leq u-(b-1)a$. Outside the poles its limit is $-\infty$ there. Such a set has smooth volume zero because $q$ is genuine. Thus $u\geq w$ almost everywhere, and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. This proves the theorem.
+because $\mu_u$ is finite and does not charge the pole set of $u$. This is impossible, so the decreasing limit $q$ is not identically $-\infty$. Now fix $a>0$. On $\{u<w-a\}$, the defining inequality of $q_b$ gives $q_b\leq u-(b-1)a$, so $q=-\infty$ at every point of this set where $u$ is finite. Since neither $q$ nor $u$ is identically $-\infty$, their pole sets have zero smooth volume, and hence so does $\{u<w-a\}$. Thus $u\geq w$ almost everywhere, and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. In particular $u\geq v$.
 \end{proof}
 
 \input{author/section_relative_extended_domination}
