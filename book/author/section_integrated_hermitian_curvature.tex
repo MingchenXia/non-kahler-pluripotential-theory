@@ -1,0 +1,127 @@
+\section{Holomorphic sectional curvature}
+\label{sec:integrated-hermitian-curvature}
+
+The curvature conditions above test a tangent direction and a fiber vector separately. For a metric on the tangent bundle, holomorphic sectional curvature tests the same vector in both places. Averaging these diagonal evaluations controls a symmetrized curvature trace. A second trace occurs when one differentiates the trace of the metric itself; their difference contains torsion and an exact form. With a K\"ahler metric for the contraction, integration removes the exact form and the torsion terms cancel. This gives an obstruction even when the metric whose curvature is tested is not closed.
+
+In this section, $g$ is a K\"ahler metric on $X$, with form $\omega_g$, and $h$ is any smooth Hermitian metric on $T^{1,0}X$, with form $\omega_h$. We retain $n\geq2$. The unscaled Chern curvature convention of \cref{subsec:projective-complement-curvature-index} gives the coefficients
+\[
+ R^h_{i\bar j k\bar l}
+ =-\partial_i\partial_{\bar j}h_{k\bar l}
+   +h^{p\bar q}(\partial_i h_{k\bar q})
+                       (\partial_{\bar j}h_{p\bar l}).
+\]
+The \emph{Chern holomorphic sectional curvature} is
+\begin{equation}\label{eq:chern-holomorphic-sectional-curvature}\index{Holomorphic sectional curvature!Chern connection}
+ H_h(x,[v])=\frac{R^h(v,\bar v,v,\bar v)}{|v|_h^4},
+ \qquad 0\ne v\in T_x^{1,0}X.
+\end{equation}
+It is \emph{quasi-negative} if it is nonpositive everywhere and strictly negative in every direction at some point. Put
+\[
+ u=\operatorname{tr}_g h,\qquad
+ q=\operatorname{tr}\bigl((g^{-1}h)^2\bigr).
+\]
+In a $g$-unitary frame, define the real contractions
+\[
+ Q_g(h)=\sum_{i,k}R^h_{i\bar i k\bar k},\qquad
+ B_g(h)=\sum_{i,k}R^h_{i\bar k k\bar i},\qquad
+ \mathcal R_g(h)=\tfrac12\bigl(Q_g(h)+B_g(h)\bigr).
+\]
+These expressions are invariant under a change of unitary frame. For a general $h$, the two traces $Q_g(h)$ and $B_g(h)$ can differ.
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:hermitian-sectional-average}\index{Chern curvature!symmetrized trace}
+At a point where $H_h\leq-\kappa$ for some $\kappa\geq0$, one has
+\[
+ \mathcal R_g(h)\leq-\frac{\kappa}{2}(u^2+q).
+\]
+In particular, nonpositive holomorphic sectional curvature gives $\mathcal R_g(h)\leq0$.
+\end{lemma}
+\begin{proof}
+In a $g$-unitary frame, let $Z_1,\ldots,Z_n$ be independent standard complex Gaussian variables, with density $\pi^{-1}\mathrm e^{-|z|^2}$ on $\mathbb C$. Their second and fourth moments are $\mathbb E|Z_i|^2=1$ and $\mathbb E|Z_i|^4=2$. Independence and invariance under coordinate phases give
+\[
+ \mathbb E[Z_i\overline{Z_j}Z_k\overline{Z_l}]
+      =\delta_{ij}\delta_{kl}+\delta_{il}\delta_{kj}.
+\]
+Thus $\mathbb E R^h(Z,\bar Z,Z,\bar Z)=Q_g(h)+B_g(h)$ and
+$\mathbb E|Z|_h^4=u^2+q$. Taking expectations in the homogeneous inequality
+$R^h(Z,\bar Z,Z,\bar Z)\leq-\kappa|Z|_h^4$ proves the result.
+\end{proof}
+
+Let $A=\nabla^h-\nabla^g$ be the difference of the Chern connections, viewed as a tensor with two holomorphic covariant indices and a tangent-bundle value. Write
+\[
+ S(v,w)=\tfrac12\bigl(A(v,w)+A(w,v)\bigr),\qquad
+ T(v,w)=A(v,w)-A(w,v).
+\]
+Since $g$ is K\"ahler, $T$ is the Chern torsion of $h$. Norms such as
+$|S|_{g,h}^2=\sum_{i,k}|S(e_i,e_k)|_h^2$ use $g$ in the covariant indices and $h$ in the value. Let $r_{i\bar j}$ be the coefficients of the Ricci form
+$\operatorname{Ric}(g)=-\mathrm i\partial\bar\partial\log\det(g_{i\bar j})$, and in a $g$-unitary frame set
+\[
+ I_g(h)=\sum_{i,k}r_{i\bar k}h_{k\bar i},\qquad
+ \mathrm dV_g=\frac{\omega_g^n}{n!},\qquad
+ P_g f=\operatorname{tr}_{\omega_g}(\mathrm i\partial\bar\partial f).
+\]
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:integrated-hermitian-chern-lu}\index{Chern curvature!integrated trace identity}
+The two metrics satisfy
+\begin{equation}\label{eq:integrated-hermitian-chern-lu}
+ \int_X\bigl(|S|_{g,h}^2+I_g(h)-\mathcal R_g(h)\bigr)\,\mathrm dV_g=0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+We first compute the exact term that distinguishes the two curvature traces. Define
+\begin{align*}
+ D_{i\bar j k\bar l}
+ ={}&\partial_i\partial_{\bar j}h_{k\bar l}
+     +\partial_k\partial_{\bar l}h_{i\bar j}\\
+   &-\partial_i\partial_{\bar l}h_{k\bar j}
+     -\partial_k\partial_{\bar j}h_{i\bar l}.
+\end{align*}
+This is a tensor: putting holomorphic differentials first gives
+\[
+ \mathrm i\partial\bar\partial\omega_h
+ =\sum_{i<k,\,j<l}D_{i\bar j k\bar l}
+          \,\mathrm dz^i\wedge\mathrm dz^k
+             \wedge\mathrm d\bar z^j\wedge\mathrm d\bar z^l.
+\]
+For $D_g=\sum_{i,k}D_{i\bar i k\bar k}$ in a $g$-unitary frame, expansion of the wedge product gives
+\[
+ D_g\,\mathrm dV_g
+ =2\mathrm i\partial\bar\partial\omega_h
+                    \wedge\frac{\omega_g^{n-2}}{(n-2)!}.
+\]
+Indeed, each pair $i<k$ contributes $D_{i\bar i k\bar k}\mathrm dV_g$ to the wedge product and occurs twice in the contraction. Closedness of $\omega_g$ and Stokes' theorem therefore give $\int_XD_g\,\mathrm dV_g=0$.
+
+The four-term antisymmetrization of the curvature formula is
+\begin{align*}
+ &R^h_{i\bar j k\bar l}+R^h_{k\bar l i\bar j}
+  -R^h_{i\bar l k\bar j}-R^h_{k\bar j i\bar l}\\
+ &\hspace{3em}=h_{p\bar q}T^p_{ik}\overline{T^q_{jl}}
+                         -D_{i\bar j k\bar l}.
+\end{align*}
+The second derivatives give $-D$, and the quadratic terms give the squared connection difference in the two skew indices. Contracting gives
+$2(Q_g(h)-B_g(h))=|T|_{g,h}^2-D_g$, hence
+\[
+ Q_g(h)=\mathcal R_g(h)+\tfrac14|T|_{g,h}^2-\tfrac14D_g.
+\]
+
+In $g$-normal holomorphic coordinates, the first derivatives of $g$ vanish. Differentiating $u=g^{k\bar l}h_{k\bar l}$ twice, the inverse-metric term is $I_g(h)$ by the K\"ahler curvature symmetries of $g$, while the second derivatives of $h$ give $-Q_g(h)+|A|_{g,h}^2$. Thus
+\begin{align*}
+ P_g u&=|A|_{g,h}^2+I_g(h)-Q_g(h)\\
+      &=|S|_{g,h}^2+I_g(h)-\mathcal R_g(h)+\tfrac14D_g,
+\end{align*}
+where symmetric and skew tensors are orthogonal and
+$|A|_{g,h}^2=|S|_{g,h}^2+|T|_{g,h}^2/4$. Integrating removes both $P_g u$ and $D_g$, proving \eqref{eq:integrated-hermitian-chern-lu}.
+\end{proof}
+
+\Needspace{10\baselineskip}
+\begin{corollary}\label{cor:nonnegative-ricci-sectional-obstruction}\index{Holomorphic sectional curvature!Ricci obstruction}
+Suppose that $\operatorname{Ric}(g)\geq0$. Every Hermitian tangent metric $h$ with $H_h\leq0$ satisfies $\operatorname{Ric}(g)=0$ and $H_h=0$ in every direction. In particular, $X$ admits no Hermitian tangent metric with quasi-negative Chern holomorphic sectional curvature.
+\end{corollary}
+\begin{proof}
+The Ricci assumption gives $I_g(h)\geq0$, and \cref{lem:hermitian-sectional-average} gives $-\mathcal R_g(h)\geq0$. All three continuous terms in \eqref{eq:integrated-hermitian-chern-lu} are nonnegative, so each vanishes everywhere. A positive definite $h$ pairs strictly positively with every nonzero semipositive Ricci matrix; hence $I_g(h)=0$ forces $\operatorname{Ric}(g)=0$.
+
+At each point, the Gaussian expectation in the averaging proof is now zero. Its integrand $R^h(Z,\bar Z,Z,\bar Z)$ is nonpositive. If it were negative in one direction, continuity and the strictly positive Gaussian density would make its expectation negative. It is therefore zero in every direction, which gives $H_h=0$ and excludes quasi-negativity.
+\end{proof}
+
+For the Ricci-flat surfaces of \cref{sec:ricci-flat-surface-rc}, this obstruction concerns all Hermitian tangent metrics, including nonclosed ones. It coexists with the RC-positive metric of \cref{thm:ricci-flat-surface-rc-positive}: that condition allows the positive tangent direction to depend on the fiber vector, while holomorphic sectional curvature evaluates the same direction twice.
