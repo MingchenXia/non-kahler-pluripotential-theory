@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint 529 preserves the latest author presentation and OT updates and integrates the checked positive left limits. Complete final reconstruction and synchronization, then independently review S04 closed-factor roots and the remaining incoming papers; continue the selected Hermitian primary-proof review. See [the scoped continuation record](latest-author-left-limit-integration-529.md).
+Current continuation: checkpoint 530 integrates the checked incoming S04 closed-factor equations and root subspace; general S04/P07 remain open. Final source reconstruction passes; synchronize and independently review P05, S05, S07 and S06 and continue selected primary proofs/arXiv intake. See [the scoped integration](closed-factor-integration-530.md).
 
 ## Greatest exponential left-limit review 526
 

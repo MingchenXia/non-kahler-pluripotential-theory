@@ -1,0 +1,68 @@
+\subsection{Closed factors and arbitrary integrable densities}
+\label{subsec:closed-factor-equations}
+
+The preceding examples use an explicit potential on projective space. On a closed factor, the mass bound from Stokes' theorem instead makes every threshold subsolution exact. This gives equations for arbitrary integrable densities on that factor, with no assumption that they are bounded below.
+
+For this subsection let $(X_0,h_0)$ be any connected compact Hermitian manifold of dimension $m\geq1$, and let $(Y,\kappa)$ be connected compact K\"ahler of dimension $k\geq2$, normalized by $\int_Y\kappa^k=1$. On $X=X_0\times Y$ put
+\[
+ N=m+k,\qquad H=h_0+\kappa,\qquad
+ C=\binom Nm,\qquad V_0=\int_{X_0}h_0^m,\qquad c_0=CV_0.
+\]
+Forms and functions on the factors are pulled back when used on $X$. For any smooth positive probability volume form $\mathrm dV$ on $X$, put
+\[
+ \mu=V_0^{-1}h_0^m\wedge\kappa^k,\qquad
+ R=\frac\mu{\mathrm dV},\qquad a=\min_XR>0,\qquad A=\max_XR.
+\]
+
+\Needspace{12\baselineskip}
+\begin{theorem}\label{thm:closed-factor-integrable-equation}\index{Monge--Ampere equation@Monge--Amp\`ere equation!closed factor}\index{Normalization scalar!closed factor}
+For every nonzero nonnegative $g\in L^1(Y,\kappa^k)$, with $M_g=\int_Yg\kappa^k$, one has
+\[
+ b_H(Rg)=\frac{c_0}{M_g}.
+\]
+There is $v\in\PSH(Y,\kappa)$ with $\sup_Yv=0$ and $\int_Y\mathrm{MA}^{\mathrm{ext}}_\kappa(v)=1$ whose pullback $u$ satisfies
+\[
+ \mathrm{MA}^{\mathrm{ext}}_H(u)
+       =\frac{c_0}{M_g}Rg\,\mathrm dV,\qquad
+ \int_X\mathrm{MA}^{\mathrm{ext}}_H(u)=c_0.
+\]
+If $v_-(h_0)=0$, then $v_-(H)=0$ and $H$ is not closed.
+\end{theorem}
+\begin{proof}
+We first compute the scalars of bounded densities, then use the closed factor's mass bound to identify the equation for an unbounded density.
+
+\emph{Step 1: bounded densities.} If $g$ is bounded and nonzero, \cref{thm:kn-continuous} on $Y$ gives a bounded continuous $v$ with $\mathrm{MA}_\kappa(v)=c_\kappa(g)g\kappa^k$. Closed Stokes gives $c_\kappa(g)=1/M_g$. The bounded product expansion gives
+\[
+ \mathrm{MA}_H(v)=C h_0^m\wedge\mathrm{MA}_\kappa(v)
+      =\frac{c_0}{M_g}Rg\,\mathrm dV.
+\]
+Uniqueness of the bounded normalization scalar therefore gives $c_H(Rg)=c_0/M_g$, including densities with zeros.
+
+\emph{Step 2: the threshold.} For general $g\in L^1$, the original truncations on $X$ satisfy
+\[
+ R\min(g,j/A)\leq\min(Rg,j)\leq R\min(g,j/a).
+\]
+By Step 1 and \cref{lem:bounded-normalizer-subsolution},
+\[
+ \frac{c_0}{\int_Y\min(g,j/a)\kappa^k}
+ \leq c_H(\min(Rg,j))
+ \leq\frac{c_0}{\int_Y\min(g,j/A)\kappa^k}.
+\]
+Both bounds tend to $c_0/M_g$.
+
+\emph{Step 3: the exact equation.} By \cref{prop:individual-normalizer-lp}, $b_\kappa(g)=1/M_g$. Thus \cref{thm:individual-density-subsolution} on $Y$ gives $v\in\PSH(Y,\kappa)$ with supremum zero and
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\kappa(v)\geq(g/M_g)\kappa^k.
+\]
+For $v_j=\max(v,-j)$, closed Stokes gives $\int_Y\mathrm{MA}_\kappa(v_j)=1$. The defining non-pluripolar truncations consequently give $\int_Y\mathrm{MA}^{\mathrm{ext}}_\kappa(v)\leq1$. The prescribed lower measure has mass one, so equality holds both in mass and in the measure inequality.
+
+The pullback $u$ is $H$-plurisubharmonic, and $\max(u,-j)$ is the pullback of $v_j$. Multiplying the bounded product expansion by the pullback of $\mathbf1_{\{v>-j\}}$ and passing to the defining non-pluripolar limit gives
+\[
+ \mathrm{MA}^{\mathrm{ext}}_H(u)
+   =C h_0^m\wedge\mathrm{MA}^{\mathrm{ext}}_\kappa(v)
+   =\frac{c_0}{M_g}Rg\,\mathrm dV.
+\]
+Its mass is $c_0$. Finally, when $v_-(h_0)=0$, pulling back bounded potentials from $X_0$ whose masses tend to zero proves $v_-(H)=0$ by the same expansion. Closedness of $h_0$ would contradict that vanishing by Stokes' theorem, so $H$ is not closed.
+\end{proof}
+
+On the elliptic threefold of \cref{thm:vanishing-lower-mass}, with the balanced metric of \cref{prop:lower-mass-balanced-metric}, the product with $\mathbb P^2$ has $c_0=240\pi$. Thus every probability density from the projective factor has this threshold and a finite-mass threshold solution. The theorem concerns factor densities; it does not give an exact equation for an arbitrary density on $X$ or identify limits of normalized exponential solutions.
