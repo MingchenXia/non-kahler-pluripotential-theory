@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint 532 integrates the radial non-Lp S05 family, joint density/exponent selection and the first-moment centering boundary. General S05 stays open. Final reads, three publications and visual checks pass; fresh empty reconstruction also passes; final metadata package checks pass; synchronize privately, then reconstruct the moving-logarithmic S05 source. Continue S07, S06, incoming S12 and selected current primary proofs/arXiv intake. See [the scoped integration](radial-integrable-selection-532.md).
+Current continuation: checkpoint 533 reconstructs and integrates the moving-logarithmic S05 special case. General S05 remains open. Complete scoped reads, 63 analytic obligations and 36 final page views pass; both author deployments and new empty-source reconstruction pass; final metadata package checks pass; synchronize privately. The complete S07 first read also passes; next reconstruct its proof, then S06 and incoming S12, alongside current primary/arXiv proof review and whole-book reader revision. See [the scoped integration](moving-logarithmic-selection-533.md).
 
 ## Greatest exponential left-limit review 526
 
