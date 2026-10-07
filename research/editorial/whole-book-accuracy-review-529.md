@@ -186,29 +186,46 @@ The published text was paywalled or unreachable. Each of these locators is suppo
 - DangNull26: statement numbers. (DX24 now has no locator: at the author's request of 6 October 2026, the published version is not consulted for now, and the statement used is cited from SGPT Proposition 3.1.12, (3.23)–(3.24).)
 - OV24Vaisman: Theorem 4.1 and Lemmas 4.2–4.4.
 - OV25Balanced: Conjecture 4.14 and Remark 4.16.
-- OV25LeeGauduchon: Remark 5.6 and Theorem 3.11.
-- OV24LCK: Question 47.56(3).
 - Dem94: Remark 4.4 and equation (4.22).
 - Dem92: Main Theorem 1.1.
 - Nguyen16: Corollary 0.2 and Proposition 2.5.
 - KN19: Remark 3.13.
 - Collins21: Theorem 2.13.
-- TWWY15: Definition 3.2 and Theorem 3.4.
 - GL23E: Lemma 3.3 and Theorem 3.4.
-- Dinew09: Theorem 1.2.
 - FTWZ16: Lemma 2.1.
-- CT15Loci: Theorem 1.1.
-- GP04: Section 2.
 - DPS94: Example 1.7.
 - DDNL21: Lemma 4.3.
-- BG18: Proposition 2.4 and Theorem 2.5.
 - WalterPrioritary93: the page of Proposition 2.
+
+The items for TWWY15, Dinew09, CT15Loci, GP04, BG18, OV25LeeGauduchon and OV24LCK were removed from this list on 7 October 2026, after the check in Follow-up 3.
+
+## Follow-up 3: publisher texts supplied by the author
+
+On 7 October 2026 the author supplied 19 PDFs, downloaded through a university VPN: seven publisher versions, eleven arXiv versions and Demailly's manuscript of Dem94. The files are evidence for this check only and are not added to the repository. Every citation site of the seven publisher texts was compared with the published statement.
+
+**Confirmed against the published text; journal pages added**
+- **TWWY15** (Calc. Var. 54, 2015): Definition 3.2 and Theorem 3.4 on pp. 444–445. The paragraph after Theorem 3.4 derives it from Caffarelli's theorem and extends it to viscosity solutions. The STW paragraph now says "in the form stated by" TWWY15 and names Caffarelli.
+- **Dinew09** (Math. Z. 262, 2009): Theorem 1.2 on p. 2. It assumes bounded plurisubharmonic functions and nonnegative densities in L¹(dλ). The historical note now states these hypotheses and adds that the inequality is local, so the hypotheses of `thm:local-mixed-input` (locally bounded functions, measurable densities) reduce to them on relatively compact subdomains.
+- **CT15Loci** (Invent. Math. 202, 2015): Theorem 1.1 on p. 1168, stated on manifolds in Fujiki's class C, as the book says.
+- **BG18** (Calc. Var. 58, 2019, Paper 184): Proposition 2.4 (the exterior-ball step) on p. 7 and Theorem 2.5 (propagation of maxima) on p. 8.
+- **OV25LeeGauduchon**: Theorem 3.11 on p. 243 (the dual description of the Lee–Gauduchon cone) and Remark 5.6 on p. 245. Theorem 4.5 (p. 244) and Example 5.7 and Remark 5.8 (p. 246) had already been seen in a preview; the locators now carry pp. 243–244 and 245–246.
+- **OV24LCK**: Question 47.56(3) on p. 665: Gauduchon metrics with the same Lee class and twisted Bott–Chern class; does ω₁ⁿ = ω₂ⁿ imply ω₁ = ω₂? This matches Problem `q:lck-gauduchon-volume`. The page is added in Chapter 25.
+
+**Corrected wording**
+- **GP04** (Comm. Math. Phys. 251, 2004): Section 2 (pp. 69–71) constructs principal torus bundles M_{P,Q} from two closed 2-forms with integral periods. Their fiber is always the square torus ("principal T²-bundles for the standard complex structure on T²", p. 66). The book's bundle L^×/⟨w ↦ qw⟩ has fiber ℂ*/q^ℤ, which is square only when log q = 2π. The old sentence, "are special cases of the torus bundles", was therefore true only for q = e^{2π}. It now says: for q = e^{2π} the bundles are GP torus bundles, built from the Chern connection of the chosen metric, with forms a constant multiple of c and 0; other values of q change only the modulus of the fiber. The identification was checked by comparing the vertical (1,0)-forms: GP's iρ = −dy + i dx + α′ with the book's d(t/2) + i dx + α′, modulo pull-backs of (1,0)-forms, under y = −t/2.
+
+**No new confirmation of journal numbering**
+- The arXiv files (ALS26, OV24Vaisman, OV25Balanced, Nguyen16, KN19, GL23E, FTWZ16, Collins21, DDNL21, DangNull26, FV26) are the versions already checked. Their locators stay on the list above.
+- The Dem94 manuscript uses the manuscript numbering (Remark 4.7, equation (4.5)), not the printed one. Remark 4.4 and (4.22) on printed p. ~121 therefore stay unconfirmed.
+- The TWWY15 bibliography note "Theorem locations refer to the published version" is removed. The book's general statement on journal versions covers it.
+
+Build: clean, 1520 physical / 1492 printed pages. Publication: website commit c08c0f5 with the remote blobs verified; the live GitHub Pages PDF matches SHA-256 `a71352bf…` and the homepage shows "1492 pages. Updated October 7, 2026".
 
 ## Deferred items (no change made)
 
 - `thm:small-pole-envelope-residual` assumes positive lower singularity volume, which its proof uses only for a side remark.
 - Some hypotheses are stronger than their proofs need (for example `cor:i-envelope-finite`, `birational_partial_kernels`, `section_bounded_connected_uniqueness`); they are kept.
 - `thm:flat-anticanonical-neighborhood`: Step 2 of Lemma 2 is only outlined; an expert check is advisable.
-- The locators not confirmed against the published text are listed in Follow-up 2. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
+- The locators not confirmed against the published text are listed in Follow-up 2, as reduced by Follow-up 3. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
 - The hidden Nakamaye chapter cites CT22 Lemma 4.2 for arbitrary modifications; the lemma assumes compositions of blowups with smooth centers. Hidden files are not edited.
 - Local reuse of letters across sections (Ω, r versus f for fiber dimension, L in Section 27.19) is declared locally and kept.

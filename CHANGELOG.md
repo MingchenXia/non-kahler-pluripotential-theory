@@ -1,5 +1,15 @@
 # Modification history
 
+## 7 October 2026 — Publisher texts checked (529, follow-up 3)
+
+The author supplied publisher PDFs for seven cited works. All their citation sites were compared with the published statements.
+- **Confirmed, with journal pages added:** TWWY15 (pp. 444–445), Dinew09 (p. 2), CT15Loci (p. 1168), BG18 (pp. 7–8), OV25LeeGauduchon (pp. 243–246) and OV24LCK Question 47.56(3) (p. 665).
+- **GP04:** the Goldstein–Prokushkin torus bundles always have a square fiber, so the primitive elliptic bundles are among them only for q = e^{2π}. The historical note is corrected.
+- **Dinew09, TWWY15:** the notes now state Dinew's hypotheses (bounded functions, L¹ densities), say why they suffice for the book's local theorem, and say that TWWY derive their Evans–Krylov theorem from Caffarelli's.
+- The supplied arXiv files and Demailly's manuscript give no new confirmation of journal numbering; the remaining list is in the checkpoint 529 record.
+
+Clean rebuild (1492 printed pages), republished in website commit c08c0f5; the live PDF matches SHA-256 `a71352bf…`.
+
 ## 6 October 2026 — Journal versions of citations; mass invariance under bounded mass (529, follow-ups)
 
 **Journal versions.** Following the author's rule "always use the journal version when possible", all 105 cited papers were checked against their published versions.
