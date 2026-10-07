@@ -1,15 +1,15 @@
 \section{Gradient bounds for concave equations}
 \label{sec:concave-gradient}\index{Gradient estimate!concave equations}
 
-Keep the fixed data and normalization of \cref{sec:concave-strict-gap-stability}, and assume in addition that $\|\partial h\|_{L^\infty(\omega)}\leq H_1$. The stability estimate supplies nearby smooth admissible functions. A weighted gradient comparison with one such function gives a bound whose comparison radius is fixed before its derivatives are known. Compactness then reduces the estimate to finitely many smooth comparison functions.
+We keep the fixed data, the family of right-hand sides and the normalization of \cref{sec:concave-strict-gap-stability}, and assume in addition that $\|\partial h\|_{L^\infty(\omega)}\leq H_1$; throughout the section, $u$ denotes a solution with such a right-hand side $h$. The gradient bound is obtained by comparison with a nearby smooth admissible function $V$. A maximum principle for a weighted gradient quantity bounds the gradient of $u$ in terms of that of $V$, provided $\|u-V\|_\infty$ is below a threshold that does not depend on the derivatives of $V$. The $C^0$ compactness of \cref{cor:concave-uniform-compactness} then shows that finitely many such comparison functions suffice for all solutions.
 
-For the derivative calculation, write $U=u/(2\pi)$ and $\underline U=\underline u/(2\pi)$. Thus $\ddc u=\mathrm i\partial\bar\partial U$. For any smooth real $V$, put $\mathcal A_V=\omega^{-1}(\chi+\mathrm i\partial\bar\partial V)$ and call $V$ admissible if $\lambda(\mathcal A_V)\in\Gamma$. Use the Chern connection of $\omega$ and define $B=DF(\mathcal A_U)$ by the trace pairing. At a point where $\mathcal A_U$ is diagonal in a unitary frame, set
+For the derivative calculation, write $U=u/(2\pi)$ and $\underline U=\underline u/(2\pi)$. Thus $\ddc u=\mathrm i\partial\bar\partial U$. For any smooth real $V$, put $\mathcal A_V=\omega^{-1}(\chi+\mathrm i\partial\bar\partial V)$ and call $V$ admissible if $\lambda(\mathcal A_V)\in\Gamma$. We use the Chern connection of $\omega$, and define the endomorphism $B=DF(\mathcal A_U)$ by $\frac{\mathrm d}{\mathrm dt}F(\mathcal A_U+tM)|_{t=0}=\operatorname{tr}(BM)$. Write $\lambda=(\lambda_1,\ldots,\lambda_n)=\lambda(\mathcal A_U)$. At a point where $\mathcal A_U$ is diagonal in a unitary frame, set
 \[
- B_i=f_i(\lambda(\mathcal A_U)),\qquad
+ B_i=f_i(\lambda),\qquad
  \mathcal Lq=\sum_iB_iq_{i\bar i},\qquad T=\sum_iB_i,
  \qquad |\partial q|_B^2=\sum_iB_i|q_i|^2.
 \]
-Here $U_{ki}=\nabla_iU_k$ and $U_{i\bar j}=\partial_i\partial_{\bar j}U$; the pure derivatives need not be symmetric. The trace expressions below are invariant under a change of unitary frame.
+Here subscripts denote frame derivatives, $U_{ki}=\nabla_iU_k$ and $U_{i\bar j}=\partial_i\partial_{\bar j}U$; the second derivatives $U_{ki}$ need not be symmetric. The trace expressions below do not depend on the unitary frame.
 
 \Needspace{11\baselineskip}
 \begin{lemma}\label{lem:concave-linearized-alternative}
@@ -19,45 +19,45 @@ There are fixed $\tau,\kappa>0$ such that
  \mathcal L(U-V)\leq h\quad(V\text{ admissible}),\qquad
  \mathcal L(\underline U-U)\geq-h.
 \end{gather*}
-At every point, at least one of the alternatives
+Moreover, at every point at least one of the alternatives
 \[
  \mathcal L(\underline U-U)\geq\kappa T,
  \qquad B\geq\kappa T\operatorname{Id}
 \]
-holds. The constants are uniform for all positive right-hand sides in the family.
+holds. The constants depend only on the fixed data; in particular they are uniform for all right-hand sides in the family.
 \end{lemma}
 \begin{proof}
-If $P$ is admissible, the ray $\mathcal A_U+tP$ is admissible. Its positive concave operator value cannot have a negative tangent slope, so $\operatorname{tr}(BP)\geq0$. The tangent inequality at the origin, where $F(0)=0$, gives $\operatorname{tr}(B\mathcal A_U)\leq h$. Choose $a_*>0$ with $F(a_*\operatorname{Id})>H_0+1$. Concavity gives
+If $\lambda(P)\in\Gamma$, then $\mathcal A_U+tP$ is admissible for $t\geq0$. The function $t\mapsto F(\mathcal A_U+tP)$ is positive and concave on $[0,\infty)$, so its derivative at $t=0$ cannot be negative; thus $\operatorname{tr}(BP)\geq0$. Since $F$ is concave and $F(0)=0$, the tangent inequality at $\mathcal A_U$, evaluated at the origin, gives $\operatorname{tr}(B\mathcal A_U)\leq h$. Choose $a_*>0$ with $F(a_*\operatorname{Id})>H_0+1$. Concavity gives
 \[
  H_0+1<F(a_*\operatorname{Id})
  \leq h+a_*T-\operatorname{tr}(B\mathcal A_U)\leq H_0+a_*T.
 \]
-Thus $T\geq a_*^{-1}$. The remaining two bounds follow by subtracting the nonnegative traces of $\mathcal A_V$ and $\mathcal A_{\underline U}$.
+Thus $T\geq a_*^{-1}$. Since $\mathcal L(U-V)=\operatorname{tr}(B\mathcal A_U)-\operatorname{tr}(B\mathcal A_V)$ and $\mathcal L(\underline U-U)=\operatorname{tr}(B\mathcal A_{\underline U})-\operatorname{tr}(B\mathcal A_U)$, the remaining two bounds follow from the nonnegativity of $\operatorname{tr}(B\mathcal A_V)$ and $\operatorname{tr}(B\mathcal A_{\underline U})$.
 
-We prove the alternative directly from the strict gap. Fix $r,H$ from \cref{lem:strict-gap-matrix-bound}, and put $\mu=\lambda(\mathcal A_{\underline U})$. Compactness and the gap give one $S>r$ such that
+We derive the alternative from the strict gap. Fix $r,H,\delta$ from \cref{lem:strict-gap-matrix-bound}, and put $\mu=\lambda(\mathcal A_{\underline U})$. Compactness and the gap give one $S>r$ such that
 \[
  f(\mu-2r\mathbf1+Se_i)>H+2\delta\qquad(1\leq i\leq n)
 \]
-everywhere. For $\lambda\in\Gamma$ with $f(\lambda)=\sigma=h$, consider the compact set
+everywhere. We first prove a scalar alternative. At a point of $X$, let $\lambda\in\Gamma$ satisfy $f(\lambda)=\sigma$, where $\sigma=h$ at that point, and consider the set
 \[
  K=\{v\geq\mu-r\mathbf1:f(v)\leq\sigma\}.
 \]
-It is contained in $\Gamma$ because $\mu-r\mathbf1\in\Gamma$; the matrix bound makes it bounded. When nonempty, it contains $\mu-r\mathbf1$ and is star-shaped about that point: every segment towards it decreases each coordinate, hence decreases $f$. Thus it is connected. Let $N=\nabla f(\lambda)$, whose entries are positive, and let $\Pi$ be the tangent hyperplane $N\cdot(v-\lambda)=0$.
+It is contained in $\Gamma$ because $\mu-r\mathbf1\in\Gamma$, it is closed, and the matrix bound of \cref{lem:strict-gap-matrix-bound}, applied to diagonal matrices, makes it bounded; thus $K$ is compact. When nonempty, it contains $\mu-r\mathbf1$ and is star-shaped about that point: moving along a segment toward it decreases each coordinate, hence decreases $f$. Thus $K$ is connected. Let $N=\nabla f(\lambda)$, whose entries are positive, and let $\Pi$ be the tangent hyperplane $N\cdot(v-\lambda)=0$.
 
-If $f(\mu-r\mathbf1)>\sigma$, concavity gives $N\cdot(\mu-\lambda)>r\sum_iN_i$. Otherwise $\mu-r\mathbf1\in K$. The positive diagonal ray from that point meets $\{f=\sigma\}$, since $f$ diverges along this ray. At the meeting point the tangent inequality gives $N\cdot(v-\lambda)\geq0$. If $\Pi$ misses $K$, connectedness makes this sign strictly positive throughout $K$, again giving $N\cdot(\mu-\lambda)>r\sum_iN_i$.
+If $f(\mu-r\mathbf1)>\sigma$, concavity gives $N\cdot(\mu-\lambda)>r\sum_iN_i$. Otherwise $\mu-r\mathbf1\in K$. The diagonal ray $\mu-r\mathbf1+t\mathbf1$, $t\geq0$, meets $\{f=\sigma\}$, since $f$ diverges along it; at the meeting point $v$, the tangent inequality gives $N\cdot(v-\lambda)\geq0$. If $\Pi$ misses $K$, connectedness makes $N\cdot(v-\lambda)$ strictly positive throughout $K$, and in particular at $\mu-r\mathbf1$; this again gives $N\cdot(\mu-\lambda)>r\sum_iN_i$.
 
 If $v\in\Pi\cap K$, put $z_i=v-r\mathbf1+Se_i$. Then $z_i\geq\mu-2r\mathbf1+Se_i$, so $f(z_i)>\sigma$. The tangent inequality at $\lambda$ gives
 \[
  0<N\cdot(z_i-v)=SN_i-r\sum_jN_j.
 \]
-Thus $N_i>(r/S)\sum_jN_j$ for every $i$. We have proved the required scalar alternative at every positive level, with constants independent of $\sigma$.
+Thus $N_i>(r/S)\sum_jN_j$ for every $i$. We have proved that $N\cdot(\mu-\lambda)>r\sum_iN_i$ or $N_i>(r/S)\sum_jN_j$ for all $i$, at every positive level $\sigma$, with constants independent of $\sigma$.
 
-Order $\lambda$ and $\mu$ decreasingly. Concavity and symmetry order $f_i(\lambda)$ increasingly. In the eigenframe of $\mathcal A_U$, the diagonal of $\mathcal A_{\underline U}$ is a doubly stochastic average of permutations of $\mu$. The rearrangement inequality therefore gives
+To pass to matrices, take $\lambda=\lambda(\mathcal A_U)$, and order $\lambda$ and $\mu$ decreasingly. By concavity and symmetry, the numbers $f_i(\lambda)$ are then ordered increasingly. In the eigenframe of $\mathcal A_U$, the diagonal of $\mathcal A_{\underline U}$ is a doubly stochastic average of permutations of $\mu$, so the rearrangement inequality gives
 \[
  \operatorname{tr}\bigl(B(\mathcal A_{\underline U}-\mathcal A_U)\bigr)
  \geq\sum_if_i(\lambda)(\mu_i-\lambda_i).
 \]
-Taking $\kappa$ smaller than $\min\{r,r/S\}$ proves the matrix alternative.
+Since $N=(f_i(\lambda))_i=(B_i)_i$, taking $\kappa$ smaller than $\min\{r,r/S\}$ proves the matrix alternative.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -74,7 +74,7 @@ Put $Q=1+|\partial U|_\omega^2$. For any smooth real $\xi$, one has
 where $C_g$ depends only on $\omega$ and $\chi$.
 \end{lemma}
 \begin{proof}
-Write $\mathscr T^p_{ik}$ and $R^p_{i\bar jk}$ for Chern torsion and curvature. The commutation and differentiated equation are
+Write $\mathscr T^p_{ik}$ and $R^p_{i\bar jk}$ for the torsion and curvature of the Chern connection. The commutation formula and the differentiated equation read
 \begin{gather*}
  \nabla_{\bar j}\nabla_iU_k
  =\nabla_kU_{i\bar j}+\sum_p\bigl(R^p_{i\bar jk}U_p-\mathscr T^p_{ik}U_{p\bar j}\bigr),\\
@@ -85,7 +85,7 @@ The product rule for $|\partial U|^2$ gives both squares $\sum B_i|U_{ki}|^2$ an
  CT|\partial U|+CT|\partial U|^2
  +C|\partial U|T^{1/2}\Bigl(\sum_{i,k}B_i|U_{k\bar i}|^2\Bigr)^{1/2}.
 \]
-Absorb half the mixed square. Since $U_{i\bar j}=\lambda_i\delta_{ij}-\chi_{i\bar j}$, the retained half bounds $\frac14\sum_iB_i\lambda_i^2-CT$. Hence
+Absorb the last term into half of the mixed square. Since $U_{i\bar j}=\lambda_i\delta_{ij}-\chi_{i\bar j}$, the remaining half is at least $\frac14\sum_iB_i\lambda_i^2-CT$. Hence
 \[
  \mathcal L|\partial U|^2\geq\sum_{i,k}B_i|U_{ki}|^2
  +\frac14\sum_iB_i\lambda_i^2-C_gTQ-2H_1|\partial U|.
@@ -95,19 +95,19 @@ Finally,
  \partial_i|\partial U|^2
  =\sum_kU_{ki}U_{\bar k}+\lambda_iU_i-\sum_k\chi_{i\bar k}U_k.
 \]
-In the product rule for $\mathrm e^\xi Q$, combine its first sum with $|\partial U|^2|\partial\xi|_B^2$ and the pure-derivative square. This gives $\sum B_i|U_{ki}+U_k\xi_i|^2$, while the remaining weight term is $|\partial\xi|_B^2$.
+In the product rule for $\mathrm e^\xi Q$, combine the cross term coming from the first sum with $|\partial U|^2|\partial\xi|_B^2$ and with the square $\sum B_i|U_{ki}|^2$. This gives $\sum B_i|U_{ki}+U_k\xi_i|^2$, while the remaining weight term is $|\partial\xi|_B^2$.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:concave-nearby-gradient}
-There are fixed $\eta,C>0$ such that every smooth admissible $V$ with $\|U-V\|_\infty\leq\eta$ satisfies
+There are constants $\eta,C>0$, depending only on the fixed data and $H_1$, such that every smooth admissible $V$ with $\|U-V\|_\infty\leq\eta$ satisfies
 \[
  \|\partial U\|_\infty\leq C\bigl(1+\|\partial V\|_\infty^2\bigr).
 \]
 The comparison radius $\eta$ is independent of the derivatives of $V$.
 \end{proposition}
 \begin{proof}
-Let $a\geq1$ and $\beta>1$ be chosen below. Assuming $\|U-V\|_\infty\leq\beta^{-1}$, put
+Let $a\geq1$ and $\beta>1$ be constants, to be chosen below. Assuming $\|U-V\|_\infty\leq\beta^{-1}$, put
 \[
  w=U-V-\beta^{-1},\qquad
  \xi=a(\underline U-U)+\beta w^2,\qquad
@@ -125,36 +125,36 @@ Writing $D=|\partial(U-V)|_B^2$, the Cauchy--Schwarz inequality gives
  \left|2\Real\sum_{i,k}B_i\chi_{i\bar k}U_k\xi_{\bar i}\right|
  &\leq\tfrac12QD+C_aT+C_aK_VQ^{1/2}T.
 \end{align*}
-For the first line, split $\xi_i$ as above and use $\sum B_i|U_i|^2\leq2D+2K_V^2T$. Apply Young's inequality to the resulting three products, each absorbing at most $\frac1{24}\sum B_i\lambda_i^2$. For the second line use $|\partial\xi|_B\leq aK_VT^{1/2}+(a+4)D^{1/2}$ and the fixed bound for $\chi$. Thus $C_a$ is independent of $\beta$ and of the derivatives of $V$.
+For the first line, split $\xi_i$ as above and use $\sum B_i|U_i|^2\leq2D+2K_V^2T$; then apply Young's inequality to the resulting three products, each absorbing at most $\frac1{24}\sum B_i\lambda_i^2$. For the second line, use $|\partial\xi|_B\leq aK_VT^{1/2}+(a+4)D^{1/2}$ and the bound for $\chi$. In both lines, $C_a$ depends on $a$ but not on $\beta$ or on the derivatives of $V$.
 
 By \cref{lem:concave-linearized-alternative} and $w\leq0$,
 \[
  \mathcal L\xi\geq a\mathcal L(\underline U-U)-4H_0+2\beta D.
 \]
-Choose $a$ large enough that $(a\kappa-C_g-2)\tau>4H_0+2H_1+1$, and then $\beta\geq2C_a+2$. Combining the preceding bounds with \cref{lem:concave-weighted-gradient}, whenever $Q\geq C'(1+K_V^4)$, gives
+Choose $a$ so large that $(a\kappa-C_g-2)\tau>4H_0+2H_1+1$, and then $\beta\geq2C_a+2$. Combining the preceding bounds with \cref{lem:concave-weighted-gradient}, we obtain, at every point where $Q\geq C'(1+K_V^4)$ for a suitable constant $C'$,
 \begin{align*}
  \mathrm e^{-\xi}\mathcal L(\mathrm e^\xi Q)
  &\geq\frac18\sum_iB_i\lambda_i^2\\
  &\quad+Q\bigl[a\mathcal L(\underline U-U)-(C_g+2)T
                  +\beta D-(4H_0+2H_1)\bigr].
 \end{align*}
-Indeed, the coefficient of $D$ before absorption is $(2\beta-C_a-1/2)Q-C_aK_V^2$, which is at least $\beta Q$ after increasing the fixed $C'$. The other errors satisfy $C_aK_V^4\leq Q$ and $C_a+C_aK_VQ^{1/2}\leq Q$, giving the additional $2T$.
+Indeed, the coefficient of $D$ before absorption is $(2\beta-C_a-1/2)Q-C_aK_V^2$, which is at least $\beta Q$ once $C'$ is large enough. The other errors satisfy $C_aK_V^4\leq Q$ and $C_a+C_aK_VQ^{1/2}\leq Q$, and they account for the additional term $-2T$ in the bracket.
 
-At a maximum of $\mathrm e^\xi Q$, suppose this large-gradient inequality holds. In the first linearized alternative the bracket is positive by the choice of $a$. In the second, $D\geq\kappa T|\partial(U-V)|^2$. For $Q\geq4(1+K_V^2)$, the triangle inequality gives $|\partial(U-V)|^2\geq c_*Q$, where $c_*=(\sqrt3-1)^2/4$. Since $\mathcal L(\underline U-U)\geq-H_0$, the bracket is at least
+Consider a maximum point of $\mathrm e^\xi Q$ at which $Q\geq C'(1+K_V^4)$. In the first alternative of \cref{lem:concave-linearized-alternative}, the bracket is positive by the choice of $a$, since $T\geq\tau$. In the second, $D\geq\kappa T|\partial(U-V)|^2$. For $Q\geq4(1+K_V^2)$, the triangle inequality gives $|\partial(U-V)|^2\geq c_*Q$, where $c_*=(\sqrt3-1)^2/4$. Since $\mathcal L(\underline U-U)\geq-H_0$, the bracket is then at least
 \[
  (\beta\kappa c_*Q-C_g-2)T-(a+4)H_0-2H_1.
 \]
-It is positive once the fixed $C'$ is large enough, because $T\geq\tau$. Both cases contradict the second derivative test. Thus $Q$ at the maximum is bounded by $C(1+K_V^4)$. The weight has uniformly bounded oscillation:
+This is positive once $C'$ is large enough, because $T\geq\tau$. In both cases $\mathcal L(\mathrm e^\xi Q)>0$ at a maximum point, which contradicts the second derivative test. Thus $Q\leq C(1+K_V^4)$ at the maximum point. The weight has uniformly bounded oscillation:
 \[
  \operatorname{osc}_X\xi\leq a(\operatorname{osc}_X\underline U+\operatorname{osc}_XU)+4/\beta.
 \]
-The potential bound in \cref{prop:strict-gap-potential-bound} therefore transfers the maximum-point estimate to every point. Taking square roots and setting $\eta=\beta^{-1}$ proves the assertion.
+By the potential bound in \cref{prop:strict-gap-potential-bound}, this oscillation is bounded independently of $V$, so the estimate at the maximum point gives $Q\leq C(1+K_V^4)$ everywhere. Taking square roots and setting $\eta=\beta^{-1}$ proves the assertion.
 \end{proof}
 
 \Needspace{9\baselineskip}
 \begin{theorem}\label{thm:concave-uniform-gradient}
-Every solution with the fixed data and $\|\partial h\|_\infty\leq H_1$ satisfies $\|\mathrm du\|_{L^\infty(\omega)}\leq C$. The constant is uniform as the positive right-hand sides tend to zero.
+There is a constant $C$, depending only on the fixed data and $H_1$, such that $\|\mathrm du\|_{L^\infty(\omega)}\leq C$ for every normalized solution $u$ whose right-hand side $h$ lies in the family and satisfies $\|\partial h\|_\infty\leq H_1$. In particular, the bound is uniform as the positive right-hand sides tend to zero.
 \end{theorem}
 \begin{proof}
-The entire family of right-hand sides with the fixed upper and first-derivative bounds is equicontinuous. By \cref{cor:concave-uniform-compactness}, the corresponding normalized solutions $U$ form a precompact family in $C^0(X)$. Choose a finite $\eta$-net from this family, with smooth admissible members $V_1,\ldots,V_N$. Each solution is within $\eta$ of one $V_j$, so \cref{prop:concave-nearby-gradient} bounds its gradient by $C(1+\max_j\|\partial V_j\|_\infty^2)$. The full family and the chosen finite net depend only on the fixed data and $H_1$. Finally $u=2\pi U$, so the same conclusion holds for $\mathrm du$.
+The right-hand sides in the family with $\|\partial h\|_\infty\leq H_1$ form an equicontinuous set. By \cref{cor:concave-uniform-compactness}, the corresponding functions $U$ form a precompact subset of $C^0(X)$. Choose a finite $\eta$-net in this set, consisting of smooth admissible functions $V_1,\ldots,V_N$. Each solution is within $\eta$ of some $V_j$, so \cref{prop:concave-nearby-gradient} bounds its gradient by $C(1+\max_j\|\partial V_j\|_\infty^2)$. The set of solutions, and hence the chosen finite net, depends only on the fixed data and $H_1$. Finally, $u=2\pi U$, so the same conclusion holds for $\mathrm du$.
 \end{proof}

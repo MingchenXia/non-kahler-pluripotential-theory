@@ -1,17 +1,17 @@
 \section{An upper bound for partial Fubini--Study limits}
 \label{sec:partial-kernel-upper}
 
-The Bernstein--Markov estimate bounds the partial Fubini--Study potentials from above. Their ideal constraints survive in the limit because the loss in each Lelong-number estimate is of order $m^{-1}$ on a fixed modification. The compact-set envelope retains the obstacle even when the set has zero smooth volume.
+The Bernstein--Markov inequality keeps the partial Fubini--Study potentials below the weight on $K$, up to an error that becomes arbitrarily small as the degree grows. The multiplier-ideal constraint survives in the limit because, on a fixed local modification, the Lelong numbers of the potentials fall short of those of the selecting potential by at most $O(m^{-1})$. To pass the obstacle condition to $L^1$ limits when $K$ has zero smooth volume, we compare the potentials with the envelope of the obstacle alone, which is defined on all of $X$.
 
 \Needspace{13\baselineskip}
-Now take $\theta=c_1(L,h)$, assume $\varphi\in\PSH(X,\theta)$, and choose a Bernstein--Markov probability $\mu$ for $(K,w)$. Use the selected spaces $V_m$ and dimensions $N_m$ from \cref{sec:partial-selected-space}. Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ for the continuous weighted norm of \cref{sec:partial-bernstein-markov}, and define the global partial Fubini--Study potential
+Now take $\theta=c_1(L,h)$, assume $\varphi\in\PSH(X,\theta)$, and let $\mu$ be a Bernstein--Markov probability measure for $(K,w)$, with $K$ and $w$ as in \cref{sec:hermitian-partial-envelopes}. Use the selected spaces $V_m$ and their dimensions $N_m$ from \cref{sec:partial-selected-space}. Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ of $V_m$ for the norm $\|\cdot\|_{m,w,\mu}$ of \cref{sec:partial-bernstein-markov}, and define the \emph{partial Fubini--Study potential}
 \[
  U_m=\frac1m\log\sum_{j=1}^{N_m}|s_j|_{h^m}^2
  \quad(N_m>0).
 \]
-Set $U_m=-\infty$ if $N_m=0$. For a nonempty space the local expression in a frame shows that $U_m\in\PSH(X,\theta)$ and has analytic singularity type. On $K$, it satisfies $\mathrm{e}^{m(U_m-w)}=B_{m,w,\varphi,\mu}$.
+Set $U_m\equiv-\infty$ if $N_m=0$. When $N_m>0$, the local expression in a holomorphic frame, as in the proof of \cref{prop:finite-bergman-identities}, shows that $U_m\in\PSH(X,\theta)$ and that $U_m$ has analytic singularities. On $K$ it satisfies $\mathrm{e}^{m(U_m-w)}=B_{m,w,\varphi,\mu}$.
 
-For a local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ and $y\in Y$, write $J_\pi$ for its local holomorphic Jacobian determinant and apply \cref{lem:ideal-modification-lelong-loss} to every basis coefficient. The Lelong number of the logarithm of a sum of squared holomorphic functions is the minimum of their orders. The smooth metric contributes zero, so
+Let $\pi:Y\to W$ be a local smooth modification of an open set $W\subseteq X$, let $y\in Y$, and write $J_\pi$ for the local holomorphic Jacobian determinant of $\pi$. Each $s_j$ lies in $V_m$, so \cref{lem:ideal-modification-lelong-loss} applies to its local coefficient. Since the Lelong number of the logarithm of a sum of squared moduli of holomorphic functions is the minimum of their vanishing orders, and the smooth metric contributes nothing, we obtain
 \[
  \nu(U_m\circ\pi,y)
        \geq\nu(\varphi\circ\pi,y)
@@ -20,49 +20,49 @@ For a local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ and $y\in Y$, write 
 \]
 
 \begin{theorem}\label{thm:partial-fubini-study-upper}\index{Fubini--Study potential!partial-kernel upper bound}
-Along the indices for which $N_m>0$, the potentials $U_m$ form a relatively compact family in $L^1(X)$. Every cluster limit $U$ along indices tending to infinity is genuine, has multiplier-ideal order
+The potentials $U_m$ with $N_m>0$ form a relatively compact subset of $L^1(X)$. Let $U$ be the $L^1$ limit of a sequence $U_{m_j}$ with $N_{m_j}>0$ and $m_j\to\infty$. Then $U\in\PSH(X,\theta)$,
 \[
  U\preceq_{\mathcal I}\varphi,
 \]
-and satisfies $U\leq w$ quasi-everywhere on $K$. Consequently
+and $U\leq w$ quasi-everywhere on $K$. Consequently
 \[
  \left(\limsup_{m\to\infty}U_m\right)^*
        \leq E_{\theta,K}[\varphi]_{\mathcal I}(w).
 \]
-If only finitely many spaces are nonempty, the last left side is $-\infty$.
+If only finitely many selected spaces are nonzero, the left-hand side is identically $-\infty$.
 \end{theorem}
 \begin{proof}
-The extremal formula for the kernel and the Bernstein--Markov inequality give, with $C_\epsilon\geq1$,
+\emph{Step 1: compactness.} The extremal formula for the kernel and the Bernstein--Markov inequality give, for every $\epsilon>0$ and with $C_\epsilon\geq1$,
 \[
  U_m\leq w+\delta_{m,\epsilon}\quad\hbox{on }K,
  \qquad
  \delta_{m,\epsilon}=2\epsilon+\frac{2\log C_\epsilon}{m}.
 \]
-The extremal formula takes the supremum over a single unit section, so no dimension factor occurs in this estimate. Fixing one $\epsilon>0$, \cref{lem:compact-obstacle-upper-bound} gives a uniform global upper bound for all nonempty indices. On the other hand, the trace identity gives
+No factor depending on $N_m$ occurs, because the extremal formula is a supremum over single sections of unit norm. Fix one $\epsilon>0$. Since $\delta_{m,\epsilon}\leq2\epsilon+2\log C_\epsilon$, \cref{lem:compact-obstacle-upper-bound} gives an upper bound for $\sup_XU_m$ that is uniform over all $m$ with $N_m>0$. On the other hand, the total mass identity gives
 \[
  \int_K \mathrm{e}^{m(U_m-w)}\,\mathrm{d}\mu=N_m\geq1.
 \]
-Since $\mu$ is a probability measure, this implies $\sup_XU_m\geq\min_Kw$. The normalized compactness theorem now gives relative $L^1$ compactness with genuine limits.
+Since $\mu$ is a probability measure, $U_m-w\geq0$ somewhere on $K$, and therefore $\sup_XU_m\geq\min_Kw$. The normalized compactness theorem (\cref{thm:normalized-compactness}) now gives relative compactness in $L^1(X)$, with limits in $\PSH(X,\theta)$.
 
-Let $U_{m_j}\to U$ in $L^1(X)$, with $m_j\to\infty$. Fix any local smooth modification $\pi:Y\to U_{\mathrm{loc}}$ over an open subset $U_{\mathrm{loc}}\subseteq X$, and any point $y\in Y$. \Cref{lem:modification-lone-pullback} supplies $L^1_{\loc}$ convergence upstairs. Upper semicontinuity of Lelong numbers in \cref{lem:lelong-lone-semicontinuity} and the preceding order bound yield
+\emph{Step 2: the multiplier-ideal order.} Let $U_{m_j}\to U$ in $L^1(X)$, with $m_j\to\infty$. Fix a local smooth modification $\pi:Y\to W$ of an open set $W\subseteq X$, and a point $y\in Y$. By \cref{lem:modification-lone-pullback}, $U_{m_j}\circ\pi\to U\circ\pi$ in $L^1_{\loc}$. Upper semicontinuity of Lelong numbers (\cref{lem:lelong-lone-semicontinuity}) and the order bound before the theorem give
 \[
  \nu(U\circ\pi,y)
        \geq\limsup_j\nu(U_{m_j}\circ\pi,y)
        \geq\nu(\varphi\circ\pi,y).
 \]
-The local valuative characterization in \cref{thm:local-i-inputs} therefore gives $U\preceq_{\mathcal I}\varphi$ at every positive weight. This argument fixes a modification and a point before passing to the limit; the already convergent subsequence works for every such choice.
+Since $\pi$ and $y$ are arbitrary, the local valuative characterization in \cref{thm:local-i-inputs} gives $U\preceq_{\mathcal I}\varphi$. Note that the modification and the point are fixed before passing to the limit; the same convergent sequence serves for all of them.
 
-To retain the obstacle on a possibly thin compact set, let $V_\theta$ be the normalized potential of minimal singularities and set
+\emph{Step 3: the obstacle.} Since $K$ may have zero smooth volume, the inequality on $K$ in Step~1 does not pass directly to $L^1$ limits. We therefore use the envelope of the obstacle alone. Set
 \[
  G=E_{\theta,K}[V_\theta]_{\mathcal I}(w).
 \]
-Every $a\in\PSH(X,\theta)$ satisfies $a\leq V_\theta+\sup_Xa$, and hence $a\preceq_{\mathcal I}V_\theta$. Thus the ideal constraint in the definition of $G$ imposes no further restriction: $G$ is the largest $\theta$-plurisubharmonic function below $w$ quasi-everywhere on $K$. In particular, the Bernstein--Markov estimate gives globally
+Every $a\in\PSH(X,\theta)$ satisfies $a\leq V_\theta+\sup_Xa$, and hence $a\preceq_{\mathcal I}V_\theta$. Thus the multiplier-ideal constraint in the definition of $G$ is no restriction, and $G$ is the largest $\theta$-plurisubharmonic function lying below $w$ quasi-everywhere on $K$. Since $U_m-\delta_{m,\epsilon}$ is such a function, Step~1 gives, on all of $X$,
 \[
  U_m\leq G+\delta_{m,\epsilon}.
 \]
-Passing to the $L^1$ limit gives $U\leq G+2\epsilon$ almost everywhere, and then everywhere by \cref{lem:qpsh-almost-everywhere-order}. Let $\epsilon\downarrow0$. Since $G\leq w$ quasi-everywhere on $K$ by \cref{thm:hermitian-partial-i-envelope}, the same holds for $U$. Both defining conditions for the partial envelope have now been checked, so $U\leq E_{\theta,K}[\varphi]_{\mathcal I}(w)$.
+Passing to the $L^1$ limit gives $U\leq G+2\epsilon$ almost everywhere, and hence everywhere by \cref{lem:qpsh-almost-everywhere-order}. Letting $\epsilon\downarrow0$ gives $U\leq G$. Since $G\leq w$ quasi-everywhere on $K$ by \cref{thm:hermitian-partial-i-envelope}, the same holds for $U$. Thus $U$ satisfies both defining conditions of the partial envelope, and $U\leq E_{\theta,K}[\varphi]_{\mathcal I}(w)$.
 
-Finally, the local Hartogs lemma says that if $U_{m_j}\to U$ in $L^1$, then for any $x_j\to x$ one has $\limsup_jU_{m_j}(x_j)\leq U(x)$. Apply this after extracting an $L^1$ convergent subsequence from any sequence of nonempty indices and points approaching $x$. Every resulting limit is at most the partial envelope. This proves the regularized upper-limit inequality, including at its poles. Empty indices contribute only $-\infty$.
+\emph{Step 4: the upper limit.} By the local Hartogs lemma, if $U_{m_j}\to U$ in $L^1$ and $x_j\to x$, then $\limsup_jU_{m_j}(x_j)\leq U(x)$. Given a point $x$, a sequence of indices $m_j\to\infty$ with $N_{m_j}>0$ and points $x_j\to x$, pass to a subsequence along which $U_{m_j}(x_j)$ converges to $\limsup_jU_{m_j}(x_j)$ and $U_{m_j}$ converges in $L^1$. By Steps~2 and~3 the $L^1$ limit is at most the partial envelope, so $\limsup_jU_{m_j}(x_j)\leq E_{\theta,K}[\varphi]_{\mathcal I}(w)(x)$. This proves the inequality for the regularized upper limit, also at the poles of the envelope. Indices with $N_m=0$ contribute only $-\infty$.
 \end{proof}
 
-A matching lower bound requires sections approximating the envelope. The projective models later in the chapter construct them explicitly. To study measures, we first integrate the kernels as derivatives of a determinant functional.
+A matching lower bound would require global sections approximating the envelope; for the projective models later in this chapter such sections are constructed explicitly. Before turning to limits of measures, we show that the partial kernel measures are the derivatives of a determinant functional.

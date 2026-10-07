@@ -2,65 +2,52 @@
 \label{sec:newton-selected-kernels}
 \index{Bergman kernel!Newton selection}
 
-An explicit monomial selection gives a lower envelope bound without a
-global approximation theorem. Its measure limit depends on the relative
-dimension of the Newton polytope. In lower dimension it is carried by
-real tori and differs from a mixed curvature measure of the envelope.
+On a product of projective lines, selecting the monomials whose exponents lie in the dilates of a fixed polytope gives a graded family of section spaces for which the lower bound for the potentials can be proved directly, without a general approximation theorem. The limit of the kernel measures depends on the dimension of the polytope. When this dimension is smaller than that of the manifold, the limit is carried by a family of real tori and differs from the mixed curvature measures of the envelope.
 
-Let $X=(\mathbb P^1)^n$, $n\geq1$, and let
+Let $X=(\mathbb P^1)^n$ with $n\geq1$, and let
 $L=\mathcal O(k_1,\ldots,k_n)$, where each $k_j$ is a positive integer.
-Equip $L$ with its product Fubini--Study metric $h$. On
+Equip $L$ with its product Fubini--Study metric $h$. On the torus
 $T=(\mathbb C^*)^n$, in the standard frame $e$, write
 \[
  r_j=\log|z_j|^2,\qquad
  \varphi_0(r)=\sum_jk_j\log(1+\mathrm e^{r_j}),\qquad
  \theta=c_1(L,h)=\ddc\varphi_0.
 \]
-Put $P=\prod_j[0,k_j]$. Fix a nonempty rational polytope
-$Q\Subset\operatorname{int}P$ such that
+Put $P=\prod_j[0,k_j]$. Fix a nonempty rational polytope $Q$ contained in the interior of $P$ whose affine span has the form
 \[
  \operatorname{aff}Q=b+W,\qquad b\in\mathbb Z^n,
- \qquad W\text{ is a rational vector space}.
 \]
-Set $d=\dim Q$ and $\Lambda=W\cap\mathbb Z^n$. The relative volume
-$\mathrm dq_\Lambda$ assigns volume one to a fundamental lattice cell;
-when $d=0$ it assigns mass one to the singleton. Select precisely
+with $W\subseteq\mathbb R^n$ a rational linear subspace. Set $d=\dim Q$ and $\Lambda=W\cap\mathbb Z^n$. Let $\mathrm dq_\Lambda$ be the Lebesgue measure on $b+W$ normalized so that a fundamental domain of the lattice $\Lambda$ has volume one; when $d=0$, it is the unit point mass at $b$. Write $\operatorname{vol}_\Lambda(Q)$ for the volume of $Q$ with respect to $\mathrm dq_\Lambda$. In this section the selected spaces are defined directly by monomials, without a selecting potential: we select exactly the monomials with exponents in $mQ$,
 \begin{equation}\label{eq:newton-selected-spaces}
  V_m=\operatorname{span}\{z^\alpha e^m:
                          \alpha\in mQ\cap\mathbb Z^n\}.
 \end{equation}
-Every displayed section extends globally, since
-$0\leq\alpha_j\leq mk_j$. These spaces form a graded series.
+Each of these monomials is a global section of $L^m$, since
+$0\leq\alpha_j\leq mk_j$. Since $Q$ is convex, products of selected sections are selected, so these spaces form a graded family.
 
-Choose a real smooth torus-invariant weight $w$ on $X$ such that
-$F=\varphi_0+w$ has $D^2F(r)>0$ at every finite $r$.
-Choose a smooth strictly positive torus-invariant probability $\nu$ on
-the whole of $X$. Thus on $T$,
+Choose a smooth real torus-invariant function $w$ on $X$ such that the function
+$F=\varphi_0+w$ of $r$ has positive definite Hessian $D^2F(r)$ for every $r\in\mathbb R^n$.
+Choose a smooth strictly positive torus-invariant probability measure $\nu$ on $X$. On $T$ we then have
 $\mathrm d\nu=a(r)\,\mathrm dr\,\mathrm d\tau$, where $a>0$,
-$\int a\,\mathrm dr=1$, and $\mathrm d\tau$ is angular Haar probability.
-Use the Hilbert norm $\int_X|s|_{h^m}^2\mathrm e^{-mw}\,\mathrm d\nu$.
-For an orthonormal basis put
+$\int a\,\mathrm dr=1$, and $\mathrm d\tau$ is the Haar probability measure on $(S^1)^n$ in the angular variables.
+Give $V_m$ the Hilbert norm $\int_X|s|_{h^m}^2\mathrm e^{-mw}\,\mathrm d\nu$, and for an orthonormal basis put
 \[
  \mathcal B_m=\sum_j|s_{m,j}|_{h^m}^2,\qquad
  B_m=\mathrm e^{-mw}\mathcal B_m,\qquad
  U_m=m^{-1}\log\mathcal B_m.
 \]
-Here $B_m$ includes the continuous weight, as in
-\cref{sec:partial-selected-space}. The closed Chern curvature $\theta$
-and an auxiliary Hermitian form $\omega$ remain distinct.
+As in \cref{sec:partial-selected-space}, the density $B_m$ includes the continuous weight.
 
 \subsection{The growth constraint and its envelope}
 
-Put $H_Q(r)=\max_{q\in Q}q\cdot r$ and define
+Let $H_Q(r)=\max_{q\in Q}q\cdot r$ be the support function of $Q$, and define
 \begin{align*}
  \mathcal C_Q&=\{v\in\PSH(X,\theta):
-     v+\varphi_0\leq H_Q+C_v\text{ on }T,\ C_v<\infty\},\\
+     v+\varphi_0\leq H_Q+C_v\text{ on }T\text{ for some constant }C_v\},\\
  E_Q&=\left(\sup\{v\in\mathcal C_Q:
                   v\leq w\text{ quasi-everywhere on }X\}\right)^*.
 \end{align*}
-All competitors are genuine and not identically $-\infty$.
-This growth constraint specifies the target of the series; an
-identification with a multiplier-ideal envelope requires a separate proof.
+This growth condition replaces the multiplier-ideal condition of \cref{sec:hermitian-partial-envelopes}; we do not identify $E_Q$ with an ideal envelope.
 
 \begin{lemma}\label{lem:newton-growth-envelope}
 The gradient $\nabla F:\mathbb R^n\to\operatorname{int}P$ is a smooth
@@ -69,8 +56,7 @@ $F^*(q)=q\cdot r(q)-F(r(q))$, set
 \[
  G_Q(r)=\max_{q\in Q}\{q\cdot r-F^*(q)\}.
 \]
-Then $E_Q=G_Q-\varphi_0$ on $T$, with canonical value $-\infty$
-on $X\setminus T$. Moreover, a global section $s$ of $L^m$ belongs
+Then $E_Q=G_Q-\varphi_0$ on $T$, and $E_Q=-\infty$ on $X\setminus T$. Moreover, a global section $s$ of $L^m$ belongs
 to $V_m$ exactly when
 \begin{equation}\label{eq:newton-entire-growth}
  |s/e^m|^2\leq C_s\mathrm e^{mH_Q(r)}\quad\text{on }T
@@ -78,138 +64,108 @@ to $V_m$ exactly when
 \end{equation}
 \end{lemma}
 \begin{proof}
-Inverted product charts show that every global section is a polynomial
-with degree at most $mk_j$ in $z_j$. The forward growth bound is the
-triangle inequality. Conversely, angular averaging of that bound gives
+In the charts at infinity one sees that every global section of $L^m$ is a polynomial of degree at most $mk_j$ in each variable $z_j$. If $s\in V_m$, the growth bound follows from the triangle inequality, since $|z^\alpha|^2=\mathrm e^{\alpha\cdot r}\leq\mathrm e^{mH_Q(r)}$ for $\alpha\in mQ$. Conversely, averaging the growth bound over the angles gives
 $\sum_\alpha|c_\alpha|^2\mathrm e^{\alpha\cdot r}
-\leq C_s\mathrm e^{mH_Q(r)}$. If a nonzero coefficient has
-$\alpha\notin mQ$, separation and a ray $r=tu$ contradict this bound.
-Thus the condition controls the whole section, including cancellation
-between its monomials.
+\leq C_s\mathrm e^{mH_Q(r)}$ for the coefficients $c_\alpha$ of $s$. If some $c_\alpha\neq0$ had $\alpha\notin mQ$, a vector $u$ with $\alpha\cdot u>mH_Q(u)$, which exists by separation, would contradict this bound along the ray $r=tu$, $t\to\infty$. Thus the growth condition controls each monomial separately, even though the monomials of $s$ may cancel pointwise.
 
 For $p\in\operatorname{int}P$, put
-$\delta_p=\min_j(p_j,k_j-p_j)>0$. Boundedness of $w$ gives
+$\delta_p=\min_j(p_j,k_j-p_j)>0$. Since $w$ is bounded,
 \begin{equation}\label{eq:newton-coercivity}
  F(r)-p\cdot r\geq\delta_p\sum_j|r_j|-\|w\|_\infty.
 \end{equation}
-Strict convexity gives a unique minimizer, whose gradient is $p$.
-Conversely, supporting planes and the asymptotic slopes of $\varphi_0$
-put every gradient in $P$. The inverse function theorem makes the image
-open, hence contained in its interior. This proves the diffeomorphism.
-The inverse gradient and both first and second derivatives of $F^*$
-are bounded on a neighborhood of $Q$; its Hessian is positive definite.
+By strict convexity, $F-p\cdot r$ therefore has a unique minimizer, at which $\nabla F=p$. Conversely, every gradient of $F$ lies in $P$: compare the supporting hyperplanes of the convex function $F$ with the asymptotic slopes of $\varphi_0$. By the inverse function theorem the image of $\nabla F$ is open, so it is contained in the interior of $P$. This proves that $\nabla F$ is a diffeomorphism onto $\operatorname{int}P$.
+On a compact neighborhood of $Q$ in $\operatorname{int}P$, the inverse gradient and the first and second derivatives of $F^*$ are bounded, and the Hessian of $F^*$ is positive definite.
 
-In a product chart with some coordinates inverted, the local potential
-of $G_Q-\varphi_0$ is
+We next show that $G_Q-\varphi_0$ is a competitor. In a product chart in which some of the coordinates are inverted, the local potential of $G_Q-\varphi_0$ is
 \[
  \max_{q\in Q}\left\{\sum_j c_j(q)\log|\zeta_j|^2-F^*(q)\right\},
  \qquad c_j(q)=q_j\text{ or }k_j-q_j.
 \]
 All $c_j$ are bounded below by a fixed positive number. The expression
-is locally bounded above, tends uniformly to $-\infty$ at coordinate
-hyperplanes with the other coordinates bounded, and is locally
-integrable by comparison with one fixed summand. A maximizing summand
-gives the psh submean inequality at finite centers; at a $-\infty$
-center it is automatic. The expressions glue. Boundedness of $F^*$
-gives $G_Q-H_Q=O(1)$, and Fenchel's inequality gives $G_Q\leq F$.
-Thus the candidate is an admissible competitor.
+is locally bounded above, tends uniformly to $-\infty$ at the coordinate
+hyperplanes when the other coordinates stay bounded, and is locally
+integrable by comparison with one fixed summand. At points where it is finite, a maximizing summand gives the submean inequality for plurisubharmonic functions; at points where it equals $-\infty$, this inequality is automatic. These local expressions glue. Boundedness of $F^*$ on $Q$
+gives $G_Q-H_Q=O(1)$, and Fenchel's inequality gives $G_Q\leq F$, that is, $G_Q-\varphi_0\leq w$.
+Thus $G_Q-\varphi_0$, extended by $-\infty$ on $X\setminus T$, belongs to $\mathcal C_Q$ and satisfies the obstacle condition.
 
-For any competitor $v$, the obstacle holds everywhere: its exceptional
-pluripolar set is Lebesgue-null, and shrinking-ball submeans pass the
-inequality with the continuous obstacle to every point. Take the circular
-maximum
-$M(r)=\max_\tau\{v(\mathrm e^{r/2}\tau)+\varphi_0(r)\}$.
-Compactness gives upper semicontinuity. Rotating a maximizing center
-gives the psh submean inequality for its invariant lift. This lift
-extends across the affine coordinate hyperplanes by the local upper
-bound. If $M(r)=-\infty$, successive one-variable maximum principles
-force this psh function to be $-\infty$ on the corresponding polydisc,
-contradicting nontriviality. Thus $M$ is finite. In logarithmic complex
-coordinates its invariant lift depends only on real parts, so its
-positive complex Hessian gives convexity of $M$.
+Now let $v$ be any competitor. The obstacle condition holds everywhere: the exceptional pluripolar set has Lebesgue measure zero, and submean values over shrinking balls carry the inequality with the continuous obstacle to every point. Consider the maximum over the angles,
+$M(r)=\max_\tau\{v(\mathrm e^{r/2}\tau)+\varphi_0(r)\}$, where $\mathrm e^{r/2}\tau$ denotes the point with coordinates $\mathrm e^{r_j/2}\tau_j$.
+By compactness, $M$ is upper semicontinuous. Rotating a point at which the maximum is attained gives the submean inequality for the invariant function $z\mapsto M(\log|z_1|^2,\ldots,\log|z_n|^2)$, which is therefore plurisubharmonic on $T$. It extends across the affine coordinate hyperplanes by the local upper bound. If $M(r)=-\infty$ for some $r$, successive one-variable maximum principles would force this function to be $-\infty$ on the corresponding polydisk, contradicting $v\not\equiv-\infty$. Thus $M$ is finite. In logarithmic coordinates this invariant function depends only on the real parts, so its positive complex Hessian shows that $M$ is convex.
 
-We have $M\leq F$ and $M\leq H_Q+C_v$. Separation along rays puts
-every supporting slope of $M$ in $Q$. At any $r$ choose such a slope
-$p$. Convex duality then gives
+We have $M\leq F$ and $M\leq H_Q+C_v$. Comparing along rays shows that every supporting slope of $M$ lies in $Q$. At any $r$, choose such a slope
+$p$. Since $M\leq F$ gives $M^*\geq F^*$, convex duality yields
 $M(r)=p\cdot r-M^*(p)\leq p\cdot r-F^*(p)\leq G_Q(r)$.
-This dominates $v$ on $T$. Shrinking-ball submeans and the uniform
-boundary decay give the same domination at the boundary, with value
-$-\infty$. The candidate is already canonical, proving the envelope
-identity after upper regularization.
+Hence $v\leq G_Q-\varphi_0$ on $T$. Submean values over shrinking balls and the uniform decay of $G_Q-\varphi_0$ near $X\setminus T$ show that $v=-\infty$ on $X\setminus T$. Since $G_Q-\varphi_0$, extended by $-\infty$, is already upper semicontinuous, this proves the identity for the envelope after upper regularization.
 \end{proof}
 
 \subsection{Norms, lattice growth and the lower bound}
 
 \begin{theorem}\label{thm:newton-potential-lower-bound}
-The norms are nondegenerate and satisfy weighted Bernstein--Markov.
+The norms are nondegenerate and satisfy the Bernstein--Markov inequality of \cref{sec:partial-bernstein-markov} for the weight $w$.
 Writing $N_m=\dim V_m$, we have
 \[
  N_m=m^d\operatorname{vol}_\Lambda(Q)+O(m^{d-1})\quad(d\geq1),
  \qquad N_m=1\quad(d=0).
 \]
-For every sufficiently large degree,
+For all sufficiently large $m$,
 \begin{equation}\label{eq:newton-potential-error}
  |U_m-E_Q|\leq\frac{C}{m}
        \left(1+\sum_j|r_j|+\log m\right)\quad\text{on }T.
 \end{equation}
-Consequently $U_m\to E_Q$ locally uniformly on $T$, in every finite
-$L^p$ against smooth volume on $X$, and weakly for the closed curvature
-currents. Both canonical potentials are $-\infty$ on $X\setminus T$.
+Consequently $U_m\to E_Q$ locally uniformly on $T$ and in $L^p$ for every finite $p$ with respect to smooth volume forms on $X$, and the closed positive currents $\theta+\ddc U_m$ converge weakly to $\theta+\ddc E_Q$. Both $U_m$ and $E_Q$ equal $-\infty$ on $X\setminus T$.
 \end{theorem}
 \begin{proof}
-The smooth positive volume makes the norm positive on every nonzero
-section. Angular Fourier orthogonality diagonalizes it:
+Since the volume form is smooth and positive, the norm is positive on every nonzero
+section. Orthogonality of the angular Fourier modes diagonalizes it:
 \begin{align*}
  A_m(\alpha)&=\|z^\alpha e^m\|_m^2
    =\int_{\mathbb R^n}\mathrm e^{\alpha\cdot r-mF(r)}a(r)\,\mathrm dr,\\
  \mathcal B_m(r)&=\sum_{\alpha\in mQ\cap\mathbb Z^n}
        \frac{\mathrm e^{\alpha\cdot r-m\varphi_0(r)}}{A_m(\alpha)}.
 \end{align*}
-For $q=\alpha/m$, the unique minimum of $F(r)-q\cdot r$ is
-$-F^*(q)$ at $r(q)$. Taylor's formula on a ball of radius $m^{-1/2}$,
-using uniform bounds on a compact neighborhood of $r(Q)$, yields
+For $q=\alpha/m$, the function $F(r)-q\cdot r$ has the unique minimum value
+$-F^*(q)$, attained at $r(q)$. Taylor's formula on a ball of radius $m^{-1/2}$ about $r(q)$,
+with uniform bounds on a compact neighborhood of $r(Q)$, yields
 \begin{equation}\label{eq:newton-laplace-bounds}
  c m^{-n/2}\mathrm e^{mF^*(q)}\leq A_m(\alpha)
                          \leq\mathrm e^{mF^*(q)}.
 \end{equation}
-The upper bound uses only the minimum and $\int a=1$.
+The upper bound uses only the minimum and $\int a\,\mathrm dr=1$.
 
-The integral offset gives
+Since $b\in\mathbb Z^n$, we have
 $(m\operatorname{aff}Q)\cap\mathbb Z^n=mb+\Lambda$.
-Fundamental cells in $m(Q-b)$ give the dimension estimate; cells
-meeting its facets lie in a fixed-width boundary layer with count
-$O(m^{d-1})$. They also give the lattice Riemann sums on $Q$.
-Every $q\in Q$ is within $O(m^{-1})$ of
-$Q_m=Q\cap(b+m^{-1}\Lambda)$: move it toward a fixed relative
-interior point by $O(m^{-1})$ to fit a ball larger than the lattice
-covering radius, then round inside that ball. This works in every
-sufficiently large degree; for a singleton it is exact.
+Counting fundamental cells of $\Lambda$ in $m(Q-b)$ gives the dimension estimate: the cells meeting the relative boundary of $m(Q-b)$ lie in a boundary layer of fixed width, and there are $O(m^{d-1})$ of them. The same cells give convergence of the lattice Riemann sums on $Q$.
+Every $q\in Q$ lies within $O(m^{-1})$ of
+$Q_m=Q\cap(b+m^{-1}\Lambda)$: move $q$ by $O(m^{-1})$ towards a fixed relative
+interior point so that a ball larger than the covering radius of the lattice fits inside $Q$, and then round to a lattice point inside that ball. This works for all
+sufficiently large $m$, and for a singleton it is exact.
 
-Put $G_{Q,m}=\max_{q\in Q_m}(q\cdot r-F^*(q))$. The grid estimate
+Put $G_{Q,m}=\max_{q\in Q_m}(q\cdot r-F^*(q))$. The approximation by the grid
 gives $0\leq G_Q-G_{Q,m}\leq C(1+\sum_j|r_j|)/m$.
-The exact kernel and \eqref{eq:newton-laplace-bounds} give
+The formula for $\mathcal B_m$ and \eqref{eq:newton-laplace-bounds} give
 \[
  G_{Q,m}-\varphi_0\leq U_m\leq G_{Q,m}-\varphi_0+
      \frac{(n/2)\log m+\log N_m-\log c}{m}.
 \]
-This proves \eqref{eq:newton-potential-error}. The monomials vanish
-at every toric boundary component. Logarithmic poles have finite
-$L^p$ norm for each finite $p$ against smooth volume, giving the global
-convergence; distributional differentiation gives current convergence.
-No uniform two-sided error across the poles is asserted.
+This proves \eqref{eq:newton-potential-error}. The selected monomials vanish
+on every component of $X\setminus T$. The functions $\log|z_j|^2$ have finite
+$L^p$ norms for each finite $p$ with respect to smooth volume forms, so \eqref{eq:newton-potential-error} gives the global
+convergence, and differentiation in the sense of distributions gives the convergence of the currents.
 
-Fenchel's inequality also gives
-$\sup_X B_m\leq C N_m m^{n/2}$. Cauchy--Schwarz in the orthonormal
-basis proves
+Fenchel's inequality $\alpha\cdot r-mF(r)\leq mF^*(\alpha/m)$ and \eqref{eq:newton-laplace-bounds} also give
+$\sup_X B_m\leq C N_m m^{n/2}$. By the Cauchy--Schwarz inequality in the orthonormal
+basis,
 $\sup_X|s|_{h^m}\mathrm e^{-mw/2}
-\leq C m^{d/2+n/4}\|s\|_m$.
-Absorb the finitely many initial degrees in $C$; a polynomial bound
-implies Bernstein--Markov with any positive exponential loss.
+\leq C m^{d/2+n/4}\|s\|_m$ for $s\in V_m$.
+The finitely many initial degrees can be absorbed in $C$, and a polynomial bound
+implies the Bernstein--Markov inequality with any positive exponential loss.
 \end{proof}
 
 \Needspace{18\baselineskip}
-\subsection{The measure and the ambient metric}
+\subsection{The limit measure and the ambient metric}
 \index{Equilibrium measure!moment shell}
+
+For $q\in\operatorname{int}P$ and $\tau\in(S^1)^n$, let $\Psi(q,\tau)=\mathrm e^{r(q)/2}\tau$ be the point of $T$ with coordinates $\mathrm e^{r_j(q)/2}\tau_j$. Thus $\Psi(q,\cdot)$ parametrizes the real torus $\{r=r(q)\}$, and we call the image of $Q\times(S^1)^n$ the \emph{moment shell} of $Q$. Here and below, $\langle S^k\rangle$ denotes the non-pluripolar product of a closed positive $(1,1)$-current $S$; in top degree it is the non-pluripolar Monge--Amp\`ere measure of \cref{thm:arbitrary-extended-ma}.
 
 \begin{theorem}\label{thm:newton-moment-shell-limit}
 Against every continuous test function on $X$,
@@ -218,75 +174,62 @@ Against every continuous test function on $X$,
  \mu_Q=\Psi_*(d!\,\mathrm dq_\Lambda\,\mathrm d\tau),
  \qquad \Psi(q,\tau)=\mathrm e^{r(q)/2}\tau.
 \end{equation}
-Its mass is $d!\operatorname{vol}_\Lambda(Q)>0$. In dimension zero it
-is Haar probability on one real $n$-torus. If $d<n$, it is singular
-against smooth ambient volume and
+The mass of $\mu_Q$ is $d!\operatorname{vol}_\Lambda(Q)>0$. If $d=0$, then $\mu_Q$ is the Haar probability measure on one real $n$-torus. If $d<n$, then $\mu_Q$ is singular with respect to smooth volume forms on $X$, and
 \[
  \left\langle(\theta+\ddc E_Q)^{d+1}\right\rangle=0.
 \]
-If $d=n$, it equals
-$\langle(\theta+\ddc E_Q)^n\rangle$.
+If $d=n$, then $\mu_Q=\langle(\theta+\ddc E_Q)^n\rangle$.
 \end{theorem}
 \begin{proof}
-Each monomial gives a probability
+For $\alpha\in mQ\cap\mathbb Z^n$ and $q=\alpha/m$, the normalized monomial $z^\alpha e^m$ gives the probability measure
 $\mathrm dP_{m,q}=A_m(\alpha)^{-1}
-\mathrm e^{m(q\cdot r-F(r))}a(r)\,\mathrm dr\,\mathrm d\tau$.
+\mathrm e^{m(q\cdot r-F(r))}a(r)\,\mathrm dr\,\mathrm d\tau$ on $T$.
 For every $\eta>0$ there is $c_\eta>0$ such that
 $F(r)-q\cdot r+F^*(q)\geq c_\eta$ whenever
-$|r-r(q)|\geq\eta$, uniformly for $q\in Q$.
-On a large compact set use uniqueness of the minima; outside it use
-\eqref{eq:newton-coercivity} uniformly on $Q$. Hence
+$|r-r(q)|\geq\eta$, uniformly for $q\in Q$: on a large compact set this follows from the uniqueness of the minima, and outside it from
+\eqref{eq:newton-coercivity}, which is uniform on $Q$. Together with \eqref{eq:newton-laplace-bounds}, this gives
 $P_{m,q}\{|r-r(q)|\geq\eta\}\leq C m^{n/2}\mathrm e^{-mc_\eta}$.
-Continuous test integrals converge uniformly to their angular average
-at $r(q)$. The identity
+Hence, for every continuous function on $X$, its integral against $P_{m,q}$ differs from its average over the torus $\{r=r(q)\}$ by $o(1)$, uniformly in $q\in Q$. The identity
 $d!m^{-d}B_m\nu=d!m^{-d}\sum_\alpha P_{m,\alpha/m}$ and the
-lattice Riemann sums prove \eqref{eq:newton-moment-shell}.
+lattice Riemann sums prove \eqref{eq:newton-moment-shell}. When $d<n$, the measure $\mu_Q$ is carried by the moment shell, which has real dimension $n+d<2n$, so it is singular with respect to smooth volume forms.
 
-Uniform strong convexity of $F^*$ on $Q$ makes the maximizing slope
-$q(r)$ unique. Its variational inequalities give
+For the curvature, note that $\theta+\ddc E_Q=\ddc G_Q$ on $T$. By uniform strong convexity of $F^*$ on $Q$, the slope $q(r)$ maximizing $q\cdot r-F^*(q)$ over $Q$ is unique. Adding the variational inequalities at $r$ and $s$ gives
 $(r-s)\cdot(q(r)-q(s))\geq c|q(r)-q(s)|^2$.
-Thus $q$ is Lipschitz; comparison of maximizing values gives
-$\nabla G_Q=q$. The function $G_Q$ is $C^{1,1}$, and its Hessian
-has rank at most $d$ almost everywhere since $q(r)\in b+W$.
-On logarithmic charts, convex mollifications converge in $C^1$,
-their Hessians stay bounded and converge in every finite local $L^p$,
-and their minors converge in $L^1$. Induction in the bounded-psh
-product definition, with integration by parts, identifies the wedge
-with these minors. The nonpluripolar extension agrees on $T$ and
-puts no mass on its pluripolar complement. The rank bound proves the
+Thus $q$ is Lipschitz, and comparison of the maximal values gives
+$\nabla G_Q=q$. Hence $G_Q$ is $C^{1,1}$, and its Hessian
+has rank at most $d$ almost everywhere, since $q(r)\in b+W$.
+In logarithmic coordinates, convex mollifications of $G_Q$ converge in $C^1$,
+their Hessians stay bounded and converge in $L^p_{\mathrm{loc}}$ for every finite $p$,
+and their minors converge in $L^1_{\mathrm{loc}}$. Induction on the degree in the Bedford--Taylor definition of products of bounded plurisubharmonic functions, together with integration by parts, identifies the powers of $\ddc G_Q$ on $T$
+with the measures given by these minors. The non-pluripolar product agrees with them on $T$ and
+puts no mass on the pluripolar set $X\setminus T$. The bound on the rank therefore proves the
 vanishing assertion.
 
-When $d=n$, the interior maximizer satisfies $r=\nabla F^*(q)$, so
-$G_Q=F$ where $\nabla F(r)\in\operatorname{int}Q$.
-Elsewhere the slope belongs to one of the finitely many facets. On
-each facet level set its scalar normal component has derivative zero
-almost everywhere: at a differentiability and density point, a nonzero
-derivative would exclude a cone of positive density from that level set.
-Consequently
+When $d=n$, a maximizer in the interior of $Q$ satisfies $r=\nabla F^*(q)$, so
+$G_Q=F$ on the set where $\nabla F(r)\in\operatorname{int}Q$.
+Elsewhere the maximizing slope lies in one of the finitely many facets of $Q$. On the set where it lies in a given facet, its component normal to that facet is constant, so the derivative of this component vanishes at almost every point of the set: at a point of differentiability and of density, a nonzero derivative would force a cone of positive density outside the set. Consequently
 $\det D^2G_Q=\boldsymbol1_{\{\nabla F(r)\in Q\}}\det D^2F$
-almost everywhere. In our normalization
+almost everywhere. In our normalization,
 $(\ddc F)^n=n!\det D^2F(r)\,\mathrm dr\,\mathrm d\tau$.
-Changing variables $q=\nabla F(r)$ gives the claimed top product.
+The change of variables $q=\nabla F(r)$ gives the asserted identity for the top product.
 \end{proof}
 
-For any smooth positive Hermitian form $\omega$, the map $\Psi$
-embeds $S_Q=\Psi(\operatorname{relint}Q\times(S^1)^n)$ as a real
-$(n+d)$-dimensional submanifold. For $d=0$ use the single torus.
-With $g_\omega(u,v)=\omega(u,Jv)$, define $J_\omega>0$ by
+For any Hermitian form $\omega$ on $X$, closed or not, the map $\Psi$
+embeds $\operatorname{relint}Q\times(S^1)^n$ onto a real
+$(n+d)$-dimensional submanifold $S_Q=\Psi(\operatorname{relint}Q\times(S^1)^n)$; for $d=0$ this is a single torus.
+Let $g_\omega(u,v)=\omega(u,Jv)$ be the associated Riemannian metric, and define the function $\mathcal J_\omega>0$ by
 $\Psi^*\mathrm d\operatorname{vol}_{\omega,S_Q}
-=J_\omega\,\mathrm dq_\Lambda\,\mathrm d\tau$.
-The relative boundary has zero measure, and therefore
+=\mathcal J_\omega\,\mathrm dq_\Lambda\,\mathrm d\tau$, where $\mathrm d\operatorname{vol}_{\omega,S_Q}$ is the Riemannian volume of $S_Q$ for $g_\omega$.
+Since the relative boundary has measure zero,
 \[
- \mathrm d\mu_Q=\frac{d!}{J_\omega\circ\Psi^{-1}}
+ \mathrm d\mu_Q=\frac{d!}{\mathcal J_\omega\circ\Psi^{-1}}
                     \,\mathrm d\operatorname{vol}_{\omega,S_Q}.
 \]
-Closedness of $\omega$ is unnecessary for this density formula.
 If $d<n$, the mixed measure
-$\langle(\theta+\ddc E_Q)^d\rangle\wedge\omega^{n-d}$ has locally
-bounded densities on $T$ and gives $S_Q$ zero mass. It differs from
-$\mu_Q$; for $d=0$ interpret the zeroth power as $1$.
-The positive limit is independent of the invariant sampling probability,
-although the finite-degree norms depend on it.
+$\langle(\theta+\ddc E_Q)^d\rangle\wedge\omega^{n-d}$, where the zeroth power is interpreted as $1$ when $d=0$, has a locally
+bounded density on $T$ and gives $S_Q$ zero mass. Hence it differs from
+$\mu_Q$.
+The limit $\mu_Q$ does not depend on the invariant probability measure $\nu$, although the norms in each degree do.
 
 \subsection{A rank-one selection with nonclosed sampling}
 
@@ -299,32 +242,24 @@ Then $\Lambda=\mathbb Z(1,-1)$, $\mathrm dq_\Lambda=\mathrm dt$, and
                           j\in\mathbb Z,\ |j|\leq m/2\},
  \qquad N_m=2\lfloor m/2\rfloor+1.
 \]
-The mass-one limit averages angular Haar probabilities on
-$|z_1|^2=(2+t)/(2-t)$ and $|z_2|^2=(2-t)/(2+t)$ for this interval.
-Indeed, these are the inverse gradient equations. The carrier is a
-compact three-dimensional portion of $|z_1z_2|=1$.
-Writing $c(p)=p\log(p/4)+(4-p)\log((4-p)/4)$ gives
-$F^*(2+t,2-t)=2c(2+t)$, and hence an explicit envelope.
+The limit $\mu_Q$ has mass one: it is the average, over $-1/2\leq t\leq1/2$, of the Haar probability measures on the real tori
+$\{|z_1|^2=(2+t)/(2-t),\ |z_2|^2=(2-t)/(2+t)\}$; indeed, these equations describe the inverse gradient map. The moment shell is a
+compact three-dimensional part of the hypersurface $|z_1z_2|=1$.
+Writing $c(p)=p\log(p/4)+(4-p)\log((4-p)/4)$, we have
+$F^*(2+t,2-t)=2c(2+t)$, which gives the envelope explicitly.
 
-Adjacent section ratios are $z_1/z_2$. In homogeneous coordinates
-$z_j=v_j/u_j$, the map $[v_1u_2:u_1v_2]$ is indeterminate at
-$(0,0)$ and $(\infty,\infty)$. The limit is obtained by radial
-concentration rather than by a globally defined submersion.
+The quotient of two adjacent selected monomials is $z_1/z_2$. In homogeneous coordinates
+$z_j=v_j/u_j$, the corresponding map $[v_1u_2:u_1v_2]$ to $\mathbb P^1$ is undefined at
+$(0,0)$ and $(\infty,\infty)$. Thus the limit arises from radial
+concentration rather than from a globally defined submersion as in \cref{sec:partial-submersion}.
 
-Let $\omega_0$ be the sum of the two Fubini--Study forms and set
-$f=c|z_1|^2/(1+|z_1|^2)$ with $c\ne0$.
-Then $\omega=\mathrm e^f\omega_0$ is smooth positive and invariant,
+Let $\omega_0$ be the sum of the two Fubini--Study forms, and set
+$f=c|z_1|^2/(1+|z_1|^2)$ with a constant $c\ne0$.
+Then $\omega=\mathrm e^f\omega_0$ is a torus-invariant Hermitian form,
 and $\mathrm d\omega=\mathrm e^f\mathrm df\wedge\omega_0\ne0$
-where $\mathrm df\ne0$. Sampling by
-$\nu=\omega^2/\int_X\omega^2$ gives the same mass-one limit.
-The curvature remains $\theta=4\omega_0$.
+wherever $\mathrm df\ne0$. Sampling with
+$\nu=\omega^2/\int_X\omega^2$ gives the same limit of mass one, while the curvature remains $\theta=4\omega_0$.
 \end{example}
 
-The integral affine offset prevents a degree obstruction: a
-half-integral singleton has no lattice point in every odd dilation.
-The theorem guarantees nonzero spaces in every sufficiently large
-degree. Polytopes touching the degree-box boundary, noninvariant
-weights or sampling, and arbitrary multiplier-ideal series require
-additional arguments. In particular the Newton-growth constraint
-above alone does not identify the ideal envelope of
+The assumption $b\in\mathbb Z^n$ excludes a parity obstruction: if $Q=\{b\}$ with $b$ half-integral, then $mQ$ contains no lattice point for odd $m$. Under our assumptions, \cref{thm:newton-potential-lower-bound} shows that $V_m\neq0$ for all sufficiently large $m$. Polytopes touching the boundary of $P$, weights or sampling measures that are not torus-invariant, and general multiplier-ideal families require additional arguments. In particular, the growth condition defining $E_Q$ does not by itself identify the ideal envelope of
 \cref{sec:hermitian-partial-envelopes}.

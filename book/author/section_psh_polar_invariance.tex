@@ -1,13 +1,13 @@
 \section{Polar curvature}
 \label{sec:psh-polar-invariance}
 
-Bounded changes preserve more than logarithmic coefficients: they preserve the whole curvature measure on the common pole set. A local energy estimate puts the bounded difference in a Sobolev space, while pole sets admit smooth tests of arbitrarily small energy. These tests exclude every coefficient measure of its Hessian from the pole set. Polar curvature is closed even when the pole set is not closed. A local elliptic equation therefore recovers it from its scalar Hermitian trace.
+For $u\in\PSH(X,\theta)$, the restriction of the current $\theta+\ddc u$ to the pole set $\{u=-\infty\}$ is called the \emph{polar curvature} of $u$. A bounded change of the potential preserves more than its Lelong numbers: it preserves the whole polar curvature. Indeed, a local energy estimate puts the bounded difference of two potentials in a Sobolev space, while pole sets admit smooth test functions of arbitrarily small energy, and these test functions show that no coefficient measure of the Hessian of the difference charges the pole set. Polar curvature is closed even when the pole set is not closed, so a local elliptic equation recovers it from its scalar Hermitian trace.
 
 \begin{lemma}\label{lem:bounded-measure-laplacian-energy}
 Let $U\subset\mathbb R^d$ be open and let $w\in L^\infty_{\mathrm{loc}}(U)$. If $\Delta w$ is a locally finite signed Radon measure, then $w\in W^{1,2}_{\mathrm{loc}}(U)$.
 \end{lemma}
 \begin{proof}
-Fix $0\leq\psi\leq1$ smooth and compactly supported on $U$, and a relatively compact open neighborhood $V$ of its support. Mollify $w$ inside $V$, writing $w_\varepsilon=w*\rho_\varepsilon$ and $\nu_\varepsilon=(\Delta w)*\rho_\varepsilon$. For small $\varepsilon$, integration by parts and Young's inequality give
+Fix a smooth function $0\leq\psi\leq1$ with compact support in $U$, and a relatively compact open neighborhood $V$ of its support. Mollify $w$ inside $V$ with a standard mollifier $\rho_\varepsilon$, writing $w_\varepsilon=w*\rho_\varepsilon$ and $\nu_\varepsilon=(\Delta w)*\rho_\varepsilon$. For small $\varepsilon$, integration by parts and Young's inequality give
 \[
  \begin{split}
  \int\psi^2|\nabla w_\varepsilon|^2
@@ -18,19 +18,19 @@ Fix $0\leq\psi\leq1$ smooth and compactly supported on $U$, and a relatively com
        +2\int w_\varepsilon^2|\nabla\psi|^2.
  \end{split}
 \]
-The right side bounds the local gradient norm independently of $\varepsilon$. Taking $\psi=1$ on any prescribed smaller compact set, weak Sobolev compactness and convergence of mollifications in $L^2$ identify the weak limit with $w$. This proves the assertion.
+Absorbing the middle term on the right, we obtain a bound for $\int\psi^2|\nabla w_\varepsilon|^2$ that is independent of $\varepsilon$. Taking $\psi=1$ on a prescribed smaller compact set, weak compactness in $W^{1,2}$ and convergence of the mollifications in $L^2$ identify the weak limit with $w$. This proves the assertion.
 \end{proof}
 
 \begin{lemma}\label{lem:pole-small-energy-tests}\index{Pluripolar set!smooth energy tests}
 Let $v$ be quasi-plurisubharmonic on a complex manifold, let $U$ be a coordinate ball with compact closure in a larger chart, and let $K\subset U\cap\{v=-\infty\}$ be compact. For every open $O\subset U$ containing $K$, there are real $\varphi_j\in C^\infty_c(O)$ with $0\leq\varphi_j\leq1$, equal to one near $K$, such that $\|\varphi_j\|_{W^{1,2}(U)}\to0$. The norm uses the Euclidean coordinates.
 \end{lemma}
 \begin{proof}
-A smooth quadratic correction and subtraction of a constant give a negative plurisubharmonic function $h$ on $U$ with the same pole set as $v$. Put $h_M=\max(h,-M)$ for $M\geq1$ and choose $0\leq\psi\leq1$ in $C^\infty_c(O)$, equal to one near $K$. On a fixed compact neighborhood of $\operatorname{supp}\psi$, the positive measures $\Delta h_M$ have uniformly bounded mass: choose a nonnegative smooth compactly supported $\chi$ on $U$ equal to one there and use
+Adding a smooth quadratic function and subtracting a constant, we obtain a negative plurisubharmonic function $h$ on $U$ with the same pole set as $v$. Put $h_M=\max(h,-M)$ for $M\geq1$, and choose $\psi\in C^\infty_c(O)$ with $0\leq\psi\leq1$ and $\psi=1$ near $K$. On a fixed compact neighborhood of $\operatorname{supp}\psi$, the positive measures $\Delta h_M$ have uniformly bounded mass: choose a nonnegative smooth function $\chi$ with compact support in $U$, equal to one on this neighborhood, and use
 \[
  \int\chi\,\Delta h_M=\int h_M\Delta\chi,
  \qquad |h_M|\leq|h|\in L^1_{\mathrm{loc}}(U).
 \]
-Apply the preceding integration-by-parts estimate to mollifications of $h_M$. Their absolute values are at most $M$, and their squares are at most $M$ times their absolute values. The uniform Laplacian mass and local $L^1$ bounds therefore give, after passing to the weak Sobolev limit,
+Apply the integration-by-parts estimate of the preceding proof to mollifications of $h_M$. Their absolute values are at most $M$, and their squares are at most $M$ times their absolute values. The uniform bounds for the mass of the Laplacians and for the local $L^1$ norms therefore give, after passing to the weak limit in $W^{1,2}$,
 \[
  \int\psi^2|\nabla h_M|^2\leq CM,
  \qquad
@@ -38,14 +38,14 @@ Apply the preceding integration-by-parts estimate to mollifications of $h_M$. Th
 \]
 Here $C$ depends on the fixed cutoffs and the local $L^1$ norm of $h$, but not on $M$. The second inequality also uses $h_M^2\leq M|h|$ in the terms containing $\psi$ and $\nabla\psi$.
 
-The Sobolev function $-\psi h_M/M$ lies between zero and one. It equals one on a neighborhood of $K$, since $h$ is upper semicontinuous and $\{h<-M\}$ is an open neighborhood of $K$. Extend it by zero and mollify with sufficiently small radius. Its support stays in $O$, it remains equal to one on a smaller neighborhood of $K$, and its Sobolev norm does not increase. Taking $M\to\infty$ gives the required smooth functions.
+The Sobolev function $-\psi h_M/M$ takes values between zero and one. It equals one on a neighborhood of $K$, since $h$ is upper semicontinuous and therefore $\{h<-M\}$ is an open neighborhood of $K$. Extend it by zero and mollify with a sufficiently small radius: the support stays in $O$, the function remains equal to one on a smaller neighborhood of $K$, and its Sobolev norm does not increase. Letting $M\to\infty$ gives the required smooth functions.
 \end{proof}
 
-Restrictions below are taken coefficientwise on the Radon measures of a current of order zero. They therefore commute with smooth changes of coordinates.
+For a current $T$ of order zero and a Borel set $B$, we write $\mathbf1_BT$ for the restriction of $T$ to $B$, taken coefficientwise on the Radon coefficient measures of $T$. These restrictions commute with smooth changes of coordinates.
 
 \Needspace{10\baselineskip}
 \begin{proposition}\label{prop:bounded-type-polar-invariance}\index{Singularity type!polar curvature invariance}\index{Polar curvature!bounded changes}
-Let $u,v$ be quasi-plurisubharmonic on a complex manifold and locally equivalent up to bounded constants. Their pole sets agree, say $S=\{u=-\infty\}=\{v=-\infty\}$, and
+Let $u,v$ be quasi-plurisubharmonic functions on a complex manifold such that every point has a neighborhood on which $u-C\leq v\leq u+C$ for some constant $C$. Then $u$ and $v$ have the same pole set $S=\{u=-\infty\}=\{v=-\infty\}$, and
 \[
  \mathbf1_S\ddc u=\mathbf1_S\ddc v.
 \]
@@ -55,19 +55,19 @@ Consequently, for any smooth real $(1,1)$-forms $\theta,\beta$,
 \]
 \end{proposition}
 \begin{proof}
-The two local order inequalities give the same pole set. Off $S$ put $w=u-v$ and assign arbitrary bounded values on $S$. This defines the locally bounded distribution $u-v$, because $S$ has Lebesgue measure zero. The coefficient measures of $\ddc w$ are locally finite: after a smooth correction, each Hessian of $u$ and $v$ is a positive current of order zero. Its Euclidean trace makes $\Delta w$ a signed measure. Thus \cref{lem:bounded-measure-laplacian-energy} gives $w\in W^{1,2}_{\mathrm{loc}}$.
+The two local inequalities show that the pole sets agree. Off $S$ put $w=u-v$, and give $w$ arbitrary bounded values on $S$. Since $S$ has Lebesgue measure zero, this defines the locally bounded distribution $u-v$. The coefficient measures of $\ddc w$ are locally finite, since after a smooth correction the complex Hessians of $u$ and $v$ are positive currents of order zero. Taking the Euclidean trace shows that $\Delta w$ is a signed Radon measure, so \cref{lem:bounded-measure-laplacian-energy} gives $w\in W^{1,2}_{\mathrm{loc}}$.
 
-Each real and imaginary part of a coefficient measure of $\ddc w$ is consequently a continuous functional on $W^{1,2}_0$ on a smaller ball, since a second distributional derivative of $w$ is a first derivative of its $L^2$ gradient. Let $\nu$ be any one of these real signed measures, with Jordan parts $\nu^+,\nu^-$. Choose a compact $K$ in the intersection of $S$ with a positive Hahn set, so $\nu^-(K)=0$. For $\epsilon>0$, take an open neighborhood $O$ of $K$ in the ball with $\nu^-(O)<\epsilon$. The tests of \cref{lem:pole-small-energy-tests}, applied to $u$, satisfy
+Consequently, the real and imaginary parts of the coefficient measures of $\ddc w$ are continuous linear functionals on $W^{1,2}_0$ of a smaller ball, since a second distributional derivative of $w$ is a first derivative of its $L^2$ gradient. Let $\nu$ be any one of these real signed measures, with Jordan decomposition $\nu=\nu^+-\nu^-$. Choose a compact set $K$ contained in the intersection of $S$ with a positive set of a Hahn decomposition, so that $\nu^-(K)=0$. For $\epsilon>0$, take an open neighborhood $O$ of $K$ in the ball with $\nu^-(O)<\epsilon$. The test functions $\varphi_j$ of \cref{lem:pole-small-energy-tests}, applied to $u$, satisfy
 \[
  \nu^+(K)\leq\int\varphi_j\,\mathrm d\nu^+
        =\langle\nu,\varphi_j\rangle
           +\int\varphi_j\,\mathrm d\nu^-
        \leq|\langle\nu,\varphi_j\rangle|+\epsilon.
 \]
-Continuity on the Sobolev space makes the first term tend to zero. Letting $\epsilon\downarrow0$ and using inner regularity gives $\nu^+(S)=0$ locally. Applying the same argument to $-\nu$ gives $\nu^-(S)=0$. All coefficient measures of $\ddc w$ therefore vanish on $S$, proving the first identity. Smooth forms also assign zero mass to $S$, which proves the second.
+By continuity on the Sobolev space, the first term tends to zero. Letting $\epsilon\downarrow0$ and using inner regularity gives $\nu^+(S)=0$ locally, and the same argument applied to $-\nu$ gives $\nu^-(S)=0$. Thus all coefficient measures of $\ddc w$ vanish on $S$, which proves the first identity. Since smooth forms also give $S$ zero mass, the second identity follows.
 \end{proof}
 
-For a closed positive current, local potentials turn equality of scalar traces into an elliptic equation. If both currents are carried by a Lebesgue null set, the resulting smooth difference vanishes.
+For closed positive currents, local potentials turn equality of the scalar traces into an elliptic equation. If both currents are carried by a Lebesgue null set, the resulting smooth difference vanishes.
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:closed-null-current-trace}\index{Closed positive current!trace on a null set}
@@ -78,10 +78,10 @@ Let $T,S$ be closed positive $(1,1)$-currents on a complex manifold of dimension
 \]
 \end{lemma}
 \begin{proof}
-On a smaller coordinate ball, take plurisubharmonic local potentials $a,b$ for $T,S$, by \cite[Chapter III, Proposition 1.19, p.~135]{DemCADG}, with the normalization of this book. Put $h=a-b\in L^1_{\mathrm{loc}}$. The trace identity gives $\ddc h\wedge\eta^{n-1}=0$ in distributions. Dividing by the smooth positive volume form $\eta^n$ gives a scalar second-order operator whose principal matrix is a positive multiple of the inverse Hermitian matrix of $\eta$. It is uniformly elliptic on every smaller ball, with smooth coefficients. Local elliptic regularity therefore makes $h$ smooth. Thus $T-S=\ddc h$ is smooth and carried by a Lebesgue null set. Its coefficient measures must vanish, proving equality locally and hence globally.
+On a small coordinate ball, take plurisubharmonic local potentials $a,b$ with $T=\ddc a$ and $S=\ddc b$, by \cite[Chapter III, Proposition 1.19, p.~135]{DemCADG}. Put $h=a-b\in L^1_{\mathrm{loc}}$. The trace identity gives $\ddc h\wedge\eta^{n-1}=0$ in the sense of distributions. Dividing by the smooth positive volume form $\eta^n$ gives a scalar second-order operator with smooth coefficients whose principal matrix is a positive multiple of the inverse of the Hermitian matrix of $\eta$; it is uniformly elliptic on every smaller ball. Local elliptic regularity therefore makes $h$ smooth. Thus $T-S=\ddc h$ is smooth and carried by a Lebesgue null set, so its coefficient measures vanish. This proves equality locally, and hence globally.
 \end{proof}
 
-Proper pushforward commutes with coefficientwise restriction to the inverse image of a Borel set. This gives exact compatibility of polar curvature under modifications, even when its pole set is not closed.
+Pushforward by a proper map commutes with restriction to the inverse image of a Borel set. Hence polar curvature is compatible with modifications, even when the pole set is not closed.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:polar-curvature-pushforward}\index{Polar curvature!pushforward}
@@ -96,12 +96,12 @@ Then
 \end{equation}
 \end{proposition}
 \begin{proof}
-Pullback is genuine and admissible by \cref{prop:psh-descent-modification}. Change of variables on the isomorphism locus, whose complement has Lebesgue measure zero on both spaces, gives $\pi_*(u\circ\pi)=u$ as distributions and $\pi_*\pi^*\theta=\theta$ as currents. Proper pushforward commutes with $\ddc$, so $\pi_*T_Y=T$.
+By \cref{prop:psh-descent-modification}, $u\circ\pi\in\PSH(Y,\pi^*\theta)$. Change of variables on the locus where $\pi$ is an isomorphism, whose complement has Lebesgue measure zero in both manifolds, gives $\pi_*(u\circ\pi)=u$ as distributions and $\pi_*\pi^*\theta=\theta$ as currents. Since pushforward by a proper map commutes with $\ddc$, we get $\pi_*T_Y=T$.
 
-For any Borel $B\subset X$, the coefficient measures of $\pi_*T_Y$ are pushforwards of the coefficient measures of $T_Y$ multiplied by the smooth coefficients arising from pullback of a test form. Restriction therefore gives $\pi_*(\mathbf1_{\pi^{-1}(B)}T_Y)=\mathbf1_B\pi_*T_Y$. Apply this to the Borel pole set $S$. No closedness of its restricted current is used.
+For any Borel set $B\subset X$, the coefficient measures of $\pi_*T_Y$ are pushforwards of the coefficient measures of $T_Y$, multiplied by the smooth coefficients that arise from pulling back a test form. Restriction therefore gives $\pi_*(\mathbf1_{\pi^{-1}(B)}T_Y)=\mathbf1_B\pi_*T_Y$. Applying this to the Borel set $S$ proves \eqref{eq:polar-curvature-pushforward}; closedness of the restricted currents is not used.
 \end{proof}
 
-The closedness of polar curvature follows from the bounded cutoff argument for complete pluripolar restrictions. The cutoff approaches the complement of the pole set pointwise, so the pole set need not be closed.
+The restriction of a closed positive current to a closed complete pluripolar set is closed; the classical proof uses bounded cutoff functions. Since these cutoff functions converge pointwise to the indicator function of the complement of the pole set, the argument also applies to pole sets that are not closed.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:polar-curvature-closedness}\index{Polar curvature!closedness}
@@ -113,21 +113,20 @@ Let $X$ be a complex manifold of dimension $n\geq1$, let $u$ be quasi-plurisubha
 is a closed positive $(1,1)$-current.
 \end{proposition}
 \begin{proof}
-Locally, a smooth quadratic correction and subtraction of a constant give a negative plurisubharmonic function $a$ with pole set $S=\{u=-\infty\}$. Put $\Theta=\ddc a$. Since smooth forms have no coefficient mass on $S$, the polar current equals $\mathbf1_S\Theta$ and is positive. In dimension one it is closed by degree.
+Locally, adding a smooth quadratic function to $u$ and subtracting a constant gives a negative plurisubharmonic function $a$ with pole set $S=\{u=-\infty\}$. Put $\Theta=\ddc a$. Since smooth forms give $S$ zero mass, the polar current equals $\mathbf1_S\Theta$ and is positive. In dimension one it is closed for degree reasons.
 
-Suppose $n\geq2$. Choose a smooth convex nondecreasing function $\chi$ on $\mathbb R$ with $\chi(t)=0$ for $t\leq1/2$ and $\chi(1)=1$, and a smooth function $0\leq\vartheta\leq1$ which is zero near zero and one near one. Set
+Now suppose that $n\geq2$. Choose a smooth convex nondecreasing function $\chi$ on $\mathbb R$ with $\chi(t)=0$ for $t\leq1/2$ and $\chi(1)=1$, and a smooth function $0\leq\vartheta\leq1$ that vanishes near zero and equals one near one. Set
 \[
- w_k=\chi(e^{a/k}),\qquad k\geq1.
+ w_k=\chi(\mathrm{e}^{a/k}),\qquad k\geq1.
 \]
-These functions are bounded plurisubharmonic, with $0\leq w_k\leq1$. They vanish on $S$ and tend to one at every point outside $S$. Hence $\vartheta(w_k)\Theta$ converges coefficientwise locally in total variation to $\mathbf1_{X\setminus S}\Theta$. Also $\vartheta'(w_k)$ vanishes on $S$ and tends to zero everywhere.
+These functions are bounded and plurisubharmonic, with $0\leq w_k\leq1$. They vanish on $S$ and tend to one at every point outside $S$. Hence $\vartheta(w_k)\Theta$ converges locally, coefficientwise in total variation, to $\mathbf1_{X\setminus S}\Theta$. Moreover, $\vartheta'(w_k)$ vanishes on $S$ and tends to zero everywhere.
 
 Fix a constant strongly positive $(n-2,n-2)$-form $\beta$ and put $\Xi=\Theta\wedge\beta$. The bounded Bedford--Taylor chain rule gives
 \[
  \mathrm d\bigl(\vartheta(w_k)\Xi\bigr)
        =\vartheta'(w_k)\,\mathrm dw_k\wedge\Xi.
 \]
-Indeed, decrease smooth plurisubharmonic functions to $w_k$ on a smaller ball. Dominated convergence gives convergence of their $\vartheta$-weighted currents. The bounded Bedford--Taylor energy convergence and Cauchy--Schwarz give convergence of the differentiated expressions, proving the chain rule for $w_k$.
-For a smooth compactly supported test one-form $\alpha$, choose a nonnegative smooth cutoff $\tau$ equal to one near its support. Since $w_k\geq0$ and $\Xi$ is closed and positive, bounded integration by parts gives
+Indeed, approximate $w_k$ on a smaller ball by a decreasing sequence of smooth plurisubharmonic functions. Dominated convergence gives convergence of the corresponding $\vartheta$-weighted currents, while the convergence of bounded Bedford--Taylor energies and the Cauchy--Schwarz inequality give convergence of the differentiated expressions; this proves the chain rule for $w_k$. For a smooth compactly supported test one-form $\alpha$, choose a nonnegative smooth cutoff $\tau$ equal to one near its support. Since $w_k\geq0$ and $\Xi$ is closed and positive, bounded integration by parts gives
 \[
  2\int\tau\,\mathrm dw_k\wedge\dc w_k\wedge\Xi
        \leq\int\tau\,\ddc(w_k^2)\wedge\Xi
@@ -141,5 +140,5 @@ Here $C$ depends only on the local mass of $\Xi$ and the fixed cutoff. The Cauch
                  |\vartheta'(w_k)|^2\,\Xi\wedge\kappa
        \longrightarrow0,
 \]
-where $\kappa$ is the Euclidean Hermitian form. The limit follows by dominated convergence against the fixed locally finite trace measure. Thus $\mathbf1_{X\setminus S}\Theta\wedge\beta$ is closed. Constant strongly positive forms span the needed test forms, so $\mathbf1_{X\setminus S}\Theta$ is closed. Subtracting it from $\Theta$ proves closedness of $\mathbf1_S\Theta$. The local currents agree on overlaps and give the asserted global current.
+where $\kappa$ is the Euclidean form; the limit follows by dominated convergence with respect to the fixed locally finite trace measure. Hence $\mathrm d(\vartheta(w_k)\Xi)\to0$, and $\mathbf1_{X\setminus S}\Theta\wedge\beta$ is closed. Since constant strongly positive forms span all constant forms of bidegree $(n-2,n-2)$, the current $\mathbf1_{X\setminus S}\Theta$ is closed. Subtracting it from $\Theta$ shows that $\mathbf1_S\Theta$ is closed. The local currents agree on overlaps and give the asserted global current.
 \end{proof}

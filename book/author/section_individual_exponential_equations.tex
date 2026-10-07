@@ -1,86 +1,90 @@
 \section{Exponential equations for an individual density}
 \label{sec:individual-exponential-equations}
 
-Fix a nonzero nonnegative $f\in L^1(\mathrm{d}V)$. An exponential subsolution is a common lower bound for the continuous solutions of the truncated equations. Those solutions decrease, so \cref{thm:exponential-closedness} gives an exact equation at the limit. The limiting solution dominates every subsolution. A positive threshold $b_h(f)$ supplies the required lower bound for each exponent.
+We return to the Hermitian background $h$ and a fixed nonzero density $0\leq f\in L^1(\mathrm{d}V)$, and consider, for $\lambda>0$, the exponential equation
+\begin{equation}\label{eq:individual-exponential-equation}
+ \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V,
+ \qquad u\in\PSH(X,h).
+\end{equation}
+A \emph{solution} is a function $u\in\PSH(X,h)$ satisfying \eqref{eq:individual-exponential-equation}, and an \emph{exponential subsolution} at exponent $\lambda$ is a function $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$. For the truncations $f_k=\min(f,k)$, \cref{thm:nguyen-exp} gives continuous solutions $u_k$ of the truncated equations, and these decrease as $k$ increases. Strict domination shows that every exponential subsolution is a common lower bound for the $u_k$. Hence, as soon as one subsolution exists, the decreasing limit is not identically $-\infty$, and \cref{thm:exponential-closedness} shows that it solves \eqref{eq:individual-exponential-equation}; it is the greatest subsolution. A positive threshold $b_h(f)$ provides exponential subsolutions for every exponent, and the normalized greatest solutions then recover $b_h(f)$ as $\lambda\downarrow0$.
 
 \begin{theorem}\label{thm:individual-exponential-subsolution}\index{Monge--Ampere equation@Monge--Amp\`ere equation!greatest exponential solution}
-Fix $\lambda>0$. Suppose there is $s\in\PSH(X,h)$ such that
+Fix $\lambda>0$, and suppose that \eqref{eq:individual-exponential-equation} has an exponential subsolution $s\in\PSH(X,h)$. For $k\geq1$, let $u_k$ be the continuous solution of
 \[
- \mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V.
+ \mathrm{MA}_h(u_k)=\mathrm{e}^{\lambda u_k}f_k\,\mathrm{d}V,
+ \qquad f_k=\min(f,k),
 \]
-Then the equation
-\[
- \mathrm{MA}^{\mathrm{ext}}_h(u_\lambda)
-       =\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V
-\]
-has a greatest solution. More precisely, $u_\lambda$ is the greatest genuine $h$-plurisubharmonic subsolution of this equation, and its Monge--Amp\`ere measure is finite. It is the decreasing limit of the continuous solutions for $f_k=\min(f,k)$.
+given by \cref{thm:nguyen-exp}. Then $u_k$ decreases to a solution $u_\lambda$ of \eqref{eq:individual-exponential-equation}, and $\mathrm{MA}^{\mathrm{ext}}_h(u_\lambda)$ has finite mass. Moreover, $u_\lambda$ is the greatest exponential subsolution: every exponential subsolution $v$ at exponent $\lambda$ satisfies $v\leq u_\lambda$. In particular, $u_\lambda$ is the greatest solution of \eqref{eq:individual-exponential-equation}.
 \end{theorem}
 \begin{proof}
-Let $u_k$ solve the continuous exponential equation for $f_k$, using \cref{thm:nguyen-exp}. By \cref{lem:exp-order}, $u_{k+1}\leq u_k$.
+Since $f_k\leq f_{k+1}$, \cref{lem:exp-order} gives $u_{k+1}\leq u_k$.
 
-Every genuine subsolution $v$ for $f$ lies below each $u_k$. Indeed, for $t>0$, on $\{u_k<v-t\}$ we have
+We first show that every exponential subsolution $v$ lies below each $u_k$. Let $t>0$. On the set $\{u_k<v-t\}$,
 \[
  \mathrm{MA}_h(u_k)=\mathrm{e}^{\lambda u_k}f_k\,\mathrm{d}V
  \leq\mathrm{e}^{-\lambda t}\mathrm{e}^{\lambda v}f\,\mathrm{d}V
  \leq\mathrm{e}^{-\lambda t}\mathrm{MA}^{\mathrm{ext}}_h(v-t).
 \]
-The first potential $u_k$ is bounded, so $P_{h/2}(u_k)$ is genuine and $v-t\preceq u_k$. Strict domination, \cref{thm:singular-strict-domination}, gives $u_k\geq v-t$. Let $t\downarrow0$.
+Since $u_k$ is bounded, $P_{h/2}(u_k)\geq\inf_Xu_k$ is not identically $-\infty$, and $v-t\preceq u_k$. Strict domination, \cref{thm:singular-strict-domination}, therefore gives $u_k\geq v-t$. Letting $t\downarrow0$ gives $u_k\geq v$.
 
-In particular, $s\leq u_k\leq u_1$. Thus the decreasing limit $u_\lambda$ is genuine. By \cref{lem:monotone-psh-capacity}, the convergence holds in capacity. Choose a common constant $A\geq\sup_Xu_1$. Apply \cref{thm:exponential-closedness} to $u_k-A$, with densities $\mathrm{e}^{\lambda A}f_k\to\mathrm{e}^{\lambda A}f$ in $L^1$. It proves the equation and finiteness of its left side. Finally every subsolution $v$ lies below all $u_k$, hence below $u_\lambda$, which is itself a subsolution.
+In particular $s\leq u_k\leq u_1$ for every $k$, so the decreasing limit $u_\lambda\geq s$ is not identically $-\infty$ and belongs to $\PSH(X,h)$. By \cref{lem:monotone-psh-capacity}, $u_k\to u_\lambda$ in capacity. Choose a constant $A\geq\sup_Xu_1$. The nonpositive functions $u_k-A$ satisfy
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(u_k-A)=\mathrm{e}^{\lambda(u_k-A)}\,\mathrm{e}^{\lambda A}f_k\,\mathrm{d}V,
+\]
+and $\mathrm{e}^{\lambda A}f_k\to\mathrm{e}^{\lambda A}f$ in $L^1(\mathrm{d}V)$. \Cref{thm:exponential-closedness}, applied with $\mu=\mathrm{d}V$ and constant exponents, shows that $\mathrm{MA}^{\mathrm{ext}}_h(u_\lambda)$ is finite and that $u_\lambda$ solves \eqref{eq:individual-exponential-equation}. Finally, every exponential subsolution lies below all $u_k$, hence below $u_\lambda$, which is itself a subsolution.
 \end{proof}
 
-Every subsolution lies below this solution, so its extremal property is independent of the truncation used to construct it. Smaller solutions with other singularities are not excluded. For $f\in L^p$, $p>1$, the continuous solution gives a bounded lower barrier. The greatest solution is then bounded and agrees with it by bounded exponential comparison.
+Being the greatest subsolution, $u_\lambda$ does not depend on the approximation used to construct it. The equation may have other, smaller solutions with different singularities. If $f\in L^p$ for some $p>1$, the continuous solution of \cref{thm:nguyen-exp} is a subsolution and therefore lies below $u_\lambda$. Thus $u_\lambda$ is bounded, and bounded exponential comparison (\cref{cor:bounded-exponential-comparison}) shows that it coincides with the continuous solution.
 
 \Needspace{20\baselineskip}
 \begin{corollary}\label{cor:individual-positive-threshold-exponential}
-If $b=b_h(f)>0$, the preceding greatest solution exists for every $\lambda>0$. If $v\in\PSH(X,h)$ has $\sup_Xv=0$ and
+Suppose $b=b_h(f)>0$. Then \eqref{eq:individual-exponential-equation} has a greatest solution $u_\lambda$ for every $\lambda>0$. If $v\in\PSH(X,h)$ satisfies $\sup_Xv=0$ and
 $\mathrm{MA}^{\mathrm{ext}}_h(v)\geq bf\,\mathrm{d}V$, then
 \[
  u_\lambda\geq v+\lambda^{-1}\log b.
 \]
-Writing
+Put
 \[
  M_\lambda=\sup_Xu_\lambda,\qquad
  v_\lambda=u_\lambda-M_\lambda,\qquad
- c_\lambda=\mathrm{e}^{\lambda M_\lambda},
+ c_\lambda=\mathrm{e}^{\lambda M_\lambda}.
 \]
-we have
+Then, as $\lambda\downarrow0$,
 \[
  c_\lambda\longrightarrow b_h(f),\qquad
  \mathrm{e}^{\lambda u_\lambda}f\longrightarrow b_h(f)f
-           \quad\text{in }L^1(\mathrm{d}V)
- \quad(\lambda\downarrow0).
+           \quad\text{in }L^1(\mathrm{d}V).
 \]
 \end{corollary}
 \begin{proof}
-The attained-threshold theorem supplies $v$. Since $v\leq0$, the function $s=v+\lambda^{-1}\log b$ satisfies
+By \cref{thm:individual-density-subsolution}, a function $v$ as in the statement exists. Since $v\leq0$, the function $s=v+\lambda^{-1}\log b$ satisfies
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(s)\geq bf\,\mathrm{d}V
-       \geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V.
+       \geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V,
 \]
-The theorem gives $u_\lambda\geq s$, hence $c_\lambda\geq b$.
+so it is an exponential subsolution. \Cref{thm:individual-exponential-subsolution} gives the greatest solution $u_\lambda$ and the bound $u_\lambda\geq s$; in particular, $c_\lambda\geq b$.
 
-Set $g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$. By \cref{lem:normalized-exponential-npp}, applied to the fixed finite measure $f\,\mathrm{d}V$, we have $g_\lambda\to f$ in $L^1$. Each $g_\lambda$ is nonzero, since a genuine quasi-plurisubharmonic function is finite almost everywhere. The equation for $u_\lambda$ implies
+Set $g_\lambda=\mathrm{e}^{\lambda v_\lambda}f$. By \cref{lem:normalized-exponential-npp}, applied to the finite measure $f\,\mathrm{d}V$, we have $g_\lambda\to f$ in $L^1$ as $\lambda\downarrow0$. Each $g_\lambda$ is nonzero, since $v_\lambda$ is finite almost everywhere. The equation for $u_\lambda$ reads $\mathrm{MA}^{\mathrm{ext}}_h(v_\lambda)=c_\lambda g_\lambda\,\mathrm{d}V$, so \cref{thm:individual-density-subsolution}, applied to the density $g_\lambda$, gives
 \[
- c_\lambda\leq b_h(g_\lambda)
+ c_\lambda\leq b_h(g_\lambda).
 \]
-by the maximal subsolution characterization. Upper semicontinuity therefore gives
+The upper semicontinuity of the threshold (\cref{thm:individual-threshold-semicontinuity}) therefore gives
 \[
  b\leq\liminf_{\lambda\downarrow0}c_\lambda
  \leq\limsup_{\lambda\downarrow0}c_\lambda
  \leq b_h(f)=b.
 \]
-This proves the scalar limit. Since $g_\lambda\to f$ in $L^1$, it also proves $c_\lambda g_\lambda\to bf$ in $L^1$.
+This proves $c_\lambda\to b$. Since $\mathrm{e}^{\lambda u_\lambda}f=c_\lambda g_\lambda$ and $g_\lambda\to f$ in $L^1$, it also proves $\mathrm{e}^{\lambda u_\lambda}f\to bf$ in $L^1$.
 \end{proof}
 
-The right-hand-side measures therefore converge in total variation. This answers the scalar and measure questions in \cref{sec:zero-exponent-topology}. Under positive lower mass, \cref{cor:positive-lower-mass-exact-threshold} also gives capacity convergence along every $L^1$-convergent normalized subsequence and identifies an exact solution at $b_h(f)$. For $L^p$ data, $p>1$, \cref{prop:symmetric-equation-clusters} gives uniform precompactness. In either case, convergence of the whole normalized family requires identification of all cluster limits. Smooth strictly positive dual attainment gives whole-family uniform convergence in \cref{cor:smooth-dual-exponential-limit}. If the smooth maximizing form is only semipositive, but strictly positive outside a proper analytic set, \cref{prop:semipositive-dual-exponential-limit} gives whole-family $L^1$ convergence and a fixed lower barrier. For $L^p$ data, $p>1$, \cref{cor:semipositive-dual-lp-limit} strengthens this to uniform convergence.
+Since $\mathrm{MA}^{\mathrm{ext}}_h(v_\lambda)=\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V$, the Monge--Amp\`ere measures of the normalized greatest solutions converge in total variation to $b_h(f)f\,\mathrm{d}V$. This answers the questions about the scalar and the measure raised in \cref{sec:zero-exponent-topology}; the potentials $v_\lambda$ themselves are harder to control. Under positive lower mass, \cref{cor:positive-lower-mass-exact-threshold} shows that every $L^1$-convergent sequence $v_{\lambda_j}$ with $\lambda_j\downarrow0$ converges in capacity to a solution of $\mathrm{MA}^{\mathrm{ext}}_h(v)=b_h(f)f\,\mathrm{d}V$. For $L^p$ data with $p>1$, \cref{prop:symmetric-equation-clusters} gives uniform precompactness. In both cases, convergence of the whole family $(v_\lambda)$ requires that all its cluster limits coincide. This holds when the dual problem for $f^{1/n}$ over Gauduchon currents, studied in \cref{sec:integrable-gauduchon-currents}, has a smooth strictly positive maximizer: the whole family then converges uniformly (\cref{cor:smooth-dual-exponential-limit}). If the maximizer is smooth and semipositive, and strictly positive outside a proper analytic set, \cref{prop:semipositive-dual-exponential-limit} gives $L^1$ convergence of the whole family and a fixed lower barrier, and \cref{cor:semipositive-dual-lp-limit} strengthens this to uniform convergence for $L^p$ data with $p>1$.
 
 \Needspace{7\baselineskip}
-For a general positive individual threshold, the corollary gives
+For a general positive threshold, the corollary gives the lower bound
 \[
- v_\lambda\geq v-\lambda^{-1}\log(c_\lambda/b_h(f)).
+ v_\lambda\geq v-\lambda^{-1}\log(c_\lambda/b_h(f))
 \]
-The next estimate quantifies this scalar error when the density root is approximable by bounded roots. Whether an exponential subsolution exists when $b_h(f)=0$ is a separate question; \cref{thm:individual-exponential-subsolution} applies whenever such a subsolution is available.
+for every normalized threshold subsolution $v$. The next subsection estimates the scalar error $\log(c_\lambda/b_h(f))$ when $f^{1/n}$ can be approximated by bounded functions in the norm of $\mathcal D_h$. When $b_h(f)=0$, \cref{thm:individual-exponential-subsolution} still applies whenever an exponential subsolution exists; examples are constructed in \cref{subsec:zero-threshold-product-exponential}.
 
 \input{author/section_exponential_tail_modulus}
 
@@ -88,12 +92,9 @@ The next estimate quantifies this scalar error when the density root is approxim
 \subsection{Exponential equations at zero threshold}
 \label{subsec:zero-threshold-product-exponential}
 
-Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$ with $v_-(h_0)=0$. Put $Y=\mathbf P^k$, $k\geq1$, with normalized Fubini--Study form $\kappa$, and set $X=X_0\times Y$, $H=h_0+\kappa$, $N=m+k$ and
-\[
- C=\binom Nm,\qquad V_0=\int_{X_0}h_0^m,\qquad
- \mu=V_0^{-1}h_0^m\wedge\kappa^k,\qquad R=\mu/\mathrm dV.
-\]
-Here $\mathrm dV$ is any smooth strictly positive probability volume form on $X$, and factor pullbacks are understood. The potential $u_\alpha=1-(1-\psi)^\alpha$ and its density $q_\alpha$ are those of \cref{lem:projective-sublogarithmic-density}, for fixed $0<\alpha<1$ and pole $o=[1:0:\cdots:0]$. Its exponential weight can absorb a concentration. Choosing the projective components accordingly gives one zero-threshold density with genuine exponential solutions for every positive exponent. On $Y\setminus\{o\}$ put $L=1-\psi\geq1$, $t=\mathrm e^{1-L}$ and
+When $b_h(f)=0$, no positive multiple of $f\,\mathrm{d}V$ is dominated by a Monge--Amp\`ere measure. An exponential subsolution $s$ only needs $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$, however, and the factor $\mathrm{e}^{\lambda s}$ is small where $s$ is very negative. A density concentrating near the pole of a singular potential can therefore admit exponential subsolutions although its threshold vanishes. We construct such densities on the products of \cref{sec:zero-lower-mass-product-equations}.
+
+We keep the notation of that section: $X=X_0\times Y$ with $Y=\mathbb P^k$, the background $H=h_0+\kappa$, the constants $N$, $C$ and $V_0$, the probability volume form $\mu=V_0^{-1}h_0^m\wedge\kappa^k$ with density $R=\mu/\mathrm{d}V$, and the potential $u_\alpha$ with density $q_\alpha$ from \cref{lem:projective-sublogarithmic-density}, for a fixed $0<\alpha<1$. On $Y\setminus\{o\}$ put $L=1-\psi\geq1$, so that $u_\alpha=1-L^\alpha$, and $t=\mathrm e^{1-L}$. As functions of $L$, define
 \[
  a=\alpha L^{\alpha-1},\qquad Q=t+(1-t)a,\qquad
  D=t(1-a)+(1-t)\alpha(1-\alpha)L^{\alpha-2},
@@ -103,127 +104,136 @@ Here $\mathrm dV$ is any smooth strictly positive probability volume form on $X$
  B_\tau=q_\alpha\mathrm e^{\tau(L^\alpha-1)}\quad(\tau>0),\qquad
  b_0=(1-\alpha)^k.
 \]
+Here $Q$ is the function $Q(r)$ of \cref{lem:projective-sublogarithmic-density}, written in terms of $L$, and $D=-\mathrm{d}Q/\mathrm{d}L$. The weight $B_\tau$ is chosen so that $\mathrm e^{\tau u_\alpha}B_\tau=q_\alpha$ off $o$.
 
 \begin{lemma}\label{lem:projective-exponential-barrier-growth}
-The radial expressions are
+As functions of $L$,
 \[
  q_\alpha=Q^{k-1}D\,\mathrm e^{k(L-1)},\qquad q_\alpha\geq b_0,
- \qquad W(L)\sim k\alpha^k(1-\alpha)L^{-1-k(1-\alpha)}.
 \]
-For every $\tau>0$, $\mathrm e^{\tau(L^\alpha-1)}W(L)\to+\infty$ as $L\to+\infty$. In particular, $B_\tau\kappa^k$ has infinite mass on every punctured neighbourhood of $o$.
+and $W(L)\sim k\alpha^k(1-\alpha)L^{-1-k(1-\alpha)}$ as $L\to+\infty$.
+For every $\tau>0$, $\mathrm e^{\tau(L^\alpha-1)}W(L)\to+\infty$ as $L\to+\infty$. In particular, $B_\tau\kappa^k$ has infinite mass on every punctured neighborhood of $o$.
 \end{lemma}
 \begin{proof}
-In the radial calculation of \cref{lem:projective-sublogarithmic-density}, $t=r/(1+r)$ and $-dQ/dL=D$. The Fubini--Study radial probability is $k\mathrm e^{-k(L-1)}\mathrm dL$, whereas the radial mass of $q_\alpha\kappa^k$ is $W(L)\mathrm dL$. Their ratio gives the formula for $q_\alpha$. The lower bound follows from $\kappa+\ddc u_\alpha\geq(1-\alpha)\kappa$ away from the pole. Since $Q\sim\alpha L^{\alpha-1}$ and $D\sim\alpha(1-\alpha)L^{\alpha-2}$, the displayed asymptotic follows. The logarithm of the weighted radial density is $\tau L^\alpha-[1+k(1-\alpha)]\log L+O(1)$, which tends to infinity. Its integral over every tail is therefore infinite.
+In the notation of the proof of \cref{lem:projective-sublogarithmic-density}, $t=r/(1+r)$ and $s(r)=L$. Since the mass of $q_\alpha\kappa^k$ on $\{r_1<r<r_2\}$ is $Q(r_2)^k-Q(r_1)^k$, this measure has radial distribution $-\mathrm{d}(Q^k)/\mathrm{d}L=W(L)\,\mathrm{d}L$. The Fubini--Study measure $\kappa^k$ corresponds to $Q=t$, so its radial distribution is $k\mathrm e^{-k(L-1)}\mathrm{d}L$. Both measures are invariant under the unitary group of the chart, so $q_\alpha$ is the ratio of the two distributions, which is the stated formula. The lower bound $q_\alpha\geq b_0$ follows from $\kappa+\ddc u_\alpha\geq(1-\alpha)\kappa$ off $o$. As $L\to+\infty$, $t$ tends to zero exponentially, so $Q\sim\alpha L^{\alpha-1}$ and $D\sim\alpha(1-\alpha)L^{\alpha-2}$; this gives the asymptotics of $W$. Consequently,
+\[
+ \log\bigl(\mathrm e^{\tau(L^\alpha-1)}W(L)\bigr)=\tau L^\alpha-[1+k(1-\alpha)]\log L+O(1)\longrightarrow+\infty,
+\]
+and the mass of $B_\tau\kappa^k$ on $\{L>T\}$, which equals $\int_T^\infty\mathrm e^{\tau(L^\alpha-1)}W(L)\,\mathrm{d}L$, is infinite for every $T$.
 \end{proof}
 
 \begin{theorem}\label{thm:product-zero-threshold-exponential-criterion}\index{Monge--Ampere equation@Monge--Amp\`ere equation!zero threshold criterion}
-Let $f\geq0$ be nonzero and integrable on $X$, and put $F=f/R$. If $\lambda>0$ and $F\leq AB_\lambda$ almost everywhere for some finite $A>0$, then
+Let $f\geq0$ be a nonzero integrable function on $X$, and put $F=f/R$.
+\begin{enumerate}
+\item If $\lambda>0$ and $F\leq AB_\lambda$ almost everywhere for a constant $A>0$, then
 \[
  s_\lambda=u_\alpha+\lambda^{-1}\log(CV_0/A)
 \]
-is a genuine exponential subsolution of actual mass $CV_0$. The exponential equation has a greatest genuine solution of finite positive mass. This conclusion holds for every $\lambda>0$ if $F$ is locally essentially bounded off $X_0\times\{o\}$ and
+is an exponential subsolution at exponent $\lambda$, of mass $CV_0$, and the equation $\mathrm{MA}^{\mathrm{ext}}_H(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$ has a greatest solution, whose mass is finite and positive.
+\item Suppose that $F$ is locally essentially bounded on $X\setminus(X_0\times\{o\})$ and
 \[
  \lim_{T\to+\infty}\operatorname*{ess\,sup}_{x\in X_0,\ L(y)>T}
  \frac{\log^+(F(x,y)/q_\alpha(y))}{L(y)^\alpha}=0,
- \qquad \log^+t=\log\max(1,t).
 \]
+where $\log^+r=\log\max(1,r)$ for $r\geq0$.
+Then the hypothesis of (1), and hence its conclusion, holds for every $\lambda>0$.
+\end{enumerate}
 \end{theorem}
 \begin{proof}
-The product measure in \cref{thm:zero-lower-mass-product-equation} is $\mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=CV_0q_\alpha\mu$. Since $\mathrm e^{\lambda u_\alpha}B_\lambda=q_\alpha$ off the pole,
+(1) By \cref{thm:zero-lower-mass-product-equation}, $\mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=CV_0q_\alpha\mu$. Off the pole fiber $X_0\times\{o\}$ we have $\mathrm e^{\lambda u_\alpha}B_\lambda=q_\alpha$ and $f\,\mathrm{d}V=F\mu\leq AB_\lambda\mu$, hence
 \[
  \mathrm e^{\lambda s_\lambda}f\,\mathrm dV
  \leq(CV_0/A)\mathrm e^{\lambda u_\alpha}AB_\lambda\mu
- =\mathrm{MA}^{\mathrm{ext}}_H(s_\lambda).
+ =CV_0q_\alpha\mu=\mathrm{MA}^{\mathrm{ext}}_H(s_\lambda),
 \]
-Both measures vanish on the polar fibre. Adding the constant preserves admissibility and mass, and \cref{thm:individual-exponential-subsolution} gives the greatest exact solution. Its mass is finite because its supremum is finite and $f\in L^1$; it is positive because a genuine quasi-plurisubharmonic function is finite almost everywhere and $f$ has positive integral.
+and both measures vanish on the pole fiber. Thus $s_\lambda$ is an exponential subsolution, and its mass is $CV_0$, since adding a constant does not change the Monge--Amp\`ere measure. \Cref{thm:individual-exponential-subsolution} now gives the greatest solution $u$ and the finiteness of its mass. The mass $\int_X\mathrm{e}^{\lambda u}f\,\mathrm{d}V$ is positive because $u$ is finite almost everywhere and $f$ has positive integral.
 
-Under the limit condition, $F/q_\alpha\leq\mathrm e^{(\lambda/2)L^\alpha}$ almost everywhere sufficiently near the pole. On the remaining compact set the ratio is bounded. Increasing a finite constant $A$ therefore gives $F\leq AB_\lambda$ on all of $X$.
+(2) Fix $\lambda>0$. By hypothesis, there is $T$ such that $F/q_\alpha\leq\mathrm e^{(\lambda/2)L^\alpha}$ almost everywhere on $\{L>T\}$. Since $\mathrm e^{(\lambda/2)L^\alpha}\leq\mathrm e^{\lambda}\mathrm e^{\lambda(L^\alpha-1)}$ for $L\geq1$, we have $F\leq\mathrm e^{\lambda}B_\lambda$ there. On the complement $\{L\leq T\}$, which is compact and disjoint from the pole fiber, $F$ is essentially bounded, while $B_\lambda\geq q_\alpha\geq b_0>0$. Increasing the constant, we obtain $F\leq AB_\lambda$ almost everywhere on $X$.
 \end{proof}
 
 \begin{theorem}\label{thm:zero-threshold-solvable-concentration}\index{Monge--Ampere density@Monge--Amp\`ere density!solvable concentration}\index{Subsolution!zero threshold exponential equation}
-Let $F_j$ be any smooth strictly positive probability densities relative to $\mathrm dV_0=V_0^{-1}h_0^m$ satisfying $c_{h_0}(F_j)\leq2^{-2j}/C$. There are smooth strictly positive probability densities $g_j$ relative to $\kappa^k$ such that
+Let $F_j$, $j\geq1$, be smooth strictly positive probability densities on $X_0$ with respect to $\mathrm dV_0=V_0^{-1}h_0^m$, whose normalization scalars on $X_0$, relative to $h_0$ and $\mathrm dV_0$, satisfy $c_{h_0}(F_j)\leq2^{-2j}/C$. There are smooth strictly positive probability densities $g_j$ on $Y$ with respect to $\kappa^k$ such that the probability densities
 \[
- f_j=RF_jg_j,\qquad f=\sum_{j\geq1}2^{-j}f_j,
- \qquad c_H(f_j)\leq2^{-2j},\qquad b_H(f)=0.
+ f_j=RF_jg_j,\qquad f=\sum_{j\geq1}2^{-j}f_j
 \]
-The function $f$ is finite everywhere, smooth off the polar fibre, has integral one and is bounded below by a positive constant. This single density has a genuine exponential subsolution and a greatest finite-mass exact solution for every $\lambda>0$. Every genuine exact solution is unbounded.
+on $X$ satisfy $c_H(f_j)\leq2^{-2j}$ and $b_H(f)=0$. The function $f$ is finite everywhere, smooth off the pole fiber $X_0\times\{o\}$, has integral one and is bounded below by a positive constant. For every $\lambda>0$, the equation $\mathrm{MA}^{\mathrm{ext}}_H(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$ has an exponential subsolution and a greatest solution, of finite mass, and every solution is unbounded.
 \end{theorem}
 \begin{proof}
-Put $w_j=2^{-j}$ and $M_j=\max F_j$. Using an increasing sequence of smooth coordinate seminorms on $X_0$, choose $0<\varepsilon_j\leq1/2$ so that
+Put $w_j=2^{-j}$ and $M_j=\max_{X_0}F_j$.
+
+\emph{Step 1: a smooth baseline.} Fix $C^j$ norms $\|\cdot\|_{C^j}$ on $X_0$, computed in a fixed finite atlas, so that they increase with $j$. Choose $0<\varepsilon_j\leq1/2$ with
 \[
  w_j\varepsilon_jM_j\leq b_0 2^{-j-2},\qquad
  w_j\varepsilon_j\|F_j\|_{C^j}\leq2^{-j}.
 \]
-Then $E=\sum_jw_j\varepsilon_jF_j$ is smooth and satisfies $0<E\leq b_0/4$.
+Then $E=\sum_jw_j\varepsilon_jF_j$ converges in every $C^l$ norm, so $E$ is smooth on $X_0$, and $0<E\leq b_0/4$.
 
-Choose a smooth function $0\leq\rho\leq1$ on $\mathbb R$, supported in $[0,1]$, positive inside and flat at the endpoints. Starting with $A_0=0$, inductively choose $A_j\geq2$, $A_j>A_{j-1}+2$, with
+\emph{Step 2: bumps escaping to the pole.} Choose a smooth function $\chi:\mathbb R\to[0,1]$, supported in $[0,1]$, positive on $(0,1)$ and flat at $0$ and $1$. Starting with $T_0=0$, choose inductively $T_j\geq2$ with $T_j>T_{j-1}+2$ and
 \[
- Z_j=\int_{A_j}^{A_j+1}\rho(L-A_j)
+ Z_j=\int_{T_j}^{T_j+1}\chi(L-T_j)
        \mathrm e^{(L^\alpha-1)/j}W(L)\,\mathrm dL
        \geq2w_jM_j.
 \]
-For each fixed $j$, \cref{lem:projective-exponential-barrier-growth} makes the integrand's weighted radial factor uniformly large on sufficiently distant intervals. Thus such a choice is possible. On that annulus put $b_j=\rho(L-A_j)B_{1/j}/Z_j$, extend it by zero elsewhere and set $g_j=\varepsilon_j+(1-\varepsilon_j)b_j$. Flatness makes $b_j$ smooth across the annulus boundaries; it vanishes near the pole and the infinity hyperplane. The integral of $b_j$ is one, so $g_j$ is a smooth strictly positive probability density. Moreover,
+This is possible because, by \cref{lem:projective-exponential-barrier-growth} with $\tau=1/j$, the factor $\mathrm e^{(L^\alpha-1)/j}W(L)$ is uniformly large on sufficiently distant intervals. On the annulus $\{T_j\leq L\leq T_j+1\}$ put $\beta_j=\chi(L-T_j)B_{1/j}/Z_j$, extend $\beta_j$ by zero, and set $g_j=\varepsilon_j+(1-\varepsilon_j)\beta_j$. Since $\chi$ is flat at the endpoints, $\beta_j$ is smooth; it vanishes near $o$ and near the hyperplane $\{L=1\}$. Its integral against $\kappa^k$ is one, so $g_j$ is a smooth strictly positive probability density with respect to $\kappa^k$. Moreover,
 \[
- w_jM_j(1-\varepsilon_j)b_j\leq B_{1/j}/2.
+ w_jM_j(1-\varepsilon_j)\beta_j\leq B_{1/j}/2.
 \]
 
-Apply \cref{thm:tw-smooth} on $Y$ to solve $(\kappa+\ddc\phi_j)^k=g_j\kappa^k$ with a smooth positive form; closed integration fixes its scalar as one. On $X_0$ the same theorem gives a smooth potential $v_j$ with $(h_0+\ddc v_j)^m=c_{h_0}(F_j)F_j\,\mathrm dV_0$. The product potential $v_j+\phi_j$ satisfies
+\emph{Step 3: the scalars $c_H(f_j)$.} By \cref{thm:tw-smooth} on $Y$, there is a smooth $\phi_j$ with $\kappa+\ddc\phi_j>0$ and $(\kappa+\ddc\phi_j)^k=g_j\kappa^k$; the scalar is one because both sides have mass one. On $X_0$, the same theorem gives a smooth $v_j$ with $h_0+\ddc v_j>0$ and $(h_0+\ddc v_j)^m=c_{h_0}(F_j)F_j\,\mathrm dV_0$. Since only one term of the binomial expansion survives for dimensional reasons,
 \[
  (H+\ddc(v_j+\phi_j))^N
  =C c_{h_0}(F_j)F_jg_j\mu
  =C c_{h_0}(F_j)f_j\,\mathrm dV.
 \]
-The factor dimensions leave only the displayed binomial term. Scalar uniqueness gives $c_H(f_j)=C c_{h_0}(F_j)\leq2^{-2j}$.
+Uniqueness of the scalar gives $c_H(f_j)=C c_{h_0}(F_j)\leq2^{-2j}$.
 
-Tonelli's theorem gives $\int_Xf\,\mathrm dV=\sum_jw_j=1$. The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact set outside the polar fibre. Hence $F=E+\sum_jw_j(1-\varepsilon_j)F_jb_j$ is smooth there. At the fibre the pointwise sum equals $E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. If a positive coefficient $a$ were admitted by the maximal-subsolution characterization in \cref{thm:individual-density-subsolution}, then comparison with each smooth component would give
+\emph{Step 4: properties of $f$.} By Tonelli's theorem, $\int_Xf\,\mathrm dV=\sum_jw_j=1$. The density of $f\,\mathrm{d}V$ with respect to $\mu$ is
 \[
- aw_j\leq c_H(f_j)\leq2^{-2j},\qquad a\leq2^{-j}
+ F=f/R=\sum_jw_jF_jg_j=E+\sum_jw_j(1-\varepsilon_j)F_j\beta_j.
+\]
+The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact subset of $Y\setminus\{o\}$; hence $F$, and therefore $f$, is smooth off the pole fiber. On the pole fiber all bumps vanish and $F=E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. If $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq af\,\mathrm{d}V$ with $a>0$, then $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq aw_jf_j\,\mathrm{d}V$, and \cref{lem:bounded-normalizer-subsolution} gives
+\[
+ aw_j\leq c_H(f_j)\leq2^{-2j},\quad\text{that is,}\quad a\leq2^{-j},
  \quad\text{for every }j.
 \]
-This is impossible; thus $b_H(f)=0$.
+This is impossible, so $b_H(f)=0$ by \cref{thm:individual-density-subsolution}.
 
-Fix $\lambda>0$ and choose $J$ with $1/j\leq\lambda$ for $j\geq J$. Since $u_\alpha\leq0$, one has $B_{1/j}\leq B_\lambda$ for these indices. Disjointness bounds the sum of their contributions by $B_\lambda/2$, and the baseline is at most $B_\lambda/4$. The remaining finitely many bumps have a finite bound
+\emph{Step 5: exponential subsolutions.} Fix $\lambda>0$, and choose $J$ with $1/j\leq\lambda$ for $j\geq J$. Since $L^\alpha-1\geq0$, we have $B_{1/j}\leq B_\lambda$ for these $j$. As the bumps have disjoint supports, Step 2 bounds their total contribution $\sum_{j\geq J}w_j(1-\varepsilon_j)F_j\beta_j$ by $B_\lambda/2$. The baseline satisfies $E\leq b_0/4\leq B_\lambda/4$, because $B_\lambda\geq q_\alpha\geq b_0$. The remaining finitely many bumps are bounded by the constant
 \[
- K_\lambda=\max_Y\sum_{j<J}w_j(1-\varepsilon_j)M_jb_j,
- \qquad D_\lambda=3/4+K_\lambda/b_0.
+ K_\lambda=\max_Y\sum_{j<J}w_j(1-\varepsilon_j)M_j\beta_j,
 \]
-Thus $F\leq D_\lambda B_\lambda$. The preceding criterion gives the explicit subsolution $u_\alpha+\lambda^{-1}\log(CV_0/D_\lambda)$ and the greatest exact solution. A bounded exponential subsolution would give a positive constant coefficient for $f$, contradicting its zero threshold. Every genuine exact solution is therefore unbounded.
+and $K_\lambda\leq(K_\lambda/b_0)B_\lambda$. Hence $F\leq A_\lambda B_\lambda$ with $A_\lambda=3/4+K_\lambda/b_0$, and \cref{thm:product-zero-threshold-exponential-criterion} gives the exponential subsolution $u_\alpha+\lambda^{-1}\log(CV_0/A_\lambda)$ and the greatest solution. Finally, a bounded solution $u$ would satisfy $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq\mathrm{e}^{\lambda\inf_Xu}f\,\mathrm{d}V$, a positive scaled subsolution, contradicting $b_H(f)=0$. Hence every solution is unbounded.
 \end{proof}
 
-The constructed density also satisfies the logarithmic criterion: on the $j$th annulus, $F/q_\alpha\leq1/4+\frac12\mathrm e^{(L^\alpha-1)/j}$, and away from all annuli the ratio is at most $1/4$. Approaching the pole through annuli forces $j\to\infty$, giving the required uniform limit. Since $b_H(f)=0$, \cref{prop:individual-normalizer-lp} also shows that $f$ belongs to no $L^p$ for $p>1$.
+The density just constructed also satisfies the criterion in part (2) of \cref{thm:product-zero-threshold-exponential-criterion}: on the $j$th annulus, $F/q_\alpha\leq1/4+\frac12\mathrm e^{(L^\alpha-1)/j}$, and away from all annuli the ratio is at most $1/4$. Approaching the pole through the annuli forces $j\to\infty$, so the required limit is zero. Since $b_H(f)=0$, \cref{prop:individual-normalizer-lp} also shows that $f$ belongs to no $L^p$ with $p>1$.
 
-For the elliptic threefold, \cref{thm:vanishing-lower-mass} supplies smooth positive forms with masses $\delta_\ell\to0$. Normalize their volume densities by $\delta_\ell$ and choose a subsequence with $\delta_{\ell_j}\leq2^{-2j}/C$. Scalar uniqueness gives the required $F_j$ with $c_{h_0}(F_j)=\delta_{\ell_j}$. Thus the construction applies to this threefold times $\mathbf P^k$ for every $k\geq1$. By \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $96\pi$ on the fourfold and $240\pi$ on the fivefold. These numerical values concern the subsolutions; the greatest exact solutions have their own finite positive masses.
+Densities $F_j$ as in the theorem exist whenever $v_-(h_0)=0$, by \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula}. For instance, on the elliptic threefold, \cref{thm:vanishing-lower-mass} gives smooth functions $v_\ell$ with $h_0+\ddc v_\ell>0$ and masses $\delta_\ell=\int_{X_0}(h_0+\ddc v_\ell)^3\to0$. The probability densities $F_\ell=(h_0+\ddc v_\ell)^3/(\delta_\ell\,\mathrm dV_0)$ satisfy $c_{h_0}(F_\ell)=\delta_\ell$ by uniqueness of the scalar, and a subsequence with $\delta_{\ell_j}\leq2^{-2j}/C$ gives the required densities. Thus the construction applies to this threefold times $\mathbb P^k$ for every $k\geq1$. With the balanced metric of \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $CV_0$, equal to $96\pi$ on the fourfold ($k=1$) and $240\pi$ on the fivefold ($k=2$). These values concern the subsolutions; the greatest solutions have their own finite positive masses.
 
-The projective components are chosen after the base sequence. The theorem does not determine solvability for an arbitrary previously prescribed concentration family or give a necessary criterion at zero threshold.
+In this construction the projective components $g_j$ are chosen after the densities $F_j$, to fit them. We do not know whether the exponential equation is solvable for every prescribed concentration family of this kind, and we have no necessary criterion for solvability at zero threshold.
 
 \Needspace{12\baselineskip}
 \subsection{Solvable exponents and collapse at zero threshold}
 
-Fix a nonzero nonnegative $f\in L^1(\mathrm dV)$ on a connected compact Hermitian manifold $(X,h)$. Let $\Lambda_h(f)$ consist of the positive exponents for which
-\[
- \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm e^{\lambda u}f\,\mathrm dV
-\]
-has a genuine $h$-plurisubharmonic solution. Existence of an exponential subsolution is equivalent to membership by \cref{thm:individual-exponential-subsolution}.
+We return to a general Hermitian form $h$ on $X$ and a nonzero density $0\leq f\in L^1(\mathrm dV)$. Let $\Lambda_h(f)$ be the set of exponents $\lambda>0$ for which \eqref{eq:individual-exponential-equation} has a solution. By \cref{thm:individual-exponential-subsolution}, $\lambda\in\Lambda_h(f)$ if and only if the equation has an exponential subsolution at exponent $\lambda$.
 
 \Needspace{9\baselineskip}
 \begin{proposition}\label{prop:solvable-exponents-upper-interval}\index{Monge--Ampere equation@Monge--Amp\`ere equation!solvable exponents}
-If $\lambda_0\in\Lambda_h(f)$, then $[\lambda_0,+\infty)\subset\Lambda_h(f)$. Consequently this set is empty, equals $(a,+\infty)$ for some $a\geq0$, or equals $[a,+\infty)$ for some $a>0$. If $b_h(f)>0$, then $\Lambda_h(f)=(0,+\infty)$.
+If $\lambda_0\in\Lambda_h(f)$, then $[\lambda_0,+\infty)\subset\Lambda_h(f)$. Consequently, $\Lambda_h(f)$ is empty, or equals $(a,+\infty)$ for some $a\geq0$, or equals $[a,+\infty)$ for some $a>0$. If $b_h(f)>0$, then $\Lambda_h(f)=(0,+\infty)$.
 \end{proposition}
 \begin{proof}
-Let $u$ solve the equation at $\lambda_0$, and put $s=u-\max(0,\sup_Xu)$. Then $s\leq0$ and
+Let $u$ be a solution at $\lambda_0$, and put $s=u-\max(0,\sup_Xu)$. Then $s\leq\min(u,0)$, so for $\lambda\geq\lambda_0$,
 \begin{align*}
  \mathrm{MA}^{\mathrm{ext}}_h(s)
  &=\mathrm e^{\lambda_0u}f\,\mathrm dV\\
  &\geq\mathrm e^{\lambda_0s}f\,\mathrm dV
- \geq\mathrm e^{\lambda s}f\,\mathrm dV
- \qquad(\lambda\geq\lambda_0).
+ \geq\mathrm e^{\lambda s}f\,\mathrm dV.
 \end{align*}
-The greatest-solution theorem supplies an exact solution at each such $\lambda$. Every nonempty upper set of positive real numbers has the stated form, determined by its infimum and whether that infimum is attained. The positive-threshold case follows from \cref{cor:individual-positive-threshold-exponential}.
+Thus $s$ is an exponential subsolution at every $\lambda\geq\lambda_0$, and \cref{thm:individual-exponential-subsolution} gives a solution. Hence $\Lambda_h(f)$ contains $[\lambda_0,+\infty)$ together with each of its points $\lambda_0$. A nonempty subset of $(0,+\infty)$ with this property is determined by its infimum $a$ and by whether $a$ belongs to it, which gives the stated forms. If $b_h(f)>0$, \cref{cor:individual-positive-threshold-exponential} gives $\Lambda_h(f)=(0,+\infty)$.
 \end{proof}
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:zero-threshold-exponential-mass-collapse}\index{Normalization scalar!zero threshold collapse}\index{Monge--Ampere mass@Monge--Amp\`ere mass!zero threshold exponential limit}
-Suppose $b_h(f)=0$. Let $\lambda_j>0$ decrease to zero, and let $u_j$ be any genuine exact solution at $\lambda_j$. Put
+Suppose $b_h(f)=0$. Let $\lambda_j>0$ decrease to zero, and let $u_j$ be any solution of \eqref{eq:individual-exponential-equation} at exponent $\lambda_j$. Put
 \[
  M_j=\sup_Xu_j,\qquad v_j=u_j-M_j,\qquad
  c_j=\mathrm e^{\lambda_jM_j}.
@@ -235,85 +245,86 @@ Then
  =\|\mathrm{MA}^{\mathrm{ext}}_h(v_j)\|_{\mathrm{TV}}
  \longrightarrow0.
 \end{gather*}
-Moreover $\mathrm e^{\lambda_ju_j}\to0$ uniformly on $X$, with value zero at poles, and $u_j\to-\infty$ uniformly in the sense that $\sup_Xu_j\to-\infty$.
+Moreover, $\mathrm e^{\lambda_ju_j}\to0$ uniformly on $X$, where the exponential is zero on the pole set, and $u_j\to-\infty$ uniformly, that is, $\sup_Xu_j\to-\infty$.
 \end{proposition}
 \begin{proof}
-For $g_j=\mathrm e^{\lambda_jv_j}f$, \cref{lem:normalized-exponential-npp} applied to the fixed finite non-pluripolar measure $f\,\mathrm dV$ gives $g_j\to f$ in $L^1$. Each $g_j$ is nonzero, because $v_j$ is finite almost everywhere. Constant invariance gives
+Set $g_j=\mathrm e^{\lambda_jv_j}f$. By \cref{lem:normalized-exponential-npp}, applied to the finite non-pluripolar measure $f\,\mathrm dV$, $g_j\to f$ in $L^1$; each $g_j$ is nonzero, since $v_j$ is finite almost everywhere. Since the Monge--Amp\`ere measure is unchanged by adding constants,
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(v_j)=c_jg_j\,\mathrm dV,
- \qquad 0<c_j\leq b_h(g_j)
+ \qquad\text{hence}\qquad 0<c_j\leq b_h(g_j)
 \]
-by \cref{thm:individual-density-subsolution}. Upper semicontinuity, \cref{thm:individual-threshold-semicontinuity}, now gives $\limsup_jc_j\leq b_h(f)=0$. Since $0\leq g_j\leq f$, the total mass is at most $c_j\|f\|_1$ and tends to zero. Also $\lambda_jM_j=\log c_j\to-\infty$ and $0\leq\mathrm e^{\lambda_ju_j}\leq c_j$. For all sufficiently large $j$, $\lambda_j<1$ and $\log c_j<0$, so $M_j=(\log c_j)/\lambda_j\leq\log c_j\to-\infty$.
+by \cref{thm:individual-density-subsolution}. The upper semicontinuity of the threshold, \cref{thm:individual-threshold-semicontinuity}, gives $\limsup_jc_j\leq b_h(f)=0$. Since $0\leq g_j\leq f$, the total masses are at most $c_j\|f\|_{L^1}$ and tend to zero. Moreover $\lambda_jM_j=\log c_j\to-\infty$, and $0\leq\mathrm e^{\lambda_ju_j}\leq\mathrm e^{\lambda_jM_j}=c_j$. Finally, once $\lambda_j<1$ and $\log c_j<0$, we have $M_j=\lambda_j^{-1}\log c_j\leq\log c_j$, so $M_j\to-\infty$.
 \end{proof}
 
-For the tailored density of \cref{thm:zero-threshold-solvable-concentration}, solutions exist for every positive exponent, so the collapse applies as $\lambda\downarrow0$ to any choice of genuine exact solutions, including the greatest ones. The subsolutions in \cref{thm:product-zero-threshold-exponential-criterion} retain actual mass $CV_0$ for every exponent, while the exact-solution masses tend to zero. Order of potentials does not give order of their total Monge--Amp\`ere masses on a nonclosed background. Convergence of normalized potentials in capacity and an exact equation for a normalized cluster limit remain separate questions at exponent zero. Positive exponent endpoints are governed instead by the compactness criterion below.
+For the density of \cref{thm:zero-threshold-solvable-concentration}, solutions exist for every positive exponent, so the collapse applies as $\lambda\downarrow0$ to every choice of solutions, in particular to the greatest ones. By contrast, the subsolutions of \cref{thm:product-zero-threshold-exponential-criterion} keep the mass $CV_0$ for every exponent, while the masses of the solutions above them tend to zero: on a nonclosed background, the order of two potentials does not give an order of their total Monge--Amp\`ere masses. Whether the normalized potentials converge in capacity, and which equation a normalized cluster limit satisfies at exponent zero, are not decided by this argument. Positive endpoints of $\Lambda_h(f)$ are governed instead by the compactness criterion below.
 
 \Needspace{12\baselineskip}
 \subsection{Positive endpoints and one-sided limits}
 
-For $\lambda\in\Lambda_h(f)$, write $U_\lambda$ for the greatest solution of \cref{thm:individual-exponential-subsolution}. A bounded truncated-density equation gives a common upper barrier when the exponents stay away from zero. Greatest-subsolution maximality then supplies an order estimate, which controls positive endpoints and one-sided limits.
+For $\lambda\in\Lambda_h(f)$, write $U_\lambda$ for the greatest solution given by \cref{thm:individual-exponential-subsolution}. When the exponents stay above a fixed $\tau>0$, the solution of a bounded truncated equation at exponent $\tau$ is a common upper barrier for all subsolutions. Together with the maximality of greatest solutions, this barrier gives an order estimate between $U_{\lambda_1}$ and $U_{\lambda_2}$, which controls the positive endpoint of $\Lambda_h(f)$ and the limits of $U_\lambda$ from the right.
 
 \Needspace{12\baselineskip}
 \begin{lemma}\label{lem:positive-exponent-uniform-upper-barrier}\index{Subsolution!common upper barrier}\index{Monge--Ampere equation@Monge--Amp\`ere equation!positive exponent order}
-For every $\tau>0$, there is a nonnegative $t_\tau\in\PSH(X,h)\cap C(X)$ such that every genuine exponential subsolution at an exponent $\lambda\geq\tau$ lies below $t_\tau$. Put $K_\tau=\sup_Xt_\tau$. For $\tau\leq\lambda_1\leq\lambda_2$ in $\Lambda_h(f)$,
+For every $\tau>0$, there is a nonnegative $t_\tau\in\PSH(X,h)\cap C(X)$ such that every exponential subsolution at an exponent $\lambda\geq\tau$ lies below $t_\tau$. Put $K_\tau=\sup_Xt_\tau$. If $\tau\leq\lambda_1\leq\lambda_2$ belong to $\Lambda_h(f)$, then
 \[
  U_{\lambda_2}\geq U_{\lambda_1}
              -K_\tau\frac{\lambda_2-\lambda_1}{\lambda_2}.
 \]
-Consequently $U_\lambda+K_\tau\log(\lambda/\tau)$ is increasing on $\Lambda_h(f)\cap[\tau,+\infty)$.
+Consequently, $\lambda\mapsto U_\lambda+K_\tau\log(\lambda/\tau)$ is nondecreasing on $\Lambda_h(f)\cap[\tau,+\infty)$.
 \end{lemma}
 \begin{proof}
-Set $q=\min(f,1)$. This is a bounded nonzero density, so \cref{thm:nguyen-exp} gives a continuous solution $w$ of $\mathrm{MA}_h(w)=\mathrm e^{\tau w}q\,\mathrm dV$. Put $t_\tau=w+\max(0,-\inf_Xw)$. Then $t_\tau\geq0$ and, for $\lambda\geq\tau$,
+Set $q=\min(f,1)$, a nonzero bounded density. By \cref{thm:nguyen-exp}, there is a continuous $w\in\PSH(X,h)$ with $\mathrm{MA}_h(w)=\mathrm e^{\tau w}q\,\mathrm dV$. Put $t_\tau=w+\max(0,-\inf_Xw)$. Then $t_\tau\geq0$ and $t_\tau\geq w$, so for $\lambda\geq\tau$,
 \[
  \mathrm{MA}_h(t_\tau)=\mathrm e^{\tau w}q\,\mathrm dV
        \leq\mathrm e^{\lambda t_\tau}f\,\mathrm dV.
 \]
-If $u$ is a genuine subsolution at $\lambda$, then on $\{t_\tau<u-\epsilon\}$,
+Let $u$ be an exponential subsolution at an exponent $\lambda\geq\tau$, and let $\epsilon>0$. On $\{t_\tau<u-\epsilon\}$,
 \[
  \mathrm{MA}_h(t_\tau)
+       \leq\mathrm e^{\lambda(u-\epsilon)}f\,\mathrm dV
        \leq\mathrm e^{-\lambda\epsilon}
                   \mathrm{MA}^{\mathrm{ext}}_h(u-\epsilon).
 \]
-The bounded first potential admits a genuine $h/2$-envelope, and $u-\epsilon\preceq t_\tau$. Thus \cref{thm:singular-strict-domination} gives $t_\tau\geq u-\epsilon$. Let $\epsilon\downarrow0$.
+The bounded function $t_\tau$ satisfies $P_{h/2}(t_\tau)\not\equiv-\infty$, and $u-\epsilon\preceq t_\tau$. Thus \cref{thm:singular-strict-domination} gives $t_\tau\geq u-\epsilon$, and letting $\epsilon\downarrow0$ gives $t_\tau\geq u$.
 
-For the order estimate, put $\delta=K_\tau(\lambda_2-\lambda_1)/\lambda_2$. Since $U_{\lambda_1}\leq K_\tau$, constant invariance gives
+For the order estimate, put $\delta=K_\tau(\lambda_2-\lambda_1)/\lambda_2$. By the first part, $U_{\lambda_1}\leq t_\tau\leq K_\tau$, so $(\lambda_2-\lambda_1)U_{\lambda_1}\leq\lambda_2\delta$, that is, $\lambda_1U_{\lambda_1}\geq\lambda_2(U_{\lambda_1}-\delta)$. Since the Monge--Amp\`ere measure is unchanged by adding constants,
 \begin{align*}
  \mathrm{MA}^{\mathrm{ext}}_h(U_{\lambda_1}-\delta)
    &=\mathrm e^{\lambda_1U_{\lambda_1}}f\,\mathrm dV\\
    &\geq\mathrm e^{\lambda_2(U_{\lambda_1}-\delta)}f\,\mathrm dV.
 \end{align*}
-Greatest-subsolution maximality yields $U_{\lambda_2}\geq U_{\lambda_1}-\delta$. Finally $\log x\geq1-x^{-1}$ for $x\geq1$, which proves the logarithmically corrected order.
+Thus $U_{\lambda_1}-\delta$ is an exponential subsolution at $\lambda_2$, and the maximality of $U_{\lambda_2}$ gives $U_{\lambda_2}\geq U_{\lambda_1}-\delta$. Finally, $1-x^{-1}\leq\log x$ for $x\geq1$; with $x=\lambda_2/\lambda_1$ this gives $\delta\leq K_\tau\log(\lambda_2/\lambda_1)$, which proves the monotonicity.
 \end{proof}
 
 \Needspace{16\baselineskip}
 \begin{proposition}\label{prop:positive-exponent-endpoint-attainment}\index{Monge--Ampere equation@Monge--Amp\`ere equation!positive endpoint}
-Suppose $\Lambda_h(f)\ne\varnothing$ and $a=\inf\Lambda_h(f)>0$. Then $a\in\Lambda_h(f)$ if and only if there are exponents $\lambda_j>a$ decreasing to $a$ and genuine exact solutions $u_j$ at $\lambda_j$ with $\inf_j\sup_Xu_j> -\infty$.
+Suppose $\Lambda_h(f)\ne\varnothing$ and $a=\inf\Lambda_h(f)>0$. Then $a\in\Lambda_h(f)$ if and only if there are exponents $\lambda_j>a$ decreasing to $a$ and solutions $u_j$ at exponent $\lambda_j$ with $\inf_j\sup_Xu_j> -\infty$.
 
-If $a\notin\Lambda_h(f)$, every sequence of genuine exact solutions at exponents $\lambda_j>a$ decreasing to $a$ satisfies
+If $a\notin\Lambda_h(f)$, then every sequence of solutions $u_j$ at exponents $\lambda_j>a$ decreasing to $a$ satisfies
 \begin{gather*}
  \sup_Xu_j\longrightarrow-\infty,\qquad
  \mathrm e^{\lambda_ju_j}\longrightarrow0\ \text{uniformly on }X,\\
  \|\mathrm{MA}^{\mathrm{ext}}_h(u_j)\|_{\mathrm{TV}}
-                \longrightarrow0.
+                \longrightarrow0,
 \end{gather*}
-The exponential has value zero at poles.
+where the exponential is zero on the pole sets.
 \end{proposition}
 \begin{proof}
-If $u_a$ is an exact solution at $a$, put $s=u_a-\max(0,\sup_Xu_a)$. Then $s\leq0$ and $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm e^{\lambda s}f\,\mathrm dV$ for every $\lambda\geq a$. Thus $U_\lambda\geq s$, which supplies the required sequence.
+Suppose first that $a\in\Lambda_h(f)$, let $u_a$ be a solution at $a$, and put $s=u_a-\max(0,\sup_Xu_a)$. As in the proof of \cref{prop:solvable-exponents-upper-interval}, $s$ is an exponential subsolution at every $\lambda\geq a$, so $U_\lambda\geq s$. Hence the greatest solutions at any exponents $\lambda_j\downarrow a$ have suprema at least $\sup_Xs>-\infty$.
 
-Conversely, the lemma with $\tau=a$ gives a common upper bound $K_a$ for $u_j$. Write $M_j=\sup_Xu_j$. Extract a subsequence for which $M_j\to M\in\mathbb R$ and, by \cref{thm:normalized-compactness}, $u_j-M_j\to v\in\PSH(X,h)$ in $L^1$. Then $u_j\to u=v+M$ in $L^1$, with a genuine limit and a common upper bound. After a further extraction the convergence holds almost everywhere. Since $\lambda_j\leq\lambda_1$ and $K_a\geq0$, dominated convergence gives
+Conversely, let $\lambda_j$ and $u_j$ be as in the statement. The lemma with $\tau=a$ gives the common upper bound $u_j\leq K_a$. Write $M_j=\sup_Xu_j$. After extraction, $M_j\to M\in\mathbb R$ and, by \cref{thm:normalized-compactness}, $u_j-M_j\to v$ in $L^1$ for some $v\in\PSH(X,h)$. Then $u_j\to u=v+M$ in $L^1$ and, after a further extraction, almost everywhere. Since $a\leq\lambda_j\leq\lambda_1$, $u_j\leq K_a$ and $K_a\geq0$, the densities $\mathrm e^{\lambda_ju_j}f$ are bounded by $\mathrm e^{\lambda_1K_a}f$, and dominated convergence gives
 \[
  \mathrm e^{\lambda_ju_j}f\longrightarrow\mathrm e^{au}f
               \quad\text{in }L^1(\mathrm dV).
 \]
-Indeed all these densities are at most $\mathrm e^{\lambda_1K_a}f$. The lower-density closure \cref{lem:density-subsolution-lone-closure} gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq\mathrm e^{au}f\,\mathrm dV$. The greatest-solution theorem now supplies an exact solution at $a$.
+\Cref{lem:density-subsolution-lone-closure} now gives $\mathrm{MA}^{\mathrm{ext}}_h(u)\geq\mathrm e^{au}f\,\mathrm dV$. Thus $u$ is an exponential subsolution at $a$, and \cref{thm:individual-exponential-subsolution} gives a solution at $a$.
 
-If $a$ is not admitted and the suprema of an exact solution sequence failed to tend to $-\infty$, a subsequence would satisfy the lower-bound condition just proved. Thus $M_j\to-\infty$. Eventually $M_j<0$; since $\lambda_j\geq a>0$,
+Finally, suppose $a\notin\Lambda_h(f)$, and let $u_j$ be solutions at exponents $\lambda_j\downarrow a$. If $\sup_Xu_j$ did not tend to $-\infty$, a subsequence would satisfy the condition just shown to imply $a\in\Lambda_h(f)$. Hence $M_j\to-\infty$. Once $M_j<0$, since $\lambda_j\geq a>0$,
 \[
- 0\leq\mathrm e^{\lambda_ju_j}\leq\mathrm e^{aM_j}
-                 \longrightarrow0.
+ 0\leq\mathrm e^{\lambda_ju_j}\leq\mathrm e^{\lambda_jM_j}\leq\mathrm e^{aM_j}
+                 \longrightarrow0,
 \]
-The exact mass is at most $\mathrm e^{aM_j}\|f\|_1$, proving the last assertion.
+and the total mass $\int_X\mathrm e^{\lambda_ju_j}f\,\mathrm dV$ is at most $\mathrm e^{aM_j}\|f\|_{L^1}$.
 \end{proof}
 
 \Needspace{10\baselineskip}
@@ -321,25 +332,29 @@ The exact mass is at most $\mathrm e^{aM_j}\|f\|_1$, proving the last assertion.
 For every $a\in\Lambda_h(f)$, the greatest solutions satisfy
 \[
  U_\lambda\longrightarrow U_a
-       \quad\text{in }L^1\text{ and in capacity}\quad(\lambda\downarrow a).
+       \quad\text{in }L^1\text{ and in capacity}\quad(\lambda\downarrow a),
 \]
-Their Monge--Amp\`ere measures converge in total variation to $\mathrm e^{aU_a}f\,\mathrm dV$.
+and their Monge--Amp\`ere measures converge in total variation to $\mathrm e^{aU_a}f\,\mathrm dV$.
 \end{proposition}
 \begin{proof}
-Put $K=K_a$ from the lemma. For any $\lambda_j>a$ decreasing to $a$, the potentials
+Let $K=K_a$ be the constant of the lemma with $\tau=a$, and let $\lambda_j>a$ decrease to $a$. By the lemma, the functions
 \[
  V_j=U_{\lambda_j}+K\log(\lambda_j/a)
 \]
-decrease and lie above $U_a$. Their limit $V$ is genuine. Dominated convergence between the integrable bounds $U_a$ and $V_1$ gives $L^1$ convergence, and \cref{lem:monotone-psh-capacity} gives capacity convergence. Since the added constants tend to zero, $U_{\lambda_j}\to V$ in both topologies.
+decrease and satisfy $V_j\geq U_a$. Their limit $V$ therefore belongs to $\PSH(X,h)$ and satisfies $V\geq U_a$. Dominated convergence between the integrable bounds $U_a$ and $V_1$ gives $V_j\to V$ in $L^1$, and \cref{lem:monotone-psh-capacity} gives convergence in capacity. Since the added constants tend to zero, $U_{\lambda_j}\to V$ in both senses.
 
-Apply \cref{thm:exponential-closedness} to the nonpositive potentials $U_{\lambda_j}-K$, the exponents $\lambda_j\to a>0$ and the densities $\mathrm e^{\lambda_jK}f\to\mathrm e^{aK}f$ in $L^1$. It gives $\mathrm{MA}^{\mathrm{ext}}_h(V)=\mathrm e^{aV}f\,\mathrm dV$, with total-variation convergence of the equation measures. Hence $V\leq U_a$ by greatest-solution maximality, while the lower bound gives $V\geq U_a$. Thus $V=U_a$. The argument applies to every decreasing sequence of exponents, giving the stated right limit.
+The nonpositive functions $U_{\lambda_j}-K$ satisfy
+\[
+ \mathrm{MA}^{\mathrm{ext}}_h(U_{\lambda_j}-K)=\mathrm e^{\lambda_j(U_{\lambda_j}-K)}\,\mathrm e^{\lambda_jK}f\,\mathrm dV,
+\]
+and $\mathrm e^{\lambda_jK}f\to\mathrm e^{aK}f$ in $L^1$. \Cref{thm:exponential-closedness} therefore gives $\mathrm{MA}^{\mathrm{ext}}_h(V)=\mathrm e^{aV}f\,\mathrm dV$, together with total-variation convergence of the measures $\mathrm{MA}^{\mathrm{ext}}_h(U_{\lambda_j})$. Hence $V$ is a solution at $a$, so $V\leq U_a$ by maximality, while $V\geq U_a$ by construction. Thus $V=U_a$. Since every sequence of exponents converging to $a$ from above has a decreasing subsequence, this proves the assertions.
 \end{proof}
 
-The corrected order also controls approach from the left. Its limit solves the limiting equation, although greatest maximality alone does not identify it with the greatest solution there.
+The corrected order also controls approach from the left. The limit solves the equation at the limiting exponent; maximality gives an inequality with the greatest solution there, but does not force equality.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:greatest-exponential-left-limit}\index{Monge--Ampere equation@Monge--Amp\`ere equation!left limit}
-Suppose $\Lambda_h(f)\ne\varnothing$, and put $a_0=\inf\Lambda_h(f)$. For every $a>a_0$, there is a genuine $L_a\in\PSH(X,h)$ such that
+Suppose $\Lambda_h(f)\ne\varnothing$, and put $a_0=\inf\Lambda_h(f)$. For every $a>a_0$, there is $L_a\in\PSH(X,h)$ such that
 \[
  U_\lambda\longrightarrow L_a
        \quad\text{in }L^1\text{ and in capacity}\quad(\lambda\uparrow a).
@@ -357,7 +372,7 @@ Choose $\tau\in\Lambda_h(f)$ with $0<\tau<a$; the upper-interval property gives 
  V_\lambda=U_\lambda+K\log(\lambda/\tau)
        \qquad(\lambda\in\Lambda_h(f),\ \lambda\geq\tau).
 \]
-This family is increasing. For a sequence $\lambda_j\uparrow a$ with $\tau\leq\lambda_j<a$, its members lie between the genuine integrable potentials $V_\tau$ and $V_a$. The upper-envelope construction in \cref{sec:obstacle-envelopes} gives
+This family is increasing. For a sequence $\lambda_j\uparrow a$ with $\tau\leq\lambda_j<a$, its members lie between the integrable potentials $V_\tau$ and $V_a$. The upper-envelope construction in \cref{sec:obstacle-envelopes} gives
 \[
  V^-_a=\left(\sup_{\tau\leq\lambda<a}V_\lambda\right)^*
         =\left(\lim_jV_{\lambda_j}\right)^*\in\PSH(X,h).
@@ -375,7 +390,7 @@ Every sequence approaching $a$ from the left has a cofinal increasing subsequenc
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:greatest-exponential-countable-jumps}\index{Monge--Ampere equation@Monge--Amp\`ere equation!countable jumps}
-On $(a_0,+\infty)$, the set
+Suppose $\Lambda_h(f)\ne\varnothing$, put $a_0=\inf\Lambda_h(f)$, and let $L_a$ be the left limit of \cref{prop:greatest-exponential-left-limit}. The set
 \[
  D=\{a>a_0:L_a\ne U_a\}
 \]

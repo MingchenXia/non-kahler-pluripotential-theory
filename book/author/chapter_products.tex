@@ -1,9 +1,9 @@
 \chapter{Non-pluripolar Monge--Amp\`ere measures}
 \label{chap:products}
 
-Let $X$ be a connected compact complex manifold of dimension $n\geq1$. Fix a Hermitian form $\omega$ and a smooth positive probability volume form $\mathrm{d}V$ for $L^1$ norms and integrals.
+Throughout this chapter, $\omega$ is a Hermitian form on $X$ and $\mathrm{d}V$ is a smooth positive probability volume form used for $L^1$ norms and integrals. As in \cref{sec:psh-bounded-products}, we write $\theta_v=\theta+\ddc v$, and $\mathrm{MA}_\theta(v)=(\theta+\ddc v)^n$ when $v$ is bounded; convergence in capacity refers to the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}.
 
-A Monge--Amp\`ere measure can be recovered from bounded products on the sets where its potential stays above a finite level. For a general smooth background, the truncation may lose positivity, but its product remains positive on these sets. For a Hermitian background, finiteness of the resulting measure for every potential is equivalent to a uniform bound on the masses of bounded potentials. If that bound fails, a potential with trivial multiplier ideals can have an integrable Hessian whose determinant is not integrable.
+For an unbounded $\theta$-plurisubharmonic function $u$, the Bedford--Taylor products of \cref{prop:bounded-products} are not defined. On the set $\{u>-t\}$, however, $u$ coincides with its bounded truncation $\max(u,-t)$, and since bounded products are plurifinely local, the restricted measures are compatible as $t$ increases. Their limit is a measure on the complement of the pole set, the non-pluripolar Monge--Amp\`ere measure of $u$. Two features of the non-K\"ahler setting appear. First, for a general smooth background $\theta$ the truncation need not be $\theta$-plurisubharmonic, so positivity of the restricted products requires a local argument. Second, the total mass of the limit may be infinite, since there is no cohomological bound. For a Hermitian background, finiteness of this mass for every potential is equivalent to a uniform bound on the Monge--Amp\`ere masses of bounded potentials, the bounded mass property. When the property fails, we construct a potential of infinite mass whose multiplier ideals are all trivial; its complex Hessian even has integrable coefficients, although its determinant is not integrable.
 
 \section{Truncation and non-pluripolar measures}
 
@@ -11,19 +11,19 @@ Let $\theta$ be a smooth real $(1,1)$-form and $u\in\PSH(X,\theta)$. For $t>0$, 
 \[
  u_t=\max(u,-t),\qquad D_t=\{u>-t\}.
 \]
-Choose a Hermitian form $\Omega\geq\theta$. Then $u_t$ is bounded and $\Omega$-plurisubharmonic, so \cref{prop:bounded-products} defines the signed product $(\theta+\ddc u_t)^n$. On the plurifinely open set $D_t$, it agrees with local truncations that preserve positivity up to an arbitrarily small smooth error.
+Choose a Hermitian form $\Omega\geq\theta$. Then $u_t$ is bounded and $\Omega$-plurisubharmonic, so \cref{prop:bounded-products} defines the product $(\theta+\ddc u_t)^n$ as a signed measure. It need not be positive on $X$, but its restriction to the plurifinely open set $D_t$ is positive. The proof replaces $u_t$ near each point by a local truncation that preserves positivity up to an arbitrarily small smooth error.
 
 \begin{lemma}\label{lem:restricted-positive-product}
-The restricted product satisfies
+With the notation above,
 \[
  0\leq\mathbf1_{D_t}(\theta+\ddc u_t)^n
  \leq\mathbf1_{D_t}(\Omega+\ddc u_t)^n.
 \]
-The same local positivity assertion holds for mixed products, on a common set where all the truncations leave their potentials unchanged.
+More generally, let $\theta_1,\ldots,\theta_n$ be smooth real $(1,1)$-forms, let $u^i\in\PSH(X,\theta_i)$, and let $D$ be the set where $u^i>-t$ for every $i$. Then the mixed product of the currents $\theta_i+\ddc\max(u^i,-t)$ is positive on $D$.
 \end{lemma}
 \Needspace{7\baselineskip}
 \begin{proof}
-Work in a coordinate ball with a fixed positive constant form $\kappa$, and fix $\epsilon>0$. Around any point choose a smaller neighborhood and a constant real form $\theta'$ such that
+Work in a coordinate ball with a fixed positive constant form $\kappa$, and fix $\epsilon>0$. Every point has a smaller neighborhood carrying a constant real form $\theta'$ such that
 \[
  -\epsilon\kappa\leq\theta-\theta'\leq\epsilon\kappa.
 \]
@@ -31,93 +31,92 @@ Take a smooth local potential $r$ for $\theta'+\epsilon\kappa$. Then $u+r$ is pl
 \[
  h_k=\max(u+r,-k)-r.
 \]
-It is locally bounded and equals $u_t=u$ on $D_t$. Moreover,
+This function is locally bounded and equals $u_t=u$ on $D_t$. Moreover,
 \[
  \theta+\ddc h_k+2\epsilon\kappa
  =\ddc\max(u+r,-k)+(\theta-\theta'+\epsilon\kappa)
 \]
-is a sum of a positive closed bounded-potential current and a smooth positive form. Its bounded products are positive. Plurifine locality transfers this positivity to the restriction of $(\theta+\ddc u_t+2\epsilon\kappa)^n$ to $D_t$.
+is the sum of a positive closed current with bounded potential and a smooth positive form, so its bounded products are positive. By plurifine locality, the restriction of $(\theta+\ddc u_t+2\epsilon\kappa)^n$ to $D_t$ is positive on this neighborhood.
 
-These neighborhoods cover the coordinate ball. Let $\epsilon\downarrow0$. The product with the fixed bounded potential $u_t$ is polynomial in $\epsilon$, with coefficients of locally finite variation. Consequently convergence holds in local total variation, also after restriction to $D_t$. This proves the first inequality. Apply the same construction to each factor to obtain mixed positivity.
+These neighborhoods cover the coordinate ball. Now let $\epsilon\downarrow0$. The product with the fixed bounded potential $u_t$ is a polynomial in $\epsilon$ whose coefficients have locally finite variation, so it converges in local total variation, also after restriction to $D_t$. This proves the first inequality. The same construction, applied to each factor, gives the positivity of mixed products.
 
-For the second inequality, expand the difference of the two powers by the telescoping identity, using the smooth positive difference $\Omega-\theta$. Every summand is a mixed product of positive factors on $D_t$, as just proved. The difference is therefore nonnegative there.
+For the second inequality, expand the difference of the two powers by the telescoping identity, using the smooth positive form $\Omega-\theta$. Every summand is a mixed product of factors that are positive on $D_t$, as just proved. The difference is therefore nonnegative there.
 \end{proof}
 
-\begin{theorem}\label{thm:arbitrary-extended-ma}\index{Monge--Ampere product@Monge--Amp\`ere product!extended non-pluripolar}\label{prop:extended-measure}
-The measures $\mathbf1_{D_t}(\theta+\ddc u_t)^n$ increase with $t$. Their limit
+\begin{theorem}[Extended non-pluripolar measure]\label{thm:arbitrary-extended-ma}\index{Monge--Ampere product@Monge--Amp\`ere product!extended non-pluripolar}\index{Non-pluripolar measure!extended}\label{prop:extended-measure}
+Let $\theta$ be a smooth real $(1,1)$-form and $u\in\PSH(X,\theta)$. The measures $\mathbf1_{D_t}(\theta+\ddc u_t)^n$ increase with $t$. Their limit
 \begin{equation}\label{eq:extended-ma}
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)
  :=\lim_{t\to+\infty}\mathbf1_{\{u>-t\}}
        (\theta+\ddc\max(u,-t))^n
 \end{equation}
-is a positive non-pluripolar Borel measure, finite on each $D_t$ and sigma-finite on $X$. It depends only on the current $\theta+\ddc u$, is unchanged by adding a constant to $u$, and satisfies
+is a positive Borel measure that puts no mass on pluripolar sets; it is finite on each $D_t$ and $\sigma$-finite on $X$. It depends only on the current $\theta+\ddc u$; in particular, it is unchanged when a constant is added to $u$. If $\Omega$ is a Hermitian form with $\theta\leq\Omega$, then
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)
- \leq\mathrm{MA}^{\mathrm{ext}}_\Omega(u)
- \quad\text{if }\Omega\text{ is Hermitian and }\theta\leq\Omega.
+ \leq\mathrm{MA}^{\mathrm{ext}}_\Omega(u).
 \]
-Its total mass may be infinite. When finite, it is the usual non-pluripolar Monge--Amp\`ere measure.
+The total mass of $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ may be infinite.
 \end{theorem}
 \begin{proof}
-For $s>t$, locality on $D_t\subset D_s$ gives
+For $s>t$, plurifine locality on $D_t\subset D_s$ gives
 \[
  \mathbf1_{D_t}(\theta+\ddc u_s)^n
  =\mathbf1_{D_t}(\theta+\ddc u_t)^n.
 \]
-Together with \cref{lem:restricted-positive-product}, this proves monotonicity. The increasing limit is countably additive by monotone convergence, and vanishes on pluripolar sets because each bounded product does. The comparison with $\Omega$ passes to the limit. Compatibility gives
+Together with \cref{lem:restricted-positive-product}, this proves that the measures increase. Their increasing limit is countably additive by monotone convergence, and it vanishes on pluripolar sets because each bounded product does. The comparison with $\Omega$ passes to the limit. By the compatibility just proved,
 \[
  \mathbf1_{D_t}\mathrm{MA}^{\mathrm{ext}}_\theta(u)
- =\mathbf1_{D_t}(\theta+\ddc u_t)^n.
+ =\mathbf1_{D_t}(\theta+\ddc u_t)^n,
 \]
-Its mass is bounded by that of the bounded $\Omega$-product. The sets $D_t$ exhaust the complement of $\{u=-\infty\}$, which has zero mass, proving sigma-finiteness.
+and the mass of this measure is bounded by that of the bounded product $(\Omega+\ddc u_t)^n$. The sets $D_t$ exhaust the complement of $\{u=-\infty\}$, which has zero mass, so the limit is $\sigma$-finite.
 
-For a smooth real function $f$, consider $\theta'=\theta+\ddc f$ and $u'=u-f$. On a common superlevel set of $u$ and $u'$, sufficiently deep truncations give the same bounded-potential current. Their restricted products therefore agree. These sets exhaust the complement of the common pole set, proving invariance under this change of decomposition. By the elliptic-regularity argument in \cref{prop:bounded-products}, any two smooth decompositions of the same current differ in this way. Constants are a special case. If the limit has finite mass, this construction is exactly the extension of the local bounded products by zero across the pole set.
+For a smooth real function $f$, consider $\theta'=\theta+\ddc f$ and $u'=u-f$. On a common superlevel set of $u$ and $u'$, sufficiently deep truncations of $u$ and $u'$ define the same current with bounded potentials, so their restricted products agree. These sets exhaust the complement of the common pole set, which proves invariance under this change of decomposition. By the elliptic-regularity argument in the proof of \cref{prop:bounded-products}, any two smooth decompositions of the same current differ in this way, and adding a constant is a special case.
 \end{proof}
 
-The notation $\mathrm{MA}^{\mathrm{ext}}$ permits infinite mass. On compact $X$, the measure defines a current of order zero precisely when its total mass is finite.
+We call $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$ the \emph{extended non-pluripolar Monge--Amp\`ere measure} of $u$;\index{Extended non-pluripolar measure|see{Non-pluripolar measure}} the word \emph{extended} indicates that its total mass may be infinite. On compact $X$ it defines a current of order zero exactly when its total mass is finite. In that case it is the non-pluripolar Monge--Amp\`ere measure in the usual sense, namely the extension by zero across $\{u=-\infty\}$ of the plurifinely local bounded products. If $u$ is bounded, then $D_t=X$ for large $t$, and $\mathrm{MA}^{\mathrm{ext}}_\theta(u)=\mathrm{MA}_\theta(u)$. In accordance with the usual notation for non-pluripolar products, we also write $\langle(\theta+\ddc u)^n\rangle$ for $\mathrm{MA}^{\mathrm{ext}}_\theta(u)$; lower powers $\langle(\theta+\ddc u)^k\rangle$ are defined by the same truncation where they are used.\index{Non-pluripolar measure!angle bracket notation}
 
 \section{Contact sets}
 
-The bounded contact inequality of \cref{lem:bounded-ordered-contact} passes to unbounded potentials on common finite levels. Local positive corrections are needed because the global truncations need not remain $\theta$-plurisubharmonic.
+The bounded contact inequality of \cref{lem:bounded-ordered-contact} extends to unbounded potentials on common finite levels. As in the previous section, local positive corrections are needed, because the global truncations need not remain $\theta$-plurisubharmonic.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:ordered-contact-general}\index{Contact set!ordered potentials}
-Let $\theta$ be any smooth real $(1,1)$-form and let $u,v\in\PSH(X,\theta)$ satisfy $u\leq v$. Then
+Let $\theta$ be a smooth real $(1,1)$-form and let $u,v\in\PSH(X,\theta)$ satisfy $u\leq v$. Then
 \[
  \mathbf1_{\{u=v\}}\mathrm{MA}^{\mathrm{ext}}_\theta(u)
  \leq\mathbf1_{\{u=v\}}\mathrm{MA}^{\mathrm{ext}}_\theta(v).
 \]
 \end{proposition}
 \begin{proof}
-Fix a coordinate ball with a constant positive form $\kappa$, a level $t>0$, and $\epsilon>0$. On smaller neighborhoods freeze $\theta$ to a constant form $\theta'$ with
-$-\epsilon\kappa\leq\theta-\theta'\leq\epsilon\kappa$. Choose a quadratic function $r$ with
+Fix a coordinate ball with a constant positive form $\kappa$, a level $t>0$, and $\epsilon>0$. On smaller neighborhoods, freeze $\theta$ to a constant form $\theta'$ with
+$-\epsilon\kappa\leq\theta-\theta'\leq\epsilon\kappa$, and choose a quadratic function $r$ with
 $\ddc r=\theta'+\epsilon\kappa$. Then $u+r$ and $v+r$ are plurisubharmonic. For a large integer $k$ put
 \[
  a_k=\max(u+r,-k)-r,\qquad
  b_k=\max(v+r,-k)-r.
 \]
-They are bounded on relatively compact neighborhoods, satisfy $a_k\leq b_k$, and
+These functions are bounded on relatively compact neighborhoods, satisfy $a_k\leq b_k$, and
 \[
  \theta+2\epsilon\kappa+\ddc a_k
  =\ddc\max(u+r,-k)+(\theta-\theta'+\epsilon\kappa)\geq0,
 \]
-with the same inequality for $b_k$. Apply the top-degree case of \cref{lem:bounded-ordered-contact} with background
+with the same inequality for $b_k$. We may therefore apply the top-degree case of \cref{lem:bounded-ordered-contact} with background
 $\theta+2\epsilon\kappa$.
 
-On $D_t=\{u>-t\}$, both $u$ and $v$ are above $-t$. Taking $k>t+\sup|r|$ makes $a_k=u$ and $b_k=v$ on $D_t$. Restrict the bounded inequality to $\{u=v\}\cap D_t$ and use locality. It gives the desired contact inequality for background $\theta+2\epsilon\kappa$ on that set. The smaller neighborhoods cover the original ball, so the restricted inequality holds throughout it.
+On $D_t=\{u>-t\}$, both $u$ and $v$ are larger than $-t$. Taking $k>t+\sup|r|$ makes $a_k=u$ and $b_k=v$ on $D_t$. Restricting the bounded inequality to $\{u=v\}\cap D_t$ and using locality, we obtain the contact inequality for the background $\theta+2\epsilon\kappa$ on that set. The smaller neighborhoods cover the original ball, so the restricted inequality holds throughout it.
 
-Choose a Hermitian form $\Omega\geq\theta$. The fixed truncations $u_t=\max(u,-t)$ and $v_t=\max(v,-t)$ are bounded and $\Omega$-plurisubharmonic, so their signed products with background $\theta$ are defined. On $D_t$, the products just used equal the restrictions of
+Choose a Hermitian form $\Omega\geq\theta$. The truncations $u_t=\max(u,-t)$ and $v_t=\max(v,-t)$ are bounded and $\Omega$-plurisubharmonic, so their signed products with background $\theta$ are defined. On $D_t$, the products used above are the restrictions of
 $(\theta+\ddc u_t+2\epsilon\kappa)^n$ and
-$(\theta+\ddc v_t+2\epsilon\kappa)^n$. These are polynomials in $\epsilon$ whose coefficients have locally finite variation. They converge in local total variation as $\epsilon\downarrow0$, including after restriction to $\{u=v\}\cap D_t$. This proves the inequality for background $\theta$ on each finite level. Finally let $t\to+\infty$. The common pole set has zero extended mass, and the levels exhaust its complement in the equality set.
+$(\theta+\ddc v_t+2\epsilon\kappa)^n$. These are polynomials in $\epsilon$ whose coefficients have locally finite variation, so they converge in local total variation as $\epsilon\downarrow0$, also after restriction to $\{u=v\}\cap D_t$. This proves the inequality for the background $\theta$ on each finite level. Finally let $t\to+\infty$: the common pole set has zero extended mass, and the sets $\{u=v\}\cap D_t$ exhaust its complement in the contact set.
 \end{proof}
 
 \section{Weighted lower semicontinuity}
 
-Capacity convergence identifies the bounded products after a cutoff in the potential. Increasing the cutoff recovers a lower bound for the extended measure, even when its mass is infinite. The weights may vary with the potentials.
+Products of uniformly bounded potentials are continuous under convergence in capacity. Multiplying the extended measure by a cutoff in the potential that vanishes below a fixed level reduces it to such bounded products, and letting the level tend to $-\infty$ gives lower semicontinuity of the extended measures, even when their masses are infinite. The weights are allowed to vary with the potentials.
 
 \Needspace{12\baselineskip}
 \begin{lemma}\label{lem:weighted-extended-lsc}\index{Non-pluripolar measure!lower semicontinuity}\label{lem:big-weighted-lsc}
-Let $\theta$ be any smooth real $(1,1)$-form. Suppose $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in capacity. If $b_j,b$ are nonnegative uniformly bounded quasi-continuous functions and $b_j\to b$ in capacity, then
+Let $\theta$ be a smooth real $(1,1)$-form. Suppose $u_j,u\in\PSH(X,\theta)$ have a common upper bound and $u_j\to u$ in capacity. If $b_j,b$ are nonnegative uniformly bounded quasi-continuous functions and $b_j\to b$ in capacity, then
 \[
  \int_Xb\,\mathrm{MA}^{\mathrm{ext}}_\theta(u)
  \leq\liminf_j\int_Xb_j\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j).
@@ -125,7 +124,9 @@ Let $\theta$ be any smooth real $(1,1)$-form. Suppose $u_j,u\in\PSH(X,\theta)$ h
 Both sides may be infinite.
 \end{lemma}
 \begin{proof}
-Translate the potentials below zero and choose a Hermitian metric $\Omega\geq\theta$. For $T>0$, let $g_T:[-\infty,0]\to[0,1]$ be a continuous nondecreasing cutoff, zero on $[-\infty,-2T]$, one on $[-T,0]$, increasing to one at finite points. Put $v_j=\max(u_j,-2T)$ and $v=\max(u,-2T)$. These are uniformly bounded $\Omega$-plurisubharmonic functions and converge in capacity. Expand $(\theta+\ddc v_j)^n$ using $\theta+\ddc v_j=(\Omega+\ddc v_j)+(\theta-\Omega)$. Each smooth factor is bounded by a fixed power of $\Omega$ up to a constant. Thus the signed terms have total variations controlled by positive bounded mixed measures, and \cref{lem:bounded-mixed-capacity} gives a common capacity bound for fixed $T$. Bounded Bedford--Taylor continuity gives weak convergence term by term. It also permits the weights $b_jg_T(v_j)$: their differences from the limiting weight tend to zero in capacity, and the common capacity bound makes their integrals tend to zero. For the fixed limiting weight, remove a set of arbitrarily small capacity, extend continuously from its complement, and control the discarded part by the same bound. Locality and the vanishing cutoff on the truncation level give
+Subtracting a common constant, we may assume that all the potentials are nonpositive. Choose a Hermitian form $\Omega\geq\theta$. For $T>0$, let $g_T:[-\infty,0]\to[0,1]$ be a continuous nondecreasing cutoff, equal to zero on $[-\infty,-2T]$ and to one on $[-T,0]$, chosen so that $g_T$ increases pointwise to one on $(-\infty,0]$ as $T\to\infty$. Put $v_j=\max(u_j,-2T)$ and $v=\max(u,-2T)$. These are uniformly bounded $\Omega$-plurisubharmonic functions, and they converge in capacity.
+
+Fix $T$. Expanding $(\theta+\ddc v_j)^n$ by means of $\theta+\ddc v_j=(\Omega+\ddc v_j)+(\theta-\Omega)$, and bounding each smooth factor by a constant multiple of $\Omega$, we see that the total variations of the signed terms are controlled by positive bounded mixed measures. By \cref{lem:bounded-mixed-capacity}, these have a common capacity bound. Bounded Bedford--Taylor continuity gives weak convergence term by term. It also allows the weights $b_jg_T(v_j)$: their differences from the limiting weight tend to zero in capacity, so the common capacity bound makes the corresponding integrals tend to zero. For the fixed limiting weight, remove an open set of arbitrarily small capacity, extend the weight continuously from its complement, and control the discarded part by the same bound. Since the cutoff vanishes at the truncation level $-2T$, locality gives
 \[
  \begin{split}
  \int_Xb_jg_T(u_j)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u_j)
@@ -134,38 +135,38 @@ Translate the potentials below zero and choose a Hermitian metric $\Omega\geq\th
  \int_Xbg_T(u)\,\mathrm{MA}^{\mathrm{ext}}_\theta(u).
  \end{split}
 \]
-The first integral is nonnegative and bounded above by the corresponding uncut integral, although the bounded product before multiplication may be signed. Let $T\to\infty$ and use monotone convergence.
+The first integral is nonnegative and at most the corresponding integral without the cutoff, although the bounded product $(\theta+\ddc v_j)^n$ may be signed. Hence the limit is bounded by the lower limit in the assertion. Letting $T\to\infty$ and using monotone convergence completes the proof.
 \end{proof}
 
 \section{Density and trace inequalities}
 \label{sec:extended-density-inequalities}
 
-The mixed density inequality of \cref{lem:nonclosed-mixed-density} passes to unbounded potentials on common finite levels. Convex combinations then give a lower bound for their extended Monge--Amp\`ere measures; comparison with a smooth metric gives a lower bound for the full linear trace.
+The mixed density inequality of \cref{lem:nonclosed-mixed-density} passes to unbounded potentials on common finite levels. It gives a lower bound for the extended measure of a convex combination of potentials and, by comparison with a smooth metric, a lower bound for the full trace measure.
 
 \begin{lemma}\label{lem:singular-convex-density}
-Let $\theta$ be a smooth semipositive $(1,1)$-form and let $f,g\geq0$ be measurable functions on $X$. Suppose $u,v\in\PSH(X,\theta)$ and
+Let $\theta$ be a smooth semipositive $(1,1)$-form and let $f,g\geq0$ be measurable functions on $X$. Suppose $u,v\in\PSH(X,\theta)$ satisfy
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)\geq f\,\mathrm{d}V,
  \qquad \mathrm{MA}^{\mathrm{ext}}_\theta(v)\geq g\,\mathrm{d}V.
 \]
-For $0\leq t\leq1$ we have
+Then, for $0\leq t\leq1$,
 \begin{equation}\label{eq:singular-convex-density}
  \mathrm{MA}^{\mathrm{ext}}_\theta(tu+(1-t)v)
  \geq\bigl(tf^{1/n}+(1-t)g^{1/n}\bigr)^n\,\mathrm{d}V.
 \end{equation}
 \end{lemma}
 \begin{proof}
-The endpoints are immediate. For $0<t<1$, translate $u,v$ to be nonpositive and put $u_k=\max(u,-k)$ and $v_k=\max(v,-k)$. Semipositivity of $\theta$ makes these bounded $\theta$-plurisubharmonic functions. By locality,
+The cases $t=0$ and $t=1$ are the hypotheses. Let $0<t<1$, translate $u,v$ to be nonpositive, and put $u_k=\max(u,-k)$ and $v_k=\max(v,-k)$. Since $\theta$ is semipositive, these are bounded $\theta$-plurisubharmonic functions, and by locality
 \[
  \mathrm{MA}_\theta(u_k)\geq\mathbf1_{\{u>-k\}}f\,\mathrm{d}V,
  \qquad
  \mathrm{MA}_\theta(v_k)\geq\mathbf1_{\{v>-k\}}g\,\mathrm{d}V.
 \]
 Apply \cref{lem:nonclosed-mixed-density} to each mixed term in the positive expansion of $\theta_{tu_k+(1-t)v_k}^{n}$. On
-$E_k=\{u>-k\}\cap\{v>-k\}$ this gives exactly the density on the right of \eqref{eq:singular-convex-density}. On the same set, plurifine locality identifies the left side with the extended measure of $tu+(1-t)v$. Let $k\to\infty$. The sets $E_k$ exhaust the complement of the two pole sets, which have zero smooth volume. Monotone convergence on Borel sets proves the inequality.
+$E_k=\{u>-k\}\cap\{v>-k\}$ this gives the density on the right of \eqref{eq:singular-convex-density}. On the same set, plurifine locality identifies the left-hand side with the extended measure of $tu+(1-t)v$. As $k\to\infty$, the sets $E_k$ exhaust the complement of the two pole sets, which have zero smooth volume. Monotone convergence on Borel sets proves the inequality.
 \end{proof}
 
-The same mixed inequality gives a linear trace bound for unbounded potentials. The linear current retains its mass on the pole set, whereas the extended measure discards that set.
+The same mixed inequality gives a lower bound for the full trace measure of an unbounded potential. Unlike the extended measure, the full current $\omega+\ddc u$ keeps its mass on the pole set; the bound below concerns only its absolutely continuous part.
 
 \begin{lemma}\label{lem:unbounded-gauduchon-trace-density}
 Let $\gamma$ be a Hermitian form. If $u\in\PSH(X,\omega)$ and $0\leq g\in L^1(\mathrm{d}V)$ satisfy $\mathrm{MA}^{\mathrm{ext}}_\omega(u)\geq g\,\mathrm{d}V$, then
@@ -175,21 +176,21 @@ Let $\gamma$ be a Hermitian form. If $u\in\PSH(X,\omega)$ and $0\leq g\in L^1(\m
 \]
 \end{lemma}
 \begin{proof}
-For bounded $u$, \cref{lem:nonclosed-mixed-density} with $T_1=\omega+\ddc u$, $T_2=\gamma$ and $k=1$ gives the displayed inequality.
+For bounded $u$, \cref{lem:nonclosed-mixed-density}, applied in local coordinates with $T_1=\omega+\ddc u$, $T_2=\gamma$ and $k=1$, gives the asserted inequality.
 
-In general, subtract a constant so that $u\leq0$ and put $u_k=\max(u,-k)$. Positivity and locality give
+In general, subtract a constant so that $u\leq0$, and put $u_k=\max(u,-k)$. Positivity and locality give
 \[
- \mathrm{MA}_\omega(u_k)\geq\mathbf1_{\{u>-k\}}g\,\mathrm{d}V.
+ \mathrm{MA}_\omega(u_k)\geq\mathbf1_{\{u>-k\}}g\,\mathrm{d}V,
 \]
-Apply the bounded inequality to $u_k$. Since $u_k\to u$ in $L^1$, their full traces converge weakly. The right-hand densities converge in $L^1$: $g^{1/n}$ is integrable and the pole set has zero smooth volume. Passing to the limit proves the assertion.
+so the bounded case applies to $u_k$ with the density $\mathbf1_{\{u>-k\}}g$. Since $u_k\to u$ in $L^1$, the positive measures $(\omega+\ddc u_k)\wedge\gamma^{n-1}$ converge weakly to $(\omega+\ddc u)\wedge\gamma^{n-1}$. The densities on the right converge in $L^1$, because $g^{1/n}$ is integrable and the pole set has zero smooth volume. Passing to the limit proves the assertion.
 \end{proof}
 
 \section{The bounded mass property}
 
-The restricted products have uniformly bounded mass whenever the bounded potentials do. Comparison of Hermitian forms makes this a property of the manifold, and smooth decreasing regularization reduces its verification to smooth potentials.
+On a compact K\"ahler manifold, all bounded $\omega$-plurisubharmonic functions have the same Monge--Amp\`ere mass $\int_X\omega^n$. For a Hermitian form, the mass depends on the potential, and the following two numbers measure how far it can vary.
 
-\begin{definition}\label{def:bmp}\index{BMP|see{Bounded mass property}}\index{Bounded mass property}\index{Positive lower mass!Hermitian backgrounds}
-The lower and upper masses of $\omega$ are
+\begin{definition}\label{def:bmp}\index{BMP|see{Bounded mass property}}\index{Bounded mass property}\index{Positive lower mass!Hermitian backgrounds}\index{Lower mass}\index{Upper mass}
+Let $\omega$ be a Hermitian form on $X$. The \emph{lower mass} and the \emph{upper mass} of $\omega$ are
 \[
  \begin{split}
  v_-(\omega)&=
@@ -200,11 +201,13 @@ The lower and upper masses of $\omega$ are
        \int_X(\omega+\ddc v)^n.
  \end{split}
 \]
-The manifold has the \emph{bounded mass property} if $v_+(\omega)<+\infty$. The form $\omega$ has \emph{positive lower mass} if $v_-(\omega)>0$.
+The manifold $X$ has the \emph{bounded mass property}, abbreviated BMP, if $v_+(\omega)<+\infty$. The form $\omega$ has \emph{positive lower mass} if $v_-(\omega)>0$.
 \end{definition}
 
+Testing with $v=0$ gives $v_-(\omega)\leq\int_X\omega^n\leq v_+(\omega)$. By the next proposition, the bounded mass property does not depend on the choice of $\omega$. Since the extended measure \eqref{eq:extended-ma} is built from products of bounded potentials, the upper mass also controls the extended measures of unbounded potentials (\cref{prop:bmp-finite}).
+
 \begin{proposition}\label{prop:bmp-metric}\index{Bounded mass property!metric independence}
-The bounded mass property is independent of the Hermitian metric. Moreover, the supremum in \cref{def:bmp} is unchanged if only smooth potentials are used.
+The bounded mass property is independent of the Hermitian form. Moreover, the supremum in \cref{def:bmp} is unchanged if only smooth potentials are used.
 \end{proposition}
 \begin{proof}
 For another Hermitian form $\eta$, choose $C>0$ such that $\eta\leq C\omega$. If $v$ is a bounded $\eta$-plurisubharmonic function, then $v/C$ is $\omega$-plurisubharmonic and
@@ -214,19 +217,19 @@ For another Hermitian form $\eta$, choose $C>0$ such that $\eta\leq C\omega$. If
 \]
 By positivity of mixed bounded products,
 $\int_X(\eta+\ddc v)^n\leq C^n v_+(\omega)$.
-Comparison in the other direction proves metric independence.
+Interchanging the two forms proves metric independence.
 
-For the last assertion apply \cref{thm:bounded-exact-regularization}. The smooth approximants decrease and remain uniformly bounded, so continuity of bounded products gives convergence of their total masses. The reverse inequality between the two suprema is immediate.
+For the last assertion, approximate a bounded potential by \cref{thm:bounded-exact-regularization}. The smooth approximants decrease and remain uniformly bounded, so the continuity of bounded products along decreasing sequences gives convergence of their total masses. The reverse inequality between the two suprema is immediate.
 \end{proof}
 
 \begin{proposition}\label{prop:bmp-finite}
-Assume $v_+(\omega)<+\infty$. If $\theta$ is a smooth real $(1,1)$-form with $\theta\leq C\omega$, $C>0$, and $u\in\PSH(X,\theta)$, then
+Assume $v_+(\omega)<+\infty$. If $\theta$ is a smooth real $(1,1)$-form with $\theta\leq C\omega$ for some $C>0$, and $u\in\PSH(X,\theta)$, then
 \[
  \mathrm{MA}^{\mathrm{ext}}_\theta(u)(X)\leq C^n v_+(\omega).
 \]
 \end{proposition}
 \begin{proof}
-The comparison in \cref{thm:arbitrary-extended-ma} with $C\omega$ gives
+The comparison in \cref{thm:arbitrary-extended-ma}, applied with the Hermitian form $C\omega$, gives
 \[
  \mathbf1_{D_t}\mathrm{MA}^{\mathrm{ext}}_\theta(u)
  \leq\mathbf1_{D_t}(C\omega+\ddc u_t)^n.
@@ -237,7 +240,7 @@ Since $u_t/C$ is bounded and $\omega$-plurisubharmonic, the right-hand side has 
 \Needspace{20\baselineskip}
 \section{Infinite mass with trivial multiplier ideals}
 
-A summable convex combination retains a fixed fraction of the mass of each smooth summand. Choosing their masses to outgrow the reciprocal $n$th powers of the weights forces infinite mass in the limit. The same weights make the tail small enough for the uniform exponential estimate of \cref{lem:uniform-exponential} to apply at every exponent.
+If the bounded mass property fails, there are smooth $\omega$-plurisubharmonic functions $u_j$ whose masses $M_j$ tend to infinity. In a convex combination $U=\sum_ja_ju_j$, positivity of mixed products shows that each summand contributes at least $a_j^nM_j$ to the extended measure of $U$. Choosing the masses $M_j$ to outgrow $a_j^{-n}$ therefore forces infinite mass. On the other hand, each tail $\sum_{j>N}a_ju_j$ is a small multiple of a convex combination of normalized potentials, and the uniform exponential integrability of \cref{lem:uniform-exponential} applies to it at every exponent.
 
 \begin{theorem}\label{thm:infinite-mass-witness}
 If $v_+(\omega)=+\infty$, there is $U\in\PSH(X,\omega)$, $U\leq0$, such that
@@ -249,7 +252,7 @@ If $v_+(\omega)=+\infty$, there is $U\in\PSH(X,\omega)$, $U\leq0$, such that
 In particular, $\mathcal I(pU)=\mathcal O_X$ for every $p>0$.
 \end{theorem}
 \begin{proof}
-Set $a_j=2^{-j}$. By \cref{prop:bmp-metric}, choose smooth $\omega$-plurisubharmonic functions $u_j$ with $\sup_Xu_j=0$ and
+Set $a_j=2^{-j}$ for $j\geq1$. By \cref{prop:bmp-metric}, we can choose smooth $\omega$-plurisubharmonic functions $u_j$ with $\sup_Xu_j=0$ and
 \[
  M_j:=\int_X\omega_{u_j}^n\geq2^{j(n+1)}.
 \]
@@ -261,15 +264,15 @@ The partial sums $U_N=\sum_{j\leq N}a_ju_j$ decrease and satisfy
 \]
 Their $L^1$ norms are bounded by \eqref{eq:normalized-lone}, so their limit $U$ is $\omega$-plurisubharmonic and nonpositive.
 
-Fix $j$ and write $v_j=U-a_ju_j$. Taking limits in the remaining partial sums gives
+We first prove that the mass is infinite. Fix $j$ and write $v_j=U-a_ju_j$. Passing to the limit in the remaining partial sums gives
 $(1-a_j)\omega+\ddc v_j\geq0$. For $t>0$, put
 \[
  v_{j,t}=\max(v_j,-t),\qquad W_{j,t}=a_ju_j+v_{j,t}.
 \]
-The first is a bounded potential for the positive background $(1-a_j)\omega$, so $W_{j,t}$ is bounded and $\omega$-plurisubharmonic.
+The function $v_{j,t}$ is a bounded potential for the positive background $(1-a_j)\omega$, so $W_{j,t}$ is bounded and $\omega$-plurisubharmonic.
 
 On $D_t=\{U>-t\}$, the inequality $u_j\leq0$ gives
-$v_j=U-a_ju_j\geq U>-t$. Thus $W_{j,t}=U=\max(U,-t)$ there. Plurifine locality and positivity of bounded mixed products yield
+$v_j=U-a_ju_j\geq U>-t$, and hence $W_{j,t}=U=\max(U,-t)$ there. Plurifine locality and positivity of bounded mixed products yield
 \begin{align*}
  \mathbf1_{D_t}\omega_{\max(U,-t)}^n
  &=\mathbf1_{D_t}
@@ -277,42 +280,42 @@ $v_j=U-a_ju_j\geq U>-t$. Thus $W_{j,t}=U=\max(U,-t)$ there. Plurifine locality a
         +(1-a_j)\omega+\ddc v_{j,t}\bigr)^n\\
  &\geq a_j^n\mathbf1_{D_t}\omega_{u_j}^n.
 \end{align*}
-The sets $D_t$ exhaust $X\setminus\{U=-\infty\}$. This pole set is pluripolar, hence has zero smooth volume; the smooth measure $\omega_{u_j}^n$ gives it zero mass. Letting $t\to+\infty$, we obtain
+The sets $D_t$ exhaust $X\setminus\{U=-\infty\}$. This pole set is pluripolar, hence has zero smooth volume, so the smooth measure $\omega_{u_j}^n$ gives it no mass. Letting $t\to+\infty$, we obtain
 \[
  \mathrm{MA}^{\mathrm{ext}}_\omega(U)(X)
  \geq a_j^nM_j\geq2^j.
 \]
 Since $j$ is arbitrary, the mass is infinite.
 
-For integrability, fix $p>0$ and take $N$ so large that
-$p\delta\leq\alpha$, where $\delta=\sum_{j>N}a_j=2^{-N}$ and $\alpha$ is from \cref{lem:uniform-exponential}. Write
+For the integrability, fix $p>0$, let $\alpha$ be the exponent of \cref{lem:uniform-exponential}, and take $N$ so large that
+$p\delta\leq\alpha$, where $\delta=\sum_{j>N}a_j=2^{-N}$. Write
 $U=A_N+V_N$ with $A_N=\sum_{j\leq N}a_ju_j$ smooth.
-For a finite tail ending at $m>N$, Jensen's inequality, with the unused weight assigned to zero, gives
+For a finite tail ending at $m>N$, Jensen's inequality for the convex exponential function, with the unused weight assigned to the value zero, gives
 \begin{align*}
  \exp\!\left(-p\sum_{N<j\leq m}a_ju_j\right)
  &\leq\sum_{N<j\leq m}\frac{a_j}{\delta}
                   \mathrm{e}^{-p\delta u_j}
        +1-\sum_{N<j\leq m}\frac{a_j}{\delta}.
 \end{align*}
-Because $u_j\leq0$ and $p\delta\leq\alpha$, the integrals of the exponentials on the right are uniformly bounded. Integrate and let $m\to+\infty$ by monotone convergence to obtain $\int_X\mathrm{e}^{-pV_N}\mathrm{d}V<+\infty$. Multiplication by the bounded smooth function $\mathrm{e}^{-pA_N}$ proves $\int_X\mathrm{e}^{-pU}\mathrm{d}V<+\infty$.
+Because $u_j\leq0$ and $p\delta\leq\alpha$, the integrals of the exponentials on the right are uniformly bounded. Integrating and letting $m\to+\infty$ by monotone convergence, we obtain $\int_X\mathrm{e}^{-pV_N}\mathrm{d}V<+\infty$. Multiplication by the bounded smooth function $\mathrm{e}^{-pA_N}$ proves $\int_X\mathrm{e}^{-pU}\mathrm{d}V<+\infty$.
 
-The constant germ $1$ is consequently integrable against each weight $\mathrm{e}^{-pU}$, so every multiplier ideal in the statement is the whole structure sheaf.
+Consequently, the constant germ $1$ is locally integrable against each weight $\mathrm{e}^{-pU}$, and every multiplier ideal $\mathcal I(pU)$ is the whole structure sheaf.
 \end{proof}
 
 \Needspace{11\baselineskip}
 \begin{corollary}\label{cor:bmp-characterization}
 \index{Bounded mass property!finiteness of all potential masses}
-The bounded mass property is equivalent to finiteness of
-$\mathrm{MA}^{\mathrm{ext}}_\omega(u)(X)$ for every $u\in\PSH(X,\omega)$.
-If bounded mass fails, potentials of infinite extended mass with all multiplier ideals trivial can approach zero in $L^1$.
+The bounded mass property holds if and only if
+$\mathrm{MA}^{\mathrm{ext}}_\omega(u)(X)<+\infty$ for every $u\in\PSH(X,\omega)$.
+If the bounded mass property fails, there are potentials with infinite extended mass and trivial multiplier ideals $\mathcal I(pu)=\mathcal O_X$, $p>0$, arbitrarily close to zero in $L^1$.
 \end{corollary}
 \begin{proof}
-The first assertion follows from \cref{prop:bmp-finite,thm:infinite-mass-witness}. For the second, use $\varepsilon U$, $0<\varepsilon\leq1$, with $U$ as above. It is $\omega$-plurisubharmonic and has all the required exponential integrability. On $D_t=\{U>-t\}$ its truncation at level $\varepsilon t$ is $\varepsilon\max(U,-t)$, and
+The first assertion follows from \cref{prop:bmp-finite,thm:infinite-mass-witness}. For the second, take $\varepsilon U$, $0<\varepsilon\leq1$, with $U$ as in \cref{thm:infinite-mass-witness}. It is $\omega$-plurisubharmonic and has the required exponential integrability. On $D_t=\{U>-t\}$, its truncation at level $\varepsilon t$ is $\varepsilon\max(U,-t)$, and
 \[
  \omega+\ddc\bigl(\varepsilon\max(U,-t)\bigr)
  =\varepsilon\omega_{\max(U,-t)}+(1-\varepsilon)\omega.
 \]
-Positivity of mixed products gives a lower bound of $\varepsilon^n$ times the truncation measure for $U$. Its limiting mass is therefore infinite. Finally, $\|\varepsilon U\|_{L^1}\to0$.
+Positivity of mixed products bounds the restricted measure of $\varepsilon U$ below by $\varepsilon^n$ times that of $U$. Its limiting mass is therefore infinite. Finally, $\|\varepsilon U\|_{L^1}\to0$ as $\varepsilon\to0$.
 \end{proof}
 
 \input{author/section_integrable_infinite_mass}

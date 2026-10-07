@@ -1,6 +1,6 @@
 \section{Capacity estimates and uniform compactness}
 
-Modified comparison bounds the capacity of a thin sublevel by the Monge--Amp\`ere mass of a slightly larger one. For an $L^p$ density, \cref{cor:lp-capacity-square} bounds this mass by the square of the capacity. Iterating the two inequalities gives a lower capacity bound for every nonempty sublevel of fixed height. The tail estimate \eqref{eq:global-capacity-tail} then bounds the depth of a normalized potential. Write $\operatorname{Cap}=\operatorname{Cap}_\omega$ for the capacity of \cref{sec:hermitian-capacity}.
+Let $\operatorname{Cap}=\operatorname{Cap}_\omega$ denote the capacity of \cref{sec:hermitian-capacity}. Modified comparison bounds the capacity of a thin sublevel set by the Monge--Amp\`ere mass of a slightly larger one. For an $L^p$ density, \cref{cor:lp-capacity-square} bounds this mass by the square of the capacity. Iterating the two inequalities gives a lower bound for the capacity of every sublevel set of fixed height above the minimum. Since the capacity of deep sublevel sets of normalized potentials is small by the tail estimate \eqref{eq:global-capacity-tail}, this bounds the depth of a normalized solution.
 
 \Needspace{15\baselineskip}
 \begin{lemma}\label{lem:thin-sublevel-capacity}
@@ -17,7 +17,7 @@ There are $\delta_\varepsilon>0$, depending only on $(X,\omega,\varepsilon)$, an
 Every $U_s$, $s>0$, has positive capacity.
 \end{lemma}
 \begin{proof}
-Use the constant $B_0$ from \cref{thm:modified-comparison} and set
+Let $B_0$ be the constant of \cref{thm:modified-comparison}, and set
 \[
  \delta_\varepsilon=\min\{1-\varepsilon,\varepsilon^3/(128B_0n^2)\}.
 \]
@@ -33,13 +33,13 @@ $0\leq(1-\varepsilon)(w-v)\leq t/2$, so $m-t/2\leq m'\leq m$. Consequently
  U_s\subset V:=\{u<(1-\varepsilon)w+m'+s+t/2\}
  \subset U_{s+t}.
 \]
-Apply modified comparison to $u,w$ at height $s+t/2$. Its inverse factor is at most $(8/7)^n$. Moreover,
+We apply modified comparison to $u,w$ at height $s+t/2<\delta_\varepsilon$; by the choice of $\delta_\varepsilon$, its inverse factor is at most $(8/7)^n$. Moreover,
 \[
  \omega_{(1-\varepsilon)w}
  \geq(1-\varepsilon)\tau\omega_\rho
  =\frac{t}{2(H+1)}\omega_\rho.
 \]
-Integration over $U_s\subset V$ and comparison over $V$ give \eqref{eq:thin-capacity}, with $C_H=[2(H+1)]^n(8/7)^n$, after taking the supremum over $\rho$. Each $U_s$ is nonempty by the definition of the infimum. \Cref{lem:strict-set-positive-volume} gives positive smooth volume, hence positive capacity by the constant test.
+Integrating over $U_s\subset V$, applying modified comparison on $V$, and taking the supremum over $\rho$, we obtain \eqref{eq:thin-capacity} with $C_H=[2(H+1)]^n(8/7)^n$. Finally, each $U_s$ is nonempty by the definition of the infimum, so it has positive smooth volume by \cref{lem:strict-set-positive-volume}, and hence positive capacity, as the constant test function shows.
 \end{proof}
 
 \Needspace{11\baselineskip}
@@ -55,19 +55,19 @@ For every $0<D<\delta_\varepsilon$,
 \end{equation}
 \end{lemma}
 \begin{proof}
-Write $a(s)=\operatorname{Cap}(U_s)^{1/n}>0$ and $K=(C_HA)^{1/n}$. The preceding lemma gives
+Write $a(s)=\operatorname{Cap}(U_s)^{1/n}>0$ and $K=(C_HA)^{1/n}$. The preceding lemma and the hypothesis, applied to $E=U_{s+t}$, give
 \[
  t\,a(s)\leq K a(s+t)^2\qquad(s+t<\delta_\varepsilon).
 \]
-Suppose $4Ka(D)<D$. Starting with $s_0=D$, define
+Suppose, to the contrary, that $4Ka(D)<D$. Starting with $s_0=D$, define
 \[
  t_j=2Ka(s_j),\qquad s_{j+1}=s_j-t_j.
 \]
-We check positivity before using the sublevel inequality. If $a(s_i)\leq2^{-i}a(D)$ for $0\leq i\leq j$, then
+We check that $s_{j+1}>0$ before applying the sublevel inequality. If $a(s_i)\leq2^{-i}a(D)$ for $0\leq i\leq j$, then
 \[
  \sum_{i=0}^j t_i\leq2Ka(D)\sum_{i=0}^j2^{-i}<4Ka(D)<D.
 \]
-Hence $s_{j+1}>0$, and the displayed sublevel inequality gives $a(s_{j+1})\leq a(s_j)/2$. Induction justifies every step, and $s_j\downarrow s_\infty\geq D-4Ka(D)>0$. Monotonicity gives
+Hence $s_{j+1}>0$, and the sublevel inequality with $s=s_{j+1}$ and $t=t_j$ gives $a(s_{j+1})\leq a(s_j)/2$. By induction, every step is justified, and $s_j\downarrow s_\infty\geq D-4Ka(D)>0$. Monotonicity gives
 $0<a(s_\infty)\leq a(s_j)\leq2^{-j}a(D)$, a contradiction. Therefore $D\leq4Ka(D)$, which is \eqref{eq:sublevel-capacity-lower}.
 \end{proof}
 
@@ -84,14 +84,14 @@ we have
 \end{equation}
 \end{theorem}
 \begin{proof}
-The zero density is excluded by \cref{cor:bounded-mass-positive}. Apply \cref{cor:lp-capacity-square,lem:backwards-capacity} with $v=0$, $H=1$, $\varepsilon=1/2$, and $A=C_p\|F\|_p>0$. Fix $D=\delta_{1/2}/2$. If $M=-\inf_Xu$, the resulting inequality is
+By \cref{cor:bounded-mass-positive}, $F$ is not almost everywhere zero. Apply \cref{lem:backwards-capacity} with $v=0$, $H=1$, $\varepsilon=1/2$, and $A=C\|F\|_p>0$, where $C$ is the constant of \cref{cor:lp-capacity-square}. Fix $D=\delta_{1/2}/2$, and put $M=-\inf_Xu$. Since $U_D=\{u<-M+D\}$, the resulting inequality reads
 \[
  \operatorname{Cap}(\{u<-M+D\})\geq c/\|F\|_p.
 \]
-If $M>D+1$, \eqref{eq:global-capacity-tail} bounds this capacity by $C/(M-D)$, giving the first assertion; the remaining case is immediate. Bounding the same capacity by $\operatorname{Cap}(X)$ gives the second assertion.
+If $M>D+1$, \eqref{eq:global-capacity-tail} bounds this capacity above by $C/(M-D)$, and the first assertion follows; the case $M\leq D+1$ is immediate. Bounding the same capacity above by $\operatorname{Cap}(X)$ gives the second assertion.
 \end{proof}
 
-If two uniformly bounded solutions remain separated at some point, the preceding estimate gives a fixed positive capacity to a sublevel of their difference. Small $L^1$ distance makes its volume small, while the uniform $L^p$ density bound makes its Monge--Amp\`ere mass small. This contradicts the sublevel estimate and upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$.
+Suppose that two uniformly bounded solutions are far apart at some point. The preceding estimates give a fixed positive lower bound for the capacity of a sublevel set of their difference. If their $L^1$ distance is small, this set has small volume, and the uniform $L^p$ bound for the densities then makes its Monge--Amp\`ere mass small. This contradicts the sublevel estimate \eqref{eq:thin-capacity}, and so upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$.
 
 \begin{theorem}\label{thm:lp-uniform-compactness}\index{Compactness!uniform convergence of solutions}
 Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
@@ -101,18 +101,18 @@ Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
 for the fixed $p>1$. If $(u_j)$ is Cauchy in $L^1(X,\mathrm{d}V)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega$-plurisubharmonic function.
 \end{theorem}
 \begin{proof}
-By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. Suppose uniform Cauchy convergence fails. After exchanging indices when necessary, there are a number $a>0$ and arbitrarily large $j,k$ with
+By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. Suppose that the sequence is not uniformly Cauchy. After exchanging indices if necessary, we find $a>0$ and arbitrarily large $j,k$ with
 \[
  S:=\inf_X(u_k-u_j)\leq-a.
 \]
 \Needspace{10\baselineskip}
-Choose $0<\varepsilon<1$ such that $\varepsilon H<a/4$, and choose a fixed $D>0$ with $2D<\delta_\varepsilon$ and $2D<a/4$. Apply the preceding sublevel lemmas with $u=u_k$, $v=u_j$. Since $v\leq0$,
+Choose $0<\varepsilon<1$ such that $\varepsilon H<a/4$, and choose a fixed $D>0$ with $2D<\delta_\varepsilon$ and $2D<a/4$. Apply the preceding sublevel lemmas with $u=u_k$ and $v=u_j$. Since $v\leq0$,
 $m=\inf(u-(1-\varepsilon)v)\leq S$. Thus
 \[
  U_{2D}\subset\{u-v<S+2D+\varepsilon H\}
  \subset\{|u-v|>a/2\}.
 \]
-The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a common $A$ supplied by \cref{cor:lp-capacity-square}, gives $\operatorname{Cap}(U_D)\geq c>0$. On the other hand, \eqref{eq:thin-capacity}, H\"older and Chebyshev give
+The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a constant $A$ independent of $j,k$ given by \cref{cor:lp-capacity-square}, yields $\operatorname{Cap}(U_D)\geq c>0$. On the other hand, \eqref{eq:thin-capacity} and the inequalities of H\"older and Chebyshev give
 \[
  \begin{split}
  D^n\operatorname{Cap}(U_D)
@@ -122,59 +122,59 @@ The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a common $A$ s
  \longrightarrow0.
  \end{split}
 \]
-This contradiction proves uniform Cauchy convergence. The normalized compactness theorem, \cref{thm:normalized-compactness}, supplies an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
+This contradiction proves that the sequence is uniformly Cauchy. For the last assertion, the normalized compactness theorem, \cref{thm:normalized-compactness}, gives an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
 \end{proof}
 
 \section{Construction of continuous solutions}
 
-Smooth approximation gives solutions with unknown normalization scalars. A Gauduchon trace bounds those scalars above, and the lower bound for the density norm bounds them away from zero. The resulting uniform $L^p$ bound puts the potentials in the compact family just constructed, so their limit solves the prescribed equation.
+Smooth approximation gives solutions with unknown normalization constants. A Gauduchon trace bounds these constants above, and the lower bound for the density norm in \cref{thm:lp-potential-estimate} bounds them away from zero. The resulting uniform $L^p$ bound puts the potentials in the compact family of \cref{thm:lp-uniform-compactness}, so their limit solves the prescribed equation.
 
 \begin{proof}[of \cref{thm:kn-continuous}]
-Choose smooth strictly positive $f_j\to f$ in $L^p(X,\mathrm{d}V)$. By \cref{thm:tw-smooth}, smooth existence gives
+Choose smooth strictly positive functions $f_j\to f$ in $L^p(X,\mathrm{d}V)$. By \cref{thm:tw-smooth}, there are smooth $u_j$ with $\omega_{u_j}>0$ and constants $c_j$ such that
 \[
  \omega_{u_j}^n=c_jf_j\,\mathrm{d}V,\qquad \sup_Xu_j=0,\qquad c_j>0.
 \]
-We first control the constants. For $n\geq2$, fix a Gauduchon metric $\gamma$. By \cref{prop:gauduchon-amgm},
+We first bound the constants. For $n\geq2$, fix a Gauduchon metric $\gamma$. By \cref{prop:gauduchon-amgm},
 \[
  c_j^{1/n}A_j\leq\int_X\omega\wedge\gamma^{n-1},
  \qquad A_j=\int_X(f_j\mathrm{d}V/\gamma^n)^{1/n}\gamma^n.
 \]
-Since $|x^{1/n}-y^{1/n}|\leq|x-y|^{1/n}$ for $x,y\geq0$, H\"older's inequality gives $A_j\to A>0$, where $A=\int_X(f\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. Thus $c_j$ is bounded above. In dimension one the same estimate is Stokes' identity and $A_j=\int_Xf_j\,\mathrm{d}V$.
+Since $|x^{1/n}-y^{1/n}|\leq|x-y|^{1/n}$ for $x,y\geq0$, H\"older's inequality gives $A_j\to A>0$, where $A=\int_X(f\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. Thus $c_j$ is bounded above. In dimension one, Stokes' theorem gives the same estimate, with $A_j=\int_Xf_j\,\mathrm{d}V$.
 
-The lower-density estimate in \cref{thm:lp-potential-estimate} gives
-$c_j\|f_j\|_p\geq c_p$, so the constants are bounded away from zero. The densities $c_jf_j$ are now uniformly bounded in $L^p$, and the same theorem gives a common bound for $u_j$. Pass to a subsequence with $c_j\to c>0$ and $u_j$ Cauchy in $L^1$. By \cref{thm:lp-uniform-compactness}, $u_j\to u$ uniformly, with $u$ continuous and $\sup_Xu=0$.
+The lower bound for the density norm in \cref{thm:lp-potential-estimate} gives
+$c_j\|f_j\|_p\geq c_p$, so the constants are bounded away from zero. The densities $c_jf_j$ are therefore uniformly bounded in $L^p$, and the same theorem gives a common bound for the $u_j$. By \cref{thm:normalized-compactness}, we may pass to a subsequence with $c_j\to c>0$ and $u_j$ Cauchy in $L^1$. By \cref{thm:lp-uniform-compactness}, $u_j\to u$ uniformly, with $u$ continuous and $\sup_Xu=0$.
 
 Bounded Bedford--Taylor continuity gives $\omega_{u_j}^n\rightharpoonup\omega_u^n$, while $c_jf_j\to cf$ in $L^p$. Hence $\omega_u^n=cf\,\mathrm{d}V$, as required.
 \end{proof}
 
-For the exponential equation, the corresponding scalar is $\mathrm{e}^{\lambda\sup_Xu}$. Its upper bound comes from Jensen's inequality: weighting a Gauduchon probability by the root of the density relates the conserved trace to $\sup_Xu$. The lower-density estimate again gives the reverse bound.
+For the exponential equation, the role of the normalization constant is played by $\mathrm{e}^{\lambda\sup_Xu}$. Its upper bound comes from Jensen's inequality: weighting the Gauduchon volume by the $n$th root of the density relates $\sup_Xu$ to the Gauduchon trace of $\omega_u$, which does not depend on $u$. The lower bound for the density norm again gives the reverse bound.
 
 \begin{lemma}\label{lem:exponential-gauduchon-mean}
-Fix $\lambda>0$. Suppose smooth $u_j$ with $\omega_{u_j}>0$ solve
+Fix $\lambda>0$. Suppose that smooth functions $u_j$ with $\omega_{u_j}>0$ solve
 \[
  \omega_{u_j}^n=\mathrm{e}^{\lambda u_j}f_j\,\mathrm{d}V,
 \]
-where smooth strictly positive $f_j$ converge in $L^p$ to a nonnegative nonzero $f$. Then $M_j=\sup_Xu_j$ is bounded above and below, uniformly in $j$.
+where the smooth strictly positive functions $f_j$ converge in $L^p$ to a nonnegative nonzero $f$. Then $M_j=\sup_Xu_j$ is bounded above and below, uniformly in $j$.
 \end{lemma}
 \begin{proof}
-Absorb the fixed smooth positive ratio $\mathrm{d}V/\omega^n$ into both $f_j$ and $f$. This preserves their $L^p$ convergence, so we may use $\mathrm{d}V=\omega^n$ in the calculation. Choose $\rho>0$ smooth with $\ddc(\rho\omega^{n-1})=0$, using \cref{thm:gauduchon}; for $n=1$, take $\rho=1$. Put
+Absorbing the fixed smooth positive ratio $\mathrm{d}V/\omega^n$ into $f_j$ and $f$ preserves their $L^p$ convergence, so we may assume $\mathrm{d}V=\omega^n$. Choose $\rho>0$ smooth with $\ddc(\rho\omega^{n-1})=0$, using \cref{thm:gauduchon}; for $n=1$, take $\rho=1$. Put
 \[
  \alpha=\int_X\rho\omega^n,\quad
  A_j=\int_X f_j^{1/n}\rho\omega^n,\quad
  \psi_j=u_j-M_j\leq0.
 \]
-Set $A=\int_X f^{1/n}\rho\omega^n$. The root inequality used in the preceding existence proof gives $A_j\to A>0$. Arithmetic--geometric mean and the conserved trace imply
+Set $A=\int_X f^{1/n}\rho\omega^n$. The inequality for $n$th roots used in the preceding existence proof gives $A_j\to A>0$. Since $\ddc(\rho\omega^{n-1})=0$, the trace $\int_X\omega_{u_j}\wedge\rho\omega^{n-1}$ equals $\alpha$; the arithmetic--geometric mean inequality therefore implies
 \[
  \alpha=\int_X\omega_{u_j}\wedge\rho\omega^{n-1}
  \geq \mathrm{e}^{\lambda M_j/n}\int_X \mathrm{e}^{\lambda\psi_j/n}f_j^{1/n}\rho\omega^n.
 \]
-Apply Jensen's inequality to the probability measure
-$A_j^{-1}f_j^{1/n}\rho\omega^n$. Taking logarithms yields
+Applying Jensen's inequality to the probability measure
+$A_j^{-1}f_j^{1/n}\rho\omega^n$ and taking logarithms, we obtain
 \begin{equation}\label{eq:gauduchon-exponential-mean}
  \lambda M_j\leq n\log(\alpha/A_j)
  +\frac{\lambda}{A_j}\int_X(-\psi_j)f_j^{1/n}\rho\omega^n.
 \end{equation}
-The normalized potentials $\psi_j$ have uniform $L^q$ bounds for every finite $q$, by \cref{lem:uniform-exponential}. With $q=np/(np-1)$, H\"older gives a uniform bound for the last integral, since
+By \cref{lem:uniform-exponential}, the normalized potentials $\psi_j$ have uniform $L^q$ bounds for every finite $q$. With $q=np/(np-1)$, H\"older's inequality gives a uniform bound for the last integral, since
 $\|f_j^{1/n}\|_{np}=\|f_j\|_p^{1/n}$. This proves the upper bound for $M_j$.
 
 Finally, the density $F_j=\mathrm{e}^{\lambda u_j}f_j$ satisfies
@@ -183,8 +183,8 @@ $\|F_j\|_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p$. The lower-density bound of \c
 
 \Needspace{9\baselineskip}
 \begin{proof}[of \cref{thm:nguyen-exp}]
-Choose smooth strictly positive $f_j\to f$ in $L^p$. The smooth proper equation, \cref{thm:smooth-proper-existence}, gives smooth $u_j$ satisfying the required equations. The preceding lemma bounds $M_j$ and consequently bounds $F_j=\mathrm{e}^{\lambda u_j}f_j$ in $L^p$. The normalized potentials $\psi_j=u_j-M_j$ are uniformly bounded by \cref{thm:lp-potential-estimate}. Pass to a subsequence with $M_j\to M$ and $\psi_j$ Cauchy in $L^1$. \Cref{thm:lp-uniform-compactness} gives uniform convergence $u_j\to u\in\PSH(X,\omega)\cap C(X)$.
+Choose smooth strictly positive functions $f_j\to f$ in $L^p$. By \cref{thm:smooth-proper-existence}, there are smooth $u_j$ with $\omega_{u_j}>0$ and $\omega_{u_j}^n=\mathrm{e}^{\lambda u_j}f_j\,\mathrm{d}V$. The preceding lemma bounds $M_j=\sup_Xu_j$, and consequently bounds $F_j=\mathrm{e}^{\lambda u_j}f_j$ in $L^p$. The normalized potentials $\psi_j=u_j-M_j$ are uniformly bounded by \cref{thm:lp-potential-estimate}. We may pass to a subsequence with $M_j\to M$ and $\psi_j$ Cauchy in $L^1$. \Cref{thm:lp-uniform-compactness} gives uniform convergence $u_j\to u\in\PSH(X,\omega)\cap C(X)$.
 
 Uniform convergence and $f_j\to f$ in $L^p$ give
-$\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^p$. Bounded-product continuity therefore gives $\omega_u^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$. Bounded exponential comparison, \cref{cor:bounded-exponential-comparison}, gives uniqueness, in fact among all bounded solutions.
+$\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^p$, and continuity of bounded products therefore gives $\omega_u^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$. Uniqueness, even among all bounded solutions, follows from bounded exponential comparison, \cref{cor:bounded-exponential-comparison}.
 \end{proof}

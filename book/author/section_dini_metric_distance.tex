@@ -1,9 +1,9 @@
 \subsection{Dini moduli and limits of distances}
 \label{sec:dini-metric-distance}
 
-The annular argument also applies to a continuous potential whose modulus need not be a power. The condition concerns the square root of that modulus. It supplies uniform distance estimates for families even when their H\"older constants are not controlled.
+The annular argument of \cref{thm:holder-current-distance} also applies to a continuous potential whose modulus of continuity is not a power; what matters is a Dini condition on the square root of the modulus. This gives uniform distance estimates for families whose H\"older constants are not controlled.
 
-Retain a coordinate domain $U\subset\C^n$ and its Euclidean form. Let now $v\in C^0(U)$, let $\theta$ be a smooth real $(1,1)$-form, and assume $T=\theta+\ddc v\geq0$. On the nested charts under consideration, choose a nondecreasing function $m:(0,r_0)\to[0,+\infty)$ with $m(r)\to0$ such that
+Keep the coordinate domain $U\subset\C^n$ with its Euclidean form $\omega_{\mathrm E}$ and volume $\mathrm{d}\lambda$, but now let $v\in C^0(U)$ and let $\theta$ be a smooth real $(1,1)$-form with $T=\theta+\ddc v\geq0$. On the relatively compact charts under consideration, choose a nondecreasing function $m:(0,r_0)\to[0,+\infty)$ with $m(r)\to0$ as $r\to0$ such that
 \[
  |v(x)-v(y)|\leq m(|x-y|),\qquad |x-y|<r_0.
 \]
@@ -14,24 +14,24 @@ Put
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:dini-current-distance}\index{Dini modulus!metric distance}\index{Metric completion!Dini potential}
-Assume $D(r_0/2)<+\infty$, and suppose that $T$ defines a smooth strictly positive metric $\eta$ on $U\setminus A$ for a proper analytic subset $A$. On a sufficiently small inner chart there are constants $C,r_1>0$ such that
+Assume that $D(r_0/2)<+\infty$ and that $T$ is a smooth Hermitian form $\eta$ on $U\setminus A$ for a proper analytic subset $A\subset U$. Then every point of $U$ has a neighborhood $V\Subset U$ with constants $C,r_1>0$ such that, for $x,y\in V$,
 \[
  d_\eta^U(x,y)\leq C D(8|x-y|),
  \qquad x,y\notin A,\quad |x-y|<r_1.
 \]
-The constants depend on the charts and an upper bound for $|\theta|$, and the displayed modulus records the dependence on $v$. Each point of $A$ in the inner chart has a unique completion limit. If these hypotheses hold in a finite chart cover of a compact connected manifold, the intrinsic metric completion is a compact continuous metric quotient of the manifold. Deleting a nonempty $A$ makes the regular metric incomplete.
+The constants depend only on the charts and an upper bound for $|\theta|$; the dependence on $v$ enters only through $D$. All sequences in $V\setminus A$ converging to a given point of $A\cap V$ have a common limit in the metric completion. If these hypotheses hold on a finite cover of a compact connected manifold by charts, the metric completion of the regular locus is compact, and the identity of the regular locus extends to a continuous surjection of the manifold onto it. If $A$ is nonempty, the metric $\eta$ on the regular locus is incomplete.
 \end{theorem}
 \begin{proof}
 Write $d=2n$ and $\mu=T\wedge\omega_{\mathrm E}^{n-1}$. The same cutoff calculation as in \cref{thm:holder-current-distance}, with a constant subtracted from $v$, gives
 \[
  \mu(B(x,s))\leq C\bigl(s^d+s^{d-2}m(2s)\bigr).
 \]
-It uses only the bound for $\theta$; closedness of $\theta$ is unnecessary. If $\tau$ is the Euclidean trace of $\eta$, then $\tau\,\mathrm{d}\lambda\leq C\mu$ on the regular locus. Polar integration bounds the average lengths of segments from a regular point $x$ over $B(x,R)$ by
+This uses only the bound for $\theta$; closedness of $\theta$ is not needed. If $\tau$ is the Euclidean trace of $\eta$, then $\tau\,\mathrm{d}\lambda\leq C\mu$ on the regular locus. Polar integration bounds the average length of the segments from a regular point $x$ to the points of $B(x,R)$ by
 \[
  C\int_{B(x,R)}\sqrt{\tau(\zeta)}
                       |\zeta-x|^{1-d}\,\mathrm{d}\lambda(\zeta).
 \]
-On an annulus of outer radius $s$, Cauchy--Schwarz and the trace bound make its contribution at most
+On an annulus of outer radius $s$, the Cauchy--Schwarz inequality and the trace bound make the contribution to this integral at most
 \[
  Cs^{1-d}s^{d/2}
        \bigl(s^d+s^{d-2}m(2s)\bigr)^{1/2}
@@ -42,24 +42,24 @@ For $s_j=2^{-j}R$, monotonicity gives
  \sum_{j\geq0}\sqrt{m(2s_j)}
  \leq\frac1{\log2}\int_0^{4R}\frac{\sqrt{m(t)}}t\,\mathrm{d}t.
 \]
-The intervals $[2s_j,4s_j]$ have disjoint interiors, which proves the inequality without a doubling condition on $m$. The average length is therefore at most $CD(4R)$.
+Indeed, $\sqrt{m(2s_j)}\log2$ is at most the integral of $\sqrt{m(t)}/t$ over $[2s_j,4s_j]$, and these intervals have disjoint interiors; no doubling condition on $m$ is needed. The average length is therefore at most $CD(4R)$.
 
-Average the two segments through a ball of radius $|x-y|/2$ about the midpoint of $x,y$, using $R=2|x-y|$ for each endpoint. Its volume is comparable to $R^d$, so the same bound supplies a broken path of length at most $CD(8|x-y|)$. The analytic avoidance argument in the proof of \cref{thm:holder-current-distance} makes almost every such path avoid $A$. Nested charts keep it inside $U$.
+For $x,y\in V\setminus A$, average the lengths of the broken segments $[x,z]\cup[z,y]$ over $z$ in the ball of radius $|x-y|/2$ about the midpoint of $x$ and $y$, applying the preceding bound with $R=2|x-y|$ at each endpoint. Since the volume of this ball is comparable to $R^d$, some broken path has length at most $CD(8|x-y|)$. As in the proof of \cref{thm:holder-current-distance}, almost every such path avoids $A$, and for small $V$ it stays inside $U$.
 
-The integrability in \eqref{eq:dini-distance-modulus} implies $D(r)\to0$. Hence any two regular sequences approaching the same point are mutually Cauchy and define one completion point. The completion and compact-quotient argument of \cref{thm:holder-current-distance} applies with this modulus. A local positive lower metric bound near a regular point prevents a sequence approaching $A$ from converging there. This also proves incompleteness when $A$ is nonempty.
+Since $D(r_0/2)<+\infty$, we have $D(r)\to0$ as $r\to0$. Hence any two regular sequences converging to the same point are Cauchy and have the same limit in the completion. The argument for the completion in the proof of \cref{thm:holder-current-distance} applies with this modulus. A positive lower bound for $\eta$ near a regular point prevents a sequence converging to a point of $A$ from converging in the metric to the regular point. This also proves incompleteness when $A$ is nonempty.
 \end{proof}
 
 \Needspace{10\baselineskip}
 \begin{corollary}\label{cor:dini-distance-rates}\index{Dini modulus!logarithmic distance rate}
-For $0<\beta\leq1$, a modulus $m(r)\leq Cr^\beta$ gives $d_\eta^U(x,y)\leq C'|x-y|^{\beta/2}$. If instead
+In the setting of \cref{thm:dini-current-distance}, let $V$ be as in the theorem. For $0<\beta\leq1$, a modulus $m(r)\leq Cr^\beta$ gives $d_\eta^U(x,y)\leq C'|x-y|^{\beta/2}$ for sufficiently close $x,y\in V\setminus A$. If instead
 \[
  m(r)\leq C(-\log r)^{-a},\qquad a>2,
 \]
-then for sufficiently close regular points,
+then for sufficiently close $x,y\in V\setminus A$,
 \[
  d_\eta^U(x,y)\leq C'(-\log|x-y|)^{1-a/2}.
 \]
-These are sufficient bounds; no necessity of the Dini condition is asserted.
+These are only sufficient conditions; we do not claim that the Dini condition is necessary.
 \end{corollary}
 \begin{proof}
 Integrating the square root of the power modulus gives a multiple of $r^{\beta/2}$. For the logarithmic modulus, the substitution $s=-\log t$ gives
@@ -67,17 +67,17 @@ Integrating the square root of the power modulus gives a multiple of $r^{\beta/2
  \int_0^r\frac{(-\log t)^{-a/2}}t\,\mathrm{d}t
  =\frac{(-\log r)^{1-a/2}}{a/2-1}.
 \]
-In either case the term $r$ in $D(r)$ is bounded by the asserted rate for small $r$. Apply the theorem; the fixed dilation of the argument changes only the constants.
+In either case the term $r$ in $D(r)$ is bounded by the asserted rate for small $r$. The theorem now gives both estimates; the fixed dilation of the argument of $D$ changes only the constants.
 \end{proof}
 
 \Needspace{14\baselineskip}
 \begin{corollary}\label{cor:dini-family-distance-limits}\index{Metric distance!uniform pseudometric limit}
-Let $X$ be a compact connected complex manifold and $\omega_0$ a Hermitian metric. For each $j$, let $T_j=\theta_j+\ddc v_j\geq0$, where $\theta_j$ is a smooth real $(1,1)$-form, $v_j$ is continuous, and $T_j$ is a smooth strictly positive metric off a proper analytic set $A_j$. Assume
+Let $\omega_0$ be a Hermitian form on $X$ and $d_{\omega_0}$ the distance of the associated Riemannian metric. For each $j$, let $T_j=\theta_j+\ddc v_j\geq0$, where $\theta_j$ is a smooth real $(1,1)$-form, $v_j$ is continuous, and $T_j$ is a smooth Hermitian form off a proper analytic subset $A_j$. Assume
 \[
  |\theta_j|_{\omega_0}\leq\Lambda,\qquad
  |v_j(x)-v_j(y)|\leq m(d_{\omega_0}(x,y)),
 \]
-with one fixed $\Lambda$ and one nondecreasing modulus $m$ tending to zero such that the function in \eqref{eq:dini-distance-modulus} satisfies $D(r_0/2)<+\infty$. Pull back each completed distance to $X$ by its continuous completion map, and denote it by $d_j$. Their diameters are uniformly bounded. A subsequence converges uniformly on $X\times X$ to a continuous pseudometric. If $T_j\geq c\omega_0$ on the regular loci for one $c>0$, the limit is a metric and dominates $\sqrt c\,d_{\omega_0}$.
+with one fixed $\Lambda$ and one nondecreasing modulus $m$ tending to zero such that the function in \eqref{eq:dini-distance-modulus} satisfies $D(r_0/2)<+\infty$. By \cref{thm:dini-current-distance}, the identity of $X\setminus A_j$ extends to a continuous surjection of $X$ onto the metric completion of $X\setminus A_j$; let $d_j$ be the pseudometric on $X$ obtained by pulling back the completed distance. Then the diameters of the $d_j$ are uniformly bounded, and a subsequence converges uniformly on $X\times X$ to a continuous pseudometric. If $T_j\geq c\omega_0$ on the regular loci for one $c>0$, the limit is a metric and dominates $\sqrt c\,d_{\omega_0}$.
 \end{corollary}
 \begin{proof}
 A finite fixed chart cover and the theorem give common constants $C,r_1>0$ such that
@@ -85,12 +85,12 @@ A finite fixed chart cover and the theorem give common constants $C,r_1>0$ such 
  d_j(x,y)\leq CD(Cd_{\omega_0}(x,y)),
  \qquad d_{\omega_0}(x,y)<r_1.
 \]
-For a pair meeting $A_j$, take regular pairs tending to it in the background topology. The completed distance and $D$ are continuous on these pairs, so the same estimate holds on $X\times X$. No uniform bound on the geometry of the analytic sets enters the constants. Divide a background minimizing geodesic into a uniformly bounded number of short pieces. The triangle inequality gives a uniform diameter bound. It also gives
+For a pair meeting $A_j$, approximate it by regular pairs in the manifold topology. The completed distance and $D$ are continuous, so the same estimate holds for all such pairs in $X\times X$. No uniform bound on the geometry of the analytic sets enters the constants. Dividing a minimizing geodesic of $d_{\omega_0}$ into a uniformly bounded number of short pieces and using the triangle inequality gives a uniform diameter bound. The triangle inequality also gives
 \[
  |d_j(x,y)-d_j(x',y')|
  \leq d_j(x,x')+d_j(y,y'),
 \]
-so the distance functions are equicontinuous. Arzel\`a--Ascoli supplies $d_{j_k}\to d_\infty$ in the uniform norm on $X\times X$. Nonnegativity, symmetry, zero diagonal and the triangle inequality pass to the limit. The lower metric bound gives $d_j\geq\sqrt c\,d_{\omega_0}$ first on regular pairs and then on all pairs, proving the last assertion.
+so the distance functions are equicontinuous. The Arzel\`a--Ascoli theorem gives a subsequence $d_{j_k}$ converging uniformly on $X\times X$ to a function $d_\infty$. Nonnegativity, symmetry, vanishing on the diagonal and the triangle inequality pass to the limit. The lower bound $T_j\geq c\omega_0$ gives $d_j\geq\sqrt c\,d_{\omega_0}$, first for regular pairs and then for all pairs, which proves the last assertion.
 
-Degeneration is possible without that lower bound. For $\varepsilon_j\downarrow0$, take $\theta_j=\varepsilon_j\omega_0$ and $v_j=0$, with $A_j=\varnothing$. These satisfy the hypotheses with $m(r)=r^2$, and $d_j=\sqrt{\varepsilon_j}\,d_{\omega_0}$ converges uniformly to zero.
+Without this lower bound the limit may degenerate. For $\varepsilon_j\downarrow0$, take $\theta_j=\varepsilon_j\omega_0$ and $v_j=0$, with $A_j=\varnothing$. These data satisfy the hypotheses with $m(r)=r^2$, and $d_j=\sqrt{\varepsilon_j}\,d_{\omega_0}$ converges uniformly to zero.
 \end{proof}

@@ -1,22 +1,22 @@
 \subsection{Stability of normalized kernels}
 \label{sec:normalized-kernel-stability}
 
-The total kernel mass is the dimension of the selected space. Dividing by that dimension removes its growth from the parameter estimates. The squared reproducing kernel supplies a symmetric probability coupling whose positivity improves the resulting variation bound.
+The total mass of $B_v\nu$ is the dimension of the selected space, so dividing by this dimension gives probability measures whose dependence on the weight can be controlled independently of the dimension. The squared reproducing kernel defines a symmetric coupling of such a probability measure with itself, and the positivity of the associated Markov operator sharpens the resulting variation bound to an optimal one.
 
-Keep the fixed data of \cref{sec:partial-kernel-parameters}, and assume $N_m>0$. For each real $v\in C(X)$ put
+Keep the fixed data of \cref{sec:partial-kernel-parameters}, and assume $N_m>0$. For each real $v\in C(X)$, the \emph{normalized kernel probability} is
 \begin{equation}\label{eq:normalized-kernel-probability}
  \mu_v=\frac{B_v}{N_m}\nu.
 \end{equation}
-For a weighted orthonormal basis $s_1,\ldots,s_{N_m}$ use the local unit evaluations $\ell_x$ to set
+Choose an orthonormal basis $s_1,\ldots,s_{N_m}$ of $V_m$ for the weight $v$, and use the unit evaluations $\ell_x$ of \cref{sec:partial-kernel-parameters} to set
 \[
  F_i(x)=\mathrm{e}^{-mv(x)/2}\ell_x(s_i),\qquad
  C_v(x,y)=\sum_i F_i(x)\overline{F_i(y)}.
 \]
-Although $C_v$ depends on the evaluation phases, its squared modulus does not. Off $Z_m$ let $\sigma_{v,x}$ be the probability in \eqref{eq:partial-kernel-response-probability} at weight $v$, and define
+The function $C_v$ depends on the phases of the evaluations, but $|C_v|$ does not. For $x\notin Z_m$ let $\sigma_{v,x}$ be the probability measure \eqref{eq:partial-kernel-response-probability} at the weight $v$, and define
 \[
- \mathcal Q_v f(x)=\int_X f(y)\,\mathrm{d}\sigma_{v,x}(y).
+ \mathcal Q_v f(x)=\int_X f(y)\,\mathrm{d}\sigma_{v,x}(y);
 \]
-Set this expression to zero on $Z_m$, which is $\mu_v$-null.
+on $Z_m$, which is a $\mu_v$-null set, put $\mathcal Q_vf=0$.
 
 \begin{lemma}\label{lem:coherent-kernel-markov}\index{Bergman kernel!coherent-state coupling}
 The measure
@@ -24,17 +24,19 @@ The measure
  \mathrm{d}J_v(x,y)=\frac{|C_v(x,y)|^2}{N_m}
                          \,\mathrm{d}\nu(x)\,\mathrm{d}\nu(y)
 \end{equation}
-is a symmetric probability coupling of $\mu_v$ with itself. The operator $\mathcal Q_v$ is a selfadjoint positive semidefinite contraction on $L^2(\mu_v)$, preserves constants almost everywhere, and preserves the integral.
+on $X\times X$ is a symmetric probability measure whose two marginals are equal to $\mu_v$. The operator $\mathcal Q_v$ is a selfadjoint, positive semidefinite contraction of $L^2(\mu_v)$; it fixes the constant functions $\mu_v$-almost everywhere and preserves integrals against $\mu_v$.
 \end{lemma}
 \begin{proof}
-Orthonormality gives $\int_X|C_v(x,y)|^2\,\mathrm{d}\nu(y)=B_v(x)$. Symmetry gives the other marginal, and the mass identity gives total mass one. Dividing by $B_v(x)$ off $Z_m$ gives the squared Riesz-vector density in \eqref{eq:partial-kernel-response-probability}. Thus the conditional probabilities of $J_v$ define $\mathcal Q_v$. Their mass and the invariant marginal prove the two preservation assertions; Jensen's inequality gives the $L^2$ contraction. Symmetry gives selfadjointness. For $f\in L^2(\mu_v)$, finite expansion gives
+Orthonormality gives $\int_X|C_v(x,y)|^2\,\mathrm{d}\nu(y)=B_v(x)$, so the first marginal of $J_v$ is $\mu_v$. By symmetry so is the second, and the total mass identity shows that $J_v$ has mass one. Off $Z_m$, dividing $|C_v(x,\cdot)|^2\,\mathrm{d}\nu$ by $B_v(x)$ gives the squared Riesz-vector density in \eqref{eq:partial-kernel-response-probability}. Thus the probabilities $\sigma_{v,x}$ are the conditional probabilities of $J_v$ given the first coordinate, and $\mathcal Q_v$ is the associated Markov operator. Since these conditional probabilities have mass one and the marginal of $J_v$ is $\mu_v$, the operator $\mathcal Q_v$ fixes constants and preserves integrals; Jensen's inequality shows that it is a contraction of $L^2(\mu_v)$, and the symmetry of $J_v$ shows that it is selfadjoint. For $f\in L^2(\mu_v)$, expanding the finite sum gives
 \[
  \langle\mathcal Q_v f,f\rangle_{L^2(\mu_v)}
  =\frac1{N_m}\sum_{i,j}
        \left|\int_X fF_i\overline{F_j}\,\mathrm{d}\nu\right|^2\geq0.
 \]
-The matrix features are phase independent. Their integrals exist because $|F_i\overline{F_j}|\leq B_v$ and $f\in L^1(\mu_v)$. This proves positivity on the stated domain.
+Each of these integrals is independent of the phases, and it exists because $|F_i\overline{F_j}|\leq B_v$ and $f\in L^1(\mu_v)$. This proves positivity.
 \end{proof}
+
+For $v,q\in C(X,\mathbb R)$ we write $D\mu_v[q]$ for the derivative of $t\mapsto\mu_{v+tq}$ at $t=0$ in total variation, which exists by \cref{prop:partial-kernel-weight-analyticity}.
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:normalized-kernel-weight-stability}\index{Bergman kernel!weight stability}
@@ -50,109 +52,109 @@ Consequently
  \|\mu_w-\mu_v\|_{\mathrm{TV}}
  \leq2\tanh\left(\frac m4\operatorname{osc}_X(w-v)\right).
 \end{equation}
-These bounds are independent of $N_m$. For a sequence of nonempty selected spaces, $m\operatorname{osc}_X(w_m-v_m)\to0$ makes the two probability sequences have the same weak or total-variation limit whenever either converges in that topology.
+These bounds do not depend on $N_m$. In particular, let $v_m,w_m\in C(X,\mathbb R)$ along a sequence of degrees with nonzero selected spaces. If $m\operatorname{osc}_X(w_m-v_m)\to0$, then the two sequences of normalized kernel probabilities have the same weak, or total variation, limit whenever one of them converges in that topology.
 \end{proposition}
 \begin{proof}
-The signed measure identity follows from \cref{cor:partial-kernel-pointwise-response} and differentiation in total variation. Put $g=q-\mathcal Q_vq$, $A=\{g>0\}$ and $p=\mu_v(A)$. The mean of $g$ is zero. Selfadjointness gives
+The formula for $D\mu_v[q]$ follows from \cref{cor:partial-kernel-pointwise-response}, since $N_m$ does not depend on the weight. For the bound, put $g=q-\mathcal Q_vq$, $A=\{g>0\}$ and $p=\mu_v(A)$. Since $\mathcal Q_v$ preserves integrals, $g$ has mean zero, and selfadjointness gives
 \[
  \int_Ag\,\mathrm{d}\mu_v
    =\langle q,(I-\mathcal Q_v)\mathbf1_A\rangle_{L^2(\mu_v)}.
 \]
-The function $(I-\mathcal Q_v)\mathbf1_A$ is nonnegative on $A$ and nonpositive on its complement, almost everywhere. Its integral is zero. Subtracting $\inf_Xq$ in this pairing therefore bounds it above by
+The function $(I-\mathcal Q_v)\mathbf1_A$ is nonnegative on $A$ and nonpositive on its complement, almost everywhere, and its integral is zero. Subtracting $\inf_Xq$ from $q$ does not change the pairing, which is therefore at most
 \[
  \operatorname{osc}_Xq
     \bigl(p-\langle\mathbf1_A,\mathcal Q_v\mathbf1_A\rangle\bigr).
 \]
-Positivity, applied to $\mathbf1_A-p$, gives
-$\langle\mathbf1_A,\mathcal Q_v\mathbf1_A\rangle\geq p^2$; the cross terms vanish by preservation of constants and the integral. Hence
+Positivity of $\mathcal Q_v$, applied to $\mathbf1_A-p$, gives
+$\langle\mathbf1_A,\mathcal Q_v\mathbf1_A\rangle\geq p^2$: since $\mathcal Q_v$ fixes constants and preserves integrals, $\langle\mathbf1_A-p,\mathcal Q_v(\mathbf1_A-p)\rangle=\langle\mathbf1_A,\mathcal Q_v\mathbf1_A\rangle-p^2$. As $g$ has mean zero, it follows that
 \[
  \|g\|_{L^1(\mu_v)}
  =2\int_Ag\,\mathrm{d}\mu_v
  \leq2\operatorname{osc}_Xq\,p(1-p)
  \leq\tfrac12\operatorname{osc}_Xq.
 \]
-Here total variation is the full signed-measure norm, the integral of the absolute density. This proves \eqref{eq:normalized-kernel-response-bound}.
+The total variation norm of a signed measure is the integral of the absolute value of its density, so $\|D\mu_v[q]\|_{\mathrm{TV}}=m\|g\|_{L^1(\mu_v)}$, and \eqref{eq:normalized-kernel-response-bound} follows.
 
-For the global estimate take $q=w-v$, $v_t=v+tq$, $\mu_t=\mu_{v_t}$ and $\mathcal Q_t=\mathcal Q_{v_t}$ for $0\leq t\leq1$. Put $a=m\operatorname{osc}_Xq$. For any Borel set $E$, its probability $p_t=\mu_t(E)$ is differentiable, since integration against $\mathbf1_E$ is a bounded linear functional on measures in total variation. Selfadjointness gives
+For the global estimate, take $q=w-v$, $v_t=v+tq$, $\mu_t=\mu_{v_t}$ and $\mathcal Q_t=\mathcal Q_{v_t}$ for $0\leq t\leq1$, and put $a=m\operatorname{osc}_Xq$. For a Borel set $E$, the function $p_t=\mu_t(E)$ is differentiable, because integration against $\mathbf1_E$ is a bounded linear functional for the total variation norm, and selfadjointness gives
 \[
  p'_t=-m\langle q,(I-\mathcal Q_t)\mathbf1_E\rangle_{L^2(\mu_t)}.
 \]
-The function $(I-\mathcal Q_t)\mathbf1_E$ has positive and negative parts whose integrals both equal $p_t-\langle\mathbf1_E,\mathcal Q_t\mathbf1_E\rangle$. Bounding $q$ between its infimum and supremum on those pieces, and applying positivity to $\mathbf1_E-p_t$, gives
+The function $(I-\mathcal Q_t)\mathbf1_E$ has positive and negative parts whose integrals both equal $p_t-\langle\mathbf1_E,\mathcal Q_t\mathbf1_E\rangle$. Bounding $q$ above and below on the supports of these parts, and applying positivity to $\mathbf1_E-p_t$ as before, we obtain
 \[
  |p'_t|\leq a\bigl(p_t-\langle\mathbf1_E,\mathcal Q_t\mathbf1_E\rangle\bigr)
           \leq ap_t(1-p_t).
 \]
-Every kernel is positive precisely off the same common zero locus $Z_m$, so the probabilities $\mu_t$ are mutually absolutely continuous. If $p_0$ is zero or one, $p_t=p_0$ throughout. Otherwise $0<p_t<1$, and integration gives
+All the kernels $B_{v_t}$ are positive exactly off the common zero set $Z_m$, so the probabilities $\mu_t$ are mutually absolutely continuous. Hence, if $p_0$ is zero or one, then $p_t=p_0$ for all $t$. Otherwise $0<p_t<1$ for all $t$, and integration gives
 \[
  \left|\log\frac{p_1}{1-p_1}-\log\frac{p_0}{1-p_0}\right|\leq a.
 \]
-With $\sigma(z)=\mathrm{e}^z/(1+\mathrm{e}^z)$, if $p_1\geq p_0$ and $z=\log(p_0/(1-p_0))$, then
+Let $\sigma(z)=\mathrm{e}^z/(1+\mathrm{e}^z)$ be the logistic function. If $p_1\geq p_0$ and $z=\log(p_0/(1-p_0))$, then
 \[
  p_1-p_0\leq\sigma(z+a)-\sigma(z)
  =\frac{\sinh(a/2)}{\cosh(z+a/2)+\cosh(a/2)}
  \leq\tanh(a/4).
 \]
-Swapping the endpoints handles the other order. The zero-mass signed difference has norm $2\sup_E|\mu_w(E)-\mu_v(E)|$, proving \eqref{eq:normalized-kernel-weight-stability}. Its right-hand side tends to zero under the sequence hypothesis, giving the final assertion.
+The case $p_1\leq p_0$ is symmetric. Since $\mu_w-\mu_v$ has total mass zero, its total variation norm is $2\sup_E|\mu_w(E)-\mu_v(E)|$, which proves \eqref{eq:normalized-kernel-weight-stability}. Under the hypothesis of the last assertion the right-hand side tends to zero, which gives the final statement.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{example}\label{ex:sharp-kernel-weight-modulus}\index{Bergman kernel!optimal oscillation modulus}
-For each $a>0$ and $m\geq1$, the bound \eqref{eq:normalized-kernel-weight-stability} is optimal as a supremum over smooth weights, already when the selected space has dimension one. On $X=\mathbb P^1$, take the trivial line bundle with unit metric, selecting potential zero and normalized Fubini--Study area $\nu$. There are smooth real weights $w_j$ with $m\operatorname{osc}_Xw_j=a$ such that
+For each $a>0$ and $m\geq1$, the bound \eqref{eq:normalized-kernel-weight-stability} is optimal as a supremum over smooth weights, already for a selected space of dimension one. Indeed, let $X=\mathbb P^1$ with the trivial line bundle and its trivial metric, take the selecting potential zero, and let $\nu$ be the Fubini--Study area normalized to mass one. Then there are smooth real weights $w_j$ with $m\operatorname{osc}_Xw_j=a$ such that
 \[
  \|\mu_{w_j}-\mu_0\|_{\mathrm{TV}}\longrightarrow2\tanh(a/4).
 \]
 \end{example}
 \begin{proof}
-The selected space consists of constants, so its probability at weight $u$ is $\mathrm{e}^{-mu}\nu/\int_X\mathrm{e}^{-mu}\,\mathrm{d}\nu$. Choose a spherical cap $E$ of mass $p=(1+\mathrm{e}^{a/2})^{-1}$. Its smooth boundary has zero area. Choose smooth cutoffs $0\leq\chi_j\leq1$, equal to one on an inner cap and zero outside an outer cap, converging almost everywhere to $\mathbf1_E$. Their oscillations are one. Put $w_j=-a\chi_j/m$. Bounded convergence of their exponential densities and positive normalizing constants gives total-variation convergence to
+The selected space consists of the constant functions, so the normalized kernel probability at a weight $u$ is $\mathrm{e}^{-mu}\nu/\int_X\mathrm{e}^{-mu}\,\mathrm{d}\nu$. Choose a spherical cap $E$ with $\nu(E)=p=(1+\mathrm{e}^{a/2})^{-1}$; its boundary circle has zero area. Choose smooth functions $0\leq\chi_j\leq1$, equal to one on an inner cap and zero outside an outer cap, converging almost everywhere to $\mathbf1_E$; each has oscillation one. Put $w_j=-a\chi_j/m$. The densities $\mathrm{e}^{a\chi_j}$ converge boundedly almost everywhere, and their normalizing constants converge to a positive limit, so $\mu_{w_j}$ converges in total variation to
 \[
  \frac{\mathrm{e}^{a\mathbf1_E}}{Z}\nu,
  \qquad Z=1-p+\mathrm{e}^ap=\mathrm{e}^{a/2}.
 \]
-The limiting mass of $E$ is $1-p$. Its density exceeds one on $E$ and is less than one outside. Its distance from $\nu$ is therefore $2(1-2p)=2\tanh(a/4)$. The triangle inequality transfers this limit to the smooth weights. This proves supremal sharpness without an assertion of exact smooth attainment.
+This limit gives $E$ the mass $1-p$, and its density with respect to $\nu$ is greater than one on $E$ and less than one outside $E$. Its total variation distance from $\nu=\mu_0$ is therefore $2(1-2p)=2\tanh(a/4)$. The triangle inequality transfers this limit to the measures $\mu_{w_j}$. This shows that the bound is optimal as a supremum; we do not claim that it is attained by a smooth weight.
 \end{proof}
 
-At the inverse-degree scale, the analytic control also becomes independent of the selected-space dimension.
+At the scale of perturbations of size $1/m$, the analytic dependence on the weight is also controlled independently of the dimension of the selected space.
 
 \Needspace{13\baselineskip}
 \begin{proposition}\label{prop:normalized-kernel-uniform-radius}
-Put $\rho=\log(3/2)$. The map $f\mapsto\mu_{v+f/m}$ has a holomorphic continuation to $\{f\in C(X,\mathbb C):\|f\|_\infty<\rho\}$ with total-variation norm at most three. For real $q\in C(X)$ and $k\geq1$,
+Put $\rho=\log(3/2)$. The map $f\mapsto\mu_{v+f/m}$ extends holomorphically to the ball $\{f\in C(X,\mathbb C):\|f\|_\infty<\rho\}$, with values in complex measures of total variation at most three. For real $q\in C(X)$ and $k\geq1$,
 \begin{equation}\label{eq:normalized-kernel-cauchy-bounds}
  \left\|\left.\frac{\mathrm{d}^k}{\mathrm{d}t^k}\right|_{t=0}
                       \mu_{v+tq}\right\|_{\mathrm{TV}}
  \leq3k!\left(\frac{m\operatorname{osc}_Xq}{2\rho}\right)^k.
 \end{equation}
-The radius and norm bound are independent of $m,N_m$ and the real base weight $v$.
+The radius $\rho$ and the bound three do not depend on $m$, $N_m$ or the real base weight $v$.
 \end{proposition}
 \begin{proof}
-On $V_m$ use $T(f)=P_v(\mathrm{e}^{-f}\,\cdot\,)$. The proof of \cref{prop:partial-kernel-weight-analyticity} gives $\|T(f)^{-1}\|\leq2$ on the stated ball. Its continued measure density is
+On $V_m$ use $T(f)=P_v(\mathrm{e}^{-f}\,\cdot\,)$, the operator in the proof of \cref{prop:partial-kernel-weight-analyticity} for the perturbation $f/m$ of the weight $v$. That proof gives $\|T(f)^{-1}\|\leq2$ on the ball. The extended measure has the density
 \[
  \frac{\mathrm{e}^{-mv(x)-f(x)}}{N_m}
-         \ell_x\bigl(T(f)^{-1}k_{v,x}\bigr).
+         \ell_x\bigl(T(f)^{-1}k_{v,x}\bigr)
 \]
-The fixed Riesz identity bounds its absolute value by
-$2\mathrm{e}^{\|f\|_\infty}B_v(x)/N_m$. Integration bounds the total variation by three; holomorphy follows from the same finite-space construction and linear passage to measures. For any complex constant $c$, $T(f+c)=\mathrm{e}^{-c}T(f)$, and the opposite factor in the density cancels. For nonconstant real $q$, replace it by $q-c$ with $c=(\sup_Xq+\inf_Xq)/2$, whose norm is $\operatorname{osc}_Xq/2$. Apply the Banach-valued Cauchy estimate on every circle of radius less than $\rho/(m\|q-c\|_\infty)$, then let the radii increase to that value. This proves \eqref{eq:normalized-kernel-cauchy-bounds}. A constant $q$ leaves the measure fixed and gives zero derivatives.
+with respect to $\nu$. By the Riesz identity at the weight $v$, its absolute value is at most
+$2\mathrm{e}^{\|f\|_\infty}B_v(x)/N_m\leq3B_v(x)/N_m$, so its total variation is at most three. Holomorphy follows from the same finite-dimensional construction and the bounded linear passage from densities to measures. For a complex constant $c$ we have $T(f+c)=\mathrm{e}^{-c}T(f)$, and the resulting factor $\mathrm{e}^{c}$ cancels the factor $\mathrm{e}^{-c}$ in the density; thus adding constants to $f$ does not change the extension. For nonconstant real $q$, replace $q$ by $q-c$ with $c=(\sup_Xq+\inf_Xq)/2$, so that $\|q-c\|_\infty=\operatorname{osc}_Xq/2$. Then $t\mapsto\mu_{v+tq}$ extends holomorphically to the disk $|t|<\rho/(m\|q-c\|_\infty)$, with total variation at most three. The Cauchy estimates for Banach-valued holomorphic functions, applied on circles of radius less than $\rho/(m\|q-c\|_\infty)$, followed by letting the radius increase to that value, prove \eqref{eq:normalized-kernel-cauchy-bounds}. If $q$ is constant, the measure does not depend on $t$, and all derivatives vanish.
 \end{proof}
 
-The condition in \eqref{eq:normalized-kernel-weight-stability} cannot in general be replaced by uniform convergence of the weights. A fiber norm can retain an inverse-degree perturbation in a nonzero measure limit.
+The hypothesis $m\operatorname{osc}_X(w_m-v_m)\to0$ in \cref{prop:normalized-kernel-weight-stability} cannot in general be replaced by uniform convergence $w_m-v_m\to0$: a perturbation of order $1/m$ along the fibers of a product survives in a nonzero measure limit.
 
 \Needspace{15\baselineskip}
 \begin{example}\label{ex:inverse-degree-fiber-weight}\index{Bergman kernel!inverse-degree weight perturbation}
-Let $Y$ be a connected compact complex manifold of positive dimension with a smooth positive probability volume $\nu_Y$. On $X=\mathbb P^1\times Y$, pull back $\mathcal O(1)$ with its Fubini--Study metric, take the selecting potential zero, and use $\nu=\nu_{\mathrm{FS}}\otimes\nu_Y$, where $\nu_{\mathrm{FS}}$ is the Fubini--Study area of mass one. Choose a nonconstant $q\in C(Y,\mathbb R)$ and put
+Let $Y$ be a connected compact complex manifold of positive dimension with a smooth positive probability volume $\nu_Y$. On $X=\mathbb P^1\times Y$, use the pullback of $\mathcal O(1)$ with its Fubini--Study metric, the selecting potential zero, and the volume $\nu=\nu_{\mathrm{FS}}\otimes\nu_Y$, where $\nu_{\mathrm{FS}}$ is the Fubini--Study area of mass one. Choose a nonconstant $q\in C(Y,\mathbb R)$ and put
 \[
  v_m(b,y)=q(y)/m,\qquad
  Z_q=\int_Y\mathrm{e}^{-q}\,\mathrm{d}\nu_Y,\qquad
  \nu_q=Z_q^{-1}\mathrm{e}^{-q}\nu_Y.
 \]
-Then $N_m=m+1$ and, exactly for every $m$,
+Then $N_m=m+1$ and, for every $m$, the kernel and the normalized kernel probability at the weight $v_m$ are
 \begin{equation}\label{eq:inverse-degree-fiber-kernels}
  B_{m,v_m}(b,y)=(m+1)\frac{\mathrm{e}^{-q(y)}}{Z_q},
  \qquad
  \mu_{m,v_m}=\nu_{\mathrm{FS}}\otimes\nu_q.
 \end{equation}
-Thus $v_m\to0$ uniformly, but the $r=1$ kernel measures tend in total variation to $\nu_{\mathrm{FS}}\otimes\nu_q$, whereas the limit at weight zero is $\nu_{\mathrm{FS}}\otimes\nu_Y$. Both logarithmic kernel potentials tend uniformly to zero. Normalization in ambient dimension gives zero in total variation.
+Thus $v_m\to0$ uniformly, but the kernel measures with $r=1$ converge in total variation to $\nu_{\mathrm{FS}}\otimes\nu_q$, whereas at the weight zero the limit is $\nu_{\mathrm{FS}}\otimes\nu_Y$. In both cases the potentials $m^{-1}\log B_{m,v}$ tend uniformly to zero. With the normalization by the dimension of $X$, both sequences of kernel measures tend to zero in total variation.
 \end{example}
 \begin{proof}
-Every section descends by compact connected fibers, as in \cref{prop:partial-kernel-submersion}. The base space $H^0(\mathbb P^1,\mathcal O(m))$ has dimension $m+1$. Its unweighted kernel is constant by the transitive unitary action preserving the metric and volume; its integral gives that constant. The product weighted norm is $Z_q$ times the base norm, proving \eqref{eq:inverse-degree-fiber-kernels}. At zero weight the probability is $\nu_{\mathrm{FS}}\otimes\nu_Y$. These probabilities differ: equality would force $\mathrm{e}^{-q}/Z_q=1$ almost everywhere and then everywhere, since every nonempty open set has positive volume and $q$ is continuous, contrary to the choice of $q$. The $r=1$ measures are $(m+1)/m$ times their probabilities. Ambient normalization in dimension $1+\dim Y$ tends to zero in total variation. Finally the difference of logarithmic kernel potentials is $(-q-\log Z_q)/m$, which tends uniformly to zero.
+Every section descends to $\mathbb P^1$, because the fibers $\{b\}\times Y$ are compact and connected, as in \cref{prop:partial-kernel-submersion}. Hence the selected space is $H^0(\mathbb P^1,\mathcal O(m))$, of dimension $m+1$. Its unweighted Bergman kernel for $\nu_{\mathrm{FS}}$ is constant, since the unitary group acts transitively on $\mathbb P^1$ and preserves the metric and the volume; its integral $m+1$ determines the constant. For a section pulled back from $\mathbb P^1$, the norm on $X$ at the weight $v_m$ is $Z_q$ times the norm on $\mathbb P^1$, which proves \eqref{eq:inverse-degree-fiber-kernels}. At the weight zero the normalized kernel probability is $\nu_{\mathrm{FS}}\otimes\nu_Y$. These probabilities differ: equality would force $\mathrm{e}^{-q}/Z_q=1$ almost everywhere, and then everywhere, because $q$ is continuous and every nonempty open set has positive volume; this contradicts the choice of $q$. The kernel measures with $r=1$ are $(m+1)/m$ times these probabilities, and the normalization in dimension $1+\dim Y\geq2$ gives measures tending to zero in total variation. Finally, $m^{-1}\log B_{m,v_m}=m^{-1}\bigl(\log(m+1)-q-\log Z_q\bigr)$ and $m^{-1}\log B_{m,0}=m^{-1}\log(m+1)$ both tend uniformly to zero.
 \end{proof}
 
-This fiber effect is the weight form of the retained conditional probabilities in \cref{sec:horizontal-kernel-asymptotics}. The stability estimates varied the norm within one selected space. A modification also changes the integrability data, so the next comparison must transform both the space and its norm.
+The same phenomenon, in which a fiber probability survives in the limit, reappears in \cref{sec:horizontal-kernel-asymptotics}, where the limit measure on the total space carries the conditional fiber probabilities of the integration volume. So far the norm varied within a fixed selected space. Under a modification the integrability condition changes as well, and the next section compares both the selected spaces and their norms.

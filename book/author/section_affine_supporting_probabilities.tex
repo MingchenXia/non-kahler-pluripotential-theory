@@ -1,15 +1,15 @@
-Assume now that the weights are continuous. The quasi-everywhere constraint retains values created by regularization, which a pointwise constraint can miss. Indeed, for $q\in C(K,\mathbb R)$,
+Assume now that the weights are continuous. If the obstacle is imposed only quasi-everywhere on $K$, the regularized envelope itself becomes a competitor, so the supremum needs no regularization; a constraint imposed at every point would miss the values created by regularization. Indeed, for $q\in C(K,\mathbb R)$,
 \begin{equation}\label{eq:affine-qe-pointwise-envelope}
  F_{\delta,q}(z)=\sup\{u(z):u\in\mathcal L_\delta,
                           \ u\leq q\text{ q.e. on }K\}.
 \end{equation}
-The genuine envelope itself is a competitor on the right: it agrees with the raw envelope off a pluripolar set by \cref{prop:affine-projective-envelope}. Conversely, the repair in \cref{cor:affine-polar-obstacle-invariance} puts every quasi-everywhere competitor below $F_{\delta,q}$ everywhere.
+The envelope $F_{\delta,q}$ itself is a competitor on the right, since it agrees with the raw envelope off a pluripolar set by \cref{prop:affine-projective-envelope}. Conversely, the argument of \cref{cor:affine-polar-obstacle-invariance} shows that every competitor on the right lies below $F_{\delta,q}$ everywhere.
 
-For $a\in\mathbb C^n$, let $\mathcal J_a(K)$ consist of pairs $(\mu,c)$, where $\mu$ is a Borel probability measure on $K$ and $c\geq0$, satisfying
+For $a\in\mathbb C^n$, let $\mathcal J_a(K)$ be the set of \emph{supporting pairs} $(\mu,c)$, where $\mu$ is a Borel probability measure on $K$ and $c\geq0$, such that
 \begin{equation}\label{eq:affine-supporting-probability-tests}
  u(a)\leq\int_K f\,\mathrm{d}\mu+c
 \end{equation}
-whenever $u\in\mathcal L_1$, $f\in C(K,\mathbb R)$ and $u\leq f$ quasi-everywhere on $K$.
+whenever $u\in\mathcal L_1$, $f\in C(K,\mathbb R)$ and $u\leq f$ quasi-everywhere on $K$. We call $\mu$ a \emph{supporting probability} at $a$.
 
 \begin{theorem}\label{thm:affine-supporting-probabilities}
 For every $a\in\mathbb C^n$, $q\in C(K,\mathbb R)$ and $\delta>0$,
@@ -23,19 +23,19 @@ In particular, $\mathcal J_a(K)$ is nonempty and
 \]
 \end{theorem}
 \begin{proof}
-On the real Banach space $C(K)$ put $T(f)=F_{1,f}(a)$. Formula \eqref{eq:affine-qe-pointwise-envelope} makes $T$ concave. Obstacle order and constant translation give monotonicity and
+On the real Banach space $C(K)$, put $T(f)=F_{1,f}(a)$. By \eqref{eq:affine-qe-pointwise-envelope}, $T$ is concave, since convex combinations of competitors are competitors. Comparison of obstacles and translation by constants show that $T$ is nondecreasing and satisfies
 \[
  T(f+t)=T(f)+t,\qquad |T(f)-T(g)|\leq\|f-g\|_\infty.
 \]
-Fix $f_0\in C(K)$. The directional derivative of the convex Lipschitz function $-T$ at $f_0$ is finite and sublinear. Hahn--Banach supplies a continuous dominated linear functional; the monotonicity of convex secants gives its supporting inequality. Changing sign yields a continuous linear $\ell$ with
+Fix $f_0\in C(K)$. The directional derivative of the convex Lipschitz function $-T$ at $f_0$ is finite and sublinear. By the Hahn--Banach theorem, there is a continuous linear functional dominated by it, and since difference quotients of a convex function are monotone, this functional supports $-T$ at $f_0$. Changing the sign, we obtain a continuous linear functional $\ell$ with
 \[
  T(f)\leq T(f_0)+\ell(f-f_0)\qquad(f\in C(K)).
 \]
-Testing $f=f_0+th$ for $h\geq0$ and $t>0$ gives $\ell(h)\geq0$. Testing positive and negative constants gives $\ell(1)=1$. Riesz representation therefore writes $\ell(f)=\int_K f\,\mathrm{d}\mu$ for a Borel probability $\mu$. Set $c=T(f_0)-\int_K f_0\,\mathrm{d}\mu$. The supporting inequality at zero gives $c\geq T(0)=V_K^*(a)\geq0$. Together with \eqref{eq:affine-qe-pointwise-envelope}, it shows $(\mu,c)\in\mathcal J_a(K)$ and
+Testing $f=f_0+th$ with $h\geq0$ and $t>0$, and using monotonicity, gives $\ell(h)\geq0$. Testing with $f=f_0\pm t$ gives $\ell(1)=1$. By the Riesz representation theorem, $\ell(f)=\int_K f\,\mathrm{d}\mu$ for a Borel probability measure $\mu$ on $K$. Set $c=T(f_0)-\int_K f_0\,\mathrm{d}\mu$. The supporting inequality at $f=0$ gives $c\geq T(0)=V_K^*(a)\geq0$. Together with \eqref{eq:affine-qe-pointwise-envelope}, it shows that $(\mu,c)\in\mathcal J_a(K)$ and
 \[
  T(f_0)=\int_K f_0\,\mathrm{d}\mu+c.
 \]
-Conversely, apply \eqref{eq:affine-supporting-probability-tests} to the genuine quasi-everywhere competitor $F_{1,f_0}$ to bound $T(f_0)$ by every such pair. This proves the attained formula for $\delta=1$. The identity $F_{\delta,q}=\delta F_{1,q/\delta}$ gives \eqref{eq:affine-supporting-probability-minimum}; the zero obstacle gives the last assertion.
+Conversely, applying \eqref{eq:affine-supporting-probability-tests} to $u=F_{1,f_0}$, which lies below $f_0$ quasi-everywhere on $K$, shows that $T(f_0)\leq\int_Kf_0\,\mathrm{d}\mu+c$ for every pair in $\mathcal J_a(K)$. This proves \eqref{eq:affine-supporting-probability-minimum} for $\delta=1$, with the minimum attained. The identity $F_{\delta,q}=\delta F_{1,q/\delta}$ gives the general case, and the zero obstacle gives the last assertion.
 \end{proof}
 \index{Envelope!supporting probability}
 
@@ -45,30 +45,30 @@ If $\psi\in C(K,\mathbb R)$, then for every $a\in\mathbb C^n$ and $\tau>0$,
  D_\tau(a)=\min\left\{c:(\mu,c)\in\mathcal J_a(K),
                 \ \int_K\psi\,\mathrm{d}\mu+\tau c=F_\tau(a)\right\}.
 \end{equation}
-Consequently $D_\tau(a)=V_K^*(a)$ if and only if there is a probability $\mu$ such that
+Consequently, $D_\tau(a)=V_K^*(a)$ if and only if there is a Borel probability measure $\mu$ on $K$ such that
 \[
  (\mu,V_K^*(a))\in\mathcal J_a(K),\qquad
  \int_K\psi\,\mathrm{d}\mu=F_\tau(a)-\tau V_K^*(a).
 \]
 \end{theorem}
 \begin{proof}
-Every defining inequality of $\mathcal J_a(K)$ is closed for weak convergence of probabilities and ordinary convergence of $c$, because its test $f$ is continuous. Probabilities on the compact metric space $K$ are weakly compact, so the pairs with $c\leq C$ form a compact set for each finite $C$.
+Each defining inequality of $\mathcal J_a(K)$ is preserved under weak convergence of the probability measures and convergence of the constants, because the test function $f$ is continuous. Since the Borel probability measures on the compact metric space $K$ form a weakly compact set, the pairs in $\mathcal J_a(K)$ with $c\leq C$ form a compact set for each finite $C$.
 
-Call a pair active at $\tau$ when it satisfies the equality in \eqref{eq:affine-supported-growth-derivative}. Such pairs exist by \cref{thm:affine-supporting-probabilities}, and satisfy
+Call a pair in $\mathcal J_a(K)$ \emph{active} at $\tau$ if it satisfies the equality in \eqref{eq:affine-supported-growth-derivative}. Such pairs exist by \cref{thm:affine-supporting-probabilities}, and since $\int_K\psi\,\mathrm{d}\mu\geq m=\inf_K\psi$, they satisfy
 \[
  0\leq c\leq\frac{F_\tau(a)-m}{\tau}.
 \]
-The active set is therefore compact and its minimum $c$ is attained. Each active pair gives $F_{\tau+h}(a)\leq F_\tau(a)+hc$, hence $D_\tau(a)\leq c$.
+The set of active pairs is therefore compact, and the minimum of $c$ over it is attained. By \cref{thm:affine-supporting-probabilities} at $\tau+h$, each active pair gives $F_{\tau+h}(a)\leq F_\tau(a)+hc$, hence $D_\tau(a)\leq c$.
 
-Choose a minimizing pair $(\mu_h,c_h)$ at $\tau+h$. The representation at $\tau$ gives
+Conversely, for $h>0$ choose a pair $(\mu_h,c_h)$ attaining the minimum in \eqref{eq:affine-supporting-probability-minimum} at $\tau+h$, with $q=\psi$. The representation at $\tau$ gives
 \[
  F_\tau(a)\leq\int_K\psi\,\mathrm{d}\mu_h+\tau c_h
             =F_{\tau+h}(a)-hc_h.
 \]
-Thus $0\leq c_h\leq(F_{\tau+h}(a)-F_\tau(a))/h$. These constants are bounded by \eqref{eq:affine-initial-slope-bounds}. Along a sequence $h\downarrow0$, compactness gives a limiting pair $(\mu,c)\in\mathcal J_a(K)$. The same secant bound makes $F_{\tau+h}(a)\to F_\tau(a)$ and $hc_h\to0$; continuity of $\psi$ then gives $\int_K\psi\,\mathrm{d}\mu+\tau c=F_\tau(a)$. The limit also satisfies $c\leq D_\tau(a)$, proving the reverse minimum inequality. Finally every pair has $c\geq V_K^*(a)$ by \cref{thm:affine-supporting-probabilities}, so attainment gives the stated equality criterion.
+Thus $0\leq c_h\leq(F_{\tau+h}(a)-F_\tau(a))/h$, and these constants are bounded by \eqref{eq:affine-initial-slope-bounds}. Along a sequence $h\downarrow0$, compactness gives a limiting pair $(\mu,c)\in\mathcal J_a(K)$. The same bound makes $F_{\tau+h}(a)\to F_\tau(a)$ and $hc_h\to0$, and continuity of $\psi$ then gives $\int_K\psi\,\mathrm{d}\mu+\tau c=F_\tau(a)$. Thus the limit pair is active, and it satisfies $c\leq D_\tau(a)$. This proves \eqref{eq:affine-supported-growth-derivative}. Finally, every pair has $c\geq V_K^*(a)$ by \cref{thm:affine-supporting-probabilities}, so the attainment of the minimum gives the stated criterion.
 \end{proof}
 
-At a regular contact point, $F_\tau(a)=\psi(a)$. The criterion then uses only the original weight and unweighted tests in $\mathcal L_1$. If the defining tests instead imposed the obstacle everywhere, the pair $(\delta_a,0)$, with $\delta_a$ the unit point mass at $a\in K$, would always be allowed; the resulting infimum would be at most $\psi(a)$ and would miss a regularization defect.
+At a point $a$ of regular contact, $F_\tau(a)=\psi(a)$, so the criterion involves only the original weight and tests by functions in $\mathcal L_1$. If the defining tests instead required $u\leq f$ at every point of $K$, the pair $(\delta_a,0)$, where $\delta_a$ is the unit point mass at $a\in K$, would always be allowed; the resulting infimum would be at most $\psi(a)$ and would not detect a defect created by regularization.
 
 \input{author/section_affine_weight_response}
 

@@ -1,24 +1,24 @@
 \section{Homogeneous replacement on a coordinate ball}
 \label{sec:local-homogeneous-dirichlet}
 
-To prove that an envelope measure is supported on the contact set, we need a local replacement with zero Monge--Amp\`ere measure and prescribed boundary values. We construct it by letting a positive density tend to zero in the smooth Dirichlet problem, then approximate continuous boundary values.
+To show that the Monge--Amp\`ere measure of an envelope vanishes off the contact set, we shall replace the envelope on small balls by a solution of the homogeneous equation with the same boundary values. We first recall the smooth Dirichlet problem with a smooth positive density; the replacement is obtained by letting a constant density tend to zero, and continuous boundary values are then handled by uniform approximation.
 
-Work on $B=B_R=\{|z|<R\}\subset\mathbb C^n$, put $\beta=\ddc|z|^2$, and let $\theta$ be any smooth real $(1,1)$-form near $\overline B$. Distances and the Laplacian are Euclidean.
+In this section we work on the ball $B=B_R=\{|z|<R\}\subset\mathbb C^n$, put $\beta=\ddc|z|^2$, and let $\theta$ be any smooth real $(1,1)$-form defined near $\overline B$. Distances and the Laplacian $\Delta$ are Euclidean.
 
 \begin{lemma}\label{lem:ball-smooth-dirichlet}
-For $\varphi\in C^\infty(\partial B)$ and $\varepsilon>0$, there is a unique smooth function $v_\varepsilon$ on $\overline B$ such that
+Let $\varphi\in C^\infty(\partial B)$, and let $F$ be a smooth strictly positive function on $\overline B$. There is a unique smooth function $v$ on $\overline B$ such that
 \[
- \theta+\ddc v_\varepsilon>0,\qquad
- (\theta+\ddc v_\varepsilon)^n=\varepsilon\beta^n,
- \qquad v_\varepsilon|_{\partial B}=\varphi.
+ \theta+\ddc v>0,\qquad
+ (\theta+\ddc v)^n=F\beta^n,
+ \qquad v|_{\partial B}=\varphi.
 \]
 \end{lemma}
 \begin{proof}
-Extend $\varphi$ smoothly to $\widetilde\varphi$ on $\overline B$. For sufficiently large $A$, the function
-$\underline v=\widetilde\varphi+A(|z|^2-R^2)$ is a smooth strict subsolution with the prescribed boundary values: its background form is positive and its determinant is at least $\varepsilon\beta^n$. For $n\geq2$ the classical smooth Dirichlet theorem of Guan--Li applies to the compact ball, with arbitrary smooth background $\chi=\theta$ and positive constant right-hand side. Their operator is $(\mathrm{i}/2)\partial\bar\partial$, so our potential is $\pi$ times theirs. No closedness condition from their separate compact-manifold theorems is used here. For $n=1$ this is the ordinary Poisson Dirichlet problem. Uniqueness follows from the maximum principle applied to the difference: the difference of the two log determinants is a smooth uniformly elliptic linear operator on that difference.
+Extend $\varphi$ to a smooth function $\widetilde\varphi$ on $\overline B$. For sufficiently large $A$, the function
+$\underline v=\widetilde\varphi+A(|z|^2-R^2)$ is a smooth strict subsolution with the prescribed boundary values: $\theta+\ddc\underline v$ is positive and its determinant is at least $(\max_{\overline B}F)\beta^n$. For $n\geq2$, the classical smooth Dirichlet theorem of Guan--Li therefore applies on the ball, with the arbitrary smooth background $\chi=\theta$ and the smooth positive right-hand side $F$. Their operator is $(\mathrm{i}/2)\partial\bar\partial$, so our potential is $\pi$ times theirs. No closedness condition is needed here; such conditions enter only in their separate theorems on compact manifolds. For $n=1$ the lemma is the Dirichlet problem for the Poisson equation. For uniqueness, integrate the derivative of $\log\det$ along the segment between the two positive matrices: the difference of the logarithms of the two determinants becomes a uniformly elliptic linear operator with smooth coefficients applied to the difference of the solutions, and the maximum principle applies.
 \end{proof}
 
-We will also use smooth comparison on domains inside the ball. If $a,b$ are smooth and strictly admissible, $(\theta+\ddc a)^n\geq(\theta+\ddc b)^n$, and $a\leq b$ on the boundary, then $a\leq b$. Integrating the derivative of the log determinant along the segment between their positive matrices gives a linear elliptic inequality for $a-b$. The maximum principle proves the assertion; a boundary need not be smooth for this maximum argument.
+The same argument gives smooth comparison on subdomains $D$ of the ball. Let $a,b$ be smooth functions on $\overline D$ with $\theta+\ddc a>0$ and $\theta+\ddc b>0$. If $(\theta+\ddc a)^n\geq(\theta+\ddc b)^n$ in $D$ and $a\leq b$ on $\partial D$, then $a\leq b$ in $D$. Indeed, integrating the derivative of the logarithm of the determinant along the segment between the two positive matrices gives a linear elliptic inequality for $a-b$, and the maximum principle proves the assertion. The boundary of $D$ need not be smooth for this argument.
 
 \Needspace{15\baselineskip}
 \begin{theorem}\label{thm:ball-homogeneous-replacement}\index{Dirichlet problem!homogeneous equation}
@@ -35,14 +35,14 @@ It dominates every continuous $\theta$-plurisubharmonic function $p$ on $\overli
 For smooth boundary data the constructed function is Lipschitz on $\overline B$.
 \end{theorem}
 \begin{proof}
-We first take $\varphi$ smooth and $0<\varepsilon\leq1$. Fix the strict subsolution above for $\varepsilon=1$; it is below every $v_\varepsilon$ by smooth comparison. Choose a smooth function $q$ with $q=\varphi$ on the boundary and $\Delta q=-C$, where $C$ is large enough that $\Delta v_\varepsilon\geq-C$ follows from $\theta+\ddc v_\varepsilon\geq0$. The scalar maximum principle gives $v_\varepsilon\leq q$. Both barriers are smooth and equal $\widetilde\varphi$ on the boundary. Consequently
+\emph{Step 1: boundary barriers.} We first take $\varphi$ smooth and $0<\varepsilon\leq1$, and let $v_\varepsilon$ be the solution of \cref{lem:ball-smooth-dirichlet} with the constant density $F\equiv\varepsilon$. The strict subsolution $\underline v$ constructed there for $F\equiv1$ lies below every $v_\varepsilon$, by smooth comparison. Choose a smooth function $q$ with $q=\varphi$ on the boundary and $\Delta q=-C$, where $C$ is so large that $\theta+\ddc v_\varepsilon\geq0$ implies $\Delta v_\varepsilon\geq-C$. The maximum principle for the Laplacian gives $v_\varepsilon\leq q$. Both barriers are smooth and equal $\widetilde\varphi$ on the boundary. Consequently
 \begin{equation}\label{eq:ball-boundary-distance}
  |v_\varepsilon(z)-\widetilde\varphi(z)|
        \leq C_1\operatorname{dist}(z,\partial B),
 \end{equation}
 with $C_1$ independent of $\varepsilon$.
 
-Here is a uniform modulus inside the ball. Let $h\in\mathbb C^n$ be small, and set $D_h=\{z\in B:z+h\in B\}$. There is $C_2>0$, independent of the translation $h$, such that smoothness of $\theta$ gives
+\emph{Step 2: a Lipschitz bound independent of $\varepsilon$.} Let $h\in\mathbb C^n$ be small, and set $D_h=\{z\in B:z+h\in B\}$. Since $\theta$ is smooth, there is $C_2>0$, independent of the translation $h$, such that
 \[
  \theta(z)-\theta(z+h)+C_2|h|\beta\geq0.
 \]
@@ -51,26 +51,24 @@ For a constant $C_3>0$ to be fixed, define on $D_h$
  w(z)=v_\varepsilon(z+h)
           +C_2|h|(|z|^2-R^2)-C_3|h|.
 \]
-Then $\theta+\ddc w\geq\theta(z+h)+\ddc v_\varepsilon(z+h)>0$ and its determinant is at least $\varepsilon\beta^n$; the Euclidean volume form is translation invariant. On $\partial D_h$, either $z$ or $z+h$ is on $\partial B$, and the other point has boundary distance at most $|h|$. Estimate \eqref{eq:ball-boundary-distance} and the Lipschitz bound for $\widetilde\varphi$ therefore give $w\leq v_\varepsilon$ if $C_3$ is fixed sufficiently large. Smooth comparison yields this inequality throughout $D_h$. Reversing the translation gives
+Then $\theta+\ddc w\geq\theta(z+h)+\ddc v_\varepsilon(z+h)>0$, and the determinant of $\theta+\ddc w$ is at least $\varepsilon\beta^n$, because the Euclidean volume form is translation invariant. On $\partial D_h$, one of the points $z$ and $z+h$ lies on $\partial B$, and the other has distance at most $|h|$ from $\partial B$. Estimate \eqref{eq:ball-boundary-distance} and the Lipschitz bound for $\widetilde\varphi$ therefore give $w\leq v_\varepsilon$ on $\partial D_h$ if $C_3$ is chosen sufficiently large, and smooth comparison extends this inequality to all of $D_h$. Together with the same argument for $-h$, this gives
 \[
- |v_\varepsilon(z+h)-v_\varepsilon(z)|\leq C_4|h|.
+ |v_\varepsilon(z+h)-v_\varepsilon(z)|\leq C_4|h|,
 \]
-The constants are independent of $\varepsilon$. The same bound for arbitrary pairs follows by subdividing their segment inside the convex ball, and extends to $\overline B$ because each $v_\varepsilon$ is continuous there.
+with constants independent of $\varepsilon$. The same bound for arbitrary pairs of points follows by subdividing the segment joining them inside the convex ball, and it extends to $\overline B$ because each $v_\varepsilon$ is continuous there.
 
-Smooth comparison also shows that $v_\varepsilon$ increases as $\varepsilon$ decreases. The barriers and common Lipschitz bound imply that its limit $H_\varphi$ is Lipschitz and that convergence is uniform on $\overline B$. The current inequality passes to the limit. Continuity of the local bounded products under uniform convergence gives $(\theta+\ddc H_\varphi)^n=0$. For smooth boundary values $\varphi,\psi$, denote the positive-density solutions by $v_{\varepsilon,\varphi}$ and $v_{\varepsilon,\psi}$. Smooth comparison gives
-$\|v_{\varepsilon,\varphi}-v_{\varepsilon,\psi}\|_\infty\leq\|\varphi-\psi\|_\infty$; passing to the limit proves the asserted contraction for such data.
+\emph{Step 3: the limit $\varepsilon\to0$.} Smooth comparison also shows that $v_\varepsilon$ increases as $\varepsilon$ decreases. By the barriers and the common Lipschitz bound, the limit $H_\varphi$ is Lipschitz and the convergence is uniform on $\overline B$. The inequality $\theta+\ddc v_\varepsilon>0$ of currents passes to the limit, and continuity of local bounded products under uniform convergence gives $(\theta+\ddc H_\varphi)^n=0$. For smooth boundary values $\varphi,\psi$, denote the solutions of \cref{lem:ball-smooth-dirichlet} with $F\equiv\varepsilon$ by $v_{\varepsilon,\varphi}$ and $v_{\varepsilon,\psi}$. Smooth comparison gives
+$\|v_{\varepsilon,\varphi}-v_{\varepsilon,\psi}\|_\infty\leq\|\varphi-\psi\|_\infty$, and passing to the limit proves the contraction for smooth data.
 
-For continuous $\varphi$, choose smooth $\varphi_j\to\varphi$ uniformly on $\partial B$. The contraction makes $H_{\varphi_j}$ uniformly Cauchy. Its limit is continuous, has the prescribed boundary values, and is $\theta$-plurisubharmonic. Uniform convergence of the bounded products again proves the homogeneous equation. Passing to the limit also proves the contraction for all continuous boundary data.
+\emph{Step 4: continuous boundary values.} For continuous $\varphi$, choose smooth $\varphi_j\to\varphi$ uniformly on $\partial B$. By the contraction, $H_{\varphi_j}$ is uniformly Cauchy. Its limit $H_\varphi$ is continuous and $\theta$-plurisubharmonic, has the prescribed boundary values, and satisfies the homogeneous equation, again by continuity of bounded products under uniform convergence. Passing to the limit also proves the contraction for all continuous boundary data.
 
-It remains to prove the domination property; it does not follow from a comparison of total masses. First take smooth $\varphi$ and continuous $p$ as in the statement. For $\delta>0$, put $p_\delta=p+\delta(|z|^2-R^2)$, so $\theta+\ddc p_\delta\geq\delta\beta$. By \cref{lem:qpsh-upper-test}, any $C^2$ function $a$ touching $p_\delta$ from above at an interior point $z_0$ satisfies
+\emph{Step 5: domination.} It remains to prove the domination property, which does not follow from a comparison of total masses. First take $\varphi$ smooth and $p$ as in the statement. For $\delta>0$ put $p_\delta=p+\delta(|z|^2-R^2)$, so that $\theta+\ddc p_\delta\geq\delta\beta$. By \cref{lem:qpsh-upper-test}, every $C^2$ function $a$ touching $p_\delta$ from above at an interior point $z_0$ satisfies
 \[
  \theta(z_0)+\ddc a(z_0)\geq\delta\beta.
 \]
+Suppose that $p_\delta-v_\varepsilon$ had a positive maximum. Since this difference is nonpositive on the boundary, the maximum would be attained at an interior point, where $v_\varepsilon$ plus the maximum touches $p_\delta$ from above. The determinant of $\theta+\ddc v_\varepsilon$ at that point would then be at least $\delta^n\beta^n$, contradicting the equation for $v_\varepsilon$ when $\varepsilon<\delta^n$. Hence $p_\delta\leq v_\varepsilon$ for small $\varepsilon$. Letting first $\varepsilon$ and then $\delta$ decrease to zero, we obtain $p\leq H_\varphi$.
 
-
-If $p_\delta-v_\varepsilon$ had a positive maximum, it would occur inside $B$, since the boundary difference is nonpositive. The smooth function $v_\varepsilon$ plus the maximum would be an upper test there. Its determinant would thus be at least $\delta^n\beta^n$, contradicting its equation when $\varepsilon<\delta^n$. Hence $p_\delta\leq v_\varepsilon$. Let $\varepsilon$ decrease to zero, then let $\delta$ decrease to zero, obtaining $p\leq H_\varphi$.
-
-Finally, for continuous $\varphi$, choose the smooth approximants above and set $a_j=\|\varphi_j-\varphi\|_\infty$. The boundary values of $p-a_j$ are at most $\varphi_j$. The smooth-data result gives $p-a_j\leq H_{\varphi_j}$; uniform convergence proves $p\leq H_\varphi$.
+Finally, for continuous $\varphi$, take the smooth approximants $\varphi_j$ above and set $a_j=\|\varphi_j-\varphi\|_\infty$. The boundary values of $p-a_j$ are at most $\varphi_j$, so the result for smooth data gives $p-a_j\leq H_{\varphi_j}$. Uniform convergence proves $p\leq H_\varphi$.
 \end{proof}
 
-The domination statement identifies $H_\varphi$ as the largest continuous admissible function with boundary values at most $\varphi$. This is the property needed for local envelope replacement.
+By the domination property, $H_\varphi$ is the largest continuous $\theta$-plurisubharmonic function on $\overline B$ whose boundary values are at most $\varphi$. This is the property needed for replacing an envelope locally.

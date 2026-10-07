@@ -1,7 +1,7 @@
 \section{H\"older continuity from bounded stability}
 \label{sec:holder-from-stability}
 
-Apply bounded stability to the Chern-connection regularizations of a solution. Their $L^1$ error controls the pointwise smoothing error; a gradient estimate for the smooth averages then gives a H\"older modulus. We use the operators $R_t$ and transforms $\Phi_{c,\delta}$ from \cref{lem:chern-kiselman-input,lem:chern-smoothing-integral}. The final interpolation step yields the explicit exponent below.
+Bounded stability also gives a H\"older modulus. We apply it to Demailly's Chern-connection regularization of a solution: the $L^1$ error of the regularization controls its pointwise error, and a gradient estimate for the smooth averages then gives the modulus. We use the averaging operators $R_t$ and the transforms $\Phi_{c,\delta}$ of \cref{lem:chern-kiselman-input}, with the constants $A,K$ given there, together with the estimates of \cref{lem:chern-smoothing-integral}. Interpolating between the smoothing error and the gradient bound yields the exponent below.
 
 \Needspace{16\baselineskip}
 \begin{theorem}\label{thm:hermitian-holder-elementary}\index{Holder continuity@H\"older continuity!bounded solutions}
@@ -13,10 +13,10 @@ Then $u$ is H\"older continuous with every exponent
 \[
  0<\beta<\frac{2(p-1)}{np+3(p-1)}.
 \]
-For a fixed bound $-C_0\leq u\leq0$ and a fixed bound for $\|f\|_p$, the H\"older constants are uniform. In particular the continuous solutions constructed in \cref{thm:kn-continuous} have this regularity.
+The H\"older constants are uniform for a fixed bound $-C_0\leq u\leq0$ and a fixed bound for $\|f\|_p$. In particular, the continuous solutions constructed in \cref{thm:kn-continuous} have this regularity.
 \end{theorem}
 \begin{proof}
-Normalize by a constant so that $-C_0\leq u\leq0$. Choose
+After adding a constant we may assume $-C_0\leq u\leq0$. Choose
 \[
  0<\eta<\frac{p-1}{np+p-1},\qquad \alpha=2\eta<1.
 \]
@@ -27,33 +27,33 @@ For small $\delta>0$ set
  r=-C_0-1,\qquad
  v_\delta=\frac{\Phi_{c,\delta}+er}{1+e}.
 \]
-The curvature estimate gives $v_\delta\in\PSH(X,\omega)$. Evaluation of the infimum at $t=\delta$ gives $\Phi_{c,\delta}\leq R_\delta u\leq0$. Its lower bound is
+The curvature estimate of \cref{lem:chern-kiselman-input} gives $v_\delta\in\PSH(X,\omega)$. Evaluating the infimum defining $\Phi_{c,\delta}$ at $t=\delta$ gives $\Phi_{c,\delta}\leq R_\delta u\leq0$. On the other hand,
 \[
  \Phi_{c,\delta}\geq u-K(\delta^2+\delta),
 \]
-since $R_tu+Kt^2\geq u$, $Kt\geq0$ and $-c\log(t/\delta)\geq0$. For $\delta$ small this is at least $r$. Thus
+since $R_tu+Kt^2\geq u$, $Kt\geq0$ and $-c\log(t/\delta)\geq0$ for $0<t\leq\delta$. For small $\delta$ this lower bound is at least $r$, and therefore
 \[
  v_\delta\leq\Phi_{c,\delta}\leq R_\delta u\leq0.
 \]
-Apply \cref{thm:bounded-one-sided-stability} and the integral estimate:
+The Hermitian form $\omega$ is semipositive and big, so \cref{thm:bounded-one-sided-stability} applies in the background $\omega$. Together with the $L^1$ estimate of \cref{lem:chern-smoothing-integral}, it gives
 \[
  \sup_X(v_\delta-u)_+
  \leq C\left(\int_X(v_\delta-u)_+\,\mathrm{d}V\right)^\eta
  \leq C\|R_\delta u-u\|_1^\eta\leq C\delta^\alpha.
 \]
-As $e\leq C\delta^\alpha$ and $u-r\leq C_0+1$, it follows that
+Since $e\leq C\delta^\alpha$ and $u-r\leq C_0+1$, it follows that
 \begin{equation}\label{eq:holder-transform-bound}
  \Phi_{c,\delta}-u
    =(1+e)(v_\delta-u)+e(u-r)\leq C\delta^\alpha.
 \end{equation}
 
-Fix $z$ and a minimizing radius $t=t(z)\in(0,\delta]$. The lower estimate at this radius and \eqref{eq:holder-transform-bound} give
+We now bound the minimizing radius from below. Fix $z$ and a radius $t=t(z)\in(0,\delta]$ at which the infimum is attained. The lower estimate at this radius and \eqref{eq:holder-transform-bound} give
 \[
  -c\log(t/\delta)
  \leq\Phi_{c,\delta}(z)-u(z)+K(\delta^2+\delta)
  \leq C\delta^\alpha=Cc.
 \]
-Thus $t(z)\geq a\delta$ with a constant $a=\mathrm{e}^{-C}>0$ independent of $z$ and $\delta$. Monotonicity of $R_su+Ks^2$ yields
+Thus $t(z)\geq a\delta$ with the constant $a=\mathrm{e}^{-C}>0$, which is independent of $z$ and $\delta$. Since $R_su+Ks^2$ is increasing in $s$,
 \[
  \begin{split}
  R_{a\delta}u+K(a\delta)^2
@@ -62,15 +62,15 @@ Thus $t(z)\geq a\delta$ with a constant $a=\mathrm{e}^{-C}>0$ independent of $z$
  &\leq\Phi_{c,\delta}+K\delta^2+K\delta.
  \end{split}
 \]
-Together with \eqref{eq:holder-transform-bound} and the lower bound $R_su-u\geq-Ks^2$, this proves, after setting $s=a\delta$,
+Combining this with \eqref{eq:holder-transform-bound} and the lower bound $R_su-u\geq-Ks^2$, and setting $s=a\delta$, we obtain
 \[
  \|R_su-u\|_\infty\leq Cs^\alpha
 \]
 for every sufficiently small $s>0$.
 
-For points $x,y$ at distance $d$ small enough, the derivative estimate gives
+Finally, let $x,y$ be points at a small distance $d$. The gradient estimate $\|\nabla R_su\|_\infty\leq C/s$ gives
 \[
  |u(x)-u(y)|\leq2Cs^\alpha+C d/s.
 \]
-Choose $s=d^{1/(1+\alpha)}$. Both terms are then bounded by a constant times $d^{\alpha/(1+\alpha)}$. Larger distances are controlled by the oscillation bound. This proves H\"older continuity with exponent $\alpha/(1+\alpha)$. Letting $\eta$ approach its permitted upper endpoint gives every $\beta$ in the theorem; any smaller exponent follows on compact $X$ by changing the constant.
+With $s=d^{1/(1+\alpha)}$, both terms are bounded by a constant times $d^{\alpha/(1+\alpha)}$, and larger distances are controlled by the bound on the oscillation. This proves H\"older continuity with exponent $\alpha/(1+\alpha)$. Letting $\eta$ approach its upper endpoint gives every $\beta$ in the theorem; smaller exponents follow on compact $X$ by changing the constant.
 \end{proof}

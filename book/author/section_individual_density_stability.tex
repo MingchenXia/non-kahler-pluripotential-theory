@@ -1,7 +1,7 @@
 \section{Stability of the subsolution threshold}
 \label{sec:individual-density-stability}
 
-The Gauduchon formula expresses $b_h^{1/n}$ as an infimum of continuous functions of the density. It therefore gives upper semicontinuity in $L^1$. For density roots, the reciprocal functional $\rho_h$ is a supremum of positive linear tests; this gives a complete normed space on which the threshold has stronger stability.
+We now study how the threshold $b_h(f)$ depends on $f$. By \eqref{eq:integrable-gauduchon-threshold}, $b_h^{1/n}$ is an infimum of functions that are continuous on $L^1$, and is therefore upper semicontinuous. It is not continuous in general: when $v_-(h)=0$, every density with positive threshold is an $L^1$ limit of densities with zero threshold. For density roots, \eqref{eq:integrable-gauduchon-root} expresses $\rho_h$ as a supremum of positive linear functionals. Hence $\rho_h$ is a norm on the space where it is finite, this space is complete for a suitable norm, and the threshold depends continuously on the root in that norm.
 
 \begin{theorem}\label{thm:individual-threshold-semicontinuity}
 Suppose $f_j,f$ are nonzero nonnegative $L^1$ densities and $f_j\to f$ in $L^1(\mathrm{d}V)$. Then
@@ -11,27 +11,26 @@ Suppose $f_j,f$ are nonzero nonnegative $L^1$ densities and $f_j\to f$ in $L^1(\
 Moreover,
 \begin{equation}\label{eq:individual-threshold-relaxation}
  b_h(f)=\lim_{\delta\downarrow0}\sup\{c_h(q):q\in L^\infty,\ q\geq0,\ q\not\equiv0,
-                                      \ \|q-f\|_1<\delta\}.
+                                      \ \|q-f\|_{L^1}<\delta\},
 \end{equation}
-The suprema are finite for sufficiently small $\delta$.
+and the suprema are finite for sufficiently small $\delta$.
 \end{theorem}
 \begin{proof}
-For a Gauduchon metric $\gamma$ on $X$, write $A_\gamma(f)=\int_X(f\,\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. For each fixed $\gamma$, H\"older's inequality and
-$|s^{1/n}-t^{1/n}|\leq|s-t|^{1/n}$ show that $A_\gamma$ is continuous in $L^1$. It is positive at every nonzero nonnegative density. By \cref{thm:integrable-gauduchon-formula}, $b_h^{1/n}$ is the infimum of the continuous positive quotients $\int_Xh\wedge\gamma^{n-1}/A_\gamma(f)$. It is therefore upper semicontinuous. Testing one fixed $\gamma$ also bounds it above on an $L^1$ neighborhood of $f$.
+For a Gauduchon form $\gamma$ on $X$, write $A_\gamma(f)=\int_X(f\,\mathrm{d}V/\gamma^n)^{1/n}\gamma^n$. Since $|s^{1/n}-t^{1/n}|\leq|s-t|^{1/n}$ for $s,t\geq0$, H\"older's inequality shows that $A_\gamma$ is continuous on $L^1$; it is positive at every nonzero nonnegative density. By \cref{thm:integrable-gauduchon-formula}, $b_h^{1/n}$ is the infimum over $\gamma$ of the continuous positive functions $f\mapsto\int_Xh\wedge\gamma^{n-1}/A_\gamma(f)$. It is therefore upper semicontinuous, and testing a single $\gamma$ bounds it above on an $L^1$ neighborhood of $f$.
 
-For bounded $q$, $b_h(q)=c_h(q)$. The first assertion therefore bounds the upper limit of $c_h(q_j)$ along every bounded-density approximation $q_j\to f$. Conversely the canonical truncations of $f$ attain $b_h(f)$ in the limit. Local boundedness and these two observations prove \eqref{eq:individual-threshold-relaxation}.
+For the second assertion, recall that $b_h(q)=c_h(q)$ for bounded $q$ (\cref{prop:individual-normalizer-lp}). By the first assertion, $\limsup_jc_h(q_j)\leq b_h(f)$ for every sequence of nonzero nonnegative bounded densities $q_j\to f$ in $L^1$. Hence the limit in \eqref{eq:individual-threshold-relaxation} is at most $b_h(f)$, and the local upper bound makes the suprema finite for small $\delta$. Conversely, the truncations $f_k$ converge to $f$ in $L^1$ and satisfy $c_h(f_k)\geq b_h(f)$, so every supremum in \eqref{eq:individual-threshold-relaxation} is at least $b_h(f)$.
 \end{proof}
 
-Consequently $b_h$ is continuous at each density where it vanishes. If $v_-(h)=0$, it is discontinuous at every density where it is positive: normalize the density, use the obstructing mixtures of \cref{cor:lower-mass-lone-instability}, and restore its integral. Thus the zero set is exactly the continuity set in that case. This statement concerns the scalar functional; it supplies neither capacity convergence of the original equation potentials nor equality of their limiting measures.
+Since $b_h\geq0$, upper semicontinuity makes $b_h$ continuous at every density where it vanishes. If $v_-(h)=0$, these are its only points of continuity. Indeed, let $b_h(f)>0$ and $g=f/\int_Xf\,\mathrm{d}V$. By \cref{cor:lower-mass-lone-instability} and \cref{thm:individual-density-subsolution}, the densities $(1-t)g+tf_0$, where $f_0$ is the density of \cref{thm:lower-mass-obstructing-measure}, have zero threshold and converge to $g$ in $L^1$ as $t\downarrow0$; multiplying them by $\int_Xf\,\mathrm{d}V$ gives densities with zero threshold converging to $f$. These statements concern only the scalar $b_h$; they say nothing about capacity convergence of the corresponding potentials or about the limits of their Monge--Amp\`ere measures.
 
 \subsection{Finite sums of densities}\label{subsec:finite-density-sums}
 
-The test formula makes $\rho_h$ homogeneous and monotone. Its triangle inequality proves that adding finitely many admissible densities preserves a positive threshold. In the statements below, $f,g$ are nonzero nonnegative $L^1$ densities, and $p,q$ are real functions in $L^n$.
+Since \eqref{eq:integrable-gauduchon-root} expresses $\rho_h(p)$ as a supremum of positive linear functionals evaluated at $|p|$, the root functional is homogeneous, monotone and subadditive. Subadditivity shows that the sum of two densities with positive threshold again has positive threshold. In the statements below, $f$ and $g$ are nonzero nonnegative $L^1$ densities, and $p$ and $q$ are real functions in $L^n$.
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:individual-root-triangle}
-The functional $\rho_h$ is homogeneous, satisfies
-$\rho_h(p)\leq\rho_h(q)$ whenever $|p|\leq|q|$, and obeys
+The functional $\rho_h$ satisfies $\rho_h(tp)=|t|\rho_h(p)$ for real $t\ne0$,
+$\rho_h(p)\leq\rho_h(q)$ whenever $|p|\leq|q|$, and
 \[
  \rho_h(p+q)\leq\rho_h(p)+\rho_h(q).
 \]
@@ -42,8 +41,12 @@ In particular, if $b_h(f),b_h(g)>0$, then
 \]
 \end{proposition}
 \begin{proof}
-The representation \eqref{eq:integrable-gauduchon-root} is a supremum of positive linear tests applied to $|p|$. It gives homogeneity, order, and the triangle inequality by $|p+q|\leq|p|+|q|$. Finally
-$(f+g)^{1/n}\leq f^{1/n}+g^{1/n}$ gives the displayed density inequality.
+By \eqref{eq:integrable-gauduchon-root}, $\rho_h(p)=\sup_\gamma L_{h,\gamma}(|p|)$ is a supremum of positive linear functionals evaluated at $|p|$. This gives homogeneity and monotonicity, and, together with $|p+q|\leq|p|+|q|$, the triangle inequality. Finally, $(f+g)^{1/n}\leq f^{1/n}+g^{1/n}$ gives
+\[
+ b_h(f+g)^{-1/n}=\rho_h\bigl((f+g)^{1/n}\bigr)\leq\rho_h(f^{1/n})+\rho_h(g^{1/n})
+ =b_h(f)^{-1/n}+b_h(g)^{-1/n},
+\]
+which is equivalent to the asserted lower bound for $b_h(f+g)$.
 \end{proof}
 
 \begin{proposition}\label{prop:individual-density-banach}\index{Density space!completeness}
@@ -53,63 +56,64 @@ The real vector space
 \]
 is complete for the norm $\|p\|_{\mathcal D_h}=\|p\|_{L^n}+\rho_h(p)$. It is an order ideal in $L^n$: if $q\in\mathcal D_h$ and $|p|\leq|q|$, then $p\in\mathcal D_h$. It contains $L^\infty$ and is therefore dense in $L^n$ for the $L^n$ norm.
 
-Moreover, $\mathcal D_h=L^n$ if and only if $v_-(h)>0$. In that case its norm is equivalent to the $L^n$ norm. If $h$ is K\"ahler, then
+Moreover, $\mathcal D_h=L^n$ if and only if $v_-(h)>0$, and in that case the norm $\|\cdot\|_{\mathcal D_h}$ is equivalent to the $L^n$ norm. If $h$ is K\"ahler, then
 \[
  \rho_h(p)=\left(\int_Xh^n\right)^{-1/n}\|p\|_{L^n}.
 \]
 \end{proposition}
 \begin{proof}
-The preceding proposition proves that $\mathcal D_h$ is a vector space and that the displayed expression is a norm. It also proves the order-ideal assertion. Bounded functions belong to $\mathcal D_h$ by continuous equation existence.
+By \cref{prop:individual-root-triangle}, $\mathcal D_h$ is a vector space and an order ideal, and $\|\cdot\|_{\mathcal D_h}$ is a norm on it. Bounded functions belong to $\mathcal D_h$, because $b_h(|p|^n)=c_h(|p|^n)>0$ for bounded nonzero $p$.
 
 \Needspace{5\baselineskip}
-If $p_j\to p$ in $L^n$, then $|p_j|^n\to|p|^n$ in $L^1$. Upper semicontinuity of $b_h$ gives
+We next show that $\rho_h$ is lower semicontinuous on $L^n$. If $p_j\to p$ in $L^n$, then $|p_j|^n\to|p|^n$ in $L^1$, and the upper semicontinuity of $b_h$ in \cref{thm:individual-threshold-semicontinuity} gives
 \[
  \rho_h(p)\leq\liminf_j\rho_h(p_j).
 \]
-This includes $b_h(|p|^n)=0$, when the right side must be infinite; for $p=0$ the inequality follows from nonnegativity. Now let $(p_j)$ be Cauchy in $\mathcal D_h$. It converges in $L^n$ to some $p$. Lower semicontinuity, applied first to $p_j$ and then to $p_j-p_k$ as $k\to\infty$, gives $p\in\mathcal D_h$ and
+This includes the case $b_h(|p|^n)=0$, in which the right side must be infinite; for $p=0$ the inequality is trivial. Now let $(p_j)$ be a Cauchy sequence in $\mathcal D_h$. It converges in $L^n$ to some $p$, and lower semicontinuity gives $\rho_h(p)\leq\liminf_j\rho_h(p_j)<+\infty$, so $p\in\mathcal D_h$. Applied to $p_j-p_k$ as $k\to\infty$, lower semicontinuity also gives
 \[
- \rho_h(p_j-p)\leq\liminf_{k\to\infty}\rho_h(p_j-p_k)\longrightarrow0.
+ \rho_h(p_j-p)\leq\liminf_{k\to\infty}\rho_h(p_j-p_k),
 \]
-Together with $L^n$ convergence, this proves completeness.
+which tends to zero as $j\to\infty$. Together with $L^n$ convergence, this proves completeness.
 
 If $v_-(h)>0$, \cref{prop:individual-normalizer-lp} gives
-$\rho_h(p)\leq v_-(h)^{-1/n}\|p\|_{L^n}$, proving equality of the spaces and equivalence of the norms. If $v_-(h)=0$, take the obstructing density $f$ from \cref{thm:lower-mass-obstructing-measure}. Its root $f^{1/n}$ belongs to $L^n$ but not to $\mathcal D_h$. The K\"ahler formula follows from the same normalization proposition.
+$\rho_h(p)\leq v_-(h)^{-1/n}\|p\|_{L^n}$, so $\mathcal D_h=L^n$ with an equivalent norm. If $v_-(h)=0$, the density $f$ of \cref{thm:lower-mass-obstructing-measure} has $b_h(f)=0$ by \cref{thm:individual-density-subsolution}; thus $f^{1/n}$ belongs to $L^n$ but not to $\mathcal D_h$. The K\"ahler formula follows from the same proposition.
 \end{proof}
 
-Thus, when lower mass vanishes, the roots of densities admitting positive scaled subsolutions form a proper dense subspace of $L^n$, complete for the stronger displayed norm. Finite addition preserves admissibility. An infinite sum need not: the positive smooth summands in \cref{thm:lower-mass-obstructing-measure} already give an $L^1$ counterexample. Density of bounded functions in the $\mathcal D_h$ norm has not been asserted. The metric comparisons in \cref{prop:individual-threshold-backgrounds} show that this space is independent of $h$ and that its norms for different Hermitian metrics are equivalent.
+Thus, when the lower mass vanishes, $\mathcal D_h$ is a proper dense subspace of $L^n$, complete for the stronger norm $\|\cdot\|_{\mathcal D_h}$; its nonnegative elements are the $n$th roots of the densities admitting a positive scaled subsolution. A finite sum of such densities again admits a positive scaled subsolution, but a convergent infinite sum need not: the smooth summands in \cref{thm:lower-mass-obstructing-measure} give an example. By \cref{prop:individual-threshold-backgrounds}, the space $\mathcal D_h$ does not depend on the Hermitian form $h$, and the norms $\|\cdot\|_{\mathcal D_h}$ for different Hermitian forms are equivalent. The closure of the bounded functions for this norm is studied in \cref{subsec:bounded-root-approximation}.
+
+The restriction of $\rho_h$ to $\mathcal D_h$ is itself a norm: if $p\ne0$, then $\rho_h(p)\geq L_{h,\gamma}(|p|)>0$ for any Gauduchon form $\gamma$. Whether this weaker norm is complete depends on the upper mass.
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:individual-root-completeness}\index{Density space!root norm}
-The norm $\rho_h$ alone is complete on $\mathcal D_h$ if and only if $v_+(h)<+\infty$. When upper mass is finite,
+The norm $\rho_h$ is complete on $\mathcal D_h$ if and only if $v_+(h)<+\infty$. When the upper mass is finite,
 \[
- \|p\|_{L^n}\leq v_+(h)^{1/n}\rho_h(p),
+ \|p\|_{L^n}\leq v_+(h)^{1/n}\rho_h(p)\qquad(p\in\mathcal D_h),
 \]
 so $\rho_h$ and $\|\cdot\|_{\mathcal D_h}$ are equivalent norms.
 \end{proposition}
 \begin{proof}
-If $v_+(h)<+\infty$, every continuous solution for a bounded density $q$ satisfies
-$c_h(q)\int_Xq\,\mathrm{d}V\leq v_+(h)$. Apply this to the truncations of $|p|^n$ and let the truncation level increase. It gives the displayed bound. Completeness follows from \cref{prop:individual-density-banach}.
+Suppose $v_+(h)<+\infty$. A continuous solution for a bounded density $q$ has mass $c_h(q)\int_Xq\,\mathrm{d}V\leq v_+(h)$. Applying this to the truncations of $|p|^n$ and letting the truncation level increase gives $b_h(|p|^n)\|p\|_{L^n}^n\leq v_+(h)$, which is the asserted inequality. Hence $\rho_h$ and $\|\cdot\|_{\mathcal D_h}$ are equivalent, and completeness follows from \cref{prop:individual-density-banach}.
 
-Suppose instead that $v_+(h)=+\infty$. By \cref{thm:gaud-volume-mass-extrema}, the constants of smooth positive probability densities are unbounded above. For each $j$, choose such a density $f_j$ with
+Suppose instead that $v_+(h)=+\infty$. By \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula}, the normalization scalars of smooth strictly positive probability densities are unbounded above. For each $j$, choose such a density $f_j$ with
 \[
  c_h(f_j)\geq(j2^j)^n,
- \qquad p_j=jf_j^{1/n}.
+ \qquad\text{and put}\qquad p_j=jf_j^{1/n}.
 \]
-Then $\|p_j\|_{L^n}=j$ and $\rho_h(p_j)\leq2^{-j}$. The positive partial sums $P_N=\sum_{j\leq N}p_j$ are Cauchy for $\rho_h$.
+Then $\|p_j\|_{L^n}=j$ and $\rho_h(p_j)=jc_h(f_j)^{-1/n}\leq2^{-j}$, so the partial sums $P_N=\sum_{j\leq N}p_j$ form a Cauchy sequence for $\rho_h$.
 
-A fixed Gauduchon test has a smooth strictly positive coefficient, so \eqref{eq:integrable-gauduchon-root} gives $\rho_h(p)\geq c\|p\|_{L^1}$ with a constant $c>0$. Thus $\sum_jp_j$ converges in $L^1$ to a nonnegative function $P$. Were $P_N$ to converge for $\rho_h$ to an element of $\mathcal D_h$, that element would equal $P$ almost everywhere. But $P\geq p_j$ for all $j$, so $\|P\|_{L^n}\geq j$ for all $j$. This contradicts membership in $L^n$. Therefore $\rho_h$ is not complete.
+Fix a Gauduchon form $\gamma$. Its coefficient $a_\gamma$ is bounded below by a positive constant, so \eqref{eq:integrable-gauduchon-root} gives $\rho_h(p)\geq c\|p\|_{L^1}$ with a constant $c>0$. Hence $\sum_jp_j$ converges in $L^1$ to a nonnegative function $P$. If $P_N$ converged for $\rho_h$ to an element of $\mathcal D_h$, that element would also be the $L^1$ limit, hence equal to $P$ almost everywhere. But $P\geq p_j$ gives $\|P\|_{L^n}\geq j$ for every $j$, so $P\notin L^n$. Therefore $\rho_h$ is not complete.
 \end{proof}
 
-The two mass properties have separate roles: positive lower mass makes every $L^n$ root admissible, whereas finite upper mass makes the root norm control the $L^n$ norm. The norm $\|\cdot\|_{\mathcal D_h}$ is complete without either assumption.
+The two mass properties play separate roles: positive lower mass makes every $L^n$ function admissible, whereas finite upper mass makes the root norm control the $L^n$ norm. The norm $\|\cdot\|_{\mathcal D_h}$ is complete without either assumption.
 
-The geometric examples realize all four possibilities. The non-K\"ahler entries below follow from \cref{cor:hopf-lower-mass,prop:lower-mass-balanced-metric,cor:both-mass-properties-fail}.
+All four combinations occur. On a compact K\"ahler manifold both mass properties hold. The Hopf threefold has positive lower mass and infinite upper mass (\cref{cor:hopf-lower-mass}). The elliptic threefold of \cref{thm:vanishing-lower-mass} has zero lower mass, and finite upper mass for its balanced metric (\cref{prop:lower-mass-balanced-metric}). The product manifolds of \cref{cor:both-mass-properties-fail} have zero lower mass and infinite upper mass. Since neither $\mathcal D_h$ nor the completeness of $\rho_h$ depends on the choice of $h$ (\cref{prop:individual-threshold-backgrounds,prop:bmp-metric}), we obtain the following table.
 \begin{center}
 \begin{tabular}{@{}l@{\qquad}l@{\qquad}l@{}}
 Manifold & Domain $\mathcal D_h$ & Is $\rho_h$ complete?\\
 \hline
 K\"ahler manifold & $L^n$ & Yes\\
 Hopf threefold & $L^n$ & No\\
-Balanced elliptic quotient & $\mathcal D_h\subsetneq L^n$ & Yes\\
+Elliptic threefold & $\mathcal D_h\subsetneq L^n$ & Yes\\
 Product example & $\mathcal D_h\subsetneq L^n$ & No
 \end{tabular}
 \end{center}

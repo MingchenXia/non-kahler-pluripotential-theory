@@ -1,7 +1,7 @@
 \section{General measures with a model reference}
 \label{sec:big-model-general-measures}
 
-The projection produces a nonzero weighted measure below the prescribed datum. Maximize its mass among supersolutions with that same upper bound. If any part of the datum remains, weighted addition increases the mass and contradicts maximality. Density truncation then gives the equation for every finite non-pluripolar measure.
+We now prove the existence statements of \cref{thm:li-general-measure}. Suppose first that $\mu$ is dominated by the Monge--Amp\`ere measure of a bounded potential. The supersolution corollary gives $Q\in\mathcal E_\varphi$ with a nonzero weighted measure $\mathrm{e}^{-Q}\mu_Q\leq\mu$. Among the potentials $w\in\mathcal E_\varphi$ whose weighted measure $\mathrm{e}^{-w}\mu_w$ lies between this measure and $\mu$, we maximize the weighted mass. If a maximizer left part of $\mu$ uncovered, weighted addition of a supersolution for the remainder would increase the weighted mass; hence the maximizer solves the equation. Truncating densities then treats every finite non-pluripolar measure.
 
 \begin{theorem}\label{thm:big-model-exponential}
 Let $\mu$ be a nonzero finite non-pluripolar measure and let $\lambda>0$. There is a unique $u\in\mathcal E_\varphi$ such that
@@ -15,61 +15,62 @@ We first take $\lambda=1$ and suppose that
  \mu\leq A\sigma,\qquad A>0,\qquad
  \sigma=\mathrm{MA}_\omega(\psi),\quad
  \psi\in\PSH(X,\omega)\cap L^\infty(X).
-\] The supersolution corollary gives $Q\in\mathcal E_\varphi$ with a finite nonzero measure
-\[
- \nu_0=\mathrm{e}^{-Q}\mu_Q\leq\mu.
 \]
-Consider
+\Cref{cor:big-relative-supersolution} gives $Q\in\mathcal E_\varphi$ such that
+\[
+ \nu_0=\mathrm{e}^{-Q}\mu_Q\leq\mu
+\]
+is a finite nonzero measure. Consider
 \[
  \mathcal T=\{w\in\mathcal E_\varphi:
               \nu_0\leq \mathrm{e}^{-w}\mu_w\leq\mu\}.
 \]
-The family contains $Q$. Exponential order gives $w\leq Q$ for every $w\in\mathcal T$. Also
+The family contains $Q$. For $w\in\mathcal T$, exponential order (\cref{cor:big-relative-orders}) gives $w\leq Q$. Also
 \[
  \ell\leq\mu_w(X)\leq \mathrm{e}^{\sup_Xw}\mu(X),
  \qquad
  \sup_Xw\geq\log\frac{\ell}{\mu(X)}.
 \]
-These bounds prevent collapse of any sequence in $\mathcal T$.
+These bounds prevent the collapse of any sequence in $\mathcal T$.
 
 \Needspace{6\baselineskip}
 Let
 \[
  \alpha=\sup_{w\in\mathcal T}\int_X\mathrm{e}^{-w}\,\mu_w\leq\mu(X),
 \]
-and choose $w_j\in\mathcal T$ whose weighted masses tend to $\alpha$. Extract a genuine $L^1$ limit $w$. Since
+and choose $w_j\in\mathcal T$ whose weighted masses tend to $\alpha$. Extract an $L^1$ limit $w\not\equiv-\infty$. Since
 \[
  \mu_{w_j}\leq \mathrm{e}^{\sup_XQ}\mu,
 \]
-the fixed-dominator theorem gives $w\in\mathcal E_\varphi$, convergence in capacity, and $\mu_{w_j}\rightharpoonup\mu_w$. Put $\nu_j=\mathrm{e}^{-w_j}\mu_{w_j}$. After another extraction, these finite measures converge weakly to a measure $\nu$, and
+the fixed-dominator theorem \cref{thm:big-relative-fixed-continuity} gives $w\in\mathcal E_\varphi$, convergence in capacity, and $\mu_{w_j}\rightharpoonup\mu_w$. Put $\nu_j=\mathrm{e}^{-w_j}\mu_{w_j}$. After a further extraction, these finite measures converge weakly to a measure $\nu$, and
 \[
  \nu_0\leq\nu\leq\mu,\qquad \nu(X)=\alpha.
 \]
 
-We claim $\mu_w=\mathrm{e}^w\nu$. \Cref{lem:fixed-npp-integrals} gives
+We claim that $\mu_w=\mathrm{e}^w\nu$. By \cref{lem:fixed-npp-integrals},
 \[
  \int_X|\mathrm{e}^{w_j}-\mathrm{e}^w|\,\mathrm{d}\mu\longrightarrow0.
 \]
-If $f$ is continuous, replacing $\mathrm{e}^{w_j}$ by $\mathrm{e}^w$ in $\int_Xf \mathrm{e}^{w_j}\,\mathrm{d}\nu_j$ therefore has error tending to zero. For the remaining integral, approximate the fixed bounded measurable function $f \mathrm{e}^w$ in $L^1(\mu)$ by continuous functions. Since $\nu_j,\nu\leq\mu$, the approximation error is uniform in $j$, while the integrals of each continuous approximation converge by weak convergence. Thus
+Let $f$ be continuous. Since $\nu_j\leq\mu$, replacing $\mathrm{e}^{w_j}$ by $\mathrm{e}^w$ in $\int_Xf \mathrm{e}^{w_j}\,\mathrm{d}\nu_j$ changes the integral by an amount tending to zero. For the remaining integral, approximate the fixed bounded measurable function $f \mathrm{e}^w$ in $L^1(\mu)$ by continuous functions. Since $\nu_j,\nu\leq\mu$, the approximation error is uniform in $j$, while the integrals of each continuous approximation converge by weak convergence. Thus
 \[
  \int_Xf\,\mu_{w_j}
  =\int_Xf \mathrm{e}^{w_j}\,\mathrm{d}\nu_j
  \longrightarrow\int_Xf \mathrm{e}^w\,\mathrm{d}\nu.
 \]
-This proves the claim. The measure $\nu$ ignores the poles of $w$, so $\mathrm{e}^{-w}\mu_w=\nu$. Hence $w\in\mathcal T$ attains the maximum $\alpha$.
+This proves the claim. The measure $\nu$ does not charge the poles of $w$, so $\mathrm{e}^{-w}\mu_w=\nu$. Hence $w\in\mathcal T$ attains the maximum $\alpha$.
 
-If $\mu-\nu$ were nonzero, the supersolution corollary would supply $v\in\mathcal E_\varphi$ with
+Suppose that $\mu-\nu$ were nonzero. Then \cref{cor:big-relative-supersolution}, applied to $\mu-\nu$, would give $v\in\mathcal E_\varphi$ with
 \[
  0\ne\nu_v=\mathrm{e}^{-v}\mu_v\leq\mu-\nu.
 \]
-In particular $\mu_v\leq \mathrm{e}^{\sup_Xv}\mu\leq A \mathrm{e}^{\sup_Xv}\sigma$, so the bounded-carrier hypothesis of the addition theorem is satisfied. That theorem gives $a\in\mathcal E_\varphi$ with
+In particular $\mu_v\leq \mathrm{e}^{\sup_Xv}\mu\leq A \mathrm{e}^{\sup_Xv}\sigma$, so the bounded-carrier hypothesis of \cref{thm:big-weighted-addition} holds. That theorem, with $\lambda=1$, gives $a\in\mathcal E_\varphi$ with
 \[
  \mathrm{e}^{-a}\mu_a=\mathrm{e}^{-w}\mu_w+\mathrm{e}^{-v}\mu_v=\nu+\nu_v.
 \]
-The right side is between $\nu_0$ and $\mu$, but its mass exceeds $\alpha$. This contradicts maximality. Therefore $\nu=\mu$, and $w$ solves the equation.
+The right-hand side lies between $\nu_0$ and $\mu$, so $a\in\mathcal T$, but its mass exceeds $\alpha$. This contradicts maximality. Therefore $\nu=\mu$, and $w$ solves the equation.
 
 \Needspace{8\baselineskip}
-Now let $\mu$ be any nonzero finite non-pluripolar measure. The bounded-carrier decomposition writes
+Now let $\mu$ be any nonzero finite non-pluripolar measure. The bounded-carrier decomposition \cref{lem:bounded-measure-carrier}, applied to $\omega$, writes
 \[
  \mu=f\sigma,\qquad
  \sigma=\mathrm{MA}_\omega(\psi),\quad
@@ -77,14 +78,14 @@ Now let $\mu$ be any nonzero finite non-pluripolar measure. The bounded-carrier 
  0\leq f\in L^1(\sigma).
 \]
 \Needspace{8\baselineskip}
-Set $f_k=\min(f,k)$ and $\mu_k=f_k\sigma$. These measures are nonzero, and the first part gives $u_k\in\mathcal E_\varphi$ with $\mu_{u_k}=\mathrm{e}^{u_k}\mu_k$. Exponential order shows that $u_k$ decreases. The uniform bound
+Set $f_k=\min(f,k)$ and $\mu_k=f_k\sigma$. These measures are nonzero, and the first part gives $u_k\in\mathcal E_\varphi$ with $\mu_{u_k}=\mathrm{e}^{u_k}\mu_k$. Since $\mu_k$ increases with $k$, exponential order shows that $u_k$ decreases. The uniform bound
 \[
  \sup_Xu_k\geq\log\frac{\ell}{\mu(X)}
 \]
-gives a genuine limit $u$. Moreover $\mu_{u_k}\leq \mathrm{e}^{\sup_Xu_1}\mu$. Fixed-dominator continuity gives $u\in\mathcal E_\varphi$ and weak convergence of these measures. On the right,
-$\mathrm{e}^{u_k}f_k\to \mathrm{e}^u f$ in $L^1(\sigma)$ by dominated convergence, with dominator $\mathrm{e}^{\sup_Xu_1}f$. Thus $\mu_u=\mathrm{e}^u\mu$.
+shows that the decreasing limit $u$ is not identically $-\infty$. Moreover $\mu_{u_k}\leq \mathrm{e}^{\sup_Xu_1}\mu$, so fixed-dominator continuity gives $u\in\mathcal E_\varphi$ and weak convergence of these measures. On the right-hand side,
+$\mathrm{e}^{u_k}f_k\to \mathrm{e}^u f$ in $L^1(\sigma)$ by dominated convergence, with dominating function $\mathrm{e}^{\sup_Xu_1}f$. Thus $\mu_u=\mathrm{e}^u\mu$.
 
-For general $\lambda>0$, apply the exponent-one result in background $\lambda\theta$, with model $\lambda\varphi$ and datum $\lambda^n\mu$, and divide its potential by $\lambda$. Scaling of the class and the Monge--Amp\`ere measure gives the displayed equation. Uniqueness follows by applying \cref{cor:big-relative-orders} to the two solutions in both directions.
+For general $\lambda>0$, apply the result for exponent one in the background $\lambda\theta$, with model $\lambda\varphi$ and datum $\lambda^n\mu$, and divide the resulting potential by $\lambda$. The scaling of the relative class and of the Monge--Amp\`ere measure gives the equation. Uniqueness follows by applying \cref{cor:big-relative-orders} to two solutions in both directions.
 \end{proof}
 
 \Needspace{15\baselineskip}
@@ -99,11 +100,11 @@ The scalar $c$ is unique and satisfies
 \]
 \end{theorem}
 \begin{proof}
-For each integer $j\geq1$, solve
+For each integer $j\geq1$, the preceding theorem gives a solution of
 \[
- \mu_{u_j}=\mathrm{e}^{u_j/j}\mu,\qquad u_j\in\mathcal E_\varphi,
+ \mu_{u_j}=\mathrm{e}^{u_j/j}\mu,\qquad u_j\in\mathcal E_\varphi.
 \]
-using the preceding theorem. Put $S=\sup_Xu_1$ and $w_j=u_1+(j-1)S$. Then $w_j/j\geq u_1$, and hence
+Put $S=\sup_Xu_1$ and $w_j=u_1+(j-1)S$. Then $w_j/j\geq u_1$, and hence
 \[
  \mu_{w_j}=\mathrm{e}^{u_1}\mu\leq \mathrm{e}^{w_j/j}\mu.
 \]
@@ -112,22 +113,22 @@ Exponential order at exponent $1/j$ gives $u_j\leq w_j$. Define
  v_j=u_j-\sup_Xu_j,\qquad
  c_j=\mathrm{e}^{(\sup_Xu_j)/j}.
 \]
-The upper bound just proved and the positive lower mass imply
+The upper bound just proved and the positive lower volume $\ell$ imply
 \[
  \frac{\ell}{\mu(X)}\leq c_j\leq \mathrm{e}^S,
  \qquad \mu_{v_j}=c_j \mathrm{e}^{v_j/j}\mu\leq \mathrm{e}^S\mu.
 \]
-The envelope identity gives $v_j\leq\varphi$. \Cref{thm:normalized-compactness} supplies a subsequence $j_k$ for which $v_{j_k}\to u$ in $L^1$, with $u$ genuine and $\sup_Xu=0$, and $c_{j_k}\to c>0$. Fixed-dominator continuity gives $u\in\mathcal E_\varphi$ and $\mu_{v_{j_k}}\rightharpoonup\mu_u$.
+The envelope identity gives $v_j\leq\varphi$. \Cref{thm:normalized-compactness} gives a subsequence $j_k$ along which $v_{j_k}\to u$ in $L^1$, where $u\not\equiv-\infty$ and $\sup_Xu=0$, and $c_{j_k}\to c>0$. Fixed-dominator continuity gives $u\in\mathcal E_\varphi$ and $\mu_{v_{j_k}}\rightharpoonup\mu_u$.
 
-\Cref{lem:normalized-exponential-npp} gives $\mathrm{e}^{v_j/j}\to1$ in $L^1(\mu)$, also for this non-semipositive background. Consequently $c_{j_k}\mathrm{e}^{v_{j_k}/j_k}\mu\to c\mu$ in total variation. The retained reciprocal exponents are $1/j_k$, so the limit equation is $\mu_u=c\mu$. Integrating it gives the stated interval for $c$. The scalar comparison in \cref{cor:big-relative-orders} gives uniqueness of $c$.
+\Cref{lem:normalized-exponential-npp}, which holds for every smooth background, gives $\mathrm{e}^{v_j/j}\to1$ in $L^1(\mu)$. Consequently $c_{j_k}\mathrm{e}^{v_{j_k}/j_k}\mu\to c\mu$ in total variation, and the limiting equation is $\mu_u=c\mu$. Integrating it and using \eqref{eq:big-relative-mass-interval} gives the stated bounds for $c$. The scalar comparison in \cref{cor:big-relative-orders} gives uniqueness of $c$.
 \end{proof}
 
-For $L^p$ data, \cref{sec:big-model-lp} will prove the stronger conclusion $u\sim\varphi$.
+For $L^p$ densities, \cref{sec:big-model-lp} proves the stronger conclusion $u\sim\varphi$.
 
 \subsection{Stability under changes of reference}
 \label{subsec:big-equation-reference-stability}
 
-Convergence of the models in $d_\theta$ controls the relative class of a limit. For equations, convergence of the data supplies the fixed dominating measures needed after extraction. The positive exponent then identifies the potential; at exponent zero, scalar uniqueness identifies the limiting measure.
+By \cref{thm:big-varying-model-closure}, convergence of the models for $d_\theta$ keeps limits in the relative class of the limiting model. For equations, convergence of the densities provides, after extraction, the fixed dominating measure required there. For a positive exponent, uniqueness then identifies the limiting potential; at exponent zero, uniqueness of the scalar identifies the limiting measure.
 
 \begin{theorem}\label{thm:big-varying-equation-stability}\index{Stability!varying model equations}
 Let $\varphi_j,\varphi\in\mathcal M_\delta(\theta)$ for some $\delta>0$, with $d_\theta(\varphi_j,\varphi)\to0$. Let $\nu$ be a finite non-pluripolar measure and let $f_j,f$ be nonnegative nonzero functions in $L^1(\nu)$ with $f_j\to f$ in $L^1(\nu)$. Put $\mu_j=f_j\nu$ and $\mu=f\nu$.
@@ -138,12 +139,12 @@ Let $\varphi_j,\varphi\in\mathcal M_\delta(\theta)$ for some $\delta>0$, with $d
  \mathrm{MA}_\theta(u_j)=\mathrm{e}^{\lambda u_j}\mu_j
 \]
 converge in $L^1(X)$ and in capacity to the solution $u\in\mathcal E_\varphi$ with datum $\mu$. Their Monge--Amp\`ere measures converge to $\mathrm{MA}_\theta(u)$ in total variation.
-\item Let $u_j\in\mathcal E_{\varphi_j}$ satisfy $\sup_Xu_j=0$ and $\mathrm{MA}_\theta(u_j)=c_j\mu_j$. Then $c_j\to c$, where $c$ is the scalar for reference $\varphi$ and datum $\mu$, and
+\item Let $u_j\in\mathcal E_{\varphi_j}$ satisfy $\sup_Xu_j=0$ and $\mathrm{MA}_\theta(u_j)=c_j\mu_j$. Then $c_j\to c$, where $c$ is the scalar for the reference $\varphi$ and the datum $\mu$, and
 \[
  \mathrm{MA}_\theta(u_j)\longrightarrow c\mu
  \quad\text{in total variation}.
 \]
-The potentials form an $L^1$ relatively compact family. Every $L^1$ cluster limit $u$ lies in $\mathcal E_\varphi$, has supremum zero and solves $\mathrm{MA}_\theta(u)=c\mu$. Each subsequence converging in $L^1$ converges to that limit in capacity.
+The potentials form a relatively compact family in $L^1$. Every $L^1$ cluster limit $u$ lies in $\mathcal E_\varphi$, has supremum zero and solves $\mathrm{MA}_\theta(u)=c\mu$. Each subsequence converging in $L^1$ converges to its limit in capacity.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
@@ -151,27 +152,27 @@ Write $M_0=\overline{\operatorname{vol}}_\theta(V_\theta)$. Every solution above
 \[
  s_j\geq\lambda^{-1}\log\frac{\delta}{\mu_j(X)},
 \]
-which is a uniform lower bound. To bound $s_j$ above, suppose after extraction that $s_j\to+\infty$. Normalized compactness gives $v_j=u_j-s_j\to v$ in $L^1$ with $\sup_Xv=0$. The fixed-measure lemma and $f_j\to f$ in $L^1(\nu)$ imply
+which is a uniform lower bound since $\mu_j(X)\to\mu(X)>0$. To bound $s_j$ from above, suppose that $s_j\to+\infty$ along a subsequence. By normalized compactness, after a further extraction, $v_j=u_j-s_j\to v$ in $L^1$ with $\sup_Xv=0$. The fixed-measure lemma \cref{lem:fixed-npp-integrals} and $f_j\to f$ in $L^1(\nu)$ imply
 \[
  \int_X\mathrm{e}^{\lambda v_j}f_j\,\mathrm{d}\nu
  \longrightarrow\int_X\mathrm{e}^{\lambda v}f\,\mathrm{d}\nu>0.
 \]
-The limit is positive since $f\nu$ is nonzero and ignores the poles of $v$. But the left side equals $\mathrm{e}^{-\lambda s_j}\mu_{u_j}(X)\leq M_0\mathrm{e}^{-\lambda s_j}$, a contradiction. Thus $s_j$ is bounded and the $u_j$ form an $L^1$ relatively compact family of genuine potentials.
+The limit is positive because $f\nu$ is nonzero and does not charge the poles of $v$. But the left-hand side equals $\mathrm{e}^{-\lambda s_j}\mu_{u_j}(X)\leq M_0\mathrm{e}^{-\lambda s_j}$, which tends to zero, a contradiction. Thus $s_j$ is bounded, and the $u_j$ form a relatively compact family in $L^1$ whose limits are not identically $-\infty$.
 
 Start with any subsequence and extract $u_j\to u$ in $L^1$. Extract again so that $\sum_j\|f_j-f\|_{L^1(\nu)}<\infty$. The function
 \[
  g=f+\sum_j|f_j-f|\in L^1(\nu)
 \]
-dominates all retained $f_j$. If $C$ is their common upper bound for $u_j$, then $\mu_{u_j}\leq\mathrm{e}^{\lambda C}g\nu$. By \cref{thm:big-varying-model-closure}, $u\in\mathcal E_\varphi$, the potentials converge in capacity and the measures converge weakly to $\mu_u$. On the other hand,
+dominates all retained $f_j$. If $C$ is a common upper bound for the $u_j$, then $\mu_{u_j}\leq\mathrm{e}^{\lambda C}g\nu$. By \cref{thm:big-varying-model-closure}, $u\in\mathcal E_\varphi$, the potentials converge in capacity, and the measures converge weakly to $\mu_u$. On the other hand,
 \[
  \mathrm{e}^{\lambda u_j}f_j\longrightarrow
  \mathrm{e}^{\lambda u}f\quad\text{in }L^1(\nu).
 \]
-Indeed, the error from $f_j-f$ is at most $\mathrm{e}^{\lambda C}\|f_j-f\|_1$, and \cref{lem:fixed-npp-integrals} for the fixed measure $f\nu$ controls the other term. Hence $\mu_u=\mathrm{e}^{\lambda u}\mu$, with convergence in total variation. Uniqueness in \cref{thm:big-model-exponential} identifies every cluster limit. The subsequence criterion gives all three convergences for the original sequence.
+Indeed, the error coming from $f_j-f$ is at most $\mathrm{e}^{\lambda C}\|f_j-f\|_{L^1(\nu)}$, and \cref{lem:fixed-npp-integrals} for the fixed measure $f\nu$ controls the remaining term. Hence $\mu_u=\mathrm{e}^{\lambda u}\mu$, with convergence in total variation. By the uniqueness in \cref{thm:big-model-exponential}, every cluster limit is this solution, and the subsequence criterion gives all three convergences for the original sequence.
 
-For the second case, integrating the equation gives
+In the second case, integrating the equation gives
 \[
  \frac{\delta}{\mu_j(X)}\leq c_j\leq\frac{M_0}{\mu_j(X)}.
 \]
-Since $\mu_j(X)\to\mu(X)>0$, these scalars stay in a compact subinterval of $(0,+\infty)$. Normalized compactness gives, after extraction, $u_j\to u$ in $L^1$, $\sup_Xu=0$, and $c_j\to c'>0$. Extract a summable density error as above. Then $\mu_{u_j}\leq Cg\nu$ for a fixed $C$, so \cref{thm:big-varying-model-closure} gives $u\in\mathcal E_\varphi$, capacity convergence and weak convergence to $\mu_u$. Since $c_jf_j\to c'f$ in $L^1(\nu)$, the limit equation is $\mu_u=c'\mu$. Scalar uniqueness in \cref{thm:big-model-normalized} gives $c'=c$. Thus the whole scalar sequence converges, and so does $c_j\mu_j$ in total variation. Applying the same argument within any $L^1$ convergent subsequence proves its capacity convergence and the asserted cluster equation.
+Since $\mu_j(X)\to\mu(X)>0$, these scalars stay in a compact subinterval of $(0,+\infty)$. After extraction, normalized compactness gives $u_j\to u$ in $L^1$ with $\sup_Xu=0$, and $c_j\to c'>0$. Extract a summable density error as above. Then $\mu_{u_j}\leq Cg\nu$ for a fixed $C$, so \cref{thm:big-varying-model-closure} gives $u\in\mathcal E_\varphi$, convergence in capacity and weak convergence to $\mu_u$. Since $c_jf_j\to c'f$ in $L^1(\nu)$, the limiting equation is $\mu_u=c'\mu$, and the uniqueness of the scalar in \cref{thm:big-model-normalized} gives $c'=c$. Hence the whole sequence of scalars converges to $c$, and $c_j\mu_j\to c\mu$ in total variation. Applying the same argument within any $L^1$-convergent subsequence proves its convergence in capacity and the equation for its limit.
 \end{proof}
