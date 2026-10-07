@@ -1,4 +1,8 @@
-# Current research status — 6 October 2026
+# Current research status — 7 October 2026
+
+## Checkpoint 529 — Latest author updates and positive left limits
+
+[The continuation record](editorial/latest-author-left-limit-integration-529.md) preserves all incoming author work and integrates the two checked positive left-limit/countability propositions with textbook prose. The clean 1488-printed-page book and matching homepage are deployed and actually verified. Both new OT questions and current locators are added to the existing catalogue without changing the original 42 descriptions. The final empty reconstruction reproduces all 1516 book and 17 companion page texts with clean logs and exact sources. Native compiler response and independent intake reviews remain pending; missing original house-audit tooling is explicitly qualified. Next: finalize private synchronization, then review and integrate S04 and the remaining incoming mathematical sources at their exact scope.
 
 ## Checkpoint 528 — Oeljeklaus–Toma manifolds
 
