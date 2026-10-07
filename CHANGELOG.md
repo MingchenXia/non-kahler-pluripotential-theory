@@ -1,5 +1,9 @@
 # Modification history
 
+## Standalone P05 divergence and conformal gauges — Xean, 7 October 2026
+
+The [P05 paper](research/papers/P05-flat-LCK-divergence-and-Kodaira-gauges.tex) proves the integrated Lee-divergence identity and the four equivalent conditions for one flat strict LCK metric. Its explicit fixed Kodaira model separates the flat conformal gauge from the Gauduchon gauge while exhibiting a Vaisman metric on the same complex surface. Complete original-task review remains INCONCLUSIVE; five statement-only reconstructions, two independent integral derivations and a separate scoped PASS establish the limited result. Xean used gpt-6.1-sol xhigh with concurrency one and no arbitrary call or time caps. The [review](research/papers/P05-flat-LCK-divergence-and-Kodaira-gauges.review.md) retains all original proofs and raw reports, excludes the misbound historical task quotation, and records the unavailable final owner exit honestly. Two clean local exports and all four final page views succeed; native editor compilation remains unverified on this host. This is the twenty-fourth standalone article and eighteenth original ID with checked scoped results. Completely resolved originals remain P08,P12,P22,S13 (4/41). General P05 existence remains unresolved. All 60 prior standalone sources and incoming book revisions are preserved without rebuilding the book.
+
 ## 6 October 2026 — Oeljeklaus–Toma manifolds 528
 
 [The new direction](research/editorial/oeljeklaus-toma-directions-528.md) answers the author's request to explore themes not yet in the literature. New Section 27.19 treats Inoue surfaces and Oeljeklaus–Toma manifolds:
