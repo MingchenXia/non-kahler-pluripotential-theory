@@ -1,0 +1,499 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newcommand{\ddc}{dd^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\I}{\mathcal I}
+\newcommand{\cO}{\mathcal O}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Exact intrinsic traces on scalar Hopf manifolds\newline
+and unbounded mass in every dimension at least three}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\noindent\textbf{Working draft.} Mathematical review, independent
+reconstruction and final comparison are pending. The unrestricted
+non-K\"ahler trace problem remains open.
+\begin{abstract}
+For every scalar Hopf manifold of dimension at least three, we extend
+the original smooth Xia--Zhang threefold construction to obtain
+unbounded Monge--Amp\`ere mass. An exact comparison of angularly
+integrated densities supplies the extension. On these targets, ambient
+potentials pulled back from projective space nevertheless have exact
+intrinsic traces on every smooth compact modification. The full trace
+envelope descends to a closed trace on the projective base. A finite
+divisorial extraction argument works in arbitrary base dimension:
+blow up each divisor image and resolve the target without changing its
+smooth locus, while the order of a pulled-back top form decreases.
+We prove ideal-type compatibility, addition and analytic approximation,
+and compute positive finite individual masses. These conclusions treat
+the specified pullback data; unrestricted non-K\"ahler exactness and
+ordinary-type independence are not claimed.
+\end{abstract}
+
+We use $d^c=\frac{i}{4\pi}(\bar\partial-\partial)$ and
+$\ddc=\frac{i}{2\pi}\partial\bar\partial$.
+Potentials have their genuine canonical representatives.
+The ideal $\I(tu)$ is defined by local integrability of
+$|g|^2e^{-tu}$, with no additional factor two.
+An ideal restricted to a submanifold always means its coherent image
+ideal. Non-pluripolar products with nonclosed smooth backgrounds use
+bounded local products with smooth corrections and truncation
+\cite[Section 2.1]{BGL}.
+
+\section{Geometry and statement}
+Fix an integer $n\ge3$ and put $d=n-1$. Let
+\[
+ M=(\mathbb C^{n+1}\setminus\{0\})/\langle z\mapsto ez\rangle,
+ \qquad
+ Y=H_n=(\mathbb C^n\setminus\{0\})/\langle z\mapsto ez\rangle.
+\]
+The inclusion of the first $n$ coordinates identifies $Y$ with a
+linear submanifold of $M$. Projectivization gives the commuting square
+\[
+ \begin{matrix}Y&\longrightarrow&M\\
+ q\downarrow&&\downarrow p\\
+ B=\PP^d&\longrightarrow&\PP^n.
+ \end{matrix}
+\]
+Both vertical maps are holomorphic submersions with connected elliptic
+fiber $E=\mathbb C/(\mathbb Z+2\pi i\mathbb Z)$.
+Normalize the Fubini--Study form $\kappa$ on $B$ by
+$\int_B\kappa^d=1$. On $Y$, put
+\[
+ r=\log\|z\|^2\pmod 2,
+ \quad \alpha=q^*\kappa=\ddc r,
+ \quad \beta=dr\wedge d^cr,
+ \quad \Omega_{a,b}=a\alpha+b\beta \quad(a,b>0).
+\]
+The differential of $r$ is global. The form $\beta$ has rank one,
+is positive along the fibers, and $\int_E\beta=2$.
+Thus $\Omega_{a,b}$ is Hermitian, $\int_Y\Omega_{a,b}^n=2nba^d$,
+and $d\Omega_{a,b}=-b\,dr\wedge\alpha\ne0$.
+The target is non-K\"ahler, since its first Betti number is one.
+Section~\ref{sec:bmp} proves that it fails BMP for every $n\ge3$,
+using the original threefold family of \cite{XZ}.
+
+Let $U$ be genuine quasi-psh on $\PP^n$ with $\nu(U,B)=0$,
+and let $u=p^*U$. Set
+\[
+ \mathfrak b_t=\I(tU)\cO_B,
+ \qquad \mathfrak a_t=\I(tu)\cO_Y.
+\]
+These image ideals are nonzero. For a prime divisor $F$ over $B$,
+write
+\[
+ \tau_B(F)=\lim_{t\to\infty}t^{-1}\ord_F\mathfrak b_t;
+\]
+define $\tau_Y$ from $\mathfrak a_t$ in the same way.
+For any sufficiently large background $\Theta$, let
+$T_\Theta$ denote the usc supremum of all $\Theta$-psh potentials
+$v\le0$ satisfying $\nu(v,F)\ge\tau(F)$ on every smooth compact
+modification. The definition includes all competitors.
+
+\begin{theorem}\label{thm:main}
+There is $a_0>0$, depending on the ambient curvature bound for $U$,
+such that for $a\ge a_0$ and every $b>0$,
+\[
+ T_{\Omega_{a,b}}(u;Y)=q^*T_{a\kappa}(U;B).
+ \tag{1}
+\]
+For every smooth compact modification $\pi:Z\to Y$ and every prime
+divisor $D$ on $Z$, simultaneously,
+\[
+ \nu(T_{\Omega_{a,b}}(u;Y)\circ\pi,D)=\tau_Y(D).
+ \tag{2}
+\]
+Equality (2) also holds for the trace in any Hermitian background
+$\Omega\ge\Omega_{a,b}$. In the backgrounds in (1), the trace has
+positive finite individual non-pluripolar mass and
+\[
+ \int_Y\MA_{\Omega_{a,b}}(T_{\Omega_{a,b}})
+   =2nb\int_B\MA_{a\kappa}(T_{a\kappa}),
+ \qquad
+ 2nb(a/2)^d\le\int_Y\MA_{\Omega_{a,b}}(T_{\Omega_{a,b}})
+   \le2nba^d.
+ \tag{3}
+\]
+The ideal class of the traces in (1) is independent of $a,b$ within
+this range, is additive and positively homogeneous in the ambient
+ideal trace data, and admits the dyadic analytic approximation
+described below.
+\end{theorem}
+
+\section{Unbounded mass in all Hopf dimensions}\label{sec:bmp}
+\begin{proposition}\label{prop:bmp}
+For every $n\ge3$, $H_n$ fails the bounded mass property.
+There are globally smooth $V_\eta$ with
+$\alpha+\beta+\ddc V_\eta>0$ and total mass tending to infinity.
+\end{proposition}
+\begin{proof}
+Use the original Xia--Zhang family, with its original heat scale
+$\varepsilon_\eta=\eta^{1/\eta^2}$, not a new transport family.
+Write $\xi\in\mathbb C^d$, $x=\log|\xi|^2$,
+$w=\log z_0\pmod{\mathbb Z+2\pi i\mathbb Z}$ and
+$\mu=e^x/(1+e^x)$ on the projective affine chart. Then
+$r=w+\bar w+\log(1+e^x)$.
+There are $n-2$ angular directions orthogonal to the radial direction.
+Differentiating in these directions gives the identical angular
+entries $A=(\mu+V_x)/\mu$. The radial/fiber block, in the frame
+of \cite[Lemma 2.2]{XZ}, is
+\[
+ K_V=\begin{pmatrix}
+ (\mu+V_{xx})/[\mu(1-\mu)]&
+ (\mu+V_{x\bar w})/\sqrt{\mu(1-\mu)}\\
+ (\mu+V_{wx})/\sqrt{\mu(1-\mu)}&1+V_{w\bar w}
+ \end{pmatrix}.
+\]
+The background block has determinant one. The differential-form
+expansion contains $-(1-\mu)V_x$, but its radial contribution
+cancels that of the angular prefactor, giving exactly this block.
+Thus the positivity conditions in every dimension are
+\[
+ 1+V_{w\bar w}>0,\qquad \mu+V_x>0,\qquad
+ Q[V]=V_{xx}+\mu-\frac{|\mu+V_{x\bar w}|^2}{1+V_{w\bar w}}>0.
+\]
+The source operator is $i\partial\bar\partial$; dividing both
+source background forms by $2\pi$ gives ours with the same
+numerical potential and these same ratios.
+
+Normalize angular contact measure by mass one and write $dA_E$
+for Haar probability measure on the elliptic fiber. The radial
+Fubini--Study density on $\PP^d$ is
+$d\mu^{d-1}\mu'\,dx=d\mu^d(1-\mu)\,dx$.
+Since the fiber mass is two, the angularly integrated background
+volume density is $2nd\mu^d(1-\mu)\,dx\,dA_E$.
+Let $J_n(V;x,w)$ denote the angularly integrated smooth
+Monge--Amp\`ere density. Multiplying by $A^{n-2}\det K_V$ gives
+\[
+ J_n(V;x,w)=\frac{n(n-1)}6(\mu+V_x)^{n-3}J_3(V;x,w).
+ \tag{7}
+\]
+This compares integrated densities; the angular spheres in the
+different dimensions each have their own probability normalization.
+
+The original family is $V_\eta=W_\eta+g_\eta$.
+It has all three strict positivity inequalities, is independent
+of $x$ at the negative end, and is one constant at the positive end
+\cite[Proposition 4.1]{XZ}. These endpoint properties give the
+same global smooth extension with $\xi\in\mathbb C^d$.
+Its construction also gives
+\[
+ \begin{gathered}
+ \sup[W_{\eta,x}]_-=o(1),\qquad
+ -m_\eta\le g_\eta'\le0,\qquad m_\eta=o(1),\\
+ g_\eta''=r_\eta-m_\eta\psi,\qquad
+ \int r_\eta=m_\eta,\quad\int\psi=1.
+ \end{gathered}
+\]
+Here $r_\eta,\psi\ge0$ and $g_\eta=0$ on $x\le-2$.
+Consequently $\mu+V_{\eta,x}\ge1/4$ for $x\ge0$ and small $\eta$.
+
+The source proves $\int J_3(V_\eta)\to\infty$. To localize this
+divergence, on $x<0$ one has
+$W_\eta=F_\eta(\varepsilon_\eta,w)$, with no $x$ derivatives.
+Since $\int_EF_{w\bar w}\,dA_E=0$, exact fiber integration gives
+\[
+ \int_E J_3(V_\eta;x,w)\,dA_E
+   =12(\mu+g_\eta')[g_\eta''+\mu(1-\mu)].
+\]
+Use $0<\mu+g_\eta'\le\mu$ and
+$\int|g_\eta''|\le2m_\eta$. The total mass on $x<0$ is at most
+$12\int_{-\infty}^0\mu^2(1-\mu)\,dx+24m_\eta
+=3/2+24m_\eta$.
+The high amplitude of $F_{w\bar w}$ has been integrated exactly;
+no uniform derivative bound is needed there.
+It follows that $\int_{x\ge0}J_3(V_\eta)\to\infty$.
+Equation (7) now gives
+\[
+ \int_{H_n}(\alpha+\beta+\ddc V_\eta)^n
+ \ge\frac{n(n-1)}6\,4^{-(n-3)}\int_{x\ge0}J_3(V_\eta)
+ \longrightarrow\infty.
+\]
+Every other Hermitian form $h$ dominates $c(\alpha+\beta)$
+for some $c>0$. The potentials $cV_\eta$ have strictly positive
+perturbed $h$, and their smooth masses dominate $c^n$ times
+the preceding divergent masses. This proves BMP failure.
+\end{proof}
+
+\section{Divisorial extraction in arbitrary dimension}
+\begin{lemma}\label{lem:extract}
+Let $f:Z\to B$ be a dominant holomorphic map of connected smooth
+compact complex manifolds, with $\dim B=d$, and let $D$ be a prime
+divisor on $Z$. Either $f(D)=B$, or there is a smooth compact
+modification $\sigma:B'\to B$ such that $f$ lifts holomorphically
+near generic $D$ and $D$ dominates a prime divisor $F$ on $B'$.
+For an integer $e\ge1$, every nonzero coherent ideal $\mathfrak b$
+and every genuine quasi-psh $w$ on $B$ satisfy
+\[
+ \ord_D f^*\mathfrak b=e\ord_F\sigma^*\mathfrak b,
+ \qquad \nu(w\circ f,D)=e\nu(w\circ\sigma,F).
+ \tag{8}
+\]
+In the horizontal case both orders and generic Lelong numbers are zero.
+\end{lemma}
+\begin{proof}
+Maintain a compact analytic graph proper over $Z$ which is an
+isomorphism near generic $D$, with a dominant map to a smooth
+compact modified base. The graph may be singular away from this
+unchanged neighborhood. The divisor image $S$ is irreducible
+analytic by the proper mapping theorem
+\cite[Chapter II, Theorem 8.8]{Dem}.
+Near generic $D$, define $J_D(f)$ as the minimum order of the
+coefficients of $f^*(dy_1\wedge\cdots\wedge dy_d)$ in a smooth
+source frame. Dominance gives a finite nonnegative integer,
+independent of the local smooth coordinate choices.
+
+If $S$ has codimension $c\ge2$, blow up its reduced coherent ideal.
+The blowup can be singular globally, but it is smooth over the
+smooth part of $S$. There use $S=\{y_1=\cdots=y_c=0\}$ and let
+$m=\min_{i\le c}\ord_D f^*y_i\ge1$.
+Choose $y_1$ of least order and shrink at generic $D$ so its
+leading coefficient is a unit. All ratios $f^*y_i/f^*y_1$ are
+holomorphic there, giving a lift to the smooth blowup chart
+\[
+ (y_1,\ldots,y_c)=(s,st_2,\ldots,st_c).
+\]
+Take the main graph of this lift. Resolve the target blowup using
+a proper resolution which is an isomorphism on its whole smooth
+locus \cite[Theorem 2.0.1]{Wlo}. The new target is smooth and
+compact. The lift at generic $D$ is preserved, since its image
+lies in that smooth locus. Taking the main graph of the resulting
+meromorphic lift again preserves the generic source neighborhood.
+
+The smooth-center Jacobian identity is
+\[
+ dy_1\wedge\cdots\wedge dy_d
+   =s^{c-1}ds\wedge dt_2\wedge\cdots\wedge dt_c
+                  \wedge dy_{c+1}\wedge\cdots\wedge dy_d.
+\]
+The target resolution is locally an isomorphism here. Therefore
+\[
+ J_D(f_{\rm new})=J_D(f)-(c-1)m\ge0.
+\]
+Each step strictly decreases $J$. After finitely many steps the
+image has codimension one; it cannot dominate the target if its
+original image was proper. This proves extraction without a
+resolution of the source graphs that might change generic $D$.
+Generic ideal generators along $F$ are powers of its equation
+times a unit ideal, giving the first equality in (8).
+
+At generic smooth points, tangential dominance $D\to F$ gives
+rank $d-1$. Absorb a unit into a local normal coordinate using
+an $e$-th root, and use the tangential base coordinates as source
+coordinates. The exact local form is
+\[
+ (z_1,z_2,\ldots,z_d,z')\longmapsto(z_1^e,z_2,\ldots,z_d).
+\]
+After a smooth local correction, divisorial Siu removal writes
+$w\circ\sigma=c\log|y_1|^2+R$, with $R$ psh and generic
+Lelong number zero on $F$
+\cite[Chapter III, (8.15)--(8.16)]{Dem}.
+At a very general point of $F$ its full point Lelong number is zero.
+Skoda's lemma gives integrability of $e^{-tR}$ for each $t>0$
+\cite[Lemma 5.6(a)]{DemAM}.
+For $e>1$ choose $1<p<e/(e-1)$. The ramification density
+$|y_1|^{2/e-2}$ lies in $L^p$, so change of variables and
+H\"older, using Skoda for $tp'R$, give
+\[
+ \int e^{-tR(z_1^e,z_2,\ldots,z_d)}dV_z
+ =C_e\int e^{-tR(y)}|y_1|^{2/e-2}dV_y<\infty.
+\]
+Free variables contribute a harmless product factor. For $e=1$
+use Fubini. A positive generic divisor coefficient $c'$ of the
+residual pullback would force nonintegrability when $tc'\ge1$.
+Its coefficient is therefore zero, and the logarithm gives $ec$.
+This proves the Lelong equality, including when $R|_F\equiv-\infty$.
+In the horizontal case $D\to B$ is a submersion at very general
+points. Skoda and Fubini give zero generic coefficient; every
+nonzero ideal is generically a unit there.
+\end{proof}
+
+\section{Ideal pullback and the full envelope}
+\begin{lemma}\label{lem:ideals}
+For a holomorphic submersion $q$ and a genuine quasi-psh potential
+$v$ on its base, $\I(tq^*v)=q^*\I(tv)$ for every real $t>0$.
+In the geometry above, $\mathfrak a_t=q^*\mathfrak b_t$ and
+$\nu(u,Y)=0$.
+\end{lemma}
+\begin{proof}
+Use local product coordinates $(x,y)$. The inclusion of the extended
+base ideal follows by Fubini. For the reverse inclusion expand an
+integrable holomorphic germ as $g(x,y)=\sum_\gamma g_\gamma(x)y^\gamma$.
+The fiber coefficient estimate for holomorphic functions bounds
+$|g_\gamma(x)|^2$ by a constant times the fiber integral of $|g|^2$.
+Each coefficient therefore lies in $\I(tv)$ at the selected base point.
+Every finite Taylor truncation belongs to its extended ideal $J$,
+so $g\in J+(y)^N$ for all $N$. Krull intersection in the Noetherian
+local analytic ring modulo $J$ gives $g\in J$. Smooth corrections
+do not affect integrability. Apply the result to $p$ and restrict
+the ideal to $Y$. Local submersion coordinates also preserve the
+generic Lelong number along the inverse image of $B$.
+\end{proof}
+
+For clarity, recall the supplied closed-target trace construction.
+Choose $a\kappa$ at least twice an admissible Hermitian background on
+$B$ and discard finitely many indices of the ambient analytic
+regularization $U_m$. The normalized ordinary analytic models
+\[
+ w_j=P_{a\kappa}[U_{2^j}|_B]
+\]
+decrease to $w=T_{a\kappa}(U;B)$.
+The trace majorant lies in $\PSH(B,a\kappa/2)$ and is below $w$.
+Closed mass monotonicity and the smaller-background expansion give
+$\int_B\MA_{a\kappa}(w)\ge(a/2)^d$, while the closed upper bound is
+$a^d$. The decreasing positive-mass model theorem
+\cite[Proposition 3.1.12]{SGPT} now gives, for every divisor $F$ over $B$,
+\[
+ \nu(w,F)=\lim_j\nu(w_j,F)
+  =\lim_j2^{-j}\ord_F\mathfrak b_{2^j}=\tau_B(F).
+ \tag{6}
+\]
+The model and positive-mass hypotheses are essential; arbitrary
+decreasing quasi-psh convergence would not imply this equality.
+The closed-target construction and analytic envelope properties are
+the known trace background, rather than conclusions imported to $Y$.
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+Apply Lemma \ref{lem:extract} to $q\circ\pi$ for every target
+modification $\pi:Z\to Y$. Equations (8), (6) and Lemma
+\ref{lem:ideals} give
+$\nu(q^*w\circ\pi,D)=\tau_Y(D)$ for each divisor, so $q^*w$ is
+an exact competitor.
+
+The compact elliptic group acts along the fibers, preserving
+$\alpha,\beta$ and every $\mathfrak a_t$. It consequently preserves
+the full trace competitor family, including its constraints on all
+modifications. Its usc envelope is invariant and descends to a
+genuine quasi-psh potential on $B$ by local sections. For a basic
+potential $q^*v$, the background inequality is equivalent to
+$a\kappa+\ddc v\ge0$. Indeed wedge the background inequality
+with the smooth semipositive $\beta$ and push forward by $q$.
+Since $\beta^2=0$ and its fiber integral is two, the resulting
+positive current is $2(a\kappa+\ddc v)$. Conversely add $b\beta\ge0$.
+
+Every base modification $B'\to B$ lifts to the smooth compact
+modification $Y\times_B B'\to Y$. The inverse image of a prime divisor
+$F$ is prime, since the elliptic fibers are connected; at generic
+points its multiplicity is one. Thus the descended trace envelope
+satisfies every base constraint, and is at most $w$. The opposite
+inequality follows from the exact competitor $q^*w$. This proves
+(1) and (2). For $\Omega\ge\Omega_{a,b}$ the same exact competitor
+lies below $T_\Omega$, so
+$\tau_Y(D)\le\nu(T_\Omega,D)\le\nu(q^*w,D)=\tau_Y(D)$.
+
+For $v_j=\max(v,-j)$ on the base, actual bounded local products give
+\[
+ (\Omega_{a,b}+\ddc q^*v_j)^n
+   =nb\,\beta\wedge q^*(a\kappa+\ddc v_j)^d,
+\]
+since the horizontal current has rank at most $d$ and $\beta^2=0$.
+Multiply by $\mathbf1_{\{v>-j\}}$ and pass to the non-pluripolar
+limit. Integrating over the fibers gives the factor $2nb$ in (3).
+The closed-base bounds above give its two inequalities.
+These are individual masses, not extremal volumes of all ordinary
+representatives.
+
+Different sufficiently large base backgrounds produce potentials
+with the same numbers (6); the closed K\"ahler ideal criterion
+\cite[Proposition 3.2.1]{SGPT} gives the same ideals at every real
+weight. Lemma \ref{lem:ideals} transfers this to (1).
+Intrinsic trace data are additive and positively homogeneous.
+On the base, the sum of two exact realizers has the sum of their
+divisorial numbers. The same criterion identifies its ideal class
+with the trace for $U_1+U_2$, in a background with sufficient
+curvature room. Positive scaling is identical. Pull back to $Y$.
+This uses the ideal criterion on the projective base, and does not
+assume a global valuative criterion on an arbitrary non-K\"ahler target.
+\end{proof}
+
+\section{Approximation and a point trace}
+For the dyadic $w_j$ above, put $v_j=q^*w_j$. Compact elliptic
+invariance applied to the full ordinary obstacle envelopes shows,
+for $h\in\PSH(B,a\kappa)$,
+\[
+ P_{\Omega_{a,b}}[q^*h]=q^*P_{a\kappa}[h].
+\]
+At each finite obstacle level the competitor family is invariant;
+its full supremum descends, and ordinary order is equivalent on
+the base by surjectivity. Thus $v_j$ are the full ordinary analytic
+models of the pulled-back restricted approximants. They decrease
+to (1) in $L^1(Y)$: decreasing quasi-psh convergence is genuine,
+or one can integrate a fixed invariant volume along the fibers.
+For every divisor $D$ over $Y$, (6) and (8) yield
+\[
+ \nu(v_j,D)\longrightarrow\tau_Y(D).
+\]
+The same potentials pulled back to any target modification converge
+in $L^1$ there, by quasi-psh compactness and uniqueness off the
+exceptional set. This assertion supplies no convergence theorem
+for extremal non-K\"ahler singularity volumes or capacities.
+
+A concrete trace involving exceptional divisors is obtained from
+\[
+ U([z_0:\cdots:z_n])
+  =\log\frac{\sum_{i=0}^{n-2}|z_i|^2}{\sum_{i=0}^{n}|z_i|^2},
+ \qquad B=\{z_n=0\}.
+\]
+Its generic number along $B$ is zero, and its restricted image
+ideals are
+\[
+ \mathfrak b_t=\mathfrak m_P^{\max(\lfloor t-d+1\rfloor,0)},
+ \qquad P=[0:\cdots:0:1]\in B.
+\]
+The formula follows from the normal radial integrability condition
+$k>t-d$ in $d$ normal coordinates to the ambient singular line.
+Consequently $\tau_Y(D)=\ord_Dq^*\mathfrak m_P$ on every model.
+The genuine potential $q^*(U|_B)$ is an explicit exact realizer,
+singular along the elliptic fiber over $P$. For $a>1$,
+\[
+ \int_Y\MA_{\Omega_{a,b}}(q^*(U|_B))=2nb(a^d-1).
+\]
+On the point blowup the horizontal current, after removing the
+exceptional divisor $F$, has class $aH-F$ and smooth semipositive
+representative $(a-1)\sigma^*\kappa+\eta$. Here $\eta$ is the
+pullback of the Fubini--Study form by the resolved projection to
+$\PP^{d-1}$. The mixed intersections of $H$ and $F$ vanish,
+$H^d=1$ and $F^d=(-1)^{d-1}$, giving $(aH-F)^d=a^d-1$.
+Its smooth product off $F$ is the pullback of the actual
+non-pluripolar product, and a smooth measure charges no divisor.
+The displayed potential need not equal the normalized trace envelope.
+
+\begin{remark}
+The theorem treats arbitrary genuine ambient $U$ with the stated
+generic condition, including nonanalytic data and cases where
+$U|_B$ is identically $-\infty$; image ideals, not naive restriction,
+define the trace. The base has arbitrary dimension $d\ge2$. No finite selection
+of exceptional divisors replaces the simultaneous constraint.
+Ideal-type compatibility is asserted for the invariant backgrounds
+in (1). Exactness in larger arbitrary backgrounds follows by the
+sandwich argument, but ordinary-type independence is not claimed.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{BGL} S. Boucksom, V. Guedj and C. H. Lu,
+\emph{Volumes of Bott--Chern classes}, arXiv:2406.01090.
+\bibitem{Dem} J.-P. Demailly, \emph{Complex Analytic and Differential
+Geometry}, Harvard-hosted June 2012 manuscript.
+\bibitem{DemAM} J.-P. Demailly, \emph{Analytic Methods in Algebraic
+Geometry}, Surveys of Modern Mathematics 1, 2012.
+\bibitem{SGPT} M. Xia, \emph{Singularities in global pluripotential
+theory}, lecture manuscript, October 4, 2026 version,
+\url{https://mingchenxia.github.io/Lectures/SGPT_final.pdf}.
+\bibitem{Wlo} J. W\l{}odarczyk,
+\emph{Resolution of singularities of analytic spaces},
+Proceedings of the 15th G\"okova Geometry--Topology Conference
+(2008), 31--63, published 2009,
+\url{https://gokovagt.org/proceedings/2008/ggt08-wlodarczyk.pdf}.
+\bibitem{XZ} M. Xia and K. Zhang,
+\emph{A counterexample to the bounded mass property},
+arXiv:2608.21053v1.
+\end{thebibliography}
+\end{document}
