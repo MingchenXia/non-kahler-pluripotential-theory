@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint 533 reconstructs and integrates the moving-logarithmic S05 special case. General S05 remains open. Complete scoped reads, 63 analytic obligations and 36 final page views pass; both author deployments and new empty-source reconstruction pass; final metadata package checks pass; synchronize privately. The complete S07 first read also passes; next reconstruct its proof, then S06 and incoming S12, alongside current primary/arXiv proof review and whole-book reader revision. See [the scoped integration](moving-logarithmic-selection-533.md).
+Current continuation: checkpoint534 integrates the directly reconstructed S07 product case. The full supporting set and invariant-measure uniqueness are proved for the specified positive continuous residual; approximation retains the divisor and uses uniform residual tensor convergence. General S07 remains open. Complete scoped reads,48 analytic obligations,26 final page views and both actual deployments pass. New empty-source reconstruction reproduces all1536 book and17 companion page texts, with all372 editable book sources exact, clean logs and publication skipped. Final metadata package comparisons pass; private synchronization follows. Next reconstruct S06 and incoming S12, alongside current primary/arXiv proof review and whole-book reader revision. See [the scoped integration](singular-product-adjoints-534.md).
 
 ## Greatest exponential left-limit review 526
 

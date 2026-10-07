@@ -1,0 +1,175 @@
+\Needspace{12\baselineskip}
+\subsection{Weak adjoints on a product surface}
+\label{subsec:singular-product-adjoints}
+
+On the product of two projective lines, the averaging probability of \eqref{eq:logarithmic-selected-residual} is the full supporting probability. The continuous positive residual defines a weak linearization, and spherical harmonics give invariant-measure uniqueness without a regularity assumption.
+
+In this subsection take $Y=\mathbb P^1_y$, $\kappa=\omega_2$ and $k=1$. Keep $a,d,b,H,\theta,\eta,\psi$ and $\mathrm{d}W=\omega_1\wedge\omega_2$ as above, and write $\phi=\phi_{a,d}$, $A=A_0=c_0H$ and $u=\psi+w_0$. Choose a smooth positive probability volume form $\mathrm{d}V=q\,\mathrm{d}W$ and put $F=\log(2bH/q)$. Then
+\[
+ \Omega=A\omega_1+b\omega_2,\qquad
+ \theta+\ddc u=\Omega+d[D],\qquad
+ \mathrm{MA}_\theta(u)=\Omega^2=c_0\mathrm{e}^F\mathrm{d}V.
+\]
+The model is admissible by \cref{prop:logarithmic-product-model}, and $u\sim\phi$ gives $B_\phi(F)=\log c_0$. Nonconstant $b$ cannot be harmonic, so $\ddc\theta=(\ddc b)\wedge\omega_2\ne0$. Every smooth potential perturbation has the same $\ddc\theta$ and is therefore non-Gauduchon.
+
+For a smooth function $h$ on the product, define its partial Laplacians by $\ddc_i h=(\Delta_i h)\omega_i$. With the mass-one Fubini--Study normalization, $\Delta_i$ is the Laplacian of the unit round sphere.
+
+\begin{lemma}\label{lem:sphere-signed-resolvent}
+Let $V>0$ be continuous on $\mathbb P^1$, and let $T$ be a finite signed measure such that
+\[
+ \int_{\mathbb P^1}(\Delta f-Vf)\,\mathrm{d}T=0
+ \qquad(f\in C^\infty(\mathbb P^1)).
+\]
+Then $T=0$.
+\end{lemma}
+\begin{proof}
+Let $H_t$ be the sphere heat operator. On spherical harmonics of degree $\ell$, it acts by $\mathrm{e}^{-t\ell(\ell+1)}$. The harmonic series defines a smooth heat solution for $t>0$; for smooth initial functions, the maximum principle gives positivity and contraction in the uniform norm. Density of smooth functions extends $H_t$ to a positive, strongly continuous contraction on $C(\mathbb P^1)$. Choose $M\geq\max V$ and define
+\[
+ R_Mg=\int_0^\infty\mathrm{e}^{-Mt}H_tg\,\mathrm{d}t.
+\]
+Then $\|R_M\|\leq M^{-1}$ and $(M-\Delta)R_Mg=g$ in distributions. For any $g\in C(\mathbb P^1)$, the map
+\[
+ f\longmapsto R_M((M-V)f-g)
+\]
+contracts by at most $1-\min V/M<1$. Its continuous fixed point satisfies $\Delta f=Vf+g$ in distributions, with a continuous right-hand side. The functions $f_\varepsilon=H_\varepsilon f$ are smooth and satisfy
+\[
+ f_\varepsilon\longrightarrow f,\qquad
+ \Delta f_\varepsilon=H_\varepsilon(Vf+g)\longrightarrow Vf+g
+\]
+uniformly. Thus $(\Delta-V)f_\varepsilon\to g$ uniformly. Testing against the finite measure $T$ gives $\int g\,\mathrm{d}T=0$ for every continuous $g$, hence $T=0$.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:singular-product-full-adjoint}\index{Adjoint measure!singular product with continuous residual}
+The weight and current
+\[
+ \rho=\frac1{2ab},\qquad
+ Q=\rho\Omega=\frac{A}{2ab}\omega_1+\frac1{2a}\omega_2
+\]
+satisfy $\mathrm{d}Q=0$ and $\int_X\rho\Omega^2=1$. For smooth real $h$, the measure-valued and logarithmic linearizations at $u$ are
+\[
+ D_u\mathrm{MA}_\theta(h)=2\Omega\wedge\ddc h,\qquad
+ L_uh=\frac{2\Omega\wedge\ddc h}{\Omega^2}
+        =\frac{\Delta_1h}{A}+\frac{\Delta_2h}{b}.
+\]
+The only Borel probability satisfying $\int_XL_uh\,\mathrm{d}\mu=0$ for every smooth real $h$ is
+\begin{equation}\label{eq:singular-product-full-support}
+ \nu=\rho\Omega^2=\frac Aa\,\mathrm{d}W,\qquad
+ \mathcal A_\phi(F)=\{\nu\}.
+\end{equation}
+If $r\geq0$ is measurable, $\int_Xr\Omega^2=1$ and $\ddc(r\Omega)=0$, then $r=\rho$ almost everywhere.
+\end{theorem}
+\begin{proof}
+We first define the weighted current and variation, then prove invariant-measure uniqueness and apply the supporting inequality on the full space $C(X)$.
+
+\emph{The current and operator.} Since $A/b$ depends only on the first curve, $\mathrm{d}((A/b)\omega_1)=0$ distributionally; this follows also by uniform smooth approximation of its coefficient. Thus $Q$ is closed, and $\int\rho\Omega^2=\int A\omega_1/a=1$. The coefficient $\rho$ is smooth and $\Omega$ is continuous, so the product defining $Q$ is well defined. Uniform positivity of $\Omega$ gives $\Omega+t\ddc h>0$ for sufficiently small signed $t$. The bounded-product calculation used in \cref{thm:moving-logarithmic-selection}, now with the smooth perturbation $th$, gives
+\[
+ \mathrm{MA}_\theta(u+th)
+       =\Omega^2+2t\Omega\wedge\ddc h+t^2(\ddc h)^2.
+\]
+This proves the two linearizations; mixed components of $\ddc h$ have zero wedge with the diagonal $\Omega$. Distributional Stokes gives $\int L_uh\,\mathrm{d}\nu=2\int\ddc h\wedge Q=0$.
+
+\emph{Invariant probabilities.} Choose real spherical harmonics $e_j$ on the second sphere, with $e_0=1$ and $\Delta_2e_j=-\lambda_je_j$. Only the constant mode has eigenvalue zero. For an invariant probability $\mu$, define finite signed measures $T_j$ on the first sphere by
+\[
+ \int f\,\mathrm{d}T_j
+       =\int_X\frac{f(x)e_j(y)}{A(x)}\,\mathrm{d}\mu.
+\]
+Testing $L_u$ on $f(x)e_j(y)$ gives
+\[
+ \int\left(\Delta_1f-\lambda_j\frac Ab f\right)\,\mathrm{d}T_j=0.
+\]
+For $j=0$, testing on spherical harmonics of the first sphere shows that $T_0=C\omega_1$. Their finite span is uniformly dense, because restrictions of polynomials decompose into harmonics and polynomials are dense on the sphere. The first marginal of $\mu$ is therefore $CA\omega_1$, and probability normalization gives $C=1/a$. For every nonconstant mode, \cref{lem:sphere-signed-resolvent} with $V=\lambda_jA/b>0$ gives $T_j=0$. As these are identities of measures, their test functions may then be multiplied by the continuous function $A$. They determine all spherical harmonic moments of $\mu$. Uniform density of harmonics and of finite product tests gives $\mu=(A/a)\omega_1\wedge\omega_2$.
+
+\emph{Supporting probabilities and weights.} Let $\mu\in\mathcal A_\phi(F)$ and, for smooth real $h$, set
+\[
+ F_t=F+\log\frac{(\Omega+t\ddc h)^2}{\Omega^2}.
+\]
+This is continuous, and $u+th$ solves the ordinary-type equation with density $\mathrm{e}^{F_t}$ and scalar $c_0$. Thus $B_\phi(F_t)=B_\phi(F)$, by uniqueness of the scalar. Uniform positivity gives $F_t-F=tL_uh+O(t^2)$ in the uniform norm. Apply \eqref{eq:adjoint-probability-set} for both signs of $t$ to obtain $\int L_uh\,\mathrm{d}\mu=0$. The perturbed density need not depend on the first curve alone: the inequality is the one on all of $C(X)$. Invariant uniqueness and nonemptiness of $\mathcal A_\phi(F)$ from \cref{thm:weak-adjoint-probabilities} now prove \eqref{eq:singular-product-full-support}.
+
+Finally, $\Omega^2/\mathrm{d}W$ is bounded above and below by positive constants, so a normalized $r$ as in the statement belongs to $L^1(\mathrm{d}W)$ and $r\Omega$ is an order-zero current. Distributional Stokes makes $r\Omega^2$ invariant. The probability uniqueness just proved gives $r\Omega^2=\rho\Omega^2$, hence $r=\rho$ almost everywhere.
+\end{proof}
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:singular-product-adjoint-approximation}\index{Adjoint measure!fixed-divisor approximation}
+Let $w_j\in C^\infty(X)$ be real and suppose
+\[
+ \Omega_j=\eta+\ddc w_j>0,\qquad \Omega_j\longrightarrow\Omega
+       \quad\text{uniformly as }(1,1)\text{-forms}.
+\]
+Put $u_j=\psi+w_j$ and $F_j=\log(\Omega_j^2/(c_0\mathrm{d}V))$. Let $\rho_j>0$ be the smooth residual adjoint weight, normalized by
+\[
+ \ddc(\rho_j\Omega_j)=0,\qquad \int_X\rho_j\Omega_j^2=1.
+\]
+Then $F_j\to F$ uniformly, and the entire sequence satisfies
+\[
+ \rho_j\Omega_j^2\rightharpoonup\nu,\qquad
+ \rho_j\Omega_j\rightharpoonup Q,\qquad
+ \rho_j\,\mathrm{d}W\rightharpoonup\rho\,\mathrm{d}W.
+\]
+Such approximations exist with $w_j\to w_0$ uniformly and can depend on both curve variables.
+\end{proposition}
+\begin{proof}
+Existence of the smooth positive weights is \cref{thm:gauduchon}, applied to the residual metrics $\Omega_j$ on the surface. Put $\nu_j=\rho_j\Omega_j^2$ and $L_jh=2\Omega_j\wedge\ddc h/\Omega_j^2$. Distributional Stokes gives $\int L_jh\,\mathrm{d}\nu_j=0$. Uniform convergence to the positive form $\Omega$ supplies a common determinant lower bound and gives $L_jh\to L_uh$ uniformly for every fixed smooth $h$. Every weak cluster point of the probabilities $\nu_j$ is therefore invariant for $L_u$. By \cref{thm:singular-product-full-adjoint}, it equals $\nu$, proving convergence of the whole sequence. The same determinant convergence gives $F_j\to F$ uniformly.
+
+For a smooth real $(1,1)$ test form $\xi$, the ratios $\Omega_j\wedge\xi/\Omega_j^2$ converge uniformly to $\Omega\wedge\xi/\Omega^2$. Consequently,
+\[
+ \int_X\rho_j\Omega_j\wedge\xi
+    =\int_X\frac{\Omega_j\wedge\xi}{\Omega_j^2}\,\mathrm{d}\nu_j
+    \longrightarrow\int_X\rho\Omega\wedge\xi.
+\]
+Similarly, the positive densities $p_j=\Omega_j^2/\mathrm{d}W$ converge uniformly to $p=\Omega^2/\mathrm{d}W$. For every $g\in C(X)$,
+\[
+ \int_Xg\rho_j\,\mathrm{d}W
+    =\int_X(g/p_j)\,\mathrm{d}\nu_j
+    \longrightarrow\int_X(g/p)\,\mathrm{d}\nu
+    =\int_Xg\rho\,\mathrm{d}W.
+\]
+These arguments require no pointwise control of the weights.
+
+For existence, heat-smooth $A$ on the first sphere to positive smooth functions $A_j$ of the same mean $a$, converging uniformly to $A$. Green inversion gives smooth mean-zero $w_j(x)$ with $\ddc w_j=(A_j-a)\omega_1$ and $w_j\to w_0$ uniformly. Their residuals converge uniformly to $\Omega$. Adding $\varepsilon_j h(x,y)$ for a fixed smooth function depending on both variables and $\varepsilon_j\to0$ preserves positivity for all sufficiently small coefficients and supplies nonsymmetric examples. Each $u_j$ retains the fixed logarithmic divisor, and its non-pluripolar equation has scalar $c_0$ and logarithmic density $F_j$.
+\end{proof}
+
+\begin{example}\label{ex:singular-product-adjoint-boundary}
+Take $a=1$, $d=1/4$, $q=1$, and let $t$ be the sphere height
+\[
+ t=\frac{|Z_0|^2-|Z_1|^2}{|Z_0|^2+|Z_1|^2},\qquad
+ b=2+t,\qquad H=A=\tfrac12+|t|.
+\]
+Here $c_0=1$ and $F=\log(2bA)$ is Lipschitz but not $C^1$. The residual has continuous positive coefficients with the same loss of differentiability. Its supporting probability differs from normalized Monge--Amp\`ere volume:
+\[
+ \int_X\Omega^2=4,\qquad
+ \int_Xt\,\mathrm{d}\nu=0,\qquad
+ \int_Xt\,\frac{\Omega^2}{4}=\frac5{24}.
+\]
+Even for smooth constant $H$, approximation of the pole by globally smooth potentials need not recover the weak adjoint. For $H=a$, so that $w_0=0$ and $\nu=\mathrm{d}W$, put
+\[
+ \psi_\delta=d\log(\ell+\delta(1-\ell)),\qquad
+ P_\delta=\omega_1+\ddc(\psi_\delta/d),\qquad0<\delta\leq1.
+\]
+The smooth potentials $\psi_\delta$ decrease pointwise to $\psi$, converge in $L^1$ and smoothly off $D$, but the classical adjoint probabilities of $\theta+\ddc\psi_\delta$ converge to
+\[
+ \frac{a\omega_1+d\delta_p}{a+d}\wedge\omega_2,
+ \qquad p=\{Z_0=0\}.
+\]
+This limit assigns mass $d/(a+d)>0$ to $D$, and the weighted currents also retain a nonzero divisor component.
+\end{example}
+\begin{proof}
+The height $t$ is uniform on $[-1,1]$, so $\int A\omega_1=1$ and $\int tA\omega_1=0$. Since $\Omega^2=2bA\,\mathrm{d}W$, its mass is four and its normalized height moment is
+\[
+ \frac12\int_{-1}^1 t^2(\tfrac12+|t|)\,\frac{\mathrm{d}t}{2}
+       =\frac5{24}.
+\]
+The weight is $1/(2b)$ and $\nu=A\,\mathrm{d}W$. Moreover, $\ddc\theta=-2t\,\mathrm{d}W$, so the background has no smooth positive Gauduchon potential perturbation.
+
+For the smoothing family, direct differentiation gives
+\[
+ \frac{P_\delta}{\omega_1}
+       =\frac{4\delta}{((1+\delta)+(1-\delta)t)^2}.
+\]
+It is positive of mass one and converges weakly to $\delta_p$. Thus the positive smooth forms are $\widehat\Omega_\delta=a\omega_1+dP_\delta+b\omega_2$. Their classical weights and probabilities are
+\[
+ \widehat\rho_\delta=\frac1{2(a+d)b},\qquad
+ \widehat\nu_\delta=\frac{a\omega_1+dP_\delta}{a+d}\wedge\omega_2.
+\]
+The weighted forms are closed, so these are the normalized classical adjoints. Their limits follow from the curve measure convergence. In particular, the weighted-current limit contains $d[D]/(2(a+d)b(p))$. These smoothings fill the pole and do not satisfy the fixed-divisor and uniform-residual hypotheses of \cref{prop:singular-product-adjoint-approximation}.
+\end{proof}
