@@ -181,23 +181,17 @@ The author's rule (6 October 2026): “You should always use the journal version
 **Not confirmed against the published text**
 
 The published text was paywalled or unreachable. Each of these locators is supported only by the final arXiv or author version, or by later citations:
-- ALS26: 19 statement numbers.
 - FV26: Conjectures 1.1–1.2.
 - DangNull26: statement numbers. (DX24 now has no locator: at the author's request of 6 October 2026, the published version is not consulted for now, and the statement used is cited from SGPT Proposition 3.1.12, (3.23)–(3.24).)
 - OV24Vaisman: Theorem 4.1 and Lemmas 4.2–4.4.
-- OV25Balanced: Conjecture 4.14 and Remark 4.16.
 - Dem94: Remark 4.4 and equation (4.22).
 - Dem92: Main Theorem 1.1.
-- Nguyen16: Corollary 0.2 and Proposition 2.5.
-- KN19: Remark 3.13.
-- Collins21: Theorem 2.13.
 - GL23E: Lemma 3.3 and Theorem 3.4.
-- FTWZ16: Lemma 2.1.
 - DPS94: Example 1.7.
 - DDNL21: Lemma 4.3.
 - WalterPrioritary93: the page of Proposition 2.
 
-The items for TWWY15, Dinew09, CT15Loci, GP04, BG18, OV25LeeGauduchon and OV24LCK were removed from this list on 7 October 2026, after the check in Follow-up 3.
+Items removed on 7 October 2026 after the checks in Follow-ups 3 and 4: TWWY15, Dinew09, CT15Loci, GP04, BG18, OV25LeeGauduchon, OV24LCK, ALS26, OV25Balanced, Nguyen16, KN19, Collins21 and FTWZ16.
 
 ## Follow-up 3: publisher texts supplied by the author
 
@@ -221,11 +215,38 @@ On 7 October 2026 the author supplied 19 PDFs, downloaded through a university V
 
 Build: clean, 1520 physical / 1492 printed pages. Publication: website commit c08c0f5 with the remote blobs verified; the live GitHub Pages PDF matches SHA-256 `a71352bf…` and the homepage shows "1492 pages. Updated October 7, 2026".
 
+## Follow-up 4: second set of publisher texts
+
+Later on 7 October 2026 the author supplied six more publisher PDFs: ALS26, Nguyen16, KN19, FTWZ16, Collins21 and OV25Balanced. As before, they are evidence only and are not added to the repository. Every citation site was compared with the published statement; ALS26 was read by an independent checker against both the journal text and arXiv v1, and its findings were rechecked on the published pages before editing.
+
+**Confirmed, with journal pages added**
+- **Nguyen16** (Adv. Math. 286, 2016): Theorem 0.1 (p. 241), Corollary 0.2 (p. 242), Lemma 1.9 (p. 255), Lemma 2.3 (p. 256) and Proposition 2.5 (p. 258). The weighted mean of Proposition 2.5 is the book's (eq:gauduchon-exponential-mean).
+- **KN19** (Adv. Math. 346, 2019): Corollary 3.9 (p. 287), Remark 3.13 (p. 289) and Lemma 4.1 (p. 294). The proof of Lemma 4.1 cites "[10, Remark 4.7]" of Demailly's manuscript for the extra term K(t−δ); this agrees with the earlier finding that manuscript Remark 4.7 is printed Remark 4.4 of Dem94.
+- **FTWZ16** (J. Funct. Anal. 271, 2016): Section 2 (pp. 3166–3178). The T³-fibration with dense leaves and the Tricerri metric with Ric(ω_T) = −α are on pp. 3166–3167. Lemma 2.1 is on p. 3167, and the Liouville argument for bounded harmonic functions is in its proof on p. 3168.
+- **Collins21** (Pure Appl. Math. Q. 17, 2021): Theorem 2.13 on p. 1068. Its second proof, with a Gauduchon rescaling of the linearized metric, is on p. 1069; the book's sentence about "the concavity argument with Gauduchon metrics" cites it.
+
+**ALS26 (J. Funct. Anal. 291, 2026, 111608): renumbering and wording**
+- The journal version inserts a new Lemma 2.5 (p. 9). Everything after it in Section 2 shifts by one: v1 Lemma 2.5 → 2.6, Propositions 2.10–2.12 → 2.11–2.13, Definition 2.13 → 2.14. The locators are corrected. All other cited numbers are unchanged, and pages are added to every ALS26 locator.
+- **Theorem 2.2 (p. 8).** The journal version adds a paragraph: the envelope's measure may have infinite mass, and the statement follows by monotone convergence over {P_θ(h) > −C}. The book had claimed that its extension removed "a uniform mass assumption"; that claim is dropped. The book now says that ALS remark the envelope may have infinite mass, and that the book's passage to unbounded potentials removes the bigness assumption.
+- **Proposition 2.13 (p. 14)** covers the case P_θ[u] = u, under ALS's standing hypothesis of semipositive big θ. The book's `prop:fixed-point-finite` assumes only semipositivity, and the note now says "the fixed-point case of …, stated there for semipositive big backgrounds".
+- **Positivity of individual masses (line 141).** The discussion after Definition 2.14 gives positivity only for potentials of the ordinary type of ϕ; positivity for every u ∈ ℰ(X,θ,ϕ) is Remark 3.9 (p. 20), now cited too.
+- **Theorem 3.14 (p. 22)** assumes v₋(θ) > 0, the standing hypothesis of the book's Chapter 30, and either of two finiteness conditions. The book's theorem is now described as "the case of finite μ_u".
+- **Lemma 4.2 (p. 24).** It now has two bullets. Condition (1) includes u_j ≃ ϕ and needs no v₋(θ) > 0; condition (2) requires v₋(θ) > 0. The book's statement that, for approximants of the ordinary type, "this alternative needs no assumption of positive lower mass" is now ALS's own published statement. The note now cites the first assertion with that content and adds that `prop:exponential-common-rooftop` also allows other singularity types under v₋(θ) > 0. The remark on condition (2) (positive lower mass prevents collapse; no upper bound on mass is used) is unchanged and correct.
+- **Not cited by the book.** Theorem 5.11 (p. 41) is now stated under v₋(θ) > 0 and v₊(θ) < +∞. The proof of Lemma 4.2(2) passes to a subsequence; the book's `lem:dominated-relative-rooftop-extraction` already states that version.
+
+**OV25Balanced (IMRN 2025, no. 3, rnaf014): wording**
+- Conjecture 4.14 (p. 7) asserts deg_u θ > 0 for every Gauduchon metric u, which is strictly stronger than pseudoeffectivity of {d^c θ}. Remark 4.16 (p. 8) relates the two. The book's `conj:lck-lee-psef` is the pseudoeffective version. The historical note used to say that the book's conjecture "is formulated in terms of Gauduchon degrees by Ornea and Verbitsky". It now states their conjecture and adds that, by `thm:lamari`, it implies the weaker `conj:lck-lee-psef` used in the book.
+
+**Still not obtained**
+DangNull26 and FV26 (AMS member access only), OV24Vaisman (International Press, purchase only), GL23E and DDNL21 (De Gruyter pages did not load through the VPN), Dem94 (subscription preview only), Dem92 and DPS94 (no scan of J. Algebraic Geom. 1992/1994 found), and WalterPrioritary93 (print volume). Their locators remain on the list in Follow-up 2.
+
+Build: clean, 1520 physical / 1492 printed pages. Publication: website commit 7df5ee1 with the remote blob verified; the live GitHub Pages PDF matches SHA-256 `604c576c…`.
+
 ## Deferred items (no change made)
 
 - `thm:small-pole-envelope-residual` assumes positive lower singularity volume, which its proof uses only for a side remark.
 - Some hypotheses are stronger than their proofs need (for example `cor:i-envelope-finite`, `birational_partial_kernels`, `section_bounded_connected_uniqueness`); they are kept.
 - `thm:flat-anticanonical-neighborhood`: Step 2 of Lemma 2 is only outlined; an expert check is advisable.
-- The locators not confirmed against the published text are listed in Follow-up 2, as reduced by Follow-up 3. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
+- The locators not confirmed against the published text are listed in Follow-up 2, as reduced by Follow-ups 3 and 4. The claims about DNGL26, Fu–Ouyang, BT82, TaylorReg and the BEGZ10 versions, deferred earlier, are resolved there.
 - The hidden Nakamaye chapter cites CT22 Lemma 4.2 for arbitrary modifications; the lemma assumes compositions of blowups with smooth centers. Hidden files are not edited.
 - Local reuse of letters across sections (Ω, r versus f for fiber dimension, L in Section 27.19) is declared locally and kept.

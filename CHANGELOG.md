@@ -1,5 +1,19 @@
 # Modification history
 
+## 7 October 2026 — Second set of publisher texts (529, follow-up 4)
+
+The author supplied six more publisher PDFs. Every citation site was compared with the published statements.
+- **Confirmed, with journal pages added:** Nguyen16, KN19, FTWZ16 and Collins21.
+- **ALS26:** the journal version inserts a new Lemma 2.5, so eight locators in Section 2 are renumbered (Lemma 2.6, Propositions 2.11–2.13, Definition 2.14). Every ALS26 locator now carries its journal page. Four descriptions are made precise:
+  - Theorem 2.2 already allows infinite mass, so the book no longer claims to remove a mass assumption.
+  - Proposition 2.13 is stated for semipositive big backgrounds.
+  - Theorem 3.14 is quoted in its finite-μ_u case.
+  - Lemma 4.2 now separates its two conditions. The note on the common rooftop says what ALS state and what the book adds.
+- **OV25Balanced:** Conjecture 4.14 asks for strictly positive Gauduchon degrees. The book's pseudoeffectivity conjecture is now described as the weaker form it implies.
+- Still without a publisher text: DangNull26, FV26, OV24Vaisman, GL23E, DDNL21, Dem94 (p. 121), Dem92, DPS94 and Walter.
+
+Clean rebuild (1492 printed pages), republished in website commit 7df5ee1; the live PDF matches SHA-256 `604c576c…`.
+
 ## 7 October 2026 — Publisher texts checked (529, follow-up 3)
 
 The author supplied publisher PDFs for seven cited works. All their citation sites were compared with the published statements.
