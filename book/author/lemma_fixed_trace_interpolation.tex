@@ -1,0 +1,37 @@
+Some equations give a trace estimate that still depends on the gradient. A linear dependence suffices to close the estimate, because elliptic regularity for the fixed operator $\Delta_g$ bounds a H\"older norm of the gradient, and interpolation makes its contribution to the supremum norm arbitrarily small.
+
+\Needspace{11\baselineskip}
+\begin{lemma}\label{lem:fixed-trace-gradient-interpolation}\index{Gradient estimate!linear trace criterion}\index{Laplacian!interpolation bound}
+Let $A,M\geq0$. There is $C=C(g,A,M)$ such that every smooth real function $v$ on $X$ satisfying
+\[
+ \operatorname{osc}_Xv\leq M,\qquad
+ \|\Delta_gv\|_{L^\infty}
+       \leq A\bigl(1+\|\mathrm{d}v\|_{L^\infty(g)}\bigr)
+\]
+also satisfies
+\[
+ \|\mathrm{d}v\|_{L^\infty(g)}+\|\Delta_gv\|_{L^\infty}\leq C.
+\]
+Here all volume and function-space norms use the fixed smooth metric $g$.
+\end{lemma}
+\begin{proof}
+Subtract $\inf_Xv$, so that $0\leq v\leq M$, and put $K=\|\mathrm{d}v\|_{L^\infty(g)}$. Fix $p>2n$ and $0<\alpha<1-2n/p$. The fixed operator $\Delta_g$ is uniformly elliptic on the underlying real manifold. The local $W^{2,p}$ estimates, patched by a finite atlas, and Morrey's inequality give
+\[
+ \|v\|_{C^{1,\alpha}}
+ \leq C_g\|v\|_{W^{2,p}}
+ \leq C_g\bigl(\|v\|_{L^p}+\|\Delta_gv\|_{L^p}\bigr)
+ \leq C_g\bigl(M+A(1+K)\bigr).
+\]
+These are the standard linear elliptic estimates of \cite[Chapter~9]{GT01}; the constants depend on the fixed metric and on the chosen $p,\alpha$.
+
+For $0<t\leq t_0$, with $t_0$ fixed by the atlas, integration along a coordinate segment of length $t$ gives
+\[
+ K\leq C_g t^{-1}M+C_g t^\alpha\|v\|_{C^{1,\alpha}}.
+\]
+Indeed, the difference quotient is bounded by $2M/t$, and its difference from the derivative at the initial point is bounded by $C_gt^\alpha\|v\|_{C^{1,\alpha}}$. A finite atlas with smaller charts controls every point and coordinate direction; equivalence with the $g$-norm gives the displayed estimate. Consequently,
+\[
+ K\leq C_gt^{-1}M+C_g^2t^\alpha(M+A)
+                      +C_g^2At^\alpha K.
+\]
+Choose $t\leq t_0$ so small that $C_g^2At^\alpha\leq1/2$. This choice depends only on $g,A$, including when $A=0$. Absorbing the last term bounds $K$ in terms of $g,A,M$, and the assumed trace estimate then bounds $\|\Delta_gv\|_\infty$.
+\end{proof}
