@@ -1,5 +1,9 @@
 # Modification history
 
+## 7 October 2026 — Resuming from preserved local work
+
+The [preservation snapshot](research/editorial/paused-left-limit-integration-20261007.md) records the unfinished local left-limit integration before merging the newly fetched remote presentation revision and research progress. This is a pending snapshot; post-merge mathematical, layout and reconstruction checks remain required.
+
 ## 6 October 2026 — Left-limit review 526
 
 [The left-limit review](research/editorial/greatest-exponential-left-limits-526.md) checks two inactive proofs: exact positive left limits of greatest exponential solutions, and at most countably many exponents where that limit differs from the greatest solution. Thirty-two analytic obligations, strict 0/0 and final complete first/automatic second reads pass. All 368 book assets / 1171 proofs, both catalogues/manifests, 451 protected and sixteen incoming files remain exact. Six official abstracts and two selected source introductions are read; no external proof is adopted. No author rebuild/publication occurs, and native 522 is pending without diagnostics. Current-package checks against actual 525 reconstruction pass: 2525 safe paths / 2524 payloads, 365 book-source byte comparisons and all 1383 book / 17 companion page texts, clean logs and publication exclusions. No new extraction/build is claimed. All 38 original directions remain open. Next: Integrate the checked positive-exponent left-limit and countable-jump propositions after greatest right continuity, update the corresponding S03 scope and history, then rebuild, inspect, publish, refresh locators and reconstruct sources. Continue exact bounded-to-smooth Hermitian equation proof review and incoming-author checks.
