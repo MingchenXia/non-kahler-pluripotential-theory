@@ -114,28 +114,75 @@ Since the two volume forms are equal, $\widehat\eta^m=\widehat\tau^n\eta_u^m$. S
 \Needspace{19\baselineskip}
 \section{Chern--Ricci flatness and Vaisman rigidity}
 
-Return to an LCK metric $\omega$ on $X$ with Lee form $\lambda$. If $\omega$ is Gauduchon, then $\lambda$ is harmonic by \cref{prop:lck-gauduchon}. If $\omega$ is moreover Chern--Ricci flat, the Riemannian Ricci tensor can be expressed through $\lambda$ and its covariant derivative, and combining the contracted Bianchi identity with the Bochner formula forces this derivative to vanish.
+Return to an LCK metric $\omega$ on $X$ with Lee form $\lambda$. If $\omega$ is Chern--Ricci flat, the Riemannian Ricci tensor can be expressed through $\lambda$, its covariant derivative $\nabla\lambda$ and its divergence $\mathrm{d}^*\lambda$. Combining the contracted Bianchi identity with the Bochner formula then shows that the squared $L^2$ norm of the part of $\nabla\lambda$ that is not $J$-invariant equals half that of $\mathrm{d}^*\lambda$. By \cref{prop:lck-gauduchon}, the divergence vanishes exactly when $\omega$ is Gauduchon, and the Bochner formula then forces $\nabla\lambda$ to vanish. Whether the Chern--Ricci-flat metric of a conformal class is Gauduchon depends on the class, as a family of metrics on a Kodaira surface shows.
 
 We write $\operatorname{Ric}^{\mathrm{Ch}}=\operatorname{Ric}/(2\pi)$ for the normalized Chern--Ricci form, which represents the first Bott--Chern class $c_1^{\mathrm{BC}}(X)$, with $\operatorname{Ric}$ as in \cref{subsec:chern-ricci-maximal-time}.
 
-\begin{theorem}\label{thm:lck-chern-ricci-rigidity}\index{Chern--Ricci curvature!LCK rigidity}
-A compact strictly LCK metric that is both Gauduchon and Chern--Ricci flat is Vaisman.
+\begin{theorem}\label{thm:lck-chern-ricci-divergence}\index{Chern--Ricci curvature!LCK divergence identity}
+Let $\omega$ be a Chern--Ricci-flat LCK metric on $X$ with Lee form $\lambda$, let $g$ be its Riemannian metric and $\nabla$ the Levi--Civita connection of $g$, and let
+\[
+ S^-(U,V)=\tfrac12\bigl((\nabla_U\lambda)(V)-(\nabla_{JU}\lambda)(JV)\bigr)
+\]
+be the $J$-anti-invariant part of $\nabla\lambda$. Then
+\[
+ \int_X|S^-|^2\,\mathrm{d}\operatorname{vol}_g
+ =\frac12\int_X(\mathrm{d}^*\lambda)^2\,\mathrm{d}\operatorname{vol}_g.
+\]
 \end{theorem}
 
 \input{author/section_lck_chern_ricci_proof}
 
-In the theorem, both conditions are imposed on the same metric. If $c_1^{\mathrm{BC}}(X)=0$, each conformal class of Hermitian metrics contains a Chern--Ricci-flat metric: if a smooth real function $h$ satisfies $\operatorname{Ric}^{\mathrm{Ch}}(\omega)=\ddc h$, then
+A real vector field $V$ on $X$ is called holomorphic if $\mathcal L_VJ=0$, that is, if its flow preserves $J$.
+
+\begin{theorem}\label{thm:lck-chern-ricci-rigidity}\index{Chern--Ricci curvature!LCK rigidity}
+Let $\omega$ be a Chern--Ricci-flat LCK metric on $X$ with Lee form $\lambda$. The following conditions are equivalent:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*,itemsep=.2em,topsep=.3em]
+\item $\omega$ is Gauduchon;
+\item the vector field $\lambda^\sharp$ is holomorphic;
+\item $\nabla\lambda=0$.
+\end{enumerate}
+In particular, a compact strictly LCK metric that is both Gauduchon and Chern--Ricci flat is Vaisman.
+\end{theorem}
+\begin{proof}
+We use the notation of the proof of \cref{thm:lck-chern-ricci-divergence}. By \cref{prop:lck-gauduchon}, condition~(i) means $\delta=0$. If $\delta=0$, then \cref{thm:lck-chern-ricci-divergence} gives $S^-=0$, so that $S(B,B)=S(JA,JA)=S(A,A)$ pointwise. The integral of this function vanishes by \eqref{eq:lck-aa-zero}, and \eqref{eq:lck-bochner-integral} gives $\int_X|S|^2\,\mathrm{d}\operatorname{vol}_g=0$. Thus (i) implies (iii), and (iii) implies (i) because $\delta=-\operatorname{tr}_gS$.
+
+For (ii), let $\widehat S$ be the endomorphism with $g(\widehat SU,V)=S(U,V)$, so that $\widehat SU=\nabla_UA$. Setting $U=A$ in \eqref{eq:lck-complex-connection} and using $g(A,V)=\lambda(V)$ and $g(JA,V)=-\lambda(JV)$ gives $\nabla_AJ=0$. Since $\nabla$ is torsion free,
+\[
+ (\mathcal L_AJ)V=[A,JV]-J[A,V]=(\nabla_AJ)V-\widehat SJV+J\widehat SV=(J\widehat S-\widehat SJ)V.
+\]
+Hence $A$ is holomorphic exactly when $\widehat S$ commutes with $J$, that is, when $S(JU,JV)=S(U,V)$ for all $U,V$, or equivalently $S^-=0$. Condition~(iii) gives $S^-=0$, and conversely $S^-=0$ gives $\delta=0$ by \cref{thm:lck-chern-ricci-divergence}, which is~(i). Finally, a strictly LCK metric with parallel Lee form is Vaisman by \cref{def:lck}.
+\end{proof}
+
+In \cref{thm:lck-chern-ricci-rigidity}, both conditions are imposed on the same metric. If $c_1^{\mathrm{BC}}(X)=0$, each conformal class of Hermitian metrics contains a Chern--Ricci-flat metric: if a smooth real function $h$ satisfies $\operatorname{Ric}^{\mathrm{Ch}}(\omega)=\ddc h$, then
 \[
  \operatorname{Ric}^{\mathrm{Ch}}(\mathrm{e}^{h/n}\omega)
  =\operatorname{Ric}^{\mathrm{Ch}}(\omega)-\ddc h=0.
 \]
-By Gauduchon's theorem, the same conformal class also contains a Gauduchon metric. The rigidity theorem applies when these two metrics coincide, and arranging this coincidence is one approach to the following conjecture.
+This metric is unique up to a positive constant factor: if $\omega$ and $\mathrm{e}^a\omega$ are both Chern--Ricci flat, then $n\ddc a=0$, and the pluriharmonic function $a$ is constant by the maximum principle. By Gauduchon's theorem, \cref{thm:gauduchon}, the same conformal class also contains a Gauduchon metric, again unique up to a positive constant factor. A Vaisman metric is Gauduchon by \cref{prop:lck-gauduchon}, since its Lee form is parallel and hence co-closed. Consequently, by \cref{thm:lck-chern-ricci-rigidity}, a conformal class of strictly LCK metrics contains a Chern--Ricci-flat Vaisman metric exactly when its Chern--Ricci-flat and Gauduchon representatives agree up to a constant factor. They need not agree even when the class contains a Vaisman metric (\cref{prop:lck-kodaira-flat-gauge}). Once the conformal class is allowed to vary, however, their agreement for a single class is equivalent to the existence of a Vaisman metric.
+
+\begin{corollary}\label{cor:lck-calabi-yau-vaisman-reduction}\index{Vaisman metric!Chern--Ricci flat}
+Assume that $c_1^{\mathrm{BC}}(X)=0$. If $\omega$ is a Vaisman metric on $X$ with Lee form $\lambda$, then $X$ carries a Chern--Ricci-flat Vaisman metric with Lee class $[\lambda]$. Consequently, $X$ admits a Vaisman metric if and only if it admits a strictly LCK metric that is both Chern--Ricci flat and Gauduchon.
+\end{corollary}
+\begin{proof}
+Choose a smooth real function $h$ with $\operatorname{Ric}^{\mathrm{Ch}}(\omega)=\ddc h$, and put $\mu=c\,\mathrm{e}^h\omega^n$, where the constant $c>0$ is chosen so that $\int_X\mu=\int_X\omega^n$. Writing $\log\mu$ for the logarithm of the coefficient of $\mu$ in local holomorphic coordinates, we have
+\[
+ -\mathrm i\partial\bar\partial\log\mu
+ =\operatorname{Ric}(\omega)-2\pi\ddc h=0.
+\]
+Let $\psi$ be a biholomorphism of $X$. In local holomorphic coordinates, the coefficient of $\psi^*\mu$ is the pullback of that of $\mu$ multiplied by $|\det\mathrm{d}\psi|^2$, whose logarithm is pluriharmonic. Hence $\log(\psi^*\mu/\mu)$ is pluriharmonic, and therefore constant; the constant is zero because $\psi^*\mu$ and $\mu$ have the same total mass. By \cref{subsec:lck-vaisman-volume}, the Lee field $\lambda^\sharp$ and the anti-Lee field $J\lambda^\sharp$ are constant multiples of holomorphic vector fields, so their flows consist of biholomorphisms and preserve $\mu$. \Cref{thm:lck-vaisman-volume} now gives a Vaisman metric $\omega'$ with Lee class $[\lambda]$ and $(\omega')^n=\mu$, and $\operatorname{Ric}(\omega')=-\mathrm i\partial\bar\partial\log\mu=0$.
+
+For the equivalence, a Chern--Ricci-flat Vaisman metric is strictly LCK and, as noted above, Gauduchon. Conversely, a strictly LCK metric that is both Chern--Ricci flat and Gauduchon is Vaisman by \cref{thm:lck-chern-ricci-rigidity}.
+\end{proof}
+
+By \cref{cor:lck-calabi-yau-vaisman-reduction}, the following conjecture is equivalent to the existence of a single strictly LCK metric that is both Chern--Ricci flat and Gauduchon.
 
 \begin{conjecture}\label{conj:lck-calabi-yau-vaisman}
 If $X$ satisfies $c_1^{\mathrm{BC}}(X)=0$ and admits a strictly LCK metric, then $X$ admits a Vaisman metric.
 \end{conjecture}
 
-The analytic problem is to achieve Chern--Ricci flatness and the Gauduchon condition simultaneously within a family of LCK metrics. The conjecture asks for one Vaisman metric; it does not assert that the Lee form of every LCK metric on $X$ is parallel.
+The analytic problem is to achieve Chern--Ricci flatness and the Gauduchon condition simultaneously within a family of LCK metrics. Since the Chern--Ricci-flat metric of a conformal class is unique up to scale, \cref{prop:lck-kodaira-flat-gauge} shows that such a family must in general leave the conformal class of the given metric. The conjecture asks for one Vaisman metric; it does not assert that the Lee form of every LCK metric on $X$ is parallel, and the Chern--Ricci-flat metrics of \cref{prop:lck-kodaira-flat-gauge} are strictly LCK without being Vaisman.
+
+\input{author/section_lck_kodaira_gauges}
 
 \input{author/section_lee_gauduchon_cone}
 \input{author/section_lee_gauduchon_strong}
