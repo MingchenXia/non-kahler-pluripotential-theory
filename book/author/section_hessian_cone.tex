@@ -117,6 +117,7 @@ eigenvalues as $\lambda_1\geq\cdots\geq\lambda_n$ and write
 The next inequalities use these derivatives of the normalized root,
 rather than derivatives of the polynomial $S_m$.
 
+\Needspace{10\baselineskip}
 \begin{lemma}\label{hessian:weighted-cone-trace}
 If $M$ belongs to the closed Hermitian $m$-cone, then
 \[
@@ -196,4 +197,62 @@ The coefficient of $t_2\cdots t_r$ is a fixed positive multiple of
 $\alpha_1\wedge\cdots\wedge\alpha_r\wedge\Xi$.
 This proves the mixed bound. The closed-cone case follows by adding
 $\varepsilon\omega$ to each form and taking the limit.
+\end{proof}
+
+The next coefficient bound also controls a torsion form whose
+diagonal coefficients can have either sign. It compares each
+two-coordinate coefficient with the positive coefficients of the
+associated gradient pairing.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{hessian:deleted-newton}\index{Newton inequality!deleted coordinates}
+If $\lambda\in\overline{\Gamma_m}$, $1\leq q\leq\min\{m-1,n-2\}$, and $i\ne j$,
+then, with $N=n-2$ and
+\[
+ c_{N,q}=\frac{q(N-q)}{(q+1)(N-q+1)}<1,
+\]
+one has
+\[
+ |S_{q;ij}(\lambda)|^2
+ \leq\frac{S_{q;i}(\lambda)S_{q;j}(\lambda)}{1-c_{N,q}}.
+\]
+This includes $q=N$, when $c_{N,N}=0$.
+\end{lemma}
+\begin{proof}
+First prove the unnormalized Newton inequality for an arbitrary real
+list $\mu$ of length $N$. For $1\leq q<N$, put
+$R(x)=\prod_{a=1}^N(x+\mu_a)$ and
+$G=R^{(N-q-1)}$. Repeated Rolle's theorem makes $G$ a real-rooted
+polynomial of degree $d=q+1$. Away from its roots $r_a$, logarithmic
+differentiation and Cauchy--Schwarz give
+\[
+ G'^2-GG''=G^2\sum_{a=1}^d\frac1{(x-r_a)^2}
+ \geq \frac1dG^2\left(\sum_{a=1}^d\frac1{x-r_a}\right)^2
+ =\frac1dG'^2.
+\]
+Continuity extends this polynomial inequality to every real $x$.
+At zero,
+\[
+ G=(N-q-1)!S_{q+1}(\mu),\quad
+ G'=(N-q)!S_q(\mu),\quad
+ G''=(N-q+1)!S_{q-1}(\mu).
+\]
+Consequently
+$S_{q-1}(\mu)S_{q+1}(\mu)\leq c_{N,q}S_q(\mu)^2$.
+No sign restriction on $\mu$ or on these coefficients was used.
+For $q=N$, its left side is zero and the same assertion holds
+with $c_{N,N}=0$.
+
+Apply this to the list with $i,j$ deleted. Put
+$A=S_{q-1;ij}$, $B=S_{q;ij}$, $C=S_{q+1;ij}$ and
+$D_i=S_{q;i}$, $D_j=S_{q;j}$. Deleted-coordinate positivity gives
+$A,D_i,D_j\geq0$: the required degrees are $q+1\leq m$.
+Splitting in the two omitted coordinates gives the exact identity
+\[
+ D_iD_j=A S_{q+1}(\lambda)+B^2-AC.
+\]
+Since $S_{q+1}(\lambda)\geq0$ and $AC\leq c_{N,q}B^2$, this is
+at least $(1-c_{N,q})B^2$. There is no division by $A$ or $D_i$;
+all degenerate endpoints are therefore included. Equivalently one
+may first add $\epsilon\mathbf1$ and pass to the closed cone.
 \end{proof}

@@ -66,7 +66,7 @@ For Borel $E\subset U$ define the smooth capacity
         a\in C^\infty(U),\ -1\leq a\leq0,
         \ddc a\in\overline{\Gamma_m(\omega)}\right\},
 \]
-for $0\leq s\leq m-1$. Its outer-open version is
+for $0\leq s\leq m$. Its outer-open version is
 \[
  c_s^*(E)=\inf\{c_s(G):E\subset G\subset U,\ G\text{ open}\}.
 \]
@@ -101,9 +101,9 @@ dominated on Borel sets by $C c_s$. The latter assertion follows
 from the absolute mixed-form estimate.
 
 \begin{lemma}\label{hessian:smooth-torsion}\index{Torsion!local Hessian estimates}
-Let $0\leq q\leq m-2$ and let $S$ be a smooth real $(1,1)$-form
+Let $0\leq q\leq m-1$ and let $S$ be a smooth real $(1,1)$-form
 in $\overline{\Gamma_m(\omega)}$ pointwise.
-Then $T=S^q\omega^{n-q-2}$ is strongly positive. For smooth real $f$
+Put $T=S^q\omega^{n-q-2}$. For smooth real $f$
 and nonnegative Borel weights $a$, supported on a fixed compact set,
 \[
  \left|\int a\,\mathrm df\wedge\dc\omega\wedge T\right|
@@ -116,7 +116,7 @@ $S^q$, it suffices to sum these bounds over the finitely many
 subset sums of its factors.
 \end{lemma}
 \begin{proof}
-Diagonalize $S$ in an $\omega$-unitary frame. Every diagonal
+For $q\leq m-2$, diagonalize $S$ in an $\omega$-unitary frame. Every diagonal
 coefficient of $S^q\omega^{n-q-2}$ is a positive multiple of
 $S_{q;ij}(\lambda)$ for two omitted coordinates. This is nonnegative
 by deleted-coordinate positivity, because $q+2\leq m$.
@@ -133,6 +133,48 @@ norm. Pointwise Cauchy--Schwarz over the simple summands, followed
 by integral Cauchy--Schwarz with weight $a$, proves the estimate.
 Conjugation gives the other estimate.
 
+For $q=m-1$, at one point choose an $\omega$-unitary coframe $e_i$
+that diagonalizes $S$. Put $\epsilon_i=\mathrm i e_i\wedge\bar e_i$
+and $\Omega=\epsilon_1\cdots\epsilon_n$, so that
+$\omega=\sum_i\epsilon_i$ and $S=\sum_i\lambda_i\epsilon_i$.
+Writing $B_{ij}=S_{q;ij}(\lambda)$ and $D_i=S_{q;i}(\lambda)$,
+ordinary wedge expansion gives
+\[
+ S^q\omega^{n-q-2}
+ =q!(n-q-2)!\sum_{i<j}B_{ij}
+                           \prod_{k\notin\{i,j\}}\epsilon_k.
+\]
+Only the remaining two-plane contributes to its wedge with
+$\mathrm df\wedge\dc\omega$. If $\partial f=\sum_i f_i e_i$,
+its absolute density relative to $\Omega$ is bounded by
+\[
+ C\sum_{i<j}(|f_i|+|f_j|)|B_{ij}|.
+\]
+The constant bounds the tensor coefficients of $\dc\omega$ in all
+unitary frames on the fixed compact set. Diagonalization is only
+pointwise; no derivative of this moving frame is taken.
+
+\Cref{hessian:deleted-newton} and finite Cauchy--Schwarz bound this sum by
+\[
+ C\sum_i|f_i|\sqrt{D_i}\sum_j\sqrt{D_j}
+ \leq C\left(\sum_i|f_i|^2D_i\right)^{1/2}
+          \left(\sum_iD_i\right)^{1/2}.
+\]
+Here $\sum_iD_i=(n-q)S_q(\lambda)$. Moreover
+\[
+ \begin{aligned}
+ S^q\omega^{n-q}&=q!(n-q)!S_q(\lambda)\Omega,\\
+ \mathrm df\wedge\dc f\wedge S^q\omega^{n-q-1}
+   &=\kappa q!(n-q-1)!\sum_i|f_i|^2D_i\,\Omega,
+ \end{aligned}
+\]
+where $\kappa=1/(2\pi)$ by the book's $\dc$ normalization.
+These two densities are nonnegative. Thus the pointwise torsion
+density is bounded by a constant times their geometric mean.
+Multiplication by $a$ and integral Cauchy--Schwarz give the assertion,
+including the cases where either density vanishes. The other wedge
+is conjugate up to a fixed sign, which does not affect its absolute
+value.
 For $q\geq1$, use the exact polarization identity
 \[
  q!\,\alpha_1\wedge\cdots\wedge\alpha_q
@@ -189,14 +231,14 @@ one fixed compact subset of $U$.
 \Needspace{14\baselineskip}
 \begin{proposition}\label{hessian:smooth-capacity-convergence}\index{Quasicontinuity!Hessian capacity}
 For the localized sequence in the preceding lemma and
-$0\leq s\leq m-1$,
+$0\leq s\leq m$,
 \[
  c_s\{v_k-v>\delta\}\longrightarrow0
                  \qquad(\delta>0).
 \]
 Consequently a uniformly bounded smooth decreasing local sequence
 has a quasicontinuous pointwise limit on every compact subset of
-$U$, for $c_{m-1}^*$ as well as $c_{m-1}$.
+$U$, for each $c_s^*$ as well as $c_s$, $0\leq s\leq m$.
 \end{proposition}
 \begin{proof}
 The assertion for $s=0$ follows by bounded convergence for volume.
@@ -326,22 +368,22 @@ $c_s\{v_k-v_j>\delta\}\leq\delta^{-1}\sup_a I_0$.
 These sets increase to $\{v_k-v>\delta\}$ as $j\to\infty$.
 Continuity of $c_s$ under increasing unions proves the induction.
 
-Choose $k_N$ so that the open sets
+For any one $0\leq s\leq m$, choose $k_N$ so that the open sets
 $G_N=\{v_{k_N}-v>2^{-N}\}$ satisfy
-$c_{m-1}(G_N)<\epsilon2^{-N}$, $N\geq1$.
+$c_s(G_N)<\epsilon2^{-N}$, $N\geq1$.
 They are open because $v$ is upper semicontinuous and $v_{k_N}$
 is smooth. On $U\setminus\bigcup_NG_N$ these smooth functions
 converge uniformly to the pointwise limit $v$. Hence $v$ is
 continuous there. The union has capacity less than $\epsilon$.
 Boundary localization transfers this conclusion to $f$ on each
 smaller compact set. Open sets have the same outer capacity, which
-also proves the assertion for $c_{m-1}^*$.
+also proves the assertion for $c_s^*$.
 \end{proof}
 
 \Needspace{16\baselineskip}
 \begin{lemma}\label{hessian:rough-coefficient-capacity}
 Every bounded admissible potential on $X$ is locally quasicontinuous
-for the preceding smooth capacity $c_{m-1}^*$. For $0\leq p<m$,
+for each smooth capacity $c_s^*$, $0\leq s\leq m$. For $0\leq p<m$,
 each coefficient measure $\nu$ of the ordered $D_p$ satisfies
 \[
  |\nu|(E)\leq C c_{m-1}^*(E),\qquad E\subset K\Subset U,
@@ -376,9 +418,9 @@ polynomial expansion is used.
 \end{proof}
 
 \begin{lemma}\label{hessian:weighted-measure-convergence}
-Suppose signed Radon measures $\nu_j\to\nu$ weakly have locally
+Fix $0\leq s\leq m$. Suppose signed Radon measures $\nu_j\to\nu$ weakly have locally
 uniformly bounded variations, each dominated on compact sets by
-$C c_{m-1}^*$. If bounded Borel functions $a_j\downarrow a$ have
+$C c_s^*$. If bounded Borel functions $a_j\downarrow a$ have
 one common bound and every member of this countable family is
 locally quasicontinuous for that capacity, then
 $a_j\nu_j\to a\nu$ weakly.
@@ -387,7 +429,7 @@ $a_j\nu_j\to a\nu$ weakly.
 Fix $\phi\in C_c(U)$ and a compact $K\Subset U$ containing its
 support. Summably allocate exceptional capacities less than
 $\epsilon$ to the countable family. Their open union $G$ has
-$c_{m-1}^*(G)<\epsilon$, and every function is continuous on
+$c_s^*(G)<\epsilon$, and every function is continuous on
 the compact set $F=K\setminus G$. Dini's theorem gives
 $\|a_j-a\|_F\to0$. Extend $a|_F$ to a bounded continuous $g$ on
 $U$ with the same bound $M$; if $F$ is empty take $g=0$.
@@ -417,8 +459,7 @@ in their potentials. For $p<m$ the coefficient convergence also
 holds after multiplication by a uniformly bounded decreasing
 admissible weight. The positive shifted currents $Q_p$ converge
 weakly for $p\leq m$; $Q_m$ converges as a positive Radon measure.
-The unwedged top-degree current is understood distributionally;
-the additional weight is used only below degree $m$.
+At degree $m$, the convergence assertion for $D_m$ is distributional.
 \end{theorem}
 \begin{proof}
 Work on a compact coordinate test set. Degree zero is constant.
@@ -446,4 +487,77 @@ Distributional convergence and these mass bounds imply weak
 convergence as an order-zero positive current, including the
 Radon measure conclusion at $p=m$. A partition of unity on a
 finite coordinate cover proves the global assertions.
+\end{proof}
+
+The coefficient bound for raw currents uses only $c_{m-1}$.
+For the positive shifted products, $c_m$ also controls their trace
+at top degree. This allows an additional bounded weight in every
+Hessian degree.
+
+\Needspace{15\baselineskip}
+\begin{lemma}\label{hessian:positive-capacity-domination}
+On $K\Subset U$, the positive shifted currents
+$Q_p(u_1,\ldots,u_p)$, $1\leq p\leq m$, for globally bounded
+admissible potentials have trace and coefficient variations bounded
+on Borel $E\subset K$ by $C c_m^*(E)$. The constants are uniform
+when all potentials have a common bound.
+\end{lemma}
+\begin{proof}
+First take smooth potentials, put $\sigma_i=\omega+\ddc u_i$, and
+choose the fixed local correction $\tau=\ddc\rho\geq2\omega$.
+Then
+$\beta_i=\ddc(u_i+\rho)=\sigma_i+(\tau-\omega)$ lies in the
+same local cone. Since $\tau-\omega\geq0$, mixed positivity gives
+\[
+ 0\leq\int_E Q_p\wedge\omega^{m-p}
+    \leq\int_E\beta_1\cdots\beta_p\omega^{n-p}
+    \leq C c_m(E),\qquad E\subset K.
+\]
+Here $Q_p\wedge\omega^{m-p}=\sigma_1\cdots\sigma_p\omega^{n-p}$.
+The last bound follows from smooth mixed-trace domination at $s=m$
+for the bounded corrected potentials and a normalized bounded sum with a fixed strictly
+plurisubharmonic function. Positivity of $Q_p$ bounds each of its
+coefficient variations on the compact coordinate set by a fixed
+multiple of its trace measure.
+
+For bounded potentials choose the smooth decreasing global
+approximations already established in the chapter. The joint
+convergence in \cref{hessian:joint-decreasing-products} identifies
+their positive-current limit with the previously constructed $Q_p$.
+On a compact neighborhood of $K$ inside $U$, lower semicontinuity
+on open sets preserves trace and coefficient variation estimates.
+For an arbitrary open $G\supset E$ intersect with a fixed relatively
+compact neighborhood of $K$ before taking this limit; its capacity
+is at most $c_m(G)$. Therefore every such trace or variation measure
+$\mu$ satisfies $\mu(E)\leq Cc_m(G)$. Infimize over $G$ to obtain
+the asserted outer-open bound. The constants of the smooth estimates
+are independent of the approximation index. The argument does not
+multiply a rough current of positive order or use an unproved rough
+diagonal polynomial expansion.
+\end{proof}
+
+\Needspace{15\baselineskip}
+\begin{theorem}\label{hessian:weighted-positive-products}\index{Hessian measure!weighted positive products}
+Suppose $a_j\downarrow a$ and $u_i^j\downarrow u_i$ are bounded
+canonical global admissible potentials with common bounds. Then,
+for $1\leq p\leq m$,
+\[
+ a_j Q_p(u_1^j,\ldots,u_p^j)
+        \longrightarrow a Q_p(u_1,\ldots,u_p)
+\]
+weakly as currents with measure coefficients. At $p=m$ this is weak
+convergence of weighted Radon measures.
+\end{theorem}
+\begin{proof}
+Work on a compact coordinate test set. By
+\cref{hessian:joint-decreasing-products}, every coefficient measure
+of the positive shifted currents converges weakly and has a uniform
+local variation bound. \Cref{hessian:positive-capacity-domination}
+strengthens this to domination by $C c_m^*$ on Borel sets.
+\Cref{hessian:rough-coefficient-capacity} makes the canonical weights
+$a_j$ and $a$ quasicontinuous for this capacity. Apply
+\cref{hessian:weighted-measure-convergence} with $s=m$ to each
+coefficient, and then use a finite partition of unity. At $p=m$,
+$Q_m$ is a positive Radon measure, so this also gives the stated
+weighted measure convergence.
 \end{proof}
