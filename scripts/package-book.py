@@ -1765,6 +1765,7 @@ selected.update(root / name for name in [
     'research/xean/results/S11-small-curvature-ideal-traces-release-native-app-actual-responses-20261008.json',
 ])
 selected.update(root / name for name in ['research/audits/small-curvature-S11-primary-review-613.json', 'research/editorial/small-curvature-S11-primary-review-613.md', 'research/source-disposition-613.json', 'research/drafts/zero-lelong-ideal-neutrality-613.tex', 'research/drafts/small-curvature-strict-types-613.tex', 'research/drafts/small-curvature-intrinsic-traces-613.tex', 'research/drafts/ruled-pole-blowup-obstruction-613.tex'])
+selected.update(root / name for name in ['research/audits/small-curvature-S11-integration-614.json', 'research/editorial/small-curvature-S11-integration-614.md', 'research/source-disposition-614.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
