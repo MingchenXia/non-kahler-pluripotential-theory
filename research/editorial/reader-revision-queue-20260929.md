@@ -1,5 +1,9 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+Checkpoint596 continuation: the selected cone Liouville/blowup argument is reconstructed; full Hermitian Hessian regularity remains pending. Independently review incoming P11 concentration and primitive radial-test results in873b53cec0f7510f5859af0b54b9a278eb86b359, comparing the full paper with existing book foundations and preserving the general P11 gap. Then reconstruct Fang2610.06719v1 largest-eigenvalue estimate and close its bounded Hessian, auxiliary-equation and continuity applications before active integration. Reuse the existing book Liouville architecture without duplicating it; Chapter33/Appendix/front reader cycle581/582/583 remains complete. Source-package status: passed. See hermitian-hessian-liouville-review-596.md.
+
+
+
 Checkpoint595 continuation: four inactive Hessian lemmas are reconstructed; full analytic adoption remains pending. Complete the exact Dinew-Kolodziej Liouville proof and Szekelyhidi largest-eigenvalue/blowup proof, then close the needed bounded-product, approximation, domination and continuity applications at their exact scopes. Reconstruct the full Hermitian Hessian estimate before deciding a book integration. Continue incoming-author checks and proportionate reader polishing; the latest complete Chapter33/Appendix/front cycle is581/582/583. Source-package status: passed. See hermitian-hessian-primary-review-595.md.
 
 
