@@ -1,5 +1,7 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+Checkpoint597 continuation: Integrate the three restricted P11 arguments: transverse concentration after Chapter4 Gauduchon linear duality, and the explicit radial root-volume calculation in the existing primitive elliptic-bundle subsection. Preserve the original all-potential P11 question, avoid repeating existing Lamari/compactness foundations, then build, inspect, update the catalogue and verify publication/reconstruction. Resume the Fang derivative-independent estimate and analytic dependency review afterwards. See divisor-free-radial-primary-review-597.md.
+
 Checkpoint596 continuation: the selected cone Liouville/blowup argument is reconstructed; full Hermitian Hessian regularity remains pending. Independently review incoming P11 concentration and primitive radial-test results in873b53cec0f7510f5859af0b54b9a278eb86b359, comparing the full paper with existing book foundations and preserving the general P11 gap. Then reconstruct Fang2610.06719v1 largest-eigenvalue estimate and close its bounded Hessian, auxiliary-equation and continuity applications before active integration. Reuse the existing book Liouville architecture without duplicating it; Chapter33/Appendix/front reader cycle581/582/583 remains complete. Source-package status: passed. See hermitian-hessian-liouville-review-596.md.
 
 

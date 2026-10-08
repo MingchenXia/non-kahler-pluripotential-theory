@@ -1,0 +1,101 @@
+% Inactive independent reconstruction of the restricted incoming P11 results.
+% General concentration belongs after Gauduchon linear duality; the radial
+% calculation belongs in the existing primitive elliptic-bundle subsection.
+\section{Transverse concentration of Gauduchon tests}
+\label{draft:597-transverse-concentration}
+
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$, with Hermitian form $\omega$. Let $\mathcal T_\omega$ be the smooth strictly positive members of the normalized current cone $\mathscr G_\omega$ of \cref{sec:gauduchon-linear-duality}. Thus every $\Theta\in\mathcal T_\omega$ satisfies $\ddc\Theta=0$ and $\int_X\omega\wedge\Theta=1$.
+These tests form a weakly relatively compact family, but their pairings with a form concentrating transversely to a hypersurface need not stay bounded. A uniform bound would, by duality, produce a potential whose curvature charges the local hypersurface. Analyticity of Lelong level sets then forces a global hypersurface.
+
+Choose a product coordinate chart $(z,\zeta)\in U\times\Delta_r$, with $z\in\mathbb C^{n-1}$, and a smooth compactly supported $0\leq\chi\leq1$ on $U$, equal to one on a nonempty connected smaller polydisk $U'$. Put $\sigma_\zeta=(\mathrm i/(2\pi))\,\mathrm d\zeta\wedge\mathrm d\bar\zeta$. Fix $p\in C_c^\infty(\mathbb C)$, nonnegative and supported in the closed unit disk, with $\int p\,\sigma_\zeta=1$. For small $\delta>0$ extend
+\[
+ B_\delta=\chi(z)\delta^{-2}p(\zeta/\delta)\sigma_\zeta
+\]
+by zero to $X$, and set
+\[
+ C_\delta=\sup_{\Theta\in\mathcal T_\omega}
+                      \int_XB_\delta\wedge\Theta.
+\]
+The form $B_\delta$ is smooth and semipositive. For fixed $\delta$ it is bounded above by a finite multiple of $\omega$, so $C_\delta<\infty$.
+
+\begin{theorem}\label{draft:597-divisor-free-concentration}
+If $C_{\delta_j}$ stays bounded along a sequence $\delta_j\downarrow0$, then some global analytic hypersurface contains $U'\times\{0\}$. In particular, on a manifold without analytic hypersurfaces, $C_\delta\to\infty$ as $\delta\downarrow0$.
+\end{theorem}
+\begin{proof}
+Suppose $C_{\delta_j}\leq M$ and put $\kappa=(M+1)^{-1}$. Normalizing any smooth strictly positive $\ddc$-closed complementary form gives
+\[
+ \int_X(\omega-\kappa B_{\delta_j})\wedge\Theta\geq0.
+\]
+The generalized Lamari criterion, \cref{thm:lamari}, supplies $v_j$ with
+\[
+ \omega+\ddc v_j\geq\kappa B_{\delta_j},\qquad\sup_Xv_j=0.
+\]
+Since $B_{\delta_j}\geq0$, the potentials belong to the fixed normalized $\omega$-plurisubharmonic family. By \cref{thm:normalized-compactness}, a subsequence converges in $L^1$ to $v\in\PSH(X,\omega)$.
+The transverse approximate identity converges to $\chi[\zeta=0]$, so passing in distributions gives
+\[
+ \omega+\ddc v\geq\kappa\chi[\zeta=0].
+\]
+On a smaller chart meeting the inner hypersurface, add a smooth $\rho$ with $\ddc\rho\geq\omega$. The closed positive current $\ddc(v+\rho)$ dominates $\kappa[\zeta=0]$ where $\chi=1$. Hence the Lelong number of $v$ is at least $\kappa$ at every point of $U'\times\{0\}$.
+By Siu's theorem in \cref{subsec:psh-lelong-levels}, the set $Z=\{\nu(v,\cdot)\geq\kappa\}$ is analytic and has dimension at most $n-1$. Smooth local corrections do not change its definition. The compact analytic set $Z$ has finitely many global irreducible components. Their intersections with the connected inner hypersurface are analytic subsets covering it. At least one intersection is the whole hypersurface, since finitely many proper analytic subsets cannot cover an open polydisk. That component has dimension $n-1$ and is the required global hypersurface.
+If no such hypersurface exists, there is no bounded sequence $C_{\delta_j}$ with $\delta_j\downarrow0$, which proves the asserted divergence.
+\end{proof}
+
+\begin{proposition}\label{draft:597-cartier-concentration-bound}
+Suppose an effective Cartier divisor agrees, with multiplicity one, with $\{\zeta=0\}$ throughout the chosen coordinate chart. Then $C_\delta$ is uniformly bounded for all sufficiently small $\delta$.
+\end{proposition}
+\begin{proof}
+Let $s$ be the canonical section of its divisor line bundle. In the chart write $s=\zeta e$ with $e$ a nonvanishing holomorphic frame. Choose a smooth Hermitian metric $h$ with $|e|_h=1$ on a neighborhood of $\operatorname{supp}\chi\times\{|\zeta|\leq\delta_0\}$ for a fixed small $\delta_0>0$.
+The smooth global functions $\psi_\delta=\log(|s|_h^2+\delta^2)$ satisfy $\ddc\psi_\delta\geq-C\omega$ with one $C\geq1$. Off the divisor their Hessians are a bounded scalar multiple of the negative curvature of $h$, plus a semipositive gradient term; continuity gives the same lower bound at the divisor. Fix $0<\epsilon\leq(2C)^{-1}$, so $\omega+\epsilon\ddc\psi_\delta\geq\omega/2$.
+On the flat-frame region,
+\[
+ \ddc\psi_\delta
+ =\frac{\delta^2}{(|\zeta|^2+\delta^2)^2}\sigma_\zeta
+ \geq\frac1{4\delta^2}\sigma_\zeta
+ \quad(|\zeta|\leq\delta).
+\]
+If $P=\|p\|_\infty$, then $B_\delta\leq P\delta^{-2}\sigma_\zeta$ on its support. Therefore
+\[
+ \omega+\epsilon\ddc\psi_\delta\geq\frac{\epsilon}{4P}B_\delta
+\]
+globally for $\delta\leq\delta_0$. Every $\Theta\in\mathcal T_\omega$ gives, by smooth Stokes,
+\[
+ 1=\int_X(\omega+\epsilon\ddc\psi_\delta)\wedge\Theta
+      \geq\frac{\epsilon}{4P}\int_XB_\delta\wedge\Theta.
+\]
+Taking the supremum proves $C_\delta\leq4P/\epsilon$.
+\end{proof}
+
+The uniform bound requires the divisor to agree on the entire cutoff chart. A global hypersurface supplied by the preceding theorem can have further branches there, so the theorem does not provide this converse at arbitrary intersections. Divergence of the transverse pairing alone also gives no lower bound for the volume of the positive root of a test.
+
+\subsection{Radial tests on a primitive elliptic bundle}
+
+Use the notation $(B,\eta),L,X,t,c,T,A,D,\omega$ of \cref{sec:primitive-elliptic-bundles}, so $D=\mathrm dt\wedge\dc t$, $\eta\wedge c=0$, $\omega=\eta+D$, and $V=\int_X\omega^3=3TA$. Pullbacks from the base are suppressed. For smooth real $T$-periodic functions $a,g$, consider
+\[
+ \Gamma=a(t)\eta^2+g(t)\eta\wedge D.
+\]
+
+\begin{proposition}\label{draft:597-primitive-radial-root-volume}
+The form $\Gamma$ is strictly positive and $\ddc$-closed exactly when $a$ is a positive constant and $g>0$. For such a form put $\bar g=T^{-1}\int_0^Tg(s)\,\mathrm ds$ and $d_\Gamma=\int_X\omega\wedge\Gamma$. Its positive square root and volume are
+\[
+ \gamma=\sqrt a\,\eta+\frac{g(t)}{2\sqrt a}D,
+ \qquad
+ \int_X\gamma^3=\frac32TA\sqrt a\,\bar g
+       \leq\frac{d_\Gamma^{3/2}}{\sqrt V}.
+\]
+Equality holds exactly when $\bar g=2a$, without requiring $g$ to be constant. In particular every degree-one test in this family has root volume at most $V^{-1/2}$.
+\end{proposition}
+\begin{proof}
+Since $\eta\wedge c=0$, the form $g\eta\wedge D$ is closed. The chain rule gives
+\[
+ \ddc(a\eta^2)=a''D\wedge\eta^2,
+\]
+the $a'c\wedge\eta^2$ term having excess base degree. Thus $\ddc\Gamma=0$ forces $a''=0$, and periodicity makes $a$ constant. In a positive coframe with $\eta=\sigma_1+\sigma_2$, $D=\sigma_3$, the complementary coefficient matrix of $\Gamma$ is $\operatorname{diag}(g,g,2a)$. Hence positivity is exactly $a,g>0$.
+The displayed $\gamma$ is positive and squares to $\Gamma$. Multiplication and fiber integration give
+\[
+ d_\Gamma=TA(a+\bar g),\qquad
+ \gamma^3=\tfrac32\sqrt a\,g\eta^2\wedge D.
+\]
+For fixed $d_\Gamma>0$ set $s=d_\Gamma/(TA)$. Then $0<a<s$, $\bar g=s-a$, and $\sqrt a(s-a)$ has its unique maximum at $a=s/3$. Substitution proves the bound and its equality condition.
+\end{proof}
+
+The K3 threefold of \cref{ex:primitive-elliptic-k3} has no divisors, so its transverse constants diverge by \cref{draft:597-divisor-free-concentration}. Nevertheless the displayed radial family has bounded root volume at fixed degree, even when $g$ concentrates arbitrarily strongly. This family therefore supplies no sequence of tests with unbounded root volume. The infimum over all admissible potentials in \cref{prob:primitive-elliptic-lower-mass} remains undetermined.
