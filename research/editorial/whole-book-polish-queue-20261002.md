@@ -1,5 +1,7 @@
 # Whole-book polish requested 2 October 2026
 
+Checkpoint590 continuation: incoming restricted S02 has independent proof/application review and a617-line inactive fragment. Integrate its10 proofs after Hopf minimal mass in Chapter8, preserving Chapter1 foundations and the unrestricted open problem; update history and catalogue, build/publish/inspect and reconstruct. Then resume Hermitian regularity primary review. No Xean execution or whole-book certificate. See rotational-hopf-primary-review-590.md.
+
 Current continuation: checkpoint579 preserves the latest incoming P14 author source and all46 incoming paths after completed Chapter32 revision578. The whole306-line paper has a first direct read; exact new cost profiles and closed-core boundary await review before integration. No new full book build or theorem adoption is claimed. First review P14, then resume the complete recursive Chapter33 reader revision and appendices. See [the intake record](incoming-p14-intake-579.md).
 
 ## Greatest exponential left-limit review 526

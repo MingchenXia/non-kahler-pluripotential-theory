@@ -1,5 +1,7 @@
 # Chapter-by-chapter revision — requested 25 September 2026
 
+Checkpoint590 continuation: incoming restricted S02 has independent proof/application review and a617-line inactive fragment. Integrate its10 proofs after Hopf minimal mass in Chapter8, preserving Chapter1 foundations and the unrestricted open problem; update history and catalogue, build/publish/inspect and reconstruct. Then resume Hermitian regularity primary review. No Xean execution or whole-book certificate. See rotational-hopf-primary-review-590.md.
+
 Checkpoint589 continuation: scoped curvature-rank section growth is integrated in Chapter20, with exact historical sources, updated locators and verified live October8 publication. Both outputs are actually reconstructed; synchronize this release, then independently review the incoming restricted S02 rotational Hopf thresholds in ca86092 and integrate only checked results. General S02 and high-dimensional intermediate cohomology remain open. Resume Hermitian regularity primary review afterwards; preserve75 missing and451 historical payload qualifications. No full-book mathematical certificate.
 
 Checkpoint587 continuation: restricted affine toric adapted integrability and the nonsimplicial quadric ideal are checked and publicly published. Actual fresh main-book and companion reconstruction passes. Push this checkpoint, then check incoming author work and current arXiv before related primary reading and direct research. General P23, S11 and P14 remain open. See affine-toric-adapted-integration-587.md.
