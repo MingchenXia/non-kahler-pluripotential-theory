@@ -4,7 +4,7 @@ Four inactive proofs reconstruct global decreasing smooth strictly admissible ap
 
 The complete 179-line saved fragment has two actual manual reads and four proofs. The linear representative convention is essential: an isolated upper semicontinuous spike satisfies unchanged current inequalities but fails the subharmonic upper-test condition. This does not change the earlier continuous book definitions.
 
-A complete title screen covers the October 8 math.CV and math.DG new pages: 21 and 44 entries, 62 unique identifiers. Selected abstracts and exact v1 metadata are checked. Curvature-rank Dolbeault cohomology growth (2610.09295v1) is directly relevant and queued for primary-proof reading; no result is adopted from a listing or abstract.
+A complete title screen covers the October 8 math.CV and math.DG new pages: 21 and 44 entries, 62 unique identifiers. Selected abstracts and exact v1 metadata are checked. Curvature-rank Dolbeault cohomology growth (2610.09295v1) is directly relevant. Reconciliation at checkpoint608 confirms its complete primary read at588 and restricted geometric/endpoint book integration at589; the BN19 cellular dependency and full all-degree theorem remain unclosed. The607 scan performs no fresh proof read or new adoption from a listing or abstract.
 
 The checkpoint 606 audit is compacted to the count of its 1896 compiled-label changes and its 41 new anchors; no mathematical or review assertion changes. The complete label comparison remains in the local review scratch.
 
@@ -12,6 +12,6 @@ All 403 book files, both original source manifests and both catalogue files rema
 
 Current metadata verification passes 2891 safe paths and 2890 payload checksums, with 400 byte-exact packaged book-source files and all 1657 main/17 companion page texts matching the actual checkpoint 606 empty reconstruction. No new empty extraction, rebuild or publication is claimed.
 
-Integrate the bounded decreasing-approximation argument at its natural foundation location in Chapter 12, with the upper-test definition and declared linear equivalence made precise, preserving all prior proofs. Then reconstruct bounded mixed products and their weighted monotone/capacity convergence, retaining every Hermitian torsion term, before extending contact comparison, domination or regularity. Check incoming author updates and read exact 2610.09295v1 on curvature-rank cohomology growth; 2610.10451v1 is only a pending candidate. Preserve reader cycle 581/582/583 and continue the remaining whole-book queue. Xean remains withdrawn.
+Integrate the bounded decreasing-approximation argument at its natural foundation location in Chapter 12, with the upper-test definition and declared linear equivalence made precise, preserving all prior proofs. Then reconstruct bounded mixed products and their weighted monotone/capacity convergence, retaining every Hermitian torsion term, before extending contact comparison, domination or regularity. Check incoming author updates and continue the unclosed all-degree dependencies of the previously read 2610.09295v1; 2610.10451v1 is only a pending candidate. Preserve reader cycle 581/582/583 and continue the remaining whole-book queue. Xean remains withdrawn.
 
 See the [scoped audit](../audits/hermitian-hessian-bounded-approximation-review-607.json).

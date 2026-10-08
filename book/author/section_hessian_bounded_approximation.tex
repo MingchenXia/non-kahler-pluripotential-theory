@@ -1,0 +1,130 @@
+\subsection{Decreasing approximation of bounded potentials}
+\label{subsec:hessian-bounded-approximation}
+\index{Admissible potential!decreasing smooth approximation}
+
+Upper semicontinuity supplies smooth obstacles decreasing to a bounded
+potential. The same penalty equation gives admissible functions between
+the potential and each obstacle, up to an error tending to zero.
+Choosing successive obstacles below the preceding smooth approximation
+makes the admissible approximations decrease as well.
+
+\begin{lemma}\label{hessian:smooth-majorants}
+Every bounded upper semicontinuous real function $u$ on $X$ is the
+pointwise decreasing limit of smooth functions $h_j>u$.
+\end{lemma}
+\begin{proof}
+Fix a Riemannian distance $d$ on $X$ and put
+\[
+ c_j(x)=\sup_{y\in X}\{u(y)-j d(x,y)\}.
+\]
+Each $c_j$ is Lipschitz, $c_j\geq u$, and $c_{j+1}\leq c_j$.
+The supremum is attained. If $y_j$ attains it at a fixed $x$, then
+$j d(x,y_j)\leq\sup_X u-u(x)$, so $y_j\to x$.
+Upper semicontinuity gives $\limsup_j c_j(x)\leq u(x)$, and hence
+$c_j\downarrow u$ pointwise.
+
+Set $\delta_j=4^{-j}$. Smooth approximation of continuous functions
+on a compact manifold gives $s_j\in C^\infty(X)$ with
+$\|s_j-c_j\|_\infty\leq\delta_j/4$.
+Take $h_j=s_j+\delta_j$. Then
+\[
+ u+\tfrac34\delta_j\leq h_j\leq c_j+\tfrac54\delta_j,
+ \qquad
+ h_{j+1}\leq c_j+\tfrac5{16}\delta_j
+                    < c_j+\tfrac34\delta_j\leq h_j.
+\]
+The bounds also imply $h_j(x)\to u(x)$ at every point.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{hessian:bounded-penalty-squeeze}
+Let $u$ be bounded admissible and $h\geq u$ smooth. Choose
+\[
+ b>\max\{1,\|H_m(h)/\omega^n\|_\infty\}.
+\]
+For each positive integer $N$, let $w_N$ be the smooth strictly
+admissible solution of
+\[
+ H_m(w_N)=b e^{N(w_N-h)}\omega^n.
+\]
+With
+\[
+ M_N=\|h\|_\infty+\frac{\log b}{N},\qquad
+ E_N=\frac{m\log(N+1)+\log b}{N},
+\]
+one has $\|w_N\|_\infty\leq M_N$ and
+\[
+ u-E_N-2M_N/N\leq w_N\leq h.
+\]
+\end{lemma}
+\begin{proof}
+Existence follows from \cref{hessian:smooth-proper-existence}.
+The maximum comparison with $h$ in the proof of
+\cref{hessian:continuous-smooth-approximation} gives $w_N\leq h$;
+it involves only the smooth obstacle and solution. The zero-order
+bound from \cref{hessian:smooth-proper-existence} gives
+$\|w_N\|_\infty\leq M_N$.
+
+The upper semicontinuous function $u-(1+N^{-1})w_N$ attains its
+maximum at some $x_N$. The smooth function $(1+N^{-1})w_N$ plus
+this maximum is an upper test for $u$ there. Put
+\[
+ T_N=(\omega+\ddc w_N)^{m-1}\wedge\omega^{n-m},
+ \qquad d_N=H_m(w_N)/\omega^n>0.
+\]
+Condition \eqref{eq:hessian-bounded-upper-tests} and polarized
+positivity yield, at $x_N$,
+\[
+ (N+1)d_N\geq\omega\wedge T_N/\omega^n
+                           \geq d_N^{(m-1)/m}.
+\]
+Consequently $d_N\geq(N+1)^{-m}$ and $w_N-h\geq-E_N$ there.
+Using $u\leq h$, the maximum is at most $E_N+M_N/N$.
+On all of $X$ this gives
+\[
+ u\leq(1+N^{-1})w_N+E_N+M_N/N
+                     \leq w_N+E_N+2M_N/N.
+\]
+\end{proof}
+
+\begin{theorem}\label{hessian:bounded-decreasing-approximation}
+Every bounded admissible potential $u$ on $X$ is the pointwise
+decreasing limit of smooth strictly admissible potentials.
+The sequence may be chosen uniformly bounded.
+\end{theorem}
+\begin{proof}
+Choose smooth $h_k\downarrow u$ by \cref{hessian:smooth-majorants}
+and put $\varepsilon_j=8^{-j}$. We construct smooth strictly admissible
+$u_j$ with $u_j\geq u+\varepsilon_j$.
+For $j=1$, take $k_1=1$. At a subsequent step choose
+$k_j\geq\max\{j,k_{j-1}+1\}$ so large that
+\[
+ h_{k_j}<u_{j-1}-\tfrac12\varepsilon_{j-1}\quad\hbox{on }X.
+\]
+Such an index exists: the open sets
+$\{h_k<u_{j-1}-\varepsilon_{j-1}/2\}$ increase with $k$ and cover
+$X$, since $h_k\downarrow u\leq u_{j-1}-\varepsilon_{j-1}$.
+Compactness gives a single index for all of $X$.
+
+For this fixed obstacle $h_{k_j}$ choose $b_j$ as in
+\cref{hessian:bounded-penalty-squeeze}, and then choose $N_j$ so large
+that its error $E_{N_j}+2M_{N_j}/N_j$ is at most $\varepsilon_j$.
+The resulting smooth solution $w_j$ satisfies
+\[
+ u-\varepsilon_j\leq w_j\leq h_{k_j}.
+\]
+Put $u_j=w_j+2\varepsilon_j$. Adding a constant preserves strict
+admissibility, and $u_j\geq u+\varepsilon_j$. For $j\geq2$,
+\[
+ u_j\leq h_{k_j}+2\varepsilon_j
+ <u_{j-1}-\tfrac12\varepsilon_{j-1}+2\varepsilon_j
+ =u_{j-1}-\tfrac14\varepsilon_{j-1}.
+\]
+Finally, $u\leq u_j\leq h_{k_j}+2\varepsilon_j$ and $k_j\geq j$
+give pointwise convergence to $u$. The bounds
+$\inf_X u\leq u_j\leq\sup_X u_1$ give a common uniform bound.
+\end{proof}
+
+For continuous $u$, Dini's theorem makes these decreasing approximations
+converge uniformly on $X$. This is the convergence used for the
+continuous mixed products in the next section.
