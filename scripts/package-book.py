@@ -1771,6 +1771,7 @@ selected.update(root / name for name in ['research/audits/hermitian-hessian-sobo
 selected.update(root / name for name in ['research/audits/hessian-two-products-sobolev-capacity-review-617.json', 'research/editorial/hessian-two-products-sobolev-capacity-review-617.md', 'research/source-disposition-617.json', 'research/drafts/hessian-two-products-sobolev-capacity-617.tex'])
 selected.update(root / name for name in ['research/audits/hessian-two-products-capacity-integration-618.json', 'research/editorial/hessian-two-products-capacity-integration-618.md', 'research/source-disposition-618.json'])
 selected.update(root / name for name in ['research/audits/hessian-local-shift-capacity-review-619.json', 'research/editorial/hessian-local-shift-capacity-review-619.md', 'research/source-disposition-619.json', 'research/drafts/hessian-local-shift-capacity-transfer-619.tex'])
+selected.update(root / name for name in ['research/audits/hessian-local-correction-integration-620.json', 'research/editorial/hessian-local-correction-integration-620.md', 'research/source-disposition-620.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
