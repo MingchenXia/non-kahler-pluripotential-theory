@@ -1696,6 +1696,7 @@ selected.update(root / name for name in ['research/audits/hermitian-hessian-pres
 selected.add(root / 'research/audits/incoming-P16-preservation-600.json')
 selected.update(root / name for name in ['research/audits/continuous-hessian-adjoint-review-601.json', 'research/editorial/continuous-hessian-adjoint-review-601.md', 'research/source-disposition-601.json', 'research/drafts/continuous-hessian-adjoint-reconstruction-601.tex'])
 selected.update(root / name for name in ['research/audits/continuous-hessian-adjoint-integration-602.json', 'research/editorial/continuous-hessian-adjoint-integration-602.md', 'research/source-disposition-602.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-complex-limits-review-603.json', 'research/editorial/hermitian-hessian-complex-limits-review-603.md', 'research/source-disposition-603.json', 'research/drafts/hermitian-hessian-bounded-complex-limits-603.tex'])
 selected.update((root / "research/audits").glob("build-snapshot-*.json"))
 completed_runs = set()
 for directory in (root / "research/rethlas/verification/results").iterdir():

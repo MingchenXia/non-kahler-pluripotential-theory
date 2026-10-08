@@ -1,0 +1,13 @@
+# Bounded complex-Hessian limits — checkpoint 603
+
+Four inactive proofs reconstruct Sobolev compactness from a bounded complex Hessian, coefficient-product continuity with arbitrary smooth nonclosed backgrounds, a concave uniformly elliptic extension of the normalized Hessian root, and the almost-everywhere/viscosity auxiliary limit. The product passage retains derivatives of the smooth test/background factors. The real projection has the explicit trace factor 1/4, and lower viscosity tests are evaluated on the global extension. No general bounded Hessian-product theorem or bounded-to-smooth result is asserted.
+
+The complete 219-line saved fragment has two actual source reads and four proof bodies. Selected primary reads identify the remaining weak-product, nonclosed-background comparison and continuity boundary; their exact ranges and qualifications are in the audit.
+
+All 395 book files, both original source manifests and both catalogue files are byte-exact to checkpoint 602. No author or companion rebuild or new publication occurs. The verified release retains 1601 printed/1629 physical pages, the 17-page companion, and both October 8, 2026 covers and matching homepage description. The unchanged native catalogue preview remains unverified. The 40 existing open assessment scopes and 75/451 historical payload qualifications remain. This is a research-only increment: continuity of arbitrary bounded weak solutions, their general products/comparison, existence/approximation and Evans--Krylov/Schauder applications remain separate obligations. Classical Laplace estimates, Sobolev compactness, Mazur and Garding algebra are declared inputs, not a fresh complete recertification. No whole-book certificate or installed base house-audit pass is claimed.
+
+Current metadata checks pass 2868 safe paths and 2867 current payload checksums, with 392 byte-exact book-source files and all 1629 main/17 companion page texts matching the actual checkpoint-602 empty reconstruction. No new empty reconstruction is claimed.
+
+Close the exact bounded weak-Hessian product and nonclosed-background comparison applications, including exponential uniqueness, before using the proper equation to prove continuity. Then reconstruct the necessary proper auxiliary existence, global smooth admissible approximation and higher-regularity applications, and integrate the complete justified Hermitian Hessian argument. Continue incoming-author and primary arXiv checks, preserving the completed Chapter 33/Appendix/front reader cycle 581/582/583.
+
+See the [scoped audit](../audits/hermitian-hessian-complex-limits-review-603.json).
