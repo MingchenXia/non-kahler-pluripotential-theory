@@ -1768,6 +1768,7 @@ selected.update(root / name for name in ['research/audits/small-curvature-S11-pr
 selected.update(root / name for name in ['research/audits/small-curvature-S11-integration-614.json', 'research/editorial/small-curvature-S11-integration-614.md', 'research/source-disposition-614.json'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-review-615.json', 'research/editorial/hermitian-hessian-sobolev-review-615.md', 'research/source-disposition-615.json', 'research/drafts/hermitian-hessian-sobolev-two-factors-615.tex'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-integration-616.json', 'research/editorial/hermitian-hessian-sobolev-integration-616.md', 'research/source-disposition-616.json'])
+selected.update(root / name for name in ['research/audits/hessian-two-products-sobolev-capacity-review-617.json', 'research/editorial/hessian-two-products-sobolev-capacity-review-617.md', 'research/source-disposition-617.json', 'research/drafts/hessian-two-products-sobolev-capacity-617.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
