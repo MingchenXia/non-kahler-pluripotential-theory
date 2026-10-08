@@ -202,29 +202,17 @@ $\psi=A(|z|^2-R^2)+b$, with $b>M+2$ and then $A$ so large that
 $\psi<-M-2$ on a neighborhood of $\overline V$.
 It exceeds $M+2$ on a fixed sufficiently thin boundary collar.
 
-Let $\zeta$ be a nonnegative even smooth probability density
-supported in $[-1,1]$, and put
-\[
- \chi_\epsilon(t)=\int|t+\epsilon s|\zeta(s)\,\mathrm ds,
- \qquad
- M_\epsilon(a,b)=\tfrac12(a+b+\chi_\epsilon(a-b)).
-\]
-This is smooth and convex, increases in each argument, and equals
-$\max(a,b)$ when $|a-b|\geq\epsilon$. It is nondecreasing in
-$\epsilon$: pairing $s$ and $-s$ shows that the scale derivative
-of $\chi_\epsilon$ is nonnegative. Choose $0<\epsilon_j\downarrow0$
+Use the regularized maximum $M_\epsilon$ constructed in
+\cref{hessian:regularized-maximum}. Choose $0<\epsilon_j\downarrow0$
 with $\epsilon_j<1$, and put $v_j=M_{\epsilon_j}(f_j,\psi)$.
-Both monotonicities give $v_j\downarrow\max(f,\psi)=v$.
-The fixed gaps give the two asserted regions of exact equality.
-
-Differentiation writes $\ddc v_j$ as a convex combination of
-$\ddc f_j$ and $\ddc\psi$, plus
-$\tfrac12\chi_{\epsilon_j}''(f_j-\psi)
-       \mathrm d(f_j-\psi)\wedge\dc(f_j-\psi)$.
-The last form is nonnegative. Cone convexity and stability under
-nonnegative addition prove local $m$-subharmonicity. Bounds for
-$f_j,\psi$ and $\chi_\epsilon(t)-|t|\leq\epsilon$ give the common
-bound. In particular all differences $v_k-v_j$ have support in
+The lemma preserves the local unshifted cone condition. Its two
+monotonicities give $v_j\downarrow\max(f,\psi)=v$, and the fixed
+gaps give the two asserted regions of exact equality. The bounds
+\[
+ \max(f_j,\psi)\leq v_j\leq\max(f_j,\psi)+\epsilon_j/2
+\]
+give a common bound.
+In particular all differences $v_k-v_j$ have support in
 one fixed compact subset of $U$.
 \end{proof}
 
@@ -418,35 +406,45 @@ polynomial expansion is used.
 \end{proof}
 
 \begin{lemma}\label{hessian:weighted-measure-convergence}
-Fix $0\leq s\leq m$. Suppose signed Radon measures $\nu_j\to\nu$ weakly have locally
-uniformly bounded variations, each dominated on compact sets by
-$C c_s^*$. If bounded Borel functions $a_j\downarrow a$ have
-one common bound and every member of this countable family is
-locally quasicontinuous for that capacity, then
-$a_j\nu_j\to a\nu$ weakly.
+Fix $0\leq s\leq m$ and the outer smooth capacity $c_s^*$ on $U$.
+Let signed Radon measures $\nu_j\to\nu$ weakly have uniformly bounded
+local variations, with all variations dominated on compact subsets
+by $C c_s^*$. Suppose, for $1\leq i\leq\ell$, that bounded Borel
+functions $b_i^j\downarrow b_i$ have one common bound and every
+member of these countable families is locally quasicontinuous for
+this capacity. For any continuous real $F$ on a compact box
+containing their ranges,
+\[
+ F(b_1^j,\ldots,b_\ell^j)\nu_j
+       \longrightarrow F(b_1,\ldots,b_\ell)\nu
+\]
+weakly as signed Radon measures.
 \end{lemma}
 \begin{proof}
 Fix $\phi\in C_c(U)$ and a compact $K\Subset U$ containing its
-support. Summably allocate exceptional capacities less than
-$\epsilon$ to the countable family. Their open union $G$ has
-$c_s^*(G)<\epsilon$, and every function is continuous on
-the compact set $F=K\setminus G$. Dini's theorem gives
-$\|a_j-a\|_F\to0$. Extend $a|_F$ to a bounded continuous $g$ on
-$U$ with the same bound $M$; if $F$ is empty take $g=0$.
+support. Allocate summable exceptional capacities to all the
+functions. Their open union $G$ has $c_s(G)<\epsilon$, and every
+function is continuous on the compact set $A=K\setminus G$.
+Dini's theorem gives $b_i^j\to b_i$ uniformly on $A$ for each $i$.
+Uniform continuity of $F$ on the compact box therefore gives
+$f_j\to f$ uniformly on $A$, where
+$f_j=F(b_1^j,\ldots,b_\ell^j)$ and $f=F(b_1,\ldots,b_\ell)$.
+Put $M=\|F\|_\infty$. Extend $f|_A$ to a continuous $g$ on $U$
+with $|g|\leq M$; if $A$ is empty, take $g=0$.
 Then
 \[
- \begin{split}
- \left|\int\phi(a_j\,\mathrm d\nu_j-a\,\mathrm d\nu)\right|
- &\leq\|\phi\|_\infty\|a_j-a\|_F|\nu_j|(K)
-          +\left|\int\phi g\,\mathrm d(\nu_j-\nu)\right|\\
+\begin{aligned}
+ \left|\int\phi f_j\,\mathrm d\nu_j-
+                 \int\phi f\,\mathrm d\nu\right|
+ &\leq \|\phi\|_\infty\|f_j-f\|_A|\nu_j|(K)
+       +\left|\int\phi g\,\mathrm d(\nu_j-\nu)\right|\\
  &\quad+2M\|\phi\|_\infty
-                 \bigl(|\nu_j|(K\cap G)+|\nu|(K\cap G)\bigr).
- \end{split}
+            \bigl(|\nu_j|(K\cap G)+|\nu|(K\cap G)\bigr).
+\end{aligned}
 \]
-For fixed $G$ the first two terms tend to zero, and the last is
-at most $4MC\|\phi\|_\infty\epsilon$. Let $\epsilon\downarrow0$.
-The weak-measure passage uses a continuous extension on the whole
-measure, rather than the discontinuous indicator of $F$.
+For fixed $G$, the first two terms tend to zero. The last term is
+at most $4MC\|\phi\|_\infty\epsilon$. Let $\epsilon$ tend to zero.
+Weak convergence is applied to $\phi g$ on the whole measure.
 \end{proof}
 
 \Needspace{20\baselineskip}

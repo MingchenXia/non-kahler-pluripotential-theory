@@ -53,6 +53,7 @@ class.
 The first estimate controls a scalar shift of the cone. It will give
 lower bounds for every coefficient of the linearized Hessian operator.
 
+\Needspace{14\baselineskip}
 \begin{lemma}\label{hessian:hessian-cone-shift}
 For $\lambda\in\Gamma_m$, put
 \[
@@ -255,4 +256,59 @@ Since $S_{q+1}(\lambda)\geq0$ and $AC\leq c_{N,q}B^2$, this is
 at least $(1-c_{N,q})B^2$. There is no division by $A$ or $D_i$;
 all degenerate endpoints are therefore included. Equivalently one
 may first add $\epsilon\mathbf1$ and pass to the closed cone.
+\end{proof}
+
+A smooth maximum preserves the cone condition and can be chosen
+monotone in its smoothing scale as well as in its two arguments.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{hessian:regularized-maximum}\index{Regularization!Hessian potentials}
+If smooth uniformly bounded admissible $u_j\downarrow u$ and
+$v_j\downarrow v$ are given, there are smooth uniformly bounded
+admissible $w_j\downarrow\max\{u,v\}$. For any chosen
+$\epsilon_j>0$ decreasing to zero, they can be chosen to satisfy
+$w_j=u_j$ on $\{u_j-v_j>\epsilon_j\}$ and
+$w_j=v_j$ on $\{v_j-u_j>\epsilon_j\}$.
+For smooth functions $f,g$ on an open subset of $X$ with
+$\ddc f,\ddc g\in\overline{\Gamma_m(\omega)}$, the regularized
+maximum $M_\epsilon(f,g)$ constructed below satisfies the same
+unshifted cone condition.
+\end{lemma}
+\begin{proof}
+Choose a nonnegative even smooth probability density $\zeta$
+supported in $[-1,1]$, and set
+\[
+ r_\epsilon(t)=\int |t-\epsilon s|\zeta(s)\,\mathrm ds,
+ \qquad M_\epsilon(x,y)=\tfrac12(x+y+r_\epsilon(x-y)).
+\]
+The function $r_\epsilon$ is smooth and convex,
+$|r_\epsilon'|\leq1$, and $r_\epsilon(t)=|t|$ for
+$|t|\geq\epsilon$. Jensen's inequality and the triangle inequality
+give
+\[
+ \max\{x,y\}\leq M_\epsilon(x,y)
+                     \leq\max\{x,y\}+\epsilon/2.
+\]
+Its partial derivatives in $x,y$ are nonnegative. For fixed $t$,
+$r_\epsilon(t)$ is an even convex function of $\epsilon$, since
+$\zeta$ is even. It is therefore nondecreasing for $\epsilon\geq0$.
+Consequently $w_j=M_{\epsilon_j}(u_j,v_j)$ decreases pointwise to
+$\max\{u,v\}$ and has the asserted equalities and bounds.
+
+Put $h_j=u_j-v_j$ and
+$a_j=(1+r_{\epsilon_j}'(h_j))/2$. The chain rule gives
+\[
+ \omega+\ddc w_j
+ =a_j(\omega+\ddc u_j)+(1-a_j)(\omega+\ddc v_j)
+       +\tfrac12r_{\epsilon_j}''(h_j)
+                    \mathrm dh_j\wedge\dc h_j.
+\]
+Here $0\leq a_j\leq1$, and the last form is semipositive.
+Convexity of the cone and its stability under semipositive addition
+prove admissibility. For smooth local functions satisfying the unshifted
+cone condition, omit $\omega$ from this chain rule; the same argument
+proves preservation of that condition. The pointwise maximum is itself admissible:
+an upper test for it at a point is an upper test for a potential
+attaining the maximum there. Its canonical representative is thus
+the indicated pointwise maximum.
 \end{proof}

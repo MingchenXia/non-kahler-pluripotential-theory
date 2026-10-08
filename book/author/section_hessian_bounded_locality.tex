@@ -1,0 +1,92 @@
+\section{Locality and maxima of bounded potentials}
+\label{sec:hessian-bounded-locality}
+
+Where one bounded admissible potential is strictly larger than another,
+the maximum has the same positive Hessian current as the larger
+potential. These strict comparison sets need not be open.
+Quasicontinuity gives cutoffs whose products with the approximating
+currents converge, allowing smooth locality to pass to these sets.
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{hessian:bounded-strict-locality}\index{Hessian measure!locality}
+Let $u,v$ be bounded admissible, put $w=\max\{u,v\}$, and fix
+$1\leq p\leq m$. For any bounded admissible $t_2,\ldots,t_p$,
+\[
+ \mathbf1_{\{u>v\}}Q_p(w,t_2,\ldots,t_p)
+       =\mathbf1_{\{u>v\}}Q_p(u,t_2,\ldots,t_p).
+\]
+The equality is coefficientwise as currents with measure
+coefficients. The corresponding equality on $\{v>u\}$ follows
+by exchanging $u,v$.
+\end{proposition}
+\begin{proof}
+Choose smooth uniformly bounded decreasing approximations of all
+the potentials by \cref{hessian:bounded-decreasing-approximation}.
+Construct $w_j$ by \cref{hessian:regularized-maximum}. Work on
+one compact coordinate test set. Fix $\delta>0$ and a smooth
+$\chi_\delta:\mathbb R\to[0,1]$ that vanishes for
+$s\leq\delta/2$ and equals one for $s\geq\delta$.
+For $j$ large enough that $\epsilon_j<\delta/2$, ordinary smooth
+locality gives
+\[
+ \chi_\delta(u_j-v_j)Q_p(w_j,t_2^j,\ldots,t_p^j)
+       =\chi_\delta(u_j-v_j)Q_p(u_j,t_2^j,\ldots,t_p^j).
+\]
+Indeed, wherever the weight is nonzero, $w_j=u_j$ on an open
+neighborhood. The equality elsewhere follows from its zero weight.
+
+Both sequences of positive currents converge by
+\cref{hessian:joint-decreasing-products}; every coefficient variation
+is uniformly dominated by $C c_m^*$ by
+\cref{hessian:positive-capacity-domination}. The potentials and their
+limits are quasicontinuous by \cref{hessian:rough-coefficient-capacity}.
+Apply \cref{hessian:weighted-measure-convergence} with $s=m$ and
+$F(x,y)=\chi_\delta(x-y)$ to the real and imaginary parts of
+each coefficient. Passing to the limit gives the same identity
+with $u,v,w,t_2,\ldots,t_p$.
+Choose the cutoffs so that $\chi_\delta(s)\to\mathbf1_{\{s>0\}}$
+pointwise as $\delta\downarrow0$. Dominated convergence against
+the fixed finite coefficient variations on the test set gives
+the asserted restriction. A partition of unity proves it globally.
+\end{proof}
+
+On the contact set, a positive constant shift gives a strict comparison
+before the limit is taken. Decreasing the shift then recovers that
+set by dominated convergence for a fixed measure.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{hessian:bounded-maximum-measure}\index{Hessian measure!maximum inequality}
+Let $u,v$ be bounded admissible. Fix $1\leq r\leq m$ and bounded admissible
+$z_1,\ldots,z_{m-r}$. Define the positive Radon measure
+\[
+ \mu_r(t)=Q_m(\underbrace{t,\ldots,t}_{r},z_1,\ldots,z_{m-r}).
+\]
+For $w=\max\{u,v\}$,
+\[
+ \mu_r(w)\geq\mathbf1_{\{u\geq v\}}\mu_r(u)
+                  +\mathbf1_{\{u<v\}}\mu_r(v).
+\]
+The inequality with $u,v$ exchanged also holds.
+\end{theorem}
+\begin{proof}
+Symmetry and \cref{hessian:bounded-strict-locality}, applied to the $r$ slots, give
+$\mu_r(w)=\mu_r(v)$ on $\{u<v\}$ and $\mu_r(w)=\mu_r(u)$ on $\{u>v\}$.
+To include the contact set, put $w_\epsilon=\max\{u+\epsilon,v\}$.
+Strict locality and invariance under addition of constants give
+\[
+ \mu_r(w_\epsilon)\geq
+                   \mathbf1_{\{u+\epsilon>v\}}\mu_r(u).
+\]
+The invariance follows from the smooth products and their joint
+decreasing limits. As $\epsilon\downarrow0$,
+$w_\epsilon\downarrow w$, so the left side converges weakly to
+$\mu_r(w)$. Against any nonnegative continuous compactly supported
+test function, the right side converges by dominated convergence
+for the fixed measure $\mu_r(u)$ to
+$\mathbf1_{\{u\geq v\}}\mu_r(u)$. This proves the measure inequality
+on the contact set as well as on $\{u>v\}$. On its disjoint
+complement $\{u<v\}$, the already proved equality supplies
+$\mu_r(v)$. Restricting the positive measures to these two Borel sets
+and adding gives the assertion. Exchanging $u,v$ gives its other
+form.
+\end{proof}

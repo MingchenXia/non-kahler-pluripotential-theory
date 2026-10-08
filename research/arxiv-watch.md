@@ -1,5 +1,7 @@
 # arXiv watch — first daily scan
 
+Checkpoint626 continuation: Check incoming author updates, then investigate bounded comparison with Hermitian torsion and its exact domain/background hypotheses. Establish every integration-by-parts, locality and approximation dependency before adopting a result. Continue the whole-book reader queue and related primary literature. Xean remains withdrawn and the broader research goal stays active. See hessian-bounded-locality-integration-626.md. No fresh arXiv scan is claimed.
+
 Checkpoint625: All eight recent/new lists freshly retrieved at23:07UTC on8October;967 rows/754 unique IDs, all payload hashes identical to the previously checked coverage. Prior title reads carried; no fresh abstract/proof reads claimed. Historical replacement gaps remain. See hessian-bounded-locality-review-625.md.
 
 Checkpoint624 continuation: Check incoming author updates and the current primary arXiv listings, then investigate locality and comparison for the bounded Hessian products using the newly proved weighted convergence. Establish every capacity, locality and approximation dependency before adopting a new result. Continue the whole-book reader queue and related research. Xean remains withdrawn. See hessian-top-capacity-integration-624.md. No fresh arXiv scan is claimed.
