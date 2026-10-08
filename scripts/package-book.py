@@ -861,6 +861,8 @@ for name in (
     "research/editorial/nonclosed-ruled-trace-integration-585.md",
     "research/audits/nonclosed-ruled-trace-integration-585.json",
     "research/source-disposition-585.json",
+    "research/editorial/current-arxiv-intake-586.md",
+    "research/audits/current-arxiv-intake-586.json",
     "research/editorial/quotient-boundary-ideals-538.md",
     "research/audits/quotient-boundary-ideals-538.json",
     "research/source-disposition-538.json",
