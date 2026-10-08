@@ -1,0 +1,144 @@
+\subsection{Adapted monomial tests on affine toric spaces}
+\label{subsec:affine-toric-adapted-ideals}
+
+The quotient calculation expresses integrability as a strict inequality on exponents. On an affine toric space the same inequality comes from the recession of a convex function, while the canonical bundle and boundary supply the translation of the exponent. This also applies to cones with more rays than their dimension.
+
+In this subsection let $N$ be a lattice of rank $n\geq1$, let $M=\operatorname{Hom}(N,\mathbb Z)$, and let $\sigma\subset N_{\mathbb R}$ be a full-dimensional strongly convex rational polyhedral cone. Its dual cone is $\sigma^\vee=\{m:\langle m,v\rangle\geq0\text{ for all }v\in\sigma\}$. The normal affine toric space
+\[
+ X_\sigma=\operatorname{Spec}\mathbb C[\sigma^\vee\cap M]
+\]
+is understood with its analytic structure. Its dense torus $T=\operatorname{Hom}(M,\mathbb C^*)$ has characters $\chi^m$, and its unique closed orbit is a vertex $o$. Choose nonzero generators $b_1,\ldots,b_s$ of the semigroup $\sigma^\vee\cap M$; their characters embed $X_\sigma$ as a closed affine subset of $\mathbb C^s$ and all vanish at $o$.
+
+For each ray $\rho$ of $\sigma$, write $v_\rho$ for its primitive lattice generator and $D_\rho$ for the corresponding prime divisor. Fix an effective rational boundary $D=\sum_\rho a_\rho D_\rho$ such that $K_{X_\sigma}+D$ is $\mathbb Q$-Cartier. With $K_{X_\sigma}=-\sum_\rho D_\rho$, this means that there is $w_D\in M_{\mathbb Q}$ with
+\begin{equation}\label{eq:toric-boundary-shift}
+ \langle w_D,v_\rho\rangle=1-a_\rho\quad\text{for every }\rho.
+\end{equation}
+Take an integer $q>0$ with $qw_D\in M$. For torus coordinates $t_1,\ldots,t_n$ determined by a basis of $M$, the meromorphic tensor
+\[
+ B_D=\chi^{qw_D}
+       \left(\frac{\mathrm dt_1}{t_1}\wedge\cdots\wedge
+                         \frac{\mathrm dt_n}{t_n}\right)^{\!\otimes q}
+\]
+generates $\omega_{X_\sigma}^{[q]}(qD)$. Indeed, its order along $D_\rho$ is $-qa_\rho$. The adapted volume $\mathrm dV_D=|B_D|^{2/q}$ is independent of this choice for local integrability, as in \eqref{eq:quotient-adapted-volumes}. We use the ideal $\mathcal I_D^{\mathrm{ad}}(u)$ defined by the holomorphic-germ integral in \eqref{eq:quotient-adapted-ideal} on this $X_\sigma$.
+
+Let $u$ be a plurisubharmonic function invariant under the compact torus of coordinate rotations. The logarithmic map $\operatorname{Log}:T\to N_{\mathbb R}$ satisfies $\langle m,\operatorname{Log}t\rangle=\log|\chi^m(t)|$. There is a finite convex function $g$ on $N_{\mathbb R}$ with
+\[
+ u(t)=2g(\operatorname{Log}t).
+\]
+To see convexity, pull $u/2$ back by the exponential covering of $T$. It is independent of the imaginary coordinates, so its distributional complex Hessian is the real Hessian of $g$ up to a positive constant. A nontrivial plurisubharmonic function of this form gives a finite convex function. The factor two matches the weight $\mathrm e^{-u}$.
+
+For a finite convex function $g$ write
+\[
+ (\operatorname{rec}g)(v)=
+       \lim_{t\to\infty}\frac{g(x+tv)-g(x)}t.
+\]
+The convex difference quotients increase to this limit in $\mathbb R\cup\{+\infty\}$; the limit does not depend on the base point $x$. The latter fact follows by comparing $g(x+tv)$ with convex combinations of $g(t v/(1-\delta))$ and $g(x/\delta)$, for $0<\delta<1$, and then reversing the translation. Define the Newton set
+\begin{equation}\label{eq:toric-newton-set}
+ P(u)=\left\{\ell\in M_{\mathbb R}:
+     \sup_{x\in-\sigma}\bigl(\langle\ell,x\rangle-g(x)\bigr)<\infty\right\}.
+\end{equation}
+Only its interior will enter the integrability test; the set itself need not be closed.\index{Newton set!toric integrability}
+
+\begin{lemma}\label{lem:convex-cone-exponential-integrability}
+Let $C$ be a closed full-dimensional convex cone in a Euclidean space, let $g$ be finite and convex, and let $\ell$ be a linear form. Then
+\[
+ \int_C\exp\bigl(2\langle\ell,x\rangle-2g(x)\bigr)\,\mathrm dx<\infty
+ \quad\Longleftrightarrow\quad
+ \langle\ell,v\rangle<(\operatorname{rec}g)(v)
+       \quad(v\in C\setminus\{0\}).
+\]
+This condition is also equivalent to $\ell$ being an interior point of $\{a:\sup_C(\langle a,x\rangle-g(x))<\infty\}$. The integral has the same finiteness on every translate of $C$.
+\end{lemma}
+\begin{proof}
+Set $F=g-\ell$. Suppose its recession is positive on $C\setminus\{0\}$. Then $F(x)\geq\gamma|x|-A$ on $C$ for some $\gamma>0$ and $A$. Otherwise there are $x_j\in C$ with $|x_j|\to\infty$ and $F(x_j)/|x_j|\leq1/j$. After taking a subsequence, $x_j/|x_j|\to v\in C$ with $|v|=1$. For fixed $t>0$, convexity gives
+\[
+ F\left(t\frac{x_j}{|x_j|}\right)
+ \leq\left(1-\frac t{|x_j|}\right)F(0)
+       +\frac t{|x_j|}F(x_j).
+\]
+Continuity gives $F(tv)\leq F(0)$ for every $t$, contradicting positive recession. A bound on the remaining compact set gives the asserted $A$. Exponential decay proves integrability. The same bound persists when $\ell$ is changed by a sufficiently small linear form, so $\ell$ lies in the stated interior.
+
+Conversely, if $(\operatorname{rec}F)(v)\leq0$ for some nonzero $v\in C$, then $F(tv)\leq F(0)$ for $t\geq0$. Choose a compact ball $K$ in the interior of $C$. On the half-tube $\{tv+x/2:t\geq1,\ x\in K\}$, convexity gives
+\[
+ F(tv+x/2)\leq\tfrac12F(2tv)+\tfrac12F(x).
+\]
+Thus $\mathrm e^{-2F}$ has a positive lower bound on a set of infinite volume. If instead $\ell$ is in the stated interior, for each nonzero $v\in C$ one may perturb $\ell$ within that interior by a linear form positive on $v$. Dividing its defining upper bound along $tv$ by $t$ gives the strict recession inequality for $\ell$. Finally, translating $C$ replaces $g(x)$ by $g(x+b)$ and multiplies the exponential by a constant; recession is unchanged.
+\end{proof}
+
+\begin{theorem}\label{thm:affine-toric-adapted-monomials}\index{Multiplier ideal!affine toric test}\index{Adapted volume!toric boundary}
+For $m\in\sigma^\vee\cap M$, the following are equivalent:
+\[
+ \chi^m\in\mathcal I_D^{\mathrm{ad}}(u)_o,
+ \qquad
+ \chi^m\in\Gamma(X_\sigma,\mathcal I_D^{\mathrm{ad}}(u)),
+ \qquad
+ m+w_D\in\operatorname{int}P(u).
+\]
+Equivalently, $\langle m+w_D,v\rangle<(\operatorname{rec}g)(v)$ for every nonzero $v\in-\sigma$.
+\end{theorem}
+\begin{proof}
+On the torus, polar coordinates turn the weighted monomial integral into a positive constant times
+\[
+ \int_Q\exp\bigl(2\langle m+w_D,x\rangle-2g(x)\bigr)\,\mathrm dx,
+\]
+where $Q$ is the logarithmic image of the domain. The omitted toric divisors have measure zero on the regular locus. A basis of neighborhoods of $o$ is given by $|\chi^{b_j}|<\epsilon$ for every $j$, with $0<\epsilon<1$. Their logarithmic domains satisfy
+\begin{equation}\label{eq:toric-logarithmic-neighborhood-sandwich}
+ -\sigma-b\ \subset\
+ Q_\epsilon=\{x:\langle b_j,x\rangle<\log\epsilon\text{ for all }j\}
+ \ \subset\ -\sigma,
+\end{equation}
+for $b\in\operatorname{int}\sigma$ sufficiently far along an interior ray. Indeed, every $\langle b_j,b\rangle$ is strictly positive, and the $b_j$ generate the dual cone. The convex-cone lemma gives necessity and sufficiency at $o$, including divergence when a recession inequality is an equality.
+
+For a compact subset of $X_\sigma$, the embedding coordinates have absolute value at most some $R>1$. Its logarithmic image is contained in $\{x:\langle b_j,x\rangle\leq\log R\}$, which is contained in $b_R-\sigma$ for a sufficiently large $b_R\in\operatorname{int}\sigma$. Under the same strict condition the integral over this translated cone is finite. This proves local integrability everywhere. The converse follows by testing at $o$, and the interior formulation follows from the lemma.
+\end{proof}
+
+\begin{corollary}\label{cor:toric-subtracted-ideal-weight}
+Let $\mathfrak a=(\chi^{a_1},\ldots,\chi^{a_r})$ be a nonzero monomial ideal on $X_\sigma$, with $a_j\in\sigma^\vee\cap M$, and let $c>0$ be real. For the measurable weight
+\[
+ v=u-c\log\left(\sum_j|\chi^{a_j}|^2\right),
+\]
+a holomorphic character $\chi^m$ is locally integrable with weight $\mathrm e^{-v}\mathrm dV_D$ at $o$, or everywhere on $X_\sigma$, exactly when
+\[
+ m+w_D+ca_j\in\operatorname{int}P(u)
+                 \quad\text{for every }j.
+\]
+Values on the common zero set do not affect these integrals.
+\end{corollary}
+\begin{proof}
+For a finite sum and $c>0$, its $c$-th power is comparable to the sum of the $c$-th powers of its terms. Thus the integrand is comparable to
+\[
+ \sum_j |\chi^m|^2|\chi^{a_j}|^{2c}\mathrm e^{-u}\,\mathrm dV_D.
+\]
+Each term gives the preceding logarithmic integral with exponent $m+w_D+ca_j$. The cone criterion applies to real exponents, so no rationality of $c$ is needed for this integrability assertion.
+\end{proof}
+
+\begin{proposition}\label{prop:quadric-threefold-adapted-ideal}\index{Quadric cone!adapted ideal jumps}
+Let $X=\{xw=yz\}\subset\mathbb C^4$, with vertex $o$, let $\mathfrak m_o=(x,y,z,w)$, and take zero boundary. For $\lambda>0$ put
+\[
+ u_\lambda=\lambda\log(|x|^2+|y|^2+|z|^2+|w|^2).
+\]
+The adapted-volume ideal at the vertex is
+\[
+ \mathcal I_0^{\mathrm{ad}}(u_\lambda)_o
+       =\mathfrak m_o^{\,\max\{0,\lfloor\lambda\rfloor-1\}}
+                         \mathcal O_{X,o}.
+\]
+In particular, the constant germ is integrable exactly when $\lambda<2$.
+\end{proposition}
+\begin{proof}
+On the torus use $x,y,z$ as characters, so $w=yz/x$. The character lattice is $\mathbb Z^3$, with semigroup generators
+\[
+ (1,0,0),\quad(0,1,0),\quad(0,0,1),\quad(-1,1,1).
+\]
+The dual cone has primitive rays $(0,1,0)$, $(0,0,1)$, $(1,1,0)$ and $(1,0,1)$. It is full-dimensional with four rays. The residue form $\Omega=\mathrm dx\wedge\mathrm dy\wedge\mathrm dz/x$ generates the canonical sheaf of this hypersurface; it equals $yz$ times the logarithmic torus form. Hence $w_0=(0,1,1)$, which pairs to one with each primitive ray.
+
+Write $d(m)=m_1+m_2+m_3$. Each semigroup generator has degree one. The logarithmic function $g$ differs by a bounded term from $\lambda$ times the maximum of the four linear forms given by those generators. Their convex hull is the section of $\sigma^\vee$ by $d=1$, so
+\[
+ P(u_\lambda)=\{\ell\in\sigma^\vee:d(\ell)\geq\lambda\}.
+\]
+Since $w_0\in\operatorname{int}\sigma^\vee$ and $d(w_0)=2$, the character condition is $d(m)+2>\lambda$. The smallest allowed integer degree is $k=\max\{0,\lfloor\lambda\rfloor-1\}$.
+
+This also gives the ideal for whole holomorphic germs. Lift a germ to a convergent power series in $x,y,z,w$. On a smaller invariant neighborhood, angular Parseval and Tonelli force every nonzero character coefficient to satisfy the same test. All homogeneous terms of degree less than $k$ therefore vanish in the coordinate ring. They are multiples of the homogeneous relation $xw-yz$, and subtracting those finitely many terms leaves a lift of order at least $k$. Thus the germ belongs to $\mathfrak m_o^k$. Conversely, every degree-$k$ monomial is integrable by the character test, and bounded holomorphic coefficient germs preserve integrability. This proves the identity and its strict endpoint.
+\end{proof}
+
+These ideals use the adapted canonical volume, whereas the resolution-ideal equivalence above uses smooth volumes on the models. Return now to the compact unibranch space and background fixed at the beginning of the appendix.
