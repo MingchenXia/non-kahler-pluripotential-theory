@@ -1773,6 +1773,7 @@ selected.update(root / name for name in ['research/audits/hessian-two-products-c
 selected.update(root / name for name in ['research/audits/hessian-local-shift-capacity-review-619.json', 'research/editorial/hessian-local-shift-capacity-review-619.md', 'research/source-disposition-619.json', 'research/drafts/hessian-local-shift-capacity-transfer-619.tex'])
 selected.update(root / name for name in ['research/audits/hessian-local-correction-integration-620.json', 'research/editorial/hessian-local-correction-integration-620.md', 'research/source-disposition-620.json'])
 selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-review-621.json', 'research/editorial/hessian-smooth-capacity-review-621.md', 'research/source-disposition-621.json', 'research/drafts/hessian-smooth-capacity-convergence-621.tex'])
+selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-integration-622.json', 'research/editorial/hessian-smooth-capacity-integration-622.md', 'research/source-disposition-622.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
