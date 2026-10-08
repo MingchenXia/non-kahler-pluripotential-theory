@@ -1,5 +1,8 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+Checkpoint593 continuation: the restricted bounded-smoothness proof is now active in Chapter10 and both author-build publications are verified. Independently review incoming S18 against existing ruled trace and moving-cost proofs; integrate its genuinely new explicit endpoint example without duplicating general results. Then complete Fang2610.06719v1 reading and continue the live book-polish queue. Source-package status: passed. See bounded-hermitian-smoothness-integration-593.md.
+
+
 Checkpoint592 continuation: integrate the independently reconstructed128-line strict-positive bounded-smoothness proof in Chapter10, then review incoming S18(a3cc5d3) and Fang2610.06719v1. Active book and catalogue remain checkpoint591; general degenerate/adapted claims are not adopted. See bounded-hermitian-primary-review-592.md.
 
 
