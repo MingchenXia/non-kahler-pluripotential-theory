@@ -1690,6 +1690,7 @@ selected.update(root / name for name in ['research/audits/ruled-logarithmic-endp
 selected.update(root / name for name in ['research/audits/hermitian-hessian-primary-review-595.json', 'research/editorial/hermitian-hessian-primary-review-595.md', 'research/source-disposition-595.json', 'research/drafts/hermitian-hessian-estimate-lemmas-595.tex'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-liouville-review-596.json', 'research/editorial/hermitian-hessian-liouville-review-596.md', 'research/source-disposition-596.json', 'research/drafts/hermitian-hessian-liouville-blowup-596.tex'])
 selected.update(root / name for name in ['research/audits/divisor-free-radial-primary-review-597.json', 'research/editorial/divisor-free-radial-primary-review-597.md', 'research/source-disposition-597.json', 'research/drafts/divisor-free-concentration-radial-tests-597.tex'])
+selected.update(root / name for name in ['research/audits/divisor-free-radial-integration-598.json', 'research/editorial/divisor-free-radial-integration-598.md', 'research/source-disposition-598.json'])
 selected.update((root / "research/audits").glob("build-snapshot-*.json"))
 completed_runs = set()
 for directory in (root / "research/rethlas/verification/results").iterdir():
