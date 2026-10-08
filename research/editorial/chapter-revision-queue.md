@@ -1,5 +1,7 @@
 # Chapter revision queue — cycle beginning 24 September 2026
 
+Checkpoint585 continuation: restricted nonclosed ruled S11 masses, ideals, pullback and strictness, with separate Gauduchon subtraction cost, are independently integrated and published. Actual fresh main-book and companion reconstruction passes. Push this checkpoint, then check incoming author work and current arXiv before related primary reading and direct research. General S11 and P14 remain open; no whole-book mathematical certification is claimed. See nonclosed-ruled-trace-integration-585.md.
+
 Checkpoint583 continuation: the complete front-matter coherence pass is checked and published. Continue related primary literature and the current open-problem program, checking incoming author progress before integration. General P14 remains open; no whole-book mathematical certification is claimed. See front-matter-coherence-583.md.
 
 
