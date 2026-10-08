@@ -1,0 +1,179 @@
+% Inactive bounded Hessian approximation. No bounded nonlinear product is used.
+\section{Decreasing admissible approximation}
+
+Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n$, with
+$2\leq m<n$, and write
+\[
+ H_m(w)=(\omega+\ddc w)^m\wedge\omega^{n-m}
+\]
+for smooth admissible $w$. In this fragment a bounded upper semicontinuous
+potential $u$ is admissible if every smooth upper test $q$ at $x$ satisfies
+$\omega(x)+\ddc q(x)\in\overline{\Gamma_m(\omega(x))}$.
+This is the standard potential-theoretic interpretation of bounded
+$(\omega,m)$-subharmonicity. The classical equivalence of viscosity and
+distributional subsolutions for a smooth strictly elliptic linear
+operator, together with G\aa rding duality, identifies it with the mixed
+linear inequalities in the canonical subharmonic representative.
+That linear equivalence is a declared input, not a new nonlinear
+product theorem.
+
+The representative matters for this extension beyond continuous
+potentials: changing the value at one point does not change a current.
+For example, the upper semicontinuous function equal to $0$ except for
+the value $1$ at one point satisfies every distributional inequality
+of the constant $0$. It fails the upper-test condition, since a local
+upper test at that point can have arbitrarily negative complex Hessian.
+It is therefore excluded by the standard subharmonic definition.
+
+We use two results of Chapter~12: the unique smooth strictly admissible
+solution of $H_m(w)=e^{aw+H}\omega^n$ for every $a>0$ and smooth $H$,
+and uniform smooth strictly admissible approximation of continuous
+admissible potentials. Neither result uses a bounded Hessian product.
+Polarized G\aa rding positivity and the classical linear subsolution
+characterization remain the algebraic and analytic inputs.
+
+\begin{lemma}\label{draft:607-smooth-majorants}
+Every bounded upper semicontinuous real function $u$ on $X$ is the
+pointwise decreasing limit of smooth functions $h_j>u$.
+\end{lemma}
+\begin{proof}
+Fix a Riemannian distance $d$ on $X$ and put
+\[
+ c_j(x)=\sup_{y\in X}\{u(y)-j d(x,y)\}.
+\]
+Each $c_j$ is Lipschitz, $c_j\geq u$, and $c_{j+1}\leq c_j$.
+The supremum is attained. If $y_j$ attains it at a fixed $x$, then
+$j d(x,y_j)\leq\sup_X u-u(x)$, so $y_j\to x$.
+Upper semicontinuity gives $\limsup_j c_j(x)\leq u(x)$, and hence
+$c_j\downarrow u$ pointwise.
+
+Set $\delta_j=4^{-j}$. Smooth approximation of continuous functions
+on a compact manifold gives $s_j\in C^\infty(X)$ with
+$\|s_j-c_j\|_\infty\leq\delta_j/4$.
+Take $h_j=s_j+\delta_j$. Then
+\[
+ u+\tfrac34\delta_j\leq h_j\leq c_j+\tfrac54\delta_j,
+ \qquad
+ h_{j+1}\leq c_j+\tfrac5{16}\delta_j
+                    < c_j+\tfrac34\delta_j\leq h_j.
+\]
+The bounds also imply $h_j(x)\to u(x)$ at every point.
+\end{proof}
+
+\begin{lemma}\label{draft:607-bounded-penalty-squeeze}
+Let $u$ be bounded admissible and $h\geq u$ smooth. Choose
+\[
+ b>\max\{1,\|H_m(h)/\omega^n\|_\infty\}.
+\]
+For each positive integer $N$, let $w_N$ be the smooth strictly
+admissible solution of
+\[
+ H_m(w_N)=b e^{N(w_N-h)}\omega^n.
+\]
+With
+\[
+ M_N=\|h\|_\infty+\frac{\log b}{N},\qquad
+ E_N=\frac{m\log(N+1)+\log b}{N},
+\]
+one has $\|w_N\|_\infty\leq M_N$ and
+\[
+ u-E_N-2M_N/N\leq w_N\leq h.
+\]
+\end{lemma}
+\begin{proof}
+At a positive maximum of $w_N-h$, the form $\omega+\ddc h$
+lies above $\omega+\ddc w_N$ and is admissible there. Monotonicity
+would give $b e^{N(w_N-h)}\leq H_m(h)/\omega^n<b$, a contradiction.
+Thus $w_N\leq h$. At extrema of $w_N$, comparison with the zero
+potential gives
+\[
+ \min_X h-\frac{\log b}{N}\leq w_N
+                \leq\max_X h-\frac{\log b}{N},
+\]
+so the asserted absolute bound follows.
+
+The upper semicontinuous function $u-(1+N^{-1})w_N$ attains its
+maximum at some $x_N$. The smooth function $(1+N^{-1})w_N$ plus
+this maximum is an upper test for $u$ there. Put
+\[
+ T_N=(\omega+\ddc w_N)^{m-1}\wedge\omega^{n-m},
+ \qquad d_N=H_m(w_N)/\omega^n>0.
+\]
+The upper-test cone condition and polarized positivity yield, at $x_N$,
+\[
+ (N+1)d_N\geq\omega\wedge T_N/\omega^n
+                           \geq d_N^{(m-1)/m}.
+\]
+Consequently $d_N\geq(N+1)^{-m}$ and $w_N-h\geq-E_N$ there.
+Using $u\leq h$, the maximum is at most $E_N+M_N/N$.
+On all of $X$ this gives
+\[
+ u\leq(1+N^{-1})w_N+E_N+M_N/N
+                     \leq w_N+E_N+2M_N/N.
+\]
+The argument uses only an upper test for $u$, with no derivative,
+continuity assumption or nonlinear product of $u$.
+\end{proof}
+
+For a continuous real obstacle $h$, let $P_c(h)$ be the pointwise
+supremum of the continuous admissible functions below $h$. Chapter~12
+proves that $P_c(h)$ is continuous and admissible. For smooth $h$ this
+also follows directly from the preceding estimate applied to every
+continuous competitor: $w_N\leq P_c(h)\leq w_N+E_N+2M_N/N$.
+The constants are independent of the competitor, and constant
+potentials make the family nonempty. This continuity argument precedes
+all assertions about an envelope's Hessian measure.
+
+\begin{proposition}\label{draft:607-bounded-envelope}
+For every smooth real obstacle $h$, the continuous envelope $P_c(h)$
+equals the pointwise supremum of all bounded admissible functions
+below $h$. In particular every such $u$ satisfies $u\leq P_c(h)$.
+\end{proposition}
+\begin{proof}
+The solutions $w_N$ of the preceding lemma are continuous admissible
+competitors, so $w_N\leq P_c(h)$. For each bounded admissible
+$u\leq h$ the same lemma gives
+\[
+ u\leq w_N+E_N+2M_N/N\leq P_c(h)+E_N+2M_N/N.
+\]
+Let $N\to\infty$ for this fixed obstacle and fixed $b$.
+Thus $P_c(h)$ dominates every bounded competitor. Since $P_c(h)$
+itself is a bounded competitor, it equals their supremum.
+\end{proof}
+
+\begin{theorem}\label{draft:607-bounded-decreasing-approximation}
+Every bounded admissible potential $u$ on $X$ is the pointwise
+decreasing limit of smooth strictly admissible potentials.
+The sequence may be chosen uniformly bounded.
+\end{theorem}
+\begin{proof}
+Choose smooth $h_j\downarrow u$ by the first lemma and put
+$v_j=P_c(h_j)$. Monotonicity of the envelope and the preceding
+proposition give
+\[
+ u\leq v_{j+1}\leq v_j\leq h_j.
+\]
+Thus $v_j$ are continuous admissible functions decreasing pointwise
+to $u$. Set $\varepsilon_j=4^{-j}$. By the continuous approximation
+lemma in Chapter~12, choose smooth strictly admissible $a_j$ with
+$\|a_j-v_j\|_\infty\leq\varepsilon_j/4$ and put
+$u_j=a_j+\varepsilon_j$. Adding a constant preserves strict
+admissibility. Moreover
+\[
+ u+\tfrac34\varepsilon_j\leq u_j,
+ \qquad
+ u_{j+1}\leq v_j+\tfrac5{16}\varepsilon_j
+                <v_j+\tfrac34\varepsilon_j\leq u_j.
+\]
+The approximation bounds imply $u_j\to u$ pointwise.
+Finally, $\inf_X u\leq u_j\leq\sup_X h_1+5/16$, so the sequence
+has a common uniform bound.
+\end{proof}
+
+This construction supplies decreasing smooth admissible approximants.
+It does not by itself identify a limit of their Hessian products.
+Replacing a uniform norm in the continuous product proof by pointwise
+monotone convergence requires additional capacity, energy or weighted
+convergence estimates, with the Hermitian torsion terms retained.
+Bounded contact comparison, domination and regularity still depend on
+that further argument.
