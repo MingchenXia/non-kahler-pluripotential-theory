@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint551 completes the recursive Chapter4 original first and final post-inspection second reads (24 inputs,2791 lines,95 proofs), with96 final pages covered, an entropy-quantifier correction and local pagination repairs. Four author publications are live verified; final1556-page cover/homepage date is October8. Actual empty-source reconstruction and current archive verification pass. Continue complete recursive Chapter5, then the live queue and incoming author/primary-source updates. See [the chapter revision](gauduchon-chapter-reader-551.md).
+Current continuation: checkpoint552 completes recursive Chapter5 first/final post-inspection second reads (232 lines,six proofs), with24 actual final pages and one repaired theorem split. The October8,1556-page author PDF/homepage is live verified. Actual empty-source reconstruction and current package checks pass. Continue complete recursive Chapter6 non-pluripolar products, then the live queue and incoming author/primary-source updates. See [the chapter revision](gauduchon-trace-topology-reader-552.md).
 
 ## Greatest exponential left-limit review 526
 
