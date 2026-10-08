@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\ddc}{dd^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\dV}{\mathrm dV}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Supporting probabilities for a continuous positive complex Hessian}
+\author{Research programme on non-K\"ahler pluripotential theory}
+\date{8 October 2026: independently checked restricted results}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a sufficient condition for uniqueness of the supporting probability
+of the Hermitian Monge--Amp\`ere normalization scalar: an actual bounded
+solution has a continuous, everywhere strictly positive complex Hessian.
+The proof linearizes along bounded admissible potentials and establishes
+the required Fredholm statement for a continuous uniformly elliptic
+operator on $W^{2,p}$. It needs no H\"older or Dini modulus for the Hessian.
+Product examples give the supporting probability explicitly for every
+positive continuous density depending on the curve factor, including a
+non-Dini example on a non-K\"ahler threefold. The unconditional
+every-continuous-density question in P16 remains open.
+\end{abstract}
+
+\paragraph{Status and scope.}
+The restricted results in this article have passed independent statement-only
+reconstruction and final mathematical comparison. The unrestricted original
+P16 remains open. The elliptic arguments use classical analysis;
+no claim of literature priority is made. The product-of-two-curves
+specialization overlaps the nonsingular specialization of the previously
+checked product-adjoint argument \cite{S07}. The general continuous-Hessian
+criterion, rather than that specialization, is the proposed restricted
+result. Supporting-set nonemptiness and its $L^q$ bounds are imported
+background of the original problem.
+
+\section{Statement and conventions}
+Let $X$ be a connected compact complex manifold of dimension $n\geq2$,
+$\omega$ a smooth positive real $(1,1)$-form and $\dV$ a smooth positive
+probability volume. Set $\ddc=i\partial\bar\partial/(2\pi)$.
+Every quasi-plurisubharmonic function denotes its genuine canonical upper
+representative. For $F\in C(X,\mathbb R)$ let $c_0(F)>0$ be the unique
+normalization scalar for an actual bounded solution of
+\begin{equation}\label{eq:equation}
+ (\omega+\ddc u)^n=c_0(F)e^F\dV,
+ \qquad u\in\PSH(X,\omega)\cap L^\infty(X).
+\end{equation}
+Bounded products are the local Bedford--Taylor products with the finite
+smooth-background expansion. Put $B_0(F)=\log c_0(F)$ and
+\begin{equation}\label{eq:support}
+ \cA_0(F)=\left\{\nu\text{ a Borel probability}:
+ B_0(G)\leq B_0(F)-\int_X(G-F)\,\mathrm d\nu
+ \text{ for all }G\in C(X,\mathbb R)\right\}.
+\end{equation}
+We use the problem's known background: $B_0$ is concave, decreasing and
+obeys $B_0(F+a)=B_0(F)-a$; $\cA_0(F)$ is nonempty, and its members have
+$L^q(\dV)$ densities for every $1<q<n/(n-1)$. These assertions are not
+new conclusions of this article.
+
+\begin{theorem}\label{thm:criterion}
+Suppose a bounded genuine solution $u$ of \eqref{eq:equation} has
+distributional complex Hessian represented by a continuous real form
+\[
+ \sigma=\omega+\ddc u>0
+\]
+everywhere on $X$. Then $\cA_0(F)$ consists of one probability $\nu_F$.
+For every $H\in C(X,\mathbb R)$,
+\[
+ \lim_{t\to0}\frac{B_0(F+tH)-B_0(F)}{t}
+       =-\int_XH\,\mathrm d\nu_F.
+\]
+Neither a full real $C^2$ representative of $u$ nor a Dini modulus for
+$\sigma$ is required.
+\end{theorem}
+Compactness makes the positivity uniform. This hypothesis is additional:
+we do not prove that an arbitrary continuous right-hand side has a solution
+with such a Hessian. The derivative conclusion is G\^ateaux differentiability,
+without a claim of Fr\'echet differentiability.
+
+\section{Linearization of the actual bounded equation}
+\begin{lemma}\label{lem:actual}
+Under the hypothesis of Theorem~\ref{thm:criterion},
+$u\in W^{2,p}(X)$ for every finite $p>1$ and has a $C^{1,\alpha}$
+representative for every $0<\alpha<1$. Its actual bounded product is
+$\sigma^n$. For each smooth real $h$, sufficiently small signed $t$
+give bounded genuine admissible $u+th$, and every $\nu\in\cA_0(F)$ satisfies
+\begin{equation}\label{eq:stationarity}
+ \int_X L_\sigma h\,\mathrm d\nu=0,
+ \qquad L_\sigma h=\tr_\sigma(\ddc h).
+\end{equation}
+\end{lemma}
+\begin{proof}
+In a coordinate ball the Euclidean Laplacian of $u$ is a constant multiple
+of the continuous trace of $\ddc u$. Local constant-coefficient elliptic
+regularity gives $W^{2,p}_{\mathrm{loc}}$ for every finite $p$.
+One can subtract the Newtonian potential of a cut-off right-hand side;
+its high-frequency second derivatives are order-zero multipliers, and
+its low-frequency part has locally bounded second-derivative kernels.
+The remaining distribution is harmonic. Sobolev embedding and a finite
+cover give the asserted regularity. Its continuous representative agrees
+with the genuine quasi-psh representative by canonical uniqueness.
+
+Choose smooth $\rho$ with $\ddc\rho\geq\omega$ on a larger coordinate
+ball. The genuine bounded psh function $u+\rho$ has decreasing radial
+regularizations \cite{Dem}. Their complex Hessians converge uniformly
+on smaller balls since $\ddc(u+\rho)$ is continuous. Bedford--Taylor
+continuity \cite{BT} and the finite smooth correction therefore identify
+the actual product with $\sigma^n$. The same argument works for $u+th$;
+uniform positivity makes it admissible for small $|t|$.
+
+Define the actual continuous logarithmic density
+\[
+ F_t=F+\log\frac{(\sigma+t\ddc h)^n}{\sigma^n}.
+\]
+The potential $u+th$ solves the equation at $F_t$ with the same scalar
+$c_0(F)$. Uniqueness of the scalar gives $B_0(F_t)=B_0(F)$. Thus
+\eqref{eq:support} implies $\int(F_t-F)\,\mathrm d\nu\leq0$.
+Uniform ellipticity gives the uniform expansion
+$F_t-F=tL_\sigma h+O(t^2)$; using both signs of $t$ proves
+\eqref{eq:stationarity}. No multiplication of a rough current by an
+unspecified weight occurs. In holomorphic coordinates $L_\sigma$ has
+a continuous uniformly positive real principal matrix and no lower-order
+terms.
+\end{proof}
+
+\section{The continuous-coefficient Fredholm argument}
+The next lemma supplies the extension from smooth elliptic theory. Its
+conclusion is a proof obligation, rather than an assumed rough adjoint
+uniqueness theorem.
+
+\begin{lemma}\label{lem:fredholm}
+For a continuous positive Hermitian form $\sigma$ and $p>2n$,
+\[
+ L_\sigma:W^{2,p}(X)\longrightarrow L^p(X,\dV)
+\]
+is Fredholm of index zero, with kernel the constants. Its range has a
+one-dimensional annihilator in $L^{p'}(\dV)$, where $p'=p/(p-1)$.
+\end{lemma}
+\begin{proof}
+Write $m=2n$. Fix a smooth positive Hermitian form $h$ and consider
+$L_s=(1-s)L_h+sL_\sigma$, $0\leq s\leq1$. All these operators have
+uniform ellipticity and a common modulus of continuity for their principal
+coefficients on a finite holomorphic cover.
+
+\emph{Local estimates.}
+For a constant positive matrix $a_0$, the smooth multipliers
+\[
+ \frac{\xi_i\xi_j}{1+a_0^{kl}\xi_k\xi_l}
+\]
+satisfy the order-zero derivative bounds, including at $\xi=0$.
+The multiplier theorem \cite[Chapter 13, Theorem 5.1]{Taylor} gives
+\[
+ \|D^2v\|_p\leq C(\|a_0^{ij}D_{ij}v\|_p+\|v\|_p)
+ \quad(v\in C_c^\infty).
+\]
+Freeze the actual continuous principal matrix at a point and take the
+chart small enough to absorb its oscillation times $\|D^2v\|_p$.
+Cut-off differentiation adds only first and zeroth derivatives. The
+elementary mollifier interpolation estimate
+\[
+ \|Dv\|_p\leq\varepsilon\|D^2v\|_p+C_\varepsilon\|v\|_p
+\]
+absorbs the first derivatives: compare $Dv$ with its mollification at
+scale proportional to $\varepsilon$, and bound the derivative of the
+mollified function by that scale's inverse times $\|v\|_p$.
+Summing the localized estimates and using smooth density proves
+\begin{equation}\label{eq:estimate}
+ \|v\|_{W^{2,p}}\leq C(\|L_sv\|_p+\|v\|_p),
+\end{equation}
+with a constant uniform in $s$.
+
+\emph{Maximum principles at this regularity.}
+The smooth Alexandrov--Bakelman--Pucci bound on a bounded annulus, for
+the fixed continuous coefficient matrix, has the consequence
+\[
+ \min_{\partial\Omega}w\geq0,\quad L_sw\leq0
+       \quad\Longrightarrow\quad w\geq0
+\]
+for $w\in W^{2,p}(\Omega)$. Indeed smooth approximation in $W^{2,p}$
+converges uniformly up to the smooth boundary; the positive parts of the
+$L_s$ errors converge in $L^m$, since $p>m$. Apply the smooth ABP bound
+to the negative of the approximant, including its vanishing boundary
+error, and pass to the limit. The printed ABP proof
+\cite[Chapter 14, Proposition 13.1 and Lemma 13.2]{Taylor} uses no
+derivative of the coefficients.
+
+If a $C^1$, $W^{2,p}$ function $v$ with $L_sv\geq0$ has an interior
+maximum $M$ on a connected open set, the usual tangent-ball argument
+proves the strong maximum principle at exactly this regularity.
+For completeness, if $w=M-v$ is positive somewhere and zero somewhere,
+choose a ball $B_r(x_c)\subset\{w>0\}$, compactly inside a coordinate
+chart, tangent to $\{w=0\}$. On its annulus the barrier
+\[
+ \phi(x)=e^{-k|x-x_c|^2}-e^{-kr^2}
+\]
+has $L_s\phi>0$ for large $k$, by ellipticity. Choose $\epsilon>0$
+so that $w\geq\epsilon\phi$ on the inner sphere; this also holds on
+the outer sphere. Weak minimum comparison yields it throughout the
+annulus. At the tangent point it contradicts $Dw=0$ by forcing a strictly
+positive inward directional derivative. A nontrivial maximum set would
+have a boundary point in the connected open set, so such a tangent ball
+would exist. Hence $v$ is constant. Applied on $X$, this proves
+$\ker L_s=\mathbb R$. If $(L_s-1)v=0$ and $v$ has a positive maximum,
+apply this argument on the component of $\{v>0\}$ containing that
+maximum. Constancy there contradicts $L_sv=v>0$. Apply it to $-v$
+to exclude a negative minimum. Thus $\ker(L_s-1)=0$.
+
+\emph{Invertibility and index.}
+Rellich compactness \cite[Chapter 13, equation (6.9)]{Taylor},
+\eqref{eq:estimate} and the trivial kernel imply the uniform estimate
+\begin{equation}\label{eq:invertestimate}
+ \|v\|_{W^{2,p}}\leq C\|(L_s-1)v\|_p.
+\end{equation}
+Otherwise normalize a contradicting sequence in $W^{2,p}$, take
+$s_j\to s$ and a strongly $L^p$ convergent subsequence, and use
+\eqref{eq:estimate} and operator-norm continuity in $s$ to get strong
+$W^{2,p}$ convergence. The limit is a nonzero element of
+$\ker(L_s-1)$, a contradiction.
+
+The smooth starting operator $L_h-1$ is an isomorphism by classical
+smooth elliptic index theory and the maximum principle. Its index is
+zero by deformation to a smooth Laplacian with a negative zeroth-order
+term. The method of continuity gives invertibility for every $s$:
+openness is the Neumann lemma; closedness follows from
+\eqref{eq:invertestimate}, weak $W^{2,p}$ compactness and strong $L^p$
+compactness of solutions for each fixed right-hand side. The estimate
+then upgrades convergence to $W^{2,p}$.
+Finally $L_\sigma$ differs from the isomorphism $L_\sigma-1$ by the
+compact inclusion $W^{2,p}\hookrightarrow L^p$. Compact perturbation
+preserves the Fredholm index. Since its kernel has dimension one,
+its range has codimension one; $L^p$ duality proves the stated
+annihilator conclusion.
+\end{proof}
+
+\section{Uniqueness and the derivative}
+\begin{proof}[Proof of Theorem~\ref{thm:criterion}]
+Choose
+\[
+ q=1+\frac1{4n},\qquad p=\frac q{q-1}=4n+1>2n.
+\]
+The imported bound applies since $1<q<n/(n-1)$. Every support has an
+$L^q$ density. Lemma~\ref{lem:actual}, smooth density in $W^{2,p}$ and
+H\"older duality extend its stationarity to every $W^{2,p}$ test.
+Lemma~\ref{lem:fredholm} puts all those densities in a one-dimensional
+space. Their integrals equal one, so they coincide. Nonemptiness makes
+this unique normalized density an actual support for every continuous
+$G$ in \eqref{eq:support}.
+
+For completeness, the derivative argument is the usual support argument.
+Monotonicity and the constant-shift law make $B_0$ 1-Lipschitz in the
+uniform norm. For continuous $H$, take $\nu_t\in\cA_0(F+tH)$.
+Every weak cluster point as $t\to0$ is in $\cA_0(F)$: pass to the limit
+in the supporting inequality for each fixed continuous $G$.
+Compactness of probabilities and uniqueness imply $\nu_t\to\nu_F$
+weakly. For $t>0$, the two supporting inequalities give
+\[
+ -\int H\,\mathrm d\nu_t
+ \leq\frac{B_0(F+tH)-B_0(F)}t
+ \leq-\int H\,\mathrm d\nu_F.
+\]
+The inequalities reverse appropriately for $t<0$. Taking limits proves
+the formula for every $H$.
+\end{proof}
+
+\section{Explicit products with an arbitrary Hermitian factor}
+\begin{proposition}\label{prop:product}
+Let $(Y,\kappa)$ be any connected compact Hermitian $k$-fold, $k\geq1$,
+normalized by $\int_Y\kappa^k=1$. On $X=\mathbb P^1\times Y$ let
+$w$ be Fubini--Study area of mass one, $a>0$, $b>0$ smooth on
+$\mathbb P^1$, and $A>0$ continuous there with $\int A w=a$.
+Set
+\[
+ \omega=aw+b\kappa,\qquad \dV=w\wedge\kappa^k,
+ \qquad F=\log((k+1)Ab^k).
+\]
+Then $c_0(F)=1$ and
+\begin{equation}\label{eq:productnu}
+ \cA_0(F)=\left\{\frac A a w\otimes\nu_\kappa\right\},
+\end{equation}
+where $\nu_\kappa$ is the smooth positive stationary probability of
+$L_\kappa=\tr_\kappa\ddc$. For $k=1$, $\nu_\kappa=\kappa$.
+\end{proposition}
+\begin{proof}
+The zero-mean Green solution on $\mathbb P^1$ of
+$\ddc u=(A-a)w$ is bounded and genuine, with continuous complex Hessian.
+Its pullback gives the positive continuous form
+$\sigma=Aw+b\kappa$ and the actual equation
+\[
+ (\omega+\ddc u)^{k+1}=(k+1)Ab^k w\wedge\kappa^k=e^F\dV.
+\]
+Scalar uniqueness gives $c_0(F)=1$. For $k\geq2$, smooth
+Gauduchon theory \cite[Theorem 2]{Gaud} gives a smooth positive
+stationary probability $\nu_\kappa$; for $k=1$ this is just Stokes.
+The block diagonal form gives
+$L_\sigma=A^{-1}L_w+b^{-1}L_\kappa$.
+For every smooth function depending on all variables, integration against
+the probability in \eqref{eq:productnu} annihilates the first term by
+base Stokes and the second by vertical stationarity and Fubini.
+This candidate has a bounded density, hence lies in the annihilator of
+Lemma~\ref{lem:fredholm}. Theorem~\ref{thm:criterion} supplies an actual
+support in that one-dimensional space. Normalization identifies the two,
+so the candidate satisfies the inequality for every continuous $G$.
+Testing only separated functions is not used to establish support.
+\end{proof}
+
+\subsection{A non-Dini density on a non-K\"ahler threefold}
+Take $Y=(\mathbb C^2\setminus\{0\})/\langle z\mapsto2z\rangle$ and
+$\kappa$ a unit-volume multiple of $|z|^{-2}\ddc|z|^2$.
+It descends to the quotient and is positive. Writing $s=|z|^2$,
+the identity $s(s^{-1})''+2(s^{-1})'=0$ gives $\ddc\kappa=0$.
+Consequently $\nu_\kappa=\kappa^2$, since
+$L_\kappa h\,\kappa^2=2\ddc h\wedge\kappa$ has integral zero.
+The smooth manifold $Y$ is $S^3\times S^1$ and has $H^2(Y,\mathbb R)=0$.
+A closed positive $(1,1)$-form would be exact but have positive square
+integral, contradicting Stokes. Thus $Y$ and $X=\mathbb P^1\times Y$
+are non-K\"ahler, the latter by restriction to the factor.
+
+Let $\tau\in[-1,1]$ be the usual height on $\mathbb P^1$, put
+$b=2+\tau$, and define
+\[
+ f(t)=\begin{cases}1/\log(e/|t|),&0<|t|\leq1,\\0,&t=0,\end{cases}
+ \qquad A=a+\epsilon\left(f(\tau)-\int f(\tau)w\right),
+ \quad0<\epsilon<a.
+\]
+Then $A$ is continuous, uniformly positive and has mean $a$.
+Near the equator its modulus is bounded below by a positive multiple
+of $1/\log(e/r)$, whose Dini integral diverges. It is not H\"older of
+any positive order. The same is true of $F=\log(3Ab^2)$: the smooth
+factor contributes only $O(r)$, and cannot cancel that modulus.
+The background $\omega=aw+b\kappa$ is genuinely nonclosed because
+the component $db\wedge\kappa$ is nonzero. Proposition~\ref{prop:product}
+gives the explicit supporting probability $(A/a)w\wedge\kappa^2$.
+The reference is zero and $e^F$ is strictly positive everywhere.
+
+\section{Proof boundary}
+The imported foundations are canonical bounded psh theory and bounded
+Bedford--Taylor continuity; constant-coefficient multiplier estimates;
+Sobolev embedding, smooth density and Rellich compactness; the smooth
+local ABP bound; smooth elliptic regularity and Fredholm theory; and
+standard Banach-space continuity and compact-perturbation index arguments.
+The continuous-coefficient Fredholm extension is proved in
+Lemma~\ref{lem:fredholm}, rather than quoted as a new imported premise.
+Gauduchon's theorem is applied only to the smooth factor $\kappa$.
+No nonsmooth-coefficient Schauder theorem, rough current product,
+derivative of the principal coefficients or Markov-generator core is
+assumed.
+
+The original P16 asks for uniqueness at every continuous $F$ on every
+compact Hermitian manifold. This article has an additional continuous
+positive Hessian hypothesis and supplies no exceptional density with
+two supports. Therefore it does not close original P16.
+
+\begin{thebibliography}{9}
+\bibitem{BT} E. Bedford and B. A. Taylor,
+\emph{A new capacity for plurisubharmonic functions},
+Acta Math. 149 (1982), 1--40, Theorem 2.1 and its printed proof.
+\bibitem{Dem} J.-P. Demailly, \emph{Complex analytic and differential geometry},
+Chapter I, canonical psh representatives and radial regularization,
+\url{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf}.
+\bibitem{Gaud} P. Gauduchon,
+\emph{Les m\'etriques standard d'une surface complexe compacte \`a
+premier nombre de Betti pair}, Ast\'erisque 126 (1985), 129--135,
+Theorem 2 (the general Hermitian theorem, independent of the parity
+assumption in Theorem 1),
+\url{https://www.numdam.org/item/AST_1985__126__129_0/}.
+\bibitem{Taylor} M. E. Taylor, \emph{Partial differential equations III},
+author-hosted Chapters 13 and 14: order-zero multipliers, compact Sobolev
+inclusions, and the ABP estimate and contact-set proof.
+\bibitem{S07} \emph{Singular non-Gauduchon product adjoints},
+checked programme article,
+\url{https://github.com/MingchenXia/non-kahler-pluripotential-theory/blob/main/research/papers/S07-singular-non-Gauduchon-product-adjoints.tex}.
+\end{thebibliography}
+\end{document}
