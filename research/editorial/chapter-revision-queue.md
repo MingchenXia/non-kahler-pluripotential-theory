@@ -1,5 +1,8 @@
 # Chapter revision queue — cycle beginning 24 September 2026
 
+Checkpoint583 continuation: the complete front-matter coherence pass is checked and published. Continue related primary literature and the current open-problem program, checking incoming author progress before integration. General P14 remains open; no whole-book mathematical certification is claimed. See front-matter-coherence-583.md.
+
+
 Checkpoint582 continuation: the complete Appendix reader revision is checked and published. Continue the front-matter coherence pass. General P14 remains open; no whole-book mathematical certification is claimed. See appendix-reader-revision-582.md.
 
 
