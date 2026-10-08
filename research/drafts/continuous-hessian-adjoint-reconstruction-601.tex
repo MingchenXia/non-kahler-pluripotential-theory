@@ -1,0 +1,264 @@
+% Inactive independent reconstruction, checkpoint601. No claim for all continuous data.
+\section{Fredholm theory for a continuous Hermitian form}
+\label{sec:continuous-hermitian-fredholm}
+
+A continuous positive Hermitian form still defines a uniformly elliptic
+trace operator. Its range is most conveniently described in Sobolev spaces:
+continuity of the coefficients suffices for the local $W^{2,p}$ estimate,
+while the maximum principle identifies the kernel.
+
+\begin{lemma}\label{lem:continuous-hermitian-fredholm}
+Let $\sigma$ be a continuous positive real $(1,1)$-form on a connected
+compact complex $n$-fold, and let $\mathrm dV$ be a smooth positive volume.
+For $p>2n$, the real operator
+\[
+ L_\sigma v=\operatorname{tr}_\sigma\ddc v,
+ \qquad L_\sigma:W^{2,p}(X)\longrightarrow L^p(\mathrm dV),
+\]
+is Fredholm of index zero. Its kernel consists of the constants, and
+its range has a one-dimensional annihilator in $L^{p'}(\mathrm dV)$,
+where $p'=p/(p-1)$.
+\end{lemma}
+\begin{proof}
+Fix a smooth positive Hermitian form $\eta$ and put
+$L_s=(1-s)L_\eta+sL_\sigma$, $0\leq s\leq1$. On a finite holomorphic
+cover these operators have uniformly positive real principal matrices
+and a common modulus of continuity. They have no lower-order terms in
+these coordinates. Write $d=2n$ for the real dimension.
+
+\emph{Local estimates.} For a constant positive real matrix $a_0$, the
+symbols $\xi_i\xi_j/(1+a_0^{kl}\xi_k\xi_l)$ satisfy the order-zero
+multiplier estimates. Consequently
+\[
+ \|D^2z\|_p\leq C\bigl(\|a_0^{ij}D_{ij}z\|_p+\|z\|_p\bigr)
+ \qquad(z\in C_c^\infty).
+\]
+Freeze the principal matrix of $L_s$ at a point and shrink the ball until
+the coefficient oscillation times this constant is less than $1/2$.
+The oscillation term can then be absorbed on the left. Differentiating
+a cutoff adds first derivatives; the interpolation inequality
+$\|Dz\|_p\leq\varepsilon\|D^2z\|_p+C_\varepsilon\|z\|_p$
+absorbs them. This inequality follows by comparing $Dz$ with its
+mollification at scale $\varepsilon$ and estimating the derivative of
+the mollified function by $C\varepsilon^{-1}\|z\|_p$.
+A partition of unity and smooth density give, uniformly in $s$,
+\begin{equation}\label{eq:continuous-hermitian-wtwo}
+ \|v\|_{W^{2,p}}\leq C\bigl(\|L_sv\|_p+\|v\|_p\bigr).
+\end{equation}
+
+\emph{Maximum principles.} We give the local estimate needed to pass
+comparison to $W^{2,p}$. Let $L=a^{ij}D_{ij}$ on a bounded smooth
+coordinate domain $D$, with $a\geq\vartheta I$, and let $z$ be smooth
+with nonnegative boundary values and minimum $-M<0$. Set
+$R=\operatorname{diam}D$. Every vector $\xi$ with $|\xi|<M/(2R)$ is
+the gradient at an interior lower supporting point of $z$: minimize
+$z(x)-\xi\cdot(x-x_0)$, where $z(x_0)=-M$. Its boundary values exceed
+$-M/2$, whereas its value at $x_0$ is $-M$. At a supporting point
+$D^2z\geq0$, and the arithmetic--geometric mean inequality gives
+\[
+ \det D^2z\leq
+ \left(\frac{\operatorname{tr}(aD^2z)}{d\vartheta}\right)^d.
+\]
+The area formula for the gradient, restricted to these supporting
+points, therefore bounds the volume of the slope ball by
+$(d\vartheta)^{-d}\int_D((Lz)^+)^d$. Thus
+\begin{equation}\label{eq:continuous-hermitian-local-minimum}
+ -\min_Dz\leq C_d\vartheta^{-1}R\|(Lz)^+\|_{L^d(D)}.
+\end{equation}
+This calculation uses no derivative of $a$. Approximate a $W^{2,p}$
+function smoothly on the closure of a smaller smooth domain. The
+approximation converges in $C^1$, and its $L$ errors converge in $L^d$
+because $p>d$. Correct the vanishing boundary error in
+\eqref{eq:continuous-hermitian-local-minimum}. Passage to the limit
+shows that $Lv\leq0$ and $v|_{\partial D}\geq0$ imply $v\geq0$.
+
+The same comparison proves the strong maximum principle. If
+$v\in W^{2,p}$, $Lv\geq0$, and $v$ has an interior maximum $M$, put
+$w=M-v\geq0$. If $w$ is positive somewhere and zero somewhere, a small
+ball contained in $\{w>0\}$ and tangent to its zero set can be chosen
+inside a coordinate chart. On the outer half-annulus of this ball,
+\[
+ \zeta(x)=\exp(-k|x-c|^2)-\exp(-kr^2)
+\]
+is positive and has $L\zeta>0$ for sufficiently large $k$, by uniform
+ellipticity. A small positive multiple of $\zeta$ is bounded above by
+$w$ on both boundary spheres, hence throughout the annulus by comparison.
+At the tangent point this forces a positive inward derivative of $w$,
+contradicting $Dw=0$. Connectedness proves that $v$ is constant.
+Applied to $L_s$ on $X$, it gives $\ker L_s=\mathbb R$. If
+$(L_s-1)v=0$ and $v$ has a positive maximum, apply the strong maximum
+principle on its positive component, where $L_sv=v>0$. Constancy
+contradicts that equation. Applying the argument to $-v$ rules out a
+negative minimum. Hence $\ker(L_s-1)=0$.
+
+\emph{Index and range.} Compactness of $W^{2,p}\hookrightarrow L^p$
+and \eqref{eq:continuous-hermitian-wtwo} now give
+\begin{equation}\label{eq:continuous-hermitian-inverse}
+ \|v\|_{W^{2,p}}\leq C\|(L_s-1)v\|_p
+\end{equation}
+uniformly in $s$. Otherwise normalize a contradicting sequence in
+$W^{2,p}$, pass to $s_j\to s$ and a strongly $L^p$ convergent subsequence,
+and apply \eqref{eq:continuous-hermitian-wtwo} to differences. Operator
+norm continuity in $s$ gives strong $W^{2,p}$ convergence to a nonzero
+member of $\ker(L_s-1)$, which is impossible.
+The smooth operator $L_\eta-1$ has index zero and trivial kernel, hence
+is an isomorphism, by smooth elliptic theory. The method of continuity
+and \eqref{eq:continuous-hermitian-inverse} show that every $L_s-1$ is
+an isomorphism. Finally, $L_\sigma$ differs from $L_\sigma-1$ by the
+compact inclusion $W^{2,p}\hookrightarrow L^p$, so it is Fredholm of
+index zero. Its one-dimensional kernel makes its range have codimension
+one. $L^p$ duality gives the annihilator assertion.
+\end{proof}
+
+\subsection{Continuous positive complex Hessians}
+\label{subsec:continuous-hessian-adjoints}
+
+The smooth recovery theorem extends to a bounded solution whose complex
+Hessian is continuous and everywhere positive. In this case one can
+vary the potential in both directions, and the resulting densities
+force every supporting probability to annihilate the same elliptic
+operator. The Sobolev range theorem then gives uniqueness.
+
+\begin{theorem}\label{thm:continuous-hessian-adjoint-uniqueness}
+Let $n\geq2$, let $\theta=\omega$ be a Hermitian form, and let $\varphi=0$.
+Suppose $F\in C(X)$ and a bounded solution $u\in\PSH(X,\omega)$ of
+\eqref{eq:relative-normalization} has distributional complex Hessian
+represented by a continuous form
+\[
+ \sigma=\omega+\ddc u>0
+\]
+everywhere on $X$. Then $\mathcal A_0(F)$ consists of one probability
+$\nu_F$. It satisfies
+\[
+ \int_X L_\sigma h\,\mathrm d\nu_F=0\quad(h\in C^\infty(X)),
+ \qquad
+ DB_0(F)[H]=-\int_XH\,\mathrm d\nu_F\quad(H\in C(X)).
+\]
+The derivative is taken in the G\^ateaux sense.
+\end{theorem}
+\begin{proof}
+The continuous trace of $\ddc u$ is the Euclidean Laplacian of $u$, up
+to the fixed normalization. Local constant-coefficient elliptic
+regularity gives $u\in W^{2,p}$ for every finite $p$. Indeed, subtract
+the Newtonian potential of a cutoff of this trace. Its second
+high-frequency derivatives are order-zero multipliers, and the
+low-frequency kernels are locally bounded; the remaining distribution
+is harmonic. Sobolev embedding gives a $C^{1,\alpha}$ representative
+for every $\alpha<1$, which agrees with the quasi-psh representative.
+
+On a coordinate ball choose smooth $\rho$ with $\ddc\rho\geq\omega$.
+The radial regularizations of the bounded psh function $u+\rho$ decrease
+to it, and their complex Hessians converge uniformly on smaller balls.
+Continuity of bounded products and the finite smooth-background
+expansion identify $(\omega+\ddc u)^n$ with $\sigma^n$. For smooth real
+$h$, the same argument applies to $u+th$, which is admissible for all
+sufficiently small signed $t$ by uniform positivity. Define
+\[
+ F_t=F+\log\frac{(\sigma+t\ddc h)^n}{\sigma^n}.
+\]
+Its equation has the same normalization scalar as the equation for $u$,
+so $B_0(F_t)=B_0(F)$. The supporting inequality gives
+$\int_X(F_t-F)\,\mathrm d\nu\leq0$ for each
+$\nu\in\mathcal A_0(F)$. Since
+$F_t-F=tL_\sigma h+O(t^2)$ uniformly, using both signs yields stationarity.
+
+Choose $p=4n+1$ and $q=p/(p-1)=1+1/(4n)$. By
+\cref{cor:gaud-adjoint-lq}, every supporting probability has an $L^q$
+density, since $q<n/(n-1)$. Smooth density in $W^{2,p}$ extends its
+stationarity to every $W^{2,p}$ test. By
+\cref{lem:continuous-hermitian-fredholm}, all these densities lie in a
+one-dimensional space. Their integrals equal one, so they coincide.
+Nonemptiness is \cref{thm:weak-adjoint-probabilities}, and the derivative
+formula follows from \cref{prop:normalization-directional}.
+\end{proof}
+
+\subsection{Products with a Hermitian factor}
+
+An explicit product construction exhibits the criterion for densities
+with an arbitrary continuous modulus. Let $(Y,\kappa)$ be a connected
+compact Hermitian $k$-fold, $k\geq1$, with $\int_Y\kappa^k=1$.
+Denote by $\nu_\kappa$ the smooth stationary probability of
+$L_\kappa=\operatorname{tr}_\kappa\ddc$, given by the Gauduchon multiplier
+when $k\geq2$; for $k=1$ it is $\kappa$. Write $w$ for the
+Fubini--Study area of mass one on $\mathbb P^1$. All factor forms and
+functions below are pulled back to $X=\mathbb P^1\times Y$.
+
+\begin{proposition}\label{prop:continuous-product-adjoint}
+Let $a>0$, let $b$ be smooth and positive on $\mathbb P^1$, and let $A$
+be continuous and positive there, with $\int_{\mathbb P^1}Aw=a$.
+For
+\[
+ \omega=aw+b\kappa,\qquad \mathrm dV=w\wedge\kappa^k,
+ \qquad F=\log((k+1)Ab^k),
+\]
+one has
+\[
+ c_0(F)=1,\qquad
+ \mathcal A_0(F)=\left\{\frac Aa\,w\otimes\nu_\kappa\right\}.
+\]
+\end{proposition}
+\begin{proof}
+The Green solution of $\ddc u=(A-a)w$ on $\mathbb P^1$ has continuous
+complex Hessian and is bounded. Its pullback yields
+$\sigma=Aw+b\kappa>0$, and
+$\sigma^{k+1}=(k+1)Ab^kw\wedge\kappa^k$.
+Thus scalar uniqueness gives $c_0(F)=1$, and
+\cref{thm:continuous-hessian-adjoint-uniqueness} gives a unique support.
+For every smooth $h$ depending on all variables, the block decomposition
+\[
+ L_\sigma h=A^{-1}L_wh+b^{-1}L_\kappa h
+\]
+shows that $(A/a)w\otimes\nu_\kappa$ is stationary: the first term
+integrates to zero by Stokes on $\mathbb P^1$, and the second by
+stationarity on $Y$ and Fubini. This candidate has a bounded density
+with respect to $\mathrm dV$. The one-dimensional annihilator of
+\cref{lem:continuous-hermitian-fredholm} and probability normalization
+therefore identify it with the supporting probability.
+\end{proof}
+
+\begin{example}\label{ex:non-dini-hopf-product-adjoint}
+There is a non-K\"ahler threefold with a nonclosed Hermitian background
+and a positive continuous density whose logarithm is neither Dini
+continuous nor H\"older continuous of any positive order, but whose
+supporting probability is explicit and unique.
+\end{example}
+\begin{proof}
+Take the Hopf surface
+$Y=(\mathbb C^2\setminus\{0\})/\langle z\mapsto2z\rangle$ and its
+unit-volume metric $\kappa=c|z|^{-2}\ddc|z|^2$, where $c>0$ is chosen
+so that $\int_Y\kappa^2=1$. In the notation of
+\eqref{eq:hopf-torsion}, this is a multiple of $\alpha+\beta$.
+Here $\alpha$ has rank one, so $\ddc\kappa=-c\alpha^2=0$ and
+$\nu_\kappa=\kappa^2$. Polar coordinates identify $Y$ with
+$S^3\times S^1$, hence $H^2(Y,\mathbb R)=0$. A closed positive form
+would be exact and have positive square integral, contradicting Stokes.
+Thus $Y$ is non-K\"ahler, and so is $\mathbb P^1\times Y$, by restriction.
+
+Let $\tau\in[-1,1]$ be the height on $\mathbb P^1$, set $b=2+\tau$,
+and put
+\[
+ f(t)=\begin{cases}
+       1/\log(e/|t|),&0<|t|\leq1,\\
+       0,&t=0,
+      \end{cases}
+ \qquad
+ A=a+\varepsilon\left(f(\tau)-\int_{\mathbb P^1}f(\tau)w\right),
+ \quad0<\varepsilon<a.
+\]
+Since $0\leq f\leq1$, this is a positive continuous function of mean
+$a$. Along a normal segment to the equator, $|\tau|$ is comparable
+to the distance $r$. The oscillation of $A$ is therefore bounded below
+by a positive multiple of $1/\log(e/r)$. Its Dini integral
+$\int_0^{r_0}\mathrm dr/(r\log(e/r))$ diverges, and this modulus is
+larger than every $r^\gamma$, $\gamma>0$, as $r\downarrow0$.
+The logarithm of $A$ has the same lower bound, because $A$ is uniformly
+positive and bounded. The smooth term $2\log b$ contributes only $O(r)$,
+so $F=\log(3Ab^2)$ has neither regularity. The mixed component
+$\mathrm db\wedge\kappa$ shows that $\omega=aw+b\kappa$ is nonclosed.
+By \cref{prop:continuous-product-adjoint}, its supporting probability
+is $(A/a)w\wedge\kappa^2$.
+\end{proof}
+
+The theorem assumes a continuous positive complex Hessian for a bounded
+solution. It does not establish that hypothesis for every continuous $F$;
+the uniqueness question for arbitrary continuous data remains open.
