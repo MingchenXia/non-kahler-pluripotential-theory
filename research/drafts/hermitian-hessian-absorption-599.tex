@@ -1,0 +1,101 @@
+% Inactive algebraic reconstruction. The PDE maximum inequality is not proved here.
+% Garding polarized positivity, cone concavity and Maclaurin inequalities are inputs.
+\section{Absorption of prescribed-potential derivatives}
+
+Let $2\leq m\leq n$, let $S_j$ denote the elementary symmetric polynomial, and put $\sigma_j=S_j/\binom nj$ and $F=\sigma_m^{1/m}$ on $\Gamma_m$. At a diagonal Hermitian matrix $\Lambda$ with eigenvalues $\lambda_1\geq\cdots\geq\lambda_n$, write
+\[
+ f=F(\Lambda),\qquad F_i=\frac{\partial F}{\partial\lambda_i},\qquad
+ S=\operatorname{tr}\Lambda,\qquad \mathcal F=\sum_iF_i.
+\]
+We use the polarized mixed-trace estimate of the preceding algebra fragment, together with classical G\aa rding concavity and Maclaurin inequalities. These standard algebraic inputs are declared rather than independently reproved here. The derivative always belongs to $\sigma_m^{1/m}$; replacing it by the derivative of $S_m$ would change the estimates.
+
+\begin{lemma}\label{draft:599-weighted-cone-trace}
+If $M$ belongs to the closed Hermitian $m$-cone, then
+\[
+ W:=\sum_iF_iM_{i\bar i}\geq\frac{f}{m!S}\operatorname{tr}M,
+ \qquad F_i\geq\frac{f}{m!S},\qquad
+ |M_{1\bar1}|\leq\operatorname{tr}M.
+\]
+No simultaneous diagonalization of $M$ and $\Lambda$ is required.
+\end{lemma}
+\begin{proof}
+In the wedge notation of the mixed-trace estimate, differentiation gives $DF_\Lambda(M)=fM_m/\sigma_m$. The estimate $M_m\geq\sigma_m M_1/(m!\sigma_1)$, with $M_1=\operatorname{tr}M/n$ and $\sigma_1=S/n$, proves the first inequality. The positive semidefinite rank-one coordinate projections belong to the closed $m$-cone; taking $M$ to be each projection proves the second inequality.
+The closed $m$-cone is contained in the closed $2$-cone. Its eigenvalues $\mu$ satisfy
+\[
+ \operatorname{tr}M\geq0,\qquad
+ \sum_i\mu_i^2=(\operatorname{tr}M)^2-2S_2(\mu)
+                   \leq(\operatorname{tr}M)^2.
+\]
+Thus the operator norm of $M$ is at most its trace, which proves the last inequality. The wedge pairing computes the derivative in the diagonal frame of $\Lambda$, regardless of the eigenvectors of $M$.
+\end{proof}
+
+\begin{lemma}\label{draft:599-fixed-comparison-absorption}
+Suppose $f\geq f_0>0$, $C_H,C_G\geq0$, and $q$ satisfies
+\[
+ q\geq8,\qquad q\geq\frac{2nm!C_H}{f_0},\qquad
+ q^2\geq\frac{4m!C_G}{f_0}.
+\]
+For $0\leq r\leq1/2$, $a,b\in\mathbb C^n$ and $M$ as above, put
+\begin{align*}
+ E={}&q(W-\mathcal F)-\frac{C_H}{\lambda_1}|M_{1\bar1}|
+             -\frac{C_G}{S}\sum_i|a_i|^2\\
+ &+\sum_iF_i\bigl(12q^2|a_i-b_i|^2
+             -(9q^2+2q+rq^2)|a_i|^2-q|a_i|\bigr).
+\end{align*}
+Then
+\[
+ E\geq\frac q2W+\frac{q^2}{4}\sum_iF_i|a_i|^2
+       -(q+1+84q^2\max_i|b_i|^2)\mathcal F.
+\]
+\end{lemma}
+\begin{proof}
+The scalar Young estimate of the preceding fragment gives
+\[
+ 12q^2|a_i-b_i|^2-(9q^2+2q)|a_i|^2-q|a_i|
+ \geq q^2|a_i|^2-1-84q^2|b_i|^2.
+\]
+Subtracting $rq^2|a_i|^2$ leaves at least $q^2|a_i|^2/2$. Since $S\leq n\lambda_1$, the previous lemma and the hypothesis on $q$ imply
+\[
+ \frac{C_H}{\lambda_1}|M_{1\bar1}|
+ \leq\frac{nC_H}{S}\operatorname{tr}M\leq\frac q2 W.
+\]
+The lower bound for each $F_i$ similarly gives
+\[
+ \frac{C_G}{S}\sum_i|a_i|^2
+             \leq\frac{q^2}{4}\sum_iF_i|a_i|^2.
+\]
+Combining these inequalities yields the assertion. The error depends on the fixed comparison vector $b$ and is not discarded.
+\end{proof}
+
+For an application with $a=\partial v$, $b=\partial\widetilde\varphi$ and $M=I+v_{i\bar j}$, the error depends on the fixed smooth comparison function. Taking $q=\chi'(v-\widetilde\varphi)$ with $\chi(t)=-(1/12)\log(2\varepsilon-t)$ and $|v-\widetilde\varphi|\leq\varepsilon$ provides a fixed positive lower bound for $q$ and a fixed finite upper bound. The lemma therefore absorbs the displayed derivatives of $v$ without a bound on those derivatives. It does not establish the geometric maximum inequality in which these terms must occur.
+
+\begin{lemma}\label{draft:599-quadratic-coercivity}
+If $f_0\leq f\leq f_1$, then
+\[
+ Q:=\sum_iF_i\lambda_i^2
+       \geq\frac{f_0}{m}S-\frac{n-m}{m}f_1^2,
+ \qquad \mathcal F\geq1.
+\]
+\end{lemma}
+\begin{proof}
+The derivative of the normalized root is $F_i=fS_{m-1}(\lambda|i)/(mS_m)$. The splitting identity gives
+\[
+ Q=\frac f m S-\frac{(m+1)f}{mS_m}S_{m+1}.
+\]
+For $m=n$, set $S_{n+1}=0$. If $S_{m+1}\leq0$, the second term is nonnegative. Otherwise $\lambda\in\Gamma_{m+1}$ and Maclaurin gives $S_{m+1}\leq\binom n{m+1}f^{m+1}$. Since $S_m=\binom nm f^m$, the subtracted term is at most $(n-m)f^2/m$. This proves the first assertion. Summing the derivatives gives $\mathcal F=f\sigma_{m-1}/\sigma_m\geq1$, again by Maclaurin.
+\end{proof}
+
+\begin{proposition}\label{draft:599-conditional-maximal-eigenvalue-bound}
+Fix $a>0$, $b,d,e\geq0$ and $0<\delta<1$. Let $K\geq1$ and $f_0\leq f\leq f_1$. Suppose the following appropriate inequality holds:
+\begin{enumerate}
+\item If $\lambda_n<-\delta\lambda_1$, then $0\geq aQ/K-bK\mathcal F-d\lambda_1\mathcal F-e$.
+\item If $\lambda_n\geq-\delta\lambda_1$, then $0\geq aQ/K-bKF_1-e$.
+\end{enumerate}
+Then $S\leq CK$ and $\lambda_1\leq CK$, with $C$ depending only on the fixed displayed data and $n,m$.
+\end{proposition}
+\begin{proof}
+In the first case, symmetry and concavity of $F$ imply $F_n\geq F_i$ for every $i$, so $Q\geq\delta^2\lambda_1^2\mathcal F/n$. To see the derivative ordering, apply monotonicity of the gradient of a concave function to $\lambda$ and the vector obtained by exchanging its $i$th and $n$th coordinates. Divide the assumed inequality by $K\mathcal F$, use $\mathcal F\geq1$, and set $t=\lambda_1/K$. It yields $a\delta^2t^2/n\leq b+dt+e$, which bounds $t$. Since $S\leq n\lambda_1$, the trace bound follows.
+In the second case, either $\lambda_1^2\leq2bK^2/a$, which gives the same trace bound directly, or $aQ/(2K)\geq bKF_1$. The assumed inequality then gives $Q\leq2eK/a$. The preceding lemma bounds $S$ by a multiple of $K$. Finally the $\Gamma_2$ identity gives $\lambda_1\leq(\sum_i\lambda_i^2)^{1/2}<S$.
+\end{proof}
+
+The hypotheses of this proposition are the remaining analytic obligation, not conclusions asserted here. In particular the second case requires absorption of every residual multiple of $\mathcal F$ and the third-derivative terms before only the constant $e$ remains. For $\Psi(t)=-2At+(A\tau/2)t^2$, $|t|\leq M$ and $\tau M\leq1$, one has $-3A\leq\Psi'\leq-A$, rather than the bound $|\Psi'|\leq2A$. The choice $\delta\leq\min\{1/17,\tau/(72A+\tau)\}$ ensures both $4(\Psi')^2\delta/(1-\delta)\leq\Psi''/2$ and $8\delta/(1-\delta)\leq1/2$. The full Hermitian torsion/eigenvalue computation and the bounded-solution dependencies remain pending. The linear case $m=1$ is excluded from the matrix trace argument.
