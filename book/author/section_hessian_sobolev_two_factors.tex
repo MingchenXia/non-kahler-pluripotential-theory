@@ -243,9 +243,115 @@ for $D_2$ follows from the uniform coefficient bounds below degree $m$
 in \cref{hessian:bounded-recursive-currents}.
 \end{proof}
 
-The argument controls coefficients of the first Hessian through a
-linear Sobolev-energy measure. It does not give this capacity estimate
-for products of two or more Hessians. In particular the higher-degree
-recursion still requires further control of bounded weights before
-permutation invariance or simultaneous decreasing convergence can be
-asserted in those degrees.
+The capacity estimate depends on using a first Hessian. A product
+of two Hessians can already charge a set of zero Sobolev capacity.
+
+\begin{lemma}\label{hessian:sobolev-codimension-two}\index{Capacity!Sobolev zero sets}
+Let $E$ be a compact subset of a smooth real submanifold of
+codimension two contained in a coordinate chart. Then
+$\operatorname{Cap}_1(E)=0$.
+\end{lemma}
+\begin{proof}
+It suffices to treat a compact subset of a submanifold chart, since
+finitely many such subsets cover $E$ and the capacity is subadditive.
+Choose real coordinates $(s,t)$ there, with $t\in\mathbb R^2$ and the
+submanifold given by $t=0$. Choose $0\leq\eta\leq1$ smooth,
+supported in this chart and equal to one near the compact subset.
+Put $r=|t|$.
+For $0<\epsilon<1/2$ define
+\[
+ h_\epsilon(r)=
+ \begin{cases}
+  1,&0\leq r\leq\epsilon^2,\\
+  \displaystyle\frac{\log(\epsilon/r)}{\log(1/\epsilon)},
+       &\epsilon^2<r<\epsilon,\\
+  0,&r\geq\epsilon.
+ \end{cases}
+\]
+The Sobolev function $f_\epsilon=\eta h_\epsilon$ equals one on an
+open neighborhood of that subset. On the fixed compact coordinate
+set the Sobolev norm is equivalent to the Euclidean one. Integration
+in the two normal variables gives
+\[
+ \|f_\epsilon\|_{H^1}^2
+ \leq C\left(\epsilon^2+
+     \int_{\epsilon^2}^{\epsilon}
+       \frac{\mathrm dr}{r\log(1/\epsilon)^2}\right)
+ =C\left(\epsilon^2+\frac1{\log(1/\epsilon)}\right)
+ \longrightarrow0.
+\]
+The derivatives of $\eta$ contribute at most $C\epsilon^2$.
+Taking the infimum over open neighborhoods proves the assertion.
+\end{proof}
+
+\begin{example}\label{hessian:sobolev-two-product-obstruction}\index{Hessian measure!Sobolev capacity obstruction}
+There are bounded continuous $\omega$-plurisubharmonic potentials
+$u,v$ and a compact Borel set $E$ such that
+\[
+ \operatorname{Cap}_1(E)=0,\qquad
+ \int_E Q_2(u,v)\wedge\omega^{m-2}>0.
+\]
+Consequently the first-Hessian capacity estimate does not extend to
+this positive two-factor measure, even within the continuous
+$\omega$-plurisubharmonic subclass.
+\end{example}
+\begin{proof}
+Choose holomorphic coordinates $z_j=x_j+\mathrm i y_j$ and a smooth
+nonnegative cutoff $\chi$ supported in the chart and equal to one
+on a smaller coordinate box. Extend
+\[
+ u=a\chi|x_1|,\qquad v=a\chi|x_2|
+\]
+by zero outside the chart. These functions are globally continuous
+and bounded. To check their curvature, replace $|x_j|$ by
+$g_\delta(x_j)=(x_j^2+\delta^2)^{1/2}$, with $0<\delta\leq1$.
+The Hessian of $\chi g_\delta$ has the nonnegative term
+$\chi\ddc g_\delta$; all its remaining terms are uniformly bounded
+forms, since $g_\delta$ and $g_\delta'$ are uniformly bounded on the
+fixed support. Thus $\ddc(\chi g_\delta)\geq-C\omega$ with $C$
+independent of $\delta$. Choosing $a>0$ sufficiently small gives
+$\omega+\ddc(a\chi g_\delta)\geq\omega/2$ for both coordinates.
+Their decreasing limits $u,v$ are therefore
+$\omega$-plurisubharmonic and admissible.
+
+On the box where $\chi=1$, set
+$\alpha_j=\frac{\mathrm i}{4\pi}\mathrm dz_j\wedge\mathrm d\bar z_j$.
+The book's normalization gives
+\[
+ \ddc g_\delta(x_j)=\tfrac12g_\delta''(x_j)\alpha_j,
+ \qquad g_\delta''(x_j)
+       =\frac{\delta^2}{(x_j^2+\delta^2)^{3/2}}
+       \longrightarrow2\delta_{\{x_j=0\}}.
+\]
+The measures $g_\delta^{\prime\prime}(t)\,\mathrm dt$ have mass two,
+while their mass outside any fixed neighborhood of zero tends to
+zero. The two
+smooth factors depend on distinct real variables, so their product
+is an approximate identity in $(x_1,x_2)$ and converges to the
+tensor-product measure. By
+\cref{hessian:bounded-two-factor-convergence}, locally
+\[
+ D_2(u,v)=a^2\delta_{\{x_1=0\}}\delta_{\{x_2=0\}}
+                         \alpha_1\wedge\alpha_2.
+\]
+Choose $E$ to be a compact piece of $\{x_1=x_2=0\}$ inside this
+box with nonempty relative interior. The preceding lemma gives
+$\operatorname{Cap}_1(E)=0$. On this box, the positive measure
+$D_2(u,v)\wedge\omega^{n-2}$ has strictly positive mass on $E$,
+since $\omega$ is strictly positive. The smooth term $\omega^n$ and
+the two single-Hessian terms in the expansion
+\[
+ Q_2(u,v)\wedge\omega^{m-2}
+ =\omega^n+\omega^{n-1}\wedge(\ddc u+\ddc v)
+                         +D_2(u,v)\wedge\omega^{n-2}
+\]
+have zero mass on $E$: each single-Hessian term is absolutely
+continuous in the other normal real variable. Hence the asserted
+mass is strictly positive. A bound by
+$C\operatorname{Cap}_1(F)^b$ for all Borel $F$, with any $b>0$,
+would contradict this choice of $E$.
+\end{proof}
+
+The higher-degree recursion still requires control of bounded weights
+against products of Hessians. The preceding Sobolev-capacity estimate
+cannot be iterated for this purpose.
