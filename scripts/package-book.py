@@ -1700,6 +1700,7 @@ selected.update(root / name for name in ['research/audits/hermitian-hessian-comp
 selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-regularity-review-604.json', 'research/editorial/hermitian-hessian-continuous-regularity-review-604.md', 'research/source-disposition-604.json', 'research/drafts/hermitian-hessian-continuous-regularity-604.tex'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-foundations-review-605.json', 'research/editorial/hermitian-hessian-continuous-foundations-review-605.md', 'research/source-disposition-605.json', 'research/drafts/hermitian-hessian-continuous-foundations-605.tex'])
 selected.update(root / name for name in ['research/audits/continuous-hermitian-hessian-book-integration-606.json', 'research/editorial/continuous-hermitian-hessian-book-integration-606.md', 'research/source-disposition-606.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-integration-612.json', 'research/editorial/hermitian-hessian-bounded-currents-integration-612.md', 'research/source-disposition-612.json'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-review-611.json', 'research/editorial/hermitian-hessian-bounded-currents-review-611.md', 'research/source-disposition-611.json', 'research/drafts/hermitian-hessian-bounded-currents-611.tex'])
 selected.update(root / name for name in ['research/audits/hopf-basic-perron-integration-610.json', 'research/editorial/hopf-basic-perron-integration-610.md', 'research/source-disposition-610.json'])
 selected.update(root / name for name in ['research/audits/hopf-basic-perron-primary-review-609.json', 'research/editorial/hopf-basic-perron-primary-review-609.md', 'research/source-disposition-609.json', 'research/drafts/hopf-basic-perron-geometry-609.tex', 'research/papers/S10-Hopf-Perron-geometry-and-metric-actions.tex'])
@@ -1718,6 +1719,51 @@ for submission in (root / "research/rethlas/verification/inputs").glob("*.md"):
     if match and match.group(1) in completed_runs:
         selected.add(submission)
 
+selected.update(root / name for name in [
+    '.gitattributes',
+    'BLUEPRINT.md',
+    'CHANGELOG.md',
+    'research/STATUS.md',
+    'research/papers/S11-zero-Lelong-residuals-and-blowups-at-poles.tex',
+    'research/xean/README.md',
+    'research/xean/results/GitHub-S10-Hopf-basic-Perron-A-H-push-20261008.json',
+    'research/xean/results/S10-S11-delayed-native-app-actual-host-unavailable-responses-20261008.json',
+    'research/xean/results/S10-release-confirmed-current-summary-refresh-20261008.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarification-and-current-source-20261008.pending.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarified-20261008-build.json',
+    'research/xean/results/S11-before-Gauduchon-dimension-clarification-20261008-source.tex',
+    'research/xean/results/S11-normal-fast-forward-preserve-four-author-commits-20261008.json',
+    'research/xean/results/S11-small-curvature-current-LF-primary-read-and-application-assessment-20261008.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-inclusive-full-review-argument-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-scoped-full-review-task-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-input-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-targets-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-checked-result-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-before-assembly-scope-clarification-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-inclusive-final-comparison-argument.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task-preparation.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-final-root-audit-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-release-20261008-build.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-before-release-wording-20261008-source.tex',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-exact-wording-change-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-native-app-actual-responses-20261008.json',
+])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
