@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint 554 completes recursive Chapter 7 first/final post-inspection second reads (491 lines, 12 proofs) and all 14 direct chapter-page views. No manuscript change or new build/publication occurs; the verified October 8 PDF remains current. Current package checks against actual 553 reconstruction pass. Continue complete recursive Chapter 8, then incoming author/primary-source updates. See [the chapter review](weighted-measures-reader-554.md).
+Current continuation: checkpoint 555 completes recursive Chapter 8 first/final post-inspection second reads (944 final lines, 18 proofs), 43 final-page coverage and three spacing guards. Both clean full author builds are live verified, with the October 8 cover and description. Actual empty-source reconstruction and current packaging checks pass; native preview compilation remains unverified after calls without diagnostics. Continue complete recursive Chapter 9, then incoming author/primary-source updates. See [the chapter revision](hopf-mass-reader-555.md).
 
 ## Greatest exponential left-limit review 526
 
