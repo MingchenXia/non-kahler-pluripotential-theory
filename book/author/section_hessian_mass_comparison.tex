@@ -1,0 +1,186 @@
+\section{Hessian mass and global comparison}
+\label{sec:hessian-mass-comparison}
+
+The maximum inequality compares measures on complementary Borel sets.
+Integrating it leaves a difference of total masses. The recursive
+currents express this difference through the complex Hessians of the
+background powers, extending the mass calculation of
+\cref{chap:mass} to bounded admissible potentials.
+
+For bounded admissible $t_1,\ldots,t_m$, put
+\[
+ \mathcal M_m(t_1,\ldots,t_m)=\int_XQ_m(t_1,\ldots,t_m),
+ \qquad H_m(t)=Q_m(t,\ldots,t).
+\]
+Here $H_m(t)$ is a finite positive Radon measure and
+$\mathcal M_m$ is the total mass of a mixed positive measure, by
+\cref{hessian:bounded-shifted-positive}. For a nonempty subset
+$I=\{i_1<\cdots<i_q\}\subset\{1,\ldots,m\}$, put
+$i(I)=i_q$ and $I^-=I\setminus\{i_q\}$. Use $D_{I^-}$ for the
+recursive current with those ordered inputs, with $D_\varnothing=1$.
+
+\Needspace{17\baselineskip}
+\begin{lemma}\label{hessian:bounded-mass-expansion}\index{Hessian measure!total mass}
+For every bounded admissible list,
+\begin{equation}\label{eq:hessian-bounded-mass-expansion}
+ \mathcal M_m(t_1,\ldots,t_m)
+ =\int_X\omega^n+
+ \sum_{\varnothing\ne I\subset\{1,\ldots,m\}}
+ \int_X t_{i(I)}D_{I^-}\wedge\ddc(\omega^{n-|I|}).
+\end{equation}
+Every integral on the right is an integral of bounded canonical
+values against signed measure coefficients.
+\end{lemma}
+\begin{proof}
+Expand $Q_m$ using \eqref{eq:hessian-bounded-shifted-current}.
+The term for $I$ pairs $D_I$ with the smooth form
+$\omega^{n-|I|}$. By \eqref{eq:hessian-bounded-recursion},
+\[
+ \langle D_I,\omega^{n-|I|}\rangle
+ =\langle t_{i(I)}D_{I^-},\ddc(\omega^{n-|I|})\rangle.
+\]
+Since $|I^-|\leq m-1$, \cref{hessian:bounded-recursive-currents}
+gives measure coefficients for $D_{I^-}$; their bounded product
+with $t_{i(I)}$ is well defined. Thus the displayed pairing is
+exactly the integral in the sum, and is finite on compact $X$.
+The empty subset contributes $\int_X\omega^n$.
+\end{proof}
+
+Let $\mu_r$ be the repeated-slot mixed measure from
+\cref{hessian:bounded-maximum-measure}, for fixed $r$ and
+$z_1,\ldots,z_{m-r}$.
+The total-mass difference below therefore has the explicit expression
+\eqref{eq:hessian-bounded-mass-expansion} for the two indicated lists.
+
+\Needspace{11\baselineskip}
+\begin{proposition}\label{hessian:comparison-mass-defect}\index{Comparison principle!Hessian mass defect}
+If $u,v$ are bounded admissible and $w=\max\{u,v\}$, then
+\[
+ \int_{\{u<v\}}\mathrm d\mu_r(v)
+ \leq\int_{\{u<v\}}\mathrm d\mu_r(u)
+                +\int_X\mathrm d\mu_r(w)-\int_X\mathrm d\mu_r(u).
+\]
+\end{proposition}
+\begin{proof}
+Set $E=\{u<v\}$. The contact-set version of
+\cref{hessian:bounded-maximum-measure} gives
+\[
+ \mu_r(w)\geq\mathbf1_{X\setminus E}\mu_r(u)
+                     +\mathbf1_E\mu_r(v).
+\]
+All these measures are finite and positive. Integrating on $X$ and
+using $\mu_r(u)(X\setminus E)=\mu_r(u)(X)-\mu_r(u)(E)$ gives
+exactly the assertion. No boundary or closed-background hypothesis
+enters this calculation.
+\end{proof}
+
+The unmodified global comparison principle holds precisely when the
+powers occurring in this mass formula are $\ddc$-closed. Only the
+powers $n-m,\ldots,n-1$ occur at Hessian degree $m$.
+
+\Needspace{24\baselineskip}
+\begin{theorem}\label{hessian:global-comparison-characterization}\index{Hessian measure!invariant mass}\index{Comparison principle!Hessian power identities}
+The following conditions are equivalent:
+\begin{enumerate}
+\item $\ddc(\omega^{n-q})=0$ for every $1\leq q\leq m$;
+\item $\int_XH_m(u)$ is independent of the smooth admissible
+      potential $u$;
+\item $\mathcal M_m(t_1,\ldots,t_m)=\int_X\omega^n$ for every
+      bounded admissible list;
+\item every pair of bounded admissible $u,v$ satisfies
+\[
+ \int_{\{u<v\}}H_m(v)\leq\int_{\{u<v\}}H_m(u).
+\]
+\end{enumerate}
+Under these conditions, for every $1\leq r\leq m$ and every fixed bounded
+admissible list $z_1,\ldots,z_{m-r}$, one also has
+\[
+ \int_{\{u<v\}}\mathrm d\mu_r(v)
+           \leq\int_{\{u<v\}}\mathrm d\mu_r(u).
+\]
+\end{theorem}
+\begin{proof}
+The first condition implies the third by
+\eqref{eq:hessian-bounded-mass-expansion}. The third implies the
+second by taking all inputs equal to a smooth potential.
+
+To prove that the second implies the first, fix any smooth real
+$f$. For all sufficiently small real $t$ of either sign,
+$\omega+t\ddc f$ is positive, so $tf$ is strictly admissible.
+The polynomial
+\[
+ \int_X(\omega+t\ddc f)^m\wedge\omega^{n-m}
+ =\sum_{q=0}^m\binom mq t^q
+              \int_X(\ddc f)^q\wedge\omega^{n-q}
+\]
+is constant on an interval. Consequently every coefficient with
+$q\geq1$ vanishes. Polarizing that coefficient by replacing $f$
+with $\sum_{a=1}^q s_af_a$ gives
+\[
+ \int_X\ddc f_1\wedge\cdots\wedge\ddc f_q
+                        \wedge\omega^{n-q}=0
+\]
+for all smooth real $f_a$. Integration by parts in the first
+factor, using \cref{lem:ibp}, gives
+\[
+ \int_Xf_1\ddc f_2\wedge\cdots\wedge\ddc f_q
+                         \wedge\ddc(\omega^{n-q})=0.
+\]
+Since $f_1$ is arbitrary, the smooth top-degree form paired with
+it vanishes pointwise. At each point the other complex Hessians
+can be prescribed by real quadratic functions times a cutoff.
+Complexifying this multilinear identity gives all coordinate
+$(q-1,q-1)$-forms, as in the proof of
+\cref{thm:mass-invariance-characterization}. They detect every
+coefficient of $\ddc(\omega^{n-q})$, so that form vanishes. When
+$q=1$, there are no other Hessians and the same conclusion follows
+directly from the arbitrariness of $f_1$.
+
+Under the third condition, $\mu_r(w)$ and $\mu_r(u)$ have the same
+total mass. \Cref{hessian:comparison-mass-defect} proves the mixed
+comparison assertion, and $r=m$ gives the fourth condition.
+Finally, suppose the fourth condition holds and fix smooth admissible
+$u,v$. Choose $C$ so large that $u<v+C$ everywhere.
+Constant invariance gives $H_m(v+C)=H_m(v)$, so comparison gives
+$\int_XH_m(v)\leq\int_XH_m(u)$. Exchanging $u,v$ gives equality,
+which is the second condition.
+\end{proof}
+
+The same varying background that obstructs Monge--Amp\`ere comparison
+also obstructs comparison at each intermediate Hessian degree.
+
+\Needspace{20\baselineskip}
+\begin{example}\label{hessian:torus-comparison-obstruction}\index{Torus!Hessian comparison obstruction}
+Let $X=(\mathbb C/(\mathbb Z+\mathrm i\mathbb Z))^n$, with
+$z_j=x_j+\mathrm i y_j$, and put
+\[
+ \beta_j=\frac{\mathrm i}{2\pi}\,\mathrm dz_j\wedge\mathrm d\bar z_j,
+ \qquad b=2+\cos(2\pi x_1),
+ \qquad\omega=\beta_1+b\beta_2+\sum_{j=3}^n\beta_j.
+\]
+For $|t|<\pi^{-2}$ the potential $u_t=t\cos(2\pi x_1)$ is smooth
+strictly admissible, and, with $B_n=\int_X\beta_1\wedge\cdots\wedge\beta_n$,
+\[
+ \int_X H_m(u_t)=n!\left(2-\frac{m\pi^2t}{2n}\right)B_n.
+\]
+Thus every $-\pi^{-2}<t<0$, together with a constant $C>|t|$,
+gives a pair $u=0$, $v=u_t+C$ that violates the unmodified global
+comparison inequality.
+\end{example}
+\begin{proof}
+As in \cref{ex:torus-mass},
+$\ddc u_t=-\pi^2t\cos(2\pi x_1)\beta_1$.
+The coefficient of $\beta_1$ in $\omega+\ddc u_t$ is strictly
+positive in the stated range, and all the other coefficients are
+positive. Since $(\ddc u_t)^2=0$, expansion gives
+\[
+ H_m(u_t)=\omega^n+m\ddc u_t\wedge\omega^{n-1}
+ =n!b\left(1-\frac mn\pi^2t\cos(2\pi x_1)\right)
+                         \beta_1\wedge\cdots\wedge\beta_n.
+\]
+The period averages of $b$ and $b\cos(2\pi x_1)$ are respectively
+$2$ and $1/2$, proving the mass formula. For $t<0$ this mass is
+strictly larger than $\int_XH_m(0)=2n!B_n$. Meanwhile $C>|t|$
+gives $\{0<u_t+C\}=X$, so the comparison inequality for this pair
+would assert the opposite ordering of these masses.
+\end{proof}
