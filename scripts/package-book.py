@@ -1692,6 +1692,8 @@ selected.update(root / name for name in ['research/audits/hermitian-hessian-liou
 selected.update(root / name for name in ['research/audits/divisor-free-radial-primary-review-597.json', 'research/editorial/divisor-free-radial-primary-review-597.md', 'research/source-disposition-597.json', 'research/drafts/divisor-free-concentration-radial-tests-597.tex'])
 selected.update(root / name for name in ['research/audits/divisor-free-radial-integration-598.json', 'research/editorial/divisor-free-radial-integration-598.md', 'research/source-disposition-598.json'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-absorption-review-599.json', 'research/editorial/hermitian-hessian-absorption-review-599.md', 'research/source-disposition-599.json', 'research/drafts/hermitian-hessian-absorption-599.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-prescribed-trace-review-600.json', 'research/editorial/hermitian-hessian-prescribed-trace-review-600.md', 'research/source-disposition-600.json', 'research/drafts/hermitian-hessian-prescribed-trace-600.tex'])
+selected.add(root / 'research/audits/incoming-P16-preservation-600.json')
 selected.update((root / "research/audits").glob("build-snapshot-*.json"))
 completed_runs = set()
 for directory in (root / "research/rethlas/verification/results").iterdir():

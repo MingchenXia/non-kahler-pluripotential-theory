@@ -1,0 +1,214 @@
+% Inactive reconstruction: this fragment proves a smooth trace estimate only.
+% The bounded-product, auxiliary-equation and bounded-regularity dependencies remain pending.
+\section{A trace estimate for a prescribed potential}
+
+Let $(X,\omega)$ be a compact Hermitian manifold of dimension $n$, and let $2\leq m\leq n$. In a coordinate chart write $\omega=(\mathrm i/(2\pi))g_{i\bar j}\,\mathrm dz_i\wedge\mathrm d\bar z_j$. All covariant derivatives use the Chern connection of $g$. Put
+\[
+ H_{i\bar j}=g_{i\bar j}+u_{i\bar j},\qquad W=g^{-1}H,
+ \qquad F(W)=\sigma_m(\lambda(W))^{1/m}.
+\]
+The function $u$ is smooth and $W$ belongs to $\Gamma_m$. At a point where $g=I$ and $H$ is diagonal, order its eigenvalues as $\lambda_1\geq\cdots\geq\lambda_n$ and use
+\[
+ f=F(W),\quad F_i=\partial_{\lambda_i}F,\quad
+ \mathcal F=\sum_iF_i,\quad S=\sum_i\lambda_i,\quad
+ Q=\sum_iF_i\lambda_i^2,\quad L=\sum_iF_i\nabla_{i\bar i}.
+\]
+The cone and quadratic estimates are those of the preceding algebraic fragments. In particular $F_i>0$, $\mathcal F\geq1$, and $|\lambda_i|<S\leq n\lambda_1$.
+
+\begin{lemma}\label{draft:600-hermitian-eigenvalue-inequality}
+At a point with $\lambda_1>1$, the largest eigenvalue has a smooth local lower support $\widetilde\lambda$, equal to $\lambda_1$ at the point, for which
+\[
+ L\log\widetilde\lambda\geq
+ \frac{f_{1\bar1}}{\lambda_1}+N
+ -\sum_iF_i|Z_i|^2-C\mathcal F
+ -\frac{C}{\lambda_1^2}\sum_iF_i|H_{1\bar1;i}|,
+\]
+where
+\[
+ N=-\frac{D^2F_W(\nabla_1W,\nabla_{\bar1}W)}{\lambda_1},
+ \qquad Z_i=\frac{H_{i\bar1;1}}{\lambda_1}.
+\]
+Here $C$ depends only on the fixed metric. Derivatives of $F$ are evaluated at $W$.
+\end{lemma}
+\begin{proof}
+Choose a smooth unitary frame parallel for the Chern connection at the point and diagonalizing $H$ there. The positive semidefinite tensor $B$, diagonal in this frame with entries $0,\beta,\ldots,\beta$, satisfies $\nabla B=0$ at the point and $|\nabla^2B|\leq C\beta$. For $0<\beta<1$, the largest eigenvalue of $W-B$ is simple, lies below that of $W$, and agrees with it at the point. This gives the required smooth support. Only its largest eigenvalue is perturbed; the equation still uses $F(W)$.
+Differentiating the normalized eigenvector equation gives
+\[
+ \widetilde\lambda_{;k}=H_{1\bar1;k},\qquad
+ \widetilde\lambda_{;k\bar k}\geq H_{1\bar1;k\bar k}
+ +\sum_{p>1}\frac{|H_{p\bar1;k}|^2+|H_{1\bar p;k}|^2}
+                         {\lambda_1-\lambda_p+\beta}-C\beta.
+\]
+The denominators are at most $(n+1)\lambda_1$. Let $U=\partial\bar\partial u$, and take $T^p_{ki}=\Gamma^p_{ki}-\Gamma^p_{ik}$. The first commutations are
+\[
+ U_{i\bar j;k}=U_{k\bar j;i}-T^p_{ki}U_{p\bar j},\qquad
+ U_{i\bar j;\bar k}=U_{i\bar k;\bar j}
+                          -\overline{T^p_{kj}}U_{i\bar p}.
+\]
+Apply the first identity, commute one mixed pair of covariant derivatives, and apply the conjugate identity. The result has the form
+\[
+ U_{1\bar1;k\bar k}=U_{k\bar k;1\bar1}
+      -2\operatorname{Re}\sum_p U_{k\bar p;1}\overline{T^p_{k1}}+E_k,
+ \qquad |E_k|\leq C|U|.
+\]
+Indeed the mixed commutator contracts curvature with $U$, differentiating the first torsion coefficient contracts $\nabla T$ with $U$, and the second use of the first identities produces contractions of two torsion coefficients with $U$. Thus all the omitted terms satisfy the displayed bound. Since $g$ is parallel, the same derivative relations apply to $H$ apart from the explicit $g$ terms in the first commutation. At the diagonal point $|U|\leq C\lambda_1$.
+For $p>1$, rewrite $U_{k\bar p;1}=U_{1\bar p;k}+T^j_{k1}U_{j\bar p}$. Young's inequality absorbs its third derivative into the positive eigenvalue square, at the cost of $C\lambda_1$. Consequently
+\[
+ \widetilde\lambda_{;k\bar k}\geq
+ H_{k\bar k;1\bar1}
+ -2\operatorname{Re}(H_{k\bar1;1}\overline{T^1_{k1}})-C\lambda_1.
+\]
+Differentiate $F(W)=f$ twice and sum this inequality with weights $F_k$. Write $D_k=H_{1\bar1;k}$ and $t_k=T^1_{k1}$. The first commutation, using $U_{1\bar1}=\lambda_1-1$, gives
+\[
+ D_k=\lambda_1Z_k-(\lambda_1-1)t_k.
+\]
+The negative logarithmic square and the remaining torsion term therefore satisfy
+\[
+ -\frac{|D_k|^2}{\lambda_1^2}-2\operatorname{Re}(Z_k\bar t_k)
+ \geq-|Z_k|^2-C-C\lambda_1^{-2}|D_k|.
+\]
+For example, expanding the left side leaves $-|Z_k|^2-2\lambda_1^{-1}\operatorname{Re}(Z_k\bar t_k)-(1-\lambda_1^{-1})^2|t_k|^2$, and $\lambda_1|Z_k|\leq|D_k|+C\lambda_1$. This proves the claim, uniformly for small $\beta$.
+\end{proof}
+
+\begin{lemma}\label{draft:600-hermitian-gradient-commutation}
+Put $s=|\partial u|_g^2$ and $K=1+\sup_Xs$. For every $\eta>0$ one has
+\[
+ Ls\geq\sum_{i,k}F_i(|u_{ki}|^2+|u_{k\bar i}|^2)
+ +2\operatorname{Re}\sum_k f_k u_{\bar k}-\eta Q-C_\eta K\mathcal F.
+\]
+The constant depends only on the metric and $\eta$.
+\end{lemma}
+\begin{proof}
+Differentiate the squared norm using metric compatibility. Its quadratic part is the displayed sum. Commuting the remaining third derivatives gives
+\[
+ u_{ki\bar i}=u_{i\bar i;k}-T^p_{ik}u_{p\bar i}
+                  +R^p_{i\bar i k}u_p,
+ \qquad
+ u_{\bar k i\bar i}=u_{i\bar i;\bar k}
+                  -\overline{T^p_{ik}}u_{i\bar p}.
+\]
+The first differentiated equation is $\sum_iF_i u_{i\bar i;k}=f_k$, because the background $g$ is parallel. At the diagonal point the torsion errors are bounded by $C\sqrt K\sum_iF_i(|\lambda_i|+1)$, and the curvature errors by $CK\mathcal F$. Use
+\[
+ C\sqrt K F_i|\lambda_i|
+       \leq\eta' F_i\lambda_i^2+C_{\eta'}KF_i
+\]
+with a sufficiently small $\eta'$ for the finite sum. This gives the asserted bound.
+\end{proof}
+
+\begin{proposition}\label{draft:600-prescribed-potential-trace}
+Fix $M\geq1$, a smooth real function $\varphi$ on $X$, and a smooth real $h(x,t)$ on a neighborhood of $X\times[-\|\varphi\|_\infty-1,\|\varphi\|_\infty+1]$. There are $\varepsilon>0$ and $C<\infty$, depending only on these data, $\omega,n,m$, such that the following holds. If smooth real $u,v$ satisfy
+\[
+ W\in\Gamma_m,\qquad I+v_{i\bar j}\in\overline{\Gamma_m},\qquad
+ \|u\|_\infty\leq M,\qquad\|v-\varphi\|_\infty\leq\varepsilon,
+ \qquad F(W)=\exp\bigl((u+h(x,v))/m\bigr),
+\]
+then
+\[
+ \operatorname{tr}_\omega(\omega+\ddc u)
+                  \leq C\bigl(1+\sup_X|\partial u|_g^2\bigr).
+\]
+The cone condition on $v$ is understood in a unitary frame. The constant uses no derivatives of $v$.
+\end{proposition}
+\begin{proof}
+For $\varepsilon\leq1$ the density has fixed bounds $0<f_0\leq f\leq f_1$. Its first derivative is
+\[
+ f_k=\frac f m(u_k+h_k(x,v)+h_t(x,v)v_k).
+\]
+The nonnegative $u_k$ contribution can be dropped from the gradient lemma. At a point with $\lambda_1>1$, differentiating once more gives
+\[
+ f_{1\bar1}\geq-C(1+|\partial v|^2+|1+v_{1\bar1}|).
+\]
+Here $u_{1\bar1}=\lambda_1-1>0$, the square from differentiating the exponential is nonnegative, and all derivatives of $h$ are bounded on the fixed interval.
+
+Set
+\[
+ \Phi(s)=-\tfrac12\log(1-s/(2K)),\quad
+ \Psi(u)=-2Au+(A\tau/2)u^2,\quad
+ \chi(t)=-\tfrac1{12}\log(2\varepsilon-t),\quad \tau=(M+1)^{-1}.
+\]
+Then $(4K)^{-1}\leq\Phi'\leq(2K)^{-1}$, $\Phi''=2(\Phi')^2$, $-3A\leq\Psi'\leq-A$, $\Psi''=A\tau$, and $q=\chi'$ lies between $1/(36\varepsilon)$ and $1/(12\varepsilon)$, with $\chi''=12q^2$.
+Take a maximum of $G=\log\lambda_1+\Phi(s)+\Psi(u)+\chi(v-\varphi)$ and use the smooth lower support from the eigenvalue lemma. At this point put
+\[
+ a_i=v_i,\quad b_i=\varphi_i,\quad P_v=I+v_{i\bar j},\quad
+ W_v=\sum_iF_i(P_v)_{i\bar i},\quad
+ x_i=\Phi's_i,\quad y_i=\Psi'u_i.
+\]
+The first derivative condition and the torsion identity give
+\[
+ H_{1\bar1;i}/\lambda_1=-x_i-y_i-q(a_i-b_i),\qquad
+ Z_i=-x_i-y_i-qa_i+e_i,\quad
+ e_i=qb_i+(1-\lambda_1^{-1})T^1_{i1}.
+\]
+Thus $|e_i|\leq E_0$, with $E_0$ independent of $A$ and of derivatives of $v$.
+
+We make the initial maximum inequality explicit. The gradient lemma and the identity $u_{i\bar j}=(\lambda_i-1)\delta_{ij}$ give, after multiplication by $\Phi'$,
+\[
+ \Phi'Ls\geq\frac1{8K}\sum_{i,k}F_i(|u_{ki}|^2+|u_{k\bar i}|^2)
+             +\frac{3}{64K}Q-C\mathcal F
+             -\frac{C_G'}S\sum_i|a_i|^2.
+\]
+To justify the constants, retain half of the positive quadratic term, use $(\lambda_i-1)^2\geq\lambda_i^2/2-1$, and choose the torsion parameter to cost at most $Q/(128K)$. The remaining density-gradient error is $C|a|/\sqrt K$. Young's inequality bounds it by $C_G'|a|^2/S+cS/K$; choose $C_G'$ large enough that the quadratic coercivity lemma absorbs $cS/K$ by $Q/(128K)$, with a fixed constant error. This leaves $3Q/(64K)$.
+The linear $H_{1\bar1;i}$ error in the eigenvalue lemma is estimated using the first derivative condition. Its $x_i$ term costs at most half of the retained quadratic sum and $C\mathcal F$. Its $y_i$ term costs at most $\Psi''\sum_iF_i|u_i|^2/4+\mathcal F$ whenever $\lambda_1\geq L_0(A)$, where $L_0(A)$ is fixed independently of $K,v$. Its $qa_i$ term costs at most $q\sum_iF_i|a_i|$ when $\lambda_1$ exceeds a fixed metric constant; its $qb_i$ term costs $C\mathcal F$.
+If either eigenvalue threshold fails, the required bound follows directly. Otherwise, with fixed $C_H,C_G,C_0$ independent of $A$, the second derivative condition gives
+\begin{align*}
+ 0\geq{}&N-\sum_iF_i|Z_i|^2+2\sum_iF_i|x_i|^2
+       +\tfrac34\Psi''\sum_iF_i|u_i|^2+\frac{Q}{32K}
+       +\Psi'(f-\mathcal F)-C_0\mathcal F\\
+ &+q(W_v-\mathcal F)-\frac{C_H}{\lambda_1}|(P_v)_{1\bar1}|
+       -\frac{C_G}S\sum_i|a_i|^2
+       +\sum_iF_i\bigl(12q^2|a_i-b_i|^2-q|a_i|\bigr).
+\end{align*}
+The fixed $qL\varphi$ term is included in $C_0$. Choose $\varepsilon$ so the lower bound for $q$ meets all thresholds of the derivative-absorption lemma. This choice precedes that of $A$.
+
+First suppose $\lambda_n<-\delta\lambda_1$. Concavity gives $N\geq0$, and
+\[
+ -|Z_i|^2+2|x_i|^2
+     \geq-6|y_i|^2-6q^2|a_i|^2-6E_0^2.
+\]
+The derivative-absorption lemma applies after decreasing the right side further by $(3q^2+2q)|a_i|^2$. Drop its nonnegative reserves and $\Psi''$ term. Since $\Psi'f\geq-3Af_1$, this gives
+\[
+ 0\geq\frac{Q}{32K}-(54A^2+C_*)K\mathcal F-3Af_1,
+\]
+where $C_*$ is fixed independently of $A,\delta$.
+
+Now suppose $\lambda_n\geq-\delta\lambda_1$, and let $I=\{i:F_i>\delta^{-1}F_1\}$. For $i\in I$, $\lambda_i<\lambda_1$ and
+\[
+ \frac{F_i-F_1}{\lambda_1-\lambda_i}
+       \geq\frac{(1-\delta)F_i}{(1+\delta)\lambda_1}
+       \geq\frac{(1-2\delta)F_i}{\lambda_1}.
+\]
+The spectral formula for $D^2F$, including its nonpositive diagonal part, therefore gives $N\geq(1-2\delta)\sum_{i\in I}F_i|Z_i|^2$. This uses the original eigenvalues; repeated eigenvalues do not occur in $I$.
+Using $x_i=-Z_i-y_i-qa_i+e_i$ and $|z+w|^2\geq\delta|z|^2-\delta|w|^2/(1-\delta)$, one obtains
+\[
+ N-\sum_{i\in I}F_i|Z_i|^2+2\sum_{i\in I}F_i|x_i|^2
+ \geq-\frac{4\delta(\Psi')^2}{1-\delta}\sum_{i\in I}F_i|u_i|^2
+       -r q^2\sum_{i\in I}F_i|a_i|^2-rE_0^2\mathcal F,
+ \quad r=\frac{8\delta}{1-\delta}.
+\]
+Choose $\delta\leq\min\{1/17,\tau/(72A+\tau)\}$. Then the first coefficient is at most $\Psi''/2$, and $r\leq1/2$. On the complementary indices the preceding elementary bound gives
+\[
+ -\sum_{i\notin I}F_i|Z_i|^2+2\sum_{i\notin I}F_i|x_i|^2
+ \geq-\frac{54A^2+6nE_0^2}{\delta}KF_1
+       -6q^2\sum_{i\notin I}F_i|a_i|^2.
+\]
+Apply the derivative-absorption lemma, with penalty $r$ on $I$ and zero outside it; adding the unused negative $(9q^2+2q)|a_i|^2$ on $I$, and $(3q^2+2q)|a_i|^2$ off $I$, only decreases its input. The constants in its fixed-comparison error and the high-index $rE_0^2$ error are bounded independently of $A,\delta$. Enlarge $C_*$ to include them. We obtain
+\[
+ 0\geq\frac{Q}{32K}-\frac{54A^2+6nE_0^2}{\delta}KF_1
+                +(A-C_*)\mathcal F-3Af_1.
+\]
+Take $A\geq\max\{1,C_*+1\}$, then fix the displayed $\delta$ and the threshold $L_0(A)$. Both case inequalities now satisfy the hypotheses of the conditional eigenvalue proposition, with fixed data. Hence $\lambda_1\leq CK$ at the maximum point.
+Finally $\Phi,\Psi,\chi$ have oscillations bounded independently of $K$ and of derivatives of $v$. Comparing $G$ at any other point with its maximum gives the same bound for $\lambda_1$ everywhere. Since $S\leq n\lambda_1$, this proves the trace estimate.
+\end{proof}
+
+\begin{corollary}\label{draft:600-prescribed-potential-complex-hessian}
+Under the hypotheses of the proposition, one has
+\[
+ \sup_X|\partial u|_g+\sup_X|\partial\bar\partial u|_g\leq C,
+\]
+with a constant depending on the same fixed data and no derivatives of $v$.
+\end{corollary}
+\begin{proof}
+The Hessian density is $F(W)^m\leq f_1^m$. Apply the trace-to-gradient blowup proposition to the fixed background $\theta=\omega$ and the preceding trace estimate. It gives the uniform gradient bound. The trace is then uniformly bounded, and the $\Gamma_2$ identity bounds the absolute value of every eigenvalue of $W$ by its trace. Subtracting the identity matrix gives the complex-Hessian bound.
+\end{proof}
+
+These estimates concern smooth solutions and a prescribed potential uniformly close to a fixed smooth comparison function. They do not supply such solutions, admissible smooth approximation, continuity of bounded Hessian solutions, or their higher regularity. The last bound is for the complex Hessian, rather than every entry of the real Hessian.
