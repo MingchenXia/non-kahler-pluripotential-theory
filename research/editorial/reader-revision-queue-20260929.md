@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint550 completes recursive Chapters2–3 first/post-inspection automatic second reads (594 lines,22 proofs), with20 actual final page views and no source changes. Current reader passes for Chapters1–3 are complete. Current package checks against actual548 reconstruction pass. Continue complete recursive Chapter4 Gauduchon, then the live queue and incoming author/primary-source updates. See [the reader review](torsion-mass-energy-reader-550.md).
+Current continuation: checkpoint551 completes the recursive Chapter4 original first and final post-inspection second reads (24 inputs,2791 lines,95 proofs), with96 final pages covered, an entropy-quantifier correction and local pagination repairs. Four author publications are live verified; final1556-page cover/homepage date is October8. Actual empty-source reconstruction and current archive verification pass. Continue complete recursive Chapter5, then the live queue and incoming author/primary-source updates. See [the chapter revision](gauduchon-chapter-reader-551.md).
 
 ## Greatest exponential left-limit review 526
 
