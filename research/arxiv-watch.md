@@ -1,5 +1,8 @@
 # arXiv watch — first daily scan
 
+Checkpoint595 continuation: four inactive Hessian lemmas are reconstructed; full analytic adoption remains pending. Complete the exact Dinew-Kolodziej Liouville proof and Szekelyhidi largest-eigenvalue/blowup proof, then close the needed bounded-product, approximation, domination and continuity applications at their exact scopes. Reconstruct the full Hermitian Hessian estimate before deciding a book integration. Continue incoming-author checks and proportionate reader polishing; the latest complete Chapter33/Appendix/front cycle is581/582/583. Source-package status: passed. See hermitian-hessian-primary-review-595.md.
+
+
 Checkpoint594 continuation: the restricted S18 endpoint example is integrated, both author-build publications are verified, and general S18 remains open. Complete independent Fang2610.06719v1 proof and dependency review, then continue the live reader-polish queue and incoming-author checks. The complete896-line source and963-line bibliography have actual first reads; these are not a proof-adoption certificate. Source-package status: passed. See ruled-logarithmic-endpoint-integration-594.md.
 
 
