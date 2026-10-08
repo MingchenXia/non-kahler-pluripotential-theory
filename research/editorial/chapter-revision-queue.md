@@ -1,5 +1,8 @@
 # Chapter revision queue — cycle beginning 24 September 2026
 
+Checkpoint592 continuation: integrate the independently reconstructed128-line strict-positive bounded-smoothness proof in Chapter10, then review incoming S18(a3cc5d3) and Fang2610.06719v1. Active book and catalogue remain checkpoint591; general degenerate/adapted claims are not adopted. See bounded-hermitian-primary-review-592.md.
+
+
 Checkpoint591 continuation: sharp rotational Hopf damping is integrated in Section8.8, with10 proofs and the unrestricted S02 gap preserved. Final author/companion builds, page inspections, post-page source reads and live October8 publication pass. Actual empty reconstruction passes: 2781 safe archive paths, 2780 payload checksums and 388 byte-exact book-source files. Every1616 main-book and17 companion page text matches; final logs are clean and publication is disabled. Final metadata packaging reuses those actual reconstruction outputs. Continue exact Hermitian regularity2610.06719v1/2610.06473v1 reading and incoming-author checks;40 open assessments and75/451 payload qualifications remain. No Xean or whole-book certificate. See rotational-hopf-damping-integration-591.md.
 
 
