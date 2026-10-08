@@ -1,5 +1,8 @@
 # Reader-oriented chapter revision — 29 September 2026
 
+Checkpoint594 continuation: the restricted S18 endpoint example is integrated, both author-build publications are verified, and general S18 remains open. Complete independent Fang2610.06719v1 proof and dependency review, then continue the live reader-polish queue and incoming-author checks. The complete896-line source and963-line bibliography have actual first reads; these are not a proof-adoption certificate. Source-package status: passed. See ruled-logarithmic-endpoint-integration-594.md.
+
+
 Checkpoint593 continuation: the restricted bounded-smoothness proof is now active in Chapter10 and both author-build publications are verified. Independently review incoming S18 against existing ruled trace and moving-cost proofs; integrate its genuinely new explicit endpoint example without duplicating general results. Then complete Fang2610.06719v1 reading and continue the live book-polish queue. Source-package status: passed. See bounded-hermitian-smoothness-integration-593.md.
 
 
