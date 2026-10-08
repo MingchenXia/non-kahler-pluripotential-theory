@@ -1,0 +1,110 @@
+\section{Fredholm theory for a continuous Hermitian form}
+\label{sec:continuous-hermitian-fredholm}
+
+A continuous positive Hermitian form still defines a uniformly elliptic
+trace operator. Its range is most conveniently described in Sobolev spaces:
+continuity of the coefficients suffices for the local $W^{2,p}$ estimate,
+while the maximum principle identifies the kernel.
+
+\begin{lemma}\label{lem:continuous-hermitian-fredholm}\index{Elliptic operator!continuous coefficients}
+Let $\sigma$ be a continuous positive real $(1,1)$-form on a connected
+compact complex $n$-fold, and let $\mathrm dV$ be a smooth positive volume.
+For $p>2n$, the real operator
+\[
+ L_\sigma v=\operatorname{tr}_\sigma\ddc v,
+ \qquad L_\sigma:W^{2,p}(X)\longrightarrow L^p(\mathrm dV),
+\]
+is Fredholm of index zero. Its kernel consists of the constants, and
+its range has a one-dimensional annihilator in $L^{p'}(\mathrm dV)$,
+where $p'=p/(p-1)$.
+\end{lemma}
+\begin{proof}
+Fix a smooth positive Hermitian form $\eta$ and put
+$L_s=(1-s)L_\eta+sL_\sigma$, $0\leq s\leq1$. On a finite holomorphic
+cover these operators have uniformly positive real principal matrices
+and a common modulus of continuity. They have no lower-order terms in
+these coordinates. Write $d=2n$ for the real dimension.
+
+\emph{Local estimates.} For a constant positive real matrix $a_0$, the
+symbols $\xi_i\xi_j/(1+a_0^{kl}\xi_k\xi_l)$ satisfy the order-zero
+multiplier estimates. Consequently
+\[
+ \|D^2z\|_p\leq C\bigl(\|a_0^{ij}D_{ij}z\|_p+\|z\|_p\bigr)
+ \qquad(z\in C_c^\infty).
+\]
+Freeze the principal matrix of $L_s$ at a point and shrink the ball until
+the coefficient oscillation times this constant is less than $1/2$.
+The oscillation term can then be absorbed on the left. Differentiating
+a cutoff adds first derivatives; the interpolation inequality
+$\|Dz\|_p\leq\varepsilon\|D^2z\|_p+C_\varepsilon\|z\|_p$
+absorbs them. This inequality follows by comparing $Dz$ with its
+mollification at scale $\varepsilon$ and estimating the derivative of
+the mollified function by $C\varepsilon^{-1}\|z\|_p$.
+A partition of unity and smooth density give, uniformly in $s$,
+\begin{equation}\label{eq:continuous-hermitian-wtwo}
+ \|v\|_{W^{2,p}}\leq C\bigl(\|L_sv\|_p+\|v\|_p\bigr).
+\end{equation}
+
+\emph{Maximum principles.} We give the local estimate needed to pass
+comparison to $W^{2,p}$. Let $L=a^{ij}D_{ij}$ on a bounded smooth
+coordinate domain $D$, with $a\geq\vartheta I$, and let $z$ be smooth
+with nonnegative boundary values and minimum $-M<0$. Set
+$R=\operatorname{diam}D$. Every vector $\xi$ with $|\xi|<M/(2R)$ is
+the gradient at an interior lower supporting point of $z$: minimize
+$z(x)-\xi\cdot(x-x_0)$, where $z(x_0)=-M$. Its boundary values exceed
+$-M/2$, whereas its value at $x_0$ is $-M$. At a supporting point
+$D^2z\geq0$, and the arithmetic--geometric mean inequality gives
+\[
+ \det D^2z\leq
+ \left(\frac{\operatorname{tr}(aD^2z)}{d\vartheta}\right)^d.
+\]
+The area formula for the gradient, restricted to these supporting
+points, therefore bounds the volume of the slope ball by
+$(d\vartheta)^{-d}\int_D((Lz)^+)^d$. Thus
+\begin{equation}\label{eq:continuous-hermitian-local-minimum}
+ -\min_Dz\leq C_d\vartheta^{-1}R\|(Lz)^+\|_{L^d(D)}.
+\end{equation}
+This calculation uses no derivative of $a$. Approximate a $W^{2,p}$
+function smoothly on the closure of a smaller smooth domain. The
+approximation converges in $C^1$, and its $L$ errors converge in $L^d$
+because $p>d$. Correct the vanishing boundary error in
+\eqref{eq:continuous-hermitian-local-minimum}. Passage to the limit
+shows that $Lv\leq0$ and $v|_{\partial D}\geq0$ imply $v\geq0$.
+
+The same comparison proves the strong maximum principle. If
+$v\in W^{2,p}$, $Lv\geq0$, and $v$ has an interior maximum $M$, put
+$w=M-v\geq0$. If $w$ is positive somewhere and zero somewhere, a small
+ball contained in $\{w>0\}$ and tangent to its zero set can be chosen
+inside a coordinate chart. On the outer half-annulus of this ball,
+\[
+ \zeta(x)=\exp(-k|x-c|^2)-\exp(-kr^2)
+\]
+is positive and has $L\zeta>0$ for sufficiently large $k$, by uniform
+ellipticity. A small positive multiple of $\zeta$ is bounded above by
+$w$ on both boundary spheres, hence throughout the annulus by comparison.
+At the tangent point this forces a positive inward derivative of $w$,
+contradicting $Dw=0$. Connectedness proves that $v$ is constant.
+Applied to $L_s$ on $X$, it gives $\ker L_s=\mathbb R$. If
+$(L_s-1)v=0$ and $v$ has a positive maximum, apply the strong maximum
+principle on its positive component, where $L_sv=v>0$. Constancy
+contradicts that equation. Applying the argument to $-v$ rules out a
+negative minimum. Hence $\ker(L_s-1)=0$.
+
+\emph{Index and range.} Compactness of $W^{2,p}\hookrightarrow L^p$
+and \eqref{eq:continuous-hermitian-wtwo} now give
+\begin{equation}\label{eq:continuous-hermitian-inverse}
+ \|v\|_{W^{2,p}}\leq C\|(L_s-1)v\|_p
+\end{equation}
+uniformly in $s$. Otherwise normalize a contradicting sequence in
+$W^{2,p}$, pass to $s_j\to s$ and a strongly $L^p$ convergent subsequence,
+and apply \eqref{eq:continuous-hermitian-wtwo} to differences. Operator
+norm continuity in $s$ gives strong $W^{2,p}$ convergence to a nonzero
+member of $\ker(L_s-1)$, which is impossible.
+The smooth operator $L_\eta-1$ has index zero and trivial kernel, hence
+is an isomorphism, by smooth elliptic theory. The method of continuity
+and \eqref{eq:continuous-hermitian-inverse} show that every $L_s-1$ is
+an isomorphism. Finally, $L_\sigma$ differs from $L_\sigma-1$ by the
+compact inclusion $W^{2,p}\hookrightarrow L^p$, so it is Fredholm of
+index zero. Its one-dimensional kernel makes its range have codimension
+one. $L^p$ duality gives the annihilator assertion.
+\end{proof}
