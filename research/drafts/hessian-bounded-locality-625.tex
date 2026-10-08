@@ -1,0 +1,181 @@
+% Inactive research fragment. Not an input of the author book.
+\section{Locality and maxima of bounded Hessian potentials}
+\label{draft625:locality}
+
+Let $(X,\omega)$ be the compact Hermitian manifold of the Hessian
+chapter, of dimension $n$, and fix $2\leq m<n$. All potentials below
+are bounded global admissible potentials in their canonical
+representatives. Write $Q_p$ for the positive shifted currents of
+\cref{hessian:bounded-shifted-positive}. The simultaneous convergence
+and capacity bounds of \cref{hessian:joint-decreasing-products,hessian:positive-capacity-domination}
+are used at their proved scope.
+
+A difference of decreasing potentials need not decrease. Continuous
+functions of finitely many such potentials nevertheless converge
+uniformly outside a common set of small capacity. This gives the
+weights needed to identify the measure on a strict comparison set.
+
+\begin{lemma}\label{draft625:continuous-weights}
+Fix a coordinate ball $U$ and its outer smooth capacity $c_m^*$.
+Let signed Radon measures $\nu_j\to\nu$ weakly have uniformly bounded
+local variations, with all variations dominated on compact subsets
+by $C c_m^*$. Suppose, for $1\leq i\leq\ell$, that bounded Borel
+functions $b_i^j\downarrow b_i$ have one common bound and every
+member of these countable families is locally quasicontinuous for
+this capacity. For any continuous real $F$ on a compact box
+containing their ranges,
+\[
+ F(b_1^j,\ldots,b_\ell^j)\nu_j
+       \longrightarrow F(b_1,\ldots,b_\ell)\nu
+\]
+weakly as signed Radon measures.
+\end{lemma}
+\begin{proof}
+Fix $\phi\in C_c(U)$ and a compact $K\Subset U$ containing its
+support. Allocate summable exceptional capacities to all the
+functions. Their open union $G$ has $c_m(G)<\epsilon$, and every
+function is continuous on the compact set $A=K\setminus G$.
+Dini's theorem gives $b_i^j\to b_i$ uniformly on $A$ for each $i$.
+Uniform continuity of $F$ on the compact box therefore gives
+$f_j\to f$ uniformly on $A$, where
+$f_j=F(b_1^j,\ldots,b_\ell^j)$ and $f=F(b_1,\ldots,b_\ell)$.
+Put $M=\|F\|_\infty$. Extend $f|_A$ to a continuous $g$ on $U$
+with $|g|\leq M$; if $A$ is empty, take $g=0$.
+Then
+\[
+\begin{aligned}
+ \left|\int\phi f_j\,\mathrm d\nu_j-
+                 \int\phi f\,\mathrm d\nu\right|
+ &\leq \|\phi\|_\infty\|f_j-f\|_A|\nu_j|(K)
+       +\left|\int\phi g\,\mathrm d(\nu_j-\nu)\right|\\
+ &\quad+2M\|\phi\|_\infty
+            \bigl(|\nu_j|(K\cap G)+|\nu|(K\cap G)\bigr).
+\end{aligned}
+\]
+For fixed $G$, the first two terms tend to zero. The last term is
+at most $4MC\|\phi\|_\infty\epsilon$. Let $\epsilon$ tend to zero.
+Weak convergence is applied to $\phi g$ on the whole measure.
+\end{proof}
+
+\begin{lemma}\label{draft625:regularized-maximum}
+If smooth uniformly bounded admissible $u_j\downarrow u$ and
+$v_j\downarrow v$ are given, there are smooth uniformly bounded
+admissible $w_j\downarrow\max\{u,v\}$. For any chosen
+$\epsilon_j>0$ decreasing to zero, they can be chosen to satisfy
+$w_j=u_j$ on $\{u_j-v_j>\epsilon_j\}$ and
+$w_j=v_j$ on $\{v_j-u_j>\epsilon_j\}$.
+\end{lemma}
+\begin{proof}
+Choose a nonnegative even smooth probability density $\zeta$
+supported in $[-1,1]$, and set
+\[
+ r_\epsilon(t)=\int |t-\epsilon s|\zeta(s)\,\mathrm ds,
+ \qquad M_\epsilon(x,y)=\tfrac12(x+y+r_\epsilon(x-y)).
+\]
+The function $r_\epsilon$ is smooth and convex,
+$|r_\epsilon'|\leq1$, and $r_\epsilon(t)=|t|$ for
+$|t|\geq\epsilon$. Jensen's inequality and the triangle inequality
+give
+\[
+ \max\{x,y\}\leq M_\epsilon(x,y)
+                     \leq\max\{x,y\}+\epsilon/2.
+\]
+Its partial derivatives in $x,y$ are nonnegative. For fixed $t$,
+$r_\epsilon(t)$ is an even convex function of $\epsilon$, since
+$\zeta$ is even. It is therefore nondecreasing for $\epsilon\geq0$.
+Consequently $w_j=M_{\epsilon_j}(u_j,v_j)$ decreases pointwise to
+$\max\{u,v\}$ and has the asserted equalities and bounds.
+
+Put $h_j=u_j-v_j$ and
+$a_j=(1+r_{\epsilon_j}'(h_j))/2$. The chain rule gives
+\[
+ \omega+\ddc w_j
+ =a_j(\omega+\ddc u_j)+(1-a_j)(\omega+\ddc v_j)
+       +\tfrac12r_{\epsilon_j}''(h_j)
+                    \mathrm dh_j\wedge\dc h_j.
+\]
+Here $0\leq a_j\leq1$, and the last form is semipositive.
+Convexity of the cone and its stability under semipositive addition
+prove admissibility. The pointwise maximum is itself admissible:
+an upper test for it at a point is an upper test for a potential
+attaining the maximum there. Its canonical representative is thus
+the indicated pointwise maximum.
+\end{proof}
+
+\begin{proposition}\label{draft625:strict-locality}
+Let $w=\max\{u,v\}$ and $1\leq p\leq m$. For any bounded
+admissible $t_2,\ldots,t_p$,
+\[
+ \mathbf1_{\{u>v\}}Q_p(w,t_2,\ldots,t_p)
+       =\mathbf1_{\{u>v\}}Q_p(u,t_2,\ldots,t_p).
+\]
+The equality is coefficientwise as currents with measure
+coefficients. The corresponding equality on $\{v>u\}$ follows
+by exchanging $u,v$.
+\end{proposition}
+\begin{proof}
+Choose smooth uniformly bounded decreasing approximations of all
+the potentials by \cref{hessian:bounded-decreasing-approximation}.
+Construct $w_j$ by \cref{draft625:regularized-maximum}. Work on
+one compact coordinate test set. Fix $\delta>0$ and a smooth
+$\chi_\delta:\mathbb R\to[0,1]$ that vanishes for
+$s\leq\delta/2$ and equals one for $s\geq\delta$.
+For $j$ large enough that $\epsilon_j<\delta/2$, ordinary smooth
+locality gives
+\[
+ \chi_\delta(u_j-v_j)Q_p(w_j,t_2^j,\ldots,t_p^j)
+       =\chi_\delta(u_j-v_j)Q_p(u_j,t_2^j,\ldots,t_p^j).
+\]
+Indeed, wherever the weight is nonzero, $w_j=u_j$ on an open
+neighborhood. The equality elsewhere follows from its zero weight.
+
+Both sequences of positive currents converge by
+\cref{hessian:joint-decreasing-products}; every coefficient variation
+is uniformly dominated by $C c_m^*$ by
+\cref{hessian:positive-capacity-domination}. The potentials and their
+limits are quasicontinuous by \cref{hessian:rough-coefficient-capacity}.
+Apply \cref{draft625:continuous-weights} with
+$F(x,y)=\chi_\delta(x-y)$ to the real and imaginary parts of
+each coefficient. Passing to the limit gives the same identity
+with $u,v,w,t_2,\ldots,t_p$.
+Choose the cutoffs so that $\chi_\delta(s)\to\mathbf1_{\{s>0\}}$
+pointwise as $\delta\downarrow0$. Dominated convergence against
+the fixed finite coefficient variations on the test set gives
+the asserted restriction. A partition of unity proves it globally.
+\end{proof}
+
+\begin{theorem}\label{draft625:maximum-measure}
+Fix $1\leq r\leq m$ and bounded admissible
+$z_1,\ldots,z_{m-r}$. Define the positive Radon measure
+\[
+ \mu_r(t)=Q_m(\underbrace{t,\ldots,t}_{r},z_1,\ldots,z_{m-r}).
+\]
+For $w=\max\{u,v\}$,
+\[
+ \mu_r(w)\geq\mathbf1_{\{u\geq v\}}\mu_r(u)
+                  +\mathbf1_{\{u<v\}}\mu_r(v).
+\]
+The inequality with $u,v$ exchanged also holds.
+\end{theorem}
+\begin{proof}
+Symmetry and \cref{draft625:strict-locality}, applied to the $r$ slots, give
+$\mu_r(w)=\mu_r(v)$ on $\{u<v\}$ and $\mu_r(w)=\mu_r(u)$ on $\{u>v\}$.
+To include the contact set, put $w_\epsilon=\max\{u+\epsilon,v\}$.
+Strict locality and invariance under addition of constants give
+\[
+ \mu_r(w_\epsilon)\geq
+                   \mathbf1_{\{u+\epsilon>v\}}\mu_r(u).
+\]
+The invariance follows from the smooth products and their joint
+decreasing limits. As $\epsilon\downarrow0$,
+$w_\epsilon\downarrow w$, so the left side converges weakly to
+$\mu_r(w)$. Against any nonnegative continuous compactly supported
+test function, the right side converges by dominated convergence
+for the fixed measure $\mu_r(u)$ to
+$\mathbf1_{\{u\geq v\}}\mu_r(u)$. This proves the measure inequality
+on the contact set as well as on $\{u>v\}$. On its disjoint
+complement $\{u<v\}$, the already proved equality supplies
+$\mu_r(v)$. Restricting the positive measures to these two Borel sets
+and adding gives the assertion. Exchanging $u,v$ gives its other
+form.
+\end{proof}
