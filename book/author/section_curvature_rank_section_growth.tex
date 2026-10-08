@@ -1,0 +1,127 @@
+\section{Curvature rank and section growth}
+\label{sec:curvature-rank-section-growth}
+
+The dimension of a section-ratio field can be bounded by a smooth curvature form, even when that form changes rank and has no global sign. The key is to arrange that a maximum of a section norm occurs where the section map has its maximal rank. This gives a pointwise restriction on the growth counted by the preceding sections.
+
+Keep the connected compact complex manifold $X$ and line bundle $L$, and choose a smooth Hermitian metric $h$ on $L$. In a local frame write $|e|_h^2=\mathrm e^{-\chi}$ and put $\beta=\ddc\chi$, with the normalization of \cref{sec:weighted-section-spaces}. Let $r=\max_X\operatorname{rank}\beta$. No positivity of $\beta$, constant-rank condition or K\"ahler metric is assumed. Set $S_h=\{x:\beta_x\geq0\}$; when $S_h$ is nonempty, let $r_h^+=\max_{S_h}\operatorname{rank}\beta$.
+
+\begin{proposition}\label{prop:section-map-curvature-rank}\index{Curvature rank!section maps}
+For a nonzero subspace $W\subset H^0(X,L^p)$, $p\geq1$, let $B_W$ be its common zero set and let $\Phi_W:X\setminus B_W\to\mathbb P(W^*)$ be its section map. If $d$ is the maximal rank of its differential, there is $x_*\notin B_W$ such that
+\[
+ \operatorname{rank}\mathrm d\Phi_W|_{x_*}=d,
+ \qquad \beta_{x_*}\geq0,
+ \qquad \operatorname{rank}\beta_{x_*}\geq d.
+\]
+\end{proposition}
+\begin{proof}
+Choose a basis $s_0,\ldots,s_N$ of $W$. Principalizing the ideal of their local coefficients gives a smooth compact modification $\pi:Y\to X$, isomorphic over $X\setminus B_W$, and an effective divisor $D$ with
+\[
+ \pi^*s_j=s_Dv_j,\qquad
+ v_j\in H^0(Y,\pi^*L^p(-D)),
+\]
+where the $v_j$ have no common zero. The resolved map $f=[v_0:\cdots:v_N]:Y\to\mathbb P^N$ has maximal differential rank $d$, since it agrees with $\Phi_W\circ\pi$ on a dense open set.
+
+The critical set $C=\{y:\operatorname{rank}\mathrm df_y<d\}$ is analytic. Proper mapping and the image-dimension theorem imply that $Z=f(Y)$ and $T=f(C)$ are compact analytic sets, with $\dim Z=d$ and $\dim T\leq d-1$ when $T$ is nonempty. For the last inequality apply the rank bound to the smooth locus of every irreducible component of $C$. By Chow's theorem $T$ is algebraic. Choose a homogeneous polynomial $P$ of degree $a\geq1$ that vanishes on $T$ and does not vanish identically on $Z$. If $T$ is empty, take $P=1$ and $a=0$, which also covers $d=0$.
+
+Then $\sigma=P(s_0,\ldots,s_N)$ is a nonzero section of $L^{pa}$. Indeed, the set where $P(v_0,\ldots,v_N)\ne0$ meets the dense locus where $\pi$ is an isomorphism. The smooth function
+\[
+ \Psi=\sum_j|\sigma s_j|_{h^{p(a+1)}}^2
+\]
+has a positive maximum $x_*$. At that point $\sigma\ne0$ and some $s_j\ne0$, so $x_*\notin B_W$ and its lift is outside $C$. The tuples $(\sigma s_j)$ and $(s_j)$ define the same projective map near $x_*$. For $\omega_{\mathrm{FS}}=\ddc\log(1+|w|^2)$ in an affine chart, the Hessian test gives
+\[
+ 0\geq\ddc\log\Psi|_{x_*}
+   =\Phi_W^*\omega_{\mathrm{FS}}|_{x_*}
+                    -p(a+1)\beta_{x_*}.
+\]
+The first form on the right is semipositive of rank $d$. Thus $\beta_{x_*}$ is semipositive and its kernel is contained in the kernel of that form, proving the assertion. The polynomial degree may depend on $p$ and $W$; no bound on it is needed.
+\end{proof}
+
+For the complete section ring with a nonzero positive-degree piece, denote its section-ratio transcendence degree by $\kappa(L)$, the \emph{Kodaira--Iitaka dimension}; put $\kappa(L)=-\infty$ when all positive powers have no sections.\index{Kodaira--Iitaka dimension}
+
+\begin{corollary}\label{cor:curvature-rank-section-count}\index{Curvature rank!growth bound}
+If $S_h$ is empty, then $H^0(X,L^p)=0$ for every $p\geq1$. Otherwise
+\[
+ \kappa(L)\leq r_h^+\leq r,
+ \qquad h^0(X,L^p)=O(p^{r_h^+}).
+\]
+In this second case, every graded section algebra with a nonzero positive-degree piece has growth dimension at most $r_h^+$, as do all its flag bodies, including those constructed on a point blowup. For every fixed weight $u\in\QPSH(X)$, the integrable spaces satisfy $\dim\mathcal H_p(u)=O(p^{r_h^+})$.
+\end{corollary}
+\begin{proof}
+The proposition applied to a single section excludes every positive power if $S_h$ is empty. If all positive-degree section spaces vanish, the remaining section bounds are immediate and $\kappa(L)=-\infty$. Otherwise, suppose a graded algebra has a nonzero positive-degree piece. Write any finitely many algebraically independent elements of its ratio field with a common denominator in one positive degree, as in \cref{prop:flag-dimension-section-field}. They are coordinate ratios of a section map. Its resolved image is projective algebraic by proper mapping and Chow's theorem; its dimension is therefore at least their number. The proposition bounds this dimension by $r_h^+$, so the field's transcendence degree is at most $r_h^+$.
+
+Apply \cref{thm:all-compact-section-count} to this algebra and to the full section ring. The degree-period formula gives the growth bound in every degree, including the zero spaces outside the period. The earlier flag identification gives the body dimensions. Finally, $\mathcal H_p(u)\subseteq H^0(X,L^p)$, so the same upper bound holds even though the integrable spaces need not form a graded algebra.
+\end{proof}
+
+\begin{lemma}\label{lem:curvature-rank-fixed-line-twist}
+For every fixed holomorphic line bundle $A$ on $X$,
+\[
+ h^0(X,L^p\otimes A)=O(p^r).
+\]
+\end{lemma}
+\begin{proof}
+Induct on the dimension, simultaneously for all compact complex manifolds and all integer upper bounds on curvature rank. Dimension zero is immediate. If all these section spaces vanish, there is nothing to prove. Otherwise fix a nonzero section in degree $a\geq1$ and resolve its zero divisor on a smooth compact modification $\mu:Y\to X$. With $M=\mu^*L$, the pulled-back twist is $M^{-a}(D)$ for a fixed effective divisor $D$ whose components are smooth. Pullback is injective on sections, and the pulled-back curvature has rank at most $r$.
+
+Write $D=H_1+\cdots+H_s$, allowing repeated components, and put $D_j=H_1+\cdots+H_j$. For $m=p-a>0$, the divisor sequences give
+\[
+ h^0(Y,M^m(D))
+ \leq h^0(Y,M^m)+\sum_{j=1}^s
+       h^0\bigl(H_j,(M|_{H_j})^m\otimes\mathcal O_Y(D_j)|_{H_j}\bigr).
+\]
+The first term is $O(m^r)$ by the preceding corollary; every other term is $O(m^r)$ by induction, since curvature rank cannot increase on restriction. The number of terms and their twists are fixed. Absorb the finitely many $p\leq a$ in the constant. On disconnected manifolds apply this argument componentwise; this also makes the induction valid for disconnected divisor components.
+\end{proof}
+
+\begin{corollary}\label{cor:curvature-rank-endpoint-cohomology}\index{Dolbeault cohomology!curvature rank at endpoints}
+For every fixed holomorphic vector bundle $E$ on $X$,
+\[
+ h^0(X,L^p\otimes E)=O(p^r),
+ \qquad h^n(X,L^p\otimes E)=O(p^r).
+\]
+\end{corollary}
+\begin{proof}
+For $E$ of positive rank, let $\pi:Y=\mathbb P(E^*)\to X$ parametrize lines, and let $\mathcal O_Y(1)$ be dual tautological. Fiberwise linear forms give $\pi_*\mathcal O_Y(1)=E$, hence
+\[
+ H^0(X,L^p\otimes E)
+ =H^0(Y,(\pi^*L)^p\otimes\mathcal O_Y(1)).
+\]
+The pulled-back curvature has rank at most $r$, so the fixed-line-twist lemma, proved in all dimensions, gives the first bound. Serre duality identifies the dual of the top cohomology with
+\[
+ H^0(X,(L^*)^p\otimes E^*\otimes K_X).
+\]
+The dual curvature is $-\beta$ and has the same rank; apply the degree-zero bound to $L^*$. A bundle of rank zero has zero cohomology and satisfies both bounds.
+\end{proof}
+
+\begin{proposition}\label{prop:curvature-rank-euler-polynomial}\index{Euler characteristic!curvature rank}
+For every fixed holomorphic vector bundle $E$, the Euler characteristic $\chi(X,L^p\otimes E)$ is a polynomial in $p$ of degree at most $r$.
+\end{proposition}
+\begin{proof}
+The analytic Hirzebruch--Riemann--Roch theorem gives
+\[
+ \chi(X,L^p\otimes E)
+ =\int_X\mathrm e^{p\beta}\operatorname{ch}(E)
+                              \operatorname{td}(T^{1,0}X)
+ =\sum_{j=0}^{r}\frac{p^j}{j!}
+       \int_X\beta^j\wedge\operatorname{ch}(E)
+                              \wedge\operatorname{td}(T^{1,0}X).
+\]
+Here the integral selects real degree $2n$, and the Chern character and Todd forms are computed with fixed Hermitian metrics. The curvature normalization represents $c_1(L)$, and $\beta^{r+1}=0$ pointwise by its rank bound. Every coefficient is independent of $p$.
+\end{proof}
+
+\begin{corollary}\label{cor:surface-curvature-rank-cohomology}
+If $\dim X=2$, then $h^q(X,L^p\otimes E)=O(p^r)$ for every fixed holomorphic vector bundle $E$ and $0\leq q\leq2$.
+\end{corollary}
+\begin{proof}
+The endpoints have already been bounded. Since $\chi=h^0-h^1+h^2$, the middle dimension is at most $h^0+h^2+|\chi|=O(p^r)$ by the Euler polynomial.
+\end{proof}
+
+\begin{example}\label{ex:curvature-rank-sharp-section-growth}
+Let $0\leq r\leq n$, let $Y$ be any connected compact complex manifold of dimension $n-r$, and take $X=\mathbb P^r\times Y$ and $L=\operatorname{pr}_1^*\mathcal O(1)$ with the pulled-back Fubini--Study metric. Its curvature has rank $r$, and
+\[
+ h^0(X,L^p)=\binom{p+r}{r}.
+\]
+Thus the section-growth exponent cannot be reduced, including when $Y$ is non-K\"ahler.
+\end{example}
+\begin{proof}
+A section, expressed in a line-bundle frame on the projective factor, is a holomorphic function of $Y$ and hence is constant there. Restriction to any slice $\mathbb P^r\times\{y_0\}$ is therefore inverse to pullback on sections. Counting degree-$p$ homogeneous monomials in $r+1$ variables gives the formula; for $r=0$ it equals one.
+\end{proof}
+
+These bounds concern the closed curvature of a line bundle. They do not estimate the mass of a potential in an unrelated nonclosed Hermitian background, as \cref{prop:sections-infinite-mass-obstruction} shows. In dimension at least three, the endpoint bounds and the Euler polynomial alone do not control the individual intermediate cohomology dimensions. The Hopf body computed next realizes the rank bound $n-1$ for the pulled-back positive line bundles of \cref{prop:hopf-flag-simplex}.
