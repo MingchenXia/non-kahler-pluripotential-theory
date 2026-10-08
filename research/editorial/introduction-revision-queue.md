@@ -1,5 +1,7 @@
 # Chapter-by-chapter revision — requested 25 September 2026
 
+Checkpoint588 continuation: complete exact Qin primary source reading and scoped geometric/classical consequence review are recorded. Integrate the checked inactive127-line fragment after the point-blowup flag count, using the existing growth theorem. The all-degree TheoremA is not adopted; full BN19 dependency review remains pending. Then continue Hermitian regularity and incoming author review. See curvature-rank-primary-review-588.md.
+
 Checkpoint587 continuation: restricted affine toric adapted integrability and the nonsimplicial quadric ideal are checked and publicly published. Actual fresh main-book and companion reconstruction passes. Push this checkpoint, then check incoming author work and current arXiv before related primary reading and direct research. General P23, S11 and P14 remain open. See affine-toric-adapted-integration-587.md.
 
 Checkpoint586 continuation: current October8 lists and all754 titles, plus eight complete exact-version abstracts, are actually read. Continue full toric multiplier-ideal primary reading, separately scoped curvature-rank growth review and Hermitian regularity. No new primary proof certificate or book adoption; general S11 remains open. See current-arxiv-intake-586.md.
