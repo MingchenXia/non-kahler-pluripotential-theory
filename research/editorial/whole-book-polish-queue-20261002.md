@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint552 completes recursive Chapter5 first/final post-inspection second reads (232 lines,six proofs), with24 actual final pages and one repaired theorem split. The October8,1556-page author PDF/homepage is live verified. Actual empty-source reconstruction and current package checks pass. Continue complete recursive Chapter6 non-pluripolar products, then the live queue and incoming author/primary-source updates. See [the chapter revision](gauduchon-trace-topology-reader-552.md).
+Current continuation: checkpoint 553 completes recursive Chapter 6 first/final post-inspection second reads (480 lines, 13 proofs), with 29 direct final page views and two repaired statement splits. The October 8, 1556-page author PDF/homepage is live verified. Actual empty-source reconstruction and final package checks pass. Continue complete recursive Chapter 7, then the live queue and incoming author/primary-source updates. See [the chapter revision](non-pluripolar-products-reader-553.md).
 
 ## Greatest exponential left-limit review 526
 
