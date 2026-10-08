@@ -1,5 +1,8 @@
 # Chapter revision queue — cycle beginning 24 September 2026
 
+Checkpoint581 continuation: the complete Chapter33 reader revision is checked and published. Continue the complete appendix reader revision and front-matter coherence pass. General P14 remains open; no whole-book mathematical certification is claimed. See chapter33-reader-revision-581.md.
+
+
 Checkpoint580 continuation: restricted P14 warped endpoint integration is independently checked and published at its stated product scope; general P14 remains open. Complete Chapter33 reader revision is next, followed by appendices and front-matter coherence. See warped-endpoint-integration-580.md.
 
 
