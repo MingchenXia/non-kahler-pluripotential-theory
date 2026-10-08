@@ -1,0 +1,251 @@
+\section{Sobolev capacity and two Hessian factors}
+\label{sec:hessian-sobolev-two-factors}
+
+To multiply a varying coefficient measure by a bounded potential,
+weak convergence of the measures is not enough. We first control the
+sets on which a potential can be discontinuous. The linear trace of
+an admissible form supplies this control through Sobolev capacity.
+Its Gauduchon multiplier must be chosen in the conformal class of
+$\omega$, since an admissible form need not be positive in every
+tangent direction.
+
+Choose $\rho>0$ by \cref{thm:gauduchon} and put
+\[
+ T=\rho\omega^{n-1},\qquad \ddc T=0,\qquad
+ A=\int_X\omega\wedge T>0.
+\]
+Write $H^1(X)=W^{1,2}(X,\mathbb R)$ and use the equivalent Sobolev norm
+\[
+ \|f\|_{H^1}^2=\int_Xf^2\omega^n+
+                   \int_X\mathrm df\wedge\dc f\wedge T.
+\]
+For an open set $G\subset X$ define
+\[
+ \operatorname{Cap}_1(G)
+ =\inf\{\|f\|_{H^1}^2:f\in H^1(X),\ f\geq1
+                          \text{ almost everywhere on }G\},
+\]
+and for an arbitrary set $E$ take the infimum over open $G\supset E$.
+Thus this capacity is defined by Sobolev energy; it is distinct from
+an $m$-Hessian capacity. Truncation allows $0\leq f\leq1$ in the
+infimum for open sets.
+\index{Capacity!Sobolev}
+
+\begin{lemma}\label{hessian:sobolev-capacity-tools}
+The capacity $\operatorname{Cap}_1$ is countably subadditive. For a
+smooth real $f$ and $a>0$,
+\[
+ \operatorname{Cap}_1(\{|f|>a\})\leq a^{-2}\|f\|_{H^1}^2.
+\]
+If a positive Radon measure $\mu$ satisfies
+$|\int_X\phi\,\mathrm d\mu|\leq C\|\phi\|_{H^1}$ for every smooth real
+$\phi$, then for every Borel set $E$,
+\[
+ \mu(E)\leq C\operatorname{Cap}_1(E)^{1/2}.
+\]
+\end{lemma}
+\begin{proof}
+For open $G_i$ choose Sobolev functions $0\leq f_i\leq1$ equal to
+one almost everywhere on $G_i$, with a summably small excess in their
+squared norms over the capacity infima. The Sobolev chain rule gives
+\[
+ \|\max_{i\leq N}f_i\|_{H^1}^2\leq\sum_{i\leq N}\|f_i\|_{H^1}^2.
+\]
+Indeed, almost everywhere the gradient of the maximum is the gradient
+of an active function, and the squared value is bounded by the sum of
+the squared values. If the sum is finite, these maxima converge in
+$L^2$, are bounded in $H^1$, and have a weak $H^1$ limit equal to one
+almost everywhere on $\bigcup_iG_i$. Lower semicontinuity proves
+subadditivity for open sets. Taking open supersets proves it for
+arbitrary sets. If the sum is infinite there is nothing to prove.
+The level-set estimate follows by testing with
+$\min\{1,|f|/a\}$ and the same Sobolev chain rule.
+
+Fix a compact $K\subset G$ and a Sobolev competitor $0\leq f\leq1$
+for the open set $G$. Positive local mollification and a partition of
+unity give smooth nonnegative $f_\epsilon\to f$ in $H^1$ that satisfy
+$f_\epsilon\geq1$ on $K$ for small $\epsilon$: every convolution ball
+meeting $K$ then lies in $G$, where $f=1$ almost everywhere.
+The assumed estimate gives
+$\mu(K)\leq C\lim_\epsilon\|f_\epsilon\|_{H^1}=C\|f\|_{H^1}$.
+Take the infimum over $f$ and then the supremum over compact $K\subset G$
+to obtain the estimate for $G$. Outer regularity and open supersets
+give it for every Borel $E$.
+\end{proof}
+
+\begin{lemma}\label{hessian:bounded-sobolev-trace}\index{Sobolev regularity!bounded Hessian potentials}
+Every bounded admissible $u$ belongs to $H^1(X)$. Its trace
+\[
+ \mu_u=(\omega+\ddc u)\wedge T
+\]
+is a positive Radon measure of total mass $A$. If $\|u\|_\infty\leq M$,
+then
+\[
+ \|u\|_{H^1}\leq C(1+M),\qquad
+ \mu_u(E)\leq C(1+M)\operatorname{Cap}_1(E)^{1/2}
+\]
+for every Borel $E$. On each fixed relatively compact coordinate chart,
+the total variation of every coefficient of $\ddc u$ is also bounded
+on $E$ by $C(1+M)\operatorname{Cap}_1(E)^{1/2}$.
+\end{lemma}
+\begin{proof}
+First let $u$ be smooth admissible. The first-cone inequality gives
+$\mu_u\geq0$, since $T$ is conformal to $\omega^{n-1}$, and
+$\ddc T=0$ gives $\mu_u(X)=A$. Applying distributional Stokes to
+$\ddc(u^2)$ yields the energy identity
+\[
+ \int_X\mathrm du\wedge\dc u\wedge T
+   =-\int_Xu\,\ddc u\wedge T
+   =-\int_Xu\,\mathrm d\mu_u+\int_Xu\omega\wedge T
+   \leq2MA.
+\]
+Together with the $L^2$ bound this controls $\|u\|_{H^1}$.
+For bounded admissible $u$, choose smooth admissible $u_j\downarrow u$
+by \cref{hessian:bounded-decreasing-approximation}, discard a finite
+initial segment, and take $\|u_j\|_\infty\leq M+1$ as in
+\cref{hessian:bounded-zero-order}. Bounded convergence gives strong
+$L^2$ convergence. The energy bound gives weak $H^1$ compactness, and
+every weak cluster point agrees with $u$ in $L^2$; thus the entire
+sequence converges weakly to $u$ in $H^1$. This proves the Sobolev bound.
+The trace measures converge weakly to $\mu_u$, preserving positivity and total mass.
+
+For any smooth real $\phi$, the first-order Stokes identity is
+\[
+ \int_X\phi\,\ddc u\wedge T
+  =-\int_X\mathrm d\phi\wedge\dc u\wedge T
+       +\int_X\phi\,\dc u\wedge\mathrm dT.
+\]
+It remains valid for $u\in H^1$ by smooth Sobolev approximation.
+Both terms are bounded by $C\|u\|_{H^1}\|\phi\|_{H^1}$; the background term
+$\int\phi\omega\wedge T$ is bounded by $C\|\phi\|_{H^1}$.
+The preceding capacity lemma gives the bound for $\mu_u$.
+In particular the derivative $\mathrm dT$ has not been discarded.
+
+For a smooth admissible approximant, write the eigenvalues of
+$\omega+\ddc u_j$ in an $\omega$-unitary frame as $\lambda_i$.
+Since $m\geq2$,
+\[
+ \sum_i\lambda_i^2\leq\left(\sum_i\lambda_i\right)^2,
+ \qquad \sum_i\lambda_i\geq0.
+\]
+Consequently every coefficient of this form is dominated by its trace.
+On a fixed coordinate chart this bounds the coefficient variations of
+$\ddc u_j$ by $C(\mu_{u_j}+\omega^n)$. Passing to the weak measure
+limits of \cref{hessian:bounded-zero-order} gives the same domination
+by $C(\mu_u+\omega^n)$. Finally
+$\int_E\omega^n\leq\operatorname{Cap}_1(E)$ and
+$\operatorname{Cap}_1(E)\leq\|1\|_{H^1}^2$ absorb the smooth term into the
+claimed square-root estimate.
+\end{proof}
+
+\begin{lemma}\label{hessian:bounded-sobolev-quasicontinuity}\index{Admissible potential!Sobolev quasicontinuity}
+Every bounded canonical admissible potential is continuous on the
+complement of an open set of arbitrarily small $\operatorname{Cap}_1$.
+The same open set can be chosen for any countable family of such
+potentials.
+\end{lemma}
+\begin{proof}
+Choose smooth admissible $u_j\downarrow u$. By the preceding lemma
+these functions converge weakly to $u$ in $H^1$. Mazur's lemma gives
+finite convex combinations $w_N$ of terms with $j\geq N$ such that
+\[
+ \|w_N-u\|_{H^1}\leq8^{-N}.
+\]
+Because $u\leq w_N\leq u_N$, they converge pointwise to the canonical
+function $u$, not just to an unspecified almost-everywhere representative.
+Put
+\[
+ G_{N_0}=\bigcup_{N\geq N_0}
+                  \{|w_{N+1}-w_N|>2^{-N}\}.
+\]
+The capacity tools imply
+\[
+ \operatorname{Cap}_1(G_{N_0})
+ \leq\sum_{N\geq N_0}4^N\|w_{N+1}-w_N\|_{H^1}^2
+ \leq C\sum_{N\geq N_0}16^{-N}\longrightarrow0.
+\]
+Outside $G_{N_0}$, the successive differences form a uniformly summable
+series. Thus $w_N$ converge uniformly there and their limit $u$ is
+continuous on that closed set. For a countable family, choose the
+exceptional open sets with capacities less than $\epsilon2^{-i}$ and
+take their union. Countable subadditivity proves the last assertion.
+\end{proof}
+
+\begin{proposition}\label{hessian:bounded-linear-weighted-convergence}\index{Hessian measure!weighted two-factor convergence}
+Suppose $u_j\downarrow u$ and $v_j\downarrow v$ are bounded canonical
+admissible potentials with a common uniform bound. Then
+\[
+ v_j\ddc u_j\longrightarrow v\ddc u
+\]
+weakly as currents with signed measure coefficients. The same conclusion
+holds for $v_j\mu_{u_j}\to v\mu_u$.
+\end{proposition}
+\begin{proof}
+Bounded convergence gives $u_j\to u$ in $L^1$. Their complex Hessians
+therefore converge in distributions. The preceding coefficient bounds
+are uniform, so this is weak convergence of each signed coefficient
+measure against continuous compactly supported tests. The trace measures
+also converge weakly. Every one of these measures has total variation
+bounded by $C_M\operatorname{Cap}_1(E)^{1/2}$ on a Borel set $E$.
+
+Fix $\epsilon>0$. Quasicontinuity supplies an open $G$ with
+$\operatorname{Cap}_1(G)<\epsilon$ on whose complement $v$ and every
+$v_j$ are continuous. Dini's theorem on the compact set $X\setminus G$
+gives uniform convergence there. Extend $v|_{X\setminus G}$ to a
+continuous function $F$ on $X$ with the same uniform bound, by Tietze's
+theorem. For any one of the signed coefficient measures $\nu_j\to\nu$
+and a fixed continuous compactly supported test $\psi$, subtract
+$F\nu_j$ and $F\nu$. The resulting error is at most
+\[
+ C_{M,\psi}\bigl(\|v_j-v\|_{X\setminus G}
+                                      +\epsilon^{1/2}\bigr).
+\]
+The term with $F$ converges by weak measure convergence. First let
+$j\to\infty$ and then $\epsilon\downarrow0$. This proves the assertion
+for the Hessian coefficients and for the positive trace measures.
+\end{proof}
+
+\begin{theorem}\label{hessian:bounded-two-factor-convergence}\index{Hessian measure!two bounded factors}
+For two bounded admissible potentials $u,v$, the recursive current
+$D_2(u,v)=\ddc(v\ddc u)$ is symmetric in its arguments. If
+$u_j\downarrow u$ and $v_j\downarrow v$ are bounded admissible sequences
+with a common uniform bound, then
+\[
+ D_2(u_j,v_j)\longrightarrow D_2(u,v)
+\]
+in distributions. Their shifted positive currents
+\[
+ Q_2(u,v)=\bigl(\omega^2+\omega\wedge\ddc u
+           +\omega\wedge\ddc v+D_2(u,v)\bigr)\wedge\omega^{n-m}
+\]
+converge weakly as positive currents. For $m=2$ these are positive Radon
+measures. For $m>2$, the unwedged $D_2$ also converges weakly as a
+current with measure coefficients.
+\end{theorem}
+\begin{proof}
+For smooth admissible approximations $u_k\downarrow u$ and
+$v_k\downarrow v$, the weighted convergence proposition gives
+\[
+ \ddc(v_k\ddc u_k)\longrightarrow\ddc(v\ddc u).
+\]
+The smooth current on the left is $\ddc v_k\wedge\ddc u_k$ and is
+symmetric. Applying the same argument in the opposite order proves
+$D_2(u,v)=D_2(v,u)$. For the bounded sequences in the statement,
+weighted convergence followed by $\ddc$ gives the asserted
+simultaneous distributional limit.
+
+The displayed subset expansion is the current of
+\cref{hessian:bounded-shifted-positive} with $p=2$. Its lower-degree
+terms converge weakly, so its whole distributional limit is $Q_2(u,v)$.
+Positivity and the uniform local mass bounds turn this into weak
+convergence of currents of order zero. When $m>2$, the same conclusion
+for $D_2$ follows from the uniform coefficient bounds below degree $m$
+in \cref{hessian:bounded-recursive-currents}.
+\end{proof}
+
+The argument controls coefficients of the first Hessian through a
+linear Sobolev-energy measure. It does not give this capacity estimate
+for products of two or more Hessians. In particular the higher-degree
+recursion still requires further control of bounded weights before
+permutation invariance or simultaneous decreasing convergence can be
+asserted in those degrees.
