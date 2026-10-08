@@ -1,6 +1,6 @@
 # Reader-oriented chapter revision — 29 September 2026
 
-Current continuation: checkpoint 553 completes recursive Chapter 6 first/final post-inspection second reads (480 lines, 13 proofs), with 29 direct final page views and two repaired statement splits. The October 8, 1556-page author PDF/homepage is live verified. Actual empty-source reconstruction and final package checks pass. Continue complete recursive Chapter 7, then the live queue and incoming author/primary-source updates. See [the chapter revision](non-pluripolar-products-reader-553.md).
+Current continuation: checkpoint 554 completes recursive Chapter 7 first/final post-inspection second reads (491 lines, 12 proofs) and all 14 direct chapter-page views. No manuscript change or new build/publication occurs; the verified October 8 PDF remains current. Current package checks against actual 553 reconstruction pass. Continue complete recursive Chapter 8, then incoming author/primary-source updates. See [the chapter review](weighted-measures-reader-554.md).
 
 ## Greatest exponential left-limit review 526
 
