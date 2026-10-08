@@ -1,0 +1,135 @@
+\Needspace{10\baselineskip}
+\section{Subtraction on warped products}
+\label{sec:warped-endpoint-subtraction}
+
+The closed core in \cref{sec:nef-boundary-subtraction} keeps the endpoint big. On a warped product, the subtraction cost can instead be computed all the way to an endpoint that is not big. Its rate is determined by two inverse moments of the fiber coefficient, while its total integral remains finite even when the endpoint volume vanishes.
+
+Let $(B,\alpha)$ be a connected compact K\"ahler manifold of dimension $m\geq2$, put $W=\int_B\alpha^m$, and let $C$ be a connected compact complex curve. Fix smooth strictly positive probability forms $\sigma$ on $B$ and $w$ on $C$. On $X=B\times C$, of dimension $n=m+1$, use $\mu=\sigma\wedge w$ and omit pullbacks. For a smooth function $a\geq0$ on $B$ and a real number $t>0$, set
+\[
+ \theta_s=\alpha+(a+t-s)w\quad(s<t),\qquad
+ \theta_t=\alpha+aw.
+\]
+The endpoint is semipositive, hence nef. For $\epsilon>0$, write
+\[
+ H(\epsilon)=\int_B\frac{\sigma}{a+\epsilon},\qquad
+ J(\epsilon)=\int_B\frac{\sigma}{(a+\epsilon)^2},\qquad
+ H(0)=\int_B\frac{\sigma}{a},
+\]
+allowing $H(0)=+\infty$, with $1/a=+\infty$ at a zero of $a$.
+
+\Needspace{20\baselineskip}
+\begin{theorem}\label{thm:warped-endpoint-subtraction}\index{Gauduchon variational volume!warped subtraction cost}
+For $s<t$, the full Gauduchon infimum is attained by a balanced metric and
+\[
+ \mathcal V_\mu(\theta_s)=\frac{nW}{H(t-s)},\qquad
+ \mathcal V_\mu(\theta_t)=\frac{nW}{H(0)},
+\]
+where the last value is zero if $H(0)=+\infty$. Every minimizing Gauduchon metric $g_s$ at $s$ has the same subtraction cost
+\begin{equation}\label{eq:warped-subtraction-cost}
+ \frac{\int_Xw\wedge g_s^{n-1}}{D_\mu(g_s)}
+ =\mathcal C(s)
+ :=n^{-(n-1)/n}W^{1/n}
+        H(t-s)^{-(n+1)/n}J(t-s).
+\end{equation}
+For every selection of these metrics, the improper integral satisfies
+\begin{equation}\label{eq:warped-improper-subtraction}
+ \int_0^t\mathcal C(s)\,\mathrm{d}s
+ =\lambda_\mu(\theta_0)-\lambda_\mu(\theta_t)<\infty.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Put $\epsilon=t-s$ and $L=a+\epsilon$. Apply \cref{thm:tw-smooth} on the closed positive base to obtain
+\[
+ A_\epsilon=\alpha+\ddc\phi_\epsilon>0,\qquad
+ A_\epsilon^m=\frac{W}{H(\epsilon)}\frac{\sigma}{L}.
+\]
+The target has total mass $W$, so closed Stokes fixes its scalar. The construction of \cref{thm:warped-gauduchon-volume}, now without a normalization of $W$ or a nonconstancy requirement on $a$, gives
+\[
+ \Omega_\epsilon=A_\epsilon+Lw,\qquad
+ \Omega_\epsilon^n=\frac{nW}{H(\epsilon)}\mu,
+ \qquad \gamma_s=L^{-1/m}\Omega_\epsilon.
+\]
+Indeed,
+\[
+ \gamma_s^m=L^{-1}A_\epsilon^m
+                      +mA_\epsilon^{m-1}\wedge w
+\]
+is closed: its first summand has top degree on the base, and its second has closed factors. Thus $\gamma_s$ is balanced. Gauduchon Stokes and the matrix arithmetic--geometric mean inequality give
+\[
+ \int_X\theta_s\wedge\xi^m
+ \geq\left(\frac{nW}{H(\epsilon)}\right)^{1/n}D_\mu(\xi)
+\]
+for every Gauduchon metric $\xi$. The metric $\gamma_s$ attains equality, with numerator $nW$ and denominator $(nW/H)^{m/n}H$. This proves the full volume formula.
+
+For every fixed test, its quotient at $\theta_t+\epsilon w$ decreases to its quotient at $\theta_t$. The two infima, over $\epsilon>0$ and over the tests, commute, as in \cref{thm:gaud-volume-nef-limit}. Hence the endpoint value is the limit of the strict values. Monotone convergence of $H(\epsilon)$ gives the asserted value, including when the integral is infinite.
+
+The cost numerator for the displayed balanced metric is $WJ/H$. Dividing by its denominator gives \eqref{eq:warped-subtraction-cost}. Also $\mathrm{d}H(t-s)/\mathrm{d}s=J(t-s)$, so differentiation of the volume formula gives $-\mathrm{d}\lambda_\mu(\theta_s)/\mathrm{d}s=\mathcal C(s)$. By \cref{prop:gaud-volume-first-variation} this is the cost of every minimizing metric, regardless of the regularity of the selection. On each interval $[0,r]$ with $r<t$, integrate this identity. Since $\mathcal C\geq0$ and the root volume has the finite endpoint limit just proved, letting $r\uparrow t$ gives \eqref{eq:warped-improper-subtraction}.
+\end{proof}
+
+The identity applies to every smooth nonnegative coefficient, including coefficients with flat zeros. Finite-order zeros give more precise rates. Fix a Riemannian metric on $B$ for the following distance comparisons.
+
+\Needspace{22\baselineskip}
+\begin{proposition}\label{prop:warped-subtraction-profiles}\index{Gauduchon variational volume!endpoint cost profiles}
+Suppose that $Z=\{a=0\}$ is a nonempty smooth compact real submanifold of positive codimension $d$, that $a\asymp\operatorname{dist}(\cdot,Z)^k$ in a fixed tube for a real number $k>0$, and that $a$ is bounded below by a positive constant outside that tube. Put $r=d/k$. Then, as $\epsilon\downarrow0$,
+\begin{equation}\label{eq:warped-subtraction-profiles}
+ \mathcal C(t-\epsilon)\asymp
+ \begin{cases}
+  \epsilon^{(1-r)/n-1},&r<1,\\
+  \epsilon^{-1}(\log(1/\epsilon))^{-(n+1)/n},&r=1,\\
+  \epsilon^{r-2},&1<r<2,\\
+  \log(1/\epsilon),&r=2,\\
+  1,&r>2.
+ \end{cases}
+\end{equation}
+Each rate is integrable, and the endpoint volume is positive exactly when $d>k$. For $r>2$, the cost tends to
+\[
+ n^{-(n-1)/n}W^{1/n}H(0)^{-(n+1)/n}J(0)>0,
+ \qquad J(0)=\int_B\frac{\sigma}{a^2}.
+\]
+For finitely many disjoint zero components satisfying these hypotheses with codimensions $d_i$ and orders $k_i$, the same assertions hold with $r=\min_i d_i/k_i$.
+\end{proposition}
+\begin{proof}
+The positive density and the tubular Jacobians are bounded above and below by positive constants. For $p=1,2$, radial integration therefore gives
+\[
+ \int_B\frac{\sigma}{(a+\epsilon)^p}
+ \asymp 1+\int_0^R\frac{u^{d-1}}{(u^k+\epsilon)^p}\,\mathrm{d}u
+ =1+\frac{\epsilon^{r-p}}k
+       \int_0^{R^k/\epsilon}\frac{v^{r-1}}{(1+v)^p}\,\mathrm{d}v,
+\]
+with the equality applying to the radial expression. For $r<p$ the last integral tends to a finite positive constant; for $r=p$ it grows logarithmically; for $r>p$ the unregularized moment is finite, and monotone convergence gives its positive limit. Applying this to $H$ and $J$ in \eqref{eq:warped-subtraction-cost} proves the five rates and the criterion $H(0)<\infty$ exactly when $r>1$.
+
+The power $(1-r)/n-1$ exceeds $-1$ for $r<1$, as does $r-2$ for $1<r<2$. At $r=1$, substitution of $\log(1/\epsilon)$ gives an integrable tail because $(n+1)/n>1$. The logarithmic and bounded rates are also integrable. When $r>2$, both inverse moments have finite positive limits, which gives the displayed limit. With finitely many disjoint components, the moments are finite sums of positive tube contributions and a bounded complement term; their smallest ratio determines the divergence, without cancellation.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:warped-endpoint-closed-core}\index{Big background!warped endpoints}
+The endpoint $\theta_t$ is big exactly when $a$ is positive everywhere. If $a$ has a zero, there is no decomposition
+\[
+ \theta_t+\ddc f=\chi+\beta
+\]
+with $f$ smooth and real, $\chi$ smooth and closed with nef class and $\int_X\chi^n>0$, and $\beta\geq0$ smooth.
+\end{proposition}
+\begin{proof}
+Suppose that $\theta_t+\ddc u\geq\delta(\alpha+w)$ for a quasi-plurisubharmonic $u$ and $\delta>0$. Pull back an arbitrary smooth nonnegative top-degree form $\zeta$ on $B$. It is $\ddc$-closed by dimension, so Stokes' theorem for distributions gives
+\[
+ 0\leq\int_X(\theta_t+\ddc u-\delta(\alpha+w))\wedge\zeta
+       =\int_B(a-\delta)\zeta.
+\]
+A nonzero $\zeta$ supported where $a<\delta$ contradicts this inequality. Thus a zero excludes every strict current representative; no singular potential has been restricted to its zero fiber. Conversely, if $a>0$ everywhere, compactness makes $\theta_t$ itself Hermitian, so it is big.
+
+For a proposed decomposition, the closed nef-and-big criterion used in \cref{thm:closed-core-subtraction} supplies a global quasi-plurisubharmonic $v$ with $\chi+\ddc v\geq\delta(\alpha+w)$ for some $\delta>0$. Then
+\[
+ \theta_t+\ddc(f+v)=\chi+\ddc v+\beta
+                         \geq\delta(\alpha+w),
+\]
+contradicting the first part. This excludes any such closed core, including after a smooth change of gauge.
+\end{proof}
+
+In the closed case $a\equiv a_0\geq0$, put $P=\alpha+(a_0+t)w$ and $Q=tw$. These closed nef forms satisfy
+\begin{equation}\label{eq:warped-closed-morse}
+ \int_XP^n-n\int_XP^{n-1}\wedge Q
+ =nWa_0=\mathcal V_\mu(\theta_t).
+\end{equation}
+This is the expression on the right of the closed Morse inequality discussed in \cref{sec:history-geometry}; the equality follows from $w^2=0$, $\alpha^{m+1}=0$ and $\int_Cw=1$. For nonconstant $a$, the exterior derivative $\mathrm{d}\theta_s=\mathrm{d}a\wedge w$ is not identically zero, and the endpoint formula retains the specified probability $\sigma$ through $H(0)$. The comparison in \eqref{eq:warped-closed-morse} therefore concerns the constant closed case.
+
+For example, take $B=\mathbb P^m$, normalized Fubini--Study $\alpha$, $\sigma=\alpha^m$, and $a([Z])=\sum_{j=1}^m|Z_j|^2/\sum_{j=0}^m|Z_j|^2$. Its law under $\sigma$ is $m x^{m-1}\,\mathrm{d}x$ on $[0,1]$, by the radial integration used in \cref{thm:radial-positive-volume-nonbig}. Hence $W=1$, $H(0)=m/(m-1)$ and $\mathcal V_\mu(\theta_t)=(m+1)(m-1)/m>0$, while the endpoint is not big and admits no closed nef core of positive top intersection. Its sole zero has real codimension $2m$ and order two. The cost is therefore logarithmic when $m=2$ and tends to a positive finite value when $m>2$, by \cref{prop:warped-subtraction-profiles}.

@@ -1,5 +1,8 @@
 # Chapter revision queue — cycle beginning 24 September 2026
 
+Checkpoint580 continuation: restricted P14 warped endpoint integration is independently checked and published at its stated product scope; general P14 remains open. Complete Chapter33 reader revision is next, followed by appendices and front-matter coherence. See warped-endpoint-integration-580.md.
+
+
 Checkpoint94's complete local-notation pass remains the baseline. This queue records a new correctness/readability pass, not a claim that the other chapters are unreviewed historically. An entry is complete only for its stated scope; include nested author inputs when claiming a whole chapter.
 
 For each unit: read the complete argument, list its hypotheses and dependencies, check notation in reading order, simplify only justified steps, reread after editing, compile, and inspect affected pages. Preserve standard environments, upright differentials and regime-specific mass assumptions. Record substantive checks in a dated review. The 25 September correction supersedes repeated section-level declarations: define notation once and carry it through the chapter. The immediate editorial priority is tracked in introduction-revision-queue.md, completing front matter in checkpoint141 and the integrated current Chapter 1 in checkpoint142. Checkpoint145 reconciles source dispositions and remaining proof obligations with the current manuscript.

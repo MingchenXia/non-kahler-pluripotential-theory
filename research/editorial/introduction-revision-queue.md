@@ -1,5 +1,8 @@
 # Chapter-by-chapter revision — requested 25 September 2026
 
+Checkpoint580 continuation: restricted P14 warped endpoint integration is independently checked and published at its stated product scope; general P14 remains open. Complete Chapter33 reader revision is next, followed by appendices and front-matter coherence. See warped-endpoint-integration-580.md.
+
+
 This is a new whole-book editorial pass, separate from the mathematical chapter-review cycle. Rewrite each chapter and section opening around its mathematical purpose and the actual argument; retain concise passages that already do this. Carry established notation through the chapter. Remove repeated definitions, default manifold qualifications and repeated operator conventions. State a changed setting where it actually changes. Use mathematical objects or results for headings rather than conversational assessments. The user's latest direction supersedes the earlier requirement to restate the setting in every section.
 
 The d-c/ddc convention is kept once in the front matter. Source-specific conversions remain where required. Default “without boundary” qualifications and introductory quasi-psh representative qualifications are removed from the active sources; hidden Nakamaye files are untouched. Necessary proof checks for restrictions, pole sets and changing hypotheses are not boilerplate.
