@@ -1,0 +1,260 @@
+\section{Continuous products, envelopes and domination}
+\label{sec:hessian-continuous-products}\index{Hessian measure!continuous potentials}
+
+Uniform admissible approximation allows us to define the mixed Hessian
+products. Their local bounds retain the derivatives of the Hermitian
+background; closedness of the background is not required.
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{hessian:continuous-products}
+For continuous admissible $u_1,\ldots,u_k$, $1\leq k\leq m$, the current
+\[
+ (\omega+\ddc u_1)\wedge\cdots\wedge(\omega+\ddc u_k)
+                                          \wedge\omega^{n-m}
+\]
+is well defined as the limit of uniform smooth admissible approximations.
+It is positive, local, and continuous when its potentials converge
+uniformly. Its local masses are bounded in terms of uniform bounds on
+the potentials. In particular $H_m(u)$ is a positive Radon measure.
+\end{proposition}
+\begin{proof}
+\Cref{hessian:smooth-proper-existence,hessian:continuous-smooth-approximation} provide the smooth approximations without
+using any continuous Hessian product or domination input.
+For a smooth admissible $u$ put $\sigma=\omega+\ddc u$.
+Since $\mathrm d\sigma=\mathrm d\omega$, the coefficients of
+$\ddc(\chi\sigma^{r-1}\wedge\omega^{n-r})$ are sums of smooth test
+factors paired with powers $\sigma^q$, $q\leq r-1$, where $\chi$ is a
+fixed cutoff. The absolute-form lemma and integration by parts give
+the Chern--Levine--Nirenberg bound by induction on $r\leq m$:
+\[
+ \int_K\sigma^r\wedge\omega^{n-r}
+                     \leq C_{K,U,\omega}(1+\|u\|_{L^\infty(U)})^r.
+\]
+At the induction step write $\sigma^r=\omega\wedge\sigma^{r-1}
++\ddc u\wedge\sigma^{r-1}$, integrate the second term against $\chi$,
+and move $\ddc$ to $\chi\sigma^{r-1}\omega^{n-r}$.
+The resulting powers have degrees $r-1,r-2,r-3$, with negative powers absent, and the induction
+applies on nested slightly larger compact sets. Mixed masses reduce to
+the single potential average, by positivity of the expansion of its
+power. Positive mixed currents have total variation controlled by these
+trace masses.
+
+To prove independence, telescope the difference between two smooth
+mixed products whose potentials have a common uniform bound. Each term
+paired with a fixed smooth complementary test is
+\[
+ \int\ddc(u_a-v_a)\wedge T\wedge\eta
+                         =\int(u_a-v_a)\ddc(T\wedge\eta),
+\]
+where $T$ is a product of the remaining admissible factors and
+$\omega^{n-m}$. The identity $\mathrm d(\omega+\ddc u)=\mathrm d\omega$
+and its $\dc$ analogue show that derivatives of $T$ introduce only
+fixed metric derivatives; every term has at most $k-1<m$ admissible
+factors. The absolute mixed-form bound and the mass estimate just
+proved bound the variation of $\ddc(T\wedge\eta)$ uniformly.
+Consequently the pairing difference is at most
+$C_\eta\max_a\|u_a-v_a\|_\infty$.
+The same construction with an arbitrary complementary smooth test
+also defines the signed products of fewer than $m$ factors without the
+factor $\omega^{n-m}$: their variation is bounded by the absolute-form
+lemma. These products justify the metric-derivative terms above.
+This proves that all approximations have the same limit and that the
+products are continuous in the uniform topology. Positivity passes
+from the smooth mixed products. Using a test supported in an open set
+on which two limiting potentials coincide proves locality by the same
+estimate on a smaller neighborhood of its support.
+\end{proof}
+
+Write $H_m(u)$ for the measure with every potential equal to $u$.
+Locality and uniform continuity of these products give comparison on a
+contact set.
+
+\begin{lemma}\label{hessian:contact-comparison}
+If $u\leq v$ are continuous admissible functions and the remaining
+$m-1$ factors are fixed continuous admissible functions, then on
+$\{u=v\}$ the mixed measure with first factor $\omega+\ddc u$ is at
+most the one with first factor $\omega+\ddc v$.
+In particular $\mathbf1_{\{u=v\}}H_m(u)\leq
+\mathbf1_{\{u=v\}}H_m(v)$.
+\end{lemma}
+\begin{proof}
+Write $M(w)$ for the mixed measure with first potential $w$.
+Positivity and locality give, for $t>0$,
+\[
+ M(\max(v,u+t))\geq
+ \mathbf1_{\{v>u+t\}}M(v)+\mathbf1_{\{u\geq v\}}M(u).
+\]
+The first indicators increase to $\mathbf1_{\{v>u\}}$ as $t\downarrow0$,
+and the potentials on the left converge uniformly to $v$.
+Integrate against nonnegative continuous tests and pass to the limit.
+Subtract the first restricted measure to obtain the claimed contact
+inequality. Replacing one factor at a time proves the pure-power claim
+and the analogous contact inequalities for all mixed powers.
+\end{proof}
+
+For a continuous real obstacle $h$, define $P(h)$ to be the supremum of
+continuous admissible functions bounded above by $h$. Constants make the
+family nonempty. The penalty construction also proves that this
+supremum is continuous and its Hessian measure lies on the contact set.
+\index{Envelope!continuous Hessian obstacle}
+
+\begin{lemma}\label{hessian:continuous-obstacle-envelope}
+The function $P(h)$ is continuous and admissible, and $H_m(P(h))$ is
+supported on $\{P(h)=h\}$. Moreover
+$\|P(h_1)-P(h_2)\|_\infty\leq\|h_1-h_2\|_\infty$.
+\end{lemma}
+\begin{proof}
+For smooth $h$, use the penalty solutions $w_N$ in \cref{hessian:continuous-smooth-approximation}. Its maximum argument applies to every continuous admissible
+competitor $v\leq h$, with an error depending on $h$ and $N$, and not
+on $v$. Taking their supremum gives
+\[
+ P(h)-E_N-2M_N/N\leq w_N\leq P(h),
+\]
+where the error tends to zero. Thus $P(h)$ is their uniform limit and
+is continuous and admissible. On every compact subset of
+$\{P(h)<h\}$ the penalty densities
+$b e^{N(w_N-h)}$ tend uniformly to zero. Product continuity implies
+the contact support assertion.
+Adding constants to competitors gives the stated Lipschitz bound.
+Approximate a continuous $h$ uniformly by smooth obstacles. Their
+envelopes converge uniformly to $P(h)$, proving continuity and
+admissibility. Any compact subset of $\{P(h)<h\}$ also lies outside the
+contact sets of all sufficiently close smooth obstacles; product
+continuity gives the support assertion for $h$.
+\end{proof}
+
+The trace test in \eqref{eq:hessian-continuous-admissibility} gives
+$L_\omega u\geq-n$, where
+$L_\omega u=n\ddc u\wedge\omega^{n-1}/\omega^n$.
+We use the classical normalized Green estimate
+\begin{equation}\label{eq:hessian-normalized-l1}
+ \int_X(\sup_Xu-u)\omega^n\leq C_\omega
+\end{equation}
+for continuous admissible $u$. The stationary probability of $L_\omega$
+has a smooth positive density equivalent to $\omega^n$. The positive
+measure $L_\omega u+n$ has stationary mass $n$, so the Green-kernel
+estimate gives this bound. It is a linear elliptic input, and does not
+assert compactness for a nonlinear Hessian measure.
+
+To use envelopes in domination, we must first exclude a potential with
+zero total Hessian mass.
+
+\begin{lemma}\label{hessian:hessian-nonvanishing}
+Every continuous admissible $u$ satisfies $\int_X H_m(u)>0$.
+\end{lemma}
+\begin{proof}
+Suppose this integral is zero. For $s>0$ put
+$w=\max(u,\min_Xu+s)$ and $U=\{u<\min_Xu+s\}$.
+The open set $U$ is nonempty, $0\leq w-u\leq s$, and $w=u$ outside it.
+Set $\sigma_u=\omega+\ddc u$, $\sigma_w=\omega+\ddc w$, and
+$\mu_q=\sigma_u^q\wedge\sigma_w^{m-q}\wedge\omega^{n-m}$.
+The contact lemma gives $\mathbf1_{X\setminus U}\mu_q\geq
+\mathbf1_{X\setminus U}\mu_m$, for $0\leq q\leq m$.
+For $q<m$ the telescoping identity is
+\[
+ \mu_q-\mu_m=\ddc(w-u)\wedge T_q,\qquad
+ T_q=\sigma_u^q\wedge
+       \sum_{r=0}^{m-q-1}\sigma_w^r\wedge\sigma_u^{m-q-1-r}
+                                      \wedge\omega^{n-m}.
+\]
+Integration by parts on $X$ therefore gives
+\[
+ \int_U(\mu_q-\mu_m)\leq\int_X(\mu_q-\mu_m)
+                                =\int_X(w-u)\ddc T_q.
+\]
+This identity follows first for smooth approximants and then by uniform
+product continuity. The derivatives of $T_q$ contain only fixed metric
+derivatives and products of at most $m-1$ admissible factors, so the
+absolute-form lemma makes $\ddc T_q$ a measure of uniformly controlled
+variation. Uniform convergence also justifies its continuous weight.
+On $U$, locality gives $\sigma_w=\omega$ and thus
+\[
+ |\ddc T_q|\leq C\sum_{r=0}^{m-1}\mu_r.
+\]
+The constant depends only on the metric and $m,n$, and not on $u$ or $s$.
+Consequently
+\[
+ \sum_{q=0}^m\int_U\mu_q
+ \leq(m+1)\int_U H_m(u)+Cms\sum_{r=0}^{m-1}\int_U\mu_r.
+\]
+For sufficiently small $s$, absorption and $H_m(u)=0$ force all these
+nonnegative integrals to vanish. But $\mu_0=\omega^n$ on the nonempty
+open set $U$, a contradiction.
+\end{proof}
+
+The envelope of a stretched difference now converts vanishing of a
+restricted measure into an order relation. The linear bound
+\eqref{eq:hessian-normalized-l1} prevents these envelopes from tending to
+$-\infty$ on an open set.
+
+\begin{proposition}\label{hessian:zero-hessian-domination}
+If continuous admissible $u,v$ satisfy
+$\mathbf1_{\{u<v\}}H_m(u)=0$, then $u\geq v$.
+\end{proposition}
+\begin{proof}
+Replace $v$ by $\max(u,v)$, so $u\leq v$.
+For $b>1$ put $p_b=P(bu-(b-1)v)$ and
+$z_b=b^{-1}p_b+(1-b^{-1})v\leq u$.
+On the contact set $C_b=\{p_b=bu-(b-1)v\}$ one has $z_b=u$;
+the contact inequality and polarized positivity give
+\[
+ \mathbf1_{C_b}b^{-m}H_m(p_b)
+                 \leq\mathbf1_{C_b}H_m(z_b)
+                 \leq\mathbf1_{C_b}H_m(u).
+\]
+The envelope measure is supported on $C_b$ and has positive mass.
+It vanishes on $C_b\cap\{u<v\}$ by the hypothesis, so some point of
+$C_b\cap\{u=v\}$ exists. Hence
+$\sup_Xp_b\geq\inf_Xv$, while $p_b\leq u$.
+The estimate \eqref{eq:hessian-normalized-l1} is consequently
+uniform for $p_b$. On the open set $E_a=\{u<v-a\}$, for $a>0$, one has
+$p_b\leq v-ba$, and therefore
+\[
+ C_\omega\geq\int_X(\sup_Xp_b-p_b)\omega^n
+                     \geq(ba-\operatorname{osc}_Xv)\int_{E_a}\omega^n.
+\]
+Letting $b\to\infty$ gives zero volume for $E_a$. Since it is open it
+is empty, and $a\downarrow0$ gives $u\geq v$.
+\end{proof}
+
+\begin{proposition}\label{hessian:strict-hessian-domination}
+If continuous admissible $u,v$ satisfy
+\[
+ \mathbf1_{\{u<v\}}H_m(u)\leq
+                    c\mathbf1_{\{u<v\}}H_m(v),\qquad 0\leq c<1,
+\]
+then $u\geq v$.
+\end{proposition}
+\begin{proof}
+Choose $b>1$ so that $(1-b^{-1})^m>c$, and put
+$p=P(bu-(b-1)v)$ and $z=b^{-1}p+(1-b^{-1})v\leq u$.
+On $C=\{p=bu-(b-1)v\}$ the contact comparison gives
+\[
+ \mathbf1_C\bigl(b^{-m}H_m(p)+(1-b^{-1})^mH_m(v)\bigr)
+                                  \leq\mathbf1_C H_m(u).
+\]
+Restricting to $\{u<v\}$ and using the hypothesis shows that
+$H_m(p)$ vanishes on $C\cap\{u<v\}$. Its support lies in $C$, where
+$p<v$ is equivalent to $u<v$. Thus $H_m(p)$ vanishes on $\{p<v\}$.
+The preceding domination proposition gives $p\geq v$.
+Since $p\leq bu-(b-1)v$, it follows that $u\geq v$.
+\end{proof}
+
+Strict domination yields the comparison needed for the proper equations.
+\index{Domination principle!continuous Hessian measures}
+
+\begin{lemma}\label{hessian:hessian-exponential-order}
+For continuous admissible $u,v$ and $a>0$, if
+\[
+ e^{-av}H_m(v)\geq e^{-au}H_m(u),
+\]
+then $u\geq v$.
+\end{lemma}
+\begin{proof}
+Fix $\delta>0$. On $\{u<v-\delta\}$, the assumed inequality gives
+\[
+ H_m(u)\leq e^{a(u-v)}H_m(v)
+       \leq e^{-a\delta}H_m(v-\delta).
+\]
+The constant $e^{-a\delta}$ is strictly smaller than one, so \cref{hessian:strict-hessian-domination} applied to $u$ and $v-\delta$ gives $u\geq v-\delta$. Letting $\delta\downarrow0$ proves the assertion.
+\end{proof}
