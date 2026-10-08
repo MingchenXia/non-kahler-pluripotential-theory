@@ -1,0 +1,115 @@
+% Inactive fragment: bounded domination in the invariant Hessian mass regime.
+% The global chapter setting remains compact X, Hermitian omega, 2 <= m < n.
+\section{Bounded domination under the power identities}
+\label{draft629:bounded-domination}
+
+The positive background term in a convex rescaling makes a strict
+comparison set visible to volume. Under the power identities of
+\cref{hessian:global-comparison-characterization}, the global comparison
+principle then yields domination for bounded potentials. Canonical
+representatives turn the resulting almost everywhere order into
+pointwise order.
+
+\begin{lemma}\label{draft629:canonical-order}
+If bounded admissible $u,v$ satisfy $u\leq v$ almost everywhere
+with respect to $\omega^n$, then $u\leq v$ everywhere.
+\end{lemma}
+\begin{proof}
+By \cref{hessian:regularized-maximum}, $w=\max\{u,v\}$ is bounded
+admissible with its indicated canonical representative. Since
+$w=v$ almost everywhere, they represent the same distribution.
+The canonical subharmonic representative used in
+\eqref{eq:hessian-bounded-upper-tests} is determined by that
+distribution. Thus $w=v$ pointwise, which is the assertion.
+\end{proof}
+
+\begin{lemma}\label{draft629:convex-background-term}
+For bounded admissible $v$, $0\leq\alpha\leq1$ and a real constant
+$b$, the function $v_\alpha=\alpha v+b$ is bounded admissible and
+\[
+ H_m(v_\alpha)\geq\alpha^m H_m(v)+(1-\alpha)^m\omega^n.
+\]
+\end{lemma}
+\begin{proof}
+Take smooth decreasing uniformly bounded admissible $v_j\downarrow v$.
+Cone convexity makes $\alpha v_j+b$ admissible because
+\[
+ \omega+\ddc(\alpha v_j+b)
+        =\alpha(\omega+\ddc v_j)+(1-\alpha)\omega.
+\]
+For $\alpha>0$, an upper test $q$ for $\alpha v+b$ gives the
+upper test $(q-b)/\alpha$ for $v$. The same convex combination
+of forms therefore proves admissibility of the limit. For
+$\alpha=0$ the potential is constant. The pointwise decreasing
+limit has the displayed canonical affine values.
+Expand the smooth top product. Every mixed term is positive by
+polarized G\aa rding positivity. Keeping the two extreme terms gives
+\[
+ H_m(\alpha v_j+b)\geq\alpha^m H_m(v_j)
+                                    +(1-\alpha)^m\omega^n.
+\]
+Joint decreasing convergence from
+\cref{hessian:joint-decreasing-products} passes this inequality
+against each nonnegative continuous test to the asserted inequality
+of positive Radon measures.
+\end{proof}
+
+\begin{theorem}\label{draft629:strict-bounded-domination}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$. Let $u,v$
+be bounded admissible. If, for some $0\leq c<1$,
+\[
+ \mathbf1_{\{u<v\}}H_m(u)
+                   \leq c\mathbf1_{\{u<v\}}H_m(v),
+\]
+then $u\geq v$ everywhere. In particular, this conclusion holds
+if $H_m(u)(\{u<v\})=0$.
+\end{theorem}
+\begin{proof}
+Choose $B>\|v\|_\infty$ and, for $0<\alpha<1$ with $\alpha^m>c$,
+put $v_\alpha=\alpha v-(1-\alpha)B$. Then $v_\alpha\leq v$ and
+$E_\alpha=\{u<v_\alpha\}\subset\{u<v\}$.
+By \cref{hessian:global-comparison-characterization} and the
+assumed restriction inequality,
+\[
+ \int_{E_\alpha}H_m(v_\alpha)
+        \leq\int_{E_\alpha}H_m(u)
+        \leq c\int_{E_\alpha}H_m(v).
+\]
+On the other hand, \cref{draft629:convex-background-term} gives
+\[
+ (\alpha^m-c)\int_{E_\alpha}H_m(v)
+             +(1-\alpha)^m\int_{E_\alpha}\omega^n\leq0.
+\]
+Both summands are nonnegative, and the coefficient of the volume
+is positive. Thus $E_\alpha$ has zero volume. Applying
+\cref{draft629:canonical-order} gives $u\geq v_\alpha$ pointwise.
+Let $\alpha$ increase to one. The boundedness of $v$ gives
+$v_\alpha\to v$ uniformly, so $u\geq v$ everywhere. The final
+assertion is the case $c=0$.
+\end{proof}
+
+\begin{corollary}\label{draft629:proper-bounded-uniqueness}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$ and fix $a>0$.
+If bounded admissible $u,v$ satisfy
+\[
+ e^{-av}H_m(v)\geq e^{-au}H_m(u),
+\]
+then $u\geq v$. Consequently, for any fixed finite positive Radon
+measure $\nu$, the equation $H_m(u)=e^{au}\nu$ has at most one
+bounded admissible solution.
+\end{corollary}
+\begin{proof}
+For $\delta>0$, put $E_\delta=\{u<v-\delta\}$. Multiplying the
+assumed measure inequality by the positive bounded Borel function
+$e^{au}$ gives on $E_\delta$
+\[
+ H_m(u)\leq e^{a(u-v)}H_m(v)
+                 \leq e^{-a\delta}H_m(v-\delta).
+\]
+The last identity uses invariance under constants. Since
+$e^{-a\delta}<1$, \cref{draft629:strict-bounded-domination} applied
+to $u,v-\delta$ gives $u\geq v-\delta$ everywhere. Letting
+$\delta\downarrow0$ gives $u\geq v$. Two solutions of the stated
+equation have equal weighted measures $e^{-au}H_m(u)=\nu$.
+Applying the order assertion in both directions proves uniqueness.
+\end{proof}

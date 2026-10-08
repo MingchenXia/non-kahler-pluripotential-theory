@@ -1780,6 +1780,7 @@ selected.update(root / name for name in ['research/audits/hessian-bounded-locali
 selected.update(root / name for name in ['research/audits/hessian-bounded-locality-integration-626.json', 'research/editorial/hessian-bounded-locality-integration-626.md', 'research/source-disposition-626.json'])
 selected.update(root / name for name in ['research/audits/hessian-mass-comparison-review-627.json', 'research/editorial/hessian-mass-comparison-review-627.md', 'research/source-disposition-627.json', 'research/drafts/hessian-mass-comparison-627.tex'])
 selected.update(root / name for name in ['research/audits/hessian-mass-comparison-integration-628.json', 'research/editorial/hessian-mass-comparison-integration-628.md', 'research/source-disposition-628.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-domination-review-629.json', 'research/editorial/hessian-bounded-domination-review-629.md', 'research/source-disposition-629.json', 'research/drafts/hessian-bounded-domination-629.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
