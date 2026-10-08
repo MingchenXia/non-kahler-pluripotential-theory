@@ -1,6 +1,6 @@
 # Whole-book polish requested 2 October 2026
 
-Current continuation: checkpoint 555 completes recursive Chapter 8 first/final post-inspection second reads (944 final lines, 18 proofs), 43 final-page coverage and three spacing guards. Both clean full author builds are live verified, with the October 8 cover and description. Actual empty-source reconstruction and current packaging checks pass; native preview compilation remains unverified after calls without diagnostics. Continue complete recursive Chapter 9, then incoming author/primary-source updates. See [the chapter revision](hopf-mass-reader-555.md).
+Current continuation: checkpoint 556 completes recursive Chapter 9 first/final post-inspection second reads (1660 final lines, 30 proofs) and seven spacing adjustments in five files. Both full author builds have live verified PDF and homepage descriptions, retaining the October 8 cover. Actual empty-source reconstruction passes all book and companion page texts and book-source bytes; final metadata packaging is checked against those reconstructed outputs; native preview retains its recorded compilation limitation. Continue complete recursive Chapter 10, then incoming author/primary-source updates. See [the chapter revision](smooth-equations-reader-556.md).
 
 ## Greatest exponential left-limit review 526
 
