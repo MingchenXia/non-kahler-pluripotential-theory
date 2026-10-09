@@ -1,5 +1,19 @@
 # Current research status — 9 October 2026
 
+## Checkpoint637 — Global modified Hessian comparison
+
+[The scoped review](editorial/hessian-global-modified-comparison-review-637.md) Three inactive proofs reconstruct global weak modified comparison and strict bounded Hessian domination on arbitrary Hermitian backgrounds. The mixed maximum formula gives a signed weighted torsion error; a triangular mixed-degree induction and an eta-cubed diagonal absorption control it. No unmodified global comparison or extra bounded-product assumption is imported.
+
+The216-line fragment receives two complete actual final manual reads. Thirty-five mathematical obligations are checked. Algebra checks cover876 torsion multiplicities and216 exact absorption weights;16 linear optimization cases test the weighted lower-mass bound under the diagonal recurrence. They check algebra and extremal recurrences, not the analytic proof. Five current dependency inputs are freshly read completely; the selected coefficient/capacity/history ranges are recorded. All413 book files,1359 old proof bodies,1449 statements,23 questions, both catalogues and both original manifests are unchanged. Incoming S10/S11 preservation carries636 at its exact scope.
+
+The published Gu-Nguyen comparison mechanism is freshly read and directly viewed on pp.1197--1200, including Lemmas3.8--3.10. Definitions and selected source proof ranges in1604.08029v4 are also consulted. The bounded locally conformal reference construction is kept distinct from the book global shifted class. No full external chain certificate is claimed; the draft proves each required global step from the existing maximum, torsion-weight and canonical-order results.
+
+No author compilation, public publication or native catalogue call occurs. The636 deployed1679-page description, October9 covers and actual1707+17-page empty reconstruction are carried at their exact scopes. Native catalogue preview remains unverified. No original problem closure, novelty claim, arbitrary Radon existence or whole-book certificate is made;40 open scopes and75 missing/451 protected historical qualifications remain. The base automatic writing audit is unavailable; the recorded reads are manual. No new arXiv scan is claimed.
+
+Integrate the mixed recurrence and weak modified comparison in the Hessian mass/comparison section, replace the strict-domination proof at its stable label, and remove the superseded partial-power assumptions from proper bounded uniqueness, stability and smoothness. Preserve the mass-characterization theorem and its torus obstruction. Update chapter/history seams and exact primary attribution; read complete changed mathematical inputs twice, build and inspect, refresh the same catalogue, verify October9 covers and every public deployment, reconstruct the source package and synchronize. Then continue the whole-book reader queue and related primary research; Xean remains withdrawn.
+
+Metadata packaging passes3048 safe paths,3047 current payload checksums and410 exact book-source files against the actual636 empty reconstruction. All1707 main/17 companion page texts match; no new empty extraction or build is claimed. The636 Gu-Nguyen fingerprint field is corrected to distinguish downloaded gzip bytes from the decompressed TeX file; its read/proof scope is unchanged.
+
 ## Checkpoint636 — Local Hessian comparison example
 
 [The scoped integration](editorial/hessian-local-comparison-example-integration-636.md) Chapter12 adds a computed example beside the local correction lemma: shifted Hessian order does not determine raw Hessian order, even when both shifted forms are positive. The correction identity retains the smooth remainder. Two local spacing controls keep a capacity lemma and its explanatory display together; no mathematical content of that prior proof changes.
