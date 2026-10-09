@@ -1783,6 +1783,7 @@ selected.update(root / name for name in ['research/audits/hessian-mass-compariso
 selected.update(root / name for name in ['research/audits/hessian-bounded-domination-review-629.json', 'research/editorial/hessian-bounded-domination-review-629.md', 'research/source-disposition-629.json', 'research/drafts/hessian-bounded-domination-629.tex'])
 selected.update(root / name for name in ['research/audits/hessian-bounded-domination-integration-630.json', 'research/editorial/hessian-bounded-domination-integration-630.md', 'research/source-disposition-630.json'])
 selected.update(root / name for name in ['research/audits/hessian-proper-data-review-631.json', 'research/editorial/hessian-proper-data-review-631.md', 'research/source-disposition-631.json', 'research/drafts/hessian-proper-data-631.tex'])
+selected.update(root / name for name in ['research/audits/hessian-proper-data-integration-632.json', 'research/editorial/hessian-proper-data-integration-632.md', 'research/source-disposition-632.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
