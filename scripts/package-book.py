@@ -1785,6 +1785,7 @@ selected.update(root / name for name in ['research/audits/hessian-bounded-domina
 selected.update(root / name for name in ['research/audits/hessian-proper-data-review-631.json', 'research/editorial/hessian-proper-data-review-631.md', 'research/source-disposition-631.json', 'research/drafts/hessian-proper-data-631.tex'])
 selected.update(root / name for name in ['research/audits/hessian-proper-data-integration-632.json', 'research/editorial/hessian-proper-data-integration-632.md', 'research/source-disposition-632.json'])
 selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-review-633.json', 'research/editorial/hessian-bounded-nonvanishing-review-633.md', 'research/source-disposition-633.json', 'research/drafts/hessian-bounded-nonvanishing-633.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-integration-634.json', 'research/editorial/hessian-bounded-nonvanishing-integration-634.md', 'research/source-disposition-634.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
