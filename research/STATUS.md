@@ -1,5 +1,13 @@
 # Current research status — 9 October 2026
 
+## Checkpoint640 — Introduction and Hessian coherence
+
+[Scoped coherence review](editorial/introduction-hessian-coherence-640.md). The Introduction connects the intermediate Hessian operator to the book's mass and comparison mechanisms. The new paragraph explains the weaker positivity cone, the role of capacity in bounded products, and torsion absorption on small sublevel sets. Its concrete smoothness/uniqueness example keeps2<=m<n, a>0 and smooth real F. The reading route includes the Hessian chapter while retaining the singularity and I-goodness program.
+
+The complete original and two revised manual reads cover234/236/236 lines, with the final read after page inspection. All proofs, statements, questions and main-page texts stay unchanged; the edited Introduction and both October9 covers are inspected. Exact-head Actions/Pages deployment, the actual served PDF checksum and the matching homepage description pass. Actual empty-source reconstruction and final current-payload packaging checks pass: all1711 main-book and17 companion page texts match, 410 packaged book-source files are exact, the logs are clean and publication is disabled. The catalogue native preview remains unverified. No whole-book mathematical certificate or new original-problem closure is claimed.
+
+Next: Check current related arXiv papers and incoming author progress, then continue the singularity, envelope and I-goodness research directions. Read the exact primary statements and proofs before any new adoption. Preserve the complete reader-cycle scopes581/582/583 and639/640. Xean remains withdrawn; the broader goal is active.
+
 ## Checkpoint639 — Complete Chapter12 reader coherence
 
 [Scoped reader review](editorial/chapter12-reader-coherence-639.md). A complete recursive Chapter12 reader pass checks the continuous regularity, bounded approximation, capacity, locality and modified-comparison arguments in their actual dependency order. Four inputs receive prose or spacing corrections: the regularity motivation, closed-cone terminology, the distinction between unmodified and weak modified comparison, and an explicitly declared capacity normalization constant. Every theorem statement and proof body remains byte-exact.

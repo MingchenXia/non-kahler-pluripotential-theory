@@ -1,5 +1,11 @@
 # Hermitian pluripotential theory: research and book plan
 
+## Checkpoint640 — Reader continuation
+
+The Introduction connects the intermediate Hessian operator to the book's mass and comparison mechanisms. The new paragraph explains the weaker positivity cone, the role of capacity in bounded products, and torsion absorption on small sublevel sets. Its concrete smoothness/uniqueness example keeps2<=m<n, a>0 and smooth real F. The reading route includes the Hessian chapter while retaining the singularity and I-goodness program. See [scoped review](research/editorial/introduction-hessian-coherence-640.md).
+
+Check current related arXiv papers and incoming author progress, then continue the singularity, envelope and I-goodness research directions. Read the exact primary statements and proofs before any new adoption. Preserve the complete reader-cycle scopes581/582/583 and639/640. Xean remains withdrawn; the broader goal is active.
+
 ## Checkpoint639 — Reader continuation
 
 A complete recursive Chapter12 reader pass checks the continuous regularity, bounded approximation, capacity, locality and modified-comparison arguments in their actual dependency order. Four inputs receive prose or spacing corrections: the regularity motivation, closed-cone terminology, the distinction between unmodified and weak modified comparison, and an explicitly declared capacity normalization constant. Every theorem statement and proof body remains byte-exact. See [scoped review](research/editorial/chapter12-reader-coherence-639.md).

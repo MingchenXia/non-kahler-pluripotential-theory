@@ -1,5 +1,7 @@
 # Chapter-by-chapter revision — requested 25 September 2026
 
+Checkpoint640 continuation: Check current related arXiv papers and incoming author progress, then continue the singularity, envelope and I-goodness research directions. Read the exact primary statements and proofs before any new adoption. Preserve the complete reader-cycle scopes581/582/583 and639/640. Xean remains withdrawn; the broader goal is active. See introduction-hessian-coherence-640.md. No fresh arXiv scan is claimed for this editorial unit.
+
 Checkpoint639 continuation: Read the complete Introduction, conventions and reading route against the expanded Hessian chapter and the singularity/I-goodness program. Keep the introduction focused on the governing mathematical mechanisms. Then continue related primary-paper and open-problem research, checking incoming author updates before integration. Xean remains withdrawn; the broader goal stays active. Complete Chapter12 reader scope is recorded in chapter12-reader-coherence-639.md; no fresh arXiv listing scan is claimed.
 
 Checkpoint590 continuation: incoming restricted S02 has independent proof/application review and a617-line inactive fragment. Integrate its10 proofs after Hopf minimal mass in Chapter8, preserving Chapter1 foundations and the unrestricted open problem; update history and catalogue, build/publish/inspect and reconstruct. Then resume Hermitian regularity primary review. No Xean execution or whole-book certificate. See rotational-hopf-primary-review-590.md.
