@@ -1,0 +1,415 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newcommand{\ddc}{dd^c}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\capH}{\operatorname{cap}}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\Dzero}{\mathcal D_h^0}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Capacity domination, critical normalizers\newline and density-root tails}
+\author{}\date{9 October 2026}
+\begin{document}\maketitle
+\noindent\textbf{Working draft.} Independent reconstruction and mathematical
+review are pending. The capacity assumption below is additional to the
+unrestricted root-space hypotheses in original S04.
+\begin{abstract}
+Under a power capacity bound on an absolutely continuous datum, we prove
+a quantitative lower estimate for every dominated density's critical
+normalizer. It controls the original supremum over all smooth positive
+Gauduchon tests and gives order-continuous density roots. The clipped
+equations have a uniformly convergent subsequence and solve the exact
+equation at the critical coefficient in the bounded continuous class.
+The proof separates scalar convergence from convergence of the actual
+Hermitian products. On every positive Hermitian background an explicit
+logarithmic reference gives a density outside every higher $L^p$ class,
+with critical coefficient one and a quantitative root-tail estimate.
+No positive lower bounded-potential mass or closedness is assumed.
+The capacity and comparison estimates are imported with their precise
+scope; no literature priority or unrestricted S04 completion is claimed.
+\end{abstract}
+
+\section{Conventions and the additional capacity condition}
+Let $X$ be connected and compact of complex dimension $n\geq3$, $h$ a
+smooth positive Hermitian form, and $dV$ a smooth strictly positive
+probability volume. Use $\ddc=i\partial\bar\partial/(2\pi)$ and genuine
+canonical psh-plus-smooth representatives. For bounded $h$-psh functions
+the actual bounded product is $\MA_h(u)=(h+\ddc u)^n$. Define
+\[
+ \capH_h(E)=\sup_{w\in\PSH(X,h),\ 0\leq w\leq1}\MA_h(w)(E).
+\]
+Its total capacity is finite by local bounded-product estimates.
+
+We use the original S04 normalizer conventions as background. For
+nonzero $g\geq0$ in $L^1(dV)$, the continuous equations for
+$g_j=\min(g,j)$ have positive normalizers $c_j$ decreasing to $b_h(g)$,
+and normalized continuous genuine potentials $\phi_j$ with
+\[
+ \MA_h(\phi_j)=c_jg_jdV,\qquad \sup_X\phi_j=0.
+\]
+The clipped existence statement is \cite[Theorem 0.1]{KN}.
+The identification of this scalar limit with the maximal genuine
+subsolution coefficient is part of the original threshold background.
+For real or complex $p\in L^n(dV)$ the original all-test norm is
+\[
+ \rho_h(p)=b_h(|p|^n)^{-1/n}
+ =\sup_T\int_X|p|\left(\frac{\gamma^n}{dV}\right)^{(n-1)/n}dV,
+ \qquad T=\gamma^{n-1},
+\]
+where the supremum retains \emph{all} smooth positive $(n-1,n-1)$ forms
+$T$ with $\ddc T=0$ and $\int h\wedge T=1$. The zero-root norm is zero;
+a zero threshold gives infinite norm. The space $\Dzero$ is the closure
+of bounded measurable roots for $\|p\|_n+\rho_h(p)$. We use the original
+equivalence between membership and vanishing root-tail norm.
+These scalar/test identities are background, not conclusions of the
+capacity argument.
+
+\begin{theorem}\label{th:main}
+Suppose $0\ne f\geq0$ belongs to $L^1(dV)$ and, for constants
+$A,\alpha>0$, satisfies
+\begin{equation}\label{eq:power}
+ \int_E f\,dV\leq A\capH_h(E)^{1+\alpha}
+ \quad\text{for every Borel }E\subset X.
+\end{equation}
+There is $C>0$, depending only on $X,h,A,\alpha$, such that every
+nonzero measurable $0\leq g\leq f$ satisfies
+\begin{equation}\label{eq:critical}
+ b_h(g)\geq C\left(\int_Xg\,dV\right)^{-\alpha/(1+\alpha)},
+ \qquad
+ \rho_h(g^{1/n})\leq C^{-1/n}
+       \left(\int_Xg\,dV\right)^{\alpha/(n(1+\alpha))}.
+\end{equation}
+In particular $f^{1/n}\in\Dzero$. There is a bounded continuous
+genuine $h$-psh $\phi$, normalized by $\sup_X\phi=0$, satisfying
+\begin{equation}\label{eq:exact}
+ \MA_h(\phi)=b_h(f)f\,dV.
+\end{equation}
+The coefficient is finite and strictly positive, and the actual measure
+has finite positive mass. No uniqueness assertion for homogeneous
+potentials is made.
+\end{theorem}
+
+\section{Capacity estimates and critical coefficients}
+We specify the two imported inequalities that will also give uniform
+stability. Let $\theta>0$ be any fixed smooth Hermitian background.
+For bounded genuine $a\leq0$, $-1\leq v\leq0$, fix $0<\varepsilon<1$,
+put
+\[
+ m=\inf_X(a-(1-\varepsilon)v),\qquad
+ U_\varepsilon(s)=\{a<(1-\varepsilon)v+m+s\}.
+\]
+The permitted increments below lie in fixed positive intervals depending
+only on $\varepsilon$, dimension and the smooth torsion bounds of
+$\theta$, as stated in \cite[Theorem 5.3 and Lemma 5.4]{KN}.
+If $\MA_\theta(a)\leq A_0\capH_\theta^{1+\alpha}$, those statements give
+\begin{align}
+ s&\leq C_\alpha A_0^{1/n}
+                 \capH_\theta(U_\varepsilon(s))^{\alpha/n},
+                 \label{eq:lowercap}\\
+ [(1-\varepsilon)t]^n\capH_\theta(U_\varepsilon(s))
+  &\leq C\MA_\theta(a)
+          (U_\varepsilon(s+4(1-\varepsilon)t)).\label{eq:uppercap}
+\end{align}
+For \eqref{eq:lowercap}, use the source admissible function
+$H(x)=A_0^{-1}x^{n\alpha}$ in its displayed formula for $\kappa$.
+The integral $\int_{s^{-1/n}}^\infty dx/(xH(x)^{1/n})$
+equals $A_0^{1/n}s^{\alpha/n}/\alpha$, which proves the displayed
+dependence, including small $A_0$. Constants in
+\eqref{eq:uppercap} do not depend on the potential's oscillation.
+Both source statements require a bounded competitor, and that bound
+will always be checked.
+
+The source convention is $\ddc_{\rm source}=2\ddc$.
+Apply its statements to the background $2\theta$ and unchanged
+potentials: the actual products and capacities are multiplied by $2^n$.
+Thus the permitted intervals and constants change by fixed geometric
+factors and the two displayed structural inequalities follow exactly.
+This conversion also applies to the clipped existence and weighted
+CLN estimates. No closedness or positive lower mass is introduced.
+
+\begin{proof}[Proof of the coefficient estimate]
+Let $g_j=\min(g,j)$ and use the clipped potentials above. Their measures
+are bounded by $c_jA\capH_h^{1+\alpha}$. Set $\varepsilon=1/2$,
+use the competitor $v=0$, and choose fixed positive $s,t$ in \emph{both}
+permitted intervals. Then \eqref{eq:lowercap} and
+\eqref{eq:uppercap}, the latter bounded by total mass, give
+\[
+ s\leq C(c_jA)^{1/n}\capH_h\{\phi_j<\inf\phi_j+s\}^{\alpha/n},
+ \qquad
+ \capH_h\{\phi_j<\inf\phi_j+s\}
+    \leq Ct^{-n}c_j\int_Xg_jdV.
+\]
+Combining yields
+$s^n\leq C A c_j^{1+\alpha}(\int g_jdV)^\alpha$, and hence
+the first inequality in \eqref{eq:critical} upon taking the original
+scalar limit $c_j\downarrow b_h(g)$. The original threshold/test
+identity gives the second inequality over the full test family.
+
+Take $g=f\mathbf1_{\{f>K\}}$. Its mass tends to zero. The actual root
+tail is
+\[
+ g^{1/n}=f^{1/n}\mathbf1_{\{f^{1/n}>K^{1/n}\}};
+\]
+both its $L^n$ norm and its $\rho_h$ norm tend to zero.
+This proves $f^{1/n}\in\Dzero$ under the original norm.
+\end{proof}
+
+\section{Uniform compactness and the actual exact equation}
+For $f_j=\min(f,j)$, let $c_j$ and $\phi_j$ be the clipped data.
+The coefficient estimate gives $b_h(f)>0$, while $c_j\leq c_1<\infty$.
+All measures therefore satisfy one common power bound
+$Ac_1\capH_h^{1+\alpha}$. Applying \eqref{eq:lowercap} with $v=0$
+at one fixed $s>0$ gives
+\[
+ \capH_h\{\phi_j<\inf\phi_j+s\}\geq c_0>0.
+\]
+Weighted CLN \cite[Proposition 1.1]{Ngu}, for normalized genuine
+$h$-psh $\phi_j$ and every $0\leq w\leq1$, gives
+$\int|\phi_j|\MA_h(w)\leq C$. Consequently
+\[
+ \capH_h\{\phi_j<-L\}\leq C/L.
+\]
+If $-\inf\phi_j>s$, the former sublevel lies in the latter with
+$L=-\inf\phi_j-s$; thus these two bounds prove
+\begin{equation}\label{eq:bound}
+ -M\leq\phi_j\leq0
+\end{equation}
+for one $M\geq1$. This does not use a uniform $L^p$ norm of $f_j$.
+
+\begin{lemma}\label{lem:stability}
+Let $u_j\in\PSH(X,\theta)\cap C(X)$ lie in $[-1,0]$, with
+$\MA_\theta(u_j)\leq A_0\capH_\theta^{1+\alpha}$ uniformly.
+If
+\[
+ \int_X|u_j-u_k|\MA_\theta(u_j)\longrightarrow0
+ \quad\text{as }j,k\longrightarrow\infty,
+\]
+then the sequence is uniformly Cauchy.
+\end{lemma}
+\begin{proof}
+Fix $d>0$ and suppose $\inf(u_j-u_k)\leq-d$.
+Choose $0<\varepsilon<\min(d/8,1/4)$ and positive $s,t$ in both
+permitted intervals such that $s+4t+\varepsilon<d/2$.
+Use $a=u_j$, $v=u_k$ above. Since $v\leq0$,
+$m=\inf(a-(1-\varepsilon)v)\leq-d$. As $v\geq-1$,
+\[
+ U_\varepsilon(s+4(1-\varepsilon)t)
+        \subset\{a-v<-d/2\}.
+\]
+Equation \eqref{eq:uppercap} therefore bounds
+$\capH_\theta(U_\varepsilon(s))$ by
+$C_{\varepsilon,t}d^{-1}\int|a-v|\MA_\theta(a)$,
+which tends to zero. Equation \eqref{eq:lowercap} contradicts this
+for the fixed $s>0$. Exchanging $j$ and $k$ proves both directions.
+All parameters are fixed for each $d$, before sending the indices
+to infinity.
+\end{proof}
+
+\begin{proof}[Proof of the exact equation]
+Normalized genuine $h$-psh functions have a uniform $L^1(dV)$ bound
+\cite[Proposition 2.1]{DK}. Add fixed smooth psh corrections on a finite
+chart covering and apply local $L^1$ compactness
+\cite[Chapter I, Propositions 4.21 and 5.9]{Dem}. This gives global
+$L^1(dV)$ compactness for the sequence.
+Extract a subsequence $\phi_j$ converging in $L^1(dV)$ and $dV$-almost
+everywhere. In view of \eqref{eq:bound} and the finite measure $fdV$,
+dominated convergence gives the two-index limit
+\[
+ \int|\phi_j-\phi_k|\MA_h(\phi_j)
+   \leq c_1\int|\phi_j-\phi_k|f\,dV\longrightarrow0.
+\]
+This uses absolute continuity of the fixed datum; it does not multiply
+an arbitrary fixed Borel function by a weakly convergent measure.
+
+Put $\theta=h/M$ and $u_j=\phi_j/M$. They lie in $[-1,0]$ and
+$\MA_\theta(u_j)=M^{-n}\MA_h(\phi_j)$.
+For each $h$-capacity competitor $w$, the function $w/M$ is a
+$\theta$-competitor, so
+$\capH_h(E)\leq M^n\capH_\theta(E)$.
+Thus the scaled products obey one common power capacity bound,
+and their two-index errors tend to zero. Lemma~\ref{lem:stability}
+makes the subsequence uniformly Cauchy. Its limit $\phi$ is continuous,
+genuinely $h$-psh by distributional positivity, and has supremum zero.
+
+On every chart choose a fixed smooth strictly psh $q$ with
+$\ddc q\geq h$; $\phi_j+q$ are uniformly bounded psh. Expand
+\[
+ \MA_h(\phi_j)
+ =\sum_{\ell=0}^n\binom n\ell
+      [\ddc(\phi_j+q)]^\ell\wedge(h-\ddc q)^{n-\ell}.
+\]
+For completeness put $S_j=\ddc(\phi_j+q)$ and $S=\ddc(\phi+q)$.
+For each $\ell\geq1$, bounded multilinearity and the closed-product
+recursion \cite[Section 2]{BT} give
+\[
+ S_j^\ell-S^\ell=\ddc\left[(\phi_j-\phi)
+          \sum_{a=0}^{\ell-1}S_j^a\wedge S^{\ell-1-a}\right].
+\]
+Pairing with a compactly supported smooth test form bounds this by
+$C\|\phi_j-\phi\|_\infty$: local CLN bounds all the mixed masses
+uniformly \cite[Theorem 2.10]{BT}. Thus every closed local product
+converges weakly, with all smooth correction factors retained.
+This is the actual bounded Hermitian product of $\phi$.
+Meanwhile $c_jf_j\to b_h(f)f$ in $L^1(dV)$, since $c_j\leq c_1$,
+$c_j\to b_h(f)$ and $f_j\to f$ in $L^1$.
+The two limits prove \eqref{eq:exact}, including its exact coefficient
+and finite prescribed measure in the bounded continuous class.
+\end{proof}
+
+\section{An explicit density beyond every higher integrability class}
+\begin{theorem}\label{th:example}
+On every $X,h,dV$ as above and for each $\alpha>0$, there is a bounded
+continuous genuine $h$-psh $u$, with $h+\ddc u\geq h/2$, whose actual
+product is $fdV$ with $f\in L^1(dV)$ and $f\notin L^p(dV)$ for
+every $p>1$. This density satisfies \eqref{eq:power}, has
+$b_h(f)=1$, and obeys, for sufficiently large $K$,
+\[
+ \rho_h\bigl(f^{1/n}\mathbf1_{\{f>K\}}\bigr)
+          \leq C(\log K)^{-\alpha}.
+\]
+This is also an example on any given background with $v_-(h)=0$;
+no assertion that all backgrounds have zero lower mass is made.
+\end{theorem}
+\begin{proof}
+Fix a small holomorphic ball about $p$, with $R=|z|<1$, and a smooth
+cutoff $0\leq\chi\leq1$ equal to one on a smaller ball. Put
+\[
+ q(s)=(1-s)^{-\alpha},\quad s=\log R^2,
+ \qquad \psi=\chi q(\log R^2)+1-\chi.
+\]
+Set $q(-\infty)=0$, and extend $\psi=1$ outside the cutoff ball.
+The function is bounded continuous; in the inner ball,
+$q'=\alpha(1-s)^{-\alpha-1}>0$ and
+$q''=\alpha(\alpha+1)(1-s)^{-\alpha-2}>0$, so it is psh.
+The transition is smooth with $\ddc\psi\geq-K_0h$ for one fixed
+$K_0$. Choose $\delta>0$ small enough and set
+$u=\delta\psi-\sup_X\delta\psi$; then
+$h+\ddc u\geq h/2$ everywhere as actual currents.
+
+The bounded product has no mass at $p$. Indeed, after a fixed smooth
+local correction the positive mixed measures are bounded by a constant
+times the top product of a bounded psh function plus a smooth strictly
+psh function. Normalize that sum to lie in $[0,1]$ on the chart. Its
+top measure is bounded by its local capacity, and the pluripolar point
+has capacity zero \cite[Theorem 6.9 and the capacity definition]{BT}.
+The finite smooth-correction expansion therefore has no atom there.
+Off $p$ the reference is smooth, so the
+actual product is absolutely continuous globally. Set $fdV=\MA_h(u)$.
+Positivity and the strict lower bound show $f\geq c>0$ almost everywhere
+for a fixed smooth-volume constant; in particular its measure has full
+support. In the inner ball the pure top term has Euclidean density
+\begin{equation}\label{eq:radial}
+ (\ddc u)^n=
+ \frac{\delta^n n!\alpha^n(\alpha+1)}{\pi^n}
+ R^{-2n}(1-\log R^2)^{-n(\alpha+1)-1}\,d\lambda.
+\end{equation}
+This follows from the tangential eigenvalues $q'/R^2$ and the radial
+eigenvalue $q''/R^2$. Integrating the sphere gives exactly
+\[
+ \int_{B_r}(\ddc u)^n
+     =\delta^n\alpha^n(1-\log r^2)^{-n(\alpha+1)}.
+\]
+All lower degree $k<n$ mixed densities are bounded by
+$C R^{-2k}(1-\log R^2)^{-k(\alpha+1)}$ and have ball mass $O(r^2)$.
+The inner expansion with the smooth positive $h$ has positive terms.
+It follows that $f\in L^1$ and, from the lower bound
+\eqref{eq:radial}, that $f\notin L^p$ for any $p>1$.
+For sufficiently small $r$ we also obtain
+\begin{equation}\label{eq:ball}
+ \int_{B_r}f\,dV\leq C[(1-\log r^2)^{-n(\alpha+1)}+r^2],
+ \qquad \mathop{\rm ess\,sup}_{X\setminus B_r}f\leq C r^{-2n}.
+\end{equation}
+
+The volume-capacity bound \cite[Proposition 5.1]{KN} gives
+\[
+ dV(E)\leq C\exp[-a\capH_h(E)^{-1/n}].
+\]
+Changing $h^n$ to the fixed comparable smooth $dV$ changes constants
+only. The primary antecedent \cite[Corollary 2.4]{DK}, applied to the
+constant density, gives the same exponential estimate on compacts;
+inner regularity of smooth volume and capacity monotonicity give it
+for all Borel sets. For $s=\capH_h(E)>0$ small, choose
+$r=\exp[-a s^{-1/n}/(4n)]$, inside the permitted ball.
+Split $E$ inside and outside $B_r$ and use \eqref{eq:ball}:
+\[
+ \int_Ef\,dV\leq C s^{1+\alpha}
+                +C\exp[-a s^{-1/n}/2]
+          \leq C' s^{1+\alpha}.
+\]
+The exponentially small $r^2$ term is absorbed by the power term.
+For larger $s$ enlarge the constant using the finite total mass.
+For $s=0$ the volume bound implies $dV(E)=0$, so the datum vanishes
+there. This verifies \eqref{eq:power} for every Borel set.
+
+Theorem~\ref{th:main} gives a continuous normalized $\phi$ satisfying
+$\MA_h(\phi)=b_h(f)fdV$. The explicit $u$ is already a genuine
+subsolution with coefficient one, so the original maximal-coefficient
+background gives $b_h(f)\geq1$. If $b_h(f)>1$, choose small
+$\varepsilon>0$ so that $(1-\varepsilon)^n b_h(f)>1$.
+The bounded positive expansion gives
+$\MA_h((1-\varepsilon)\phi)\geq(1-\varepsilon)^n b_h(f)fdV$.
+Modified comparison \cite[Theorem 2.3]{KN}, for $u$ and
+$(1-\varepsilon)\phi$ on
+\[
+ U=\{u<(1-\varepsilon)\phi+
+                 \inf_X(u-(1-\varepsilon)\phi)+s\},
+\]
+with $s>0$ sufficiently small, gives
+\[
+ (1-\varepsilon)^n b_h(f)\int_U f\,dV
+       \leq(1+C_\varepsilon s)\int_U f\,dV.
+\]
+The permitted increment interval is positive for fixed $\varepsilon$;
+choose $s$ in it with $1+C_\varepsilon s<(1-\varepsilon)^n b_h(f)$.
+The set $U$ is open and nonempty by continuity and attainment of the
+minimum. Its measure is positive because $f\geq c>0$.
+This contradiction proves $b_h(f)=1$.
+
+Finally take $r_K=K^{-1/(4n)}$. For large $K$, \eqref{eq:ball}
+gives $\mathop{\rm ess\,sup}_{X\setminus B_{r_K}}f\leq C K^{1/2}<K$,
+so $\{f>K\}\subset B_{r_K}$ up to a null set. Hence
+\[
+ \int_{\{f>K\}}f\,dV
+    \leq C(\log K)^{-n(\alpha+1)}+CK^{-1/(2n)}
+    \leq C'(\log K)^{-n(\alpha+1)}.
+\]
+Applying \eqref{eq:critical} to $f\mathbf1_{\{f>K\}}$ gives the
+asserted root-tail rate without an implicit threshold inversion.
+\end{proof}
+
+\begin{remark}
+The logarithmic reference is continuous and bounded but is not H\"older
+at $p$. The example therefore goes beyond higher $L^p$ integrability
+without invoking a H\"older-reference range theorem. The analytic
+capacity estimates and their historical range consequences are prior
+work. The explicit estimate on the original critical normalizer and the
+actual product argument are stated with their additional capacity
+hypothesis. Original S04 asks whether \emph{every} positive-threshold
+root has uniform tails, or whether uniform tails alone give the exact
+critical equation. This paper proves neither universal assertion and
+does not supply a counterexample to either one.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{KN} S. Ko\l odziej and N. C. Nguyen,
+\emph{Weak solutions to the complex Monge--Amp\`ere equation on Hermitian
+manifolds}, \href{https://arxiv.org/abs/1312.5491v2}{arXiv:1312.5491v2},
+Theorem 0.1, Theorem 2.3, Proposition 5.1, Theorem 5.3 and Lemma 5.4.
+\bibitem{Ngu} N. C. Nguyen,
+\emph{The complex Monge--Amp\`ere type equation on compact Hermitian
+manifolds and applications},
+\href{https://arxiv.org/abs/1501.00891v1}{arXiv:1501.00891v1}, Proposition 1.1.
+\bibitem{DK} S. Dinew and S. Ko\l odziej,
+\emph{Pluripotential estimates on compact Hermitian manifolds},
+\href{https://arxiv.org/abs/0910.3937v1}{arXiv:0910.3937v1},
+Proposition 2.1, Corollary 2.4 and Proposition 2.5.
+\bibitem{BT} E. Bedford and B. A. Taylor,
+\emph{A new capacity for plurisubharmonic functions}, Acta Math.
+149 (1982), 1--40, Sections 2, 6 and 7.
+\bibitem{Dem} J.-P. Demailly,
+\emph{Complex Analytic and Differential Geometry}, author-hosted
+manuscript, version of 21 June 2012, Chapter I, Propositions 4.21 and 5.9.
+\end{thebibliography}
+\end{document}
