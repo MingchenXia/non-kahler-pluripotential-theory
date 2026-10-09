@@ -1,0 +1,149 @@
+\Needspace{18\baselineskip}
+\subsection{Finite maps between curves}
+\label{subsec:finite-curve-potential-operations}
+
+Let $r:C'\to C$ be a finite surjective holomorphic map of
+degree $d$ between connected compact Riemann surfaces. Write
+$e_x$ for its local degree at $x\in C'$, so that
+$\sum_{r(x)=s}e_x=d$ for every $s\in C$.
+Fix a smooth real $(1,1)$-form $\beta$ on $C$ and put
+$\sigma=r^*\beta$.
+Potentials in background $\sigma$ need not descend to $C$.
+Taking the maximum on each fiber nevertheless gives a base
+potential that dominates the original potential after pullback.
+Its Lelong numbers are the smallest ramification-adjusted
+Lelong numbers on the fiber.
+
+\Needspace{15\baselineskip}
+\begin{lemma}\label{finite-curve:fiber-maximum}\index{Descent!finite curve fiber maximum}
+For $h\in\PSH(C',\sigma)$, the function
+\[
+ m_h(s)=\max_{r(x)=s}h(x)
+\]
+belongs to $\PSH(C,\beta)$ and satisfies $h\leq m_h\circ r$.
+For every $s\in C$,
+\[
+ \nu(m_h,s)=\min_{r(x)=s}\frac{\nu(h,x)}{e_x}.
+\]
+If $v\in\PSH(C,\beta)$, then $h\preceq v\circ r$ implies
+$m_h\preceq v$. The analogous implication holds for the
+all-weight ideal order.
+\end{lemma}
+\begin{proof}
+On a base disk choose a smooth function $a$ with $\ddc a=\beta$.
+Off the branch values, $m_h+a$ is the maximum of finitely many
+subharmonic functions obtained from $h+a\circ r$ by inverse
+branches. It is subharmonic there and locally bounded above.
+The removable-singularity theorem extends it across the branch
+values. This extension has the stated value: upper
+semicontinuity and properness give the upper bound at the
+fiber, while the genuine upper limits of $h+a\circ r$ at its
+points give the reverse bound. Thus the extensions glue.
+The function is not identically $-\infty$, since $h$ is finite
+at some point. This proves the curvature inequality and
+$h\leq m_h\circ r$.
+
+Choose coordinates in the disjoint disks over $s$ so that the
+map on the disk centered at $x$ is $t=z^{e_x}$. Then
+\[
+ \sup_{|t|<\delta}m_h(t)
+ =\max_{r(x)=s}\sup_{|z|<\delta^{1/e_x}}h(z).
+\]
+Divide by $\log\delta^2<0$ and use the supremum definition
+of Lelong number. Each quotient on the right tends to
+$\nu(h,x)/e_x$, and the maximum becomes the minimum after
+division. Smooth local corrections do not affect these limits.
+
+An ordinary bound $h\leq v\circ r+c$ gives
+$m_h\leq v+c$ on every fiber. On a curve, the all-weight
+ideal order is equivalent to the pointwise Lelong inequalities,
+by \cref{thm:local-i-inputs}. The pullback formula
+\cref{curve-map:lelong-pullback} makes
+$h\preceq_{\mathcal I}v\circ r$ equivalent to
+$\nu(h,x)\geq e_x\nu(v,r(x))$ at every $x$.
+The minimum formula gives the required base inequalities.
+\end{proof}
+
+Finite pullback of measures includes ramification at atoms.
+For a continuous real function $f$ on $C'$, put
+\[
+ (\operatorname{Tr}_r f)(s)
+       =\sum_{r(x)=s}e_xf(x).
+\]
+This function is continuous: in the local description $t=z^e$,
+the $e$ values tend to the same value at the branch point.
+For a finite positive measure $\mu$ on $C$, define $r^*\mu$ by
+\[
+ \int_{C'}f\,\mathrm d(r^*\mu)
+       =\int_C\operatorname{Tr}_r f\,\mathrm d\mu,
+\]
+and extend the definition to signed measures by linearity.
+Positivity and the bound $|\operatorname{Tr}_r f|\leq d\|f\|_\infty$
+give a finite measure by the Riesz representation theorem.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{finite-curve:measure-pullback}\index{Polar curvature!ramified curve pullback}
+For every finite signed measure $\mu$ and Borel set $B\subset C$,
+\[
+ \begin{gathered}
+ r_*r^*\mu=d\mu,\qquad
+ \|r^*\mu\|_{\mathrm{TV}}=d\|\mu\|_{\mathrm{TV}},\\
+ r^*(\mathbf1_B\mu)=\mathbf1_{r^{-1}(B)}r^*\mu,
+ \qquad r^*\delta_s=\sum_{r(x)=s}e_x\delta_x.
+ \end{gathered}
+\]
+For $v\in\PSH(C,\beta)$, writing
+$T_v=\beta+\ddc v$ and
+$\mu_v=\mathbf1_{\{v=-\infty\}}T_v$, one has
+\[
+ T_{v\circ r}=r^*T_v,\qquad
+ \mu_{v\circ r}=r^*\mu_v.
+\]
+Images and inverse images of polar sets under $r$ are polar.
+Pullback and pushforward of positive measures commute with
+taking the atomic part.
+\end{lemma}
+\begin{proof}
+The trace of $g\circ r$ is $dg$, giving the pushforward
+identity. The same weighted fiber formula for Borel test
+functions follows from the monotone-class theorem and gives
+the restriction and atom formulas. The positive and negative
+Jordan parts of a signed measure have disjoint Borel carriers;
+their pullbacks are positive with disjoint inverse-image
+carriers. Each has $d$ times its original mass, which proves
+the total-variation identity.
+
+Choose a local smooth $a$ with $\ddc a=\beta$; then $v+a$
+is a subharmonic potential of $T_v$. Its Riesz
+representation is a logarithmic potential plus a harmonic
+function. In coordinates $t=z^e$, the identity
+\[
+ \ddc_z\log|z^e-t|^2
+       =\sum_{z^e=t}\operatorname{ord}_z(z^e-t)\delta_z
+\]
+shows that pulling back this potential gives the weighted
+measure above. Fubini's theorem applies locally: factorization
+of $z^e-t$ into its $e$ linear factors gives a uniform local
+$L^1$ bound for these logarithmic kernels as $t$ varies on a
+smaller disk. The harmonic term has zero Hessian after
+pullback. This proves $T_{v\circ r}=r^*T_v$.
+The pole set of $v\circ r$ is exactly $r^{-1}\{v=-\infty\}$,
+so the restriction formula proves the polar identity.
+
+Inverse images of polar sets are polar by composition of
+local subharmonic witnesses. For images, take local witnesses
+on the finitely many inverse-image disks of a small base disk.
+Off the branch values, the sum of their values over the inverse
+branches is subharmonic and is $-\infty$ wherever any witness
+has a pole. It is locally bounded above and is not identically
+$-\infty$. Its extension across the branch values is
+subharmonic. Adding the finitely many branch values to the
+resulting polar set still gives a polar set. This proves the
+image assertion locally, hence globally.
+
+The pullback of a nonatomic measure has no atoms by the atom
+formula. The pushforward of a nonatomic measure has no atoms
+because every fiber is finite. Atomic measures pull back and
+push forward to atomic measures. Splitting a positive measure
+into these two parts proves the last assertion.
+\end{proof}
