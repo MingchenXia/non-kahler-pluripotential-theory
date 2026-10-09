@@ -1827,6 +1827,7 @@ selected.update(root / name for name in ['research/audits/fixed-spherical-equati
 selected.update(root / name for name in ['research/audits/S15-holder-range-reconstruction-671.json', 'research/editorial/S15-holder-range-reconstruction-671.md', 'research/source-disposition-671.json', 'research/drafts/local-holder-measure-estimates-671.tex', 'research/drafts/holder-reference-capacity-671.tex', 'research/drafts/holder-reference-chern-estimates-671.tex', 'research/drafts/holder-dominated-regularity-671.tex', 'research/drafts/holder-dominated-homogeneous-equation-671.tex'])
 selected.update(root / name for name in ['research/audits/S15-holder-range-integration-672.json', 'research/editorial/S15-holder-range-integration-672.md', 'research/source-disposition-672.json'])
 selected.update(root / name for name in ['research/audits/incoming-P13-determinant-profile-review-673.json', 'research/editorial/incoming-P13-determinant-profile-review-673.md', 'research/source-disposition-673.json', 'research/drafts/fixed-determinant-data-ellipticity-673.tex', 'research/drafts/intrinsic-gauduchon-determinant-profile-673.tex', 'research/drafts/sharp-determinant-power-concentration-673.tex'])
+selected.update(root / name for name in ['research/audits/P13-determinant-profile-integration-674.json', 'research/editorial/P13-determinant-profile-integration-674.md', 'research/source-disposition-674.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
