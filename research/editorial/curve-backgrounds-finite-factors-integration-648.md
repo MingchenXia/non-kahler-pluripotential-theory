@@ -10,6 +10,6 @@ The finite factor is an explicit hypothesis; its existence is not imported witho
 
 The same catalogue retains all 44 full descriptions and 40 open assessment scopes, with 265 single-page and 26 range locators checked. Saved-source native compiler call 61 returned no diagnostics through four bounded waits while source and page review continued, and was terminated. Preview compilation remains unverified; the same editor is retained and no separate catalogue PDF is built.
 
-Actual empty source reconstruction and final current-payload packaging checks remain pending. No original problem closure, new external adoption, novelty claim or whole-book certificate is made. The base automatic writing audit remains unavailable; the reads are manual.
+Actual empty reconstruction passes: all 412 packaged book-source files are exact and all 1723 main-book and 17 companion page texts match production. Safe paths, current payload checksums and clean logs pass; reconstruction publication is disabled. No original problem closure, new external adoption, novelty claim or whole-book certificate is made. The base automatic writing audit remains unavailable; the reads are manual.
 
 Next: Review the precise existence input for a connected-fiber curve factor before dropping the stated factorization hypothesis. Continue the whole-book reader queues and exact related primary-paper reading, preserving general P01/P17 and the remaining open scopes.
