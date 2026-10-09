@@ -184,3 +184,75 @@ strictly larger than $\int_XH_m(0)=2n!B_n$. Meanwhile $C>|t|$
 gives $\{0<u_t+C\}=X$, so the comparison inequality for this pair
 would assert the opposite ordering of these masses.
 \end{proof}
+
+\subsection{Domination and proper equations}
+\label{subsec:hessian-bounded-domination}
+
+The positive background term in a convex rescaling makes a strict
+comparison set visible to volume. Under the power identities of
+\cref{hessian:global-comparison-characterization}, the global comparison
+principle then yields domination for bounded potentials. Canonical
+representatives turn the resulting almost everywhere order into
+pointwise order.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{hessian:strict-bounded-domination}\index{Domination principle!bounded Hessian potentials}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$. Let $u,v$
+be bounded admissible. If, for some $0\leq c<1$,
+\[
+ \mathbf1_{\{u<v\}}H_m(u)
+                   \leq c\mathbf1_{\{u<v\}}H_m(v),
+\]
+then $u\geq v$ everywhere. In particular, this conclusion holds
+if $H_m(u)(\{u<v\})=0$.
+\end{theorem}
+\begin{proof}
+Choose $B>\|v\|_\infty$ and, for $0<\alpha<1$ with $\alpha^m>c$,
+put $v_\alpha=\alpha v-(1-\alpha)B$. Then $v_\alpha\leq v$ and
+$E_\alpha=\{u<v_\alpha\}\subset\{u<v\}$.
+By \cref{hessian:global-comparison-characterization} and the
+assumed restriction inequality,
+\[
+ \int_{E_\alpha}H_m(v_\alpha)
+        \leq\int_{E_\alpha}H_m(u)
+        \leq c\int_{E_\alpha}H_m(v).
+\]
+On the other hand, \cref{hessian:convex-background-term} gives
+\[
+ (\alpha^m-c)\int_{E_\alpha}H_m(v)
+             +(1-\alpha)^m\int_{E_\alpha}\omega^n\leq0.
+\]
+Both summands are nonnegative, and the coefficient of the volume
+is positive. Thus $E_\alpha$ has zero volume. Applying
+\cref{hessian:canonical-order} gives $u\geq v_\alpha$ pointwise.
+Let $\alpha$ increase to one. The boundedness of $v$ gives
+$v_\alpha\to v$ uniformly, so $u\geq v$ everywhere. The final
+assertion is the case $c=0$.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{corollary}\label{hessian:proper-bounded-uniqueness}\index{Hessian equation!bounded proper uniqueness}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$ and fix $a>0$.
+If bounded admissible $u,v$ satisfy
+\[
+ e^{-av}H_m(v)\geq e^{-au}H_m(u),
+\]
+then $u\geq v$. Consequently, for any fixed finite positive Radon
+measure $\nu$, the equation $H_m(u)=e^{au}\nu$ has at most one
+bounded admissible solution.
+\end{corollary}
+\begin{proof}
+For $\delta>0$, put $E_\delta=\{u<v-\delta\}$. Multiplying the
+assumed measure inequality by the positive bounded Borel function
+$e^{au}$ gives on $E_\delta$
+\[
+ H_m(u)\leq e^{a(u-v)}H_m(v)
+                 \leq e^{-a\delta}H_m(v-\delta).
+\]
+The last identity uses invariance under constants. Since
+$e^{-a\delta}<1$, \cref{hessian:strict-bounded-domination} applied
+to $u,v-\delta$ gives $u\geq v-\delta$ everywhere. Letting
+$\delta\downarrow0$ gives $u\geq v$. Two solutions of the stated
+equation have equal weighted measures $e^{-au}H_m(u)=\nu$.
+Applying the order assertion in both directions proves uniqueness.
+\end{proof}
