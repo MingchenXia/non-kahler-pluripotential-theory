@@ -1,0 +1,37 @@
+\subsection{Stability for measures bounded by the square of capacity}
+\label{subsec:capacity-square-stability}
+
+The sublevel iteration above uses the measure only through its capacity bound. It therefore gives a one-sided estimate against the solution measure even when that measure is singular.
+
+\begin{proposition}\label{prop:capacity-square-one-sided-stability}\index{Stability!capacity-dominated measures}
+Fix $A>0$ and $H\geq1$. Let $u,v\in\PSH(X,\omega)\cap C(X)$, with $\sup_Xu=0$ and $-H\leq v\leq0$. Suppose $\mu=\omega_u^n$ satisfies
+\[
+ \mu(E)\leq A\operatorname{Cap}_\omega(E)^2
+ \qquad(E\subset X\text{ Borel}).
+\]
+There is a constant $C$, depending only on $(X,\omega),A,H$, such that
+\[
+ \sup_X(v-u)_+\leq
+ C\left(\int_X(v-u)_+\,\mathrm d\mu\right)^{1/(6n+1)}.
+\]
+\end{proposition}
+\begin{proof}
+Write $L=\int_X(v-u)_+\,\mathrm d\mu$ and $S=\sup_X(v-u)_+$. Applying \cref{lem:backwards-capacity} with $v=0$, $\varepsilon=1/2$, and a fixed $D<\delta_{1/2}$ gives a positive lower bound for $\operatorname{Cap}_\omega\{u<\inf_Xu+D\}$. The tail estimate \eqref{eq:global-capacity-tail} then bounds $\|u\|_\infty$ in terms of $(X,\omega)$ and $A$. Hence $S$ has a fixed upper bound, and the asserted estimate follows after increasing $C$ when $L\geq1$.
+
+For $0<\varepsilon\leq1/2$, choose a fixed $c>0$ such that $D=c\varepsilon^3$ satisfies $2D<\delta_\varepsilon$ and $4D\leq\varepsilon$. Set
+\[
+ m=\inf_X(u-(1-\varepsilon)v),\qquad
+ U_s=\{u<(1-\varepsilon)v+m+s\}.
+\]
+Since $v\leq0$ and $\inf_X(u-v)=-S$ when $S>0$, one has $m\leq-S$. On $U_{2D}$ this gives
+\[
+ v-u>S-\varepsilon H-2D.
+\]
+If $S>2\varepsilon H+4D$, the last quantity exceeds $S/2$. Applying \cref{lem:backwards-capacity,lem:thin-sublevel-capacity} gives
+\[
+ \frac{D^{2n}}{4^nC_HA}
+ \leq D^n\operatorname{Cap}_\omega(U_D)
+ \leq C_H\mu(U_{2D})\leq\frac{2C_H L}{S}.
+\]
+Consequently $S\leq C L\varepsilon^{-6n}$ in this case; in the other case, $S\leq(2H+1)\varepsilon$. For sufficiently small $L>0$, take $\varepsilon=L^{1/(6n+1)}$. The remaining $0<L<1$ are handled by the fixed upper bound for $S$. If $L=0$, the displayed inequality rules out the first case for every small $\varepsilon$, and the other case gives $S=0$ on letting $\varepsilon\downarrow0$.
+\end{proof}
