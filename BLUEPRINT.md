@@ -1,5 +1,13 @@
 # Blueprint: singularities in Hermitian pluripotential theory
 
+## Checkpoint639 — Complete Chapter12 reader coherence
+
+[Scoped reader review](research/editorial/chapter12-reader-coherence-639.md). A complete recursive Chapter12 reader pass checks the continuous regularity, bounded approximation, capacity, locality and modified-comparison arguments in their actual dependency order. Four inputs receive prose or spacing corrections: the regularity motivation, closed-cone terminology, the distinction between unmodified and weak modified comparison, and an explicitly declared capacity normalization constant. Every theorem statement and proof body remains byte-exact.
+
+The complete14-input original and final manual reader passes cover3745 and3751 lines. All proof bodies, statements and questions remain exact; incoming author progress and original manifests are preserved. Three clean author builds publish, with final1683 printed pages and October9 covers. The final served PDF checksum, matching description and exact-head Actions/Pages deployment pass. The complete Chapter12 output and changed pages are inspected. Catalogue native preview remains unverified after a bounded compiler attempt; its44 descriptions and40 open assessment scopes are retained. Actual empty-source reconstruction and final metadata payload checks pass; all1711 main-book and17 companion page texts match production, with clean final logs and publication disabled. No whole-book mathematical or new external dependency certificate is claimed.
+
+Next: Read the complete Introduction, conventions and reading route against the expanded Hessian chapter and the singularity/I-goodness program. Keep the introduction focused on the governing mathematical mechanisms. Then continue related primary-paper and open-problem research, checking incoming author updates before integration. Xean remains withdrawn; the broader goal stays active.
+
 ## Checkpoint638 — Bounded Hessian modified comparison
 
 [The scoped integration](research/editorial/hessian-global-modified-comparison-integration-638.md) Chapter12 proves weak modified comparison for bounded shifted Hessian measures on arbitrary Hermitian backgrounds. Mixed torsion control and a finite absorption argument replace the earlier power-identity hypothesis in strict bounded domination, proper bounded uniqueness, data stability and smoothness. Unmodified global comparison retains its separate necessary and sufficient partial-power condition.

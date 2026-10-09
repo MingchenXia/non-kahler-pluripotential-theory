@@ -1,5 +1,11 @@
 # Hermitian pluripotential theory: research and book plan
 
+## Checkpoint639 — Reader continuation
+
+A complete recursive Chapter12 reader pass checks the continuous regularity, bounded approximation, capacity, locality and modified-comparison arguments in their actual dependency order. Four inputs receive prose or spacing corrections: the regularity motivation, closed-cone terminology, the distinction between unmodified and weak modified comparison, and an explicitly declared capacity normalization constant. Every theorem statement and proof body remains byte-exact. See [scoped review](research/editorial/chapter12-reader-coherence-639.md).
+
+Read the complete Introduction, conventions and reading route against the expanded Hessian chapter and the singularity/I-goodness program. Keep the introduction focused on the governing mathematical mechanisms. Then continue related primary-paper and open-problem research, checking incoming author updates before integration. Xean remains withdrawn; the broader goal stays active.
+
 ## Completion goal, 1 October 2026
 
 The author explicitly directs finishing the whole book and continuing work until told to stop. Complete the remaining units in the reader-revision queue, including the appendix and final front matter; reconcile source dispositions, historical attribution and proof boundaries; and check the whole manuscript's structure, notation, references and index. A completed writing release includes the final book and companion builds, inspected output, a fresh reconstructed source package, verified private synchronization and verified public PDF/homepage publication.
