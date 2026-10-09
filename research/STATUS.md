@@ -1,5 +1,15 @@
 # Current research status — 8 October 2026
 
+## Checkpoint635 — Local Hessian comparison interfaces
+
+[The scoped review](editorial/hessian-local-comparison-interface-635.md) A complete unchanged Introduction/read-route pass retains the connected singularity program. Two inactive elementary examples distinguish shifted and unshifted Hessian comparisons and admissibility from semipositivity. They identify the exact operator and cone interfaces that must be supplied before the selected local comparison theorem can justify unrestricted bounded shifted domination.
+
+The98-line inactive fragment has two complete manual final reads. Six diagonal matrix calculations pass exact rational checks. The local published comparison section is freshly read and directly viewed on pp.147--148; its definitions and precise source dependencies are checked. Fang and Guedj-Lu receive only the recorded selected consultations, and Gu-Nguyen v4 is identified at metadata level. No full external dependency chain is newly certified. The Introduction is read completely and retained unchanged; the complete chapter entry and decreasing-approximation input are also read.
+
+All413 book files, both catalogues, both original manifests and incoming author payloads remain unchanged from634. No author/companion compilation, public publication or native catalogue call occurs. The634 deployed1679-page description, October9 cover dates and actual1707+17-page reconstruction are carried at their exact scopes. The native catalogue preview remains unverified. The examples disprove only the specified elementary implications, not the cited domination theorem. No source-proof adoption, new problem closure, novelty claim or whole-book certificate is made;40 open scopes and75 missing/451 protected historical qualifications remain. The automatic base writing audit is unavailable; actual reads are manual. No fresh arXiv listing scan is claimed.
+
+Metadata packaging passes3041 safe archive paths,3040 payload checksums and410 byte-exact packaged book sources. All1707 main-book and17 companion page texts match the actual634 reconstructed outputs; no new empty extraction or compilation is claimed.
+
 ## Checkpoint634 — Bounded Hessian nonvanishing
 
 [The scoped integration](editorial/hessian-bounded-nonvanishing-integration-634.md) Chapter12 now proves nonvanishing of the Hessian mass of each bounded canonical admissible potential on an arbitrary Hermitian background. A signed torsion measure with capacity-controlled continuous weights justifies the truncation argument. All metric derivatives are retained and no raw top-degree coefficient estimate is used. Individual mass positivity is distinguished from a uniform lower mass bound; unrestricted bounded domination is not inferred.
