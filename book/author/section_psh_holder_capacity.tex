@@ -1,0 +1,58 @@
+\subsection{Capacity bounds for H\"older references}
+
+To pass from the exponential tail estimate to a capacity estimate, we use a closed background on an auxiliary projective space. The local capacity comparison then returns the result to the original Hermitian manifold.
+
+For the Fubini--Study form $\omega_{\mathrm{FS}}$ on $\mathbb P^n$, normalized by $\int\omega_{\mathrm{FS}}^n=1$, define for a compact set $K$
+\[
+ T(K)=\inf_{v\in\PSH(\mathbb P^n,\omega_{\mathrm{FS}}),\ \sup v=0}
+                 \exp(\sup_Kv).
+\]
+We recall the classical global extremal-function theorem in this closed setting \cite{GZ17}. If $K$ is non-pluripolar, the upper semicontinuous regularization of
+\[
+ V_K=\sup\{v\in\PSH(\mathbb P^n,\omega_{\mathrm{FS}}):v|_K\leq0\}
+\]
+is bounded, nonnegative and $\omega_{\mathrm{FS}}$-plurisubharmonic. Its Monge--Amp\`ere probability is supported on $K$. If $K$ is pluripolar, $\sup V_K=+\infty$ and $T(K)=0$.
+
+\begin{lemma}\label{lem:projective-capacity-comparison}
+For every compact $K\subset\mathbb P^n$,
+\[
+ T(K)\leq\mathrm e\exp\bigl(-\operatorname{Cap}_{\omega_{\mathrm{FS}}}(K)^{-1/n}\bigr).
+\]
+The right-hand side is zero for capacity zero.
+\end{lemma}
+\begin{proof}
+The pluripolar case follows from the recalled theorem and the characterization of capacity-zero sets. Otherwise let $M=\sup V_K^*<\infty$. Subtracting $\sup_Kv$ from a normalized competitor, and conversely normalizing competitors for $V_K$, shows directly that $T(K)=\mathrm e^{-M}$.
+
+If $M\geq1$, the function $q=V_K^*/M$ satisfies $0\leq q\leq1$ and is an admissible capacity test. Since the background is closed,
+\[
+ 1=\int_K\omega_{V_K^*}^n
+ \leq M^n\int_K\omega_q^n
+ \leq M^n\operatorname{Cap}_{\omega_{\mathrm{FS}}}(K).
+\]
+Here $\omega_{V_K^*}\leq M\omega_q$ follows from $M\geq1$. Thus $M\geq\operatorname{Cap}_{\omega_{\mathrm{FS}}}(K)^{-1/n}$. If $M<1$, $V_K^*$ itself is a capacity test, so the same supported probability gives $\operatorname{Cap}_{\omega_{\mathrm{FS}}}(K)=1$. Since $T(K)\leq1$, the stated factor $\mathrm e$ covers this case.
+\end{proof}
+
+\begin{proposition}\label{prop:holder-reference-capacity}\index{Capacity!Holder reference@H\"older reference}
+Let $(X,\omega)$ be compact Hermitian. Fix $0<\alpha\leq1$ and $N>0$. There are $a,C>0$ such that every $u\in\PSH(X,\omega)\cap C^{0,\alpha}(X)$ with $\|u\|_{C^{0,\alpha}}\leq N$ satisfies
+\[
+ \omega_u^n(E)\leq C\exp\bigl(-a\operatorname{Cap}_\omega(E)^{-1/n}\bigr)
+ \quad(E\subset X\text{ Borel}).
+\]
+Consequently, for each $s>0$ there is a uniform $C_s$ with $\omega_u^n(E)\leq C_s\operatorname{Cap}_\omega(E)^s$.
+\end{proposition}
+\begin{proof}
+Fix nested coordinate balls $B'\Subset B$ and a smooth quadratic $Q$ with $\ddc Q\geq\omega$ on $B$. The function $p=u+Q$ is plurisubharmonic with a common H\"older bound, and $\omega_u^n\leq(\ddc p)^n$ there. Regard $B$ as a ball in the affine chart $\C^n\subset\mathbb P^n$ and restrict this local measure to $B'$, extending it by zero. By \cref{lem:local-holder-exponential-tails} on $(\mathbb P^n,\omega_{\mathrm{FS}})$, it has a uniform exponential tail on every normalized global Fubini--Study potential. Its total mass is uniformly bounded by local Chern--Levine--Nirenberg estimates.
+
+For a non-pluripolar compact $K\subset B'$, choose a normalized potential $v$ with $\sup_Kv\leq\log T(K)+1$. For small $T(K)$ the tail estimate gives
+\[
+ (\ddc p)^n(K)\leq C T(K)^c
+ \leq C\exp\bigl(-c\operatorname{Cap}_{\omega_{\mathrm{FS}}}(K)^{-1/n}\bigr).
+\]
+The common mass bound handles the remaining $T(K)$, and pluripolar sets have zero local product mass. A bounded local potential for $\omega_{\mathrm{FS}}$ turns every global test $0\leq v\leq1$ into a plurisubharmonic function of a fixed bounded range on $B$. Hence
+\[
+ \operatorname{Cap}_{\omega_{\mathrm{FS}}}(K)
+ \leq C_1\operatorname{cap}(K,B)
+ \leq C_2\operatorname{Cap}_\omega(K),
+\]
+where the last inequality is the gluing construction of \cref{lem:global-capacity-estimates} on the original manifold. These inequalities have the required direction after taking negative inverse powers. Inner regularity of the finite local product extends the bound from compact to Borel subsets of $B'$. Summing over a fixed finite cover proves the first assertion. The second follows by bounding $x^{-s}\exp(-ax^{-1/n})$ on $0<x\leq\operatorname{Cap}_\omega(X)$.
+\end{proof}

@@ -1,0 +1,67 @@
+\subsection{Regularity for a measure with a H\"older reference}
+
+The same smoothing argument applies to a singular solution measure dominated by the product of a H\"older potential. Its square-capacity bound supplies stability, and the weighted Chern estimate supplies the smoothing error.
+
+\begin{theorem}\label{thm:holder-dominated-continuous-regularity}\index{Holder continuity@H\"older continuity!singular solution measure}
+Let $u\in\PSH(X,\omega)\cap C^{0,\alpha}(X)$, $0<\alpha\leq1$, and suppose $\varphi\in\PSH(X,\omega)\cap C(X)$ satisfies
+\[
+ \omega_\varphi^n=\mu\leq A\omega_u^n,
+ \qquad A>0.
+\]
+Then $\varphi$ is H\"older continuous with exponent
+\[
+ \beta=\frac{\alpha}{(\alpha+2n)(6n+1)+\alpha}>0.
+\]
+Its H\"older constant is uniform for fixed bounds on $A$, $\|u\|_{C^{0,\alpha}}$ and the oscillation of $\varphi$.
+\end{theorem}
+\begin{proof}
+Normalize $\sup_X\varphi=0$ and write $M=\|\varphi\|_\infty$. By \cref{prop:holder-reference-capacity}, the measure $\mu$ has a square-capacity bound with a fixed constant. Put
+\[
+ \eta=\frac{2\alpha}{\alpha+2n},\qquad
+ \gamma=\frac1{6n+1},\qquad q=\eta\gamma/2<1.
+\]
+The weighted estimate of \cref{lem:holder-reference-chern-error} gives $\|R_\delta\varphi-\varphi\|_{L^1(\mu)}\leq C\delta^\eta$.
+
+Use the constants $A_0,K$ of \cref{lem:chern-kiselman-input}, taking $A_0\geq1$, and define the unshifted transform
+\[
+ F=\inf_{0<t\leq\delta}
+       \{R_t\varphi+Kt^2+Kt-b\log(t/\delta)\}.
+\]
+It differs from $\Phi_{b,\delta}$ by the constant $K(\delta^2+\delta)$, so
+\[
+ \omega+\ddc F\geq-(A_0b+2K\delta)\omega,
+ \qquad \varphi\leq F\leq R_\delta\varphi+2K\delta
+\]
+when $\delta\leq1$. Choose $\varepsilon=\delta^q$ and $b=(\varepsilon-2K\delta)/A_0$. For small $\delta$, $\varepsilon\leq1/2$ and $\varepsilon/(2A_0)\leq b\leq\varepsilon/A_0$.
+
+Set $T=(1-\varepsilon)F$. Then $\omega+\ddc T\geq\varepsilon^2\omega$. The transform is continuous: its positive logarithmic penalty excludes radii near zero uniformly in the base point for each fixed $\delta,b$, and the minimum of its continuous defining function on the resulting compact interval depends continuously on the base point. Take $B\geq M+2K+1$ and set $\psi=T-B\varepsilon$. Since $R_\delta\varphi\leq0$, we have $-M-B\leq\psi\leq0$. Moreover,
+\[
+ \psi-\varphi
+ \leq(1-\varepsilon)(R_\delta\varphi-\varphi+2K\delta)
+                         +\varepsilon(M-B)
+ \leq(1-\varepsilon)(R_\delta\varphi-\varphi+2K\delta).
+\]
+The weighted smoothing estimate and the fixed bound for $\mu(X)$ give $\int(\psi-\varphi)_+\,\mathrm d\mu\leq C\delta^\eta$. Thus \cref{prop:capacity-square-one-sided-stability}, with a fixed competitor bound $H\geq M+B+1$, gives
+\[
+ \sup_X(T-\varphi)\leq C\delta^{\eta\gamma}+B\varepsilon\leq C_1\varepsilon.
+\]
+Since $\varphi\leq0$,
+\[
+ 0\leq F-\varphi
+ =\frac{T-\varphi+\varepsilon\varphi}{1-\varepsilon}
+ \leq2C_1\varepsilon.
+\]
+At a minimizing radius $t_0\in(0,\delta]$, monotonicity of $R_t\varphi+Kt^2$ implies
+\[
+ b\log(\delta/t_0)\leq F-\varphi\leq2C_1\varepsilon,
+ \qquad t_0\geq\kappa\delta,
+ \quad\kappa=\exp(-4A_0C_1)>0.
+\]
+The constant $\kappa$ is independent of $\delta$ and the point. Applying monotonicity again gives $R_{\kappa\delta}\varphi-\varphi\leq2C_1\delta^q$. With the lower bound $R_r\varphi-\varphi\geq-Kr^2$ and $r=\kappa\delta$, this proves $\|R_r\varphi-\varphi\|_\infty\leq Cr^q$.
+
+Finally \cref{lem:chern-smoothing-integral} gives $\|\nabla R_r\varphi\|_\infty\leq C/r$. For points a distance $s$ apart,
+\[
+ |\varphi(x)-\varphi(y)|\leq2Cr^q+Cs/r.
+\]
+Take $r=s^{1/(1+q)}$ for small $s$; boundedness handles larger distances. The exponent is $q/(1+q)=\beta$.
+\end{proof}
