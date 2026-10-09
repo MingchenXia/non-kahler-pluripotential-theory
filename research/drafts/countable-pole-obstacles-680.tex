@@ -1,0 +1,104 @@
+\subsection{Countable poles and all obstacles}
+\label{subsec:countable-pole-obstacles}\index{Pole set!countable dense poles}\index{Envelope!countable poles}
+
+A fixed potential that is more singular than every finite stretch of a given potential supplies ordinary competitors below all continuous obstacles. We construct such a pair with poles on any prescribed countable set. The potentials have trivial multiplier ideals even when their poles are dense, so both envelopes lose this ordinary singularity information.
+
+Let $h$ be a Hermitian form on the connected compact complex manifold $X$ of dimension $n\geq1$, and fix a smooth positive probability volume form $\mathrm dV$. Below a continuous obstacle we use the same competitor definitions as in \cref{def:singularity-envelope,def:hermitian-i-envelope}, with the bound $v\leq F$.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:countable-pole-stretching}\index{Relative envelope class!countable poles}
+For every nonempty finite or countably infinite subset $\{x_j\}\subset X$, there are nonpositive $u,w\in\PSH(X,h)$ such that
+\[
+ h+\ddc u,\ h+\ddc w\geq\tfrac34h,
+ \qquad u(x_j)=w(x_j)=-\infty.
+\]
+The same $w$ satisfies $tw\preceq u$ for every $0<t\leq1$, and
+\[
+ u\in\mathcal E_{\mathrm{env}}(X,h,0),\qquad
+ \mathrm e^{-su},\ \mathrm e^{-sw}\in L^1(X,\mathrm dV)
+ \quad(s>0).
+\]
+Thus $\mathcal I(su)=\mathcal I(sw)=\mathcal O_X$ for every $s>0$. If the prescribed set is dense, both potentials are unbounded on every nonempty open set.
+\end{theorem}
+\begin{proof}
+Fix $0<\beta<\beta'<1$. Choose a finite atlas of relatively compact charts with larger coordinate neighborhoods, on which the coefficients of $\mathrm dV$ are uniformly bounded. For each $x_j$, choose a coordinate ball of radius $r_j\leq1$ centered at $z_j$, contained in one of the larger charts. Let $\chi$ be a smooth cutoff supported inside the unit ball, with $0\leq\chi\leq1$ and $\chi=1$ near zero. On this ball set
+\[
+ \chi_j(z)=\chi((z-z_j)/r_j),\qquad
+ L_j=1-\log(|z-z_j|^2/r_j^2).
+\]
+The functions $-\chi_jL_j^\sigma$, for $\sigma=\beta,\beta'$, extend by zero outside the ball. Near the center they are plurisubharmonic: for $s=\log(|z-z_j|^2/r_j^2)$ the profile $q_\sigma(s)=-(1-s)^\sigma$ has
+\[
+ q_\sigma'=\sigma(1-s)^{\sigma-1}>0,
+ \qquad q_\sigma''=\sigma(1-\sigma)(1-s)^{\sigma-2}>0.
+\]
+To justify the extension across the center, take a smooth nondecreasing $\zeta$ equal to zero on $(-\infty,-2]$ and one on $[-1,+\infty)$. For large $A$ put
+\[
+ q_{\sigma,A}'(s)=q_\sigma'(s)\zeta(s/A),\qquad
+ q_{\sigma,A}(s)=q_\sigma(0)-\int_s^0q_{\sigma,A}'(v)\,\mathrm dv.
+\]
+These profiles are convex and increasing, constant near the center, and agree with $q_\sigma$ on $s\geq-A$. As $A$ increases they decrease to $q_\sigma$, including its value $-\infty$ at the center. Radial integrability gives convergence in $L^1$. The cutoff annulus is unchanged for large $A$, and its Hessian has a finite lower bound. After a fixed local quadratic correction, the decreasing-limit theorem gives the canonical quasi-plurisubharmonic extension; its current bound passes to the limit.
+
+Put $e_j=2^{-j-2}$. Scale both profiles by the same $0<\delta_j\leq2^{-j}$ so that the nonpositive functions
+\begin{equation}\label{eq:countable-pole-terms}
+ a_j=-\delta_j\chi_jL_j^\beta,
+ \qquad c_j=-\delta_j\chi_jL_j^{\beta'},
+ \qquad \ddc a_j,\ \ddc c_j\geq-e_jh
+\end{equation}
+have these lower bounds globally. This is possible because only the smooth cutoff annulus can contribute a negative Hessian. Coordinate rescaling and the finite atlas give
+\[
+ \|a_j\|_{L^1}+\|c_j\|_{L^1}\leq C\delta_j.
+\]
+Consequently the nonpositive partial sums decrease with uniformly bounded $L^1$ norms. By \cref{cor:decreasing-limit}, they define potentials
+\[
+ u=\sum_j a_j,\qquad w=\sum_j c_j
+\]
+with the stated canonical values and with currents at least $(1-\sum_j e_j)h\geq3h/4$. Each prescribed point is a pole of its own summand. This also proves the assertion when the prescribed set is dense.
+
+For $b\geq1$ let
+\[
+ S=\sum_j\delta_j>0,\qquad
+ M_b=\max\{0,\sup_{L\geq1}(bL^\beta-L^{\beta'})\}<\infty.
+\]
+Multiplying the defining inequality by $\delta_j\chi_j$ and summing gives
+\begin{equation}\label{eq:countable-fixed-minorant}
+ w\leq bu+M_bS.
+\end{equation}
+The inequality first holds for finite sums and then for their decreasing limits, including common poles. Taking $b=1/t$ gives $tw\preceq u$. Since $h>0$, convexity with zero makes $tw$ $h$-plurisubharmonic. Also $w-M_bS\leq bu$ is an $h$-plurisubharmonic stretching competitor for every $b\geq1$, so \cref{def:relative-envelope-class} gives $u\in\mathcal E_{\mathrm{env}}(X,h,0)$.
+
+It remains to prove integrability at every positive exponential scale. Fix $s>0$ and use Jensen's inequality with weights $\delta_j/S$, assigning the unused weight in each finite sum to zero:
+\[
+ \mathrm e^{-s\sum_{j\leq N}a_j}
+ \leq1-\sum_{j\leq N}\frac{\delta_j}{S}
+     +\sum_{j\leq N}\frac{\delta_j}{S}
+          \mathrm e^{sS\chi_jL_j^\beta}.
+\]
+The integrals on the right are bounded uniformly in $j$, since coordinate rescaling reduces the contribution inside the ball to a constant times
+\[
+ \int_0^1\exp\bigl(sS(1-\log R^2)^\beta\bigr)R^{2n-1}\,\mathrm dR.
+\]
+With $x=-\log R^2$, its exponent is $-nx+sS(1+x)^\beta$, which is at most $-nx/2$ for large $x$. Integrating the Jensen inequality and using monotone convergence proves $\mathrm e^{-su}\in L^1$. The same calculation with $\beta'$ proves the assertion for $w$. Every holomorphic germ is bounded on a smaller coordinate neighborhood, so \cref{def:multiplier-ideal} gives the stated trivial ideals.
+\end{proof}
+
+\Needspace{10\baselineskip}
+\begin{proposition}\label{prop:countable-pole-all-obstacles}\index{Envelope!all continuous obstacles}
+For the potentials of \cref{thm:countable-pole-stretching} and every $F\in C(X,\mathbb R)$,
+\[
+ P_{h,F}[u]=P_{h,F}[u]_{\mathcal I}=P_h(F).
+\]
+In particular, $P_h[u]=P_h[u]_{\mathcal I}=0$.
+\end{proposition}
+\begin{proof}
+Put $Q=P_h(F)$. The constant $\min_XF$ is a competitor. The envelope construction of \cref{sec:obstacle-envelopes}, which preserves the exact lower current bound for the nonclosed form $h$, gives $Q\in\PSH(X,h)$ and
+\[
+ \min_XF\leq Q\leq F\leq\max_XF.
+\]
+Since $Q$ is bounded, all its multiplier ideals are trivial. Thus $Q\sim_{\mathcal I}u$, making $Q$ itself a competitor for the ideal envelope below $F$. Every ideal competitor is an unrestricted competitor for $P_h(F)$, so $P_{h,F}[u]_{\mathcal I}=Q$.
+
+For $0<t<1$ set
+\[
+ A_t=(1-t)Q+tw-t\|F\|_\infty.
+\]
+Convexity gives $A_t\in\PSH(X,h)$, and $w\leq0$ implies $A_t\leq(1-t)F-t\|F\|_\infty\leq F$. Boundedness of $Q$ and \eqref{eq:countable-fixed-minorant} with $b=1/t$ give $A_t\preceq u$. Hence the ordinary envelope $O=P_{h,F}[u]$ has a competitor and satisfies $A_t\leq O\leq Q$. Its regularized supremum is $h$-plurisubharmonic by the same envelope construction. Where $w$ is finite, $A_t\to Q$ as $t\downarrow0$. Thus $O=Q$ almost everywhere, and \cref{lem:qpsh-almost-everywhere-order} gives equality everywhere. For $F=0$, zero is an unrestricted competitor, so $P_h(0)=0$.
+\end{proof}
+
+For a dense prescribed set, the ordinary type of $u$ differs from the bounded type, although their envelopes agree below every continuous obstacle. The construction applies to every positive Hermitian background, including one with unbounded upper mass or zero lower mass. It does not decide whether equality below zero alone implies all-obstacle equality for an arbitrary potential and an admissible smooth background.
