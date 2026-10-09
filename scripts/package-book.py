@@ -1700,6 +1700,7 @@ selected.update(root / name for name in ['research/audits/hermitian-hessian-comp
 selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-regularity-review-604.json', 'research/editorial/hermitian-hessian-continuous-regularity-review-604.md', 'research/source-disposition-604.json', 'research/drafts/hermitian-hessian-continuous-regularity-604.tex'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-foundations-review-605.json', 'research/editorial/hermitian-hessian-continuous-foundations-review-605.md', 'research/source-disposition-605.json', 'research/drafts/hermitian-hessian-continuous-foundations-605.tex'])
 selected.update(root / name for name in ['research/audits/continuous-hermitian-hessian-book-integration-606.json', 'research/editorial/continuous-hermitian-hessian-book-integration-606.md', 'research/source-disposition-606.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-integration-612.json', 'research/editorial/hermitian-hessian-bounded-currents-integration-612.md', 'research/source-disposition-612.json'])
 selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-review-611.json', 'research/editorial/hermitian-hessian-bounded-currents-review-611.md', 'research/source-disposition-611.json', 'research/drafts/hermitian-hessian-bounded-currents-611.tex'])
 selected.update(root / name for name in ['research/audits/hopf-basic-perron-integration-610.json', 'research/editorial/hopf-basic-perron-integration-610.md', 'research/source-disposition-610.json'])
 selected.update(root / name for name in ['research/audits/hopf-basic-perron-primary-review-609.json', 'research/editorial/hopf-basic-perron-primary-review-609.md', 'research/source-disposition-609.json', 'research/drafts/hopf-basic-perron-geometry-609.tex', 'research/papers/S10-Hopf-Perron-geometry-and-metric-actions.tex'])
@@ -1718,6 +1719,88 @@ for submission in (root / "research/rethlas/verification/inputs").glob("*.md"):
     if match and match.group(1) in completed_runs:
         selected.add(submission)
 
+selected.update(root / name for name in [
+    '.gitattributes',
+    'BLUEPRINT.md',
+    'CHANGELOG.md',
+    'research/STATUS.md',
+    'research/papers/S11-zero-Lelong-residuals-and-blowups-at-poles.tex',
+    'research/xean/README.md',
+    'research/xean/results/GitHub-S10-Hopf-basic-Perron-A-H-push-20261008.json',
+    'research/xean/results/S10-S11-delayed-native-app-actual-host-unavailable-responses-20261008.json',
+    'research/xean/results/S10-release-confirmed-current-summary-refresh-20261008.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarification-and-current-source-20261008.pending.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarified-20261008-build.json',
+    'research/xean/results/S11-before-Gauduchon-dimension-clarification-20261008-source.tex',
+    'research/xean/results/S11-normal-fast-forward-preserve-four-author-commits-20261008.json',
+    'research/xean/results/S11-small-curvature-current-LF-primary-read-and-application-assessment-20261008.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-inclusive-full-review-argument-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-scoped-full-review-task-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-input-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-targets-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-checked-result-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-before-assembly-scope-clarification-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-inclusive-final-comparison-argument.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task-preparation.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-final-root-audit-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-release-20261008-build.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-before-release-wording-20261008-source.tex',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-exact-wording-change-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-native-app-actual-responses-20261008.json',
+])
+selected.update(root / name for name in ['research/audits/small-curvature-S11-primary-review-613.json', 'research/editorial/small-curvature-S11-primary-review-613.md', 'research/source-disposition-613.json', 'research/drafts/zero-lelong-ideal-neutrality-613.tex', 'research/drafts/small-curvature-strict-types-613.tex', 'research/drafts/small-curvature-intrinsic-traces-613.tex', 'research/drafts/ruled-pole-blowup-obstruction-613.tex'])
+selected.update(root / name for name in ['research/audits/small-curvature-S11-integration-614.json', 'research/editorial/small-curvature-S11-integration-614.md', 'research/source-disposition-614.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-review-615.json', 'research/editorial/hermitian-hessian-sobolev-review-615.md', 'research/source-disposition-615.json', 'research/drafts/hermitian-hessian-sobolev-two-factors-615.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-integration-616.json', 'research/editorial/hermitian-hessian-sobolev-integration-616.md', 'research/source-disposition-616.json'])
+selected.update(root / name for name in ['research/audits/hessian-two-products-sobolev-capacity-review-617.json', 'research/editorial/hessian-two-products-sobolev-capacity-review-617.md', 'research/source-disposition-617.json', 'research/drafts/hessian-two-products-sobolev-capacity-617.tex'])
+selected.update(root / name for name in ['research/audits/hessian-two-products-capacity-integration-618.json', 'research/editorial/hessian-two-products-capacity-integration-618.md', 'research/source-disposition-618.json'])
+selected.update(root / name for name in ['research/audits/hessian-local-shift-capacity-review-619.json', 'research/editorial/hessian-local-shift-capacity-review-619.md', 'research/source-disposition-619.json', 'research/drafts/hessian-local-shift-capacity-transfer-619.tex'])
+selected.update(root / name for name in ['research/audits/hessian-local-correction-integration-620.json', 'research/editorial/hessian-local-correction-integration-620.md', 'research/source-disposition-620.json'])
+selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-review-621.json', 'research/editorial/hessian-smooth-capacity-review-621.md', 'research/source-disposition-621.json', 'research/drafts/hessian-smooth-capacity-convergence-621.tex'])
+selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-integration-622.json', 'research/editorial/hessian-smooth-capacity-integration-622.md', 'research/source-disposition-622.json'])
+selected.update(root / name for name in ['research/audits/hessian-top-capacity-review-623.json', 'research/editorial/hessian-top-capacity-review-623.md', 'research/source-disposition-623.json', 'research/drafts/hessian-top-capacity-weighted-623.tex'])
+selected.update(root / name for name in ['research/audits/hessian-top-capacity-integration-624.json', 'research/editorial/hessian-top-capacity-integration-624.md', 'research/source-disposition-624.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-locality-review-625.json', 'research/editorial/hessian-bounded-locality-review-625.md', 'research/source-disposition-625.json', 'research/drafts/hessian-bounded-locality-625.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-locality-integration-626.json', 'research/editorial/hessian-bounded-locality-integration-626.md', 'research/source-disposition-626.json'])
+selected.update(root / name for name in ['research/audits/hessian-mass-comparison-review-627.json', 'research/editorial/hessian-mass-comparison-review-627.md', 'research/source-disposition-627.json', 'research/drafts/hessian-mass-comparison-627.tex'])
+selected.update(root / name for name in ['research/audits/hessian-mass-comparison-integration-628.json', 'research/editorial/hessian-mass-comparison-integration-628.md', 'research/source-disposition-628.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-domination-review-629.json', 'research/editorial/hessian-bounded-domination-review-629.md', 'research/source-disposition-629.json', 'research/drafts/hessian-bounded-domination-629.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-domination-integration-630.json', 'research/editorial/hessian-bounded-domination-integration-630.md', 'research/source-disposition-630.json'])
+selected.update(root / name for name in ['research/audits/hessian-proper-data-review-631.json', 'research/editorial/hessian-proper-data-review-631.md', 'research/source-disposition-631.json', 'research/drafts/hessian-proper-data-631.tex'])
+selected.update(root / name for name in ['research/audits/hessian-proper-data-integration-632.json', 'research/editorial/hessian-proper-data-integration-632.md', 'research/source-disposition-632.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-review-633.json', 'research/editorial/hessian-bounded-nonvanishing-review-633.md', 'research/source-disposition-633.json', 'research/drafts/hessian-bounded-nonvanishing-633.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-integration-634.json', 'research/editorial/hessian-bounded-nonvanishing-integration-634.md', 'research/source-disposition-634.json'])
+selected.update(root / name for name in ['research/audits/hessian-local-comparison-interface-635.json', 'research/editorial/hessian-local-comparison-interface-635.md', 'research/source-disposition-635.json', 'research/drafts/hessian-local-comparison-interface-635.tex'])
+selected.update(root / name for name in ['research/audits/hessian-local-comparison-example-integration-636.json', 'research/editorial/hessian-local-comparison-example-integration-636.md', 'research/source-disposition-636.json'])
+selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-review-637.json', 'research/editorial/hessian-global-modified-comparison-review-637.md', 'research/source-disposition-637.json', 'research/drafts/hessian-global-modified-comparison-637.tex'])
+selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-integration-638.json', 'research/editorial/hessian-global-modified-comparison-integration-638.md', 'research/source-disposition-638.json'])
+selected.update(root / name for name in ['research/audits/chapter12-reader-coherence-639.json', 'research/editorial/chapter12-reader-coherence-639.md', 'research/source-disposition-639.json'])
+selected.update(root / name for name in ['research/audits/introduction-hessian-coherence-640.json', 'research/editorial/introduction-hessian-coherence-640.md', 'research/source-disposition-640.json'])
+selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-review-641.json', 'research/editorial/curve-fibration-polar-metric-review-641.md', 'research/source-disposition-641.json', 'research/drafts/curve-fibration-polar-metric-641.tex'])
+selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-integration-642.json', 'research/editorial/curve-fibration-polar-metric-integration-642.md', 'research/source-disposition-642.json'])
+selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-review-643.json', 'research/editorial/hopf-curve-submersion-example-review-643.md', 'research/source-disposition-643.json', 'research/drafts/hopf-curve-submersion-example-643.tex'])
+selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-integration-644.json', 'research/editorial/hopf-curve-submersion-example-integration-644.md', 'research/source-disposition-644.json'])
+selected.update(root / name for name in ['research/audits/curve-map-critical-fiber-review-645.json', 'research/editorial/curve-map-critical-fiber-review-645.md', 'research/source-disposition-645.json', 'research/drafts/curve-map-critical-fiber-models-645.tex'])
+selected.update(root / name for name in ['research/audits/critical-curve-fiber-model-integration-646.json', 'research/editorial/critical-curve-fiber-model-integration-646.md', 'research/source-disposition-646.json'])
+selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-review-647.json', 'research/editorial/curve-backgrounds-finite-factors-review-647.md', 'research/source-disposition-647.json', 'research/drafts/curve-backgrounds-finite-factors-647.tex'])
+selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-integration-648.json', 'research/editorial/curve-backgrounds-finite-factors-integration-648.md', 'research/source-disposition-648.json'])
+selected.update(root / name for name in ['research/audits/curve-component-factor-review-649.json', 'research/editorial/curve-component-factor-review-649.md', 'research/source-disposition-649.json', 'research/drafts/curve-component-factor-649.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

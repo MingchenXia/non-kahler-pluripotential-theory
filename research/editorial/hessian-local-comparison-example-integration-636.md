@@ -1,0 +1,17 @@
+# Local Hessian comparison example — checkpoint636
+
+Chapter12 adds a computed example beside the local correction lemma: shifted Hessian order does not determine raw Hessian order, even when both shifted forms are positive. The correction identity retains the smooth remainder. Two local spacing controls keep a capacity lemma and its explanatory display together; no mathematical content of that prior proof changes.
+
+The complete329-line bounded-current input and563-line capacity input each receive two actual final manual reads. All1357 other old proof bodies and1448 prior statements are byte-exact; one old proof changes only by a spacing command. All23 questions, both original manifests and incoming S10/S11 payloads remain preserved. The new example is12.8.1 on451. No boundary data are imposed, so it is not a counterexample to a comparison theorem.
+
+Three clean full author builds produce1679 printed/1707 physical pages. Each public PDF, matching homepage description and exact-head successful Actions/Pages deployment is checked. The final output has10088 internal links and1062 source-matched index locators. The first review covers47 selected pages, with29 directly viewed and18 pixel-identical carried from634; the second covers47 with12 directly viewed and35 pixel-identical carried; the final covers49 with6 directly viewed and43 pixel-identical carried. Both complete intervening1707-page text comparisons pass at their recorded changed-page scopes. All altered/adjoining capacity pages are inspected. The final main and companion covers are directly viewed and show October9,2026. The companion command is up to date; the actual632 compile is carried and all17 page texts match634 reconstruction.
+
+The same catalogue retains44 full descriptions and40 open assessment scopes, with255 single-page/26 range locators refreshed. Saved-source native compiler call39 yields no diagnostics after three bounded waits and is terminated; its preview remains unverified. The same editor stays open and no separate catalogue PDF is built.
+
+Gu-Nguyen1604.08029v4 source definitions and selected comparison mechanism are read; published metadata and exact downloads are identified. The source bounded class uses a locally conformal Kahler reference. No new external full dependency certificate, bounded theorem adoption, novelty claim, original problem closure or whole-book certificate is made. No fresh arXiv listing scan occurs;631 coverage is carried. The base automatic writing audit is unavailable; the recorded reads are manual.
+
+Reconstruct global weak modified comparison for bounded shifted Hessian measures from the mixed maximum theorem and weighted torsion currents. Check the exact mixed-degree recurrence and absorption constants before extending strict domination beyond the partial-power regime. Consult the published Gu-Nguyen weak comparison dependency at its precise scope. Then integrate only fully reviewed arguments and update superseded hypotheses and callers. Continue incoming-author checks, related primary research and the whole-book reader queue; Xean remains withdrawn.
+
+See [the scoped audit](../audits/hessian-local-comparison-example-integration-636.json).
+
+Actual empty reconstruction passes3044 safe paths,3043 current payload checksums and410 byte-exact packaged book sources. All1707 main-book and17 companion page texts match production, final logs are clean and publication is disabled. Final metadata packaging reuses these actual rebuilt outputs; no second empty reconstruction is claimed.

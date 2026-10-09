@@ -1,0 +1,355 @@
+% Inactive research reconstruction, checkpoint623. Not a book input.
+% Scope: the existing chapter's 2 <= m < n, canonical bounded class.
+% KN26 already establishes Hermitian Hessian weighted decreasing limits;
+% this draft makes no novelty claim and does not certify that whole paper.
+\section{Top-degree smooth capacity and weighted positive products}
+\label{draft623:top-capacity}
+
+Let $X$ be the chapter's compact Hermitian manifold of dimension $n$,
+with $2\leq m<n$. On a coordinate ball $U$ compactly contained in a
+holomorphic chart, keep the same Hermitian form $\omega$ and the local
+unshifted cone of \cref{hessian:local-unshifted-correction}.
+The results of \cref{sec:hessian-smooth-capacity} are inputs at their
+stated degrees. The missing torsion estimate at degree $m-1$ can be
+proved by summing the diagonal wedge coefficients before taking
+absolute values. No positivity of the associated $(n-2,n-2)$-form is
+assumed.
+
+Write $S_k(\lambda)$ for the unnormalized elementary symmetric
+polynomial and $S_{k;I}$ for the polynomial with coordinates in $I$
+omitted. Put $S_0=1$ and $S_k=0$ above the length of the list.
+
+\begin{lemma}\label{draft623:deleted-newton}
+If $\lambda\in\overline{\Gamma_m}$, $1\leq q\leq m-1$, and $i\ne j$,
+then, with $N=n-2$ and
+\[
+ c_{N,q}=\frac{q(N-q)}{(q+1)(N-q+1)}<1,
+\]
+one has
+\[
+ |S_{q;ij}(\lambda)|^2
+ \leq\frac{S_{q;i}(\lambda)S_{q;j}(\lambda)}{1-c_{N,q}}.
+\]
+This includes $q=N$, when $c_{N,N}=0$.
+\end{lemma}
+\begin{proof}
+First prove the unnormalized Newton inequality for an arbitrary real
+list $\mu$ of length $N$. For $1\leq q<N$, put
+$R(x)=\prod_{a=1}^N(x+\mu_a)$ and
+$G=R^{(N-q-1)}$. Repeated Rolle's theorem makes $G$ a real-rooted
+polynomial of degree $d=q+1$. Away from its roots $r_a$, logarithmic
+differentiation and Cauchy--Schwarz give
+\[
+ G'^2-GG''=G^2\sum_{a=1}^d\frac1{(x-r_a)^2}
+ \geq \frac1dG^2\left(\sum_{a=1}^d\frac1{x-r_a}\right)^2
+ =\frac1dG'^2.
+\]
+Continuity extends this polynomial inequality to every real $x$.
+At zero,
+\[
+ G=(N-q-1)!S_{q+1}(\mu),\quad
+ G'=(N-q)!S_q(\mu),\quad
+ G''=(N-q+1)!S_{q-1}(\mu).
+\]
+Consequently
+$S_{q-1}(\mu)S_{q+1}(\mu)\leq c_{N,q}S_q(\mu)^2$.
+No sign restriction on $\mu$ or on these coefficients was used.
+For $q=N$, its left side is zero and the same assertion holds
+with $c_{N,N}=0$.
+
+Apply this to the list with $i,j$ deleted. Put
+$A=S_{q-1;ij}$, $B=S_{q;ij}$, $C=S_{q+1;ij}$ and
+$D_i=S_{q;i}$, $D_j=S_{q;j}$. Deleted-coordinate positivity gives
+$A,D_i,D_j\geq0$: the required degrees are $q+1\leq m$.
+Splitting in the two omitted coordinates gives the exact identity
+\[
+ D_iD_j=A S_{q+1}(\lambda)+B^2-AC.
+\]
+Since $S_{q+1}(\lambda)\geq0$ and $AC\leq c_{N,q}B^2$, this is
+at least $(1-c_{N,q})B^2$. There is no division by $A$ or $D_i$;
+all degenerate endpoints are therefore included. Equivalently one
+may first add $\epsilon\mathbf1$ and pass to the closed cone.
+\end{proof}
+
+\begin{lemma}\label{draft623:top-torsion}
+Let $0\leq q\leq m-1$ and let $S$ be a smooth real $(1,1)$-form
+in $\overline{\Gamma_m(\omega)}$ pointwise. For smooth real $f$
+and nonnegative Borel $a$ supported on a fixed compact coordinate set,
+\[
+ \left|\int a\,\mathrm df\wedge\dc\omega\wedge S^q\omega^{n-q-2}\right|
+ \leq C\left(\int a\,\mathrm df\wedge\dc f\wedge
+                           S^q\omega^{n-q-1}\right)^{1/2}
+          \left(\int a\,S^q\omega^{n-q}\right)^{1/2}.
+\]
+The conjugate estimate with $\dc f\wedge\mathrm d\omega$ holds.
+For a mixed product, a finite sum of these single-power bounds over
+subset sums of its factors suffices.
+\end{lemma}
+\begin{proof}
+For $q=0$ the estimate in \cref{hessian:smooth-torsion} applies.
+For $q\geq1$, at one point choose an $\omega$-unitary coframe $e_i$
+that diagonalizes $S$. Put $\epsilon_i=\mathrm i e_i\wedge\bar e_i$
+and $\Omega=\epsilon_1\cdots\epsilon_n$, so that
+$\omega=\sum_i\epsilon_i$ and $S=\sum_i\lambda_i\epsilon_i$.
+Writing $B_{ij}=S_{q;ij}(\lambda)$ and $D_i=S_{q;i}(\lambda)$,
+ordinary wedge expansion gives
+\[
+ S^q\omega^{n-q-2}
+ =q!(n-q-2)!\sum_{i<j}B_{ij}
+                           \prod_{k\notin\{i,j\}}\epsilon_k.
+\]
+Only the remaining two-plane contributes to its wedge with
+$\mathrm df\wedge\dc\omega$. If $\partial f=\sum_i f_i e_i$,
+its absolute density relative to $\Omega$ is bounded by
+\[
+ C\sum_{i<j}(|f_i|+|f_j|)|B_{ij}|.
+\]
+The constant bounds the tensor coefficients of $\dc\omega$ in all
+unitary frames on the fixed compact set. Diagonalization is only
+pointwise; no derivative of this moving frame is taken.
+
+The preceding lemma and finite Cauchy--Schwarz bound this sum by
+\[
+ C\sum_i|f_i|\sqrt{D_i}\sum_j\sqrt{D_j}
+ \leq C\left(\sum_i|f_i|^2D_i\right)^{1/2}
+          \left(\sum_iD_i\right)^{1/2}.
+\]
+Here $\sum_iD_i=(n-q)S_q(\lambda)$. Moreover
+\[
+ \begin{aligned}
+ S^q\omega^{n-q}&=q!(n-q)!S_q(\lambda)\Omega,\\
+ \mathrm df\wedge\dc f\wedge S^q\omega^{n-q-1}
+   &=\kappa q!(n-q-1)!\sum_i|f_i|^2D_i\,\Omega,
+ \end{aligned}
+\]
+where $\kappa=1/(2\pi)$ by the book's $\dc$ normalization.
+These two densities are nonnegative. Thus the pointwise torsion
+density is bounded by a constant times their geometric mean.
+Multiplication by $a$ and integral Cauchy--Schwarz give the assertion,
+including the cases where either density vanishes. The other wedge
+is conjugate up to a fixed sign, which does not affect its absolute
+value. For a mixed product use the exact polarization identity in
+\cref{hessian:smooth-torsion}; every subset sum stays in the cone.
+No strong positivity at $q=m-1$ is asserted.
+\end{proof}
+
+Define $c_m$ and $c_m^*$ by the formulas in
+\cref{hessian:smooth-local-capacity}, now with $s=m$.
+The smooth CLN bound in \cref{hessian:local-smooth-bounds} makes
+this capacity finite on compact subsets. The same suprema show
+monotonicity, countable subadditivity and continuity under increasing
+unions; the outer-open version agrees on open sets.
+The smooth mixed-trace domination in
+\eqref{eq:hessian:smooth-capacity-bound} holds at $s=m$, because
+it uses only positive mixed traces of at most $m$ cone factors.
+
+\begin{proposition}\label{draft623:top-capacity-convergence}
+For the sequence $v_j\downarrow v$ localized as in
+\cref{hessian:boundary-localization},
+\[
+ c_m\{v_k-v>\delta\}\longrightarrow0\qquad(\delta>0).
+\]
+Every bounded smooth decreasing local sequence has a pointwise limit
+quasicontinuous on compact subsets for $c_m$ and $c_m^*$.
+Every bounded canonical global admissible potential is locally
+quasicontinuous for these capacities.
+\end{proposition}
+\begin{proof}
+Let $q=m-1$, $\theta=\omega^{n-m}$ and $h=v_k-v_j\geq0$ for
+$j\geq k$. All differences have support in a fixed $K_0\Subset U$.
+The already proved capacity convergence at $s=m-1$, and smooth
+mixed-trace domination, give
+\[
+ \int h\,\ddc g_1\cdots\ddc g_q\omega^{n-q}\longrightarrow0
+\]
+uniformly in $j\geq k$ and all smooth local cone functions $g_i$
+with a fixed common bound. Indeed split at $h=\delta$, bound its
+small part by $C\delta$ using CLN, and bound the other part by
+$C c_{m-1}\{v_k-v>\delta\}$. Let $k\to\infty$ and then
+$\delta\downarrow0$.
+
+Put $w_t=v_j+t h$ and $E_m(w)=\int_U w(\ddc w)^m\theta$.
+The fixed smooth collar and the degree-$m$ CLN bound make these
+energies uniformly bounded. The exact identity
+\eqref{eq:hessian:energy-variation} holds with $s=m$, since its
+integration by parts uses only smoothness and compact support of $h$:
+\[
+ \frac{\mathrm d}{\mathrm dt}E_m(w_t)
+ =(m+1)\int h(\ddc w_t)^m\theta
+ +m\int h(\ddc w_t)^q
+       (\mathrm dw_t\wedge\dc\theta
+          -\dc w_t\wedge\mathrm d\theta+w_t\ddc\theta).
+\]
+In the first-order terms the torsion form is
+$(\ddc w_t)^q\omega^{n-q-2}$. The preceding torsion lemma bounds
+each integral by the product of a uniformly bounded gradient
+factor and a factor tending uniformly to zero by the lower weighted
+trace estimate. The gradient bound uses degree $q+1=m$, which is
+allowed by \cref{hessian:local-smooth-bounds}. The last term tends
+to zero by the absolute mixed-form bound at $q=m-1<m$.
+In full,
+\[
+ \begin{aligned}
+ \mathrm d\theta&=(n-m)\mathrm d\omega\wedge\omega^{n-m-1},\\
+ \ddc\theta&=(n-m)\ddc\omega\wedge\omega^{n-m-1}\\
+ &\quad+(n-m)(n-m-1)\mathrm d\omega\wedge\dc\omega
+                                              \wedge\omega^{n-m-2}.
+ \end{aligned}
+\]
+For $n-m=1$ the last term is absent, so no negative power is used.
+Thus
+\[
+ E_m(v_k)-E_m(v_j)=(m+1)\Delta_{kj}+r_{kj},\quad
+ \Delta_{kj}=\int_0^1\int h\Lambda_m(w_t)\,\mathrm dt\geq0,
+ \quad |r_{kj}|\leq e_k\longrightarrow0.
+\]
+The inequality $E_m(v_j)\leq E_m(v_k)+e_k$ and a subsequence
+approaching the liminf make the bounded energy sequence converge.
+Hence $\Delta_{kj}\to0$ uniformly in $j\geq k$.
+Since $\Lambda_m(w_t)\geq(1-t)^m\Lambda_m(v_j)$,
+\[
+ I_m:=\int h\Lambda_m(v_j)\longrightarrow0
+                                      \quad\text{uniformly in }j\geq k.
+\]
+
+For any smooth competitor $-1\leq a\leq0$, put
+\[
+ I_\ell=\int h(\ddc v_j)^\ell(\ddc a)^{m-\ell}\theta,\quad
+ \eta_\ell=(\ddc v_j)^\ell(\ddc a)^{m-\ell-1},\quad0\leq\ell<m.
+\]
+These integrals are nonnegative. Exact first-order Stokes gives
+\[
+ \begin{aligned}
+ I_\ell&=-\int\mathrm dh\wedge\dc a\wedge\eta_\ell\theta
+             +\int h\,\dc a\wedge\eta_\ell\mathrm d\theta,\\
+ F_\ell(h)&:=\int\mathrm dh\wedge\dc h\wedge\eta_\ell\theta\\
+ &=I_{\ell+1}-\int h\ddc v_k\wedge\eta_\ell\theta
+                +\int h\,\dc h\wedge\eta_\ell\mathrm d\theta.
+ \end{aligned}
+\]
+The second integral in the first line is $o(1)$ uniformly in $a$ and
+$j\geq k$. Apply mixed polarization in the torsion lemma: subset
+sums of the factors in $\eta_\ell$ have one common local bound,
+their gradient factors are bounded by CLN and their lower traces
+with weight $h$ tend to zero. The last integral has the same
+property. For that term the first factor is bounded by the energy
+of $h$, at most twice the sum of those of $v_k,v_j$ for each
+positive single-power gradient pairing; the second uses
+$h^2\leq C h$ and the lower weighted trace estimate.
+
+The form $\eta_\ell\theta$ has positive gradient pairing: appending
+one nonnegative rank-one form completes a polarized product of
+$m$ cone forms. Consequently Cauchy--Schwarz for this positive
+$(n-1,n-1)$-form and the uniform gradient bound for $a$ give
+\[
+ I_\ell\leq C F_\ell(h)^{1/2}+o(1),\qquad
+ F_\ell(h)\leq I_{\ell+1}+o(1).
+\]
+The dropped integral is nonnegative. Starting with $I_m\to0$,
+finite backward induction gives $I_0\to0$ uniformly over all
+competitors. Chebyshev's inequality and continuity of $c_m$ under
+increasing unions yield
+\[
+ c_m\{v_k-v>\delta\}
+   =\lim_{j\to\infty}c_m\{v_k-v_j>\delta\}
+   \leq\delta^{-1}\sup_{j\geq k,a}I_0\longrightarrow0.
+\]
+
+Choose a subsequence $k_N$ with
+$c_m(G_N)<\epsilon2^{-N}$ for the open sets
+$G_N=\{v_{k_N}-v>2^{-N}\}$. These sets are open because the
+pointwise decreasing limit $v$ is upper semicontinuous.
+Outside their union, $v_{k_N}\to v$ uniformly, proving continuity
+there. Countable subadditivity bounds the exceptional capacity by
+$\epsilon$. Boundary localization gives this conclusion on each
+compact subset of the original local ball; open-set equality also
+gives $c_m^*$. For a bounded global admissible $u$, apply its global
+smooth decreasing approximation and the local correction $u+\rho$
+from \cref{hessian:local-unshifted-correction}. Subtracting smooth
+$\rho$ preserves continuity on the complement of the exceptional
+open set and identifies the limit with the canonical values of $u$.
+\end{proof}
+
+\begin{lemma}\label{draft623:positive-capacity-domination}
+On $K\Subset U$, the positive shifted currents
+$Q_p(u_1,\ldots,u_p)$, $1\leq p\leq m$, for globally bounded
+admissible potentials have trace and coefficient variations bounded
+on Borel $E\subset K$ by $C c_m^*(E)$. The constants are uniform
+when all potentials have a common bound.
+\end{lemma}
+\begin{proof}
+First take smooth potentials, put $\sigma_i=\omega+\ddc u_i$, and
+choose the fixed local correction $\tau=\ddc\rho\geq2\omega$.
+Then
+$\beta_i=\ddc(u_i+\rho)=\sigma_i+(\tau-\omega)$ lies in the
+same local cone. Since $\tau-\omega\geq0$, mixed positivity gives
+\[
+ 0\leq\int_E Q_p\wedge\omega^{m-p}
+    \leq\int_E\beta_1\cdots\beta_p\omega^{n-p}
+    \leq C c_m(E),\qquad E\subset K.
+\]
+Here $Q_p\wedge\omega^{m-p}=\sigma_1\cdots\sigma_p\omega^{n-p}$.
+The last bound follows from smooth mixed-trace domination at $s=m$
+for the bounded corrected potentials and a normalized bounded sum with a fixed strictly
+plurisubharmonic function. Positivity of $Q_p$ bounds each of its
+coefficient variations on the compact coordinate set by a fixed
+multiple of its trace measure.
+
+For bounded potentials choose the smooth decreasing global
+approximations already established in the chapter. The joint
+convergence in \cref{hessian:joint-decreasing-products} identifies
+their positive-current limit with the previously constructed $Q_p$.
+On a compact neighborhood of $K$ inside $U$, lower semicontinuity
+on open sets preserves trace and coefficient variation estimates.
+For an arbitrary open $G\supset E$ intersect with a fixed relatively
+compact neighborhood of $K$ before taking this limit; its capacity
+is at most $c_m(G)$. Therefore every such trace or variation measure
+$\mu$ satisfies $\mu(E)\leq Cc_m(G)$. Infimize over $G$ to obtain
+the asserted outer-open bound. The constants of the smooth estimates
+are independent of the approximation index. The argument does not
+multiply a rough current of positive order or use an unproved rough
+diagonal polynomial expansion.
+\end{proof}
+
+\begin{theorem}\label{draft623:weighted-positive-products}
+Suppose $a_j\downarrow a$ and $u_i^j\downarrow u_i$ are bounded
+canonical global admissible potentials with common bounds. Then,
+for $1\leq p\leq m$,
+\[
+ a_j Q_p(u_1^j,\ldots,u_p^j)
+        \longrightarrow a Q_p(u_1,\ldots,u_p)
+\]
+weakly as currents with measure coefficients. At $p=m$ this is weak
+convergence of weighted Radon measures. No order-zero assertion for
+the unwedged $D_m$ is made.
+\end{theorem}
+\begin{proof}
+Work with one coefficient measure $\nu_j\to\nu$ on a coordinate
+chart; its weak convergence and local mass bound follow from
+\cref{hessian:joint-decreasing-products}. The preceding lemma bounds
+all these variations by $C c_m^*$ on a fixed compact test set.
+The capacity proposition makes every canonical $a_j$ and $a$
+quasicontinuous for this capacity. Allocate exceptional capacities
+summably to this countable family and take their open union $G$
+with $c_m(G)<\epsilon$. On the compact $F=K\setminus G$, all the
+weights are continuous and Dini's theorem gives uniform convergence
+$a_j\to a$. Extend $a|_F$ to a continuous $g$ on $U$ with the same
+bound $M$ by Tietze's theorem, taking $g=0$ if $F$ is empty.
+For a fixed $\phi\in C_c(U)$ with support in $K$, subtraction gives
+\[
+ \begin{split}
+ \left|\int\phi(a_j\,\mathrm d\nu_j-a\,\mathrm d\nu)\right|
+ &\leq\|\phi\|_\infty\|a_j-a\|_F|\nu_j|(K)
+      +\left|\int\phi g\,\mathrm d(\nu_j-\nu)\right|\\
+ &\quad+2M\|\phi\|_\infty
+                \bigl(|\nu_j|(K\cap G)+|\nu|(K\cap G)\bigr).
+ \end{split}
+\]
+The first two terms tend to zero for fixed $G$, and the last is at
+most $4MC\|\phi\|_\infty\epsilon$. Let $\epsilon\downarrow0$.
+Continuous extension is tested against the whole measure, avoiding
+any weak-limit claim for a discontinuous closed-set indicator.
+Repeat coefficientwise and use a finite partition of unity.
+The positive top-degree current is already a Radon measure, so the
+same argument gives the claimed weighted convergence at $p=m$.
+\end{proof}

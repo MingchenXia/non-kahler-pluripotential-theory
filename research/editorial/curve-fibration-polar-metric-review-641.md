@@ -1,0 +1,11 @@
+# Models over a curve — checkpoint641
+
+Four proofs extend the curve polar metric to the full model space of a rank-one background pulled back under a compact holomorphic submersion with connected fibers. Constant Gauduchon fiber volume normalizes the polar trace, giving an exact isometry, analytic closure, ideal retraction and an all-obstacle criterion; every top-degree mass is zero.
+
+The inactive212-line fragment receives two complete final manual reads and19 explicit proof checks. General descent, multiplier-ideal pullback and obstacle reprojection reuse their existing natural foundations. Selected internal proof consultations are recorded in the audit; no new external mathematical input or whole-chapter read is claimed. All413 book files,1361 proof bodies,1451 statements,23 formal questions, both catalogues, incoming S10/S11 and the original manifests are freshly preserved.
+
+Eight complete arXiv category payloads are freshly fetched on October9 and match631 byte for byte. Their extracted titles are present, but no new complete title reading is claimed. Viaclovsky2610.10451v1 is downloaded at exact checksums:35 PDF pages and2745 source lines. The actual selected reading is source1--342 and first-page PDF text, not the full proof or its external starting construction. Its critical and multiple fibers do not satisfy this draft's submersion hypotheses; none of its geometric assertions is adopted.
+
+No author build, homepage publication or native catalogue call occurs. The checked640 publication and October9 covers are carried unchanged; the catalogue native preview remains unverified. The current metadata package is checked against the actual640 empty reconstruction; all410 book sources and1711+17 page texts match. No new empty build is claimed. The broader research goal remains active; no original problem closes and Xean remains withdrawn.
+
+Next: Integrate the four proofs beside the zero-volume product constructions in Chapter16, preserving the submersion and connected-fiber hypotheses. Read the complete changed inputs and seams, rebuild and inspect, refresh the existing catalogue, verify the dated public release and reconstruct the source package. Then investigate singular-fiber extensions and related primary papers without importing their unreviewed assertions.
