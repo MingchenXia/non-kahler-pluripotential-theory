@@ -1794,6 +1794,7 @@ selected.update(root / name for name in ['research/audits/chapter12-reader-coher
 selected.update(root / name for name in ['research/audits/introduction-hessian-coherence-640.json', 'research/editorial/introduction-hessian-coherence-640.md', 'research/source-disposition-640.json'])
 selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-review-641.json', 'research/editorial/curve-fibration-polar-metric-review-641.md', 'research/source-disposition-641.json', 'research/drafts/curve-fibration-polar-metric-641.tex'])
 selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-integration-642.json', 'research/editorial/curve-fibration-polar-metric-integration-642.md', 'research/source-disposition-642.json'])
+selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-review-643.json', 'research/editorial/hopf-curve-submersion-example-review-643.md', 'research/source-disposition-643.json', 'research/drafts/hopf-curve-submersion-example-643.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
