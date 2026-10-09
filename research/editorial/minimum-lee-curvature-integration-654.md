@@ -1,0 +1,18 @@
+# Minimum Lee-curvature eigenvalue — integration 654
+
+Chapter 29 gives the strictly increasing Lee-curvature volume polynomial, the constant-least-eigenvalue semipositivity criterion and two explicit Hopf families in every dimension at least two. The proof reuses the established conformal Gauduchon nonvanishing argument. The semipositive representative also gives nefness and the balanced obstruction. Historical and research-program seams preserve the unrestricted P03 conjecture; indefinite Lee curvature and pointwise first degeneration do not refute it.
+
+The complete changed 279-line LCK root, complete new 189-line input and two exact 13-line seams receive pre-output and final post-output manual reads: 494 actual lines per pass. The complete historical and research-program roots and Chapter 29 recursive inputs are not claimed read anew. The four proof and statement bodies are byte-exact to the twice-read 653 draft. Its 28 obligations carry their exact scope. An elementary paragraph applies the existing nef definition and balanced obstruction; the later ordinary/twisted section explicitly restores the general LCK setting. The conjecture's introductory sentence no longer implies invented authorship.
+
+All 1378 old proof bodies and 1468 old statement blocks are byte-exact. The 23 formal questions, both original manifests and immutable S10/S11/P06/P03 evidence remain preserved. Active counts are 1369 proofs, 1455 formal blocks, 403 recursive inputs and 2834 labels; every target is defined. Historical qualifications 75 missing and 451 protected, and earlier whole-book, Chapter 12 and introduction reader passes, carry their exact prior scopes. No whole-chapter/book certificate or novelty claim is made.
+
+One clean full author build and publication pass: 1706 printed pages, 1734 physical pages, 10215 valid internal links and 1090 source-matched index locators across 14 index pages. All 25 selected final main-book pages in seven sheets and the companion cover are directly viewed. Both covers show October 9, 2026. The actual served PDF checksum and matching homepage description pass successful exact-head Actions and Pages deployment checks.
+
+The same catalogue retains 44 full descriptions and 40 open assessment scopes. Its 275 single-page and 26 range locators and formal chapter numbers are refreshed. P03 states the spectral condition, volume mechanism, invariant-quotient scope and both all-dimensional Hopf examples. The unrestricted problem is preserved, and every citation key is defined. The initial saved-source native compiler call did not return diagnostics and its waiting execution was terminated. A new call on the final saved catalogue source returned no diagnostics within 45 seconds. Native preview compilation remains unverified. The same editor and source are retained; no separate catalogue PDF, tab or local compiler is used.
+
+
+Actual empty reconstruction passes: all 414 packaged book sources are exact and all 1734 main-book and 17 companion page texts match production. Safe unique paths, current payload checksums, clean logs and disabled reconstruction publication pass.
+
+The automatic base writing audit remains unavailable; reads are manual. No new arXiv listing fetch or verifier execution is claimed. Earlier related-paper reading carries only its recorded scope.
+
+Next: Resume the finite-curve pullback direction and whole-book reader queues. Check incoming author updates before the next coherent unit and verify exact primary dependencies before adopting related recent papers. The 40 open assessment scopes remain active. Verify dated covers, the public PDF and the matching homepage after each successful full author build; Xean remains withdrawn.
