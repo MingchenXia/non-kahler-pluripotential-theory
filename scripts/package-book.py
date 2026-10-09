@@ -1816,6 +1816,7 @@ selected.update(root / name for name in ['BLUEPRINT.md', 'CHANGELOG.md', 'resear
 selected.update(root / name for name in ['research/audits/chapter4-reader-coherence-661.json', 'research/editorial/chapter4-reader-coherence-661.md', 'research/source-disposition-661.json'])
 selected.update(root / name for name in ['research/audits/smooth-hessian-adjoint-review-662.json', 'research/editorial/smooth-hessian-adjoint-review-662.md', 'research/source-disposition-662.json', 'research/drafts/section_gauduchon_hessian_adjoint_bounds.tex'])
 selected.update(root / name for name in ['research/audits/smooth-hessian-adjoint-integration-663.json', 'research/editorial/smooth-hessian-adjoint-integration-663.md', 'research/source-disposition-663.json'])
+selected.update(root / name for name in ['research/audits/oscillatory-controlled-hessian-review-664.json', 'research/editorial/oscillatory-controlled-hessian-review-664.md', 'research/source-disposition-664.json', 'research/drafts/gauduchon-oscillatory-controlled-hessians-664.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
