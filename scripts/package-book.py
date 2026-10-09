@@ -1797,6 +1797,7 @@ selected.update(root / name for name in ['research/audits/curve-fibration-polar-
 selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-review-643.json', 'research/editorial/hopf-curve-submersion-example-review-643.md', 'research/source-disposition-643.json', 'research/drafts/hopf-curve-submersion-example-643.tex'])
 selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-integration-644.json', 'research/editorial/hopf-curve-submersion-example-integration-644.md', 'research/source-disposition-644.json'])
 selected.update(root / name for name in ['research/audits/curve-map-critical-fiber-review-645.json', 'research/editorial/curve-map-critical-fiber-review-645.md', 'research/source-disposition-645.json', 'research/drafts/curve-map-critical-fiber-models-645.tex'])
+selected.update(root / name for name in ['research/audits/critical-curve-fiber-model-integration-646.json', 'research/editorial/critical-curve-fiber-model-integration-646.md', 'research/source-disposition-646.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

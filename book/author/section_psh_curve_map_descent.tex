@@ -1,0 +1,174 @@
+\Needspace{20\baselineskip}
+\subsection{Maps to a curve}
+\label{subsec:curve-map-critical-fibers}
+
+Let $p:X\to C$ be a surjective holomorphic map with connected
+fibers, where $X$ is a connected compact complex manifold of
+dimension $n\geq1$ and $C$ is a connected compact Riemann surface.
+Critical fibers are allowed. Fix any smooth real $(1,1)$-form
+$\beta$ on $C$.
+
+\Needspace{14\baselineskip}
+\begin{proposition}\label{curve-map:potential-descent}\index{Descent!critical curve fibers}
+Pullback gives a bijection
+\[
+ \PSH(C,\beta)\longrightarrow\PSH(X,p^*\beta).
+\]
+It preserves the supremum and the ordinary singularity order.
+\end{proposition}
+\begin{proof}
+The critical set is a proper compact analytic subset of $X$.
+It has finitely many irreducible components, and $p$ is constant
+on each: its differential vanishes on the smooth locus of that
+component, and continuity extends the constant to the component.
+Thus the set $D\subset C$ of critical values is finite.
+
+Let $U\in\PSH(X,p^*\beta)$. On a base coordinate disk choose a
+smooth $a$ with $\ddc a=\beta$. Over $C\setminus D$, the function
+$U+a\circ p$ restricts to a plurisubharmonic function, or the
+constant $-\infty$, on each compact connected fiber. The maximum
+principle makes it constant there. Local holomorphic sections
+then give a function $v$ with $U=v\circ p$ and $a+v$ subharmonic.
+This is the local argument of \cref{prop:psh-descent-submersion};
+it uses compactness of the fibers, not compactness of the
+punctured total space.
+
+The function $v$ is bounded above by $\sup_XU$. The removable
+singularity theorem extends $a+v$ subharmonically across the
+finitely many punctures. The extensions glue, giving
+$v\in\PSH(C,\beta)$. Its pullback is $p^*\beta$-plurisubharmonic
+by \cref{lem:smooth-disk-criterion}. It agrees with $U$ off the
+proper analytic set $p^{-1}(D)$, hence almost everywhere and
+everywhere by \cref{lem:qpsh-almost-everywhere-order}.
+
+Conversely pullback preserves the curvature inequality by the
+disk criterion. It is not identically $-\infty$, because $p$ is
+surjective. Surjectivity also proves uniqueness and preserves
+the supremum and every inequality $v\leq w+c$.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{curve-map:lelong-pullback}\index{Lelong number!curve map pullback}
+Let $f:(\mathbb C^m,0)\to(\mathbb C,0)$ be a nonconstant
+holomorphic germ, with $m\geq1$, and let $e=\operatorname{ord}_0f$.
+For every quasi-subharmonic germ $v$ at zero,
+\[
+ \nu(v\circ f,0)=e\nu(v,0).
+\]
+\end{lemma}
+\begin{proof}
+A smooth correction of $v$ pulls back to a smooth function, so
+we may assume that $v$ is subharmonic. The Taylor expansion of
+$f$ gives $|f(z)|\leq M|z|^e$ on a small ball. Choose a unit vector
+$\xi$ on which the leading homogeneous term is nonzero. Then
+\[
+ f(\zeta\xi)=a\zeta^e+O(\zeta^{e+1}),\qquad a\ne0.
+\]
+For all small $r$, the remainder has modulus at most
+$|a|r^e/4$ on $|\zeta|=r$. If $|t|<|a|r^e/4$, Rouch\'e's theorem
+shows that $f(\zeta\xi)-t$ has $e$ zeros in $|\zeta|<r$.
+Consequently, with $c=|a|/4$,
+\[
+ \{|t|<cr^e\}\subset f(B(0,r))
+                  \subset\{|t|<Mr^e\}.
+\]
+The suprema of $v$ on these three sets are ordered. Dividing
+by $\log r^2<0$, the two disk terms both tend to $e\nu(v,0)$
+by the definition in \cref{sec:analytic-types}. The middle term
+therefore has the same limit, proving the formula.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{corollary}\label{curve-map:ideal-types}\index{Multiplier ideal!all-weight curve pullback}
+For $v,w\in\QPSH(C)$, the inclusions
+$\mathcal I(tv)\subseteq\mathcal I(tw)$ for every $t>0$ hold
+if and only if
+\[
+ \mathcal I(t(v\circ p))\subseteq\mathcal I(t(w\circ p))
+ \quad\text{for every }t>0.
+\]
+In particular pullback preserves and reflects all-weight
+multiplier-ideal equivalence.
+\end{corollary}
+\begin{proof}
+On a smooth curve, local modifications are isomorphisms.
+By \cref{thm:local-i-inputs}, the base inclusions are therefore
+equivalent to $\nu(v,s)\geq\nu(w,s)$ for every $s\in C$.
+Let $\pi$ be any local modification of a neighborhood in $X$
+with smooth source, and let $y$ be a point of its source.
+In a coordinate at $s=p(\pi(y))$, the germ $p\circ\pi-s$ is
+nonconstant. Indeed, a modification is an isomorphism on a
+dense open set, and a nonconstant holomorphic map cannot be
+constant on an open set. Its order $e_y$ is positive and finite.
+The preceding lemma gives
+\[
+ \nu(v\circ p\circ\pi,y)=e_y\nu(v,s),\qquad
+ \nu(w\circ p\circ\pi,y)=e_y\nu(w,s).
+\]
+The base inequalities thus imply all inequalities upstairs,
+and the same valuative theorem gives the ideal inclusions.
+Conversely the upstairs inclusions give the inequalities for
+the identity modification at any $x\in p^{-1}(s)$. Dividing by
+$\operatorname{ord}_x(p-s)>0$ recovers the base inequalities.
+Apply this argument in both directions for equality.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{curve-map:lone-pullback}\index{Compactness!curve map pullback}
+If $v_j,v\in\PSH(C,\beta)$ and $v_j\to v$ in $L^1(C)$, then
+$v_j\circ p\to v\circ p$ in $L^1(X)$ for every smooth positive
+volume form on $X$.
+\end{lemma}
+\begin{proof}
+Put $M_j=\sup_Cv_j$ and $M=\sup_Cv$. Hartogs' lemma applied at
+moving maximum points gives $\limsup M_j\leq M$. A subsequence
+with limiting suprema below $M$ would give $v$ below that limit
+almost everywhere, hence everywhere, a contradiction. Thus
+$M_j\to M$.
+
+By surjectivity, $(v_j-M_j)\circ p$ has supremum zero. Normalized
+compactness, \cref{thm:normalized-compactness}, makes these
+pullbacks precompact in $L^1(X)$. On every relatively compact
+product chart over $C\setminus D$, where $D$ is the finite set
+of critical values, Fubini's theorem and bounded smooth volume
+densities give local $L^1$ convergence to $(v-M)\circ p$.
+Every subsequential limit therefore equals this pullback off
+$p^{-1}(D)$, and hence almost everywhere, because that analytic
+set has smooth volume zero. All subsequential limits agree,
+so the entire normalized sequence converges. Adding $M_j\to M$
+proves the assertion.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{curve-map:analytic-types}\index{Analytic singularity!curve map descent}
+A function $v\in\QPSH(C)$ has analytic singularities if and
+only if $v\circ p$ has analytic singularities.
+\end{lemma}
+\begin{proof}
+Composing a local analytic presentation with $p$ proves the
+forward implication. The pulled-back generators are not all
+identically zero, since a nonconstant map to a curve is open.
+
+Conversely fix $s\in C$ and $x\in p^{-1}(s)$. In coordinates,
+choose a complex line through $x$ on which $p-s$ has its finite
+order $e$ and is nonconstant, as in the Lelong lemma. On that
+line write
+\[
+ (p-s)(\zeta)=h(\zeta)^e,
+\]
+where $h$ is a local biholomorphism fixing zero; take an analytic
+$e$th root of the nonvanishing factor of the germ. The restriction
+of $v\circ p$ to the line is not identically $-\infty$, since
+$v$ is finite almost everywhere and this map is open. By
+\cref{prop:analytic-type-calculus}, it has analytic singularities.
+In one variable its presentation is
+$r\log|\zeta|^2+O(1)$ with $r\in\mathbb Q_{\geq0}$, obtained by
+taking the least order of its finitely many generators.
+Changing to $w=h(\zeta)$ gives
+\[
+ v(s+w^e)=r\log|w|^2+O(1).
+\]
+Every sufficiently small $t$ has an $e$th root $w$, so
+$v(s+t)=(r/e)\log|t|^2+O(1)$. This is an analytic presentation
+on the base, including a bounded one when $r=0$.
+\end{proof}
