@@ -1,0 +1,188 @@
+\subsection{Uniformly controlled complex Hessians}
+\label{sec:gaud-hessian-adjoint-bounds}
+
+The preceding construction bounds the solution form and its Gauduchon factor by controlling derivatives of the logarithmic density. A bound on the solution form itself leads to a different estimate. If $\Omega=\omega+\ddc v$, then $d\Omega=d\omega$, so the divergence of its cofactor depends only on the fixed torsion and the size of $\Omega$. This permits uniform bounds for the factor even when derivatives of the varying complex Hessian are unbounded.
+
+We continue to assume $n\geq3$ and that $\mathrm{d}V$ is a probability volume form. We first give the real elliptic estimate used below. A cube denoted by $tQ$ has the same center as $Q$ and $t$ times its side length, and $\fint_Q$ denotes its Euclidean average.
+
+\Needspace{12\baselineskip}
+\begin{lemma}\label{lem:gaud-divergence-harnack}
+Let $Q\subset\R^m$, $m>2$, be a cube. Suppose that $u$ is a smooth strictly positive solution on a neighborhood of $3Q$ of
+\[
+ \operatorname{div}(A\nabla u+Bu)=0,
+ \qquad \lambda I\leq A\leq\Lambda I,\qquad |B|\leq K,
+\]
+where $A$ is a smooth symmetric matrix field and $B$ is a smooth vector field. Then
+\[
+ \sup_{Q/2}u\leq C\inf_{Q/2}u,
+\]
+where $C$ depends only on $m,\lambda,\Lambda,K$ and the side length of $Q$. Derivatives of $A$ and $B$ do not enter $C$.
+\end{lemma}
+\begin{proof}
+We first estimate positive and negative powers, then compare their small moments by an estimate for $\log u$.
+
+For $p\ne0,1$, test the weak equation by $\eta^2u^{p-1}$, where $\eta$ is a smooth cutoff. The principal term is
+\[
+ (p-1)\int\eta^2u^{p-2}\langle A\nabla u,\nabla u\rangle.
+\]
+The other terms contain respectively $2\eta u^{p-1}A\nabla u\cdot\nabla\eta$, $(p-1)\eta^2u^{p-1}B\cdot\nabla u$, and $2\eta u^pB\cdot\nabla\eta$. Taking absolute values after moving the principal term to one side and applying Young's inequality absorbs half of its energy. Thus, for either sign of $p$,
+\begin{equation}\label{eq:gaud-harnack-power}
+ \int\eta^2|\nabla u^{p/2}|^2
+ \leq C_1p^2(1+|p-1|^{-2})
+        \int (|\nabla\eta|^2+K^2\eta^2)u^p,
+\end{equation}
+with $C_1$ depending only on the ellipticity bounds. Each test is legitimate since this individual smooth positive solution is bounded above and away from zero on the cutoff support.
+
+Put $\beta=m/(m-2)>1$ and choose $p_0=\beta^{-k-1/2}$, with $k$ to be fixed later. Apply the Euclidean Sobolev inequality to $\eta u^{p/2}$ on nested cubes shrinking from $Q$ to $Q/2$. Choose the cutoff gaps proportional to $2^{-j}$ and the powers $p_j=p_0\beta^j$. The positive powers never equal one: the closest two are $\beta^{-1/2}$ and $\beta^{1/2}$. Consequently the constants in \eqref{eq:gaud-harnack-power}, together with the cutoff terms from $\nabla(\eta u^{p/2})$, grow at most polynomially in $p_j$ and exponentially in $j$. Since $\sum_j(j+1)\beta^{-j}<\infty$, their iteration product converges. Negative powers give the same calculation for $u^{-1}$. We obtain
+\begin{equation}\label{eq:gaud-harnack-moments}
+ \sup_{Q/2}u\leq C_2\left(\fint_Q u^{p_0}\right)^{1/p_0},
+ \qquad
+ \inf_{Q/2}u\geq C_2^{-1}
+                  \left(\fint_Q u^{-p_0}\right)^{-1/p_0}.
+\end{equation}
+Here $C_2$ also depends on $p_0$ and the fixed cube size.
+
+Testing instead by $\eta^2/u$ gives
+\[
+ \int\eta^2|\nabla\log u|^2
+       \leq C_3\int(|\nabla\eta|^2+K^2\eta^2).
+\]
+For every subcube $S\subset Q$ of side length $\ell$, a cutoff supported in $2S\subset3Q$, equal to one on $S$, has derivative bounded by $C/\ell$. Poincar\'e's inequality and Cauchy--Schwarz therefore give
+\[
+ \fint_S|\log u-(\log u)_S|
+ \leq C_4(1+K\ell)\leq K_0,
+\]
+where $K_0\geq1$ is uniform and $(\log u)_S$ denotes the mean. We spell out the exponential consequence of this mean oscillation bound.
+
+Write $f=\log u$ and fix $a>2$. Select the maximal dyadic subcubes $S$ of $Q$ on which $\fint_S|f-f_Q|>aK_0$. Their total measure is at most $|Q|/a$. The parent of each selected cube has average at most $aK_0$, hence $|f_S-f_Q|\leq2^maK_0$. Outside their union, differentiation of dyadic averages gives $|f-f_Q|\leq aK_0$ almost everywhere. Repeat this selection inside each chosen cube, subtracting its own mean. The union at generation $j$ has measure at most $a^{-j}|Q|$, and outside generation $j+1$ the accumulated mean changes and last oscillation give
+\[
+ |f-f_Q|\leq (j2^ma+a)K_0.
+\]
+The intersection of all generations is null. Choosing $c>0$ so that $\exp(c2^ma)<a$ and summing over the generations yields
+\[
+ \fint_Q\exp\!\left(\frac{c|f-f_Q|}{K_0}\right)\leq C_5,
+\]
+with dimensional constants. Now fix $k$ large enough that $p_0<c/K_0$. Multiplying the estimates for the positive and negative exponentials cancels $f_Q$ and gives
+\[
+ \left(\fint_Q u^{p_0}\right)
+ \left(\fint_Q u^{-p_0}\right)\leq C_5^2.
+\]
+Combining this with \eqref{eq:gaud-harnack-moments} proves the result. Every constant comes from the stated coefficient bounds and the fixed cube.
+\end{proof}
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:gaud-hessian-factor-bounds}\index{Gauduchon factor!uniform complex-Hessian bounds}
+Fix $0<\delta\leq\Lambda$. For every smooth real $v$ with
+\[
+ \delta\omega\leq\Omega_v:=\omega+\ddc v\leq\Lambda\omega,
+\]
+let $\rho_v$ be its Gauduchon factor normalized by
+\[
+ \ddc(\rho_v\Omega_v^{n-1})=0,
+ \qquad \int_X\rho_v\,\mathrm{d}V=1.
+\]
+There is $C_H\geq1$, depending only on $X,\omega,\mathrm{d}V,\delta,\Lambda$, such that $C_H^{-1}\leq\rho_v\leq C_H$ on $X$ for every such $v$.
+\end{proposition}
+\begin{proof}
+Existence and uniqueness of $\rho_v$ follow from \cref{thm:gauduchon}. Fix a real reference metric on $X$, and put $Q_v=\Omega_v^{n-1}$ and $J_v=\Omega_v^n/\mathrm{d}V$. Since $d\Omega_v=d\omega$,
+\begin{equation}\label{eq:gaud-hessian-cofactor-divergence}
+ dQ_v=(n-1)d\omega\wedge\Omega_v^{n-2}.
+\end{equation}
+Both $Q_v$ and $dQ_v$ have uniformly bounded coefficients in fixed charts.
+
+Define a real tensor $A_v$ and vector field $b_v$ by
+\[
+ \langle A_vd\phi,d\psi\rangle\,\mathrm{d}V
+       =n\,d\psi\wedge\dc\phi\wedge Q_v,
+ \qquad
+ (b_v\cdot d\phi)\,\mathrm{d}V
+       =-n\,\dc\phi\wedge dQ_v.
+\]
+Only the $(1,1)$ part of $d\psi\wedge\dc\phi$ contributes to the first identity; it is
+\[
+ \frac{\mathrm i}{4\pi}
+ (\partial\psi\wedge\bar\partial\phi
+       +\partial\phi\wedge\bar\partial\psi).
+\]
+Thus $A_v$ is symmetric and uniformly positive definite, with a uniform upper bound. The second identity and \eqref{eq:gaud-hessian-cofactor-divergence} give a uniform bound for $b_v$.
+
+For $L_{\Omega_v}\phi=n\ddc\phi\wedge Q_v/\Omega_v^n$, Stokes' theorem gives
+\begin{align*}
+ \int_X\psi J_vL_{\Omega_v}\phi\,\mathrm{d}V
+ &=-n\int_Xd\psi\wedge\dc\phi\wedge Q_v
+          +n\int_X\psi\dc\phi\wedge dQ_v\\
+ &=-\int_X\langle A_vd\phi,d\psi\rangle\,\mathrm{d}V
+          -\int_X\psi b_v\cdot d\phi\,\mathrm{d}V.
+\end{align*}
+In particular, the adjoint equation for $\rho_v$ is
+\[
+ \operatorname{div}_{\mathrm{d}V}(A_vd\rho_v+b_v\rho_v)=0.
+\]
+In each coordinate chart, multiplying the coefficients by the fixed smooth volume density converts this to Euclidean divergence form while preserving uniform ellipticity and a uniform bound for the vector coefficient. \Cref{lem:gaud-divergence-harnack} applies. A fixed finite cover by inner cubes has a connected overlap graph, since $X$ is connected. Chaining its local estimates gives $\sup_X\rho_v\leq C_H\inf_X\rho_v$. The normalization and $\mathrm{d}V(X)=1$ imply the claimed two-sided bound.
+\end{proof}
+
+For a fixed $0<\varepsilon<1$, consider the full family
+\begin{equation}\label{eq:gaud-controlled-hessian-family}
+ \mathcal V_\varepsilon=
+ \{v\in C^\infty(X,\R):\sup_Xv=0,
+                    -\varepsilon\omega\leq\ddc v\leq\varepsilon\omega\}.
+\end{equation}
+Set $c_v=\int_X\Omega_v^n$ and $F_v=\log(J_v/c_v)$, so that $\int_X\mathrm e^{F_v}\mathrm{d}V=1$. The density $F_v$ is defined by an actual solution form, rather than prescribed before solving an equation.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:gaud-hessian-adjoint-endpoint}\index{Adjoint measure!uniform complex-Hessian bounds}\index{Determinant density!exact maximizers with controlled Hessian}
+Let
+\[
+ j_-=(1-\varepsilon)^n\min_X\frac{\omega^n}{\mathrm{d}V},
+ \qquad j_+=(1+\varepsilon)^n\max_X\frac{\omega^n}{\mathrm{d}V},
+\]
+and take $C_H$ from \cref{prop:gaud-hessian-factor-bounds} with $\delta=1-\varepsilon$ and $\Lambda=1+\varepsilon$. For every $v\in\mathcal V_\varepsilon$, the exact maximizing current $T_v\in\mathscr G_\omega$ for $F_v$ is unique. Its determinant density $k_{T_v}$ and the probability density $r_v=\mathrm d\nu_{T_v,F_v}/\mathrm{d}V$ satisfy
+\begin{equation}\label{eq:gaud-hessian-adjoint-bounds}
+ \frac{j_-}{C_Hj_+}\leq r_v\leq\frac{C_Hj_+}{j_-},
+ \qquad
+ j_+^{-1/n}\frac{j_-}{C_Hj_+}
+ \leq k_{T_v}\leq j_-^{-1/n}\frac{C_Hj_+}{j_-}.
+\end{equation}
+In particular both densities are uniformly bounded at the critical exponent $n/(n-1)$, without an assumption on the lower mass. Moreover,
+\[
+ \|F_v-F_0\|_\infty
+       \leq n\log\frac{1+\varepsilon}{1-\varepsilon},
+\]
+and this normalized family contains infinitely many distinct nonconstant densities on the fixed manifold $X$.
+\end{theorem}
+\begin{proof}
+Use the normalization of \cref{prop:gaud-hessian-factor-bounds} and put
+\[
+ N_v=\int_XJ_v\rho_v\,\mathrm{d}V,
+ \qquad T_v=\frac{\rho_v}{N_v}\Omega_v^{n-1}.
+\]
+The factor equation and $\ddc$-Stokes give
+\[
+ \int_X\omega\wedge\rho_v\Omega_v^{n-1}
+   =\int_X\Omega_v\wedge\rho_v\Omega_v^{n-1}=N_v.
+\]
+Hence $T_v\in\mathscr G_\omega$. It is the $(n-1)$st power of the Gauduchon metric $\gamma_v=(\rho_v/N_v)^{1/(n-1)}\Omega_v$. The equation $\Omega_v^n=c_v\mathrm e^{F_v}\mathrm{d}V$ gives $B_0(F_v)=\log c_v$. Thus \cref{thm:weak-gaud-compact-duality} identifies $T_v$ as the unique exact maximizer, and $M(F_v)=c_v^{-1/n}$. The determinant and probability normalizations are therefore
+\begin{equation}\label{eq:gaud-hessian-adjoint-densities}
+ k_{T_v}=\frac{\rho_v}{N_v}J_v^{(n-1)/n},
+ \qquad
+ \Gamma_{F_v}(T_v)=c_v^{-1/n}\frac{J_v\rho_v}{N_v}\,\mathrm{d}V,
+ \qquad r_v=\frac{J_v\rho_v}{N_v}.
+\end{equation}
+Here $j_-\leq J_v\leq j_+$ and, since $\int_X\rho_v\,\mathrm{d}V=1$, also $j_-\leq N_v\leq j_+$. The factor bound gives the first pair of inequalities in \eqref{eq:gaud-hessian-adjoint-bounds}; the identity $k_{T_v}=J_v^{-1/n}r_v$ gives the second. The critical norms are bounded by the respective upper constants because $\mathrm{d}V$ is a probability volume.
+
+The inequalities
+\[
+ (1-\varepsilon)^n\leq\frac{J_v}{J_0}\leq(1+\varepsilon)^n,
+ \qquad
+ (1-\varepsilon)^n\leq\frac{c_v}{c_0}\leq(1+\varepsilon)^n
+\]
+give the bound for $F_v-F_0$ by subtracting logarithms. To prove nontriviality, choose a nonconstant smooth real $\phi$. For small $t$, the potential $t\phi-\sup_X(t\phi)$ belongs to $\mathcal V_\varepsilon$ and gives the same density as $t\phi$. Differentiation at zero gives
+\[
+ \left.\frac{d}{dt}F_{t\phi}\right|_{t=0}
+ =L_\omega\phi-
+       \frac{\int_XJ_0L_\omega\phi\,\mathrm{d}V}{\int_XJ_0\,\mathrm{d}V}.
+\]
+This function is nonconstant: otherwise $L_\omega\phi$ would be constant, its values at a maximum and a minimum would force that constant to be zero, and the strong maximum principle would make $\phi$ constant. Choose two points where the displayed derivative differs. The difference of the densities at these points is strictly monotone for $t$ in a small interval. These give infinitely many distinct densities, with at most one parameter having equal values at the chosen points. Discarding that parameter gives the nonconstant family.
+\end{proof}
+
+The same estimate applies to the family with $\delta\omega\leq\Omega_v\leq\Lambda\omega$ by replacing $j_-$ and $j_+$ with $\delta^n\min_X(\omega^n/\mathrm{d}V)$ and $\Lambda^n\max_X(\omega^n/\mathrm{d}V)$. The restriction is geometric: uniform bounds for $F$ alone do not supply these bounds for its solution form. Thus this construction provides critical estimates when $v_-(\omega)=0$ for a larger smooth family, but leaves the question for arbitrary bounded families of continuous densities open.
