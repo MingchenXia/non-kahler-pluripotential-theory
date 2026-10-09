@@ -1828,6 +1828,7 @@ selected.update(root / name for name in ['research/audits/S15-holder-range-recon
 selected.update(root / name for name in ['research/audits/S15-holder-range-integration-672.json', 'research/editorial/S15-holder-range-integration-672.md', 'research/source-disposition-672.json'])
 selected.update(root / name for name in ['research/audits/incoming-P13-determinant-profile-review-673.json', 'research/editorial/incoming-P13-determinant-profile-review-673.md', 'research/source-disposition-673.json', 'research/drafts/fixed-determinant-data-ellipticity-673.tex', 'research/drafts/intrinsic-gauduchon-determinant-profile-673.tex', 'research/drafts/sharp-determinant-power-concentration-673.tex'])
 selected.update(root / name for name in ['research/audits/P13-determinant-profile-integration-674.json', 'research/editorial/P13-determinant-profile-integration-674.md', 'research/source-disposition-674.json'])
+selected.update(root / name for name in ['research/audits/chapter2-mass-reader-coherence-675.json', 'research/editorial/chapter2-mass-reader-coherence-675.md', 'research/source-disposition-675.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
