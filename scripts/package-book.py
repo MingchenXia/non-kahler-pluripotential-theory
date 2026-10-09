@@ -1811,6 +1811,7 @@ selected.update(root / name for name in ['research/audits/finite-curve-pullback-
 selected.update(root / name for name in ['research/audits/recent-arxiv-fiber-margin-review-657.json', 'research/editorial/recent-arxiv-fiber-margin-review-657.md', 'research/source-disposition-657.json', 'research/drafts/fiberwise-convexity-margin-example-657.tex'])
 selected.update(root / name for name in ['research/audits/local-fiber-margin-integration-658.json', 'research/editorial/local-fiber-margin-integration-658.md', 'research/source-disposition-658.json'])
 selected.update(root / name for name in ['research/audits/negative-bundle-logarithmic-weight-review-659.json', 'research/editorial/negative-bundle-logarithmic-weight-review-659.md', 'research/source-disposition-659.json', 'research/drafts/negative-bundle-logarithmic-weights-659.tex'])
+selected.update(root / name for name in ['research/audits/negative-bundle-logarithmic-weight-integration-660.json', 'research/editorial/negative-bundle-logarithmic-weight-integration-660.md', 'research/source-disposition-660.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

@@ -1,0 +1,153 @@
+\subsection{Negative bundle metrics and logarithmic weights}
+\label{subsec:negative-bundle-logarithmic-weights}
+\index{Vector bundle!negative curvature and logarithmic weights}
+
+For positive curvature, the reciprocal norm in
+\cref{lem:reciprocal-bundle-norm-levi} is useful near a removed
+zero section. With negative curvature, the squared norm itself
+is plurisubharmonic. Adding its logarithm gives a weight whose
+Levi form controls both the base and the fiber directions.
+
+In this subsection the base $X$ need not be compact. Suppose
+that it has a K\"ahler form $\omega$ and a smooth nonnegative
+plurisubharmonic exhaustion $\rho$. Here an exhaustion has
+compact sublevel sets; a constant function qualifies on a compact
+base. Let $\pi:E\to X$ be a holomorphic vector bundle of rank
+$r\geq1$, with a smooth Hermitian metric $h$, and let $Z$ be its
+zero section. Use the unscaled curvature and coefficient forms
+$\alpha_{h,v}$ of \cref{subsec:projective-complement-curvature-index},
+and assume
+\[
+ \alpha_{h,v}\leq-|v|_h^2\omega
+ \qquad(x\in X,\ v\in E_x).
+\]
+This is a uniform negative curvature bound with respect to the
+chosen base form.
+
+\begin{proposition}\label{prop:negative-bundle-logarithmic-weight}
+\index{Plurisubharmonic function!negative bundle norm}
+Put $U(v)=|v|_h^2$, $q=U\mathrm e^U$ and
+$\Psi=\rho\circ\pi+U$. Then $\Psi$ is a smooth
+plurisubharmonic exhaustion of $E$ and
+\[
+ \Omega=\pi^*\omega+2\pi\ddc U
+\]
+is a K\"ahler form on $E$. The function $\log q$, extended by
+$-\infty$ on $Z$, is plurisubharmonic and satisfies
+\[
+ 2\pi\ddc\log q\geq\Omega\quad\hbox{on }E\setminus Z.
+\]
+Both $U$ and $q$ are strictly plurisubharmonic off $Z$.
+For the real radial vector field $\mathcal R$, whose flow is
+$v\mapsto\mathrm e^s v$, one has
+$\mathcal Rq=2(1+U)q$. In particular $q$ has no critical
+points off $Z$.
+\end{proposition}
+\begin{proof}
+At $x$, choose a Chern-normal unitary holomorphic frame as in
+\cref{lem:reciprocal-bundle-norm-levi}. Write a tangent vector at
+$(x,v)$ as $(a,b)$, with $a$ horizontal and $b$ vertical.
+The first base derivatives and mixed base--fiber derivatives of
+$U$ vanish there. The same normal-frame calculation gives
+\[
+ \begin{aligned}
+ \mathcal L_U(a,b)
+   &=-h(R_h(a,\bar a)v,v)+|b|_h^2
+      \geq U\omega(a,\bar a)+|b|_h^2,\\
+ \mathcal L_{\log U}(a,b)
+   &=-\frac{h(R_h(a,\bar a)v,v)}U
+       +\frac{|b|_h^2U-|h(b,v)|^2}{U^2}
+      \geq\omega(a,\bar a)\quad(v\ne0).
+ \end{aligned}
+\]
+The last vertical term is nonnegative by Cauchy--Schwarz.
+Here $\mathcal L$ is the unscaled complex Hessian, corresponding
+to $2\pi\ddc=\mathrm i\partial\bar\partial$.
+These formulas show that $U$ is plurisubharmonic, that
+$\Omega$ is positive definite even on $Z$, and that
+$2\pi\ddc(\log U+U)\geq\Omega$ off $Z$.
+The form $\Omega$ is closed because $\omega$ is closed.
+The first formula gives strict positivity for $U$ off $Z$;
+exponentiating $\log q$ gives it for $q$.
+Locally, $U$ is comparable to the squared Euclidean fiber norm,
+so $\log q$ tends to $-\infty$ at $Z$ and is locally bounded above.
+By \cref{lem:qpsh-removable-analytic}, the upper-limit extension
+is plurisubharmonic and has value $-\infty$ on $Z$.
+
+The function $\Psi$ is plurisubharmonic. Its sublevel set of
+height $M$ lies over the compact set $\{\rho\leq M\}$ and in
+the disk bundle $\{U\leq M\}$ over that set, which is compact.
+The sublevel is closed, so $\Psi$ is an exhaustion. Finally,
+$\mathcal RU=2U$ gives the radial identity and excludes critical
+points where $q>0$.
+\end{proof}
+
+\begin{corollary}\label{cor:negative-bundle-weight-jets}
+\index{Multiplier ideal!zero section logarithmic weight}
+For every $m>0$,
+\[
+ \mathcal I(m\log q)
+    =\mathcal I_Z^{\max\{\lfloor m\rfloor-r+1,0\}}.
+\]
+In particular, if $k\geq1$ is an integer and $m\geq r+k-1$,
+a holomorphic function that is locally square integrable against
+$q^{-m}$ times a smooth positive volume form vanishes to order
+at least $k$ along $Z$. If $m<r+k-1$, this conclusion fails for
+some local holomorphic functions.
+\end{corollary}
+\begin{proof}
+In a local bundle frame, $\log q=\log|v|^2+O(1)$ near $Z$.
+Apply \cref{lem:smooth-center-multiplier-ideal} in codimension
+$r$. Its radial integrability condition for a homogeneous fiber
+term of degree $a$ is $a+r>m$. For $m<r+k-1$, a monomial
+of degree $k-1$ satisfies this condition and has insufficient
+vanishing order. Smooth positive volume forms do not change
+local integrability.
+\end{proof}
+
+\begin{corollary}\label{cor:negative-bundle-complete-punctured-metric}
+\index{K\"ahler metric!complete punctured negative bundle}
+The manifold $E\setminus Z$ admits a complete K\"ahler metric.
+\end{corollary}
+\begin{proof}
+Choose a smooth convex increasing function $\eta$ on $\mathbb R$
+equal to $-\log(-t)$ for $t\leq-1$. On $E\setminus Z$ put
+\[
+ \widehat\Omega
+   =\Omega+2\pi\ddc(\Psi^2)
+       +2\pi\ddc\eta(\log q).
+\]
+The added forms are nonnegative, so this is K\"ahler.
+Since $\Psi\geq0$ is plurisubharmonic,
+$2\pi\ddc(\Psi^2)\geq
+2\mathrm i\partial\Psi\wedge\bar\partial\Psi$.
+Thus $\Psi$ has bounded gradient for $\widehat\Omega$, and a
+curve of finite length stays in a compact sublevel of $\Psi$ in
+$E$. The only possible escape from that compact set within
+$E\setminus Z$ is approach to $Z$.
+Where $\log q\leq-1$, set $\tau=\log(-\log q)$. Convexity and
+the chain rule give
+\[
+ 2\pi\ddc\eta(\log q)
+   \geq\mathrm i\partial\tau\wedge\bar\partial\tau.
+\]
+Hence $\tau$ also has bounded gradient there, while
+$\tau\to+\infty$ on approach to $Z$. A finite-length curve
+cannot escape in this way either. The criterion that every
+escaping curve has infinite length proves completeness.
+\end{proof}
+
+For example, let $B\to X$ have a smooth Hermitian metric with
+positive unscaled curvature form $\omega$. The direct sum
+$E=(B^*)^{\oplus r}$ with its induced metric satisfies
+$\alpha_{h,v}=-|v|_h^2\omega$.
+Thus the construction applies whenever this base also has the
+stated plurisubharmonic exhaustion, including a compact base.
+
+If the base is connected, compact and has positive dimension,
+one may take $\rho=0$. Then $U$ is an exhaustion that is
+strictly plurisubharmonic off $Z$, but the total space $E$ is
+not Stein: every holomorphic function on $E$ restricts to a
+constant on the compact connected zero section and therefore
+fails to separate its distinct points. Strict positivity away
+from a compact analytic set does not remove this obstruction.
