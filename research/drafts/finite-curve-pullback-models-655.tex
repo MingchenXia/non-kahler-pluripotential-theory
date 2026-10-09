@@ -1,0 +1,193 @@
+\Needspace{18\baselineskip}
+\subsection{Models pulled back by a finite curve map}
+\label{subsec:finite-curve-pullback-models}
+
+Let $r:C'\to C$ be a finite surjective holomorphic map of
+degree $d$ between connected compact Riemann surfaces. Fix a
+smooth real form $\beta$ of area $A\geq0$ on $C$ and put
+$\sigma=r^*\beta$. The models pulled back from $C$ occupy a
+proper subspace of the full model space on $C'$ in general.
+The fiber maximum of \cref{finite-curve:fiber-maximum} compares
+envelope competitors on the two curves. The weighted measure
+pullback then identifies the metric on this subspace and gives
+a retraction from the full space.
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{finite-curve:envelope-pullback}\index{Envelope!finite curve pullback}
+For $v\in\PSH(C,\beta)$ and every smooth real obstacle $F$ on $C$,
+\[
+ \begin{aligned}
+ P_{\sigma,F\circ r}[v\circ r]
+       &=P_{\beta,F}[v]\circ r,\\
+ P_{\sigma,F\circ r}[v\circ r]_{\mathcal I}
+       &=P_{\beta,F}[v]_{\mathcal I}\circ r.
+ \end{aligned}
+\]
+In particular, $J(v)=v\circ r$ embeds the ordinary model space
+$\mathcal M(\beta)$ into $\mathcal M(\sigma)$ and preserves
+ideal projection.
+\end{proposition}
+\begin{proof}
+Pullback sends every base competitor to an upstairs competitor:
+it preserves positivity, the obstacle inequality, the ordinary
+order and, by the Lelong formula and the curve valuative
+criterion, the all-weight ideal order.
+Conversely, if $h$ is an upstairs competitor, its fiber maximum
+$m_h$ is a base competitor by
+\cref{finite-curve:fiber-maximum}, since $h\leq F\circ r$
+implies $m_h\leq F$. Also $h\leq m_h\circ r$.
+Thus the two unregularized suprema are equal after pullback.
+A finite nonconstant holomorphic map of curves is open;
+upper regularization commutes with its pullback, as is seen
+in the coordinates $t=z^e$. This proves both identities.
+Take $F=0$. An ordinary model is fixed by its ordinary
+envelope, so its pullback is a model; surjectivity of $r$
+gives injectivity. Applying the ideal identity to a model
+proves preservation of ideal projection.
+\end{proof}
+
+Let $d_\beta$ and $d_\sigma$ be the polar metrics from
+\cref{prop:curve-arbitrary-background-models}. If $q$ is a model
+on $C'$, denote its polar curvature by
+$\mu_q=\mathbf1_{\{q=-\infty\}}(\sigma+\ddc q)$.
+Write $p_\beta(\nu)$ for the base model with polar measure
+$\nu$, using the same classification.
+Write $U_\beta(v)=\int_C\mathrm{MA}_\beta(v)$ and
+$U_\sigma(q)=\int_{C'}\mathrm{MA}_\sigma(q)$ for their
+non-pluripolar volumes.
+
+\Needspace{18\baselineskip}
+\begin{proposition}\label{finite-curve:model-retraction}\index{Metric completeness!finite curve pullback subspace}\index{Model potential!finite curve averaging}
+For $u,v\in\mathcal M(\beta)$,
+\[
+ d_\sigma(J(u),J(v))=d\,d_\beta(u,v),\qquad
+ U_\sigma(J(u))=d\,U_\beta(u).
+\]
+The image $J(\mathcal M(\beta))$ is closed and contains the
+linear polar-measure geodesic between each pair of its members.
+The map
+\[
+ R(q)=J\!\left(p_\beta\!\left(d^{-1}r_*\mu_q\right)\right)
+\]
+is a $1$-Lipschitz retraction onto this image. Its polar measure is
+\[
+ \mu_{R(q)}=d^{-1}r^*r_*\mu_q.
+\]
+It preserves the polar mass and the non-pluripolar volume,
+and commutes with ideal projection on $\mathcal M(\sigma)$.
+At $A=0$ both model spaces are smooth singletons.
+\end{proposition}
+\begin{proof}
+Change of variables off the finite branch sets gives
+$\int_{C'}\sigma=dA$.
+By \cref{finite-curve:measure-pullback}, the polar measure of
+$J(v)$ is $r^*\mu_v$, with total mass $d\mu_v(C)$.
+The curve classification gives
+\[
+ \begin{aligned}
+ d_\sigma(J(u),J(v))
+   &=\|r^*(\mu_u-\mu_v)\|_{\mathrm{TV}}
+     =d\|\mu_u-\mu_v\|_{\mathrm{TV}},\\
+ U_\sigma(J(v))
+   &=dA-d\mu_v(C)=d\,U_\beta(v).
+ \end{aligned}
+\]
+Completeness of the base model space proves closedness of the
+image: a convergent sequence in the image comes from a
+Cauchy sequence downstairs. Linear interpolation of polar
+measures commutes with $r^*$, giving the stated geodesics.
+
+For any $q\in\mathcal M(\sigma)$, its polar measure has mass
+at most $dA$. Its pushforward is polar by the image assertion
+of \cref{finite-curve:measure-pullback}, so
+$d^{-1}r_*\mu_q$ has mass at most $A$ and defines a base model.
+This proves that $R$ is well defined and gives its displayed
+polar measure. The identity $r_*r^*=d$ makes $R\circ J=J$.
+For any finite signed measure $\tau$ on $C'$,
+pushforward does not increase total variation, hence
+\[
+ \|d^{-1}r^*r_*\tau\|_{\mathrm{TV}}
+       =\|r_*\tau\|_{\mathrm{TV}}
+       \leq\|\tau\|_{\mathrm{TV}}.
+\]
+Apply this to the difference of two polar measures to obtain
+the Lipschitz estimate.
+The averaging operator preserves their total mass, so the
+formula $U_\sigma(q)=dA-\mu_q(C')$ gives volume preservation.
+Both measure operations commute with taking the atomic part,
+which is ideal projection by the curve classification.
+This proves the commutation assertion. At zero area all
+polar measures vanish and both spaces are singletons.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{corollary}\label{finite-curve:original-base-subspace}\index{Model potential!descent to original curve base}
+Let $p:X\to C$ be a surjective holomorphic map from a connected
+compact complex manifold of dimension at least two, with
+component factorization $p=r\circ q$, $q:X\to C'$.
+For $\theta=p^*\beta$, the ordinary models that are constant
+on each $p$-fiber form a closed complete subspace. With the
+$p$-fiber normalization of \cref{fibration:finite-curve-factor},
+the map $v\mapsto v\circ p$ is an isometry from
+$(\mathcal M(\beta),d_\beta)$ onto this subspace.
+
+Every model has the form $U=u\circ q$, and
+\[
+ R_X(U)=R(u)\circ q
+\]
+is a $1$-Lipschitz retraction onto the subspace. It commutes
+with ideal projection. The subspace contains the linear
+polar-measure geodesic between each pair of its members.
+\end{corollary}
+\begin{proof}
+The full model correspondence for $q$ is
+\cref{fibration:curve-envelope-pullback}. A model $u\circ q$
+is constant on $p$-fibers exactly when $u$ is constant on
+$r$-fibers. In that case $u=m_u\circ r$, and
+\cref{finite-curve:fiber-maximum} makes $m_u$ a base potential.
+The envelope identity and injectivity of $J$ then show that
+$m_u$ is a model. Thus this subspace is exactly the pullback
+image of $\mathcal M(\beta)$.
+
+By \cref{fibration:finite-curve-factor}, the $p$-normalized
+metric is $d^{-1}$ times the polar metric on $C'$.
+The preceding proposition proves the isometry, closedness,
+completeness, retraction and geodesic assertions.
+The ideal-envelope correspondence for $q$ transfers the
+commutation with ideal projection.
+\end{proof}
+
+This retraction averages the singularity data over a fiber.
+Unlike the ideal retraction, it need not select a nearest model.
+
+\Needspace{15\baselineskip}
+\begin{example}\label{finite-curve:averaging-not-nearest}\index{Model potential!averaging is not nearest}
+For $r:\mathbb P^1\to\mathbb P^1$, $r(z)=z^3$, and the
+Fubini--Study background $\beta$ of area one, the retraction
+$R$ above is not a nearest-point retraction, even on ideal
+models with analytic singularities.
+\end{example}
+\begin{proof}
+Put $\sigma=r^*\beta$, of area three, and let $q$ be its model
+with polar measure $\delta_1$. This is an analytic ideal model:
+in the affine coordinate, the global function
+\[
+ h(z)=\log|z-1|^2-\tfrac13\log(1+|z|^6)
+\]
+extends smoothly across infinity and satisfies
+$\sigma+\ddc h=\delta_1+\tfrac23\sigma$.
+Thus $h$ is $\sigma$-plurisubharmonic with one logarithmic pole,
+and the curve classification identifies its envelope with $q$;
+\cref{prop:analytic-envelope-type} preserves its analytic type.
+Writing $\zeta=\exp(2\pi\mathrm i/3)$, one has
+\[
+ \mu_{R(q)}=\tfrac13(\delta_1+\delta_\zeta+\delta_{\zeta^2}).
+\]
+The three atoms are distinct, so
+\[
+ d_\sigma(q,R(q))=\tfrac23+\tfrac13+\tfrac13=\tfrac43.
+\]
+The zero model is $J(0)$ and has zero polar measure, giving
+$d_\sigma(q,J(0))=1$. Hence the averaged model is strictly
+farther from $q$ than a member of the same pullback subspace.
+\end{proof}
