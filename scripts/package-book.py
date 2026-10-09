@@ -1789,6 +1789,7 @@ selected.update(root / name for name in ['research/audits/hessian-bounded-nonvan
 selected.update(root / name for name in ['research/audits/hessian-local-comparison-interface-635.json', 'research/editorial/hessian-local-comparison-interface-635.md', 'research/source-disposition-635.json', 'research/drafts/hessian-local-comparison-interface-635.tex'])
 selected.update(root / name for name in ['research/audits/hessian-local-comparison-example-integration-636.json', 'research/editorial/hessian-local-comparison-example-integration-636.md', 'research/source-disposition-636.json'])
 selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-review-637.json', 'research/editorial/hessian-global-modified-comparison-review-637.md', 'research/source-disposition-637.json', 'research/drafts/hessian-global-modified-comparison-637.tex'])
+selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-integration-638.json', 'research/editorial/hessian-global-modified-comparison-integration-638.md', 'research/source-disposition-638.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
