@@ -1808,6 +1808,7 @@ selected.update(root / name for name in ['research/audits/incoming-P03-minimum-l
 selected.update(root / name for name in ['research/audits/minimum-lee-curvature-integration-654.json', 'research/editorial/minimum-lee-curvature-integration-654.md', 'research/source-disposition-654.json'])
 selected.update(root / name for name in ['research/audits/finite-curve-pullback-review-655.json', 'research/editorial/finite-curve-pullback-review-655.md', 'research/source-disposition-655.json', 'research/drafts/finite-curve-pullback-foundations-655.tex', 'research/drafts/finite-curve-pullback-models-655.tex'])
 selected.update(root / name for name in ['research/audits/finite-curve-pullback-integration-656.json', 'research/editorial/finite-curve-pullback-integration-656.md', 'research/source-disposition-656.json'])
+selected.update(root / name for name in ['research/audits/recent-arxiv-fiber-margin-review-657.json', 'research/editorial/recent-arxiv-fiber-margin-review-657.md', 'research/source-disposition-657.json', 'research/drafts/fiberwise-convexity-margin-example-657.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
