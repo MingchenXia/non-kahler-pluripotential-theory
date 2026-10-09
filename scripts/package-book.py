@@ -1801,6 +1801,7 @@ selected.update(root / name for name in ['research/audits/critical-curve-fiber-m
 selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-review-647.json', 'research/editorial/curve-backgrounds-finite-factors-review-647.md', 'research/source-disposition-647.json', 'research/drafts/curve-backgrounds-finite-factors-647.tex'])
 selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-integration-648.json', 'research/editorial/curve-backgrounds-finite-factors-integration-648.md', 'research/source-disposition-648.json'])
 selected.update(root / name for name in ['research/audits/curve-component-factor-review-649.json', 'research/editorial/curve-component-factor-review-649.md', 'research/source-disposition-649.json', 'research/drafts/curve-component-factor-649.tex'])
+selected.update(root / name for name in ['research/audits/curve-component-factor-integration-650.json', 'research/editorial/curve-component-factor-integration-650.md', 'research/source-disposition-650.json'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

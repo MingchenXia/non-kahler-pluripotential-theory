@@ -1,5 +1,7 @@
 # Whole-book polish requested 2 October 2026
 
+Checkpoint650 continuation: Continue the whole-book reader queues and investigate the compatibility of finite curve pullback with polar curvature and model envelopes. Review the exact primary-paper dependencies before any external adoption; general P01/P17 and the remaining open scopes stay active. Check incoming author updates before the next coherent unit. See curve-component-factor-integration-650.md. The full finite-pullback primary source is consulted across649/650, without external adoption.
+
 Checkpoint649 continuation: Place the classical curve-component factorization after the Chapter 1 critical-map foundations, and replace the conditional Chapter 16 factor setup by its internal reference. Avoid duplicating the metric consequences; retain the counterexample to original-base trace pushforward. Read all changed inputs, build and inspect, refresh the same catalogue, verify the dated public release and reconstruct both outputs before synchronization. Continue the finite-pullback primary paper and whole-book reader queues. See curve-component-factor-review-649.md. Primary consultation is partial, not adoption.
 
 Checkpoint648 continuation: Review the precise existence input for a connected-fiber curve factor before dropping the stated factorization hypothesis. Continue the whole-book reader queues and exact related primary-paper reading, preserving general P01/P17 and the remaining open scopes. See curve-backgrounds-finite-factors-integration-648.md. No new arXiv proof adoption is claimed.
