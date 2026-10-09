@@ -1792,6 +1792,7 @@ selected.update(root / name for name in ['research/audits/hessian-global-modifie
 selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-integration-638.json', 'research/editorial/hessian-global-modified-comparison-integration-638.md', 'research/source-disposition-638.json'])
 selected.update(root / name for name in ['research/audits/chapter12-reader-coherence-639.json', 'research/editorial/chapter12-reader-coherence-639.md', 'research/source-disposition-639.json'])
 selected.update(root / name for name in ['research/audits/introduction-hessian-coherence-640.json', 'research/editorial/introduction-hessian-coherence-640.md', 'research/source-disposition-640.json'])
+selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-review-641.json', 'research/editorial/curve-fibration-polar-metric-review-641.md', 'research/source-disposition-641.json', 'research/drafts/curve-fibration-polar-metric-641.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

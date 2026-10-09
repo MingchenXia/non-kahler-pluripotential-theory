@@ -1,5 +1,11 @@
 # Modification history
 
+## Checkpoint641 — Models over a curve
+
+Four proofs extend the curve polar metric to the full model space of a rank-one background pulled back under a compact holomorphic submersion with connected fibers. Constant Gauduchon fiber volume normalizes the polar trace, giving an exact isometry, analytic closure, ideal retraction and an all-obstacle criterion; every top-degree mass is zero. Two complete final reads and19 mathematical obligations are recorded. Fresh arXiv payloads match631; the selected six-sphere Introduction is not an adopted input. The active book, catalogue and dated public release stay unchanged. The current metadata package is checked against the actual640 empty reconstruction; all410 book sources and1711+17 page texts match. No new empty build is claimed. See [scoped review](research/editorial/curve-fibration-polar-metric-review-641.md).
+
+Next: Integrate the four proofs beside the zero-volume product constructions in Chapter16, preserving the submersion and connected-fiber hypotheses. Read the complete changed inputs and seams, rebuild and inspect, refresh the existing catalogue, verify the dated public release and reconstruct the source package. Then investigate singular-fiber extensions and related primary papers without importing their unreviewed assertions.
+
 ## Checkpoint640 — Introduction and Hessian coherence
 
 [Scoped coherence review](research/editorial/introduction-hessian-coherence-640.md). The Introduction connects the intermediate Hessian operator to the book's mass and comparison mechanisms. The new paragraph explains the weaker positivity cone, the role of capacity in bounded products, and torsion absorption on small sublevel sets. Its concrete smoothness/uniqueness example keeps2<=m<n, a>0 and smooth real F. The reading route includes the Hessian chapter while retaining the singularity and I-goodness program.
