@@ -1,0 +1,59 @@
+\subsection{H\"older reference approximation and weighted smoothing}
+
+The Chern averages preserve a H\"older norm uniformly. Their small lower-curvature loss can therefore be absorbed by rescaling, without changing the limiting potential.
+
+\begin{lemma}\label{lem:smooth-holder-reference-approximation}
+If $u\in\PSH(X,\omega)\cap C^{0,\alpha}(X)$ with $0<\alpha\leq1$, there are smooth $u_j\in\PSH(X,\omega)$ tending uniformly to $u$, with a common $C^{0,\alpha}$ bound. If $\sup_Xu=0$, the approximants can also be normalized by $\sup_Xu_j=0$.
+\end{lemma}
+\begin{proof}
+Use the Chern averages $R_tu$ in \cref{lem:continuous-potential-smooth-loss}. For a sequence $t_j\downarrow0$ there are $\varepsilon_j\downarrow0$ such that
+\[
+ \omega+\ddc R_{t_j}u\geq-\varepsilon_j\omega,
+ \qquad R_{t_j}u\longrightarrow u\quad\text{uniformly}.
+\]
+We also have a uniform H\"older bound. In a coordinate chart with a smooth orthonormal tangent frame, the averaging formula is
+\[
+ R_tu(x)=\int u(F(x,t\xi))\rho(|\xi|^2)\,\mathrm d\xi.
+\]
+On a smaller chart, smoothness of $F$ bounds $\operatorname{dist}(F(x,t\xi),F(y,t\xi))$ by $C\operatorname{dist}(x,y)$, uniformly for small $t$ and $|\xi|\leq1$. Integrating the H\"older inequality for $u$ gives the same bound for $R_tu$. A finite cover and the common supremum bound handle pairs outside a common smaller chart.
+
+Set $u_j=R_{t_j}u/(1+\varepsilon_j)$. Then
+\[
+ \omega+\ddc u_j
+ =\frac{\varepsilon_j\omega+(\omega+\ddc R_{t_j}u)}{1+\varepsilon_j}\geq0.
+\]
+These functions converge uniformly with a common H\"older bound. Subtracting their suprema gives the asserted normalization when $\sup_Xu=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:holder-reference-chern-error}
+Let $u\in\PSH(X,\omega)\cap C^{0,\alpha}(X)$, $0<\alpha\leq1$, and let $\mu$ be a positive measure with $\mu\leq A\omega_u^n$. For bounded $\varphi\in\PSH(X,\omega)$ with $-M\leq\varphi\leq0$, the Chern averages satisfy
+\[
+ \|R_t\varphi-\varphi\|_{L^1(\mu)}
+ \leq C t^{2\alpha/(\alpha+2n)}
+\]
+for small $t>0$. The constant is uniform under fixed bounds for $A,M$ and $\|u\|_{C^{0,\alpha}}$.
+\end{lemma}
+\begin{proof}
+First we check a common lower curvature bound for the averages. The base part of the classical Chern curvature estimate stated before \cref{lem:general-kiselman-modulus} gives
+\[
+ \omega+\ddc R_t\varphi
+ \geq-(A_0\lambda(\cdot,t)+\epsilon_0(t))\omega,
+ \qquad \lambda(x,t)=t\partial_t(R_t\varphi(x)+K_0t^2).
+\]
+Its constants are fixed under the stated bounded range. In the local kernel form used in \cref{lem:chern-smoothing-integral},
+\[
+ k_t(x,y)=t^{-2n}a\bigl(x,(y-x)/t,t\bigr),
+\]
+with uniformly bounded first derivatives and compact support in its rescaled second variable. Differentiating with respect to $t$ at fixed $x,y$ and changing variables shows that
+\[
+ \int|t\partial_t k_t(x,y)|\,\mathrm dy\leq C.
+\]
+Thus $|t\partial_tR_t\varphi|\leq CM$, so $\lambda$ is uniformly bounded and the displayed curvature estimate supplies one fixed lower bound $\ddc R_t\varphi\geq-C\omega$. Both $R_t\varphi$ and $\varphi$ also lie in $[-M,0]$.
+
+Apply \cref{cor:holder-reference-weighted-modulus} to this pair, whose common lower bound has just been established. By \cref{lem:chern-smoothing-integral}, its smooth-volume $L^1$ error is at most $Ct^2$. Domination by $A\omega_u^n$ therefore gives
+\[
+ \int|R_t\varphi-\varphi|\,\mathrm d\mu
+ \leq C\|R_t\varphi-\varphi\|_{L^1(\mathrm dV)}^{\alpha/(\alpha+2n)}
+ \leq Ct^{2\alpha/(\alpha+2n)}.
+\]
+\end{proof}

@@ -1824,6 +1824,7 @@ selected.update(root / name for name in ['research/audits/incoming-P19-transvers
 selected.update(root / name for name in ['research/audits/hopf-transverse-recovery-integration-668.json', 'research/editorial/hopf-transverse-recovery-integration-668.md', 'research/source-disposition-668.json'])
 selected.update(root / name for name in ['research/audits/incoming-S15-spherical-carrier-review-669.json', 'research/editorial/incoming-S15-spherical-carrier-review-669.md', 'research/source-disposition-669.json', 'research/drafts/local-spherical-product-669.tex', 'research/drafts/fixed-spherical-equations-669.tex', 'research/drafts/capacity-square-stability-669.tex'])
 selected.update(root / name for name in ['research/audits/fixed-spherical-equations-integration-670.json', 'research/editorial/fixed-spherical-equations-integration-670.md', 'research/source-disposition-670.json'])
+selected.update(root / name for name in ['research/audits/S15-holder-range-reconstruction-671.json', 'research/editorial/S15-holder-range-reconstruction-671.md', 'research/source-disposition-671.json', 'research/drafts/local-holder-measure-estimates-671.tex', 'research/drafts/holder-reference-capacity-671.tex', 'research/drafts/holder-reference-chern-estimates-671.tex', 'research/drafts/holder-dominated-regularity-671.tex', 'research/drafts/holder-dominated-homogeneous-equation-671.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
