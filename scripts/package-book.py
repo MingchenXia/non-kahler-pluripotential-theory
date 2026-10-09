@@ -1822,6 +1822,7 @@ selected.update(root / name for name in ['BLUEPRINT.md', 'CHANGELOG.md', 'resear
 selected.update(root / name for name in ['research/audits/chapter5-reader-coherence-666.json', 'research/editorial/chapter5-reader-coherence-666.md', 'research/source-disposition-666.json'])
 selected.update(root / name for name in ['research/audits/incoming-P19-transverse-recovery-review-667.json', 'research/editorial/incoming-P19-transverse-recovery-review-667.md', 'research/source-disposition-667.json', 'research/drafts/p19-ideal-modification-667.tex', 'research/drafts/p19-volume-modification-667.tex', 'research/drafts/p19-hopf-transverse-recovery-667.tex'])
 selected.update(root / name for name in ['research/audits/hopf-transverse-recovery-integration-668.json', 'research/editorial/hopf-transverse-recovery-integration-668.md', 'research/source-disposition-668.json'])
+selected.update(root / name for name in ['research/audits/incoming-S15-spherical-carrier-review-669.json', 'research/editorial/incoming-S15-spherical-carrier-review-669.md', 'research/source-disposition-669.json', 'research/drafts/local-spherical-product-669.tex', 'research/drafts/fixed-spherical-equations-669.tex', 'research/drafts/capacity-square-stability-669.tex'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive
