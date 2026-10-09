@@ -1,0 +1,75 @@
+\section{Power capacity bounds and threshold equations}
+\label{sec:power-capacity-threshold}
+
+In this section, $X$ is a connected compact complex manifold of dimension $n\geq3$, with a Hermitian form $h$ and a smooth positive probability volume $\mathrm dV$. The root-tail condition of \cref{prop:root-uniform-tails} controls the scalar threshold. A power bound for one density's measure supplies the missing control of its approximating potentials: the capacity estimates give a common bound, and stability against the solution measure gives uniform convergence.
+
+\begin{theorem}\label{thm:power-capacity-critical-equation}\index{Subsolution!threshold under capacity domination}\index{Density space!capacity dominated roots}
+Let $0\leq f\in L^1(\mathrm dV)$ have positive integral. Suppose that $A,\alpha>0$ satisfy
+\begin{equation}\label{eq:datum-power-capacity}
+ \int_Ef\,\mathrm dV\leq A\operatorname{Cap}_h(E)^{1+\alpha}
+ \qquad(E\subset X\text{ Borel}).
+\end{equation}
+There is $C>0$, depending only on $(X,h),A,\alpha$, such that every measurable $0\leq g\leq f$ with positive integral satisfies
+\begin{equation}\label{eq:power-capacity-critical-bound}
+ b_h(g)\geq C\left(\int_Xg\,\mathrm dV\right)^{-\alpha/(1+\alpha)},
+ \qquad
+ \rho_h(g^{1/n})\leq C^{-1/n}
+        \left(\int_Xg\,\mathrm dV\right)^{\alpha/(n(1+\alpha))}.
+\end{equation}
+In particular, $f^{1/n}\in\mathcal D_h^0$. There is $\phi\in\PSH(X,h)\cap C(X)$, with $\sup_X\phi=0$, such that
+\begin{equation}\label{eq:power-capacity-exact-threshold}
+ \mathrm{MA}_h(\phi)=b_h(f)f\,\mathrm dV.
+\end{equation}
+The coefficient $b_h(f)$ and the mass of this measure are finite and strictly positive.
+\end{theorem}
+\begin{proof}
+\emph{Step 1: the coefficient and root tails.} Put $g_j=\min(g,j)$ and let $\phi_j$ be normalized continuous solutions of
+\[
+ \mathrm{MA}_h(\phi_j)=c_jg_j\,\mathrm dV,
+ \qquad c_j=c_h(g_j),\qquad \sup_X\phi_j=0,
+\]
+given by \cref{thm:kn-continuous}. The definition \eqref{eq:individual-truncated-normalizer} gives $c_j\downarrow b_h(g)$. Their measures satisfy a power capacity bound with constant $c_jA$.
+
+Take competitor zero, $H=1$ and $\varepsilon=1/2$ in \cref{lem:power-backwards-capacity,lem:thin-sublevel-capacity}. Choose $D>0$ fixed with $2D<\delta_{1/2}$ and put $U_D=\{\phi_j<\inf_X\phi_j+D\}$. These estimates give
+\[
+ D\leq C_\alpha(C_1c_jA)^{1/n}
+                   \operatorname{Cap}_h(U_D)^{\alpha/n},
+ \qquad
+ D^n\operatorname{Cap}_h(U_D)
+       \leq C_1c_j\int_Xg_j\,\mathrm dV.
+\]
+Combining them yields
+\[
+ c_j^{1+\alpha}\left(\int_Xg_j\,\mathrm dV\right)^\alpha\geq c>0.
+\]
+Taking the limit proves the lower bound for $b_h(g)$. The identity \eqref{eq:integrable-gauduchon-root}, with its full family of Gauduchon tests, gives the root estimate. Apply it to $g=f\mathbf1_{\{f>K^n\}}$ whenever this density is nonzero. Its mass tends to zero; the zero density has root norm zero. Thus the tails of $f^{1/n}$ tend to zero in both $L^n$ and $\rho_h$, and \cref{prop:root-uniform-tails} gives $f^{1/n}\in\mathcal D_h^0$.
+
+\emph{Step 2: uniform convergence of a subsequence.} Now use $f_j=\min(f,j)$, $c_j=c_h(f_j)$ and normalized continuous solutions $\phi_j$. Step 1 gives $b_h(f)>0$, while $c_j\leq c_1<\infty$. Hence
+\[
+ \mathrm{MA}_h(\phi_j)(E)
+       \leq Ac_1\operatorname{Cap}_h(E)^{1+\alpha}.
+\]
+The first part of the proof of \cref{prop:power-capacity-one-sided-stability}, using the capacity tail estimate, gives one $M\geq1$ with $-M\leq\phi_j\leq0$ for all $j$.
+
+By \cref{thm:normalized-compactness}, extract a subsequence converging in $L^1(\mathrm dV)$ and almost everywhere. Since $f\,\mathrm dV$ is a fixed finite absolutely continuous measure and the potentials have a common bound, dominated convergence gives
+\[
+ \int_X|\phi_j-\phi_k|\,\mathrm{MA}_h(\phi_j)
+ \leq c_1\int_X|\phi_j-\phi_k|f\,\mathrm dV\longrightarrow0
+\]
+along this subsequence as both indices tend to infinity. Apply \cref{prop:power-capacity-one-sided-stability} in both orders, with $H=M$. The subsequence is uniformly Cauchy. Its limit $\phi$ is continuous, $h$-plurisubharmonic by distributional positivity, and has supremum zero.
+
+\emph{Step 3: passage of the products.} On a coordinate ball choose a fixed smooth $q$ with $\ddc q\geq h$, and put $S_j=\ddc(\phi_j+q)$ and $S=\ddc(\phi+q)$. For every $\ell\geq1$, the calculus of bounded products gives
+\[
+ S_j^\ell-S^\ell
+ =\ddc\left[(\phi_j-\phi)
+       \sum_{a=0}^{\ell-1}S_j^a\wedge S^{\ell-1-a}\right].
+\]
+The local Chern--Levine--Nirenberg estimate bounds its pairing with a compactly supported smooth test form by $C\|\phi_j-\phi\|_\infty$. Expand the Hermitian products as in \cref{prop:bounded-products}:
+\[
+ \mathrm{MA}_h(\phi_j)
+ =\sum_{\ell=0}^n\binom n\ell S_j^\ell\wedge(h-\ddc q)^{n-\ell}.
+\]
+Every term converges, with its smooth correction factor, to the corresponding term for $\phi$. On the other hand, $c_jf_j\to b_h(f)f$ in $L^1(\mathrm dV)$. The two limits prove \eqref{eq:power-capacity-exact-threshold}; its prescribed mass is $b_h(f)\int_Xf\,\mathrm dV$.
+\end{proof}
+
+The capacity assumption concerns the fixed datum and implies the root-tail condition. Whether root tails alone suffice for the exact equation when $v_-(h)=0$ remains part of \cref{qu:individual-equation-threshold}; whether every positive-threshold root has these tails is the question following \cref{prop:root-uniform-tails}.
