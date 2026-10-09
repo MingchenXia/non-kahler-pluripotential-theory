@@ -1,5 +1,11 @@
 # Current research status — 9 October 2026
 
+## Checkpoint648 — Curve backgrounds and finite factors
+
+Chapter 16 extends the full curve-quotient model metric to every smooth curve background of nonnegative area, including the zero-area smooth singleton. A given connected-fiber curve factor followed by a finite map of degree d gives two fiber normalizations with ratio d. An explicit squared-coordinate example shows that polar-trace pushforward to the original base can identify distinct analytic ideal models. Complete changed-input and final-page reviews preserve older proofs and questions. The 1695-page October 9 public release, matching homepage and both covers are verified. Catalogue native preview remains unverified. Actual empty source reconstruction and final current-payload packaging checks remain pending. See [scoped integration](editorial/curve-backgrounds-finite-factors-integration-648.md).
+
+Next: Review the precise existence input for a connected-fiber curve factor before dropping the stated factorization hypothesis. Continue the whole-book reader queues and exact related primary-paper reading, preserving general P01/P17 and the remaining open scopes.
+
 ## Checkpoint647 — Curve backgrounds and finite factors
 
 Five inactive proofs extend the full curve-quotient model metric to arbitrary smooth curve backgrounds, including the zero-area singleton. Given a connected-fiber curve factor followed by a finite map of degree d, the two Gauduchon normalizations differ by d. Explicit logarithmic models over the squared-coordinate map show why pushing polar trace to the original base loses fiber-component information. Two complete manual reads and 30 obligation checks are recorded. Active book and catalogue remain unchanged; the checked October 9 release carries. Current metadata packaging passes against the actual 646 empty reconstruction: all 412 book sources and all 1721+17 page texts match. No new empty extraction or build is claimed. See [scoped review](editorial/curve-backgrounds-finite-factors-review-647.md).

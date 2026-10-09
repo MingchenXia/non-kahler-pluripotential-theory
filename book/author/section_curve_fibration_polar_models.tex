@@ -13,8 +13,9 @@ recovers the curve metric without choosing a product structure.
 Let $p:X\to C$ be a surjective holomorphic map with connected
 fibers, where $X$ is a connected compact complex manifold of
 dimension $n\geq2$ and $C$ is a connected compact Riemann surface.
-Fix a smooth positive $(1,1)$-form $\beta$ on $C$, put
-$A=\int_C\beta$ and $\theta=p^*\beta$. For
+Fix a smooth real $(1,1)$-form $\beta$ on $C$, put
+$A=\int_C\beta$ and $\theta=p^*\beta$, and choose a smooth
+positive area-one form $\eta$ on $C$. For
 $v\in\PSH(C,\beta)$ write
 \[
  T_v=\beta+\ddc v,\qquad
@@ -23,40 +24,63 @@ $v\in\PSH(C,\beta)$ write
 Thus $\mu_v$ is the polar curvature of the curve potential.
 
 \Needspace{14\baselineskip}
-\begin{lemma}\label{fibration:curve-envelope-pullback}\index{Envelope!curve map}
-For $v\in\PSH(C,\beta)$ and $U=v\circ p$,
+\begin{lemma}\label{fibration:curve-envelope-pullback}\index{Envelope!curve map}\index{Model potential!arbitrary curve background pullback}
+The class $\PSH(X,\theta)$ is nonempty if and only if $A\geq0$.
+For $v\in\PSH(C,\beta)$ and $U=v\circ p$, one has
 \[
- \begin{aligned}
- P_\theta[U]&=P_\beta[v]\circ p,\\
- P_\theta[U]_{\mathcal I}&=P_\beta[v]_{\mathcal I}\circ p.
- \end{aligned}
+ P_\theta[U]=P_\beta[v]\circ p,\qquad
+ P_\theta[U]_{\mathcal I}=P_\beta[v]_{\mathcal I}\circ p.
 \]
 Pullback is a bijection between the ordinary model spaces and
-between their ideal subspaces. Every $U\in\PSH(X,\theta)$ has zero
-extended Monge--Amp\`ere measure. In particular all ordinary types
-in this background have zero upper and lower singularity volumes.
+between their ideal subspaces. Every potential in this background
+has zero extended Monge--Amp\`ere measure, and every ordinary type
+has zero upper and lower singularity volumes.
+
+If $A=0$ and $\beta=\ddc h$, the only normalized potential is
+$-h\circ p+\min_Ch$. It is smooth and is the unique ordinary and
+ideal model.
 \end{lemma}
 \begin{proof}
-By \cref{curve-map:potential-descent,curve-map:ideal-types},
-ordinary and ideal competitor families correspond under pullback.
-The map $p$ is open: on a line through any point its nonconstant
-holomorphic germ is open. Hence upper regularization commutes
-with pullback, even at a critical point. These observations
-prove both envelope identities and the model assertions.
+By \cref{curve-map:potential-descent}, every potential descends,
+even for this possibly indefinite background. Thus nonemptiness
+is equivalent to the curve condition in
+\cref{lem:curve-background-area}. Descent preserves the ordinary
+order, and \cref{curve-map:ideal-types} preserves and reflects
+the all-weight ideal order. At each $x\in X$, choose coordinates
+centered at $x$ and $p(x)$. A complex line detects the first nonzero homogeneous
+term of $p$. Its restriction to that line is open, so $p$ is
+open. Upper regularization therefore commutes with pullback,
+proving the envelope identities and the model bijections.
 
-For the mass assertion, $\max(U,-j)=\max(v,-j)\circ p$. Locally
-choose a smooth $a$ with $\ddc a=\beta$. The bounded subharmonic
-function $a+\max(v,-j)$ has smooth decreasing local approximants.
-Their pullbacks have complex Hessian rank at most one, including
-at critical points, so their $n$th powers vanish. Bounded product
-continuity proves that every bounded truncation has zero top
-product. The non-pluripolar measure is therefore zero. Descent
-applies to every representative of every ordinary type, proving
-the volume assertion.
+Write $\beta=A\eta+\ddc h$ with $h$ smooth, using
+\cref{lem:curve-background-area}. For $v\in\PSH(C,\beta)$, put
+$w=v+h\in\PSH(C,A\eta)$. Then
+\[
+ \theta+\ddc(v\circ p)
+   =A p^*\eta+\ddc(w\circ p).
+\]
+When $A>0$, put $W=w\circ p$. Its bounded truncations are
+$\max(W,-j)=\max(w,-j)\circ p$. Locally choose a smooth $a$
+with $\ddc a=A\eta$. The bounded subharmonic function
+$a+\max(w,-j)$ has smooth decreasing local approximants. Their
+pullbacks have complex Hessian rank at most one, including at
+critical points, so their $n$th powers vanish. Bounded product
+continuity makes each truncation have zero top product, and
+hence $W$ has zero extended measure in the positive background.
+The current invariance in
+\cref{thm:arbitrary-extended-ma} gives zero extended measure in
+the original decomposition as well.
+
+When $A=0$, the curve lemma gives $v=-h+c$. Its pullback is
+smooth with zero curvature current, so its top product is zero.
+Surjectivity gives the stated normalization. Every potential
+differs from this one by a constant, and both envelopes fix its
+normalized representative. Since descent applies to every
+representative of every ordinary type, both singularity volumes
+are zero in all cases.
 \end{proof}
 
-Fix a Gauduchon form $\gamma$ on $X$ and a smooth positive
-area-one form $\eta$ on $C$. For a finite positive measure
+Henceforth assume $A\geq0$. Fix a Gauduchon form $\gamma$ on $X$. For a finite positive measure
 $\mu$ of mass $M$, let $q_\mu$ be the solution normalized by
 $\int_Cq_\mu\,\eta=0$ to
 \[
@@ -163,41 +187,61 @@ mass of $v$.
 
 Metric convergence implies $L^1(X)$ convergence for every smooth
 positive volume form. The upper-volume comparison on
-$\mathcal M(\theta)$ vanishes identically.
+$\mathcal M(\theta)$ vanishes identically. At $A=0$ this is the
+one-point metric space of the unique smooth model.
 \end{proposition}
 \begin{proof}
-The Borel restriction identity of \cref{fibration:gauduchon-fiber-volume}
-applied to $T_v$ and $\{v=-\infty\}$ gives
-$\lambda_U^\gamma=L_\gamma(\mu_v)$. Its variation identity yields
+The definition of pullback measure gives
+$p^*T_v=\theta+\ddc(v\circ p)$: in the smooth decomposition
+$\beta=A\eta+\ddc h$, both sides are
+$A p^*\eta+\ddc((v+h)\circ p)$. Apply the Borel restriction and
+total-variation identities of
+\cref{fibration:gauduchon-fiber-volume} to get
 \[
+ \lambda_{v\circ p}^\gamma=L_\gamma(\mu_v),\qquad
  \rho_\theta(v\circ p,w\circ p)
        =\|\mu_v-\mu_w\|_{\mathrm{TV}}=d_\beta(v,w).
 \]
-Together with \cref{fibration:curve-envelope-pullback}, this proves
-independence and an isometry onto the entire model space.
-Completeness and geodesics follow from
-\cref{cor:curve-model-completeness}. The mass bound gives diameter
-at most $2A$, and the models of $A\delta_s$ and $A\delta_t$ for
-distinct base points attain it.
+The envelope bijection and
+\cref{prop:curve-arbitrary-background-models} give the isometry,
+completeness and geodesics. Polar measures have mass at most
+$A$, so their mutual distance is at most $2A$. For $A>0$, the
+models of $A\delta_s$ and $A\delta_t$, $s\ne t$, attain this
+bound. For $A=0$, \cref{fibration:curve-envelope-pullback} gives
+the singleton.
 
-Ideal projection commutes with pullback by the envelope identity.
-Thus \cref{prop:curve-analytic-distance-defect} gives its unique
-nearest-point property, the Lipschitz estimate and the distance
-formula. By \cref{curve-map:analytic-types}, analytic models
-correspond in both directions. Every analytic model is ideal by
-\cref{prop:analytic-envelope-type}. The analytic curve models of
-positive curve mass are dense in the ideal subspace by
-\cref{cor:curve-model-completeness}; their pullbacks have zero
-top-degree mass. This proves the asserted analytic closure.
-Closedness and geodesic convexity follow from those of atomic
-polar measures.
+Ideal projection corresponds to the atomic part of the polar
+measure by the same curve classification. If
+$\mu=\mu_{\mathrm{at}}+\mu_{\mathrm{diff}}$ and $\nu$ is atomic,
+the measures $\mu_{\mathrm{diff}}$ and
+$\mu_{\mathrm{at}}-\nu$ are mutually singular. Therefore
+\[
+ \|\mu-\nu\|_{\mathrm{TV}}
+  =\mu_{\mathrm{diff}}(C)
+     +\|\mu_{\mathrm{at}}-\nu\|_{\mathrm{TV}}.
+\]
+The minimum is attained exactly at $\nu=\mu_{\mathrm{at}}$.
+Taking the atomic part does not increase total variation, giving
+the Lipschitz estimate. Atomic polar measures of mass at most
+$A$ form a closed convex subset of the polar-measure space.
 
-Curve metric convergence gives base $L^1$ convergence by
-\cref{thm:curve-model-capacity-convergence}, and
-\cref{curve-map:lone-pullback} then gives convergence upstairs.
-Finally the envelope lemma makes all top masses zero, including
-that of each pairwise maximum. This makes the upper-volume
-comparison zero.
+For $A>0$, the smooth-gauge model bijection in the proof of
+\cref{prop:curve-arbitrary-background-models} preserves analytic
+singularities in both directions: its envelope differs by a
+bounded function from the smoothly transported analytic model,
+by \cref{prop:i-envelope-gauge}. Thus the analytic density in
+\cref{cor:curve-model-completeness} carries from $A\eta$ to
+$\beta$. The analytic descent equivalence of
+\cref{curve-map:analytic-types} and the envelope bijection then
+give the stated closure upstairs. At zero area the unique smooth
+model is already analytic and ideal.
+
+Curve metric convergence implies $L^1(C)$ convergence by
+\cref{prop:curve-arbitrary-background-models}, and
+\cref{curve-map:lone-pullback} gives convergence upstairs.
+Finally all top-degree masses, including those of pairwise
+maxima, vanish by \cref{fibration:curve-envelope-pullback}.
+The upper-volume comparison therefore vanishes.
 \end{proof}
 
 \Needspace{14\baselineskip}
@@ -206,28 +250,143 @@ Let $U=v\circ p$ and $R=P_\theta[U]_{\mathcal I}$. The following
 are equivalent: $P_\theta[U]=P_\theta[U]_{\mathcal I}$;
 $\mu_v$ is atomic; $U\in\mathcal E_{\mathrm{env}}(X,\theta,R)$;
 and the ordinary and ideal envelopes of $U$ agree below every
-smooth real obstacle on $X$.
+smooth real obstacle on $X$. At zero area all four conditions hold.
 \end{corollary}
 \begin{proof}
-Put $r=P_\beta[v]_{\mathcal I}$. The envelope lemma gives
-$R=r\circ p$ and makes the first condition equivalent to
-$P_\beta[v]=r$. By \cref{cor:curve-arbitrary-background-criterion},
-this is equivalent to atomicity and to
-$v\in\mathcal E_{\mathrm{env}}(C,\beta,r)$.
-
-For each $b\geq1$, descent and surjectivity give a bijection
-between all stretching competitors satisfying
-$b^{-1}h+(1-b^{-1})r\leq v$ and their upstairs counterparts.
-Only convex combinations occur, so the correspondence remains
-valid at poles. It identifies the two relative-class conditions.
-Then \cref{prop:ideal-obstacle-reprojection} gives equality below
-every smooth obstacle on $X$, including obstacles that do not
-descend. Conversely that equality includes the zero obstacle.
+Put $r=P_\beta[v]_{\mathcal I}$. The envelope bijection gives
+$R=r\circ p$. By \cref{cor:curve-arbitrary-background-criterion},
+base envelope equality is equivalent to atomic polar curvature
+and to $v\in\mathcal E_{\mathrm{env}}(C,\beta,r)$.
+For each stretching parameter $b\geq1$, descent and surjectivity
+identify competitors satisfying
+$b^{-1}h+(1-b^{-1})r\leq v$ with their upstairs counterparts.
+This uses only convex combinations and remains valid at poles.
+Thus the relative-class conditions correspond. Apply
+\cref{prop:ideal-obstacle-reprojection} for equality below every
+smooth obstacle on $X$; the converse includes the zero obstacle.
+The zero-area assertion follows from the smooth singleton.
 \end{proof}
 
 The top-degree measure is zero for every potential, yet the
 first polar trace separates every pair of models. Here the
 one-dimensional quotient supplies all the singularity data.
+
+\Needspace{18\baselineskip}
+\subsection{Finite curve factors}
+\label{subsec:finite-curve-factors}
+
+Keep $X$ and $C$ as above. We now allow $p:X\to C$ to have
+disconnected fibers and suppose that it has a factorization
+\[
+ X\xrightarrow{q}C'\xrightarrow{r}C,
+ \qquad p=r\circ q,
+\]
+where $q$ is surjective and holomorphic with connected fibers,
+$C'$ is a connected compact Riemann surface, and $r$ is finite
+and holomorphic of degree $d\geq1$. Let $\beta$ be any smooth real form on $C$ with
+$A=\int_C\beta\geq0$, and put $\sigma=r^*\beta$ and
+$\theta=p^*\beta=q^*\sigma$.
+
+\Needspace{16\baselineskip}
+\begin{proposition}\label{fibration:finite-curve-factor}\index{Metric completeness!finite curve factor}
+The entire ordinary $\theta$-model space is isometric, using the
+$q$-fiber normalization, to the curve model space in background
+$\sigma$, whose area is $dA$. Its diameter is $2dA$; it has the
+analytic closure, ideal retraction, convergence and all-obstacle
+properties above.
+
+If $\kappa_q^\gamma$ and $\kappa_p^\gamma$ are the constants
+defined by the pushforwards of $\gamma^{n-1}$ to $C'$ and $C$,
+then
+\[
+ \kappa_p^\gamma=d\kappa_q^\gamma.
+\]
+Consequently normalizing the same polar-trace variation by
+$\kappa_p^\gamma$ gives $d^{-1}$ times the $q$-normalized metric,
+with diameter $2A$. This rescaled metric is also independent of
+$\gamma$. For a model $U=v\circ q$ with polar measure $\mu_v$,
+\[
+ p_*\lambda_U^\gamma=\kappa_q^\gamma r_*\mu_v.
+\]
+\end{proposition}
+\begin{proof}
+Away from the finitely many critical values, $r$ is a covering
+with $d$ sheets. Change of variables on these sheets gives
+\[
+ \int_{C'}r^*\alpha=d\int_C\alpha
+\]
+for every smooth real $(1,1)$-form $\alpha$; the branch points
+and their inverse images have smooth area zero. In particular
+$\int_{C'}\sigma=dA$. Apply
+\cref{fibration:curve-envelope-pullback,fibration:polar-model-metric,fibration:all-obstacle-criterion}
+to $q$ and this smooth curve background, which may vanish at
+branch points or be indefinite.
+
+The Gauduchon trace lemma for $q$ gives
+$q_*(\gamma^{n-1})=\kappa_q^\gamma$. For a smooth test form
+$\alpha$ on $C$, the projection formula and the covering
+calculation yield
+\[
+ \int_Xp^*\alpha\wedge\gamma^{n-1}
+  =\kappa_q^\gamma\int_{C'}r^*\alpha
+  =d\kappa_q^\gamma\int_C\alpha.
+\]
+Thus $p_*(\gamma^{n-1})$ is the constant $d\kappa_q^\gamma$.
+The ratio of the two normalizations is $d^{-1}$, giving every
+metric assertion. Finally
+$q_*\lambda_U^\gamma=\kappa_q^\gamma\mu_v$, so composing
+pushforwards proves the last identity.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{example}\label{fibration:disconnected-polar-pushforward}\index{Descent!disconnected curve fibers}
+Let $X=\mathbb P^1\times\mathbb P^1$, let $q$ be its first
+projection and let $r:\mathbb P^1\to\mathbb P^1$ be
+$r([z_0:z_1])=[z_0^2:z_1^2]$. Put $p=r\circ q$ and
+$\theta=p^*\omega_{\FS}$, with $\int_{\mathbb P^1}\omega_{\FS}=1$.
+There are two distinct analytic ideal $\theta$-models $U_+,U_-$
+which do not descend through $p$. Their $q$-normalized polar
+distance is four and their $p$-normalized distance is two, yet
+\[
+ p_*\lambda_{U_+}^\gamma=p_*\lambda_{U_-}^\gamma
+\]
+for every Gauduchon form $\gamma$. Thus the pushforward of polar
+trace to the original base does not separate the models.
+\end{example}
+\begin{proof}
+The finite map $r$ has degree two and is branched at zero and
+infinity. In the affine coordinate it is $r(z)=z^2$, so the
+smooth semipositive form $\sigma=r^*\omega_{\FS}$ has area two.
+For $s\in\{1,-1\}$, set
+\[
+ v_s(z)=2\log|z-s|^2-\log(1+|z|^4)-\log8.
+\]
+This extends smoothly across infinity and has curvature
+$\sigma+\ddc v_s=2\delta_s$. The inequality
+$|z-s|^4\leq(|z|+1)^4\leq8(1+|z|^4)$, with equality at
+$z=-s$, shows that its supremum is zero.
+The model of $2\delta_s$ from
+\cref{prop:curve-arbitrary-background-models} has precisely
+this total curvature, since its polar measure already has the
+full mass two. Harmonic uniqueness and normalization identify
+it with $v_s$. Write $v_+=v_1$ and $v_-=v_{-1}$. Both have
+analytic singularities, hence are ideal by
+\cref{prop:analytic-envelope-type}. The model pullback bijection makes
+$U_\pm=v_\pm\circ q$ analytic ideal $\theta$-models.
+
+The function $U_+$ is $-\infty$ on $q^{-1}(1)$ and finite on
+$q^{-1}(-1)$, although both divisors are mapped by $p$ to the
+same base point $1$. It therefore cannot descend through $p$;
+the same argument with the divisors exchanged applies to $U_-$.
+The variation of $2\delta_1-2\delta_{-1}$ is four. The finite
+factor proposition gives the two distances and
+\[
+ p_*\lambda_{U_\pm}^\gamma
+   =2\kappa_q^\gamma\delta_1.
+\]
+The upstairs polar traces are distinct, while this common
+pushforward loses which component carries the pole.
+\end{proof}
 
 \Needspace{18\baselineskip}
 \subsection{Hopf surface fibers and unbounded ambient mass}

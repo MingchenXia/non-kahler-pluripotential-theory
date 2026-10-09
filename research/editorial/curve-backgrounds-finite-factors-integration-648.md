@@ -1,0 +1,15 @@
+# Curve backgrounds and finite factors — integration 648
+
+Chapter 16 extends the full curve-quotient model metric to every smooth curve background of nonnegative area, including the zero-area smooth singleton. A given connected-fiber curve factor followed by a finite map of degree d gives two fiber normalizations with ratio d. An explicit squared-coordinate example shows that polar-trace pushforward to the original base can identify distinct analytic ideal models.
+
+The complete 503-line fibration input and 271-line chapter root receive final post-output manual reads. The prebuild read and subsequent local coordinate clarification are separately recorded. The five-proof, two-read reconstruction and its 30 obligations in 647 carry at their recorded scope. Three existing statements and proofs are expanded; 1369 of 1372 old proof bodies and 1459 of 1462 old statement blocks remain byte-exact. The Gauduchon and Hopf proofs, all 23 formal questions, both original manifests and incoming S10/S11 are preserved. The rank-one bounded-product calculation replaces a self-reference in the initial proof; the all-obstacle and explicit-example proofs match 647 after notation conversion.
+
+One clean full TeX build produces 1695 printed and 1723 physical pages. Its first publication hook fails because the shell lacked network permission; a publish-only retry with network permission succeeds. All 31 selected final pages in eight sheets are directly viewed, including the complete fibration section, finite factor, counterexample, Hopf and topology seams, general P01 question, changed contents and all 13 index pages. Both covers are directly viewed and show October 9, 2026. The actual served PDF checksum, matching homepage and exact-head successful Actions/Pages deployment pass. There are 10172 valid internal PDF links and 1080 source-matched index locators.
+
+The finite factor is an explicit hypothesis; its existence is not imported without review. The upstairs trace separates models, while its pushforward to the original base can lose component information. The zero-area metric is the smooth singleton; no ordinary model is asserted for negative base area. General P01/P17 remain open.
+
+The same catalogue retains all 44 full descriptions and 40 open assessment scopes, with 265 single-page and 26 range locators checked. Saved-source native compiler call 61 returned no diagnostics through four bounded waits while source and page review continued, and was terminated. Preview compilation remains unverified; the same editor is retained and no separate catalogue PDF is built.
+
+Actual empty source reconstruction and final current-payload packaging checks remain pending. No original problem closure, new external adoption, novelty claim or whole-book certificate is made. The base automatic writing audit remains unavailable; the reads are manual.
+
+Next: Review the precise existence input for a connected-fiber curve factor before dropping the stated factorization hypothesis. Continue the whole-book reader queues and exact related primary-paper reading, preserving general P01/P17 and the remaining open scopes.
