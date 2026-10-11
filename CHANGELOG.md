@@ -1,5 +1,9 @@
 # Modification history
 
+## P09 spectral-gap candidate — 11 October 2026
+
+Save an explicitly unverified standalone draft and pending audit. The proposed estimate controls every normalized smooth positive Hermitian test by the pairing with a constant-rank semipositive spectral gap and is sharp on a two-block product torus. A closed strictly positive background has positive root volume and threshold while every normalized threshold-minimizing sequence has vanishing determinant denominator; the additional normalized-sequence condition therefore needs separate justification. The general closed-nef bridge remains open. Full source and explicit corrections received root preassessment; independent gpt-6.1-sol xhigh Xean review, compilation and PDF inspection are pending after the execution-environment failure. The runtime now reports running/connected, but file and shell tools are not yet exposed to this task. Preserve the latest author book, all historical evidence and counts; no checked article or original closure is added.
+
 ## Source-bound reader preparation — 11 October 2026
 
 While execution was unavailable, the exact private checkpoint 684 source was read through GitHub. The complete recursive Chapter 12 scope comprises 14 files and 75 proof environments; Chapter 13 comprises 10 files and 39 proof environments. Chapter 14's root and 23 inputs were also read, with 72 proof environments and the remaining input queue recorded. The extended reading covers prescribed and minimal singularities, interior smoothness, semipositive degeneration, nodal distance criteria and invariant projective selection. The snapshot retains exact source commit and Git blob identities, dependency maps and scoped editorial candidates. No manuscript adoption, new mathematical certificate, checked release, local-byte comparison, compilation or publication is claimed. See [reader preparation](research/editorial/remote-reader-preparation-20261011.md).

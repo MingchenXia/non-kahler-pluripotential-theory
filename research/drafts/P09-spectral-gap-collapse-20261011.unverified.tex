@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ddc}{\frac{i}{2\pi}\partial\bar\partial}
+\newcommand{\tr}{\operatorname{tr}}
+\title{A spectral gap forces collapse of normalized Gauduchon tests}
+\author{}
+\date{11 October 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Research draft.}
+Independent Xean review and compilation are pending. The original P09
+problem and every previous verdict remain unchanged.
+
+\begin{abstract}
+We bound the determinant denominator of every normalized Hermitian test
+by the pairing with a semipositive form having a fixed spectral gap.
+If that form has rank \(q<n\), a pairing of size \(e\) forces the denominator
+to be \(O(e^{q/n})\). On a product of elliptic curves the estimate is sharp,
+with an explicit maximizing metric at every prescribed pairing.
+A closed strictly positive background on this product has positive root
+volume and positive strict-positivity threshold, yet the determinant
+denominator tends to zero along every sequence minimizing that threshold.
+This rules out a universal lower bound for that particular normalization
+of threshold-minimizing tests. The general positive-intersection
+root-volume problem remains open.
+\end{abstract}
+
+\section{The two quotients}
+
+Let \(X\) be a connected compact complex manifold of dimension \(n\geq2\),
+\(h\) a smooth positive Hermitian form, and \(\mu\) a smooth positive
+probability volume form. A smooth positive Hermitian form \(\gamma\) is
+Gauduchon when \(\ddc(\gamma^{n-1})=0\). Put
+\[
+ A_\theta(\gamma)=\int_X\theta\wedge\gamma^{n-1},
+ \qquad
+ D_\mu(\gamma)=\int_X
+       \left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n .
+\]
+For a smooth positive background \(\alpha\), the two quantities considered
+here are
+\[
+ \kappa_h(\alpha)=\inf_{\gamma\ {\rm Gauduchon}}
+       \frac{A_\alpha(\gamma)}{A_h(\gamma)},
+ \qquad
+ \lambda_\mu(\alpha)=\inf_{\gamma\ {\rm Gauduchon}}
+       \frac{A_\alpha(\gamma)}{D_\mu(\gamma)}.
+\]
+The factor \(n\) in the usual trace identity is included in these
+definitions. Multiplication of \(\gamma\) by a positive scalar multiplies
+all three pairings \(A_\alpha,A_h,D_\mu\) by the same factor.
+Thus each ray can be normalized by \(A_h(\gamma)=1\).
+
+The source definitions and the proposed threshold-sequence argument
+are recorded in \cite{volume,collapse,bridge}. They are used as definitions
+and as the formulation to be tested. All estimates below are proved
+directly, for arbitrary smooth positive Hermitian tests; their validity
+does not depend on a solution theorem or on a restriction to invariant
+Gauduchon tests.
+
+\section{A spectral estimate for every test}
+
+Write
+\[
+ H=\int_Xh^n,\qquad \nu=\frac{h^n}{H},\qquad
+ r=\frac{\mu}{\nu},\qquad R=\max_X r.
+\]
+The maximum \(R\) is finite and positive. At a point, an \(h\)-unitary
+frame identifies \(\gamma\) with a positive Hermitian matrix \(G\).
+Set \(C=(\det G)G^{-1}\). This is the cofactor endomorphism; the convention
+is independent of the unitary frame. It satisfies
+\[
+ \det C=(\det G)^{n-1},\qquad
+ A_h(\gamma)=\frac Hn\int_X\tr C\,d\nu,\qquad
+ D_\mu(\gamma)=H^{(n-1)/n}
+       \int_X r^{1/n}(\det C)^{1/n}\,d\nu .
+\]
+These identities can be checked in a unitary frame diagonalizing \(G\):
+\(\gamma^n=(\det G)h^n\), while
+\(h\wedge\gamma^{n-1}/h^n=\tr C/n\).
+The same expansion gives
+\(B\wedge\gamma^{n-1}/h^n=\tr(BC)/n\), including an arbitrary
+Hermitian \(B\). Substituting \(\mu=rh^n/H\) gives the displayed
+denominator formula. Unitary invariance then gives the identities globally.
+
+\begin{theorem}\label{thm:gap}
+Let \(B\) be a smooth semipositive real \((1,1)\)-form of constant
+complex rank \(q\), where \(1\leq q<n\), and put \(m=n-q\).
+Suppose its positive eigenvalues relative to \(h\) are at least
+\(\delta>0\). For every smooth positive Hermitian \(\gamma\) with
+\(A_h(\gamma)=1\), put \(e=A_B(\gamma)\).
+If \(0<e\leq\delta q/n\), then
+\begin{equation}\label{eq:gap}
+ D_\mu(\gamma)\leq
+ n(R/H)^{1/n}
+ \left(\frac{1-e/\delta}{m}\right)^{m/n}
+ \left(\frac{e/\delta}{q}\right)^{q/n}.
+\end{equation}
+In particular \(D_\mu(\gamma)\leq
+n(R/H)^{1/n}m^{-m/n}q^{-q/n}\delta^{-q/n}e^{q/n}\).
+The estimate includes variable and nondiagonal tests.
+\end{theorem}
+
+\begin{proof}
+Let \(P\) be the \(h\)-orthogonal projection onto the positive spectral
+subbundle of \(B\), and \(Q=I-P\). Constant rank and the positive gap make
+these smooth subbundles. In matrix notation \(B\geq\delta P\).
+Put \(p=\tr(PC)>0\) and \(s=\tr(QC)>0\).
+In the orthogonal splitting of dimensions \(m,q\), write
+\[
+ C=\begin{pmatrix}U&V\\V^*&W\end{pmatrix}.
+\]
+The blocks \(U,W\) are positive. The Schur complement
+\(W-V^*U^{-1}V\) is positive and at most \(W\), so
+\[
+ \det C
+ =\det U\,\det(W-V^*U^{-1}V)
+ \leq\det U\,\det W
+ \leq (s/m)^m(p/q)^q.
+\]
+For completeness, the determinant inequality follows by conjugating
+the Schur complement by \(W^{-1/2}\): its eigenvalues belong to \((0,1]\).
+The last step is the arithmetic--geometric mean inequality for the
+positive eigenvalues of each diagonal block.
+
+Let \(z=\int_Xp\,d\nu\) and \(y=Hz/n\). Normalization gives
+\[
+ \int_X(s+p)\,d\nu=n/H,\qquad
+ \int_Xs\,d\nu=n/H-z.
+\]
+Also
+\[
+ e=\frac Hn\int_X\tr(BC)\,d\nu\geq\frac{H\delta}{n}z.
+\]
+Indeed \(\tr((B-\delta P)C)\geq0\), as seen after conjugation by
+\(C^{1/2}\). Hence \(0<y<1\) and \(y\leq e/\delta\).
+
+Applying the determinant estimate and the two-factor integral
+inequality with exponents \(m/n,q/n\) gives
+\begin{align*}
+ D_\mu(\gamma)
+ &\leq H^{(n-1)/n}R^{1/n}
+       \left(\frac{\int_Xs\,d\nu}{m}\right)^{m/n}
+       \left(\frac{\int_Xp\,d\nu}{q}\right)^{q/n}\\
+ &=n(R/H)^{1/n}
+       \left(\frac{1-y}{m}\right)^{m/n}
+       \left(\frac yq\right)^{q/n}.
+\end{align*}
+This integral inequality follows by dividing \(s,p\) by their positive
+integrals and applying weighted arithmetic--geometric mean pointwise,
+then integrating. It therefore imposes no commutativity or constancy
+hypothesis on \(C\).
+
+The logarithmic derivative of
+\((1-y)^{m/n}y^{q/n}\) is
+\((q-ny)/(ny(1-y))\). It is nonnegative for \(0<y\leq q/n\).
+Our assumptions put both \(y\) and \(e/\delta\) in this interval.
+Replacing \(y\) by \(e/\delta\) proves \eqref{eq:gap}.
+Discarding the factor \((1-e/\delta)^{m/n}\leq1\) proves the last bound.
+\end{proof}
+
+\begin{corollary}\label{cor:sequence}
+Suppose \(a>0\), \(\alpha-a h=B\) satisfies the hypotheses of
+Theorem~\ref{thm:gap}, and \(\kappa_h(\alpha)=a\).
+Then every normalized sequence of Gauduchon metrics with
+\(A_\alpha(\gamma_j)\to a\) satisfies
+\[
+ D_\mu(\gamma_j)=
+ O\bigl((A_\alpha(\gamma_j)-a)^{q/n}\bigr)\longrightarrow0.
+\]
+\end{corollary}
+\begin{proof}
+Here \(e_j=A_B(\gamma_j)=A_\alpha(\gamma_j)-a\to0\).
+Every \(e_j\) is strictly positive because \(B\) has positive rank and
+\(\gamma_j\) is positive. Apply Theorem~\ref{thm:gap} for all sufficiently
+large \(j\). The equality \(\kappa_h(\alpha)=a\) is a hypothesis of this
+corollary, not an inference from the pointwise lower bound alone.
+\end{proof}
+
+\section{A closed positive example and sharp constants}
+
+Let \(E=\mathbb C/(\mathbb Z+i\mathbb Z)\), let \(X=E^n\), and let
+\(\omega_i\) be the pullback of the translation-invariant positive
+area form on the \(i\)-th factor with integral one. Set
+\[
+ \mu=\omega_1\wedge\cdots\wedge\omega_n,\qquad
+ h=\sum_{i=1}^n\omega_i,\qquad
+ B=\delta\sum_{i=m+1}^n\omega_i,\qquad
+ \alpha=a h+B,
+\]
+where \(a,\delta>0\), \(1\leq m<n\), and \(q=n-m\).
+The forms \(h,\alpha\) are closed and strictly positive. In particular
+\(\alpha\) is nef, is itself a strict positive representative, and
+\[
+ \int_X\alpha^n=n!a^m(a+\delta)^q>0.
+\]
+
+\begin{theorem}\label{thm:flat}
+For this fixed geometry,
+\[
+ \kappa_h(\alpha)=a,\qquad
+ \lambda_\mu(\alpha)=\bigl(n!a^m(a+\delta)^q\bigr)^{1/n}>0.
+\]
+For every \(e\in(0,\delta)\), among all smooth normalized Gauduchon
+metrics with \(A_\alpha(\gamma)=a+e\), the maximum denominator is
+\begin{equation}\label{eq:flat}
+ \frac{n}{(n!)^{1/n}}
+ \left(\frac{1-e/\delta}{m}\right)^{m/n}
+ \left(\frac{e/\delta}{q}\right)^{q/n}.
+\end{equation}
+A translation-invariant closed metric attains this value.
+Nevertheless every normalized threshold-minimizing sequence has
+\(D_\mu(\gamma_j)\to0\).
+\end{theorem}
+
+\begin{proof}
+In this normalization \(H=n!\), \(\nu=\mu\), and \(R=1\).
+Moreover \(B=\delta P\), so the preceding proof gives
+\(y=e/\delta\) exactly. Its determinant and integral estimates give
+\eqref{eq:flat} for every \(e\in(0,\delta)\); the monotonicity step of
+Theorem~\ref{thm:gap} is unnecessary.
+
+We verify attainment within the full test class. Put \(x=e/\delta\), and
+choose weights
+\[
+ w_i=\frac{1-x}{m}\quad(1\leq i\leq m),\qquad
+ w_i=\frac{x}{q}\quad(m<i\leq n).
+\]
+Let \(C\) be the constant diagonal matrix with entries
+\(c_i=w_i/(n-1)!\), and set
+\[
+ G=(\det C)^{1/(n-1)}C^{-1}.
+\]
+It is positive, and direct determinants give
+\(\det G=(\det C)^{1/(n-1)}\); hence \((\det G)G^{-1}=C\).
+The associated translation-invariant metric is closed and hence
+Gauduchon. Directly,
+\[
+ A_h=(n-1)!\sum_i c_i=1,\qquad
+ A_B=\delta(n-1)!\sum_{i>m}c_i=\delta x=e.
+\]
+Its denominator is
+\[
+ (n!)^{(n-1)/n}(\det C)^{1/n}
+ =\frac{n}{(n!)^{1/n}}\left(\prod_i w_i\right)^{1/n},
+\]
+which equals \eqref{eq:flat}.
+
+Since \(\alpha\geq a h\), every test satisfies \(A_\alpha/A_h\geq a\).
+The constructed metrics have \(A_\alpha=a+\delta x\), and \(x\downarrow0\)
+therefore proves \(\kappa_h(\alpha)=a\).
+For an arbitrary normalized threshold-minimizing sequence,
+\(e_j=A_\alpha(\gamma_j)-a\to0\).
+Either \eqref{eq:flat} or Corollary~\ref{cor:sequence} then proves
+denominator collapse, including for variable nondiagonal metrics.
+
+It remains to compute the root volume without a solution theorem.
+The pointwise arithmetic--geometric mean inequality for the eigenvalues
+of \(\alpha\) relative to \(\gamma\) yields
+\[
+ \alpha\wedge\gamma^{n-1}
+ \geq
+ \left(\frac{\alpha^n}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+Here \(\alpha^n=M\mu\), where \(M=n!a^m(a+\delta)^q\).
+Thus \(A_\alpha(\gamma)\geq M^{1/n}D_\mu(\gamma)\) for every smooth
+positive metric, in particular every Gauduchon metric.
+The closed metric \(\gamma=\alpha\) gives equality. Taking the infimum
+proves the asserted formula for \(\lambda_\mu\).
+\end{proof}
+
+\section{What the example decides}
+
+The example has a closed nef background with positive top intersection,
+positive root volume, and an explicit strict positive representative.
+It has no normalized threshold-minimizing sequence whose determinant
+denominators have positive lower limit. Thus the existence of such
+a sequence cannot be a necessary consequence of closed nef positive
+intersection, even on a compact K\"ahler manifold.
+
+There is no contradiction with the conditional collapse proposition:
+its nonbigness hypothesis is absent here, and the hypothesis of a positive
+denominator lower limit in its second assertion simply fails.
+Nor is there a counterexample to positive-intersection bigness.
+The general first bridge on arbitrary compact complex manifolds,
+and the classical closed nef bigness conjecture, are not decided.
+Any continuation using normalized threshold sequences must distinguish
+a useful sufficient condition from a universally available condition.
+
+The two quotient problems are genuinely different in this example.
+The metric \(\alpha\) attains the root-volume quotient. After normalization,
+its excess over \(a\) is
+\[
+ e_\lambda=\frac{\delta q a}{na+m\delta}>0,
+\]
+because its normalized cofactor weights are
+\(w_i=a_i^{-1}/\sum_\ell a_\ell^{-1}\), with \(a_i=a\) on the first
+block and \(a_i=a+\delta\) on the second. Threshold-minimizing
+sequences instead have excess tending to zero and cannot keep a positive
+determinant denominator.
+
+This draft does not replace the frozen P09 manuscripts or change any
+previous native verdict, acceptance record, publication count, or
+original-problem completion flag. Literature priority is not asserted.
+
+\begin{thebibliography}{3}
+\bibitem{volume}
+M. Xia, \emph{Singularities in Hermitian pluripotential theory},
+working manuscript: \emph{A Gauduchon variational volume},
+source snapshot \texttt{0646d2cf}, definition and dual-formula context.
+\href{https://github.com/MingchenXia/non-kahler-pluripotential-theory/blob/0646d2cf9d9bb10e15bc357305cce3c58ecb4741/book/author/chapter_gauduchon_variational_volume.tex}{Versioned source}.
+
+\bibitem{collapse}
+Same manuscript, \emph{Collapse of normalized Gauduchon tests},
+entire subsection, source snapshot \texttt{0646d2cf}.
+\href{https://github.com/MingchenXia/non-kahler-pluripotential-theory/blob/0646d2cf9d9bb10e15bc357305cce3c58ecb4741/book/author/section_gauduchon_collapse.tex}{Versioned source}.
+
+\bibitem{bridge}
+Same manuscript, \emph{Closed positivity and geometric equations},
+closed-nef bridge problem and its surrounding explanation,
+source snapshot \texttt{0646d2cf}.
+\href{https://github.com/MingchenXia/non-kahler-pluripotential-theory/blob/0646d2cf9d9bb10e15bc357305cce3c58ecb4741/book/author/section_non_kahler_geometry.tex}{Versioned source}.
+\end{thebibliography}
+\end{document}
