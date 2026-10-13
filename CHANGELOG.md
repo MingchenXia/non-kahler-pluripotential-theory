@@ -1,5 +1,11 @@
 # Modification history
 
+## P09 first independent PASS after successful native login — 13 October 2026
+
+Official CLI authentication now has an actual `Successfully logged in` exit0 receipt. A new Xean gpt-6.1-sol xhigh literature invocation completed with a nonempty primary-source result; the inspected 2012 Demailly edition states decreasing psh limits at I.5.4, not I.5.8, and requires information about the limit to exclude identically minus infinity. The complete ordinary finding and edition limits are preserved separately from the earlier failed logins.
+
+The entire current P09 spectral-gap argument received a first independent PASS for its exact restricted A–F task, with premises=[] and passages=[]. The [complete report and source binding](research/drafts/P09-spectral-gap-first-independent-PASS-20261013.json) point to private `MingchenXia/research-workspace@9a439cc6dc3e4a8e98a0f9064c3d3d5b9d3f8b44`. Every full-matrix and integral estimate, exact range, n! normalization, actual closed inverse-cofactor metric and distinction between the two quotients was assessed. The general corollary retains the hypothesis kappa=a. A separate statement-only closed-metric construction with no author notes is running; final comparison and article acceptance are pending. The existing editor source, book, historical reports and counts remain unchanged: 48 checked articles and four full original closures. General original P09 is not solved.
+
 ## Original 41-ID statement recovery and research screening — 13 October 2026
 
 Preserved all 41 corresponding current book statement strings and complete historical P06, S07 and S12 task copies with exact source commits and byte hashes. The current book's later P24, P25 and S19 entries are explicitly excluded from the user's original 41-ID goal. These snapshots are not certified verbatim copies of the unavailable original PDF and do not replace its completion criteria. The [scope and screening record](research/drafts/original-scope-recovery-screening-20261013.json) points to the full private archive at `MingchenXia/research-workspace@cdb05eab1730d5a22a36e6b2e697a2ab0bddc0fb`.
