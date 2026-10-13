@@ -1,0 +1,46 @@
+# Coordination items, proofreading round 4
+- [r4g13] bounded H_m(v)=Q_m(v,...,v) not defined before first bounded use in section_hessian_bounded_locality (line ~101) -> sent to r4g11.
+- [r4g13] optional: constant b in hessian:mixed-torsion-comparison vs masses b_{p,q}.
+- [r4g09] history: KNHessian16 Lemma 3.20 cited as pp. 23--25 (with Thm 3.17) and pp. 25--26 -> r4g26 prompt.
+- [r4g09] overfull 24pt in section_hessian_smooth_capacity.tex lines 102--112 (r4g12 editing) -> check at end.
+- [r4g09] notation: data function H vs complex Hessian H(u), H_{i\bar j}; E_a vs E_N; lone subsection in proper approximation section (optional).
+- [r4g10] overfull 24pt in section_hessian_smooth_capacity.tex 102--112 (again) -> check after r4g12.
+- [r4g10] optional: data H_j vs operator H_m; sigma_a^{j_a} superscript notation in bounded_currents 109--114.
+- [r4g11] mass_comparison lines 17--19 define H_m(t)=Q_m(t,...,t) again; now defined in bounded_locality -> make reminder (coordinator, r4g13 done).
+- [r4g11] history line ~299 "the source local class" -> r4g26 prompt.
+- [r4g01] zero_lelong_ideals:6 first assertion is Skoda's theorem (book cites DemAM11 Lemma 5.6 in section_psh_integrability) -> add "this is Skoda's integrability theorem" pointer (coordinator).
+- [r4g01] psh_holder_capacity:10 \cite{GZ17} without locator -> find locator (coordinator).
+- [r4g01] psh_holder_chern_estimates:43 uniformity of K_0,A_0,eps_0 -> optional.
+- [r4g01] history:21 "genuine potentials" -> sent to r4g25.
+- [r4g02] \colon for maps p:X\to C etc. in section_curve_fibration_polar_models (13,278,417,440), section_finite_curve_pullback_models (5,125,127), chapter_research_program (222) -> coordinator at end (global colon check).
+- [r4g02] chapter_igood:257 "supplies the finite factor" -> "gives" (coordinator at end if r4g18 did not).
+- [r4g02] labels curve-map:*, finite-curve:* nonstandard prefixes (keep).
+- [r4g05] DONE (coordinator): thm:bounded-hermitian-smoothness applied Evans--Krylov to a viscosity solution; replaced by a second classical approximation b_j with prescribed potentials a_j (uniform C^alpha right-hand sides), Evans--Krylov for classical solutions, Arzela--Ascoli.
+- [r4g05] lem:fixed-trace-gradient-interpolation is not used anywhere except history (report to user).
+- [r4g05] section_uniqueness_cofactor:76 \Needspace mid-paragraph splits a paragraph (typographic) -> coordinator check.
+- [r4g01] DONE (coordinator): Skoda pointer in section_psh_zero_lelong_ideals.
+- [r4g11] DONE (coordinator): mass_comparison H_m redefinition -> reminder.
+- [r4g07] "closed m-cone" -> C_{n,m} in bounded_currents:37 and continuous_regularity; trace section "W\in\Gamma_m" (matrix) -> C_{n,m}? check at end (r4g08 owns trace).
+- [r4g07] optional: cone:176--178 strictness of S_{j;I}>0 via shift lambda - t1.
+- [r4g08] viscosity Evans--Krylov--Caffarelli at complex_limits:153: attributed in history (TWWY15 Thm 3.4 and following paragraph, which says the viscosity proof is the same) -> OK.
+- [r4g08] optional: W in cone lemma vs W=g^{-1}H in trace; H overloads; g normalization (Liouville: i g with kappa; trace: i/(2pi) g).
+- [r4g04] history 59/64 items -> sent to r4g25.
+- [r4g04] "scalar Hopf manifold" = quotient by z->ez used book-wide; consider a one-line global convention (check conventions.tex / chapter_hopf at end).
+- [r4g06] Hopf descent proved in four places with four notations (prop:hopf-basic-descent; thm:hopf-descended-hermitian-ma; prop:hopf-basic-mass in hopf_projective_traces; proof of prop:hopf-fiber-ideal-envelope) -> report to user as an editorial decision (consolidation).
+- [r4g06] research_program:280 terminology -> sent to r4g25; Darvas arXiv v3 locators -> sent to r4g25.
+- [r4g19] DONE: psh-closed-regularization: noted that eps_j omega is absorbed into lambda_j (statement correct).
+- [r4g19] igood roadmap + "supplies" -> sent to r4g18; history 609-618 + research_program:222 colon -> sent to r4g25.
+- [r4g19] colon in section_hopf_projective_traces (p:X\longrightarrow) -> r4g20 or coordinator at end.
+- [r4g21] DONE: radial nonbig section opening now acknowledges the warped example (duplicate value); history 685/707 -> sent to r4g25.
+- [r4g21] optional: warped profile "k>0 real" forces even integer; GVV chapter opening does not mention subtraction sections.
+- [r4g18] DONE: ordinary_type_topology opening mentions countable-pole potentials.
+- [r4g18] optional: "diffuse polar mass" vs "nonatomic polar mass".
+- [r4g15] prescribed roadmap -> sent to r4g14; history 547/186 + research_program:53 -> sent to r4g25.
+- [r4g15] optional: power-capacity section assumes n>=3 but proof works for n>=1 (report to user).
+- [r4g26] KNHessian16, DKHessian17, GLHessian25 remain arXiv locators (journal not open) -> report to user.
+- [r4g16] history:539 -> sent to r4g25. Optional: n>=2 unused in thresholds; unused W^{2,p} paragraph; repeated strong max principle.
+- [r4g20] optional: cor:hopf-trace-ideal-class global criterion supported only via history; pointer to thm:local-i-inputs + cofinality would help (coordinator check at end).
+- [r4g21/r4g22] DONE: GVV chapter opening mentions Hessian multiplier bounds, determinant profile/ellipticity/concentration, subtraction cost (warped, ruled).
+- [r4g14] research_program:41, history:547 terminology -> sent to r4g25. Optional: closed-factor theorem assumes k>=2 unused (report to user).
+- [r4g17] DONE: divisorial_adjoint_obstruction open question qualified (beyond product model). history 562/571 -> r4g25. Placement of radial residual/obstacle sections (report to user).
+- [r4g24] history 806 -> r4g25. Optional: kappa reuse in mass_bound_volumes; \enlargethispage{8\baselineskip} in section_big_model_lp (check final build page).

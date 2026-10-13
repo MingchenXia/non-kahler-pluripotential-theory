@@ -1,5 +1,17 @@
 # Modification history
 
+## 13 October 2026 — Proofreading of the author's new material (review branch)
+
+The author's `main` (201 new commits, including the chapter on complex Hessian equations, new sections in most chapters and the author's own integration of S04, S05, P05 and S07) was merged into the review branch. The author's text was kept; the review branch's earlier corrections were ported onto it, and its duplicate integration was withdrawn.
+
+All new material (about 12,800 source lines) was proofread in 26 parts and audited independently in four parts. See [the record](research/editorial/whole-book-proofreading-20261013.md).
+- No theorem was found false.
+- Repaired: the regularity step of `thm:bounded-hermitian-smoothness` (Evans–Krylov now applied to classical solutions of a second approximation), the uniformity step of smooth proper Hessian existence, the ideal-order half of the finite-curve envelope pullback, the regularization step for small-curvature strict types, and many missing justifications.
+- Corrected: the point $P$ and the Siu remainder in the Hopf trace example; the scope of the all-dimensional Hopf results (contraction by $e^{-1}$, a property of the manifold); a positivity condition for warped subtraction; the chordal-distance normalization in two Green kernels; "positive upper volume" for countable poles; several statements now say exactly what their proofs give.
+- Historical notes: locators checked against arXiv and open journal texts, with corrections for BT82, KNHolder18, DP04, Nguyen16, TW10, WN19, Gauduchon85, KNHessian16, DKHessian17, GLHessian25, Fang, Chiose16 and Sze18; published versions of DinewUniqueness08 and DemCohomology15 in the bibliography.
+- Hessian chapter conventions fixed once; chapter openings describe the new sections; workflow vocabulary removed.
+- Items for the author's decision are listed in the record.
+
 ## 7 October 2026 — Crelle papers (529, follow-up 5)
 
 Publisher PDFs of GL23E and DDNL21 were checked against the book.
