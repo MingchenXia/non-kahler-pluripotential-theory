@@ -1,13 +1,27 @@
 The ordinary envelope $P_\theta[u]$ is in general less singular than $u$. When the pole set of $u$ is a compact set of Hausdorff dimension zero, however, the full local Monge--Amp\`ere product of \cref{thm:small-pole-local-products} is defined, and the ordinary envelope preserves its restriction to the pole set. Bounded mass controls the local approximations in every degree, and the products of lower degree put no mass on the pole set.
 
+For potentials that are locally bounded off a compact set of Hausdorff dimension zero, the bounded truncations have full weak limits in every degree. This does not use the bounded mass property.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{lem:small-pole-full-measures}\index{Monge--Ampere measure@Monge--Amp\`ere measure!full measure at small poles}
+Let $\omega$ be a Hermitian form on $X$, let $S\subset X$ be a compact set of Hausdorff dimension zero, and let $v\in\PSH(X,\omega)$ be locally bounded on $X\setminus S$. Put $v_k=\max(v,-k)$. As $k\to\infty$, the currents $(\ddc v_k)^j$, $1\leq j\leq n$, converge weakly to currents $W_j(v)$ of order zero, and the measures $(\omega+\ddc v_k)^n$ converge weakly to a finite positive measure $\Phi_v$, which we call the \emph{full Monge--Amp\`ere measure} of $v$. One has $\int_XW_n(v)=0$,
+\begin{equation}\label{eq:small-pole-full-total}
+ J(v):=\Phi_v(X)
+ =\int_X\omega^n+
+       \sum_{j=1}^{n-1}\binom nj
+              \int_XW_j(v)\wedge\omega^{n-j},
+\end{equation}
+and $v_-(\omega)\leq J(v)\leq v_+(\omega)$. The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ on $X\setminus S$. On each coordinate chart, $\mathbf1_S\Phi_v=\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ for every smooth function $q$ making $v+q$ plurisubharmonic there; in particular, this restriction does not depend on $q$.
+\end{lemma}
+\begin{proof}
+On each relatively compact chart choose a smooth $q_1$ with $\ddc q_1\geq\omega$, so that the functions $v_k+q_1$ are plurisubharmonic and decrease to $v+q_1$. \Cref{thm:small-pole-local-products} then gives the full weak limits in every degree. Indeed, $\ddc v_k=\ddc(v_k+q_1)-\ddc q_1$, and the powers can be expanded in the closed positive powers of $\ddc(v_k+q_1)$ and smooth forms. The local limits patch together because the approximating bounded currents are global. The limits are currents of order zero with finite mass on the compact manifold $X$, and $\Phi_v$ is positive. Stokes' theorem for the bounded potentials $v_k$ gives $\int_XW_n(v)=0$, and the binomial expansion of $(\omega+\ddc v_k)^n$ gives \eqref{eq:small-pole-full-total}. Every truncation $v_k$ has mass between $v_-(\omega)$ and $v_+(\omega)$, which bounds $J(v)$. On every compact subset of $X\setminus S$, the truncations eventually agree with $v$, so $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ there.
+
+Every closed positive power of degree less than $n$ in this expansion has coefficient measures vanishing on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\mathbf1_S\Phi_v$, which identifies $\mathbf1_S\Phi_v$ with $\mathbf1_S(\ddc(v+q_1))^n_{\mathrm{full}}$. If $v+q$ is plurisubharmonic for another smooth $q$, choose $C>0$ with $\ddc(q+C|z|^2)\geq\omega$ on a smaller chart. The same argument applies to $q+C|z|^2$, and by multilinearity the full top power of $\ddc(v+q+C|z|^2)$ differs from that of $\ddc(v+q)$ by full powers of lower degree wedged with smooth forms, which vanish on $S$. These assertions are local on each chart and do not require a single chart containing $S$.
+\end{proof}
+
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:small-pole-envelope-residual}\index{Residual mass!ordinary envelope}
-Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be a compact set of Hausdorff dimension zero. Suppose $u\in\PSH(X,\omega)$ is locally bounded on $X\setminus S$ and has pole set $\{u=-\infty\}=S$. Put $p=P_\omega[u]$ and $p_m=P_\omega(u+m,0)$ for real $m>0$. For $v=u$, $v=p$ and $v=p_m$, the weak limit
-\[
- \Phi_v=\lim_{k\to\infty}
-                 (\omega+\ddc\max(v,-k))^n
-\]
-of the bounded truncations exists and is a finite positive measure, which we call the \emph{full Monge--Amp\`ere measure} of $v$. On each coordinate chart, its restriction $\mathbf1_S\Phi_v$ equals $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ for every smooth function $q$ making $v+q$ plurisubharmonic there; in particular, it does not depend on $q$. Moreover,
+Let $\omega$ be a Hermitian form on $X$, and let $S\subset X$ be a compact set of Hausdorff dimension zero. Suppose $u\in\PSH(X,\omega)$ is locally bounded on $X\setminus S$ and has pole set $\{u=-\infty\}=S$. Put $p=P_\omega[u]$ and $p_m=P_\omega(u+m,0)$ for real $m>0$. Then $p$ and $p_m$ are locally bounded on $X\setminus S$, their full Monge--Amp\`ere measures and that of $u$ (\cref{lem:small-pole-full-measures}) satisfy
 \[
  \mathbf1_S\Phi_p=\mathbf1_S\Phi_u,
 \]
@@ -20,20 +34,7 @@ and $\Phi_{p_m}\to\Phi_p$ weakly as $m\to\infty$.
 \]
 where the increasing limit is understood after upper semicontinuous regularization. Thus $p_m\sim u$, and $p_m$ and $p$ are locally bounded off $S$. By \cref{lem:monotone-psh-capacity}, $p_m\to p$ in capacity. On compact subsets of $X\setminus S$ the potentials have a common bounded range, so all bounded local products converge there, by the bounded product theory of \cref{sec:psh-local-capacity}.
 
-\emph{Step 2: full measures.} Let $v\in\PSH(X,\omega)$ be locally bounded off $S$, and put $v_k=\max(v,-k)$. On each chart choose a smooth $q$ with $\ddc q\geq\omega$, so that the functions $v_k+q$ are plurisubharmonic and decrease to $v+q$. \Cref{thm:small-pole-local-products} then gives full weak limits in every degree,
-\[
- W_j(v)=\lim_{k\to\infty}(\ddc v_k)^j,
- \qquad
- \Phi_v=\lim_{k\to\infty}(\omega+\ddc v_k)^n.
-\]
-Indeed, $\ddc v_k=\ddc(v_k+q)-\ddc q$, and the powers can be expanded in the closed positive powers of $\ddc(v_k+q)$ and smooth forms. The local limits patch together because the approximating bounded currents are global. The limits are currents of order zero with finite mass on the compact manifold $X$, and $\Phi_v$ is positive. Stokes' theorem for the bounded potentials $v_k$ gives $\int_XW_n(v)=0$. Consequently
-\begin{equation}\label{eq:small-pole-full-total}
- J(v):=\Phi_v(X)
- =\int_X\omega^n+
-       \sum_{j=1}^{n-1}\binom nj
-              \int_XW_j(v)\wedge\omega^{n-j}.
-\end{equation}
-The measure $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. Every closed positive power of degree less than $n$ in this expansion has coefficient measures vanishing on $S$, by \cref{cor:closed-current-hausdorff-null}. Thus only the top closed power contributes to $\mathbf1_S\Phi_v$. This identifies $\mathbf1_S\Phi_v$ with $\mathbf1_S(\ddc(v+q))^n_{\mathrm{full}}$ and proves independence of $q$. These assertions are local on each chart and do not require a single chart containing $S$. Finally, $J(v)\leq v_+(\omega)$, since every truncation $v_k$ has mass at most $v_+(\omega)$.
+\emph{Step 2: full measures.} By Step~1 and \cref{lem:small-pole-full-measures}, the full Monge--Amp\`ere measures $\Phi_v$, the currents $W_j(v)$ and the total masses $J(v)$ of \eqref{eq:small-pole-full-total} are defined for $v=u$, $v=p$ and $v=p_m$.
 
 \emph{Step 3: convergence of the lower-degree powers.} We need local trace bounds for the closed powers of $p_m$ that are uniform in $m$. Fix a relatively compact coordinate neighborhood and write $\kappa=\ddc|z|^2$. Choose $B>0$ with $B\kappa\geq\omega$ there, and $A>1$ with $A\omega-B\kappa\geq\kappa$. For $p_{m,k}=\max(p_m,-k)$, the closed current
 $T_{m,k}=B\kappa+\ddc p_{m,k}$ is positive and

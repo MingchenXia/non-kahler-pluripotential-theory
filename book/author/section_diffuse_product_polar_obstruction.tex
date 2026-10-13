@@ -18,7 +18,7 @@ Put $D=\Delta^n$, $S=K^n$ and
 The function $h$ is locally Lipschitz off $S$, and its bounded local Monge--Amp\`ere measure $(\ddc h)^n$ vanishes there. The measures $(\ddc h_L)^n$ all have the same finite mass $M$. Their supports are compact and converge to $S$ as $L\to\infty$, in the sense that they lie in any given neighborhood of $S$ for all large $L$.
 \end{lemma}
 \begin{proof}
-Use the binary Cantor set and the nonatomic probability measure $\sigma$ of \cref{ex:diffuse-polar-zero-model}, placed in a small real interval in $\Delta$. Its intervals of level $k$ have length $r_k=\exp(-4^{k+1})$ and mass $2^{-k}$. For every $s>0$,
+Use the binary Cantor set $K$ and the nonatomic probability measure $\sigma$ constructed in the proof of \cref{lem:polar-cantor-nonatomic-measure}, in the coordinate of $\Delta$, with the interval of level zero contained in $\Delta$. Its intervals of level $k$ have length $r_k=\exp(-4^{k+1})$ and mass $2^{-k}$. For every $s>0$,
 \[
  2^kr_k^s\longrightarrow0,\qquad
  2^{nk}(\sqrt n r_k)^s\longrightarrow0.
@@ -156,7 +156,7 @@ From now on, $C$ is a fixed constant as in \cref{lem:diffuse-cutoff-polar-blindn
 
 \Needspace{20\baselineskip}
 \begin{proposition}\label{prop:diffuse-representative-mass}\label{prop:diffuse-hermitian-mass-polynomial}\index{Monge--Ampere mass@Monge--Amp\`ere mass!bounded-equivalent diffuse representatives}\index{Monge--Ampere mass@Monge--Amp\`ere mass!diffuse cutoff polynomial}
-Let $u\in\PSH(X,\omega)$ be locally bounded off $S$, with $\{u=-\infty\}=S$, and put $A=\int_X\omega^n$. For $v\in\PSH(X,\omega)$ with $v\sim u$ and $k>0$, put $v_k=\max(v,-k)$. As $k\to\infty$, the measures $(\omega+\ddc v_k)^n$ converge weakly to a finite positive measure $\Phi_v$ such that
+Let $u\in\PSH(X,\omega)$ be locally bounded off $S$, with $\{u=-\infty\}=S$, and put $A=\int_X\omega^n$. For $v\in\PSH(X,\omega)$ with $v\sim u$ and $k>0$, put $v_k=\max(v,-k)$. As $k\to\infty$, the measures $(\omega+\ddc v_k)^n$ converge weakly to the full Monge--Amp\`ere measure $\Phi_v$ of \cref{lem:small-pole-full-measures}, a finite positive measure such that
 \begin{equation}\label{eq:diffuse-residual-local}
  \mathbf1_S\Phi_v=\mathbf1_S(\ddc(u+\psi))^n_{\mathrm{full}}
 \end{equation}
@@ -181,12 +181,7 @@ For $0<t<1/C$ and $u=tH$, one has $\Phi_v(S)=Mt^n$ and $c_j(tH)=c_jt^j$, where $
 Thus $\int_X\mathrm{MA}_\omega(tH)=A+\sum_{j=1}^{n-1}\binom nj c_jt^j-Mt^n$.
 \end{proposition}
 \begin{proof}
-Since $v\sim u$, the function $v$ is locally bounded off $S$ and $\{v=-\infty\}=S$. On a relatively compact coordinate neighborhood, choose a smooth function $\psi_1$ with $\ddc\psi_1\geq\omega$. Then $v+\psi_1$ and $v_k+\psi_1=\max(v+\psi_1,\psi_1-k)$ are plurisubharmonic and locally bounded off $S$, and $v_k+\psi_1$ decreases to $v+\psi_1$ as $k$ increases. By \cref{thm:small-pole-local-products}, for $1\leq j\leq n$ the currents $(\ddc(v_k+\psi_1))^j$ converge weakly to the closed positive currents $(\ddc(v+\psi_1))^j_{\mathrm{full}}$ of order zero. Writing $\omega+\ddc v_k=(\omega-\ddc\psi_1)+\ddc(v_k+\psi_1)$ and expanding, we obtain weak convergence of $(\ddc v_k)^j$, $1\leq j\leq n$, and of $(\omega+\ddc v_k)^n$; the local limits patch together because the approximating bounded currents are global. On the chosen neighborhood,
-\[
- \Phi_v=\sum_{j=0}^n\binom nj(\omega-\ddc\psi_1)^{n-j}
-            \wedge(\ddc(v+\psi_1))^j_{\mathrm{full}}.
-\]
-For $j<n$, the coefficient measures of $(\ddc(v+\psi_1))^j_{\mathrm{full}}$ vanish on $S$ by \cref{cor:closed-current-hausdorff-null}, and smooth forms give $S$ zero mass. Hence $\mathbf1_S\Phi_v=\mathbf1_S(\ddc(v+\psi_1))^n_{\mathrm{full}}$. If $u+\psi$ is plurisubharmonic on this neighborhood, then $(u+\psi)-(v+\psi_1)$ is bounded, and \cref{lem:small-pole-residual-invariance} gives \eqref{eq:diffuse-residual-local}. Off $S$, the truncations eventually agree with $v$ on every compact set, so $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ there, while $\mathrm{MA}_\omega(v)$ does not charge the pluripolar set $S$. Therefore $\int_X\mathrm{MA}_\omega(v)=\Phi_v(X)-\Phi_v(S)$.
+Since $v\sim u$, the function $v$ is locally bounded off $S$ and $\{v=-\infty\}=S$. By \cref{lem:small-pole-full-measures}, the measures $(\omega+\ddc v_k)^n$ and the currents $(\ddc v_k)^j$, $1\leq j\leq n$, converge weakly to $\Phi_v$ and to currents $W_j(v)$, and $\Phi_v$ equals $\mathrm{MA}_\omega(v)$ off $S$. On a relatively compact coordinate neighborhood, choose a smooth function $\psi_1$ with $\ddc\psi_1\geq\omega$; the same lemma gives $\mathbf1_S\Phi_v=\mathbf1_S(\ddc(v+\psi_1))^n_{\mathrm{full}}$ there. If $u+\psi$ is plurisubharmonic on this neighborhood, then $(u+\psi)-(v+\psi_1)$ is bounded, and \cref{lem:small-pole-residual-invariance} gives \eqref{eq:diffuse-residual-local}. Since $\mathrm{MA}_\omega(v)$ does not charge the pluripolar set $S$, we obtain $\int_X\mathrm{MA}_\omega(v)=\Phi_v(X)-\Phi_v(S)$.
 
 For $1\leq j<n$, integration by parts for bounded potentials gives
 \[
@@ -194,9 +189,9 @@ For $1\leq j<n$, integration by parts for bounded potentials gives
        =\int_Xv_k(\ddc v_k)^{j-1}
                            \wedge\ddc(\omega^{n-j});
 \]
-this follows by uniformly bounded decreasing regularization, as in \cref{thm:mass-expansion,thm:bounded-exact-regularization}. The left side converges, so $c_j(v)$ exists and is finite. By Stokes' theorem for bounded potentials, $(\ddc v_k)^n$ has zero integral. The binomial expansion of $(\omega+\ddc v_k)^n$ therefore gives $\Phi_v(X)=A+\sum_{j=1}^{n-1}\binom njc_j(v)$, which proves the mass formula.
+this follows by uniformly bounded decreasing regularization, as in \cref{thm:mass-expansion,thm:bounded-exact-regularization}. The left side converges to $\int_XW_j(v)\wedge\omega^{n-j}$, so $c_j(v)$ exists, is finite and equals this integral. The formula \eqref{eq:small-pole-full-total} for $\Phi_v(X)$ therefore proves the mass formula.
 
-Each measure $(\omega+\ddc v_k)^n$ has total mass between $v_-(\omega)$ and $v_+(\omega)$; passing to the limit gives the two bounds, the upper one in the extended real sense. If $\ddc(\omega^q)=0$ for $1\leq q<n$, every $c_j(v)$ vanishes. For $n=2$, the convergence $v_k\to v$ in $L^1$ gives $c_1(v)=\int_Xv\ddc\omega$.
+The bounds $v_-(\omega)\leq\Phi_v(X)\leq v_+(\omega)$ of \cref{lem:small-pole-full-measures} give the two bounds, the upper one in the extended real sense. If $\ddc(\omega^q)=0$ for $1\leq q<n$, every $c_j(v)$ vanishes. For $n=2$, the convergence $v_k\to v$ in $L^1$ gives $c_1(v)=\int_Xv\ddc\omega$.
 
 Finally, let $u=tH$, which belongs to $\PSH(X,\omega)$ by \cref{lem:diffuse-cutoff-polar-blindness}. Near $S$, the function $u=th$ is plurisubharmonic, so \eqref{eq:diffuse-residual-local} with $\psi=0$ and \cref{lem:anisotropic-diffuse-product}, with all weights equal to one, give $\mathbf1_S\Phi_v=t^n\sigma^{\otimes n}$, a measure of mass $t^n=Mt^n$. Since $\max(tH,-k)=tH_{k/t}$, the limit defining $c_j(tH)$ is $t^j$ times the limit of the integrals defining $c_j$, taken along $L=k/t\to\infty$. Hence $c_j$ exists and $c_j(tH)=c_jt^j$.
 \end{proof}
@@ -324,7 +319,7 @@ The residual measure distinguishes the parameters of one ordered family, but its
 
 \Needspace{17\baselineskip}
 \begin{proposition}\label{prop:disjoint-diffuse-scalar-obstruction}\index{Residual mass!failure of scalar separation}\index{Model potential!disjoint diffuse poles}
-Assume $0<v_-(\omega)\leq v_+(\omega)<+\infty$, and fix $0<\delta<v_-(\omega)$. For every sufficiently small $r>0$, there are distinct ordinary models $p_1,p_2\in\mathcal M_\delta(\omega)$ and disjoint compact sets $S_1,S_2$ of Hausdorff dimension zero such that the full Monge--Amp\`ere measures $\Phi_{p_i}$ of \cref{thm:small-pole-envelope-residual} satisfy
+Assume $0<v_-(\omega)\leq v_+(\omega)<+\infty$, and fix $0<\delta<v_-(\omega)$. For every sufficiently small $r>0$, there are distinct ordinary models $p_1,p_2\in\mathcal M_\delta(\omega)$ and disjoint compact sets $S_1,S_2$ of Hausdorff dimension zero such that the full Monge--Amp\`ere measures $\Phi_{p_i}$ of \cref{lem:small-pole-full-measures} satisfy
 \[
  R_i:=\mathbf1_{S_1\cup S_2}\Phi_{p_i},\qquad
  R_i(X)=r,\qquad \operatorname{supp}R_i\subset S_i.
