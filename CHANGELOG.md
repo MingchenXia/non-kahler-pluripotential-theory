@@ -1,5 +1,11 @@
 # Modification history
 
+## Full P16 source findings retained; unrestricted supporting-probability gap isolated — 13 October 2026
+
+A second actual user-requested Xean gpt-6.1-sol xhigh source invocation completed with twelve whole ordinary notes, candidate=false. The [complete record](research/xean/results/P16-continuous-density-uniqueness-primary-literature-20261013-complete-record.json) retains every source condition, including inspected October 2026 work, omitted primary proof details, smooth-reference restrictions and the nonclosed weak-product gap. None establishes the universal continuous-density singleton or an actual counterexample. The self-contained one-sided-slope argument identifies the support-set width with the symmetric concavity gap divided by t; the required o(t) estimate is not proved. No stronger regularity is silently assumed.
+
+The full record and new exact Harnack scope check are archived in private `research-workspace@a876b7d386c3782aa233064bfe0fb626d4dc85f0`. S09's independent primary search is now running with unchanged ideal-inclusion, zero-volume and no-BMP criteria. Incoming uploaded Guedj–Zeriahi background material was preserved through normal Git reconciliation; it is not treated as the lost original problem-list PDF. No TeX, author queue, accepted article or original-closure count changes: 48 checked scoped articles, four complete originals out of 41.
+
 ## Unrestricted P03 primary-source scope checked; P16 continued — 13 October 2026
 
 A fresh user-requested Xean gpt-6.1-sol xhigh native literature call completed. All seven full ordinary notes, source conventions, exact special-class hypotheses, failed retrievals and the unchanged full P03 task are in the [complete record](research/xean/results/P03-unrestricted-Lee-class-primary-literature-20261013-complete-record.json). The opened 2024 primary texts retain the unrestricted Lee-curvature assertion as a conjecture; an inspected 2026 result remains Vaisman-specific. This bounded retrieval establishes no full proof or counterexample and is not an exhaustive literature claim. Explicit -d(I lambda) matches 4 pi kappa_lambda; inconsistent printed d^c conjugations are retained instead of silently reversing the target sign.
