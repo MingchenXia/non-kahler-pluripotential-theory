@@ -36,16 +36,12 @@ constant $C$ depending on the same data,
 \]
 \end{lemma}
 \begin{proof}
-For one potential and a nonnegative compactly supported cutoff $\chi$,
-closedness of $\ddc f$ gives
-\[
- \int\chi(\ddc f)^q\omega^{n-q}
-       =\int f(\ddc f)^{q-1}\ddc(\chi\omega^{n-q}).
-\]
-For $q\geq1$, the absolute-form estimate
-\cref{hessian:absolute-mixed-forms} applies at degree $q-1<m$.
-Nested cutoffs and induction on $q$, starting with volume, therefore
-bound the left side by $C(1+M)^q$.
+For one potential $f$, the form $\omega+\ddc f$ lies in
+$\Gamma_m(\omega)$, and $(\omega+\ddc f)^q\wedge\omega^{n-q}$ expands
+into nonnegative terms, one of which is $(\ddc f)^q\wedge\omega^{n-q}$.
+The Chern--Levine--Nirenberg bound in the proof of
+\cref{hessian:continuous-products}, whose proof uses only the values of
+the potential on $U$, therefore bounds the mass on $K$ by $C(1+M)^q$.
 For mixed factors, positivity of every term in the expansion of
 $(\sum_i\ddc f_i)^q\omega^{n-q}$ bounds the mixed trace by a fixed
 multiple of the single trace for $\sum_i f_i$. This proves the first
@@ -131,27 +127,8 @@ is bounded by the sum of these bounds over the finitely many
 nonempty subset sums of its factors.
 \end{lemma}
 \begin{proof}
-For $q\leq m-2$, diagonalize $\alpha$ in an $\omega$-unitary frame,
-with eigenvalues $\lambda\in\overline{\Gamma_m}$. Every diagonal
-coefficient of $\alpha^q\omega^{n-q-2}$ is a positive multiple of
-$S_{q;ij}(\lambda)$ for two omitted coordinates. This is nonnegative
-by deleted-coordinate positivity, because $q+2\leq m$.
-The form is a nonnegative sum of simple positive coordinate forms.
-
-For one such simple form, only the remaining complex two-plane
-contributes to a complementary wedge. The coefficients of
-$\dc\omega$ are uniformly bounded in unitary frames on the fixed
-compact set. The wedge of $\mathrm df\wedge\dc\omega$ with this
-simple form is consequently bounded by a constant times the norm of
-the gradient of $f$ along that plane. The wedges
-with $\omega^2$ and with $\mathrm df\wedge\dc f\wedge\omega$
-give, up to fixed positive constants, one and the square of that
-norm. Pointwise Cauchy--Schwarz over the simple summands, followed
-by integral Cauchy--Schwarz with weight $a$, proves the estimate.
-Conjugation gives the other estimate.
-
-For $q=m-1$, at one point choose an $\omega$-unitary coframe $e_i$
-that diagonalizes $\alpha$. Put $\epsilon_i=\mathrm i e_i\wedge\bar e_i$
+At one point choose an $\omega$-unitary coframe $e_i$
+that diagonalizes $\alpha$, with eigenvalues $\lambda\in\overline{\Gamma_m}$. Put $\epsilon_i=\mathrm i e_i\wedge\bar e_i$
 and $\Omega=\epsilon_1\cdots\epsilon_n$, so that
 $\omega=\sum_i\epsilon_i$ and $\alpha=\sum_i\lambda_i\epsilon_i$.
 Writing $B_{ij}=S_{q;ij}(\lambda)$ and $D_i=S_{q;i}(\lambda)$,
@@ -168,10 +145,12 @@ its absolute density relative to $\Omega$ is bounded by
  C\sum_{i<j}(|f_i|+|f_j|)|B_{ij}|.
 \]
 The constant bounds the tensor coefficients of $\dc\omega$ in all
-unitary frames on the fixed compact set. Diagonalization is only
-pointwise; no derivative of this moving frame is taken.
+unitary frames on the fixed compact set; no derivative of this
+pointwise frame is taken.
 
-\Cref{hessian:deleted-newton} and finite Cauchy--Schwarz bound this sum by
+For $q\geq1$, \cref{hessian:deleted-newton} applies, since
+$q\leq m-1\leq n-2$, and gives $|B_{ij}|\leq C(D_iD_j)^{1/2}$; for
+$q=0$, $B_{ij}=D_i=1$. Finite Cauchy--Schwarz therefore bounds this sum by
 \[
  C\sum_i|f_i|\sqrt{D_i}\sum_j\sqrt{D_j}
  \leq C\left(\sum_i|f_i|^2D_i\right)^{1/2}
@@ -204,8 +183,6 @@ identity
 Every nonempty subset sum remains in the cone. Applying the single
 power estimate to each term and taking absolute values proves the
 mixed assertion. At $q=0$ use the single term $\alpha^0=1$.
-No Cauchy--Schwarz assertion for an arbitrary weakly positive
-$(n-2,n-2)$-form is needed.
 \end{proof}
 
 \begin{lemma}\label{hessian:boundary-localization}
@@ -445,8 +422,7 @@ measure variation on open sets preserves these estimates at each
 limit. For any open $G\supset E$, intersect with a fixed open
 neighborhood of $K$ having compact closure in $U$; this gives
 $|\nu|(E)\leq Cc_{m-1}(G)$. Taking the infimum proves the outer
-estimate. The polynomial expansion is used only for smooth
-potentials; no product of nonsmooth currents is expanded.
+estimate.
 \end{proof}
 
 \begin{lemma}\label{hessian:weighted-measure-convergence}
@@ -497,7 +473,7 @@ to zero.
 \end{proof}
 
 \Needspace{20\baselineskip}
-\begin{theorem}\label{hessian:joint-decreasing-products}\index{Hessian measure!simultaneous decreasing convergence}
+\begin{theorem}\label{hessian:joint-decreasing-products}\label{hessian:bounded-two-factor-convergence}\label{hessian:bounded-linear-weighted-convergence}\index{Hessian measure!simultaneous decreasing convergence}\index{Hessian measure!two bounded factors}\index{Hessian measure!weighted two-factor convergence}
 For uniformly bounded admissible potentials $u_i^j\downarrow u_i$
 on $X$, the currents $D_p(u_1^j,\ldots,u_p^j)$ converge to
 $D_p(u_1,\ldots,u_p)$ in distributions for $p\leq m$, and weakly
@@ -506,7 +482,6 @@ in their potentials. For $p<m$ the coefficient convergence also
 holds after multiplication by a uniformly bounded decreasing
 admissible weight. The positive shifted currents $Q_p$ converge
 weakly for $p\leq m$; $Q_m$ converges as a positive Radon measure.
-At degree $m$, the convergence assertion for $D_m$ is distributional.
 \end{theorem}
 \begin{proof}
 Work on a compact coordinate test set, and induct on $p$; the case
@@ -585,16 +560,13 @@ compact neighborhood of $K$ before taking this limit; its capacity
 is at most $c_m(G)$. Therefore every such trace or variation measure
 $\mu$ satisfies $\mu(E)\leq Cc_m(G)$. Infimize over $G$ to obtain
 the asserted outer-open bound. The constants of the smooth estimates
-are independent of the approximation index. As in
-\cref{hessian:rough-coefficient-capacity}, all expansions are carried
-out for smooth potentials, and no current of positive order is
-multiplied by a discontinuous function.
+are independent of the approximation index.
 \end{proof}
 
 \Needspace{15\baselineskip}
 \begin{theorem}\label{hessian:weighted-positive-products}\index{Hessian measure!weighted positive products}
 Suppose $a_j\downarrow a$ and $u_i^j\downarrow u_i$ are bounded
-canonical global admissible potentials with common bounds. Then,
+admissible potentials on $X$ with common bounds. Then,
 for $1\leq p\leq m$,
 \[
  a_j Q_p(u_1^j,\ldots,u_p^j)
@@ -609,7 +581,7 @@ Work on a compact coordinate test set. By
 of the positive shifted currents converges weakly and has a uniform
 local variation bound. \Cref{hessian:positive-capacity-domination}
 strengthens this to domination by $C c_m^*$ on Borel sets.
-\Cref{hessian:rough-coefficient-capacity} makes the canonical weights
+\Cref{hessian:rough-coefficient-capacity} makes the weights
 $a_j$ and $a$ quasicontinuous for this capacity. Apply
 \cref{hessian:weighted-measure-convergence} with $s=m$ to each
 coefficient, and then use a finite partition of unity. At $p=m$,

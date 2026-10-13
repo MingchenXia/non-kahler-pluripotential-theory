@@ -7,7 +7,7 @@ The comparison rests on the following elementary fact: for nested section spaces
 
 \Needspace{19\baselineskip}
 \begin{lemma}\label{lem:kernel-codimension-comparison}\index{Bergman kernel!codimension estimate}
-Let $B$ be a connected compact complex manifold of dimension $q\geq1$, let $A\to B$ be a holomorphic line bundle with a smooth Hermitian metric, let $v\in C(B)$, and let $\nu$ be a smooth positive probability volume on $B$. For every integer $m\geq1$ let $W_m\subseteq V_m\subseteq H^0(B,A^m)$ be subspaces, both with the norm $\|\cdot\|_{m,v,\nu}$, and put $d_m=\dim V_m-\dim W_m$. Write $B_{V_m,v}$, $B_{W_m,v}$ for their kernels and $\beta_{V_m,v}^{(q)}$, $\beta_{W_m,v}^{(q)}$ for their kernel measures, defined as in \cref{sec:partial-selected-space} with the space indicated by the subscript. Then
+Let $B$ be a compact complex manifold of dimension $q$, let $A\to B$ be a holomorphic line bundle with a smooth Hermitian metric, let $v\in C(B)$, and let $\nu$ be a smooth positive probability volume on $B$. For every integer $m\geq1$ let $W_m\subseteq V_m\subseteq H^0(B,A^m)$ be subspaces, both with the norm $\|\cdot\|_{m,v,\nu}$, and put $d_m=\dim V_m-\dim W_m$. Write $B_{V_m,v}$, $B_{W_m,v}$ for their kernels and $\beta_{V_m,v}^{(q)}$, $\beta_{W_m,v}^{(q)}$ for their kernel measures, defined as in \cref{sec:partial-selected-space} with the space indicated by the subscript. Then
 \[
  \begin{gathered}
  B_{V_m,v}-B_{W_m,v}\geq0,\\
@@ -26,7 +26,35 @@ These statements include the case of zero-dimensional spaces.
 Extend an orthonormal basis of $W_m$ to an orthonormal basis of $V_m$ for the norm at the weight $v$. The difference of the kernels is the sum of the squared weighted evaluations of the $d_m$ added basis vectors. It is nonnegative, and its integral against $\nu$ is $d_m$, which gives the total variation formula. For the determinant functionals, apply the first-variation formula of \cref{prop:partial-kernel-variation} to each of the two fixed spaces, and integrate the difference along $t\mapsto tv$, $0\leq t\leq1$. By what we have just proved, at each $t$ the difference of the kernel measures is positive with total mass $q!d_m/m^q$, so its integral against $v$ is at most $q!d_m\|v\|_\infty/m^q$ in absolute value. Since both functionals vanish at zero, this proves the last assertion.
 \end{proof}
 
-Return to a submersion $\pi\colon X\to B$ and a pulled-back line bundle $L=\pi^*A$ as in \cref{sec:partial-submersion}, and write $f=n-q$ for the fiber dimension. Fix distinct points $p_1,\ldots,p_N$ of $X$ and positive rational numbers $a_1,\ldots,a_N$. Suppose that $\varphi\in\QPSH(X)$ is locally bounded away from these points and that, in local coordinates $x$ centered at $p_j$,
+Return to a submersion $\pi\colon X\to B$ and a pulled-back line bundle $L=\pi^*A$ as in \cref{sec:partial-submersion}. Equip $A$ with a smooth metric $h_A$ and put $\theta=c_1(A,h_A)$. Choose a smooth positive probability volume $\nu_B$ on $B$, smooth fiber probabilities as in \cref{sec:partial-submersion}, and the smooth positive volume $\nu_X=\mathcal L\nu_B$ on $X$. Use the pullback metric on $L$, and for $v\in C(B)$ use the weight $v\circ\pi$ in the norm on $X$. For a selecting potential $\varphi\in\QPSH(X)$, we write $\beta_{X,m,v\circ\pi,\varphi}^{(q)}$ and $\mathcal F_{X,m}^{(q)}$ for the kernel measure and the determinant functional on $X$ defined by these data, and we regard the selected spaces, by descent as in \cref{prop:partial-kernel-submersion}, as subspaces
+\[
+ V_m=H^0\bigl(X,L^m\otimes\mathcal I(m\varphi)\bigr)\subseteq H^0(B,A^m).
+\]
+The following proposition reduces kernel limits for $\varphi$ to the equilibrium theorem on the base, once the selected spaces are close to those of a potential on the base.
+
+\Needspace{24\baselineskip}
+\begin{proposition}\label{prop:descended-kernel-limit}\index{Equilibrium measure!descended selected spaces}
+Assume that $B$ is K\"ahler, let $\psi\in\PSH(B,\theta)$ have positive non-pluripolar mass, and suppose that
+\[
+ W_m=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)\subseteq V_m,
+ \qquad d_m=\dim V_m-\dim W_m=o(m^q).
+\]
+Let $E(v)=E_{\theta,B}[\psi]_{\mathcal I}(v)$ for $v\in C(B)$. Then, for every $v\in C(B)$, the total variation distance between $\beta_{X,m,v\circ\pi,\varphi}^{(q)}$ and the lift of the kernel measure of $W_m$ on $B$ is $q!d_m/m^q$, and
+\[
+ \beta_{X,m,v\circ\pi,\varphi}^{(q)}
+      \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E(v))\bigr),
+ \qquad
+ \mathcal F_{X,m}^{(q)}(v\circ\pi)\longrightarrow
+ \int_0^1\!\left(\int_B
+           v\,\mathrm{d}\mathrm{MA}_\theta(E(tv))\right)\mathrm{d}t.
+\]
+The normalized dimensions $q!N_m/m^q$ converge to the total mass of the limit measure, which is finite and positive. If $n>q$, the kernel measures with the normalization $n!/m^n$ tend to zero in total variation.
+\end{proposition}
+\begin{proof}
+For $s\in V_m$, the pointwise norm of $\pi^*s$ and the weight $v\circ\pi$ are constant on the fibers, and every fiber probability has mass one, so the norm of $\pi^*s$ on $X$ equals the norm of $s$ on $B$. As in \cref{prop:partial-kernel-submersion}, pulling back an orthonormal basis shows that $\beta_{X,m,v\circ\pi,\varphi}^{(q)}$ is the lift of the kernel measure of $V_m$ on $B$, and the equality of the Gram matrices shows that $\mathcal F_{X,m}^{(q)}(v\circ\pi)$ is the determinant functional of $V_m$ at $v$. By \cref{lem:kernel-codimension-comparison}, the kernel measures of $V_m$ and $W_m$ differ by a positive measure of total mass $q!d_m/m^q$, and so do their lifts, since lifting preserves positivity and mass; the same lemma bounds the difference of the determinant functionals by $q!d_m\|v\|_\infty/m^q$. Apply \cref{thm:fujiki-partial-kernel-limit,cor:fujiki-partial-determinant} on $B$, with the identity as K\"ahler modification, to the spaces $W_m$ selected by $\psi$. They give the convergence of the kernel measures and determinant functionals of $W_m$, and the total mass of the limit measure is finite and positive and equals the limit of $q!\dim W_m/m^q$. Lifting preserves weak convergence and $d_m=o(m^q)$, which proves the two limits and the assertion about the dimensions. Since the $q$-normalized masses are bounded, multiplying them by $(n!/q!)m^{q-n}$ proves the last assertion.
+\end{proof}
+
+We now let the selecting potential have isolated poles. Write $f=n-q$ for the fiber dimension. Fix distinct points $p_1,\ldots,p_N$ of $X$ and positive real numbers $a_1,\ldots,a_N$. Suppose that $\varphi\in\QPSH(X)$ is locally bounded away from these points and that, in local coordinates $x$ centered at $p_j$,
 \begin{equation}\label{eq:isolated-selecting-poles}
  \varphi(x)=a_j\log|x|^2+O(1).
 \end{equation}
@@ -44,7 +72,7 @@ Let $\mathfrak m_b$ denote the ideal sheaf of a point $b\in B$; its zeroth power
 
 \Needspace{22\baselineskip}
 \begin{proposition}\label{prop:isolated-pole-section-descent}
-Pullback identifies the selected space $H^0(X,L^m\otimes\mathcal I(m\varphi))$ with
+The selected space of $\varphi$ is
 \[
  V_m=H^0\left(B,A^m\otimes
                        \bigcap_{b\in Z}\mathfrak m_b^{r_{m,b}}\right).
@@ -70,7 +98,7 @@ where an empty inner sum is zero. The implied constant depends only on the point
 \]
 away from the points $p_j$ the ideal is the full structure sheaf.
 
-Every section of $L^m$ descends to $B$, by the argument in \cref{prop:partial-kernel-submersion}. Near $p_j$ choose submersion coordinates $(z,\tau)$ with $\pi(z,\tau)=z$. A pulled-back section has a local coefficient $g(z)$ that does not depend on $\tau$, and its vanishing order at $(0,0)$ equals the vanishing order of $g$ at $z=0$. The conditions imposed by the points of one fiber are therefore vanishing conditions at the same base point, and the strongest of them is vanishing to order $r_{m,b}$. This proves the identification.
+Near $p_j$ choose submersion coordinates $(z,\tau)$ with $\pi(z,\tau)=z$. A pulled-back section has a local coefficient $g(z)$ that does not depend on $\tau$, and its vanishing order at $(0,0)$ equals the vanishing order of $g$ at $z=0$. The conditions imposed by the points of one fiber are therefore vanishing conditions at the same base point, and the strongest of them is vanishing to order $r_{m,b}$. This proves the identification.
 
 For the dimension bound, map each section in $V_m$ to its jets modulo $\mathfrak m_b^{s_{m,b}}$ at the finitely many points $b\in Z$. The kernel of this map is $W_m$, so local trivializations of $A^m$ give an injection
 \[
@@ -78,36 +106,24 @@ For the dimension bound, map each section in $V_m$ to its jets modulo $\mathfrak
        \bigoplus_{b\in Z}\mathfrak m_b^{r_{m,b}}/
                                       \mathfrak m_b^{s_{m,b}}.
 \]
-Surjectivity of the jet map is not needed. In $q$ variables there are $\binom{j+q-1}{q-1}$ monomials of degree $j$, which gives the dimensions of these quotients. Finally $0\leq s_{m,b}-r_{m,b}\leq f$ and $s_{m,b}=O(m)$, which proves the bound, also when $q=1$ or $f=0$.
+In $q$ variables there are $\binom{j+q-1}{q-1}$ monomials of degree $j$, which gives the dimensions of these quotients. Finally $0\leq s_{m,b}-r_{m,b}\leq f$ and $s_{m,b}=O(m)$, which proves the bound, also when $q=1$ or $f=0$.
 \end{proof}
 
-Equip $A$ with a smooth metric $h_A$ and put $\theta=c_1(A,h_A)$. Choose a smooth positive probability volume $\nu_B$ on $B$, smooth fiber probabilities as in \cref{sec:partial-submersion}, and the smooth positive volume $\nu_X=\mathcal L\nu_B$ on $X$. Use the pullback metric on $L$, and for $v\in C(B)$ use the weight $v\circ\pi$ in the norm on $X$. We write $\beta_{X,m,v\circ\pi,\varphi}^{(q)}$ and $\mathcal F_{X,m}^{(q)}$ for the kernel measure and the determinant functional on $X$ defined by these data and the selecting potential $\varphi$.
-
-\Needspace{24\baselineskip}
+\Needspace{16\baselineskip}
 \begin{theorem}\label{thm:isolated-pole-kernel-limit}
 Assume that $B$ is K\"ahler and that there is $\psi\in\PSH(B,\theta)$ with positive non-pluripolar mass, locally bounded off $Z$, such that
 \[
  \psi(z)=a_b\log|z-b|^2+O(1)\quad\hbox{near each }b\in Z
 \]
-in local coordinates $z$ on $B$. Let $E(v)=E_{\theta,B}[\psi]_{\mathcal I}(v)$. Then, for the selecting potential $\varphi$ of \eqref{eq:isolated-selecting-poles},
+in local coordinates $z$ on $B$. Then the selecting potential $\varphi$ of \eqref{eq:isolated-selecting-poles} satisfies the conclusions of \cref{prop:descended-kernel-limit}, and the total variation distance there is $O(m^{-1})$. In particular,
 \[
  \beta_{X,m,v\circ\pi,\varphi}^{(q)}
-      \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E(v))\bigr).
+      \rightharpoonup\mathcal L\bigl(\mathrm{MA}_\theta(E_{\theta,B}[\psi]_{\mathcal I}(v))\bigr)
+ \qquad(v\in C(B)).
 \]
-More precisely, the total variation distance between $\beta_{X,m,v\circ\pi,\varphi}^{(q)}$ and the lift of the kernel measure on $B$ selected by $\psi$ is $O(m^{-1})$. The determinant functionals satisfy
-\[
- \mathcal F_{X,m}^{(q)}(v\circ\pi)\longrightarrow
- \int_0^1\!\left(\int_B
-           v\,\mathrm{d}\mathrm{MA}_\theta(E(tv))\right)\mathrm{d}t.
-\]
-The normalized dimensions $q!N_m/m^q$ converge to the total mass of the limit measure, which is finite and positive. If $n>q$, the kernel measures with the normalization $n!/m^n$ tend to zero in total variation.
 \end{theorem}
 \begin{proof}
-By \cref{lem:smooth-center-multiplier-ideal} in dimension $q$, the space of sections of $A^m$ selected by $\psi$ on $B$ is the space $W_m$ of \cref{prop:isolated-pole-section-descent}. Corresponding sections in $V_m$ and on $X$ have equal norms, since their pointwise norms and the continuous weight are pulled back from $B$ and every fiber probability has mass one. As in \cref{prop:partial-kernel-submersion}, pulling back an orthonormal basis shows that the kernel measure on $X$ is the lift of the kernel measure of $V_m$ on $B$.
-
-By \cref{lem:kernel-codimension-comparison,prop:isolated-pole-section-descent}, the $q$-normalized kernel measures of $V_m$ and $W_m$ on $B$ differ by a positive measure of total mass $O(m^{-1})$, and so do their lifts. Apply \cref{thm:fujiki-partial-kernel-limit} on $B$, with the identity as K\"ahler modification; its hypotheses are among ours. It gives the convergence of the kernel measures of $W_m$, and since the difference tends to zero, the asserted limit on $X$ follows.
-
-By the same lemma, the determinant functionals of $V_m$ and $W_m$ differ by at most $O(m^{-1})\|v\|_\infty$. The isometric identification of the norms and \cref{cor:fujiki-partial-determinant} on $B$ give the limit of the functionals. Testing the constant function one proves the assertion about the dimensions. Since the $q$-normalized masses are bounded, multiplying them by $(n!/q!)m^{q-n}$ proves the last assertion.
+By \cref{lem:smooth-center-multiplier-ideal} in dimension $q$, the space of sections of $A^m$ selected by $\psi$ on $B$ is the space $W_m$ of \cref{prop:isolated-pole-section-descent}. That proposition gives $W_m\subseteq V_m$ and $\dim V_m-\dim W_m=O(m^{q-1})$, so \cref{prop:descended-kernel-limit} applies.
 \end{proof}
 
 If $\theta>0$, \cref{lem:small-isolated-log-poles}, applied on $B$ with the Hermitian form $\theta$, constructs the required $\psi$ whenever the coefficients $a_b$ are sufficiently small. Off the poles, $\theta+\ddc\psi$ then dominates a positive multiple of $\theta$, so the non-pluripolar mass of $\psi$ is positive; it is finite because $\theta$ is closed and $B$ is K\"ahler. The same lemma, applied on $X$ with a Hermitian form, constructs $\varphi$. If the fibers have positive dimension, such a function $\varphi$ does not descend to $B$, since it is finite at the other points of a fiber containing a pole.

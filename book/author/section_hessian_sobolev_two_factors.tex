@@ -2,13 +2,14 @@
 \label{sec:hessian-sobolev-two-factors}
 
 Weak convergence of measures is not enough to pass to the limit in
-their products with bounded potentials. We first control the
-sets on which a potential can be discontinuous. The linear trace of
-an admissible form supplies this control through Sobolev capacity.
-The trace is taken against a $\ddc$-closed conformal multiple of
-$\omega^{n-1}$: an admissible form need not be positive in every
-tangent direction, so only its trace relative to $\omega$ is known
-to be nonnegative.
+their products with bounded potentials; one needs a capacity that
+dominates the measures and makes the potentials quasicontinuous.
+Sobolev capacity does this for the first Hessian of a bounded
+admissible potential, through its linear trace, but a product of two
+Hessians can charge a set of zero Sobolev capacity. The trace is taken
+against a $\ddc$-closed conformal multiple of $\omega^{n-1}$: an
+admissible form need not be positive in every tangent direction, so
+only its trace relative to $\omega$ is known to be nonnegative.
 
 Choose $\rho>0$ by \cref{thm:gauduchon} for $\omega$ and put
 \[
@@ -27,9 +28,8 @@ For an open set $G\subset X$ define
                           \text{ almost everywhere on }G\},
 \]
 and for an arbitrary set $E$ take the infimum over open $G\supset E$.
-This capacity is defined by Sobolev energy; it is distinct from the
-local Hessian capacities of \cref{sec:hessian-smooth-capacity}.
-Truncation allows $0\leq f\leq1$ in the infimum for open sets.
+It is distinct from the local Hessian capacities of
+\cref{sec:hessian-smooth-capacity}. Truncation allows $0\leq f\leq1$ in the infimum for open sets.
 \index{Capacity!Sobolev}
 
 \begin{lemma}\label{hessian:sobolev-capacity-tools}
@@ -131,17 +131,12 @@ Both terms are bounded by $C\|u\|_{H^1}\|\phi\|_{H^1}$; the background term
 $\int\phi\omega\wedge T$ is bounded by $C\|\phi\|_{H^1}$.
 Hence $|\int_X\phi\,\mathrm d\mu_u|\leq C(1+M)\|\phi\|_{H^1}$, and
 \cref{hessian:sobolev-capacity-tools} gives the bound for $\mu_u$.
-The term with $\mathrm dT$ must be kept: $T$ is $\ddc$-closed but
-need not be closed.
 
-For a smooth admissible approximant, write the eigenvalues of
-$\omega+\ddc u_j$ in an $\omega$-unitary frame as $\lambda_i$.
-Since $m\geq2$,
-\[
- \sum_i\lambda_i^2\leq\left(\sum_i\lambda_i\right)^2,
- \qquad \sum_i\lambda_i\geq0.
-\]
-Consequently every coefficient of this form is dominated by its trace.
+For a smooth admissible approximant, the eigenvalues of
+$\omega+\ddc u_j$ relative to $\omega$ have modulus at most its trace,
+by the proof of \cref{hessian:weighted-cone-trace}, since $m\geq2$.
+Consequently every coefficient of this form is dominated by a fixed
+multiple of its trace.
 On a fixed coordinate chart this bounds the coefficient variations of
 $\ddc u_j$ by $C(\mu_{u_j}+\omega^n)$. Passing to the weak measure
 limits of \cref{hessian:bounded-zero-order} gives the same domination
@@ -152,7 +147,7 @@ claimed square-root estimate.
 \end{proof}
 
 \begin{lemma}\label{hessian:bounded-sobolev-quasicontinuity}\index{Admissible potential!Sobolev quasicontinuity}
-Every bounded canonical admissible potential is continuous on the
+Every bounded admissible potential is continuous on the
 complement of an open set of arbitrarily small $\operatorname{Cap}_1$.
 The same open set can be chosen for any countable family of such
 potentials.
@@ -185,91 +180,12 @@ exceptional open sets with capacities less than $\epsilon2^{-i}$ and
 take their union. Countable subadditivity proves the last assertion.
 \end{proof}
 
-\begin{proposition}\label{hessian:bounded-linear-weighted-convergence}\index{Hessian measure!weighted two-factor convergence}
-Suppose $u_j\downarrow u$ and $v_j\downarrow v$ are bounded canonical
-admissible potentials with a common uniform bound. Then
-\[
- v_j\ddc u_j\longrightarrow v\ddc u
-\]
-weakly as currents with signed measure coefficients. The same conclusion
-holds for $v_j\mu_{u_j}\to v\mu_u$.
-\end{proposition}
-\begin{proof}
-Bounded convergence gives $u_j\to u$ in $L^1$. Their complex Hessians
-therefore converge in distributions. The coefficient bounds of
-\cref{hessian:bounded-sobolev-trace} are uniform, so this is weak convergence of each signed coefficient
-measure against continuous compactly supported tests. The trace measures
-also converge weakly. Every one of these measures has total variation
-bounded by $C_M\operatorname{Cap}_1(E)^{1/2}$ on a Borel set $E$.
-
-Fix $\epsilon>0$. \Cref{hessian:bounded-sobolev-quasicontinuity}
-gives an open $G$ with
-$\operatorname{Cap}_1(G)<\epsilon$ on whose complement $v$ and every
-$v_j$ are continuous. Dini's theorem on the compact set $X\setminus G$
-gives uniform convergence there. Extend $v|_{X\setminus G}$ to a
-continuous function $g$ on $X$ with the same uniform bound, by Tietze's
-theorem. For any one of the signed coefficient measures $\nu_j\to\nu$
-and a fixed continuous compactly supported test $\psi$, subtract
-$g\nu_j$ and $g\nu$. The resulting error is at most
-\[
- C_{M,\psi}\bigl(\|v_j-v\|_{X\setminus G}
-                                      +\epsilon^{1/2}\bigr).
-\]
-Indeed, $v_j-g=v_j-v$ on $X\setminus G$, while on $G$ the weights are
-bounded and, with $K=\operatorname{supp}\psi$,
-$|\nu_j|(G\cap K)+|\nu|(G\cap K)\leq C_M\epsilon^{1/2}$. The term with $g$ converges by weak measure convergence. First let
-$j\to\infty$ and then $\epsilon\downarrow0$. This proves the assertion
-for the Hessian coefficients and for the positive trace measures.
-\end{proof}
-
-\begin{theorem}\label{hessian:bounded-two-factor-convergence}\index{Hessian measure!two bounded factors}
-For two bounded admissible potentials $u,v$, the recursive current
-$D_2(u,v)=\ddc(v\ddc u)$ is symmetric in its arguments. If
-$u_j\downarrow u$ and $v_j\downarrow v$ are bounded admissible sequences
-with a common uniform bound, then
-\[
- D_2(u_j,v_j)\longrightarrow D_2(u,v)
-\]
-in distributions. The shifted positive currents
-\[
- Q_2(u,v)=\bigl(\omega^2+\omega\wedge\ddc u
-           +\omega\wedge\ddc v+D_2(u,v)\bigr)\wedge\omega^{n-m}
-\]
-satisfy $Q_2(u_j,v_j)\to Q_2(u,v)$ weakly as positive currents.
-For $m=2$ these are positive Radon measures. For $m>2$, the unwedged $D_2$ also converges weakly as a
-current with measure coefficients.
-\end{theorem}
-\begin{proof}
-For uniformly bounded smooth admissible approximations
-$u_k\downarrow u$ and $v_k\downarrow v$,
-\cref{hessian:bounded-linear-weighted-convergence} and continuity of
-$\ddc$ in distributions give
-\[
- \ddc(v_k\ddc u_k)\longrightarrow\ddc(v\ddc u).
-\]
-The smooth current on the left is $\ddc v_k\wedge\ddc u_k$ and is
-symmetric. Applying the same argument in the opposite order proves
-$D_2(u,v)=D_2(v,u)$. For the bounded sequences in the statement,
-weighted convergence followed by $\ddc$ gives the asserted
-simultaneous distributional limit.
-
-The displayed subset expansion is the current of
-\cref{hessian:bounded-shifted-positive} with $p=2$. Its lower-degree
-terms converge weakly by \cref{hessian:bounded-zero-order}, so its
-whole distributional limit is $Q_2(u,v)$.
-Positivity and the uniform local mass bounds turn this into weak
-convergence of currents of order zero. When $m>2$, the same conclusion
-for $D_2$ follows from the uniform coefficient bounds below degree $m$
-in \cref{hessian:bounded-recursive-currents}.
-\end{proof}
-
 The capacity estimate depends on using a first Hessian. A product
 of two Hessians can already charge a set of zero Sobolev capacity.
 
 \begin{lemma}\label{hessian:sobolev-codimension-two}\index{Capacity!Sobolev zero sets}
-Let $E$ be a compact subset of a smooth real submanifold of
-codimension two contained in a coordinate chart. Then
-$\operatorname{Cap}_1(E)=0$.
+Let $E$ be a compact subset of a smooth real submanifold of $X$ of
+codimension two. Then $\operatorname{Cap}_1(E)=0$.
 \end{lemma}
 \begin{proof}
 It suffices to treat a compact subset of a submanifold chart, since
@@ -309,12 +225,13 @@ assertion.
 
 \begin{example}\label{hessian:sobolev-two-product-obstruction}\index{Hessian measure!Sobolev capacity obstruction}
 There are bounded continuous $\omega$-plurisubharmonic potentials
-$u,v$ and a compact Borel set $E$ such that
+$u,v$ and a compact set $E$ such that
 \[
  \operatorname{Cap}_1(E)=0,\qquad
  \int_E Q_2(u,v)\wedge\omega^{m-2}>0.
 \]
-Consequently the first-Hessian capacity estimate does not extend to
+Consequently the first-Hessian capacity estimate of
+\cref{hessian:bounded-sobolev-trace} does not extend to
 this positive two-factor measure, even within the continuous
 $\omega$-plurisubharmonic subclass.
 \end{example}
@@ -348,15 +265,20 @@ The book's normalization gives
 \]
 The measures $g_\delta^{\prime\prime}(t)\,\mathrm dt$ have mass two,
 while their mass outside any fixed neighborhood of zero tends to
-zero. The two
-smooth factors depend on distinct real variables, so their product
-is an approximate identity in $(x_1,x_2)$ and converges to the
-tensor-product measure. By
-\cref{hessian:bounded-two-factor-convergence}, locally
+zero. Thus $\Theta=\ddc u=a\delta_{\{x_1=0\}}\alpha_1$ on the box. This
+current is $\mathrm d$- and $\dc$-closed and depends only on $x_1$,
+while $v=a|x_2|$ there. Hence
+$\ddc(g_\delta(x_2)\Theta)=\ddc g_\delta(x_2)\wedge\Theta$, and since
+$g_\delta\to|\cdot|$ uniformly, \eqref{eq:hessian-bounded-recursion}
+gives on the box
 \[
- D_2(u,v)=a^2\delta_{\{x_1=0\}}\delta_{\{x_2=0\}}
-                         \alpha_1\wedge\alpha_2.
+ D_2(u,v)=\ddc(v\Theta)
+ =\lim_{\delta\downarrow0}a\,\ddc g_\delta(x_2)\wedge\Theta
+ =a^2\delta_{\{x_1=0\}}\delta_{\{x_2=0\}}
+                         \alpha_1\wedge\alpha_2;
 \]
+the two factors depend on distinct real variables, so their product
+converges to the tensor-product measure.
 Choose $E$ to be a compact piece of $\{x_1=x_2=0\}$ inside this
 box with nonempty relative interior. The preceding lemma gives
 $\operatorname{Cap}_1(E)=0$. On this box, the positive measure

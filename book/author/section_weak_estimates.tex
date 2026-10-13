@@ -104,41 +104,29 @@ By \cref{cor:bounded-mass-positive}, $F$ is not almost everywhere zero. Apply \c
 If $M>D+1$, \eqref{eq:global-capacity-tail} bounds this capacity above by $C/(M-D)$, and the first assertion follows; the case $M\leq D+1$ is immediate. Bounding the same capacity above by $\operatorname{Cap}(X)$ gives the second assertion.
 \end{proof}
 
-Suppose that two uniformly bounded solutions are far apart at some point. The preceding estimates give a fixed positive lower bound for the capacity of a sublevel set of their difference. If their $L^1$ distance is small, this set has small volume, and the uniform $L^p$ bound for the densities then makes its Monge--Amp\`ere mass small. This contradicts the sublevel estimate \eqref{eq:thin-capacity}, and so upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$.
+\input{author/section_capacity_square_stability}
+
+For $L^p$ densities, this stability estimate upgrades $L^1$ compactness to uniform compactness. Put $p'=p/(p-1)$.
 
 \begin{theorem}\label{thm:lp-uniform-compactness}\index{Compactness!uniform convergence of solutions}
 Suppose $u_j\in\PSH(X,\omega)\cap C(X)$, $\sup_Xu_j=0$, and
 \[
- \omega_{u_j}^n=F_j\,\mathrm{d}V,\qquad F_j\geq0,\qquad \sup_j\|F_j\|_p<\infty
+ \omega_{u_j}^n=F_j\,\mathrm{d}V,\qquad F_j\geq0,\qquad B:=\sup_j\|F_j\|_p<\infty
 \]
 for the fixed $p>1$. If $(u_j)$ is Cauchy in $L^1(X,\mathrm{d}V)$, then it is Cauchy uniformly. In particular, every such family has a subsequence converging uniformly to a continuous $\omega$-plurisubharmonic function.
 \end{theorem}
 \begin{proof}
-By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. Suppose that the sequence is not uniformly Cauchy. After exchanging indices if necessary, we find $a>0$ and arbitrarily large $j,k$ with
+By \cref{thm:lp-potential-estimate}, there is a common $H\geq1$ with $-H\leq u_j\leq0$. By \cref{cor:lp-capacity-square}, every measure $\omega_{u_j}^n$ satisfies the hypothesis of \cref{prop:capacity-square-one-sided-stability} with $\alpha=1$ and $A=C_pB$. Since $|u_j-u_k|\leq2H$, H\"older's inequality gives, for $l\in\{j,k\}$,
 \[
- S:=\inf_X(u_k-u_j)\leq-a.
+ \int_X|u_j-u_k|F_l\,\mathrm{d}V\leq B\|u_j-u_k\|_{p'}
+ \leq(2H)^{1/p}B\|u_j-u_k\|_1^{1/p'}.
 \]
-\Needspace{10\baselineskip}
-Choose $0<\varepsilon<1$ such that $\varepsilon H<a/4$, and choose a fixed $D>0$ with $2D<\delta_\varepsilon$ and $2D<a/4$. Apply the preceding sublevel lemmas with $u=u_k$ and $v=u_j$. Since $v\leq0$,
-$m=\inf(u-(1-\varepsilon)v)\leq S$. Thus
+That proposition, applied to the pairs $(u,v)=(u_k,u_j)$ and $(u_j,u_k)$, therefore gives
 \[
- U_{2D}\subset\{u-v<S+2D+\varepsilon H\}
- \subset\{|u-v|>a/2\}.
+ \|u_j-u_k\|_\infty\leq C\|u_j-u_k\|_1^{1/((6n+1)p')}
 \]
-The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a constant $A$ independent of $j,k$ given by \cref{cor:lp-capacity-square}, yields $\operatorname{Cap}(U_D)\geq c>0$. On the other hand, \eqref{eq:thin-capacity} and the inequalities of H\"older and Chebyshev give
-\[
- \begin{split}
- D^n\operatorname{Cap}(U_D)
- &\leq C_H\int_{U_{2D}}F_k\,\mathrm{d}V\\
- &\leq C_H\|F_k\|_p
-       \left(\frac{2\|u_k-u_j\|_1}{a}\right)^{1/p'}
- \longrightarrow0.
- \end{split}
-\]
-This contradiction proves that the sequence is uniformly Cauchy. For the last assertion, the normalized compactness theorem, \cref{thm:normalized-compactness}, gives an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
+with $C$ independent of $j,k$. This proves the first assertion. For the last assertion, the normalized compactness theorem, \cref{thm:normalized-compactness}, gives an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
 \end{proof}
-
-\input{author/section_capacity_square_stability}
 
 \section{Construction of continuous solutions}
 
@@ -201,5 +189,5 @@ $\|F_j\|_p\leq \mathrm{e}^{\lambda M_j}\|f_j\|_p$. The lower-density bound of \c
 Choose smooth strictly positive functions $f_j\to f$ in $L^p$. By \cref{thm:smooth-proper-existence}, there are smooth $u_j$ with $\omega_{u_j}>0$ and $\omega_{u_j}^n=\mathrm{e}^{\lambda u_j}f_j\,\mathrm{d}V$. The preceding lemma bounds $M_j=\sup_Xu_j$, and consequently bounds $F_j=\mathrm{e}^{\lambda u_j}f_j$ in $L^p$. The normalized potentials $\psi_j=u_j-M_j$ are uniformly bounded by \cref{thm:lp-potential-estimate}. By \cref{thm:normalized-compactness}, we may pass to a subsequence with $M_j\to M$ and $\psi_j$ Cauchy in $L^1$. \Cref{thm:lp-uniform-compactness} gives uniform convergence $u_j\to u\in\PSH(X,\omega)\cap C(X)$.
 
 Uniform convergence and $f_j\to f$ in $L^p$ give
-$\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^p$, and continuity of bounded products therefore gives $\omega_u^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$. Uniqueness, even among all bounded solutions, follows from bounded exponential comparison, \cref{cor:bounded-exponential-comparison}.
+$\mathrm{e}^{\lambda u_j}f_j\to \mathrm{e}^{\lambda u}f$ in $L^p$, and continuity of bounded products therefore gives $\omega_u^n=\mathrm{e}^{\lambda u}f\,\mathrm{d}V$. Uniqueness among bounded solutions follows from \cref{cor:bounded-exponential-comparison}.
 \end{proof}

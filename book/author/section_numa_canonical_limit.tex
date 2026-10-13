@@ -9,7 +9,7 @@ For the symmetric projective data, $u_*$ is the unique normalized bounded $K$-in
 \[
  \mathrm{MA}_\omega(u)=f\omega_X^3.
 \]
-If $u_\lambda$ is the unique solution of
+If $u_\lambda$ is the unique bounded solution of
 \[
  \mathrm{MA}_\omega(u_\lambda)
       =\mathrm{e}^{\lambda u_\lambda}f\omega_X^3,\qquad\lambda>0,
@@ -22,7 +22,7 @@ then
 The selected limit $u_*$ is $C^{1,1}$.
 \end{theorem}
 
-Uniqueness holds only within the $K$-invariant class: by \cref{prop:numa-radial-continuum}, the same equation has uncountably many normalized solutions. Since a cluster limit is a priori only bounded, the proof needs the radial form of the equation for bounded invariant solutions, which we derive first. For a real scalar $s$, define the coefficient polynomial $A(r,s)$ and its primitive $\Phi(r,s)$ by
+Uniqueness holds only within the $K$-invariant class: by \cref{prop:numa-radial-continuum}, the same equation has uncountably many normalized solutions. Since a cluster limit is a priori only bounded, the proof needs the radial form of the equation for bounded invariant solutions, which we derive first, for every exponent $\lambda\geq0$. For a real scalar $s$, define the coefficient polynomial $A(r,s)$ and its primitive $\Phi(r,s)$ by
 \[
  A(r,s)=(x(r)+s)(y(r)-s),\qquad
  \Phi(r,s)=\int_0^s A(r,t)\,\mathrm{d}t.
@@ -31,24 +31,26 @@ Partial derivatives of $\Phi$ with respect to $r$ below keep $s$ fixed.
 
 \Needspace{22\baselineskip}
 \begin{lemma}\label{lem:numa-radial-flux}
-Suppose $u$ is a bounded block-unitary-invariant solution of the zero-exponent equation. On $U$ write $u+\rho=G(r)$. Then $G$ is locally Lipschitz, its derivative $h=G'$ has locally bounded variation, and its one-sided representatives satisfy
+Let $\lambda\geq0$, and let $u$ be a bounded block-unitary-invariant solution of $\mathrm{MA}_\omega(u)=\mathrm{e}^{\lambda u}f\omega_X^3$. On $U$ write $u+\rho=G(r)$. Then $G$ is $C^1$, and its derivative $h=G'$ is continuous, has locally bounded variation, and satisfies
 \[
- -x(r)\leq h(r\pm)\leq y(r),\qquad \mathrm{d}h+z\,\mathrm{d}r\geq0.
+ -x(r)\leq h(r)\leq y(r),\qquad \mathrm{d}h+z\,\mathrm{d}r\geq0.
 \]
-In fact $h$ is continuous. With
+With
 \[
  k(r)=\begin{cases}0,&|r|\leq1,\\x(r)y(r)z(r),&|r|>1,\end{cases}
+ \qquad
+ k_\lambda(r)=\mathrm{e}^{\lambda(G(r)-\rho(r))}k(r),
 \]
-it satisfies the distributional identity on $\mathbb R$
+$h$ satisfies the distributional identity on $\mathbb R$
 \begin{equation}\label{eq:numa-flux-identity}
  \mathrm{d}\bigl(\Phi(r,h(r))\bigr)
- =\bigl(k(r)-A(r,h(r))z(r)
+ =\bigl(k_\lambda(r)-A(r,h(r))z(r)
                     +\partial_r\Phi(r,h(r))\bigr)\,\mathrm{d}r.
 \end{equation}
 \Needspace{4\baselineskip}
 On every open interval where $A(r,h(r))>0$, $h$ is smooth and
 \[
- h'=\frac{k(r)}{A(r,h)}-z.
+ h'=\frac{k_\lambda(r)}{A(r,h)}-z.
 \]
 \end{lemma}
 \begin{proof}
@@ -71,18 +73,18 @@ For smooth $G$, the rank-one wedge formula gives the radial coefficient of its M
 This identity passes to a locally Lipschitz $G$ with the preceding lower Hessian bound. Indeed, convolve $G$ on a slightly larger compact interval. The derivatives $h_\epsilon$ are uniformly bounded and converge to $h$ almost everywhere and in every finite $L^q$ space. Their second derivatives have a uniform lower bound. Consequently the functions $G_\epsilon(r)$ have a common quasi-plurisubharmonic lower Hessian bound on compact subsets of $U$, and converge uniformly to $G(r)$. A fixed smooth local correction and bounded Bedford--Taylor continuity give convergence of their signed products. On the right-hand side of the formula, the two ordinary terms converge in $L^1$, and $\Phi(r,h_\epsilon)\to\Phi(r,h)$ in $L^1$, giving distributional convergence of its derivative. This proves the same formula for the bounded product of $G$.
 
 \Needspace{7\baselineskip}
-\emph{Continuity of $h$.} After the same division by $6\nu$, the right-hand side $f\omega_X^3$ has radial coefficient $k(r)\,\mathrm{d}r$. This gives \eqref{eq:numa-flux-identity}, initially for the almost-everywhere representative of $h$. If $h$ jumped at $r_0$, the atom of its left side would be
+\emph{Continuity of $h$.} After the same division by $6\nu$, the right-hand side $\mathrm{e}^{\lambda u}f\omega_X^3$ has radial coefficient $k_\lambda(r)\,\mathrm{d}r$, and $k_\lambda$ is continuous because $G$ is. This gives \eqref{eq:numa-flux-identity}, initially for the almost-everywhere representative of $h$. If $h$ jumped at $r_0$, the atom of its left side would be
 \[
  \Phi(r_0,h(r_0+))-\Phi(r_0,h(r_0-))
  =\int_{h(r_0-)}^{h(r_0+)}(x(r_0)+s)(y(r_0)-s)\,\mathrm{d}s.
 \]
 The right side has no atom. An upward jump of positive size lies in $[-x(r_0),y(r_0)]$, where the integrand is strictly positive in the interior. Since $x+y>0$ everywhere, such an integral is strictly positive. Thus there are no jumps. A locally bounded-variation function whose jumps all vanish has a continuous representative here: its distributional derivative consists of an absolutely continuous measure and a nonnegative singular measure, so its one-sided representatives coincide at every point. We henceforth use this representative. In particular $G$ is $C^1$ and $G'=h$ everywhere.
 
-All coefficients on the right of \eqref{eq:numa-flux-identity} are now continuous, so $\Phi(r,h(r))$ is $C^1$. Where $\partial_s\Phi=A>0$, the implicit function theorem gives $h\in C^1$ and the stated ordinary differential equation. Smoothness then follows by the smooth coefficients of that equation. The function $k$ is smooth, since the original density and its flat joins are smooth.
+All coefficients on the right of \eqref{eq:numa-flux-identity} are now continuous, so $\Phi(r,h(r))$ is $C^1$. Where $\partial_s\Phi=A>0$, the implicit function theorem gives $h\in C^1$ and the stated ordinary differential equation. The function $k$ is smooth, since the original density and its flat joins are smooth. Smoothness of $h$ follows, since $(G,h)$ solves the system $G'=h$, $h'=\mathrm{e}^{\lambda(G-\rho)}k/A(r,h)-z$ with smooth coefficients.
 \end{proof}
 
 \begin{proof}[of \cref{thm:numa-selected-limit}]
-We first show that a normalized bounded $K$-invariant solution $u$ coincides with $u_*$, by computing its slope $h$ on the band $|r|\leq1$ and outside it. Apply \cref{lem:numa-radial-flux}. Because $\rho$ and $u$ are invariant under block exchange, $G$ is even, so $h$ is odd and $h(0)=0$.
+We first show that a normalized bounded $K$-invariant solution $u$ coincides with $u_*$, by computing its slope $h$ on the band $|r|\leq1$ and outside it. Apply \cref{lem:numa-radial-flux} with $\lambda=0$, so that $k_0=k$. Because $\rho$ and $u$ are invariant under block exchange, $G$ is even, so $h$ is odd and $h(0)=0$.
 
 \emph{The slope on the band.} On $0<r<1$ we have $x=p>0$ and $y=p+b\geq p>0$. Starting from zero, as long as $-p<h<y$, the equation is $h'=-z_0$. Thus $h(r)=-\int_0^r z_0(s)\,\mathrm{d}s$. This decreasing function cannot meet the positive upper boundary $y$. Its first meeting with the lower boundary $-p$ occurs at the unique $t_*\in(0,1)$ satisfying
 \[
@@ -120,5 +122,5 @@ Taking the limit at infinity gives $C=0$. The scalar function $s^2/2-s^3/3$ is s
 
 We have proved that $G'$ agrees everywhere with the symmetric explicit slope. Thus $u$ differs from $u_*$ by a constant on $U$. The two quasi-plurisubharmonic functions then agree up to that constant on $X$ by their canonical representatives. Their supremum normalization removes the constant. This proves uniqueness within the bounded $K$-invariant class.
 
-\emph{Convergence.} Finally \cref{prop:symmetric-equation-clusters} gives uniform precompactness of the normalized positive-exponent family. Every cluster limit solves the zero-exponent equation and is $K$-invariant, because the data are $K$-invariant. The scalar is one for these data. The uniqueness just proved identifies every cluster limit with $u_*$. If convergence of the whole family failed, a sequence staying a fixed positive uniform distance from $u_*$ would have a convergent subsequence, contradicting that identification. This proves uniform convergence and the asserted $C^{1,1}$ regularity of the limit.
+\emph{Convergence.} Finally \cref{prop:symmetric-equation-clusters} gives uniform precompactness of the normalized positive-exponent family. Every cluster limit solves the zero-exponent equation and is $K$-invariant, because the data are $K$-invariant. The scalar is one for these data. The uniqueness just proved identifies every cluster limit with $u_*$. If convergence of the whole family failed, a sequence staying a fixed positive uniform distance from $u_*$ would have a convergent subsequence, contradicting that identification. This proves uniform convergence. Finally, $u_*$ is $C^{1,1}$ by \cref{prop:numa-radial-continuum}.
 \end{proof}

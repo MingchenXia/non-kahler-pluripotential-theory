@@ -131,8 +131,7 @@ of positive Radon measures.
 \end{proof}
 
 The weighted limits also pass integration by parts against metric
-derivatives. A truncation just above the infimum then excludes zero
-Hessian mass for a bounded potential.
+derivatives.
 
 \Needspace{15\baselineskip}
 \begin{lemma}\label{hessian:bounded-torsion-weight}\index{Torsion!weighted bounded products}
@@ -174,107 +173,18 @@ All the canonical weights are quasicontinuous for $c_{m-1}^*$, by
 \Cref{hessian:weighted-measure-convergence}, with $s=m-1$,
 thus proves the weighted assertion coefficientwise on a finite
 coordinate cover. A partition of unity gives it on $X$.
-Even the term involving $R_k\ddc(\omega^\ell)$ contains only a
-current of degree $m-1$, so the argument requires no coefficient
-estimate in degree $m$.
 \end{proof}
 
-\Needspace{11\baselineskip}
+\Needspace{8\baselineskip}
 \begin{proposition}\label{hessian:bounded-nonvanishing}\index{Hessian measure!nonvanishing for bounded potentials}
 Every bounded admissible potential $u$ has
 \[
  \int_X H_m(u)>0.
 \]
-No differential identities for powers of $\omega$ are required.
 \end{proposition}
 \begin{proof}
-Suppose instead that $\int_XH_m(u)=0$. Since $H_m(u)$ is positive,
-$H_m(u)=0$. Fix $s>0$, to be chosen below, set
-$c=\inf_Xu+s$, and put $w=\max\{u,c\}$.
-The upper semicontinuity of $u$ makes
-$U=\{u<c\}$ open, and the definition of the infimum makes it
-nonempty. Moreover $0\leq w-u\leq s$ and this difference is
-zero outside $U$. The maximum is bounded admissible with its
-canonical pointwise values by \cref{hessian:regularized-maximum}.
-
-\Needspace{5\baselineskip}
-For $0\leq q\leq m$, define the positive Radon measures
-\[
- \mu_q=Q_m(\underbrace{u,\ldots,u}_{q},
-                    \underbrace{w,\ldots,w}_{m-q}).
-\]
-Thus $\mu_m=H_m(u)=0$. For $q<m$, let $T_q$ be the sum of
-$m-q$ currents with $q+r$ slots equal to $u$ and
-$m-q-1-r$ slots equal to $w$, for $0\leq r<m-q$, each of degree
-$m-1$ and wedged with $\omega^{n-m}$. In smooth notation this is
-\[
- T_q=\sum_{r=0}^{m-q-1}
-       (\omega+\ddc u)^{q+r}
-       (\omega+\ddc w)^{m-q-1-r}\omega^{n-m}.
-\]
-Here each displayed product denotes the symmetric shifted current
-$R_{m-1}$ of \eqref{eq:hessian-bounded-shifted-current}, wedged with
-$\omega^{n-m}$.
-
-Choose uniformly bounded smooth admissible $u_j\downarrow u$ by
-\cref{hessian:bounded-decreasing-approximation}, and the
-regularized maxima $w_j=M_{\epsilon_j}(u_j,c)\downarrow w$,
-where $\epsilon_j\downarrow0$, as in
-\cref{hessian:regularized-maximum}.
-Both lists have a common bound. Write $\mu_q^j$ and $T_q^j$ for the
-smooth forms defined by $u_j,w_j$ in place of $u,w$. The polynomial
-identity $\mu_q^j-\mu_m^j=\ddc(w_j-u_j)\wedge T_q^j$ and
-Stokes' theorem on the compact manifold give
-\[
- \int_X(\mu_q^j-\mu_m^j)
-              =\int_X(w_j-u_j)\ddc T_q^j.
-\]
-Joint decreasing convergence in
-\cref{hessian:joint-decreasing-products} passes the left side to
-$\int_X(\mu_q-\mu_m)=\int_X\mu_q$.
-\Cref{hessian:bounded-torsion-weight}, with $F(x,y)=y-x$ and the
-decreasing lists $u_j,w_j$, passes the right side to its limit. Hence
-\[
- \int_X\mu_q=\int_X(w-u)\ddc T_q.
-\]
-The difference of the two decreasing sequences need not itself
-decrease; the continuous two-variable weight is essential here.
-
-On the open set $U$, the potential $w$ is constant. Locality of
-the raw recursion therefore sets every factor $\ddc w$ to zero
-there, so that its shifted factors become $\omega$.
-The formula in the preceding lemma expresses $\ddc T_q|_U$ as
-finitely many smooth metric-derivative forms wedged with powers
-of $\omega+\ddc u$ of degrees at most $m-1$.
-Use smooth admissible approximations to $u$ and the constant $c$ in
-these local expressions; their limits are the same restricted currents.
-For those smooth approximations, the absolute mixed-form
-estimate \cref{hessian:absolute-mixed-forms} bounds a term with $r$
-factors $\omega+\ddc u_j$ by the positive trace
-$C(\omega+\ddc u_j)^r\wedge\omega^{n-r}$. In the joint limit, this
-trace becomes $C(\omega+\ddc u)^r\wedge\omega^{n-r}$, which equals
-$C\mu_r$ on $U$. Against compactly supported nonnegative tests in $U$, weak
-convergence and lower semicontinuity of total variation preserve
-the estimate. Exhaustion gives the measure inequality
-\[
- \mathbf1_U|\ddc T_q|
-                 \leq C\sum_{r=0}^{m-1}\mathbf1_U\mu_r.
-\]
-Here $C$ depends only on $\omega,m,n$, not on $u$ or $s$; a fixed
-finite coordinate cover bounds all the smooth metric coefficients.
-
-\Needspace{8\baselineskip}
-Since $0\leq w-u\leq s$ and $w-u$ vanishes outside $U$, positivity
-of $\mu_q$ and this measure inequality give
-\[
- \int_U\mu_q\leq\int_X\mu_q
-            \leq Cs\sum_{r=0}^{m-1}\int_U\mu_r
-                 \qquad(0\leq q<m).
-\]
-Summing these $m$ inequalities gives
-$(1-mCs)\sum_{r=0}^{m-1}\int_U\mu_r\leq0$. Since $C$ does not
-depend on $s$, we may choose $s>0$ with $mCs<1$, which forces
-$\sum_{r=0}^{m-1}\int_U\mu_r=0$.
-But locality gives $\mu_0=\omega^n$ on the nonempty open set $U$,
-whose volume is positive. This contradiction proves the result.
+Otherwise $H_m(u)=0$, and the domination principle
+\cref{hessian:strict-bounded-domination}, whose proof does not use the
+present proposition, applied with $c=0$ and the constant
+$v=\sup_Xu+1$, gives $u\geq\sup_Xu+1$, a contradiction.
 \end{proof}

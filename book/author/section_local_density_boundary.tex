@@ -3,7 +3,7 @@
 
 \Cref{thm:nonclosed-interior-smoothness} requires a smooth positive density on the whole regular locus of a global strict barrier, and the global minimum of the difference between the solution and the barrier drives its proof. If the density is smooth and positive only on a smaller open set, smoothness can fail there. A bounded solution with minimal singularities can be discontinuous on a ball where its density is constant (\cref{thm:compact-local-density-discontinuity}), and a locally Lipschitz plurisubharmonic function with constant density need not be $C^1$ (\cref{ex:local-lipschitz-constant-measure}). Boundary data give a different route to regularity: if the solution has smooth boundary values on small balls, uniqueness for the bounded Dirichlet problem identifies it with the smooth Dirichlet solution.
 
-In this section $\theta$ is a smooth real $(1,1)$-form on $X$, and $\rho\in\PSH(X,\theta)$ satisfies $\theta+\ddc\rho\geq\varepsilon\omega$ for some $\varepsilon>0$; in particular $\theta$ is big. We fix an open set $\Omega\subset X$ on which $\rho$ is smooth and $\mathrm{d}\theta=0$.
+In this section $\theta$ is a smooth real $(1,1)$-form on $X$, not necessarily closed, and $\Omega\subset X$ is an open set.
 
 \Needspace{13\baselineskip}
 \subsection{Smooth boundary traces}
@@ -11,27 +11,24 @@ In this section $\theta$ is a smooth real $(1,1)$-form on $X$, and $\rho\in\PSH(
 Let $B\Subset\Omega$ be a coordinate ball. A function $u$ on $B$ has \emph{boundary trace} $g$, a function on $\partial B$, if $u(z)\to g(\xi)$ as $B\ni z\to\xi$, for every $\xi\in\partial B$.
 
 \begin{theorem}\label{thm:smooth-boundary-trace-regularity}
-Suppose that $u\in\PSH(X,\theta)$ has minimal ordinary singularities and
+Suppose that $u\in\PSH(X,\theta)$ is locally bounded on $\Omega$ and
 \[
  \mathrm{MA}_\theta(u)=f\,\mathrm{d}V\quad\text{on }\Omega,
  \qquad f\in C^\infty(\Omega),\quad f>0.
 \]
-Assume that $\Omega$ is covered by coordinate Euclidean balls $B_j\Subset\Omega$ such that $\theta$ has a smooth local potential near $\overline{B_j}$ and $u$ has a smooth boundary trace on $\partial B_j$. Then $u\in C^\infty(\Omega)$ and $\theta+\ddc u>0$ there.
+Assume that $\Omega$ is covered by coordinate Euclidean balls $B_j\Subset\Omega$ such that $u$ has a smooth boundary trace on $\partial B_j$. Then $u\in C^\infty(\Omega)$ and $\theta+\ddc u>0$ there.
 \end{theorem}
 
 \begin{proof}
-Since $\rho-\sup_X\rho\leq V_\theta$, minimal singularities give $u\geq\rho-C$ for a constant $C$. Thus $u$ is locally bounded on $\Omega$. Fix one of the balls, write it as $B=B_R(z_0)$, let $g$ be the boundary trace of $u$ on $\partial B$, and choose a smooth function $h$ near $\overline B$ with $\ddc h=\theta$. By \cref{prop:bounded-products}, the bounded plurisubharmonic function $v=u+h$ has Bedford--Taylor measure $f\,\mathrm{d}V$ and smooth boundary trace $\varphi=g+h|_{\partial B}$.
-
-For a smooth function $V$ and the Euclidean volume $\mathrm{d}\Lambda$,
-\begin{equation}\label{eq:local-density-determinant}
- (\ddc V)^n=\frac{n!}{\pi^n}\det(V_{j\bar k})\,\mathrm{d}\Lambda.
-\end{equation}
-The smooth Dirichlet theorem, \cref{lem:ball-smooth-dirichlet}, with zero background and density $f\,\mathrm{d}V$, gives a smooth strictly plurisubharmonic $V$ on $\overline B$ with $(\ddc V)^n=f\,\mathrm{d}V$ and boundary value $\varphi$; a smooth extension $\Phi$ of $\varphi$ gives the required strict subsolution $\Phi+A(|z-z_0|^2-R^2)$ for large $A$. In dimension one this is the Dirichlet problem for the Poisson equation.
-
-The difference $v-V$ tends to zero at every boundary point. Compactness of $\partial B$ makes this convergence uniform near the boundary: otherwise a sequence approaching the boundary with difference bounded away from zero would have a subsequence approaching one fixed boundary point. Uniqueness for the bounded Dirichlet problem, that is, the Bedford--Taylor comparison principle, gives $v=V$. Therefore $u=V-h$ is smooth on $B$, and $\theta+\ddc u=\ddc V>0$ there. Since the balls cover $\Omega$, the theorem follows.
+Fix one of the balls $B$, and let $g$ be the boundary trace of $u$ on $\partial B$. \Cref{lem:ball-smooth-dirichlet}, applied with the background $\theta$, the density $f\,\mathrm{d}V$ and the boundary value $g$, gives $V\in C^\infty(\overline B)$ with
+\[
+ \theta+\ddc V>0,\qquad (\theta+\ddc V)^n=f\,\mathrm{d}V\ \text{on }B,
+ \qquad V|_{\partial B}=g.
+\]
+The functions $u$ and $V$ are bounded and $\theta$-plurisubharmonic on $B$, they have the same Monge--Amp\`ere measure, and $u-V$ tends to zero at every boundary point. The local comparison principle of \cref{lem:big-local-comparison}, whose proof uses neither a barrier nor closedness of $\theta$ and therefore applies on every coordinate ball, gives $u\geq V$ and $V\geq u$. Therefore $u=V$ is smooth on $B$, and $\theta+\ddc u>0$ there. Since the balls cover $\Omega$, the theorem follows.
 \end{proof}
 
-The proof uses minimal singularities only to obtain the local lower bound by $\rho$. Consequently the same conclusion holds for any solution already known to be locally bounded on $\Omega$ and satisfying the same trace condition. Closedness of $\theta$ on $\Omega$ provides the local potentials $h$ once the coordinate balls are small enough; the background may be nonclosed elsewhere.
+If some $\rho\in\PSH(X,\theta)$, for instance a strict barrier, is locally bounded on $\Omega$, then every $u\in\PSH(X,\theta)$ with minimal ordinary singularities is locally bounded on $\Omega$, since $\rho-\sup_X\rho\leq V_\theta\leq u+C$.
 
 \begin{example}\label{ex:logarithmic-continuous-density}
 For every $n\geq1$, the trace criterion applies to a bounded continuous solution whose global density belongs to $L^1$ but to no $L^p$ with $p>1$, and which is not H\"older continuous at the points of $X\setminus\Omega$.
@@ -42,7 +39,7 @@ Let $E=\mathbb C/(\mathbb Z+\mathrm{i}\mathbb Z)$, $X=E^n$, and
  \qquad \theta=\sum_{j=1}^n\omega_j,
  \qquad D=\{0\}\times E^{n-1}.
 \]
-Take $\rho=0$, and use the volume form $\theta^n$ in place of $\mathrm{d}V$. Choose a nonnegative smooth cutoff $\chi$ supported in a coordinate disk $|z|<r_0<1$ of $E$ and equal to one near zero. For $\beta>0$, define
+Use the volume form $\theta^n$ in place of $\mathrm{d}V$. Choose a nonnegative smooth cutoff $\chi$ supported in a coordinate disk $|z|<r_0<1$ of $E$ and equal to one near zero. For $\beta>0$, define
 \[
  \psi(z)=\chi(z)(-\log|z|^2)^{-\beta}\quad(z\ne0),
  \qquad \psi(0)=0,
@@ -65,13 +62,17 @@ Give $f$ any positive value on the null set $D$. It is smooth and positive on $\
  \int_0^{r_0}s^{1-2p}(-\log s^2)^{-p(\beta+2)}\,\mathrm{d}s=+\infty
  \qquad(p>1).
 \]
-Also $(-\log|z|^2)^{-\beta}/|z|^\alpha\to+\infty$ for every $\alpha>0$, so $u$ is not H\"older at $D$. Finally, boundedness gives minimal ordinary singularities, since every global $\theta$-plurisubharmonic competitor is bounded above.
+Also $(-\log|z|^2)^{-\beta}/|z|^\alpha\to+\infty$ for every $\alpha>0$, so $u$ is not H\"older at $D$.
 \end{example}
 
 \subsection{A bounded discontinuous potential}
 
 We construct a bounded plurisubharmonic function on a bidisk whose Monge--Amp\`ere measure is a constant multiple of Lebesgue measure, but which is discontinuous. The construction places logarithmic poles with summable weights at points accumulating at the origin; the resulting weight $b$ vanishes at the poles but not at their limit. It is the local model for \cref{thm:compact-local-density-discontinuity}.
 
+For a smooth function $V$ on an open subset of $\mathbb C^n$ and the Euclidean volume $\mathrm{d}\Lambda$,
+\begin{equation}\label{eq:local-density-determinant}
+ (\ddc V)^n=\frac{n!}{\pi^n}\det(V_{j\bar k})\,\mathrm{d}\Lambda.
+\end{equation}
 Let $U=W=\{|z|<1/4\}\subset\mathbb C$, with coordinates $z$ and $w$ on the two factors. Write $\mathrm{d}A$ for planar Lebesgue measure and set
 \[
  a_k=\alpha_k=2^{-k-4},\qquad

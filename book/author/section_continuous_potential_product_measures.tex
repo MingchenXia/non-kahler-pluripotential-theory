@@ -90,10 +90,9 @@ These group averages converge strongly in $H^1$: rotations act continuously and 
 \begin{theorem}\label{thm:continuous-potential-curve-exponential}\index{Monge--Ampere equation@Monge--Amp\`ere equation!continuous measure potential}\index{Vanishing exponent!singular curve measure}
 Suppose $Q=Q_\mu$ is finite and continuous. For every $\lambda>0$ there is a unique bounded $w_\lambda\in\PSH(Y,\kappa)$ satisfying
 \begin{equation}\label{eq:continuous-potential-curve-exponential}
- \kappa+\ddc w_\lambda=\mathrm e^{\lambda w_\lambda}\mu,
- \qquad\int_Y\mathrm e^{\lambda w_\lambda}\,\mathrm d\mu=1.
+ \kappa+\ddc w_\lambda=\mathrm e^{\lambda w_\lambda}\mu.
 \end{equation}
-It is continuous and obeys
+Since $\kappa+\ddc w_\lambda$ has mass one, $\int_Y\mathrm e^{\lambda w_\lambda}\,\mathrm d\mu=1$. The solution is continuous and obeys
 \begin{equation}\label{eq:continuous-potential-curve-barriers}
  Q-\sup_YQ\leq w_\lambda\leq Q-\inf_YQ.
 \end{equation}
@@ -143,7 +142,7 @@ Multiplication by the bounded density $\rho_\lambda$ preserves this estimate. It
 \[
  w_\lambda=q_\lambda-\lambda^{-1}\log Z_\lambda
 \]
-solves \eqref{eq:continuous-potential-curve-exponential} with precisely the displayed constant.
+solves \eqref{eq:continuous-potential-curve-exponential}, since $\rho_\lambda=\mathrm e^{\lambda w_\lambda}$.
 
 \emph{Uniqueness and the barriers.} Every bounded $\kappa$-plurisubharmonic function is in $H^1$, by the same smoothing and energy bound used above after subtracting its $\kappa$-mean. For two bounded solutions $w_1,w_2$, their right-hand sides have bounded densities relative to $\mu$. The trace inequality extends distributional Stokes to their difference, giving
 \[
@@ -175,15 +174,11 @@ This proves the whole-family estimate. Finally, \cref{lem:curve-probability-gree
 
 \subsection{The product equation and its maximal coefficient}
 
-Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$. Set
+We use the product $X=X_0\times Y$ with background $H=h_0+\kappa$ of \cref{sec:zero-lower-mass-product-equations}, now with $Y=\mathbb P^1$, so that $k=1$ and $\binom Nm=N=m+1$, and with $V_0=\int_{X_0}h_0^m$. For $M>0$ put
 \[
- \begin{gathered}
- X=X_0\times Y,\qquad N=m+1,\qquad H=h_0+\kappa,\\
- V_0=\int_{X_0}h_0^m,\qquad
- \nu=M\frac{h_0^m}{V_0}\otimes\mu,\qquad c=\frac{NV_0}{M},
- \end{gathered}
+ \nu=M\frac{h_0^m}{V_0}\otimes\mu,\qquad c=\frac{NV_0}{M}.
 \]
-where $M>0$ and factor forms and potentials are pulled back to $X$ when used there. Thus $\nu(X)=M$.
+Thus $\nu(X)=M$. When $v_-(h_0)=0$, the background $H$ has zero lower mass and is not closed, by \cref{lem:split-product-normalization}.
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:nonpolar-curve-product-equation}\index{Monge--Ampere equation@Monge--Amp\`ere equation!singular factor measure}
@@ -193,19 +188,17 @@ If $\mu$ is non-polar, then $\nu$ is non-pluripolar and
  \mathrm{MA}^{\mathrm{ext}}_H(u)=c\nu,\qquad
  \int_X\mathrm{MA}^{\mathrm{ext}}_H(u)=NV_0.
 \]
-This is the unique supremum-zero solution among pullbacks of $\kappa$-plurisubharmonic functions. It is bounded exactly when $Q_\mu$ is bounded, and continuous exactly when $Q_\mu$ is continuous. If $v_-(h_0)=0$, then $v_-(H)=0$ and $H$ is not closed.
+This is the unique supremum-zero solution among pullbacks of $\kappa$-plurisubharmonic functions. It is bounded exactly when $Q_\mu$ is bounded, and continuous exactly when $Q_\mu$ is continuous.
 \end{proposition}
 \begin{proof}
 Let $s\not\equiv-\infty$ be plurisubharmonic on a product chart. By local integrability and Fubini's theorem, for almost every point of $X_0$ with respect to smooth volume, the restriction of $s$ to the corresponding curve slice is subharmonic and not identically $-\infty$. Non-polarity of $\mu$ and a second application of Fubini give its pole set product measure zero. A countable cover proves that $\nu$ is non-pluripolar.
 
-For bounded $p\in\PSH(Y,\kappa)$, bounded multilinearity and \cref{lem:bounded-products-submersion} give
+By part (1) of \cref{lem:split-product-normalization}, every $p\in\PSH(Y,\kappa)$ satisfies
 \begin{equation}\label{eq:singular-curve-product-identity}
- \mathrm{MA}_H(p\circ\pi_Y)
- =N h_0^m\otimes(\kappa+\ddc p).
+ \mathrm{MA}^{\mathrm{ext}}_H(p\circ\pi_Y)
+ =N h_0^m\otimes\mathrm{MA}^{\mathrm{ext}}_\kappa(p),
 \end{equation}
-Only one curve factor survives in the expansion. For arbitrary $p$, apply this to $p_j=\max(p,-j)$, restrict to the pullback of $\{p>-j\}$ and increase $j$. The defining extended limit gives the same formula with $\mathrm{MA}^{\mathrm{ext}}_\kappa(p)$ on the right. \Cref{lem:curve-probability-green-potential} now proves the equation, the finite mass and the uniqueness among pullbacks. Boundedness and continuity follow from the same constant-difference identity.
-
-If $v_-(h_0)=0$, pull back bounded potentials whose $h_0$-masses tend to zero. Their $H$-masses are $N$ times those masses, because $\int_Y\kappa=1$, so $v_-(H)=0$. A closed $h_0$ would give every bounded potential mass $V_0>0$ by Stokes. Hence $h_0$ is not closed; restricting $H$ to a factor slice shows that $H$ is not closed either.
+where $\mathrm{MA}^{\mathrm{ext}}_\kappa(p)=\kappa+\ddc p$ when $p$ is bounded. \Cref{lem:curve-probability-green-potential} now proves the equation, the finite mass and the uniqueness among pullbacks. Boundedness and continuity follow from the same constant-difference identity.
 \end{proof}
 
 For this fixed product measure define its subsolution threshold by
@@ -240,19 +233,7 @@ All the constructed potentials belong to $\mathcal E_{\mathrm{env}}(X,H,0)$. The
 \begin{proof}
 \Cref{lem:continuous-potential-measure-trace} gives non-polarity, and \cref{thm:continuous-potential-curve-exponential} constructs $w_\lambda$. Substituting it in \eqref{eq:singular-curve-product-identity} proves the exponential equation and its finite mass. Supremum normalization gives the displayed $c_\lambda$, and the uniform curve estimate gives both limits. For any bounded $H$-plurisubharmonic $p$ and $t\geq1$, the constant $a_t=t\inf_Xp$ is an $H$-plurisubharmonic function below $tp$. This is the defining condition of \cref{def:relative-envelope-class} for the reference $0$, which proves the envelope-class assertion.
 
-\emph{Greatestness.} Write $s=U_\lambda$. Let $\psi$ be a bounded exponential subsolution, that is, a bounded $\psi\in\PSH(X,H)$ with $\mathrm{MA}_H(\psi)\geq\mathrm e^{\lambda\psi}\nu$. Then on $\{s<\psi-\epsilon\}$,
-\[
- \mathrm{MA}_H(s)\leq\mathrm e^{-\lambda\epsilon}\mathrm{MA}_H(\psi-\epsilon).
-\]
-The bounded strict domination theorem, \cref{thm:bounded-strict-domination}, gives $s\geq\psi-\epsilon$. Letting $\epsilon\downarrow0$ proves $s\geq\psi$, and applying the argument in both directions proves bounded uniqueness.
-
-Now let $r\in\PSH(X,H)$ be an arbitrary exponential subsolution, $\mathrm{MA}^{\mathrm{ext}}_H(r)\geq\mathrm e^{\lambda r}\nu$. Fix $A>0$ and put $p=s-A$, $W=\max(r,p)$. These maxima are $H$-plurisubharmonic by \cref{lem:max-psh}, and $W$ is bounded. Choose $j$ with $-j<\inf_Xp$ and set $r_j=\max(r,-j)$; then $W=\max(r_j,p)$. Plurifine locality on $\{r_j>p\}$ and \cref{lem:bounded-ordered-contact}, applied to $p\leq W$ on their contact set, give
-\[
- \mathrm{MA}_H(W)\geq
- \mathbf1_{\{r_j>p\}}\mathrm{MA}_H(r_j)
- +\mathbf1_{\{r_j\leq p\}}\mathrm{MA}_H(p).
-\]
-On the first set $r_j=r>-j$, so strict-superlevel locality identifies the measure with $\mathrm{MA}^{\mathrm{ext}}_H(r)$. On the second, $W=p$ and $\mathrm{MA}_H(p)=\mathrm e^{\lambda s}\nu\geq\mathrm e^{\lambda p}\nu$. Thus $W$ is a bounded exponential subsolution, and $r\leq W\leq s$. This uses bounded products before every restriction and applies also when the measure of $r$ has infinite mass.
+\emph{Greatestness.} The potential $U_\lambda$ is bounded and satisfies $\mathrm{MA}_H(U_\lambda)=\mathrm e^{\lambda U_\lambda}\nu$. \Cref{lem:bounded-exponential-supersolution} below, applied with the background $H$ and the measure $\nu$, therefore shows that $U_\lambda$ dominates every $r\in\PSH(X,H)$ with $\mathrm{MA}^{\mathrm{ext}}_H(r)\geq\mathrm e^{\lambda r}\nu$. Applied to two bounded solutions, it gives bounded uniqueness.
 
 \emph{The maximal coefficient.} Suppose $\mathrm{MA}^{\mathrm{ext}}_H(r)\geq a\nu$ with $a>0$, and put $B=\sup_Xr$. For every $\lambda>0$ the potential $r+\lambda^{-1}\log a-B$ is an exponential subsolution, since its exponential is at most $a$. Greatestness gives
 \[

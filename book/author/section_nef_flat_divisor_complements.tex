@@ -59,7 +59,11 @@ Let $f$ be holomorphic on $U\setminus D$. Its modulus attains a maximum on the c
 A compact set $K\subset S\setminus D$ is disjoint from a sufficiently small tube around the compact divisor $D$. A holomorphic function on $(S\setminus D)\setminus K$ is therefore constant on this punctured tube, and by the identity theorem on the connected set $(S\setminus D)\setminus K$ it is constant everywhere; the constant function is the required extension. Similarly, every open neighborhood $V$ of $D$ contains a full tube, and $V\setminus D$ is connected, because paths in the connected manifold $V$ can be perturbed off the real codimension-two submanifold $D$. The identity theorem gives the assertion for $V$. The same path argument shows that $S\setminus D$ is connected.
 \end{proof}
 
-Recall that a complex manifold is \emph{holomorphically separable} if its holomorphic functions separate points, and that a Stein manifold is holomorphically separable and holomorphically convex (see the next subsection for the latter notion).
+Recall that a complex manifold $Y$ is \emph{holomorphically separable} if its holomorphic functions separate points, and \emph{holomorphically convex} if the holomorphic hull
+\[
+ \widehat K_Y=\{y\in Y:|f(y)|\leq\max_K|f|\text{ for every }f\in\mathcal O(Y)\}
+\]
+of every compact set $K\subset Y$ is compact. A Stein manifold has both properties.
 
 \begin{corollary}\label{cor:flat-divisor-nonstein}
 \index{Stein manifold!flat divisor obstruction}
@@ -75,12 +79,6 @@ In the finite-holonomy case, each fiber of the map of \cref{prop:flat-divisor-fi
 \label{subsec:elliptic-affine-quotients}
 
 The nine-point blowups show that a background with a well-defined order of degeneration can have very different holomorphic geometry near its null locus. The remaining subsections give a second instance of this contrast, for K\"ahler classes on a ruled surface over an elliptic curve. A K\"ahler class determines a holomorphic extension of the tangent bundle by the trivial line bundle and an affine bundle modeled on the cotangent bundle, its cotangent torsor. The tautological line bundle of the extension is big, but its section algebra is not finitely generated, and the torsor is never Stein. In this subsection we construct the relevant quotients and show that they are not Stein, although their universal covers are. The obstruction now comes from fiberwise Laurent expansions on the punctured total space of a line bundle of nonzero degree, rather than from the flat circle levels used in \cref{cor:flat-divisor-nonstein}.
-
-For a compact subset $K$ of a complex manifold $Y$, its holomorphic hull is
-\[
- \widehat K_Y=\{y\in Y:|f(y)|\leq\max_K|f|\text{ for every }f\in\mathcal O(Y)\}.
-\]
-The manifold $Y$ is \emph{holomorphically convex} if every such hull is compact.
 
 \begin{lemma}\label{lem:positive-line-puncture-hull}
 \index{Holomorphic hull!punctured line bundle}
@@ -357,8 +355,10 @@ These are exactly the cocycles defining $Kf^*\eta+\rho\xi$. Two extensions with 
 \]
 agree on overlaps and identify the glued charts with $Q$. In the first chart $\sigma=tY=ty/\rho$. Substituting $b_\lambda'/b_\lambda=-2\pi\mathrm{i}dm$ turns the lattice action into the action of \cref{prop:elliptic-affine-quotient-nonstein} with $\kappa=2\pi\mathrm{i}d\rho$. That proposition gives the assertions on the Stein property.
 
-\emph{Step 4: K\"ahler classes.} The restriction of a K\"ahler class to a ruling fiber is nonzero, because its integral over the fiber is positive. For the canonical extension $0\to\mathcal O_M\to V\to T_M\to0$ of a K\"ahler class, the dual extension of $\mathcal O_M$ by $\Omega^1_M$ has the negative of that class, which still has nonzero restriction to the fibers; by \cref{lem:split-elliptic-cotangent-cohomology} its ruling component $\rho$ is nonzero. Finally, we use the quotient convention for projectivization: $\mathbb P(V)$ parametrizes the one-dimensional quotients of the fibers of $V$, that is, the lines in $V^*$. The complement $\mathbb P(V)\setminus\mathbb P(T_M)$ consists of the lines in $V^*$ not contained in $\Omega^1_M$, and it identifies with $p_W^{-1}(1)\subset V^*$ by normalizing a nonzero functional to take the value one on the distinguished copy of $\mathcal O_M$. This proves the final assertion.
+\emph{Step 4: K\"ahler classes.} The restriction of a K\"ahler class to a ruling fiber is nonzero, because its integral over the fiber is positive. For the canonical extension $0\to\mathcal O_M\to V\to T_M\to0$ of a K\"ahler class, the dual extension of $\mathcal O_M$ by $\Omega^1_M$ has the negative of that class, which still has nonzero restriction to the fibers; by \cref{lem:split-elliptic-cotangent-cohomology} its ruling component $\rho$ is nonzero. This proves the final assertion.
 \end{proof}
+
+For a holomorphic vector bundle $F$ on a complex manifold $Y$ we use the quotient convention for projectivization: $\mathbb P(F)$ parametrizes the one-dimensional quotients of the fibers of $F$, that is, the lines in $F^*$, and the projection $\pi\colon\mathbb P(F)\to Y$ satisfies $\pi_*\mathcal O_{\mathbb P(F)}(r)=\operatorname{Sym}^rF$. For the canonical extension $V$ of a K\"ahler class, the complement $\mathbb P(V)\setminus\mathbb P(T_M)$ consists of the lines in $V^*$ not contained in $\Omega^1_M$, and it identifies with the cotangent torsor $T_W=p_W^{-1}(1)$ of $W=V^*$ by normalizing a nonzero functional to take the value one on the distinguished copy of $\mathcal O_M$.
 
 \subsection{Symmetric tensors on split elliptic ruled surfaces}
 \label{subsec:split-elliptic-symmetric-tensors}
@@ -442,13 +442,7 @@ where $h^0=\dim H^0$. For $s\geq1$, taking the coefficient of $u^s$ defines a su
 whose kernel is $hH^0(E,A\otimes\operatorname{Sym}^{s-1}U)$.
 \end{lemma}
 \begin{proof}
-A splitting of $U$ would give an invariant section $u+a(z)h$ lifting $1$, with $a$ entire and
-\[
- a(z+1)=a(z),\qquad a(z+\tau)=a(z)-2\pi\mathrm{i}d.
-\]
-The derivative $a'$ would then be lattice periodic, hence constant on the compact torus. The first identity forces this constant to vanish, contradicting the second. Thus the extension does not split.
-
-More generally, write an invariant polynomial of degree $s$ as
+Write an invariant polynomial of degree $s$ as
 \[
  F(z,h,u)=\sum_{j=0}^s a_j(z)h^{s-j}u^j.
 \]
@@ -457,7 +451,7 @@ If its largest nonzero $u$-degree is $j>0$, then $a_j$ is lattice periodic, henc
  a_{j-1}(z+1)=a_{j-1}(z),\qquad
  a_{j-1}(z+\tau)=a_{j-1}(z)-j(2\pi\mathrm{i}d)a_j,
 \]
-and the same derivative argument gives a contradiction. Hence $F=a_0h^s$ with $a_0$ constant; this also covers $s=0$.
+so the derivative $a_{j-1}'$ is lattice periodic, hence constant on the compact torus. The first identity forces this constant to vanish, and then $a_{j-1}$ is constant, contradicting the second identity. Hence $F=a_0h^s$ with $a_0$ constant; this also covers $s=0$. For $s=1$ this shows that $U$ does not split, since a splitting would give an invariant section with $u$-coefficient one.
 
 The powers of the invariant line $\mathcal O_Eh$ give a filtration of $\operatorname{Sym}^sU$ whose $s+1$ successive quotients are trivial line bundles. A line bundle of negative degree on a compact curve has no nonzero section, since the zero divisor of a nonzero section has nonnegative degree. Hence the filtration twisted by $A^{-k}$ has no global sections. Serre duality and $\Omega_E^1\simeq\mathcal O_E$ give $H^1(E,A^k)=0$, and the cohomology sequences of the filtration twisted by $A^k$ then give $H^1(E,A^k\otimes\operatorname{Sym}^sU)=0$. Riemann--Roch on the curve of genus one, for a bundle of rank $s+1$ and degree $kd(s+1)$, gives the dimension formula.
 
@@ -470,7 +464,7 @@ Finally, the leading coefficient gives the exact sequence of bundles
 Indeed, translating $u$ by a multiple of $h$ does not change the leading coefficient, and a polynomial with zero leading coefficient is divisible by $h$. The vanishing of $H^1(E,A\otimes\operatorname{Sym}^{s-1}U)$ just proved gives the asserted surjectivity and kernel on global sections.
 \end{proof}
 
-For a line bundle $\mathcal L$ on a projective manifold $Y$ of dimension $N$, recall that its volume is $\operatorname{vol}(\mathcal L)=\limsup_{r\to\infty}N!\,h^0(Y,\mathcal L^r)/r^N$, and that $\mathcal L$ is big if and only if $\operatorname{vol}(\mathcal L)>0$. For a vector bundle $F$ we use the quotient convention introduced in the proof of \cref{thm:split-elliptic-cotangent-torsor}, in which the projection $\pi\colon\mathbb P(F)\to Y$ satisfies $\pi_*\mathcal O_{\mathbb P(F)}(r)=\operatorname{Sym}^rF$.
+For a line bundle $\mathcal L$ on a projective manifold $Y$ of dimension $N$, recall that its volume is $\operatorname{vol}(\mathcal L)=\limsup_{r\to\infty}N!\,h^0(Y,\mathcal L^r)/r^N$, and that $\mathcal L$ is big if and only if $\operatorname{vol}(\mathcal L)>0$.
 
 \begin{theorem}\label{thm:split-elliptic-symmetric-dimensions}
 \index{Vector bundle!big tangent bundle}
@@ -689,11 +683,7 @@ There is a degree-preserving isomorphism of algebras
 Consequently the dimension formula, the bigness and volume of the tautological line bundle, and the failure of finite generation in \cref{cor:elliptic-extension-symmetric-dimensions} hold also for this extension.
 \end{proposition}
 \begin{proof}
-Give $c_-,c_+$ weights $-1,1$, and $h,u,w$ weight zero. Using $c_-c_+=h^2$, the blocks of negative weight have the form $c_-^kF(z,h,u,w)$, those of positive weight the form $c_+^kF(z,h,u,w)$, and the block of weight zero consists of the polynomials $F$. These expressions are unique: the substitution $c_+=h^2/c_-$ embeds the algebra into $\mathcal O(\mathbb C)[h,u,w,c_-,c_-^{-1}]$, and distinct weights correspond to distinct powers of $c_-$ with nonzero polynomial coefficients. In tensor degree $r$, the remaining polynomial degree is $r-k$.
-
-The coefficient bundle $U_3$ now has the inverse translation $u\mapsto u-m(q_0h+Kw)$. Thus the block of weight $-k$ is $H^0(E,A^k\otimes\operatorname{Sym}^{r-k}U_3)$, the block of weight $k$ has $A^{-k}$ in place of $A^k$, and the block of weight zero is $H^0(E,\operatorname{Sym}^rU_3)$. Put $H=h+(K/q_0)w$. Since $q_0\ne0$, this identifies $U_3$ with the bundle $U$ defined above, with $H$ in place of its Euler variable, plus the trivial line bundle generated by $w$.
-
-By \cref{lem:elliptic-unipotent-symmetric-cohomology}, all positive weights vanish, and the algebra of weight zero is $\mathbb C[H,w]$. Expanding the negative blocks in powers of $w$ identifies them with the blocks for the tangent bundle in \cref{lem:split-elliptic-tensor-weights}, and the substitutions $h\mapsto H$ and $y^k\mapsto c_-^k$ give bijections in every degree and surviving weight. Products multiply the coefficient polynomials and add the powers of $c_-$, so these bijections preserve multiplication. This proves the isomorphism. Summing the dimensions for the tangent bundle and taking the quotient by $w$ gives the remaining assertions, exactly as in the proof of \cref{cor:elliptic-extension-symmetric-dimensions}.
+The proof of \cref{thm:elliptic-extension-polynomial-ring} uses \cref{lem:elliptic-extension-fiber-ring} only through the lattice action, which \cref{lem:elliptic-zero-ruling-quadric} gives in the same form, and through the relation $c_-c_+=P$ with the nonzero polynomial $P=h(h+\rho w)$. With the relation $c_-c_+=h^2$ of \cref{lem:elliptic-zero-ruling-quadric}, that proof applies verbatim and gives the isomorphism. Summing the dimensions for the tangent bundle and taking the quotient by $w$ gives the remaining assertions, exactly as in the proof of \cref{cor:elliptic-extension-symmetric-dimensions}.
 \end{proof}
 
 \begin{proposition}\label{prop:elliptic-zero-ruling-torsor-cover}

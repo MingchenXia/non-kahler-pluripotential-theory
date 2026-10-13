@@ -1,14 +1,14 @@
 \subsection{A bounded divisorial band from fiber integrability}
 \label{sec:fiber-integrability-band}
 
-The comparison of \cref{thm:horizontal-center-descent} does not need the exact local form \eqref{eq:horizontal-center-singularity}. It suffices to bound the selecting potential from below by a divisorial pole on all of $X$, and from above by an anisotropic model in a single chart over the divisor. The lower bound gives the inclusion of the reference spaces into the selected spaces. The upper bound forces vanishing along the divisor to an order that falls short of the reference order by a bounded amount: separate powers of the normal variables replace the shift by the fiber dimension with a weighted shift. The selecting potential may then be singular along a positive-dimensional subset of a fiber, and it need not descend to the base.
+The comparison of \cref{thm:horizontal-center-descent} does not need the exact local form \eqref{eq:horizontal-center-singularity}. It suffices to bound the selecting potential from below by divisorial poles on all of $X$, and from above by an anisotropic model in a single chart over each divisor. The lower bound gives the inclusion of the reference spaces into the selected spaces. The upper bound forces vanishing along each divisor to an order that falls short of the reference order by a bounded amount: separate powers of the normal variables replace the shift by the fiber dimension with a weighted shift. The selecting potential may then be singular along a positive-dimensional subset of a fiber, and it need not descend to the base. Several divisors can be treated at once if they cross normally, since the integrability test on the base then separates in normal coordinates.
 
-Let $\pi\colon X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds with connected fibers of dimension $f\geq1$, and let $B$ be K\"ahler of dimension $q\geq1$. Fix a Hermitian form $\omega$ on $X$, a holomorphic line bundle $A$ on $B$ with a smooth Hermitian metric $h$, and $\varphi\in\PSH(X,\omega)$. Write $\theta=c_1(A,h)$, and use holomorphic descent to regard the selected spaces as subspaces of $H^0(B,A^m)$:
+Let $\pi\colon X\to B$ be a surjective holomorphic submersion of connected compact complex manifolds with connected fibers of dimension $f$, and let $q=\dim B$. Fix a Hermitian form $\omega$ on $X$, a holomorphic line bundle $A$ on $B$ with a smooth Hermitian metric $h$, and $\varphi\in\PSH(X,\omega)$. Write $\theta=c_1(A,h)$, and use holomorphic descent to regard the selected spaces as subspaces of $H^0(B,A^m)$:
 \[
  V_m=H^0\bigl(X,\pi^*A^m\otimes\mathcal I(m\varphi)\bigr)
        \subseteq H^0(B,A^m),\qquad m\geq1.
 \]
-Let $D\subset B$ be a nonempty smooth connected reduced divisor. Fix a smooth metric $H_D$ on $\mathcal O_B(D)$, and write $s_D$ for its canonical section and $\eta=c_1(\mathcal O_B(D),H_D)$ for its curvature.
+Let $D_1,\ldots,D_N$ be distinct nonempty smooth connected reduced divisors on $B$ whose union has simple normal crossings. For each $i$, choose a smooth metric $H_i$ on $\mathcal O_B(D_i)$, and write $s_i$ for the canonical section and $\eta_i$ for the curvature.
 
 \begin{lemma}\label{lem:anisotropic-fiber-integrability}\index{Multiplier ideal!fiber integrability}
 Let $r\geq1$ and $\ell\geq0$ be integers, let $p,b_1,\ldots,b_r$ be positive integers, and let $P>0$. The function
@@ -34,48 +34,63 @@ over a box near the origin. This box contains a small simplex $\{\sum_jx_j<\delt
 This gives the threshold and the logarithmic divergence at equality. Bounded factors in the weight, holomorphic units and additional tangential variables do not affect this local test.
 \end{proof}
 
-\Needspace{32\baselineskip}
-\begin{theorem}\label{thm:fiber-integrability-band}\index{Holomorphic section!fiber integrability band}
-Suppose that $c>0$ and $u\in C^\infty(B,\mathbb R)$ satisfy
+\Needspace{36\baselineskip}
+\begin{theorem}\label{thm:fiber-integrability-band}\label{thm:crossing-fiber-integrability-band}\label{cor:semipositive-fiber-band}\index{Holomorphic section!fiber integrability band}\index{Holomorphic section!crossing divisorial band}\index{Holomorphic section!semipositive residual}
+Suppose that $c_1,\ldots,c_N>0$ and $u\in C^\infty(B,\mathbb R)$ satisfy
 \[
- \beta=\theta+\ddc u-c\eta>0,
- \qquad \varphi\geq c\log\|\pi^*s_D\|_{H_D}^2-C
+ \beta=\theta+\ddc u-\sum_{i=1}^Nc_i\eta_i\geq0,
+ \qquad\int_B\beta^q>0,
+ \qquad \varphi\geq\sum_{i=1}^Nc_i\log\|\pi^*s_i\|_{H_i}^2-C
                          \quad\hbox{on }X
 \]
-for a constant $C$. Suppose further that there is one submersion polydisk over an open subset of $D$, with coordinates
+for a constant $C$. Suppose further that for each $i$ there is one submersion polydisk over an open subset of $D_i$, with coordinates
 \[
- \pi(z,t,w,v)=(z,t),\quad D=\{z=0\},\quad
- t\in\mathbb C^{q-1},\quad w\in\mathbb C^r,\quad v\in\mathbb C^{f-r},
+ \pi(z,t,w,v)=(z,t),\quad D_i=\{z=0\},\quad
+ t\in\mathbb C^{q-1},\quad w\in\mathbb C^{r_i},\quad v\in\mathbb C^{f-r_i},
 \]
-where $1\leq r\leq f$, on which
+where $1\leq r_i\leq f$, on which
 \[
- \varphi\leq\frac cp\log\left(|z|^{2p}+\sum_{j=1}^r|w_j|^{2b_j}\right)+C'
+ \varphi\leq\frac{c_i}{p_i}\log\left(|z|^{2p_i}+\sum_{j=1}^{r_i}|w_j|^{2b_{ij}}\right)+C_i
 \]
-for positive integers $p,b_1,\ldots,b_r$ and a constant $C'$. Put
+for positive integers $p_i,b_{i1},\ldots,b_{ir_i}$ and a constant $C_i$. Put
 \[
- a=p\sum_{j=1}^r b_j^{-1},\quad L_m=\lfloor mc\rfloor,\quad
- K_m=\max\{\lfloor mc-a\rfloor,0\},\quad
- \psi=u+c\log\|s_D\|_{H_D}^2.
+ \begin{gathered}
+ a_i=p_i\sum_{j=1}^{r_i}b_{ij}^{-1},\quad
+ L_{m,i}=\lfloor mc_i\rfloor,\quad
+ K_{m,i}=\max\{\lfloor mc_i-a_i\rfloor,0\},\\
+ \psi=u+\sum_{i=1}^Nc_i\log\|s_i\|_{H_i}^2.
+ \end{gathered}
 \]
-Then $\psi\in\PSH(B,\theta)$, its non-pluripolar mass is $\int_B\beta^q\in(0,\infty)$, and for every $m\geq1$,
+Then $\psi\in\PSH(B,\theta)$, $\mathrm{MA}_\theta(\psi)=\beta^q$, its mass is $\int_B\beta^q\in(0,\infty)$, and for every $m\geq1$,
 \[
- W_m:=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
-      =H^0(B,A^m(-L_mD))\subseteq V_m
-                       \subseteq H^0(B,A^m(-K_mD)).
+ \begin{split}
+ W_m&:=H^0\bigl(B,A^m\otimes\mathcal I(m\psi)\bigr)
+      =H^0\left(B,A^m\left(-\sum_iL_{m,i}D_i\right)\right)\subseteq V_m,\\
+ V_m&\subseteq H^0\left(B,A^m\left(-\sum_iK_{m,i}D_i\right)\right).
+ \end{split}
 \]
-Moreover $\dim V_m-\dim W_m=O(m^{q-1})=o(m^q)$. For $q=1$ this difference is at most $\lceil a\rceil$ for every $m$.
+Moreover $\dim V_m-\dim W_m=O(m^{q-1})$. For $q=1$ this difference is at most $\sum_i\lceil a_i\rceil$ for every $m$.
 \end{theorem}
 \begin{proof}
-By the Poincar\'e--Lelong formula, $\theta+\ddc\psi=\beta+c[D]$. Off $D$, locality identifies the non-pluripolar top power with $\beta^q$; the non-pluripolar product puts no mass on $D$, and neither does the smooth measure $\beta^q$. Hence $\mathrm{MA}_\theta(\psi)=\beta^q$, whose mass is finite and positive because $\beta>0$ and $B$ is compact. The one-variable integrability condition $\ell+1>mc$ gives $\mathcal I(m\psi)=\mathcal O_B(-L_mD)$, also when $mc$ is an integer. Since $u$ is bounded, the global lower bound implies $\varphi\geq\psi\circ\pi-C''$. Hence integrability on the base gives integrability of the pullback in every bounded submersion chart, which proves $W_m\subseteq V_m$.
+By the Poincar\'e--Lelong formula, $\theta+\ddc\psi=\beta+\sum_ic_i[D_i]\geq0$. Off the divisors, locality identifies the non-pluripolar top power with $\beta^q$; the non-pluripolar product puts no mass on the divisors, and neither does the smooth measure $\beta^q$. Hence $\mathrm{MA}_\theta(\psi)=\beta^q$, whose mass is finite because $\beta$ is smooth and positive by assumption.
 
-For the upper inclusion, take a nonzero section in $V_m$ and let $\ell$ be its vanishing order along $D$; note that $D$ is irreducible, being smooth and connected. In the polydisk of the upper bound, the coefficient of the section is $z^\ell g(z,t)$, where $g(0,t)$ does not vanish identically on the open subset of $D$, since otherwise the identity theorem would increase the order along $D$. Shrink the polydisk about a point with $w=0$ at which $g(0,t)\ne0$, so that $g$ becomes a holomorphic unit. The upper bound on $\varphi$ and \cref{lem:anisotropic-fiber-integrability} then force $\ell+1>mc-a$. For an integer $\ell\geq0$ this is equivalent to $\ell\geq K_m$, which proves the upper inclusion.
+Near a point of $B$, the divisors through that point are distinct coordinate hyperplanes $\{z_i=0\}$, and $\psi=\sum_ic_i\log|z_i|^2+O(1)$, the sum running over these divisors. If a holomorphic germ is divisible by each corresponding $z_i^{L_{m,i}}$, then it is divisible by their product; its residual coefficient is bounded, and since $L_{m,i}+1>mc_i$, Fubini's theorem gives integrability. Conversely, at generic nearby points of each coordinate hyperplane only one divisor passes, and the one-variable integrability condition $\ell+1>mc_i$ forces divisibility by $z_i^{L_{m,i}}$; the divisor of the germ then gives divisibility throughout the chart. This proves $\mathcal I(m\psi)=\mathcal O_B(-\sum_iL_{m,i}D_i)$, also when some $mc_i$ is an integer. Since $u$ is bounded, the global lower bound implies $\varphi\geq\psi\circ\pi-C'$. Hence integrability on the base gives integrability of the pullback in every bounded submersion chart, which proves $W_m\subseteq V_m$.
 
-Since $\lfloor mc\rfloor-\lfloor mc-a\rfloor\leq\lceil a\rceil$, we have $0\leq L_m-K_m\leq\lceil a\rceil$. Use the restriction sequences along $D$ from the proof of \cref{thm:horizontal-center-descent} for $K_m\leq j<L_m$. Each step loses at most $h^0(D,(A^m(-jD))|_D)$ dimensions, and by \cref{lem:linear-range-section-bound} this is at most $Cm^{q-1}$, uniformly for $0\leq j\leq cm$. Since the number of steps is bounded, the estimate follows. For $q=1$ the connected divisor $D$ is a single point, and each restriction space has dimension one.
+For the upper inclusion, take a nonzero section in $V_m$ and let $\ell$ be its vanishing order along $D_i$; note that $D_i$ is irreducible, being smooth and connected. In the polydisk over $D_i$ on which the upper bound holds, the coefficient of the section is $z^\ell g(z,t)$, where $g(0,t)$ does not vanish identically on the open subset of $D_i$, since otherwise the identity theorem would increase the order along $D_i$. Shrink the polydisk about a point with $w=0$ at which $g(0,t)\ne0$, so that $g$ becomes a holomorphic unit. The upper bound on $\varphi$ and \cref{lem:anisotropic-fiber-integrability} then force $\ell+1>mc_i-a_i$. For an integer $\ell\geq0$ this is equivalent to $\ell\geq K_{m,i}$. Imposing these orders along all the divisors proves the upper inclusion.
+
+Since $\lfloor mc_i\rfloor-\lfloor mc_i-a_i\rfloor\leq\lceil a_i\rceil$, we have $0\leq L_{m,i}-K_{m,i}\leq\lceil a_i\rceil$. Raise the orders from $(K_{m,i})_i$ to $(L_{m,i})_i$, one divisor and one unit at a time. As in the proof of \cref{thm:horizontal-center-descent}, the restriction sequence along $D_i$ shows that each step loses at most
+\[
+ h^0\left(D_i,\left.A^m\left(-\sum_j n_jD_j\right)\right|_{D_i}\right),
+ \qquad 0\leq n_j\leq mc_j,
+\]
+dimensions. By \cref{lem:linear-range-section-bound} with $E=A|_{D_i}$ and $F_j=\mathcal O_B(-D_j)|_{D_i}$, this is $O(m^{q-1})$ uniformly over all steps, and there are at most $\sum_i\lceil a_i\rceil$ steps. When $q=1$, the distinct connected divisors are points, and each restriction space has dimension one.
 \end{proof}
+
+For a single divisor we write $D,s_D,\eta,c,p,r,b_j,a,L_m,K_m$ for $D_1,s_1,\eta_1,c_1,p_1,r_1,b_{1j},a_1,L_{m,1},K_{m,1}$.
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:exact-anisotropic-fiber-series}
-Keep the positivity condition $\beta>0$ of \cref{thm:fiber-integrability-band}. Suppose that a nonempty compact smooth submanifold $Z\subset\pi^{-1}(D)$ projects submersively onto $D$, and that near every point of $Z$ there are coordinates as in that theorem in which
+Let $N=1$, and let $c$ and $u$ satisfy the conditions on $\beta$ in \cref{thm:fiber-integrability-band}. Suppose that a nonempty compact smooth submanifold $Z\subset\pi^{-1}(D)$ projects submersively onto $D$, and that near every point of $Z$ there are coordinates as in that theorem in which
 \[
  Z=\{z=w_1=\cdots=w_r=0\},\qquad
  \varphi=\frac cp\log\left(|z|^{2p}+\sum_{j=1}^r|w_j|^{2b_j}\right)+O(1),
@@ -115,8 +130,6 @@ For $q=1$ the defect is exactly one for every $m\geq2$.
 Locally, the complex Hessian of the logarithm of a sum of two squared norms of holomorphic sections is bounded below by a convex combination of the negatives of their curvature forms. Hence $\ddc\varphi\geq-\tfrac12\omega_B-\tfrac34\omega_F$ off the pole set, and across it by the extension theorem after a quadratic correction. Thus $\varphi\in\PSH(X,\omega)$. The pole set is $D\times\{o\}$, along which $\varphi$ has the exact local model of \cref{cor:exact-anisotropic-fiber-series}. Here $u=0$, $\beta=\tfrac12\omega_B$, and $K_m=L_m-1$ for $m\geq2$, while $K_1=L_1=0$. The spaces $V_m$ and $W_m$ therefore correspond to homogeneous polynomials of degrees $m-L_m+1$ and $m-L_m$, and since $m-L_m=\lceil m/2\rceil$, the difference of their dimensions is the displayed binomial coefficient.
 \end{proof}
 
-In this example $\varphi$ is finite on most of each fiber over $D$ and equals $-\infty$ on a proper subset of it, so $\varphi$ differs from every pullback of a function on $B$ by an unbounded amount. For $p=b_j=1$ and $r=f$, the shift $a=f$ is the shift by the fiber dimension found in \cref{thm:horizontal-center-descent}. \Cref{thm:fiber-integrability-band} thus gives sufficient conditions for the approximation asked for in \cref{qu:fiber-selected-approximation}; we do not know which other fiber singularities admit such an approximation.
-
-The assumption $f\geq1$ excludes only a trivial case. If the fibers have dimension zero, then $\pi$ is a covering, since $X$ is compact and $\pi$ is a submersion, and hence a biholomorphism, since the fibers are connected. If, in addition, the descended selecting potential is $\theta$-plurisubharmonic with finite positive mass, taking it as $\psi$ gives $V_m=W_m$.
+In this example $\varphi$ is finite on most of each fiber over $D$ and equals $-\infty$ on a proper subset of it, so $\varphi$ differs from every pullback of a function on $B$ by an unbounded amount. For $p=b_j=1$ and $r=f$, the shift $a=f$ is the shift by the fiber dimension found in \cref{thm:horizontal-center-descent}. \Cref{thm:fiber-integrability-band} thus gives sufficient conditions for the approximation asked for in \cref{qu:fiber-selected-approximation}, and when $B$ is K\"ahler, \cref{prop:descended-kernel-limit} turns them into limits of the kernel measures. We do not know which other fiber singularities admit such an approximation.
 
 \input{author/section_crossing_fiber_integrability}

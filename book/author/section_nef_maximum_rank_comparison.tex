@@ -1,31 +1,8 @@
-\subsection{A maximum-rank comparison criterion}
+\subsection{Variable multiples of semipositive generators}
 \label{sec:nef-maximum-rank-comparison}
 \index{Nef degeneration!maximum-rank comparison}
 
-The constant-rank hypothesis in \cref{lem:nef-logarithmic-rank-comparison} can be removed. For a closed semipositive form $B$, the intersection polynomial $\int_X(B+\epsilon\Omega)^n$ has a leading term of order $\epsilon^{n-R}$, where $R$ is the largest rank that $B$ attains anywhere on $X$. Combined with the comparison of quotients, this gives the order $n-R$ for every background that is comparable to $B$. The criterion applies to backgrounds that vanish on an open set, and to positive variable multiples of arbitrary closed semipositive generators.
-
-\Needspace{12\baselineskip}
-\begin{proposition}\label{prop:nef-maximum-rank-comparison}
-Let $X$ be a compact K\"ahler manifold of dimension $n$, let $B$ be a smooth closed semipositive $(1,1)$-form, and put $R=\max_X\operatorname{rank}B$. Suppose a smooth nef background $\theta$ satisfies
-\[
- \theta\leq CB,\qquad \theta+\ddc\varphi\geq cB
-\]
-as currents, for constants $c,C>0$ and a real function $\varphi\in L^1(X)$. For every smooth positive probability form $\mu$ and Hermitian form $h$, there are constants $L,U>0$ such that
-\[
- L\epsilon^{n-R}\leq\mathcal V_\mu(\theta+\epsilon h)
-                       \leq U\epsilon^{n-R},\qquad 0<\epsilon\leq1.
-\]
-Thus $\theta$ has common order $n-R$, without any constant-rank hypothesis.
-\end{proposition}
-\begin{proof}
-Fix a K\"ahler form $\Omega$. The first part of \cref{lem:nef-logarithmic-rank-comparison}, which does not use the rank, shows that $\lambda_\mu(\theta+\epsilon h)$ and $\lambda_\mu(B+\epsilon\Omega)$ differ by bounded positive factors. Since $B^{R+1}=0$, the closed nef formula following \cref{thm:gaud-volume-nef-limit} gives
-\[
- \mathcal V_\mu(B+\epsilon\Omega)
- =\sum_{k=0}^{R}\binom nk\epsilon^{n-k}
-                         \int_X B^k\wedge\Omega^{n-k}.
-\]
-All coefficients are nonnegative. If $R>0$, then at a point where $B$ has rank $R$, some principal $R\times R$ minor of its coefficient matrix is positive and stays positive nearby, so $B^R\wedge\Omega^{n-R}$ has positive integral. If $R=0$, this integral is the K\"ahler volume. Hence the coefficient of $\epsilon^{n-R}$ is positive. For $0<\epsilon\leq1$, every other power of $\epsilon$ that occurs is at most $\epsilon^{n-R}$, so the polynomial is bounded below by its leading term and above by the sum of its coefficients times $\epsilon^{n-R}$. Raising the comparison of quotients to the $n$th power gives the asserted bounds, and taking logarithms gives the order.
-\end{proof}
+\Cref{lem:nef-logarithmic-rank-comparison} applies to positive variable multiples of arbitrary closed semipositive generators on a compact K\"ahler manifold, and in particular to backgrounds that vanish on an open set.
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:nef-variable-semipositive-generators}
@@ -34,20 +11,15 @@ On a compact K\"ahler manifold $X$ of dimension $n$, fix finitely many smooth cl
  \theta=\sum_jt_jf_jB_j,\qquad
  B=\sum_{j:t_j>0}B_j,\qquad R=\max_X\operatorname{rank}B.
 \]
-The background $\theta$ is nef, has common order $n-R$, and satisfies the two-sided power bounds of \cref{prop:nef-maximum-rank-comparison}. For every modification $\pi\colon Y\to X$ with $Y$ a compact K\"ahler manifold, the pullback $\pi^*\theta$ has the same order and power bounds with the same exponent, for every smooth positive probability form and Hermitian perturbation on $Y$.
+The background $\theta$ is nef, has common order $n-R$, and satisfies the two-sided power bounds of \cref{lem:nef-logarithmic-rank-comparison}. For every modification $\pi\colon Y\to X$ with $Y$ a compact K\"ahler manifold, the pullback $\pi^*\theta$ has the same order and power bounds with the same exponent, for every smooth positive probability form and Hermitian perturbation on $Y$.
 \end{corollary}
 \begin{proof}
-Semipositivity gives nefness. If some $t_j$ is positive, compactness and strict positivity of the functions $f_j$ give
+If some $t_j$ is positive, compactness and strict positivity of the functions $f_j$ give $cB\leq\theta\leq CB$ with
 \[
- \begin{gathered}
- cB\leq\theta\leq CB,\qquad
- c=\min_{j:t_j>0}\bigl(t_j\min_X f_j\bigr)>0,\\
- C=\max_{j:t_j>0}\bigl(t_j\max_X f_j\bigr),
- \end{gathered}
+ c=\min_{j:t_j>0}\bigl(t_j\min_X f_j\bigr)>0,\qquad
+ C=\max_{j:t_j>0}\bigl(t_j\max_X f_j\bigr).
 \]
-and \cref{prop:nef-maximum-rank-comparison} applies with $\varphi=0$. If all parameters vanish, then $B=\theta=0$, $R=0$, any $c,C>0$ may be used, and the order is $n$.
-
-These inequalities between smooth forms are preserved by pullback, and the rank of $\pi^*B$ is at most $R$. If $R>0$, the set where $B$ has rank $R$ is nonempty and open, so it meets the dense open set where $\pi$ is biholomorphic; hence the maximal rank of $\pi^*B$ is $R$. This is immediate if $R=0$. Since $\dim Y=n$, the same proposition applies on $Y$, with any choice of data there. No singular potential needs to be pulled back.
+If all parameters vanish, then $B=\theta=0$, and any $c,C>0$ may be used. \Cref{lem:nef-logarithmic-rank-comparison} gives all assertions.
 \end{proof}
 
 The constants depend on the parameters $t_j$ and need not stay bounded as a positive parameter tends to zero. The rank of a sum records how the generators overlap, and it need not equal the sum of their ranks. Members of the family are not closed when $\sum_jt_j\,\mathrm df_j\wedge B_j\ne0$.

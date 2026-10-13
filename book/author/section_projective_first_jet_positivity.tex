@@ -3,7 +3,7 @@
 
 RC-positivity asks for one positive tangent direction for each fiber vector, whereas Griffiths positivity asks for positivity on every pair of nonzero tangent and fiber vectors. The Lamari criterion of \cref{thm:lamari} characterizes, by a duality with Gauduchon tests, the smooth real $(1,1)$-forms $\theta$ that admit a positive current $\theta+\ddc u$, and Griffiths positivity on a projective manifold admits an analogous duality. A strictly Griffiths-positive metric on $E$ amounts to a strictly plurisubharmonic squared norm on the dual bundle, and the Levi form of this squared norm depends linearly on the dual Hermitian form. Twisting by powers of a very ample line bundle gives finite-dimensional spaces of candidate forms. At each level, either some candidate is strictly plurisubharmonic or a finite atomic positive measure annihilates the Levi forms of all candidates, and if every level fails, a weak limit of these measures annihilates the Levi forms of all smooth Hermitian forms. This measure lives over the dual bundle, whereas the Gauduchon currents in \cref{thm:lamari} live on the base.
 
-Throughout this section, $X$ is a projective manifold of dimension $n\geq2$, $E\to X$ is a holomorphic vector bundle of positive rank, and $F=E^*$. Fix a very ample line bundle $A$, a basis $t_1,\ldots,t_d$ of $H^0(X,A)$, and the Fubini--Study metric $a$ on $A$ determined by this basis. Fix also an integer $m_0\geq0$ for which $E\otimes A^{m_0}$ is globally generated; this integer is part of the data. In a local frame of $A$, put
+Throughout this section, $X$ is a projective manifold of any dimension $n\geq1$, $E\to X$ is a holomorphic vector bundle of positive rank, and $F=E^*$. Fix a very ample line bundle $A$, a basis $t_1,\ldots,t_d$ of $H^0(X,A)$, and the Fubini--Study metric $a$ on $A$ determined by this basis. Fix also an integer $m_0\geq0$ for which $E\otimes A^{m_0}$ is globally generated; this integer is part of the data. In a local frame of $A$, put
 \[
  \rho=\sum_{\alpha=1}^d|t_\alpha|^2,
  \qquad a=\mathrm e^{-\phi},\qquad\phi=\log\rho.
@@ -17,12 +17,11 @@ For a smooth Hermitian form $h$ on $F$, not initially assumed positive, let $G_h
 The function $G_h$ is strictly plurisubharmonic off the zero section if and only if $h$ is a smooth positive Hermitian metric with strictly Griffiths-negative curvature. Equivalently, its dual metric on $E$ is strictly Griffiths-positive.
 \end{lemma}
 \begin{proof}
-On vertical tangent vectors the Levi form is $h$ itself, so strict positivity forces $h>0$. At a fixed base point, choose a holomorphic frame in which the matrix $H$ of $h$ is the identity and has vanishing first derivatives. Then $R_h(u,\bar u)=-H_{u\bar u}$ at this point. A tangent vector to $F$ has horizontal and vertical components $(u,w)$, and
+On vertical tangent vectors the Levi form is $h$ itself, so strict positivity forces $h>0$. For $h>0$, write a tangent vector to $F$ at $v$ by its horizontal and vertical components $(u,w)$ in a holomorphic frame that is unitary and Chern-normal at the base point. The calculation in the proof of \cref{lem:reciprocal-bundle-norm-levi} gives
 \[
- \mathcal L G_h(u,w)=|w|^2+v^*H_{u\bar u}v
-                  =|w|^2-h(R_h(u,\bar u)v,v).
+ \mathcal L G_h(u,w)=|w|_h^2-h(R_h(u,\bar u)v,v),
 \]
-For $v\ne0$, this is positive for every nonzero $(u,w)$ precisely when the curvature evaluation is negative for every nonzero $u$. The curvature of the dual metric is the negative transpose of the original curvature, with respect to the dual Hermitian pairing, which gives the last assertion.
+without mixed terms. For $v\ne0$, this is positive for every nonzero $(u,w)$ precisely when the curvature evaluation is negative for every nonzero $u$. The curvature of the dual metric is the negative transpose of the original curvature, with respect to the dual Hermitian pairing, which gives the last assertion.
 \end{proof}
 
 The Levi forms will be tested on a compact set. Choose any smooth Hermitian metric $k$ on $F$, let $S=\{v:k(v,v)=1\}$ be its unit sphere bundle, and choose a smooth positive Hermitian form $b$ on the complex vector bundle $W=T^{1,0}F|_S$ over $S$. The set
@@ -89,17 +88,9 @@ Let $\mathcal H_m=\{h_{m,B}:B=B^*\}$. To pass from these finite-dimensional test
 The matrix-valued map $Y=tt^*/\rho$ embeds $X$ as a compact smooth submanifold of the real vector space of Hermitian $d\times d$ matrices. Restrictions of real polynomials in its real coordinates are dense in $C^2(X,\mathbb R)$ for the $C^2$ norm.
 \end{lemma}
 \begin{proof}
-The normalized rank-one projector $Y$ determines the point $[t]$ of projective space, and its differential vanishes only in directions in which $\mathrm dt$ is proportional to $t$. Since $A$ is very ample, $Y$ is therefore injective with injective differential, and compactness makes it an embedding. A $C^2$ function on this image extends to a $C^2$ function on an ambient cube: use local coordinates in which the image is a graph, extend constantly in the normal coordinates, and combine these extensions with a finite smooth partition of unity and a cutoff. Rescale the cube to $[0,1]^q$.
+The normalized rank-one projector $Y$ determines the point $[t]$ of projective space, and its differential vanishes only in directions in which $\mathrm dt$ is proportional to $t$. Since $A$ is very ample, $Y$ is therefore injective with injective differential, and compactness makes it an embedding. A $C^2$ function on this image extends to a compactly supported $C^2$ function $f$ on the ambient space $\mathbb R^{d^2}$: use local coordinates in which the image is a graph, extend constantly in the normal coordinates, and combine these extensions with a finite smooth partition of unity and a cutoff.
 
-For such an extension $f$, its multivariate Bernstein polynomial is
-\[
- B_Nf(y)=\sum_{0\leq j_1,\ldots,j_q\leq N}
-       f(j/N)\prod_{\ell=1}^q
-       \binom N{j_\ell}y_\ell^{j_\ell}(1-y_\ell)^{N-j_\ell},
-\]
-where $j=(j_1,\ldots,j_q)$. For a multi-index $\alpha$ with $|\alpha|\leq2$, differentiation expresses $\partial^\alpha B_Nf$ as an average of $\Delta_{1/N}^\alpha f(j/N)$, with prefactor $\prod_\ell(N)_{\alpha_\ell}$ and Bernstein degrees $N-\alpha_\ell$. Here $(N)_r=N(N-1)\cdots(N-r+1)$, and $\Delta^\alpha_{1/N}$ is the corresponding iterated forward difference with step $1/N$. Repeated use of the fundamental theorem of calculus expresses $N^{|\alpha|}\Delta_{1/N}^\alpha f(j/N)$ as an average of $\partial^\alpha f$ at points within $2/N$ in each affected coordinate.
-
-The remaining Bernstein weights are the law of independent binomial variables of degrees $N-\alpha_\ell$, divided by $N$. Their means differ from $y_\ell$ by at most $2/N$ and their variances are at most $1/(4N)$. Uniform continuity of $\partial^\alpha f$, splitting the average into a fixed small neighborhood of $y$ and its complement, and Chebyshev's inequality give uniform convergence to $\partial^\alpha f$. The prefactor divided by $N^{|\alpha|}$ tends to one. This proves convergence for every derivative of order at most two, including the function itself. Restrict to the embedded image and use the chain rule in a finite collection of charts to obtain the asserted $C^2$ approximation.
+The convolutions of $f$ with the Gaussian kernels $G_\varepsilon(y)=(\pi\varepsilon)^{-d^2/2}\mathrm e^{-|y|^2/\varepsilon}$ converge to $f$ in $C^2$ as $\varepsilon\to0$, since $\partial^\alpha(f*G_\varepsilon)=(\partial^\alpha f)*G_\varepsilon$ for $|\alpha|\leq2$ and these derivatives of $f$ are uniformly continuous. Each $f*G_\varepsilon$ is the restriction of an entire function on $\mathbb C^{d^2}$, because $f$ has compact support, so its Taylor polynomials at the origin converge to it in $C^2$ on every compact set. Thus real polynomials approximate $f$ in $C^2$ on a neighborhood of the image. Restrict to the embedded image and use the chain rule in a finite collection of charts to obtain the asserted $C^2$ approximation.
 \end{proof}
 
 \begin{lemma}\label{lem:first-jet-nested-metric-density}

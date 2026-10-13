@@ -2,58 +2,41 @@
 \label{sec:nef-projective-integer-cones}
 \index{Nef degeneration!nonclosed projective cones}
 
-In the examples of \cref{sec:nef-surface-orders} the order is not an integer because a coefficient of the background vanishes at a point. We now consider backgrounds that are combinations, with strictly positive coefficient functions, of finitely many fixed closed semipositive generators on products of projective spaces and their linear blowups. Such backgrounds have integral orders even when they are not closed. The tool is a comparison with a closed semipositive form $B$ of constant rank. If $\theta$ is bounded above by a multiple of $B$ and, after the addition of a possibly singular potential, below by another multiple, then the Gauduchon quotients of $\theta+\epsilon h$ and of the closed form $B+\epsilon\Omega$ are comparable, and the latter have an explicit order. On a blown-up factor the pulled-back hyperplane form loses rank along the exceptional divisor, and the logarithmic potential of that divisor provides the lower bound.
+In the examples of \cref{sec:nef-surface-orders} the order is not an integer because a coefficient of the background vanishes at a point. We now consider backgrounds that are combinations, with strictly positive coefficient functions, of finitely many fixed closed semipositive generators on products of projective spaces and their linear blowups. Such backgrounds have integral orders even when they are not closed. The tool is a comparison with a closed semipositive form $B$. If $\theta$ lies between two positive multiples of $B$, then the Gauduchon quotients of $\theta+\epsilon h$ and of $B+\epsilon\Omega$, for a K\"ahler form $\Omega$, are comparable, and the intersection polynomial of $B+\epsilon\Omega$ has order $n-R$, where $R$ is the largest rank of $B$.
 
 \Needspace{14\baselineskip}
-\begin{lemma}\label{lem:nef-logarithmic-rank-comparison}
-Let $X$ be a compact K\"ahler manifold of dimension $n$, let $\Omega$ be a K\"ahler form, and let $B$ be a smooth closed semipositive $(1,1)$-form. Suppose a smooth nef background $\theta$ satisfies
+\begin{lemma}\label{lem:nef-logarithmic-rank-comparison}\label{prop:nef-maximum-rank-comparison}
+Let $X$ be a compact K\"ahler manifold of dimension $n$, let $B$ be a smooth closed semipositive $(1,1)$-form, and put $R=\max_X\operatorname{rank}B$. Let $\theta$ be a smooth real $(1,1)$-form with
 \[
- \theta\leq CB,\qquad \theta+\ddc\varphi\geq cB
+ cB\leq\theta\leq CB
 \]
-as currents, for constants $c,C>0$ and a real function $\varphi\in L^1(X)$. For every Hermitian form $h$ and smooth strictly positive probability form $\mu$, there are constants $k,K>0$ such that, for $0<\epsilon\leq1$,
+for constants $c,C>0$. Then $\theta$ is nef, and for every Hermitian form $h$ and every smooth positive probability form $\mu$ there are constants $L,U>0$ such that
+\[
+ L\epsilon^{n-R}\leq\mathcal V_\mu(\theta+\epsilon h)
+                       \leq U\epsilon^{n-R},\qquad 0<\epsilon\leq1.
+\]
+In particular, $\theta$ has common order $n-R$. The same holds, with the same exponent, for $\pi^*\theta$, for every modification $\pi\colon Y\to X$ from a compact K\"ahler manifold $Y$ and every Hermitian form and smooth positive probability form on $Y$.
+\end{lemma}
+\begin{proof}
+Semipositivity of $\theta$ gives nefness. Fix a K\"ahler form $\Omega$ on $X$ and constants $c_h,C_h>0$ with $c_h\Omega\leq h\leq C_h\Omega$, and put $k=\min(c,c_h)$ and $K=\max(C,C_h)$. For $\epsilon>0$ the forms $\theta+\epsilon h-k(B+\epsilon\Omega)$ and $K(B+\epsilon\Omega)-(\theta+\epsilon h)$ are semipositive, so the monotonicity and homogeneity in \cref{prop:gaud-volume-elementary} give
 \begin{equation}\label{eq:nef-logarithmic-quotient-comparison}
  k\lambda_\mu(B+\epsilon\Omega)
  \leq\lambda_\mu(\theta+\epsilon h)
  \leq K\lambda_\mu(B+\epsilon\Omega).
 \end{equation}
-If $B$ has constant rank $R$, there are moreover constants $L,U>0$ with
-\[
- L\epsilon^{n-R}\leq\mathcal V_\mu(\theta+\epsilon h)
-                       \leq U\epsilon^{n-R},\qquad 0<\epsilon\leq1.
-\]
-In particular, $\theta$ then has common order $n-R$.
-\end{lemma}
-\begin{proof}
-Choose $c_h,C_h>0$ with $c_h\Omega\leq h\leq C_h\Omega$. For every Gauduchon metric $\gamma$, Stokes' theorem for currents gives
-\[
- \int_X\ddc\varphi\wedge\gamma^{n-1}
-       =\langle\varphi,\ddc\gamma^{n-1}\rangle=0.
-\]
-The lower bound for $\theta+\ddc\varphi$ therefore gives $\int_X(\theta+\epsilon h)\wedge\gamma^{n-1}\geq k\int_X(B+\epsilon\Omega)\wedge\gamma^{n-1}$ with $k=\min(c,c_h)$, and the upper bound for $\theta$ gives the reverse inequality with $K=\max(C,C_h)$. Dividing by $D_\mu(\gamma)>0$ and taking infima over all Gauduchon metrics proves \eqref{eq:nef-logarithmic-quotient-comparison}; no rank hypothesis has been used.
-
-Now suppose that $B$ has constant rank $R$. Its $R$ positive eigenvalues relative to $\Omega$ are then bounded above and away from zero, uniformly on $X$. With $A_\epsilon=B+\epsilon\Omega$, compactness gives constants $m_0,M_0>0$ with
+Since $B$ is semipositive of rank at most $R$, the forms $B^j\wedge\Omega^{n-j}$ are semipositive and vanish for $j>R$. The closed nef formula following \cref{thm:gaud-volume-nef-limit} therefore gives
 \begin{equation}\label{eq:nef-projective-pointwise-volume}
- m_0\epsilon^{n-R}\mu\leq A_\epsilon^n
-                         \leq M_0\epsilon^{n-R}\mu,\qquad 0<\epsilon\leq1.
+ \mathcal V_\mu(B+\epsilon\Omega)
+ =\sum_{j=0}^{R}\binom nj\epsilon^{n-j}
+                         \int_X B^j\wedge\Omega^{n-j},
 \end{equation}
-For every Gauduchon metric $\gamma$, the pointwise arithmetic--geometric mean inequality gives
-\[
- A_\epsilon\wedge\gamma^{n-1}
- \geq\left(\frac{A_\epsilon^n}{\gamma^n}\right)^{1/n}\gamma^n,
-\]
-and hence $\lambda_\mu(A_\epsilon)\geq m_0^{1/n}\epsilon^{(n-R)/n}$. In the other direction, the positive closed form $\gamma=A_\epsilon$ is itself an admissible test. Writing $A_\epsilon^n=f_\epsilon\mu$, we have
-\[
- \begin{aligned}
- D_\mu(A_\epsilon)&=\int_X f_\epsilon^{(n-1)/n}\mu
- \geq m_0^{(n-1)/n}\epsilon^{(n-R)(n-1)/n},\\
- \int_X A_\epsilon^n&\leq M_0\epsilon^{n-R},
- \end{aligned}
-\]
-so the quotient of this test is at most $M_0m_0^{-(n-1)/n}\epsilon^{(n-R)/n}$. Raising both bounds to the $n$th power and using \eqref{eq:nef-logarithmic-quotient-comparison} gives the two-sided power bounds. The argument includes the case $R=0$, and the case $n=1$, in which $D_\mu=1$. Fixed positive factors do not affect the order, since their logarithms are divided by $\log\epsilon$.
+with nonnegative coefficients. The form $B^R\wedge\Omega^{n-R}$ is positive at a point where $B$ has rank $R$, so the coefficient of $\epsilon^{n-R}$ is positive. For $0<\epsilon\leq1$ every power $\epsilon^{n-j}$ that occurs is at most $\epsilon^{n-R}$, so the polynomial lies between its leading term and the sum of its coefficients times $\epsilon^{n-R}$. Raising \eqref{eq:nef-logarithmic-quotient-comparison} to the $n$th power gives the two-sided bounds. Fixed positive factors do not affect the order, since their logarithms are divided by $\log\epsilon$.
+
+For a modification $\pi\colon Y\to X$, the inequalities $c\pi^*B\leq\pi^*\theta\leq C\pi^*B$ hold on $Y$, and $\pi^*B$ is smooth, closed and semipositive of rank at most $R$. The set where $B$ has rank $R$ is open and nonempty, so it meets the dense open set over which $\pi$ is biholomorphic; hence $\pi^*B$ has maximal rank $R$. Since $\dim Y=n$, the first part applies on $Y$.
 \end{proof}
 
 \subsubsection{Linear blowups and the fixed generators}
-The manifolds are products of factors of two kinds. A \emph{plain} factor is $Z_i=\mathbb P^{m_i}$ with $m_i\geq1$; let $H_i$ be its Fubini--Study form normalized to have integral one on lines, and set $\kappa_i=H_i$. A \emph{blown-up} factor is
+The manifolds are products of factors of two kinds. A \emph{plain} factor is $Z_i=\mathbb P^{m_i}$ with $m_i\geq1$; let $H_i$ be its Fubini--Study form normalized to have integral one on lines. A \emph{blown-up} factor is
 \[
  Z_i=\operatorname{Bl}_{\mathbb P^{\ell_i}}\mathbb P^{m_i},
  \qquad m_i\geq2,\quad 0\leq\ell_i\leq m_i-2,
@@ -72,8 +55,7 @@ The form $\kappa$ is K\"ahler, as the restriction of a product K\"ahler form, wh
 
 Let $E=\{w=0\}$ be the exceptional divisor. The coordinate section $w_j$ of $p^*\mathcal O(1)$ vanishes exactly on $E+q^{-1}\{t_j=0\}$, so $\mathcal O(E)=p^*\mathcal O(1)\otimes q^*\mathcal O(-1)$. Give this line bundle the product metric, whose curvature is $H-Q$. For its canonical section $s_E$, the function $\psi_E=\log|s_E|^2$ is locally integrable, and the Poincar\'e--Lelong formula, as in \cref{sec:divisorial-gaud-volume}, gives
 \begin{equation}\label{eq:nef-projective-exceptional-potential}
- \ddc\psi_E=[E]-H+Q,\qquad
- H+\ddc(\psi_E/2)=\tfrac12(\kappa+[E])\geq\kappa/2.
+ \ddc\psi_E=[E]-H+Q.
 \end{equation}
 
 \Needspace{9\baselineskip}
@@ -104,14 +86,7 @@ Every background $\theta$ in the fixed cone \eqref{eq:nef-fixed-projective-cone}
 \end{equation}
 \end{theorem}
 \begin{proof}
-Let $B_\theta$ be the sum of the forms $\kappa_i$ over the factors in which $H_i$ occurs and of the forms $Q_i$ over the factors in which only $Q_i$ occurs. It is closed and semipositive of constant rank $R(\theta)$. Since the coefficients are bounded and $H_i,Q_i\leq\kappa_i$, we have $\theta\leq CB_\theta$ for some $C>0$.
-
-For the lower bound, let $s_i=\min_X(a_i+b_if_i)>0$ for each blown-up factor in which $H_i$ occurs, and put
-\[
- \varphi=\sum_{\substack{i\text{ blown up}\\H_i\text{ occurs}}}
-                          (s_i/2)\psi_{E_i}.
-\]
-By \eqref{eq:nef-projective-exceptional-potential}, $s_iH_i+\ddc(s_i\psi_{E_i}/2)=(s_i/2)(\kappa_i+[E_i])\geq(s_i/2)\kappa_i$. The remaining terms $(a_i+b_if_i-s_i)H_i$ and all terms involving $Q_i$ are semipositive. On plain factors in which $H_i$ occurs and on factors in which only $Q_i$ occurs, the relevant coefficient is bounded below by a positive constant. Taking the minimum of these constants gives $\theta+\ddc\varphi\geq cB_\theta$ for some $c>0$. For $\theta=0$ take $\varphi=0$ and any $c>0$. Now apply \cref{lem:nef-logarithmic-rank-comparison} with $\Omega=\sum_i\kappa_i$.
+Let $B_\theta$ be the sum of the generators $H_i$ and $Q_i$ that occur in $\theta$; it is closed and semipositive. The coefficient function of an occurring generator takes values in a compact subinterval of $(0,\infty)$, because $f_i$ and $g_i$ are strictly positive, so $cB_\theta\leq\theta\leq CB_\theta$ for some constants $c,C>0$ (any constants if $\theta=0$). Ranks of forms pulled back from different factors add pointwise. On a plain factor $H_i$ has rank $m_i$. On a blown-up factor, $H_i$ and $H_i+Q_i$ have rank $m_i$ off $E_i$, where $p_i$ is biholomorphic, while $Q_i$ has constant rank $r_i$. Hence the maximal rank of $B_\theta$, attained off all exceptional divisors, is $R(\theta)$, and \cref{lem:nef-logarithmic-rank-comparison} applies.
 \end{proof}
 
 Members of the fixed cone need not be closed: by construction
@@ -126,27 +101,10 @@ By \cref{prop:nef-modification-volume}, pulling back by a modification can only 
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{prop:nef-projective-modification-equality}
-Replacing some plain factors by linear blowups as above preserves the order of every background in the fixed cone. More generally, for every modification $\pi\colon Y\to X$ with $Y$ a compact K\"ahler manifold, the pullback $\pi^*\theta$ has common order $n-R(\theta)$, and satisfies two-sided power bounds with this exponent for every smooth positive probability form and every Hermitian perturbation on $Y$.
+Let $\theta$ be in the fixed cone, and let $\pi\colon Y\to X$ be a modification from a compact K\"ahler manifold $Y$, for instance the product in which some plain factors are replaced by linear blowups as above. Then $\pi^*\theta$ has common order $n-R(\theta)$, and satisfies two-sided power bounds with this exponent for every smooth positive probability form and every Hermitian perturbation on $Y$.
 \end{proposition}
 \begin{proof}
-For a product of linear blowups, pull back the coefficient functions and take the new coefficients of the forms $Q_i$ to be zero. A form $H_i$ that occurs on a plain factor becomes a form $H_i$ that occurs on a blown-up factor, with the same rank $m_i$, and factors in which nothing occurs remain so. Hence \cref{thm:nef-projective-integer-orders}, applied on both products, gives the same order.
-
-For a general compact K\"ahler manifold $Y$, pull back the semipositive smooth remainders and the divisor identities used in the proof of \cref{thm:nef-projective-integer-orders}. Each nonzero holomorphic section remains nonzero under the surjective map $\pi$, and the logarithm of the squared norm of its pullback is locally integrable, with $\ddc$ equal to the current of its effective zero divisor minus the pulled-back curvature. Hence
-\[
- \pi^*\theta\leq C\pi^*B_\theta,\qquad
- \pi^*\theta+\ddc(\varphi\circ\pi)\geq c\pi^*B_\theta.
-\]
-Fix a K\"ahler form $\Omega_Y$ on $Y$, and apply the first part of \cref{lem:nef-logarithmic-rank-comparison}, which needs no rank hypothesis; the pulled-back background is semipositive and hence nef. Put $R=R(\theta)$. Pullback does not increase rank, so $(\pi^*B_\theta)^{R+1}=0$, while
-\[
- \int_Y(\pi^*B_\theta)^R\wedge\Omega_Y^{n-R}>0:
-\]
-for $R>0$ the integrand is positive on the nonempty set where $\pi$ is biholomorphic, and for $R=0$ the integral is the K\"ahler volume. For any smooth positive probability form $\mu_Y$, the closed nef formula following \cref{thm:gaud-volume-nef-limit} gives
-\[
- \mathcal V_{\mu_Y}(\pi^*B_\theta+\epsilon\Omega_Y)
- =\sum_{k=0}^{R}\binom nk\epsilon^{n-k}
-       \int_Y(\pi^*B_\theta)^k\wedge\Omega_Y^{n-k}.
-\]
-All coefficients are nonnegative and the coefficient for $k=R$ is positive, so this polynomial is bounded above and below by positive multiples of $\epsilon^{n-R}$ for $0<\epsilon\leq1$. The comparison of quotients gives the same bounds for $\pi^*\theta+\epsilon h_Y$. In particular, the order upstairs equals the order downstairs.
+By the proof of \cref{thm:nef-projective-integer-orders}, $cB_\theta\leq\theta\leq CB_\theta$, where $B_\theta$ is closed and semipositive of maximal rank $R(\theta)$. The last assertion of \cref{lem:nef-logarithmic-rank-comparison} applies.
 \end{proof}
 
 \Needspace{13\baselineskip}
@@ -197,11 +155,7 @@ The two orders are equal if and only if, for every factor,
 the second condition concerns only blown-up factors.
 \end{theorem}
 \begin{proof}
-The residual parameters $(a_i-\delta_i,b_i,c_i-\rho_i,d_i)$ are nonnegative, so $\beta$ lies in the fixed cone; in particular it is smooth, semipositive and nef. Also
-\[
- (\theta-\beta)+\ddc\Phi_D=[D]\geq0,
-\]
-which is the positive-current comparison of \cref{prop:nef-positive-current-subtraction}. Apply \cref{thm:nef-projective-integer-orders} to $\theta$ and to $\beta$. If $H_i$ occurs in $\theta$ but not in $\beta$, the rank $R_i$ drops from $m_i$ to $r_i<m_i$ or to zero. If $H_i$ does not occur in $\theta$, then $a_i=b_i=0$, and the range of \cref{lem:nef-projective-effective-divisor-range} together with $a_i\geq\delta_i$ forces $\delta_i=0$ and hence $\rho_i\geq0$; thus $Q_i$ cannot appear in $\beta$ if it was absent from $\theta$. Therefore no rank $R_i$ increases, each difference $R_i(\theta)-R_i(\beta)$ is nonnegative, and the sum vanishes exactly when the generator that determines $R_i(\theta)$ still occurs in $\beta$ for every $i$. This is the stated pair of conditions.
+The residual parameters $(a_i-\delta_i,b_i,c_i-\rho_i,d_i)$ are nonnegative, so $\beta$ lies in the fixed cone; in particular it is smooth, semipositive and nef. Apply \cref{thm:nef-projective-integer-orders} to $\theta$ and to $\beta$. If $H_i$ occurs in $\theta$ but not in $\beta$, the rank $R_i$ drops from $m_i$ to $r_i<m_i$ or to zero. If $H_i$ does not occur in $\theta$, then $a_i=b_i=0$, and the range of \cref{lem:nef-projective-effective-divisor-range} together with $a_i\geq\delta_i$ forces $\delta_i=0$ and hence $\rho_i\geq0$; thus $Q_i$ cannot appear in $\beta$ if it was absent from $\theta$. Therefore no rank $R_i$ increases, each difference $R_i(\theta)-R_i(\beta)$ is nonnegative, and the sum vanishes exactly when the generator that determines $R_i(\theta)$ still occurs in $\beta$ for every $i$. This is the stated pair of conditions.
 \end{proof}
 
 The parameter inequalities guarantee that the residual stays in the fixed cone; they do not describe all divisors whose residual is nef.
@@ -219,4 +173,4 @@ Every residual $\beta_s$ is nef and not closed. Its order equals that of $\theta
 The lower bound $\theta_t\geq\min(t,\min g)\kappa>0$ shows that $\theta_t$ is positive. For $s<t$ the form $H$ occurs in $\beta_s$ and the rank is $m$; at $s=t$ only $Q$ occurs, with rank $r=m-\ell-1$. The order formula gives zero and $m-r=\ell+1$, respectively. The exterior derivative of every residual is $\mathrm dg\wedge Q\ne0$. Finally, let $\ell$ range from zero to $m-2$.
 \end{proof}
 
-At the endpoint $s=t$, the current $t[E]+\beta_t$ in the class of $\theta_t$ has a divisorial part, although the minimal multiplicities of $\theta_t$ vanish because $\theta_t$ is nef, as explained before \cref{cor:nef-boundary-minimal-removal}. The construction uses three hypotheses in an essential way: the coefficient functions are strictly positive, the subtracted divisor keeps the residual in the fixed cone, and, for general modifications, the source manifold is K\"ahler. Without such hypotheses the question in \cref{qu:nef-degeneration-exponent} is open.
+At the endpoint $s=t$, the current $t[E]+\beta_t$ in the class of $\theta_t$ has a divisorial part, although the minimal multiplicities of $\theta_t$ vanish because $\theta_t$ is nef, as explained before \cref{cor:nef-boundary-minimal-removal}.

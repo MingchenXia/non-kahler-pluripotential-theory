@@ -2,21 +2,58 @@
 \section{Exact equations on products with zero lower mass}
 \label{sec:zero-lower-mass-product-equations}
 
-Positive lower mass guarantees solvability for all measures, but an individual density can have a positive threshold and an exact equation even when the lower mass vanishes. We construct explicit examples on products. Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$ with $v_-(h_0)=0$. On its product with a projective space, a potential with a sublogarithmic pole, pulled back from the projective factor, solves an explicit equation whose density is integrable but belongs to no $L^p$ with $p>1$. The coefficient is computed from the normalization scalars of bounded truncations, the equation itself follows from the product structure of the Monge--Amp\`ere measure, and the product background again has zero lower mass.
+Positive lower mass guarantees solvability for all measures, but an individual density can have a positive threshold and an exact equation even when the lower mass vanishes. We construct such examples on products $X_0\times Y$ of a Hermitian manifold with $v_-(h_0)=0$ and a closed K\"ahler factor. On $Y=\mathbb P^k$, a potential with a sublogarithmic pole, pulled back from the projective factor, solves an explicit equation whose density is integrable but belongs to no $L^p$ with $p>1$. The coefficient is computed from the normalization scalars of bounded truncations, the equation follows from the product structure of the Monge--Amp\`ere measure, and the product background again has zero lower mass.
 
-Throughout this section, $Y=\mathbb P^k$ with $k\geq1$, $\kappa$ is the Fubini--Study form normalized by $\int_Y\kappa^k=1$, and $X=X_0\times Y$, a compact complex manifold of dimension $N=m+k$ with the Hermitian background $H=h_0+\kappa$. Forms and functions on the factors are identified with their pullbacks to $X$. Put
+Throughout this section, $(X_0,h_0)$ is a connected compact Hermitian manifold of dimension $m\geq1$, $(Y,\kappa)$ is a connected compact K\"ahler manifold of dimension $k\geq1$ normalized by $\int_Y\kappa^k=1$, and $X=X_0\times Y$, a compact complex manifold of dimension $N=m+k$ with the Hermitian background $H=h_0+\kappa$. Forms and functions on the factors are identified with their pullbacks to $X$. Put
 \[
  V_0=\int_{X_0}h_0^m,\qquad C=\binom Nm,\qquad
  \mu=V_0^{-1}h_0^m\wedge\kappa^k,\qquad R=\frac{\mu}{\mathrm{d}V},
 \]
 where $\mathrm{d}V$ is any smooth positive probability volume form on $X$. Then $\mu$ is a smooth positive probability volume form, and $R$ is smooth and bounded above and below by positive constants. The normalization scalar $c_H$ and the threshold $b_H$ are those of \cref{sec:lower-mass-solvability,sec:individual-density-subsolutions}, now on the $N$-dimensional manifold $X$ with background $H$.
 
-For $0<\alpha<1$ define, on $Y$,
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:split-product-normalization}\index{Normalization scalar!split products}
+\begin{enumerate}
+\item For every $v\in\PSH(Y,\kappa)$,
+\begin{equation}\label{eq:split-product-ma}
+ \mathrm{MA}^{\mathrm{ext}}_H(v)=Ch_0^m\wedge\mathrm{MA}^{\mathrm{ext}}_\kappa(v).
+\end{equation}
+\item For every nonzero nonnegative $g\in L^1(Y,\kappa^k)$, with $M_g=\int_Yg\kappa^k$,
+\[
+ b_H(Rg)=\frac{CV_0}{M_g},
+\]
+and $c_H(Rg)=CV_0/M_g$ if $g$ is bounded.
+\item If $v_-(h_0)=0$, then $v_-(H)=0$ and $H$ is not closed.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Forms and currents of bidegree $(j,j)$ pulled back from $X_0$ vanish for $j>m$, and those pulled back from $Y$ vanish for $j>k$. For bounded $v$, \cref{prop:bounded-products,lem:bounded-products-submersion} and the binomial expansion therefore give $\mathrm{MA}_H(v)=Ch_0^m\wedge\mathrm{MA}_\kappa(v)$. For general $v$, apply this to $\max(v,-j)$, multiply by the pullback of $\mathbf1_{\{v>-j\}}$, and let $j\to\infty$ as in the definition \eqref{eq:extended-ma} of the extended measure.
+
+(2) Suppose first that $g$ is bounded. \Cref{thm:kn-continuous} on $Y$, with reference volume $\kappa^k$, gives a continuous $v\in\PSH(Y,\kappa)$ and $c>0$ with $\mathrm{MA}_\kappa(v)=cg\kappa^k$. Since $\kappa$ is closed, Stokes' theorem gives $\int_Y\mathrm{MA}_\kappa(v)=1$, hence $c=1/M_g$, and (1) gives
+\[
+ \mathrm{MA}_H(v)=\frac{C}{M_g}h_0^m\wedge g\kappa^k
+ =\frac{CV_0}{M_g}Rg\,\mathrm{d}V.
+\]
+Uniqueness of the scalar gives $c_H(Rg)=CV_0/M_g$. For general $g$, write $a=\min_XR$ and $A=\max_XR$. The truncations of $Rg$ that define $b_H(Rg)$ in \eqref{eq:individual-truncated-normalizer} satisfy
+\[
+ R\min(g,j/A)\leq\min(Rg,j)\leq R\min(g,j/a).
+\]
+By the bounded case and the monotonicity of the scalar in \cref{lem:bounded-normalizer-subsolution},
+\[
+ \frac{CV_0}{M_{\min(g,j/a)}}\leq c_H(\min(Rg,j))
+                         \leq\frac{CV_0}{M_{\min(g,j/A)}}.
+\]
+By monotone convergence, both bounds tend to $CV_0/M_g$.
+
+(3) For bounded $w\in\PSH(X_0,h_0)$, the same expansion gives $\mathrm{MA}_H(w)=C\,\mathrm{MA}_{h_0}(w)\wedge\kappa^k$, a measure of mass $C\int_{X_0}\mathrm{MA}_{h_0}(w)$. Pulling back bounded potentials whose masses on $X_0$ tend to zero gives $v_-(H)=0$. If $h_0$ were closed, Stokes' theorem would give every bounded $h_0$-plurisubharmonic function the mass $V_0>0$, contradicting $v_-(h_0)=0$. Hence $h_0$, and therefore $H$, is not closed.
+\end{proof}
+
+Until \cref{subsec:closed-factor-equations}, let $Y=\mathbb P^k$, with $\kappa$ the Fubini--Study form normalized by $\int_Y\kappa^k=1$. For $0<\alpha<1$ define, on $Y$,
 \[
  \psi([z_0:\cdots:z_k])=\log\frac{\sum_{i=1}^k|z_i|^2}{\sum_{i=0}^k|z_i|^2},
  \qquad u_\alpha=1-(1-\psi)^\alpha.
 \]
-The function $\psi$ is smooth on $Y\setminus\{o\}$, where $o=[1:0:\cdots:0]$, and tends to $-\infty$ at $o$; moreover $\psi\leq0$, with equality exactly on the hyperplane $\{z_0=0\}$. Thus $u_\alpha\leq0$, and $u_\alpha$ has a single pole at $o$, where $u_\alpha(o)=-\infty$.
+The function $\psi$ is smooth on $Y\setminus\{o\}$, where $o=[1:0:\cdots:0]$, and tends to $-\infty$ at $o$; moreover $\psi\leq0$, with equality exactly on the hyperplane $\{z_0=0\}$. Thus $u_\alpha\leq0$, and the pole set of $u_\alpha$ is $\{o\}$.
 
 \Needspace{6\baselineskip}
 \begin{lemma}\label{lem:projective-sublogarithmic-density}\index{Monge--Ampere density@Monge--Amp\`ere density!sublogarithmic pole}
@@ -55,63 +92,23 @@ Near $r=0$ the smooth volume is comparable to $r^{k-1}\mathrm{d}r$ in the radial
 \end{proof}
 
 \Needspace{6\baselineskip}
-\begin{lemma}\label{lem:split-product-normalization}\index{Normalization scalar!split products}
-Let $g$ be a strictly positive continuous function on $Y$, and put $M_g=\int_Yg\kappa^k$. Then
-\[
- c_H(Rg)=\frac{CV_0}{M_g}.
-\]
-\end{lemma}
-\begin{proof}
-Suppose first that $g$ is smooth. Since $\kappa$ is K\"ahler, \cref{thm:tw-smooth} on $Y$ gives a smooth $\phi_g$ with $A_g=\kappa+\ddc\phi_g>0$ and $A_g^k=(g/M_g)\kappa^k$; the scalar is determined by integration, since both sides have mass one. On $X$, since $h_0^{m+1}=0$ and $A_g^{k+1}=0$ for dimensional reasons,
-\[
- (H+\ddc\phi_g)^N=C h_0^m\wedge A_g^k
-                    =(CV_0/M_g)Rg\,\mathrm{d}V.
-\]
-Uniqueness of the scalar gives $c_H(Rg)=CV_0/M_g$. For continuous $g>0$, choose smooth $g_l>0$ converging uniformly to $g$. Since $g$ has a positive minimum, $(1-\varepsilon_l)g\leq g_l\leq(1+\varepsilon_l)g$ for some $\varepsilon_l\in(0,1)$ tending to zero. The order and homogeneity of the scalar in \cref{lem:bounded-normalizer-subsolution} give
-\[
- (1-\varepsilon_l)c_H(Rg_l)\leq c_H(Rg)
-                         \leq(1+\varepsilon_l)c_H(Rg_l).
-\]
-Since $M_{g_l}\to M_g$, the smooth case proves the formula.
-\end{proof}
-
-\Needspace{6\baselineskip}
 \begin{theorem}\label{thm:zero-lower-mass-product-equation}\index{Monge--Ampere equation@Monge--Amp\`ere equation!zero lower mass products}
-The Hermitian form $H$ is not closed and satisfies $v_-(H)=0$. For every $0<\alpha<1$, the function $f=Rq_\alpha$ is a probability density in $L^1(\mathrm{d}V)$, belonging to no $L^p(\mathrm{d}V)$ with $p>1$, and
+For every $0<\alpha<1$, the function $f=Rq_\alpha$ is a probability density in $L^1(\mathrm{d}V)$, belonging to no $L^p(\mathrm{d}V)$ with $p>1$, and
 \[
  b_H(f)=CV_0>0,\qquad
  \mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=b_H(f)f\,\mathrm{d}V.
 \]
-The potential $u_\alpha$, pulled back to $X$, has supremum zero and finite mass $CV_0$. It belongs to $\mathcal E_{\mathrm{env}}(X,H,0)$, and $P_{\delta H}(u_\alpha)\not\equiv-\infty$ for every $0<\delta<1$.
+The potential $u_\alpha$, pulled back to $X$, has supremum zero and finite mass $CV_0$. It belongs to $\mathcal E_{\mathrm{env}}(X,H,0)$, and $P_{\delta H}(u_\alpha)\not\equiv-\infty$ for every $0<\delta<1$. If $v_-(h_0)=0$, then $H$ is not closed and $v_-(H)=0$.
 \end{theorem}
 \begin{proof}
-\emph{Step 1: the threshold.} Write $a=\min_XR>0$, $A=\max_XR$, and $M_s=\int_Y\min(q_\alpha,s)\kappa^k$ for $s>0$. By \cref{lem:projective-sublogarithmic-density}, the truncations $\min(q_\alpha,s)$ are continuous and strictly positive, and $M_s\uparrow1$ as $s\to\infty$. The truncations of $f$ satisfy
-\[
- R\min(q_\alpha,j/A)\leq\min(Rq_\alpha,j)
-                         \leq R\min(q_\alpha,j/a).
-\]
-Hence \cref{lem:split-product-normalization} and the monotonicity of the scalar give
-\[
- \frac{CV_0}{M_{j/a}}\leq c_H(\min(f,j))
-                         \leq\frac{CV_0}{M_{j/A}}.
-\]
-Both bounds tend to $CV_0$ as $j\to\infty$, so $b_H(f)=CV_0$, whatever the reference volume $\mathrm{d}V$.
-
-\emph{Step 2: the equation.} For $u_{\alpha,j}=\max(u_\alpha,-j)$, the binomial expansion of bounded local products, with factor forms of degrees $m$ and $k$, gives
-\[
- \mathrm{MA}_H(u_{\alpha,j})
-       =C h_0^m\wedge\mathrm{MA}_\kappa(u_{\alpha,j}).
-\]
-Multiplying by $\mathbf1_{\{u_\alpha>-j\}}$ and letting $j\to\infty$, as in the definition \eqref{eq:extended-ma} of the extended measure, we obtain
+\emph{Step 1: the equation.} By \cref{lem:projective-sublogarithmic-density}, $\int_Xf\,\mathrm{d}V=\int_Xq_\alpha\mu=\int_Yq_\alpha\kappa^k=1$. Part (2) of \cref{lem:split-product-normalization}, with $g=q_\alpha$ and $M_g=1$, gives $b_H(f)=CV_0$, and part (1) gives
 \[
  \mathrm{MA}^{\mathrm{ext}}_H(u_\alpha)=Ch_0^m\wedge q_\alpha\kappa^k
  =CV_0\,q_\alpha\mu=CV_0f\,\mathrm{d}V,
 \]
-a measure of mass $CV_0$. The bounds $a\leq R\leq A$ transfer the integrability properties of $q_\alpha$ to $f$.
+a measure of mass $CV_0$. Since $R$ is bounded above and below by positive constants, $f$ has the integrability properties of $q_\alpha$. The last assertion is part (3) of the lemma.
 
-\emph{Step 3: lower mass and nonclosedness.} Pull back bounded $h_0$-plurisubharmonic functions whose masses on $X_0$ tend to zero. The same expansion shows that their $H$-masses are $C$ times their masses on $X_0$, so $v_-(H)=0$. If $h_0$ were closed, Stokes' theorem would give every bounded $h_0$-plurisubharmonic function the mass $V_0>0$, contradicting $v_-(h_0)=0$. Hence $h_0$, and therefore $H$, is not closed.
-
-\emph{Step 4: the envelopes.} Choose $\alpha<\beta<1$. For $b\geq1$ and $\varepsilon>0$ with $\varepsilon\beta\leq1$, the number
+\emph{Step 2: the envelopes.} Choose $\alpha<\beta<1$. For $b\geq1$ and $\varepsilon>0$ with $\varepsilon\beta\leq1$, the number
 \[
  K_b=\sup_{s\geq1}\{b s^\alpha-\varepsilon s^\beta\}-b
 \]
@@ -130,6 +127,6 @@ Let $X_0$ be the elliptic threefold of \cref{thm:vanishing-lower-mass}, and let 
 \Cref{thm:vanishing-lower-mass} gives $v_-(h_0)=0$, and \cref{prop:lower-mass-balanced-metric} gives $V_0=24\pi$. The product theorem applies with $m=3$, $k=2$ and $C=\binom53=10$.
 \end{proof}
 
-These examples show that an individual density can have a positive threshold and an exact equation even though the background has zero lower mass. The exactness comes from the product structure. For $k\geq2$, the radial flux also identifies the limit of the supremum-normalized exponential solutions as the exponent tends to zero (\cref{thm:radial-integrable-selection}); a first moment of the limiting measure determines whether the solutions shifted by $-\lambda^{-1}\log b_H(f)$ have a finite limit (\cref{prop:radial-scalar-centering}). \Cref{qu:individual-equation-threshold} asks for an exact equation for every integrable density with positive threshold.
+For $k\geq2$, the radial flux on these products also identifies the limit of the supremum-normalized exponential solutions as the exponent tends to zero (\cref{thm:radial-integrable-selection}); a first moment of the limiting measure determines whether the solutions shifted by $-\lambda^{-1}\log b_H(f)$ have a finite limit (\cref{prop:radial-scalar-centering}). \Cref{qu:individual-equation-threshold} asks for an exact equation for every integrable density with positive threshold.
 
 \input{author/subsection_closed_factor_equations}

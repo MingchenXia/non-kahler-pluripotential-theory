@@ -19,9 +19,8 @@ the potentials. In particular the Hessian measure $H_m(u)$, the
 product with every potential equal to $u$, is a positive Radon measure.
 \end{proposition}
 \begin{proof}
-\Cref{hessian:smooth-proper-existence,hessian:continuous-smooth-approximation} provide the smooth approximations without
-using any continuous Hessian product or domination input.
-For a smooth admissible $u$ put $\sigma=\omega+\ddc u$.
+\Cref{hessian:continuous-smooth-approximation} provides the smooth
+approximations. For a smooth admissible $u$ put $\sigma=\omega+\ddc u$.
 Since $\mathrm d\sigma=\mathrm d\omega$, the coefficients of
 $\ddc(\chi\sigma^{r-1}\wedge\omega^{n-r})$ are sums of smooth test
 factors paired with powers $\sigma^q$, $q\leq r-1$, where $\chi$ is a
@@ -96,8 +95,7 @@ and the analogous contact inequalities for all mixed powers.
 
 For a continuous real obstacle $h$, define $P(h)$ to be the supremum of
 continuous admissible functions bounded above by $h$. Constants make the
-family nonempty. The penalty construction also proves that this
-supremum is continuous and its Hessian measure lies on the contact set.
+family nonempty.
 \index{Envelope!continuous Hessian obstacle}
 
 \begin{lemma}\label{hessian:continuous-obstacle-envelope}
@@ -106,9 +104,10 @@ supported on $\{P(h)=h\}$. Moreover
 $\|P(h_1)-P(h_2)\|_\infty\leq\|h_1-h_2\|_\infty$.
 \end{lemma}
 \begin{proof}
-For smooth $h$, use the penalty solutions $w_N$ in \cref{hessian:continuous-smooth-approximation}. The maximum argument there applies to every continuous admissible
-competitor $v\leq h$, with an error depending on $h$ and $N$, and not
-on $v$. Taking the supremum over these competitors gives
+For smooth $h$, let $w_N$ be the penalty solutions of
+\cref{hessian:bounded-penalty-squeeze}. They are competitors, and that
+lemma applies to every competitor with an error depending only on $h$
+and $N$. Taking the supremum over the competitors gives
 \[
  P(h)-E_N-2M_N/N\leq w_N\leq P(h),
 \]
@@ -124,10 +123,6 @@ admissibility. Any compact subset of $\{P(h)<h\}$ also lies outside the
 contact sets of all sufficiently close smooth obstacles; product
 continuity gives the support assertion for $h$.
 \end{proof}
-
-The obstacle also bounds discontinuous competitors. Their upper-test
-admissibility suffices for the penalty estimate, so allowing them does
-not change the continuous envelope of a smooth obstacle.
 
 \begin{proposition}\label{hessian:bounded-envelope}
 For every smooth real obstacle $h$, the envelope $P(h)$ equals the
@@ -149,17 +144,14 @@ The trace test $\gamma_1=\cdots=\gamma_{m-1}=\omega$ in
 \eqref{eq:hessian-continuous-admissibility} gives
 $L_\omega u\geq-n$ in distributions, where
 $L_\omega u=n\ddc u\wedge\omega^{n-1}/\omega^n$.
-We use the classical normalized Green estimate
+For smooth admissible $u$, the Green-kernel argument in the proof of
+\cref{prop:stw-czero-reconstructed}, applied to the operator
+$L_\omega$, gives
 \begin{equation}\label{eq:hessian-normalized-l1}
- \int_X(\sup_Xu-u)\omega^n\leq C_\omega
+ \int_X(\sup_Xu-u)\omega^n\leq C_\omega.
 \end{equation}
-for continuous admissible $u$. By the proof of \cref{thm:gauduchon},
-the stationary probability $\nu$ of $L_\omega$, characterized by
-$\int_XL_\omega f\,\mathrm d\nu=0$ for smooth $f$, has a smooth
-positive density with respect to $\omega^n$. The positive measure
-$(L_\omega u+n)\nu$ therefore has mass $n$, and the Green-kernel
-estimate for $L_\omega$ gives this bound. It is a linear elliptic input,
-and does not assert compactness for a nonlinear Hessian measure.
+By \cref{hessian:continuous-smooth-approximation}, this estimate
+extends to every continuous admissible $u$.
 
 To use envelopes in domination, we must first exclude a potential with
 zero total Hessian mass.
@@ -168,14 +160,12 @@ zero total Hessian mass.
 Every continuous admissible $u$ satisfies $\int_X H_m(u)>0$.
 \end{lemma}
 \begin{proof}
-Suppose this integral is zero. For $s>0$ put
+Suppose this integral is zero, so that $H_m(u)=0$. For $s>0$ put
 $w=\max(u,\min_Xu+s)$ and $U=\{u<\min_Xu+s\}$.
 The open set $U$ is nonempty, $0\leq w-u\leq s$, and $w=u$ outside it.
 Set $\sigma_u=\omega+\ddc u$, $\sigma_w=\omega+\ddc w$, and
-$\mu_q=\sigma_u^q\wedge\sigma_w^{m-q}\wedge\omega^{n-m}$.
-Since $X\setminus U=\{u=w\}$, \cref{hessian:contact-comparison} gives $\mathbf1_{X\setminus U}\mu_q\geq
-\mathbf1_{X\setminus U}\mu_m$, for $0\leq q\leq m$.
-For $q<m$ the telescoping identity is
+$\mu_q=\sigma_u^q\wedge\sigma_w^{m-q}\wedge\omega^{n-m}$, so that
+$\mu_m=H_m(u)=0$. For $q<m$ the telescoping identity is
 \[
  \mu_q-\mu_m=\ddc(w-u)\wedge T_q,\qquad
  T_q=\sigma_u^q\wedge
@@ -184,8 +174,7 @@ For $q<m$ the telescoping identity is
 \]
 Integration by parts on $X$ therefore gives
 \[
- \int_U(\mu_q-\mu_m)\leq\int_X(\mu_q-\mu_m)
-                                =\int_X(w-u)\ddc T_q.
+ \int_X\mu_q=\int_X(w-u)\ddc T_q.
 \]
 This identity follows first for smooth approximants and then by uniform
 product continuity. The derivatives of $T_q$ contain only fixed metric
@@ -197,14 +186,14 @@ On $U$, locality gives $\sigma_w=\omega$ and thus
  |\ddc T_q|\leq C\sum_{r=0}^{m-1}\mu_r.
 \]
 The constant depends only on the metric and $m,n$, and not on $u$ or $s$.
-Since $0\leq w-u\leq s$ and $w-u$ vanishes outside $U$, summing over
-$q$ gives
+Since $0\leq w-u\leq s$ and $w-u$ vanishes outside $U$,
 \[
- \sum_{q=0}^m\int_U\mu_q
- \leq(m+1)\int_U H_m(u)+Cms\sum_{r=0}^{m-1}\int_U\mu_r.
+ \int_U\mu_q\leq\int_X\mu_q\leq Cs\sum_{r=0}^{m-1}\int_U\mu_r
+ \qquad(0\leq q<m).
 \]
-For sufficiently small $s$, absorption and $H_m(u)=0$ force all these
-nonnegative integrals to vanish. But $\mu_0=\omega^n$ on the nonempty
+Summing over $q<m$ gives
+$(1-mCs)\sum_{r=0}^{m-1}\int_U\mu_r\leq0$. For $mCs<1$ these
+nonnegative integrals vanish. But $\mu_0=\omega^n$ on the nonempty
 open set $U$, a contradiction.
 \end{proof}
 

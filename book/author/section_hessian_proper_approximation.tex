@@ -70,15 +70,17 @@ equation.
 \end{proof}
 
 An ordinary smooth approximation need not be admissible. To obtain an
-admissible one, choose a smooth obstacle above the continuous potential
-and penalize the solution's distance from that obstacle.
+admissible one, choose a smooth obstacle above the potential and
+penalize the solution's distance from that obstacle.
 
 \begin{lemma}\label{hessian:continuous-smooth-approximation}
 Every continuous admissible $\varphi$ on $X$ is the uniform limit of
 smooth strictly admissible functions.
 \end{lemma}
 \begin{proof}
-Fix a smooth $h\geq\varphi$ and a constant
+Continuous admissible functions are bounded admissible
+(\cref{sec:hessian-cone}). Let $u$ be bounded admissible, fix a smooth
+$h\geq u$ and a constant
 \[
  b>\max\left\{1,\left\|H_m(h)/\omega^n\right\|_\infty\right\}.
 \]
@@ -98,44 +100,39 @@ also gives
  \|w_N\|_\infty\leq M_N:=\|h\|_\infty+\frac{\log b}{N}.
 \]
 
-Let $x_N$ maximize $\varphi-(1+N^{-1})w_N$.
-The smooth positive form
-$T_N=(\omega+\ddc w_N)^{m-1}\wedge\omega^{n-m}$
-defines a strictly elliptic linear operator. Admissibility gives
-$(\omega+\ddc\varphi)\wedge T_N\geq0$ in distributions.
-Its linear maximum principle, applied to the upper test
-$(1+N^{-1})w_N$ plus the maximum value, gives at $x_N$
+The upper semicontinuous function $u-(1+N^{-1})w_N$ attains its
+maximum at some $x_N$, and $(1+N^{-1})w_N$ plus this maximum is an
+upper test for $u$ there. Put
 \[
- 0\leq\bigl(\omega+(1+N^{-1})\ddc w_N\bigr)\wedge T_N.
+ T_N=(\omega+\ddc w_N)^{m-1}\wedge\omega^{n-m},
+ \qquad d_N=H_m(w_N)/\omega^n.
 \]
-This application is to a continuous distributional subsolution of a
-smooth strictly elliptic operator. It does not assume a second derivative
-of $\varphi$. Write $d_N=H_m(w_N)/\omega^n$. The identity
+At $x_N$, condition \eqref{eq:hessian-bounded-upper-tests} puts
 $\omega+(1+N^{-1})\ddc w_N=(1+N^{-1})(\omega+\ddc w_N)-N^{-1}\omega$
-gives the first inequality below. The middle term is $\sigma_{m-1}$
-of the eigenvalues of $\omega+\ddc w_N$, so Maclaurin's inequality
-$\sigma_{m-1}\geq\sigma_m^{(m-1)/m}$ gives the second:
+in the closed cone. Its wedge product with $T_N$ is therefore
+nonnegative, by polarized G\aa rding positivity; this is the first
+inequality below. Maclaurin's inequality
+$\sigma_{m-1}\geq\sigma_m^{(m-1)/m}$ for $\omega+\ddc w_N$ gives the
+second:
 \[
- (N+1)d_N\geq \omega\wedge T_N/\omega^n
-                         \geq d_N^{(m-1)/m}.
+ (N+1)d_N\geq\omega\wedge T_N/\omega^n
+                           \geq d_N^{(m-1)/m}.
 \]
-Therefore $d_N\geq(N+1)^{-m}$. Since $d_N=be^{N(w_N-h)}$, at this
-maximum point
+Therefore $d_N\geq(N+1)^{-m}$. Since $d_N=be^{N(w_N-h)}$, at $x_N$
 \[
  w_N-h\geq-E_N,\qquad
  E_N=\frac{m\log(N+1)+\log b}{N}.
 \]
-Since $\varphi\leq h$, the maximum of
-$\varphi-(1+N^{-1})w_N$ is at most $E_N+M_N/N$.
-It follows on all of $X$ that
-\[
- \varphi-E_N-2M_N/N\leq w_N\leq h.
-\]
-Given $\delta>0$, choose the smooth majorant $h$ above with
-$\varphi\leq h\leq\varphi+\delta$, and then $N$ so large that
+Since $u\leq h$, the maximum of $u-(1+N^{-1})w_N$ is at most
+$E_N+M_N/N$. It follows on all of $X$ that
+\begin{equation}\label{eq:hessian-penalty-squeeze}
+ u-E_N-2M_N/N\leq w_N\leq h.
+\end{equation}
+
+Given $\delta>0$, apply this to $u=\varphi$ and a smooth $h$ with
+$\varphi\leq h\leq\varphi+\delta$, and choose $N$ so large that
 $E_N+2M_N/N\leq\delta$. The resulting $w_N$ is strictly admissible
 and within $\delta$ of $\varphi$. Let $\delta\downarrow0$.
-No monotonicity of the chosen approximants is needed.
 \end{proof}
 
 \input{author/section_hessian_bounded_approximation}

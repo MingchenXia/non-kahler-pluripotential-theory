@@ -16,25 +16,12 @@ $|\lambda_i|<S\leq n\lambda_1$.
 
 We shall estimate equations whose density involves another admissible
 potential $v$. In an approximation argument the derivatives of $v$ may
-diverge. The logarithmic weight below absorbs these derivatives using
-only uniform closeness to one fixed smooth comparison function.
-
-\begin{lemma}\label{hessian:hessian-gradient-absorption}
-For $\epsilon>0$, let $\chi(t)=-(1/12)\log(2\epsilon-t)$ on $|t|\leq\epsilon$. Suppose $q=\chi'(t)\geq8$. For any $a,b\in\mathbb C$,
-\[
- \chi''(t)|a-b|^2-(9q^2+2q)|a|^2-q|a|
-       \geq q^2|a|^2-1-84q^2|b|^2.
-\]
-In particular, let $v,\widetilde\varphi$ be smooth real functions with $|v-\widetilde\varphi|\leq\epsilon$, and take derivatives in an $\omega$-unitary frame. For a positive diagonal linearized operator with coefficients $B_p$, set $t=v-\widetilde\varphi$, $a=v_p$ and $b=\widetilde\varphi_p$, multiply by $B_p$ and sum. The result is at least $q^2\sum_pB_p|v_p|^2$, up to an error bounded by
-$(1+84q^2\sup|\partial\widetilde\varphi|_\omega^2)\sum_pB_p$.
-The condition $q\geq8$ holds throughout this interval if $\epsilon\leq1/288$.
-\end{lemma}
-\begin{proof}
-Young's inequality gives $|a-b|^2\geq(7/8)|a|^2-7|b|^2$. Since $\chi''=12q^2$, the coefficient of $|a|^2$ after subtracting $9q^2$ is $3q^2/2$. Moreover, $2q\leq q^2/4$ and $q|a|\leq q^2|a|^2/4+1$. The remaining coefficient is at least $q^2$, and the error involving $b$ is $84q^2|b|^2$. Finally $q\geq1/(36\epsilon)$, which proves the last assertion. The weighted version follows by summing the scalar inequality with positive coefficients.
-\end{proof}
+diverge. A logarithmic weight $\chi$ with $\chi''=12(\chi')^2$ absorbs
+these derivatives using only uniform closeness to one fixed smooth
+comparison function; in the next lemma $q$ stands for $\chi'$.
 
 \Needspace{18\baselineskip}
-\begin{lemma}\label{hessian:fixed-comparison-absorption}
+\begin{lemma}\label{hessian:fixed-comparison-absorption}\label{hessian:hessian-gradient-absorption}
 Suppose $f\geq f_0>0$, $C_H,C_G\geq0$, and $q$ satisfies
 \[
  q\geq8,\qquad q\geq\frac{2nm!C_H}{f_0},\qquad
@@ -54,13 +41,12 @@ Then
 \]
 \end{lemma}
 \begin{proof}
-The proof of \cref{hessian:hessian-gradient-absorption} uses only
-$q\geq8$ and $\chi''=12q^2$. It therefore gives
+Young's inequality gives $|a_i-b_i|^2\geq(7/8)|a_i|^2-7|b_i|^2$, so $12q^2|a_i-b_i|^2-9q^2|a_i|^2\geq(3/2)q^2|a_i|^2-84q^2|b_i|^2$. Since $q\geq8$, one has $2q\leq q^2/4$, and $q|a_i|\leq q^2|a_i|^2/4+1$. Hence
 \[
  12q^2|a_i-b_i|^2-(9q^2+2q)|a_i|^2-q|a_i|
  \geq q^2|a_i|^2-1-84q^2|b_i|^2.
 \]
-Subtracting $rq^2|a_i|^2$ leaves at least $q^2|a_i|^2/2$. Since $S\leq n\lambda_1$, \cref{hessian:weighted-cone-trace} and the hypothesis on $q$ imply
+Subtracting $rq^2|a_i|^2$, with $r\leq1/2$, leaves $q^2|a_i|^2/2$ in place of $q^2|a_i|^2$. Since $S\leq n\lambda_1$, \cref{hessian:weighted-cone-trace} and the hypothesis on $q$ imply
 \[
  \frac{C_H}{\lambda_1}|M_{1\bar1}|
  \leq\frac{nC_H}{S}\operatorname{tr}M\leq\frac q2 W_M.
@@ -70,14 +56,14 @@ The lower bound for each $F_i$ similarly gives
  \frac{C_G}{S}\sum_i|a_i|^2
              \leq\frac{q^2}{4}\sum_iF_i|a_i|^2.
 \]
-Combining these inequalities yields the assertion. The error depends on the fixed comparison vector $b$ and is not discarded.
+Combining these inequalities yields the assertion.
 \end{proof}
 
 The two cases for the smallest eigenvalue
 will reduce to the following numerical estimate.
 
 \begin{proposition}\label{hessian:conditional-maximal-eigenvalue-bound}
-Fix $a>0$, $b,d,e\geq0$ and $0<\delta<1$. Let $K\geq1$, and let $\lambda\in\Gamma_m$ be ordered decreasingly, with $0<f_0\leq f\leq f_1$. Suppose the following inequality holds according to the sign of $\lambda_n+\delta\lambda_1$:
+Fix $a,\delta>0$ and $b,d,e\geq0$. Let $K\geq1$, and let $\lambda\in\Gamma_m$ be ordered decreasingly, with $0<f_0\leq f\leq f_1$. Suppose the following inequality holds according to the sign of $\lambda_n+\delta\lambda_1$:
 \begin{enumerate}
 \item If $\lambda_n<-\delta\lambda_1$, then $0\geq aQ/K-bK\mathcal F-d\lambda_1\mathcal F-e$.
 \item If $\lambda_n\geq-\delta\lambda_1$, then $0\geq aQ/K-bKF_1-e$.
@@ -92,8 +78,6 @@ In the second case, since $Q\geq F_1\lambda_1^2$, either $\lambda_1^2\leq2bK^2/a
 The geometric computation uses a lower support for the largest
 eigenvalue, as in the second-order argument for the Gauduchon equation
 in \cref{sec:stw-second-order-proof}.
-The perturbation affects only this support; derivatives of $F$ remain
-evaluated at the original matrix $W$.
 
 \Needspace{15\baselineskip}
 \begin{lemma}\label{hessian:hermitian-eigenvalue-inequality}
@@ -109,10 +93,10 @@ where
  N=-\frac{D^2F_W(\nabla_1W,\nabla_{\bar1}W)}{\lambda_1},
  \qquad Z_i=\frac{H_{i\bar1;1}}{\lambda_1}.
 \]
-Here $C$ depends only on the fixed metric. Derivatives of $F$ are evaluated at $W$.
+Here $C$ depends only on the fixed metric, and the derivatives of $F$ are evaluated at $W$.
 \end{lemma}
 \begin{proof}
-Choose a smooth unitary frame parallel for the Chern connection at the point and diagonalizing $H$ there. The positive semidefinite tensor $B$, diagonal in this frame with entries $0,\beta,\ldots,\beta$, satisfies $\nabla B=0$ at the point and $|\nabla^2B|\leq C\beta$. For $0<\beta<1$, the largest eigenvalue of $W-B$ is simple, lies below that of $W$, and agrees with it at the point. This gives the required smooth support $\widetilde\lambda$. The perturbation enters only through $\widetilde\lambda$; the equation still uses $F(W)$.
+Choose a smooth unitary frame parallel for the Chern connection at the point and diagonalizing $H$ there. The positive semidefinite tensor $B$, diagonal in this frame with entries $0,\beta,\ldots,\beta$, satisfies $\nabla B=0$ at the point and $|\nabla^2B|\leq C\beta$. For $0<\beta<1$, the largest eigenvalue of $W-B$ is simple, lies below that of $W$, and agrees with it at the point. This gives the required smooth support $\widetilde\lambda$.
 Differentiating the normalized eigenvector equation gives
 \[
  \widetilde\lambda_{;k}=H_{1\bar1;k},\qquad
@@ -178,14 +162,14 @@ and sum over $i$. This gives the asserted bound.
 
 \Needspace{19\baselineskip}
 \begin{proposition}\label{hessian:prescribed-potential-trace}
-Fix $M,B\geq1$ and a smooth real $h(x,t)$ on a neighborhood of
+Fix $M,B>0$ and a smooth real $h(x,t)$ on a neighborhood of
 $X\times[-B-1,B+1]$. There is $0<\varepsilon\leq1$, depending only on
 $M,B,h,\omega,n,m$, with the following property. For every smooth real
 $\varphi$ with $\|\varphi\|_\infty\leq B$, there is $C<\infty$, depending
-also on its $C^2$ norm, such that if smooth real $u,v$ satisfy
+only on these data and on $\|\varphi\|_{C^2}$, such that if a smooth
+strictly admissible $u$ and a smooth admissible $v$ satisfy
 \begin{gather*}
- \lambda\in\Gamma_m,\qquad I+v_{i\bar j}\in C_{n,m},\\
- \|u\|_\infty\leq M,\qquad\|v-\varphi\|_\infty\leq\varepsilon,\\
+ \|u\|_\infty\leq M,\qquad\|v-\varphi\|_\infty\leq\varepsilon,\qquad
  F(W)=\exp\bigl((u+h(x,v))/m\bigr),
 \end{gather*}
 then
@@ -193,7 +177,6 @@ then
  \operatorname{tr}_\omega(\omega+\ddc u)
                   \leq C\bigl(1+\sup_X|\partial u|_g^2\bigr).
 \]
-The cone condition on $v$ is understood in a unitary frame. The tolerance $\varepsilon$ uses no derivatives of $\varphi$; the constant $C$ uses no derivatives of $v$.
 \end{proposition}
 \begin{proof}
 For $\varepsilon\leq1$ the root $f=F(W)$ of the density has fixed bounds $0<f_0\leq f\leq f_1$. Its first derivative is
@@ -263,7 +246,7 @@ Now suppose $\lambda_n\geq-\delta\lambda_1$, and let $I=\{i:F_i>\delta^{-1}F_1\}
        \geq\frac{(1-\delta)F_i}{(1+\delta)\lambda_1}
        \geq\frac{(1-2\delta)F_i}{\lambda_1}.
 \]
-The spectral formula for $D^2F$, including its nonpositive diagonal part, therefore gives $N\geq(1-2\delta)\sum_{i\in I}F_i|Z_i|^2$. This uses the original eigenvalues; since $\lambda_i<\lambda_1$ for $i\in I$, the difference quotients used here do not degenerate.
+The spectral formula for $D^2F$ at the original eigenvalues, including its nonpositive diagonal part, therefore gives $N\geq(1-2\delta)\sum_{i\in I}F_i|Z_i|^2$; the difference quotients used here do not degenerate, since $\lambda_i<\lambda_1$ for $i\in I$.
 Using $x_i=-Z_i-y_i-qa_i+e_i$ and $|z+w|^2\geq\delta|z|^2-\delta|w|^2/(1-\delta)$, one obtains
 \begin{align*}
  N-\sum_{i\in I}F_i|Z_i|^2+2\sum_{i\in I}F_i|x_i|^2

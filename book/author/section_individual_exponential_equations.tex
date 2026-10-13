@@ -6,7 +6,19 @@ We return to the Hermitian background $h$ and a fixed nonzero density $0\leq f\i
  \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V,
  \qquad u\in\PSH(X,h).
 \end{equation}
-A \emph{solution} is a function $u\in\PSH(X,h)$ satisfying \eqref{eq:individual-exponential-equation}, and an \emph{exponential subsolution} at exponent $\lambda$ is a function $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$. For the truncations $f_k=\min(f,k)$, \cref{thm:nguyen-exp} gives continuous solutions $u_k$ of the truncated equations, and these decrease as $k$ increases. Strict domination shows that every exponential subsolution is a common lower bound for the $u_k$. Hence, as soon as one subsolution exists, the decreasing limit is not identically $-\infty$, and \cref{thm:exponential-closedness} shows that it solves \eqref{eq:individual-exponential-equation}; it is the greatest subsolution. A positive threshold $b_h(f)$ provides exponential subsolutions for every exponent, and the normalized greatest solutions then recover $b_h(f)$ as $\lambda\downarrow0$.
+An \emph{exponential subsolution} at exponent $\lambda$ is a function $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$. Bounded solutions of the truncated equations dominate every exponential subsolution, so as soon as one subsolution exists, their decreasing limit is the greatest solution. A positive threshold $b_h(f)$ provides exponential subsolutions for every exponent, and the normalized greatest solutions then recover $b_h(f)$ as $\lambda\downarrow0$. The domination comes from the following consequence of strict domination, which we state for an arbitrary measure.
+
+\begin{lemma}\label{lem:bounded-exponential-supersolution}
+Let $\lambda>0$ and let $\nu$ be a positive Borel measure on $X$. If $t\in\PSH(X,h)$ is bounded and $\mathrm{MA}_h(t)\leq\mathrm e^{\lambda t}\nu$, then every $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm e^{\lambda s}\nu$ satisfies $s\leq t$.
+\end{lemma}
+\begin{proof}
+Let $\epsilon>0$. On the set $\{t<s-\epsilon\}$,
+\[
+ \mathrm{MA}_h(t)\leq\mathrm e^{\lambda(s-\epsilon)}\nu
+ \leq\mathrm e^{-\lambda\epsilon}\mathrm{MA}^{\mathrm{ext}}_h(s-\epsilon).
+\]
+Since $t$ is bounded, $P_{h/2}(t)\geq\inf_Xt$ is not identically $-\infty$, and $s-\epsilon\preceq t$. \Cref{thm:singular-strict-domination}, applied with $\delta=1/2$ and $c=\mathrm e^{-\lambda\epsilon}$, therefore gives $t\geq s-\epsilon$. Letting $\epsilon\downarrow0$ gives $s\leq t$.
+\end{proof}
 
 \begin{theorem}\label{thm:individual-exponential-subsolution}\index{Monge--Ampere equation@Monge--Amp\`ere equation!greatest exponential solution}
 Fix $\lambda>0$, and suppose that \eqref{eq:individual-exponential-equation} has an exponential subsolution $s\in\PSH(X,h)$. For $k\geq1$, let $u_k$ be the continuous solution of
@@ -17,17 +29,9 @@ Fix $\lambda>0$, and suppose that \eqref{eq:individual-exponential-equation} has
 given by \cref{thm:nguyen-exp}. Then $u_k$ decreases to a solution $u_\lambda$ of \eqref{eq:individual-exponential-equation}, and $\mathrm{MA}^{\mathrm{ext}}_h(u_\lambda)$ has finite mass. Moreover, $u_\lambda$ is the greatest exponential subsolution: every exponential subsolution $v$ at exponent $\lambda$ satisfies $v\leq u_\lambda$. In particular, $u_\lambda$ is the greatest solution of \eqref{eq:individual-exponential-equation}.
 \end{theorem}
 \begin{proof}
-Since $f_k\leq f_{k+1}$, \cref{lem:exp-order} gives $u_{k+1}\leq u_k$.
+Since $f_k\leq f_{k+1}$, \cref{lem:exp-order} gives $u_{k+1}\leq u_k$. Since $\mathrm{MA}_h(u_k)=\mathrm{e}^{\lambda u_k}f_k\,\mathrm{d}V\leq\mathrm{e}^{\lambda u_k}f\,\mathrm{d}V$, \cref{lem:bounded-exponential-supersolution}, with $\nu=f\,\mathrm{d}V$, shows that every exponential subsolution $v$ satisfies $v\leq u_k$ for every $k$.
 
-We first show that every exponential subsolution $v$ lies below each $u_k$. Let $t>0$. On the set $\{u_k<v-t\}$,
-\[
- \mathrm{MA}_h(u_k)=\mathrm{e}^{\lambda u_k}f_k\,\mathrm{d}V
- \leq\mathrm{e}^{-\lambda t}\mathrm{e}^{\lambda v}f\,\mathrm{d}V
- \leq\mathrm{e}^{-\lambda t}\mathrm{MA}^{\mathrm{ext}}_h(v-t).
-\]
-Since $u_k$ is bounded, $P_{h/2}(u_k)\geq\inf_Xu_k$ is not identically $-\infty$, and $v-t\preceq u_k$. Strict domination, \cref{thm:singular-strict-domination}, therefore gives $u_k\geq v-t$. Letting $t\downarrow0$ gives $u_k\geq v$.
-
-In particular $s\leq u_k\leq u_1$ for every $k$, so the decreasing limit $u_\lambda\geq s$ is not identically $-\infty$ and belongs to $\PSH(X,h)$. By \cref{lem:monotone-psh-capacity}, $u_k\to u_\lambda$ in capacity. Choose a constant $A\geq\sup_Xu_1$. The nonpositive functions $u_k-A$ satisfy
+In particular $s\leq u_k\leq u_1$ for every $k$, so the decreasing limit $u_\lambda\geq s$ is not identically $-\infty$ and belongs to $\PSH(X,h)$. By \cref{lem:monotone-psh-capacity}, $u_k\to u_\lambda$ in capacity. Put $A=\sup_Xu_1$. The nonpositive functions $u_k-A$ satisfy
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(u_k-A)=\mathrm{e}^{\lambda(u_k-A)}\,\mathrm{e}^{\lambda A}f_k\,\mathrm{d}V,
 \]
@@ -192,12 +196,7 @@ Uniqueness of the scalar gives $c_H(f_j)=C c_{h_0}(F_j)\leq2^{-2j}$.
 \[
  F=f/R=\sum_jw_jF_jg_j=E+\sum_jw_j(1-\varepsilon_j)F_j\beta_j.
 \]
-The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact subset of $Y\setminus\{o\}$; hence $F$, and therefore $f$, is smooth off the pole fiber. On the pole fiber all bumps vanish and $F=E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. If $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq af\,\mathrm{d}V$ with $a>0$, then $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq aw_jf_j\,\mathrm{d}V$, and \cref{lem:bounded-normalizer-subsolution} gives
-\[
- aw_j\leq c_H(f_j)\leq2^{-2j},\quad\text{that is,}\quad a\leq2^{-j},
- \quad\text{for every }j.
-\]
-This is impossible, so $b_H(f)=0$ by \cref{thm:individual-density-subsolution}.
+The annuli are disjoint and escape to the pole, so only finitely many bumps meet any compact subset of $Y\setminus\{o\}$; hence $F$, and therefore $f$, is smooth off the pole fiber. On the pole fiber all bumps vanish and $F=E$, so $f$ is finite everywhere. Also $f\geq w_1f_1\geq\frac12\min_Xf_1>0$. Since $f\geq w_jf_j$ and $c_H(f_j)\leq2^{-2j}=w_j^2$ for every $j$, the argument in the proof of \cref{thm:lower-mass-obstructing-measure} shows that no $u\in\PSH(X,H)$ and $a>0$ satisfy $\mathrm{MA}^{\mathrm{ext}}_H(u)\geq af\,\mathrm{d}V$. Hence $b_H(f)=0$ by \cref{thm:individual-density-subsolution}.
 
 \emph{Step 5: exponential subsolutions.} Fix $\lambda>0$, and choose $J$ with $1/j\leq\lambda$ for $j\geq J$. Since $L^\alpha-1\geq0$, we have $B_{1/j}\leq B_\lambda$ for these $j$. As the bumps have disjoint supports, Step 2 bounds their total contribution $\sum_{j\geq J}w_j(1-\varepsilon_j)F_j\beta_j$ by $B_\lambda/2$. The baseline satisfies $E\leq b_0/4\leq B_\lambda/4$, because $B_\lambda\geq q_\alpha\geq b_0$. The remaining finitely many bumps are bounded by the constant
 \[
@@ -208,7 +207,7 @@ and $K_\lambda\leq(K_\lambda/b_0)B_\lambda$. Hence $F\leq A_\lambda B_\lambda$ w
 
 The density just constructed also satisfies the criterion in part (2) of \cref{thm:product-zero-threshold-exponential-criterion}: on the $j$th annulus, $F/q_\alpha\leq1/4+\frac12\mathrm e^{(L^\alpha-1)/j}$, and away from all annuli the ratio is at most $1/4$. Approaching the pole through the annuli forces $j\to\infty$, so the required limit is zero. Since $b_H(f)=0$, \cref{prop:individual-normalizer-lp} also shows that $f$ belongs to no $L^p$ with $p>1$.
 
-Densities $F_j$ as in the theorem exist whenever $v_-(h_0)=0$, by \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula}. For instance, on the elliptic threefold, \cref{thm:vanishing-lower-mass} gives smooth functions $v_\ell$ with $h_0+\ddc v_\ell>0$ and masses $\delta_\ell=\int_{X_0}(h_0+\ddc v_\ell)^3\to0$. The probability densities $F_\ell=(h_0+\ddc v_\ell)^3/(\delta_\ell\,\mathrm dV_0)$ satisfy $c_{h_0}(F_\ell)=\delta_\ell$ by uniqueness of the scalar, and a subsequence with $\delta_{\ell_j}\leq2^{-2j}/C$ gives the required densities. Thus the construction applies to this threefold times $\mathbb P^k$ for every $k\geq1$. With the balanced metric of \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $CV_0$, equal to $96\pi$ on the fourfold ($k=1$) and $240\pi$ on the fivefold ($k=2$). These values concern the subsolutions; the greatest solutions have their own finite positive masses.
+Densities $F_j$ as in the theorem exist whenever $v_-(h_0)=0$, by \cref{thm:gaud-volume-mass-extrema,thm:gaud-volume-dual-formula}. By \cref{thm:vanishing-lower-mass}, this holds on the elliptic threefold, so the construction applies to this threefold times $\mathbb P^k$ for every $k\geq1$. With the balanced metric of \cref{prop:lower-mass-balanced-metric}, $V_0=24\pi$, so the explicit subsolutions have mass $CV_0$, equal to $96\pi$ on the fourfold ($k=1$) and $240\pi$ on the fivefold ($k=2$). These values concern the subsolutions; the greatest solutions have their own finite positive masses.
 
 In this construction the projective components $g_j$ are chosen after the densities $F_j$, to fit them. We do not know whether the exponential equation is solvable for every prescribed concentration family of this kind, and we have no necessary criterion for solvability at zero threshold.
 
@@ -279,14 +278,7 @@ Set $q=\min(f,1)$, a nonzero bounded density. By \cref{thm:nguyen-exp}, there is
  \mathrm{MA}_h(t_\tau)=\mathrm e^{\tau w}q\,\mathrm dV
        \leq\mathrm e^{\lambda t_\tau}f\,\mathrm dV.
 \]
-Let $u$ be an exponential subsolution at an exponent $\lambda\geq\tau$, and let $\epsilon>0$. On $\{t_\tau<u-\epsilon\}$,
-\[
- \mathrm{MA}_h(t_\tau)
-       \leq\mathrm e^{\lambda(u-\epsilon)}f\,\mathrm dV
-       \leq\mathrm e^{-\lambda\epsilon}
-                  \mathrm{MA}^{\mathrm{ext}}_h(u-\epsilon).
-\]
-The bounded function $t_\tau$ satisfies $P_{h/2}(t_\tau)\not\equiv-\infty$, and $u-\epsilon\preceq t_\tau$. Thus \cref{thm:singular-strict-domination} gives $t_\tau\geq u-\epsilon$, and letting $\epsilon\downarrow0$ gives $t_\tau\geq u$.
+\Cref{lem:bounded-exponential-supersolution}, with $\nu=f\,\mathrm dV$, therefore shows that every exponential subsolution at an exponent $\lambda\geq\tau$ lies below $t_\tau$.
 
 For the order estimate, put $\delta=K_\tau(\lambda_2-\lambda_1)/\lambda_2$. By the first part, $U_{\lambda_1}\leq t_\tau\leq K_\tau$, so $(\lambda_2-\lambda_1)U_{\lambda_1}\leq\lambda_2\delta$, that is, $\lambda_1U_{\lambda_1}\geq\lambda_2(U_{\lambda_1}-\delta)$. Since the Monge--Amp\`ere measure is unchanged by adding constants,
 \begin{align*}

@@ -11,7 +11,7 @@ measurable factors will be identified with currents by convolution.
 \begin{lemma}\label{hessian:complex-hessian-compactness}
 Suppose $u_j$ is smooth,
 \[
- \sup_j\bigl(\|u_j\|_\infty+\|\ddc u_j\|_{L^\infty}\bigr)<\infty,
+ \sup_j\|\ddc u_j\|_{L^\infty}<\infty,
  \qquad u_j\longrightarrow u\quad\text{uniformly on }X.
 \]
 Then $u\in W^{2,p}(X)$ for every $1<p<\infty$, its distributional complex
@@ -20,7 +20,8 @@ for every $0<\alpha<1$. The same hypotheses give uniform $W^{2,p}$ bounds
 for the sequence.
 \end{lemma}
 \begin{proof}
-On a coordinate ball the Euclidean Laplacian is
+The uniform convergence makes the $u_j$ uniformly bounded. On a
+coordinate ball the Euclidean Laplacian is
 $\Delta u_j=4\sum_i (u_j)_{i\bar i}$, so it is uniformly bounded.
 The interior Laplace estimate on two nested balls gives
 \[
@@ -33,8 +34,6 @@ limits in $L^\infty$; testing against compactly supported smooth functions
 identifies them with $H(u)$. Choose $p$ with $1-2n/p>\alpha$.
 The compact Sobolev embedding into $C^{1,\alpha}$ gives convergence of
 subsequences. Every such limit is $u$, hence the whole sequence converges.
-This estimates the full real Hessian in every finite $L^p$ space, without
-asserting that it is bounded.
 \end{proof}
 
 \begin{lemma}\label{hessian:complex-hessian-products}
@@ -47,8 +46,7 @@ the hypotheses of \cref{hessian:complex-hessian-compactness}. Let $\theta_a$ be 
        \quad\text{as currents}.
 \]
 The current on the right is the product of the almost-everywhere
-coefficients. No closedness or positivity of the $\theta_a$ is required.
-For each smooth test form $\eta$ of bidegree $(n-k,n-k)$, the
+coefficients. For each smooth test form $\eta$ of bidegree $(n-k,n-k)$, the
 difference of the pairings with $\eta$ is bounded by
 $C_\eta\max_a\|u_j^a-u^a\|_\infty$.
 \end{lemma}
@@ -76,9 +74,7 @@ coefficient products, justifies integration by parts:
 Here $\xi$ includes the chosen smooth background factors and the test
 form, so their derivatives are retained. The right-hand side has the
 asserted uniform bound. A finite partition of unity proves the claim on
-$X$. This argument also proves that the coefficient product is the
-distributional limit; it does not identify a separately defined bounded
-Hessian operator for all nonsmooth admissible functions.
+$X$.
 \end{proof}
 
 \Needspace{22\baselineskip}
@@ -106,11 +102,8 @@ is concave, agrees with $F$ on $K$, and satisfies, for $P\geq0$,
 \]
 \end{lemma}
 \begin{proof}
-Since $m\geq2$, $C_{n,m}\subset C_{n,2}$, so
-\[
- \sum_i\lambda_i^2=(\operatorname{tr}A)^2-2S_2(A)
-                          \leq L^2.
-\]
+Since $m\geq2$, the eigenvalues of $A\in C_{n,m}$ have modulus at most
+$\operatorname{tr}A$, by the proof of \cref{hessian:weighted-cone-trace}.
 Thus $K$ is bounded and closed. Maclaurin gives
 $\sigma_j(A)\geq\sigma_m(A)^{j/m}\geq f_0^j$ for $j\leq m$,
 so every matrix in $K$ is in the interior. In a unitary eigenframe,
@@ -203,7 +196,7 @@ Every $u_j$ is a classical solution of
  \mathcal G(x,D^2u_j)=r_j(x),\qquad
                r_j(x)=e^{(u_j+h(x,v_j))/m}.
 \]
-For completeness, let a smooth test $q$ touch $u$ from above at an
+Let a smooth test $q$ touch $u$ from above at an
 interior point $x_0$. Replacing $q$ by $q+|x-x_0|^4$ makes the local
 contact strict and does not change $D^2q(x_0)$. Local maximum points
 $x_j$ of $u_j-q$ then tend to $x_0$. At these points $D^2u_j\leq D^2q$,

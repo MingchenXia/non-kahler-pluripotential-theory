@@ -20,7 +20,7 @@ In particular, $f^{1/n}\in\mathcal D_h^0$. There is $\phi\in\PSH(X,h)\cap C(X)$,
 \begin{equation}\label{eq:power-capacity-exact-threshold}
  \mathrm{MA}_h(\phi)=b_h(f)f\,\mathrm dV.
 \end{equation}
-The coefficient $b_h(f)$ and the mass of this measure are finite and strictly positive.
+where $b_h(f)>0$.
 \end{theorem}
 \begin{proof}
 \emph{Step 1: the coefficient and root tails.} Put $g_j=\min(g,j)$ and let $\phi_j$ be normalized continuous solutions of
@@ -44,12 +44,12 @@ Eliminating $\operatorname{Cap}_h(U_D)$ yields
 \]
 with $c$ depending only on $(X,h)$, $A$ and $\alpha$. Letting $j\to\infty$ proves the lower bound for $b_h(g)$. Since $\rho_h(g^{1/n})=b_h(g)^{-1/n}$ by definition, this lower bound is equivalent to the root estimate; by \eqref{eq:integrable-gauduchon-root}, the root estimate bounds every Gauduchon test of $g^{1/n}$. Apply it to $g=f\mathbf1_{\{f>K^n\}}$, for which $g^{1/n}=f^{1/n}\mathbf1_{\{f^{1/n}>K\}}$, whenever this density is nonzero; the zero density has root functional zero. Since the mass of $g$ tends to zero as $K\to\infty$, the tails of $f^{1/n}$ tend to zero in both $L^n$ and $\rho_h$. The case $g=f$ shows that $f^{1/n}\in\mathcal D_h$, and \cref{prop:root-uniform-tails} gives $f^{1/n}\in\mathcal D_h^0$.
 
-\emph{Step 2: uniform convergence of a subsequence.} Now use $f_j=\min(f,j)$, $c_j=c_h(f_j)$ and normalized continuous solutions $\phi_j$. Step 1 gives $b_h(f)>0$, while $c_j\leq c_1<\infty$. Hence
+\emph{Step 2: uniform convergence of a subsequence.} Take $g=f$ in Step 1, so that $g_j=f_j$ and $b_h(f)>0$. Since $c_j\leq c_1$, the measures satisfy
 \[
  \mathrm{MA}_h(\phi_j)(E)
-       \leq Ac_1\operatorname{Cap}_h(E)^{1+\alpha}.
+       \leq Ac_1\operatorname{Cap}_h(E)^{1+\alpha},
 \]
-The first part of the proof of \cref{prop:power-capacity-one-sided-stability}, using the capacity tail estimate, gives one $M\geq1$ with $-M\leq\phi_j\leq0$ for all $j$.
+and the first estimate of Step 1 bounds $\operatorname{Cap}_h(U_D)$ below by a positive constant independent of $j$. Since $U_D=\{\phi_j<\inf_X\phi_j+D\}$, the tail estimate \eqref{eq:global-capacity-tail}, applied with $h$ in place of $\omega$, gives one $M\geq1$ with $-M\leq\phi_j\leq0$ for all $j$.
 
 By \cref{thm:normalized-compactness}, extract a subsequence converging in $L^1(\mathrm dV)$ and almost everywhere. Since $f\,\mathrm dV$ is a fixed finite absolutely continuous measure and the potentials have a common bound, dominated convergence gives
 \[
@@ -58,18 +58,7 @@ By \cref{thm:normalized-compactness}, extract a subsequence converging in $L^1(\
 \]
 along this subsequence as both indices tend to infinity. The same bound holds with $\mathrm{MA}_h(\phi_k)$ in place of $\mathrm{MA}_h(\phi_j)$. Applying \cref{prop:power-capacity-one-sided-stability} with $H=M$ to the pairs $(u,v)=(\phi_j,\phi_k)$ and $(\phi_k,\phi_j)$ shows that the subsequence is uniformly Cauchy. Its limit $\phi$ is continuous, $h$-plurisubharmonic by distributional positivity, and has supremum zero.
 
-\emph{Step 3: passage of the products.} On a coordinate ball choose a fixed smooth $q$ with $\ddc q\geq h$, and put $S_j=\ddc(\phi_j+q)$ and $S=\ddc(\phi+q)$. For every $\ell\geq1$, the calculus of bounded products gives
-\[
- S_j^\ell-S^\ell
- =\ddc\left[(\phi_j-\phi)
-       \sum_{a=0}^{\ell-1}S_j^a\wedge S^{\ell-1-a}\right].
-\]
-The local Chern--Levine--Nirenberg estimate bounds its pairing with a compactly supported smooth test form by $C\|\phi_j-\phi\|_\infty$. Expand the Hermitian products as in \cref{prop:bounded-products}:
-\[
- \mathrm{MA}_h(\phi_j)
- =\sum_{\ell=0}^n\binom n\ell S_j^\ell\wedge(h-\ddc q)^{n-\ell}.
-\]
-Every term converges, with its smooth correction factor, to the corresponding term for $\phi$. On the other hand, $c_jf_j\to b_h(f)f$ in $L^1(\mathrm dV)$. The two limits prove \eqref{eq:power-capacity-exact-threshold}; its prescribed mass is $b_h(f)\int_Xf\,\mathrm dV$.
+\emph{Step 3: the limit equation.} Uniform convergence implies convergence in capacity, so the continuity of bounded products recalled in \cref{sec:psh-local-capacity,sec:hermitian-capacity} gives $\mathrm{MA}_h(\phi_j)\rightharpoonup\mathrm{MA}_h(\phi)$ along the subsequence. On the other hand, $c_jf_j\to b_h(f)f$ in $L^1(\mathrm dV)$. The two limits prove \eqref{eq:power-capacity-exact-threshold}.
 \end{proof}
 
-The capacity assumption concerns the fixed datum and implies the root-tail condition. When $v_-(h)>0$, which always holds for $n\leq2$ by \cref{cor:lower-mass-dimension}, the root tails and the lower bound $b_h(g)\geq v_-(h)/\int_Xg\,\mathrm dV$ already follow from \cref{prop:root-uniform-tails,prop:individual-normalizer-lp}, and \cref{cor:positive-lower-mass-exact-threshold} gives an exact threshold equation for every integrable density; the capacity assumption then provides a continuous solution. Zero lower mass occurs only for $n\geq3$. Whether root tails alone suffice for the exact equation when $v_-(h)=0$ remains part of \cref{qu:individual-equation-threshold}; whether every positive-threshold root has these tails is the question following \cref{prop:root-uniform-tails}.
+The capacity assumption concerns the fixed datum and implies the root-tail condition. When $v_-(h)>0$, which always holds for $n\leq2$ by \cref{cor:lower-mass-dimension}, the root tails and the lower bound $b_h(g)\geq v_-(h)/\int_Xg\,\mathrm dV$ already follow from \cref{prop:root-uniform-tails,prop:individual-normalizer-lp}, and \cref{cor:positive-lower-mass-exact-threshold} gives an exact threshold equation for every integrable density; the capacity assumption then provides a continuous solution. Whether root tails alone suffice for the exact equation when $v_-(h)=0$ remains part of \cref{qu:individual-equation-threshold}; whether every positive-threshold root has these tails is the question following \cref{prop:root-uniform-tails}.
