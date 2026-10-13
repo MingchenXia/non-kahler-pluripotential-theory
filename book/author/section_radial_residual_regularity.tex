@@ -4,7 +4,7 @@
 Subtracting a prescribed singularity separates regularity of the residual from the pole of the solution. On projective space, central radial mass gives an exact inverse for the equation. A relative density error then controls the residual through two derivatives, even when the density is merely integrable at the pole. The inverse also permits smooth crossing of density zeros away from it. The pole is the one used in \cref{lem:projective-sublogarithmic-density}; here its ordinary type is fixed while the density varies.
 
 \subsection{The prescribed ordinary type}
-Let $k\geq2$, let $\kappa$ be the Fubini--Study form on $\mathbb P^k$ with $\int\kappa^k=1$, and put $o=[1:0:\cdots:0]$. On the chart $Z_0\ne0$ write $z_i=Z_i/Z_0$ and set
+Let $k\geq1$, let $\kappa$ be the Fubini--Study form on $\mathbb P^k$ with $\int\kappa^k=1$, and put $o=[1:0:\cdots:0]$. On the chart $Z_0\ne0$ write $z_i=Z_i/Z_0$ and set
 \[
  r=\sum_{j=1}^k|z_j|^2,\qquad P=\frac r{1+r},\qquad
  T=1-\log P,
@@ -12,17 +12,12 @@ Let $k\geq2$, let $\kappa$ be the Fubini--Study form on $\mathbb P^k$ with $\int
 \]
 The ratio $P=\sum_{i=1}^k|Z_i|^2/\sum_{i=0}^k|Z_i|^2$ is global. Give $u_\alpha$ its canonical value $-\infty$ at $o$ and value zero on the hyperplane $Z_0=0$. Primes denote differentiation in $r$. Throughout this section $b_\alpha=k(1-\alpha)>0$ and, near $r=0$, $L=1-\log r$.
 
-\Needspace{12\baselineskip}
-\begin{lemma}\label{lem:radial-nonlogarithmic-type}\index{Singularity type!radial nonlogarithmic pole}
-The canonical $u_\alpha$ is $\kappa$-plurisubharmonic and smooth off $o$. Its non-pluripolar measure has a positive density $q_\alpha$ of mass one, in $L^1$ and in no $L^p$, $p>1$. Distinct $\alpha$ give distinct ordinary types, although all their multiplier ideals are trivial.
-\end{lemma}
-\begin{proof}
-Plurisubharmonicity, smoothness off the pole, unit mass and the $L^p$ assertions are those of \cref{lem:projective-sublogarithmic-density}. To fix the profile used in the inverse below, put
+Since $\log P$ is the function $\psi$ of \cref{sec:zero-lower-mass-product-equations}, $u_\alpha$ is the potential of \cref{lem:projective-sublogarithmic-density}: it is $\kappa$-plurisubharmonic and smooth off $o$, and its non-pluripolar measure $q_\alpha\kappa^k$ has mass one, with a positive density $q_\alpha$ in $L^1$ and in no $L^p$, $p>1$. In the notation of the proof of that lemma, the total potential and its radial flux are
 \begin{equation}\label{eq:radial-residual-baseline}
  \Phi_\alpha=\log(1+r)+u_\alpha,\qquad
  Q_\alpha=r\Phi_\alpha'=P+\alpha(1-P)T^{\alpha-1}.
 \end{equation}
-The tangential and radial eigenvalues are $Q_\alpha/r$ and $Q_\alpha'$, both positive. Radial determinant integration, with the constant fixed by $\Phi=\log(1+r)$, gives
+The radial determinant integration of that proof applies to every radial $\Phi$ with $\ddc\Phi\geq0$ off $o$:
 \begin{equation}\label{eq:radial-residual-flux}
  \int_{a<|z|^2<b}(\ddc\Phi)^k=Q(b)^k-Q(a)^k,
  \qquad Q=r\Phi'.
@@ -31,23 +26,22 @@ Since $Q_\alpha(0)=0$ and $Q_\alpha(\infty)=1$, the density is
 \begin{equation}\label{eq:radial-residual-baseline-density}
  q_\alpha=\frac{(Q_\alpha^k)'}{(P^k)'}>0.
 \end{equation}
-Smoothness on the hyperplane and the exclusion of the canonical
-pole in the product leave no further measure. Near $r=0$, direct differentiation gives
+Near $r=0$, direct differentiation gives
 \begin{align}\label{eq:radial-residual-asymptotics}
  Q_\alpha&\sim\alpha L^{\alpha-1},&
  Q_\alpha'&\sim\frac{\alpha(1-\alpha)}rL^{\alpha-2},\\
  (Q_\alpha^k)'&\sim
  \frac{k\alpha^k(1-\alpha)}rL^{-1-k(1-\alpha)}.\nonumber
 \end{align}
-In particular $q_\alpha\sim\alpha^k(1-\alpha)r^{-k}L^{-1-b_\alpha}$; the radial volume has order $r^{k-1}\,\mathrm{d}r$, recovering these integrability assertions.
+In particular $q_\alpha\sim\alpha^k(1-\alpha)r^{-k}L^{-1-b_\alpha}$.
 
-The types for different $\alpha$ are ordinarily distinct, since
-their difference is unbounded at $o$. Yet every $\mathcal I(tu_\alpha)$
-is trivial for finite $t>0$: integrability of the constant function
-reduces near $o$ to
-$\int^\infty \mathrm{e}^{-kL+tL^\alpha}\,\mathrm{d}L<\infty$.
-Ordinary type information here is strictly finer than this ideal
-information.
+\Needspace{6\baselineskip}
+\begin{lemma}\label{lem:radial-nonlogarithmic-type}\index{Singularity type!radial nonlogarithmic pole}
+Distinct $\alpha$ give distinct ordinary types, although every multiplier ideal $\mathcal I(tu_\alpha)$, $t>0$, is trivial.
+\end{lemma}
+\begin{proof}
+For $\alpha<\beta$, the difference $u_\alpha-u_\beta=T^\beta-T^\alpha$ is unbounded at $o$. Near $o$, integrability of $\mathrm e^{-tu_\alpha}$ against the smooth volume, which is comparable to $r^{k-1}\,\mathrm dr$ in the radial variable, reduces to
+$\int^\infty \mathrm{e}^{-kL+tL^\alpha}\,\mathrm{d}L<\infty$. Ordinary type information here is strictly finer than this ideal information.
 \end{proof}
 
 \Needspace{14\baselineskip}
@@ -81,14 +75,14 @@ across $o$, with value $R_0$, and for small $r$ satisfies
 It is locally $C^{0,\min\{1,2\delta\}}$.
 For $\delta\ge\frac12$ it extends $C^1$ with zero gradient at $o$;
 for $\delta\ge1$ it extends $C^2$ with zero Hessian at $o$.
-No derivative hypothesis on the error in \eqref{eq:radial-residual-density-error} is needed
-for these conclusions.
 The potential and its residual are smooth on $\mathbb P^k\setminus\{o\}$,
-including every density zero there. Condition
-\eqref{eq:radial-residual-density-error} makes the central mass of every ball
-around $o$ positive; this positivity, not the smoothness of the density alone,
-is what the smoothness across density zeros uses.
+including every density zero there.
 \end{theorem}
+
+No derivative of the error in \eqref{eq:radial-residual-density-error} is controlled.
+Smoothness across density zeros comes from the positivity of the central mass
+of every ball around $o$, which \eqref{eq:radial-residual-density-error} implies,
+not from the smoothness of the density alone.
 
 \begin{proof}
 Let
@@ -165,15 +159,7 @@ the potential is unique up to constants: its flux satisfies
 $Q^k=M$, and \eqref{eq:radial-residual-inverse} then fixes its derivative.
 No nonsymmetric uniqueness is asserted.
 
-Since $U\sim u_\alpha$, \cref{prop:relative-elementary} gives relative envelope-class membership; an explicit stretching family shows it directly. If
-$a_* =\inf R$, the $\kappa$-psh functions
-$v_t=u_\alpha+t a_*$ satisfy, for every $t\ge1$,
-\[
- t^{-1}v_t+(1-t^{-1})u_\alpha=u_\alpha+a_*\le U.
-\]
-At $t=1$ the term with zero coefficient is omitted, as in \cref{def:relative-envelope-class}. Hence
-$U\in \mathcal E_{\mathrm{env}}(\mathbb P^k,\kappa,u_\alpha)$; at the common
-pole $o$ both sides of the inequality equal $-\infty$.
+Since $U\sim u_\alpha$, \cref{prop:relative-elementary} gives $U\in\mathcal E_{\mathrm{env}}(\mathbb P^k,\kappa,u_\alpha)$.
 
 \subsection{Smooth residuals from flat errors}
 \begin{proposition}\label{prop:radial-flat-residual}
@@ -264,7 +250,7 @@ $R-R_0$ is smooth and flat at the pole.
 
 \subsection{Smooth residuals with an open density-zero annulus}
 \begin{proposition}\label{prop:radial-zero-annulus}
-For every $k\ge2$ and $0<\alpha<1$, there is a nonnegative radial
+There is a nonnegative radial
 probability density $q_0$, smooth off $o$ and along the hyperplane,
 which equals $q_\alpha$ near $o$ and vanishes on a nonempty open
 annulus. Its solution has ordinary type $u_\alpha$ and a
@@ -293,33 +279,17 @@ the smoothness assertion concerns the residual.
 \end{proof}
 
 \subsection{Products with a zero-lower-mass factor}
-Let $(X_0,h_0)$ be any connected compact Hermitian $m$-fold with
-$v_-(h_0)=0$, and write $V_0=\int_{X_0}h_0^m>0$.
-On $X=X_0\times\mathbb P^k$ put $N=m+k$ and
-$H=\operatorname{pr}_0^*h_0+\operatorname{pr}_Y^*\kappa$, where $\operatorname{pr}_0$ and $\operatorname{pr}_Y$ are the projections onto $X_0$ and $Y=\mathbb P^k$. Let $q$ and $U$ be as in \cref{thm:radial-residual-regularity}; in the product formulas below, $U$ and $R$ denote their pullbacks.
+Use the product $X=X_0\times Y$ with $Y=\mathbb P^k$, the background $H=h_0+\kappa$, $N=m+k$ and $V_0=\int_{X_0}h_0^m$ of \cref{sec:zero-lower-mass-product-equations}. Let $q$ and $U$ be as in \cref{thm:radial-residual-regularity}; in the product formulas below, $U$ and $R$ denote their pullbacks.
 \begin{corollary}\label{cor:radial-residual-nonclosed-product}
-The pullback of $U$ has the ordinary type of the pullback of $u_\alpha$, belongs to its relative envelope class $\mathcal E_{\mathrm{env}}(X,H,u_\alpha)$ and has finite Monge--Amp\`ere mass $\binom Nm V_0$. Its residual has the regularity of \cref{thm:radial-residual-regularity} across $X_0\times\{o\}$. The background $H$ is nonclosed and $v_-(H)=0$.
+The pullback of $U$ has the ordinary type of the pullback of $u_\alpha$, belongs to its relative envelope class $\mathcal E_{\mathrm{env}}(X,H,u_\alpha)$ and has finite Monge--Amp\`ere mass $\binom Nm V_0$. Its residual has the regularity of \cref{thm:radial-residual-regularity} across $X_0\times\{o\}$. If $v_-(h_0)=0$, the background $H$ is nonclosed and $v_-(H)=0$.
 \end{corollary}
 \begin{proof}
-The pullback of $U$ obeys
+By part (1) of \cref{lem:split-product-normalization},
 \[
- \mathrm{MA}_H(U)=\binom Nm\operatorname{pr}_0^*(h_0^m)
-                 \wedge\operatorname{pr}_Y^*(q\kappa^k),
+ \mathrm{MA}_H(U)=\binom Nm h_0^m\wedge q\kappa^k,
  \qquad \int_X\mathrm{MA}_H(U)=\binom Nm V_0.
 \]
-Indeed the bounded truncation $\max\{U,-j\}$ is a pullback.
-The bounded corrected-product expansion of \cref{prop:bounded-products,lem:bounded-products-submersion} leaves only the displayed
-binomial term by dimensions; multiplication by $\mathbf1_{\{U>-j\}}$
-and increasing $j$ give the exact formula and finite mass.
 The residual is the pullback of $R$, so its regularity
-extends across $X_0\times\{o\}$. It is ordinarily equivalent to the
-pullback of $u_\alpha$ and belongs to the corresponding relative
-stretching class by the same explicit $v_t$.
-
-The last two assertions are also part of \cref{thm:zero-lower-mass-product-equation}. Directly,
-$v_-(H)=0$ because bounded $h_0$-psh potentials with masses tending
-to zero have pullbacks of mass $\binom Nm$ times those masses.
-The background is nonclosed, since a closed positive
-$h_0$ would have all bounded masses equal to $V_0>0$ by Stokes.
-The conclusion $v_-(H)=0$ uses the hypothesis $v_-(h_0)=0$ on the factor, and this calculation does not determine the threshold of an individual density.
+extends across $X_0\times\{o\}$, and it is bounded. Thus the pullback of $U$ has the ordinary type of the
+pullback of $u_\alpha$, and \cref{prop:relative-elementary} gives the envelope class. The last assertion is part (3) of \cref{lem:split-product-normalization}.
 \end{proof}

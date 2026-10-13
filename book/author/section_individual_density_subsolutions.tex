@@ -20,7 +20,7 @@ The Monge--Amp\`ere operator is not continuous under $L^1$ convergence of potent
 
 \Needspace{8\baselineskip}
 \begin{lemma}\label{lem:density-subsolution-lone-closure}
-Let $s_j,s\in\PSH(X,h)$ be bounded above by a common constant and satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
+Let $s_j,s\in\PSH(X,h)$ satisfy $s_j\to s$ in $L^1(X)$. Suppose $g_j,g\geq0$, $g_j\to g$ in $L^1(\mathrm{d}V)$, and
 \[
  \mathrm{MA}^{\mathrm{ext}}_h(s_j)\geq g_j\,\mathrm{d}V
  \quad\text{for every }j.
@@ -28,12 +28,12 @@ Let $s_j,s\in\PSH(X,h)$ be bounded above by a common constant and satisfy $s_j\t
 Then $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq g\,\mathrm{d}V$.
 \end{lemma}
 \begin{proof}
-Subtracting a common constant, which does not change the extended measures, we may assume that all potentials are nonpositive. Pass to a subsequence along which $s_j\to s$ and $g_j\to g$ almost everywhere, and set
+If $x_j$ is a maximum point of $s_j$, \cref{lem:qpsh-hartogs} and compactness of $X$ give $\limsup_j\sup_Xs_j\leq\sup_Xs$, so the potentials have a common upper bound. Subtracting it, which does not change the extended measures, we may assume that all potentials are nonpositive. Pass to a subsequence along which $s_j\to s$ and $g_j\to g$ almost everywhere, and set
 \[
  a_j=\inf_{\ell\geq j}g_\ell,\qquad
  w_j=\left(\sup_{\ell\geq j}s_\ell\right)^*.
 \]
-Then $0\leq a_j\uparrow g$ almost everywhere, and $w_j\in\PSH(X,h)$ decreases to $s$.
+Then $0\leq a_j\uparrow g$ almost everywhere, and $w_j\in\PSH(X,h)$ decreases to $s$ by \cref{lem:qpsh-hartogs}.
 
 \emph{Step 1: $\mathrm{MA}^{\mathrm{ext}}_h(w_j)\geq a_j\,\mathrm{d}V$.} Fix $j$. For $N\geq j$, the finite maximum $m_N=\max_{j\leq\ell\leq N}s_\ell$ satisfies $\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq a_j\,\mathrm{d}V$: on the set $\{m_N=s_\ell\}$, \cref{prop:ordered-contact-general} gives $\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq\mathrm{MA}^{\mathrm{ext}}_h(s_\ell)\geq g_\ell\,\mathrm{d}V\geq a_j\,\mathrm{d}V$, and these sets cover $X$. As $N\to\infty$, the functions $m_N$ increase, are bounded above by zero, and have regularized limit $w_j$. By \cref{lem:monotone-psh-capacity}, $m_N\to w_j$ in capacity, so the damped measures $\mathrm{e}^{m_N}\mathrm{MA}^{\mathrm{ext}}_h(m_N)$ converge weakly to $\mathrm{e}^{w_j}\mathrm{MA}^{\mathrm{ext}}_h(w_j)$. Since $m_N\to w_j$ almost everywhere and $a_j\leq g$, dominated convergence gives $\mathrm{e}^{m_N}a_j\to\mathrm{e}^{w_j}a_j$ in $L^1(\mathrm{d}V)$. Passing to the limit in $\mathrm{e}^{m_N}\mathrm{MA}^{\mathrm{ext}}_h(m_N)\geq\mathrm{e}^{m_N}a_j\,\mathrm{d}V$ gives
 \[
@@ -85,7 +85,7 @@ Let $0\leq f\in L^1(\mathrm{d}V)$ have positive integral. If $f\in L^p(\mathrm{d
 If $h$ is K\"ahler, then $b_h(f)=\int_Xh^n/\int_Xf\,\mathrm{d}V$.
 \end{proposition}
 \begin{proof}
-Suppose that $f\in L^p$ with $p>1$, and let $v$ be a continuous solution of $\mathrm{MA}_h(v)=c_h(f)f\,\mathrm{d}V$. It is a subsolution with coefficient $c_h(f)$, so \cref{thm:individual-density-subsolution} gives $c_h(f)\leq b_h(f)$. Conversely, \cref{lem:bounded-normalizer-subsolution}, applied to a threshold subsolution, gives $b_h(f)\leq c_h(f)$.
+If $f\in L^p$ with $p>1$, then $f_k\to f$ in $L^p$, and \cref{lem:lp-normalizer-continuity} gives $b_h(f)=\lim_kc_h(f_k)=c_h(f)$.
 
 For general $f$, the continuous solution for $f_k$ has total mass $c_h(f_k)\int_Xf_k\,\mathrm{d}V$, which is at least $v_-(h)$ by the definition of the lower mass. Letting $k\to\infty$ and using monotone convergence gives the lower bound for $b_h(f)$. If $h$ is K\"ahler, Stokes' theorem for bounded potentials gives instead the identity $c_h(f_k)\int_Xf_k\,\mathrm{d}V=\int_Xh^n$, and the same limit proves the last assertion.
 \end{proof}
