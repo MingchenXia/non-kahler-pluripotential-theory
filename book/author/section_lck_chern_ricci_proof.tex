@@ -1,11 +1,11 @@
 \begin{proof}
-We keep the divergence terms in the Ricci tensor and compare the Bianchi and Bochner identities before imposing the Gauduchon condition. All norms, traces and contractions use $g$. Put
+We compute the Ricci tensor without assuming that $\lambda$ is co-closed, and compare the integrated Bianchi and Bochner identities; the Gauduchon condition enters only in Step~3. All norms, traces and contractions use $g$. Put
 \[
  B=JA,\qquad S=\nabla\lambda,\qquad
  S^+(U,V)=\tfrac12\bigl(S(U,V)+S(JU,JV)\bigr),\qquad
  u=|\lambda|_g^2.
 \]
-Closedness of $\lambda$ makes $S$ symmetric, and $\operatorname{tr}_gS=-q$. The tensors $S^+$ and $S^-=S-S^+$ are orthogonal. Write $J\lambda=-\lambda\circ J$, so that $\lambda^{\mathrm c}=J\lambda/(4\pi)$.
+Closedness of $\lambda$ makes $S$ symmetric, and $\operatorname{tr}_gS=-q$. The tensors $S^+$ and $S^-=S-S^+$ are pointwise orthogonal. Write $J\lambda=-\lambda\circ J$, so that $\lambda^{\mathrm c}=J\lambda/(4\pi)$.
 
 \emph{Step 1: the Ricci tensor.} We first show that
 \begin{equation}\label{eq:lck-ricci-real}
@@ -14,14 +14,14 @@ Closedness of $\lambda$ makes $S$ symmetric, and $\operatorname{tr}_gS=-q$. The 
        +\tfrac12\lambda\otimes\lambda
        +\tfrac n2 J\lambda\otimes J\lambda.
 \end{equation}
-Locally write $\lambda=\mathrm df$ and put $\widetilde g=\mathrm e^{-f}g$. The real conformal Ricci formula in dimension $2n$ is
+Locally write $\lambda=\mathrm df$ and put $\widetilde g=\mathrm e^{-f}g$. The formula for the Ricci tensor under a conformal change in real dimension $2n$ gives
 \[
  \operatorname{Ric}_{\widetilde g}
  =\operatorname{Ric}_g+(n-1)S
        +\tfrac{n-1}{2}\lambda\otimes\lambda
-       +\tfrac12\{-q-(n-1)u\}g.
+       -\tfrac12\bigl(q+(n-1)u\bigr)g.
 \]
-The local metric $\widetilde g$ is K\"ahler. Since the Chern--Ricci form of $g$ vanishes, the Ricci form of $\widetilde g$ is $n\mathrm i\partial\bar\partial f=(n/2)\mathrm d(J\lambda)$.
+The local metric $\widetilde g$ is K\"ahler. Since the Chern--Ricci form of $g$ vanishes, the Ricci form of $\widetilde g$, normalized as $\operatorname{Ric}$, is $n\mathrm i\partial\bar\partial f=(n/2)\mathrm d(J\lambda)$.
 Applying \eqref{eq:lck-complex-connection} to
 $(\nabla_UJ\lambda)(V)=-S(U,JV)-\lambda((\nabla_UJ)V)$ and antisymmetrizing gives
 \[
@@ -43,12 +43,12 @@ Since $S(A,A)=A(u)/2$ and $\operatorname{div}A=-q$, integration by parts gives
 \begin{equation}\label{eq:lck-aa-divergence}
  \int_Xu q\,\mathrm d\operatorname{vol}_g=2E_A.
 \end{equation}
-Pair the contracted Bianchi identity $\delta\operatorname{Ric}_g+\mathrm ds/2=0$ with $\lambda$ and integrate. Here $\delta$ is minus covariant contraction, the formal adjoint of the symmetric covariant derivative. Thus
+Pair the contracted Bianchi identity $\delta\operatorname{Ric}_g+\mathrm ds/2=0$ with $\lambda$ and integrate. Here $\delta$, minus the divergence, is the formal adjoint of the symmetrized covariant derivative. Thus
 \[
  0=\int_X\langle\operatorname{Ric}_g,S\rangle\,\mathrm d\operatorname{vol}_g
        +\tfrac12\int_Xs q\,\mathrm d\operatorname{vol}_g.
 \]
-Substitution of \cref{eq:lck-ricci-real,eq:lck-aa-divergence} gives
+Substituting \eqref{eq:lck-ricci-real} and using $\langle S^+,S\rangle=|S^+|^2$, $\operatorname{tr}_gS=-q$, $(J\lambda)^\sharp=B$ and \eqref{eq:lck-aa-divergence}, we obtain
 \begin{equation}\label{eq:lck-bianchi-integral}
  0=n\|S^+\|^2-(n-1)\|S\|^2+\tfrac{n-2}{2}\|q\|^2
        +\tfrac{4-n}{2}E_A+\tfrac n2E_B.
@@ -67,14 +67,14 @@ Using \eqref{eq:lck-aa-divergence}, we obtain
 \begin{equation}\label{eq:lck-bochner-integral}
  \|q\|^2=\|S\|^2+\tfrac{4-n}{2}E_A+\tfrac n2E_B.
 \end{equation}
-Eliminating $E_A,E_B$ between the two identities gives
-$n(\|S^+\|^2-\|S\|^2)+n\|q\|^2/2=0$. Orthogonality proves the asserted identity for $S^-$.
+Substituting the value of $\tfrac{4-n}{2}E_A+\tfrac n2E_B$ given by \eqref{eq:lck-bochner-integral} into \eqref{eq:lck-bianchi-integral} gives
+$n(\|S^+\|^2-\|S\|^2)+n\|q\|^2/2=0$. Since $\|S\|^2=\|S^+\|^2+\|S^-\|^2$ by orthogonality, this is the asserted identity for $S^-$.
 
-\emph{Step 3: rigidity.} By \cref{prop:lck-gauduchon}, the Gauduchon condition is equivalent to $q=0$. In that case the integral identity forces $S=S^+$, hence $S(B,B)=S(A,A)$. Equation \eqref{eq:lck-aa-divergence} gives $E_A=E_B=0$, and \eqref{eq:lck-bochner-integral} implies $S=0$. Thus $\omega$ is Vaisman.
+\emph{Step 3: rigidity.} By \cref{prop:lck-gauduchon}, the Gauduchon condition is equivalent to $q=0$. If $q=0$, the integral identity forces $S=S^+$, hence $S(B,B)=S(JA,JA)=S(A,A)$. Equation \eqref{eq:lck-aa-divergence} gives $E_A=E_B=0$, and \eqref{eq:lck-bochner-integral} implies $S=0$. Since $\omega$ is strictly LCK, it is then Vaisman.
 
-Equation \eqref{eq:lck-complex-connection} gives $\nabla_AJ=0$. If $T$ is the symmetric endomorphism defined by $g(TU,V)=S(U,V)$, then
+Equation \eqref{eq:lck-complex-connection} gives $\nabla_AJ=0$. Let $T$ be the symmetric endomorphism defined by $g(TU,V)=S(U,V)$, so that $\nabla_UA=TU$. Since $\nabla$ is torsion free,
 \[
  (\mathcal L_AJ)V=JTV-TJV.
 \]
-Consequently $A$ is real holomorphic exactly when $S=S^+$. The integral identity then gives $q=0$, hence $S=0$. Conversely, a parallel Lee form gives $q=0$ and $\mathcal L_AJ=0$. Strictness ensures that the parallel Lee form is nonzero.
+Consequently $A$ is real holomorphic exactly when $T$ commutes with $J$, that is, when $S=S^+$. In that case the integral identity gives $q=0$, hence $S=0$ by the previous paragraph. Conversely, if $\omega$ is Vaisman, then $S=0$, so $q=-\operatorname{tr}_gS=0$ and $\mathcal L_AJ=0$.
 \end{proof}

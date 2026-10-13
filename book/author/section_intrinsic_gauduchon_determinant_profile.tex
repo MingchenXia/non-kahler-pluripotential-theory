@@ -1,54 +1,51 @@
 \subsection{Intrinsic determinant measures and the complete profile}
 
-Keep the smooth positive probability volume $\mathrm dV$ fixed. For a positive $(n-1,n-1)$-current $T$ of finite mass, let $\Gamma_{0,h}(T)$ denote the determinant measure of \eqref{eq:weak-gaud-functional} computed with a positive auxiliary metric $h$. The current need not be smooth or strictly positive. The following coordinate calculation identifies the measure itself, including on singular coefficient measures.
+Keep the smooth positive probability volume $\mathrm dV$ fixed. For a positive $(n-1,n-1)$-current $T$ of finite mass and a Hermitian form $h$, let $\Gamma_{0,h}(T)$ denote the determinant measure of \eqref{eq:weak-gaud-functional} with $F=0$, computed with $h$ in place of $\omega$. The current need not be smooth or strictly positive. By \cref{lem:weak-gaud-determinant-dual}, the total mass of $\Gamma_{0,h}(T)$ does not depend on $h$. The following coordinate formula shows that the measure itself does not depend on $h$, also when the coefficient measures of $T$ are singular.
 
 \Needspace{11\baselineskip}
 \begin{lemma}\label{lem:gaud-determinant-measure-intrinsic}\index{Gauduchon duality!intrinsic determinant measure}
-For a fixed positive current $T$ and fixed $\mathrm dV$, the measure
-$\Gamma_{0,h}(T)$ is independent of the positive auxiliary metric $h$.
-This statement includes singular and degenerate currents.
+For every positive $(n-1,n-1)$-current $T$ on $X$ and the fixed $\mathrm dV$, the measure
+$\Gamma_{0,h}(T)$ is the same for all Hermitian forms $h$.
+This includes singular currents and currents with degenerate coefficient matrices.
 \end{lemma}
 \begin{proof}
-In a holomorphic frame put
-$\lambda=\bigwedge_{j=1}^n(i\,dz_j\wedge d\bar z_j)$,
-$h=i\sum H_{ij}\,dz_i\wedge d\bar z_j$ and $\mathrm dV=v\lambda$.
-Positive currents have measure coefficients. Choose a positive
-Radon measure $\nu$ dominating them. For a smooth real form
-$\xi=i\sum\Xi_{ij}\,dz_i\wedge d\bar z_j$, let $Q$ be the
-positive semidefinite Hermitian coefficient matrix characterized by
-$\xi\wedge T=\operatorname{tr}(\Xi Q)\nu$. Then
+In local holomorphic coordinates put
+$\lambda=\bigwedge_{j=1}^n(\mathrm i\,\mathrm dz_j\wedge\mathrm d\bar z_j)$,
+$h=\mathrm i\sum H_{ij}\,\mathrm dz_i\wedge\mathrm d\bar z_j$ and $\mathrm dV=v\lambda$.
+The coefficients of $T$ are measures. Choose a positive
+Radon measure $\nu$ with respect to which they are all absolutely continuous. There is a
+$\nu$-measurable field $Q$ of positive semidefinite Hermitian matrices such that
+$\xi\wedge T=\operatorname{tr}(\Xi Q)\nu$ for every smooth real $(1,1)$-form
+$\xi=\mathrm i\sum\Xi_{ij}\,\mathrm dz_i\wedge\mathrm d\bar z_j$. In an $h$-unitary frame, the trace measure $\sigma_h=h\wedge T$ and the matrix density $P_h$ of \cref{sec:weak-gauduchon-duality}, formed with $h$ in place of $\omega$, are
 \[
  \sigma_h=\operatorname{tr}(HQ)\nu,\qquad
  P_h=\frac{nH^{1/2}QH^{1/2}}{\operatorname{tr}(HQ)}.
 \]
-The formula holds on $Q\ne0$; zero is assigned when $Q=0$.
-Since $h^n=n!\det(H)\lambda$, determinant algebra gives
+The second formula holds where $Q\ne0$; the set where $Q=0$ has zero $\sigma_h$-measure.
+Since $h^n=n!\det(H)\lambda$, the density in \eqref{eq:weak-gaud-functional} is $(v/(n!\det H))^{1/n}$, and $\det P_h=n^n\det(H)\det(Q)/\operatorname{tr}(HQ)^n$. Hence
 \begin{equation}\label{eq:intrinsic-gaud-determinant-coordinate}
  \Gamma_{0,h}(T)
  =n(n!)^{-1/n}v^{1/n}(\det Q)^{1/n}\nu.
 \end{equation}
-This expression has no $H$. Replacing $\nu$ by $L\nu$, where
+The right side does not involve $H$. Replacing $\nu$ by $L\nu$, where
 $L>0$ almost everywhere, replaces $Q$ by $Q/L$, leaving the
-measure unchanged; a common dominating measure compares any two choices. The original geometric definition
-ensures compatibility under frame changes. Matrix AM--GM bounds it
-locally by a constant times a reference trace measure, proving local
-finiteness. Compactness gives a finite Radon measure.
+right side unchanged; a common dominating measure compares any two choices. Thus two Hermitian forms give the same measure on every coordinate chart, and hence on $X$.
 \end{proof}
-Write $\Gamma_0(T)$ for this intrinsic measure.
+We write $\Gamma_0(T)$ for this measure. For $h=\omega$ it is the measure $\Gamma_0(T)$ of \cref{sec:gaud-determinant-integrability}.
 
 
 \Needspace{18\baselineskip}
 \begin{theorem}\label{thm:constant-mass-entire-determinant-profile}\index{Gauduchon duality!exact density-root profile}
-Let $\beta$ be smooth positive Hermitian with
-$\ddc(\beta^j)=0$ for $1\leq j\leq n-1$,
+Let $\beta$ be a Hermitian form with
+$\ddc(\beta^j)=0$ for $1\leq j\leq n-1$, put
 $V=\int_X\beta^n$, and let $h=\beta+\ddc u>0$ for a smooth
-global real function $u$. Then
+real function $u$ on $X$. Then
 \[
  \mathscr G_h=\mathscr G_\beta,\qquad
  \{\Gamma_{0,h}(T):T\in\mathscr G_h\}
  =\{\Gamma_{0,\beta}(T):T\in\mathscr G_\beta\}.
 \]
-Every measure in this common family has a density $k_T$ satisfying
+Every measure $\Gamma_0(T)$ in this common family is absolutely continuous with respect to $\mathrm dV$, and its density $k_T$ satisfies
 \[
  k_T\geq0,\qquad
  \|k_T\|_{L^{n/(n-1)}(\mathrm dV)}\leq V^{-1/n}.
@@ -58,63 +55,60 @@ For every real or complex $p\in L^n(\mathrm dV)$,
  \sup_{T\in\mathscr G_h}\int_X|p|\,\Gamma_0(T)
        =V^{-1/n}\|p\|_{L^n(\mathrm dV)}.
 \end{equation}
-All suprema retain singular and degenerate tests.
+Here the supremum runs over all of $\mathscr G_h$, singular and degenerate currents included.
 \end{theorem}
 \begin{proof}
-Distributional integration by parts gives
-$\int h\wedge T=\int\beta\wedge T+\int u\ddc T
-=\int\beta\wedge T$. This proves equality of the actual current
-sets; Lemma~\ref{lem:gaud-determinant-measure-intrinsic} proves equality of their measure sets.
+For every positive $(n-1,n-1)$-current $T$ with $\ddc T=0$, distributional integration by parts gives
+$\int_X h\wedge T=\int_X\beta\wedge T+\int_X u\,\ddc T
+=\int_X\beta\wedge T$. Hence $\mathscr G_h=\mathscr G_\beta$, and \cref{lem:gaud-determinant-measure-intrinsic} gives $\Gamma_{0,h}(T)=\Gamma_{0,\beta}(T)$ for every such $T$.
 
-Take a smooth strictly positive real $r$ and put $M=\int r^n \mathrm dV$.
-By \cref{thm:tw-smooth} there are a smooth potential $w$, a positive form $A=\beta+\ddc w$ and a positive coefficient in its prescribed-volume equation. The mass-invariance hypothesis and \cref{thm:mass-invariance-characterization} determine that coefficient, giving
+Take a smooth strictly positive function $r$ and put $M=\int_X r^n \,\mathrm dV$.
+By \cref{thm:tw-smooth}, applied to the background $\beta$ and the density $r^n$, there are a smooth function $w$ with $A=\beta+\ddc w>0$ and a constant $c>0$ with $A^n=cr^n\,\mathrm dV$. By the hypothesis on $\beta$ and \cref{thm:mass-invariance-characterization}, $\int_XA^n=\int_X\beta^n=V$. This determines $c=V/M$, so
 \begin{equation}\label{eq:constant-mass-reference-equation}
  A^n=\frac{Vr^n}{M}\,\mathrm dV.
 \end{equation}
-In particular, the total mass of $A$ is $V$. No estimates uniform in a degenerating smooth density are required.
+Each $r$ is treated separately, so no estimates uniform in $r$ are needed.
 
 For every $T\in\mathscr G_\beta$, integration by parts gives
-$\int A\wedge T=1$. In an $A$-unitary frame, matrix AM--GM gives
-$\det(P_A)^{1/n}\leq1$, including singular coefficient densities.
-Thus as Radon measures
+$\int_X A\wedge T=1$. By the lemma, $\Gamma_0(T)=\Gamma_{0,A}(T)$, and the arithmetic--geometric mean inequality gives
+$(\det P_A)^{1/n}\leq\frac1n\operatorname{tr}P_A=1$ almost everywhere for the trace measure $A\wedge T$, also where the coefficient measures are singular.
+Thus, as Radon measures,
 \[
  \Gamma_0(T)\leq
        (\mathrm dV/A^n)^{1/n}(A\wedge T).
 \]
-Multiplying by $r$ and using \eqref{eq:constant-mass-reference-equation} yields
+Multiplying by $r$, using \eqref{eq:constant-mass-reference-equation} and integrating yields
 \begin{equation}\label{eq:constant-mass-determinant-dual}
- \int r\,\Gamma_0(T)\leq V^{-1/n}\|r\|_{L^n(\mathrm dV)}.
+ \int_X r\,\Gamma_0(T)\leq V^{-1/n}\|r\|_{L^n(\mathrm dV)}.
 \end{equation}
 Replacing a smooth nonnegative $r$ by $r+\eta$ and letting
-$\eta\downarrow0$ extends this bound to nonnegative smooth tests.
-For smooth real or complex $s$, smooth positive approximations
-$\sqrt{|s|^2+\eta^2}$ imply
-$|\int s\,\Gamma_0(T)|\leq V^{-1/n}\|s\|_n$.
+$\eta\downarrow0$ extends this bound to nonnegative smooth functions.
+For smooth real or complex $s$, applying it to the smooth positive functions
+$\sqrt{|s|^2+\eta^2}$ gives
+$|\int_X s\,\Gamma_0(T)|\leq V^{-1/n}\|s\|_{L^n}$.
 Consequently integration against $\Gamma_0(T)$ extends continuously
-from smooth functions to $L^n$. Its positive dual representative is
-$k_T\in L^{n/(n-1)}$ with the stated bound. Equality on smooth
-tests identifies the two Radon measures, proving absolute continuity.
-The integrals of arbitrary $L^n$ roots are therefore well-defined.
+from smooth functions to $L^n(\mathrm dV)$. By duality, this functional is represented by a function
+$k_T\in L^{n/(n-1)}(\mathrm dV)$, nonnegative because the functional is positive, with the stated bound. Equality on smooth
+functions identifies $\Gamma_0(T)$ with $k_T\,\mathrm dV$, proving absolute continuity.
+In particular, the integral in \eqref{eq:constant-mass-determinant-profile} is defined, as $\int_X|p|k_T\,\mathrm dV$, and H\"older's inequality gives its upper bound.
 
-For the reverse inequality with $r>0$ smooth, let
-$T_r=A^{n-1}/V$. It is smooth and positive. Write $E=\ddc w$. For $j\leq n-1$, expansion and closedness of $E$ give
+For the reverse inequality, let $r>0$ be smooth, and let
+$T_r=A^{n-1}/V$. It is smooth and positive. Write $E=\ddc w$; this form is $\mathrm d$-closed and $\dc$-closed. For $1\leq j\leq n-1$, the binomial expansion gives
 \[
- \ddc(A^j)=\sum_{l=0}^j\binom jl\ddc(\beta^{j-l})\wedge E^l=0.
+ \ddc(A^j)=\sum_{l=0}^j\binom jl\ddc(\beta^{j-l})\wedge E^l=0,
 \]
-The term with $j=l$ differentiates the constant one. Thus $\ddc T_r=0$, and smooth integration by parts gives
+since the term with $l=j$ contains $\ddc(1)=0$ and the others vanish by hypothesis. Thus $\ddc T_r=0$, and smooth integration by parts gives
 \[
  \int_X\beta\wedge A^{n-1}
  =\int_X A^n-\int_X\ddc w\wedge A^{n-1}=V.
 \]
 Consequently $T_r\in\mathscr G_\beta$.
-Its positive root is $\gamma=V^{-1/(n-1)}A$, so
+We have $T_r=\gamma^{n-1}$ with $\gamma=V^{-1/(n-1)}A$, and the determinant measure of $\gamma^{n-1}$ is $(\mathrm dV/\gamma^n)^{1/n}\gamma^n$, as computed in \cref{sec:weak-gauduchon-duality}. Hence
 \[
  k_{T_r}=(\gamma^n/\mathrm dV)^{(n-1)/n}
-       =V^{-1/n}\frac{r^{n-1}}{\|r\|_n^{n-1}}.
+       =V^{-1/n}\frac{r^{n-1}}{\|r\|_{L^n}^{n-1}}.
 \]
-It attains equality in \eqref{eq:constant-mass-determinant-dual}. For a nonnegative
-$p\in L^n$, take smooth positive $r_j\to p$ in $L^n$. The common
-dual bound controls $\int(p-r_j)k_{T_{r_j}}\mathrm dV$, proving the lower
-bound in \eqref{eq:constant-mass-determinant-profile}; the upper bound already holds for
-every current. Apply the same argument to $|p|$ for complex roots.
+Thus $\int_Xrk_{T_r}\,\mathrm dV=V^{-1/n}\|r\|_{L^n}$, which is equality in \eqref{eq:constant-mass-determinant-dual}. For a nonnegative
+$p\in L^n$, take smooth positive $r_j\to p$ in $L^n$. By the bound for $k_T$, the error $|\int_X(p-r_j)k_{T_{r_j}}\,\mathrm dV|$ is at most $V^{-1/n}\|p-r_j\|_{L^n}\to0$, which proves the lower
+bound in \eqref{eq:constant-mass-determinant-profile}. For real or complex $p$, apply this to $|p|$.
 \end{proof}
