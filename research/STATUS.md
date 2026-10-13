@@ -1,4 +1,10 @@
-# Current research status — 9 October 2026
+# Current research status — 13 October 2026
+
+## Checkpoint685 — Chapter 11 degenerate-uniqueness reader coherence
+
+Chapter 11, Uniqueness for degenerate equations, receives a complete recursive reader revision. The opening connects scalar uniqueness to cofactor propagation and weighted energy. The bounded uniqueness introduction retains connectedness and density of the positive set and makes extreme-level nullity conditional on a nonconstant difference. The analytic example distinguishes the real analytic density from its smooth nonclosed background and smooth potentials. Every statement, proof, label and input is preserved. The final 1774-line chapter and 26 proofs are read twice, with supplementary final-opening reads. Its complete output, both dated covers, neighbors, contents and index are inspected. The 1758-page public release is byte-exact to production; the same catalogue compiles natively. Fresh empty-source reconstruction passes: all 437 book files are byte-exact, and all 1788 main plus 17 companion page texts match production, with clean logs and reconstruction publication disabled. See [reader review](editorial/chapter11-degenerate-uniqueness-reader-coherence-685.md).
+
+Next: Continue Chapter 12, Complex Hessian equations. Bind the complete source-bound preparation of 11 October to the current local inputs before editing. Preserve 2 <= m < n, admissibility and derivative uniformity, the distinction between raw distributional products and positive measure products, Hessian capacity, torsion terms and constant-barrier hypotheses. Complete both final reads, full affected output, catalogue checks, dated builds, public verification, empty-source reconstruction and normal private synchronization. Then continue Chapters 13 and 14 and the whole-book reader and primary-paper queues. Xean remains withdrawn; whole-book completion remains outstanding.
 
 ## Checkpoint684 — Chapter 10 continuous-equation reader coherence
 
