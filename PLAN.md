@@ -1,5 +1,19 @@
 # Hermitian pluripotential theory: research and book plan
 
+## User steering, 13 October 2026: concise, rigorous, non-redundant book
+
+After the proofreading of the new material, the author directs (verbatim): “重复论证都删掉。全书没有用到的假设都删掉，核对一下。然后表述要简洁且严格。能够简化的证明和构造也去简化。位置你觉得不合适的内容你自己搬去合适的位置”, and “参考文献不要重复”.
+
+Standing rules from now on (also in the book-writing skill and its editorial memory):
+- **No duplicated arguments.** Each argument is proved once, at its natural home, and cited elsewhere. A removed duplicate keeps its label on the surviving statement, so internal references still resolve.
+- **No unused hypotheses.** A hypothesis that no step of the proof uses is removed, after checking every step, every cited result and every caller in the new scope. A hypothesis needed by a cited result, an example or an application stays.
+- **Concise and rigorous statements; simpler proofs and constructions** whenever a shorter correct argument exists. Simplification never weakens a statement or hides a dependency.
+- **Placement.** Material that is not in its natural chapter or section is moved there, after a dependency check in reading order.
+- **One bibliography entry per work.** The author's lecture notes SGPT are cited through a single entry (the 4 October 2026 version).
+- **Results of the authorless standalone papers are original to the book** (7 October 2026): they enter as the book's own theorems with complete proofs and are never cited or mentioned, including in the historical notes.
+
+The whole-book pass implementing these rules runs on the review branch (see `AGENTS.md`); the author's chapter-by-chapter reader passes should start from the reconciled text.
+
 ## Checkpoint685 — Chapter 11 degenerate-uniqueness reader coherence
 
 Chapter 11, Uniqueness for degenerate equations, receives a complete recursive reader revision. The opening connects scalar uniqueness to cofactor propagation and weighted energy. The bounded uniqueness introduction retains connectedness and density of the positive set and makes extreme-level nullity conditional on a nonconstant difference. The analytic example distinguishes the real analytic density from its smooth nonclosed background and smooth potentials. Every statement, proof, label and input is preserved. The final 1774-line chapter and 26 proofs are read twice, with supplementary final-opening reads. Its complete output, both dated covers, neighbors, contents and index are inspected. The 1758-page public release is byte-exact to production; the same catalogue compiles natively. Fresh empty-source reconstruction passes: all 437 book files are byte-exact, and all 1788 main plus 17 companion page texts match production, with clean logs and reconstruction publication disabled. See [reader review](research/editorial/chapter11-degenerate-uniqueness-reader-coherence-685.md).

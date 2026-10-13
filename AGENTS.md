@@ -71,6 +71,12 @@ Keep `.gitignore` exclusions: build products, downloaded full texts, temporary
 previews, credentials, raw verifier logs and verifier runtime state remain excluded
 from the source repository. The public PDF exception is specified below.
 
+## Review branches
+
+Cloud review sessions work on a `claude/…` branch of this repository rather than on `main`. Such a session first merges the current `main` into its branch, keeps the author's text and integrations, and ports its own corrections onto them; it never force-pushes or rewrites history. Large reviews are split into parts that edit disjoint files, followed by independent audits of every mathematical correction; the part reports, audits and a record are kept in `research/editorial/`. The author merges a review branch into `main`; after the merge the branch is deleted, and later work starts again from `main`. Open pull requests and branches that are merged or superseded are closed.
+
+The editorial standing rules of 13 October 2026 (no duplicated arguments, no unused hypotheses, concise and rigorous statements, simpler proofs, correct placement, one bibliography entry per work) are recorded in `PLAN.md` and in the book-writing skill.
+
 ## Public book PDF and homepage
 
 On 30 September 2026 the user explicitly authorized updating
