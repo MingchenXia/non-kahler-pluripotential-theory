@@ -3,7 +3,7 @@
 
 The threefold mass formula locates the source of unbounded mass, but it does not by itself give a construction in higher dimension. The same heat potentials do work there: the radial--vertical block is unchanged, and each extra angular direction contributes a factor whose lower bound is uniform where the threefold mass diverges.
 
-For $n\geq3$, let
+For $n\geq2$, let
 \[
  H_n=(\mathbb C^n\setminus\{0\})/
              \langle z\mapsto\mathrm e^{-1}z\rangle,
@@ -21,7 +21,52 @@ The forms descend and $\omega_n$ is positive for the same reasons as in dimensio
 \]
 Thus $\omega_n$ is Gauduchon.
 
-On the affine chart $\{z_0\neq0\}$ write $\xi=(z_1/z_0,\dots,z_{n-1}/z_0)\in\mathbb C^{n-1}$,
+Potentials pulled back from the projective base reduce to the closed manifold $\mathbb P^{n-1}$. For the invariant backgrounds $a\alpha_n+b\beta_n$, positivity is decided on the base, also for families over a parameter manifold, and since $\beta_n^2=0$ the vertical form supplies exactly one factor of the Monge--Amp\`ere measure. Later chapters use this reduction for subgeodesics over strips, trace envelopes, descended Monge--Amp\`ere equations and envelope systems.
+
+\Needspace{18\baselineskip}
+\begin{lemma}\label{lem:hopf-basic-potentials}\index{Hopf manifold!basic potentials}
+Let $n\geq2$, let $a,b\geq0$ be real numbers, and let $S$ be a complex manifold, possibly a point. Put $P=p_n\times\mathrm{id}_S\colon H_n\times S\to\mathbb P^{n-1}\times S$, and write $\operatorname{pr}$ for the projections of $H_n\times S$ to $H_n$ and of $\mathbb P^{n-1}\times S$ to $\mathbb P^{n-1}$.
+\begin{enumerate}
+\item For every quasi-plurisubharmonic function $V$ on $\mathbb P^{n-1}\times S$,
+\[
+ \begin{gathered}
+ a\operatorname{pr}^*\alpha_n+b\operatorname{pr}^*\beta_n+\ddc P^*V\geq0\\
+ \Longleftrightarrow\quad
+ a\operatorname{pr}^*\omega_{\FS}+\ddc V\geq0.
+ \end{gathered}
+\]
+\item A quasi-plurisubharmonic function on $H_n\times S$ that is constant on the fibers of $P$, equivalently invariant under scalar multiplication on the first factor, is $P^*V$ for a unique quasi-plurisubharmonic function $V$ on $\mathbb P^{n-1}\times S$.
+\item For a positive Borel measure $\nu$ on $\mathbb P^{n-1}$, let $\beta_n\wedge p_n^*\nu$ denote the measure $F\mapsto\int_{\mathbb P^{n-1}}\bigl(\int_{p_n^{-1}(y)}F\beta_n\bigr)\mathrm d\nu(y)$ on $H_n$. For every $v\in\PSH(\mathbb P^{n-1},a\omega_{\FS})$,
+\[
+ \mathrm{MA}^{\mathrm{ext}}_{a\alpha_n+b\beta_n}(p_n^*v)
+ =nb\,\beta_n\wedge p_n^*\mathrm{MA}^{\mathrm{ext}}_{a\omega_{\FS}}(v).
+\]
+Consequently, for every nonnegative Borel function $F$ on $\mathbb P^{n-1}$,
+\[
+ \int_{H_n}p_n^*F\,\mathrm{MA}^{\mathrm{ext}}_{a\alpha_n+b\beta_n}(p_n^*v)
+ =2nb\int_{\mathbb P^{n-1}}F\,\mathrm{MA}^{\mathrm{ext}}_{a\omega_{\FS}}(v).
+\]
+The extended mass of $v$ is at most $a^{n-1}$, with equality for bounded $v$, so the extended mass of $p_n^*v$ is at most $2nba^{n-1}$. For $b=0$, the extended measure of $p_n^*v$ is zero.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) In local product coordinates for the submersion $P$, the current $\ddc P^*V$ is the pullback of $\ddc V$. Thus the current on the left is $T=P^*\Theta+b\operatorname{pr}^*\beta_n$, where $\Theta=a\operatorname{pr}^*\omega_{\FS}+\ddc V$. If $\Theta\geq0$, then $P^*\Theta\geq0$, because holomorphic pullback preserves positivity (\cref{lem:smooth-disk-criterion}), and $T\geq0$ because $\beta_n\geq0$. Conversely, suppose that $T\geq0$. Its wedge product with the smooth semipositive form $\operatorname{pr}^*\beta_n$ is a positive current, and $\beta_n^2=0$ gives $T\wedge\operatorname{pr}^*\beta_n=P^*\Theta\wedge\operatorname{pr}^*\beta_n$. Pairing a pulled-back current with a test form amounts to pairing the original current with the fiber integral of the form, as in the proof of \cref{lem:bounded-products-submersion}. The fibers of $P$ are those of $p_n$, on which $\beta_n$ has integral two, so
+\[
+ P_*\bigl(T\wedge\operatorname{pr}^*\beta_n\bigr)=2\Theta.
+\]
+The map $P$ is proper, so this push-forward is positive, and $\Theta\geq0$. The argument does not use $b>0$.
+
+(2) Each fiber of $P$ is an orbit of scalar multiplication on the first factor, so the two conditions agree. Since $P$ is surjective, a function $U$ satisfying them is $P^*V$ for a unique function $V$. Near each point of $\mathbb P^{n-1}\times S$, the submersion $P$ has a local holomorphic section $\gamma$ defined on a connected open set $W$, and $V=U\circ\gamma$ there. Shrinking $W$, we may write $U$ near $\gamma(W)$ as a plurisubharmonic function plus a smooth function. The composition of the plurisubharmonic part with $\gamma$ is plurisubharmonic on $W$ or identically $-\infty$. The latter would make $U$ equal to $-\infty$ on the nonempty open set $P^{-1}(W)$, which is impossible for a quasi-plurisubharmonic function. Hence $V$ is quasi-plurisubharmonic, as in the proof of \cref{prop:psh-descent-submersion}.
+
+(3) Adding a constant to $v$ changes neither side, so we may assume $v\leq0$. The functions $v_j=\max(v,-j)$ are bounded and $a\omega_{\FS}$-plurisubharmonic, and $p_n^*v_j=\max(p_n^*v,-j)$. By \cref{lem:bounded-products-submersion}, applied with $n-1$ and with $n$ factors, the bounded powers of $a\alpha_n+\ddc p_n^*v_j$ of degrees $n-1$ and $n$ are $p_n^*\nu_j$, where $\nu_j=(a\omega_{\FS}+\ddc v_j)^{n-1}$, and zero. Expanding the $n$th power of $(a\alpha_n+\ddc p_n^*v_j)+b\beta_n$ by multilinearity of bounded products (\cref{prop:bounded-products}), and using $\beta_n^2=0$, we obtain
+\[
+ (a\alpha_n+b\beta_n+\ddc p_n^*v_j)^n
+ =nb\,\beta_n\wedge p_n^*\nu_j.
+\]
+On the right, the wedge product is taken in local product coordinates. Wedging with the pullback of a top-degree measure on the base retains only the restriction of $\beta_n$ to the fibers, so this is the measure defined in the statement. Restrict both sides to the set $\{p_n^*v>-j\}=p_n^{-1}\{v>-j\}$. As $j\to\infty$, the measures $\mathbf 1_{\{v>-j\}}\nu_j$ increase to $\mathrm{MA}^{\mathrm{ext}}_{a\omega_{\FS}}(v)$. Monotone convergence in the outer integral defining $\beta_n\wedge p_n^*\nu$ and the definition \eqref{eq:extended-ma} give the measure identity. Since $\beta_n$ has integral two on each fiber, the integral identity follows. Finally, $\nu_j$ is a positive measure of mass $\int_{\mathbb P^{n-1}}(a\omega_{\FS})^{n-1}=a^{n-1}$, by Stokes' theorem for the closed form $\omega_{\FS}$, and $\mathbf 1_{\{v>-j\}}\nu_j\leq\nu_j$. For bounded $v$ and large $j$, nothing is removed.
+\end{proof}
+
+For the rest of the section, let $n\geq3$. On the affine chart $\{z_0\neq0\}$ write $\xi=(z_1/z_0,\dots,z_{n-1}/z_0)\in\mathbb C^{n-1}$,
 $x=\log|\xi|^2$, $w=\log z_0\pmod\Lambda$ and
 $\mu=\mathrm e^x/(1+\mathrm e^x)$ as before. For a smooth real function $V(x,w)$ with the endpoint properties required before \cref{lem:hopf-positivity}, let $J_n(V;x,w)$ be the density obtained by integrating $(\omega_n+\ddc V)^n$ over the angular variables $\xi/|\xi|$ against their rotation-invariant probability measure. Thus
 \[
