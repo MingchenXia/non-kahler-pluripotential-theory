@@ -104,11 +104,17 @@ Since $|G(x,v_j)-G(x,u)|\leq\delta_j$, the functions $a_\pm=a_j\pm\delta_j$ sati
 \]
 Hence $a_j\to u$ uniformly. By \cref{lem:prescribed-potential-trace},
 $C^{-1}\omega\leq\omega_{a_j}\leq C\omega$ uniformly.
-In particular $\Delta_ga_j$ is uniformly bounded. Fixed-operator elliptic estimates give uniform $W^{2,q}$ bounds for every finite $q$, so $u\in C^{1,\alpha}(X)$ for every $0<\alpha<1$.
+In particular $\Delta_ga_j$ is uniformly bounded. Fixed-operator elliptic estimates give uniform $W^{2,q}$ bounds for every finite $q$, so the $a_j$ are bounded in $C^{1,\alpha}(X)$ uniformly in $j$, for every $0<\alpha<1$, and $u\in C^{1,\alpha}(X)$.
 
-We explain the uniformly elliptic passage to higher regularity, using the concave extension from \cref{cor:classical-higher-estimate}.
+The right-hand sides $a_j+G(x,v_j)$ need not be uniformly H\"older, because the $v_j$ are not. We therefore solve once more, with the $a_j$ as prescribed potentials. By \cref{thm:smooth-proper-existence}, there is a smooth strictly $\omega$-plurisubharmonic $b_j$ with
+\[
+ \omega_{b_j}^n=\mathrm e^{b_j+G(x,a_j)}\omega^n.
+\]
+The $a_j$ are smooth, strictly $\omega$-plurisubharmonic and uniformly bounded, since $|a_j|\leq\sup_X|u|+\delta_j$. Hence \cref{lem:prescribed-potential-trace}, applied with $a_j$ in place of $v$, gives $C^{-1}\omega\leq\omega_{b_j}\leq C\omega$ uniformly, and the elliptic estimates above bound the $b_j$ in $C^{1,\alpha}(X)$ uniformly in $j$. Moreover $|G(x,a_j)-G(x,u)|\leq C|a_j-u|\to0$ uniformly, so the comparison argument above gives $b_j\to u$ uniformly. The right-hand sides $b_j+G(x,a_j)$ are now bounded in $C^\alpha(X)$ uniformly in $j$.
+
+We pass to second derivatives using the concave extension from \cref{cor:classical-higher-estimate}.
 On a relatively compact coordinate chart, let $P$ send a real Hessian to its complex Hermitian part, with the coordinate normalization of $\ddc$.
-By the uniform equivalence just proved, all matrices $g(x)+P(D^2a_j)$ lie in a fixed compact set $\mathcal K=\{A:\lambda I\leq A\leq\Lambda I\}$ of positive Hermitian matrices. Define
+By the uniform equivalence just proved, all matrices $g(x)+P(D^2b_j)$ lie in a fixed compact set $\mathcal K=\{A:\lambda I\leq A\leq\Lambda I\}$ of positive Hermitian matrices. Define
 \[
  \mathcal F(x,N)=\inf_{A\in\mathcal K}
  \left\{\log\det A+\operatorname{tr}\bigl[A^{-1}(g(x)+P(N)-A)\bigr]\right\}
@@ -116,14 +122,11 @@ By the uniform equivalence just proved, all matrices $g(x)+P(D^2a_j)$ lie in a f
 \]
 The tangent inequality for the concave logarithmic determinant shows that this is the original operator whenever $g(x)+P(N)\in\mathcal K$.
 It is concave and uniformly elliptic on real symmetric matrices: for $N'\geq0$, $P(N')\geq0$ and its trace is a fixed positive multiple of $\operatorname{tr}N'$, while $A^{\pm1}$ have uniform bounds. Its dependence on $x$ is uniformly Lipschitz on this chart.
-Thus the $a_j$ are classical, and hence viscosity, solutions of
+Thus the $b_j$ are classical solutions of
 \[
- \mathcal F(x,D^2a_j)=a_j+G(x,v_j).
+ \mathcal F(x,D^2b_j)=b_j+G(x,a_j),
 \]
-Here $a_j\to u$ and $G(x,v_j)\to G(x,u)$ uniformly, while the operator $\mathcal F$ does not depend on $j$. Stability of viscosity solutions under uniform convergence gives
-$\mathcal F(x,D^2u)=u+G(x,u)$ in the viscosity sense.
-The right-hand side is H\"older because $u\in C^{1,\alpha}$.
-The local Evans--Krylov estimate therefore gives $u\in C^{2,\beta}$ for some $\beta>0$.
+with the same operator for every $j$ and right-hand sides bounded in $C^\alpha$ uniformly in $j$. The local Evans--Krylov estimate bounds the $b_j$ in $C^{2,\beta}$ on smaller charts, uniformly in $j$, for some $\beta>0$. Since $b_j\to u$ uniformly, the Arzel\`a--Ascoli theorem gives $u\in C^{2,\beta}$.
 The metric bounds pass to the limit, so the original equation is now uniformly elliptic with $\omega+\ddc u>0$.
 Differentiating it and applying Schauder estimates repeatedly proves $u\in C^\infty(X)$.
 \end{proof}
