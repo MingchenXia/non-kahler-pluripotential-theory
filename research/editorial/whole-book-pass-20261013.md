@@ -124,4 +124,6 @@ Book sources changed: 358 files, about 6,200 lines removed and 3,800 added. No t
 - **GZ17.** The author's copy of GZ17 (in `research/sources/`) and the erratum were used to give locators for all GZ17 citations; no cited statement is affected by the erratum.
 
 ## 5. Build and publication
-(See below.)
+- Clean build: 1748 physical / 1718 printed pages (before the pass: 1798 / 1768). No errors, no overfull boxes, no undefined or multiply defined references; one underfull line in a bibliography entry. Citation placement check passes.
+- Inspected: the first pages of the two new chapters, the contents and the last index page (printed page 1718).
+- Published in website commit 4064b6c (`Papers/SHPT_vibe.pdf` and `readme.md` only), PDF SHA-256 `1f240ad4…`; the live GitHub Pages PDF matches, and the homepage shows “A research monograph. 1718 pages. Updated October 13, 2026.”

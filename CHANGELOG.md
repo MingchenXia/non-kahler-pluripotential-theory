@@ -1,5 +1,14 @@
 # Modification history
 
+## 13 October 2026 — Whole-book pass: duplicates, unused hypotheses, concision, placement (review branch)
+
+The author asked for duplicated arguments and unused hypotheses to be deleted, for concise and rigorous statements, simpler proofs, and for misplaced content to be moved. See [the record](research/editorial/whole-book-pass-20261013.md).
+- 23 parts with disjoint files, then 15 independent audits: duplicated statements merged with their labels moved; repeated arguments proved once in shared lemmas; unused hypotheses removed after checking every proof and caller in the enlarged scope; recaps replaced by reminders. Audits restored one narrowed scope and one deleted step, and repaired a citation of a deleted remark.
+- Placement after a label-graph analysis of the whole book, by seven agents and three audits. New chapters: "Gauduchon degrees and positivity of vector bundles" and "Polar curvature and zero-volume models". New appendix: "Cotangent torsors on split elliptic ruled surfaces". The core of the variational volume now precedes its uses. Proved results from the research programme moved into the main text. Forward references from proofs and statements fell from 116 to about 40, none circular.
+- Historical notes synchronized with every change and reordered by chapter; preface roadmap updated.
+- Also: SGPT bibliography entries merged; GZ17 locators added from the author's copy (erratum checked); repository workflow updated (PLAN, AGENTS, book-writing skill).
+- Clean build 1748 physical / 1718 printed pages; published in website commit 4064b6c, live PDF SHA-256 `1f240ad4…`.
+
 ## 13 October 2026 — Proofreading of the author's new material (review branch)
 
 The author's `main` (201 new commits, including the chapter on complex Hessian equations, new sections in most chapters and the author's own integration of S04, S05, P05 and S07) was merged into the review branch. The author's text was kept; the review branch's earlier corrections were ported onto it, and its duplicate integration was withdrawn.
