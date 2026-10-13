@@ -142,7 +142,7 @@ which proves exactness in every such background.
 
 \subsection{Mass and the ideal class}
 
-The mass of a basic potential is computed by the closed base and the area of the elliptic fiber. The formula below holds for all $a,b>0$. It computes one representative; the target still fails the bounded mass property by \cref{cor:hopf-all-metrics-unbounded}.
+The mass of a basic potential is computed by the closed base and the area of the elliptic fiber. The formula below holds for all $a,b>0$. It computes the masses of basic potentials only; the target still fails the bounded mass property by \cref{cor:hopf-all-metrics-unbounded}.
 
 \begin{proposition}\label{prop:hopf-basic-mass}\index{Monge--Amp\`ere mass!Hopf pullback}
 For every $v\in\PSH(B,a\kappa)$,
@@ -153,7 +153,7 @@ For every $v\in\PSH(B,a\kappa)$,
 In particular, the trace envelope in \eqref{eq:hopf-projective-trace-envelope} has mass between $2nb(a/2)^d$ and $2nba^d$.
 \end{proposition}
 \begin{proof}
-Normalize $v\leq0$ and put $v_j=\max(v,-j)$. For bounded potentials, the horizontal current has rank at most $d=n-1$ and $\beta^2=0$, so the bounded local product gives
+Normalize $v\leq0$ and put $v_j=\max(v,-j)$. For bounded potentials, the current $q^*(a\kappa+\ddc v_j)$ is pulled back from the base of dimension $d=n-1$, so its $(d+1)$st power vanishes; since also $\beta^2=0$, the bounded local product gives
 \[
  (\Omega_{a,b}+\ddc q^*v_j)^n
        =nb\,\beta\wedge q^*(a\kappa+\ddc v_j)^d.
@@ -167,7 +167,7 @@ Set
 \[
  U([z_0:\cdots:z_n])
  =\log\frac{\sum_{i=0}^{n-2}|z_i|^2}{\sum_{i=0}^n|z_i|^2},
- \qquad P=[0:\cdots:0:1]\in B.
+ \qquad P=[0:\cdots:0:1:0]\in B.
 \]
 Then $\nu(U,B)=0$ and, for every $t>0$,
 \[
@@ -182,9 +182,9 @@ for every divisor $D$ on every smooth compact modification $Z\to Y$, with the id
 It need not equal the normalized trace envelope.
 \end{example}
 \begin{proof}
-The singular locus of $U$ is the projective line defined by $z_0=\cdots=z_{n-2}=0$, of codimension $d$. Its smooth-center multiplier ideals are given by \cref{lem:smooth-center-multiplier-ideal}; restriction to $B$ gives the displayed powers of $\mathfrak m_P$. Dividing their orders by $t$ proves the trace formula. Exactness of the ordinary restriction follows from \cref{prop:trace-naive-comparison}, since the ambient pullback has analytic singularities.
+The pole set of $U$ is the projective line $L$ defined by $z_0=\cdots=z_{n-2}=0$, of codimension $d$, and $U$ is smooth off $L$. Near $L$, $U$ is $\log\sum_{i=0}^{n-2}|z_i|^2$ up to a bounded term, so \cref{lem:smooth-center-multiplier-ideal} gives $\mathcal I(tU)=\mathcal I_L^{\max\{\lfloor t\rfloor-d+1,0\}}$. The line $L$ meets $B$ transversally at the single point $P$, so restriction to $B$ gives the displayed powers of $\mathfrak m_P$; in particular $\nu(U,B)=0$. Dividing their orders by $t$ proves the trace formula. Exactness of the ordinary restriction follows from \cref{prop:trace-naive-comparison}, since the ambient pullback has analytic singularities.
 
-On the point blowup $\sigma:\widetilde B\to B$, let $F$ be the exceptional divisor, $H=[\sigma^*\kappa]$, and let $\eta$ be the pullback of the Fubini--Study form by the resolved projection to $\mathbb P^{d-1}$. The logarithm defining $U|_B$ gives
+On the point blowup $\sigma\colon\widetilde B\to B$ at $P$, let $F$ be the exceptional divisor, $H=[\sigma^*\kappa]$, and let $\eta$ be the pullback of the Fubini--Study form by the resolved projection to $\mathbb P^{d-1}$. The logarithm defining $U|_B$ gives
 \[
  \sigma^*(a\kappa)+\ddc(U|_B\circ\sigma)
        =[F]+(a-1)\sigma^*\kappa+\eta.
@@ -193,7 +193,7 @@ The residual form is smooth semipositive for $a>1$, with class $aH-F$. Its smoot
 \end{proof}
 
 \begin{corollary}\label{cor:hopf-trace-ideal-class}\index{Trace!background independence of the ideal class}
-The ideal singularity class of $\mathcal T_{\Omega_{a,b}}(u;Y)$ is independent of $a\geq2C$ and $b>0$, and depends only on the multiplier-ideal class of $U$. These classes respect addition and positive scaling of the ambient data: for $U_1,U_2$ with zero generic Lelong number along $B$ and $\lambda>0$, in sufficiently large invariant backgrounds,
+The ideal singularity class of $\mathcal T_{\Omega_{a,b}}(u;Y)$ is independent of $a\geq2C$ and $b>0$, and depends only on the multiplier-ideal class of $U$. These classes respect addition and positive scaling of the ambient data: for $U_1,U_2\in\QPSH(\mathbb P^n)$ with zero generic Lelong number along $B$, $u_i=U_i\circ p$ and $\lambda>0$, in sufficiently large invariant backgrounds,
 \[
  \mathcal T(u_1+u_2;Y)\sim_{\mathcal I}
        \mathcal T(u_1;Y)+\mathcal T(u_2;Y),
@@ -215,21 +215,21 @@ The ideal-class conclusion here concerns the invariant backgrounds $\Omega_{a,b}
 
 Let $U_m$ be the ambient multiplier-ideal approximants used in \cref{thm:restricted-analytic-envelope-limit}. After discarding finitely many dyadic indices, their restrictions belong to $\PSH(B,a\kappa)$. Put
 \[
- w_j=P_{a\kappa}[U_{2^j}|_B],\qquad v_j=q^*w_j.
+ w_{a,j}=P_{a\kappa}[U_{2^j}|_B],\qquad v_j=q^*w_{a,j}.
 \]
 
 \begin{proposition}\label{prop:hopf-trace-analytic-approximation}\index{Trace!Hopf analytic approximation}
-The potentials $v_j$ are the full ordinary analytic models
+The potentials $v_j$ are the ordinary envelopes of the pulled-back analytic approximants,
 \[
  v_j=P_{\Omega_{a,b}}[q^*(U_{2^j}|_B)].
 \]
-They decrease to $\mathcal T_{\Omega_{a,b}}(u;Y)$ in $L^1(Y)$. For every smooth compact modification $\pi:Z\to Y$, their pullbacks converge in $L^1(Z)$, and for every prime divisor $D\subset Z$,
+They decrease to $\mathcal T_{\Omega_{a,b}}(u;Y)$ in $L^1(Y)$. For every smooth compact modification $\pi\colon Z\to Y$, their pullbacks converge in $L^1(Z)$, and for every prime divisor $D\subset Z$,
 \[
  \nu(v_j\circ\pi,D)\longrightarrow\tau_{Y,u}(D).
 \]
 \end{proposition}
 \begin{proof}
-For $h\in\PSH(B,a\kappa)$, each finite obstacle envelope $P_{\Omega_{a,b}}(q^*h+A,0)$ is invariant under the elliptic action. Its full supremum descends to the base, where \eqref{eq:hopf-basic-positivity} gives the background condition. Surjectivity makes the obstacle inequalities equivalent on $Y$ and $B$. Hence
+Let $h\in\PSH(B,a\kappa)$ and $A>0$. The family of competitors for the envelope $P_{\Omega_{a,b}}(q^*h+A,0)$ is invariant under the elliptic action, hence so is the envelope, and as in the proof of \cref{thm:hopf-projective-exact-trace} it is pulled back from the base. By \eqref{eq:hopf-basic-positivity}, a basic potential $q^*g$ is $\Omega_{a,b}$-plurisubharmonic exactly when $g$ is $a\kappa$-plurisubharmonic, and since $q$ is surjective, $q^*g\leq\min(q^*h+A,0)$ exactly when $g\leq\min(h+A,0)$. Hence
 \[
  P_{\Omega_{a,b}}(q^*h+A,0)
        =q^*P_{a\kappa}(h+A,0).
@@ -237,9 +237,10 @@ For $h\in\PSH(B,a\kappa)$, each finite obstacle envelope $P_{\Omega_{a,b}}(q^*h+
 Letting $A\to+\infty$ and taking upper semicontinuous regularizations, we obtain
 \[
  P_{\Omega_{a,b}}[q^*h]=q^*P_{a\kappa}[h].
-\] Analytic type follows from \cref{prop:analytic-envelope-type}.
+\]
+For $h=U_{2^j}|_B$ this is the asserted identity. By \cref{prop:analytic-envelope-type}, $w_{a,j}$ has the analytic type of $U_{2^j}|_B$, so $v_j$ has the analytic type of $q^*(U_{2^j}|_B)$.
 
-The base models decrease to $w_a$ by \cref{thm:restricted-analytic-envelope-limit}. Their pullbacks therefore decrease to $q^*w_a$ and converge in $L^1(Y)$ by genuine decreasing quasi-plurisubharmonic convergence. The extracted-divisor formula \eqref{eq:dominant-divisorial-pullback} transfers convergence of all base divisorial Lelong numbers to every $D$ over $Y$; horizontal divisors have coefficient zero throughout. Finally, \cref{lem:modification-lone-pullback} gives $L^1$ convergence on each compact modification.
+The base models $w_{a,j}$ decrease to $w_a$ by \cref{thm:restricted-analytic-envelope-limit}, applied on $B$ with $\Omega=a\kappa$ and $\delta_m=0$. Their pullbacks therefore decrease to $q^*w_a$, and they converge in $L^1(Y)$ by monotone convergence, since $q^*w_a\leq v_j\leq0$ and $q^*w_a$ is integrable. The divisorial Lelong numbers of the $w_{a,j}$ converge on every compact model of $B$, by the positive-mass argument in the proof of \cref{thm:kahler-target-exact-trace}. The extracted-divisor formula \eqref{eq:dominant-divisorial-pullback} transfers this convergence to every $D$ over $Y$; divisors dominating $B$ have coefficient zero throughout. Finally, \cref{lem:modification-lone-pullback} gives $L^1$ convergence on each compact modification.
 \end{proof}
 
-These results answer the trace question for arbitrary genuine projective data pulled back to the Hopf pair $(H_{n+1},H_n)$, including nonanalytic data. They neither require bounded mass on $H_n$ nor supply convergence of extremal singularity volumes there. The unrestricted realization problem of \cref{qu:exact-trace-program} still concerns data without this projective pullback structure.
+These results answer the trace question for all projective data pulled back to the Hopf pair $(H_{n+1},H_n)$, including nonanalytic data. They neither require bounded mass on $H_n$ nor give convergence of the lower and upper singularity volumes there. The unrestricted realization problem of \cref{qu:exact-trace-program} still concerns data without this projective pullback structure.
