@@ -73,7 +73,33 @@ For the last assertion put $q_j=P_\theta(u_j,w)$. Contact gives
 The case already treated bounds $\sup_Xq_j$ from below, and therefore also $\sup_Xu_j\geq\sup_Xq_j$. If $u_j\to u$ in $L^1$, then, since $q_j\leq w$, a subsequence of the $q_j$ converges in $L^1$ to some $q\not\equiv-\infty$, and the case already treated gives $q\in\mathcal E_\varphi$. Since $q\leq u\leq\varphi+C$, upward stability gives $u\in\mathcal E_\varphi$ as well.
 \end{proof}
 
-When the first moment of the difference from the limit tends to zero, rooftops of the tails identify the limit in capacity.
+A common lower bound in $\mathcal E_\varphi$ and a weighted first moment of the difference from the limit tending to zero give convergence in capacity: rooftops of the tails identify the limit.
+
+\Needspace{13\baselineskip}
+\begin{lemma}\label{lem:big-weighted-common-bound}
+Let $a_j\in\PSH(X,\theta)$ have a common upper bound and converge in $L^1(X)$ to $a\in\PSH(X,\theta)$ with $a\preceq\varphi$. Suppose there is $h\in\mathcal E_\varphi$ such that $h\leq a_j$ for every $j$. If, for some $\lambda>0$,
+\[
+ \int_X|a_j-a|\mathrm{e}^{\lambda a}\,\mu_{a_j}\longrightarrow0,
+\]
+then $a\in\mathcal E_\varphi$ and $a_j\to a$ in capacity.
+\end{lemma}
+\begin{proof}
+By \cref{lem:qpsh-almost-everywhere-order}, the lower bound passes to the limit, so $h\leq a\preceq\varphi$, and upward stability gives $a\in\mathcal E_\varphi$. Start with any subsequence and extract a further subsequence along which the integrals in the hypothesis are at most $2^{-j}$ and $a_j\to a$ almost everywhere for smooth volume. For $N\geq j$ let $p_{j,N}=P_\theta(a_j,\ldots,a_N)$; these rooftops are not identically $-\infty$ because $h$ is a competitor. Partitioning the contact set according to the first obstacle touched gives
+\[
+ \int_X\min(1,|p_{j,N}-a|)\mathrm{e}^{\lambda a}\,\mu_{p_{j,N}}
+ \leq\sum_{k=j}^N\int_X|a_k-a|\mathrm{e}^{\lambda a}\,\mu_{a_k}
+ \leq2^{1-j}.
+\]
+The decreasing limits $p_j=P_\theta(\inf_{k\geq j}a_k)$ satisfy $h\leq p_j\leq a$, the second inequality by the almost-everywhere convergence, and hence so does their increasing regularized limit $p$. Upward stability puts the $p_j$ and $p$ in $\mathcal E_\varphi$, although the finite rooftops need not lie there.
+
+Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ hold in capacity by \cref{lem:monotone-psh-capacity}, since $h$ is a common lower bound. Apply \cref{lem:weighted-extended-lsc} to this rooftop estimate, with the bounded weights $\min(1,|p_{j,N}-a|)\mathrm{e}^{\lambda a}$ and then $\min(1,|p_j-a|)\mathrm{e}^{\lambda a}$. These weights converge in capacity: discard the deep sublevel sets of $h$ and $a$, and use continuity on the remaining finite ranges. The result is
+\[
+ \int_X\min(1,|p-a|)\mathrm{e}^{\lambda a}\,\mu_p=0.
+\]
+Since the exponential is positive off a pluripolar set, which $\mu_p$ does not charge, $\mu_p(\{p<a\})=0$, and zero domination gives $p=a$. The upper envelopes $(\sup_{k\geq j}a_k)^*$ decrease to $a$. Squeezing the extracted $a_j$ between these envelopes and $p_j$ proves convergence in capacity. Since the initial subsequence was arbitrary, the conclusion holds for the original sequence.
+\end{proof}
+
+Without a given lower bound, the first-moment criterion produces one from the rooftops of the tails.
 
 \Needspace{20\baselineskip}
 \begin{theorem}\label{thm:big-relative-self-measure-convergence}
@@ -84,19 +110,13 @@ Let $u_j,u\in\mathcal E_\varphi$, with $u_j\to u$ in $L^1(X)$. If
 then $u_j\to u$ in capacity. Moreover, after passing to a subsequence, $P_\theta(\inf_{k\geq j}u_k)$ belongs to $\mathcal E_\varphi$ for every $j$.
 \end{theorem}
 \begin{proof}
-Start with any subsequence and extract a further subsequence along which the integrals in the hypothesis are at most $2^{-j}$ and $u_j\to u$ almost everywhere for smooth volume. The envelope identity and Hartogs' lemma give a uniform bound $u_j,u\leq\varphi+C$. For $N\geq j$ let $p_{j,N}=P_\theta(u_j,\ldots,u_N)$. Partitioning the contact set according to the first obstacle touched gives
+Start with any subsequence and extract a further subsequence along which the integrals in the hypothesis are at most $2^{-j}$ and $u_j\to u$ almost everywhere for smooth volume. The envelope identity and Hartogs' lemma give a uniform bound $u_j,u\leq\varphi+C$. For $N\geq j$ let $p_{j,N}=P_\theta(u_j,\ldots,u_N)$. Partitioning the contact set as in the proof of the preceding lemma gives
 \begin{equation}\label{eq:big-self-measure-roofs}
  \int_X|p_{j,N}-u|\,\mu_{p_{j,N}}\leq2^{1-j}.
 \end{equation}
-Apply \cref{prop:big-relative-first-moment} with $w=u$, in its one-sided form. It bounds $\sup_Xp_{j,N}$ from below, independently of $N$. Consequently the decreasing sequence has a limit
+By \eqref{eq:big-self-measure-roofs}, \cref{prop:big-relative-first-moment}, applied with $w=u$ in its one-sided form, bounds $\sup_Xp_{j,N}$ from below, independently of $N$. Consequently the decreasing sequence has a limit
 \[
  p_j=P_\theta\left(\inf_{k\geq j}u_k\right)
 \]
-that is not identically $-\infty$, and the same proposition puts $p_j$ in $\mathcal E_\varphi$. The increasing sequence $p_j$ has a regularized limit $p$, which belongs to $\mathcal E_\varphi$ by upward stability, since $p_1\leq p\leq u\preceq\varphi$. The inequality $p\leq u$ follows from the almost-everywhere convergence of the extracted sequence.
-
-Both $p_{j,N}\downarrow p_j$ and $p_j\uparrow p$ hold in capacity by \cref{lem:monotone-psh-capacity}, since $p_1\not\equiv-\infty$ is a common lower bound. Apply \cref{lem:weighted-extended-lsc} to \eqref{eq:big-self-measure-roofs}, with the bounded weights $\min(1,|p_{j,N}-u|)$ and then $\min(1,|p_j-u|)$. These weights converge in capacity: discard the deep sublevel sets of $p_1$ and $u$, and use that $\min(1,|x-y|)$ is Lipschitz on finite values. The result is
-\[
- \int_X\min(1,|p-u|)\,\mu_p=0.
-\]
-Hence $\mu_p(\{p<u\})=0$, and zero domination gives $p=u$. The upper envelopes $(\sup_{k\geq j}u_k)^*$ decrease to $u$. Squeezing the extracted $u_j$ between these envelopes and $p_j$ proves convergence in capacity. Since the initial subsequence was arbitrary, the conclusion holds for the original sequence.
+that is not identically $-\infty$, and the same proposition puts $p_j$ in $\mathcal E_\varphi$. This proves the second assertion. Since $p_1\leq u_k$ for every $k$ and $\mathrm{e}^{u}\leq\mathrm{e}^{\sup_Xu}$, the preceding lemma, applied to the extracted sequence with $h=p_1$ and $\lambda=1$, shows that it converges to $u$ in capacity. Since the initial subsequence was arbitrary, the conclusion holds for the original sequence.
 \end{proof}

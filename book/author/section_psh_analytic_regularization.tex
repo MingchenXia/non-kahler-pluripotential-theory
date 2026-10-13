@@ -65,6 +65,8 @@ uniformly for centers in the inner chart. A Borel set in the inner chart with ze
 
 \input{author/section_psh_strict_lelong_levels}
 
+\input{author/section_psh_divisorial_sobolev}
+
 \section{The local Bergman estimates}
 
 Demailly's approximation of plurisubharmonic functions by functions with analytic singularities is built from Bergman kernels of weighted spaces of holomorphic functions. In this section we recall the local construction and its estimates. Fix a bounded pseudoconvex domain $\Omega\subset\mathbb C^n$ and a plurisubharmonic function $\psi$ on $\Omega$. Write $\mathrm{d}\lambda$ for Euclidean volume and $B(x,r)$ for the Euclidean ball of radius $r>0$ about $x$. For a positive integer $m$, define the weighted Hilbert space of holomorphic functions
@@ -198,3 +200,23 @@ Here the $s_\ell$ are local holomorphic defining functions of divisors, which ma
 \end{theorem}
 
 This classical theorem is applied to the closed current $\ddc u$ with the smooth lower bound $-\alpha$; see \cref{sec:history-psh} for its source. The lower bound need not be closed, and $X$ need not be K\"ahler. The sequence $(\widetilde u_j)$ need not be the multiplier-ideal sequence of \cref{thm:demailly-hermitian-input}. If $\theta+\ddc u\geq\varepsilon\omega$ for some $\varepsilon>0$, applying the theorem with $\alpha=\theta-\varepsilon\omega$ and discarding the terms with $\delta_j\geq\varepsilon$ gives approximants with $\theta+\ddc\widetilde u_j\geq(\varepsilon-\delta_j)\omega>0$; thus strict positivity is preserved.
+
+On such a modification, a Hermitian form pulled back from $X$ becomes positive after a small exceptional correction. For an effective real divisor $D=\sum_ja_jD_j$ on a compact complex manifold, with prime divisors $D_j$ and $a_j>0$, choose a smooth Hermitian metric on each line bundle $\mathcal O(D_j)$, with canonical section $s_j$ and Chern curvature form $\eta_j$, and put
+\[
+ \sigma_D=\sum_ja_j\log|s_j|^2,\qquad \eta_D=\sum_ja_j\eta_j.
+\]
+The form $\eta_D$ is closed, and the Poincar\'e--Lelong formula reads $\ddc\sigma_D=[D]-\eta_D$.
+
+\begin{lemma}\label{lem:nef-blowup-metric}
+Let $p\colon Z\to X$ be a finite composition of blowups along smooth centers of codimension at least two, and let $h_X$ be a Hermitian form on $X$. There are a constant $C_0>0$, an effective real divisor $D$ on $Z$ whose components are exceptional for $p$, and a curvature form $\eta_D$ as above such that
+\begin{equation}\label{eq:nef-blowup-positive-metric}
+ h_Z=C_0p^*h_X-\eta_D>0.
+\end{equation}
+Every component of $D$ is mapped by $p$ into a set of complex codimension at least two in $X$.
+\end{lemma}
+
+\begin{proof}
+First let $q\colon M'\to M$ be one blowup along a smooth center, with exceptional divisor $E$, and let $h_M$ be a Hermitian form on $M$. The exceptional divisor $E$ is the projectivized normal bundle of the center, and $\mathcal O(-E)|_E$ is the dual of its tautological line subbundle; on each projective fiber of $E$ it restricts to $\mathcal O(1)$. A Hermitian metric on the normal bundle of the center therefore induces a metric on $\mathcal O(-E)|_E$ whose curvature restricts to a Fubini--Study form on each fiber, and so is positive on the tangent spaces of the fibers. Extend this metric to $\mathcal O(-E)$ on $M'$ by extending the smooth logarithm of its ratio to a fixed reference metric from the closed submanifold $E$, and let $\beta$ be its curvature. The semipositive form $q^*h_M$ is positive off $E$, and at points of $E$ its kernel is exactly the tangent space of the fiber, on which $\beta$ is positive. Hence $Cq^*h_M+\beta>0$ for every sufficiently large $C$: otherwise, unit tangent vectors violating the inequality for $C\to\infty$ would converge, by compactness, to a vector in the kernel of $q^*h_M$ on which $\beta$ is nonpositive. With $\eta_E=-\beta$, the curvature of the induced metric on $\mathcal O(E)$, this reads $Cq^*h_M-\eta_E>0$.
+
+For a composition of blowups, apply this step successively, with $h_M$ the positive form already obtained on the previous blowup. Each step multiplies the previous divisor by a positive constant, pulls it back and adds the new exceptional divisor, so the divisor stays effective and exceptional. This proves \eqref{eq:nef-blowup-positive-metric}. Each exceptional divisor maps into the image of its center, which has dimension at most $n-2$.
+\end{proof}

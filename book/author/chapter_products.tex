@@ -3,7 +3,7 @@
 
 Throughout this chapter, $\omega$ is a Hermitian form on $X$ and $\mathrm{d}V$ is a smooth positive probability volume form used for $L^1$ norms and integrals. As in \cref{sec:psh-bounded-products}, we write $\theta_v=\theta+\ddc v$, and $\mathrm{MA}_\theta(v)=(\theta+\ddc v)^n$ when $v$ is bounded; convergence in capacity refers to the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}.
 
-For an unbounded $\theta$-plurisubharmonic function $u$, the Bedford--Taylor products of \cref{prop:bounded-products} are not defined. On the set $\{u>-t\}$, however, $u$ coincides with its bounded truncation $\max(u,-t)$, and since bounded products are plurifinely local, the restricted measures are compatible as $t$ increases. Their limit is a measure on the complement of the pole set, the non-pluripolar Monge--Amp\`ere measure of $u$. For a general smooth background $\theta$, the truncation need not be $\theta$-plurisubharmonic, so positivity of the restricted products requires a local argument. The total mass of the limit may also be infinite. For a Hermitian background, finiteness of this mass for every potential is equivalent to a uniform bound on the Monge--Amp\`ere masses of bounded potentials, the bounded mass property. When the property fails, we construct a potential of infinite mass whose multiplier ideals are all trivial; its complex Hessian even has integrable coefficients, although its determinant is not integrable.
+For an unbounded $\theta$-plurisubharmonic function $u$, the Bedford--Taylor products of \cref{prop:bounded-products} are not defined. On the set $\{u>-t\}$, however, $u$ coincides with its bounded truncation $\max(u,-t)$, and since bounded products are plurifinely local, the restricted measures are compatible as $t$ increases. Their limit is a measure on the complement of the pole set, the non-pluripolar Monge--Amp\`ere measure of $u$. For a general smooth background $\theta$, the truncation need not be $\theta$-plurisubharmonic, so positivity of the restricted products requires a local argument. The total mass of the limit may also be infinite. For a Hermitian background, finiteness of this mass for every potential is equivalent to a uniform bound on the Monge--Amp\`ere masses of bounded potentials, the bounded mass property; it holds whenever $X$ has a modification from a compact K\"ahler manifold, in particular when $X$ is Moishezon. When the property fails, we construct a potential of infinite mass whose multiplier ideals are all trivial; its complex Hessian even has integrable coefficients, although its determinant is not integrable.
 
 \section{Truncation and non-pluripolar measures}
 
@@ -204,6 +204,29 @@ The bounded mass property is independent of the Hermitian form. Moreover, $v_+(\
 \end{proposition}
 \begin{proof}
 Smooth strictly $\omega$-plurisubharmonic potentials are bounded, so $\Vsm(\omega)\leq v_+(\omega)$. Conversely, approximate a bounded potential by \cref{thm:bounded-exact-regularization}. The smooth approximants are strictly $\omega$-plurisubharmonic, decrease and remain uniformly bounded, so the continuity of bounded products along decreasing sequences gives convergence of their total masses. This proves $v_+(\omega)=\Vsm(\omega)$, and metric independence follows from \cref{prop:smooth-bmp-metric}.
+\end{proof}
+
+A compact complex manifold of dimension $n$ is \emph{Moishezon} if it has $n$ algebraically independent meromorphic functions. By Moishezon's theorem, a compact irreducible complex space of dimension $n$ with $n$ algebraically independent meromorphic functions admits a modification from a smooth projective manifold; the source of this form of the theorem is given in \cref{sec:history-products}. Such a modification gives $X$ the bounded mass property: the pulled-back Hermitian form is dominated by a fixed K\"ahler form, whose Monge--Amp\`ere mass does not change when a smooth potential is added.
+
+\begin{lemma}\label{lem:kahler-modification-bounded-mass}
+If a compact complex manifold $X$ admits a modification $\pi\colon Z\to X$ from a compact K\"ahler manifold, in particular if $X$ is Moishezon, then $X$ has the bounded mass property.
+\end{lemma}
+\begin{proof}
+For a Moishezon manifold, Moishezon's theorem gives such a modification from a smooth projective, hence K\"ahler, manifold. Fix a Hermitian form $\omega$ on $X$ and a K\"ahler form $\kappa$ on $Z$, and choose $C>0$ with $\pi^*\omega\leq C\kappa$. By \cref{prop:bmp-metric}, it suffices to bound the masses of smooth functions $u\in\PSH(X,\omega)$. Their pullbacks satisfy
+\[
+ 0\leq\pi^*\omega+\ddc(u\circ\pi)
+ \leq C\kappa+\ddc(u\circ\pi).
+\]
+Taking top powers and integrating gives
+\[
+ \begin{split}
+ \int_X(\omega+\ddc u)^n
+ &=\int_Z(\pi^*\omega+\ddc(u\circ\pi))^n\\
+ &\leq\int_Z(C\kappa+\ddc(u\circ\pi))^n
+ =C^n\int_Z\kappa^n.
+ \end{split}
+\]
+The first equality follows by change of variables on the set where $\pi$ is biholomorphic, since smooth top-degree forms give the exceptional analytic sets zero mass. The inequality follows by expanding in the smooth semipositive difference $C\kappa-\pi^*\omega$, and the last equality follows from Stokes' theorem because $\kappa$ is closed. The bound does not depend on $u$, which proves the bounded mass property.
 \end{proof}
 
 \begin{proposition}\label{prop:bmp-finite}

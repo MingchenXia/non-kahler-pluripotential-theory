@@ -6,18 +6,18 @@ We return to the Hermitian background $h$ and a fixed nonzero density $0\leq f\i
  \mathrm{MA}^{\mathrm{ext}}_h(u)=\mathrm{e}^{\lambda u}f\,\mathrm{d}V,
  \qquad u\in\PSH(X,h).
 \end{equation}
-An \emph{exponential subsolution} at exponent $\lambda$ is a function $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$. Bounded solutions of the truncated equations dominate every exponential subsolution, so as soon as one subsolution exists, their decreasing limit is the greatest solution. A positive threshold $b_h(f)$ provides exponential subsolutions for every exponent, and the normalized greatest solutions then recover $b_h(f)$ as $\lambda\downarrow0$. The domination comes from the following consequence of strict domination, which we state for an arbitrary measure.
+An \emph{exponential subsolution} at exponent $\lambda$ is a function $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm{e}^{\lambda s}f\,\mathrm{d}V$. Bounded solutions of the truncated equations dominate every exponential subsolution, so as soon as one subsolution exists, their decreasing limit is the greatest solution. A positive threshold $b_h(f)$ provides exponential subsolutions for every exponent, and the normalized greatest solutions then recover $b_h(f)$ as $\lambda\downarrow0$. The domination comes from the following case of \cref{cor:singular-exponential-order}, which we state for an arbitrary measure.
 
 \begin{lemma}\label{lem:bounded-exponential-supersolution}
 Let $\lambda>0$ and let $\nu$ be a positive Borel measure on $X$. If $t\in\PSH(X,h)$ is bounded and $\mathrm{MA}_h(t)\leq\mathrm e^{\lambda t}\nu$, then every $s\in\PSH(X,h)$ with $\mathrm{MA}^{\mathrm{ext}}_h(s)\geq\mathrm e^{\lambda s}\nu$ satisfies $s\leq t$.
 \end{lemma}
 \begin{proof}
-Let $\epsilon>0$. On the set $\{t<s-\epsilon\}$,
+Since $t$ is bounded, $s\preceq t$, and $P_{h/2}(t)\geq\inf_Xt$, so $t$ admits a smaller-background envelope. Off the pole set of $s$,
 \[
- \mathrm{MA}_h(t)\leq\mathrm e^{\lambda(s-\epsilon)}\nu
- \leq\mathrm e^{-\lambda\epsilon}\mathrm{MA}^{\mathrm{ext}}_h(s-\epsilon).
+ \mathrm e^{-\lambda t}\mathrm{MA}_h(t)\leq\nu
+ \leq\mathrm e^{-\lambda s}\mathrm{MA}^{\mathrm{ext}}_h(s).
 \]
-Since $t$ is bounded, $P_{h/2}(t)\geq\inf_Xt$ is not identically $-\infty$, and $s-\epsilon\preceq t$. \Cref{thm:singular-strict-domination}, applied with $\delta=1/2$ and $c=\mathrm e^{-\lambda\epsilon}$, therefore gives $t\geq s-\epsilon$. Letting $\epsilon\downarrow0$ gives $s\leq t$.
+\Cref{cor:singular-exponential-order}, applied with $\theta=h$, $u=t$ and $v=s$, gives $s\leq t$.
 \end{proof}
 
 \begin{theorem}\label{thm:individual-exponential-subsolution}\index{Monge--Ampere equation@Monge--Amp\`ere equation!greatest exponential solution}
@@ -79,6 +79,13 @@ The upper semicontinuity of the threshold (\cref{thm:individual-threshold-semico
  \leq b_h(f)=b.
 \]
 This proves $c_\lambda\to b$. Since $\mathrm{e}^{\lambda u_\lambda}f=c_\lambda g_\lambda$ and $g_\lambda\to f$ in $L^1$, it also proves $\mathrm{e}^{\lambda u_\lambda}f\to bf$ in $L^1$.
+\end{proof}
+
+\begin{corollary}\label{cor:exponential-cluster-threshold-subsolutions}
+Suppose $b_h(f)>0$, and let $u_\lambda$ and $v_\lambda$ be as in \cref{cor:individual-positive-threshold-exponential}. Every $L^1$ limit of a sequence $v_{\lambda_j}$ with $\lambda_j\downarrow0$ belongs to the family $\mathcal S_f$ of \cref{prop:greatest-normalized-threshold}, and hence lies below $\Phi_f$.
+\end{corollary}
+\begin{proof}
+Suppose $v_{\lambda_j}\to v$ in $L^1$ with $\lambda_j\downarrow0$. By \cref{thm:normalized-compactness}, $v$ is $h$-plurisubharmonic with supremum zero. The measures $\mathrm{MA}^{\mathrm{ext}}_h(v_{\lambda_j})=\mathrm{e}^{\lambda_ju_{\lambda_j}}f\,\mathrm{d}V$ have densities converging in $L^1$ to $b_h(f)f$, by \cref{cor:individual-positive-threshold-exponential}. Applying \cref{lem:density-subsolution-lone-closure} to these densities and potentials shows that $v\in\mathcal S_f$.
 \end{proof}
 
 Since $\mathrm{MA}^{\mathrm{ext}}_h(v_\lambda)=\mathrm{e}^{\lambda u_\lambda}f\,\mathrm{d}V$, the Monge--Amp\`ere measures of the normalized greatest solutions converge in total variation to $b_h(f)f\,\mathrm{d}V$. This answers the questions about the scalar and the measure raised in \cref{sec:zero-exponent-topology}; the potentials $v_\lambda$ themselves are harder to control. Under positive lower mass, \cref{cor:positive-lower-mass-exact-threshold} shows that every $L^1$-convergent sequence $v_{\lambda_j}$ with $\lambda_j\downarrow0$ converges in capacity to a solution of $\mathrm{MA}^{\mathrm{ext}}_h(v)=b_h(f)f\,\mathrm{d}V$. For $L^p$ data with $p>1$, \cref{prop:symmetric-equation-clusters} gives uniform precompactness. In both cases, convergence of the whole family $(v_\lambda)$ requires that all its cluster limits coincide. This holds when the dual problem for $f^{1/n}$ over Gauduchon currents, studied in \cref{sec:integrable-gauduchon-currents}, has a smooth strictly positive maximizer: the whole family then converges uniformly (\cref{cor:smooth-dual-exponential-limit}). If the maximizer is smooth and semipositive, and strictly positive outside a proper analytic set, \cref{prop:semipositive-dual-exponential-limit} gives $L^1$ convergence of the whole family and a fixed lower barrier, and \cref{cor:semipositive-dual-lp-limit} strengthens this to uniform convergence for $L^p$ data with $p>1$.

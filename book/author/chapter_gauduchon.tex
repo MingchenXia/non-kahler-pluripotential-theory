@@ -5,11 +5,7 @@ Throughout this chapter, $\omega$ is a fixed Hermitian form on $X$, and $n\geq2$
 
 The mass variation in \cref{chap:mass} leaves a linear conservation law. If $\gamma$ is a Gauduchon metric, so that $\ddc(\gamma^{n-1})=0$, integration against $\gamma^{n-1}$ annihilates every complex Hessian. Thus the trace mass $\int_X(\theta+\ddc u)\wedge\gamma^{n-1}$ of a positive current depends only on its smooth background $\theta$, even when $u$ is unbounded. Gauduchon's theorem produces such a metric in every conformal class, providing conserved pairings when the background is not closed.
 
-These pairings determine positivity as well as mass. A smooth form $\theta$ admits a positive current $\theta+\ddc u$ exactly when all its Gauduchon degrees are nonnegative. Normalizing the degrees gives the largest lower curvature bound obtainable by adding a complex Hessian. This bound is always attained by a potential; a minimizing test exists in the weak closure of the normalized smooth Gauduchon forms, although a smooth minimizing metric generally does not exist. The smooth tests can have uniformly bounded pairings with forms concentrating transversely to a local hypersurface only if a global hypersurface contains it. Applied to $\omega_u$, the conformal construction also gives the adjoint probability of the linearized Monge--Amp\`ere operator. It identifies the compatibility condition for that operator and explains the extra term in entropy dissipation for a nonclosed background. For a continuous strictly positive form, the trace operator is still Fredholm on Sobolev spaces.
-
-For a holomorphic line bundle, the conserved pairing is the degree of its curvature, and a positive degree excludes a metric with nonpositive curvature. Fiber averaging extends this obstruction to plurisubharmonic norms near a direct sum of line bundles of positive degree. Polar duality and homogeneous regularization then turn it into an obstruction to semipositive Finsler curvature. The stable ample bundles constructed on Hirzebruch surfaces show that ampleness alone does not remove the obstruction; their projective complements give a geometric way to measure it.
-
-The same scalar equation can improve curvature when the mean curvature is nonnegative: a conformal change spreads directional positivity from a nonempty open set to the whole manifold. Ricci-flat K\"ahler surfaces illustrate the distinction between this directional condition and positivity on every tangent and fiber pair. Holomorphic sectional curvature evaluates the same tangent vector in both places. An integral identity against a K\"ahler metric with nonnegative Ricci curvature excludes quasi-negative holomorphic sectional curvature for every Hermitian metric, closed or not, and on a complex torus it forces a metric with nonpositive holomorphic sectional curvature to be translation invariant. On a projective manifold, positivity on all tangent and fiber pairs admits another duality criterion, expressed by positive measures over the dual bundle.
+These pairings determine positivity as well as mass. A smooth form $\theta$ admits a positive current $\theta+\ddc u$ exactly when all its Gauduchon degrees are nonnegative. Normalizing the degrees gives the largest lower curvature bound obtainable by adding a complex Hessian. This bound is always attained by a potential; a minimizing test exists in the weak closure of the normalized smooth Gauduchon forms, although a smooth minimizing metric generally does not exist. The smooth tests can have uniformly bounded pairings with forms concentrating transversely to a local hypersurface only if a global hypersurface contains it. The weak limits of these tests are positive pluriharmonic currents; positivity and the vanishing of their $\ddc$ control their concentration on a smooth hypersurface. Applied to $\omega_u$, the conformal construction also gives the adjoint probability of the linearized Monge--Amp\`ere operator. It identifies the compatibility condition for that operator and explains the extra term in entropy dissipation for a nonclosed background. \Cref{chap:gauduchon-bundle-positivity} applies Gauduchon degrees and this compatibility condition to the curvature of vector bundles.
 
 \section{Conformal Gauduchon metrics}
 
@@ -56,7 +52,26 @@ Finally, integration by parts gives
 Thus the equation $L^*\rho=0$ is precisely $\ddc(\rho\eta^{n-1})=0$, and the one-dimensional adjoint kernel gives uniqueness up to positive scaling. Since $\gamma^{n-1}=\rho\eta^{n-1}$, the form $\gamma$ is Gauduchon.
 \end{proof}
 
-A K\"ahler form, that is, a closed Hermitian form, is both balanced and pluriclosed, and every balanced form is Gauduchon. On surfaces, balanced forms are K\"ahler, and the Gauduchon and pluriclosed conditions coincide.
+A K\"ahler form, that is, a closed Hermitian form, is both balanced and pluriclosed, and every balanced form is Gauduchon. On surfaces, balanced forms are K\"ahler, and the Gauduchon and pluriclosed conditions coincide. The first statement has a converse.
+
+\begin{lemma}\label{lem:balanced-pluriclosed-closed}
+If a Hermitian form $\zeta$ satisfies $\mathrm d\zeta^{n-1}=0$ and $\ddc\zeta=0$, then $\mathrm d\zeta=0$.
+\end{lemma}
+\begin{proof}
+For $n=2$, the balanced condition is the assertion $\mathrm d\zeta=0$. Suppose $n\geq3$ and set $\alpha=\partial\zeta$. Since $\zeta$ is balanced, $\alpha\wedge\zeta^{n-2}=0$, so $\alpha$ is a primitive $(2,1)$-form. Applying $\partial\bar\partial$ to the balanced power gives
+\[
+ 0=\partial\bar\partial\zeta^{n-1}
+  =(n-1)\partial\bar\partial\zeta\wedge\zeta^{n-2}
+    +(n-1)(n-2)\alpha\wedge\bar\alpha\wedge\zeta^{n-3}.
+\]
+The first term vanishes because $\zeta$ is pluriclosed. For a primitive $(2,1)$-form, pointwise Hermitian linear algebra gives
+\[
+ -\mathrm i\,\alpha\wedge\bar\alpha\wedge
+                 \frac{\zeta^{n-3}}{(n-3)!}
+       =|\alpha|_\zeta^2\frac{\zeta^n}{n!}.
+\]
+Thus $\alpha=0$, and since $\zeta$ is real, also $\bar\partial\zeta=0$, so $\mathrm d\zeta=0$.
+\end{proof}
 
 \Needspace{12\baselineskip}
 \section{Conservation of the trace mass}
@@ -199,7 +214,6 @@ Since $\theta$ is smooth, $-C\omega\leq\theta\leq C\omega$ for some $C$, so the 
 
 \input{author/section_gauduchon_linear_duality}
 \input{author/section_gauduchon_transverse_concentration}
-\input{author/section_convex_bundle_norm_obstruction}
 \input{author/section_horizontal_pluriharmonic_currents}
 
 \section{The adjoint measure of the linearization}
@@ -291,8 +305,6 @@ When persistence holds, the one-form $v\mapsto\int_Xv\,\mathrm d\mu_u$ on $\HH_\
 \input{author/section_hermitian_parabolic_entropy}
 \input{author/section_parabolic_total_variation_growth}
 
-\input{author/section_continuous_hermitian_fredholm}
-
 \section{Limits of adjoint measures}
 \label{sec:adjoint-measure-limits}
 
@@ -311,8 +323,3 @@ By \cref{prop:gauduchon-potential-persistence,thm:mass-invariance-characterizati
 
 The proposition applies in particular to Gauduchon surfaces. For a general Hermitian background, passing from smooth $u_j\in\HH_\omega$ to a limit $u\in\PSH(X,\omega)$ requires control of the multipliers $\rho_{u_j}$ as well as of the potentials. The supporting probabilities of \cref{chap:normalization} recover $\mu_u$ in the smooth case. If the solution of the normalized equation with a continuous logarithmic density is bounded and has a continuous strictly positive complex Hessian, \cref{thm:continuous-hessian-adjoint-uniqueness} gives a unique supporting probability, which is stationary for the linearized operator, and hence approximation independence under uniform convergence of the logarithmic densities. We do not know whether, in general, the limit is independent of the approximating sequence, or whether a weak linearization satisfies an adjoint identity.
 
-\input{author/section_gauduchon_directional_curvature}
-\input{author/section_ricci_flat_surface_curvature}
-\input{author/section_integrated_hermitian_curvature}
-\input{author/section_projective_first_jet_positivity}
-\input{author/section_ramified_root_metric_tests}

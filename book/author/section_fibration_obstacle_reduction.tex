@@ -1,4 +1,4 @@
-\subsection{Relative divisors and fiber obstacles}
+\section{Relative divisors and fiber obstacles}
 \label{subsec:fibration-obstacle-reduction}
 
 To test equality of the envelopes below all obstacles beyond curves, we need potentials whose envelopes can be computed. Consider a holomorphic submersion with compact connected fibers, and a potential that is the sum of a logarithmic potential $\Psi$ with fixed weights along some divisors and the pullback of a potential $w$ on the base. Every competitor has at least the poles of $\Psi$, and removing them leaves a current pulled back from the base. Since the fibers are compact and connected, the remaining potential descends to the base, and minimizing the obstacle over the fibers reduces both envelopes to envelopes on the base. Over a fiber contained in the divisor the induced obstacle is infinite, but normalized compactness still bounds the competitors. Because the remaining current comes from a base of smaller dimension, all these potentials have zero top-degree mass. The reduction gives criteria on the base for membership in relative envelope classes and for equality of the envelopes below all obstacles. The divisors may be singular or ramified over the base; only the explicit product formula for the multiplier ideals requires relative normal crossings.
@@ -80,6 +80,8 @@ Since $n>d$, the $n$th bounded product of this current is zero by \cref{lem:boun
 
 By divisorial removal and descent, every representative ordinarily equivalent to $u$ has this form. By the identity already proved, the ideal model is also of this form, with base potential $P_{\beta,\widehat 0}[w]_{\mathcal I}$, where $\widehat0$ is the induced obstacle for $F=0$. The same removal and descent apply to every representative of its ordinary type. All these masses are zero, which proves both volume assertions.
 \end{proof}
+
+Recall from \cref{def:relative-envelope-class} that $u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi)$ means that $u\preceq\varphi$ and that, for every $a\in(0,1)$, there is a \emph{stretching competitor} $h\in\PSH(X,\theta)$ with $a\varphi+(1-a)h\leq u$; here $a=1-b^{-1}$ in the notation of that definition.
 
 \Needspace{17\baselineskip}
 \begin{proposition}\label{prop:fibration-relative-envelope-class}\index{Relative envelope class!fibration equivalence}\index{Relative envelope class!whole-fiber reduction}\index{Divisor!vertical fibration reduction}
@@ -327,6 +329,41 @@ Every expression $\Psi+b\circ p$ is invariant under translation of the first fac
 \end{proof}
 
 The correct formula takes the fiber minimum over each connected component of a fiber separately. These components are the points of the finite covering of the base in \cref{lem:submersion-component-cover}.
+
+Envelopes and relative envelope classes also pass through this finite covering. Pullback of competitors and the maximum over the fibers of a finite unramified covering identify the envelopes upstairs and downstairs, and the same fiber maximum transfers stretching competitors from the covering space to the base.
+
+\Needspace{20\baselineskip}
+\begin{proposition}\label{prop:finite-cover-envelope-transport}\index{Envelope!finite unramified cover}\index{Relative envelope class!finite unramified cover}
+Let $r\colon Y\to X$ be a finite unramified holomorphic covering between connected compact complex manifolds. Let $\theta$ be a smooth real $(1,1)$-form on $X$, let $u,\varphi\in\PSH(X,\theta)$, and put $\theta'=r^*\theta$ and $u'=u\circ r$. For every $F\in C(X,\mathbb R)$,
+\[
+ \begin{split}
+ P_{\theta',F\circ r}[u']&=P_{\theta,F}[u]\circ r,\\
+ P_{\theta',F\circ r}[u']_{\mathcal I}
+   &=P_{\theta,F}[u]_{\mathcal I}\circ r.
+ \end{split}
+\]
+Moreover,
+\[
+ u'\in\mathcal E_{\mathrm{env}}(Y,\theta',\varphi\circ r)
+ \quad\Longleftrightarrow\quad
+ u\in\mathcal E_{\mathrm{env}}(X,\theta,\varphi).
+\]
+\end{proposition}
+\begin{proof}
+For $v\in\PSH(Y,\theta')$, define
+\[
+ v_{\max}(x)=\max_{y\in r^{-1}(x)}v(y).
+\]
+Over a sufficiently small ball in $X$, this is the finite maximum of the functions obtained by composing $v$ with the local inverse branches of $r$. Each of them is $\theta$-plurisubharmonic, so $v_{\max}\in\PSH(X,\theta)$ by \cref{lem:max-psh}. If $v\preceq u'$, then $v_{\max}\preceq u$. If $v\sim_{\mathcal I}u'$, a local biholomorphic change of variables makes each branch multiplier-ideal equivalent to $u$, and the maximum rule in \cref{lem:hermitian-i-calculus} gives $v_{\max}\sim_{\mathcal I}u$. The obstacle bound $v\leq F\circ r$ gives $v_{\max}\leq F$.
+
+Thus every competitor upstairs is dominated by the pullback of a corresponding competitor downstairs. Conversely, pullback of a competitor downstairs preserves the background inequality, the ordinary order or multiplier-ideal equivalence, and the obstacle bound. These two correspondences between the competitor families give the envelope identities; upper regularization commutes with $r$, since $r$ is locally biholomorphic.
+
+Since $r$ is surjective, it reflects the ordinary order: $u'\preceq\varphi\circ r$ if and only if $u\preceq\varphi$. Fix $a\in(0,1)$. Pullback takes any stretching competitor $h$ with $a\varphi+(1-a)h\leq u$ to a stretching competitor upstairs. Conversely, if $v\in\PSH(Y,\theta')$ satisfies
+\[
+ a\varphi\circ r+(1-a)v\leq u',
+\]
+then taking the maximum over the fibers gives $a\varphi+(1-a)v_{\max}\leq u$; this also holds at poles, because the convex sums are defined there. Applying the definition of the relative class for every $a$ proves the last assertion.
+\end{proof}
 
 \Needspace{38\baselineskip}
 \begin{corollary}\label{cor:fibration-component-cover}\index{Envelope!cover of fiber components}\index{Envelope!curve criterion on a component cover}\index{Obstacle!minimum on a fiber component}
