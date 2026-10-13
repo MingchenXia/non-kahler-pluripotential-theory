@@ -30,7 +30,7 @@ At every point, the infimum is attained at some $t>0$.
 
 For the background $\omega$, this lemma is the only input we take from the classical theory. The linear term $K(t-\delta)$ is needed in the Hermitian case, where it absorbs the mixed base--fiber terms in the complex Hessian of the regularization. Since $-c\log(t/\delta)$ tends to $+\infty$ as $t\downarrow0$ while $u$ is bounded, the infimum is attained away from zero. We need neither smoothness of the minimizing radius nor smoothness of the transform across the region where this radius equals $\delta$.
 
-Next we prove two elementary estimates for the averaging operators. They do not rely on any volume identity from K\"ahler geometry.
+Next we prove two elementary estimates for the averaging operators.
 
 \Needspace{11\baselineskip}
 \begin{lemma}\label{lem:chern-smoothing-integral}
@@ -66,9 +66,6 @@ For the derivative bound, change variables in the fiber to write $R_tu(z)=\int_X
 \]
 Indeed, the inverse fiber map and its Jacobian have uniformly bounded derivatives, and differentiating the rescaled radial argument introduces at most one factor $t^{-1}$ in addition to $t^{-2n}$. Since the kernel is smooth with compact support, there are no boundary terms. Integration over a ball of volume at most $Ct^{2n}$ gives $\int|\nabla_zk_t|\,\mathrm{d}V\leq C/t$, and multiplication by the uniform bound for $u$ proves the assertion.
 \end{proof}
-
-The first estimate relies on the cancellation of the odd first-order term against the even kernel, and not on conservation of Monge--Amp\`ere mass.
-
 
 \subsection{The general curvature modulus}
 \label{subsec:general-curvature-modulus}
@@ -128,19 +125,20 @@ For continuous potentials, the curvature loss of the averages becomes uniformly 
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{lem:continuous-potential-smooth-loss}\index{Regularization!continuous potentials}
-Let $\alpha$ be a smooth real $(1,1)$-form on $X$, and let $u\in\PSH(X,\alpha)\cap C^0(X)$. There are smooth real functions $u_j$ and numbers $\varepsilon_j\downarrow0$ such that $u_j\to u$ uniformly and
+Let $\alpha$ be a smooth real $(1,1)$-form on $X$, let $u\in\PSH(X,\alpha)\cap C^0(X)$, and let $t_j\downarrow0$ be sufficiently small. The Chern averages $u_j=R_{t_j}u$ are smooth, converge uniformly to $u$, and satisfy
 \[
- \alpha+\ddc u_j\geq-\varepsilon_j\omega.
+ \alpha+\ddc u_j\geq-\varepsilon_j\omega
 \]
+for numbers $\varepsilon_j\downarrow0$.
 \end{lemma}
 \begin{proof}
 Use the Chern averaging operators and the classical estimate stated before \cref{lem:general-kiselman-modulus}, with $\alpha$ in place of $\theta$. For some $K_0,A>0$ and $\epsilon_0(t)\to0$, put $\lambda(x,t)=t\partial_t(R_tu(x)+K_0t^2)$. The estimate with vanishing radius component gives
 \[
  \alpha+\ddc R_tu\geq-(A\lambda(\cdot,t)+\epsilon_0(t))\omega.
 \]
-The function $\lambda$ is nonnegative, continuous for $t>0$, and increasing in $t$. For fixed $x$, the convex function $s\mapsto R_{\mathrm{e}^s}u(x)+K_0\mathrm{e}^{2s}$ has the finite limit $u(x)$ as $s\to-\infty$. Its nonnegative derivative must therefore tend to zero, since a positive limit of the derivative would make the function tend to $-\infty$. Thus $\lambda(x,t)\to0$ as $t\to0$, and for any sequence $t_j\downarrow0$, Dini's theorem gives $\|\lambda(\cdot,t_j)\|_\infty\to0$.
+The function $\lambda$ is nonnegative, continuous for $t>0$, and increasing in $t$. For fixed $x$, the convex function $s\mapsto R_{\mathrm{e}^s}u(x)+K_0\mathrm{e}^{2s}$ has the finite limit $u(x)$ as $s\to-\infty$. Its nonnegative derivative must therefore tend to zero, since a positive limit of the derivative would make the function tend to $-\infty$. Thus $\lambda(x,t)\to0$ as $t\to0$, and Dini's theorem gives $\|\lambda(\cdot,t_j)\|_\infty\to0$.
 
-The averaging kernels have mass one and only sample points at distance at most $Ct$ from the base point. Uniform continuity of $u$ therefore gives $\|R_tu-u\|_\infty\to0$. Set $u_j=R_{t_j}u$, and let $\varepsilon_j\to0$ be a decreasing positive majorant of $A\|\lambda(\cdot,t_j)\|_\infty+\epsilon_0(t_j)$.
+The averaging kernels have mass one and only sample points at distance at most $Ct$ from the base point. Uniform continuity of $u$ therefore gives $\|R_tu-u\|_\infty\to0$. Let $\varepsilon_j\to0$ be a decreasing positive majorant of $A\|\lambda(\cdot,t_j)\|_\infty+\epsilon_0(t_j)$.
 \end{proof}
 
 \input{author/section_psh_holder_chern_estimates}

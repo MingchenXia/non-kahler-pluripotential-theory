@@ -11,40 +11,57 @@ The first inequality follows from volume monotonicity, since $\varphi\preceq V$,
  A_\theta(\nu)=\sup\left\{\int_X(-w)\,\mathrm{d}\nu:
  w\in\PSH(X,\theta),\ \sup_Xw=0\right\}.
 \]
-We show that a first moment of $V-u$ against the measure $\mu_u$ of $u$ itself controls a higher moment of $V-u$ against every fixed $\nu$ with $A_\theta(\nu)<\infty$. An envelope with a concave obstacle converts the distribution of $V-u$ under $\mu_u$ into this stronger integrability estimate.
+We show that a first moment of $V-u$ against the measure $\mu_u$ of $u$ itself controls a higher moment of $V-u$ against every fixed $\nu$ with $A_\theta(\nu)<\infty$. An envelope with a concave obstacle converts the distribution of $V-u$ under $\mu_u$ into this stronger integrability estimate. We state the envelope lemma for the reference $\varphi$; here it is applied with $V$ in place of $\varphi$, and in \cref{sec:big-model-lp} with $\varphi$ itself.
 
-\begin{lemma}\label{lem:big-concave-envelope}
-Let $u\in\PSH(X,\theta)$ satisfy $u\sim V$ and $u\leq V$. Let $\chi\colon\mathbb R_{\leq0}\to\mathbb R_{\leq0}$ be increasing and concave, with $\chi(0)=0$ and $\chi'\geq1$, and assume that $\chi$ is $C^{1,1}$ on compact intervals. Set
+\Needspace{20\baselineskip}
+\begin{lemma}\label{lem:big-concave-envelope}\label{lem:big-model-concave-envelope}
+Let $u\in\mathcal E_\varphi$ with $u\leq\varphi$, and let
+$\chi\colon\mathbb R_{\leq0}\to\mathbb R_{\leq0}$ be increasing and concave, with $\chi(0)=0$. Suppose that $\chi$ is $C^{1,1}$ on compact intervals and that, for a finite constant $L\geq1$,
 \[
- b=V+\chi(u-V),\qquad p=P_\theta(b),
+ 1\leq\chi'\leq L.
 \]
-where the obstacle $b$ is defined off the pole set of $V$ and is set equal to $-\infty$ on that set. Then $p\sim V$ and
+Then the envelope
 \[
- \mu_p\leq\mathbf1_{\{p=b\}}\chi'(u-V)^n\mu_u.
+ p=P_\theta(\varphi+\chi(u-\varphi))
 \]
-The measures and contact sets in this inequality may be restricted to the complement of the pole set of any fixed strict analytic barrier for $\theta$, that is, of any $\rho\in\PSH(X,\theta)$ with analytic singularities such that $\theta+\ddc\rho\geq a\omega$ for some $a>0$.
+belongs to $\mathcal E_\varphi$, and
+\[
+ \mu_p\leq\mathbf1_{\{p=\varphi+\chi(u-\varphi)\}}
+                 \chi'(u-\varphi)^n\mu_u.
+\]
+Here the obstacle and the contact set are defined off the pluripolar set where $u-\varphi$ is undefined, which all these measures ignore.
 \end{lemma}
 \begin{proof}
-The difference $u-V$ is bounded, so $V-C\leq b\leq u\leq V$ for some constant $C$. Hence $p\sim V$. The obstacle is quasi-continuous: away from sets of arbitrarily small capacity, $u$ and $V$ are finite and continuous, and their difference has a fixed bounded range. The general contact theorem \cref{thm:big-general-envelope-contact} therefore applies.
+For $t\leq0$, the bounds on $\chi'$ give $Lt\leq\chi(t)\leq t$. Thus
+\[
+ Q_L(u,\varphi)\leq p\leq u\leq\varphi.
+\]
+The lower potential belongs to $\mathcal E_\varphi$ by \cref{lem:relative-stretch-closure}, so $p$ is not identically $-\infty$ and belongs to $\mathcal E_\varphi$ by upward stability. The obstacle is finite and quasi-continuous off the poles, so the contact theorem \cref{thm:big-general-envelope-contact} applies.
 
-Choose a strict analytic barrier $\rho$ and translate it so that $\rho\leq V$; put $\Omega=X\setminus\{\rho=-\infty\}$. On this open set $u$, $V$ and $p$ are locally bounded. Let $\tau=\chi^{-1}$; then $\tau$ is convex and $0<\tau'\leq1$. By \cref{lem:bounded-convex-pair}, the function
+Let $\tau=\chi^{-1}$. It is convex, with $L^{-1}\leq\tau'\leq1$. We justify the transformation
 \[
- w=V+\tau(p-V)
+ w=\varphi+\tau(p-\varphi)
 \]
-is $\theta$-plurisubharmonic on $\Omega$ and satisfies
+without assuming that $\varphi$ is locally bounded on some open set. On a coordinate ball choose a smooth function $q$ with $\theta+\ddc q\geq0$. The functions
 \[
- \mathrm{MA}_\theta(w)\geq\tau'(p-V)^n\mu_p.
+ p_m=\max(p,q-m),\qquad
+ \varphi_m=\max(\varphi,q-m)
 \]
-Since $p\leq w\leq V$ on $\Omega$, the removability lemma \cref{lem:qpsh-removable-analytic} extends $w$ across the analytic set $X\setminus\Omega$, preserving its smooth lower curvature bound.
+are locally bounded $\theta$-plurisubharmonic functions on the ball, and $p_m\leq\varphi_m$. \Cref{lem:bounded-convex-pair} applies to
+$w_m=\varphi_m+\tau(p_m-\varphi_m)$ and gives
+\[
+ \theta_{w_m}\geq0,\qquad
+ \mu_{w_m}\geq\tau'(p_m-\varphi_m)^n\mu_{p_m}.
+\]
 
-\Needspace{6\baselineskip}
-The inequality $p\leq b$ implies $w\leq u$, with equality on $D=\{p=b\}$. Ordered contact gives
+The function $(s,t)\mapsto t+\tau(s-t)$ on $\{s\leq t\}$ is nondecreasing in each variable. Consequently $w_m$ decreases as $m$ increases. Since $p\leq p_m\leq w_m\leq\varphi_m$, the limit is not identically $-\infty$ on the ball. Off the poles it equals $w$. The local limits therefore agree on overlaps after regularization and define a global $\theta$-plurisubharmonic function.
+
+On $D_m=\{p>q-m\}$, neither $p$ nor $\varphi$ is truncated. Thus $w_m=w$ there, and plurifine locality transfers the product inequality to $D_m$. These sets exhaust the complement of the poles of $p$ in the ball. Since all products ignore the discarded pluripolar set,
 \[
- \mathbf1_D\tau'(p-V)^n\mu_p
- \leq\mathbf1_D\mathrm{MA}_\theta(w)
- \leq\mathbf1_D\mu_u.
+ \mu_w\geq\tau'(p-\varphi)^n\mu_p.
 \]
-On $D$ the derivative $\tau'(p-V)$ equals $1/\chi'(u-V)$. Together with contact support for $p$, this proves the claim on $\Omega$. The analytic set $X\setminus\Omega$ is not charged by the non-pluripolar measures involved.
+The obstacle bound $p\leq\varphi+\chi(u-\varphi)$ gives $w\leq u$, with equality on the contact set of $p$. Ordered contact, the identity
+$\tau'(p-\varphi)=1/\chi'(u-\varphi)$ on that set, and contact support of $\mu_p$ prove the assertion.
 \end{proof}
 
 \Needspace{11\baselineskip}
@@ -80,7 +97,7 @@ and set
  W_s(t)=\int_0^t F_s(a)^{1/N}\,\mathrm{d}a,
  \qquad\chi_s(-t)=-W_s(t).
 \]
-The tail $\mu_u(\{x>t\})$ in the first denominator has a positive lower bound on $[0,T-s]$. Hence $F_s$ is locally Lipschitz, and $\chi_s$ has the regularity and concavity required in the lemma.
+The tail $\mu_u(\{x>t\})$ in the first denominator has a positive lower bound on $[0,T-s]$. Hence $F_s$ is bounded, nondecreasing and locally Lipschitz, with $F_s\geq1$. Since $u\leq V$ and, by \cref{prop:relative-elementary}, $u\in\mathcal E_V$, the function $\chi_s$ satisfies the hypotheses of \cref{lem:big-concave-envelope}, with $V$ in place of $\varphi$.
 
 Tonelli's theorem gives
 \begin{equation}\label{eq:big-weight-derivative-moment}
@@ -97,7 +114,7 @@ Chebyshev's inequality gives $\mu_u(\{x>t\})\leq B/t$. Integrating first for $F_
 \end{equation}
 Indeed, $g_s(t)\geq cB^{-1}t^{-1/2}$ for $t\geq1$ in this interval, so $F_s(t)\geq c(1+B)^{-1}t^{1/2}$. For $t\geq2$ integrate this estimate over $[t/2,t]$; for $1\leq t\leq2$ use $W_s(t)\geq t$.
 
-Let $p_s=P_\theta(V-W_s(x))$, the envelope of the preceding lemma for $\chi=\chi_s$. The lemma, the bound $W_s(t)\leq tF_s(t)^{1/N}$ and the Cauchy--Schwarz inequality give, since $N=2n+1$,
+Let $p_s=P_\theta(V-W_s(x))\in\mathcal E_V$, the envelope of \cref{lem:big-concave-envelope} for $\chi=\chi_s$. The lemma, the bound $W_s(t)\leq tF_s(t)^{1/N}$ and the Cauchy--Schwarz inequality give, since $N=2n+1$,
 \[
  \begin{split}
  \int_X(V-p_s)^{1/2}\,\mu_{p_s}
