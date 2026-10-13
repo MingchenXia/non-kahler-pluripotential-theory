@@ -1,5 +1,11 @@
 # Modification history
 
+## Chapter 11 inactive reader prose draft — 13 October 2026
+
+Freshly read the complete 1771-line, 13-file Chapter 11 remote baseline, including all 26 proofs, and prepare a source-bound prose patch for its opening, bounded connectedness explanation, analytic-density introduction and transition to Chapter 12. The draft preserves all statement/proof blocks, labels and recursive inputs. It retains the C2 weighted-energy and threefold Sobolev hypotheses, connected and dense positivity, conditional nullity of extremal levels, and the distinction between analytic density and smooth background. Changed prose was read twice; an in-memory patch reconstruction passes. The proposal is inactive and uncompiled, preserves the unavailable uncommitted Chapter 11 work, and does not constitute a new checked release. See [draft and checks](research/editorial/chapter11-reader-prose-draft-20261013.md).
+
+The current homepage still displays 1760 printed pages and October 9; the PDF could not be fetched through the web tool, so no served-byte or cover verification is claimed. Execution remains failed/offline with no shell/file or restart controls. Recover the saved Chapter 11 edits, merge this proposal manually, verify the earlier public build before superseding it, and complete the standing build/review/publication procedure with actual current cover dates. Original problems, checked counts, active author sources and catalogue remain unchanged; Xean remains withdrawn for the book task.
+
 ## Complete Chapter 14 baseline and incoming P09 assessment — 11 October 2026
 
 Complete the exact checkpoint 684 recursive Chapter 14 reading through all 46 files and 134 proof environments. The 22 newly read inputs include every newly encountered descendant; the active input graph closes with no unread source. Extend the source-bound inventory and mathematical/editorial map through local boundary counterexamples, resolved and minimal blowup equations, ordinary-type measure carriers, singular spherical and curve measures, lower-mass obstruction, individual critical thresholds, full Gauduchon tests, root-tail norms, capacity-controlled exact equations, positive exponential endpoints and radial selection. This is baseline reading; final revision, local-byte binding, second revised reads and output checks remain pending.
