@@ -1,0 +1,159 @@
+\Needspace{16\baselineskip}
+\section{Gauduchon quotients and the normalization constant}\label{sec:gaud-volume-definition}
+\label{sec:gaud-volume-positive-cone}
+
+When the background has a strictly positive representative, the normalization constant can be computed from Gauduchon metrics alone. Integrating the arithmetic--geometric mean inequality against the $(n-1)$st power of a Gauduchon metric $\gamma$ bounds the $n$th root of the constant from above by a quotient whose numerator $\int_X\theta\wedge\gamma^{n-1}$ is linear in the background and unchanged by smooth $\ddc$ changes of it, and the Gauduchon metric conformal to the solution form gives equality. The infimum of these quotients makes sense for every pseudoeffective background and defines the Gauduchon variational volume, which \cref{chap:gauduchon-variational-volume} studies as a function of the background. Varying the probability measure realizes the mass of every smooth strictly positive potential, so the extrema of the volume over all measures are the lower and upper Monge--Amp\`ere masses.
+
+In this section $\theta$ is a smooth real $(1,1)$-form on $X$, which we call the \emph{background}, and $\mu$ is a smooth strictly positive probability form on $X$. The background $\theta$ is called \emph{pseudoeffective} if $\PSH(X,\theta)\ne\varnothing$, that is, if $\theta+\ddc u\geq0$ for some quasi-plurisubharmonic $u$; by \cref{thm:lamari} this holds exactly when $\int_X\theta\wedge\gamma^{n-1}\geq0$ for every Gauduchon metric $\gamma$. Bigness is defined in \cref{sec:obstacle-envelopes}. Neither notion requires $\theta$ to be closed, and both are unchanged by a smooth $\ddc$ change of $\theta$.
+
+For a Gauduchon metric $\gamma$, Stokes' theorem shows that the pairing $\int_X\theta\wedge\gamma^{n-1}$ is unchanged by a smooth $\ddc$ change of $\theta$; this pairing will be the numerator of our quotient. For the denominator, put
+\[
+ D_\mu(\gamma)=\int_X
+           \left(\frac{\mu}{\gamma^n}\right)^{1/n}\gamma^n.
+\]
+This number is positive. Like the numerator, it is multiplied by $r^{n-1}$ when $\gamma$ is multiplied by a positive constant $r$, so the quotient below depends only on the ray of $\gamma$.
+
+\Needspace{12\baselineskip}
+\begin{definition}\label{def:gaud-variational-volume}\index{Gauduchon variational volume!definition}\index{Root volume|see{Gauduchon variational volume}}
+For a pseudoeffective smooth real $(1,1)$-form $\theta$ on $X$, define
+\[
+ \lambda_\mu(\theta)=
+ \inf_{\gamma\text{ Gauduchon}}
+ \frac{\displaystyle\int_X\theta\wedge\gamma^{n-1}}
+      {D_\mu(\gamma)},
+ \qquad
+ \mathcal V_\mu(\theta)=\lambda_\mu(\theta)^n.
+\]
+We call $\mathcal V_\mu(\theta)$ the \emph{Gauduchon variational volume} of $\theta$ with respect to $\mu$, and $\lambda_\mu(\theta)$ its \emph{root volume}. In dimension one every Hermitian metric is Gauduchon, and every quotient equals $\int_X\theta$.
+\end{definition}
+
+\begin{proposition}\label{prop:gaud-volume-elementary}
+For a pseudoeffective $\theta$, the number $\lambda_\mu(\theta)$ is finite and nonnegative. It is unchanged by a smooth $\ddc$ change of $\theta$, positively homogeneous of degree one, and concave on the cone of pseudoeffective forms. If $\beta$ is a smooth real $(1,1)$-form and $\beta-\theta$ is pseudoeffective, then
+\[
+ \lambda_\mu(\beta)\geq\lambda_\mu(\theta).
+\]
+Finally, $\lambda_\mu$ is upper semicontinuous under smooth convergence within this cone.
+\end{proposition}
+\begin{proof}
+Choose $u\in\PSH(X,\theta)$. For every Gauduchon metric $\gamma$, Stokes' theorem for currents and the Gauduchon condition give
+\[
+ \int_X\theta\wedge\gamma^{n-1}
+ =\int_X(\theta+\ddc u)\wedge\gamma^{n-1}\geq0.
+\]
+Thus every quotient is nonnegative, and testing one fixed Gauduchon metric gives a finite upper bound. The same identity shows that each quotient is unchanged by a smooth $\ddc$ change of the background, and, applied to $\beta-\theta$, it proves the monotonicity.
+
+Each quotient is a linear function of the background, so their infimum is concave and positively homogeneous. Each individual quotient is also continuous in the smooth topology. Given a smoothly converging sequence, we bound the infimum by any one quotient, take the upper limit, and finally take the infimum over the test metric. This proves upper semicontinuity.
+\end{proof}
+
+The smooth equation identifies both the value of the quotient and every minimizing metric. Let $\mathscr P$ be the set of backgrounds $\theta$ admitting a smooth real function $u$ with $\theta+\ddc u>0$. Choosing such a Hermitian representative of $\theta$ and writing $\mu$ as a smooth positive density relative to the volume form of this representative, we may apply \cref{thm:tw-smooth}. It gives, for each $\theta\in\mathscr P$, a unique positive form $\Omega_\theta$, which we call the \emph{solution form}, and a unique constant $c_\theta(\mu)>0$ such that
+\[
+ \Omega_\theta=\theta+\ddc u_\theta,
+ \qquad \Omega_\theta^n=c_\theta(\mu)\mu.
+\]
+The potential $u_\theta$ is unique after any fixed additive normalization. In the notation of \eqref{eq:smooth-ma}, with the chosen representative of $\theta$ as $\omega$ and $\mathrm e^F\mathrm{d}V=\mu$, the constant $c_\theta(\mu)$ is $\mathrm e^b$.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:gaud-volume-dual-formula}\index{Gauduchon variational volume!smooth equation}
+For every $\theta\in\mathscr P$,
+\[
+ \lambda_\mu(\theta)=c_\theta(\mu)^{1/n},
+ \qquad \mathcal V_\mu(\theta)=c_\theta(\mu).
+\]
+The infimum in \cref{def:gaud-variational-volume} is attained. When $n\geq2$, its minimizing Gauduchon metrics are precisely the constant multiples of the Gauduchon metric conformal to $\Omega_\theta$.
+\end{theorem}
+\begin{proof}
+Suppose first that $n\geq2$. By \cref{prop:gauduchon-amgm}, applied with $\mathrm{d}V=\mu$ and $f=1$, every test quotient is at least $c_\theta(\mu)^{1/n}$; this bound integrates the pointwise inequality \eqref{eq:gauduchon-amgm} for $\eta=\Omega_\theta$, whose right side is $c_\theta(\mu)^{1/n}(\mu/\gamma^n)^{1/n}\gamma^n$. Take the Gauduchon metric $\gamma=\mathrm{e}^g\Omega_\theta$ conformal to $\Omega_\theta$, given by \cref{thm:gauduchon}, where $g$ is a smooth real function. Since all eigenvalues of $\Omega_\theta$ relative to $\gamma$ are equal at every point, equality holds pointwise and hence in the quotient. This proves the formula and attainment. Conversely, if a Gauduchon metric attains the infimum, the nonnegative smooth difference of the two sides of the pointwise inequality has zero integral. It therefore vanishes everywhere, and the equality case of the arithmetic--geometric mean inequality makes $\gamma$ conformal to $\Omega_\theta$. Since the Gauduchon metric in a conformal class is unique up to a constant factor, this proves the last assertion.
+
+For $n=1$, we integrate the equation and use $\int_X\ddc u_\theta=0$. This gives $c_\theta(\mu)=\int_X\theta$, which equals every quotient in the definition.
+\end{proof}
+
+For a Hermitian background $\omega$, a smooth positive probability volume $\mathrm{d}V$ and a nonzero nonnegative density $f\in L^1(\mathrm{d}V)$, the infimum of the analogous quotient, with $\mu$ replaced by $f\,\mathrm{d}V$, is the $n$th root of the subsolution threshold $b_\omega(f)$ of \cref{sec:individual-density-subsolutions}; see \cref{thm:integrable-gauduchon-formula}. Attainment in this extremal problem, and the regularity of the extremal tests, are studied from \cref{sec:weak-gauduchon-duality} on.
+
+\begin{corollary}\label{cor:gaud-volume-big-positive}
+If $\theta$ is big, then $\lambda_\mu(\theta)>0$.
+\end{corollary}
+\begin{proof}
+By the definition of bigness, there are a Hermitian form $h$ and $\delta>0$ such that $\theta-\delta h$ is pseudoeffective. Monotonicity, homogeneity and the theorem, applied to $h\in\mathscr P$, give
+$\lambda_\mu(\theta)\geq\delta\lambda_\mu(h)>0$.
+\end{proof}
+
+The converse fails: \cref{thm:radial-positive-volume-nonbig} gives, on a projective manifold, a smooth semipositive background of positive volume that is not big.
+
+\Needspace{18\baselineskip}
+\subsection{Varying the probability measure}
+
+Changing the smooth positive probability measure $\mu$ multiplies each denominator $D_\mu(\gamma)$ by a factor bounded above and below independently of $\gamma$. The value of the volume may therefore change, but its vanishing and positivity do not. Moreover, every smooth potential whose form is strictly positive solves the normalized equation for a suitable measure. Consequently, on $\mathscr P$ the volume is independent of the measure exactly when the total Monge--Amp\`ere mass is independent of the potential.
+
+\begin{proposition}\label{prop:gaud-volume-density-comparison}
+For smooth positive probability measures $\mu,\nu$, choose constants $m,M>0$ such that $m\mu\leq\nu\leq M\mu$. Then for every pseudoeffective $\theta$,
+\[
+ M^{-1/n}\lambda_\mu(\theta)
+ \leq\lambda_\nu(\theta)
+ \leq m^{-1/n}\lambda_\mu(\theta).
+\]
+In particular, whether $\lambda_\mu(\theta)$ vanishes does not depend on the smooth positive probability measure $\mu$.
+\end{proposition}
+\begin{proof}
+Since $D_\nu(\gamma)=\int_X(\nu/\mu)^{1/n}(\mu/\gamma^n)^{1/n}\gamma^n$, the inequalities $m\mu\leq\nu\leq M\mu$ give
+\[
+ m^{1/n}D_\mu(\gamma)\leq D_\nu(\gamma)\leq M^{1/n}D_\mu(\gamma)
+\]
+for every admissible metric $\gamma$. The numerators of the quotients are nonnegative and do not involve the measure. Dividing and taking infima proves the assertion.
+\end{proof}
+
+\begin{proposition}\label{prop:gaud-volume-density-independence}
+Let $\theta\in\mathscr P$. The value $\mathcal V_\mu(\theta)$ is the same for all smooth positive probability measures $\mu$ if and only if
+\[
+ \int_X(\theta+\ddc v)^n
+\]
+is independent of the smooth potential $v$ with $\theta+\ddc v>0$.
+\end{proposition}
+\begin{proof}
+For a smooth potential $v$ with $\theta+\ddc v>0$, put
+\[
+ M_v=\int_X(\theta+\ddc v)^n,
+ \qquad \mu_v=\frac{(\theta+\ddc v)^n}{M_v}.
+\]
+Then $\mu_v$ is a smooth positive probability measure, and $v$ solves the normalized equation for $\mu_v$ with scalar $M_v$. Uniqueness of the scalar and \cref{thm:gaud-volume-dual-formula} give $\mathcal V_{\mu_v}(\theta)=M_v$. Hence, if the volume does not depend on the measure, neither does the mass. Conversely, suppose that all these masses equal one constant $M$. For an arbitrary smooth positive probability measure $\mu$, integrating the normalized equation gives $c_\theta(\mu)=M$, so $\mathcal V_\mu(\theta)=M$ for every $\mu$.
+\end{proof}
+
+For instance, the nonclosed torus metric of \cref{ex:torus-mass} has volumes that depend on the measure. If $n=2$ and $\omega$ is a Gauduchon metric, Stokes' theorem shows that the smooth masses are all equal to $\int_X\omega^2$, so $\mathcal V_\mu(\omega)=\int_X\omega^2$ for every $\mu$. For the standard metric $\omega$ on the Hopf threefold of \cref{chap:hopf}, each $\mathcal V_\mu(\omega)$ is finite and positive, although the upper mass $v_+(\omega)$ is infinite.
+
+\Needspace{21\baselineskip}
+\subsection{Upper and lower masses}
+\label{sec:gaud-volume-extrema}
+
+As the probability measure varies, the smooth equation realizes the mass of every smooth strictly positive potential, by the proof of \cref{prop:gaud-volume-density-independence}. The extrema of the volume over all measures are therefore the extrema of these masses, and regularization of bounded potentials identifies them with the lower and upper masses $v_-(\omega)$ and $v_+(\omega)$ of \cref{def:bmp}. The infimum simplifies further: at each Gauduchon metric an explicit measure maximizes the denominator, and this removes the density from the formula entirely.
+
+Throughout this subsection $\omega$ is a Hermitian form on $X$, and $\mathscr M$ denotes the set of smooth strictly positive probability measures on $X$.
+
+\begin{theorem}\label{thm:gaud-volume-mass-extrema}\index{Monge--Ampere mass@Monge--Amp\`ere mass!extrema by duality}
+One has
+\[
+ \inf_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_-(\omega),
+ \qquad
+ \sup_{\mu\in\mathscr M}\mathcal V_\mu(\omega)=v_+(\omega),
+\]
+where the supremum may be infinite. Moreover,
+\begin{equation}\label{eq:gaud-lower-mass-formula}
+ v_-(\omega)^{1/n}
+ =\inf_{\gamma\text{ Gauduchon}}
+ \frac{\displaystyle\int_X\omega\wedge\gamma^{n-1}}
+      {\displaystyle\left(\int_X\gamma^n\right)^{(n-1)/n}}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For each $\mu\in\mathscr M$, the smooth normalized equation realizes $\mathcal V_\mu(\omega)$ as the mass $\int_X(\omega+\ddc v)^n$ of a smooth potential $v$ with $\omega+\ddc v>0$. Conversely, every such potential realizes its mass as $\mathcal V_{\mu_v}(\omega)$ for the measure $\mu_v$ in the proof of \cref{prop:gaud-volume-density-independence}. Thus the set of volumes $\mathcal V_\mu(\omega)$, $\mu\in\mathscr M$, coincides with the set of these smooth masses.
+
+It remains to show that the smooth masses have the same extrema as the masses of bounded potentials, which define $v_\pm(\omega)$. If $u\in\PSH(X,\omega)\cap L^\infty$, \cref{thm:bounded-exact-regularization} gives uniformly bounded smooth strictly $\omega$-plurisubharmonic functions $u_j$ decreasing to $u$. Their Monge--Amp\`ere measures converge by the monotone continuity of bounded products, and so do their total masses, since $X$ is compact. Every bounded mass is therefore a limit of smooth strictly positive masses. Conversely, smooth potentials are bounded. This proves the first two identities.
+
+For the last formula, take $n$th roots and interchange the infima over $\mu$ and over $\gamma$ in \cref{thm:gaud-volume-dual-formula}. For a fixed Gauduchon metric $\gamma$, H\"older's inequality and $\int_X\mu=1$ give
+\[
+ D_\mu(\gamma)
+ \leq\left(\int_X\gamma^n\right)^{(n-1)/n},
+\]
+with equality for the smooth probability measure
+$\mu=\gamma^n/\int_X\gamma^n$. The numerator is positive and does not depend on $\mu$, so the infimum of the quotient over $\mu$ is obtained by maximizing the denominator. This gives \eqref{eq:gaud-lower-mass-formula}. For $n=1$ both denominators equal one, and the same argument applies.
+\end{proof}
+
+Thus $v_-(\omega)>0$ if and only if $\int_X\omega\wedge\gamma^{n-1}$ has a positive lower bound over all Gauduchon metrics $\gamma$ with $\int_X\gamma^n=1$. This lower bound fails on the threefold constructed in \cref{thm:vanishing-lower-mass}. \Cref{cor:positive-lower-mass-solvability} in \cref{chap:relative-finite-measures} shows that positivity of $v_-(\omega)$ is also equivalent to solvability, in the background $\omega$, of the normalized equation for every nonzero finite non-pluripolar measure. In the same way, each individual volume $\mathcal V_\mu(\omega)$ is finite, while their supremum $v_+(\omega)$ can be infinite.
