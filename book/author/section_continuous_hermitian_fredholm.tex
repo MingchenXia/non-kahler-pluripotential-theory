@@ -1,18 +1,20 @@
-\section{Fredholm theory for a continuous Hermitian form}
+\section{Fredholm theory for a continuous positive form}
 \label{sec:continuous-hermitian-fredholm}
 
-A continuous positive Hermitian form still defines a uniformly elliptic
-trace operator. Its range is most conveniently described in Sobolev spaces:
+A continuous strictly positive $(1,1)$-form still defines a uniformly
+elliptic trace operator. Its range is most conveniently described in Sobolev spaces:
 continuity of the coefficients suffices for the local $W^{2,p}$ estimate,
-while the maximum principle identifies the kernel.
+while the maximum principle identifies the kernel. The lemma is used for
+continuous positive complex Hessians in
+\cref{thm:continuous-hessian-adjoint-uniqueness}.
 
 \begin{lemma}\label{lem:continuous-hermitian-fredholm}\index{Elliptic operator!continuous coefficients}
-Let $\sigma$ be a continuous positive real $(1,1)$-form on a connected
-compact complex $n$-fold, and let $\mathrm dV$ be a smooth positive volume.
+Let $\sigma$ be a continuous strictly positive real $(1,1)$-form on $X$,
+and let $\mathrm dV$ be a smooth positive volume form.
 For $p>2n$, the real operator
 \[
  L_\sigma v=\operatorname{tr}_\sigma\ddc v,
- \qquad L_\sigma:W^{2,p}(X)\longrightarrow L^p(\mathrm dV),
+ \qquad L_\sigma\colon W^{2,p}(X)\longrightarrow L^p(\mathrm dV),
 \]
 is Fredholm of index zero. Its kernel consists of the constants, and
 its range has a one-dimensional annihilator in $L^{p'}(\mathrm dV)$,
@@ -25,9 +27,10 @@ cover these operators have uniformly positive real principal matrices
 and a common modulus of continuity. They have no lower-order terms in
 these coordinates. Write $d=2n$ for the real dimension.
 
-\emph{Local estimates.} For a constant positive real matrix $a_0$, the
-symbols $\xi_i\xi_j/(1+a_0^{kl}\xi_k\xi_l)$ satisfy the order-zero
-multiplier estimates. Consequently
+\emph{Local estimates.} For a constant positive definite real matrix
+$a_0$, the symbols $\xi_i\xi_j/(1+a_0^{kl}\xi_k\xi_l)$ satisfy the
+order-zero multiplier estimates, uniformly for $a_0$ in a compact set of
+positive definite matrices. Consequently
 \[
  \|D^2z\|_p\leq C\bigl(\|a_0^{ij}D_{ij}z\|_p+\|z\|_p\bigr)
  \qquad(z\in C_c^\infty).
@@ -47,12 +50,12 @@ A partition of unity and smooth density give, uniformly in $s$,
 
 \emph{Maximum principles.} We give the local estimate needed to pass
 comparison to $W^{2,p}$. Let $L=a^{ij}D_{ij}$ on a bounded smooth
-coordinate domain $D$, with $a\geq\vartheta I$, and let $z$ be smooth
-with nonnegative boundary values and minimum $-M<0$. Set
-$R=\operatorname{diam}D$. Every vector $\xi$ with $|\xi|<M/(2R)$ is
-the gradient at an interior lower supporting point of $z$: minimize
-$z(x)-\xi\cdot(x-x_0)$, where $z(x_0)=-M$. Its boundary values exceed
-$-M/2$, whereas its value at $x_0$ is $-M$. At a supporting point
+coordinate domain $\Omega$, with $a\geq\vartheta I$, and let $z$ be
+smooth on $\overline\Omega$ with nonnegative boundary values and minimum
+$-m<0$. Set $R=\operatorname{diam}\Omega$. Every vector $\xi$ with
+$|\xi|<m/(2R)$ is the gradient at an interior lower supporting point of
+$z$: minimize $z(x)-\xi\cdot(x-x_0)$, where $z(x_0)=-m$. Its boundary
+values exceed $-m/2$, whereas its value at $x_0$ is $-m$. At a supporting point
 $D^2z\geq0$, and the arithmetic--geometric mean inequality gives
 \[
  \det D^2z\leq
@@ -60,33 +63,39 @@ $D^2z\geq0$, and the arithmetic--geometric mean inequality gives
 \]
 The area formula for the gradient, restricted to these supporting
 points, therefore bounds the volume of the slope ball by
-$(d\vartheta)^{-d}\int_D((Lz)^+)^d$. Thus
+$(d\vartheta)^{-d}\int_\Omega((Lz)^+)^d$. Thus
 \begin{equation}\label{eq:continuous-hermitian-local-minimum}
- -\min_Dz\leq C_d\vartheta^{-1}R\|(Lz)^+\|_{L^d(D)}.
+ -\min_\Omega z\leq C_d\vartheta^{-1}R\|(Lz)^+\|_{L^d(\Omega)}.
 \end{equation}
-This calculation uses no derivative of $a$. Approximate a $W^{2,p}$
-function smoothly on the closure of a smaller smooth domain. The
-approximation converges in $C^1$, and its $L$ errors converge in $L^d$
-because $p>d$. Correct the vanishing boundary error in
+This calculation uses no derivative of $a$. Now let $v$ be of class
+$W^{2,p}$ on a neighborhood of $\overline\Omega$, and approximate it in
+$W^{2,p}$ by smooth functions. Since $p>d$, the approximations converge
+in $C^1(\overline\Omega)$, and their images under $L$ converge in
+$L^d(\Omega)$. Adding to each approximation the negative part of its
+minimum on $\partial\Omega$, which tends to zero, we may apply
 \eqref{eq:continuous-hermitian-local-minimum}. Passage to the limit
-shows that $Lv\leq0$ and $v|_{\partial D}\geq0$ imply $v\geq0$.
+shows that $Lv\leq0$ and $v|_{\partial\Omega}\geq0$ imply $v\geq0$.
 
 The same comparison proves the strong maximum principle. If
-$v\in W^{2,p}$, $Lv\geq0$, and $v$ has an interior maximum $M$, put
-$w=M-v\geq0$. If $w$ is positive somewhere and zero somewhere, a small
-ball contained in $\{w>0\}$ and tangent to its zero set can be chosen
-inside a coordinate chart. On the outer half-annulus of this ball,
+$v\in W^{2,p}$ on a connected open set, $Lv\geq0$, and $v$ has an
+interior maximum $m$, put $w=m-v\geq0$. If $w$ is positive somewhere and
+zero somewhere, a small ball contained in $\{w>0\}$ and tangent to its
+zero set can be chosen inside a coordinate chart. Let $c$ and $r$ be its
+center and radius. On the annulus $\{r/2<|x-c|<r\}$,
 \[
  \zeta(x)=\exp(-k|x-c|^2)-\exp(-kr^2)
 \]
 is positive and has $L\zeta>0$ for sufficiently large $k$, by uniform
-ellipticity. A small positive multiple of $\zeta$ is bounded above by
-$w$ on both boundary spheres, hence throughout the annulus by comparison.
-At the tangent point this forces a positive inward derivative of $w$,
-contradicting $Dw=0$. Connectedness proves that $v$ is constant.
+ellipticity. For small $\epsilon>0$, the function $\epsilon\zeta$ is
+bounded above by $w$ on both boundary spheres, hence throughout the
+annulus by the comparison principle applied to $w-\epsilon\zeta$. At the tangent point
+this forces a positive inward derivative of $w$, contradicting $Dw=0$ at
+this minimum of the $C^1$ function $w$. Connectedness proves that $v$ is
+constant.
 Applied to $L_s$ on $X$, it gives $\ker L_s=\mathbb R$. If
 $(L_s-1)v=0$ and $v$ has a positive maximum, apply the strong maximum
-principle on its positive component, where $L_sv=v>0$. Constancy
+principle on the component of $\{v>0\}$ containing a maximum point,
+where $L_sv=v>0$. Constancy
 contradicts that equation. Applying the argument to $-v$ rules out a
 negative minimum. Hence $\ker(L_s-1)=0$.
 
@@ -95,7 +104,7 @@ and \eqref{eq:continuous-hermitian-wtwo} now give
 \begin{equation}\label{eq:continuous-hermitian-inverse}
  \|v\|_{W^{2,p}}\leq C\|(L_s-1)v\|_p
 \end{equation}
-uniformly in $s$. Otherwise normalize a contradicting sequence in
+uniformly in $s$. If this failed, we could normalize a contradicting sequence in
 $W^{2,p}$, pass to $s_j\to s$ and a strongly $L^p$ convergent subsequence,
 and apply \eqref{eq:continuous-hermitian-wtwo} to differences. Operator
 norm continuity in $s$ gives strong $W^{2,p}$ convergence to a nonzero

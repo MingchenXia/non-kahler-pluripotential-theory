@@ -7,16 +7,19 @@ a constant Euclidean cone. We first establish the Liouville theorem that
 rules out such a nonconstant limit.
 
 For this Euclidean argument allow $1\leq m\leq n$. Write
-$H(v)=(v_{i\bar j})$. A continuous real function $v$ on a Euclidean
-domain is admissible for $C_{n,m}$ if
+$H(v)=(v_{i\bar j})$ for the complex Hessian. A continuous real function
+$v$ on a domain in $\mathbb C^n$ is admissible for $C_{n,m}$ if
 \[
- \operatorname{tr}(QH(v))\geq0
- \quad\text{in distributions for every }Q\in C_{n,m}^*,
+ \operatorname{tr}(PH(v))\geq0
+ \quad\text{in distributions for every }P\in C_{n,m}^*,
 \]
-where $C_{n,m}^*=\{Q:\operatorname{tr}(QA)\geq0\text{ for all }A\in C_{n,m}\}$.
-For smooth functions this says $H(v)\in C_{n,m}$. Call $v$ maximal
-if every smooth lower test has Hessian outside the interior of $C_{n,m}$
-at the contact point. Admissibility implies subharmonicity and is
+where $C_{n,m}^*=\{P:\operatorname{tr}(PA)\geq0\text{ for all }A\in C_{n,m}\}$
+is the dual cone of Hermitian matrices.
+For smooth functions this says $H(v)\in C_{n,m}$. A \emph{lower test}
+for $v$ at $z_0$ is a smooth function $\psi$ near $z_0$ with
+$\psi\leq v$ near $z_0$ and $\psi(z_0)=v(z_0)$. Call $v$
+\emph{maximal} if $H(\psi)(z_0)$ lies outside the interior of $C_{n,m}$
+for every lower test $\psi$ at every point $z_0$. Admissibility implies subharmonicity and is
 preserved by nonnegative convolution. The cone polynomial $S_m$ increases
 under nonnegative matrix addition in the interior.
 
@@ -24,17 +27,17 @@ under nonnegative matrix addition in the interior.
 Local uniform limits of admissible maximal functions are admissible and maximal. Suppose $v$ is admissible and maximal on a bounded open set $D$, and $h$ is smooth and admissible there. If both are continuous on $\overline D$ and $h\leq v$ on $\partial D$, then $h\leq v$ on $D$.
 \end{lemma}
 \begin{proof}
-The distributional inequalities pass to local uniform limits. If a lower test $h$ for the limit at $z_0$ has Hessian in the interior, subtract $\delta|z-z_0|^2$, for sufficiently small $\delta>0$, to make the contact strict while retaining interior admissibility near $z_0$. Interior minimum points for the approximants then tend to $z_0$. Adding the minimum value produces lower tests for them with Hessian in the interior, contradicting their maximality.
+The distributional inequalities pass to local uniform limits. If a lower test $\psi$ for the limit at $z_0$ has $H(\psi)(z_0)$ in the interior of $C_{n,m}$, subtract $\delta|z-z_0|^2$, for sufficiently small $\delta>0$, to make the contact strict while keeping the Hessian in the interior near $z_0$. On a small closed ball around $z_0$, the minimum points of each approximant minus this function then tend to $z_0$. Adding the minimum values produces lower tests for the approximants with Hessian in the interior, contradicting their maximality.
 
-For comparison choose $R$ with $\overline D\subset\{|z|\leq R\}$. If $h>v$ somewhere, the function $h_\delta=h+\delta(|z|^2-R^2)$ still exceeds $v$ somewhere for small $\delta>0$ and is at most $v$ on the boundary. The negative minimum of $v-h_\delta$ is attained inside $D$. Since $H(h_\delta)=H(h)+\delta I$ belongs to the interior, adding the minimum value gives a forbidden lower test. This argument requires no regularity of the boundary.
+For the comparison assertion, choose $R$ with $\overline D\subset\{|z|\leq R\}$. If $h>v$ somewhere, the function $h_\delta=h+\delta(|z|^2-R^2)$ still exceeds $v$ somewhere for small $\delta>0$ and is at most $v$ on the boundary. The negative minimum of $v-h_\delta$ is attained inside $D$. Since $H(h_\delta)=H(h)+\delta I$ belongs to the interior, adding the minimum value to $h_\delta$ gives a lower test for $v$ that maximality forbids. This argument requires no regularity of the boundary.
 \end{proof}
 
 \begin{theorem}\label{hessian:hessian-cone-liouville}
 Every bounded globally Lipschitz admissible function on $\mathbb C^n$ that is maximal for $C_{n,m}$ is constant.
 \end{theorem}
 \begin{proof}
-For $m=1$, the distributional subharmonicity and the lower-test condition say that the function is a viscosity solution of the Laplace equation. The elementary equivalence with harmonicity and bounded harmonic Liouville give the conclusion. For $m=n$, admissibility is distributional plurisubharmonicity. The continuous representative is plurisubharmonic, and bounded plurisubharmonic Liouville applies.
-For a fixed $m\geq2$, we therefore argue by induction on $n\geq m$.
+For $m=1$, the dual cone consists of the nonnegative multiples of $I$. Distributional subharmonicity and the lower-test condition then say that the function is a viscosity solution of the Laplace equation. The elementary equivalence with harmonicity and bounded harmonic Liouville give the conclusion. For $m=n$, admissibility is distributional plurisubharmonicity. The continuous representative is plurisubharmonic, and bounded plurisubharmonic Liouville applies.
+For a fixed $m\geq2$, we therefore argue by induction on $n\geq m$, the case $n=m$ being the plurisubharmonic one.
 
 The reduction in dimension is particularly simple for this cone. For a Hermitian $(n-1)$-by-$(n-1)$ matrix $A$ and $m<n$,
 \[
@@ -66,8 +69,8 @@ First suppose there are a fixed $\rho>0$, numbers $\epsilon_k\downarrow0$, $r_k\
  \qquad
  \int_{B(x_k,r_k)}|\partial_{\xi_k}v_{\epsilon_k}|^2\,\mathrm dy\longrightarrow0.
 \]
-Translate and rotate to make $x_k$ the origin and $\xi_k$ the last complex direction. Compactness of uniformly bounded Lipschitz functions and the preceding lemma give a locally uniform limit $a$ that is admissible and maximal. The transformed mollifications have the same limit. Their last derivatives tend to zero in $L^2$ on every fixed ball, so $\partial_{z_n}a=0$ in distributions. Since $a$ is real and continuous, it is independent of $z_n$.
-The induction hypothesis gives $a=c\in[0,1]$. In the displayed gap inequality the first average is at most one, while the fixed-radius average and the value at the origin tend to $c$. This would give $4/3\leq1-c\leq1$, a contradiction.
+Translate and unitarily rotate to make $x_k$ the origin and $\xi_k$ the last complex direction; this preserves $C_{n,m}$. Compactness of uniformly bounded Lipschitz functions and \cref{hessian:hessian-cone-stability} give a locally uniform limit $a$, along a subsequence, that is admissible and maximal. The transformed mollifications have the same limit. Their last derivatives tend to zero in $L^2$ on every fixed ball, so $\partial_{z_n}a=0$ in distributions. Since $a$ is real and continuous, it is independent of $z_n$.
+By the dimension reduction, $a$ induces a bounded Lipschitz function on $\mathbb C^{n-1}$ that is admissible and maximal for $C_{n-1,m}$, and $n-1\geq m$. The induction hypothesis gives $a=c\in[0,1]$. In the displayed gap inequality the first average is at most one, while the fixed-radius average and the value at the origin tend to $c$. This would give $4/3\leq1-c\leq1$, a contradiction.
 
 If this case does not occur, then for every fixed $\rho>0$ there is $C_\rho\geq1$ such that
 \[
@@ -75,7 +78,7 @@ If this case does not occur, then for every fixed $\rho>0$ there is $C_\rho\geq1
 \]
 for every unit complex direction $\xi$, whenever $0<\epsilon<C_\rho^{-1}$, $r>C_\rho$ and
 $[v^2]_r(x)+[v]_\rho(x)-2v(x)\geq4/3$.
-Indeed, failure for every integer choice $C_\rho=k$ produces the sequences excluded above. The dependence on the fixed radius $\rho$ is retained.
+Indeed, failure for every integer choice $C_\rho=k$ produces the sequences excluded above. The constant $C_\rho$ may depend on $\rho$.
 Translate so that $v(0)<1/12$. Choose $\rho$ with $[v]_\rho(0)>3/4$, then $r>C_\rho$ with $[v^2]_r(0)>3/4$. The open set
 \[
  D=\{x:2v(x)<[v^2]_r(x)+[v]_\rho(x)-4/3\}
@@ -97,7 +100,7 @@ The smooth function
 \[
  h=\tfrac12\bigl([v^2]_r-c|z|^2+[v]_\rho-4/3\bigr)
 \]
-is admissible on $D$. The set $D'=\{v<h\}$ contains the origin, is bounded, and lies in $D$. Continuity gives $v=h$ on its boundary. The comparison lemma gives $h\leq v$ on $D'$, a contradiction. This completes the induction.
+is admissible on $D$. The set $D'=\{v<h\}$ contains the origin, is bounded, and lies in $D$. Continuity gives $v=h$ on its boundary. The comparison assertion of \cref{hessian:hessian-cone-stability} gives $h\leq v$ on $D'$, a contradiction. This completes the induction.
 \end{proof}
 
 A trace bound now suffices to bound the gradient. The following
@@ -116,7 +119,7 @@ There is a uniform bound for $\sup_X|\partial u|_\omega$ over all smooth real $u
 The bound requires no derivatives of the Hessian density.
 \end{proposition}
 \begin{proof}
-In local holomorphic coordinates write $\omega=\mathrm i g_{i\bar j}\,\mathrm dz_i\wedge\mathrm d\bar z_j$ and $\theta_u=\mathrm i(b_{i\bar j}+\kappa u_{i\bar j})\,\mathrm dz_i\wedge\mathrm d\bar z_j$, where the fixed constant $\kappa>0$ accounts for the convention for $\ddc$.
+In local holomorphic coordinates write $\omega=\mathrm i g_{i\bar j}\,\mathrm dz_i\wedge\mathrm d\bar z_j$ and $\theta_u=\mathrm i(b_{i\bar j}+\kappa u_{i\bar j})\,\mathrm dz_i\wedge\mathrm d\bar z_j$, where $\kappa=1/(2\pi)$ comes from the normalization of $\ddc$.
 For eigenvalues $\lambda\in\Gamma_m$, $m\geq2$, one has
 \[
  \sum_i\lambda_i^2
@@ -125,7 +128,7 @@ For eigenvalues $\lambda\in\Gamma_m$, $m\geq2$, one has
 \]
 Thus the assumed trace estimate bounds every eigenvalue in absolute value by $A(1+\sup|\partial u|^2)$.
 
-Suppose contrary to the claim that a sequence $u_j$ has maxima $R_j=\sup|\partial u_j|_\omega\to\infty$, attained at $x_j$. Pass to $x_j\to x_\infty$ and work in a fixed chart, changing coordinates linearly so that $g(x_\infty)=I$. If $y_j$ is the coordinate of $x_j$, set
+Suppose, contrary to the claim, that a sequence $u_j$ has maxima $R_j=\sup|\partial u_j|_\omega\to\infty$, attained at $x_j$. Passing to a subsequence, let $x_j\to x_\infty$, and work in a fixed chart, changing coordinates linearly so that $g(x_\infty)=I$. If $y_j$ is the coordinate of $x_j$, set
 \begin{align*}
  v_j(z)&=u_j(y_j+z/R_j),\qquad g_j(z)=g(y_j+z/R_j),\\
  E_j(z)&=R_j^{-2}b(y_j+z/R_j)+\kappa H(v_j)(z).
@@ -134,18 +137,18 @@ These are defined on balls with radii tending to infinity. On each fixed ball $g
 Interior estimates for the fixed Euclidean Laplacian give local uniform $W^{2,q}$ bounds for every finite $q$. A diagonal subsequence converges in $C^1$ on compact subsets to a bounded globally Lipschitz $v$, with $|\partial v(0)|=1$.
 
 The Hermitian matrices $g_j^{-1/2}E_jg_j^{-1/2}$ belong to the interior of $C_{n,m}$ and differ from $\kappa H(v_j)$ by a term tending uniformly to zero on fixed balls. Pairing with any fixed matrix in the dual cone and passing in distributions proves that $v$ is admissible.
-Its equation is
+By homogeneity of $S_m$, the rescaled Hessian densities satisfy
 \[
  \frac{S_m(g_j^{-1/2}E_jg_j^{-1/2})}{\binom nm}
    =R_j^{-2m}\frac{\theta_{u_j}^m\wedge\omega^{n-m}}{\omega^n}
       (y_j+z/R_j)\leq BR_j^{-2m}.
 \]
-We show maximality by lower tests, rather than by an unproved convergence assertion for variable-background Hessian measures. If a smooth lower test $\psi$ at $z_0$ had $H(\psi)(z_0)$ in the interior, choose a small $\delta>0$ so that $H(\psi)-\delta I$ remains there near $z_0$. Strictifying the contact by subtracting $\delta|z-z_0|^2$ gives interior minimum points $z_j\to z_0$ for $v_j$ minus this test. At those points
+We prove maximality directly with lower tests; no convergence theorem for Hessian measures with variable backgrounds is needed. If a smooth lower test $\psi$ at $z_0$ had $H(\psi)(z_0)$ in the interior, choose a small $\delta>0$ so that $H(\psi)-\delta I$ remains there near $z_0$. Strictifying the contact by subtracting $\delta|z-z_0|^2$ gives interior minimum points $z_j\to z_0$ for $v_j$ minus this test. At those points
 \[
  E_j\geq R_j^{-2}b+\kappa(H(\psi)-\delta I).
 \]
 The matrix on the right, measured with $g_j$, is uniformly inside the cone. Monotonicity of $S_m$ under nonnegative addition gives a fixed positive lower bound for the left side of the preceding equation. This contradicts $BR_j^{-2m}\to0$.
-Hence $v$ is maximal. The Liouville theorem makes it constant, contradicting $|\partial v(0)|=1$.
+Hence $v$ is maximal. \Cref{hessian:hessian-cone-liouville} makes it constant, contradicting $|\partial v(0)|=1$.
 \end{proof}
 
 On a fixed rescaled ball the metric varies by order $R_j^{-1}$,

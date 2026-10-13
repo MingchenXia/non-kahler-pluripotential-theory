@@ -9,7 +9,8 @@ strictly admissible $u$, put
  H_{i\bar j}=g_{i\bar j}+u_{i\bar j},\qquad W=g^{-1}H,
  \qquad L=\sum_iF_i\nabla_{i\bar i}
 \]
-in a unitary frame diagonalizing $H$. Use $f,\mathcal F,S,Q$ from
+in a unitary frame diagonalizing $H$. Let $\lambda_1\geq\cdots\geq\lambda_n$ be
+the eigenvalues of $W$, and use $f,\mathcal F,S,Q$ from
 \cref{sec:hessian-cone}. Since $m\geq2$, one has
 $|\lambda_i|<S\leq n\lambda_1$.
 
@@ -170,9 +171,9 @@ Differentiate the squared norm using metric compatibility. Its quadratic part is
 The first differentiated equation is $\sum_iF_i u_{i\bar i;k}=f_k$, because the background $g$ is parallel. At the diagonal point the torsion errors are bounded by $C\sqrt K\sum_iF_i(|\lambda_i|+1)$, and the curvature errors by $CK\mathcal F$. Use
 \[
  C\sqrt K F_i|\lambda_i|
-       \leq\eta' F_i\lambda_i^2+C_{\eta'}KF_i
+       \leq\eta F_i\lambda_i^2+C_\eta KF_i,
 \]
-with a sufficiently small $\eta'$ for the finite sum. This gives the asserted bound.
+and sum over $i$. This gives the asserted bound.
 \end{proof}
 
 \Needspace{19\baselineskip}
@@ -195,7 +196,7 @@ then
 The cone condition on $v$ is understood in a unitary frame. The tolerance $\varepsilon$ uses no derivatives of $\varphi$; the constant $C$ uses no derivatives of $v$.
 \end{proposition}
 \begin{proof}
-For $\varepsilon\leq1$ the density has fixed bounds $0<f_0\leq f\leq f_1$. Its first derivative is
+For $\varepsilon\leq1$ the root $f=F(W)$ of the density has fixed bounds $0<f_0\leq f\leq f_1$. Its first derivative is
 \[
  f_k=\frac f m(u_k+h_k(x,v)+h_t(x,v)v_k).
 \]
@@ -226,7 +227,7 @@ The first-order condition at the maximum, and the identity $D_i=\lambda_1Z_i-(\l
 \]
 Thus $|e_i|\leq E_0$, with $E_0$ independent of $A$ and of derivatives of $v$.
 
-We first bound the term $\Phi'Ls$ of $LG$. \Cref{hessian:hermitian-gradient-commutation} and the identity $u_{i\bar j}=(\lambda_i-1)\delta_{ij}$ give, after multiplication by $\Phi'$,
+We first bound the term $\Phi'Ls$ of $L\widetilde G$. \Cref{hessian:hermitian-gradient-commutation} and the identity $u_{i\bar j}=(\lambda_i-1)\delta_{ij}$ give, after multiplication by $\Phi'$,
 \[
  \Phi'Ls\geq\frac1{8K}\sum_{i,k}F_i(|u_{ki}|^2+|u_{k\bar i}|^2)
              +\frac{3}{64K}Q-C\mathcal F
@@ -245,12 +246,12 @@ If $\lambda_1$ lies below either threshold at the maximum point, the final compa
 \end{align*}
 The fixed $qL\varphi$ term is included in $C_0$. Choose $\varepsilon$ so small that the lower bound $q\geq1/(36\varepsilon)$ meets all thresholds of \cref{hessian:fixed-comparison-absorption}. These thresholds depend on $M,B,h$ and the metric, and not on derivatives of $\varphi$. This choice precedes that of $A$.
 
-First suppose $\lambda_n<-\delta\lambda_1$. Concavity gives $N\geq0$, and
+Let $0<\delta<1$; it is fixed at the end of the proof. First suppose $\lambda_n<-\delta\lambda_1$. Concavity gives $N\geq0$, and
 \[
  -|Z_i|^2+2|x_i|^2
      \geq-6|y_i|^2-6q^2|a_i|^2-6E_0^2.
 \]
-\Cref{hessian:fixed-comparison-absorption}, with $M=P_v$ and $r=0$, applies after decreasing the right side further by $(3q^2+2q)|a_i|^2$. Drop the nonnegative terms $qW_v/2$ and $q^2\sum_iF_i|a_i|^2/4$ that it provides, and the $\Psi''$ term. Since $\Psi'f\geq-3Af_1$ and $-\Psi'\mathcal F\geq0$, this gives
+After decreasing the right side further by $(3q^2+2q)|a_i|^2$, apply \cref{hessian:fixed-comparison-absorption} to the matrix $P_v$, with $r=0$. Drop the nonnegative terms $qW_v/2$ and $q^2\sum_iF_i|a_i|^2/4$ that it provides, and the $\Psi''$ term. Since $\Psi'f\geq-3Af_1$ and $-\Psi'\mathcal F\geq0$, this gives
 \[
  0\geq\frac{Q}{32K}-(54A^2+C_*)K\mathcal F-3Af_1,
 \]
@@ -276,7 +277,7 @@ Choose $\delta\leq\min\{1/17,\tau/(72A+\tau)\}$. Then the first coefficient is a
  \geq-\frac{54A^2+6nE_0^2}{\delta}KF_1
        -6q^2\sum_{i\notin I}F_i|a_i|^2.
 \]
-Apply \cref{hessian:fixed-comparison-absorption} with $M=P_v$ and penalty $r$. To match its input, add the negative terms $-(9q^2+2q)|a_i|^2$ for $i\in I$ and $-(3q^2+2q+rq^2)|a_i|^2$ for $i\notin I$; this only decreases the right side. Its fixed-comparison error and the error $rE_0^2\mathcal F$ from $I$ have constants bounded independently of $A,\delta$. Enlarge $C_*$ to include them, and drop the nonnegative terms provided by the lemma and the remaining $\Psi''$ term. We obtain
+Apply \cref{hessian:fixed-comparison-absorption} to the matrix $P_v$, with penalty $r$. To match its input, add the negative terms $-(9q^2+2q)|a_i|^2$ for $i\in I$ and $-(3q^2+2q+rq^2)|a_i|^2$ for $i\notin I$; this only decreases the right side. Its fixed-comparison error and the error $rE_0^2\mathcal F$ from $I$ have constants bounded independently of $A,\delta$. Enlarge $C_*$ to include them, and drop the nonnegative terms provided by the lemma and the remaining $\Psi''$ term. We obtain
 \[
  0\geq\frac{Q}{32K}-\frac{54A^2+6nE_0^2}{\delta}KF_1
                 +(A-C_*)\mathcal F-3Af_1.
