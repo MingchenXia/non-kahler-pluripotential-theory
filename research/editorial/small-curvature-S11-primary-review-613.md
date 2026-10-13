@@ -1,0 +1,15 @@
+# Small-curvature ordinary types and S11 — scoped review613
+
+Six inactive proofs reconstruct the incoming restricted S11 A--G claims, with a further polar-curvature vanishing consequence on every smooth compact modification. The strict-type criterion uses an effective finite logarithmic divisor and actual ordinary representatives with arbitrarily small negative curvature. Ambient multiplier ideals ignore the residual, and SNC intrinsic traces are finite even when naive restriction is identically minus infinity. On the ruled surface the strictness obstruction extends to every nonempty finite composition of point blowups, including pole centers, while one-sided strictness and both optimized masses persist.
+
+All261 inactive lines and six proof bodies have two actual complete manual reads. The447-line incoming source has two complete reads; its raw paper and frozen verifier payloads are preserved. The24 listed mathematical obligations pass. The zero-Lelong deduction reuses the book uniform Lelong bound by scaling, and the polar-curvature consequence uses bounded-type invariance and the exact Gauduchon trace. Divisorial removal uses the strict background directly, avoiding a duplicate removability proof.
+
+The primary review reads Main Theorem1.1 and all Section2 of Demailly92, with8 actual PDF pages viewed, and Theorem2 of Gauduchon85 on journal132--133, with2 actual pages viewed. The exact Demailly1401.5432v2 Theorem1.2 proof and selected strong-openness statement/application are read. Richberg smoothing is applied to continuous attenuation intermediates, never directly to the unbounded input. Classical regularization, Bergman/Ohsawa--Takegoshi and earlier ideal-addition foundations remain declared; no entire new external dependency certificate is claimed.
+
+All406 book files, both original source manifests and both catalogue sources are unchanged. No book or companion build and no publication occur. The active612 main/companion covers remain October8,2026. General S11 remains open. No novelty assertion, whole-book mathematical certificate, automatic installed base audit or Xean execution is claimed.
+
+Integrate the six checked S11 proof bodies at their natural homes: local ideal neutrality in Chapter1, the small-curvature/strictness argument in Chapter16, the original-ideal trace formula in Chapter19, and the expanded finite pole-center blowup proposition replacing its outside-pole special case. Update history and S11 catalogue scope, preserve general S11 and formal questions, build and inspect, reread changed units, reconstruct and verify each author-build publication with October8,2026 covers. Then resume bounded-Hessian convergence and the live reader queue; Xean remains withdrawn.
+
+See [the scoped audit](../audits/small-curvature-S11-primary-review-613.json).
+
+Current metadata checks pass2957 safe paths and2956 current payload checksums. All403 packaged book sources and all1673 main/17 companion page texts match the actual612 empty reconstruction, whose final logs are clean and publication is disabled. No new empty reconstruction is claimed.

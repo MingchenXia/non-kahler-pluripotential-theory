@@ -1,71 +1,80 @@
 \begin{proof}
-We express the Ricci tensor of the Riemannian metric in terms of the covariant derivative of the Lee form, and then compare two integral identities for this derivative, one from the contracted Bianchi identity and one from the Bochner formula. Let $g$ be the Riemannian metric of $\omega$ and $\nabla$ its Levi--Civita connection; norms, traces and contractions are taken with respect to $g$. For real tangent vectors $U,V$, put
+We keep the divergence terms in the Ricci tensor and compare the Bianchi and Bochner identities before imposing the Gauduchon condition. All norms, traces and contractions use $g$. Put
 \[
- A=\lambda^\sharp,\qquad B=JA,\qquad
- S=\nabla\lambda,\qquad
- S^+(U,V)=\tfrac12\bigl(S(U,V)+S(JU,JV)\bigr).
+ B=JA,\qquad S=\nabla\lambda,\qquad
+ S^+(U,V)=\tfrac12\bigl(S(U,V)+S(JU,JV)\bigr),\qquad
+ u=|\lambda|_g^2.
 \]
-The tensor $S$ is symmetric because $\mathrm{d}\lambda=0$. By \cref{prop:lck-gauduchon}, $\lambda$ is harmonic, so $\operatorname{tr}_gS=0$ and $\operatorname{div}A=0$. Write $J\lambda=-\lambda\circ J$, so that $\lambda^{\mathrm c}=J\lambda/(4\pi)$.
+Closedness of $\lambda$ makes $S$ symmetric, and $\operatorname{tr}_gS=-q$. The tensors $S^+$ and $S^-=S-S^+$ are orthogonal. Write $J\lambda=-\lambda\circ J$, so that $\lambda^{\mathrm c}=J\lambda/(4\pi)$.
 
 \emph{Step 1: the Ricci tensor.} We first show that
 \begin{equation}\label{eq:lck-ricci-real}
  \operatorname{Ric}_g
- =nS^+-(n-1)S-\tfrac12|\lambda|^2g
+ =nS^+-(n-1)S+\tfrac{q-u}{2}g
        +\tfrac12\lambda\otimes\lambda
        +\tfrac n2 J\lambda\otimes J\lambda.
 \end{equation}
-To prove this identity, take a local function $f$ with $\lambda=\mathrm{d}f$ and put $\widetilde g=\mathrm{e}^{-f}g$. The formula for the Ricci tensor under a conformal change, in real dimension $2n$, gives
+Locally write $\lambda=\mathrm df$ and put $\widetilde g=\mathrm e^{-f}g$. The real conformal Ricci formula in dimension $2n$ is
 \[
  \operatorname{Ric}_{\widetilde g}
  =\operatorname{Ric}_g+(n-1)S
        +\tfrac{n-1}{2}\lambda\otimes\lambda
-       -\tfrac{n-1}{2}|\lambda|^2g,
+       +\tfrac12\{-q-(n-1)u\}g.
 \]
-where the term involving the trace of the Hessian of $f$ vanishes because $\operatorname{tr}_gS=0$.
-The local metric $\widetilde g$ is K\"ahler. Since the Chern--Ricci form of $g$ vanishes, the Ricci form of $\widetilde g$, written with the unnormalized operator $\mathrm i\partial\bar\partial$, is
-$n\mathrm i\partial\bar\partial f=\tfrac n2\mathrm{d}(J\lambda)$.
-
+The local metric $\widetilde g$ is K\"ahler. Since the Chern--Ricci form of $g$ vanishes, the Ricci form of $\widetilde g$ is $n\mathrm i\partial\bar\partial f=(n/2)\mathrm d(J\lambda)$.
 Applying \eqref{eq:lck-complex-connection} to
-$(\nabla_UJ\lambda)(V)=-S(U,JV)-\lambda((\nabla_UJ)V)$ and antisymmetrizing yields
+$(\nabla_UJ\lambda)(V)=-S(U,JV)-\lambda((\nabla_UJ)V)$ and antisymmetrizing gives
 \[
- \mathrm{d}(J\lambda)(U,JV)
- =2S^+(U,V)-|\lambda|^2g(U,V)
+ \mathrm d(J\lambda)(U,JV)
+ =2S^+(U,V)-u g(U,V)
              +\lambda(U)\lambda(V)+J\lambda(U)J\lambda(V).
 \]
-For a K\"ahler metric, the Ricci tensor is obtained from the Ricci form by evaluation on $(U,JV)$. Comparing the last two displays with the conformal formula proves \eqref{eq:lck-ricci-real}. The calculation is local, but the resulting tensor identity holds globally.
-
-\emph{Step 2: the Bianchi identity.} All integrals below are taken with respect to the Riemannian volume of $g$. Since
-$S(A,A)=\tfrac12A(|\lambda|^2)$ and $\operatorname{div}A=0$,
-\begin{equation}\label{eq:lck-aa-zero}
- \int_X S(A,A)\,\mathrm{d}\operatorname{vol}_g=0.
-\end{equation}
-The contracted Bianchi identity and $\mathrm{d}^*\lambda=0$ imply
-$\int_X\langle\operatorname{Ric}_g,S\rangle\,\mathrm{d}\operatorname{vol}_g=0$.
-Indeed, integrating by parts expresses this integral through the divergence of the Ricci tensor paired with $\lambda$. By the contracted Bianchi identity, this divergence is half the differential of the scalar curvature, and its pairing with the co-closed form $\lambda$ integrates to zero. Since $S^+$ is the orthogonal projection of $S$ onto the $J$-invariant symmetric tensors, \eqref{eq:lck-ricci-real}, the vanishing trace of $S$ and \eqref{eq:lck-aa-zero} give
-\begin{equation}\label{eq:lck-bianchi-integral}
- n\int_X|S^+|^2\,\mathrm{d}\operatorname{vol}_g
- -(n-1)\int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
- +\tfrac n2\int_XS(B,B)\,\mathrm{d}\operatorname{vol}_g=0.
-\end{equation}
-
-\emph{Step 3: the Bochner formula.} The integrated Bochner identity for the harmonic one-form $\lambda$ is
+Evaluating the K\"ahler Ricci form on $(U,JV)$ and comparing with the conformal formula proves \eqref{eq:lck-ricci-real}. Taking its trace gives the scalar curvature
 \[
- \int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
- +\int_X\operatorname{Ric}_g(A,A)\,\mathrm{d}\operatorname{vol}_g=0.
+ s=(n-1)q-\tfrac{n-1}{2}u.
 \]
-When \eqref{eq:lck-ricci-real} is evaluated on $(A,A)$, its two quartic terms cancel and the term $J\lambda\otimes J\lambda$ vanishes. Thus
+
+\emph{Step 2: the integral identity.} Write $\|\cdot\|$ for the $L^2(g)$ norm and set
+\[
+ E_A=\int_X S(A,A)\,\mathrm d\operatorname{vol}_g,
+ \qquad E_B=\int_X S(B,B)\,\mathrm d\operatorname{vol}_g.
+\]
+Since $S(A,A)=A(u)/2$ and $\operatorname{div}A=-q$, integration by parts gives
+\begin{equation}\label{eq:lck-aa-divergence}
+ \int_Xu q\,\mathrm d\operatorname{vol}_g=2E_A.
+\end{equation}
+Pair the contracted Bianchi identity $\delta\operatorname{Ric}_g+\mathrm ds/2=0$ with $\lambda$ and integrate. Here $\delta$ is minus covariant contraction, the formal adjoint of the symmetric covariant derivative. Thus
+\[
+ 0=\int_X\langle\operatorname{Ric}_g,S\rangle\,\mathrm d\operatorname{vol}_g
+       +\tfrac12\int_Xs q\,\mathrm d\operatorname{vol}_g.
+\]
+Substitution of \cref{eq:lck-ricci-real,eq:lck-aa-divergence} gives
+\begin{equation}\label{eq:lck-bianchi-integral}
+ 0=n\|S^+\|^2-(n-1)\|S\|^2+\tfrac{n-2}{2}\|q\|^2
+       +\tfrac{4-n}{2}E_A+\tfrac n2E_B.
+\end{equation}
+For the closed one-form $\lambda$, the integrated Bochner formula reads
+\[
+ \|q\|^2=\|S\|^2
+          +\int_X\operatorname{Ric}_g(A,A)\,\mathrm d\operatorname{vol}_g.
+\]
+The quartic terms in \eqref{eq:lck-ricci-real} cancel on $(A,A)$, and $J\lambda(A)=0$, so
 \[
  \operatorname{Ric}_g(A,A)
- =(1-\tfrac n2)S(A,A)+\tfrac n2S(B,B).
+ =(1-\tfrac n2)S(A,A)+\tfrac n2 S(B,B)+\tfrac12q u.
 \]
-Together with \eqref{eq:lck-aa-zero}, this gives
+Using \eqref{eq:lck-aa-divergence}, we obtain
 \begin{equation}\label{eq:lck-bochner-integral}
- \int_X|S|^2\,\mathrm{d}\operatorname{vol}_g
- +\tfrac n2\int_XS(B,B)\,\mathrm{d}\operatorname{vol}_g=0.
+ \|q\|^2=\|S\|^2+\tfrac{4-n}{2}E_A+\tfrac n2E_B.
 \end{equation}
-Subtracting \eqref{eq:lck-bochner-integral} from \eqref{eq:lck-bianchi-integral} and using $|S|^2=|S^+|^2+|S-S^+|^2$ gives
+Eliminating $E_A,E_B$ between the two identities gives
+$n(\|S^+\|^2-\|S\|^2)+n\|q\|^2/2=0$. Orthogonality proves the asserted identity for $S^-$.
+
+\emph{Step 3: rigidity.} By \cref{prop:lck-gauduchon}, the Gauduchon condition is equivalent to $q=0$. In that case the integral identity forces $S=S^+$, hence $S(B,B)=S(A,A)$. Equation \eqref{eq:lck-aa-divergence} gives $E_A=E_B=0$, and \eqref{eq:lck-bochner-integral} implies $S=0$. Thus $\omega$ is Vaisman.
+
+Equation \eqref{eq:lck-complex-connection} gives $\nabla_AJ=0$. If $T$ is the symmetric endomorphism defined by $g(TU,V)=S(U,V)$, then
 \[
- \int_X|S-S^+|^2\,\mathrm{d}\operatorname{vol}_g=0.
+ (\mathcal L_AJ)V=JTV-TJV.
 \]
-Hence $S=S^+$ everywhere, and consequently $S(B,B)=S(A,A)$ pointwise. The integral of this function vanishes by \eqref{eq:lck-aa-zero}, so \eqref{eq:lck-bochner-integral} gives $\int_X|S|^2=0$. Hence $\nabla\lambda=0$, which is the Vaisman condition.
+Consequently $A$ is real holomorphic exactly when $S=S^+$. The integral identity then gives $q=0$, hence $S=0$. Conversely, a parallel Lee form gives $q=0$ and $\mathcal L_AJ=0$. Strictness ensures that the parallel Lee form is nonzero.
 \end{proof}

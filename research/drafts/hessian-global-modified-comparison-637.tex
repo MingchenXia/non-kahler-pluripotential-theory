@@ -1,0 +1,216 @@
+% Inactive proof reconstruction. The compact Hermitian setting of Chapter12
+% and 2<=m<n are in force. No external bounded comparison theorem is used.
+% Published Gu--Nguyen Lemmas3.8--3.10 supply a related local mechanism;
+% their bounded-product hypotheses are not silently transferred here.
+
+For bounded admissible $u,V$, use the notation
+\[
+ \sigma_u=\omega+\ddc u,\qquad
+ M_{p,q}=\sigma_u^p\sigma_V^q\omega^{n-p-q}
+                    \quad(0\leq p+q\leq m).
+\]
+These expressions denote the positive mixed measure $Q_m$ with
+$p$ slots equal to $u$, $q$ slots equal to $V$ and the remaining
+slots equal to the constant zero. In particular $M_{0,0}=\omega^n$.
+For $p+q\leq m-1$, put
+\[
+ T_{p,q}=\sigma_u^p\sigma_V^q\omega^{n-p-q-1}.
+\]
+This denotes $R_{m-1}$ with the same nonconstant slots and zero
+in its other slots, wedged with $\omega^{n-m}$.
+
+\begin{lemma}\label{draft637:mixed-comparison}
+Let $u,V$ be bounded admissible, $b$ a real constant and $s>0$.
+Suppose $0\leq\max\{u,V+b\}-u\leq s$. Set
+$E=\{u<V+b\}$ and $b_{p,q}=M_{p,q}(E)$.
+There is a constant $C$, depending only on $X,\omega,m,n$, such that
+\[
+ b_{p,q+1}\leq b_{p+1,q}
+              +Cs\sum_{a+d\leq p+q}b_{a,d}
+                   \qquad(p+q\leq m-1).
+\]
+For $q=0$, the error can instead be bounded by
+$Cs(b_{p,0}+b_{p-1,0}+b_{p-2,0})$, with negative indices zero.
+\end{lemma}
+\begin{proof}
+First estimate the torsion of $T_{p,q}$, writing $r=p+q$.
+For smooth admissible potentials, the product rule expresses
+$\ddc T_{p,q}$ as a sum of fixed smooth metric forms wedged
+with products of $\sigma_u,\sigma_V$ of degrees $r,r-1,r-2$.
+The terms of degree $r$ come from differentiating the background
+power; they cannot be discarded. Indeed,
+$\mathrm d\sigma_u=\mathrm d\sigma_V=\mathrm d\omega$,
+$\dc\sigma_u=\dc\sigma_V=\dc\omega$ and
+$\ddc\sigma_u=\ddc\sigma_V=\ddc\omega$.
+Every term therefore contains either $\ddc\omega$ or
+$\mathrm d\omega\wedge\dc\omega$, with its product-rule
+multiplicity and the appropriate remaining background power.
+Terms with negative numbers of factors are absent.
+
+All variable degrees are at most $r<m$.
+Apply \cref{hessian:absolute-mixed-forms} to each term. Expanding
+the resulting positive power of the sum of its variable factors
+gives the pointwise bound
+\[
+ |\ddc T_{p,q}|\leq C\sum_{a+d\leq r}M_{a,d}.
+\]
+For $q=0$ every variable factor is $\sigma_u$, so the sharper
+bound is $C(M_{p,0}+M_{p-1,0}+M_{p-2,0})$.
+The constant bounds fixed metric coefficients on a finite coordinate
+cover and the finitely many multiplicities; it is independent of
+the potentials and their bounds.
+
+Choose uniformly bounded smooth decreasing approximations to $u,V$.
+By \cref{hessian:bounded-torsion-weight}, the torsion measures
+converge weakly; by \cref{hessian:joint-decreasing-products},
+all positive measures in these bounds also converge weakly.
+Against nonnegative continuous tests, lower semicontinuity of
+total variation preserves both bounds. They are consequently
+inequalities of measures and may be restricted to the Borel set $E$.
+
+Put $w=\max\{u,V+b\}$ and $h=w-u$.
+The mixed maximum theorem \cref{hessian:bounded-maximum-measure},
+with one moving slot and the fixed slots defining $T_{p,q}$, gives
+\[
+ (\omega+\ddc w)T_{p,q}
+ \geq\mathbf1_E\sigma_VT_{p,q}
+                +\mathbf1_{X\setminus E}\sigma_uT_{p,q}.
+\]
+All products here are the corresponding positive mixed measures.
+After integration, this implies
+\[
+ b_{p,q+1}\leq b_{p+1,q}
+       +\int_X\bigl((\omega+\ddc w)-\sigma_u\bigr)T_{p,q}.
+\]
+Regularized maxima of the smooth decreasing approximations give
+a uniformly bounded decreasing smooth list $w_j\downarrow w$.
+Stokes' theorem on compact $X$ gives for these lists
+\[
+ \int_X\bigl((\omega+\ddc w_j)-\sigma_{u_j}\bigr)T_{p,q}^j
+                      =\int_X(w_j-u_j)\ddc T_{p,q}^j.
+\]
+Joint decreasing convergence passes the positive mixed measures
+on the left to their limits. The continuous two-variable weight
+$F(x,y)=y-x$ in \cref{hessian:bounded-torsion-weight} passes the
+right side to $\int_Xh\ddc T_{p,q}$. No monotonicity of $w_j-u_j$
+is needed. Since $h$ is zero outside $E$ and $0\leq h\leq s$,
+\[
+ \int_Xh\ddc T_{p,q}\leq s|\ddc T_{p,q}|(E).
+\]
+The torsion bounds prove both assertions. The argument never
+passes a varying measure to a weak limit after restriction to $E$.
+\end{proof}
+
+\begin{theorem}\label{draft637:modified-comparison}
+There is $C\geq1$, depending only on $X,\omega,m,n$, with the
+following property. For bounded admissible $u,v$ and $0<\alpha<1$,
+put $\eta=1-\alpha$, $V=\alpha v$ and $S=\inf_X(u-V)$.
+For $0<s<\eta^3/C$, let $E_s=\{u<V+S+s\}$. Then
+\[
+ \int_{E_s}H_m(V)
+       \leq\left(1+\frac{Cs}{\eta^m}\right)
+                                  \int_{E_s}H_m(u).
+\]
+No differential identity for a power of $\omega$ is assumed.
+\end{theorem}
+\begin{proof}
+Use the mixed measures above on $E_s$, writing
+$b_{p,q}=M_{p,q}(E_s)$ and $a_k=b_{k,0}$.
+The definition of $S$ gives
+$0\leq\max\{u,V+S+s\}-u\leq s$, so the preceding lemma applies.
+Repeatedly moving a $V$ slot to a $u$ slot gives, for $p+q=r$,
+\[
+ b_{p,q}\leq a_r+C_1s\sum_{d=0}^{r-1}A_d,
+ \qquad A_d=\max_{a+b=d}b_{a,b},\qquad 1\leq r\leq m.
+\]
+Here there are at most $m$ moves, and the multiplicity $d+1$
+in the lower-degree sum is absorbed in $C_1$.
+For $0<s\leq1$, induction on $r$ shows
+\[
+ A_r\leq a_r+K_rs\sum_{k<r}a_k.
+\]
+In fact $A_0=a_0$, and one may take
+$K_r=C_1(1+\sum_{1\leq d<r}K_d)$: insert the earlier bounds
+in the displayed recurrence and use $s^2\leq s$.
+Thus, for a constant $C_2$ depending only on the setting,
+\[
+ b_{0,m}\leq a_m+C_2s\sum_{k<m}a_k.
+\]
+
+It remains to control the lower diagonal masses by $a_m$.
+The identity $\sigma_V=\alpha\sigma_v+\eta\omega$ and mixed
+positivity give $b_{k,1}\geq\eta a_k$; this identity and
+inequality pass from smooth approximations by joint convergence.
+The sharper diagonal assertion of the lemma therefore gives
+\[
+ \eta a_k\leq a_{k+1}
+          +C_3s(a_k+a_{k-1}+a_{k-2})\qquad(0\leq k<m),
+\]
+with $a_{-1}=a_{-2}=0$.
+Set $B_k=\eta^{m-k}a_k$ for $0\leq k\leq m$, and set
+$B_{-1}=B_{-2}=0$. Multiplying by $\eta^{m-k-1}$ and using
+$0<\eta<1$ gives
+\[
+ B_k\leq B_{k+1}
+          +\delta(B_k+B_{k-1}+B_{k-2}),
+ \qquad\delta=C_3s\eta^{-3}.
+\]
+For $M=\max_{0\leq k<m}B_k$, summing from any $j<m$ through
+$m-1$ gives $B_j\leq B_m+3m\delta M$.
+If $s<\eta^3/(6mC_3)$, it follows that $M\leq2B_m$.
+Consequently
+\[
+ a_k\leq2\eta^{-(m-k)}a_m\quad(k<m),\qquad
+ \sum_{k<m}a_k\leq2m\eta^{-m}a_m.
+\]
+Choose $C\geq\max\{1,6mC_3,2mC_2\}$. Then the asserted
+range for $s$ supplies every preceding restriction, and substitution
+in the bound for $b_{0,m}$ proves the theorem.
+No division by $a_m$ occurs, so zero top mass on $E_s$ is included.
+\end{proof}
+
+\begin{theorem}\label{draft637:strict-domination}
+Let $u,v$ be bounded admissible. If, for some $0\leq c<1$,
+\[
+ \mathbf1_{\{u<v\}}H_m(u)
+                  \leq c\mathbf1_{\{u<v\}}H_m(v),
+\]
+then $u\geq v$ everywhere, on an arbitrary Hermitian background.
+In particular, $H_m(u)(\{u<v\})=0$ implies $u\geq v$.
+\end{theorem}
+\begin{proof}
+Add the same constant to $u,v$ so that $v\geq1$.
+This preserves the measure hypothesis and the desired conclusion.
+Choose $0<\alpha<1$ with $\alpha^m>c$ and put $V=\alpha v$,
+$\eta=1-\alpha$. Suppose $S=\inf_X(u-V)<0$.
+For $0<s<-S$, the set $E_s=\{u<V+S+s\}$ is contained in
+$\{u<V\}$ and hence in $\{u<v\}$.
+It has positive volume. Indeed, if its volume were zero, then
+$u\geq V+S+s$ almost everywhere. Both functions are bounded
+admissible with their canonical representatives, so
+\cref{hessian:canonical-order} would give this order everywhere,
+contradicting the definition of $S$. The argument does not require
+$E_s$ to be open or the infimum to be attained.
+
+Choose also $s<\eta^3/C$, where $C$ is from the preceding theorem.
+By \cref{hessian:convex-background-term} and the measure hypothesis,
+\[
+ \alpha^m H_m(v)(E_s)+\eta^m\int_{E_s}\omega^n
+ \leq H_m(V)(E_s)
+ \leq(1+Cs\eta^{-m})H_m(u)(E_s)
+ \leq c(1+Cs\eta^{-m})H_m(v)(E_s).
+\]
+If $c>0$, take $s$ still smaller so that
+$c(1+Cs\eta^{-m})<\alpha^m$. If $c=0$, this strict inequality
+already holds. All measures are finite and positive, so the
+display forces the positive-volume term to be zero, a contradiction.
+Hence $S\geq0$ and $u\geq\alpha v$. Let $\alpha$ increase
+to one, with $\alpha^m>c$. Since $v$ is bounded, $\alpha v\to v$
+uniformly, and therefore $u\geq v$. The final assertion is $c=0$.
+\end{proof}
+
+% If integrated, the existing proper bounded uniqueness, data stability and
+% smoothness proofs use only strict domination after their hypotheses.
+% Their partial-power assumptions can then be removed after checking callers.
+% This does not assert existence for arbitrary Radon data, c=1 domination,
+% unmodified global comparison, a uniform mass lower bound, or novelty.

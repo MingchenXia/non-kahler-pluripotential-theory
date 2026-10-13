@@ -1,0 +1,293 @@
+\section{Singular measures on products with a curve}
+\label{sec:continuous-potential-product-measures}
+
+The closed-factor equations above concern integrable densities. A curve factor also allows a direct test on a measure: its logarithmic potential determines an exact equation, and continuity of that potential supplies the energy control needed for every positive exponent. The resulting product measure may be singular with respect to smooth volume, even when the solution is continuous.
+
+Let $Y=\mathbb P^1$ and let $\kappa$ be the Fubini--Study form of mass one. For the chordal distance $d_{\mathrm{ch}}$, put
+\[
+ G(x,y)=\log d_{\mathrm{ch}}(x,y)^2+1,\qquad K(x,y)=1-G(x,y)\geq0.
+\]
+For a Borel probability $\mu$ on $Y$, define
+\begin{equation}\label{eq:curve-measure-green-potential}
+ Q_\mu(x)=\int_YG(x,y)\,\mathrm d\mu(y).
+\end{equation}
+We say that $\mu$ is non-polar if it gives every polar Borel set mass zero.
+
+\subsection{The logarithmic potential and its measure trace}
+
+\Needspace{10\baselineskip}
+\begin{lemma}\label{lem:curve-probability-green-potential}\index{Green function!projective line}\index{Non-pluripolar measure!curve potential}
+For every probability $\mu$, the function $Q_\mu$ is $\kappa$-plurisubharmonic, has $\kappa$-mean zero, and satisfies
+\[
+ \kappa+\ddc Q_\mu=\mu,\qquad Q_\mu\leq1.
+\]
+If $\mu$ is non-polar, then $\mathrm{MA}^{\mathrm{ext}}_\kappa(Q_\mu)=\mu$. Every $p\in\PSH(Y,\kappa)$ with $\mathrm{MA}^{\mathrm{ext}}_\kappa(p)\geq\mu$ is of the form $Q_\mu+C$.
+\end{lemma}
+\Needspace{8\baselineskip}
+\begin{proof}
+The Poincar\'e--Lelong formula gives $\ddc_xG(x,y)=\delta_y-\kappa$. After a rotation sending $y$ to $[1:0]$, the variable $t=d_{\mathrm{ch}}(x,y)^2$ is uniformly distributed on $[0,1]$ for the measure $\kappa$. Thus
+\[
+ \int_YG(x,y)\kappa(x)=\int_0^1(\log t+1)\,\mathrm dt=0,
+ \qquad \sup_y\int_Y|G(x,y)|\kappa(x)<\infty.
+\]
+The continuous potentials $\int\max(G(x,y),-L)\,\mathrm d\mu(y)$ are $\kappa$-plurisubharmonic by \cref{lem:max-psh} and averaging, and decrease to $Q_\mu$. Tonelli's theorem gives its integrability and mean zero; the decreasing-limit property gives its canonical values. Distributional Fubini proves the curvature identity.
+
+In degree one the extended measure of $p$ is
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\kappa(p)
+ =\mathbf1_{\{p>-\infty\}}(\kappa+\ddc p).
+\]
+The pole set of $Q_\mu$ is polar, so non-polarity gives its asserted measure. For any $p$, distributional Stokes gives the full current $\kappa+\ddc p$ mass one, and its extended measure has mass at most one. Domination of the probability $\mu$ therefore forces both measures to equal $\mu$. The distribution $p-Q_\mu$ is harmonic on the compact connected curve, hence constant, and canonical equality gives the assertion everywhere.
+\end{proof}
+
+For real Sobolev functions on $Y$ use the Dirichlet form
+\[
+ E(p,q)=\int_Y\mathrm dp\wedge\dc q.
+\]
+It is symmetric and nonnegative on the diagonal. The space $H^1(Y)$ and its norm are taken for the Fubini--Study Riemannian metric.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{lem:continuous-potential-measure-trace}\index{Sobolev space!trace against a measure}\index{Logarithmic potential!continuous measure potential}
+Suppose $Q=Q_\mu$ is finite and continuous. Then $\mu$ is non-polar, $Q\in H^1(Y)$, and smooth restriction extends to a continuous linear map
+\[
+ \operatorname{Tr}_\mu:H^1(Y)\longrightarrow L^1(\mu).
+\]
+For every $h\in H^1(Y)$,
+\begin{equation}\label{eq:continuous-potential-trace}
+ \int_Y\operatorname{Tr}_\mu h\,\mathrm d\mu
+ =\int_Yh\kappa-E(h,Q).
+\end{equation}
+For $h\in\PSH(Y,\kappa)\cap H^1(Y)$ this trace agrees $\mu$-almost everywhere with its canonical values. The trace commutes with Lipschitz real compositions.
+\end{lemma}
+\begin{proof}
+Continuity gives the uniform kernel bound
+\begin{equation}\label{eq:continuous-potential-kernel-bound}
+ A_\mu:=\sup_x\int_YK(x,y)\,\mathrm d\mu(y)
+       =1-\inf_YQ<\infty.
+\end{equation}
+To prove non-polarity, take a nontrivial subharmonic function on a coordinate disk. Cut off its positive Hessian measure on a slightly larger disk. The logarithmic potential of this finite measure has the same Hessian on the smaller disk, so their difference is harmonic there. This is the local Riesz decomposition: it also follows directly from the distributional fundamental solution and harmonic regularity. On compact subdisks the kernel $-\log|z-a|^2$ differs from $K(z,a)$ by a bounded smooth term. Symmetry of $K$, Tonelli's theorem and \eqref{eq:continuous-potential-kernel-bound} make the logarithmic potential integrable against $\mu$; its harmonic remainder is bounded. The pole set consequently has $\mu$-mass zero. A countable disk cover proves the claim for polar Borel sets.
+
+The group $\mathrm{SU}(2)$ acts on $Y$ by Fubini--Study isometries. Average with smooth nonnegative conjugation-invariant kernels of mass one supported near the identity. This gives smooth $Q_\epsilon$, probability measures $\mu_\epsilon$, and
+\[
+ Q_\epsilon\longrightarrow Q\ \text{uniformly},\qquad
+ \ddc Q_\epsilon=\mu_\epsilon-\kappa,\qquad
+ \int_YQ_\epsilon\kappa=0.
+\]
+Smooth Stokes gives $E(Q_\epsilon,Q_\epsilon)=-\int Q_\epsilon\,\mathrm d\mu_\epsilon\leq\|Q\|_\infty$. Poincar\'e's inequality and weak Hilbert compactness show that $Q\in H^1$. Its distributional curvature identity gives \eqref{eq:continuous-potential-trace} first for smooth $h$. Apply this identity to $\sqrt{h^2+\epsilon^2}$, whose gradient has magnitude at most $|\mathrm dh|$. Letting $\epsilon\downarrow0$ yields
+\[
+ \int_Y|h|\,\mathrm d\mu
+ \leq\|h\|_{L^1(\kappa)}+E(h,h)^{1/2}E(Q,Q)^{1/2}
+ \leq C_\mu\|h\|_{H^1}.
+\]
+Completion defines the trace and extends the identity.
+
+These group averages converge strongly in $H^1$: rotations act continuously and isometrically on that space, and the averaging kernels approach the identity. They also converge pointwise to every canonical quasi-subharmonic function. Indeed their induced averages about a point are radial by conjugation invariance. In a coordinate centered at that point they are positive averages of circular means; after a smooth quadratic correction, the submean inequality and upper semicontinuity give the required limit. The correction error tends to zero, and upper semicontinuity gives the limit also at a pole. For a $\kappa$-plurisubharmonic $H^1$ function, strong convergence and the trace bound give $L^1(\mu)$ convergence, while a subsequence converges $\mu$-almost everywhere to the trace. Non-polarity makes the canonical value finite there and identifies the two. Finally, the Sobolev chain rule and smooth approximation show that Lipschitz compositions are continuous in $H^1$; the corresponding $L^1(\mu)$ limits prove the composition assertion.
+\end{proof}
+
+\Needspace{22\baselineskip}
+\subsection{Exponential equations and uniform selection on the curve}
+
+\begin{theorem}\label{thm:continuous-potential-curve-exponential}\index{Monge--Ampere equation@Monge--Amp\`ere equation!continuous measure potential}\index{Vanishing exponent!singular curve measure}
+Suppose $Q=Q_\mu$ is finite and continuous. For every $\lambda>0$ there is a unique bounded $w_\lambda\in\PSH(Y,\kappa)$ satisfying
+\begin{equation}\label{eq:continuous-potential-curve-exponential}
+ \kappa+\ddc w_\lambda=\mathrm e^{\lambda w_\lambda}\mu,
+ \qquad\int_Y\mathrm e^{\lambda w_\lambda}\,\mathrm d\mu=1.
+\end{equation}
+It is continuous and obeys
+\begin{equation}\label{eq:continuous-potential-curve-barriers}
+ Q-\sup_YQ\leq w_\lambda\leq Q-\inf_YQ.
+\end{equation}
+The entire family satisfies, as $\lambda\downarrow0$,
+\[
+ \left\|w_\lambda-Q+\int_YQ\,\mathrm d\mu\right\|_\infty=O(\lambda).
+\]
+The limit is the greatest $p\in\PSH(Y,\kappa)$ with $\mathrm{MA}^{\mathrm{ext}}_\kappa(p)\geq\mu$ and $\int_Yp\,\mathrm d\mu\leq0$.
+\end{theorem}
+\begin{proof}
+\emph{Variational existence.} On the real Hilbert space
+\[
+ \mathcal H=\{q\in H^1(Y):\int_Yq\kappa=0\}
+\]
+consider the extended functional
+\[
+ J_\lambda(q)=\tfrac12E(q,q)
+       +\lambda^{-1}\log\int_Y\mathrm e^{\lambda\operatorname{Tr}_\mu q}\,\mathrm d\mu.
+\]
+It is finite at zero. Jensen's inequality and \eqref{eq:continuous-potential-trace} give
+\[
+ J_\lambda(q)\geq\tfrac12E(q,q)-E(q,Q),
+\]
+so it is coercive and bounded below. Strong $H^1$ convergence gives $L^1(\mu)$ convergence of traces. A subsequence realizing the lower limit converges almost everywhere for $\mu$, and Fatou's lemma proves strong lower semicontinuity of the exponential term. Jensen excludes a zero integral or a logarithm tending to $-\infty$. H\"older's inequality makes the logarithmic term convex, while the Dirichlet term is strictly convex on $\mathcal H$. Separation of a closed convex epigraph makes $J_\lambda$ weakly lower semicontinuous. Weak compactness therefore gives a unique minimizer $q_\lambda$, with
+\[
+ 0<Z_\lambda:=\int_Y\mathrm e^{\lambda\operatorname{Tr}_\mu q_\lambda}\,\mathrm d\mu<\infty.
+\]
+
+\Needspace{10\baselineskip}
+Variation in a smooth mean-zero direction $h$ is justified by its boundedness, which dominates the differentiated integrand by a constant times the integrable exponential. Put $\rho_\lambda=\mathrm e^{\lambda\operatorname{Tr}_\mu q_\lambda}/Z_\lambda$. The Euler equation is
+\[
+ E(q_\lambda,h)+\int_Yh\rho_\lambda\,\mathrm d\mu=0,
+ \qquad\ddc q_\lambda=\rho_\lambda\mu-\kappa.
+\]
+The second identity follows for arbitrary smooth tests by subtracting their $\kappa$-mean; $\int\rho_\lambda\,\mathrm d\mu=1$ fixes the constant term. The minimizer has a canonical $\kappa$-plurisubharmonic representative. Its mean-zero Green representation and \cref{lem:continuous-potential-measure-trace} give
+\[
+ q_\lambda(x)=\int_YG(x,y)\rho_\lambda(y)\,\mathrm d\mu(y)\leq1,
+ \qquad\rho_\lambda\leq\mathrm e^\lambda/Z_\lambda\quad\mu\text{-a.e.}
+\]
+The kernel bound then gives $q_\lambda\geq1-(\mathrm e^\lambda/Z_\lambda)A_\mu$.
+
+To obtain continuity, the continuous functions $\int\min(K(x,y),L)\,\mathrm d\mu(y)$ increase to the continuous function $1-Q(x)$. Dini's theorem gives
+\begin{equation}\label{eq:continuous-potential-uniform-tail}
+ \sup_x\int_Y(K(x,y)-L)_+\,\mathrm d\mu(y)\longrightarrow0.
+\end{equation}
+Multiplication by the bounded density $\rho_\lambda$ preserves this estimate. Its truncated Green potentials converge uniformly, so $q_\lambda$ is continuous. Now
+\[
+ w_\lambda=q_\lambda-\lambda^{-1}\log Z_\lambda
+\]
+solves \eqref{eq:continuous-potential-curve-exponential} with precisely the displayed constant.
+
+\emph{Uniqueness and the barriers.} Every bounded $\kappa$-plurisubharmonic function is in $H^1$, by the same smoothing and energy bound used above after subtracting its $\kappa$-mean. For two bounded solutions $w_1,w_2$, their right-hand sides have bounded densities relative to $\mu$. The trace inequality extends distributional Stokes to their difference, giving
+\[
+ E(w_1-w_2,w_1-w_2)
+ =-\int_Y(w_1-w_2)(\mathrm e^{\lambda w_1}-\mathrm e^{\lambda w_2})\,\mathrm d\mu\leq0.
+\]
+The difference is constant; the unit exponential integrals force that constant to be zero.
+
+Set $L_0=Q-\sup Q\leq0$, $R_0=Q-\inf Q\geq0$, and $z=(L_0-w_\lambda)_+$. The $H^1$ chain rule, canonical trace and extended Stokes give
+\[
+ E(z,z)=-\int_Yz(1-\mathrm e^{\lambda w_\lambda})\,\mathrm d\mu\leq0.
+\]
+Indeed $z>0$ implies $w_\lambda<L_0\leq0$. Thus $z$ is constant. If it were a positive constant, continuity would give $w_\lambda=L_0-z\leq-z$ everywhere, contradicting its unit exponential integral. This proves the lower barrier. Testing $(w_\lambda-R_0)_+$ gives the upper barrier with the same argument and the reversed exponential difference. In particular $\|w_\lambda\|_\infty\leq\operatorname{osc}Q$.
+
+\emph{Selection.} Write $q_\lambda=w_\lambda-\int_Yw_\lambda\kappa$, consistent with the variational normalization. The barriers give $\mathrm e^{\lambda w_\lambda}=1+O(\lambda)$ uniformly, and the Green identity gives
+\[
+ \|q_\lambda-Q\|_\infty
+ \leq\|\mathrm e^{\lambda w_\lambda}-1\|_\infty
+       \sup_x\int_Y|G(x,y)|\,\mathrm d\mu(y)=O(\lambda).
+\]
+The last kernel integral is bounded by $1+A_\mu$. The $q_\lambda$ are uniformly bounded, so Taylor's formula gives
+\[
+ \lambda^{-1}\log Z_\lambda
+ =\int_Yq_\lambda\,\mathrm d\mu+O(\lambda)
+ =\int_YQ\,\mathrm d\mu+O(\lambda).
+\]
+This proves the whole-family estimate. Finally, \cref{lem:curve-probability-green-potential} identifies every critical subsolution as $Q+C$. Its $\mu$-mean is at most zero exactly when $C\leq-\int Q\,\mathrm d\mu$, proving the order characterization.
+\end{proof}
+
+\subsection{The product equation and its maximal coefficient}
+
+Let $(X_0,h_0)$ be a connected compact Hermitian manifold of dimension $m\geq1$. Set
+\[
+ \begin{gathered}
+ X=X_0\times Y,\qquad N=m+1,\qquad H=h_0+\kappa,\\
+ V_0=\int_{X_0}h_0^m,\qquad
+ \nu=M\frac{h_0^m}{V_0}\otimes\mu,\qquad c=\frac{NV_0}{M},
+ \end{gathered}
+\]
+where $M>0$ and factor forms and potentials are pulled back to $X$ when used there. Thus $\nu(X)=M$.
+
+\Needspace{15\baselineskip}
+\begin{proposition}\label{prop:nonpolar-curve-product-equation}\index{Monge--Ampere equation@Monge--Amp\`ere equation!singular factor measure}
+If $\mu$ is non-polar, then $\nu$ is non-pluripolar and
+\[
+ u=(Q_\mu-\sup_YQ_\mu)\circ\pi_Y,\qquad
+ \mathrm{MA}^{\mathrm{ext}}_H(u)=c\nu,\qquad
+ \int_X\mathrm{MA}^{\mathrm{ext}}_H(u)=NV_0.
+\]
+This is the unique supremum-zero solution among pullbacks of $\kappa$-plurisubharmonic functions. It is bounded exactly when $Q_\mu$ is bounded, and continuous exactly when $Q_\mu$ is continuous. If $v_-(h_0)=0$, then $v_-(H)=0$ and $H$ is not closed.
+\end{proposition}
+\begin{proof}
+A nontrivial local plurisubharmonic function on a product chart has a nontrivial subharmonic restriction to the curve for smooth-volume-almost every point of $X_0$, by local integrability and Fubini's theorem. Non-polarity of $\mu$ and a second application of Fubini give its pole set product measure zero. A countable cover proves that $\nu$ is non-pluripolar.
+
+For bounded $p\in\PSH(Y,\kappa)$, bounded multilinearity and \cref{lem:bounded-products-submersion} give
+\begin{equation}\label{eq:singular-curve-product-identity}
+ \mathrm{MA}_H(p\circ\pi_Y)
+ =N h_0^m\otimes(\kappa+\ddc p).
+\end{equation}
+Only one curve factor survives in the expansion. For arbitrary $p$, apply this to $p_j=\max(p,-j)$, restrict to the pullback of $\{p>-j\}$ and increase $j$. The defining extended limit gives the same formula with $\mathrm{MA}^{\mathrm{ext}}_\kappa(p)$ on the right. \Cref{lem:curve-probability-green-potential} now proves the equation, finite mass and separated uniqueness. Boundedness and continuity follow from the same constant-difference identity.
+
+If $v_-(h_0)=0$, pull back bounded potentials whose $h_0$-masses tend to zero. Their $H$-masses are $N$ times those masses, because $\int_Y\kappa=1$, so $v_-(H)=0$. A closed $h_0$ would give every bounded potential mass $V_0>0$ by Stokes. Hence $h_0$ is not closed; restricting $H$ to a factor slice shows that $H$ is not closed either.
+\end{proof}
+
+For this fixed product measure define its subsolution threshold by
+\[
+ b_H(\nu)=\sup\{a\geq0:\exists p\in\PSH(X,H),
+                \mathrm{MA}^{\mathrm{ext}}_H(p)\geq a\nu\}.
+\]
+For $\nu=f\,\mathrm dV$ this agrees with the individual-density threshold of \cref{thm:individual-density-subsolution}.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:continuous-potential-product-threshold}\index{Normalization scalar!singular product measure}\index{Monge--Ampere equation@Monge--Amp\`ere equation!greatest singular-measure subsolution}
+Suppose $Q=Q_\mu$ is finite and continuous. Then $b_H(\nu)=c$, attained by the bounded continuous $u$ of \cref{prop:nonpolar-curve-product-equation}. For every $\lambda>0$, the continuous potential
+\[
+ U_\lambda=\lambda^{-1}\log c+w_\lambda\circ\pi_Y
+\]
+satisfies
+\[
+ \mathrm{MA}_H(U_\lambda)=\mathrm e^{\lambda U_\lambda}\nu,
+ \qquad \int_X\mathrm{MA}_H(U_\lambda)=NV_0.
+\]
+It dominates every $p\in\PSH(X,H)$ with $\mathrm{MA}^{\mathrm{ext}}_H(p)\geq\mathrm e^{\lambda p}\nu$, and it is the unique bounded solution. For $v_\lambda=U_\lambda-\sup_XU_\lambda$ and $c_\lambda=\mathrm e^{\lambda\sup_XU_\lambda}$,
+\[
+ \begin{gathered}
+ \mathrm{MA}_H(v_\lambda)=c_\lambda\mathrm e^{\lambda v_\lambda}\nu,
+ \qquad c_\lambda=c\,\mathrm e^{\lambda\sup_Yw_\lambda},\\
+ \|v_\lambda-u\|_\infty=O(\lambda),\qquad
+ \lambda^{-1}\log(c_\lambda/c)\longrightarrow\sup_YQ-\int_YQ\,\mathrm d\mu.
+ \end{gathered}
+\]
+All the constructed potentials belong to $\mathcal E_{\mathrm{env}}(X,H,0)$. The same coefficient $c$ is attained if the defining supremum for $b_H(\nu)$ is restricted to bounded potentials or to this envelope class.
+\end{theorem}
+\begin{proof}
+\Cref{lem:continuous-potential-measure-trace} gives non-polarity, and \cref{thm:continuous-potential-curve-exponential} constructs $w_\lambda$. Substituting it in \eqref{eq:singular-curve-product-identity} proves the exponential equation and its finite mass. Supremum normalization gives the displayed $c_\lambda$, and the uniform curve estimate gives both limits. For any bounded $H$-plurisubharmonic $p$ and $t\geq1$, the constant $a_t=t\inf_Xp$ is an $H$-plurisubharmonic competitor below $tp$. Hence $P_H(tp)$ is genuine for every $t$, which proves the envelope-class assertion.
+
+\emph{Greatestness.} Write $s=U_\lambda$. If $b$ is a bounded exponential subsolution, then on $\{s<b-\epsilon\}$,
+\[
+ \mathrm{MA}_H(s)\leq\mathrm e^{-\lambda\epsilon}\mathrm{MA}_H(b-\epsilon).
+\]
+The bounded strict domination theorem, \cref{thm:bounded-strict-domination}, gives $s\geq b-\epsilon$. Letting $\epsilon\downarrow0$ proves $s\geq b$, and applying the argument in both directions proves bounded uniqueness.
+
+For an arbitrary exponential subsolution $r$, fix $A>0$ and put $p=s-A$, $W=\max(r,p)$. These maxima are $H$-plurisubharmonic by \cref{lem:max-psh}, and $W$ is bounded. Choose $j$ with $-j<\inf_Xp$ and set $r_j=\max(r,-j)$; then $W=\max(r_j,p)$. Plurifine locality on $\{r_j>p\}$ and \cref{lem:bounded-ordered-contact}, applied to $p\leq W$ on their contact set, give
+\[
+ \mathrm{MA}_H(W)\geq
+ \mathbf1_{\{r_j>p\}}\mathrm{MA}_H(r_j)
+ +\mathbf1_{\{r_j\leq p\}}\mathrm{MA}_H(p).
+\]
+On the first set $r_j=r>-j$, so strict-superlevel locality identifies the measure with $\mathrm{MA}^{\mathrm{ext}}_H(r)$. On the second, $W=p$ and $\mathrm{MA}_H(p)=\mathrm e^{\lambda s}\nu\geq\mathrm e^{\lambda p}\nu$. Thus $W$ is a bounded exponential subsolution, and $r\leq W\leq s$. This uses bounded products before every restriction and applies also when the measure of $r$ has infinite mass.
+
+\emph{The maximal coefficient.} Suppose $\mathrm{MA}^{\mathrm{ext}}_H(r)\geq a\nu$ with $a>0$, and put $B=\sup_Xr$. For every $\lambda>0$ the potential $r+\lambda^{-1}\log a-B$ is an exponential subsolution, since its exponential is at most $a$. Greatestness gives
+\[
+ r+\lambda^{-1}\log a-B
+ \leq\lambda^{-1}\log c+w_\lambda\circ\pi_Y.
+\]
+Evaluate at a fixed finite point of $r$, multiply by $\lambda$, and let $\lambda\downarrow0$. The uniform barriers for $w_\lambda$ give $a\leq c$. The equation for $u$ attains $c$ in each stated class.
+\end{proof}
+
+The order characterization of the zero-exponent limit is confined to the separated sector. Bounded uniqueness at a positive exponent and maximality of the coefficient do not determine all normalized critical potentials on the nonclosed product.
+
+\Needspace{12\baselineskip}
+\begin{proposition}\label{prop:frostman-product-measures}\index{Frostman measure!product equation}\index{Non-pluripolar measure!weighted circle}
+Suppose, for some $C>0$ and $\delta>0$,
+\[
+ \mu(B_{\mathrm{ch}}(x,r))\leq Cr^\delta
+ \qquad(x\in Y,\ 0<r\leq1).
+\]
+Then $Q_\mu$ is finite and continuous, so \cref{thm:continuous-potential-product-threshold} applies. In particular it applies to
+\[
+ \mathrm d\mu(\vartheta)=(1+\epsilon\cos\vartheta)
+       \frac{\mathrm d\vartheta}{2\pi},\qquad0<\epsilon<1,
+\]
+on the circle $[1:\mathrm e^{\mathrm i\vartheta}]$. This measure and its product $\nu$ are singular with respect to smooth volume, and $Q_\mu$ is nonconstant on its support.
+\end{proposition}
+\begin{proof}
+Since $K=-\log d_{\mathrm{ch}}^2$, layer-cake integration gives
+\[
+ \sup_x\int_{\{K(x,y)>L\}}K(x,y)\,\mathrm d\mu(y)
+ \leq C\left(L+\frac2\delta\right)\mathrm e^{-\delta L/2}.
+\]
+Consequently the continuous truncated-kernel potentials converge uniformly to $Q_\mu$. Weighted arclength on the circle has the ball bound with $\delta=1$. On that circle the kernel is $1+\log\sin^2((\vartheta-\varphi)/2)$, whose first cosine coefficient is $-2$. Integrating its $L^1$ Fourier series against $1+\epsilon\cos\varphi$ gives
+\[
+ Q_\mu([1:\mathrm e^{\mathrm i\vartheta}])
+ =1-2\log2-\epsilon\cos\vartheta.
+\]
+This proves nonconstancy, and the support has smooth curve volume zero. Its product with $X_0$ also has smooth volume zero.
+\end{proof}

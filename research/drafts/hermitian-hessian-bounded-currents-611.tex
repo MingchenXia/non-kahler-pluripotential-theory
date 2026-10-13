@@ -1,0 +1,245 @@
+% Inactive research fragment. Fixed-order recursion is proved here;
+% permutation invariance and simultaneous decreasing convergence are pending.
+\section{Bounded potentials and recursive Hessian currents}
+\label{sec:hessian-bounded-currents}
+
+The decreasing approximation of bounded admissible potentials supplies
+limits that uniform approximation cannot reach. A bounded potential can
+multiply a current with measure coefficients, so one can apply $\ddc$
+to the resulting current. Repeating this operation requires bounds on
+every coefficient, rather than only on the trace of a positive mixed
+measure. The absolute-form estimate provides these bounds below degree
+$m$; at degree $m$, positivity is obtained after wedging with
+$\omega^{n-m}$.
+
+Keep the setting of \cref{chap:hessian-equations}. All bounded potentials
+have their canonical upper semicontinuous representatives from
+\eqref{eq:hessian-bounded-upper-tests}. Their pointwise values will be
+used when multiplying measure coefficients. For a real current $T$ of
+order zero, write $\|T\|_K$ for the sum of the total variations of its
+coefficients on a compact coordinate set $K$. Fix $K\Subset U$ in a
+coordinate chart. Different fixed coordinate frames give equivalent
+local bounds.
+
+\begin{lemma}\label{hessian:bounded-zero-order}
+If $u$ is bounded admissible, then $\ddc u$ has signed Radon measure
+coefficients. For $K\Subset U$ contained in a coordinate chart,
+\[
+ \|\ddc u\|_K\leq C_{K,U,\omega}(1+\|u\|_{L^\infty(X)}).
+\]
+\end{lemma}
+\begin{proof}
+Choose smooth strictly admissible $u_j\downarrow u$ by
+\cref{hessian:bounded-decreasing-approximation}, and put
+$\sigma_j=\omega+\ddc u_j$. After discarding finitely many terms,
+$\|u_j\|_\infty\leq\|u\|_\infty+1$. Indeed, the increasing open sets
+$\{u_j<\sup_Xu+1\}$ cover $X$, and compactness gives a single index
+whose open set is all of $X$; the lower bound follows from $u_j\geq u$.
+
+The closed $m$-cone lies in the closed $2$-cone. In an $\omega$-unitary
+frame, its eigenvalues satisfy
+\[
+ \sum_i\lambda_i^2\leq(\operatorname{tr}\sigma_j)^2,
+ \qquad \operatorname{tr}\sigma_j\geq0.
+\]
+Thus every coefficient of $\sigma_j$ is bounded by its trace. The
+degree-one Chern--Levine--Nirenberg estimate in
+\cref{hessian:continuous-products}, applied to these smooth functions,
+bounds the integral of that trace on $K$ by
+$C(1+\|u\|_\infty)$. Subtracting the fixed smooth $\omega$ gives the
+same bound for the coefficient variations of $\ddc u_j$.
+Bounded convergence gives $u_j\to u$ in local $L^1$, and therefore
+$\ddc u_j\to\ddc u$ in distributions. The uniform coefficient bounds
+show that this limit has measure coefficients with the asserted bound.
+\end{proof}
+
+Set $D_0=1$. For an ordered list $u_1,\ldots,u_p$ of bounded
+admissible potentials, define recursively
+\begin{equation}\label{eq:hessian-bounded-recursion}
+ D_p(u_1,\ldots,u_p)
+ =\ddc\bigl(u_pD_{p-1}(u_1,\ldots,u_{p-1})\bigr).
+\end{equation}
+The next result justifies the bounded multiplication at every step up
+to $p=m$.
+
+\begin{proposition}\label{hessian:bounded-recursive-currents}
+For $1\leq p<m$, the recursion defines a real closed current of order
+zero and bidegree $(p,p)$. If
+$M=\max_a\|u_a\|_{L^\infty(X)}$, then
+\[
+ \|D_p(u_1,\ldots,u_p)\|_K
+       \leq C_{K,U,\omega,p}(1+M)^p.
+\]
+For $p=m$, it defines a real closed distributional current. For any
+smooth admissible sequences $u_a^{j_a}\downarrow u_a$ with a common
+uniform bound, one has
+\begin{equation}\label{eq:hessian-bounded-iterated-limit}
+ D_p(u_1,\ldots,u_p)
+ =\lim_{j_p\to\infty}\cdots\lim_{j_1\to\infty}
+    \ddc u_1^{j_1}\wedge\cdots\wedge\ddc u_p^{j_p}
+\end{equation}
+in distributions. The index $j_1$ tends to infinity first. Below degree
+$m$, all these limits have locally uniformly bounded coefficient
+variations.
+\end{proposition}
+\begin{proof}
+The case $p=1$ is the preceding lemma. Suppose the assertions hold
+through degree $p-1<m$. Since $u_p$ is bounded Borel and $D_{p-1}$
+has measure coefficients, their product is well defined. Applying
+$\ddc$ gives a real current that is both $\mathrm d$- and
+$\dc$-closed.
+
+For a fixed smooth complementary test form $\eta$, dominated
+convergence against the fixed signed measures gives
+\[
+ \begin{aligned}
+ \langle D_p,\eta\rangle
+ &=\langle u_pD_{p-1},\ddc\eta\rangle\\
+ &=\lim_{j_p\to\infty}
+       \langle u_p^{j_p}D_{p-1},\ddc\eta\rangle.
+ \end{aligned}
+\]
+With $j_p$ fixed, the inductive iterated limit for $D_{p-1}$ can be
+paired with the smooth form $u_p^{j_p}\ddc\eta$. Integration by parts
+for the smooth closed factors identifies the resulting pairing with
+the smooth product on the right of
+\eqref{eq:hessian-bounded-iterated-limit}. This proves that identity
+also when $p=m$.
+
+For $p<m$, expand the smooth product using
+$\ddc u_a^{j_a}=\sigma_a^{j_a}-\omega$. A term with $q$ admissible
+factors, $0\leq q\leq p$, has the form
+\[
+ \sigma_{a_1}^{j_{a_1}}\wedge\cdots\wedge
+ \sigma_{a_q}^{j_{a_q}}\wedge\omega^{p-q}.
+\]
+Every such $q$ is strictly less than $m$. Apply
+\cref{hessian:absolute-mixed-forms} to each coefficient test, and then
+the smooth mass estimate from \cref{hessian:continuous-products} to
+the potential sum. The term $q=0$ is the fixed smooth form $\omega^p$.
+For $q\geq1$, the sum of its admissible forms is
+$q(\omega+\ddc\bar u)$, where $\bar u$ is their average and
+$\|\bar u\|_\infty\leq M+1$. The result is a
+coefficient variation bound $C(1+M)^p$, after choosing the
+approximations with norm at most $M+1$ as in the preceding proof.
+For arbitrary uniformly bounded approximations the same argument
+uses their common bound. The bounds survive each distributional
+limit, proving that $D_p$ has order zero and the stated estimate.
+This completes the induction. No coefficient bound for the unwedged
+degree-$m$ current is used or asserted.
+\end{proof}
+
+For a subset $I=\{i_1<\cdots<i_q\}\subset\{1,\ldots,p\}$, write
+$D_I=D_q(u_{i_1},\ldots,u_{i_q})$, with $D_\varnothing=1$.
+Define the shifted current and its mixed positive current by
+\begin{equation}\label{eq:hessian-bounded-shifted-current}
+ R_p(u_1,\ldots,u_p)
+ =\sum_{I\subset\{1,\ldots,p\}}\omega^{p-|I|}\wedge D_I,
+ \qquad Q_p=R_p\wedge\omega^{n-m}.
+\end{equation}
+Below degree $m$, $R_p$ has measure coefficients. At degree $m$ it
+is initially a distributional current. Its positive wedge $Q_m$ is
+nevertheless a measure.
+
+Put $M=\max_a\|u_a\|_{L^\infty(X)}$.
+
+\begin{theorem}\label{hessian:bounded-shifted-positive}
+For $1\leq p\leq m$, $Q_p$ is a positive current of order zero, and
+\[
+ \int_KQ_p\wedge\omega^{m-p}
+       \leq C_{K,U,\omega,p}(1+M)^p.
+\]
+It is the iterated limit, in the order of
+\eqref{eq:hessian-bounded-iterated-limit}, of
+\[
+ (\omega+\ddc u_1^{j_1})\wedge\cdots\wedge
+ (\omega+\ddc u_p^{j_p})\wedge\omega^{n-m}.
+\]
+In particular $Q_m$ is a positive Radon measure. These currents are
+local in the canonical potentials and independent of the chosen
+approximations for the fixed ordering. When all potentials are
+continuous, $Q_p$ equals the continuous mixed product of
+\cref{hessian:continuous-products}.
+\end{theorem}
+\begin{proof}
+Expand the smooth shifted product over its subsets. Applying
+\eqref{eq:hessian-bounded-iterated-limit} to each subset, in its
+inherited ordering, gives \eqref{eq:hessian-bounded-shifted-current}.
+The absent indices have no effect on a subset's limit.
+
+Each smooth product is positive: pairing with a decomposable
+strongly positive complementary test appends $m-p$ nonnegative
+rank-one $(1,1)$-forms, and polarized G\aa rding positivity applies.
+The smooth mixed mass bound is uniform in all indices. Distributional
+limits preserve positivity and the local trace bound at every step.
+Positive currents have order zero, so this gives the assertions for
+$Q_p$, including the top-degree measure.
+
+The recursion uses only bounded multiplication of canonical values
+and local distributional differentiation. It is therefore local.
+Its definition contains no approximation choices, so the proved
+limit is independent of those choices while the ordering is fixed.
+For continuous potentials, the approximations converge uniformly by
+Dini's theorem. The telescoping estimate in
+\cref{hessian:continuous-products} is uniform in all remaining
+indices and shows that their iterated limit is the same continuous
+mixed product. This also proves permutation invariance in the
+continuous case.
+\end{proof}
+
+The shifted currents are not closed. Their derivatives can be stated
+without multiplying a discontinuous function by a distribution of
+positive order. This is the torsion identity needed before considering
+integration by parts with bounded weights.
+
+\begin{proposition}\label{hessian:bounded-current-torsion}
+Write $R_{p-1}^{\widehat a}$ for the shifted current obtained by
+omitting $u_a$, in the inherited order, and use two hats for two
+omissions. Put $R_0=1$. For $1\leq p\leq m$,
+\[
+ \begin{aligned}
+ \mathrm dR_p&=\mathrm d\omega\wedge
+                         \sum_{a=1}^pR_{p-1}^{\widehat a},\\
+ \dc R_p&=\dc\omega\wedge
+                         \sum_{a=1}^pR_{p-1}^{\widehat a},\\
+ \ddc R_p&=\ddc\omega\wedge
+                         \sum_{a=1}^pR_{p-1}^{\widehat a}
+       +2\,\mathrm d\omega\wedge\dc\omega\wedge
+                         \sum_{a<b}R_{p-2}^{\widehat a\widehat b}.
+ \end{aligned}
+\]
+The last sum is absent for $p=1$. All currents on the right have order
+zero. If all but at most one potential are smooth, $R_p$ is independent
+of the ordering and is the ordinary
+product of the smooth factors with $\omega+\ddc u$.
+\end{proposition}
+\begin{proof}
+Every $D_I$ is both $\mathrm d$- and $\dc$-closed. Differentiating
+\eqref{eq:hessian-bounded-shifted-current} therefore gives
+\[
+ \mathrm dR_p=\mathrm d\omega\wedge
+ \sum_I(p-|I|)\omega^{p-|I|-1}\wedge D_I,
+\]
+with zero terms omitted. The coefficient $p-|I|$ counts the omitted
+indices outside $I$, which proves the first formula; the second is
+identical with $\dc$ in place of $\mathrm d$. Apply $\mathrm d$ to
+the second formula. Each pair of omitted indices occurs twice, and
+$-\dc\omega\wedge\mathrm d\omega
+=\mathrm d\omega\wedge\dc\omega$ because both forms have odd
+degree three. This gives the displayed $\ddc$ formula, with every
+background derivative retained.
+
+If all but one potential are smooth, applying $\ddc$ to the bounded
+potential times a smooth closed product gives its $\ddc$ wedged
+with that product. At later smooth steps, closedness again makes
+the recursion ordinary smooth multiplication. This is independent
+of the position of the bounded potential, and the subset expansion
+gives the last assertion.
+\end{proof}
+
+The iterated limit fixes the order of the potentials. The preceding
+proofs do not identify it with a simultaneous limit in which all
+indices tend to infinity together, nor do they prove that two bounded
+potentials can be interchanged. Those assertions require control of
+discontinuous weights against varying measures. They are separate
+from the coefficient bounds and positivity established here.

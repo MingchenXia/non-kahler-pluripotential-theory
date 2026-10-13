@@ -1,0 +1,219 @@
+% Inactive reconstruction of the continuous-solution regime, 2 <= m < n.
+% Deep inputs are declared below. General bounded-solution continuity is separate.
+\section{Smoothness of continuous admissible solutions}
+
+Let $(X,\omega)$ be compact Hermitian, of dimension $n$, and let
+$2\leq m<n$. A continuous real function $v$ is admissible if
+\[
+ (\omega+\ddc v)\wedge\gamma_1\wedge\cdots\wedge\gamma_{m-1}
+                              \wedge\omega^{n-m}\geq0
+\]
+in distributions for every smooth collection of forms in
+$\Gamma_m(\omega)$. For smooth $v$ this is equivalent to the pointwise
+closed-cone condition. We write
+$H_m(v)=(\omega+\ddc v)^m\wedge\omega^{n-m}$.
+
+The argument uses two established continuous pluripotential inputs:
+the continuous Hessian products constructed by uniform smooth admissible
+approximation, with continuity in that topology (Ko\l odziej--Nguyen,
+1507.06755v2, Proposition 2.9 and Corollary 2.10), and continuous strict
+domination (Guedj--Lu, 2302.03354v1, Corollary 2.3). The latter says that
+\[
+ \mathbf1_{\{u<v\}}H_m(u)\leq c\mathbf1_{\{u<v\}}H_m(v),\quad 0\leq c<1,
+ \qquad\Longrightarrow\qquad u\geq v.
+\]
+In particular equality of $e^{-u}H_m(u)$ and $e^{-v}H_m(v)$ implies
+$u=v$: apply strict domination on $\{u<v-\delta\}$ with
+$c=e^{-\delta}$, then let $\delta\downarrow0$, and exchange the functions.
+These are inputs for continuous functions, not newly recertified general
+bounded-product or bounded-domination theorems. Their selected primary
+proof scopes and deeper algebraic/envelope dependencies remain explicit
+in the audit.
+
+For higher regularity we use the classical Evans--Krylov--Caffarelli
+estimate in Tosatti--Wang--Weinkove--Yang, 1402.0554v2, Theorem 3.4,
+including its continuous-viscosity version stated immediately after the
+theorem. The cone estimates, smooth trace estimate and gradient blowup
+are the preceding reconstructed fragments 599, 600 and 596. Smooth
+elliptic inversion, the distributional linear maximum principle and
+Schauder bootstrapping are standard analytic inputs.
+
+\begin{lemma}\label{draft:604-smooth-proper-existence}
+For every $a>0$ and smooth real $H$ on $X$, there is a unique smooth
+strictly admissible solution of
+\[
+ H_m(w)=e^{aw+H}\omega^n.
+\]
+It satisfies
+\[
+ -\frac{\max_X H}{a}\leq w\leq-\frac{\min_X H}{a}.
+\]
+\end{lemma}
+\begin{proof}
+At a maximum of $w$, the admissible form $\omega+\ddc w$ is at most
+$\omega$, hence $e^{aw+H}\leq1$ there. At a minimum it is at least
+$\omega$, and the reverse inequality holds. These give the bounds.
+For two solutions, a positive maximum of their difference would imply
+$H_m(w_1)\leq H_m(w_2)$ there, contradicting the exponential factor.
+This proves uniqueness.
+
+First take $a=1$ and use the path
+$H_m(w_t)=e^{w_t+tH}\omega^n$, starting with $w_0=0$.
+The trace theorem 600 applies with prescribed potential $v=0$,
+fixed smooth comparison $0$, and $h(x,v)=tH(x)$; its constants are
+uniform for $t\in[0,1]$. The gradient proposition 596 then gives a
+uniform gradient and complex-Hessian bound. The interior-Laplace argument
+of 603 gives uniform $W^{2,p}$ and hence $C^{1,\alpha}$ bounds, for any
+fixed $\alpha<1$. Consequently
+$r_t=e^{(w_t+tH)/m}$ has a uniform H\"older bound.
+
+The extension of 603 is uniformly elliptic and concave on all real
+Hessians, with coefficient oscillation bounded by
+$C|x-y|(1+\|R\|)$. It therefore belongs to the class in Theorem 3.4
+of the stated analytic input (trace and operator-norm ellipticity differ
+only by the fixed factor $2n$). That theorem gives uniform $C^{2,\beta}$
+bounds on a finite cover. The original smooth Hessian operator is
+uniformly elliptic near the attained compact cone set. Differentiating
+and applying Schauder estimates gives bounds for every higher derivative.
+
+The linearization of
+$\log(H_m(w)/\omega^n)-w-tH$ is $L_w-1$, with positive definite
+principal coefficients. The maximum principle gives zero kernel;
+smooth elliptic Fredholm theory gives surjectivity and Schauder inversion.
+The implicit-function theorem proves openness. The uniform estimates
+prove closedness, so the path reaches $t=1$.
+For general $a$, use the metric $a\omega$ and potential $\widehat w=aw$.
+Both sides of its coefficient-one equation acquire the same factor
+$a^n$, so it is exactly the stated equation after division by that factor.
+\end{proof}
+
+\begin{lemma}\label{draft:604-continuous-smooth-approximation}
+Every continuous admissible $\varphi$ on $X$ is the uniform limit of
+smooth strictly admissible functions.
+\end{lemma}
+\begin{proof}
+Fix a smooth $h\geq\varphi$ and a constant
+\[
+ b>\max\left\{1,\left\|H_m(h)/\omega^n\right\|_\infty\right\}.
+\]
+For each positive integer $N$ solve, by the preceding lemma,
+\[
+ H_m(w_N)=b e^{N(w_N-h)}\omega^n.
+\]
+At a positive maximum of $w_N-h$, the form $\omega+\ddc h$ lies above
+the strictly admissible form $\omega+\ddc w_N$, hence is admissible there.
+Monotonicity would give
+$b e^{N(w_N-h)}\leq H_m(h)/\omega^n<b$, a contradiction.
+Thus $w_N\leq h$. The preceding zero-order estimate also gives
+\[
+ \|w_N\|_\infty\leq M_N:=\|h\|_\infty+\frac{\log b}{N}.
+\]
+
+Let $x_N$ maximize $\varphi-(1+N^{-1})w_N$.
+The smooth positive form
+$T_N=(\omega+\ddc w_N)^{m-1}\wedge\omega^{n-m}$
+defines a strictly elliptic linear operator. Admissibility gives
+$(\omega+\ddc\varphi)\wedge T_N\geq0$ in distributions.
+Its linear maximum principle, applied to the upper test
+$(1+N^{-1})w_N$ plus the maximum value, gives at $x_N$
+\[
+ 0\leq\bigl(\omega+(1+N^{-1})\ddc w_N\bigr)\wedge T_N.
+\]
+This application is to a continuous distributional subsolution of a
+smooth strictly elliptic operator. It does not assume a second derivative
+of $\varphi$. Writing $d_N=H_m(w_N)/\omega^n$, polarized G\aa rding
+positivity yields
+\[
+ (N+1)d_N\geq \omega\wedge T_N/\omega^n
+                         \geq d_N^{(m-1)/m}.
+\]
+Therefore, at this maximum point,
+\[
+ w_N-h\geq-E_N,\qquad
+ E_N=\frac{m\log(N+1)+\log b}{N}.
+\]
+Since $\varphi\leq h$, the maximum of
+$\varphi-(1+N^{-1})w_N$ is at most $E_N+M_N/N$.
+It follows on all of $X$ that
+\[
+ \varphi-E_N-2M_N/N\leq w_N\leq h.
+\]
+Given $\delta>0$, choose an ordinary smooth majorant
+$\varphi\leq h\leq\varphi+\delta$, and then $N$ so large that
+$E_N+2M_N/N\leq\delta$. The resulting $w_N$ is strictly admissible
+and within $\delta$ of $\varphi$. Let $\delta\downarrow0$.
+No monotonicity of the chosen approximants is needed.
+\end{proof}
+
+\begin{proposition}\label{draft:604-proper-uniform-stability}
+Let $H_j$ be smooth and converge uniformly to a continuous $H$.
+The smooth solutions $w_j$ of
+$H_m(w_j)=e^{w_j+H_j}\omega^n$ converge uniformly to the unique
+continuous admissible solution of
+$H_m(w)=e^{w+H}\omega^n$. For smooth $H_1,H_2$,
+\[
+ \|w_1-w_2\|_\infty\leq\|H_1-H_2\|_\infty.
+\]
+\end{proposition}
+\begin{proof}
+At a maximum of $w_1-w_2$, monotonicity gives
+$e^{w_1+H_1}\leq e^{w_2+H_2}$, hence the maximum is at most
+$\|H_1-H_2\|_\infty$. Exchange the functions to obtain the norm bound.
+Thus $w_j$ is Cauchy uniformly. The limit is admissible by passage of
+the linear distributional inequalities to the limit. The continuous
+Hessian-product input passes the equation to this limit. The exponential
+order consequence stated above proves uniqueness among continuous
+admissible solutions, independently of the approximation of $H$.
+\end{proof}
+
+\begin{theorem}\label{draft:604-continuous-hessian-regularity}
+If $\varphi$ is continuous and admissible on $X$, $f(x,t)$ is smooth
+on a neighborhood of its bounded range, and
+\[
+ H_m(\varphi)=e^{f(x,\varphi)}\omega^n,
+\]
+then $\varphi$ is smooth.
+\end{theorem}
+\begin{proof}
+Choose smooth admissible $v_j\to\varphi$ uniformly, by the approximation
+lemma. Their values lie in a fixed compact interval on which $f$ is
+smooth. Put $h(x,t)=-t+f(x,t)$ and solve
+\[
+ H_m(u_j)=e^{u_j+h(x,v_j)}\omega^n.
+\]
+The preceding stability proposition shows that $u_j$ converges uniformly
+to a continuous admissible $u$ satisfying
+\[
+ e^{-u}H_m(u)=e^{-\varphi+f(x,\varphi)}\omega^n
+                              =e^{-\varphi}H_m(\varphi).
+\]
+Continuous exponential uniqueness gives $u=\varphi$.
+
+The zero-order bounds for $u_j$ are uniform. Fix a smooth ordinary
+approximation $\widetilde\varphi$ within the small tolerance required
+by the trace theorem 600. After discarding finitely many terms, all
+$v_j$ lie within that fixed tolerance of $\widetilde\varphi$.
+The trace theorem and gradient blowup 596 then give uniform gradient
+and complex-Hessian bounds for $u_j$, independent of derivatives of
+$v_j$. The first lemma of 603 yields
+$\varphi\in W^{2,p}$ for every finite $p$, and
+$\varphi\in C^{1,\alpha}$ for every $\alpha<1$.
+
+The last proposition of 603 makes $\varphi$ a continuous viscosity
+solution of the concave uniformly elliptic extension, with right-hand
+side $e^{f(x,\varphi)/m}$. This right-hand side is H\"older. The
+continuous-viscosity version of Theorem 3.4 therefore gives
+$\varphi\in C^{2,\beta}$, for some $\beta>0$.
+The operator agrees with the original Hessian root on the attained
+compact cone set; the now classical equation thus has smooth dependence
+on $x,\varphi$ and its complex Hessian, and is uniformly elliptic there.
+Difference quotients and interior Schauder estimates give $C^{3,\beta}$;
+iteration proves smoothness. A second family of auxiliary equations is
+unnecessary because the analytic estimate applies to the viscosity limit.
+\end{proof}
+
+This theorem assumes continuity of the given weak solution. Extending
+it to an arbitrary bounded admissible weak solution requires its bounded
+Hessian products, domination and continuity to be justified separately.
+No Orlicz statement or conclusion for a merely semipositive background
+is asserted here.

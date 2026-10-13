@@ -1,0 +1,245 @@
+\Needspace{14\baselineskip}
+\section{Exact traces on Hopf manifolds}
+\label{sec:hopf-projective-traces}
+
+The projective base of a scalar Hopf manifold has higher dimension than the curve in \cref{sec:curve-fibration-traces}. A divisor on a modification of the Hopf manifold can therefore map to a set of codimension greater than one in the base. Extracting its image as a divisor on a modified base reduces the trace constraint to a closed-background problem. The elliptic action then identifies the full trace envelope with the pullback of the base envelope. Thus exact realization is possible for these data even though the target has unbounded mass.
+
+Fix $n\geq3$ and put
+\[
+ X=H_{n+1},\qquad Y=H_n\subset X,\qquad
+ p:X\longrightarrow\mathbb P^n,\qquad
+ q=p|_Y:Y\longrightarrow B=\mathbb P^{n-1},
+\]
+where $Y$ is defined by $z_n=0$ and $B\subset\mathbb P^n$ is the same hyperplane. Both maps are holomorphic submersions with connected elliptic fibers. Set $d=n-1$, and let $\kappa$ be the Fubini--Study form on $B$, normalized by $\int_B\kappa^d=1$. With $s=\log|z|^2$ on the covering space of $Y$, the forms of \cref{sec:hopf-all-dimensions} satisfy
+\[
+ \alpha=\ddc s=q^*\kappa,\qquad
+ \beta=\mathrm ds\wedge\dc s,\qquad
+ \beta^2=0,\qquad \int_{q^{-1}(x)}\beta=2.
+\]
+For $a,b>0$ write $\Omega_{a,b}=a\alpha+b\beta$; this is a Hermitian form on $Y$.
+
+Take $U\in\QPSH(\mathbb P^n)$ with $\nu(U,B)=0$, set $u=U\circ p$, and choose $C\geq1$ with $C\omega_{\FS}+\ddc U\geq0$. Throughout the construction assume $a\geq2C$ and $b>0$. The submersion identity of \cref{lem:submersion-multiplier-pullback}, followed by restriction, gives
+\begin{equation}\label{eq:hopf-trace-image-ideals}
+ \mathfrak b_t=\mathcal I(tU)\mathcal O_B,
+ \qquad
+ \mathfrak a_t(u;Y)=\mathfrak b_t\mathcal O_Y
+ \quad(t>0).
+\end{equation}
+Local product coordinates also give $\nu(u,Y)=0$. The ideals $\mathfrak b_t$ are nonzero, and their trace data $\tau_{B,U}$ is defined as in \cref{eq:trace-profile}. We do not require $U|_B$ to be a genuine quasi-plurisubharmonic function.
+
+\subsection{Divisors under a dominant map}
+
+The following reduction applies to every compact modification, without choosing finitely many divisors in advance.
+
+\Needspace{14\baselineskip}
+\begin{lemma}\label{lem:dominant-divisorial-extraction}\index{Divisor!extraction on the base}
+Let $f:Z\to M$ be a dominant holomorphic map of connected smooth compact complex manifolds, and let $D$ be a prime divisor on $Z$. If $f(D)\ne M$, there are a smooth compact modification $\sigma:M'\to M$, a prime divisor $F\subset M'$ dominated by $D$, and an integer $e\geq1$ such that $f$ lifts holomorphically near a general point of $D$ and
+\begin{equation}\label{eq:dominant-divisorial-pullback}
+ \operatorname{ord}_D(\mathfrak b\mathcal O_Z)
+   =e\operatorname{ord}_F(\mathfrak b\mathcal O_{M'}),
+ \qquad
+ \nu(w\circ f,D)=e\nu(w\circ\sigma,F)
+\end{equation}
+for every nonzero coherent ideal $\mathfrak b$ on $M$ and every $w\in\QPSH(M)$. If $f(D)=M$, both quantities on the left are zero.
+\end{lemma}
+\begin{proof}
+We first extract a divisor on the base and then check the effect of ramification on its generic Lelong number. Put $r=\dim M$. Maintain a compact analytic graph proper over $Z$, isomorphic to $Z$ near a general point of $D$, with a dominant map to the current smooth modified base. Its divisor image $S$ is irreducible analytic by the proper mapping theorem. The graph may be singular away from this neighborhood.
+
+Near a general point of $D$, let $J_D(f)$ be the least vanishing order of the coefficients of $f^*(\mathrm dy_1\wedge\cdots\wedge\mathrm dy_r)$ in a smooth source frame. Dominance makes it a finite nonnegative integer. Changes of smooth coordinates multiply the target volume form by a unit and change the source frame by an invertible matrix, so this integer is independent of the coordinates.
+
+Suppose $S$ has codimension $c\geq2$. Blow up its reduced coherent ideal. Over the smooth part of $S$, use coordinates with $S=\{y_1=\cdots=y_c=0\}$ and put
+\[
+ m=\min_{i\leq c}\operatorname{ord}_D(f^*y_i)\geq1.
+\]
+Choose $y_1$ attaining this minimum. After removing a proper analytic subset of $D$, its leading coefficient is a unit, and all ratios $f^*y_i/f^*y_1$ are holomorphic. The map therefore lifts near these points to the smooth blowup chart
+\[
+ (y_1,\ldots,y_c)=(s,st_2,\ldots,st_c).
+\]
+Resolve the target blowup by a proper analytic resolution which is an isomorphism over its whole smooth locus; the resolution input is recalled in \cref{hist:hopf-projective-traces}. The resulting base is smooth and compact, and the lift near the general point of $D$ is preserved. Taking the main analytic graph of the resulting meromorphic lift again gives a compact graph proper over $Z$, unchanged in this neighborhood.
+
+In these coordinates,
+\[
+ \mathrm dy_1\wedge\cdots\wedge\mathrm dy_r
+ =s^{c-1}\mathrm ds\wedge\mathrm dt_2\wedge\cdots\wedge\mathrm dt_c
+                  \wedge\mathrm dy_{c+1}\wedge\cdots\wedge\mathrm dy_r.
+\]
+Consequently the new Jacobian order is $J_D(f)-(c-1)m\geq0$. It strictly decreases at every step. After finitely many steps the divisor image has codimension one: its image cannot dominate a modified base when its original image was proper. This proves extraction without resolving the source graph in a way that changes the general point of $D$.
+
+Let $e$ be the order along $D$ of the pullback of a local equation of the extracted divisor $F$. Near its general point, the ideal $\mathfrak b\mathcal O_{M'}$ is a power of that equation times a unit ideal. Pullback gives the ideal-order identity in \eqref{eq:dominant-divisorial-pullback}.
+
+The map $D\to F$ has tangential rank $r-1$ at general smooth points. Use the tangential base coordinates as source coordinates and absorb the unit in the normal pullback into a local holomorphic $e$th root. The resulting local form of the map is
+\[
+ (z_1,z_2,\ldots,z_r,z')\longmapsto(z_1^e,z_2,\ldots,z_r).
+\]
+After a smooth local correction, Siu's divisorial removal from \cref{sec:psh-divisorial-estimates} writes
+\[
+ w\circ\sigma=c_0\log|y_1|^2+R,
+ \qquad c_0=\nu(w\circ\sigma,F),
+\]
+with $R$ plurisubharmonic and $\nu(R,F)=0$. By the non-strict Lelong level theorem in \cref{subsec:psh-lelong-levels}, its full point Lelong number is zero at a very general point of $F$. Skoda's theorem then makes $\mathrm e^{-tR}$ locally integrable for every $t>0$ at this point.
+
+For $e>1$, choose $1<p<e/(e-1)$ and let $p'$ be its conjugate exponent. The density $|y_1|^{2/e-2}$ belongs locally to $L^p$. Change of variables and H\"older's inequality, using integrability of $\mathrm e^{-tp'R}$, give
+\[
+ \int \mathrm e^{-tR(z_1^e,z_2,\ldots,z_r)}\,\mathrm dV_z
+ =c_e\int \mathrm e^{-tR(y)}|y_1|^{2/e-2}\,\mathrm dV_y<+\infty
+\]
+on sufficiently small corresponding polydisks. Free source variables contribute a finite product factor; for $e=1$ Fubini's theorem suffices. A positive generic divisor coefficient $c'$ of the pulled-back residual would instead force nonintegrability for $tc'\geq1$. The residual coefficient is therefore zero, and the logarithmic term has coefficient $ec_0$. This proves the Lelong identity even if $R|_F\equiv-\infty$.
+
+Finally, if $f(D)=M$, the map is a submersion near a very general point of $D$. A nonzero ideal is a unit at a general image point, and Skoda's theorem at an image point of zero Lelong number, followed by Fubini's theorem in product coordinates, gives zero generic Lelong number on $D$.
+\end{proof}
+
+\subsection{The full trace envelope}
+
+Let $w_a=\mathcal T_{a\kappa}(U;B)$. The closed-background construction of \cref{thm:kahler-target-exact-trace} applies with $\Omega_0=C\kappa$. It gives
+\begin{equation}\label{eq:hopf-base-exact-trace}
+ \begin{gathered}
+ \nu(w_a\circ\sigma,F)=\tau_{B,U}(F)
+ \quad\hbox{for every divisor }F\hbox{ over }B,\\
+ (a/2)^d\leq\int_B\mathrm{MA}_{a\kappa}(w_a)\leq a^d.
+ \end{gathered}
+\end{equation}
+\Needspace{6\baselineskip}
+The lower bound comes from the trace majorant in the half-sized background, and the upper bound from closed mass monotonicity. In particular, the mass is positive, as required for convergence of the divisorial Lelong numbers of the decreasing base models.
+
+\Needspace{17\baselineskip}
+\begin{theorem}\label{thm:hopf-projective-exact-trace}\index{Trace!Hopf manifold}
+For the projective pullback data above,
+\begin{equation}\label{eq:hopf-projective-trace-envelope}
+ \mathcal T_{\Omega_{a,b}}(u;Y)=q^*w_a.
+\end{equation}
+For every Hermitian form $\Omega\geq\Omega_{a,b}$, every smooth compact modification $\pi:Z\to Y$, and every prime divisor $D\subset Z$,
+\[
+ \nu\bigl(\mathcal T_\Omega(u;Y)\circ\pi,D\bigr)=\tau_{Y,u}(D).
+\]
+\end{theorem}
+\begin{proof}
+Apply \cref{lem:dominant-divisorial-extraction} to $f=q\circ\pi$. If $D$ dominates $B$, both the trace order and the Lelong number of $q^*w_a$ are zero. Otherwise the ideal identity \eqref{eq:hopf-trace-image-ideals} and the extracted divisor $F$ give
+\[
+ \tau_{Y,u}(D)=e\tau_{B,U}(F)
+             =e\nu(w_a\circ\sigma,F)
+             =\nu(q^*w_a\circ\pi,D).
+\]
+Thus the same potential $q^*w_a$, independent of the choice of $D$, is an exact trace competitor on every compact model.
+
+The compact elliptic group $\mathbb C^*/\langle\mathrm e^{-1}\rangle$ acts by scalar multiplication on $Y$. It preserves $\alpha$, $\beta$ and all ideals in \eqref{eq:hopf-trace-image-ideals}. It also preserves the full competitor family: for a translation $\rho$, the constraint for $v\circ\rho$ on $\pi$ is the constraint for $v$ on the modification $\rho\circ\pi$, with the same ideal order. By \cref{thm:restricted-analytic-envelope-limit}, the envelope is the largest member of this family, so it is invariant under the group. The action is transitive on each fiber; local holomorphic sections of $q$ therefore show that the envelope descends to a genuine quasi-plurisubharmonic function $v$ on $B$.
+
+For a basic potential, positivity is equivalent to positivity on the base:
+\begin{equation}\label{eq:hopf-basic-positivity}
+ \Omega_{a,b}+\ddc q^*v\geq0
+ \quad\Longleftrightarrow\quad a\kappa+\ddc v\geq0.
+\end{equation}
+Indeed, wedge the left-hand current with the smooth semipositive form $\beta$ and push forward by $q$. Since $\beta^2=0$ and its fiber integral is two, the resulting positive current is $2(a\kappa+\ddc v)$. Conversely, pull back the base inequality and add $b\beta\geq0$.
+
+Every smooth compact modification $\sigma:B'\to B$ lifts to the smooth compact modification $Y\times_B B'\to Y$. The inverse image of a prime divisor $F\subset B'$ is prime, because the fibers are connected, and has generic multiplicity one. The trace constraint on this divisor says exactly that $v$ satisfies the constraint at $F$ on $B'$. Thus $v\leq w_a$. The opposite inequality follows from the exact competitor $q^*w_a$, proving \eqref{eq:hopf-projective-trace-envelope}.
+
+For $\Omega\geq\Omega_{a,b}$, this competitor lies below $T_\Omega=\mathcal T_\Omega(u;Y)$. The defining lower bound and the order of the two potentials give
+\[
+ \tau_{Y,u}(D)\leq\nu(T_\Omega\circ\pi,D)
+       \leq\nu(q^*w_a\circ\pi,D)=\tau_{Y,u}(D),
+\]
+which proves exactness in every such background.
+\end{proof}
+
+\subsection{Mass and the ideal class}
+
+The mass of a basic potential is computed by the closed base and the area of the elliptic fiber. The formula below holds for all $a,b>0$. It computes one representative; the target still fails the bounded mass property by \cref{cor:hopf-all-metrics-unbounded}.
+
+\begin{proposition}\label{prop:hopf-basic-mass}\index{Monge--Amp\`ere mass!Hopf pullback}
+For every $v\in\PSH(B,a\kappa)$,
+\begin{equation}\label{eq:hopf-basic-mass}
+ \int_Y\mathrm{MA}_{\Omega_{a,b}}(q^*v)
+       =2nb\int_B\mathrm{MA}_{a\kappa}(v).
+\end{equation}
+In particular, the trace envelope in \eqref{eq:hopf-projective-trace-envelope} has mass between $2nb(a/2)^d$ and $2nba^d$.
+\end{proposition}
+\begin{proof}
+Normalize $v\leq0$ and put $v_j=\max(v,-j)$. For bounded potentials, the horizontal current has rank at most $d=n-1$ and $\beta^2=0$, so the bounded local product gives
+\[
+ (\Omega_{a,b}+\ddc q^*v_j)^n
+       =nb\,\beta\wedge q^*(a\kappa+\ddc v_j)^d.
+\]
+This identity follows by local decreasing regularization on base charts and the bounded product convergence of \cref{chap:products}; it does not require $\beta$ to be closed. Restrict to $q^{-1}\{v>-j\}$ and pass to the increasing non-pluripolar measures. Fiber integration gives \eqref{eq:hopf-basic-mass}, and \eqref{eq:hopf-base-exact-trace} gives the two bounds.
+\end{proof}
+
+\Needspace{14\baselineskip}
+\begin{example}\label{ex:hopf-point-trace}\index{Trace!exceptional divisor on a Hopf manifold}
+Set
+\[
+ U([z_0:\cdots:z_n])
+ =\log\frac{\sum_{i=0}^{n-2}|z_i|^2}{\sum_{i=0}^n|z_i|^2},
+ \qquad P=[0:\cdots:0:1]\in B.
+\]
+Then $\nu(U,B)=0$ and, for every $t>0$,
+\[
+ \mathfrak b_t=\mathfrak m_P^{\max\{\lfloor t-d+1\rfloor,0\}},
+ \qquad
+ \tau_{Y,u}(D)=\operatorname{ord}_D(\mathfrak m_P\mathcal O_Z)
+\]
+for every divisor $D$ on every smooth compact modification $Z\to Y$, with the ideal extended through $q$. The potential $q^*(U|_B)$ is an exact realizer, singular along the elliptic fiber above $P$. For this explicit potential it suffices to take $a>1$, and
+\[
+ \int_Y\mathrm{MA}_{\Omega_{a,b}}(q^*(U|_B))=2nb(a^d-1).
+\]
+It need not equal the normalized trace envelope.
+\end{example}
+\begin{proof}
+The singular locus of $U$ is the projective line defined by $z_0=\cdots=z_{n-2}=0$, of codimension $d$. Its smooth-center multiplier ideals are given by \cref{lem:smooth-center-multiplier-ideal}; restriction to $B$ gives the displayed powers of $\mathfrak m_P$. Dividing their orders by $t$ proves the trace formula. Exactness of the ordinary restriction follows from \cref{prop:trace-naive-comparison}, since the ambient pullback has analytic singularities.
+
+On the point blowup $\sigma:\widetilde B\to B$, let $F$ be the exceptional divisor, $H=[\sigma^*\kappa]$, and let $\eta$ be the pullback of the Fubini--Study form by the resolved projection to $\mathbb P^{d-1}$. The logarithm defining $U|_B$ gives
+\[
+ \sigma^*(a\kappa)+\ddc(U|_B\circ\sigma)
+       =[F]+(a-1)\sigma^*\kappa+\eta.
+\]
+The residual form is smooth semipositive for $a>1$, with class $aH-F$. Its smooth top product off $F$ computes the non-pluripolar mass, and the smooth measure does not charge $F$. Since $H|_F=0$, all mixed intersections involving both $H$ and $F$ vanish; $H^d=1$ and $F^d=(-1)^{d-1}$ give $(aH-F)^d=a^d-1$. Formula \eqref{eq:hopf-basic-mass} now supplies the elliptic factor $2nb$.
+\end{proof}
+
+\begin{corollary}\label{cor:hopf-trace-ideal-class}\index{Trace!background independence of the ideal class}
+The ideal singularity class of $\mathcal T_{\Omega_{a,b}}(u;Y)$ is independent of $a\geq2C$ and $b>0$, and depends only on the multiplier-ideal class of $U$. These classes respect addition and positive scaling of the ambient data: for $U_1,U_2$ with zero generic Lelong number along $B$ and $\lambda>0$, in sufficiently large invariant backgrounds,
+\[
+ \mathcal T(u_1+u_2;Y)\sim_{\mathcal I}
+       \mathcal T(u_1;Y)+\mathcal T(u_2;Y),
+ \qquad
+ \mathcal T(\lambda u_1;Y)\sim_{\mathcal I}
+       \lambda\mathcal T(u_1;Y),
+\]
+where the backgrounds on the individual envelopes are omitted from the notation.
+\end{corollary}
+\begin{proof}
+All sufficiently large base backgrounds give the same divisorial Lelong numbers \eqref{eq:hopf-base-exact-trace}. On the compact K\"ahler base, equality of these numbers on all compact models is equivalent to equality of the multiplier ideals at every real positive weight; see the closed criterion recalled in \cref{hist:hopf-projective-traces}. Hence all $w_a$ have the same ideal class. The submersion identity of \cref{lem:submersion-multiplier-pullback} transfers the equality to $q^*w_a$, which does not depend on $b$. Equal ambient multiplier ideals also give equal trace data.
+
+By \cref{thm:trace-data-additivity}, the trace data of $U_1+U_2$ is the sum of those of $U_1$ and $U_2$. The sum of two exact base realizers has precisely these divisorial Lelong numbers, so the same closed criterion identifies its ideal class with that of the base trace envelope for $U_1+U_2$. Positive scaling is identical. Pullback gives both assertions on $Y$.
+\end{proof}
+
+The ideal-class conclusion here concerns the invariant backgrounds $\Omega_{a,b}$. Exactness in every larger Hermitian background follows from \cref{thm:hopf-projective-exact-trace}, but does not by itself identify an ordinary or ideal class in all those backgrounds. The criterion in the proof is applied on $B$, not assumed on a general non-K\"ahler manifold.
+
+\subsection{Decreasing analytic models}
+
+Let $U_m$ be the ambient multiplier-ideal approximants used in \cref{thm:restricted-analytic-envelope-limit}. After discarding finitely many dyadic indices, their restrictions belong to $\PSH(B,a\kappa)$. Put
+\[
+ w_j=P_{a\kappa}[U_{2^j}|_B],\qquad v_j=q^*w_j.
+\]
+
+\begin{proposition}\label{prop:hopf-trace-analytic-approximation}\index{Trace!Hopf analytic approximation}
+The potentials $v_j$ are the full ordinary analytic models
+\[
+ v_j=P_{\Omega_{a,b}}[q^*(U_{2^j}|_B)].
+\]
+They decrease to $\mathcal T_{\Omega_{a,b}}(u;Y)$ in $L^1(Y)$. For every smooth compact modification $\pi:Z\to Y$, their pullbacks converge in $L^1(Z)$, and for every prime divisor $D\subset Z$,
+\[
+ \nu(v_j\circ\pi,D)\longrightarrow\tau_{Y,u}(D).
+\]
+\end{proposition}
+\begin{proof}
+For $h\in\PSH(B,a\kappa)$, each finite obstacle envelope $P_{\Omega_{a,b}}(q^*h+A,0)$ is invariant under the elliptic action. Its full supremum descends to the base, where \eqref{eq:hopf-basic-positivity} gives the background condition. Surjectivity makes the obstacle inequalities equivalent on $Y$ and $B$. Hence
+\[
+ P_{\Omega_{a,b}}(q^*h+A,0)
+       =q^*P_{a\kappa}(h+A,0).
+\]
+Letting $A\to+\infty$ and taking upper semicontinuous regularizations, we obtain
+\[
+ P_{\Omega_{a,b}}[q^*h]=q^*P_{a\kappa}[h].
+\] Analytic type follows from \cref{prop:analytic-envelope-type}.
+
+The base models decrease to $w_a$ by \cref{thm:restricted-analytic-envelope-limit}. Their pullbacks therefore decrease to $q^*w_a$ and converge in $L^1(Y)$ by genuine decreasing quasi-plurisubharmonic convergence. The extracted-divisor formula \eqref{eq:dominant-divisorial-pullback} transfers convergence of all base divisorial Lelong numbers to every $D$ over $Y$; horizontal divisors have coefficient zero throughout. Finally, \cref{lem:modification-lone-pullback} gives $L^1$ convergence on each compact modification.
+\end{proof}
+
+These results answer the trace question for arbitrary genuine projective data pulled back to the Hopf pair $(H_{n+1},H_n)$, including nonanalytic data. They neither require bounded mass on $H_n$ nor supply convergence of extremal singularity volumes there. The unrestricted realization problem of \cref{qu:exact-trace-program} still concerns data without this projective pullback structure.

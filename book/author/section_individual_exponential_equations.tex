@@ -151,6 +151,7 @@ and both measures vanish on the pole fiber. Thus $s_\lambda$ is an exponential s
 (2) Fix $\lambda>0$. By hypothesis, there is $T$ such that $F/q_\alpha\leq\mathrm e^{(\lambda/2)L^\alpha}$ almost everywhere on $\{L>T\}$. Since $\mathrm e^{(\lambda/2)L^\alpha}\leq\mathrm e^{\lambda}\mathrm e^{\lambda(L^\alpha-1)}$ for $L\geq1$, we have $F\leq\mathrm e^{\lambda}B_\lambda$ there. On the complement $\{L\leq T\}$, which is compact and disjoint from the pole fiber, $F$ is essentially bounded, while $B_\lambda\geq q_\alpha\geq b_0>0$. Increasing the constant, we obtain $F\leq AB_\lambda$ almost everywhere on $X$.
 \end{proof}
 
+\Needspace{14\baselineskip}
 \begin{theorem}\label{thm:zero-threshold-solvable-concentration}\index{Monge--Ampere density@Monge--Amp\`ere density!solvable concentration}\index{Subsolution!zero threshold exponential equation}
 Let $F_j$, $j\geq1$, be smooth strictly positive probability densities on $X_0$ with respect to $\mathrm dV_0=V_0^{-1}h_0^m$, whose normalization scalars on $X_0$, relative to $h_0$ and $\mathrm dV_0$, satisfy $c_{h_0}(F_j)\leq2^{-2j}/C$. There are smooth strictly positive probability densities $g_j$ on $Y$ with respect to $\kappa^k$ such that the probability densities
 \[
@@ -259,7 +260,7 @@ by \cref{thm:individual-density-subsolution}. The upper semicontinuity of the th
 For the density of \cref{thm:zero-threshold-solvable-concentration}, solutions exist for every positive exponent, so the collapse applies as $\lambda\downarrow0$ to every choice of solutions, in particular to the greatest ones. By contrast, the subsolutions of \cref{thm:product-zero-threshold-exponential-criterion} keep the mass $CV_0$ for every exponent, while the masses of the solutions above them tend to zero: on a nonclosed background, the order of two potentials does not give an order of their total Monge--Amp\`ere masses. Whether the normalized potentials converge in capacity, and which equation a normalized cluster limit satisfies at exponent zero, are not decided by this argument. Positive endpoints of $\Lambda_h(f)$ are governed instead by the compactness criterion below.
 
 \Needspace{12\baselineskip}
-\subsection{Positive endpoints and right limits}
+\subsection{Positive endpoints and one-sided limits}
 
 For $\lambda\in\Lambda_h(f)$, write $U_\lambda$ for the greatest solution given by \cref{thm:individual-exponential-subsolution}. When the exponents stay above a fixed $\tau>0$, the solution of a bounded truncated equation at exponent $\tau$ is a common upper barrier for all subsolutions. Together with the maximality of greatest solutions, this barrier gives an order estimate between $U_{\lambda_1}$ and $U_{\lambda_2}$, which controls the positive endpoint of $\Lambda_h(f)$ and the limits of $U_\lambda$ from the right.
 
@@ -350,4 +351,64 @@ The nonpositive functions $U_{\lambda_j}-K$ satisfy
 and $\mathrm e^{\lambda_jK}f\to\mathrm e^{aK}f$ in $L^1$. \Cref{thm:exponential-closedness} therefore gives $\mathrm{MA}^{\mathrm{ext}}_h(V)=\mathrm e^{aV}f\,\mathrm dV$, together with total-variation convergence of the measures $\mathrm{MA}^{\mathrm{ext}}_h(U_{\lambda_j})$. Hence $V$ is a solution at $a$, so $V\leq U_a$ by maximality, while $V\geq U_a$ by construction. Thus $V=U_a$. Since every sequence of exponents converging to $a$ from above has a decreasing subsequence, this proves the assertions.
 \end{proof}
 
-The endpoint criterion is expressed through solutions rather than through $f$ itself. We know neither an intrinsic criterion on $f$ for $a\in\Lambda_h(f)$, nor whether a positive infimum $a\notin\Lambda_h(f)$ can occur, nor whether the greatest solutions converge as the exponent increases to a point of $\Lambda_h(f)$. The right limit concerns greatest solutions only; it does not identify limits of other solutions with different singularities.
+The corrected order also controls approach from the left. The limit solves the equation at the limiting exponent; maximality gives an inequality with the greatest solution there, but does not force equality.
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{prop:greatest-exponential-left-limit}\index{Monge--Ampere equation@Monge--Amp\`ere equation!left limit}
+Suppose $\Lambda_h(f)\ne\varnothing$, and put $a_0=\inf\Lambda_h(f)$. For every $a>a_0$, there is $L_a\in\PSH(X,h)$ such that
+\[
+ U_\lambda\longrightarrow L_a
+       \quad\text{in }L^1\text{ and in capacity}\quad(\lambda\uparrow a).
+\]
+It satisfies
+\[
+ L_a\leq U_a,\qquad
+ \mathrm{MA}^{\mathrm{ext}}_h(L_a)=\mathrm e^{aL_a}f\,\mathrm dV.
+\]
+The equation measures converge in total variation to this finite measure. The left limit is independent of the auxiliary exponent and of the cofinal sequence used to construct it.
+\end{proposition}
+\begin{proof}
+Choose $\tau\in\Lambda_h(f)$ with $0<\tau<a$; the upper-interval property gives such a choice. Put $K=K_\tau$ from \cref{lem:positive-exponent-uniform-upper-barrier} and
+\[
+ V_\lambda=U_\lambda+K\log(\lambda/\tau)
+       \qquad(\lambda\in\Lambda_h(f),\ \lambda\geq\tau).
+\]
+This family is increasing. For a sequence $\lambda_j\uparrow a$ with $\tau\leq\lambda_j<a$, its members lie between the integrable potentials $V_\tau$ and $V_a$. The upper-envelope construction in \cref{sec:obstacle-envelopes} gives
+\[
+ V^-_a=\left(\sup_{\tau\leq\lambda<a}V_\lambda\right)^*
+        =\left(\lim_jV_{\lambda_j}\right)^*\in\PSH(X,h).
+\]
+Indeed cofinality and the order give the same pointwise supremum for every such sequence. Regularization changes it only on a pluripolar set. Dominated convergence between the integrable bounds gives $L^1$ convergence to $V^-_a$, and \cref{lem:monotone-psh-capacity} gives convergence in capacity. Since the added constants converge, set
+\[
+ L_a=V^-_a-K\log(a/\tau).
+\]
+Then $U_{\lambda_j}\to L_a$ in both topologies and $L_a\leq U_a$; the latter inequality survives regularization because $V_a$ is upper semicontinuous.
+
+The potentials $U_{\lambda_j}-K$ and their limit $L_a-K$ are nonpositive. Apply \cref{thm:exponential-closedness} with exponents tending to $a>0$ and densities $\mathrm e^{\lambda_jK}f\to\mathrm e^{aK}f$ in $L^1$. It proves the exact equation and total-variation convergence.
+
+Every sequence approaching $a$ from the left has a cofinal increasing subsequence. If potential convergence in either topology, or total-variation convergence of the equation measures, failed, a sequence staying outside a fixed neighbourhood of the proposed limit would therefore have an increasing subsequence, contrary to the preceding argument. This proves the full left limit and measure convergence. Repeating the construction with another $\tau$ gives the same $L^1$ limit; canonical quasi-plurisubharmonic representatives that agree almost everywhere agree everywhere. Thus the auxiliary choice does not change $L_a$.
+\end{proof}
+
+\Needspace{11\baselineskip}
+\begin{proposition}\label{prop:greatest-exponential-countable-jumps}\index{Monge--Ampere equation@Monge--Amp\`ere equation!countable jumps}
+Suppose $\Lambda_h(f)\ne\varnothing$, put $a_0=\inf\Lambda_h(f)$, and let $L_a$ be the left limit of \cref{prop:greatest-exponential-left-limit}. The set
+\[
+ D=\{a>a_0:L_a\ne U_a\}
+\]
+is at most countable. At every $a>a_0$ with $a\notin D$, the greatest solutions are continuous in $L^1$ and in capacity as $\lambda\to a$, and their equation measures converge in total variation to $\mathrm e^{aU_a}f\,\mathrm dV$.
+\end{proposition}
+\begin{proof}
+Fix $a_0<\alpha<\beta$, choose an admitted $0<\tau<\alpha$, and use the corrected family $V_\lambda$ from the preceding proof on $[\alpha,\beta]$. Its integrals
+\[
+ I(\lambda)=\int_XV_\lambda\,\mathrm dV
+\]
+form a finite bounded increasing real function. For $a\in(\alpha,\beta]$, the left-limit proposition gives
+\[
+ I(a)-I(a-)=\int_X(U_a-L_a)\,\mathrm dV.
+\]
+If $L_a\ne U_a$, this quantity is positive: the integrable nonnegative difference cannot vanish almost everywhere without equality of the canonical potentials. For any finite ordered collection of such points, the sum of their jumps is at most $I(\beta)-I(\alpha)$. Consequently there are only finitely many jumps at least $1/m$ for each positive integer $m$, and at most countably many positive jumps. A countable cover by intervals with rational endpoints inside $(a_0,+\infty)$ proves the assertion about $D$.
+
+If $a\notin D$, the left limit is $U_a$, and \cref{prop:greatest-exponential-right-continuity} supplies the same right limit in both topologies and for the equation measures. Splitting an arbitrary approaching sequence into its two sides proves the stated two-sided convergence.
+\end{proof}
+
+Whether an actual jump occurs, or all left limits equal the greatest solution, remains undecided. An intrinsic criterion on $f$ and the existence or nonexistence of a positive excluded endpoint remain separate questions. These one-sided limits concern greatest solutions at positive exponents; they do not identify limits of arbitrary solutions with other singularities or supply a zero-exponent limit.

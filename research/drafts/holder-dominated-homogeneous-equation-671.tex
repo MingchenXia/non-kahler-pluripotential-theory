@@ -1,0 +1,55 @@
+\section{The homogeneous equation with a H\"older reference}
+
+A bounded density against a H\"older reference measure gives an exact homogeneous equation. The coefficient is obtained with the solution. Continuous approximation of the density is needed before passing to smooth reference measures, since weak convergence does not preserve integrals of a fixed Borel function.
+
+\begin{theorem}\label{thm:holder-reference-homogeneous-equation}
+Let $h$ be a Hermitian form on a connected compact complex manifold $X$. Suppose $u\in\PSH(X,h)\cap C^{0,\alpha}(X)$ for some $0<\alpha\leq1$, and let $\nu$ be a finite nonzero positive measure with
+\[
+ \nu\leq A\mathrm{MA}_h(u),\qquad A>0.
+\]
+There are a constant $c>0$ and a H\"older continuous $w\in\PSH(X,h)$ such that
+\[
+ \sup_Xw=0,\qquad\mathrm{MA}_h(w)=c\nu.
+\]
+In particular, its mass is finite and positive. No mass bound over all bounded $h$-plurisubharmonic functions is assumed.
+\end{theorem}
+\begin{proof}
+\emph{Step 1: approximate the density and reference.} Write $\sigma=\mathrm{MA}_h(u)$ and $\nu=A g\sigma$, with $0\leq g\leq1$. Choose continuous $g_l\in[0,1]$ tending to $g$ in $L^1(\sigma)$. Regularity of the finite measure supplies this approximation. The inequality $|s^{1/n}-t^{1/n}|^n\leq|s-t|$ on $[0,1]$, followed by H\"older's inequality, gives $g_l^{1/n}\to g^{1/n}$ in $L^1(\sigma)$.
+
+By \cref{lem:smooth-holder-reference-approximation}, there are smooth $v_j\in\PSH(X,h)$ tending uniformly to $u$ with a common H\"older norm. Their bounded products $\sigma_j=h_{v_j}^n$ tend weakly to $\sigma$. Choose a dense countable family of continuous tests, including the constant one. For each $l$, choose $j(l)\geq l$ so that integration of $g_l^{1/n}$, and of $g_l$ multiplied by the first $l$ tests, against $\sigma_{j(l)}-\sigma$ has absolute value at most $1/l$. Write $\widehat v_l=v_{j(l)}$ and
+\[
+ \nu_l=A g_l h_{\widehat v_l}^n.
+\]
+The common bounded-reference mass and $0\leq g_l\leq1$ give uniformly bounded masses. The diagonal and density approximation imply
+\[
+ \nu_l\rightharpoonup\nu,\qquad
+ \lim_l\int_Xg_l^{1/n}h_{\widehat v_l}^n
+ =\int_Xg^{1/n}\,\mathrm d\sigma>0.
+\]
+Discard finitely many terms if needed. Each $\nu_l$ has a continuous density with respect to smooth volume and positive mass. Thus \cref{thm:kn-continuous} gives continuous normalized $h$-plurisubharmonic $\varphi_l$ and $c_l>0$ with $h_{\varphi_l}^n=c_l\nu_l$.
+
+\emph{Step 2: control the coefficients and potentials.} Since both right-hand sides have smooth-volume densities, \cref{lem:nonclosed-mixed-density} gives
+\[
+ h_{\varphi_l}\wedge h_{\widehat v_l}^{n-1}
+ \geq(c_lA)^{1/n}g_l^{1/n}h_{\widehat v_l}^n.
+\]
+The trace bound in \cref{lem:bounded-reference-trace} is uniform for references with a fixed supremum norm, as its proof shows. Integrating therefore bounds $c_l$ above. By \cref{prop:holder-reference-capacity}, the solution measures $\mu_l=h_{\varphi_l}^n\leq C h_{\widehat v_l}^n$ have a common square-capacity bound.
+
+Fix $\varepsilon=1/2$, the zero competitor, and $D>0$ with $2D<\delta_{1/2}$. The backwards estimate of \cref{lem:backwards-capacity} gives
+\[
+ \operatorname{Cap}_h\{\varphi_l<\inf_X\varphi_l+D\}\geq a_0>0.
+\]
+The normalized tail estimate \eqref{eq:global-capacity-tail} then bounds $-\inf_X\varphi_l$ uniformly. Applying \cref{lem:thin-sublevel-capacity} at $s=t=D$ also gives
+\[
+ D^na_0\leq C\mu_l(X)=Cc_l\nu_l(X).
+\]
+Since the masses of $\nu_l$ are uniformly bounded above, $c_l$ is bounded away from zero.
+
+\emph{Step 3: take a uniform limit.} Extract a subsequence with $c_l\to c>0$ and $\varphi_l$ converging in $L^1(\mathrm dV)$, using \cref{thm:normalized-compactness}. All potentials now have common upper and lower bounds. The common H\"older norms of $\widehat v_l$ and \cref{cor:holder-reference-weighted-modulus} give, uniformly in $j,k$,
+\[
+ \int_X|\varphi_j-\varphi_k|\,\mathrm d\mu_j
+ \leq C\|\varphi_j-\varphi_k\|_{L^1(\mathrm dV)}^{\alpha/(\alpha+2n)}
+ \longrightarrow0.
+\]
+Use \cref{prop:capacity-square-one-sided-stability} in both orders to see that this subsequence is uniformly Cauchy. Its continuous limit $w$ is $h$-plurisubharmonic and has supremum zero. Uniform bounded-product continuity and $\nu_l\rightharpoonup\nu$ yield $\mathrm{MA}_h(w)=c\nu$. Finally \cref{thm:holder-dominated-continuous-regularity}, with reference $u$ and domination constant $cA$, gives the H\"older assertion. Its mass is $c\nu(X)$.
+\end{proof}

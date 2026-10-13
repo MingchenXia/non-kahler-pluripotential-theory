@@ -1,0 +1,95 @@
+\subsection{A logarithmic density with critical coefficient one}
+\label{subsec:logarithmic-critical-density}
+
+The power capacity condition can hold for a density outside every $L^p$ class with $p>1$. A bounded continuous potential with logarithmic modulus at one point gives such a datum on each fixed Hermitian background.
+
+\begin{theorem}\label{thm:logarithmic-critical-density}\index{Monge--Ampere measure@Monge--Amp\`ere measure!logarithmic density}\index{Uniform tails!logarithmic root estimate}
+In the setting of \cref{thm:power-capacity-critical-equation}, fix $\alpha>0$. There is $u\in\PSH(X,h)\cap C(X)$ with $h+\ddc u\geq h/2$ whose measure $\mathrm{MA}_h(u)=f\,\mathrm dV$ satisfies
+\[
+ f\in L^1(\mathrm dV),\qquad
+ f\notin L^p(\mathrm dV)\quad\text{for every }p>1.
+\]
+For some $A>0$ it satisfies \eqref{eq:datum-power-capacity}, and $b_h(f)=1$. For all sufficiently large $K$,
+\begin{equation}\label{eq:logarithmic-root-tail}
+ \rho_h\bigl(f^{1/n}\mathbf1_{\{f>K\}}\bigr)
+       \leq C(\log K)^{-\alpha}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Choose a holomorphic ball with coordinates centred at $x_0$ and $R=|z|<1$, and a smooth cutoff $0\leq\chi\leq1$ supported in it and equal to one on a smaller ball. Put
+\[
+ q(s)=(1-s)^{-\alpha},\qquad s=\log R^2,
+ \qquad \psi=\chi q(\log R^2)+1-\chi.
+\]
+Set $\psi(x_0)=0$ and extend $\psi=1$ outside the ball. In the smaller ball, $q'=\alpha(1-s)^{-\alpha-1}>0$ and $q''=\alpha(\alpha+1)(1-s)^{-\alpha-2}>0$, so $\psi$ is plurisubharmonic there, including its continuous extension at $x_0$. The transition is smooth and $\ddc\psi\geq-K_0h$ globally for a fixed $K_0$. For sufficiently small $\delta>0$, the normalized potential $u=\delta\psi-\sup_X\delta\psi$ satisfies $h+\ddc u\geq h/2$.
+
+The bounded product gives zero mass to $x_0$. Indeed, after a smooth local correction, its expansion is dominated in total variation by a constant times the top product of a bounded plurisubharmonic function plus a strictly plurisubharmonic quadratic function. Rescaling this sum into $[0,1]$ bounds that top product by local capacity, and a pluripolar point has capacity zero. Off $x_0$ the potential is smooth. Thus the measure is absolutely continuous; write it as $f\,\mathrm dV$. The strict lower bound implies $f\geq c>0$ almost everywhere.
+
+In the smaller ball the tangential and radial eigenvalues of the Hessian of $q(\log R^2)$ are $q'/R^2$ and $q''/R^2$. In the operator convention of the book this gives
+\begin{equation}\label{eq:logarithmic-density-radial}
+ (\ddc u)^n
+ =\frac{\delta^nn!\alpha^n(\alpha+1)}{\pi^n}
+    R^{-2n}(1-\log R^2)^{-n(\alpha+1)-1}\,\mathrm d\lambda,
+\end{equation}
+where $\mathrm d\lambda$ is Euclidean volume.
+
+\Needspace{5\baselineskip}
+Integration over the ball gives
+\[
+ \int_{B_r}(\ddc u)^n
+       =\delta^n\alpha^n(1-\log r^2)^{-n(\alpha+1)}.
+\]
+For $k<n$, the degree-$k$ mixed terms with the smooth positive form $h$ have density bounded by
+$CR^{-2k}(1-\log R^2)^{-k(\alpha+1)}$ and mass $O(r^2)$ on $B_r$. The expansion has positive terms in this ball. Hence $f\in L^1$. For $p>1$, the pure top term gives a positive multiple of the divergent integral
+\[
+ \int_0^r R^{2n(1-p)-1}
+       (1-\log R^2)^{-p(n(\alpha+1)+1)}\,\mathrm dR
+\]
+as a lower bound for $\int_{B_r}f^p\,\mathrm dV$, since smooth volume densities are comparable. Thus $f\notin L^p$. For all sufficiently small $r$,
+\begin{equation}\label{eq:logarithmic-density-ball}
+ \int_{B_r}f\,\mathrm dV
+ \leq C\bigl[(1-\log r^2)^{-n(\alpha+1)}+r^2\bigr],
+ \qquad \mathop{\rm ess\,sup}_{X\setminus B_r}f\leq Cr^{-2n}.
+\end{equation}
+
+By \eqref{eq:global-volume-capacity},
+\[
+ \mathrm dV(E)\leq C\exp\bigl(-a\operatorname{Cap}_h(E)^{-1/n}\bigr).
+\]
+Let $s=\operatorname{Cap}_h(E)>0$ be small and choose $r=\exp[-as^{-1/n}/(4n)]$. Splitting $E$ inside and outside $B_r$ and applying \eqref{eq:logarithmic-density-ball}, we obtain
+\[
+ \int_Ef\,\mathrm dV
+ \leq Cs^{1+\alpha}
+       +C\exp[-as^{-1/n}/(2n)]
+       +C\exp[-as^{-1/n}/2]
+ \leq C's^{1+\alpha}.
+\]
+For larger $s$ use the finite total mass; for $s=0$ the volume estimate gives $\mathrm dV(E)=0$. This proves \eqref{eq:datum-power-capacity} for every Borel set.
+
+By \cref{thm:power-capacity-critical-equation}, there is a normalized continuous $\phi$ with $\mathrm{MA}_h(\phi)=b_h(f)f\,\mathrm dV$. The explicit potential $u$ is a subsolution with coefficient one, so \cref{thm:individual-density-subsolution} gives $b_h(f)\geq1$. Suppose $b_h(f)>1$, and choose $0<\varepsilon<1$ with $(1-\varepsilon)^nb_h(f)>1$. Positive multilinearity gives
+\[
+ \mathrm{MA}_h((1-\varepsilon)\phi)
+       \geq(1-\varepsilon)^nb_h(f)f\,\mathrm dV.
+\]
+Apply \cref{thm:modified-comparison} to $u,\phi$ on
+\[
+ U_s=\{u<(1-\varepsilon)\phi+
+                     \inf_X(u-(1-\varepsilon)\phi)+s\}.
+\]
+For sufficiently small $s>0$ its reverse factor $Q_\varepsilon(s)$ is defined, tends to one as $s\downarrow0$, and satisfies
+\[
+ (1-\varepsilon)^nb_h(f)\int_{U_s}f\,\mathrm dV
+       \leq Q_\varepsilon(s)\int_{U_s}f\,\mathrm dV.
+\]
+Choose $s$ so that $Q_\varepsilon(s)<(1-\varepsilon)^nb_h(f)$. The set $U_s$ is open and nonempty, and $f\geq c>0$ almost everywhere, so its $f\,\mathrm dV$ measure is positive. This contradiction proves $b_h(f)=1$.
+
+Finally take $r_K=K^{-1/(4n)}$. The outside bound in \eqref{eq:logarithmic-density-ball} gives $f\leq CK^{1/2}<K$ almost everywhere on $X\setminus B_{r_K}$ for large $K$. Therefore
+\[
+ \int_{\{f>K\}}f\,\mathrm dV
+ \leq C(\log K)^{-n(\alpha+1)}+CK^{-1/(2n)}
+ \leq C'(\log K)^{-n(\alpha+1)}.
+\]
+Apply \eqref{eq:power-capacity-critical-bound} to $g=f\mathbf1_{\{f>K\}}$ to get \eqref{eq:logarithmic-root-tail}.
+\end{proof}
+
+The potential has logarithmic modulus at $x_0$ and is not H\"older there. Its root-tail estimate follows from the capacity bound despite the failure of higher $L^p$ integrability. The construction applies to each fixed background, including one with $v_-(h)=0$.

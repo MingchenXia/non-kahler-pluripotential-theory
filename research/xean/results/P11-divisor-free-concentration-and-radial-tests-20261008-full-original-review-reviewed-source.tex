@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}\newtheorem{remark}{Remark}
+\newcommand{\ddc}{dd^c}
+\newcommand{\dc}{d^c}
+\title{Divisor-free transverse concentration and limits of radial tests}
+\author{}\date{October 8, 2026}
+\begin{document}\maketitle
+\noindent\textbf{Working draft.} Independent review and statement-only
+reconstruction are pending. The lower-mass problem P11 remains open.
+\begin{abstract}
+We study smooth positive $\ddc$-closed complementary tests on compact
+complex manifolds. Bounded transverse concentration along a local
+hypersurface forces that hypersurface to lie in a global analytic
+hypersurface. Thus the concentration constants diverge on a manifold
+without divisors. Conversely a Cartier divisor agreeing with the chosen
+hypersurface on the entire cutoff chart supplies a uniform bound through
+actual regularized logarithmic potentials. On a primitive elliptic
+threefold bundle, every test in a specified radial affine family has an
+explicit bounded positive-root volume, including arbitrarily concentrated
+radial coefficients. These conclusions isolate a limitation of radial
+tests; they do not construct lower-mass collapse on a curve-free K3 bundle.
+\end{abstract}
+
+\section{Transverse concentration against every complementary test}
+Use $\ddc=i\partial\bar\partial/(2\pi)$ and
+$\dc=i(\bar\partial-\partial)/(4\pi)$. Let $X$ be a connected compact
+complex manifold of dimension $n\geq2$, and let $\omega$ be a smooth
+positive Hermitian form. Put
+\[
+ \mathcal T_\omega=\{\Theta\in C^\infty(X,\Lambda^{n-1,n-1}_{\mathbb R}):
+ \Theta>0,\ \ddc\Theta=0,\ \int_X\omega\wedge\Theta=1\}.
+\]
+The inequality means strict positivity. This set is nonempty by
+\cite[Proposition 1.3]{Lamari}; no closedness of $\omega$ is assumed.
+Choose a coordinate polydisk with coordinates $(z,\zeta)$, where
+$z\in\mathbb C^{n-1}$. Let $0\leq\chi\leq1$ be a smooth compactly
+supported function of $z$, equal to one on a nonempty connected smaller
+polydisk $U'$. Choose $p\in C_c^\infty(\mathbb C)$ nonnegative, positive for
+$|\zeta|<1$ and zero for $|\zeta|\geq1$, with
+\[
+ \int_{\mathbb C}p(\zeta)\,\sigma_\zeta=1,\qquad
+ \sigma_\zeta=\frac{i}{2\pi}d\zeta\wedge d\bar\zeta.
+\]
+For small $\delta>0$ extend the smooth semipositive form
+\[
+ B_\delta=\chi(z)\delta^{-2}p(\zeta/\delta)\sigma_\zeta
+\]
+by zero to $X$, and define
+\[
+ C_\delta=\sup_{\Theta\in\mathcal T_\omega}
+                    \int_X B_\delta\wedge\Theta.
+\]
+Each $C_\delta$ is finite: $B_\delta\leq M_\delta\omega$ for a finite
+constant $M_\delta$. All tests, including those varying in every variable,
+are included.
+
+\begin{theorem}\label{thm:concentration}
+If $C_{\delta_j}$ is bounded along some $\delta_j\downarrow0$, there
+is a global analytic hypersurface in $X$ containing
+$U'\times\{\zeta=0\}$. In particular, if $X$ has no analytic
+hypersurfaces, then $C_\delta\to\infty$ as $\delta\downarrow0$.
+\end{theorem}
+\begin{proof}
+Suppose $C_{\delta_j}\leq M$, and choose $\kappa=1/(M+1)>0$.
+Every smooth strictly positive $\ddc$-closed complementary form satisfies
+\[
+ \int_X(\omega-\kappa B_{\delta_j})\wedge\Theta
+       \geq(1-\kappa M)\int_X\omega\wedge\Theta\geq0,
+\]
+after normalizing its positive degree. Lamari's criterion
+\cite[Lemma 3.3]{Lamari} therefore supplies a real distribution $v_j$
+with
+\[
+ \omega+\ddc v_j\geq\kappa B_{\delta_j}.
+\]
+The criterion concerns smooth real $(1,1)$ forms and does not require
+$\omega-\kappa B_{\delta_j}$ to be closed. Adding a fixed sufficiently
+positive quadratic in each coordinate ball gives the canonical genuine
+psh representative of the distribution. Subtracting the quadratic gives
+a genuine quasi-psh representative, and we normalize $\sup_Xv_j=0$.
+
+Here is the needed compactness argument. Use a finite cover by inner
+coordinate balls, with larger concentric balls still in their charts.
+Fixed bounded quadratics correct the common Hessian lower bound. At a
+maximum point in one inner ball, the submean inequality on a larger ball
+bounds the integral of $-v_j$ on that inner ball. Each nonempty overlap
+has fixed positive volume. An existing integral bound therefore gives a
+point of the overlap where $v_j$ is uniformly bounded below; the submean
+inequality in the next chart propagates its bound. The finite overlap
+graph is connected. Taking the finitely many possible starting balls
+into account gives a common global $L^1$ bound. Local psh compactness
+\cite[I.5.8--5.9]{Demailly} and finite diagonal extraction now give
+$v_j\to v$ in $L^1$ after a subsequence, with a nontrivial genuine
+canonical $v$ and $\omega+\ddc v\geq0$.
+
+The normalized transverse approximate identity gives, as currents,
+\[
+ B_{\delta_j}\longrightarrow\chi(z)[\zeta=0].
+\]
+Thus $\omega+\ddc v\geq\kappa[\zeta=0]$ where $\chi=1$.
+In any chart add smooth $\rho$ with $\ddc\rho\geq\omega$.
+The current $\ddc(v+\rho)$ is positive and \emph{closed}, and its
+geometric Lelong number is at least $\kappa$ on the inner hypersurface.
+Siu's analyticity theorem in the form
+\cite[III.8.5]{Demailly} gives an analytic Lelong upperlevel set of
+complex dimension at most $n-1$. Smooth changes of $\rho$ have zero
+Lelong number, so these local upperlevel sets agree on overlaps and
+form a global proper analytic set. It contains the inner hypersurface,
+and therefore has an analytic hypersurface component containing it.
+Indeed locally intersect with the connected smooth inner hypersurface:
+a proper analytic subset cannot contain an open subset of it. The
+hypersurface component meeting that open subset contains the whole inner
+polydisk by the identity principle.
+
+If $X$ has no analytic hypersurfaces, no bounded subsequence can exist.
+Since $C_\delta\geq0$ is finite for each $\delta$, this is exactly the
+asserted divergence.
+\end{proof}
+
+\begin{proposition}\label{prop:divisor-bound}
+Suppose an effective Cartier divisor $D$ agrees with $\{\zeta=0\}$
+with multiplicity one on a neighborhood of the entire cutoff chart.
+Then $C_\delta$ is bounded uniformly for all sufficiently small
+$\delta>0$.
+\end{proposition}
+\begin{proof}
+Let $s_D$ be its canonical section. Choose a smooth Hermitian metric
+$h$ on $\mathcal O(D)$ whose local frame in this chart has norm one
+on a neighborhood of the cutoff support. Such a metric is obtained by
+extending the prescribed local logarithm by a smooth cutoff. For
+\[
+ \psi_\delta=\log(|s_D|_h^2+\delta^2)
+\]
+one has $\ddc\psi_\delta\geq-C\omega$ globally, with $C\geq1$
+independent of $\delta$. Off $D$, the chain rule writes its Hessian
+as $-a_\delta\,\operatorname{curv}(h)$ plus a semipositive gradient
+term, where $0\leq a_\delta\leq1$. The same lower bound holds at
+$D$ by smoothness and continuity. Choose $0<\epsilon\leq1/(2C)$.
+Then $\omega+\epsilon\ddc\psi_\delta\geq\omega/2$ everywhere.
+On the flat-metric chart the exact local formula is
+\[
+ \ddc\psi_\delta=
+    \frac{\delta^2}{(|\zeta|^2+\delta^2)^2}\sigma_\zeta
+    \geq\frac{\delta^{-2}}4\sigma_\zeta\quad(|\zeta|\leq\delta).
+\]
+Writing $P=\|p\|_\infty>0$ and using $\chi\leq1$, it follows that
+\[
+ \omega+\epsilon\ddc\psi_\delta
+                    \geq\frac{\epsilon}{4P}B_\delta
+\]
+throughout $X$. For any $\Theta\in\mathcal T_\omega$, smooth Stokes gives
+\[
+ 1=\int_X(\omega+\epsilon\ddc\psi_\delta)\wedge\Theta
+       \geq\frac{\epsilon}{4P}\int_XB_\delta\wedge\Theta.
+\]
+Hence $C_\delta\leq4P/\epsilon$, as claimed.
+\end{proof}
+
+\begin{remark}
+The converse proposition requires a divisor agreeing on the entire
+specified cutoff chart. The theorem's necessary global hypersurface
+may have other branches elsewhere; no uniform bound at arbitrary
+branch intersections is inferred. Neither assertion gives a rate of
+divergence or a large positive-root volume of the concentrating tests.
+\end{remark}
+
+\section{The primitive elliptic-bundle radial family}
+Keep the primitive elliptic bundle setting of original P11. Thus $(B,\eta)$
+is a compact K\"ahler surface, $\eta\wedge c=0$, and
+$X=L^\times/\langle w\mapsto qw\rangle$. Put
+\[
+ t=\log|w|^2,\quad \ddc t=\pi^*c,\quad T=2\log q,\quad
+ A=\int_B\eta^2,\quad\beta=dt\wedge\dc t,\quad\omega=\eta+\beta.
+\]
+Suppress pullbacks of base forms. The derivatives of $t$ descend,
+and functions of $t$ below are smooth $T$-periodic functions. The
+original identities are
+\[
+ \beta^2=0,\quad d\beta=-dt\wedge c,\quad
+ d(\omega^2)=0,\quad\int_X\eta^2\beta=TA,\quad
+ V:=\int_X\omega^3=3TA.
+\]
+In particular $\omega^2/V\in\mathcal T_\omega$. In the divisor-free
+K3 example specified in P11, Theorem~\ref{thm:concentration} applies
+to every local transverse cutoff family.
+
+Consider the following \emph{specified affine family}, for real smooth
+periodic $a,g$:
+\[
+ \Gamma=a(t)\eta^2+g(t)\eta\beta.
+\]
+\begin{theorem}\label{thm:radial}
+The form $\Gamma$ is strictly positive and $\ddc$-closed exactly
+when $a$ is a positive constant and $g(t)>0$. In that case its positive
+square root and root volume satisfy
+\begin{gather*}
+ \gamma=\sqrt a\,\eta+\frac{g(t)}{2\sqrt a}\beta,
+ \qquad\gamma^2=\Gamma,\\
+ D:=\int_X\omega\Gamma=TA(a+\bar g),\qquad
+ R:=\int_X\gamma^3=\frac32TA\sqrt a\,\bar g,
+ \qquad\bar g=T^{-1}\int_0^Tg(t)dt,\\
+ R\leq\frac{D^{3/2}}{\sqrt V}.
+\end{gather*}
+Equality holds exactly when $\bar g=2a$; it does not require $g$ to
+be pointwise constant. In particular every degree-one test in this
+family has $R\leq1/\sqrt V$.
+\end{theorem}
+\begin{proof}
+The term $g\eta\beta$ is closed: $dg\wedge\beta=0$ and
+$\eta\wedge c=0$. Also
+\[
+ \ddc(a\eta^2)=a''\beta\eta^2,
+\]
+since $a'c\eta^2$ has excess base degree. Thus $\ddc\Gamma=0$
+exactly when $a''=0$, which by periodicity means $a$ is constant.
+In an adapted positive complex coframe, write $\eta=\sigma_1+\sigma_2$
+and $\beta=\sigma_3$. The cofactor matrix of $\Gamma$ is
+$\operatorname{diag}(g,g,2a)$, so strict positivity is exactly $a,g>0$.
+The displayed $\gamma$ is positive and its square is $\Gamma$.
+Direct multiplication gives
+\[
+ \omega\Gamma=(a+g)\eta^2\beta,\qquad
+ \gamma^3=\tfrac32\sqrt a\,g\eta^2\beta.
+\]
+Fiber integration proves $D$ and $R$. For fixed $D>0$ set $s=D/(TA)$.
+Then $0<a<s$, $\bar g=s-a$, and
+$\sqrt a(s-a)$ has its unique maximum at $a=s/3$.
+Substitution gives $R\leq D^{3/2}/\sqrt{3TA}$ and the equality condition.
+\end{proof}
+
+\section{The remaining lower-mass problem}
+The concentration argument is an application of Lamari duality,
+canonical psh compactness and Siu analyticity; these foundations retain
+their attribution. All statements concern actual smooth complementary
+tests and genuine canonical potentials. No prior verifier verdict or
+finite computation is a mathematical premise.
+The radial result covers only the displayed affine family; it supplies
+no bound on all positive $\ddc$-closed tests. Large transverse pairings
+alone do not imply divergent positive-root volume. No sequence of smooth
+admissible potentials with masses tending to zero on the curve-free
+K3 bundle has been obtained. Neither the full value of $v_-(\omega)$
+there nor the proposed nonzero-real-Chern-class vanishing claim is
+resolved by this paper. Original P11 remains open.
+
+\begin{thebibliography}{9}
+\bibitem{Lamari} A.~Lamari, \emph{Courants k\"ahl\'eriens et surfaces
+compactes}, Ann.~Inst.~Fourier \textbf{49} (1999), 263--285,
+Proposition 1.3 and Lemma 3.3.
+\href{https://www.numdam.org/article/AIF_1999__49_1_263_0.pdf}{Published primary text}.
+\bibitem{Demailly} J.-P.~Demailly, \emph{Complex Analytic and Differential
+Geometry}, I.5.8--5.9 and III.8.5.
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/agbook.pdf}{University-hosted primary text}.
+\end{thebibliography}
+\end{document}

@@ -1,7 +1,7 @@
 \chapter{Weighted Monge--Amp\`ere measures}
 \label{chap:damped-measures}
 
-Throughout this chapter, $\omega$ is a Hermitian form on $X$, and capacity refers to the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}. For nonpositive $u\in\PSH(X,\omega)$ we write
+Let $X$ be a connected compact complex manifold of dimension $n$, and let $\omega$ be a Hermitian form. Capacity refers to the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}. For nonpositive $u\in\PSH(X,\omega)$ we write
 \[
  \mu_u=\mathrm{MA}^{\mathrm{ext}}_\omega(u)
 \]
@@ -10,7 +10,7 @@ for the extended non-pluripolar Monge--Amp\`ere measure of \cref{thm:arbitrary-e
  r_n=\max(n-2,0).
 \]
 
-By \cref{chap:products}, the measure $\mu_u$ can have infinite mass when the bounded mass property fails. Its mass on a superlevel set $\{u\geq-t\}$, however, grows at most like a polynomial of degree $r_n$ in $t$, because the Monge--Amp\`ere masses of bounded potentials grow at most polynomially in their range. Multiplying $\mu_u$ by a weight that decreases sufficiently fast in the depth $-u$ compensates for this growth. If $w\colon [0,+\infty)\to[0,+\infty)$ is a nonincreasing function with $w(t)\to0$ as $t\to+\infty$, we call
+By \cref{chap:products}, the measure $\mu_u$ can have infinite mass when the bounded mass property fails. Its mass above depth $t$, on the superlevel set $\{u\geq-t\}$, is nevertheless bounded by a polynomial of degree $r_n$ in $t$, because the masses of bounded potentials grow at most polynomially in their range. A weight that decreases sufficiently fast in the depth $-u$ compensates for this growth. If $w\colon[0,+\infty)\to[0,+\infty)$ is a nonincreasing function with $w(t)\to0$ as $t\to+\infty$, we call
 \[
  w(-u)\,\mu_u
 \]
@@ -131,7 +131,7 @@ Since $\mu_u$ does not charge the pole set, multiplication by $\mathrm{e}^{-pu}$
 
 \section{Decreasing weights and capacity continuity}
 
-For a general decreasing weight $w$, writing $w(s)=\int_s^\infty(-w'(t))\,\mathrm{d}t$ and integrating the restricted mass estimate \eqref{eq:restricted-mass-growth} in $t$ bounds both the total mass and the mass on deep sublevel sets. Above any fixed depth, the damped measure is a weighted product of bounded potentials, which is continuous under convergence in capacity; the tail bound then removes the restriction to a fixed depth.
+For a general decreasing weight $w$, writing $w(s)=\int_s^\infty(-w'(t))\,\mathrm{d}t$ and integrating the finite-depth estimate \eqref{eq:restricted-mass-growth} in $t$ bounds both the total mass and the mass on deep sublevel sets. Above any fixed depth, the damped measure is a weighted product of bounded potentials, which is continuous under convergence in capacity; the tail bound then removes the restriction to a fixed depth.
 
 \input{author/section_general_damping_weights}
 
@@ -176,7 +176,7 @@ Differentiation gives
 The ratios $(\mathrm{e}+t)/(1+t)$ are bounded. The substitution $y=\log(\mathrm{e}+t)$ therefore bounds the integrals of the two terms over $[T,+\infty)$ by fixed multiples of $[\log(\mathrm{e}+T)]^{1-a}$ and $[\log(\mathrm{e}+T)]^{-a}$, respectively. Since $a>1$ and $\log(\mathrm{e}+T)\geq1$, we obtain
 $B_w(T)\leq C_{n,a}[\log(\mathrm{e}+T)]^{1-a}$. Hence, by \cref{prop:general-damping-weights}, the damped measures $(1-u)^{-(n-2)}[\log(\mathrm{e}-u)]^{-a}\mu_u$ have uniformly bounded mass, their mass on $\{u<-T\}$ is at most a constant times $[\log(\mathrm{e}+T)]^{1-a}$, and they are continuous under convergence in capacity. In dimensions one and two, $r_n=0$ and $B_w(T)=w(T)$, so the finiteness condition $B_w(0)=w(0)<+\infty$ is automatic and every weight satisfying the remaining hypotheses of \cref{prop:general-damping-weights} can be used.
 
-Damping can remove an infinite mass entirely in the limit. When the bounded mass property fails, take the potentials $w_\varepsilon=\varepsilon U$ of \cref{cor:strong-linear-infinite-mass}, with $U$ normalized by $\sup_XU=0$. For $0<\varepsilon<1$, the potentials $\varepsilon U$ converge to zero in capacity as $\varepsilon\downarrow0$: by \eqref{eq:global-capacity-tail}, the capacity of $\{\varepsilon U<-\delta\}$ is at most $C\varepsilon/\delta$ for each fixed $\delta>0$ and small $\varepsilon$. Consequently, for $p>0$ and $q>r_n$,
+Damping can restore convergence when every undamped measure has infinite mass. When the bounded mass property fails, take the potential $U$ constructed in the proof of \cref{thm:infinite-mass-witness}, whose current has integrable coefficients by \cref{prop:integrable-infinite-mass}, and normalize it by $\sup_XU=0$. For $0<\varepsilon<1$, the potentials $\varepsilon U$ converge to zero in capacity as $\varepsilon\downarrow0$: by \eqref{eq:global-capacity-tail}, the capacity of $\{\varepsilon U<-\delta\}$ is at most $C\varepsilon/\delta$ for each fixed $\delta>0$ and small $\varepsilon$. Consequently, for $p>0$ and $q>r_n$,
 \[
  \mathrm{e}^{p\varepsilon U}\mu_{\varepsilon U}\rightharpoonup\omega^n,
  \qquad
@@ -186,7 +186,7 @@ although $\mu_{\varepsilon U}(X)=+\infty$ for every $0<\varepsilon<1$. The full 
 
 \section{Uniform tails and undamped convergence}
 
-Removing the weight requires uniform control of the mass on deep sublevel sets of the approximating potentials. The following condition gives both a finite limit measure and weak convergence of the undamped measures $\mu_{u_j}$. It can equivalently be expressed by an increasing integrability weight.
+On deep sublevel sets the damping weight tends to zero, so convergence of the weighted measures can leave their undamped mass uncontrolled. Uniformly vanishing deep tails supply the additional control: the following condition gives a finite limit measure and weak convergence of the undamped measures $\mu_{u_j}$. It can equivalently be expressed by an increasing integrability weight.
 
 \begin{theorem}\label{thm:undamped-tail-continuity}\index{Uniform tails!undamped measures}
 Let $u_j,u\in\PSH(X,\omega)$ be nonpositive and suppose $u_j\to u$ in capacity. Assume

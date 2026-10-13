@@ -1,0 +1,189 @@
+\Needspace{18\baselineskip}
+\subsection{The least eigenvalue of Lee curvature}
+\label{subsec:lck-minimum-lee-curvature}
+
+Fix a strictly LCK metric $\omega$ with Lee form $\lambda$.
+The volume along $\omega+t\kappa_\lambda$ increases as long
+as this form is positive. If the least relative eigenvalue of
+$\kappa_\lambda$ is a negative constant, the first boundary
+form has a kernel everywhere and its total volume is zero.
+This contradiction gives a pointwise positivity criterion.
+
+Set $Q=\lambda\wedge\lambda^{\mathrm c}\geq0$.
+The form $Q$ is nonzero on an open set, since $\lambda$ is
+not exact and hence is not identically zero.
+
+\Needspace{14\baselineskip}
+\begin{proposition}\label{lck:lee-volume-ray}\index{Lee form!volume polynomial}
+On the interval where $\eta_t=\omega+t\kappa_\lambda>0$, the
+polynomial $V(t)=\int_X\eta_t^n$ has degree at most $n-1$ and
+\[
+ V'(t)=n(n-1)\int_XQ\wedge\omega\wedge\eta_t^{n-2}>0.
+\]
+\end{proposition}
+\begin{proof}
+Since $\mathrm d\eta_t=\lambda\wedge\omega$ and
+$\mathrm d\lambda^{\mathrm c}=-\kappa_\lambda$, Stokes' theorem gives
+\[
+ 0=\int_X\mathrm d(\lambda^{\mathrm c}\wedge\eta_t^{n-1})
+  =-\int_X\kappa_\lambda\wedge\eta_t^{n-1}
+    +(n-1)\int_XQ\wedge\omega\wedge\eta_t^{n-2}.
+\]
+Differentiating the wedge polynomial proves the formula.
+The integrand on the right is positive wherever $\lambda\ne0$,
+including when $n=2$. Its integral is therefore strictly positive.
+Finally, $\kappa_\lambda$ is closed and de Rham exact, so
+\[
+ \int_X\kappa_\lambda^n
+ =-\int_X\mathrm d(\lambda^{\mathrm c}\wedge
+                         \kappa_\lambda^{n-1})=0.
+\]
+This removes the coefficient of degree $n$.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{lck:constant-minimum-lee}\index{Lee form!constant least curvature eigenvalue}
+If the least eigenvalue of $\kappa_\lambda$ relative to
+$\omega$ is constant on $X$, then it is zero and
+$\kappa_\lambda$ is semipositive. Its ordinary Bott--Chern
+class is nonzero and pseudoeffective.
+
+If all relative eigenvalues are constant, the rank is constant
+and lies between $1$ and $n-1$. In particular, the conclusion
+holds on a compact quotient $\Gamma\backslash G$ with
+left-invariant complex structure and strictly LCK tensors.
+\end{theorem}
+\begin{proof}
+Let $r$ be the constant least relative eigenvalue. If $r<0$,
+put $t_0=-1/r$. Then $\eta_t>0$ for $0\leq t<t_0$,
+whereas $\eta_{t_0}$ is semipositive with a kernel at every
+point. Thus $V(t_0)=0$. The preceding proposition and
+polynomial continuity instead give $V(t_0)\geq V(0)>0$.
+This proves $r\geq0$ and semipositivity.
+
+The nonnegative smooth form $\kappa_\lambda^n$ has integral
+zero by the same proposition, hence vanishes everywhere.
+Thus the least eigenvalue is zero at every point. Applying
+the Lee degree \eqref{eq:lck-lee-degree} to a conformal
+Gauduchon representative, as above, proves that the class is
+nonzero. The form $\kappa_\lambda$ itself represents it positively.
+
+Constant spectrum gives constant rank. The positive pairing
+\eqref{eq:lck-lee-degree} excludes rank zero, and the vanishing
+top power excludes rank $n$. On the stated compact quotient,
+the relative matrix is constant in a left-invariant frame,
+which proves the last assertion.
+\end{proof}
+
+The class is also nef: the same representative is bounded below by
+$-\epsilon h$ for every Hermitian form $h$ and every $\epsilon>0$.
+Thus \cref{prop:lck-balanced-obstruction} excludes balanced metrics
+under the least-eigenvalue hypothesis.
+
+The hypothesis concerns the chosen LCK metric. The other
+eigenvalues may vary, as the following examples show. They also
+explain why first degeneration of a volume ray need not force
+its total volume to vanish without the constant-minimum condition.
+
+\Needspace{16\baselineskip}
+\begin{example}\label{lck:indefinite-hopf-lee}\index{Hopf manifold!indefinite Lee curvature}
+On the scalar Hopf manifold
+$H_n=(\mathbb C^n\setminus\{0\})/\langle z\mapsto z/2\rangle$,
+for every $n\geq2$, there is a strictly LCK metric with
+indefinite Lee curvature and a smooth semipositive representative
+of its ordinary Bott--Chern class. The first boundary reached
+for increasing $t>0$ in $\omega+t\kappa_\lambda$ has positive
+total volume.
+\end{example}
+\begin{proof}
+Fix $0<\epsilon<1$ and put
+\[
+ \rho=\sum_j|z_j|^2,\qquad
+ \Phi=\rho+\epsilon\operatorname{Re}(z_1^2),\qquad
+ \omega=\frac{\ddc\rho}{\Phi},\qquad
+ \lambda=-\mathrm d\log\Phi.
+\]
+The bounds $(1-\epsilon)\rho\leq\Phi\leq(1+\epsilon)\rho$
+give positivity. Since $\ddc\Phi=\ddc\rho$ and both $\Phi$
+and $\ddc\rho$ scale by $1/4$ under $z\mapsto z/2$,
+the metric and Lee form descend and satisfy the LCK equation.
+Polar coordinates identify the quotient with
+$S^{2n-1}\times(\mathbb R/(\log2)\mathbb Z)$, so it is compact
+and connected. The Lee period from $z$ to $z/2$ is $2\log2$,
+which proves strictness.
+
+Here $\kappa_\lambda=\ddc\log\Phi$. With
+$F_i=\bar z_i+\epsilon z_1\delta_{i1}$, its complex Hessian is
+\[
+ (\log\Phi)_{i\bar j}
+ =\frac{\delta_{ij}}{\Phi}
+       -\frac{F_i\overline{F_j}}{\Phi^2}.
+\]
+Relative to $\omega$, the eigenvalues are $1$ with multiplicity
+$n-1$ and $h=1-|F|^2/\Phi$. Writing $z_1=x+\mathrm i y$ and
+$B=\sum_{j>1}|z_j|^2$, one finds
+\[
+ h=\frac{\epsilon((1-\epsilon)y^2-(1+\epsilon)x^2)}
+           {(1+\epsilon)x^2+(1-\epsilon)y^2+B},
+ \qquad -\epsilon\leq h\leq\epsilon.
+\]
+At $(1,0,\ldots,0)$ the spectrum is
+$-\epsilon,1,\ldots,1$, hence is indefinite. The bounded smooth
+function $u=\log\rho-\log\Phi$ is deck invariant, and
+\[
+ \kappa_\lambda+\ddc u=\ddc\log\rho\geq0,
+\]
+by the Cauchy--Schwarz inequality for the Hessian of $\log\rho$.
+The correction also gives the standard Hopf conformal representative:
+$\mathrm e^{-u}\omega=\ddc\rho/\rho$.
+
+The first boundary occurs at $t_0=1/\epsilon$. At that value,
+\[
+ 1+h/\epsilon=\frac{2(1-\epsilon)y^2+B}{\Phi}.
+\]
+It vanishes only on the real $z_1$ rays with the remaining
+coordinates zero. The other relative eigenvalues of
+$\omega+t_0\kappa_\lambda$ equal $1+1/\epsilon>0$.
+The boundary form is therefore semipositive and its top power
+is positive on a nonempty open set, proving positive total volume.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{example}\label{lck:variable-positive-lee-spectrum}\index{Hopf manifold!variable Lee spectrum}
+For every $n\geq2$, the same $H_n$ carries a family of strictly
+LCK metrics whose least Lee-curvature eigenvalue is identically
+zero and whose remaining relative spectrum is nonconstant.
+Thus constancy of the least eigenvalue is strictly weaker than
+constancy of the whole spectrum.
+\end{example}
+\begin{proof}
+Put $q=|z_1|^2$ and, for $0<\epsilon<1$, define
+\[
+ \Psi=\rho+\epsilon\frac{q^2}{\rho},\qquad
+ \omega_\epsilon=\frac{\ddc\Psi}{\rho},\qquad
+ \lambda=-\mathrm d\log\rho.
+\]
+For $a=q/\rho\in[0,1]$, direct differentiation gives
+\[
+ \left(\frac{q^2}{\rho}\right)_{i\bar j}
+ =\frac{2}{\rho}(q_i-a\rho_i)(q_{\bar j}-a\rho_{\bar j})
+       +2a\delta_{i1}\delta_{j1}-a^2\delta_{ij}.
+\]
+The first two terms are positive semidefinite and $a^2\leq1$,
+so $\ddc\Psi\geq(1-\epsilon)\ddc\rho>0$.
+The potential is smooth on the punctured space and scales by
+$1/4$ under the deck map. Hence $\omega_\epsilon$ descends,
+satisfies the LCK equation and has Lee period $2\log2$.
+
+Its Lee curvature is $\ddc\log\rho$, which is semipositive
+of rank $n-1$. The least relative eigenvalue is consequently
+zero everywhere. At $(1,0,\ldots,0)$, the Hessian of
+$q^2/\rho$ is $\operatorname{diag}(1,-1,\ldots,-1)$, giving
+the spectrum
+\[
+ 0,(1-\epsilon)^{-1},\ldots,(1-\epsilon)^{-1}.
+\]
+At $(0,1,0,\ldots,0)$ the term $q^2/\rho$ vanishes to fourth
+order, so its Hessian is zero and the spectrum is
+$0,1,\ldots,1$. These spectra differ for every $\epsilon>0$.
+\end{proof}

@@ -1,6 +1,6 @@
 \section{Capacity estimates and uniform compactness}
 
-Let $\operatorname{Cap}=\operatorname{Cap}_\omega$ denote the capacity of \cref{sec:hermitian-capacity}. Modified comparison bounds the capacity of a thin sublevel set by the Monge--Amp\`ere mass of a slightly larger one. For an $L^p$ density, \cref{cor:lp-capacity-square} bounds this mass by the square of the capacity. Iterating the two inequalities gives a lower bound for the capacity of every sublevel set of fixed height above the minimum. Since the capacity of deep sublevel sets of normalized potentials is small by the tail estimate \eqref{eq:global-capacity-tail}, this bounds the depth of a normalized solution.
+Let $\operatorname{Cap}=\operatorname{Cap}_\omega$ denote the capacity of \cref{sec:hermitian-capacity}. Modified comparison bounds the capacity of a thin sublevel set by the Monge--Amp\`ere mass of a slightly larger one. A bound by a power $1+\alpha$ of capacity, $\alpha>0$, makes the resulting iteration converge. For an $L^p$ density, \cref{cor:lp-capacity-square} supplies the case $\alpha=1$. Iterating the two inequalities gives a lower bound for the capacity of every sublevel set of fixed height above the minimum. Since the capacity of deep sublevel sets of normalized potentials is small by the tail estimate \eqref{eq:global-capacity-tail}, this bounds the depth of a normalized solution.
 
 \Needspace{15\baselineskip}
 \begin{lemma}\label{lem:thin-sublevel-capacity}
@@ -43,34 +43,47 @@ Integrating over $U_s\subset V$, applying modified comparison on $V$, and taking
 \end{proof}
 
 \Needspace{11\baselineskip}
-\begin{lemma}\label{lem:backwards-capacity}
-In the preceding setting, suppose
+\begin{lemma}\label{lem:backwards-capacity}\label{lem:power-backwards-capacity}
+In the setting of \cref{lem:thin-sublevel-capacity}, suppose that $A,\alpha>0$ and
 \[
- \int_E\omega_u^n\leq A\operatorname{Cap}(E)^2\qquad(E\subset X\ \hbox{Borel}),
- \qquad A>0.
+ \omega_u^n(E)\leq A\operatorname{Cap}_\omega(E)^{1+\alpha}
+ \qquad(E\subset X\text{ Borel}).
 \]
 For every $0<D<\delta_\varepsilon$,
+\begin{equation}\label{eq:power-sublevel-lower}
+ D\leq C_\alpha(C_HA)^{1/n}
+                  \operatorname{Cap}_\omega(U_D)^{\alpha/n},
+ \qquad C_\alpha=\frac{2}{1-2^{-\alpha}}.
+\end{equation}
+In particular, when $\alpha=1$,
 \begin{equation}\label{eq:sublevel-capacity-lower}
  \operatorname{Cap}(U_D)\geq\frac{D^n}{4^nC_HA}.
 \end{equation}
 \end{lemma}
 \begin{proof}
-Write $a(s)=\operatorname{Cap}(U_s)^{1/n}>0$ and $K=(C_HA)^{1/n}$. The preceding lemma and the hypothesis, applied to $E=U_{s+t}$, give
+Put $a(s)=\operatorname{Cap}_\omega(U_s)^{1/n}>0$ and $K=(C_HA)^{1/n}$. The thin-sublevel estimate gives
 \[
- t\,a(s)\leq K a(s+t)^2\qquad(s+t<\delta_\varepsilon).
+ t\,a(s)\leq K a(s+t)^{1+\alpha}
+ \qquad(0<s,t,\ s+t<\delta_\varepsilon).
 \]
-Suppose, to the contrary, that $4Ka(D)<D$. Starting with $s_0=D$, define
+Suppose $C_\alpha K a(D)^\alpha<D$. Starting with $s_0=D$, set
 \[
- t_j=2Ka(s_j),\qquad s_{j+1}=s_j-t_j.
+ t_j=2K a(s_j)^\alpha,\qquad s_{j+1}=s_j-t_j.
 \]
-We check that $s_{j+1}>0$ before applying the sublevel inequality. If $a(s_i)\leq2^{-i}a(D)$ for $0\leq i\leq j$, then
+If $a(s_i)\leq2^{-i}a(D)$ for $0\leq i\leq j$, then
 \[
- \sum_{i=0}^j t_i\leq2Ka(D)\sum_{i=0}^j2^{-i}<4Ka(D)<D.
+ \sum_{i=0}^jt_i
+ \leq2K a(D)^\alpha\sum_{i=0}^j2^{-i\alpha}
+ <C_\alpha K a(D)^\alpha<D.
 \]
-Hence $s_{j+1}>0$, and the sublevel inequality with $s=s_{j+1}$ and $t=t_j$ gives $a(s_{j+1})\leq a(s_j)/2$. By induction, every step is justified, and $s_j\downarrow s_\infty\geq D-4Ka(D)>0$. Monotonicity gives
-$0<a(s_\infty)\leq a(s_j)\leq2^{-j}a(D)$, a contradiction. Therefore $D\leq4Ka(D)$, which is \eqref{eq:sublevel-capacity-lower}.
+Thus $s_{j+1}>0$, and the sublevel estimate, applied with $s=s_{j+1}$ and $t=t_j$, gives $a(s_{j+1})\leq a(s_j)/2$. Induction justifies every step. The decreasing sequence $s_j$ has a limit
+\[
+ s_\infty\geq D-C_\alpha K a(D)^\alpha>0.
+\]
+Monotonicity now gives $0<a(s_\infty)\leq2^{-j}a(D)$ for every $j$, a contradiction. This proves \eqref{eq:power-sublevel-lower}, including the case in which $U_D=X$.
 \end{proof}
 
+\Needspace{11\baselineskip}
 \begin{theorem}\label{thm:lp-potential-estimate}\index{A priori estimate!Lp densities@$L^p$ densities}
 There are constants $C_p,c_p>0$, depending only on $(X,\omega,\mathrm{d}V,p)$, such that, whenever
 $u\in\PSH(X,\omega)\cap L^\infty(X)$, $\sup_Xu=0$, and
@@ -124,6 +137,8 @@ The capacity lower bound \eqref{eq:sublevel-capacity-lower}, with a constant $A$
 \]
 This contradiction proves that the sequence is uniformly Cauchy. For the last assertion, the normalized compactness theorem, \cref{thm:normalized-compactness}, gives an $L^1$-Cauchy subsequence of any such family. Its uniform limit is continuous, and distributional convergence preserves $\omega$-plurisubharmonicity.
 \end{proof}
+
+\input{author/section_capacity_square_stability}
 
 \section{Construction of continuous solutions}
 

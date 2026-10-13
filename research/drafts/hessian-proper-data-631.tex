@@ -1,0 +1,141 @@
+% Inactive reconstruction fragment; labels are prefixed pending integration.
+% Chapter12 setting: compact connected X, Hermitian omega, 2<=m<n.
+
+\begin{lemma}\label{draft631:proper-continuous-data}
+Let $a>0$ and let smooth $H_j$ converge uniformly to a continuous
+$H$. The smooth solutions of $H_m(w_j)=e^{aw_j+H_j}\omega^n$
+converge uniformly to the unique continuous admissible solution of
+$H_m(w)=e^{aw+H}\omega^n$. For two continuous data $H_1,H_2$,
+the corresponding solutions satisfy
+\[
+ \|w_1-w_2\|_\infty\leq a^{-1}\|H_1-H_2\|_\infty.
+\]
+They also satisfy
+$-\max_XH/a\leq w\leq-\min_XH/a$.
+\end{lemma}
+\begin{proof}
+Smooth solutions exist by \cref{hessian:smooth-proper-existence}.
+At a maximum of $w_1-w_2$, monotonicity of the smooth Hessian
+operator gives $e^{aw_1+H_1}\leq e^{aw_2+H_2}$. Hence
+$a(w_1-w_2)\leq H_2-H_1$ there. Exchanging the functions gives
+the stated norm estimate for smooth data. Thus a uniformly
+convergent sequence of smooth data gives a uniformly Cauchy
+sequence of solutions. Its limit is admissible by the linear
+distributional inequalities, and \cref{hessian:continuous-products}
+passes the equation to the limit. The bounds follow from those
+for the smooth solutions. Taking limits in the smooth norm estimate
+proves it for continuous data. Finally,
+\cref{hessian:hessian-exponential-order} in both directions gives
+uniqueness among continuous admissible solutions.
+\end{proof}
+
+The proper equation can now be solved when its exponent depends
+smoothly on the unknown potential, provided that constant barriers
+bound the desired range and the dependence is strictly increasing.
+
+\begin{theorem}\label{draft631:proper-variable-existence}
+Let $A<B$ and let $f$ be smooth on a neighborhood of
+$X\times[A,B]$. Suppose that, for every $x\in X$,
+\[
+ f(x,A)\leq0\leq f(x,B),\qquad
+ 0<\kappa\leq\partial_t f(x,t)\leq L\quad(A\leq t\leq B).
+\]
+There is a unique continuous admissible solution with values in
+$[A,B]$ of
+\[
+ H_m(w)=e^{f(x,w)}\omega^n.
+\]
+This solution is smooth and strictly admissible.
+\end{theorem}
+\begin{proof}
+Choose $a\geq L$ and let
+$\mathcal C=\{v\in C(X):A\leq v\leq B\}$, a complete subset of
+$C(X)$ in the uniform norm. For $v\in\mathcal C$ put
+$H_v(x)=f(x,v(x))-av(x)$ and let $T(v)$ be the continuous proper
+solution with exponent $aT(v)+H_v$, furnished by
+\cref{draft631:proper-continuous-data}. The function $f(x,t)-at$
+is nonincreasing in $t$, so
+\[
+ -aB\leq f(x,B)-aB\leq H_v(x)
+                   \leq f(x,A)-aA\leq-aA.
+\]
+The zero-order bounds in that lemma give $A\leq T(v)\leq B$.
+The mean-value theorem also gives
+\[
+ \|H_v-H_z\|_\infty\leq(a-\kappa)\|v-z\|_\infty,
+ \qquad
+ \|T(v)-T(z)\|_\infty
+          \leq(1-\kappa/a)\|v-z\|_\infty.
+\]
+Since $0\leq1-\kappa/a<1$, the contraction theorem gives a unique
+fixed point $w\in\mathcal C$. It is admissible because it equals
+$T(w)$, and its equation is exactly the stated equation. Every
+continuous admissible solution in this interval is a fixed point,
+by uniqueness of the continuous proper equation with its prescribed
+$H_w$. This proves uniqueness in the stated class.
+\Cref{hessian:continuous-hessian-regularity} makes $w$ smooth.
+Its form lies in the closed $m$-cone and has positive $m$th
+symmetric polynomial; Maclaurin's inequalities then put it in the
+open cone. Thus it is strictly admissible.
+\end{proof}
+
+The same strict increase controls solutions with a fixed Radon
+right-hand measure. Here the bounded domination argument requires
+the partial power identities on the background.
+
+\begin{proposition}\label{draft631:proper-bounded-stability}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$. Let $A<B$ and $f$ be
+smooth near $X\times[A,B]$, with $\partial_t f\geq\kappa>0$
+there, and let $\nu$ be a finite positive Radon measure.
+Suppose bounded admissible $u,v$ have values in $[A,B]$ and satisfy
+\[
+ H_m(u)=e^{f(x,u)+h_1}\nu,\qquad
+ H_m(v)=e^{f(x,v)+h_2}\nu,
+\]
+where $h_1,h_2$ are bounded Borel functions. Then
+\[
+ \|u-v\|_\infty
+            \leq\kappa^{-1}\|h_1-h_2\|_{L^\infty(\nu)}.
+\]
+\end{proposition}
+\begin{proof}
+Put $K=\|h_1-h_2\|_{L^\infty(\nu)}$ and fix $s>K/\kappa$.
+On $E_s=\{v+s<u\}$, the actual values $u,v$ lie in $[A,B]$,
+so $f(x,u)-f(x,v)\geq\kappa s$. The equations and the essential
+bound on $h_2-h_1$ therefore give, as restricted measures,
+\[
+ \mathbf1_{E_s}H_m(v+s)
+ =\mathbf1_{E_s}H_m(v)
+ \leq e^{K-\kappa s}\mathbf1_{E_s}H_m(u).
+\]
+The constant is smaller than one. Applying
+\cref{hessian:strict-bounded-domination} to $v+s,u$ gives
+$u\leq v+s$ pointwise. Let $s\downarrow K/\kappa$ and exchange
+$u,v$ to obtain the norm bound. The exponent is evaluated only
+at $u,v$; the shifted comparison potential need not take its
+values in $[A,B]$.
+\end{proof}
+
+\begin{corollary}\label{draft631:proper-bounded-smoothness}
+Assume $\ddc(\omega^{n-q})=0$ for $1\leq q\leq m$.
+Under the hypotheses of \cref{draft631:proper-variable-existence},
+every bounded admissible solution with values in $[A,B]$ is its
+smooth solution. In particular, for every $a>0$ and smooth real
+$H$, the equation $H_m(u)=e^{au+H}\omega^n$ has exactly one bounded
+admissible solution, and that solution is smooth and strictly
+admissible.
+\end{corollary}
+\begin{proof}
+For a continuous admissible potential, smooth decreasing admissible
+approximations converge uniformly on compact $X$ by Dini's theorem.
+Thus \cref{hessian:joint-decreasing-products,hessian:continuous-products}
+define the same Hessian measure on the continuous class.
+The smooth solution of \cref{draft631:proper-variable-existence}
+therefore solves the bounded equation as well. Apply
+\cref{draft631:proper-bounded-stability} with $\nu=\omega^n$ and
+$h_1=h_2=0$ to identify any other bounded solution in $[A,B]$
+with it. For the final assertion, smooth existence is already
+\cref{hessian:smooth-proper-existence}, and
+\cref{hessian:proper-bounded-uniqueness} with
+$\nu=e^H\omega^n$ gives uniqueness among all bounded solutions.
+\end{proof}

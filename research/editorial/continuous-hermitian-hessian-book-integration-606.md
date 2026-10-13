@@ -1,0 +1,19 @@
+# Continuous Hermitian Hessian book integration — checkpoint 606
+
+Chapter 12 now reconstructs the continuous Hermitian Hessian theory for a strictly positive background and 2<=m<n: cone algebra, Liouville and blowup, a prescribed-potential trace estimate, bounded-complex-Hessian limits, proper smooth equations and admissible approximation, continuous products, envelopes and domination, and smoothness of continuous weak solutions with smooth positive density depending on the potential. Thirty proofs are arranged without a product/approximation dependency cycle. The tolerance in the trace estimate is chosen before the fixed smooth comparison potential and independently of its derivatives. The following relative and geometric chapters are renumbered; all previous proofs and formal questions are preserved.
+
+All eight saved inputs have complete manual first and second reads. The second read follows the first PDF inspection. The final inspection covers 68 physical pages: 25 directly viewed and 43 exact text-and-render carries from the completed first inspection. Every page of the new chapter is covered. Seven long statement blocks are kept on one page.
+
+The final book has 1629 printed/1657 physical pages, 9791 checked internal PDF links and 1007 clickable index locators on 13 index pages. Both October 8, 2026 covers and both actual full-build homepage publications are verified, including the exact served PDF checksum and successful Actions/Pages head. The final homepage commit is daea201003476446d9bb9945ab8f17a25eee0203.
+
+All 1274 previous proof bodies, 1363 statement environments and 23 formal questions remain byte-exact. Both source manifests and all 47 incoming P16 paths are preserved. All 44 catalogue descriptions retain their assessment scope; 244 single-page and 26 range locators are checked, with chapter/subsection numbers refreshed.
+
+The KN16 source-version locators are corrected explicitly in the audit; frozen prior review records remain provenance.
+
+The continuous hypothesis and strictly positive Hermitian background are essential to the adopted scope. No arbitrary bounded Hessian-product construction, bounded-to-continuous theorem or general background degeneration is claimed. All 44 full problem descriptions and 40 existing open assessment scopes remain, with 75 missing/451 protected historical payload qualifications. Classical Garding, linear elliptic and Caffarelli/Evans--Krylov/Schauder inputs remain declared; this is not a whole-book mathematical certificate or a fresh complete recertification of every primary source. The installed base writing audit is unavailable; both chapter reads are actual manual reads. The saved-source native compiler call (cell 18) returned no diagnostics or success during bounded waits and was terminated. The same source and editor are preserved; native compilation remains unverified. No separate catalogue PDF or replacement document was created.
+
+Actual empty source-package reconstruction passes 2887 safe paths and 2886 payload checksums, with 400 byte-exact packaged book-source files. All 1657 main-book and 17 companion page texts match; final logs are clean and homepage publication is disabled in the extracted package. Final metadata verification reuses these actual checkpoint 606 outputs and checks all current payload bytes and checksums; no second empty reconstruction is claimed.
+
+Resume the arbitrary bounded Hessian-product, domination and continuity boundary, checking the local unshifted dd^c u arguments against the nonclosed shifted omega+dd^c u background. Check incoming author progress before committing further research, and review recent arXiv candidates at exact source-version scope. Integrate only independently justified results. Preserve the completed reader cycle 581/582/583; continue the remaining whole-book revision queue. Xean remains withdrawn.
+
+See the [scoped audit](../audits/continuous-hermitian-hessian-book-integration-606.json).

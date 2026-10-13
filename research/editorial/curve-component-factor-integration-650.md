@@ -1,0 +1,19 @@
+# Curve of fiber components — integration 650
+
+Chapter 1 reconstructs the classical curve of fiber components for every surjective holomorphic map from a connected compact complex manifold to a compact curve. Chapter 16 now applies its full model-space description to all such maps, including critical and disconnected fibers, without assuming a separate factorization. Nonnegative base area is exactly the nonemptiness condition; zero area gives the smooth singleton. The two fiber normalizations and the obstruction to pushing polar traces to the original base remain explicit.
+
+The four complete changed inputs receive prebuild and final post-output manual reads, totaling 1334 lines. The new component-factor proof is byte-exact with the twice-read 649 reconstruction and its 18 obligations. Of 1374 old proof bodies and 1464 old statement blocks, 1373 and 1463 remain byte-exact; the existing finite-factor proposition is expanded, and one classical foundation proposition and proof are added. All 23 formal questions, both original manifests, incoming S10/S11, and the Gauduchon and Hopf proof bodies are preserved. No duplicate metric corollary is added.
+
+One clean full author build, including its publication hook, passes. The book has 1697 printed and 1725 physical pages. All 39 selected final pages in ten sheets are directly viewed, including the complete factorization proof, descent seams, full fibration discussion, contents, the general P01 question and all 13 index pages. Both covers are directly viewed and show October 9, 2026. The actual served PDF checksum and homepage description match the release, with successful exact-head Actions and Pages deployment. All 10180 internal PDF links and 1082 source-matched index locators pass.
+
+The intermediate curve is constructed and unique, including critical fibers, finite ramification and scheme fiber multiplicities. The finite-factor model theorem applies for any smooth base form of nonnegative area; no negative-area model or original-base descent is asserted. Distinct analytic ideal models can still have the same trace pushforward to the original base. General P01/P17 remain open.
+
+The same catalogue retains 44 complete descriptions and 40 open assessment scopes, with 267 single-page and 26 range locators checked. Saved-source native compiler call 97 returned no diagnostics through four bounded waits while source and page review continued, and was terminated. Preview compilation remains unverified; the same editor is retained and no separate catalogue PDF is built.
+
+Actual empty reconstruction passes: all 412 packaged book-source files are exact and all 1725 main-book and 17 companion page texts match production. Safe paths, current payload checksums and clean logs pass; reconstruction publication is disabled.
+
+Primary-paper source lines 651–1667 of arXiv:2610.07528v1 are actually read in 650, completing the source consultation begun at lines 1–650 in 649. This is primary source consultation, not independent verification of its quoted dependencies or a complete PDF read. Generic/prepolar and reduced/higher-ramified scopes remain separate. No external theorem is adopted. The earlier arXiv listing coverage carries its recorded scope; no fresh listing fetch is claimed.
+
+No original problem closure, novelty claim or whole-book certificate is made. Historical qualifications and the earlier whole-book, Chapter 12 and introduction reader passes carry their exact scopes. The base automatic writing audit remains unavailable; the reads are manual.
+
+Next: Continue the whole-book reader queues and investigate the compatibility of finite curve pullback with polar curvature and model envelopes. Review the exact primary-paper dependencies before any external adoption; general P01/P17 and the remaining open scopes stay active. Check incoming author updates before the next coherent unit.

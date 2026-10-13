@@ -1,0 +1,617 @@
+\section{Sharp damping under unitary rotations}
+\label{sec:hopf-rotational-damping}\index{Hopf manifold!rotational damping}\index{Damped measure!sharp rotational threshold}
+
+The general damping estimate controls mass by the depth of a potential. On the standard Hopf threefold, unitary symmetry gives a stronger estimate: after integration along the elliptic fibers, a positive radial flux has total mass one. A semiconvexity estimate bounds the remaining radial coefficient by the square root of the depth. The resulting damping threshold is sharp, and at its endpoint finite measures can still concentrate on a pole divisor.
+
+We retain the standard threefold $X$, form $\omega$, projection $\pi:X\to\mathbb P^2$, fiber $E$ and probability area $\mathrm dA_E$ of this chapter. Let $\mathcal R$ be the class of $u\in\PSH(X,\omega)$ with $\sup_Xu=0$ invariant under
+\[
+ (z_0,z')\longmapsto(z_0,Az'),\qquad A\in U(2),\quad z'=(z_1,z_2).
+\]
+This holomorphic action preserves $\omega$. The class includes bounded and unbounded potentials. For a positive $C^1$ nonincreasing function $W:[0,+\infty)\to(0,+\infty)$ tending to zero, write
+\[
+ \mu_u=\mathrm{MA}^{\mathrm{ext}}_\omega(u),\qquad
+ \nu_{W,u}=W(-u)\mu_u,
+ \qquad Q_T(W)=\sup_{t\geq T}(1+\sqrt{2t})W(t),\quad Q(W)=Q_0(W).
+\]
+The weighted measure gives zero mass to the pole set, as does the extended non-pluripolar measure. Capacity always means $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}.
+
+\subsection{Positive fiber flux}
+
+Let $V$ be a smooth invariant $\omega$-plurisubharmonic function with $V\leq0$.
+In the affine chart it has the form $V(x,w)$. The matrix calculation in the proof of \cref{lem:hopf-positivity}
+applies at every finite $x$, without assuming the special endpoint behavior
+of the heat family. Put
+\[
+ A_V=\mu+V_x,\quad B_V=1+V_{w\bar w},\quad
+ R_V=\mu+V_{xx},\quad C_V=\mu+V_{x\bar w},\quad
+ \Delta_V=B_VR_V-|C_V|^2.
+\]
+Let $\mathrm d\Omega$ be probability angular area in $\C^2$. The radial Fubini--Study measure is $2\mu^2(1-\mu)\,\mathrm dx\,\mathrm d\Omega$, and $\omega^3=6\omega_{\FS}^2\mathrm dA_E$. Semipositivity gives $A_V,B_V,R_V,\Delta_V\geq0$ and, without dividing
+by $B_V$,
+\begin{equation}\label{eq:rotational-positive-density}
+ \mathrm{MA}_\omega(V)=12 A_V\Delta_V\,
+       \mathrm dx\,\mathrm d\Omega\,\mathrm dA_E.
+\end{equation}
+The complement of these radial coordinates has zero mass for a smooth top form.
+
+\begin{lemma}\label{lem:rotational-positive-flux}
+For every smooth invariant $\omega$-plurisubharmonic function,
+\[
+ \int_{\mathbb R\times E}\Delta_V\,\mathrm dx\,\mathrm dA_E=1.
+\]
+If in addition $V\leq0$, then
+\[
+ |V_x|^2\leq-2V,\qquad 0\leq A_V\leq1+\sqrt{-2V}.
+\]
+\end{lemma}
+\begin{proof}
+Set $m(x)=\int_EV\,\mathrm dA_E$ and
+$e(x)=\int_E|V_w|^2\,\mathrm dA_E$.
+Periodic integration by parts gives
+\[
+ \begin{split}
+ \int_E V_{w\bar w}V_{xx}\,\mathrm dA_E
+    &=-\operatorname{Re}\int_EV_{\bar w}V_{xxw}\,\mathrm dA_E,\\
+ e''&=2\int_E|V_{xw}|^2\,\mathrm dA_E
+       +2\operatorname{Re}\int_EV_{\bar w}V_{xxw}\,\mathrm dA_E.
+ \end{split}
+\]
+The mean of every fiber derivative vanishes. Expanding $\Delta_V$ yields
+\[
+ \int_E\Delta_V\,\mathrm dA_E
+   =m''+\mu(1-\mu)-\tfrac12e''.
+\]
+Thus $f(x)=\log(1+\mathrm e^x)+m(x)-e(x)/2$ is convex.
+
+Both $m$ and $e$ are smooth global functions on the projective base:
+local fiber coordinates change by holomorphic translations, preserving
+fiber Haar area, the vertical derivative and the Dirichlet integral.
+They are $U(2)$-invariant. Smoothness and radial invariance at $\xi=0$
+give $m',e'\to0$ at the negative end. At the positive end use a normal
+coordinate $z_0/z_1$ to the hyperplane $\{z_0=0\}$ on the base.
+The invariant base functions are constant along this hyperplane and
+smooth across it; their $x$ derivatives tend to zero. This does not
+require that the pointwise potential be constant on its elliptic fibers
+at that end. Consequently $f'(-\infty)=0$ and $f'(+\infty)=1$.
+Integrating the nonnegative $f''$ proves the flux identity.
+
+For each fixed $w$, $R_V\geq0$ implies $V_{xx}\geq-1$ on all of $\mathbb R$.
+Hence for every real $h$,
+\[
+ V(x+h,w)\geq V(x,w)+hV_x(x,w)-h^2/2.
+\]
+Taking $h=V_x(x,w)$ and using $V\leq0$ proves the derivative bound.
+Finally $\mu\leq1$ proves the bound for $A_V$.
+\end{proof}
+
+Combining the positive density with \cref{lem:rotational-positive-flux} proves
+\begin{equation}\label{eq:rotational-smooth-upper}
+ \int_XW(-V)\mathrm{MA}_\omega(V)\leq12Q(W),\qquad
+ \int_{\{-V>T\}}W(-V)\mathrm{MA}_\omega(V)\leq12Q_T(W).
+\end{equation}
+The positive flux supplies the reference integral even though the unweighted Monge--Amp\`ere masses are unbounded.
+
+\begin{lemma}\label{lem:rotational-capacity-smoothing}
+Every bounded invariant $\omega$-plurisubharmonic function $u$, with $-L\leq u\leq0$, admits smooth invariant $\omega$-plurisubharmonic approximants with the same bounds converging to $u$ in capacity.
+\end{lemma}
+\begin{proof}
+The compact group $G=U(3)\times(\mathbb R/\mathbb Z)$ acts transitively and holomorphically on $X$ by unitary transformations and positive scalar multiplication. It preserves $\omega$. Choose a nonnegative smooth central approximate identity $\rho_\epsilon$ on $G$, supported near its identity, and put
+\[
+ u_\epsilon(p)=\int_Gu(gp)\rho_\epsilon(g)\,\mathrm dg.
+\]
+Convolution on a compact homogeneous space is smooth. Averaging preserves the current inequality and the bounds, and centrality makes convolution commute with the $U(2)$ action. Transporting the bounded tests defining capacity shows that $\operatorname{Cap}_\omega$ is $G$-invariant.
+
+Suppose $L>0$. By quasi-continuity, choose an open set $O$ of arbitrarily small capacity such that $u$ is continuous on $X\setminus O$. When $g$ is sufficiently close to the identity, $u(gp)$ and $u(p)$ are uniformly close whenever both points lie outside $O$. Thus, outside $O$ and for small kernel support,
+\[
+ \{|u_\epsilon-u|>\delta\}
+ \subset\{P_\epsilon\mathbf1_O>\delta/(4L)\},\qquad
+ P_\epsilon\mathbf1_O(p)=\int_G\mathbf1_O(gp)\rho_\epsilon(g)\,\mathrm dg.
+\]
+Markov's inequality, followed by capacity invariance, gives
+\[
+ \begin{split}
+ \operatorname{Cap}_\omega\{P_\epsilon\mathbf1_O>\delta/(4L)\}
+ &\leq\frac{4L}{\delta}\sup_{0\leq v\leq1}
+       \int_XP_\epsilon\mathbf1_O\,(\omega+\ddc v)^3\\
+ &\leq\frac{4L}{\delta}\operatorname{Cap}_\omega(O),
+ \end{split}
+\]
+where the supremum runs over $v\in\PSH(X,\omega)$. Letting the capacity of $O$ tend to zero proves the claim. If $L=0$, $u=0$ and no approximation is needed.
+\end{proof}
+
+\begin{proposition}\label{prop:rotational-weighted-upper}
+For every $u\in\mathcal R$ and $T\geq0$,
+\begin{equation}\label{eq:rotational-rough-upper}
+ \nu_{W,u}(X)\leq12Q(W),\qquad
+ \nu_{W,u}(\{-u>T\})\leq12Q_T(W).
+\end{equation}
+If $\sqrt t\,W(t)\to0$, the family $\{\nu_{W,u}:u\in\mathcal R\}$ is uniformly absolutely continuous with respect to capacity, and $u\mapsto\nu_{W,u}$ is continuous from convergence in capacity to weak convergence of finite measures.
+\end{proposition}
+\begin{proof}
+For bounded $u\leq0$, apply \cref{lem:rotational-capacity-smoothing}. The bounded capacity continuity of products and quasi-continuous coefficients in \cref{sec:psh-local-capacity,sec:hermitian-capacity} passes the total estimate \eqref{eq:rotational-smooth-upper} to $u$. For the tail at $T>0$, use continuous depth cutoffs majorizing $\mathbf1_{\{-u>T\}}$ and supported in $\{-u>T-\delta\}$, where $0<\delta<T$. The same product continuity gives a bound by $12Q_{T-\delta}(W)$. Continuity of $(1+\sqrt{2t})W(t)$ gives $Q_{T-\delta}(W)\to Q_T(W)$. For $T=0$, use the total estimate.
+
+For unbounded $u$, the canonical truncations $u^K=\max(u,-K)$ remain bounded and invariant. On $\{u>-K\}$ their measures agree with the finite-level restrictions defining $\mu_u$. These restrictions increase to $\mu_u$, so monotone convergence proves \eqref{eq:rotational-rough-upper}.
+
+Splitting at depth $T$ and rescaling $u^T$ into a capacity test gives, for every Borel set $B$,
+\begin{equation}\label{eq:rotational-uniform-ac}
+ \nu_{W,u}(B)\leq W(0)(1+T)^3\operatorname{Cap}_\omega(B)+12Q_T(W).
+\end{equation}
+Indeed $\omega+\ddc u^T\leq(1+T)(\omega+\ddc(u^T/(1+T)))$, and the latter potential has range of length at most one. If $\sqrt t\,W(t)\to0$, then $Q_T(W)\to0$. Taking first $T$ large and then the capacity small proves uniform absolute continuity.
+
+Suppose $u_j\to u$ in capacity in $\mathcal R$. For fixed $K$, the truncations $u_j^K$ converge in capacity to $u^K$, and their weighted bounded products converge weakly. Outside $\{u\leq-K\}$, locality identifies $\nu_{W,u^K}$ with $\nu_{W,u}$. Both measures give this exceptional set mass at most $12Q_{K-1}(W)$ when $K>1$, by their tail estimates; this also includes any truncation mass on $\{u=-K\}$. Hence
+\[
+ \|\nu_{W,u^K}-\nu_{W,u}\|_{\mathrm{TV}}\leq24Q_{K-1}(W)
+\]
+uniformly over $u\in\mathcal R$. Letting $K\to+\infty$ removes the truncations and proves the claimed continuity.
+\end{proof}
+
+\subsection{Heat concentration at large depth}
+
+The flux estimate suggests the depth scale at which a counterexample must place its mass. A faster initial heat time than in the unbounded-mass construction gives mass of order $\eta^{-1}$ at depth of order $\eta^{-2}$. Its integrated radial defect remains small after a fixed parameter is chosen, but no longer tends to zero. We therefore need a correction with a small fixed total slope.
+
+We use the heat kernel $k_t$ of \eqref{eq:hopf-heat} and its potential $F_\eta$ of \cref{lem:hopf-fiber-potential}. The following value estimates complement the derivative bounds already proved.
+
+\begin{lemma}\label{lem:rotational-heat-values}
+Uniformly in $\eta$ and $w$,
+$F_\eta(t,w)\leq C\eta$ for $t>0$, and
+$F_\eta(t,w)\geq-2\eta\log(1/t)-C\eta$ for $0<t\leq1$.
+Uniformly on $\sqrt t\leq|w|\leq2\sqrt t$ near the origin of $E$, as $t\to0$,
+\begin{align*}
+ F_\eta(t,w)&=2\eta\log t+O(\eta),\\
+ t k_t(w)&=2\mathrm e^{-|w|^2/t}+O(\mathrm e^{-1/(Ct)}),\\
+ t\partial_{\bar w}\log k_t(w)&=-w+O(\mathrm e^{-1/(Ct)}).
+\end{align*}
+\end{lemma}
+\begin{proof}
+For the upper bound use $k_r\geq0$ on $(0,1]$ and \eqref{eq:hopf-large-time}.
+The nonnegative Fourier coefficients imply $k_r(w)\leq k_r(0)$, and Gaussian
+summation gives
+$k_r(0)\leq2/r+C r^{-1}\mathrm e^{-1/(2r)}$ for $r\leq1$.
+Its integrable error proves the lower bound.
+On the indicated annulus the nonzero-lattice terms and their derivatives
+are exponentially small relative to the zero-lattice term, proving the last
+two identities. For the first, split the defining integral at a fixed small
+$r_0$. On $[t,r_0]$ the nonzero-lattice contributions have bounded integral,
+and the difference between $(2/r)\mathrm e^{-|w|^2/r}$ and $2/r$ has integral
+at most $2|w|^2/t\leq8$. The remaining integral is uniformly bounded.
+\end{proof}
+
+\begin{theorem}\label{thm:rotational-depth-core}
+There are $A,B,D,\eta_0>0$ such that for every $0<\eta<\eta_0$ there exist
+$u_\eta\in C^\infty(X,\mathbb R)\cap\mathcal R$ and a measurable $K_\eta\subset X$ satisfying
+\begin{gather*}
+ \sup_Xu_\eta=0,\qquad \omega+\ddc u_\eta>0,
+ \qquad 0\leq-u_\eta\leq B\eta^{-2}\quad\text{on }X,\\
+ A\eta^{-2}\leq-u_\eta\leq B\eta^{-2}\quad\text{on }K_\eta,
+ \qquad
+ \int_{K_\eta}(\omega+\ddc u_\eta)^3\geq D\eta^{-1}.
+\end{gather*}
+\end{theorem}
+\begin{proof}
+Fix $\kappa$ as in \cref{lem:hopf-square}, also with $\kappa<1/100$. Choose a small fixed $c>0$
+later and set
+\begin{gather*}
+ \varepsilon=\mathrm e^{-c\eta^{-3}},\qquad
+ q_0=\sqrt{c\eta^{-3}+\log(1/\eta)},\qquad
+ a=\sqrt{\kappa/(2\eta)},\\
+ q(x)=q_0-\int_0^{ax}\chi(s)\,\mathrm ds,\qquad
+ t(x)=\eta^{-1}\mathrm e^{-q(x)^2},\\
+ b=(q_0-1/2)/a,\qquad x_*=(q_0+1/2)/a,\qquad
+ Z_\eta(x,w)=\vartheta(q(x))F_\eta(t(x),w).
+\end{gather*}
+Use the cutoffs $\chi$ and $\vartheta$ from the earlier heat-time construction. Then $Z_\eta=F_\eta(\varepsilon,\cdot)$ for
+$x\leq0$, $Z_\eta=0$ for $x\geq x_*$, and
+\[
+ \eta b,\eta x_*\longrightarrow\ell:=\sqrt{2c/\kappa},\qquad
+ 1+(Z_\eta)_{w\bar w}>1-\eta.
+\]
+The larger value of $q_0$ changes the integrated positivity defect; we estimate it at this scale. Write $r_-=\max(-r,0)$ for the negative part of a real number $r$.
+
+On $[0,b]$ we have $\vartheta=1$.
+Write $F=F_\eta$ and put $\sigma=(\log t)_x$, $h=\eta k_t$ and $\zeta=\sigma t\partial_{\bar w}\log k_t/\mu$. The identity \eqref{eq:hopf-Q-identity} applies to $Z_\eta$ on this interval.
+The contribution involving $h[1+t(\log k_t)_{w\bar w}]$ is nonnegative.
+On $[0,a^{-1}]$,
+\[
+ \sigma=2aq\chi(ax),\quad
+ \sigma_x=-\frac\kappa\eta\chi(ax)^2+\frac\kappa\eta q\chi'(ax),
+ \quad t\leq\varepsilon\mathrm e^{q_0}.
+\]
+This upper bound for $t$ is smaller than every power of $\eta$.
+Thus $\kappa q\chi't\leq\eta$ and $\sigma^2t\leq\eta^2$.
+Use \eqref{eq:hopf-square} with $\kappa\chi^2$ where $\chi>0$, and $F_t\geq-\eta$
+for the $\chi'$ term. It follows that $[Q[Z_\eta]]_-\leq C\eta$.
+Where $\chi=0$ also $\chi'=0$, and
+$Q[Z_\eta]=\mu-\mu^2/(1-\eta+h)>0$, since $x\leq a^{-1}=o(1)$.
+
+On $[a^{-1},b]$, $\sigma=2aq$, $\sigma_x=-\kappa/\eta$,
+$\mathrm dx=-\mathrm dq/a$. For $t\leq1$, \eqref{eq:hopf-Q-identity} and
+\eqref{eq:hopf-square} give
+\[
+ [Q[Z_\eta]]_-\leq
+ 2\eta+2\kappa q^2t+C\kappa\exp\left(-\frac\eta{C\kappa q^2t}\right).
+\]
+For $t\geq1$, \eqref{eq:hopf-large-time} gives instead
+$[Q[Z_\eta]]_-\leq C\kappa q^2t^2\mathrm e^{-t/4}$.
+Put $L=\log(1/\eta)$. Integrating the $q^2t$ term uses
+$\int_{\sqrt L}^\infty q^2\mathrm e^{-q^2}\,\mathrm dq\leq C\sqrt L\eta$.
+For the exponential term split at $2\sqrt L$: the initial interval has
+length $O(\sqrt L)$, and on the rest
+$\eta^2\mathrm e^{q^2}/q^2\geq\mathrm e^{q^2/4}$ for small $\eta$.
+Its remaining integral is uniformly bounded even with upper endpoint infinity.
+For large time use
+$\mathrm dx=\sqrt{\eta/(2\kappa)}\,\mathrm dt/(tq)$,
+$q\leq\sqrt L$, and the integrability of $t\mathrm e^{-t/4}$.
+Including the constant term and initial interval yields
+\begin{equation}\label{eq:rotational-integrated-defect}
+ \int_0^b\max_{w\in E}[Q[Z_\eta](x,w)]_-\,\mathrm dx
+       \leq C\eta b+C\sqrt{\eta L}\leq C\ell+o(1).
+\end{equation}
+All constants here are independent of $q_0,c,\eta$ with fixed $\kappa$.
+The bound is small after choosing $c$, although it need not tend to zero.
+
+Also $\sup[(Z_\eta)_x]_-=O(\sqrt{\eta L})$:
+for $t\leq1$ use $F_t\geq-\eta$ and
+$t\sqrt{L+\log(1/t)}\leq\sqrt L$; for $t\geq1$ use \eqref{eq:hopf-large-time}.
+On $[b,x_*]$, $0\leq q\leq1$ and $(\mathrm e\eta)^{-1}\leq t\leq\eta^{-1}$,
+so differentiated cutoffs and \eqref{eq:hopf-large-time} give
+\[
+ \sup_w\bigl(|(Z_\eta)_x|+|Q[Z_\eta]-Q[0]|\bigr)
+       \leq C\mathrm e^{-1/(5\mathrm e\eta)}.
+\]
+Choose $c$ so that $\ell<1/(10\mathrm e)$. Since
+$Q[0]=\mu(1-\mu)\geq\mathrm e^{-x_*}/4$ here, this implies $Q[Z_\eta]>0$
+on the cutoff interval. For $x\leq0$ use
+$Q[Z_\eta]\geq\mu(1-\mu/(1-\eta))>0$, and for $x\geq x_*$ use $Z_\eta=0$.
+On $[-2,-1]$ the same formula gives $Q[Z_\eta]\geq2/27$.
+
+The continuous defect $d_\eta(x)=\max_w[Q[Z_\eta]]_-$ is therefore
+supported in $[0,b]$. Choose a smooth nonnegative $r_\eta$, supported in
+$(-1/2,b+1/2)$, with $r_\eta>d_\eta$ on $[0,b]$ and
+$m_\eta:=\int r_\eta\leq\int d_\eta+\eta$.
+Uniform approximation and a positive bump give this choice for each fixed
+$\eta$; no uniform derivative bound is needed.
+Fix a smooth probability bump $\psi$ supported in $(-2,-1)$ and put
+\[
+ g_\eta(x)=\int_{-\infty}^x(x-s)(r_\eta(s)-m_\eta\psi(s))\,\mathrm ds,
+ \qquad V_\eta=Z_\eta+g_\eta.
+\]
+The support order implies $-m_\eta\leq g_\eta'\leq0$;
+$g_\eta=0$ at the negative end and is constant at the positive end.
+Furthermore $g_\eta\leq0$ and $|g_\eta|\leq m_\eta(b+3)=O_c(\eta^{-1})$.
+Shrink the fixed $c$ so that \eqref{eq:rotational-integrated-defect} ensures
+\[
+ m_\eta<\min\{\mu(-2)/2,\,1/8,\,1/(27\|\psi\|_\infty)\}
+\]
+for all sufficiently small $\eta$.
+Now $Q[V_\eta]=Q[Z_\eta]+r_\eta-m_\eta\psi>0$ everywhere:
+use the majorant on $[0,b]$, the margin $2/27$ on $(-2,-1)$, and the
+established positivity elsewhere.
+The vertical coefficient is above $1-\eta$. For the horizontal coefficient,
+derivatives vanish for $x\leq-2$; on $[-2,0]$ use $\mu\geq\mu(-2)>m_\eta$;
+on $[0,\infty)$ use $\mu\geq1/2$ and $(Z_\eta)_x\geq-o(1)$.
+Thus \eqref{eq:hopf-positivity} gives a smooth globally strictly positive potential.
+
+On $x<-3$, $V_\eta=F_\eta(\varepsilon,\cdot)$ has fiber mean zero, so
+$0\leq\sup_XV_\eta\leq C\eta$ by \cref{lem:rotational-heat-values} and $g_\eta\leq0$.
+Set $u_\eta=V_\eta-\sup_XV_\eta$.
+Where the cutoff is nonzero $t\geq\varepsilon$, giving
+\begin{equation}\label{eq:rotational-global-depth}
+ 0\leq-u_\eta\leq2c\eta^{-2}+O_c(\eta^{-1})+O(\eta).
+\end{equation}
+Multiplication by a cutoff between zero and one preserves this lower bound
+for $Z_\eta$, including where $F_\eta$ is positive.
+
+\medskip\noindent\emph{Mass and depth on the concentration region.}
+Let $K_\eta$ consist of all radial angular directions and
+\[
+ q_0/2\leq q(x)\leq3q_0/4,\qquad
+ \sqrt{t(x)}\leq|w|\leq2\sqrt{t(x)},
+\]
+using the small lift near zero in $E$.
+This lies in the linear transport region, with $\vartheta=1$,
+$x\asymp_c\eta^{-1}\to\infty$, $\sigma=2aq\asymp_c\eta^{-2}$, and
+superexponentially small $t$. \Cref{lem:rotational-heat-values} gives, uniformly,
+\[
+ 0<c_1\leq tk_t\leq3,\quad h\to\infty,\quad
+ \zeta\to0,\quad \eta\sigma^2t\to0,\quad \mu\to1.
+\]
+In \eqref{eq:hopf-Q-identity} the first $h$ contribution is nonnegative,
+$\sigma_xtF_t=-\kappa t(k_t-1)\geq-3\kappa$, and the completed square
+tends to one. Its other negative terms tend to zero.
+Thus $Q[Z_\eta]\geq1/4$ for small $\eta$. On the core $\psi=0$ and
+$g_\eta''=r_\eta\geq0$, so $Q[V_\eta]\geq1/4$. Also
+\[
+ \mu+(V_\eta)_x\geq c_2\eta\sigma,\qquad
+ 1+(V_\eta)_{w\bar w}\geq c_1\eta/t.
+\]
+Indeed $(Z_\eta)_x=\eta\sigma(tk_t-t)$ and $\mu+g_\eta'>0$ here;
+the vertical inequality follows from $1-\eta+\eta k_t$.
+
+In \eqref{eq:rotational-positive-density}, $\Delta_{V_\eta}=(1+(V_\eta)_{w\bar w})Q[V_\eta]$. The fiber annulus has area $3t/2$.
+Integrating the preceding lower bounds and using
+$\sigma\,\mathrm dx=-2q\,\mathrm dq$ yields
+\[
+ \int_{K_\eta}(\omega+\ddc u_\eta)^3
+ \geq c_3\eta^2\int_{q_0/2}^{3q_0/4}2q\,\mathrm dq
+ =c_4\eta^2q_0^2\geq c_5\eta^{-1}.
+\]
+
+The annular value estimate also gives
+\[
+ -u_\eta=2\eta q^2+O_c(\eta^{-1})+O(\eta\log(1/\eta)).
+\]
+As $\eta q_0^2=c\eta^{-2}+\eta\log(1/\eta)$, this is bounded above and below
+by fixed positive multiples of $\eta^{-2}$ on the core.
+Together with \eqref{eq:rotational-global-depth}, this proves the asserted mass and depth bounds.
+All these potentials are bounded: truncations beyond their individual depth
+equal them everywhere, so the defining extended product equals
+\eqref{eq:rotational-positive-density}.
+
+\end{proof}
+
+\begin{corollary}\label{cor:rotational-necessary-weights}
+Let $W:[0,\infty)\to(0,\infty)$ be nonincreasing. A uniform bound for the
+weighted masses
+\[
+ \int_X W(-u)\mathrm{MA}^{\mathrm{ext}}_\omega(u)
+\]
+over all normalized $\omega$-psh potentials requires
+\[
+ \sup_{T\gg1}\sqrt T\,W(T)<\infty.
+\]
+Uniform deep tails over that class require $\sqrt T\,W(T)\to0$.
+\end{corollary}
+\begin{proof}
+On $K_\eta$, monotonicity of $W$ gives
+\[
+ \int_XW(-u_\eta)\mathrm{MA}^{\mathrm{ext}}_\omega(u_\eta)
+       \geq D\eta^{-1}W(B\eta^{-2}).
+\]
+Every sufficiently large $T$ equals $B\eta^{-2}$ for some sufficiently small
+$\eta$, proving the necessary bound.
+Also $K_\eta\subset\{-u_\eta>A\eta^{-2}/2\}$, so uniform deep tails force
+this lower bound to tend to zero.
+\end{proof}
+
+\begin{theorem}\label{thm:rotational-infinite-weighted-measure}
+Suppose $W$ is positive and nonincreasing, finite on compact intervals, and
+\[
+ \sup_{T\gg1}\sqrt T W(T)=\infty.
+\]
+Then there is a single $U\in\mathcal R$ such that
+\[
+ \int_XW(-U)\mathrm{MA}^{\mathrm{ext}}_\omega(U)=\infty.
+\]
+\end{theorem}
+\begin{proof}
+First select the correction with additional local control. Put
+\[
+ x_{\rm pre}=(q_0+1/2-2\sqrt L)/a.
+\]
+Then $t(x_{\rm pre})=\eta^3$, $x_{\rm pre}\to\infty$, and
+$b-x_{\rm pre}=O(\sqrt{\eta L})\to0$.
+For a fixed large $K$ the preceding defect estimates give
+$d_\eta\leq(K/2)\eta$ on $[0,x_{\rm pre}]$:
+on the linear portion $q^2t\leq4L\eta^3$, and the exponential error is
+$O(\exp(-1/(C\kappa\eta^2L)))=o(\eta)$.
+On the initial portion use the previously proved $C\eta$ bound.
+The integral of $d_\eta$ on $[x_{\rm pre},b]$ tends to zero by the same
+integrated estimates and this interval's length.
+
+Choose a fixed left cutoff, zero for $x\leq-1/2$ and one for $x\geq-1/4$,
+and a translated right cutoff, one for $x\leq x_{\rm pre}$ and zero for
+$x\geq x_{\rm pre}+1/4$.
+Let $r^0_\eta$ be $K\eta$ times their product. It strictly exceeds $d_\eta$
+on $[0,x_{\rm pre}]$. The continuous function
+$e_\eta=\max(d_\eta-r^0_\eta,0)$ is supported in $[x_{\rm pre},b]$.
+Add a smooth nonnegative majorant $s_\eta>e_\eta$ on that interval,
+supported in $(x_{\rm pre}-1/4,b+1/2)$, with
+$\int s_\eta\leq\int e_\eta+\eta$.
+Set $r_\eta=r^0_\eta+s_\eta$. Then
+\[
+ r_\eta>d_\eta\quad\text{on }[0,b],\qquad
+ m_\eta=\int r_\eta\leq K\eta b+O(\sqrt{\eta L})+O(\eta).
+\]
+After shrinking the fixed $c$, this is bounded by a fixed $m_0$ within all
+the positivity tolerances above. The conclusions of \cref{thm:rotational-depth-core} therefore hold for this choice, with fixed $A,B,D$.
+On every fixed compact interval $I\Subset(0,\infty)$, for sufficiently small
+$\eta$ we have $r_\eta=K\eta$ and exactly
+\begin{equation}\label{eq:rotational-controlled-correction}
+ g_\eta(x)=-m_\eta(x-\mu_\psi)
+              +K\eta(x^2/2+b_0x+b_1),\qquad
+ \mu_\psi=\int s\psi(s)\,\mathrm ds.
+\end{equation}
+Here $b_0,b_1$ depend only on the fixed left cutoff.
+Globally $0\leq-g_\eta(x)\leq m_0(x+2)$ for $x\geq0$.
+
+Let $G(w)=-\int_0^\infty(k_r(w)-1)\,\mathrm dr$ for $w\ne0$ on $E$.
+Gaussian integration gives the uniform bound
+\begin{equation}\label{eq:rotational-off-pole-value}
+ -F_\eta(t,w)\leq
+ C\eta\bigl(1+\log^+(1/\operatorname{dist}_E(w,0)^2)\bigr),\quad t>0.
+\end{equation}
+Indeed the nearest Gaussian has integral bounded by
+$C+2\log^+(1/\operatorname{dist}_E(w,0)^2)$ on $(0,1]$;
+the other lattice terms have bounded integral and large times decay.
+The same bound applies after the cutoff.
+On a fixed $I\Subset(0,\infty)$, $\vartheta=1$ for small $\eta$ and
+$t_\eta(x)\leq\exp(-c/(2\eta^3))$.
+Every fixed $x$ derivative of $t_\eta$ has this bound times a polynomial
+in $\eta^{-1}$. On compact fiber sets away from zero,
+\[
+ F_\eta(t_\eta(x),w)/\eta\longrightarrow G(w)
+                   \quad\text{in }C^\ell\text{ for every fixed }\ell.
+\]
+To verify derivatives, subtract $G$ from $G_t=F_\eta(t,\cdot)/\eta$:
+$G_t-G=\int_0^t(k_r-1)\,\mathrm dr=-t+O(\exp(-d^2/(Ct)))$ when
+$d$ stays positive. Differentiated Gaussian errors have only polynomial
+factors in $t^{-1}$, and repeated $x$ differentiation preserves their decay.
+Together with \eqref{eq:rotational-controlled-correction} and $0\leq\sup V_\eta\leq C\eta$,
+this gives uniform $C^\ell$ bounds for $u_\eta$ on each such fixed compact
+product set, for all sufficiently small $\eta$. The threshold may depend
+on the set and derivative order.
+
+Fix $a_j=2^{-j-2}$, $j\geq1$, so $\sum a_j=1/4$.
+Choose scales $\eta_j\downarrow0$ recursively and write
+$u_j=u_{\eta_j}$, $K_j=K_{\eta_j}$.
+Require the minimum $x$ on $K_j$ to exceed every earlier $x_{*,i}$ by two.
+Choose a relatively compact product neighborhood $O_j$ of $K_j$, with
+positive $x$ interval and fiber closure away from zero, on which the earlier
+$u_i$ are constant. The $K_j$ are pairwise disjoint.
+With $E_j=\sum_{i<j}a_i\|u_i\|_\infty$, impose
+\begin{gather*}
+ E_j\leq a_j\eta_j^{-2},\qquad \eta_j\leq a_j,\\
+ a_j\eta_j\leq2^{-j}a_i\eta_i\quad(i<j).
+\end{gather*}
+For each earlier $O_i$, require the preceding uniform derivative bounds to
+hold for $u_j$ through order $j$. All are finite constraints at stage $j$,
+achievable by making $\eta_j$ smaller. They ensure that the future series
+$\sum_{k>i}a_ku_k$ converges in $C^\infty$ on compact subsets of $O_i$:
+for every fixed derivative order the sufficiently late terms have a uniform
+bound there, and $\sum a_k<\infty$.
+
+These constraints also give $\sum_{k>j}a_k\eta_k\leq a_j\eta_j$.
+On $K_j$ the coordinate and distance estimates are
+\[
+ x\leq C_c\eta_j^{-1},\qquad
+ \log^+(1/\operatorname{dist}_E(w,0)^2)\leq C_c\eta_j^{-3}.
+\]
+Using \eqref{eq:rotational-off-pole-value}, the global slope bound on $g_k$, and the
+supremum constants, the future depth is at most
+\[
+ C_c\eta_j^{-3}\sum_{k>j}a_k\eta_k
+       +C_c\eta_j^{-1}\sum_{k>j}a_k
+ \leq C_c a_j\eta_j^{-2}+C_c\eta_j^{-1}/4.
+\]
+The last term is at most a fixed multiple of $a_j\eta_j^{-2}$ since
+$\eta_j\leq a_j$. Including the earlier and current terms, there is a fixed
+$C_*>0$, independent of the scales, such that
+\begin{equation}\label{eq:rotational-series-depth}
+ -\sum_i a_iu_i\leq C_*a_j\eta_j^{-2}\quad\text{on }K_j.
+\end{equation}
+Fix this constant before the scale choice. Since $\sqrt T W(T)$ is unbounded,
+at each stage choose arbitrarily large $T_j$ such that
+\[
+ \frac D{\sqrt{C_*}}a_j^{5/2}\sqrt{T_j}W(T_j)\geq1,
+ \qquad \eta_j=\sqrt{C_*a_j/T_j},
+\]
+and so small a scale that all finite preceding constraints hold.
+Such values occur arbitrarily far out because $W$ is finite on compact
+intervals. Thus the recursive choice is possible.
+
+The smooth nonpositive partial sums $v_N=\sum_{j\leq N}a_ju_j$ decrease, and
+\[
+ \omega+\ddc v_N
+ =(1-\sum_{j\leq N}a_j)\omega
+       +\sum_{j\leq N}a_j(\omega+\ddc u_j)\geq\tfrac34\omega.
+\]
+By \cref{thm:normalized-compactness}, $\int_X(-v_N)\,\mathrm dV\leq C\sum_j a_j<+\infty$. Thus \cref{cor:decreasing-limit} gives a $\omega$-plurisubharmonic limit $v$ with $\omega+\ddc v\geq3\omega/4$. Its supremum is finite and nonpositive.
+
+On $O_j$ the earlier terms are constant and the future series converges
+smoothly. Thus $v$ is smooth there and
+$\omega+\ddc v\geq a_j(\omega+\ddc u_j)$ pointwise.
+The determinant inequality for positive Hermitian matrices gives on $K_j$
+\[
+ \mathrm{MA}^{\mathrm{ext}}_\omega(v)\geq a_j^3(\omega+\ddc u_j)^3.
+\]
+On these sets the extended product is the smooth product: on a compact neighborhood of $K_j$
+all sufficiently deep canonical truncations equal $v$.
+Set $U=v-\sup_Xv$. Since $\sup v\leq0$, $-U\leq-v$, and its local currents
+are unchanged. Monotonicity of $W$ and \eqref{eq:rotational-series-depth} give
+\[
+ \int_{K_j}W(-U)\mathrm{MA}^{\mathrm{ext}}_\omega(U)
+ \geq D a_j^3\eta_j^{-1}W(C_*a_j\eta_j^{-2})
+ =\frac D{\sqrt{C_*}}a_j^{5/2}\sqrt{T_j}W(T_j)\geq1.
+\]
+The disjoint $K_j$ prove infinite total mass for this single potential.
+They lie in its smooth locus, so no mass is assigned to poles.
+\end{proof}
+
+\subsection{Concentration at the critical weight}
+
+\begin{lemma}\label{lem:rotational-critical-concentration}
+Suppose $\sqrt t\,W(t)$ is bounded but does not tend to zero. There are smooth $u_j\in\mathcal R$ converging in capacity to $g\in\mathcal R$ such that a weak cluster measure of $\nu_{W,u_j}$ gives positive mass to the pole divisor
+\[
+ H=\pi^{-1}\{[z_0:z_1:z_2]:z_0=0\},
+\]
+whereas $\nu_{W,g}(H)=0$.
+\end{lemma}
+\begin{proof}
+Use the correction chosen in the proof of \cref{thm:rotational-infinite-weighted-measure}. Its plateau and its late supplement satisfy
+\[
+ \int r^0_\eta=K\eta x_{\rm pre}+O(\eta),\qquad
+ \int s_\eta=O(\sqrt{\eta L})+O(\eta),\qquad
+ \eta x_{\rm pre}\to\ell.
+\]
+Therefore $m_\eta\to m:=K\ell>0$. Shrink the fixed $c$ so that $m$
+satisfies all the established positivity margins. On each fixed finite
+$x$ interval, $r_\eta$ and all its derivatives tend to zero; the late
+supplement escapes the interval. Thus $g_\eta$ converges smoothly there to
+\[
+ g(x)=-m\int_{-\infty}^x(x-s)\psi(s)\,\mathrm ds.
+\]
+It is zero for $x\leq-2$ and equals $-m(x-\mu_\psi)$ for $x\geq-1$.
+The same margins give $\mu+g'>0$ and
+$g''+\mu(1-\mu)\geq0$ at finite $x$.
+Across $H$, its extension has logarithmic singularity of coefficient $m$: a local defining function $\zeta$ gives $g=m\log|\zeta|^2+O(1)$.
+Its upper semicontinuous extension is $\omega$-plurisubharmonic, has supremum zero and belongs to $\mathcal R$.
+
+The bound \eqref{eq:rotational-off-pole-value} and $F_\eta\leq C\eta$ imply that, on compact base sets away from $H$, each fixed-depth exceptional set lies in an exponentially shrinking tube about the local holomorphic zero section $w=0$. These tubes have capacity tending to zero. Indeed, on a relatively compact coordinate chart, $\log|w|^2$ is locally integrable and plurisubharmonic; the weighted Chern--Levine--Nirenberg estimate of \cref{sec:psh-local-capacity} bounds the relative capacity of $\{\log|w|^2<-T\}$ by $C/T$. A finite cover and the local capacity comparison transfer this estimate to $\operatorname{Cap}_\omega$.
+
+The corrections converge uniformly on compact base sets away from $H$, including $\xi=0$, and the supremum normalization is $O(\eta)$. Since $g$ has its logarithmic pole on $H$, the estimate \eqref{eq:global-capacity-tail} gives neighborhoods of $H$ with arbitrarily small capacity. Removing one such neighborhood proves $u_\eta\to g$ in capacity.
+
+Assume $\sqrt t\,W(t)$ is bounded but does not tend to zero. Choose
+the preceding sequence of cores with weighted mass bounded below by
+$c_0>0$. The proved upper bound makes their full weighted measures
+uniformly finite, so a subsequence has a weak cluster measure $\nu$.
+For each fixed closed neighborhood $H_r$ of $H$, all sufficiently late
+cores lie in $H_r$. Portmanteau gives $\nu(H_r)\geq c_0$; decreasing
+continuity of the finite measure gives $\nu(H)\geq c_0$.
+But $\nu_{W,g}(H)=0$ by its defining non-pluripolar truncation.
+\end{proof}
+
+\begin{theorem}\label{thm:rotational-sharp-damping}
+Within $\mathcal R$ the following assertions hold.
+\begin{enumerate}
+\item Every individual $\nu_{W,u}$ is finite if and only if
+$\sup_{t\gg1}\sqrt t\,W(t)<\infty$. This is also equivalent to a uniform
+total-mass bound. In this case
+\[
+ \sup_{u\in\mathcal R}\nu_{W,u}(X)\leq12Q(W).
+\]
+If the condition fails there is one $u\in\mathcal R$ with infinite measure.
+\item Uniform deep tails hold if and only if $\sqrt t\,W(t)\to0$.
+For all $u\in\mathcal R$ and $T\geq0$,
+\[
+ \nu_{W,u}(\{-u>T\})\leq12Q_T(W).
+\]
+The inequality is understood in the extended sense.
+\item Uniform absolute continuity relative to $\operatorname{Cap}_\omega$
+holds if and only if $\sqrt t\,W(t)\to0$.
+\item The assignment $u\mapsto\nu_{W,u}$ is a map into finite measures
+and is continuous from capacity convergence in $\mathcal R$ to weak
+measure convergence if and only if $\sqrt t\,W(t)\to0$.
+When $\sqrt t\,W(t)$ is bounded but does not tend to zero, there are
+smooth $u_j\in\mathcal R$ converging in capacity to
+$g\in\mathcal R$, whose weighted measures have a weak cluster measure
+charging the pole divisor of $g$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The sufficient conditions are \cref{prop:rotational-weighted-upper}. The necessary uniform mass and tail conditions follow from \cref{cor:rotational-necessary-weights}, whose smooth potentials are invariant. If $\sqrt t\,W(t)$ is unbounded, \cref{thm:rotational-infinite-weighted-measure} disproves universal individual finiteness and prevents a map into finite measures.
+
+For uniform absolute continuity, the concentration regions of \cref{thm:rotational-depth-core} lie in $\{x\geq c_1/\eta\}$ for a fixed $c_1>0$, hence in shrinking neighborhoods of $H$. The globally defined $h_H=\log(|z_0|^2/|z|^2)$ has supremum zero and $\omega+\ddc h_H=\beta+[H]\geq0$. Its sublevel estimate \eqref{eq:global-capacity-tail} shows that these neighborhoods have capacity tending to zero. If $\limsup_{t\to+\infty}\sqrt t\,W(t)>0$, choose the scales so that $D\eta^{-1}W(B\eta^{-2})$ stays bounded below. The weighted masses on these regions then violate uniform absolute continuity. Finally, \cref{lem:rotational-critical-concentration} disproves capacity-to-weak continuity whenever $\sqrt t\,W(t)$ is bounded but does not tend to zero.
+\end{proof}
+
+\begin{corollary}\label{cor:rotational-power-log-weights}
+For a weight $W$ satisfying the assumptions of this section and agreeing for large $t$ with
+\[
+ W_{p,a}(t)=(1+t)^{-p}[\log(\mathrm e+t)]^{-a},
+\]
+universal individual finiteness and uniform total-mass bounds in $\mathcal R$ hold exactly when $p>1/2$, or $p=1/2$ and $a\geq0$. Uniform deep tails, uniform capacity absolute continuity and capacity-to-weak continuity hold exactly when $p>1/2$, or $p=1/2$ and $a>0$.
+\end{corollary}
+\begin{proof}
+Apply \cref{thm:rotational-sharp-damping} to $\sqrt t\,W_{p,a}(t)\sim t^{1/2-p}(\log t)^{-a}$. A smooth decreasing modification on a compact interval changes none of these conditions.
+\end{proof}
+
+The necessary conditions and the single infinite-measure example also apply to the class of all normalized potentials on $X$. The sufficient conditions proved here use the $U(2)$ symmetry. For the unrestricted class, \cref{prop:general-damping-weights} still gives the sufficient condition $\int_0^{+\infty}(1+t)(-W'(t))\,\mathrm dt<+\infty$; its optimal damping rate remains open.

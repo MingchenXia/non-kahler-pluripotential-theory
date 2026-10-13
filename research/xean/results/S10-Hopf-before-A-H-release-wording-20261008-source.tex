@@ -1,0 +1,499 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newcommand{\ddc}{dd^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\BB}{\mathcal B}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Perron interpolation and metric actions on Hopf manifolds}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\noindent\textbf{Working draft.} Mathematical review, independent
+reconstruction and final comparison are pending. The general singularity
+class programme remains open.
+\begin{abstract}
+On the diagonal Hopf manifold of every dimension at least three, we study
+canonical potentials invariant under the elliptic fiber action. The full
+Hermitian Perron problem for two such endpoints descends to the projective
+base. Its interpolation is the unique geodesic of a complete metric on the
+invariant finite energy potentials. The associated metric action agrees
+with the raw Hermitian integral action on smooth invariant paths. Smooth
+Perron paths are stationary under every smooth variation, by compact group
+averaging. A diagonal projective family gives explicit nonconstant examples
+and exact distance and action formulas. The metric acts on potentials;
+their ordinary model projection in this finite energy domain is zero.
+An explicit unbounded family has finite squared energy exactly below a
+computed exponent threshold and contains distinct ordinary types.
+Constant Perron translations are nevertheless saddles for the full raw
+action, with infinitely many negative directions and strictly smaller
+lengths among nonbasic paths.
+\end{abstract}
+
+We use $d^c=\frac{i}{4\pi}(\bar\partial-\partial)$ and
+$\ddc=\frac{i}{2\pi}\partial\bar\partial$, ordinary wedge powers,
+and genuine canonical quasi-psh representatives, including their poles.
+For bounded potentials we use the local products with smooth corrections
+\cite[Section 2.1 and Proposition 2.1]{BGL}, including their plurifine
+locality \cite{BTfine}. The unbounded basic products used here are proved
+from canonical finite-level identities below; no BMP-dependent global
+nonclosed product theorem is applied on $X$. Constants are retained in
+the potential space and have positive distance.
+
+\section{The elliptic bundle and its basic potentials}
+Fix $n\geq3$, put $d=n-1$, and consider
+\[
+ X=(\mathbb C^n\setminus\{0\})/\langle z\mapsto ez\rangle,
+ \qquad \pi:X\longrightarrow Y=\PP^d.
+\]
+The free deck action is properly discontinuous and has the compact radial
+fundamental strip $1\leq\lVert z\rVert\leq e$. Thus $X$ is connected and
+compact. Its fibers are the elliptic group
+$E=\mathbb C/(\mathbb Z+2\pi i\mathbb Z)$, acting transitively by
+scalar multiplication. Topologically $X=S^{2n-1}\times S^1$; its first
+Betti number is one, whereas that of $\PP^d\times E$ is two.
+Its real cohomology in every intermediate positive even degree vanishes.
+A product of two positive-dimensional compact complex manifolds would
+have the nonzero pullback of either factor's top-degree class in such
+a degree, since projection to that factor has a smooth section.
+Thus $X$ admits no such product decomposition.
+
+On the cover write
+\[
+ t=\log\lVert z\rVert^2,\qquad
+ \alpha=\ddc t=\pi^*\kappa,\qquad
+ \beta=dt\wedge d^ct,\qquad h=\alpha+\beta,
+\]
+where $\int_Y\kappa^d=1$. The deck map adds two to $t$, so these
+forms descend. The form $\alpha$ is positive in base directions, and
+$\beta$ is semipositive of rank one and positive vertically. Hence $h$
+is Hermitian. Moreover
+\begin{equation}\label{eq:geometry}
+ dh=-dt\wedge\alpha=-dt\wedge h\ne0,
+ \qquad \int_{\pi^{-1}(y)}\beta=2,
+ \qquad \int_Xh^n=2n.
+\end{equation}
+For the middle equality take a fiber coordinate $\zeta=a+ib$. Then
+$t=2a+\text{constant}$ and $\beta=da\wedge db/\pi$, with periods
+$1$ and $2\pi$. The last equality follows from $\beta^2=0$ and
+$\alpha^{d+1}=0$. Both $h$ and these normalizations are invariant under
+$E$. An invariant genuine potential is called basic and is exactly $\pi^*v$.
+
+\begin{lemma}\label{lem:descent}
+For genuine potentials on $Y$, and for their complexifications on
+$Y\times S$, where $S$ is a strip, positivity satisfies
+\[
+ \operatorname{pr}_X^*h+\ddc(\pi\times\mathrm{id})^*V\geq0
+ \quad\Longleftrightarrow\quad
+ \operatorname{pr}_Y^*\kappa+\ddc V\geq0.
+\]
+For every genuine $v\in\PSH(Y,\kappa)$ the actual measure is
+\begin{equation}\label{eq:measure}
+ \MA_h^{\mathrm{ext}}(\pi^*v)
+     =n\beta\wedge\pi^*\MA_\kappa(v).
+\end{equation}
+Consequently, for every nonnegative Borel $F$,
+\begin{equation}\label{eq:fiber-integration}
+ \int_X\pi^*F\,\MA_h^{\mathrm{ext}}(\pi^*v)
+       =2n\int_YF\,\MA_\kappa(v).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Locally $\beta=\frac{i}{2\pi}\partial t\wedge\bar\partial t$ has
+a nonzero vertical coefficient. Every vector on $Y\times S$ has a unique
+lift annihilated by $\partial t$. Testing the positive current on those
+smooth lifts removes $\beta$ and gives positivity of the base current.
+Its distributional coefficients are independent of the fiber coordinate;
+testing with a nonnegative compact fiber density proves the assertion
+on the base. The reverse implication adds $\beta\geq0$. Local
+holomorphic sections give the canonical quasi-psh representative of a
+descended invariant function, so this argument includes singular potentials.
+
+For bounded $v$, local Bedford--Taylor multiplication and the smooth
+correction polynomial give \eqref{eq:measure}: the only nonzero top term
+contains one $\beta$ and $d$ base factors. For general $v$, apply that
+identity to $v_j=\max(v,-j)$ and multiply by
+$\mathbf1_{\{v>-j\}}$. The increasing finite-level measures on both
+sides give \eqref{eq:measure} without a product on the pole set.
+Fiber integration of the smooth vertical factor, of mass two, proves
+\eqref{eq:fiber-integration}.
+\end{proof}
+
+\section{The full Perron envelope and its completion}
+The Hermitian Perron segment uses all strip subgeodesics, with joint
+boundary upper bounds given by the endpoints. Basicness is not an
+assumption on its competitors.
+\begin{proposition}\label{prop:perron}
+For two basic endpoints, whenever the base Perron family is nonempty,
+the full Hermitian Perron envelope is the pullback of the base envelope.
+For $v_0,v_1\in\mathcal E^2(Y,\kappa)$ it attains both endpoints
+genuinely in $L^1(X)$.
+\end{proposition}
+\begin{proof}
+The full competitor family is stable under the compact fiber group.
+Its supremum and usc regularization are therefore invariant. The locally
+bounded upper chord bound and the existence of a base competitor make
+the resulting envelope a genuine basic potential. Lemma~\ref{lem:descent}
+makes its descent a base subgeodesic with the same boundary bounds.
+Conversely, every base competitor pulls back to a full competitor.
+This proves equality of the two envelopes; usc regularization commutes
+with pullback in submersion charts.
+
+For smooth endpoints a competitor is
+$\max\{v_0-Ct,v_1-C(1-t)\}$, with
+$C\geq\sup_Y|v_0-v_1|$. For arbitrary $\mathcal E^2$ endpoints,
+the base Perron construction is nontrivial and has capacity endpoint
+attainment \cite[Theorem 5.2 and Corollary 5.4]{Darvas}. It therefore
+attains them in base $L^1$. Equation~\eqref{eq:geometry} gives
+\[
+ \int_X|\pi^*(v-w)|\frac{h^n}{2n}
+       =\int_Y|v-w|\kappa^d,
+\]
+which proves the claimed endpoint attainment on $X$. Every prescribed
+smooth positive probability $dV$ has a bounded positive density ratio
+with $h^n/(2n)$ on compact $X$, so this convergence also holds in the
+original task's $L^1(X,dV)$, with the same canonical endpoints.
+\end{proof}
+
+Let $\BB_\infty$ be the smooth basic potentials with strictly positive
+$h+\ddc u$, and set
+\[
+ \BB_2=\left\{\pi^*v:\ v\in\PSH(Y,\kappa),\quad
+ \int_Y\MA_\kappa(v)=1,\quad
+ \int_Y|v|^2\MA_\kappa(v)<\infty\right\}.
+\]
+By \eqref{eq:fiber-integration}, these are precisely the basic potentials
+of actual mass $2n$ and finite squared energy on $X$.
+Define the distance on $\BB_\infty$ by the infimum of raw Hermitian
+lengths of smooth \emph{basic} paths. The raw metric restricted to those
+tangents is exactly
+\begin{equation}\label{eq:metric}
+ G^X_{\pi^*v}(\pi^*\xi,\pi^*\eta)
+       =2n\int_Y\xi\eta(\kappa+\ddc v)^d.
+\end{equation}
+
+\begin{theorem}\label{th:completion}
+The metric completion of $\BB_\infty$ is $\BB_2$, with distance
+\begin{equation}\label{eq:distance}
+ d_B(\pi^*v,\pi^*w)
+   =2\pi\sqrt{2n}\,\widetilde d_D
+                 \left(\frac{v}{2\pi},\frac{w}{2\pi}\right).
+\end{equation}
+Here $\widetilde d_D$ is Darvas' completed metric for the background
+$\kappa$ and operator $i\partial\bar\partial$.
+Its unique constant-speed geodesic is the full Hermitian Perron segment.
+\end{theorem}
+\begin{proof}
+The operator conversion is
+$\kappa+i\partial\bar\partial(v/(2\pi))=\kappa+\ddc v$.
+Thus \eqref{eq:metric} gives \eqref{eq:distance} on smooth potentials.
+Darvas' completion theorem applies on the connected compact K\"ahler
+manifold $Y$ \cite[Theorems 6.1 and 9.2]{Darvas}. Constant positive
+rescaling preserves its completeness and unique geodesics, giving the
+completion on genuine $\mathcal E^2$ representatives. Proposition
+\ref{prop:perron} identifies that geodesic with the full Hermitian
+envelope. In particular
+$d_B(\pi^*v,\pi^*(v+c))=\sqrt{2n}|c|$.
+\end{proof}
+
+For absolutely continuous curves in this completed metric set
+\begin{equation}\label{eq:action}
+ \mathcal A_B(\gamma)=\frac12\int_0^1|\dot\gamma|_{d_B}^2\,dt.
+\end{equation}
+Every connecting curve has action at least half the squared endpoint
+distance, by the length inequality and Cauchy--Schwarz. The unique
+constant-speed Perron segment attains equality and is the unique minimizer.
+
+On a smooth basic path \eqref{eq:action} is the raw integral action.
+For completeness, the metric derivative can be checked from the
+smooth-endpoint formula \cite[(15)]{Darvas}. If $v_{s+\delta}-v_s
+=\delta\dot v_s+O(\delta^2)$ in $C^2$, its short base Perron segment
+lies between its chord and that chord minus
+$C\delta^2\tau(1-\tau)$. The lower path is a subgeodesic by the
+Schur inequality and uniform strict positivity near $v_s$.
+Its initial velocity is consequently
+$v_{s+\delta}-v_s+O(\delta^2)$ uniformly. Formula (15) gives the
+metric derivative $\bigl(\int_Y\dot v_s^2\MA_\kappa(v_s)\bigr)^{1/2}$
+on the base. Equation~\eqref{eq:metric} gives the stated raw speed on $X$.
+For a path only $C^1$ in time the Taylor remainder is $o(\delta)$,
+and the same argument has the same derivative limit.
+
+The completed action is defined by metric speed. The initial-velocity
+formula has a bounded-potential counterexample outside its smooth
+hypotheses \cite[Section 7]{Darvas}; it is not used to define a
+Riemannian metric at every point of $\BB_2$.
+
+\section{Stationarity under every smooth variation}
+\begin{theorem}\label{th:stationary}
+Every smooth basic Perron path with strictly positive spatial forms is
+stationary for the original raw Hermitian action under all smooth
+variations with fixed endpoints.
+\end{theorem}
+\begin{proof}
+Write $u_t=\pi^*v_t$ and let $L(w)$ be the first variation of
+\[
+ \mathcal S_X(u)=\frac12\int_0^1\int_X\dot u_t^2(h+\ddc u_t)^n\,dt.
+\]
+Uniform positivity on $[0,1]\times X$ makes this derivative well defined
+for every smooth endpoint-zero variation. The action is invariant under
+$E$ and the path is fixed by $E$. Hence $L(g^*w)=L(w)$ and
+\[
+ L(w)=L\left(\int_Eg^*w\,dg\right).
+\]
+The averaged variation is smooth basic, say $\pi^*q_t$.
+Equation~\eqref{eq:fiber-integration}, applied before differentiating,
+reduces its first variation to $2n$ times the closed-base one.
+Put $\eta_t=\kappa+\ddc v_t$. Time integration by parts and closed
+spatial integration by parts give
+\[
+ L_Y(q)=\int_0^1\int_Y q_t\left[
+ -\ddot v_t\eta_t^d
+ +d\,d\dot v_t\wedge d^c\dot v_t\wedge\eta_t^{d-1}\right]dt.
+\]
+Indeed $\ddc(f^2)=2f\ddc f+2df\wedge d^cf$ cancels the two
+terms containing $\dot v_t\ddc\dot v_t$. The bracket vanishes by
+the smooth base homogeneous Monge--Amp\`ere equation, or its Schur
+complement. Thus $L_Y(q)=0$ and $L(w)=0$ for every variation.
+\end{proof}
+
+This theorem concerns stationarity, while the minimization in
+\eqref{eq:action} is in $\BB_2$. The length infimum in
+Theorem~\ref{th:completion} is over basic paths. A global raw-action
+minimum among all nonbasic paths already fails for constant endpoints,
+as the next theorem shows. The torsion is still present:
+here $\ddc\beta=-\alpha^2$,
+but
+\[
+ \ddc(h+\ddc\pi^*v)^{n-1}
+   =-(n-1)\alpha^2\wedge\pi^*\eta^{n-2}=0
+\]
+by the dimension of the base. The group averaging proves the full
+first-variation assertion without suppressing torsion in a general metric.
+
+\section{Stationary translations are saddles}
+The distinction between stationarity and minimization is substantive.
+Write $r=\log\lVert z\rVert^2$ modulo two. Every smooth two-periodic
+function of $r$ is a genuine global smooth function on $X$. For a path
+$u(t,r)$ one has
+\[
+ h+\ddc u=(1+u_r)\alpha+(1+u_{rr})\beta .
+\]
+Thus both coefficients positive imply strict spatial positivity.
+Let $\langle F\rangle=\frac12\int_0^2F(r)\,dr$.
+The fiber integral of $\beta$ is two, so the exact raw action is
+\begin{equation}\label{eq:radial-action}
+ \mathcal S_X(u)=n\int_0^1
+   \left\langle u_t^2(1+u_r)^d(1+u_{rr})\right\rangle dt.
+\end{equation}
+The average is independent of the choice of base section, which only
+shifts the start of a full period.
+
+\begin{theorem}\label{th:saddle}
+For every $c\ne0$, the full Hermitian Perron segment $u_t=ct$ is
+stationary under all smooth fixed-endpoint variations, but its raw-action
+Hessian has an infinite-dimensional negative subspace.
+The infimum of raw Hermitian lengths over all smooth positive paths
+from $0$ to $c$ is strictly smaller than $d_B(0,c)=\sqrt{2n}|c|$.
+\end{theorem}
+\begin{proof}
+Every strip subgeodesic is convex in real time at a fixed spatial point,
+so its endpoint upper bounds imply $u_t\leq ct$. The path $ct$ itself
+is a competitor. It is therefore the full Perron segment.
+It is smooth basic and stationary by Theorem~\ref{th:stationary}.
+
+Take a smooth periodic $w(t,r)$ with $w(0,r)=w(1,r)=0$.
+The paths $ct+\varepsilon w$ are spatially strictly positive for small
+$\varepsilon$. Expanding \eqref{eq:radial-action}, and integrating the
+terms $w_rw_{rr}$ in $r$ and $w_tw_{rr}$ in both $r$ and $t$, gives
+\[
+ \left.\frac{d^2}{d\varepsilon^2}\mathcal S_X(ct+\varepsilon w)
+ \right|_{\varepsilon=0}
+ =2n\int_0^1\left\langle
+       (w_t+dcw_r)^2-\frac{d(d+1)}2c^2w_r^2
+                    \right\rangle dt.
+\]
+Indeed $\int\langle w_tw_{rr}\rangle dt
+=-\frac12[\langle w_r^2\rangle]_0^1=0$.
+For every positive integer $k$, set
+\[
+ w_k(t,r)=\sin(\pi t)\cos\bigl(\pi k(r-dct)\bigr).
+\]
+Then $w_{k,t}+dcw_{k,r}=\pi\cos(\pi t)\cos(\pi k(r-dct))$,
+and the displayed quadratic form is exactly
+\begin{equation}\label{eq:saddle-mode}
+ \frac{n\pi^2}{2}\left(1-\frac{d(d+1)}2c^2k^2\right).
+\end{equation}
+It is negative for all sufficiently large $k$. Distinct positive
+integer modes and their derivatives are orthogonal under $r$-averaging.
+The quadratic form is therefore negative on every nonzero finite
+combination of those large modes.
+Every such combination has admissible sufficiently small variations.
+
+Their action is strictly less than $\mathcal S_X(ct)=nc^2$.
+On the unit time interval their raw length satisfies
+$L_{\mathrm{raw}}^2\leq2\mathcal S_X$ by Cauchy--Schwarz.
+Thus an admissible path has length strictly less than $\sqrt{2n}|c|$.
+These raw-action competitors are not required to be strip subgeodesics.
+No definiteness or completeness of the full length infimum is asserted.
+\end{proof}
+
+For a completely explicit threefold example take
+\[
+ u_\varepsilon(t,r)=t+\varepsilon\sin(\pi t)
+                         \cos\bigl(\pi(r-2t)\bigr).
+\]
+Its spatial coefficients are at least $1-\pi|\varepsilon|$ and
+$1-\pi^2|\varepsilon|$. Direct periodic averaging in
+\eqref{eq:radial-action} gives the exact polynomial
+\begin{equation}\label{eq:saddle-polynomial}
+ \mathcal S_X(u_\varepsilon)
+    =3-\frac{3\pi^2}{2}\varepsilon^2
+                     +\frac{111\pi^4}{64}\varepsilon^4.
+\end{equation}
+To check the quartic coefficient, write $f=\sin(\pi t)$ and $p=f'$.
+The averaged quadratic coefficient before multiplication by $n=3$ is
+$(p^2-3\pi^2f^2-2\pi^2fp)/2$; the quartic one is
+$\pi^2f^2(p^2+6\pi^2fp+12\pi^2f^2)/8$.
+All odd coefficients vanish. Use
+$\int fp=\int f^3p=0$, $\int f^2=1/2$, $\int p^2=\pi^2/2$,
+$\int f^4=3/8$ and $\int f^2p^2=\pi^2/8$.
+The choice $\varepsilon=1/100$ is strictly positive spatially and
+has action $2.9985212487\ldots<3$.
+
+\section{Explicit nonconstant paths}
+Choose real $a_0,\ldots,a_{n-1}$, not all equal, and set
+\[
+ v_t([z])=\log\frac{\sum_{j=0}^{n-1}e^{ta_j}|z_j|^2}
+                        {\sum_{j=0}^{n-1}|z_j|^2}.
+\]
+On the strip, the holomorphic map
+$F([z],s)=[e^{a_0s/2}z_0:\cdots:e^{a_{n-1}s/2}z_{n-1}]$
+satisfies
+\[
+ \operatorname{pr}_Y^*\kappa+\ddc V=F^*\kappa.
+\]
+The form has rank $d$, its spatial slices are strictly positive, and
+its $(d+1)$st power vanishes. The bounded base Dirichlet uniqueness
+\cite[Section 2.2, (16)--(17)]{Darvas} identifies this smooth path
+with the Perron segment. Its pullback is the full Hermitian segment
+and is stationary under every smooth variation by
+Theorem~\ref{th:stationary}.
+
+Under $\kappa^d$, the variables
+$x_j=|z_j|^2/\sum|z_j|^2$ have the uniform simplex distribution.
+To see this, take a standard complex Gaussian vector, divide it by its
+norm, and use its unitary invariant projective distribution. Its squared
+coordinates are independent exponential variables before division.
+Thus $\int x_i^2\kappa^d=2/[n(n+1)]$ and
+$\int x_ix_j\kappa^d=1/[n(n+1)]$ for $i\ne j$.
+The initial velocity is $\sum a_jx_j$, and the smooth geodesic
+distance formula gives
+\begin{equation}\label{eq:explicit-action}
+ \begin{split}
+ d_B(\pi^*v_0,\pi^*v_1)^2
+      &=\frac{2\bigl[(\sum_ja_j)^2+\sum_ja_j^2\bigr]}{n+1},\\
+ \mathcal S_X(\pi^*v)=\mathcal A_B(\pi^*v)
+      &=\frac{(\sum_ja_j)^2+\sum_ja_j^2}{n+1}.
+ \end{split}
+\end{equation}
+For $n=3$ and $(a_0,a_1,a_2)=(1,-1,0)$, the squared distance is one
+and the action is $1/2$. These paths are spatially nonconstant on the
+actual nonproduct Hopf manifold.
+
+\section{An explicit singular finite energy family}
+Let $o=[1:0:\cdots:0]\in\PP^d$ and, for $0<a<1$, set canonically
+\[
+ \psi=\log\frac{\sum_{j=1}^d|z_j|^2}{\sum_{j=0}^d|z_j|^2},
+ \qquad v_a=1-(1-\psi)^a,\qquad v_a(o)=-\infty.
+\]
+In the affine chart write $s=\log|z'|^2$,
+$L=\log(1+e^s)$, $P=e^s/(1+e^s)$ and $T=1+L-s\geq1$.
+The local potential $\Phi=L+1-T^a$ has slope
+\[
+ A=P+a(1-P)T^{a-1},\qquad
+ A'=P'(1-aT^{a-1})+a(1-a)(1-P)^2T^{a-2}>0.
+\]
+Thus $v_a$ is $\kappa$-psh off $o$ and smooth across the hyperplane
+at infinity. The bounded $\kappa$-psh truncations $\max(v_a,-j)$
+decrease to its genuine canonical representative. Nontriviality and
+smooth-volume integrability follow from $|v_a|=O((1-s)^a)$ near the
+pole and radial volume $O(e^{ds})\,ds$.
+
+The actual radial flux is $Q(s)=A(s)^d$. The sphere coefficient is one:
+$d^c\log|z'|^2$ has integral one on its Hopf circle, while its Hessian
+is mass-one Fubini--Study on $\PP^{d-1}$. Bounded Stokes on annuli
+therefore gives mass $Q(s_2)-Q(s_1)$. One has $Q(-\infty)=0$ and
+$Q(+\infty)=1$. Finite-level locality and exhaustion by these annuli
+give the actual non-pluripolar mass one, with no pole atom. Smoothness
+at infinity gives no mass on that hyperplane.
+
+As $s\to-\infty$, $T\sim1-s$ and
+\[
+ |v_a|^2\sim T^{2a},\qquad
+ Q'(s)\sim d a^d(1-a)T^{-d(1-a)-1}.
+\]
+Consequently
+\begin{equation}\label{eq:energy-cutoff}
+ \int_Y|v_a|^2\MA_\kappa(v_a)<\infty
+       \quad\Longleftrightarrow\quad a<\frac{d}{d+2}.
+\end{equation}
+At equality the divergence is logarithmic. Every other compact region
+has smooth potential and measure. By \eqref{eq:fiber-integration},
+$\pi^*v_a$ has actual mass $2n$ and lies in $\BB_2$ precisely in
+\eqref{eq:energy-cutoff}. Its pole set is the entire elliptic fiber over $o$.
+For $0<a<b<d/(d+2)$, the two basic potentials have finite positive
+$d_B$ distance, but $T^b-T^a\to\infty$ rules out mutual ordinary
+comparison. Both have ordinary model projection zero, as follows below.
+
+\section{The ordinary model projection and test curves}
+For finite $C$, the full obstacle envelope with obstacle
+$\pi^*\min(v+C,0)$ is invariant under $E$. The same descent proof gives
+\[
+ P_h\bigl(\pi^*\min(v+C,0)\bigr)
+       =\pi^*P_\kappa\bigl(\min(v+C,0)\bigr).
+\]
+Taking the increasing limit and its canonical usc representative yields
+$P_h[\pi^*v]=\pi^*P_\kappa[v]$. In particular base ordinary models
+embed. For $v\in\mathcal E^2$, the base full-mass envelope theorem
+\cite[Theorem 4.3]{Darvas} gives $P_\kappa[v](0)=0$. Hence the
+ordinary model projection of every point of $\BB_2$ is zero; the
+metric in \eqref{eq:distance} retains potential data that this projection
+forgets. Lower and upper volumes of the entire ordinary type include
+nonbasic potentials and are not computed by the basic mass formula.
+
+Ordinary-equivalent endpoints have their common type throughout the
+Perron segment, by the affine maximum barriers and the chord bound.
+No unrestricted stretching-envelope equivalence is inferred from a model
+projection. For a base model test curve, pullback preserves concavity,
+monotonicity and ordinary-model normalization. It commutes with the forward
+usc supremum Legendre transform and the backward pointwise infimum.
+If the associated base Perron ray has every finite slice in $\mathcal E^2$,
+its pullback has every finite segment a $d_B$ geodesic and metric-action
+minimizer. The finite-energy condition is part of this statement.
+
+This construction concerns the complete topology of canonical basic
+finite energy potentials on a genuinely nonclosed manifold. A separating
+complete metric on all ordinary models, with modification and varying
+background compatibility, remains a further problem.
+
+\begin{thebibliography}{9}
+\bibitem{BT} E. Bedford and B. A. Taylor,
+\emph{A new capacity for plurisubharmonic functions},
+Acta Math. \textbf{149} (1982), 1--40.
+\bibitem{BTfine} E. Bedford and B. A. Taylor,
+\emph{Fine topology, Shilov boundary and $(dd^c)^n$},
+J. Funct. Anal. \textbf{72} (1987), 225--251.
+\bibitem{BGL} S. Boucksom, V. Guedj and C. H. Lu,
+\emph{Volumes of Bott--Chern classes}, arXiv:2406.01090.
+\bibitem{Darvas} T. Darvas,
+\emph{The Mabuchi completion of the space of K\"ahler potentials},
+Amer. J. Math. \textbf{139} (2017), 1275--1313;
+arXiv:1401.7318v3.
+\end{thebibliography}
+\end{document}

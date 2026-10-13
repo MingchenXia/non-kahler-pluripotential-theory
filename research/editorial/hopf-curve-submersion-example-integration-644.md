@@ -1,0 +1,13 @@
+# Hopf surface submersions — integration 644
+
+Chapter 16 constructs a compact Hopf-surface submersion over P1 whose ambient Hermitian masses are unbounded. In the distinct rank-one background, its entire model space has the complete curve polar metric, diameter two and analytic closure equal to the ideal subspace. Chapter 1 adds the squared-coordinate example distinguishing fixed-weight multiplier-ideal pullback from all-weight type descent.
+
+The two complete changed inputs receive prebuild and final post-output manual reads. The 643 two-read proof review and its 17 obligations carry at their recorded scope. All 1365 old proof bodies, 1455 statements and 23 formal questions remain byte-exact; incoming S10/S11 and both original manifests are preserved. The two new proof bodies retain their reviewed content, with one cross-reference whitespace repair.
+
+The first author compilation exposes that whitespace diagnostic and is not published. The corrected full build is clean, with 1689 printed and 1717 physical pages. All 38 selected pages in ten sheets are directly viewed, including the new examples and seams, contents, the general P01 question and all 13 index pages. Both covers show October 9, 2026. The actual served PDF checksum, matching homepage and exact-head successful Actions/Pages deployment are verified.
+
+The same catalogue retains 44 descriptions and 40 open assessment scopes; 261 single-page and 26 range locators are refreshed. P01/P17 receive the unbounded-mass Hopf example at its exact scope. Saved-source native compiler call 341 returned no diagnostics through four bounded waits while page review continued, and was terminated. Preview compilation remains unverified; the same editor is retained and no separate catalogue PDF is built.
+
+Actual empty reconstruction passes: all 411 packaged book-source files are exact, all 1717 main-book and 17 companion page texts match production, current payload checksums and safe paths pass, final logs are clean and reconstruction publication is disabled. No new external theorem, original-problem closure, novelty claim or whole-book certificate is made. The base automatic writing audit is unavailable; the reads are manual.
+
+Next: Reconstruct descent and Lelong pullback across critical fibers, then the Gauduchon polar trace, analytic restriction and L1 convergence. Keep any proposed singular-fiber extension inactive until its complete proofs and dependencies receive two reads. Continue incoming-author checks, related primary papers and the whole-book reader queues; general P01/P17 and the other open scopes remain active. Xean is withdrawn.

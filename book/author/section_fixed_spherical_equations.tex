@@ -1,0 +1,79 @@
+\section{Singular measures on shrinking spheres}
+\label{sec:fixed-spherical-equations}
+
+A bounded density with respect to the measure of a bounded potential gives an exponential equation by \cref{thm:bounded-subsolution}. The following construction turns this analytic hypothesis into a test against a probability measure fixed by a coordinate ball. It applies to singular data on every Hermitian background, including backgrounds with zero lower mass.
+
+Fix a Hermitian form $h$ on $X$, with $n\geq2$, a holomorphic coordinate ball centered at a point $p$, and a smooth cutoff $0\leq\chi\leq1$ supported in that ball and equal to one near a smaller closed ball. Choose $r_0>0$ so small that all spheres of radii $r_j=r_0 2^{-j}$, $j\geq1$, lie in the smaller ball. Let $\sigma_j$ denote their normalized Euclidean surface probabilities, extended by zero to $X$, and put
+\begin{equation}\label{eq:fixed-spherical-probability}
+ S_n=\sum_{j\geq1}r_j^{n/2},\qquad
+ \rho=\frac1{S_n}\sum_{j\geq1}r_j^{n/2}\sigma_j.
+\end{equation}
+For a finite positive measure $\nu$, define
+\[
+ M_\rho(\nu)=\left\|\frac{\mathrm d\nu}{\mathrm d\rho}\right\|_{L^\infty(\rho)},
+\]
+with value $+\infty$ when $\nu\not\ll\rho$. The measure $\rho$ is chosen before $\nu$ or the exponent in the equation. Transporting the same measure under a change of coordinates leaves the test unchanged. Allowing the existence of some coordinate ball with this construction gives a sufficient condition independent of a specified chart.
+
+\begin{proposition}\label{prop:fixed-spherical-reference}\index{Non-pluripolar measure!shrinking spheres}\index{Subsolution!singular measure}
+The measure $\rho$ is a singular non-pluripolar probability. There are $k>0$ and $u_\rho\in\PSH(X,h)\cap C^{0,1/2}(X)$ with $\sup_Xu_\rho=0$ such that
+\[
+ h+\ddc u_\rho\geq h/2,\qquad
+ \mathrm{MA}_h(u_\rho)\geq k\rho,\qquad
+ 0<\mathrm{MA}_h(u_\rho)(X)<\infty.
+\]
+\end{proposition}
+\begin{proof}
+In the coordinate ball write $R=|z|$ and set
+\[
+ \psi_j=\chi\log\max\{R^2,r_j^2\}+(1-\chi),
+\]
+extending $\psi_j$ by one outside it. On the transition region of $\chi$, $R$ is bounded away from zero and exceeds all $r_j$. Hence all $\psi_j$ agree there with the same smooth function. Where $\chi=1$ they are plurisubharmonic, and outside its support they are constant. One fixed $K\geq1$ therefore satisfies $\ddc\psi_j\geq-Kh$ for every $j$. Put
+\[
+ Z=2K\sum_{j\geq1}\sqrt{r_j},\qquad
+ d_j=\frac{\sqrt{r_j}}Z,\qquad u_0=\sum_{j\geq1}d_j\psi_j.
+\]
+The estimate $\|\psi_j\|_\infty\leq C(1+|\log r_j|)$ gives uniform convergence, and $\sum d_j=1/(2K)$ yields $h+\ddc u_0\geq h/2$.
+
+For two points of the inner ball at Euclidean distance $t$, the reverse triangle inequality gives
+\[
+ |\log\max\{|z|^2,r_j^2\}-\log\max\{|z'|^2,r_j^2\}|
+ \leq2\log(1+t/r_j).
+\]
+The contribution of $r_j\geq t$ is at most $Ct\sum_{r_j\geq t}r_j^{-1/2}\leq C\sqrt t$. For $r_j<t$, summing the geometric tail gives at most $C\sqrt t\sum_{\ell\geq0}2^{-\ell/2}(1+\ell)$. On the cutoff transition and outside, the series is a fixed smooth function. These estimates give a local $1/2$-H\"older bound near every point. A finite cover and the bound on the oscillation give the global bound.
+
+On the smaller ball, the currents $\ddc\psi_j$ are closed and positive. Expand the product of $h+\sum_{j\leq N}d_j\ddc\psi_j$ there and retain its positive diagonal terms. By \cref{lem:spherical-bounded-product}, these are $d_j^n\sigma_j$. Uniform convergence of the corrected bounded potentials gives weak convergence of their products. Testing against nonnegative functions and first retaining any fixed finite number of diagonal terms therefore gives
+\[
+ \mathrm{MA}_h(u_0)\geq\sum_{j\geq1}d_j^n\sigma_j
+                       =\frac{S_n}{Z^n}\rho.
+\]
+Here the right-hand side is supported strictly inside the smaller ball, so the inequality extends to $X$. Each $\sigma_j$ is non-pluripolar by the same lemma; countable additivity gives that property for $\rho$. The countable union of the spheres has zero smooth volume, which proves singularity. Local bounded-product estimates on a finite cover make the mass of $u_0$ finite, and the retained inequality makes it positive. Set $k=S_n/Z^n$ and subtract $\sup_Xu_0$ to obtain $u_\rho$.
+\end{proof}
+
+\Needspace{16\baselineskip}
+\begin{corollary}\label{cor:fixed-spherical-homogeneous}\index{Monge--Ampere equation@Monge--Amp\`ere equation!singular spherical data}
+Let $\nu$ be a finite nonzero positive measure with $M_\rho(\nu)<\infty$. There are $c>0$ and a H\"older continuous $w\in\PSH(X,h)$ satisfying
+\[
+ \sup_Xw=0,\qquad\mathrm{MA}_h(w)=c\nu,
+ \qquad0<\mathrm{MA}_h(w)(X)<\infty.
+\]
+\end{corollary}
+\begin{proof}
+By \cref{prop:fixed-spherical-reference}, $\nu\leq (M_\rho(\nu)/k)\mathrm{MA}_h(u_\rho)$, where $u_\rho$ is H\"older continuous with exponent $1/2$. Apply \cref{thm:holder-reference-homogeneous-equation}. The equation and $0<c<\infty$ give its positive finite mass.
+\end{proof}
+
+\begin{theorem}\label{thm:fixed-spherical-exponential}\index{Monge--Ampere equation@Monge--Amp\`ere equation!singular spherical data}
+Let $\nu$ be a finite nonzero positive measure with $M_\rho(\nu)<\infty$. Then $\nu$ is non-pluripolar and
+\[
+ \mathrm{MA}_h(u_\rho)\geq\frac{k}{M_\rho(\nu)}\nu.
+\]
+For every $\lambda>0$ there is a unique bounded $U_\lambda\in\PSH(X,h)$ satisfying
+\[
+ \mathrm{MA}_h(U_\lambda)=\mathrm e^{\lambda U_\lambda}\nu,
+ \qquad0<\mathrm{MA}_h(U_\lambda)(X)<\infty.
+\]
+\end{theorem}
+\begin{proof}
+Since $\nu\leq M_\rho(\nu)\rho$, the reference inequality proves the first assertion. Write $\alpha=\mathrm{MA}_h(u_\rho)$. Then $\nu=f\alpha$ with $0\leq f\leq M_\rho(\nu)/k$. The form $h>0$ is semipositive and big, so \cref{thm:bounded-subsolution} gives the unique bounded solution. Its boundedness and the equation give positive finite mass.
+\end{proof}
+
+The scalar in the exponential equation is fixed: adding a constant to $U_\lambda$ changes its right-hand side. The theorem imposes no supremum normalization and does not assert uniqueness among unbounded potentials. For example, it applies to every bounded nonzero nonnegative density on any one of the chosen spheres. Failure of the test gives no obstruction to solvability. The homogeneous equation is supplied separately by \cref{cor:fixed-spherical-homogeneous}, with a positive coefficient obtained as part of the solution. The construction does not identify a largest admissible coefficient or establish uniqueness for that equation.

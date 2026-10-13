@@ -1,0 +1,44 @@
+Uniform bounds for the solution forms need not give derivative bounds, or even equicontinuity, for their normalized logarithmic densities.
+
+\Needspace{13\baselineskip}
+\begin{example}\label{ex:gaud-oscillatory-controlled-hessians}\index{Adjoint measure!oscillatory controlled Hessians}
+For every fixed $0<\varepsilon<1$, there are $v_j\in\mathcal V_\varepsilon$ with $\|v_j\|_{C^0}\to0$ such that their normalized densities $F_{v_j}$ are pairwise distinct, bounded in $C^0$, and unbounded in $C^1$. This family is not equicontinuous. Nevertheless, both densities of its exact maximizers satisfy the uniform bounds of \cref{thm:gaud-hessian-adjoint-endpoint}.
+\end{example}
+\begin{proof}
+Choose holomorphic coordinates centered at a point $p$, put $x=\operatorname{Re}z_1$, and take a smooth real cutoff $\zeta$ supported in the chart and equal to one near $p$. We may assume $0\leq\zeta\leq1$. On the chart set
+\[
+ \beta=dx\wedge\dc x=\ddc(x^2/2)
+       =\frac{\mathrm i}{8\pi}dz_1\wedge d\bar z_1.
+\]
+This is a nonzero semipositive form of rank one. For a constant $a>0$ to be chosen, extend
+\[
+ w_j=\frac a{j^2}\zeta\sin(jx)
+\]
+by zero outside the chart, and put $v_j=w_j-\sup_Xw_j$. The product rule gives
+\begin{align*}
+ \ddc w_j={}&-a\zeta\sin(jx)\beta
+       +\frac a j\cos(jx)
+          (d\zeta\wedge\dc x+dx\wedge\dc\zeta)\\
+       &+\frac a{j^2}\sin(jx)\ddc\zeta.
+\end{align*}
+All fixed forms in this expression have compact support after multiplication by the indicated cutoff or its derivatives. Thus a fixed $C>0$ bounds the operator norm of $\ddc w_j$ relative to $\omega$ by $aC$ for every $j\geq1$. Choose $a$ so small that $aC\leq\varepsilon/2$. Then $v_j\in\mathcal V_\varepsilon$, and $\|v_j\|_{C^0}\leq2a/j^2$.
+
+Write $s=\operatorname{tr}_{\omega(p)}\beta>0$. Since $x(p)=0$ and $\zeta=1$ near $p$, we have $\Omega_{v_j}(p)=\omega(p)$ and
+\[
+ \partial_x\Omega_{v_j}(p)=\partial_x\omega(p)-aj\beta.
+\]
+Differentiating the logarithmic determinant, and observing that its normalizing integral is constant in the spatial variable, gives the exact identity
+\[
+ \partial_xF_{v_j}(p)
+   =\partial_x\log\frac{\omega^n}{\mathrm{d}V}(p)-ajs.
+\]
+These derivatives are pairwise different and their absolute values tend to infinity. Hence the densities are pairwise distinct and their $C^1$ norms are unbounded. Their uniform $C^0$ bound is part of \cref{thm:gaud-hessian-adjoint-endpoint}.
+
+To check failure of equicontinuity, take points $p_j^\pm$ with $x=\pm\pi/(2j)$ and all other real coordinates zero. For large $j$ they lie where $\zeta=1$, and
+$\Omega_{v_j}(p_j^\pm)=\omega(p_j^\pm)\mp a\beta$. The integral normalizing $F_{v_j}$ cancels from the difference, so
+\[
+ F_{v_j}(p_j^-)-F_{v_j}(p_j^+)
+       \longrightarrow\log\frac{1+as}{1-as}>0.
+\]
+Indeed, $\beta^2=0$ gives $(\omega(p)\pm a\beta)^n=(1\pm as)\omega(p)^n$, and $as<1$ by the chosen form comparison. Both points tend to $p$, which proves the failure of equicontinuity. The exact-adjoint bounds still apply because the entire sequence lies in $\mathcal V_\varepsilon$.
+\end{proof}

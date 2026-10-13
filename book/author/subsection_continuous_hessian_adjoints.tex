@@ -1,0 +1,154 @@
+\subsection{Continuous positive complex Hessians}
+\label{subsec:continuous-hessian-adjoints}
+
+The smooth recovery theorem extends to a bounded solution whose complex
+Hessian is continuous and everywhere positive. In this case one can
+vary the potential in both directions, and the resulting densities
+force every supporting probability to annihilate the same elliptic
+operator. The Sobolev range theorem then gives uniqueness.
+
+\Needspace{14\baselineskip}
+\begin{theorem}\label{thm:continuous-hessian-adjoint-uniqueness}\index{Adjoint measure!continuous positive Hessian}
+Let $n\geq2$, let $\theta=\omega$ be a Hermitian form, and let $\varphi=0$.
+Suppose $F\in C(X)$ and a bounded solution $u\in\PSH(X,\omega)$ of
+\eqref{eq:relative-normalization} has distributional complex Hessian
+represented by a continuous form
+\[
+ \sigma=\omega+\ddc u>0
+\]
+everywhere on $X$. Then $\mathcal A_0(F)$ consists of one probability
+$\nu_F$. It satisfies
+\begin{align*}
+ \int_X L_\sigma h\,\mathrm d\nu_F&=0\quad(h\in C^\infty(X)),\\
+ DB_0(F)[H]&=-\int_XH\,\mathrm d\nu_F\quad(H\in C(X)).
+\end{align*}
+The derivative is taken in the G\^ateaux sense.
+\end{theorem}
+\begin{proof}
+The continuous trace of $\ddc u$ is the Euclidean Laplacian of $u$, up
+to the fixed normalization. Local constant-coefficient elliptic
+regularity gives $u\in W^{2,p}$ for every finite $p$. Indeed, subtract
+the Newtonian potential of a cutoff of this trace. Its second
+high-frequency derivatives are order-zero multipliers, and the
+low-frequency kernels are locally bounded; the remaining distribution
+is harmonic. Sobolev embedding gives a $C^{1,\alpha}$ representative
+for every $\alpha<1$, which agrees with the quasi-psh representative.
+
+On a coordinate ball choose smooth $\rho$ with $\ddc\rho\geq\omega$.
+The radial regularizations of the bounded psh function $u+\rho$ decrease
+to it, and their complex Hessians converge uniformly on smaller balls.
+Continuity of bounded products and the finite smooth-background
+expansion identify $(\omega+\ddc u)^n$ with $\sigma^n$. For smooth real
+$h$, the same argument applies to $u+th$, which is admissible for all
+sufficiently small signed $t$ by uniform positivity. Define
+\[
+ F_t=F+\log\frac{(\sigma+t\ddc h)^n}{\sigma^n}.
+\]
+Its equation has the same normalization scalar as the equation for $u$,
+so $B_0(F_t)=B_0(F)$. The supporting inequality gives
+$\int_X(F_t-F)\,\mathrm d\nu\leq0$ for each
+$\nu\in\mathcal A_0(F)$. Since
+$F_t-F=tL_\sigma h+O(t^2)$ uniformly, using both signs yields stationarity.
+
+Choose $p=4n+1$ and $q=p/(p-1)=1+1/(4n)$. By
+\cref{cor:gaud-adjoint-lq}, every supporting probability has an $L^q$
+density, since $q<n/(n-1)$. Smooth density in $W^{2,p}$ extends its
+stationarity to every $W^{2,p}$ test. By
+\cref{lem:continuous-hermitian-fredholm}, all these densities lie in a
+one-dimensional space. Their integrals equal one, so they coincide.
+Nonemptiness is \cref{thm:weak-adjoint-probabilities}, and the derivative
+formula follows from \cref{prop:normalization-directional}.
+\end{proof}
+
+\subsection{Products with a Hermitian factor}
+
+An explicit product construction exhibits the criterion for densities
+with an arbitrary continuous modulus. Let $(Y,\kappa)$ be a connected
+compact Hermitian $k$-fold, $k\geq1$, with $\int_Y\kappa^k=1$.
+Denote by $\nu_\kappa$ the smooth stationary probability of
+$L_\kappa=\operatorname{tr}_\kappa\ddc$, given by the Gauduchon multiplier
+when $k\geq2$; for $k=1$ it is $\kappa$. Write $w$ for the
+Fubini--Study area of mass one on $\mathbb P^1$. All factor forms and
+functions below are pulled back to $X=\mathbb P^1\times Y$.
+
+\begin{proposition}\label{prop:continuous-product-adjoint}\index{Adjoint measure!Hermitian product}
+Let $a>0$, let $b$ be smooth and positive on $\mathbb P^1$, and let $A$
+be continuous and positive there, with $\int_{\mathbb P^1}Aw=a$.
+For
+\[
+ \omega=aw+b\kappa,\qquad \mathrm dV=w\wedge\kappa^k,
+ \qquad F=\log((k+1)Ab^k),
+\]
+one has
+\[
+ c_0(F)=1,\qquad
+ \mathcal A_0(F)=\left\{\frac Aa\,w\otimes\nu_\kappa\right\}.
+\]
+\end{proposition}
+\begin{proof}
+The Green solution of $\ddc u=(A-a)w$ on $\mathbb P^1$ has continuous
+complex Hessian and is bounded. Its pullback yields
+$\sigma=Aw+b\kappa>0$, and
+$\sigma^{k+1}=(k+1)Ab^kw\wedge\kappa^k$.
+Thus scalar uniqueness gives $c_0(F)=1$, and
+\cref{thm:continuous-hessian-adjoint-uniqueness} gives a unique support.
+For every smooth $h$ depending on all variables, the block decomposition
+\[
+ L_\sigma h=A^{-1}L_wh+b^{-1}L_\kappa h
+\]
+shows that $(A/a)w\otimes\nu_\kappa$ is stationary: the first term
+integrates to zero by Stokes on $\mathbb P^1$, and the second by
+stationarity on $Y$ and Fubini. This candidate has a bounded density
+with respect to $\mathrm dV$. The one-dimensional annihilator of
+\cref{lem:continuous-hermitian-fredholm} and probability normalization
+therefore identify it with the supporting probability.
+\end{proof}
+
+\begin{example}\label{ex:non-dini-hopf-product-adjoint}\index{Dini continuity!failure with unique adjoint}\index{Hopf manifold!adjoint product example}
+There is a non-K\"ahler threefold with a nonclosed Hermitian background
+and a positive continuous density whose logarithm is neither Dini
+continuous nor H\"older continuous of any positive order, but whose
+supporting probability is explicit and unique.
+\end{example}
+\begin{proof}
+Take the Hopf surface
+$Y=(\mathbb C^2\setminus\{0\})/\langle z\mapsto2z\rangle$ and its
+unit-volume metric $\kappa=c|z|^{-2}\ddc|z|^2$, where $c>0$ is chosen
+so that $\int_Y\kappa^2=1$. Put $s=\log|z|^2$, $\alpha=\ddc s$ and
+$\beta=\mathrm ds\wedge\dc s$, so that $\kappa=c(\alpha+\beta)$.
+The differentiation in \eqref{eq:hopf-torsion} applies in this dimension.
+Here $\alpha$ has rank one, so $\ddc\kappa=-c\alpha^2=0$ and
+$\nu_\kappa=\kappa^2$. Polar coordinates identify $Y$ with
+$S^3\times S^1$, hence $H^2(Y,\mathbb R)=0$. A closed positive form
+would be exact and have positive square integral, contradicting Stokes.
+Thus $Y$ is non-K\"ahler, and so is $\mathbb P^1\times Y$, by restriction.
+
+Let $\tau\in[-1,1]$ be the height on $\mathbb P^1$, set $b=2+\tau$,
+and put
+\[
+ f(t)=\begin{cases}
+       1/\log(e/|t|),&0<|t|\leq1,\\
+       0,&t=0,
+      \end{cases}
+\]
+\[
+ A=a+\varepsilon\left(f(\tau)-\int_{\mathbb P^1}f(\tau)w\right),
+ \quad0<\varepsilon<a.
+\]
+Since $0\leq f\leq1$, this is a positive continuous function of mean
+$a$. Along a normal segment to the equator, $|\tau|$ is comparable
+to the distance $r$. The oscillation of $A$ is therefore bounded below
+by a positive multiple of $1/\log(e/r)$. Its Dini integral
+$\int_0^{r_0}\mathrm dr/(r\log(e/r))$ diverges, and this modulus is
+larger than every $r^\gamma$, $\gamma>0$, as $r\downarrow0$.
+The logarithm of $A$ has the same lower bound, because $A$ is uniformly
+positive and bounded. The smooth term $2\log b$ contributes only $O(r)$,
+so $F=\log(3Ab^2)$ has neither regularity. The mixed component
+$\mathrm db\wedge\kappa$ shows that $\omega=aw+b\kappa$ is nonclosed.
+By \cref{prop:continuous-product-adjoint}, its supporting probability
+is $(A/a)w\wedge\kappa^2$.
+\end{proof}
+
+The theorem assumes a continuous positive complex Hessian for a bounded
+solution. It does not establish that hypothesis for every continuous $F$;
+the uniqueness question for arbitrary continuous data remains open.

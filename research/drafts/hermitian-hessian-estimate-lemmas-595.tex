@@ -1,0 +1,101 @@
+% Inactive research fragment. Not an active book input or a regularity theorem.
+% The mixed-form lemma uses Garding positivity as an external algebraic input.
+% The comparison lemma is explicitly conditional on bounded domination.
+\section{Algebra for an admissible Hessian equation}
+
+Let $1\leq m\leq n$. For $\lambda\in\mathbb R^n$, let $S_j(\lambda)$ be the elementary symmetric polynomial of degree $j$, put $\sigma_j=S_j/\binom nj$ and $\sigma_0=1$, and set
+\[
+ \Gamma_m=\{\lambda:S_j(\lambda)>0,\ 1\leq j\leq m\}.
+\]
+The following shift estimate controls admissible eigenvalues even when some of them are negative.
+
+\begin{lemma}\label{draft:595-hessian-cone-shift}
+For $\lambda\in\Gamma_m$, put
+\[
+ e_m=\frac{\sigma_m(\lambda)}{m\sigma_{m-1}(\lambda)}.
+\]
+Then $\lambda-t\mathbf1\in\Gamma_m$ for $0\leq t<e_m$. If $m\geq2$, the conclusion also holds for $t=e_m$. For $m=1$, the endpoint lies on the boundary.
+\end{lemma}
+\begin{proof}
+The polynomial
+\[
+ P(x)=\sigma_m(\lambda+x\mathbf1)
+     =\sum_{j=0}^m\binom mj\sigma_j(\lambda)x^{m-j}
+\]
+is a positive multiple of the $(n-m)$th derivative of $\prod_i(x+\lambda_i)$. Hence all its roots are real, by Rolle's theorem. Its coefficients are positive, so all its roots are strictly negative. Write $P(x)=\prod_{i=1}^m(x+r_i)$ with $r_i>0$. Logarithmic differentiation at zero gives
+\[
+ \sum_{i=1}^m r_i^{-1}
+       =\frac{m\sigma_{m-1}(\lambda)}{\sigma_m(\lambda)}
+       =e_m^{-1}.
+\]
+Thus $\min_i r_i\geq e_m$, with strict inequality if $m\geq2$. For $x> -\min_i r_i$, every derivative of $P$ is positive: differentiating its product expansion produces sums of products of positive factors. Since
+\[
+ P^{(m-j)}(x)=\frac{m!}{j!}\sigma_j(\lambda+x\mathbf1),
+ \qquad 1\leq j\leq m,
+\]
+all the required symmetric polynomials are positive at $x=-t$. When $m=1$, the sole root is $-e_1$.
+\end{proof}
+
+Fix a positive Hermitian form $\omega$ on an $n$-dimensional complex vector space. A real $(1,1)$-form belongs to $\Gamma_m(\omega)$ if its eigenvalues relative to $\omega$ belong to $\Gamma_m$. In the next lemma we use the classical G\aa rding positivity of polarized products: the wedge of $k$ forms in $\Gamma_k(\omega)$ with $\omega^{n-k}$ is positive. This is an external algebraic input, not proved in this fragment.
+
+\begin{lemma}\label{draft:595-hessian-mixed-trace}
+If $\alpha,\gamma\in\Gamma_m(\omega)$, then
+\[
+ \frac{\alpha^{m-1}\wedge\gamma\wedge\omega^{n-m}}{\omega^n}
+ \frac{\alpha\wedge\omega^{n-1}}{\omega^n}
+ \geq\frac1{m!}
+ \frac{\alpha^m\wedge\omega^{n-m}}{\omega^n}
+ \frac{\gamma\wedge\omega^{n-1}}{\omega^n}.
+\]
+The assertion extends to $\gamma\in\overline{\Gamma_m(\omega)}$ by continuity.
+\end{lemma}
+\begin{proof}
+Write $\sigma_k=\alpha^k\wedge\omega^{n-k}/\omega^n$, and
+$M_k=\alpha^{k-1}\wedge\gamma\wedge\omega^{n-k}/\omega^n$.
+For $1\leq k<m$, the cone shift with index $k+1$ and G\aa rding positivity give
+\[
+ M_{k+1}\geq tM_k
+ \quad\left(0\leq t<\frac{\sigma_{k+1}}{(k+1)\sigma_k}\right).
+\]
+Let $t$ increase to the displayed endpoint. Iterating, starting with $M_1=\gamma\wedge\omega^{n-1}/\omega^n$, yields
+\[
+ M_m\geq\frac{\sigma_m}{m!\sigma_1}M_1.
+\]
+All denominators are positive. Approximating a form in the closed cone by $\gamma+\delta\omega$, $\delta\downarrow0$, gives the last assertion.
+\end{proof}
+
+\begin{lemma}\label{draft:595-hessian-gradient-absorption}
+For $\epsilon>0$, let $\chi(t)=-(1/12)\log(2\epsilon-t)$ on $|t|\leq\epsilon$. Suppose $q=\chi'(t)\geq8$. For any $a,b\in\mathbb C$,
+\[
+ \chi''(t)|a-b|^2-(9q^2+2q)|a|^2-q|a|
+       \geq q^2|a|^2-1-84q^2|b|^2.
+\]
+In particular, let $v,\widetilde\varphi$ be smooth real functions with $|v-\widetilde\varphi|\leq\epsilon$, and take derivatives in an $\omega$-unitary frame. For a positive diagonal linearized operator with coefficients $B_p$, setting $t=v-\widetilde\varphi$, $a=v_p$, $b=\widetilde\varphi_p$ and summing gives an error bounded by
+$(1+84q^2\sup|\partial\widetilde\varphi|_\omega^2)\sum_pB_p$.
+The condition $q\geq8$ holds throughout this interval if $\epsilon\leq1/288$.
+\end{lemma}
+\begin{proof}
+Young's inequality gives $|a-b|^2\geq(7/8)|a|^2-7|b|^2$. Since $\chi''=12q^2$, the coefficient of $|a|^2$ after subtracting $9q^2$ is $3q^2/2$. Moreover, $2q\leq q^2/4$ and $q|a|\leq q^2|a|^2/4+1$. The remaining coefficient is at least $q^2$, and the error involving $b$ is $84q^2|b|^2$. Finally $q\geq1/(36\epsilon)$, which proves the last assertion. The weighted version follows by summing the scalar inequality with positive coefficients.
+\end{proof}
+
+\subsection{An exponential comparison consequence}
+
+Let $(X,\omega)$ be compact Hermitian, and let $H_m(u)=(\omega+\ddc u)^m\wedge\omega^{n-m}$ denote the bounded Hessian measure. For this subsection, assume that these measures are defined, addition of constants preserves them, and the following bounded domination principle holds: if
+$\mathbf1_{\{u<v\}}H_m(u)\leq c\mathbf1_{\{u<v\}}H_m(v)$ for a constant $0\leq c<1$, then $u\geq v$.
+This hypothesis still requires its own primary proof review before use in the book.
+
+\begin{lemma}\label{draft:595-hessian-exponential-order}
+For bounded admissible $u,v$ and $a>0$, if
+\[
+ e^{-av}H_m(v)\geq e^{-au}H_m(u),
+\]
+then $u\geq v$.
+\end{lemma}
+\begin{proof}
+Fix $\delta>0$. On $\{u<v-\delta\}$, the assumed inequality gives
+\[
+ H_m(u)\leq e^{a(u-v)}H_m(v)
+       \leq e^{-a\delta}H_m(v-\delta).
+\]
+The constant $e^{-a\delta}$ is strictly smaller than one, so bounded domination applied to $u$ and $v-\delta$ gives $u\geq v-\delta$. Letting $\delta\downarrow0$ proves the assertion.
+\end{proof}

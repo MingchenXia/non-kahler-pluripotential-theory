@@ -702,6 +702,189 @@ for name in (
     "research/audits/projective-complement-curvature-integration-512.json",
     "research/editorial/projective-complement-curvature-integration-512.md",
     "research/source-disposition-526.json",
+    "research/source-disposition-529.json",
+    "research/audits/left-limit-integration-529.json",
+    "research/editorial/latest-author-left-limit-integration-529.md",
+    "research/source-disposition-530.json",
+    "research/audits/closed-factor-integration-530.json",
+    "research/editorial/closed-factor-integration-530.md",
+    "research/source-disposition-531.json",
+    "research/audits/flat-lck-integration-531.json",
+    "research/editorial/flat-lck-integration-531.md",
+    "research/source-disposition-532.json",
+    "research/audits/radial-integrable-selection-532.json",
+    "research/editorial/radial-integrable-selection-532.md",
+    "research/source-disposition-533.json",
+    "research/audits/moving-logarithmic-selection-533.json",
+    "research/editorial/moving-logarithmic-selection-533.md",
+    "research/source-disposition-534.json",
+    "research/editorial/radial-residual-regularity-535.md",
+    "research/audits/radial-residual-regularity-535.json",
+    "research/source-disposition-535.json",
+    "research/editorial/divisorial-type-thresholds-536.md",
+    "research/audits/divisorial-type-thresholds-536.json",
+    "research/source-disposition-536.json",
+    "research/editorial/fixed-trace-interpolation-539.md",
+    "research/audits/fixed-trace-interpolation-539.json",
+    "research/source-disposition-539.json",
+    "research/editorial/integrated-hermitian-curvature-540.md",
+    "research/audits/integrated-hermitian-curvature-540.json",
+    "research/source-disposition-540.json",
+    "research/editorial/hopf-all-dimensional-mass-541.md",
+    "research/audits/hopf-all-dimensional-mass-541.json",
+    "research/source-disposition-541.json",
+    "research/editorial/hopf-projective-traces-542.md",
+    "research/audits/hopf-projective-traces-542.json",
+    "research/source-disposition-542.json",
+    "research/editorial/introduction-continuity-543.md",
+    "research/audits/introduction-continuity-543.json",
+    "research/source-disposition-543.json",
+    "research/editorial/torus-sectional-rigidity-544.md",
+    "research/audits/torus-sectional-rigidity-544.json",
+    "research/source-disposition-544.json",
+    "research/editorial/foundations-reader-continuity-545.md",
+    "research/audits/foundations-reader-continuity-545.json",
+    "research/source-disposition-545.json",
+    "research/editorial/singular-radial-obstacles-546.md",
+    "research/audits/singular-radial-obstacles-546.json",
+    "research/source-disposition-546.json",
+    "research/editorial/products-ideals-reader-continuity-547.md",
+    "research/audits/products-ideals-reader-continuity-547.json",
+    "research/source-disposition-547.json",
+    "research/editorial/potentials-envelopes-reader-continuity-548.md",
+    "research/audits/potentials-envelopes-reader-continuity-548.json",
+    "research/source-disposition-548.json",
+    "research/editorial/polar-curvature-chapter-one-reader-549.md",
+    "research/audits/polar-curvature-chapter-one-reader-549.json",
+    "research/source-disposition-549.json",
+    "research/editorial/torsion-mass-energy-reader-550.md",
+    "research/audits/torsion-mass-energy-reader-550.json",
+    "research/source-disposition-550.json",
+    "research/editorial/gauduchon-chapter-reader-551.md",
+    "research/audits/gauduchon-chapter-reader-551.json",
+    "research/source-disposition-551.json",
+    "research/editorial/gauduchon-trace-topology-reader-552.md",
+    "research/audits/gauduchon-trace-topology-reader-552.json",
+    "research/source-disposition-552.json",
+    "research/editorial/non-pluripolar-products-reader-553.md",
+    "research/audits/non-pluripolar-products-reader-553.json",
+    "research/source-disposition-553.json",
+    "research/editorial/weighted-measures-reader-554.md",
+    "research/audits/weighted-measures-reader-554.json",
+    "research/source-disposition-554.json",
+    "research/editorial/hopf-mass-reader-555.md",
+    "research/audits/hopf-mass-reader-555.json",
+    "research/source-disposition-555.json",
+    "research/editorial/smooth-equations-reader-556.md",
+    "research/audits/smooth-equations-reader-556.json",
+    "research/source-disposition-556.json",
+    "research/editorial/continuous-equations-reader-557.md",
+    "research/audits/continuous-equations-reader-557.json",
+    "research/source-disposition-557.json",
+    "research/editorial/degenerate-uniqueness-reader-558.md",
+    "research/audits/degenerate-uniqueness-reader-558.json",
+    "research/source-disposition-558.json",
+    "research/editorial/envelopes-reader-559.md",
+    "research/audits/envelopes-reader-559.json",
+    "research/source-disposition-559.json",
+    "research/editorial/prescribed-equations-reader-560.md",
+    "research/audits/prescribed-equations-reader-560.json",
+    "research/source-disposition-560.json",
+    "research/editorial/normalization-reader-561.md",
+    "research/audits/normalization-reader-561.json",
+    "research/source-disposition-561.json",
+    "research/editorial/ideal-envelopes-reader-562.md",
+    "research/audits/ideal-envelopes-reader-562.json",
+    "research/source-disposition-562.json",
+    "research/editorial/perron-legendre-reader-563.md",
+    "research/audits/perron-legendre-reader-563.json",
+    "research/source-disposition-563.json",
+    "research/editorial/intrinsic-traces-reader-564.md",
+    "research/audits/intrinsic-traces-reader-564.json",
+    "research/source-disposition-564.json",
+    "research/editorial/weighted-sections-reader-565.md",
+    "research/audits/weighted-sections-reader-565.json",
+    "research/source-disposition-565.json",
+    "research/editorial/flag-bodies-reader-566.md",
+    "research/audits/flag-bodies-reader-566.json",
+    "research/source-disposition-566.json",
+    "research/editorial/hopf-reduction-reader-567.md",
+    "research/audits/hopf-reduction-reader-567.json",
+    "research/source-disposition-567.json",
+    "research/editorial/divisorial-models-reader-568.md",
+    "research/audits/divisorial-models-reader-568.json",
+    "research/source-disposition-568.json",
+    "research/editorial/nonclosed-classes-reader-569.md",
+    "research/audits/nonclosed-classes-reader-569.json",
+    "research/source-disposition-569.json",
+    "research/editorial/envelope-systems-reader-570.md",
+    "research/audits/envelope-systems-reader-570.json",
+    "research/source-disposition-570.json",
+    "research/editorial/gauduchon-variational-volume-reader-571.md",
+    "research/audits/gauduchon-variational-volume-reader-571.json",
+    "research/source-disposition-571.json",
+    "research/editorial/partial-kernels-reader-572.md",
+    "research/audits/partial-kernels-reader-572.json",
+    "research/source-disposition-572.json",
+    "research/editorial/bott-chern-loci-reader-573.md",
+    "research/audits/bott-chern-loci-reader-573.json",
+    "research/source-disposition-573.json",
+    "research/editorial/lck-reader-574.md",
+    "research/audits/lck-reader-574.json",
+    "research/source-disposition-574.json",
+    "research/editorial/bounded-mass-volumes-reader-575.md",
+    "research/audits/bounded-mass-volumes-reader-575.json",
+    "research/source-disposition-575.json",
+    "research/editorial/relative-finite-equations-reader-576.md",
+    "research/audits/relative-finite-equations-reader-576.json",
+    "research/source-disposition-576.json",
+    "research/editorial/big-bounded-mass-equations-reader-577.md",
+    "research/audits/big-bounded-mass-equations-reader-577.json",
+    "research/source-disposition-577.json",
+    "research/editorial/open-problems-reader-578.md",
+    "research/audits/open-problems-reader-578.json",
+    "research/source-disposition-578.json",
+    "research/editorial/incoming-p14-intake-579.md",
+    "research/audits/incoming-p14-intake-579.json",
+    "research/editorial/warped-endpoint-integration-580.md",
+    "research/audits/warped-endpoint-integration-580.json",
+    "research/source-disposition-580.json",
+    "research/editorial/chapter33-reader-revision-581.md",
+    "research/audits/chapter33-reader-revision-581.json",
+    "research/source-disposition-581.json",
+    "research/editorial/appendix-reader-revision-582.md",
+    "research/audits/appendix-reader-revision-582.json",
+    "research/source-disposition-582.json",
+    "research/editorial/front-matter-coherence-583.md",
+    "research/audits/front-matter-coherence-583.json",
+    "research/source-disposition-583.json",
+    "research/editorial/nonclosed-ruled-trace-integration-585.md",
+    "research/audits/nonclosed-ruled-trace-integration-585.json",
+    "research/source-disposition-585.json",
+    "research/editorial/current-arxiv-intake-586.md",
+    "research/audits/current-arxiv-intake-586.json",
+    "research/editorial/affine-toric-adapted-integration-587.md",
+    "research/audits/affine-toric-adapted-integration-587.json",
+    "research/source-disposition-587.json",
+    "research/editorial/curvature-rank-primary-review-588.md",
+    "research/audits/curvature-rank-primary-review-588.json",
+    "research/drafts/curvature-rank-section-growth-588.tex",
+    "research/editorial/rotational-hopf-primary-review-590.md",
+    "research/audits/rotational-hopf-primary-review-590.json",
+    "research/drafts/rotational-hopf-damping-590.tex",
+    "research/editorial/rotational-hopf-damping-integration-591.md",
+    "research/audits/rotational-hopf-damping-integration-591.json",
+    "research/source-disposition-591.json",
+    "research/editorial/quotient-boundary-ideals-538.md",
+    "research/audits/quotient-boundary-ideals-538.json",
+    "research/source-disposition-538.json",
+    "research/editorial/continuous-potential-product-measures-537.md",
+    "research/audits/continuous-potential-product-measures-537.json",
+    "research/source-disposition-537.json",
+    "research/audits/singular-product-adjoints-534.json",
+    "research/editorial/singular-product-adjoints-534.md",
+    "research/editorial/whole-book-presentation-revision-527.md",
+    "research/editorial/oeljeklaus-toma-directions-528.md",
     "research/audits/greatest-exponential-left-limits-526.json",
     "research/editorial/greatest-exponential-left-limits-526.md",
     "research/papers/greatest-exponential-left-limits-526.tex",
@@ -1500,6 +1683,29 @@ for name in (
     "research/editorial/section_divisorial_trace_representatives.tex",
 ):
     selected.add(root / name)
+selected.update(root / name for name in ['.gitattributes', 'BLUEPRINT.md', 'CHANGELOG.md', 'research/STATUS.md', 'research/audits/curvature-rank-section-integration-589.json', 'research/audits/incoming-S02-preservation-589.json', 'research/editorial/curvature-rank-section-integration-589.md', 'research/papers/S02-sharp-damping-in-the-rotational-Hopf-sector.tex', 'research/source-disposition-589.json', 'research/xean/README.md', 'research/xean/results/GitHub-S11-nonclosed-ruled-A-G-push-20261008.json', 'research/xean/results/S02-before-publication-incoming-author-preservation-20261008.json', 'research/xean/results/S02-frozen-argument-terminal-newline-preservation-20261008.json', 'research/xean/results/S02-original-task.json', 'research/xean/results/S02-publication-incoming-checkpoint588-preservation-20261008.json', 'research/xean/results/S02-queued-capacity-truncation-and-support-root-reassessment-20261008.pending.json', 'research/xean/results/S02-rotational-A-E-checked-result-20261008.json', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-actual-owner-registration.json', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-argument.md', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-complete-result.json', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-ready-assembly.pending.json', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-reviewed-source.tex', 'research/xean/results/S02-rotational-A-E-evidence-bound-final-recheck-20261008-task.json', 'research/xean/results/S02-rotational-A-E-exact-primary-reassessment-20261008.pending.json', 'research/xean/results/S02-rotational-A-E-final-exact-primary-applications-20261008.json', 'research/xean/results/S02-rotational-A-E-final-root-audit-20261008.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-actual-owner-registration.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-argument.md', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-complete-result.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-ready-assembly.pending.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-reviewed-source.tex', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-task.json', 'research/xean/results/S02-rotational-A-E-limited-final-comparison-20261008-task.prepared.json', 'research/xean/results/S02-rotational-A-E-limited-final-task-preparation-20261008.pending.json', 'research/xean/results/S02-rotational-A-E-release-20261008-build.json', 'research/xean/results/S02-rotational-A-E-release-20261008-native-app-attempt-unverified.json', 'research/xean/results/S02-rotational-A-E-release-exact-wording-change-20261008.json', 'research/xean/results/S02-rotational-sharp-damping-20261007-full-review-task.json', 'research/xean/results/S02-rotational-sharp-damping-20261007-inclusive-full-review-argument.md', 'research/xean/results/S02-rotational-sharp-damping-20261007-known-overlap.md', 'research/xean/results/S02-rotational-sharp-damping-20261007-native-codex-input.json', 'research/xean/results/S02-rotational-sharp-damping-20261007-preparation.pending.json', 'research/xean/results/S02-rotational-sharp-damping-20261007-primary-applications.pending.json', 'research/xean/results/S02-rotational-sharp-damping-20261007-statement-only-targets.md', 'research/xean/results/S02-rotational-sharp-damping-full-review-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S02-rotational-sharp-damping-full-review-20261008-actual-owner-registration.json', 'research/xean/results/S02-rotational-sharp-damping-full-review-20261008-complete-result.json', 'research/xean/results/S02-rotational-sharp-damping-new-input-root-read-20261007.pending.json', 'research/xean/results/S02-rotational-sharp-damping-statement-only-cold-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S02-rotational-sharp-damping-statement-only-cold-20261008-actual-owner-registration.json', 'research/xean/results/S02-rotational-sharp-damping-statement-only-cold-20261008-complete-result.json', 'research/xean/results/S11-release-confirmed-current-summary-refresh-20261008.json'])
+selected.update(root / name for name in ['research/papers/S18-first-moment-free-nonanalytic-moving-volumes.tex', 'research/xean/results/GitHub-S02-rotational-A-E-push-20261008.json', 'research/xean/results/S02-release-confirmed-current-summary-refresh-20261008.json', 'research/xean/results/S18-BGL-primary-locator-clarification-20261008.json', 'research/xean/results/S18-before-publication-incoming-author-checkpoint590-preservation-20261008.json', 'research/xean/results/S18-before-publication-incoming-author-checkpoint591-preservation-20261008.json', 'research/xean/results/S18-first-moment-free-A-E-checked-result-20261008.json', 'research/xean/results/S18-first-moment-free-A-E-final-exact-primary-applications-20261008.json', 'research/xean/results/S18-first-moment-free-A-E-final-root-audit-20261008.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-actual-owner-registration.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-argument.md', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-complete-result.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-preparation.pending.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-task-preparation.pending.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-task.json', 'research/xean/results/S18-first-moment-free-A-E-limited-final-comparison-20261008-task.prepared.json', 'research/xean/results/S18-first-moment-free-A-E-release-20261008-build.json', 'research/xean/results/S18-first-moment-free-A-E-release-20261008-native-app-attempt-unverified.json', 'research/xean/results/S18-first-moment-free-A-E-release-exact-wording-change-20261008.json', 'research/xean/results/S18-first-moment-free-cold-input-entire-root-read-20261007.pending.json', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-actual-owner-registration.json', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-argument.md', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-complete-result.json', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-preparation.pending.json', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-reviewed-source.tex', 'research/xean/results/S18-first-moment-free-current-full-review-20261008-task.json', 'research/xean/results/S18-first-moment-free-current-paper-20261008.pending.json', 'research/xean/results/S18-first-moment-free-current-statement-only-cold-20261008-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/S18-first-moment-free-current-statement-only-cold-20261008-actual-owner-registration.json', 'research/xean/results/S18-first-moment-free-current-statement-only-cold-20261008-complete-result.json', 'research/xean/results/S18-first-moment-free-inclusive-native-preparation-20261007.pending.json', 'research/xean/results/S18-first-moment-free-native-codex-input-20261007.json', 'research/xean/results/S18-first-moment-free-statement-only-targets-20261007.md', 'research/xean/results/S18-original-task.json', 'research/xean/results/S18-original-task.provenance.json', 'research/xean/results/history-search-boundary-correction-20261008.json', 'research/audits/incoming-S18-preservation-592.json', 'research/audits/bounded-hermitian-primary-review-592.json', 'research/editorial/bounded-hermitian-primary-review-592.md', 'research/drafts/bounded-hermitian-smoothness-592.tex'])
+selected.update(root / name for name in ['research/audits/bounded-hermitian-smoothness-integration-593.json', 'research/editorial/bounded-hermitian-smoothness-integration-593.md', 'research/source-disposition-593.json'])
+selected.update(root / name for name in ['research/audits/ruled-logarithmic-endpoint-integration-594.json', 'research/editorial/ruled-logarithmic-endpoint-integration-594.md', 'research/source-disposition-594.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-primary-review-595.json', 'research/editorial/hermitian-hessian-primary-review-595.md', 'research/source-disposition-595.json', 'research/drafts/hermitian-hessian-estimate-lemmas-595.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-liouville-review-596.json', 'research/editorial/hermitian-hessian-liouville-review-596.md', 'research/source-disposition-596.json', 'research/drafts/hermitian-hessian-liouville-blowup-596.tex'])
+selected.update(root / name for name in ['research/audits/divisor-free-radial-primary-review-597.json', 'research/editorial/divisor-free-radial-primary-review-597.md', 'research/source-disposition-597.json', 'research/drafts/divisor-free-concentration-radial-tests-597.tex'])
+selected.update(root / name for name in ['research/audits/divisor-free-radial-integration-598.json', 'research/editorial/divisor-free-radial-integration-598.md', 'research/source-disposition-598.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-absorption-review-599.json', 'research/editorial/hermitian-hessian-absorption-review-599.md', 'research/source-disposition-599.json', 'research/drafts/hermitian-hessian-absorption-599.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-prescribed-trace-review-600.json', 'research/editorial/hermitian-hessian-prescribed-trace-review-600.md', 'research/source-disposition-600.json', 'research/drafts/hermitian-hessian-prescribed-trace-600.tex'])
+selected.add(root / 'research/audits/incoming-P16-preservation-600.json')
+selected.update(root / name for name in ['research/audits/continuous-hessian-adjoint-review-601.json', 'research/editorial/continuous-hessian-adjoint-review-601.md', 'research/source-disposition-601.json', 'research/drafts/continuous-hessian-adjoint-reconstruction-601.tex'])
+selected.update(root / name for name in ['research/audits/continuous-hessian-adjoint-integration-602.json', 'research/editorial/continuous-hessian-adjoint-integration-602.md', 'research/source-disposition-602.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-complex-limits-review-603.json', 'research/editorial/hermitian-hessian-complex-limits-review-603.md', 'research/source-disposition-603.json', 'research/drafts/hermitian-hessian-bounded-complex-limits-603.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-regularity-review-604.json', 'research/editorial/hermitian-hessian-continuous-regularity-review-604.md', 'research/source-disposition-604.json', 'research/drafts/hermitian-hessian-continuous-regularity-604.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-continuous-foundations-review-605.json', 'research/editorial/hermitian-hessian-continuous-foundations-review-605.md', 'research/source-disposition-605.json', 'research/drafts/hermitian-hessian-continuous-foundations-605.tex'])
+selected.update(root / name for name in ['research/audits/continuous-hermitian-hessian-book-integration-606.json', 'research/editorial/continuous-hermitian-hessian-book-integration-606.md', 'research/source-disposition-606.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-integration-612.json', 'research/editorial/hermitian-hessian-bounded-currents-integration-612.md', 'research/source-disposition-612.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-currents-review-611.json', 'research/editorial/hermitian-hessian-bounded-currents-review-611.md', 'research/source-disposition-611.json', 'research/drafts/hermitian-hessian-bounded-currents-611.tex'])
+selected.update(root / name for name in ['research/audits/hopf-basic-perron-integration-610.json', 'research/editorial/hopf-basic-perron-integration-610.md', 'research/source-disposition-610.json'])
+selected.update(root / name for name in ['research/audits/hopf-basic-perron-primary-review-609.json', 'research/editorial/hopf-basic-perron-primary-review-609.md', 'research/source-disposition-609.json', 'research/drafts/hopf-basic-perron-geometry-609.tex', 'research/papers/S10-Hopf-Perron-geometry-and-metric-actions.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-approximation-integration-608.json', 'research/editorial/hermitian-hessian-bounded-approximation-integration-608.md', 'research/source-disposition-608.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-bounded-approximation-review-607.json', 'research/editorial/hermitian-hessian-bounded-approximation-review-607.md', 'research/source-disposition-607.json', 'research/drafts/hermitian-hessian-bounded-approximation-607.tex'])
 selected.update((root / "research/audits").glob("build-snapshot-*.json"))
 completed_runs = set()
 for directory in (root / "research/rethlas/verification/results").iterdir():
@@ -1513,6 +1719,128 @@ for submission in (root / "research/rethlas/verification/inputs").glob("*.md"):
     if match and match.group(1) in completed_runs:
         selected.add(submission)
 
+selected.update(root / name for name in [
+    '.gitattributes',
+    'BLUEPRINT.md',
+    'CHANGELOG.md',
+    'research/STATUS.md',
+    'research/papers/S11-zero-Lelong-residuals-and-blowups-at-poles.tex',
+    'research/xean/README.md',
+    'research/xean/results/GitHub-S10-Hopf-basic-Perron-A-H-push-20261008.json',
+    'research/xean/results/S10-S11-delayed-native-app-actual-host-unavailable-responses-20261008.json',
+    'research/xean/results/S10-release-confirmed-current-summary-refresh-20261008.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarification-and-current-source-20261008.pending.json',
+    'research/xean/results/S11-Gauduchon-dimension-clarified-20261008-build.json',
+    'research/xean/results/S11-before-Gauduchon-dimension-clarification-20261008-source.tex',
+    'research/xean/results/S11-normal-fast-forward-preserve-four-author-commits-20261008.json',
+    'research/xean/results/S11-small-curvature-current-LF-primary-read-and-application-assessment-20261008.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-inclusive-full-review-argument-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-scoped-full-review-task-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-input-zero-coefficient-clarified.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-20261008-statement-only-targets-zero-coefficient-clarified.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-scoped-full-review-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-20261008-statement-only-cold-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-checked-result-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-exit-and-whole-public-root-read.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-actual-owner-registration.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-before-assembly-scope-clarification-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-complete-result.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-durable-native-process-exit.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-inclusive-final-comparison-argument.md',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-live-status.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task-preparation.pending.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-evidence-bound-final-20261008-task.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-final-root-audit-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-A-G-release-20261008-build.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-before-release-wording-20261008-source.tex',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-exact-wording-change-20261008.json',
+    'research/xean/results/S11-small-curvature-ideal-traces-release-native-app-actual-responses-20261008.json',
+])
+selected.update(root / name for name in ['research/audits/small-curvature-S11-primary-review-613.json', 'research/editorial/small-curvature-S11-primary-review-613.md', 'research/source-disposition-613.json', 'research/drafts/zero-lelong-ideal-neutrality-613.tex', 'research/drafts/small-curvature-strict-types-613.tex', 'research/drafts/small-curvature-intrinsic-traces-613.tex', 'research/drafts/ruled-pole-blowup-obstruction-613.tex'])
+selected.update(root / name for name in ['research/audits/small-curvature-S11-integration-614.json', 'research/editorial/small-curvature-S11-integration-614.md', 'research/source-disposition-614.json'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-review-615.json', 'research/editorial/hermitian-hessian-sobolev-review-615.md', 'research/source-disposition-615.json', 'research/drafts/hermitian-hessian-sobolev-two-factors-615.tex'])
+selected.update(root / name for name in ['research/audits/hermitian-hessian-sobolev-integration-616.json', 'research/editorial/hermitian-hessian-sobolev-integration-616.md', 'research/source-disposition-616.json'])
+selected.update(root / name for name in ['research/audits/hessian-two-products-sobolev-capacity-review-617.json', 'research/editorial/hessian-two-products-sobolev-capacity-review-617.md', 'research/source-disposition-617.json', 'research/drafts/hessian-two-products-sobolev-capacity-617.tex'])
+selected.update(root / name for name in ['research/audits/hessian-two-products-capacity-integration-618.json', 'research/editorial/hessian-two-products-capacity-integration-618.md', 'research/source-disposition-618.json'])
+selected.update(root / name for name in ['research/audits/hessian-local-shift-capacity-review-619.json', 'research/editorial/hessian-local-shift-capacity-review-619.md', 'research/source-disposition-619.json', 'research/drafts/hessian-local-shift-capacity-transfer-619.tex'])
+selected.update(root / name for name in ['research/audits/hessian-local-correction-integration-620.json', 'research/editorial/hessian-local-correction-integration-620.md', 'research/source-disposition-620.json'])
+selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-review-621.json', 'research/editorial/hessian-smooth-capacity-review-621.md', 'research/source-disposition-621.json', 'research/drafts/hessian-smooth-capacity-convergence-621.tex'])
+selected.update(root / name for name in ['research/audits/hessian-smooth-capacity-integration-622.json', 'research/editorial/hessian-smooth-capacity-integration-622.md', 'research/source-disposition-622.json'])
+selected.update(root / name for name in ['research/audits/hessian-top-capacity-review-623.json', 'research/editorial/hessian-top-capacity-review-623.md', 'research/source-disposition-623.json', 'research/drafts/hessian-top-capacity-weighted-623.tex'])
+selected.update(root / name for name in ['research/audits/hessian-top-capacity-integration-624.json', 'research/editorial/hessian-top-capacity-integration-624.md', 'research/source-disposition-624.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-locality-review-625.json', 'research/editorial/hessian-bounded-locality-review-625.md', 'research/source-disposition-625.json', 'research/drafts/hessian-bounded-locality-625.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-locality-integration-626.json', 'research/editorial/hessian-bounded-locality-integration-626.md', 'research/source-disposition-626.json'])
+selected.update(root / name for name in ['research/audits/hessian-mass-comparison-review-627.json', 'research/editorial/hessian-mass-comparison-review-627.md', 'research/source-disposition-627.json', 'research/drafts/hessian-mass-comparison-627.tex'])
+selected.update(root / name for name in ['research/audits/hessian-mass-comparison-integration-628.json', 'research/editorial/hessian-mass-comparison-integration-628.md', 'research/source-disposition-628.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-domination-review-629.json', 'research/editorial/hessian-bounded-domination-review-629.md', 'research/source-disposition-629.json', 'research/drafts/hessian-bounded-domination-629.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-domination-integration-630.json', 'research/editorial/hessian-bounded-domination-integration-630.md', 'research/source-disposition-630.json'])
+selected.update(root / name for name in ['research/audits/hessian-proper-data-review-631.json', 'research/editorial/hessian-proper-data-review-631.md', 'research/source-disposition-631.json', 'research/drafts/hessian-proper-data-631.tex'])
+selected.update(root / name for name in ['research/audits/hessian-proper-data-integration-632.json', 'research/editorial/hessian-proper-data-integration-632.md', 'research/source-disposition-632.json'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-review-633.json', 'research/editorial/hessian-bounded-nonvanishing-review-633.md', 'research/source-disposition-633.json', 'research/drafts/hessian-bounded-nonvanishing-633.tex'])
+selected.update(root / name for name in ['research/audits/hessian-bounded-nonvanishing-integration-634.json', 'research/editorial/hessian-bounded-nonvanishing-integration-634.md', 'research/source-disposition-634.json'])
+selected.update(root / name for name in ['research/audits/hessian-local-comparison-interface-635.json', 'research/editorial/hessian-local-comparison-interface-635.md', 'research/source-disposition-635.json', 'research/drafts/hessian-local-comparison-interface-635.tex'])
+selected.update(root / name for name in ['research/audits/hessian-local-comparison-example-integration-636.json', 'research/editorial/hessian-local-comparison-example-integration-636.md', 'research/source-disposition-636.json'])
+selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-review-637.json', 'research/editorial/hessian-global-modified-comparison-review-637.md', 'research/source-disposition-637.json', 'research/drafts/hessian-global-modified-comparison-637.tex'])
+selected.update(root / name for name in ['research/audits/hessian-global-modified-comparison-integration-638.json', 'research/editorial/hessian-global-modified-comparison-integration-638.md', 'research/source-disposition-638.json'])
+selected.update(root / name for name in ['research/audits/chapter12-reader-coherence-639.json', 'research/editorial/chapter12-reader-coherence-639.md', 'research/source-disposition-639.json'])
+selected.update(root / name for name in ['research/audits/introduction-hessian-coherence-640.json', 'research/editorial/introduction-hessian-coherence-640.md', 'research/source-disposition-640.json'])
+selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-review-641.json', 'research/editorial/curve-fibration-polar-metric-review-641.md', 'research/source-disposition-641.json', 'research/drafts/curve-fibration-polar-metric-641.tex'])
+selected.update(root / name for name in ['research/audits/curve-fibration-polar-metric-integration-642.json', 'research/editorial/curve-fibration-polar-metric-integration-642.md', 'research/source-disposition-642.json'])
+selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-review-643.json', 'research/editorial/hopf-curve-submersion-example-review-643.md', 'research/source-disposition-643.json', 'research/drafts/hopf-curve-submersion-example-643.tex'])
+selected.update(root / name for name in ['research/audits/hopf-curve-submersion-example-integration-644.json', 'research/editorial/hopf-curve-submersion-example-integration-644.md', 'research/source-disposition-644.json'])
+selected.update(root / name for name in ['research/audits/curve-map-critical-fiber-review-645.json', 'research/editorial/curve-map-critical-fiber-review-645.md', 'research/source-disposition-645.json', 'research/drafts/curve-map-critical-fiber-models-645.tex'])
+selected.update(root / name for name in ['research/audits/critical-curve-fiber-model-integration-646.json', 'research/editorial/critical-curve-fiber-model-integration-646.md', 'research/source-disposition-646.json'])
+selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-review-647.json', 'research/editorial/curve-backgrounds-finite-factors-review-647.md', 'research/source-disposition-647.json', 'research/drafts/curve-backgrounds-finite-factors-647.tex'])
+selected.update(root / name for name in ['research/audits/curve-backgrounds-finite-factors-integration-648.json', 'research/editorial/curve-backgrounds-finite-factors-integration-648.md', 'research/source-disposition-648.json'])
+selected.update(root / name for name in ['research/audits/curve-component-factor-review-649.json', 'research/editorial/curve-component-factor-review-649.md', 'research/source-disposition-649.json', 'research/drafts/curve-component-factor-649.tex'])
+selected.update(root / name for name in ['research/audits/curve-component-factor-integration-650.json', 'research/editorial/curve-component-factor-integration-650.md', 'research/source-disposition-650.json'])
+selected.update(root / name for name in ['research/audits/incoming-P06-countable-divisorial-review-651.json', 'research/editorial/incoming-P06-countable-divisorial-review-651.md', 'research/source-disposition-651.json', 'research/drafts/p06-countable-divisorial-positivity-651.tex', '.gitattributes', 'BLUEPRINT.md', 'CHANGELOG.md', 'research/STATUS.md', 'research/papers/P06-countable-divisorial-ideal-positivity-on-pluriclosed-surfaces.tex', 'research/xean/README.md', 'research/xean/results/P06-Choquet-and-primary-convention-clarification-20261009.pending.json', 'research/xean/results/P06-LF-corrected-primary-read-and-application-assessment-20261008.pending.json', 'research/xean/results/P06-countable-divisorial-A-F-before-release-banner-20261009.tex', 'research/xean/results/P06-countable-divisorial-A-F-checked-result-20261009.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-bound-final-20261009-actual-exit-and-whole-public-root-read.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-bound-final-20261009-complete-result.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-actual-exit-and-whole-public-root-read.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-actual-owner-registration.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-argument.md', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-complete-result.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-durable-native-process-exit.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-live-status.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-preparation.pending.json', 'research/xean/results/P06-countable-divisorial-A-F-evidence-format-retry-20261009-task.json', 'research/xean/results/P06-countable-divisorial-A-F-final-root-audit-20261009.json', 'research/xean/results/P06-countable-divisorial-A-F-release-20261009-build.json', 'research/xean/results/P06-countable-divisorial-A-F-statement-only-independent-20261009-actual-owner-exit-and-whole-public-root-read.json', 'research/xean/results/P06-countable-divisorial-A-F-statement-only-independent-20261009-complete-result.json', 'research/xean/results/P06-countable-divisorial-full-original-review-20261009-complete-result.json', 'research/xean/results/P06-countable-divisorial-full-original-review-20261009-whole-public-root-read-and-terminal-reset-settlement-20261009.json', 'research/xean/results/P06-countable-divisorial-native-blind-reconstruction-input-20261007.json', 'research/xean/results/P06-original-full-review-exact-primary-applications-20261009.pending.json', 'research/xean/results/P06-original-task.json', 'research/xean/results/P06-public-evidence-binding-format-diagnostic-20261009.md'])
+selected.update(root / name for name in ['research/audits/countable-divisorial-positivity-integration-652.json', 'research/editorial/countable-divisorial-positivity-integration-652.md', 'research/source-disposition-652.json'])
+selected.update(root / name for name in ['research/audits/incoming-P03-minimum-lee-curvature-review-653.json', 'research/editorial/incoming-P03-minimum-lee-curvature-review-653.md', 'research/source-disposition-653.json', 'research/drafts/p03-minimum-lee-curvature-653.tex', '.gitattributes', 'BLUEPRINT.md', 'CHANGELOG.md', 'research/STATUS.md', 'research/papers/P03-minimum-spectrum-Lee-curvature.tex', 'research/xean/README.md', 'research/xean/results/P03-minimum-spectrum-A-F-before-release-banner-20261009.tex', 'research/xean/results/P03-minimum-spectrum-A-F-checked-result-20261009.json', 'research/xean/results/P03-minimum-spectrum-A-F-final-root-audit-20261009.json', 'research/xean/results/P03-minimum-spectrum-A-F-release-20261009-build.json', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-actual-exit-and-whole-public-root-read.json', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-argument.md', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-complete-result.json', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-durable-native-process-exit.json', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-preparation.pending.json', 'research/xean/results/P03-minimum-spectrum-A-F-scoped-final-comparison-20261009-task.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-full-original-review-actual-exit-and-whole-public-root-read.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-full-original-review-complete-result.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-full-original-task.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-statement-only-independent-actual-exit-and-whole-public-root-read.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-statement-only-independent-complete-result.json', 'research/xean/results/P03-minimum-spectrum-and-variable-spectrum-Hopf-20261009-statement-only-input.json', 'research/xean/results/P03-original-task.json'])
+selected.update(root / name for name in ['research/audits/minimum-lee-curvature-integration-654.json', 'research/editorial/minimum-lee-curvature-integration-654.md', 'research/source-disposition-654.json'])
+selected.update(root / name for name in ['research/audits/finite-curve-pullback-review-655.json', 'research/editorial/finite-curve-pullback-review-655.md', 'research/source-disposition-655.json', 'research/drafts/finite-curve-pullback-foundations-655.tex', 'research/drafts/finite-curve-pullback-models-655.tex'])
+selected.update(root / name for name in ['research/audits/finite-curve-pullback-integration-656.json', 'research/editorial/finite-curve-pullback-integration-656.md', 'research/source-disposition-656.json'])
+selected.update(root / name for name in ['research/audits/recent-arxiv-fiber-margin-review-657.json', 'research/editorial/recent-arxiv-fiber-margin-review-657.md', 'research/source-disposition-657.json', 'research/drafts/fiberwise-convexity-margin-example-657.tex'])
+selected.update(root / name for name in ['research/audits/local-fiber-margin-integration-658.json', 'research/editorial/local-fiber-margin-integration-658.md', 'research/source-disposition-658.json'])
+selected.update(root / name for name in ['research/audits/negative-bundle-logarithmic-weight-review-659.json', 'research/editorial/negative-bundle-logarithmic-weight-review-659.md', 'research/source-disposition-659.json', 'research/drafts/negative-bundle-logarithmic-weights-659.tex'])
+selected.update(root / name for name in ['research/audits/negative-bundle-logarithmic-weight-integration-660.json', 'research/editorial/negative-bundle-logarithmic-weight-integration-660.md', 'research/source-disposition-660.json'])
+selected.update(root / name for name in ['BLUEPRINT.md', 'CHANGELOG.md', 'research/STATUS.md', 'research/papers/S17-uniform-exact-adjoint-endpoint-on-smooth-Hessian-families.tex', 'research/xean/README.md', 'research/xean/results/S17-original-condition-task.json', 'research/xean/results/S17-smooth-Hessian-A-D-final-exact-scope-comparison-20261009-actual-exit-whole-result-and-primary-applications.json', 'research/xean/results/S17-smooth-Hessian-A-D-final-exact-scope-comparison-20261009-complete-result.json', 'research/xean/results/S17-smooth-Hessian-A-D-final-exact-scope-comparison-20261009-durable-native-process-exit.json', 'research/xean/results/S17-smooth-Hessian-A-D-final-exact-scope-comparison-20261009-preparation.pending.json', 'research/xean/results/S17-smooth-Hessian-A-D-final-exact-scope-comparison-20261009-task.json', 'research/xean/results/S17-smooth-Hessian-before-cv-normalization-clarification-20261009.tex', 'research/xean/results/S17-smooth-Hessian-before-release-status-20261009.tex', 'research/xean/results/S17-smooth-Hessian-checked-result-20261009.json', 'research/xean/results/S17-smooth-Hessian-cold-root-primary-and-DAG-assessment-20261009.md', 'research/xean/results/S17-smooth-Hessian-final-root-audit-20261009.json', 'research/xean/results/S17-smooth-Hessian-final-root-primary-and-scope-assessment-20261009.md', 'research/xean/results/S17-smooth-Hessian-full-review-root-primary-assessment-20261009.md', 'research/xean/results/S17-smooth-Hessian-release-20261009-build.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-full-original-review-actual-exit-whole-result-and-primary-applications.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-full-original-review-complete-result.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-full-original-task.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-statement-only-independent-actual-exit-whole-chain-and-primary-applications.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-statement-only-independent-complete-result.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-statement-only-input.json', 'research/xean/results/S17-smooth-Hessian-uniform-exact-adjoint-endpoint-20261009-statement-only-targets.md'])
+selected.update(root / name for name in ['research/audits/chapter4-reader-coherence-661.json', 'research/editorial/chapter4-reader-coherence-661.md', 'research/source-disposition-661.json'])
+selected.update(root / name for name in ['research/audits/smooth-hessian-adjoint-review-662.json', 'research/editorial/smooth-hessian-adjoint-review-662.md', 'research/source-disposition-662.json', 'research/drafts/section_gauduchon_hessian_adjoint_bounds.tex'])
+selected.update(root / name for name in ['research/audits/smooth-hessian-adjoint-integration-663.json', 'research/editorial/smooth-hessian-adjoint-integration-663.md', 'research/source-disposition-663.json'])
+selected.update(root / name for name in ['research/audits/oscillatory-controlled-hessian-review-664.json', 'research/editorial/oscillatory-controlled-hessian-review-664.md', 'research/source-disposition-664.json', 'research/drafts/gauduchon-oscillatory-controlled-hessians-664.tex'])
+selected.update(root / name for name in ['research/audits/oscillatory-controlled-hessian-integration-665.json', 'research/editorial/oscillatory-controlled-hessian-integration-665.md', 'research/source-disposition-665.json'])
+selected.update(root / name for name in ['BLUEPRINT.md', 'CHANGELOG.md', 'research/STATUS.md', 'research/papers/P13-all-current-determinant-profile-and-ellipticity.tex', 'research/papers/P19-transverse-recovery-on-the-Hopf-threefold.tex', 'research/papers/S15-fixed-spherical-measures-and-exact-Hermitian-equations.tex', 'research/xean/README.md', 'research/xean/results/P13-nonclosed-A-G-final-20261009-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/P13-nonclosed-A-G-final-20261009-complete-result.json', 'research/xean/results/P13-nonclosed-A-G-final-20261009-durable-native-process-exit.json', 'research/xean/results/P13-nonclosed-A-G-final-20261009-independent-byte-binding-verification.json', 'research/xean/results/P13-nonclosed-A-G-final-20261009-preparation.pending.json', 'research/xean/results/P13-nonclosed-A-G-final-20261009-scoped-task.json', 'research/xean/results/P13-nonclosed-A-G-final-complete-root-assessment-20261009.md', 'research/xean/results/P13-nonclosed-before-release-status-and-citations-20261009.tex', 'research/xean/results/P13-nonclosed-checked-result-20261009.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-exact-primary-applications.md', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-full-original-review-actual-exit-whole-result-and-every-application.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-full-original-review-complete-result.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-full-original-task.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-statement-only-independent-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-statement-only-independent-complete-result.json', 'research/xean/results/P13-nonclosed-entire-determinant-profile-20261009-statement-only-input.json', 'research/xean/results/P13-nonclosed-final-root-audit-20261009.json', 'research/xean/results/P13-nonclosed-profile-full-review-complete-root-assessment-20261009.md', 'research/xean/results/P13-nonclosed-profile-statement-only-complete-root-assessment-20261009.md', 'research/xean/results/P13-nonclosed-release-20261009-build.json', 'research/xean/results/P13-nonclosed-release-status-and-citations-20261009.json', 'research/xean/results/P13-original-task.json', 'research/xean/results/P19-original-task.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-evidence-binding-followup-20261009-actual-exit-whole-result-and-primary-applications.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-evidence-binding-followup-20261009-complete-result.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-evidence-binding-followup-20261009-durable-native-process-exit.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-evidence-binding-followup-20261009-preparation.pending.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-evidence-binding-followup-20261009-task.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-exact-scope-comparison-20261009-complete-result.json', 'research/xean/results/P19-scalar-Hopf-A-G-final-exact-scope-comparison-20261009-task.json', 'research/xean/results/P19-scalar-Hopf-before-release-status-20261009.tex', 'research/xean/results/P19-scalar-Hopf-checked-result-20261009.json', 'research/xean/results/P19-scalar-Hopf-final-complete-result-and-evidence-binding-assessment-20261009.md', 'research/xean/results/P19-scalar-Hopf-final-followup-complete-root-assessment-20261009.md', 'research/xean/results/P19-scalar-Hopf-final-root-audit-20261009.json', 'research/xean/results/P19-scalar-Hopf-release-20261009-build.json', 'research/xean/results/P19-scalar-Hopf-release-status-only-change-20261009.json', 'research/xean/results/P19-scalar-invariance-cold-root-primary-and-DAG-assessment-20261009.md', 'research/xean/results/P19-scalar-invariance-full-review-root-primary-assessment-20261009.md', 'research/xean/results/P19-scalar-invariance-transverse-recovery-20261009-full-original-review-complete-result.json', 'research/xean/results/P19-scalar-invariance-transverse-recovery-20261009-full-original-task.json', 'research/xean/results/P19-scalar-invariance-transverse-recovery-20261009-statement-only-independent-complete-result.json', 'research/xean/results/P19-scalar-invariance-transverse-recovery-20261009-statement-only-input.json', 'research/xean/results/P19-scalar-invariance-transverse-recovery-20261009-statement-only-targets.md', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-full-original-review-actual-owner-exit-whole-public-and-every-application.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-full-original-review-complete-result.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-full-original-task.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-statement-only-independent-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-statement-only-independent-complete-result.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-statement-only-input.json', 'research/xean/results/S15-fixed-spherical-exact-all-three-20261009-statement-only-targets.md', 'research/xean/results/S15-original-task.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-complete-result.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-durable-native-process-exit.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-independent-byte-binding-verification.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-preparation.pending.json', 'research/xean/results/S15-spherical-A-F-repaired-final-20261009-scoped-task.json', 'research/xean/results/S15-spherical-before-release-status-and-citations-20261009.tex', 'research/xean/results/S15-spherical-checked-result-20261009.json', 'research/xean/results/S15-spherical-final-root-audit-20261009.json', 'research/xean/results/S15-spherical-full-original-review-complete-root-assessment-20261009.md', 'research/xean/results/S15-spherical-release-20261009-build.json', 'research/xean/results/S15-spherical-release-status-and-citations-20261009.json', 'research/xean/results/S15-spherical-repaired-final-complete-root-assessment-20261009.md', 'research/xean/results/S15-spherical-statement-only-complete-root-assessment-20261009.md'])
+selected.update(root / name for name in ['research/audits/chapter5-reader-coherence-666.json', 'research/editorial/chapter5-reader-coherence-666.md', 'research/source-disposition-666.json'])
+selected.update(root / name for name in ['research/audits/incoming-P19-transverse-recovery-review-667.json', 'research/editorial/incoming-P19-transverse-recovery-review-667.md', 'research/source-disposition-667.json', 'research/drafts/p19-ideal-modification-667.tex', 'research/drafts/p19-volume-modification-667.tex', 'research/drafts/p19-hopf-transverse-recovery-667.tex'])
+selected.update(root / name for name in ['research/audits/hopf-transverse-recovery-integration-668.json', 'research/editorial/hopf-transverse-recovery-integration-668.md', 'research/source-disposition-668.json'])
+selected.update(root / name for name in ['research/audits/incoming-S15-spherical-carrier-review-669.json', 'research/editorial/incoming-S15-spherical-carrier-review-669.md', 'research/source-disposition-669.json', 'research/drafts/local-spherical-product-669.tex', 'research/drafts/fixed-spherical-equations-669.tex', 'research/drafts/capacity-square-stability-669.tex'])
+selected.update(root / name for name in ['research/audits/fixed-spherical-equations-integration-670.json', 'research/editorial/fixed-spherical-equations-integration-670.md', 'research/source-disposition-670.json'])
+selected.update(root / name for name in ['research/audits/S15-holder-range-reconstruction-671.json', 'research/editorial/S15-holder-range-reconstruction-671.md', 'research/source-disposition-671.json', 'research/drafts/local-holder-measure-estimates-671.tex', 'research/drafts/holder-reference-capacity-671.tex', 'research/drafts/holder-reference-chern-estimates-671.tex', 'research/drafts/holder-dominated-regularity-671.tex', 'research/drafts/holder-dominated-homogeneous-equation-671.tex'])
+selected.update(root / name for name in ['research/audits/S15-holder-range-integration-672.json', 'research/editorial/S15-holder-range-integration-672.md', 'research/source-disposition-672.json'])
+selected.update(root / name for name in ['research/audits/incoming-P13-determinant-profile-review-673.json', 'research/editorial/incoming-P13-determinant-profile-review-673.md', 'research/source-disposition-673.json', 'research/drafts/fixed-determinant-data-ellipticity-673.tex', 'research/drafts/intrinsic-gauduchon-determinant-profile-673.tex', 'research/drafts/sharp-determinant-power-concentration-673.tex'])
+selected.update(root / name for name in ['research/audits/P13-determinant-profile-integration-674.json', 'research/editorial/P13-determinant-profile-integration-674.md', 'research/source-disposition-674.json'])
+selected.update(root / name for name in ['research/audits/chapter2-mass-reader-coherence-675.json', 'research/editorial/chapter2-mass-reader-coherence-675.md', 'research/source-disposition-675.json'])
+selected.update(root / name for name in ['research/audits/chapter6-nonpluripolar-reader-coherence-676.json', 'research/editorial/chapter6-nonpluripolar-reader-coherence-676.md', 'research/source-disposition-676.json'])
+selected.update(root / name for name in ['research/audits/incoming-S04-power-capacity-review-677.json', 'research/editorial/incoming-S04-power-capacity-review-677.md', 'research/source-disposition-677.json', 'research/drafts/logarithmic-critical-density-677.tex', 'research/drafts/power-capacity-stability-677.tex', 'research/drafts/power-capacity-threshold-equation-677.tex'])
+selected.update(root / name for name in ['research/audits/S04-power-capacity-integration-678.json', 'research/editorial/S04-power-capacity-integration-678.md', 'research/source-disposition-678.json'])
+selected.update(root / name for name in ['research/papers/S09-countable-dense-poles-and-all-obstacle-envelope-equality.tex', 'research/xean/results/S09-countable-dense-poles-20261009-exact-primary-applications.md', 'research/xean/results/S09-countable-dense-poles-20261009-full-original-review-actual-exit-whole-result-and-every-application.json', 'research/xean/results/S09-countable-dense-poles-20261009-full-original-review-complete-result.json', 'research/xean/results/S09-countable-dense-poles-20261009-full-original-review-durable-native-process-exit.json', 'research/xean/results/S09-countable-dense-poles-20261009-full-original-task.json', 'research/xean/results/S09-countable-dense-poles-20261009-independent-byte-binding-verification.json', 'research/xean/results/S09-countable-dense-poles-20261009-statement-only-independent-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S09-countable-dense-poles-20261009-statement-only-independent-complete-result.json', 'research/xean/results/S09-countable-dense-poles-20261009-statement-only-independent-native-process-metadata-after-terminal-reset.json', 'research/xean/results/S09-countable-dense-poles-20261009-statement-only-input.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-complete-result.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-durable-native-process-exit.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-live-status.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-preparation.pending.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-20261009-task.json', 'research/xean/results/S09-countable-dense-poles-A-E-final-complete-root-assessment-20261009.md', 'research/xean/results/S09-countable-dense-poles-before-release-status-and-citations-20261009.tex', 'research/xean/results/S09-countable-dense-poles-checked-result-20261009.json', 'research/xean/results/S09-countable-dense-poles-final-root-audit-20261009.json', 'research/xean/results/S09-countable-dense-poles-full-review-complete-root-assessment-20261009.md', 'research/xean/results/S09-countable-dense-poles-independent-complete-root-assessment-20261009.md', 'research/xean/results/S09-countable-dense-poles-release-20261009-build.json', 'research/xean/results/S09-countable-dense-poles-release-status-and-citations-20261009.json', 'research/xean/results/S09-original-task.json'])
+selected.update(root / name for name in ['research/audits/chapter7-damping-reader-coherence-679.json', 'research/editorial/chapter7-damping-reader-coherence-679.md', 'research/source-disposition-679.json'])
+selected.update(root / name for name in ['research/audits/incoming-S09-countable-poles-review-680.json', 'research/editorial/incoming-S09-countable-poles-review-680.md', 'research/source-disposition-680.json', 'research/drafts/countable-pole-obstacles-680.tex'])
+selected.update(root / name for name in ['research/audits/S09-countable-poles-integration-681.json', 'research/editorial/S09-countable-poles-integration-681.md', 'research/source-disposition-681.json'])
+selected.update(root / name for name in ['research/audits/chapter8-hopf-reader-coherence-682.json', 'research/editorial/chapter8-hopf-reader-coherence-682.md', 'research/source-disposition-682.json'])
+selected.update(root / name for name in ['research/audits/chapter9-smooth-equations-reader-coherence-683.json', 'research/editorial/chapter9-smooth-equations-reader-coherence-683.md', 'research/source-disposition-683.json'])
+selected.update(root / name for name in ['research/audits/chapter10-continuous-equations-reader-coherence-684.json', 'research/editorial/chapter10-continuous-equations-reader-coherence-684.md', 'research/source-disposition-684.json'])
+selected.update(root / name for name in ['research/papers/S04-capacity-domination-critical-normalizers-and-root-tails.tex', 'research/xean/results/S04-original-task.json', 'research/xean/results/S04-power-capacity-20261009-exact-primary-applications.md', 'research/xean/results/S04-power-capacity-20261009-full-original-review-actual-exit-whole-result-and-every-application.json', 'research/xean/results/S04-power-capacity-20261009-full-original-review-complete-result.json', 'research/xean/results/S04-power-capacity-20261009-full-original-review-durable-native-process-exit.json', 'research/xean/results/S04-power-capacity-20261009-full-original-task.json', 'research/xean/results/S04-power-capacity-20261009-independent-byte-binding-verification.json', 'research/xean/results/S04-power-capacity-20261009-statement-only-independent-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S04-power-capacity-20261009-statement-only-independent-complete-result.json', 'research/xean/results/S04-power-capacity-20261009-statement-only-independent-durable-native-process-exit.json', 'research/xean/results/S04-power-capacity-20261009-statement-only-input.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-actual-exit-whole-chain-and-every-application.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-complete-result.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-live-status.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-native-process-metadata-after-terminal-reset.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-preparation.pending.json', 'research/xean/results/S04-power-capacity-A-E-final-20261009-task.json', 'research/xean/results/S04-power-capacity-A-E-final-complete-root-assessment-20261009.md', 'research/xean/results/S04-power-capacity-before-release-status-and-citations-20261009.tex', 'research/xean/results/S04-power-capacity-checked-result-20261009.json', 'research/xean/results/S04-power-capacity-final-root-audit-20261009.json', 'research/xean/results/S04-power-capacity-full-review-complete-root-assessment-20261009.md', 'research/xean/results/S04-power-capacity-independent-complete-root-assessment-20261009.md', 'research/xean/results/S04-power-capacity-release-20261009-build.json', 'research/xean/results/S04-power-capacity-release-status-and-citations-20261009.json'])
+selected.update(root / name for name in ['research/audits/chapter11-degenerate-uniqueness-reader-coherence-685.json', 'research/editorial/chapter11-degenerate-uniqueness-reader-coherence-685.md'])
 readme = (root / "README.md").read_text() + """
 
 ## Source archive

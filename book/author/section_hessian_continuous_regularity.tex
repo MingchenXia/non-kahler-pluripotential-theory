@@ -1,0 +1,140 @@
+\section{Continuous equations and regularity}
+\label{sec:hessian-continuous-regularity}
+\index{Hessian equation!regularity of continuous solutions}
+
+The proper equation is stable in the uniform norm, so its smooth solutions
+extend to continuous data. This also identifies the limit of the
+auxiliary equations with a prescribed continuous weak solution.
+
+\Needspace{13\baselineskip}
+\begin{proposition}\label{hessian:proper-uniform-stability}
+Let $a>0$ and let smooth $H_j$ converge uniformly to a continuous
+$H$. The smooth solutions of $H_m(w_j)=e^{aw_j+H_j}\omega^n$
+converge uniformly to the unique continuous admissible solution of
+$H_m(w)=e^{aw+H}\omega^n$. For two continuous data $H_1,H_2$,
+the corresponding solutions satisfy
+\[
+ \|w_1-w_2\|_\infty\leq a^{-1}\|H_1-H_2\|_\infty.
+\]
+They also satisfy
+$-\max_XH/a\leq w\leq-\min_XH/a$.
+\end{proposition}
+\begin{proof}
+Smooth solutions exist by \cref{hessian:smooth-proper-existence}.
+At a maximum of $w_1-w_2$, monotonicity of the smooth Hessian
+operator gives $e^{aw_1+H_1}\leq e^{aw_2+H_2}$. Hence
+$a(w_1-w_2)\leq H_2-H_1$ there. Exchanging the functions gives
+the stated norm estimate for smooth data. Thus a uniformly
+convergent sequence of smooth data gives a uniformly Cauchy
+sequence of solutions. Its limit is admissible by the linear
+distributional inequalities, and \cref{hessian:continuous-products}
+passes the equation to the limit. The bounds follow from those
+for the smooth solutions. Taking limits in the smooth norm estimate
+proves it for continuous data. Finally,
+\cref{hessian:hessian-exponential-order} in both directions gives
+uniqueness among continuous admissible solutions.
+\end{proof}
+
+For smooth positive densities depending on the potential, the estimate
+of \cref{sec:hessian-trace} gives complex-Hessian bounds independent of
+derivatives of the prescribed approximation. The elliptic extension then
+upgrades the continuous solution to a classical one.
+
+\Needspace{11\baselineskip}
+\begin{theorem}\label{hessian:continuous-hessian-regularity}
+If $\varphi$ is continuous and admissible on $X$, $f(x,t)$ is smooth
+on a neighborhood of its bounded range, and
+\[
+ H_m(\varphi)=e^{f(x,\varphi)}\omega^n,
+\]
+then $\varphi$ is smooth.
+\end{theorem}
+\begin{proof}
+Choose smooth admissible $v_j\to\varphi$ uniformly, by \cref{hessian:continuous-smooth-approximation}. Their values lie in a fixed compact interval on which $f$ is
+smooth. Put $h(x,t)=-t+f(x,t)$ and solve
+\[
+ H_m(u_j)=e^{u_j+h(x,v_j)}\omega^n.
+\]
+The preceding stability proposition shows that $u_j$ converges uniformly
+to a continuous admissible $u$ satisfying
+\[
+ e^{-u}H_m(u)=e^{-\varphi+f(x,\varphi)}\omega^n
+                              =e^{-\varphi}H_m(\varphi).
+\]
+\Cref{hessian:hessian-exponential-order}, applied in both directions, gives $u=\varphi$.
+
+The zero-order bounds for $u_j$ are uniform. Fix $M$ bounding them
+and choose $B>\|\varphi\|_\infty+1$. Extend $h$ smoothly away from a neighborhood of the range of $\varphi$ to $X\times[-B-1,B+1]$; this does not change the equations for large $j$. The tolerance $\varepsilon$ in
+\cref{hessian:prescribed-potential-trace} depends on these bounds and on
+$h$, without derivatives of the smooth comparison function.
+Choose a fixed smooth $\widetilde\varphi$ with
+$\|\widetilde\varphi-\varphi\|_\infty<\varepsilon/2$ and
+$\|\widetilde\varphi\|_\infty\leq B$.
+For large $j$, $\|v_j-\widetilde\varphi\|_\infty<\varepsilon$.
+\Cref{hessian:prescribed-potential-complex-hessian} then gives uniform gradient
+and complex-Hessian bounds for $u_j$, independent of derivatives of
+$v_j$. \Cref{hessian:complex-hessian-compactness} yields
+$\varphi\in W^{2,p}$ for every finite $p$, and
+$\varphi\in C^{1,\alpha}$ for every $\alpha<1$.
+
+\Cref{hessian:proper-auxiliary-limit} makes $\varphi$ a continuous viscosity
+solution of the concave uniformly elliptic extension, with right-hand
+side $e^{f(x,\varphi)/m}$. This right-hand side is H\"older. The analytic estimate in \cref{sec:hessian-complex-limits} therefore gives
+$\varphi\in C^{2,\beta}$, for some $\beta>0$.
+The operator agrees with the original Hessian root on the attained
+compact cone set; the now classical equation thus has smooth dependence
+on $x,\varphi$ and its complex Hessian, and is uniformly elliptic there.
+Difference quotients and interior Schauder estimates give $C^{3,\beta}$;
+iteration proves smoothness. The estimate applies directly to the viscosity limit.
+\end{proof}
+
+The proper equation can now be solved when its exponent depends
+smoothly on the unknown potential, provided that constant barriers
+bound the desired range and the dependence is strictly increasing.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{hessian:proper-variable-existence}\index{Hessian equation!strictly increasing exponent}
+Let $A<B$ and let $f$ be smooth on a neighborhood of
+$X\times[A,B]$. Suppose that, for every $x\in X$,
+\[
+ f(x,A)\leq0\leq f(x,B),\qquad
+ 0<\kappa\leq\partial_t f(x,t)\leq L\quad(A\leq t\leq B).
+\]
+There is a unique continuous admissible solution with values in
+$[A,B]$ of
+\[
+ H_m(w)=e^{f(x,w)}\omega^n.
+\]
+This solution is smooth and strictly admissible.
+\end{theorem}
+\begin{proof}
+Choose $a\geq L$ and let
+$\mathcal C=\{v\in C(X):A\leq v\leq B\}$, a complete subset of
+$C(X)$ in the uniform norm. For $v\in\mathcal C$ put
+$H_v(x)=f(x,v(x))-av(x)$ and let $T(v)$ be the continuous proper
+solution with exponent $aT(v)+H_v$, furnished by
+\cref{hessian:proper-uniform-stability}. The function $f(x,t)-at$
+is nonincreasing in $t$, so
+\[
+ -aB\leq f(x,B)-aB\leq H_v(x)
+                   \leq f(x,A)-aA\leq-aA.
+\]
+The zero-order bounds in that proposition give $A\leq T(v)\leq B$.
+The mean-value theorem also gives
+\[
+ \|H_v-H_z\|_\infty\leq(a-\kappa)\|v-z\|_\infty,
+ \qquad
+ \|T(v)-T(z)\|_\infty
+          \leq(1-\kappa/a)\|v-z\|_\infty.
+\]
+Since $0\leq1-\kappa/a<1$, the contraction theorem gives a unique
+fixed point $w\in\mathcal C$. It is admissible because it equals
+$T(w)$, and its equation is exactly the stated equation. Every
+continuous admissible solution in this interval is a fixed point,
+by uniqueness of the continuous proper equation with its prescribed
+$H_w$. This proves uniqueness in the stated class.
+\Cref{hessian:continuous-hessian-regularity} makes $w$ smooth.
+Its form lies in the closed $m$-cone and has positive $m$th
+symmetric polynomial; Maclaurin's inequalities then put it in the
+open cone. Thus it is strictly admissible.
+\end{proof}

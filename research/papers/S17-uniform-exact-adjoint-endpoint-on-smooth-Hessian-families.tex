@@ -1,0 +1,357 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ddc}{dd^c}
+\newcommand{\avg}{\mathop{\mathrm{Avg}}}
+\title{Uniform exact-adjoint endpoint bounds\\
+on smooth complex-Hessian families}
+\author{Research working paper}
+\date{9 October 2026: checked restricted theorem}
+\begin{document}
+\maketitle
+\begin{abstract}
+On a fixed compact complex manifold, we give an explicit infinite
+supremum-norm-bounded family of smooth logarithmic densities generated
+by uniformly positive, bounded complex Hessians. The theorem
+bounds the determinant-weighted probabilities and determinant densities
+of every exact maximizing current uniformly in $L^\infty$.
+The proof controls the Gauduchon factor through its cofactor divergence:
+the lower vector coefficient involves only the fixed background torsion.
+We expand the required uniform Harnack argument. No derivative bound
+on the varying Hessian or logarithmic density enters the final constants.
+The family is nontrivial on every fixed manifold in the original
+zero-lower-mass setting. This proves the restricted sufficient-condition
+estimate in original S17; unrestricted density families
+and the original all-support problem P16 remain unresolved.
+\end{abstract}
+
+\section{The original setting and the explicit family}
+Fix a connected compact complex manifold $X$ of dimension $n\geq3$,
+a smooth positive Hermitian form $h$, and a smooth positive probability
+volume $dV$. Throughout,
+\[
+ d^c=\frac{i}{4\pi}(\bar\partial-\partial),\qquad
+ \ddc=\frac{i}{2\pi}\partial\bar\partial.
+\]
+Retain the original S17 assumption $v_-(h)=0$ for bounded genuine
+$h$-psh potentials. Fix $0<\varepsilon_0<1$ and define
+\[
+ \mathcal V_{\varepsilon_0}=
+ \{v\in C^\infty(X,\mathbb R):\ \sup_Xv=0,
+             -\varepsilon_0h\leq\ddc v\leq\varepsilon_0h\}.
+\]
+For each $v$ put
+\[
+ \sigma_v=h+\ddc v,\quad J_v=\sigma_v^n/dV,\quad
+ c_v=\int_XJ_v\,dV,\quad F_v=\log(J_v/c_v).
+\]
+These are actual smooth positive solution forms and smooth real
+logarithmic densities, with $\int_Xe^{F_v}dV=1$.
+Boundedness of the family $\{F_v\}$ uses the supremum norm on $C^0(X)$.
+No derivative norm of $F_v$ or $\sigma_v$ is part of the family bounds.
+
+For clarity, the only original maximizing-current background we retain is
+as follows. Let $\mathcal G_h$ consist of positive $(n-1,n-1)$ currents
+$T$ with $\ddc T=0$ and $\int_Xh\wedge T=1$. Original S17 defines
+the determinant measure $\Gamma_F(T)$, an attained maximum
+$M(F)=e^{-B_0(F)/n}$, and the weighted probability
+$\nu_{T,F}=\Gamma_F(T)/M(F)$ at an exact maximizer. For a smooth $F$
+the exact maximizing current is unique, smooth and strictly positive:
+it is the normalized $(n-1)$st power of the Gauduchon metric conformal
+to the smooth solution form. If $T=\gamma^{n-1}$ is that current, its
+determinant density is
+\[
+ k_T=(\gamma^n/dV)^{(n-1)/n},\qquad
+ \Gamma_F(T)=e^{F/n}k_T\,dV.
+\]
+These are the original problem's stated background, not conclusions
+about arbitrary tests or about all supporting probabilities.
+
+\begin{theorem}\label{thm:family}
+There are constants $0<c<C<\infty$, depending only on
+$X,h,dV,\varepsilon_0$, such that for every
+$v\in\mathcal V_{\varepsilon_0}$ and every original exact maximizing
+current $T$ for $F_v$, both densities obey
+\[
+ c\leq\frac{d\nu_{T,F_v}}{dV}\leq C,
+ \qquad c\leq k_T\leq C.
+\]
+In particular, both have a uniform critical
+$L^{n/(n-1)}(dV)$ bound. Moreover,
+\[
+ \|F_v-F_0\|_\infty
+ \leq n\log\frac{1+\varepsilon_0}{1-\varepsilon_0},
+\]
+and the family contains infinitely many distinct normalized nonconstant
+densities on the specified fixed zero-lower-mass manifold.
+No new existence assertion for a zero-lower-mass manifold is made.
+\end{theorem}
+
+\section{Cofactors and the fixed torsion}
+We first allow any smooth real $v$ with
+$\delta h\leq\sigma=h+\ddc v\leq\Lambda h$.
+Put $Q=\sigma^{n-1}$ and $J=\sigma^n/dV$.
+Gauduchon's smooth conformal theorem
+\cite[Th\'eor\`eme 2 and its full proof]{Gaud} gives a smooth
+strictly positive function $\rho$ such that
+\[
+ \ddc(\rho Q)=0,\qquad\int_X\rho\,dV=1.
+\]
+The factor is unique with this normalization. The even first-Betti
+condition in that article concerns its Theorem 1, and is not used.
+Since $d\sigma=dh$, smooth differentiation gives
+\begin{equation}\label{eq:dQ}
+ dQ=(n-1)dh\wedge\sigma^{n-2}.
+\end{equation}
+Thus $Q$ and $dQ$ have bounded coefficients controlled only by
+$\delta,\Lambda$ and fixed geometry. No derivative of the variable
+complex Hessian occurs in this bound.
+
+Define a real symmetric tensor $A$ and a vector $b$ intrinsically by
+\begin{align*}
+ \langle A\,d\phi,d\psi\rangle dV
+       &=n\,d\psi\wedge d^c\phi\wedge Q,\\
+ (b\cdot d\phi)dV&=-n\,d^c\phi\wedge dQ.
+\end{align*}
+Only the $(1,1)$ part of $d\psi\wedge d^c\phi$ contributes; it equals
+\[
+ \frac{i}{4\pi}
+  (\partial\psi\wedge\bar\partial\phi
+       +\partial\phi\wedge\bar\partial\psi).
+\]
+This proves symmetry and positivity of $A$.
+It is uniformly elliptic and bounded in fixed real reference geometry.
+Equation~\eqref{eq:dQ} bounds $b$ uniformly.
+For $L_\sigma\phi=\operatorname{tr}_\sigma\ddc\phi$, put $P=JL_\sigma$.
+Exact Stokes, with ordinary wedge powers, gives
+\begin{align*}
+ \int_X\psi P\phi\,dV
+ &=-n\int_Xd\psi\wedge d^c\phi\wedge Q
+        +n\int_X\psi d^c\phi\wedge dQ\\
+ &=-\int_X\langle A\,d\phi,d\psi\rangle dV
+        -\int_X\psi b\cdot d\phi\,dV.
+\end{align*}
+Indeed the last term of $d(\psi d^c\phi\wedge Q)$ is
+$-\psi d^c\phi\wedge dQ$.
+Consequently
+\[
+ P=\operatorname{div}_{dV}(A\,d)-b\cdot d,
+ \qquad
+ \operatorname{div}_{dV}(A\,d\rho+b\rho)=0.
+\]
+The latter follows from $\ddc(\rho Q)=0$. We need no sign or bound
+on $\operatorname{div}b$, or on all component derivatives of $A$.
+In a coordinate chart the fixed smooth volume density can be
+absorbed into $A,b$, preserving uniformly controlled ellipticity
+and the bound on the lower vector.
+
+\section{A uniform Harnack argument}
+\begin{lemma}\label{lem:Harnack}
+Let $\rho$ be a smooth strictly positive solution on a fixed chart of
+\[
+ \operatorname{div}(A\nabla\rho+B\rho)=0,
+ \qquad\lambda I\leq A\leq\lambda_1 I,\quad |B|\leq K.
+\]
+On a fixed-ratio inner cube,
+$\sup\rho\leq C\inf\rho$, where $C$ depends only on
+dimension, ellipticity, $K$ and the fixed chart size.
+No derivative bound for $A,B$ enters this constant.
+\end{lemma}
+\begin{proof}
+All powers below are admissible tests: the individual smooth
+positive function has finite positive and negative moments on
+each compact cutoff support. Their sizes are not assumed uniform.
+For $p\ne0,1$ test by $\eta^2\rho^{p-1}$. Move the principal
+energy to one side, using $|p-1|$ for either sign, and apply
+Young's inequality to the principal cutoff, vector-gradient and
+vector-cutoff terms. This gives
+\begin{equation}\label{eq:power}
+ \int\eta^2|\nabla\rho^{p/2}|^2
+ \leq Cp^2(1+|p-1|^{-2})
+          \int(|\nabla\eta|^2+K^2\eta^2)\rho^p.
+\end{equation}
+The coefficient bounds alone control $C$.
+Write $m=2n$ and $\beta=m/(m-2)>1$.
+Sobolev applied to $\eta\rho^{p/2}$ on nested cubes gives positive
+power iteration for $p>0$, and the same iteration for $\rho^{-1}$
+when $p<0$. Choose $p_0=\beta^{-k-1/2}$ with $k$ large.
+Then $p_0\beta^j$ never equals one; the exponents near one have
+a fixed dimensional gap. Geometric cutoff gaps and convergence
+of $\sum_j\beta^{-j}(j+1)$ give
+\begin{align}
+ \sup_{Q/2}\rho&\leq C(\avg_Q\rho^{p_0})^{1/p_0},\label{eq:sup}\\
+ \inf_{Q/2}\rho&\geq C^{-1}(\avg_Q\rho^{-p_0})^{-1/p_0}.
+                                                        \label{eq:inf}
+\end{align}
+Polynomial growth of the constants in~\eqref{eq:power}, away
+from $p=1$, is sufficient for these convergent products.
+
+The test $\eta^2/\rho$ gives
+\[
+ \int\eta^2|\nabla\log\rho|^2
+       \leq C\int(|\nabla\eta|^2+K^2\eta^2).
+\]
+For every subcube $S\subset Q$, use a cutoff on $2S$ inside a
+larger fixed chart cube. Scaling and Poincare give
+\[
+ \avg_S|\log\rho-(\log\rho)_S|\leq K_0,
+\]
+with a uniform $K_0\geq1$.
+Here and below $\avg$ denotes the Euclidean average.
+
+We expand the exponential bridge. For any function $f$ with this
+mean oscillation bound, fix $a>2$. Select maximal dyadic subcubes
+$S$ of $Q$ where $\avg_S|f-f_Q|>aK_0$.
+Their total measure is at most $|Q|/a$.
+Their parents have average at most $aK_0$, hence
+$|f_S-f_Q|\leq2^maK_0$.
+Off their union differentiation gives $|f-f_Q|\leq aK_0$.
+Repeat inside each selected cube with its own mean. Generation
+$j$ has measure at most $a^{-j}|Q|$; off the next generation,
+the accumulated increments and final oscillation are at most
+$(j2^ma+a)K_0$. The intersection of all generations is null.
+Integrating this exponential tail proves, for a dimensional $c>0$,
+\[
+ \avg_Q e^{c|f-f_Q|/K_0}\leq C_m.
+\]
+Apply it to $f=\log\rho$ and choose the earlier $k$ so that
+$p_0<c/K_0$. It follows that
+\[
+ (\avg_Q\rho^{p_0})(\avg_Q\rho^{-p_0})\leq C.
+\]
+Combining with~\eqref{eq:sup}--\eqref{eq:inf} proves Harnack.
+The selected $p_0$ and all constants depend only on the stated
+uniform data, never on derivatives of the variable coefficients.
+\end{proof}
+
+A fixed finite chart cover and connectedness supply a finite
+Harnack chain. Thus $\sup_X\rho\leq C_H\inf_X\rho$ with a
+uniform $C_H$. Since $dV(X)=\int_X\rho\,dV=1$,
+\begin{equation}\label{eq:rho}
+ C_H^{-1}\leq\rho\leq C_H.
+\end{equation}
+This quantitative estimate supplements Gauduchon's qualitative
+smooth conformal existence. Its constants depend only on fixed
+geometry, $\delta,\Lambda$ and the fixed torsion $dh$.
+
+\section{Exact-current and determinant normalization}
+For a smooth $v$ define
+\[
+ M_0=\int_XJ\rho\,dV,\qquad
+ T_* =\rho Q/M_0,\qquad r=J\rho/M_0.
+\]
+Smooth $\ddc$-Stokes with $\ddc(\rho Q)=0$ gives
+\[
+ \int_Xh\wedge\rho Q
+  =\int_X\sigma\wedge\rho Q
+  =\int_XJ\rho\,dV=M_0.
+\]
+Thus $T_*\in\mathcal G_h$. It is the $(n-1)$st power of the
+smooth Gauduchon metric
+$\gamma=(\rho/M_0)^{1/(n-1)}\sigma$ conformal to the actual
+solution form. The original smooth exact-maximizer statement
+identifies every exact maximizing current with $T_*$.
+For $c_v=\int_XJdV$ and $F=\log(J/c_v)$ the actual solution has
+$B_0(F)=\log c_v$, so the original scalar identity gives
+$M(F)=c_v^{-1/n}$. Here $c_0$ is reserved for $v=0$.
+The ordinary wedge normalization of its determinant yields
+\[
+ k_{T_*}=(\gamma^n/dV)^{(n-1)/n}
+       =\frac{\rho}{M_0}J^{(n-1)/n}
+       =J^{-1/n}r.
+\]
+Consequently
+\[
+ \Gamma_F(T_*)=c_v^{-1/n}r\,dV,
+ \qquad \nu_{T_*,F}=r\,dV,\qquad\int_Xr\,dV=1.
+\]
+This calculation estimates the original exact determinant-weighted
+probability, with its precise trace and wedge normalizations.
+It asserts nothing about singular determinant measures of arbitrary
+test currents, near-maximizers, or representation of all supports.
+
+Let $J_h=h^n/dV$ and put
+\[
+ j_-=(1-\varepsilon_0)^n\min_XJ_h>0,\qquad
+ j_+=(1+\varepsilon_0)^n\max_XJ_h.
+\]
+For our entire family, $j_-\leq J\leq j_+$ and
+$j_-\leq M_0\leq j_+$ because $\int_X\rho dV=1$.
+Equation~\eqref{eq:rho}, with
+$\delta=1-\varepsilon_0$ and $\Lambda=1+\varepsilon_0$, gives
+\[
+ \frac{j_-}{C_Hj_+}\leq r\leq\frac{C_Hj_+}{j_-},
+ \qquad
+ j_+^{-1/n}\frac{j_-}{C_Hj_+}
+       \leq k_{T_*}\leq
+ j_-^{-1/n}\frac{C_Hj_+}{j_-}.
+\]
+These explicit bounds prove the density assertions of
+Theorem~\ref{thm:family}. The critical norm is bounded by the
+same upper constant since $dV$ is a probability volume.
+
+\section{Boundedness and nontriviality at zero lower mass}
+The inequalities
+$(1-\varepsilon_0)^nJ_h\leq J_v\leq(1+\varepsilon_0)^nJ_h$
+also hold after integration for $c_v/c_0$.
+Subtracting the two logarithms gives
+$\|F_v-F_0\|_\infty\leq
+n\log((1+\varepsilon_0)/(1-\varepsilon_0))$.
+
+Choose any smooth nonconstant real $\phi$ on the fixed $X$.
+For all sufficiently small $t$, subtract the supremum of $t\phi$;
+the resulting potential belongs to $\mathcal V_{\varepsilon_0}$.
+The subtraction changes no Hessian or $F$.
+Smooth differentiation at $t=0$ gives
+\[
+ \left.\frac{d}{dt}F_{t\phi}\right|_{t=0}
+   =L_h\phi-
+     \frac{\int_XJ_hL_h\phi\,dV}{\int_XJ_h\,dV}.
+\]
+This function is nonconstant. Otherwise $L_h\phi$ is constant;
+evaluation at a maximum and a minimum makes that constant zero,
+and the compact smooth strong maximum principle makes $\phi$
+constant. The latter is the same smooth elliptic principle used
+in Gauduchon's primary proof.
+Choose two points where the displayed derivative differs. The
+difference $F_{t\phi}(x)-F_{t\phi}(y)$ is strictly monotone on a
+small parameter interval. It gives infinitely many distinct
+normalized densities, with at most one parameter having zero
+difference at these two points. Discarding that parameter yields
+infinitely many nonconstant densities.
+Distinct members cannot differ merely by a constant, because each
+has $\int_Xe^FdV=1$.
+
+The original metric $h$ and its hypothesis $v_-(h)=0$ have been
+retained throughout. Restricting to this uniformly positive
+smooth-Hessian family gives no positive lower mass for the full
+bounded $h$-psh family. The construction uses the given fixed
+zero-lower-mass manifold and does not require replacing it by a
+K\"ahler manifold or constructing an additional such manifold.
+
+\paragraph{Verification boundary.}
+The original smooth maximizing-current and scalar-duality background
+is used exactly as supplied by S17. Smooth Gauduchon conformal
+existence and the classical smooth maximum principle are established
+foundations. The cofactor identities, uniform weak estimates,
+dyadic bridge, every-exact-current normalization and nontrivial
+family calculations above have been independently reconstructed and
+checked. No pending sibling manuscript or prior
+verdict is a correctness grant. No literature priority is asserted.
+The checked theorem has precisely the restricted scope stated above.
+
+\begin{thebibliography}{9}
+\bibitem{Gaud} P. Gauduchon,
+\emph{Les m\'etriques standard d'une surface complexe compacte
+\`a premier nombre de Betti pair}, Ast\'erisque 126 (1985), 129--135.
+General Th\'eor\`eme 2, its positive smooth adjoint proof,
+and the preceding smooth maximum principle.
+\href{https://www.numdam.org/article/AST_1985__126__129_0.pdf}{Primary text}.
+\end{thebibliography}
+\end{document}

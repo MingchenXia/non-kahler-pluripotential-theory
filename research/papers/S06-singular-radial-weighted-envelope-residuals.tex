@@ -1,0 +1,503 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newcommand{\D}{dd^c}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\MA}{\operatorname{MA}}
+\newcommand{\Eenv}{\mathcal E_{\mathrm{env}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{Residual regularity of singular radial weighted envelopes}
+\author{}\date{}
+\begin{document}\maketitle
+\begin{abstract}
+We consider an ordinary global obstacle envelope with a sublogarithmic
+pole on projective space. A compactly supported radial perturbation of
+the singular weight reduces its envelope to a one-dimensional convex
+minorant. The residual against the prescribed singular reference is
+globally $C^{1,1}$, vanishes near the pole, and is smooth near the
+hyperplane at infinity. The envelope retains its ordinary type and its
+actual non-pluripolar measure has mass one, with zero density on every
+free interval. Fixed-support bounded obstacle families have a uniform
+$C^{1,1}$ residual bound and quantitative $C^{1,\gamma}$ stability for
+$0<\gamma<1$, even when the infinity contact moves. The formula extends to the full family of competitors on
+a product with an arbitrary positive Hermitian factor, including a
+nonclosed background on a non-K\"ahler fourfold. The conclusions concern
+this declared singular-obstacle operator and its residual.
+\end{abstract}
+\noindent\textbf{Checked scoped result.} The declared theorem has been
+independently reconstructed and reviewed. The unrestricted original
+S06 programme remains open.
+
+\section{The singular reference and the precise operator}
+Use $\D=i\partial\bar\partial/(2\pi)$ and ordinary wedge powers.
+Let $\kappa=\D\log(1+|z|^2)$ be the standard Fubini--Study form on
+$\mathbf P^k$, $k\geq2$, with $\int\kappa^k=1$. On its standard affine
+chart put
+\[
+ r=|z|^2,\qquad x=\log r,\qquad p=\frac r{1+r},\qquad
+ T=1-\log p,\qquad 0<\alpha<1,
+\]
+and define
+\[
+ \psi=1-T^\alpha,\qquad
+ A(x)=\log(1+e^x)+\psi(x).
+\]
+The canonical value of $\psi$ at $z=0$ is $-\infty$.
+At infinity, with $R=1/r$, it is
+$1-(1+\log(1+R))^\alpha$, a smooth expression in $R$.
+Here $R$ is a smooth projective function near the hyperplane, and the
+expression has value zero there. Thus $\psi$ is a genuine global
+$\kappa$-psh function, as also follows from the derivative
+calculation below. All inequalities involving potentials include their
+canonical values. Ordinary order $u\preceq v$ means $u\leq v+C_0$
+for a finite constant $C_0$.
+
+Fix $F\in C_c^2(\mathbf R,\mathbf R)$ and pull $F(\log r)$ back to
+the punctured chart, extending it by zero at both ends. Define the
+ordinary global obstacle envelope
+\begin{equation}\label{eq:envelope}
+ E_F=\left(\sup\{v\in\PSH(\mathbf P^k,\kappa):
+       v\leq\psi+F\text{ everywhere},\ v\preceq\psi\}\right)^*.
+\end{equation}
+Here the obstacle set is the entire manifold. Since $F$ is bounded,
+the order condition is redundant for each competitor; its inclusion
+declares the intended ordinary class. This is not an ideal-order
+envelope. The weight itself takes the value $-\infty$ at the pole.
+
+\begin{lemma}\label{lem:reference}
+$A$ is smooth and strictly convex, $0<A'<1$, and $A''$ is bounded.
+Its asymptotic slopes are $0$ and $1$. Moreover,
+\[
+ \begin{split}
+ &A(x)=1-(1-x)^\alpha+o(1)\quad(x\longrightarrow-\infty),\\
+ &A(x)-xA'(x)\longrightarrow-\infty\quad(x\longrightarrow-\infty),\\
+ &A(x)-x\searrow0,\quad A(x)-xA'(x)\longrightarrow0
+       \quad(x\longrightarrow+\infty).
+ \end{split}
+\]
+\end{lemma}
+\begin{proof}
+Put $a=\alpha T^{\alpha-1}$. Since $p'=p(1-p)$ and $T'=-(1-p)$,
+\[
+ A'=p+(1-p)a,\qquad
+ A''=p(1-p)(1-a)+\alpha(1-\alpha)(1-p)^2T^{\alpha-2}.
+\]
+Both assertions follow from $T\geq1$ and $0<a\leq\alpha<1$.
+The left asymptotics follow from $T=1-x+O(e^x)$; the tangent intercept
+has leading term $-(1-\alpha)(-x)^\alpha$.
+On the right, $A=x+(1-\alpha)e^{-x}+O(e^{-2x})$ and
+$A'=1-(1-\alpha)e^{-x}+O(e^{-2x})$. Finally $A'-1<0$.
+\end{proof}
+
+\section{Convex reduction for the full envelope}
+Let $g=A+F$ and let $C$ be its largest convex minorant on $\mathbf R$,
+defined as the supremum of all affine functions below $g$.
+This gives a finite convex function because $A-\|F\|_\infty$ is a
+convex minorant and is itself the supremum of its supporting lines.
+In particular
+\begin{equation}\label{eq:sandwich}
+ A-\|F\|_\infty\leq C\leq A+F\leq A+\|F\|_\infty.
+\end{equation}
+
+\begin{theorem}\label{th:main}
+The exact envelope in \eqref{eq:envelope} is
+\[
+ E_F(z)=C(\log|z|^2)-\log(1+|z|^2)
+\]
+off its pole, with canonical extensions at the pole and infinity.
+It is ordinarily equivalent to $\psi$. Its residual $E_F-\psi$ has a
+canonical extension in $C^{1,1}(\mathbf P^k)$, is identically zero
+near the pole, and is smooth near infinity.
+If $J=\{C<g\}$, then $C$ is affine on each connected component of $J$,
+and, writing $L_2=\sup_{\mathbf R}\max(g'',0)$,
+\begin{equation}\label{eq:quantitative}
+ 0\leq C'(b)-C'(a)\leq L_2(b-a)\qquad(a<b).
+\end{equation}
+\end{theorem}
+\begin{proof}[Proof of the formula and type]
+Every supporting slope of $C$ lies in $[0,1]$: a negative slope is
+incompatible with $g(x)\to-\infty$ at the left end, and a slope above
+one is incompatible with $g(x)=x+o(1)$ at the right end.
+The bounds \eqref{eq:sandwich} force the limiting slopes to be $0,1$.
+
+The full competitor family is invariant under $U(k)$ acting in the affine
+chart, so its upper-regularized supremum is radial. It is genuine
+$\kappa$-psh: local smooth closed potentials give a locally uniformly
+upper-bounded psh family, whose upper-regularized supremum is psh.
+The competitor $\psi-\|F\|_\infty$ prevents collapse. The obstacle
+$\psi+F$ is upper semicontinuous, so regularization preserves the
+pointwise upper bound, including the pole.
+
+For completeness, a radial psh total potential has the form $B(\log r)$
+with $B$ convex and nondecreasing. Restriction along a complex line gives
+convexity in $\log r$: radial subharmonic functions satisfy
+$(r\,\partial_r B(\log r))'\geq0$ in distributions.
+On the punctured affine space, positivity in a complex direction
+orthogonal to $z$ gives $B'\geq0$ for $k\geq2$.
+These statements hold for general radial psh functions by invariant
+local smoothing on annuli and distributional limits. Conversely, for
+smooth convex nondecreasing $B$, the complex Hessian has tangential
+eigenvalue $B'/r$ and radial eigenvalue $B''/r$; one-dimensional smooth
+convex approximation proves the distributional assertion for finite
+convex $B$. The envelope total profile is therefore a convex minorant
+of $g$ and is at most $C$.
+
+Conversely $C$ gives a psh total potential on the punctured chart by
+this Hessian criterion. Its upper bound at the origin and
+\eqref{eq:sandwich} give a canonical removable psh extension with value
+$-\infty$. Since $C'\leq1$, $C-x$ is nonincreasing and has a finite
+limit at infinity by \eqref{eq:sandwich}. The proposed potential is
+locally bounded above there. Adding a local smooth potential of
+$\kappa$ and applying removable psh singularities across the
+hyperplane proves a genuine extension. Thus it is a global competitor,
+and the formula follows. The bounds give ordinary equivalence without
+ever subtracting two infinite pole values.
+\end{proof}
+
+\begin{proof}[Proof of regularity and the end formulas]
+On a compact interval inside $J$ the gap $g-C$ has a positive minimum.
+Replacing $C$ on a sufficiently short subinterval by its chord preserves
+convex gluing: the chord slope lies between the corresponding endpoint
+one-sided derivatives. Continuity makes the increase smaller than the
+gap. Unless $C$ is locally affine this gives a larger convex minorant,
+a contradiction. Overlapping intervals show that $C$ is affine on
+each component of $J$.
+
+At a contact point $y$, domination by the differentiable obstacle gives
+$C'_-(y)\geq g'(y)\geq C'_+(y)$; convexity gives the reverse order.
+Thus $C$ is differentiable there, and both derivatives equal $g'(y)$.
+It is differentiable on free intervals as well. A differentiable convex
+function on an open interval has continuous derivative, so $C\in C^1$.
+For $a<b$ in distinct free intervals, move $a$ to its right contact
+endpoint and $b$ to its left contact endpoint, leaving contact points
+fixed. The new points $a',b'$ lie in $[a,b]$ and have the same
+derivatives. Any unbounded free component that has no appropriate
+endpoint puts both original points in that component, where the
+difference is zero. Otherwise
+\[
+ 0\leq C'(b)-C'(a)=g'(b')-g'(a')
+       \leq L_2(b'-a')\leq L_2(b-a).
+\]
+This proves \eqref{eq:quantitative}.
+
+For a tangent $\ell_x(y)=A'(x)y+A(x)-xA'(x)$, Lemma~\ref{lem:reference}
+gives $\ell_x\to-\infty$ uniformly on $\operatorname{supp}F$ as
+$x\to-\infty$. For all sufficiently negative $x$, this tangent is
+below $g$ there, and below $A=g$ outside the support. It is an affine
+minorant touching $A$ at $x$, so $C(x)=A(x)$ on a left end interval.
+The residual is exactly zero near the pole, and this is its canonical
+smooth extension.
+
+Put $L=\inf_{\mathbf R}(g(x)-x)\leq0$. If $L$ is attained at $y$,
+the minorant $x+L$ touches $g$ at $y$. The slope bound $C'\leq1$
+then forces $C=x+L$ on $[y,\infty)$: indeed
+$C(x)\leq C(y)+(x-y)=x+L$ and the reverse inequality holds everywhere.
+If $L<0$, it is attained, since $g-x\to+\infty$ on the left and
+to zero on the right. The same formula holds if $L=0$ is attained.
+The envelope is then
+\begin{equation}\label{eq:tail}
+ E_F=L-\log(1+R)
+\end{equation}
+near infinity, a smooth projective function there.
+
+If $L=0$ is not attained, $g(y)-y$ has a positive minimum on
+$\operatorname{supp}F$. The tangents $\ell_x(y)$ tend uniformly to
+$y$ on that compact set as $x\to+\infty$. For all sufficiently large
+$x$ they lie below $g$ there and below $A$ elsewhere. Consequently
+$C=A$ on a right end interval. The residual is again zero there.
+These alternatives include $F=0$, whose assertion is immediate.
+
+On the remaining finite annulus, $C-A$ is $C^{1,1}$. More explicitly,
+$|C-A|\leq\|F\|_\infty$, $|(C-A)'|\leq1$, and
+$\|(C-A)''\|_{L^\infty}\leq L_2+\|A''\|_\infty$.
+If $x=\log r$ is expressed in any smooth real coordinate chart on that
+annulus, then almost everywhere
+\[
+ |\nabla^2(C-A)(x)|\leq
+ (L_2+\|A''\|_\infty)|\nabla x|^2+|\nabla^2x|.
+\]
+Together with the exact smooth end formulas this gives a global
+$C^{1,1}$ bound using $\alpha,F$ and the two end cutoffs just constructed.
+No uniform bound on the location of those cutoffs is asserted for
+families approaching a change in the infinity alternative.
+\end{proof}
+
+\section{Actual measures and stability}
+\begin{corollary}\label{cor:mass}
+The actual non-pluripolar measure of $E_F$ has mass one. For finite
+$a<b$,
+\[
+ \MA_\kappa(E_F)(\{a<\log r<b\})=C'(b)^k-C'(a)^k.
+\]
+It gives zero measure to the pole and has zero density on every free
+interval. For $F,G\in C_c^2(\mathbf R)$, the canonically extended
+residuals satisfy
+\[
+ \|(E_F-\psi)-(E_G-\psi)\|_{C^0(\mathbf P^k)}
+       \leq\|F-G\|_\infty.
+\]
+\end{corollary}
+\begin{proof}
+On an annulus the bounded local product is computed from the convex
+total profile. For a smooth profile its Euclidean density is
+$k!\pi^{-k}(C')^{k-1}C''r^{-k}$; polar integration gives
+$k(C')^{k-1}C''\,dx$. Smooth convex approximation and continuity of
+the bounded Bedford--Taylor product give the displayed formula.
+Continuity of $C'$ excludes boundary atoms. At the pole use the strict
+superlevel restrictions of $\max(E_F,-j)$; their increasing union is
+the finite locus, and the non-pluripolar product gives no pole mass.
+There is no hyperplane mass since the envelope is smooth at infinity.
+The asymptotic slopes $0,1$ therefore give total mass one. A free
+interval is affine, so its radial eigenvalue and top density are zero.
+When its slope is positive the smooth Hessian has rank $k-1$.
+
+For $\delta=\|F-G\|_\infty$, subtracting $\delta$ from any competitor
+for $F$ gives a competitor for $G$, and conversely. Taking envelopes
+gives the uniform bound on the finite locus. The smooth residual
+extensions give the same bound at the pole and infinity. This asserts
+$C^0$ stability, not convergence in $C^{1,1}$.
+\end{proof}
+
+Choose a smooth nonnegative compactly supported bump $\chi$ with
+$\chi(x_0)=1$, and take $F=-M\chi$, where $M>A(x_0)-x_0$.
+Then $L<0$, so \eqref{eq:tail} holds on an open right tail.
+This gives an actual compact example with a retained sublogarithmic
+pole, a globally $C^{1,1}$ residual, and a nonempty zero-density region.
+Its regularity follows from the convex obstacle and end formulas,
+not from a prescribed determinant vanishing order.
+
+\section{Uniform families and derivative stability}
+Fix a finite interval $[a,b]$, $M>0$, and the parameters $k,\alpha$.
+Write $\mathcal F_{a,b,M}$ for the real $C^2$ obstacles supported in
+$[a,b]$ with $\|F\|_\infty+\|F''\|_\infty\le M$, and let
+$R_F$ denote the canonically extended residual $E_F-\psi$.
+Norms below are taken in one fixed finite smooth projective atlas.
+
+\begin{theorem}\label{th:uniform}
+There is $K=K(k,\alpha,a,b,M)$ such that
+\[
+ \|R_F\|_{C^{1,1}}\le K\qquad(F\in\mathcal F_{a,b,M}).
+\]
+For every $0<\gamma<1$ there is $K_\gamma$, with the same fixed
+parameter dependence, such that for $F,G\in\mathcal F_{a,b,M}$ and
+$\delta=\|F-G\|_\infty\le1$,
+\[
+ \|R_F-R_G\|_{C^{1,\gamma}}
+       \le K_\gamma\delta^{(1-\gamma)/2}.
+\]
+These bounds include changes between the infinity alternatives in
+Theorem~\ref{th:main}. They assume no uniform right contact cutoff.
+\end{theorem}
+\begin{proof}
+The left tangents of $A$ tend uniformly to $-\infty$ on $[a,b]$.
+Choose $a_0<a$, depending only on $\alpha,a,b,M$, so that every
+tangent at $x<a_0$ lies below $A-M$ on $[a,b]$. It is below
+$A+F$ globally and touches $A$ at $x$, where $F=0$.
+Thus $C_F=A$ on the same left interval for every $F$ in the family.
+All residuals vanish on the same neighborhood of the pole.
+The bounds
+\[
+ |C_F-A|\le M,\quad |C_F'-A'|\le1,\quad
+ 0\le C_F''\le\|A''\|_\infty+M\quad\hbox{a.e.}
+\]
+give uniform real Hessian bounds on any fixed compact annulus.
+
+Put $B=\max(b,0)+1$. For $x>B$, the obstacle is $A$.
+At contact points $C_F'=A'$. At a free point, the slope is
+$A'(d)\ge A'(x)$ if the free interval has a finite right contact
+endpoint $d$. An unbounded right free interval has slope one.
+Consequently, at every $x>B$,
+\[
+ 0\le1-C_F'(x)\le1-A'(x)\le e^{-x}.
+\]
+The locally Lipschitz functions $C_F',A'$ agree on the contact set.
+A locally Lipschitz function has derivative zero almost everywhere
+on its zero set: use its differentiability at density points and
+zero-set points approaching them. Hence $C_F''=A''$ almost
+everywhere on that contact set, whereas $C_F''=0$ on the free set.
+The reference derivative formula now gives
+\[
+ 0\le C_F''(x)\le A''(x)
+       \le(1+\alpha(1-\alpha))e^{-x}\quad\hbox{a.e. on }x>B.
+\]
+
+In a projective chart $Z_j\ne0$, $j\ge1$, set
+$\zeta=Z_0/Z_j$, $y=(Z_i/Z_j)_{i\ge1,i\ne j}$ and
+\[
+ H(y)=1+\sum|y_i|^2,\qquad R=|\zeta|^2/H(y),\qquad x=-\log R.
+\]
+On fixed relatively compact chart pieces,
+$|\nabla R|\le c\sqrt R$ and $|\nabla^2R|\le c$.
+Put $d_F=1-C_F'$ and express the envelope as
+$\mathcal E(R)=C_F(-\log R)+\log R-\log(1+R)$ for $R>0$.
+Then
+\[
+ \mathcal E_R=\frac{d_F}{R}-\frac1{1+R},\qquad
+ \mathcal E_{RR}=\frac{C_F''-d_F}{R^2}+\frac1{(1+R)^2}
+ \quad\hbox{a.e.}
+\]
+The preceding inequalities give $|\mathcal E_R|\le2$ and
+$|\mathcal E_{RR}|\le c_\alpha/R+1$. The real chain rule therefore
+bounds $\nabla^2\mathcal E$ uniformly in these projective charts.
+Also $\nabla\mathcal E\to0$ as $\zeta\to0$.
+The limit $L_F=\lim_{x\to\infty}(C_F(x)-x)$ lies in $[-M,0]$, and
+integrating $0\le1-C_F'\le e^{-x}$ yields
+$|C_F(x)-x-L_F|\le e^{-x}$.
+The value error is thus $O(R)$, so the extended envelope is
+differentiable at $\zeta=0$ with derivative zero.
+
+The continuous gradient has a local $W^{1,\infty}$ bound on
+coordinate boxes disjoint from $\zeta=0$, hence an actual Lipschitz
+representative there by convolution. Subdivide a straight coordinate
+segment into such boxes and pass to its possible single crossing of
+$\zeta=0$ by gradient continuity. A segment contained in that
+hyperplane has zero gradient throughout. This proves a uniform
+$C^{1,1}$ bound across infinity. Subtract the fixed smooth $\psi$
+there, and combine this bound with the common left cutoff and the
+fixed intervening annulus to obtain the global assertion.
+
+Finally $Z=R_F-R_G$ satisfies $\|Z\|_\infty\le\delta$ by
+Corollary~\ref{cor:mass} and has a uniform Lipschitz gradient.
+On a smaller fixed chart, a real directional increment $h$ gives
+\[
+ |\partial_e Z|\le2\delta/h+K h.
+\]
+Choosing $h=\sqrt{\delta/K}$ when within the chart radius, and
+enlarging the fixed constant otherwise, gives
+$\|\nabla Z\|_\infty\le c\sqrt\delta$.
+For points separated by $t$,
+\[
+ |\nabla Z(x)-\nabla Z(y)|\le
+             \min(c\sqrt\delta,2Kt).
+\]
+Divide by $t^\gamma$ and split at $t=\sqrt\delta$.
+A finite atlas gives the stated $C^{1,\gamma}$ estimate.
+The case $\delta=0$ follows directly from the uniform value estimate.
+No $C^{1,1}$ convergence is inferred.
+\end{proof}
+
+\section{All competitors on a nonclosed product}
+Let $(Y,h_0)$ be any connected compact positive Hermitian $m$-fold,
+and put $X=\mathbf P^k\times Y$, $H=\kappa+h_0$,
+$N=k+m$, and $V_0=\int_Yh_0^m$. Pull $\psi$ and $F$ back to $X$.
+Define $E_F^H$ by \eqref{eq:envelope} with the full family of genuine
+$H$-psh potentials, the pulled-back obstacle, and ordinary order.
+
+\begin{theorem}\label{th:product}
+The full product envelope is the pullback of $E_F$ and
+\[
+ \MA_H^{\rm ext}(E_F^H)=
+       \binom Nk\,\MA_\kappa(E_F)\otimes h_0^m,
+ \qquad \int_X\MA_H^{\rm ext}(E_F^H)=\binom Nk V_0.
+\]
+Its residual is globally $C^{1,1}$ and it belongs to the exact
+stretching class $\Eenv(X,H,\psi)$. On any one fixed such product,
+the uniform bounds and derivative stability of
+Theorem~\ref{th:uniform} hold for the pulled-back residuals.
+\end{theorem}
+\begin{proof}
+Every genuine $H$-psh competitor restricts on a projective slice to a
+genuine $\kappa$-psh function or to $-\infty$ identically. The exact
+lower Hessian in this assertion can be verified locally even when
+$H$ is nonclosed. Choose a smooth quadratic correction $\rho$ with
+$\D\rho\geq H$ on a coordinate polydisk. For a standard nonnegative
+radial convolution kernel set
+$v_\epsilon=(v+\rho)*\eta_\epsilon-\rho$ on a smaller polydisk.
+The psh convolutions decrease to the canonical $v+\rho$ and
+\[
+ \D v_\epsilon\geq(\D\rho-H)*\eta_\epsilon-\D\rho
+       \geq-H-o(1)\omega_{\rm Eucl},
+\]
+uniformly in the background error. Restrict this smooth inequality
+to each slice. On each fixed slice the restricted psh convolutions
+decrease either to $-\infty$ identically or to a psh function locally
+in $L^1$; in the latter case the error tends to zero distributionally.
+Subtracting $\rho$ preserves the canonical values and gives the exact
+$\kappa$ lower bound. These local restrictions patch. A global slice
+is consequently genuine or identically $-\infty$.
+
+The everywhere obstacle constraint makes every nontrivial slice a
+competitor for $E_F$. Thus $v\leq\operatorname{pr}_1^*E_F$ pointwise,
+and upper regularization preserves this inequality since the right
+side is upper semicontinuous. Conversely every base competitor lifts
+because $h_0\geq0$, giving equality. No transitive group on $Y$ and
+no restriction to separated competitors is used.
+
+For bounded finite-level truncations of the pulled-back potential,
+multilinearity of the locally corrected products gives only the term
+with $k$ projective and $m$ factor entries. Restrict to strict
+superlevel sets and let the level tend to infinity; this is the
+actual non-pluripolar construction, so the same binomial identity
+holds. It gives the finite mass stated. The residual bounds and
+extensions pull back as well. If $K_0=\|F\|_\infty$, then
+$E_F^H\geq\psi-K_0$. The genuine potential $a_1=E_F^H$ supplies
+the defining inequality at $t=1$. For $t>1$, use $a_t=\psi-tK_0$, which satisfies
+$t^{-1}a_t+(1-t^{-1})\psi=\psi-K_0\leq E_F^H$.
+This proves the exact stretching definition, together with ordinary
+order. The reference is genuine; no model-envelope identification
+or unbounded-product continuity theorem has been substituted.
+The uniform family and derivative estimates pull back to the fixed
+smooth product atlas, with constants depending also on that atlas.
+\end{proof}
+
+For a concrete nonclosed example let
+$Y=(\mathbf C^2\setminus\{0\})/\langle\zeta\mapsto e\zeta\rangle$.
+With $s=\log|\zeta|^2$ and $d^c=i(\bar\partial-\partial)/(4\pi)$, put
+$h_0=\D s+ds\wedge d^cs$. Both terms are scaling-invariant and descend.
+The first is positive on complex tangential directions and the
+second on the radial direction, so $h_0>0$.
+Moreover $dh_0=-ds\wedge\D s\ne0$.
+The factor is diffeomorphic to $S^3\times S^1$, with first Betti
+number one, so is not K\"ahler. The product with $\mathbf P^2$ is a
+compact non-K\"ahler fourfold, and $dH\ne0$. No zero-lower-mass
+property of this factor is needed or asserted here.
+
+\section{Literature and the answered scope}
+Ahn's \cite[Theorem 1.4(ii)]{AhnC} proves continuity of weighted
+extremals for finite continuous weights on compact Hermitian manifolds
+when the unweighted extremal is continuous. His
+\cite[Theorem 1.1(ii)]{AhnH} gives H\"older regularity with a uniform
+density in capacity. Those theorems use weights valued in $\mathbf R$;
+the weight here has a genuine $-\infty$ pole. The obstacle set here
+is the entire manifold and has full capacity density. Thus this
+construction does not exhibit a failure of that density assumption.
+Its conclusions concern a singular unbounded weight, retained
+ordinary type, and regularity of the pole-subtracted residual. The
+envelope itself retains its pole and is not a globally H\"older
+function. No literature-priority assertion is made.
+
+The foundational psh envelopes and removable extensions used above
+are the local statements in \cite[Chapter I, Sections 4--5]{Dem}.
+All product calculations use bounded local products as in
+\cite[Section 2]{BT}; smooth-background corrections and positivity
+at bounded levels can be justified as in
+\cite[Section 2.1, Proposition 2.1]{BGL}. The nonclosed unbounded
+calculation is obtained from finite-level strict-superlevel
+restrictions, not from a global theorem requiring BMP.
+
+This gives a specific radial singular-obstacle regularity and
+stability criterion with actual free-region density zeros, its
+canonical extension across a nonlogarithmic pole, and an all-competitor
+nonclosed product identity. Arbitrary prescribed types, general
+compact obstacle sets and ideal weighted envelopes remain outside
+the theorem. The ordinary model of the selecting potential is not
+assumed to preserve its sublogarithmic pole.
+
+\begin{thebibliography}{9}
+\bibitem{AhnC} H. Ahn, \emph{Characterization of continuity of
+Siciak--Zaharjuta extremal functions on compact Hermitian manifolds},
+arXiv:2604.01885v3 (2026).
+\bibitem{AhnH} H. Ahn, \emph{H\"older regularity of Siciak--Zaharjuta
+extremal functions on compact Hermitian manifolds},
+arXiv:2604.01887v3 (2026).
+\bibitem{Dem} J.-P. Demailly, \emph{Complex Analytic and Differential
+Geometry}, Chapter I.
+\bibitem{BT} E. Bedford and B. A. Taylor, \emph{A new capacity for
+plurisubharmonic functions}, Acta Math. 149 (1982), 1--40.
+\bibitem{BGL} S. Boucksom, V. Guedj and C. H. Lu,
+\emph{Volumes of Bott--Chern classes}, arXiv:2406.01090.
+\end{thebibliography}
+\end{document}

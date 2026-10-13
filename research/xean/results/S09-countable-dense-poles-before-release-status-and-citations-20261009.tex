@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ddc}{D}
+\newcommand{\PSH}{\operatorname{PSH}}
+\newcommand{\Eenv}{\mathcal E_{\mathrm{env}}}
+\newcommand{\OO}{\mathcal O_X}
+\title{Countable dense poles and equality of all obstacle envelopes}
+\author{Research manuscript for Problem S09}
+\date{9 October 2026\quad Private draft; independent verification pending}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every positive Hermitian background and every prescribed countable
+set, we construct genuine potentials with poles at all its points, trivial
+multiplier ideals at every positive scale, and ordinary envelopes equal
+to their ideal envelopes for every continuous obstacle. A fixed stronger
+potential supplies ordinary-order competitors at every small convex
+weight. Countable Jensen estimates prove exponential integrability
+directly. A dense prescribed set gives potentials unbounded on every
+nonempty open set. No mass bound or positive lower volume is assumed.
+The conclusion concerns this explicit family and leaves the unrestricted
+implication in original S09 unresolved. Independent acceptance and
+literature priority are not asserted.
+\end{abstract}
+
+\section{Definitions and statement}
+Let $X$ be connected compact complex, $\dim_{\mathbb C}X=n\geq1$, and
+$h>0$ smooth Hermitian. Fix a smooth positive probability volume $dV$,
+and use $\ddc=i\partial\bar\partial/(2\pi)$. All potentials have genuine
+canonical quasi-psh representatives. Write $v\preceq u$ if $v\leq u+C$
+for some finite constant. The original multiplier ideal $\mathcal I(su)$
+uses the integrability of $|g|^2e^{-su}$, and $v\preceq_{\mathcal I}u$
+means $\mathcal I(sv)\subseteq\mathcal I(su)$ for every real $s>0$.
+For continuous real $F$ put
+\[
+ P_{h,F}[u]=\bigl(\sup\{v\in\PSH(X,h):v\leq F,
+                                     \ v\preceq u\}\bigr)^*,
+\]
+with $P_{h,F}[u]_{\mathcal I}$ defined by ideal order instead, and
+\[
+ P_h(F)=\bigl(\sup\{v\in\PSH(X,h):v\leq F\}\bigr)^*.
+\]
+Here $*$ is upper semicontinuous regularization. These are the original
+orders and envelopes, with no change of multiplier-ideal convention.
+
+\begin{theorem}\label{th:main}
+Fix $0<\beta<\beta'<1$ and any nonempty finite or countably infinite
+set $\{x_j\}$ in $X$. There are genuine $u,w\in\PSH(X,h)$ satisfying:
+\begin{enumerate}
+\item $u,w\leq0$, $h+\ddc u,h+\ddc w\geq3h/4$, and
+      $u(x_j)=w(x_j)=-\infty$ for every prescribed point.
+\item For every $0<t\leq1$, $tw\preceq u$. The same fixed $w$
+      works for all $t$. Also $u\in\Eenv(X,h,0)$ in the original
+      stretching sense: for every $b\geq1$, some genuine $h$-psh
+      $v$ satisfies $b^{-1}v\leq u$ canonically.
+\item $e^{-su},e^{-sw}\in L^1(X,dV)$ for every real $s>0$;
+      in particular $\mathcal I(su)=\OO$ for every such $s$.
+\item For every continuous real obstacle $F$,
+      \[
+       P_{h,F}[u]=P_{h,F}[u]_{\mathcal I}=P_h(F).
+      \]
+      Consequently the two zero-obstacle envelopes both equal the
+      genuine potential zero. Every original smooth obstacle is included.
+\end{enumerate}
+If the prescribed set is dense, $u$ is unbounded on every nonempty open
+set. The pole sets can contain additional points. No Monge--Amp\`ere
+mass or product-continuity assertion is made.
+\end{theorem}
+
+\section{Actual countable potentials}
+Take a finite atlas of relatively compact coordinate charts covering $X$,
+with slightly larger charts on which the coefficients of $dV$ are uniformly
+bounded. For each $x_j$, choose a coordinate ball $B_j$ centered there
+with radius $0<r_j\leq1$, contained in one of the larger charts. Let
+$0\leq\chi\leq1$ be one smooth cutoff supported strictly inside the
+unit ball and equal to one near zero. In that chart put
+\[
+ \chi_j(z)=\chi((z-z_j)/r_j),\qquad
+ L_j=1-\log\frac{|z-z_j|^2}{r_j^2},
+\]
+and extend the supported profiles by zero outside $B_j$. The balls
+may overlap. Let $e_j=2^{-j-2}$, so $\sum_j e_j\leq1/4$.
+
+For $0<\sigma<1$, the inner profile $q_\sigma(s)=-(1-s)^\sigma$
+has $q_\sigma'=\sigma(1-s)^{\sigma-1}>0$ and
+$q_\sigma''=\sigma(1-\sigma)(1-s)^{\sigma-2}>0$.
+Its tangential and radial Hessian eigenvalues in the normalized radial
+coordinate are $q_\sigma'/R^2$ and $q_\sigma''/R^2$. The cutoff
+transition is smooth with a finite negative Hessian bound relative to $h$.
+Choose $\delta_j>0$, the same for $\beta$ and $\beta'$, with
+$\delta_j\leq2^{-j}$ so that
+\begin{equation}\label{eq:terms}
+ a_j=-\delta_j\chi_j L_j^\beta,\qquad
+ c_j=-\delta_j\chi_j L_j^{\beta'},\qquad
+ \ddc a_j,\ddc c_j\geq-e_jh.
+\end{equation}
+This is possible separately for each $j$ by scaling both finite annular
+bounds. At $x_j$ assign the canonical value $-\infty$.
+
+For completeness this is genuine positivity across the point. Choose
+smooth nondecreasing $\zeta$ equal to zero below $-2$ and to one above
+$-1$. For $A$ large define
+\[
+ q_A'(s)=q_\sigma'(s)\zeta(s/A),\qquad
+ q_A(s)=q_\sigma(0)-\int_s^0q_A'(t)\,dt,\quad s\leq0.
+\]
+The profile is convex increasing, constant for $s\leq-2A$, and equals
+$q_\sigma$ for $s\geq-A$. It gives a smooth radial function at the
+center and leaves the fixed cutoff transition unchanged. As $A$ increases
+it decreases to $q_\sigma$, including the value $-\infty$ at the center,
+and converges in $L^1$ by the radial integrability of $(1-s)^\sigma$.
+The smooth Hessian bounds pass distributionally. Local addition of a
+fixed strictly psh quadratic makes these a decreasing psh sequence, so
+the limit has the claimed canonical representative
+\cite[Theorems I.5.4 and I.5.8]{Dem}.
+
+Define the actual decreasing sums
+\[
+ u=\lim_{N\to\infty}\sum_{j\leq N}a_j,\qquad
+ w=\lim_{N\to\infty}\sum_{j\leq N}c_j.
+\]
+Finite-atlas volume bounds and rescaling by $r_j$ give
+$\|a_j\|_{L^1}+\|c_j\|_{L^1}\leq C\delta_j$, since both unit-ball
+radial integrals are finite. Thus the sums are $L^1$ and are not
+identically $-\infty$. Each partial sum has background current at least
+$(1-\sum_{j\leq N}e_j)h\geq3h/4$. A fixed local quadratic correcting
+$h$ makes all partial sums psh. Their decreasing limits are therefore
+genuine canonical quasi-psh functions, and their current bounds pass to
+the limit. Each negative summand has a pole at its own $x_j$, proving
+the asserted values. If these points are dense, every nonempty open set
+contains an actual pole, so no local boundedness is possible there.
+
+\section{One fixed stronger ordinary minorant}
+Put $S=\sum_j\delta_j$, so $0<S<\infty$. For every real $b\geq1$,
+\[
+ M_b=\max\{0,\sup_{L\geq1}(bL^\beta-L^{\beta'})\}<\infty
+\]
+because $\beta'>\beta$. Termwise multiplication by $0\leq\chi_j\leq1$
+and summation yield, for every finite $N$,
+\[
+ \sum_{j\leq N}c_j\leq b\sum_{j\leq N}a_j
+                                  +M_b\sum_{j\leq N}\delta_j.
+\]
+Pass to the actual decreasing canonical sums. The inequality remains
+valid at common poles; in particular if $u=-\infty$ it forces
+$w=-\infty$. Hence $w\leq bu+M_bS$ everywhere. With $b=1/t$ this
+gives
+\begin{equation}\label{eq:minorant}
+ tw\leq u+tM_{1/t}S,\qquad 0<t\leq1.
+\end{equation}
+The function $tw$ is genuine $h$-psh by convexity with the potential zero.
+For stretching, $v=w-M_bS$ is genuine $h$-psh and satisfies $v\leq bu$.
+Together with $u\leq0$, this proves the original $\Eenv(X,h,0)$ condition.
+No bound uniform in $b$ or in $t$ on the ordinary-order constants is
+required.
+
+\section{Exponential integrability without valuation assumptions}
+Let $s>0$ and $\alpha_j=\delta_j/S$. Weighted Jensen, assigning the
+missing tail weight to the number zero, gives
+\[
+ e^{-s\sum_{j\leq N}a_j}
+ \leq1-\sum_{j\leq N}\alpha_j
+       +\sum_{j\leq N}\alpha_j e^{sS\chi_j L_j^\beta}.
+\]
+The individual integrals on the right are uniformly bounded in $j$.
+Outside $B_j$ the exponential is one; inside, the finite-atlas volume
+bound and $r_j^{2n}\leq1$ reduce the estimate to
+\[
+ C\int_0^1\exp\bigl(sS(1-\log R^2)^\beta\bigr)R^{2n-1}\,dR<\infty.
+\]
+With $x=-\log R^2$, the exponent is $-nx+sS(1+x)^\beta$,
+which is eventually at most $-nx/2$ because $\beta<1$.
+Integrating Jensen and then using monotone convergence proves
+$e^{-su}\in L^1(X,dV)$. Repeat the same argument with $\beta'$ to
+obtain $e^{-sw}\in L^1$ for every $s>0$. Every holomorphic germ is bounded
+on a smaller coordinate ball. Thus $|g|^2e^{-su}$ is locally integrable
+for every germ, proving $\mathcal I(su)=\OO$ in the exact original
+convention. No selected-divisor or zero-Lelong-number inference is used.
+
+\section{Every continuous obstacle}
+\begin{lemma}\label{lem:envelope}
+If a nonempty family of genuine $h$-psh functions is bounded above by
+continuous $F$, its regularized supremum is genuine $h$-psh and below $F$.
+\end{lemma}
+\begin{proof}
+First finite maxima retain the exact nonclosed bound. On a smaller chart,
+convolve two potentials $v_i$ with smooth positive kernels. Positivity of
+$h+\ddc v_i$ gives $\ddc(v_i*\kappa_\varepsilon)
+\geq-h*\kappa_\varepsilon\geq-h-o(1)\ddc|z|^2$ uniformly there.
+The smooth maximum
+$m_\tau(x,y)=\tau\log(e^{x/\tau}+e^{y/\tau})$ has nonnegative first
+derivatives summing to one and a positive semidefinite Hessian. Its
+chain rule therefore preserves this lower bound. Convolution converges
+in $L^1$, and $0\leq m_\tau-\max\leq\tau\log2$, so taking both limits
+passes the exact bound $\ddc\max(v_1,v_2)\geq-h$ distributionally.
+Adding one local quadratic $Q$ with $\ddc Q\geq h$ identifies its
+canonical representative as $\max(v_1+Q,v_2+Q)-Q$
+\cite[Theorem I.5.6]{Dem}.
+
+Apply the local psh upper-envelope theorem and its Choquet selection
+\cite[Theorem I.5.7 and its proof]{Dem} after adding the same $Q$.
+A finite cover gives a countable subfamily whose supremum has the same
+regularization and equals it almost everywhere. Include one fixed
+genuine competitor $A$ in every finite maximum. These maxima increase,
+lie between $A$ and $F$, and converge in $L^1$ by domination to the
+regularized supremum. Their exact $h$ current bounds pass to that limit.
+The local psh regularization supplies its canonical representative.
+Continuity of $F$ preserves the upper bound at every point. No local
+potential for the nonclosed form $h$ is required.
+\end{proof}
+
+Fix continuous real $F$ and set $W=P_h(F)$. The constant $\min_XF$
+is a competitor, so $\min_XF\leq W\leq\max_XF$. Local psh supremum
+regularization with Lemma~\ref{lem:envelope} gives a genuine bounded
+$h$-psh envelope and preserves $W\leq F$.
+Because every $\mathcal I(su)$ is $\OO$, every genuine $h$-psh function
+is ideal-order dominated by $u$. Therefore $P_{h,F}[u]_{\mathcal I}=W$
+directly from the full original definition.
+
+For $0<t<1$ define the genuine convex-combination potential
+\[
+ A_t=(1-t)W+tw-t\|F\|_\infty.
+\]
+It is below $F$, since $w\leq0$, $W\leq F$, and
+$(1-t)F-t\|F\|_\infty\leq F$. Equation \eqref{eq:minorant} and
+boundedness of $W$ show $A_t\preceq u$ for each $t$. Hence $A_t$ is
+an ordinary-order competitor for the original envelope $O=P_{h,F}[u]$.
+The envelope is genuine and nontrivial because it dominates $A_t$;
+all its competitors are bounded above by $F$, so
+Lemma~\ref{lem:envelope} applies. We have $A_t\leq O\leq W$.
+On the full-volume set where $w$ is finite, $A_t\to W$ as $t\downarrow0$,
+so $O=W$ almost everywhere. Canonical equality holds everywhere: locally
+add one smooth quadratic to both, obtaining two psh functions with the
+same distribution; uniqueness of the psh representative
+\cite[Theorem I.5.8]{Dem} makes them identical, including point values.
+This proves the asserted equality for all $F$. For $F=0$, $W=0$ because
+zero itself is a competitor.
+
+\begin{remark}
+These statements are independent of any bounded upper mass property or
+positive lower singularity volume. They apply on any given positive
+background having zero lower mass or unbounded upper mass; no such
+geometry or top-product theorem is inferred from the construction.
+Original S09 concerns every genuine zero-obstacle equality for arbitrary
+admissible smooth backgrounds. Here positivity of $h$ and the fixed
+stronger minorant are explicit restrictions. The known relative-envelope
+sufficient criterion is not claimed as a new universal theorem. The
+countable construction and all of its new elementary primary applications
+still require independent reconstruction and final audit.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{Dem} J.-P. Demailly, \emph{Complex Analytic and Differential
+Geometry}, author-hosted manuscript, version of 21 June 2012, Chapter I,
+Theorems 5.4, 5.6, 5.7 and 5.8.
+\end{thebibliography}
+\end{document}
