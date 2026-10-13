@@ -24,8 +24,8 @@ Choose smooth uniformly bounded decreasing approximations of all
 the potentials by \cref{hessian:bounded-decreasing-approximation}.
 Construct $w_j$ by \cref{hessian:regularized-maximum}. Work on
 one compact coordinate test set. Fix $\delta>0$ and a smooth
-$\chi_\delta:\mathbb R\to[0,1]$ that vanishes for
-$s\leq\delta/2$ and equals one for $s\geq\delta$.
+$\chi_\delta\colon\mathbb R\to[0,1]$ that vanishes for
+$x\leq\delta/2$ and equals one for $x\geq\delta$.
 For $j$ large enough that $\epsilon_j<\delta/2$, ordinary smooth
 locality gives
 \[
@@ -44,8 +44,8 @@ Apply \cref{hessian:weighted-measure-convergence} with $s=m$ and
 $F(x,y)=\chi_\delta(x-y)$ to the real and imaginary parts of
 each coefficient. Passing to the limit gives the same identity
 with $u,v,w,t_2,\ldots,t_p$.
-Choose the cutoffs so that $\chi_\delta(s)\to\mathbf1_{\{s>0\}}$
-pointwise as $\delta\downarrow0$. Dominated convergence against
+As $\delta\downarrow0$, $\chi_\delta(x)\to\mathbf1_{\{x>0\}}$
+for every real $x$. Dominated convergence against
 the fixed finite coefficient variations on the test set gives
 the asserted restriction. A partition of unity proves it globally.
 \end{proof}
@@ -69,7 +69,8 @@ For $w=\max\{u,v\}$,
 The inequality with $u,v$ exchanged also holds.
 \end{theorem}
 \begin{proof}
-Symmetry and \cref{hessian:bounded-strict-locality}, applied to the $r$ slots, give
+Symmetry and \cref{hessian:bounded-strict-locality}, applied to the
+$r$ slots one at a time, give
 $\mu_r(w)=\mu_r(v)$ on $\{u<v\}$ and $\mu_r(w)=\mu_r(u)$ on $\{u>v\}$.
 To include the contact set, put $w_\epsilon=\max\{u+\epsilon,v\}$.
 Strict locality and invariance under addition of constants give
@@ -80,18 +81,22 @@ Strict locality and invariance under addition of constants give
 The invariance follows from the smooth products and their joint
 decreasing limits. As $\epsilon\downarrow0$,
 $w_\epsilon\downarrow w$, so the left side converges weakly to
-$\mu_r(w)$. Against any nonnegative continuous compactly supported
+$\mu_r(w)$ by \cref{hessian:joint-decreasing-products}. Against any nonnegative continuous compactly supported
 test function, the right side converges by dominated convergence
 for the fixed measure $\mu_r(u)$ to
 $\mathbf1_{\{u\geq v\}}\mu_r(u)$. This proves the measure inequality
 on the contact set as well as on $\{u>v\}$. On its disjoint
-complement $\{u<v\}$, the already proved equality supplies
-$\mu_r(v)$. Restricting the positive measures to these two Borel sets
+complement $\{u<v\}$, the equality proved first gives
+$\mu_r(w)=\mu_r(v)$. Restricting the positive measures to these two Borel sets
 and adding gives the assertion. Exchanging $u,v$ gives its other
 form.
 \end{proof}
 
-Convex rescaling also supplies a positive background term in the measure.
+For bounded admissible $v$, write $H_m(v)=Q_m(v,\ldots,v)$ for the
+positive Radon measure of \cref{hessian:bounded-shifted-positive}
+with all potentials equal to $v$. For continuous $v$ this is the
+measure $H_m(v)$ of \cref{sec:hessian-continuous-products}.
+Convex rescaling supplies a positive background term in this measure.
 
 \Needspace{13\baselineskip}
 \begin{lemma}\label{hessian:convex-background-term}\index{Hessian measure!convex rescaling}
@@ -102,8 +107,8 @@ $b$, the function $v_\alpha=\alpha v+b$ is bounded admissible and
 \]
 \end{lemma}
 \begin{proof}
-Take smooth decreasing uniformly bounded admissible $v_j\downarrow v$.
-Cone convexity makes $\alpha v_j+b$ admissible because
+Take smooth decreasing uniformly bounded admissible $v_j\downarrow v$
+by \cref{hessian:bounded-decreasing-approximation}. Cone convexity makes $\alpha v_j+b$ admissible because
 \[
  \omega+\ddc(\alpha v_j+b)
         =\alpha(\omega+\ddc v_j)+(1-\alpha)\omega.
@@ -164,12 +169,14 @@ wedged with raw currents $D_p$ of degrees $p\leq m-1$.
 variation locally by $C c_{m-1}^*$, uniformly under common bounds
 on the potentials. Joint convergence follows from
 \cref{hessian:joint-decreasing-products} applied to this expansion.
-All the canonical weights are quasicontinuous for $c_{m-1}^*$.
+All the canonical weights are quasicontinuous for $c_{m-1}^*$, by
+\cref{hessian:rough-coefficient-capacity}.
 \Cref{hessian:weighted-measure-convergence}, with $s=m-1$,
 thus proves the weighted assertion coefficientwise on a finite
 coordinate cover. A partition of unity gives it on $X$.
-The term involving $R_k\ddc(\omega^\ell)$ retains degree $m-1$;
-the argument requires no coefficient estimate in degree $m$.
+Even the term involving $R_k\ddc(\omega^\ell)$ contains only a
+current of degree $m-1$, so the argument requires no coefficient
+estimate in degree $m$.
 \end{proof}
 
 \Needspace{11\baselineskip}
@@ -181,7 +188,8 @@ Every bounded admissible potential $u$ has
 No differential identities for powers of $\omega$ are required.
 \end{proposition}
 \begin{proof}
-Suppose instead that $H_m(u)=0$. Fix $s>0$, set
+Suppose instead that $\int_XH_m(u)=0$. Since $H_m(u)$ is positive,
+$H_m(u)=0$. Fix $s>0$, to be chosen below, set
 $c=\inf_Xu+s$, and put $w=\max\{u,c\}$.
 The upper semicontinuity of $u$ makes
 $U=\{u<c\}$ open, and the definition of the infimum makes it
@@ -208,19 +216,24 @@ Here each displayed product denotes the symmetric shifted current
 $R_{m-1}$ of \eqref{eq:hessian-bounded-shifted-current}, wedged with
 $\omega^{n-m}$.
 
-Choose smooth bounded admissible $u_j\downarrow u$ and the
+Choose uniformly bounded smooth admissible $u_j\downarrow u$ by
+\cref{hessian:bounded-decreasing-approximation}, and the
 regularized maxima $w_j=M_{\epsilon_j}(u_j,c)\downarrow w$,
 where $\epsilon_j\downarrow0$, as in
 \cref{hessian:regularized-maximum}.
-Both lists have a common bound. The smooth polynomial identity and
+Both lists have a common bound. Write $\mu_q^j$ and $T_q^j$ for the
+smooth forms defined by $u_j,w_j$ in place of $u,w$. The polynomial
+identity $\mu_q^j-\mu_m^j=\ddc(w_j-u_j)\wedge T_q^j$ and
 Stokes' theorem on the compact manifold give
 \[
  \int_X(\mu_q^j-\mu_m^j)
               =\int_X(w_j-u_j)\ddc T_q^j.
 \]
-Joint decreasing convergence passes the left side to its limit.
-The preceding lemma, with $F(x,y)=y-x$ and the decreasing lists
-$u_j,w_j$, passes the right side to its limit. Hence
+Joint decreasing convergence in
+\cref{hessian:joint-decreasing-products} passes the left side to
+$\int_X(\mu_q-\mu_m)=\int_X\mu_q$.
+\Cref{hessian:bounded-torsion-weight}, with $F(x,y)=y-x$ and the
+decreasing lists $u_j,w_j$, passes the right side to its limit. Hence
 \[
  \int_X\mu_q=\int_X(w-u)\ddc T_q.
 \]
@@ -236,12 +249,11 @@ of $\omega+\ddc u$ of degrees at most $m-1$.
 Use smooth admissible approximations to $u$ and the constant $c$ in
 these local expressions; their limits are the same restricted currents.
 For those smooth approximations, the absolute mixed-form
-estimate \cref{hessian:absolute-mixed-forms} bounds each such term
-by a constant times the corresponding positive trace, and therefore
-by $C\sum_{r=0}^{m-1}\mu_r$ on $U$ after taking joint limits.
-More explicitly, a term with $r$ factors is bounded by
-$C(\omega+\ddc u)^r\omega^{n-r}$; this is $C\mu_r$ on $U$.
-Against compactly supported nonnegative tests in $U$, weak
+estimate \cref{hessian:absolute-mixed-forms} bounds a term with $r$
+factors $\omega+\ddc u_j$ by the positive trace
+$C(\omega+\ddc u_j)^r\wedge\omega^{n-r}$. In the joint limit, this
+trace becomes $C(\omega+\ddc u)^r\wedge\omega^{n-r}$, which equals
+$C\mu_r$ on $U$. Against compactly supported nonnegative tests in $U$, weak
 convergence and lower semicontinuity of total variation preserve
 the estimate. Exhaustion gives the measure inequality
 \[
@@ -252,14 +264,17 @@ Here $C$ depends only on $\omega,m,n$, not on $u$ or $s$; a fixed
 finite coordinate cover bounds all the smooth metric coefficients.
 
 \Needspace{8\baselineskip}
-Since $w-u$ vanishes outside $U$, positivity gives
+Since $0\leq w-u\leq s$ and $w-u$ vanishes outside $U$, positivity
+of $\mu_q$ and this measure inequality give
 \[
  \int_U\mu_q\leq\int_X\mu_q
             \leq Cs\sum_{r=0}^{m-1}\int_U\mu_r
                  \qquad(0\leq q<m).
 \]
-Summing these $m$ inequalities and choosing $s>0$ with $mCs<1$
-forces $\sum_{r=0}^{m-1}\int_U\mu_r=0$.
+Summing these $m$ inequalities gives
+$(1-mCs)\sum_{r=0}^{m-1}\int_U\mu_r\leq0$. Since $C$ does not
+depend on $s$, we may choose $s>0$ with $mCs<1$, which forces
+$\sum_{r=0}^{m-1}\int_U\mu_r=0$.
 But locality gives $\mu_0=\omega^n$ on the nonempty open set $U$,
 whose volume is positive. This contradiction proves the result.
 \end{proof}

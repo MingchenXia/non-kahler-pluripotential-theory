@@ -1,7 +1,8 @@
 \section{Hessian mass and global comparison}
 \label{sec:hessian-mass-comparison}
 
-The maximum inequality compares measures on complementary Borel sets.
+The maximum inequality of \cref{hessian:bounded-maximum-measure}
+compares measures on complementary Borel sets.
 Integrating it leaves a difference of total masses. The recursive
 currents express this difference through the complex Hessians of the
 background powers, extending the mass calculation of
@@ -20,8 +21,10 @@ Here $H_m(t)$ is a finite positive Radon measure and
 $\mathcal M_m$ is the total mass of a mixed positive measure, by
 \cref{hessian:bounded-shifted-positive}. For a nonempty subset
 $I=\{i_1<\cdots<i_q\}\subset\{1,\ldots,m\}$, put
-$i(I)=i_q$ and $I^-=I\setminus\{i_q\}$. Use $D_{I^-}$ for the
-recursive current with those ordered inputs, with $D_\varnothing=1$.
+$i(I)=i_q$ and $I^-=I\setminus\{i_q\}$. The currents $D_I$ and
+$D_{I^-}$ are the recursive currents of the list $t_1,\ldots,t_m$
+introduced before \eqref{eq:hessian-bounded-shifted-current};
+in particular $D_\varnothing=1$.
 
 \Needspace{17\baselineskip}
 \begin{lemma}\label{hessian:bounded-mass-expansion}\index{Hessian measure!total mass}
@@ -53,8 +56,10 @@ The empty subset contributes $\int_X\omega^n$.
 Let $\mu_r$ be the repeated-slot mixed measure from
 \cref{hessian:bounded-maximum-measure}, for fixed $r$ and
 $z_1,\ldots,z_{m-r}$.
-The total-mass difference below therefore has the explicit expression
-\eqref{eq:hessian-bounded-mass-expansion} for the two indicated lists.
+The total masses of $\mu_r(w)$ and $\mu_r(u)$ in the next proposition
+are values of $\mathcal M_m$, so
+\eqref{eq:hessian-bounded-mass-expansion} for the two corresponding
+lists expresses their difference explicitly.
 
 \Needspace{11\baselineskip}
 \begin{proposition}\label{hessian:comparison-mass-defect}\index{Comparison principle!Hessian mass defect}
@@ -66,8 +71,8 @@ If $u,v$ are bounded admissible and $w=\max\{u,v\}$, then
 \]
 \end{proposition}
 \begin{proof}
-Set $E=\{u<v\}$. The contact-set version of
-\cref{hessian:bounded-maximum-measure} gives
+Set $E=\{u<v\}$. \Cref{hessian:bounded-maximum-measure}, whose
+first term includes the contact set $\{u=v\}$, gives
 \[
  \mu_r(w)\geq\mathbf1_{X\setminus E}\mu_r(u)
                      +\mathbf1_E\mu_r(v).
@@ -96,8 +101,9 @@ The following conditions are equivalent:
  \int_{\{u<v\}}H_m(v)\leq\int_{\{u<v\}}H_m(u).
 \]
 \end{enumerate}
-Under these conditions, for every $1\leq r\leq m$ and every fixed bounded
-admissible list $z_1,\ldots,z_{m-r}$, one also has
+Under these conditions, for every $1\leq r\leq m$, every fixed bounded
+admissible list $z_1,\ldots,z_{m-r}$ and all bounded admissible $u,v$,
+one also has
 \[
  \int_{\{u<v\}}\mathrm d\mu_r(v)
            \leq\int_{\{u<v\}}\mathrm d\mu_r(u).
@@ -118,8 +124,9 @@ The polynomial
               \int_X(\ddc f)^q\wedge\omega^{n-q}
 \]
 is constant on an interval. Consequently every coefficient with
-$q\geq1$ vanishes. Polarizing that coefficient by replacing $f$
-with $\sum_{a=1}^q s_af_a$ gives
+$q\geq1$ vanishes. Replacing $f$ by $\sum_{a=1}^q s_af_a$ in the
+coefficient of $t^q$ and comparing the coefficients of
+$s_1\cdots s_q$ gives
 \[
  \int_X\ddc f_1\wedge\cdots\wedge\ddc f_q
                         \wedge\omega^{n-q}=0
@@ -140,8 +147,8 @@ coefficient of $\ddc(\omega^{n-q})$, so that form vanishes. When
 $q=1$, there are no other Hessians and the same conclusion follows
 directly from the arbitrariness of $f_1$.
 
-Under the third condition, $\mu_r(w)$ and $\mu_r(u)$ have the same
-total mass. \Cref{hessian:comparison-mass-defect} proves the mixed
+Under the third condition, $\mu_r(w)$ and $\mu_r(u)$ both have
+total mass $\int_X\omega^n$. \Cref{hessian:comparison-mass-defect} proves the mixed
 comparison assertion, and $r=m$ gives the fourth condition.
 Finally, suppose the fourth condition holds and fix smooth admissible
 $u,v$. Choose $C$ so large that $u<v+C$ everywhere.
@@ -150,8 +157,9 @@ $\int_XH_m(v)\leq\int_XH_m(u)$. Exchanging $u,v$ gives equality,
 which is the second condition.
 \end{proof}
 
-The same varying background that obstructs Monge--Amp\`ere comparison
-also obstructs comparison at each intermediate Hessian degree.
+The varying background of \cref{ex:torus-mass}, which obstructs
+Monge--Amp\`ere comparison, also obstructs comparison at each
+intermediate Hessian degree.
 
 \Needspace{20\baselineskip}
 \begin{example}\label{hessian:torus-comparison-obstruction}\index{Torus!Hessian comparison obstruction}
@@ -231,18 +239,18 @@ For $q=0$, the error can instead be bounded by
 $Cs(b_{p,0}+b_{p-1,0}+b_{p-2,0})$, with negative indices zero.
 \end{lemma}
 \begin{proof}
-First estimate the torsion of $T_{p,q}$, writing $r=p+q$.
-For smooth admissible potentials, the product rule expresses
-$\ddc T_{p,q}$ as a sum of fixed smooth metric forms wedged
-with products of $\sigma_u,\sigma_V$ of degrees $r,r-1,r-2$.
-The terms of degree $r$ come from differentiating the background
-power; they cannot be discarded. Indeed,
+First estimate the torsion of $T_{p,q}$, writing $r=p+q$, for
+smooth admissible potentials. Since
 $\mathrm d\sigma_u=\mathrm d\sigma_V=\mathrm d\omega$,
 $\dc\sigma_u=\dc\sigma_V=\dc\omega$ and
-$\ddc\sigma_u=\ddc\sigma_V=\ddc\omega$.
-Every term therefore contains either $\ddc\omega$ or
+$\ddc\sigma_u=\ddc\sigma_V=\ddc\omega$, the product rule
+expresses $\ddc T_{p,q}$ as a sum of fixed smooth metric forms
+wedged with products of $\sigma_u,\sigma_V$ of degrees $r,r-1,r-2$.
+Every term contains either $\ddc\omega$ or
 $\mathrm d\omega\wedge\dc\omega$, with its product-rule
 multiplicity and the appropriate remaining background power.
+The terms of degree $r$ come from differentiating the background
+power; they cannot be discarded.
 Terms with negative numbers of factors are absent.
 
 All variable degrees are at most $r<m$.
@@ -267,8 +275,10 @@ total variation preserves both bounds. They are consequently
 inequalities of measures and may be restricted to the Borel set $E$.
 
 Put $w=\max\{u,V+b\}$ and $h=w-u$.
-The mixed maximum theorem \cref{hessian:bounded-maximum-measure},
-with one moving slot and the fixed slots defining $T_{p,q}$, gives
+Apply the mixed maximum theorem \cref{hessian:bounded-maximum-measure}
+with $r=1$, with $V+b$ in place of $v$, and with the $m-1$ slots
+defining $T_{p,q}$ as the fixed list. Since adding the constant $b$
+does not change the measures, it gives
 \[
  (\omega+\ddc w)T_{p,q}
  \geq\mathbf1_E\sigma_VT_{p,q}
@@ -280,8 +290,9 @@ After integration, this implies
  b_{p,q+1}\leq b_{p+1,q}
        +\int_X\bigl((\omega+\ddc w)-\sigma_u\bigr)T_{p,q}.
 \]
-Regularized maxima of the smooth decreasing approximations give
-a uniformly bounded decreasing smooth list $w_j\downarrow w$.
+Regularized maxima of the smooth decreasing approximations, from
+\cref{hessian:regularized-maximum}, give a uniformly bounded
+decreasing smooth list $w_j\downarrow w$.
 Stokes' theorem on compact $X$ gives for these lists
 \[
  \int_X\bigl((\omega+\ddc w_j)-\sigma_{u_j}\bigr)T_{p,q}^j
@@ -295,7 +306,8 @@ is needed. Since $h$ is zero outside $E$ and $0\leq h\leq s$,
 \[
  \int_Xh\ddc T_{p,q}\leq s|\ddc T_{p,q}|(E).
 \]
-The torsion bounds prove both assertions. The argument never
+Together with the torsion bounds restricted to $E$, the last three
+displays prove both assertions. The argument never
 passes a varying measure to a weak limit after restriction to $E$.
 \end{proof}
 
@@ -317,13 +329,15 @@ Use the mixed measures above on $E_s$, writing
 $b_{p,q}=M_{p,q}(E_s)$ and $a_k=b_{k,0}$.
 The definition of $S$ gives
 $0\leq\max\{u,V+S+s\}-u\leq s$, so \cref{hessian:mixed-torsion-comparison} applies.
-Repeatedly moving a $V$ slot to a $u$ slot gives, for $p+q=r$,
+Repeatedly moving a $V$ slot to a $u$ slot by this lemma gives,
+for $p+q=r$,
 \[
  b_{p,q}\leq a_r+C_1s\sum_{d=0}^{r-1}A_d,
- \qquad A_d=\max_{a+b=d}b_{a,b},\qquad 1\leq r\leq m.
+ \qquad A_d=\max_{i+j=d}b_{i,j},\qquad 1\leq r\leq m.
 \]
 Here there are at most $m$ moves, and the multiplicity $d+1$
-in the lower-degree sum is absorbed in $C_1$.
+in the lower-degree sum is absorbed in $C_1$, which depends only
+on $X,\omega,m,n$.
 For $0<s\leq1$, induction on $r$ shows
 \[
  A_r\leq a_r+K_rs\sum_{k<r}a_k.
@@ -331,16 +345,17 @@ For $0<s\leq1$, induction on $r$ shows
 In fact $A_0=a_0$, and one may take
 $K_r=C_1(1+\sum_{1\leq d<r}K_d)$: insert the earlier bounds
 in the displayed recurrence and use $s^2\leq s$.
-Thus, for a constant $C_2$ depending only on the setting,
+Thus, for a constant $C_2$ depending only on $X,\omega,m,n$,
 \[
  b_{0,m}\leq a_m+C_2s\sum_{k<m}a_k.
 \]
 
 It remains to control the lower diagonal masses by $a_m$.
 The identity $\sigma_V=\alpha\sigma_v+\eta\omega$ and mixed
-positivity give $b_{k,1}\geq\eta a_k$; this identity and
-inequality pass from smooth approximations by joint convergence.
-The diagonal assertion of \cref{hessian:mixed-torsion-comparison} gives
+positivity give $b_{k,1}\geq\eta a_k$ for $0\leq k<m$; this identity
+and inequality pass from smooth approximations by joint convergence.
+The assertion for $q=0$ in \cref{hessian:mixed-torsion-comparison},
+with $C_3$ the constant of that lemma, gives
 \[
  \eta a_k\leq a_{k+1}
           +C_3s(a_k+a_{k-1}+a_{k-2})\qquad(0\leq k<m),
@@ -354,9 +369,9 @@ $0<\eta<1$ gives
           +\delta(B_k+B_{k-1}+B_{k-2}),
  \qquad\delta=C_3s\eta^{-3}.
 \]
-For $M=\max_{0\leq k<m}B_k$, summing from any $j<m$ through
-$m-1$ gives $B_j\leq B_m+3m\delta M$.
-If $s<\eta^3/(6mC_3)$, it follows that $M\leq2B_m$.
+For $\bar B=\max_{0\leq k<m}B_k$, summing from any $j<m$ through
+$m-1$ gives $B_j\leq B_m+3m\delta\bar B$.
+If $s<\eta^3/(6mC_3)$, it follows that $\bar B\leq2B_m$.
 Consequently
 \[
  a_k\leq2\eta^{-(m-k)}a_m\quad(k<m),\qquad
@@ -371,11 +386,12 @@ No division by $a_m$ occurs, so zero top mass on $E_s$ is included.
 \subsection{Domination and proper equations}
 \label{subsec:hessian-bounded-domination}
 
-The weak modified comparison estimate makes strict domination possible
+The weak modified comparison estimate extends the strict domination
+of \cref{hessian:strict-hessian-domination} to bounded potentials
 on an arbitrary Hermitian background. A convex rescaling supplies a
 positive volume term, while choosing a sufficiently small sublevel
-set absorbs the torsion error. Canonical representatives detect its
-positive volume even when the set is not open.
+set absorbs the torsion error. Canonical representatives show that
+this sublevel set has positive volume even when it is not open.
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{hessian:strict-bounded-domination}\index{Domination principle!bounded Hessian potentials}
@@ -402,7 +418,8 @@ contradicting the definition of $S$. The argument does not require
 $E_s$ to be open or the infimum to be attained.
 
 Choose also $s<\eta^3/C$, where $C$ is from \cref{hessian:weak-modified-comparison}.
-By \cref{hessian:convex-background-term} and the measure hypothesis,
+By \cref{hessian:convex-background-term}, \cref{hessian:weak-modified-comparison}
+and the measure hypothesis on $E_s\subset\{u<v\}$,
 \[
 \begin{aligned}
  \alpha^m H_m(v)(E_s)+\eta^m\int_{E_s}\omega^n
@@ -439,7 +456,8 @@ $e^{au}$ gives on $E_\delta$
  H_m(u)\leq e^{a(u-v)}H_m(v)
                  \leq e^{-a\delta}H_m(v-\delta).
 \]
-The last identity uses invariance under constants. Since
+The last step uses $H_m(v)=H_m(v-\delta)$, by invariance under
+constants. Since
 $e^{-a\delta}<1$, \cref{hessian:strict-bounded-domination} applied
 to $u,v-\delta$ gives $u\geq v-\delta$ everywhere. Letting
 $\delta\downarrow0$ gives $u\geq v$. Two solutions of the stated
@@ -454,7 +472,7 @@ data for a fixed Radon right-hand measure.
 \begin{proposition}\label{hessian:proper-bounded-stability}\index{Hessian equation!bounded data stability}
 Let $A<B$ and $f$ be
 smooth near $X\times[A,B]$, with $\partial_t f\geq\kappa>0$
-there, and let $\nu$ be a finite positive Radon measure.
+on $X\times[A,B]$, and let $\nu$ be a finite positive Radon measure.
 Suppose bounded admissible $u,v$ have values in $[A,B]$ and satisfy
 \[
  H_m(u)=e^{f(x,u)+h_1}\nu,\qquad
@@ -468,9 +486,10 @@ where $h_1,h_2$ are bounded Borel functions. Then
 \end{proposition}
 \begin{proof}
 Put $K=\|h_1-h_2\|_{L^\infty(\nu)}$ and fix $s>K/\kappa$.
-On $E_s=\{v+s<u\}$, the actual values $u,v$ lie in $[A,B]$,
-so $f(x,u)-f(x,v)\geq\kappa s$. The equations and the essential
-bound on $h_2-h_1$ therefore give, as restricted measures,
+On $E_s=\{v+s<u\}$, the pointwise values of $u,v$ lie in $[A,B]$,
+so $f(x,u)-f(x,v)\geq\kappa s$ by the mean value theorem.
+The equations and the essential bound on $h_2-h_1$ therefore give,
+as restricted measures,
 \[
  \mathbf1_{E_s}H_m(v+s)
  =\mathbf1_{E_s}H_m(v)
@@ -487,8 +506,8 @@ values in $[A,B]$.
 \Needspace{14\baselineskip}
 \begin{corollary}\label{hessian:proper-bounded-smoothness}\index{Hessian equation!bounded proper smoothness}
 Under the hypotheses of \cref{hessian:proper-variable-existence},
-every bounded admissible solution with values in $[A,B]$ is its
-smooth solution. In particular, for every $a>0$ and smooth real
+every bounded admissible solution with values in $[A,B]$ coincides
+with the smooth solution given there. In particular, for every $a>0$ and smooth real
 $H$, the equation $H_m(u)=e^{au+H}\omega^n$ has exactly one bounded
 admissible solution, and that solution is smooth and strictly
 admissible.

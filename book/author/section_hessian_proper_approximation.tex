@@ -32,14 +32,21 @@ This proves uniqueness.
 
 First take $a=1$ and use the path
 $H_m(w_t)=e^{w_t+tH}\omega^n$, starting with $w_0=0$.
-The trace estimate of \cref{hessian:prescribed-potential-trace} applies with prescribed potential $v=0$,
-fixed smooth comparison $0$, and $h(x,v)=tH(x)$; its constants are
-uniform for $t\in[0,1]$. \Cref{hessian:hessian-trace-to-gradient} then gives a
+By the bounds just proved, $\|w_t\|_\infty\leq\|H\|_\infty$.
+The trace estimate of \cref{hessian:prescribed-potential-trace} applies with
+$h(x,\tau)=\tau H(x)$, the constant prescribed potential $v=t$, and a
+constant comparison function $\varphi=t_i$. One such constant serves for
+all $t$ with $|t-t_i|\leq\varepsilon$, so finitely many give constants
+uniform for $t\in[0,1]$.
+\Cref{hessian:prescribed-potential-complex-hessian}, which combines this
+trace estimate with \cref{hessian:hessian-trace-to-gradient}, then gives a
 uniform gradient and complex-Hessian bound. \Cref{hessian:complex-hessian-compactness} gives uniform $W^{2,p}$ and hence $C^{1,\alpha}$ bounds, for any
 fixed $\alpha<1$. Consequently
 $r_t=e^{(w_t+tH)/m}$ has a uniform H\"older bound.
 
-The extension of \cref{hessian:uniform-elliptic-extension} is uniformly elliptic and concave on all real
+Take $f_0$ and $L$ in \cref{hessian:uniform-elliptic-extension} from
+the uniform lower bound for $r_t$ and the uniform trace bound. The
+resulting extension is uniformly elliptic and concave on all real
 Hessians, with coefficient oscillation bounded by
 $C|x-y|(1+\|R\|)$. The analytic estimate recalled in \cref{sec:hessian-complex-limits} therefore gives uniform $C^{2,\beta}$
 bounds on a finite cover. The original smooth Hessian operator is
@@ -56,9 +63,10 @@ Its principal coefficients are positive definite. The maximum principle gives ze
 smooth elliptic Fredholm theory gives surjectivity and Schauder inversion.
 The implicit-function theorem proves openness. The uniform estimates
 prove closedness, so the path reaches $t=1$.
-For general $a$, use the metric $a\omega$ and potential $\widehat w=aw$.
-Both sides of its coefficient-one equation acquire the same factor
-$a^n$, so it is exactly the stated equation after division by that factor.
+For general $a$, apply the case $a=1$ to the metric $a\omega$ and the
+potential $\widehat w=aw$. Both sides of the resulting equation acquire
+the factor $a^n$; after division by it, this is exactly the stated
+equation.
 \end{proof}
 
 An ordinary smooth approximation need not be admissible. To obtain an
@@ -80,9 +88,12 @@ For each positive integer $N$ solve, by the preceding lemma,
 \]
 At a positive maximum of $w_N-h$, the form $\omega+\ddc h$ lies above
 the strictly admissible form $\omega+\ddc w_N$, hence is admissible there.
-Monotonicity would give
-$b e^{N(w_N-h)}\leq H_m(h)/\omega^n<b$, a contradiction.
-Thus $w_N\leq h$. The preceding zero-order estimate also gives
+Monotonicity of $\sigma_m$ on the cone would give
+$b e^{N(w_N-h)}\leq H_m(h)/\omega^n<b$, which is impossible since
+$w_N>h$ there.
+Thus $w_N\leq h$. The zero-order estimate of
+\cref{hessian:smooth-proper-existence}, with $a=N$ and $H=\log b-Nh$,
+also gives
 \[
  \|w_N\|_\infty\leq M_N:=\|h\|_\infty+\frac{\log b}{N}.
 \]
@@ -99,13 +110,17 @@ $(1+N^{-1})w_N$ plus the maximum value, gives at $x_N$
 \]
 This application is to a continuous distributional subsolution of a
 smooth strictly elliptic operator. It does not assume a second derivative
-of $\varphi$. Writing $d_N=H_m(w_N)/\omega^n$, polarized G\aa rding
-positivity yields
+of $\varphi$. Write $d_N=H_m(w_N)/\omega^n$. The identity
+$\omega+(1+N^{-1})\ddc w_N=(1+N^{-1})(\omega+\ddc w_N)-N^{-1}\omega$
+gives the first inequality below. The middle term is $\sigma_{m-1}$
+of the eigenvalues of $\omega+\ddc w_N$, so Maclaurin's inequality
+$\sigma_{m-1}\geq\sigma_m^{(m-1)/m}$ gives the second:
 \[
  (N+1)d_N\geq \omega\wedge T_N/\omega^n
                          \geq d_N^{(m-1)/m}.
 \]
-Therefore, at this maximum point,
+Therefore $d_N\geq(N+1)^{-m}$. Since $d_N=be^{N(w_N-h)}$, at this
+maximum point
 \[
  w_N-h\geq-E_N,\qquad
  E_N=\frac{m\log(N+1)+\log b}{N}.
@@ -116,7 +131,7 @@ It follows on all of $X$ that
 \[
  \varphi-E_N-2M_N/N\leq w_N\leq h.
 \]
-Given $\delta>0$, choose an ordinary smooth majorant
+Given $\delta>0$, choose the smooth majorant $h$ above with
 $\varphi\leq h\leq\varphi+\delta$, and then $N$ so large that
 $E_N+2M_N/N\leq\delta$. The resulting $w_N$ is strictly admissible
 and within $\delta$ of $\varphi$. Let $\delta\downarrow0$.

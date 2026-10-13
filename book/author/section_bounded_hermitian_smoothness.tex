@@ -1,9 +1,9 @@
 \section{Smoothness of bounded solutions}
 \label{sec:bounded-hermitian-smoothness}
 
-The continuous solutions constructed above have low regularity when the density is merely integrable. If the density is a smooth positive function of the point and the potential, every bounded solution is smooth. Differentiating that density directly would require derivatives of the solution. We instead freeze its occurrence in a smooth approximation and solve a proper exponential equation. A square of the prescribed potential in the maximum-principle function gives a trace estimate independent of its derivatives.
+When the density is merely integrable, the solutions constructed above are only known to be continuous. If the density is a smooth positive function of the point and the potential, however, every bounded solution is smooth. Differentiating that density directly would require derivatives of the solution. Instead, we replace the potential in the density by a smooth approximation $v$, the prescribed potential, and solve an exponential equation as in \cref{thm:smooth-proper-existence}. Adding a multiple of the square of $v$, shifted to be positive, to the test function of the maximum principle gives a trace estimate that does not depend on the derivatives of $v$.
 
-We first prove this estimate, retaining the matrix notation $g,h$, the traces $S,B$ and the torsion trace $\tau$ of \cref{lem:hermitian-trace-inequality}.
+We first prove this estimate, using the matrix notation $g,h$, the traces $S,B$ and the torsion trace $\tau$ of \cref{lem:hermitian-trace-inequality}.
 
 \begin{lemma}\label{lem:prescribed-potential-trace}
 Fix $M\geq0$ and a smooth real function $G$ on $X\times[-M,M]$.
@@ -18,13 +18,13 @@ then
 \end{lemma}
 \begin{proof}
 The extrema of $u$ give the first bound, as in \cref{thm:smooth-proper-existence}.
-Put $k=g+(v_{i\bar j})$, $S_v=\operatorname{tr}_gk$, and $D=2\|G\|_{C^0}$.
-The chain rule and Cauchy--Schwarz give, for $H=u+G(x,v)$,
+Put $k=g+(v_{i\bar j})$, $S_v=\operatorname{tr}_gk$, $D=2\|G\|_{C^0}$ and $H=u+G(x,v)$.
+Then $\log(\det h/\det g)=H$, so $H$ plays the role of the function $G$ of \cref{lem:hermitian-trace-inequality}. The chain rule and the Cauchy--Schwarz inequality give
 \[
  \Delta_gH\geq-C_0\bigl(1+S_v+|\partial v|_g^2\bigr).
 \]
-Indeed $\Delta_gu=S-n\geq-n$, $\Delta_gv=S_v-n$, and the mixed derivatives of $G(x,v)$ are bounded below by $-C_0(1+|\partial v|_g^2)$.
-Here and below constants depend only on the declared data.
+Indeed $\Delta_gu=S-n\geq-n$, and $\Delta_g[G(x,v)]$ is the sum of $G_t(x,v)\Delta_gv=G_t(x,v)(S_v-n)$, where $G_t$ is the derivative of $G$ in its second variable, and of terms containing at most two first derivatives of $v$, which are bounded below by $-C_0(1+|\partial v|_g^2)$.
+Here and below, constants depend only on $\omega$, $M$ and $\|G\|_{C^2}$.
 
 Set $r=v+M+1$, $R=2M+1$ and $s=u-\inf_Xu+1$, so
 $1\leq r\leq R$ and $1\leq s\leq D+1$. For constants $A,L>0$ to be chosen, maximize
@@ -97,8 +97,8 @@ By \cref{thm:smooth-proper-existence}, there is a smooth strictly $\omega$-pluri
  \omega_{a_j}^n=\mathrm e^{a_j+G(x,v_j)}\omega^n.
 \]
 Put $\delta_j=\|G(x,v_j)-G(x,u)\|_{C^0}\to0$.
-The given $u$ solves the proper equation with coefficient $G(x,u)$.
-The weighted measures of $a_j-\delta_j$ and $a_j+\delta_j$ bracket its coefficient, so \cref{cor:bounded-exponential-comparison} gives
+The given $u$ solves the same equation with $G(x,v_j)$ replaced by $G(x,u)$.
+Since $|G(x,v_j)-G(x,u)|\leq\delta_j$, the functions $a_\pm=a_j\pm\delta_j$ satisfy $\mathrm e^{-a_+}\omega_{a_+}^n\leq\mathrm e^{-u}\omega_u^n\leq\mathrm e^{-a_-}\omega_{a_-}^n$, so \cref{cor:bounded-exponential-comparison}, applied twice, gives
 \[
  a_j-\delta_j\leq u\leq a_j+\delta_j.
 \]
@@ -108,7 +108,7 @@ In particular $\Delta_ga_j$ is uniformly bounded. Fixed-operator elliptic estima
 
 We explain the uniformly elliptic passage to higher regularity, using the concave extension from \cref{cor:classical-higher-estimate}.
 On a relatively compact coordinate chart, let $P$ send a real Hessian to its complex Hermitian part, with the coordinate normalization of $\ddc$.
-All matrices $g(x)+P(D^2a_j)$ lie in a fixed compact interval $\mathcal K=\{\lambda I\leq A\leq\Lambda I\}$ of positive matrices. Define
+By the uniform equivalence just proved, all matrices $g(x)+P(D^2a_j)$ lie in a fixed compact set $\mathcal K=\{A:\lambda I\leq A\leq\Lambda I\}$ of positive Hermitian matrices. Define
 \[
  \mathcal F(x,N)=\inf_{A\in\mathcal K}
  \left\{\log\det A+\operatorname{tr}\bigl[A^{-1}(g(x)+P(N)-A)\bigr]\right\}
@@ -120,7 +120,7 @@ Thus the $a_j$ are classical, and hence viscosity, solutions of
 \[
  \mathcal F(x,D^2a_j)=a_j+G(x,v_j).
 \]
-Both sides converge uniformly except for the Hessian variable. Stability of viscosity solutions gives
+Here $a_j\to u$ and $G(x,v_j)\to G(x,u)$ uniformly, while the operator $\mathcal F$ does not depend on $j$. Stability of viscosity solutions under uniform convergence gives
 $\mathcal F(x,D^2u)=u+G(x,u)$ in the viscosity sense.
 The right-hand side is H\"older because $u\in C^{1,\alpha}$.
 The local Evans--Krylov estimate therefore gives $u\in C^{2,\beta}$ for some $\beta>0$.

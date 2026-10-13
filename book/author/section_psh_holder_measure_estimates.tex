@@ -3,20 +3,19 @@
 A H\"older modulus for a bounded potential gives a modulus for integration against its Monge--Amp\`ere measure. The proof uses a smooth approximation of the reference, with integration by parts controlling the change in its measure.
 
 \begin{lemma}\label{lem:local-holder-reference-integrals}\index{Holder continuity@H\"older continuity!reference integrals}
-Let $B'\Subset B$ be concentric balls in $\C^n$, and let $0<\alpha\leq1$. Suppose $p\in\PSH(B)\cap C^{0,\alpha}(B)$ has $C^{0,\alpha}$ norm at most $N$. For every $M\geq1$ there is a constant $C_M$ such that bounded $a,b\in\PSH(B)$ with $|a|,|b|\leq M$ satisfy
+Let $B'\Subset B$ be concentric balls in $\C^n$, and let $0<\alpha\leq1$. Suppose $p\in\PSH(B)\cap C^{0,\alpha}(B)$ has $C^{0,\alpha}$ norm at most $N$. For every $M\geq1$ there is a constant $C_M$, depending only on $M$, $N$, $\alpha$ and the balls, such that all $a,b\in\PSH(B)$ with $|a|,|b|\leq M$ satisfy
 \[
  \int_{B'}|a-b|(\ddc p)^n
  \leq C_M\|a-b\|_{L^1(B)}^{\alpha/(\alpha+2n)}.
 \]
-The constants are uniform for references with the stated bound $N$.
 \end{lemma}
 \begin{proof}
-Choose intermediate concentric balls and a smooth cutoff $0\leq\chi\leq1$ supported in the innermost of them and equal to one on $B'$. All integrations below take place away from $\partial B$. Let $p_\varepsilon$ be a nonnegative radial convolution of $p$ on a larger intermediate ball. It is plurisubharmonic, and, for small $\varepsilon>0$,
+Choose intermediate concentric balls and a smooth cutoff $0\leq\chi\leq1$ supported in the innermost of them and equal to one on $B'$. All integrations below take place away from $\partial B$. Let $p_\varepsilon$ be the convolution of $p$ with a nonnegative radial mollifier of radius $\varepsilon$, defined on a larger intermediate ball. It is plurisubharmonic, and, for small $\varepsilon>0$,
 \[
  \|p-p_\varepsilon\|_\infty\leq C\varepsilon^\alpha,
  \qquad 0\leq\ddc p_\varepsilon\leq C\varepsilon^{-2}\ddc|z|^2.
 \]
-Both references have a common bounded range. Set $f=|a-b|=2\max(a,b)-a-b$, and put
+Both $p$ and $p_\varepsilon$ take values in $[-N,N]$. Set $f=|a-b|=2\max(a,b)-a-b$, and put
 \[
  T=\sum_{j=0}^{n-1}(\ddc p)^j\wedge(\ddc p_\varepsilon)^{n-1-j}.
 \]
@@ -25,7 +24,11 @@ This is a closed positive current. Factorization and integration by parts give
  \int\chi f\bigl((\ddc p)^n-(\ddc p_\varepsilon)^n\bigr)
  =\int(p-p_\varepsilon)\ddc(\chi f)\wedge T.
 \]
-We check that the last signed measure has variation at most $C(1+M)^2$, uniformly in $\varepsilon$. The term $\chi\ddc f\wedge T$ is a linear combination of the positive measures formed with $\max(a,b),a,b$, whose masses are at most $CM$ by local Chern--Levine--Nirenberg estimates. The term $f\ddc\chi\wedge T$ has variation at most $CM$.
+We check that the signed measure $\ddc(\chi f)\wedge T$ has total variation at most $C(1+M)^2$, uniformly in $\varepsilon$, where $C$ depends only on $N$, $\alpha$ and the balls. Expand
+\[
+ \ddc(\chi f)=\chi\ddc f+f\ddc\chi+\mathrm d\chi\wedge\dc f+\mathrm df\wedge\dc\chi.
+\]
+The term $\chi\ddc f\wedge T$ is a linear combination of the positive measures formed with $\max(a,b),a,b$, whose masses are at most $CM$ by local Chern--Levine--Nirenberg estimates. The term $f\ddc\chi\wedge T$ has variation at most $CM$.
 
 For the two terms involving $\mathrm df$, use a cutoff $\eta$ equal to one near $\operatorname{supp}\chi$. If $q$ is any of $a,b,\max(a,b)$, translate it so that $0\leq q\leq2M$. The bounded chain rule and closedness of $T$ give
 \[
@@ -33,11 +36,11 @@ For the two terms involving $\mathrm df$, use a cutoff $\eta$ equal to one near 
  =\frac12\int q^2\ddc\eta\wedge T
        -\int\eta q\ddc q\wedge T\leq CM^2.
 \]
-The last term is nonnegative before subtraction, and the first is bounded using the local mass of $T$. Since $f=2\max(a,b)-a-b$, its gradient energy is also bounded by $CM^2$. Cauchy--Schwarz against the positive current $T$ now bounds the variation of $\mathrm d\chi\wedge\dc f\wedge T$ and $\dc\chi\wedge\mathrm df\wedge T$ by $CM$. These are all the terms of $\ddc(\chi f)\wedge T$.
+The last term is nonnegative before subtraction, and the first is bounded using the local mass of $T$. Since $f=2\max(a,b)-a-b$, its gradient energy is also bounded by $CM^2$. Cauchy--Schwarz against the positive current $T$ now bounds the variation of $\mathrm d\chi\wedge\dc f\wedge T$ and $\mathrm df\wedge\dc\chi\wedge T$ by $CM$. This accounts for all four terms of the expansion.
 
 The bounded formulas follow first for local smooth regularizations. To pass to bounded potentials, regularize $a,b,p$ decreasingly on the intermediate balls, write $f$ as the displayed linear combination, and apply \cref{lem:weighted-decreasing-products} to the expanded identities. The energy bounds are uniform; thus the integration by parts and its estimate survive this limit.
 
-Writing $L=\|a-b\|_{L^1(B)}$, we have proved
+Writing $L=\|a-b\|_{L^1(B)}$ and using $(\ddc p_\varepsilon)^n\leq C\varepsilon^{-2n}(\ddc|z|^2)^n$ for the second term, we have proved
 \begin{equation}\label{eq:holder-reference-local-balance}
  \int\chi f(\ddc p)^n
  \leq C(1+M)^2\varepsilon^\alpha+C\varepsilon^{-2n}L.
@@ -73,7 +76,7 @@ Choose a smooth quadratic $Q$ with $\ddc Q\geq\Omega$ on $B$ and a fixed constan
 \[
  a_m=\max(w,-m),\qquad b_m=\max(w,-m-1),\qquad f_m=a_m-b_m.
 \]
-These are bounded plurisubharmonic truncations; $0\leq f_m\leq1$, it vanishes on $\{w\geq-m\}$, and it equals one on $\{w<-m-1\}$. By \cref{lem:uniform-exponential} on $(Y,\Omega)$ and the bounded correction $Q-D$,
+These are bounded plurisubharmonic truncations, and $0\leq f_m\leq1$; moreover, $f_m$ vanishes on $\{w\geq-m\}$ and equals one on $\{w<-m-1\}$. By \cref{lem:uniform-exponential} on $(Y,\Omega)$ and the bounded correction $Q-D$,
 \[
  \|f_m\|_{L^1(B)}\leq C\mathrm e^{-am}
 \]
@@ -83,5 +86,5 @@ for a fixed $a>0$. Use the proof of \cref{lem:local-holder-reference-integrals},
  \leq C(1+m)^2\exp\left(-\frac{a\alpha m}{\alpha+2n}\right)
  \leq C\mathrm e^{-cm}
 \]
-for some $c>0$. Large $m$ ensure that the convolution radius is admissible; the common local mass handles the other integers. The bounded difference between $w$ and $v$, and then choosing an integer just below the given height, prove the estimate for every real $t\geq0$.
+for some $c>0$. For large $m$ the convolution radius $\varepsilon$ is admissible, and the common local mass handles the other integers. Finally, $w-v=Q-D$ is bounded on $B$. Hence, for large $t$, the set $B'\cap\{v<-t\}$ lies in $\{w<-m-1\}$, where $\chi f_m=1$, for an integer $m\geq t-C$. This proves the estimate for large real $t$, and the common local mass covers the remaining $t\geq0$.
 \end{proof}

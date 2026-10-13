@@ -1,17 +1,18 @@
 \section{Bounded potentials and recursive Hessian currents}
 \label{sec:hessian-bounded-currents}\index{Hessian measure!bounded recursive currents}
 
-The decreasing approximation of bounded admissible potentials supplies
-limits that uniform approximation cannot reach. A bounded potential can
+The decreasing approximation of
+\cref{hessian:bounded-decreasing-approximation} supplies limits that
+uniform approximation cannot reach. A bounded potential can
 multiply a current with measure coefficients, so one can apply $\ddc$
 to the resulting current. Repeating this operation requires bounds on
 every coefficient, rather than only on the trace of a positive mixed
-measure. The absolute-form estimate provides these bounds below degree
-$m$; at degree $m$, positivity is obtained after wedging with
-$\omega^{n-m}$.
+measure. The absolute-form estimate of \cref{hessian:absolute-mixed-forms}
+provides these bounds below degree $m$; at degree $m$, positivity is
+obtained after wedging with $\omega^{n-m}$.
 
-All bounded potentials have their canonical upper semicontinuous representatives from
-\eqref{eq:hessian-bounded-upper-tests}. Their pointwise values will be
+Bounded potentials are always taken in their canonical upper semicontinuous representatives,
+as in \eqref{eq:hessian-bounded-upper-tests}. Their pointwise values will be
 used when multiplying measure coefficients. For a real current $T$ of
 order zero, write $\|T\|_K$ for the sum of the total variations of its
 coefficients on a compact coordinate set $K$. Fix $K\Subset U$ in a
@@ -35,13 +36,13 @@ $\{u_j<\sup_Xu+1\}$ cover $X$, and compactness gives a single index
 whose open set is all of $X$; the lower bound follows from $u_j\geq u$.
 
 The closed $m$-cone lies in the closed $2$-cone. In an $\omega$-unitary
-frame, its eigenvalues satisfy
+frame, the eigenvalues $\lambda_i$ of $\sigma_j$ therefore satisfy
 \[
  \sum_i\lambda_i^2\leq(\operatorname{tr}\sigma_j)^2,
  \qquad \operatorname{tr}\sigma_j\geq0.
 \]
 Thus every coefficient of $\sigma_j$ is bounded by its trace. The
-degree-one Chern--Levine--Nirenberg estimate in
+degree-one Chern--Levine--Nirenberg estimate in the proof of
 \cref{hessian:continuous-products}, applied to these smooth functions,
 bounds the integral of that trace on $K$ by
 $C(1+\|u\|_\infty)$. Subtracting the fixed smooth $\omega$ gives the
@@ -69,9 +70,9 @@ $M=\max_a\|u_a\|_{L^\infty(X)}$, then
  \|D_p(u_1,\ldots,u_p)\|_K
        \leq C_{K,U,\omega,p}(1+M)^p.
 \]
-For $p=m$, it defines a real closed distributional current. For any
-smooth admissible sequences $u_a^{j_a}\downarrow u_a$ with a common
-uniform bound, one has
+For $p=m$, it defines a real closed distributional current. For
+$1\leq p\leq m$ and any smooth admissible sequences
+$u_a^{j_a}\downarrow u_a$ with a common uniform bound, one has
 \begin{equation}\label{eq:hessian-bounded-iterated-limit}
  D_p(u_1,\ldots,u_p)
  =\lim_{j_p\to\infty}\cdots\lim_{j_1\to\infty}
@@ -131,15 +132,15 @@ degree-$m$ current is used or asserted.
 \Needspace{8\baselineskip}
 For a subset $I=\{i_1<\cdots<i_q\}\subset\{1,\ldots,p\}$, write
 $D_I=D_q(u_{i_1},\ldots,u_{i_q})$, with $D_\varnothing=1$.
-Define the shifted current and its mixed positive current by
+Define the shifted current and its wedge with $\omega^{n-m}$ by
 \begin{equation}\label{eq:hessian-bounded-shifted-current}
  R_p(u_1,\ldots,u_p)
  =\sum_{I\subset\{1,\ldots,p\}}\omega^{p-|I|}\wedge D_I,
  \qquad Q_p=R_p\wedge\omega^{n-m}.
 \end{equation}
 Below degree $m$, $R_p$ has measure coefficients. At degree $m$ it
-is initially a distributional current. Its positive wedge $Q_m$ is
-nevertheless a measure.
+is a priori only a distributional current, but its wedge $Q_m$ is a
+positive measure by the next theorem.
 
 Put $M=\max_a\|u_a\|_{L^\infty(X)}$.
 
@@ -150,7 +151,8 @@ For $1\leq p\leq m$, $Q_p$ is a positive current of order zero, and
  \int_KQ_p\wedge\omega^{m-p}
        \leq C_{K,U,\omega,p}(1+M)^p.
 \]
-It is the iterated limit, in the order of
+For approximations as in \cref{hessian:bounded-recursive-currents},
+it is the iterated limit, in the order of
 \eqref{eq:hessian-bounded-iterated-limit}, of
 \[
  (\omega+\ddc u_1^{j_1})\wedge\cdots\wedge
@@ -212,8 +214,8 @@ omissions. Put $R_0=1$. For $1\leq p\leq m$,
 \]
 The last sum is absent for $p=1$. All currents on the right have order
 zero. If all but at most one potential are smooth, $R_p$ is independent
-of the ordering and is the ordinary
-product of the smooth factors with $\omega+\ddc u$.
+of the ordering and is the ordinary product of the smooth factors
+with $\omega+\ddc u$, where $u$ is the remaining potential.
 \end{proposition}
 \begin{proof}
 Every $D_I$ is both $\mathrm d$- and $\dc$-closed. Differentiating
@@ -225,11 +227,12 @@ Every $D_I$ is both $\mathrm d$- and $\dc$-closed. Differentiating
 with zero terms omitted. The coefficient $p-|I|$ counts the omitted
 indices outside $I$, which proves the first formula; the second is
 identical with $\dc$ in place of $\mathrm d$. Apply $\mathrm d$ to
-the second formula. Each pair of omitted indices occurs twice, and
+the second formula, and use the first formula for each
+$R_{p-1}^{\widehat a}$. Each pair of omitted indices occurs twice, and
 $-\dc\omega\wedge\mathrm d\omega
 =\mathrm d\omega\wedge\dc\omega$ because both forms have odd
-degree three. This gives the displayed $\ddc$ formula, with every
-background derivative retained.
+degree three. This gives the displayed $\ddc$ formula, in which every
+background derivative appears.
 
 If all but one potential are smooth, applying $\ddc$ to the bounded
 potential times a smooth closed product gives its $\ddc$ wedged
@@ -241,12 +244,13 @@ gives the last assertion.
 
 Local capacity arguments naturally concern functions whose unshifted
 Hessian lies in the cone. On a coordinate ball $U$, call a bounded
-canonical function $f$ \emph{$m$-subharmonic relative to $\omega$} if
+function $f$, taken in its canonical upper semicontinuous representative,
+\emph{$m$-subharmonic relative to $\omega$} if
 \[
  \ddc f\wedge\gamma_1\wedge\cdots\wedge\gamma_{m-1}
                                   \wedge\omega^{n-m}\geq0
 \]
-for all smooth $\gamma_i\in\Gamma_m(\omega)$. Equivalently, its local
+in distributions on $U$, for all smooth $\gamma_i\in\Gamma_m(\omega)$. Equivalently, its local
 upper tests $q$ satisfy
 $\ddc q\in\overline{\Gamma_m(\omega)}$. The same Hermitian form
 $\omega$ is used here and in the chapter's shifted admissibility.
@@ -289,7 +293,7 @@ must therefore account for this smooth remainder.
 
 \Needspace{13\baselineskip}
 \begin{example}\label{hessian:shifted-unshifted-order}\index{Hessian measure!shifted and unshifted comparison}
-On the unit ball in $\mathbb C^3$, put
+Take $n=3$ and $m=2$. On the unit ball in $\mathbb C^3$, put
 $\beta_j=\ddc|z_j|^2$, $\beta=\sum_{j=1}^3\beta_j$ and
 \[
  u=-\tfrac12\sum_{j=1}^3|z_j|^2,
@@ -308,8 +312,8 @@ even for smooth potentials with positive perturbed forms.
 \begin{proof}
 The eigenvalues of the two perturbed forms relative to $\beta$ are
 $(\tfrac12,\tfrac12,\tfrac12)$ and $(\tfrac15,1,1)$.
-For a diagonal form with relative eigenvalues $\lambda_1,\lambda_2,
-\lambda_3$, its second Hessian is
+For a diagonal form $\alpha$ with relative eigenvalues $\lambda_1,\lambda_2,
+\lambda_3$, its second Hessian $\alpha^2\wedge\beta$ is
 $(\lambda_1\lambda_2+\lambda_1\lambda_3+\lambda_2\lambda_3)\beta^3/3$.
 Consequently the shifted measures of $u,v$ are
 $\tfrac14\beta^3$ and $\tfrac7{15}\beta^3$, while their unshifted
@@ -323,7 +327,8 @@ where $\mathrm d\omega\ne0$.
 
 The iterated limit fixes the order of the potentials. Symmetry and
 simultaneous convergence require control of discontinuous weights
-against varying coefficient measures. The next section supplies the
-first-Hessian estimate for \cref{hessian:bounded-two-factor-convergence};
+against varying coefficient measures. The next section obtains this
+control for a first Hessian from Sobolev capacity, which gives
+\cref{hessian:bounded-two-factor-convergence} for two factors;
 the local Hessian capacities in \cref{sec:hessian-smooth-capacity}
 give the control in the remaining degrees.

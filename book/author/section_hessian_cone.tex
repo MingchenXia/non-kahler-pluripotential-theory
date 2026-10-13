@@ -13,13 +13,16 @@ relative to $\omega$ belong to $\Gamma_m$. Write $C_{n,m}$ for the
 corresponding closed cone of Hermitian matrices. The algebraic assertions
 below also apply when $m=n$.
 
-We use the classical G\aa rding facts: the closed spectral cone is convex,
+We use the classical G\aa rding facts: the cone $C_{n,m}$ is convex,
 contains the nonnegative matrices, and is preserved by adding them;
-adding a positive matrix puts a closed-cone matrix in its interior.
-The normalized root $F=\sigma_m^{1/m}$ is concave and increasing there.
-Polarized products of $k$ forms in $\Gamma_k(\omega)$ with
-$\omega^{n-k}$ are positive, and Maclaurin's inequalities give
-$\sigma_j^{1/j}\geq\sigma_k^{1/k}$ for $j\leq k$. These algebraic
+adding a positive matrix puts a matrix of $C_{n,m}$ in its interior.
+The normalized root $F=\sigma_m^{1/m}$ is concave and increasing on
+$\Gamma_m$. Polarized products of $k$ forms in $\Gamma_k(\omega)$ with
+$\omega^{n-k}$ are positive, and on $\Gamma_k$ Maclaurin's inequalities
+give $\sigma_j^{1/j}\geq\sigma_k^{1/k}$ for $1\leq j\leq k$. If $\alpha$
+has eigenvalues $\lambda$ relative to $\omega$, then
+$\alpha^j\wedge\omega^{n-j}=\sigma_j(\lambda)\,\omega^n$; this is the
+normalization of all Hessian measures in the chapter. These algebraic
 facts will serve as inputs to the analytic arguments.
 
 A continuous real function $v$ on $X$ is \emph{admissible} if
@@ -29,26 +32,38 @@ A continuous real function $v$ on $X$ is \emph{admissible} if
 \end{equation}
 in distributions for every smooth collection
 $\gamma_1,\ldots,\gamma_{m-1}\in\Gamma_m(\omega)$.
-For smooth $v$ this is equivalent to the pointwise closed-cone condition;
-strict admissibility means membership in the open cone. Maxima and
-convex combinations preserve continuous admissibility. To check the
-maximum property, fix one smooth positive linear test in
-\eqref{eq:hessian-continuous-admissibility}. Locally a smooth solution of
-its inhomogeneous linear equation reduces the assertion to the maximum
-property for subsolutions of a smooth elliptic operator.
+For smooth $v$ this is equivalent, by G\aa rding duality, to
+$\omega+\ddc v\in\overline{\Gamma_m(\omega)}$ at every point; a smooth
+$v$ is \emph{strictly admissible} if $\omega+\ddc v\in\Gamma_m(\omega)$
+everywhere. Maxima and convex combinations preserve continuous
+admissibility. To check the maximum property, fix
+$\gamma_1,\ldots,\gamma_{m-1}$ in
+\eqref{eq:hessian-continuous-admissibility}. By polarized positivity,
+the left-hand side is $(Lv+g)\,\omega^n$ for a linear elliptic operator
+$L$ with smooth coefficients and a smooth function $g$. Subtracting a
+local smooth solution of $Lh=-g$ reduces the assertion to the classical
+fact that the maximum of two continuous distributional subsolutions of
+$L$ is again a subsolution.
 
 For a bounded upper semicontinuous function $v$, admissibility means that
-every local $C^2$ upper test $q$ at $x$ satisfies
+every \emph{upper test} $q$ at a point $x$, that is, every $C^2$ function
+$q$ near $x$ with $q\geq v$ near $x$ and $q(x)=v(x)$, satisfies
 \begin{equation}\label{eq:hessian-bounded-upper-tests}
  \omega(x)+\ddc q(x)\in\overline{\Gamma_m(\omega(x))}.
 \end{equation}
 For continuous $v$, this agrees with
 \eqref{eq:hessian-continuous-admissibility}: G\aa rding duality reduces
 both conditions to subsolution inequalities for smooth strictly elliptic
-linear operators. We use their classical viscosity--distributional
-equivalence, with the usual subharmonic representative in the bounded
-class.
-\index{Admissible potential!bounded upper tests}
+linear operators, and we use the classical equivalence of viscosity and
+distributional subsolutions for such operators. In the bounded class,
+pairing \eqref{eq:hessian-bounded-upper-tests} with $\omega^{n-1}$
+makes $v$, up to a local smooth function, a viscosity subsolution, and
+hence a subharmonic function, for such an operator. As for ordinary
+subharmonic functions, $v(x)$ is then the limit of the essential
+suprema of $v$ on small coordinate balls centered at $x$. Thus $v$ is
+the \emph{canonical representative} of its class in $L^1(X)$, and
+this representative is determined by the distribution defined by $v$.
+\index{Admissible potential!bounded upper tests}\index{Admissible potential!canonical representative}
 
 The first estimate controls a scalar shift of the cone. It will give
 lower bounds for every coefficient of the linearized Hessian operator.
@@ -96,19 +111,19 @@ The assertion extends to $\gamma\in\overline{\Gamma_m(\omega)}$ by continuity.
 \begin{proof}
 Write $\sigma_k=\alpha^k\wedge\omega^{n-k}/\omega^n$, and
 $M_k=\alpha^{k-1}\wedge\gamma\wedge\omega^{n-k}/\omega^n$.
-For $1\leq k<m$, the cone shift with index $k+1$ and G\aa rding positivity give
+Let $1\leq k<m$. For $0\leq t<\sigma_{k+1}/((k+1)\sigma_k)$, \cref{hessian:hessian-cone-shift}, with $k+1$ in place of $m$, puts $\alpha-t\omega$ in $\Gamma_{k+1}(\omega)$. G\aa rding positivity for the $k+1$ forms $\alpha-t\omega,\alpha,\ldots,\alpha,\gamma$ of $\Gamma_{k+1}(\omega)$ gives $(\alpha-t\omega)\wedge\alpha^{k-1}\wedge\gamma\wedge\omega^{n-k-1}\geq0$, that is,
 \[
  M_{k+1}\geq tM_k
  \quad\left(0\leq t<\frac{\sigma_{k+1}}{(k+1)\sigma_k}\right).
 \]
-Let $t$ increase to the displayed endpoint. Iterating, starting with $M_1=\gamma\wedge\omega^{n-1}/\omega^n$, yields
+Let $t$ increase to the displayed endpoint. Iterating, starting with $M_1=\gamma\wedge\omega^{n-1}/\omega^n$, and using $\prod_{k=1}^{m-1}\sigma_{k+1}/((k+1)\sigma_k)=\sigma_m/(m!\sigma_1)$, yields
 \[
  M_m\geq\frac{\sigma_m}{m!\sigma_1}M_1.
 \]
 All denominators are positive. Approximating a form in the closed cone by $\gamma+\delta\omega$, $\delta\downarrow0$, gives the last assertion.
 \end{proof}
 
-At a diagonal Hermitian matrix $\Lambda$ in the open cone, order its
+At a diagonal Hermitian matrix $\Lambda$ in the interior of $C_{n,m}$, order its
 eigenvalues as $\lambda_1\geq\cdots\geq\lambda_n$ and write
 \[
  f=F(\Lambda),\quad F_i=\partial_{\lambda_i}F,\quad
@@ -120,7 +135,7 @@ rather than derivatives of the polynomial $S_m$.
 
 \Needspace{10\baselineskip}
 \begin{lemma}\label{hessian:weighted-cone-trace}
-If $M$ belongs to the closed Hermitian $m$-cone, then
+If $M\in C_{n,m}$, then
 \[
  W:=\sum_iF_iM_{i\bar i}\geq\frac{f}{m!S}\operatorname{tr}M,
  \qquad F_i\geq\frac{f}{m!S},\qquad
@@ -129,8 +144,8 @@ If $M$ belongs to the closed Hermitian $m$-cone, then
 No simultaneous diagonalization of $M$ and $\Lambda$ is required.
 \end{lemma}
 \begin{proof}
-In the wedge notation of the mixed-trace estimate, differentiation gives $DF_\Lambda(M)=fM_m/\sigma_m$. The estimate $M_m\geq\sigma_m M_1/(m!\sigma_1)$, with $M_1=\operatorname{tr}M/n$ and $\sigma_1=S/n$, proves the first inequality. The positive semidefinite rank-one coordinate projections belong to the closed $m$-cone; taking $M$ to be each projection proves the second inequality.
-The closed $m$-cone is contained in the closed $2$-cone. Its eigenvalues $\mu$ satisfy
+In the notation of the proof of \cref{hessian:hessian-mixed-trace}, with $\alpha$ and $\gamma$ the forms with matrices $\Lambda$ and $M$, differentiation gives $DF_\Lambda(M)=fM_m/\sigma_m$. The estimate $M_m\geq\sigma_m M_1/(m!\sigma_1)$, with $M_1=\operatorname{tr}M/n$ and $\sigma_1=S/n$, proves the first inequality. The positive semidefinite rank-one coordinate projections belong to $C_{n,m}$; taking $M$ to be each projection proves the second inequality.
+Since $m\geq2$, $C_{n,m}$ is contained in $C_{n,2}$, so the eigenvalues $\mu$ of $M$ satisfy
 \[
  \operatorname{tr}M\geq0,\qquad
  \sum_i\mu_i^2=(\operatorname{tr}M)^2-2S_2(\mu)
@@ -148,7 +163,7 @@ If $0<f_0\leq f\leq f_1$, then
 \]
 \end{lemma}
 \begin{proof}
-The derivative of the normalized root is $F_i=fS_{m-1}(\lambda|i)/(mS_m)$. The splitting identity gives
+Write $(\lambda|i)$ for $\lambda$ with its $i$th coordinate omitted. The derivative of the normalized root is $F_i=fS_{m-1}(\lambda|i)/(mS_m)$. The splitting identity $S_k(\lambda)=\lambda_iS_{k-1}(\lambda|i)+S_k(\lambda|i)$, applied with $k=m$ and $k=m+1$, gives
 \[
  Q=\frac f m S-\frac{(m+1)f}{mS_m}S_{m+1}.
 \]
