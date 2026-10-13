@@ -1,5 +1,13 @@
 # Modification history
 
+## P09 restricted spectral-gap result verified through its full independent chain — 13 October 2026
+
+The [complete checked result](research/drafts/P09-spectral-gap-A-F-checked-result-20261013.json) records the first full independent PASS, five entire statement-only ordinary notes with their ten actual support edges, and a fresh final PASS over the author proof and the four-note mathematical target closure. Both full native reviews have premises=[] and passages=[]. All-n proofs retain the uniform spectral gap, exact small-excess range, explicit kappa=a antecedent, full variable/nondiagonal tests, actual positive closed metrics and every n! constant. The fifth note's finite computations are preserved as native-reported supplementary observations. Two assignment quotations incorrectly labelled as task quotations remain preserved and were not imported as proof grants. No private worker programmes, histories or artifact contents were accessed or rerun.
+
+All complete evidence is archived at private `MingchenXia/research-workspace@419be0ff015033300f5c288f16faeca47b0ce049`, project `projects/non-kahler-pluripotential-theory`. The existing editor source received five harmless status/wording updates and compiled successfully in the built-in compiler. Every theorem, corollary and proof environment is byte-identical to the reviewed source. The same editor remains open; no replacement document or separate PDF was created. The actual versioned definition and formulation sources were recovered from the authorized Git repository, while the native browser404 reports remain unchanged. The older exported five-page PDF is historical evidence for its earlier source.
+
+Only the restricted A–F mathematical result is verified. Original P09, the general closed-nef bridge and the original 41-question programme are not completed. A new finished article or completed house-asset paper pipeline is not claimed. Counts remain 48 articles across 38 IDs, 17 condition/formulation answers and four complete originals P08,P12,P22,S13. The original PDF upload reference remains unreadable. Book chapters, public release, author queue and all historical reports are preserved.
+
 ## P09 first independent PASS after successful native login — 13 October 2026
 
 Official CLI authentication now has an actual `Successfully logged in` exit0 receipt. A new Xean gpt-6.1-sol xhigh literature invocation completed with a nonempty primary-source result; the inspected 2012 Demailly edition states decreasing psh limits at I.5.4, not I.5.8, and requires information about the limit to exclude identically minus infinity. The complete ordinary finding and edition limits are preserved separately from the earlier failed logins.
