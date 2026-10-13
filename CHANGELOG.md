@@ -1,5 +1,11 @@
 # Modification history
 
+## Original 41-ID statement recovery and research screening — 13 October 2026
+
+Preserved all 41 corresponding current book statement strings and complete historical P06, S07 and S12 task copies with exact source commits and byte hashes. The current book's later P24, P25 and S19 entries are explicitly excluded from the user's original 41-ID goal. These snapshots are not certified verbatim copies of the unavailable original PDF and do not replace its completion criteria. The [scope and screening record](research/drafts/original-scope-recovery-screening-20261013.json) points to the full private archive at `MingchenXia/research-workspace@cdb05eab1730d5a22a36e6b2e697a2ab0bddc0fb`.
+
+No new theorem, checked article or original closure follows from this recovery. The elementary and restricted cases already recorded for P06, S07 and S12 do not settle their remaining general questions. The prepared P09 review is still unadmitted. Current official CLI status is explicitly `Not logged in`; no fresh model call or device code was generated. The historical 48 articles and four full original closures remain unchanged. Book sources, author priorities and prior verification evidence are preserved.
+
 ## P09 draft compilation and native authentication blocker — 13 October 2026
 
 The restored [P09 spectral-gap draft](research/drafts/P09-spectral-gap-collapse-20261011.unverified.tex) passed the native editor compiler, two clean local pdflatex passes and individual inspection of all five final PDF pages. Two narrative/status replacements repair an overfull line and remove the obsolete compilation-pending text; every other source byte and formula is unchanged. The original complete draft, author manual assessments, current TeX, PDF, hashes and actual run evidence are archived at private `MingchenXia/research-workspace@e08da49a4272de83dbecda8e47e8d615743d0c16`, under `projects/non-kahler-pluripotential-theory`. See the [source-bound compilation and failure record](research/drafts/P09-spectral-gap-compiled-draft-20261013.json).
