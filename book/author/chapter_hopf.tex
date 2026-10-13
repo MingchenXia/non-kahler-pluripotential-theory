@@ -73,7 +73,6 @@ For every $V\in C^\infty(X,\R)$,
        \left(\int_{\pi^{-1}(y)}|V_w|^2\,\mathrm{d}A_E\right)
        \omega_{\FS}^2(y).
 \end{equation}
-The formula holds without any positivity assumption on $\omega+\ddc V$.
 \end{proposition}
 \begin{proof}
 Since $\beta$ restricts to $2\mathrm{d}A_E$ on each fiber,
@@ -170,7 +169,7 @@ All differentiated series converge locally uniformly for $t>0$.
 
 \Needspace{19\baselineskip}
 \begin{lemma}\label{lem:hopf-fiber-potential}
-Let $0<\eta<1/10$ and define
+Let $\eta>0$ and define
 \[
  F_\eta(t,w)=-\eta\int_t^\infty(k_r(w)-1)\,\mathrm{d}r.
 \]
@@ -306,10 +305,9 @@ Discarding the nonnegative square and applying \cref{lem:hopf-gradient} gives \e
 
 The heat time will remain small on a fixed base ball and then increase with the radial variable until the fiber potential can be cut off. We choose its rate of increase so that the negative part of the Schur complement has small integral in the radial variable. Fix $\kappa$ as in \cref{lem:hopf-square}.
 
-All estimates below concern the limit $\eta\downarrow0$, with $\kappa$ fixed. Write
+All estimates below concern the limit $\eta\downarrow0$, with $\kappa$ fixed. For each $\eta$ choose the heat time $\varepsilon$ on the central ball with $0<\varepsilon\leq\eta^{1/\eta^2}$; the proof of \cref{thm:hopf-unbounded} takes $\varepsilon=\eta^{1/\eta^2}$, and \cref{sec:hopf-rotational-damping} uses smaller values. Write
 \[
  L=\log(1/\eta),\quad
- \varepsilon=\eta^{1/\eta^2},\quad
  q_0=\sqrt{\log\frac1{\eta\varepsilon}},\quad
  a=\sqrt{\frac\kappa{2\eta}}.
 \]
@@ -327,8 +325,7 @@ Thus $t=\varepsilon$ on $x\leq0$, and $q=q_0+1/2-ax$ on $x\geq a^{-1}$. Put
 \Needspace{5\baselineskip}
 For small $\eta$, we have $0<a^{-1}<b<x_*$, with
 \begin{equation}\label{eq:hopf-scale-size}
- q(b)=1,\quad q(x_*)=0,\quad
- b,x_*=O\bigl(\sqrt{L/\eta}\bigr),\quad \eta b=o(1).
+ q(b)=1,\qquad q(x_*)=0.
 \end{equation}
 Fix also a smooth cutoff $\vartheta\colon \R\to[0,1]$, independent of $\eta$, zero on $(-\infty,0]$ and one on $[1,+\infty)$, and define
 \[
@@ -345,12 +342,11 @@ For the functions just constructed, let
 \[
  d_\eta(x)=\max_{w\in E}\max\{-Q[W](x,w),0\}.
 \]
-For all sufficiently small $\eta$, the function $d_\eta$ is continuous, supported in $[0,b]$, and
+There are $C,\eta_0>0$, depending only on $\kappa$, $\chi$ and $\vartheta$, such that the following holds whenever $0<\eta<\eta_0$ and $\eta x_*\leq1/(10\mathrm{e})$. The function $d_\eta$ is continuous and supported in $[0,b]$, $Q[W]>0$ outside $[0,b]\times E$, $Q[W]\geq2/27$ on $[-2,-1]\times E$, and
 \begin{equation}\label{eq:hopf-small-defect}
- \int_\R d_\eta(x)\,\mathrm{d}x=o(1),\qquad
- \sup_{\R\times E}\max\{-W_x,0\}=o(1).
+ \int_\R d_\eta(x)\,\mathrm{d}x\leq C\bigl(\eta b+\sqrt{\eta L}\bigr),\qquad
+ \sup_{\R\times E}\max\{-W_x,0\}\leq C\sqrt{\eta L}.
 \end{equation}
-On $[-2,-1]\times E$, one also has $Q[W]\geq2/27$.
 \end{lemma}
 \begin{proof}
 We first derive an exact formula for $Q[W]$ on $[0,b]$, then bound its negative part separately on $[0,a^{-1}]$ and on $[a^{-1},b]$, integrate these bounds, and finally examine the ends of the radial line.
@@ -386,8 +382,7 @@ By \eqref{eq:hopf-log-hessian}, the part $\sigma^2th[1+t(\log k_t)_{w\bar w}]$ i
  \sigma_x=-\frac\kappa\eta\chi(ax)^2
                +\frac\kappa\eta q\chi'(ax).
 \]
-Moreover $q_0-1/2\leq q\leq q_0$ and
-$t\leq\varepsilon \mathrm{e}^{q_0}$, and the latter tends to zero faster than any power of $\eta$. In particular,
+Moreover $q_0-1/2\leq q\leq q_0$ and $t\leq\varepsilon \mathrm{e}^{q_0}$. Since $\log(1/\varepsilon)\geq L/\eta^2$ and $q_0^2\leq2\log(1/\varepsilon)$, for small $\eta$ both $t$ and $q_0^2t$ are at most $\varepsilon^{1/4}\leq\eta^{1/(4\eta^2)}$, which tends to zero faster than any power of $\eta$. In particular,
 \[
  \kappa q\chi'(ax)t\leq\eta,\qquad \sigma^2t\leq\eta^2.
 \]
@@ -421,12 +416,12 @@ $\eta[(|\sigma_x|+\sigma^2)t+\sigma^2t^2]\mathrm{e}^{-t/4}$. Since $q,t\geq1$ he
 \]
 The square of the mixed derivative is at most $C\kappa\eta q^2t^2\mathrm{e}^{-t/2}$, so it satisfies the same bound. Since $Q[0]>0$, this proves \eqref{eq:hopf-defect-large-time}.
 
-\medskip\noindent\emph{Step 4: integration of the negative part.} The constant $2\eta$ and the initial interval contribute $O(\eta b)=o(1)$, by \eqref{eq:hopf-scale-size}. In the small-time region, $q\geq\sqrt L$ and $t=\eta^{-1}\mathrm{e}^{-q^2}$. Therefore
+\medskip\noindent\emph{Step 4: integration of the negative part.} The constant $2\eta$ and the initial interval contribute $O(\eta b)$. In the small-time region, $q\geq\sqrt L$ and $t=\eta^{-1}\mathrm{e}^{-q^2}$. Therefore
 \[
  \int 2\kappa q^2t\,\mathrm{d}x
  \leq\frac{2\kappa}{a\eta}
        \int_{\sqrt L}^{\infty}q^2\mathrm{e}^{-q^2}\,\mathrm{d}q
- \leq C\sqrt{\eta L}=o(1).
+ \leq C\sqrt{\eta L}.
 \]
 \Needspace{5\baselineskip}
 For the exponential term the integral is at most
@@ -436,13 +431,13 @@ For the exponential term the integral is at most
  \exp\left(-\frac{\eta^2\mathrm{e}^{q^2}}{C\kappa q^2}\right)\,\mathrm{d}q.
 \]
 The interval $[\sqrt L,2\sqrt L]$ has length $O(\sqrt L)$. For $q\geq2\sqrt L$ and sufficiently small $\eta$,
-$\eta^2\mathrm{e}^{q^2}/q^2\geq \mathrm{e}^{q^2/4}$. The integrand on this remaining interval is bounded by $\exp(-\mathrm{e}^{q^2/4}/(C\kappa))$, which is integrable on $[1,+\infty)$. The prefactor is $O(\sqrt\eta)$, and the initial interval contributes $O(\sqrt{\eta L})$, so the full expression is $o(1)$. In the large-time region, \eqref{eq:hopf-time-change} gives
+$\eta^2\mathrm{e}^{q^2}/q^2\geq \mathrm{e}^{q^2/4}$. The integrand on this remaining interval is bounded by $\exp(-\mathrm{e}^{q^2/4}/(C\kappa))$, which is integrable on $[1,+\infty)$. The prefactor is $O(\sqrt\eta)$, and the initial interval contributes $O(\sqrt{\eta L})$, so the full expression is $O(\sqrt{\eta L})$. In the large-time region, \eqref{eq:hopf-time-change} gives
 \[
  \int d_\eta(x)\,\mathrm{d}x
  \leq C\sqrt\eta\int_1^{1/(\mathrm{e}\eta)}qt \mathrm{e}^{-t/4}\,\mathrm{d}t
- \leq C\sqrt{\eta L}\int_1^\infty t \mathrm{e}^{-t/4}\,\mathrm{d}t=o(1).
+ \leq C\sqrt{\eta L}\int_1^\infty t \mathrm{e}^{-t/4}\,\mathrm{d}t.
 \]
-This proves the integral assertion on $[0,b]$.
+This proves the integral bound on $[0,b]$.
 
 \medskip\noindent\emph{Step 5: the radial slope.} The negative part of $W_x$ is uniformly small as well. For $t\leq1$, we have $F_t\geq-\eta$ and $0\leq\sigma\leq2aq$, so
 \[
@@ -458,11 +453,11 @@ $1/(\mathrm{e}\eta)\leq t\leq1/\eta$. The derivatives of the cutoffs and scale h
  \sup_w\bigl(|W_x|+|Q[W]-Q[0]|\bigr)
  \leq C\mathrm{e}^{-1/(5\mathrm{e}\eta)}.
 \]
-But $Q[0]=\mu(1-\mu)\geq \mathrm{e}^{-x_*}/4$ on this interval, and \eqref{eq:hopf-scale-size} shows that the error is $o(\mathrm{e}^{-x_*})$. Hence $Q[W]>0$ there. For $x\geq x_*$, $W=0$ and positivity is immediate. For $x\leq0$, $W_x=0$ and
+But $Q[0]=\mu(1-\mu)\geq \mathrm{e}^{-x_*}/4\geq\mathrm{e}^{-1/(10\mathrm{e}\eta)}/4$ on this interval, because $\eta x_*\leq1/(10\mathrm{e})$. Hence $Q[W]>0$ there for small $\eta$. For $x\geq x_*$, $W=0$ and positivity is immediate. For $x\leq0$, $W_x=0$ and
 \[
  Q[W]\geq\mu\left(1-\frac\mu{1-\eta}\right)>0,
 \]
-since $\mu\leq1/2$. On $[-2,-1]$, the bounds $1/9\leq\mu\leq3/10$ and $1-\eta\geq9/10$ give $Q[W]\geq2/27$. Finally, $Q[W]$ is continuous, with positive denominator, so the maximum of its negative part over the compact fiber $E$ is continuous in $x$. This proves the assertions about support and continuity, and completes the proof.
+since $\mu\leq1/2$. On $[-2,-1]$, the bounds $1/9\leq\mu\leq3/10$ and $1-\eta\geq9/10$ give $Q[W]\geq2/27$. Finally, $Q[W]$ is continuous, with positive denominator, so the maximum of its negative part over the compact fiber $E$ is continuous in $x$. This proves the assertions about support, positivity and continuity, and completes the proof.
 \end{proof}
 
 \Needspace{17\baselineskip}
@@ -470,32 +465,35 @@ since $\mu\leq1/2$. On $[-2,-1]$, the bounds $1/9\leq\mu\leq3/10$ and $1-\eta\ge
 
 Adding a function of $x$ alone changes $Q[W]$ by its second derivative and leaves the vertical energy unchanged. The integral bound for $d_\eta$ lets us choose this second derivative larger than $d_\eta$ and compensate its integral on an interval where $Q[W]$ is uniformly positive. The correction has small first derivative, so the remaining horizontal coefficient stays positive as well.
 
-\begin{proof}[of \cref{thm:hopf-unbounded}]
-Choose a smooth function $r_\eta\geq0$ supported in $(-1/2,b+1/2)$ with
+\begin{lemma}\label{lem:hopf-base-correction}
+Fix a smooth $\psi\geq0$ supported in $(-2,-1)$ with $\int_\R\psi=1$, and put $m_0=\min\{\mu(-2)/2,\,1/(27\|\psi\|_\infty)\}$. Let $\eta$ and $W$ be as in \cref{lem:hopf-small-defect}, with $\max\{-W_x,0\}\leq1/4$. Let $r\geq0$ be a smooth function supported in $[-1/2,b+1/2]$ with $r>d_\eta$ on $[0,b]$ and $m:=\int_\R r\,\mathrm{d}x<m_0$, and put
 \[
- r_\eta>d_\eta\ \hbox{on }[0,b],\qquad
- m_\eta:=\int_\R r_\eta\,\mathrm{d}x\leq\int_\R d_\eta\,\mathrm{d}x+\eta=o(1).
+ g(x)=\int_{-\infty}^x(x-s)
+                   (r(s)-m\psi(s))\,\mathrm{d}s,
+ \qquad V=W+g.
 \]
-Such a majorant exists by uniform approximation of the compactly supported continuous function $d_\eta$, followed by adding a positive bump on $[0,b]$; for each fixed $\eta$ the approximation error can be chosen small enough for the integral bound. Fix a smooth $\psi\geq0$ supported in $(-2,-1)$ with integral one and set
-\[
- g_\eta(x)=\int_{-\infty}^x(x-s)
-                   (r_\eta(s)-m_\eta\psi(s))\,\mathrm{d}s,
- \qquad V_\eta=W+g_\eta.
-\]
-The negative part of $g_\eta''$ lies to the left of its positive part, and their integrals agree. Consequently,
-\[
- -m_\eta\leq g_\eta'\leq0,
- \qquad g_\eta'=0\ \hbox{for }x\leq-2
-                 \ \hbox{and for }x\geq b+1/2.
-\]
-Thus $g_\eta$ vanishes for $x\leq-2$ and is constant for $x\geq b+1/2$, and $V_\eta$ has the properties at the two ends required for smooth extension to $X$.
+Then $-m\leq g'\leq0$, $g=0$ for $x\leq-2$, $g$ is constant for $x\geq b+1/2$, and $-m(x+2)\leq g(x)\leq0$ for $x\geq-2$. The function $V$ extends to a smooth function on $X$ with $\omega+\ddc V>0$.
+\end{lemma}
+\begin{proof}
+Since $g''=r-m\psi$, where $\psi$ is supported to the left of the support of $r$ and both terms have integral $m$, we have $g'=-m\int_{-\infty}^x\psi$ for $x\leq-1/2$ and $g'=-m+\int_{-\infty}^xr$ for $x\geq-1/2$. This gives $-m\leq g'\leq0$, with $g'=0$ for $x\leq-2$ and for $x\geq b+1/2$, and hence the assertions about $g$. In particular, $V$ is independent of $x$ near $-\infty$ and constant near $+\infty$, so it extends smoothly to $X$.
 
-Since $g_\eta$ is independent of $w$, the Schur complement changes by exactly its second derivative:
+Since $g$ is independent of $w$, the Schur complement changes by exactly its second derivative:
 \[
- Q[V_\eta]=Q[W]+r_\eta-m_\eta\psi.
+ Q[V]=Q[W]+r-m\psi.
 \]
-This is positive on $[0,b]$ because $r_\eta>d_\eta$ there. On $(-2,-1)$ it is at least $2/27-m_\eta\|\psi\|_\infty>0$ for small $\eta$. Elsewhere $Q[W]>0$, $\psi=0$ and $r_\eta\geq0$.
-The vertical coefficient remains above $1-\eta$ by \eqref{eq:hopf-vertical-positive}. For the remaining coefficient, if $x\leq-2$, both $W_x$ and $g_\eta'$ vanish; if $-2\leq x\leq0$, then $W_x=0$ and $\mu\geq\mu(-2)>0$, while $|g_\eta'|\leq m_\eta=o(1)$; and if $x\geq0$, then $\mu\geq1/2$, $W_x\geq-o(1)$ and $g_\eta'\geq-m_\eta$. In all cases $\mu+(V_\eta)_x>0$ for sufficiently small $\eta$. Therefore \cref{lem:hopf-positivity} gives $\omega+\ddc V_\eta>0$ over $U_0$. Near the fibers over $\mathbb P^2\setminus U_0$, the function $V_\eta$ is constant, so $\omega+\ddc V_\eta=\omega>0$ there as well.
+This is positive on $[0,b]$ because $r>d_\eta$ there. On $(-2,-1)$ it is at least $2/27-m\|\psi\|_\infty>0$. Elsewhere $Q[W]>0$, $\psi=0$ and $r\geq0$.
+The vertical coefficient remains above $1-\eta$ by \eqref{eq:hopf-vertical-positive}. For the remaining coefficient, if $x\leq-2$, both $W_x$ and $g'$ vanish; if $-2\leq x\leq0$, then $W_x=0$ and $\mu\geq\mu(-2)>m\geq|g'|$; and if $x\geq0$, then $\mu\geq1/2$, $W_x\geq-1/4$ and $g'\geq-m>-1/8$. In all cases $\mu+V_x>0$. Therefore \cref{lem:hopf-positivity} gives $\omega+\ddc V>0$ over $U_0$. Near the fibers over $\mathbb P^2\setminus U_0$, the function $V$ is constant, so $\omega+\ddc V=\omega>0$ there as well.
+\end{proof}
+
+Such functions $r$ exist with $\int_\R r\,\mathrm{d}x\leq\int_\R d_\eta\,\mathrm{d}x+\delta$ for every $\delta>0$: add a small positive constant to a uniform smooth approximation of the compactly supported continuous function $d_\eta$, and multiply by a cutoff equal to one on $[0,b]$ and supported in $[-1/2,b+1/2]$.
+
+\begin{proof}[of \cref{thm:hopf-unbounded}]
+Take $\varepsilon=\eta^{1/\eta^2}$. Then $q_0^2=(1+\eta^{-2})L$, so $b,x_*=O(\sqrt{L/\eta})$ and $\eta x_*\to0$. For small $\eta$, \cref{lem:hopf-small-defect} therefore gives
+\[
+ \int_\R d_\eta\,\mathrm{d}x=o(1),\qquad
+ \sup_{\R\times E}\max\{-W_x,0\}=o(1).
+\]
+Choose $r_\eta$ as in \cref{lem:hopf-base-correction} with $m_\eta=\int_\R r_\eta\,\mathrm{d}x\leq\int_\R d_\eta\,\mathrm{d}x+\eta=o(1)$, and let $g_\eta$ and $V_\eta=W+g_\eta$ be the corresponding functions. For small $\eta$, $m_\eta<m_0$ and $\max\{-W_x,0\}\leq1/4$, and that lemma shows that $V_\eta$ is smooth on $X$ with $\omega+\ddc V_\eta>0$.
 
 On the fixed ball $B=\{|\xi|^2<\mathrm{e}^{-3}\}\Subset U_0$, one has
 $V_\eta=F_\eta(\varepsilon,w)$, including at $\xi=0$. Thus
@@ -569,10 +567,6 @@ The Hopf metric satisfies
 \begin{proof}
 The lower bound $v_-(\omega)\geq6$ follows from \eqref{eq:hopf-average-mass}, and it is attained by constants. \Cref{thm:hopf-unbounded} gives $v_+(\omega)=+\infty$.
 \end{proof}
-
-In particular, for any sequence of bounded potentials whose masses tend to $6$, the differences from their fiber averages tend to zero in $L^2(X,\nu)$. This controls only the variation along the fibers; the averaged potentials can still be arbitrary bounded potentials on the base.
-
-For nonpositive $u\in\PSH(X,\omega)$ on this threefold, \cref{prop:general-damping-weights} gives finite damped measures for the weight $(1-u)^{-1}[\log(\mathrm{e}-u)]^{-a}$, $a>1$, at the threshold $r_3=1$, with uniform tails and capacity continuity. The optimal damping rate for all normalized potentials on this threefold remains open. Under unitary rotations of the last two coordinates, \cref{thm:rotational-sharp-damping} gives the exact square-root threshold.
 
 \input{author/section_hopf_rotational_damping}
 

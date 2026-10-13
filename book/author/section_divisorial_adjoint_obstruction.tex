@@ -28,7 +28,7 @@ Write $x=\log|z|^2$ and $\chi(x)=\log(1+\mathrm e^x)$. The envelope $\varphi=P_\
  \varphi=W(x)-2\chi(x),\qquad
  W(x)=\begin{cases}x+2\log2,&x\leq0,\\2\chi(x),&x\geq0.\end{cases}
 \end{equation}
-It satisfies $\psi\leq\varphi\leq0$, $0\leq\varphi-\psi\leq2\log2$, and the model condition \eqref{eq:als-model-condition} with $\varepsilon=3/4$.
+It satisfies $\varphi\leq0$, $0\leq\varphi-\psi\leq2\log2$, and the model condition \eqref{eq:als-model-condition} with $\varepsilon=3/4$.
 \end{lemma}
 \begin{proof}
 The function $W$ is convex: both one-sided derivatives at zero equal one, and the derivative of $2\chi$ increases from one to two on $[0,\infty)$. Since $\omega_1=\ddc\chi(x)$ on the affine chart, $W-2\chi$ is $2\omega_1$-plurisubharmonic there. Since $W$ has slope one for $x\leq0$ and agrees with $2\chi$ for $x\geq0$, the function $W-2\chi$ extends to a global $2\omega_1$-plurisubharmonic function, with a logarithmic pole along $D$ and equal to zero where $|z|\geq1$. The asserted bounds follow from $\psi=x-\chi$: the difference $\varphi-\psi$ equals $2\log2-\chi$ for $x\leq0$ and $\chi-x$ for $x\geq0$.
@@ -64,38 +64,18 @@ For every real continuous $F$,
 At $v=\psi$, the non-pluripolar part of $\theta+\ddc\psi$ is $\beta$, whose adjoint cofactor is $Q=\beta/4$, with adjoint probability $\beta\wedge Q=\mathrm dV$.
 \end{proposition}
 \begin{proof}
-On $X\setminus D$, the function $w=v-\psi$ is bounded, because $v\sim\varphi\sim\psi$, and satisfies $\beta+\ddc w\geq0$. After adding local potentials of the closed form $\beta$, \cref{lem:qpsh-removable-pluripolar} extends $w$ across $D$; the extensions agree on overlaps and give a bounded $\beta$-plurisubharmonic function on $X$. Conversely, for every bounded $w\in\PSH(X,\beta)$, the function $\psi+w$ is $\theta$-plurisubharmonic with current $\beta+\ddc w+[D]$, and it has the ordinary type of $\varphi$. The decomposition is unique, since two such functions $w$ agree off $D$ and hence everywhere.
-
-Put $T=\beta+\ddc w$. The bounded-product construction gives
+On the first factor, $r=|s|_{h_{\mathrm{FS}}}^2$ for the section $s$ of $\mathcal O(1)$ vanishing at $z=0$ and the Fubini--Study metric $h_{\mathrm{FS}}$, whose curvature form is $\omega_1$. Since $\varphi\sim\psi$, \cref{thm:ordinary-divisor-normalization} below, applied to the pullback of $s$ with weight one and residual form $\theta-\omega_1=\beta$, gives the decomposition, the first identity in \eqref{eq:divisorial-residual-mass} and $B_\varphi=B_\beta$; uniqueness of $w=v-\psi$ is clear. Put $T=\beta+\ddc w$. The bounded-product construction gives
 \[
  T^2-\beta^2=\ddc\bigl(w(T+\beta)\bigr),
 \]
-and Stokes' theorem against the constant function yields $\int_XT^2=4$. The product gives no mass to $D$ by \cref{prop:bounded-products}; we also give a direct cutoff estimate, which will be used again below. Shift $w$ so that $0\leq w\leq M$, and set $f_t=\max\{\psi/t,-1\}$ for $t>0$. Choose smooth convex functions $\sigma_\epsilon$ with derivative in $[0,1]$, equal to $-1$ below $-1-\epsilon$ and to the identity above $-1+\epsilon$, converging uniformly to $\max\{\cdot,-1\}$. Then $f_{t,\epsilon}=\sigma_\epsilon(\psi/t)$ is globally smooth, constant near $D$, and
-\[
- f_{t,\epsilon}\longrightarrow f_t\ \text{uniformly},\qquad
- \ddc f_{t,\epsilon}\geq-\omega_1/t.
-\]
-Testing the distributional identity against $f_{t,\epsilon}$, using positivity of $T+\beta$, and letting $\epsilon\to0$, we obtain
-\begin{equation}\label{eq:divisorial-cutoff-bound}
- \int_X(-f_t)T^2
- \leq\int_X(-f_t)\beta^2
-   +\frac Mt\int_X\omega_1\wedge(T+\beta)
- =\int_X(-f_t)\beta^2+\frac{4M}{t}.
-\end{equation}
-Here the last integral equals four by Stokes' theorem. The right-hand side tends to zero as $t\to\infty$, since $f_t\to0$ off $D$ and $\beta^2(D)=0$; as $-f_t=1$ on $D$, this gives $T^2(D)=0$. Off $D$ the currents $\theta+\ddc v$ and $T$ agree, so locality and the fact that the extended measure puts no mass on the pole set prove \eqref{eq:divisorial-residual-mass}.
+and Stokes' theorem against the constant function yields $\int_XT^2=4$. Integrating the equation in the background $\beta$ therefore gives the formula for $B_\varphi$. This formula is G\^ateaux differentiable on $C(X)$, with derivative $G\mapsto-\int_XG\,\mathrm e^F\mathrm dV/\int_X\mathrm e^F\mathrm dV$, so \cref{prop:normalization-directional} identifies $\mathcal A_\varphi(F)$.
 
-For the Hermitian background $\beta$, \cref{thm:kn-continuous} with density $\mathrm e^F$ gives a bounded solution $w$ and a constant $c>0$, and the correspondence above turns it into a solution $\psi+w$ in the ordinary type of $\varphi$. Every potential of that type has mass four, so integration forces $c=4/\int_X\mathrm e^F\mathrm dV$, which is the formula for $B_\varphi$. Jensen's inequality for the probability $\nu_F=\mathrm e^F\mathrm dV/\int_X\mathrm e^F\mathrm dV$ gives
-\[
- B_\varphi(G)\leq B_\varphi(F)-\int_X(G-F)\,\mathrm d\nu_F.
-\]
-Thus $\nu_F$ is a supporting probability. For any supporting probability, testing its inequality at $G=F\pm th$ and differentiating at $t=0$ shows that its integral against every $h\in C(X)$ equals that of $\nu_F$.
-
-For a smooth real $h$ and sufficiently small $|t|$, we have $\beta+t\ddc h>0$, so $\psi+th$ stays in the same ordinary type and its residual measure is $(\beta+t\ddc h)^2$, with derivative $2\ddc h\wedge\beta$ at $t=0$. Since $\beta$ is closed, the constant weight $\rho=1/4$ annihilates this derivative after integration, and $Q=\rho\beta$ gives the asserted probability. This normalization uses the residual mass: since $\int_X\theta\wedge Q=3/2$, the cofactor $Q$ is not a normalized Gauduchon current for $\theta$ in the sense of \cref{sec:gauduchon-linear-duality}.
+For a smooth real $h$ and small $|t|$, the potential $\psi+th$ has the ordinary type of $\varphi$ and residual measure $(\beta+t\ddc h)^2$, whose derivative at $t=0$ is $2\ddc h\wedge\beta$. Since $\beta$ is closed, the constant $1/4$ is its normalized Gauduchon multiplier by the uniqueness in \cref{thm:gauduchon}; hence $Q=\beta/4$ and $\beta\wedge Q=\mathrm dV$.
 \end{proof}
 
 \Needspace{12\baselineskip}
 \begin{theorem}\label{thm:divisorial-smoothing-adjoints}
-Let $g$ be a smooth real function on the second factor with $\gamma=\ddc g\geq-\omega_2$, regarded as a function on $X$. For $0<\delta\leq1$ put
+Let $g$ be a smooth real function on the second factor with $\gamma=\ddc g\geq-\omega_2$, regarded as a function on $X$. For $\delta>0$ put
 \[
  u_{\delta,g}=\log(r+\delta\mathrm e^g),\qquad
  \Omega_{\delta,g}=\theta+\ddc u_{\delta,g},\qquad
@@ -128,7 +108,7 @@ The chain rule gives $\Omega_{\delta,g}=A_\delta+R_\delta$, where
  A_\delta=(2-\lambda)\omega_1+2\omega_2+(1-\lambda)\gamma,
  \qquad R_\delta=\lambda(1-\lambda)\mathrm dh\wedge\dc h.
 \]
-Thus $A_\delta\geq\omega_1+\omega_2$ and $R_\delta\geq0$, and the inequality $\Omega_{\delta,g}\geq\omega$ extends across $D$ by continuity. Closedness of $\theta$ and Stokes' theorem give the mass eight. Since $\Omega_{\delta,g}$ is closed, the Gauduchon condition $\ddc(\rho\Omega_{\delta,g})=0$ reduces to the elliptic equation $\ddc\rho\wedge\Omega_{\delta,g}=0$ on the connected surface, whose smooth solutions are constant by the maximum principle. Normalization against $\Omega_{\delta,g}^2$ gives $\rho=1/8$ and the stated adjoint cofactors and probabilities.
+Thus $A_\delta\geq\omega_1+\omega_2$ and $R_\delta\geq0$, and the inequality $\Omega_{\delta,g}\geq\omega$ extends across $D$ by continuity. Closedness of $\theta$ and Stokes' theorem give the mass eight. Since $\Omega_{\delta,g}$ is closed, the uniqueness in \cref{thm:gauduchon} makes its normalized Gauduchon multiplier the constant $1/8$, which gives the stated adjoint cofactors and probabilities.
 
 The rank-one form $R_\delta$ has square zero, hence $\Omega_{\delta,g}^2=A_\delta^2+2A_\delta\wedge R_\delta$. The bounded coefficients of $A_\delta$ converge off $D$ to those of $\beta$, which gives $A_\delta^2\to4\mathrm dV$. Write $N=\mathrm d\psi\wedge\dc\psi$. In $A_\delta\wedge R_\delta$, the part in which $R_\delta$ contributes only derivatives along the first factor (the normal part) is
 \[
@@ -165,16 +145,15 @@ The difference of the potentials satisfies
 \]
 off $D$. The right-hand side tends to zero and is dominated by an integrable logarithmic pole, which proves $L^1$ convergence. Continuity of distributional differentiation then gives the limit of the cofactors. A locally integrable function times the smooth form $\beta$ has absolutely continuous coefficients, so it cannot produce the singular coefficients of $[D]$.
 
-For convergence in capacity, use the capacity $\operatorname{Cap}_\omega$ of \cref{sec:hermitian-capacity}, whose test potentials are the functions $v\in\PSH(X,\omega)$ with $0\leq v\leq1$. For such $v$, apply the cutoff argument of \eqref{eq:divisorial-cutoff-bound} with $\beta$ replaced by $\omega$, $w=v$ and $M=1$. Stokes' theorem gives $\int_X\omega_1\wedge(2\omega+\ddc v)=2$, so
-\[
- \operatorname{Cap}_\omega\{\psi<-t\}
- \leq\int_X(-f_t)\omega^2+2/t\longrightarrow0.
-\]
-The same bound shows that $D$ has capacity zero. For $\eta>0$, the set of points off $D$ where $u_{\delta,g}-\psi>\eta$ is contained in
+For convergence in capacity, note that $\psi\in\PSH(X,\omega)$ and $\sup_X\psi=0$, so \eqref{eq:global-capacity-tail} gives
+\begin{equation}\label{eq:divisorial-cutoff-bound}
+ \operatorname{Cap}_\omega(\{\psi<-t\})\leq C/t,\qquad t>1.
+\end{equation}
+For $\eta>0$, the set of points off $D$ where $u_{\delta,g}-\psi>\eta$ is contained in
 \[
  \left\{r<\frac{\delta\mathrm e^{\max g}}{\mathrm e^\eta-1}\right\}.
 \]
-This is a sublevel set of $\psi$ whose level tends to $-\infty$ as $\delta\downarrow0$. The capacity bound for such sublevel sets, together with $\operatorname{Cap}_\omega(D)=0$, proves convergence in capacity.
+This is a sublevel set of $\psi$ whose level tends to $-\infty$ as $\delta\downarrow0$, so \eqref{eq:divisorial-cutoff-bound} proves convergence in capacity.
 
 Finally, $\Omega_{\delta,g}\geq\omega$ gives $F_{\delta,g}\geq-\log2$. In the affine chart $|\mathrm d\psi|_\omega^2\leq C/r$, while $g$ and its first two derivatives are bounded. The decomposition above yields $\Omega_{\delta,g}\leq C_g(1+r^{-1})\omega$, hence
 \[
@@ -183,7 +162,7 @@ Finally, $\Omega_{\delta,g}\geq\omega$ gives $F_{\delta,g}\geq-\log2$. In the af
 Every finite power of this logarithmic bound is integrable. Smooth convergence off $D$ gives $F_{\delta,g}\to0$ there, and dominated convergence proves convergence in $L^p$.
 \end{proof}
 
-The exponential densities satisfy $\int_X\mathrm e^{F_{\delta,g}}\mathrm dV=2$ for every $\delta$, whereas their pointwise limit has integral one; they are therefore not uniformly integrable. The smoothings leave the ordinary type of $\varphi$ and keep the mass eight of bounded potentials instead of the mass four of that type. The example thus shows which concentration a recovery theorem must exclude. The hypotheses of \cref{prop:weak-adjoint-stability} (uniform convergence) and of \cref{thm:normalization-bounded-lone} (uniformly bounded logarithmic densities converging in $L^1$) are stronger than the convergence in every $L^p$ obtained here. In the fixed divisorial type, a common bound on the residual potentials gives a direct recovery estimate instead.
+The exponential densities satisfy $\int_X\mathrm e^{F_{\delta,g}}\mathrm dV=2$ for every $\delta$, whereas their pointwise limit has integral one, so they are not uniformly integrable: the smoothings leave the ordinary type of $\varphi$ and keep the mass eight of bounded potentials instead of the mass four of that type. Convergence in every $L^p$ is weaker than the hypotheses of \cref{prop:weak-adjoint-stability} and \cref{thm:normalization-bounded-lone}. In the fixed divisorial type, a common bound on the residual potentials gives a recovery estimate.
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:divisorial-residual-recovery}\index{Adjoint measure!fixed-divisor recovery}
@@ -230,9 +209,9 @@ The constant test potential in the definition of capacity gives $4\mathrm dV(E)\
  \|w_j-w\|_{L^1(\mathrm dV)}
  \leq\eta+\tfrac M2\operatorname{Cap}_\beta(E_{j,\eta}).
 \]
-Taking the limits in the same order proves $L^1$ convergence, and hence convergence of the currents $Q_j$ by continuity of distributional differentiation. The limiting cofactor satisfies $\ddc Q=0$, $\int_X\beta\wedge Q=1$, and $T\wedge Q=\nu$ as a bounded product. For smooth real $h$, the signed measure $2\ddc h\wedge T$ is the formal linearization of the residual operator at $w$ in the direction $h$, and its integral against the constant $1/4$ vanishes by Stokes' theorem. It is the derivative of the residual measure along $w+th$ whenever these functions remain $\beta$-plurisubharmonic.
+Taking the limits in the same order proves $L^1$ convergence, and hence convergence of the currents $Q_j$ by continuity of distributional differentiation.
 
-If $T_j$ is smooth and strictly positive, the maximum principle on the connected surface makes its Gauduchon multiplier constant, and the mass four normalizes it to $1/4$. Finally, if $\psi+w$ solves the equation at $F$, then $\nu=T^2/4=\mathrm e^F\mathrm dV/\int_X\mathrm e^F\mathrm dV$, which is the unique supporting probability by \cref{prop:divisorial-residual-adjoint}.
+If $T_j$ is smooth and strictly positive, it is closed, so the uniqueness in \cref{thm:gauduchon} and the mass four make its normalized Gauduchon multiplier the constant $1/4$. Finally, if $\psi+w$ solves the equation at $F$, then $\nu=T^2/4=\mathrm e^F\mathrm dV/\int_X\mathrm e^F\mathrm dV$, which is the unique supporting probability by \cref{prop:divisorial-residual-adjoint}.
 \end{proof}
 
 In the corollary, the potentials $\psi+w_j$ keep their pole along $D$, and the adjoint objects refer to the smooth residual forms $T_j$. We do not know whether a similar recovery holds for more general singular references, for unbounded residual sequences, or, beyond the product model of \cref{subsec:singular-product-adjoints}, when the Gauduchon multipliers are not constant.
