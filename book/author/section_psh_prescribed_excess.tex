@@ -1,7 +1,7 @@
 \subsection{Adding a prescribed local measure}
 \label{subsec:local-prescribed-excess}
 
-The concentration in \cref{prop:smooth-dirac-concentration} can be produced on top of a given bounded potential $b$ and repeated, so as to add an arbitrary prescribed measure to $(\ddc b)^n$. Adding a perturbation $h$ to $b$ creates the mixed terms $(\ddc b)^{n-r}\wedge(\ddc h)^r$. A mixed Chern--Levine--Nirenberg estimate controls them, provided that the lower-degree currents of $h$ are kept small.
+We now construct the potentials of \cref{prop:smooth-dirac-concentration} on top of a given locally bounded potential $b$, and repeat the construction so as to add an arbitrary positive measure to $(\ddc b)^n$. Adding a perturbation $h$ to $b$ creates the mixed terms $(\ddc b)^{n-r}\wedge(\ddc h)^r$. A mixed Chern--Levine--Nirenberg estimate controls them, provided that the lower-degree currents of $h$ are kept small.
 
 \begin{lemma}\label{lem:ridge-lower-degree-limit}
 Fix the data $n,U,v,\varepsilon,R,\eta,\chi_\eta$ of \cref{lem:smooth-logarithmic-ridge}, and write $h_A$ for the smooth plurisubharmonic function $h$ of that lemma, regarded as a function of $A$. Put $D=\{0\}\times U$, and write $[D]$ for the current of integration over this hypersurface. Then, for every $1\leq r\leq n$,
@@ -50,7 +50,7 @@ where $W$ is $T$ multiplied by the remaining positive closed factors. Apply this
 
 \Needspace{18\baselineskip}
 \begin{proposition}\label{prop:local-one-atom-addition}
-Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b\in\PSH(\Omega)\cap L^\infty(\Omega)$, $a\in\Omega$ and $c>0$. Given finitely many $f_i\in C_c(\Omega)$ and numbers $\tau,t>0$, there is a smooth bounded plurisubharmonic function $h\leq0$ on $\Omega$ such that
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b$ be a locally bounded plurisubharmonic function on $\Omega$, and let $a\in\Omega$ and $c>0$. Given finitely many $f_i\in C_c(\Omega)$ and numbers $\tau,t>0$, there is a smooth bounded plurisubharmonic function $h\leq0$ on $\Omega$ such that
 \[
  \begin{gathered}
  \|h\|_{L^p(\Omega)}\leq C_{\Omega,p}t\quad(1\leq p<\infty),\\
@@ -67,7 +67,16 @@ These constants are independent of $b,a,c$, the test functions and the tolerance
 \begin{proof}
 We take for $h$ a function from \cref{lem:smooth-logarithmic-ridge} whose top-degree measure approximates $c\delta_a$ and whose lower-degree currents are small; \cref{lem:local-mixed-cln-trace} then controls the mixed terms.
 
-Write $a=(a_1,a')$ and $m=n-1$, and fix $R=2\sup_\Omega|z_1|+2$. For $\delta>0$, put $H_\delta(z')=\log(|z'-a'|^2+\delta^2)$. By the radial calculation in the proof of \cref{prop:smooth-dirac-concentration}, $(\ddc H_\delta)^m$ is a probability measure tending to $\delta_{a'}$ as $\delta\downarrow0$. Extend every $f_i$ by zero outside $\Omega$, and choose $\delta$ such that
+Write $a=(a_1,a')$ and $m=n-1$, and fix $R=2\sup_\Omega|z_1|+2$. For $\delta>0$, put $H_\delta(z')=\log(|z'-a'|^2+\delta^2)$. With $s=|z'-a'|^2$, the complex Hessian of $H_\delta$ has the eigenvalue $(s+\delta^2)^{-1}$ with multiplicity $m-1$ in the directions orthogonal to $z'-a'$ and the eigenvalue $\delta^2(s+\delta^2)^{-2}$ in the radial direction. Taking the determinant and integrating in polar coordinates gives
+\[
+ (\ddc H_\delta)^m=
+ \frac{m!}{\pi^m}\frac{\delta^2}{(|z'-a'|^2+\delta^2)^{m+1}}
+                       \,\mathrm d\lambda_{2m},
+ \qquad
+ \int_{|z'-a'|<\rho}(\ddc H_\delta)^m
+       =\left(\frac{\rho^2}{\rho^2+\delta^2}\right)^m,
+\]
+where $\lambda_{2m}$ is Lebesgue measure. These probability measures tend to $\delta_{a'}$ as $\delta\downarrow0$, since their mass outside each ball about $a'$ tends to zero. Extend every $f_i$ by zero outside $\Omega$, and choose $\delta$ such that
 \[
  \left|c\int_{\mathbb C^m}f_i(a_1,z')(\ddc H_\delta)^m
                   -cf_i(a)\right|<\tau/3\quad\text{for all }i.
@@ -90,13 +99,15 @@ as $A\to\infty$. For the fixed $\delta$, the integrals of these limits against $
    -c\int_{\mathbb C^m}f_i(a_1,z')(\ddc H_\delta)^m\right|<\tau/3
  \quad\text{for all }i.
 \]
-The last choice follows directly from \eqref{eq:smooth-ridge-transverse-integral}, because the circles there shrink uniformly over the projected supports of the tests and $\varepsilon(\ddc v)^m=c(\ddc H_\delta)^m$.
+The last choice follows from \eqref{eq:smooth-ridge-transverse-integral} and the uniform continuity of the $f_i$: as $A\to\infty$, the radii of the circles there tend to zero uniformly for $z'$ in the projection of $\Omega$, while $\varepsilon(\ddc v)^m=c(\ddc H_\delta)^m$ has mass $c$.
 
-Set $h=h_A-\eta$. As in the proof of \cref{prop:smooth-dirac-concentration}, $h$ is smooth, bounded and nonpositive on $\Omega$, with
+Set $h=h_A-\eta$, a smooth plurisubharmonic function. In the notation of \cref{lem:smooth-logarithmic-ridge}, now $q=\varepsilon\log(|z_1-a_1|^2/R^2)$ and $T=v-A-q$. The convolution satisfies $0\leq\chi_\eta-\max(\cdot,0)\leq\eta$, and $q+\max(T,0)=\max(q,v-A)$. On $\Omega$, both branches of this maximum are nonpositive, by the choices of $R$ and $A$, and the second is bounded below. Hence $h$ is bounded on $\Omega$, and
 \[
- \varepsilon\log(|z_1-a_1|^2/R^2)-\eta\leq h\leq0.
+ q-\eta\leq h\leq0,
+ \qquad\text{so}\qquad
+ |h|\leq\varepsilon\bigl|\log(|z_1-a_1|^2/R^2)\bigr|+\eta.
 \]
-The logarithm has $L^p(\Omega)$ norm bounded uniformly for $a_1$ in the projection of $\Omega$ to the first coordinate: after translation, its one-variable integral is bounded by polar integration on one fixed disk. This uniform bound, the weighted Chern--Levine--Nirenberg estimate and the range estimate \eqref{eq:local-cln-range} give the asserted bound for the integrals over $B'$. Since $\varepsilon+\eta\leq t$, both estimates hold with constants depending only on $\Omega$, $p$, $B'$ and $B$.
+The logarithm has $L^p(\Omega)$ norm bounded uniformly for $a_1$ in the projection of $\Omega$ to the first coordinate: after translation, its one-variable integral is bounded by polar integration on one fixed disk. This gives the $L^p$ bound. The weighted Chern--Levine--Nirenberg estimate, applied to this nonpositive plurisubharmonic logarithm, and the range estimate \eqref{eq:local-cln-range} for the constant term give the bound for the integrals over $B'$. Since $\varepsilon+\eta\leq t$, both estimates hold with constants depending only on $\Omega$, $p$, $B'$ and $B$.
 
 Finally, multilinearity of bounded products gives
 \[
@@ -108,7 +119,7 @@ The choice of $\delta$, the choice of $A$ for the top-degree term and the estima
 \end{proof}
 
 \begin{theorem}\label{thm:local-prescribed-excess}\index{Monge--Ampere product@Monge--Amp\`ere product!prescribed excess measure}
-Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b\in\PSH(\Omega)\cap L^\infty(\Omega)$, and let $\nu$ be a positive Radon measure on $\Omega$. There are bounded plurisubharmonic functions $u_j\leq b$ on $\Omega$ such that
+Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b$ be a locally bounded plurisubharmonic function on $\Omega$, and let $\nu$ be a positive Radon measure on $\Omega$. There are plurisubharmonic functions $u_j\leq b$ on $\Omega$, with $u_j-b$ bounded, such that
 \[
  \begin{gathered}
  \|u_j-b\|_{L^p(\Omega)}\longrightarrow0\quad(1\leq p<\infty),\\
@@ -116,7 +127,7 @@ Let $\Omega\subset\mathbb C^n$, $n\geq2$, be a bounded domain, let $b\in\PSH(\Om
                     \quad\text{vaguely}.
  \end{gathered}
 \]
-The same sequence converges to $b$ in local capacity. If $b$ is smooth, every $u_j$ can be chosen smooth. The measure $\nu$ may have infinite total mass.
+The same sequence converges to $b$ in local capacity. If $b$ is smooth, every $u_j$ can be chosen smooth.
 \end{theorem}
 \begin{proof}
 Choose relatively compact open sets exhausting $\Omega$, each with closure contained in the next one. On each of these sets, take a countable family of smooth compactly supported functions that is uniformly dense in the space of continuous functions vanishing at its boundary, and add a nonnegative smooth compactly supported cutoff function equal to one on its closure. Enumerate the union of these families as $(f_i)$. If positive measures converge against every $f_i$ to a fixed positive Radon measure, they converge vaguely: the cutoff functions give common local mass bounds, and uniform approximation then handles every continuous compactly supported test function.
@@ -130,7 +141,7 @@ Such an approximation uses only the finite mass of $\nu$ on a compact neighborho
 \[
  b_{j,s}=b_{j,s-1}+h_{j,s},\qquad u_j=b_{j,N_j}.
 \]
-Every intermediate potential is bounded and plurisubharmonic, so the proposition applies at each step; the choice at the next step may depend on the bound of the current potential, and each perturbation serves all finite $p$ at once. Summing the norm estimates yields $\|u_j-b\|_{L^p(\Omega)}\leq C_{\Omega,p}/j$, and since every $h_{j,s}\leq0$, we have $u_j\leq b$. Summing the measure errors gives
+Every intermediate potential is locally bounded and plurisubharmonic, so the proposition applies at each step, and each perturbation serves all finite $p$ at once. The difference $u_j-b=\sum_sh_{j,s}$ is bounded and nonpositive, and summing the norm estimates yields $\|u_j-b\|_{L^p(\Omega)}\leq C_{\Omega,p}/j$. Summing the measure errors gives
 \[
  \left|\int_\Omega f_i\bigl((\ddc u_j)^n-(\ddc b)^n-\nu\bigr)\right|
        <2/j\quad(i\leq j).

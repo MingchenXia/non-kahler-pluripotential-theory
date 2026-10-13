@@ -76,7 +76,28 @@ Use the normalized diffuse polar curve model $w$ of \cref{ex:diffuse-polar-zero-
 The identities for the zero obstacle in \cref{prop:divisorial-product-obstacles} give all four envelope identities. Both functions have supremum zero, and $w\leq0$ gives $a\leq b$. Ideal projection preserves the ideal type by \cref{thm:hermitian-i-projection}, so $a\sim_{\mathcal I}b$. Restriction to $\mathbb P^1\times\{z\}$, for any $z\notin D$, gives the unbounded difference $w$, so $a\not\sim b$. Finally, \cref{prop:fibration-obstacle-reduction} gives zero extended mass for every ordinary representative of either model, which proves all four volume identities.
 \end{proof}
 
-The same failure occurs in a nonclosed background once a second curve factor is added.
+A semipositive term in the background that vanishes on the slices of a product does not change the envelopes of potentials pulled back from the other factor.
+
+\Needspace{16\baselineskip}
+\begin{lemma}\label{lem:auxiliary-slice-envelopes}\index{Envelope!auxiliary product factor}
+Let $Y$ and $T$ be connected compact complex manifolds, let $\pi\colon Y\times T\to Y$ be the projection, let $\gamma$ be a smooth real $(1,1)$-form on $Y$, and let $\alpha$ be a smooth semipositive real $(1,1)$-form on $Y\times T$ whose restriction to every slice $Y\times\{t\}$ is zero. Put $\Gamma=\pi^*\gamma+\alpha$. For every $u\in\PSH(Y,\gamma)$, one has $u\circ\pi\in\PSH(Y\times T,\Gamma)$ and
+\[
+ P_\Gamma[u\circ\pi]=P_\gamma[u]\circ\pi.
+\]
+If $P_\gamma[u]_{\mathcal I}$ is ordinarily equivalent to a quasi-plurisubharmonic function $g$ with $\ddc g=S-\beta'$, where $S$ is a divisorial current on $Y$, possibly zero, as in \cref{lem:divisorial-potential-domination} and $\beta'$ is a smooth form, then also
+\[
+ P_\Gamma[u\circ\pi]_{\mathcal I}=P_\gamma[u]_{\mathcal I}\circ\pi.
+\]
+\end{lemma}
+\begin{proof}
+Since $\alpha\geq0$, pullback maps $\PSH(Y,\gamma)$ into $\PSH(Y\times T,\Gamma)$. It preserves the bound $v\leq0$, the ordinary order and, by \cref{lem:submersion-multiplier-pullback}, multiplier-ideal equivalence. Pullbacks of competitors are therefore competitors, and since upper regularization commutes with pullback by a projection, both envelopes upstairs are at least the pullbacks of the envelopes on $Y$.
+
+Let $v$ be an ordinary competitor for $u\circ\pi$, and replace it by the competitor $\max(v,u\circ\pi-\sup_Yu)$. For every $t\in T$, the restriction $v(\cdot,t)$ is $\gamma$-plurisubharmonic, because $\Gamma$ restricts to $\gamma$ on $Y\times\{t\}$, and it is not identically $-\infty$, nonpositive and at least as singular as $u$. Hence $v(\cdot,t)\leq P_\gamma[u]$, which proves the ordinary identity.
+
+Under the additional hypothesis, put $q=P_\gamma[u]_{\mathcal I}$, so that $u\sim_{\mathcal I}q\sim_{\mathcal I}g$ by \cref{thm:hermitian-i-projection}. The complex Hessian of $g\circ\pi$ is $\pi^*S-\pi^*\beta'$, and $\pi^*S$ is the sum of the prime divisors $D_j\times T$ with the coefficients of the components $D_j$ of $S$; it has finite mass for a product Hermitian metric. An ideal competitor $v$ for $u\circ\pi$ satisfies $v\sim_{\mathcal I}g\circ\pi$, so \cref{lem:divisorial-potential-domination} gives $v\preceq g\circ\pi\sim q\circ\pi$. Thus $v$ is an ordinary competitor for $q\circ\pi$, and the ordinary identity and \cref{prop:p-below-i} give $v\leq P_\gamma[q]\circ\pi=q\circ\pi$.
+\end{proof}
+
+The failure of \cref{ex:zero-volume-distinct-product-models} also occurs in a nonclosed background once a second curve factor is added.
 
 \Needspace{16\baselineskip}
 \begin{example}\label{ex:nonclosed-zero-volume-distinct-models}\index{Envelope!nonclosed zero-volume obstruction}\index{Singularity volume!nonclosed zero-volume models}
@@ -99,11 +120,10 @@ Let $Y=\mathbb P^1\times\mathbb P^1$, with projections $\pi_1,\pi_2$, and let $\
 \[
  \beta=\pi_1^*\sigma+(f\circ\pi_1)\pi_2^*\sigma.
 \]
-This form is positive, and $\mathrm d\beta=\pi_1^*(\mathrm df)\wedge\pi_2^*\sigma\ne0$. Let $w_0$ be the normalized diffuse polar model of \cref{ex:diffuse-polar-zero-model}, and put $w=w_0\circ\pi_1$. Then $w\in\PSH(Y,\beta)$ and
+This form is positive, and $\mathrm d\beta=\pi_1^*(\mathrm df)\wedge\pi_2^*\sigma\ne0$. Let $w_0$ be the normalized diffuse polar model of \cref{ex:diffuse-polar-zero-model}, which satisfies $P_\sigma[w_0]=w_0$ and $P_\sigma[w_0]_{\mathcal I}=0$, and put $w=w_0\circ\pi_1$. \Cref{lem:auxiliary-slice-envelopes}, applied to the first factor with $T=\mathbb P^1$, $\alpha=(f\circ\pi_1)\pi_2^*\sigma$ and $g=0$, gives
 \[
  P_\beta[w]=w,\qquad P_\beta[w]_{\mathcal I}=0.
 \]
-Indeed, replace an ordinary competitor $v\leq0$ by $\max(v,w)$. On every horizontal section $y\mapsto(y,z)$, where $\beta$ restricts to $\sigma$, this maximum is a $\sigma$-plurisubharmonic function, not identically $-\infty$ since it dominates $w_0$, and it is at least as singular as $w_0$. Its restriction is therefore at most $P_\sigma[w_0]=w_0$. This proves $v\leq w$ on $Y$; the reverse inequality for the envelope holds because $w$ is itself a competitor. All multiplier ideals of $w_0$ are trivial, so \cref{lem:submersion-multiplier-pullback} shows that the same holds for $w$. Since $\beta$ is positive, zero is a competitor for the ideal envelope of $w$, which proves the second identity.
 
 Set $k=n-2$ and $M=Y\times\mathbb P^k$, with projections $p,r$. On the second factor take the probability Fubini--Study form $\kappa$, a hyperplane $D$, and its normalized potential $\psi$ with $\kappa+\ddc\psi=[D]$. Put
 \[
@@ -112,7 +132,7 @@ Set $k=n-2$ and $M=Y\times\mathbb P^k$, with projections $p,r$. On the second fa
 \]
 The form $\Theta$ is positive and not closed. A sufficiently large multiple of the closed positive product form dominates $\Theta$, so the bounded mass property follows from Stokes' theorem for that closed form and the metric independence in \cref{prop:bmp-metric}.
 
-Apply \cref{prop:fibration-obstacle-reduction} to $p\colon M\to Y$ and the divisor $Y\times D$. The induced zero obstacle is zero because $\sup\psi=0$. The two identities on the base give all four identities upstairs, and both functions have supremum zero. Ideal projection preserves the ideal type, so $a\sim_{\mathcal I}b$. Moreover $a\leq b$, while their difference restricts to the unbounded function $w$ on any section outside the divisor, so $a\not\sim b$. Since $\dim Y=2<n$, the same proposition gives zero extended mass for every ordinary representative of $a$ or $b$, which proves the volume assertions.
+Apply \cref{prop:fibration-obstacle-reduction} to $p\colon M\to Y$ and the divisor $Y\times D$, whose induced zero obstacle is zero because $\sup\psi=0$. The two identities on the base give the four identities upstairs. The remaining assertions follow as in the proof of \cref{ex:zero-volume-distinct-product-models}; for the volumes, use $\dim Y=2<n$.
 \end{proof}
 
 We return to the product $M=C\times Z$ and its fixed divisor potential $\Psi$. All the models $\Psi+q\circ p$ have zero top-degree volumes, but the polar curvature of $q$ on $C$ still distinguishes them.
@@ -132,7 +152,7 @@ Write $\mu_q=\mathbf1_{\{q=-\infty\}}(\eta+\ddc q)$ for the polar curvature of $
 
 \Needspace{15\baselineskip}
 \begin{proposition}\label{prop:divisorial-product-polar-metric}\index{Metric completeness!zero-volume product}\index{Model potential!polar product metric}
-The set $\mathcal S_\Psi$ consists of normalized ordinary models in background $\Theta$, and $(\mathcal S_\Psi,\rho_\Psi)$ is a complete geodesic metric space. The upper-volume comparison $d_\Theta$, given by the formula of \cref{def:model-volume-comparison} from the upper singularity volumes of $a$, $b$ and $\max(a,b)$ (the formula makes sense in any background in which these volumes are finite), vanishes identically on this set:
+The set $\mathcal S_\Psi$ consists of normalized ordinary models in background $\Theta$, and $(\mathcal S_\Psi,\rho_\Psi)$ is a complete geodesic metric space. The upper-volume comparison $d_\Theta$, given by the formula of \cref{def:model-volume-comparison} from the upper singularity volumes of $a$, $b$ and $\max(a,b)$, which are finite here, vanishes identically on this set:
 \[
  d_\Theta(a,b)=0\qquad(a,b\in\mathcal S_\Psi).
 \]
@@ -164,96 +184,6 @@ Finally, if $\rho_\Psi(\Phi(q_j),\Phi(q))\to0$, then \cref{thm:curve-model-capac
 where $C_{\mathrm dV}$ bounds the density of $p_*\mathrm dV$ with respect to $\eta$.
 \end{proof}
 
-The same complete metric exists on the corresponding product locus in the nonclosed background of \cref{ex:nonclosed-zero-volume-distinct-models}.
-
-\Needspace{16\baselineskip}
-\begin{corollary}\label{cor:nonclosed-product-polar-metric}\index{Metric completeness!nonclosed zero-volume product}\index{Model potential!nonclosed polar product metric}
-Let $M=\mathbb P^1\times\mathbb P^1\times\mathbb P^k$, $k\geq1$, with projections $h,s,r$. Let $\sigma$ and $\kappa$ be the probability Fubini--Study forms on $\mathbb P^1$ and $\mathbb P^k$, respectively, and let $f$ be a positive nonconstant smooth real function on the first factor. Set
-\[
- \Theta=h^*\sigma+(f\circ h)s^*\sigma+r^*\kappa,
- \qquad \Psi=\psi\circ r,
-\]
-where $\psi$ is the normalized hyperplane potential with $\kappa+\ddc\psi=[D]$. For every normalized ordinary model $q$ on $(\mathbb P^1,\sigma)$, put $\Phi_f(q)=\Psi+q\circ h$. Then
-\[
- P_\Theta[\Phi_f(q)]=\Phi_f(q),\qquad
- P_\Theta[\Phi_f(q)]_{\mathcal I}
-       =\Phi_f(P_\sigma[q]_{\mathcal I}).
-\]
-On $\mathcal T_\Psi=\{\Phi_f(q):P_\sigma[q]=q\}$, define
-\[
- \begin{gathered}
- \rho_{\Psi,f}(\Phi_f(q_1),\Phi_f(q_2))
-       =\|\mu_{q_1}-\mu_{q_2}\|_{\mathrm{TV}},\\
- \mu_q=\mathbf1_{\{q=-\infty\}}(\sigma+\ddc q).
- \end{gathered}
-\]
-All the conclusions of \cref{prop:divisorial-product-polar-metric} hold on this locus: completeness and geodesics, vanishing of the upper-volume comparison, a closed ideal subspace in which analytic models are dense, ideal projection as the nearest-point retraction, and $L^1$ convergence upstairs.
-\end{corollary}
-\begin{proof}
-On $Y=\mathbb P^1\times\mathbb P^1$, write $\pi_1,\pi_2$ for the projections and put $\beta=\pi_1^*\sigma+(f\circ\pi_1)\pi_2^*\sigma$. The restriction argument of \cref{ex:nonclosed-zero-volume-distinct-models} applies to every normalized ordinary curve model and gives
-\[
- P_\beta[q\circ\pi_1]=q\circ\pi_1.
-\]
-Indeed, the maximum of an ordinary competitor with $q\circ\pi_1$ restricts on every horizontal section to a competitor for $P_\sigma[q]=q$ that is $\sigma$-plurisubharmonic and not identically $-\infty$.
-
-Put $q_{\mathcal I}=P_\sigma[q]_{\mathcal I}$ and let $E$ be the atomic part of $\mu_q$. The Green potential $w_E$ of \cref{lem:curve-atomic-ideal-model} satisfies $q_{\mathcal I}\sim w_E$ and $q\sim_{\mathcal I}w_E$. Its pullback satisfies
-\[
- \ddc(w_E\circ\pi_1)
-       =\sum_xE(\{x\})[\{x\}\times\mathbb P^1]
-           -E(\mathbb P^1)\pi_1^*\sigma.
-\]
-The divisor current is closed and has finite mass, and $w_E\circ\pi_1$ is $\beta$-plurisubharmonic because $E(\mathbb P^1)\leq1$. By \cref{cor:divisorial-envelope-equality}, its ordinary and ideal envelopes are equal. Multiplier ideals pull back by \cref{lem:submersion-multiplier-pullback}, so ordinary equivalence and the ordinary identity just proved give
-\[
- P_\beta[q\circ\pi_1]_{\mathcal I}
-       =P_\beta[w_E\circ\pi_1]_{\mathcal I}
-       =P_\beta[w_E\circ\pi_1]
-       =q_{\mathcal I}\circ\pi_1.
-\]
-This includes the cases $E=0$ and $E$ with countably many atoms.
-
-Apply \cref{prop:fibration-obstacle-reduction} to $M\to Y$ and the divisor $Y\times D$, whose induced zero obstacle is zero. The two identities on the base give the asserted identities upstairs. Thus $\Phi_f$ identifies the locus isometrically with the whole space of curve models, and ideal projection again takes the atomic part. The metric, nearest-point and analytic-closure arguments of \cref{prop:divisorial-product-polar-metric} apply unchanged; rational atomic coefficients and the unit coefficient of the hyperplane give local analytic monomials. Each pairwise maximum still has the form $\Psi+\max(q_1,q_2)\circ h$, so the fibration proposition makes all three upper volumes zero. Finally, integration of a smooth volume form along the compact fibers of $h$ transfers $L^1$ convergence on the curve to $M$, as in that proposition. The background is positive and not closed, and, as in \cref{ex:nonclosed-zero-volume-distinct-models}, a dominating closed product form gives the bounded mass property.
-\end{proof}
-
-The locus and its metric persist when the coefficient $f$ of the second curve factor is allowed to vanish.
-
-\Needspace{17\baselineskip}
-\begin{corollary}\label{cor:degenerate-product-polar-metric}\index{Model potential!nonbig product background}\index{Metric completeness!degenerating product background}
-Keep $M,h,s,r,\sigma,\kappa,D,\Psi$ from \cref{cor:nonclosed-product-polar-metric}. For any smooth real function $f\geq0$ on the first curve, put
-\[
- \Theta_f=h^*\sigma+(f\circ h)s^*\sigma+r^*\kappa,
- \qquad \Phi(q)=\Psi+q\circ h.
-\]
-For every normalized ordinary curve model $q$, one has
-\[
- P_{\Theta_f}[\Phi(q)]=\Phi(q),\qquad
- P_{\Theta_f}[\Phi(q)]_{\mathcal I}
-       =\Phi(P_\sigma[q]_{\mathcal I}).
-\]
-All the metric conclusions of \cref{cor:nonclosed-product-polar-metric} hold on the same set $\mathcal T_\Psi$, with the same distance given by total variation of polar curvature. The identity map of this set is an isometry between any two of the backgrounds $\Theta_f$ and commutes with ideal projection. This includes uniformly convergent families $f_j\to0$, whose limiting background $\Theta_0$ is not big.
-\end{corollary}
-\begin{proof}
-On $Y=\mathbb P^1\times\mathbb P^1$, put $\beta_f=\pi_1^*\sigma+(f\circ\pi_1)\pi_2^*\sigma$. This form is semipositive, and the argument with horizontal sections in \cref{cor:nonclosed-product-polar-metric} still gives
-\[
- P_{\beta_f}[q\circ\pi_1]=q\circ\pi_1.
-\]
-Indeed, the pullback of $q$ is $\beta_f$-plurisubharmonic, and every horizontal section has background $\sigma$, also where $f$ vanishes.
-
-Write $q_{\mathcal I}=P_\sigma[q]_{\mathcal I}$, let $E$ be the atomic part of $\mu_q$, and set $g=w_E\circ\pi_1$, with the Green potential $w_E$ from the proof of \cref{cor:nonclosed-product-polar-metric}. Then $g$ is $\beta_f$-plurisubharmonic, $q\circ\pi_1\sim_{\mathcal I}g$, and $g\sim q_{\mathcal I}\circ\pi_1$. Its complex Hessian is the same countable divisor current of finite mass minus $E(\mathbb P^1)\pi_1^*\sigma$. For every ideal competitor $v\leq0$ for $q\circ\pi_1$, \cref{lem:divisorial-potential-domination} gives $v\preceq g$. Therefore
-\[
- v\leq P_{\beta_f}[g]
-       =P_{\beta_f}[q_{\mathcal I}\circ\pi_1]
-       =q_{\mathcal I}\circ\pi_1.
-\]
-The last equality uses the ordinary identity just proved, since $q_{\mathcal I}$ is an ordinary curve model. Conversely, $q_{\mathcal I}\circ\pi_1$ is a normalized $\beta_f$-plurisubharmonic ideal competitor, because ideal projection preserves the ideal type on the curve and multiplier ideals pull back. This proves the ideal identity on the base, including the cases $E=0$ and $E$ with countably many atoms.
-
-\Cref{prop:fibration-obstacle-reduction} allows this semipositive background on the base and gives both identities upstairs. Normalization follows because the factors are independent. The metric space is the same isometric copy of the whole space of curve models, and ideal projection, analytic closure, geodesics and $L^1$ convergence upstairs follow as in the preceding proof. Since the relevant currents are still pulled back from the surface $Y$, the same proposition gives zero upper volumes, so the upper-volume comparison vanishes. Both $\Phi(q)$ and its polar measure are independent of $f$, so the stated identifications and the compatibility with ideal projection hold exactly, including at the limiting background. Analytic singularities depend only on the functions, so their closure is also unchanged.
-
-To see that $\Theta_0$ is not big, let $n=k+2$, and take the smooth closed positive $(n-1,n-1)$-form and the Hermitian form
-\[
- T=h^*\sigma\wedge r^*(\kappa^k),\qquad
- \Omega=h^*\sigma+s^*\sigma+r^*\kappa.
-\]
-One has $\int_M\Theta_0\wedge T=0$ and $\int_M\Omega\wedge T=1$. If $\Theta_0+\ddc u\geq\varepsilon\Omega$ for some $u\in\QPSH(M)$ and $\varepsilon>0$, pairing with $T$ and using Stokes' theorem would give $0\geq\varepsilon$. Thus $\Theta_0$ is not big, although the model locus keeps its complete metric.
-\end{proof}
+The locus and its metric persist when an auxiliary curve factor with a variable nonnegative coefficient is added to the background, which can make it nonclosed or nonbig; see \cref{cor:nonclosed-separated-product-metric} with $m=1$.
 
 \input{author/section_separated_curve_product_models}

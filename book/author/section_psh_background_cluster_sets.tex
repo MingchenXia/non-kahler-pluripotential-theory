@@ -1,6 +1,3 @@
-\subsection{Cluster sets at a bounded background}
-\label{subsec:bounded-background-cluster-sets}
-
 Let $\Omega\subset\mathbb C^n$ be a domain, $n\geq1$, and let $b$ be a locally bounded plurisubharmonic function on $\Omega$. If potentials approach $b$ from below in local capacity, every limit of their Monge--Amp\`ere measures must dominate $(\ddc b)^n$. Truncation at a fixed distance below $b$ provides a common bound, and plurifine locality keeps the measure outside the small set where the truncation changes the potential.
 
 \begin{lemma}\label{lem:capacity-limit-measure-floor}\index{Monge--Ampere product@Monge--Amp\`ere product!capacity limit order}
@@ -28,18 +25,22 @@ Taking the lower limit proves the assertion for such $f$. For a general $f$, use
 \end{proof}
 
 \Needspace{17\baselineskip}
-\begin{theorem}\label{thm:bounded-background-cluster-sets}\index{Monge--Ampere product@Monge--Amp\`ere product!cluster sets at a bounded background}
-Assume that $\Omega$ is bounded, $n\geq2$, and $b\in\PSH(\Omega)\cap L^\infty(\Omega)$. For a set $F\subset\mathcal M_+(\Omega)$, the following are equivalent:
+\begin{theorem}\label{thm:bounded-background-cluster-sets}\label{thm:zero-local-cluster-sets}\index{Monge--Ampere product@Monge--Amp\`ere product!cluster sets at a bounded background}\index{Monge--Ampere product@Monge--Amp\`ere product!full cluster sets}
+Assume that $\Omega$ is bounded and $n\geq2$. For a set $F\subset\mathcal M_+(\Omega)$, the following are equivalent:
 \begin{enumerate}
 \item $F$ is vaguely closed and every $\mu\in F$ satisfies $\mu\geq(\ddc b)^n$;
-\item there are bounded plurisubharmonic functions $u_j\leq b$ on $\Omega$, converging to $b$ in $L^p(\Omega)$ for every $1\leq p<\infty$ and in local capacity, whose full vague cluster set is $F$.
+\item there are locally bounded plurisubharmonic functions $u_j\leq b$ on $\Omega$, converging to $b$ in $L^p(\Omega)$ for every $1\leq p<\infty$ and in local capacity, whose full vague cluster set is $F$:
+\[
+ F=\left\{\mu\in\mathcal M_+(\Omega):\ (\ddc u_{j_k})^n\longrightarrow\mu
+        \text{ vaguely for some }j_1<j_2<\cdots\right\}.
+\]
 \end{enumerate}
-The empty set is allowed. If $b$ is smooth, every $u_j$ in the second condition can be chosen smooth.
+The empty set is allowed. In the second condition, the $u_j$ can be chosen with $u_j-b$ bounded, and smooth if $b$ is smooth.
 \end{theorem}
 \begin{proof}
-If the second condition holds, \cref{lem:capacity-limit-measure-floor} gives the measure inequality, and the full cluster set is closed in the metrizable vague topology by the argument at the beginning of the proof of \cref{thm:zero-local-cluster-sets}.
+In a metric space, the full cluster set of a sequence is the intersection of the closures of its tails: a point of this intersection can be approximated within $1/k$ at an index larger than the preceding one, successively for $k=1,2,\ldots$. Hence, if the second condition holds, $F$ is closed by \cref{lem:local-vague-metric}, and \cref{lem:capacity-limit-measure-floor} gives the measure inequality.
 
-Conversely, assume the first condition. If $F$ is nonempty, the concatenation of a dense sequence used in the proof of \cref{thm:zero-local-cluster-sets} gives measures $\nu_j\in F$ whose full vague cluster set is $F$. If $F$ is empty, take $\nu_j=(\ddc b)^n+j\delta_a$ for a fixed $a\in\Omega$. A nonnegative compactly supported test function equal to one at $a$ has integral at least $j$ against $\nu_j$, so this sequence has no vaguely convergent subsequence. In either case, $\nu_j-(\ddc b)^n$ is a positive Radon measure.
+Conversely, assume the first condition. If $F$ is nonempty, choose a dense sequence $\mu_1,\mu_2,\ldots$ in $F$, repetitions allowed; this is possible because a subset of a separable metric space is separable. Concatenating the finite lists $(\mu_1)$, $(\mu_1,\mu_2)$, $(\mu_1,\mu_2,\mu_3)$, and so on, we obtain a sequence $(\nu_j)$ in $F$ in which every $\mu_k$ appears arbitrarily late. Hence every point of $F$ is the limit of a subsequence, and since $F$ is closed, no other subsequential limit occurs. If $F$ is empty, take $\nu_j=(\ddc b)^n+j\delta_a$ for a fixed $a\in\Omega$. A nonnegative compactly supported test function equal to one at $a$ has integral at least $j$ against $\nu_j$, so this sequence has no vaguely convergent subsequence. In either case, $\nu_j-(\ddc b)^n$ is a positive Radon measure.
 
 Let $(f_i)$ and $d_v$ be as in \cref{lem:local-vague-metric}. For each $j$, approximate the excess $\nu_j-(\ddc b)^n$ against $f_1,\ldots,f_j$ by a positive finite atomic measure, with each error less than $1/j$. If this measure has $N_j>0$ atoms, perform the construction from the proof of \cref{thm:local-prescribed-excess}, starting at $b$ and using $\tau=t=(jN_j)^{-1}$ for each atom; if it has none, take $u_j=b$. Summing the estimates of \cref{prop:local-one-atom-addition} gives
 \[
@@ -48,7 +49,7 @@ Let $(f_i)$ and $d_v$ be as in \cref{lem:local-vague-metric}. For each $j$, appr
  \left|\int_\Omega f_i\bigl((\ddc u_j)^n-\nu_j\bigr)\right|
        <2/j\quad(i\leq j).
 \]
-For every fixed pair of concentric balls $B'\Subset B\Subset\Omega$, the same construction bounds the integral of $|u_j-b|$ over $B'$ against $(\ddc w)^n$ by $C_{B',B,\Omega}/j$, for every $w\in\PSH(B)$ with $0\leq w\leq1$. Dividing by a fixed positive threshold and taking the supremum over $w$ gives convergence in local capacity. Each $u_j$ is bounded and lies below $b$, and it is smooth when $b$ is smooth. One sequence serves all finite $p$, and no common local mass bound on the $\nu_j$ is needed.
+For every fixed pair of concentric balls $B'\Subset B\Subset\Omega$, the same construction bounds the integral of $|u_j-b|$ over $B'$ against $(\ddc w)^n$ by $C_{B',B,\Omega}/j$, for every $w\in\PSH(B)$ with $0\leq w\leq1$. Dividing by a fixed positive threshold and taking the supremum over $w$ gives convergence in local capacity. Each $u_j\leq b$ differs from $b$ by a bounded function, and it is smooth when $b$ is smooth. One sequence serves all finite $p$, and no common local mass bound on the $\nu_j$ is needed.
 
 The error in the first $j$ coordinates and the tail of the series yield
 \[
@@ -57,4 +58,4 @@ The error in the first $j$ coordinates and the tail of the series yield
 By the remark following \cref{lem:local-vague-metric}, the two sequences of measures have the same limits along corresponding subsequences. Hence their full vague cluster sets coincide.
 \end{proof}
 
-For example, on the unit ball the function $b=|z|^2-1$ has nonzero Monge--Amp\`ere measure. For every point $a$ of the ball, the theorem allows the cluster sets $\{(\ddc b)^n\}$, $\{(\ddc b)^n+\delta_a\}$ and the empty set, but it excludes $\{0\}$; this exclusion relies on the convergence in local capacity. In dimension one, $L^1$ convergence alone forces $\ddc u_j\to\ddc b$ vaguely, so the full cluster set is always $\{\ddc b\}$.
+For $b=0$, the first condition says only that $F$ is vaguely closed: every vaguely closed subset of $\mathcal M_+(\Omega)$, including the empty set, is the full vague cluster set of smooth bounded plurisubharmonic functions $u_j\leq0$ tending to zero in every $L^p(\Omega)$, $1\leq p<\infty$, and in local capacity. On the unit ball, the function $b=|z|^2-1$ has nonzero Monge--Amp\`ere measure. For every point $a$ of the ball, the theorem allows the cluster sets $\{(\ddc b)^n\}$, $\{(\ddc b)^n+\delta_a\}$ and the empty set, but it excludes $\{0\}$; this exclusion relies on the convergence in local capacity. In dimension one, by contrast, $L^1_{\mathrm{loc}}$ convergence alone forces $\ddc u_j\to\ddc b$ in the sense of distributions, hence vaguely by positivity, so the full cluster set is always $\{\ddc b\}$; the freedom in the theorem begins in dimension two.

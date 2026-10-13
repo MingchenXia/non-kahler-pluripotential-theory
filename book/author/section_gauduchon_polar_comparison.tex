@@ -3,13 +3,11 @@
 
 To use polar currents on all modifications at once, their sizes must be normalized compatibly. Pairing with Gauduchon forms does this: for a Gauduchon form $\eta$ on a modification, the total $\eta$-trace of the curvature current does not depend on the potential. Taking the supremum, over a family of modifications, of the normalized total variations of the polar traces gives a comparison that separates analytic models without any bound on top-degree mass. The space of all possible values of these coordinates is complete; whether its limit points are realized by ordinary models is a separate question.
 
-Here $X$ again has arbitrary dimension $n\geq1$, and $\omega$ is a Hermitian form on $X$. Fix a set $\mathscr R$ of smooth modifications $\pi\colon Y_\pi\to X$ that contains the identity and, for any two analytic singularity types, a common log resolution. On each $Y_\pi$, choose a Gauduchon form $\eta_\pi$, that is, a Hermitian form with $\ddc(\eta_\pi^{n-1})=0$ as in \cref{def:gauduchon-metric}. For $u\in\PSH(X,\omega)$, set
+Here $n\geq1$ is arbitrary, and $\omega$ is a Hermitian form on $X$. Fix a set $\mathscr R$ of smooth modifications $\pi\colon Y_\pi\to X$ that contains, for any two analytic singularity types, a common log resolution. On each $Y_\pi$, choose a Gauduchon form $\eta_\pi$, that is, a Hermitian form with $\ddc(\eta_\pi^{n-1})=0$ as in \cref{def:gauduchon-metric}. For $u\in\PSH(X,\omega)$, with the polar current $\operatorname{Pol}_\pi(u)$ of \cref{subsec:polar-first-current-obstruction}, set
 \[
- \mu_\pi(u)=\mathbf1_{\{u\circ\pi=-\infty\}}
-       \bigl(\pi^*\omega+\ddc(u\circ\pi)\bigr)
-          \wedge\eta_\pi^{n-1},
+ \mu_\pi(u)=\operatorname{Pol}_\pi(u)\wedge\eta_\pi^{n-1},
 \]
-where the restriction is applied to the coefficient measures of the current, and define
+and define
 \begin{equation}\label{eq:gauduchon-polar-comparison}
  \begin{gathered}
  A_\pi=\int_{Y_\pi}\pi^*\omega\wedge\eta_\pi^{n-1},\\
@@ -22,10 +20,10 @@ The Gauduchon forms are part of the data. Multiplying one of them by a positive 
 
 \Needspace{16\baselineskip}
 \begin{proposition}\label{prop:gauduchon-polar-comparison}\index{Model potential!Gauduchon polar trace}\index{Gauduchon metric!polar trace comparison}
-Every $A_\pi$ is positive. The comparison \eqref{eq:gauduchon-polar-comparison} is a pseudometric on $\PSH(X,\omega)$, bounded by two, and its restriction to normalized ordinary models with analytic singularities is a metric. If $X$ is a curve, then for all ordinary models $p,q$,
+Every $A_\pi$ is positive. The comparison \eqref{eq:gauduchon-polar-comparison} is a pseudometric on $\PSH(X,\omega)$, bounded by two, and its restriction to ordinary models with analytic singularities is a metric. If $X$ is a curve, then for all ordinary models $p,q$,
 \[
  \delta_\omega^{\mathrm{pol}}(p,q)
-       =\frac{\|\mu_{\operatorname{id}_X}(p)-\mu_{\operatorname{id}_X}(q)\|_{\mathrm{TV}}}{\int_X\omega},
+       =\frac{\|\operatorname{Pol}_\omega(p)-\operatorname{Pol}_\omega(q)\|_{\mathrm{TV}}}{\int_X\omega},
 \]
 so $\delta_\omega^{\mathrm{pol}}$ induces the complete topology of the polar metric on curve models, in which the closure of the analytic models is exactly the set of ideal models.
 
@@ -49,9 +47,9 @@ Let $p,q$ be ordinary models with analytic singularities, choose a common log re
  \mu_\pi(p)=\sum_i a_i[E_i]\wedge\eta_\pi^{n-1},\qquad
  \mu_\pi(q)=\sum_i b_i[E_i]\wedge\eta_\pi^{n-1}.
 \]
-Indeed, a smooth local correction makes the complex Hessian closed and positive without changing its coefficient mass on a divisor. Distinct components do not share trace mass on their intersections, and each component has strictly positive trace mass. Equality of these measures therefore implies $a_i=b_i$ for every $i$. The criterion of \cref{lem:analytic-ideal-dominance}, which uses only the finitely many divisors $E_i$, applied in both directions gives $p\sim q$. An ordinary model is the ordinary envelope of every potential of its type, so ordinary models with the same type are equal. This proves separation.
+Distinct components do not share trace mass on their intersections, and each component has strictly positive trace mass. Equality of these measures therefore implies $a_i=b_i$ for every $i$. The criterion of \cref{lem:analytic-ideal-dominance}, which uses only the finitely many divisors $E_i$, applied in both directions gives $p\sim q$. An ordinary model is the ordinary envelope of every potential of its type, so ordinary models with the same type are equal. This proves separation.
 
-On a curve, every smooth modification is an isomorphism and $\eta_\pi^{n-1}=1$. Hence $A_\pi=\int_X\omega$, and pullback preserves the total variation of polar curvature. The formula on curves and the assertions following it are therefore consequences of \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect}.
+On a curve, every smooth modification is an isomorphism and $\eta_\pi^{n-1}=1$. Hence $A_\pi=\int_X\omega$, and pullback preserves the total variation of polar curvature, so every $\pi\in\mathscr R$ gives the same term in the supremum. This proves the formula on curves, and the assertions following it are consequences of \cref{cor:curve-model-completeness,prop:curve-analytic-distance-defect}.
 
 Finally, $u-f$ has, in background $\omega'$, the same pulled-back curvature current and the same pole set as $u$ in background $\omega$, and Stokes' theorem gives $A_{\pi,\omega'}=A_{\pi,\omega}$. The gauge formula follows. It holds for the potentials themselves, before any ordinary projection.
 \end{proof}
@@ -72,7 +70,7 @@ The map $u\mapsto(\mu_\pi(u))_\pi$ takes values in this space and preserves the 
 The metric is finite, bounded by two, and separates points. A Cauchy sequence is Cauchy in total variation in each coordinate, and completeness of the space of finite signed measures gives a limit there; positivity and the mass bound pass to the limit. Given $\varepsilon>0$, choose $N$ such that every normalized coordinate distance is at most $\varepsilon$ for all $j,k\geq N$. Letting $k$ tend to infinity separately in each coordinate preserves this inequality, and taking the supremum proves convergence for $\widehat\delta$. The last assertion follows from the definition and the mass bound proved above.
 \end{proof}
 
-By \cref{prop:bounded-type-polar-invariance}, the coordinates $\mu_\pi$ are invariant under bounded changes of the potential. This allows the gauge identity of \cref{prop:gauduchon-polar-comparison}, which concerns the potentials themselves, to be transferred to normalized ordinary models.
+Since the coordinates $\mu_\pi$ are invariant under bounded changes of the potential, the gauge identity of \cref{prop:gauduchon-polar-comparison}, which concerns the potentials themselves, transfers to ordinary models.
 
 \Needspace{12\baselineskip}
 \begin{corollary}\label{cor:polar-model-gauge-transport}\index{Model potential!polar gauge transport}
@@ -80,7 +78,7 @@ The comparison $\delta_\omega^{\mathrm{pol}}$ descends to ordinary classes. For 
 \[
  G_f(p)=P_{\omega'}[p-f]
 \]
-is a bijection between the normalized ordinary models in the two backgrounds, with inverse $q\mapsto P_\omega[q+f]$. If the same Gauduchon forms are used in both backgrounds, $G_f$ preserves $\delta^{\mathrm{pol}}$, analytic models and ideal models.
+is a bijection between the ordinary models in the two backgrounds, with inverse $q\mapsto P_\omega[q+f]$. If the same Gauduchon forms are used in both backgrounds, $G_f$ preserves $\delta^{\mathrm{pol}}$, analytic models and ideal models.
 \end{corollary}
 \begin{proof}
 Boundedly equivalent potentials have boundedly equivalent pullbacks on every modification, with the same pole set. \Cref{prop:bounded-type-polar-invariance} therefore gives equality of their polar currents and of their measures $\mu_\pi$ in every coordinate, which proves descent to ordinary classes.
@@ -102,7 +100,7 @@ The traces $\mu_\pi$ determine the whole polar currents, because these currents 
 
 \Needspace{10\baselineskip}
 \begin{corollary}\label{cor:closed-pole-trace-recovery}\index{Polar curvature!recovery from trace}
-Let $u,v\in\PSH(X,\omega)$. For every $\pi\in\mathscr R$, the polar curvature currents of $u\circ\pi$ and $v\circ\pi$, defined by coefficientwise restriction, are closed, and they agree if and only if $\mu_\pi(u)=\mu_\pi(v)$. Consequently, $\delta_\omega^{\mathrm{pol}}(u,v)=0$ exactly when all these polar currents agree.
+Let $u,v\in\PSH(X,\omega)$. For every $\pi\in\mathscr R$, the currents $\operatorname{Pol}_\pi(u)$ and $\operatorname{Pol}_\pi(v)$ are closed, and they agree if and only if $\mu_\pi(u)=\mu_\pi(v)$. Consequently, $\delta_\omega^{\mathrm{pol}}(u,v)=0$ exactly when all these polar currents agree.
 \end{corollary}
 \begin{proof}
 By \cref{prop:psh-descent-modification}, the pullbacks belong to $\PSH(Y_\pi,\pi^*\omega)$, and \cref{prop:polar-curvature-closedness}, applied with background $\pi^*\omega$, shows that their polar currents are closed and positive. Both currents are carried by the union of the two Borel pole sets, which has Lebesgue measure zero. Equality of their $\eta_\pi$-traces therefore gives equality of the currents by \cref{lem:closed-null-current-trace}, and the converse is immediate. Since every $A_\pi$ is positive, the last assertion follows.
@@ -112,7 +110,7 @@ For a sequence that is Cauchy for $\delta^{\mathrm{pol}}_\omega$, total-variatio
 
 \Needspace{12\baselineskip}
 \begin{proposition}\label{prop:closed-pole-compatible-limits}\index{Polar curvature!compatible current limits}
-Let $(p_j)$ be normalized ordinary $\omega$-models forming a Cauchy sequence for $\delta_\omega^{\mathrm{pol}}$. For every $\pi\in\mathscr R$, their polar currents on $Y_\pi$ converge weakly to a unique closed positive current $R_\pi$, with
+Let $(p_j)$ be normalized functions in $\PSH(X,\omega)$ forming a Cauchy sequence for $\delta_\omega^{\mathrm{pol}}$. For every $\pi\in\mathscr R$, the currents $\operatorname{Pol}_\pi(p_j)$ converge weakly to a unique closed positive current $R_\pi$, with
 \[
  R_\pi\wedge\eta_\pi^{n-1}
        =\lim_{j\to\infty}\mu_\pi(p_j)
@@ -127,7 +125,7 @@ Fix $\pi$. By \cref{prop:polar-trace-coordinate-completeness}, the measures $\mu
 \]
 This is a Borel set of Lebesgue measure zero. Every measure $\mu_\pi(p_j)$ vanishes on its complement, so $\lambda_\pi(Y_\pi\setminus B_\pi)=0$. The polar currents are closed and positive by \cref{cor:closed-pole-trace-recovery}, and their $\eta_\pi$-trace masses are at most $A_\pi$. By compactness of positive currents of bounded mass, a subsequence converges weakly. Its limit $R$ is closed and positive, and $R\wedge\eta_\pi^{n-1}=\lambda_\pi$. Since positivity bounds all coefficient measures by the Hermitian trace, $R$ is carried by $B_\pi$. Any two subsequential limits have the same null carrier and the same trace, so they agree by \cref{lem:closed-null-current-trace}. As every subsequence has a further convergent subsequence, the whole sequence of currents converges weakly to this unique limit $R_\pi$.
 
-Apply \cref{prop:polar-curvature-pushforward} to $g$, with background $\pi^*\omega$ and potential $p_j\circ\pi$. It gives $g_*\operatorname{Pol}_{\pi'}(p_j)=\operatorname{Pol}_\pi(p_j)$. Proper pushforward is weakly continuous, since a smooth test form downstairs pulls back to a smooth test form upstairs, and passing to the limit proves compatibility. The limits are constructed separately in each coordinate, so no diagonal subsequence over $\mathscr R$ is needed.
+Apply \cref{prop:polar-curvature-pushforward} to $g$, with background $\pi^*\omega$ and potential $p_j\circ\pi$. It gives $g_*\operatorname{Pol}_{\pi'}(p_j)=\operatorname{Pol}_\pi(p_j)$. Proper pushforward is weakly continuous, since a smooth test form downstairs pulls back to a smooth test form upstairs, and passing to the limit proves compatibility.
 
 To obtain one pole carrier, put $h_m=\sum_{j=1}^m2^{-j}p_j$. These functions decrease, and they are $\omega$-plurisubharmonic because the coefficients have sum at most one and $\omega>0$. Normalized compactness, \cref{thm:normalized-compactness}, bounds their $L^1$ norms uniformly, so \cref{cor:decreasing-limit} gives a limit $h\in\PSH(X,\omega)$. Since all summands are nonpositive, each pole set of a $p_j$ is contained in the pole set of $h$. Hence $B_\pi\subset\{h\circ\pi=-\infty\}$, which gives the last assertion.
 \end{proof}
