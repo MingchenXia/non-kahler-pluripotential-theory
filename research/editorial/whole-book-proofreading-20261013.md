@@ -52,4 +52,7 @@ No theorem of the new material was found false. The corrections below are the su
 
 ## 4. Audits, build and publication
 
-(See the status file and the change log.)
+- **Audits.** Four independent audits (a4a–a4d) rechecked about 190 listed corrections and 50 renamings, the coordinator's edits and a math diff of every edited file. They found no reviewer correction wrong. They fixed one reintroduced false claim (“$t\geq\varepsilon$ everywhere” in the rotational-damping depth bound), a missing constant term in a chapter opening, three widened Hopf scopes, one notation clash, and three overstatements in sentences written by the coordinator (variational-volume opening: Hessian multiplier bounds need $n\geq3$ and uniformly comparable solution forms, subtraction cost stated on compact Kähler manifolds; radial nonbig opening: the warped example matches only for $C=\mathbb P^1$ and a rescaled coefficient; countable poles give positive *upper* volume). The reports are in `proofreading-20261013-reports/`.
+- **Checks.** Citation placement passes; no standalone paper, file or workflow is cited or mentioned; map typography and banned vocabulary were scanned book-wide.
+- **Build.** Clean: 1798 physical / 1768 printed pages, no errors, no overfull boxes, no undefined references (one underfull line in a bibliography entry).
+- **Publication.** Website commit 24475d2 (`Papers/SHPT_vibe.pdf` and `readme.md` only), PDF SHA-256 `79ae403f…`, homepage “A research monograph. 1768 pages. Updated October 13, 2026.”
