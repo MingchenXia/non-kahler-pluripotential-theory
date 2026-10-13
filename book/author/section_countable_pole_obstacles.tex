@@ -3,7 +3,7 @@
 
 If a potential $w$ is at least as singular as every multiple $bu$, $b\geq1$, of a potential $u$, then convex combinations with $w$ supply ordinary competitors for $u$ below every continuous obstacle; this is the mechanism of the single-pole example in the proof of \cref{prop:all-obstacle-uniformity}. We construct such a pair with poles on any prescribed countable set. The potentials have trivial multiplier ideals even when their poles are dense, so both envelopes lose this ordinary singularity information.
 
-We keep the Hermitian form $\omega$ and the volume form $\mathrm dV$. As before \cref{prop:finite-cover-envelope-transport}, envelopes below a continuous obstacle $F$ are defined by the competitor families of \cref{def:singularity-envelope,def:hermitian-i-envelope} with the bound $v\leq F$.
+We keep the Hermitian form $\omega$ and the volume form $\mathrm dV$. Envelopes below a continuous obstacle $F$ are defined by the competitor families of \cref{def:singularity-envelope,def:hermitian-i-envelope} with the bound $v\leq F$.
 
 \Needspace{14\baselineskip}
 \begin{theorem}\label{thm:countable-pole-stretching}\index{Relative envelope class!countable poles}
@@ -26,17 +26,12 @@ Fix $0<\beta<\beta'<1$, and index the prescribed points by integers $j\geq1$. Ch
  \chi_j(z)=\chi((z-z_j)/r_j),\qquad
  L_j=1-\log(|z-z_j|^2/r_j^2).
 \]
-The functions $-\chi_jL_j^\sigma$, for $\sigma=\beta,\beta'$, extend by zero outside the ball. Near the center they are plurisubharmonic: for $s=\log(|z-z_j|^2/r_j^2)$ the profile $q_\sigma(s)=-(1-s)^\sigma$ has
+The functions $-\chi_jL_j^\sigma$, for $\sigma=\beta,\beta'$, extend by zero outside the ball. Near the center, where $\chi_j=1$, they are plurisubharmonic off $z_j$: for $s=\log(|z-z_j|^2/r_j^2)$ the profile $q_\sigma(s)=-(1-s)^\sigma$ is convex and increasing, since
 \[
  q_\sigma'=\sigma(1-s)^{\sigma-1}>0,
  \qquad q_\sigma''=\sigma(1-\sigma)(1-s)^{\sigma-2}>0.
 \]
-To justify the extension across the center, take a smooth nondecreasing $\zeta$ equal to zero on $(-\infty,-2]$ and one on $[-1,+\infty)$. For large $A$ put
-\[
- q_{\sigma,A}'(s)=q_\sigma'(s)\zeta(s/A),\qquad
- q_{\sigma,A}(s)=q_\sigma(0)-\int_s^0q_{\sigma,A}'(v)\,\mathrm dv.
-\]
-These profiles are convex and increasing, constant near the center, and agree with $q_\sigma$ on $s\geq-A$. As $A$ increases they decrease to $q_\sigma$, including its value $-\infty$ at the center. Radial integrability gives convergence in $L^1$. The cutoff annulus is unchanged for large $A$, and its Hessian has a finite lower bound. After a fixed local quadratic correction, the decreasing-limit theorem gives the canonical quasi-plurisubharmonic extension; its current bound passes to the limit.
+Being nonpositive, they extend across $z_j$ with the value $-\infty$ by \cref{lem:qpsh-removable-analytic}. On the annulus where the cutoff varies they are smooth, so their complex Hessians have a finite lower bound.
 
 Put $e_j=2^{-j-2}$. Scale both profiles by the same $0<\delta_j\leq2^{-j}$ so that the nonpositive functions
 \begin{equation}\label{eq:countable-pole-terms}
@@ -44,7 +39,7 @@ Put $e_j=2^{-j-2}$. Scale both profiles by the same $0<\delta_j\leq2^{-j}$ so th
  \qquad c_j=-\delta_j\chi_jL_j^{\beta'},
  \qquad \ddc a_j,\ \ddc c_j\geq-e_j\omega
 \end{equation}
-have these lower bounds globally. This is possible because only the smooth cutoff annulus can contribute a negative Hessian. Coordinate rescaling and the finite atlas give
+have these lower bounds globally; only the cutoff annulus contributes a negative Hessian. Coordinate rescaling and the finite atlas give
 \[
  \|a_j\|_{L^1}+\|c_j\|_{L^1}\leq C\delta_j.
 \]
@@ -88,17 +83,7 @@ For the potentials of \cref{thm:countable-pole-stretching} and every $F\in C(X,\
 In particular, $P_\omega[u]=P_\omega[u]_{\mathcal I}=0$.
 \end{proposition}
 \begin{proof}
-Put $Q=P_\omega(F)$. The constant $\min_XF$ is a competitor. The envelope construction of \cref{sec:obstacle-envelopes}, which preserves the exact lower current bound for the nonclosed form $\omega$, gives $Q\in\PSH(X,\omega)$ and
-\[
- \min_XF\leq Q\leq F\leq\max_XF.
-\]
-Since $Q$ is bounded, all its multiplier ideals are trivial. Thus $Q\sim_{\mathcal I}u$, making $Q$ itself a competitor for the ideal envelope below $F$. Every ideal competitor is an unrestricted competitor for $P_\omega(F)$, so $P_{\omega,F}[u]_{\mathcal I}=Q$.
-
-For $0<t<1$ set
-\[
- A_t=(1-t)Q+tw-t\|F\|_\infty.
-\]
-Convexity gives $A_t\in\PSH(X,\omega)$, and $w\leq0$ implies $A_t\leq(1-t)F-t\|F\|_\infty\leq F$. Boundedness of $Q$ and \eqref{eq:countable-fixed-minorant} with $b=1/t$ give $A_t\preceq u$. Hence $A_t$ is a competitor for the ordinary envelope $O=P_{\omega,F}[u]$. Since all competitors lie below $F$, the same envelope construction gives $O\in\PSH(X,\omega)$, and $A_t\leq O\leq Q$. Where $w$ is finite, $A_t\to Q$ as $t\downarrow0$. Thus $O=Q$ almost everywhere, and \cref{lem:qpsh-almost-everywhere-order} gives equality everywhere. For $F=0$, zero is an unrestricted competitor, so $P_\omega(0)=0$.
+The proof of the nonseparation assertion of \cref{prop:all-obstacle-uniformity} uses only that $w\leq0$ is $\omega$-plurisubharmonic with $\delta w\preceq u$ for $0<\delta\leq1$, that $u$ has trivial multiplier ideals, and that $F$ is continuous. By \cref{thm:countable-pole-stretching}, these conditions hold here, so that proof gives $P_{\omega,F}[u]=P_{\omega,F}[0]=P_\omega(F)$ and the same identities for the ideal envelopes. For $F=0$, zero is a competitor, so $P_\omega(0)=0$.
 \end{proof}
 
-For a dense prescribed set, the ordinary type of $u$ differs from the bounded type, although their envelopes agree below every continuous obstacle. Since $u\in\mathcal E_{\mathrm{env}}(X,\omega,0)$ and $P_\omega[u]_{\mathcal I}=0$, the equality below smooth obstacles is also an instance of \cref{prop:ideal-obstacle-reprojection}. The construction applies to every Hermitian form $\omega$, including one with unbounded upper mass or zero lower mass. It does not decide whether equality below the zero obstacle alone implies equality below every obstacle for an arbitrary potential in an arbitrary smooth background.
+For a dense prescribed set, the ordinary type of $u$ differs from the bounded type, although their envelopes agree below every continuous obstacle. The construction applies to every Hermitian form $\omega$, including one with unbounded upper mass or zero lower mass.
