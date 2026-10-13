@@ -2,8 +2,8 @@
 \subsection{A countable divisorial positivity criterion}
 \label{subsec:countable-divisorial-positivity}
 
-A prescribed divisorial part can determine an ideal envelope's
-ordinary type even when it has infinitely many components.
+A prescribed divisorial part can determine the ordinary type of an
+ideal envelope even when it has infinitely many components.
 On the projective plane with a pluriclosed background, the
 smooth residual determines the mass of every representative of that type.
 This gives a positivity test directly from divisorial orders.
@@ -22,14 +22,15 @@ $\ddc\theta=0$ and $R=\theta-A\kappa>0$.
 
 \Needspace{14\baselineskip}
 \begin{lemma}\label{countable-divisorial:profile}\index{Divisorial current!summable hyperplane series}
-The series defines a quasi-plurisubharmonic function, and
+The series $u_0$ defines a quasi-plurisubharmonic function, and
 \[
  \ddc u=S-A\kappa,\qquad
  S=\sum_{j\geq1}a_j[H_j],\qquad
  \theta+\ddc u=R+S>0.
 \]
-For every prime divisor $E$ on every smooth compact modification
-$\pi:Z\to X$, the convergent order profile is
+For every smooth compact modification $\pi\colon Z\to X$ and
+every prime divisor $E$ on $Z$, the series defining the order
+profile converges, and
 \[
  b(E):=\sum_{j\geq1}a_j\operatorname{ord}_E(\pi^*H_j)
        =\nu(u\circ\pi,E).
@@ -37,36 +38,44 @@ $\pi:Z\to X$, the convergent order profile is
 \end{lemma}
 \begin{proof}
 The Poincar\'e--Lelong formula gives
-$\ddc\ell_j=[H_j]-\kappa$. Unitary invariance reduces its
-integral to the distribution of $x=|Z_0|^2/\|Z\|^2$, whose
+$\ddc\ell_j=[H_j]-\kappa$. By unitary invariance, the integral
+of $\ell_j$ against the probability measure $\kappa^2$ is
+computed from the distribution of $x=|Z_0|^2/\|Z\|^2$, whose
 density on $[0,1]$ is $2(1-x)$. Thus
 \[
  \int_X\ell_j\kappa^2=\int_0^1 2(1-x)\log x\,\mathrm dx=-\frac32.
 \]
-The decreasing series has finite $L^1$ norm and a common
-lower curvature bound $-A\kappa$. Its canonical limit is
-quasi-plurisubharmonic. Distributional convergence gives the
-current identities and strict positivity.
+Since $\ell_j\leq0$, the partial sums of $u_0$ decrease, and
+they are $A\kappa$-plurisubharmonic. By monotone convergence,
+$\int_Xu_0\kappa^2=-\frac32A$ is finite, so the limit $u_0$ is
+not identically $-\infty$ and is $A\kappa$-plurisubharmonic.
+The partial sums converge in $L^1$, so their complex Hessians
+converge as currents; this gives the current identities, and
+$\theta+\ddc u\geq R>0$.
 
 Fix $\pi$ and $E$, and choose a Gauduchon form $\gamma$ on the
-compact surface $Z$. For the tail
+compact surface $Z$. Consider the tail
 $r_N=\sum_{j>N}a_j\ell_j$ of total coefficient
-$A_N=\sum_{j>N}a_j$, the closed positive current
+$A_N=\sum_{j>N}a_j$. Its pullback $r_N\circ\pi$ is
+$A_N\pi^*\kappa$-plurisubharmonic; it is not identically
+$-\infty$ because $\pi$ is biholomorphic over a dense open
+subset of $X$. Hence the closed positive current
 \[
  T_N=A_N\pi^*\kappa+\ddc(r_N\circ\pi)
 \]
-has trace mass $A_N\int_Z\pi^*\kappa\wedge\gamma$, by
-distributional Stokes. The pullback of $r_N$ is
-quasi-plurisubharmonic, since $\pi$ is an isomorphism on a
-dense open set where $r_N$ is finite almost everywhere.
-Divisorial removal gives
+has trace mass $\int_ZT_N\wedge\gamma=A_N\int_Z\pi^*\kappa\wedge\gamma$,
+by distributional Stokes and $\ddc\gamma=0$.
+By \cref{lem:nonclosed-divisorial-removal},
+$T_N\geq\nu(r_N\circ\pi,E)[E]$, and therefore
 \[
  0\leq\nu(r_N\circ\pi,E)
  \leq A_N\frac{\int_Z\pi^*\kappa\wedge\gamma}{\int_E\gamma}.
 \]
-The denominator is positive and the ratio is finite.
-Finite additivity of Lelong numbers now identifies the partial
-profile with $\nu(u\circ\pi,E)$ up to an error tending to zero.
+The denominator is positive, so this bound tends to zero.
+Lelong numbers are additive, and
+$\nu(\ell_j\circ\pi,E)=\operatorname{ord}_E(\pi^*H_j)$.
+Hence the $N$th partial sum of $b(E)$ differs from
+$\nu(u\circ\pi,E)$ by $\nu(r_N\circ\pi,E)$.
 This proves convergence and the asserted equality.
 \end{proof}
 
@@ -83,54 +92,66 @@ are equivalent. Under either condition,
 \]
 and every $w\in\PSH(X,\theta)$ with $w\sim q$ satisfies
 \begin{equation}\label{eq:countable-divisorial-positive-mass}
- \int_X\mathrm{MA}^{\mathrm{ext}}_\theta(w)
+ \int_X\mathrm{MA}_\theta(w)
  =\underline{\operatorname{vol}}_\theta(q)
  =\overline{\operatorname{vol}}_\theta(q)
  =\int_XR^2>0.
 \end{equation}
-The background is big and $X$ has the bounded mass property.
+Moreover, $\theta$ is big and $X$ has the bounded mass property.
 \end{proposition}
 \begin{proof}
-\emph{Ideal profile and envelope.} Choose an integer $C>A$
-with $C\kappa\geq\theta$. Both $u$ and $v$ are
-$C\kappa$-plurisubharmonic. The projective valuative
-characterization of all-weight ideal types applies in this
-closed background: generic orders on all smooth projective
-modifications recover point Lelong numbers by further point
-blowups, and equality of those numbers is equivalent to ideal
-equivalence. The stated profile therefore implies
-$v\sim_{\mathcal I}u$. Conversely, ideal equivalence pulls
-back under every compact modification by
-\cref{lem:birational-ideal-order}; the local valuative criterion
-\cref{thm:local-i-inputs} then gives equality of generic
-coefficients on every such modification. The common factor
-between growth against $\log|z|$ and the book's
-$\log|z|^2$ convention does not affect these equalities.
+\emph{Ideal profile and envelope.} Choose an integer $C$
+with $C\kappa\geq\theta$. Then $C>A$, since $\theta>A\kappa$,
+and $u$ and $v$ are plurisubharmonic for the K\"ahler form
+$C\kappa$. In this common closed background, the stated
+profile implies $v\sim_{\mathcal I}u$ by the projective valuative
+characterization of ideal equivalence, whose source is given in
+\cref{sec:history-volumes}. On the surface $X$ this also follows
+from the first item of \cref{thm:local-i-inputs}, which reduces
+ideal equivalence to equality of the Lelong numbers at all points
+of all local modifications. Over a smaller neighborhood, a local
+modification of a surface is a finite composition of point blowups,
+and these extend to a smooth compact modification of $X$. One further
+point blowup turns the Lelong number at a point into the generic
+Lelong number along the exceptional curve. Thus the profile
+determines all these Lelong numbers.
+Conversely, if $v\sim_{\mathcal I}u$, then
+$v\circ\pi\sim_{\mathcal I}u\circ\pi$ for every smooth compact
+modification $\pi$ by \cref{lem:birational-ideal-order}. The first
+item of \cref{thm:local-i-inputs}, applied with the identity of $Z$,
+then gives equal Lelong numbers at all points of $Z$, and hence
+equal generic Lelong numbers along every prime divisor $E$.
 
-The potential $u$ has complex Hessian $S-A\kappa$.
-By \cref{cor:divisorial-envelope-equality}, its ordinary and
-ideal envelopes agree and are ordinarily equivalent to $u$.
-Ideal equivalence identifies the defining families for the
-two ideal envelopes in the statement, proving the assertion
-about $q$. The inequality $\theta+\ddc u\geq R>0$ proves
+The potential $u$ satisfies $\ddc u=S-A\kappa$, and $\theta=R+A\kappa$
+is a Hermitian form. Hence \cref{cor:divisorial-envelope-equality},
+applied with the smooth closed form $A\kappa$ and the Hermitian form
+$\theta$, shows that the ordinary and ideal envelopes of $u$ agree
+and are ordinarily equivalent to $u$.
+Since $v\sim_{\mathcal I}u$, the families defining
+$P_\theta[v]_{\mathcal I}$ and $P_\theta[u]_{\mathcal I}$ coincide,
+which proves the assertion about $q$. The inequality
+$\theta+\ddc u\geq R>0$ proves
 bigness. For any Hermitian form $h$ on $X$, choose $D$ with
 $D\kappa\geq h$. Bounded $h$-plurisubharmonic potentials are
-$D\kappa$-plurisubharmonic, and positivity of bounded mixed
-products bounds their masses by $\int_X(D\kappa)^2=D^2$.
+$D\kappa$-plurisubharmonic, so positivity of bounded mixed
+products and Stokes' theorem bound their masses by $\int_X(D\kappa)^2=D^2$.
 This proves the bounded mass property.
 
-\emph{The bounded residual.} Fix $w\sim u$ in
-$\PSH(X,\theta)$ and put $T=C\kappa+\ddc w$.
-Its base divisorial coefficients are $a_j$, so divisorial
-removal and passage through increasing finite sums give
+\emph{The bounded residual.} Fix $w\in\PSH(X,\theta)$ with
+$w\sim u$, and put $T=C\kappa+\ddc w$. Ordinary equivalence
+preserves generic Lelong numbers, so \cref{countable-divisorial:profile},
+applied with $\pi$ the identity, gives $\nu(w,H_j)=\nu(u,H_j)=a_j$.
+\Cref{lem:nonclosed-divisorial-removal}, applied to the finite partial
+sums of $S$, and passage to the limit give
 \[
- K=T-S=(C-A)\kappa+\ddc h\geq0,\qquad h=w-u.
+ K=T-S=(C-A)\kappa+\ddc g\geq0,\qquad g=w-u.
 \]
-The distributional difference has a canonical
-quasi-plurisubharmonic representative, which is bounded by
-ordinary equivalence and almost-everywhere order. Thus $K$
+Since $w\sim u$, the function $g$ is bounded off the poles of $u$.
+By the inequality just displayed, it agrees almost everywhere with a
+quasi-plurisubharmonic function, which is bounded by
+\cref{lem:qpsh-almost-everywhere-order}. Thus $K$
 has bounded local potentials, and its trace charges no
-pluripolar set. The current $S$ is carried by the actual pole
+pluripolar set. The current $S$ is carried by the pole
 union $\bigcup_jH_j\subset\{w=-\infty\}$. Thus
 $\langle T\rangle=K$. For every smooth real $(1,1)$-form $L$
 with $\ddc L=0$, distributional Stokes gives
@@ -142,26 +163,29 @@ with $\ddc L=0$, distributional Stokes gives
 \emph{Closed top mass and smooth correction.} Put
 $T_u=C\kappa+\ddc u=S+(C-A)\kappa$.
 For the finite partial sums $u_N=\sum_{j\leq N}a_j\ell_j$,
-the closed non-pluripolar mass is
-$(C-\sum_{j\leq N}a_j)^2$: outside the finite divisor union
-the current is the smooth residual, and the measure gives
-that union zero mass. Since $u_0\leq u_N$, closed-background
-mass monotonicity, the closed case of
+the non-pluripolar mass of $(C\kappa+\ddc u_N)^2$ is
+$(C-\sum_{j\leq N}a_j)^2$: outside $\bigcup_{j\leq N}H_j$
+the current is the smooth form $(C-\sum_{j\leq N}a_j)\kappa$, and the
+non-pluripolar product gives that union zero mass. Since $u_0\leq u_N$,
+closed-background mass monotonicity, the closed case of
 \cref{thm:volume-monotonicity}, gives
 \[
  \int_X\langle T_u^2\rangle
- \leq\left(C-\sum_{j\leq N}a_j\right)^2.
+ \leq\left(C-\sum_{j\leq N}a_j\right)^2
 \]
-For the reverse inequality, locally write $S=\ddc b$ with
-$b$ plurisubharmonic. The currents
-$(C-A)\kappa+\ddc\max(b,-k)$ have bounded local potentials
-and dominate $(C-A)\kappa$.
-Their squared products, restricted to $\{b>-k\}$, therefore
-dominate $(C-A)^2\kappa^2$ on that set. Letting $k$ increase
-and using the local truncation definition gives
+for every $N$, and hence $\int_X\langle T_u^2\rangle\leq(C-A)^2$.
+For the reverse inequality, locally write $S=\ddc\psi$ with
+$\psi$ plurisubharmonic. The currents
+$(C-A)\kappa+\ddc\max(\psi,-k)$ have bounded local potentials
+and are at least $(C-A)\kappa$.
+On the plurifine open set $\{\psi>-k\}$, their squared products
+coincide with $\langle T_u^2\rangle$ and therefore
+dominate $(C-A)^2\kappa^2$. Letting $k$ increase, and noting
+that $\kappa^2$ does not charge the pluripolar set $\{\psi=-\infty\}$, gives
 $\langle T_u^2\rangle\geq(C-A)^2\kappa^2$.
-The two bounds prove equality of total masses.
-Closed mass invariance under bounded changes then gives
+The two bounds give $\int_X\langle T_u^2\rangle=(C-A)^2$.
+Since $C\kappa$ is a K\"ahler form and $w-u$ is bounded,
+invariance of closed masses under bounded changes then gives
 \[
  \int_X\langle T^2\rangle=(C-A)^2.
 \]
@@ -170,17 +194,17 @@ Set $L=C\kappa-\theta\geq0$, so $\ddc L=0$.
 Expanding the bounded products of $\max(w,-k)$ in the two
 backgrounds and restricting to $\{w>-k\}$ gives, in the limit,
 \[
- \mathrm{MA}^{\mathrm{ext}}_\theta(w)
+ \mathrm{MA}_\theta(w)
        =\langle T^2\rangle-2L\wedge\langle T\rangle+L^2.
 \]
-All correction measures are finite: the closed top measure
-has the mass just computed, the degree-one limit is $K$, and
+All three measures on the right are finite: the first
+has the mass just computed, $\langle T\rangle=K$, and
 the smooth measure $L^2$ gives the pole set zero mass.
 The same truncations are used in both backgrounds, so this
 identity is an equality of Borel measures.
-Integrating yields
+Integrating, and using the Stokes identity for $\int_XL\wedge\langle T\rangle$, yields
 \[
- \int_X\mathrm{MA}^{\mathrm{ext}}_\theta(w)
+ \int_X\mathrm{MA}_\theta(w)
  =(C-A)^2-2(C-A)\int_XL\wedge\kappa+\int_XL^2
  =\int_X(\theta-A\kappa)^2.
 \]
@@ -191,10 +215,11 @@ singularity-volume identities and their strict positivity.
 \Needspace{16\baselineskip}
 \begin{example}\label{countable-divisorial:nonclosed-example}\index{Pluriclosed metric!nonanalytic positive-volume type}
 There is a nonclosed pluriclosed background on $\mathbb P^2$
-with a nonanalytic ideal type satisfying
-\cref{countable-divisorial:positive-mass}. Its prescribed
-divisors are not contained in a single pencil, and both
-singularity volumes of its ideal model are at least $1/16$.
+to which \cref{countable-divisorial:positive-mass} applies with a
+nonanalytic ideal type: no potential with analytic singularities is
+ideal equivalent to $u$. The prescribed
+hyperplanes are not contained in a single pencil, and both
+singularity volumes of the ideal model $q$ are at least $1/16$.
 \end{example}
 \begin{proof}
 In a coordinate ball choose a smooth real cutoff $\chi$ equal
@@ -208,8 +233,9 @@ It is real and smooth, with $\ddc\tau=0$. Where $\chi=1$,
  \mathrm d\tau=\mathrm dz_2\wedge\mathrm d\bar z_2
                   \wedge(\mathrm dz_1-\mathrm d\bar z_1)\ne0.
 \]
-Choose $\epsilon>0$ small enough that
-$\theta=\kappa+\epsilon\tau\geq\kappa/2$.
+Choose $\varepsilon>0$ small enough that
+$\theta=\kappa+\varepsilon\tau\geq\kappa/2$; then $\ddc\theta=0$
+and $\mathrm d\theta=\varepsilon\,\mathrm d\tau\neq0$.
 Set $A=1/4$, $a_j=A2^{-j}$, $t_j=2^{-j}$ and
 \[
  H_j=\{Z_0+t_jZ_1+t_j^2Z_2=0\}.
@@ -217,10 +243,12 @@ Set $A=1/4$, $a_j=A2^{-j}$, $t_j=2^{-j}$ and
 The Vandermonde determinant shows that any three defining
 linear forms are independent; hence the hyperplanes are not
 in one pencil. Here $R=\theta-A\kappa\geq\kappa/4$, so
-$\int_XR^2\geq1/16$. The preceding proposition gives the
+$\int_XR^2\geq1/16$. \Cref{countable-divisorial:positive-mass} gives the
 mass throughout the ordinary type and both singularity volumes.
-There are infinitely many positive base divisor coefficients.
-An analytic singularity on a compact manifold has only
-finitely many prime divisorial components, so no analytic
-potential has this ideal type.
+By its first condition with $\pi$ the identity, every potential
+ideal equivalent to $u$ has generic Lelong number $a_j>0$ along
+each of the infinitely many lines $H_j$. A potential with analytic
+singularities on a compact manifold has positive generic Lelong
+numbers only along the finitely many prime divisors in its pole set.
+Hence no analytic potential has this ideal type.
 \end{proof}
